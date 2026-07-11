@@ -110,57 +110,62 @@ DATACENTERS_DF = pd.DataFrame(
 # treat as illustrative, not exhaustive — follow the tracker links for current
 # status. level: Local/State. status: Enacted/Proposed/Rejected/Vetoed.
 MORATORIUMS = [
-    # locality, state, level, status, when, note
-    ("Minneapolis", "MN", "Local", "Enacted", "May 2026", ""),
-    ("Denver", "CO", "Local", "Enacted", "May 2026", ""),
-    ("Baltimore City", "MD", "Local", "Enacted", "May 2026", ""),
-    ("Reno", "NV", "Local", "Enacted", "May 2026", ""),
-    ("Dubuque County", "IA", "Local", "Enacted", "2026", ""),
-    ("Bloomington", "IL", "Local", "Enacted", "2026", ""),
-    ("Normal", "IL", "Local", "Enacted", "2026", ""),
-    ("Iron County", "UT", "Local", "Enacted", "2026", ""),
-    ("Manitowoc County", "WI", "Local", "Enacted", "2026", "18-month"),
-    ("Smithfield", "RI", "Local", "Enacted", "2026", "Outright ban"),
-    ("Meridian Township", "MI", "Local", "Enacted", "2026", ""),
-    ("Washington Township (Macomb Co.)", "MI", "Local", "Enacted", "2026", ""),
-    ("Hill County", "TX", "Local", "Enacted", "2026", "Under developer lawsuit"),
-    ("DeKalb County", "GA", "Local", "Enacted", "2026", ""),
-    ("Lysander (Onondaga Co.)", "NY", "Local", "Enacted", "May 2026", "6-month"),
-    ("Perth (Fulton Co.)", "NY", "Local", "Enacted", "Jun 2025", "1-year"),
-    ("Groton", "CT", "Local", "Enacted", "2025", "Year-long"),
-    ("Peculiar", "MO", "Local", "Enacted", "2025", "Ban"),
-    ("Bangor", "ME", "Local", "Enacted", "2025", "Temporary ban"),
-    # North Carolina — 20+ jurisdictions since late 2025 (subset)
-    ("Gates County", "NC", "Local", "Enacted", "2025–26", ""),
-    ("Brevard", "NC", "Local", "Enacted", "2025–26", ""),
-    ("Clay County", "NC", "Local", "Enacted", "2025–26", ""),
-    ("Canton", "NC", "Local", "Enacted", "2025–26", ""),
-    ("Chatham County", "NC", "Local", "Enacted", "2025–26", ""),
-    ("Kings Mountain", "NC", "Local", "Enacted", "2025–26", ""),
-    ("Boone", "NC", "Local", "Enacted", "2025–26", ""),
-    ("Apex", "NC", "Local", "Enacted", "2025–26", ""),
-    ("Orange County", "NC", "Local", "Enacted", "2025–26", ""),
-    ("Rowan County", "NC", "Local", "Enacted", "2025–26", ""),
-    ("Swain County", "NC", "Local", "Enacted", "2025–26", ""),
-    ("Watauga County", "NC", "Local", "Enacted", "2025–26", ""),
-    ("Madison County", "NC", "Local", "Enacted", "2025–26", ""),
-    ("Clyde", "NC", "Local", "Enacted", "2025–26", ""),
+    # locality, state, level, status, when, note, lat, lon
+    ("Minneapolis", "MN", "Local", "Enacted", "May 2026", "", 44.98, -93.27),
+    ("Denver", "CO", "Local", "Enacted", "May 2026", "", 39.74, -104.99),
+    ("Baltimore City", "MD", "Local", "Enacted", "May 2026", "", 39.29, -76.61),
+    ("Reno", "NV", "Local", "Enacted", "May 2026", "", 39.53, -119.81),
+    ("Dubuque County", "IA", "Local", "Enacted", "2026", "", 42.47, -90.88),
+    ("Bloomington", "IL", "Local", "Enacted", "2026", "", 40.48, -88.99),
+    ("Normal", "IL", "Local", "Enacted", "2026", "", 40.51, -88.99),
+    ("Iron County", "UT", "Local", "Enacted", "2026", "", 37.68, -113.06),
+    ("Manitowoc County", "WI", "Local", "Enacted", "2026", "18-month", 44.09, -87.66),
+    ("Smithfield", "RI", "Local", "Enacted", "2026", "Outright ban", 41.92, -71.55),
+    ("Meridian Township", "MI", "Local", "Enacted", "2026", "", 42.72, -84.42),
+    ("Washington Township (Macomb Co.)", "MI", "Local", "Enacted", "2026", "", 42.72, -82.92),
+    ("Hill County", "TX", "Local", "Enacted", "2026", "Under developer lawsuit", 32.01, -97.13),
+    ("DeKalb County", "GA", "Local", "Enacted", "2026", "", 33.77, -84.23),
+    ("Lysander (Onondaga Co.)", "NY", "Local", "Enacted", "May 2026", "6-month", 43.17, -76.35),
+    ("Perth (Fulton Co.)", "NY", "Local", "Enacted", "Jun 2025", "1-year", 43.05, -74.19),
+    ("Groton", "CT", "Local", "Enacted", "2025", "Year-long", 41.35, -72.08),
+    ("Peculiar", "MO", "Local", "Enacted", "2025", "Ban", 38.72, -94.46),
+    ("Bangor", "ME", "Local", "Enacted", "2025", "Temporary ban", 44.80, -68.77),
+    # North Carolina — 20+ jurisdictions since late 2025
+    ("Gates County", "NC", "Local", "Enacted", "Dec 2025", "", 36.44, -76.70),
+    ("Brevard", "NC", "Local", "Enacted", "Sep 2025", "", 35.23, -82.73),
+    ("Clay County", "NC", "Local", "Enacted", "Sep 2025", "", 35.06, -83.75),
+    ("Canton", "NC", "Local", "Enacted", "Feb 2026", "", 35.53, -82.84),
+    ("Chatham County", "NC", "Local", "Enacted", "Feb 2026", "", 35.70, -79.26),
+    ("Kings Mountain", "NC", "Local", "Enacted", "Feb 2026", "", 35.25, -81.34),
+    ("Boone", "NC", "Local", "Enacted", "Mar 2026", "", 36.22, -81.67),
+    ("Apex", "NC", "Local", "Enacted", "Apr 2026", "", 35.73, -78.85),
+    ("Orange County", "NC", "Local", "Enacted", "Apr 2026", "", 36.06, -79.12),
+    ("Rowan County", "NC", "Local", "Enacted", "Apr 2026", "", 35.64, -80.47),
+    ("Swain County", "NC", "Local", "Enacted", "Apr 2026", "", 35.49, -83.49),
+    ("Watauga County", "NC", "Local", "Enacted", "2026", "Ban", 36.23, -81.69),
+    ("Madison County", "NC", "Local", "Enacted", "2026", "Ban", 35.85, -82.70),
+    ("Clyde", "NC", "Local", "Enacted", "2026", "Ban", 35.53, -82.91),
     # Proposed / under consideration
-    ("Seattle", "WA", "Local", "Proposed", "Jun 2026", ""),
-    ("Indianapolis", "IN", "Local", "Proposed", "Jun 2026", "Non-binding pause"),
-    ("Pulaski County", "AR", "Local", "Proposed", "2026", ""),
-    ("St. Lawrence County", "NY", "Local", "Proposed", "2026", "Urged municipalities"),
+    ("Charlotte", "NC", "Local", "Proposed", "2026", "Council deadlocked 5–5", 35.23, -80.84),
+    ("Durham", "NC", "Local", "Proposed", "2026", "", 35.99, -78.90),
+    ("Harnett County", "NC", "Local", "Proposed", "2026", "", 35.37, -78.87),
+    ("Cumberland County", "NC", "Local", "Proposed", "2026", "", 35.05, -78.83),
+    ("Fayetteville", "NC", "Local", "Proposed", "2026", "", 35.05, -78.88),
+    ("Seattle", "WA", "Local", "Proposed", "Jun 2026", "", 47.61, -122.33),
+    ("Indianapolis", "IN", "Local", "Proposed", "Jun 2026", "Non-binding pause", 39.77, -86.16),
+    ("Pulaski County", "AR", "Local", "Proposed", "2026", "", 34.75, -92.29),
+    ("St. Lawrence County", "NY", "Local", "Proposed", "2026", "Urged municipalities", 44.59, -75.16),
     # Rejected
-    ("Cheyenne", "WY", "Local", "Rejected", "2026", "Voted down 8–1"),
-    # State-level
-    ("New York (statewide)", "NY", "State", "Proposed", "Jun 2026", "Passed legislature; awaiting governor"),
-    ("Georgia (HB 1012)", "GA", "State", "Proposed", "2026", "Permit bar to Mar 2027"),
-    ("Maine (statewide)", "ME", "State", "Vetoed", "Apr 2026", "Governor veto"),
-    ("Ohio (ballot measure)", "OH", "State", "Rejected", "2026", "Failed signature threshold"),
+    ("Cheyenne", "WY", "Local", "Rejected", "2026", "Voted down 8–1", 41.14, -104.82),
+    # State-level (no single map point)
+    ("New York (statewide)", "NY", "State", "Proposed", "Jun 2026", "Passed legislature; awaiting governor", None, None),
+    ("Georgia (HB 1012)", "GA", "State", "Proposed", "2026", "Permit bar to Mar 2027", None, None),
+    ("Maine (statewide)", "ME", "State", "Vetoed", "Apr 2026", "Governor veto", None, None),
+    ("Ohio (ballot measure)", "OH", "State", "Rejected", "2026", "Failed signature threshold", None, None),
 ]
 MORATORIUMS_DF = pd.DataFrame(
     MORATORIUMS,
-    columns=["locality", "state", "level", "status", "when", "note"])
+    columns=["locality", "state", "level", "status", "when", "note", "lat", "lon"])
 
 # Illustrative 24-hour marginal carbon-intensity curves (gCO2/kWh).
 # STYLIZED shapes anchored to plausible ranges — NOT live. Replace via the
@@ -1031,36 +1036,47 @@ with tab_news:
                "sentiment (Reddit), no key required.")
 
     st.markdown("#### The recurring flashpoints")
+    # (icon, headline, body, youtube-search-query) — the query surfaces news
+    # clips / explainers that demonstrate the issue, no API key required.
     issues = [
         ("💵", "Electricity bills & grid strain",
          "Surging data-centre load raises wholesale prices and can shift "
          "transmission/capacity costs onto ordinary ratepayers; PJM's capacity "
          "price spiked ~10× on data-centre-driven demand. Utilities also delay "
-         "fossil-plant retirements to serve the load."),
+         "fossil-plant retirements to serve the load.",
+         "data center electricity bills ratepayers grid strain news"),
         ("💧", "Water",
          "Evaporative cooling consumes potable water — millions of gallons a day "
          "at a large campus — a flashpoint in drought-prone metros (Phoenix, "
-         "Texas, Georgia)."),
+         "Texas, Georgia).",
+         "data center water use cooling drought news"),
         ("🏘️", "Zoning, land use & moratoria",
          "Counties are enacting moratoria or rejecting rezonings amid resident "
-         "opposition; some developers are pulling out of hostile jurisdictions."),
+         "opposition; some developers are pulling out of hostile jurisdictions.",
+         "data center zoning moratorium residents oppose rezoning news"),
         ("🔊", "Noise",
          "Chillers and backup generators produce a constant low-frequency hum; "
          "noise complaints have driven lawsuits and setback rules (notably in "
-         "Northern Virginia)."),
+         "Northern Virginia).",
+         "data center noise complaints residents hum news"),
         ("🧾", "Tax breaks vs. local benefit",
          "Big sales/property-tax abatements versus relatively few permanent jobs "
-         "fuel debate over whether the local trade-off pays off."),
+         "fuel debate over whether the local trade-off pays off.",
+         "data center tax breaks incentives few jobs news"),
         ("🛢️", "Backup diesel & air permits",
          "Fleets of diesel generators for backup draw air-quality scrutiny and "
-         "permit fights near residential areas."),
+         "permit fights near residential areas.",
+         "data center backup diesel generators air quality permit news"),
     ]
     cards = st.columns(3)
-    for i, (icon, head, body) in enumerate(issues):
+    for i, (icon, head, body, vquery) in enumerate(issues):
         with cards[i % 3]:
             with st.container(border=True):
                 st.markdown(f"### {icon}\n**{head}**")
                 st.caption(body)
+                yt_url = ("https://www.youtube.com/results?search_query="
+                          + urllib.parse.quote(vquery))
+                st.markdown(f"▶ **[Watch videos]({yt_url})**")
 
     st.divider()
     st.markdown("#### Moratorium & ban tracker")
@@ -1083,6 +1099,17 @@ with tab_news:
         list(MORATORIUMS_DF.status.unique()),
         default=["Enacted", "Proposed"])
     mdf = MORATORIUMS_DF[MORATORIUMS_DF.status.isin(fstat)] if fstat else MORATORIUMS_DF
+
+    # map — local actions with coordinates, coloured by status
+    STATUS_COLORS = {"Enacted": "#d73027", "Proposed": "#fdae61",
+                     "Rejected": "#9aa0a6", "Vetoed": "#9aa0a6"}
+    geo = mdf.dropna(subset=["lat", "lon"]).copy()
+    if not geo.empty:
+        geo["color"] = geo["status"].map(STATUS_COLORS).fillna("#9aa0a6")
+        st.map(geo, latitude="lat", longitude="lon", color="color", size=18000)
+        st.caption("🔴 Enacted · 🟠 Proposed · ⚪ Rejected/Vetoed. Points are "
+                   "approximate (county seat / city centre); statewide actions "
+                   "aren't mapped. Zoom to see the North Carolina cluster.")
 
     tcol, ccol = st.columns([3, 2])
     with tcol:
