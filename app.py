@@ -111,6 +111,62 @@ DATACENTERS_DF = pd.DataFrame(
     columns=["market", "region", "country", "grid", "lat", "lon",
              "mw", "uc", "planned", "src"])
 
+# First-party hyperscaler campuses — self-published LOCATIONS (no per-facility MW
+# disclosed). Google: datacenters.google/locations (active US). Meta:
+# datacenters.atmeta.com/us-locations. Coords approximate (town/county centroid).
+HYPERSCALERS = [
+    # company, location, state, lat, lon, src
+    ("Google", "The Dalles", "OR", 45.59, -121.18, "google_dc"),
+    ("Google", "Council Bluffs", "IA", 41.26, -95.86, "google_dc"),
+    ("Google", "Douglas County", "GA", 33.75, -84.75, "google_dc"),
+    ("Google", "Ellis County", "TX", 32.35, -96.85, "google_dc"),
+    ("Google", "Henderson", "NV", 36.04, -114.98, "google_dc"),
+    ("Google", "New Carlisle", "IN", 41.70, -86.51, "google_dc"),
+    ("Google", "Jackson County", "AL", 34.75, -85.86, "google_dc"),
+    ("Google", "Lenoir", "NC", 35.91, -81.54, "google_dc"),
+    ("Google", "Mayes County", "OK", 36.31, -95.32, "google_dc"),
+    ("Google", "Midlothian", "TX", 32.48, -96.99, "google_dc"),
+    ("Google", "Montgomery County", "TN", 36.53, -87.36, "google_dc"),
+    ("Google", "Northern Virginia", "VA", 39.02, -77.48, "google_dc"),
+    ("Google", "Papillion", "NE", 41.15, -96.04, "google_dc"),
+    ("Google", "Red Oak", "TX", 32.52, -96.80, "google_dc"),
+    ("Google", "Storey County", "NV", 39.44, -119.42, "google_dc"),
+    ("Google", "New Albany (Central Ohio)", "OH", 40.08, -82.81, "google_dc"),
+    ("Google", "Omaha", "NE", 41.26, -95.94, "google_dc"),
+    ("Google", "The Lowcountry (Berkeley Co.)", "SC", 33.20, -80.01, "google_dc"),
+    ("Meta", "Prineville", "OR", 44.30, -120.83, "meta_dc"),
+    ("Meta", "Altoona", "IA", 41.64, -93.46, "meta_dc"),
+    ("Meta", "Fort Worth", "TX", 32.76, -97.33, "meta_dc"),
+    ("Meta", "Temple", "TX", 31.10, -97.34, "meta_dc"),
+    ("Meta", "El Paso", "TX", 31.76, -106.49, "meta_dc"),
+    ("Meta", "Los Lunas", "NM", 34.81, -106.73, "meta_dc"),
+    ("Meta", "New Albany", "OH", 40.08, -82.80, "meta_dc"),
+    ("Meta", "Bowling Green", "OH", 41.37, -83.65, "meta_dc"),
+    ("Meta", "DeKalb", "IL", 41.93, -88.75, "meta_dc"),
+    ("Meta", "Forest City", "NC", 35.33, -81.86, "meta_dc"),
+    ("Meta", "Gallatin", "TN", 36.39, -86.45, "meta_dc"),
+    ("Meta", "Stanton Springs (Newton Co.)", "GA", 33.60, -83.71, "meta_dc"),
+    ("Meta", "Sarpy County", "NE", 41.10, -96.11, "meta_dc"),
+    ("Meta", "Eagle Mountain", "UT", 40.31, -112.01, "meta_dc"),
+    ("Meta", "Mesa", "AZ", 33.42, -111.83, "meta_dc"),
+    ("Meta", "Huntsville", "AL", 34.73, -86.59, "meta_dc"),
+    ("Meta", "Montgomery", "AL", 32.37, -86.30, "meta_dc"),
+    ("Meta", "Kuna", "ID", 43.49, -116.42, "meta_dc"),
+    ("Meta", "Jeffersonville", "IN", 38.28, -85.74, "meta_dc"),
+    ("Meta", "Lebanon", "IN", 40.05, -86.47, "meta_dc"),
+    ("Meta", "Richland Parish", "LA", 32.47, -91.75, "meta_dc"),
+    ("Meta", "Rosemount", "MN", 44.74, -93.13, "meta_dc"),
+    ("Meta", "Kansas City", "MO", 39.10, -94.58, "meta_dc"),
+    ("Meta", "Tulsa", "OK", 36.15, -95.99, "meta_dc"),
+    ("Meta", "Aiken", "SC", 33.56, -81.72, "meta_dc"),
+    ("Meta", "Henrico", "VA", 37.56, -77.40, "meta_dc"),
+    ("Meta", "Beaver Dam", "WI", 43.46, -88.84, "meta_dc"),
+    ("Meta", "Cheyenne", "WY", 41.14, -104.82, "meta_dc"),
+]
+HYPERSCALERS_DF = pd.DataFrame(
+    HYPERSCALERS, columns=["company", "location", "state", "lat", "lon", "src"])
+HYPERSCALER_COLORS = {"Google": "#34a853", "Meta": "#0866ff", "Microsoft": "#f25022"}
+
 # Metric toggle config: label -> (column, source keys, blurb).
 DC_METRICS = {
     "Operational (running today)":
@@ -236,6 +292,14 @@ SOURCES = {
                      "https://www.jll.com/en-us/insights/market-dynamics/north-america-data-centers"),
     "cushman_dc":   ("Cushman & Wakefield — Americas Data Center Update H2 2025 (Virginia under-construction)",
                      "https://www.cushmanwakefield.com/en/insights/americas-data-center-update"),
+    "google_dc":    ("Google — Data center locations (first-party)",
+                     "https://datacenters.google/locations/"),
+    "meta_dc":      ("Meta — US data center locations (first-party)",
+                     "https://datacenters.atmeta.com/us-locations/"),
+    "imasons":      ("Infrastructure Masons (iMasons) — industry & sustainability data",
+                     "https://imasons.org/"),
+    "bnef":         ("BloombergNEF (BNEF) — data-centre power-demand research & forecasts",
+                     "https://about.bnef.com/"),
     "ercot_ll":     ("ERCOT — Large Load Interconnection Queue (Dec 2025 board update)",
                      "https://www.ercot.com/gridinfo/load"),
     "pjm_lf":       ("PJM — 2025 Long-Term Load Forecast (data-centre-driven growth)",
@@ -1107,6 +1171,41 @@ with tab_dc:
                "pulled live for carbon on the **Grid timing** tab.")
 
     st.divider()
+    st.subheader("First-party: hyperscaler campuses")
+    st.caption("Individual data-centre campuses that operators publish themselves "
+               "— exact locations, from Google's and Meta's own sites. Neither "
+               "discloses per-facility MW, so these are location markers (not sized "
+               "by power); the broker map above is the place to read scale.")
+
+    firms = st.multiselect("Company", list(HYPERSCALERS_DF.company.unique()),
+                           default=list(HYPERSCALERS_DF.company.unique()))
+    hdf = HYPERSCALERS_DF[HYPERSCALERS_DF.company.isin(firms)].copy() if firms \
+        else HYPERSCALERS_DF.copy()
+
+    if hdf.empty:
+        st.info("Pick a company to plot its campuses.")
+    else:
+        h1, h2 = st.columns(2)
+        h1.metric("Campuses shown", f"{len(hdf)}")
+        h2.metric("States", f"{hdf.state.nunique()}")
+        hdf["color"] = hdf["company"].map(HYPERSCALER_COLORS).fillna("#888888")
+        st.map(hdf, latitude="lat", longitude="lon", color="color", size=16000)
+        st.caption(" · ".join(f"{c} = {len(hdf[hdf.company==c])}"
+                              for c in firms if len(hdf[hdf.company == c])) +
+                   "  ·  🟢 Google · 🔵 Meta")
+        with st.expander("Campus list + sources"):
+            st.dataframe(hdf[["company", "location", "state"]],
+                         use_container_width=True, hide_index=True,
+                         column_config={"company": "Company", "location": "Location",
+                                        "state": "State"})
+            st.caption("First-party sources: " + " · ".join(
+                src_link(k) for k in ["google_dc", "meta_dc"]))
+    st.caption("Only Google and Meta publish full campus lists; Microsoft, AWS, "
+               "Oracle and others disclose regions but not per-site locations as "
+               "cleanly. Research/forecast context: "
+               + src_link("imasons") + " · " + src_link("bnef") + ".")
+
+    st.divider()
     st.subheader("The demand wave — ERCOT & PJM")
     st.caption("The two US grids where data-centre load growth is most acute. "
                "Interconnection-queue figures are filed point-in-time snapshots "
@@ -1397,8 +1496,8 @@ with tab_method:
     st.subheader("Sources & coefficients")
     for key in ["google_2025", "openai_2025", "epoch_2025", "hungry_2025",
                 "mlenergy", "iea_2025", "gpt5_report", "eia930", "pjm_dm2",
-                "cbre_dc", "cbre_glob", "jll_dc", "cushman_dc", "ercot_ll",
-                "pjm_lf", "eia_va",
+                "cbre_dc", "cbre_glob", "jll_dc", "cushman_dc", "google_dc",
+                "meta_dc", "imasons", "bnef", "ercot_ll", "pjm_lf", "eia_va",
                 "google_news", "reddit", "icap_mor", "dcbans", "gjf_mor",
                 "rockinst", "elmaps", "watttime", "gridstatus"]:
         st.markdown(f"- {src_link(key)}")
