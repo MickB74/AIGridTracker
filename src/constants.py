@@ -216,10 +216,41 @@ HYPERSCALERS = [
     ("Meta", "Henrico", "VA", 37.56, -77.40, "meta_dc"),
     ("Meta", "Beaver Dam", "WI", 43.46, -88.84, "meta_dc"),
     ("Meta", "Cheyenne", "WY", 41.14, -104.82, "meta_dc"),
+    # Microsoft — first-party "community" list (local.microsoft.com/communities);
+    # metro/region level, plotted at the named campus/metro centroid.
+    ("Microsoft", "Goodyear (Greater Phoenix)", "AZ", 33.44, -112.36, "microsoft_dc"),
+    ("Microsoft", "Santa Clara / San Jose", "CA", 37.35, -121.95, "microsoft_dc"),
+    ("Microsoft", "Greater Atlanta", "GA", 33.75, -84.39, "microsoft_dc"),
+    ("Microsoft", "Chicago", "IL", 41.85, -87.65, "microsoft_dc"),
+    ("Microsoft", "Northern Indiana (LaPorte)", "IN", 41.61, -86.72, "microsoft_dc"),
+    ("Microsoft", "West Des Moines", "IA", 41.58, -93.71, "microsoft_dc"),
+    ("Microsoft", "Southeast Michigan", "MI", 42.17, -83.78, "microsoft_dc"),
+    ("Microsoft", "Las Vegas", "NV", 36.17, -115.14, "microsoft_dc"),
+    ("Microsoft", "Maiden (Catawba Co.)", "NC", 35.58, -81.21, "microsoft_dc"),
+    ("Microsoft", "Northern Virginia", "VA", 39.02, -77.48, "microsoft_dc"),
+    ("Microsoft", "Central Ohio (Heath)", "OH", 40.02, -82.44, "microsoft_dc"),
+    ("Microsoft", "Boydton (Southern Virginia)", "VA", 36.67, -78.39, "microsoft_dc"),
+    ("Microsoft", "Greater San Antonio", "TX", 29.42, -98.49, "microsoft_dc"),
+    ("Microsoft", "Quincy (Central Washington)", "WA", 47.23, -119.85, "microsoft_dc"),
+    ("Microsoft", "Mount Pleasant (Racine Co.)", "WI", 42.72, -87.85, "microsoft_dc"),
+    ("Microsoft", "Cheyenne", "WY", 41.14, -104.82, "microsoft_dc"),
+    # Amazon / AWS — established US regions + first-party investment announcements
+    # (aboutamazon.com); metro/county level, no per-campus map published.
+    ("Amazon (AWS)", "Northern Virginia (Loudoun Co.)", "VA", 39.08, -77.65, "aws_dc"),
+    ("Amazon (AWS)", "Central Ohio (New Albany)", "OH", 40.08, -82.81, "aws_dc"),
+    ("Amazon (AWS)", "Umatilla / Boardman", "OR", 45.84, -119.70, "aws_dc"),
+    ("Amazon (AWS)", "New Carlisle (Northern Indiana)", "IN", 41.70, -86.51, "aws_dc"),
+    ("Amazon (AWS)", "Madison County", "MS", 32.63, -90.03, "aws_dc"),
+    ("Amazon (AWS)", "Warren County (Vicksburg)", "MS", 32.35, -90.88, "aws_dc"),
+    ("Amazon (AWS)", "Richmond County (Rockingham)", "NC", 34.97, -79.76, "aws_dc"),
+    ("Amazon (AWS)", "Luzerne County (Salem Twp.)", "PA", 41.15, -76.04, "aws_dc"),
+    ("Amazon (AWS)", "Falls Township (Bucks Co.)", "PA", 40.17, -74.76, "aws_dc"),
+    ("Amazon (AWS)", "Caddo / Bossier Parish", "LA", 32.52, -93.75, "aws_dc"),
 ]
 HYPERSCALERS_DF = pd.DataFrame(
     HYPERSCALERS, columns=["company", "location", "state", "lat", "lon", "src"])
-HYPERSCALER_COLORS = {"Google": "#34a853", "Meta": "#0866ff", "Microsoft": "#f25022"}
+HYPERSCALER_COLORS = {"Google": "#34a853", "Meta": "#0866ff",
+                      "Microsoft": "#f25022", "Amazon (AWS)": "#ff9900"}
 
 # Metric toggle config: label -> (column, source keys, blurb).
 DC_METRICS = {
@@ -373,6 +404,10 @@ SOURCES = {
                      "https://datacenters.google/locations/"),
     "meta_dc":      ("Meta — US data center locations (first-party)",
                      "https://datacenters.atmeta.com/us-locations/"),
+    "microsoft_dc": ("Microsoft — Datacenter communities (first-party, metro-level)",
+                     "https://local.microsoft.com/communities/"),
+    "aws_dc":       ("Amazon — AWS investment announcements & global infrastructure (first-party)",
+                     "https://www.aboutamazon.com/what-we-do/amazon-web-services"),
     "imasons":      ("Infrastructure Masons (iMasons) — industry & sustainability data",
                      "https://imasons.org/"),
     "bnef":         ("BloombergNEF (BNEF) — data-center power-demand research & forecasts",
