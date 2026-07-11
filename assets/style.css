@@ -1,10 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
 
+/* Hide Streamlit Header, Footer, Main Menu, and Decoration Bar */
+header, footer, [data-testid="stHeader"], [data-testid="stDecoration"], #MainMenu {
+    visibility: hidden !important;
+    display: none !important;
+    height: 0 !important;
+}
+
 /* Main Body & Typography overrides */
 html, body, [class*="css"], .stApp {
     font-family: 'Inter', sans-serif !important;
-    background-color: #0f1115 !important;
+    background-color: #0c0e12 !important; /* Deeper background */
     color: #e2e8f0 !important;
+}
+
+/* Custom dashboard width and padding to look like a bespoke web app */
+.stAppDeployButton {
+    display: none !important; /* Hide deploy button if present */
+}
+
+.main .block-container {
+    padding-top: 2.5rem !important;
+    padding-bottom: 5rem !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+    max-width: 1550px !important;
+    margin: 0 auto !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -99,6 +120,14 @@ div[data-testid="stMetricValue"] {
     padding: 6px !important;
     border-radius: 12px !important;
     border: 1px solid rgba(255, 255, 255, 0.03) !important;
+}
+
+.stTabs [data-baseweb="tab-border"] {
+    display: none !important;
+}
+
+.stTabs [data-baseweb="tab-highlight-spinner"] {
+    display: none !important;
 }
 
 .stTabs [data-baseweb="tab"] {
