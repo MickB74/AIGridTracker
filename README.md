@@ -10,7 +10,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Interface (7 tabs)
+## Interface (8 tabs)
 
 1. **🧮 Calculator** — enter queries *or* raw output tokens, pick a source's
    coefficient (including live ML.ENERGY models once added), choose a grid carbon
@@ -33,9 +33,13 @@ streamlit run app.py
    curves per ISO (CAISO / ERCOT / PJM), showing the carbon saved by shifting a
    flexible workload from the dirtiest to the cleanest hour. Curves are stylized
    placeholders behind a `fetch_grid_intensity()` stub — wire a live feed there.
-6. **🌍 Macro outlook** — IEA data-centre electricity trajectory (415 → 945 TWh),
+6. **🗞️ Community & backlash** — the pushback side: a sourced rundown of the
+   recurring flashpoints (power bills / grid strain, water, zoning & moratoria,
+   noise, tax breaks, backup diesel) plus **live headlines** via Google News RSS
+   (no API key), filterable by theme and place.
+7. **🌍 Macro outlook** — IEA data-centre electricity trajectory (415 → 945 TWh),
    AI's rising share, inference dominance, and the Jevons-paradox caveat.
-7. **📚 Methodology** — every coefficient, its source link, and the scope caveats
+8. **📚 Methodology** — every coefficient, its source link, and the scope caveats
    (chip-only vs full-stack, market vs location-based carbon, text-only, water).
 
 ## Live data wiring

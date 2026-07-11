@@ -17,6 +17,8 @@ tab. Figures are point-in-time estimates, not guarantees.
 import json
 import os
 import pathlib
+import urllib.parse
+import xml.etree.ElementTree as ET
 
 import streamlit as st
 import pandas as pd
@@ -153,6 +155,8 @@ SOURCES = {
                      "https://www.pjm.com/-/media/DotCom/library/reports-notices/load-forecast/2025-load-report.pdf"),
     "eia_va":       ("EIA — Commercial electricity sales in Virginia driven by data centers (2025)",
                      "https://www.eia.gov/todayinenergy/detail.php?id=67664"),
+    "google_news":  ("Google News — live headline search (Community & backlash tab)",
+                     "https://news.google.com/"),
     "pjm_dm2":      ("PJM Data Miner 2 — gen_by_fuel & fivemin_marginal_emissions feeds",
                      "https://dataminer2.pjm.com/"),
 }
@@ -362,6 +366,51 @@ def eia_latest_demand(api_key: str, respondent: str):
     return float(rows[0]["value"]), rows[0]["period"]
 
 
+# --- Live news — Google News RSS (free, keyless) ---------------------------- #
+GOOGLE_NEWS_RSS = ("https://news.google.com/rss/search?q={q}"
+                   "&hl=en-US&gl=US&ceid=US:en")
+
+# Recurring flashpoints -> a search query that surfaces them.
+NEWS_THEMES = {
+    "Community opposition & moratoria": "data center community opposition moratorium residents",
+    "Electricity bills & grid strain": "data center electricity rates ratepayers grid cost",
+    "Water use": "data center water use drought cooling",
+    "Zoning & land-use fights": "data center zoning rezoning land use fight",
+    "Noise complaints": "data center noise complaints residents",
+    "Tax breaks vs. local benefit": "data center tax incentives subsidy jobs",
+}
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def fetch_news(query: str, limit: int = 15):
+    """Live headlines from Google News RSS (no API key). Returns
+    (list_of_dicts, error_or_None); each dict has title/source/link/published."""
+    try:
+        url = GOOGLE_NEWS_RSS.format(q=urllib.parse.quote(query))
+        r = requests.get(url, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+        r.raise_for_status()
+        root = ET.fromstring(r.content)
+        out = []
+        for it in root.iter("item"):
+            title = (it.findtext("title") or "").strip()
+            src_el = it.find("source")
+            source = src_el.text.strip() if src_el is not None and src_el.text else ""
+            # Google News formats titles as "Headline - Source"; drop the suffix.
+            if source and title.endswith(f" - {source}"):
+                title = title[: -(len(source) + 3)]
+            out.append({
+                "title": title,
+                "source": source,
+                "link": (it.findtext("link") or "").strip(),
+                "published": (it.findtext("pubDate") or "").strip()[:16],
+            })
+            if len(out) >= limit:
+                break
+        return out, None
+    except Exception as e:                                        # noqa: BLE001
+        return None, str(e)
+
+
 # --------------------------------------------------------------------------- #
 # HELPERS
 # --------------------------------------------------------------------------- #
@@ -435,10 +484,11 @@ st.title("⚡ AI Token Footprint")
 st.caption("The energy, water, and carbon behind LLM token usage — from a single "
            "prompt to the global grid. Sourced throughout; see **Methodology**.")
 
-(tab_calc, tab_compare, tab_live, tab_grid, tab_dc, tab_macro,
+(tab_calc, tab_compare, tab_live, tab_grid, tab_dc, tab_news, tab_macro,
  tab_method) = st.tabs(
     ["🧮 Calculator", "📊 Compare sources", "🔬 Live models",
-     "🕐 Grid timing", "🏢 Data centers", "🌍 Macro outlook", "📚 Methodology"]
+     "🕐 Grid timing", "🏢 Data centers", "🗞️ Community & backlash",
+     "🌍 Macro outlook", "📚 Methodology"]
 )
 
 # --------------------------------------------------------------------------- #
@@ -860,7 +910,70 @@ with tab_dc:
         st.caption("Enter your EIA key to pull each grid's latest total demand.")
 
 # --------------------------------------------------------------------------- #
-# TAB 6 — MACRO OUTLOOK
+# TAB 6 — COMMUNITY & BACKLASH (live news + the recurring issues)
+# --------------------------------------------------------------------------- #
+
+with tab_news:
+    st.subheader("Community pushback & the issues data centres face")
+    st.caption("The build-out isn't frictionless: towns are pausing or blocking "
+               "projects over power bills, water, noise, and land use. Live "
+               "headlines below (Google News, no key) — and the recurring themes.")
+
+    st.markdown("#### The recurring flashpoints")
+    issues = [
+        ("💵 Electricity bills & grid strain",
+         "Surging data-centre load raises wholesale prices and can shift "
+         "transmission/capacity costs onto ordinary ratepayers; PJM's capacity "
+         "price spiked ~10× on data-centre-driven demand. Utilities also delay "
+         "fossil-plant retirements to serve the load."),
+        ("💧 Water",
+         "Evaporative cooling consumes potable water — millions of gallons a day "
+         "at a large campus — a flashpoint in drought-prone metros (Phoenix, "
+         "Texas, Georgia)."),
+        ("🏘️ Zoning, land use & moratoria",
+         "Counties are enacting moratoria or rejecting rezonings amid resident "
+         "opposition; some developers are pulling out of hostile jurisdictions."),
+        ("🔊 Noise",
+         "Chillers and backup generators produce a constant low-frequency hum; "
+         "noise complaints have driven lawsuits and setback rules (notably in "
+         "Northern Virginia)."),
+        ("🧾 Tax breaks vs. local benefit",
+         "Big sales/property-tax abatements versus relatively few permanent jobs "
+         "fuel debate over whether the local trade-off pays off."),
+        ("🛢️ Backup diesel & air permits",
+         "Fleets of diesel generators for backup draw air-quality scrutiny and "
+         "permit fights near residential areas."),
+    ]
+    ci = st.columns(2)
+    for i, (head, body) in enumerate(issues):
+        with ci[i % 2]:
+            st.markdown(f"**{head}**")
+            st.caption(body)
+
+    st.divider()
+    st.markdown("#### Live headlines")
+    theme = st.selectbox("Theme", list(NEWS_THEMES.keys()))
+    extra = st.text_input("Add a place or keyword (optional)",
+                          placeholder="e.g. Virginia, Georgia, Tucson")
+    query = NEWS_THEMES[theme] + (f" {extra}" if extra.strip() else "")
+
+    news, nerr = fetch_news(query)
+    if nerr or news is None:
+        st.warning("Couldn't reach Google News (offline or blocked).")
+        st.caption(f"Detail: {nerr}")
+    elif not news:
+        st.info("No headlines for this theme right now — try another or add a place.")
+    else:
+        st.caption(f"{len(news)} recent stories • “{query}” • live via Google News")
+        for a in news:
+            meta = " · ".join(x for x in (a["source"], a["published"]) if x)
+            st.markdown(f"- [{a['title']}]({a['link']})  \n  <small>{meta}</small>",
+                        unsafe_allow_html=True)
+    st.caption("Headlines are an automated news search, unfiltered and not "
+               "endorsements; follow the link to the original outlet.")
+
+# --------------------------------------------------------------------------- #
+# TAB 7 — MACRO OUTLOOK
 # --------------------------------------------------------------------------- #
 
 with tab_macro:
@@ -884,7 +997,7 @@ with tab_macro:
         "a year), but cheaper inference drives more usage — total load still rises.")
 
 # --------------------------------------------------------------------------- #
-# TAB 7 — METHODOLOGY
+# TAB 8 — METHODOLOGY
 # --------------------------------------------------------------------------- #
 
 with tab_method:
@@ -892,7 +1005,7 @@ with tab_method:
     for key in ["google_2025", "openai_2025", "epoch_2025", "hungry_2025",
                 "mlenergy", "iea_2025", "gpt5_report", "eia930", "pjm_dm2",
                 "cbre_dc", "cbre_glob", "ercot_ll", "pjm_lf", "eia_va",
-                "elmaps", "watttime", "gridstatus"]:
+                "google_news", "elmaps", "watttime", "gridstatus"]:
         st.markdown(f"- {src_link(key)}")
 
     st.divider()
