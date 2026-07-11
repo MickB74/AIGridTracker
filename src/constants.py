@@ -693,3 +693,16 @@ REDDIT_HOSTS = ("https://old.reddit.com/search.rss",
 _ATOM = "{http://www.w3.org/2005/Atom}"
 REDDIT_UA = "AIGridTracker/1.0 (public sentiment tab; contact via GitHub)"
 REDDIT_PARQUET = pathlib.Path(__file__).resolve().parent.parent / "reddit_corpus.parquet"
+
+# Subreddits pulled directly each day — site-wide keyword search misses the
+# data-center communities. datacenter/datacenters are on-topic wholesale; the
+# rest are searched (restrict_sr) for "data center" so only relevant posts land.
+CURATED_SUBS = ("datacenter", "datacenters", "energy", "RealEstate")
+# Obvious noise to drop from any source (site-wide search drags these in). Any
+# subreddit ending in "content" or a u/ user page is also dropped in code.
+DENY_SUBS = {
+    "askreddit", "codwarzone", "thefinals", "smallstreetbets", "etfinvesting",
+    "sndk_stock", "irenstocks", "passive_income", "sui", "lovegrok",
+    "pokecorner", "ffxivrecruitment", "purtle", "marketfluxhub", "facepalm",
+    "defendingaiart", "lovegroknews", "coherencephysics",
+}

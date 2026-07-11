@@ -3,7 +3,11 @@ import requests
 import time
 import pandas as pd
 import streamlit as st
-from src.constants import REDDIT_HOSTS, _ATOM, REDDIT_UA, REDDIT_PARQUET, NEWS_THEMES
+from src.constants import (REDDIT_HOSTS, _ATOM, REDDIT_UA, REDDIT_PARQUET,
+                           NEWS_THEMES, CURATED_SUBS, DENY_SUBS)
+
+# base hosts (REDDIT_HOSTS are full .../search.rss URLs) for subreddit endpoints
+_REDDIT_BASES = tuple(h.rsplit("/search.rss", 1)[0] for h in REDDIT_HOSTS)
 
 def _parse_reddit_rss(content: bytes, limit: int):
     root = ET.fromstring(content)
@@ -41,19 +45,16 @@ def _reddit_query(news_query: str) -> str:
     return base or news_query
 
 
-@st.cache_data(ttl=3600, show_spinner=False)
-def fetch_reddit(query: str, limit: int = 15, sort: str = "relevance",
-                 period: str = "year"):
-    """Live Reddit threads via the public Atom search RSS (keyless). Returns
-    (list_of_dicts, error_or_None); each dict has title/subreddit/link/created.
-    Tries old.reddit.com (rarely throttled) first, then www, each with a short
-    backoff retry on 429."""
-    params = {"q": query, "sort": sort, "t": period}
+def _reddit_rss(path: str, params: dict, limit: int):
+    """GET a Reddit .rss endpoint across mirror hosts with 429 backoff.
+    `path` is appended to each base host (e.g. "/search.rss", "/r/energy/new.rss").
+    Returns (list_of_dicts, error_or_None). Tries old.reddit.com (rarely
+    throttled) first, then www, each with a short backoff retry on 429."""
     last = "Reddit unreachable"
-    for host in REDDIT_HOSTS:
+    for base in _REDDIT_BASES:
         for attempt in range(3):
             try:
-                r = requests.get(host, params=params,
+                r = requests.get(base + path, params=params,
                                  headers={"User-Agent": REDDIT_UA}, timeout=15)
                 if r.status_code == 429:
                     last = "429 (rate-limited)"
@@ -68,6 +69,49 @@ def fetch_reddit(query: str, limit: int = 15, sort: str = "relevance",
                 last = str(e)
                 break   # network/parse error on this host — try the next host
     return None, last
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def fetch_reddit(query: str, limit: int = 15, sort: str = "relevance",
+                 period: str = "year"):
+    """Site-wide Reddit search via the public Atom RSS (keyless). Returns
+    (list_of_dicts, error_or_None); each dict has title/subreddit/link/created."""
+    return _reddit_rss("/search.rss",
+                       {"q": query, "sort": sort, "t": period}, limit)
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def fetch_subreddit(sub: str, query: str = None, limit: int = 25):
+    """Posts from r/<sub>: newest, or a subreddit-restricted search if `query`
+    is given. Lets us pull the data-center communities directly instead of
+    hoping site-wide search happens to surface them."""
+    if query:
+        return _reddit_rss(f"/r/{sub}/search.rss",
+                           {"q": query, "restrict_sr": 1, "sort": "new",
+                            "t": "year"}, limit)
+    return _reddit_rss(f"/r/{sub}/new.rss", {}, limit)
+
+
+def _is_junk_sub(sub: str) -> bool:
+    """Drop obvious noise (spam/content-farm subs, u/ user pages) that site-wide
+    keyword search drags in — see DENY_SUBS."""
+    s = (sub or "").replace("r/", "").strip().lower()
+    return s.startswith("u/") or s.endswith("content") or s in DENY_SUBS
+
+
+def _theme_of(title: str) -> list:
+    """Which NEWS_THEMES a Reddit title plausibly belongs to, by descriptor
+    keyword. Used to file curated-subreddit posts under the right theme filter;
+    a post matching none is dropped (keeps the theme-organized feed on-topic)."""
+    t = (title or "").lower()
+    hits = []
+    for theme, q in NEWS_THEMES.items():
+        words = q.split()
+        terms = (words[2:] if [w.lower() for w in words[:2]] == ["data", "center"]
+                 else words)
+        if any(w.lower() in t for w in terms):
+            hits.append(theme)
+    return hits
 
 
 @st.cache_data(ttl=86400, show_spinner=False)
@@ -98,8 +142,25 @@ def load_reddit_corpus(day: str) -> tuple:
             if not prior.empty and "theme" in prior:
                 rows.extend(prior[prior.theme == theme].to_dict("records"))
 
+    # pull the data-center communities directly, then file each post under the
+    # theme(s) it matches (datacenter subs wholesale; adjacent subs on-topic only)
+    for sub in CURATED_SUBS:
+        time.sleep(2)
+        q = None if sub.lower() in ("datacenter", "datacenters") else '"data center"'
+        posts, err = fetch_subreddit(sub, query=q)
+        if posts:
+            for p in posts:
+                for theme in _theme_of(p["title"]):
+                    rows.append({**p, "theme": theme})
+        else:
+            errs.append(f"r/{sub}: {err or 'no results'}")
+
+    # drop obvious junk subreddits from every source
+    rows = [r for r in rows if not _is_junk_sub(r.get("subreddit"))]
+
     if rows:
-        df = (pd.DataFrame(rows).drop_duplicates("link").reset_index(drop=True))
+        df = (pd.DataFrame(rows)
+              .drop_duplicates(["link", "theme"]).reset_index(drop=True))
         try:
             df.to_parquet(REDDIT_PARQUET, index=False)
         except Exception:                                         # noqa: BLE001
