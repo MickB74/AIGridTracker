@@ -1,5 +1,5 @@
 {
- "generated": "2026-07 (Senate contact XML + Wikipedia current governors)",
+ "generated": "2026-07 (Senate XML + current governors + @unitedstates congress-legislators for House)",
  "officials": [
   {
    "office": "Senator",
@@ -10,7 +10,8 @@
    "contact": "https://alsobrooks.senate.gov/contact",
    "state_full": "Maryland",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -21,7 +22,8 @@
    "contact": "https://www.armstrong.senate.gov/contact",
    "state_full": "Oklahoma",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -32,7 +34,8 @@
    "contact": "https://www.baldwin.senate.gov/contact",
    "state_full": "Wisconsin",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -43,7 +46,8 @@
    "contact": "https://www.banks.senate.gov/contact",
    "state_full": "Indiana",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -54,7 +58,8 @@
    "contact": "https://www.barrasso.senate.gov/contact",
    "state_full": "Wyoming",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -65,7 +70,8 @@
    "contact": "https://www.bennet.senate.gov/contact",
    "state_full": "Colorado",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -76,7 +82,8 @@
    "contact": "https://www.blackburn.senate.gov/contact",
    "state_full": "Tennessee",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -87,7 +94,8 @@
    "contact": "https://www.blumenthal.senate.gov/contact",
    "state_full": "Connecticut",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -98,7 +106,8 @@
    "contact": "https://www.bluntrochester.senate.gov/contact",
    "state_full": "Delaware",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -109,7 +118,8 @@
    "contact": "https://www.booker.senate.gov/contact",
    "state_full": "New Jersey",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -120,7 +130,8 @@
    "contact": "https://www.boozman.senate.gov/contact",
    "state_full": "Arkansas",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -131,7 +142,8 @@
    "contact": "https://www.britt.senate.gov/contact",
    "state_full": "Alabama",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -142,7 +154,8 @@
    "contact": "https://www.budd.senate.gov/contact",
    "state_full": "North Carolina",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -153,7 +166,8 @@
    "contact": "https://www.cantwell.senate.gov/contact",
    "state_full": "Washington",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -164,7 +178,8 @@
    "contact": "https://www.capito.senate.gov/contact",
    "state_full": "West Virginia",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -175,7 +190,8 @@
    "contact": "https://www.cassidy.senate.gov/contact",
    "state_full": "Louisiana",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -186,7 +202,8 @@
    "contact": "https://www.collins.senate.gov/contact",
    "state_full": "Maine",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -197,7 +214,8 @@
    "contact": "https://www.coons.senate.gov/contact",
    "state_full": "Delaware",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -208,7 +226,8 @@
    "contact": "https://www.cornyn.senate.gov/contact",
    "state_full": "Texas",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -219,7 +238,8 @@
    "contact": "https://www.cortezmasto.senate.gov/contact",
    "state_full": "Nevada",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -230,7 +250,8 @@
    "contact": "https://www.cotton.senate.gov/contact",
    "state_full": "Arkansas",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -241,7 +262,8 @@
    "contact": "https://www.cramer.senate.gov/contact",
    "state_full": "North Dakota",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -252,7 +274,8 @@
    "contact": "https://www.crapo.senate.gov/contact",
    "state_full": "Idaho",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -263,7 +286,8 @@
    "contact": "https://www.cruz.senate.gov/contact",
    "state_full": "Texas",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -274,7 +298,8 @@
    "contact": "https://www.curtis.senate.gov/contact",
    "state_full": "Utah",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -285,7 +310,8 @@
    "contact": "https://www.daines.senate.gov/contact",
    "state_full": "Montana",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -296,7 +322,8 @@
    "contact": "https://www.duckworth.senate.gov/contact",
    "state_full": "Illinois",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -307,7 +334,8 @@
    "contact": "https://www.durbin.senate.gov/contact",
    "state_full": "Illinois",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -318,7 +346,8 @@
    "contact": "https://www.ernst.senate.gov/contact",
    "state_full": "Iowa",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -329,7 +358,8 @@
    "contact": "https://www.fetterman.senate.gov/contact",
    "state_full": "Pennsylvania",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -340,7 +370,8 @@
    "contact": "https://www.fischer.senate.gov/contact",
    "state_full": "Nebraska",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -351,7 +382,8 @@
    "contact": "https://www.gallego.senate.gov/contact",
    "state_full": "Arizona",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -362,7 +394,8 @@
    "contact": "https://www.gillibrand.senate.gov/contact",
    "state_full": "New York",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -373,7 +406,8 @@
    "contact": "https://www.lgraham.senate.gov/contact",
    "state_full": "South Carolina",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -384,7 +418,8 @@
    "contact": "https://www.grassley.senate.gov/contact",
    "state_full": "Iowa",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -395,7 +430,8 @@
    "contact": "https://www.hagerty.senate.gov/contact",
    "state_full": "Tennessee",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -406,7 +442,8 @@
    "contact": "https://www.hassan.senate.gov/contact",
    "state_full": "New Hampshire",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -417,7 +454,8 @@
    "contact": "https://www.hawley.senate.gov/contact",
    "state_full": "Missouri",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -428,7 +466,8 @@
    "contact": "https://www.heinrich.senate.gov/contact",
    "state_full": "New Mexico",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -439,7 +478,8 @@
    "contact": "https://www.hickenlooper.senate.gov/contact",
    "state_full": "Colorado",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -450,7 +490,8 @@
    "contact": "https://www.hirono.senate.gov/contact",
    "state_full": "Hawaii",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -461,7 +502,8 @@
    "contact": "https://www.hoeven.senate.gov/contact",
    "state_full": "North Dakota",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -472,7 +514,8 @@
    "contact": "https://www.husted.senate.gov/contact",
    "state_full": "Ohio",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -483,7 +526,8 @@
    "contact": "https://www.hydesmith.senate.gov/contact",
    "state_full": "Mississippi",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -494,7 +538,8 @@
    "contact": "https://www.ronjohnson.senate.gov/contact",
    "state_full": "Wisconsin",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -505,7 +550,8 @@
    "contact": "https://www.justice.senate.gov/contact",
    "state_full": "West Virginia",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -516,7 +562,8 @@
    "contact": "https://www.kaine.senate.gov/contact",
    "state_full": "Virginia",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -527,7 +574,8 @@
    "contact": "https://www.kelly.senate.gov/contact",
    "state_full": "Arizona",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -538,7 +586,8 @@
    "contact": "https://www.kennedy.senate.gov/contact",
    "state_full": "Louisiana",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -549,7 +598,8 @@
    "contact": "https://www.kim.senate.gov/contact",
    "state_full": "New Jersey",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -560,7 +610,8 @@
    "contact": "https://www.king.senate.gov/contact",
    "state_full": "Maine",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -571,7 +622,8 @@
    "contact": "https://www.klobuchar.senate.gov/contact",
    "state_full": "Minnesota",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -582,7 +634,8 @@
    "contact": "https://www.lankford.senate.gov/contact",
    "state_full": "Oklahoma",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -593,7 +646,8 @@
    "contact": "https://www.lee.senate.gov/contact",
    "state_full": "Utah",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -604,7 +658,8 @@
    "contact": "https://www.lujan.senate.gov/contact",
    "state_full": "New Mexico",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -615,7 +670,8 @@
    "contact": "https://www.lummis.senate.gov/contact",
    "state_full": "Wyoming",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -626,7 +682,8 @@
    "contact": "https://www.markey.senate.gov/contact",
    "state_full": "Massachusetts",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -637,7 +694,8 @@
    "contact": "https://www.marshall.senate.gov/contact",
    "state_full": "Kansas",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -648,7 +706,8 @@
    "contact": "https://www.mcconnell.senate.gov/contact",
    "state_full": "Kentucky",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -659,7 +718,8 @@
    "contact": "https://mccormick.senate.gov/contact",
    "state_full": "Pennsylvania",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -670,7 +730,8 @@
    "contact": "https://www.merkley.senate.gov/contact",
    "state_full": "Oregon",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -681,7 +742,8 @@
    "contact": "https://www.moody.senate.gov/contact",
    "state_full": "Florida",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -692,7 +754,8 @@
    "contact": "https://www.moran.senate.gov/contact",
    "state_full": "Kansas",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -703,7 +766,8 @@
    "contact": "https://www.moreno.senate.gov/contact",
    "state_full": "Ohio",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -714,7 +778,8 @@
    "contact": "https://www.murkowski.senate.gov/contact",
    "state_full": "Alaska",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -725,7 +790,8 @@
    "contact": "https://www.murphy.senate.gov/contact",
    "state_full": "Connecticut",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -736,7 +802,8 @@
    "contact": "https://www.murray.senate.gov/contact",
    "state_full": "Washington",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -747,7 +814,8 @@
    "contact": "https://www.ossoff.senate.gov/contact",
    "state_full": "Georgia",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -758,7 +826,8 @@
    "contact": "https://www.padilla.senate.gov/contact",
    "state_full": "California",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -769,7 +838,8 @@
    "contact": "https://www.paul.senate.gov/contact",
    "state_full": "Kentucky",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -780,7 +850,8 @@
    "contact": "https://www.peters.senate.gov/contact",
    "state_full": "Michigan",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -791,7 +862,8 @@
    "contact": "https://www.reed.senate.gov/contact",
    "state_full": "Rhode Island",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -802,7 +874,8 @@
    "contact": "https://www.ricketts.senate.gov/contact",
    "state_full": "Nebraska",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -813,7 +886,8 @@
    "contact": "https://www.risch.senate.gov/contact",
    "state_full": "Idaho",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -824,7 +898,8 @@
    "contact": "https://www.rosen.senate.gov/contact",
    "state_full": "Nevada",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -835,7 +910,8 @@
    "contact": "https://www.rounds.senate.gov/contact",
    "state_full": "South Dakota",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -846,7 +922,8 @@
    "contact": "https://www.sanders.senate.gov/contact",
    "state_full": "Vermont",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -857,7 +934,8 @@
    "contact": "https://www.schatz.senate.gov/contact",
    "state_full": "Hawaii",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -868,7 +946,8 @@
    "contact": "https://www.schiff.senate.gov/contact",
    "state_full": "California",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -879,7 +958,8 @@
    "contact": "https://www.schmitt.senate.gov/contact",
    "state_full": "Missouri",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -890,7 +970,8 @@
    "contact": "https://www.schumer.senate.gov/contact",
    "state_full": "New York",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -901,7 +982,8 @@
    "contact": "https://www.rickscott.senate.gov/contact",
    "state_full": "Florida",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -912,7 +994,8 @@
    "contact": "https://www.scott.senate.gov/contact",
    "state_full": "South Carolina",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -923,7 +1006,8 @@
    "contact": "https://www.shaheen.senate.gov/contact",
    "state_full": "New Hampshire",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -934,7 +1018,8 @@
    "contact": "https://www.sheehy.senate.gov/contact",
    "state_full": "Montana",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -945,7 +1030,8 @@
    "contact": "https://www.slotkin.senate.gov/contact",
    "state_full": "Michigan",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -956,7 +1042,8 @@
    "contact": "https://www.smith.senate.gov/contact",
    "state_full": "Minnesota",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -967,7 +1054,8 @@
    "contact": "https://www.sullivan.senate.gov/contact",
    "state_full": "Alaska",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -978,7 +1066,8 @@
    "contact": "https://www.thune.senate.gov/contact",
    "state_full": "South Dakota",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -989,7 +1078,8 @@
    "contact": "https://www.tillis.senate.gov/contact",
    "state_full": "North Carolina",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -1000,7 +1090,8 @@
    "contact": "https://www.tuberville.senate.gov/contact",
    "state_full": "Alabama",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -1011,7 +1102,8 @@
    "contact": "https://www.vanhollen.senate.gov/contact",
    "state_full": "Maryland",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -1022,7 +1114,8 @@
    "contact": "https://www.warner.senate.gov/contact",
    "state_full": "Virginia",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -1033,7 +1126,8 @@
    "contact": "https://www.warnock.senate.gov/contact",
    "state_full": "Georgia",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -1044,7 +1138,8 @@
    "contact": "https://www.warren.senate.gov/contact",
    "state_full": "Massachusetts",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -1055,7 +1150,8 @@
    "contact": "https://www.welch.senate.gov/contact",
    "state_full": "Vermont",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -1066,7 +1162,8 @@
    "contact": "https://www.whitehouse.senate.gov/contact",
    "state_full": "Rhode Island",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -1077,7 +1174,8 @@
    "contact": "https://www.wicker.senate.gov/contact",
    "state_full": "Mississippi",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -1088,7 +1186,8 @@
    "contact": "https://www.wyden.senate.gov/contact",
    "state_full": "Oregon",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Senator",
@@ -1099,7 +1198,8 @@
    "contact": "https://www.young.senate.gov/contact",
    "state_full": "Indiana",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1110,7 +1210,8 @@
    "contact": "https://governor.alabama.gov",
    "state_full": "Alabama",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1121,7 +1222,8 @@
    "contact": "https://gov.alaska.gov",
    "state_full": "Alaska",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1132,7 +1234,8 @@
    "contact": "https://azgovernor.gov",
    "state_full": "Arizona",
    "stance": "Signed a 3-year pause on new data-center sales-tax breaks and proposed a per-gallon water-user fee.",
-   "stance_src": "az_hobbs"
+   "stance_src": "az_hobbs",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1143,7 +1246,8 @@
    "contact": "https://governor.arkansas.gov",
    "state_full": "Arkansas",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1154,7 +1258,8 @@
    "contact": "https://www.gov.ca.gov",
    "state_full": "California",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1165,7 +1270,8 @@
    "contact": "https://governor.colorado.gov",
    "state_full": "Colorado",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1176,7 +1282,8 @@
    "contact": "https://portal.ct.gov/governor",
    "state_full": "Connecticut",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1187,7 +1294,8 @@
    "contact": "https://governor.delaware.gov",
    "state_full": "Delaware",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1198,7 +1306,8 @@
    "contact": "https://www.flgov.com",
    "state_full": "Florida",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1209,7 +1318,8 @@
    "contact": "https://gov.georgia.gov",
    "state_full": "Georgia",
    "stance": "Vetoed HB 1192 (2024), which would have paused data-center sales-tax exemptions — sided with keeping incentives.",
-   "stance_src": "ga_kemp"
+   "stance_src": "ga_kemp",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1220,7 +1330,8 @@
    "contact": "https://governor.hawaii.gov",
    "state_full": "Hawaii",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1231,7 +1342,8 @@
    "contact": "https://gov.idaho.gov",
    "state_full": "Idaho",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1242,7 +1354,8 @@
    "contact": "https://gov.illinois.gov",
    "state_full": "Illinois",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1253,7 +1366,8 @@
    "contact": "https://www.in.gov/gov",
    "state_full": "Indiana",
    "stance": "Broke ground on Meta's $10B campus but insists hyperscalers 'pay every penny' and opposes tax abatements.",
-   "stance_src": "in_braun"
+   "stance_src": "in_braun",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1264,7 +1378,8 @@
    "contact": "https://governor.iowa.gov",
    "state_full": "Iowa",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1275,7 +1390,8 @@
    "contact": "https://governor.kansas.gov",
    "state_full": "Kansas",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1286,7 +1402,8 @@
    "contact": "https://governor.ky.gov",
    "state_full": "Kentucky",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1297,7 +1414,8 @@
    "contact": "https://gov.louisiana.gov",
    "state_full": "Louisiana",
    "stance": "Courted Meta's $10B campus with a 20-year sales-tax exemption; later signed an order to protect utility ratepayers.",
-   "stance_src": "la_landry"
+   "stance_src": "la_landry",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1308,7 +1426,8 @@
    "contact": "https://www.maine.gov/governor",
    "state_full": "Maine",
    "stance": "Vetoed a statewide data-center moratorium bill (Apr 2026).",
-   "stance_src": "rockinst"
+   "stance_src": "rockinst",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1319,7 +1438,8 @@
    "contact": "https://governor.maryland.gov",
    "state_full": "Maryland",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1330,7 +1450,8 @@
    "contact": "https://www.mass.gov/orgs/office-of-the-governor",
    "state_full": "Massachusetts",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1341,7 +1462,8 @@
    "contact": "https://www.michigan.gov/whitmer",
    "state_full": "Michigan",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1352,7 +1474,8 @@
    "contact": "https://mn.gov/governor",
    "state_full": "Minnesota",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1363,7 +1486,8 @@
    "contact": "https://governorreeves.ms.gov",
    "state_full": "Mississippi",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1374,7 +1498,8 @@
    "contact": "https://governor.mo.gov",
    "state_full": "Missouri",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1385,7 +1510,8 @@
    "contact": "https://governor.mt.gov",
    "state_full": "Montana",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1396,7 +1522,8 @@
    "contact": "https://governor.nebraska.gov",
    "state_full": "Nebraska",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1407,7 +1534,8 @@
    "contact": "https://gov.nv.gov",
    "state_full": "Nevada",
    "stance": "Backs data-center projects but requires closed-loop water recycling to limit consumption.",
-   "stance_src": "nv_lombardo"
+   "stance_src": "nv_lombardo",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1418,7 +1546,8 @@
    "contact": "https://www.governor.nh.gov",
    "state_full": "New Hampshire",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1429,7 +1558,8 @@
    "contact": "https://www.nj.gov/governor",
    "state_full": "New Jersey",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1440,7 +1570,8 @@
    "contact": "https://www.governor.state.nm.us",
    "state_full": "New Mexico",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1451,7 +1582,8 @@
    "contact": "https://www.governor.ny.gov",
    "state_full": "New York",
    "stance": "Weighing a data-center moratorium passed by the legislature (Jun 2026).",
-   "stance_src": "rockinst"
+   "stance_src": "rockinst",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1462,7 +1594,8 @@
    "contact": "https://governor.nc.gov",
    "state_full": "North Carolina",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1473,7 +1606,8 @@
    "contact": "https://www.governor.nd.gov",
    "state_full": "North Dakota",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1484,7 +1618,8 @@
    "contact": "https://governor.ohio.gov",
    "state_full": "Ohio",
    "stance": "Paused new data-center tax exemptions pending a legislative study; says data centers should pay their fair share.",
-   "stance_src": "oh_dewine"
+   "stance_src": "oh_dewine",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1495,7 +1630,8 @@
    "contact": "https://oklahoma.gov/governor",
    "state_full": "Oklahoma",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1506,7 +1642,8 @@
    "contact": "https://www.oregon.gov/gov",
    "state_full": "Oregon",
    "stance": "Convened a state Data Center Advisory Committee and backed a one-year tax-break moratorium ('stop being a cheap date').",
-   "stance_src": "or_kotek"
+   "stance_src": "or_kotek",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1517,7 +1654,8 @@
    "contact": "https://www.governor.pa.gov",
    "state_full": "Pennsylvania",
    "stance": "Proposed 'GRID' standards tying incentives to escalating clean-firm energy use and making developers pay grid-upgrade costs.",
-   "stance_src": "pa_shapiro"
+   "stance_src": "pa_shapiro",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1528,7 +1666,8 @@
    "contact": "https://governor.ri.gov",
    "state_full": "Rhode Island",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1539,7 +1678,8 @@
    "contact": "https://governor.sc.gov",
    "state_full": "South Carolina",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1550,7 +1690,8 @@
    "contact": "https://governor.sd.gov",
    "state_full": "South Dakota",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1561,7 +1702,8 @@
    "contact": "https://www.tn.gov/governor",
    "state_full": "Tennessee",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1572,7 +1714,8 @@
    "contact": "https://gov.texas.gov",
    "state_full": "Texas",
    "stance": "Signed SB 6 (2025): 75 MW+ loads must pay for grid upgrades and curtail in emergencies; later urged limits on rural-neighborhood builds.",
-   "stance_src": "tx_sb6"
+   "stance_src": "tx_sb6",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1583,7 +1726,8 @@
    "contact": "https://governor.utah.gov",
    "state_full": "Utah",
    "stance": "Signed EO 2026-03 setting a 'higher bar' for data centers — protecting water, air quality, and ratepayers.",
-   "stance_src": "ut_cox"
+   "stance_src": "ut_cox",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1594,7 +1738,8 @@
    "contact": "https://governor.vermont.gov",
    "state_full": "Vermont",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1605,7 +1750,8 @@
    "contact": "https://www.governor.virginia.gov",
    "state_full": "Virginia",
    "stance": "Signed 2026 energy laws: data centers pay their fair share, stricter backup-generator rules, and a first-of-its-kind energy-consumption tax.",
-   "stance_src": "va_span"
+   "stance_src": "va_span",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1616,7 +1762,8 @@
    "contact": "https://www.governor.wa.gov",
    "state_full": "Washington",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1627,7 +1774,8 @@
    "contact": "https://governor.wv.gov",
    "state_full": "West Virginia",
    "stance": "",
-   "stance_src": ""
+   "stance_src": "",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1638,7 +1786,8 @@
    "contact": "https://evers.wi.gov",
    "state_full": "Wisconsin",
    "stance": "Courted Microsoft's $7B+ Mount Pleasant campus and signed pro-data-center incentive legislation.",
-   "stance_src": "wi_evers"
+   "stance_src": "wi_evers",
+   "district": ""
   },
   {
    "office": "Governor",
@@ -1648,6 +1797,5251 @@
    "website": "https://governor.wyo.gov",
    "contact": "https://governor.wyo.gov",
    "state_full": "Wyoming",
+   "stance": "",
+   "stance_src": "",
+   "district": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AL",
+   "state_full": "Alabama",
+   "name": "Robert B. Aderholt",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://aderholt.house.gov",
+   "contact": "https://aderholt.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Gus M. Bilirakis",
+   "party": "Republican",
+   "district": "12",
+   "website": "https://bilirakis.house.gov",
+   "contact": "https://bilirakis.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "GA",
+   "state_full": "Georgia",
+   "name": "Sanford D. Bishop, Jr.",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://bishop.house.gov",
+   "contact": "https://bishop.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Vern Buchanan",
+   "party": "Republican",
+   "district": "16",
+   "website": "https://buchanan.house.gov",
+   "contact": "https://buchanan.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Ken Calvert",
+   "party": "Republican",
+   "district": "41",
+   "website": "https://calvert.house.gov",
+   "contact": "https://calvert.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IN",
+   "state_full": "Indiana",
+   "name": "André Carson",
+   "party": "Democrat",
+   "district": "7",
+   "website": "https://carson.house.gov",
+   "contact": "https://carson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "John R. Carter",
+   "party": "Republican",
+   "district": "31",
+   "website": "https://carter.house.gov",
+   "contact": "https://carter.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Kathy Castor",
+   "party": "Democrat",
+   "district": "14",
+   "website": "https://castor.house.gov",
+   "contact": "https://castor.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Judy Chu",
+   "party": "Democrat",
+   "district": "28",
+   "website": "https://chu.house.gov",
+   "contact": "https://chu.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Yvette D. Clarke",
+   "party": "Democrat",
+   "district": "9",
+   "website": "https://clarke.house.gov",
+   "contact": "https://clarke.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MO",
+   "state_full": "Missouri",
+   "name": "Emanuel Cleaver",
+   "party": "Democrat",
+   "district": "5",
+   "website": "https://cleaver.house.gov",
+   "contact": "https://cleaver.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "SC",
+   "state_full": "South Carolina",
+   "name": "James E. Clyburn",
+   "party": "Democrat",
+   "district": "6",
+   "website": "https://clyburn.house.gov",
+   "contact": "https://clyburn.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TN",
+   "state_full": "Tennessee",
+   "name": "Steve Cohen",
+   "party": "Democrat",
+   "district": "9",
+   "website": "https://cohen.house.gov",
+   "contact": "https://cohen.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OK",
+   "state_full": "Oklahoma",
+   "name": "Tom Cole",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://cole.house.gov",
+   "contact": "https://cole.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Jim Costa",
+   "party": "Democrat",
+   "district": "21",
+   "website": "https://costa.house.gov",
+   "contact": "https://costa.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CT",
+   "state_full": "Connecticut",
+   "name": "Joe Courtney",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://courtney.house.gov",
+   "contact": "https://courtney.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AR",
+   "state_full": "Arkansas",
+   "name": "Eric A. \"Rick\" Crawford",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://crawford.house.gov",
+   "contact": "https://crawford.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Henry Cuellar",
+   "party": "Democrat",
+   "district": "28",
+   "website": "https://cuellar.house.gov",
+   "contact": "https://cuellar.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Danny K. Davis",
+   "party": "Democrat",
+   "district": "7",
+   "website": "https://davis.house.gov",
+   "contact": "https://davis.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CO",
+   "state_full": "Colorado",
+   "name": "Diana DeGette",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://degette.house.gov",
+   "contact": "https://degette.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CT",
+   "state_full": "Connecticut",
+   "name": "Rosa L. DeLauro",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://delauro.house.gov",
+   "contact": "https://delauro.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TN",
+   "state_full": "Tennessee",
+   "name": "Scott DesJarlais",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://desjarlais.house.gov",
+   "contact": "https://desjarlais.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Mario Diaz-Balart",
+   "party": "Republican",
+   "district": "26",
+   "website": "https://mariodiazbalart.house.gov",
+   "contact": "https://mariodiazbalart.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Lloyd Doggett",
+   "party": "Democrat",
+   "district": "37",
+   "website": "https://doggett.house.gov",
+   "contact": "https://doggett.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TN",
+   "state_full": "Tennessee",
+   "name": "Charles J. \"Chuck\" Fleischmann",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://fleischmann.house.gov",
+   "contact": "https://fleischmann.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NC",
+   "state_full": "North Carolina",
+   "name": "Virginia Foxx",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://foxx.house.gov",
+   "contact": "https://foxx.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "John Garamendi",
+   "party": "Democrat",
+   "district": "8",
+   "website": "https://garamendi.house.gov",
+   "contact": "https://garamendi.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AZ",
+   "state_full": "Arizona",
+   "name": "Paul A. Gosar",
+   "party": "Republican",
+   "district": "9",
+   "website": "https://gosar.house.gov",
+   "contact": "https://gosar.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MO",
+   "state_full": "Missouri",
+   "name": "Sam Graves",
+   "party": "Republican",
+   "district": "6",
+   "website": "https://graves.house.gov",
+   "contact": "https://graves.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Al Green",
+   "party": "Democrat",
+   "district": "9",
+   "website": "https://algreen.house.gov",
+   "contact": "https://algreen.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "VA",
+   "state_full": "Virginia",
+   "name": "H. Morgan Griffith",
+   "party": "Republican",
+   "district": "9",
+   "website": "https://morgangriffith.house.gov",
+   "contact": "https://morgangriffith.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "KY",
+   "state_full": "Kentucky",
+   "name": "Brett Guthrie",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://guthrie.house.gov",
+   "contact": "https://guthrie.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MD",
+   "state_full": "Maryland",
+   "name": "Andy Harris",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://harris.house.gov",
+   "contact": "https://harris.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CT",
+   "state_full": "Connecticut",
+   "name": "James A. Himes",
+   "party": "Democrat",
+   "district": "4",
+   "website": "https://himes.house.gov",
+   "contact": "https://himes.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MD",
+   "state_full": "Maryland",
+   "name": "Steny H. Hoyer",
+   "party": "Democrat",
+   "district": "5",
+   "website": "https://hoyer.house.gov",
+   "contact": "https://hoyer.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MI",
+   "state_full": "Michigan",
+   "name": "Bill Huizenga",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://huizenga.house.gov",
+   "contact": "https://huizenga.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "GA",
+   "state_full": "Georgia",
+   "name": "Henry C. \"Hank\" Johnson, Jr.",
+   "party": "Democrat",
+   "district": "4",
+   "website": "https://hankjohnson.house.gov",
+   "contact": "https://hankjohnson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OH",
+   "state_full": "Ohio",
+   "name": "Jim Jordan",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://jordan.house.gov",
+   "contact": "https://jordan.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OH",
+   "state_full": "Ohio",
+   "name": "Marcy Kaptur",
+   "party": "Democrat",
+   "district": "9",
+   "website": "https://kaptur.house.gov",
+   "contact": "https://kaptur.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MA",
+   "state_full": "Massachusetts",
+   "name": "William R. Keating",
+   "party": "Democrat",
+   "district": "9",
+   "website": "https://keating.house.gov",
+   "contact": "https://keating.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Mike Kelly",
+   "party": "Republican",
+   "district": "16",
+   "website": "https://kelly.house.gov",
+   "contact": "https://kelly.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WA",
+   "state_full": "Washington",
+   "name": "Rick Larsen",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://larsen.house.gov",
+   "contact": "https://larsen.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CT",
+   "state_full": "Connecticut",
+   "name": "John B. Larson",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://larson.house.gov",
+   "contact": "https://larson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OH",
+   "state_full": "Ohio",
+   "name": "Robert E. Latta",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://latta.house.gov",
+   "contact": "https://latta.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Zoe Lofgren",
+   "party": "Democrat",
+   "district": "18",
+   "website": "https://lofgren.house.gov",
+   "contact": "https://lofgren.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OK",
+   "state_full": "Oklahoma",
+   "name": "Frank D. Lucas",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://lucas.house.gov",
+   "contact": "https://lucas.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MA",
+   "state_full": "Massachusetts",
+   "name": "Stephen F. Lynch",
+   "party": "Democrat",
+   "district": "8",
+   "website": "https://lynch.house.gov",
+   "contact": "https://lynch.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Doris O. Matsui",
+   "party": "Democrat",
+   "district": "7",
+   "website": "https://matsui.house.gov",
+   "contact": "https://matsui.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Michael T. McCaul",
+   "party": "Republican",
+   "district": "10",
+   "website": "https://mccaul.house.gov",
+   "contact": "https://mccaul.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Tom McClintock",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://mcclintock.house.gov",
+   "contact": "https://mcclintock.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MN",
+   "state_full": "Minnesota",
+   "name": "Betty McCollum",
+   "party": "Democrat",
+   "district": "4",
+   "website": "https://mccollum.house.gov",
+   "contact": "https://mccollum.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MA",
+   "state_full": "Massachusetts",
+   "name": "James P. McGovern",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://mcgovern.house.gov",
+   "contact": "https://mcgovern.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Gregory W. Meeks",
+   "party": "Democrat",
+   "district": "5",
+   "website": "https://meeks.house.gov",
+   "contact": "https://meeks.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WI",
+   "state_full": "Wisconsin",
+   "name": "Gwen Moore",
+   "party": "Democrat",
+   "district": "4",
+   "website": "https://gwenmoore.house.gov",
+   "contact": "https://gwenmoore.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Jerrold Nadler",
+   "party": "Democrat",
+   "district": "12",
+   "website": "https://nadler.house.gov",
+   "contact": "https://nadler.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MA",
+   "state_full": "Massachusetts",
+   "name": "Richard E. Neal",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://neal.house.gov",
+   "contact": "https://neal.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Delegate",
+   "state": "DC",
+   "state_full": "District of Columbia",
+   "name": "Eleanor Holmes Norton",
+   "party": "Democrat",
+   "district": "At-Large",
+   "website": "https://norton.house.gov",
+   "contact": "https://norton.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NJ",
+   "state_full": "New Jersey",
+   "name": "Frank Pallone, Jr.",
+   "party": "Democrat",
+   "district": "6",
+   "website": "https://pallone.house.gov",
+   "contact": "https://pallone.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Nancy Pelosi",
+   "party": "Democrat",
+   "district": "11",
+   "website": "https://pelosi.house.gov",
+   "contact": "https://pelosi.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "ME",
+   "state_full": "Maine",
+   "name": "Chellie Pingree",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://pingree.house.gov",
+   "contact": "https://pingree.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Mike Quigley",
+   "party": "Democrat",
+   "district": "5",
+   "website": "https://quigley.house.gov",
+   "contact": "https://quigley.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "KY",
+   "state_full": "Kentucky",
+   "name": "Harold Rogers",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://halrogers.house.gov",
+   "contact": "https://halrogers.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AL",
+   "state_full": "Alabama",
+   "name": "Mike Rogers",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://mikerogers.house.gov",
+   "contact": "https://mikerogers.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "LA",
+   "state_full": "Louisiana",
+   "name": "Steve Scalise",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://scalise.house.gov",
+   "contact": "https://scalise.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Janice D. Schakowsky",
+   "party": "Democrat",
+   "district": "9",
+   "website": "https://schakowsky.house.gov",
+   "contact": "https://schakowsky.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AZ",
+   "state_full": "Arizona",
+   "name": "David Schweikert",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://schweikert.house.gov",
+   "contact": "https://schweikert.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "GA",
+   "state_full": "Georgia",
+   "name": "Austin Scott",
+   "party": "Republican",
+   "district": "8",
+   "website": "https://austinscott.house.gov",
+   "contact": "https://austinscott.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "VA",
+   "state_full": "Virginia",
+   "name": "Robert C. \"Bobby\" Scott",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://bobbyscott.house.gov",
+   "contact": "https://bobbyscott.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AL",
+   "state_full": "Alabama",
+   "name": "Terri A. Sewell",
+   "party": "Democrat",
+   "district": "7",
+   "website": "https://sewell.house.gov",
+   "contact": "https://sewell.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Brad Sherman",
+   "party": "Democrat",
+   "district": "32",
+   "website": "https://sherman.house.gov",
+   "contact": "https://sherman.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "ID",
+   "state_full": "Idaho",
+   "name": "Michael K. Simpson",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://simpson.house.gov",
+   "contact": "https://simpson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WA",
+   "state_full": "Washington",
+   "name": "Adam Smith",
+   "party": "Democrat",
+   "district": "9",
+   "website": "https://adamsmith.house.gov",
+   "contact": "https://adamsmith.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NE",
+   "state_full": "Nebraska",
+   "name": "Adrian Smith",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://adriansmith.house.gov",
+   "contact": "https://adriansmith.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NJ",
+   "state_full": "New Jersey",
+   "name": "Christopher H. Smith",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://chrissmith.house.gov",
+   "contact": "https://chrissmith.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Linda T. Sánchez",
+   "party": "Democrat",
+   "district": "38",
+   "website": "https://lindasanchez.house.gov",
+   "contact": "https://lindasanchez.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MS",
+   "state_full": "Mississippi",
+   "name": "Bennie G. Thompson",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://benniethompson.house.gov",
+   "contact": "https://benniethompson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Mike Thompson",
+   "party": "Democrat",
+   "district": "4",
+   "website": "https://mikethompson.house.gov",
+   "contact": "https://mikethompson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Glenn Thompson",
+   "party": "Republican",
+   "district": "15",
+   "website": "https://thompson.house.gov",
+   "contact": "https://thompson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Paul Tonko",
+   "party": "Democrat",
+   "district": "20",
+   "website": "https://tonko.house.gov",
+   "contact": "https://tonko.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OH",
+   "state_full": "Ohio",
+   "name": "Michael R. Turner",
+   "party": "Republican",
+   "district": "10",
+   "website": "https://turner.house.gov",
+   "contact": "https://turner.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Nydia M. Velázquez",
+   "party": "Democrat",
+   "district": "7",
+   "website": "https://velazquez.house.gov",
+   "contact": "https://velazquez.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MI",
+   "state_full": "Michigan",
+   "name": "Tim Walberg",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://walberg.house.gov",
+   "contact": "https://walberg.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Debbie Wasserman Schultz",
+   "party": "Democrat",
+   "district": "25",
+   "website": "https://wassermanschultz.house.gov",
+   "contact": "https://wassermanschultz.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Maxine Waters",
+   "party": "Democrat",
+   "district": "43",
+   "website": "https://waters.house.gov",
+   "contact": "https://waters.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Daniel Webster",
+   "party": "Republican",
+   "district": "11",
+   "website": "https://webster.house.gov",
+   "contact": "https://webster.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "SC",
+   "state_full": "South Carolina",
+   "name": "Joe Wilson",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://joewilson.house.gov",
+   "contact": "https://joewilson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Frederica S. Wilson",
+   "party": "Democrat",
+   "district": "24",
+   "website": "https://wilson.house.gov",
+   "contact": "https://wilson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "VA",
+   "state_full": "Virginia",
+   "name": "Robert J. Wittman",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://wittman.house.gov",
+   "contact": "https://wittman.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AR",
+   "state_full": "Arkansas",
+   "name": "Steve Womack",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://womack.house.gov",
+   "contact": "https://womack.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NV",
+   "state_full": "Nevada",
+   "name": "Mark E. Amodei",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://amodei.house.gov",
+   "contact": "https://amodei.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OR",
+   "state_full": "Oregon",
+   "name": "Suzanne Bonamici",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://bonamici.house.gov",
+   "contact": "https://bonamici.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WA",
+   "state_full": "Washington",
+   "name": "Suzan K. DelBene",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://delbene.house.gov",
+   "contact": "https://delbene.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "KY",
+   "state_full": "Kentucky",
+   "name": "Thomas Massie",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://massie.house.gov",
+   "contact": "https://massie.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Bill Foster",
+   "party": "Democrat",
+   "district": "11",
+   "website": "https://foster.house.gov",
+   "contact": "https://foster.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NV",
+   "state_full": "Nevada",
+   "name": "Dina Titus",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://titus.house.gov",
+   "contact": "https://titus.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Jared Huffman",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://huffman.house.gov",
+   "contact": "https://huffman.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Ami Bera",
+   "party": "Democrat",
+   "district": "6",
+   "website": "https://bera.house.gov",
+   "contact": "https://bera.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Julia Brownley",
+   "party": "Democrat",
+   "district": "26",
+   "website": "https://juliabrownley.house.gov",
+   "contact": "https://juliabrownley.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Raul Ruiz",
+   "party": "Democrat",
+   "district": "25",
+   "website": "https://ruiz.house.gov",
+   "contact": "https://ruiz.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Mark Takano",
+   "party": "Democrat",
+   "district": "39",
+   "website": "https://takano.house.gov",
+   "contact": "https://takano.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Juan Vargas",
+   "party": "Democrat",
+   "district": "52",
+   "website": "https://vargas.house.gov",
+   "contact": "https://vargas.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Scott H. Peters",
+   "party": "Democrat",
+   "district": "50",
+   "website": "https://scottpeters.house.gov",
+   "contact": "https://scottpeters.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Lois Frankel",
+   "party": "Democrat",
+   "district": "22",
+   "website": "https://frankel.house.gov",
+   "contact": "https://frankel.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "KY",
+   "state_full": "Kentucky",
+   "name": "Andy Barr",
+   "party": "Republican",
+   "district": "6",
+   "website": "https://barr.house.gov",
+   "contact": "https://barr.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MO",
+   "state_full": "Missouri",
+   "name": "Ann Wagner",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://wagner.house.gov",
+   "contact": "https://wagner.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NC",
+   "state_full": "North Carolina",
+   "name": "Richard Hudson",
+   "party": "Republican",
+   "district": "9",
+   "website": "https://hudson.house.gov",
+   "contact": "https://hudson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Grace Meng",
+   "party": "Democrat",
+   "district": "6",
+   "website": "https://meng.house.gov",
+   "contact": "https://meng.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Hakeem S. Jeffries",
+   "party": "Democrat",
+   "district": "8",
+   "website": "https://jeffries.house.gov",
+   "contact": "https://jeffries.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OH",
+   "state_full": "Ohio",
+   "name": "Joyce Beatty",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://beatty.house.gov",
+   "contact": "https://beatty.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OH",
+   "state_full": "Ohio",
+   "name": "David P. Joyce",
+   "party": "Republican",
+   "district": "14",
+   "website": "https://joyce.house.gov",
+   "contact": "https://joyce.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Scott Perry",
+   "party": "Republican",
+   "district": "10",
+   "website": "https://perry.house.gov",
+   "contact": "https://perry.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Randy K. Weber, Sr.",
+   "party": "Republican",
+   "district": "14",
+   "website": "https://weber.house.gov",
+   "contact": "https://weber.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Joaquin Castro",
+   "party": "Democrat",
+   "district": "20",
+   "website": "https://castro.house.gov",
+   "contact": "https://castro.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Roger Williams",
+   "party": "Republican",
+   "district": "25",
+   "website": "https://williams.house.gov",
+   "contact": "https://williams.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Marc A. Veasey",
+   "party": "Democrat",
+   "district": "33",
+   "website": "https://veasey.house.gov",
+   "contact": "https://veasey.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WI",
+   "state_full": "Wisconsin",
+   "name": "Mark Pocan",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://pocan.house.gov",
+   "contact": "https://pocan.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Robin L. Kelly",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://robinkelly.house.gov",
+   "contact": "https://robinkelly.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MO",
+   "state_full": "Missouri",
+   "name": "Jason Smith",
+   "party": "Republican",
+   "district": "8",
+   "website": "https://jasonsmith.house.gov",
+   "contact": "https://jasonsmith.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MA",
+   "state_full": "Massachusetts",
+   "name": "Katherine M. Clark",
+   "party": "Democrat",
+   "district": "5",
+   "website": "https://katherineclark.house.gov",
+   "contact": "https://katherineclark.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NJ",
+   "state_full": "New Jersey",
+   "name": "Donald Norcross",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://norcross.house.gov",
+   "contact": "https://norcross.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NC",
+   "state_full": "North Carolina",
+   "name": "Alma S. Adams",
+   "party": "Democrat",
+   "district": "12",
+   "website": "https://adams.house.gov",
+   "contact": "https://adams.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AL",
+   "state_full": "Alabama",
+   "name": "Gary J. Palmer",
+   "party": "Republican",
+   "district": "6",
+   "website": "https://palmer.house.gov",
+   "contact": "https://palmer.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AR",
+   "state_full": "Arkansas",
+   "name": "J. French Hill",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://hill.house.gov",
+   "contact": "https://hill.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AR",
+   "state_full": "Arkansas",
+   "name": "Bruce Westerman",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://westerman.house.gov",
+   "contact": "https://westerman.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Mark DeSaulnier",
+   "party": "Democrat",
+   "district": "10",
+   "website": "https://desaulnier.house.gov",
+   "contact": "https://desaulnier.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Pete Aguilar",
+   "party": "Democrat",
+   "district": "33",
+   "website": "https://aguilar.house.gov",
+   "contact": "https://aguilar.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Ted Lieu",
+   "party": "Democrat",
+   "district": "36",
+   "website": "https://lieu.house.gov",
+   "contact": "https://lieu.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Norma J. Torres",
+   "party": "Democrat",
+   "district": "35",
+   "website": "https://torres.house.gov",
+   "contact": "https://torres.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "GA",
+   "state_full": "Georgia",
+   "name": "Earl L. \"Buddy\" Carter",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://buddycarter.house.gov",
+   "contact": "https://buddycarter.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "GA",
+   "state_full": "Georgia",
+   "name": "Barry Loudermilk",
+   "party": "Republican",
+   "district": "11",
+   "website": "https://loudermilk.house.gov",
+   "contact": "https://loudermilk.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "GA",
+   "state_full": "Georgia",
+   "name": "Rick W. Allen",
+   "party": "Republican",
+   "district": "12",
+   "website": "https://allen.house.gov",
+   "contact": "https://allen.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Mike Bost",
+   "party": "Republican",
+   "district": "12",
+   "website": "https://bost.house.gov",
+   "contact": "https://bost.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MA",
+   "state_full": "Massachusetts",
+   "name": "Seth Moulton",
+   "party": "Democrat",
+   "district": "6",
+   "website": "https://moulton.house.gov",
+   "contact": "https://moulton.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MI",
+   "state_full": "Michigan",
+   "name": "John R. Moolenaar",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://moolenaar.house.gov",
+   "contact": "https://moolenaar.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MI",
+   "state_full": "Michigan",
+   "name": "Debbie Dingell",
+   "party": "Democrat",
+   "district": "6",
+   "website": "https://debbiedingell.house.gov",
+   "contact": "https://debbiedingell.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MN",
+   "state_full": "Minnesota",
+   "name": "Tom Emmer",
+   "party": "Republican",
+   "district": "6",
+   "website": "https://emmer.house.gov",
+   "contact": "https://emmer.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NC",
+   "state_full": "North Carolina",
+   "name": "David Rouzer",
+   "party": "Republican",
+   "district": "7",
+   "website": "https://rouzer.house.gov",
+   "contact": "https://rouzer.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NJ",
+   "state_full": "New Jersey",
+   "name": "Bonnie Watson Coleman",
+   "party": "Democrat",
+   "district": "12",
+   "website": "https://watsoncoleman.house.gov",
+   "contact": "https://watsoncoleman.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Elise M. Stefanik",
+   "party": "Republican",
+   "district": "21",
+   "website": "https://stefanik.house.gov",
+   "contact": "https://stefanik.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Brendan F. Boyle",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://boyle.house.gov",
+   "contact": "https://boyle.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Brian Babin",
+   "party": "Republican",
+   "district": "36",
+   "website": "https://babin.house.gov",
+   "contact": "https://babin.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "VA",
+   "state_full": "Virginia",
+   "name": "Donald S. Beyer, Jr.",
+   "party": "Democrat",
+   "district": "8",
+   "website": "https://beyer.house.gov",
+   "contact": "https://beyer.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Delegate",
+   "state": "VI",
+   "state_full": "U.S. Virgin Islands",
+   "name": "Stacey E. Plaskett",
+   "party": "Democrat",
+   "district": "At-Large",
+   "website": "https://plaskett.house.gov",
+   "contact": "https://plaskett.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WA",
+   "state_full": "Washington",
+   "name": "Dan Newhouse",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://newhouse.house.gov",
+   "contact": "https://newhouse.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WI",
+   "state_full": "Wisconsin",
+   "name": "Glenn Grothman",
+   "party": "Republican",
+   "district": "6",
+   "website": "https://grothman.house.gov",
+   "contact": "https://grothman.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Delegate",
+   "state": "AS",
+   "state_full": "American Samoa",
+   "name": "Aumua Amata Coleman Radewagen",
+   "party": "Republican",
+   "district": "At-Large",
+   "website": "https://radewagen.house.gov",
+   "contact": "https://radewagen.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MS",
+   "state_full": "Mississippi",
+   "name": "Trent Kelly",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://trentkelly.house.gov",
+   "contact": "https://trentkelly.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Darin LaHood",
+   "party": "Republican",
+   "district": "16",
+   "website": "https://lahood.house.gov",
+   "contact": "https://lahood.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OH",
+   "state_full": "Ohio",
+   "name": "Warren Davidson",
+   "party": "Republican",
+   "district": "8",
+   "website": "https://davidson.house.gov",
+   "contact": "https://davidson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "KY",
+   "state_full": "Kentucky",
+   "name": "James Comer",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://comer.house.gov",
+   "contact": "https://comer.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Dwight Evans",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://evans.house.gov",
+   "contact": "https://evans.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Bradley Scott Schneider",
+   "party": "Democrat",
+   "district": "10",
+   "website": "https://schneider.house.gov",
+   "contact": "https://schneider.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AZ",
+   "state_full": "Arizona",
+   "name": "Andy Biggs",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://biggs.house.gov",
+   "contact": "https://biggs.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Ro Khanna",
+   "party": "Democrat",
+   "district": "17",
+   "website": "https://khanna.house.gov",
+   "contact": "https://khanna.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Jimmy Panetta",
+   "party": "Democrat",
+   "district": "19",
+   "website": "https://panetta.house.gov",
+   "contact": "https://panetta.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Salud O. Carbajal",
+   "party": "Democrat",
+   "district": "24",
+   "website": "https://carbajal.house.gov",
+   "contact": "https://carbajal.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Nanette Diaz Barragán",
+   "party": "Democrat",
+   "district": "44",
+   "website": "https://barragan.house.gov",
+   "contact": "https://barragan.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "J. Luis Correa",
+   "party": "Democrat",
+   "district": "46",
+   "website": "https://correa.house.gov",
+   "contact": "https://correa.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Neal P. Dunn",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://dunn.house.gov",
+   "contact": "https://dunn.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "John H. Rutherford",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://rutherford.house.gov",
+   "contact": "https://rutherford.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Darren Soto",
+   "party": "Democrat",
+   "district": "9",
+   "website": "https://soto.house.gov",
+   "contact": "https://soto.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Brian J. Mast",
+   "party": "Republican",
+   "district": "21",
+   "website": "https://mast.house.gov",
+   "contact": "https://mast.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Raja Krishnamoorthi",
+   "party": "Democrat",
+   "district": "8",
+   "website": "https://krishnamoorthi.house.gov",
+   "contact": "https://krishnamoorthi.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "LA",
+   "state_full": "Louisiana",
+   "name": "Clay Higgins",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://clayhiggins.house.gov",
+   "contact": "https://clayhiggins.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "LA",
+   "state_full": "Louisiana",
+   "name": "Mike Johnson",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://mikejohnson.house.gov",
+   "contact": "https://mikejohnson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MD",
+   "state_full": "Maryland",
+   "name": "Jamie Raskin",
+   "party": "Democrat",
+   "district": "8",
+   "website": "https://raskin.house.gov",
+   "contact": "https://raskin.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MI",
+   "state_full": "Michigan",
+   "name": "Jack Bergman",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://bergman.house.gov",
+   "contact": "https://bergman.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NE",
+   "state_full": "Nebraska",
+   "name": "Don Bacon",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://bacon.house.gov",
+   "contact": "https://bacon.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NJ",
+   "state_full": "New Jersey",
+   "name": "Josh Gottheimer",
+   "party": "Democrat",
+   "district": "5",
+   "website": "https://gottheimer.house.gov",
+   "contact": "https://gottheimer.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Adriano Espaillat",
+   "party": "Democrat",
+   "district": "13",
+   "website": "https://espaillat.house.gov",
+   "contact": "https://espaillat.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Brian K. Fitzpatrick",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://fitzpatrick.house.gov",
+   "contact": "https://fitzpatrick.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Lloyd Smucker",
+   "party": "Republican",
+   "district": "11",
+   "website": "https://smucker.house.gov",
+   "contact": "https://smucker.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TN",
+   "state_full": "Tennessee",
+   "name": "David Kustoff",
+   "party": "Republican",
+   "district": "8",
+   "website": "https://kustoff.house.gov",
+   "contact": "https://kustoff.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Vicente Gonzalez",
+   "party": "Democrat",
+   "district": "34",
+   "website": "https://gonzalez.house.gov",
+   "contact": "https://gonzalez.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Jodey C. Arrington",
+   "party": "Republican",
+   "district": "19",
+   "website": "https://arrington.house.gov",
+   "contact": "https://arrington.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WA",
+   "state_full": "Washington",
+   "name": "Pramila Jayapal",
+   "party": "Democrat",
+   "district": "7",
+   "website": "https://jayapal.house.gov",
+   "contact": "https://jayapal.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "KS",
+   "state_full": "Kansas",
+   "name": "Ron Estes",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://estes.house.gov",
+   "contact": "https://estes.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "SC",
+   "state_full": "South Carolina",
+   "name": "Ralph Norman",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://norman.house.gov",
+   "contact": "https://norman.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Jimmy Gomez",
+   "party": "Democrat",
+   "district": "34",
+   "website": "https://gomez.house.gov",
+   "contact": "https://gomez.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Michael Cloud",
+   "party": "Republican",
+   "district": "27",
+   "website": "https://cloud.house.gov",
+   "contact": "https://cloud.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OH",
+   "state_full": "Ohio",
+   "name": "Troy Balderson",
+   "party": "Republican",
+   "district": "12",
+   "website": "https://balderson.house.gov",
+   "contact": "https://balderson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OK",
+   "state_full": "Oklahoma",
+   "name": "Kevin Hern",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://hern.house.gov",
+   "contact": "https://hern.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Joseph D. Morelle",
+   "party": "Democrat",
+   "district": "25",
+   "website": "https://morelle.house.gov",
+   "contact": "https://morelle.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Mary Gay Scanlon",
+   "party": "Democrat",
+   "district": "5",
+   "website": "https://scanlon.house.gov",
+   "contact": "https://scanlon.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "HI",
+   "state_full": "Hawaii",
+   "name": "Ed Case",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://case.house.gov",
+   "contact": "https://case.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NV",
+   "state_full": "Nevada",
+   "name": "Steven Horsford",
+   "party": "Democrat",
+   "district": "4",
+   "website": "https://horsford.house.gov",
+   "contact": "https://horsford.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AZ",
+   "state_full": "Arizona",
+   "name": "Greg Stanton",
+   "party": "Democrat",
+   "district": "4",
+   "website": "https://stanton.house.gov",
+   "contact": "https://stanton.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Josh Harder",
+   "party": "Democrat",
+   "district": "9",
+   "website": "https://harder.house.gov",
+   "contact": "https://harder.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Mike Levin",
+   "party": "Democrat",
+   "district": "49",
+   "website": "https://levin.house.gov",
+   "contact": "https://levin.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CO",
+   "state_full": "Colorado",
+   "name": "Joe Neguse",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://neguse.house.gov",
+   "contact": "https://neguse.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CO",
+   "state_full": "Colorado",
+   "name": "Jason Crow",
+   "party": "Democrat",
+   "district": "6",
+   "website": "https://crow.house.gov",
+   "contact": "https://crow.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CT",
+   "state_full": "Connecticut",
+   "name": "Jahana Hayes",
+   "party": "Democrat",
+   "district": "5",
+   "website": "https://hayes.house.gov",
+   "contact": "https://hayes.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "W. Gregory Steube",
+   "party": "Republican",
+   "district": "17",
+   "website": "https://steube.house.gov",
+   "contact": "https://steube.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "GA",
+   "state_full": "Georgia",
+   "name": "Lucy McBath",
+   "party": "Democrat",
+   "district": "6",
+   "website": "https://mcbath.house.gov",
+   "contact": "https://mcbath.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "ID",
+   "state_full": "Idaho",
+   "name": "Russ Fulcher",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://fulcher.house.gov",
+   "contact": "https://fulcher.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Jesús G. \"Chuy\" García",
+   "party": "Democrat",
+   "district": "4",
+   "website": "https://chuygarcia.house.gov",
+   "contact": "https://chuygarcia.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Sean Casten",
+   "party": "Democrat",
+   "district": "6",
+   "website": "https://casten.house.gov",
+   "contact": "https://casten.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Lauren Underwood",
+   "party": "Democrat",
+   "district": "14",
+   "website": "https://underwood.house.gov",
+   "contact": "https://underwood.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IN",
+   "state_full": "Indiana",
+   "name": "James R. Baird",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://baird.house.gov",
+   "contact": "https://baird.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "KS",
+   "state_full": "Kansas",
+   "name": "Sharice Davids",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://davids.house.gov",
+   "contact": "https://davids.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MA",
+   "state_full": "Massachusetts",
+   "name": "Lori Trahan",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://trahan.house.gov",
+   "contact": "https://trahan.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MA",
+   "state_full": "Massachusetts",
+   "name": "Ayanna Pressley",
+   "party": "Democrat",
+   "district": "7",
+   "website": "https://pressley.house.gov",
+   "contact": "https://pressley.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MI",
+   "state_full": "Michigan",
+   "name": "Haley M. Stevens",
+   "party": "Democrat",
+   "district": "11",
+   "website": "https://stevens.house.gov",
+   "contact": "https://stevens.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MI",
+   "state_full": "Michigan",
+   "name": "Rashida Tlaib",
+   "party": "Democrat",
+   "district": "12",
+   "website": "https://tlaib.house.gov",
+   "contact": "https://tlaib.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MN",
+   "state_full": "Minnesota",
+   "name": "Angie Craig",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://craig.house.gov",
+   "contact": "https://craig.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MN",
+   "state_full": "Minnesota",
+   "name": "Ilhan Omar",
+   "party": "Democrat",
+   "district": "5",
+   "website": "https://omar.house.gov",
+   "contact": "https://omar.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MN",
+   "state_full": "Minnesota",
+   "name": "Pete Stauber",
+   "party": "Republican",
+   "district": "8",
+   "website": "https://stauber.house.gov",
+   "contact": "https://stauber.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MS",
+   "state_full": "Mississippi",
+   "name": "Michael Guest",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://guest.house.gov",
+   "contact": "https://guest.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NH",
+   "state_full": "New Hampshire",
+   "name": "Chris Pappas",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://pappas.house.gov",
+   "contact": "https://pappas.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NJ",
+   "state_full": "New Jersey",
+   "name": "Jefferson Van Drew",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://vandrew.house.gov",
+   "contact": "https://vandrew.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NV",
+   "state_full": "Nevada",
+   "name": "Susie Lee",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://susielee.house.gov",
+   "contact": "https://susielee.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Alexandria Ocasio-Cortez",
+   "party": "Democrat",
+   "district": "14",
+   "website": "https://ocasio-cortez.house.gov",
+   "contact": "https://ocasio-cortez.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Madeleine Dean",
+   "party": "Democrat",
+   "district": "4",
+   "website": "https://dean.house.gov",
+   "contact": "https://dean.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Chrissy Houlahan",
+   "party": "Democrat",
+   "district": "6",
+   "website": "https://houlahan.house.gov",
+   "contact": "https://houlahan.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Daniel Meuser",
+   "party": "Republican",
+   "district": "9",
+   "website": "https://meuser.house.gov",
+   "contact": "https://meuser.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "John Joyce",
+   "party": "Republican",
+   "district": "13",
+   "website": "https://johnjoyce.house.gov",
+   "contact": "https://johnjoyce.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Guy Reschenthaler",
+   "party": "Republican",
+   "district": "14",
+   "website": "https://reschenthaler.house.gov",
+   "contact": "https://reschenthaler.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "SC",
+   "state_full": "South Carolina",
+   "name": "William R. Timmons IV",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://timmons.house.gov",
+   "contact": "https://timmons.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "SD",
+   "state_full": "South Dakota",
+   "name": "Dusty Johnson",
+   "party": "Republican",
+   "district": "At-Large",
+   "website": "https://dustyjohnson.house.gov",
+   "contact": "https://dustyjohnson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TN",
+   "state_full": "Tennessee",
+   "name": "Tim Burchett",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://burchett.house.gov",
+   "contact": "https://burchett.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TN",
+   "state_full": "Tennessee",
+   "name": "John W. Rose",
+   "party": "Republican",
+   "district": "6",
+   "website": "https://johnrose.house.gov",
+   "contact": "https://johnrose.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Dan Crenshaw",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://crenshaw.house.gov",
+   "contact": "https://crenshaw.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Lance Gooden",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://gooden.house.gov",
+   "contact": "https://gooden.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Lizzie Fletcher",
+   "party": "Democrat",
+   "district": "7",
+   "website": "https://fletcher.house.gov",
+   "contact": "https://fletcher.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Veronica Escobar",
+   "party": "Democrat",
+   "district": "16",
+   "website": "https://escobar.house.gov",
+   "contact": "https://escobar.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Chip Roy",
+   "party": "Republican",
+   "district": "21",
+   "website": "https://roy.house.gov",
+   "contact": "https://roy.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Sylvia R. Garcia",
+   "party": "Democrat",
+   "district": "29",
+   "website": "https://sylviagarcia.house.gov",
+   "contact": "https://sylviagarcia.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "VA",
+   "state_full": "Virginia",
+   "name": "Ben Cline",
+   "party": "Republican",
+   "district": "6",
+   "website": "https://cline.house.gov",
+   "contact": "https://cline.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WA",
+   "state_full": "Washington",
+   "name": "Kim Schrier",
+   "party": "Democrat",
+   "district": "8",
+   "website": "https://schrier.house.gov",
+   "contact": "https://schrier.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WI",
+   "state_full": "Wisconsin",
+   "name": "Bryan Steil",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://steil.house.gov",
+   "contact": "https://steil.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WV",
+   "state_full": "West Virginia",
+   "name": "Carol D. Miller",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://miller.house.gov",
+   "contact": "https://miller.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "ME",
+   "state_full": "Maine",
+   "name": "Jared F. Golden",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://golden.house.gov",
+   "contact": "https://golden.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NC",
+   "state_full": "North Carolina",
+   "name": "Gregory F. Murphy",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://murphy.house.gov",
+   "contact": "https://murphy.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MD",
+   "state_full": "Maryland",
+   "name": "Kweisi Mfume",
+   "party": "Democrat",
+   "district": "7",
+   "website": "https://mfume.house.gov",
+   "contact": "https://mfume.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WI",
+   "state_full": "Wisconsin",
+   "name": "Thomas P. Tiffany",
+   "party": "Republican",
+   "district": "7",
+   "website": "https://tiffany.house.gov",
+   "contact": "https://tiffany.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Darrell Issa",
+   "party": "Republican",
+   "district": "48",
+   "website": "https://issa.house.gov",
+   "contact": "https://issa.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Pete Sessions",
+   "party": "Republican",
+   "district": "17",
+   "website": "https://sessions.house.gov",
+   "contact": "https://sessions.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "David G. Valadao",
+   "party": "Republican",
+   "district": "22",
+   "website": "https://valadao.house.gov",
+   "contact": "https://valadao.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AL",
+   "state_full": "Alabama",
+   "name": "Barry Moore",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://barrymoore.house.gov",
+   "contact": "https://barrymoore.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Jay Obernolte",
+   "party": "Republican",
+   "district": "23",
+   "website": "https://obernolte.house.gov",
+   "contact": "https://obernolte.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Young Kim",
+   "party": "Republican",
+   "district": "40",
+   "website": "https://youngkim.house.gov",
+   "contact": "https://youngkim.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Sara Jacobs",
+   "party": "Democrat",
+   "district": "51",
+   "website": "https://sarajacobs.house.gov",
+   "contact": "https://sarajacobs.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CO",
+   "state_full": "Colorado",
+   "name": "Lauren Boebert",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://boebert.house.gov",
+   "contact": "https://boebert.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Kat Cammack",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://cammack.house.gov",
+   "contact": "https://cammack.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Scott Franklin",
+   "party": "Republican",
+   "district": "18",
+   "website": "https://franklin.house.gov",
+   "contact": "https://franklin.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Byron Donalds",
+   "party": "Republican",
+   "district": "19",
+   "website": "https://donalds.house.gov",
+   "contact": "https://donalds.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Carlos A. Gimenez",
+   "party": "Republican",
+   "district": "28",
+   "website": "https://gimenez.house.gov",
+   "contact": "https://gimenez.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Maria Elvira Salazar",
+   "party": "Republican",
+   "district": "27",
+   "website": "https://salazar.house.gov",
+   "contact": "https://salazar.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "GA",
+   "state_full": "Georgia",
+   "name": "Nikema Williams",
+   "party": "Democrat",
+   "district": "5",
+   "website": "https://nikemawilliams.house.gov",
+   "contact": "https://nikemawilliams.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "GA",
+   "state_full": "Georgia",
+   "name": "Andrew S. Clyde",
+   "party": "Republican",
+   "district": "9",
+   "website": "https://clyde.house.gov",
+   "contact": "https://clyde.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IA",
+   "state_full": "Iowa",
+   "name": "Ashley Hinson",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://hinson.house.gov",
+   "contact": "https://hinson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IA",
+   "state_full": "Iowa",
+   "name": "Mariannette Miller-Meeks",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://millermeeks.house.gov",
+   "contact": "https://millermeeks.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IA",
+   "state_full": "Iowa",
+   "name": "Randy Feenstra",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://feenstra.house.gov",
+   "contact": "https://feenstra.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Mary E. Miller",
+   "party": "Republican",
+   "district": "15",
+   "website": "https://marymiller.house.gov",
+   "contact": "https://marymiller.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IN",
+   "state_full": "Indiana",
+   "name": "Frank J. Mrvan",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://mrvan.house.gov",
+   "contact": "https://mrvan.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IN",
+   "state_full": "Indiana",
+   "name": "Victoria Spartz",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://spartz.house.gov",
+   "contact": "https://spartz.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "KS",
+   "state_full": "Kansas",
+   "name": "Tracey Mann",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://mann.house.gov",
+   "contact": "https://mann.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MA",
+   "state_full": "Massachusetts",
+   "name": "Jake Auchincloss",
+   "party": "Democrat",
+   "district": "4",
+   "website": "https://auchincloss.house.gov",
+   "contact": "https://auchincloss.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MI",
+   "state_full": "Michigan",
+   "name": "Lisa C. McClain",
+   "party": "Republican",
+   "district": "9",
+   "website": "https://mcclain.house.gov",
+   "contact": "https://mcclain.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MN",
+   "state_full": "Minnesota",
+   "name": "Michelle Fischbach",
+   "party": "Republican",
+   "district": "7",
+   "website": "https://fischbach.house.gov",
+   "contact": "https://fischbach.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NC",
+   "state_full": "North Carolina",
+   "name": "Deborah K. Ross",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://ross.house.gov",
+   "contact": "https://ross.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NM",
+   "state_full": "New Mexico",
+   "name": "Teresa Leger Fernandez",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://fernandez.house.gov",
+   "contact": "https://fernandez.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Andrew R. Garbarino",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://garbarino.house.gov",
+   "contact": "https://garbarino.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Nicole Malliotakis",
+   "party": "Republican",
+   "district": "11",
+   "website": "https://malliotakis.house.gov",
+   "contact": "https://malliotakis.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Ritchie Torres",
+   "party": "Democrat",
+   "district": "15",
+   "website": "https://ritchietorres.house.gov",
+   "contact": "https://ritchietorres.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OK",
+   "state_full": "Oklahoma",
+   "name": "Stephanie I. Bice",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://bice.house.gov",
+   "contact": "https://bice.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OR",
+   "state_full": "Oregon",
+   "name": "Cliff Bentz",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://bentz.house.gov",
+   "contact": "https://bentz.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "SC",
+   "state_full": "South Carolina",
+   "name": "Nancy Mace",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://mace.house.gov",
+   "contact": "https://mace.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TN",
+   "state_full": "Tennessee",
+   "name": "Diana Harshbarger",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://harshbarger.house.gov",
+   "contact": "https://harshbarger.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Pat Fallon",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://fallon.house.gov",
+   "contact": "https://fallon.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "August Pfluger",
+   "party": "Republican",
+   "district": "11",
+   "website": "https://pfluger.house.gov",
+   "contact": "https://pfluger.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Ronny Jackson",
+   "party": "Republican",
+   "district": "13",
+   "website": "https://jackson.house.gov",
+   "contact": "https://jackson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Troy E. Nehls",
+   "party": "Republican",
+   "district": "22",
+   "website": "https://nehls.house.gov",
+   "contact": "https://nehls.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Beth Van Duyne",
+   "party": "Republican",
+   "district": "24",
+   "website": "https://vanduyne.house.gov",
+   "contact": "https://vanduyne.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "UT",
+   "state_full": "Utah",
+   "name": "Blake D. Moore",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://blakemoore.house.gov",
+   "contact": "https://blakemoore.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "UT",
+   "state_full": "Utah",
+   "name": "Burgess Owens",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://owens.house.gov",
+   "contact": "https://owens.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WA",
+   "state_full": "Washington",
+   "name": "Marilyn Strickland",
+   "party": "Democrat",
+   "district": "10",
+   "website": "https://strickland.house.gov",
+   "contact": "https://strickland.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WI",
+   "state_full": "Wisconsin",
+   "name": "Scott Fitzgerald",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://fitzgerald.house.gov",
+   "contact": "https://fitzgerald.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Claudia Tenney",
+   "party": "Republican",
+   "district": "24",
+   "website": "https://tenney.house.gov",
+   "contact": "https://tenney.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "LA",
+   "state_full": "Louisiana",
+   "name": "Julia Letlow",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://letlow.house.gov",
+   "contact": "https://letlow.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "LA",
+   "state_full": "Louisiana",
+   "name": "Troy A. Carter",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://troycarter.house.gov",
+   "contact": "https://troycarter.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NM",
+   "state_full": "New Mexico",
+   "name": "Melanie A. Stansbury",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://stansbury.house.gov",
+   "contact": "https://stansbury.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Jake Ellzey",
+   "party": "Republican",
+   "district": "6",
+   "website": "https://ellzey.house.gov",
+   "contact": "https://ellzey.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OH",
+   "state_full": "Ohio",
+   "name": "Shontel M. Brown",
+   "party": "Democrat",
+   "district": "11",
+   "website": "https://shontelbrown.house.gov",
+   "contact": "https://shontelbrown.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OH",
+   "state_full": "Ohio",
+   "name": "Mike Carey",
+   "party": "Republican",
+   "district": "15",
+   "website": "https://carey.house.gov",
+   "contact": "https://carey.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NE",
+   "state_full": "Nebraska",
+   "name": "Mike Flood",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://flood.house.gov",
+   "contact": "https://flood.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MN",
+   "state_full": "Minnesota",
+   "name": "Brad Finstad",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://finstad.house.gov",
+   "contact": "https://finstad.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Patrick Ryan",
+   "party": "Democrat",
+   "district": "18",
+   "website": "https://patryan.house.gov",
+   "contact": "https://patryan.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IN",
+   "state_full": "Indiana",
+   "name": "Rudy Yakym III",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://yakym.house.gov",
+   "contact": "https://yakym.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MT",
+   "state_full": "Montana",
+   "name": "Ryan K. Zinke",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://zinke.house.gov",
+   "contact": "https://zinke.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AL",
+   "state_full": "Alabama",
+   "name": "Dale W. Strong",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://strong.house.gov",
+   "contact": "https://strong.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AZ",
+   "state_full": "Arizona",
+   "name": "Elijah Crane",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://crane.house.gov",
+   "contact": "https://crane.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AZ",
+   "state_full": "Arizona",
+   "name": "Juan Ciscomani",
+   "party": "Republican",
+   "district": "6",
+   "website": "https://ciscomani.house.gov",
+   "contact": "https://ciscomani.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Kevin Kiley",
+   "party": "Independent",
+   "district": "3",
+   "website": "https://kiley.house.gov",
+   "contact": "https://kiley.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Kevin Mullin",
+   "party": "Democrat",
+   "district": "15",
+   "website": "https://kevinmullin.house.gov",
+   "contact": "https://kevinmullin.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Sydney Kamlager-Dove",
+   "party": "Democrat",
+   "district": "37",
+   "website": "https://kamlager-dove.house.gov",
+   "contact": "https://kamlager-dove.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Robert Garcia",
+   "party": "Democrat",
+   "district": "42",
+   "website": "https://robertgarcia.house.gov",
+   "contact": "https://robertgarcia.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CO",
+   "state_full": "Colorado",
+   "name": "Brittany Pettersen",
+   "party": "Democrat",
+   "district": "7",
+   "website": "https://pettersen.house.gov",
+   "contact": "https://pettersen.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Aaron Bean",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://bean.house.gov",
+   "contact": "https://bean.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Cory Mills",
+   "party": "Republican",
+   "district": "7",
+   "website": "https://mills.house.gov",
+   "contact": "https://mills.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Maxwell Frost",
+   "party": "Democrat",
+   "district": "10",
+   "website": "https://frost.house.gov",
+   "contact": "https://frost.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Anna Paulina Luna",
+   "party": "Republican",
+   "district": "13",
+   "website": "https://luna.house.gov",
+   "contact": "https://luna.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Laurel M. Lee",
+   "party": "Republican",
+   "district": "15",
+   "website": "https://laurellee.house.gov",
+   "contact": "https://laurellee.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Jared Moskowitz",
+   "party": "Democrat",
+   "district": "23",
+   "website": "https://moskowitz.house.gov",
+   "contact": "https://moskowitz.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "GA",
+   "state_full": "Georgia",
+   "name": "Richard McCormick",
+   "party": "Republican",
+   "district": "7",
+   "website": "https://mccormick.house.gov",
+   "contact": "https://mccormick.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "GA",
+   "state_full": "Georgia",
+   "name": "Mike Collins",
+   "party": "Republican",
+   "district": "10",
+   "website": "https://collins.house.gov",
+   "contact": "https://collins.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Delegate",
+   "state": "GU",
+   "state_full": "Guam",
+   "name": "James C. Moylan",
+   "party": "Republican",
+   "district": "At-Large",
+   "website": "https://moylan.house.gov",
+   "contact": "https://moylan.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "HI",
+   "state_full": "Hawaii",
+   "name": "Jill N. Tokuda",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://tokuda.house.gov",
+   "contact": "https://tokuda.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IA",
+   "state_full": "Iowa",
+   "name": "Zachary Nunn",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://nunn.house.gov",
+   "contact": "https://nunn.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Jonathan L. Jackson",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://jonathanjackson.house.gov",
+   "contact": "https://jonathanjackson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Delia C. Ramirez",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://ramirez.house.gov",
+   "contact": "https://ramirez.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Nikki Budzinski",
+   "party": "Democrat",
+   "district": "13",
+   "website": "https://budzinski.house.gov",
+   "contact": "https://budzinski.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IL",
+   "state_full": "Illinois",
+   "name": "Eric Sorensen",
+   "party": "Democrat",
+   "district": "17",
+   "website": "https://sorensen.house.gov",
+   "contact": "https://sorensen.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IN",
+   "state_full": "Indiana",
+   "name": "Erin Houchin",
+   "party": "Republican",
+   "district": "9",
+   "website": "https://houchin.house.gov",
+   "contact": "https://houchin.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "KY",
+   "state_full": "Kentucky",
+   "name": "Morgan McGarvey",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://mcgarvey.house.gov",
+   "contact": "https://mcgarvey.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MD",
+   "state_full": "Maryland",
+   "name": "Glenn Ivey",
+   "party": "Democrat",
+   "district": "4",
+   "website": "https://ivey.house.gov",
+   "contact": "https://ivey.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MI",
+   "state_full": "Michigan",
+   "name": "Hillary J. Scholten",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://scholten.house.gov",
+   "contact": "https://scholten.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MI",
+   "state_full": "Michigan",
+   "name": "John James",
+   "party": "Republican",
+   "district": "10",
+   "website": "https://james.house.gov",
+   "contact": "https://james.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MI",
+   "state_full": "Michigan",
+   "name": "Shri Thanedar",
+   "party": "Democrat",
+   "district": "13",
+   "website": "https://thanedar.house.gov",
+   "contact": "https://thanedar.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MO",
+   "state_full": "Missouri",
+   "name": "Mark Alford",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://alford.house.gov",
+   "contact": "https://alford.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MO",
+   "state_full": "Missouri",
+   "name": "Eric Burlison",
+   "party": "Republican",
+   "district": "7",
+   "website": "https://burlison.house.gov",
+   "contact": "https://burlison.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MS",
+   "state_full": "Mississippi",
+   "name": "Mike Ezell",
+   "party": "Republican",
+   "district": "4",
+   "website": "https://ezell.house.gov",
+   "contact": "https://ezell.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NC",
+   "state_full": "North Carolina",
+   "name": "Donald G. Davis",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://dondavis.house.gov",
+   "contact": "https://dondavis.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NC",
+   "state_full": "North Carolina",
+   "name": "Valerie P. Foushee",
+   "party": "Democrat",
+   "district": "4",
+   "website": "https://foushee.house.gov",
+   "contact": "https://foushee.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NC",
+   "state_full": "North Carolina",
+   "name": "Chuck Edwards",
+   "party": "Republican",
+   "district": "11",
+   "website": "https://edwards.house.gov",
+   "contact": "https://edwards.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NJ",
+   "state_full": "New Jersey",
+   "name": "Thomas H. Kean, Jr.",
+   "party": "Republican",
+   "district": "7",
+   "website": "https://kean.house.gov",
+   "contact": "https://kean.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NJ",
+   "state_full": "New Jersey",
+   "name": "Robert Menendez",
+   "party": "Democrat",
+   "district": "8",
+   "website": "https://menendez.house.gov",
+   "contact": "https://menendez.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NM",
+   "state_full": "New Mexico",
+   "name": "Gabe Vasquez",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://vasquez.house.gov",
+   "contact": "https://vasquez.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Nick LaLota",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://lalota.house.gov",
+   "contact": "https://lalota.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Daniel S. Goldman",
+   "party": "Democrat",
+   "district": "10",
+   "website": "https://goldman.house.gov",
+   "contact": "https://goldman.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Michael Lawler",
+   "party": "Republican",
+   "district": "17",
+   "website": "https://lawler.house.gov",
+   "contact": "https://lawler.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Nicholas A. Langworthy",
+   "party": "Republican",
+   "district": "23",
+   "website": "https://langworthy.house.gov",
+   "contact": "https://langworthy.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OH",
+   "state_full": "Ohio",
+   "name": "Greg Landsman",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://landsman.house.gov",
+   "contact": "https://landsman.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OH",
+   "state_full": "Ohio",
+   "name": "Max L. Miller",
+   "party": "Republican",
+   "district": "7",
+   "website": "https://maxmiller.house.gov",
+   "contact": "https://maxmiller.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OH",
+   "state_full": "Ohio",
+   "name": "Emilia Strong Sykes",
+   "party": "Democrat",
+   "district": "13",
+   "website": "https://sykes.house.gov",
+   "contact": "https://sykes.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OK",
+   "state_full": "Oklahoma",
+   "name": "Josh Brecheen",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://brecheen.house.gov",
+   "contact": "https://brecheen.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OR",
+   "state_full": "Oregon",
+   "name": "Val T. Hoyle",
+   "party": "Democrat",
+   "district": "4",
+   "website": "https://hoyle.house.gov",
+   "contact": "https://hoyle.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OR",
+   "state_full": "Oregon",
+   "name": "Andrea Salinas",
+   "party": "Democrat",
+   "district": "6",
+   "website": "https://salinas.house.gov",
+   "contact": "https://salinas.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Summer L. Lee",
+   "party": "Democrat",
+   "district": "12",
+   "website": "https://summerlee.house.gov",
+   "contact": "https://summerlee.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Christopher R. Deluzio",
+   "party": "Democrat",
+   "district": "17",
+   "website": "https://deluzio.house.gov",
+   "contact": "https://deluzio.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "RI",
+   "state_full": "Rhode Island",
+   "name": "Seth Magaziner",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://magaziner.house.gov",
+   "contact": "https://magaziner.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "SC",
+   "state_full": "South Carolina",
+   "name": "Russell Fry",
+   "party": "Republican",
+   "district": "7",
+   "website": "https://fry.house.gov",
+   "contact": "https://fry.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TN",
+   "state_full": "Tennessee",
+   "name": "Andrew Ogles",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://ogles.house.gov",
+   "contact": "https://ogles.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Nathaniel Moran",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://moran.house.gov",
+   "contact": "https://moran.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Keith Self",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://keithself.house.gov",
+   "contact": "https://keithself.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Morgan Luttrell",
+   "party": "Republican",
+   "district": "8",
+   "website": "https://luttrell.house.gov",
+   "contact": "https://luttrell.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Monica De La Cruz",
+   "party": "Republican",
+   "district": "15",
+   "website": "https://delacruz.house.gov",
+   "contact": "https://delacruz.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Jasmine Crockett",
+   "party": "Democrat",
+   "district": "30",
+   "website": "https://crockett.house.gov",
+   "contact": "https://crockett.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Greg Casar",
+   "party": "Democrat",
+   "district": "35",
+   "website": "https://casar.house.gov",
+   "contact": "https://casar.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Wesley Hunt",
+   "party": "Republican",
+   "district": "38",
+   "website": "https://hunt.house.gov",
+   "contact": "https://hunt.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "VA",
+   "state_full": "Virginia",
+   "name": "Jennifer A. Kiggans",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://kiggans.house.gov",
+   "contact": "https://kiggans.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "VT",
+   "state_full": "Vermont",
+   "name": "Becca Balint",
+   "party": "Democrat",
+   "district": "At-Large",
+   "website": "https://balint.house.gov",
+   "contact": "https://balint.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WA",
+   "state_full": "Washington",
+   "name": "Marie Gluesenkamp Perez",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://gluesenkampperez.house.gov",
+   "contact": "https://gluesenkampperez.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WI",
+   "state_full": "Wisconsin",
+   "name": "Derrick Van Orden",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://vanorden.house.gov",
+   "contact": "https://vanorden.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WY",
+   "state_full": "Wyoming",
+   "name": "Harriet M. Hageman",
+   "party": "Republican",
+   "district": "At-Large",
+   "website": "https://hageman.house.gov",
+   "contact": "https://hageman.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "VA",
+   "state_full": "Virginia",
+   "name": "Jennifer L. McClellan",
+   "party": "Democrat",
+   "district": "4",
+   "website": "https://mcclellan.house.gov",
+   "contact": "https://mcclellan.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "RI",
+   "state_full": "Rhode Island",
+   "name": "Gabe Amo",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://amo.house.gov",
+   "contact": "https://amo.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "UT",
+   "state_full": "Utah",
+   "name": "Celeste Maloy",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://maloy.house.gov",
+   "contact": "https://maloy.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Thomas R. Suozzi",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://suozzi.house.gov",
+   "contact": "https://suozzi.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Timothy M. Kennedy",
+   "party": "Democrat",
+   "district": "26",
+   "website": "https://kennedy.house.gov",
+   "contact": "https://kennedy.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Vince Fong",
+   "party": "Republican",
+   "district": "20",
+   "website": "https://fong.house.gov",
+   "contact": "https://fong.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OH",
+   "state_full": "Ohio",
+   "name": "Michael A. Rulli",
+   "party": "Republican",
+   "district": "6",
+   "website": "https://rulli.house.gov",
+   "contact": "https://rulli.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NJ",
+   "state_full": "New Jersey",
+   "name": "LaMonica McIver",
+   "party": "Democrat",
+   "district": "10",
+   "website": "https://mciver.house.gov",
+   "contact": "https://mciver.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WI",
+   "state_full": "Wisconsin",
+   "name": "Tony Wied",
+   "party": "Republican",
+   "district": "8",
+   "website": "https://wied.house.gov",
+   "contact": "https://wied.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "LA",
+   "state_full": "Louisiana",
+   "name": "Cleo Fields",
+   "party": "Democrat",
+   "district": "6",
+   "website": "https://fields.house.gov",
+   "contact": "https://fields.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IN",
+   "state_full": "Indiana",
+   "name": "Marlin A. Stutzman",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://stutzman.house.gov",
+   "contact": "https://stutzman.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Gilbert Ray Cisneros, Jr.",
+   "party": "Democrat",
+   "district": "31",
+   "website": "https://cisneros.house.gov",
+   "contact": "https://cisneros.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AK",
+   "state_full": "Alaska",
+   "name": "Nicholas J. Begich III",
+   "party": "Republican",
+   "district": "At-Large",
+   "website": "https://begich.house.gov",
+   "contact": "https://begich.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AL",
+   "state_full": "Alabama",
+   "name": "Shomari Figures",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://figures.house.gov",
+   "contact": "https://figures.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AZ",
+   "state_full": "Arizona",
+   "name": "Yassamin Ansari",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://ansari.house.gov",
+   "contact": "https://ansari.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AZ",
+   "state_full": "Arizona",
+   "name": "Abraham J. Hamadeh",
+   "party": "Republican",
+   "district": "8",
+   "website": "https://hamadeh.house.gov",
+   "contact": "https://hamadeh.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Lateefah Simon",
+   "party": "Democrat",
+   "district": "12",
+   "website": "https://simon.house.gov",
+   "contact": "https://simon.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Adam Gray",
+   "party": "Democrat",
+   "district": "13",
+   "website": "https://gray.house.gov",
+   "contact": "https://gray.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Sam T. Liccardo",
+   "party": "Democrat",
+   "district": "16",
+   "website": "https://liccardo.house.gov",
+   "contact": "https://liccardo.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "George Whitesides",
+   "party": "Democrat",
+   "district": "27",
+   "website": "https://whitesides.house.gov",
+   "contact": "https://whitesides.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Luz M. Rivas",
+   "party": "Democrat",
+   "district": "29",
+   "website": "https://rivas.house.gov",
+   "contact": "https://rivas.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Laura Friedman",
+   "party": "Democrat",
+   "district": "30",
+   "website": "https://friedman.house.gov",
+   "contact": "https://friedman.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Derek Tran",
+   "party": "Democrat",
+   "district": "45",
+   "website": "https://tran.house.gov",
+   "contact": "https://tran.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "Dave Min",
+   "party": "Democrat",
+   "district": "47",
+   "website": "https://min.house.gov",
+   "contact": "https://min.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CO",
+   "state_full": "Colorado",
+   "name": "Jeff Hurd",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://hurd.house.gov",
+   "contact": "https://hurd.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CO",
+   "state_full": "Colorado",
+   "name": "Jeff Crank",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://crank.house.gov",
+   "contact": "https://crank.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CO",
+   "state_full": "Colorado",
+   "name": "Gabe Evans",
+   "party": "Republican",
+   "district": "8",
+   "website": "https://gabeevans.house.gov",
+   "contact": "https://gabeevans.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "DE",
+   "state_full": "Delaware",
+   "name": "Sarah McBride",
+   "party": "Democrat",
+   "district": "At-Large",
+   "website": "https://mcbride.house.gov",
+   "contact": "https://mcbride.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Mike Haridopolos",
+   "party": "Republican",
+   "district": "8",
+   "website": "https://haridopolos.house.gov",
+   "contact": "https://haridopolos.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "GA",
+   "state_full": "Georgia",
+   "name": "Brian Jack",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://jack.house.gov",
+   "contact": "https://jack.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IN",
+   "state_full": "Indiana",
+   "name": "Jefferson Shreve",
+   "party": "Republican",
+   "district": "6",
+   "website": "https://shreve.house.gov",
+   "contact": "https://shreve.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "IN",
+   "state_full": "Indiana",
+   "name": "Mark B. Messmer",
+   "party": "Republican",
+   "district": "8",
+   "website": "https://messmer.house.gov",
+   "contact": "https://messmer.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "KS",
+   "state_full": "Kansas",
+   "name": "Derek Schmidt",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://schmidt.house.gov",
+   "contact": "https://schmidt.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MD",
+   "state_full": "Maryland",
+   "name": "Johnny Olszewski, Jr.",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://olszewski.house.gov",
+   "contact": "https://olszewski.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MD",
+   "state_full": "Maryland",
+   "name": "Sarah Elfreth",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://elfreth.house.gov",
+   "contact": "https://elfreth.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MD",
+   "state_full": "Maryland",
+   "name": "April McClain Delaney",
+   "party": "Democrat",
+   "district": "6",
+   "website": "https://mcclaindelaney.house.gov",
+   "contact": "https://mcclaindelaney.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MI",
+   "state_full": "Michigan",
+   "name": "Tom Barrett",
+   "party": "Republican",
+   "district": "7",
+   "website": "https://barrett.house.gov",
+   "contact": "https://barrett.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MI",
+   "state_full": "Michigan",
+   "name": "Kristen McDonald Rivet",
+   "party": "Democrat",
+   "district": "8",
+   "website": "https://mcdonaldrivet.house.gov",
+   "contact": "https://mcdonaldrivet.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MN",
+   "state_full": "Minnesota",
+   "name": "Kelly Morrison",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://morrison.house.gov",
+   "contact": "https://morrison.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MO",
+   "state_full": "Missouri",
+   "name": "Wesley Bell",
+   "party": "Democrat",
+   "district": "1",
+   "website": "https://bell.house.gov",
+   "contact": "https://bell.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MO",
+   "state_full": "Missouri",
+   "name": "Robert F. Onder, Jr.",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://onder.house.gov",
+   "contact": "https://onder.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Delegate",
+   "state": "MP",
+   "state_full": "N. Mariana Islands",
+   "name": "Kimberlyn King-Hinds",
+   "party": "Republican",
+   "district": "At-Large",
+   "website": "https://king-hinds.house.gov",
+   "contact": "https://king-hinds.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "MT",
+   "state_full": "Montana",
+   "name": "Troy Downing",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://downing.house.gov",
+   "contact": "https://downing.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NC",
+   "state_full": "North Carolina",
+   "name": "Addison P. McDowell",
+   "party": "Republican",
+   "district": "6",
+   "website": "https://mcdowell.house.gov",
+   "contact": "https://mcdowell.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NC",
+   "state_full": "North Carolina",
+   "name": "Mark Harris",
+   "party": "Republican",
+   "district": "8",
+   "website": "https://markharris.house.gov",
+   "contact": "https://markharris.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NC",
+   "state_full": "North Carolina",
+   "name": "Pat Harrigan",
+   "party": "Republican",
+   "district": "10",
+   "website": "https://harrigan.house.gov",
+   "contact": "https://harrigan.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NC",
+   "state_full": "North Carolina",
+   "name": "Brad Knott",
+   "party": "Republican",
+   "district": "13",
+   "website": "https://knott.house.gov",
+   "contact": "https://knott.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NC",
+   "state_full": "North Carolina",
+   "name": "Tim Moore",
+   "party": "Republican",
+   "district": "14",
+   "website": "https://timmoore.house.gov",
+   "contact": "https://timmoore.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "ND",
+   "state_full": "North Dakota",
+   "name": "Julie Fedorchak",
+   "party": "Republican",
+   "district": "At-Large",
+   "website": "https://fedorchak.house.gov",
+   "contact": "https://fedorchak.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NH",
+   "state_full": "New Hampshire",
+   "name": "Maggie Goodlander",
+   "party": "Democrat",
+   "district": "2",
+   "website": "https://goodlander.house.gov",
+   "contact": "https://goodlander.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NJ",
+   "state_full": "New Jersey",
+   "name": "Herbert C. Conaway, Jr.",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://conaway.house.gov",
+   "contact": "https://conaway.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NJ",
+   "state_full": "New Jersey",
+   "name": "Nellie Pou",
+   "party": "Democrat",
+   "district": "9",
+   "website": "https://pou.house.gov",
+   "contact": "https://pou.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Laura Gillen",
+   "party": "Democrat",
+   "district": "4",
+   "website": "https://gillen.house.gov",
+   "contact": "https://gillen.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "George Latimer",
+   "party": "Democrat",
+   "district": "16",
+   "website": "https://latimer.house.gov",
+   "contact": "https://latimer.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "Josh Riley",
+   "party": "Democrat",
+   "district": "19",
+   "website": "https://riley.house.gov",
+   "contact": "https://riley.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NY",
+   "state_full": "New York",
+   "name": "John W. Mannion",
+   "party": "Democrat",
+   "district": "22",
+   "website": "https://mannion.house.gov",
+   "contact": "https://mannion.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OH",
+   "state_full": "Ohio",
+   "name": "David J. Taylor",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://taylor.house.gov",
+   "contact": "https://taylor.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OR",
+   "state_full": "Oregon",
+   "name": "Maxine Dexter",
+   "party": "Democrat",
+   "district": "3",
+   "website": "https://dexter.house.gov",
+   "contact": "https://dexter.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "OR",
+   "state_full": "Oregon",
+   "name": "Janelle S. Bynum",
+   "party": "Democrat",
+   "district": "5",
+   "website": "https://bynum.house.gov",
+   "contact": "https://bynum.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Ryan Mackenzie",
+   "party": "Republican",
+   "district": "7",
+   "website": "https://mackenzie.house.gov",
+   "contact": "https://mackenzie.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "PA",
+   "state_full": "Pennsylvania",
+   "name": "Robert P. Bresnahan, Jr.",
+   "party": "Republican",
+   "district": "8",
+   "website": "https://bresnahan.house.gov",
+   "contact": "https://bresnahan.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Delegate",
+   "state": "PR",
+   "state_full": "Puerto Rico",
+   "name": "Pablo José Hernández",
+   "party": "Democrat",
+   "district": "At-Large",
+   "website": "https://hernandez.house.gov",
+   "contact": "https://hernandez.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "SC",
+   "state_full": "South Carolina",
+   "name": "Sheri Biggs",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://sheribiggs.house.gov",
+   "contact": "https://sheribiggs.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Craig A. Goldman",
+   "party": "Republican",
+   "district": "12",
+   "website": "https://craiggoldman.house.gov",
+   "contact": "https://craiggoldman.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Brandon Gill",
+   "party": "Republican",
+   "district": "26",
+   "website": "https://gill.house.gov",
+   "contact": "https://gill.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Julie Johnson",
+   "party": "Democrat",
+   "district": "32",
+   "website": "https://juliejohnson.house.gov",
+   "contact": "https://juliejohnson.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "UT",
+   "state_full": "Utah",
+   "name": "Mike Kennedy",
+   "party": "Republican",
+   "district": "3",
+   "website": "https://mikekennedy.house.gov",
+   "contact": "https://mikekennedy.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "VA",
+   "state_full": "Virginia",
+   "name": "John J. McGuire III",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://mcguire.house.gov",
+   "contact": "https://mcguire.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "VA",
+   "state_full": "Virginia",
+   "name": "Eugene Simon Vindman",
+   "party": "Democrat",
+   "district": "7",
+   "website": "https://vindman.house.gov",
+   "contact": "https://vindman.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "VA",
+   "state_full": "Virginia",
+   "name": "Suhas Subramanyam",
+   "party": "Democrat",
+   "district": "10",
+   "website": "https://subramanyam.house.gov",
+   "contact": "https://subramanyam.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WA",
+   "state_full": "Washington",
+   "name": "Michael Baumgartner",
+   "party": "Republican",
+   "district": "5",
+   "website": "https://baumgartner.house.gov",
+   "contact": "https://baumgartner.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WA",
+   "state_full": "Washington",
+   "name": "Emily Randall",
+   "party": "Democrat",
+   "district": "6",
+   "website": "https://randall.house.gov",
+   "contact": "https://randall.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "WV",
+   "state_full": "West Virginia",
+   "name": "Riley M. Moore",
+   "party": "Republican",
+   "district": "2",
+   "website": "https://rileymoore.house.gov",
+   "contact": "https://rileymoore.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Jimmy Patronis",
+   "party": "Republican",
+   "district": "1",
+   "website": "https://patronis.house.gov",
+   "contact": "https://patronis.house.gov/contact/email-me",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "FL",
+   "state_full": "Florida",
+   "name": "Randy Fine",
+   "party": "Republican",
+   "district": "6",
+   "website": "https://fine.house.gov",
+   "contact": "hhttps://fine.house.gov/address_authentication?form=/contact/email-me",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "VA",
+   "state_full": "Virginia",
+   "name": "James R. Walkinshaw",
+   "party": "Democrat",
+   "district": "11",
+   "website": "https://walkinshaw.house.gov",
+   "contact": "https://walkinshaw.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "AZ",
+   "state_full": "Arizona",
+   "name": "Adelita S. Grijalva",
+   "party": "Democrat",
+   "district": "7",
+   "website": "https://grijalva.house.gov",
+   "contact": "https://grijalva.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TN",
+   "state_full": "Tennessee",
+   "name": "Matt Van Epps",
+   "party": "Republican",
+   "district": "7",
+   "website": "https://vanepps.house.gov",
+   "contact": "https://vanepps.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "TX",
+   "state_full": "Texas",
+   "name": "Christian D. Menefee",
+   "party": "Democrat",
+   "district": "18",
+   "website": "https://menefee.house.gov",
+   "contact": "https://menefee.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "GA",
+   "state_full": "Georgia",
+   "name": "Clay Fuller",
+   "party": "Republican",
+   "district": "14",
+   "website": "https://fuller.house.gov",
+   "contact": "https://fuller.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "NJ",
+   "state_full": "New Jersey",
+   "name": "Analilia Mejia",
+   "party": "Democrat",
+   "district": "11",
+   "website": "https://mejia.house.gov",
+   "contact": "https://mejia.house.gov",
+   "stance": "",
+   "stance_src": ""
+  },
+  {
+   "office": "Representative",
+   "state": "CA",
+   "state_full": "California",
+   "name": "James Gallagher",
+   "party": "Republican",
+   "district": "1",
+   "website": "",
+   "contact": "",
    "stance": "",
    "stance_src": ""
   }

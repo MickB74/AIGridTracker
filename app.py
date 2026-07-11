@@ -72,11 +72,11 @@ GRID_INTENSITY = {
 
 WATER_ML_PER_WH = 0.26 / 0.24  # ~1.083 mL/Wh, implied by Gemini disclosure
 
-# IEA data-centre electricity outlook (TWh), demand-side.
+# IEA data-center electricity outlook (TWh), demand-side.
 IEA_OUTLOOK = pd.DataFrame({"year": [2024, 2025, 2030, 2035],
                             "twh":  [415,  485,  945,  1200]})
 
-# Third-party GLOBAL data-centre electricity forecasts (TWh) — same metric so
+# Third-party GLOBAL data-center electricity forecasts (TWh) — same metric so
 # they're comparable. Shows how much the projections diverge by year/scenario.
 DC_FORECASTS = pd.DataFrame([
     {"source": "IEA (base)",     "year": 2030, "twh": 945,  "src": "iea_2025"},
@@ -88,7 +88,7 @@ DC_FORECASTS = pd.DataFrame([
     {"source": "BloombergNEF",   "year": 2050, "twh": 3700, "src": "bnef"},
 ])
 
-# US-only data-centre electricity forecasts for 2030 (TWh). The spread is the
+# US-only data-center electricity forecasts for 2030 (TWh). The spread is the
 # story: central estimates run ~350 → ~970 TWh. Scenario/range midpoints noted.
 DC_FORECASTS_US = pd.DataFrame([
     {"source": "Goldman Sachs / McKinsey", "twh": 350, "note": "~300–400 range", "src": "wri_range"},
@@ -99,7 +99,7 @@ DC_FORECASTS_US = pd.DataFrame([
     {"source": "BCG",                      "twh": 970, "note": "high end",        "src": "wri_range"},
 ])
 
-# Major data-centre markets — OPERATIONAL commissioned power (MW), ~2025.
+# Major data-center markets — OPERATIONAL commissioned power (MW), ~2025.
 # Market-level totals from broker inventories (CBRE / Cushman & Wakefield /
 # datacenterHawk) — NOT per-facility disclosures, which operators don't publish.
 # grid = the ISO/grid feed this app can pull carbon for ("" = not yet wired).
@@ -206,7 +206,7 @@ DC_METRICS = {
          "US markets only; blank = not broken out."),
 }
 
-# Data-centre moratoriums / bans — POINT-IN-TIME SNAPSHOT (mid-2026). Compiled
+# Data-center moratoriums / bans — POINT-IN-TIME SNAPSHOT (mid-2026). Compiled
 # from public trackers (see MORATORIUM_TRACKERS); dozens more churn weekly, so
 # treat as illustrative, not exhaustive — follow the tracker links for current
 # status. level: Local/State. status: Enacted/Proposed/Rejected/Vetoed.
@@ -322,29 +322,29 @@ SOURCES = {
                      "https://datacenters.atmeta.com/us-locations/"),
     "imasons":      ("Infrastructure Masons (iMasons) — industry & sustainability data",
                      "https://imasons.org/"),
-    "bnef":         ("BloombergNEF (BNEF) — data-centre power-demand research & forecasts",
+    "bnef":         ("BloombergNEF (BNEF) — data-center power-demand research & forecasts",
                      "https://about.bnef.com/"),
     "ercot_ll":     ("ERCOT — Large Load Interconnection Queue (Dec 2025 board update)",
                      "https://www.ercot.com/gridinfo/load"),
-    "pjm_lf":       ("PJM — 2025 Long-Term Load Forecast (data-centre-driven growth)",
+    "pjm_lf":       ("PJM — 2025 Long-Term Load Forecast (data-center-driven growth)",
                      "https://www.pjm.com/-/media/DotCom/library/reports-notices/load-forecast/2025-load-report.pdf"),
     "eia_va":       ("EIA — Commercial electricity sales in Virginia driven by data centers (2025)",
                      "https://www.eia.gov/todayinenergy/detail.php?id=67664"),
     "eia_pilot":    ("EIA — Pilot survey on energy use at data centers (Mar 2026)",
                      "https://www.eia.gov/pressroom/releases/press585.php"),
-    "gartner":      ("Gartner — data-centre electricity to double by 2030 (~980 TWh)",
+    "gartner":      ("Gartner — data-center electricity to double by 2030 (~980 TWh)",
                      "https://www.gartner.com/en/newsroom/press-releases/2025-11-17-gartner-says-electricity-demand-for-data-centers-to-grow-16-percent-in-2025-and-double-by-2030"),
-    "bnef_106":     ("BloombergNEF — US data-centre power demand ~106 GW by 2035",
+    "bnef_106":     ("BloombergNEF — US data-center power demand ~106 GW by 2035",
                      "https://www.utilitydive.com/news/us-data-center-power-demand-could-reach-106-gw-by-2035-bloombergnef/806972/"),
     "wri_range":    ("World Resources Institute — US 2030 forecasts span 206–970 TWh",
                      "https://www.wri.org/insights/us-data-centers-electricity-demand"),
-    "sp_451":       ("S&P Global / 451 Research — global data-centre demand ~1,587 TWh by 2030",
+    "sp_451":       ("S&P Global / 451 Research — global data-center demand ~1,587 TWh by 2030",
                      "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/110525-global-data-center-power-demand-expected-to-almost-double-by-2030"),
     "epri_pi":      ("EPRI — Powering Intelligence 2026 (US Low/Medium/High scenarios)",
                      "https://powering-intelligence.epri.com/summary-projections.html"),
-    "lbnl":         ("Lawrence Berkeley National Lab — US data centres 325–580 TWh by 2030",
+    "lbnl":         ("Lawrence Berkeley National Lab — US data centers 325–580 TWh by 2030",
                      "https://eta.lbl.gov/publications/2024-united-states-data-center-energy"),
-    # --- Governor data-centre stances (Officials tab) ---
+    # --- Governor data-center stances (Officials tab) ---
     "ga_kemp":      ("Georgia governor vetoes bill to pause data-center tax breaks (2024)",
                      "https://www.datacenterdynamics.com/en/news/georgia-governor-vetoes-bill-to-pause-data-center-tax-breaks/"),
     "tx_sb6":       ("Gov. Abbott signs SB 6 — large-load grid rules (2025)",
@@ -584,7 +584,7 @@ EIA_DEMAND_BASE = "https://api.eia.gov/v2/electricity/rto/region-data/data/"
 def eia_latest_demand(api_key: str, respondent: str):
     """Latest hourly system demand (MW) for a balancing authority via EIA-930
     region-data (type 'D'). Returns (mw, period_str) or None. Grid-scale total
-    load, not data-centre-only — context for 'how much power'."""
+    load, not data-center-only — context for 'how much power'."""
     params = {
         "api_key": api_key, "frequency": "hourly", "data[0]": "value",
         "facets[respondent][]": respondent, "facets[type][]": "D",
@@ -602,7 +602,7 @@ def eia_latest_demand(api_key: str, respondent: str):
 GOOGLE_NEWS_RSS = ("https://news.google.com/rss/search?q={q}"
                    "&hl=en-US&gl=US&ceid=US:en")
 
-# Official company hubs / reports / press releases on data centres & communities.
+# Official company hubs / reports / press releases on data centers & communities.
 # (category, company, what it is, url) — first-party material: economic-impact
 # reports, community pledges, newsrooms. Curated landing pages, not one-off links.
 COMPANY_STATEMENTS = [
@@ -611,7 +611,7 @@ COMPANY_STATEMENTS = [
      "Impact in communities hub + 2025 economic-impact report",
      "https://www.aboutamazon.com/aws-impact-in-communities"),
     ("Hyperscalers & AI cloud", "Amazon / AWS",
-     "Data centres: water & electricity use explainer",
+     "Data centers: water & electricity use explainer",
      "https://www.aboutamazon.com/news/sustainability/amazon-data-centers-electricity-bills-water-use"),
     ("Hyperscalers & AI cloud", "Google",
      "Accelerating economies — 2025 Data Center Community Impact Report",
@@ -1219,7 +1219,7 @@ with tab_grid:
 # --------------------------------------------------------------------------- #
 
 with tab_dc:
-    st.subheader("Where the data centres are — and how much power they pull")
+    st.subheader("Where the data centers are — and how much power they pull")
     st.caption("Market-level power by phase (~2025). Totals are broker inventories "
                "(CBRE / JLL / Cushman & Wakefield) — operators don't disclose "
                "per-facility MW. Toggle the phase; each is cited separately because "
@@ -1279,7 +1279,7 @@ with tab_dc:
 
     st.divider()
     st.subheader("First-party: hyperscaler campuses")
-    st.caption("Individual data-centre campuses that operators publish themselves "
+    st.caption("Individual data-center campuses that operators publish themselves "
                "— exact locations, from Google's and Meta's own sites. Neither "
                "discloses per-facility MW, so these are location markers (not sized "
                "by power); the broker map above is the place to read scale.")
@@ -1313,11 +1313,11 @@ with tab_dc:
                + src_link("imasons") + " · " + src_link("bnef") + ".")
 
     st.info(
-        "📋 **Authoritative facility data is coming (EIA).** Data centres are "
+        "📋 **Authoritative facility data is coming (EIA).** Data centers are "
         "electricity *customers*, so they've never been in federal facility data "
         "— which is why the maps above rely on broker estimates and operator "
         "self-disclosure. That's starting to change: in **March 2026 the EIA "
-        "launched its first pilot survey** of data-centre energy use — 196 "
+        "launched its first pilot survey** of data-center energy use — 196 "
         "companies across **Texas, Washington, and Northern Virginia/DC** "
         "(electricity, cooling, IT specs, efficiency), voluntary now with a "
         "**mandatory survey to follow**. Results aren't published yet. Meanwhile "
@@ -1327,7 +1327,7 @@ with tab_dc:
 
     st.divider()
     st.subheader("The demand wave — ERCOT & PJM")
-    st.caption("The two US grids where data-centre load growth is most acute. "
+    st.caption("The two US grids where data-center load growth is most acute. "
                "Interconnection-queue figures are filed point-in-time snapshots "
                "(not a live API); headline numbers sourced below.")
 
@@ -1336,19 +1336,19 @@ with tab_dc:
         st.markdown("**ERCOT (Texas)**")
         e1, e2 = st.columns(2)
         e1.metric("Large-load queue", "~233 GW", "requests, Nov 2025")
-        e2.metric("Data centres", "72.9%", "of the queue")
+        e2.metric("Data centers", "72.9%", "of the queue")
         st.caption("Nearly **4×** the 63 GW at end-2024. + crypto ~8.8%. "
                    f"{src_link('ercot_ll')}.")
     with gp:
         st.markdown("**PJM (Mid-Atlantic)**")
         p1, p2 = st.columns(2)
-        p1.metric("Peak load 2024→30", "+32 GW", "94% data centres")
+        p1.metric("Peak load 2024→30", "+32 GW", "94% data centers")
         p2.metric("Dominion (VA) summer peak", "23.9 GW", "+23% vs 2019")
         st.caption("Dominion zone (NoVA \"Data Center Alley\") drives the biggest "
                    f"absolute rise. {src_link('pjm_lf')}; {src_link('eia_va')}.")
 
     st.markdown("**Live system demand (EIA-930)** — grid-scale total load right "
-                "now (all uses, not data-centre-only):")
+                "now (all uses, not data-center-only):")
     dk = st.text_input("EIA API key", type="password", key="dc_eia_key",
                        value=LOCAL_SECRETS["eia"],
                        help="Free instant key: eia.gov/opendata/register.php "
@@ -1376,7 +1376,7 @@ with tab_dc:
 # --------------------------------------------------------------------------- #
 
 with tab_news:
-    st.subheader("Community pushback & the issues data centres face")
+    st.subheader("Community pushback & the issues data centers face")
     st.caption("The build-out isn't frictionless: towns are pausing or blocking "
                "projects over power bills, water, noise, and land use. Recurring "
                "themes below, plus a live feed — news (Google) or grassroots "
@@ -1387,9 +1387,9 @@ with tab_news:
     # clips / explainers that demonstrate the issue, no API key required.
     issues = [
         ("💵", "Electricity bills & grid strain",
-         "Surging data-centre load raises wholesale prices and can shift "
+         "Surging data-center load raises wholesale prices and can shift "
          "transmission/capacity costs onto ordinary ratepayers; PJM's capacity "
-         "price spiked ~10× on data-centre-driven demand. Utilities also delay "
+         "price spiked ~10× on data-center-driven demand. Utilities also delay "
          "fossil-plant retirements to serve the load.",
          "data center electricity bills ratepayers grid strain news"),
         ("💧", "Water",
@@ -1476,7 +1476,7 @@ with tab_news:
     st.divider()
     st.markdown("#### Moratorium & ban tracker")
     st.caption("Towns, counties and states that have paused or blocked data "
-               "centres. Point-in-time snapshot (mid-2026) compiled from public "
+               "centers. Point-in-time snapshot (mid-2026) compiled from public "
                "trackers — dozens more churn weekly, so follow the links below "
                "for live status. Not exhaustive.")
 
@@ -1503,7 +1503,7 @@ with tab_news:
         geo["color"] = geo["status"].map(STATUS_COLORS).fillna("#9aa0a6")
         st.map(geo, latitude="lat", longitude="lon", color="color", size=18000)
         st.caption("🔴 Enacted · 🟠 Proposed · ⚪ Rejected/Vetoed. Points are "
-                   "approximate (county seat / city centre); statewide actions "
+                   "approximate (county seat / city center); statewide actions "
                    "aren't mapped. Zoom to see the North Carolina cluster.")
 
     tcol, ccol = st.columns([3, 2])
@@ -1590,36 +1590,43 @@ with tab_news:
 # --------------------------------------------------------------------------- #
 
 with tab_officials:
-    st.subheader("Contact your officials — senators & governors")
-    st.caption("All 100 US senators and 50 governors: party, official website, "
-               "and contact page — a directory for reaching decision-makers on "
-               "data-centre policy, where much of the action (moratoriums, "
-               "incentives, permitting) actually happens.")
+    st.subheader("Contact your officials — Congress & governors")
+    st.caption("Every US senator, representative, and governor: party, official "
+               "website, and contact page — a directory for reaching "
+               "decision-makers on data-center policy, where much of the action "
+               "(moratoriums, incentives, permitting) actually happens.")
 
     odf, ogen = load_officials()
     if odf.empty:
         st.warning("Couldn't load the officials directory.")
         st.caption(f"Detail: {ogen}")
     else:
+        nS = (odf.office == "Senator").sum()
+        nH = odf.office.isin(["Representative", "Delegate"]).sum()
+        nG = (odf.office == "Governor").sum()
         st.info(
-            "**Two honest limits.** (1) **Stances are only shown where documented** "
-            "and cited — most officials have made no public data-centre statement, "
-            "so that column is usually blank; nothing is inferred. (2) Senators and "
-            "governors **don't publish direct emails** — the Contact link opens "
-            "their official webform. Roster: " + ogen + ".")
+            f"**{nS} senators · {nH} House members · {nG} governors = "
+            f"{len(odf)} officials.** Two honest limits: (1) **stances are only "
+            "shown where documented** and cited — most officials have made no "
+            "public data-center statement, so that column is usually blank; "
+            "nothing is inferred. (2) Members **don't publish direct emails** — "
+            "the Contact link opens their official webform. Roster: " + ogen + ".")
 
-        f1, f2, f3 = st.columns([1.2, 1.4, 2])
-        office = f1.radio("Office", ["All", "Senator", "Governor"])
+        f1, f2, f3 = st.columns([1.6, 1.4, 2])
+        offices = f1.multiselect("Office", ["Senator", "Representative",
+                                            "Delegate", "Governor"],
+                                 default=["Senator", "Representative",
+                                          "Delegate", "Governor"])
         parties = f2.multiselect("Party", sorted(odf.party.unique()),
                                  default=sorted(odf.party.unique()))
-        states = f3.multiselect("State", sorted(odf.state_full.unique()),
+        states = f3.multiselect("State / territory", sorted(odf.state_full.unique()),
                                 default=[])
         only_stance = st.checkbox("Only show officials with a documented "
-                                  "data-centre stance", value=False)
+                                  "data-center stance", value=False)
 
         view = odf.copy()
-        if office != "All":
-            view = view[view.office == office]
+        if offices:
+            view = view[view.office.isin(offices)]
         if parties:
             view = view[view.party.isin(parties)]
         if states:
@@ -1630,17 +1637,18 @@ with tab_officials:
 
         q1, q2, q3 = st.columns(3)
         q1.metric("Officials shown", f"{len(view)}")
-        q2.metric("Senators", f"{(view.office=='Senator').sum()}")
+        q2.metric("House members",
+                  f"{view.office.isin(['Representative','Delegate']).sum()}")
         q3.metric("With sourced stance", f"{(view.stance.str.len()>0).sum()}")
 
-        show = view[["name", "office", "state_full", "party",
+        show = view[["name", "office", "state_full", "district", "party",
                      "stance", "website", "contact"]].copy()
         st.dataframe(
             show, use_container_width=True, hide_index=True, height=560,
             column_config={
                 "name": "Name", "office": "Office", "state_full": "State",
-                "party": "Party",
-                "stance": st.column_config.TextColumn("Data-centre stance (sourced)",
+                "district": "District", "party": "Party",
+                "stance": st.column_config.TextColumn("Data-center stance (sourced)",
                                                       width="large"),
                 "website": st.column_config.LinkColumn("Website", display_text="site"),
                 "contact": st.column_config.LinkColumn("Contact", display_text="contact"),
@@ -1654,20 +1662,21 @@ with tab_officials:
                 st.markdown(f"- **{r['name']}** ({r['party']}, {r['office']}, "
                             f"{r['state_full']}): {r['stance']}{src}")
 
-        st.caption("Sources: official [US Senate contact list]"
+        st.caption("Sources: official [Senate contact list]"
                    "(https://www.senate.gov/general/contact_information/senators_cfm.xml)"
-                   " · [current US governors]"
+                   " · [House member data]"
+                   "(https://unitedstates.github.io/congress-legislators/) "
+                   "(@unitedstates project) · [current US governors]"
                    "(https://en.wikipedia.org/wiki/List_of_current_United_States_governors)"
-                   ". Governor site URLs are official state-government pages. "
-                   "Verify before any outreach — rosters change with elections "
-                   "and appointments.")
+                   ". Governor URLs are official state pages. Verify before "
+                   "outreach — rosters change with elections and appointments.")
 
 # --------------------------------------------------------------------------- #
 # TAB 8 — MACRO OUTLOOK
 # --------------------------------------------------------------------------- #
 
 with tab_macro:
-    st.subheader("Global data-centre electricity — IEA outlook")
+    st.subheader("Global data-center electricity — IEA outlook")
     line = (alt.Chart(IEA_OUTLOOK).mark_line(point=True, strokeWidth=3).encode(
         x=alt.X("year:O", title=None), y=alt.Y("twh:Q", title="TWh / year"),
         tooltip=["year", "twh"]).properties(height=320))
@@ -1676,10 +1685,10 @@ with tab_macro:
     c1, c2, c3 = st.columns(3)
     c1.metric("2024 → 2030", "~415 → 945 TWh", "≈ Japan's total demand")
     c2.metric("Share of global electricity, 2030", "~3%")
-    c3.metric("Data-centre CO₂, 2030", "~1%", "of global emissions")
+    c3.metric("Data-center CO₂, 2030", "~1%", "of global emissions")
 
     st.markdown(
-        "- AI's slice of data-centre power is projected to climb from **5–15%** recently "
+        "- AI's slice of data-center power is projected to climb from **5–15%** recently "
         "to **35–50% by 2030**.\n"
         "- **Inference dominates**: it accounts for the majority of a model's lifetime "
         "energy (>90% by some operator accounts) — *usage*, not training, is the lever.\n"
@@ -1688,13 +1697,13 @@ with tab_macro:
 
     st.divider()
     st.subheader("Forecasts disagree — a lot")
-    st.caption("Third-party projections of **global** data-centre electricity (TWh) "
+    st.caption("Third-party projections of **global** data-center electricity (TWh) "
                "vary widely by forecaster, year, and scenario. Same metric, so "
                "they're comparable; the gap is the honest uncertainty.")
     fdf = DC_FORECASTS.copy()
     fdf["label"] = fdf["source"] + " · " + fdf["year"].astype(str)
     fc = (alt.Chart(fdf).mark_bar().encode(
-        x=alt.X("twh:Q", title="Global data-centre electricity (TWh/yr)"),
+        x=alt.X("twh:Q", title="Global data-center electricity (TWh/yr)"),
         y=alt.Y("label:N", sort="-x", title=None),
         color=alt.Color("source:N", legend=alt.Legend(title="Forecaster")),
         tooltip=["source", "year", "twh"],
@@ -1705,7 +1714,7 @@ with tab_macro:
                 "whole point: central estimates run ~2.8× from low to high.")
     udf = DC_FORECASTS_US.copy()
     uc = (alt.Chart(udf).mark_bar().encode(
-        x=alt.X("twh:Q", title="US data-centre electricity, 2030 (TWh/yr)"),
+        x=alt.X("twh:Q", title="US data-center electricity, 2030 (TWh/yr)"),
         y=alt.Y("source:N", sort="x", title=None),
         color=alt.Color("twh:Q", scale=alt.Scale(scheme="yelloworangered"), legend=None),
         tooltip=["source", "twh", "note"],
@@ -1713,7 +1722,7 @@ with tab_macro:
     st.altair_chart(uc, use_container_width=True)
 
     st.markdown(
-        f"- **In capacity terms:** BloombergNEF sees US data-centre power hitting "
+        f"- **In capacity terms:** BloombergNEF sees US data-center power hitting "
         f"**~106 GW by 2035** (from ~25 GW in 2024) — **8.6%** of all US "
         f"electricity, more than double today's 3.5%. {src_link('bnef_106')}.\n"
         f"- **Why the spread:** forecasts hinge on how much announced pipeline "
