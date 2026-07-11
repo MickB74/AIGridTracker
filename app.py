@@ -14,6 +14,10 @@ Coefficients are sourced inline (see SOURCES) and surfaced on the Methodology
 tab. Figures are point-in-time estimates, not guarantees.
 """
 
+import json
+import os
+import pathlib
+
 import streamlit as st
 import pandas as pd
 import altair as alt
@@ -381,6 +385,47 @@ def src_link(key: str) -> str:
     return f"[{name}]({url})"
 
 
+@st.cache_data(show_spinner=False)
+def load_local_secrets() -> dict:
+    """Best-effort local API keys for dev convenience, so keys needn't be pasted
+    each session. Never raises; returns {'eia': str, 'pjm': str} (blank if absent).
+    Lookup order per key: environment variable -> ./.env -> sibling
+    pjm-suite/PJM_Data_Hub/config.json. Nothing is committed — .gitignore blocks
+    .env and config.json. The UI fields still override whatever is found here."""
+    out = {"eia": os.environ.get("EIA_API_KEY", "").strip(),
+           "pjm": os.environ.get("PJM_API_KEY", "").strip()}
+    here = pathlib.Path(__file__).resolve().parent
+
+    env_path = here / ".env"
+    if env_path.exists():
+        try:
+            for line in env_path.read_text().splitlines():
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                k, v = line.split("=", 1)
+                v = v.strip().strip('"').strip("'")
+                if k.strip() == "EIA_API_KEY" and not out["eia"]:
+                    out["eia"] = v
+                elif k.strip() == "PJM_API_KEY" and not out["pjm"]:
+                    out["pjm"] = v
+        except Exception:                                          # noqa: BLE001
+            pass
+
+    if not out["eia"] or not out["pjm"]:
+        cfg = here.parent / "pjm-suite" / "PJM_Data_Hub" / "config.json"
+        try:
+            data = json.loads(cfg.read_text())
+            out["eia"] = out["eia"] or str(data.get("eia_api_key", "")).strip()
+            out["pjm"] = out["pjm"] or str(data.get("subscription_key", "")).strip()
+        except Exception:                                          # noqa: BLE001
+            pass
+    return out
+
+
+LOCAL_SECRETS = load_local_secrets()
+
+
 # --------------------------------------------------------------------------- #
 # PAGE
 # --------------------------------------------------------------------------- #
@@ -623,7 +668,10 @@ with tab_grid:
         import datetime as _dt
         c1, c2, c3 = st.columns([2, 1.2, 1])
         api_key = c1.text_input("EIA API key", type="password",
+                                value=LOCAL_SECRETS["eia"],
                                 help="Free instant key: eia.gov/opendata/register.php")
+        if LOCAL_SECRETS["eia"]:
+            c1.caption("🔑 Auto-loaded from local config.")
         ba = c2.selectbox("Balancing authority", list(EIA_RESPONDENTS.keys()),
                           format_func=lambda k: EIA_RESPONDENTS[k][0])
         date = c3.date_input("Date (local)", value=_dt.date.today() - _dt.timedelta(days=1),
@@ -655,7 +703,10 @@ with tab_grid:
         import datetime as _dt
         c1, c2 = st.columns([2, 1])
         api_key = c1.text_input("PJM Data Miner 2 subscription key", type="password",
-                                help="PJM Tools → View Profile → Your Subscriptions.")
+                                value=LOCAL_SECRETS["pjm"],
+                                help="Data Miner 2 → account icon → API Access.")
+        if LOCAL_SECRETS["pjm"]:
+            c1.caption("🔑 Auto-loaded from local config.")
         date = c2.date_input("Date (EPT)", value=_dt.date.today() - _dt.timedelta(days=1))
         date_str = date.strftime("%m/%d/%Y")
         pnode = ""
@@ -787,8 +838,11 @@ with tab_dc:
     st.markdown("**Live system demand (EIA-930)** — grid-scale total load right "
                 "now (all uses, not data-centre-only):")
     dk = st.text_input("EIA API key", type="password", key="dc_eia_key",
+                       value=LOCAL_SECRETS["eia"],
                        help="Free instant key: eia.gov/opendata/register.php "
                             "— same key as the Grid timing tab.")
+    if LOCAL_SECRETS["eia"]:
+        st.caption("🔑 Auto-loaded from local config.")
     if dk:
         cols = st.columns(3)
         for col, ba in zip(cols, ["ERCO", "PJM", "CISO"]):
