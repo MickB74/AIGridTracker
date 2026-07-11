@@ -89,7 +89,7 @@ if _stories:
         padding: 20px;
         position: relative;
         box-shadow: 0 8px 30px rgba(255, 90, 31, 0.03);
-        height: 120px;
+        height: 140px;
         box-sizing: border-box;
     }}
     .carousel-wrapper {{
@@ -135,12 +135,13 @@ if _stories:
     }}
     .slide-title {{
         font-family: 'Outfit', sans-serif;
-        font-size: 1.2rem;
+        font-size: 1.15rem; /* Slightly smaller to prevent any overflow */
         font-weight: 600;
         margin: 2px 0 6px 0;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+        line-height: 1.3;
     }}
     .slide-title a {{
         color: #f8fafc;
@@ -157,6 +158,7 @@ if _stories:
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+        line-height: 1.3;
     }}
     .slide-meta {{
         font-size: 0.76rem;
@@ -268,7 +270,7 @@ if _stories:
     </body>
     </html>
     """
-    components.html(carousel_html, height=140)
+    components.html(carousel_html, height=160)
     st.caption("Automated Google News search (last 7 days) for communities "
                "affected by a built or under-construction data center. "
                "Unfiltered and not an endorsement — follow the link to the "
