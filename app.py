@@ -479,28 +479,6 @@ def src_link(key: str) -> str:
     return f"[{name}]({url})"
 
 
-@st.cache_resource(show_spinner=False)
-def _vader():
-    """VADER lexicon sentiment analyzer (lightweight, offline, tuned for short
-    social/headline text). Cached as a resource so it loads once."""
-    from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-    return SentimentIntensityAnalyzer()
-
-
-def sentiment_of(text: str) -> float:
-    """Compound sentiment in [-1, 1] for a headline/title."""
-    return _vader().polarity_scores(text or "")["compound"]
-
-
-def sentiment_badge(compound: float):
-    """(label, emoji, hex_color) for a compound score."""
-    if compound >= 0.05:
-        return "Positive", "🟢", "#1a9850"
-    if compound <= -0.05:
-        return "Negative", "🔴", "#d73027"
-    return "Neutral", "⚪", "#8a8a8a"
-
-
 @st.cache_data(show_spinner=False)
 def load_local_secrets() -> dict:
     """Best-effort local API keys for dev convenience, so keys needn't be pasted
@@ -1020,7 +998,7 @@ with tab_news:
                 st.caption(body)
 
     st.divider()
-    st.markdown("#### Live discussion & sentiment")
+    st.markdown("#### Live discussion")
     csrc, cth = st.columns([1, 2])
     feed = csrc.radio("Source", ["📰 News", "👥 Reddit"], horizontal=True)
     theme = cth.selectbox("Theme", list(NEWS_THEMES.keys()))
@@ -1028,23 +1006,25 @@ with tab_news:
                           placeholder="e.g. Virginia, Georgia, Tucson")
     query = NEWS_THEMES[theme] + (f" {extra}" if extra.strip() else "")
 
-    # --- fetch + normalize both feeds to a common {title, link, meta} shape --- #
+    # --- fetch + normalize both feeds to a common {title, link, meta, dt} shape --- #
     items, err, disclaimer = None, None, ""
     if feed == "📰 News":
         raw, err = fetch_news(query)
         disclaimer = ("Headlines are an automated news search, unfiltered and not "
                       "endorsements; follow the link to the original outlet.")
         if raw:
-            items = [{"title": a["title"], "link": a["link"],
-                      "meta": " · ".join(x for x in (a["source"], a["published"]) if x)}
+            items = [{"title": a["title"], "link": a["link"], "when": a["published"],
+                      "meta": " · ".join(x for x in (a["source"], a["published"]) if x),
+                      "dt": pd.to_datetime(a["published"], errors="coerce")}
                      for a in raw]
     else:
-        raw, err = fetch_reddit(query)
+        raw, err = fetch_reddit(query, sort="new")
         disclaimer = ("Reddit threads are user posts — anecdotal and unverified; a "
                       "read on local sentiment, not reporting.")
         if raw:
-            items = [{"title": p["title"], "link": p["link"],
-                      "meta": " · ".join(x for x in (p["subreddit"], p["created"]) if x)}
+            items = [{"title": p["title"], "link": p["link"], "when": p["created"],
+                      "meta": " · ".join(x for x in (p["subreddit"], p["created"]) if x),
+                      "dt": pd.to_datetime(p["created"], errors="coerce")}
                      for p in raw]
 
     if err or items is None:
@@ -1062,52 +1042,16 @@ with tab_news:
     elif not items:
         st.info("Nothing for this theme right now — try another or add a place.")
     else:
-        # score every item once, sort most-negative first (the story here)
+        # newest first; items with an unparseable date sink to the bottom
+        items.sort(key=lambda it: it["dt"] if pd.notna(it["dt"]) else pd.Timestamp.min,
+                   reverse=True)
+        st.caption(f"{len(items)} items • “{query}” • newest first")
         for it in items:
-            it["s"] = sentiment_of(it["title"])
-        items.sort(key=lambda it: it["s"])
-        pos = sum(1 for it in items if it["s"] >= 0.05)
-        neg = sum(1 for it in items if it["s"] <= -0.05)
-        neu = len(items) - pos - neg
-        avg = sum(it["s"] for it in items) / len(items)
-        lean_label, lean_emoji, lean_color = sentiment_badge(avg)
-
-        st.caption(f"{len(items)} items • “{query}” • sentiment via VADER (lexicon)")
-
-        cL, cR = st.columns([1, 2])
-        cL.metric("Overall tone", f"{lean_emoji} {lean_label}", f"avg {avg:+.2f}")
-        sdf = pd.DataFrame({
-            "label": ["Negative", "Neutral", "Positive"],
-            "count": [neg, neu, pos]})
-        bar = (alt.Chart(sdf).mark_bar().encode(
-            x=alt.X("count:Q", stack="normalize", title=None,
-                    axis=alt.Axis(format="%")),
-            color=alt.Color("label:N", legend=alt.Legend(orient="bottom", title=None),
-                            scale=alt.Scale(domain=["Negative", "Neutral", "Positive"],
-                                            range=["#d73027", "#9aa0a6", "#1a9850"])),
-            order=alt.Order("label:N"),
-            tooltip=["label", "count"],
-        ).properties(height=70))
-        cR.altair_chart(bar, use_container_width=True)
-
-        st.markdown(
-            f"<small>🔴 {neg} negative · ⚪ {neu} neutral · 🟢 {pos} positive</small>",
-            unsafe_allow_html=True)
-        st.write("")
-
-        for it in items:
-            _, _, color = sentiment_badge(it["s"])
-            st.markdown(
-                f"<span style='color:{color};font-size:1.1em'>●</span> "
-                f"[{it['title']}]({it['link']}) "
-                f"<span style='color:#888;font-size:0.8em'>({it['s']:+.2f})</span>"
-                f"<br><small style='color:#888'>{it['meta']}</small>",
-                unsafe_allow_html=True)
+            st.markdown(f"- [{it['title']}]({it['link']})  \n"
+                        f"  <small style='color:#888'>{it['meta']}</small>",
+                        unsafe_allow_html=True)
 
     st.caption(disclaimer)
-    st.caption("Sentiment is automated lexicon scoring (VADER) on the headline "
-               "text only — a directional read, not a verified measure; sarcasm "
-               "and headline shorthand can fool it.")
 
 # --------------------------------------------------------------------------- #
 # TAB 7 — MACRO OUTLOOK
