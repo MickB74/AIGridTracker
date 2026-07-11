@@ -352,6 +352,14 @@ SOURCES = {
                      "https://www.interconnectedcapital.com/research/data-center-moratoriums"),
     "dcbans":       ("DataCenterBans.com — moratorium & ban tracker",
                      "https://www.datacenterbans.com/"),
+    "dcopp":        ("Data Center Opposition — grassroots opposition & local fights tracker",
+                     "https://datacenteropposition.com/"),
+    "dcwatch":      ("Data Center Watch — activist-group & blocked/delayed-project tracker",
+                     "https://www.datacenterwatch.org/report"),
+    "dcresp":       ("Coalition for Responsible Data Center Development — map of community organizations",
+                     "https://www.datacenterresponsibility.com/mapofcommunityorganizations"),
+    "dctrack":      ("Data Center Tracker — community response & legislative-action database",
+                     "https://datacentertracker.org/"),
     "gjf_mor":      ("Good Jobs First — Data Center Moratorium Bills Are Spreading (2026)",
                      "https://goodjobsfirst.org/data-center-moratorium-bills-are-spreading-in-2026/"),
     "rockinst":     ("Rockefeller Institute — Updates on the Cloud: More Moratoriums (2026)",
@@ -782,6 +790,19 @@ def src_link(key: str) -> str:
 
 
 @st.cache_data(show_spinner=False)
+def load_officials():
+    """US senators + governors directory from officials.json (built from the
+    official Senate contact XML and the current-governors list). Returns
+    (DataFrame, generated_note) or (empty, error)."""
+    p = pathlib.Path(__file__).resolve().parent / "officials.json"
+    try:
+        data = json.loads(p.read_text())
+        return pd.DataFrame(data["officials"]), data.get("generated", "")
+    except Exception as e:                                          # noqa: BLE001
+        return pd.DataFrame(), str(e)
+
+
+@st.cache_data(show_spinner=False)
 def load_local_secrets() -> dict:
     """Best-effort local API keys for dev convenience, so keys needn't be pasted
     each session. Never raises; returns {'eia': str, 'pjm': str} (blank if absent).
@@ -831,11 +852,11 @@ st.title("⚡ AI Token Footprint")
 st.caption("The energy, water, and carbon behind LLM token usage — from a single "
            "prompt to the global grid. Sourced throughout; see **Methodology**.")
 
-(tab_calc, tab_compare, tab_live, tab_grid, tab_dc, tab_news, tab_macro,
- tab_method) = st.tabs(
+(tab_calc, tab_compare, tab_live, tab_grid, tab_dc, tab_news, tab_officials,
+ tab_macro, tab_method) = st.tabs(
     ["🧮 Calculator", "📊 Compare sources", "🔬 Live models",
      "🕐 Grid timing", "🏢 Data centers", "🗞️ Community & backlash",
-     "🌍 Macro outlook", "📚 Methodology"]
+     "🏛️ Officials", "🌍 Macro outlook", "📚 Methodology"]
 )
 
 # --------------------------------------------------------------------------- #
@@ -1480,7 +1501,8 @@ with tab_news:
         st.altair_chart(chart, use_container_width=True)
 
     st.caption("Trackers: " + " · ".join(
-        src_link(k) for k in ["icap_mor", "dcbans", "gjf_mor", "rockinst"]))
+        src_link(k) for k in ["icap_mor", "dcbans", "dcopp", "dcwatch", "dcresp",
+                               "dctrack", "gjf_mor", "rockinst"]))
 
     st.divider()
     st.markdown("#### Live discussion")
@@ -1539,7 +1561,84 @@ with tab_news:
     st.caption(disclaimer)
 
 # --------------------------------------------------------------------------- #
-# TAB 7 — MACRO OUTLOOK
+# TAB 7 — OFFICIALS (senators + governors contact directory)
+# --------------------------------------------------------------------------- #
+
+with tab_officials:
+    st.subheader("Contact your officials — senators & governors")
+    st.caption("All 100 US senators and 50 governors: party, official website, "
+               "and contact page — a directory for reaching decision-makers on "
+               "data-centre policy, where much of the action (moratoriums, "
+               "incentives, permitting) actually happens.")
+
+    odf, ogen = load_officials()
+    if odf.empty:
+        st.warning("Couldn't load the officials directory.")
+        st.caption(f"Detail: {ogen}")
+    else:
+        st.info(
+            "**Two honest limits.** (1) **Stances are only shown where documented** "
+            "and cited — most officials have made no public data-centre statement, "
+            "so that column is usually blank; nothing is inferred. (2) Senators and "
+            "governors **don't publish direct emails** — the Contact link opens "
+            "their official webform. Roster: " + ogen + ".")
+
+        f1, f2, f3 = st.columns([1.2, 1.4, 2])
+        office = f1.radio("Office", ["All", "Senator", "Governor"])
+        parties = f2.multiselect("Party", sorted(odf.party.unique()),
+                                 default=sorted(odf.party.unique()))
+        states = f3.multiselect("State", sorted(odf.state_full.unique()),
+                                default=[])
+        only_stance = st.checkbox("Only show officials with a documented "
+                                  "data-centre stance", value=False)
+
+        view = odf.copy()
+        if office != "All":
+            view = view[view.office == office]
+        if parties:
+            view = view[view.party.isin(parties)]
+        if states:
+            view = view[view.state_full.isin(states)]
+        if only_stance:
+            view = view[view.stance.str.len() > 0]
+        view = view.sort_values(["state_full", "office", "name"])
+
+        q1, q2, q3 = st.columns(3)
+        q1.metric("Officials shown", f"{len(view)}")
+        q2.metric("Senators", f"{(view.office=='Senator').sum()}")
+        q3.metric("With sourced stance", f"{(view.stance.str.len()>0).sum()}")
+
+        show = view[["name", "office", "state_full", "party",
+                     "stance", "website", "contact"]].copy()
+        st.dataframe(
+            show, use_container_width=True, hide_index=True, height=560,
+            column_config={
+                "name": "Name", "office": "Office", "state_full": "State",
+                "party": "Party",
+                "stance": st.column_config.TextColumn("Data-centre stance (sourced)",
+                                                      width="large"),
+                "website": st.column_config.LinkColumn("Website", display_text="site"),
+                "contact": st.column_config.LinkColumn("Contact", display_text="contact"),
+            })
+
+        stanced = view[view.stance.str.len() > 0]
+        if not stanced.empty:
+            st.markdown("**Documented stances in this view:**")
+            for _, r in stanced.iterrows():
+                src = f" ({src_link(r['stance_src'])})" if r["stance_src"] else ""
+                st.markdown(f"- **{r['name']}** ({r['party']}, {r['office']}, "
+                            f"{r['state_full']}): {r['stance']}{src}")
+
+        st.caption("Sources: official [US Senate contact list]"
+                   "(https://www.senate.gov/general/contact_information/senators_cfm.xml)"
+                   " · [current US governors]"
+                   "(https://en.wikipedia.org/wiki/List_of_current_United_States_governors)"
+                   ". Governor site URLs are official state-government pages. "
+                   "Verify before any outreach — rosters change with elections "
+                   "and appointments.")
+
+# --------------------------------------------------------------------------- #
+# TAB 8 — MACRO OUTLOOK
 # --------------------------------------------------------------------------- #
 
 with tab_macro:
@@ -1611,7 +1710,8 @@ with tab_method:
                 "meta_dc", "imasons", "bnef", "bnef_106", "gartner", "wri_range",
                 "sp_451", "epri_pi", "lbnl", "ercot_ll", "pjm_lf", "eia_va",
                 "eia_pilot",
-                "google_news", "reddit", "icap_mor", "dcbans", "gjf_mor",
+                "google_news", "reddit", "icap_mor", "dcbans", "dcopp", "dcwatch",
+                "dcresp", "dctrack", "gjf_mor",
                 "rockinst", "elmaps", "watttime", "gridstatus"]:
         st.markdown(f"- {src_link(key)}")
 
