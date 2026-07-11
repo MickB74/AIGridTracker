@@ -725,6 +725,85 @@ def fetch_news(query: str, limit: int = 15):
         return None, str(e)
 
 
+# --- Rotating community spotlight — last-7-days harm stories ----------------- #
+# Landing banner: a single real, recent news story about a community negatively
+# affected by a data center that is BUILT or UNDER CONSTRUCTION. Google News RSS
+# `when:7d` server-side window + client-side pubDate gate (belt and braces).
+STORY_QUERY = ('data center residents (noise OR water OR "electric bill" OR '
+               'rates OR lawsuit OR complaints OR moratorium OR pollution OR '
+               '"property values") when:7d')
+
+# title keyword -> (emoji, one-line framing of the harm) for the spotlight blurb.
+STORY_ANGLES = [
+    (("noise", "hum", "sound", "decibel"), "🔊",
+     "Noise from the facility is drawing resident complaints."),
+    (("water", "drought", "cooling", "aquifer", "well"), "💧",
+     "Water use for cooling is straining the local supply."),
+    (("bill", "rate", "ratepayer", "electric", "utility", "cost of power"), "💸",
+     "Neighbors say the new load is pushing up their power bills."),
+    (("lawsuit", "sue", "sued", "court", "legal", "litigation"), "⚖️",
+     "The dispute has escalated into litigation."),
+    (("moratorium", "ban", "pause", "zoning", "rezone", "rezoning", "permit"), "🛑",
+     "Local officials are moving to pause or block the project."),
+    (("pollution", "air quality", "diesel", "emissions", "health", "smog"), "🏭",
+     "Residents are raising air-quality and health concerns."),
+    (("property value", "property values", "home value", "tax", "subsidy"), "🏠",
+     "Residents question property-value hits and local benefit."),
+]
+
+
+def _story_angle(title: str):
+    t = title.lower()
+    for keys, emoji, blurb in STORY_ANGLES:
+        if any(k in t for k in keys):
+            return emoji, blurb
+    return "⚠️", "A community is pushing back on a nearby data center."
+
+
+@st.cache_data(ttl=1800, show_spinner=False)
+def fetch_community_stories(limit: int = 12, max_age_days: int = 7):
+    """Recent headlines about communities negatively affected by a built or
+    under-construction data center. Filters to the last `max_age_days` by
+    pubDate. Returns (list_of_dicts, error_or_None); each dict has
+    title/source/link/published/age_days."""
+    from email.utils import parsedate_to_datetime
+    import datetime as _dt
+    try:
+        url = GOOGLE_NEWS_RSS.format(q=urllib.parse.quote(STORY_QUERY))
+        r = requests.get(url, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+        r.raise_for_status()
+        root = ET.fromstring(r.content)
+        now = _dt.datetime.now(_dt.timezone.utc)
+        out = []
+        for it in root.iter("item"):
+            title = (it.findtext("title") or "").strip()
+            src_el = it.find("source")
+            source = src_el.text.strip() if src_el is not None and src_el.text else ""
+            if source and title.endswith(f" - {source}"):
+                title = title[: -(len(source) + 3)]
+            pub_raw = (it.findtext("pubDate") or "").strip()
+            age_days = None
+            if pub_raw:
+                try:
+                    age_days = (now - parsedate_to_datetime(pub_raw)).days
+                except Exception:                                 # noqa: BLE001
+                    age_days = None
+            # gate to the recency window; keep unparseable dates (when:7d already
+            # constrained them server-side).
+            if age_days is not None and age_days > max_age_days:
+                continue
+            out.append({
+                "title": title, "source": source,
+                "link": (it.findtext("link") or "").strip(),
+                "published": pub_raw, "age_days": age_days,
+            })
+            if len(out) >= limit:
+                break
+        return out, None
+    except Exception as e:                                        # noqa: BLE001
+        return None, str(e)
+
+
 # --- Live Reddit — public search RSS (keyless, works from any IP) ------------ #
 # Reddit's search.json API is closed (403s off datacenter IPs), but the Atom
 # search.rss feed is still open and reachable from anywhere. RSS carries
@@ -876,6 +955,52 @@ st.set_page_config(page_title="AI Token Footprint", page_icon="⚡", layout="wid
 st.title("⚡ AI Token Footprint")
 st.caption("The energy, water, and carbon behind LLM token usage — from a single "
            "prompt to the global grid. Sourced throughout; see **Methodology**.")
+
+# --- Rotating community spotlight (last 7 days) ----------------------------- #
+# A real, recent story about a community negatively affected by a built or
+# under-construction data center. Rotates: the featured story advances by day,
+# and ◂ ▸ step through the rest. Degrades gracefully if the feed is unavailable.
+_stories, _story_err = fetch_community_stories()
+if _stories:
+    import datetime as _dt
+    _n = len(_stories)
+    # seed the day's starting story so the spotlight rotates over time, then let
+    # the buttons step through; always read modulo n in case the count changed.
+    st.session_state.setdefault("story_idx", _dt.date.today().toordinal())
+    _i = st.session_state["story_idx"] % _n
+    _s = _stories[_i]
+    _emoji, _blurb = _story_angle(_s["title"])
+    _age = ""
+    _d = _s.get("age_days")
+    if _d is not None:
+        _age = "today" if _d <= 0 else ("yesterday" if _d == 1 else f"{_d} days ago")
+    with st.container(border=True):
+        _c1, _c2 = st.columns([6, 1])
+        with _c1:
+            st.markdown(f"**{_emoji} Community spotlight — a data center in the news**")
+            st.markdown(f"#### [{_s['title']}]({_s['link']})")
+            _meta = " · ".join(x for x in [_s["source"], _age] if x)
+            st.caption(f"{_blurb}" + (f"  \n*{_meta}*" if _meta else ""))
+        with _c2:
+            st.caption(f"{_i + 1} / {_n}")
+            _pv, _nx = st.columns(2)
+            if _pv.button("◂", key="story_prev", use_container_width=True,
+                          help="Previous story"):
+                st.session_state["story_idx"] = _i - 1
+                st.rerun()
+            if _nx.button("▸", key="story_next", use_container_width=True,
+                          help="Next story"):
+                st.session_state["story_idx"] = _i + 1
+                st.rerun()
+    st.caption("Automated Google News search (last 7 days) for communities "
+               "affected by a built or under-construction data center. "
+               "Unfiltered and not an endorsement — follow the link to the "
+               "original outlet. More on the **Community & backlash** tab.")
+else:
+    st.info("Community spotlight is temporarily unavailable "
+            f"({_story_err or 'no recent stories found'}). See the "
+            "**Community & backlash** tab for trackers and live discussion.")
+st.divider()
 
 (tab_calc, tab_compare, tab_live, tab_grid, tab_dc, tab_news, tab_officials,
  tab_macro, tab_method) = st.tabs(
