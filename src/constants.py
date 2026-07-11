@@ -166,8 +166,12 @@ DATACENTERS_DF = pd.DataFrame(
              "mw", "uc", "planned", "src"])
 
 # First-party hyperscaler campuses — self-published LOCATIONS (no per-facility MW
-# disclosed). Google: datacenters.google/locations (active US). Meta:
-# datacenters.atmeta.com/us-locations. Coords approximate (town/county centroid).
+# disclosed). Google: datacenters.google/locations (active US, precise campuses).
+# Meta: datacenters.atmeta.com/us-locations (precise campuses). Microsoft:
+# local.microsoft.com/communities (metro/"community" level, not per-campus).
+# Amazon/AWS: aboutamazon.com investment announcements + long-established AWS US
+# regions (metro/county level; Amazon does not publish a per-campus location map).
+# Coords approximate (town/county/metro centroid).
 HYPERSCALERS = [
     # company, location, state, lat, lon, src
     ("Google", "The Dalles", "OR", 45.59, -121.18, "google_dc"),
