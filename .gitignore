@@ -16,3 +16,6 @@ venv/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Cached daily Reddit snapshot (regenerated at runtime)
+reddit_corpus.parquet
