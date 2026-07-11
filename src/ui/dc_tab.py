@@ -2,7 +2,10 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 import plotly.express as px
-from src.constants import DATACENTERS_DF, DC_METRICS, ERCOT_LL_VINTAGE, ERCOT_LL_DC_SHARE, ERCOT_LL_FUNNEL, HYPERSCALERS_DF, HYPERSCALER_COLORS
+from src.constants import (DATACENTERS_DF, DC_METRICS, ERCOT_LL_VINTAGE,
+                           ERCOT_LL_DC_SHARE, ERCOT_LL_FUNNEL, HYPERSCALERS_DF,
+                           HYPERSCALER_COLORS, AI_COMPETITOR_SITES_DF,
+                           AI_COMPETITORS_DF)
 from src.helpers import src_link
 from src.services.ercot import ercot_largeload_latest
 from src.services.eia import eia_latest_demand
@@ -147,17 +150,24 @@ def render_dc_tab():
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.divider()
-    st.subheader("First-party: hyperscaler campuses")
-    st.caption("Individual data-center campuses that operators publish themselves "
-               "— exact locations, from Google's and Meta's own sites. Neither "
-               "discloses per-facility MW, so these are location markers (not sized "
-               "by power); the broker map above is the place to read scale.")
+    st.subheader("Hyperscaler campuses + AI-competitor megasites")
+    st.caption("Individual data-center sites. **Hyperscalers** (Google, Meta, "
+               "Microsoft, Amazon) are plotted from operators' own location pages. "
+               "**AI-competitor sites** — the frontier-model builders and AI-cloud "
+               "players these companies name as competition in their SEC 10-K "
+               "filings (see the competitor table below) — are plotted from public "
+               "announcements and press (xAI's Colossus, the OpenAI · Oracle · "
+               "SoftBank *Stargate* campuses). No operator discloses per-facility "
+               "MW, so these are location markers, not sized by power.")
+
+    campus_df = pd.concat([HYPERSCALERS_DF, AI_COMPETITOR_SITES_DF],
+                          ignore_index=True)
 
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    firms = st.multiselect("Company", list(HYPERSCALERS_DF.company.unique()),
-                           default=list(HYPERSCALERS_DF.company.unique()))
-    hdf = HYPERSCALERS_DF[HYPERSCALERS_DF.company.isin(firms)].copy() if firms \
-        else HYPERSCALERS_DF.copy()
+    firms = st.multiselect("Company", list(campus_df.company.unique()),
+                           default=list(campus_df.company.unique()))
+    hdf = campus_df[campus_df.company.isin(firms)].copy() if firms \
+        else campus_df.copy()
 
     if hdf.empty:
         st.info("Pick a company to plot its campuses.")
@@ -200,20 +210,46 @@ def render_dc_tab():
 
         st.caption(" · ".join(f"{c} = {len(hdf[hdf.company==c])}"
                                for c in firms if len(hdf[hdf.company == c])) +
-                   "  ·  🟢 Google · 🔵 Meta · 🔴 Microsoft · 🟠 Amazon (AWS)")
-        with st.expander("Campus list + sources"):
+                   "  ·  🟢 Google · 🔵 Meta · 🔴 Microsoft · 🟠 Amazon (AWS) · "
+                   "🟣 xAI · 🩵 OpenAI · Oracle (Stargate) · 🩷 CoreWeave")
+        with st.expander("Site list + sources"):
             st.dataframe(hdf[["company", "location", "state"]],
                          use_container_width=True, hide_index=True,
                          column_config={"company": "Company", "location": "Location",
                                         "state": "State"})
-            st.caption("First-party sources: " + " · ".join(
+            st.caption("Hyperscaler (first-party): " + " · ".join(
                 src_link(k) for k in
                 ["google_dc", "meta_dc", "microsoft_dc", "aws_dc"]))
+            st.caption("AI-competitor sites: " + " · ".join(
+                src_link(k) for k in ["stargate", "xai_memphis", "crwv_dc"]))
     st.caption("Google and Meta publish precise campus lists; Microsoft "
                "(metro-level communities) and Amazon/AWS (investment announcements) "
-               "disclose locations less granularly, and Oracle and others not "
-               "cleanly at all. Research/forecast context: "
+               "disclose locations less granularly. AI-competitor sites are "
+               "publicly documented but not first-party campus lists, so their "
+               "coordinates are approximate. Research/forecast context: "
                + src_link("imasons") + " · " + src_link("bnef") + ".")
+
+    # --- Who each company names as a competitor (from SEC 10-K filings) --------
+    st.divider()
+    st.subheader("Who each company calls a competitor — from SEC 10-K filings")
+    st.caption("Straight from the “Competition” section (Item 1) of each filer's "
+               "latest annual report. **Only Oracle names specific rivals**; the "
+               "big-tech filings describe competitor *categories* — always "
+               "including AI and frontier models — but name no companies. "
+               "*Named in filing* is what the 10-K literally lists; *Key AI / "
+               "data-center rivals* maps those categories to today's market "
+               "participants.")
+
+    comp = AI_COMPETITORS_DF.copy()
+    comp["Names rivals?"] = comp["names"].map({True: "✅ Yes", False: "— categories only"})
+    show = comp[["filer", "Names rivals?", "quote", "named", "rivals"]].rename(
+        columns={"filer": "Filer",
+                 "quote": "AI-competitor language (from the 10-K)",
+                 "named": "Named in filing", "rivals": "Key AI / data-center rivals"})
+    st.dataframe(show, use_container_width=True, hide_index=True)
+    st.caption("Filings: " + " · ".join(
+        src_link(k) for k in
+        ["goog_10k", "meta_10k", "msft_10k", "amzn_10k", "orcl_10k", "crwv_10k"]))
 
     st.info(
         "📋 **Authoritative facility data is coming (EIA).** Data centers are "

@@ -253,8 +253,80 @@ HYPERSCALERS = [
 ]
 HYPERSCALERS_DF = pd.DataFrame(
     HYPERSCALERS, columns=["company", "location", "state", "lat", "lon", "src"])
+
+# AI-competitor compute megasites — the frontier-model builders / AI-cloud players
+# these hyperscalers name as competition in their SEC 10-K filings (see
+# AI_COMPETITORS). Locations are publicly documented via operator announcements
+# and press (NOT first-party campus lists like the hyperscalers above), so treat
+# them as approximate site/metro centroids, not surveyed coordinates.
+AI_COMPETITOR_SITES = [
+    # company, location, state, lat, lon, src
+    ("xAI (Colossus)", "Memphis (Boxtown / President's Island)", "TN", 35.08, -90.11, "xai_memphis"),
+    ("xAI (Colossus)", "Memphis (Whitehaven)", "TN", 35.04, -90.02, "xai_memphis"),
+    ("OpenAI · Oracle (Stargate)", "Abilene (Lancium Clean Campus)", "TX", 32.45, -99.73, "stargate"),
+    ("OpenAI · Oracle (Stargate)", "Shackelford County", "TX", 32.74, -99.33, "stargate"),
+    ("OpenAI · Oracle (Stargate)", "Doña Ana County", "NM", 32.35, -106.87, "stargate"),
+    ("OpenAI · Oracle (Stargate)", "Milam County (Rockdale)", "TX", 30.65, -96.97, "stargate"),
+    ("OpenAI · Oracle (Stargate)", "Lordstown", "OH", 41.17, -80.85, "stargate"),
+    # CoreWeave — AI-cloud "neocloud"; mostly leased / partner-hosted (Core
+    # Scientific), so these are documented site metros, not a first-party campus map.
+    ("CoreWeave", "Kenilworth (NEST11)", "NJ", 40.68, -74.29, "crwv_dc"),
+    ("CoreWeave", "Las Vegas (Core Campus / LAS1)", "NV", 36.10, -115.15, "crwv_dc"),
+    ("CoreWeave", "Lancaster", "PA", 40.04, -76.30, "crwv_dc"),
+    ("CoreWeave", "Denton (Core Scientific host)", "TX", 33.21, -97.13, "crwv_dc"),
+    ("CoreWeave", "Port of Muskogee (Core Scientific host)", "OK", 35.74, -95.37, "crwv_dc"),
+]
+AI_COMPETITOR_SITES_DF = pd.DataFrame(
+    AI_COMPETITOR_SITES, columns=["company", "location", "state", "lat", "lon", "src"])
+
 HYPERSCALER_COLORS = {"Google": "#34a853", "Meta": "#0866ff",
-                      "Microsoft": "#f25022", "Amazon (AWS)": "#ff9900"}
+                      "Microsoft": "#f25022", "Amazon (AWS)": "#ff9900",
+                      "xAI (Colossus)": "#a855f7",
+                      "OpenAI · Oracle (Stargate)": "#14b8a6",
+                      "CoreWeave": "#ec4899"}
+
+# Who each company calls a competitor "in AI and AI data centers", straight from
+# the SEC 10-K "Competition" section (Item 1) of the filers the tracker follows,
+# plus the newly-public AI-cloud filer CoreWeave. Note: only Oracle NAMES specific
+# rivals in its filing; the big-tech filings describe competitor *categories*
+# (always including AI / frontier models) but name no companies. `named` is what
+# the filing literally lists; `rivals` is an editorial cross-reference mapping
+# those categories to today's AI / data-center market participants.
+AI_COMPETITORS = [
+    {"filer": "Alphabet (Google)", "src": "goog_10k", "names": False,
+     "quote": "“developers and providers of AI products and services”; also "
+              "“providers of enterprise cloud services” and consumer-hardware makers.",
+     "named": "—",
+     "rivals": "OpenAI, Anthropic, Microsoft, Amazon (AWS), Meta, xAI"},
+    {"filer": "Meta", "src": "meta_10k", "names": False,
+     "quote": "“companies in the development and application of AI, particularly "
+              "with respect to the development of frontier AI models.”",
+     "named": "—",
+     "rivals": "OpenAI, Google (Alphabet), Anthropic, xAI, Microsoft"},
+    {"filer": "Microsoft", "src": "msft_10k", "names": False,
+     "quote": "“AI-first application companies”; Azure’s “AI offerings compete with "
+              "AI products from hyperscalers … and … open source offerings.”",
+     "named": "—",
+     "rivals": "Google, Amazon (AWS), OpenAI, Anthropic, Meta, Oracle, Salesforce"},
+    {"filer": "Amazon (AWS)", "src": "amzn_10k", "names": False,
+     "quote": "competition intensified by “practical applications of artificial "
+              "intelligence and machine learning” in “web and infrastructure "
+              "computing services.”",
+     "named": "—",
+     "rivals": "Microsoft (Azure), Google Cloud, Oracle (OCI), CoreWeave, NVIDIA, OpenAI, Anthropic"},
+    {"filer": "Oracle", "src": "orcl_10k", "names": True,
+     "quote": "cloud/software/hardware offerings “compete directly with … Alphabet "
+              "Inc., Amazon.com, Inc., … IBM … Microsoft Corporation, Salesforce, "
+              "Inc. and SAP SE …”",
+     "named": "Adobe, Alphabet, Amazon.com, Cisco, Intel, IBM, Microsoft, Salesforce, SAP, HPE, Workday",
+     "rivals": "Amazon (AWS), Microsoft (Azure), Alphabet (Google Cloud), IBM, CoreWeave"},
+    {"filer": "CoreWeave", "src": "crwv_10k", "names": False,
+     "quote": "“We primarily compete with hyperscalers … several of which are also "
+              "customers … We also compete with smaller cloud service providers.”",
+     "named": "—",
+     "rivals": "Amazon (AWS), Microsoft (Azure), Google Cloud, Oracle (OCI), Lambda, Nebius"},
+]
+AI_COMPETITORS_DF = pd.DataFrame(AI_COMPETITORS)
 
 # Metric toggle config: label -> (column, source keys, blurb).
 DC_METRICS = {
@@ -412,6 +484,25 @@ SOURCES = {
                      "https://local.microsoft.com/communities/"),
     "aws_dc":       ("Amazon — AWS investment announcements & global infrastructure (first-party)",
                      "https://www.aboutamazon.com/what-we-do/amazon-web-services"),
+    # --- SEC 10-K "Competition" sections + AI-competitor compute sites ---
+    "goog_10k":     ("Alphabet Inc. — Form 10-K FY2024, Item 1 “Competition” (SEC EDGAR)",
+                     "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"),
+    "meta_10k":     ("Meta Platforms, Inc. — Form 10-K FY2025, Item 1 “Competition” (SEC EDGAR)",
+                     "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"),
+    "msft_10k":     ("Microsoft Corp. — Form 10-K FY2025, Item 1 “Competition” (SEC EDGAR)",
+                     "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm"),
+    "amzn_10k":     ("Amazon.com, Inc. — Form 10-K FY2025, Item 1 “Competition” (SEC EDGAR)",
+                     "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm"),
+    "orcl_10k":     ("Oracle Corp. — Form 10-K FY2026, Item 1 “Competition” (SEC EDGAR)",
+                     "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm"),
+    "crwv_10k":     ("CoreWeave, Inc. — Form 10-K FY2025, Item 1 “Competition” (SEC EDGAR)",
+                     "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm"),
+    "stargate":     ("OpenAI — Stargate AI data-center sites (OpenAI · Oracle · SoftBank; first-party)",
+                     "https://openai.com/index/five-new-stargate-sites/"),
+    "xai_memphis":  ("xAI — Colossus supercomputer, Memphis (first-party)",
+                     "https://x.ai/memphis"),
+    "crwv_dc":      ("CoreWeave — Our capacity plans for CoreWeave data centers (first-party) + Core Scientific host-site announcements",
+                     "https://www.coreweave.com/blog/our-capacity-plans-for-coreweave-data-centers"),
     "imasons":      ("Infrastructure Masons (iMasons) — industry & sustainability data",
                      "https://imasons.org/"),
     "bnef":         ("BloombergNEF (BNEF) — data-center power-demand research & forecasts",
