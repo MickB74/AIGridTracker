@@ -479,6 +479,28 @@ def src_link(key: str) -> str:
     return f"[{name}]({url})"
 
 
+@st.cache_resource(show_spinner=False)
+def _vader():
+    """VADER lexicon sentiment analyzer (lightweight, offline, tuned for short
+    social/headline text). Cached as a resource so it loads once."""
+    from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+    return SentimentIntensityAnalyzer()
+
+
+def sentiment_of(text: str) -> float:
+    """Compound sentiment in [-1, 1] for a headline/title."""
+    return _vader().polarity_scores(text or "")["compound"]
+
+
+def sentiment_badge(compound: float):
+    """(label, emoji, hex_color) for a compound score."""
+    if compound >= 0.05:
+        return "Positive", "🟢", "#1a9850"
+    if compound <= -0.05:
+        return "Negative", "🔴", "#d73027"
+    return "Neutral", "⚪", "#8a8a8a"
+
+
 @st.cache_data(show_spinner=False)
 def load_local_secrets() -> dict:
     """Best-effort local API keys for dev convenience, so keys needn't be pasted
@@ -967,37 +989,38 @@ with tab_news:
 
     st.markdown("#### The recurring flashpoints")
     issues = [
-        ("💵 Electricity bills & grid strain",
+        ("💵", "Electricity bills & grid strain",
          "Surging data-centre load raises wholesale prices and can shift "
          "transmission/capacity costs onto ordinary ratepayers; PJM's capacity "
          "price spiked ~10× on data-centre-driven demand. Utilities also delay "
          "fossil-plant retirements to serve the load."),
-        ("💧 Water",
+        ("💧", "Water",
          "Evaporative cooling consumes potable water — millions of gallons a day "
          "at a large campus — a flashpoint in drought-prone metros (Phoenix, "
          "Texas, Georgia)."),
-        ("🏘️ Zoning, land use & moratoria",
+        ("🏘️", "Zoning, land use & moratoria",
          "Counties are enacting moratoria or rejecting rezonings amid resident "
          "opposition; some developers are pulling out of hostile jurisdictions."),
-        ("🔊 Noise",
+        ("🔊", "Noise",
          "Chillers and backup generators produce a constant low-frequency hum; "
          "noise complaints have driven lawsuits and setback rules (notably in "
          "Northern Virginia)."),
-        ("🧾 Tax breaks vs. local benefit",
+        ("🧾", "Tax breaks vs. local benefit",
          "Big sales/property-tax abatements versus relatively few permanent jobs "
          "fuel debate over whether the local trade-off pays off."),
-        ("🛢️ Backup diesel & air permits",
+        ("🛢️", "Backup diesel & air permits",
          "Fleets of diesel generators for backup draw air-quality scrutiny and "
          "permit fights near residential areas."),
     ]
-    ci = st.columns(2)
-    for i, (head, body) in enumerate(issues):
-        with ci[i % 2]:
-            st.markdown(f"**{head}**")
-            st.caption(body)
+    cards = st.columns(3)
+    for i, (icon, head, body) in enumerate(issues):
+        with cards[i % 3]:
+            with st.container(border=True):
+                st.markdown(f"### {icon}\n**{head}**")
+                st.caption(body)
 
     st.divider()
-    st.markdown("#### Live discussion")
+    st.markdown("#### Live discussion & sentiment")
     csrc, cth = st.columns([1, 2])
     feed = csrc.radio("Source", ["📰 News", "👥 Reddit"], horizontal=True)
     theme = cth.selectbox("Theme", list(NEWS_THEMES.keys()))
@@ -1005,42 +1028,86 @@ with tab_news:
                           placeholder="e.g. Virginia, Georgia, Tucson")
     query = NEWS_THEMES[theme] + (f" {extra}" if extra.strip() else "")
 
+    # --- fetch + normalize both feeds to a common {title, link, meta} shape --- #
+    items, err, disclaimer = None, None, ""
     if feed == "📰 News":
-        news, nerr = fetch_news(query)
-        if nerr or news is None:
-            st.warning("Couldn't reach Google News (offline or blocked).")
-            st.caption(f"Detail: {nerr}")
-        elif not news:
-            st.info("No headlines for this theme — try another or add a place.")
-        else:
-            st.caption(f"{len(news)} recent stories • “{query}” • live via Google News")
-            for a in news:
-                meta = " · ".join(x for x in (a["source"], a["published"]) if x)
-                st.markdown(f"- [{a['title']}]({a['link']})  \n  <small>{meta}</small>",
-                            unsafe_allow_html=True)
-        st.caption("Headlines are an automated news search, unfiltered and not "
-                   "endorsements; follow the link to the original outlet.")
+        raw, err = fetch_news(query)
+        disclaimer = ("Headlines are an automated news search, unfiltered and not "
+                      "endorsements; follow the link to the original outlet.")
+        if raw:
+            items = [{"title": a["title"], "link": a["link"],
+                      "meta": " · ".join(x for x in (a["source"], a["published"]) if x)}
+                     for a in raw]
     else:
-        posts, rerr = fetch_reddit(query)
-        if rerr or posts is None:
-            reddit_url = ("https://www.reddit.com/search/?q="
-                          + urllib.parse.quote(query) + "&sort=new")
+        raw, err = fetch_reddit(query)
+        disclaimer = ("Reddit threads are user posts — anecdotal and unverified; a "
+                      "read on local sentiment, not reporting.")
+        if raw:
+            items = [{"title": p["title"], "link": p["link"],
+                      "meta": " · ".join(x for x in (p["subreddit"], p["created"]) if x)}
+                     for p in raw]
+
+    if err or items is None:
+        reddit_url = ("https://www.reddit.com/search/?q="
+                      + urllib.parse.quote(query) + "&sort=new")
+        if feed == "👥 Reddit":
             st.warning("Couldn't load the Reddit feed right now (it rate-limits "
                        "rapid requests — try again in a moment).")
             st.markdown(f"🔗 **[Open this search on Reddit]({reddit_url})** — or "
                         "browse r/energy, r/RealEstate, r/climate, and your local "
                         "city/county subreddit.")
-            st.caption(f"Detail: {rerr}")
-        elif not posts:
-            st.info("No Reddit posts for this theme — try another or add a place.")
         else:
-            st.caption(f"{len(posts)} threads • “{query}” • live via Reddit RSS")
-            for p in posts:
-                meta = " · ".join(x for x in (p["subreddit"], p["created"]) if x)
-                st.markdown(f"- [{p['title']}]({p['link']})  \n  <small>{meta}</small>",
-                            unsafe_allow_html=True)
-        st.caption("Reddit threads are user posts — anecdotal and unverified; a "
-                   "read on local sentiment, not reporting.")
+            st.warning("Couldn't reach Google News (offline or blocked).")
+        st.caption(f"Detail: {err}")
+    elif not items:
+        st.info("Nothing for this theme right now — try another or add a place.")
+    else:
+        # score every item once, sort most-negative first (the story here)
+        for it in items:
+            it["s"] = sentiment_of(it["title"])
+        items.sort(key=lambda it: it["s"])
+        pos = sum(1 for it in items if it["s"] >= 0.05)
+        neg = sum(1 for it in items if it["s"] <= -0.05)
+        neu = len(items) - pos - neg
+        avg = sum(it["s"] for it in items) / len(items)
+        lean_label, lean_emoji, lean_color = sentiment_badge(avg)
+
+        st.caption(f"{len(items)} items • “{query}” • sentiment via VADER (lexicon)")
+
+        cL, cR = st.columns([1, 2])
+        cL.metric("Overall tone", f"{lean_emoji} {lean_label}", f"avg {avg:+.2f}")
+        sdf = pd.DataFrame({
+            "label": ["Negative", "Neutral", "Positive"],
+            "count": [neg, neu, pos]})
+        bar = (alt.Chart(sdf).mark_bar().encode(
+            x=alt.X("count:Q", stack="normalize", title=None,
+                    axis=alt.Axis(format="%")),
+            color=alt.Color("label:N", legend=alt.Legend(orient="bottom", title=None),
+                            scale=alt.Scale(domain=["Negative", "Neutral", "Positive"],
+                                            range=["#d73027", "#9aa0a6", "#1a9850"])),
+            order=alt.Order("label:N"),
+            tooltip=["label", "count"],
+        ).properties(height=70))
+        cR.altair_chart(bar, use_container_width=True)
+
+        st.markdown(
+            f"<small>🔴 {neg} negative · ⚪ {neu} neutral · 🟢 {pos} positive</small>",
+            unsafe_allow_html=True)
+        st.write("")
+
+        for it in items:
+            _, _, color = sentiment_badge(it["s"])
+            st.markdown(
+                f"<span style='color:{color};font-size:1.1em'>●</span> "
+                f"[{it['title']}]({it['link']}) "
+                f"<span style='color:#888;font-size:0.8em'>({it['s']:+.2f})</span>"
+                f"<br><small style='color:#888'>{it['meta']}</small>",
+                unsafe_allow_html=True)
+
+    st.caption(disclaimer)
+    st.caption("Sentiment is automated lexicon scoring (VADER) on the headline "
+               "text only — a directional read, not a verified measure; sarcasm "
+               "and headline shorthand can fool it.")
 
 # --------------------------------------------------------------------------- #
 # TAB 7 — MACRO OUTLOOK
