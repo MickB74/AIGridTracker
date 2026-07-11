@@ -80,30 +80,51 @@ IEA_OUTLOOK = pd.DataFrame({"year": [2024, 2025, 2030, 2035],
 # datacenterHawk) — NOT per-facility disclosures, which operators don't publish.
 # grid = the ISO/grid feed this app can pull carbon for ("" = not yet wired).
 # Approximate; sources on the Methodology tab and in each row's `src`.
+# Market power (MW) across three phases, so the app can toggle the metric:
+#   mw       = OPERATIONAL / commissioned (CBRE North America & Global 2025)
+#   uc       = UNDER CONSTRUCTION (JLL year-end 2025; NoVA per Cushman & Wakefield)
+#   planned  = PLANNED PIPELINE beyond current construction (JLL year-end 2025)
+# None = that phase isn't broken out for the market in the cited reports.
 DATACENTERS = [
-    # name, region, country, grid, lat, lon, mw, src
-    ("Northern Virginia (Ashburn)", "US", "USA", "PJM",   38.98, -77.46, 4900, "cbre_dc"),
-    ("Dallas–Fort Worth",           "US", "USA", "ERCO",  32.78, -96.80, 1650, "cbre_dc"),
-    ("Phoenix",                     "US", "USA", "",      33.45, -112.07, 1380, "cbre_dc"),
-    ("Atlanta",                     "US", "USA", "",      33.75, -84.39, 1300, "cbre_dc"),
-    ("Chicago",                     "US", "USA", "PJM",   41.85, -87.65, 1200, "cbre_dc"),
-    ("Silicon Valley (Santa Clara)","US", "USA", "CISO",  37.35, -121.95, 950, "cbre_dc"),
-    ("Columbus (Central Ohio)",     "US", "USA", "PJM",   39.96, -83.00,  700, "cbre_dc"),
-    ("Portland / Hillsboro",        "US", "USA", "",      45.52, -122.98, 600, "cbre_dc"),
-    ("Beijing",              "APAC", "China",      "", 39.90, 116.40, 1799, "cbre_glob"),
-    ("London",               "EMEA", "UK",         "", 51.51,  -0.13, 1189, "cbre_glob"),
-    ("Sydney",               "APAC", "Australia",  "", -33.87, 151.21, 1050, "cbre_glob"),
-    ("Tokyo",                "APAC", "Japan",      "", 35.68, 139.69, 1000, "cbre_glob"),
-    ("Shanghai",             "APAC", "China",      "", 31.23, 121.47, 1000, "cbre_glob"),
-    ("Singapore",            "APAC", "Singapore",  "",  1.35, 103.82, 1000, "cbre_glob"),
-    ("Frankfurt",            "EMEA", "Germany",    "", 50.11,   8.68,  900, "cbre_glob"),
-    ("Dublin",               "EMEA", "Ireland",    "", 53.35,  -6.26,  700, "cbre_glob"),
-    ("Amsterdam",            "EMEA", "Netherlands","", 52.37,   4.90,  550, "cbre_glob"),
-    ("Paris",                "EMEA", "France",     "", 48.86,   2.35,  500, "cbre_glob"),
+    # name, region, country, grid, lat, lon, mw, uc, planned, src
+    ("Northern Virginia (Ashburn)", "US", "USA", "PJM",   38.98, -77.46, 4900, 6300, 5900, "cbre_dc"),
+    ("Dallas–Fort Worth",           "US", "USA", "ERCO",  32.78, -96.80, 1650, None, 3900, "cbre_dc"),
+    ("Phoenix",                     "US", "USA", "",      33.45, -112.07, 1380, 1300, 4200, "cbre_dc"),
+    ("Atlanta",                     "US", "USA", "",      33.75, -84.39, 1300, 1110, None, "cbre_dc"),
+    ("Chicago",                     "US", "USA", "PJM",   41.85, -87.65, 1200, 1180, None, "cbre_dc"),
+    ("Silicon Valley (Santa Clara)","US", "USA", "CISO",  37.35, -121.95, 950, None, None, "cbre_dc"),
+    ("Columbus (Central Ohio)",     "US", "USA", "PJM",   39.96, -83.00,  700, None, None, "cbre_dc"),
+    ("Portland / Hillsboro",        "US", "USA", "",      45.52, -122.98, 600, None, None, "cbre_dc"),
+    ("Beijing",              "APAC", "China",      "", 39.90, 116.40, 1799, None, None, "cbre_glob"),
+    ("London",               "EMEA", "UK",         "", 51.51,  -0.13, 1189, None, None, "cbre_glob"),
+    ("Sydney",               "APAC", "Australia",  "", -33.87, 151.21, 1050, None, None, "cbre_glob"),
+    ("Tokyo",                "APAC", "Japan",      "", 35.68, 139.69, 1000, None, None, "cbre_glob"),
+    ("Shanghai",             "APAC", "China",      "", 31.23, 121.47, 1000, None, None, "cbre_glob"),
+    ("Singapore",            "APAC", "Singapore",  "",  1.35, 103.82, 1000, None, None, "cbre_glob"),
+    ("Frankfurt",            "EMEA", "Germany",    "", 50.11,   8.68,  900, None, None, "cbre_glob"),
+    ("Dublin",               "EMEA", "Ireland",    "", 53.35,  -6.26,  700, None, None, "cbre_glob"),
+    ("Amsterdam",            "EMEA", "Netherlands","", 52.37,   4.90,  550, None, None, "cbre_glob"),
+    ("Paris",                "EMEA", "France",     "", 48.86,   2.35,  500, None, None, "cbre_glob"),
 ]
 DATACENTERS_DF = pd.DataFrame(
     DATACENTERS,
-    columns=["market", "region", "country", "grid", "lat", "lon", "mw", "src"])
+    columns=["market", "region", "country", "grid", "lat", "lon",
+             "mw", "uc", "planned", "src"])
+
+# Metric toggle config: label -> (column, source keys, blurb).
+DC_METRICS = {
+    "Operational (running today)":
+        ("mw", ["cbre_dc", "cbre_glob"],
+         "Commissioned & running. CBRE North America & Global Data Center Trends 2025."),
+    "Under construction":
+        ("uc", ["jll_dc", "cushman_dc"],
+         "Being built now. JLL year-end 2025; Northern Virginia per Cushman & Wakefield. "
+         "US markets only; blank = not broken out."),
+    "Planned pipeline":
+        ("planned", ["jll_dc"],
+         "Announced/planned beyond current construction. JLL year-end 2025. "
+         "US markets only; blank = not broken out."),
+}
 
 # Data-centre moratoriums / bans — POINT-IN-TIME SNAPSHOT (mid-2026). Compiled
 # from public trackers (see MORATORIUM_TRACKERS); dozens more churn weekly, so
@@ -211,6 +232,10 @@ SOURCES = {
                      "https://www.cbre.com/insights/reports/north-america-data-center-trends-h1-2025"),
     "cbre_glob":    ("CBRE — Global Data Center Trends 2025 (EMEA/APAC market MW)",
                      "https://www.cbre.com/insights/reports/global-data-center-trends-2025"),
+    "jll_dc":       ("JLL — North America Data Center Report, Year-end 2025 (under-construction & planned MW)",
+                     "https://www.jll.com/en-us/insights/market-dynamics/north-america-data-centers"),
+    "cushman_dc":   ("Cushman & Wakefield — Americas Data Center Update H2 2025 (Virginia under-construction)",
+                     "https://www.cushmanwakefield.com/en/insights/americas-data-center-update"),
     "ercot_ll":     ("ERCOT — Large Load Interconnection Queue (Dec 2025 board update)",
                      "https://www.ercot.com/gridinfo/load"),
     "pjm_lf":       ("PJM — 2025 Long-Term Load Forecast (data-centre-driven growth)",
@@ -441,6 +466,88 @@ def eia_latest_demand(api_key: str, respondent: str):
 # --- Live news — Google News RSS (free, keyless) ---------------------------- #
 GOOGLE_NEWS_RSS = ("https://news.google.com/rss/search?q={q}"
                    "&hl=en-US&gl=US&ceid=US:en")
+
+# Official company hubs / reports / press releases on data centres & communities.
+# (category, company, what it is, url) — first-party material: economic-impact
+# reports, community pledges, newsrooms. Curated landing pages, not one-off links.
+COMPANY_STATEMENTS = [
+    # --- Hyperscalers & AI cloud ---
+    ("Hyperscalers & AI cloud", "Amazon / AWS",
+     "Impact in communities hub + 2025 economic-impact report",
+     "https://www.aboutamazon.com/aws-impact-in-communities"),
+    ("Hyperscalers & AI cloud", "Amazon / AWS",
+     "Data centres: water & electricity use explainer",
+     "https://www.aboutamazon.com/news/sustainability/amazon-data-centers-electricity-bills-water-use"),
+    ("Hyperscalers & AI cloud", "Google",
+     "Accelerating economies — 2025 Data Center Community Impact Report",
+     "https://datacenters.google/accelerating-economies/"),
+    ("Hyperscalers & AI cloud", "Microsoft",
+     "Datacenter Community Pledge (Local blog)",
+     "https://local.microsoft.com/blog/microsofts-datacenter-community-pledge/"),
+    ("Hyperscalers & AI cloud", "Microsoft",
+     "Community-First AI Infrastructure framework (Jan 2026)",
+     "https://blogs.microsoft.com/on-the-issues/2026/01/13/community-first-ai-infrastructure/"),
+    ("Hyperscalers & AI cloud", "Meta",
+     "Data Centers — Economic impact & growing local economies",
+     "https://datacenters.atmeta.com/economic-impact/"),
+    ("Hyperscalers & AI cloud", "CoreWeave",
+     "Newsroom — project & jobs announcements",
+     "https://www.coreweave.com/newsroom"),
+    ("Hyperscalers & AI cloud", "CoreWeave",
+     "Data Centers Explained: myths, facts & answers",
+     "https://www.coreweave.com/blog/the-data-center-questions-everyone-is-asking-answered"),
+    # --- Colocation & wholesale developers ---
+    ("Colocation & wholesale developers", "QTS",
+     "Community Commitments (energy, water, jobs, transparency)",
+     "https://q.com/commitments/"),
+    ("Colocation & wholesale developers", "Digital Realty",
+     "2025 Impact Report",
+     "https://www.digitalrealty.com/resources/reports/impact-report"),
+    ("Colocation & wholesale developers", "Equinix",
+     "Newsroom — press releases & workforce/community investment",
+     "https://newsroom.equinix.com/"),
+    ("Colocation & wholesale developers", "Vantage Data Centers",
+     "Our approach to responsible growth + news",
+     "https://blog.vantage-dc.com/2026/03/26/our-approach-to-responsible-growth/"),
+    ("Colocation & wholesale developers", "Prime Data Centers",
+     "Community Commitment (energy, water, air, noise)",
+     "https://primedatacenters.com/community-commitment/"),
+    ("Colocation & wholesale developers", "CyrusOne",
+     "Communities commitments + 2025 Sustainability Report",
+     "https://www.cyrusone.com/commitments/communities"),
+    ("Colocation & wholesale developers", "Aligned Data Centers",
+     "Empowering the community",
+     "https://aligneddc.com/community/"),
+    ("Colocation & wholesale developers", "EdgeConneX",
+     "Sustainability — annual report & goals",
+     "https://www.edgeconnex.com/company/sustainability/"),
+    ("Colocation & wholesale developers", "STACK Infrastructure",
+     "Responsibility — community stewardship & Impact report",
+     "https://www.stackinfra.com/responsibility/"),
+    ("Colocation & wholesale developers", "Switch",
+     "Sustainability — community partnerships & ESG report",
+     "https://www.switch.com/sustainability/"),
+]
+
+# Operator -> Google-News search term for the live press-release feed. Keyed by a
+# clean brand token (drops "/ AWS", "Data Centers", etc. that hurt recall).
+COMPANY_FEED_TERMS = {
+    "Amazon / AWS": "AWS",
+    "Google": '"Google" data center',
+    "Microsoft": '"Microsoft" datacenter',
+    "Meta": '"Meta" data center',
+    "CoreWeave": "CoreWeave",
+    "QTS": '"QTS" data center',
+    "Digital Realty": '"Digital Realty"',
+    "Equinix": "Equinix",
+    "Vantage Data Centers": '"Vantage Data Centers"',
+    "Prime Data Centers": '"Prime Data Centers"',
+    "CyrusOne": "CyrusOne",
+    "Aligned Data Centers": '"Aligned" data center',
+    "EdgeConneX": "EdgeConneX",
+    "STACK Infrastructure": '"STACK Infrastructure"',
+    "Switch": '"Switch" data center',
+}
 
 # Recurring flashpoints -> a search query that surfaces them.
 NEWS_THEMES = {
@@ -942,39 +1049,60 @@ with tab_grid:
 
 with tab_dc:
     st.subheader("Where the data centres are — and how much power they pull")
-    st.caption("Operational commissioned power by market (~2025). Market-level "
-               "totals from broker inventories (CBRE / Cushman & Wakefield) — "
-               "operators don't disclose per-facility MW. Approximate; see "
-               "**Methodology** for sources.")
+    st.caption("Market-level power by phase (~2025). Totals are broker inventories "
+               "(CBRE / JLL / Cushman & Wakefield) — operators don't disclose "
+               "per-facility MW. Toggle the phase; each is cited separately because "
+               "the shops measure different things. Approximate; see **Methodology**.")
 
-    region = st.radio("Region", ["All", "US", "EMEA", "APAC"], horizontal=True)
+    cmet, creg = st.columns([2, 2])
+    metric_label = cmet.radio("Phase", list(DC_METRICS.keys()), horizontal=True)
+    col, msrcs, blurb = DC_METRICS[metric_label]
+    region = creg.radio("Region", ["All", "US", "EMEA", "APAC"], horizontal=True)
+
     dcd = DATACENTERS_DF if region == "All" else DATACENTERS_DF[DATACENTERS_DF.region == region]
+    dcd = dcd[dcd[col].notna()].copy()          # only markets with data for this phase
+    dcd["val"] = dcd[col]
 
-    m1, m2, m3 = st.columns(3)
-    m1.metric("Markets shown", f"{len(dcd)}")
-    m2.metric("Operational power", f"{dcd['mw'].sum()/1000:,.1f} GW")
-    m3.metric("Largest", f"{dcd.loc[dcd['mw'].idxmax(), 'market'].split(' (')[0]}",
-              f"{dcd['mw'].max():,.0f} MW")
+    st.caption(f"**{metric_label}** — {blurb}")
 
-    map_df = dcd.rename(columns={"lat": "latitude", "lon": "longitude"}).copy()
-    map_df["size"] = map_df["mw"] * 40          # radius in metres, scaled by MW
-    st.map(map_df, latitude="latitude", longitude="longitude", size="size",
-           color="#ff5a1f")
+    if dcd.empty:
+        st.info("No markets report this phase for the selected region. Try "
+                "**Operational**, or switch region to **US**.")
+    else:
+        m1, m2, m3 = st.columns(3)
+        m1.metric("Markets shown", f"{len(dcd)}")
+        m2.metric(f"{metric_label.split(' (')[0]} power", f"{dcd['val'].sum()/1000:,.1f} GW")
+        m3.metric("Largest", f"{dcd.loc[dcd['val'].idxmax(), 'market'].split(' (')[0]}",
+                  f"{dcd['val'].max():,.0f} MW")
 
-    bar = (alt.Chart(dcd).mark_bar().encode(
-        x=alt.X("mw:Q", title="Operational power (MW)"),
-        y=alt.Y("market:N", sort="-x", title=None),
-        tooltip=["market", "country", "grid", "mw"],
-        color=alt.Color("region:N", legend=alt.Legend(title="Region")),
-    ).properties(height=max(280, 26 * len(dcd))))
-    st.altair_chart(bar, use_container_width=True)
+        map_df = dcd.rename(columns={"lat": "latitude", "lon": "longitude"}).copy()
+        map_df["size"] = map_df["val"] * 40     # radius in metres, scaled by MW
+        st.map(map_df, latitude="latitude", longitude="longitude", size="size",
+               color="#ff5a1f")
 
-    with st.expander("Table + sources"):
-        show = dcd[["market", "region", "country", "grid", "mw"]].copy()
-        show["source"] = dcd["src"].map(lambda k: SOURCES[k][0])
-        st.dataframe(show, use_container_width=True, hide_index=True,
-                     column_config={"mw": st.column_config.NumberColumn("MW", format="%d"),
-                                    "grid": "ISO feed"})
+        bar = (alt.Chart(dcd).mark_bar().encode(
+            x=alt.X("val:Q", title=f"{metric_label.split(' (')[0]} power (MW)"),
+            y=alt.Y("market:N", sort="-x", title=None),
+            tooltip=[alt.Tooltip("market"), alt.Tooltip("country"),
+                     alt.Tooltip("grid"), alt.Tooltip("val:Q", title="MW")],
+            color=alt.Color("region:N", legend=alt.Legend(title="Region")),
+        ).properties(height=max(280, 26 * len(dcd))))
+        st.altair_chart(bar, use_container_width=True)
+
+        with st.expander("Table — all phases + sources"):
+            show = dcd[["market", "region", "country", "grid",
+                        "mw", "uc", "planned"]].copy()
+            st.dataframe(
+                show, use_container_width=True, hide_index=True,
+                column_config={
+                    "grid": "ISO feed",
+                    "mw": st.column_config.NumberColumn("Operational (MW)", format="%d"),
+                    "uc": st.column_config.NumberColumn("Under constr. (MW)", format="%d"),
+                    "planned": st.column_config.NumberColumn("Planned (MW)", format="%d")})
+            st.caption("Sources — " + " · ".join(src_link(k) for k in
+                       ["cbre_dc", "cbre_glob", "jll_dc", "cushman_dc"]))
+
+    st.caption("Sources for this phase: " + " · ".join(src_link(k) for k in msrcs))
     st.caption("⚡ Markets tagged with an **ISO feed** (ERCO / CISO / PJM) can be "
                "pulled live for carbon on the **Grid timing** tab.")
 
@@ -1077,6 +1205,54 @@ with tab_news:
                 yt_url = ("https://www.youtube.com/results?search_query="
                           + urllib.parse.quote(vquery))
                 st.markdown(f"▶ **[Watch videos]({yt_url})**")
+
+    st.divider()
+    st.markdown("#### What the companies say")
+    st.caption("First-party material — economic-impact reports, community "
+               "pledges and newsrooms the operators themselves publish. These "
+               "make the case *for* the build-out, so read them as the "
+               "company's side, alongside the pushback above and the live feed "
+               "below.")
+    # dict preserves insertion order -> categories render in list order.
+    cats = {}
+    for cat, company, what, url in COMPANY_STATEMENTS:
+        cats.setdefault(cat, []).append((company, what, url))
+    for cat, entries in cats.items():
+        st.markdown(f"**{cat}**")
+        comp_cols = st.columns(3)
+        for i, (company, what, url) in enumerate(entries):
+            with comp_cols[i % 3]:
+                st.markdown(f"**{company}** — [{what}]({url})")
+
+    st.markdown("###### 📣 Live press releases & news")
+    st.caption("Fresh Google News hits for a given operator — their own "
+               "announcements plus third-party coverage, newest first. No key "
+               "required; headlines are unfiltered, not endorsements.")
+    pick = st.selectbox("Operator", ["All operators"]
+                        + list(COMPANY_FEED_TERMS.keys()))
+    if pick == "All operators":
+        pr_query = ("(" + " OR ".join(COMPANY_FEED_TERMS.values()) + ") "
+                    "data center (community OR jobs OR investment OR ratepayers "
+                    "OR water OR moratorium)")
+    else:
+        pr_query = (COMPANY_FEED_TERMS[pick]
+                    + " data center (community OR jobs OR investment OR "
+                    "ratepayers OR water OR moratorium)")
+    pr_items, pr_err = fetch_news(pr_query, limit=12)
+    if pr_err or pr_items is None:
+        gn_url = ("https://news.google.com/search?q="
+                  + urllib.parse.quote(pr_query))
+        st.warning("Couldn't reach Google News right now — "
+                   f"[open this search]({gn_url}).")
+    elif not pr_items:
+        st.info("No recent items for this operator — try another.")
+    else:
+        st.caption(f"{len(pr_items)} items • newest first")
+        for it in pr_items:
+            meta = " · ".join(x for x in (it["source"], it["published"]) if x)
+            st.markdown(f"- [{it['title']}]({it['link']})  \n"
+                        f"  <small style='color:#888'>{meta}</small>",
+                        unsafe_allow_html=True)
 
     st.divider()
     st.markdown("#### Moratorium & ban tracker")
@@ -1221,7 +1397,8 @@ with tab_method:
     st.subheader("Sources & coefficients")
     for key in ["google_2025", "openai_2025", "epoch_2025", "hungry_2025",
                 "mlenergy", "iea_2025", "gpt5_report", "eia930", "pjm_dm2",
-                "cbre_dc", "cbre_glob", "ercot_ll", "pjm_lf", "eia_va",
+                "cbre_dc", "cbre_glob", "jll_dc", "cushman_dc", "ercot_ll",
+                "pjm_lf", "eia_va",
                 "google_news", "reddit", "icap_mor", "dcbans", "gjf_mor",
                 "rockinst", "elmaps", "watttime", "gridstatus"]:
         st.markdown(f"- {src_link(key)}")
