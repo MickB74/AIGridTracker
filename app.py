@@ -41,6 +41,9 @@ def load_css():
 st.set_page_config(page_title="AI Token Footprint", page_icon="⚡", layout="wide")
 load_css()
 
+# Render custom hero banner
+st.image("assets/hero.png", use_column_width=True)
+
 st.markdown('<h1 class="main-title">⚡ AI Token Footprint</h1>', unsafe_allow_html=True)
 st.caption("The energy, water, and carbon behind LLM token usage — from a single "
            "prompt to the global data-center grid. Sourced throughout; see **Methodology**.")
