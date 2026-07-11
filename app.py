@@ -12,8 +12,10 @@ Run:
 """
 
 import streamlit as st
+import streamlit.components.v1 as components
 import pathlib
 import datetime as _dt
+import json
 
 from src.services.news import fetch_community_stories, _story_angle
 from src.ui.calc_tab import render_calc_tab
@@ -49,36 +51,224 @@ st.caption("The energy, water, and carbon behind LLM token usage — from a sing
            "prompt to the global data-center grid. Sourced throughout; see **Methodology**.")
 
 # --- Rotating community spotlight (last 7 days) ----------------------------- #
-st.markdown('<div class="spotlight-container">', unsafe_allow_html=True)
+# --- Rotating community spotlight (last 7 days) ----------------------------- #
 _stories, _story_err = fetch_community_stories()
 if _stories:
-    _n = len(_stories)
-    st.session_state.setdefault("story_idx", _dt.date.today().toordinal())
-    _i = st.session_state["story_idx"] % _n
-    _s = _stories[_i]
-    _emoji, _blurb = _story_angle(_s["title"])
-    _age = ""
-    _d = _s.get("age_days")
-    if _d is not None:
-        _age = "today" if _d <= 0 else ("yesterday" if _d == 1 else f"{_d} days ago")
+    slides_data = []
+    for s in _stories:
+        emoji, blurb = _story_angle(s["title"])
+        d = s.get("age_days")
+        age = "today" if d is not None and d <= 0 else ("yesterday" if d == 1 else f"{d} days ago" if d is not None else "")
+        meta = " · ".join(x for x in [s["source"], age] if x)
+        slides_data.append({
+            "title": s["title"],
+            "link": s["link"],
+            "emoji": emoji,
+            "blurb": blurb,
+            "meta": meta
+        })
     
-    _c1, _c2 = st.columns([6, 1])
-    with _c1:
-        st.markdown(f"**{_emoji} Community spotlight — a data center in the news**")
-        st.markdown(f"#### [{_s['title']}]({_s['link']})")
-        _meta = " · ".join(x for x in [_s["source"], _age] if x)
-        st.caption(f"{_blurb}" + (f"  \n*{_meta}*" if _meta else ""))
-    with _c2:
-        st.caption(f"{_i + 1} / {_n}")
-        _pv, _nx = st.columns(2)
-        if _pv.button("◂", key="story_prev", use_container_width=True,
-                      help="Previous story"):
-            st.session_state["story_idx"] = _i - 1
-            st.rerun()
-        if _nx.button("▸", key="story_next", use_container_width=True,
-                      help="Next story"):
-            st.session_state["story_idx"] = _i + 1
-            st.rerun()
+    carousel_html = f"""
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    body {{
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: transparent;
+        color: #e2e8f0;
+        overflow: hidden;
+    }}
+    .spotlight-container {{
+        background: linear-gradient(135deg, rgba(255, 90, 31, 0.05) 0%, rgba(245, 166, 35, 0.02) 100%);
+        border: 1px solid rgba(255, 90, 31, 0.15);
+        border-radius: 16px;
+        padding: 20px;
+        position: relative;
+        box-shadow: 0 8px 30px rgba(255, 90, 31, 0.03);
+        height: 120px;
+        box-sizing: border-box;
+    }}
+    .carousel-wrapper {{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }}
+    .slides-container {{
+        display: flex;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        height: 100%;
+    }}
+    .slide {{
+        min-width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }}
+    .header-row {{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4px;
+    }}
+    .title-label {{
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #ff5a1f;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }}
+    .slide-counter {{
+        font-size: 0.85rem;
+        color: #64748b;
+        margin-right: 80px; /* Space for overlay controls */
+    }}
+    .slide-title {{
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 2px 0 6px 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }}
+    .slide-title a {{
+        color: #f8fafc;
+        text-decoration: none;
+        transition: color 0.2s;
+    }}
+    .slide-title a:hover {{
+        color: #38ef7d;
+    }}
+    .slide-blurb {{
+        font-size: 0.88rem;
+        color: #94a3b8;
+        margin: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }}
+    .slide-meta {{
+        font-size: 0.76rem;
+        color: #64748b;
+        margin-top: 4px;
+        font-style: italic;
+    }}
+    .controls {{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        display: flex;
+        gap: 8px;
+        z-index: 10;
+    }}
+    .control-btn {{
+        background-color: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: #e2e8f0;
+        border-radius: 8px;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-size: 0.8rem;
+        outline: none;
+    }}
+    .control-btn:hover {{
+        background-color: rgba(56, 239, 125, 0.08);
+        border-color: #38ef7d;
+        color: #38ef7d;
+    }}
+    </style>
+    </head>
+    <body>
+    <div class="spotlight-container" id="container">
+        <div class="carousel-wrapper">
+            <div class="slides-container" id="slides"></div>
+        </div>
+        <div class="controls">
+            <button class="control-btn" onclick="prevSlide()">◂</button>
+            <button class="control-btn" onclick="nextSlide()">▸</button>
+        </div>
+    </div>
+
+    <script>
+    const data = {json.dumps(slides_data)};
+    let currentIndex = 0;
+    let autoPlayInterval;
+
+    const slidesContainer = document.getElementById('slides');
+
+    // Build slides DOM
+    data.forEach((item, index) => {{
+        const slide = document.createElement('div');
+        slide.className = 'slide';
+        slide.innerHTML = `
+            <div class="header-row">
+                <div class="title-label">
+                    <span>${{item.emoji}}</span>
+                    <span>Community spotlight — a data center in the news</span>
+                </div>
+                <div class="slide-counter">${{index + 1}} / ${{data.length}}</div>
+            </div>
+            <div class="slide-title">
+                <a href="${{item.link}}" target="_blank">${{item.title}}</a>
+            </div>
+            <div class="slide-blurb">${{item.blurb}}</div>
+            <div class="slide-meta">${{item.meta}}</div>
+        `;
+        slidesContainer.appendChild(slide);
+    }});
+
+    function updateCarousel() {{
+        slidesContainer.style.transform = `translateX(-${{currentIndex * 100}}%)`;
+    }}
+
+    function nextSlide() {{
+        currentIndex = (currentIndex + 1) % data.length;
+        updateCarousel();
+        resetTimer();
+    }}
+
+    function prevSlide() {{
+        currentIndex = (currentIndex - 1 + data.length) % data.length;
+        updateCarousel();
+        resetTimer();
+    }}
+
+    function startTimer() {{
+        autoPlayInterval = setInterval(nextSlide, 7000);
+    }}
+
+    function resetTimer() {{
+        clearInterval(autoPlayInterval);
+        startTimer();
+    }}
+
+    // Hover play/pause behavior
+    const container = document.getElementById('container');
+    container.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+    container.addEventListener('mouseleave', startTimer);
+
+    startTimer();
+    </script>
+    </body>
+    </html>
+    """
+    components.html(carousel_html, height=140)
     st.caption("Automated Google News search (last 7 days) for communities "
                "affected by a built or under-construction data center. "
                "Unfiltered and not an endorsement — follow the link to the "
@@ -87,7 +277,6 @@ else:
     st.info("Community spotlight is temporarily unavailable "
             f"({_story_err or 'no recent stories found'}). See the "
             "**Community & backlash** tab for trackers and live discussion.")
-st.markdown('</div>', unsafe_allow_html=True)
 st.divider()
 
 # --- TABS SETUP ---
