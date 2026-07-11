@@ -1,7 +1,7 @@
 # AI Token Footprint
 
 A Streamlit app for the energy, water, and carbon footprint of LLM token usage —
-from a single prompt to the global data-centre grid.
+from a single prompt to the global data-center grid.
 
 ## Run
 
@@ -25,8 +25,8 @@ streamlit run app.py
 4. **🏢 Data centers** — where the load actually is: major US + global markets by
    operational commissioned power (MW) on a map and MW-by-market bar chart, tagged
    with the ISO feed the app can pull carbon for. Plus the **ERCOT / PJM demand
-   wave** (ERCOT's ~233 GW large-load queue, ~73% data centres; PJM's +32 GW
-   2024→2030, 94% data-centre-driven) and a **live EIA-930 total-demand** pull per
+   wave** (ERCOT's ~233 GW large-load queue, ~73% data centers; PJM's +32 GW
+   2024→2030, 94% data-center-driven) and a **live EIA-930 total-demand** pull per
    grid. Market MW are broker-inventory estimates (CBRE / Cushman & Wakefield),
    not per-facility disclosures.
 5. **🕐 Grid timing** — the CFE / 24-7 matching angle: hourly carbon-intensity
@@ -39,7 +39,7 @@ streamlit run app.py
    RSS) or grassroots sentiment (Reddit Atom search RSS) — filterable by theme
    and place. Both keyless; Reddit uses the RSS endpoint (the JSON API is closed)
    so it works from any IP.
-7. **🌍 Macro outlook** — IEA data-centre electricity trajectory (415 → 945 TWh),
+7. **🌍 Macro outlook** — IEA data-center electricity trajectory (415 → 945 TWh),
    AI's rising share, inference dominance, and the Jevons-paradox caveat.
 8. **📚 Methodology** — every coefficient, its source link, and the scope caveats
    (chip-only vs full-stack, market vs location-based carbon, text-only, water).
@@ -80,7 +80,7 @@ Swap in new disclosures without touching the UI.
 
 ## Primary sources
 
-- IEA — *Energy and AI* (2025) + 2026 update — macro data-centre outlook
+- IEA — *Energy and AI* (2025) + 2026 update — macro data-center outlook
 - Google — *Measuring the environmental impact of AI inference* (Aug 2025) — per-prompt
 - Epoch AI (2025) — per-token inference energy
 - *How Hungry is AI?* (arXiv:2505.09598) — per-query energy/water/carbon benchmark
