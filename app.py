@@ -369,6 +369,13 @@ SOURCES = {
                      "https://oregoncapitalchronicle.com/2026/01/20/oregon-governor-forms-new-committee-to-advise-on-massive-data-center-growth/"),
     "in_braun":     ("Gov. Braun — hyperscalers must pay, opposes tax abatements (2026)",
                      "https://www.wfyi.org/public-affairs/2026-03-09/governor-braun-touts-efforts-to-bring-down-energy-costs-following-legislative-session-highlights-data-center-agreement"),
+    # --- House member data-centre stances (Officials tab) ---
+    "house_rpa":    ("House E&C — Ratepayer Protection Act (large loads pay their own way)",
+                     "https://www.eenews.net/articles/energy-and-commerce-lawmakers-to-introduce-data-center-bill/"),
+    "house_pallone":("Rep. Pallone calls for a national data-center moratorium (2026)",
+                     "https://www.eenews.net/articles/data-center-moratorium-still-has-few-takers-on-capitol-hill/"),
+    "house_subram": ("Rep. Subramanyam files data-center protection/energy-cost bills (2026)",
+                     "https://virginiamercury.com/2026/05/22/va-congressmen-file-energy-cost-transparency-data-center-attack-protections-bills/"),
     "google_news":  ("Google News — live headline search (Community & backlash tab)",
                      "https://news.google.com/"),
     "reddit":       ("Reddit — public search JSON (grassroots sentiment; Community & backlash tab)",
@@ -1746,8 +1753,11 @@ with tab_officials:
                                  default=sorted(odf.party.unique()))
         states = f3.multiselect("State / territory", sorted(odf.state_full.unique()),
                                 default=[])
-        only_stance = st.checkbox("Only show officials with a documented "
-                                  "data-center stance", value=False)
+        cbx1, cbx2 = st.columns(2)
+        only_stance = cbx1.checkbox("Only officials with a documented "
+                                    "data-center stance", value=False)
+        ec_only = cbx2.checkbox("Only House Energy & Commerce members "
+                                "(the committee with jurisdiction)", value=False)
 
         view = odf.copy()
         if offices:
@@ -1758,6 +1768,8 @@ with tab_officials:
             view = view[view.state_full.isin(states)]
         if only_stance:
             view = view[view.stance.str.len() > 0]
+        if ec_only:
+            view = view[view.get("committee", "") == "Energy & Commerce"]
         view = view.sort_values(["state_full", "office", "name"])
 
         q1, q2, q3 = st.columns(3)
@@ -1767,12 +1779,13 @@ with tab_officials:
         q3.metric("With sourced stance", f"{(view.stance.str.len()>0).sum()}")
 
         show = view[["name", "office", "state_full", "district", "party",
-                     "stance", "website", "contact"]].copy()
+                     "committee", "stance", "website", "contact"]].copy()
         st.dataframe(
             show, use_container_width=True, hide_index=True, height=560,
             column_config={
                 "name": "Name", "office": "Office", "state_full": "State",
                 "district": "District", "party": "Party",
+                "committee": st.column_config.TextColumn("Committee"),
                 "stance": st.column_config.TextColumn("Data-center stance (sourced)",
                                                       width="large"),
                 "website": st.column_config.LinkColumn("Website", display_text="site"),
