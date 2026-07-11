@@ -83,8 +83,20 @@ DC_FORECASTS = pd.DataFrame([
     {"source": "IEA (base)",     "year": 2035, "twh": 1200, "src": "iea_2025"},
     {"source": "IEA (lift-off)", "year": 2035, "twh": 1700, "src": "iea_2025"},
     {"source": "Gartner",        "year": 2030, "twh": 980,  "src": "gartner"},
+    {"source": "451 Research",   "year": 2030, "twh": 1587, "src": "sp_451"},
     {"source": "BloombergNEF",   "year": 2035, "twh": 1200, "src": "bnef"},
     {"source": "BloombergNEF",   "year": 2050, "twh": 3700, "src": "bnef"},
+])
+
+# US-only data-centre electricity forecasts for 2030 (TWh). The spread is the
+# story: central estimates run ~350 → ~970 TWh. Scenario/range midpoints noted.
+DC_FORECASTS_US = pd.DataFrame([
+    {"source": "Goldman Sachs / McKinsey", "twh": 350, "note": "~300–400 range", "src": "wri_range"},
+    {"source": "IEA",                      "twh": 425, "note": "~8% of US power", "src": "iea_2025"},
+    {"source": "LBNL (Berkeley Lab)",      "twh": 450, "note": "range 325–580",  "src": "lbnl"},
+    {"source": "EPRI (medium)",            "twh": 590, "note": "13% of US power", "src": "epri_pi"},
+    {"source": "EPRI (high)",              "twh": 790, "note": "17% of US power", "src": "epri_pi"},
+    {"source": "BCG",                      "twh": 970, "note": "high end",        "src": "wri_range"},
 ])
 
 # Major data-centre markets — OPERATIONAL commissioned power (MW), ~2025.
@@ -326,6 +338,12 @@ SOURCES = {
                      "https://www.utilitydive.com/news/us-data-center-power-demand-could-reach-106-gw-by-2035-bloombergnef/806972/"),
     "wri_range":    ("World Resources Institute — US 2030 forecasts span 206–970 TWh",
                      "https://www.wri.org/insights/us-data-centers-electricity-demand"),
+    "sp_451":       ("S&P Global / 451 Research — global data-centre demand ~1,587 TWh by 2030",
+                     "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/110525-global-data-center-power-demand-expected-to-almost-double-by-2030"),
+    "epri_pi":      ("EPRI — Powering Intelligence 2026 (US Low/Medium/High scenarios)",
+                     "https://powering-intelligence.epri.com/summary-projections.html"),
+    "lbnl":         ("Lawrence Berkeley National Lab — US data centres 325–580 TWh by 2030",
+                     "https://eta.lbl.gov/publications/2024-united-states-data-center-energy"),
     "google_news":  ("Google News — live headline search (Community & backlash tab)",
                      "https://news.google.com/"),
     "reddit":       ("Reddit — public search JSON (grassroots sentiment; Community & backlash tab)",
@@ -1559,18 +1577,27 @@ with tab_macro:
     ).properties(height=max(240, 30 * len(fdf))))
     st.altair_chart(fc, use_container_width=True)
 
+    st.markdown("**US-only, 2030 (TWh)** — the spread across forecasters is the "
+                "whole point: central estimates run ~2.8× from low to high.")
+    udf = DC_FORECASTS_US.copy()
+    uc = (alt.Chart(udf).mark_bar().encode(
+        x=alt.X("twh:Q", title="US data-centre electricity, 2030 (TWh/yr)"),
+        y=alt.Y("source:N", sort="x", title=None),
+        color=alt.Color("twh:Q", scale=alt.Scale(scheme="yelloworangered"), legend=None),
+        tooltip=["source", "twh", "note"],
+    ).properties(height=max(200, 34 * len(udf))))
+    st.altair_chart(uc, use_container_width=True)
+
     st.markdown(
-        f"- **US, specifically:** BloombergNEF sees US data-centre power hitting "
+        f"- **In capacity terms:** BloombergNEF sees US data-centre power hitting "
         f"**~106 GW by 2035** (from ~25 GW in 2024) — **8.6%** of all US "
         f"electricity, more than double today's 3.5%. {src_link('bnef_106')}.\n"
-        f"- **How wide is the uncertainty?** WRI notes US 2030 forecasts span "
-        f"**206–970 TWh** — nearly a **5× spread** between the low (EPRI) and high "
-        f"(BCG) ends. {src_link('wri_range')}.\n"
         f"- **Why the spread:** forecasts hinge on how much announced pipeline "
         f"actually gets built and powered (interconnection queues are heavily "
         f"speculative), plus efficiency gains and utilisation assumptions.")
     st.caption("Forecasters: " + " · ".join(src_link(k) for k in
-               ["iea_2025", "bnef", "gartner"]))
+               ["iea_2025", "bnef", "gartner", "sp_451", "epri_pi", "lbnl",
+                "wri_range"]))
 
 # --------------------------------------------------------------------------- #
 # TAB 8 — METHODOLOGY
@@ -1582,7 +1609,8 @@ with tab_method:
                 "mlenergy", "iea_2025", "gpt5_report", "eia930", "pjm_dm2",
                 "cbre_dc", "cbre_glob", "jll_dc", "cushman_dc", "google_dc",
                 "meta_dc", "imasons", "bnef", "bnef_106", "gartner", "wri_range",
-                "ercot_ll", "pjm_lf", "eia_va", "eia_pilot",
+                "sp_451", "epri_pi", "lbnl", "ercot_ll", "pjm_lf", "eia_va",
+                "eia_pilot",
                 "google_news", "reddit", "icap_mor", "dcbans", "gjf_mor",
                 "rockinst", "elmaps", "watttime", "gridstatus"]:
         st.markdown(f"- {src_link(key)}")
