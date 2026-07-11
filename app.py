@@ -105,6 +105,63 @@ DATACENTERS_DF = pd.DataFrame(
     DATACENTERS,
     columns=["market", "region", "country", "grid", "lat", "lon", "mw", "src"])
 
+# Data-centre moratoriums / bans — POINT-IN-TIME SNAPSHOT (mid-2026). Compiled
+# from public trackers (see MORATORIUM_TRACKERS); dozens more churn weekly, so
+# treat as illustrative, not exhaustive — follow the tracker links for current
+# status. level: Local/State. status: Enacted/Proposed/Rejected/Vetoed.
+MORATORIUMS = [
+    # locality, state, level, status, when, note
+    ("Minneapolis", "MN", "Local", "Enacted", "May 2026", ""),
+    ("Denver", "CO", "Local", "Enacted", "May 2026", ""),
+    ("Baltimore City", "MD", "Local", "Enacted", "May 2026", ""),
+    ("Reno", "NV", "Local", "Enacted", "May 2026", ""),
+    ("Dubuque County", "IA", "Local", "Enacted", "2026", ""),
+    ("Bloomington", "IL", "Local", "Enacted", "2026", ""),
+    ("Normal", "IL", "Local", "Enacted", "2026", ""),
+    ("Iron County", "UT", "Local", "Enacted", "2026", ""),
+    ("Manitowoc County", "WI", "Local", "Enacted", "2026", "18-month"),
+    ("Smithfield", "RI", "Local", "Enacted", "2026", "Outright ban"),
+    ("Meridian Township", "MI", "Local", "Enacted", "2026", ""),
+    ("Washington Township (Macomb Co.)", "MI", "Local", "Enacted", "2026", ""),
+    ("Hill County", "TX", "Local", "Enacted", "2026", "Under developer lawsuit"),
+    ("DeKalb County", "GA", "Local", "Enacted", "2026", ""),
+    ("Lysander (Onondaga Co.)", "NY", "Local", "Enacted", "May 2026", "6-month"),
+    ("Perth (Fulton Co.)", "NY", "Local", "Enacted", "Jun 2025", "1-year"),
+    ("Groton", "CT", "Local", "Enacted", "2025", "Year-long"),
+    ("Peculiar", "MO", "Local", "Enacted", "2025", "Ban"),
+    ("Bangor", "ME", "Local", "Enacted", "2025", "Temporary ban"),
+    # North Carolina — 20+ jurisdictions since late 2025 (subset)
+    ("Gates County", "NC", "Local", "Enacted", "2025–26", ""),
+    ("Brevard", "NC", "Local", "Enacted", "2025–26", ""),
+    ("Clay County", "NC", "Local", "Enacted", "2025–26", ""),
+    ("Canton", "NC", "Local", "Enacted", "2025–26", ""),
+    ("Chatham County", "NC", "Local", "Enacted", "2025–26", ""),
+    ("Kings Mountain", "NC", "Local", "Enacted", "2025–26", ""),
+    ("Boone", "NC", "Local", "Enacted", "2025–26", ""),
+    ("Apex", "NC", "Local", "Enacted", "2025–26", ""),
+    ("Orange County", "NC", "Local", "Enacted", "2025–26", ""),
+    ("Rowan County", "NC", "Local", "Enacted", "2025–26", ""),
+    ("Swain County", "NC", "Local", "Enacted", "2025–26", ""),
+    ("Watauga County", "NC", "Local", "Enacted", "2025–26", ""),
+    ("Madison County", "NC", "Local", "Enacted", "2025–26", ""),
+    ("Clyde", "NC", "Local", "Enacted", "2025–26", ""),
+    # Proposed / under consideration
+    ("Seattle", "WA", "Local", "Proposed", "Jun 2026", ""),
+    ("Indianapolis", "IN", "Local", "Proposed", "Jun 2026", "Non-binding pause"),
+    ("Pulaski County", "AR", "Local", "Proposed", "2026", ""),
+    ("St. Lawrence County", "NY", "Local", "Proposed", "2026", "Urged municipalities"),
+    # Rejected
+    ("Cheyenne", "WY", "Local", "Rejected", "2026", "Voted down 8–1"),
+    # State-level
+    ("New York (statewide)", "NY", "State", "Proposed", "Jun 2026", "Passed legislature; awaiting governor"),
+    ("Georgia (HB 1012)", "GA", "State", "Proposed", "2026", "Permit bar to Mar 2027"),
+    ("Maine (statewide)", "ME", "State", "Vetoed", "Apr 2026", "Governor veto"),
+    ("Ohio (ballot measure)", "OH", "State", "Rejected", "2026", "Failed signature threshold"),
+]
+MORATORIUMS_DF = pd.DataFrame(
+    MORATORIUMS,
+    columns=["locality", "state", "level", "status", "when", "note"])
+
 # Illustrative 24-hour marginal carbon-intensity curves (gCO2/kWh).
 # STYLIZED shapes anchored to plausible ranges — NOT live. Replace via the
 # fetch_grid_intensity() stub with Electricity Maps / WattTime / EIA-930 /
@@ -159,6 +216,14 @@ SOURCES = {
                      "https://news.google.com/"),
     "reddit":       ("Reddit — public search JSON (grassroots sentiment; Community & backlash tab)",
                      "https://www.reddit.com/"),
+    "icap_mor":     ("Interconnected Capital — US Data Center Moratorium Tracker (2026)",
+                     "https://www.interconnectedcapital.com/research/data-center-moratoriums"),
+    "dcbans":       ("DataCenterBans.com — moratorium & ban tracker",
+                     "https://www.datacenterbans.com/"),
+    "gjf_mor":      ("Good Jobs First — Data Center Moratorium Bills Are Spreading (2026)",
+                     "https://goodjobsfirst.org/data-center-moratorium-bills-are-spreading-in-2026/"),
+    "rockinst":     ("Rockefeller Institute — Updates on the Cloud: More Moratoriums (2026)",
+                     "https://www.rockinst.org/blog/updates-on-the-cloud-more-moratoriums-on-data-centers/"),
     "pjm_dm2":      ("PJM Data Miner 2 — gen_by_fuel & fivemin_marginal_emissions feeds",
                      "https://dataminer2.pjm.com/"),
 }
@@ -998,6 +1063,50 @@ with tab_news:
                 st.caption(body)
 
     st.divider()
+    st.markdown("#### Moratorium & ban tracker")
+    st.caption("Towns, counties and states that have paused or blocked data "
+               "centres. Point-in-time snapshot (mid-2026) compiled from public "
+               "trackers — dozens more churn weekly, so follow the links below "
+               "for live status. Not exhaustive.")
+
+    enacted = MORATORIUMS_DF[MORATORIUMS_DF.status == "Enacted"]
+    proposed = MORATORIUMS_DF[MORATORIUMS_DF.status == "Proposed"]
+    q1, q2, q3 = st.columns(3)
+    q1.metric("Enacted (listed)", f"{len(enacted)}")
+    q2.metric("Proposed / considering", f"{len(proposed)}")
+    q3.metric("States represented", f"{MORATORIUMS_DF.state.nunique()}")
+    st.caption("Trackers report **50+ localities enacted** nationally (North "
+               "Carolina alone has 20+); the table lists a representative subset.")
+
+    fstat = st.multiselect(
+        "Filter by status",
+        list(MORATORIUMS_DF.status.unique()),
+        default=["Enacted", "Proposed"])
+    mdf = MORATORIUMS_DF[MORATORIUMS_DF.status.isin(fstat)] if fstat else MORATORIUMS_DF
+
+    tcol, ccol = st.columns([3, 2])
+    with tcol:
+        st.dataframe(
+            mdf[["locality", "state", "level", "status", "when", "note"]],
+            use_container_width=True, hide_index=True, height=360,
+            column_config={"locality": "Locality", "state": "State",
+                           "level": "Level", "status": "Status",
+                           "when": "When", "note": "Note"})
+    with ccol:
+        by_state = (mdf.groupby("state").size().reset_index(name="n")
+                    .sort_values("n", ascending=False))
+        chart = (alt.Chart(by_state).mark_bar().encode(
+            x=alt.X("n:Q", title="Localities / actions"),
+            y=alt.Y("state:N", sort="-x", title=None),
+            tooltip=["state", "n"],
+            color=alt.Color("n:Q", scale=alt.Scale(scheme="reds"), legend=None),
+        ).properties(height=360))
+        st.altair_chart(chart, use_container_width=True)
+
+    st.caption("Trackers: " + " · ".join(
+        src_link(k) for k in ["icap_mor", "dcbans", "gjf_mor", "rockinst"]))
+
+    st.divider()
     st.markdown("#### Live discussion")
     csrc, cth = st.columns([1, 2])
     feed = csrc.radio("Source", ["📰 News", "👥 Reddit"], horizontal=True)
@@ -1086,7 +1195,8 @@ with tab_method:
     for key in ["google_2025", "openai_2025", "epoch_2025", "hungry_2025",
                 "mlenergy", "iea_2025", "gpt5_report", "eia930", "pjm_dm2",
                 "cbre_dc", "cbre_glob", "ercot_ll", "pjm_lf", "eia_va",
-                "google_news", "reddit", "elmaps", "watttime", "gridstatus"]:
+                "google_news", "reddit", "icap_mor", "dcbans", "gjf_mor",
+                "rockinst", "elmaps", "watttime", "gridstatus"]:
         st.markdown(f"- {src_link(key)}")
 
     st.divider()
