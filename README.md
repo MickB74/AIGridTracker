@@ -35,8 +35,10 @@ streamlit run app.py
    placeholders behind a `fetch_grid_intensity()` stub — wire a live feed there.
 6. **🗞️ Community & backlash** — the pushback side: a sourced rundown of the
    recurring flashpoints (power bills / grid strain, water, zoning & moratoria,
-   noise, tax breaks, backup diesel) plus **live headlines** via Google News RSS
-   (no API key), filterable by theme and place.
+   noise, tax breaks, backup diesel) plus a **live feed** — news (Google News
+   RSS) or grassroots sentiment (Reddit Atom search RSS) — filterable by theme
+   and place. Both keyless; Reddit uses the RSS endpoint (the JSON API is closed)
+   so it works from any IP.
 7. **🌍 Macro outlook** — IEA data-centre electricity trajectory (415 → 945 TWh),
    AI's rising share, inference dominance, and the Jevons-paradox caveat.
 8. **📚 Methodology** — every coefficient, its source link, and the scope caveats

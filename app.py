@@ -157,6 +157,8 @@ SOURCES = {
                      "https://www.eia.gov/todayinenergy/detail.php?id=67664"),
     "google_news":  ("Google News — live headline search (Community & backlash tab)",
                      "https://news.google.com/"),
+    "reddit":       ("Reddit — public search JSON (grassroots sentiment; Community & backlash tab)",
+                     "https://www.reddit.com/"),
     "pjm_dm2":      ("PJM Data Miner 2 — gen_by_fuel & fivemin_marginal_emissions feeds",
                      "https://dataminer2.pjm.com/"),
 }
@@ -403,6 +405,49 @@ def fetch_news(query: str, limit: int = 15):
                 "source": source,
                 "link": (it.findtext("link") or "").strip(),
                 "published": (it.findtext("pubDate") or "").strip()[:16],
+            })
+            if len(out) >= limit:
+                break
+        return out, None
+    except Exception as e:                                        # noqa: BLE001
+        return None, str(e)
+
+
+# --- Live Reddit — public search RSS (keyless, works from any IP) ------------ #
+# Reddit's search.json API is closed (403s off datacenter IPs), but the Atom
+# search.rss feed is still open and reachable from anywhere. RSS carries
+# title/subreddit/link/date but not scores — a fair trade for reliability.
+# (Technique cf. github.com/mvanhorn/last30days-skill: RSS instead of JSON.)
+REDDIT_RSS = "https://www.reddit.com/search.rss"
+_ATOM = "{http://www.w3.org/2005/Atom}"
+REDDIT_UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+             "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36")
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def fetch_reddit(query: str, limit: int = 15, sort: str = "relevance",
+                 period: str = "year"):
+    """Live Reddit threads via the public Atom search RSS (keyless). Returns
+    (list_of_dicts, error_or_None); each dict has title/subreddit/link/created.
+    A 429 means Reddit is rate-limiting — the 1h cache normally avoids it."""
+    try:
+        r = requests.get(REDDIT_RSS,
+                         params={"q": query, "sort": sort, "t": period},
+                         headers={"User-Agent": REDDIT_UA}, timeout=15)
+        r.raise_for_status()
+        if not r.content.lstrip().startswith(b"<"):
+            raise RuntimeError("Reddit returned non-XML (rate-limited or blocked)")
+        root = ET.fromstring(r.content)
+        out = []
+        for e in root.iter(_ATOM + "entry"):
+            link_el = e.find(_ATOM + "link")
+            cat = e.find(_ATOM + "category")
+            out.append({
+                "title": (e.findtext(_ATOM + "title") or "").strip(),
+                "subreddit": (cat.get("label") or cat.get("term") or "")
+                             if cat is not None else "",
+                "link": link_el.get("href") if link_el is not None else "",
+                "created": (e.findtext(_ATOM + "published") or "")[:10],
             })
             if len(out) >= limit:
                 break
@@ -916,8 +961,9 @@ with tab_dc:
 with tab_news:
     st.subheader("Community pushback & the issues data centres face")
     st.caption("The build-out isn't frictionless: towns are pausing or blocking "
-               "projects over power bills, water, noise, and land use. Live "
-               "headlines below (Google News, no key) — and the recurring themes.")
+               "projects over power bills, water, noise, and land use. Recurring "
+               "themes below, plus a live feed — news (Google) or grassroots "
+               "sentiment (Reddit), no key required.")
 
     st.markdown("#### The recurring flashpoints")
     issues = [
@@ -951,26 +997,50 @@ with tab_news:
             st.caption(body)
 
     st.divider()
-    st.markdown("#### Live headlines")
-    theme = st.selectbox("Theme", list(NEWS_THEMES.keys()))
+    st.markdown("#### Live discussion")
+    csrc, cth = st.columns([1, 2])
+    feed = csrc.radio("Source", ["📰 News", "👥 Reddit"], horizontal=True)
+    theme = cth.selectbox("Theme", list(NEWS_THEMES.keys()))
     extra = st.text_input("Add a place or keyword (optional)",
                           placeholder="e.g. Virginia, Georgia, Tucson")
     query = NEWS_THEMES[theme] + (f" {extra}" if extra.strip() else "")
 
-    news, nerr = fetch_news(query)
-    if nerr or news is None:
-        st.warning("Couldn't reach Google News (offline or blocked).")
-        st.caption(f"Detail: {nerr}")
-    elif not news:
-        st.info("No headlines for this theme right now — try another or add a place.")
+    if feed == "📰 News":
+        news, nerr = fetch_news(query)
+        if nerr or news is None:
+            st.warning("Couldn't reach Google News (offline or blocked).")
+            st.caption(f"Detail: {nerr}")
+        elif not news:
+            st.info("No headlines for this theme — try another or add a place.")
+        else:
+            st.caption(f"{len(news)} recent stories • “{query}” • live via Google News")
+            for a in news:
+                meta = " · ".join(x for x in (a["source"], a["published"]) if x)
+                st.markdown(f"- [{a['title']}]({a['link']})  \n  <small>{meta}</small>",
+                            unsafe_allow_html=True)
+        st.caption("Headlines are an automated news search, unfiltered and not "
+                   "endorsements; follow the link to the original outlet.")
     else:
-        st.caption(f"{len(news)} recent stories • “{query}” • live via Google News")
-        for a in news:
-            meta = " · ".join(x for x in (a["source"], a["published"]) if x)
-            st.markdown(f"- [{a['title']}]({a['link']})  \n  <small>{meta}</small>",
-                        unsafe_allow_html=True)
-    st.caption("Headlines are an automated news search, unfiltered and not "
-               "endorsements; follow the link to the original outlet.")
+        posts, rerr = fetch_reddit(query)
+        if rerr or posts is None:
+            reddit_url = ("https://www.reddit.com/search/?q="
+                          + urllib.parse.quote(query) + "&sort=new")
+            st.warning("Couldn't load the Reddit feed right now (it rate-limits "
+                       "rapid requests — try again in a moment).")
+            st.markdown(f"🔗 **[Open this search on Reddit]({reddit_url})** — or "
+                        "browse r/energy, r/RealEstate, r/climate, and your local "
+                        "city/county subreddit.")
+            st.caption(f"Detail: {rerr}")
+        elif not posts:
+            st.info("No Reddit posts for this theme — try another or add a place.")
+        else:
+            st.caption(f"{len(posts)} threads • “{query}” • live via Reddit RSS")
+            for p in posts:
+                meta = " · ".join(x for x in (p["subreddit"], p["created"]) if x)
+                st.markdown(f"- [{p['title']}]({p['link']})  \n  <small>{meta}</small>",
+                            unsafe_allow_html=True)
+        st.caption("Reddit threads are user posts — anecdotal and unverified; a "
+                   "read on local sentiment, not reporting.")
 
 # --------------------------------------------------------------------------- #
 # TAB 7 — MACRO OUTLOOK
@@ -1005,7 +1075,7 @@ with tab_method:
     for key in ["google_2025", "openai_2025", "epoch_2025", "hungry_2025",
                 "mlenergy", "iea_2025", "gpt5_report", "eia930", "pjm_dm2",
                 "cbre_dc", "cbre_glob", "ercot_ll", "pjm_lf", "eia_va",
-                "google_news", "elmaps", "watttime", "gridstatus"]:
+                "google_news", "reddit", "elmaps", "watttime", "gridstatus"]:
         st.markdown(f"- {src_link(key)}")
 
     st.divider()
