@@ -76,6 +76,17 @@ WATER_ML_PER_WH = 0.26 / 0.24  # ~1.083 mL/Wh, implied by Gemini disclosure
 IEA_OUTLOOK = pd.DataFrame({"year": [2024, 2025, 2030, 2035],
                             "twh":  [415,  485,  945,  1200]})
 
+# Third-party GLOBAL data-centre electricity forecasts (TWh) — same metric so
+# they're comparable. Shows how much the projections diverge by year/scenario.
+DC_FORECASTS = pd.DataFrame([
+    {"source": "IEA (base)",     "year": 2030, "twh": 945,  "src": "iea_2025"},
+    {"source": "IEA (base)",     "year": 2035, "twh": 1200, "src": "iea_2025"},
+    {"source": "IEA (lift-off)", "year": 2035, "twh": 1700, "src": "iea_2025"},
+    {"source": "Gartner",        "year": 2030, "twh": 980,  "src": "gartner"},
+    {"source": "BloombergNEF",   "year": 2035, "twh": 1200, "src": "bnef"},
+    {"source": "BloombergNEF",   "year": 2050, "twh": 3700, "src": "bnef"},
+])
+
 # Major data-centre markets — OPERATIONAL commissioned power (MW), ~2025.
 # Market-level totals from broker inventories (CBRE / Cushman & Wakefield /
 # datacenterHawk) — NOT per-facility disclosures, which operators don't publish.
@@ -309,6 +320,12 @@ SOURCES = {
                      "https://www.eia.gov/todayinenergy/detail.php?id=67664"),
     "eia_pilot":    ("EIA — Pilot survey on energy use at data centers (Mar 2026)",
                      "https://www.eia.gov/pressroom/releases/press585.php"),
+    "gartner":      ("Gartner — data-centre electricity to double by 2030 (~980 TWh)",
+                     "https://www.gartner.com/en/newsroom/press-releases/2025-11-17-gartner-says-electricity-demand-for-data-centers-to-grow-16-percent-in-2025-and-double-by-2030"),
+    "bnef_106":     ("BloombergNEF — US data-centre power demand ~106 GW by 2035",
+                     "https://www.utilitydive.com/news/us-data-center-power-demand-could-reach-106-gw-by-2035-bloombergnef/806972/"),
+    "wri_range":    ("World Resources Institute — US 2030 forecasts span 206–970 TWh",
+                     "https://www.wri.org/insights/us-data-centers-electricity-demand"),
     "google_news":  ("Google News — live headline search (Community & backlash tab)",
                      "https://news.google.com/"),
     "reddit":       ("Reddit — public search JSON (grassroots sentiment; Community & backlash tab)",
@@ -1527,6 +1544,34 @@ with tab_macro:
         "- **Jevons paradox:** per-query efficiency keeps improving (Gemini fell ~33× in "
         "a year), but cheaper inference drives more usage — total load still rises.")
 
+    st.divider()
+    st.subheader("Forecasts disagree — a lot")
+    st.caption("Third-party projections of **global** data-centre electricity (TWh) "
+               "vary widely by forecaster, year, and scenario. Same metric, so "
+               "they're comparable; the gap is the honest uncertainty.")
+    fdf = DC_FORECASTS.copy()
+    fdf["label"] = fdf["source"] + " · " + fdf["year"].astype(str)
+    fc = (alt.Chart(fdf).mark_bar().encode(
+        x=alt.X("twh:Q", title="Global data-centre electricity (TWh/yr)"),
+        y=alt.Y("label:N", sort="-x", title=None),
+        color=alt.Color("source:N", legend=alt.Legend(title="Forecaster")),
+        tooltip=["source", "year", "twh"],
+    ).properties(height=max(240, 30 * len(fdf))))
+    st.altair_chart(fc, use_container_width=True)
+
+    st.markdown(
+        f"- **US, specifically:** BloombergNEF sees US data-centre power hitting "
+        f"**~106 GW by 2035** (from ~25 GW in 2024) — **8.6%** of all US "
+        f"electricity, more than double today's 3.5%. {src_link('bnef_106')}.\n"
+        f"- **How wide is the uncertainty?** WRI notes US 2030 forecasts span "
+        f"**206–970 TWh** — nearly a **5× spread** between the low (EPRI) and high "
+        f"(BCG) ends. {src_link('wri_range')}.\n"
+        f"- **Why the spread:** forecasts hinge on how much announced pipeline "
+        f"actually gets built and powered (interconnection queues are heavily "
+        f"speculative), plus efficiency gains and utilisation assumptions.")
+    st.caption("Forecasters: " + " · ".join(src_link(k) for k in
+               ["iea_2025", "bnef", "gartner"]))
+
 # --------------------------------------------------------------------------- #
 # TAB 8 — METHODOLOGY
 # --------------------------------------------------------------------------- #
@@ -1536,8 +1581,8 @@ with tab_method:
     for key in ["google_2025", "openai_2025", "epoch_2025", "hungry_2025",
                 "mlenergy", "iea_2025", "gpt5_report", "eia930", "pjm_dm2",
                 "cbre_dc", "cbre_glob", "jll_dc", "cushman_dc", "google_dc",
-                "meta_dc", "imasons", "bnef", "ercot_ll", "pjm_lf", "eia_va",
-                "eia_pilot",
+                "meta_dc", "imasons", "bnef", "bnef_106", "gartner", "wri_range",
+                "ercot_ll", "pjm_lf", "eia_va", "eia_pilot",
                 "google_news", "reddit", "icap_mor", "dcbans", "gjf_mor",
                 "rockinst", "elmaps", "watttime", "gridstatus"]:
         st.markdown(f"- {src_link(key)}")
