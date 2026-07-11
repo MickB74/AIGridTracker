@@ -1508,10 +1508,11 @@ with tab_dc:
 # --------------------------------------------------------------------------- #
 
 with tab_news:
-    st.subheader("Community pushback & the issues data centers face")
+    st.subheader("Community impact — the frictions and the value")
     st.caption("The build-out isn't frictionless: towns are pausing or blocking "
-               "projects over power bills, water, noise, and land use. Recurring "
-               "themes below, plus a live feed — news (Google) or grassroots "
+               "projects over power bills, water, noise, and land use. Below are "
+               "the recurring flashpoints *and* how a host community actually "
+               "extracts value, plus a live feed — news (Google) or grassroots "
                "sentiment (Reddit), no key required.")
 
     st.markdown("#### The recurring flashpoints")
@@ -1550,6 +1551,61 @@ with tab_news:
     cards = st.columns(3)
     for i, (icon, head, body, vquery) in enumerate(issues):
         with cards[i % 3]:
+            with st.container(border=True):
+                st.markdown(f"### {icon}\n**{head}**")
+                st.caption(body)
+                yt_url = ("https://www.youtube.com/results?search_query="
+                          + urllib.parse.quote(vquery))
+                st.markdown(f"▶ **[Watch videos]({yt_url})**")
+
+    st.divider()
+    st.markdown("#### How communities extract value")
+    st.caption("The flip side of the pushback: the levers through which a host "
+               "community actually captures value from a data center. When these "
+               "land, local support and future approvals follow; when they don't, "
+               "opposition rises and supply shrinks.")
+    # (icon, headline, body, search-query) — parallels the flashpoints above so
+    # the tab shows both the cost and the benefit side of the same project.
+    value_levers = [
+        ("👷", "Jobs & local workforce",
+         "Construction crews during the build and skilled operations/security "
+         "roles once live, plus demand for local trades and suppliers. A "
+         "skilled local workforce is itself a top siting criterion — the value "
+         "runs both ways.",
+         "data center local jobs workforce economic impact"),
+        ("🧾", "Tax base & fiscal revenue",
+         "Property, sales and equipment taxes can materially expand a small "
+         "county's budget — funding schools, roads and services. The live "
+         "debate is abatements vs. permanent jobs, so communities increasingly "
+         "negotiate the trade-off explicitly.",
+         "data center property tax revenue county schools"),
+        ("⚡", "Grid stability contributions",
+         "Projects developed to *support* the grid — funding transmission "
+         "upgrades, adding on-site generation or storage, and offering "
+         "flexible/curtailable load — leave the local system more reliable "
+         "than they found it.",
+         "data center grid stability transmission upgrade flexible load"),
+        ("☀️", "Shared clean power",
+         "Green tariffs, community solar, on-campus solar PV and clean "
+         "microgrids let residents and the operator draw from the same new "
+         "clean supply — decarbonizing the local grid rather than just "
+         "consuming from it.",
+         "data center community solar green tariff clean microgrid"),
+        ("🛡️", "Ratepayer protection",
+         "Cost-allocation rules that make data centers pay for the grid "
+         "capacity they trigger — rather than socializing it onto households — "
+         "are the single biggest driver of whether a community feels it's "
+         "gaining or subsidizing.",
+         "data center cost allocation ratepayer protection tariff"),
+        ("🤝", "Community-benefit agreements",
+         "Direct, negotiated commitments — local infrastructure, workforce "
+         "training, noise/water safeguards, community funds — turn a project "
+         "into a proof point that de-risks the next site.",
+         "data center community benefit agreement local investment"),
+    ]
+    vcards = st.columns(3)
+    for i, (icon, head, body, vquery) in enumerate(value_levers):
+        with vcards[i % 3]:
             with st.container(border=True):
                 st.markdown(f"### {icon}\n**{head}**")
                 st.caption(body)
