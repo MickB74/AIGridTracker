@@ -17,6 +17,7 @@ tab. Figures are point-in-time estimates, not guarantees.
 import json
 import os
 import pathlib
+import time
 import urllib.parse
 import xml.etree.ElementTree as ET
 
@@ -306,6 +307,8 @@ SOURCES = {
                      "https://www.pjm.com/-/media/DotCom/library/reports-notices/load-forecast/2025-load-report.pdf"),
     "eia_va":       ("EIA — Commercial electricity sales in Virginia driven by data centers (2025)",
                      "https://www.eia.gov/todayinenergy/detail.php?id=67664"),
+    "eia_pilot":    ("EIA — Pilot survey on energy use at data centers (Mar 2026)",
+                     "https://www.eia.gov/pressroom/releases/press585.php"),
     "google_news":  ("Google News — live headline search (Community & backlash tab)",
                      "https://news.google.com/"),
     "reddit":       ("Reddit — public search JSON (grassroots sentiment; Community & backlash tab)",
@@ -659,10 +662,36 @@ def fetch_news(query: str, limit: int = 15):
 # search.rss feed is still open and reachable from anywhere. RSS carries
 # title/subreddit/link/date but not scores — a fair trade for reliability.
 # (Technique cf. github.com/mvanhorn/last30days-skill: RSS instead of JSON.)
-REDDIT_RSS = "https://www.reddit.com/search.rss"
+#
+# On shared datacenter IPs (Streamlit Cloud), the www host rate-limits hard:
+# a 429 can hit the very first request because many apps share the IP. But
+# old.reddit.com serves the same search.rss from different infrastructure that
+# doesn't throttle nearly as aggressively — so we hit it first and only fall
+# back to www if it's unreachable. A unique, identifying User-Agent (per
+# Reddit's API rules) plus a short backoff retry further reduce 429s; a
+# spoofed browser UA from a datacenter actually gets throttled the worst.
+REDDIT_HOSTS = ("https://old.reddit.com/search.rss",
+                "https://www.reddit.com/search.rss")
 _ATOM = "{http://www.w3.org/2005/Atom}"
-REDDIT_UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-             "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36")
+REDDIT_UA = "AIGridTracker/1.0 (public sentiment tab; contact via GitHub)"
+
+
+def _parse_reddit_rss(content: bytes, limit: int):
+    root = ET.fromstring(content)
+    out = []
+    for e in root.iter(_ATOM + "entry"):
+        link_el = e.find(_ATOM + "link")
+        cat = e.find(_ATOM + "category")
+        out.append({
+            "title": (e.findtext(_ATOM + "title") or "").strip(),
+            "subreddit": (cat.get("label") or cat.get("term") or "")
+                         if cat is not None else "",
+            "link": link_el.get("href") if link_el is not None else "",
+            "created": (e.findtext(_ATOM + "published") or "")[:10],
+        })
+        if len(out) >= limit:
+            break
+    return out
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
@@ -670,31 +699,28 @@ def fetch_reddit(query: str, limit: int = 15, sort: str = "relevance",
                  period: str = "year"):
     """Live Reddit threads via the public Atom search RSS (keyless). Returns
     (list_of_dicts, error_or_None); each dict has title/subreddit/link/created.
-    A 429 means Reddit is rate-limiting — the 1h cache normally avoids it."""
-    try:
-        r = requests.get(REDDIT_RSS,
-                         params={"q": query, "sort": sort, "t": period},
-                         headers={"User-Agent": REDDIT_UA}, timeout=15)
-        r.raise_for_status()
-        if not r.content.lstrip().startswith(b"<"):
-            raise RuntimeError("Reddit returned non-XML (rate-limited or blocked)")
-        root = ET.fromstring(r.content)
-        out = []
-        for e in root.iter(_ATOM + "entry"):
-            link_el = e.find(_ATOM + "link")
-            cat = e.find(_ATOM + "category")
-            out.append({
-                "title": (e.findtext(_ATOM + "title") or "").strip(),
-                "subreddit": (cat.get("label") or cat.get("term") or "")
-                             if cat is not None else "",
-                "link": link_el.get("href") if link_el is not None else "",
-                "created": (e.findtext(_ATOM + "published") or "")[:10],
-            })
-            if len(out) >= limit:
-                break
-        return out, None
-    except Exception as e:                                        # noqa: BLE001
-        return None, str(e)
+    Tries old.reddit.com (rarely throttled) first, then www, each with a short
+    backoff retry on 429."""
+    params = {"q": query, "sort": sort, "t": period}
+    last = "Reddit unreachable"
+    for host in REDDIT_HOSTS:
+        for attempt in range(3):
+            try:
+                r = requests.get(host, params=params,
+                                 headers={"User-Agent": REDDIT_UA}, timeout=15)
+                if r.status_code == 429:
+                    last = "429 (rate-limited)"
+                    time.sleep(1.5 * (attempt + 1))   # 1.5s, 3s, 4.5s
+                    continue
+                r.raise_for_status()
+                if not r.content.lstrip().startswith(b"<"):
+                    raise RuntimeError("Reddit returned non-XML "
+                                       "(rate-limited or blocked)")
+                return _parse_reddit_rss(r.content, limit), None
+            except Exception as e:                                # noqa: BLE001
+                last = str(e)
+                break   # network/parse error on this host — try the next host
+    return None, last
 
 
 # --------------------------------------------------------------------------- #
@@ -1205,6 +1231,19 @@ with tab_dc:
                "cleanly. Research/forecast context: "
                + src_link("imasons") + " · " + src_link("bnef") + ".")
 
+    st.info(
+        "📋 **Authoritative facility data is coming (EIA).** Data centres are "
+        "electricity *customers*, so they've never been in federal facility data "
+        "— which is why the maps above rely on broker estimates and operator "
+        "self-disclosure. That's starting to change: in **March 2026 the EIA "
+        "launched its first pilot survey** of data-centre energy use — 196 "
+        "companies across **Texas, Washington, and Northern Virginia/DC** "
+        "(electricity, cooling, IT specs, efficiency), voluntary now with a "
+        "**mandatory survey to follow**. Results aren't published yet. Meanwhile "
+        "EIA already powers this app's live grid data (EIA-930): the carbon "
+        "curves on **Grid timing** and the live system-demand metric below. "
+        + src_link("eia_pilot") + " · " + src_link("eia930") + ".")
+
     st.divider()
     st.subheader("The demand wave — ERCOT & PJM")
     st.caption("The two US grids where data-centre load growth is most acute. "
@@ -1498,6 +1537,7 @@ with tab_method:
                 "mlenergy", "iea_2025", "gpt5_report", "eia930", "pjm_dm2",
                 "cbre_dc", "cbre_glob", "jll_dc", "cushman_dc", "google_dc",
                 "meta_dc", "imasons", "bnef", "ercot_ll", "pjm_lf", "eia_va",
+                "eia_pilot",
                 "google_news", "reddit", "icap_mor", "dcbans", "gjf_mor",
                 "rockinst", "elmaps", "watttime", "gridstatus"]:
         st.markdown(f"- {src_link(key)}")
