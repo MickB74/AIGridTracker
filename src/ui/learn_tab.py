@@ -93,7 +93,125 @@ electricity rates, and require billions in new transmission infrastructure.
     st.markdown("</div>", unsafe_allow_html=True)
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 3 — Inputs and Outputs
+    # SECTION 3 — What actually happens inside an AI data center
+    # ══════════════════════════════════════════════════════════════════════════
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("## ⚙️ What actually happens inside an AI data center?")
+    st.markdown("""\
+Inside the building, thousands of **GPUs** (specialized AI chips) are wired together
+into clusters and run nearly non-stop. But they're doing two very different kinds of
+work — **training** and **inference** — with very different power profiles. Almost
+everything on your electricity bill and this tracker traces back to one of these two.
+""")
+
+    t_col, i_col = st.columns(2)
+    with t_col:
+        st.markdown("""\
+### 🏋️ Training — *building* the model
+Training is how an AI model is created. Engineers feed it enormous datasets — much
+of the public internet, books, code — and the model adjusts billions of internal
+numbers ("parameters") over and over until it can predict language and patterns well.
+
+- **Runs once per model**, but for **weeks or months** without stopping.
+- Uses **thousands of GPUs in lockstep** on a single job — a "training cluster" of
+  50–100+ MW running flat-out, 24/7.
+- Extremely **power-hungry and steady** — a near-constant, city-sized electrical load
+  that's hard for a grid to absorb.
+- Training a single frontier model can consume **tens of gigawatt-hours** — as much
+  electricity as thousands of homes use in a year.
+""")
+    with i_col:
+        st.markdown("""\
+### 💬 Inference — *using* the model
+Inference is what happens every time someone actually uses the AI. Your prompt goes
+to a data center, runs through the already-trained model, and a response comes back —
+usually in under a second.
+
+- **Runs constantly, forever** — every chat message, image, and search summary is an
+  inference request.
+- Each request is **small**, but there are **billions per day** across all users.
+- Load is **spiky and follows the clock** — busy in waking hours, lighter overnight —
+  which makes it easier to shift toward cleaner grid hours.
+- Over a model's lifetime, **inference usually dwarfs training** in total energy,
+  simply because it never stops.
+""")
+
+    st.info(
+        "**Rule of thumb:** *Training* is a one-time, massive, steady burst to build "
+        "the model. *Inference* is the endless drip of everyday use. Training gets the "
+        "headlines; inference quietly dominates the long-run footprint."
+    )
+
+    st.markdown("""\
+#### The full lifecycle, start to finish
+""")
+    st.markdown("""\
+| Stage | What happens | Energy character |
+|-------|-------------|------------------|
+| **1. Data prep** | Collecting, cleaning, and filtering the training dataset | Moderate, bursty — mostly CPU and storage |
+| **2. Training** | The model learns from the data over weeks/months on a GPU cluster | Huge, steady, 24/7 — the single biggest one-time draw |
+| **3. Fine-tuning** | Smaller follow-up training to specialize or align the model (e.g. safety) | Much smaller than training, done repeatedly |
+| **4. Deployment** | Loading the finished model onto inference servers | Low — a setup step |
+| **5. Inference** | Serving real user requests, 24/7, for the life of the model | Spiky but relentless; dominates lifetime total |
+| **6. Retraining** | Building the next, better model — the cycle repeats | Back to a full training-sized burst |
+""")
+
+    st.caption(
+        "This is why AI facilities come in two flavors: **training campuses** built for "
+        "massive, constant power, and **inference campuses** placed close to users for "
+        "low latency. Some sites do both."
+    )
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # ══════════════════════════════════════════════════════════════════════════
+    # SECTION 4 — Using the right model for the task
+    # ══════════════════════════════════════════════════════════════════════════
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("## 🎯 Using the right model for the task")
+    st.markdown("""\
+Not every question needs the biggest, most powerful model. A frontier model with
+hundreds of billions of parameters can use **10–100× more energy per response** than
+a small model — and for most everyday tasks, the small model answers just as well.
+**Matching the model to the job** is one of the simplest ways to cut AI's energy and
+carbon footprint, and it's a choice made by the people *building* AI products, not
+just the data-center operators.
+""")
+
+    m1, m2 = st.columns(2)
+    with m1:
+        st.markdown("""\
+#### Bigger isn't always better
+- **Small / "mini" models** handle the bulk of real traffic — classification,
+  summarizing, autocomplete, simple Q&A — at a fraction of the energy.
+- **Large frontier models** shine at hard reasoning, complex code, and nuanced
+  writing, but are wasteful overkill for routine requests.
+- Sending every request to the largest model is like **taking a semi-truck to pick
+  up a bag of groceries** — it works, but you're burning far more fuel than the trip
+  requires.
+""")
+    with m2:
+        st.markdown("""\
+#### How teams right-size in practice
+- **Model routing** — a lightweight system sends easy questions to a small model and
+  only escalates hard ones to a large model.
+- **Distillation** — training a small, cheap model to mimic a big one for a specific
+  task, keeping most of the quality at a fraction of the cost.
+- **Caching & retrieval** — reusing past answers or looking facts up in a database
+  instead of re-running the model from scratch.
+- **Shorter prompts & outputs** — energy scales with the number of tokens processed,
+  so concise in-and-out means less compute.
+""")
+
+    st.info(
+        "**The takeaway:** the greenest AI request is often the one that never touches "
+        "a giant model. Right-sizing — the *right* model, a *short* prompt, a *cached* "
+        "answer when possible — can cut the energy of a typical workload dramatically "
+        "with no visible drop in quality."
+    )
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # ══════════════════════════════════════════════════════════════════════════
+    # SECTION 5 — Inputs and Outputs
     # ══════════════════════════════════════════════════════════════════════════
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("## 🔄 Inputs and outputs — what goes in, what comes out")
@@ -131,7 +249,7 @@ electricity rates, and require billions in new transmission infrastructure.
     st.markdown("</div>", unsafe_allow_html=True)
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 4 — Efficiency
+    # SECTION 6 — Efficiency
     # ══════════════════════════════════════════════════════════════════════════
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("## 🌱 How can data centers be more efficient?")
@@ -189,7 +307,7 @@ efficiency opportunity.
     st.markdown("</div>", unsafe_allow_html=True)
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 5 — Site selection
+    # SECTION 7 — Site selection
     # ══════════════════════════════════════════════════════════════════════════
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("## 📍 Where do companies build — and what do they look for?")
@@ -221,7 +339,7 @@ some communities are targeted more than others.
     st.markdown("</div>", unsafe_allow_html=True)
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 6 — Key terms glossary
+    # SECTION 8 — Key terms glossary
     # ══════════════════════════════════════════════════════════════════════════
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     with st.expander("📖 Glossary of key terms", expanded=False):
