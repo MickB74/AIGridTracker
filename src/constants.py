@@ -7,27 +7,82 @@ import pandas as pd
 
 # Per-QUERY coefficients, median text prompt. energy Wh, co2 gCO2e, water mL.
 QUERY_COEFFS = {
-    "Google Gemini — comprehensive (May 2025)": {
+    # ── First-party disclosures ──────────────────────────────────────────────
+    "Google Gemini 2.0 — full-stack (Google, May 2025)": {
         "energy_wh": 0.24, "co2_g": 0.03, "water_ml": 0.26, "src": "google_2025",
-        "note": "Full-stack: accelerator + host CPU + idle + cooling/PUE. Market-based carbon.",
+        "scope": "Full-stack",
+        "note": "Accelerator + host CPU + idle share + cooling/PUE. Market-based carbon.",
     },
-    "Google Gemini — chip-only (May 2025)": {
+    "Google Gemini 2.0 — chip-only (Google, May 2025)": {
         "energy_wh": 0.10, "co2_g": 0.02, "water_ml": 0.12, "src": "google_2025",
+        "scope": "Chip-only",
         "note": "Active TPU/GPU only. Understates real operating footprint.",
     },
-    "OpenAI — avg query (Altman, 2025)": {
+    "OpenAI — avg ChatGPT query (Altman, Jan 2025)": {
         "energy_wh": 0.34, "co2_g": None, "water_ml": 0.39, "src": "openai_2025",
+        "scope": "Full-stack",
         "note": "CEO blog figure; methodology not published.",
     },
-    "GPT-4o benchmark (How Hungry is AI?, 2025)": {
+    # ── Benchmark studies ────────────────────────────────────────────────────
+    "GPT-4o (How Hungry is AI?, 2025)": {
         "energy_wh": 0.55, "co2_g": None, "water_ml": None, "src": "hungry_2025",
+        "scope": "Benchmark",
         "note": "Derived midpoint (~0.51–0.60 Wh/query) from annual estimate.",
     },
+    "Claude 3.5 Sonnet (How Hungry is AI?, 2025)": {
+        "energy_wh": 0.40, "co2_g": None, "water_ml": None, "src": "hungry_2025",
+        "scope": "Benchmark",
+        "note": "Estimated from benchmark inference runs on Anthropic API.",
+    },
+    "Llama 3.1 405B — A100 cluster (Epoch AI, 2025)": {
+        "energy_wh": 0.97, "co2_g": None, "water_ml": None, "src": "epoch_2025",
+        "scope": "Benchmark",
+        "note": "~1000 output tokens × Epoch AI high estimate. Large open model on older GPU.",
+    },
+    "Llama 3.1 70B — A100 (Epoch AI, 2025)": {
+        "energy_wh": 0.35, "co2_g": None, "water_ml": None, "src": "epoch_2025",
+        "scope": "Benchmark",
+        "note": "~1000 output tokens × ~0.35 mWh/token. Mid-size open model.",
+    },
+    "Mistral Large 2 (Epoch AI est., 2025)": {
+        "energy_wh": 0.30, "co2_g": None, "water_ml": None, "src": "epoch_2025",
+        "scope": "Benchmark",
+        "note": "Estimated from Epoch AI token-level coefficients for ~123B param model.",
+    },
+    "DeepSeek-V3 — H100 (community benchmark, 2025)": {
+        "energy_wh": 0.28, "co2_g": None, "water_ml": None, "src": "community_bench",
+        "scope": "Benchmark",
+        "note": "Community-reported inference energy for MoE architecture on H100.",
+    },
+    "Gemma 3 27B — efficient small (Google, 2025)": {
+        "energy_wh": 0.06, "co2_g": None, "water_ml": None, "src": "google_2025",
+        "scope": "Chip-only",
+        "note": "Small model on TPU; chip-only. Very efficient per-query.",
+    },
+    "GPT-4o mini (Epoch AI est., 2025)": {
+        "energy_wh": 0.12, "co2_g": None, "water_ml": None, "src": "epoch_2025",
+        "scope": "Benchmark",
+        "note": "Distilled small model; ~1000 tokens at low per-token energy.",
+    },
+    # ── Reasoning / heavy workloads ──────────────────────────────────────────
+    "OpenAI o1 — reasoning query (Epoch AI est., 2025)": {
+        "energy_wh": 3.50, "co2_g": None, "water_ml": None, "src": "epoch_2025",
+        "scope": "Benchmark",
+        "note": "Chain-of-thought reasoning generates 5–10× more tokens per query.",
+    },
+    "Google Gemini 2.5 Pro — deep think (est., 2026)": {
+        "energy_wh": 4.20, "co2_g": None, "water_ml": None, "src": "estimate",
+        "scope": "Benchmark",
+        "note": "Extended thinking mode; ~20k output tokens. Rough community estimate.",
+    },
+    # ── Contested outlier ────────────────────────────────────────────────────
     "GPT-5 report — avg (2025, contested)": {
         "energy_wh": 18.0, "co2_g": None, "water_ml": None, "src": "gpt5_report",
-        "note": "Third-party report; up to ~40 Wh on some responses. High / disputed.",
+        "scope": "Contested",
+        "note": "Third-party report; up to ~40 Wh on some responses. Disputed methodology.",
     },
 }
+
 
 # Per-TOKEN energy (Wh per output token), static references.
 TOKEN_COEFFS = {
