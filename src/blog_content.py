@@ -261,4 +261,127 @@ signaled that legislators are paying attention.
 > the **Officials** tab to contact your Texas state legislators directly.
 """,
     },
+    # ── Story 4 ──────────────────────────────────────────────────────────────
+    {
+        "id": "social-license-risk-2026",
+        "section": "stories",
+        "title": "How the Industry Files Your Protest: 'Social License' and the $64B Risk Column",
+        "date": _dt.date(2026, 7, 11),
+        "author": "AI Grid Tracker",
+        "tags": ["community", "policy", "site-selection", "risk", "zoning"],
+        "summary": (
+            "Data-center developers don't have a risk category called 'protests.' They "
+            "have 'social license to operate' — and organized community opposition has "
+            "now blocked or delayed an estimated $64 billion in projects. Here's how the "
+            "industry actually scores the risk that you'll show up to a hearing."
+        ),
+        "body": """\
+Ask a data-center developer whether they worry about protests and you'll get a careful
+answer. That's because inside the industry, *"protest"* isn't a risk category. What you
+do when you pack a planning-board hearing gets filed under a quieter, more clinical
+heading — and understanding that heading tells you exactly how much leverage residents
+actually have.
+
+### The term of art: "social license to operate"
+
+Borrowed from mining and oil & gas, **social license to operate (SLO)** is the industry's
+name for whether a community *tacitly accepts* your project — separate from whether you
+have the permits. You can hold every entitlement and still be dead in the water. In 2026,
+consultants began urging developers to treat SLO with "the same technical rigor applied
+to power and fiber due diligence." Data Center Dynamics coined a companion phrase —
+**"social interconnection"** — to sit alongside grid interconnection on the site checklist.
+
+The blunt version, from an engineering-firm white paper this June: *"Data centers don't
+fail on power. They fail on public trust."*
+
+### Why the reframing happened: the numbers got real
+
+Community opposition stopped being a soft, hand-wavy concern the moment it started
+showing up on balance sheets:
+
+| Metric | Value |
+|--------|-------|
+| U.S. investment **blocked** by opposition (since mid-2024) | **~$18 billion** |
+| Investment **delayed** by opposition | **~$46 billion** |
+| Total affected investment | **~$64 billion** |
+| Local opposition groups (end of 2024) | ~76 |
+| Local opposition groups (April 2026) | 268 |
+| Local opposition groups (mid-2026) | **430+ across 40+ states** |
+| Restriction/moratorium bills filed | 300+ across 30+ states |
+
+That's a 5x growth in organized opposition groups in eighteen months. When a risk grows
+that fast and carries a ten-figure price tag, it stops being a PR footnote and becomes a
+column in the underwriting model.
+
+### How the risk actually gets scored
+
+Here's the part residents rarely see. Developers don't guess at community mood anymore —
+they buy it as a data product. Site-selection platforms now sell a **"community sentiment
+layer"** that scrapes municipal records, meeting transcripts, and hyper-local news, then
+runs sentiment analysis to flag friction *before a dollar of capital is committed.*
+
+The scoring is weighted by **topic** and by **geography**:
+
+- **By issue** — negativity ratings that tell developers which objections stick:
+  noise pollution **87%**, wildlife impact **83%**, environmental impact **79%**,
+  water usage **64%**, direct costs to residents **49%**. Note that *noise* — not
+  carbon, not water — tops the list. It's the most visceral and the hardest to spin.
+- **By state** — jurisdictions get ranked receptive-to-hostile. Most positive:
+  Mississippi (78%), Wyoming (74%), South Carolina (69%). Most negative: West Virginia,
+  Delaware, Kansas.
+
+One sobering data point on *whose* voice the coverage reflects: in the media these tools
+ingest, **industry sources supply 51% of quotes at 90% positive sentiment**, while
+individual citizens are just **4% of quotes at a 6-to-1 negative ratio**. The models
+know residents are outgunned in the press — which is precisely why an organized,
+on-the-record community can move the needle out of proportion to its size.
+
+### What "risk" means to them — and why it favors you
+
+Crucially, the industry doesn't fear a picket line directly. It fears what the picket
+line *converts into*. Opposition is classified as a **second-order, indirect risk** —
+dangerous because it becomes:
+
+- **Entitlement risk** — rezoning denied or, as in Prince William County, Virginia,
+  a rezoning **voided in court** on a public-notice technicality that opponents found
+  and litigated all the way toward the state Supreme Court.
+- **Schedule risk** — permitting delays measured in months and years of carrying cost.
+- **Reputational risk** — disclosed in hyperscalers' own 10-Ks as a threat to their
+  ability to build capacity.
+- **Financing risk** — whether "announced demand" is actually *executable* at the
+  proposed site.
+
+That chain — protest → delay/denial → dead capital — is the whole reason a resident at
+a microphone matters. You are not the risk. You are the *trigger* for the risks they've
+already priced.
+
+### The mitigation playbook (read it as a tell)
+
+How developers respond reveals how they think. The countermeasures — **community-benefit
+agreements**, local-hiring pledges, front-loaded water-recycling and renewable
+commitments, choosing pro-development counties on purpose, and assembling land through
+blandly-named LLCs to avoid attention — are all attempts to *manufacture* social license
+before opposition can organize. The single most effective counter they cite is
+unglamorous: **early, continuous communication.** Opposition thrives on being surprised.
+
+### What it means for communities
+
+The lesson isn't that protest is futile — it's the opposite. The industry has spent real
+money building tools to detect you *early* precisely because organized, informed, on-the-
+record opposition is one of the few forces that reliably converts into delay and denial.
+Three things maximize that leverage:
+
+1. **Show up early and on the record.** Sentiment models weight documented, attributed
+   opposition — public comment, letters, meeting testimony — far more than social-media
+   noise.
+2. **Lead with noise, water, and cost.** These are the objections the industry's own
+   scoring rates as stickiest and hardest to spin.
+3. **Watch the procedure.** The biggest data-center defeat of the cycle turned on a
+   notice technicality, not a vote. Entitlements have rules; enforcing them is leverage.
+
+> Use the **Community & Backlash** tab to see what residents near you are already
+> organizing around, and the **Officials** tab to put your documented objection on the
+> record with the people who actually vote on the rezoning.
+""",
+    },
 ]

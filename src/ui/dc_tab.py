@@ -200,17 +200,19 @@ def render_dc_tab():
 
         st.caption(" · ".join(f"{c} = {len(hdf[hdf.company==c])}"
                                for c in firms if len(hdf[hdf.company == c])) +
-                   "  ·  🟢 Google · 🔵 Meta")
+                   "  ·  🟢 Google · 🔵 Meta · 🔴 Microsoft · 🟠 Amazon (AWS)")
         with st.expander("Campus list + sources"):
             st.dataframe(hdf[["company", "location", "state"]],
                          use_container_width=True, hide_index=True,
                          column_config={"company": "Company", "location": "Location",
                                         "state": "State"})
             st.caption("First-party sources: " + " · ".join(
-                src_link(k) for k in ["google_dc", "meta_dc"]))
-    st.caption("Only Google and Meta publish full campus lists; Microsoft, AWS, "
-               "Oracle and others disclose regions but not per-site locations as "
-               "cleanly. Research/forecast context: "
+                src_link(k) for k in
+                ["google_dc", "meta_dc", "microsoft_dc", "aws_dc"]))
+    st.caption("Google and Meta publish precise campus lists; Microsoft "
+               "(metro-level communities) and Amazon/AWS (investment announcements) "
+               "disclose locations less granularly, and Oracle and others not "
+               "cleanly at all. Research/forecast context: "
                + src_link("imasons") + " · " + src_link("bnef") + ".")
 
     st.info(
