@@ -672,3 +672,86 @@ def render_corporate_tab():
                 "MWh (2024)": st.column_config.NumberColumn(format="%d"),
                 "TWh (2024)": st.column_config.NumberColumn(format="%.3f"),
             })
+
+    # ------------------------------------------------------------------ #
+    # CORPORATE KEY PLAYERS & DIRECTORS
+    # ------------------------------------------------------------------ #
+    st.divider()
+    st.subheader("👥 Key Corporate Players & Sustainability Directors")
+    st.caption(
+        "A directory of senior executives, data center directors, grid planners, and sustainability leaders "
+        "driving hyperscale expansion. Use the search link to look up their professional profile on LinkedIn."
+    )
+
+    import urllib.parse
+    
+    KEY_PLAYERS = [
+        # Microsoft
+        ("Noelle Walsh", "Microsoft", "Corporate VP, Cloud Operations & Innovation", "Leads global Azure cloud infrastructure construction and operations."),
+        ("Bobby Hollis", "Microsoft", "VP of Energy", "Directs global energy sourcing, grid integration, and power purchase agreements (PPAs)."),
+        ("Melanie Nakagawa", "Microsoft", "Chief Sustainability Officer", "Directs corporate climate and sustainability policies (carbon negative by 2030)."),
+        # Google
+        ("Kate Brandt", "Google (Alphabet)", "Chief Sustainability Officer", "Leads circular economy, carbon-free energy, and sustainability goals across Google."),
+        ("Michael Terrell", "Google (Alphabet)", "Senior Director of Energy and Climate", "Pioneered Google's 24/7 hourly Carbon-Free Energy (CFE) matching strategy."),
+        ("Ben Townsend", "Google (Alphabet)", "Global Head of Infrastructure Planning & Water Policy", "Oversees site selection and cooling water sustainability policies."),
+        # Meta
+        ("Rachel Peterson", "Meta Platforms", "VP of Data Centers", "Directs Meta's global owned and leased data center physical infrastructure."),
+        ("Urvi Parekh", "Meta Platforms", "Head of Renewable Energy", "Leads Meta's clean energy procurement (15+ GW contracted portfolio)."),
+        ("Blair Anderson", "Meta Platforms", "Director of State & Local Public Policy", "Leads governmental relations and community tax incentives negotiations."),
+        # Amazon (AWS)
+        ("Kevin Miller", "Amazon (AWS)", "VP of Global Data Centers", "Directs AWS worldwide physical infrastructure design, build, and operations."),
+        ("Chris Roe", "Amazon (AWS)", "Director of Energy & Sustainable Operations", "Leads clean power procurement and operational carbon reduction programs."),
+        ("Jenna Leiner", "Amazon (AWS)", "Lead, Water Sustainability", "Manages AWS global water replenishment projects and dry-cooling upgrades."),
+        # CoreWeave
+        ("Michael Intrator", "CoreWeave", "Co-founder & CEO", "Leads corporate strategy and capital raises for specialized GPU hosting clusters."),
+        ("Brian Venturo", "CoreWeave", "Co-founder & CTO", "Designs CoreWeave's hardware architecture and high-density cluster cooling setups."),
+        # Equinix
+        ("Adaire Fox-Martin", "Equinix", "Chief Executive Officer", "Directs corporate strategy for the world's largest colocation provider."),
+        ("Christopher Wellise", "Equinix", "VP of Global Sustainability", "Leads corporate green design, energy reporting, and circular hardware programs."),
+        # Digital Realty
+        ("Andy Power", "Digital Realty", "President & CEO", "Leads global wholesale data center development and leasing strategy."),
+        ("Aaron Binkley", "Digital Realty", "VP of Sustainability", "Directs global environmental reporting, carbon reduction, and green tariffs.")
+    ]
+
+    player_list = []
+    for name, company, title, focus in KEY_PLAYERS:
+        # Generate direct LinkedIn search URL
+        search_query = f"{name} {company}"
+        linkedin_url = f"https://www.linkedin.com/search/results/people/?keywords={urllib.parse.quote(search_query)}"
+        
+        player_list.append({
+            "Name": name,
+            "Company": company,
+            "Title / Corporate Role": title,
+            "Infrastructure / Sustainability Focus": focus,
+            "LinkedIn Profile": linkedin_url
+        })
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    
+    # Search box for key players
+    search_player = st.text_input("🔍 Filter players by name, company, or role", value="")
+    
+    player_df = pd.DataFrame(player_list)
+    if search_player:
+        mask = (
+            player_df["Name"].str.contains(search_player, case=False) |
+            player_df["Company"].str.contains(search_player, case=False) |
+            player_df["Title / Corporate Role"].str.contains(search_player, case=False)
+        )
+        player_df = player_df[mask]
+
+    st.dataframe(
+        player_df,
+        use_container_width=True,
+        hide_index=True,
+        column_config={
+            "Name": st.column_config.TextColumn(width="medium"),
+            "Company": st.column_config.TextColumn(width="medium"),
+            "Title / Corporate Role": st.column_config.TextColumn(width="large"),
+            "Infrastructure / Sustainability Focus": st.column_config.TextColumn(width="large"),
+            "LinkedIn Profile": st.column_config.LinkColumn("Professional Profile", display_text="👥 LinkedIn Search", width="medium")
+        }
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+

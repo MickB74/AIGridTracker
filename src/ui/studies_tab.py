@@ -311,12 +311,19 @@ def render_studies_tab():
                 query_str = f"{r['company']} data center {r['location']} {selected_state}"
                 maps_url = f"https://www.google.com/maps/search/?api=1&query={urllib.parse.quote(query_str)}"
                 
+                # Clean company name and location for a targeted LinkedIn people search
+                company_clean = r['company'].replace(" (AWS)", "").replace(" (Colossus)", "").split(" · ")[0]
+                location_clean = r['location'].split(" (")[0] # remove Loudoun Co. etc.
+                li_query = f'{company_clean} "{location_clean}" "data center"'
+                linkedin_url = f"https://www.linkedin.com/search/results/people/?keywords={urllib.parse.quote(li_query)}"
+                
                 campus_list.append({
                     "Company": r["company"],
                     "Metro/Location": r["location"],
                     "Coordinates": f"{r['lat']:.4f}, {r['lon']:.4f}",
                     "Source": src_link(r["src"]),
-                    "Google Maps": maps_url
+                    "Google Maps": maps_url,
+                    "LinkedIn Search": linkedin_url
                 })
             
             st.dataframe(
@@ -328,7 +335,8 @@ def render_studies_tab():
                     "Metro/Location": st.column_config.TextColumn(width="large"),
                     "Coordinates": st.column_config.TextColumn(width="small"),
                     "Source": st.column_config.TextColumn(width="small"),
-                    "Google Maps": st.column_config.LinkColumn("Google Maps Directions", display_text="🗺️ View Map", width="medium")
+                    "Google Maps": st.column_config.LinkColumn("Google Maps Directions", display_text="🗺️ View Map", width="medium"),
+                    "LinkedIn Search": st.column_config.LinkColumn("Local Staff Directory", display_text="👥 Find Staff", width="medium")
                 }
             )
 
