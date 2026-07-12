@@ -311,19 +311,40 @@ def render_studies_tab():
                 query_str = f"{r['company']} data center {r['location']} {selected_state}"
                 maps_url = f"https://www.google.com/maps/search/?api=1&query={urllib.parse.quote(query_str)}"
                 
-                # Clean company name and location for a targeted LinkedIn people search
+                # Clean company name and location for a targeted LinkedIn people search.
+                # Scope to on-site data center roles (ops, critical facilities, security)
+                # rather than every corporate employee tied to the company + city.
                 company_clean = r['company'].replace(" (AWS)", "").replace(" (Colossus)", "").split(" · ")[0]
                 location_clean = r['location'].split(" (")[0] # remove Loudoun Co. etc.
-                li_query = f'{company_clean} "{location_clean}" "data center"'
+                role_terms = (
+                    '"data center technician" OR "critical facilities" OR '
+                    '"data center operations" OR "site operations" OR "facilities engineer" OR '
+                    '"mechanical technician" OR "electrical technician" OR "commissioning" OR '
+                    '"construction manager" OR "site contractor" OR "general contractor" OR '
+                    '"MEP" OR "controls technician"'
+                )
+                li_query = f'{company_clean} "{location_clean}" ({role_terms})'
                 linkedin_url = f"https://www.linkedin.com/search/results/people/?keywords={urllib.parse.quote(li_query)}"
-                
+
+                # Corporate leadership who drive utility deals & site selection —
+                # company-wide (usually HQ), not tied to this specific campus location.
+                exec_terms = (
+                    '"data center site selection" OR "site acquisition" OR '
+                    '"energy procurement" OR "energy strategy" OR "head of energy" OR '
+                    '"utility partnerships" OR "grid strategy" OR "power procurement" OR '
+                    '"infrastructure development" OR "data center development"'
+                )
+                exec_query = f'{company_clean} ({exec_terms})'
+                exec_url = f"https://www.linkedin.com/search/results/people/?keywords={urllib.parse.quote(exec_query)}"
+
                 campus_list.append({
                     "Company": r["company"],
                     "Metro/Location": r["location"],
                     "Coordinates": f"{r['lat']:.4f}, {r['lon']:.4f}",
                     "Source": src_link(r["src"]),
                     "Google Maps": maps_url,
-                    "LinkedIn Search": linkedin_url
+                    "LinkedIn Search": linkedin_url,
+                    "Exec Search": exec_url
                 })
             
             st.dataframe(
@@ -336,7 +357,8 @@ def render_studies_tab():
                     "Coordinates": st.column_config.TextColumn(width="small"),
                     "Source": st.column_config.TextColumn(width="small"),
                     "Google Maps": st.column_config.LinkColumn("Google Maps Directions", display_text="🗺️ View Map", width="medium"),
-                    "LinkedIn Search": st.column_config.LinkColumn("Local Staff Directory", display_text="👥 Find Staff", width="medium")
+                    "LinkedIn Search": st.column_config.LinkColumn("Local Staff Directory", display_text="👥 Find Staff", width="medium"),
+                    "Exec Search": st.column_config.LinkColumn("Energy & Siting Leadership", display_text="🏛️ Find Execs", width="medium")
                 }
             )
 
