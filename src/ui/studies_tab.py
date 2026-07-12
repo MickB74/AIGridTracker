@@ -130,21 +130,22 @@ STATE_STUDIES = {
     },
     "New Jersey": {
         "abbrev": "NJ",
-        "title": "Board of Public Utilities Ratepayer Subsidy Investigation & Large Load Tariffs (2025–2026)",
-        "author": "New Jersey Board of Public Utilities (NJBPU) / Legislature (P.L. 2025 c. 98)",
+        "title": "New Jersey Hyperscale Grid Studies & Market Inventory (2025–2026)",
+        "author": "NJBPU / New Jersey Policy Perspective (NJPP) Research",
         "src_key": "nj_bpu_2026",
         "pdf_url": "https://www.nj.gov/bpu/",
-        "summary": "Mandated utility study on cost-shifting and legislative tariffs to make large loads pay grid upgrades directly.",
+        "summary": "Administrative investigations on grid costs alongside independent market assessments of wholesale compute capacity.",
         "findings": [
-            "**Ratepayer Subsidy Study (P.L. 2025 c. 98)**: Mandated the NJBPU to investigate whether residential ratepayers are subsidizing grid infrastructure expansions required by hyperscale data centers, estimating rate impacts over the next 20 years.",
-            "**Large Load Tariffs (A-796 / S-731)**: Governor Mikie Sherrill signed legislation in July 2026 requiring electric public utilities to submit specific 'large load' tariffs (typically for loads >= 50 MW).",
-            "**Grid Infrastructure Costs**: Ensures that the substantial costs of upgrading transmission and substation infrastructure to support large compute clusters are billed directly to developers rather than rolled into the general rate base."
+            "**Market Capacity Inventory**: NJ holds approximately **1.04 GW** of total data center power capacity in 2026, projected to reach **1.23 GW by 2031**. This makes the state a top-5 U.S. data center market.",
+            "**Operational vs. Planned**: NJ hosts **12 active wholesale/colocation campuses** representing roughly **325 MW** of operational draw. There are **7 major planned expansion projects** in the pipeline representing an additional **640 MW** of capacity.",
+            "**Severe Supply Constraints**: Driven by NYC-proximity financial trading links and AI cloud deployments, NJ's vacancy rate is under **4%** (occupancy at 96%). Major hubs are concentrated in Secaucus, Piscataway, and Carteret (Equinix, Digital Realty, DataBank).",
+            "**Grid Cost Shifting (P.L. 2025 c. 98 / A-796)**: The NJBPU and independent watchdogs (NJPP) warn that data centers trigger massive utility transmission cost-sharing. In July 2026, Governor Sherrill signed A-796 requiring specific large load tariffs (>= 50 MW) to make operators pay for their own grid upgrades."
         ],
         "metrics": {
-            "Study Legislation": "P.L. 2025 c. 98",
-            "Large Load Tariff Bill": "A-796 (Signed July 2026)",
-            "Applicable Threshold": ">= 50 MW load size",
-            "Primary Target": "Ratepayer protection"
+            "Total Power Capacity": "1.04 GW (2026)",
+            "Operational / Planned": "325 MW / 640 MW",
+            "Market Vacancy Rate": "Under 4% (Highly constrained)",
+            "Featured Hubs": "Secaucus, Piscataway, Carteret"
         }
     }
 }
