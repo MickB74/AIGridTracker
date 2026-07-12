@@ -127,6 +127,25 @@ STATE_STUDIES = {
             "Local Moratoriums": "Enacted (multiple counties)",
             "State Water Inventory": "Due Late 2026"
         }
+    },
+    "New Jersey": {
+        "abbrev": "NJ",
+        "title": "Board of Public Utilities Ratepayer Subsidy Investigation & Large Load Tariffs (2025–2026)",
+        "author": "New Jersey Board of Public Utilities (NJBPU) / Legislature (P.L. 2025 c. 98)",
+        "src_key": "nj_bpu_2026",
+        "pdf_url": "https://www.nj.gov/bpu/",
+        "summary": "Mandated utility study on cost-shifting and legislative tariffs to make large loads pay grid upgrades directly.",
+        "findings": [
+            "**Ratepayer Subsidy Study (P.L. 2025 c. 98)**: Mandated the NJBPU to investigate whether residential ratepayers are subsidizing grid infrastructure expansions required by hyperscale data centers, estimating rate impacts over the next 20 years.",
+            "**Large Load Tariffs (A-796 / S-731)**: Governor Mikie Sherrill signed legislation in July 2026 requiring electric public utilities to submit specific 'large load' tariffs (typically for loads >= 50 MW).",
+            "**Grid Infrastructure Costs**: Ensures that the substantial costs of upgrading transmission and substation infrastructure to support large compute clusters are billed directly to developers rather than rolled into the general rate base."
+        ],
+        "metrics": {
+            "Study Legislation": "P.L. 2025 c. 98",
+            "Large Load Tariff Bill": "A-796 (Signed July 2026)",
+            "Applicable Threshold": ">= 50 MW load size",
+            "Primary Target": "Ratepayer protection"
+        }
     }
 }
 
@@ -139,6 +158,7 @@ MAP_STATES = [
     ("Oregon", "OR", 1, 10),
     ("Maryland", "MD", 1, 10),
     ("Indiana", "IN", 1, 10),
+    ("New Jersey", "NJ", 1, 10),
     # Fill others
     ("Alabama", "AL", 0, 0), ("Alaska", "AK", 0, 0), ("Arizona", "AZ", 0, 0), ("Arkansas", "AR", 0, 0),
     ("California", "CA", 0, 0), ("Colorado", "CO", 0, 0), ("Connecticut", "CT", 0, 0), ("Delaware", "DE", 0, 0),
@@ -146,7 +166,7 @@ MAP_STATES = [
     ("Iowa", "IA", 0, 0), ("Kansas", "KS", 0, 0), ("Kentucky", "KY", 0, 0),
     ("Louisiana", "LA", 0, 0), ("Maine", "ME", 0, 0), ("Massachusetts", "MA", 0, 0),
     ("Minnesota", "MN", 0, 0), ("Mississippi", "MS", 0, 0), ("Missouri", "MO", 0, 0), ("Montana", "MT", 0, 0),
-    ("Nebraska", "NE", 0, 0), ("Nevada", "NV", 0, 0), ("New Hampshire", "NH", 0, 0), ("New Jersey", "NJ", 0, 0),
+    ("Nebraska", "NE", 0, 0), ("Nevada", "NV", 0, 0), ("New Hampshire", "NH", 0, 0),
     ("New Mexico", "NM", 0, 0), ("New York", "NY", 0, 0), ("North Carolina", "NC", 0, 0), ("North Dakota", "ND", 0, 0),
     ("Ohio", "OH", 0, 0), ("Oklahoma", "OK", 0, 0), ("Pennsylvania", "PA", 0, 0), ("Rhode Island", "RI", 0, 0),
     ("South Carolina", "SC", 0, 0), ("South Dakota", "SD", 0, 0), ("Tennessee", "TN", 0, 0), ("Texas", "TX", 0, 0),

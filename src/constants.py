@@ -629,6 +629,8 @@ SOURCES = {
                       "https://mgaleg.maryland.gov/"),
     "iurc_indiana_2026":("Indiana General Assembly — IURC Large Load Energy & Water Study (HB 1245, 2026)",
                       "https://iga.in.gov/"),
+    "nj_bpu_2026":    ("New Jersey BPU & Legislature — Ratepayer Subsidy Study & Large Load Tariffs (P.L. 2025 c. 98 / A-796)",
+                      "https://www.nj.gov/bpu/"),
 }
 
 # --------------------------------------------------------------------------- #
