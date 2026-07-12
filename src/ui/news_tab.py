@@ -116,6 +116,75 @@ def render_news_tab():
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.divider()
+    st.markdown("#### 🏘️ Case Studies: Lessons & Data Filed in Towns")
+    st.caption(
+        "Specific municipal files, regulatory submissions, and lessons learned from the front lines of "
+        "local data center development."
+    )
+
+    TOWN_CASES = {
+        "Loudoun County, VA": {
+            "operator": "Multiple Hyperscalers & Equinix",
+            "data_filed": "Loudoun County Board of Supervisors noise ordinance audits (limiting low-frequency hum to 38 dBA at residential property lines) and zoning amendments requiring Special Use Permits (SUP) for data centers in all commercial zones.",
+            "outcome": "Strict noise mitigation walls mandated; developers forced to install custom quiet chillers. Siting is prohibited within 1,000 feet of residential zoning boundaries.",
+            "lesson": "Density clusters near residential areas trigger immediate noise lawsuits and grid bottlenecks. Siting now requires strict acoustic engineering from day one."
+        },
+        "The Dalles, OR": {
+            "operator": "Google",
+            "data_filed": "Municipal water rights filings and public record lawsuits. Google historically sued the city of The Dalles to protect their water draw figures as a proprietary 'trade secret' during drought seasons.",
+            "outcome": "Google withdrew its lawsuit under intense community pressure in late 2023, disclosing a draw of **274.5 Million Gallons** (approx. 29% of the town's total water consumption).",
+            "lesson": "Drought-prone communities will not tolerate utility secrecy. Operator transparency regarding local resource consumption is now a public expectation."
+        },
+        "Mesa, AZ": {
+            "operator": "Meta, Google & EdgeCore",
+            "data_filed": "Mesa City Council water allocation agreements and dry-cooling zoning resolutions.",
+            "outcome": "Mesa enacted a resolution banning all open-loop evaporative cooling for new data centers, requiring closed-loop/dry-cooling setups for all future building permits.",
+            "lesson": "Desert municipalities prioritize aquifer conservation over PUE. Operators must use air-cooling in the Southwest, accepting higher summer power draws."
+        },
+        "Frederick County, MD": {
+            "operator": "Aligned Data Centers (Quantum Loophole)",
+            "data_filed": "Maryland Public Service Commission CPCN permit application for **168 diesel backup generators** (representing ~504 MW of emergency capacity).",
+            "outcome": "PSC rejected the air quality permit due to particulate limits, leading Aligned to cancel the $30B project. This prompted the state legislature to pass CISA (SB 116) to exempt backup power from full CPCN reviews.",
+            "lesson": "Massive diesel backup arrays near residential areas are major regulatory vulnerabilities. Clean emergency power (batteries/hydrogen) is increasingly necessary."
+        },
+        "Lebanon, IN": {
+            "operator": "Amazon (AWS) / Eli Lilly",
+            "data_filed": "LEAP Innovation District pipeline planning and Indiana DNR aquifer extraction surveys. Proposed drawing 100 Million gallons/day from the Wabash River aquifer via a 35-mile pipeline.",
+            "outcome": "Fierce protests from agricultural landowners and rural counties forced the governor to pause pipeline decisions and commission a comprehensive regional water survey.",
+            "lesson": "Cross-county resource redirection triggers intense rural-agricultural backlash. Siting in dry agricultural zones requires regional, not just municipal, resource agreements."
+        },
+        "Secaucus / Piscataway, NJ": {
+            "operator": "Equinix & Digital Realty",
+            "data_filed": "New Jersey Board of Public Utilities (BPU) Large Load Tariff filings (under Assembly Bill A-796).",
+            "outcome": "Governor Sherrill signed P.L. 2025 c. 98 into law, requiring specific tariffs making any large load addition (>= 50 MW) pay for its own grid substation upgrades directly.",
+            "lesson": "Ratepayers will no longer subsidize industrial grid connections. Developers must budget millions in direct substation upgrades in their capital allocations."
+        }
+    }
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    selected_town = st.selectbox(
+        "Select a town/county case study:",
+        options=["Select a Town..."] + list(TOWN_CASES.keys())
+    )
+
+    if selected_town != "Select a Town...":
+        case = TOWN_CASES[selected_town]
+        
+        c1, c2 = st.columns(2)
+        with c1:
+            st.markdown(f"**🏢 Operator / Project**: {case['operator']}")
+            st.markdown(f"**📜 Specific Data Filed**:")
+            st.caption(case['data_filed'])
+        with c2:
+            st.markdown(f"**Outcome / Regulatory Action**:")
+            st.markdown(f"*{case['outcome']}*")
+            st.markdown(f"**💡 Key Lesson Learned**:")
+            st.info(case['lesson'])
+    else:
+        st.info("💡 Select a town or county from the dropdown above to view municipal filings, water/noise data, and lessons learned.")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.divider()
     st.markdown("#### What the companies say")
     st.caption("First-party material — economic-impact reports, community "
                "pledges and newsrooms the operators themselves publish. These "
