@@ -611,7 +611,224 @@ SOURCES = {
                      "https://www.ercot.com/files/docs/2026/04/01/ERCOT_LargeLoad_Update_April2026_B-C_-Hearing.pdf"),
     "ercot_ll_tac": ("ERCOT — Large Load Interconnection status, March TAC report (Mar 13 2026)",
                      "https://www.ercot.com/files/docs/2026/03/12/March-TAC-Report.pdf"),
+    "electricchoice": ("ElectricChoice.com — U.S. Data Center Power Map by State (2026; updated July 2026; CC-BY 4.0; cites LBNL, EPRINC, EIA)",
+                      "https://www.electricchoice.com/datacenters/"),
+    "google_env_2026": ("Google 2026 Environmental Report (FY2025) — first-party, third-party limited assurance (KPMG). Electricity, GHG, Water, PUE, CFE.",
+                      "https://sustainability.google/reports/google-2026-environmental-report/"),
 }
+
+# --------------------------------------------------------------------------- #
+# GOOGLE 2026 ENVIRONMENTAL REPORT DATA (FY2025)
+# Source: Google 2026 Environmental Report — first-party, third-party limited
+# assurance by KPMG. All figures for FY2025 unless noted.
+# PDF: https://storage.googleapis.com/gweb-mobius-cdn/sustainability/uploads/
+#      7f477eb723fe0c23d03f94b90a08882b9f28187d.pdf
+# --------------------------------------------------------------------------- #
+
+# Electricity consumption (MWh) — data centers only, 2021–2025
+GOOGLE_DC_ELECTRICITY = pd.DataFrame([
+    {"year": 2021, "dc_mwh": 17_429_800, "total_mwh": 18_058_300},
+    {"year": 2022, "dc_mwh": 20_616_500, "total_mwh": 21_586_400},
+    {"year": 2023, "dc_mwh": 23_980_800, "total_mwh": 24_994_000},
+    {"year": 2024, "dc_mwh": 30_637_100, "total_mwh": 31_713_900},
+    {"year": 2025, "dc_mwh": 42_415_800, "total_mwh": 43_586_600},
+])
+
+# GHG emissions (tCO2e) — operational scope 1+2 (market-based) and total
+# ambition-based, 2019–2025
+GOOGLE_GHG = pd.DataFrame([
+    {"year": 2019, "scope1": 65_300,  "scope2_market": 788_200,  "scope2_location": 5_173_000,  "total_ambition": 8_002_500},
+    {"year": 2020, "scope1": 50_200,  "scope2_market": 921_200,  "scope2_location": 5_845_000,  "total_ambition": 7_152_400},
+    {"year": 2021, "scope1": 57_600,  "scope2_market": 1_769_400,"scope2_location": 6_498_700,  "total_ambition": 8_462_000},
+    {"year": 2022, "scope1": 89_400,  "scope2_market": 2_430_200,"scope2_location": 7_963_700,  "total_ambition": 9_558_600},
+    {"year": 2023, "scope1": 75_100,  "scope2_market": 3_288_000,"scope2_location": 9_085_700,  "total_ambition": 10_906_100},
+    {"year": 2024, "scope1": 71_700,  "scope2_market": 2_898_600,"scope2_location": 11_067_100, "total_ambition": 12_233_300},
+    {"year": 2025, "scope1": 86_100,  "scope2_market": 2_815_000,"scope2_location": 15_148_700, "total_ambition": 14_473_100},
+])
+
+# Water use (million gallons) 2021–2025
+GOOGLE_WATER = pd.DataFrame([
+    {"year": 2021, "withdrawal": 6_297,  "discharge": 1_735, "consumption": 4_562},
+    {"year": 2022, "withdrawal": 7_600,  "discharge": 2_035, "consumption": 5_565},
+    {"year": 2023, "withdrawal": 8_653,  "discharge": 2_301, "consumption": 6_352},
+    {"year": 2024, "withdrawal": 11_011, "discharge": 2_876, "consumption": 8_135},
+    {"year": 2025, "withdrawal": 14_689, "discharge": 3_820, "consumption": 10_869},
+])
+
+# Fleet-wide average PUE 2021–2025
+GOOGLE_PUE_FLEET = pd.DataFrame([
+    {"year": 2021, "pue": 1.10},
+    {"year": 2022, "pue": 1.10},
+    {"year": 2023, "pue": 1.10},
+    {"year": 2024, "pue": 1.09},
+    {"year": 2025, "pue": 1.09},
+])
+
+# Per-campus PUE 2025 (US locations from the report)
+GOOGLE_PUE_SITES = [
+    # location, state/country, pue_2025
+    ("Berkeley County, SC",        "US", 1.09),
+    ("Bristol, VA",                "US", 1.09),
+    ("Central Ohio (Lancaster), OH","US", 1.04),
+    ("Columbus, OH",               "US", 1.06),
+    ("Council Bluffs, IA (1st)",   "US", 1.11),
+    ("Council Bluffs, IA (2nd)",   "US", 1.08),
+    ("The Dalles, OR (1st)",       "US", 1.10),
+    ("The Dalles, OR (2nd)",       "US", 1.06),
+    ("Douglas County, GA",         "US", 1.09),
+    ("Henderson, NV",              "US", 1.09),
+    ("Jackson County, AL",         "US", 1.10),
+    ("Lenoir, NC",                 "US", 1.10),
+    ("Loudoun County, VA (1st)",   "US", 1.08),
+    ("Loudoun County, VA (2nd)",   "US", 1.08),
+    ("Mayes County, OK",           "US", 1.12),
+    ("Midlothian, TX",             "US", 1.10),
+    ("Montgomery County, TN",      "US", 1.09),
+    ("New Albany, OH",             "US", 1.06),
+    ("Omaha, NE",                  "US", 1.05),
+    ("Papillion, NE",              "US", 1.09),
+    ("Storey County, NV",          "US", 1.14),
+    # International
+    ("St. Ghislain, Belgium",      "Europe", 1.08),
+    ("Quilicura, Chile",           "LatAm",  1.08),
+    ("Fredericia, Denmark",        "Europe", 1.07),
+    ("Hamina, Finland",            "Europe", 1.10),
+    ("Dublin, Ireland",            "Europe", 1.08),
+    ("Inzai, Japan",               "APAC",   1.12),
+    ("Eemshaven, Netherlands",     "Europe", 1.07),
+    ("Singapore (1st)",            "APAC",   1.12),
+    ("Singapore (2nd)",            "APAC",   1.14),
+    ("Changhua County, Taiwan",    "APAC",   1.13),
+]
+GOOGLE_PUE_SITES_DF = pd.DataFrame(
+    GOOGLE_PUE_SITES, columns=["location", "region", "pue_2025"])
+
+# Carbon-free energy % by US grid region (hourly matching, 2025)
+GOOGLE_CFE_BY_GRID = [
+    # grid, google_cfe_pct, contracted_pct, consumed_grid_pct, grid_cfe_pct
+    ("Arizona Salt River Project (SRP)",       86, 73, 13, 56),
+    ("Bonneville Power Administration (BPA)",  83,  0, 83, 84),
+    ("Duke Energy Carolinas (DUKE)",           65, 18, 47, 57),
+    ("ERCOT (Texas)",                          83, 73, 10, 46),
+    ("MISO (Midwest)",                         88, 83,  5, 36),
+    ("NV Energy (NVE)",                        65, 55, 10, 32),
+    ("PJM (Mid-Atlantic)",                     57, 29, 28, 40),
+    ("South Carolina (SC)",                    31,  8, 23, 25),
+    ("Southern Company (SOCO)",                42, 14, 28, 33),
+    ("Southwest Power Pool (SPP)",             84, 77,  7, 47),
+    ("Tennessee Valley Authority (TVA)",       58, 20, 38, 47),
+]
+GOOGLE_CFE_BY_GRID_DF = pd.DataFrame(
+    GOOGLE_CFE_BY_GRID,
+    columns=["grid", "google_cfe", "contracted_cfe", "consumed_grid_cfe", "grid_cfe"])
+
+# Key 2025 headline metrics (for callout cards)
+GOOGLE_2025_HEADLINE = {
+    "dc_twh": 42.4,              # data-center electricity consumption TWh
+    "total_twh": 43.6,           # total company electricity TWh
+    "yoy_electricity_growth_pct": 37,  # year-on-year % increase
+    "fleet_pue": 1.09,
+    "global_cfe_pct": 65,        # hourly CFE match
+    "scope2_market_tco2e": 2_815_000,
+    "scope2_location_tco2e": 15_148_700,
+    "total_ambition_tco2e": 14_473_100,
+    "water_consumption_mgal": 10_869,  # million gallons
+    "water_dc_mgal": 10_523,           # data centers only
+    "clean_energy_gw_signed": 12,      # GW of new clean energy signed in 2025
+    "avoided_tco2e_m": 58,             # million tCO2e avoided across operations
+    "gemini_energy_improvement_x": 33, # 33x energy reduction median text prompt
+    "gemini_carbon_improvement_x": 44, # 44x carbon reduction median text prompt
+    "water_replenished_pct": 78,       # freshwater replenishment %
+}
+
+# --------------------------------------------------------------------------- #
+# STATE-LEVEL DATA CENTER DATA
+# Source: ElectricChoice.com/datacenters (updated July 2026; CC-BY 4.0)
+# Underlying cites: LBNL-2001637 (Dec 2024), EIA, EPRINC, DCE/industry reports.
+# dc = active facility count; twh = annual TWh consumed; upcoming = major
+# projects under construction or announced in that state.
+# --------------------------------------------------------------------------- #
+STATE_DC_NATIONAL = {
+    "active_facilities": 4500,
+    "twh_annual": 176,
+    "pct_us_power": 4.4,
+    "under_construction": 700,
+    "homes_equivalent_millions": 16,
+    "as_of": "2026",
+}
+
+STATE_DC_ROWS = [
+    # state, abbrev, dc_count, twh_year, major_hubs, upcoming
+    ("Alabama",             "AL",  35,  0.6,  "Birmingham, Huntsville",                                                             False),
+    ("Alaska",              "AK",   5,  0.1,  "Anchorage",                                                                         False),
+    ("Arizona",             "AZ", 190, 10.5,  "Phoenix (Mesa, Goodyear, Chandler) — Microsoft, Apple, Vantage, QTS, Iron Mountain",  True),
+    ("Arkansas",            "AR",  15,  0.3,  "West Memphis — Google",                                                              True),
+    ("California",          "CA", 321, 11.0,  "Silicon Valley, Los Angeles — Equinix, Digital Realty, CoreSite, Vantage",           False),
+    ("Colorado",            "CO",  70,  1.8,  "Denver, Colorado Springs — Flexential, Viawest",                                     False),
+    ("Connecticut",         "CT",  60,  1.0,  "Stamford, Hartford",                                                                 False),
+    ("Delaware",            "DE",  22,  0.4,  "Wilmington",                                                                        False),
+    ("Dist. of Columbia",   "DC",  12,  0.3,  "Washington D.C.",                                                                   False),
+    ("Florida",             "FL", 135,  4.2,  "Miami, Tampa, Jacksonville — Equinix, Digital Realty, CyrusOne",                     False),
+    ("Georgia",             "GA", 162,  9.0,  "Atlanta (Douglasville, Palmetto) — Switch, Google, Microsoft, QTS",                  True),
+    ("Hawaii",              "HI",   8,  0.1,  "Honolulu",                                                                          False),
+    ("Idaho",               "ID",  12,  0.2,  "Boise",                                                                             False),
+    ("Illinois",            "IL", 244, 12.0,  "Chicago (Elk Grove Village, Aurora) — Microsoft, Equinix, Digital Realty, Meta",     False),
+    ("Indiana",             "IN",  85,  2.0,  "Lebanon, La Porte, Indianapolis — Amazon ($15B), Meta ($10B), Microsoft ($1B)",      True),
+    ("Iowa",                "IA", 115,  3.8,  "Des Moines, Altoona — Apple, Google, Meta",                                         False),
+    ("Kansas",              "KS",  22,  0.4,  "Kansas City metro, Wichita",                                                        False),
+    ("Kentucky",            "KY",  40,  0.6,  "Louisville, Lexington",                                                             False),
+    ("Louisiana",           "LA",  30,  0.5,  "Richland Parish, Caddo & Bossier Parishes — Meta ($27B), Amazon ($12B), Hut 8",      True),
+    ("Maine",               "ME",   8,  0.1,  "Portland",                                                                          False),
+    ("Maryland",            "MD",  48,  0.9,  "Baltimore, Frederick",                                                               False),
+    ("Massachusetts",       "MA",  58,  1.1,  "Boston, Holyoke, Cambridge",                                                        False),
+    ("Michigan",            "MI",  62,  1.1,  "Detroit, Grand Rapids",                                                             False),
+    ("Minnesota",           "MN",  78,  1.5,  "Minneapolis, Shakopee",                                                             False),
+    ("Mississippi",         "MS",  20,  0.3,  "Madison County, Meridian — Amazon ($16B+), Compass ($10B)",                          True),
+    ("Missouri",            "MO",  55,  1.2,  "Kansas City, St. Louis — Google ($2B)",                                             True),
+    ("Montana",             "MT",  12,  0.2,  "Billings, Missoula",                                                                False),
+    ("Nebraska",            "NE",  42,  2.1,  "Omaha, Lincoln — Google, Meta",                                                     False),
+    ("Nevada",              "NV",  72,  2.8,  "Las Vegas (Henderson), Reno — Switch (SUPERNAP), Google, Apple",                     False),
+    ("New Hampshire",       "NH",  14,  0.2,  "Manchester",                                                                        False),
+    ("New Jersey",          "NJ",  95,  2.2,  "Secaucus, Piscataway (NYC Metro) — Equinix, Digital Realty",                        False),
+    ("New Mexico",          "NM",  28,  1.6,  "Albuquerque, Los Lunas — Meta",                                                     False),
+    ("New York",            "NY", 155,  4.5,  "NYC Metro, Buffalo — Equinix, DataBank, Digital Realty",                            False),
+    ("North Carolina",      "NC", 115,  4.5,  "Charlotte, Research Triangle, Richmond County — Apple, Google, Amazon ($10B)",       True),
+    ("North Dakota",        "ND",  18,  0.3,  "Fargo",                                                                             False),
+    ("Ohio",                "OH", 203,  7.5,  "Columbus (New Albany), Hebron — Google, Meta, Amazon ($10B), Microsoft",             True),
+    ("Oklahoma",            "OK",  38,  0.6,  "Oklahoma City, Tulsa",                                                              False),
+    ("Oregon",              "OR", 148,  6.5,  "Hillsboro, Prineville, The Dalles — Apple, Meta, Google",                           False),
+    ("Pennsylvania",        "PA",  98,  2.5,  "Salem Twp., Fairless Hills, Lancaster — Amazon ($20B), CoreWeave ($6B)",             True),
+    ("Rhode Island",        "RI",   8,  0.2,  "Providence",                                                                        False),
+    ("South Carolina",      "SC",  40,  0.6,  "Aiken County, Charleston — Meta ($800M)",                                           True),
+    ("South Dakota",        "SD",  10,  0.1,  "Sioux Falls",                                                                       False),
+    ("Tennessee",           "TN",  68,  1.8,  "Nashville, Memphis — Oracle ($1.5B), xAI ($1B+)",                                   False),
+    ("Texas",               "TX", 413, 17.0,  "Dallas–Fort Worth, Austin, San Antonio, West Texas — Google ($40B), Meta, Stargate", True),
+    ("Utah",                "UT",  48,  2.6,  "Salt Lake City, Bluffdale — Meta, Google",                                          False),
+    ("Vermont",             "VT",   5,  0.1,  "Burlington",                                                                        False),
+    ("Virginia",            "VA", 665, 24.0,  "Ashburn ('Data Center Alley'), Loudoun Co., Prince William — AWS, Microsoft, Google, Equinix", True),
+    ("Washington",          "WA", 142,  4.2,  "Quincy, Seattle, Moses Lake — Microsoft, Amazon",                                   False),
+    ("West Virginia",       "WV",   8,  0.1,  "Charleston",                                                                        False),
+    ("Wisconsin",           "WI",  52,  0.9,  "Mount Pleasant, Milwaukee — Microsoft ($3.3B)",                                     True),
+    ("Wyoming",             "WY",  18,  0.5,  "Cheyenne — Microsoft",                                                              False),
+]
+STATE_DC_DF = pd.DataFrame(
+    STATE_DC_ROWS,
+    columns=["state", "abbrev", "dc_count", "twh_year", "major_hubs", "upcoming"])
+
+# Top 10 mega-projects under construction / announced (ElectricChoice 2026 + press).
+MEGA_PROJECTS = [
+    {"project": "Stargate",              "company": "OpenAI / Oracle / SoftBank", "location": "Abilene, TX",          "invest": "$100B+",  "capacity": "1+ GW",    "status": "Under Construction"},
+    {"project": "West Texas campus",     "company": "Google",                    "location": "West Texas (3 sites)", "invest": "$40B",    "capacity": "multi-GW", "status": "Under Construction"},
+    {"project": "Meta Hyperion",         "company": "Meta / Blue Owl",           "location": "Richland Parish, LA", "invest": "$27B",    "capacity": "2–5 GW",   "status": "Under Construction"},
+    {"project": "Vantage Frontier",      "company": "Vantage Data Centers",      "location": "Shackelford Co., TX", "invest": "$25B",    "capacity": "1.4 GW",   "status": "Under Construction"},
+    {"project": "AWS Mississippi",       "company": "Amazon (AWS)",              "location": "Mississippi",         "invest": "$25B",    "capacity": "multi-site","status": "Under Construction"},
+    {"project": "xAI Colossus",          "company": "xAI",                       "location": "Memphis, TN",         "invest": "$20B",    "capacity": "~2 GW",    "status": "Under Construction"},
+    {"project": "AWS Pennsylvania",      "company": "Amazon (AWS)",              "location": "Pennsylvania",        "invest": "$20B",    "capacity": "2+ GW",    "status": "Under Construction"},
+    {"project": "EdgeCore Virginia",     "company": "EdgeCore",                  "location": "Louisa County, VA",   "invest": "$17B",    "capacity": "1.1+ GW",  "status": "Under Construction"},
+    {"project": "AWS Northern Indiana",  "company": "Amazon (AWS)",              "location": "Northern Indiana",    "invest": "$15B",    "capacity": "2.4 GW",   "status": "Under Construction"},
+    {"project": "QTS Cedar Rapids",      "company": "QTS Data Centers",          "location": "Cedar Rapids, IA",    "invest": "$10B",    "capacity": "GW-scale",  "status": "Under Construction"},
+]
+MEGA_PROJECTS_DF = pd.DataFrame(MEGA_PROJECTS)
 
 # --------------------------------------------------------------------------- #
 # LIVE DATA CONFIGS

@@ -8,6 +8,12 @@ Includes an interactive growth trend chart over recent time periods.
 import streamlit as st
 import pandas as pd
 import altair as alt
+from src.constants import (
+    GOOGLE_DC_ELECTRICITY, GOOGLE_GHG, GOOGLE_WATER,
+    GOOGLE_PUE_FLEET, GOOGLE_PUE_SITES_DF, GOOGLE_CFE_BY_GRID_DF,
+    GOOGLE_2025_HEADLINE,
+)
+from src.helpers import src_link
 
 # Financial and profile data
 COMPANY_FINANCIALS = [
@@ -32,7 +38,7 @@ COMPANY_FINANCIALS = [
         "Net Income": "$80.6 Billion",
         "Total Assets": "$402.3 Billion",
         "Employees": "181,000",
-        "Description": "Google Cloud provider and TPU custom-accelerator hardware designer.",
+        "Description": "Google Cloud provider and TPU custom-accelerator hardware designer. Data centers consumed 42.4 TWh in 2025 (+37% YoY). Fleet-wide PUE 1.09. Source: Google 2026 Environmental Report.",
         "IR Link": "https://abc.xyz/investor/"
     },
     {
@@ -318,3 +324,191 @@ def render_corporate_tab():
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.caption("Figures reflect FY2025/2026 filings, annual reports, SEC 10-K competition statements, and recent private equity valuations.")
+
+    # ------------------------------------------------------------------ #
+    # GOOGLE DEEP-DIVE — 2026 Environmental Report (FY2025)
+    # ------------------------------------------------------------------ #
+    st.divider()
+    st.subheader("🟢 Google (Alphabet) — Environmental Deep-Dive")
+    st.caption(
+        "First-party data from Google's **2026 Environmental Report (FY2025)**, "
+        "subject to third-party limited assurance by KPMG. "
+        + src_link("google_env_2026")
+    )
+
+    g = GOOGLE_2025_HEADLINE
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### ⚡ 2025 Key Metrics")
+    g1, g2, g3, g4 = st.columns(4)
+    g1.metric("DC Electricity",       f"{g['dc_twh']} TWh",   f"+{g['yoy_electricity_growth_pct']}% YoY")
+    g2.metric("Fleet-wide PUE",       f"{g['fleet_pue']}",    "83% less overhead than industry avg")
+    g3.metric("Hourly CFE Match",     f"{g['global_cfe_pct']}%", "9th year 100% annual renewable match")
+    g4.metric("Water Consumed",       f"{g['water_consumption_mgal']:,}M gal", f"DC: {g['water_dc_mgal']:,}M gal")
+
+    g5, g6, g7, g8 = st.columns(4)
+    g5.metric("Scope 2 (market)",     f"{g['scope2_market_tco2e']/1e6:.2f}M tCO2e",  "incl. EAC/GC accounting")
+    g6.metric("Scope 2 (location)",   f"{g['scope2_location_tco2e']/1e6:.1f}M tCO2e", "actual grid intensity")
+    g7.metric("Clean energy signed",  f"{g['clean_energy_gw_signed']} GW",  "net-new in 2025")
+    g8.metric("Emissions avoided",    f"{g['avoided_tco2e_m']}M tCO2e",     "across operations & supply chain")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # Electricity growth chart
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### 📈 Data Center Electricity Consumption (2021–2025)")
+    st.caption("Google data centers alone grew from 17.4 TWh in 2021 to **42.4 TWh** in 2025 — a 143% increase in four years.")
+
+    elec = GOOGLE_DC_ELECTRICITY.copy()
+    elec["dc_twh"] = elec["dc_mwh"] / 1e6
+    elec["total_twh"] = elec["total_mwh"] / 1e6
+    elec_long = elec.melt(id_vars="year", value_vars=["dc_twh", "total_twh"],
+                          var_name="category", value_name="twh")
+    elec_long["category"] = elec_long["category"].map(
+        {"dc_twh": "Data Centers", "total_twh": "Total (incl. Offices)"})
+
+    elec_chart = (
+        alt.Chart(elec_long)
+        .mark_line(point=True, strokeWidth=3)
+        .encode(
+            x=alt.X("year:O", title="Year"),
+            y=alt.Y("twh:Q", title="Electricity (TWh)"),
+            color=alt.Color("category:N",
+                scale=alt.Scale(domain=["Data Centers", "Total (incl. Offices)"],
+                                range=["#34a853", "#fbbc04"]),
+                legend=alt.Legend(title="")),
+            tooltip=["year:O", "category:N", alt.Tooltip("twh:Q", format=".1f", title="TWh")],
+        ).properties(height=280)
+    )
+    st.altair_chart(elec_chart, use_container_width=True)
+    st.caption(src_link("google_env_2026") + " · pp. 93")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # GHG emissions chart
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### 🌡️ GHG Emissions: Scope 2 Location-Based vs. Market-Based (2019–2025)")
+    st.caption(
+        "Location-based tracks actual grid carbon intensity — up 2.9× since 2019 as electricity demand surged. "
+        "Market-based is far lower because Google retires renewable energy certificates (EACs/GCs) against consumption. "
+        "The gap illustrates how much carbon is 'on paper' vs. real grid impact."
+    )
+
+    ghg = GOOGLE_GHG.copy()
+    ghg_long = ghg.melt(
+        id_vars="year",
+        value_vars=["scope2_location", "scope2_market", "total_ambition"],
+        var_name="metric", value_name="tco2e"
+    )
+    ghg_long["Metric"] = ghg_long["metric"].map({
+        "scope2_location": "Scope 2 (Location-based)",
+        "scope2_market":   "Scope 2 (Market-based)",
+        "total_ambition":  "Total Ambition-based",
+    })
+    ghg_long["MtCO2e"] = ghg_long["tco2e"] / 1e6
+
+    ghg_chart = (
+        alt.Chart(ghg_long)
+        .mark_line(point=True, strokeWidth=2)
+        .encode(
+            x=alt.X("year:O", title="Year"),
+            y=alt.Y("MtCO2e:Q", title="Million tCO2e"),
+            color=alt.Color("Metric:N",
+                scale=alt.Scale(
+                    domain=["Scope 2 (Location-based)", "Scope 2 (Market-based)", "Total Ambition-based"],
+                    range=["#ea4335", "#34a853", "#fbbc04"]),
+                legend=alt.Legend(title="")),
+            tooltip=["year:O", "Metric:N", alt.Tooltip("MtCO2e:Q", format=".2f", title="Mt CO2e")],
+        ).properties(height=280)
+    )
+    st.altair_chart(ghg_chart, use_container_width=True)
+    st.caption(src_link("google_env_2026") + " · pp. 90")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # Water consumption chart
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### 💧 Water Withdrawal & Consumption (2021–2025)")
+    st.caption("Data center water consumption reached **10.5 billion gallons** in 2025. Google replenished 78% of freshwater consumed via 165 stewardship projects across 97 watersheds.")
+
+    water = GOOGLE_WATER.copy()
+    water_long = water.melt(id_vars="year",
+        value_vars=["withdrawal", "consumption"],
+        var_name="metric", value_name="mgal")
+    water_long["Metric"] = water_long["metric"].map(
+        {"withdrawal": "Total Withdrawal", "consumption": "Net Consumption"})
+
+    water_chart = (
+        alt.Chart(water_long)
+        .mark_area(opacity=0.3)
+        .encode(
+            x=alt.X("year:O", title="Year"),
+            y=alt.Y("mgal:Q", title="Million Gallons"),
+            color=alt.Color("Metric:N",
+                scale=alt.Scale(domain=["Total Withdrawal", "Net Consumption"],
+                                range=["#4285f4", "#0f9d58"]),
+                legend=alt.Legend(title="")),
+            tooltip=["year:O", "Metric:N", alt.Tooltip("mgal:Q", format=",", title="M gal")],
+        ).properties(height=240)
+    ) + (
+        alt.Chart(water_long)
+        .mark_line(point=True, strokeWidth=2)
+        .encode(
+            x=alt.X("year:O"),
+            y=alt.Y("mgal:Q"),
+            color=alt.Color("Metric:N",
+                scale=alt.Scale(domain=["Total Withdrawal", "Net Consumption"],
+                                range=["#4285f4", "#0f9d58"])),
+            tooltip=["year:O", "Metric:N", alt.Tooltip("mgal:Q", format=",", title="M gal")],
+        )
+    )
+    st.altair_chart(water_chart, use_container_width=True)
+    st.caption(src_link("google_env_2026") + " · pp. 96")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # CFE by grid region
+    with st.expander("🔋 Carbon-Free Energy % by U.S. Grid Region (hourly matching, 2025)"):
+        st.caption(
+            "Google's **hourly** CFE match per grid region. "
+            "'Google CFE' = total CFE attributed (contracted + consumed grid). "
+            "'Grid CFE' = the underlying grid's own clean energy share without Google's contracts. "
+            + src_link("google_env_2026") + " · pp. 94"
+        )
+        cfe_df = GOOGLE_CFE_BY_GRID_DF.copy()
+        cfe_df.columns = ["Grid", "Google CFE %", "Contracted %", "Consumed Grid %", "Grid CFE %"]
+        st.dataframe(cfe_df, use_container_width=True, hide_index=True,
+            column_config={
+                "Google CFE %":    st.column_config.NumberColumn(format="%d%%"),
+                "Contracted %":    st.column_config.NumberColumn(format="%d%%"),
+                "Consumed Grid %": st.column_config.NumberColumn(format="%d%%"),
+                "Grid CFE %":      st.column_config.NumberColumn(format="%d%%"),
+            })
+
+    # Per-campus PUE
+    with st.expander("🏭 PUE per Data Center Campus (2025)"):
+        st.caption(
+            "Power Usage Effectiveness per campus — lower is better. Industry average PUE = 1.54 (Uptime Institute 2025). "
+            "Google's best campus (Central Ohio Lancaster): **1.04**. Fleet average: **1.09**. "
+            + src_link("google_env_2026") + " · pp. 95"
+        )
+        pue_df = GOOGLE_PUE_SITES_DF.sort_values("pue_2025").copy()
+        pue_df.columns = ["Location", "Region", "PUE (2025)"]
+        pue_bar = (
+            alt.Chart(pue_df)
+            .mark_bar(cornerRadiusTopRight=3, cornerRadiusBottomRight=3)
+            .encode(
+                x=alt.X("PUE (2025):Q", scale=alt.Scale(domain=[1.0, 1.20]), title="PUE"),
+                y=alt.Y("Location:N", sort="x", title=None),
+                color=alt.Color("Region:N",
+                    scale=alt.Scale(scheme="tableau10"),
+                    legend=alt.Legend(title="Region")),
+                tooltip=["Location:N", "Region:N", alt.Tooltip("PUE (2025):Q", format=".2f")],
+            ).properties(height=max(300, 20 * len(pue_df)))
+        )
+        # Reference line at industry average 1.54
+        rule = alt.Chart(pd.DataFrame([{"pue": 1.54}])).mark_rule(
+            color="#ef4444", strokeDash=[6, 4], strokeWidth=1.5
+        ).encode(x="pue:Q")
+        fleet_rule = alt.Chart(pd.DataFrame([{"pue": 1.09}])).mark_rule(
+            color="#34a853", strokeDash=[4, 3], strokeWidth=1.5
+        ).encode(x="pue:Q")
+        st.altair_chart(pue_bar + rule + fleet_rule, use_container_width=True)
+        st.caption("🔴 red dashed = industry avg PUE 1.54 · 🟢 green dashed = Google fleet avg 1.09")
+        st.dataframe(pue_df, use_container_width=True, hide_index=True)
+

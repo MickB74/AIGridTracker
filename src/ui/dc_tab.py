@@ -5,7 +5,8 @@ import plotly.express as px
 from src.constants import (DATACENTERS_DF, DC_METRICS, ERCOT_LL_VINTAGE,
                            ERCOT_LL_DC_SHARE, ERCOT_LL_FUNNEL, HYPERSCALERS_DF,
                            HYPERSCALER_COLORS, AI_COMPETITOR_SITES_DF,
-                           AI_COMPETITORS_DF)
+                           AI_COMPETITORS_DF, STATE_DC_DF, STATE_DC_NATIONAL,
+                           MEGA_PROJECTS_DF)
 from src.helpers import src_link
 from src.services.ercot import ercot_largeload_latest
 from src.services.eia import eia_latest_demand
@@ -378,3 +379,137 @@ them. {src_link('ferc_showcause')}.
             "Expect firm-service requirements, large upfront interconnection "
             "fees, and curtailment obligations to spread across every ISO.")
     st.markdown('</div>', unsafe_allow_html=True)
+
+    # ------------------------------------------------------------------ #
+    # NEW: ElectricChoice.com — 50-state data center landscape (July 2026)
+    # ------------------------------------------------------------------ #
+    st.divider()
+    st.subheader("🗺️ All 50 states: data center facility count & power draw")
+    st.caption(
+        "State-by-state breakdown from ElectricChoice.com's U.S. Data Center Power "
+        "Map (updated July 2026; CC-BY 4.0), itself citing Lawrence Berkeley National "
+        "Lab (LBNL-2001637, Dec 2024), EIA, EPRINC, and industry facility inventories. "
+        "Facility counts = active data centers as of 2026; TWh/year = annual electricity "
+        "consumption; 🔜 = states with major projects under construction or announced."
+    )
+
+    # --- National headline stats ---
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    n = STATE_DC_NATIONAL
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Active data centers", f"{n['active_facilities']:,}+", "across all 50 states")
+    c2.metric("Annual power use", f"{n['twh_annual']} TWh", f"{n['pct_us_power']}% of U.S. electricity")
+    c3.metric("Under construction", f"{n['under_construction']}+", "in 38 states")
+    c4.metric("Homes equivalent", f"{n['homes_equivalent_millions']}M homes", "powered annually")
+
+    st.caption(f"As of {n['as_of']}. Source: {src_link('electricchoice')} · {src_link('lbnl')}")
+
+    st.divider()
+
+    # --- Sort / filter controls ---
+    sc1, sc2, sc3 = st.columns([2, 1, 1])
+    search_q = sc1.text_input("🔍 Search states or hubs", placeholder="e.g. Virginia, Google, Phoenix…", key="state_dc_search")
+    sort_by = sc2.selectbox("Sort by", ["TWh/year ↓", "Facilities ↓", "TWh/year ↑", "Facilities ↑", "State A→Z"], key="state_dc_sort")
+    show_upcoming_only = sc3.checkbox("🔜 Upcoming projects only", value=False, key="state_dc_upcoming")
+
+    sdf = STATE_DC_DF.copy()
+
+    # Apply search
+    if search_q:
+        q = search_q.lower()
+        sdf = sdf[sdf["state"].str.lower().str.contains(q) |
+                  sdf["major_hubs"].str.lower().str.contains(q) |
+                  sdf["abbrev"].str.lower().str.contains(q)]
+
+    # Apply upcoming filter
+    if show_upcoming_only:
+        sdf = sdf[sdf["upcoming"]]
+
+    # Apply sort
+    sort_map = {
+        "TWh/year ↓":    ("twh_year", False),
+        "TWh/year ↑":    ("twh_year", True),
+        "Facilities ↓":  ("dc_count", False),
+        "Facilities ↑":  ("dc_count", True),
+        "State A→Z":     ("state", True),
+    }
+    sort_col, sort_asc = sort_map[sort_by]
+    sdf = sdf.sort_values(sort_col, ascending=sort_asc).reset_index(drop=True)
+
+    # --- Bar chart ---
+    top_n = min(25, len(sdf))
+    chart_df = sdf.head(top_n).copy()
+    chart_df["label"] = chart_df["abbrev"] + ("  🔜" if False else "")   # flag via color
+    bar = (
+        alt.Chart(chart_df)
+        .mark_bar(cornerRadiusTopRight=4, cornerRadiusBottomRight=4)
+        .encode(
+            x=alt.X("twh_year:Q", title="TWh / year"),
+            y=alt.Y("state:N", sort="-x" if "↓" in sort_by and "TWh" in sort_by else None,
+                    title=None),
+            color=alt.Color(
+                "upcoming:N",
+                scale=alt.Scale(domain=[True, False], range=["#ff5a1f", "#3b82f6"]),
+                legend=alt.Legend(title="Major projects upcoming", labelExpr=(
+                    "datum.label === 'true' ? '🔜 Yes' : 'No'"
+                ))
+            ),
+            tooltip=[
+                alt.Tooltip("state:N", title="State"),
+                alt.Tooltip("dc_count:Q", title="Active facilities"),
+                alt.Tooltip("twh_year:Q", title="TWh/year"),
+                alt.Tooltip("major_hubs:N", title="Hubs & operators"),
+            ],
+        )
+        .properties(height=max(280, 22 * top_n), title=f"Top {top_n} states by TWh/year (orange = major projects underway)")
+    )
+    st.altair_chart(bar, use_container_width=True)
+
+    # --- Sortable table ---
+    display_df = sdf[["state", "abbrev", "dc_count", "twh_year", "major_hubs", "upcoming"]].copy()
+    display_df["upcoming"] = display_df["upcoming"].map({True: "🔜 Yes", False: "—"})
+    display_df.index = range(1, len(display_df) + 1)
+    st.dataframe(
+        display_df,
+        use_container_width=True,
+        column_config={
+            "state":      st.column_config.TextColumn("State"),
+            "abbrev":     st.column_config.TextColumn("Abbrev.", width="small"),
+            "dc_count":   st.column_config.NumberColumn("Active Facilities", format="%d"),
+            "twh_year":   st.column_config.NumberColumn("TWh / year", format="%.1f"),
+            "major_hubs": st.column_config.TextColumn("Major Hubs & Operators", width="large"),
+            "upcoming":   st.column_config.TextColumn("Projects Underway", width="small"),
+        }
+    )
+    st.caption(
+        f"Showing {len(sdf)} of 51 entries (50 states + D.C.).  "
+        f"Source: {src_link('electricchoice')} · Underlying data: {src_link('lbnl')}"
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # --- Mega-projects leaderboard ---
+    st.divider()
+    st.subheader("💰 Largest data center projects under construction (2024–2028)")
+    st.caption(
+        "Top 10 individual megaprojects ranked by announced investment. "
+        "Represents hundreds of billions in committed capital and tens of GW of new AI compute capacity. "
+        f"Source: {src_link('electricchoice')} · {src_link('stargate')} · {src_link('xai_memphis')}"
+    )
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    mp = MEGA_PROJECTS_DF.copy()
+    st.dataframe(
+        mp,
+        use_container_width=True,
+        hide_index=True,
+        column_config={
+            "project":  st.column_config.TextColumn("Project"),
+            "company":  st.column_config.TextColumn("Company"),
+            "location": st.column_config.TextColumn("Location"),
+            "invest":   st.column_config.TextColumn("Investment"),
+            "capacity": st.column_config.TextColumn("Power Capacity"),
+            "status":   st.column_config.TextColumn("Status"),
+        }
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
