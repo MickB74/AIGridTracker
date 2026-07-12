@@ -4,3 +4,5 @@ altair>=5.0
 plotly>=5.20
 requests>=2.28
 pyarrow>=14.0
+beautifulsoup4>=4.12   # src/research: parse SEC filing / first-party page HTML
+lxml>=5.0              # src/research: pandas.read_html table extraction

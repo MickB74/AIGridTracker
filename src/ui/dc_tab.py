@@ -6,7 +6,7 @@ from src.constants import (DATACENTERS_DF, DC_METRICS, ERCOT_LL_VINTAGE,
                            ERCOT_LL_DC_SHARE, ERCOT_LL_FUNNEL, HYPERSCALERS_DF,
                            HYPERSCALER_COLORS, AI_COMPETITOR_SITES_DF,
                            AI_COMPETITORS_DF, STATE_DC_DF, STATE_DC_NATIONAL,
-                           MEGA_PROJECTS_DF)
+                           MEGA_PROJECTS_DF, OPERATORS_DF)
 from src.helpers import src_link
 from src.services.ercot import ercot_largeload_latest
 from src.services.eia import eia_latest_demand
@@ -229,6 +229,40 @@ def render_dc_tab():
                "publicly documented but not first-party campus lists, so their "
                "coordinates are approximate. Research/forecast context: "
                + src_link("imasons") + " · " + src_link("bnef") + ".")
+
+    # --- Owners, operators & the LLCs they file under -------------------------
+    st.divider()
+    st.subheader("Who owns it, who runs it, who fills it — and the LLC on the deed")
+    st.caption(
+        "A campus has up to three separate parties, and the map's brand label is "
+        "usually just the **operator**. Land is bought and permitted through "
+        "single-purpose **shell LLCs** — the join key back to county deed and "
+        "Secretary-of-State records. Hyperscalers hide behind codename LLCs during "
+        "land assembly; the colocation/REIT operators file under brand-named site "
+        "entities but rarely disclose the **tenant** actually consuming the power. "
+        "Ownership facts are press-sourced (automated fact-check pending).")
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    tier_labels = {"hyperscaler": "Hyperscaler (owns & consumes)",
+                   "ai": "AI / neocloud", "colo": "Colocation / wholesale REIT"}
+    opdf = OPERATORS_DF.copy()
+    opdf["tier"] = opdf["tier"].map(tier_labels)
+    st.dataframe(
+        opdf, use_container_width=True, hide_index=True,
+        column_config={
+            "operator": "Operator / brand", "tier": "Category",
+            "owner": "Owner / PE parent", "model": "Owns vs leases",
+            "discloses_tenant": "Tenant disclosed?",
+            "filing_llc": "Property / land-acquisition LLCs"})
+    st.caption(
+        "**Resolving a shell LLC → operator:** county assessor / GIS parcel → the "
+        "grantee LLC on the deed → that LLC's registration in the state "
+        "Secretary-of-State business database → registered agent & principals "
+        "(often the parent's real-estate counsel). Utility interconnection and "
+        "air-permit filings corroborate. Sources: "
+        + " · ".join(src_link(k) for k in
+                     ["dc_ownership", "vantage_dbsl", "switch_dbif", "crwv_coresci"]))
+    st.markdown('</div>', unsafe_allow_html=True)
 
     # --- Who each company names as a competitor (from SEC 10-K filings) --------
     st.divider()

@@ -65,3 +65,65 @@ def render_macro_tab():
                ["iea_2025", "bnef", "gartner", "sp_451", "epri_pi", "lbnl",
                 "wri_range"]))
     st.markdown('</div>', unsafe_allow_html=True)
+
+    # ── RURAL DATA CENTER SHIFT (Pew Research 2026) ─────────────────────────
+    st.divider()
+    st.subheader("🏡 U.S. Geographic Shift — The Rural Migration")
+    st.caption(
+        "Analysis of national data-center geographic placement by the **Pew Research Center (April 2026)**. "
+        "Shows a major structural shift in site selection away from traditional urban centers towards rural areas. "
+        + src_link("pew_rural_2026")
+    )
+    
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### 📊 Planned vs. Operating Data Centers by Census Type")
+    r1, r2, r3 = st.columns(3)
+    r1.metric("Planned in Rural Areas", "67%", "vs. 13% of currently operating")
+    r2.metric("Planned in Urban Areas", "33%", "vs. 87% of currently operating")
+    r3.metric("Landing in 'New' Counties", "39%", "counties with zero current data centers")
+    
+    st.markdown(
+        "**Key Findings from the 2026 Pew Report:**  \n"
+        "- **The Regional Drivers**: The South and Midwest are capturing the vast majority (**three-quarters**) of all planned "
+        "U.S. data center developments. The South alone accounts for nearly half (**48%**) of all upcoming sites.  \n"
+        "- **Growth Speed**: Planned developments represent a **62% increase** in total facilities for the South and a **64% increase** "
+        "for the Midwest relative to current counts.  \n"
+        "- **Proximity to Residents**: Currently, **38% of Americans** live within 5 miles of an operational data center. Once planned "
+        "projects are built, this number rises to **42%**.  \n"
+        "- **Tight Siting Clusters**: Data centers remain highly clustered: **90%** of all operating and planned sites are within 5 miles of another."
+    )
+    
+    # State operating vs planned leaderboard
+    with st.expander("📈 Top States by Planned & Operating Facilities (Pew 2026)"):
+        st.caption("Leaders in planned and operating facilities as of Feb 2026. Source: Pew Research / Data Center Map.")
+        import pandas as pd
+        pew_states = pd.DataFrame([
+            {"State": "Virginia", "Operating": 398, "Planned": 287, "Total": 685},
+            {"State": "Texas", "Operating": 296, "Planned": 170, "Total": 466},
+            {"State": "Georgia", "Operating": 94, "Planned": 141, "Total": 235},
+            {"State": "Illinois", "Operating": 139, "Planned": 123, "Total": 262},
+            {"State": "Arizona", "Operating": 98, "Planned": 86, "Total": 184},
+            {"State": "Indiana", "Operating": 38, "Planned": 54, "Total": 92},
+            {"State": "Ohio", "Operating": 166, "Planned": 57, "Total": 223},
+            {"State": "Pennsylvania", "Operating": 78, "Planned": 51, "Total": 129},
+            {"State": "North Carolina", "Operating": 72, "Planned": 41, "Total": 113},
+            {"State": "Iowa", "Operating": 64, "Planned": 41, "Total": 105},
+        ])
+        
+        # Draw a grouped bar chart
+        pew_long = pew_states.melt(id_vars="State", value_vars=["Operating", "Planned"], 
+                                   var_name="Status", value_name="Count")
+        pew_chart = (
+            alt.Chart(pew_long)
+            .mark_bar()
+            .encode(
+                x=alt.X("Count:Q", title="Number of Data Centers"),
+                y=alt.Y("State:N", sort="-x", title=None),
+                color=alt.Color("Status:N", scale=alt.Scale(domain=["Operating", "Planned"], range=["#2b5c8f", "#ff7f0e"])),
+                tooltip=["State", "Status", "Count"]
+            ).properties(height=280)
+        )
+        st.altair_chart(pew_chart, use_container_width=True)
+        st.dataframe(pew_states.sort_values("Total", ascending=False), use_container_width=True, hide_index=True)
+    st.markdown('</div>', unsafe_allow_html=True)
+

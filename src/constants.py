@@ -295,6 +295,113 @@ HYPERSCALER_COLORS = {"Google": "#34a853", "Meta": "#0866ff",
                       "OpenAI · Oracle (Stargate)": "#14b8a6",
                       "CoreWeave": "#ec4899"}
 
+# --------------------------------------------------------------------------- #
+# ROLE-AWARE ATTRIBUTION
+# A data-center campus involves up to three distinct parties. Collapsing them
+# into one "company" column hides who owns the land, who runs the building, and
+# who actually consumes the power. We separate:
+#   • owner    — parent / private-equity owner of the operator ("self" = public
+#                & independent, no PE parent)
+#   • operator — the brand that builds & runs the facility
+#   • tenant   — the power consumer (frequently undisclosed for colo/REIT space)
+# plus filing_llc (the single-purpose LLC on the deed/permit — the join key back
+# to county assessor + Secretary-of-State records) and attribution (how the
+# operator/tenant was resolved → drives map-marker confidence).
+#
+# NOTE: the colocation/REIT ownership facts below were compiled from trade press
+# and operator releases; the automated fact-check pass could not run (API spend
+# limit), so treat every non-first-party row as press-sourced, not independently
+# verified.
+ATTRIBUTION_LEVELS = {  # most → least authoritative
+    "first_party":  "Operator's own location / community page",
+    "deed":         "County deed / assessor record naming the filing LLC",
+    "leasing_news": "Operator or tenant leasing announcement",
+    "press":        "Trade press / reporting (not first-party)",
+    "inferred":     "Inferred from interconnection, PPA, or circumstantial signals",
+}
+
+# Operator-level reference: owner/PE parent, build model, tenant disclosure, and
+# the property-LLC naming pattern used on deeds & permits. owner="self" means
+# public & independent (no PE parent).
+#   name: (tier, owner, owner_note, model, discloses_tenant, filing_llc, color, src)
+OPERATORS = {
+    "Google":        ("hyperscaler", "self", "Public (Alphabet, NASDAQ: GOOGL)", "Own", False,
+                      "Land-acquisition shells: Jet Stream LLC, Sharka LLC", "#34a853", "google_dc"),
+    "Meta":          ("hyperscaler", "self", "Public (NASDAQ: META)", "Own", False,
+                      "Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain", "#0866ff", "meta_dc"),
+    "Microsoft":     ("hyperscaler", "self", "Public (NASDAQ: MSFT)", "Mixed", False,
+                      "Project-name / generic 'Holdings LLC'; less consistently codenamed", "#f25022", "microsoft_dc"),
+    "Amazon (AWS)":  ("hyperscaler", "self", "Public (NASDAQ: AMZN)", "Own", False,
+                      "Vadata, Inc. — AWS's build/operating entity on many permits", "#ff9900", "aws_dc"),
+    "xAI (Colossus)": ("ai", "self", "Private (xAI)", "Mixed", True,
+                      "Site/retrofit LLCs (e.g. former Electrolux plant, Memphis)", "#a855f7", "xai_memphis"),
+    "OpenAI · Oracle (Stargate)": ("ai", "self", "JV: OpenAI · Oracle · SoftBank; sites developed by Oracle/Crusoe/Vantage", "Mixed", True,
+                      "Per-site developer LLCs (Crusoe/Lancium at Abilene, etc.)", "#14b8a6", "stargate"),
+    "CoreWeave":     ("ai", "self", "Public (NASDAQ: CRWV, IPO Mar 2025)", "Lease", False,
+                      "Mostly TENANT in partners' buildings: Core Scientific, Chirisa/Bulk, Flexential, Lincoln, TierPoint, Digital Realty, DataBank, Switch, Galaxy, Applied Digital", "#ec4899", "crwv_dc"),
+    # ---- Colocation / wholesale REITs & operators (press-sourced) ----
+    "Digital Realty": ("colo", "self", "Public REIT (NYSE: DLR)", "Mixed", False,
+                      "'Digital [City]/[Address] LLC'; legacy Telx entities; Ascenty (LatAm)", "#6366f1", "dc_ownership"),
+    "QTS":           ("colo", "Blackstone", "Blackstone take-private ~$10B, closed 2021", "Own", False,
+                      "'QTS ... LLC' + Blackstone holding entities; early generic project LLCs", "#8b5cf6", "dc_ownership"),
+    "Vantage":       ("colo", "DigitalBridge + Silver Lake", "$9.2B equity round closed Jun 2024", "Own", False,
+                      "Per-campus 'Vantage ... LLC' site entities", "#0ea5e9", "vantage_dbsl"),
+    "CyrusOne":      ("colo", "KKR + Global Infrastructure Partners", "~$15B take-private, closed 2022", "Own", False,
+                      "'CyrusOne LLC' subsidiaries", "#22d3ee", "dc_ownership"),
+    "Aligned":       ("colo", "Nvidia · Microsoft · BlackRock/MGX (pending)", "~$40B acquisition announced Oct 2025, close H1 2026 (press)", "Own", False,
+                      "Per-site LLCs", "#f59e0b", "dc_ownership"),
+    "Switch":        ("colo", "DigitalBridge + IFM Investors", "~$11B EV take-private, closed 2022", "Own", False,
+                      "'Switch ... LLC'; campuses branded 'Primes'", "#ef4444", "switch_dbif"),
+    "Stack Infrastructure": ("colo", "Blue Owl / IPI Partners", "Blue Owl acquired IPI Partners, 2025", "Own", False,
+                      "Per-site LLCs", "#10b981", "dc_ownership"),
+    "EdgeConneX":    ("colo", "EQT Infrastructure + ADIA", "EQT-backed", "Own", False,
+                      "Per-site LLCs", "#a3a3a3", "dc_ownership"),
+    "Equinix":       ("colo", "self", "Public REIT (NASDAQ: EQIX)", "Mixed", False,
+                      "IBX-branded site entities", "#dc2626", "dc_ownership"),
+    "Core Scientific": ("colo", "CoreWeave (pending)", "All-stock ~$9B acquisition announced Jul 2025 (press)", "Own", True,
+                      "Site LLCs; ~10 US facilities (HPC + crypto)", "#64748b", "crwv_coresci"),
+}
+
+# Per-company role resolution for the AI-competitor sites (tenant, attribution).
+# CoreWeave is a tenant in partners' buildings, so its "tenant" is undisclosed.
+_AI_ROLE = {
+    "xAI (Colossus)":             ("xAI (Colossus)", "first_party"),
+    "OpenAI · Oracle (Stargate)": ("OpenAI",         "first_party"),
+    "CoreWeave":                  (None,             "leasing_news"),
+}
+
+def _role_rows():
+    """Backfill the flat (company, …) site lists into the role-aware schema."""
+    rows = []
+    for company, loc, st_, lat, lon, src in HYPERSCALERS:      # own & consume
+        llc = OPERATORS[company][5] if company in OPERATORS else None
+        rows.append((company, "self", company, loc, st_, lat, lon,
+                     llc, "first_party", src))
+    for company, loc, st_, lat, lon, src in AI_COMPETITOR_SITES:
+        tenant, attribution = _AI_ROLE.get(company, (company, "press"))
+        owner = OPERATORS[company][1] if company in OPERATORS else "self"
+        llc = OPERATORS[company][5] if company in OPERATORS else None
+        rows.append((company, owner, tenant, loc, st_, lat, lon,
+                     llc, attribution, src))
+    return rows
+
+# Role-aware master site table. The legacy HYPERSCALERS_DF / AI_COMPETITOR_SITES_DF
+# above remain the compat view consumed by the existing campus map.
+DC_SITES_DF = pd.DataFrame(_role_rows(), columns=[
+    "operator", "owner", "tenant", "location", "state",
+    "lat", "lon", "filing_llc", "attribution", "src"])
+
+def _tenant_disclosure(tier, discloses):
+    if tier == "hyperscaler":
+        return "Self-consumed"
+    return "Sometimes" if discloses else "Rarely"
+
+# Operator-level table for rendering (the colo/REIT + owner reference).
+OPERATORS_DF = pd.DataFrame(
+    [(name, m[0], m[2], m[3], _tenant_disclosure(m[0], m[4]), m[5])
+     for name, m in OPERATORS.items()],
+    columns=["operator", "tier", "owner", "model", "discloses_tenant", "filing_llc"])
+
 # Who each company calls a competitor "in AI and AI data centers", straight from
 # the SEC 10-K "Competition" section (Item 1) of the filers the tracker follows,
 # plus the newly-public AI-cloud filer CoreWeave. Note: only Oracle NAMES specific
@@ -513,6 +620,15 @@ SOURCES = {
                      "https://x.ai/memphis"),
     "crwv_dc":      ("CoreWeave — Our capacity plans for CoreWeave data centers (first-party) + Core Scientific host-site announcements",
                      "https://www.coreweave.com/blog/our-capacity-plans-for-coreweave-data-centers"),
+    # --- Operator ownership / property-LLC structure (press-sourced) ---
+    "dc_ownership": ("Data-center operator ownership & M&A — compiled from trade press (Data Center Dynamics, dgtlinfra, ABI Research) + operator releases; automated fact-check pending",
+                     "https://dgtlinfra.com/data-center-companies/"),
+    "vantage_dbsl": ("Vantage Data Centers — $9.2B equity investment led by DigitalBridge & Silver Lake (closed Jun 2024)",
+                     "https://vantage-dc.com/news/vantage-data-centers-completes-9-2-billion-equity-investment-led-by-digitalbridge-and-silver-lake/"),
+    "switch_dbif":  ("Switch, Inc. — DigitalBridge & IFM Investors take-private (~$11B EV, 2022)",
+                     "https://dgtlinfra.com/digitalbridge-ifm-switch-inc-data-center/"),
+    "crwv_coresci": ("CoreWeave to acquire Core Scientific — all-stock ~$9B (announced Jul 2025)",
+                     "https://www.coreweave.com/news/coreweave-to-acquire-core-scientific"),
     "imasons":      ("Infrastructure Masons (iMasons) — industry & sustainability data",
                      "https://imasons.org/"),
     "bnef":         ("BloombergNEF (BNEF) — data-center power-demand research & forecasts",
@@ -631,6 +747,8 @@ SOURCES = {
                       "https://iga.in.gov/"),
     "nj_bpu_2026":    ("New Jersey BPU & Legislature — Ratepayer Subsidy Study & Large Load Tariffs (P.L. 2025 c. 98 / A-796)",
                       "https://www.nj.gov/bpu/"),
+    "pew_rural_2026": ("Pew Research Center — Most new data centers in the U.S. are coming to rural areas (April 13, 2026)",
+                      "https://www.pewresearch.org/short-reads/2026/04/13/most-new-data-centers-in-the-us-are-coming-to-rural-areas/"),
 }
 
 # --------------------------------------------------------------------------- #
