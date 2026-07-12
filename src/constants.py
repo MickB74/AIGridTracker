@@ -751,6 +751,8 @@ SOURCES = {
                       "https://www.pewresearch.org/short-reads/2026/04/13/most-new-data-centers-in-the-us-are-coming-to-rural-areas/"),
     "datacentermap":  ("DataCenterMap.com — U.S. Data Center Directory & Industry Map",
                       "https://www.datacentermap.com/usa/"),
+    "msft_community_2026": ("Microsoft — Building Community-First AI Infrastructure Framework (January 2026)",
+                      "https://blogs.microsoft.com/on-the-issues/2026/01/13/community-first-ai-infrastructure/"),
 }
 
 # --------------------------------------------------------------------------- #

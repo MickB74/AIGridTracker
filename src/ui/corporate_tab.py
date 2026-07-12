@@ -515,6 +515,53 @@ def render_corporate_tab():
         st.dataframe(pue_df, use_container_width=True, hide_index=True)
 
     # ------------------------------------------------------------------ #
+    # MICROSOFT DEEP-DIVE — 2026 Environmental Sustainability & Community-First (FY2025)
+    # ------------------------------------------------------------------ #
+    st.divider()
+    st.subheader("🟥 Microsoft — Environmental & 'Community-First' Deep-Dive")
+    st.caption(
+        "First-party data from Microsoft's **2026 Environmental Sustainability Report (FY2025)** "
+        "and their landmark **January 2026 Community-First AI Infrastructure** initiative. "
+        + src_link("msft_community_2026")
+    )
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### ⚡ FY2025 Key Metrics & Commitments")
+    ms1, ms2, ms3, ms4 = st.columns(4)
+    ms1.metric("Total GHG Emissions", "20.3M tCO₂e", "+25% YoY growth (AI-driven)")
+    ms2.metric("Power Draw Growth", "+24% YoY", "100% annual renewable match")
+    ms3.metric("Scope 2 Share", "13% of footprint", "vs. 2% previously (RECs pause)")
+    ms4.metric("Water Replenished", "14.0M m³", "Achieved global Water Positive")
+
+    st.markdown(
+        "**Key Operational Details & Methodological Shift:**  \n"
+        "- **Carbon-Free Energy Priority**: Microsoft shifted accounting methodology by pausing the purchase of "
+        "non-additional, unbundled Renewable Energy Certificates (RECs) to focus entirely on investing in **net-new** "
+        "grid-decarbonizing carbon-free electricity (CFE) projects. This drove their reported Scope 2 emissions up from 2% to 13% "
+        "of their footprint, reflecting the raw reality of grid consumption.  \n"
+        "- **Supply Chain Scope 3**: Upstream construction materials (steel, concrete) and server hardware manufacturing continue "
+        "to represent the largest portion of their carbon footprint."
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### 🏡 The Community-First AI Infrastructure Framework (January 2026)")
+    st.caption("Launched by President Brad Smith in January 2026 to set a 'high bar' for datacenter civic responsibility across 5 core pillars:")
+    
+    st.markdown(
+        "1. **⚡ Electricity (Ratepayer Protection)**: A firm pledge to **pay their own way** for grid upgrades. Microsoft commits to working "
+        "with local utilities and public service commissions to set large-customer tariffs so that infrastructure costs (transmission, substations) "
+        "are not passed on to residential power bills.  \n"
+        "   * *Examples*: Partnering with **Black Hills Energy in Wyoming** on custom rates, and backing a new dedicated tariff for **Very Large Customers in Wisconsin** "
+        "to safeguard residential users.  \n"
+        "2. **💧 Water Net-Positivity**: Commitment to minimize water draws and replenish **more water than they consume** in the local water basins where they operate.  \n"
+        "3. **🛠️ Local Employment**: Concrete mandates for local workforce construction hiring, combined with regional vocational and digital skills programs.  \n"
+        "4. **🏥 Local Tax Base Contribution**: Generating substantial property tax revenue to subsidize municipal public schools, hospitals, parks, and libraries.  \n"
+        "5. **🧠 Community Investment**: Directly funding local nonprofits and AI literacy training centers in host counties."
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # ------------------------------------------------------------------ #
     # META DEEP-DIVE — 2025 Environmental Data Index (FY2024)
     # ------------------------------------------------------------------ #
     st.divider()
