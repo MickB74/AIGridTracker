@@ -615,6 +615,8 @@ SOURCES = {
                       "https://www.electricchoice.com/datacenters/"),
     "google_env_2026": ("Google 2026 Environmental Report (FY2025) — first-party, third-party limited assurance (KPMG). Electricity, GHG, Water, PUE, CFE.",
                       "https://sustainability.google/reports/google-2026-environmental-report/"),
+    "meta_env_2025":  ("Meta 2025 Environmental Data Index (FY2024) — Electricity, GHG, Water, PUE/WUE per campus. sustainability.atmeta.com",
+                      "https://sustainability.atmeta.com/wp-content/uploads/2025/10/Meta_2025-Environmental-Data-Index.pdf"),
 }
 
 # --------------------------------------------------------------------------- #
@@ -742,7 +744,112 @@ GOOGLE_2025_HEADLINE = {
 }
 
 # --------------------------------------------------------------------------- #
+# META 2025 ENVIRONMENTAL DATA INDEX (FY2024)
+# Source: Meta 2025 Environmental Data Index — sustainability.atmeta.com
+# PDF: https://sustainability.atmeta.com/wp-content/uploads/2025/10/
+#      Meta_2025-Environmental-Data-Index.pdf
+# All figures for FY2024 unless noted.
+# --------------------------------------------------------------------------- #
+
+# Electricity consumption (MWh) total by year, 2020-2024
+META_DC_ELECTRICITY = pd.DataFrame([
+    {"year": 2020, "dc_mwh": 6_966_000,  "total_mwh": 7_170_000},
+    {"year": 2021, "dc_mwh": 9_117_122,  "total_mwh": 9_420_839},
+    {"year": 2022, "dc_mwh": 11_167_416, "total_mwh": 11_508_131},
+    {"year": 2023, "dc_mwh": 14_975_435, "total_mwh": 15_325_314},
+    {"year": 2024, "dc_mwh": 18_061_781, "total_mwh": 18_423_634},
+])
+
+# Electricity by campus (MWh, 2024) — owned data centers
+META_DC_CAMPUS_ELECTRICITY = pd.DataFrame([
+    {"campus": "Altoona, IA",          "region": "US",      "mwh_2024": 1_585_392},
+    {"campus": "Clonee, Ireland",       "region": "Europe",  "mwh_2024": 1_076_961},
+    {"campus": "DeKalb, IL",            "region": "US",      "mwh_2024":   372_339},
+    {"campus": "Eagle Mountain, UT",    "region": "US",      "mwh_2024": 1_115_619},
+    {"campus": "Forest City, NC",       "region": "US",      "mwh_2024":   535_555},
+    {"campus": "Fort Worth, TX",        "region": "US",      "mwh_2024": 1_109_004},
+    {"campus": "Gallatin, TN",          "region": "US",      "mwh_2024":   359_730},
+    {"campus": "Henrico, VA",           "region": "US",      "mwh_2024":   948_859},
+    {"campus": "Huntsville, AL",        "region": "US",      "mwh_2024":   865_803},
+    {"campus": "Kansas City, MO",       "region": "US",      "mwh_2024":    22_963},
+    {"campus": "Los Lunas, NM",         "region": "US",      "mwh_2024": 1_143_067},
+    {"campus": "Luleå, Sweden",         "region": "Europe",  "mwh_2024":   468_809},
+    {"campus": "Mesa, AZ",              "region": "US",      "mwh_2024":    24_657},
+    {"campus": "New Albany, OH",        "region": "US",      "mwh_2024":   521_217},
+    {"campus": "Odense, Denmark",       "region": "Europe",  "mwh_2024":   569_374},
+    {"campus": "Prineville, OR",        "region": "US",      "mwh_2024": 1_728_291},
+    {"campus": "Sarpy, NE",             "region": "US",      "mwh_2024": 1_258_239},
+    {"campus": "Stanton Springs, GA",   "region": "US",      "mwh_2024": 1_184_380},
+    {"campus": "Leased facilities",     "region": "Various", "mwh_2024": 3_069_504},
+])
+
+# GHG emissions (tCO2e) 2020-2024 — scope 1, scope 2 market/location, scope 3 total
+META_GHG = pd.DataFrame([
+    {"year": 2020, "scope1": 126_000, "scope2_market":  9_000, "scope2_location": 2_718_000, "scope3": 5_091_000},
+    {"year": 2021, "scope1":  97_000, "scope2_market":  2_487, "scope2_location": 3_080_194, "scope3": 5_772_583},
+    {"year": 2022, "scope1": 126_000, "scope2_market":    273, "scope2_location": 3_921_611, "scope3": 8_466_264},
+    {"year": 2023, "scope1":  86_000, "scope2_market":  1_658, "scope2_location": 5_141_350, "scope3": 7_445_621},
+    {"year": 2024, "scope1":  97_000, "scope2_market":  1_358, "scope2_location": 5_967_348, "scope3": 8_151_769},
+])
+
+# Water withdrawal by campus (megaliters, 2024)
+META_WATER_CAMPUS = pd.DataFrame([
+    {"campus": "Altoona, IA",        "region": "US",      "withdrawal_ml": 242, "consumption_ml": None},
+    {"campus": "Clonee, Ireland",     "region": "Europe",  "withdrawal_ml": 571, "consumption_ml": None},
+    {"campus": "DeKalb, IL",          "region": "US",      "withdrawal_ml": 105, "consumption_ml": None},
+    {"campus": "Eagle Mountain, UT",  "region": "US",      "withdrawal_ml": 133, "consumption_ml": None},
+    {"campus": "Forest City, NC",     "region": "US",      "withdrawal_ml":  16, "consumption_ml": None},
+    {"campus": "Fort Worth, TX",      "region": "US",      "withdrawal_ml": 311, "consumption_ml": None},
+    {"campus": "Gallatin, TN",        "region": "US",      "withdrawal_ml": 205, "consumption_ml": None},
+    {"campus": "Henrico, VA",         "region": "US",      "withdrawal_ml":  92, "consumption_ml": None},
+    {"campus": "Huntsville, AL",      "region": "US",      "withdrawal_ml": 209, "consumption_ml": None},
+    {"campus": "Los Lunas, NM",       "region": "US",      "withdrawal_ml": 252, "consumption_ml": None},
+    {"campus": "Luleå, Sweden",       "region": "Europe",  "withdrawal_ml":  29, "consumption_ml": None},
+    {"campus": "New Albany, OH",      "region": "US",      "withdrawal_ml":  86, "consumption_ml": None},
+    {"campus": "Odense, Denmark",     "region": "Europe",  "withdrawal_ml": 292, "consumption_ml": None},
+    {"campus": "Prineville, OR",      "region": "US",      "withdrawal_ml": 328, "consumption_ml": None},
+    {"campus": "Sarpy, NE",           "region": "US",      "withdrawal_ml": 142, "consumption_ml": None},
+    {"campus": "Stanton Springs, GA", "region": "US",      "withdrawal_ml": 146, "consumption_ml": None},
+])
+
+# Global water totals (megaliters) 2020-2024
+META_WATER = pd.DataFrame([
+    {"year": 2020, "withdrawal_ml": 3_726, "consumption_ml": 2_202, "discharge_ml": 1_524},
+    {"year": 2021, "withdrawal_ml": 5_043, "consumption_ml": 2_569, "discharge_ml": 2_473},
+    {"year": 2022, "withdrawal_ml": 4_893, "consumption_ml": 2_638, "discharge_ml": 2_254},
+    {"year": 2023, "withdrawal_ml": 5_274, "consumption_ml": 3_078, "discharge_ml": 2_196},
+    {"year": 2024, "withdrawal_ml": 5_637, "consumption_ml": 3_123, "discharge_ml": 2_514},
+])
+
+# Fleet PUE and WUE 2020-2024
+META_EFFICIENCY = pd.DataFrame([
+    {"year": 2020, "pue": 1.10, "wue": 0.30},
+    {"year": 2021, "pue": 1.09, "wue": 0.26},
+    {"year": 2022, "pue": 1.08, "wue": 0.20},
+    {"year": 2023, "pue": 1.08, "wue": 0.18},
+    {"year": 2024, "pue": 1.08, "wue": 0.19},
+])
+
+# Key 2024 headline metrics
+META_2024_HEADLINE = {
+    "dc_twh": 18.1,              # data center electricity TWh
+    "total_twh": 18.4,           # total electricity TWh
+    "fleet_pue": 1.08,
+    "fleet_wue": 0.19,           # liters per kWh IT load
+    "scope2_market_tco2e": 1_358,
+    "scope2_location_tco2e": 5_967_348,
+    "scope3_tco2e": 8_151_769,
+    "water_withdrawal_ml": 5_637,  # megaliters
+    "water_consumption_ml": 3_123,
+    "water_restoration_ml": 6_017, # ml restored via stewardship projects
+    "renewable_match_pct": 100,
+    "leed_gold_pct": 100,          # data centers covered by LEED Gold or ISO 50001
+    "as_of": "FY2024",
+}
+
+# --------------------------------------------------------------------------- #
 # STATE-LEVEL DATA CENTER DATA
+
 # Source: ElectricChoice.com/datacenters (updated July 2026; CC-BY 4.0)
 # Underlying cites: LBNL-2001637 (Dec 2024), EIA, EPRINC, DCE/industry reports.
 # dc = active facility count; twh = annual TWh consumed; upcoming = major

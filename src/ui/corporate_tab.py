@@ -12,6 +12,8 @@ from src.constants import (
     GOOGLE_DC_ELECTRICITY, GOOGLE_GHG, GOOGLE_WATER,
     GOOGLE_PUE_FLEET, GOOGLE_PUE_SITES_DF, GOOGLE_CFE_BY_GRID_DF,
     GOOGLE_2025_HEADLINE,
+    META_DC_ELECTRICITY, META_DC_CAMPUS_ELECTRICITY, META_GHG,
+    META_WATER, META_EFFICIENCY, META_2024_HEADLINE,
 )
 from src.helpers import src_link
 
@@ -512,3 +514,161 @@ def render_corporate_tab():
         st.caption("🔴 red dashed = industry avg PUE 1.54 · 🟢 green dashed = Google fleet avg 1.09")
         st.dataframe(pue_df, use_container_width=True, hide_index=True)
 
+    # ------------------------------------------------------------------ #
+    # META DEEP-DIVE — 2025 Environmental Data Index (FY2024)
+    # ------------------------------------------------------------------ #
+    st.divider()
+    st.subheader("🟦 Meta Platforms — Environmental Deep-Dive")
+    st.caption(
+        "First-party data from Meta's **2025 Environmental Data Index (FY2024)**. "
+        "Covers electricity consumption by campus, GHG emissions, water stewardship, PUE & WUE. "
+        + src_link("meta_env_2025")
+    )
+
+    m = META_2024_HEADLINE
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### ⚡ 2024 Key Metrics")
+    m1, m2, m3, m4 = st.columns(4)
+    m1.metric("DC Electricity",      f"{m['dc_twh']} TWh",    "18 owned campuses + leased")
+    m2.metric("Fleet-wide PUE",      f"{m['fleet_pue']}",     "Better than Google's 1.09")
+    m3.metric("Fleet-wide WUE",      f"{m['fleet_wue']} L/kWh","vs. 0.30 in 2020")
+    m4.metric("Renewable Match",     f"{m['renewable_match_pct']}%",  "every year since 2020")
+
+    m5, m6, m7, m8 = st.columns(4)
+    m5.metric("Scope 2 (market)",    f"{m['scope2_market_tco2e']:,} tCO2e",  "near-zero w/ RECs")
+    m6.metric("Scope 2 (location)",  f"{m['scope2_location_tco2e']/1e6:.1f}M tCO2e","actual grid carbon")
+    m7.metric("Scope 3 total",       f"{m['scope3_tco2e']/1e6:.1f}M tCO2e",  "incl. hardware mfg.")
+    m8.metric("Water restored",      f"{m['water_restoration_ml']:,} ML",     "via stewardship projects")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # Electricity growth chart
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### 📈 Data Center Electricity Consumption (2020–2024)")
+    st.caption("Meta DC electricity grew from 7.0 TWh in 2020 to **18.1 TWh** in 2024 — +159% in four years, driven by AI infrastructure buildout and new campus openings.")
+
+    m_elec = META_DC_ELECTRICITY.copy()
+    m_elec["dc_twh"]    = m_elec["dc_mwh"]    / 1e6
+    m_elec["total_twh"] = m_elec["total_mwh"] / 1e6
+    m_elec_long = m_elec.melt(id_vars="year", value_vars=["dc_twh", "total_twh"],
+                              var_name="category", value_name="twh")
+    m_elec_long["category"] = m_elec_long["category"].map(
+        {"dc_twh": "Data Centers", "total_twh": "Total (incl. Offices)"})
+
+    m_elec_chart = (
+        alt.Chart(m_elec_long)
+        .mark_line(point=True, strokeWidth=3)
+        .encode(
+            x=alt.X("year:O", title="Year"),
+            y=alt.Y("twh:Q", title="Electricity (TWh)"),
+            color=alt.Color("category:N",
+                scale=alt.Scale(domain=["Data Centers", "Total (incl. Offices)"],
+                                range=["#1877f2", "#42b72a"]),
+                legend=alt.Legend(title="")),
+            tooltip=["year:O", "category:N", alt.Tooltip("twh:Q", format=".1f", title="TWh")],
+        ).properties(height=260)
+    )
+    st.altair_chart(m_elec_chart, use_container_width=True)
+    st.caption(src_link("meta_env_2025") + " · p. F")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # GHG chart
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### 🌡️ GHG Emissions: Scope 2 Market vs. Location-Based (2020–2024)")
+    st.caption(
+        "Meta's market-based Scope 2 is near-zero (**1,358 tCO2e** in 2024) thanks to 100% REC matching. "
+        "Location-based tells the real grid-impact story: **5.97M tCO2e** from actual electrons consumed. "
+        "Scope 3 (hardware mfg., logistics, sold products) dominates the total footprint at **8.15M tCO2e**."
+    )
+    m_ghg = META_GHG.copy()
+    m_ghg_long = m_ghg.melt(
+        id_vars="year",
+        value_vars=["scope2_location", "scope2_market", "scope3"],
+        var_name="metric", value_name="tco2e"
+    )
+    m_ghg_long["Metric"] = m_ghg_long["metric"].map({
+        "scope2_location": "Scope 2 (Location-based)",
+        "scope2_market":   "Scope 2 (Market-based)",
+        "scope3":          "Scope 3 (Value Chain)",
+    })
+    m_ghg_long["MtCO2e"] = m_ghg_long["tco2e"] / 1e6
+
+    m_ghg_chart = (
+        alt.Chart(m_ghg_long)
+        .mark_line(point=True, strokeWidth=2)
+        .encode(
+            x=alt.X("year:O", title="Year"),
+            y=alt.Y("MtCO2e:Q", title="Million tCO2e"),
+            color=alt.Color("Metric:N",
+                scale=alt.Scale(
+                    domain=["Scope 2 (Location-based)", "Scope 2 (Market-based)", "Scope 3 (Value Chain)"],
+                    range=["#ea4335", "#34a853", "#fa7343"]),
+                legend=alt.Legend(title="")),
+            tooltip=["year:O", "Metric:N", alt.Tooltip("MtCO2e:Q", format=".3f", title="Mt CO2e")],
+        ).properties(height=260)
+    )
+    st.altair_chart(m_ghg_chart, use_container_width=True)
+    st.caption(src_link("meta_env_2025") + " · pp. C–E")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # PUE & WUE trend
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### ⚙️ PUE & WUE Trend (2020–2024)")
+    st.caption(
+        "Meta's fleet PUE has improved from 1.10 → **1.08** and WUE from 0.30 → **0.19 L/kWh**, "
+        "reflecting continued investment in liquid cooling, airside economization, and AI-optimized airflow management."
+    )
+    m_eff = META_EFFICIENCY.copy()
+
+    pue_c = (
+        alt.Chart(m_eff)
+        .mark_line(point=True, strokeWidth=3, color="#1877f2")
+        .encode(
+            x=alt.X("year:O", title="Year"),
+            y=alt.Y("pue:Q", title="PUE", scale=alt.Scale(domain=[1.0, 1.15])),
+            tooltip=["year:O", alt.Tooltip("pue:Q", format=".2f", title="PUE")],
+        )
+    )
+    wue_c = (
+        alt.Chart(m_eff)
+        .mark_line(point=True, strokeWidth=3, color="#42b72a", strokeDash=[4, 2])
+        .encode(
+            x=alt.X("year:O"),
+            y=alt.Y("wue:Q", title="WUE (L/kWh)", scale=alt.Scale(domain=[0.0, 0.40])),
+            tooltip=["year:O", alt.Tooltip("wue:Q", format=".2f", title="WUE")],
+        )
+    )
+    combined = alt.layer(pue_c, wue_c).resolve_scale(y="independent").properties(height=240)
+    st.altair_chart(combined, use_container_width=True)
+    st.caption("🔵 blue = PUE (left axis) · 🟢 green dashed = WUE in L/kWh (right axis) · " + src_link("meta_env_2025") + " · p. H")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # Per-campus electricity bar chart
+    with st.expander("🏭 Electricity by Data Center Campus (2024, MWh)"):
+        st.caption(
+            "Top consumers: Altoona IA (1.59 TWh), Prineville OR (1.73 TWh), Sarpy NE (1.26 TWh), and leased facilities (3.07 TWh). "
+            + src_link("meta_env_2025") + " · p. F"
+        )
+        campus_df = META_DC_CAMPUS_ELECTRICITY.sort_values("mwh_2024", ascending=False).copy()
+        campus_df["TWh"] = campus_df["mwh_2024"] / 1e6
+        campus_bar = (
+            alt.Chart(campus_df)
+            .mark_bar(cornerRadiusTopRight=4, cornerRadiusBottomRight=4)
+            .encode(
+                x=alt.X("TWh:Q", title="Electricity (TWh)"),
+                y=alt.Y("campus:N", sort="-x", title=None),
+                color=alt.Color("region:N",
+                    scale=alt.Scale(scheme="tableau10"),
+                    legend=alt.Legend(title="Region")),
+                tooltip=["campus:N", "region:N",
+                         alt.Tooltip("mwh_2024:Q", format=",", title="MWh"),
+                         alt.Tooltip("TWh:Q", format=".3f", title="TWh")],
+            ).properties(height=420)
+        )
+        st.altair_chart(campus_bar, use_container_width=True)
+        campus_df_display = campus_df[["campus", "region", "mwh_2024", "TWh"]].copy()
+        campus_df_display.columns = ["Campus", "Region", "MWh (2024)", "TWh (2024)"]
+        st.dataframe(campus_df_display, use_container_width=True, hide_index=True,
+            column_config={
+                "MWh (2024)": st.column_config.NumberColumn(format="%d"),
+                "TWh (2024)": st.column_config.NumberColumn(format="%.3f"),
+            })
