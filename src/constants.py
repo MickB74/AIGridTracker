@@ -749,6 +749,8 @@ SOURCES = {
                       "https://www.nj.gov/bpu/"),
     "pew_rural_2026": ("Pew Research Center — Most new data centers in the U.S. are coming to rural areas (April 13, 2026)",
                       "https://www.pewresearch.org/short-reads/2026/04/13/most-new-data-centers-in-the-us-are-coming-to-rural-areas/"),
+    "datacentermap":  ("DataCenterMap.com — U.S. Data Center Directory & Industry Map",
+                      "https://www.datacentermap.com/usa/"),
 }
 
 # --------------------------------------------------------------------------- #

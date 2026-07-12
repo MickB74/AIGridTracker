@@ -244,7 +244,12 @@ def render_studies_tab():
                 st.markdown(f"- {finding}")
                 
             st.divider()
-            st.markdown(f"🔗 **[Download Full Official Study PDF]({study['pdf_url']})**")
+            state_slug = selected_state.lower().replace(" ", "-")
+            dc_map_url = f"https://www.datacentermap.com/usa/{state_slug}/"
+            
+            dcl1, dcl2 = st.columns(2)
+            dcl1.markdown(f"🔗 **[Download Full Official Study PDF]({study['pdf_url']})**")
+            dcl2.markdown(f"🔗 **[View {selected_state} Directory on Data Center Map]({dc_map_url})**")
             
         else:
             # Dynamically generated profile for states without a curated report
@@ -293,7 +298,12 @@ def render_studies_tab():
                 )
             
             st.divider()
-            st.markdown(f"🔗 **[View U.S. Data Center Power Map on ElectricChoice.com](https://www.electricchoice.com/datacenters/)**")
+            state_slug = selected_state.lower().replace(" ", "-")
+            dc_map_url = f"https://www.datacentermap.com/usa/{state_slug}/"
+            
+            dcl1, dcl2 = st.columns(2)
+            dcl1.markdown(f"🔗 **[View U.S. Data Center Power Map on ElectricChoice.com](https://www.electricchoice.com/datacenters/)**")
+            dcl2.markdown(f"🔗 **[View {selected_state} Directory on Data Center Map]({dc_map_url})**")
             
         # ── LOCAL CAMPUSES & GOOGLE MAPS DIRECTIONS ─────────────────────────
         # Concatenate hyperscalers and AI competitors
