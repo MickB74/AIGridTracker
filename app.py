@@ -31,6 +31,7 @@ from src.ui.blog_tab import render_blog_tab
 from src.ui.learn_tab import render_learn_tab
 from src.ui.corporate_tab import render_corporate_tab
 from src.ui.studies_tab import render_studies_tab
+from src.ui.sandbox_tab import render_sandbox_tab
 
 # Load custom CSS styles
 def load_css():
@@ -285,10 +286,10 @@ st.divider()
 
 # --- TABS SETUP ---
 (tab_calc, tab_learn, tab_compare, tab_live, tab_grid, tab_dc, tab_studies,
- tab_corporate, tab_news, tab_officials, tab_macro, tab_method, tab_blog) = st.tabs(
+ tab_corporate, tab_news, tab_officials, tab_macro, tab_method, tab_blog, tab_sandbox) = st.tabs(
     ["🧮 Calculator", "🎓 Learn", "📊 Compare sources", "🔬 Live models",
      "🕐 Grid timing", "🏢 Data centers", "🗂️ State studies", "💼 Corporate profiles",
-     "🗞️ Community & backlash", "🏛️ Officials", "🌍 Macro outlook", "📚 Methodology", "📝 Blog"]
+     "🗞️ Community & backlash", "🏛️ Officials", "🌍 Macro outlook", "📚 Methodology", "📝 Blog", "🎮 Siting Sandbox"]
 )
 
 with tab_calc:
@@ -329,6 +330,9 @@ with tab_method:
 
 with tab_blog:
     render_blog_tab()
+
+with tab_sandbox:
+    render_sandbox_tab()
 
 st.divider()
 st.caption("Scaffold — static coefficients live in src/constants.py; live model data "
