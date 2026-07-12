@@ -562,6 +562,36 @@ def render_corporate_tab():
     st.markdown('</div>', unsafe_allow_html=True)
 
     # ------------------------------------------------------------------ #
+    # AMAZON (AWS) DEEP-DIVE — Water Stewardship & Efficiency (2026)
+    # ------------------------------------------------------------------ #
+    st.divider()
+    st.subheader("🧡 Amazon (AWS) — Environmental & Water Deep-Dive")
+    st.caption(
+        "First-party data from AWS's **2026 Water Stewardship Disclosures** "
+        "and their corporate **AWS in Communities** program. "
+        + src_link("aws_water_2026")
+    )
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### ⚡ Water Stewardship & Cooling Metrics")
+    aws1, aws2, aws3, aws4 = st.columns(4)
+    aws1.metric("2025 Water Withdrawal", "2.5B Gallons", "First-ever disclosure (Jun 2026)")
+    aws2.metric("Fleet-wide WUE", "0.12 L/kWh", "7.0× more efficient than industry avg")
+    aws3.metric("Water-Positive Target", "75% Complete", "Net-positive water by 2030")
+    aws4.metric("Mechanical Cooling Power", "Up to -50%", "Peak energy cut via system upgrades")
+
+    st.markdown(
+        "**Key Operational Details & Sourcing Strategies:**  \n"
+        "- **Recycled Sourcing**: AWS targets non-drinking water (recycled municipal wastewater) for server cooling to protect public aquifers. "
+        "Currently supplying over 100 campuses, with a goal of **120 campuses by 2030**.  \n"
+        "- **Historical Transparency Milestone**: In **June 2026**, AWS published its first detailed annual water footprint reporting **2.5 billion gallons** "
+        "of global withdrawals, addressing long-standing utility requests.  \n"
+        "- **AWS in Communities Program**: Actively sponsors local infrastructure training bootcamps (fiber optic cabling, cloud systems support) in major cluster "
+        "metros (such as Loudoun County, VA, and Morrow County, OR) to build a local pipeline of operations staff."
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # ------------------------------------------------------------------ #
     # META DEEP-DIVE — 2025 Environmental Data Index (FY2024)
     # ------------------------------------------------------------------ #
     st.divider()
@@ -719,6 +749,22 @@ def render_corporate_tab():
                 "MWh (2024)": st.column_config.NumberColumn(format="%d"),
                 "TWh (2024)": st.column_config.NumberColumn(format="%.3f"),
             })
+
+
+    # Meta community impact program
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### 🏡 Meta Data Center Community Action Grants & CBAs")
+    st.caption("Meta's local funding and community-benefit commitments in data center host counties: " + src_link("meta_community_2026"))
+    
+    st.markdown(
+        "- **Community Action Grants**: Since 2011, Meta has contributed over **$74 Million** globally (with **$24 Million** through direct "
+        "local Community Action Grants) to fund technology integration and STEAM education in regional public schools.  \n"
+        "- **2026 Grant Cycle**: Awarded **328 separate grants** across data center communities, expanding the program to include seven "
+        "new host regions.  \n"
+        "- **Local Community Benefit Agreements (CBAs)**: In counties like Sarpy (NE), Altoona (IA), and Gallatin (TN), Meta enters into CBAs to fund "
+        "local public parks, municipal fiber-optic broadband expansions, and water-basin replenishment projects."
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
 
     # ------------------------------------------------------------------ #
     # CORPORATE KEY PLAYERS & DIRECTORS

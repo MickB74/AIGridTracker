@@ -753,6 +753,10 @@ SOURCES = {
                       "https://www.datacentermap.com/usa/"),
     "msft_community_2026": ("Microsoft — Building Community-First AI Infrastructure Framework (January 2026)",
                       "https://blogs.microsoft.com/on-the-issues/2026/01/13/community-first-ai-infrastructure/"),
+    "aws_water_2026": ("AWS — Water stewardship, consumption disclosures, and 2030 water-positive progress (June 2026)",
+                      "https://sustainability.aboutamazon.com/water"),
+    "meta_community_2026": ("Meta — Data Center Community Action Grants & Local Investment (2026)",
+                      "https://sustainability.atmeta.com/community/"),
 }
 
 # --------------------------------------------------------------------------- #

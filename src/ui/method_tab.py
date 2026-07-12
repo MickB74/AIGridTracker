@@ -19,7 +19,7 @@ def render_method_tab():
                 "spp_hill", "miso_llir",
                 "google_news", "reddit", "icap_mor", "dcbans", "dcopp", "dcwatch",
                 "dcresp", "dctrack", "gjf_mor",
-                "rockinst", "elmaps", "watttime", "gridstatus", "datacentermap", "msft_community_2026"]:
+                "rockinst", "elmaps", "watttime", "gridstatus", "datacentermap", "msft_community_2026", "aws_water_2026", "meta_community_2026"]:
         st.markdown(f"- {src_link(key)}")
     st.markdown('</div>', unsafe_allow_html=True)
 
