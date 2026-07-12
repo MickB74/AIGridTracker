@@ -3,14 +3,15 @@ State Studies tab — presents official state-level data center impact studies,
 legislative reports, and grid integration papers (e.g. Michigan CRC, Virginia JLARC).
 Generates detailed data center capacity profiles dynamically for all 50 states + DC
 using the state dataset, alongside an interactive choropleth map.
-Pulls live Google News and daily Reddit discussion threads for the selected state.
+Pulls live Google News, daily Reddit discussions, and lists individual hyperscaler/AI campuses
+with direct Google Maps search links for the selected state.
 """
 
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 import urllib.parse
-from src.constants import STATE_DC_DF, SOURCES
+from src.constants import STATE_DC_DF, SOURCES, HYPERSCALERS_DF, AI_COMPETITOR_SITES_DF
 from src.helpers import src_link
 from src.services.news import fetch_news
 from src.services.reddit import load_reddit_corpus
@@ -294,9 +295,46 @@ def render_studies_tab():
             st.divider()
             st.markdown(f"🔗 **[View U.S. Data Center Power Map on ElectricChoice.com](https://www.electricchoice.com/datacenters/)**")
             
+        # ── LOCAL CAMPUSES & GOOGLE MAPS DIRECTIONS ─────────────────────────
+        # Concatenate hyperscalers and AI competitors
+        campuses = pd.concat([HYPERSCALERS_DF, AI_COMPETITOR_SITES_DF], ignore_index=True)
+        # Filter for selected state by abbreviation (e.g. "TX")
+        state_campuses = campuses[campuses["state"] == row["abbrev"]].copy()
+        
+        if not state_campuses.empty:
+            st.divider()
+            st.markdown(f"#### 🏭 Hyperscaler & AI Campuses in {selected_state}")
+            st.caption("Individual facility locations. Google and Meta publish precise lists; other coordinates are metro/county centroids.")
+            
+            campus_list = []
+            for _, r in state_campuses.iterrows():
+                query_str = f"{r['company']} data center {r['location']} {selected_state}"
+                maps_url = f"https://www.google.com/maps/search/?api=1&query={urllib.parse.quote(query_str)}"
+                
+                campus_list.append({
+                    "Company": r["company"],
+                    "Metro/Location": r["location"],
+                    "Coordinates": f"{r['lat']:.4f}, {r['lon']:.4f}",
+                    "Source": src_link(r["src"]),
+                    "Google Maps": maps_url
+                })
+            
+            st.dataframe(
+                pd.DataFrame(campus_list),
+                use_container_width=True,
+                hide_index=True,
+                column_config={
+                    "Company": st.column_config.TextColumn(width="medium"),
+                    "Metro/Location": st.column_config.TextColumn(width="large"),
+                    "Coordinates": st.column_config.TextColumn(width="small"),
+                    "Source": st.column_config.TextColumn(width="small"),
+                    "Google Maps": st.column_config.LinkColumn("Google Maps Directions", display_text="🗺️ View Map", width="medium")
+                }
+            )
+
         # ── NEWS & REDDIT FEEDS FOR SELECTED STATE ────────────────────────
         st.divider()
-        st.subheader(f"🗞️ Live Local Updates & sentiment: {selected_state}")
+        st.subheader(f"🗞️ Live Local Updates & Sentiment: {selected_state}")
         st.caption(
             f"Google News hits for data centers in {selected_state} and grassroots "
             "mentions filtered from today's Reddit local grid discussion snapshot."
@@ -333,7 +371,6 @@ def render_studies_tab():
             reddit_items = []
             if not corpus.empty:
                 # Filter posts mentioning the state name or its abbreviation in a bounded word format
-                # Case insensitive search
                 state_lower = selected_state.lower()
                 abbrev_term = f" {row['abbrev']} "
                 
