@@ -89,6 +89,44 @@ STATE_STUDIES = {
             "Transparency Level": "Improved (New state disclosure laws)",
             "Primary Issue": "Water rights vs. Agricultural demand"
         }
+    },
+    "Maryland": {
+        "abbrev": "MD",
+        "title": "Critical Infrastructure Streamlining Act of 2024 & State Data Center Impact Mandate (2024)",
+        "author": "Maryland General Assembly (CISA / SB 116)",
+        "src_key": "md_assembly_2024",
+        "pdf_url": "https://mgaleg.maryland.gov/",
+        "summary": "Legislative response to utility generator permit denials and creation of state-wide environmental impact study.",
+        "findings": [
+            "**Backup Generator Controversy**: Aligned Data Centers canceled a massive $30B project in late 2023 after the Maryland PSC denied a permit for 168 diesel backup generators due to air quality emissions thresholds.",
+            "**Regulatory Streamlining (CISA)**: In May 2024, Maryland enacted the Critical Infrastructure Streamlining Act to exempt data center backup power from Certificate of Public Convenience and Necessity (CPCN) reviews to attract investment.",
+            "**Environmental Safeguards**: Environmental groups expressed concern over local particulate and carbon emissions from diesel backup arrays, prompting the state to commission a comprehensive data center impact study due September 1, 2026."
+        ],
+        "metrics": {
+            "Streamlining Bill (CISA)": "Passed (May 2024)",
+            "Canceled Project Investment": "$30 Billion",
+            "Controversial Hardware": "168 Diesel Generators",
+            "Comprehensive Study Due": "Sept 1, 2026"
+        }
+    },
+    "Indiana": {
+        "abbrev": "IN",
+        "title": "Indiana Utility Regulatory Commission Large Load Grid & Water Studies (2026)",
+        "author": "Indiana General Assembly / IURC (HB 1245)",
+        "src_key": "iurc_indiana_2026",
+        "pdf_url": "https://iga.in.gov/",
+        "summary": "Administrative mandates on ratepayer protection, utility load forecasts, and local water inventory reviews.",
+        "findings": [
+            "**Ratepayer Cost-Shifting**: House Bill 1245 was introduced in the 2026 session to mandate that the IURC study how data center demand affects retail electric rates, ensuring residential users do not subsidize transmission expansions.",
+            "**Statewide Water Inventory**: Due to significant Meta ($10B in La Porte) and Amazon ($15B in Lebanon) campuses, the state is currently building a statewide water inventory by end of 2026 to monitor large industrial draws.",
+            "**County-Level Moratoriums**: Due to perceived gaps in state environmental oversight, multiple Indiana counties and cities (including Indianapolis) have enacted temporary data center construction moratoriums to protect local resources."
+        ],
+        "metrics": {
+            "IURC Study Mandate": "Active (HB 1245, 2026)",
+            "Featured Projects": "Amazon ($15B), Meta ($10B)",
+            "Local Moratoriums": "Enacted (multiple counties)",
+            "State Water Inventory": "Due Late 2026"
+        }
     }
 }
 
@@ -99,12 +137,14 @@ MAP_STATES = [
     ("Virginia", "VA", 1, 10),
     ("Georgia", "GA", 1, 10),
     ("Oregon", "OR", 1, 10),
+    ("Maryland", "MD", 1, 10),
+    ("Indiana", "IN", 1, 10),
     # Fill others
     ("Alabama", "AL", 0, 0), ("Alaska", "AK", 0, 0), ("Arizona", "AZ", 0, 0), ("Arkansas", "AR", 0, 0),
     ("California", "CA", 0, 0), ("Colorado", "CO", 0, 0), ("Connecticut", "CT", 0, 0), ("Delaware", "DE", 0, 0),
     ("Florida", "FL", 0, 0), ("Hawaii", "HI", 0, 0), ("Idaho", "ID", 0, 0), ("Illinois", "IL", 0, 0),
-    ("Indiana", "IN", 0, 0), ("Iowa", "IA", 0, 0), ("Kansas", "KS", 0, 0), ("Kentucky", "KY", 0, 0),
-    ("Louisiana", "LA", 0, 0), ("Maine", "ME", 0, 0), ("Maryland", "MD", 0, 0), ("Massachusetts", "MA", 0, 0),
+    ("Iowa", "IA", 0, 0), ("Kansas", "KS", 0, 0), ("Kentucky", "KY", 0, 0),
+    ("Louisiana", "LA", 0, 0), ("Maine", "ME", 0, 0), ("Massachusetts", "MA", 0, 0),
     ("Minnesota", "MN", 0, 0), ("Mississippi", "MS", 0, 0), ("Missouri", "MO", 0, 0), ("Montana", "MT", 0, 0),
     ("Nebraska", "NE", 0, 0), ("Nevada", "NV", 0, 0), ("New Hampshire", "NH", 0, 0), ("New Jersey", "NJ", 0, 0),
     ("New Mexico", "NM", 0, 0), ("New York", "NY", 0, 0), ("North Carolina", "NC", 0, 0), ("North Dakota", "ND", 0, 0),

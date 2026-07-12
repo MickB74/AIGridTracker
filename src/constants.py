@@ -625,6 +625,10 @@ SOURCES = {
                       "https://www.house.ga.gov/"),
     "oregon_doe_2024":("Oregon Department of Energy — Data Centers and Energy Use in Oregon (2024)",
                       "https://www.oregon.gov/energy/Data-Center-Energy-Use.aspx"),
+    "md_assembly_2024":("Maryland General Assembly — Critical Infrastructure Streamlining Act of 2024 (CISA / SB 116)",
+                      "https://mgaleg.maryland.gov/"),
+    "iurc_indiana_2026":("Indiana General Assembly — IURC Large Load Energy & Water Study (HB 1245, 2026)",
+                      "https://iga.in.gov/"),
 }
 
 # --------------------------------------------------------------------------- #
