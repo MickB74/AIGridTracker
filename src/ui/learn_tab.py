@@ -449,13 +449,16 @@ def _render_community_evaluator():
         st.error(
             f"🔴 **High likelihood ({overall}%)** — Your community matches what "
             "data-center developers prioritize. Your area may already be on their "
-            "radar. Now is the time to get informed and engaged."
+            "radar. Now is the time to get informed and engaged. "
+            "Head to the **🛡️ Negotiation toolkit** tab for model CBA clauses, "
+            "a Data Dividend calculator, and a meeting prep checklist."
         )
     elif overall >= 45:
         st.warning(
             f"🟡 **Moderate likelihood ({overall}%)** — Some factors are attractive; "
             "others may deter developers or slow the process. Stay informed about "
-            "zoning changes and large land transactions."
+            "zoning changes and large land transactions. See the **🛡️ Negotiation "
+            "toolkit** tab to prepare in advance."
         )
     else:
         st.success(

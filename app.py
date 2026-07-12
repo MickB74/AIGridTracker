@@ -34,6 +34,7 @@ from src.ui.corporate_tab import render_corporate_tab
 from src.ui.studies_tab import render_studies_tab
 from src.ui.sandbox_tab import render_sandbox_tab
 from src.ui.bills_tab import render_bills_tab
+from src.ui.toolkit_tab import render_toolkit_tab
 
 # Load custom CSS styles
 def load_css():
@@ -341,12 +342,12 @@ st.divider()
 (tab_calc, tab_learn, tab_bills,
  tab_live, tab_compare, tab_grid,
  tab_dc, tab_corporate, tab_states,
- tab_news, tab_macro,
+ tab_news, tab_toolkit, tab_macro,
  tab_blog) = st.tabs([
     "🧮 Calculator", "🎓 Learn & simulate", "💡 Your utility bill",
     "🔬 Live models", "📊 Compare sources", "🕐 Grid timing",
     "🏢 Data centers", "💼 Corporate profiles", "🗂️ States & officials",
-    "🗞️ Community & backlash", "🌍 Macro outlook",
+    "🗞️ Community & backlash", "🛡️ Negotiation toolkit", "🌍 Macro outlook",
     "📝 Blog & methodology",
 ])
 
@@ -387,6 +388,9 @@ with tab_states:
 
 with tab_news:
     render_news_tab()
+
+with tab_toolkit:
+    render_toolkit_tab()
 
 with tab_macro:
     render_macro_tab()
