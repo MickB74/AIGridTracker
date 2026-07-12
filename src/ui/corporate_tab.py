@@ -25,10 +25,11 @@ COMPANY_FINANCIALS = [
         "Type": "Public",
         "Market Cap": "$3.15 Trillion",
         "Stock Price": "$420.50",
+        "Capital Budget (Annual CapEx)": "$55.7 Billion",
         "Net Income": "$88.1 Billion",
         "Total Assets": "$512.4 Billion",
         "Employees": "228,000",
-        "Description": "Azure cloud services provider and major OpenAI partner/backer.",
+        "Description": "Azure cloud services provider, chief developer of Copilot services, and major OpenAI partner/backer.",
         "IR Link": "https://www.microsoft.com/en-us/investor"
     },
     {
@@ -37,6 +38,7 @@ COMPANY_FINANCIALS = [
         "Type": "Public",
         "Market Cap": "$2.18 Trillion",
         "Stock Price": "$175.30",
+        "Capital Budget (Annual CapEx)": "$51.4 Billion",
         "Net Income": "$80.6 Billion",
         "Total Assets": "$402.3 Billion",
         "Employees": "181,000",
@@ -49,6 +51,7 @@ COMPANY_FINANCIALS = [
         "Type": "Public",
         "Market Cap": "$3.12 Trillion",
         "Stock Price": "$124.80",
+        "Capital Budget (Annual CapEx)": "$1.5 Billion",
         "Net Income": "$29.8 Billion",
         "Total Assets": "$65.7 Billion",
         "Employees": "29,600",
@@ -61,6 +64,7 @@ COMPANY_FINANCIALS = [
         "Type": "Public",
         "Market Cap": "$1.92 Trillion",
         "Stock Price": "$185.20",
+        "Capital Budget (Annual CapEx)": "$75.0 Billion",
         "Net Income": "$30.4 Billion",
         "Total Assets": "$527.8 Billion",
         "Employees": "1,540,000",
@@ -73,6 +77,7 @@ COMPANY_FINANCIALS = [
         "Type": "Public",
         "Market Cap": "$1.28 Trillion",
         "Stock Price": "$505.10",
+        "Capital Budget (Annual CapEx)": "$38.5 Billion",
         "Net Income": "$39.1 Billion",
         "Total Assets": "$229.6 Billion",
         "Employees": "67,300",
@@ -80,11 +85,64 @@ COMPANY_FINANCIALS = [
         "IR Link": "https://investor.fb.com/"
     },
     {
+        "Company": "AMD",
+        "Ticker": "AMD",
+        "Type": "Public",
+        "Market Cap": "$282.4 Billion",
+        "Stock Price": "$174.50",
+        "Capital Budget (Annual CapEx)": "$0.5 Billion",
+        "Net Income": "$1.8 Billion",
+        "Total Assets": "$68.2 Billion",
+        "Employees": "26,000",
+        "Description": "Leading GPU designer (Instinct MI300 and MI325 series) competing with NVIDIA in AI accelerators.",
+        "IR Link": "https://ir.amd.com/"
+    },
+    {
+        "Company": "Vertiv Holdings",
+        "Ticker": "VRT",
+        "Type": "Public",
+        "Market Cap": "$38.2 Billion",
+        "Stock Price": "$101.50",
+        "Capital Budget (Annual CapEx)": "$0.2 Billion",
+        "Net Income": "$460 Million",
+        "Total Assets": "$6.8 Billion",
+        "Employees": "27,000",
+        "Description": "Global leader in datacenter power management, heat exchangers, and liquid/thermal cooling systems.",
+        "IR Link": "https://investors.vertiv.com/"
+    },
+    {
+        "Company": "Constellation Energy",
+        "Ticker": "CEG",
+        "Type": "Public",
+        "Market Cap": "$80.5 Billion",
+        "Stock Price": "$251.38",
+        "Capital Budget (Annual CapEx)": "$2.2 Billion",
+        "Net Income": "$3.8 Billion",
+        "Total Assets": "$45.3 Billion",
+        "Employees": "15,300",
+        "Description": "Largest U.S. nuclear operator; signed the 835 MW Three Mile Island restart deal to power Microsoft AI datacenters.",
+        "IR Link": "https://investors.constellationenergy.com/"
+    },
+    {
+        "Company": "Super Micro Computer",
+        "Ticker": "SMCI",
+        "Type": "Public",
+        "Market Cap": "$18.3 Billion",
+        "Stock Price": "$32.50",
+        "Capital Budget (Annual CapEx)": "$0.2 Billion",
+        "Net Income": "$1.2 Billion",
+        "Total Assets": "$8.5 Billion",
+        "Employees": "5,200",
+        "Description": "Builds high-density GPU server racks and liquid-cooling manifolds for hyperscale datacenters.",
+        "IR Link": "https://ir.supermicro.com/"
+    },
+    {
         "Company": "Oracle",
         "Ticker": "ORCL",
         "Type": "Public",
         "Market Cap": "$475.2 Billion",
         "Stock Price": "$172.40",
+        "Capital Budget (Annual CapEx)": "$8.5 Billion",
         "Net Income": "$10.5 Billion",
         "Total Assets": "$137.1 Billion",
         "Employees": "164,000",
@@ -97,6 +155,7 @@ COMPANY_FINANCIALS = [
         "Type": "Public (REIT)",
         "Market Cap": "$78.4 Billion",
         "Stock Price": "$820.60",
+        "Capital Budget (Annual CapEx)": "$3.0 Billion",
         "Net Income": "$1.04 Billion",
         "Total Assets": "$32.8 Billion",
         "Employees": "13,000",
@@ -109,6 +168,7 @@ COMPANY_FINANCIALS = [
         "Type": "Public (REIT)",
         "Market Cap": "$48.2 Billion",
         "Stock Price": "$148.30",
+        "Capital Budget (Annual CapEx)": "$2.5 Billion",
         "Net Income": "$995 Million",
         "Total Assets": "$39.5 Billion",
         "Employees": "3,600",
@@ -121,6 +181,7 @@ COMPANY_FINANCIALS = [
         "Type": "Private",
         "Market Cap": "$23.0 Billion (est. valuation)",
         "Stock Price": "N/A",
+        "Capital Budget (Annual CapEx)": "$12.0 Billion",
         "Net Income": "N/A",
         "Total Assets": "$8.2 Billion (est. debt+equity)",
         "Employees": "950",
@@ -133,6 +194,7 @@ COMPANY_FINANCIALS = [
         "Type": "Private (Blackstone)",
         "Market Cap": "$10.0 Billion (acquisition value)",
         "Stock Price": "N/A",
+        "Capital Budget (Annual CapEx)": "$8.0 Billion",
         "Net Income": "N/A",
         "Total Assets": "$15.0 Billion (estimated assets)",
         "Employees": "850",
@@ -145,6 +207,7 @@ COMPANY_FINANCIALS = [
         "Type": "Private (KKR / GIP)",
         "Market Cap": "$15.0 Billion (acquisition value)",
         "Stock Price": "N/A",
+        "Capital Budget (Annual CapEx)": "$6.5 Billion",
         "Net Income": "N/A",
         "Total Assets": "$18.5 Billion (estimated assets)",
         "Employees": "650",
@@ -157,6 +220,7 @@ COMPANY_FINANCIALS = [
         "Type": "Private (DigitalBridge)",
         "Market Cap": "$11.0 Billion (acquisition value)",
         "Stock Price": "N/A",
+        "Capital Budget (Annual CapEx)": "$3.5 Billion",
         "Net Income": "N/A",
         "Total Assets": "$13.0 Billion (estimated assets)",
         "Employees": "900",
@@ -169,6 +233,7 @@ COMPANY_FINANCIALS = [
         "Type": "Private (DigitalBridge / Silver Lake)",
         "Market Cap": "$15.0 Billion (est. valuation)",
         "Stock Price": "N/A",
+        "Capital Budget (Annual CapEx)": "$7.0 Billion",
         "Net Income": "N/A",
         "Total Assets": "$20.0 Billion (estimated assets)",
         "Employees": "1,100",
@@ -250,7 +315,7 @@ def render_corporate_tab():
 
     # Display dataframe with clean column configs
     st.dataframe(
-        view[["Company", "Ticker", "Type", "Market Cap", "Stock Price", "Net Income", "Total Assets", "Employees"]],
+        view[["Company", "Ticker", "Type", "Market Cap", "Stock Price", "Capital Budget (Annual CapEx)", "Net Income", "Total Assets", "Employees"]],
         use_container_width=True,
         hide_index=True,
         column_config={
@@ -259,6 +324,7 @@ def render_corporate_tab():
             "Type": st.column_config.TextColumn(width="small"),
             "Market Cap": st.column_config.TextColumn(width="medium"),
             "Stock Price": st.column_config.TextColumn(width="small"),
+            "Capital Budget (Annual CapEx)": st.column_config.TextColumn(width="medium"),
             "Net Income": st.column_config.TextColumn(width="medium"),
             "Total Assets": st.column_config.TextColumn(width="medium"),
             "Employees": st.column_config.TextColumn(width="small"),
@@ -283,6 +349,7 @@ def render_corporate_tab():
         with det1:
             st.markdown(f"- **Market Cap / Valuation:** {comp_info['Market Cap']}")
             st.markdown(f"- **Stock Price:** {comp_info['Stock Price']}")
+            st.markdown(f"- **Capital Budget (Annual CapEx):** {comp_info['Capital Budget (Annual CapEx)']}")
         with det2:
             st.markdown(f"- **Net Income:** {comp_info['Net Income']}")
             st.markdown(f"- **Total Assets:** {comp_info['Total Assets']}")
