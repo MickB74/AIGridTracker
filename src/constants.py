@@ -358,8 +358,8 @@ OPERATORS = {
                       "Per-site LLCs", "#a3a3a3", "dc_ownership"),
     "Equinix":       ("colo", "self", "Public REIT (NASDAQ: EQIX)", "Mixed", False,
                       "IBX-branded site entities", "#dc2626", "dc_ownership"),
-    "Core Scientific": ("colo", "CoreWeave (pending)", "All-stock ~$9B acquisition announced Jul 2025 (press)", "Own", True,
-                      "Site LLCs; ~10 US facilities (HPC + crypto)", "#64748b", "crwv_coresci"),
+    "Core Scientific": ("colo", "self", "Public (NASDAQ: CORZ); CoreWeave acquisition proposed Jul 2025 — outcome uncertain, verify", "Own", True,
+                      "Site LLCs; ~10 US facilities (~840 MW HPC + ~500 MW crypto; ~1.3 GW gross)", "#64748b", "crwv_coresci"),
 }
 
 # Per-company role resolution for the AI-competitor sites (tenant, attribution).

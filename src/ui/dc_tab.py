@@ -6,7 +6,8 @@ from src.constants import (DATACENTERS_DF, DC_METRICS, ERCOT_LL_VINTAGE,
                            ERCOT_LL_DC_SHARE, ERCOT_LL_FUNNEL, HYPERSCALERS_DF,
                            HYPERSCALER_COLORS, AI_COMPETITOR_SITES_DF,
                            AI_COMPETITORS_DF, STATE_DC_DF, STATE_DC_NATIONAL,
-                           MEGA_PROJECTS_DF, OPERATORS_DF)
+                           MEGA_PROJECTS_DF, OPERATORS_DF, DC_SITES_DF,
+                           OPERATORS)
 from src.helpers import src_link
 from src.services.ercot import ercot_largeload_latest
 from src.services.eia import eia_latest_demand
@@ -161,37 +162,72 @@ def render_dc_tab():
                "SoftBank *Stargate* campuses). No operator discloses per-facility "
                "MW, so these are location markers, not sized by power.")
 
-    campus_df = pd.concat([HYPERSCALERS_DF, AI_COMPETITOR_SITES_DF],
-                          ignore_index=True)
+    campus_df = DC_SITES_DF.copy()
+    campus_df["_owner_label"] = campus_df["owner"].replace("self", "Self-owned")
+    campus_df["_tenant_label"] = campus_df["tenant"].fillna("Undisclosed")
+
+    _OP_COLORS = {name: m[6] for name, m in OPERATORS.items()}
+    _OWNER_COLORS = {
+        "Self-owned": "#6b7280",
+        "Blackstone": "#8b5cf6", "DigitalBridge + Silver Lake": "#0ea5e9",
+        "KKR + Global Infrastructure Partners": "#22d3ee",
+        "DigitalBridge + IFM Investors": "#ef4444",
+        "Nvidia · Microsoft · BlackRock/MGX (pending)": "#f59e0b",
+        "Blue Owl / IPI Partners": "#10b981",
+        "EQT Infrastructure + ADIA": "#a3a3a3",
+    }
+    _TENANT_COLORS = {
+        "Google": "#34a853", "Meta": "#0866ff", "Microsoft": "#f25022",
+        "Amazon (AWS)": "#ff9900", "xAI (Colossus)": "#a855f7",
+        "OpenAI": "#14b8a6", "CoreWeave": "#ec4899", "Undisclosed": "#6b7280",
+    }
 
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    firms = st.multiselect("Company", list(campus_df.company.unique()),
-                           default=list(campus_df.company.unique()))
-    hdf = campus_df[campus_df.company.isin(firms)].copy() if firms \
+    ccol, rcol = st.columns([3, 2])
+    color_role = rcol.radio(
+        "Color by", ["Operator", "Owner / PE parent", "Tenant"],
+        horizontal=True, help="Switch the map legend between who runs the "
+        "building (operator), who owns the company (PE parent), or who "
+        "actually consumes the power (tenant).")
+    _role_col = {"Operator": "operator", "Owner / PE parent": "_owner_label",
+                 "Tenant": "_tenant_label"}[color_role]
+    _role_colors = {"Operator": _OP_COLORS, "Owner / PE parent": _OWNER_COLORS,
+                    "Tenant": _TENANT_COLORS}[color_role]
+
+    role_vals = sorted(campus_df[_role_col].unique())
+    firms = ccol.multiselect("Filter", role_vals, default=role_vals,
+                             key="campus_filter")
+    hdf = campus_df[campus_df[_role_col].isin(firms)].copy() if firms \
         else campus_df.copy()
 
     if hdf.empty:
-        st.info("Pick a company to plot its campuses.")
+        st.info("Pick a value to plot campuses.")
     else:
         h1, h2 = st.columns(2)
         h1.metric("Campuses shown", f"{len(hdf)}")
         h2.metric("States", f"{hdf.state.nunique()}")
-        hdf["id"] = hdf["company"] + " · " + hdf["location"]
+        hdf["id"] = hdf["operator"] + " · " + hdf["location"]
 
         fig = px.scatter_geo(
-            hdf, lat="lat", lon="lon", color="company", scope="usa",
-            color_discrete_map=HYPERSCALER_COLORS, hover_name="location",
-            custom_data=["id", "company", "location", "state", "lat", "lon", "src"])
-        fig.update_traces(marker=dict(size=11, line=dict(width=0.5, color="white")),
-                          hovertemplate="%{customdata[1]} — %{customdata[2]}, "
-                                        "%{customdata[3]}<extra></extra>")
+            hdf, lat="lat", lon="lon", color=_role_col, scope="usa",
+            color_discrete_map=_role_colors, hover_name="location",
+            custom_data=["id", "operator", "location", "state",
+                         "_owner_label", "_tenant_label", "attribution"])
+        fig.update_traces(
+            marker=dict(size=11, line=dict(width=0.5, color="white")),
+            hovertemplate=(
+                "<b>%{customdata[1]}</b> — %{customdata[2]}, %{customdata[3]}<br>"
+                "Owner: %{customdata[4]}<br>"
+                "Tenant: %{customdata[5]}<br>"
+                "Source: %{customdata[6]}"
+                "<extra></extra>"))
         fig.update_geos(bgcolor="rgba(0,0,0,0)", landcolor="#26272b",
                         subunitcolor="#3c3f44", showsubunits=True,
                         countrycolor="#3c3f44", lakecolor="rgba(0,0,0,0)")
         fig.update_layout(
             margin=dict(l=0, r=0, t=0, b=0), height=460,
             paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
-            legend=dict(title="Company", orientation="h",
+            legend=dict(title=color_role, orientation="h",
                         y=1.0, yanchor="bottom", x=0))
         event = st.plotly_chart(fig, use_container_width=True,
                                 on_select="rerun", key="campus_map")
@@ -204,20 +240,24 @@ def render_dc_tab():
         if picked:
             for _, r in hdf[hdf.id.isin(picked)].iterrows():
                 st.markdown(
-                    f"**{r.company} — {r['location']}, {r.state}**  \n"
+                    f"**{r.operator} — {r['location']}, {r.state}**  \n"
+                    f"Owner: {r._owner_label} · Tenant: {r._tenant_label} · "
+                    f"Attribution: {r.attribution}  \n"
                     f"📍 {r.lat:.2f}, {r.lon:.2f}  ·  source: {src_link(r.src)}")
         else:
-            st.caption("👆 Click a dot to see that campus's details.")
+            st.caption("👆 Click a dot to see operator, owner & tenant details.")
 
-        st.caption(" · ".join(f"{c} = {len(hdf[hdf.company==c])}"
-                               for c in firms if len(hdf[hdf.company == c])) +
-                   "  ·  🟢 Google · 🔵 Meta · 🔴 Microsoft · 🟠 Amazon (AWS) · "
-                   "🟣 xAI · 🩵 OpenAI · Oracle (Stargate) · 🩷 CoreWeave")
+        counts = " · ".join(f"{v} = {len(hdf[hdf[_role_col]==v])}"
+                            for v in firms if len(hdf[hdf[_role_col] == v]))
+        st.caption(counts)
         with st.expander("Site list + sources"):
-            st.dataframe(hdf[["company", "location", "state"]],
-                         use_container_width=True, hide_index=True,
-                         column_config={"company": "Company", "location": "Location",
-                                        "state": "State"})
+            st.dataframe(
+                hdf[["operator", "_owner_label", "_tenant_label",
+                     "location", "state", "attribution"]].rename(
+                    columns={"_owner_label": "Owner", "_tenant_label": "Tenant",
+                             "operator": "Operator", "location": "Location",
+                             "state": "State", "attribution": "Source type"}),
+                use_container_width=True, hide_index=True)
             st.caption("Hyperscaler (first-party): " + " · ".join(
                 src_link(k) for k in
                 ["google_dc", "meta_dc", "microsoft_dc", "aws_dc"]))
