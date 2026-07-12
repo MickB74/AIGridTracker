@@ -617,6 +617,14 @@ SOURCES = {
                       "https://sustainability.google/reports/google-2026-environmental-report/"),
     "meta_env_2025":  ("Meta 2025 Environmental Data Index (FY2024) — Electricity, GHG, Water, PUE/WUE per campus. sustainability.atmeta.com",
                       "https://sustainability.atmeta.com/wp-content/uploads/2025/10/Meta_2025-Environmental-Data-Index.pdf"),
+    "crc_mich_2026":  ("Citizens Research Council of Michigan — Data Centers in Michigan: Policy Controversies (June 2026)",
+                      "https://crcmich.org/publications/data-centers-in-michigan-evaluation-controversies-hyperscale-development"),
+    "jlarc_va_2024":  ("Virginia JLARC — Data Center Impact Study (Report 591, Dec 2024)",
+                      "https://jlarc.virginia.gov/pdfs/reports/Rpt591.pdf"),
+    "ga_house_2024":  ("Georgia House of Representatives — Joint Committee on Data Center Tax Incentives (2024)",
+                      "https://www.house.ga.gov/"),
+    "oregon_doe_2024":("Oregon Department of Energy — Data Centers and Energy Use in Oregon (2024)",
+                      "https://www.oregon.gov/energy/Data-Center-Energy-Use.aspx"),
 }
 
 # --------------------------------------------------------------------------- #
