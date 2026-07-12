@@ -16,6 +16,7 @@ from src.constants import (
     META_WATER, META_EFFICIENCY, META_2024_HEADLINE,
 )
 from src.helpers import src_link
+from src.services.sec_xbrl import fetch_dynamic_financials
 
 # Financial and profile data
 COMPANY_FINANCIALS = [
@@ -279,8 +280,23 @@ def render_corporate_tab():
         "and specialised colocation operators are profiled below."
     )
 
-    # Convert to dataframe
-    df = pd.DataFrame(COMPANY_FINANCIALS)
+    # Convert to dataframe and merge SEC XBRL data where available
+    live_financials = []
+    for item in COMPANY_FINANCIALS:
+        ticker = item["Ticker"]
+        updated_item = item.copy()
+        if ticker != "Private":
+            sec_data = fetch_dynamic_financials(ticker)
+            if sec_data:
+                if "Net Income" in sec_data:
+                    updated_item["Net Income"] = sec_data["Net Income"]
+                if "Capital Budget (Annual CapEx)" in sec_data:
+                    updated_item["Capital Budget (Annual CapEx)"] = sec_data["Capital Budget (Annual CapEx)"]
+                if "Total Assets" in sec_data:
+                    updated_item["Total Assets"] = sec_data["Total Assets"]
+        live_financials.append(updated_item)
+
+    df = pd.DataFrame(live_financials)
 
     # Summary metrics row
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
@@ -337,7 +353,7 @@ def render_corporate_tab():
     selected_company = st.selectbox("Select a company for more details", view["Company"].tolist() if not view.empty else ["No matching companies"])
 
     if selected_company != "No matching companies":
-        comp_info = next(item for item in COMPANY_FINANCIALS if item["Company"] == selected_company)
+        comp_info = next(item for item in live_financials if item["Company"] == selected_company)
         
         st.markdown('<div class="glass-card">', unsafe_allow_html=True)
         st.markdown(f"## {comp_info['Company']} ({comp_info['Ticker']})")
