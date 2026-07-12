@@ -51,6 +51,228 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── Story 0 ──────────────────────────────────────────────────────────────
+    {
+        "id": "utility-bill-explainer-2026",
+        "section": "stories",
+        "title": "Why Your Electric Bill Is Going Up — and What Data Centers Have to Do With It",
+        "date": _dt.date(2026, 7, 12),
+        "author": "GridWatch AI",
+        "tags": ["utility bills", "capacity markets", "PJM", "demand response", "research", "explainer"],
+        "summary": (
+            "Capacity charges, peak load auctions, and the coincident-peak trap: a "
+            "plain-language guide to the parts of your electric bill you've never heard "
+            "of — and why data center growth is making them explode."
+        ),
+        "body": """\
+If your electricity bill has been climbing and you can't figure out why — you're
+not using more power, you haven't added appliances — the answer is probably hiding
+in a line item you've never looked at.
+
+It's not the kilowatt-hours. It's the **capacity charges**.
+
+### The part of your bill nobody explains
+
+Most people think of electricity as a single rate: use more, pay more. In reality,
+your bill has three major components, and the one growing fastest is the one almost
+nobody understands:
+
+| Component | What it pays for | Typical share | Growing? |
+|-----------|-----------------|---------------|----------|
+| **Energy charges** | The actual electricity you consumed (kWh) | 40–60% | Slowly |
+| **Capacity charges** | Keeping enough power plants *available* to meet the highest hour of demand all year | 15–30% | **Fast** |
+| **Transmission & distribution** | Wires, substations, and poles to move power from plant to home | 20–30% | Moderately |
+
+The energy charge is intuitive — run the AC more, pay more. But capacity charges
+are different. You pay them whether you use the power or not, because the grid must
+maintain enough generation to handle the *worst-case peak* — even if that peak lasts
+only a few hours each summer.
+
+Think of it like a fire department: your taxes pay for fire stations that sit idle
+most of the year, because they need to be there the one day your house catches fire.
+Capacity charges are the grid's fire department. And right now, someone is building
+a factory that requires its own fire station — and sending you part of the bill.
+
+### The coincident peak trap
+
+Here's where it gets personal. In most deregulated markets, your capacity charge
+isn't based on *your* individual peak usage. It's based on your usage during the
+**system coincident peak (CP)** — the single highest-demand hour across the entire
+grid that year.
+
+If a new 200 MW data center comes online in your utility's territory and raises the
+system peak, *your* capacity allocation goes up even though your behavior didn't
+change. The new load raises the waterline, and everyone pays more to keep the system
+above it.
+
+This isn't hypothetical. In PJM — the grid operator serving 65 million people across
+13 states from New Jersey to Illinois — it just happened:
+
+- The **2025/26 capacity auction** price jumped **833%** — from $28.92 to $269.92
+  per MW-day
+- PJM's independent market monitor found data centers were responsible for **63%**
+  of that price increase
+- **Pepco** customers in Washington D.C. saw bills rise **$21/month**, with roughly
+  half attributable to capacity costs
+- Across the PJM footprint, residential bills increased **$15–21/month** from
+  capacity charges alone
+
+That's not a rate increase driven by fuel costs, inflation, or your usage. It's a
+rate increase driven by someone else's load.
+
+### 44 hours that could save $150 billion
+
+In February 2025, researchers at **Duke University's Nicholas Institute for Energy,
+Environment & Sustainability** published a study that reframed the entire debate.
+Led by Tyler Norris, the analysis introduced a concept called **"curtailment-enabled
+headroom"** — how much new load the existing grid can absorb if that load agrees to
+briefly reduce consumption during the handful of hours each year when the system is
+most stressed.
+
+The findings were striking:
+
+- The existing U.S. grid could absorb **up to 98 GW** of new data center load —
+  more than the world's entire current data center fleet
+- The required curtailment: just **0.5% of annual hours** — an average of **44 hours
+  per year**, with a maximum of 177 hours in the most constrained regions
+- Potential avoided infrastructure cost: **$150 billion or more** in new power plants
+  and transmission lines that wouldn't need to be built
+- The curtailment rate is comparable to existing demand response programs that
+  industrial customers already participate in
+
+In plain English: if data centers agreed to dim the lights for less than two days a
+year — spread across the summer's hottest afternoons — we wouldn't need to build
+tens of billions of dollars in new infrastructure, and your capacity charges would
+stay flat.
+
+### So why don't they just do it?
+
+This is the question everyone asks, and the answer reveals a structural failure in
+how we regulate large electricity consumers.
+
+**1. The costs they impose aren't the costs they pay.**
+
+When a data center raises the system peak, the resulting capacity charges are
+socialized across *all* ratepayers. The data center pays its share, but the
+*incremental* system-wide cost it imposes — the billions in new capacity procurement
+triggered by its load — is spread across millions of customers. There's no price
+signal telling the operator: "Your consumption during this hour just cost the grid
+$50 million in capacity obligations."
+
+Under current rate design, a data center that curtails during peak hours saves almost
+nothing on its own bill. The capacity auction was settled months ago; the price is
+already set. Curtailment is a cost with no reward.
+
+**2. Uptime SLAs are contractually sacred.**
+
+Cloud and colocation contracts guarantee **99.99–99.999% uptime** — "four nines" to
+"five nines." Five-nines means a maximum of **5.26 minutes of total downtime per
+year**. The Duke study's 44-hour curtailment, even if it's just a partial load
+reduction, would blow through any existing SLA by orders of magnitude.
+
+Renegotiating these contracts means:
+- SLA breach penalties (often millions per incident)
+- Customer churn risk (if AWS curtails but Azure doesn't, customers switch)
+- Insurance and liability exposure (financial, healthcare, and government workloads
+  have legal uptime requirements)
+
+Here's the irony: **AI training workloads are actually highly flexible**. A training
+run can pause, checkpoint, and resume — it doesn't care about latency or real-time
+availability. But operators run training and inference on shared infrastructure and
+apply the strictest SLA to everything. Separating these workloads is technically
+straightforward but commercially inconvenient.
+
+**3. There's no regulatory mandate.**
+
+Unlike power plants, which must bid into capacity markets and face penalties for
+non-performance, **data centers have no obligation to participate in demand response**.
+They're classified as ordinary load. They consume what they want, when they want, and
+the grid must accommodate them.
+
+Several mechanisms could change this but don't exist at scale:
+
+- **Marginal capacity pricing** — charge new large loads for the *incremental* capacity
+  cost they impose, not just the system average. If a 200 MW data center knew it would
+  pay the full marginal cost of the capacity auction increase it triggered, curtailment
+  would become profitable overnight.
+- **Mandatory demand response above a threshold** — require any load above 10 MW to
+  participate in curtailment programs, the way generators must participate in capacity
+  markets.
+- **Differentiated SLAs** — regulatory frameworks that distinguish delay-tolerant
+  workloads (AI training, batch processing, backups) from latency-critical ones
+  (inference, real-time services), enabling curtailment of the flexible portion without
+  touching customer-facing services.
+
+### The research landscape: what we know and what's contested
+
+The Duke study didn't land in a vacuum. A growing body of academic and policy research
+is wrestling with the same questions:
+
+**Lawrence Berkeley National Lab (LBNL, Jan 2025)** found U.S. data center electricity
+surged from 58 TWh (2014) to 176 TWh (2023) and projects **325–580 TWh by 2028** —
+potentially 12% of all U.S. electricity. In July 2024, a voltage fluctuation in
+Northern Virginia triggered simultaneous disconnection of 60 data centers, causing a
+1,500 MW surplus that required emergency grid adjustments.
+
+**The Harvard Belfer Center (Feb 2026)** called AI-driven load growth a "watershed
+moment" for grid planning, noting that traditional forecasting methods are failing
+because demand is growing faster than any historical precedent.
+
+**E3, funded by Amazon (Dec 2025)**, studied four Amazon facilities and concluded data
+centers generate **$3.4 million in surplus revenue** per 100 MW facility — paying more
+than their direct cost to serve. This is the industry's primary counterargument to the
+"ratepayers are subsidizing data centers" narrative.
+
+**The critical nuance:** both things can be true simultaneously. A data center can pay
+more than its direct cost-to-serve while *also* driving up system-wide capacity costs
+that are socialized to everyone. E3's facility-level analysis and PJM's system-level
+market monitor are measuring different things. The surplus at the meter doesn't capture
+the externality at the auction.
+
+**Columbia University (2025)** showed that grid-enhancing technologies (dynamic line
+ratings, power flow controllers) could release 20–40% more capacity from existing
+transmission — deferring $10–30 billion in new construction.
+
+### What would actually fix this?
+
+The research converges on a handful of structural reforms:
+
+1. **Cost-causation rate design** — charge large loads for the capacity and transmission
+   costs they *cause*, not the system average. FERC and several state PUCs are
+   investigating this, but no major market has implemented it yet.
+
+2. **Mandatory demand response for large loads** — if you consume more than 10 MW, you
+   participate in curtailment programs, period. At least five state legislatures
+   introduced versions of this in 2026.
+
+3. **Load flexibility contracts** — utilities offer lower rates in exchange for
+   contractual curtailment rights during peak hours. Duke Energy and Dominion are
+   piloting programs, but participation is voluntary and uptake is low.
+
+4. **Interconnection reform** — FERC Order 2023 is speeding up queue processing and
+   requiring deposits to prevent speculative capacity hoarding, but implementation is
+   slow.
+
+5. **On-site generation requirements** — require large loads to provide their own
+   peaking capacity (batteries, on-site generation) so the grid doesn't have to overbuild
+   for them. Proposed in North Carolina, Virginia, and Georgia.
+
+### The bottom line
+
+The Duke University research proves the *technical* solution exists: brief, modest
+curtailment — less than two days a year — could avoid tens of billions in new
+infrastructure and keep your capacity charges from spiraling. The barrier isn't
+engineering. It's a regulatory and commercial framework that lets the largest
+electricity consumers externalize their peak-load costs onto everyone else's bill.
+
+Until that framework changes, residential ratepayers bear the cost of keeping the
+grid ready for loads that refuse to flex.
+
+> **Explore more:** Use the **💡 Your Utility Bill** tab for an interactive breakdown
+> of bill components, the **🕐 Grid Timing** tab to see real-time grid stress in your
+> region, and the **🏛️ Officials** tab to contact your legislators about rate reform.
+""",
+    },
     # ── Story 1 ──────────────────────────────────────────────────────────────
     {
         "id": "moratorium-wave-2026",
