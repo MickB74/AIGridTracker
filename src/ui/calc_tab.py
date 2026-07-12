@@ -83,8 +83,8 @@ def render_calc_tab():
                         st.warning("No recent news updates found. Try visiting [Methodology](file:///Users/michaelbarry/Documents/GitHub/AIGridTracker/app.py#L93) for reference sites.")
                     else:
                         st.success("Found recent articles regarding AI and data center footprint disclosures:")
-                        for n in news:
-                            st.markdown(f"- [{n['title']}]({n['link']}) (*{n['source']}*)")
+                        for item in news:
+                            st.markdown(f"- [{item['title']}]({item['link']}) (*{item['source']}*)")
         else:
             n = st.number_input("Output tokens", min_value=0, value=500_000, step=10_000)
             # merge static references with any live coefficients loaded on Live tab
