@@ -1,11 +1,13 @@
 """
 Corporate Profiles tab — displays financial and operational profile data
 (market cap, stock price, net income, assets, employees) for major public
-and private data center developers and hyperscalers.
+and private data center developers, hardware manufacturers, and hyperscalers.
+Includes an interactive growth trend chart over recent time periods.
 """
 
 import streamlit as st
 import pandas as pd
+import altair as alt
 
 # Financial and profile data
 COMPANY_FINANCIALS = [
@@ -32,6 +34,18 @@ COMPANY_FINANCIALS = [
         "Employees": "181,000",
         "Description": "Google Cloud provider and TPU custom-accelerator hardware designer.",
         "IR Link": "https://abc.xyz/investor/"
+    },
+    {
+        "Company": "NVIDIA",
+        "Ticker": "NVDA",
+        "Type": "Public",
+        "Market Cap": "$3.12 Trillion",
+        "Stock Price": "$124.80",
+        "Net Income": "$29.8 Billion",
+        "Total Assets": "$65.7 Billion",
+        "Employees": "29,600",
+        "Description": "Leading GPU designer and AI platform builder powering data-center hardware clusters globally.",
+        "IR Link": "https://investor.nvidia.com/"
     },
     {
         "Company": "Amazon",
@@ -155,12 +169,41 @@ COMPANY_FINANCIALS = [
     }
 ]
 
+# Historical revenue growth data ($ Billions)
+GROWTH_DATA = [
+    # Microsoft
+    {"Year": 2022, "Company": "Microsoft", "Revenue ($B)": 198.3},
+    {"Year": 2023, "Company": "Microsoft", "Revenue ($B)": 211.9},
+    {"Year": 2024, "Company": "Microsoft", "Revenue ($B)": 245.1},
+    {"Year": 2025, "Company": "Microsoft", "Revenue ($B)": 280.5},
+    # Google
+    {"Year": 2022, "Company": "Google (Alphabet)", "Revenue ($B)": 282.8},
+    {"Year": 2023, "Company": "Google (Alphabet)", "Revenue ($B)": 307.4},
+    {"Year": 2024, "Company": "Google (Alphabet)", "Revenue ($B)": 355.2},
+    {"Year": 2025, "Company": "Google (Alphabet)", "Revenue ($B)": 400.1},
+    # NVIDIA
+    {"Year": 2022, "Company": "NVIDIA", "Revenue ($B)": 27.0},
+    {"Year": 2023, "Company": "NVIDIA", "Revenue ($B)": 27.0},
+    {"Year": 2024, "Company": "NVIDIA", "Revenue ($B)": 60.9},
+    {"Year": 2025, "Company": "NVIDIA", "Revenue ($B)": 120.8},
+    # Amazon
+    {"Year": 2022, "Company": "Amazon", "Revenue ($B)": 514.0},
+    {"Year": 2023, "Company": "Amazon", "Revenue ($B)": 574.8},
+    {"Year": 2024, "Company": "Amazon", "Revenue ($B)": 630.5},
+    {"Year": 2025, "Company": "Amazon", "Revenue ($B)": 685.2},
+    # Meta
+    {"Year": 2022, "Company": "Meta Platforms", "Revenue ($B)": 116.6},
+    {"Year": 2023, "Company": "Meta Platforms", "Revenue ($B)": 134.9},
+    {"Year": 2024, "Company": "Meta Platforms", "Revenue ($B)": 160.2},
+    {"Year": 2025, "Company": "Meta Platforms", "Revenue ($B)": 185.5}
+]
+
 def render_corporate_tab():
     st.subheader("💼 Corporate Profiles — Financials & Scale")
     st.caption(
         "Financial and operational scale of the companies driving data center expansion. "
-        "Hyperscale players (Microsoft, Google, Amazon, Meta) and specialised operators "
-        "(colocation REITs and private-equity-backed developers) are listed below."
+        "Hyperscale players (Microsoft, Google, Amazon, Meta), core hardware enablers (NVIDIA), "
+        "and specialised colocation operators are profiled below."
     )
 
     # Convert to dataframe
@@ -168,12 +211,12 @@ def render_corporate_tab():
 
     # Summary metrics row
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown("### 📈 Cloud & Data Center Sector Power")
+    st.markdown("### 📈 Sector Financial Scale")
     
     m1, m2, m3 = st.columns(3)
-    m1.metric("Public Hyperscaler Cap", "$8.53 Trillion", help="Combined market cap of MSFT, GOOGL, AMZN, and META")
-    m2.metric("Combined Sector Employees", "> 2.2 Million", help="Total employees across listed firms, including retail divisions")
-    m3.metric("Annual Cloud Net Income", "> $230 Billion", help="Aggregated net income for the five public tech filers")
+    m1.metric("Combined Public Sector Cap", "$12.2 Trillion", help="Combined market cap of MSFT, GOOGL, NVDA, AMZN, META, ORCL, EQIX, DLR")
+    m2.metric(" Roster Employees", "2.26 Million", help="Total employees across listed companies")
+    m3.metric("Annual Sector Net Income", "$279 Billion", help="Aggregated net income for the public tech filers")
     st.markdown('</div>', unsafe_allow_html=True)
 
     # Interactive filtering controls
@@ -240,5 +283,38 @@ def render_corporate_tab():
             st.markdown(f"- 🔗 [Investor Relations / Corporate Portal]({comp_info['IR Link']})")
             
         st.markdown('</div>', unsafe_allow_html=True)
+
+    # Time-period growth chart
+    st.markdown("### 📈 Revenue Growth Over Time (2022–2025)")
+    st.markdown(
+        "Plotting annual revenue growth shows the steep trajectories of AI hyperscalers and enablers. "
+        "Notice **NVIDIA's** explosive pivot from 2023 onward, reflecting the massive market rush for AI chips."
+    )
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    growth_df = pd.DataFrame(GROWTH_DATA)
+    
+    # Filter chart by company
+    selected_growth_companies = st.multiselect(
+        "Select companies to plot",
+        options=list(growth_df["Company"].unique()),
+        default=list(growth_df["Company"].unique())
+    )
+    
+    chart_view = growth_df[growth_df["Company"].isin(selected_growth_companies)] if selected_growth_companies else growth_df
+    
+    growth_chart = (
+        alt.Chart(chart_view)
+        .mark_line(point=True, strokeWidth=3)
+        .encode(
+            x=alt.X("Year:O", title="Fiscal Year"),
+            y=alt.Y("Revenue ($B):Q", title="Annual Revenue ($ Billions)"),
+            color=alt.Color("Company:N", scale=alt.Scale(scheme="category10")),
+            tooltip=["Company", "Year", "Revenue ($B)"]
+        )
+        .properties(height=350)
+    )
+    st.altair_chart(growth_chart, use_container_width=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
     st.caption("Figures reflect FY2025/2026 filings, annual reports, SEC 10-K competition statements, and recent private equity valuations.")
