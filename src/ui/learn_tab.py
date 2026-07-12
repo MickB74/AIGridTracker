@@ -302,6 +302,20 @@ grid, not just annually through credits.
 A few European facilities pipe waste heat to district heating networks, warming
 nearby homes and offices. This is rare in the US but represents a major untapped
 efficiency opportunity.
+
+#### Compute efficiency
+The cheapest watt is the one you never draw. Key levers:
+- **Server utilization** — Average utilization across the industry is just
+  **12–18%** (NRDC, 2024). Virtualization and workload packing can push this
+  above 60%, cutting servers (and energy) by half or more.
+- **Model optimization** — Techniques like quantization, distillation, and
+  sparse attention can reduce inference energy per query by **2–10×** with
+  minimal quality loss.
+- **Right-sizing hardware** — Matching GPU/CPU tier to the workload avoids
+  powering idle silicon. Not every task needs an H100.
+- **Workload scheduling** — Shifting deferrable jobs (training, batch
+  inference, backups) to off-peak hours or periods of high renewable
+  generation reduces both grid strain and carbon intensity.
 """)
 
     st.markdown("</div>", unsafe_allow_html=True)
