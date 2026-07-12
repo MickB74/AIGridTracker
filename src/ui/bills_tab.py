@@ -70,6 +70,125 @@ Typically **20–30%** of a residential bill.
     st.markdown("</div>", unsafe_allow_html=True)
 
     # ══════════════════════════════════════════════════════════════════════════
+    # SECTION 1b — Residential vs. Commercial vs. Industrial
+    # ══════════════════════════════════════════════════════════════════════════
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("## 🏠🏢🏭 Three customers, three completely different bills")
+    st.markdown("""\
+Residential, commercial, and industrial customers all pay for the same
+grid — but the way costs show up on their bills is radically different.
+Understanding this gap is key to seeing why data center growth hits
+homeowners hardest.
+""")
+
+    r_col, c_col, i_col = st.columns(3)
+    with r_col:
+        st.markdown("""\
+### 🏠 Residential
+**You get a blended rate and no demand meter.**
+
+- Billed almost entirely on **kWh consumed** — a flat or tiered cents-per-kWh
+  rate that bundles energy, capacity, and T&D into one number
+- **No demand charge** on most residential tariffs — you never see a $/kW
+  line item
+- Capacity costs are **socialized** into your per-kWh rate or added as a
+  small rider/surcharge — you pay them, but you can't see them or manage them
+- No interval meter in most homes — your utility records total monthly usage,
+  not *when* you used it
+- **You have almost zero visibility or control** over the capacity costs
+  embedded in your bill
+""")
+    with c_col:
+        st.markdown("""\
+### 🏢 Commercial
+**You get a demand meter and a separate $/kW charge.**
+
+- Billed on **kWh consumed** *plus* a **demand charge** ($/kW) based on your
+  highest 15-minute peak during the billing period
+- The demand charge is a **visible line item** — an office building can see
+  that its peak hit 450 kW on a Tuesday afternoon and that cost $6,750
+- Smart building managers actively **shave peaks** — staggering HVAC startups,
+  dimming lights, shedding non-critical loads — to reduce their demand charge
+- Capacity and transmission costs show up separately, not bundled
+- **Demand charges are typically 30–50%** of a commercial bill
+""")
+    with i_col:
+        st.markdown("""\
+### 🏭 Industrial (including data centers)
+**You negotiate custom rates and manage demand in real time.**
+
+- Very large loads (1 MW+) often get **negotiated tariffs** or special rate
+  schedules with discounted energy rates in exchange for high load factor
+- Explicit **demand charges** ($/kW) based on monthly or annual peak, plus
+  separate capacity and transmission charges
+- Many have **interval meters** logging demand every 5–15 minutes, and
+  dedicated energy managers monitoring load curves
+- Some negotiate **interruptible rates** — lower prices in exchange for
+  agreeing to curtail during grid emergencies (though data centers rarely
+  accept these)
+- **Data centers** typically draw 50–300+ MW at 95%+ load factor, making
+  them the largest single loads on most utility systems
+""")
+
+    st.markdown("""\
+### The asymmetry that drives the problem
+""")
+
+    st.markdown("""\
+| | Residential | Commercial | Industrial / Data Center |
+|---|---|---|---|
+| **Sees demand charges?** | No — buried in kWh rate | Yes — explicit $/kW line item | Yes — negotiated and managed |
+| **Has a demand meter?** | Rarely (smart meters are spreading) | Yes — 15-min interval | Yes — 5-15 min interval |
+| **Can manage peak usage?** | Barely — no real-time signal | Yes — building automation | Yes — dedicated energy team |
+| **Capacity cost allocation** | Socialized across all ratepayers | Partially based on individual peak | Negotiated; often discounted for high load factor |
+| **Benefits from curtailment?** | No direct savings | Yes — lower demand charge | Yes — but won't do it (SLAs) |
+| **Typical monthly bill** | $150–250 | $5,000–50,000 | $500,000–5,000,000+ |
+""")
+
+    st.error(
+        "**The core inequity:** Industrial customers like data centers have dedicated "
+        "demand meters, energy management teams, and negotiated rates that let them "
+        "optimize their costs. Residential customers have none of these tools — yet "
+        "when data center growth drives up system-wide capacity costs, those costs are "
+        "socialized into the blended per-kWh rate that homeowners pay. The customers "
+        "with the *least* ability to respond bear a disproportionate share of the cost "
+        "caused by the customers with the *most* ability to respond."
+    )
+
+    with st.expander("How this works in different market structures"):
+        st.markdown("""\
+The mechanism varies by region, but the outcome is similar everywhere:
+
+**Deregulated markets (PJM, ISO-NE, NYISO)** — Capacity is procured through
+auctions. The cost is allocated to utilities based on their total load during
+system peak hours, then passed through to customers. Residential customers see
+it as a line item ("generation capacity charge") or bundled into the default
+service rate. C&I customers see explicit demand and capacity charges and can
+manage them.
+
+**Regulated/vertically integrated markets (Duke, Southern Company, Entergy)** —
+No separate capacity market. The utility owns generation and recovers costs
+through base rates set in rate cases. When the utility builds new capacity to
+serve data center growth, the capital is rate-based and recovered from *all*
+customers through higher per-kWh rates. C&I customers still have demand charges
+on their tariff; residential customers just see a rate increase.
+
+**ERCOT (Texas)** — No capacity market at all. Texas uses an "energy-only"
+market where scarcity pricing during peak hours is supposed to incentivize
+generation investment. Residential customers on variable-rate plans are directly
+exposed to wholesale price spikes (which is why bills exploded during Winter
+Storm Uri). C&I customers with fixed contracts are partially insulated. Data
+centers can negotiate bilateral PPAs that lock in low prices, shifting scarcity
+cost to the remaining pool.
+
+**In all three structures**, the pattern holds: large industrial loads have
+tools, tariffs, and negotiating power to manage their exposure. Residential
+customers absorb socialized costs with no visibility and no control.
+""")
+
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # ══════════════════════════════════════════════════════════════════════════
     # SECTION 2 — Peak load: why the hottest afternoon sets your bill
     # ══════════════════════════════════════════════════════════════════════════
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
