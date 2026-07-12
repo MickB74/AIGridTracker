@@ -9,7 +9,19 @@ def render_calc_tab():
     left, right = st.columns([1, 1.1], gap="large")
 
     with left:
-        mode = st.radio("Estimate by", ["Queries", "Tokens"], horizontal=True)
+        mode = st.radio(
+            "Estimate by",
+            ["Queries", "Tokens"],
+            horizontal=True,
+            help="Choose 'Queries' to calculate by individual user prompts, or 'Tokens' for raw text-generation volume."
+        )
+        
+        # Brief description of Queries vs Tokens to educate users
+        st.caption(
+            "💡 **What are these?**  \n"
+            "• **Queries**: A complete prompt-and-response interaction (asking a model a question). Includes model compute plus network and search routing. Typically ranges from **0.3 Wh to 3 Wh** depending on size and features.  \n"
+            "• **Tokens**: Granular chunks of text (approx. 4 characters or 0.75 words). A typical page of single-spaced text contains **500 to 800 tokens**."
+        )
 
         if mode == "Queries":
             n = st.number_input("Number of queries", min_value=0, value=1000, step=100)
