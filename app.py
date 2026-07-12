@@ -29,6 +29,7 @@ from src.ui.macro_tab import render_macro_tab
 from src.ui.method_tab import render_method_tab
 from src.ui.blog_tab import render_blog_tab
 from src.ui.learn_tab import render_learn_tab
+from src.ui.corporate_tab import render_corporate_tab
 
 # Load custom CSS styles
 def load_css():
@@ -282,10 +283,10 @@ else:
 st.divider()
 
 # --- TABS SETUP ---
-(tab_calc, tab_learn, tab_compare, tab_live, tab_grid, tab_dc, tab_news,
- tab_officials, tab_macro, tab_method, tab_blog) = st.tabs(
+(tab_calc, tab_learn, tab_compare, tab_live, tab_grid, tab_dc, tab_corporate,
+ tab_news, tab_officials, tab_macro, tab_method, tab_blog) = st.tabs(
     ["🧮 Calculator", "🎓 Learn", "📊 Compare sources", "🔬 Live models",
-     "🕐 Grid timing", "🏢 Data centers", "🗞️ Community & backlash",
+     "🕐 Grid timing", "🏢 Data centers", "💼 Corporate profiles", "🗞️ Community & backlash",
      "🏛️ Officials", "🌍 Macro outlook", "📚 Methodology", "📝 Blog"]
 )
 
@@ -306,6 +307,9 @@ with tab_grid:
 
 with tab_dc:
     render_dc_tab()
+
+with tab_corporate:
+    render_corporate_tab()
 
 with tab_news:
     render_news_tab()
