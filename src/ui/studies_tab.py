@@ -1,18 +1,19 @@
 """
 State Studies tab — presents official state-level data center impact studies,
 legislative reports, and grid integration papers (e.g. Michigan CRC, Virginia JLARC).
-Includes an interactive US map showing featured states.
+Generates detailed data center capacity profiles dynamically for all 50 states + DC
+using the state dataset, alongside an interactive choropleth map.
 """
 
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from src.constants import STATE_DC_DF, SOURCES
 from src.helpers import src_link
 
-# Featured state studies data
+# Specific official state studies data (curated deep-dives)
 STATE_STUDIES = {
     "Michigan": {
-        "abbrev": "MI",
         "title": "Data Centers in Michigan: Evaluation of Policy Controversies Regarding Hyperscale Data Center Development (June 2026)",
         "author": "Citizens Research Council of Michigan (Report 426)",
         "src_key": "crc_mich_2026",
@@ -33,7 +34,6 @@ STATE_STUDIES = {
         }
     },
     "Virginia": {
-        "abbrev": "VA",
         "title": "Joint Legislative Audit and Review Commission (JLARC) Data Center Study (December 2024)",
         "author": "Commonwealth of Virginia (Report 591)",
         "src_key": "jlarc_va_2024",
@@ -53,7 +53,6 @@ STATE_STUDIES = {
         }
     },
     "Georgia": {
-        "abbrev": "GA",
         "title": "Joint Committee on Data Center Tax Incentives & Grid Reliability (2024–2025)",
         "author": "Georgia General Assembly Special Study Committee",
         "src_key": "ga_house_2024",
@@ -72,7 +71,6 @@ STATE_STUDIES = {
         }
     },
     "Oregon": {
-        "abbrev": "OR",
         "title": "Data Centers and Energy Use in Oregon (2024)",
         "author": "Oregon Department of Energy (ODOE) Sector Report",
         "src_key": "oregon_doe_2024",
@@ -91,7 +89,6 @@ STATE_STUDIES = {
         }
     },
     "Maryland": {
-        "abbrev": "MD",
         "title": "Critical Infrastructure Streamlining Act of 2024 & State Data Center Impact Mandate (2024)",
         "author": "Maryland General Assembly (CISA / SB 116)",
         "src_key": "md_assembly_2024",
@@ -110,7 +107,6 @@ STATE_STUDIES = {
         }
     },
     "Indiana": {
-        "abbrev": "IN",
         "title": "Indiana Utility Regulatory Commission Large Load Grid & Water Studies (2026)",
         "author": "Indiana General Assembly / IURC (HB 1245)",
         "src_key": "iurc_indiana_2026",
@@ -129,7 +125,6 @@ STATE_STUDIES = {
         }
     },
     "New Jersey": {
-        "abbrev": "NJ",
         "title": "New Jersey Hyperscale Grid Studies & Market Inventory (2025–2026)",
         "author": "NJBPU / New Jersey Policy Perspective (NJPP) Research",
         "src_key": "nj_bpu_2026",
@@ -150,53 +145,27 @@ STATE_STUDIES = {
     }
 }
 
-# Mapping states for Choropleth
-MAP_STATES = [
-    # state, code, has_study, val
-    ("Michigan", "MI", 1, 10),
-    ("Virginia", "VA", 1, 10),
-    ("Georgia", "GA", 1, 10),
-    ("Oregon", "OR", 1, 10),
-    ("Maryland", "MD", 1, 10),
-    ("Indiana", "IN", 1, 10),
-    ("New Jersey", "NJ", 1, 10),
-    # Fill others
-    ("Alabama", "AL", 0, 0), ("Alaska", "AK", 0, 0), ("Arizona", "AZ", 0, 0), ("Arkansas", "AR", 0, 0),
-    ("California", "CA", 0, 0), ("Colorado", "CO", 0, 0), ("Connecticut", "CT", 0, 0), ("Delaware", "DE", 0, 0),
-    ("Florida", "FL", 0, 0), ("Hawaii", "HI", 0, 0), ("Idaho", "ID", 0, 0), ("Illinois", "IL", 0, 0),
-    ("Iowa", "IA", 0, 0), ("Kansas", "KS", 0, 0), ("Kentucky", "KY", 0, 0),
-    ("Louisiana", "LA", 0, 0), ("Maine", "ME", 0, 0), ("Massachusetts", "MA", 0, 0),
-    ("Minnesota", "MN", 0, 0), ("Mississippi", "MS", 0, 0), ("Missouri", "MO", 0, 0), ("Montana", "MT", 0, 0),
-    ("Nebraska", "NE", 0, 0), ("Nevada", "NV", 0, 0), ("New Hampshire", "NH", 0, 0),
-    ("New Mexico", "NM", 0, 0), ("New York", "NY", 0, 0), ("North Carolina", "NC", 0, 0), ("North Dakota", "ND", 0, 0),
-    ("Ohio", "OH", 0, 0), ("Oklahoma", "OK", 0, 0), ("Pennsylvania", "PA", 0, 0), ("Rhode Island", "RI", 0, 0),
-    ("South Carolina", "SC", 0, 0), ("South Dakota", "SD", 0, 0), ("Tennessee", "TN", 0, 0), ("Texas", "TX", 0, 0),
-    ("Utah", "UT", 0, 0), ("Vermont", "VT", 0, 0), ("Washington", "WA", 0, 0), ("West Virginia", "WV", 0, 0),
-    ("Wisconsin", "WI", 0, 0), ("Wyoming", "WY", 0, 0)
-]
-MAP_DF = pd.DataFrame(MAP_STATES, columns=["state", "code", "has_study", "value"])
-
 def render_studies_tab():
-    st.subheader("🏛️ State Studies — Local Impact & Legislative Audits")
+    st.subheader("🏛️ State Studies & Market Profiles")
     st.caption(
-        "A directory of official, state-level data center impact studies, joint legislative audits, "
-        "and public policy evaluation reports. Click a colored state on the map or select from the dropdown "
-        "to view key findings."
+        "A directory of official state policy audits, utility Board of Public Utilities (BPU) load studies, "
+        "and detailed data center market statistics. Click any state on the map or use the selectbox below "
+        "to view that state's complete environmental, power, and capacity profile."
     )
 
-    # US Map visualization
+    # US Map visualization using actual state TWh data
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown("### 🗺️ U.S. State Studies Map")
+    st.markdown("### 🗺️ Data Center Power Map by State (TWh / year)")
     
-    # Custom plotly map
+    # Custom plotly map colored by actual state-level TWh draw
     fig = px.choropleth(
-        MAP_DF,
-        locations="code",
+        STATE_DC_DF,
+        locations="abbrev",
         locationmode="USA-states",
-        color="value",
+        color="twh_year",
         scope="usa",
-        color_continuous_scale=["rgba(0,0,0,0)", "#ff5a1f"],
-        labels={"value": "Featured Study"},
+        color_continuous_scale="Oranges",
+        labels={"twh_year": "TWh / year"},
         hover_name="state"
     )
     fig.update_layout(
@@ -208,14 +177,14 @@ def render_studies_tab():
             showlakes=False
         ),
         margin=dict(l=0, r=0, t=0, b=0),
-        height=380,
-        coloraxis_showscale=False,
+        height=400,
+        coloraxis_colorbar=dict(title="TWh / year", thickness=15, len=0.8),
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)"
     )
     
     event = st.plotly_chart(fig, use_container_width=True, on_select="rerun", key="state_studies_map")
-    st.caption("Orange states have featured studies. Click a state to view or use the selector below.")
+    st.caption("Map is colored by annual data center power draw (TWh/year). Click any state to load its details card.")
     st.markdown('</div>', unsafe_allow_html=True)
 
     # Get state selection from click
@@ -223,51 +192,106 @@ def render_studies_tab():
     try:
         if event.selection and "points" in event.selection and len(event.selection["points"]) > 0:
             point = event.selection["points"][0]
-            # Map abbrev back to state name
-            code = point.get("location")
-            for name, c, hs, v in MAP_STATES:
-                if c == code and hs == 1:
-                    clicked_state = name
+            code = point.get("location") # e.g. "TX"
+            row = STATE_DC_DF[STATE_DC_DF["abbrev"] == code]
+            if not row.empty:
+                clicked_state = row.iloc[0]["state"]
     except Exception:
         pass
 
-    # Dropdown selector
-    dropdown_states = ["Select State..."] + sorted(list(STATE_STUDIES.keys()))
+    # Dropdown selector containing all 51 entries
+    dropdown_states = ["Select State..."] + sorted(list(STATE_DC_DF["state"].unique()))
     default_idx = 0
-    if clicked_state in STATE_STUDIES:
+    if clicked_state in dropdown_states:
         default_idx = dropdown_states.index(clicked_state)
 
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown("### 📋 Study Directory & Details")
+    st.markdown("### 📋 State Data Center Profile Details")
     selected_state = st.selectbox(
-        "Choose a state study to view details:",
+        "Choose a state to view details:",
         options=dropdown_states,
         index=default_idx,
         key="state_study_select"
     )
 
     if selected_state != "Select State...":
-        study = STATE_STUDIES[selected_state]
-        st.markdown(f"## {selected_state}: {study['title']}")
-        st.caption(f"**Author / Agency:** {study['author']} · **Reference Link:** {src_link(study['src_key'])}")
-        st.markdown(f"**Study Scope Summary:** *{study['summary']}*")
+        # Load state parameters from the global state dataset
+        row = STATE_DC_DF[STATE_DC_DF["state"] == selected_state].iloc[0]
         
-        # Summary Metrics
-        st.markdown("#### Key Metrics from Report")
-        cols = st.columns(len(study["metrics"]))
-        for i, (k, v) in enumerate(study["metrics"].items()):
-            cols[i].metric(k, v)
+        # Check if we have an official curated legislative study
+        is_curated = selected_state in STATE_STUDIES
         
-        st.divider()
+        st.markdown(f"## 📍 {selected_state} Data Center Profile")
         
-        # Key Findings
-        st.markdown("#### 🔍 Core Findings")
-        for finding in study["findings"]:
-            st.markdown(f"- {finding}")
+        if is_curated:
+            study = STATE_STUDIES[selected_state]
+            st.caption(f"**Curated Policy Deep-Dive** · Reference: {src_link(study['src_key'])}")
+            st.markdown(f"*{study['summary']}*")
             
-        st.divider()
-        st.markdown(f"🔗 **[Download Full Report PDF]({study['pdf_url']})**")
+            # Curated Metrics
+            cols = st.columns(len(study["metrics"]))
+            for i, (k, v) in enumerate(study["metrics"].items()):
+                cols[i].metric(k, v)
+            
+            st.divider()
+            st.markdown("#### 🔍 Curated Report Findings")
+            for finding in study["findings"]:
+                st.markdown(f"- {finding}")
+                
+            st.divider()
+            st.markdown(f"🔗 **[Download Full Official Study PDF]({study['pdf_url']})**")
+            
+        else:
+            # Dynamically generated profile for states without a curated report
+            st.caption(f"**Data Center Market Profile** · Source: {src_link('electricchoice')} / Lawrence Berkeley Lab")
+            
+            # Dynamic Metrics Row
+            c1, c2, c3, c4 = st.columns(4)
+            c1.metric("Active Facilities", f"{row['dc_count']}")
+            c2.metric("Power Draw", f"{row['twh_year']:.1f} TWh/yr")
+            # Percent of national 176 TWh
+            pct_us = (row['twh_year'] / 176.0) * 100
+            c3.metric("US Power Share", f"{pct_us:.1f}%")
+            
+            pipeline_status = "🔜 Active Projects" if row['upcoming'] else "Stable Market"
+            c4.metric("Upcoming Pipeline", pipeline_status)
+            
+            st.divider()
+            st.markdown("#### ⚙️ Grid Integration & Local Impacts")
+            
+            st.markdown(
+                f"**Clustered Operator Hubs**: Primary facilities and operators in {selected_state} are "
+                f"concentrated in: *{row['major_hubs']}*."
+            )
+            
+            # Dynamic context based on size
+            if row['twh_year'] >= 5.0:
+                st.warning(
+                    f"⚠️ **High Grid Demand**: Drawing {row['twh_year']:.1f} TWh annually, {selected_state} represents a major cluster "
+                    "for industrial load. Utilities and state public service commissions are heavily reviewing interconnection queues "
+                    "to prevent cost-shifting to residential ratepayers."
+                )
+                st.markdown(
+                    "- **Power Cost-Shifting**: Large load connections require substantial substation upgrades. Regulators are moving towards dedicated "
+                    "tariffs ensuring hyperscalers pay for transmission buildouts directly."
+                    "\n- **Water Scarcity Risk**: Dense server concentrations require millions of gallons of cooling water daily. Closed-loop, air-cooled "
+                    "designs are increasingly mandated in local municipal zoning codes."
+                )
+            else:
+                st.info(
+                    f"ℹ️ **Stable Load Profile**: With a load of {row['twh_year']:.1f} TWh annually across {row['dc_count']} facilities, "
+                    f"{selected_state}'s data center footprint is currently manageable under standard utility tariffs. Infrastructure is typically "
+                    "integrated without major grid-reliability risks."
+                )
+                st.markdown(
+                    "- **Local Economic Impact**: While economic benefits during operations are modest (limited permanent jobs), "
+                    "local municipalities benefit from commercial property taxes and construction-phase employment multipliers."
+                )
+            
+            st.divider()
+            st.markdown(f"🔗 **[View U.S. Data Center Power Map on ElectricChoice.com](https://www.electricchoice.com/datacenters/)**")
+            
     else:
-        st.info("💡 Select an orange state on the map or choose a state from the dropdown to load its policy findings.")
-    
+        st.info("💡 Select any state on the map above or choose a state from the dropdown to load its comprehensive data center profile.")
+        
     st.markdown('</div>', unsafe_allow_html=True)
