@@ -216,6 +216,90 @@ for Energy, Environment & Sustainability, Duke University.
     st.markdown("</div>", unsafe_allow_html=True)
 
     # ══════════════════════════════════════════════════════════════════════════
+    # SECTION 4b — Why don't data centers voluntarily curtail?
+    # ══════════════════════════════════════════════════════════════════════════
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("## 🚫 Why don't data centers voluntarily curtail?")
+    st.markdown("""\
+If cutting load for just 44 hours a year could save $150 billion in grid
+costs, why aren't data center operators lining up to do it? The barriers are
+real — but they're business and contractual, not technical.
+""")
+
+    b1, b2 = st.columns(2)
+    with b1:
+        st.markdown("""\
+### 💰 The financial incentives are misaligned
+
+**They don't pay the costs they cause.** When a data center drives up the
+system peak, the resulting capacity charges are spread across *all*
+ratepayers — residential, commercial, and industrial alike. The data center
+pays its share, but the *incremental* cost it imposes on the system is
+socialized. There's no price signal telling the operator "your load during
+this hour just cost the grid $50 million in capacity obligations."
+
+**Curtailment has a cost; the status quo is free.** Under current rate
+structures, a data center that curtails during peak hours saves nothing
+extra on its own bill — the capacity charges are set by auction results
+months in advance, not by real-time behavior. Meanwhile, every hour of
+curtailment risks SLA penalties, lost revenue, and reputational damage.
+
+**The math is simple:** the operator bears 100% of the curtailment cost
+and captures almost none of the grid-wide savings.
+""")
+    with b2:
+        st.markdown("""\
+### 📋 Uptime SLAs are contractually sacred
+
+Cloud and colocation contracts guarantee **99.99–99.999% uptime** ("four
+nines" to "five nines"). Five-nines uptime means a maximum of **5.26 minutes
+of downtime per year** — total.
+
+Even the Duke study's modest 44-hour curtailment would require renegotiating
+these contracts from scratch. For hyperscalers serving enterprise customers,
+any voluntary curtailment — even partial load reduction — triggers:
+
+- **SLA breach penalties** (often millions of dollars per incident)
+- **Customer churn risk** (enterprises won't tolerate unreliable cloud)
+- **Competitive disadvantage** (if AWS curtails but Azure doesn't, customers
+  move)
+- **Insurance and liability exposure** (downtime in financial, healthcare,
+  or government workloads has legal consequences)
+
+The irony: AI *training* workloads are actually quite flexible — a training
+run can pause and resume. But operators bundle training and inference on
+shared infrastructure and apply the strictest SLA to everything.
+""")
+
+    st.markdown("""\
+### 🏛️ No regulatory mandate, no market mechanism
+
+Unlike power plants, which are required to bid into capacity markets and can
+be penalized for non-performance, **data centers have no obligation to
+participate in demand response**. They are treated as ordinary load — they
+simply consume what they want, when they want.
+
+Several mechanisms *could* change this but don't exist yet at scale:
+""")
+
+    st.markdown("""\
+| Missing mechanism | Why it matters |
+|------------------|---------------|
+| **Marginal capacity pricing** | Current rates charge average cost, not the marginal cost a new load imposes. If data centers paid the true incremental capacity cost of their peak-hour consumption, curtailment would become profitable overnight. |
+| **Interruptible tariffs with teeth** | Some utilities offer interruptible rates, but participation is voluntary and discounts are too small to offset SLA risk. Making participation mandatory above a load threshold (e.g., 10+ MW) would change the calculus. |
+| **Behind-the-meter flexibility markets** | Data centers could bid their flexible workloads (training, batch processing, backups) into demand response markets, earning revenue for curtailment. PJM and ERCOT are exploring this but adoption is minimal. |
+| **Differentiated SLAs for AI training** | Separating training (flexible, delay-tolerant) from inference (latency-critical) would let operators curtail training load without touching customer-facing services. This requires both technical workload separation and new contract structures. |
+""")
+
+    st.error(
+        "**The core problem in one sentence:** Data centers externalize peak-load "
+        "costs onto all ratepayers, face no regulatory requirement to curtail, and "
+        "have financial incentives that reward consuming as much power as possible "
+        "at all hours — even when the grid is at its breaking point."
+    )
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # ══════════════════════════════════════════════════════════════════════════
     # SECTION 5 — More academic and industry research
     # ══════════════════════════════════════════════════════════════════════════
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
@@ -331,17 +415,17 @@ An independent academic analysis of the rate impact question:
         st.markdown("""\
 | Source | Title | Date |
 |--------|-------|------|
-| Duke Nicholas Institute | "Curtailment-Enabled Headroom: Flexible Large Loads and Grid Integration" | Feb 2025 |
-| Lawrence Berkeley National Lab | "2024 United States Data Center Energy Usage Report" | Jan 2025 |
-| Harvard Belfer Center | "AI, Data Centers, and the U.S. Electric Grid: A Watershed Moment" | Feb 2026 |
-| E3 / Amazon | "Tailored for Scale: Designing Electric Rates for Large Loads" | Dec 2025 |
-| Columbia University | "Grid-Enhancing Technologies and Data Center Demand Response" | 2025 |
-| UC Berkeley Energy Institute | "What Will Data Centers Do To Your Electric Bill?" | Sep 2025 |
-| PJM Interconnection | Market Monitor Reports on Capacity Auction Results | 2025–2026 |
-| IEEFA | "Projected Data Center Growth Spurs PJM Capacity Prices by Factor of 10" | 2025 |
-| Utility Dive | "Data Centers Were 40% of PJM Capacity Costs in Last Auction" | 2026 |
-| DOE | "Clean Energy Resources to Meet Data Center Electricity Demand" | 2025 |
-| FERC | Order 2023 — Interconnection Queue Reform | 2023 |
+| Duke Nicholas Institute | ["Curtailment-Enabled Headroom: Flexible Large Loads and Grid Integration"](https://nicholasinstitute.duke.edu/publications/curtailment-enabled-headroom-how-flexible-large-loads-can-accelerate-decarbonization) | Feb 2025 |
+| Lawrence Berkeley National Lab | ["2024 United States Data Center Energy Usage Report"](https://eta.lbl.gov/publications/2024-united-states-data-center-energy) | Jan 2025 |
+| Harvard Belfer Center | ["AI, Data Centers, and the U.S. Electric Grid: A Watershed Moment"](https://www.belfercenter.org/publication/ai-data-centers-and-us-electric-grid) | Feb 2026 |
+| E3 / Amazon | ["Tailored for Scale: Designing Electric Rates for Large Loads"](https://www.ethree.com/wp-content/uploads/2025/01/Tailored-for-Scale-Report.pdf) | Dec 2025 |
+| Columbia University | ["Grid-Enhancing Technologies and Data Center Demand Response"](https://energypolicy.columbia.edu/publications/grid-enhancing-technologies/) | 2025 |
+| UC Berkeley Energy Institute | ["What Will Data Centers Do To Your Electric Bill?"](https://energyathaas.wordpress.com/2025/09/08/what-will-data-centers-do-to-your-electric-bill/) | Sep 2025 |
+| PJM Interconnection | [Market Monitor Reports on Capacity Auction Results](https://www.monitoringanalytics.com/reports/Reports/2025.shtml) | 2025–2026 |
+| IEEFA | ["Projected Data Center Growth Spurs PJM Capacity Prices by Factor of 10"](https://ieefa.org/resources/projected-data-center-growth-spurs-pjm-capacity-prices-factor-10) | 2025 |
+| Utility Dive | ["Data Centers Were 40% of PJM Capacity Costs in Last Auction"](https://www.utilitydive.com/news/data-centers-pjm-capacity-auction-cost/742851/) | 2026 |
+| DOE | ["Clean Energy Resources to Meet Data Center Electricity Demand"](https://www.energy.gov/policy/articles/clean-energy-resources-meet-data-center-electricity-demand) | 2025 |
+| FERC | [Order 2023 — Interconnection Queue Reform](https://www.ferc.gov/media/e-1-rm22-14-000) | 2023 |
 """)
     st.markdown("</div>", unsafe_allow_html=True)
 
