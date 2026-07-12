@@ -1,5 +1,5 @@
 import streamlit as st
-from src.constants import QUERY_COEFFS, TOKEN_COEFFS, GRID_INTENSITY, WATER_ML_PER_WH
+from src.constants import QUERY_COEFFS, TOKEN_COEFFS, GRID_INTENSITY, WATER_ML_PER_WH, SOURCES
 from src.helpers import human_energy, human_water
 
 def render_calc_tab():
@@ -24,7 +24,13 @@ def render_calc_tab():
                 grid_name = st.selectbox("Grid carbon intensity", list(GRID_INTENSITY.keys()), index=2)
                 co2_g = energy_wh / 1000 * GRID_INTENSITY[grid_name]
                 grid_label = grid_name
-            st.info(c["note"])
+            
+            note_text = c["note"]
+            src_key = c["src"]
+            if src_key in SOURCES:
+                src_lbl, src_url = SOURCES[src_key]
+                note_text += f"\n\n🔗 **Source Link:** [{src_lbl}]({src_url})"
+            st.info(note_text)
             per_unit_e = c["energy_wh"]
         else:
             n = st.number_input("Output tokens", min_value=0, value=500_000, step=10_000)

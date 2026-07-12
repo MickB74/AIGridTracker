@@ -34,6 +34,16 @@ QUERY_COEFFS = {
         "scope": "Benchmark",
         "note": "Estimated from benchmark inference runs on Anthropic API.",
     },
+    "Claude 3.5 Haiku — efficient (Epoch AI est., 2025)": {
+        "energy_wh": 0.10, "co2_g": None, "water_ml": None, "src": "epoch_2025",
+        "scope": "Benchmark",
+        "note": "Distilled faster model; estimated from token-level coefficients for small parameter scale.",
+    },
+    "Claude 3 Opus — heavy workload (Epoch AI est., 2025)": {
+        "energy_wh": 0.85, "co2_g": None, "water_ml": None, "src": "epoch_2025",
+        "scope": "Benchmark",
+        "note": "Large frontier model; estimated from token-level coefficients for high-parameter density.",
+    },
     "Llama 3.1 405B — A100 cluster (Epoch AI, 2025)": {
         "energy_wh": 0.97, "co2_g": None, "water_ml": None, "src": "epoch_2025",
         "scope": "Benchmark",
