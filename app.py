@@ -1,6 +1,6 @@
 """
-AI Token Footprint — energy, water & carbon of LLM usage
-=========================================================
+GridWatch AI — energy, water & carbon of LLM usage
+==================================================
 Streamlit app: turns tokens/queries into energy, water, and CO2; puts a single
 query in human terms; compares first-party & benchmark sources; pulls LIVE
 measured per-model numbers from the ML.ENERGY leaderboard; and shows how timing
@@ -43,13 +43,13 @@ def load_css():
 # PAGE SETUP
 # --------------------------------------------------------------------------- #
 
-st.set_page_config(page_title="AI Token Footprint", page_icon="⚡", layout="wide")
+st.set_page_config(page_title="GridWatch AI", page_icon="⚡", layout="wide")
 load_css()
 
 # Render custom hero banner
 st.image("assets/hero.png", use_column_width=True)
 
-st.markdown('<h1 class="main-title">⚡ AI Token Footprint</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-title">⚡ GridWatch AI</h1>', unsafe_allow_html=True)
 st.caption("The energy, water, and carbon behind LLM token usage — from a single "
            "prompt to the global data-center grid. Sourced throughout; see **Methodology**.")
 

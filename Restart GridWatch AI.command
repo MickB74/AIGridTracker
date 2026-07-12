@@ -30,7 +30,7 @@ fi
 (sleep 3 && open "http://localhost:$PORT") &
 
 # 4) Restart (foreground; close this window or Ctrl-C to stop).
-echo "Starting AI Token Footprint on http://localhost:$PORT …"
+echo "Starting GridWatch AI on http://localhost:$PORT …"
 exec "$STREAMLIT" run app.py \
     --server.port "$PORT" \
     --server.headless false

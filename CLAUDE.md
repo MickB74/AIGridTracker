@@ -1,4 +1,4 @@
-# CLAUDE.md — AI Token Footprint
+# CLAUDE.md — GridWatch AI
 
 Context for AI agents working in this repo.
 

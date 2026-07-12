@@ -1,4 +1,4 @@
-# AI Token Footprint
+# GridWatch AI
 
 A Streamlit app for the energy, water, and carbon footprint of LLM token usage —
 from a single prompt to the global data-center grid.
