@@ -1,5 +1,5 @@
 """
-Blog content — curated stories and project narrative for the AIGridTracker blog tab.
+Blog content — curated stories and project narrative for the GridWatch AI blog tab.
 Each story is a dict with: id, section, title, date, author, summary, body (markdown),
 and optional tags. Sections: "stories" for reported pieces, "about" for project mission.
 """
@@ -14,7 +14,7 @@ ABOUT_SECTION = {
     "title": "Our Mission",
     "tagline": "Transparency tools for the communities living next to AI infrastructure.",
     "body": """\
-**AI Grid Tracker** exists because the people who live near data centers deserve the
+**GridWatch AI** exists because the people who live near data centers deserve the
 same quality of information that the people who *build* them already have.
 
 Every week a new hyperscaler or colocation developer files interconnection paperwork
@@ -42,7 +42,7 @@ This project is independent, unfunded, and open-source. It is not affiliated wit
 cloud provider, data-center developer, or advocacy group. Our only agenda is that public
 decisions should be informed by public data.
 
-*— The AI Grid Tracker team*
+*— The GridWatch AI team*
 """,
 }
 
@@ -57,7 +57,7 @@ BLOG_STORIES = [
         "section": "stories",
         "title": "The Moratorium Wave: Why 14 States Are Pressing Pause on Data Centers",
         "date": _dt.date(2026, 7, 8),
-        "author": "AI Grid Tracker",
+        "author": "GridWatch AI",
         "tags": ["policy", "moratoriums", "zoning", "community"],
         "summary": (
             "From Virginia's Loudoun County to rural Indiana, a rolling wave of moratorium "
@@ -122,7 +122,7 @@ genuine community benefit will find smoother paths than those that don't.
         "section": "stories",
         "title": "The Hidden Water Cost of Your AI Query: What the Data Actually Shows",
         "date": _dt.date(2026, 7, 3),
-        "author": "AI Grid Tracker",
+        "author": "GridWatch AI",
         "tags": ["water", "energy", "research", "explainer"],
         "summary": (
             "A single ChatGPT query uses about 18 mL of water — roughly a medicine-cup "
@@ -152,7 +152,7 @@ Data-center water use has two components:
   coal-heavy grid, the water embedded in its electricity can **dwarf** the water
   used on-site. The US Geological Survey estimates 1.5–2.0 L/kWh for coal generation.
 
-The AI Grid Tracker's **Calculator** tab accounts for both. When you enter a query
+GridWatch AI's **Calculator** tab accounts for both. When you enter a query
 count and select a grid carbon intensity, the water estimate multiplies the energy
 draw by a blended WUE factor that includes off-site generation water.
 
@@ -188,7 +188,7 @@ The point isn't to stop using AI. It's to ensure that:
         "section": "stories",
         "title": "233 GW of Demand Is Waiting in Line: Inside ERCOT's Data Center Queue",
         "date": _dt.date(2026, 6, 25),
-        "author": "AI Grid Tracker",
+        "author": "GridWatch AI",
         "tags": ["grid", "ERCOT", "Texas", "demand", "infrastructure"],
         "summary": (
             "Texas's grid operator has 233 GW of large-load interconnection requests — "
@@ -267,7 +267,7 @@ signaled that legislators are paying attention.
         "section": "stories",
         "title": "How the Industry Files Your Protest: 'Social License' and the $64B Risk Column",
         "date": _dt.date(2026, 7, 11),
-        "author": "AI Grid Tracker",
+        "author": "GridWatch AI",
         "tags": ["community", "policy", "site-selection", "risk", "zoning"],
         "summary": (
             "Data-center developers don't have a risk category called 'protests.' They "

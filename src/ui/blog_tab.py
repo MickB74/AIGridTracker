@@ -1,5 +1,5 @@
 """
-Blog tab — curated stories and project mission for the AI Grid Tracker.
+Blog tab — curated stories and project mission for GridWatch AI.
 Renders an 'Our Mission' section and a feed of authored blog posts with
 tags, summaries, and full-body markdown expansion.
 """
