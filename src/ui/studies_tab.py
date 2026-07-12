@@ -3,13 +3,17 @@ State Studies tab — presents official state-level data center impact studies,
 legislative reports, and grid integration papers (e.g. Michigan CRC, Virginia JLARC).
 Generates detailed data center capacity profiles dynamically for all 50 states + DC
 using the state dataset, alongside an interactive choropleth map.
+Pulls live Google News and daily Reddit discussion threads for the selected state.
 """
 
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import urllib.parse
 from src.constants import STATE_DC_DF, SOURCES
 from src.helpers import src_link
+from src.services.news import fetch_news
+from src.services.reddit import load_reddit_corpus
 
 # Specific official state studies data (curated deep-dives)
 STATE_STUDIES = {
@@ -107,7 +111,7 @@ STATE_STUDIES = {
         }
     },
     "Indiana": {
-        "title": "Indiana Utility Regulatory Commission Large Load Grid & Water Studies (2026)",
+        "title": "Indiana Utility Regulatory Commission Grid & Water Studies (2026)",
         "author": "Indiana General Assembly / IURC (HB 1245)",
         "src_key": "iurc_indiana_2026",
         "pdf_url": "https://iga.in.gov/",
@@ -249,7 +253,6 @@ def render_studies_tab():
             c1, c2, c3, c4 = st.columns(4)
             c1.metric("Active Facilities", f"{row['dc_count']}")
             c2.metric("Power Draw", f"{row['twh_year']:.1f} TWh/yr")
-            # Percent of national 176 TWh
             pct_us = (row['twh_year'] / 176.0) * 100
             c3.metric("US Power Share", f"{pct_us:.1f}%")
             
@@ -290,6 +293,80 @@ def render_studies_tab():
             
             st.divider()
             st.markdown(f"🔗 **[View U.S. Data Center Power Map on ElectricChoice.com](https://www.electricchoice.com/datacenters/)**")
+            
+        # ── NEWS & REDDIT FEEDS FOR SELECTED STATE ────────────────────────
+        st.divider()
+        st.subheader(f"🗞️ Live Local Updates & sentiment: {selected_state}")
+        st.caption(
+            f"Google News hits for data centers in {selected_state} and grassroots "
+            "mentions filtered from today's Reddit local grid discussion snapshot."
+        )
+        
+        feed_col1, feed_col2 = st.columns(2)
+        
+        # 1. Google News Column
+        with feed_col1:
+            st.markdown("##### 📰 Recent Google News")
+            news_q = f'"{selected_state}" "data center" (electricity OR grid OR water OR community OR ratepayer OR moratorium)'
+            news_items, news_err = fetch_news(news_q, limit=6)
+            
+            if news_err or news_items is None:
+                gn_url = "https://news.google.com/search?q=" + urllib.parse.quote(news_q)
+                st.warning("Google News feed is temporarily unavailable.")
+                st.markdown(f"🔗 **[Open search on Google News]({gn_url})**")
+            elif not news_items:
+                st.info(f"No recent news articles found for data centers in {selected_state}.")
+            else:
+                for it in news_items:
+                    meta = " · ".join(x for x in (it["source"], it["published"]) if x)
+                    st.markdown(
+                        f"- [{it['title']}]({it['link']})  \n"
+                        f"  <small style='color:#888'>{meta}</small>",
+                        unsafe_allow_html=True
+                    )
+        
+        # 2. Reddit Sentiment Column
+        with feed_col2:
+            st.markdown("##### 👥 Local Reddit Discussion")
+            corpus, cerr = load_reddit_corpus(pd.Timestamp.now().strftime("%Y-%m-%d"))
+            
+            reddit_items = []
+            if not corpus.empty:
+                # Filter posts mentioning the state name or its abbreviation in a bounded word format
+                # Case insensitive search
+                state_lower = selected_state.lower()
+                abbrev_term = f" {row['abbrev']} "
+                
+                match_mask = (
+                    corpus["title"].str.lower().str.contains(state_lower, na=False) |
+                    corpus["selftext"].str.lower().str.contains(state_lower, na=False) |
+                    corpus["subreddit"].str.lower().str.contains(state_lower, na=False) |
+                    corpus["title"].str.contains(abbrev_term, na=False) |
+                    corpus["selftext"].str.contains(abbrev_term, na=False)
+                )
+                matching_posts = corpus[match_mask]
+                
+                if not matching_posts.empty:
+                    for p in matching_posts.head(6).itertuples():
+                        reddit_items.append({
+                            "title": p.title,
+                            "link": p.link,
+                            "meta": f"r/{p.subreddit} · {p.created}"
+                        })
+            
+            # Display Reddit Posts
+            if reddit_items:
+                for it in reddit_items:
+                    st.markdown(
+                        f"- [{it['title']}]({it['link']})  \n"
+                        f"  <small style='color:#888'>{it['meta']}</small>",
+                        unsafe_allow_html=True
+                    )
+            else:
+                rq = f'data center "{selected_state}"'
+                reddit_url = "https://www.reddit.com/search/?q=" + urllib.parse.quote(rq) + "&sort=new"
+                st.info(f"No recent Reddit snapshot discussions found mentioning {selected_state}.")
+                st.markdown(f"🔗 **[Search Reddit Live for '{selected_state}']({reddit_url})**")
             
     else:
         st.info("💡 Select any state on the map above or choose a state from the dropdown to load its comprehensive data center profile.")
