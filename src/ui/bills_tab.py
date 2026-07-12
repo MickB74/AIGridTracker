@@ -119,6 +119,109 @@ usage didn't change.
     st.markdown("</div>", unsafe_allow_html=True)
 
     # ══════════════════════════════════════════════════════════════════════════
+    # SECTION 2b — How wholesale MW charges land on your residential bill
+    # ══════════════════════════════════════════════════════════════════════════
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("## 🧮 How wholesale MW charges actually land on your bill")
+    st.markdown("""\
+The capacity auction clears at **$269.92 per MW-day**. But you're not a power
+plant and you don't buy megawatts. So how does a wholesale market price end up
+on your residential bill? Through a chain of translations:
+""")
+
+    h1, h2 = st.columns(2)
+    with h1:
+        st.markdown("""\
+#### Step 1: Your utility buys capacity in bulk
+
+Your utility (Pepco, Duke, AEP, ComEd, etc.) is obligated to procure enough
+capacity to cover every customer's share of the system peak — plus a reserve
+margin. It buys this capacity at the auction price and the total cost enters
+its **revenue requirement** — the amount it needs to collect from all
+customers combined.
+
+For a utility serving 1 million homes in PJM, the 2025/26 auction cost
+roughly **$800 million to $1.2 billion** in capacity obligations alone —
+before a single electron flows.
+
+#### Step 2: The cost is allocated to you via your "capacity tag"
+
+In PJM, every customer gets a **Peak Load Contribution (PLC)** — also called
+a "capacity tag." It's your usage during the **five highest-demand hours**
+of the prior summer (the "5 CP" hours), averaged together.
+
+If you ran your AC hard on those specific afternoons, your PLC is high and
+you carry a bigger share of the capacity cost. If you were away on vacation,
+your tag is lower. Most residential customers have **no idea** which hours
+set their tag — the utility doesn't alert you in advance.
+""")
+    with h2:
+        st.markdown("""\
+#### Step 3: It shows up as a line item — or it's buried
+
+How the capacity cost actually appears on your bill depends on your utility
+and state:
+
+| How it shows up | Example utilities |
+|----------------|-------------------|
+| **Explicit "capacity" or "generation capacity" line item** | Pepco (DC/MD), BGE, PECO — deregulated markets where supply and delivery are separated |
+| **Bundled into "supply charges" per kWh** | Duke Energy, Dominion, Southern Company — regulated utilities that roll capacity into a blended rate |
+| **"Default service" rider or surcharge** | ComEd, PPL — appears as a separate rider that changes when auction prices change |
+| **Invisible — embedded in base rate** | Many rural co-ops and munis that set rates annually |
+
+In deregulated states, when the PJM capacity auction price jumps, you'll see
+it directly: Pepco customers got a separate notice in spring 2025 that their
+capacity charge was increasing by ~$10/month. In regulated states, the same
+cost flows through the next rate case — it's delayed, but it still arrives.
+
+#### Step 4: Peak-period pricing (if your utility uses it)
+
+Some utilities go further with **time-of-use (TOU)** rates that charge more
+during peak hours (typically 2–7 PM on summer weekdays). This is designed to
+incentivize you to shift usage — run the dishwasher at night, pre-cool the
+house in the morning — but it also means your bill is directly affected by
+*when* you use power, not just *how much*.
+""")
+
+    st.markdown("""\
+#### A worked example: the PJM capacity cost on a typical home
+""")
+
+    ex1, ex2, ex3 = st.columns(3)
+    with ex1:
+        st.metric("Typical residential PLC", "2.5 kW",
+                  help="Average capacity tag for a home with central AC in PJM")
+        st.caption("Your share of the system peak")
+    with ex2:
+        st.metric("2024/25 capacity cost", "$2.20/month",
+                  help="2.5 kW × $28.92/MW-day × 30.4 days ÷ 1000")
+        st.caption("Before the price jump")
+    with ex3:
+        st.metric("2025/26 capacity cost", "$20.50/month",
+                  help="2.5 kW × $269.92/MW-day × 30.4 days ÷ 1000",
+                  delta="+$18.30/month", delta_color="inverse")
+        st.caption("After the 833% auction increase")
+
+    st.markdown("""\
+That **$18.30/month increase** — about **$220/year** — is entirely from the
+capacity market. Your usage didn't change. Your appliances didn't change.
+The *grid's obligation* changed because total system peak demand grew, driven
+largely by data center load, and the price of securing enough generation to
+meet that peak went up accordingly.
+""")
+
+    st.info(
+        "**What you can do:** In PJM territory, your capacity tag is set by your "
+        "usage during the ~5 hottest summer afternoons. If you can reduce AC usage "
+        "during **2–6 PM on the hottest weekdays in July/August** — by pre-cooling, "
+        "raising the thermostat, or using a smart thermostat's demand-response mode — "
+        "you can lower your PLC and reduce your share of capacity costs for the "
+        "following year. Some utilities offer **peak-time rebate** programs that pay "
+        "you $1–2/kWh for reducing usage during these critical hours."
+    )
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # ══════════════════════════════════════════════════════════════════════════
     # SECTION 3 — How data centers specifically affect your bill
     # ══════════════════════════════════════════════════════════════════════════
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
