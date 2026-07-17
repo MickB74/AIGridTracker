@@ -2,18 +2,198 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 import plotly.express as px
+import pydeck as pdk
 from src.constants import (DATACENTERS_DF, DC_METRICS, ERCOT_LL_VINTAGE,
                            ERCOT_LL_DC_SHARE, ERCOT_LL_FUNNEL, HYPERSCALERS_DF,
                            HYPERSCALER_COLORS, AI_COMPETITOR_SITES_DF,
                            AI_COMPETITORS_DF, STATE_DC_DF, STATE_DC_NATIONAL,
                            MEGA_PROJECTS_DF, OPERATORS_DF, DC_SITES_DF,
-                           OPERATORS)
+                           OPERATORS, EXECUTIVES_DF)
 from src.helpers import src_link
 from src.services.ercot import ercot_largeload_latest
 from src.services.eia import eia_latest_demand
 from src.services.secrets import load_local_secrets
 
+def _hex_to_rgb(hex_color):
+    """Convert '#rrggbb' to [r, g, b, a]."""
+    h = hex_color.lstrip("#")
+    return [int(h[i:i+2], 16) for i in (0, 2, 4)] + [200]
+
+_REGION_PRESETS = {
+    "Full USA": {"lat": 39.5, "lon": -98.5, "zoom": 3.5, "pitch": 0},
+    "Data Center Alley (NoVA)": {"lat": 39.04, "lon": -77.5, "zoom": 9, "pitch": 30},
+    "Dallas–Fort Worth": {"lat": 32.78, "lon": -96.8, "zoom": 9, "pitch": 30},
+    "Silicon Valley / Bay Area": {"lat": 37.4, "lon": -122.0, "zoom": 9, "pitch": 30},
+    "Central Ohio": {"lat": 40.08, "lon": -82.8, "zoom": 9, "pitch": 30},
+    "Phoenix / Mesa, AZ": {"lat": 33.45, "lon": -111.9, "zoom": 9, "pitch": 30},
+    "Pacific NW (OR / WA)": {"lat": 45.5, "lon": -120.5, "zoom": 7, "pitch": 20},
+    "Texas (statewide)": {"lat": 31.5, "lon": -99.5, "zoom": 5.5, "pitch": 15},
+    "Memphis, TN (xAI)": {"lat": 35.06, "lon": -90.06, "zoom": 10, "pitch": 30},
+    "Abilene, TX (Stargate)": {"lat": 32.45, "lon": -99.7, "zoom": 10, "pitch": 30},
+}
+
+def _render_interactive_map():
+    """Detailed, zoomable interactive map of all US data center sites."""
+    st.subheader("🗺️ Interactive US data center map")
+    st.caption(
+        "Explore every tracked data center campus on a zoomable street-level "
+        "map. Zoom in to see individual sites; hover for operator, owner, "
+        "tenant, and attribution details. Color-coded by operator."
+    )
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+
+    all_sites = DC_SITES_DF.copy()
+    all_sites["_owner_label"] = all_sites["owner"].replace("self", "Self-owned")
+    all_sites["_tenant_label"] = all_sites["tenant"].fillna("Undisclosed")
+    all_sites["_attrib_label"] = all_sites["attribution"].map({
+        "first_party": "First-party (operator site)",
+        "deed": "County deed / assessor",
+        "leasing_news": "Leasing announcement",
+        "press": "Trade press",
+        "inferred": "Inferred",
+    }).fillna("Unknown")
+
+    op_colors = {name: m[6] for name, m in OPERATORS.items()}
+    all_sites["color"] = all_sites["operator"].map(
+        lambda o: _hex_to_rgb(op_colors.get(o, "#6b7280")))
+
+    fc1, fc2 = st.columns([3, 2])
+    operators = sorted(all_sites["operator"].unique())
+    selected_ops = fc1.multiselect(
+        "Filter by operator", operators, default=operators,
+        key="map_op_filter")
+    states = sorted(all_sites["state"].unique())
+    selected_states = fc2.multiselect(
+        "Filter by state", states, default=states,
+        key="map_state_filter")
+
+    filtered = all_sites[
+        all_sites["operator"].isin(selected_ops) &
+        all_sites["state"].isin(selected_states)
+    ].copy()
+
+    rc1, rc2, rc3 = st.columns([2, 1, 1])
+    preset = rc1.selectbox("Jump to region", list(_REGION_PRESETS.keys()),
+                           key="map_preset")
+    map_style = rc2.radio("Map style", ["Road", "Satellite", "Dark"],
+                          horizontal=True, key="map_style")
+    show_labels = rc3.checkbox("Show site labels", value=False, key="map_labels")
+
+    style_urls = {
+        "Road": "road",
+        "Satellite": "satellite",
+        "Dark": "dark",
+    }
+
+    vp = _REGION_PRESETS[preset]
+
+    m1, m2, m3 = st.columns(3)
+    m1.metric("Sites shown", f"{len(filtered)}")
+    m2.metric("Operators", f"{filtered['operator'].nunique()}")
+    m3.metric("States", f"{filtered['state'].nunique()}")
+
+    if filtered.empty:
+        st.info("No sites match the current filters. Broaden the selection.")
+    else:
+        tooltip = {
+            "html": (
+                "<div style='font-family:sans-serif;padding:4px'>"
+                "<b style='font-size:14px'>{operator}</b><br/>"
+                "<span style='color:#aaa'>📍</span> {location}, {state}<br/>"
+                "<span style='color:#aaa'>Owner:</span> {_owner_label}<br/>"
+                "<span style='color:#aaa'>Tenant:</span> {_tenant_label}<br/>"
+                "<span style='color:#aaa'>Source:</span> {_attrib_label}"
+                "</div>"
+            ),
+            "style": {
+                "backgroundColor": "#1a1a2e",
+                "color": "white",
+                "border": "1px solid #333",
+                "border-radius": "6px",
+            }
+        }
+
+        layers = [
+            pdk.Layer(
+                "ScatterplotLayer",
+                data=filtered,
+                get_position=["lon", "lat"],
+                get_fill_color="color",
+                get_radius=6000,
+                radius_min_pixels=4,
+                radius_max_pixels=20,
+                pickable=True,
+                auto_highlight=True,
+                highlight_color=[255, 255, 0, 100],
+            ),
+        ]
+
+        if show_labels:
+            layers.append(
+                pdk.Layer(
+                    "TextLayer",
+                    data=filtered,
+                    get_position=["lon", "lat"],
+                    get_text="location",
+                    get_size=12,
+                    get_color=[255, 255, 255, 200],
+                    get_angle=0,
+                    get_text_anchor="'middle'",
+                    get_alignment_baseline="'top'",
+                    get_pixel_offset=[0, 12],
+                )
+            )
+
+        deck = pdk.Deck(
+            layers=layers,
+            initial_view_state=pdk.ViewState(
+                latitude=vp["lat"],
+                longitude=vp["lon"],
+                zoom=vp["zoom"],
+                pitch=vp["pitch"],
+                bearing=0,
+            ),
+            map_style=style_urls[map_style],
+            tooltip=tooltip,
+        )
+        st.pydeck_chart(deck, use_container_width=True)
+
+    with st.expander("Map legend — operator colors"):
+        legend_items = []
+        for op in sorted(filtered["operator"].unique()):
+            c = op_colors.get(op, "#6b7280")
+            count = len(filtered[filtered["operator"] == op])
+            legend_items.append(
+                f'<span style="display:inline-block;width:12px;height:12px;'
+                f'border-radius:50%;background:{c};margin-right:6px"></span>'
+                f'**{op}** ({count} sites)')
+        st.markdown("  \n".join(legend_items), unsafe_allow_html=True)
+
+    st.caption(
+        "Map tiles: OpenStreetMap / Mapbox. Data from operator first-party "
+        "location pages, SEC filings, press, and deed records. Coordinates "
+        "are town/county/metro centroids — not surveyed GPS positions."
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
 def render_dc_tab():
+    with st.expander("📑 On this page", expanded=False):
+        st.markdown(
+            "**1.** Interactive US data center map · "
+            "**2.** Market power by phase · "
+            "**3.** ERCOT large-load queue · "
+            "**4.** Hyperscaler campuses & AI megasites · "
+            "**5.** Owners, operators & shell LLCs · "
+            "**6.** Key executives · "
+            "**7.** SEC 10-K competitor analysis · "
+            "**8.** Demand wave (ERCOT & PJM) · "
+            "**9.** Grid operators & FERC response · "
+            "**10.** 50-state facility count · "
+            "**11.** Mega-projects leaderboard"
+        )
+    _render_interactive_map()
+    st.divider()
     st.subheader("Where the data centers are — and how much power they pull")
     st.caption("Market-level power by phase (~2025). Totals are broker inventories "
                "(CBRE / JLL / Cushman & Wakefield) — operators don't disclose "
@@ -274,13 +454,10 @@ def render_dc_tab():
     st.divider()
     st.subheader("Who owns it, who runs it, who fills it — and the LLC on the deed")
     st.caption(
-        "A campus has up to three separate parties, and the map's brand label is "
-        "usually just the **operator**. Land is bought and permitted through "
-        "single-purpose **shell LLCs** — the join key back to county deed and "
-        "Secretary-of-State records. Hyperscalers hide behind codename LLCs during "
-        "land assembly; the colocation/REIT operators file under brand-named site "
-        "entities but rarely disclose the **tenant** actually consuming the power. "
-        "Ownership facts are press-sourced (automated fact-check pending).")
+        "A campus has up to three separate parties — the map's brand label is "
+        "usually just the **operator**. Land is bought through single-purpose "
+        "**shell LLCs**, the join key back to county deed records. Ownership "
+        "facts are press-sourced.")
 
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     tier_labels = {"hyperscaler": "Hyperscaler (owns & consumes)",
@@ -302,6 +479,58 @@ def render_dc_tab():
         "air-permit filings corroborate. Sources: "
         + " · ".join(src_link(k) for k in
                      ["dc_ownership", "vantage_dbsl", "switch_dbif", "crwv_coresci"]))
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # --- Key executives at data center operators & sponsors --------------------
+    st.divider()
+    st.subheader("Key executives — who runs these companies")
+    st.caption(
+        "CEO and data-center leadership at every tracked operator and "
+        "mega-project sponsor. LinkedIn links open a people search for "
+        "the executive — verify the profile before reaching out. Titles "
+        "are as of mid-2025; confirm current roles before outreach.")
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+
+    exec_df = EXECUTIVES_DF.copy()
+
+    ef1, ef2 = st.columns(2)
+    ex_filter = ef1.multiselect(
+        "Filter by company", sorted(exec_df["company"].unique()),
+        default=[], key="exec_company_filter",
+        placeholder="All companies")
+    cat_labels = {"leadership": "Leadership", "infrastructure": "Infrastructure",
+                  "sustainability": "Sustainability & energy",
+                  "policy": "Policy & government relations"}
+    cat_filter = ef2.multiselect(
+        "Filter by role category",
+        list(cat_labels.keys()), default=[],
+        format_func=lambda x: cat_labels[x],
+        key="exec_cat_filter", placeholder="All categories")
+    if ex_filter:
+        exec_df = exec_df[exec_df["company"].isin(ex_filter)]
+    if cat_filter:
+        exec_df = exec_df[exec_df["category"].isin(cat_filter)]
+
+    st.dataframe(
+        exec_df[["company", "name", "title", "category", "focus", "linkedin"]],
+        use_container_width=True, hide_index=True,
+        column_config={
+            "company": st.column_config.TextColumn("Company"),
+            "name": st.column_config.TextColumn("Name"),
+            "title": st.column_config.TextColumn("Title"),
+            "category": st.column_config.TextColumn("Category"),
+            "focus": st.column_config.TextColumn("Focus", width="large"),
+            "linkedin": st.column_config.LinkColumn(
+                "LinkedIn", display_text="search"),
+        })
+    st.caption(
+        f"Showing {len(exec_df)} executives across "
+        f"{exec_df['company'].nunique()} companies. "
+        "Titles sourced from company websites and SEC filings; LinkedIn "
+        "links are search URLs — verify the profile matches before "
+        "connecting. Executives change roles; always confirm current "
+        "status.")
     st.markdown('</div>', unsafe_allow_html=True)
 
     # --- Who each company names as a competitor (from SEC 10-K filings) --------
@@ -327,16 +556,11 @@ def render_dc_tab():
         ["goog_10k", "meta_10k", "msft_10k", "amzn_10k", "orcl_10k", "crwv_10k"]))
 
     st.info(
-        "📋 **Authoritative facility data is coming (EIA).** Data centers are "
-        "electricity *customers*, so they've never been in federal facility data "
-        "— which is why the maps above rely on broker estimates and operator "
-        "self-disclosure. That's starting to change: in **March 2026 the EIA "
+        "📋 **Authoritative facility data is coming.** In **March 2026 the EIA "
         "launched its first pilot survey** of data-center energy use — 196 "
-        "companies across **Texas, Washington, and Northern Virginia/DC** "
-        "(electricity, cooling, IT specs, efficiency), voluntary now with a "
-        "**mandatory survey to follow**. Results aren't published yet. Meanwhile "
-        "EIA already powers this app's live grid data (EIA-930): the carbon "
-        "curves on **Grid timing** and the live system-demand metric below. "
+        "companies across Texas, Washington, and Northern Virginia/DC — with a "
+        "**mandatory survey to follow**. Until results publish, the maps above "
+        "rely on broker estimates and operator self-disclosure. "
         + src_link("eia_pilot") + " · " + src_link("eia930") + ".")
     st.markdown('</div>', unsafe_allow_html=True)
 
@@ -391,67 +615,65 @@ def render_dc_tab():
 
     st.divider()
     st.subheader("How the grid operators & FERC are responding")
-    st.caption("Every US RTO/ISO is now rewriting the rulebook for how giant, "
-               "inflexible data-center loads connect and pay — with FERC forcing "
-               "the pace. The common thread: make large loads *provably* firm, "
-               "curtailable, and cost-causation-fair so existing ratepayers "
-               "aren't left holding the bill.")
-
-    st.markdown(f"""
-**⚖️ FERC — the federal referee.**
-On **Dec 18, 2025** FERC ordered **PJM** — the nation's largest grid operator —
-to write new tariff rules for *co-location* (data centers plugging directly into
-a power plant behind the meter), giving PJM 60 days to file and demanding an
-interim reliability report. It found PJM's tariff lacked the "clarity or
-consistency" to price co-located load fairly. {src_link('ferc_pjm_colo')}.
-Then on **Jun 18, 2026** FERC went wider, issuing **show-cause orders to MISO,
-SPP and other RTOs**: justify your large-load rules within 60 days, or reform
-them. {src_link('ferc_showcause')}.
-""")
+    st.caption("Every US RTO/ISO is rewriting the rulebook for how giant, "
+               "inflexible loads connect and pay — with FERC forcing the pace.")
 
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    ra, rb = st.columns(2)
-    with ra:
-        st.markdown("**🟠 PJM (Mid-Atlantic / Data Center Alley)**")
-        st.markdown(f"""
-- Data-center demand is now showing up as **price**: the latest capacity auction
-  cleared at a **record ~$16.4B**, with data centers ~**40% ($6.5B)** of the
-  cost — and it hit the price cap for the third straight year. {src_link('pjm_auction25')}.
-- Building a distinct **co-located load service** and large-load tariff under
-  FERC's Dec 2025 order (NITS on a gross basis, plus new firm / non-firm
-  contract-demand services). {src_link('ferc_pjm_colo')}.
-""")
-        st.markdown("**🔵 MISO (Midwest / South)**")
-        st.markdown(f"""
-- Facing an "unprecedented surge" in large-load requests; standing up
-  **Large Load Interconnection Reliability Requirements** and expedited study
-  paths (ERAS) to integrate them without degrading reliability. {src_link('miso_llir')}.
-- Under FERC's Jun 2026 show-cause order to justify or revise its tariff. {src_link('ferc_showcause')}.
-""")
-    with rb:
-        st.markdown("**🟢 ERCOT (Texas)**")
-        st.markdown(f"""
-- **SB 6 (2025)** is the most aggressive large-load law yet: loads **≥75 MW**
-  get new interconnection standards, a **$50k/MW** fee, and mandatory
-  **curtailment/shut-off equipment** — ERCOT can order them to drop load or run
-  backup generation during grid emergencies. {src_link('tx_sb6_ll')}; {src_link('tx_sb6')}.
-- Ties directly to the **~233 GW large-load queue** above — the rules are how
-  Texas decides which of those actually get to plug in.
-""")
-        st.markdown("**🟡 SPP (Central Plains)**")
-        st.markdown(f"""
-- Created a **High Impact Large Load (HILL)** track: a targeted **~90-day**
-  study-and-approval process (plus a HILL Generation Assessment for load paired
-  with on-site generation) to fast-track big connections while catching system
-  constraints early. {src_link('spp_hill')}.
-- Also named in FERC's Jun 2026 show-cause order. {src_link('ferc_showcause')}.
-""")
+    fr1, fr2, fr3 = st.columns(3)
+    fr1.metric("FERC orders", "PJM + MISO + SPP", "tariff reform mandated")
+    fr2.metric("PJM capacity auction", "~$16.4B record", "~40% from data centers")
+    fr3.metric("Texas SB 6", "$50k/MW fee", "+ mandatory curtailment ≥75 MW")
 
     st.info("**The through-line:** co-location + cost allocation. Regulators are "
             "converging on two questions — *can this load be curtailed when the "
             "grid is tight?* and *who pays for the transmission it needs?* "
             "Expect firm-service requirements, large upfront interconnection "
             "fees, and curtailment obligations to spread across every ISO.")
+
+    with st.expander("Read more — what FERC and each grid operator is doing"):
+        st.markdown(f"""
+**⚖️ FERC — the federal referee.**
+On **Dec 18, 2025** FERC ordered **PJM** to write new tariff rules for
+*co-location* (data centers plugging directly into a power plant behind the
+meter), finding PJM's tariff lacked the "clarity or consistency" to price
+co-located load fairly. {src_link('ferc_pjm_colo')}. On **Jun 18, 2026** FERC
+went wider, issuing **show-cause orders to MISO, SPP and other RTOs**: justify
+your large-load rules within 60 days, or reform them. {src_link('ferc_showcause')}.
+""")
+        ra, rb = st.columns(2)
+        with ra:
+            st.markdown("**🟠 PJM (Mid-Atlantic / Data Center Alley)**")
+            st.markdown(f"""
+- The latest capacity auction cleared at a **record ~\\$16.4B**, with data
+  centers ~**40% (\\$6.5B)** of the cost — hitting the price cap for the third
+  straight year. {src_link('pjm_auction25')}.
+- Building a distinct **co-located load service** and large-load tariff under
+  FERC's Dec 2025 order. {src_link('ferc_pjm_colo')}.
+""")
+            st.markdown("**🔵 MISO (Midwest / South)**")
+            st.markdown(f"""
+- Facing an "unprecedented surge" in large-load requests; standing up
+  **Large Load Interconnection Reliability Requirements** and expedited study
+  paths (ERAS). {src_link('miso_llir')}.
+- Under FERC's Jun 2026 show-cause order. {src_link('ferc_showcause')}.
+""")
+        with rb:
+            st.markdown("**🟢 ERCOT (Texas)**")
+            st.markdown(f"""
+- **SB 6 (2025)** is the most aggressive large-load law yet: loads **≥75 MW**
+  get new interconnection standards, a **\\$50k/MW** fee, and mandatory
+  **curtailment/shut-off equipment** — ERCOT can order them to drop load
+  during grid emergencies. {src_link('tx_sb6_ll')}; {src_link('tx_sb6')}.
+- These rules are how Texas decides which of the **~233 GW queue** above
+  actually get to plug in.
+""")
+            st.markdown("**🟡 SPP (Central Plains)**")
+            st.markdown(f"""
+- Created a **High Impact Large Load (HILL)** track: a targeted **~90-day**
+  study-and-approval process to fast-track big connections while catching
+  system constraints early. {src_link('spp_hill')}.
+- Also named in FERC's Jun 2026 show-cause order. {src_link('ferc_showcause')}.
+""")
     st.markdown('</div>', unsafe_allow_html=True)
 
     # ------------------------------------------------------------------ #
@@ -585,5 +807,9 @@ them. {src_link('ferc_showcause')}.
             "status":   st.column_config.TextColumn("Status"),
         }
     )
+    st.caption(
+        "Scroll up to **Key executives** for the leadership behind these "
+        "projects. See the **States & officials** tab for elected officials "
+        "in these states and the **Negotiation toolkit** for CBA templates.")
     st.markdown('</div>', unsafe_allow_html=True)
 

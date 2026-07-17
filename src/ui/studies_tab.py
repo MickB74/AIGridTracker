@@ -414,13 +414,17 @@ def render_studies_tab():
                 state_lower = selected_state.lower()
                 abbrev_term = f" {row['abbrev']} "
                 
+                has_selftext = "selftext" in corpus.columns
                 match_mask = (
                     corpus["title"].str.lower().str.contains(state_lower, na=False) |
-                    corpus["selftext"].str.lower().str.contains(state_lower, na=False) |
                     corpus["subreddit"].str.lower().str.contains(state_lower, na=False) |
-                    corpus["title"].str.contains(abbrev_term, na=False) |
-                    corpus["selftext"].str.contains(abbrev_term, na=False)
+                    corpus["title"].str.contains(abbrev_term, na=False)
                 )
+                if has_selftext:
+                    match_mask = match_mask | (
+                        corpus["selftext"].str.lower().str.contains(state_lower, na=False) |
+                        corpus["selftext"].str.contains(abbrev_term, na=False)
+                    )
                 matching_posts = corpus[match_mask]
                 
                 if not matching_posts.empty:
@@ -447,5 +451,11 @@ def render_studies_tab():
             
     else:
         st.info("💡 Select any state on the map above or choose a state from the dropdown to load its comprehensive data center profile.")
-        
+
     st.markdown('</div>', unsafe_allow_html=True)
+
+    st.info(
+        "**Facing a data center project in your state?** GridWatch Consulting "
+        "provides impact analysis, CBA drafting, and hearing support — with a "
+        "success-fee model. See the **Consulting** tab for a free assessment."
+    )

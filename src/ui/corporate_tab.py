@@ -14,6 +14,8 @@ from src.constants import (
     GOOGLE_2025_HEADLINE,
     META_DC_ELECTRICITY, META_DC_CAMPUS_ELECTRICITY, META_GHG,
     META_WATER, META_EFFICIENCY, META_2024_HEADLINE,
+    MICROSOFT_ENV_HEADLINE, AWS_ENV_HEADLINE,
+    EXECUTIVES_DF,
 )
 from src.helpers import src_link
 from src.services.sec_xbrl import fetch_dynamic_financials
@@ -275,10 +277,22 @@ GROWTH_DATA = [
 def render_corporate_tab():
     st.subheader("💼 Corporate Profiles — Financials & Scale")
     st.caption(
-        "Financial and operational scale of the companies driving data center expansion. "
-        "Hyperscale players (Microsoft, Google, Amazon, Meta), core hardware enablers (NVIDIA), "
-        "and specialised colocation operators are profiled below."
+        "The companies driving the build-out: hyperscalers, hardware enablers, "
+        "and colocation operators — financials, environmental data, and the "
+        "people who run them."
     )
+
+    with st.expander("📑 On this page", expanded=False):
+        st.markdown(
+            "**1.** Sector financial scale · "
+            "**2.** Company profiles directory · "
+            "**3.** Hyperscaler environmental comparison · "
+            "**4.** Google deep-dive · "
+            "**5.** Microsoft deep-dive · "
+            "**6.** Amazon (AWS) deep-dive · "
+            "**7.** Meta deep-dive · "
+            "**8.** Key corporate players & sustainability directors"
+        )
 
     # Convert to dataframe and merge SEC XBRL data where available
     live_financials = []
@@ -409,6 +423,136 @@ def render_corporate_tab():
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.caption("Figures reflect FY2025/2026 filings, annual reports, SEC 10-K competition statements, and recent private equity valuations.")
+
+    # ------------------------------------------------------------------ #
+    # CROSS-COMPANY ENVIRONMENTAL COMPARISON
+    # ------------------------------------------------------------------ #
+    st.divider()
+    st.subheader("🌍 Hyperscaler Environmental Comparison")
+    st.caption(
+        "Side-by-side environmental footprint of the four largest hyperscalers. "
+        "Google and Meta publish granular time-series data; Microsoft and AWS "
+        "publish headline metrics. Reporting years and scopes differ — read the "
+        "notes column before comparing."
+    )
+
+    g = GOOGLE_2025_HEADLINE
+    m = META_2024_HEADLINE
+    ms = MICROSOFT_ENV_HEADLINE
+    aw = AWS_ENV_HEADLINE
+
+    _comp_data = pd.DataFrame([
+        {
+            "Company": "Google", "Report Year": "FY2025",
+            "DC Electricity (TWh)": g["dc_twh"],
+            "Scope 2 Location (Mt CO2e)": g["scope2_location_tco2e"] / 1e6,
+            "Scope 2 Market (Mt CO2e)": g["scope2_market_tco2e"] / 1e6,
+            "Water Consumed (M gal)": g["water_dc_mgal"],
+            "Renewable Match": f"{g['global_cfe_pct']}% hourly",
+        },
+        {
+            "Company": "Meta", "Report Year": "FY2024",
+            "DC Electricity (TWh)": m["dc_twh"],
+            "Scope 2 Location (Mt CO2e)": m["scope2_location_tco2e"] / 1e6,
+            "Scope 2 Market (Mt CO2e)": m["scope2_market_tco2e"] / 1e6,
+            "Water Consumed (M gal)": round(m["water_consumption_ml"] * 0.264172),
+            "Renewable Match": f"{m['renewable_match_pct']}% annual",
+        },
+        {
+            "Company": "Microsoft", "Report Year": ms["report_year"],
+            "DC Electricity (TWh)": ms["dc_twh"],
+            "Scope 2 Location (Mt CO2e)": ms["scope2_location_mt"],
+            "Scope 2 Market (Mt CO2e)": ms["scope2_market_mt"],
+            "Water Consumed (M gal)": ms["water_consumption_mgal"],
+            "Renewable Match": f"{ms['renewable_pct']}% annual",
+        },
+        {
+            "Company": "AWS (Amazon)", "Report Year": aw["report_year"],
+            "DC Electricity (TWh)": aw["dc_twh"],
+            "Scope 2 Location (Mt CO2e)": aw["scope2_location_mt"],
+            "Scope 2 Market (Mt CO2e)": aw["scope2_market_mt"],
+            "Water Consumed (M gal)": aw["water_consumption_mgal"],
+            "Renewable Match": f"{aw['renewable_pct']}% annual",
+        },
+    ])
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### ⚡ Electricity Consumption")
+    _ec1, _ec2, _ec3, _ec4 = st.columns(4)
+    _ec1.metric("Google", f"{g['dc_twh']} TWh", "FY2025")
+    _ec2.metric("AWS", f"{aw['dc_twh']} TWh", f"{aw['report_year']} (est.)")
+    _ec3.metric("Microsoft", f"{ms['dc_twh']} TWh", ms["report_year"])
+    _ec4.metric("Meta", f"{m['dc_twh']} TWh", "FY2024")
+
+    _elec_chart_data = _comp_data[["Company", "DC Electricity (TWh)"]].copy()
+    _elec_chart_data.columns = ["Company", "TWh"]
+    _elec_bar = (
+        alt.Chart(_elec_chart_data)
+        .mark_bar(cornerRadiusTopLeft=4, cornerRadiusTopRight=4)
+        .encode(
+            x=alt.X("Company:N", sort="-y", title=None),
+            y=alt.Y("TWh:Q", title="DC Electricity (TWh)"),
+            color=alt.Color("Company:N",
+                scale=alt.Scale(
+                    domain=["Google", "AWS (Amazon)", "Microsoft", "Meta"],
+                    range=["#34a853", "#ff9900", "#00a4ef", "#0866ff"]),
+                legend=None),
+            tooltip=["Company:N", alt.Tooltip("TWh:Q", format=".1f")],
+        ).properties(height=260)
+    )
+    st.altair_chart(_elec_bar, use_container_width=True)
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### 🌡️ Carbon Emissions (Scope 2 Location-Based)")
+    _ghg_chart_data = _comp_data[["Company", "Scope 2 Location (Mt CO2e)"]].dropna().copy()
+    _ghg_chart_data.columns = ["Company", "MtCO2e"]
+    _ghg_bar = (
+        alt.Chart(_ghg_chart_data)
+        .mark_bar(cornerRadiusTopLeft=4, cornerRadiusTopRight=4)
+        .encode(
+            x=alt.X("Company:N", sort="-y", title=None),
+            y=alt.Y("MtCO2e:Q", title="Million tCO2e (location-based)"),
+            color=alt.Color("Company:N",
+                scale=alt.Scale(
+                    domain=["Google", "AWS (Amazon)", "Microsoft", "Meta"],
+                    range=["#34a853", "#ff9900", "#00a4ef", "#0866ff"]),
+                legend=None),
+            tooltip=["Company:N", alt.Tooltip("MtCO2e:Q", format=".1f")],
+        ).properties(height=260)
+    )
+    st.altair_chart(_ghg_bar, use_container_width=True)
+    st.caption(
+        "Location-based = actual grid carbon intensity at each facility. All four "
+        "companies claim 100% renewable matching via certificates/PPAs (market-based), "
+        "but that doesn't change what the grid actually burns. Google is the only "
+        "one reporting **hourly** CFE matching (vs. annual)."
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### 💧 Full Comparison Table")
+    st.dataframe(
+        _comp_data,
+        use_container_width=True, hide_index=True,
+        column_config={
+            "DC Electricity (TWh)": st.column_config.NumberColumn(format="%.1f"),
+            "Scope 2 Location (Mt CO2e)": st.column_config.NumberColumn(format="%.1f"),
+            "Scope 2 Market (Mt CO2e)": st.column_config.NumberColumn(format="%.2f"),
+            "Water Consumed (M gal)": st.column_config.NumberColumn(format="%,d"),
+        })
+    st.caption(
+        "**Caveats:** AWS DC electricity is estimated (Amazon reports total company, "
+        "not DC-only). Report years differ. Water measurement methods vary. "
+        "Microsoft and Meta report annual renewable matching; Google reports hourly CFE. "
+        "Market-based Scope 2 near zero for all four reflects certificate purchasing, "
+        "not grid decarbonization."
+    )
+    _comp_csv = _comp_data.to_csv(index=False)
+    st.download_button(
+        "📥 Download comparison data (CSV)",
+        _comp_csv, "hyperscaler_environmental_comparison.csv", "text/csv")
+    st.markdown('</div>', unsafe_allow_html=True)
 
     # ------------------------------------------------------------------ #
     # GOOGLE DEEP-DIVE — 2026 Environmental Report (FY2025)
@@ -855,79 +999,42 @@ def render_corporate_tab():
     st.divider()
     st.subheader("👥 Key Corporate Players & Sustainability Directors")
     st.caption(
-        "A directory of senior executives, data center directors, grid planners, and sustainability leaders "
-        "driving hyperscale expansion. Use the search link to look up their professional profile on LinkedIn."
-    )
-
-    import urllib.parse
-    
-    KEY_PLAYERS = [
-        # Microsoft
-        ("Noelle Walsh", "Microsoft", "Corporate VP, Cloud Operations & Innovation", "Leads global Azure cloud infrastructure construction and operations."),
-        ("Bobby Hollis", "Microsoft", "VP of Energy", "Directs global energy sourcing, grid integration, and power purchase agreements (PPAs)."),
-        ("Melanie Nakagawa", "Microsoft", "Chief Sustainability Officer", "Directs corporate climate and sustainability policies (carbon negative by 2030)."),
-        # Google
-        ("Kate Brandt", "Google (Alphabet)", "Chief Sustainability Officer", "Leads circular economy, carbon-free energy, and sustainability goals across Google."),
-        ("Michael Terrell", "Google (Alphabet)", "Senior Director of Energy and Climate", "Pioneered Google's 24/7 hourly Carbon-Free Energy (CFE) matching strategy."),
-        ("Ben Townsend", "Google (Alphabet)", "Global Head of Infrastructure Planning & Water Policy", "Oversees site selection and cooling water sustainability policies."),
-        # Meta
-        ("Rachel Peterson", "Meta Platforms", "VP of Data Centers", "Directs Meta's global owned and leased data center physical infrastructure."),
-        ("Urvi Parekh", "Meta Platforms", "Head of Renewable Energy", "Leads Meta's clean energy procurement (15+ GW contracted portfolio)."),
-        ("Blair Anderson", "Meta Platforms", "Director of State & Local Public Policy", "Leads governmental relations and community tax incentives negotiations."),
-        # Amazon (AWS)
-        ("Kevin Miller", "Amazon (AWS)", "VP of Global Data Centers", "Directs AWS worldwide physical infrastructure design, build, and operations."),
-        ("Chris Roe", "Amazon (AWS)", "Director of Energy & Sustainable Operations", "Leads clean power procurement and operational carbon reduction programs."),
-        ("Jenna Leiner", "Amazon (AWS)", "Lead, Water Sustainability", "Manages AWS global water replenishment projects and dry-cooling upgrades."),
-        # CoreWeave
-        ("Michael Intrator", "CoreWeave", "Co-founder & CEO", "Leads corporate strategy and capital raises for specialized GPU hosting clusters."),
-        ("Brian Venturo", "CoreWeave", "Co-founder & CTO", "Designs CoreWeave's hardware architecture and high-density cluster cooling setups."),
-        # Equinix
-        ("Adaire Fox-Martin", "Equinix", "Chief Executive Officer", "Directs corporate strategy for the world's largest colocation provider."),
-        ("Christopher Wellise", "Equinix", "VP of Global Sustainability", "Leads corporate green design, energy reporting, and circular hardware programs."),
-        # Digital Realty
-        ("Andy Power", "Digital Realty", "President & CEO", "Leads global wholesale data center development and leasing strategy."),
-        ("Aaron Binkley", "Digital Realty", "VP of Sustainability", "Directs global environmental reporting, carbon reduction, and green tariffs.")
-    ]
-
-    player_list = []
-    for name, company, title, focus in KEY_PLAYERS:
-        # Generate direct LinkedIn search URL
-        search_query = f"{name} {company}"
-        linkedin_url = f"https://www.linkedin.com/search/results/people/?keywords={urllib.parse.quote(search_query)}"
-        
-        player_list.append({
-            "Name": name,
-            "Company": company,
-            "Title / Corporate Role": title,
-            "Infrastructure / Sustainability Focus": focus,
-            "LinkedIn Profile": linkedin_url
-        })
+        "Infrastructure, sustainability, and policy leaders at the "
+        "hyperscalers — the people shaping energy sourcing, water policy, "
+        "and community engagement. Filtered from the full executive "
+        "directory on the **Data centers** tab.")
 
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    
-    # Search box for key players
-    search_player = st.text_input("🔍 Filter players by name, company, or role", value="")
-    
-    player_df = pd.DataFrame(player_list)
+
+    corp_exec = EXECUTIVES_DF[
+        EXECUTIVES_DF["category"].isin(["infrastructure", "sustainability", "policy"])
+    ].copy()
+
+    search_player = st.text_input(
+        "Filter by name, company, or role", value="",
+        key="corp_exec_search", placeholder="e.g. sustainability, AWS, water")
     if search_player:
-        mask = (
-            player_df["Name"].str.contains(search_player, case=False) |
-            player_df["Company"].str.contains(search_player, case=False) |
-            player_df["Title / Corporate Role"].str.contains(search_player, case=False)
-        )
-        player_df = player_df[mask]
+        q = search_player.lower()
+        mask = (corp_exec["name"].str.lower().str.contains(q) |
+                corp_exec["company"].str.lower().str.contains(q) |
+                corp_exec["title"].str.lower().str.contains(q) |
+                corp_exec["focus"].str.lower().str.contains(q))
+        corp_exec = corp_exec[mask]
 
     st.dataframe(
-        player_df,
-        use_container_width=True,
-        hide_index=True,
+        corp_exec[["company", "name", "title", "focus", "linkedin"]],
+        use_container_width=True, hide_index=True,
         column_config={
-            "Name": st.column_config.TextColumn(width="medium"),
-            "Company": st.column_config.TextColumn(width="medium"),
-            "Title / Corporate Role": st.column_config.TextColumn(width="large"),
-            "Infrastructure / Sustainability Focus": st.column_config.TextColumn(width="large"),
-            "LinkedIn Profile": st.column_config.LinkColumn("Professional Profile", display_text="👥 LinkedIn Search", width="medium")
-        }
-    )
+            "company": st.column_config.TextColumn("Company", width="medium"),
+            "name": st.column_config.TextColumn("Name", width="medium"),
+            "title": st.column_config.TextColumn("Title", width="large"),
+            "focus": st.column_config.TextColumn("Focus", width="large"),
+            "linkedin": st.column_config.LinkColumn(
+                "LinkedIn", display_text="search", width="small"),
+        })
+    st.caption(
+        f"Showing {len(corp_exec)} infrastructure / sustainability / policy "
+        f"executives. Full directory (all {len(EXECUTIVES_DF)} executives "
+        f"including CEOs) is on the **Data centers** tab.")
     st.markdown('</div>', unsafe_allow_html=True)
 

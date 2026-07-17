@@ -51,6 +51,259 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── Morgan Stanley opposition analysis ──────────────────────────────────
+    {
+        "id": "morgan-stanley-opposition-bottleneck-2026",
+        "section": "stories",
+        "title": "Morgan Stanley Says Community Opposition Is the Biggest Threat to the Data Center Buildout. Are They Right?",
+        "date": _dt.date(2026, 7, 15),
+        "author": "GridWatch AI",
+        "tags": ["Wall Street", "community opposition", "moratorium", "investment", "analysis"],
+        "summary": (
+            "Morgan Stanley warns that \\$156B in data center projects were canceled or "
+            "delayed in 2025, with another \\$130B disrupted in Q1 2026 — driven by "
+            "community resistance. We checked their thesis against our data."
+        ),
+        "body": """\
+Morgan Stanley published an analyst note this week warning that community opposition
+has become the single biggest bottleneck for AI data center expansion. Their numbers
+are stark: **\\$156 billion** in data center projects were canceled or delayed during
+2025, with another **\\$130 billion** disrupted in Q1 2026 alone.
+
+We ran their thesis against everything we track. Here's where they're right, where
+they're incomplete, and what it means for your community.
+
+### The moratorium wave is real — and accelerating
+
+Morgan Stanley cites Morning Consult survey data showing roughly **50% of Americans**
+believe data centers will negatively impact electricity prices and the grid, with
+**45%** worried about water costs and environmental damage. That's not fringe
+sentiment. That's mainstream.
+
+Our moratorium tracker tells the same story from the policy side. We now count
+**50+ localities and four states** that have enacted, proposed, or considered data
+center moratoriums or outright bans:
+
+- **North Carolina** alone has 14+ local bans or moratoriums — from Brevard to
+  Boone to Apex — plus proposed actions in Charlotte (deadlocked 5–5), Durham,
+  and Fayetteville
+- **New York** enacted the nation's first statewide moratorium (EO 62, July 2026)
+  — a one-year freeze on facilities over 50 MW
+- Cities as diverse as **Denver, Minneapolis, Baltimore, Reno, and Seattle** have
+  enacted or proposed restrictions
+- Even in developer-friendly states, individual counties are pushing back —
+  **Hill County, TX** enacted a moratorium and is now being sued by the developer
+
+A year ago, opposition was scattered. Today it's a coordinated national movement
+with its own advocacy infrastructure.
+
+### The dollar figures add up
+
+Morgan Stanley's \\$156B disruption figure sounds enormous until you look at the
+pipeline. Our mega-projects tracker alone shows **\\$300 billion+** in announced
+hyperscale investment currently under construction:
+
+| Project | Company | Investment | Capacity |
+|---------|---------|-----------|----------|
+| Stargate | OpenAI / Oracle / SoftBank | \\$100B+ | 1+ GW |
+| West Texas campus | Google | \\$40B | Multi-GW |
+| Meta Hyperion | Meta / Blue Owl | \\$27B | 2–5 GW |
+| Vantage Frontier | Vantage | \\$25B | 1.4 GW |
+| AWS Mississippi | Amazon | \\$25B | Multi-site |
+| xAI Colossus | xAI | \\$20B | ~2 GW |
+
+If even half this pipeline faces permitting delays, grid interconnection queues,
+or community opposition, \\$156B in disruption is entirely plausible. These aren't
+small-business permits being held up — each project represents a multi-year,
+multi-gigawatt commitment that touches land use, water rights, grid capacity,
+and ratepayer impacts.
+
+### Where Morgan Stanley is right
+
+**Opposition is a material constraint.** This is no longer a risk factor buried
+in an S-1 filing. When 50% of the public thinks data centers will raise their
+electric bills — and the PJM capacity auction just proved them right with an
+833% price jump — the political environment for permitting has fundamentally
+changed.
+
+**On-site power is an obvious hedge.** Morgan Stanley identifies Bloom Energy,
+Solaris Energy Infrastructure, and Innio as beneficiaries, and the logic is
+sound. Behind-the-meter gas turbines and fuel cells let developers sidestep
+both the grid interconnection queue and the community argument that "this
+facility will raise my electric bill." If you can't connect to the grid, bring
+your own.
+
+**Data center REITs are somewhat insulated.** Digital Realty and peers operate
+smaller, urban-edge facilities that draw less community ire than a 500 MW
+hyperscale campus in a rural county. Morgan Stanley is right that the
+opposition movement is primarily targeting hyperscale, not colo.
+
+### Where they're incomplete
+
+Morgan Stanley frames community opposition primarily as a **risk to total
+investment** — implying the buildout might shrink. Our data suggests something
+different: it's a **geographic reshuffling**, not a demand reduction.
+
+Look at where the mega-projects are actually being built: Abilene, TX.
+Richland Parish, LA. Shackelford County, TX. Northern Indiana. Rural
+Mississippi. These are locations chosen specifically for low population
+density, cheap land, available power, and — crucially — minimal organized
+opposition.
+
+Northern Virginia (Ashburn) has **4,900 MW operational** with **12,200 MW**
+more in the pipeline. But new hyperscale capacity is increasingly fleeing
+to places where the planning commission has three members, not thirty
+concerned residents.
+
+The capital isn't disappearing. It's following the path of least resistance
+— literally.
+
+### What this means for communities
+
+**1. If a developer is courting your town, you have more leverage than you
+think.** Morgan Stanley just told its institutional clients that community
+opposition is the #1 risk to a \\$500 billion capital cycle. That's your
+negotiating position stated in the language Wall Street understands.
+
+**2. The window for negotiation is now.** Developers are racing to lock in
+sites before the opposition movement matures further. If your county is
+being approached, the CBA negotiation happens before the permit vote, not
+after. Use the **Negotiation Toolkit** tab to prepare.
+
+**3. Watch the geographic displacement.** If your state enacts restrictions
+(as New York just did), neighboring states without protections will see an
+influx. If you're in a state that hasn't acted, the developer may already
+be scouting your county. Check the **Data Centers** tab to see what's in
+your pipeline.
+
+**4. "Canceled" doesn't always mean canceled.** Some of the \\$156B in
+"disrupted" projects will resurface in new jurisdictions with new LLCs and
+new permitting applications. Track the operators and their subsidiary
+companies — our **Operators** registry lists the LLCs that hyperscalers
+use so you can connect a new filing to its parent company.
+
+### The bottom line
+
+Is Morgan Stanley right? **Mostly, yes.** Community opposition is a real,
+material constraint on the data center buildout — and the financial markets
+are finally pricing it in.
+
+But the deeper story is one they don't fully tell: the opposition isn't
+killing the buildout, it's **democratizing** it. For the first time,
+communities have enough organized power to demand a seat at the table
+before the concrete is poured. New York's \\$1M/MW community benefit
+benchmark, the proliferating moratoriums, the 50% public concern numbers
+— these aren't obstacles to progress. They're the market correcting for
+decades of data centers arriving with tax breaks and leaving communities
+with the bill.
+
+The question isn't whether the data centers get built. They will. The
+question is whether your community gets a fair deal when they do.
+
+> Use the **Negotiation Toolkit** tab to model community benefit agreements,
+> the **Data Centers** tab to see what's in your region's pipeline, and the
+> **States & Officials** tab to contact your representatives.
+""",
+    },
+    # ── NY Moratorium ───────────────────────────────────────────────────────
+    {
+        "id": "ny-moratorium-eo62-2026",
+        "section": "stories",
+        "title": "New York Just Changed the Game: What EO 62 Means for Every Community Fighting a Data Center",
+        "date": _dt.date(2026, 7, 15),
+        "author": "GridWatch AI",
+        "tags": ["moratorium", "New York", "policy", "EO 62", "community benefits", "breaking"],
+        "summary": (
+            "Governor Hochul signed the nation's first statewide data center moratorium "
+            "on July 14 — a 1-year pause on 50+ MW facilities that sets a precedent for "
+            "community negotiating power nationwide."
+        ),
+        "body": """\
+On July 14, 2026, Governor Kathy Hochul signed Executive Order 62, making New York
+the first state in the nation to impose a moratorium on new hyperscale data centers.
+The order pauses state environmental permits for any facility drawing 50 megawatts or
+more — effectively freezing the pipeline of large AI and cloud campuses for up to one
+year.
+
+This isn't a symbolic gesture. It's a structural shift in how states can respond to
+the data center buildout.
+
+### What the order actually does
+
+**Permit freeze.** The Department of Environmental Conservation will not issue
+discretionary permits for large data centers that haven't already been deemed complete.
+Projects already in the approval pipeline with complete applications are grandfathered.
+
+**Environmental standards.** The Department of Public Service will develop a Generic
+Environmental Impact Statement (GEIS) — a uniform framework for evaluating a data
+center's effect on energy demand, water use, water quality, and air quality. This
+replaces the current ad hoc, project-by-project review.
+
+**Community Investment Framework.** Within 60 days, Empire State Development must
+publish a template that gives towns and counties a standardized playbook for
+negotiating with developers. The preliminary recommendation is striking: **\\$1 million
+per megawatt** as a starting point for developer contributions. A 200 MW facility
+would begin negotiations at \\$200 million in community benefits.
+
+**Labor standards.** Data center construction projects will face prevailing wage
+requirements, project labor agreements, local hiring targets, and apprenticeship
+mandates.
+
+**Grid and ratepayer protection.** Hochul is separately pursuing a Grid Acceleration
+Fund that would require data centers to pay into the state's aging power
+infrastructure, and legislation to repeal sales tax exemptions that large facilities
+currently enjoy.
+
+### Why it happened
+
+The numbers explain the urgency. As of May 2026, nearly **12 gigawatts** of proposed
+data center demand was sitting in NYISO's interconnection queue — more than 8 GW
+added during 2025 alone. For context, 12 GW is roughly equivalent to the output of
+12 nuclear power plants.
+
+Hochul framed the order as protecting New Yorkers from rising electricity bills,
+strained water supplies, and a grid that wasn't built for this kind of load growth.
+The political backdrop matters too: communities across upstate New York — from the
+Hudson Valley to the Finger Lakes — had been pushing back against proposed campuses,
+and several local moratoriums were already in place (Lysander, Perth, St. Lawrence
+County).
+
+### What it means for your community
+
+Even if you're not in New York, EO 62 changes the landscape:
+
+**1. The \\$1M/MW benchmark is now public.** Before this, communities negotiated in
+the dark. The state of New York just told every planning board in America what a
+megawatt of data center capacity is worth to the developer. Use it.
+
+**2. The GEIS model is replicable.** Other states can adopt the same uniform
+environmental review framework instead of letting each project define its own
+scope of impact.
+
+**3. Developers will route around.** Expect an acceleration of data center proposals
+in states without moratoriums or strong environmental review — making it even more
+important for those communities to be prepared with CBA demands before the developer
+arrives.
+
+**4. The moratorium is temporary.** One year. The real legacy is the regulatory
+framework that comes out of it — the standards, the community benefit formula, and
+the environmental review process. Watch what New York builds during this pause.
+
+### What to do now
+
+- **Read the executive order** in full:
+  [EO 62 text](https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops)
+- **Use our Data Dividend Calculator** on the Negotiation Toolkit tab to model what
+  the \\$1M/MW benchmark means for your specific facility
+- **Download the Model CBA Clauses** and bring them to your next planning commission
+  meeting — the NY framework validates every provision we recommend
+- **Contact your state legislators** using the States & Officials tab if you want
+  your state to follow New York's lead
+
+The era of data centers arriving with no accountability is ending. New York just
+proved that states can act — and communities should demand it.
+""",
+    },
     # ── Story 0 ──────────────────────────────────────────────────────────────
     {
         "id": "utility-bill-explainer-2026",

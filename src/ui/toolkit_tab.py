@@ -6,6 +6,11 @@ examples to help towns extract maximum value.
 
 import streamlit as st
 import pandas as pd
+import altair as alt
+from src.constants import (
+    OPERATORS_DF, EXECUTIVES_DF, MORATORIUMS_DF,
+    STATE_PUCS_DF, STATE_DC_DF, STATE_GRID_PROFILES,
+)
 
 
 # ── Real-world CBA examples database ─────────────────────────────────────── #
@@ -13,16 +18,33 @@ import pandas as pd
 _CBA_EXAMPLES = [
     {
         "community": "Cedar Rapids, IA",
-        "operator": "Meta / Google",
+        "operator": "Google / QTS",
         "year": 2023,
         "mw": 200,
         "investment_b": 2.4,
         "what_they_got": [
-            "Annual community betterment fund payments ($200K+/yr)",
+            "Google: \\$400K/yr for 15 years (\\$6M total community betterment fund)",
+            "QTS: \\$18M over 18 years (\\$1M/yr) in community payments",
             "Local hiring commitments for construction",
             "Property tax abatement tied to job creation benchmarks",
         ],
-        "lesson": "Tied incentives to measurable deliverables, not just promises.",
+        "lesson": "Tied incentives to measurable deliverables with long time horizons. "
+                  "Per-year community payments create accountability.",
+    },
+    {
+        "community": "Lancaster, PA",
+        "operator": "Arcadian Infracom",
+        "year": 2024,
+        "mw": 160,
+        "investment_b": 1.8,
+        "what_they_got": [
+            "\\$20.25M total community benefit package",
+            "\\$10M letter of credit for clean energy compliance",
+            "20,000 gallon/day hard cap on water usage",
+            "Annual community benefit payments tied to phases",
+        ],
+        "lesson": "The \\$10M letter of credit for clean energy is a powerful innovation — "
+                  "the developer loses real money if they don't meet sustainability targets.",
     },
     {
         "community": "Loudoun County, VA",
@@ -31,8 +53,10 @@ _CBA_EXAMPLES = [
         "mw": 3000,
         "investment_b": 50.0,
         "what_they_got": [
-            "Data center property taxes fund ~32% of county budget",
-            "Residential property tax rate among lowest in Virginia",
+            "Data center equipment taxes: \\$330M in FY2020 alone",
+            "DCs fund 38% of general fund (from just 4% of parcels)",
+            "Over \\$100M/yr in new revenue; property tax rate dropped "
+            "from \\$1.145 to \\$0.805 per \\$100 assessed value",
             "Strict noise ordinance (38 dBA at residential property lines)",
             "1,000-ft setback from residential zoning",
         ],
@@ -90,14 +114,14 @@ _MODEL_CLAUSES = {
     "Direct financial payments": {
         "icon": "💰",
         "clause": (
-            "Developer shall pay an annual Community Benefit Payment of $[X] per MW "
+            "Developer shall pay an annual Community Benefit Payment of \\$[X] per MW "
             "of contracted power capacity into a Community Benefit Fund administered "
             "by [County/Town]. Payments commence upon certificate of occupancy and "
             "adjust annually by CPI."
         ),
         "why": (
             "A per-MW annual payment creates a predictable, inflation-protected "
-            "revenue stream tied to the facility's actual size. $500–$2,000/MW/year "
+            "revenue stream tied to the facility's actual size. \\$500–\\$2,000/MW/year "
             "is the emerging range in negotiated deals."
         ),
         "range_low": 500,
@@ -109,7 +133,7 @@ _MODEL_CLAUSES = {
         "clause": (
             "Total facility water withdrawal shall not exceed [X] gallons per day. "
             "Developer shall install metering equipment accessible to [Municipal Water "
-            "Authority] and pay a surcharge of $[Y] per 1,000 gallons exceeding the cap. "
+            "Authority] and pay a surcharge of \\$[Y] per 1,000 gallons exceeding the cap. "
             "Annual water usage reports shall be public record."
         ),
         "why": (
@@ -180,7 +204,7 @@ _MODEL_CLAUSES = {
             "Developer shall use best efforts to ensure that [X]% of construction labor "
             "and [Y]% of permanent operations staff are sourced from [County/Region]. "
             "Developer shall fund a workforce training program at [local community "
-            "college] of not less than $[Z] per year for [N] years, focused on "
+            "college] of not less than \\$[Z] per year for [N] years, focused on "
             "electrical, HVAC, and network operations certifications."
         ),
         "why": (
@@ -214,13 +238,13 @@ _MODEL_CLAUSES = {
         "icon": "🏗️",
         "clause": (
             "Developer shall post a decommissioning bond or letter of credit equal to "
-            "$[X] per MW within 90 days of certificate of occupancy, to fund site "
+            "\\$[X] per MW within 90 days of certificate of occupancy, to fund site "
             "remediation and restoration if the facility ceases operations."
         ),
         "why": (
             "Without a bond, a bankrupt or departing operator can leave the community "
             "with a derelict industrial site and no funds for cleanup. Typical bonds "
-            "range from $5,000–$15,000 per MW."
+            "range from \\$5,000–\\$15,000 per MW."
         ),
         "range_low": 5000,
         "range_high": 15000,
@@ -247,18 +271,45 @@ def render_toolkit_tab():
         "community negotiate the best possible deal — or decide to say no."
     )
 
+    with st.expander("📑 On this page", expanded=False):
+        st.markdown(
+            "**1.** Your leverage & what to demand · "
+            "**2.** Data Dividend Calculator · "
+            "**3.** Model CBA clauses (copy & customize) · "
+            "**4.** What other communities have won · "
+            "**5.** The Alaska Model — data dividends · "
+            "**6.** Grid equity demands · "
+            "**7.** Meeting prep checklist · "
+            "**8.** Meeting prep generator (downloadable brief) · "
+            "**9.** Advanced revenue capture strategies · "
+            "**10.** Industry benchmarks · "
+            "**11.** Free consultation request"
+        )
+
     # ================================================================== #
     # SECTION 1 — The core principle
     # ================================================================== #
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("## The #1 rule: never approve without a contract")
-    st.markdown(
-        "A data center needs your land, your water, your power grid, and your "
-        "community's approval. That is **leverage**. Once you approve, the leverage "
-        "is gone. Every approval should be conditioned on a legally binding "
-        "**Community Benefit Agreement (CBA)** that specifies exactly what the "
-        "community gets, with enforcement mechanisms and penalties."
-    )
+
+    lev1, lev_arrow, lev2 = st.columns([1, 0.3, 1])
+    with lev1:
+        st.markdown("#### 🏘️ Your leverage")
+        for icon, item in [("🏗️", "Land"), ("💧", "Water"), ("⚡", "Grid capacity"), ("📋", "Zoning approval")]:
+            with st.container(border=True):
+                st.markdown(f"{icon} **{item}**")
+    with lev_arrow:
+        st.markdown("")
+        st.markdown("")
+        st.markdown("")
+        st.markdown("### ➡️")
+        st.markdown("*Don't give these away*")
+    with lev2:
+        st.markdown("#### 📜 What to demand")
+        for icon, item in [("💰", "Annual payments"), ("💧", "Water caps"), ("🔊", "Noise limits"), ("⚡", "Rate protection")]:
+            with st.container(border=True):
+                st.markdown(f"{icon} **{item}**")
+
     st.error(
         "**Without a CBA:** the developer gets tax breaks, your utility rates rise, "
         "your water table drops, and you get a press release about '50 permanent jobs.'  \n"
@@ -289,7 +340,7 @@ def render_toolkit_tab():
         capex_per_mw = st.slider(
             "CapEx per MW ($M)", 5.0, 20.0, _DEFAULT_CAPEX_PER_MW, 0.5,
             key="tk_capex",
-            help="Industry average is $8–12M per MW for AI-ready facilities.",
+            help="Industry average is \\$8–12M per MW for AI-ready facilities.",
         )
         total_capex = facility_mw * capex_per_mw
 
@@ -323,7 +374,7 @@ def render_toolkit_tab():
     cba_per_mw = st.slider(
         "Negotiated CBA payment ($/MW/year)", 0, 3000, 1000, 100,
         key="tk_cba_rate",
-        help="Emerging range is $500–$2,000/MW/year. Aim high.",
+        help="Emerging range is \\$500–\\$2,000/MW/year. Aim high.",
     )
     annual_cba = facility_mw * cba_per_mw
 
@@ -346,6 +397,27 @@ def render_toolkit_tab():
     rv2.metric("Equipment tax", f"${annual_equip_tax/1e6:.1f}M/yr")
     rv3.metric("CBA payment", f"${annual_cba/1e6:.2f}M/yr")
     rv4.metric("Infrastructure fee", f"${annual_infra_fee/1e6:.2f}M/yr")
+
+    rev_df = pd.DataFrame([
+        {"Source": "Property tax", "Amount_M": annual_prop_tax / 1e6},
+        {"Source": "Equipment tax", "Amount_M": annual_equip_tax / 1e6},
+        {"Source": "CBA payment", "Amount_M": annual_cba / 1e6},
+        {"Source": "Infrastructure fee", "Amount_M": annual_infra_fee / 1e6},
+    ])
+    rev_chart = (
+        alt.Chart(rev_df)
+        .mark_arc(innerRadius=50, outerRadius=100)
+        .encode(
+            theta=alt.Theta("Amount_M:Q"),
+            color=alt.Color("Source:N",
+                scale=alt.Scale(
+                    domain=["Property tax", "Equipment tax", "CBA payment", "Infrastructure fee"],
+                    range=["#3b82f6", "#8b5cf6", "#10b981", "#f59e0b"]),
+                legend=alt.Legend(title="Revenue source")),
+            tooltip=["Source:N", alt.Tooltip("Amount_M:Q", format=".2f", title="$M/yr")],
+        ).properties(height=220)
+    )
+    st.altair_chart(rev_chart, use_container_width=True)
 
     st.divider()
     st.markdown("#### What this means for your community")
@@ -391,6 +463,11 @@ def render_toolkit_tab():
             "grid strain) is worth the deal at these terms."
         )
 
+    st.info(
+        "**Want a custom analysis for your community?** GridWatch Consulting "
+        "builds facility-specific impact models using your local utility data. "
+        "See the **Consulting** tab for a free initial assessment."
+    )
     st.markdown("</div>", unsafe_allow_html=True)
 
     # ================================================================== #
@@ -411,9 +488,14 @@ def render_toolkit_tab():
             st.markdown(f"**Why this matters:** {clause['why']}")
             if clause.get("range_low"):
                 st.caption(
-                    f"Typical range: ${clause['range_low']:,}–"
-                    f"${clause['range_high']:,} {clause['unit']}"
+                    f"Typical range: \\${clause['range_low']:,}–"
+                    f"\\${clause['range_high']:,} {clause['unit']}"
                 )
+    st.info(
+        "**Need clauses tailored to your situation?** These are starting points — "
+        "GridWatch Consulting drafts custom CBA language for your specific "
+        "developer, facility, and jurisdiction. See the **Consulting** tab."
+    )
     st.markdown("</div>", unsafe_allow_html=True)
 
     # ================================================================== #
@@ -447,12 +529,29 @@ def render_toolkit_tab():
     st.markdown("## 🏔️ The Alaska Model — Data Dividends")
     st.markdown("#### If they're extracting your resources, you deserve a share")
 
-    st.markdown(
-        "Alaska's Permanent Fund takes a portion of oil revenue and pays an annual "
-        "dividend to every resident. The same principle applies to data centers: "
-        "they extract your community's **land, water, electricity, and grid capacity** "
-        "— finite local resources — to generate billions in revenue."
-    )
+    ak1, ak_arrow, ak2, ak_arrow2, ak3 = st.columns([1, 0.2, 1, 0.2, 1])
+    with ak1:
+        st.markdown("**🏘️ Resources extracted**")
+        for item in ["🏗️ Your land", "💧 Your water", "⚡ Your grid", "🏚️ Your stability"]:
+            st.markdown(f"&nbsp;&nbsp;{item}")
+    with ak_arrow:
+        st.markdown("")
+        st.markdown("")
+        st.markdown("### ➡️")
+    with ak2:
+        with st.container(border=True):
+            st.markdown("**🏢 Data Center**")
+            st.markdown("Generates billions")
+            st.markdown("⬇️ 1–3% fee")
+            st.markdown("**🏦 Trust Fund**")
+    with ak_arrow2:
+        st.markdown("")
+        st.markdown("")
+        st.markdown("### ➡️")
+    with ak3:
+        st.markdown("**🏘️ Community receives**")
+        for item in ["💵 Direct payments", "🎓 Scholarships", "⚡ Bill credits", "👶 Childcare"]:
+            st.markdown(f"&nbsp;&nbsp;{item}")
 
     st.markdown("#### How to build a local Data Dividend fund")
 
@@ -490,7 +589,7 @@ def render_toolkit_tab():
         st.success(
             f"Based on your calculator inputs above: a {infra_fee_pct:.1f}% "
             f"infrastructure fee on a {facility_mw} MW facility would generate "
-            f"**${annual_infra_fee/1e6:.2f}M/year** — or **${dividend_per_hh:,.0f} "
+            f"**\\${annual_infra_fee/1e6:.2f}M/year** — or **\\${dividend_per_hh:,.0f} "
             f"per household per year** as a direct data dividend."
         )
 
@@ -503,12 +602,15 @@ def render_toolkit_tab():
     st.markdown("## ⚡ Grid Equity Demands")
     st.markdown("#### Don't let them raise your electric bill")
 
-    st.markdown(
-        "When a data center draws 200+ MW from your local grid, the utility must "
-        "build new substations, upgrade transmission lines, and sometimes delay "
-        "retiring old fossil plants. Without protection, these costs are spread "
-        "across **all ratepayers** — including you."
-    )
+    ge_a, ge_b, ge_c = st.columns(3)
+    with ge_a:
+        with st.container(border=True):
+            st.markdown("**🏢 200+ MW Data Center**")
+            st.markdown("Requires grid upgrades: substations, transmission lines — \\$100M+")
+    with ge_b:
+        st.error("**❌ WITHOUT protection**\n\nAll ratepayers pay via rate increase")
+    with ge_c:
+        st.success("**✅ WITH cost causation**\n\nDeveloper pays 100% of upgrades")
 
     ge1, ge2 = st.columns(2)
     with ge1:
@@ -565,6 +667,618 @@ def render_toolkit_tab():
         "Print this page or take a screenshot. Every question the developer "
         "can't answer clearly is a reason to pause the approval."
     )
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # ================================================================== #
+    # SECTION 7b — Meeting Prep Generator
+    # ================================================================== #
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("## 📄 Meeting Prep Generator")
+    st.markdown("#### Auto-generate a one-page brief for your next meeting")
+    st.caption(
+        "Select your state, the company/operator you're facing, and the "
+        "meeting type. We'll pull real data from our databases to build a "
+        "downloadable brief with talking points, CBA targets, and questions."
+    )
+
+    mg1, mg2, mg3 = st.columns(3)
+    with mg1:
+        _sidebar_st = st.session_state.get("my_state", "All states")
+        _mg_states = sorted(STATE_GRID_PROFILES.keys())
+        _mg_idx = _mg_states.index(_sidebar_st) if _sidebar_st in _mg_states else 0
+        mg_state = st.selectbox("Your state", _mg_states, index=_mg_idx, key="mg_state")
+    with mg2:
+        _ops = sorted(OPERATORS_DF["operator"].unique().tolist())
+        _ops_with_unknown = ["Unknown / not listed"] + _ops
+        mg_operator = st.selectbox("Company / operator", _ops_with_unknown, key="mg_operator")
+    with mg3:
+        mg_meeting = st.selectbox(
+            "Meeting type",
+            ["Planning commission hearing", "Zoning board meeting",
+             "Town hall / public comment", "Direct negotiation with developer",
+             "PUC rate case hearing"],
+            key="mg_meeting")
+
+    mg_mw = st.slider("Proposed facility size (MW)", 50, 1000, 200, 50, key="mg_mw")
+
+    if st.button("📝 Generate meeting brief", type="primary", key="mg_generate"):
+        _prof = STATE_GRID_PROFILES.get(mg_state, {})
+        _rate = _prof.get("rate", 0.12)
+        _gco2 = _prof.get("gco2", 400)
+        _water_stress = _prof.get("water_stress", "medium")
+
+        _st_row = STATE_DC_DF[STATE_DC_DF["state"] == mg_state]
+        _st_twh = _st_row.iloc[0]["twh_year"] if not _st_row.empty else 0
+        _st_count = int(_st_row.iloc[0]["dc_count"]) if not _st_row.empty else 0
+        _st_abbrev_row = STATE_PUCS_DF[STATE_PUCS_DF["state"] == mg_state]
+        _abbrev = _st_abbrev_row.iloc[0]["abbrev"] if not _st_abbrev_row.empty else ""
+        _puc_name = _st_abbrev_row.iloc[0]["name"] if not _st_abbrev_row.empty else "N/A"
+        _puc_web = _st_abbrev_row.iloc[0]["website"] if not _st_abbrev_row.empty else ""
+        _puc_complaint = _st_abbrev_row.iloc[0]["complaint"] if not _st_abbrev_row.empty else ""
+
+        _moras = MORATORIUMS_DF[MORATORIUMS_DF["state"] == _abbrev]
+        _mora_text = ""
+        if not _moras.empty:
+            enacted = (_moras["status"] == "Enacted").sum()
+            proposed = (_moras["status"] == "Proposed").sum()
+            parts = []
+            if enacted:
+                parts.append(f"{enacted} enacted")
+            if proposed:
+                parts.append(f"{proposed} proposed")
+            _mora_text = f"Moratorium activity: {', '.join(parts)}"
+
+        _op_info = ""
+        _op_execs = ""
+        if mg_operator != "Unknown / not listed":
+            _op_rows = OPERATORS_DF[OPERATORS_DF["operator"] == mg_operator]
+            if not _op_rows.empty:
+                _op = _op_rows.iloc[0]
+                _op_info = (
+                    f"  Tier: {_op.get('tier', 'N/A')}\n"
+                    f"  Owner: {_op.get('owner', 'N/A')}\n"
+                    f"  Business model: {_op.get('model', 'N/A')}\n"
+                )
+            _exec_rows = EXECUTIVES_DF[
+                EXECUTIVES_DF["company"].str.contains(mg_operator, case=False, na=False)
+            ]
+            if not _exec_rows.empty:
+                _op_execs = "KEY EXECUTIVES\n"
+                for _, ex in _exec_rows.head(5).iterrows():
+                    _op_execs += f"  - {ex['name']}, {ex['title']}\n"
+
+        _pue = 1.12
+        _annual_twh = mg_mw * 8760 * _pue / 1e6
+        _annual_co2 = mg_mw * 8760 * _pue * _gco2 / 1e6
+        _annual_water_mgal = mg_mw * 8760 * _pue * 1000 * 2.0 / 1e6
+        _homes = mg_mw * 8760 * _pue * 1000 / 10_500
+        _investment = mg_mw * 2
+        _data_dividend = _investment * 1e6 * 0.02
+
+        _meeting_advice = {
+            "Planning commission hearing": (
+                "STRATEGY: Focus on conditions of approval, not outright denial. "
+                "Planning commissions can attach binding conditions (CBAs, noise limits, "
+                "water caps) to conditional use permits.\n\n"
+                "KEY MOVES:\n"
+                "  - Request the developer present a water impact study\n"
+                "  - Ask for the utility's rate impact analysis\n"
+                "  - Demand the CBA be a condition of approval, not a side letter\n"
+                "  - Request a noise study at the nearest residential property line\n"
+                "  - Ask whether tax abatements are being offered and for how long"
+            ),
+            "Zoning board meeting": (
+                "STRATEGY: Zoning boards control land use. Your leverage is the variance "
+                "or rezoning the developer needs. Don't grant it without binding conditions.\n\n"
+                "KEY MOVES:\n"
+                "  - Challenge whether the proposed use is compatible with the zone\n"
+                "  - Request traffic, noise, and environmental impact studies\n"
+                "  - Ask about setback distances from residential areas\n"
+                "  - Demand a decommissioning bond as a condition\n"
+                "  - Request public water usage reporting as a condition"
+            ),
+            "Town hall / public comment": (
+                "STRATEGY: Public comment shapes the political environment. Bring "
+                "specific data, not just feelings. Elected officials respond to "
+                "organized, fact-based opposition.\n\n"
+                "KEY MOVES:\n"
+                "  - Lead with the rate impact: 'This will cost every household $X/year'\n"
+                "  - Cite specific water consumption numbers\n"
+                "  - Reference what other communities have won (Lancaster, Loudoun County)\n"
+                "  - Present the Data Dividend model as a positive alternative\n"
+                "  - Bring printed copies of your demands for every council member"
+            ),
+            "Direct negotiation with developer": (
+                "STRATEGY: The developer wants your land, water, and grid. You have "
+                "leverage until you sign. Never negotiate alone — bring a lawyer and "
+                "a technical advisor.\n\n"
+                "KEY MOVES:\n"
+                "  - Open with the Loudoun County benchmark (38% of budget from DCs)\n"
+                "  - Present your Data Dividend calculation as the starting ask\n"
+                "  - Demand cost causation: developer pays 100% of grid upgrades\n"
+                "  - Require a decommissioning bond (\\$5K-15K per MW)\n"
+                "  - Insist on annual public reporting of water, noise, and emissions"
+            ),
+            "PUC rate case hearing": (
+                "STRATEGY: PUC hearings determine who pays for grid upgrades. Your "
+                "goal is to prevent cost-shifting from the data center to ratepayers.\n\n"
+                "KEY MOVES:\n"
+                "  - Request the utility's load growth forecast with/without the DC\n"
+                "  - Ask whether the DC is paying for its own interconnection costs\n"
+                "  - Cite New Jersey's Large Load Tariff as a model\n"
+                "  - Request that grid upgrade costs be assigned to the cost-causer\n"
+                "  - Ask for a residential rate impact analysis before approval"
+            ),
+        }
+        _advice = _meeting_advice.get(mg_meeting, "")
+
+        brief = (
+            f"MEETING PREP BRIEF\n"
+            f"{'='*60}\n"
+            f"Generated by AI GridWatch\n\n"
+            f"MEETING: {mg_meeting}\n"
+            f"STATE: {mg_state}\n"
+            f"OPERATOR: {mg_operator}\n"
+            f"FACILITY: {mg_mw} MW proposed\n\n"
+            f"{'─'*60}\n"
+            f"YOUR STATE AT A GLANCE\n"
+            f"{'─'*60}\n"
+            f"  Existing DC facilities: {_st_count}\n"
+            f"  Existing DC load: {_st_twh:.1f} TWh/year\n"
+            f"  Grid carbon intensity: {_gco2} gCO2/kWh\n"
+            f"  Residential electricity rate: ${_rate:.3f}/kWh\n"
+            f"  Water stress: {_water_stress}\n"
+            f"  PUC: {_puc_name}\n"
+            f"  PUC website: {_puc_web}\n"
+            f"  PUC complaint portal: {_puc_complaint}\n"
+        )
+        if _mora_text:
+            brief += f"  {_mora_text}\n"
+
+        brief += (
+            f"\n{'─'*60}\n"
+            f"FACILITY IMPACT ESTIMATES\n"
+            f"{'─'*60}\n"
+            f"  Annual electricity: {_annual_twh:.1f} TWh\n"
+            f"  Annual carbon: {_annual_co2:,.0f} tCO2e\n"
+            f"  Annual water (evaporative): {_annual_water_mgal:,.0f}M gallons\n"
+            f"  Homes equivalent: {_homes:,.0f}\n"
+            f"  Estimated investment: ${_investment:.0f}M\n"
+        )
+
+        if _op_info:
+            brief += (
+                f"\n{'─'*60}\n"
+                f"OPERATOR PROFILE: {mg_operator}\n"
+                f"{'─'*60}\n"
+                f"{_op_info}"
+            )
+        if _op_execs:
+            brief += f"\n{_op_execs}"
+
+        brief += (
+            f"\n{'─'*60}\n"
+            f"{_advice}\n"
+            f"\n{'─'*60}\n"
+            f"CBA TARGETS (bring these to the table)\n"
+            f"{'─'*60}\n"
+            f"  Data dividend: ${_data_dividend/1e6:.1f}M/year (2% of investment)\n"
+            f"  Noise limit: 45 dBA at residential property line\n"
+            f"  Water cap: {_annual_water_mgal * 0.5:,.0f}M gallons/year\n"
+            f"  Grid upgrades: Developer pays 100%\n"
+            f"  Decommissioning bond: ${mg_mw * 10_000 / 1e6:.1f}M\n"
+            f"  Local hiring: 80%+ construction labor, prevailing wage\n"
+            f"  Property tax lock: No abatement below ${_investment * 0.02:.0f}M/year\n"
+            f"\n{'─'*60}\n"
+            f"QUESTIONS TO ASK\n"
+            f"{'─'*60}\n"
+            f"  1. How many MW will this facility draw at full build-out?\n"
+            f"  2. Who pays for grid upgrades (substation, transmission)?\n"
+            f"  3. What is the projected impact on residential electricity rates?\n"
+            f"  4. How many gallons/day will cooling consume? From which source?\n"
+            f"  5. What specific tax incentives are being offered, and for how long?\n"
+            f"  6. How many permanent local jobs (not construction)?\n"
+            f"  7. What is the projected noise level at the nearest home?\n"
+            f"  8. Is there a binding CBA? What are the annual payments?\n"
+            f"  9. What happens if the facility closes — is there a decommissioning bond?\n"
+            f"  10. Will water, noise, and emissions data be publicly reported?\n"
+        )
+
+        st.success("Brief generated! Review below and download.")
+        st.text(brief)
+        st.download_button(
+            "📥 Download meeting brief",
+            brief,
+            f"meeting_brief_{mg_state.replace(' ', '_')}_{mg_meeting.split()[0].lower()}.txt",
+            "text/plain",
+            key="mg_download",
+        )
+
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # ================================================================== #
+    # SECTION 8 — Advanced Revenue Capture Strategies
+    # ================================================================== #
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("## 🏛️ Advanced Revenue Capture Strategies")
+    st.markdown("#### Beyond the CBA — policy tools that maximize community value")
+    st.caption(
+        "These strategies go beyond individual CBAs. They're legislative and "
+        "policy tools that states and municipalities can adopt to ensure data "
+        "centers pay their fair share permanently — not just during a one-time negotiation."
+    )
+
+    # ── Energy Severance Tax ─────────────────────────────────────────── #
+    with st.expander("⚡ Energy Severance Tax", expanded=True):
+        st.markdown(
+            "**The idea:** Just as oil-producing states levy a severance tax on "
+            "extracted oil, communities can levy a per-kWh fee on massive "
+            "electricity consumers that are 'extracting' local grid capacity."
+        )
+
+        st.markdown("**Real legislation:**")
+        ev1, ev2 = st.columns(2)
+        with ev1:
+            with st.container(border=True):
+                st.markdown("**Virginia H.B. 30 (2026)**")
+                st.markdown(
+                    "- **\\$0.011/kWh** electricity consumption tax on data centers\n"
+                    "- **\\$600M annual revenue cap** (statewide)\n"
+                    "- Applies to facilities drawing significant grid load\n"
+                    "- *Source: Virginia General Assembly budget bill*"
+                )
+        with ev2:
+            with st.container(border=True):
+                st.markdown("**Minnesota Data Center Fees (2025)**")
+                st.markdown(
+                    "- **Tiered annual fees** by facility size:\n"
+                    "  - \\$2M/yr for smaller facilities\n"
+                    "  - \\$5M/yr for large (100+ MW) facilities\n"
+                    "- Removed sales tax exemption on electricity\n"
+                    "- *Source: Minnesota Legislature*"
+                )
+
+        st.markdown("**What it means for your community:**")
+        sev_mw = facility_mw
+        sev_kwh = sev_mw * 8760 * 0.85 * 1000
+        sev_revenue = sev_kwh * 0.011
+        sev_rev_str = f"\\${sev_revenue/1e6:.1f}M/year"
+        st.info(
+            f"At Virginia's \\$0.011/kWh rate, a {sev_mw} MW facility would generate "
+            f"**{sev_rev_str}** in severance tax revenue. "
+            "Push your state legislature to adopt a similar measure — or negotiate "
+            "an equivalent 'energy impact fee' directly in the CBA."
+        )
+
+    # ── Compute Royalty / Revenue Share ──────────────────────────────── #
+    with st.expander("💎 Compute Royalty — Revenue Share", expanded=True):
+        st.markdown(
+            "**The idea:** Data centers use local resources (land, water, power, "
+            "grid capacity) to generate cloud computing revenue. A compute royalty "
+            "captures a small percentage of that revenue — similar to mineral "
+            "royalties — rather than relying solely on property taxes."
+        )
+
+        st.markdown("**Real examples:**")
+        cr1, cr2, cr3 = st.columns(3)
+        with cr1:
+            with st.container(border=True):
+                st.markdown("**Lancaster, PA**")
+                st.markdown(
+                    "- \\$20.25M total CBA package\n"
+                    "- \\$10M letter of credit tied to\n"
+                    "  clean energy compliance\n"
+                    "- Effectively a revenue-linked\n"
+                    "  performance guarantee"
+                )
+        with cr2:
+            with st.container(border=True):
+                st.markdown("**Cedar Rapids, IA**")
+                st.markdown(
+                    "- Google: \\$400K/yr × 15 years\n"
+                    "- QTS: \\$1M/yr × 18 years\n"
+                    "- Annual payments create\n"
+                    "  ongoing accountability"
+                )
+        with cr3:
+            with st.container(border=True):
+                st.markdown("**Proposed Federal Act**")
+                st.markdown(
+                    "- **0.5% of gross revenue**\n"
+                    "  as annual community\n"
+                    "  contribution\n"
+                    "- Would standardize compute\n"
+                    "  royalties nationally"
+                )
+
+        annual_revenue_est = facility_mw * 1.1  # ~$1.1M revenue per MW (conservative)
+        royalty_05 = annual_revenue_est * 0.005
+        royalty_1 = annual_revenue_est * 0.01
+        royalty_2 = annual_revenue_est * 0.02
+        st.markdown("**Estimated royalty revenue** (based on ~\\$1.1M revenue/MW):")
+        ry1, ry2, ry3 = st.columns(3)
+        ry1.metric("0.5% royalty", f"${royalty_05:.1f}M/yr")
+        ry2.metric("1.0% royalty", f"${royalty_1:.1f}M/yr")
+        ry3.metric("2.0% royalty", f"${royalty_2:.1f}M/yr")
+
+    # ── Gross Receipts Tax ───────────────────────────────────────────── #
+    with st.expander("🧾 Gross Receipts Tax", expanded=True):
+        st.markdown(
+            "**The idea:** Unlike income taxes (which data centers minimize via "
+            "depreciation), a gross receipts tax applies to total revenue — "
+            "before deductions. It's harder to avoid and captures value even "
+            "when companies report minimal profit."
+        )
+
+        st.markdown("**States that already tax data center revenue:**")
+        grt_data = pd.DataFrame([
+            {"State": "Ohio", "Tax": "Commercial Activity Tax (CAT)",
+             "Rate": "0.26% of gross receipts > $1M", "Note": "Broad-based, includes data processing"},
+            {"State": "Oregon", "Rate": "0.57%", "Tax": "Corporate Activity Tax (CAT)",
+             "Note": "Applies to commercial activity > $1M"},
+            {"State": "Texas", "Tax": "Franchise Tax (margin tax)",
+             "Rate": "0.375–0.75%", "Note": "Taxes 'data processing services' under 34 TAC §3.330"},
+            {"State": "Virginia", "Tax": "BPOL Tax",
+             "Rate": "Varies by locality", "Note": "Business license tax on gross receipts; localities set rates"},
+            {"State": "Washington", "Tax": "Business & Occupation Tax",
+             "Rate": "0.471–1.5%", "Note": "No corporate income tax; B&O applies to all business activity"},
+        ])
+        st.dataframe(grt_data, hide_index=True, use_container_width=True)
+
+        st.markdown(
+            "**Connecticut** also applies a reduced **1% rate** specifically on "
+            "data processing services."
+        )
+        st.info(
+            "**Why this matters:** A data center with \\$220M in annual revenue "
+            "paying a 0.5% gross receipts tax generates **\\$1.1M/year** for the "
+            "state — revenue that can't be zeroed out by depreciation schedules "
+            "or transfer pricing."
+        )
+
+    # ── Corporate Tax Apportionment ──────────────────────────────────── #
+    with st.expander("📊 Corporate Tax Apportionment — Who Gets the Tax Base?", expanded=True):
+        st.markdown(
+            "**The idea:** States divide a multistate corporation's taxable income "
+            "using an apportionment formula. The formula determines how much of "
+            "a data center's profits your state can tax. The wrong formula means "
+            "billions in equipment sits in your state but the tax revenue goes elsewhere."
+        )
+
+        ap1, ap2 = st.columns(2)
+        with ap1:
+            with st.container(border=True):
+                st.markdown("**✅ Property-weighted formula (better for communities)**")
+                st.markdown(
+                    "The traditional **UDITPA 3-factor formula** divides income "
+                    "equally among property, payroll, and sales. Since data centers "
+                    "have massive property (servers, buildings) but sell services "
+                    "to customers everywhere, the property factor keeps tax revenue "
+                    "in the state where the equipment sits.\n\n"
+                    "**Virginia** retains its property factor — one reason Loudoun "
+                    "County captures so much revenue."
+                )
+        with ap2:
+            with st.container(border=True):
+                st.markdown("**❌ Single-sales-factor (bad for host communities)**")
+                st.markdown(
+                    "**12+ states** have adopted single-sales-factor apportionment, "
+                    "which assigns income only based on where customers are — not "
+                    "where the data center is built. This effectively **exempts "
+                    "capital-intensive operations** from state income tax.\n\n"
+                    "If your state uses single-sales-factor, the data center's "
+                    "\\$775M in equipment generates almost no income tax revenue "
+                    "for your community."
+                )
+
+        st.warning(
+            "**Action item:** Before approving any data center incentive package, "
+            "check whether your state uses property-weighted or single-sales-factor "
+            "apportionment. If single-sales-factor, the income tax revenue projections "
+            "in the developer's pitch are likely inflated. Demand higher CBA payments "
+            "and property/equipment taxes to compensate."
+        )
+
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # ================================================================== #
+    # SECTION 9 — Know the Numbers
+    # ================================================================== #
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("## 📐 Know the Numbers — Industry Benchmarks")
+    st.markdown(
+        "#### Walk into any negotiation knowing what the facility is actually worth"
+    )
+    st.caption(
+        "These are the real economics data center developers don't volunteer. "
+        "Sources: Loudoun County government, Epoch AI, Brookings Institution, "
+        "Tax Foundation, Columbia Law School."
+    )
+
+    bn1, bn2, bn3, bn4 = st.columns(4)
+    bn1.metric(
+        "Typical CapEx",
+        "$8–12M / MW",
+        "AI-ready facilities trend higher",
+        help="A 100 MW AI facility costs \\$800M–\\$1.2B to build. A 1 GW "
+             "campus: ~\\$38B (Epoch AI estimate).",
+    )
+    bn2.metric(
+        "Equipment share",
+        "~77% of CapEx",
+        "Servers, GPUs, networking",
+        help="For a \\$1B facility, ~\\$775M is taxable equipment. This is the "
+             "property tax base developers try to get exempted.",
+    )
+    bn3.metric(
+        "Permanent jobs",
+        "~157 / facility",
+        "Avg across industry",
+        help="Subsidies average \\$1.4M–\\$2.1M per permanent job created. "
+             "Compare to manufacturing at ~\\$50K–\\$200K per job.",
+    )
+    bn4.metric(
+        "Annual TCO",
+        "~$8.5M / MW",
+        "Operating cost (Epoch AI)",
+        help="A 100 MW facility costs ~\\$850M/year to operate (power, cooling, "
+             "staff, maintenance, refresh cycles).",
+    )
+
+    st.divider()
+    st.markdown("#### The Loudoun County benchmark")
+    lc1, lc2, lc3 = st.columns(3)
+    lc1.metric(
+        "% of county budget",
+        "38%",
+        "From just 4% of parcels",
+        help="Data centers fund over a third of Loudoun County's general fund "
+             "while occupying a tiny fraction of the land.",
+    )
+    lc2.metric(
+        "Equipment tax revenue",
+        "$330M+",
+        "FY2020 (single year)",
+        help="Computer equipment tax (personal property) is the largest single "
+             "revenue source for Loudoun County.",
+    )
+    lc3.metric(
+        "Property tax rate drop",
+        "$1.145 → $0.805",
+        "Per $100 assessed value",
+        help="DC revenue allowed the county to cut residential property tax "
+             "rates by 30% — the most tangible resident benefit.",
+    )
+
+    st.success(
+        "**Use Loudoun County as your benchmark.** When a developer says 'we'll "
+        "bring tax revenue,' ask: will you match Loudoun County's model, where "
+        "data centers fund 38% of the county budget and residential tax rates "
+        "dropped 30%? If not, why should we approve?"
+    )
+
+    st.divider()
+    st.markdown("#### The subsidy trap")
+    st.warning(
+        "**Virginia foregoes ~\\$1B/year** in data center tax subsidies (sales tax "
+        "exemptions, investment incentives). That's \\$1B that could fund schools, "
+        "roads, and services. Before accepting a subsidized deal, calculate:\n\n"
+        "- **What the developer is asking for** (tax breaks, free land, utility discounts)\n"
+        "- **What the community actually gets** (jobs × salary × years)\n"
+        "- **Subsidy per permanent job** — if it exceeds \\$500K/job, the deal is bad\n\n"
+        "Industry average: **\\$1.4M–\\$2.1M per permanent job** in subsidies. "
+        "For comparison, manufacturing subsidies average \\$50K–\\$200K per job."
+    )
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # ================================================================== #
+    # SECTION 10 — Consulting CTA / Intake
+    # ================================================================== #
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("## 🤝 Need expert help negotiating?")
+    st.markdown(
+        "The tools above give you the data. But going up against a \\$2B developer "
+        "with a team of lawyers is different from reading a checklist. "
+        "**GridWatch Consulting** works directly with communities to negotiate "
+        "CBAs, data dividends, and grid equity protections — and we only get "
+        "paid when you win."
+    )
+
+    wh1, wh2, wh3 = st.columns(3)
+    with wh1:
+        with st.container(border=True):
+            st.markdown("**📊 Custom impact analysis**")
+            st.markdown(
+                "We model the real energy, water, and grid strain of the "
+                "proposed facility using your local utility data — not the "
+                "developer's projections."
+            )
+    with wh2:
+        with st.container(border=True):
+            st.markdown("**📜 CBA drafting & review**")
+            st.markdown(
+                "We customize model clauses for your state's laws, "
+                "set negotiation anchors using our Data Dividend Calculator, "
+                "and review developer proposals for gaps."
+            )
+    with wh3:
+        with st.container(border=True):
+            st.markdown("**🎤 Hearing support**")
+            st.markdown(
+                "Expert testimony at planning commission and zoning "
+                "board hearings, backed by data the developer can't dispute."
+            )
+
+    st.info(
+        "**Success-fee model:** We believe communities shouldn't pay upfront "
+        "to defend their own resources. Our fee is a small percentage of the "
+        "community benefits we help you win — if we don't deliver results, "
+        "you don't pay. Initial consultations are always free."
+    )
+
+    st.markdown("---")
+    st.markdown("#### Request a free consultation")
+
+    consult_col1, consult_col2 = st.columns(2)
+    with consult_col1:
+        contact_name = st.text_input(
+            "Your name", key="consult_name",
+            placeholder="Jane Smith",
+        )
+        contact_email = st.text_input(
+            "Email", key="consult_email",
+            placeholder="jane@example.com",
+        )
+        community_name = st.text_input(
+            "Community / municipality", key="consult_community",
+            placeholder="e.g. Springfield Township, OH",
+        )
+    with consult_col2:
+        developer_name = st.text_input(
+            "Developer (if known)", key="consult_developer",
+            placeholder="e.g. Meta, Google, QTS, unknown",
+        )
+        facility_size = st.selectbox(
+            "Proposed facility size",
+            ["Not sure yet", "Under 50 MW", "50–200 MW", "200–500 MW", "500+ MW"],
+            key="consult_size",
+        )
+        timeline = st.selectbox(
+            "Where are you in the process?",
+            [
+                "Just heard about the proposal",
+                "Public comment period open",
+                "Zoning / planning hearing scheduled",
+                "Negotiating terms with developer",
+                "Already approved — want to reopen terms",
+            ],
+            key="consult_timeline",
+        )
+
+    situation = st.text_area(
+        "Tell us about your situation",
+        key="consult_situation",
+        placeholder="What's happening in your community? What are your biggest concerns "
+                    "(water, noise, grid strain, tax giveaways)? Any upcoming deadlines?",
+        height=120,
+    )
+
+    if st.button("📨 Request free consultation", type="primary", key="consult_submit"):
+        if not contact_name or not contact_email or not community_name:
+            st.error("Please fill in your name, email, and community name.")
+        else:
+            st.success(
+                f"**Thank you, {contact_name}!** We'll reach out within 48 hours "
+                f"to schedule your free consultation about the situation in "
+                f"**{community_name}**. Check your inbox at **{contact_email}**."
+            )
+            st.balloons()
+            st.caption(
+                "In the meantime, use the calculator and model clauses above to "
+                "start preparing. The more you know before we talk, the stronger "
+                "your position."
+            )
+
     st.markdown("</div>", unsafe_allow_html=True)
 
     # ================================================================== #

@@ -38,9 +38,55 @@ def render_sandbox_tab():
                 "Northern Virginia (PJM)",
                 "West Texas (ERCOT)",
                 "Central Iowa (MISO)",
-                "Pacific Northwest (BPA / PacifiCorp)"
+                "Pacific Northwest (BPA / PacifiCorp)",
+                "Central Ohio (PJM)",
+                "Georgia / Atlanta Metro (SERC)",
+                "Phoenix, Arizona (SPP West)",
+                "South Carolina Midlands (Duke / SERC)",
+                "North Carolina Piedmont (Duke / PJM)",
+                "Chicago / NE Illinois (PJM / ComEd)",
+                "Dallas–Fort Worth (ERCOT)",
+                "Salt Lake City, Utah (PacifiCorp)",
+                "New York Metro (NYISO)",
+                "Mississippi Delta (MISO South)",
+                "Southeast Michigan (MISO / DTE)",
+                "El Paso, Texas (ERCOT West)",
+                "San Antonio, Texas (ERCOT / CPS Energy)",
+                "Kansas City (SPP)",
+                "Indiana (MISO / AES Indiana)",
+                "Nashville, Tennessee (TVA)",
+                "Memphis, Tennessee (TVA / MLGW)",
+                "Reno / Sparks, Nevada (NV Energy)",
+                "Las Vegas, Nevada (NV Energy)",
+                "Cheyenne, Wyoming (WAPA / PacifiCorp)",
+                "Quincy, Washington (Grant County PUD)",
+                "The Dalles, Oregon (BPA / PGE)",
+                "Loudoun County, Virginia (Dominion / PJM)",
+                "Prince William County, Virginia (PJM)",
+                "Rural Maine (ISO-NE / Versant)",
+                "Central Pennsylvania (PJM / PPL)",
+                "Upstate New York (NYISO North)",
+                "New Albany, Ohio (AEP / PJM)",
+                "Papillion / Sarpy County, Nebraska (OPPD)",
+                "Albuquerque, New Mexico (PNM / SPP)",
+                "Sacramento, California (CAISO / SMUD)",
+                "San Jose, California (CAISO / PG&E)",
+                "Henrico County, Virginia (Dominion / PJM)",
+                "Abilene, Texas (ERCOT / AEP)",
+                "Stillwater, Oklahoma (SPP / OG&E)",
+                "Montgomery County, Missouri (MISO / Ameren)",
+                "Farmington, Minnesota (MISO / Xcel)",
+                "Jackson, Mississippi (Entergy / MISO South)",
+                "Starke County, Indiana (MISO / NIPSCO)",
+                "ACE Basin, South Carolina (Duke / Santee Cooper)",
+                "Stokes County, North Carolina (Duke)",
+                "Pittsylvania County, Virginia (AEP / PJM)",
+                "Morgan County, Georgia (Georgia Power / SERC)",
+                "El Paso County, Texas (ERCOT West / El Paso Electric)",
+                "Mount Pleasant, Wisconsin (MISO / WE Energies)",
+                "Lousiana Gulf Coast (MISO South / Entergy)",
             ],
-            help="Determines baseline grid carbon intensity, regional temperatures, and interconnection queue queue lengths."
+            help="Determines baseline grid carbon intensity, regional temperatures, and interconnection queue lengths."
         )
         
         cooling = st.selectbox(
@@ -84,24 +130,62 @@ def render_sandbox_tab():
         water_rate = 0.10
         cooling_cost_adj = 1.5 # million $ per MW
         
-    # Regional PUE adjustments (warmer climates require more fan/chiller power)
-    if "Texas" in region:
-        pue += 0.05
-    elif "Virginia" in region:
-        pue += 0.02
-    elif "Iowa" in region:
-        pue += 0.01
-
-    # 2. Interconnection Queue Wait Times (months)
-    queue_wait = 36
-    if "Virginia" in region:
-        queue_wait = 60 # PJM queues are heavily constrained
-    elif "Texas" in region:
-        queue_wait = 24 # ERCOT connects fast
-    elif "Iowa" in region:
-        queue_wait = 48
-    else: # Northwest
-        queue_wait = 54
+    # Regional profiles: (PUE adjustment, queue wait months, grid gCO2/kWh)
+    REGION_PROFILES = {
+        "Northern Virginia (PJM)":              (0.02, 60, 380),
+        "West Texas (ERCOT)":                   (0.05, 24, 340),
+        "Central Iowa (MISO)":                  (0.01, 48, 410),
+        "Pacific Northwest (BPA / PacifiCorp)": (0.00, 54, 180),
+        "Central Ohio (PJM)":                   (0.02, 54, 420),
+        "Georgia / Atlanta Metro (SERC)":       (0.04, 36, 370),
+        "Phoenix, Arizona (SPP West)":          (0.08, 30, 390),
+        "South Carolina Midlands (Duke / SERC)":(0.04, 36, 340),
+        "North Carolina Piedmont (Duke / PJM)": (0.03, 42, 350),
+        "Chicago / NE Illinois (PJM / ComEd)":  (0.01, 48, 310),
+        "Dallas–Fort Worth (ERCOT)":            (0.05, 24, 360),
+        "Salt Lake City, Utah (PacifiCorp)":    (0.02, 42, 440),
+        "New York Metro (NYISO)":               (0.01, 60, 250),
+        "Mississippi Delta (MISO South)":       (0.06, 30, 400),
+        "Southeast Michigan (MISO / DTE)":      (0.02, 42, 390),
+        "El Paso, Texas (ERCOT West)":          (0.07, 24, 350),
+        "San Antonio, Texas (ERCOT / CPS Energy)":(0.06, 24, 340),
+        "Kansas City (SPP)":                    (0.03, 36, 420),
+        "Indiana (MISO / AES Indiana)":         (0.02, 42, 430),
+        "Nashville, Tennessee (TVA)":           (0.04, 30, 350),
+        "Memphis, Tennessee (TVA / MLGW)":      (0.05, 30, 370),
+        "Reno / Sparks, Nevada (NV Energy)":    (0.04, 36, 330),
+        "Las Vegas, Nevada (NV Energy)":        (0.08, 36, 380),
+        "Cheyenne, Wyoming (WAPA / PacifiCorp)":(0.00, 36, 460),
+        "Quincy, Washington (Grant County PUD)":(0.00, 42, 80),
+        "The Dalles, Oregon (BPA / PGE)":       (0.00, 48, 120),
+        "Loudoun County, Virginia (Dominion / PJM)": (0.02, 60, 380),
+        "Prince William County, Virginia (PJM)":(0.02, 60, 380),
+        "Rural Maine (ISO-NE / Versant)":       (0.00, 48, 200),
+        "Central Pennsylvania (PJM / PPL)":     (0.01, 54, 350),
+        "Upstate New York (NYISO North)":       (0.00, 54, 180),
+        "New Albany, Ohio (AEP / PJM)":         (0.02, 54, 420),
+        "Papillion / Sarpy County, Nebraska (OPPD)": (0.02, 36, 440),
+        "Albuquerque, New Mexico (PNM / SPP)":  (0.06, 36, 370),
+        "Sacramento, California (CAISO / SMUD)":(0.04, 60, 220),
+        "San Jose, California (CAISO / PG&E)":  (0.02, 60, 220),
+        "Henrico County, Virginia (Dominion / PJM)": (0.03, 60, 380),
+        "Abilene, Texas (ERCOT / AEP)":         (0.06, 24, 360),
+        "Stillwater, Oklahoma (SPP / OG&E)":    (0.05, 30, 410),
+        "Montgomery County, Missouri (MISO / Ameren)": (0.03, 36, 430),
+        "Farmington, Minnesota (MISO / Xcel)":  (0.01, 42, 340),
+        "Jackson, Mississippi (Entergy / MISO South)": (0.06, 30, 400),
+        "Starke County, Indiana (MISO / NIPSCO)":(0.02, 42, 440),
+        "ACE Basin, South Carolina (Duke / Santee Cooper)": (0.04, 36, 320),
+        "Stokes County, North Carolina (Duke)": (0.03, 42, 350),
+        "Pittsylvania County, Virginia (AEP / PJM)": (0.03, 54, 370),
+        "Morgan County, Georgia (Georgia Power / SERC)": (0.04, 36, 370),
+        "El Paso County, Texas (ERCOT West / El Paso Electric)": (0.07, 24, 350),
+        "Mount Pleasant, Wisconsin (MISO / WE Energies)": (0.01, 42, 380),
+        "Lousiana Gulf Coast (MISO South / Entergy)": (0.06, 30, 380),
+    }
+    pue_adj, queue_wait, grid_intensity = REGION_PROFILES.get(
+        region, (0.03, 36, 350))
+    pue += pue_adj
 
     # Bypassing the grid queue with gas turbines or behind-the-meter nuclear
     if power.startswith("On-site Natural Gas"):
@@ -128,17 +212,6 @@ def render_sandbox_tab():
     load_factor = 0.85
     annual_power_mwh = campus_size * 8760 * load_factor * pue
     
-    # Grid emission factors (gCO2/kWh)
-    grid_intensity = 350
-    if "Virginia" in region:
-        grid_intensity = 380
-    elif "Texas" in region:
-        grid_intensity = 340
-    elif "Iowa" in region:
-        grid_intensity = 410
-    else: # Northwest
-        grid_intensity = 180
-
     # Apply procurement strategies
     carbon_intensity = grid_intensity
     if power.startswith("24/7"):
@@ -172,6 +245,81 @@ def render_sandbox_tab():
     if "Virginia" in region and campus_size >= 300:
         feasibility_score -= 15
         backlash_reasons.append("🔌 **Loudoun Over-Density**: High scale in Virginia triggers immediate transmission upgrade surcharges.")
+    if "Ohio" in region:
+        feasibility_score -= 10
+        backlash_reasons.append("📋 **Ohio Scrutiny**: Governor paused tax exemptions; Select Committee investigating data center impacts on ratepayers.")
+    if "Mississippi" in region:
+        feasibility_score -= 15
+        backlash_reasons.append("⚖️ **Environmental Justice**: Mississippi communities are actively litigating air quality and permitting violations (xAI precedent).")
+    if "Georgia" in region:
+        feasibility_score -= 10
+        backlash_reasons.append("💧 **Georgia Water Stress**: Atlanta metro faces growing water competition; governor vetoed tax-break reform attempts.")
+    if "Phoenix" in region:
+        feasibility_score -= 20
+        backlash_reasons.append("🏜️ **Desert Water Crisis**: Arizona has paused groundwater-dependent development; extreme heat raises PUE and cooling costs.")
+    if "New York" in region:
+        feasibility_score -= 20
+        backlash_reasons.append("🚫 **Moratorium Enacted**: NY EO 62 imposes 1-year moratorium on 50+ MW facilities (Jul 2026); first statewide ban in the US.")
+    if "Michigan" in region:
+        feasibility_score -= 10
+        backlash_reasons.append("⚡ **Rate Contestation**: Michigan AG challenged DTE data center contracts; first contested rate case in state history.")
+    if "Indiana" in region and campus_size >= 200:
+        feasibility_score -= 10
+        backlash_reasons.append("🏘️ **Community Opposition**: Meta's \\$10B Indiana campus drew 2,400+ petition signatures and organized resistance.")
+    if "Memphis" in region:
+        feasibility_score -= 20
+        backlash_reasons.append("⚖️ **xAI Precedent**: Memphis xAI facility triggered Clean Air Act lawsuits from NAACP and Earthjustice; unpermitted gas turbines drew federal investigation.")
+    if "Prince William" in region:
+        feasibility_score -= 20
+        backlash_reasons.append("🚫 **Organized Resistance**: Coalition to Protect Prince William County has blocked major projects since 2014; Board denied Dulles Cloud South rezoning.")
+    if "Loudoun" in region:
+        feasibility_score -= 15
+        backlash_reasons.append("🔌 **Saturation Zone**: Loudoun County hosts 70%+ of world internet traffic; residents and officials pushing back on further expansion.")
+    if "Maine" in region:
+        feasibility_score -= 15
+        backlash_reasons.append("🚫 **Moratorium Momentum**: Maine legislature passed a data-center moratorium bill (governor vetoed Apr 2026); political risk remains high.")
+    if "California" in region:
+        feasibility_score -= 15
+        backlash_reasons.append("📜 **CEQA & Permitting**: California's environmental review process adds 12–24 months; energy costs are 2–3x national average.")
+    if "Abilene" in region:
+        feasibility_score -= 10
+        backlash_reasons.append("🏘️ **Rural Opposition**: Save Abilene coalition organized against large-scale data center development near residential areas.")
+    if "Stillwater" in region or "Oklahoma" in region:
+        feasibility_score -= 10
+        backlash_reasons.append("📋 **NDA Controversy**: County officials required to sign NDAs before seeing project details; conflicts with Oklahoma open government statutes.")
+    if "Montgomery County, Missouri" in region:
+        feasibility_score -= 10
+        backlash_reasons.append("🌾 **Agricultural Land Loss**: Farmers and residents testified against converting productive farmland to data center campuses.")
+    if "Farmington" in region:
+        feasibility_score -= 10
+        backlash_reasons.append("📋 **CRDCD Opposition**: Coalition for Responsible Data Center Development (501(c)(3)) organized; testified before MN Senate Energy Committee.")
+    if "ACE Basin" in region:
+        feasibility_score -= 15
+        backlash_reasons.append("🌿 **Conservation Area**: SELC lawsuit to protect ACE Basin ecological preserve; one of SC's most pristine coastal ecosystems.")
+    if "Stokes County" in region:
+        feasibility_score -= 10
+        backlash_reasons.append("🏘️ **Rural Zoning Fight**: Sierra Club and local residents challenged data center zoning in agricultural community.")
+    if "Morgan County" in region:
+        feasibility_score -= 15
+        backlash_reasons.append("💧 **Contamination Risk**: Rep. AOC cited Meta's Georgia data center contaminating Morgan County drinking water at EPA hearing.")
+    if "Pittsylvania" in region:
+        feasibility_score -= 10
+        backlash_reasons.append("🏥 **Health Concerns**: SELC published health impact research on gas plant associated with data center; community organized opposition.")
+    if "Wyoming" in region:
+        feasibility_score += 5
+        backlash_reasons.append("✅ **State Support**: Wyoming governor framed data center projects as national security imperative; low population density reduces opposition.")
+    if "Quincy" in region:
+        feasibility_score += 5
+        backlash_reasons.append("✅ **Established Hub**: Grant County PUD provides ultra-cheap hydropower; existing Microsoft, Yahoo, and Sabey campuses set precedent.")
+    if "Nebraska" in region:
+        feasibility_score += 5
+        backlash_reasons.append("✅ **Utility Support**: OPPD actively courting data center load; public power keeps rates competitive.")
+    if "Lousiana" in region:
+        feasibility_score -= 5
+        backlash_reasons.append("📋 **Mixed Signals**: Governor courted Meta with 20-year tax exemptions but later signed ratepayer protection order; regulatory whiplash risk.")
+    if "Mount Pleasant" in region:
+        feasibility_score -= 5
+        backlash_reasons.append("⚠️ **Foxconn Precedent**: Community skeptical after Foxconn promised \\$10B campus but dramatically scaled back; trust deficit for megaprojects.")
 
     # Clamp score
     feasibility_score = max(5, min(100, feasibility_score))

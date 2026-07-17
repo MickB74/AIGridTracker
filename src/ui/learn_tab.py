@@ -6,6 +6,7 @@ inputs/outputs, efficiency strategies, and site-selection criteria.
 import math
 import streamlit as st
 import pandas as pd
+import altair as alt
 import requests
 
 
@@ -571,21 +572,29 @@ def render_learn_tab():
         "for when choosing where to build."
     )
 
+    with st.expander("📑 On this page", expanded=False):
+        st.markdown(
+            "**1.** What is a data center? · "
+            "**2.** How are AI data centers different? · "
+            "**3.** What happens inside an AI data center · "
+            "**4.** Using the right model for the task · "
+            "**5.** Inputs & outputs · "
+            "**6.** Efficiency (PUE, WUE, CUE) · "
+            "**7.** Site selection & community siting evaluator · "
+            "**8.** Key terms glossary · "
+            "**Also below:** 🎮 AI Datacenter Siting Sandbox (interactive simulation)"
+        )
+
     # ══════════════════════════════════════════════════════════════════════════
     # SECTION 1 — What is a data center?
     # ══════════════════════════════════════════════════════════════════════════
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("## 🏢 What is a data center?")
-    st.markdown("""\
-A **data center** is a purpose-built facility that houses computer servers, storage
-systems, and networking equipment. Every time you stream a video, send an email, use
-a banking app, or ask an AI chatbot a question, a data center somewhere is doing the
-work.
-
-Think of it as a **warehouse for computing** — but instead of shelves of products,
-the racks hold thousands of servers running 24/7, connected to the internet by
-fiber-optic cables and kept running by dedicated power and cooling systems.
-""")
+    st.markdown(
+        "A **warehouse for computing** — thousands of servers running 24/7 behind "
+        "every video stream, banking app, and AI chatbot, kept alive by dedicated "
+        "power, cooling, and fiber."
+    )
 
     col_a, col_b, col_c = st.columns(3)
     with col_a:
@@ -608,45 +617,39 @@ fiber-optic cables and kept running by dedicated power and cooling systems.
     # ══════════════════════════════════════════════════════════════════════════
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("## 🤖 How are AI data centers different?")
-    st.markdown("""\
-Traditional data centers run **general workloads** — web hosting, email, databases,
-video streaming. The servers inside use standard CPUs and draw moderate power.
-
-AI data centers are fundamentally different in three ways:
-""")
 
     d1, d2, d3 = st.columns(3)
     with d1:
-        st.markdown("""\
-### ⚡ Power density
-Traditional servers draw **5–15 kW per rack**. AI racks packed with GPUs like
-NVIDIA's H100 or B200 draw **40–120 kW per rack** — up to **10× more** in the
-same physical space. This means AI facilities need vastly more power per square
-foot and generate far more heat.
-""")
+        st.metric("⚡ Power density", "40–120 kW/rack", "vs 5–15 kW traditional")
+        st.caption("Up to 10× more power in the same space — and far more heat.")
     with d2:
-        st.markdown("""\
-### 🧊 Cooling demands
-Standard air cooling can't handle GPU-density heat loads. AI data centers
-increasingly use **liquid cooling** — piping coolant directly to chips — or
-**rear-door heat exchangers**. Some use evaporative cooling towers that consume
-millions of gallons of water per day.
-""")
+        st.metric("🧊 Cooling", "Liquid-cooled", "air can't keep up")
+        st.caption("Evaporative towers can consume millions of gallons a day.")
     with d3:
-        st.markdown("""\
-### 🔌 Grid impact
-A single AI training cluster can draw **50–100 MW** continuously — the electrical
-load of a small city. When dozens of these facilities cluster in one region (like
-Northern Virginia or Central Texas), they can strain the local grid, drive up
-electricity rates, and require billions in new transmission infrastructure.
-""")
+        st.metric("🔌 Grid draw", "50–100 MW", "per training cluster")
+        st.caption("The continuous load of a small city, per cluster.")
 
     st.info(
-        "**The key difference in one sentence:** A traditional data center serves "
-        "millions of small, quick requests; an AI data center runs fewer, far more "
-        "computationally intensive workloads that demand specialized hardware, "
-        "extreme power density, and advanced cooling."
+        "**In one sentence:** a traditional data center serves millions of small, "
+        "quick requests; an AI data center runs fewer, far heavier workloads that "
+        "demand extreme power density and advanced cooling."
     )
+    with st.expander("Read more — why the difference matters"):
+        st.markdown("""\
+Traditional data centers run **general workloads** — web hosting, email, databases,
+video streaming — on standard CPUs drawing moderate power.
+
+- **Power density:** AI racks packed with GPUs like NVIDIA's H100 or B200 draw
+  **40–120 kW per rack** vs 5–15 kW for traditional servers. AI facilities need
+  vastly more power per square foot and generate far more heat.
+- **Cooling:** Standard air cooling can't handle GPU heat loads, so AI facilities
+  use **liquid cooling** (piping coolant to chips) or rear-door heat exchangers.
+  Some rely on evaporative cooling towers that consume millions of gallons of
+  water per day.
+- **Grid impact:** When dozens of 50–100 MW clusters concentrate in one region
+  (Northern Virginia, Central Texas), they strain the grid, drive up electricity
+  rates, and require billions in new transmission infrastructure.
+""")
     st.markdown("</div>", unsafe_allow_html=True)
 
     # ══════════════════════════════════════════════════════════════════════════
@@ -654,44 +657,25 @@ electricity rates, and require billions in new transmission infrastructure.
     # ══════════════════════════════════════════════════════════════════════════
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("## ⚙️ What actually happens inside an AI data center?")
-    st.markdown("""\
-Inside the building, thousands of **GPUs** (specialized AI chips) are wired together
-into clusters and run nearly non-stop. But they're doing two very different kinds of
-work — **training** and **inference** — with very different power profiles. Almost
-everything on your electricity bill and this tracker traces back to one of these two.
-""")
+    st.markdown(
+        "Two kinds of work with very different power profiles: **training** "
+        "(building the model — one massive, months-long burn) and **inference** "
+        "(using it — a smaller but endless drip, billions of requests a day)."
+    )
 
-    t_col, i_col = st.columns(2)
-    with t_col:
-        st.markdown("""\
-### 🏋️ Training — *building* the model
-Training is how an AI model is created. Engineers feed it enormous datasets — much
-of the public internet, books, code — and the model adjusts billions of internal
-numbers ("parameters") over and over until it can predict language and patterns well.
-
-- **Runs once per model**, but for **weeks or months** without stopping.
-- Uses **thousands of GPUs in lockstep** on a single job — a "training cluster" of
-  50–100+ MW running flat-out, 24/7.
-- Extremely **power-hungry and steady** — a near-constant, city-sized electrical load
-  that's hard for a grid to absorb.
-- Training a single frontier model can consume **tens of gigawatt-hours** — as much
-  electricity as thousands of homes use in a year.
-""")
-    with i_col:
-        st.markdown("""\
-### 💬 Inference — *using* the model
-Inference is what happens every time someone actually uses the AI. Your prompt goes
-to a data center, runs through the already-trained model, and a response comes back —
-usually in under a second.
-
-- **Runs constantly, forever** — every chat message, image, and search summary is an
-  inference request.
-- Each request is **small**, but there are **billions per day** across all users.
-- Load is **spiky and follows the clock** — busy in waking hours, lighter overnight —
-  which makes it easier to shift toward cleaner grid hours.
-- Over a model's lifetime, **inference usually dwarfs training** in total energy,
-  simply because it never stops.
-""")
+    st.markdown("#### At a glance")
+    ti_compare = pd.DataFrame([
+        {"Attribute": "Duration", "Training": "Weeks–months (one-time)", "Inference": "Forever (24/7)"},
+        {"Attribute": "GPU usage", "Training": "Thousands in lockstep", "Inference": "Spread across clusters"},
+        {"Attribute": "Power profile", "Training": "Steady, flat, 24/7", "Inference": "Spiky, follows clock"},
+        {"Attribute": "Total lifetime energy", "Training": "~20–30%", "Inference": "~70–80%"},
+    ])
+    st.dataframe(ti_compare, use_container_width=True, hide_index=True,
+                 column_config={
+                     "Attribute": st.column_config.TextColumn(width="small"),
+                     "Training": st.column_config.TextColumn("🏋️ Training", width="medium"),
+                     "Inference": st.column_config.TextColumn("💬 Inference", width="medium"),
+                 })
 
     st.info(
         "**Rule of thumb:** *Training* is a one-time, massive, steady burst to build "
@@ -699,19 +683,60 @@ usually in under a second.
         "headlines; inference quietly dominates the long-run footprint."
     )
 
-    st.markdown("""\
-#### The full lifecycle, start to finish
+    with st.expander("Read more — training vs inference, in depth"):
+        t_col, i_col = st.columns(2)
+        with t_col:
+            st.markdown("""\
+##### 🏋️ Training — *building* the model
+Engineers feed enormous datasets — much of the public internet, books, code — and
+the model adjusts billions of internal parameters until it can predict language well.
+
+- **Runs once per model**, but for **weeks or months** without stopping.
+- **Thousands of GPUs in lockstep** — a 50–100+ MW cluster running flat-out, 24/7.
+- A near-constant, city-sized electrical load that's hard for a grid to absorb.
+- A single frontier model can consume **tens of gigawatt-hours** — as much
+  electricity as thousands of homes use in a year.
 """)
-    st.markdown("""\
-| Stage | What happens | Energy character |
-|-------|-------------|------------------|
-| **1. Data prep** | Collecting, cleaning, and filtering the training dataset | Moderate, bursty — mostly CPU and storage |
-| **2. Training** | The model learns from the data over weeks/months on a GPU cluster | Huge, steady, 24/7 — the single biggest one-time draw |
-| **3. Fine-tuning** | Smaller follow-up training to specialize or align the model (e.g. safety) | Much smaller than training, done repeatedly |
-| **4. Deployment** | Loading the finished model onto inference servers | Low — a setup step |
-| **5. Inference** | Serving real user requests, 24/7, for the life of the model | Spiky but relentless; dominates lifetime total |
-| **6. Retraining** | Building the next, better model — the cycle repeats | Back to a full training-sized burst |
+        with i_col:
+            st.markdown("""\
+##### 💬 Inference — *using* the model
+Your prompt goes to a data center, runs through the trained model, and a response
+comes back — usually in under a second.
+
+- **Runs constantly, forever** — every chat message and search summary.
+- Each request is small, but there are **billions per day** across all users.
+- Load is **spiky and follows the clock** — easier to shift toward cleaner grid hours.
+- Over a model's lifetime, **inference usually dwarfs training** in total energy.
 """)
+
+    st.markdown("#### The full lifecycle, start to finish")
+
+    lifecycle_df = pd.DataFrame([
+        {"Stage": "1. Data prep", "Energy": 2, "Type": "Moderate"},
+        {"Stage": "2. Training", "Energy": 10, "Type": "HUGE"},
+        {"Stage": "3. Fine-tuning", "Energy": 3, "Type": "Moderate"},
+        {"Stage": "4. Deployment", "Energy": 1, "Type": "Low"},
+        {"Stage": "5. Inference", "Energy": 7, "Type": "Relentless"},
+        {"Stage": "6. Retraining", "Energy": 10, "Type": "HUGE"},
+    ])
+    lifecycle_bar = (
+        alt.Chart(lifecycle_df)
+        .mark_bar(cornerRadiusTopRight=6, cornerRadiusBottomRight=6)
+        .encode(
+            x=alt.X("Energy:Q", title="Relative energy intensity", scale=alt.Scale(domain=[0, 10])),
+            y=alt.Y("Stage:N", sort=None, title=None),
+            color=alt.Color("Energy:Q",
+                scale=alt.Scale(scheme="redyellowgreen", reverse=True, domain=[0, 10]),
+                legend=None),
+            tooltip=["Stage:N", "Type:N", alt.Tooltip("Energy:Q", title="Intensity (0–10)")],
+        ).properties(height=200)
+    )
+    st.altair_chart(lifecycle_bar, use_container_width=True)
+
+    lc1, lc2, lc3 = st.columns(3)
+    lc1.markdown("**One-time burst:** Training & retraining are the biggest single energy draws")
+    lc2.markdown("**Never stops:** Inference runs 24/7 for the life of the model")
+    lc3.markdown("**The cycle repeats:** Each new model generation starts the process over")
 
     st.caption(
         "This is why AI facilities come in two flavors: **training campuses** built for "
@@ -725,46 +750,33 @@ usually in under a second.
     # ══════════════════════════════════════════════════════════════════════════
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("## 🎯 Using the right model for the task")
-    st.markdown("""\
-Not every question needs the biggest, most powerful model. A frontier model with
-hundreds of billions of parameters can use **10–100× more energy per response** than
-a small model — and for most everyday tasks, the small model answers just as well.
-**Matching the model to the job** is one of the simplest ways to cut AI's energy and
-carbon footprint, and it's a choice made by the people *building* AI products, not
-just the data-center operators.
-""")
+    st.markdown(
+        "A frontier model can use **10–100× more energy per response** than a small "
+        "one — and for most everyday tasks, the small model answers just as well. "
+        "Sending every request to the largest model is like taking a semi-truck to "
+        "pick up groceries."
+    )
 
-    m1, m2 = st.columns(2)
-    with m1:
+    st.info(
+        "**The takeaway:** the greenest AI request is often the one that never touches "
+        "a giant model. Right-sizing — the *right* model, a *short* prompt, a *cached* "
+        "answer when possible — cuts energy dramatically with no visible drop in quality."
+    )
+    with st.expander("Read more — how teams right-size in practice"):
         st.markdown("""\
-#### Bigger isn't always better
-- **Small / "mini" models** handle the bulk of real traffic — classification,
-  summarizing, autocomplete, simple Q&A — at a fraction of the energy.
-- **Large frontier models** shine at hard reasoning, complex code, and nuanced
-  writing, but are wasteful overkill for routine requests.
-- Sending every request to the largest model is like **taking a semi-truck to pick
-  up a bag of groceries** — it works, but you're burning far more fuel than the trip
-  requires.
-""")
-    with m2:
-        st.markdown("""\
-#### How teams right-size in practice
 - **Model routing** — a lightweight system sends easy questions to a small model and
   only escalates hard ones to a large model.
 - **Distillation** — training a small, cheap model to mimic a big one for a specific
   task, keeping most of the quality at a fraction of the cost.
 - **Caching & retrieval** — reusing past answers or looking facts up in a database
   instead of re-running the model from scratch.
-- **Shorter prompts & outputs** — energy scales with the number of tokens processed,
-  so concise in-and-out means less compute.
-""")
+- **Shorter prompts & outputs** — energy scales with tokens processed, so concise
+  in-and-out means less compute.
 
-    st.info(
-        "**The takeaway:** the greenest AI request is often the one that never touches "
-        "a giant model. Right-sizing — the *right* model, a *short* prompt, a *cached* "
-        "answer when possible — can cut the energy of a typical workload dramatically "
-        "with no visible drop in quality."
-    )
+Small "mini" models already handle the bulk of real traffic — classification,
+summarizing, autocomplete, simple Q&A — at a fraction of the energy. Large frontier
+models shine at hard reasoning and complex code, but are overkill for routine requests.
+""")
     st.markdown("</div>", unsafe_allow_html=True)
 
     # ══════════════════════════════════════════════════════════════════════════
@@ -773,35 +785,38 @@ just the data-center operators.
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("## 🔄 Inputs and outputs — what goes in, what comes out")
 
-    in_col, out_col = st.columns(2)
-
-    with in_col:
-        st.markdown("### 📥 Inputs (what a data center consumes)")
-        st.markdown("""\
-| Resource | What it's for | Scale |
-|----------|--------------|-------|
-| **Electricity** | Powers servers, cooling, lighting, networking | 50–300+ MW per campus |
-| **Water** | Evaporative cooling towers, humidification | 1–5 million gal/day for large facilities |
-| **Land** | Building footprint, setbacks, future expansion | 50–500+ acres per campus |
-| **Fiber optic cables** | Internet connectivity, data transit | Multiple redundant paths required |
-| **Backup fuel** | Diesel/gas generators for outages | Thousands of gallons stored on-site |
-| **Hardware** | GPUs, CPUs, memory, SSDs, networking gear | Refreshed every 3–5 years |
-| **Construction materials** | Concrete, steel, copper for the building itself | 12–24 month build cycles |
-""")
-
-    with out_col:
-        st.markdown("### 📤 Outputs (what a data center produces)")
-        st.markdown("""\
-| Output | Description | Community impact |
-|--------|------------|-----------------|
-| **Compute services** | AI inference, cloud apps, storage | The product — delivered over fiber |
-| **Heat** | Waste heat from servers and power conversion | Radiated or cooled away; rarely recaptured |
-| **Noise** | Cooling fans, generators, transformers | 50–70+ dB at property line; constant |
-| **CO₂ emissions** | From grid electricity and backup generators | Varies by grid mix; 0 if 100% renewable |
-| **Wastewater** | Blowdown from cooling towers (mineral-laden) | Discharged to municipal systems |
-| **Jobs** | Construction (temporary) and operations (permanent) | 50–150 permanent jobs per facility |
-| **Tax revenue** | Property taxes, sales taxes on equipment | Often reduced by abatement deals |
-""")
+    io_in, io_mid, io_out = st.columns([1, 0.4, 1])
+    with io_in:
+        st.markdown("### 📥 What goes IN")
+        for icon, resource, scale in [
+            ("⚡", "Electricity", "50–300+ MW"),
+            ("💧", "Water", "1–5M gal/day"),
+            ("🏗️", "Land", "50–500+ acres"),
+            ("🔌", "Fiber", "Redundant paths"),
+            ("🖥️", "Hardware", "Refreshed every 3–5 yrs"),
+        ]:
+            with st.container(border=True):
+                st.markdown(f"{icon} **{resource}** — {scale}")
+    with io_mid:
+        st.markdown("")
+        st.markdown("")
+        st.markdown("")
+        st.markdown("")
+        st.markdown("### &nbsp;&nbsp;➡️")
+        st.markdown("### 🏢")
+        st.markdown("### &nbsp;&nbsp;➡️")
+    with io_out:
+        st.markdown("### 📤 What comes OUT")
+        for icon, output, impact in [
+            ("☁️", "Compute services", "AI & cloud (the product)"),
+            ("🌡️", "Waste heat", "Rarely recaptured in US"),
+            ("🔊", "Noise", "50–70+ dB at property line"),
+            ("💨", "CO₂ emissions", "Varies by grid mix"),
+            ("👷", "Jobs", "50–150 permanent"),
+            ("💰", "Tax revenue", "Often reduced by abatements"),
+        ]:
+            with st.container(border=True):
+                st.markdown(f"{icon} **{output}** — {impact}")
 
     st.markdown("</div>", unsafe_allow_html=True)
 
@@ -810,69 +825,74 @@ just the data-center operators.
     # ══════════════════════════════════════════════════════════════════════════
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("## 🌱 How can data centers be more efficient?")
-    st.markdown("""\
-The industry uses several strategies to reduce energy, water, and carbon footprint.
-Not all operators adopt all of these — and the gap between the best and worst
-performers is wide.
+    st.markdown(
+        "The industry uses several strategies to reduce energy, water, and carbon footprint. "
+        "Not all operators adopt all of these — and the gap between the best and worst "
+        "performers is wide."
+    )
+
+    pue_compare = pd.DataFrame([
+        {"Facility type": "Best-in-class (Google/Meta)", "PUE": 1.10},
+        {"Facility type": "Good modern facility", "PUE": 1.20},
+        {"Facility type": "Industry average (2024)", "PUE": 1.55},
+        {"Facility type": "Older / poorly designed", "PUE": 1.80},
+    ])
+    pue_bar = (
+        alt.Chart(pue_compare)
+        .mark_bar(cornerRadiusTopRight=6, cornerRadiusBottomRight=6)
+        .encode(
+            x=alt.X("PUE:Q", scale=alt.Scale(domain=[1.0, 2.0]), title="PUE (lower = better)"),
+            y=alt.Y("Facility type:N", sort=None, title=None),
+            color=alt.Color("PUE:Q", scale=alt.Scale(scheme="redyellowgreen", reverse=True, domain=[1.0, 2.0]),
+                            legend=None),
+            tooltip=["Facility type", alt.Tooltip("PUE:Q", format=".2f")],
+        ).properties(height=160)
+    )
+    perfect_line = alt.Chart(pd.DataFrame([{"pue": 1.0}])).mark_rule(
+        color="#10b981", strokeDash=[4, 3], strokeWidth=1.5
+    ).encode(x="pue:Q")
+    st.altair_chart(pue_bar + perfect_line, use_container_width=True)
+    st.caption("🟢 Green dashed = theoretical perfect PUE (1.0). Every 0.1 improvement saves ~7–10% total energy.")
+
+    ef1, ef2, ef3 = st.columns(3)
+    ef1.metric("Industry avg PUE", "1.55", "best-in-class: 1.10")
+    ef2.metric("Server utilization", "12–18%", "could be 60%+")
+    ef3.metric("Liquid cooling savings", "30–50%", "of cooling energy")
+
+    with st.expander("Read more — the six efficiency levers, explained"):
+        e1, e2 = st.columns(2)
+        with e1:
+            st.markdown("""\
+##### Power efficiency (PUE)
+Total facility energy ÷ IT equipment energy. 1.0 = perfect (impossible);
+1.1–1.2 = best-in-class (Google, Meta); industry average ≈ 1.55 (Uptime
+Institute, 2024). Every 0.1 reduction saves ~7–10% of total energy.
+
+##### Liquid cooling
+Direct-to-chip cooling removes heat far more efficiently than air — 30–50% less
+cooling energy, and increasingly required for AI GPU racks drawing 60+ kW.
+
+##### Free cooling
+Cold-climate facilities (Nordics, Pacific Northwest, Ireland) use outside air
+much of the year, drastically cutting water and chiller energy.
 """)
+        with e2:
+            st.markdown("""\
+##### Renewable energy
+Leading operators sign PPAs for wind and solar. The gold standard is **24/7
+Carbon-Free Energy** — matching consumption with clean energy hour-by-hour on
+the same grid, not just annually through credits.
 
-    e1, e2 = st.columns(2)
-    with e1:
-        st.markdown("""\
-#### Power efficiency (PUE)
-**Power Usage Effectiveness** measures total facility energy ÷ IT equipment energy.
-- **PUE 1.0** = perfect (impossible in practice)
-- **PUE 1.1–1.2** = best-in-class (Google, Meta)
-- **PUE 1.5–1.8** = older or poorly designed facilities
-- **Industry average** ≈ 1.55 (Uptime Institute, 2024)
+##### Water efficiency (WUE)
+Liters of water per kWh of IT energy. 0.0 = air-cooled; 0.2–0.5 = efficient
+evaporative; 1.0–2.0 = heavy use. Arid-region facilities are switching to
+closed-loop chillers that use zero water at the cost of more energy.
 
-Every 0.1 reduction in PUE saves **~7–10%** of total energy.
-
-#### Liquid cooling
-Direct-to-chip liquid cooling removes heat far more efficiently than air. It enables
-higher rack densities and can reduce cooling energy by **30–50%**. Increasingly
-required for AI GPU racks drawing 60+ kW.
-
-#### Free cooling
-Facilities in cold climates (Nordics, Pacific Northwest, Ireland) can use outside
-air for cooling much of the year, drastically cutting water and energy for chiller
-systems.
-""")
-
-    with e2:
-        st.markdown("""\
-#### Renewable energy
-Leading operators sign **Power Purchase Agreements (PPAs)** for wind and solar to
-match their electricity consumption. The gold standard is **24/7 Carbon-Free
-Energy (CFE)** — matching consumption with clean energy hour-by-hour on the same
-grid, not just annually through credits.
-
-#### Water efficiency (WUE)
-**Water Usage Effectiveness** measures liters of water consumed per kWh of IT energy.
-- **WUE 0.0** = air-cooled, no water used
-- **WUE 0.2–0.5** = efficient evaporative cooling
-- **WUE 1.0–2.0** = heavy water use
-- Some facilities in arid regions are switching to **closed-loop** or **air-cooled**
-  chillers that use zero water at the cost of higher energy use.
-
-#### Waste heat reuse
-A few European facilities pipe waste heat to district heating networks, warming
-nearby homes and offices. This is rare in the US but represents a major untapped
-efficiency opportunity.
-
-#### Compute efficiency
-The cheapest watt is the one you never draw. Key levers:
-- **Server utilization** — Average utilization across the industry is just
-  **12–18%** (NRDC, 2024). Virtualization and workload packing can push this
-  above 60%, cutting servers (and energy) by half or more.
-- **Model optimization** — Techniques like quantization, distillation, and
-  sparse attention can reduce inference energy per query by **2–10×** with
-  minimal quality loss.
-- **Right-sizing hardware** — Matching GPU/CPU tier to the workload avoids
-  powering idle silicon. Not every task needs an H100.
-- **Workload scheduling** — Shifting deferrable jobs (training, batch
-  inference, backups) to off-peak hours or periods of high renewable
-  generation reduces both grid strain and carbon intensity.
+##### Compute efficiency
+The cheapest watt is the one you never draw: raise server utilization (industry
+average is just 12–18%), optimize models (quantization and distillation cut
+inference energy 2–10×), right-size hardware, and schedule deferrable jobs
+into off-peak, high-renewable hours.
 """)
 
     st.markdown("</div>", unsafe_allow_html=True)
@@ -882,24 +902,36 @@ The cheapest watt is the one you never draw. Key levers:
     # ══════════════════════════════════════════════════════════════════════════
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("## 📍 Where do companies build — and what do they look for?")
-    st.markdown("""\
-Site selection is driven by a specific checklist of requirements. Understanding what
-companies prioritize explains why data centers cluster in certain regions — and why
-some communities are targeted more than others.
-""")
+    st.markdown(
+        "Site selection is driven by a specific checklist of requirements. Understanding what "
+        "companies prioritize explains why data centers cluster in certain regions — and why "
+        "some communities are targeted more than others."
+    )
 
-    st.markdown("""\
-| Priority | What they need | Why it matters | Where it leads |
-|----------|---------------|----------------|----------------|
-| **1. Power availability** | 50–300+ MW of firm, deliverable electricity | Without power, nothing runs. New generation or transmission takes 3–7 years to build. | Northern Virginia, Central Texas, Central Ohio — where grid capacity exists or is planned |
-| **2. Fiber connectivity** | Dense fiber routes with low latency to major metros | AI inference must respond in milliseconds. Distance = delay. | Along major internet exchange points and cable landing stations |
-| **3. Tax incentives** | Property tax abatements, sales tax exemptions on equipment | A $1B+ campus can save $50–200M over 20 years with incentives | States with aggressive incentive programs (Virginia, Texas, Georgia, Indiana) |
-| **4. Land cost & availability** | 50–500 acres, flat, outside flood zones | Campuses are expanding rapidly and need room to grow | Exurban and rural areas with cheap agricultural land |
-| **5. Water access** | Reliable municipal or well water supply for cooling | Evaporative cooling is the cheapest thermal solution | Near rivers, reservoirs, or municipal water systems |
-| **6. Permitting speed** | Fast zoning approval and building permits | Every month of delay costs millions in lost revenue | Jurisdictions with business-friendly zoning or by-right development |
-| **7. Natural disaster risk** | Low earthquake, hurricane, tornado, flood exposure | Downtime is unacceptable for mission-critical workloads | Inland areas with moderate climates |
-| **8. Workforce** | Electricians, HVAC techs, security, network engineers | Ongoing operations require specialized labor | Near population centers (but not so close that land is expensive) |
-""")
+    site_factors = pd.DataFrame([
+        {"Factor": "1. Power availability", "Weight": 10, "What they need": "50–300+ MW of firm electricity"},
+        {"Factor": "2. Fiber connectivity", "Weight": 8, "What they need": "Dense fiber with low latency"},
+        {"Factor": "3. Tax incentives", "Weight": 7, "What they need": "Abatements, exemptions"},
+        {"Factor": "4. Land (cheap & flat)", "Weight": 6, "What they need": "50–500 acres, no flood zones"},
+        {"Factor": "5. Water access", "Weight": 6, "What they need": "Reliable municipal or well supply"},
+        {"Factor": "6. Permitting speed", "Weight": 7, "What they need": "Fast zoning & building permits"},
+        {"Factor": "7. Disaster safety", "Weight": 5, "What they need": "Low quake/hurricane/tornado risk"},
+        {"Factor": "8. Workforce", "Weight": 4, "What they need": "Electricians, HVAC, network engineers"},
+    ])
+    factor_bar = (
+        alt.Chart(site_factors)
+        .mark_bar(cornerRadiusTopRight=6, cornerRadiusBottomRight=6)
+        .encode(
+            x=alt.X("Weight:Q", title="Relative importance", scale=alt.Scale(domain=[0, 10])),
+            y=alt.Y("Factor:N", sort=None, title=None),
+            color=alt.Color("Weight:Q",
+                scale=alt.Scale(scheme="orangered", domain=[0, 10]),
+                legend=None),
+            tooltip=["Factor:N", "What they need:N", alt.Tooltip("Weight:Q", title="Importance (0–10)")],
+        ).properties(height=240)
+    )
+    st.altair_chart(factor_bar, use_container_width=True)
+    st.caption("Power is king — everything else follows. Without available grid capacity, no amount of tax incentives matters.")
 
     st.warning(
         "**What's often missing from this checklist:** community input, cumulative "

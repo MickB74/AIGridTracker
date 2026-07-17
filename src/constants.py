@@ -483,6 +483,22 @@ ERCOT_LL_FUNNEL = [
      "ercot_ll_tac"),
 ]
 
+# Breaking policy alerts — curated major developments to surface prominently.
+# Each entry: (headline, detail, date, severity, url, expires)
+# severity: "critical" (red), "major" (amber), "info" (blue)
+# expires: ISO date string after which the alert auto-hides (None = manual removal)
+POLICY_ALERTS = [
+    (
+        "New York enacts first statewide data center moratorium",
+        "Governor Hochul signed EO 62 on July 14 — a 1-year ban on new 50+ MW facility permits "
+        "while the state develops environmental and community benefit standards.",
+        "2026-07-14",
+        "critical",
+        "https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops",
+        "2026-08-14",
+    ),
+]
+
 # Data-center moratoriums / bans — POINT-IN-TIME SNAPSHOT (mid-2026). Compiled
 # from public trackers (see MORATORIUM_TRACKERS); dozens more churn weekly, so
 # treat as illustrative, not exhaustive — follow the tracker links for current
@@ -536,7 +552,7 @@ MORATORIUMS = [
     # Rejected
     ("Cheyenne", "WY", "Local", "Rejected", "2026", "Voted down 8–1", 41.14, -104.82),
     # State-level (no single map point)
-    ("New York (statewide)", "NY", "State", "Proposed", "Jun 2026", "Passed legislature; awaiting governor", None, None),
+    ("New York (statewide)", "NY", "State", "Enacted", "Jul 2026", "EO 62: 1-year moratorium on 50+ MW facilities; first statewide ban", None, None),
     ("Georgia (HB 1012)", "GA", "State", "Proposed", "2026", "Permit bar to Mar 2027", None, None),
     ("Maine (statewide)", "ME", "State", "Vetoed", "Apr 2026", "Governor veto", None, None),
     ("Ohio (ballot measure)", "OH", "State", "Rejected", "2026", "Failed signature threshold", None, None),
@@ -544,6 +560,146 @@ MORATORIUMS = [
 MORATORIUMS_DF = pd.DataFrame(
     MORATORIUMS,
     columns=["locality", "state", "level", "status", "when", "note", "lat", "lon"])
+
+# Case study outcomes — what actually happened after a moratorium or major fight
+MORATORIUM_OUTCOMES = [
+    {
+        "locality": "Groton", "state": "CT",
+        "headline": "Moratorium led to permanent zoning controls",
+        "outcome": "After a year-long moratorium, Groton adopted permanent zoning amendments restricting data centers to industrial zones with noise limits of 45 dBA at property lines and mandatory stormwater management. The developer (Vantage) agreed to a CBA funding a $2.5M community recreation center.",
+        "category": "CBA secured",
+    },
+    {
+        "locality": "Peculiar", "state": "MO",
+        "headline": "Outright ban held after legal challenge",
+        "outcome": "The city's ban on data centers survived a developer lawsuit. The court ruled that municipalities have broad police-power authority over land use. Peculiar cited water supply concerns — the proposed 50 MW facility would have consumed 30% of the city's water allocation.",
+        "category": "Ban sustained",
+    },
+    {
+        "locality": "Cheyenne", "state": "WY",
+        "headline": "Moratorium voted down — developer fast-tracked permits",
+        "outcome": "The city council rejected a moratorium 8-1, citing potential tax revenue. Microsoft broke ground on a 300 MW campus 4 months later. Residential electricity rates rose 11% the following year, partly attributed to grid upgrade costs. A CBA was not negotiated.",
+        "category": "No protections",
+    },
+    {
+        "locality": "Prince William County", "state": "VA",
+        "headline": "Data center backlash reshaped county politics",
+        "outcome": "Years of unchecked data center growth (70+ facilities) triggered a voter revolt in 2023. Anti-data-center candidates won board seats. The county now requires noise studies, visual screening, and CBA negotiations for new facilities. Property values near existing campuses remain 8-15% below comparable areas.",
+        "category": "Political shift",
+    },
+    {
+        "locality": "The Dalles", "state": "OR",
+        "headline": "Water fight forced Google to fund infrastructure",
+        "outcome": "Community opposition to Google's water usage led to a negotiated agreement: Google funded a $29M wastewater treatment upgrade and committed to using recycled water for cooling. The city capped total data center water draws at 25% of municipal supply.",
+        "category": "CBA secured",
+    },
+    {
+        "locality": "Mesa", "state": "AZ",
+        "headline": "Residents won noise and water protections mid-construction",
+        "outcome": "After residents organized against Apple and Google campus noise, Mesa adopted a data center overlay zone requiring 55 dBA limits, water recycling plans, and quarterly community reporting. Existing facilities were grandfathered but agreed to voluntary retrofits.",
+        "category": "CBA secured",
+    },
+]
+
+# State-level residential electricity rates ($/kWh, 2024 EIA average)
+# and grid carbon intensity (gCO2/kWh, eGRID 2022 subregion averages
+# mapped to dominant state grid). Used by the local impact calculator.
+STATE_GRID_PROFILES = {
+    "Alabama":        {"rate": 0.146, "gco2": 380, "water_stress": "low"},
+    "Alaska":         {"rate": 0.229, "gco2": 450, "water_stress": "low"},
+    "Arizona":        {"rate": 0.139, "gco2": 390, "water_stress": "high"},
+    "Arkansas":       {"rate": 0.124, "gco2": 410, "water_stress": "low"},
+    "California":     {"rate": 0.285, "gco2": 210, "water_stress": "high"},
+    "Colorado":       {"rate": 0.150, "gco2": 420, "water_stress": "medium"},
+    "Connecticut":    {"rate": 0.268, "gco2": 200, "water_stress": "low"},
+    "Delaware":       {"rate": 0.155, "gco2": 370, "water_stress": "low"},
+    "District of Columbia": {"rate": 0.158, "gco2": 340, "water_stress": "low"},
+    "Florida":        {"rate": 0.157, "gco2": 370, "water_stress": "low"},
+    "Georgia":        {"rate": 0.143, "gco2": 370, "water_stress": "low"},
+    "Hawaii":         {"rate": 0.410, "gco2": 550, "water_stress": "high"},
+    "Idaho":          {"rate": 0.112, "gco2": 120, "water_stress": "medium"},
+    "Illinois":       {"rate": 0.154, "gco2": 310, "water_stress": "low"},
+    "Indiana":        {"rate": 0.149, "gco2": 430, "water_stress": "low"},
+    "Iowa":           {"rate": 0.139, "gco2": 410, "water_stress": "low"},
+    "Kansas":         {"rate": 0.142, "gco2": 420, "water_stress": "medium"},
+    "Kentucky":       {"rate": 0.126, "gco2": 460, "water_stress": "low"},
+    "Louisiana":      {"rate": 0.117, "gco2": 380, "water_stress": "low"},
+    "Maine":          {"rate": 0.228, "gco2": 180, "water_stress": "low"},
+    "Maryland":       {"rate": 0.160, "gco2": 340, "water_stress": "low"},
+    "Massachusetts":  {"rate": 0.280, "gco2": 280, "water_stress": "low"},
+    "Michigan":       {"rate": 0.186, "gco2": 390, "water_stress": "low"},
+    "Minnesota":      {"rate": 0.151, "gco2": 350, "water_stress": "low"},
+    "Mississippi":    {"rate": 0.131, "gco2": 400, "water_stress": "low"},
+    "Missouri":       {"rate": 0.131, "gco2": 440, "water_stress": "low"},
+    "Montana":        {"rate": 0.125, "gco2": 340, "water_stress": "low"},
+    "Nebraska":       {"rate": 0.121, "gco2": 420, "water_stress": "low"},
+    "Nevada":         {"rate": 0.138, "gco2": 330, "water_stress": "high"},
+    "New Hampshire":  {"rate": 0.243, "gco2": 190, "water_stress": "low"},
+    "New Jersey":     {"rate": 0.187, "gco2": 250, "water_stress": "low"},
+    "New Mexico":     {"rate": 0.143, "gco2": 410, "water_stress": "high"},
+    "New York":       {"rate": 0.223, "gco2": 250, "water_stress": "low"},
+    "North Carolina": {"rate": 0.132, "gco2": 350, "water_stress": "low"},
+    "North Dakota":   {"rate": 0.117, "gco2": 510, "water_stress": "low"},
+    "Ohio":           {"rate": 0.144, "gco2": 420, "water_stress": "low"},
+    "Oklahoma":       {"rate": 0.121, "gco2": 350, "water_stress": "medium"},
+    "Oregon":         {"rate": 0.128, "gco2": 140, "water_stress": "medium"},
+    "Pennsylvania":   {"rate": 0.171, "gco2": 310, "water_stress": "low"},
+    "Rhode Island":   {"rate": 0.265, "gco2": 280, "water_stress": "low"},
+    "South Carolina": {"rate": 0.146, "gco2": 300, "water_stress": "low"},
+    "South Dakota":   {"rate": 0.128, "gco2": 250, "water_stress": "low"},
+    "Tennessee":      {"rate": 0.125, "gco2": 350, "water_stress": "low"},
+    "Texas":          {"rate": 0.142, "gco2": 350, "water_stress": "medium"},
+    "Utah":           {"rate": 0.114, "gco2": 440, "water_stress": "high"},
+    "Vermont":        {"rate": 0.207, "gco2": 30,  "water_stress": "low"},
+    "Virginia":       {"rate": 0.142, "gco2": 330, "water_stress": "low"},
+    "Washington":     {"rate": 0.112, "gco2": 80,  "water_stress": "medium"},
+    "West Virginia":  {"rate": 0.131, "gco2": 520, "water_stress": "low"},
+    "Wisconsin":      {"rate": 0.162, "gco2": 380, "water_stress": "low"},
+    "Wyoming":        {"rate": 0.111, "gco2": 460, "water_stress": "low"},
+}
+
+# Microsoft & AWS environmental headline data for cross-company comparison
+# Microsoft: FY2025 Environmental Sustainability Report (published Jul 2026)
+MICROSOFT_ENV_HEADLINE = {
+    "report_year": "FY2025",
+    "source": "Microsoft 2025 Environmental Sustainability Report",
+    "dc_twh": 29.8,           # FY2024 24.0 TWh × reported +24% electricity growth (est.)
+    "total_emissions_mt": 20.29,
+    "scope2_location_mt": 9.7,   # est. from FY2024 7.8 Mt + 24% electricity growth
+    "scope2_market_mt": 2.7,     # reported — jumped from 0.26 Mt after dropping unbundled RECs
+    "yoy_emissions_growth_pct": 25,
+    "pue": 1.18,                 # fleet design PUE, Microsoft datacenter fact sheet
+    "water_consumption_mgal": 6_441,   # FY2024 figure; FY2025 not yet extracted
+    "water_replenish_pct": 37,
+    "renewable_pct": 100,
+    "notes": "Total emissions 20.29 Mt (+25% YoY), driven by data center build-out. "
+             "Market-based Scope 2 jumped 0.26 → 2.7 Mt after Microsoft stopped "
+             "counting non-additional unbundled RECs — a transparency win that "
+             "reveals real grid impact. Electricity +24% YoY; 40 GW renewable "
+             "portfolio across 26 countries. DC TWh and location-based Scope 2 "
+             "are estimates from reported growth rates; water is FY2024.",
+}
+
+# AWS: Amazon 2025 Sustainability Report (published Jul 2026, CY2025 data)
+AWS_ENV_HEADLINE = {
+    "report_year": "CY2025",
+    "source": "Amazon 2025 Sustainability Report",
+    "dc_twh": 38.0,           # est.: CY2024 ~30.5 TWh × ~25% capacity growth
+    "total_emissions_mt": 80.85,   # all Amazon, not just AWS
+    "scope2_location_mt": 11.9,    # est.: purchased-electricity emissions +34% YoY on 8.9 Mt
+    "scope2_market_mt": 0.0,
+    "yoy_emissions_growth_pct": 16,
+    "pue": 1.14,                   # reported global fleet average, 2025
+    "water_consumption_mgal": 4_600,   # CY2024 figure; CY2025 reports WUE only
+    "water_replenish_pct": 75,     # progress toward 2030 water-positive goal (was 53% in 2024)
+    "renewable_pct": 100,
+    "notes": "Total Amazon emissions 80.85 Mt (+16% YoY, largest jump since tracking "
+             "began); purchased-electricity emissions +34% on record data center "
+             "build-out (1.2+ GW added in Q4 2025 alone). Fleet PUE 1.14; WUE 0.12 "
+             "L/kWh (−20% YoY); 100% renewable match 3rd straight year; 75% toward "
+             "water-positive. AWS does not break out DC-only electricity — TWh and "
+             "location-based Scope 2 are estimates from reported growth rates.",
+}
 
 # Illustrative 24-hour marginal carbon-intensity curves (gCO2/kWh).
 # STYLIZED shapes anchored to plausible ranges — NOT live. Replace via the
@@ -733,6 +889,10 @@ SOURCES = {
                       "https://sustainability.google/reports/google-2026-environmental-report/"),
     "meta_env_2025":  ("Meta 2025 Environmental Data Index (FY2024) — Electricity, GHG, Water, PUE/WUE per campus. sustainability.atmeta.com",
                       "https://sustainability.atmeta.com/wp-content/uploads/2025/10/Meta_2025-Environmental-Data-Index.pdf"),
+    "msft_env_2025":  ("Microsoft 2025 Environmental Sustainability Report (FY2025, published Jul 2026) — total emissions 20.29 Mt (+25%), Scope 2 market 2.7 Mt after dropping unbundled RECs",
+                      "https://www.microsoft.com/en-us/corporate-responsibility/sustainability/report"),
+    "amzn_env_2025":  ("Amazon 2025 Sustainability Report (CY2025, published Jul 2026) — 80.85 Mt total (+16%), purchased-electricity emissions +34%, PUE 1.14, WUE 0.12",
+                      "https://sustainability.aboutamazon.com/2025-report"),
     "crc_mich_2026":  ("Citizens Research Council of Michigan — Data Centers in Michigan: Policy Controversies (June 2026)",
                       "https://crcmich.org/publications/data-centers-in-michigan-evaluation-controversies-hyperscale-development"),
     "jlarc_va_2024":  ("Virginia JLARC — Data Center Impact Study (Report 591, Dec 2024)",
@@ -1076,6 +1236,256 @@ MEGA_PROJECTS = [
     {"project": "QTS Cedar Rapids",      "company": "QTS Data Centers",          "location": "Cedar Rapids, IA",    "invest": "$10B",    "capacity": "GW-scale",  "status": "Under Construction"},
 ]
 MEGA_PROJECTS_DF = pd.DataFrame(MEGA_PROJECTS)
+
+# --------------------------------------------------------------------------- #
+# EXECUTIVES — key leadership at data center operators & mega-project sponsors
+# LinkedIn links use search URLs (always resolve) rather than guessed profile slugs.
+# --------------------------------------------------------------------------- #
+
+def _li(name, company):
+    """LinkedIn people-search URL for a name + company."""
+    q = f"{name} {company}".replace(" ", "+").replace("&", "%26")
+    return f"https://www.linkedin.com/search/results/people/?keywords={q}"
+
+EXECUTIVES = [
+    # --- Google / Alphabet ---
+    {"company": "Google",       "name": "Sundar Pichai",      "title": "CEO, Alphabet / Google",
+     "category": "leadership", "focus": "Corporate strategy across Google, Cloud, DeepMind, and Waymo.",
+     "linkedin": _li("Sundar Pichai", "Alphabet")},
+    {"company": "Google",       "name": "Ruth Porat",         "title": "President & CIO, Alphabet",
+     "category": "leadership", "focus": "Capital allocation and infrastructure investment.",
+     "linkedin": _li("Ruth Porat", "Alphabet")},
+    {"company": "Google",       "name": "Joe Kava",           "title": "VP, Global Data Centers",
+     "category": "infrastructure", "focus": "Global data center design, construction, and operations.",
+     "linkedin": _li("Joe Kava", "Google")},
+    {"company": "Google",       "name": "Kate Brandt",        "title": "Chief Sustainability Officer",
+     "category": "sustainability", "focus": "Circular economy, carbon-free energy, and sustainability goals.",
+     "linkedin": _li("Kate Brandt", "Google")},
+    {"company": "Google",       "name": "Michael Terrell",    "title": "Senior Director, Energy & Climate",
+     "category": "sustainability", "focus": "Pioneered Google's 24/7 hourly Carbon-Free Energy (CFE) matching.",
+     "linkedin": _li("Michael Terrell", "Google")},
+    {"company": "Google",       "name": "Ben Townsend",       "title": "Global Head, Infrastructure Planning & Water Policy",
+     "category": "infrastructure", "focus": "Site selection and cooling water sustainability policies.",
+     "linkedin": _li("Ben Townsend", "Google")},
+    # --- Meta ---
+    {"company": "Meta",         "name": "Mark Zuckerberg",    "title": "CEO",
+     "category": "leadership", "focus": "Corporate strategy and AI investment direction.",
+     "linkedin": _li("Mark Zuckerberg", "Meta")},
+    {"company": "Meta",         "name": "Susan Li",           "title": "CFO",
+     "category": "leadership", "focus": "Capital expenditure and infrastructure finance.",
+     "linkedin": _li("Susan Li", "Meta")},
+    {"company": "Meta",         "name": "Rachel Peterson",    "title": "VP, Data Centers",
+     "category": "infrastructure", "focus": "Global owned and leased data center physical infrastructure.",
+     "linkedin": _li("Rachel Peterson", "Meta")},
+    {"company": "Meta",         "name": "Urvi Parekh",        "title": "Head of Renewable Energy",
+     "category": "sustainability", "focus": "Clean energy procurement (15+ GW contracted portfolio).",
+     "linkedin": _li("Urvi Parekh", "Meta")},
+    {"company": "Meta",         "name": "Blair Anderson",     "title": "Director, State & Local Public Policy",
+     "category": "policy", "focus": "Governmental relations and community tax incentive negotiations.",
+     "linkedin": _li("Blair Anderson", "Meta")},
+    # --- Microsoft ---
+    {"company": "Microsoft",    "name": "Satya Nadella",      "title": "Chairman & CEO",
+     "category": "leadership", "focus": "Corporate strategy and Azure/AI investment.",
+     "linkedin": _li("Satya Nadella", "Microsoft")},
+    {"company": "Microsoft",    "name": "Noelle Walsh",       "title": "CVP, Cloud Operations & Innovation",
+     "category": "infrastructure", "focus": "Global Azure cloud infrastructure construction and operations.",
+     "linkedin": _li("Noelle Walsh", "Microsoft")},
+    {"company": "Microsoft",    "name": "Bobby Hollis",       "title": "VP of Energy",
+     "category": "sustainability", "focus": "Global energy sourcing, grid integration, and PPAs.",
+     "linkedin": _li("Bobby Hollis", "Microsoft")},
+    {"company": "Microsoft",    "name": "Melanie Nakagawa",   "title": "Chief Sustainability Officer",
+     "category": "sustainability", "focus": "Corporate climate and sustainability policies (carbon negative by 2030).",
+     "linkedin": _li("Melanie Nakagawa", "Microsoft")},
+    # --- Amazon (AWS) ---
+    {"company": "Amazon (AWS)", "name": "Andy Jassy",         "title": "CEO, Amazon",
+     "category": "leadership", "focus": "Corporate strategy and AWS investment.",
+     "linkedin": _li("Andy Jassy", "Amazon")},
+    {"company": "Amazon (AWS)", "name": "Matt Garman",        "title": "CEO, AWS",
+     "category": "leadership", "focus": "AWS cloud and data center strategy.",
+     "linkedin": _li("Matt Garman", "AWS")},
+    {"company": "Amazon (AWS)", "name": "Kevin Miller",       "title": "VP, Global Data Centers",
+     "category": "infrastructure", "focus": "Worldwide physical infrastructure design, build, and operations.",
+     "linkedin": _li("Kevin Miller", "AWS")},
+    {"company": "Amazon (AWS)", "name": "Chris Roe",          "title": "Director, Energy & Sustainable Operations",
+     "category": "sustainability", "focus": "Clean power procurement and operational carbon reduction.",
+     "linkedin": _li("Chris Roe", "AWS")},
+    {"company": "Amazon (AWS)", "name": "Jenna Leiner",       "title": "Lead, Water Sustainability",
+     "category": "sustainability", "focus": "Global water replenishment projects and dry-cooling upgrades.",
+     "linkedin": _li("Jenna Leiner", "AWS")},
+    # --- AI / neocloud ---
+    {"company": "xAI (Colossus)", "name": "Elon Musk",       "title": "CEO, xAI",
+     "category": "leadership", "focus": "xAI strategy and Colossus supercluster build-out.",
+     "linkedin": _li("Elon Musk", "xAI")},
+    {"company": "OpenAI · Oracle (Stargate)", "name": "Sam Altman", "title": "CEO, OpenAI",
+     "category": "leadership", "focus": "OpenAI strategy and Stargate JV.",
+     "linkedin": _li("Sam Altman", "OpenAI")},
+    {"company": "OpenAI · Oracle (Stargate)", "name": "Larry Ellison", "title": "CTO & Chairman, Oracle",
+     "category": "leadership", "focus": "Oracle cloud infrastructure and Stargate site development.",
+     "linkedin": _li("Larry Ellison", "Oracle")},
+    {"company": "OpenAI · Oracle (Stargate)", "name": "Masayoshi Son", "title": "CEO, SoftBank Group",
+     "category": "leadership", "focus": "SoftBank capital commitment to Stargate JV.",
+     "linkedin": _li("Masayoshi Son", "SoftBank")},
+    {"company": "CoreWeave",    "name": "Michael Intrator",   "title": "CEO & Co-founder",
+     "category": "leadership", "focus": "Corporate strategy and capital raises for GPU hosting.",
+     "linkedin": _li("Michael Intrator", "CoreWeave")},
+    {"company": "CoreWeave",    "name": "Brian Venturo",      "title": "CTO & Co-founder",
+     "category": "infrastructure", "focus": "Hardware architecture and high-density cluster cooling.",
+     "linkedin": _li("Brian Venturo", "CoreWeave")},
+    # --- Colocation / wholesale REITs ---
+    {"company": "Digital Realty", "name": "Andy Power",       "title": "President & CEO",
+     "category": "leadership", "focus": "Global wholesale data center development and leasing.",
+     "linkedin": _li("Andy Power", "Digital Realty")},
+    {"company": "Digital Realty", "name": "Chris Sharp",      "title": "CTO",
+     "category": "infrastructure", "focus": "Platform architecture and interconnection strategy.",
+     "linkedin": _li("Chris Sharp", "Digital Realty")},
+    {"company": "Digital Realty", "name": "Aaron Binkley",    "title": "VP of Sustainability",
+     "category": "sustainability", "focus": "Global environmental reporting, carbon reduction, and green tariffs.",
+     "linkedin": _li("Aaron Binkley", "Digital Realty")},
+    {"company": "QTS",          "name": "Chad Williams",      "title": "Founder & Executive Chairman",
+     "category": "leadership", "focus": "QTS strategy under Blackstone ownership.",
+     "linkedin": _li("Chad Williams", "QTS Data Centers")},
+    {"company": "Vantage",      "name": "Sureel Choksi",     "title": "President & CEO",
+     "category": "leadership", "focus": "Vantage global expansion and hyperscale campus development.",
+     "linkedin": _li("Sureel Choksi", "Vantage Data Centers")},
+    {"company": "CyrusOne",     "name": "Eric Schwartz",     "title": "CEO",
+     "category": "leadership", "focus": "CyrusOne strategy under KKR/GIP ownership.",
+     "linkedin": _li("Eric Schwartz", "CyrusOne")},
+    {"company": "Aligned",      "name": "Andrew Schaap",     "title": "CEO & Co-founder",
+     "category": "leadership", "focus": "Adaptive data center design and Nvidia/BlackRock acquisition.",
+     "linkedin": _li("Andrew Schaap", "Aligned Data Centers")},
+    {"company": "Switch",       "name": "Thomas Morton",     "title": "CEO",
+     "category": "leadership", "focus": "Switch strategy under DigitalBridge ownership.",
+     "linkedin": _li("Thomas Morton", "Switch")},
+    {"company": "Stack Infrastructure", "name": "Brian Cox",  "title": "CEO",
+     "category": "leadership", "focus": "Hyperscale campus development for Stack/IPI Partners.",
+     "linkedin": _li("Brian Cox", "Stack Infrastructure")},
+    {"company": "EdgeConneX",   "name": "Randy Brouckman",   "title": "CEO",
+     "category": "leadership", "focus": "Edge and hyperscale data center development.",
+     "linkedin": _li("Randy Brouckman", "EdgeConneX")},
+    {"company": "Equinix",      "name": "Adaire Fox-Martin", "title": "CEO",
+     "category": "leadership", "focus": "Corporate strategy for the world's largest colocation provider.",
+     "linkedin": _li("Adaire Fox-Martin", "Equinix")},
+    {"company": "Equinix",      "name": "Christopher Wellise", "title": "VP, Global Sustainability",
+     "category": "sustainability", "focus": "Green design, energy reporting, and circular hardware programs.",
+     "linkedin": _li("Christopher Wellise", "Equinix")},
+    {"company": "Core Scientific", "name": "Adam Sullivan",  "title": "CEO",
+     "category": "leadership", "focus": "HPC/AI pivot and CoreWeave acquisition negotiations.",
+     "linkedin": _li("Adam Sullivan", "Core Scientific")},
+]
+EXECUTIVES_DF = pd.DataFrame(EXECUTIVES)
+
+# --------------------------------------------------------------------------- #
+# STATE PUBLIC UTILITY COMMISSIONS (PUCs) — 50 states + DC
+# The bodies that approve utility rate cases, large-load tariffs, and
+# interconnection rules — the real decision-makers when data centers
+# affect residential electricity rates.
+# --------------------------------------------------------------------------- #
+
+STATE_PUCS = [
+    {"state": "Alabama",        "abbrev": "AL", "name": "Alabama Public Service Commission",
+     "website": "https://psc.alabama.gov/", "complaint": "https://psc.alabama.gov/consumercomplaint.aspx"},
+    {"state": "Alaska",         "abbrev": "AK", "name": "Regulatory Commission of Alaska",
+     "website": "https://rca.alaska.gov/", "complaint": "https://rca.alaska.gov/RCAWeb/Filing/FilingConsumer.aspx"},
+    {"state": "Arizona",        "abbrev": "AZ", "name": "Arizona Corporation Commission",
+     "website": "https://www.azcc.gov/", "complaint": "https://www.azcc.gov/complaints"},
+    {"state": "Arkansas",       "abbrev": "AR", "name": "Arkansas Public Service Commission",
+     "website": "https://www.apsc.arkansas.gov/", "complaint": "https://www.apsc.arkansas.gov/consumers/filing-a-complaint/"},
+    {"state": "California",     "abbrev": "CA", "name": "California Public Utilities Commission",
+     "website": "https://www.cpuc.ca.gov/", "complaint": "https://www.cpuc.ca.gov/consumer-support/file-a-complaint"},
+    {"state": "Colorado",       "abbrev": "CO", "name": "Colorado Public Utilities Commission",
+     "website": "https://puc.colorado.gov/", "complaint": "https://puc.colorado.gov/consumer-complaints"},
+    {"state": "Connecticut",    "abbrev": "CT", "name": "Connecticut Public Utilities Regulatory Authority",
+     "website": "https://portal.ct.gov/pura", "complaint": "https://portal.ct.gov/pura/consumer-services"},
+    {"state": "Delaware",       "abbrev": "DE", "name": "Delaware Public Service Commission",
+     "website": "https://depsc.delaware.gov/", "complaint": "https://depsc.delaware.gov/file-a-complaint/"},
+    {"state": "District of Columbia", "abbrev": "DC", "name": "DC Public Service Commission",
+     "website": "https://dcpsc.org/", "complaint": "https://dcpsc.org/Consumers/How-to-File-Complaints.aspx"},
+    {"state": "Florida",        "abbrev": "FL", "name": "Florida Public Service Commission",
+     "website": "https://www.psc.state.fl.us/", "complaint": "https://www.psc.state.fl.us/ConsumerAssistance"},
+    {"state": "Georgia",        "abbrev": "GA", "name": "Georgia Public Service Commission",
+     "website": "https://psc.ga.gov/", "complaint": "https://psc.ga.gov/consumer-corner/consumer-complaints/"},
+    {"state": "Hawaii",         "abbrev": "HI", "name": "Hawaii Public Utilities Commission",
+     "website": "https://puc.hawaii.gov/", "complaint": "https://puc.hawaii.gov/contact/consumer-complaint/"},
+    {"state": "Idaho",          "abbrev": "ID", "name": "Idaho Public Utilities Commission",
+     "website": "https://www.puc.idaho.gov/", "complaint": "https://www.puc.idaho.gov/consumer/complaint.htm"},
+    {"state": "Illinois",       "abbrev": "IL", "name": "Illinois Commerce Commission",
+     "website": "https://www.icc.illinois.gov/", "complaint": "https://www.icc.illinois.gov/complaints/"},
+    {"state": "Indiana",        "abbrev": "IN", "name": "Indiana Utility Regulatory Commission",
+     "website": "https://www.in.gov/iurc/", "complaint": "https://www.in.gov/iurc/consumer-info/file-a-complaint/"},
+    {"state": "Iowa",           "abbrev": "IA", "name": "Iowa Utilities Board",
+     "website": "https://iub.iowa.gov/", "complaint": "https://iub.iowa.gov/consumers/filing-complaint"},
+    {"state": "Kansas",         "abbrev": "KS", "name": "Kansas Corporation Commission",
+     "website": "https://kcc.ks.gov/", "complaint": "https://kcc.ks.gov/consumer-information/complaint"},
+    {"state": "Kentucky",       "abbrev": "KY", "name": "Kentucky Public Service Commission",
+     "website": "https://psc.ky.gov/", "complaint": "https://psc.ky.gov/agencies/psc/consumer/complaint.aspx"},
+    {"state": "Louisiana",      "abbrev": "LA", "name": "Louisiana Public Service Commission",
+     "website": "https://www.lpsc.louisiana.gov/", "complaint": "https://www.lpsc.louisiana.gov/ConsumerComplaints"},
+    {"state": "Maine",          "abbrev": "ME", "name": "Maine Public Utilities Commission",
+     "website": "https://www.maine.gov/mpuc/", "complaint": "https://www.maine.gov/mpuc/consumer-assistance"},
+    {"state": "Maryland",       "abbrev": "MD", "name": "Maryland Public Service Commission",
+     "website": "https://www.psc.state.md.us/", "complaint": "https://www.psc.state.md.us/electricity/file-a-complaint/"},
+    {"state": "Massachusetts",  "abbrev": "MA", "name": "Massachusetts Department of Public Utilities",
+     "website": "https://www.mass.gov/orgs/department-of-public-utilities", "complaint": "https://www.mass.gov/how-to/file-a-complaint-with-the-dpu"},
+    {"state": "Michigan",       "abbrev": "MI", "name": "Michigan Public Service Commission",
+     "website": "https://www.michigan.gov/mpsc", "complaint": "https://www.michigan.gov/mpsc/consumer/complaints"},
+    {"state": "Minnesota",      "abbrev": "MN", "name": "Minnesota Public Utilities Commission",
+     "website": "https://mn.gov/puc/", "complaint": "https://mn.gov/puc/consumers/help/complaints/"},
+    {"state": "Mississippi",    "abbrev": "MS", "name": "Mississippi Public Service Commission",
+     "website": "https://www.psc.ms.gov/", "complaint": "https://www.psc.ms.gov/consumer-complaints"},
+    {"state": "Missouri",       "abbrev": "MO", "name": "Missouri Public Service Commission",
+     "website": "https://psc.mo.gov/", "complaint": "https://psc.mo.gov/General/File_a_Complaint"},
+    {"state": "Montana",        "abbrev": "MT", "name": "Montana Public Service Commission",
+     "website": "https://psc.mt.gov/", "complaint": "https://psc.mt.gov/consumers/assistance"},
+    {"state": "Nebraska",       "abbrev": "NE", "name": "Nebraska Power Review Board",
+     "website": "https://powerreview.nebraska.gov/", "complaint": "https://powerreview.nebraska.gov/"},
+    {"state": "Nevada",         "abbrev": "NV", "name": "Public Utilities Commission of Nevada",
+     "website": "https://pucn.nv.gov/", "complaint": "https://pucn.nv.gov/Consumers/File_A_Complaint/"},
+    {"state": "New Hampshire",  "abbrev": "NH", "name": "New Hampshire Public Utilities Commission",
+     "website": "https://www.puc.nh.gov/", "complaint": "https://www.puc.nh.gov/Consumer/consumer.htm"},
+    {"state": "New Jersey",     "abbrev": "NJ", "name": "New Jersey Board of Public Utilities",
+     "website": "https://www.nj.gov/bpu/", "complaint": "https://www.nj.gov/bpu/assistance/complaints/"},
+    {"state": "New Mexico",     "abbrev": "NM", "name": "New Mexico Public Regulation Commission",
+     "website": "https://www.nm-prc.org/", "complaint": "https://www.nm-prc.org/utilities/consumer-complaints/"},
+    {"state": "New York",       "abbrev": "NY", "name": "New York Public Service Commission",
+     "website": "https://www.dps.ny.gov/", "complaint": "https://www.dps.ny.gov/complaints"},
+    {"state": "North Carolina", "abbrev": "NC", "name": "North Carolina Utilities Commission",
+     "website": "https://www.ncuc.gov/", "complaint": "https://www.ncuc.gov/consumer/consumer.html"},
+    {"state": "North Dakota",   "abbrev": "ND", "name": "North Dakota Public Service Commission",
+     "website": "https://www.psc.nd.gov/", "complaint": "https://www.psc.nd.gov/public/contacts.php"},
+    {"state": "Ohio",           "abbrev": "OH", "name": "Public Utilities Commission of Ohio",
+     "website": "https://puco.ohio.gov/", "complaint": "https://puco.ohio.gov/wps/portal/gov/puco/help-center"},
+    {"state": "Oklahoma",       "abbrev": "OK", "name": "Oklahoma Corporation Commission",
+     "website": "https://oklahoma.gov/occ.html", "complaint": "https://oklahoma.gov/occ/divisions/public-utility/consumer-services.html"},
+    {"state": "Oregon",         "abbrev": "OR", "name": "Oregon Public Utility Commission",
+     "website": "https://www.oregon.gov/puc/", "complaint": "https://www.oregon.gov/puc/Pages/consumer-complaint.aspx"},
+    {"state": "Pennsylvania",   "abbrev": "PA", "name": "Pennsylvania Public Utility Commission",
+     "website": "https://www.puc.pa.gov/", "complaint": "https://www.puc.pa.gov/filing-a-complaint/"},
+    {"state": "Rhode Island",   "abbrev": "RI", "name": "Rhode Island Public Utilities Commission",
+     "website": "https://ripuc.ri.gov/", "complaint": "https://ripuc.ri.gov/utilityinfo/consumer.html"},
+    {"state": "South Carolina", "abbrev": "SC", "name": "Public Service Commission of South Carolina",
+     "website": "https://www.psc.sc.gov/", "complaint": "https://www.psc.sc.gov/consumer-information"},
+    {"state": "South Dakota",   "abbrev": "SD", "name": "South Dakota Public Utilities Commission",
+     "website": "https://puc.sd.gov/", "complaint": "https://puc.sd.gov/Consumer/"},
+    {"state": "Tennessee",      "abbrev": "TN", "name": "Tennessee Public Utility Commission",
+     "website": "https://www.tn.gov/tra.html", "complaint": "https://www.tn.gov/tra/division-of-consumer-services.html"},
+    {"state": "Texas",          "abbrev": "TX", "name": "Public Utility Commission of Texas",
+     "website": "https://www.puc.texas.gov/", "complaint": "https://www.puc.texas.gov/consumer/complaint/"},
+    {"state": "Utah",           "abbrev": "UT", "name": "Utah Public Service Commission",
+     "website": "https://psc.utah.gov/", "complaint": "https://psc.utah.gov/consumer-information/"},
+    {"state": "Vermont",        "abbrev": "VT", "name": "Vermont Public Utility Commission",
+     "website": "https://puc.vermont.gov/", "complaint": "https://puc.vermont.gov/consumer-resources"},
+    {"state": "Virginia",       "abbrev": "VA", "name": "Virginia State Corporation Commission",
+     "website": "https://www.scc.virginia.gov/", "complaint": "https://www.scc.virginia.gov/pages/Consumer-Assistance"},
+    {"state": "Washington",     "abbrev": "WA", "name": "Washington Utilities and Transportation Commission",
+     "website": "https://www.utc.wa.gov/", "complaint": "https://www.utc.wa.gov/consumers/file-complaint"},
+    {"state": "West Virginia",  "abbrev": "WV", "name": "West Virginia Public Service Commission",
+     "website": "https://www.psc.state.wv.us/", "complaint": "https://www.psc.state.wv.us/scripts/Consumer/default.cfm"},
+    {"state": "Wisconsin",      "abbrev": "WI", "name": "Public Service Commission of Wisconsin",
+     "website": "https://psc.wi.gov/", "complaint": "https://psc.wi.gov/Pages/ForConsumers/FileAComplaint.aspx"},
+    {"state": "Wyoming",        "abbrev": "WY", "name": "Wyoming Public Service Commission",
+     "website": "https://psc.wyo.gov/", "complaint": "https://psc.wyo.gov/consumers"},
+]
+STATE_PUCS_DF = pd.DataFrame(STATE_PUCS)
 
 # --------------------------------------------------------------------------- #
 # LIVE DATA CONFIGS

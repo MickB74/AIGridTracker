@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from src.helpers import src_link
+from src.constants import STATE_PUCS_DF
 from src.services.officials import load_officials
 from src.services.news import fetch_news
 from src.services.reddit import load_reddit_corpus
@@ -36,8 +37,10 @@ def render_officials_tab():
                                           "Delegate", "Governor"])
         parties = f2.multiselect("Party", sorted(odf.party.unique()),
                                  default=sorted(odf.party.unique()))
+        _sidebar_state = st.session_state.get("my_state", "All states")
+        _default_states = [_sidebar_state] if _sidebar_state != "All states" and _sidebar_state in odf.state_full.values else []
         states = f3.multiselect("State / territory", sorted(odf.state_full.unique()),
-                                default=[])
+                                default=_default_states)
         cbx1, cbx2 = st.columns(2)
         only_stance = cbx1.checkbox("Only officials with a documented "
                                     "data-center stance", value=False)
@@ -82,8 +85,9 @@ def render_officials_tab():
             st.markdown("**Documented stances in this view:**")
             for _, r in stanced.iterrows():
                 src = f" ({src_link(r['stance_src'])})" if r["stance_src"] else ""
+                stance_safe = r['stance'].replace('$', '\\$')
                 st.markdown(f"- **{r['name']}** ({r['party']}, {r['office']}, "
-                            f"{r['state_full']}): {r['stance']}{src}")
+                            f"{r['state_full']}): {stance_safe}{src}")
 
         # State-specific active issues tracker
         st.divider()
@@ -117,14 +121,16 @@ def render_officials_tab():
                             st.caption(f"No recent local news headlines found matching '{state}' issues.")
                         else:
                             for n in news:
-                                st.markdown(f"- [{n['title']}]({n['link']}) ({n['source']})")
+                                t = n['title'].replace('$', '\\$')
+                                st.markdown(f"- [{t}]({n['link']}) ({n['source']})")
                     with c_reddit:
                         st.markdown("**Community Sentiment (Reddit)**")
                         if cerr or not reddit_items:
                             st.caption(f"No recent local discussions found in snapshot matching '{state}'/'{abbr}'.")
                         else:
                             for r in reddit_items:
-                                st.markdown(f"- [{r['title']}]({r['link']}) (r/{r['subreddit']})")
+                                t = r['title'].replace('$', '\\$')
+                                st.markdown(f"- [{t}]({r['link']}) (r/{r['subreddit']})")
             if len(states) > 3:
                 st.warning("Showing active issues for the first 3 selected states only to optimize speed.")
         else:
@@ -138,4 +144,64 @@ def render_officials_tab():
                    "(https://en.wikipedia.org/wiki/List_of_current_United_States_governors)"
                    ". Governor URLs are official state pages. Verify before "
                    "outreach — rosters change with elections and appointments.")
+
+        st.info(
+            "**See also:** The **Data centers** tab has an interactive map of "
+            "every tracked data center campus — filter by state to see which "
+            "operators are building in your officials' districts. The "
+            "**Negotiation toolkit** tab has model CBA clauses and a Data "
+            "Dividend Calculator to bring to meetings.")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # ------------------------------------------------------------------ #
+    # State PUC directory
+    # ------------------------------------------------------------------ #
+    st.divider()
+    st.subheader("Your state Public Utility Commission (PUC)")
+    st.caption(
+        "PUCs approve rate cases, large-load tariffs, and interconnection "
+        "rules — they decide whether data center costs land on residential "
+        "bills. Every state has one. File a complaint or intervene in a "
+        "rate case to make your voice heard.")
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+
+    puc_df = STATE_PUCS_DF.copy()
+
+    _sidebar_state = st.session_state.get("my_state", "All states")
+    _puc_default = [_sidebar_state] if _sidebar_state != "All states" and _sidebar_state in puc_df["state"].values else []
+    puc_filter = st.multiselect(
+        "Filter by state", sorted(puc_df["state"].unique()),
+        default=_puc_default, key="puc_state_filter",
+        placeholder="All states — or pick yours")
+    if puc_filter:
+        puc_df = puc_df[puc_df["state"].isin(puc_filter)]
+
+    st.dataframe(
+        puc_df, use_container_width=True, hide_index=True,
+        column_config={
+            "state": st.column_config.TextColumn("State"),
+            "abbrev": st.column_config.TextColumn("Abbrev.", width="small"),
+            "name": st.column_config.TextColumn("Commission Name", width="large"),
+            "website": st.column_config.LinkColumn("Website", display_text="site"),
+            "complaint": st.column_config.LinkColumn(
+                "File complaint / intervene", display_text="complaint"),
+        })
+
+    st.caption(
+        f"Showing {len(puc_df)} of {len(STATE_PUCS_DF)} commissions. "
+        "URLs are official state PUC pages. Complaint links open the "
+        "consumer-assistance or formal-complaint portal — procedures "
+        "vary by state. Nebraska has a Power Review Board (public power "
+        "state). Texas (PUCT) has deregulated retail but still regulates "
+        "transmission and distribution rates.")
+
+    st.info(
+        "**How to use this:** When a data center developer applies for a "
+        "large-load interconnection or a utility files a rate case to "
+        "recover grid upgrade costs, you can intervene at your PUC. "
+        "Filing a consumer complaint puts your concerns on the record. "
+        "See the **Utility bill** tab for how wholesale costs flow to "
+        "your bill, and the **Negotiation toolkit** for model rate-"
+        "protection clauses.")
     st.markdown('</div>', unsafe_allow_html=True)
