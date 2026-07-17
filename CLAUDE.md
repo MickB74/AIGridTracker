@@ -30,29 +30,34 @@ Always run both checks. The smoke test catches runtime import errors and widget 
 
 ### Entrypoints
 
-- **app.py** — Main page. Hero section, news carousel, and 10 top-level tabs (some with stacked sub-modules). Tab order follows the advocacy flow: Community & advocacy → Industry landscape → Learn → Technical deep-dive → Reference.
-- **pages/consulting.py** — Secondary Streamlit page for consulting intake form.
+- **app.py** — Single page. Hero section, news carousel, sidebar, and 11 top-level tabs (some with stacked sub-modules). Tab order follows the advocacy flow: Community & advocacy → Industry landscape → Learn → Technical deep-dive → Reference → Business.
+
+### Sidebar (app.py)
+
+- **My Community** — state selectbox (`key="my_state"`); when set, shows quick facts and stores `st.session_state["my_state_abbrev"]`. Tabs read these keys to pre-filter (officials, PUC, moratoriums, impact calculator, meeting prep). Default state selections should check `st.session_state.get("my_state", ...)`.
+- **Quick Search** — free-text search across `MORATORIUMS_DF`, `EXECUTIVES_DF`, `DC_SITES_DF`, `STATE_PUCS_DF`, rendered grouped by type in the sidebar.
 
 ### Tab layout (app.py)
 
 | Tab | Module(s) | Purpose |
 |-----|-----------|---------|
-| Negotiation toolkit | `toolkit_tab` | CBA templates, data dividend calculator, model clauses, meeting checklist |
-| Community & backlash | `news_tab` | Moratorium tracker, live news/Reddit, case studies |
-| Your utility bill | `bills_tab` | Bill anatomy, rate impact, wholesale-to-retail flow |
+| Negotiation toolkit | `toolkit_tab` | CBA templates, data dividend calculator, model clauses, meeting checklist, meeting prep generator (downloadable brief) |
+| Community & backlash | `news_tab` | Moratorium tracker + map, live news/Reddit, town case studies, 4-company environmental scorecard, spend estimator, report-freshness checker |
+| Your utility bill | `bills_tab` | Bill anatomy, rate impact, wholesale-to-retail flow, curtailment research library |
 | States & officials | `studies_tab` + `officials_tab` | State market profiles, Congress/governor directory, PUC directory |
 | Data centers | `dc_tab` | Interactive map, market power, ERCOT queue, campuses, operators, executives, competitors, FERC response, 50-state stats, mega-projects |
 | Corporate profiles | `corporate_tab` | Google/Meta/Microsoft/AWS environmental deep-dives, sustainability directors |
 | Macro outlook | `macro_tab` | IEA forecasts, geographic shift analysis |
-| Learn & simulate | `learn_tab` + `sandbox_tab` | Data center explainer + interactive siting simulator |
+| Learn & simulate | `learn_tab` + `impact_tab` + `sandbox_tab` | Data center explainer + local impact calculator + interactive siting simulator |
 | Technical deep-dive | `calc_tab`, `live_tab`, `compare_tab`, `grid_tab` (nested sub-tabs) | Token calculator, live benchmarks, source comparison, grid timing |
 | Blog & methodology | `blog_tab` + `method_tab` | Blog posts + source coefficients |
+| Consulting | `consulting_tab` | Consulting pitch + intake form |
 
-Three tabs stack two modules with a divider between them (States, Learn, Blog). Each has a "This tab contains…" caption at the top. The three longest tabs (Data centers, Toolkit, Learn) have an "On this page" expander for navigation.
+Stacked tabs (States, Learn, Blog) have a "This tab contains…" caption at the top and a divider between modules. Long tabs (Data centers, Toolkit, Learn, Bills, News, Corporate) have an "On this page" expander for navigation.
 
 ### Data layer
 
-- **src/constants.py** (~1,500 lines) — All static data, coefficients, and registries. Major datasets:
+- **src/constants.py** (~1,700 lines) — All static data, coefficients, and registries. Major datasets:
   - `SOURCES` — dict mapping source keys to `(name, url)` pairs; used by `src_link()` everywhere
   - `DATACENTERS_DF` — market-level power by phase (operational/UC/planned)
   - `DC_SITES_DF` — per-campus site table with operator/owner/tenant/LLC/attribution
@@ -60,10 +65,19 @@ Three tabs stack two modules with a divider between them (States, Learn, Blog). 
   - `EXECUTIVES_DF` — 39 executives with company, title, category, focus, LinkedIn
   - `AI_COMPETITORS_DF` — SEC 10-K competitor analysis
   - `STATE_DC_DF` — 50-state facility count and TWh/year
+  - `STATE_GRID_PROFILES` — 51-state residential rate ($/kWh), grid carbon (gCO2/kWh), water stress; feeds the impact calculator and meeting prep generator
   - `MEGA_PROJECTS_DF` — top 10 megaprojects under construction
   - `STATE_PUCS_DF` — 51 state PUC commissions with website and complaint links
   - `MORATORIUMS_DF` — data center moratorium/ban tracker
-  - Google/Meta environmental report data (`GOOGLE_*`, `META_*`)
+  - `MORATORIUM_OUTCOMES` — case-study outcomes (CBA secured / ban sustained / etc.)
+  - Environmental report headline data for all four hyperscalers:
+    `GOOGLE_*` (FY2025), `META_*` (FY2024), `MICROSOFT_ENV_HEADLINE` (FY2025),
+    `AWS_ENV_HEADLINE` (CY2025). Microsoft/AWS don't break out DC-only
+    electricity — those TWh and location-based Scope 2 values are estimates
+    derived from reported growth rates; keep the "(est.)" markers when
+    displaying them. When a new report edition lands, update the headline
+    dict, its `SOURCES` entry, and the `REPORT_REGISTRY` year in
+    `src/services/report_check.py`.
   - Grid coefficients, model parameters, ERCOT large-load data
 
 - **src/helpers.py** — Three utility functions: `human_energy()`, `human_water()`, `src_link()`.
@@ -82,13 +96,15 @@ External data fetchers. All must be cached with `@st.cache_data` and fail gracef
 | `mlenergy.py` | ML.ENERGY leaderboard benchmark data |
 | `reddit.py` | Reddit community posts (from local parquet snapshot) |
 | `sec_xbrl.py` | SEC XBRL financial data |
+| `report_check.py` | Polls hyperscaler report pages for editions newer than tracked (`REPORT_REGISTRY` holds the tracked year per company; cached 24 h) |
 | `secrets.py` | API key loading from `.env` or local config |
 
 ### Other files
 
 - **parse_reports.py** — CLI tool to extract metrics from Google/Meta environmental reports into constants
-- **assets/style.css** — Custom CSS (glass-card styling, dark theme)
-- **assets/hero.png** — Header background image
+- **assets/style.css** — Custom CSS (glass-card styling, dark theme, mobile breakpoints at 768/1024 px, expander + prose typography)
+- **assets/hero.png** / **assets/logo.svg** — Header background image and logo
+- **docs/marketing-plan.md** — Marketing plan (not rendered by the app)
 - **data/reports/** — Source PDF reports
 - **officials.json** — Cached officials data
 - **reddit_corpus.parquet** — Reddit discussion snapshot
@@ -120,8 +136,10 @@ External data fetchers. All must be cached with `@st.cache_data` and fail gracef
 - **Dollar signs in markdown**: Streamlit renders `$...$` as LaTeX in `st.markdown()`, `st.info()`, `st.success()`, `st.warning()`, `st.error()`, `st.caption()`, and `help=` tooltips. Escape with `\\$` in these contexts. But `st.metric()` values/deltas, slider/input labels, and dataframe cell values do NOT render markdown — use plain `$` there.
 - **Mermaid diagrams**: Streamlit does not render ```mermaid code fences. Use Streamlit-native layouts instead (`st.columns` + `st.container(border=True)` for flows, Altair charts for data).
 - **Altair charts**: Import `altair as alt`. Use `st.altair_chart(chart, use_container_width=True)`.
+- **Altair column names**: A dot in a DataFrame column name (e.g. `"Est. Spend ($B)"`) is parsed by Altair as a nested-field accessor and silently produces zeros. Use simple column names (`"Spend"`) and set display titles via `alt.X/Y/Tooltip(title=...)`.
 - **Tab state**: All tabs render on every page load (not lazy). Keep expensive operations behind `@st.cache_data` or user-triggered buttons.
-- **Tab bar overflow**: At 10 tabs the bar scrolls horizontally on narrow screens. Tab names should be short.
+- **Tab bar overflow**: At 11 tabs the bar scrolls horizontally on narrow screens. Tab names should be short.
+- **Scroll container**: Streamlit's scrollable element is `section.main`, not `window` — relevant for any browser automation or scroll-to JS.
 - **No deep-linking**: Streamlit tabs don't support URL anchors. Users can't share a link to a specific tab.
 
 ## Key patterns
@@ -131,3 +149,6 @@ External data fetchers. All must be cached with `@st.cache_data` and fail gracef
 - **Filterable dataframes**: Use `st.multiselect` for filters, then `df[df.col.isin(selected)]` before `st.dataframe()`. Use `st.column_config.LinkColumn` for clickable URLs.
 - **Cross-links**: At the bottom of sections, use `st.info("**See also:** ...")` to point users to related tabs.
 - **On-this-page navigation**: For tabs with 5+ sections, add a collapsed `st.expander("📑 On this page")` at the top listing all sections.
+- **Metrics-first sections ("prime-time" style)**: Long-form sections lead with `st.metric` cards carrying the headline numbers + a one-sentence takeaway (`st.info`), with the full prose in a collapsed `st.expander("Read more — ...")`. Don't add new always-visible prose walls — follow this pattern.
+- **Sidebar-aware defaults**: Widgets that filter by state should default from `st.session_state.get("my_state")` / `st.session_state.get("my_state_abbrev")` so the sidebar "My Community" selection flows through.
+- **Downloadable outputs**: Calculators and generators end with `st.download_button` (text or CSV) so users can take results to meetings.
