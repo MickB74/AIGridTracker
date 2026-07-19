@@ -5,6 +5,8 @@ and private data center developers, hardware manufacturers, and hyperscalers.
 Includes an interactive growth trend chart over recent time periods.
 """
 
+import datetime as _dt
+
 import streamlit as st
 import pandas as pd
 import altair as alt
@@ -15,10 +17,18 @@ from src.constants import (
     META_DC_ELECTRICITY, META_DC_CAMPUS_ELECTRICITY, META_GHG,
     META_WATER, META_EFFICIENCY, META_2024_HEADLINE,
     MICROSOFT_ENV_HEADLINE, AWS_ENV_HEADLINE,
-    EXECUTIVES_DF,
+    EXECUTIVES_DF, SHARES_OUTSTANDING,
 )
 from src.helpers import src_link
 from src.services.sec_xbrl import fetch_dynamic_financials
+from src.services.marketdata import fetch_live_quotes
+
+
+def _fmt_market_cap(usd_billions: float) -> str:
+    """Format a market cap given in $B as a Trillion/Billion string."""
+    if usd_billions >= 1000:
+        return f"${usd_billions / 1000:.2f} Trillion"
+    return f"${usd_billions:,.1f} Billion"
 
 # Financial and profile data
 COMPANY_FINANCIALS = [
@@ -274,291 +284,41 @@ GROWTH_DATA = [
     {"Year": 2025, "Company": "Meta Platforms", "Revenue ($B)": 185.5}
 ]
 
-def render_corporate_tab():
-    st.subheader("💼 Corporate Profiles — Financials & Scale")
-    st.caption(
-        "The companies driving the build-out: hyperscalers, hardware enablers, "
-        "and colocation operators — financials, environmental data, and the "
-        "people who run them."
-    )
 
-    with st.expander("📑 On this page", expanded=False):
-        st.markdown(
-            "**1.** Sector financial scale · "
-            "**2.** Company profiles directory · "
-            "**3.** Hyperscaler environmental comparison · "
-            "**4.** Google deep-dive · "
-            "**5.** Microsoft deep-dive · "
-            "**6.** Amazon (AWS) deep-dive · "
-            "**7.** Meta deep-dive · "
-            "**8.** Key corporate players & sustainability directors"
-        )
-
-    # Convert to dataframe and merge SEC XBRL data where available
-    live_financials = []
-    for item in COMPANY_FINANCIALS:
-        ticker = item["Ticker"]
-        updated_item = item.copy()
-        if ticker != "Private":
-            sec_data = fetch_dynamic_financials(ticker)
-            if sec_data:
-                if "Net Income" in sec_data:
-                    updated_item["Net Income"] = sec_data["Net Income"]
-                if "Capital Budget (Annual CapEx)" in sec_data:
-                    updated_item["Capital Budget (Annual CapEx)"] = sec_data["Capital Budget (Annual CapEx)"]
-                if "Total Assets" in sec_data:
-                    updated_item["Total Assets"] = sec_data["Total Assets"]
-        live_financials.append(updated_item)
-
-    df = pd.DataFrame(live_financials)
-
-    # Summary metrics row
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown("### 📈 Sector Financial Scale")
-    
-    m1, m2, m3 = st.columns(3)
-    m1.metric("Combined Public Sector Cap", "$12.2 Trillion", help="Combined market cap of MSFT, GOOGL, NVDA, AMZN, META, ORCL, EQIX, DLR")
-    m2.metric(" Roster Employees", "2.26 Million", help="Total employees across listed companies")
-    m3.metric("Annual Sector Net Income", "$279 Billion", help="Aggregated net income for the public tech filers")
-    st.markdown('</div>', unsafe_allow_html=True)
-
-    # Interactive filtering controls
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown("### 📋 Company Profiles Directory")
-    
-    ctrl_col1, ctrl_col2 = st.columns(2)
-    with ctrl_col1:
-        search_query = st.text_input("🔍 Search by company name", value="")
-    with ctrl_col2:
-        type_filter = st.multiselect(
-            "Filter by ownership type",
-            options=["Public", "Public (REIT)", "Private", "Private (Blackstone)", "Private (KKR / GIP)", "Private (DigitalBridge)"],
-            default=["Public", "Public (REIT)", "Private", "Private (Blackstone)", "Private (KKR / GIP)", "Private (DigitalBridge)"]
-        )
-
-    # Filter dataframe
-    view = df.copy()
-    if search_query:
-        view = view[view["Company"].str.contains(search_query, case=False)]
-    if type_filter:
-        view = view[view["Type"].isin(type_filter)]
-
-    # Display dataframe with clean column configs
-    st.dataframe(
-        view[["Company", "Ticker", "Type", "Market Cap", "Stock Price", "Capital Budget (Annual CapEx)", "Net Income", "Total Assets", "Employees"]],
-        use_container_width=True,
-        hide_index=True,
-        column_config={
-            "Company": st.column_config.TextColumn(width="medium"),
-            "Ticker": st.column_config.TextColumn(width="small"),
-            "Type": st.column_config.TextColumn(width="small"),
-            "Market Cap": st.column_config.TextColumn(width="medium"),
-            "Stock Price": st.column_config.TextColumn(width="small"),
-            "Capital Budget (Annual CapEx)": st.column_config.TextColumn(width="medium"),
-            "Net Income": st.column_config.TextColumn(width="medium"),
-            "Total Assets": st.column_config.TextColumn(width="medium"),
-            "Employees": st.column_config.TextColumn(width="small"),
-        }
-    )
-    st.markdown('</div>', unsafe_allow_html=True)
-
-    # Detail Profile Cards
-    st.markdown("### 🔍 Individual Corporate Profiles")
-    selected_company = st.selectbox("Select a company for more details", view["Company"].tolist() if not view.empty else ["No matching companies"])
-
-    if selected_company != "No matching companies":
-        comp_info = next(item for item in live_financials if item["Company"] == selected_company)
-        
-        st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-        st.markdown(f"## {comp_info['Company']} ({comp_info['Ticker']})")
-        st.caption(f"Ownership Type: **{comp_info['Type']}**")
-        
-        st.markdown(f"**Business Overview:** {comp_info['Description']}")
-        
-        det1, det2, det3 = st.columns(3)
-        with det1:
-            st.markdown(f"- **Market Cap / Valuation:** {comp_info['Market Cap']}")
-            st.markdown(f"- **Stock Price:** {comp_info['Stock Price']}")
-            st.markdown(f"- **Capital Budget (Annual CapEx):** {comp_info['Capital Budget (Annual CapEx)']}")
-        with det2:
-            st.markdown(f"- **Net Income:** {comp_info['Net Income']}")
-            st.markdown(f"- **Total Assets:** {comp_info['Total Assets']}")
-        with det3:
-            st.markdown(f"- **Total Roster Employees:** {comp_info['Employees']}")
-            st.markdown(f"- 🔗 [Investor Relations / Corporate Portal]({comp_info['IR Link']})")
-            
-        st.markdown('</div>', unsafe_allow_html=True)
-
-    # Time-period growth chart
-    st.markdown("### 📈 Revenue Growth Over Time (2022–2025)")
-    st.markdown(
-        "Plotting annual revenue growth shows the steep trajectories of AI hyperscalers and enablers. "
-        "Notice **NVIDIA's** explosive pivot from 2023 onward, reflecting the massive market rush for AI chips."
-    )
-
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    growth_df = pd.DataFrame(GROWTH_DATA)
-    
-    # Filter chart by company
-    selected_growth_companies = st.multiselect(
-        "Select companies to plot",
-        options=list(growth_df["Company"].unique()),
-        default=list(growth_df["Company"].unique())
-    )
-    
-    chart_view = growth_df[growth_df["Company"].isin(selected_growth_companies)] if selected_growth_companies else growth_df
-    
-    growth_chart = (
-        alt.Chart(chart_view)
-        .mark_line(point=True, strokeWidth=3)
-        .encode(
-            x=alt.X("Year:O", title="Fiscal Year"),
-            y=alt.Y("Revenue ($B):Q", title="Annual Revenue ($ Billions)"),
-            color=alt.Color("Company:N", scale=alt.Scale(scheme="category10")),
-            tooltip=["Company", "Year", "Revenue ($B)"]
-        )
-        .properties(height=350)
-    )
-    st.altair_chart(growth_chart, use_container_width=True)
-    st.markdown('</div>', unsafe_allow_html=True)
-
-    st.caption("Figures reflect FY2025/2026 filings, annual reports, SEC 10-K competition statements, and recent private equity valuations.")
-
-    # ------------------------------------------------------------------ #
-    # CROSS-COMPANY ENVIRONMENTAL COMPARISON
-    # ------------------------------------------------------------------ #
-    st.divider()
-    st.subheader("🌍 Hyperscaler Environmental Comparison")
-    st.caption(
-        "Side-by-side environmental footprint of the four largest hyperscalers. "
-        "Google and Meta publish granular time-series data; Microsoft and AWS "
-        "publish headline metrics. Reporting years and scopes differ — read the "
-        "notes column before comparing."
-    )
-
-    g = GOOGLE_2025_HEADLINE
-    m = META_2024_HEADLINE
-    ms = MICROSOFT_ENV_HEADLINE
-    aw = AWS_ENV_HEADLINE
-
-    _comp_data = pd.DataFrame([
-        {
-            "Company": "Google", "Report Year": "FY2025",
-            "DC Electricity (TWh)": g["dc_twh"],
-            "Scope 2 Location (Mt CO2e)": g["scope2_location_tco2e"] / 1e6,
-            "Scope 2 Market (Mt CO2e)": g["scope2_market_tco2e"] / 1e6,
-            "Water Consumed (M gal)": g["water_dc_mgal"],
-            "Renewable Match": f"{g['global_cfe_pct']}% hourly",
-        },
-        {
-            "Company": "Meta", "Report Year": "FY2024",
-            "DC Electricity (TWh)": m["dc_twh"],
-            "Scope 2 Location (Mt CO2e)": m["scope2_location_tco2e"] / 1e6,
-            "Scope 2 Market (Mt CO2e)": m["scope2_market_tco2e"] / 1e6,
-            "Water Consumed (M gal)": round(m["water_consumption_ml"] * 0.264172),
-            "Renewable Match": f"{m['renewable_match_pct']}% annual",
-        },
-        {
-            "Company": "Microsoft", "Report Year": ms["report_year"],
-            "DC Electricity (TWh)": ms["dc_twh"],
-            "Scope 2 Location (Mt CO2e)": ms["scope2_location_mt"],
-            "Scope 2 Market (Mt CO2e)": ms["scope2_market_mt"],
-            "Water Consumed (M gal)": ms["water_consumption_mgal"],
-            "Renewable Match": f"{ms['renewable_pct']}% annual",
-        },
-        {
-            "Company": "AWS (Amazon)", "Report Year": aw["report_year"],
-            "DC Electricity (TWh)": aw["dc_twh"],
-            "Scope 2 Location (Mt CO2e)": aw["scope2_location_mt"],
-            "Scope 2 Market (Mt CO2e)": aw["scope2_market_mt"],
-            "Water Consumed (M gal)": aw["water_consumption_mgal"],
-            "Renewable Match": f"{aw['renewable_pct']}% annual",
-        },
+def _rec_gap_chart(location_mt, market_mt, color):
+    """Paired bar: Scope 2 location-based (real grid) vs. market-based (after
+    certificates/PPAs). The gap is the carbon that RECs move 'off paper'."""
+    _d = pd.DataFrame([
+        {"Method": "Location-based", "MtCO2e": location_mt, "order": 0},
+        {"Method": "Market-based", "MtCO2e": market_mt, "order": 1},
     ])
-
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown("#### ⚡ Electricity Consumption")
-    _ec1, _ec2, _ec3, _ec4 = st.columns(4)
-    _ec1.metric("Google", f"{g['dc_twh']} TWh", "FY2025")
-    _ec2.metric("AWS", f"{aw['dc_twh']} TWh", f"{aw['report_year']} (est.)")
-    _ec3.metric("Microsoft", f"{ms['dc_twh']} TWh", ms["report_year"])
-    _ec4.metric("Meta", f"{m['dc_twh']} TWh", "FY2024")
-
-    _elec_chart_data = _comp_data[["Company", "DC Electricity (TWh)"]].copy()
-    _elec_chart_data.columns = ["Company", "TWh"]
-    _elec_bar = (
-        alt.Chart(_elec_chart_data)
-        .mark_bar(cornerRadiusTopLeft=4, cornerRadiusTopRight=4)
+    bars = (
+        alt.Chart(_d)
+        .mark_bar(cornerRadiusTopLeft=4, cornerRadiusTopRight=4, size=90)
         .encode(
-            x=alt.X("Company:N", sort="-y", title=None),
-            y=alt.Y("TWh:Q", title="DC Electricity (TWh)"),
-            color=alt.Color("Company:N",
-                scale=alt.Scale(
-                    domain=["Google", "AWS (Amazon)", "Microsoft", "Meta"],
-                    range=["#34a853", "#ff9900", "#00a4ef", "#0866ff"]),
+            x=alt.X("Method:N", sort=alt.SortField("order"), title=None,
+                    axis=alt.Axis(labelAngle=0)),
+            y=alt.Y("MtCO2e:Q", title="Million tCO2e"),
+            color=alt.Color("Method:N",
+                scale=alt.Scale(domain=["Location-based", "Market-based"],
+                                range=[color, "#9aa0a6"]),
                 legend=None),
-            tooltip=["Company:N", alt.Tooltip("TWh:Q", format=".1f")],
-        ).properties(height=260)
+            tooltip=[alt.Tooltip("Method:N", title="Accounting"),
+                     alt.Tooltip("MtCO2e:Q", format=".2f", title="Mt CO2e")],
+        )
     )
-    st.altair_chart(_elec_bar, use_container_width=True)
-    st.markdown('</div>', unsafe_allow_html=True)
-
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown("#### 🌡️ Carbon Emissions (Scope 2 Location-Based)")
-    _ghg_chart_data = _comp_data[["Company", "Scope 2 Location (Mt CO2e)"]].dropna().copy()
-    _ghg_chart_data.columns = ["Company", "MtCO2e"]
-    _ghg_bar = (
-        alt.Chart(_ghg_chart_data)
-        .mark_bar(cornerRadiusTopLeft=4, cornerRadiusTopRight=4)
+    labels = (
+        alt.Chart(_d).mark_text(dy=-8, fontSize=13, fontWeight="bold")
         .encode(
-            x=alt.X("Company:N", sort="-y", title=None),
-            y=alt.Y("MtCO2e:Q", title="Million tCO2e (location-based)"),
-            color=alt.Color("Company:N",
-                scale=alt.Scale(
-                    domain=["Google", "AWS (Amazon)", "Microsoft", "Meta"],
-                    range=["#34a853", "#ff9900", "#00a4ef", "#0866ff"]),
-                legend=None),
-            tooltip=["Company:N", alt.Tooltip("MtCO2e:Q", format=".1f")],
-        ).properties(height=260)
+            x=alt.X("Method:N", sort=alt.SortField("order")),
+            y="MtCO2e:Q",
+            text=alt.Text("MtCO2e:Q", format=".1f"),
+        )
     )
-    st.altair_chart(_ghg_bar, use_container_width=True)
-    st.caption(
-        "Location-based = actual grid carbon intensity at each facility. All four "
-        "companies claim 100% renewable matching via certificates/PPAs (market-based), "
-        "but that doesn't change what the grid actually burns. Google is the only "
-        "one reporting **hourly** CFE matching (vs. annual)."
-    )
-    st.markdown('</div>', unsafe_allow_html=True)
+    st.altair_chart((bars + labels).properties(height=260), use_container_width=True)
 
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown("#### 💧 Full Comparison Table")
-    st.dataframe(
-        _comp_data,
-        use_container_width=True, hide_index=True,
-        column_config={
-            "DC Electricity (TWh)": st.column_config.NumberColumn(format="%.1f"),
-            "Scope 2 Location (Mt CO2e)": st.column_config.NumberColumn(format="%.1f"),
-            "Scope 2 Market (Mt CO2e)": st.column_config.NumberColumn(format="%.2f"),
-            "Water Consumed (M gal)": st.column_config.NumberColumn(format="%,d"),
-        })
-    st.caption(
-        "**Caveats:** AWS DC electricity is estimated (Amazon reports total company, "
-        "not DC-only). Report years differ. Water measurement methods vary. "
-        "Microsoft and Meta report annual renewable matching; Google reports hourly CFE. "
-        "Market-based Scope 2 near zero for all four reflects certificate purchasing, "
-        "not grid decarbonization."
-    )
-    _comp_csv = _comp_data.to_csv(index=False)
-    st.download_button(
-        "📥 Download comparison data (CSV)",
-        _comp_csv, "hyperscaler_environmental_comparison.csv", "text/csv")
-    st.markdown('</div>', unsafe_allow_html=True)
 
-    # ------------------------------------------------------------------ #
-    # GOOGLE DEEP-DIVE — 2026 Environmental Report (FY2025)
-    # ------------------------------------------------------------------ #
-    st.divider()
-    st.subheader("🟢 Google (Alphabet) — Environmental Deep-Dive")
+def _render_google_deepdive():
     st.caption(
         "First-party data from Google's **2026 Environmental Report (FY2025)**, "
         "subject to third-party limited assurance by KPMG. "
@@ -741,88 +501,120 @@ def render_corporate_tab():
         st.caption("🔴 red dashed = industry avg PUE 1.54 · 🟢 green dashed = Google fleet avg 1.09")
         st.dataframe(pue_df, use_container_width=True, hide_index=True)
 
-    # ------------------------------------------------------------------ #
-    # MICROSOFT DEEP-DIVE — 2026 Environmental Sustainability & Community-First (FY2025)
-    # ------------------------------------------------------------------ #
-    st.divider()
-    st.subheader("🟥 Microsoft — Environmental & 'Community-First' Deep-Dive")
+
+def _render_microsoft_deepdive():
+    ms = MICROSOFT_ENV_HEADLINE
     st.caption(
-        "First-party data from Microsoft's **2026 Environmental Sustainability Report (FY2025)** "
-        "and their landmark **January 2026 Community-First AI Infrastructure** initiative. "
+        "First-party data from Microsoft's **2025 Environmental Sustainability Report (FY2025)** "
+        "and their **January 2026 Community-First AI Infrastructure** initiative. "
         + src_link("msft_community_2026")
     )
 
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown("#### ⚡ FY2025 Key Metrics & Commitments")
-    ms1, ms2, ms3, ms4 = st.columns(4)
-    ms1.metric("Total GHG Emissions", "20.3M tCO₂e", "+25% YoY growth (AI-driven)")
-    ms2.metric("Power Draw Growth", "+24% YoY", "100% annual renewable match")
-    ms3.metric("Scope 2 Share", "13% of footprint", "vs. 2% previously (RECs pause)")
-    ms4.metric("Water Replenished", "14.0M m³", "Achieved global Water Positive")
-
-    st.markdown(
-        "**Key Operational Details & Methodological Shift:**  \n"
-        "- **Carbon-Free Energy Priority**: Microsoft shifted accounting methodology by pausing the purchase of "
-        "non-additional, unbundled Renewable Energy Certificates (RECs) to focus entirely on investing in **net-new** "
-        "grid-decarbonizing carbon-free electricity (CFE) projects. This drove their reported Scope 2 emissions up from 2% to 13% "
-        "of their footprint, reflecting the raw reality of grid consumption.  \n"
-        "- **Supply Chain Scope 3**: Upstream construction materials (steel, concrete) and server hardware manufacturing continue "
-        "to represent the largest portion of their carbon footprint."
-    )
+    st.markdown("#### ⚡ FY2025 Key Metrics")
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Total GHG Emissions", f"{ms['total_emissions_mt']}M tCO₂e", f"+{ms['yoy_emissions_growth_pct']}% YoY (AI-driven)")
+    c2.metric("DC Electricity", f"{ms['dc_twh']} TWh (est.)", "+24% YoY")
+    c3.metric("Fleet PUE", f"{ms['pue']}", f"{ms['renewable_pct']}% annual renewable match")
+    c4.metric("Water Replenished", f"{ms['water_replenish_pct']}%", "toward water-positive")
     st.markdown('</div>', unsafe_allow_html=True)
+
+    st.info(
+        "**The transparency story:** Microsoft stopped counting non-additional, unbundled "
+        "RECs — and its market-based Scope 2 jumped from 0.26 to **2.7M tCO₂e**, revealing "
+        "real grid impact that certificates had masked. It's a rare accounting choice that "
+        "makes a company's numbers look *worse* while being more honest."
+    )
 
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown("#### 🏡 The Community-First AI Infrastructure Framework (January 2026)")
-    st.caption("Launched by President Brad Smith in January 2026 to set a 'high bar' for datacenter civic responsibility across 5 core pillars:")
-    
-    st.markdown(
-        "1. **⚡ Electricity (Ratepayer Protection)**: A firm pledge to **pay their own way** for grid upgrades. Microsoft commits to working "
-        "with local utilities and public service commissions to set large-customer tariffs so that infrastructure costs (transmission, substations) "
-        "are not passed on to residential power bills.  \n"
-        "   * *Examples*: Partnering with **Black Hills Energy in Wyoming** on custom rates, and backing a new dedicated tariff for **Very Large Customers in Wisconsin** "
-        "to safeguard residential users.  \n"
-        "2. **💧 Water Net-Positivity**: Commitment to minimize water draws and replenish **more water than they consume** in the local water basins where they operate.  \n"
-        "3. **🛠️ Local Employment**: Concrete mandates for local workforce construction hiring, combined with regional vocational and digital skills programs.  \n"
-        "4. **🏥 Local Tax Base Contribution**: Generating substantial property tax revenue to subsidize municipal public schools, hospitals, parks, and libraries.  \n"
-        "5. **🧠 Community Investment**: Directly funding local nonprofits and AI literacy training centers in host counties."
+    st.markdown("#### 🌡️ The REC Gap — Scope 2 Location vs. Market (FY2025)")
+    _rec_gap_chart(ms["scope2_location_mt"], ms["scope2_market_mt"], "#00a4ef")
+    st.caption(
+        "Location-based (9.7 Mt) = carbon from the electrons actually consumed. "
+        "Market-based (2.7 Mt) = after net-new clean-energy contracts. Because Microsoft "
+        "now counts only *additional* carbon-free energy, the remaining gap reflects genuine "
+        "grid impact rather than paper certificates. " + src_link("msft_env_2025")
     )
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # ------------------------------------------------------------------ #
-    # AMAZON (AWS) DEEP-DIVE — Water Stewardship & Efficiency (2026)
-    # ------------------------------------------------------------------ #
-    st.divider()
-    st.subheader("🧡 Amazon (AWS) — Environmental & Water Deep-Dive")
+    with st.expander("📖 Read more — accounting shift & the Community-First framework"):
+        st.markdown(
+            "**Methodological shift.** Microsoft paused the purchase of non-additional, "
+            "unbundled Renewable Energy Certificates (RECs) to focus entirely on investing in "
+            "**net-new** grid-decarbonizing carbon-free electricity (CFE). This drove reported "
+            "Scope 2 emissions up from 2% to 13% of its footprint — reflecting the raw reality "
+            "of grid consumption. Upstream construction materials (steel, concrete) and server "
+            "hardware manufacturing (Scope 3) remain the largest share of the total footprint.\n\n"
+            "**The Community-First AI Infrastructure Framework (January 2026).** Launched by "
+            "President Brad Smith to set a 'high bar' for datacenter civic responsibility across "
+            "five pillars:\n\n"
+            "1. **⚡ Electricity (ratepayer protection):** a pledge to **pay their own way** for "
+            "grid upgrades — working with utilities and PUCs to set large-customer tariffs so "
+            "transmission and substation costs aren't passed to residential bills. *Examples:* "
+            "custom rates with **Black Hills Energy (Wyoming)** and a dedicated **Very Large "
+            "Customer tariff in Wisconsin**.\n"
+            "2. **💧 Water net-positivity:** minimize draws and replenish more water than consumed "
+            "in local basins.\n"
+            "3. **🛠️ Local employment:** local construction-hiring mandates plus regional "
+            "vocational and digital-skills programs.\n"
+            "4. **🏥 Local tax base:** property-tax revenue for municipal schools, hospitals, "
+            "parks, and libraries.\n"
+            "5. **🧠 Community investment:** direct funding for local nonprofits and AI-literacy "
+            "training in host counties."
+        )
+
+
+def _render_aws_deepdive():
+    aw = AWS_ENV_HEADLINE
     st.caption(
-        "First-party data from AWS's **2026 Water Stewardship Disclosures** "
-        "and their corporate **AWS in Communities** program. "
+        "First-party data from Amazon's **2025 Sustainability Report (CY2025)**, its "
+        "**June 2026 Water Stewardship disclosures**, and the **AWS in Communities** program. "
         + src_link("aws_water_2026")
     )
 
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown("#### ⚡ Water Stewardship & Cooling Metrics")
-    aws1, aws2, aws3, aws4 = st.columns(4)
-    aws1.metric("2025 Water Withdrawal", "2.5B Gallons", "First-ever disclosure (Jun 2026)")
-    aws2.metric("Fleet-wide WUE", "0.12 L/kWh", "7.0× more efficient than industry avg")
-    aws3.metric("Water-Positive Target", "75% Complete", "Net-positive water by 2030")
-    aws4.metric("Mechanical Cooling Power", "Up to -50%", "Peak energy cut via system upgrades")
+    st.markdown("#### ⚡ CY2025 Key Metrics")
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("DC Electricity", f"{aw['dc_twh']} TWh (est.)", "+34% purchased-power YoY")
+    c2.metric("Fleet WUE", "0.12 L/kWh", "−20% YoY · best of the four")
+    c3.metric("Fleet PUE", f"{aw['pue']}", f"{aw['renewable_pct']}% renewable match")
+    c4.metric("Water-Positive", f"{aw['water_replenish_pct']}%", "target: net-positive by 2030")
+    st.markdown('</div>', unsafe_allow_html=True)
 
-    st.markdown(
-        "**Key Operational Details & Sourcing Strategies:**  \n"
-        "- **Recycled Sourcing**: AWS targets non-drinking water (recycled municipal wastewater) for server cooling to protect public aquifers. "
-        "Currently supplying over 100 campuses, with a goal of **120 campuses by 2030**.  \n"
-        "- **Historical Transparency Milestone**: In **June 2026**, AWS published its first detailed annual water footprint reporting **2.5 billion gallons** "
-        "of global withdrawals, addressing long-standing utility requests.  \n"
-        "- **AWS in Communities Program**: Actively sponsors local infrastructure training bootcamps (fiber optic cabling, cloud systems support) in major cluster "
-        "metros (such as Loudoun County, VA, and Morrow County, OR) to build a local pipeline of operations staff."
+    st.info(
+        "**Best-in-class cooling, first-time disclosure:** AWS runs the lowest WUE of the four "
+        "majors (**0.12 L/kWh**), and in June 2026 published its first detailed water footprint "
+        "— **2.5B gallons** of global withdrawals — after years of utility pressure. But its "
+        "market-based Scope 2 of 0.0 Mt sits against an estimated 11.9 Mt of real grid carbon."
+    )
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### 🌡️ The REC Gap — Scope 2 Location vs. Market (CY2025)")
+    _rec_gap_chart(aw["scope2_location_mt"], aw["scope2_market_mt"], "#ff9900")
+    st.caption(
+        "Market-based Scope 2 is **0.0 Mt** — 100% renewable-matched on paper — while "
+        "location-based grid impact is an estimated **11.9 Mt**. The entire gap is "
+        "certificates and PPAs, not grid decarbonization. Amazon does not break out DC-only "
+        "figures, so the location-based estimate is derived from reported growth rates. "
+        + src_link("amzn_env_2025")
     )
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # ------------------------------------------------------------------ #
-    # META DEEP-DIVE — 2025 Environmental Data Index (FY2024)
-    # ------------------------------------------------------------------ #
-    st.divider()
-    st.subheader("🟦 Meta Platforms — Environmental Deep-Dive")
+    with st.expander("📖 Read more — water sourcing & community programs"):
+        st.markdown(
+            "**Recycled sourcing.** AWS targets non-drinking water (recycled municipal "
+            "wastewater) for server cooling to protect public aquifers — currently supplying "
+            "over 100 campuses, with a goal of **120 campuses by 2030**.\n\n"
+            "**Transparency milestone.** In **June 2026**, AWS published its first detailed "
+            "annual water footprint, reporting **2.5 billion gallons** of global withdrawals "
+            "and addressing long-standing utility requests.\n\n"
+            "**AWS in Communities.** Sponsors local infrastructure training bootcamps (fiber-"
+            "optic cabling, cloud systems support) in major cluster metros such as **Loudoun "
+            "County, VA** and **Morrow County, OR** to build a local operations-staff pipeline."
+        )
+
+
+def _render_meta_deepdive():
     st.caption(
         "First-party data from Meta's **2025 Environmental Data Index (FY2024)**. "
         "Covers electricity consumption by campus, GHG emissions, water stewardship, PUE & WUE. "
@@ -830,6 +622,7 @@ def render_corporate_tab():
     )
 
     m = META_2024_HEADLINE
+    _water_restored_mgal = round(m["water_restoration_ml"] * 0.264172)
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("#### ⚡ 2024 Key Metrics")
     m1, m2, m3, m4 = st.columns(4)
@@ -842,7 +635,7 @@ def render_corporate_tab():
     m5.metric("Scope 2 (market)",    f"{m['scope2_market_tco2e']:,} tCO2e",  "near-zero w/ RECs")
     m6.metric("Scope 2 (location)",  f"{m['scope2_location_tco2e']/1e6:.1f}M tCO2e","actual grid carbon")
     m7.metric("Scope 3 total",       f"{m['scope3_tco2e']/1e6:.1f}M tCO2e",  "incl. hardware mfg.")
-    m8.metric("Water restored",      f"{m['water_restoration_ml']:,} ML",     "via stewardship projects")
+    m8.metric("Water restored",      f"{_water_restored_mgal:,}M gal", f"{m['water_restoration_ml']:,} ML via stewardship")
     st.markdown('</div>', unsafe_allow_html=True)
 
     # Electricity growth chart
@@ -977,12 +770,11 @@ def render_corporate_tab():
                 "TWh (2024)": st.column_config.NumberColumn(format="%.3f"),
             })
 
-
     # Meta community impact program
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("#### 🏡 Meta Data Center Community Action Grants & CBAs")
     st.caption("Meta's local funding and community-benefit commitments in data center host counties: " + src_link("meta_community_2026"))
-    
+
     st.markdown(
         "- **Community Action Grants**: Since 2011, Meta has contributed over **$74 Million** globally (with **$24 Million** through direct "
         "local Community Action Grants) to fund technology integration and STEAM education in regional public schools.  \n"
@@ -992,6 +784,350 @@ def render_corporate_tab():
         "local public parks, municipal fiber-optic broadband expansions, and water-basin replenishment projects."
     )
     st.markdown('</div>', unsafe_allow_html=True)
+
+
+def render_corporate_tab():
+    st.subheader("💼 Corporate Profiles — Financials & Scale")
+    st.caption(
+        "The companies driving the build-out: hyperscalers, hardware enablers, "
+        "and colocation operators — financials, environmental data, and the "
+        "people who run them."
+    )
+
+    with st.expander("📑 On this page", expanded=False):
+        st.markdown(
+            "**1.** Sector financial scale · "
+            "**2.** Company profiles directory · "
+            "**3.** Revenue growth over time · "
+            "**4.** Hyperscaler environmental comparison · "
+            "**5.** Environmental deep-dives (Google / Microsoft / Amazon / Meta — tabbed) · "
+            "**6.** Key corporate players & sustainability directors"
+        )
+
+    # Live stock prices (Yahoo Finance) for all public tickers, fetched once.
+    _public_tickers = tuple(
+        i["Ticker"] for i in COMPANY_FINANCIALS if i["Ticker"] != "Private"
+    )
+    quotes = fetch_live_quotes(_public_tickers)
+
+    # Convert to dataframe and merge SEC XBRL + live-quote data where available
+    live_financials = []
+    live_cap_total_b = 0.0     # sum of live-computed public market caps ($B)
+    quote_epoch = None          # newest quote timestamp, for the "as of" note
+    for item in COMPANY_FINANCIALS:
+        ticker = item["Ticker"]
+        updated_item = item.copy()
+        if ticker != "Private":
+            sec_data = fetch_dynamic_financials(ticker)
+            if sec_data:
+                if "Net Income" in sec_data:
+                    updated_item["Net Income"] = sec_data["Net Income"]
+                if "Capital Budget (Annual CapEx)" in sec_data:
+                    updated_item["Capital Budget (Annual CapEx)"] = sec_data["Capital Budget (Annual CapEx)"]
+                if "Total Assets" in sec_data:
+                    updated_item["Total Assets"] = sec_data["Total Assets"]
+
+            q = quotes.get(ticker)
+            if q:
+                price = q["price"]
+                updated_item["Stock Price"] = f"${price:,.2f}"
+                if q.get("time"):
+                    quote_epoch = max(quote_epoch or 0, q["time"])
+                shares_b = SHARES_OUTSTANDING.get(ticker)
+                if shares_b:
+                    cap_b = price * shares_b
+                    updated_item["Market Cap"] = f"≈ {_fmt_market_cap(cap_b)}"
+                    live_cap_total_b += cap_b
+        live_financials.append(updated_item)
+
+    df = pd.DataFrame(live_financials)
+
+    # "As of" date from the newest quote (falls back to a static note offline)
+    _as_of = ""
+    if quote_epoch:
+        _as_of = _dt.datetime.utcfromtimestamp(quote_epoch).strftime("%b %d, %Y")
+
+    # Summary metrics row
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("### 📈 Sector Financial Scale")
+    
+    _cap_str = (f"${live_cap_total_b / 1000:.1f} Trillion" if live_cap_total_b >= 1000
+                else "$12.2 Trillion")
+    _cap_delta = f"live · as of {_as_of}" if (live_cap_total_b and _as_of) else "static estimate"
+    m1, m2, m3 = st.columns(3)
+    m1.metric("Combined Public Sector Cap", _cap_str, _cap_delta,
+              delta_color="off",
+              help="Sum of live market caps (price × shares outstanding) for the public tickers with a quote.")
+    m2.metric(" Roster Employees", "2.26 Million", help="Total employees across listed companies")
+    m3.metric("Annual Sector Net Income", "$279 Billion", help="Aggregated net income for the public tech filers")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # Interactive filtering controls
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("### 📋 Company Profiles Directory")
+    
+    ctrl_col1, ctrl_col2 = st.columns(2)
+    with ctrl_col1:
+        search_query = st.text_input("🔍 Search by company name", value="")
+    with ctrl_col2:
+        type_filter = st.multiselect(
+            "Filter by ownership type",
+            options=["Public", "Public (REIT)", "Private", "Private (Blackstone)", "Private (KKR / GIP)", "Private (DigitalBridge)"],
+            default=["Public", "Public (REIT)", "Private", "Private (Blackstone)", "Private (KKR / GIP)", "Private (DigitalBridge)"]
+        )
+
+    # Filter dataframe
+    view = df.copy()
+    if search_query:
+        view = view[view["Company"].str.contains(search_query, case=False)]
+    if type_filter:
+        view = view[view["Type"].isin(type_filter)]
+
+    # Display dataframe with clean column configs
+    st.dataframe(
+        view[["Company", "Ticker", "Type", "Market Cap", "Stock Price", "Capital Budget (Annual CapEx)", "Net Income", "Total Assets", "Employees"]],
+        use_container_width=True,
+        hide_index=True,
+        column_config={
+            "Company": st.column_config.TextColumn(width="medium"),
+            "Ticker": st.column_config.TextColumn(width="small"),
+            "Type": st.column_config.TextColumn(width="small"),
+            "Market Cap": st.column_config.TextColumn(width="medium"),
+            "Stock Price": st.column_config.TextColumn(width="small"),
+            "Capital Budget (Annual CapEx)": st.column_config.TextColumn(width="medium"),
+            "Net Income": st.column_config.TextColumn(width="medium"),
+            "Total Assets": st.column_config.TextColumn(width="medium"),
+            "Employees": st.column_config.TextColumn(width="small"),
+        }
+    )
+    if _as_of:
+        st.caption(
+            f"**Stock Price** live via {src_link('yahoo_finance')} (as of {_as_of}); "
+            f"**Market Cap** ≈ live price × shares outstanding. "
+            "**Net Income / CapEx / Total Assets** from each company's latest SEC 10-K "
+            "(XBRL). Employees and private-company valuations are static."
+        )
+    else:
+        st.caption(
+            "Live quotes unavailable right now — showing last static figures. "
+            "**Net Income / CapEx / Total Assets** still reflect the latest SEC 10-K where available."
+        )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # Detail Profile Cards
+    st.markdown("### 🔍 Individual Corporate Profiles")
+    selected_company = st.selectbox("Select a company for more details", view["Company"].tolist() if not view.empty else ["No matching companies"])
+
+    if selected_company != "No matching companies":
+        comp_info = next(item for item in live_financials if item["Company"] == selected_company)
+        
+        st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+        st.markdown(f"## {comp_info['Company']} ({comp_info['Ticker']})")
+        st.caption(f"Ownership Type: **{comp_info['Type']}**")
+        
+        st.markdown(f"**Business Overview:** {comp_info['Description']}")
+        
+        det1, det2, det3 = st.columns(3)
+        with det1:
+            st.markdown(f"- **Market Cap / Valuation:** {comp_info['Market Cap']}")
+            st.markdown(f"- **Stock Price:** {comp_info['Stock Price']}")
+            st.markdown(f"- **Capital Budget (Annual CapEx):** {comp_info['Capital Budget (Annual CapEx)']}")
+        with det2:
+            st.markdown(f"- **Net Income:** {comp_info['Net Income']}")
+            st.markdown(f"- **Total Assets:** {comp_info['Total Assets']}")
+        with det3:
+            st.markdown(f"- **Total Roster Employees:** {comp_info['Employees']}")
+            st.markdown(f"- 🔗 [Investor Relations / Corporate Portal]({comp_info['IR Link']})")
+            
+        st.markdown('</div>', unsafe_allow_html=True)
+
+    # Time-period growth chart
+    st.markdown("### 📈 Revenue Growth Over Time (2022–2025)")
+    st.markdown(
+        "Plotting annual revenue growth shows the steep trajectories of AI hyperscalers and enablers. "
+        "Notice **NVIDIA's** explosive pivot from 2023 onward, reflecting the massive market rush for AI chips."
+    )
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    growth_df = pd.DataFrame(GROWTH_DATA)
+    
+    # Filter chart by company
+    selected_growth_companies = st.multiselect(
+        "Select companies to plot",
+        options=list(growth_df["Company"].unique()),
+        default=list(growth_df["Company"].unique())
+    )
+    
+    chart_view = growth_df[growth_df["Company"].isin(selected_growth_companies)] if selected_growth_companies else growth_df
+    
+    growth_chart = (
+        alt.Chart(chart_view)
+        .mark_line(point=True, strokeWidth=3)
+        .encode(
+            x=alt.X("Year:O", title="Fiscal Year"),
+            y=alt.Y("Revenue ($B):Q", title="Annual Revenue ($ Billions)"),
+            color=alt.Color("Company:N", scale=alt.Scale(scheme="category10")),
+            tooltip=["Company", "Year", "Revenue ($B)"]
+        )
+        .properties(height=350)
+    )
+    st.altair_chart(growth_chart, use_container_width=True)
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.caption("Stock prices and market caps are live (Yahoo Finance, delayed); income, CapEx and assets come from SEC 10-K XBRL filings; private-company valuations reflect recent PE transactions.")
+
+    # ------------------------------------------------------------------ #
+    # CROSS-COMPANY ENVIRONMENTAL COMPARISON
+    # ------------------------------------------------------------------ #
+    st.divider()
+    st.subheader("🌍 Hyperscaler Environmental Comparison")
+    st.caption(
+        "Side-by-side environmental footprint of the four largest hyperscalers. "
+        "Google and Meta publish granular time-series data; Microsoft and AWS "
+        "publish headline metrics. Reporting years and scopes differ — read the "
+        "notes column before comparing."
+    )
+
+    g = GOOGLE_2025_HEADLINE
+    m = META_2024_HEADLINE
+    ms = MICROSOFT_ENV_HEADLINE
+    aw = AWS_ENV_HEADLINE
+
+    _comp_data = pd.DataFrame([
+        {
+            "Company": "Google", "Report Year": "FY2025",
+            "DC Electricity (TWh)": g["dc_twh"],
+            "Scope 2 Location (Mt CO2e)": g["scope2_location_tco2e"] / 1e6,
+            "Scope 2 Market (Mt CO2e)": g["scope2_market_tco2e"] / 1e6,
+            "Water Consumed (M gal)": g["water_dc_mgal"],
+            "Renewable Match": f"{g['global_cfe_pct']}% hourly",
+        },
+        {
+            "Company": "Meta", "Report Year": "FY2024",
+            "DC Electricity (TWh)": m["dc_twh"],
+            "Scope 2 Location (Mt CO2e)": m["scope2_location_tco2e"] / 1e6,
+            "Scope 2 Market (Mt CO2e)": m["scope2_market_tco2e"] / 1e6,
+            "Water Consumed (M gal)": round(m["water_consumption_ml"] * 0.264172),
+            "Renewable Match": f"{m['renewable_match_pct']}% annual",
+        },
+        {
+            "Company": "Microsoft", "Report Year": ms["report_year"],
+            "DC Electricity (TWh)": ms["dc_twh"],
+            "Scope 2 Location (Mt CO2e)": ms["scope2_location_mt"],
+            "Scope 2 Market (Mt CO2e)": ms["scope2_market_mt"],
+            "Water Consumed (M gal)": ms["water_consumption_mgal"],
+            "Renewable Match": f"{ms['renewable_pct']}% annual",
+        },
+        {
+            "Company": "AWS (Amazon)", "Report Year": aw["report_year"],
+            "DC Electricity (TWh)": aw["dc_twh"],
+            "Scope 2 Location (Mt CO2e)": aw["scope2_location_mt"],
+            "Scope 2 Market (Mt CO2e)": aw["scope2_market_mt"],
+            "Water Consumed (M gal)": aw["water_consumption_mgal"],
+            "Renewable Match": f"{aw['renewable_pct']}% annual",
+        },
+    ])
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### ⚡ Electricity Consumption")
+    _ec1, _ec2, _ec3, _ec4 = st.columns(4)
+    _ec1.metric("Google", f"{g['dc_twh']} TWh", "FY2025")
+    _ec2.metric("AWS", f"{aw['dc_twh']} TWh", f"{aw['report_year']} (est.)")
+    _ec3.metric("Microsoft", f"{ms['dc_twh']} TWh", ms["report_year"])
+    _ec4.metric("Meta", f"{m['dc_twh']} TWh", "FY2024")
+
+    _elec_chart_data = _comp_data[["Company", "DC Electricity (TWh)"]].copy()
+    _elec_chart_data.columns = ["Company", "TWh"]
+    _elec_bar = (
+        alt.Chart(_elec_chart_data)
+        .mark_bar(cornerRadiusTopLeft=4, cornerRadiusTopRight=4)
+        .encode(
+            x=alt.X("Company:N", sort="-y", title=None),
+            y=alt.Y("TWh:Q", title="DC Electricity (TWh)"),
+            color=alt.Color("Company:N",
+                scale=alt.Scale(
+                    domain=["Google", "AWS (Amazon)", "Microsoft", "Meta"],
+                    range=["#34a853", "#ff9900", "#00a4ef", "#0866ff"]),
+                legend=None),
+            tooltip=["Company:N", alt.Tooltip("TWh:Q", format=".1f")],
+        ).properties(height=260)
+    )
+    st.altair_chart(_elec_bar, use_container_width=True)
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### 🌡️ Carbon Emissions (Scope 2 Location-Based)")
+    _ghg_chart_data = _comp_data[["Company", "Scope 2 Location (Mt CO2e)"]].dropna().copy()
+    _ghg_chart_data.columns = ["Company", "MtCO2e"]
+    _ghg_bar = (
+        alt.Chart(_ghg_chart_data)
+        .mark_bar(cornerRadiusTopLeft=4, cornerRadiusTopRight=4)
+        .encode(
+            x=alt.X("Company:N", sort="-y", title=None),
+            y=alt.Y("MtCO2e:Q", title="Million tCO2e (location-based)"),
+            color=alt.Color("Company:N",
+                scale=alt.Scale(
+                    domain=["Google", "AWS (Amazon)", "Microsoft", "Meta"],
+                    range=["#34a853", "#ff9900", "#00a4ef", "#0866ff"]),
+                legend=None),
+            tooltip=["Company:N", alt.Tooltip("MtCO2e:Q", format=".1f")],
+        ).properties(height=260)
+    )
+    st.altair_chart(_ghg_bar, use_container_width=True)
+    st.caption(
+        "Location-based = actual grid carbon intensity at each facility. All four "
+        "companies claim 100% renewable matching via certificates/PPAs (market-based), "
+        "but that doesn't change what the grid actually burns. Google is the only "
+        "one reporting **hourly** CFE matching (vs. annual)."
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### 💧 Full Comparison Table")
+    st.dataframe(
+        _comp_data,
+        use_container_width=True, hide_index=True,
+        column_config={
+            "DC Electricity (TWh)": st.column_config.NumberColumn(format="%.1f"),
+            "Scope 2 Location (Mt CO2e)": st.column_config.NumberColumn(format="%.1f"),
+            "Scope 2 Market (Mt CO2e)": st.column_config.NumberColumn(format="%.2f"),
+            "Water Consumed (M gal)": st.column_config.NumberColumn(format="%,d"),
+        })
+    st.caption(
+        "**Caveats:** AWS DC electricity is estimated (Amazon reports total company, "
+        "not DC-only). Report years differ. Water measurement methods vary. "
+        "Microsoft and Meta report annual renewable matching; Google reports hourly CFE. "
+        "Market-based Scope 2 near zero for all four reflects certificate purchasing, "
+        "not grid decarbonization."
+    )
+    _comp_csv = _comp_data.to_csv(index=False)
+    st.download_button(
+        "📥 Download comparison data (CSV)",
+        _comp_csv, "hyperscaler_environmental_comparison.csv", "text/csv")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # ------------------------------------------------------------------ #
+    # HYPERSCALER ENVIRONMENTAL DEEP-DIVES (tabbed)
+    # ------------------------------------------------------------------ #
+    st.divider()
+    st.subheader("🔬 Hyperscaler Environmental Deep-Dives")
+    st.caption(
+        "The four largest hyperscalers, one per tab. Google and Meta publish granular "
+        "multi-year time-series; Microsoft and Amazon report headline metrics only and "
+        "don't break out DC-only figures (those are marked *est.*). Every tab leads with "
+        "key metrics, then the charts and full detail."
+    )
+    _dd_tabs = st.tabs([
+        "🟢 Google", "🟥 Microsoft", "🧡 Amazon (AWS)", "🟦 Meta",
+    ])
+    with _dd_tabs[0]:
+        _render_google_deepdive()
+    with _dd_tabs[1]:
+        _render_microsoft_deepdive()
+    with _dd_tabs[2]:
+        _render_aws_deepdive()
+    with _dd_tabs[3]:
+        _render_meta_deepdive()
 
     # ------------------------------------------------------------------ #
     # CORPORATE KEY PLAYERS & DIRECTORS

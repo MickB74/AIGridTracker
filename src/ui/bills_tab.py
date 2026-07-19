@@ -8,6 +8,8 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
+from src.helpers import src_link
+
 
 def render_bills_tab():
     st.subheader("💡 Your Utility Bill — What's Actually Driving It Up?")
@@ -35,78 +37,100 @@ def render_bills_tab():
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("## 🧾 Anatomy of your electric bill")
     st.markdown(
-        "Most people think they pay one rate for electricity. In reality, your bill is "
-        "built from **several distinct charges** — and the ones you've never heard of are "
-        "often the ones growing fastest."
+        "You see one blended rate. But every dollar splits into two very different "
+        "things: the electricity you **use**, and the grid capacity that must "
+        "**exist** to serve the single highest moment of demand all year. "
+        "Data-center growth hits the second kind hardest."
     )
 
+    # Composition of expenses for major U.S. investor-owned utilities, 2023
+    # (FERC Form 1 via EIA EPA table 8.3), per LBNL Retail Price & Cost Trends
+    # 2024. Totals ($B): FPP 104, O&M 66, Depreciation 45, G&A 37, Taxes/Other
+    # 35 → 287. See src_link("lbnl_price_trends").
     bill_parts = pd.DataFrame([
-        {"Component": "Energy charges (kWh)", "Share": 50, "Growing?": "Stable"},
-        {"Component": "Demand / capacity", "Share": 22, "Growing?": "FAST"},
-        {"Component": "Transmission & distribution", "Share": 23, "Growing?": "Growing"},
-        {"Component": "Fees & taxes", "Share": 5, "Growing?": "Stable"},
+        {"Component": "Fuel & purchased power",   "Share": 36, "order": 1},
+        {"Component": "Operations & maintenance", "Share": 23, "order": 2},
+        {"Component": "Depreciation",             "Share": 16, "order": 3},
+        {"Component": "General & administrative", "Share": 13, "order": 4},
+        {"Component": "Taxes & other",            "Share": 12, "order": 5},
     ])
-    donut = (
+    color_scale = alt.Scale(
+        domain=["Fuel & purchased power", "Operations & maintenance",
+                "Depreciation", "General & administrative", "Taxes & other"],
+        range=["#3b82f6", "#f59e0b", "#ef4444", "#a855f7", "#6b7280"])
+    base = (
         alt.Chart(bill_parts)
-        .mark_arc(innerRadius=60, outerRadius=110)
-        .encode(
-            theta=alt.Theta("Share:Q"),
-            color=alt.Color("Component:N",
-                scale=alt.Scale(
-                    domain=["Energy charges (kWh)", "Demand / capacity",
-                            "Transmission & distribution", "Fees & taxes"],
-                    range=["#3b82f6", "#ef4444", "#f59e0b", "#6b7280"]),
-                legend=alt.Legend(title="Bill components")),
-            tooltip=["Component:N", alt.Tooltip("Share:Q", title="% of bill")],
-        ).properties(height=260, width=300)
+        .transform_stack(stack="Share", groupby=[],
+                         sort=[alt.SortField("order", "ascending")], as_=["x0", "x1"])
+        .transform_calculate(mid="(datum.x0 + datum.x1) / 2", lab="datum.Share + '%'")
     )
-    text_label = (
-        alt.Chart(bill_parts)
-        .mark_text(radiusOffset=20, size=13)
-        .encode(
-            theta=alt.Theta("Share:Q", stack=True),
-            text=alt.Text("Share:Q", format="d"),
-            color=alt.value("#ffffff"),
-        )
+    bar = base.mark_bar(height=64).encode(
+        x=alt.X("x0:Q", axis=None, scale=alt.Scale(domain=[0, 100])),
+        x2="x1:Q",
+        color=alt.Color("Component:N", scale=color_scale,
+                        legend=alt.Legend(title=None, orient="bottom",
+                                          labelColor="#cbd5e1", columns=3)),
+        order=alt.Order("order:Q"),
+        tooltip=["Component:N", alt.Tooltip("Share:Q", title="% of expenses")],
     )
-    bc1, bc2 = st.columns([1.2, 1])
-    with bc1:
-        st.altair_chart(donut + text_label, use_container_width=True)
-    with bc2:
-        st.markdown("")
-        st.metric("Energy charges", "~50%", "Stable — tracks your actual usage")
-        st.metric("Demand / capacity", "~22%", "FASTEST growing", delta_color="inverse")
-        st.metric("Transmission & distribution", "~23%", "Growing with new infrastructure")
-        st.caption("The red slice — demand/capacity — is where data center growth hits hardest.")
+    bar_labels = base.mark_text(color="white", fontWeight="bold", size=14).encode(
+        x=alt.X("mid:Q", scale=alt.Scale(domain=[0, 100])),
+        text=alt.Text("lab:N"),
+        order=alt.Order("order:Q"),
+    )
+    st.altair_chart((bar + bar_labels).properties(height=120),
+                    use_container_width=True)
+    st.caption(
+        "Composition of expenses for major U.S. investor-owned utilities in "
+        f"2023, per {src_link('lbnl_price_trends')}. Fuel & purchased power is "
+        "the only large piece that scales with how much electricity you use — "
+        "the rest is largely **fixed**: the plants, wires, people, and capital "
+        "that must exist to run the system. On a home bill it all arrives as "
+        "one blended per-kWh rate."
+    )
+
+    u1, u2 = st.columns(2)
+    u1.metric("Tracks your usage", "~36%",
+              "Fuel & purchased power — the fuel burned to make the power",
+              delta_color="off")
+    u2.metric("Fixed system costs", "~64%",
+              "Plants, wires, staff & capital — exist regardless of use",
+              delta_color="inverse")
 
     with st.expander("Read more — what each charge actually is"):
         col1, col2, col3 = st.columns(3)
         with col1:
             st.markdown("""\
-##### ⚡ Energy charges
-**What you use** — per kWh. Run the AC more, pay more; reflects actual fuel
-and generation cost. Typically **40–60%** of a residential bill.
+##### ⚡ Fuel & purchased power — *what you use*
+The fuel and wholesale power a utility buys to serve you — the largest single
+expense (~36%) and the most volatile. It drove the 2021–22 bill spike as
+natural-gas prices surged (gas sets ~40% of U.S. generation), and eased as
+they fell back.
 """)
         with col2:
             st.markdown("""\
-##### 📈 Demand / capacity charges
-**What the grid must be ready to deliver.** Your utility maintains enough
-plants and wires for the *highest moment of demand* all year — even if that
-peak lasts a few hours. Those standby costs are spread across all ratepayers.
-Typically **15–30%**, but growing fast.
+##### 🔌 The grid — *what must exist*
+Wires, substations, and their upkeep, **sized for the single highest moment of
+demand, not the average.** Distribution is now the largest and fastest-growing
+slice of utility investment — capital spending on it **grew ~50% from
+2019–2023**, even as spending on power plants fell.
 """)
         with col3:
             st.markdown("""\
-##### 🔌 Transmission & distribution
-**Moving power from plant to home.** When big new loads require grid upgrades,
-those costs flow into T&D charges for *everyone* on the system. Typically
-**20–30%**.
+##### 📈 The long-run shift
+Over two decades the balance has tilted from *producing* power toward
+*delivering* it: EIA finds power production fell from 69% (2006) to 54% of
+utility costs while delivery climbed to 46%. New large loads accelerate that
+grid spending — and it's recovered from everyone.
 """)
 
     st.info(
-        "**Key insight:** You don't just pay for the electricity you *use* — you "
-        "also pay for the infrastructure that must *exist* to serve the highest "
-        "moment of demand. That's why peak load matters so much."
+        "**Key insight:** The fastest-growing part of your bill is the grid "
+        "itself. Utility capital spending on the **distribution network grew "
+        "~50% from 2019 to 2023** — now the single largest category of "
+        "investment (44%) — while spending on power plants fell. New peak loads "
+        "like data centers require exactly this kind of grid buildout, and "
+        "those costs are recovered from every ratepayer on the system."
     )
     st.markdown("</div>", unsafe_allow_html=True)
 

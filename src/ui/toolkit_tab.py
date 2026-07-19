@@ -4,13 +4,16 @@ data center development. Calculators, model clauses, and real-world
 examples to help towns extract maximum value.
 """
 
+import urllib.parse
 import streamlit as st
 import pandas as pd
 import altair as alt
 from src.constants import (
     OPERATORS_DF, EXECUTIVES_DF, MORATORIUMS_DF,
     STATE_PUCS_DF, STATE_DC_DF, STATE_GRID_PROFILES,
+    FARMLAND_CROPLAND_USD_ACRE_2024, US_CROPLAND_USD_ACRE_2024,
 )
+from src.helpers import src_link
 
 
 # ── Real-world CBA examples database ─────────────────────────────────────── #
@@ -111,10 +114,37 @@ _CBA_EXAMPLES = [
 # ── Model CBA clauses ────────────────────────────────────────────────────── #
 
 _MODEL_CLAUSES = {
+    "Landowner bloc: no-individual-deals pact": {
+        "icon": "🤝",
+        "clause": (
+            "The undersigned landowners agree to negotiate the sale or lease of their "
+            "parcels to [Developer / any data-center developer] solely as a group, "
+            "through [designated representative or attorney]. No signatory shall enter "
+            "into any individual sale, option, or letter of intent on terms below those "
+            "secured for the group. Net proceeds shall be shared pro rata by contributed "
+            "acreage. If any signatory is offered superior terms, those terms shall be "
+            "extended to all signatories (most-favored-nation). A signatory who sells "
+            "individually in breach shall [forfeit $[X] / grant the group a right of "
+            "first refusal]. This agreement expires on [date] if no group transaction "
+            "has closed."
+        ),
+        "why": (
+            "Unlike the other entries here, this is a landowner-to-landowner agreement — "
+            "the foundation of bloc negotiation (see 'Negotiate as a bloc' above), not a "
+            "term you hand the developer. It denies the developer its favorite tactic: "
+            "buying owners one at a time and sweetening a single holdout to break ranks. "
+            "Salem Township, PA landowners used exactly this alignment to pool ~1,700 "
+            "acres and sell together for ~\\$586M. Have a licensed real-estate attorney "
+            "draft the binding version for your state."
+        ),
+        "range_low": None,
+        "range_high": None,
+        "unit": None,
+    },
     "Direct financial payments": {
         "icon": "💰",
         "clause": (
-            "Developer shall pay an annual Community Benefit Payment of \\$[X] per MW "
+            "Developer shall pay an annual Community Benefit Payment of $[X] per MW "
             "of contracted power capacity into a Community Benefit Fund administered "
             "by [County/Town]. Payments commence upon certificate of occupancy and "
             "adjust annually by CPI."
@@ -133,7 +163,7 @@ _MODEL_CLAUSES = {
         "clause": (
             "Total facility water withdrawal shall not exceed [X] gallons per day. "
             "Developer shall install metering equipment accessible to [Municipal Water "
-            "Authority] and pay a surcharge of \\$[Y] per 1,000 gallons exceeding the cap. "
+            "Authority] and pay a surcharge of $[Y] per 1,000 gallons exceeding the cap. "
             "Annual water usage reports shall be public record."
         ),
         "why": (
@@ -204,7 +234,7 @@ _MODEL_CLAUSES = {
             "Developer shall use best efforts to ensure that [X]% of construction labor "
             "and [Y]% of permanent operations staff are sourced from [County/Region]. "
             "Developer shall fund a workforce training program at [local community "
-            "college] of not less than \\$[Z] per year for [N] years, focused on "
+            "college] of not less than $[Z] per year for [N] years, focused on "
             "electrical, HVAC, and network operations certifications."
         ),
         "why": (
@@ -238,7 +268,7 @@ _MODEL_CLAUSES = {
         "icon": "🏗️",
         "clause": (
             "Developer shall post a decommissioning bond or letter of credit equal to "
-            "\\$[X] per MW within 90 days of certificate of occupancy, to fund site "
+            "$[X] per MW within 90 days of certificate of occupancy, to fund site "
             "remediation and restoration if the facility ceases operations."
         ),
         "why": (
@@ -275,6 +305,8 @@ def render_toolkit_tab():
         st.markdown(
             "**1.** Your leverage & what to demand · "
             "**2.** Data Dividend Calculator · "
+            "**2b.** Land price discovery (USDA farmland baseline) · "
+            "**2c.** Negotiate as a bloc (+ checklist) · "
             "**3.** Model CBA clauses (copy & customize) · "
             "**4.** What other communities have won · "
             "**5.** The Alaska Model — data dividends · "
@@ -467,6 +499,233 @@ def render_toolkit_tab():
         "**Want a custom analysis for your community?** GridWatch Consulting "
         "builds facility-specific impact models using your local utility data. "
         "See the **Consulting** tab for a free initial assessment."
+    )
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # ================================================================== #
+    # SECTION 2b — Land Price Discovery
+    # ================================================================== #
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("## 🔎 Land price discovery")
+    st.markdown("#### What is the developer really willing to pay?")
+    st.caption(
+        "The land rush runs on an information gap: the developer knows the campus "
+        "is worth billions; sellers priced their acreage against crops. Start here — "
+        "the USDA agricultural baseline for your state, plus where to find what the "
+        "developer has already paid nearby."
+    )
+
+    _pd_states = sorted(FARMLAND_CROPLAND_USD_ACRE_2024.keys())
+    _pd_sidebar = st.session_state.get("my_state", "All states")
+    _pd_default = _pd_sidebar if _pd_sidebar in _pd_states else "Wisconsin"
+    pdc1, pdc2 = st.columns([1.25, 1])
+    with pdc1:
+        pd_state = st.selectbox(
+            "Your state", _pd_states,
+            index=_pd_states.index(_pd_default), key="tk_pd_state",
+        )
+        pd_offer = st.number_input(
+            "Offer you've heard ($/acre)", 0, 500000, 0, 5000, key="tk_pd_offer",
+            help="Enter a per-acre offer a neighbor received (or leave at 0). "
+                 "Recorded deeds show what the developer actually paid — see the "
+                 "links below.",
+        )
+        pd_acres = st.number_input(
+            "Acreage in play (optional)", 0, 5000, 0, 10, key="tk_pd_acres",
+        )
+
+    pd_baseline = FARMLAND_CROPLAND_USD_ACRE_2024.get(pd_state, US_CROPLAND_USD_ACRE_2024)
+    with pdc2:
+        st.metric(f"USDA cropland baseline · {pd_state} (2024)", f"${pd_baseline:,}/acre")
+        if pd_offer > 0:
+            st.metric("Offer vs. farmland value", f"{pd_offer / pd_baseline:.1f}×")
+        else:
+            st.metric("Typical data-center premium", "10–40× farmland")
+
+    if pd_offer > 0:
+        _mult = pd_offer / pd_baseline
+        if _mult >= 10:
+            st.success(
+                f"At **{_mult:.1f}×** the farmland baseline, this offer reflects the "
+                "land's value **to the data center**, not to a farmer. That multiple "
+                "is your anchor — and a signal the parcel matters to the site plan."
+            )
+        elif _mult >= 3:
+            st.warning(
+                f"At **{_mult:.1f}×** farmland value, the offer beats agricultural "
+                "comps but is likely well below the developer's ceiling. Neighbors "
+                "who compared notes and held out have gotten more."
+            )
+        else:
+            st.info(
+                f"At **{_mult:.1f}×** farmland value, this is close to an ordinary "
+                "land sale — far under what data-center assemblers have paid "
+                "elsewhere. Don't price against crops; price against the campus."
+            )
+
+    if pd_acres > 0:
+        _base_total = pd_baseline * pd_acres
+        _line = f"Farmland-basis value of **{pd_acres:,} acres**: **\\${_base_total:,.0f}**"
+        if pd_offer > 0:
+            _line += f"  ·  at the \\${pd_offer:,}/acre offer: **\\${pd_offer * pd_acres:,.0f}**"
+        st.markdown(_line)
+
+    st.caption(
+        "Reference: in Port Washington, WI, sellers were reportedly offered up to "
+        "~\\$120,000/acre — roughly **18×** the state's ~\\$6,800/acre cropland baseline."
+    )
+
+    st.markdown("**Where to run your own price discovery:**")
+    _deed_q = urllib.parse.quote(f"{pd_state} register of deeds property sale price records")
+    st.markdown(
+        f"- **County deed / recorder records** — what the developer *actually paid* "
+        f"for nearby parcels is public record: "
+        f"[search {pd_state} deed & property records](https://www.google.com/search?q={_deed_q})\n"
+        f"- **USDA NASS QuickStats** — pull live cropland and county-level land values: "
+        f"{src_link('usda_quickstats')}\n"
+        f"- **Good Jobs First Subsidy Tracker** — tax abatements already handed to "
+        f"data centers in your state: {src_link('gjf_subsidy')}\n"
+        f"- Baseline figures above: {src_link('usda_land')}"
+    )
+    st.caption(
+        "Cropland baseline is the USDA NASS 2024 state average; AZ and NV use the "
+        "state farm-real-estate value (cropland withheld), and the six New England "
+        "states share USDA's regional figure. Treat it as the *floor*, not the offer."
+    )
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # ================================================================== #
+    # SECTION 2c — Negotiate as a bloc
+    # ================================================================== #
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("## 🤝 Negotiate as a bloc, not parcel-by-parcel")
+    st.caption(
+        "Developers assemble land quietly, one owner at a time, so no seller ever "
+        "sees the whole picture. Neighbors who negotiate together erase that "
+        "information gap — and the largest collective deals show how much is at stake."
+    )
+
+    st.markdown("#### The precedent: Salem Township, Pennsylvania")
+    sb1, sb2, sb3, sb4 = st.columns(4)
+    sb1.metric("Landowners", "96")
+    sb2.metric("Acres pooled", "~1,700")
+    sb3.metric("Total sale", "$586M")
+    sb4.metric("Avg / acre", "$330K")
+    st.markdown(
+        "Rather than let a developer pick them off one parcel at a time, **96 Salem "
+        "Township families pooled ~1,700 acres and sold together to QTS (a Blackstone "
+        "company) for \\$586 million** — about **\\$330,000 an acre**, roughly \\$5.5M "
+        "per family — anchoring a ~\\$10B campus. The organizers describe the strategy "
+        "in exactly these terms: keep landowners *aligned and informed* and work the "
+        f"township process together, instead of forcing a deal one property at a time. "
+        f"{src_link('salem_bloc')} A second Salem Township bloc has since announced a "
+        f"~\\$1.2 billion follow-on deal. {src_link('salem_bloc2')}"
+    )
+    st.info(
+        "Contrast Port Washington, where owners sold one at a time — and some later "
+        "said *\"after the fact, you hear what everybody else got.\"* Same land rush, "
+        "opposite outcome."
+    )
+
+    st.markdown("#### A proven playbook from resource extraction")
+    st.markdown(
+        "Landowner bloc negotiation isn't new — it's how rural communities have dealt "
+        "with extractive industries for decades:\n"
+        f"- **Oil & gas** — Marcellus Shale **landowner coalitions** pooled thousands of "
+        f"acres to negotiate gas leases together, winning higher signing bonuses and "
+        f"royalties than neighbors who signed alone. {src_link('marcellus_lease')}\n"
+        "- **Wind & solar** — developer leases carry confidentiality clauses precisely so "
+        "neighbors *can't* compare terms; landowner groups that pool information close "
+        "that gap.\n"
+        "- **The through-line:** whoever controls the information controls the price. A "
+        "bloc is how sellers take that control back — the same logic behind the **Alaska "
+        "Model** for ongoing revenue (Section 5 below)."
+    )
+
+    with st.expander("📋 How to build a landowner bloc — the playbook", expanded=False):
+        st.markdown(
+            "**Set it up**\n"
+            "1. **Talk to neighbors the moment LLC offers appear.** That's the signal "
+            "assembly has begun — and the strategy depends on you *not* comparing notes. "
+            "One meeting erases the information gap.\n"
+            "2. **Form a real structure.** A landowner association/LLC or a **land-pooling "
+            "agreement** (borrowed from oil & gas): negotiate as one, share proceeds by a "
+            "set formula (usually pro-rata by acreage) so no single parcel is a make-or-"
+            "break holdout — or a target to buy off.\n"
+            "3. **Sign a \"no individual deals\" pact with teeth** — a right of first "
+            "refusal to the group and/or liquidated damages for breaking ranks, plus a "
+            "**most-favored-nation clause** so any better price one owner wins flows to "
+            "everyone. This is what defeats the sweetened-holdout play.\n"
+            "4. **Hire shared professionals and split the cost** — a land-use attorney and "
+            "an appraiser/broker who knows **industrial / data-center comps, not "
+            "cropland**. The developer already has all three.\n\n"
+            "**Run it**\n"
+            "5. **Do price discovery first** (see the tool above): deed records, the USDA "
+            "baseline, and data-center land comps tell you the developer's likely ceiling.\n"
+            "6. **One voice, closed cards.** One spokesperson; never reveal individual "
+            "reservation prices.\n"
+            "7. **Know your leverage geometry.** Contiguous parcels the site *needs* = a "
+            "critical bloc; peripheral/fungible parcels = less leverage. The site plan and "
+            "interconnection filings hint at what they actually require.\n"
+            "8. **Negotiate more than price** — escalators, phased payments, environmental "
+            "protections, and terms for neighbors facing **transmission eminent domain** so "
+            "non-sellers aren't left carrying the wires for nothing.\n\n"
+            "**Expect the traps**\n"
+            "9. **Fake deadlines and \"your neighbor already signed\" bluffs** are split "
+            "tactics — a written pact and shared counsel make them inert. Verify the claim; "
+            "it's often untrue.\n"
+            "10. **Fix the proceeds formula and taxes up front** (installment sales, 1031 "
+            "exchanges) so the structure doesn't quietly erode the gain.\n"
+            "11. **Coordinate with the town's CBA process** so the developer can't play "
+            "landowners against the municipality."
+        )
+
+    _bloc_checklist = (
+        "LANDOWNER BLOC NEGOTIATION — QUICK CHECKLIST (GridWatch AI)\n"
+        "=========================================================\n\n"
+        "SET IT UP\n"
+        "[ ] Talk to neighbors the moment mysterious LLC offers appear\n"
+        "[ ] Compare notes: what has each owner been offered? (kills the info gap)\n"
+        "[ ] Form a structure: landowner association/LLC or land-pooling agreement\n"
+        "[ ] Agree a proceeds-sharing formula (usually pro-rata by acreage)\n"
+        "[ ] Sign a 'no individual deals' pact: right of first refusal to the group\n"
+        "    + liquidated damages for breaking ranks + most-favored-nation clause\n"
+        "[ ] Hire shared pros (split cost): land-use attorney + industrial appraiser/broker\n\n"
+        "RUN IT\n"
+        "[ ] Price discovery first: county deed records, USDA baseline, data-center comps\n"
+        "[ ] One spokesperson; never disclose individual reservation prices\n"
+        "[ ] Assess leverage geometry: are your parcels critical to the site footprint?\n"
+        "[ ] Negotiate beyond price: escalators, phased payments, environmental terms,\n"
+        "    and protections for neighbors facing transmission eminent domain\n\n"
+        "EXPECT THE TRAPS\n"
+        "[ ] Treat deadlines and 'your neighbor already signed' as split tactics — verify\n"
+        "[ ] Set proceeds formula + tax structure up front (installment sales / 1031)\n"
+        "[ ] Coordinate with the town's CBA / permit process\n\n"
+        "PRECEDENTS\n"
+        "- Salem Township, PA: 96 owners pooled ~1,700 acres, sold together for ~$586M\n"
+        "  (~$330K/acre) to QTS/Blackstone; a 2nd bloc announced a ~$1.2B follow-on.\n"
+        "- Marcellus Shale gas landowner coalitions: pooled acreage won higher bonuses\n"
+        "  and royalties than solo signers.\n\n"
+        "NOT LEGAL ADVICE. Consult a licensed land-use / real-estate attorney in your\n"
+        "state before forming a coalition or signing anything. Requirements for pooling\n"
+        "agreements, and any antitrust considerations, vary by jurisdiction.\n"
+    )
+    st.download_button(
+        "⬇️ Download the bloc-negotiation checklist",
+        data=_bloc_checklist,
+        file_name="landowner-bloc-negotiation-checklist.txt",
+        mime="text/plain",
+        key="tk_bloc_dl",
+    )
+
+    st.warning(
+        "**Not legal advice.** This is educational information, not a substitute for "
+        "counsel. Forming a landowner coalition, drafting a pooling or "
+        "no-individual-deals agreement, and structuring the sale (and its taxes) all "
+        "carry legal consequences that vary by state — and collective arrangements can "
+        "raise antitrust questions in some framings. **Consult a licensed land-use / "
+        "real-estate attorney in your jurisdiction before organizing a bloc or signing "
+        "anything.**"
     )
     st.markdown("</div>", unsafe_allow_html=True)
 

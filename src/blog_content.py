@@ -51,6 +51,266 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── Port Washington / Stargate land rush ────────────────────────────────
+    {
+        "id": "port-washington-stargate-land-rush-2026",
+        "section": "stories",
+        "title": "A \\$15B Data Center Made Wisconsin Farmers Millionaires — and the Same Playbook Is Headed for 10 More Markets",
+        "date": _dt.date(2026, 7, 18),
+        "author": "GridWatch AI",
+        "tags": ["Wisconsin", "Stargate", "emerging markets", "site selection", "eminent domain", "land value", "OpenAI", "Oracle", "case study"],
+        "summary": (
+            "In Port Washington, Vantage's \\$15B OpenAI–Oracle Stargate campus turned "
+            "farmland into a lottery ticket — some sellers cleared millions, some wish "
+            "they'd held out, and the neighbors who didn't sell face eminent domain. "
+            "It's also a preview: the same power-first, low-opposition playbook is now "
+            "spreading to 10 emerging markets, from Reno to Tulsa to New Mexico's "
+            "\\$165B Stargate site."
+        ),
+        "body": """\
+An [Inc. story this month](https://www.inc.com/georgia-fearn/15-billion-data-center-made-wisconsin-farmers-millionaires-some-wish-they-held-out/91373128)
+put a human face on a number we track constantly: what a megawatt of AI infrastructure
+is actually worth to the developer — and how little of that value the first sellers
+tend to capture.
+
+The setting is **Port Washington, Wisconsin**, a town of about 12,000 on Lake Michigan
+in Ozaukee County. There, **Vantage Data Centers** is building the **"Lighthouse"
+campus** — a **\\$15 billion-plus** development that is part of the **OpenAI–Oracle
+Stargate** buildout. It sits on roughly **672 acres of former farmland** about a mile
+inland from the lake, and is slated for completion around **2028**.
+
+For the farmers who sold, the offer was life-changing. For the neighbors who didn't,
+the same project is arriving as a condemnation notice.
+
+### The quiet land rush
+
+The land didn't change hands in one splashy announcement. Developers assembled it the
+way they usually do — quietly, parcel by parcel, often through blandly-named LLCs so no
+single seller could see the full picture. By the time the scale was public, buyers had
+reportedly spent **\\$125 million-plus** assembling **more than 1,500 acres** in and
+around Port Washington. One parcel alone
+[sold for \\$9.3 million](https://biztimes.com/port-washington-land-sold-to-data-center-developer-for-9-3-million/).
+
+The per-acre math is what turned heads. Prime Wisconsin cropland typically trades around
+**\\$5,000–\\$10,000 an acre**. Sellers here were reportedly offered **as much as
+\\$120,000 an acre** — more than ten times agricultural value. That's how a working
+farm becomes a seven-figure check.
+
+### Why some wish they'd held out
+
+Here's the part the headline captures: *some sellers wish they'd held out.* That regret
+isn't irrational — it's the predictable result of an **information asymmetry**.
+
+When you're the first to sign, you're negotiating against a developer who knows exactly
+how many acres it needs, how the parcels fit together, and what the whole campus is
+worth. You know none of that. Early sellers priced their land against *farmland* comps.
+The developer priced it against a **\\$15 billion campus** that couldn't be built without
+it. Sellers who held their ground longer — or whose parcel turned out to be a
+must-have for the site plan — generally did better than the neighbors who took the
+first "generous" offer.
+
+The lesson isn't "everyone should have held out forever." It's that **the developer's
+walk-away price and yours are wildly different numbers, and only one side knew both.**
+
+### The neighbors who didn't win the lottery
+
+Selling your land was the good outcome. The harder story belongs to the residents who
+**didn't** sell — and are being pulled into the project anyway.
+
+Powering the campus requires up to **~900 MW** of electricity, which means new
+high-voltage **transmission lines and substations**. Those lines have to cross private
+property that was never for sale. The **American Transmission Company** can acquire the
+easements it needs through **condemnation — eminent domain** — the government's power to
+force a sale for "public use." Some property owners, including
+[Wisconsin artist Tom Uttech](https://abcnews.com/US/600-acre-ai-data-center-cost-wisconsin-residents/story?id=130153006),
+are working with legal organizations to fight it.
+
+Sit with the asymmetry: the farmer who sold got \\$120,000 an acre. The neighbor whose
+land is taken for the wires that feed the same campus gets an **easement valuation** —
+and no windfall. Same project. Opposite ends of the leverage curve.
+
+### What the town was promised
+
+Vantage's public case for the project is the familiar mix of jobs and growth:
+**1,000+ long-term jobs**, an estimated **\\$2.7 billion** contribution to Wisconsin's
+GDP, and roughly **\\$175 million** toward local power, water, and transport upgrades.
+The company also says a majority of the campus's power will come from zero-emission
+resources.
+
+Treat those as the developer's projections, not settled facts — the jobs figure in
+particular tends to shrink between the press release and the finished, largely-automated
+building (a **200 MW data center typically employs 50–150 people** once operational, as
+we detail in the ERCOT and moratorium pieces below). The point isn't that the numbers
+are worthless; it's that they're the *opening bid* in a negotiation, not the final
+accounting.
+
+### Port Washington isn't an outlier — it's the template
+
+The reason this story matters beyond one Wisconsin town: the same playbook is being run
+in dozens of places at once. A [CommercialSearch survey of emerging data-center markets](https://www.commercialsearch.com/news/10-emerging-data-center-markets-to-watch/)
+(July 2026) makes the pattern explicit — site selection has flipped from *network
+connectivity* toward **power availability, cheap land, and "minimal permitting
+obstacles."** In plain terms, developers are hunting for exactly what Port Washington
+offered: large rural parcels, an accommodating grid, and neighbors who haven't organized
+yet.
+
+Two of these campuses are literally the **same OpenAI–Oracle Stargate program** as
+Wisconsin's — Port Washington in the Midwest, and **Project Jupiter**, a **\\$165 billion**
+hyperscale facility with Oracle as anchor tenant, in New Mexico's borderplex. This isn't
+ten unrelated projects. It's one buildout, spreading.
+
+Here are the ten markets on the watch list — and the friction already surfacing in them:
+
+| Market | Why it's on the list | Marquee project(s) | Community friction so far |
+|--------|----------------------|--------------------|---------------------------|
+| **San Antonio / Austin, TX** | Fastest-growing US hub, ~50 facilities | CloudBurst 1.2 GW (\\$14.5B); Microsoft \\$1.5B | Water-supply scrutiny |
+| **West Texas** | Off-grid gas + solar, cheap land | GW Ranch 7.65 GW (largest permitted); Meta El Paso \\$10B | Air permits for on-site gas |
+| **Columbus, OH** | Sales-tax exemption, fast permits | Meta & EdgeConneX, New Albany | Rate-impact questions |
+| **Reno, NV** | Silicon Valley overflow, no corp. tax | Vantage \\$3B / 224 MW; Switch 650 MW | Growth-pace concerns |
+| **Kansas City, MO** | Fiber crossroads | Google "Project Kestrel" \\$100B; Meta \\$1B | Moratorium debates; proof-of-power zoning |
+| **Salt Lake City, UT** | "Silicon Slopes," cold-air cooling | Stratos 7.5 GW | Pushback cut Stratos by 19,000+ acres; Great Salt Lake water |
+| **Memphis, TN** | "Digital Delta" fiber + aquifer | xAI Colossus ~2 GW; Google \\$1B (W. Memphis) | Water + air-quality fights |
+| **Omaha, NE** | Tier-2 as Northern Virginia maxes out | Google; Meta Sarpy County | Incentive scrutiny |
+| **Albuquerque, NM** | Phoenix / Dallas alternative | Project Jupiter \\$165B (OpenAI Stargate) | Neighboring-county moratoriums; groundwater |
+| **Tulsa, OK** | Cheap renewable power, big parcels | Meta "Anthem" \\$1B; Beale "Clydesdale" \\$3B | Moratorium (Meta exempted) |
+
+Look at the last column. In **at least half** of these "emerging" markets — Kansas City,
+Salt Lake, Albuquerque, Tulsa, Omaha — organized opposition, moratoriums, or new zoning
+guardrails *already exist*, sometimes before ground is broken. The pattern we flagged in
+our Morgan Stanley analysis holds: the capital follows the path of least resistance —
+and the resistance is learning to get there first.
+
+If your metro is on this list, Port Washington is your preview. The window to negotiate
+opens *before* the quietly-named LLCs have bought the first 500 acres — not after.
+
+### What this means for your community
+
+Port Washington is a preview of what a Stargate-scale campus does to a rural land market —
+and a checklist of what to get right before the offers start:
+
+**1. Assume the developer knows more than you do.** They've mapped every parcel and
+priced the whole campus. If offers are arriving quietly through LLCs, that's a signal
+the assembly is bigger than any one seller is being told. Our **Data Centers** tab lists
+the LLCs hyperscalers use so you can connect a local filing to its parent.
+
+**2. Neighbors have more leverage together than apart.** Piecemeal selling is exactly
+the dynamic that leaves early sellers with regret. Landowners who compare notes — or
+negotiate as a bloc — close the information gap the developer relies on.
+
+**3. The windfall and the burden land on different people.** Sellers get millions;
+neighbors get transmission easements and eminent domain. A **community benefit agreement**
+negotiated *before* the permit vote is how a town spreads the upside and cushions the
+people carrying the cost. Model one on the **Negotiation Toolkit** tab.
+
+**4. Fight the fights that actually convert.** As we've documented, the data-center
+defeats that stick often turn on **procedure and grid/transmission terms**, not vibes —
+the environmental review, the routing of the lines, the ratepayer impact of ~900 MW of
+new load. Put those objections on the record with the people who vote. Use the
+**States & Officials** tab.
+
+### So how does a community actually capture the value?
+
+Diagnosing the asymmetry only helps if it points to action. Here is the toolkit
+communities use to turn a data center from a windfall-for-a-few into shared, durable
+local value — roughly in order of leverage:
+
+**1. Negotiate the land as a bloc, not parcel by parcel.** The single biggest value leak
+in Port Washington was sequential selling. Landowners who form a negotiating group — or
+grant a shared option to one broker or attorney — deny the developer its favorite tactic:
+picking people off one at a time at farmland prices. If the campus can't be built without
+your collective acreage, price it against the campus, not the crop. It works: in **Salem
+Township, Pennsylvania, 96 landowners pooled ~1,700 acres and sold together** to QTS (a
+Blackstone company) for **\\$586 million** — about **\\$330,000 an acre** — and a second
+neighborhood bloc has since lined up a ~\\$1.2 billion follow-on. Same AI land rush as
+Wisconsin; opposite outcome, because they moved as one. *(The Toolkit tab now has a
+"Negotiate as a bloc" playbook, a model no-individual-deals clause, and a downloadable
+checklist.)*
+
+**2. Put the money in a Community Benefit Agreement — before the permit vote.** A CBA is a
+legally binding contract, separate from zoning, in which the developer commits cash and
+concessions in exchange for community support. Leverage is highest before the vote and
+near-zero after. New York's EO 62 set a public benchmark: **~\\$1 million per megawatt** as
+a starting point — a ~900 MW campus like Port Washington's would *open* negotiations near
+**\\$900 million** in community benefits. Model your own on the **🛡️ Negotiation Toolkit** tab.
+
+**3. Replace the tax abatement with a host fee or PILOT.** The standard deal — a 10–20 year
+property-tax abatement — starves exactly the schools and roads that absorb the impact.
+Counter with a **Payment In Lieu Of Taxes** or an **annual host fee** (per MW or per acre)
+that escalates with inflation and starts on day one. A megawatt of always-on load can
+support a recurring payment, not just a one-time check.
+
+**4. Set up a data dividend — the Alaska model.** Alaska pays every resident an annual
+dividend from oil revenue. A community can structure the same thing: route a slice of the
+host fee or a per-MWh levy into a **permanent local fund** that pays residents or
+underwrites property-tax relief for the life of the facility. That's the difference between
+a few farmers getting rich once and the whole town getting a raise for 30 years. The
+**Data Dividend calculator** on the Negotiation Toolkit tab sizes it.
+
+**5. Make the data center pay for its own grid.** The ~900 MW is the biggest hidden cost:
+if its new generation and transmission get socialized, everyone's electric bill rises (see
+the capacity-charge story below). Demand a **large-load tariff** that assigns the full cost
+of new generation and transmission to the facility, plus closed-loop cooling and
+water-replenishment commitments in writing.
+
+**6. Get the transmission-corridor neighbors paid — recurring, not one-time.** For the
+residents facing eminent domain, push for above-market easements structured as **annual
+line-rental payments** rather than a single condemnation check, plus routing that avoids
+homes. The people carrying the wires should share the upside, not just the burden.
+
+**7. Bond the exit.** Data centers become obsolete. Require a **decommissioning bond** up
+front so the town isn't left with a stranded concrete shell and a cleanup bill.
+
+The through-line: value you capture **contractually, before the vote, and structured as
+recurring revenue** beats a one-time land check every time. A land sale pays the person who
+holds the deed; a CBA, a host fee, and a data dividend pay the whole community — including
+the neighbors who never got an offer.
+
+### Where to find the numbers (close the information gap yourself)
+
+Every mechanism above depends on knowing what your land and your megawatts are actually
+worth. Most of that price signal is **public** — communities just don't know where to look.
+Here's where it lives:
+
+- **County Register of Deeds / Recorder** — the strongest signal of all. Every land sale
+  is public record, so the developer has *already told you* what it will pay: look up what
+  the neighbor who sold first actually got. (In Port Washington, the "\\$9.3 million parcel"
+  figure came straight from public records.)
+- **USDA NASS QuickStats & Land Values Summary** — the agricultural baseline, free:
+  cropland value in \\$/acre by state and county. This is your "before AI" floor — the
+  number the developer's premium multiplies. *(Now built into the app — see below.)*
+- **Federal Reserve district Ag-Credit surveys** (Chicago, Kansas City, Dallas, Minneapolis
+  Fed) — quarterly farmland-value trends.
+- **Good Jobs First "Subsidy Tracker"** — every tax abatement and subsidy already handed to
+  a data center, by locality. Shows what other towns gave away — and to whom.
+- **New York's EO 62 Community Investment Framework** — the public **~\\$1M/MW** community
+  benefit benchmark to anchor a CBA.
+- **CBRE / JLL / Cushman & Wakefield** data-center market reports — what a megawatt of
+  capacity actually rents for, so you can price the campus the way the operator does.
+- **Your state PUC dockets** (Wisconsin: the PSC) — the transmission and large-load
+  filings that reveal the grid cost, and the easements headed for your neighbors.
+
+We wired the first two into the **🛡️ Negotiation Toolkit** tab: a **Land price-discovery**
+tool now shows the USDA cropland baseline for your state, converts any per-acre offer into a
+multiple over farmland value, and links straight to your county's deed records and the live
+USDA and Good Jobs First databases. Diagnose the asymmetry, then close it.
+
+### The bottom line
+
+The Port Washington story gets told as a feel-good windfall — farmers made
+millionaires overnight. That's true, and it's also the smaller half of the story. The
+full version is about **who had the information and who didn't**: a developer that knew
+the campus was worth \\$15 billion, sellers who priced against soybeans, and neighbors
+who get the wires but not the check.
+
+Communities can't stop the AI land rush from coming. But they can refuse to negotiate
+in the dark — which is the one condition under which everybody but the developer
+loses.
+
+> Model the numbers on the **🛡️ Negotiation Toolkit** tab, trace the operators and
+> their LLCs on the **🏢 Data Centers** tab, and put your objection on the record via
+> the **🗂️ States & Officials** tab.
+""",
+    },
     # ── Morgan Stanley opposition analysis ──────────────────────────────────
     {
         "id": "morgan-stanley-opposition-bottleneck-2026",
@@ -361,19 +621,19 @@ above it.
 This isn't hypothetical. In PJM — the grid operator serving 65 million people across
 13 states from New Jersey to Illinois — it just happened:
 
-- The **2025/26 capacity auction** price jumped **833%** — from $28.92 to $269.92
+- The **2025/26 capacity auction** price jumped **833%** — from \\$28.92 to \\$269.92
   per MW-day
 - PJM's independent market monitor found data centers were responsible for **63%**
   of that price increase
-- **Pepco** customers in Washington D.C. saw bills rise **$21/month**, with roughly
+- **Pepco** customers in Washington D.C. saw bills rise **\\$21/month**, with roughly
   half attributable to capacity costs
-- Across the PJM footprint, residential bills increased **$15–21/month** from
+- Across the PJM footprint, residential bills increased **\\$15–21/month** from
   capacity charges alone
 
 That's not a rate increase driven by fuel costs, inflation, or your usage. It's a
 rate increase driven by someone else's load.
 
-### 44 hours that could save $150 billion
+### 44 hours that could save \\$150 billion
 
 In February 2025, researchers at **Duke University's Nicholas Institute for Energy,
 Environment & Sustainability** published a study that reframed the entire debate.
@@ -388,7 +648,7 @@ The findings were striking:
   more than the world's entire current data center fleet
 - The required curtailment: just **0.5% of annual hours** — an average of **44 hours
   per year**, with a maximum of 177 hours in the most constrained regions
-- Potential avoided infrastructure cost: **$150 billion or more** in new power plants
+- Potential avoided infrastructure cost: **\\$150 billion or more** in new power plants
   and transmission lines that wouldn't need to be built
 - The curtailment rate is comparable to existing demand response programs that
   industrial customers already participate in
@@ -410,7 +670,7 @@ socialized across *all* ratepayers. The data center pays its share, but the
 *incremental* system-wide cost it imposes — the billions in new capacity procurement
 triggered by its load — is spread across millions of customers. There's no price
 signal telling the operator: "Your consumption during this hour just cost the grid
-$50 million in capacity obligations."
+\\$50 million in capacity obligations."
 
 Under current rate design, a data center that curtails during peak hours saves almost
 nothing on its own bill. The capacity auction was settled months ago; the price is
@@ -472,7 +732,7 @@ moment" for grid planning, noting that traditional forecasting methods are faili
 because demand is growing faster than any historical precedent.
 
 **E3, funded by Amazon (Dec 2025)**, studied four Amazon facilities and concluded data
-centers generate **$3.4 million in surplus revenue** per 100 MW facility — paying more
+centers generate **\\$3.4 million in surplus revenue** per 100 MW facility — paying more
 than their direct cost to serve. This is the industry's primary counterargument to the
 "ratepayers are subsidizing data centers" narrative.
 
@@ -484,7 +744,7 @@ the externality at the auction.
 
 **Columbia University (2025)** showed that grid-enhancing technologies (dynamic line
 ratings, power flow controllers) could release 20–40% more capacity from existing
-transmission — deferring $10–30 billion in new construction.
+transmission — deferring \\$10–30 billion in new construction.
 
 ### What would actually fix this?
 
@@ -620,16 +880,16 @@ Data-center water use has two components:
 - **On-site (direct) cooling.** Evaporative cooling towers in hot climates consume
   water directly. Google reported a global average **Water Usage Effectiveness (WUE)**
   of 1.1 L per kWh of IT load in 2024. Microsoft reported 1.8 L/kWh. Meta was lower
-  at 0.26 L/kWh, partly because of its colder-climate sites in Luleå and Clonee.
+  at 0.19 L/kWh, partly because of its colder-climate sites in Luleå and Clonee.
 
 - **Off-site (indirect) water.** Thermoelectric power plants — coal, gas, and nuclear —
   withdraw enormous volumes for steam cooling. When a data center draws from a
   coal-heavy grid, the water embedded in its electricity can **dwarf** the water
   used on-site. The US Geological Survey estimates 1.5–2.0 L/kWh for coal generation.
 
-GridWatch AI's **Calculator** tab accounts for both. When you enter a query
-count and select a grid carbon intensity, the water estimate multiplies the energy
-draw by a blended WUE factor that includes off-site generation water.
+The **Footprint calculator** (Technical deep-dive tab) accounts for both: open
+its *Water methodology* panel to pick an operator WUE and a grid mix, and it
+splits your water footprint into on-site and off-site components.
 
 ### Scale matters — but so does location
 
@@ -652,9 +912,9 @@ The point isn't to stop using AI. It's to ensure that:
 3. **Grid operators account for indirect water** when modeling the full resource cost
    of new data-center loads.
 
-> Explore the **Calculator** tab to see the water footprint of your own AI usage,
-> and the **Grid Timing** tab to understand how the generation mix in your region
-> affects both carbon *and* water.
+> Use the **Footprint calculator** (Technical deep-dive tab) to estimate the
+> water footprint of your own AI usage, and the **Grid Timing** tab to understand
+> how the generation mix in your region affects both carbon *and* water.
 """,
     },
     # ── Story 3 ──────────────────────────────────────────────────────────────
@@ -704,7 +964,7 @@ Three factors make Texas the epicenter of the data-center land rush:
 
 2. **Cheap land and power.** West Texas wind and solar have pushed wholesale energy
    prices to some of the lowest in the nation — sometimes negative during sunny,
-   windy afternoons. Developers can contract for renewable PPAs at $20–25/MWh.
+   windy afternoons. Developers can contract for renewable PPAs at \\$20–25/MWh.
 
 3. **No state income tax.** Combined with local Chapter 313 (now Chapter 403)
    property-tax abatements, the effective tax burden on a billion-dollar campus
@@ -740,14 +1000,14 @@ signaled that legislators are paying attention.
     {
         "id": "social-license-risk-2026",
         "section": "stories",
-        "title": "How the Industry Files Your Protest: 'Social License' and the $64B Risk Column",
+        "title": "How the Industry Files Your Protest: 'Social License' and the \\$64B Risk Column",
         "date": _dt.date(2026, 7, 11),
         "author": "GridWatch AI",
         "tags": ["community", "policy", "site-selection", "risk", "zoning"],
         "summary": (
             "Data-center developers don't have a risk category called 'protests.' They "
             "have 'social license to operate' — and organized community opposition has "
-            "now blocked or delayed an estimated $64 billion in projects. Here's how the "
+            "now blocked or delayed an estimated \\$64 billion in projects. Here's how the "
             "industry actually scores the risk that you'll show up to a hearing."
         ),
         "body": """\
@@ -776,9 +1036,9 @@ showing up on balance sheets:
 
 | Metric | Value |
 |--------|-------|
-| U.S. investment **blocked** by opposition (since mid-2024) | **~$18 billion** |
-| Investment **delayed** by opposition | **~$46 billion** |
-| Total affected investment | **~$64 billion** |
+| U.S. investment **blocked** by opposition (since mid-2024) | **~\\$18 billion** |
+| Investment **delayed** by opposition | **~\\$46 billion** |
+| Total affected investment | **~\\$64 billion** |
 | Local opposition groups (end of 2024) | ~76 |
 | Local opposition groups (April 2026) | 268 |
 | Local opposition groups (mid-2026) | **430+ across 40+ states** |

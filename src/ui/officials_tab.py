@@ -1,3 +1,5 @@
+import re
+import html as _html
 import streamlit as st
 import pandas as pd
 from src.helpers import src_link
@@ -37,8 +39,18 @@ def render_officials_tab():
                                           "Delegate", "Governor"])
         parties = f2.multiselect("Party", sorted(odf.party.unique()),
                                  default=sorted(odf.party.unique()))
+        # Default the state filter from the sidebar "My Community" pick first,
+        # then fall back to the state selected in the profile module above
+        # (studies_tab's selectbox, key="state_study_select") so a Wisconsin
+        # profile also scopes this directory to Wisconsin officials.
         _sidebar_state = st.session_state.get("my_state", "All states")
-        _default_states = [_sidebar_state] if _sidebar_state != "All states" and _sidebar_state in odf.state_full.values else []
+        _studies_state = st.session_state.get("state_study_select", "Select State...")
+        _focus_state = None
+        if _sidebar_state != "All states" and _sidebar_state in odf.state_full.values:
+            _focus_state = _sidebar_state
+        elif _studies_state not in ("Select State...", None) and _studies_state in odf.state_full.values:
+            _focus_state = _studies_state
+        _default_states = [_focus_state] if _focus_state else []
         states = f3.multiselect("State / territory", sorted(odf.state_full.unique()),
                                 default=_default_states)
         cbx1, cbx2 = st.columns(2)
@@ -52,6 +64,10 @@ def render_officials_tab():
             view = view[view.office.isin(offices)]
         if parties:
             view = view[view.party.isin(parties)]
+        # Snapshot after office/party filters but BEFORE the state filter, so
+        # federal (national-scope) champions can pass through the state filter
+        # in the stances list below.
+        view_pre_state = view.copy()
         if states:
             view = view[view.state_full.isin(states)]
         if only_stance:
@@ -80,14 +96,52 @@ def render_officials_tab():
                 "contact": st.column_config.LinkColumn("Contact", display_text="contact"),
             })
 
+        def _stance_li(r):
+            # Build one <li> of full-brightness HTML (the .stance-list CSS keeps
+            # these bright rather than the muted body-prose gray). src_link()
+            # returns markdown [name](url) — convert it to an anchor, and use the
+            # &#36; entity for any '$' so Streamlit doesn't LaTeX-render it.
+            src = ""
+            if r["stance_src"]:
+                anchor = re.sub(r'\[([^\]]+)\]\(([^)]+)\)',
+                                r'<a href="\2" target="_blank">\1</a>',
+                                src_link(r["stance_src"]))
+                src = f" ({anchor})"
+            stance = _html.escape(r["stance"]).replace("$", "&#36;")
+            return (f"<li><strong>{_html.escape(r['name'])}</strong> "
+                    f"({_html.escape(r['party'])}, {_html.escape(r['office'])}, "
+                    f"{_html.escape(r['state_full'])}): {stance}{src}</li>")
+
+        def _render_stances(df):
+            lis = "".join(_stance_li(r) for _, r in df.iterrows())
+            st.markdown(f'<ul class="stance-list">{lis}</ul>',
+                        unsafe_allow_html=True)
+
         stanced = view[view.stance.str.len() > 0]
         if not stanced.empty:
             st.markdown("**Documented stances in this view:**")
-            for _, r in stanced.iterrows():
-                src = f" ({src_link(r['stance_src'])})" if r["stance_src"] else ""
-                stance_safe = r['stance'].replace('$', '\\$')
-                st.markdown(f"- **{r['name']}** ({r['party']}, {r['office']}, "
-                            f"{r['state_full']}): {stance_safe}{src}")
+            _render_stances(stanced)
+
+        # Federal champions: members of Congress whose stance is a national
+        # standard (e.g. the Ratepayer Protection Act). Their stances apply
+        # everywhere, so surface them even when a state filter would hide them.
+        FEDERAL_OFFICES = ("Senator", "Representative", "Delegate")
+        federal_stanced = view_pre_state[
+            (view_pre_state.stance.str.len() > 0)
+            & (view_pre_state.office.isin(FEDERAL_OFFICES))
+        ]
+        if ec_only:
+            federal_stanced = federal_stanced[
+                federal_stanced.get("committee", "") == "Energy & Commerce"]
+        # Drop any already listed above (avoids duplicates when no state filter
+        # is active and the federal members are already in `stanced`).
+        already_shown = set(zip(stanced["name"], stanced["state_full"]))
+        federal_extra = federal_stanced[~federal_stanced.apply(
+            lambda r: (r["name"], r["state_full"]) in already_shown, axis=1)] \
+            if not federal_stanced.empty else federal_stanced
+        if not federal_extra.empty:
+            st.markdown("**Federal champions (national scope — apply to every state):**")
+            _render_stances(federal_extra)
 
         # State-specific active issues tracker
         st.divider()
@@ -168,11 +222,21 @@ def render_officials_tab():
 
     puc_df = STATE_PUCS_DF.copy()
 
+    # Sync the filter to the sidebar "My Community" state whenever it changes,
+    # while still letting the user override the dropdown manually afterward.
+    # (A multiselect with both default= and key= ignores default on reruns, so
+    # a later sidebar change never propagates — hence the explicit sync.)
     _sidebar_state = st.session_state.get("my_state", "All states")
-    _puc_default = [_sidebar_state] if _sidebar_state != "All states" and _sidebar_state in puc_df["state"].values else []
+    if st.session_state.get("_puc_last_sidebar") != _sidebar_state:
+        st.session_state["_puc_last_sidebar"] = _sidebar_state
+        st.session_state["puc_state_filter"] = (
+            [_sidebar_state]
+            if _sidebar_state != "All states" and _sidebar_state in puc_df["state"].values
+            else []
+        )
     puc_filter = st.multiselect(
         "Filter by state", sorted(puc_df["state"].unique()),
-        default=_puc_default, key="puc_state_filter",
+        key="puc_state_filter",
         placeholder="All states — or pick yours")
     if puc_filter:
         puc_df = puc_df[puc_df["state"].isin(puc_filter)]
@@ -192,9 +256,10 @@ def render_officials_tab():
         f"Showing {len(puc_df)} of {len(STATE_PUCS_DF)} commissions. "
         "URLs are official state PUC pages. Complaint links open the "
         "consumer-assistance or formal-complaint portal — procedures "
-        "vary by state. Nebraska has a Power Review Board (public power "
-        "state). Texas (PUCT) has deregulated retail but still regulates "
-        "transmission and distribution rates.")
+        "vary by state. Nebraska (public power state) has a Power Review "
+        "Board with no separate consumer-complaint portal, so its "
+        "complaint cell is blank. Texas (PUCT) has deregulated retail but "
+        "still regulates transmission and distribution rates.")
 
     st.info(
         "**How to use this:** When a data center developer applies for a "

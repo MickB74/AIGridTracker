@@ -1,6 +1,8 @@
 import streamlit as st
-from src.constants import QUERY_COEFFS, TOKEN_COEFFS, GRID_INTENSITY, WATER_ML_PER_WH, SOURCES
-from src.helpers import human_energy, human_water
+from src.constants import (
+    QUERY_COEFFS, TOKEN_COEFFS, GRID_INTENSITY, ONSITE_WUE, OFFSITE_WATER, SOURCES,
+)
+from src.helpers import human_energy, human_water, src_link
 from src.services.news import fetch_news
 
 def render_calc_tab():
@@ -60,15 +62,15 @@ def render_calc_tab():
             elif sort_order == "Energy (High → Low)":
                 filtered_keys = sorted(filtered_keys, key=lambda k: QUERY_COEFFS[k]["energy_wh"], reverse=True)
             
+            src_water_ml = None
             if not filtered_keys:
                 st.warning("No sources match the selected provider filter.")
-                energy_wh, water_ml, co2_g, grid_label, per_unit_e = 0.0, 0.0, 0.0, "", 0.0
+                energy_wh, co2_g, grid_label, per_unit_e = 0.0, 0.0, "", 0.0
             else:
                 coeff_name = st.selectbox("Per-query source", filtered_keys)
                 c = QUERY_COEFFS[coeff_name]
                 energy_wh = n * c["energy_wh"]
-                water_ml = (n * c["water_ml"] if c["water_ml"] is not None
-                            else n * c["energy_wh"] * WATER_ML_PER_WH)
+                src_water_ml = n * c["water_ml"] if c["water_ml"] is not None else None
                 if c["co2_g"] is not None:
                     co2_g = n * c["co2_g"]
                     grid_label = "source's own carbon accounting"
@@ -107,11 +109,31 @@ def render_calc_tab():
             energy_wh = n * per_unit_e
             grid_name = st.selectbox("Grid carbon intensity", list(GRID_INTENSITY.keys()), index=2)
             co2_g = energy_wh / 1000 * GRID_INTENSITY[grid_name]
-            water_ml = energy_wh * WATER_ML_PER_WH
             grid_label = grid_name
+            src_water_ml = None
             if not live:
                 st.caption("Tip: open **Live models** to add measured per-token "
                            "coefficients from the ML.ENERGY leaderboard.")
+
+        # Water = energy × (on-site cooling WUE + off-site generation water).
+        with st.expander("💧 Water methodology — on-site + off-site"):
+            wue_name = st.selectbox(
+                "On-site cooling (operator WUE)", list(ONSITE_WUE.keys()),
+                help="Water Usage Effectiveness: liters evaporated on-site per kWh of IT load.",
+            )
+            offsite_name = st.selectbox(
+                "Off-site generation water (grid mix)", list(OFFSITE_WATER.keys()),
+                help="Water consumed by the power plants supplying the data center. "
+                     "Consumption (evaporated), not withdrawal.",
+            )
+            st.caption(
+                f"Sources: {src_link(ONSITE_WUE[wue_name]['src'])} · "
+                f"{src_link(OFFSITE_WATER[offsite_name]['src'])} · "
+                f"{src_link('thirsty_2024')}"
+            )
+        onsite_ml = energy_wh * ONSITE_WUE[wue_name]["l_per_kwh"]
+        offsite_ml = energy_wh * OFFSITE_WATER[offsite_name]["l_per_kwh"]
+        water_ml = onsite_ml + offsite_ml
 
     with right:
         # Wrap right column calculations in a premium glass-card styled container
@@ -122,6 +144,21 @@ def render_calc_tab():
         m1.metric("Energy", f"{energy_wh/1000:,.3f} kWh" if energy_wh >= 1000 else f"{energy_wh:,.1f} Wh")
         m2.metric("Water", f"{water_ml/1000:,.2f} L" if water_ml >= 1000 else f"{water_ml:,.1f} mL")
         m3.metric("Carbon", f"{co2_g/1000:,.2f} kg" if co2_g >= 1000 else f"{co2_g:,.1f} g")
+
+        st.caption(
+            f"Water split: **{onsite_ml/1000:,.2f} L** on-site cooling + "
+            f"**{offsite_ml/1000:,.2f} L** off-site generation"
+            if water_ml >= 1000 else
+            f"Water split: **{onsite_ml:,.1f} mL** on-site cooling + "
+            f"**{offsite_ml:,.1f} mL** off-site generation"
+        )
+        if src_water_ml is not None:
+            st.caption(
+                f"This source's own water disclosure (on-site only): "
+                f"**{src_water_ml/1000:,.2f} L**" if src_water_ml >= 1000 else
+                f"This source's own water disclosure (on-site only): "
+                f"**{src_water_ml:,.1f} mL**"
+            )
 
         st.markdown("### Human Scale Equivalents")
         st.markdown(f"- {human_energy(energy_wh)}")

@@ -110,7 +110,25 @@ GRID_INTENSITY = {
     "Coal-heavy grid": 700,
 }
 
-WATER_ML_PER_WH = 0.26 / 0.24  # ~1.083 mL/Wh, implied by Gemini disclosure
+# ── Water coefficients (Footprint calculator; blog: hidden-water-cost) ──────
+# On-site cooling WUE (L per kWh of IT load), fleet-average disclosures.
+# Note L/kWh == mL/Wh, so these multiply Wh energy directly into mL water.
+ONSITE_WUE = {
+    "Google fleet average (2024)":    {"l_per_kwh": 1.10, "src": "google_env_2026"},
+    "Microsoft fleet average (2024)": {"l_per_kwh": 1.80, "src": "msft_env_2025"},
+    "Meta fleet average (2024)":      {"l_per_kwh": 0.19, "src": "meta_env_2025"},
+    "AWS fleet average (2025)":       {"l_per_kwh": 0.12, "src": "amzn_env_2025"},
+}
+
+# Off-site (indirect) water consumed by electricity generation, L per kWh.
+# Consumption (evaporated), not withdrawal — withdrawal figures run far higher.
+OFFSITE_WATER = {
+    "US grid average":      {"l_per_kwh": 1.20, "src": "thirsty_2024"},
+    "Coal-heavy grid":      {"l_per_kwh": 1.70, "src": "usgs_water"},   # USGS: 1.5–2.0
+    "Gas-heavy grid":       {"l_per_kwh": 0.90, "src": "usgs_water"},
+    "Nuclear-heavy grid":   {"l_per_kwh": 2.00, "src": "usgs_water"},
+    "High-renewables grid": {"l_per_kwh": 0.10, "src": "thirsty_2024"},  # wind/solar PV
+}
 
 # IEA data-center electricity outlook (TWh), demand-side.
 IEA_OUTLOOK = pd.DataFrame({"year": [2024, 2025, 2030, 2035],
@@ -658,6 +676,34 @@ STATE_GRID_PROFILES = {
     "Wyoming":        {"rate": 0.111, "gco2": 460, "water_stress": "low"},
 }
 
+# Farmland price baseline — USDA NASS "Land Values 2024 Summary" (Aug 2024),
+# average CROPLAND value ($/acre) by state, 2024. This is the agricultural
+# baseline a community can price against when a data-center developer comes
+# assembling land: the "before AI" value of the dirt. Source key: usda_land.
+# States withheld (D) for cropland in the USDA report use the state's 2024
+# FARM REAL ESTATE value from the same report (Arizona 4,000; Nevada 1,150);
+# Delaware has no published figure and is omitted. CT/ME/MA/NH/RI/VT are
+# reported only as a combined "Other States" group (9,600) and each carries
+# that group value. Alaska, Hawaii, and DC are not surveyed and fall back to
+# the US average in the UI.
+FARMLAND_CROPLAND_USD_ACRE_2024 = {
+    "Alabama": 4440, "Arizona": 4000, "Arkansas": 3600, "California": 17330,
+    "Colorado": 2810, "Connecticut": 9600, "Florida": 10170, "Georgia": 4330,
+    "Idaho": 5820, "Illinois": 9550, "Indiana": 7870, "Iowa": 9800,
+    "Kansas": 3300, "Kentucky": 6220, "Louisiana": 3480, "Maine": 9600,
+    "Maryland": 8770, "Massachusetts": 9600, "Michigan": 5870, "Minnesota": 6540,
+    "Mississippi": 3880, "Missouri": 4910, "Montana": 1280, "Nebraska": 6540,
+    "Nevada": 1150, "New Hampshire": 9600, "New Jersey": 16300,
+    "New Mexico": 2000, "New York": 3850, "North Carolina": 5120,
+    "North Dakota": 2600, "Ohio": 9270, "Oklahoma": 2310, "Oregon": 4350,
+    "Pennsylvania": 9270, "Rhode Island": 9600, "South Carolina": 3800,
+    "South Dakota": 4350, "Tennessee": 5610, "Texas": 2570, "Utah": 5040,
+    "Vermont": 9600, "Virginia": 5930, "Washington": 3410,
+    "West Virginia": 4050, "Wisconsin": 6800, "Wyoming": 1960,
+}
+# US average cropland value, USDA NASS 2024 ($/acre) — UI fallback + anchor.
+US_CROPLAND_USD_ACRE_2024 = 5570
+
 # Microsoft & AWS environmental headline data for cross-company comparison
 # Microsoft: FY2025 Environmental Sustainability Report (published Jul 2026)
 MICROSOFT_ENV_HEADLINE = {
@@ -727,12 +773,30 @@ SOURCES = {
                      "https://epoch.ai/"),
     "hungry_2025":  ("How Hungry is AI? Benchmarking Energy, Water, Carbon (arXiv:2505.09598)",
                      "https://arxiv.org/abs/2505.09598"),
+    "thirsty_2024": ("Li et al., Making AI Less Thirsty — water footprint of AI (arXiv:2304.03271)",
+                     "https://arxiv.org/abs/2304.03271"),
+    "usgs_water":   ("USGS — Thermoelectric power water use (withdrawal & consumption by fuel)",
+                     "https://www.usgs.gov/mission-areas/water-resources/science/thermoelectric-power-water-use"),
+    "usda_land":    ("USDA NASS — Land Values 2024 Summary (cropland value $/acre by state)",
+                     "https://www.nass.usda.gov/Publications/Todays_Reports/reports/land0824.pdf"),
+    "usda_quickstats": ("USDA NASS QuickStats — query cropland/farm real estate values live by state & county",
+                        "https://quickstats.nass.usda.gov/"),
+    "gjf_subsidy":  ("Good Jobs First — Subsidy Tracker (tax abatements & subsidies given to data centers)",
+                     "https://subsidytracker.goodjobsfirst.org/"),
+    "salem_bloc":   ("Times Leader — 96 Salem Twp. landowners' historic 1,700-acre collective data-center sale",
+                     "https://www.timesleader.com/news/1735892/96-salem-twp-landowners-complete-historic-1700-acre-sale-for-major-data-center-campus"),
+    "salem_bloc2":  ("Times Leader — 4-3 Group's second Salem Township data-center land deal (~1.2B)",
+                     "https://www.timesleader.com/news/1745226/1-2-billion-land-deal-for-second-data-center-project-in-salem-township-announced-by-4-3-group"),
+    "marcellus_lease": ("Penn State Extension — natural gas landowner leasing, royalties & coalitions",
+                        "https://extension.psu.edu/energy/marcellus-shale-and-natural-gas/landowner-leasing-and-royalties"),
     "mlenergy":     ("ML.ENERGY Leaderboard — measured per-model inference energy (live)",
                      "https://ml.energy/leaderboard"),
     "iea_2025":     ("IEA, Energy and AI (2025) + Key Questions update (2026)",
                      "https://www.iea.org/reports/energy-and-ai"),
     "gpt5_report":  ("Third-party GPT-5 energy report (2025) — contested",
                      "https://www.datacenterdynamics.com/"),
+    "yahoo_finance":("Yahoo Finance — live delayed stock quotes (chart API)",
+                     "https://finance.yahoo.com/"),
     "elmaps":       ("Electricity Maps — real-time grid carbon intensity API",
                      "https://www.electricitymaps.com/"),
     "watttime":     ("WattTime — marginal emissions (MOER) API",
@@ -797,6 +861,10 @@ SOURCES = {
                      "https://www.eia.gov/todayinenergy/detail.php?id=67664"),
     "eia_pilot":    ("EIA — Pilot survey on energy use at data centers (Mar 2026)",
                      "https://www.eia.gov/pressroom/releases/press585.php"),
+    "eia_price_components": ("EIA — Electricity prices reflect rising delivery costs, declining power production costs (Today in Energy)",
+                     "https://www.eia.gov/todayinenergy/detail.php?id=32812"),
+    "lbnl_price_trends": ("Berkeley Lab (LBNL) — Retail Electricity Price and Cost Trends: 2024 Update (FERC Form 1 data through 2023)",
+                     "https://eta-publications.lbl.gov/sites/default/files/2025-01/retail_price_and_cost_trends_2024_update_final_v3.pdf"),
     # --- How the RTOs/ISOs & FERC are responding (Data centers tab) ---
     "ferc_pjm_colo": ("FERC — directs PJM to write co-location rules for data centers (Dec 18, 2025 fact sheet; Docket EL25-49/AD24-11)",
                      "https://www.ferc.gov/news-events/news/fact-sheet-ferc-directs-nations-largest-grid-operator-create-new-rules-embrace"),
@@ -917,6 +985,17 @@ SOURCES = {
                       "https://sustainability.aboutamazon.com/water"),
     "meta_community_2026": ("Meta — Data Center Community Action Grants & Local Investment (2026)",
                       "https://sustainability.atmeta.com/community/"),
+}
+
+# Shares outstanding (billions, all classes) for live market-cap = price ×
+# shares. Prices come live from Yahoo Finance; share counts change slowly
+# (buybacks/issuance ~1–3%/yr) so they're maintained here from each company's
+# most recent 10-Q cover. Used only for the Corporate Profiles cards.
+# Last reviewed FY2025 filings.
+SHARES_OUTSTANDING = {
+    "MSFT": 7.43, "GOOGL": 12.05, "NVDA": 24.36, "AMZN": 10.62,
+    "META": 2.53, "AMD": 1.62, "VRT": 0.381, "CEG": 0.313,
+    "SMCI": 0.596, "ORCL": 2.80, "EQIX": 0.0965, "DLR": 0.336,
 }
 
 # --------------------------------------------------------------------------- #
@@ -1383,75 +1462,75 @@ EXECUTIVES_DF = pd.DataFrame(EXECUTIVES)
 
 STATE_PUCS = [
     {"state": "Alabama",        "abbrev": "AL", "name": "Alabama Public Service Commission",
-     "website": "https://psc.alabama.gov/", "complaint": "https://psc.alabama.gov/consumercomplaint.aspx"},
+     "website": "https://psc.alabama.gov/", "complaint": "https://psc.alabama.gov/file-a-complaint/"},
     {"state": "Alaska",         "abbrev": "AK", "name": "Regulatory Commission of Alaska",
-     "website": "https://rca.alaska.gov/", "complaint": "https://rca.alaska.gov/RCAWeb/Filing/FilingConsumer.aspx"},
+     "website": "https://rca.alaska.gov/", "complaint": "https://rca.alaska.gov/RCAWeb/ForConsumers/SubmitInformalComplaint.aspx"},
     {"state": "Arizona",        "abbrev": "AZ", "name": "Arizona Corporation Commission",
-     "website": "https://www.azcc.gov/", "complaint": "https://www.azcc.gov/complaints"},
+     "website": "https://www.azcc.gov/", "complaint": "https://www.azcc.gov/utilities/consumer-services"},
     {"state": "Arkansas",       "abbrev": "AR", "name": "Arkansas Public Service Commission",
-     "website": "https://www.apsc.arkansas.gov/", "complaint": "https://www.apsc.arkansas.gov/consumers/filing-a-complaint/"},
+     "website": "https://apsc.arkansas.gov/", "complaint": "https://apsc.arkansas.gov/filing-a-complaint/"},
     {"state": "California",     "abbrev": "CA", "name": "California Public Utilities Commission",
      "website": "https://www.cpuc.ca.gov/", "complaint": "https://www.cpuc.ca.gov/consumer-support/file-a-complaint"},
     {"state": "Colorado",       "abbrev": "CO", "name": "Colorado Public Utilities Commission",
-     "website": "https://puc.colorado.gov/", "complaint": "https://puc.colorado.gov/consumer-complaints"},
+     "website": "https://puc.colorado.gov/", "complaint": "https://puc.colorado.gov/for-consumers"},
     {"state": "Connecticut",    "abbrev": "CT", "name": "Connecticut Public Utilities Regulatory Authority",
      "website": "https://portal.ct.gov/pura", "complaint": "https://portal.ct.gov/pura/consumer-services"},
     {"state": "Delaware",       "abbrev": "DE", "name": "Delaware Public Service Commission",
-     "website": "https://depsc.delaware.gov/", "complaint": "https://depsc.delaware.gov/file-a-complaint/"},
+     "website": "https://depsc.delaware.gov/", "complaint": "https://depsc.delaware.gov/customer-assistance/"},
     {"state": "District of Columbia", "abbrev": "DC", "name": "DC Public Service Commission",
-     "website": "https://dcpsc.org/", "complaint": "https://dcpsc.org/Consumers/How-to-File-Complaints.aspx"},
+     "website": "https://dcpsc.org/", "complaint": "https://complaints.dcpsc.dc.gov/en-US/"},
     {"state": "Florida",        "abbrev": "FL", "name": "Florida Public Service Commission",
      "website": "https://www.psc.state.fl.us/", "complaint": "https://www.psc.state.fl.us/ConsumerAssistance"},
     {"state": "Georgia",        "abbrev": "GA", "name": "Georgia Public Service Commission",
-     "website": "https://psc.ga.gov/", "complaint": "https://psc.ga.gov/consumer-corner/consumer-complaints/"},
+     "website": "https://psc.ga.gov/", "complaint": "https://psc.ga.gov/services-resources/file-consumer-complaint/"},
     {"state": "Hawaii",         "abbrev": "HI", "name": "Hawaii Public Utilities Commission",
-     "website": "https://puc.hawaii.gov/", "complaint": "https://puc.hawaii.gov/contact/consumer-complaint/"},
+     "website": "https://puc.hawaii.gov/", "complaint": "https://cca.hawaii.gov/dca/filing-a-complaint/"},
     {"state": "Idaho",          "abbrev": "ID", "name": "Idaho Public Utilities Commission",
-     "website": "https://www.puc.idaho.gov/", "complaint": "https://www.puc.idaho.gov/consumer/complaint.htm"},
+     "website": "https://puc.idaho.gov/", "complaint": "https://puc.idaho.gov/Form/ConsumerAssistance"},
     {"state": "Illinois",       "abbrev": "IL", "name": "Illinois Commerce Commission",
      "website": "https://www.icc.illinois.gov/", "complaint": "https://www.icc.illinois.gov/complaints/"},
     {"state": "Indiana",        "abbrev": "IN", "name": "Indiana Utility Regulatory Commission",
-     "website": "https://www.in.gov/iurc/", "complaint": "https://www.in.gov/iurc/consumer-info/file-a-complaint/"},
-    {"state": "Iowa",           "abbrev": "IA", "name": "Iowa Utilities Board",
-     "website": "https://iub.iowa.gov/", "complaint": "https://iub.iowa.gov/consumers/filing-complaint"},
+     "website": "https://www.in.gov/iurc/", "complaint": "https://www.in.gov/iurc/customer-assistance/"},
+    {"state": "Iowa",           "abbrev": "IA", "name": "Iowa Utilities Commission",
+     "website": "https://iuc.iowa.gov/", "complaint": "https://iuc.iowa.gov/customer-assistance/how-do-i-file-utility-complaint"},
     {"state": "Kansas",         "abbrev": "KS", "name": "Kansas Corporation Commission",
-     "website": "https://kcc.ks.gov/", "complaint": "https://kcc.ks.gov/consumer-information/complaint"},
+     "website": "https://kcc.ks.gov/", "complaint": "https://puc.kcc.ks.gov/complaint/"},
     {"state": "Kentucky",       "abbrev": "KY", "name": "Kentucky Public Service Commission",
      "website": "https://psc.ky.gov/", "complaint": "https://psc.ky.gov/agencies/psc/consumer/complaint.aspx"},
     {"state": "Louisiana",      "abbrev": "LA", "name": "Louisiana Public Service Commission",
-     "website": "https://www.lpsc.louisiana.gov/", "complaint": "https://www.lpsc.louisiana.gov/ConsumerComplaints"},
+     "website": "https://www.lpsc.louisiana.gov/", "complaint": "https://www.lpsc.louisiana.gov/Consumers"},
     {"state": "Maine",          "abbrev": "ME", "name": "Maine Public Utilities Commission",
      "website": "https://www.maine.gov/mpuc/", "complaint": "https://www.maine.gov/mpuc/consumer-assistance"},
     {"state": "Maryland",       "abbrev": "MD", "name": "Maryland Public Service Commission",
      "website": "https://www.psc.state.md.us/", "complaint": "https://www.psc.state.md.us/electricity/file-a-complaint/"},
     {"state": "Massachusetts",  "abbrev": "MA", "name": "Massachusetts Department of Public Utilities",
-     "website": "https://www.mass.gov/orgs/department-of-public-utilities", "complaint": "https://www.mass.gov/how-to/file-a-complaint-with-the-dpu"},
+     "website": "https://www.mass.gov/orgs/department-of-public-utilities", "complaint": "https://www.mass.gov/how-to/file-a-complaint-involving-a-gas-electric-or-water-company"},
     {"state": "Michigan",       "abbrev": "MI", "name": "Michigan Public Service Commission",
      "website": "https://www.michigan.gov/mpsc", "complaint": "https://www.michigan.gov/mpsc/consumer/complaints"},
     {"state": "Minnesota",      "abbrev": "MN", "name": "Minnesota Public Utilities Commission",
      "website": "https://mn.gov/puc/", "complaint": "https://mn.gov/puc/consumers/help/complaints/"},
     {"state": "Mississippi",    "abbrev": "MS", "name": "Mississippi Public Service Commission",
-     "website": "https://www.psc.ms.gov/", "complaint": "https://www.psc.ms.gov/consumer-complaints"},
+     "website": "https://www.psc.ms.gov/", "complaint": "https://ctsportal.psc.ms.gov/portal/"},
     {"state": "Missouri",       "abbrev": "MO", "name": "Missouri Public Service Commission",
-     "website": "https://psc.mo.gov/", "complaint": "https://psc.mo.gov/General/File_a_Complaint"},
+     "website": "https://psc.mo.gov/", "complaint": "https://psc.mo.gov/General/Submit_A_Complaint"},
     {"state": "Montana",        "abbrev": "MT", "name": "Montana Public Service Commission",
-     "website": "https://psc.mt.gov/", "complaint": "https://psc.mt.gov/consumers/assistance"},
+     "website": "https://psc.mt.gov/", "complaint": "https://psc.mt.gov/Consumers/Request-Assistance"},
     {"state": "Nebraska",       "abbrev": "NE", "name": "Nebraska Power Review Board",
-     "website": "https://powerreview.nebraska.gov/", "complaint": "https://powerreview.nebraska.gov/"},
+     "website": "https://powerreview.nebraska.gov/", "complaint": ""},
     {"state": "Nevada",         "abbrev": "NV", "name": "Public Utilities Commission of Nevada",
-     "website": "https://pucn.nv.gov/", "complaint": "https://pucn.nv.gov/Consumers/File_A_Complaint/"},
+     "website": "https://puc.nv.gov/", "complaint": "https://puc.nv.gov/FAQ/Resolving_Disputes/"},
     {"state": "New Hampshire",  "abbrev": "NH", "name": "New Hampshire Public Utilities Commission",
-     "website": "https://www.puc.nh.gov/", "complaint": "https://www.puc.nh.gov/Consumer/consumer.htm"},
+     "website": "https://www.puc.nh.gov/", "complaint": "https://www.energy.nh.gov/rules-and-regulatory/proceedings/complaint-proceedings"},
     {"state": "New Jersey",     "abbrev": "NJ", "name": "New Jersey Board of Public Utilities",
      "website": "https://www.nj.gov/bpu/", "complaint": "https://www.nj.gov/bpu/assistance/complaints/"},
     {"state": "New Mexico",     "abbrev": "NM", "name": "New Mexico Public Regulation Commission",
-     "website": "https://www.nm-prc.org/", "complaint": "https://www.nm-prc.org/utilities/consumer-complaints/"},
+     "website": "https://www.prc.nm.gov/", "complaint": "https://www.prc.nm.gov/consumer-relations/file-a-complaint/"},
     {"state": "New York",       "abbrev": "NY", "name": "New York Public Service Commission",
-     "website": "https://www.dps.ny.gov/", "complaint": "https://www.dps.ny.gov/complaints"},
+     "website": "https://www.dps.ny.gov/", "complaint": "https://dps.ny.gov/file-complaint"},
     {"state": "North Carolina", "abbrev": "NC", "name": "North Carolina Utilities Commission",
      "website": "https://www.ncuc.gov/", "complaint": "https://www.ncuc.gov/consumer/consumer.html"},
     {"state": "North Dakota",   "abbrev": "ND", "name": "North Dakota Public Service Commission",
-     "website": "https://www.psc.nd.gov/", "complaint": "https://www.psc.nd.gov/public/contacts.php"},
+     "website": "https://www.psc.nd.gov/", "complaint": "https://www.psc.nd.gov/contact"},
     {"state": "Ohio",           "abbrev": "OH", "name": "Public Utilities Commission of Ohio",
      "website": "https://puco.ohio.gov/", "complaint": "https://puco.ohio.gov/wps/portal/gov/puco/help-center"},
     {"state": "Oklahoma",       "abbrev": "OK", "name": "Oklahoma Corporation Commission",
@@ -1459,31 +1538,31 @@ STATE_PUCS = [
     {"state": "Oregon",         "abbrev": "OR", "name": "Oregon Public Utility Commission",
      "website": "https://www.oregon.gov/puc/", "complaint": "https://www.oregon.gov/puc/Pages/consumer-complaint.aspx"},
     {"state": "Pennsylvania",   "abbrev": "PA", "name": "Pennsylvania Public Utility Commission",
-     "website": "https://www.puc.pa.gov/", "complaint": "https://www.puc.pa.gov/filing-a-complaint/"},
+     "website": "https://www.puc.pa.gov/", "complaint": "https://www.puc.pa.gov/complaints/"},
     {"state": "Rhode Island",   "abbrev": "RI", "name": "Rhode Island Public Utilities Commission",
-     "website": "https://ripuc.ri.gov/", "complaint": "https://ripuc.ri.gov/utilityinfo/consumer.html"},
+     "website": "https://ripuc.ri.gov/", "complaint": "https://ripuc.ri.gov/consumer-information/how-file-complaint"},
     {"state": "South Carolina", "abbrev": "SC", "name": "Public Service Commission of South Carolina",
-     "website": "https://www.psc.sc.gov/", "complaint": "https://www.psc.sc.gov/consumer-information"},
+     "website": "https://psc.sc.gov/", "complaint": "https://psc.sc.gov/consumer-info/file-complaint"},
     {"state": "South Dakota",   "abbrev": "SD", "name": "South Dakota Public Utilities Commission",
      "website": "https://puc.sd.gov/", "complaint": "https://puc.sd.gov/Consumer/"},
     {"state": "Tennessee",      "abbrev": "TN", "name": "Tennessee Public Utility Commission",
-     "website": "https://www.tn.gov/tra.html", "complaint": "https://www.tn.gov/tra/division-of-consumer-services.html"},
+     "website": "https://www.tn.gov/tpuc.html", "complaint": "https://www.tn.gov/tpuc/utility-complaint-resources.html"},
     {"state": "Texas",          "abbrev": "TX", "name": "Public Utility Commission of Texas",
      "website": "https://www.puc.texas.gov/", "complaint": "https://www.puc.texas.gov/consumer/complaint/"},
     {"state": "Utah",           "abbrev": "UT", "name": "Utah Public Service Commission",
-     "website": "https://psc.utah.gov/", "complaint": "https://psc.utah.gov/consumer-information/"},
+     "website": "https://psc.utah.gov/", "complaint": "https://psc.utah.gov/complaint-process/"},
     {"state": "Vermont",        "abbrev": "VT", "name": "Vermont Public Utility Commission",
-     "website": "https://puc.vermont.gov/", "complaint": "https://puc.vermont.gov/consumer-resources"},
+     "website": "https://puc.vermont.gov/", "complaint": "https://puc.vermont.gov/public-participation/complaints"},
     {"state": "Virginia",       "abbrev": "VA", "name": "Virginia State Corporation Commission",
-     "website": "https://www.scc.virginia.gov/", "complaint": "https://www.scc.virginia.gov/pages/Consumer-Assistance"},
+     "website": "https://www.scc.virginia.gov/", "complaint": "https://www.scc.virginia.gov/consumers/public-utility/utility-complaints/"},
     {"state": "Washington",     "abbrev": "WA", "name": "Washington Utilities and Transportation Commission",
      "website": "https://www.utc.wa.gov/", "complaint": "https://www.utc.wa.gov/consumers/file-complaint"},
     {"state": "West Virginia",  "abbrev": "WV", "name": "West Virginia Public Service Commission",
-     "website": "https://www.psc.state.wv.us/", "complaint": "https://www.psc.state.wv.us/scripts/Consumer/default.cfm"},
+     "website": "https://www.psc.state.wv.us/", "complaint": "https://www.psc.state.wv.us/Efile/Informal_Request/default.htm"},
     {"state": "Wisconsin",      "abbrev": "WI", "name": "Public Service Commission of Wisconsin",
-     "website": "https://psc.wi.gov/", "complaint": "https://psc.wi.gov/Pages/ForConsumers/FileAComplaint.aspx"},
+     "website": "https://psc.wi.gov/", "complaint": "https://psc.wi.gov/Pages/ForConsumers/LogAComplaint.aspx"},
     {"state": "Wyoming",        "abbrev": "WY", "name": "Wyoming Public Service Commission",
-     "website": "https://psc.wyo.gov/", "complaint": "https://psc.wyo.gov/consumers"},
+     "website": "https://psc.wyo.gov/", "complaint": "https://psc.wyo.gov/home/file-a-complaint"},
 ]
 STATE_PUCS_DF = pd.DataFrame(STATE_PUCS)
 

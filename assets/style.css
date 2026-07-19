@@ -496,16 +496,26 @@ div.stDownloadButton > button:hover {
     margin-bottom: 0.4rem !important;
 }
 
-/* Body prose slightly looser for long-form reading */
+/* Body prose slightly looser for long-form reading, at full brightness */
 div[data-testid="stMarkdownContainer"] p,
 div[data-testid="stMarkdownContainer"] li {
     line-height: 1.6 !important;
-    color: #C7D0DC !important;
+    color: #EAF0F7 !important;
 }
 
 /* Keep bold text bright so key numbers pop against the softer body color */
 div[data-testid="stMarkdownContainer"] strong {
     color: #EAF0F7 !important;
+}
+
+/* Documented-stance / federal-champion lists render at full brightness
+   (not the muted body-prose gray) so they read as prominent, not disabled. */
+div[data-testid="stMarkdownContainer"] ul.stance-list li {
+    color: #EAF0F7 !important;
+    line-height: 1.6 !important;
+}
+div[data-testid="stMarkdownContainer"] ul.stance-list li a {
+    color: #2DD4BF !important;
 }
 
 /* ── Expander polish ────────────────────────────────────────────────────── */
