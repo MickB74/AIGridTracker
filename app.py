@@ -17,11 +17,12 @@ import pathlib
 import datetime as _dt
 import json
 import base64
+import urllib.parse
 
 from src.services.news import fetch_community_stories, _story_angle
 from src.constants import (
     POLICY_ALERTS, STATE_PUCS_DF, MORATORIUMS_DF, STATE_DC_DF,
-    EXECUTIVES_DF, OPERATORS_DF, DC_SITES_DF,
+    EXECUTIVES_DF, OPERATORS_DF, DC_SITES_DF, VIDEO_TOPICS,
 )
 from src.ui.calc_tab import render_calc_tab
 from src.ui.compare_tab import render_compare_tab
@@ -29,9 +30,11 @@ from src.ui.live_tab import render_live_tab
 from src.ui.grid_tab import render_grid_tab
 from src.ui.dc_tab import render_dc_tab
 from src.ui.news_tab import render_news_tab
+from src.ui.news_feed_tab import render_news_feed_tab
 from src.ui.officials_tab import render_officials_tab
 from src.ui.macro_tab import render_macro_tab
 from src.ui.method_tab import render_method_tab
+from src.ui.monitors_tab import render_monitors_tab
 from src.ui.blog_tab import render_blog_tab
 from src.ui.learn_tab import render_learn_tab
 from src.ui.corporate_tab import render_corporate_tab
@@ -489,6 +492,30 @@ elif not _stories:
     st.info("Community spotlight is temporarily unavailable "
             f"({_story_err or 'no recent stories found'}). See the "
             "**Community & backlash** tab for trackers and live discussion.")
+
+# ── What is GridWatch AI? — mission explainer ─────────────────────────── #
+st.markdown("#### What is GridWatch AI?")
+_mission_cards = [
+    ("🎯", "Our mission",
+     "Give the people who live near data centers the same quality of "
+     "information the companies building them already have."),
+    ("🛠️", "What we do",
+     "Track the energy, water, and carbon of AI infrastructure — and "
+     "aggregate local news, moratoriums, and official filings, all sourced."),
+    ("👥", "Who we serve",
+     "Residents, local officials, and advocates facing a data-center "
+     "proposal or expansion in their community."),
+    ("🤝", "How we help",
+     "Negotiation toolkits, impact and bill calculators, PUC and official "
+     "directories, and meeting-prep briefs you can take to the table."),
+]
+_mcols = st.columns(4)
+for _mcol, (_mic, _mh, _mb) in zip(_mcols, _mission_cards):
+    with _mcol:
+        with st.container(border=True):
+            st.markdown(f"### {_mic}\n**{_mh}**")
+            st.caption(_mb)
+
 # ── Breaking policy alerts ────────────────────────────────────────────── #
 _severity_styles = {
     "critical": ("🔴", "#ff4444", "rgba(255,68,68,0.08)", "rgba(255,68,68,0.25)"),
@@ -515,16 +542,28 @@ for _alert in POLICY_ALERTS[:3]:
         unsafe_allow_html=True,
     )
 
+# ── Videos — curated topic explainers ─────────────────────────────────── #
+st.markdown("#### ▶ Videos")
+st.caption("Short explainers and reporting on each data-center issue. Each link "
+           "opens a fresh YouTube search so results stay current — a starting "
+           "point, not an endorsement of any single video.")
+for _vgroup, _vtopics in VIDEO_TOPICS.items():
+    with st.expander(f"▶ {_vgroup}", expanded=False):
+        for _vemoji, _vlabel, _vquery in _vtopics:
+            _vurl = ("https://www.youtube.com/results?search_query="
+                     + urllib.parse.quote(_vquery))
+            st.markdown(f"{_vemoji} [{_vlabel}]({_vurl})")
+
 st.divider()
 
 # --- TABS SETUP ---
 # Flow: Problem → Impact → Action → Deep dive → Reference → Business
-(tab_news, tab_bills,
+(tab_news, tab_newsfeed, tab_bills,
  tab_states, tab_dc,
  tab_toolkit, tab_learn,
  tab_corporate, tab_macro,
  tab_technical, tab_blog, tab_consulting) = st.tabs([
-    "🗞️ Community & backlash", "💡 Your utility bill",
+    "🗞️ Community & backlash", "📰 News", "💡 Your utility bill",
     "🗂️ States & officials", "🏢 Data centers",
     "🛡️ Negotiation toolkit", "🎓 Learn & simulate",
     "💼 Corporate profiles", "🌍 Macro outlook",
@@ -538,6 +577,9 @@ with tab_toolkit:
 
 with tab_news:
     render_news_tab()
+
+with tab_newsfeed:
+    render_news_feed_tab()
 
 with tab_bills:
     render_bills_tab()
@@ -595,9 +637,12 @@ with tab_technical:
 # ── Reference ─────────────────────────────────────────────────────────── #
 with tab_blog:
     st.caption("This tab contains: **Blog posts & analysis** "
+               "· **Market monitors & advocacy** "
                "· **Methodology & source coefficients** "
                "— scroll down for each section.")
     render_blog_tab()
+    st.divider()
+    render_monitors_tab()
     st.divider()
     render_method_tab()
 

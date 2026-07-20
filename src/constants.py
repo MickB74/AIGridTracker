@@ -517,6 +517,41 @@ POLICY_ALERTS = [
     ),
 ]
 
+# Curated video topics for the landing-page "Videos" section. Each entry is
+# (emoji, label, youtube_search_query); rendered as a live YouTube-search link
+# so results stay fresh without hardcoding specific (rot-prone) video URLs.
+# Grouped to mirror the flashpoints / value-levers framing used elsewhere.
+VIDEO_TOPICS = {
+    "Community flashpoints": [
+        ("💵", "Electricity bills & grid strain",
+         "data center electricity bills ratepayers grid strain"),
+        ("💧", "Water use & cooling",
+         "data center water use cooling drought"),
+        ("🏘️", "Zoning, land use & moratoria",
+         "data center zoning moratorium residents oppose rezoning"),
+        ("🔊", "Noise from chillers & generators",
+         "data center noise complaints residents hum"),
+        ("🧾", "Tax breaks vs. local benefit",
+         "data center tax breaks incentives few jobs"),
+        ("🛢️", "Backup diesel & air permits",
+         "data center backup diesel generators air quality permit"),
+    ],
+    "How communities capture value": [
+        ("👷", "Jobs & local workforce",
+         "data center local jobs workforce economic impact"),
+        ("🧾", "Tax base & fiscal revenue",
+         "data center property tax revenue county schools"),
+        ("⚡", "Grid stability contributions",
+         "data center grid stability transmission upgrade flexible load"),
+        ("☀️", "Shared clean power",
+         "data center community solar green tariff clean microgrid"),
+        ("🛡️", "Ratepayer protection",
+         "data center cost allocation ratepayer protection tariff"),
+        ("🤝", "Community-benefit agreements",
+         "data center community benefit agreement local investment"),
+    ],
+}
+
 # Data-center moratoriums / bans — POINT-IN-TIME SNAPSHOT (mid-2026). Compiled
 # from public trackers (see MORATORIUM_TRACKERS); dozens more churn weekly, so
 # treat as illustrative, not exhaustive — follow the tracker links for current
@@ -985,6 +1020,36 @@ SOURCES = {
                       "https://sustainability.aboutamazon.com/water"),
     "meta_community_2026": ("Meta — Data Center Community Action Grants & Local Investment (2026)",
                       "https://sustainability.atmeta.com/community/"),
+    # --- Independent Market Monitors (IMM) — annual State of the Market reports ---
+    "imm_pjm":      ("Monitoring Analytics — PJM State of the Market (Independent Market Monitor)",
+                     "https://www.monitoringanalytics.com/reports/PJM_State_of_the_Market/2025.shtml"),
+    "imm_ercot":    ("Potomac Economics — ERCOT State of the Market (Independent Market Monitor)",
+                     "https://www.potomaceconomics.com/markets-monitored/ercot/"),
+    "imm_miso":     ("Potomac Economics — MISO State of the Market (Independent Market Monitor)",
+                     "https://www.potomaceconomics.com/markets-monitored/miso/"),
+    "imm_isone":    ("Potomac Economics — ISO New England State of the Market (Independent Market Monitor)",
+                     "https://www.potomaceconomics.com/markets-monitored/iso-new-england/"),
+    "imm_nyiso":    ("Potomac Economics — NYISO State of the Market (Independent Market Monitor)",
+                     "https://www.potomaceconomics.com/markets-monitored/new-york-iso/"),
+    "imm_caiso":    ("CAISO Department of Market Monitoring — Annual Report on Market Issues & Performance",
+                     "https://www.caiso.com/market-operations/market-monitoring/reports-and-presentations"),
+    "imm_spp":      ("SPP Market Monitoring Unit — Annual State of the Market Report",
+                     "https://www.spp.org/markets-operations/market-monitoring/"),
+    "caiso_largeload": ("CAISO — Large Load Considerations Issue Paper (Jan 2026, data-center forecasting)",
+                     "https://www.caiso.com/documents/issue-paper-large-load-consideration-jan-20-2026.pdf"),
+    # --- Ratepayer / consumer-advocacy organizations ---
+    "pulp":         ("Pennsylvania Utility Law Project (PULP) — low-income ratepayer advocacy & data-center cost cases",
+                     "https://www.pautilitylawproject.org/"),
+    "cause_pa":     ("CAUSE-PA — Coalition for Affordable Utility Services & Energy Efficiency in PA (repped by PULP)",
+                     "https://www.pautilitylawproject.org/"),
+    "nasuca":       ("NASUCA — National Association of State Utility Consumer Advocates (state advocate network)",
+                     "https://www.nasuca.org/"),
+    "nclc":         ("National Consumer Law Center — utility & energy affordability advocacy",
+                     "https://www.nclc.org/topic/energy-utilities/"),
+    "kleinman":     ("Kleinman Center for Energy Policy (UPenn) — data-center & ratepayer policy research",
+                     "https://kleinmanenergy.upenn.edu/"),
+    "whyy_dc":      ("WHYY — Pennsylvania data-center electricity cost & ratepayer coverage",
+                     "https://whyy.org/articles/pennsylvania-electricity-costs-data-centers/"),
 }
 
 # Shares outstanding (billions, all classes) for live market-cap = price ×
@@ -1745,6 +1810,24 @@ STORY_ANGLES = [
      "Residents question property-value hits and local benefit."),
 ]
 
+# Substring → weight table for the heuristic "top stories" ranker. A headline's
+# score is (recency + sum of matched weights), so outcome/escalation words
+# (lawsuit, moratorium, rate hike) float the highest-stakes stories to the top.
+# Keys are matched case-insensitively as substrings against the headline.
+STORY_IMPACT_WEIGHTS = {
+    "moratorium": 3.0, "ban": 3.0, "lawsuit": 3.0, "sued": 2.5, "sue": 2.0,
+    "reject": 2.5, "denied": 2.5, "block": 2.5, "halt": 2.5, "withdraw": 2.5,
+    "pull out": 2.5, "kill": 2.0, "pause": 2.0, "referendum": 2.0,
+    "settlement": 2.0, "protest": 2.0, "approve": 1.8, "vote": 1.5,
+    "ratepayer": 2.5, "rate hike": 2.5, "electric bill": 2.5,
+    "power bill": 2.5, "utility bill": 2.5, "rates": 1.5, "bills": 1.2,
+    "drought": 2.0, "water": 1.5, "aquifer": 2.0, "noise": 1.5,
+    "diesel": 1.5, "pollution": 1.8, "air quality": 1.8,
+    "oppose": 1.5, "opposition": 1.5, "backlash": 2.0, "outcry": 2.0,
+    "property value": 1.8, "subsidy": 1.5, "tax break": 1.5,
+    "billion": 1.5, "gigawatt": 1.2, "hyperscale": 1.0,
+}
+
 # Reddit search configurations
 REDDIT_HOSTS = ("https://old.reddit.com/search.rss",
                 "https://www.reddit.com/search.rss")
@@ -1764,3 +1847,89 @@ DENY_SUBS = {
     "pokecorner", "ffxivrecruitment", "purtle", "marketfluxhub", "facepalm",
     "defendingaiart", "lovegroknews", "coherencephysics",
 }
+
+# ── Independent Market Monitors (IMM) ─────────────────────────────────────── #
+# Every organized US wholesale market has an independent monitor that publishes
+# an annual State of the Market report. These reports are the authoritative,
+# non-industry source on capacity-auction costs, congestion, and large-load
+# (data-center) driven price impacts — exactly the numbers a community needs at
+# a rate case. All PDF/landing-page only (no public API), so this is a curated
+# citation registry, not a live feed. "src_key" links via src_link() to SOURCES.
+# "finding" = the most advocacy-relevant, load/data-center-related takeaway;
+# where a headline number comes from reporting rather than the report body,
+# "finding_src" points to that citation instead of the report.
+MARKET_MONITORS = [
+    {"monitor": "Monitoring Analytics", "grid": "PJM", "region": "Mid-Atlantic / 13 states + DC",
+     "report": "Annual State of the Market Report for PJM", "edition": "2025 (Vol. 1 & 2)",
+     "finding": "PJM's 2025/26 capacity auction cleared at ~$14.7B, up from ~$2.2B a year earlier — "
+                "a spike driven largely by data-center load growth outpacing new supply.",
+     "src_key": "imm_pjm", "finding_src": "whyy_dc"},
+    {"monitor": "Potomac Economics", "grid": "ERCOT", "region": "Texas (~90% of state load)",
+     "report": "State of the Market Report for the ERCOT Markets", "edition": "2025 (pub. May 2026)",
+     "finding": "Tracks large-flexible-load (crypto/data-center) interconnection and its effect on "
+                "scarcity pricing and reserve margins in the fastest-growing large-load market.",
+     "src_key": "imm_ercot", "finding_src": "imm_ercot"},
+    {"monitor": "Potomac Economics", "grid": "MISO", "region": "Midwest / South, 15 states",
+     "report": "State of the Market Report for the MISO Electricity Markets", "edition": "2024 (latest annual)",
+     "finding": "Day-ahead congestion cost ~$1.3B in 2024 (+10% YoY) — a signal of transmission strain "
+                "as new large loads queue across the footprint.",
+     "src_key": "imm_miso", "finding_src": "imm_miso"},
+    {"monitor": "Potomac Economics", "grid": "ISO-NE", "region": "New England, 6 states",
+     "report": "Annual Markets Report (ISO New England)", "edition": "2024 (latest annual)",
+     "finding": "Baseline competitiveness and capacity-market reference for the Northeast; useful "
+                "comparison point for large-load cost-allocation arguments.",
+     "src_key": "imm_isone", "finding_src": "imm_isone"},
+    {"monitor": "Potomac Economics", "grid": "NYISO", "region": "New York State",
+     "report": "State of the Market Report for the New York ISO Markets", "edition": "2024 (latest annual)",
+     "finding": "Covers capacity, congestion and interconnection trends for NY, where data-center siting "
+                "pressure is rising upstate.",
+     "src_key": "imm_nyiso", "finding_src": "imm_nyiso"},
+    {"monitor": "CAISO Dept. of Market Monitoring", "grid": "CAISO", "region": "California + part of NV",
+     "report": "Annual Report on Market Issues & Performance (+ Large Load Considerations paper)",
+     "edition": "2024 report (pub. Oct 2025) + Jan 2026 large-load paper",
+     "finding": "CA data-center load is forecast to grow ~1.8 GW by 2030 and ~4.9 GW by 2040; CAISO's "
+                "large-load paper flags transmission cost-allocation and demand-forecast risk.",
+     "src_key": "imm_caiso", "finding_src": "caiso_largeload"},
+    {"monitor": "SPP Market Monitoring Unit", "grid": "SPP", "region": "Central US, 14 states",
+     "report": "Annual State of the Market Report", "edition": "2025",
+     "finding": "Finds SPP broadly competitive (output gap <0.1% in 2025); the annual report is the "
+                "reference for congestion and new large-load interconnection in the plains.",
+     "src_key": "imm_spp", "finding_src": "imm_spp"},
+]
+MARKET_MONITORS_DF = pd.DataFrame(MARKET_MONITORS)
+
+# ── Ratepayer / consumer-advocacy organizations ──────────────────────────── #
+# Groups that intervene in rate cases and PUC proceedings on behalf of
+# residential / low-income customers — natural allies and model-language sources
+# for a community facing data-center cost shifting. Not data feeds; a curated
+# directory of who to read, cite, and contact. "key_point" is a quotable,
+# sourced takeaway; "src_key"/"stat_src" link via src_link().
+ADVOCACY_ORGS = [
+    {"org": "Pennsylvania Utility Law Project (PULP)", "scope": "Pennsylvania", "type": "Legal aid / advocacy",
+     "focus": "Low-income residential ratepayers; data-center cost-causation in rate cases",
+     "key_point": "Estimates PA ratepayers already pay ~$1B/yr more in capacity costs from data-center "
+                  "load growth, with residential customers facing $78M+/month more — and notes universal-"
+                  "service program costs fall on residential customers alone.",
+     "src_key": "pulp", "stat_src": "whyy_dc"},
+    {"org": "CAUSE-PA", "scope": "Pennsylvania", "type": "Consumer coalition",
+     "focus": "Affordable utility service & energy efficiency; large-load cost allocation",
+     "key_point": "Argues in PUC proceedings that grid upgrades for large loads should be paid by those "
+                  "loads unless proven otherwise, and that data centers post collateral for forecasts.",
+     "src_key": "cause_pa", "stat_src": "whyy_dc"},
+    {"org": "NASUCA", "scope": "National (state advocates)", "type": "Advocate network",
+     "focus": "Umbrella for state utility consumer advocates; coordination & federal comments",
+     "key_point": "The clearinghouse for finding and coordinating with your own state's consumer "
+                  "advocate office — the party that formally intervenes in rate cases on your behalf.",
+     "src_key": "nasuca", "stat_src": "nasuca"},
+    {"org": "National Consumer Law Center (NCLC)", "scope": "National", "type": "Legal advocacy / research",
+     "focus": "Energy & utility affordability, shutoff protections, low-income programs",
+     "key_point": "Publishes model regulatory language and testimony on protecting residential customers "
+                  "from cost shifts — reusable in comments and CBA drafting.",
+     "src_key": "nclc", "stat_src": "nclc"},
+    {"org": "Kleinman Center for Energy Policy (UPenn)", "scope": "National / research", "type": "Academic research",
+     "focus": "Data-center load, rate design, and ratepayer-protection policy analysis",
+     "key_point": "Independent analysis of new large-load tariff frameworks (e.g. PA's) — useful neutral "
+                  "backing when a company disputes advocacy-group numbers.",
+     "src_key": "kleinman", "stat_src": "kleinman"},
+]
+ADVOCACY_ORGS_DF = pd.DataFrame(ADVOCACY_ORGS)

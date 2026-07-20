@@ -51,6 +51,210 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── Amazon site-selection interview ───────────────────────────────────
+    {
+        "id": "amazon-oyer-site-selection-2026",
+        "section": "stories",
+        "title": "Amazon Says It Picks Sites Where the Grid Needs Help. Here's What Communities Should Hear.",
+        "date": _dt.date(2026, 7, 20),
+        "author": "GridWatch AI",
+        "tags": ["Amazon", "AWS", "site selection", "water", "nuclear", "rates", "hyperscaler", "analysis"],
+        "summary": (
+            "In a Latitude Media interview, Amazon's energy chief laid out a sophisticated "
+            "site-selection strategy — picking locations where new load 'benefits the grid,' "
+            "pledging full cost coverage, and touting a 52% water-efficiency gain. The claims "
+            "are worth understanding, because the playbook is coming to a town near you."
+        ),
+        "body": """\
+A [Latitude Media interview published July 17](https://www.latitudemedia.com/news/inside-amazons-approach-to-data-center-sustainability-a-conversation-with-brandon-oyer/)
+gives an unusually detailed look at how Amazon thinks about where to build data centers.
+**Brandon Oyer**, who leads energy and water strategy for AWS, describes a site-selection
+philosophy that has evolved from "where can we plug in renewables?" to **"where does the
+grid actually need us?"** — a framing that, if taken at face value, turns the developer
+from a burden on the grid into a benefactor.
+
+The interview is worth reading in full, because the specific claims Amazon makes are
+exactly the ones your planning board will hear when an AWS-affiliated LLC shows up at
+a hearing. Here's what was said, what checks out, and what's missing.
+
+---
+
+### The site-selection thesis: "go where the grid benefits"
+
+Oyer says Amazon invested in **transmission-system modeling experts with 20+ years
+of experience** and shifted its strategy from finding spots to connect renewables to
+analyzing where additional grid load would prove most beneficial. This approach, he
+says, led to data center developments in **Jackson, Mississippi** and **South Bend,
+Indiana**.
+
+**What this means in practice:** Amazon is choosing locations where utilities have
+excess capacity or aging infrastructure that needs investment to justify upgrades.
+From the grid operator's perspective, a large anchor tenant *can* accelerate
+infrastructure modernization that benefits everyone. From the community's perspective,
+the question is whether that benefit is contractually guaranteed or just implied.
+
+**The community question:** "Beneficial to the grid" and "beneficial to residents"
+are not the same thing. A utility that gains a 200 MW anchor customer may improve
+system economics while still socializing transmission costs. Ask: *Who pays for the
+new substation? Is the rate benefit in writing, or in a press release?*
+
+---
+
+### The rate-protection claims
+
+This is the most consequential section for communities. Oyer makes three specific
+claims:
+
+1. **Amazon covers the full cost** of electricity consumption and infrastructure
+   improvements — transmission lines, substations, grid upgrades — **without passing
+   expenses to other ratepayers.**
+
+2. **Amazon signed the White House Ratepayer Protection Pledge** (March 2026),
+   committing to fully cover AI data center electricity production costs.
+
+3. **Evidence from two states:**
+   - **Indiana:** Utility Indiana Michigan Power announced **customer base rate
+     reductions** due to revenue from large customers like Amazon.
+   - **Mississippi:** Entergy announced plans for an additional **\\$300 million in
+     grid improvements at no cost to customers**, expected to reduce power outages
+     by half within five years.
+
+**What checks out:** The White House pledge is real and public. Rate reductions in
+Indiana Michigan Power's territory have been reported. Entergy's Mississippi grid
+investment has been announced.
+
+**What's missing:** These are developer-sourced claims presented without independent
+utility or regulatory confirmation. The critical distinction — which the interview
+doesn't address — is between **direct** costs (the data center's own interconnection
+and consumption) and **indirect, system-wide** costs (capacity-market impacts,
+transmission overbuild, peak-load socialization). As we detailed in our
+[utility-bill explainer](#), PJM's independent market monitor found data centers were
+responsible for **63% of an 833% capacity-price increase** — even though each
+individual facility paid its direct costs in full.
+
+A data center can simultaneously (a) pay more than its direct cost-to-serve and
+(b) drive up system-wide capacity costs that land on everyone else's bill. Amazon's
+claims address (a). Your electric bill reflects (b).
+
+**What to demand:** Don't accept "we pay our own way" as the full answer. Ask your
+PUC or utility commission: *Has the utility filed testimony confirming that this
+facility's load will not increase residential capacity charges?* That's a testable,
+auditable claim — and it's the one that matters.
+
+---
+
+### The clean-energy portfolio
+
+Oyer cites Amazon's carbon-free energy portfolio:
+
+- **700+ projects globally**
+- **42 gigawatts** of capacity
+- Enough to power **12.1 million U.S. homes**
+
+These are large numbers. They represent **contracted or announced** capacity — not
+necessarily operational generation at the time and place the data center is consuming
+power. The distinction between a Power Purchase Agreement signed today and electrons
+flowing to a facility tomorrow is one the industry routinely elides.
+
+Amazon also touts its **\\$500 million investment in X-energy** for small modular
+reactors (SMRs), starting at **80 MW** per unit, partnered with **Energy Northwest**
+for offtake commitments. Oyer frames this as potentially establishing an industry
+model for nuclear deployment without ratepayer financial risk.
+
+**Community note:** SMRs remain pre-commercial. No SMR has delivered power to a U.S.
+data center. The X-energy investment is a bet on future technology, not a
+current-state energy source. When a developer tells your planning board the facility
+will be powered by nuclear, ask: *When? And what powers it until then?*
+
+---
+
+### The water claims — and what "water positive" means
+
+The water section contains the most specific operational data:
+
+- **52% improvement in water use effectiveness** between 2021 and 2025
+- **75% toward water-positive status by 2030**
+- **Project Rainier** in Northern Indiana: a **2.2 GW campus** that requires water
+  cooling for only **2–3% of the year**, relying on outside air for **97–98%**
+
+Regional water replenishment projects cited:
+
+| Region | Investment | Claimed impact |
+|--------|-----------|----------------|
+| Mississippi | Precision irrigation tech | Reduce ag water withdrawals by **150M gallons/year** |
+| Mexico | Infrastructure repair | Replenish **2.5B liters/year** |
+| Oregon | \\$235M surface water supply | Amazon uses **5%** of capacity; **95%** serves region |
+
+Amazon also says it prioritizes switching from potable to recycled water (treated
+sewage) where possible.
+
+**What's credible:** Cold-climate and arid-climate designs genuinely differ in water
+intensity. A facility in Northern Indiana *will* use less evaporative cooling than one
+in Phoenix. The 52% WUE improvement is plausible given the industry trend toward
+air-cooled and hybrid designs.
+
+**What's missing:** "Water positive" is a corporate-defined metric, not a regulatory
+standard. It typically means the company funds water-replenishment projects *somewhere*
+that offset the volume consumed *somewhere else*. If your aquifer drops, the fact that
+Amazon funded an irrigation project in Mississippi doesn't refill it. The relevant
+question is always local: *What is the net water impact on this watershed, this
+aquifer, this municipal supply?*
+
+**What to demand:** Facility-level water-use disclosures (gallons per day, source,
+and discharge), not global averages. If the developer cites "water positive," ask:
+*Where is the replenishment, and does it benefit this community's water supply?*
+
+---
+
+### The missing voices
+
+The most important thing about this interview is what it *doesn't* contain: no
+critical questions, no independent verification, and no community voices offering
+counterpoints. This is Amazon's narrative, presented on Amazon's terms.
+
+That's not a criticism of the journalism — corporate profile interviews serve a
+purpose. But communities should recognize the format for what it is: a **pre-packaged
+site-selection pitch**. Every claim Oyer makes is the claim your planning board will
+hear, often verbatim, when the development agreement comes up for a vote.
+
+Oyer's closing line captures the tone: *"From the top of Amazon leadership, all the
+way to the people who are building and monitoring our substations, we're all aligned
+on the mission: build responsibly, build economically, and strive to be the most
+responsible partner."*
+
+That's a corporate value statement. Your job is to convert it into **contractual
+commitments** — CBAs, rate guarantees, water-use caps, decommissioning bonds — before
+the vote, not after.
+
+---
+
+### What to do with this
+
+If Amazon (or any hyperscaler) is siting in your community, this interview is a
+useful decoder ring for the pitch you're about to receive:
+
+1. **They'll say they benefit the grid.** Ask your utility to confirm, in filed
+   testimony, that the facility will not increase residential rates or capacity
+   charges.
+
+2. **They'll cite clean energy commitments.** Ask what percentage is operational
+   *today* at *this* facility, versus contracted for future delivery elsewhere.
+
+3. **They'll tout water efficiency.** Ask for facility-level daily water consumption,
+   source, and whether "water positive" credits benefit your local watershed.
+
+4. **They'll promise jobs and investment.** Ask for a binding community benefit
+   agreement with annual reporting, clawback provisions if commitments aren't met,
+   and a decommissioning bond.
+
+The hyperscalers aren't wrong that well-sited data centers can benefit a community.
+But "can benefit" and "will benefit" are separated by a contract. Get it in writing.
+
+> Model the numbers on the **🛡️ Negotiation Toolkit** tab, check the operator's
+> footprint on the **🏢 Data Centers** tab, and review Amazon's environmental data
+> on the **📊 Corporate Profiles** tab.
+""",
+    },
     # ── Port Washington / Stargate land rush ────────────────────────────────
     {
         "id": "port-washington-stargate-land-rush-2026",

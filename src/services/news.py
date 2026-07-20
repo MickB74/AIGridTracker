@@ -4,7 +4,9 @@ import requests
 import streamlit as st
 import datetime as _dt
 from email.utils import parsedate_to_datetime
-from src.constants import GOOGLE_NEWS_RSS, STORY_QUERY, STORY_ANGLES
+from src.constants import (
+    GOOGLE_NEWS_RSS, STORY_QUERY, STORY_ANGLES, STORY_IMPACT_WEIGHTS,
+)
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def fetch_news(query: str, limit: int = 15):
@@ -43,6 +45,27 @@ def _story_angle(title: str):
         if any(k in t for k in keys):
             return emoji, blurb
     return "⚠️", "A community is pushing back on a nearby data center."
+
+
+def rank_stories(items, top_n: int = 5):
+    """Heuristic 'most important' ranking for community-impact headlines.
+    Score = recency (fresher = higher) + summed weights of high-stakes keywords
+    (lawsuit, moratorium, rate hike, …). No LLM, no API key. Returns a new list
+    of the top `top_n` items, each annotated with score/angle_emoji/angle_blurb,
+    sorted most-important first."""
+    scored = []
+    for it in items or []:
+        title = it.get("title") or ""
+        t = title.lower()
+        weight = sum(w for kw, w in STORY_IMPACT_WEIGHTS.items() if kw in t)
+        age = it.get("age_days")
+        # unknown age is treated as fresh (server-side when:7d already gated it)
+        recency = 3.0 if age is None else max(0.0, 3.0 - 0.4 * age)
+        emoji, blurb = _story_angle(title)
+        scored.append({**it, "score": round(weight + recency, 2),
+                       "angle_emoji": emoji, "angle_blurb": blurb})
+    scored.sort(key=lambda s: s["score"], reverse=True)
+    return scored[:top_n]
 
 
 @st.cache_data(ttl=1800, show_spinner=False)
