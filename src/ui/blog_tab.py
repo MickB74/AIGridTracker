@@ -19,7 +19,7 @@ def render_blog_tab():
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown(f"## {ABOUT_SECTION['title']}")
     st.markdown(
-        f'<p style="font-size:1.15rem;opacity:0.8;margin-bottom:1.2rem;">'
+        f'<p style="font-size:1.15rem;color:#C8D0DA;margin-bottom:1.2rem;">'
         f'{ABOUT_SECTION["tagline"]}</p>',
         unsafe_allow_html=True,
     )

@@ -23,7 +23,7 @@ def render_consulting_tab():
             ">GridWatch Consulting</h1>
             <p style="
                 font-size: 1.15rem;
-                color: #A4B0C0;
+                color: #C8D0DA;
                 margin: 0 0 20px 0;
                 max-width: 700px;
                 line-height: 1.55;

@@ -545,6 +545,7 @@ mechanisms that could change that but don't yet exist at scale.
     st.caption("Five key studies on data centers and your bill — click any to expand.")
 
     with st.expander("🏛️ LBNL / DOE — 2024 Data Center Energy Report"):
+        st.markdown(src_link("lbnl"), unsafe_allow_html=True)
         st.markdown("""\
 The U.S. DOE's flagship assessment (published January 2025):
 
@@ -561,6 +562,7 @@ requiring emergency grid adjustments to prevent cascading outages.
 """)
 
     with st.expander("🎓 Harvard Belfer Center — AI, Data Centers, and the U.S. Electric Grid (2026)"):
+        st.markdown(src_link("belfer"), unsafe_allow_html=True)
         st.markdown("""\
 A policy analysis calling AI-driven load growth a "watershed moment" for grid planning:
 
@@ -573,6 +575,7 @@ A policy analysis calling AI-driven load growth a "watershed moment" for grid pl
 """)
 
     with st.expander("🏭 E3 / Amazon — Tailored for Scale (Dec 2025) — the industry counterargument"):
+        st.markdown(src_link("e3_amazon"), unsafe_allow_html=True)
         st.markdown("""\
 An Amazon-commissioned study examining whether data centers raise rates:
 
@@ -590,6 +593,7 @@ socialized system-wide capacity costs.
 """)
 
     with st.expander("⚡ Columbia — Grid-Enhancing Technologies (2025)"):
+        st.markdown(src_link("columbia_get"), unsafe_allow_html=True)
         st.markdown("""\
 - **GETs** (dynamic line ratings, power flow controllers, topology optimization)
   could release 20–40% more capacity from existing transmission without new
@@ -599,6 +603,7 @@ socialized system-wide capacity costs.
 """)
 
     with st.expander("🎓 UC Berkeley Energy Institute — What Will Data Centers Do To Your Electric Bill? (2025)"):
+        st.markdown(src_link("ucb_haas"), unsafe_allow_html=True)
         st.markdown("""\
 - Investor-owned utilities sought **\\$18 billion in rate increases** in 2025 —
   the most since the mid-1980s

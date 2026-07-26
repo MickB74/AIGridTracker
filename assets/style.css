@@ -118,7 +118,7 @@ div[data-testid="stMetricValue"] {
 
 div[data-testid="stMetricLabel"] {
     font-size: 12px !important;
-    color: #6B7789 !important;
+    color: #9CA6B6 !important;
     text-transform: none !important;
 }
 
@@ -146,7 +146,7 @@ div[data-testid="stMetricDelta"] {
     white-space: nowrap !important;
     background-color: transparent !important;
     border-radius: 8px !important;
-    color: #6B7789 !important;
+    color: #9CA6B6 !important;
     font-weight: 500 !important;
     font-size: 0.85rem !important;
     padding: 6px 11px !important;
@@ -281,7 +281,7 @@ div.stAlert [data-testid="stNotificationContentError"] {
 /* ── Checkboxes ──────────────────────────────────────────────────────────── */
 
 div[data-testid="stCheckbox"] label span[data-testid="stCheckbox-label"] {
-    color: #A4B0C0 !important;
+    color: #C8D0DA !important;
 }
 
 /* ── Sliders ─────────────────────────────────────────────────────────────── */
@@ -312,7 +312,7 @@ hr {
 /* ── Captions / small text ───────────────────────────────────────────────── */
 
 .stCaption, small, [data-testid="stCaptionContainer"] {
-    color: #6B7789 !important;
+    color: #9CA6B6 !important;
     font-size: 12px !important;
 }
 
@@ -389,7 +389,7 @@ div[data-testid="stTooltipContent"] {
     background: #1F2835 !important;
     border: 1px solid #3A4656 !important;
     border-radius: 10px !important;
-    color: #A4B0C0 !important;
+    color: #C8D0DA !important;
     font-size: 13px !important;
 }
 
@@ -477,7 +477,7 @@ section[data-testid="stSidebar"] hr {
 div.stDownloadButton > button {
     background-color: transparent !important;
     border: 1px dashed #3A4656 !important;
-    color: #6B7789 !important;
+    color: #9CA6B6 !important;
     font-size: 12px !important;
     padding: 6px 12px !important;
 }
@@ -524,7 +524,7 @@ div[data-testid="stMarkdownContainer"] ul.stance-list li a {
 div[data-testid="stExpander"] summary {
     font-weight: 600 !important;
     font-size: 0.9rem !important;
-    color: #A4B0C0 !important;
+    color: #C8D0DA !important;
 }
 
 div[data-testid="stExpander"] summary:hover {
@@ -532,5 +532,5 @@ div[data-testid="stExpander"] summary:hover {
 }
 
 div[data-testid="stExpander"] summary svg {
-    fill: #6B7789 !important;
+    fill: #9CA6B6 !important;
 }

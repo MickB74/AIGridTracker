@@ -654,6 +654,118 @@ MORATORIUM_OUTCOMES = [
     },
 ]
 
+# Project-stage playbook — drives the "Start here" wizard (start_here_tab).
+# Each stage maps the situation a community is in to the moves that matter
+# this week and the meeting type used for the generated action pack
+# (must be a key of MEETING_ADVICE in src/briefs.py).
+PROJECT_STAGES = {
+    "Rumors — land purchases, unknown LLC activity, nothing filed yet": {
+        "emoji": "🕵️",
+        "meeting_type": "Town hall / public comment",
+        "headline": (
+            "You have the most leverage right now — and the least information. "
+            "Developers assemble land and utility capacity quietly before anything "
+            "is public. Move fast on records."
+        ),
+        "moves": [
+            "Pull county recorder / assessor records for recent land sales near the "
+            "parcel — write down the LLC name on every deed",
+            "Search the LLC in your Secretary of State's business registry; the "
+            "registered agent often points to the real developer or its law firm",
+            "Ask your utility (or PUC) whether a large-load interconnection or "
+            "will-serve request has been filed for the area",
+            "File a public records request for any pre-application meetings between "
+            "the developer and your planning or economic development department",
+            "Get a data-center item on the next town council agenda before the "
+            "applicant controls the narrative",
+        ],
+    },
+    "Application filed — rezoning or permits requested": {
+        "emoji": "📋",
+        "meeting_type": "Planning commission hearing",
+        "headline": (
+            "The developer needs approvals from your local boards. Every study you "
+            "demand and every condition you attach is binding leverage — a side "
+            "letter after approval is not."
+        ),
+        "moves": [
+            "Read the full application at the planning office and note what's "
+            "missing: water source, MW at full build-out, noise, tax abatements",
+            "Demand water, noise, traffic, and rate-impact studies as conditions "
+            "of the permit — before any vote",
+            "Insist any community benefit agreement be a written condition of "
+            "approval, not a separate promise",
+            "Ask for a decommissioning bond so the site isn't abandoned scrap "
+            "if the operator leaves",
+            "Find out every board member's position before the hearing — "
+            "organized residents change votes",
+        ],
+    },
+    "Public hearing scheduled": {
+        "emoji": "📣",
+        "meeting_type": "Zoning board meeting",
+        "headline": (
+            "Hearings are won by organized, specific, data-backed comment — not by "
+            "turnout alone. Divide the talking points so ten speakers make ten "
+            "different arguments."
+        ),
+        "moves": [
+            "Download the action pack below and print copies of the demands for "
+            "every board member",
+            "Assign each speaker one topic: rates, water, noise, jobs, taxes, "
+            "decommissioning — with one number each",
+            "Lead with the household cost: grid upgrades land on everyone's bill "
+            "unless the developer pays them",
+            "Cite communities that won: The Dalles (Google-funded water "
+            "infrastructure), Groton CT (CBA as zoning condition)",
+            "Ask the board on the record whether a binding CBA is a condition "
+            "of approval",
+        ],
+    },
+    "Approved — construction not yet started": {
+        "emoji": "🤝",
+        "meeting_type": "Direct negotiation with developer",
+        "headline": (
+            "Approval is not the end. Developers still need building permits, water "
+            "agreements, and community goodwill — Mesa AZ residents won noise and "
+            "water protections after approval."
+        ),
+        "moves": [
+            "Ask what permits remain (building, water, stormwater) — each is a "
+            "negotiation point for a CBA or amendment",
+            "Push your council to negotiate a development agreement covering water "
+            "caps, noise limits, and annual community payments",
+            "Request the utility's interconnection cost estimate and who pays it — "
+            "this is where rate impacts are decided",
+            "Set up independent baseline monitoring (noise, well levels) before "
+            "construction so violations are provable later",
+            "Organize now for enforcement: approved conditions only matter if "
+            "someone is watching",
+        ],
+    },
+    "Under construction or already operating": {
+        "emoji": "⚖️",
+        "meeting_type": "PUC rate case hearing",
+        "headline": (
+            "Your fight moves to the utility commission and enforcement. The goal: "
+            "the data center pays its own grid costs, honors its conditions, and "
+            "any expansion faces real terms."
+        ),
+        "moves": [
+            "Intervene (or comment) in your utility's next rate case — ask who is "
+            "paying for the grid upgrades serving the facility",
+            "File complaints through your PUC's portal for noise, water, or "
+            "condition violations — linked in your action pack",
+            "Request the facility's actual water and power usage via public "
+            "records if any public utility serves it",
+            "Push for a large-load tariff in your state so the next facility "
+            "pays cost-based rates",
+            "Treat every expansion request as a new negotiation — grandfathered "
+            "terms don't have to carry forward",
+        ],
+    },
+}
+
 # State-level residential electricity rates ($/kWh, 2024 EIA average)
 # and grid carbon intensity (gCO2/kWh, eGRID 2022 subregion averages
 # mapped to dominant state grid). Used by the local impact calculator.
@@ -925,6 +1037,14 @@ SOURCES = {
                      "https://powering-intelligence.epri.com/summary-projections.html"),
     "lbnl":         ("Lawrence Berkeley National Lab — US data centers 325–580 TWh by 2030",
                      "https://eta.lbl.gov/publications/2024-united-states-data-center-energy"),
+    "belfer":       ("Harvard Belfer Center — AI, Data Centers, and the U.S. Electric Grid (2026)",
+                     "https://www.belfercenter.org/publication/ai-data-centers-and-us-electric-grid"),
+    "e3_amazon":    ("E3 / Amazon — Tailored for Scale: Designing Electric Rates for Large Loads (2025)",
+                     "https://www.ethree.com/wp-content/uploads/2025/01/Tailored-for-Scale-Report.pdf"),
+    "columbia_get": ("Columbia University — Grid-Enhancing Technologies and Data Center Demand Response (2025)",
+                     "https://energypolicy.columbia.edu/publications/grid-enhancing-technologies/"),
+    "ucb_haas":     ("UC Berkeley Energy Institute — What Will Data Centers Do To Your Electric Bill? (2025)",
+                     "https://energyathaas.wordpress.com/2025/09/08/what-will-data-centers-do-to-your-electric-bill/"),
     # --- Governor data-center stances (Officials tab) ---
     "ga_kemp":      ("Georgia governor vetoes bill to pause data-center tax breaks (2024)",
                      "https://www.datacenterdynamics.com/en/news/georgia-governor-vetoes-bill-to-pause-data-center-tax-breaks/"),
@@ -1050,6 +1170,17 @@ SOURCES = {
                      "https://kleinmanenergy.upenn.edu/"),
     "whyy_dc":      ("WHYY — Pennsylvania data-center electricity cost & ratepayer coverage",
                      "https://whyy.org/articles/pennsylvania-electricity-costs-data-centers/"),
+    # --- BNEF 194 GW forecast (July 2026) ---
+    "bnef_194gw":   ("Latitude Media — BNEF nearly doubled its forecast for US data center power demand (Jul 2026)",
+                     "https://www.latitudemedia.com/news/bnef-nearly-doubled-its-forecast-for-us-data-center-power-demand/"),
+    "bnef_194gw_bb":("Bloomberg — Data Centers on Track to Suck Up a Fifth of US Power (Jul 2026)",
+                     "https://finance.yahoo.com/technology/ai/articles/data-centers-track-suck-fifth-110000467.html"),
+    "tc_4x_dc":     ("TechCrunch — Data centers expected to use 4x more electricity by 2035 (Jul 2026)",
+                     "https://techcrunch.com/2026/07/21/data-centers-expected-to-use-4x-more-electricity-by-2035/"),
+    "moodys_700b":  ("Moody's Ratings — Hyperscalers' spending surges to \\$700B (2026)",
+                     "https://datacentremagazine.com/news/moodys-report-ai-data-centre-spend-set-to-reach-us-700bn"),
+    "btm_gas":      ("Natural Gas Intelligence — On-site natural gas generation gains favor with hyperscalers (2026)",
+                     "https://naturalgasintel.com/news/on-site-natural-gas-generation-gains-favor-with-hyperscalers-as-bridge-to-grid/"),
 }
 
 # Shares outstanding (billions, all classes) for live market-cap = price ×

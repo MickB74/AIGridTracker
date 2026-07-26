@@ -100,10 +100,10 @@ def _render_interactive_map():
             "html": (
                 "<div style='font-family:sans-serif;padding:4px'>"
                 "<b style='font-size:14px'>{operator}</b><br/>"
-                "<span style='color:#aaa'>📍</span> {location}, {state}<br/>"
-                "<span style='color:#aaa'>Owner:</span> {_owner_label}<br/>"
-                "<span style='color:#aaa'>Tenant:</span> {_tenant_label}<br/>"
-                "<span style='color:#aaa'>Source:</span> {_attrib_label}"
+                "<span style='color:#C8D0DA'>📍</span> {location}, {state}<br/>"
+                "<span style='color:#C8D0DA'>Owner:</span> {_owner_label}<br/>"
+                "<span style='color:#C8D0DA'>Tenant:</span> {_tenant_label}<br/>"
+                "<span style='color:#C8D0DA'>Source:</span> {_attrib_label}"
                 "</div>"
             ),
             "style": {

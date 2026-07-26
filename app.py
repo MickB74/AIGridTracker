@@ -44,6 +44,7 @@ from src.ui.bills_tab import render_bills_tab
 from src.ui.toolkit_tab import render_toolkit_tab
 from src.ui.consulting_tab import render_consulting_tab
 from src.ui.impact_tab import render_impact_tab
+from src.ui.start_here_tab import render_start_here_tab
 
 # Load custom CSS styles
 def load_css():
@@ -304,7 +305,7 @@ body {{
 }}
 .hero-subtitle {{
     font-size: 0.95rem;
-    color: #A4B0C0;
+    color: #C8D0DA;
     margin: 0 0 20px 0;
     max-width: 680px;
     line-height: 1.55;
@@ -360,7 +361,7 @@ body {{
 .slide-counter {{
     font-family: 'IBM Plex Mono', ui-monospace, monospace;
     font-size: 0.75rem;
-    color: #6B7789;
+    color: #9CA6B6;
     margin-right: 76px;
 }}
 .slide-title {{
@@ -383,7 +384,7 @@ body {{
 }}
 .slide-blurb {{
     font-size: 0.85rem;
-    color: #A4B0C0;
+    color: #C8D0DA;
     margin: 0;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -392,7 +393,7 @@ body {{
 }}
 .slide-meta {{
     font-size: 0.72rem;
-    color: #6B7789;
+    color: #9CA6B6;
     margin-top: 3px;
     font-style: italic;
 }}
@@ -465,7 +466,7 @@ body {{
                 <rect x="0" y="-14" width="42" height="26" rx="5" fill="none" stroke="#2DD4BF" stroke-width="1.1" opacity="0.5"/>
                 <text x="21" y="4" font-family="'IBM Plex Mono',ui-monospace,monospace" font-size="15" font-weight="600" text-anchor="middle" fill="#2DD4BF">AI</text>
                 <text x="54" y="7" font-family="'Space Grotesk',system-ui,sans-serif" font-size="40" font-weight="700" letter-spacing="-0.03em" fill="#EAF0F7">Grid<tspan fill="url(#tg)">Watch</tspan></text>
-                <text x="56" y="30" font-family="'Space Grotesk',system-ui,sans-serif" font-size="11" font-weight="400" letter-spacing="0.12em" fill="#6B7789">COMMUNITY ENERGY INTELLIGENCE</text>
+                <text x="56" y="30" font-family="'Space Grotesk',system-ui,sans-serif" font-size="11" font-weight="400" letter-spacing="0.12em" fill="#9CA6B6">COMMUNITY ENERGY INTELLIGENCE</text>
               </g>
             </svg>
         </div>
@@ -536,8 +537,8 @@ for _alert in POLICY_ALERTS[:3]:
         f'<span style="font-size:1.1rem;line-height:1.4;">{_dot}</span>'
         f'<div>'
         f'<strong style="color:{_color};font-size:0.95rem;">{_headline}</strong>'
-        f'<span style="color:#888;font-size:0.8rem;margin-left:10px;">{_date}</span>'
-        f'<br><span style="color:#aaa;font-size:0.85rem;">{_detail}{_link_html}</span>'
+        f'<span style="color:#9CA6B6;font-size:0.8rem;margin-left:10px;">{_date}</span>'
+        f'<br><span style="color:#C8D0DA;font-size:0.85rem;">{_detail}{_link_html}</span>'
         f'</div></div>',
         unsafe_allow_html=True,
     )
@@ -557,12 +558,17 @@ for _vgroup, _vtopics in VIDEO_TOPICS.items():
 st.divider()
 
 # --- TABS SETUP ---
-# Flow: Problem → Impact → Action → Deep dive → Reference → Business
-(tab_news, tab_newsfeed, tab_bills,
+# Flow: Start here → Problem → Impact → Action → Deep dive → Reference → Business
+st.info(
+    "🚨 **New here because of a local proposal?** Open **Start here** — the "
+    "first tab below — for a five-step guided plan and a downloadable action pack."
+)
+(tab_start, tab_news, tab_newsfeed, tab_bills,
  tab_states, tab_dc,
  tab_toolkit, tab_learn,
  tab_corporate, tab_macro,
  tab_technical, tab_blog, tab_consulting) = st.tabs([
+    "🚨 Start here",
     "🗞️ Community & backlash", "📰 News", "💡 Your utility bill",
     "🗂️ States & officials", "🏢 Data centers",
     "🛡️ Negotiation toolkit", "🎓 Learn & simulate",
@@ -570,6 +576,10 @@ st.divider()
     "🔬 Technical deep-dive", "📝 Blog & methodology",
     "🤝 Consulting",
 ])
+
+# ── Start here (guided wizard) ────────────────────────────────────────── #
+with tab_start:
+    render_start_here_tab()
 
 # ── Community & advocacy (lead tabs) ─────────────────────────────────── #
 with tab_toolkit:

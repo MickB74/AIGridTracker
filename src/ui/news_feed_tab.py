@@ -121,7 +121,7 @@ def render_news_feed_tab():
         st.caption(f"{len(items)} items • “{query}” • newest first")
         for it in items:
             st.markdown(f"- [{it['title']}]({it['link']})  \n"
-                        f"  <small style='color:#888'>{it['meta']}</small>",
+                        f"  <small style='color:#9CA6B6'>{it['meta']}</small>",
                         unsafe_allow_html=True)
 
     st.caption(disclaimer)

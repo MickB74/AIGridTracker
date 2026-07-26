@@ -41,6 +41,7 @@ Always run both checks. The smoke test catches runtime import errors and widget 
 
 | Tab | Module(s) | Purpose |
 |-----|-----------|---------|
+| Start here | `start_here_tab` | Guided 5-step wizard for someone facing a new proposal: situation/stage → LLC unmasking lookup → impact estimate → stage playbook (`PROJECT_STAGES`) → downloadable action pack |
 | Negotiation toolkit | `toolkit_tab` | CBA templates, data dividend calculator, model clauses, meeting checklist, meeting prep generator (downloadable brief) |
 | Community & backlash | `news_tab` | Moratorium tracker + map, live news/Reddit, town case studies, 4-company environmental scorecard, spend estimator, report-freshness checker |
 | Your utility bill | `bills_tab` | Bill anatomy, rate impact, wholesale-to-retail flow, curtailment research library |
@@ -81,6 +82,10 @@ Stacked tabs (States, Learn, Blog) have a "This tab contains…" caption at the 
   - Grid coefficients, model parameters, ERCOT large-load data
 
 - **src/helpers.py** — Three utility functions: `human_energy()`, `human_water()`, `src_link()`.
+
+- **src/impact_model.py** — `estimate_facility_impact(mw, state, cooling)`: the single shared facility-impact model (PUE/water by cooling type, homes-equivalent, investment/data-dividend economics). Used by the impact calculator, meeting prep generator, and Start here wizard — never duplicate these coefficients inline in a tab.
+
+- **src/briefs.py** — `build_meeting_brief(state, operator, meeting_type, mw)`: pure-text meeting brief assembly plus the `MEETING_ADVICE` strategy dict. Shared by the toolkit's meeting prep generator and the Start here action pack. Output is plain text — don't escape `$` here.
 
 ### Services (src/services/)
 

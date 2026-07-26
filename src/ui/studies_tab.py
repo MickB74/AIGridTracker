@@ -399,7 +399,7 @@ def render_studies_tab():
                     meta = " · ".join(x for x in (it["source"], it["published"]) if x)
                     st.markdown(
                         f"- [{it['title']}]({it['link']})  \n"
-                        f"  <small style='color:#888'>{meta}</small>",
+                        f"  <small style='color:#9CA6B6'>{meta}</small>",
                         unsafe_allow_html=True
                     )
         
@@ -440,7 +440,7 @@ def render_studies_tab():
                 for it in reddit_items:
                     st.markdown(
                         f"- [{it['title']}]({it['link']})  \n"
-                        f"  <small style='color:#888'>{it['meta']}</small>",
+                        f"  <small style='color:#9CA6B6'>{it['meta']}</small>",
                         unsafe_allow_html=True
                     )
             else:

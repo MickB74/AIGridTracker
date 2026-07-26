@@ -624,7 +624,7 @@ def render_news_tab():
         for it in pr_items:
             meta = " · ".join(x for x in (it["source"], it["published"]) if x)
             st.markdown(f"- [{it['title']}]({it['link']})  \n"
-                        f"  <small style='color:#888'>{meta}</small>",
+                        f"  <small style='color:#9CA6B6'>{meta}</small>",
                         unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 

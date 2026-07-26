@@ -10,6 +10,7 @@ from src.constants import (
     STATE_GRID_PROFILES, STATE_DC_DF, MORATORIUMS_DF,
     STATE_PUCS_DF, DC_SITES_DF,
 )
+from src.impact_model import estimate_facility_impact
 
 
 def render_impact_tab():
@@ -41,32 +42,17 @@ def render_impact_tab():
             help="Evaporative uses ~2 gal/kWh; dry uses ~0.02 gal/kWh; hybrid ~0.8 gal/kWh.")
     st.markdown('</div>', unsafe_allow_html=True)
 
-    prof = STATE_GRID_PROFILES[state]
-    res_rate = prof["rate"]
-    gco2 = prof["gco2"]
-    water_stress = prof["water_stress"]
-
-    pue = 1.12
-    if cooling.startswith("Dry"):
-        water_gal_per_kwh = 0.02
-        pue = 1.22
-    elif cooling.startswith("Hybrid"):
-        water_gal_per_kwh = 0.80
-        pue = 1.15
-    else:
-        water_gal_per_kwh = 2.0
-        pue = 1.12
-
-    annual_mwh = facility_mw * 8760 * pue
-    annual_twh = annual_mwh / 1e6
-    annual_water_gal = annual_mwh * 1000 * water_gal_per_kwh
-    annual_water_mgal = annual_water_gal / 1e6
-    annual_co2_t = annual_mwh * gco2 / 1e6
-    homes_equiv = annual_mwh * 1000 / 10_500
-
-    dc_rate_est = 0.05
-    annual_dc_spend = annual_mwh * 1000 * dc_rate_est / 1e9
-    rate_ratio = res_rate / dc_rate_est
+    imp = estimate_facility_impact(facility_mw, state, cooling)
+    res_rate = imp["rate"]
+    gco2 = imp["gco2"]
+    water_stress = imp["water_stress"]
+    pue = imp["pue"]
+    annual_twh = imp["annual_twh"]
+    annual_water_mgal = imp["annual_water_mgal"]
+    annual_co2_t = imp["annual_co2_t"]
+    homes_equiv = imp["homes_equiv"]
+    annual_dc_spend = imp["annual_dc_spend_busd"]
+    rate_ratio = imp["rate_ratio"]
 
     # ── Impact dashboard ───────────────────────────────────────────────── #
     st.markdown("### Projected annual impact")
@@ -208,7 +194,7 @@ def render_impact_tab():
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("### What to demand")
 
-    _data_dividend = facility_mw * 2_000_000 * 0.02
+    _data_dividend = imp["data_dividend_usd"]
     _cba_pct = 2.0
 
     st.markdown(
