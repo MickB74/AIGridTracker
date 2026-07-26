@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data center impact calculator — AI GridWatch</title>
+<meta name="description" content="Estimate the electricity, water, carbon, and rate impact of a data center in your state — free community calculator.">
+<link rel="canonical" href="https://gridwatch-ai.vercel.app/impact">
+<link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
+      href="https://gridwatch-ai.vercel.app/blog/feed.xml">
+<meta property="og:title" content="Data center impact calculator — AI GridWatch">
+<meta property="og:description" content="Estimate the electricity, water, carbon, and rate impact of a data center in your state — free community calculator.">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<style>
+:root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
+        --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
+* { box-sizing:border-box; margin:0; }
+body { background:var(--bg); color:var(--ink);
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.wrap { max-width:900px; margin:0 auto; padding:20px 20px 64px; }
+nav { display:flex; align-items:center; gap:14px; padding:14px 0;
+      border-bottom:1px solid var(--rule); flex-wrap:wrap; }
+nav img { height:34px; }
+nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+nav a:hover { color:var(--teal); }
+nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
+           font-weight:700; padding:8px 16px; border-radius:8px; }
+header { padding:44px 0 10px; }
+.kicker { color:var(--teal); font-weight:700; letter-spacing:.12em;
+          text-transform:uppercase; font-size:13px; }
+h1 { font-size:clamp(28px,5vw,44px); line-height:1.12; margin:10px 0; }
+.sub { color:var(--muted); max-width:640px; }
+.stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+         margin:30px 0; }
+@media (min-width:640px){ .stats{ grid-template-columns:repeat(4,1fr);} }
+.stat { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:16px; }
+.stat b { display:block; font-size:24px; color:var(--teal); }
+.stat span { font-size:13px; color:var(--muted); }
+section { margin:34px 0; }
+h2 { font-size:20px; color:var(--teal); margin-bottom:12px;
+     border-bottom:1px solid var(--rule); padding-bottom:8px; }
+ul { padding-left:22px; } li { margin:9px 0; }
+a { color:var(--teal); }
+.btn { display:inline-block; background:var(--teal); color:#06251f;
+       font-weight:700; padding:12px 22px; border-radius:10px;
+       text-decoration:none; margin:8px 8px 0 0; }
+.btn.ghost { background:transparent; color:var(--teal);
+             border:1px solid var(--teal); }
+.muted { color:var(--muted); font-size:14px; }
+.grid3 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid3{ grid-template-columns:repeat(3,1fr);} }
+.card { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:18px; }
+.card h3 { margin-bottom:6px; font-size:16px; }
+.panel { border-radius:14px; padding:18px; color:#fff; }
+.panel h3 { margin-bottom:8px; }
+.panel p { font-size:14px; color:rgba(255,255,255,.85); }
+.ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
+       border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
+.src { font-size:12.5px; color:var(--muted); }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+th { color:var(--muted); font-weight:600; }
+footer { margin-top:48px; border-top:1px solid var(--rule);
+         padding-top:16px; font-size:13px; color:var(--muted); }
+.statelist { columns:2; font-size:14.5px; }
+@media (min-width:640px){ .statelist{ columns:4; } }
+.statelist a { display:block; padding:3px 0; text-decoration:none; }
+.post-meta { color:var(--muted); font-size:14px; margin:8px 0 6px; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 20px; }
+.tag { background:var(--card); border:1px solid var(--rule);
+       border-radius:20px; padding:3px 11px; font-size:12px;
+       color:var(--muted); }
+.prose h3 { font-size:17px; color:var(--teal); margin:24px 0 8px; }
+.prose p { margin:10px 0; }
+.prose blockquote { border-left:3px solid var(--teal); margin:16px 0;
+                    padding:6px 16px; color:var(--muted); }
+.prose table { margin:16px 0; }
+.prose ul, .prose ol { margin:10px 0; }
+.prose hr { border:none; border-top:1px solid var(--rule); margin:24px 0; }
+.post-nav { display:flex; justify-content:space-between; gap:14px;
+            margin:32px 0 0; padding:18px 0 0;
+            border-top:1px solid var(--rule); font-size:14px; }
+.post-nav a { max-width:45%; }
+.post-nav .dir { color:var(--muted); font-size:12px; display:block; }
+.blog-list { list-style:none; padding:0; }
+.blog-list li { border-bottom:1px solid var(--rule); padding:18px 0; }
+.blog-list li:last-child { border-bottom:none; }
+.blog-list h3 { font-size:17px; margin:0 0 4px; }
+.blog-list h3 a { text-decoration:none; }
+.blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
+.badge { display:inline-block; font-size:12px; font-weight:700;
+         padding:2px 9px; border-radius:6px; }
+.badge-enacted { background:#065f46; color:#6ee7b7; }
+.badge-proposed { background:#713f12; color:#fde68a; }
+.badge-rejected { background:#7f1d1d; color:#fca5a5; }
+.badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.outcome { border-left:3px solid var(--teal); padding:10px 14px;
+           margin:10px 0; }
+.outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
+                text-transform:uppercase; letter-spacing:.08em; }
+.grid2 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
+.official { font-size:14px; }
+.official .role { color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="index.html"><img src="assets/logo.svg" alt="AI GridWatch"></a>
+  <a href="index.html">Home</a>
+  <a href="states/index.html">Your state</a>
+  <a href="health-risks.html">Health risks</a>
+  <a href="moratoriums.html">Moratoriums</a>
+  <a href="impact.html">Calculator</a>
+  <a href="companies/index.html">Companies</a>
+  <a href="blog/index.html">Blog</a>
+  <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
+</nav>
+
+<header>
+  <div class="kicker">Community calculator</div>
+  <h1>What does a data center cost your community?</h1>
+  <p class="sub">Pick a size and your state. The calculator estimates annual
+  electricity, water draw, carbon emissions, rate pressure, and the CBA
+  target your community should be negotiating — all sourced from the same
+  model the full toolkit uses.</p>
+</header>
+<section>
+  <h2>Facility size</h2>
+  <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+    <input type="range" id="mw-slider" min="10" max="500" value="100"
+           step="10" style="flex:1;min-width:200px;accent-color:var(--teal)">
+    <span id="mw-label" style="font-size:28px;font-weight:700;color:var(--teal);min-width:80px">100 MW</span>
+  </div>
+  <p class="muted" style="margin-top:6px">10 MW = small edge facility &middot;
+  100 MW = typical hyperscaler campus &middot; 500 MW = mega-project</p>
+</section>
+<section>
+  <h2>Your state</h2>
+  <select id="state-select" style="background:var(--card);color:var(--ink);
+    border:1px solid var(--rule);border-radius:8px;padding:8px 14px;
+    font-size:15px;width:100%;max-width:320px">
+    <option value="Alabama">Alabama</option>
+<option value="Alaska">Alaska</option>
+<option value="Arizona">Arizona</option>
+<option value="Arkansas">Arkansas</option>
+<option value="California">California</option>
+<option value="Colorado">Colorado</option>
+<option value="Connecticut">Connecticut</option>
+<option value="Delaware">Delaware</option>
+<option value="District of Columbia">District of Columbia</option>
+<option value="Florida">Florida</option>
+<option value="Georgia">Georgia</option>
+<option value="Hawaii">Hawaii</option>
+<option value="Idaho">Idaho</option>
+<option value="Illinois">Illinois</option>
+<option value="Indiana">Indiana</option>
+<option value="Iowa">Iowa</option>
+<option value="Kansas">Kansas</option>
+<option value="Kentucky">Kentucky</option>
+<option value="Louisiana">Louisiana</option>
+<option value="Maine">Maine</option>
+<option value="Maryland">Maryland</option>
+<option value="Massachusetts">Massachusetts</option>
+<option value="Michigan">Michigan</option>
+<option value="Minnesota">Minnesota</option>
+<option value="Mississippi">Mississippi</option>
+<option value="Missouri">Missouri</option>
+<option value="Montana">Montana</option>
+<option value="Nebraska">Nebraska</option>
+<option value="Nevada">Nevada</option>
+<option value="New Hampshire">New Hampshire</option>
+<option value="New Jersey">New Jersey</option>
+<option value="New Mexico">New Mexico</option>
+<option value="New York">New York</option>
+<option value="North Carolina">North Carolina</option>
+<option value="North Dakota">North Dakota</option>
+<option value="Ohio">Ohio</option>
+<option value="Oklahoma">Oklahoma</option>
+<option value="Oregon">Oregon</option>
+<option value="Pennsylvania">Pennsylvania</option>
+<option value="Rhode Island">Rhode Island</option>
+<option value="South Carolina">South Carolina</option>
+<option value="South Dakota">South Dakota</option>
+<option value="Tennessee">Tennessee</option>
+<option value="Texas">Texas</option>
+<option value="Utah">Utah</option>
+<option value="Vermont">Vermont</option>
+<option value="Virginia">Virginia</option>
+<option value="Washington">Washington</option>
+<option value="West Virginia">West Virginia</option>
+<option value="Wisconsin">Wisconsin</option>
+<option value="Wyoming">Wyoming</option>
+  </select>
+</section>
+<div class="stats" id="results">
+  <div class="stat"><b id="r-energy">—</b><span>annual electricity (MWh)</span></div>
+  <div class="stat"><b id="r-homes">—</b><span>homes equivalent</span></div>
+  <div class="stat"><b id="r-water">—</b><span>annual water (million gal)</span></div>
+  <div class="stat"><b id="r-co2">—</b><span>annual CO&#8322; (metric tons)</span></div>
+</div>
+<section>
+  <h2>Economic impact</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Rate pressure</h3>
+      <p>Residents pay <strong id="r-ratio">—</strong>&times; what the data
+      center pays per kWh (<span id="r-resrate">—</span> vs $0.05).</p>
+    </div>
+    <div class="card">
+      <h3>CBA target</h3>
+      <p>At 2% of estimated investment, your community should negotiate at
+      least <strong id="r-dividend">—</strong>/year in community benefits.</p>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:8px">Grid carbon:
+  <span id="r-gco2">—</span> gCO&#8322;/kWh &middot; Water stress:
+  <span id="r-stress">—</span> &middot; Cooling: evaporative (PUE 1.12)</p>
+</section>
+<section>
+  <h2>What to do with these numbers</h2>
+  <p>Print this page, or use the full toolkit to generate a complete action
+  pack — a meeting brief, comment scripts, letters to officials, and a
+  community flyer with these numbers baked in.</p>
+  <p><a class="btn" href="https://aigridtracker.streamlit.app">Generate your action pack &rarr;</a>
+  <a class="btn ghost" href="health-risks.html">The health risks, sourced</a></p>
+</section>
+<script>
+(function() {
+  var P = {"Alabama": {"rate": 0.146, "gco2": 380, "water_stress": "low"}, "Alaska": {"rate": 0.229, "gco2": 450, "water_stress": "low"}, "Arizona": {"rate": 0.139, "gco2": 390, "water_stress": "high"}, "Arkansas": {"rate": 0.124, "gco2": 410, "water_stress": "low"}, "California": {"rate": 0.285, "gco2": 210, "water_stress": "high"}, "Colorado": {"rate": 0.15, "gco2": 420, "water_stress": "medium"}, "Connecticut": {"rate": 0.268, "gco2": 200, "water_stress": "low"}, "Delaware": {"rate": 0.155, "gco2": 370, "water_stress": "low"}, "District of Columbia": {"rate": 0.158, "gco2": 340, "water_stress": "low"}, "Florida": {"rate": 0.157, "gco2": 370, "water_stress": "low"}, "Georgia": {"rate": 0.143, "gco2": 370, "water_stress": "low"}, "Hawaii": {"rate": 0.41, "gco2": 550, "water_stress": "high"}, "Idaho": {"rate": 0.112, "gco2": 120, "water_stress": "medium"}, "Illinois": {"rate": 0.154, "gco2": 310, "water_stress": "low"}, "Indiana": {"rate": 0.149, "gco2": 430, "water_stress": "low"}, "Iowa": {"rate": 0.139, "gco2": 410, "water_stress": "low"}, "Kansas": {"rate": 0.142, "gco2": 420, "water_stress": "medium"}, "Kentucky": {"rate": 0.126, "gco2": 460, "water_stress": "low"}, "Louisiana": {"rate": 0.117, "gco2": 380, "water_stress": "low"}, "Maine": {"rate": 0.228, "gco2": 180, "water_stress": "low"}, "Maryland": {"rate": 0.16, "gco2": 340, "water_stress": "low"}, "Massachusetts": {"rate": 0.28, "gco2": 280, "water_stress": "low"}, "Michigan": {"rate": 0.186, "gco2": 390, "water_stress": "low"}, "Minnesota": {"rate": 0.151, "gco2": 350, "water_stress": "low"}, "Mississippi": {"rate": 0.131, "gco2": 400, "water_stress": "low"}, "Missouri": {"rate": 0.131, "gco2": 440, "water_stress": "low"}, "Montana": {"rate": 0.125, "gco2": 340, "water_stress": "low"}, "Nebraska": {"rate": 0.121, "gco2": 420, "water_stress": "low"}, "Nevada": {"rate": 0.138, "gco2": 330, "water_stress": "high"}, "New Hampshire": {"rate": 0.243, "gco2": 190, "water_stress": "low"}, "New Jersey": {"rate": 0.187, "gco2": 250, "water_stress": "low"}, "New Mexico": {"rate": 0.143, "gco2": 410, "water_stress": "high"}, "New York": {"rate": 0.223, "gco2": 250, "water_stress": "low"}, "North Carolina": {"rate": 0.132, "gco2": 350, "water_stress": "low"}, "North Dakota": {"rate": 0.117, "gco2": 510, "water_stress": "low"}, "Ohio": {"rate": 0.144, "gco2": 420, "water_stress": "low"}, "Oklahoma": {"rate": 0.121, "gco2": 350, "water_stress": "medium"}, "Oregon": {"rate": 0.128, "gco2": 140, "water_stress": "medium"}, "Pennsylvania": {"rate": 0.171, "gco2": 310, "water_stress": "low"}, "Rhode Island": {"rate": 0.265, "gco2": 280, "water_stress": "low"}, "South Carolina": {"rate": 0.146, "gco2": 300, "water_stress": "low"}, "South Dakota": {"rate": 0.128, "gco2": 250, "water_stress": "low"}, "Tennessee": {"rate": 0.125, "gco2": 350, "water_stress": "low"}, "Texas": {"rate": 0.142, "gco2": 350, "water_stress": "medium"}, "Utah": {"rate": 0.114, "gco2": 440, "water_stress": "high"}, "Vermont": {"rate": 0.207, "gco2": 30, "water_stress": "low"}, "Virginia": {"rate": 0.142, "gco2": 330, "water_stress": "low"}, "Washington": {"rate": 0.112, "gco2": 80, "water_stress": "medium"}, "West Virginia": {"rate": 0.131, "gco2": 520, "water_stress": "low"}, "Wisconsin": {"rate": 0.162, "gco2": 380, "water_stress": "low"}, "Wyoming": {"rate": 0.111, "gco2": 460, "water_stress": "low"}};
+  var PUE = 1.12, WG = 2.0, HOME = 10500, INV = 2000000, DIV = 0.02, DCR = 0.05;
+  var slider = document.getElementById('mw-slider');
+  var label = document.getElementById('mw-label');
+  var sel = document.getElementById('state-select');
+  function fmt(n) {
+    if (n >= 1e9) return (n/1e9).toFixed(1) + 'B';
+    if (n >= 1e6) return (n/1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return Math.round(n).toLocaleString();
+    return n.toFixed(1);
+  }
+  function usd(n) {
+    if (n >= 1e9) return '$' + (n/1e9).toFixed(1) + 'B';
+    if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return '$' + Math.round(n).toLocaleString();
+    return '$' + n.toFixed(0);
+  }
+  function calc() {
+    var mw = +slider.value;
+    var st = sel.value;
+    var prof = P[st] || {rate:0.12, gco2:400, water_stress:'medium'};
+    label.textContent = mw + ' MW';
+    var kwh = mw * 8760 * PUE * 1000;
+    var mwh = kwh / 1000;
+    document.getElementById('r-energy').textContent = fmt(mwh);
+    document.getElementById('r-homes').textContent = fmt(kwh / HOME);
+    document.getElementById('r-water').textContent = (kwh * WG / 1e6).toFixed(1);
+    document.getElementById('r-co2').textContent = fmt(mwh * prof.gco2 / 1e6);
+    document.getElementById('r-ratio').textContent = (prof.rate / DCR).toFixed(1);
+    document.getElementById('r-resrate').textContent = '$' + prof.rate.toFixed(3);
+    document.getElementById('r-dividend').textContent = usd(mw * INV * DIV);
+    document.getElementById('r-gco2').textContent = prof.gco2;
+    document.getElementById('r-stress').textContent = prof.water_stress;
+  }
+  slider.addEventListener('input', calc);
+  sel.addEventListener('change', calc);
+  calc();
+})();
+</script>
+
+<footer>
+  <a href="about.html">About</a> · <a href="search.html">Search</a>
+  · <a href="dividend.html">Data dividend calculator</a>
+  <br>AI GridWatch — community energy intelligence. Planning estimates, not
+  engineering studies; every number is sourced in the
+  <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.
+</footer>
+</div>
+</body>
+</html>

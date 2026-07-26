@@ -3,8 +3,13 @@ Static-site generator for the public front door (Vercel).
 
 Renders web/ from the same registries the Streamlit app uses:
   - index.html            landing page
-  - states/<slug>.html    51 SEO-indexable state one-pagers
+  - states/<slug>.html    51 enriched state one-pagers (PUC, moratoriums,
+                          DC sites, officials, CBA wins, case studies, muni league)
   - health-risks.html     sourced health-risks page (mirrors the infographic)
+  - moratoriums.html       moratorium tracker + case study outcomes
+  - impact.html           client-side impact calculator (JS, embedded coefficients)
+  - blog/index.html       blog index (all posts, newest first)
+  - blog/<slug>.html      individual blog post pages with prev/next nav
   - assets/               logo + downloadable health-risks PDF
   - sitemap.xml, robots.txt, vercel.json (cleanUrls)
 
@@ -21,9 +26,17 @@ import os
 import pathlib
 import shutil
 
+import markdown
+
+from src.blog_content import BLOG_STORIES, ABOUT_SECTION
 from src.constants import (
     STATE_GRID_PROFILES, STATE_DC_DF, STATE_PUCS_DF, MORATORIUMS_DF,
-    HEALTH_RISKS, CBA_BENCHMARKS, SOURCES,
+    MORATORIUM_OUTCOMES, HEALTH_RISKS, CBA_BENCHMARKS, COMPANY_CONCESSIONS,
+    DC_SITES_DF, LOCAL_OFFICIALS_DF, LOCAL_BODIES_DF, STATE_MUNI_LEAGUES,
+    OPERATORS_DF, EXECUTIVES_DF,
+    GOOGLE_2025_HEADLINE, META_2024_HEADLINE,
+    MICROSOFT_ENV_HEADLINE, AWS_ENV_HEADLINE,
+    SOURCES,
 )
 from src.pdf_pack import build_health_pdf
 
@@ -34,6 +47,8 @@ ROOT = pathlib.Path(__file__).resolve().parent
 WEB = ROOT / "web"
 
 esc = html.escape
+
+_ABBREV = dict(zip(STATE_PUCS_DF["state"], STATE_PUCS_DF["abbrev"]))
 
 
 def slugify(state):
@@ -96,10 +111,48 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .statelist { columns:2; font-size:14.5px; }
 @media (min-width:640px){ .statelist{ columns:4; } }
 .statelist a { display:block; padding:3px 0; text-decoration:none; }
+.post-meta { color:var(--muted); font-size:14px; margin:8px 0 6px; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 20px; }
+.tag { background:var(--card); border:1px solid var(--rule);
+       border-radius:20px; padding:3px 11px; font-size:12px;
+       color:var(--muted); }
+.prose h3 { font-size:17px; color:var(--teal); margin:24px 0 8px; }
+.prose p { margin:10px 0; }
+.prose blockquote { border-left:3px solid var(--teal); margin:16px 0;
+                    padding:6px 16px; color:var(--muted); }
+.prose table { margin:16px 0; }
+.prose ul, .prose ol { margin:10px 0; }
+.prose hr { border:none; border-top:1px solid var(--rule); margin:24px 0; }
+.post-nav { display:flex; justify-content:space-between; gap:14px;
+            margin:32px 0 0; padding:18px 0 0;
+            border-top:1px solid var(--rule); font-size:14px; }
+.post-nav a { max-width:45%; }
+.post-nav .dir { color:var(--muted); font-size:12px; display:block; }
+.blog-list { list-style:none; padding:0; }
+.blog-list li { border-bottom:1px solid var(--rule); padding:18px 0; }
+.blog-list li:last-child { border-bottom:none; }
+.blog-list h3 { font-size:17px; margin:0 0 4px; }
+.blog-list h3 a { text-decoration:none; }
+.blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
+.badge { display:inline-block; font-size:12px; font-weight:700;
+         padding:2px 9px; border-radius:6px; }
+.badge-enacted { background:#065f46; color:#6ee7b7; }
+.badge-proposed { background:#713f12; color:#fde68a; }
+.badge-rejected { background:#7f1d1d; color:#fca5a5; }
+.badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.outcome { border-left:3px solid var(--teal); padding:10px 14px;
+           margin:10px 0; }
+.outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
+                text-transform:uppercase; letter-spacing:.08em; }
+.grid2 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
+.official { font-size:14px; }
+.official .role { color:var(--muted); font-size:13px; }
 """
 
 
-def page(title, description, body, canonical, depth=0):
+def page(title, description, body, canonical, depth=0,
+         og_type="website", og_extra=""):
     p = "../" * depth
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -109,9 +162,12 @@ def page(title, description, body, canonical, depth=0):
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
 <link rel="canonical" href="{canonical}">
+<link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
+      href="{SITE_URL}/blog/feed.xml">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{og_type}">
+{og_extra}
 <link rel="icon" href="{p}assets/logo.svg" type="image/svg+xml">
 <style>{CSS}</style>
 </head>
@@ -122,11 +178,17 @@ def page(title, description, body, canonical, depth=0):
   <a href="{p}index.html">Home</a>
   <a href="{p}states/index.html">Your state</a>
   <a href="{p}health-risks.html">Health risks</a>
+  <a href="{p}moratoriums.html">Moratoriums</a>
+  <a href="{p}impact.html">Calculator</a>
+  <a href="{p}companies/index.html">Companies</a>
+  <a href="{p}blog/index.html">Blog</a>
   <a class="cta" href="{APP_URL}">Open the toolkit &rarr;</a>
 </nav>
 {body}
 <footer>
-  AI GridWatch — community energy intelligence. Planning estimates, not
+  <a href="{p}about.html">About</a> · <a href="{p}search.html">Search</a>
+  · <a href="{p}dividend.html">Data dividend calculator</a>
+  <br>AI GridWatch — community energy intelligence. Planning estimates, not
   engineering studies; every number is sourced in the
   <a href="{APP_URL}">full toolkit</a>. Built from public data.
 </footer>
@@ -189,6 +251,20 @@ def build_index():
   approval. Timing is the leverage.</p>
 </section>
 <section>
+  <h2>Latest from the blog</h2>
+  <div class="grid3">
+    {"".join(
+        f'<div class="card"><p class="muted" style="margin-bottom:4px">'
+        f'{s["date"].strftime("%b %-d")}</p>'
+        f'<h3><a href="blog/{s["id"]}.html">'
+        f'{esc(s["title"].replace(chr(92) + "$", "$"))}</a></h3></div>'
+        for s in _sorted_posts()[:3]
+    )}
+  </div>
+  <p class="muted" style="margin-top:10px">
+    <a href="blog/index.html">All posts &rarr;</a></p>
+</section>
+<section>
   <h2>Find your state</h2>
   <div class="statelist">{states_links}</div>
 </section>
@@ -200,13 +276,18 @@ def build_index():
         body, f"{SITE_URL}/")
 
 
+def _status_badge(status):
+    cls = f"badge-{status.lower().replace(' ', '-')}"
+    return f'<span class="badge {cls}">{esc(status)}</span>'
+
+
 def build_state(state):
     prof = STATE_GRID_PROFILES[state]
     row = STATE_DC_DF[STATE_DC_DF["state"] == state]
     dc_count = int(row.iloc[0]["dc_count"]) if not row.empty else 0
     twh = row.iloc[0]["twh_year"] if not row.empty else 0.0
     puc_row = STATE_PUCS_DF[STATE_PUCS_DF["state"] == state]
-    abbrev = puc_row.iloc[0]["abbrev"] if not puc_row.empty else ""
+    abbrev = _ABBREV.get(state, "")
     moras = MORATORIUMS_DF[MORATORIUMS_DF["state"] == abbrev]
 
     puc_html = ""
@@ -223,12 +304,94 @@ def build_state(state):
     if not moras.empty:
         rows = "\n".join(
             f"<tr><td>{esc(str(m.locality))}</td><td>{esc(str(m.level))}</td>"
-            f"<td>{esc(str(m.status))}</td><td>{esc(str(m.note))}</td></tr>"
+            f"<td>{_status_badge(str(m.status))}</td>"
+            f"<td>{esc(str(m.note))}</td></tr>"
             for m in moras.itertuples())
         mora_html = (
             f'<section><h2>Pushback already happening in {esc(state)}</h2>'
             f'<table><tr><th>Where</th><th>Level</th><th>Status</th>'
             f'<th>Note</th></tr>{rows}</table></section>')
+
+    # DC sites in this state
+    sites = DC_SITES_DF[DC_SITES_DF["state"] == abbrev]
+    sites_html = ""
+    if not sites.empty:
+        site_rows = "\n".join(
+            f"<tr><td>{esc(str(s.operator))}</td>"
+            f"<td>{esc(str(s.location))}</td>"
+            f"<td>{esc(str(s.tenant)) if str(s.tenant) != 'nan' else '—'}</td>"
+            f"<td>{esc(str(s.filing_llc)) if str(s.filing_llc) != 'nan' else '—'}</td></tr>"
+            for s in sites.itertuples())
+        sites_html = (
+            f'<section><h2>Known data center campuses in {esc(state)}</h2>'
+            f'<table><tr><th>Operator</th><th>Location</th>'
+            f'<th>Tenant</th><th>Filing LLC</th></tr>'
+            f'{site_rows}</table></section>')
+
+    # CBA benchmarks for this state
+    state_cbas = [b for b in CBA_BENCHMARKS if b["state"] == abbrev]
+    cba_html = ""
+    if state_cbas:
+        items = "\n".join(
+            f"<li><strong>{esc(b['community'])}</strong> ({esc(b['company'])}) "
+            f"— {esc(b['won'])}</li>"
+            for b in state_cbas)
+        cba_html = (
+            f'<section><h2>What communities in {esc(state)} have won</h2>'
+            f'<ul>{items}</ul></section>')
+
+    # Moratorium outcomes / case studies for this state
+    state_outcomes = [o for o in MORATORIUM_OUTCOMES if o["state"] == abbrev]
+    outcome_html = ""
+    if state_outcomes:
+        cards = "\n".join(
+            f'<div class="outcome"><div class="cat">{esc(o["category"])}</div>'
+            f'<p><strong>{esc(o["locality"])}</strong> — '
+            f'{esc(o["headline"])}</p>'
+            f'<p class="muted">{esc(o["outcome"])}</p></div>'
+            for o in state_outcomes)
+        outcome_html = (
+            f'<section><h2>Case studies</h2>{cards}</section>')
+
+    # Local officials (curated, only for covered localities)
+    officials = LOCAL_OFFICIALS_DF[LOCAL_OFFICIALS_DF["state"] == abbrev]
+    bodies = LOCAL_BODIES_DF[LOCAL_BODIES_DF["state"] == abbrev]
+    officials_html = ""
+    if not officials.empty:
+        for _, b in bodies.iterrows():
+            loc = b["locality"]
+            loc_officials = officials[officials["locality"] == loc]
+            people = "\n".join(
+                f'<div class="official"><strong>{esc(o["name"])}</strong>'
+                f'<span class="role"> — {esc(o["role"])}'
+                f'{", " + esc(o["district"]) if o.get("district") else ""}'
+                f'</span></div>'
+                for _, o in loc_officials.iterrows())
+            comment = (f'<p class="muted">Public comment: '
+                       f'{esc(b["comment_process"])}</p>'
+                       if b.get("comment_process") else "")
+            meets = (f'<p class="muted">Meets: {esc(b["meets"])}'
+                     f'{" · " + esc(b["where"]) if b.get("where") else ""}'
+                     f'</p>' if b.get("meets") else "")
+            agenda = (f'<p class="muted"><a href="{esc(b["agenda_url"])}">'
+                      f'Agendas &amp; minutes</a></p>'
+                      if b.get("agenda_url") else "")
+            officials_html += (
+                f'<section><h2>{esc(loc)} — {esc(b["body"])}</h2>'
+                f'<div class="grid2">{people}</div>'
+                f'{meets}{comment}{agenda}'
+                f'<p class="src">Source: <a href="{esc(b["source"])}">'
+                f'{esc(b["source"][:60])}</a> · as of {b["as_of"]}</p>'
+                f'</section>')
+
+    # Municipal league
+    muni = STATE_MUNI_LEAGUES.get(abbrev)
+    muni_html = ""
+    if muni:
+        muni_html = (
+            f'<p class="muted" style="margin-top:16px">'
+            f'State municipal league: '
+            f'<a href="{esc(muni[1])}">{esc(muni[0])}</a></p>')
 
     body = f"""
 <header>
@@ -245,6 +408,11 @@ def build_state(state):
 </div>
 {puc_html}
 {mora_html}
+{outcome_html}
+{sites_html}
+{cba_html}
+{officials_html}
+{muni_html}
 <section>
   <h2>A data center was proposed near you?</h2>
   <p>The free toolkit walks you through it in five steps: who's really
@@ -323,6 +491,743 @@ def build_health():
         body, f"{SITE_URL}/health-risks")
 
 
+def _md_to_html(text):
+    """Convert markdown body to HTML, stripping Streamlit LaTeX escapes."""
+    text = text.replace("\\$", "$")
+    md = markdown.Markdown(extensions=["tables"])
+    return md.convert(text)
+
+
+def _sorted_posts():
+    return sorted(BLOG_STORIES, key=lambda s: s["date"], reverse=True)
+
+
+def build_blog_index():
+    posts = _sorted_posts()
+    items = ""
+    for s in posts:
+        title_clean = s["title"].replace("\\$", "$")
+        summary_clean = s["summary"].replace("\\$", "$")
+        items += (
+            f'<li><div class="post-meta">{s["date"].strftime("%b %-d, %Y")}'
+            f"</div>"
+            f'<h3><a href="{s["id"]}.html">{esc(title_clean)}</a></h3>'
+            f'<p class="summary">{esc(summary_clean)}</p></li>\n'
+        )
+    body = f"""
+<header>
+  <div class="kicker">Blog</div>
+  <h1>Analysis &amp; explainers</h1>
+  <p class="sub">Deep dives on the forces shaping data center development —
+  capacity markets, moratoriums, corporate strategy, and the numbers behind
+  your electric bill.</p>
+</header>
+<section>
+  <ul class="blog-list">{items}</ul>
+</section>
+"""
+    return page(
+        "Blog — AI GridWatch",
+        "Analysis and explainers on data center development, grid impact, "
+        "and community advocacy from AI GridWatch.",
+        body, f"{SITE_URL}/blog/", depth=1)
+
+
+def build_blog_post(story, prev_post, next_post):
+    title_clean = story["title"].replace("\\$", "$")
+    summary_clean = story["summary"].replace("\\$", "$")
+    body_html = _md_to_html(story["body"])
+    tags_html = " ".join(
+        f'<span class="tag">{esc(t)}</span>' for t in story.get("tags", []))
+
+    nav = '<div class="post-nav">'
+    if prev_post:
+        prev_title = prev_post["title"].replace("\\$", "$")
+        nav += (f'<a href="{prev_post["id"]}.html">'
+                f'<span class="dir">&larr; Previous</span>'
+                f'{esc(prev_title)}</a>')
+    else:
+        nav += "<span></span>"
+    if next_post:
+        next_title = next_post["title"].replace("\\$", "$")
+        nav += (f'<a href="{next_post["id"]}.html" style="text-align:right">'
+                f'<span class="dir">Next &rarr;</span>'
+                f'{esc(next_title)}</a>')
+    else:
+        nav += "<span></span>"
+    nav += "</div>"
+
+    body = f"""
+<header>
+  <div class="kicker">Blog</div>
+  <h1>{esc(title_clean)}</h1>
+  <div class="post-meta">{story["date"].strftime("%b %-d, %Y")}
+  &middot; {esc(story["author"])}</div>
+  <div class="tags">{tags_html}</div>
+  <p class="sub">{esc(summary_clean)}</p>
+</header>
+<section class="prose">
+  {body_html}
+</section>
+{nav}
+"""
+    og_extra = (
+        f'<meta property="article:published_time" '
+        f'content="{story["date"].isoformat()}">\n'
+        f'<meta property="article:author" content="{esc(story["author"])}">')
+    return page(
+        f"{title_clean} — AI GridWatch",
+        summary_clean,
+        body, f"{SITE_URL}/blog/{story['id']}", depth=1,
+        og_type="article", og_extra=og_extra)
+
+
+def build_impact_calculator():
+    import json
+    profiles_json = json.dumps(
+        {s: STATE_GRID_PROFILES[s] for s in sorted(STATE_GRID_PROFILES)})
+
+    state_options = "\n".join(
+        f'<option value="{esc(s)}">{esc(s)}</option>'
+        for s in sorted(STATE_GRID_PROFILES))
+
+    body = f"""
+<header>
+  <div class="kicker">Community calculator</div>
+  <h1>What does a data center cost your community?</h1>
+  <p class="sub">Pick a size and your state. The calculator estimates annual
+  electricity, water draw, carbon emissions, rate pressure, and the CBA
+  target your community should be negotiating — all sourced from the same
+  model the full toolkit uses.</p>
+</header>
+<section>
+  <h2>Facility size</h2>
+  <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+    <input type="range" id="mw-slider" min="10" max="500" value="100"
+           step="10" style="flex:1;min-width:200px;accent-color:var(--teal)">
+    <span id="mw-label" style="font-size:28px;font-weight:700;color:var(--teal);min-width:80px">100 MW</span>
+  </div>
+  <p class="muted" style="margin-top:6px">10 MW = small edge facility &middot;
+  100 MW = typical hyperscaler campus &middot; 500 MW = mega-project</p>
+</section>
+<section>
+  <h2>Your state</h2>
+  <select id="state-select" style="background:var(--card);color:var(--ink);
+    border:1px solid var(--rule);border-radius:8px;padding:8px 14px;
+    font-size:15px;width:100%;max-width:320px">
+    {state_options}
+  </select>
+</section>
+<div class="stats" id="results">
+  <div class="stat"><b id="r-energy">—</b><span>annual electricity (MWh)</span></div>
+  <div class="stat"><b id="r-homes">—</b><span>homes equivalent</span></div>
+  <div class="stat"><b id="r-water">—</b><span>annual water (million gal)</span></div>
+  <div class="stat"><b id="r-co2">—</b><span>annual CO&#8322; (metric tons)</span></div>
+</div>
+<section>
+  <h2>Economic impact</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Rate pressure</h3>
+      <p>Residents pay <strong id="r-ratio">—</strong>&times; what the data
+      center pays per kWh (<span id="r-resrate">—</span> vs $0.05).</p>
+    </div>
+    <div class="card">
+      <h3>CBA target</h3>
+      <p>At 2% of estimated investment, your community should negotiate at
+      least <strong id="r-dividend">—</strong>/year in community benefits.</p>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:8px">Grid carbon:
+  <span id="r-gco2">—</span> gCO&#8322;/kWh &middot; Water stress:
+  <span id="r-stress">—</span> &middot; Cooling: evaporative (PUE 1.12)</p>
+</section>
+<section>
+  <h2>What to do with these numbers</h2>
+  <p>Print this page, or use the full toolkit to generate a complete action
+  pack — a meeting brief, comment scripts, letters to officials, and a
+  community flyer with these numbers baked in.</p>
+  <p><a class="btn" href="{APP_URL}">Generate your action pack &rarr;</a>
+  <a class="btn ghost" href="health-risks.html">The health risks, sourced</a></p>
+</section>
+<script>
+(function() {{
+  var P = {profiles_json};
+  var PUE = 1.12, WG = 2.0, HOME = 10500, INV = 2000000, DIV = 0.02, DCR = 0.05;
+  var slider = document.getElementById('mw-slider');
+  var label = document.getElementById('mw-label');
+  var sel = document.getElementById('state-select');
+  function fmt(n) {{
+    if (n >= 1e9) return (n/1e9).toFixed(1) + 'B';
+    if (n >= 1e6) return (n/1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return Math.round(n).toLocaleString();
+    return n.toFixed(1);
+  }}
+  function usd(n) {{
+    if (n >= 1e9) return '$' + (n/1e9).toFixed(1) + 'B';
+    if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return '$' + Math.round(n).toLocaleString();
+    return '$' + n.toFixed(0);
+  }}
+  function calc() {{
+    var mw = +slider.value;
+    var st = sel.value;
+    var prof = P[st] || {{rate:0.12, gco2:400, water_stress:'medium'}};
+    label.textContent = mw + ' MW';
+    var kwh = mw * 8760 * PUE * 1000;
+    var mwh = kwh / 1000;
+    document.getElementById('r-energy').textContent = fmt(mwh);
+    document.getElementById('r-homes').textContent = fmt(kwh / HOME);
+    document.getElementById('r-water').textContent = (kwh * WG / 1e6).toFixed(1);
+    document.getElementById('r-co2').textContent = fmt(mwh * prof.gco2 / 1e6);
+    document.getElementById('r-ratio').textContent = (prof.rate / DCR).toFixed(1);
+    document.getElementById('r-resrate').textContent = '$' + prof.rate.toFixed(3);
+    document.getElementById('r-dividend').textContent = usd(mw * INV * DIV);
+    document.getElementById('r-gco2').textContent = prof.gco2;
+    document.getElementById('r-stress').textContent = prof.water_stress;
+  }}
+  slider.addEventListener('input', calc);
+  sel.addEventListener('change', calc);
+  calc();
+}})();
+</script>
+"""
+    return page(
+        "Data center impact calculator — AI GridWatch",
+        "Estimate the electricity, water, carbon, and rate impact of a "
+        "data center in your state — free community calculator.",
+        body, f"{SITE_URL}/impact")
+
+
+def build_moratoriums():
+    total = len(MORATORIUMS_DF)
+    n_states = MORATORIUMS_DF["state"].nunique()
+    enacted = len(MORATORIUMS_DF[MORATORIUMS_DF["status"] == "Enacted"])
+    proposed = len(MORATORIUMS_DF[MORATORIUMS_DF["status"] == "Proposed"])
+
+    rows = "\n".join(
+        f"<tr><td>{esc(str(m.locality))}</td>"
+        f"<td><a href=\"states/{slugify(STATE_PUCS_DF[STATE_PUCS_DF['abbrev'] == m.state].iloc[0]['state'])}.html\">"
+        f"{esc(str(m.state))}</a></td>"
+        f"<td>{esc(str(m.level))}</td>"
+        f"<td>{_status_badge(str(m.status))}</td>"
+        f"<td>{esc(str(m.when))}</td>"
+        f"<td>{esc(str(m.note))}</td></tr>"
+        for m in MORATORIUMS_DF.itertuples())
+
+    outcomes = "\n".join(
+        f'<div class="outcome"><div class="cat">{esc(o["category"])}</div>'
+        f'<p><strong>{esc(o["locality"])}, {esc(o["state"])}</strong> — '
+        f'{esc(o["headline"])}</p>'
+        f'<p class="muted">{esc(o["outcome"])}</p></div>'
+        for o in MORATORIUM_OUTCOMES)
+
+    body = f"""
+<header>
+  <div class="kicker">Community tracker</div>
+  <h1>Data center moratoriums &amp; pushback</h1>
+  <p class="sub">Every community that pressed pause on data center
+  development — bans, moratoria, zoning fights, and the outcomes.
+  Updated as new actions are reported.</p>
+</header>
+<div class="stats">
+  <div class="stat"><b>{total}</b><span>tracked actions</span></div>
+  <div class="stat"><b>{n_states}</b><span>states</span></div>
+  <div class="stat"><b>{enacted}</b><span>enacted</span></div>
+  <div class="stat"><b>{proposed}</b><span>proposed or pending</span></div>
+</div>
+<section>
+  <h2>All tracked moratoriums</h2>
+  <div style="overflow-x:auto">
+  <table><tr><th>Locality</th><th>State</th><th>Level</th>
+  <th>Status</th><th>When</th><th>Note</th></tr>
+  {rows}</table>
+  </div>
+  <p class="muted" style="margin-top:10px">See the full interactive map and
+  filters in the <a href="{APP_URL}">GridWatch toolkit</a>.</p>
+</section>
+<section>
+  <h2>What happened next: case studies</h2>
+  <p class="muted" style="margin-bottom:14px">Six communities that took
+  action — what they won, what they lost, and what changed.</p>
+  {outcomes}
+</section>
+<section>
+  <h2>Your community is next?</h2>
+  <p>The toolkit generates a full action pack — impact numbers, CBA targets,
+  meeting scripts, and letters — customized for your state and situation.</p>
+  <p><a class="btn" href="{APP_URL}">Start here &rarr;</a>
+  <a class="btn ghost" href="health-risks.html">The health risks, sourced</a></p>
+</section>
+"""
+    return page(
+        "Data center moratoriums & community pushback — AI GridWatch",
+        f"{total} data center moratoriums and community actions tracked "
+        f"across {n_states} states, with case study outcomes.",
+        body, f"{SITE_URL}/moratoriums")
+
+
+_HYPERSCALERS = [
+    {
+        "slug": "google", "name": "Google", "report": "FY2025",
+        "d": GOOGLE_2025_HEADLINE,
+        "twh": GOOGLE_2025_HEADLINE["dc_twh"],
+        "pue": GOOGLE_2025_HEADLINE["fleet_pue"],
+        "scope2_loc": GOOGLE_2025_HEADLINE["scope2_location_tco2e"],
+        "scope2_mkt": GOOGLE_2025_HEADLINE["scope2_market_tco2e"],
+        "water_mgal": GOOGLE_2025_HEADLINE["water_consumption_mgal"],
+        "renewable": "65% CFE",
+        "water_note": f'{GOOGLE_2025_HEADLINE["water_replenished_pct"]}% replenished',
+        "extra": [
+            ("YoY electricity growth", f'+{GOOGLE_2025_HEADLINE["yoy_electricity_growth_pct"]}%'),
+            ("Clean energy signed", f'{GOOGLE_2025_HEADLINE["clean_energy_gw_signed"]} GW'),
+            ("Avoided emissions", f'{GOOGLE_2025_HEADLINE["avoided_tco2e_m"]}M tCO2e'),
+            ("Gemini efficiency", f'{GOOGLE_2025_HEADLINE["gemini_energy_improvement_x"]}x vs 2019 model'),
+        ],
+    },
+    {
+        "slug": "meta", "name": "Meta", "report": "FY2024",
+        "d": META_2024_HEADLINE,
+        "twh": META_2024_HEADLINE["dc_twh"],
+        "pue": META_2024_HEADLINE["fleet_pue"],
+        "scope2_loc": META_2024_HEADLINE["scope2_location_tco2e"],
+        "scope2_mkt": META_2024_HEADLINE["scope2_market_tco2e"],
+        "water_mgal": round(META_2024_HEADLINE["water_consumption_ml"] * 0.264172),
+        "renewable": f'{META_2024_HEADLINE["renewable_match_pct"]}% renewable',
+        "water_note": f'{round(META_2024_HEADLINE["water_restoration_ml"] * 0.264172):,} Mgal restored',
+        "extra": [
+            ("Fleet WUE", f'{META_2024_HEADLINE["fleet_wue"]} L/kWh'),
+            ("LEED Gold", f'{META_2024_HEADLINE["leed_gold_pct"]}% of campuses'),
+            ("Scope 3", f'{META_2024_HEADLINE["scope3_tco2e"]:,} tCO2e'),
+        ],
+    },
+    {
+        "slug": "microsoft", "name": "Microsoft", "report": "FY2025",
+        "d": MICROSOFT_ENV_HEADLINE,
+        "twh": MICROSOFT_ENV_HEADLINE["dc_twh"],
+        "pue": MICROSOFT_ENV_HEADLINE["pue"],
+        "scope2_loc": int(MICROSOFT_ENV_HEADLINE["scope2_location_mt"] * 1e6),
+        "scope2_mkt": int(MICROSOFT_ENV_HEADLINE["scope2_market_mt"] * 1e6),
+        "water_mgal": MICROSOFT_ENV_HEADLINE["water_consumption_mgal"],
+        "renewable": f'{MICROSOFT_ENV_HEADLINE["renewable_pct"]}% renewable',
+        "water_note": f'{MICROSOFT_ENV_HEADLINE["water_replenish_pct"]}% replenished',
+        "est": True,
+        "extra": [
+            ("Total emissions", f'{MICROSOFT_ENV_HEADLINE["total_emissions_mt"]:.1f} Mt CO2e'),
+            ("YoY emissions growth", f'+{MICROSOFT_ENV_HEADLINE["yoy_emissions_growth_pct"]}%'),
+        ],
+        "notes": MICROSOFT_ENV_HEADLINE.get("notes", ""),
+    },
+    {
+        "slug": "aws", "name": "Amazon (AWS)", "report": "CY2025",
+        "d": AWS_ENV_HEADLINE,
+        "twh": AWS_ENV_HEADLINE["dc_twh"],
+        "pue": AWS_ENV_HEADLINE["pue"],
+        "scope2_loc": int(AWS_ENV_HEADLINE["scope2_location_mt"] * 1e6),
+        "scope2_mkt": int(AWS_ENV_HEADLINE["scope2_market_mt"] * 1e6),
+        "water_mgal": AWS_ENV_HEADLINE["water_consumption_mgal"],
+        "renewable": f'{AWS_ENV_HEADLINE["renewable_pct"]}% renewable',
+        "water_note": f'{AWS_ENV_HEADLINE["water_replenish_pct"]}% toward water-positive',
+        "est": True,
+        "extra": [
+            ("Total Amazon emissions", f'{AWS_ENV_HEADLINE["total_emissions_mt"]:.1f} Mt CO2e'),
+            ("YoY emissions growth", f'+{AWS_ENV_HEADLINE["yoy_emissions_growth_pct"]}%'),
+        ],
+        "notes": AWS_ENV_HEADLINE.get("notes", ""),
+    },
+]
+
+
+def _fmt_co2(t):
+    if t >= 1e6:
+        return f"{t / 1e6:.1f}M"
+    if t >= 1e3:
+        return f"{t / 1e3:.0f}K"
+    return f"{t:,.0f}"
+
+
+def build_scorecards_index():
+    cards = ""
+    for h in _HYPERSCALERS:
+        est = " (est.)" if h.get("est") else ""
+        cards += (
+            f'<a href="{h["slug"]}.html" class="card" '
+            f'style="text-decoration:none;display:block">'
+            f'<h3>{esc(h["name"])}</h3>'
+            f'<p class="muted">{h["report"]} · {h["twh"]} TWh{est} · '
+            f'PUE {h["pue"]}</p></a>\n')
+    body = f"""
+<header>
+  <div class="kicker">Corporate scorecards</div>
+  <h1>Hyperscaler environmental reports</h1>
+  <p class="sub">Side-by-side environmental data from the four largest data
+  center operators — electricity, carbon, water, and what the numbers actually
+  mean when you strip out the RECs.</p>
+</header>
+<section>
+  <h2>Comparison</h2>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th></th><th>DC TWh</th><th>PUE</th><th>Scope 2 (location)</th>
+    <th>Scope 2 (market)</th><th>Water (Mgal)</th><th>Renewable</th></tr>
+    {"".join(
+        f'<tr><td><a href="{h["slug"]}.html">'
+        f'{esc(h["name"])}</a></td>'
+        f'<td>{h["twh"]}{"*" if h.get("est") else ""}</td>'
+        f'<td>{h["pue"]}</td>'
+        f'<td>{_fmt_co2(h["scope2_loc"])}</td>'
+        f'<td>{_fmt_co2(h["scope2_mkt"])}</td>'
+        f'<td>{h["water_mgal"]:,}</td>'
+        f'<td>{esc(h["renewable"])}</td></tr>'
+        for h in _HYPERSCALERS
+    )}
+  </table>
+  </div>
+  <p class="muted" style="margin-top:6px">* DC-only TWh and location-based
+  Scope 2 are estimates derived from reported growth rates; these companies
+  do not break out data-center-only electricity.</p>
+</section>
+<section>
+  <h2>Individual profiles</h2>
+  <div class="grid2">{cards}</div>
+</section>
+"""
+    return page(
+        "Hyperscaler environmental scorecards — AI GridWatch",
+        "Side-by-side environmental data for Google, Meta, Microsoft, and "
+        "AWS: electricity, carbon, water, and renewable claims.",
+        body, f"{SITE_URL}/companies/", depth=1)
+
+
+def build_scorecard(h):
+    est = " (est.)" if h.get("est") else ""
+    extras = "\n".join(
+        f'<tr><td>{esc(k)}</td><td><strong>{esc(v)}</strong></td></tr>'
+        for k, v in h.get("extra", []))
+    notes_html = ""
+    if h.get("notes"):
+        notes_html = (
+            f'<div class="ask" style="margin-top:18px">'
+            f'<strong>Methodology note:</strong> {esc(h["notes"])}</div>')
+
+    concessions = COMPANY_CONCESSIONS.get(h["name"].split(" (")[0], {})
+    concession_html = ""
+    if concessions.get("concessions"):
+        rows = "\n".join(
+            f'<tr><td>{esc(c["where"])}</td><td>{esc(c["year"])}</td>'
+            f'<td>{esc(c["what"])}</td></tr>'
+            for c in concessions["concessions"])
+        concession_html = (
+            f'<section><h2>What communities have won from {esc(h["name"])}</h2>'
+            f'<p class="muted" style="margin-bottom:10px">'
+            f'{esc(concessions.get("pattern", ""))}</p>'
+            f'<table><tr><th>Where</th><th>Year</th><th>What</th></tr>'
+            f'{rows}</table></section>')
+
+    body = f"""
+<header>
+  <div class="kicker">Corporate scorecard</div>
+  <h1>{esc(h['name'])} environmental profile</h1>
+  <p class="sub">Key environmental metrics from the {esc(h['report'])}
+  sustainability report. Numbers communities cite at hearings.</p>
+</header>
+<div class="stats">
+  <div class="stat"><b>{h['twh']} TWh{est}</b><span>data center electricity</span></div>
+  <div class="stat"><b>{h['pue']}</b><span>fleet PUE</span></div>
+  <div class="stat"><b>{_fmt_co2(h['scope2_loc'])}</b><span>Scope 2 (location) tCO2e</span></div>
+  <div class="stat"><b>{h['water_mgal']:,}</b><span>water consumption (Mgal)</span></div>
+</div>
+<section>
+  <h2>Key metrics</h2>
+  <table>
+    <tr><td>Scope 2 (market-based)</td><td><strong>{_fmt_co2(h['scope2_mkt'])} tCO2e</strong></td></tr>
+    <tr><td>Renewable / CFE claim</td><td><strong>{esc(h['renewable'])}</strong></td></tr>
+    <tr><td>Water stewardship</td><td><strong>{esc(h['water_note'])}</strong></td></tr>
+    {extras}
+  </table>
+  {notes_html}
+</section>
+{concession_html}
+<section>
+  <h2>What this means for your community</h2>
+  <p>The gap between <strong>market-based</strong> and
+  <strong>location-based</strong> Scope 2 emissions shows how much carbon
+  the grid actually emits vs. what the company claims after buying renewable
+  energy certificates (RECs). A large gap means the facility runs on fossil
+  power but papers it over with certificates — your community breathes the
+  actual emissions.</p>
+  <p><a class="btn" href="{APP_URL}">Run the numbers for your community &rarr;</a>
+  <a class="btn ghost" href="../companies/index.html">All scorecards</a></p>
+</section>
+"""
+    return page(
+        f"{h['name']} environmental scorecard — AI GridWatch",
+        f"Environmental data for {h['name']}: {h['twh']} TWh, PUE "
+        f"{h['pue']}, water and carbon metrics from {h['report']}.",
+        body, f"{SITE_URL}/companies/{h['slug']}", depth=1)
+
+
+def build_rss():
+    posts = _sorted_posts()[:20]
+    items = ""
+    for s in posts:
+        title_clean = s["title"].replace("\\$", "$")
+        summary_clean = s["summary"].replace("\\$", "$")
+        items += f"""    <item>
+      <title>{esc(title_clean)}</title>
+      <link>{SITE_URL}/blog/{s['id']}</link>
+      <guid>{SITE_URL}/blog/{s['id']}</guid>
+      <pubDate>{s['date'].strftime('%a, %d %b %Y')} 00:00:00 GMT</pubDate>
+      <description>{esc(summary_clean)}</description>
+    </item>\n"""
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>AI GridWatch Blog</title>
+  <link>{SITE_URL}/blog/</link>
+  <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
+  <atom:link href="{SITE_URL}/blog/feed.xml" rel="self" type="application/rss+xml"/>
+{items}</channel>
+</rss>
+"""
+
+
+def build_about():
+    body_html = _md_to_html(ABOUT_SECTION["body"])
+    body = f"""
+<header>
+  <div class="kicker">About</div>
+  <h1>{esc(ABOUT_SECTION['title'])}</h1>
+  <p class="sub">{esc(ABOUT_SECTION['tagline'])}</p>
+</header>
+<section class="prose">
+  {body_html}
+</section>
+<section>
+  <h2>Use the tools</h2>
+  <p>Everything on this site is free and requires no account.</p>
+  <p>
+    <a class="btn" href="{APP_URL}">Open the toolkit &rarr;</a>
+    <a class="btn ghost" href="impact.html">Impact calculator</a>
+  </p>
+</section>
+"""
+    return page(
+        "About — AI GridWatch",
+        ABOUT_SECTION["tagline"],
+        body, f"{SITE_URL}/about")
+
+
+def build_search():
+    import json
+    index = []
+    for m in MORATORIUMS_DF.itertuples():
+        index.append({"t": str(m.locality), "k": "moratorium",
+                       "d": f"{m.state} · {m.status}",
+                       "u": f"moratoriums.html"})
+    for _, r in OPERATORS_DF.iterrows():
+        index.append({"t": r["operator"], "k": "operator",
+                       "d": f"{r['tier']} · {r['model']}",
+                       "u": f"search.html"})
+    for _, r in EXECUTIVES_DF.iterrows():
+        index.append({"t": r["name"], "k": "executive",
+                       "d": f"{r['company']} · {r['title']}",
+                       "u": f"search.html"})
+    for _, r in DC_SITES_DF.iterrows():
+        loc = str(r.get("location", ""))
+        st = str(r.get("state", ""))
+        index.append({"t": f"{r['operator']} — {loc}",
+                       "k": "site",
+                       "d": f"{st} · {r.get('tenant', '—')}",
+                       "u": f"states/{slugify(STATE_PUCS_DF[STATE_PUCS_DF['abbrev'] == st].iloc[0]['state'])}.html" if not STATE_PUCS_DF[STATE_PUCS_DF['abbrev'] == st].empty else "states/index.html"})
+    for s in sorted(STATE_GRID_PROFILES):
+        index.append({"t": s, "k": "state",
+                       "d": f"State briefing",
+                       "u": f"states/{slugify(s)}.html"})
+    for s in _sorted_posts():
+        title_clean = s["title"].replace("\\$", "$")
+        index.append({"t": title_clean, "k": "blog",
+                       "d": s["date"].strftime("%b %Y"),
+                       "u": f"blog/{s['id']}.html"})
+    index_json = json.dumps(index)
+
+    body = f"""
+<header>
+  <div class="kicker">Search</div>
+  <h1>Find anything</h1>
+  <p class="sub">Search across moratoriums, operators, executives, data
+  center sites, states, and blog posts.</p>
+</header>
+<section>
+  <input type="text" id="q" placeholder="Type to search..."
+         autofocus autocomplete="off"
+         style="width:100%;background:var(--card);color:var(--ink);
+         border:1px solid var(--rule);border-radius:10px;padding:12px 16px;
+         font-size:16px;margin-bottom:14px">
+  <div id="results"></div>
+  <p class="muted" id="count"></p>
+</section>
+<script>
+(function() {{
+  var IX = {index_json};
+  var q = document.getElementById('q');
+  var box = document.getElementById('results');
+  var ct = document.getElementById('count');
+  var kinds = {{moratorium:'#ef4444', operator:'#3b82f6', executive:'#a855f7',
+                site:'#f59e0b', state:'#2dd4bf', blog:'#6366f1'}};
+  function render(items) {{
+    if (!q.value.trim()) {{ box.innerHTML = ''; ct.textContent = IX.length + ' items indexed'; return; }}
+    if (!items.length) {{ box.innerHTML = '<p style="color:var(--muted)">No results.</p>'; ct.textContent = ''; return; }}
+    box.innerHTML = items.slice(0, 40).map(function(it) {{
+      var c = kinds[it.k] || 'var(--muted)';
+      return '<div style="padding:10px 0;border-bottom:1px solid var(--rule)">'
+        + '<a href="' + it.u + '" style="text-decoration:none">'
+        + '<span class="badge" style="background:' + c + '22;color:' + c + '">' + it.k + '</span> '
+        + '<strong>' + it.t + '</strong></a>'
+        + '<div class="muted" style="font-size:13px">' + it.d + '</div></div>';
+    }}).join('');
+    ct.textContent = items.length + ' result' + (items.length === 1 ? '' : 's');
+  }}
+  q.addEventListener('input', function() {{
+    var v = q.value.toLowerCase().trim();
+    if (!v) {{ render([]); return; }}
+    var words = v.split(/\\s+/);
+    var hits = IX.filter(function(it) {{
+      var hay = (it.t + ' ' + it.d + ' ' + it.k).toLowerCase();
+      return words.every(function(w) {{ return hay.indexOf(w) >= 0; }});
+    }});
+    render(hits);
+  }});
+  render([]);
+}})();
+</script>
+"""
+    return page(
+        "Search — AI GridWatch",
+        "Search data center moratoriums, operators, executives, sites, and "
+        "state briefings.",
+        body, f"{SITE_URL}/search")
+
+
+def build_data_dividend():
+    body = f"""
+<header>
+  <div class="kicker">Community calculator</div>
+  <h1>Data dividend calculator</h1>
+  <p class="sub">Estimate what your community should be getting back from a
+  data center — annual tax revenue, CBA investment target, and per-household
+  benefit. Bring these numbers to the negotiating table.</p>
+</header>
+<section>
+  <h2>Facility details</h2>
+  <div class="grid2">
+    <div>
+      <label class="muted" for="dd-mw">Facility size (MW)</label>
+      <div style="display:flex;align-items:center;gap:14px">
+        <input type="range" id="dd-mw" min="10" max="500" value="100"
+               step="10" style="flex:1;accent-color:var(--teal)">
+        <span id="dd-mw-label" style="font-size:22px;font-weight:700;
+              color:var(--teal);min-width:70px">100 MW</span>
+      </div>
+    </div>
+    <div>
+      <label class="muted" for="dd-homes">Households in your community</label>
+      <input type="number" id="dd-homes" value="15000" min="500" max="500000"
+             step="500" style="background:var(--card);color:var(--ink);
+             border:1px solid var(--rule);border-radius:8px;padding:8px 14px;
+             font-size:15px;width:100%">
+    </div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div>
+      <label class="muted" for="dd-tax">Local property tax rate (%)</label>
+      <input type="number" id="dd-tax" value="1.0" min="0.1" max="5" step="0.1"
+             style="background:var(--card);color:var(--ink);
+             border:1px solid var(--rule);border-radius:8px;padding:8px 14px;
+             font-size:15px;width:100%">
+    </div>
+    <div>
+      <label class="muted" for="dd-cba">CBA share of investment (%)</label>
+      <input type="number" id="dd-cba" value="2.0" min="0.5" max="10" step="0.5"
+             style="background:var(--card);color:var(--ink);
+             border:1px solid var(--rule);border-radius:8px;padding:8px 14px;
+             font-size:15px;width:100%">
+    </div>
+  </div>
+</section>
+<div class="stats">
+  <div class="stat"><b id="dd-invest">—</b><span>estimated investment</span></div>
+  <div class="stat"><b id="dd-annual">—</b><span>annual CBA target</span></div>
+  <div class="stat"><b id="dd-perhome">—</b><span>per household / year</span></div>
+  <div class="stat"><b id="dd-taxrev">—</b><span>est. annual property tax</span></div>
+</div>
+<section>
+  <h2>What good CBA deals include</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Direct payments</h3>
+      <p class="muted">Annual community benefit fund, infrastructure
+      upgrades (roads, water, sewer), school funding, recreation
+      facilities.</p>
+    </div>
+    <div class="card">
+      <h3>Protections</h3>
+      <p class="muted">Water draw caps, noise limits, visual screening,
+      decommissioning bonds, local hiring requirements, rate-impact
+      studies.</p>
+    </div>
+  </div>
+</section>
+<section>
+  <h2>Generate the full package</h2>
+  <p>The toolkit builds a complete meeting brief with these numbers, plus
+  comment scripts, letters, and CBA clause templates.</p>
+  <p><a class="btn" href="{APP_URL}">Generate your action pack &rarr;</a>
+  <a class="btn ghost" href="impact.html">Impact calculator</a></p>
+</section>
+<script>
+(function() {{
+  var INV_PER_MW = 2000000;
+  var mwSlider = document.getElementById('dd-mw');
+  var mwLabel = document.getElementById('dd-mw-label');
+  var homesInput = document.getElementById('dd-homes');
+  var taxInput = document.getElementById('dd-tax');
+  var cbaInput = document.getElementById('dd-cba');
+  function usd(n) {{
+    if (n >= 1e9) return '$' + (n/1e9).toFixed(1) + 'B';
+    if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return '$' + Math.round(n).toLocaleString();
+    return '$' + Math.round(n);
+  }}
+  function calc() {{
+    var mw = +mwSlider.value;
+    var homes = +homesInput.value || 15000;
+    var taxRate = (+taxInput.value || 1.0) / 100;
+    var cbaShare = (+cbaInput.value || 2.0) / 100;
+    mwLabel.textContent = mw + ' MW';
+    var investment = mw * INV_PER_MW;
+    var annualCba = investment * cbaShare;
+    var perHome = annualCba / homes;
+    var taxRev = investment * taxRate;
+    document.getElementById('dd-invest').textContent = usd(investment);
+    document.getElementById('dd-annual').textContent = usd(annualCba);
+    document.getElementById('dd-perhome').textContent = usd(perHome);
+    document.getElementById('dd-taxrev').textContent = usd(taxRev);
+  }}
+  [mwSlider, homesInput, taxInput, cbaInput].forEach(function(el) {{
+    el.addEventListener('input', calc);
+  }});
+  calc();
+}})();
+</script>
+"""
+    return page(
+        "Data dividend calculator — AI GridWatch",
+        "Estimate the CBA target, tax revenue, and per-household benefit "
+        "your community should negotiate from a data center.",
+        body, f"{SITE_URL}/dividend")
+
+
 def build_sitemap(paths):
     urls = "\n".join(
         f"  <url><loc>{SITE_URL}/{p}</loc></url>" for p in paths)
@@ -334,6 +1239,8 @@ def build_sitemap(paths):
 def main():
     shutil.rmtree(WEB, ignore_errors=True)
     (WEB / "states").mkdir(parents=True)
+    (WEB / "blog").mkdir(parents=True)
+    (WEB / "companies").mkdir(parents=True)
     (WEB / "assets").mkdir()
 
     shutil.copy(ROOT / "assets" / "logo.svg", WEB / "assets" / "logo.svg")
@@ -342,10 +1249,35 @@ def main():
 
     (WEB / "index.html").write_text(build_index(), encoding="utf-8")
     (WEB / "health-risks.html").write_text(build_health(), encoding="utf-8")
+    (WEB / "moratoriums.html").write_text(build_moratoriums(), encoding="utf-8")
+    (WEB / "impact.html").write_text(build_impact_calculator(), encoding="utf-8")
+    (WEB / "about.html").write_text(build_about(), encoding="utf-8")
+    (WEB / "search.html").write_text(build_search(), encoding="utf-8")
+    (WEB / "dividend.html").write_text(build_data_dividend(), encoding="utf-8")
     (WEB / "states" / "index.html").write_text(
         build_states_index(), encoding="utf-8")
 
-    paths = ["", "health-risks", "states/"]
+    posts = _sorted_posts()
+    (WEB / "blog" / "index.html").write_text(
+        build_blog_index(), encoding="utf-8")
+    (WEB / "blog" / "feed.xml").write_text(build_rss(), encoding="utf-8")
+
+    for i, story in enumerate(posts):
+        prev_post = posts[i - 1] if i > 0 else None
+        next_post = posts[i + 1] if i < len(posts) - 1 else None
+        (WEB / "blog" / f"{story['id']}.html").write_text(
+            build_blog_post(story, prev_post, next_post), encoding="utf-8")
+
+    (WEB / "companies" / "index.html").write_text(
+        build_scorecards_index(), encoding="utf-8")
+    for h in _HYPERSCALERS:
+        (WEB / "companies" / f"{h['slug']}.html").write_text(
+            build_scorecard(h), encoding="utf-8")
+
+    paths = ["", "health-risks", "moratoriums", "impact", "about",
+             "search", "dividend", "companies/", "states/", "blog/"]
+    paths.extend(f"companies/{h['slug']}" for h in _HYPERSCALERS)
+    paths.extend(f"blog/{s['id']}" for s in posts)
     for state in sorted(STATE_GRID_PROFILES):
         slug = slugify(state)
         (WEB / "states" / f"{slug}.html").write_text(

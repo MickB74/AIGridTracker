@@ -1,0 +1,8 @@
+# Dependencies for the static site build only (build_site.py).
+# Deliberately excludes streamlit and the app-only libs — Vercel installs this,
+# not requirements.txt, so builds stay fast. Keep in sync when build_site.py
+# or anything it imports (src/constants, src/blog_content, src/pdf_pack)
+# grows a new dependency.
+pandas>=2.0
+markdown>=3.4
+fpdf2>=2.8

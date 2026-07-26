@@ -8,3 +8,4 @@ pyarrow>=14.0
 beautifulsoup4>=4.12   # src/research: parse SEC filing / first-party page HTML
 lxml>=5.0              # src/research: pandas.read_html table extraction
 fpdf2>=2.8             # src/pdf_pack: Start Here action-pack PDF
+markdown>=3.4           # build_site: blog post rendering

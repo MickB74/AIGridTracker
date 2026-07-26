@@ -6,9 +6,12 @@
 <title>Maine data centers: electricity, water &amp; who to call</title>
 <meta name="description" content="Data center facilities, grid impact, and regulator contacts for Maine — free community negotiation tools from AI GridWatch.">
 <link rel="canonical" href="https://gridwatch-ai.vercel.app/states/maine">
+<link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
+      href="https://gridwatch-ai.vercel.app/blog/feed.xml">
 <meta property="og:title" content="Maine data centers: electricity, water &amp; who to call">
 <meta property="og:description" content="Data center facilities, grid impact, and regulator contacts for Maine — free community negotiation tools from AI GridWatch.">
 <meta property="og:type" content="website">
+
 <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
 <style>
 :root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
@@ -66,6 +69,43 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .statelist { columns:2; font-size:14.5px; }
 @media (min-width:640px){ .statelist{ columns:4; } }
 .statelist a { display:block; padding:3px 0; text-decoration:none; }
+.post-meta { color:var(--muted); font-size:14px; margin:8px 0 6px; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 20px; }
+.tag { background:var(--card); border:1px solid var(--rule);
+       border-radius:20px; padding:3px 11px; font-size:12px;
+       color:var(--muted); }
+.prose h3 { font-size:17px; color:var(--teal); margin:24px 0 8px; }
+.prose p { margin:10px 0; }
+.prose blockquote { border-left:3px solid var(--teal); margin:16px 0;
+                    padding:6px 16px; color:var(--muted); }
+.prose table { margin:16px 0; }
+.prose ul, .prose ol { margin:10px 0; }
+.prose hr { border:none; border-top:1px solid var(--rule); margin:24px 0; }
+.post-nav { display:flex; justify-content:space-between; gap:14px;
+            margin:32px 0 0; padding:18px 0 0;
+            border-top:1px solid var(--rule); font-size:14px; }
+.post-nav a { max-width:45%; }
+.post-nav .dir { color:var(--muted); font-size:12px; display:block; }
+.blog-list { list-style:none; padding:0; }
+.blog-list li { border-bottom:1px solid var(--rule); padding:18px 0; }
+.blog-list li:last-child { border-bottom:none; }
+.blog-list h3 { font-size:17px; margin:0 0 4px; }
+.blog-list h3 a { text-decoration:none; }
+.blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
+.badge { display:inline-block; font-size:12px; font-weight:700;
+         padding:2px 9px; border-radius:6px; }
+.badge-enacted { background:#065f46; color:#6ee7b7; }
+.badge-proposed { background:#713f12; color:#fde68a; }
+.badge-rejected { background:#7f1d1d; color:#fca5a5; }
+.badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.outcome { border-left:3px solid var(--teal); padding:10px 14px;
+           margin:10px 0; }
+.outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
+                text-transform:uppercase; letter-spacing:.08em; }
+.grid2 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
+.official { font-size:14px; }
+.official .role { color:var(--muted); font-size:13px; }
 </style>
 </head>
 <body>
@@ -75,6 +115,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <a href="../index.html">Home</a>
   <a href="../states/index.html">Your state</a>
   <a href="../health-risks.html">Health risks</a>
+  <a href="../moratoriums.html">Moratoriums</a>
+  <a href="../impact.html">Calculator</a>
+  <a href="../companies/index.html">Companies</a>
+  <a href="../blog/index.html">Blog</a>
   <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
 </nav>
 
@@ -91,8 +135,13 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <div class="stat"><b>180</b><span>grid gCO&#8322;/kWh · water stress: low</span></div>
 </div>
 <section><h2>Your regulator</h2><p><strong>Maine Public Utilities Commission</strong> — <a href="https://www.maine.gov/mpuc/">website</a> · <a href="https://www.maine.gov/mpuc/consumer-assistance">file a complaint</a></p></section>
-<section><h2>Pushback already happening in Maine</h2><table><tr><th>Where</th><th>Level</th><th>Status</th><th>Note</th></tr><tr><td>Bangor</td><td>Local</td><td>Enacted</td><td>Temporary ban</td></tr>
-<tr><td>Maine (statewide)</td><td>State</td><td>Vetoed</td><td>Governor veto</td></tr></table></section>
+<section><h2>Pushback already happening in Maine</h2><table><tr><th>Where</th><th>Level</th><th>Status</th><th>Note</th></tr><tr><td>Bangor</td><td>Local</td><td><span class="badge badge-enacted">Enacted</span></td><td>Temporary ban</td></tr>
+<tr><td>Maine (statewide)</td><td>State</td><td><span class="badge badge-vetoed">Vetoed</span></td><td>Governor veto</td></tr></table></section>
+
+
+
+
+<p class="muted" style="margin-top:16px">State municipal league: <a href="http://www.memun.org/">Maine Municipal Association</a></p>
 <section>
   <h2>A data center was proposed near you?</h2>
   <p>The free toolkit walks you through it in five steps: who's really
@@ -104,7 +153,9 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 </section>
 
 <footer>
-  AI GridWatch — community energy intelligence. Planning estimates, not
+  <a href="../about.html">About</a> · <a href="../search.html">Search</a>
+  · <a href="../dividend.html">Data dividend calculator</a>
+  <br>AI GridWatch — community energy intelligence. Planning estimates, not
   engineering studies; every number is sourced in the
   <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.
 </footer>
