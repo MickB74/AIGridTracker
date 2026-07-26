@@ -51,6 +51,148 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── DOE National Transmission Needs Study (July 2026 draft) ─────────
+    {
+        "id": "doe-transmission-needs-2026",
+        "section": "stories",
+        "title": "DOE Just Named Data Centers the #1 Reason America Needs New Power Lines. Here's Why Your Community Should Read the Fine Print.",
+        "date": _dt.date(2026, 7, 26),
+        "author": "GridWatch AI",
+        "tags": ["DOE", "transmission", "NIETC", "rates", "public comment",
+                 "tribal lands", "policy", "breaking"],
+        "summary": (
+            "The Department of Energy's draft 2026 National Transmission Needs "
+            "Study makes it official: load growth — led by data centers — is now "
+            "the main reason the U.S. needs new transmission. Congestion already "
+            "adds \\$11 billion a year to wholesale power costs, tens of billions "
+            "in new lines are approved, and the study feeds directly into federal "
+            "corridor designations that can override local siting authority. It's "
+            "open for public comment right now — and it's full of numbers "
+            "communities can use."
+        ),
+        "body": """\
+Every three years, federal law requires the Department of Energy to tell the
+country where its electric grid is congested, constrained, or about to be.
+The [draft 2026 National Transmission Needs Study](https://www.energy.gov/oe/national-transmission-needs-study),
+released for public comment in July, is that report — and this edition reads
+differently from every one before it.
+
+The headline isn't buried. In DOE's own words, **load growth is now the main
+driver of future transmission need** — and the first item on its list of what's
+driving load growth is *"growth in data centers, artificial intelligence (AI),
+and cryptocurrency mining."* The agency devotes a call-out box to data-center
+projections showing demand reaching **more than 400 TWh by 2030 — over 10% of
+all U.S. electricity**.
+
+If you're a resident wondering whether the data center proposed outside town
+has anything to do with the new 500 kV line proposed *through* it, the federal
+government just answered you.
+
+---
+
+### The numbers worth writing down
+
+| What the study found | Number |
+|---|---|
+| Congestion's added cost to wholesale power, 2023 | **\\$11 billion** (peaked at \\$21B in 2022) |
+| Share of hours driving most congestion costs | **just 5%** |
+| U.S. demand growth projected by NERC, 2024–2034 | **+25%** (4,281 → 5,353 TWh) |
+| Data-center demand by 2030 (LBNL/EPRI/McKinsey range) | **up to 400+ TWh, >10% of U.S. total** |
+| FERC's own range for data-center growth by 2030 | **13 to 55 GW** — a 4x spread |
+| Transmission built 2016–2024 | **85,000 circuit-miles** — 98% by incumbent utilities |
+| Aging-grid replacement need (Brattle est.) | **~4,000 circuit-miles / ~\\$10B per year** |
+| Newly approved regional buildouts | MISO **\\$21.8B** · SPP **\\$7.7B** · Texas 765 kV **\\$33B** |
+
+---
+
+### Why this document matters more than most reports
+
+This isn't just a study — it's legal machinery. Under Federal Power Act
+§216, the Needs Study is the analytical foundation DOE uses to designate
+**National Interest Electric Transmission Corridors (NIETCs)**. Inside a
+designated corridor, federal regulators gain *backstop siting authority* —
+meaning a transmission project rejected or delayed at the state or local
+level can still move forward.
+
+Translation for communities: the maps in this draft are an early look at
+where federal authority may eventually reach. The time to influence that is
+**now, during the comment period** — not after a corridor lands on your county.
+
+---
+
+### Four things communities should take from it
+
+**1. You now have federal validation.** When a developer's consultant tells
+your planning board that a data center has nothing to do with rising
+delivery charges, you can quote the Department of Energy: load growth, led
+by data centers, is the principal driver of the country's transmission
+needs. Print the study's data-center box (p. 80) and bring it.
+
+**2. The bill for all of this is unassigned.** The study identifies *need* —
+it is silent on *who pays*. Transmission costs flow into the delivery
+portion of every electric bill by default, and utilities earn a regulated
+return on every mile they build (which is one reason incumbents built 98%
+of it). Unless your state adopts large-load tariffs and cost-causation
+rules, a buildout justified by data-center demand lands on households.
+That's the fight at your PUC, and the study is your exhibit A.
+
+**3. Nobody actually knows how much of this demand is real.** FERC's own
+projection spans **13 to 55 GW** by 2030 — the top of the range is four
+times the bottom. Speculative and duplicate interconnection requests
+("phantom load") are inflating forecasts everywhere. If lines get built for
+load that never materializes, ratepayers hold the bag for decades. The ask:
+load commitments, minimum-take contracts, and developer-funded upgrades
+*before* shovels move — so the party creating the risk carries it.
+
+**4. The cheapest fix is flexibility, not always wire.** The study notes
+most congestion costs pile up in just **5% of hours** — the same peak hours
+when data centers could curtail. Texas already wrote this into law (SB 6:
+ERCOT can curtail large loads in emergencies). Communities and PUCs should
+demand the same: flexible-load agreements and grid-enhancing technologies
+evaluated *before* approving billion-dollar buildouts that peak-shave for a
+handful of hours a year.
+
+---
+
+### The tribal-lands finding everyone will skip
+
+One section deserves more attention than it will get: **2.3% of the
+nation's transmission miles cross Tribal lands**, and over 1,000
+high-voltage substations sit on or near them — 919 in SPP South alone.
+Yet Navajo Nation and Hopi Tribe homes still lack electricity, and DOE's
+Office of Indian Energy found energy costs consume a **28.3% larger share
+of income** for households on Indian land than elsewhere. Infrastructure
+that crosses a community without serving it is the oldest story in
+energy — and it's a preview of what data-center-driven buildout does
+wherever the benefits and burdens land on different people.
+
+---
+
+### What to do with it
+
+1. **File a comment.** The draft is open for public consultation on
+   [DOE's Needs Study page](https://www.energy.gov/oe/national-transmission-needs-study).
+   Tell them transmission driven by large loads should be paid for by
+   large loads — and that corridor designations need real local process.
+2. **Cite it at your next hearing.** Pair it with your numbers from the
+   **Local Impact Calculator** and the rate-impact background in **Your
+   utility bill**.
+3. **Ask your utility one question in writing:** *What share of your
+   planned transmission spending is driven by data-center load, and under
+   what tariff will it be recovered?* Their answer (or refusal) is a
+   public-comment exhibit.
+4. **Find your regulator** in **States & officials** — rate cases, not
+   zoning hearings, are where transmission costs are actually assigned.
+
+The grid is being rebuilt around AI demand either way. The only open
+question is whether communities shape the terms — and this study, for all
+its dry federal prose, just handed them the evidence.
+
+*Source: [DOE 2026 National Transmission Needs Study — Draft for
+Consultation and Public Comment](https://www.energy.gov/oe/national-transmission-needs-study),
+July 2026.*
+""",
+    },
     # ── BNEF 194 GW forecast ─────────────────────────────────────────────
     {
         "id": "bnef-194gw-forecast-2026",

@@ -1522,6 +1522,8 @@ SOURCES = {
                      "https://datacentremagazine.com/news/moodys-report-ai-data-centre-spend-set-to-reach-us-700bn"),
     "btm_gas":      ("Natural Gas Intelligence — On-site natural gas generation gains favor with hyperscalers (2026)",
                      "https://naturalgasintel.com/news/on-site-natural-gas-generation-gains-favor-with-hyperscalers-as-bridge-to-grid/"),
+    "doe_needs_2026": ("DOE Office of Electricity — 2026 National Transmission Needs Study, Draft for Consultation and Public Comment (Jul 2026)",
+                       "https://www.energy.gov/oe/national-transmission-needs-study"),
     # ── Health risks module ──────────────────────────────────────────── #
     "unpaid_toll":  ("Han, Wu, Li, Wierman & Ren — The Unpaid Toll: Quantifying the Public Health Impact of AI (arXiv:2412.06288, UC Riverside/Caltech, 2024)",
                      "https://arxiv.org/abs/2412.06288"),
