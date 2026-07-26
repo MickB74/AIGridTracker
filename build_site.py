@@ -36,6 +36,10 @@ from src.constants import (
     OPERATORS_DF, EXECUTIVES_DF,
     GOOGLE_2025_HEADLINE, META_2024_HEADLINE,
     MICROSOFT_ENV_HEADLINE, AWS_ENV_HEADLINE,
+    EQUINIX_2024_HEADLINE, DIGITAL_REALTY_2024_HEADLINE,
+    EDGECONNEX_2024_HEADLINE, STACK_2023_HEADLINE,
+    CYRUSONE_2023_HEADLINE, VANTAGE_2023_HEADLINE,
+    COREWEAVE_PROFILE, QTS_PROFILE, SWITCH_PROFILE, COMPASS_PROFILE,
     SOURCES,
 )
 from src.pdf_pack import build_health_pdf
@@ -838,6 +842,178 @@ _HYPERSCALERS = [
 ]
 
 
+_OPERATORS = [
+    {
+        "slug": "equinix", "name": "Equinix", "report": "FY2024",
+        "d": EQUINIX_2024_HEADLINE,
+        "twh": 8.17, "pue": 1.39,
+        "scope2_loc": 2_645_700, "scope2_mkt": 253_300,
+        "water_mgal": 1_104, "renewable": "96% renewable",
+        "water_note": "37% non-potable; WUE 0.95",
+        "scale": "268 data centers · 74 markets · 35 countries",
+        "revenue": "$8.7B",
+        "est_twh": True,
+        "extra": [
+            ("Scope 1", "59,400 tCO2e"),
+            ("Scope 3", "1.44M tCO2e"),
+            ("Net zero target", "2040 (SBTi validated)"),
+            ("Heat exported", "14.5 GWh to communities (+245% YoY)"),
+        ],
+    },
+    {
+        "slug": "digital-realty", "name": "Digital Realty", "report": "FY2024",
+        "d": DIGITAL_REALTY_2024_HEADLINE,
+        "pue": 1.38, "wue": 0.59,
+        "scope2_loc": 3_311_323, "scope2_mkt": 948_175,
+        "renewable": "93% renewable",
+        "water_note": "45% non-potable; WUE 0.59",
+        "scale": "300+ data centers · 55+ metros · 30+ countries",
+        "revenue": "$6.1B",
+        "extra": [
+            ("Scope 1", "51,745 tCO2e"),
+            ("Scope 3", "1.46M tCO2e (+16.9% YoY)"),
+            ("EMEA PUE", "1.31; new builds designed at 1.20"),
+            ("EU carbon-neutral", "42% of European IT capacity"),
+        ],
+        "notes": "Absolute TWh and water consumption not disclosed. "
+                 "PUE/WUE/renewable from FY2025 report; Scope 1/2/3 "
+                 "from FY2024. SBTi validation status unconfirmed.",
+    },
+    {
+        "slug": "edgeconnex", "name": "EdgeConneX", "report": "FY2024",
+        "d": EDGECONNEX_2024_HEADLINE,
+        "twh": 1.66, "pue": 1.33,
+        "scope2_loc": None, "scope2_mkt": 0,
+        "water_mgal": 25, "renewable": "90% renewable",
+        "water_note": "93% water-free sites; 25 Mgal",
+        "scale": "410 MW capacity · 20+ countries",
+        "extra": [
+            ("Scope 1", "17,925 tCO2e"),
+            ("Scope 3", "498,287 tCO2e"),
+            ("SBTi S1+2 target", "Met (−50.4%)"),
+            ("SBTi S3 target", "Exceeded (−64%)"),
+        ],
+    },
+    {
+        "slug": "stack", "name": "STACK Infrastructure", "report": "FY2023",
+        "d": STACK_2023_HEADLINE,
+        "pue": 1.35,
+        "scope2_loc": 295_400, "scope2_mkt": None,
+        "renewable": "100% renewable (since 2021)",
+        "water_note": "WUE 1.08; 34.8M gal saved via reclaimed water",
+        "scale": "37+ facilities · 22 markets · >7 GW capacity",
+        "extra": [
+            ("Scope 1", "3,900 tCO2e"),
+            ("Scope 3", "460,300 tCO2e"),
+            ("SBTi", "Committed (Sept 2024)"),
+        ],
+        "notes": "Scope 2 boundary (location vs market) unclear in report. "
+                 ">1,000 GWh procured in 2023.",
+    },
+    {
+        "slug": "cyrusone", "name": "CyrusOne", "report": "FY2023",
+        "d": CYRUSONE_2023_HEADLINE,
+        "pue": 1.46,
+        "scope2_loc": None, "scope2_mkt": 402_058,
+        "renewable": "61.6% carbon-free",
+        "water_note": "Net Positive Water at 12 facilities",
+        "scale": "50+ data centers globally",
+        "extra": [
+            ("Scope 1", "27,710 tCO2e"),
+            ("Scope 3", "474,137 tCO2e"),
+            ("vs SBTi target", "−29.4% since 2021 (exceeded by >16 ppts)"),
+            ("EcoVadis", "Gold (top 5%) — 3rd consecutive year"),
+            ("Green financing", "$11.2B sustainability-linked (2024)"),
+        ],
+        "notes": "Private since April 2022 (KKR/GIP, $15B). TWh and "
+                 "absolute water consumption not disclosed.",
+    },
+    {
+        "slug": "vantage", "name": "Vantage Data Centers", "report": "CY2023",
+        "d": VANTAGE_2023_HEADLINE,
+        "pue": 1.26,
+        "scope2_loc": 49_420, "scope2_mkt": None,
+        "renewable": "4 of 34 campuses >99% renewable",
+        "water_note": "Near-zero water (air-cooled design)",
+        "scale": "34 campuses · 5 continents · >2 GW capacity",
+        "extra": [
+            ("Scope 1", "4,371 tCO2e"),
+            ("Scope 1+2 total", "53,791 tCO2e (+145% YoY)"),
+            ("Net zero target", "S1+2 by 2030; all scopes by 2040"),
+        ],
+        "notes": "PUE is annualized design average, not operational. "
+                 "Market-based Scope 2 deferred pending verification. "
+                 "Scope 3 not quantified in absolute terms.",
+    },
+]
+
+_LIMITED_DISCLOSURE = [
+    {
+        "slug": "coreweave", "name": "CoreWeave", "report": "FY2025",
+        "d": COREWEAVE_PROFILE,
+        "scale": "43 data centers · >850 MW active · ~3.1 GW contracted",
+        "revenue": "$5.13B",
+        "disclosure": "none",
+        "gap_text": "No sustainability report. No CDP response. No Scope "
+                    "1/2/3 inventory. No PUE or WUE figures. Marketing "
+                    "claims only (unverified).",
+        "context": "IPO March 2025 (NASDAQ: CRWV). Revenue grew from $229M "
+                   "(2023) to $5.13B (2025). GPU-specialized cloud building "
+                   "at massive scale with zero environmental disclosure.",
+    },
+    {
+        "slug": "qts", "name": "QTS (Blackstone)", "report": "FY2024",
+        "d": QTS_PROFILE,
+        "scale": ">2 GW contracted capacity",
+        "disclosure": "partial",
+        "reported": [
+            ("WUE", "0.82 L/kWh (−27% YoY)"),
+            ("Carbon-free electricity", "100%"),
+            ("Water-free new builds", "100% of greenfield"),
+        ],
+        "not_reported": ["Fleet PUE", "Scope 1/2/3 (absolute)",
+                         "Total electricity (TWh)", "Revenue"],
+        "context": "Private since 2021 (Blackstone, $10B). Reports strong "
+                   "water and clean-energy metrics but omits fleet PUE and "
+                   "audited emissions totals.",
+    },
+    {
+        "slug": "switch", "name": "Switch (DigitalBridge)", "report": "CY2024",
+        "d": SWITCH_PROFILE,
+        "scale": "Las Vegas 315 MW · Tahoe Reno up to 2 GW planned",
+        "disclosure": "marketing only",
+        "reported": [
+            ("PUE (claimed)", "1.18"),
+            ("Renewable (claimed)", "100% since 2016"),
+        ],
+        "not_reported": ["Audited sustainability report", "Scope 1/2/3",
+                         "WUE", "Absolute water consumption", "Revenue"],
+        "context": "Private since 2023 (DigitalBridge). All environmental "
+                   "claims come from marketing pages — no downloadable "
+                   "report, no third-party verification found. $20B in "
+                   "green financing raised since 2024.",
+    },
+    {
+        "slug": "compass", "name": "Compass Datacenters", "report": "FY2024",
+        "d": COMPASS_PROFILE,
+        "scale": "Total capacity not disclosed",
+        "disclosure": "partial",
+        "reported": [
+            ("Design PUE", "1.25"),
+            ("WUE", "0 (waterless cooling)"),
+            ("Embodied carbon", "−33% per MW (2022-2024)"),
+        ],
+        "not_reported": ["Scope 1/2 for data centers (only corporate "
+                         "offices reported)", "Total capacity / campus count",
+                         "Revenue"],
+        "context": "Build-to-suit model: tenants control operations, so "
+                   "Compass's Scope 1/2 covers only corporate offices "
+                   "(~3,700 tCO2e). The real DC energy footprint sits in "
+                   "Scope 3 Category 13 — easy to misread as 'low-impact.'",
+    },
+]
+
+
 def _fmt_co2(t):
     if t >= 1e6:
         return f"{t / 1e6:.1f}M"
@@ -846,56 +1022,113 @@ def _fmt_co2(t):
     return f"{t:,.0f}"
 
 
+def _co2_cell(val):
+    return _fmt_co2(val) if val is not None else "—"
+
+
 def build_scorecards_index():
-    cards = ""
-    for h in _HYPERSCALERS:
-        est = " (est.)" if h.get("est") else ""
-        cards += (
-            f'<a href="{h["slug"]}.html" class="card" '
-            f'style="text-decoration:none;display:block">'
-            f'<h3>{esc(h["name"])}</h3>'
-            f'<p class="muted">{h["report"]} · {h["twh"]} TWh{est} · '
-            f'PUE {h["pue"]}</p></a>\n')
+    def _cards(items):
+        out = ""
+        for h in items:
+            twh = h.get("twh")
+            twh_str = (f'{twh} TWh{"*" if h.get("est_twh") or h.get("est") else ""}'
+                       if twh else "")
+            pue = h.get("pue")
+            pue_str = f'PUE {pue}' if pue else ""
+            detail = " · ".join(filter(None, [h["report"], twh_str, pue_str]))
+            out += (
+                f'<a href="{h["slug"]}.html" class="card" '
+                f'style="text-decoration:none;display:block">'
+                f'<h3>{esc(h["name"])}</h3>'
+                f'<p class="muted">{detail}</p></a>\n')
+        return out
+
+    def _comparison_rows(items):
+        rows = ""
+        for h in items:
+            twh = h.get("twh")
+            twh_str = (f'{twh}{"*" if h.get("est_twh") or h.get("est") else ""}'
+                       if twh else "—")
+            water = h.get("water_mgal")
+            water_str = f"{water:,}" if water else "—"
+            rows += (
+                f'<tr><td><a href="{h["slug"]}.html">'
+                f'{esc(h["name"])}</a></td>'
+                f'<td>{twh_str}</td>'
+                f'<td>{h.get("pue", "—")}</td>'
+                f'<td>{_co2_cell(h.get("scope2_loc"))}</td>'
+                f'<td>{_co2_cell(h.get("scope2_mkt"))}</td>'
+                f'<td>{water_str}</td>'
+                f'<td>{esc(h.get("renewable", "—"))}</td></tr>')
+        return rows
+
+    gap_rows = ""
+    for ld in _LIMITED_DISCLOSURE:
+        gap_rows += (
+            f'<tr><td><a href="{ld["slug"]}.html">'
+            f'{esc(ld["name"])}</a></td>'
+            f'<td>{esc(ld["scale"])}</td>'
+            f'<td><span class="badge badge-{"rejected" if ld["disclosure"] == "none" else "proposed"}">'
+            f'{esc(ld["disclosure"])}</span></td></tr>')
+
     body = f"""
 <header>
   <div class="kicker">Corporate scorecards</div>
-  <h1>Hyperscaler environmental reports</h1>
-  <p class="sub">Side-by-side environmental data from the four largest data
-  center operators — electricity, carbon, water, and what the numbers actually
-  mean when you strip out the RECs.</p>
+  <h1>Who builds the AI grid — and what they disclose</h1>
+  <p class="sub">Environmental data from 14 data center companies —
+  hyperscalers, operators, and developers — side by side. The gap between
+  what they claim and what they report is the gap your community should
+  ask about.</p>
 </header>
 <section>
-  <h2>Comparison</h2>
+  <h2>Hyperscalers</h2>
+  <p class="muted">The four companies that build and operate their own AI
+  infrastructure at the largest scale.</p>
   <div style="overflow-x:auto">
   <table>
     <tr><th></th><th>DC TWh</th><th>PUE</th><th>Scope 2 (location)</th>
     <th>Scope 2 (market)</th><th>Water (Mgal)</th><th>Renewable</th></tr>
-    {"".join(
-        f'<tr><td><a href="{h["slug"]}.html">'
-        f'{esc(h["name"])}</a></td>'
-        f'<td>{h["twh"]}{"*" if h.get("est") else ""}</td>'
-        f'<td>{h["pue"]}</td>'
-        f'<td>{_fmt_co2(h["scope2_loc"])}</td>'
-        f'<td>{_fmt_co2(h["scope2_mkt"])}</td>'
-        f'<td>{h["water_mgal"]:,}</td>'
-        f'<td>{esc(h["renewable"])}</td></tr>'
-        for h in _HYPERSCALERS
-    )}
+    {_comparison_rows(_HYPERSCALERS)}
   </table>
   </div>
   <p class="muted" style="margin-top:6px">* DC-only TWh and location-based
-  Scope 2 are estimates derived from reported growth rates; these companies
-  do not break out data-center-only electricity.</p>
+  Scope 2 are estimates; these companies do not break out data-center-only
+  electricity.</p>
+  <div class="grid2">{_cards(_HYPERSCALERS)}</div>
 </section>
 <section>
-  <h2>Individual profiles</h2>
-  <div class="grid2">{cards}</div>
+  <h2>Data center operators &amp; developers</h2>
+  <p class="muted">Companies that build, own, or lease hyperscale data center
+  campuses — the facilities where AI workloads actually run.</p>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th></th><th>DC TWh</th><th>PUE</th><th>Scope 2 (location)</th>
+    <th>Scope 2 (market)</th><th>Water (Mgal)</th><th>Renewable</th></tr>
+    {_comparison_rows(_OPERATORS)}
+  </table>
+  </div>
+  <p class="muted" style="margin-top:6px">— = not disclosed or not applicable.
+  * = estimated figure.</p>
+  <div class="grid2">{_cards(_OPERATORS)}</div>
+</section>
+<section>
+  <h2>Transparency gaps</h2>
+  <p class="muted">These companies build or operate significant data center
+  capacity but publish little or no environmental data. That silence is itself
+  a data point — ask why.</p>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th></th><th>Scale</th><th>Disclosure level</th></tr>
+    {gap_rows}
+  </table>
+  </div>
+  <div class="grid2">{_cards(_LIMITED_DISCLOSURE)}</div>
 </section>
 """
     return page(
-        "Hyperscaler environmental scorecards — AI GridWatch",
-        "Side-by-side environmental data for Google, Meta, Microsoft, and "
-        "AWS: electricity, carbon, water, and renewable claims.",
+        "Corporate environmental scorecards — AI GridWatch",
+        "Environmental data for 14 data center companies: hyperscalers, "
+        "operators, and developers — side by side.",
         body, f"{SITE_URL}/companies/", depth=1)
 
 
@@ -965,6 +1198,145 @@ def build_scorecard(h):
         f"Environmental data for {h['name']}: {h['twh']} TWh, PUE "
         f"{h['pue']}, water and carbon metrics from {h['report']}.",
         body, f"{SITE_URL}/companies/{h['slug']}", depth=1)
+
+
+def build_operator_scorecard(h):
+    extras = "\n".join(
+        f'<tr><td>{esc(k)}</td><td><strong>{esc(v)}</strong></td></tr>'
+        for k, v in h.get("extra", []))
+    notes_html = ""
+    if h.get("notes"):
+        notes_html = (
+            f'<div class="ask" style="margin-top:18px">'
+            f'<strong>Methodology note:</strong> {esc(h["notes"])}</div>')
+
+    stats = []
+    if h.get("twh"):
+        est = "*" if h.get("est_twh") else ""
+        stats.append(f'<div class="stat"><b>{h["twh"]} TWh{est}</b>'
+                     f'<span>electricity</span></div>')
+    if h.get("pue"):
+        stats.append(f'<div class="stat"><b>{h["pue"]}</b>'
+                     f'<span>fleet PUE</span></div>')
+    if h.get("scope2_loc") is not None:
+        stats.append(f'<div class="stat"><b>{_fmt_co2(h["scope2_loc"])}</b>'
+                     f'<span>Scope 2 (location) tCO2e</span></div>')
+    elif h.get("scope2_mkt") is not None:
+        stats.append(f'<div class="stat"><b>{_fmt_co2(h["scope2_mkt"])}</b>'
+                     f'<span>Scope 2 (market) tCO2e</span></div>')
+    if h.get("water_mgal"):
+        stats.append(f'<div class="stat"><b>{h["water_mgal"]:,}</b>'
+                     f'<span>water (Mgal)</span></div>')
+
+    metrics_rows = ""
+    if h.get("scope2_mkt") is not None and h.get("scope2_loc") is not None:
+        metrics_rows += (f'<tr><td>Scope 2 (market-based)</td>'
+                         f'<td><strong>{_fmt_co2(h["scope2_mkt"])} tCO2e</strong></td></tr>')
+    metrics_rows += (f'<tr><td>Renewable / CFE claim</td>'
+                     f'<td><strong>{esc(h.get("renewable", "—"))}</strong></td></tr>')
+    metrics_rows += (f'<tr><td>Water</td>'
+                     f'<td><strong>{esc(h.get("water_note", "—"))}</strong></td></tr>')
+
+    scale_html = (f'<tr><td>Scale</td>'
+                  f'<td><strong>{esc(h.get("scale", ""))}</strong></td></tr>')
+    if h.get("revenue"):
+        scale_html += (f'<tr><td>Revenue</td>'
+                       f'<td><strong>{esc(h["revenue"])}</strong></td></tr>')
+
+    body = f"""
+<header>
+  <div class="kicker">Corporate scorecard</div>
+  <h1>{esc(h['name'])} environmental profile</h1>
+  <p class="sub">Key environmental metrics from the {esc(h['report'])}
+  sustainability report.</p>
+</header>
+<div class="stats">{"".join(stats)}</div>
+<section>
+  <h2>Key metrics</h2>
+  <table>
+    {metrics_rows}
+    {scale_html}
+    {extras}
+  </table>
+  {notes_html}
+</section>
+<section>
+  <h2>What this means for your community</h2>
+  <p>These operators lease capacity to hyperscalers — when Google, Microsoft,
+  or AWS announces a campus in your area, the building may carry a different
+  name on the permit. The environmental footprint belongs to the facility,
+  not the tenant's brand. Ask the operator, not just the tenant, for their
+  PUE, water, and emissions data.</p>
+  <p><a class="btn" href="{APP_URL}">Run the numbers for your community &rarr;</a>
+  <a class="btn ghost" href="../companies/index.html">All scorecards</a></p>
+</section>
+"""
+    desc_parts = []
+    if h.get("pue"):
+        desc_parts.append(f"PUE {h['pue']}")
+    if h.get("twh"):
+        desc_parts.append(f"{h['twh']} TWh")
+    desc_detail = ", ".join(desc_parts)
+    return page(
+        f"{h['name']} environmental scorecard — AI GridWatch",
+        f"Environmental data for {h['name']}: {desc_detail}, "
+        f"carbon and water metrics from {h['report']}.",
+        body, f"{SITE_URL}/companies/{h['slug']}", depth=1)
+
+
+def build_limited_scorecard(ld):
+    reported_html = ""
+    if ld.get("reported"):
+        rows = "\n".join(
+            f'<tr><td>{esc(k)}</td><td><strong>{esc(v)}</strong></td></tr>'
+            for k, v in ld["reported"])
+        reported_html = (
+            f'<section><h2>What they do report</h2>'
+            f'<table>{rows}</table></section>')
+
+    not_reported_html = ""
+    if ld.get("not_reported"):
+        items = "".join(f"<li>{esc(x)}</li>" for x in ld["not_reported"])
+        not_reported_html = (
+            f'<section><h2>What they don\'t report</h2>'
+            f'<ul>{items}</ul></section>')
+
+    gap_html = ""
+    if ld.get("gap_text"):
+        gap_html = (
+            f'<section><h2>Disclosure gap</h2>'
+            f'<div class="ask">{esc(ld["gap_text"])}</div></section>')
+
+    badge_class = "rejected" if ld["disclosure"] == "none" else "proposed"
+    body = f"""
+<header>
+  <div class="kicker">Corporate scorecard</div>
+  <h1>{esc(ld['name'])}</h1>
+  <p class="sub">{esc(ld.get('scale', ''))} ·
+  <span class="badge badge-{badge_class}">disclosure: {esc(ld['disclosure'])}</span></p>
+</header>
+<section>
+  <h2>Context</h2>
+  <p>{esc(ld.get('context', ''))}</p>
+</section>
+{gap_html}
+{reported_html}
+{not_reported_html}
+<section>
+  <h2>Why this matters</h2>
+  <p>Companies building gigawatts of data center capacity without publishing
+  environmental data are asking communities to approve projects on trust.
+  If a developer won't disclose PUE, water consumption, and emissions
+  before construction, that's a question for your planning board.</p>
+  <p><a class="btn" href="{APP_URL}">Run the numbers for your community &rarr;</a>
+  <a class="btn ghost" href="../companies/index.html">All scorecards</a></p>
+</section>
+"""
+    return page(
+        f"{ld['name']} — AI GridWatch",
+        f"{ld['name']}: {ld.get('scale', '')} — disclosure level: "
+        f"{ld['disclosure']}.",
+        body, f"{SITE_URL}/companies/{ld['slug']}", depth=1)
 
 
 def build_rss():
@@ -1049,6 +1421,14 @@ def build_search():
         index.append({"t": title_clean, "k": "blog",
                        "d": s["date"].strftime("%b %Y"),
                        "u": f"blog/{s['id']}.html"})
+    for h in _HYPERSCALERS + _OPERATORS:
+        index.append({"t": h["name"], "k": "company",
+                       "d": f'{h["report"]} · PUE {h.get("pue", "—")}',
+                       "u": f"companies/{h['slug']}.html"})
+    for ld in _LIMITED_DISCLOSURE:
+        index.append({"t": ld["name"], "k": "company",
+                       "d": f'disclosure: {ld["disclosure"]}',
+                       "u": f"companies/{ld['slug']}.html"})
     index_json = json.dumps(index)
 
     body = f"""
@@ -1074,7 +1454,8 @@ def build_search():
   var box = document.getElementById('results');
   var ct = document.getElementById('count');
   var kinds = {{moratorium:'#ef4444', operator:'#3b82f6', executive:'#a855f7',
-                site:'#f59e0b', state:'#2dd4bf', blog:'#6366f1'}};
+                site:'#f59e0b', state:'#2dd4bf', blog:'#6366f1',
+                company:'#f472b6'}};
   function render(items) {{
     if (!q.value.trim()) {{ box.innerHTML = ''; ct.textContent = IX.length + ' items indexed'; return; }}
     if (!items.length) {{ box.innerHTML = '<p style="color:var(--muted)">No results.</p>'; ct.textContent = ''; return; }}
@@ -1273,10 +1654,18 @@ def main():
     for h in _HYPERSCALERS:
         (WEB / "companies" / f"{h['slug']}.html").write_text(
             build_scorecard(h), encoding="utf-8")
+    for h in _OPERATORS:
+        (WEB / "companies" / f"{h['slug']}.html").write_text(
+            build_operator_scorecard(h), encoding="utf-8")
+    for ld in _LIMITED_DISCLOSURE:
+        (WEB / "companies" / f"{ld['slug']}.html").write_text(
+            build_limited_scorecard(ld), encoding="utf-8")
 
     paths = ["", "health-risks", "moratoriums", "impact", "about",
              "search", "dividend", "companies/", "states/", "blog/"]
     paths.extend(f"companies/{h['slug']}" for h in _HYPERSCALERS)
+    paths.extend(f"companies/{h['slug']}" for h in _OPERATORS)
+    paths.extend(f"companies/{ld['slug']}" for ld in _LIMITED_DISCLOSURE)
     paths.extend(f"blog/{s['id']}" for s in posts)
     for state in sorted(STATE_GRID_PROFILES):
         slug = slugify(state)

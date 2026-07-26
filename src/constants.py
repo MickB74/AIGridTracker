@@ -1235,6 +1235,190 @@ AWS_ENV_HEADLINE = {
              "location-based Scope 2 are estimates from reported growth rates.",
 }
 
+# ---------------------------------------------------------------------------
+# Data-center operators — environmental headline dicts
+# ---------------------------------------------------------------------------
+
+EQUINIX_2024_HEADLINE = {
+    "report_year": "FY2024",
+    "source": "Equinix 2025 Sustainability Report / Data Summary",
+    "dc_twh": 8.17,            # FY2023 confirmed; FY2024 not yet located
+    "pue": 1.39,
+    "wue": 0.95,
+    "scope1_tco2e": 59_400,
+    "scope2_location_tco2e": 2_645_700,
+    "scope2_market_tco2e": 253_300,
+    "scope3_tco2e": 1_435_000,
+    "renewable_pct": 96,
+    "water_consumption_mgal": 1_104,   # 4,180 ML × 0.264172
+    "nonpotable_water_pct": 37,
+    "data_centers": 268,
+    "markets": 74,
+    "countries": 35,
+    "revenue_b": 8.7,
+    "net_zero_target": 2040,
+    "sbti_validated": True,
+    "notes": "FY2024 Scope 1+2+3 = 1.75 Mt; down 10% from 2019 baseline "
+             "despite business growth. DC TWh is FY2023 (8.17); FY2024 "
+             "figure not yet extracted from primary report. PUE improved 6% "
+             "YoY. SBTi-validated: −90% absolute Scope 1+2 and −90% Scope 3 "
+             "vs. 2019 by 2040. Heat exported to communities: 14.5 GWh (+245%).",
+    "est_twh": True,
+}
+
+DIGITAL_REALTY_2024_HEADLINE = {
+    "report_year": "FY2024/FY2025",
+    "source": "Digital Realty 2025 Impact Report",
+    "pue": 1.38,               # FY2025 global
+    "wue": 0.59,               # FY2025, −15.7% YoY
+    "scope1_tco2e": 51_745,    # FY2024
+    "scope2_location_tco2e": 3_311_323,
+    "scope2_market_tco2e": 948_175,
+    "scope3_tco2e": 1_456_435, # FY2024, +16.9% YoY
+    "renewable_pct": 93,       # FY2025
+    "data_centers": 300,
+    "markets": 55,
+    "countries": 30,
+    "revenue_b": 6.1,
+    "nonpotable_water_pct": 45,
+    "notes": "PUE/WUE/renewable from FY2025; Scope 1/2/3 from FY2024. "
+             "Absolute TWh and water consumption not disclosed. EMEA PUE "
+             "1.31; new 2025 builds designed at 1.20. 42% of European IT "
+             "capacity carbon-neutral certified. +3% water use vs +34% "
+             "portfolio growth (2023-2025). SBTi status unconfirmed.",
+}
+
+EDGECONNEX_2024_HEADLINE = {
+    "report_year": "FY2024",
+    "source": "EdgeConneX 5th Annual Sustainability Report (Sept 2025)",
+    "dc_twh": 1.66,            # 1,659,057 MWh
+    "pue": 1.33,
+    "scope1_tco2e": 17_925,
+    "scope2_market_tco2e": 0,
+    "scope3_tco2e": 498_287,
+    "renewable_pct": 90,
+    "water_consumption_mgal": 25,  # 96,491 m³ × 0.000264172 Mgal/m³ ≈ 25
+    "water_free_pct": 93,
+    "capacity_mw": 410,
+    "sbti_validated": True,
+    "notes": "SBTi Scope 1+2 target met (−50.4%); Scope 3 target exceeded "
+             "(−64%) vs 2021 baseline. Market-based Scope 2 is 0 tCO2e "
+             "(100% RECs/PPAs); location-based Scope 2 not disclosed. "
+             "93% of sites use water-free cooling. Includes 50% of "
+             "AdaniConneX (India) JV from 2022 onward.",
+}
+
+STACK_2023_HEADLINE = {
+    "report_year": "FY2023",
+    "source": "STACK Infrastructure 2024 Impact Report (April 2025)",
+    "pue": 1.35,
+    "wue": 1.08,
+    "scope1_tco2e": 3_900,
+    "scope2_tco2e": 295_400,   # renewable-covered; unclear loc vs mkt
+    "scope3_tco2e": 460_300,
+    "renewable_pct": 100,      # since Dec 31, 2021
+    "capacity_gw": 7,          # built + in-development + potential
+    "facilities": 37,
+    "markets": 22,
+    "sbti_committed": True,    # Sept 2024
+    "notes": "100% renewable procurement since 2021; >1,000 GWh procured "
+             "in 2023. Scope 2 boundary (location vs market) unclear in "
+             "report. 34.8 M gallons potable water saved via reclaimed-water "
+             "systems. SBTi committed (not yet validated) as of Sept 2024.",
+}
+
+CYRUSONE_2023_HEADLINE = {
+    "report_year": "FY2023",
+    "source": "CyrusOne 2024 Sustainability Report (June 2024)",
+    "pue": 1.46,
+    "scope1_tco2e": 27_710,
+    "scope2_market_tco2e": 402_058,
+    "scope3_tco2e": 474_137,
+    "carbon_free_pct": 61.6,
+    "data_centers": 50,
+    "sbti_validated": True,
+    "net_positive_water_sites": 12,
+    "notes": "Private since April 2022 (KKR/GIP, $15B). Emissions down "
+             "29.4% vs 2021 baseline, exceeding SBTi interim by >16 ppts. "
+             "Net Positive Water at 12 facilities + US HQ. EcoVadis Gold "
+             "(top 5%) 3rd consecutive year. $11.2B sustainability-linked "
+             "financing secured in 2024. TWh and absolute water not disclosed.",
+}
+
+VANTAGE_2023_HEADLINE = {
+    "report_year": "CY2023",
+    "source": "Vantage Data Centers 2023 ESG Report (July 2024)",
+    "pue": 1.26,               # annualized design PUE
+    "scope1_tco2e": 4_371,
+    "scope2_location_tco2e": 49_420,
+    "capacity_gw": 2,          # >2 GW total IT once fully built
+    "campuses": 34,
+    "notes": "Design PUE; operational PUE not disclosed. Scope 2 is "
+             "location-based only; market-based deferred pending 3rd-party "
+             "verification. Scope 3 not quantified (reported as 96.2% of "
+             "total). Near-zero water via air-cooled chiller design. 4 of 34 "
+             "campuses at >99% renewable. Net zero S1+2 by 2030, all scopes "
+             "by 2040 (The Climate Pledge).",
+}
+
+# Limited-disclosure operators (capacity/profile only, minimal ESG)
+COREWEAVE_PROFILE = {
+    "report_year": "FY2025",
+    "source": "CoreWeave FY2025 10-K (SEC filing)",
+    "capacity_mw": 850,
+    "contracted_gw": 3.1,
+    "data_centers": 43,
+    "revenue_b": 5.13,
+    "esg_disclosure": False,
+    "notes": "IPO March 2025 (NASDAQ: CRWV). No sustainability report, no "
+             "CDP response, no Scope 1/2/3 inventory, no PUE/WUE figures. "
+             "Marketing claims: $2B Scotland buildout 'powered by renewable "
+             "energy'; liquid cooling '300x more water efficient' (unverified, "
+             "no baseline). Revenue grew from $229M (2023) to $5.13B (2025).",
+}
+
+QTS_PROFILE = {
+    "report_year": "FY2024",
+    "source": "QTS 2024 Sustainability Report",
+    "wue": 0.82,               # −27% YoY
+    "carbon_free_pct": 100,
+    "contracted_gw": 2,
+    "carbon_free_mwh": 489_390,
+    "esg_disclosure": "partial",
+    "notes": "Private since 2021 (Blackstone, $10B). Fleet PUE not disclosed "
+             "publicly. Scope 1/2/3 not in report summary (third-party "
+             "estimates exist but unverified). Claims 100% carbon-free "
+             "operational electricity. 100% new greenfield builds are "
+             "water-free. ~1.5B gallons/year saved via closed-loop cooling.",
+}
+
+SWITCH_PROFILE = {
+    "report_year": "CY2024",
+    "source": "Switch ESG webpage (marketing claims only)",
+    "pue": 1.18,               # marketing claim, not from audited report
+    "renewable_pct": 100,      # since 2016, marketing claim
+    "esg_disclosure": False,
+    "notes": "Private since 2023 (DigitalBridge). No downloadable ESG report "
+             "found — only marketing webpage. PUE 1.18 and 100% renewable "
+             "since 2016 are unverified claims. No Scope 1/2/3, no WUE, no "
+             "absolute water figures. Las Vegas: 315 MW; Tahoe Reno: up to "
+             "2 GW planned. $20B green financing raised since 2024.",
+}
+
+COMPASS_PROFILE = {
+    "report_year": "FY2024",
+    "source": "Compass Datacenters Outcomes 2025 Report (Oct 2025)",
+    "pue": 1.25,               # annualized design PUE
+    "wue": 0,                  # waterless cooling design
+    "esg_disclosure": "partial",
+    "notes": "Build-to-suit model: Scope 1/2 covers corporate offices only "
+             "(~3,700 tCO2e), NOT data center operations. Actual DC energy "
+             "sits in Scope 3 Category 13 (downstream leased assets, +17% "
+             "in 2024). Total capacity, campus count, and markets not "
+             "disclosed. Waterless cooling design (zero water for IT loads). "
+             "Embodied carbon in construction −33% per MW (2022-2024).",
+}
+
 # Illustrative 24-hour marginal carbon-intensity curves (gCO2/kWh).
 # STYLIZED shapes anchored to plausible ranges — NOT live. Replace via the
 # fetch_grid_intensity() stub with Electricity Maps / WattTime / EIA-930 /

@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Corporate environmental scorecards — AI GridWatch</title>
-<meta name="description" content="Environmental data for 14 data center companies: hyperscalers, operators, and developers — side by side.">
-<link rel="canonical" href="https://gridwatch-ai.vercel.app/companies/">
+<title>STACK Infrastructure environmental scorecard — AI GridWatch</title>
+<meta name="description" content="Environmental data for STACK Infrastructure: PUE 1.35, carbon and water metrics from FY2023.">
+<link rel="canonical" href="https://gridwatch-ai.vercel.app/companies/stack">
 <link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
       href="https://gridwatch-ai.vercel.app/blog/feed.xml">
-<meta property="og:title" content="Corporate environmental scorecards — AI GridWatch">
-<meta property="og:description" content="Environmental data for 14 data center companies: hyperscalers, operators, and developers — side by side.">
+<meta property="og:title" content="STACK Infrastructure environmental scorecard — AI GridWatch">
+<meta property="og:description" content="Environmental data for STACK Infrastructure: PUE 1.35, carbon and water metrics from FY2023.">
 <meta property="og:type" content="website">
 
 <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
@@ -123,70 +123,32 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 </nav>
 
 <header>
-  <div class="kicker">Corporate scorecards</div>
-  <h1>Who builds the AI grid — and what they disclose</h1>
-  <p class="sub">Environmental data from 14 data center companies —
-  hyperscalers, operators, and developers — side by side. The gap between
-  what they claim and what they report is the gap your community should
-  ask about.</p>
+  <div class="kicker">Corporate scorecard</div>
+  <h1>STACK Infrastructure environmental profile</h1>
+  <p class="sub">Key environmental metrics from the FY2023
+  sustainability report.</p>
 </header>
+<div class="stats"><div class="stat"><b>1.35</b><span>fleet PUE</span></div><div class="stat"><b>295K</b><span>Scope 2 (location) tCO2e</span></div></div>
 <section>
-  <h2>Hyperscalers</h2>
-  <p class="muted">The four companies that build and operate their own AI
-  infrastructure at the largest scale.</p>
-  <div style="overflow-x:auto">
+  <h2>Key metrics</h2>
   <table>
-    <tr><th></th><th>DC TWh</th><th>PUE</th><th>Scope 2 (location)</th>
-    <th>Scope 2 (market)</th><th>Water (Mgal)</th><th>Renewable</th></tr>
-    <tr><td><a href="google.html">Google</a></td><td>42.4</td><td>1.09</td><td>15.1M</td><td>2.8M</td><td>10,869</td><td>65% CFE</td></tr><tr><td><a href="meta.html">Meta</a></td><td>18.1</td><td>1.08</td><td>6.0M</td><td>1K</td><td>825</td><td>100% renewable</td></tr><tr><td><a href="microsoft.html">Microsoft</a></td><td>29.8*</td><td>1.18</td><td>9.7M</td><td>2.7M</td><td>6,441</td><td>100% renewable</td></tr><tr><td><a href="aws.html">Amazon (AWS)</a></td><td>38.0*</td><td>1.14</td><td>11.9M</td><td>0</td><td>4,600</td><td>100% renewable</td></tr>
+    <tr><td>Renewable / CFE claim</td><td><strong>100% renewable (since 2021)</strong></td></tr><tr><td>Water</td><td><strong>WUE 1.08; 34.8M gal saved via reclaimed water</strong></td></tr>
+    <tr><td>Scale</td><td><strong>37+ facilities · 22 markets · &gt;7 GW capacity</strong></td></tr>
+    <tr><td>Scope 1</td><td><strong>3,900 tCO2e</strong></td></tr>
+<tr><td>Scope 3</td><td><strong>460,300 tCO2e</strong></td></tr>
+<tr><td>SBTi</td><td><strong>Committed (Sept 2024)</strong></td></tr>
   </table>
-  </div>
-  <p class="muted" style="margin-top:6px">* DC-only TWh and location-based
-  Scope 2 are estimates; these companies do not break out data-center-only
-  electricity.</p>
-  <div class="grid2"><a href="google.html" class="card" style="text-decoration:none;display:block"><h3>Google</h3><p class="muted">FY2025 · 42.4 TWh · PUE 1.09</p></a>
-<a href="meta.html" class="card" style="text-decoration:none;display:block"><h3>Meta</h3><p class="muted">FY2024 · 18.1 TWh · PUE 1.08</p></a>
-<a href="microsoft.html" class="card" style="text-decoration:none;display:block"><h3>Microsoft</h3><p class="muted">FY2025 · 29.8 TWh* · PUE 1.18</p></a>
-<a href="aws.html" class="card" style="text-decoration:none;display:block"><h3>Amazon (AWS)</h3><p class="muted">CY2025 · 38.0 TWh* · PUE 1.14</p></a>
-</div>
+  <div class="ask" style="margin-top:18px"><strong>Methodology note:</strong> Scope 2 boundary (location vs market) unclear in report. &gt;1,000 GWh procured in 2023.</div>
 </section>
 <section>
-  <h2>Data center operators &amp; developers</h2>
-  <p class="muted">Companies that build, own, or lease hyperscale data center
-  campuses — the facilities where AI workloads actually run.</p>
-  <div style="overflow-x:auto">
-  <table>
-    <tr><th></th><th>DC TWh</th><th>PUE</th><th>Scope 2 (location)</th>
-    <th>Scope 2 (market)</th><th>Water (Mgal)</th><th>Renewable</th></tr>
-    <tr><td><a href="equinix.html">Equinix</a></td><td>8.17*</td><td>1.39</td><td>2.6M</td><td>253K</td><td>1,104</td><td>96% renewable</td></tr><tr><td><a href="digital-realty.html">Digital Realty</a></td><td>—</td><td>1.38</td><td>3.3M</td><td>948K</td><td>—</td><td>93% renewable</td></tr><tr><td><a href="edgeconnex.html">EdgeConneX</a></td><td>1.66</td><td>1.33</td><td>—</td><td>0</td><td>25</td><td>90% renewable</td></tr><tr><td><a href="stack.html">STACK Infrastructure</a></td><td>—</td><td>1.35</td><td>295K</td><td>—</td><td>—</td><td>100% renewable (since 2021)</td></tr><tr><td><a href="cyrusone.html">CyrusOne</a></td><td>—</td><td>1.46</td><td>—</td><td>402K</td><td>—</td><td>61.6% carbon-free</td></tr><tr><td><a href="vantage.html">Vantage Data Centers</a></td><td>—</td><td>1.26</td><td>49K</td><td>—</td><td>—</td><td>4 of 34 campuses &gt;99% renewable</td></tr>
-  </table>
-  </div>
-  <p class="muted" style="margin-top:6px">— = not disclosed or not applicable.
-  * = estimated figure.</p>
-  <div class="grid2"><a href="equinix.html" class="card" style="text-decoration:none;display:block"><h3>Equinix</h3><p class="muted">FY2024 · 8.17 TWh* · PUE 1.39</p></a>
-<a href="digital-realty.html" class="card" style="text-decoration:none;display:block"><h3>Digital Realty</h3><p class="muted">FY2024 · PUE 1.38</p></a>
-<a href="edgeconnex.html" class="card" style="text-decoration:none;display:block"><h3>EdgeConneX</h3><p class="muted">FY2024 · 1.66 TWh · PUE 1.33</p></a>
-<a href="stack.html" class="card" style="text-decoration:none;display:block"><h3>STACK Infrastructure</h3><p class="muted">FY2023 · PUE 1.35</p></a>
-<a href="cyrusone.html" class="card" style="text-decoration:none;display:block"><h3>CyrusOne</h3><p class="muted">FY2023 · PUE 1.46</p></a>
-<a href="vantage.html" class="card" style="text-decoration:none;display:block"><h3>Vantage Data Centers</h3><p class="muted">CY2023 · PUE 1.26</p></a>
-</div>
-</section>
-<section>
-  <h2>Transparency gaps</h2>
-  <p class="muted">These companies build or operate significant data center
-  capacity but publish little or no environmental data. That silence is itself
-  a data point — ask why.</p>
-  <div style="overflow-x:auto">
-  <table>
-    <tr><th></th><th>Scale</th><th>Disclosure level</th></tr>
-    <tr><td><a href="coreweave.html">CoreWeave</a></td><td>43 data centers · &gt;850 MW active · ~3.1 GW contracted</td><td><span class="badge badge-rejected">none</span></td></tr><tr><td><a href="qts.html">QTS (Blackstone)</a></td><td>&gt;2 GW contracted capacity</td><td><span class="badge badge-proposed">partial</span></td></tr><tr><td><a href="switch.html">Switch (DigitalBridge)</a></td><td>Las Vegas 315 MW · Tahoe Reno up to 2 GW planned</td><td><span class="badge badge-proposed">marketing only</span></td></tr><tr><td><a href="compass.html">Compass Datacenters</a></td><td>Total capacity not disclosed</td><td><span class="badge badge-proposed">partial</span></td></tr>
-  </table>
-  </div>
-  <div class="grid2"><a href="coreweave.html" class="card" style="text-decoration:none;display:block"><h3>CoreWeave</h3><p class="muted">FY2025</p></a>
-<a href="qts.html" class="card" style="text-decoration:none;display:block"><h3>QTS (Blackstone)</h3><p class="muted">FY2024</p></a>
-<a href="switch.html" class="card" style="text-decoration:none;display:block"><h3>Switch (DigitalBridge)</h3><p class="muted">CY2024</p></a>
-<a href="compass.html" class="card" style="text-decoration:none;display:block"><h3>Compass Datacenters</h3><p class="muted">FY2024</p></a>
-</div>
+  <h2>What this means for your community</h2>
+  <p>These operators lease capacity to hyperscalers — when Google, Microsoft,
+  or AWS announces a campus in your area, the building may carry a different
+  name on the permit. The environmental footprint belongs to the facility,
+  not the tenant's brand. Ask the operator, not just the tenant, for their
+  PUE, water, and emissions data.</p>
+  <p><a class="btn" href="https://aigridtracker.streamlit.app">Run the numbers for your community &rarr;</a>
+  <a class="btn ghost" href="../companies/index.html">All scorecards</a></p>
 </section>
 
 <footer>
