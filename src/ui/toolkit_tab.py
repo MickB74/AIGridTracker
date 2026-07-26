@@ -938,14 +938,14 @@ def render_toolkit_tab():
             "any approval is granted."
         )
         mit_items = [
-            ("Sound walls / noise barriers", "\\$150–\\$300 per linear foot",
+            ("Sound walls / noise barriers", "$150–$300/lin. ft",
              "Effective for mechanical noise from cooling systems at the "
              "property line. Demand third-party acoustic design, not the "
              "developer's own spec."),
-            ("Acoustic windows for adjacent homes", "\\$800–\\$1,500 per window",
+            ("Acoustic windows for adjacent homes", "$800–$1,500/window",
              "Double- or triple-pane retrofits for homes within the noise "
              "impact zone. Developer funds the full replacement."),
-            ("HVAC / air filtration upgrades", "\\$5,000–\\$15,000 per home",
+            ("HVAC / air filtration upgrades", "$5K–$15K/home",
              "Backup generator emissions and construction dust affect the "
              "nearest homes. Developer-funded HEPA filtration or HVAC upgrades."),
             ("Landscape screening & setback buffers", "Varies",
