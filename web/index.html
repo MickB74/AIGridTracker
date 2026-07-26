@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI GridWatch — data center impact tools for communities</title>
+<meta name="description" content="Free calculators, negotiation playbooks, and sourced health evidence for communities facing data center development.">
+<link rel="canonical" href="https://gridwatch-ai.vercel.app/">
+<meta property="og:title" content="AI GridWatch — data center impact tools for communities">
+<meta property="og:description" content="Free calculators, negotiation playbooks, and sourced health evidence for communities facing data center development.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<style>
+:root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
+        --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
+* { box-sizing:border-box; margin:0; }
+body { background:var(--bg); color:var(--ink);
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.wrap { max-width:900px; margin:0 auto; padding:20px 20px 64px; }
+nav { display:flex; align-items:center; gap:14px; padding:14px 0;
+      border-bottom:1px solid var(--rule); flex-wrap:wrap; }
+nav img { height:34px; }
+nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+nav a:hover { color:var(--teal); }
+nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
+           font-weight:700; padding:8px 16px; border-radius:8px; }
+header { padding:44px 0 10px; }
+.kicker { color:var(--teal); font-weight:700; letter-spacing:.12em;
+          text-transform:uppercase; font-size:13px; }
+h1 { font-size:clamp(28px,5vw,44px); line-height:1.12; margin:10px 0; }
+.sub { color:var(--muted); max-width:640px; }
+.stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+         margin:30px 0; }
+@media (min-width:640px){ .stats{ grid-template-columns:repeat(4,1fr);} }
+.stat { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:16px; }
+.stat b { display:block; font-size:24px; color:var(--teal); }
+.stat span { font-size:13px; color:var(--muted); }
+section { margin:34px 0; }
+h2 { font-size:20px; color:var(--teal); margin-bottom:12px;
+     border-bottom:1px solid var(--rule); padding-bottom:8px; }
+ul { padding-left:22px; } li { margin:9px 0; }
+a { color:var(--teal); }
+.btn { display:inline-block; background:var(--teal); color:#06251f;
+       font-weight:700; padding:12px 22px; border-radius:10px;
+       text-decoration:none; margin:8px 8px 0 0; }
+.btn.ghost { background:transparent; color:var(--teal);
+             border:1px solid var(--teal); }
+.muted { color:var(--muted); font-size:14px; }
+.grid3 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid3{ grid-template-columns:repeat(3,1fr);} }
+.card { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:18px; }
+.card h3 { margin-bottom:6px; font-size:16px; }
+.panel { border-radius:14px; padding:18px; color:#fff; }
+.panel h3 { margin-bottom:8px; }
+.panel p { font-size:14px; color:rgba(255,255,255,.85); }
+.ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
+       border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
+.src { font-size:12.5px; color:var(--muted); }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+th { color:var(--muted); font-weight:600; }
+footer { margin-top:48px; border-top:1px solid var(--rule);
+         padding-top:16px; font-size:13px; color:var(--muted); }
+.statelist { columns:2; font-size:14.5px; }
+@media (min-width:640px){ .statelist{ columns:4; } }
+.statelist a { display:block; padding:3px 0; text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="index.html"><img src="assets/logo.svg" alt="AI GridWatch"></a>
+  <a href="index.html">Home</a>
+  <a href="states/index.html">Your state</a>
+  <a href="health-risks.html">Health risks</a>
+  <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
+</nav>
+
+<header>
+  <div class="kicker">AI GridWatch</div>
+  <h1>A data center is coming to town.<br>Negotiate like you know the numbers.</h1>
+  <p class="sub">Free tools for communities facing data center development:
+  impact calculators, negotiation playbooks, health evidence, and the
+  documents to bring to your next hearing — all sourced.</p>
+  <p>
+    <a class="btn" href="https://aigridtracker.streamlit.app">Start here — the 5-step wizard</a>
+    <a class="btn ghost" href="health-risks.html">The health risks, sourced</a>
+  </p>
+</header>
+<div class="stats">
+  <div class="stat"><b>4,427</b><span>tracked U.S. data center facilities</span></div>
+  <div class="stat"><b>153 TWh</b><span>estimated annual electricity, 51 states</span></div>
+  <div class="stat"><b>47</b><span>tracked moratorium &amp; pushback efforts</span></div>
+  <div class="stat"><b>325&ndash;580 TWh</b><span>projected U.S. data center demand by 2030 (Berkeley Lab)</span></div>
+</div>
+<section>
+  <h2>What you get</h2>
+  <div class="grid3">
+    <div class="card"><h3>📥 Action pack</h3><p class="muted">A personalized
+    PDF: impact numbers, meeting strategy, CBA targets, a 2-minute speech,
+    and ready-to-send letters.</p></div>
+    <div class="card"><h3>🪧 Flyer + petition</h3><p class="muted">A one-page
+    hand-out with your community's numbers, in English and Spanish, with a
+    sign-up sheet.</p></div>
+    <div class="card"><h3>🌐 Campaign site</h3><p class="muted">A complete
+    one-page website with your numbers baked in — free to host, no coding
+    needed.</p></div>
+  </div>
+  <p class="muted" style="margin-top:10px">All generated in the free
+  <a href="https://aigridtracker.streamlit.app">GridWatch toolkit</a> — no signup required.</p>
+</section>
+<section>
+  <h2>Communities that organized, won</h2>
+  <ul><li><strong>The Dalles, OR</strong> (Google) — $29M wastewater treatment upgrade + recycled-water cooling; city capped DC draws at 25% of municipal supply</li>
+<li><strong>Groton, CT</strong> (Vantage) — $2.5M community recreation center CBA, recorded as a zoning condition after a year-long moratorium</li>
+<li><strong>Morrow &amp; Umatilla Counties, OR</strong> (Amazon (AWS)) — Renegotiated tax agreements with higher annual community payments after commissioners pushed back</li>
+<li><strong>Loudoun County, VA</strong> (Multiple) — Hundreds of millions/year in data-center property taxes — ~38% of the county budget — by declining abatements</li></ul>
+  <p class="muted">Every one of these happened <em>before</em> final
+  approval. Timing is the leverage.</p>
+</section>
+<section>
+  <h2>Find your state</h2>
+  <div class="statelist"><a href="states/alabama.html">Alabama</a>
+<a href="states/alaska.html">Alaska</a>
+<a href="states/arizona.html">Arizona</a>
+<a href="states/arkansas.html">Arkansas</a>
+<a href="states/california.html">California</a>
+<a href="states/colorado.html">Colorado</a>
+<a href="states/connecticut.html">Connecticut</a>
+<a href="states/delaware.html">Delaware</a>
+<a href="states/district-of-columbia.html">District of Columbia</a>
+<a href="states/florida.html">Florida</a>
+<a href="states/georgia.html">Georgia</a>
+<a href="states/hawaii.html">Hawaii</a>
+<a href="states/idaho.html">Idaho</a>
+<a href="states/illinois.html">Illinois</a>
+<a href="states/indiana.html">Indiana</a>
+<a href="states/iowa.html">Iowa</a>
+<a href="states/kansas.html">Kansas</a>
+<a href="states/kentucky.html">Kentucky</a>
+<a href="states/louisiana.html">Louisiana</a>
+<a href="states/maine.html">Maine</a>
+<a href="states/maryland.html">Maryland</a>
+<a href="states/massachusetts.html">Massachusetts</a>
+<a href="states/michigan.html">Michigan</a>
+<a href="states/minnesota.html">Minnesota</a>
+<a href="states/mississippi.html">Mississippi</a>
+<a href="states/missouri.html">Missouri</a>
+<a href="states/montana.html">Montana</a>
+<a href="states/nebraska.html">Nebraska</a>
+<a href="states/nevada.html">Nevada</a>
+<a href="states/new-hampshire.html">New Hampshire</a>
+<a href="states/new-jersey.html">New Jersey</a>
+<a href="states/new-mexico.html">New Mexico</a>
+<a href="states/new-york.html">New York</a>
+<a href="states/north-carolina.html">North Carolina</a>
+<a href="states/north-dakota.html">North Dakota</a>
+<a href="states/ohio.html">Ohio</a>
+<a href="states/oklahoma.html">Oklahoma</a>
+<a href="states/oregon.html">Oregon</a>
+<a href="states/pennsylvania.html">Pennsylvania</a>
+<a href="states/rhode-island.html">Rhode Island</a>
+<a href="states/south-carolina.html">South Carolina</a>
+<a href="states/south-dakota.html">South Dakota</a>
+<a href="states/tennessee.html">Tennessee</a>
+<a href="states/texas.html">Texas</a>
+<a href="states/utah.html">Utah</a>
+<a href="states/vermont.html">Vermont</a>
+<a href="states/virginia.html">Virginia</a>
+<a href="states/washington.html">Washington</a>
+<a href="states/west-virginia.html">West Virginia</a>
+<a href="states/wisconsin.html">Wisconsin</a>
+<a href="states/wyoming.html">Wyoming</a></div>
+</section>
+
+<footer>
+  AI GridWatch — community energy intelligence. Planning estimates, not
+  engineering studies; every number is sourced in the
+  <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.
+</footer>
+</div>
+</body>
+</html>

@@ -7,6 +7,12 @@
       "runtimeArgs": ["run", "app.py", "--server.headless", "true", "--server.port", "8520"],
       "port": 8520,
       "autoPort": false
+    },
+    {
+      "name": "static-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8777", "--directory", "web"],
+      "port": 8777
     }
   ]
 }

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The health risks of data centers — sourced community briefing</title>
+<meta name="description" content="Air, noise, light, bills, water, and climate: the documented health impacts of data centers, with sources and the permit conditions that address them.">
+<link rel="canonical" href="https://gridwatch-ai.vercel.app/health-risks">
+<meta property="og:title" content="The health risks of data centers — sourced community briefing">
+<meta property="og:description" content="Air, noise, light, bills, water, and climate: the documented health impacts of data centers, with sources and the permit conditions that address them.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<style>
+:root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
+        --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
+* { box-sizing:border-box; margin:0; }
+body { background:var(--bg); color:var(--ink);
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.wrap { max-width:900px; margin:0 auto; padding:20px 20px 64px; }
+nav { display:flex; align-items:center; gap:14px; padding:14px 0;
+      border-bottom:1px solid var(--rule); flex-wrap:wrap; }
+nav img { height:34px; }
+nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+nav a:hover { color:var(--teal); }
+nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
+           font-weight:700; padding:8px 16px; border-radius:8px; }
+header { padding:44px 0 10px; }
+.kicker { color:var(--teal); font-weight:700; letter-spacing:.12em;
+          text-transform:uppercase; font-size:13px; }
+h1 { font-size:clamp(28px,5vw,44px); line-height:1.12; margin:10px 0; }
+.sub { color:var(--muted); max-width:640px; }
+.stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+         margin:30px 0; }
+@media (min-width:640px){ .stats{ grid-template-columns:repeat(4,1fr);} }
+.stat { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:16px; }
+.stat b { display:block; font-size:24px; color:var(--teal); }
+.stat span { font-size:13px; color:var(--muted); }
+section { margin:34px 0; }
+h2 { font-size:20px; color:var(--teal); margin-bottom:12px;
+     border-bottom:1px solid var(--rule); padding-bottom:8px; }
+ul { padding-left:22px; } li { margin:9px 0; }
+a { color:var(--teal); }
+.btn { display:inline-block; background:var(--teal); color:#06251f;
+       font-weight:700; padding:12px 22px; border-radius:10px;
+       text-decoration:none; margin:8px 8px 0 0; }
+.btn.ghost { background:transparent; color:var(--teal);
+             border:1px solid var(--teal); }
+.muted { color:var(--muted); font-size:14px; }
+.grid3 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid3{ grid-template-columns:repeat(3,1fr);} }
+.card { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:18px; }
+.card h3 { margin-bottom:6px; font-size:16px; }
+.panel { border-radius:14px; padding:18px; color:#fff; }
+.panel h3 { margin-bottom:8px; }
+.panel p { font-size:14px; color:rgba(255,255,255,.85); }
+.ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
+       border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
+.src { font-size:12.5px; color:var(--muted); }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+th { color:var(--muted); font-weight:600; }
+footer { margin-top:48px; border-top:1px solid var(--rule);
+         padding-top:16px; font-size:13px; color:var(--muted); }
+.statelist { columns:2; font-size:14.5px; }
+@media (min-width:640px){ .statelist{ columns:4; } }
+.statelist a { display:block; padding:3px 0; text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="index.html"><img src="assets/logo.svg" alt="AI GridWatch"></a>
+  <a href="index.html">Home</a>
+  <a href="states/index.html">Your state</a>
+  <a href="health-risks.html">Health risks</a>
+  <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
+</nav>
+
+<header>
+  <div class="kicker">Community briefing</div>
+  <h1>The health risks of data centers</h1>
+  <p class="sub">Six ways a facility affects the people who live near one —
+  every claim sourced, every risk paired with the permit condition that
+  addresses it. Format inspired by the
+  <a href="https://www.environmentalhealthproject.org/_files/ugd/a9ce25_3c3574ea12324c65909d308c3a716e56.pdf">Environmental Health Project's
+  community infographic</a>.</p>
+  <p><a class="btn" href="assets/gridwatch_health_risks.pdf">📥 Print the
+  infographic (PDF)</a>
+  <a class="btn ghost" href="https://aigridtracker.streamlit.app">Open the full toolkit</a></p>
+</header>
+
+<section>
+  <div class="panel" style="background:#414A5C">
+    <h3>🫁 Air pollution</h3>
+    <p>Fossil power plants and diesel backup generators serving data centers emit pollution linked to ~1,300 premature deaths a year by 2030.</p>
+  </div>
+  <ul><li>UC Riverside &amp; Caltech researchers project that air pollution from U.S. data centers could contribute to roughly 1,300 premature deaths and 600,000 asthma-symptom cases a year by 2030, with public-health costs approaching $20B annually. <span class="src">— <a href="https://arxiv.org/abs/2412.06288">Han, Wu, Li, Wierman &amp; Ren</a></span></li><li>The pollution comes from two places: the fossil-fueled power plants supplying the electricity and on-site diesel backup generators emitting NOx and fine particulates (PM2.5) — both linked to respiratory disease, cardiovascular conditions, and cancer risk. <span class="src">— <a href="https://arxiv.org/abs/2412.06288">Han, Wu, Li, Wierman &amp; Ren</a></span></li><li>The burden lands unevenly: much of the health impact falls on communities near the power plants that serve a data center, which can sit hundreds of miles from the facility itself. <span class="src">— <a href="https://arxiv.org/abs/2412.06288">Han, Wu, Li, Wierman &amp; Ren</a></span></li></ul>
+  <div class="ask"><strong>What to demand:</strong> Demand generator run-hour limits, Tier 4 (or battery) backup instead of legacy diesel, and an air-permit review with public comment before any approval.</div>
+</section>
+<section>
+  <div class="panel" style="background:#8C4A2F">
+    <h3>🔊 Noise pollution</h3>
+    <p>Cooling systems and generators produce a constant low-frequency hum linked to sleep disturbance, hypertension, and cardiovascular disease.</p>
+  </div>
+  <ul><li>Data-center cooling systems and backup generators produce a continuous low-frequency hum that travels farther than ordinary sound and penetrates building walls. <span class="src">— <a href="https://www.environmentalhealthproject.org/_files/ugd/a9ce25_3c3574ea12324c65909d308c3a716e56.pdf">Environmental Health Project</a></span></li><li>The WHO links chronic environmental noise to sleep disturbance, cardiovascular and metabolic disease, and cognitive impairment — in Europe, environmental noise contributes to an estimated 48,000 new heart-disease cases and 12,000 premature deaths every year. <span class="src">— <a href="https://www.eea.europa.eu/en/analysis/publications/health-risks-caused-by-environmental-noise-in-europe">European Environment Agency</a></span></li><li>WHO night-noise recommendations sit around 40-45 dB — the reason our model CBA clause sets 45 dBA at the nearest residential property line. <span class="src">— <a href="https://www.who.int/europe/publications/i/item/WHO-EURO-2018-3009-42767-59666">WHO Europe</a></span></li></ul>
+  <div class="ask"><strong>What to demand:</strong> A 45 dBA limit at the residential property line as a permit condition — measured after commissioning, not just modeled — with quarterly public reporting.</div>
+</section>
+<section>
+  <div class="panel" style="background:#5B2D5E">
+    <h3>💡 Light pollution</h3>
+    <p>24/7 campus lighting disrupts sleep and circadian rhythms; the AMA has warned about nighttime light exposure since 2012.</p>
+  </div>
+  <ul><li>The American Medical Association adopted policy in 2012 recognizing nighttime light exposure as a health hazard: it suppresses melatonin and disrupts circadian rhythms. <span class="src">— <a href="https://www.ama-assn.org/sites/ama-assn.org/files/corp/media-browser/public/about-ama/councils/Council%20Reports/council-on-science-public-health/a12-csaph4-lightpollution-summary.pdf">American Medical Association</a></span></li><li>Chronic light at night is associated with reduced sleep, impaired daytime functioning, obesity, and mood disorders, with research linking elevated light pollution to higher breast and prostate cancer rates. <span class="src">— <a href="https://www.ama-assn.org/sites/ama-assn.org/files/corp/media-browser/public/about-ama/councils/Council%20Reports/council-on-science-public-health/a12-csaph4-lightpollution-summary.pdf">American Medical Association</a></span></li><li>Data center campuses typically run high-intensity exterior security lighting around the clock. <span class="src">— <a href="https://www.environmentalhealthproject.org/_files/ugd/a9ce25_3c3574ea12324c65909d308c3a716e56.pdf">Environmental Health Project</a></span></li></ul>
+  <div class="ask"><strong>What to demand:</strong> Full-cutoff shielded fixtures, color temperature at or below 3000K (the AMA community guidance), and dark-sky-compliant site lighting as approval conditions.</div>
+</section>
+<section>
+  <div class="panel" style="background:#7A1F2B">
+    <h3>💸 Higher bills</h3>
+    <p>Large loads strain the grid and shift transmission and capacity costs onto residential ratepayers.</p>
+  </div>
+  <ul><li>PJM&#x27;s 2025 capacity auction cleared at a record $16.4B — with data centers responsible for roughly 40% (~$6.5B) of the increase, costs that flow through to ratepayers across 13 states. <span class="src">— <a href="https://www.utilitydive.com/news/data-centers-pjm-capacity-auction/808951/">PJM 2025 capacity auction</a></span></li><li>Virginia&#x27;s legislative audit agency (JLARC) found that unconstrained data-center growth will raise costs for other customers absent policy changes — in the state with more data centers than any other. <span class="src">— <a href="https://jlarc.virginia.gov/pdfs/reports/Rpt591.pdf">Virginia JLARC</a></span></li><li>Berkeley economists warn that who pays for data-center-driven grid expansion is a policy choice: without large-load tariffs, the default is everyone. <span class="src">— <a href="https://energyathaas.wordpress.com/2025/09/08/what-will-data-centers-do-to-your-electric-bill/">UC Berkeley Energy Institute</a></span></li></ul>
+  <div class="ask"><strong>What to demand:</strong> Cost causation as a condition: the developer pays 100% of interconnection and grid upgrades, under a large-load tariff so costs never reach residential bills. Estimate your own exposure in the Local Impact Calculator.</div>
+</section>
+<section>
+  <div class="panel" style="background:#1F5D73">
+    <h3>💧 Water consumption</h3>
+    <p>Data centers consume water twice — on site for cooling and at the power plants that supply them — often in water-stressed regions.</p>
+  </div>
+  <ul><li>About one-fifth of data centers&#x27; direct water footprint is drawn from moderately-to-highly water-stressed watersheds, and nearly half of servers are powered by plants in water-stressed regions. <span class="src">— <a href="https://iopscience.iop.org/article/10.1088/1748-9326/abfba1">Siddik, Shehabi &amp; Marston</a></span></li><li>Water is consumed twice: directly for evaporative cooling on site, and indirectly at the thermoelectric power plants generating the electricity. <span class="src">— <a href="https://iopscience.iop.org/article/10.1088/1748-9326/abfba1">Siddik, Shehabi &amp; Marston</a></span></li><li>AI-specific demand is growing fast — researchers project AI&#x27;s water withdrawal could reach billions of cubic meters a year by 2027, and most operators still don&#x27;t report site-level water use. <span class="src">— <a href="https://arxiv.org/abs/2304.03271">Li et al., Making AI Less Thirsty</a></span></li></ul>
+  <div class="ask"><strong>What to demand:</strong> An enforceable annual water cap in the permit, recycled or non-potable cooling supply, quarterly public metering, and re-approval before expansion.</div>
+</section>
+<section>
+  <div class="panel" style="background:#2F5D33">
+    <h3>🌡️ Climate &amp; reliability</h3>
+    <p>Fossil-heavy demand growth raises emissions, strains grid reliability, and adds local waste heat.</p>
+  </div>
+  <ul><li>U.S. data-center electricity use is projected to reach 325-580 TWh by 2030 (Berkeley Lab) — up to ~12% of national consumption — with much of the new supply coming from natural gas. <span class="src">— <a href="https://eta.lbl.gov/publications/2024-united-states-data-center-energy">Lawrence Berkeley National Lab</a></span></li><li>The IEA projects data centers will drive one of the largest sources of electricity demand growth this decade, with the fuel mix determining the emissions impact. <span class="src">— <a href="https://www.iea.org/reports/energy-and-ai">IEA, Energy and AI (2025) + Key Questions update (2026)</a></span></li><li>Hyperscalers are increasingly turning to on-site gas generation as a &#x27;bridge&#x27; — locking in fossil combustion next to host communities. <span class="src">— <a href="https://naturalgasintel.com/news/on-site-natural-gas-generation-gains-favor-with-hyperscalers-as-bridge-to-grid/">Natural Gas Intelligence</a></span></li></ul>
+  <div class="ask"><strong>What to demand:</strong> Binding 24/7 carbon-free energy commitments, no ratepayer-funded gas buildout, and demand-response/curtailment agreements so the facility sheds load in grid emergencies.</div>
+</section>
+
+<footer>
+  AI GridWatch — community energy intelligence. Planning estimates, not
+  engineering studies; every number is sourced in the
+  <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.
+</footer>
+</div>
+</body>
+</html>

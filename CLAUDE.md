@@ -97,6 +97,10 @@ Stacked tabs (States, Learn, Blog) have a "This tab contains…" caption at the 
 
 - **src/site_builder.py** — `build_campaign_site(...)`: self-contained single-file campaign `index.html` (inline CSS, OG tags, no external assets) users host on Netlify Drop / GitHub Pages.
 
+### Static site (web/ — Vercel front door)
+
+- **build_site.py** — Python static-site generator; renders `web/` from the same constants registries: landing page, 51 state one-pagers (`states/<slug>.html`), sourced health-risks page, health infographic PDF, sitemap/robots/vercel.json. Regenerate with `python3 build_site.py` (env overrides: `SITE_URL`, `APP_URL`) and commit the output whenever constants change — Vercel serves `web/` as-is (Root Directory = `web`, framework "Other", no build step). Preview locally with the `static-site` entry in `.claude/launch.json` (port 8777). The Streamlit app is NOT hosted on Vercel — the site links to it via `APP_URL`.
+
 ### Services (src/services/)
 
 External data fetchers. All must be cached with `@st.cache_data` and fail gracefully (return empty/None, never crash a tab).
