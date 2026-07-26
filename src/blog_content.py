@@ -51,6 +51,201 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── PJM capacity auction / ratepayer cost allocation ─────────────────
+    {
+        "id": "pjm-capacity-auction-ratepayer-shock-2026",
+        "section": "stories",
+        "title": "Five Auctions, \\$29 Billion: How Data Centers Took Over the PJM Capacity Market — and Sent Your Bill to the Moon",
+        "date": _dt.date(2026, 7, 26),
+        "author": "GridWatch AI",
+        "tags": ["PJM", "capacity markets", "utility bills", "cost allocation",
+                 "FERC", "Illinois", "Virginia", "ratepayers", "analysis"],
+        "summary": (
+            "PJM's capacity auction price has gone from \\$29/MW-day to \\$325 in "
+            "four years. Data centers drove 46% of the cost — \\$29.4 billion — "
+            "across those auctions, and the grid's independent watchdog says "
+            "ratepayers are footing the bill for power plants that may never "
+            "be needed. Here's the full timeline, who pays, and the three "
+            "reform proposals on the table right now."
+        ),
+        "body": """\
+On July 14, 2026, PJM Interconnection — the grid operator for 67 million
+people across 13 states and Washington, D.C. — published the results of its
+fifth consecutive capacity auction shaped by data center demand. The numbers
+tell a story that every ratepayer in the mid-Atlantic should understand,
+because the cost lands on their bill whether they've heard of a "base residual
+auction" or not.
+
+### The price trajectory
+
+PJM's capacity market pays power plants to *exist* — to be available on the
+hottest summer afternoon even if they don't run. The clearing price determines
+how much consumers pay for that insurance. Here is what has happened to it:
+
+| Delivery year | Clearing price (\\$/MW-day) | Change | Total cost |
+|---------------|---------------------------|--------|------------|
+| 2024/2025 | \\$28.92 | — | ~\\$5 B |
+| 2025/2026 | \\$269.92 | **+833%** | ~\\$14.7 B |
+| 2026/2027 | \\$329.17 | +22% | ~\\$16.4 B |
+| 2027/2028 | \\$333.44 (price cap) | +1.3% | ~\\$16.4 B |
+| 2028/2029 | \\$325.00 | −2.5% | ~\\$16.4 B |
+
+Read that first jump again. In a single year, the price that sets roughly 20%
+of your electricity bill rose by a factor of *nine*. And it has stayed there
+for four straight auctions, pinned at or near the FERC-approved price cap.
+
+The price cap is doing real work here. Without it, the 2028/2029 auction
+would have cleared at roughly **\\$555/MW-day** RTO-wide — and **\\$777/MW-day**
+in the ComEd zone around Chicago. The cap has saved consumers an estimated
+**\\$45 billion** over four auctions. But it hasn't solved the underlying
+problem — it's just hidden how bad the underlying problem is.
+
+Two things happened in 2025 that had never happened before: PJM's load
+forecast added **tens of thousands of megawatts** of data center demand, and
+the clearing price hit the administrative ceiling. By the 2027/2028 auction
+it got worse — PJM fell **6,625 MW short** of its own reliability target, the
+first RTO-wide capacity shortfall in the market's history.
+
+---
+
+### Where the \\$29.4 billion went
+
+PJM's Independent Market Monitor — the neutral referee Congress created to
+keep wholesale markets honest — has now quantified data centers' share of the
+bill. The numbers are stark.
+
+| Metric | Value |
+|--------|-------|
+| Data center share of the **latest** auction | **\\$6.3 B** (38% of \\$16.4 B) |
+| Data center share over **four auctions** | **\\$29.4 B** (46% of \\$63.6 B) |
+| Share of projected load growth from data centers | **94%** |
+| Customers who pay these costs | **67 million** across 13 states + D.C. |
+
+Market Monitor president Joseph Bowring put it plainly: **"This is not
+something the data centers are actually paying themselves. This is a cost
+being imposed on all customers in the PJM footprint."**
+
+That distinction is the whole story. The capacity market doesn't charge data
+centers directly for the demand they add. It charges *everyone* — residential,
+commercial, industrial — based on their share of system peak load. When a
+500 MW data center raises the system peak, your household's fractional share
+of the new, larger peak becomes your new capacity bill — even though your
+usage hasn't changed.
+
+Bowring's diagnosis: **"PJM is continuing to act like it's business as usual"**
+when what the grid is experiencing is **"a paradigm shift."**
+
+---
+
+### What it costs you, personally
+
+The capacity charge is typically buried on page two of your bill, lumped into
+"supply charges" or "generation service." But it's real money:
+
+- **ComEd (Illinois)** customers have seen power prices rise **~50% in two
+  years**, with capacity costs the primary driver.
+- **Pepco (D.C.)** residential customers saw bills jump **~\\$21/month**
+  starting June 2025.
+- **BGE (Baltimore)** and **Dominion (Virginia)** zones cleared even higher
+  than the RTO average in the 2025/2026 auction — \\$466 and \\$444/MW-day
+  respectively — because that's where data centers are concentrating.
+- The average PJM household could face a cumulative increase of roughly
+  **\\$70/month** by 2028 if prices stay at these levels.
+
+Virginia — which hosts more data center capacity than any other state — and
+northern Illinois are ground zero. But capacity charges are allocated across
+the *entire* RTO, so customers in Ohio, Indiana, Kentucky, and the Carolinas
+are paying too.
+
+---
+
+### Why the price cap matters — and why it's not protecting you
+
+You might think a price cap is good news. It isn't, for two reasons:
+
+**1. The cap isn't low.** At \\$333.44/MW-day, a ratepayer's capacity bill is
+already 11 times what it was in 2024. The cap prevents further increases; it
+doesn't roll back the ones already baked in.
+
+**2. When supply can't clear above the cap, it doesn't show up.** In the
+2027/2028 auction, 809.6 MW of capacity *offered* to sell but was priced
+above the ceiling. It couldn't clear. Result: the grid fell short of its
+reliability margin for the first time. The cap kept the price from rising —
+and in exchange, it kept the power from arriving.
+
+The 2028/2029 auction was even worse: **6,831 MW short**, with a reserve
+margin of just **14.7%** against a 20% target — the lowest ever recorded.
+Only 525 MW of new generation cleared, down from 774 MW the year before.
+
+PJM has asked FERC to approve a temporary "reliability backstop" auction to
+fill the gap. But that doesn't change the structural problem: the capacity
+market was designed for a world where demand grew 1% a year. Data centers
+blew past that assumption so fast that the market's own safety valve is now
+working against reliability.
+
+---
+
+### Three reform proposals — and what they'd mean for your bill
+
+The debate has moved from "is this a problem?" to "which fix?" Here are the
+three live proposals:
+
+**1. Separate auction for large loads (Bowring / Market Monitor)**
+Data centers that can't self-supply would bid in a segregated 15-year capacity
+auction. Their costs would be allocated to *them*, not to residential
+ratepayers. Bowring: **"There's only one way to do what hyperscalers agree is
+the right thing to do, and that is to run a separate auction."**
+
+**2. Illinois POWER Act (state legislation)**
+Would require data centers to pay their own interconnection costs, bring
+enough new capacity to cover their own load, and supply new clean energy or
+reimburse the state. Failed to pass in spring 2026, but the Citizens Utility
+Board says the fight is **"far from over"** and will return.
+
+**3. Federal Power for the People Act**
+Would direct FERC to ensure data centers fund the local transmission upgrades
+their load requires — rather than spreading those costs across the RTO.
+
+All three share one principle: **the entity that causes the cost should bear
+the cost.** That principle already applies to transmission interconnection for
+new generators. It has never been applied to new *load* at this scale, because
+load at this scale didn't exist until AI.
+
+---
+
+### What you can do with these numbers
+
+If you live in PJM territory — Delaware, Illinois, Indiana, Kentucky,
+Maryland, Michigan, New Jersey, North Carolina, Ohio, Pennsylvania, Tennessee,
+Virginia, West Virginia, or D.C. — here's how to use this:
+
+1. **Find the capacity charge on your bill.** It's usually inside "supply" or
+   "generation service." Your utility's tariff schedule will break it out.
+   Once you see it, you'll understand why your bill moved.
+
+2. **Ask your state PUC one question:** *"What is my utility's plan to ensure
+   data center load growth doesn't raise residential capacity costs further?"*
+   File it in writing. It becomes part of the record in any future rate case.
+
+3. **Support cost-causation reform.** Whether it's the POWER Act in Illinois,
+   the Market Monitor's separate-auction proposal at FERC, or your state's own
+   version — the policy ask is the same: large loads should pay for the
+   capacity they require, not externalize it onto 67 million households.
+
+4. **Show up at PJM stakeholder meetings.** PJM's Board is actively
+   deliberating on data center demand management *right now*. Public pressure
+   from ratepayer advocates — including the Citizens Utility Board, NRDC,
+   state consumer advocates, and individual residents — is what moves the
+   timeline from "under study" to "implemented."
+
+The capacity market is the most expensive part of your bill that you've never
+heard of. Now you've heard of it — and you know who's driving the price.
+
+> Use the **Your Utility Bill** tab for a full breakdown of how capacity
+> charges flow from the auction to your monthly statement, and the
+> **States & Officials** tab to find your PUC's complaint portal.
+""",
+    },
     # ── Regulatory gap-shopping / oversight sidestep ────────────────────
     {
         "id": "oversight-gaps-agency-shopping-2026",
@@ -374,11 +569,22 @@ load commitments, minimum-take contracts, and developer-funded upgrades
 
 **4. The cheapest fix is flexibility, not always wire.** The study notes
 most congestion costs pile up in just **5% of hours** — the same peak hours
-when data centers could curtail. Texas already wrote this into law (SB 6:
-ERCOT can curtail large loads in emergencies). Communities and PUCs should
-demand the same: flexible-load agreements and grid-enhancing technologies
-evaluated *before* approving billion-dollar buildouts that peak-shave for a
-handful of hours a year.
+when data centers could curtail. That finding lines up almost exactly with
+what Duke University's Nicholas Institute published in February 2025:
+[*Curtailment-Enabled Headroom*](https://nicholasinstitute.duke.edu/publications/curtailment-enabled-headroom-how-flexible-large-loads-can-accelerate-decarbonization),
+led by Tyler Norris, found the **existing** grid could absorb **up to 98 GW**
+of new large load if that load agreed to curtail just **0.5% of annual hours
+— roughly 44 hours a year** — avoiding **\\$150 billion or more** in new
+power plants and transmission lines. DOE says congestion concentrates in 5%
+of hours; Duke says you only need the flexible loads to stand down in 0.5%
+of them. Texas already wrote a version of this into law (SB 6: ERCOT can
+curtail large loads in emergencies). Communities and PUCs should demand the
+same: flexible-load agreements and grid-enhancing technologies evaluated
+*before* approving billion-dollar buildouts that peak-shave for a handful of
+hours a year. *(We break down the Duke numbers — and the SLA and rate-design
+reasons operators resist them — in* **"Why Your Electric Bill Is Going Up —
+and What Data Centers Have to Do With It"** *elsewhere on this blog, with the
+full research library in the* **Your utility bill** *tab.)*
 
 ---
 
@@ -418,9 +624,12 @@ The grid is being rebuilt around AI demand either way. The only open
 question is whether communities shape the terms — and this study, for all
 its dry federal prose, just handed them the evidence.
 
-*Source: [DOE 2026 National Transmission Needs Study — Draft for
+*Sources: [DOE 2026 National Transmission Needs Study — Draft for
 Consultation and Public Comment](https://www.energy.gov/oe/national-transmission-needs-study),
-July 2026.*
+July 2026; Norris, T. et al., [*Curtailment-Enabled Headroom: How Flexible
+Large Loads Can Accelerate Decarbonization*](https://nicholasinstitute.duke.edu/publications/curtailment-enabled-headroom-how-flexible-large-loads-can-accelerate-decarbonization),
+Nicholas Institute for Energy, Environment & Sustainability, Duke University,
+February 2025.*
 """,
     },
     # ── BNEF 194 GW forecast ─────────────────────────────────────────────
