@@ -4,9 +4,23 @@ outputs. Email capture is always optional (never gates a download); rows land
 in data/analytics/subscribers.csv via src/services/tracking.py.
 """
 
+from pathlib import Path
+
 import streamlit as st
+import streamlit.components.v1 as components
 
 from src.services.tracking import add_subscriber
+
+_SAMPLE_HTML: str | None = None
+
+
+def _load_sample_html() -> str:
+    global _SAMPLE_HTML
+    if _SAMPLE_HTML is None:
+        _SAMPLE_HTML = (
+            Path(__file__).resolve().parents[2] / "assets" / "sample_newsletter.html"
+        ).read_text()
+    return _SAMPLE_HTML
 
 
 def render_newsletter_signup(source: str, compact: bool = False) -> None:
@@ -37,3 +51,6 @@ def render_newsletter_signup(source: str, compact: bool = False) -> None:
             source=source,
         )
         (st.success if ok else st.error)(msg)
+    if not compact:
+        with st.expander("See a sample issue"):
+            components.html(_load_sample_html(), height=1400, scrolling=True)

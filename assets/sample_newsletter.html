@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    background: #f7f6f3;
+    color: #1a1a1a;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #161614; color: #e8e6e1; }
+    .newsletter { color: #e8e6e1; }
+    .bg-card { background: #1e1e1c; border-color: #2e2e2a; }
+    .bg-highlight { background: #1c2a18; border-color: #5cb85f; }
+    .bg-alert { background: #2a2410; }
+    .accent { color: #5cb85f; }
+    .accent-border { border-color: #5cb85f; }
+    .text-secondary { color: #a8a8a2; }
+    .text-tertiary { color: #6e6e68; }
+    .tag-win { background: #1c2a18; color: #5cb85f; }
+    .tag-alert { background: #2a2410; color: #daa520; }
+    .tag-new { background: #162a38; color: #5dade2; }
+    .tag-moratorium { background: #1c2a18; color: #5cb85f; }
+    .border { border-color: #2e2e2a; }
+    .rate-table th { border-color: #2e2e2a; }
+    .rate-table td { border-color: #2e2e2a; }
+    .footer { border-color: #2e2e2a; }
+    .footer a { color: #5cb85f; }
+    .sample-banner { background: #1c2a18; border-color: #5cb85f; color: #5cb85f; }
+    .masthead { border-color: #5cb85f; }
+    .section-header { border-color: #2e2e2a; }
+  }
+
+  .newsletter {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 40px;
+  }
+  .masthead {
+    text-align: center;
+    padding: 24px 0 20px;
+    border-bottom: 3px solid #2d6a30;
+    margin-bottom: 24px;
+  }
+  .masthead-label {
+    font-family: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #2d6a30;
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .masthead-meta {
+    font-size: 13px;
+    color: #8a8a84;
+    margin-top: 6px;
+  }
+  .sample-banner {
+    background: #e8f0e8;
+    border: 1px dashed #2d6a30;
+    border-radius: 6px;
+    padding: 8px 14px;
+    text-align: center;
+    font-size: 13px;
+    color: #2d6a30;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .section-header {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 19px;
+    font-weight: 700;
+    margin: 28px 0 14px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #e2e0db;
+  }
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 14px 0;
+  }
+  .stat-box {
+    background: #ffffff;
+    border: 1px solid #e2e0db;
+    border-radius: 6px;
+    padding: 12px;
+    text-align: center;
+  }
+  .stat-number {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d6a30;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 10px;
+    color: #8a8a84;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .story {
+    background: #ffffff;
+    border: 1px solid #e2e0db;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+  }
+  .story-tag {
+    display: inline-block;
+    font-family: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 3px;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .tag-win { background: #e8f0e8; color: #2d6a30; }
+  .tag-alert { background: #fff8e6; color: #b8860b; }
+  .tag-new { background: #e8f0f8; color: #1a5276; }
+  .tag-moratorium { background: #e8f0e8; color: #2d6a30; }
+  .story h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 5px;
+  }
+  .story p {
+    color: #5a5a56;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .story-location {
+    font-size: 11px;
+    color: #8a8a84;
+    margin-bottom: 3px;
+  }
+  .state-block {
+    background: #eef4e8;
+    border-left: 3px solid #2d6a30;
+    border-radius: 0 6px 6px 0;
+    padding: 14px 16px;
+    margin: 18px 0;
+  }
+  .state-block-header {
+    font-family: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #2d6a30;
+    margin-bottom: 5px;
+  }
+  .state-block p {
+    font-size: 13px;
+    color: #5a5a56;
+    line-height: 1.55;
+  }
+  .state-block strong { color: #1a1a1a; }
+  .rate-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-bottom: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+  .rate-table th {
+    text-align: left;
+    font-family: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #8a8a84;
+    padding: 7px 8px;
+    border-bottom: 2px solid #e2e0db;
+  }
+  .rate-table td {
+    padding: 7px 8px;
+    border-bottom: 1px solid #e2e0db;
+    color: #5a5a56;
+  }
+  .rate-table tr:last-child td { border-bottom: none; }
+  .rate-up { font-weight: 600; color: #c0392b; }
+  .rate-pending { color: #b8860b; }
+  .footer {
+    border-top: 1px solid #e2e0db;
+    margin-top: 30px;
+    padding-top: 16px;
+    text-align: center;
+    font-size: 11px;
+    color: #8a8a84;
+    line-height: 1.6;
+  }
+  .footer a { color: #2d6a30; text-decoration: none; }
+  @media (max-width: 500px) {
+    .stat-row { grid-template-columns: 1fr; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="newsletter">
+
+  <div class="sample-banner">
+    This is a sample issue &mdash; subscribe to get one like it every week
+  </div>
+
+  <div class="masthead">
+    <div class="masthead-label accent">The GridWatch Dispatch</div>
+    <h1>Week of July 21, 2026</h1>
+    <div class="masthead-meta">Issue #14 &middot; 5 min read</div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-box bg-card">
+      <div class="stat-number accent">47</div>
+      <div class="stat-label text-tertiary">Active moratoriums</div>
+    </div>
+    <div class="stat-box bg-card">
+      <div class="stat-number accent">3</div>
+      <div class="stat-label text-tertiary">New this week</div>
+    </div>
+    <div class="stat-box bg-card">
+      <div class="stat-number accent">6</div>
+      <div class="stat-label text-tertiary">CBAs secured</div>
+    </div>
+  </div>
+
+  <h2 class="section-header">Negotiation wins</h2>
+
+  <div class="story bg-card">
+    <span class="story-tag tag-win">Win</span>
+    <div class="story-location text-tertiary">Groton, CT</div>
+    <h3>Vantage signs $2.5M community benefit agreement after year-long moratorium</h3>
+    <p class="text-secondary">Groton&rsquo;s moratorium led to permanent zoning controls &mdash; data centers restricted to industrial zones with 45 dBA noise limits at property lines. Vantage agreed to fund a community recreation center and mandatory stormwater management.</p>
+  </div>
+
+  <div class="story bg-card">
+    <span class="story-tag tag-win">Win</span>
+    <div class="story-location text-tertiary">The Dalles, OR</div>
+    <h3>Google funds $29M water infrastructure upgrade after community pressure</h3>
+    <p class="text-secondary">Residents pushed back on Google&rsquo;s water draws. The result: Google funded a wastewater treatment upgrade and committed to recycled cooling water. The city capped total data center water use at 25% of municipal supply.</p>
+  </div>
+
+  <h2 class="section-header">New moratoriums</h2>
+
+  <div class="story bg-card">
+    <span class="story-tag tag-moratorium">Enacted</span>
+    <div class="story-location text-tertiary">New York &mdash; Statewide</div>
+    <h3>Governor signs EO 62: one-year moratorium on facilities over 50 MW</h3>
+    <p class="text-secondary">New York becomes the first state with a blanket moratorium on large data centers. EO 62 pauses permitting for 50+ MW facilities while the state studies grid capacity and environmental impact.</p>
+  </div>
+
+  <div class="story bg-card">
+    <span class="story-tag tag-new">New</span>
+    <div class="story-location text-tertiary">Seattle, WA</div>
+    <h3>City council proposes pause on new data center permits</h3>
+    <p class="text-secondary">Seattle joins the growing list of cities hitting the brakes. The proposal would freeze new permits while the city evaluates power grid strain and water use &mdash; a response to three campus applications filed this spring.</p>
+  </div>
+
+  <div class="state-block bg-highlight">
+    <div class="state-block-header accent">Filtered to your state &mdash; North Carolina</div>
+    <p><strong>14 local moratoriums now active</strong> across NC, from Brevard to Apex. Charlotte&rsquo;s council remains deadlocked 5&ndash;5. Durham and Harnett County proposals are advancing through committee.</p>
+  </div>
+
+  <h2 class="section-header">Rate cases to watch</h2>
+
+  <div style="overflow-x: auto;">
+    <table class="rate-table">
+      <thead>
+        <tr><th>Utility</th><th>State</th><th>Filed</th><th>Ask</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Duke Energy Carolinas</td><td>NC</td><td>Jun 2026</td><td class="rate-up">+8.4%</td><td class="rate-pending">Comment period open</td></tr>
+        <tr><td>Dominion Energy</td><td>VA</td><td>May 2026</td><td class="rate-up">+6.1%</td><td>Hearing Aug 12</td></tr>
+        <tr><td>AEP Ohio</td><td>OH</td><td>Apr 2026</td><td class="rate-up">+11.2%</td><td>PUC review</td></tr>
+        <tr><td>ComEd</td><td>IL</td><td>Mar 2026</td><td class="rate-up">+5.7%</td><td>Staff recommendation due</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="section-header">What we're reading</h2>
+
+  <div class="story bg-card">
+    <span class="story-tag tag-alert">Report</span>
+    <h3>ERCOT's 2025 State of the Market report drops &mdash; large-load queue hits record</h3>
+    <p class="text-secondary">Potomac Economics&rsquo; latest IMM report for Texas shows the large-flexible-load interconnection queue at an all-time high, with data centers and crypto miners driving scarcity pricing concerns into 2027.</p>
+  </div>
+
+  <div class="story bg-card">
+    <span class="story-tag tag-alert">Research</span>
+    <h3>Kleinman Center: data center load growth is repricing capacity markets nationwide</h3>
+    <p class="text-secondary">New UPenn analysis links PJM&rsquo;s capacity auction spike &mdash; from $2.2B to $14.7B &mdash; directly to data center demand outpacing new generation.</p>
+  </div>
+
+  <div class="footer">
+    <strong>The GridWatch Dispatch</strong> &middot; One email per week<br>
+    New moratoriums, rate cases, and negotiation wins &mdash; filtered to your state.
+  </div>
+
+</div>
+</body>
+</html>
