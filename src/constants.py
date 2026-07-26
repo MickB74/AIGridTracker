@@ -1360,6 +1360,16 @@ SOURCES = {
                      "https://www.ferc.gov/news-events/news/ferc-launches-aggressive-targeted-action-speed-large-load-integration"),
     "pjm_auction25": ("PJM 2025 capacity auction — record $16.4B; data centers ~40% ($6.5B) of cost",
                      "https://www.utilitydive.com/news/data-centers-pjm-capacity-auction/808951/"),
+    "pjm_auction_imm_6b": ("PJM IMM Bowring — data centers drove $6.3B (38%) of $16.4B 2028/29 capacity auction cost (Jul 2026)",
+                     "https://www.utilitydive.com/news/pjm-data-centers-capacity-auction-imm-bowring/825626/"),
+    "pjm_bra_2028":  ("PJM 2028/29 BRA — 134,479 MW cleared at $325/MW-day; 2028/29 delivery year (Jul 14, 2026)",
+                     "https://insidelines.pjm.com/pjm-auction-procures-134311-mw-of-generation-resources-supply-responds-to-price-signal/"),
+    "pjm_bra_2027":  ("PJM 2027/28 BRA — hit $333.44 price cap; first-ever RTO-wide reliability shortfall of 6,625 MW (Dec 2025)",
+                     "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2027-2028/2027-2028-bra-report.pdf"),
+    "cub_pjm_reform": ("Citizens Utility Board — sustained high PJM capacity prices ramp up urgency for data center reform (Jul 2026)",
+                     "https://www.citizensutilityboard.org/blog/2026/07/15/cub-sustained-high-pjm-capacity-prices-ramp-up-urgency-for-data-center-reform/"),
+    "ieefa_pjm_10x": ("IEEFA — projected data center growth spurs PJM capacity prices by factor of 10",
+                     "https://ieefa.org/resources/projected-data-center-growth-spurs-pjm-capacity-prices-factor-10"),
     "tx_sb6_ll":    ("Texas SB 6 — ERCOT may curtail/disconnect large loads (≥75 MW) in emergencies; new interconnection standards (2025)",
                      "https://www.utilitydive.com/news/texas-law-gives-grid-operator-power-to-disconnect-data-centers-during-crisi/751587/"),
     "spp_hill":     ("SPP — High Impact Large Load (HILL) 90-day study process (RR696, 2025)",
@@ -2420,3 +2430,292 @@ ADVOCACY_ORGS = [
      "src_key": "kleinman", "stat_src": "kleinman"},
 ]
 ADVOCACY_ORGS_DF = pd.DataFrame(ADVOCACY_ORGS)
+
+# ──────────────────────────────────────────────────────────────────────────────
+# LOCAL OFFICIALS — town/county layer
+#
+# Three-tier design (see src/local_officials.py for the resolution logic):
+#   1. LOCAL_BODIES / LOCAL_OFFICIALS — hand-verified rows for localities with
+#      an active data-center fight. Every row carries `source` (the official
+#      .gov page it came from) and `as_of` (the date it was read). NOTHING here
+#      is inferred, pattern-matched, or guessed: if a name, email or phone was
+#      not on the official page, the field is left blank.
+#   2. OpenStates /people.geo — free API, state legislators only (see
+#      src/services/openstates.py). Explicitly excludes mayors and governors.
+#   3. STATE_MUNI_LEAGUES + build_lookup_links() — deterministic "go find them"
+#      links, 100% state coverage, zero staleness risk.
+#
+# TO ADD A LOCALITY: open its official government site, read the roster page,
+# and append rows below with the page URL as `source` and today's date as
+# `as_of`. Do not populate from search-engine snippets — during the initial
+# build those were wrong for 2 of the first 4 localities checked.
+# ──────────────────────────────────────────────────────────────────────────────
+
+# State municipal leagues — official URLs as published by the National League
+# of Cities (nlc.org/membership/state-municipal-leagues), read 2026-07-26.
+# 49 leagues: Hawaii has none (no independent municipalities — county govt only).
+STATE_MUNI_LEAGUES = {
+    "AK": ("Alaska Municipal League", "http://www.akml.org/"),
+    "AL": ("Alabama League of Municipalities", "https://almonline.org/"),
+    "AR": ("Arkansas Municipal League", "http://www.arml.org/"),
+    "AZ": ("League of Arizona Cities and Towns", "http://www.azleague.org/"),
+    "CA": ("League of California Cities", "http://www.cacities.org/"),
+    "CO": ("Colorado Municipal League", "http://www.cml.org/"),
+    "CT": ("Connecticut Conference of Municipalities", "http://www.ccm-ct.org/"),
+    "DE": ("Delaware League of Local Governments", "https://www.dllg.us/"),
+    "FL": ("Florida League of Cities", "http://www.flcities.com/"),
+    "GA": ("Georgia Municipal Association", "https://www.gacities.com/"),
+    "IA": ("Iowa League of Cities", "http://www.iowaleague.org/"),
+    "ID": ("Association of Idaho Cities", "http://www.idahocities.org/"),
+    "IL": ("Illinois Municipal League", "http://www.iml.org/"),
+    "IN": ("Accelerate Indiana Municipalities", "https://aimindiana.org/"),
+    "KS": ("League of Kansas Municipalities", "http://www.lkm.org/"),
+    "KY": ("Kentucky League of Cities", "http://www.klc.org/"),
+    "LA": ("Louisiana Municipal Association", "http://www.lma.org/"),
+    "MA": ("Massachusetts Municipal Association", "http://www.mma.org/"),
+    "MD": ("Maryland Municipal League", "http://www.mdmunicipal.org/"),
+    "ME": ("Maine Municipal Association", "http://www.memun.org/"),
+    "MI": ("Michigan Municipal League", "http://www.mml.org/"),
+    "MN": ("League of Minnesota Cities", "http://www.lmc.org/"),
+    "MO": ("Missouri Municipal League", "http://www.mocities.com/"),
+    "MS": ("Mississippi Municipal League", "http://www.mmlonline.com/"),
+    "MT": ("Montana League of Cities and Towns", "https://mtleague.org/"),
+    "NC": ("North Carolina League of Municipalities", "http://www.nclm.org/"),
+    "ND": ("North Dakota League of Cities", "http://www.ndlc.org/"),
+    "NE": ("League of Nebraska Municipalities", "http://www.lonm.org/"),
+    "NH": ("New Hampshire Municipal Association", "https://www.nhmunicipal.org/"),
+    "NJ": ("New Jersey State League of Municipalities", "https://www.njlm.org/"),
+    "NM": ("New Mexico Municipal League", "http://www.nmml.org/"),
+    "NV": ("Nevada League of Cities and Municipalities", "https://nvleague.com/"),
+    "NY": ("NY State Conference of Mayors (NYCOM)", "http://www.nycom.org/"),
+    "OH": ("Ohio Municipal League", "http://www.omlohio.org/"),
+    "OK": ("Oklahoma Municipal League", "http://www.oml.org/"),
+    "OR": ("League of Oregon Cities", "http://www.orcities.org/"),
+    "PA": ("Pennsylvania Municipal League", "http://www.pml.org/"),
+    "RI": ("Rhode Island League of Cities and Towns", "http://www.rileague.org/"),
+    "SC": ("Municipal Association of South Carolina", "http://www.masc.sc/"),
+    "SD": ("South Dakota Municipal League", "http://www.sdmunicipalleague.org/"),
+    "TN": ("Tennessee Municipal League", "http://www.tml1.org/"),
+    "TX": ("Texas Municipal League", "http://www.tml.org/"),
+    "UT": ("Utah League of Cities and Towns", "http://www.ulct.org/"),
+    "VA": ("Virginia Municipal League", "http://www.vml.org/"),
+    "VT": ("Vermont League of Cities and Towns", "http://www.vlct.org/"),
+    "WA": ("Association of Washington Cities", "https://wacities.org/"),
+    "WI": ("League of Wisconsin Municipalities", "http://www.lwm-info.org/"),
+    "WV": ("West Virginia Municipal League", "http://www.wvml.org/"),
+    "WY": ("Wyoming Association of Municipalities", "http://www.wyomuni.org/"),
+}
+
+# National fallbacks used when a state has no league or the locality is a county.
+NACO_COUNTY_SEARCH = "https://www.naco.org/counties"
+USA_GOV_LOCAL = "https://www.usa.gov/local-governments"
+
+# ── Tier 1: governing bodies (stable — survives elections) ───────────────────
+# `decides` = what this body actually votes on, so users pick the right room.
+LOCAL_BODIES = [
+    {"locality": "Tucker County", "state": "WV",
+     "body": "Tucker County Commission",
+     "decides": "County-level approvals, resolutions and budget. Note: WV HB 2014 "
+                "strips counties of zoning authority over certified microgrid "
+                "districts and high-impact data centers.",
+     "meets": "2nd Wednesday 9:00 a.m. year-round; 4th Wednesday 4:00 p.m. "
+              "(Nov-Apr) / 6:00 p.m. (May-Oct)",
+     "where": "Courtroom, Tucker County Courthouse, 211 First Street, Parsons, WV 26287",
+     "agenda_url": "https://tuckercountycommission.com/agendas",
+     "comment_process": "Agendas posted on the website and around the courthouse. "
+                        "To be added to the agenda, contact the Tucker County "
+                        "Clerk's Office in advance.",
+     "phone": "304-478-2866 ext. 1207", "email": "sdevilder@tuckercountycommission.com",
+     "website": "https://tuckercountycommission.com/county-commission",
+     "as_of": "2026-07-26", "source": "https://tuckercountycommission.com/county-commission"},
+
+    {"locality": "Port Washington", "state": "WI",
+     "body": "Common Council",
+     "decides": "Ordinances and resolutions, budget and tax levy, contracts for "
+                "city services, and appointments to boards and commissions — "
+                "including the Plan Commission that handles land use.",
+     "meets": "1st and 3rd Tuesday of the month",
+     "where": "City Hall, 100 W. Grand Avenue, Port Washington, WI 53074",
+     "agenda_url": "https://www.portwashingtonwi.gov/our-city/meeting-calendar",
+     "comment_process": "Council meetings include a public comment period. Meeting "
+                        "location has moved for high-attendance data-center items — "
+                        "check the calendar listing before you go.",
+     "phone": "262-284-5585", "email": "",
+     "website": "https://www.portwashingtonwi.gov/our-city/mayor-common-council",
+     "as_of": "2026-07-26", "source": "https://www.portwashingtonwi.gov/our-city/mayor-common-council"},
+
+    {"locality": "Goochland County", "state": "VA",
+     "body": "Board of Supervisors",
+     "decides": "Land use and rezoning, conditional use permits, budget and tax "
+                "rates. Data centers are permitted by right across most of the "
+                "designated technology district; gas peakers and SMRs still "
+                "require a conditional use permit.",
+     "meets": "1st Tuesday monthly, 2:00 p.m. (public hearings at 6:00 p.m.); "
+              "3rd Tuesday reserved for additional meetings",
+     "where": "County Administration Building, Board Meeting Room 250, "
+              "1800 Sandy Hook Road, Goochland, VA 23063",
+     "agenda_url": "https://www.goochlandva.us/381/Public-Notices-Meetings-Agendas-Minutes",
+     "comment_process": "Email comments on any agenda item to BOSCOMMENT@GOOCHLANDVA.US. "
+                        "Meetings stream on the county's YouTube channel. Each member "
+                        "has a published Voting History page.",
+     "phone": "804-556-5800", "email": "BOSCOMMENT@GOOCHLANDVA.US",
+     "website": "https://www.goochlandva.us/158/Board-of-Supervisors",
+     "as_of": "2026-07-26", "source": "https://www.goochlandva.us/158/Board-of-Supervisors"},
+
+    {"locality": "Prince William County", "state": "VA",
+     "body": "Board of County Supervisors",
+     "decides": "Rezonings, special use permits and comprehensive plan amendments — "
+                "the body that approved the PW Digital Gateway. Seven district "
+                "members plus an at-large Chair.",
+     "meets": "See the county's published annual meeting calendar",
+     "where": "1 County Complex Court, Prince William, VA 22192",
+     "agenda_url": "https://www.pwcva.gov/department/board-county-supervisors",
+     "comment_process": "Residents may attend in person or participate remotely. "
+                        "Each supervisor keeps a district office — contacting your "
+                        "own district member directly is more effective than the "
+                        "general line.",
+     "phone": "703-792-4311", "email": "",
+     "website": "https://www.pwcva.gov/department/board-county-supervisors/contact-us",
+     "as_of": "2026-07-26", "source": "https://www.pwcva.gov/department/board-county-supervisors/contact-us"},
+]
+LOCAL_BODIES_DF = pd.DataFrame(LOCAL_BODIES)
+
+# ── Tier 1: named officials ─────────────────────────────────────────────────
+# `stance` is blank unless a documented, citable position exists — matching the
+# convention used for the Congress/governor directory. Blank means "not
+# recorded", never "neutral".
+LOCAL_OFFICIALS = [
+    # Tucker County, WV — https://tuckercountycommission.com/county-commission
+    {"locality": "Tucker County", "state": "WV", "body": "Tucker County Commission",
+     "name": "Michael Rosenau", "role": "Commission President", "district": "",
+     "email": "mrosenau@tuckercountycommission.com", "phone": "304-614-4006",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://tuckercountycommission.com/county-commission"},
+    {"locality": "Tucker County", "state": "WV", "body": "Tucker County Commission",
+     "name": "Fred Davis", "role": "Commissioner", "district": "",
+     "email": "fdavis@tuckercountycommission.com", "phone": "304-614-3227",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://tuckercountycommission.com/county-commission"},
+    {"locality": "Tucker County", "state": "WV", "body": "Tucker County Commission",
+     "name": "Tim Knotts", "role": "Commissioner", "district": "",
+     "email": "tknotts@tuckercountycommission.com", "phone": "301-616-8073",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://tuckercountycommission.com/county-commission"},
+    {"locality": "Tucker County", "state": "WV", "body": "Tucker County Commission",
+     "name": "Shelia DeVilder", "role": "County Administrator (staff, not elected)",
+     "district": "", "email": "sdevilder@tuckercountycommission.com",
+     "phone": "304-478-2866 ext. 1207", "stance": "", "as_of": "2026-07-26",
+     "source": "https://tuckercountycommission.com/county-commission"},
+
+    # Port Washington, WI — https://www.portwashingtonwi.gov/our-city/mayor-common-council
+    {"locality": "Port Washington", "state": "WI", "body": "Common Council",
+     "name": "Ted Neitzke IV", "role": "Mayor", "district": "",
+     "email": "tneitzke@portwashingtonwi.gov", "phone": "262-284-5585",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.portwashingtonwi.gov/our-city/mayor-common-council"},
+    {"locality": "Port Washington", "state": "WI", "body": "Common Council",
+     "name": "Deborah Postl", "role": "Alderperson", "district": "Wards 1 & 9",
+     "email": "dpostl@portwashingtonwi.gov", "phone": "262-284-5585",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.portwashingtonwi.gov/our-city/mayor-common-council"},
+    {"locality": "Port Washington", "state": "WI", "body": "Common Council",
+     "name": "Paul Neumyer", "role": "Alderperson", "district": "Ward 2",
+     "email": "pneumyer@portwashingtonwi.gov", "phone": "262-284-5585",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.portwashingtonwi.gov/our-city/mayor-common-council"},
+    {"locality": "Port Washington", "state": "WI", "body": "Common Council",
+     "name": "Michael Gasper", "role": "Alderperson", "district": "Ward 3",
+     "email": "mgasper@portwashingtonwi.gov", "phone": "262-284-5585",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.portwashingtonwi.gov/our-city/mayor-common-council"},
+    {"locality": "Port Washington", "state": "WI", "body": "Common Council",
+     "name": "Dan Benning", "role": "Alderperson", "district": "Wards 4 & 8",
+     "email": "dbenning@portwashingtonwi.gov", "phone": "262-284-5585",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.portwashingtonwi.gov/our-city/mayor-common-council"},
+    {"locality": "Port Washington", "state": "WI", "body": "Common Council",
+     "name": "Jonathan Pleitner", "role": "Alderperson", "district": "Ward 5",
+     "email": "jpleitner@portwashingtonwi.gov", "phone": "262-284-5585",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.portwashingtonwi.gov/our-city/mayor-common-council"},
+    {"locality": "Port Washington", "state": "WI", "body": "Common Council",
+     "name": "Michael Beaster", "role": "Alderperson", "district": "Ward 6",
+     "email": "mbeaster@portwashingtonwi.gov", "phone": "262-284-5585",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.portwashingtonwi.gov/our-city/mayor-common-council"},
+    {"locality": "Port Washington", "state": "WI", "body": "Common Council",
+     "name": "Mary Lou Mueller", "role": "Alderperson", "district": "Ward 7",
+     "email": "mmueller@portwashingtonwi.gov", "phone": "262-284-5585",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.portwashingtonwi.gov/our-city/mayor-common-council"},
+
+    # Goochland County, VA — https://www.goochlandva.us/158/Board-of-Supervisors
+    {"locality": "Goochland County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Jonathan Christy", "role": "Chair", "district": "District 1",
+     "email": "jchristy@goochlandva.us", "phone": "804-837-7056",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.goochlandva.us/158/Board-of-Supervisors"},
+    {"locality": "Goochland County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Neil Spoonhower", "role": "Vice-Chair", "district": "District 2",
+     "email": "nspoonhower@goochlandva.us", "phone": "804-316-5584",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.goochlandva.us/158/Board-of-Supervisors"},
+    {"locality": "Goochland County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Tom Winfree", "role": "Supervisor", "district": "District 3",
+     "email": "twinfree@goochlandva.us", "phone": "804-659-4607",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.goochlandva.us/158/Board-of-Supervisors"},
+    {"locality": "Goochland County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Charlie Vaughters", "role": "Supervisor", "district": "District 4",
+     "email": "cvaughters@goochlandva.us", "phone": "804-508-8763",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.goochlandva.us/158/Board-of-Supervisors"},
+    {"locality": "Goochland County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Jonathan Lyle", "role": "Supervisor", "district": "District 5",
+     "email": "jlyle@goochlandva.us", "phone": "804-584-7524",
+     "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.goochlandva.us/158/Board-of-Supervisors"},
+
+    # Prince William County, VA — https://www.pwcva.gov/department/board-county-supervisors/contact-us
+    {"locality": "Prince William County", "state": "VA",
+     "body": "Board of County Supervisors", "name": "Deshundra Jefferson",
+     "role": "Chair", "district": "At-Large", "email": "chair@pwcgov.org",
+     "phone": "703-792-4640", "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.pwcva.gov/department/board-county-supervisors/contact-us"},
+    {"locality": "Prince William County", "state": "VA",
+     "body": "Board of County Supervisors", "name": "Tom Gordy",
+     "role": "Supervisor", "district": "Brentsville", "email": "tgordy@pwcgov.org",
+     "phone": "703-792-6190", "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.pwcva.gov/department/board-county-supervisors/contact-us"},
+    {"locality": "Prince William County", "state": "VA",
+     "body": "Board of County Supervisors", "name": "Yesli Vega",
+     "role": "Supervisor", "district": "Coles", "email": "yvega@pwcgov.org",
+     "phone": "703-792-4620", "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.pwcva.gov/department/board-county-supervisors/contact-us"},
+    {"locality": "Prince William County", "state": "VA",
+     "body": "Board of County Supervisors", "name": "George Stewart",
+     "role": "Supervisor", "district": "Gainesville", "email": "gstewart@pwcgov.org",
+     "phone": "703-792-6195", "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.pwcva.gov/department/board-county-supervisors/contact-us"},
+    {"locality": "Prince William County", "state": "VA",
+     "body": "Board of County Supervisors", "name": "Victor S. Angry",
+     "role": "Supervisor", "district": "Neabsco", "email": "vsangry@pwcgov.org",
+     "phone": "703-792-4668", "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.pwcva.gov/department/board-county-supervisors/contact-us"},
+    {"locality": "Prince William County", "state": "VA",
+     "body": "Board of County Supervisors", "name": "Kenny Boddye",
+     "role": "Supervisor", "district": "Occoquan", "email": "kboddye@pwcgov.org",
+     "phone": "703-792-4643", "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.pwcva.gov/department/board-county-supervisors/contact-us"},
+    {"locality": "Prince William County", "state": "VA",
+     "body": "Board of County Supervisors", "name": "Andrea Bailey",
+     "role": "Supervisor", "district": "Potomac", "email": "abailey@pwcgov.org",
+     "phone": "703-792-4563", "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.pwcva.gov/department/board-county-supervisors/contact-us"},
+    {"locality": "Prince William County", "state": "VA",
+     "body": "Board of County Supervisors", "name": "Jeannie LaCroix",
+     "role": "Supervisor", "district": "Woodbridge", "email": "JLaCroix@pwcgov.org",
+     "phone": "", "stance": "", "as_of": "2026-07-26",
+     "source": "https://www.pwcva.gov/department/board-county-supervisors/contact-us"},
+]
+LOCAL_OFFICIALS_DF = pd.DataFrame(LOCAL_OFFICIALS)

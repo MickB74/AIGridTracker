@@ -4,12 +4,14 @@ import json
 
 def load_local_secrets() -> dict:
     """Best-effort local API keys for dev convenience, so keys needn't be pasted
-    each session. Never raises; returns {'eia': str, 'pjm': str} (blank if absent).
-    Lookup order per key: environment variable -> ./.env -> sibling
-    pjm-suite/PJM_Data_Hub/config.json. Nothing is committed — .gitignore blocks
-    .env and config.json. The UI fields still override whatever is found here."""
+    each session. Never raises; returns {'eia': str, 'pjm': str, 'openstates': str}
+    (blank if absent). Lookup order per key: environment variable -> ./.env ->
+    sibling pjm-suite/PJM_Data_Hub/config.json. Nothing is committed —
+    .gitignore blocks .env and config.json. The UI fields still override
+    whatever is found here."""
     out = {"eia": os.environ.get("EIA_API_KEY", "").strip(),
-           "pjm": os.environ.get("PJM_API_KEY", "").strip()}
+           "pjm": os.environ.get("PJM_API_KEY", "").strip(),
+           "openstates": os.environ.get("OPENSTATES_API_KEY", "").strip()}
     
     # Resolve project root relative to this file: src/services/secrets.py -> root/
     here = pathlib.Path(__file__).resolve().parent.parent.parent
@@ -27,6 +29,8 @@ def load_local_secrets() -> dict:
                     out["eia"] = v
                 elif k.strip() == "PJM_API_KEY" and not out["pjm"]:
                     out["pjm"] = v
+                elif k.strip() == "OPENSTATES_API_KEY" and not out["openstates"]:
+                    out["openstates"] = v
         except Exception:                                          # noqa: BLE001
             pass
 

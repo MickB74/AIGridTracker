@@ -3,12 +3,219 @@ import html as _html
 import streamlit as st
 import pandas as pd
 from src.helpers import src_link
-from src.constants import STATE_PUCS_DF
+from src.constants import STATE_PUCS_DF, MORATORIUMS_DF, DC_SITES_DF
+from src.local_officials import (
+    build_lookup_links, covered_localities, curated, split_label,
+    verification_note,
+)
 from src.services.officials import load_officials
 from src.services.news import fetch_news
+from src.services.openstates import fetch_state_legislators
 from src.services.reddit import load_reddit_corpus
+from src.services.secrets import load_local_secrets
+
+
+# Abbrev -> full name, borrowed from the PUC registry so we don't add a
+# fourth copy of the state list to the codebase.
+def _abbrev_to_full() -> dict:
+    try:
+        return dict(zip(STATE_PUCS_DF["abbrev"], STATE_PUCS_DF["state"]))
+    except Exception:                                              # noqa: BLE001
+        return {}
+
+
+def _resolve_latlon(locality: str, state: str):
+    """Best-effort lat/lon for a locality, reusing coordinates the app already
+    carries in the moratorium tracker and the site table. Returns None when the
+    locality isn't in either — we then ask the user rather than guessing."""
+    loc_k = (locality or "").strip().lower()
+    st_k = (state or "").strip().upper()
+    if not loc_k or not st_k:
+        return None
+    for df, col in ((MORATORIUMS_DF, "locality"), (DC_SITES_DF, "location")):
+        try:
+            m = df[(df[col].str.strip().str.lower() == loc_k)
+                   & (df["state"].str.upper() == st_k)]
+            if not m.empty:
+                return float(m.iloc[0]["lat"]), float(m.iloc[0]["lon"])
+        except Exception:                                          # noqa: BLE001
+            continue
+    return None
+
+
+def render_local_officials():
+    """Town/county officials — the layer closest to an actual land-use vote."""
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("### 🏛️ Your local officials — town & county")
+    st.caption(
+        "Land-use votes happen here, not in Congress. This section resolves in "
+        "three tiers: hand-verified rosters for localities with an active "
+        "data-center fight, a free state-legislator lookup, and directory links "
+        "that work everywhere else.")
+
+    a2f = _abbrev_to_full()
+    f2a = {v: k for k, v in a2f.items()}
+    labels = covered_localities()
+
+    # Default the picker from the sidebar "My Community" selection.
+    sidebar_state = st.session_state.get("my_state", "All states")
+    sidebar_abbrev = st.session_state.get(
+        "my_state_abbrev", f2a.get(sidebar_state, ""))
+    default_idx = 0
+    if sidebar_abbrev:
+        for i, lb in enumerate(labels):
+            if lb.endswith(f", {sidebar_abbrev}"):
+                default_idx = i + 1
+                break
+
+    choice = st.selectbox(
+        "Locality", ["— Not listed / somewhere else —"] + labels,
+        index=default_idx, key="local_off_locality",
+        help="Verified rosters exist for localities with an active fight. "
+             "Pick the first option for anywhere else and you'll get "
+             "directory links instead.")
+
+    if choice.startswith("—"):
+        locality, state = "", (sidebar_abbrev or "")
+        st.text_input("Locality name (optional)", key="local_off_freetext",
+                      placeholder="e.g. Beaver Dam")
+        locality = st.session_state.get("local_off_freetext", "").strip()
+        state_full = st.selectbox(
+            "State", ["Select…"] + sorted(a2f.values()),
+            index=(sorted(a2f.values()).index(sidebar_state) + 1
+                   if sidebar_state in a2f.values() else 0))
+        state = f2a.get(state_full, "")
+    else:
+        locality, state = split_label(choice)
+
+    data = curated(locality, state)
+
+    # ── Tier 1: verified bodies + people ────────────────────────────────────
+    if data["bodies"] or data["officials"]:
+        for b in data["bodies"]:
+            with st.container(border=True):
+                st.markdown(f"**{b['body']}** — {b['locality']}, {b['state']}")
+                st.markdown(f"*What it decides:* {b['decides']}")
+                c1, c2 = st.columns(2)
+                c1.markdown(f"**Meets:** {b['meets'] or '—'}")
+                c1.markdown(f"**Where:** {b['where'] or '—'}")
+                c2.markdown(f"**Phone:** {b['phone'] or '—'}")
+                c2.markdown(f"**Clerk / comment email:** {b['email'] or '—'}")
+                st.markdown(f"**Public comment:** {b['comment_process']}")
+                lc1, lc2 = st.columns(2)
+                if b.get("agenda_url"):
+                    lc1.markdown(f"[📅 Agendas & minutes]({b['agenda_url']})")
+                if b.get("website"):
+                    lc2.markdown(f"[🔗 Official page]({b['website']})")
+
+        if data["officials"]:
+            odf = pd.DataFrame(data["officials"])
+            show = odf[["name", "role", "district", "email", "phone",
+                        "stance", "source"]].copy()
+            show["stance"] = show["stance"].replace(
+                "", "Not recorded — ask them")
+            st.dataframe(
+                show, use_container_width=True, hide_index=True,
+                column_config={
+                    "name": st.column_config.TextColumn("Name"),
+                    "role": st.column_config.TextColumn("Role"),
+                    "district": st.column_config.TextColumn("District",
+                                                            width="small"),
+                    "email": st.column_config.TextColumn("Email", width="medium"),
+                    "phone": st.column_config.TextColumn("Phone", width="small"),
+                    "stance": st.column_config.TextColumn("Data-center stance"),
+                    "source": st.column_config.LinkColumn("Verified from",
+                                                          display_text="source"),
+                })
+
+            emails = [e for e in odf["email"].tolist() if e]
+            if emails:
+                st.markdown("**Copy-paste all emails:**")
+                st.code(", ".join(emails), language=None)
+            st.download_button(
+                "⬇️ Download roster (CSV)",
+                odf.to_csv(index=False).encode("utf-8"),
+                file_name=f"{locality.replace(' ', '_')}_{state}_officials.csv",
+                mime="text/csv", key="dl_local_officials")
+
+            st.caption(
+                "Provenance: " + verification_note(data["officials"])
+                + " Nothing here is inferred — blank fields mean the official "
+                "page didn't publish that detail. Rosters change with "
+                "elections: click **source** to confirm before you send "
+                "anything that matters.")
+    elif locality or state:
+        st.info(
+            "**No verified roster for this locality yet.** Rather than show you "
+            "names we haven't checked, here are the directories that will have "
+            "them. (Search-engine snippets were wrong for 2 of the first 4 "
+            "localities we validated, which is why this app won't repeat them.)")
+
+    # ── Tier 3: directory links ─────────────────────────────────────────────
+    # Always rendered, including before a state is picked — otherwise the
+    # "not listed" path dead-ends. With no state we still have the national
+    # county and USA.gov directories, which beat an empty panel.
+    _has_curated = bool(data["bodies"] or data["officials"])
+    with st.expander("🔎 Find officials for any town — directory links",
+                     expanded=not _has_curated):
+        if not state:
+            st.caption("Pick your state above to add its municipal-league "
+                       "directory to this list.")
+        for lk in build_lookup_links(state, locality):
+            st.markdown(f"**[{lk['label']}]({lk['url']})** — {lk['why']}")
+
+    # ── Tier 2: OpenStates state legislators ────────────────────────────────
+    with st.expander("🗳️ Your state legislators (free OpenStates lookup)"):
+        st.caption(
+            "OpenStates covers **state legislators and members of Congress "
+            "only** — its API explicitly excludes mayors and governors, so this "
+            "supplements the roster above rather than replacing it. These are "
+            "the members who vote on preemption bills, NDA bans, and "
+            "data-center tax exemptions.")
+        key = load_local_secrets().get("openstates", "")
+        key = st.text_input(
+            "OpenStates API key", value=key, type="password",
+            help="Free key from open.pluralpolicy.com. Also read from "
+                 "OPENSTATES_API_KEY in your environment or .env.")
+        ll = _resolve_latlon(locality, state)
+        c1, c2 = st.columns(2)
+        lat = c1.number_input("Latitude", value=float(ll[0]) if ll else 0.0,
+                              format="%.4f")
+        lng = c2.number_input("Longitude", value=float(ll[1]) if ll else 0.0,
+                              format="%.4f")
+        if ll:
+            st.caption("Coordinates pre-filled from the app's own site data.")
+        if st.button("Look up legislators", key="os_lookup"):
+            if not key:
+                st.warning("Add a free OpenStates API key to use this lookup.")
+            elif lat == 0.0 and lng == 0.0:
+                st.warning("Enter the coordinates of the proposed site.")
+            else:
+                rows, note = fetch_state_legislators(lat, lng, key)
+                if rows:
+                    st.dataframe(
+                        pd.DataFrame(rows), use_container_width=True,
+                        hide_index=True,
+                        column_config={
+                            "url": st.column_config.LinkColumn(
+                                "Profile", display_text="OpenStates"),
+                        })
+                    st.caption(note)
+                else:
+                    st.warning(f"No results. {note}")
+
+    st.info(
+        "**Where this fits:** use the **Negotiation toolkit** to generate a "
+        "meeting brief for the body above, and the **Start here** wizard to "
+        "build a comment script sized to your hearing date. For rate and "
+        "interconnection questions, the PUC directory below is the right venue "
+        "— not your council.")
+    st.markdown('</div>', unsafe_allow_html=True)
+
 
 def render_officials_tab():
+    render_local_officials()
+    st.divider()
     st.subheader("Contact your officials — Congress & governors")
     st.caption("Every US senator, representative, and governor: party, official "
                "website, and contact page — a directory for reaching "

@@ -45,7 +45,7 @@ Always run both checks. The smoke test catches runtime import errors and widget 
 | Negotiation toolkit | `toolkit_tab` | CBA templates, data dividend calculator, model clauses, meeting checklist, meeting prep generator (downloadable brief) |
 | Community & backlash | `news_tab` | Moratorium tracker + map, live news/Reddit, town case studies, 4-company environmental scorecard, spend estimator, report-freshness checker |
 | Your utility bill | `bills_tab` | Bill anatomy, rate impact, wholesale-to-retail flow, curtailment research library |
-| States & officials | `studies_tab` + `officials_tab` | State market profiles, Congress/governor directory, PUC directory |
+| States & officials | `studies_tab` + `officials_tab` | State market profiles, local (town/county) officials, Congress/governor directory, PUC directory |
 | Data centers | `dc_tab` | Interactive map, market power, ERCOT queue, campuses, operators, executives, competitors, FERC response, 50-state stats, mega-projects |
 | Corporate profiles | `corporate_tab` | Google/Meta/Microsoft/AWS environmental deep-dives, sustainability directors |
 | Macro outlook | `macro_tab` | IEA forecasts, geographic shift analysis |
@@ -69,6 +69,15 @@ Stacked tabs (States, Learn, Blog) have a "This tab contains…" caption at the 
   - `STATE_GRID_PROFILES` — 51-state residential rate ($/kWh), grid carbon (gCO2/kWh), water stress; feeds the impact calculator and meeting prep generator
   - `MEGA_PROJECTS_DF` — top 10 megaprojects under construction
   - `STATE_PUCS_DF` — 51 state PUC commissions with website and complaint links
+  - `LOCAL_BODIES_DF` / `LOCAL_OFFICIALS_DF` — town/county governing bodies
+    (meeting schedule, agenda URL, public-comment process) and named local
+    officials for localities with an active fight. **Every row carries `source`
+    (the official .gov page) and `as_of` (the date it was read).** Populate only
+    by reading the locality's own roster page — never from search-engine
+    snippets, which were wrong for 2 of the first 4 localities validated.
+    Blank `stance` means "not recorded", never "neutral".
+  - `STATE_MUNI_LEAGUES` — 49 state municipal leagues (per NLC). Hawaii has
+    none: no independent municipalities, county government only.
   - `MORATORIUMS_DF` — data center moratorium/ban tracker
   - `MORATORIUM_OUTCOMES` — case-study outcomes (CBA secured / ban sustained / etc.)
   - `COMPANY_CONCESSIONS` — per-operator negotiation intel: documented concessions won elsewhere + a strategy read; feeds the meeting brief / action pack
@@ -88,6 +97,15 @@ Stacked tabs (States, Learn, Blog) have a "This tab contains…" caption at the 
 - **src/helpers.py** — Three utility functions: `human_energy()`, `human_water()`, `src_link()`.
 
 - **src/impact_model.py** — `estimate_facility_impact(mw, state, cooling)`: the single shared facility-impact model (PUE/water by cooling type, homes-equivalent, investment/data-dividend economics). Used by the impact calculator, meeting prep generator, and Start here wizard — never duplicate these coefficients inline in a tab.
+
+- **src/local_officials.py** — Three-tier local-official resolution, pure
+  functions, no Streamlit: `curated(locality, state)` (verified rows from
+  `LOCAL_OFFICIALS_DF`/`LOCAL_BODIES_DF`), `covered_localities()` for the
+  picker, `build_lookup_links(state, locality)` (deterministic directory links,
+  full 51-state coverage), and `verification_note()` for the provenance footer.
+  Tier 2 (state legislators) lives in `services/openstates.py`. The tiers are
+  not interchangeable — OpenStates excludes mayors, so it can never substitute
+  for tier 1.
 
 - **src/briefs.py** — `build_meeting_brief_data(state, operator, meeting_type, mw)`: structured meeting-brief assembly (sections of kv/bullets/numbered/advice) plus the `MEETING_ADVICE` strategy dict. `build_meeting_brief(...)` renders it as plain text (toolkit's meeting prep generator, Start here text download). Output is plain text — don't escape `$` here.
 
@@ -112,6 +130,7 @@ External data fetchers. All must be cached with `@st.cache_data` and fail gracef
 | `ercot.py` | ERCOT large-load document scraping |
 | `news.py` | Google News RSS feeds |
 | `officials.py` | Congress/governor directory (Senate XML + @unitedstates project) |
+| `openstates.py` | OpenStates v3 `/people.geo` — state legislators + Congress for a lat/lon. Free key (`OPENSTATES_API_KEY`). Per OpenStates' own spec, **governors and mayors are excluded** — say so in the UI rather than implying town coverage. Returns `(rows, note)`; never raises |
 | `mlenergy.py` | ML.ENERGY leaderboard benchmark data |
 | `reddit.py` | Reddit community posts (from local parquet snapshot) |
 | `sec_xbrl.py` | SEC XBRL financial data |
