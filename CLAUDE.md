@@ -49,7 +49,7 @@ Always run both checks. The smoke test catches runtime import errors and widget 
 | Data centers | `dc_tab` | Interactive map, market power, ERCOT queue, campuses, operators, executives, competitors, FERC response, 50-state stats, mega-projects |
 | Corporate profiles | `corporate_tab` | Google/Meta/Microsoft/AWS environmental deep-dives, sustainability directors |
 | Macro outlook | `macro_tab` | IEA forecasts, geographic shift analysis |
-| Learn & simulate | `learn_tab` + `impact_tab` + `sandbox_tab` | Data center explainer + local impact calculator + interactive siting simulator |
+| Learn & simulate | `learn_tab` + `impact_tab` + `health_tab` + `sandbox_tab` | Data center explainer + local impact calculator + health risks module (`HEALTH_RISKS`, sourced six-panel cards + infographic PDF via `build_health_pdf`) + interactive siting simulator |
 | Technical deep-dive | `calc_tab`, `live_tab`, `compare_tab`, `grid_tab` (nested sub-tabs) | Token calculator, live benchmarks, source comparison, grid timing |
 | Blog & methodology | `blog_tab` + `method_tab` | Blog posts + source coefficients |
 | Consulting | `consulting_tab` | Consulting pitch + intake form |
@@ -74,6 +74,7 @@ Stacked tabs (States, Learn, Blog) have a "This tab contains…" caption at the 
   - `COMPANY_CONCESSIONS` — per-operator negotiation intel: documented concessions won elsewhere + a strategy read; feeds the meeting brief / action pack
   - `CBA_BENCHMARKS` — what similar communities won (Start here impact step)
   - `OUTREACH_TIPS` — platform-by-platform digital organizing playbook (Nextdoor/Ring/Facebook/WhatsApp/forums)
+  - `HEALTH_RISKS` — six health-risk panels (air/noise/light/bills/water/climate); every fact carries a SOURCES key; rendered by `health_tab` and `build_health_pdf`
   - Environmental report headline data for all four hyperscalers:
     `GOOGLE_*` (FY2025), `META_*` (FY2024), `MICROSOFT_ENV_HEADLINE` (FY2025),
     `AWS_ENV_HEADLINE` (CY2025). Microsoft/AWS don't break out DC-only

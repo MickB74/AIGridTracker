@@ -852,6 +852,149 @@ OUTREACH_TIPS = [
      ]},
 ]
 
+# Health risks of data centers — six-panel module (health section of the
+# Learn tab + downloadable infographic PDF). Format inspired by the
+# Environmental Health Project's "Health Risks of Data Centers" infographic
+# (see SOURCES["ehp_health"]); every fact carries its own SOURCES key.
+# Colors are deep panel hues that read on both the dark app and white PDF.
+HEALTH_RISKS = [
+    {"key": "air", "title": "Air pollution", "icon": "🫁",
+     "color": "#414A5C",
+     "summary": "Fossil power plants and diesel backup generators serving "
+                "data centers emit pollution linked to ~1,300 premature "
+                "deaths a year by 2030.",
+     "facts": [
+         {"text": "UC Riverside & Caltech researchers project that air "
+                  "pollution from U.S. data centers could contribute to "
+                  "roughly 1,300 premature deaths and 600,000 asthma-symptom "
+                  "cases a year by 2030, with public-health costs "
+                  "approaching $20B annually.", "src": "unpaid_toll"},
+         {"text": "The pollution comes from two places: the fossil-fueled "
+                  "power plants supplying the electricity and on-site diesel "
+                  "backup generators emitting NOx and fine particulates "
+                  "(PM2.5) — both linked to respiratory disease, "
+                  "cardiovascular conditions, and cancer risk.",
+          "src": "unpaid_toll"},
+         {"text": "The burden lands unevenly: much of the health impact "
+                  "falls on communities near the power plants that serve a "
+                  "data center, which can sit hundreds of miles from the "
+                  "facility itself.", "src": "unpaid_toll"},
+     ],
+     "ask": "Demand generator run-hour limits, Tier 4 (or battery) backup "
+            "instead of legacy diesel, and an air-permit review with public "
+            "comment before any approval."},
+    {"key": "noise", "title": "Noise pollution", "icon": "🔊",
+     "color": "#8C4A2F",
+     "summary": "Cooling systems and generators produce a constant "
+                "low-frequency hum linked to sleep disturbance, "
+                "hypertension, and cardiovascular disease.",
+     "facts": [
+         {"text": "Data-center cooling systems and backup generators "
+                  "produce a continuous low-frequency hum that travels "
+                  "farther than ordinary sound and penetrates building "
+                  "walls.", "src": "ehp_health"},
+         {"text": "The WHO links chronic environmental noise to sleep "
+                  "disturbance, cardiovascular and metabolic disease, and "
+                  "cognitive impairment — in Europe, environmental noise "
+                  "contributes to an estimated 48,000 new heart-disease "
+                  "cases and 12,000 premature deaths every year.",
+          "src": "eea_noise"},
+         {"text": "WHO night-noise recommendations sit around 40-45 dB — "
+                  "the reason our model CBA clause sets 45 dBA at the "
+                  "nearest residential property line.", "src": "who_noise"},
+     ],
+     "ask": "A 45 dBA limit at the residential property line as a permit "
+            "condition — measured after commissioning, not just modeled — "
+            "with quarterly public reporting."},
+    {"key": "light", "title": "Light pollution", "icon": "💡",
+     "color": "#5B2D5E",
+     "summary": "24/7 campus lighting disrupts sleep and circadian "
+                "rhythms; the AMA has warned about nighttime light "
+                "exposure since 2012.",
+     "facts": [
+         {"text": "The American Medical Association adopted policy in 2012 "
+                  "recognizing nighttime light exposure as a health hazard: "
+                  "it suppresses melatonin and disrupts circadian rhythms.",
+          "src": "ama_light"},
+         {"text": "Chronic light at night is associated with reduced sleep, "
+                  "impaired daytime functioning, obesity, and mood "
+                  "disorders, with research linking elevated light pollution "
+                  "to higher breast and prostate cancer rates.",
+          "src": "ama_light"},
+         {"text": "Data center campuses typically run high-intensity "
+                  "exterior security lighting around the clock.",
+          "src": "ehp_health"},
+     ],
+     "ask": "Full-cutoff shielded fixtures, color temperature at or below "
+            "3000K (the AMA community guidance), and dark-sky-compliant "
+            "site lighting as approval conditions."},
+    {"key": "costs", "title": "Higher bills", "icon": "💸",
+     "color": "#7A1F2B",
+     "summary": "Large loads strain the grid and shift transmission and "
+                "capacity costs onto residential ratepayers.",
+     "facts": [
+         {"text": "PJM's 2025 capacity auction cleared at a record $16.4B — "
+                  "with data centers responsible for roughly 40% (~$6.5B) "
+                  "of the increase, costs that flow through to ratepayers "
+                  "across 13 states.", "src": "pjm_auction25"},
+         {"text": "Virginia's legislative audit agency (JLARC) found that "
+                  "unconstrained data-center growth will raise costs for "
+                  "other customers absent policy changes — in the state "
+                  "with more data centers than any other.",
+          "src": "jlarc_va_2024"},
+         {"text": "Berkeley economists warn that who pays for "
+                  "data-center-driven grid expansion is a policy choice: "
+                  "without large-load tariffs, the default is everyone.",
+          "src": "ucb_haas"},
+     ],
+     "ask": "Cost causation as a condition: the developer pays 100% of "
+            "interconnection and grid upgrades, under a large-load tariff "
+            "so costs never reach residential bills. Estimate your own "
+            "exposure in the Local Impact Calculator."},
+    {"key": "water", "title": "Water consumption", "icon": "💧",
+     "color": "#1F5D73",
+     "summary": "Data centers consume water twice — on site for cooling "
+                "and at the power plants that supply them — often in "
+                "water-stressed regions.",
+     "facts": [
+         {"text": "About one-fifth of data centers' direct water footprint "
+                  "is drawn from moderately-to-highly water-stressed "
+                  "watersheds, and nearly half of servers are powered by "
+                  "plants in water-stressed regions.", "src": "siddik_2021"},
+         {"text": "Water is consumed twice: directly for evaporative "
+                  "cooling on site, and indirectly at the thermoelectric "
+                  "power plants generating the electricity.",
+          "src": "siddik_2021"},
+         {"text": "AI-specific demand is growing fast — researchers project "
+                  "AI's water withdrawal could reach billions of cubic "
+                  "meters a year by 2027, and most operators still don't "
+                  "report site-level water use.", "src": "thirsty_2024"},
+     ],
+     "ask": "An enforceable annual water cap in the permit, recycled or "
+            "non-potable cooling supply, quarterly public metering, and "
+            "re-approval before expansion."},
+    {"key": "climate", "title": "Climate & reliability", "icon": "🌡️",
+     "color": "#2F5D33",
+     "summary": "Fossil-heavy demand growth raises emissions, strains "
+                "grid reliability, and adds local waste heat.",
+     "facts": [
+         {"text": "U.S. data-center electricity use is projected to reach "
+                  "325-580 TWh by 2030 (Berkeley Lab) — up to ~12% of "
+                  "national consumption — with much of the new supply "
+                  "coming from natural gas.", "src": "lbnl"},
+         {"text": "The IEA projects data centers will drive one of the "
+                  "largest sources of electricity demand growth this "
+                  "decade, with the fuel mix determining the emissions "
+                  "impact.", "src": "iea_2025"},
+         {"text": "Hyperscalers are increasingly turning to on-site gas "
+                  "generation as a 'bridge' — locking in fossil combustion "
+                  "next to host communities.", "src": "btm_gas"},
+     ],
+     "ask": "Binding 24/7 carbon-free energy commitments, no "
+            "ratepayer-funded gas buildout, and demand-response/curtailment "
+            "agreements so the facility sheds load in grid emergencies."},
+]
+
 # Project-stage playbook — drives the "Start here" wizard (start_here_tab).
 # Each stage maps the situation a community is in to the moves that matter
 # this week and the meeting type used for the generated action pack
@@ -1379,6 +1522,19 @@ SOURCES = {
                      "https://datacentremagazine.com/news/moodys-report-ai-data-centre-spend-set-to-reach-us-700bn"),
     "btm_gas":      ("Natural Gas Intelligence — On-site natural gas generation gains favor with hyperscalers (2026)",
                      "https://naturalgasintel.com/news/on-site-natural-gas-generation-gains-favor-with-hyperscalers-as-bridge-to-grid/"),
+    # ── Health risks module ──────────────────────────────────────────── #
+    "unpaid_toll":  ("Han, Wu, Li, Wierman & Ren — The Unpaid Toll: Quantifying the Public Health Impact of AI (arXiv:2412.06288, UC Riverside/Caltech, 2024)",
+                     "https://arxiv.org/abs/2412.06288"),
+    "siddik_2021":  ("Siddik, Shehabi & Marston — The environmental footprint of data centers in the United States (Environmental Research Letters, 2021)",
+                     "https://iopscience.iop.org/article/10.1088/1748-9326/abfba1"),
+    "who_noise":    ("WHO Europe — Environmental Noise Guidelines: noise & cardiovascular/metabolic mechanisms (2018)",
+                     "https://www.who.int/europe/publications/i/item/WHO-EURO-2018-3009-42767-59666"),
+    "eea_noise":    ("European Environment Agency — Health risks caused by environmental noise in Europe (2020)",
+                     "https://www.eea.europa.eu/en/analysis/publications/health-risks-caused-by-environmental-noise-in-europe"),
+    "ama_light":    ("American Medical Association — Council on Science & Public Health report on light pollution & nighttime lighting (2012 policy)",
+                     "https://www.ama-assn.org/sites/ama-assn.org/files/corp/media-browser/public/about-ama/councils/Council%20Reports/council-on-science-public-health/a12-csaph4-lightpollution-summary.pdf"),
+    "ehp_health":   ("Environmental Health Project — The Health Risks of Data Centers (infographic, 2026)",
+                     "https://www.environmentalhealthproject.org/_files/ugd/a9ce25_3c3574ea12324c65909d308c3a716e56.pdf"),
 }
 
 # Shares outstanding (billions, all classes) for live market-cap = price ×

@@ -409,6 +409,8 @@ def render_start_here_tab():
     st.info(
         "**Go deeper:** model CBA clauses and the data dividend calculator in "
         "**Negotiation toolkit** · rate-impact background in **Your utility "
-        "bill** · your officials and PUC in **States & officials**."
+        "bill** · sourced health-risk evidence (printable) in **Learn & "
+        "simulate → Health risks** · your officials and PUC in **States & "
+        "officials**."
     )
     st.markdown('</div>', unsafe_allow_html=True)

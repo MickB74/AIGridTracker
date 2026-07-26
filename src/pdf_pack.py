@@ -568,3 +568,107 @@ def build_flyer_pdf(state, mw, imp, upgrade_per_home_yr,
             x += w
 
     return bytes(pdf.output())
+
+
+# ---------------------------------------------------------------------- #
+# Health-risks infographic (format inspired by EHP's "Health Risks of
+# Data Centers"; see SOURCES["ehp_health"])
+# ---------------------------------------------------------------------- #
+
+def _hex_rgb(hex_color):
+    h = hex_color.lstrip("#")
+    return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
+
+
+def build_health_pdf(health_risks, sources):
+    """Infographic: page 1 is a six-panel color grid, then one page per
+    risk with sourced facts and a "what to demand" box.
+
+    `health_risks` is the HEALTH_RISKS registry; `sources` is SOURCES
+    (used to print the citation name + URL under each fact).
+    """
+    pdf = _ActionPackPDF(
+        doc_title="THE HEALTH RISKS OF DATA CENTERS",
+        doc_subtitle=f"Community briefing · {date.today():%B %d, %Y}",
+    )
+    pdf.add_page()
+
+    pdf.set_font("Helvetica", "B", 19)
+    pdf.set_text_color(*INK)
+    pdf.cell(0, 9, "The Health Risks of Data Centers",
+             new_x="LMARGIN", new_y="NEXT")
+    pdf.set_font("Helvetica", "", 9.5)
+    pdf.set_text_color(*MUTED)
+    pdf.multi_cell(0, 5.2, _latin1(
+        "Six ways a data center affects the people who live near one — "
+        "every claim sourced on the pages that follow, with the permit "
+        "condition that addresses it."), new_x="LMARGIN", new_y="NEXT")
+    pdf.ln(4)
+
+    # 2-column x 3-row panel grid
+    col_w = (pdf.w - 2 * _MARGIN - 6) / 2
+    row_h = 56
+    top = pdf.get_y()
+    for i, risk in enumerate(health_risks):
+        x = _MARGIN + (i % 2) * (col_w + 6)
+        y = top + (i // 2) * (row_h + 5)
+        r, g, b = _hex_rgb(risk["color"])
+        pdf.set_fill_color(r, g, b)
+        pdf.rect(x, y, col_w, row_h, "F")
+        pdf.set_xy(x + 5, y + 5)
+        pdf.set_font("Helvetica", "B", 12.5)
+        pdf.set_text_color(255, 255, 255)
+        pdf.cell(col_w - 10, 6, _latin1(risk["title"]))
+        pdf.set_xy(x + 5, y + 13.5)
+        pdf.set_font("Helvetica", "", 8.8)
+        pdf.multi_cell(col_w - 10, 4.4, _latin1(risk["summary"]))
+
+    # detail pages
+    for risk in health_risks:
+        pdf.add_page()
+        r, g, b = _hex_rgb(risk["color"])
+        band_y = pdf.get_y()
+        pdf.set_fill_color(r, g, b)
+        pdf.rect(_MARGIN, band_y, pdf.w - 2 * _MARGIN, 12, "F")
+        pdf.set_xy(_MARGIN + 5, band_y + 3)
+        pdf.set_font("Helvetica", "B", 12.5)
+        pdf.set_text_color(255, 255, 255)
+        pdf.cell(0, 6, _latin1(risk["title"].upper()))
+        pdf.set_y(band_y + 16)
+
+        for fact in risk["facts"]:
+            pdf._ensure_room(20)
+            pdf.bullet(fact["text"])
+            src_name, src_url = sources.get(fact["src"], ("", ""))
+            if src_name:
+                pdf.set_x(_MARGIN + 4)
+                pdf.set_font("Helvetica", "I", 7.5)
+                pdf.set_text_color(*MUTED)
+                pdf.multi_cell(0, 3.8, _latin1(f"Source: {src_name}"),
+                               new_x="LMARGIN", new_y="NEXT")
+                pdf.set_x(_MARGIN + 4)
+                pdf.set_font("Helvetica", "", 7)
+                pdf.set_text_color(*TEAL)
+                pdf.multi_cell(0, 3.6, _latin1(src_url), link=src_url,
+                               new_x="LMARGIN", new_y="NEXT")
+            pdf.ln(2)
+
+        pdf._ensure_room(26)
+        pdf.ln(2)
+        box_y = pdf.get_y()
+        pdf.set_draw_color(*TEAL)
+        pdf.set_line_width(0.5)
+        pdf.set_font("Helvetica", "B", 9)
+        pdf.set_text_color(*TEAL)
+        pdf.set_xy(_MARGIN + 5, box_y + 4)
+        pdf.cell(0, 5, "WHAT TO DEMAND")
+        pdf.set_xy(_MARGIN + 5, box_y + 10)
+        pdf.set_font("Helvetica", "", 9)
+        pdf.set_text_color(*INK)
+        pdf.multi_cell(pdf.w - 2 * _MARGIN - 10, 5.0, _latin1(risk["ask"]),
+                       new_x="LMARGIN", new_y="NEXT")
+        box_h = pdf.get_y() - box_y + 4
+        pdf.rect(_MARGIN, box_y, pdf.w - 2 * _MARGIN, box_h, "D")
+        pdf.set_y(box_y + box_h + 2)
+
+    return bytes(pdf.output())

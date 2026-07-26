@@ -47,6 +47,7 @@ from src.ui.bills_tab import render_bills_tab
 from src.ui.toolkit_tab import render_toolkit_tab
 from src.ui.consulting_tab import render_consulting_tab
 from src.ui.impact_tab import render_impact_tab
+from src.ui.health_tab import render_health_tab
 from src.ui.start_here_tab import render_start_here_tab
 from src.ui.newsletter import render_newsletter_signup
 from src.services.tracking import load_events, load_subscribers
@@ -663,11 +664,14 @@ with tab_macro:
 with tab_learn:
     st.caption("This tab contains: **Data center explainer** "
                "· **Local impact calculator** "
+               "· **Health risks** (sourced, printable) "
                "· **AI Datacenter Siting Sandbox** (interactive simulation) "
                "— scroll down for each section.")
     render_learn_tab()
     st.divider()
     render_impact_tab()
+    st.divider()
+    render_health_tab()
     st.divider()
     render_sandbox_tab()
 
