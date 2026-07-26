@@ -654,6 +654,131 @@ MORATORIUM_OUTCOMES = [
     },
 ]
 
+# Negotiation intel per operator — documented concessions won elsewhere plus
+# a read on how the company negotiates. Keyed by OPERATORS_DF operator name;
+# operators without a well-documented track record are simply absent (the
+# brief/action pack skips the section). Feeds build_meeting_brief_data().
+COMPANY_CONCESSIONS = {
+    "Google": {
+        "pattern": (
+            "Negotiates through PR-friendly commitments — water stewardship "
+            "pledges, community grants — but its largest concessions came only "
+            "under permit leverage and records-transparency pressure. Secrecy "
+            "is standard practice (NDAs with local officials, shell LLCs like "
+            "'Design LLC') until approvals are locked; forcing early "
+            "disclosure of water and power demands shifts the balance."
+        ),
+        "concessions": [
+            {"where": "The Dalles, OR", "year": "2021-22",
+             "what": "Funded a ~$29M water/wastewater infrastructure upgrade "
+                     "and committed to recycled-water cooling after the city "
+                     "tied expansion approval to water guarantees; dropped its "
+                     "fight to keep water-use records secret after a local "
+                     "newspaper's public-records lawsuit."},
+            {"where": "Mesa, AZ", "year": "2023",
+             "what": "Accepted voluntary noise retrofits and quarterly "
+                     "community reporting under the city's data-center "
+                     "overlay zone."},
+            {"where": "Multiple campuses", "year": "ongoing",
+             "what": "Routinely funds local community grants near campuses — "
+                     "treat these as table stakes, not a substitute for a "
+                     "binding CBA."},
+        ],
+    },
+    "Meta": {
+        "pattern": (
+            "Runs a standardized siting playbook behind shell LLCs (in Los "
+            "Lunas it arrived as 'Greater Kudu LLC') and moves fast once "
+            "incentives are locked. Its public 'water positive by 2030' "
+            "pledge is leverage: communities have converted it into binding "
+            "local water caps, restoration funding, and reporting terms."
+        ),
+        "concessions": [
+            {"where": "Los Lunas, NM", "year": "2016-22",
+             "what": "Agreed to water-use limits and funded Rio Grande basin "
+                     "water-restoration projects after drought-driven "
+                     "scrutiny of the campus's cooling demand."},
+            {"where": "Multiple campuses", "year": "ongoing",
+             "what": "Funds community action grants and local infrastructure "
+                     "near campuses; amounts are negotiated site by site — "
+                     "get them written into approval conditions."},
+        ],
+    },
+    "Microsoft": {
+        "pattern": (
+            "The most willing of the hyperscalers to accept transparency and "
+            "design conditions: it has publicly committed new builds to "
+            "zero-water evaporative cooling designs and has paid for its own "
+            "water treatment where municipal systems pushed back. Use its "
+            "published sustainability commitments as the floor of your ask, "
+            "not the ceiling."
+        ),
+        "concessions": [
+            {"where": "Quincy, WA", "year": "2010s",
+             "what": "Funded and built water treatment/reuse capacity after "
+                     "the city objected to cooling discharge loads on the "
+                     "municipal system."},
+            {"where": "San Antonio, TX", "year": "ongoing",
+             "what": "Runs cooling on recycled municipal wastewater instead "
+                     "of potable supply."},
+            {"where": "New builds (announced)", "year": "2024",
+             "what": "Committed next-generation data center designs to zero "
+                     "water for cooling — cite this when a developer claims "
+                     "evaporative water draw is unavoidable."},
+        ],
+    },
+    "Amazon (AWS)": {
+        "pattern": (
+            "The hardest bargainer on taxes — AWS extracts enterprise-zone "
+            "abatements and has litigated assessments — but its Oregon deals "
+            "prove terms are reopenable when officials organize. Leverage "
+            "sits with whoever controls the next approval; its 'water "
+            "positive by 2030' pledge is a hook for binding water terms."
+        ),
+        "concessions": [
+            {"where": "Morrow & Umatilla Counties, OR", "year": "2022",
+             "what": "Renegotiated enterprise-zone tax agreements to raise "
+                     "annual community payments after county commissioners "
+                     "and residents pushed back on earlier abatements."},
+            {"where": "Loudoun County, VA", "year": "ongoing",
+             "what": "Pays hundreds of millions per year in data-center "
+                     "property taxes — precedent that a jurisdiction with "
+                     "market power can decline abatements entirely."},
+        ],
+    },
+    "QTS": {
+        "pattern": (
+            "Blackstone-owned and growth-driven — entitlement delay is its "
+            "biggest cost, which makes timeline leverage real. In contested "
+            "Virginia rezonings QTS offered proffers (buffers, transmission "
+            "undergrounding contributions, community funds) to keep projects "
+            "moving. Get proffers recorded as binding conditions of approval, "
+            "not letters of intent."
+        ),
+        "concessions": [
+            {"where": "Prince William County, VA", "year": "2022-23",
+             "what": "Offered rezoning proffers — setbacks, buffering, and "
+                     "community contributions — during the contested Digital "
+                     "Gateway rezoning; the approval was later challenged in "
+                     "court, a reminder to secure commitments that survive "
+                     "litigation."},
+        ],
+    },
+    "Vantage": {
+        "pattern": (
+            "Colocation developer that needs local zoning wins to serve "
+            "hyperscaler tenants; it has accepted CBAs as zoning conditions "
+            "when boards held firm through a moratorium."
+        ),
+        "concessions": [
+            {"where": "Groton, CT", "year": "2023",
+             "what": "Agreed to a CBA funding a $2.5M community recreation "
+                     "center as part of permanent zoning controls adopted "
+                     "after a year-long moratorium."},
+        ],
+    },
+}
+
 # Project-stage playbook — drives the "Start here" wizard (start_here_tab).
 # Each stage maps the situation a community is in to the moves that matter
 # this week and the meeting type used for the generated action pack

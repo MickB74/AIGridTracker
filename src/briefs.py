@@ -7,7 +7,7 @@ so dollar signs are NOT escaped here.
 
 from src.constants import (
     STATE_GRID_PROFILES, STATE_DC_DF, STATE_PUCS_DF, MORATORIUMS_DF,
-    OPERATORS_DF, EXECUTIVES_DF,
+    OPERATORS_DF, EXECUTIVES_DF, COMPANY_CONCESSIONS,
 )
 from src.impact_model import estimate_facility_impact
 
@@ -68,8 +68,20 @@ MEETING_ADVICE = {
 }
 
 
-def build_meeting_brief(state, operator, meeting_type, mw):
-    """Assemble the one-page meeting brief as plain text.
+def build_meeting_brief_data(state, operator, meeting_type, mw):
+    """Assemble the meeting brief as structured data.
+
+    Returns a dict with meta fields plus a `sections` list. Each section is
+    {"title", "kind", ...} where kind is one of:
+      - "kv":          items = [(label, value), ...]
+      - "bullets":     items = [str, ...]
+      - "numbered":    items = [str, ...]
+      - "advice":      text  = raw MEETING_ADVICE string
+      - "execs":       items = [{"name","title","focus","linkedin"}, ...]
+      - "concessions": pattern = strategy read, items = [{"where","year","what"}, ...]
+
+    Consumed by build_meeting_brief (plain text) and src/pdf_pack.py (PDF)
+    so the two renderings can never drift.
 
     `operator` should be an OPERATORS_DF operator name, or
     "Unknown / not listed" to skip the operator profile section.
@@ -95,98 +107,143 @@ def build_meeting_brief(state, operator, meeting_type, mw):
             parts.append(f"{enacted} enacted")
         if proposed:
             parts.append(f"{proposed} proposed")
-        _mora_text = f"Moratorium activity: {', '.join(parts)}"
+        _mora_text = ", ".join(parts)
 
-    _op_info = ""
-    _op_execs = ""
+    sections = []
+
+    _glance = [
+        ("Existing DC facilities", f"{_st_count}"),
+        ("Existing DC load", f"{_st_twh:.1f} TWh/year"),
+        ("Grid carbon intensity", f"{imp['gco2']} gCO2/kWh"),
+        ("Residential electricity rate", f"${imp['rate']:.3f}/kWh"),
+        ("Water stress", f"{imp['water_stress']}"),
+        ("PUC", _puc_name),
+        ("PUC website", _puc_web),
+        ("PUC complaint portal", _puc_complaint),
+    ]
+    if _mora_text:
+        _glance.append(("Moratorium activity", _mora_text))
+    sections.append(
+        {"title": "YOUR STATE AT A GLANCE", "kind": "kv", "items": _glance})
+
+    sections.append({
+        "title": "FACILITY IMPACT ESTIMATES", "kind": "kv", "items": [
+            ("Annual electricity", f"{imp['annual_twh']:.1f} TWh"),
+            ("Annual carbon", f"{imp['annual_co2_t']:,.0f} tCO2e"),
+            ("Annual water (evaporative)",
+             f"{imp['annual_water_mgal']:,.0f}M gallons"),
+            ("Homes equivalent", f"{imp['homes_equiv']:,.0f}"),
+            ("Estimated investment", f"${imp['investment_musd']:.0f}M"),
+        ]})
+
     if operator != "Unknown / not listed":
         _op_rows = OPERATORS_DF[OPERATORS_DF["operator"] == operator]
         if not _op_rows.empty:
             _op = _op_rows.iloc[0]
-            _op_info = (
-                f"  Tier: {_op.get('tier', 'N/A')}\n"
-                f"  Owner: {_op.get('owner', 'N/A')}\n"
-                f"  Business model: {_op.get('model', 'N/A')}\n"
-            )
+            sections.append({
+                "title": f"OPERATOR PROFILE: {operator}", "kind": "kv",
+                "items": [
+                    ("Tier", f"{_op.get('tier', 'N/A')}"),
+                    ("Owner", f"{_op.get('owner', 'N/A')}"),
+                    ("Business model", f"{_op.get('model', 'N/A')}"),
+                ]})
         _exec_rows = EXECUTIVES_DF[
-            EXECUTIVES_DF["company"].str.contains(operator, case=False, na=False)
+            EXECUTIVES_DF["company"].str.contains(
+                operator, case=False, na=False, regex=False)
         ]
         if not _exec_rows.empty:
-            _op_execs = "KEY EXECUTIVES\n"
-            for _, ex in _exec_rows.head(5).iterrows():
-                _op_execs += f"  - {ex['name']}, {ex['title']}\n"
+            sections.append({
+                "title": "KEY EXECUTIVES & HOW TO REACH THEM", "kind": "execs",
+                "items": [{"name": ex["name"], "title": ex["title"],
+                           "focus": ex.get("focus", ""),
+                           "linkedin": ex.get("linkedin", "")}
+                          for _, ex in _exec_rows.head(5).iterrows()]})
 
-    _advice = MEETING_ADVICE.get(meeting_type, "")
+        _cc = COMPANY_CONCESSIONS.get(operator)
+        if _cc:
+            sections.append({
+                "title": f"TRACK RECORD — WHAT {operator.upper()} "
+                         "HAS CONCEDED ELSEWHERE",
+                "kind": "concessions",
+                "pattern": _cc["pattern"],
+                "items": _cc["concessions"]})
+
+    sections.append({
+        "title": f"MEETING STRATEGY: {meeting_type.upper()}", "kind": "advice",
+        "text": MEETING_ADVICE.get(meeting_type, "")})
+
+    sections.append({
+        "title": "CBA TARGETS (bring these to the table)", "kind": "kv",
+        "items": [
+            ("Data dividend",
+             f"${imp['data_dividend_usd']/1e6:.1f}M/year (2% of investment)"),
+            ("Noise limit", "45 dBA at residential property line"),
+            ("Water cap", f"{imp['annual_water_mgal'] * 0.5:,.0f}M gallons/year"),
+            ("Grid upgrades", "Developer pays 100%"),
+            ("Decommissioning bond", f"${mw * 10_000 / 1e6:.1f}M"),
+            ("Local hiring", "80%+ construction labor, prevailing wage"),
+            ("Property tax lock",
+             f"No abatement below ${imp['investment_musd'] * 0.02:.0f}M/year"),
+        ]})
+
+    sections.append({
+        "title": "QUESTIONS TO ASK", "kind": "numbered", "items": [
+            "How many MW will this facility draw at full build-out?",
+            "Who pays for grid upgrades (substation, transmission)?",
+            "What is the projected impact on residential electricity rates?",
+            "How many gallons/day will cooling consume? From which source?",
+            "What specific tax incentives are being offered, and for how long?",
+            "How many permanent local jobs (not construction)?",
+            "What is the projected noise level at the nearest home?",
+            "Is there a binding CBA? What are the annual payments?",
+            "What happens if the facility closes — is there a decommissioning bond?",
+            "Will water, noise, and emissions data be publicly reported?",
+        ]})
+
+    return {
+        "meeting_type": meeting_type,
+        "state": state,
+        "operator": operator,
+        "mw": mw,
+        "sections": sections,
+    }
+
+
+def build_meeting_brief(state, operator, meeting_type, mw):
+    """Render the meeting brief as plain text (st.text / .txt download)."""
+    data = build_meeting_brief_data(state, operator, meeting_type, mw)
 
     brief = (
         f"MEETING PREP BRIEF\n"
         f"{'='*60}\n"
         f"Generated by AI GridWatch\n\n"
-        f"MEETING: {meeting_type}\n"
-        f"STATE: {state}\n"
-        f"OPERATOR: {operator}\n"
-        f"FACILITY: {mw} MW proposed\n\n"
-        f"{'─'*60}\n"
-        f"YOUR STATE AT A GLANCE\n"
-        f"{'─'*60}\n"
-        f"  Existing DC facilities: {_st_count}\n"
-        f"  Existing DC load: {_st_twh:.1f} TWh/year\n"
-        f"  Grid carbon intensity: {imp['gco2']} gCO2/kWh\n"
-        f"  Residential electricity rate: ${imp['rate']:.3f}/kWh\n"
-        f"  Water stress: {imp['water_stress']}\n"
-        f"  PUC: {_puc_name}\n"
-        f"  PUC website: {_puc_web}\n"
-        f"  PUC complaint portal: {_puc_complaint}\n"
+        f"MEETING: {data['meeting_type']}\n"
+        f"STATE: {data['state']}\n"
+        f"OPERATOR: {data['operator']}\n"
+        f"FACILITY: {data['mw']} MW proposed\n"
     )
-    if _mora_text:
-        brief += f"  {_mora_text}\n"
-
-    brief += (
-        f"\n{'─'*60}\n"
-        f"FACILITY IMPACT ESTIMATES\n"
-        f"{'─'*60}\n"
-        f"  Annual electricity: {imp['annual_twh']:.1f} TWh\n"
-        f"  Annual carbon: {imp['annual_co2_t']:,.0f} tCO2e\n"
-        f"  Annual water (evaporative): {imp['annual_water_mgal']:,.0f}M gallons\n"
-        f"  Homes equivalent: {imp['homes_equiv']:,.0f}\n"
-        f"  Estimated investment: ${imp['investment_musd']:.0f}M\n"
-    )
-
-    if _op_info:
-        brief += (
-            f"\n{'─'*60}\n"
-            f"OPERATOR PROFILE: {operator}\n"
-            f"{'─'*60}\n"
-            f"{_op_info}"
-        )
-    if _op_execs:
-        brief += f"\n{_op_execs}"
-
-    brief += (
-        f"\n{'─'*60}\n"
-        f"{_advice}\n"
-        f"\n{'─'*60}\n"
-        f"CBA TARGETS (bring these to the table)\n"
-        f"{'─'*60}\n"
-        f"  Data dividend: ${imp['data_dividend_usd']/1e6:.1f}M/year (2% of investment)\n"
-        f"  Noise limit: 45 dBA at residential property line\n"
-        f"  Water cap: {imp['annual_water_mgal'] * 0.5:,.0f}M gallons/year\n"
-        f"  Grid upgrades: Developer pays 100%\n"
-        f"  Decommissioning bond: ${mw * 10_000 / 1e6:.1f}M\n"
-        f"  Local hiring: 80%+ construction labor, prevailing wage\n"
-        f"  Property tax lock: No abatement below ${imp['investment_musd'] * 0.02:.0f}M/year\n"
-        f"\n{'─'*60}\n"
-        f"QUESTIONS TO ASK\n"
-        f"{'─'*60}\n"
-        f"  1. How many MW will this facility draw at full build-out?\n"
-        f"  2. Who pays for grid upgrades (substation, transmission)?\n"
-        f"  3. What is the projected impact on residential electricity rates?\n"
-        f"  4. How many gallons/day will cooling consume? From which source?\n"
-        f"  5. What specific tax incentives are being offered, and for how long?\n"
-        f"  6. How many permanent local jobs (not construction)?\n"
-        f"  7. What is the projected noise level at the nearest home?\n"
-        f"  8. Is there a binding CBA? What are the annual payments?\n"
-        f"  9. What happens if the facility closes — is there a decommissioning bond?\n"
-        f"  10. Will water, noise, and emissions data be publicly reported?\n"
-    )
+    for sec in data["sections"]:
+        brief += f"\n{'─'*60}\n{sec['title']}\n{'─'*60}\n"
+        if sec["kind"] == "kv":
+            for label, value in sec["items"]:
+                brief += f"  {label}: {value}\n"
+        elif sec["kind"] == "bullets":
+            for item in sec["items"]:
+                brief += f"  - {item}\n"
+        elif sec["kind"] == "numbered":
+            for i, item in enumerate(sec["items"], 1):
+                brief += f"  {i}. {item}\n"
+        elif sec["kind"] == "advice":
+            brief += f"{sec['text']}\n"
+        elif sec["kind"] == "execs":
+            for ex in sec["items"]:
+                brief += f"  - {ex['name']}, {ex['title']}\n"
+                if ex["focus"]:
+                    brief += f"      Focus: {ex['focus']}\n"
+                if ex["linkedin"]:
+                    brief += f"      LinkedIn: {ex['linkedin']}\n"
+        elif sec["kind"] == "concessions":
+            brief += f"{sec['pattern']}\n\n"
+            for c in sec["items"]:
+                brief += f"  - {c['where']} ({c['year']}): {c['what']}\n"
     return brief

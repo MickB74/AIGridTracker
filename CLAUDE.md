@@ -71,6 +71,7 @@ Stacked tabs (States, Learn, Blog) have a "This tab contains…" caption at the 
   - `STATE_PUCS_DF` — 51 state PUC commissions with website and complaint links
   - `MORATORIUMS_DF` — data center moratorium/ban tracker
   - `MORATORIUM_OUTCOMES` — case-study outcomes (CBA secured / ban sustained / etc.)
+  - `COMPANY_CONCESSIONS` — per-operator negotiation intel: documented concessions won elsewhere + a strategy read; feeds the meeting brief / action pack
   - Environmental report headline data for all four hyperscalers:
     `GOOGLE_*` (FY2025), `META_*` (FY2024), `MICROSOFT_ENV_HEADLINE` (FY2025),
     `AWS_ENV_HEADLINE` (CY2025). Microsoft/AWS don't break out DC-only
@@ -85,7 +86,9 @@ Stacked tabs (States, Learn, Blog) have a "This tab contains…" caption at the 
 
 - **src/impact_model.py** — `estimate_facility_impact(mw, state, cooling)`: the single shared facility-impact model (PUE/water by cooling type, homes-equivalent, investment/data-dividend economics). Used by the impact calculator, meeting prep generator, and Start here wizard — never duplicate these coefficients inline in a tab.
 
-- **src/briefs.py** — `build_meeting_brief(state, operator, meeting_type, mw)`: pure-text meeting brief assembly plus the `MEETING_ADVICE` strategy dict. Shared by the toolkit's meeting prep generator and the Start here action pack. Output is plain text — don't escape `$` here.
+- **src/briefs.py** — `build_meeting_brief_data(state, operator, meeting_type, mw)`: structured meeting-brief assembly (sections of kv/bullets/numbered/advice) plus the `MEETING_ADVICE` strategy dict. `build_meeting_brief(...)` renders it as plain text (toolkit's meeting prep generator, Start here text download). Output is plain text — don't escape `$` here.
+
+- **src/pdf_pack.py** — `build_action_pack_pdf(state, stage, stage_info, brief_data)`: branded PDF rendering of the Start here action pack (fpdf2; natively drawn logo, header/footer with page numbers). Consumes `build_meeting_brief_data()` output; core fonts are cp1252-only, so all text goes through its `_latin1()` sanitizer.
 
 ### Services (src/services/)
 
@@ -156,4 +159,4 @@ External data fetchers. All must be cached with `@st.cache_data` and fail gracef
 - **On-this-page navigation**: For tabs with 5+ sections, add a collapsed `st.expander("📑 On this page")` at the top listing all sections.
 - **Metrics-first sections ("prime-time" style)**: Long-form sections lead with `st.metric` cards carrying the headline numbers + a one-sentence takeaway (`st.info`), with the full prose in a collapsed `st.expander("Read more — ...")`. Don't add new always-visible prose walls — follow this pattern.
 - **Sidebar-aware defaults**: Widgets that filter by state should default from `st.session_state.get("my_state")` / `st.session_state.get("my_state_abbrev")` so the sidebar "My Community" selection flows through.
-- **Downloadable outputs**: Calculators and generators end with `st.download_button` (text or CSV) so users can take results to meetings.
+- **Downloadable outputs**: Calculators and generators end with `st.download_button` (text, CSV, or PDF via `src/pdf_pack.py`) so users can take results to meetings.

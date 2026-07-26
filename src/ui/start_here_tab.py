@@ -12,7 +12,8 @@ from src.constants import (
     MORATORIUM_OUTCOMES, DC_SITES_DF, OPERATORS_DF,
 )
 from src.impact_model import estimate_facility_impact, INVESTMENT_USD_PER_MW
-from src.briefs import build_meeting_brief
+from src.briefs import build_meeting_brief, build_meeting_brief_data
+from src.pdf_pack import build_action_pack_pdf
 
 _UNKNOWN_LLC = "I don't know — I only have an LLC or company name from a filing"
 
@@ -60,9 +61,12 @@ def render_start_here_tab():
             key="sh_llc", placeholder="e.g. Jet Stream LLC, Greasewood LLC")
         if llc_q:
             _mask = (
-                DC_SITES_DF["filing_llc"].str.contains(llc_q, case=False, na=False)
-                | DC_SITES_DF["operator"].str.contains(llc_q, case=False, na=False)
-                | DC_SITES_DF["owner"].str.contains(llc_q, case=False, na=False)
+                DC_SITES_DF["filing_llc"].str.contains(
+                    llc_q, case=False, na=False, regex=False)
+                | DC_SITES_DF["operator"].str.contains(
+                    llc_q, case=False, na=False, regex=False)
+                | DC_SITES_DF["owner"].str.contains(
+                    llc_q, case=False, na=False, regex=False)
             )
             _hits = DC_SITES_DF[_mask]
             if not _hits.empty:
@@ -177,13 +181,17 @@ def render_start_here_tab():
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("### Step 5 — Download your action pack")
     st.caption(
-        "One text file: your situation, the operator intel, impact numbers, "
-        "meeting strategy, CBA targets, questions to ask, and your this-week "
-        "checklist. Print it and bring it."
+        "One print-ready PDF: your situation, the operator intel, impact "
+        "numbers, meeting strategy, CBA targets, questions to ask, and your "
+        "this-week checklist. Print it and bring it."
     )
 
+    _brief_data = build_meeting_brief_data(
+        state, operator_for_brief, stage_info["meeting_type"], mw)
+    pack_pdf = build_action_pack_pdf(state, stage, stage_info, _brief_data)
+
     _checklist = "".join(f"  [ ] {_m}\n" for _m in stage_info["moves"])
-    pack = (
+    pack_txt = (
         f"START-HERE ACTION PACK\n"
         f"{'='*60}\n"
         f"SITUATION: {stage}\n"
@@ -193,13 +201,25 @@ def render_start_here_tab():
         + build_meeting_brief(state, operator_for_brief,
                               stage_info["meeting_type"], mw)
     )
-    st.download_button(
-        "📥 Download action pack (text)",
-        pack,
-        f"gridwatch_action_pack_{state.replace(' ', '_')}.txt",
-        "text/plain",
+
+    _fname = f"gridwatch_action_pack_{state.replace(' ', '_')}"
+    d1, d2 = st.columns([1, 1])
+    d1.download_button(
+        "📥 Download action pack (PDF)",
+        pack_pdf,
+        f"{_fname}.pdf",
+        "application/pdf",
         key="sh_download",
         type="primary",
+        use_container_width=True,
+    )
+    d2.download_button(
+        "Plain text version",
+        pack_txt,
+        f"{_fname}.txt",
+        "text/plain",
+        key="sh_download_txt",
+        use_container_width=True,
     )
 
     st.info(
