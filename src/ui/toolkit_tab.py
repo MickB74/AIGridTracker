@@ -312,11 +312,12 @@ def render_toolkit_tab():
             "**4.** What other communities have won · "
             "**5.** The Alaska Model — data dividends · "
             "**6.** Grid equity demands · "
-            "**7.** Meeting prep checklist · "
-            "**8.** Meeting prep generator (downloadable brief) · "
-            "**9.** Advanced revenue capture strategies · "
-            "**10.** Industry benchmarks · "
-            "**11.** Free consultation request"
+            "**7.** Protecting the closest neighbors · "
+            "**8.** Meeting prep checklist · "
+            "**9.** Meeting prep generator (downloadable brief) · "
+            "**10.** Advanced revenue capture strategies · "
+            "**11.** Industry benchmarks · "
+            "**12.** Free consultation request"
         )
 
     # ================================================================== #
@@ -904,7 +905,195 @@ def render_toolkit_tab():
     st.markdown("</div>", unsafe_allow_html=True)
 
     # ================================================================== #
-    # SECTION 7 — Meeting prep checklist
+    # SECTION 7 — Protecting the closest neighbors
+    # ================================================================== #
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("## 🏠 Protecting and compensating the closest neighbors")
+    st.caption(
+        "A regional study that finds 'no measurable effect on property values' "
+        "and the family 300 feet from the fence line are two different realities. "
+        "If your property directly borders the site, the community-wide CBA may "
+        "not be enough — you need protections specific to proximity."
+    )
+
+    st.info(
+        "**If you are a directly-affected property owner:** Identify yourself "
+        "early in the process, attend every hearing, and start a **dated impact "
+        "log** now — photos, noise readings (a free phone app works), before-and-"
+        "after appraisals, any health complaints. Documentation created *before* "
+        "construction is far stronger than memories reconstructed after."
+    )
+
+    st.markdown("### Five remedies — from permit conditions to litigation")
+    st.markdown(
+        "These build on each other. Start at the top; litigation is the "
+        "backstop, not the first move."
+    )
+
+    with st.expander("1. Developer-paid mitigation (permit conditions)", expanded=True):
+        st.markdown(
+            "The most direct tool: **make the developer pay to mitigate the "
+            "impact on adjacent properties as a condition of the permit.** "
+            "Planning commissions and zoning boards can require these before "
+            "any approval is granted."
+        )
+        mit_items = [
+            ("Sound walls / noise barriers", "\\$150–\\$300 per linear foot",
+             "Effective for mechanical noise from cooling systems at the "
+             "property line. Demand third-party acoustic design, not the "
+             "developer's own spec."),
+            ("Acoustic windows for adjacent homes", "\\$800–\\$1,500 per window",
+             "Double- or triple-pane retrofits for homes within the noise "
+             "impact zone. Developer funds the full replacement."),
+            ("HVAC / air filtration upgrades", "\\$5,000–\\$15,000 per home",
+             "Backup generator emissions and construction dust affect the "
+             "nearest homes. Developer-funded HEPA filtration or HVAC upgrades."),
+            ("Landscape screening & setback buffers", "Varies",
+             "Dense tree plantings, earthen berms, or expanded setbacks "
+             "beyond the minimum zoning requirement — especially for light "
+             "pollution from 24/7 security lighting."),
+        ]
+        for label, cost, desc in mit_items:
+            with st.container(border=True):
+                mc1, mc2 = st.columns([2, 1])
+                with mc1:
+                    st.markdown(f"**{label}**")
+                    st.caption(desc)
+                with mc2:
+                    st.metric("Typical cost", cost)
+
+        st.warning(
+            "**Push for these as binding permit conditions**, not voluntary "
+            "commitments. A condition in the zoning approval is enforceable; "
+            "a promise in a press release is not."
+        )
+
+    with st.expander("2. Property-value guarantees", expanded=False):
+        st.markdown(
+            "A **property-value guarantee** is a written commitment from the "
+            "developer: if you sell your home within a set period and the sale "
+            "price is less than the pre-project appraised value, **the developer "
+            "makes you whole** — paying the difference."
+        )
+        st.markdown(
+            "- **Precedent:** Property-value guarantees are well-established in "
+            "**wind energy** and **pipeline** siting. They are still uncommon in "
+            "data center deals specifically, but that makes them an *ask*, not a "
+            "fantasy — communities that demand them first set the benchmark.\n"
+            "- **Structure:** Independent pre-construction appraisal (not the "
+            "developer's appraiser), a guarantee period of at least 5–10 years, "
+            "and an arbitration mechanism for disputes.\n"
+            "- **Key principle:** The guarantee should cover the *difference* "
+            "between the pre-project appraisal and the actual sale price, not "
+            "just a fixed dollar amount."
+        )
+        st.info(
+            "**Honest caveat:** Property-value guarantees are proven in wind "
+            "and pipeline siting but still rare in data center deals. We frame "
+            "this as a documented tool to demand — and communities that go first "
+            "create the precedent."
+        )
+
+    with st.expander("3. Voluntary buyouts", expanded=False):
+        st.markdown(
+            "When mitigation isn't enough, the next step is a **voluntary "
+            "buyout** — the developer purchases the adjacent property at a "
+            "fair (or above-market) price so the family can relocate."
+        )
+
+        bo1, bo2 = st.columns(2)
+        with bo1:
+            with st.container(border=True):
+                st.markdown("**Mason County, WV — 'Good Neighbors' program**")
+                st.markdown(
+                    "A data center developer created a formal buyout program "
+                    "for the closest residential properties. The program offers "
+                    "the **highest of three independent appraisals plus a "
+                    f"relocation premium.** {src_link('mason_buyout')}"
+                )
+        with bo2:
+            with st.container(border=True):
+                st.markdown("**Ashburn / Loudoun County, VA**")
+                st.markdown(
+                    "Homeowners adjacent to expanding data center campuses "
+                    "have reported buyout offers of **~\\$4 million per home** "
+                    "from developers assembling buffer land around their "
+                    f"facilities. {src_link('ashburn_buyout')}"
+                )
+
+        st.markdown(
+            "**Key principles for a fair buyout:**\n"
+            "- **Voluntary** — the owner decides whether to sell. A buyout "
+            "program that pressures holdouts is a forced taking in disguise.\n"
+            "- **Above-market pricing** — the highest of multiple independent "
+            "appraisals, plus a premium for involuntary disruption.\n"
+            "- **Relocation assistance** — moving costs, temporary housing, "
+            "and a reasonable timeline (6–12 months minimum).\n"
+            "- **Leverage note:** If your property is needed for the site "
+            "footprint or as a buffer, and the project requires a rezoning "
+            "that needs unanimous consent (or near-unanimous), **holdouts "
+            "have real leverage** — use it to negotiate, not just to block."
+        )
+
+    with st.expander("4. Eminent domain — know the real risk", expanded=False):
+        st.markdown(
+            "Data centers themselves are almost never built via eminent "
+            "domain — they need willing sellers and zoning approval. **The "
+            "real forced-taking risk is the transmission line**, not the "
+            "data center."
+        )
+        st.markdown(
+            "- **Transmission easements** are acquired by the utility (not the "
+            "developer) under state eminent-domain authority. In Georgia, "
+            "utilities building lines to serve data centers have offered "
+            f"**125% of appraised value** for easements. {src_link('ga_eminent')}\n"
+            "- **Easements outlive the sale** — even if you sell the property "
+            "later, the transmission easement stays. It permanently limits "
+            "what you can build on the affected strip.\n"
+            "- **Compensation is for the easement, not the property** — you "
+            "keep the land but lose the use. Negotiate the compensation "
+            "based on the full diminution of property value, not just the "
+            "strip's acreage."
+        )
+        st.warning(
+            "If a new transmission line is proposed to serve a data center "
+            "near your property, **hire your own appraiser immediately** — "
+            "the utility's offer is a starting point, not a final number. "
+            "You have the right to negotiate and, in most states, to "
+            "challenge the valuation in court."
+        )
+
+    with st.expander("5. Litigation as a backstop", expanded=False):
+        st.markdown(
+            "If the developer won't mitigate, won't guarantee values, and "
+            "won't buy you out, **litigation is the backstop** — not the "
+            "first move, but sometimes the only one left."
+        )
+        st.markdown(
+            f"Typical claims in industrial-siting neighbor suits "
+            f"({src_link('nuisance_law')}):\n"
+            "- **Diminished property value** — the difference between your "
+            "home's value before and after the facility, supported by "
+            "appraisals and comparable sales.\n"
+            "- **Loss of use and enjoyment** — noise, light, vibration, "
+            "or traffic that materially interferes with your use of your "
+            "own property (the common-law nuisance standard).\n"
+            "- **Mitigation costs** — if you've had to install your own "
+            "sound barriers, window treatments, or filtration systems to "
+            "make the property livable."
+        )
+        st.info(
+            "**Your dated impact log is your evidence.** The photos, noise "
+            "readings, and before-and-after appraisals you started at the "
+            "beginning of this process become the foundation of any legal "
+            "claim. Start documenting now, even if you hope you'll never "
+            "need it."
+        )
+
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # ================================================================== #
+    # SECTION 8 — Meeting prep checklist
     # ================================================================== #
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("## 📋 Meeting prep checklist")
@@ -925,6 +1114,17 @@ def render_toolkit_tab():
 
     for topic, q in questions:
         st.checkbox(f"**{topic}:** {q}", key=f"tk_check_{topic}")
+
+    st.divider()
+    st.markdown("**For the closest property owners:**")
+    neighbor_questions = [
+        ("Setbacks", "What is the minimum setback from the facility boundary to the nearest residential property line? How does it compare to Loudoun County's 1,000-ft standard?"),
+        ("Mitigation", "Will the developer fund sound walls, acoustic windows, or HVAC upgrades for adjacent homes — and are these binding permit conditions or voluntary promises?"),
+        ("Property values", "Is the developer offering a property-value guarantee or buyout program for directly-affected homeowners? What are the terms?"),
+        ("Transmission", "Will new transmission lines cross residential properties? If so, what is the compensation for easements, and does it cover full diminution of value?"),
+    ]
+    for topic, q in neighbor_questions:
+        st.checkbox(f"**{topic}:** {q}", key=f"tk_check_nbr_{topic}")
 
     st.caption(
         "Print this page or take a screenshot. Every question the developer "

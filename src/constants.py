@@ -1547,6 +1547,15 @@ SOURCES = {
                      "https://www.ama-assn.org/sites/ama-assn.org/files/corp/media-browser/public/about-ama/councils/Council%20Reports/council-on-science-public-health/a12-csaph4-lightpollution-summary.pdf"),
     "ehp_health":   ("Environmental Health Project — The Health Risks of Data Centers (infographic, 2026)",
                      "https://www.environmentalhealthproject.org/_files/ugd/a9ce25_3c3574ea12324c65909d308c3a716e56.pdf"),
+    # --- Closest-neighbor protections (property values, buyouts, eminent domain) ---
+    "mason_buyout": ("WCHS/Eyewitness News — Mason County, WV 'Good Neighbors' buyout program for data center neighbors",
+                     "https://www.wchstv.com/news/local/mason-county-data-center-good-neighbors-program"),
+    "ashburn_buyout": ("NBC4 Washington — Loudoun County / Ashburn homeowners report ~$4M buyout offers from data center developers",
+                     "https://www.nbcwashington.com/news/local/northern-virginia/data-center-expansion-loudoun-county-homeowners-buyout-offers/"),
+    "ga_eminent":   ("Fortune — Georgia power-line eminent domain for data centers: 125% of appraised value offers",
+                     "https://fortune.com/2025/06/01/georgia-eminent-domain-power-lines-data-centers/"),
+    "nuisance_law": ("Bernstein & Maryanoff — property value diminution & nuisance damages in industrial siting cases (plaintiffs' practice summary)",
+                     "https://www.bernsteinandmaryanoff.com/nuisance-property-damage/"),
 }
 
 # Shares outstanding (billions, all classes) for live market-cap = price ×
