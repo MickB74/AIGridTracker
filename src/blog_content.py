@@ -51,6 +51,234 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── Regulatory gap-shopping / oversight sidestep ────────────────────
+    {
+        "id": "oversight-gaps-agency-shopping-2026",
+        "section": "stories",
+        "title": "One Project, Two Stories: How Data Center Developers Shop the Gaps Between Agencies",
+        "date": _dt.date(2026, 7, 26),
+        "author": "GridWatch AI",
+        "tags": ["West Virginia", "permitting", "preemption", "NDAs", "shell LLCs",
+                 "air permits", "zoning", "transparency", "analysis"],
+        "summary": (
+            "In Tucker County, West Virginia, one developer told the DEP it "
+            "controlled 10,000 acres — and told the Department of Commerce its "
+            "project was merely \"conceptual.\" Both agencies say there's no "
+            "contradiction, because neither one reviews the whole project. That "
+            "gap isn't a West Virginia quirk. It's the buildout's default "
+            "operating mode, and it shows up in seven recognizable forms — from "
+            "\"nonroad engine\" turbine exemptions in Memphis to shell-company "
+            "NDAs in Wisconsin to by-right zoning in Virginia. Here's the "
+            "taxonomy, and the questions that close each gap."
+        ),
+        "body": """\
+On July 1, 2026, West Virginia's Department of Commerce decided that a data
+center proposed less than a mile from the towns of Davis and Thomas was
+"conceptual" — the developer, Fundamental Data, didn't have legal control of
+the land, so there was nothing yet to review.
+
+There was one problem with that finding. The West Virginia Department of
+Environmental Protection had *already* issued Fundamental Data an air pollution
+permit for the gas plant meant to power the site — a permit that rested in part
+on the company demonstrating control of that same ground.
+
+Same company. Same 10,000 acres. Two agencies, two answers.
+
+Asked about it by
+[Mountain State Spotlight](https://mountainstatespotlight.org/2026/07/23/data-center-sidestep-oversight/),
+both departments sent *identical* statements denying any discrepancy — and the
+explanation is the whole story. Air permitting accepts "a lease, purchase
+agreement, option to purchase, or another legally recognized arrangement."
+Commerce's High Impact Data Center program uses "distinct statutory criteria,
+such as recorded deeds and binding commitments, which operate independently of
+WVDEP's air permitting requirements."
+
+Both statements are true. Neither agency is lying. And that is precisely the
+point: **no one in West Virginia state government is responsible for evaluating
+the project as a project.** During the 2025 comment period, DEP regulators told
+residents repeatedly that their authority extended only to the natural gas
+plant — not to the data center the gas plant existed to power.
+
+Tucker United's Nikki Forrester put it more bluntly than any regulator would:
+the company "lives in the brackish zone between being a microgrid and data
+center-related project and not having anything to do with data centers so they
+can skirt regulations and state rules."
+
+---
+
+### The detail that makes it a national story
+
+Five days after Commerce withdrew its demand for information, a Fundamental
+Data representative named Ted McGavran appeared before the city council in
+**Belmont, North Carolina** — his own hometown — to argue for data center zoning
+ordinances there. In the same presentation he described the Tucker County
+project as targeting large-scale clients and **3–5 gigawatts** of generation.
+Nothing conceptual about it.
+
+He also said his company helped write West Virginia's data center law, and
+summed up the result: *"We can do pretty much whatever we want to do up there."*
+
+(Fundamental Data spokesperson Andrea Khoury told the outlet McGavran "is not
+authorized to speak on behalf of the company," that his remarks were "solely in
+his personal capacity," and denied the company had a hand in drafting the law.)
+
+Forrester's response is the line worth carrying into your own hearing: **"Even
+data center developers don't want these things in their own backyard."**
+
+The reason he *could* advocate for zoning in Belmont while his company faced
+none in Tucker County is West Virginia
+[HB 2014](https://www.wvlegislature.gov/Bill_Text_HTML/2025_SESSIONS/RS/bills/hb2014%20sub1%20enr.pdf),
+the Power Generation and Consumption Act, effective July 11, 2025. Certified
+microgrid districts and certified high-impact data centers **may not be subject
+to county or municipal zoning, noise, viewshed, lighting, development, or land
+use ordinances.** The state didn't just fragment review — it deleted the one
+layer of government that answers a phone call from a resident.
+
+---
+
+### Seven versions of the same move
+
+Tucker County isn't an outlier. It's one instance of a repeatable pattern:
+*route the project to the venue with the narrowest mandate.* Here are the other
+six forms it takes, each documented somewhere else in the country.
+
+**1. Agency-shopping on facts.** *(Tucker County, WV)* Tell each regulator the
+version of the project that fits its checklist. Because no agency reviews
+cumulative impact, the versions never have to reconcile.
+
+**2. Statutory preemption of the local layer.** *(WV HB 2014)* If certification
+comes from the state Commerce Secretary and local ordinances are void by
+statute, the planning-commission hearing — the one place residents reliably get
+standing — simply never happens. West Virginia went furthest, but per
+[MultiState's 2026 tracker](https://www.multistate.us/insider/2026/4/14/federal-ai-data-center-policy-meets-resistance-from-state-lawmakers)
+and
+[Prism](https://prismreports.org/2026/05/18/more-states-are-trying-to-block-cities-from-regulating-ai-data-centers/),
+a growing number of states have taken up preemption bills. Some WV lawmakers
+are now moving to restore local control.
+
+**3. Reclassifying the equipment.** *(Memphis, TN)* xAI ran gas turbines at its
+Colossus site while asserting an "operational waiver" to run up to 364 days
+without a permit; the Shelby County Health Department treated temporary
+turbines as **"nonroad engines"** exempt from permitting. The NAACP and the
+[Southern Environmental Law Center](https://www.selc.org/press-release/groups-appeal-permit-for-xais-south-memphis-data-center-decisions-around-unpermitted-methane-gas-turbines/)
+sued and appealed, arguing no Clean Air Act framework allows installing and
+operating that generation permit-free. The turbines eventually got a permit
+covering 15 units — as *secondary emergency backup*.
+
+**4. Sizing to stay under the threshold.** Backup generation is routinely
+permitted as **synthetic minor** — a permit whose explicit purpose is to cap
+hours so the site never becomes a Title V major source. One Georgia data center
+permit covering **50-plus diesel generators** states outright that it exists
+"for the purpose of establishing practically enforceable emission limitations
+such that the facility will not be considered a major source." That's legal and
+routine. It also means the community's public-participation rights are set by
+an hours cap that most residents never see and no one independently meters.
+
+**5. Contracting away disclosure.** *(WI, MN, TN, AZ)* Wisconsin Watch found at
+least four Wisconsin communities signed NDAs before any public process:
+**Beaver Dam** signed with **Balloonist LLC** on Dec 1, 2023 — barred from even
+confirming "the existence of the project" — and the \\$1B, 520-acre Meta project
+wasn't announced for **14 months**. **Menomonie** signed with the same shell in
+Feb 2024 (\\$1.6B, announced July 2025); **Kenosha** with Microsoft in May 2024;
+**Janesville** with Viridian in Sept 2025 (\\$8B). Minnesota officials used the
+code name **"Project Bigfoot"** in public documents for over a year while Meta
+worked through **Jimnist LLC**. Public Citizen reports **80% of Virginia
+localities** with data centers have NDAs in place, and that
+[at least ten states](https://www.citizen.org/news/the-secret-data-center-buildout-how-states-can-stop-big-techs-abuse-of-ndas/)
+have introduced bills to restrict them. As one Oklahoma legislator framed it:
+*where you want to put your data center is not a trade secret.*
+
+**6. Zoning it by right.** *(VA)* You don't need preemption if the land is
+already zoned for it. In **Franklin County, Virginia**, data centers are
+permitted by right in the Regional Enterprise Park district and face no
+restriction at all on unzoned property — meaning a campus can be built with
+**no public hearing and no supervisors' vote**, only site plans and building
+permits. **Goochland** permits them by right across most of a designated
+district. Loudoun County has been unwinding exactly this fast-track status.
+
+**7. Redacting the price.** Even when a project reaches a public regulator, the
+economics often don't. The Illinois Attorney General sought a contested hearing
+over **"heavily redacted"** ComEd data center special contracts. In Montana,
+advocates challenged the PSC's ability to keep data center terms secret. And
+Earthjustice's May 2026 Mississippi report argues incremental system costs were
+cloaked in NDAs in a way with **no known analogue anywhere else in the
+country**. If the contract is sealed, no one can verify who's paying for the
+interconnection — which is the only number that determines whether your bill
+moves.
+
+---
+
+### What these have in common
+
+Every one of the seven is *legal*. None requires anyone to lie. They work
+because permitting authority in the U.S. is sliced by **medium** (air, water,
+land) and by **jurisdiction** (federal, state, county), while a gigawatt-scale
+data center is a single decision with effects that cross all of them.
+
+The developer sees one project. The law sees eight unrelated filings. The gap
+between those two views is the product.
+
+The federal layer is starting to notice — FERC's December 2025 PJM co-location
+order forced tariff changes precisely because co-located load was escaping the
+cost-allocation rules that apply to everyone else, on the principle that "costs
+must be allocated to those who cause them and benefit from them." State
+ratepayer advocates told FERC in July 2026 it still doesn't go far enough. But
+federal cost-allocation reform doesn't help you at a county hearing next month.
+
+---
+
+### Six questions that close the gaps
+
+Put these in writing — to the developer, the agency, and your elected officials.
+A refusal to answer is itself a public record you can cite.
+
+1. **"List every permit, certification, and approval this project requires, and
+   name the agency and decision-maker for each."** Ask for the *whole* list.
+   The list itself reveals which venues you still have standing in — and the
+   deadlines you're about to miss.
+2. **"What did you tell each of those agencies about land control, project
+   size, and generating capacity?"** Then compare the filings. Discrepancies
+   like Tucker County's are only visible if someone reads them side by side.
+3. **"Which agency is evaluating cumulative impact — air, water, noise, traffic,
+   and rates together?"** If the honest answer is *none*, that is the finding.
+   Say it out loud at the hearing and ask your council to request one.
+4. **"Are the generators permitted as emergency, synthetic minor, or major
+   source — and what is the annual hours cap?"** Then ask who verifies the
+   hours and whether run-time logs are public.
+5. **"Has any official here signed an NDA relating to this project? Produce it."**
+   Ask at an open meeting, on the record. In several states this question alone
+   has driven legislation.
+6. **"Is the utility's contract for this load public and unredacted?"** If not,
+   your PUC — not your planning board — is where the money gets decided. Find
+   yours in the **States & officials** tab.
+
+---
+
+### The bottom line
+
+The Tucker County story will get read as a West Virginia story about one
+awkward developer. It isn't. It's a demonstration that a project can hold two
+contradictory identities at the same time — real enough for an air permit,
+conceptual enough to dodge disclosure — and that under current law, **both can
+be true simultaneously.**
+
+Communities keep losing these fights not because they show up unprepared, but
+because they show up at the *one* venue that was never empowered to consider
+what they came to say. Map the venues first. Then decide where to spend your
+people.
+
+*Sources: [Mountain State Spotlight, "Tucker County residents want to know what
+Fundamental Data is planning," July 23, 2026](https://mountainstatespotlight.org/2026/07/23/data-center-sidestep-oversight/);
+[WV HB 2014 (enrolled)](https://www.wvlegislature.gov/Bill_Text_HTML/2025_SESSIONS/RS/bills/hb2014%20sub1%20enr.pdf);
+[Southern Environmental Law Center on xAI turbine permits](https://www.selc.org/press-release/groups-appeal-permit-for-xais-south-memphis-data-center-decisions-around-unpermitted-methane-gas-turbines/);
+[Wisconsin Watch, "At least four Wisconsin communities signed secrecy deals," Jan 2026](https://wisconsinwatch.org/2026/01/wisconsin-data-center-secrecy-deals-nda-nondisclosure-agreement/);
+[Public Citizen, "The Secret Data Center Buildout"](https://www.citizen.org/news/the-secret-data-center-buildout-how-states-can-stop-big-techs-abuse-of-ndas/);
+[Star Tribune on Minnesota code names and shell companies](https://www.startribune.com/ndas-code-names-and-shell-companies-how-minnesota-officials-support-data-center-secrecy/601499182);
+[Utility Dive on FERC and PJM data center transmission costs](https://www.utilitydive.com/news/ferc-data-center-pjm-transmission-costs/825760/);
+[Illinois AG objections to ComEd data center contracts](https://www.utilitydive.com/news/illinois-ag-files-objections-to-comed-data-center-agreements-at-ferc/809576/);
+[MultiState 2026 state data center tracker](https://www.multistate.us/insider/2026/4/14/federal-ai-data-center-policy-meets-resistance-from-state-lawmakers).*
+""",
+    },
     # ── DOE National Transmission Needs Study (July 2026 draft) ─────────
     {
         "id": "doe-transmission-needs-2026",
@@ -66,9 +294,9 @@ BLOG_STORIES = [
             "the main reason the U.S. needs new transmission. Congestion already "
             "adds \\$11 billion a year to wholesale power costs, tens of billions "
             "in new lines are approved, and the study feeds directly into federal "
-            "corridor designations that can override local siting authority. It's "
-            "open for public comment right now — and it's full of numbers "
-            "communities can use."
+            "corridor designations that can override local siting authority. "
+            "Public comments are open until September 7, 2026 — and the draft is "
+            "full of numbers communities can use."
         ),
         "body": """\
 Every three years, federal law requires the Department of Energy to tell the
@@ -170,8 +398,10 @@ wherever the benefits and burdens land on different people.
 
 ### What to do with it
 
-1. **File a comment.** The draft is open for public consultation on
-   [DOE's Needs Study page](https://www.energy.gov/oe/national-transmission-needs-study).
+1. **File a comment — by September 7, 2026.** The 60-day window closes
+   then; email your comments to
+   [NeedsStudy.Comments@hq.doe.gov](mailto:NeedsStudy.Comments@hq.doe.gov)
+   (details on [DOE's Needs Study page](https://www.energy.gov/oe/national-transmission-needs-study)).
    Tell them transmission driven by large loads should be paid for by
    large loads — and that corridor designations need real local process.
 2. **Cite it at your next hearing.** Pair it with your numbers from the
