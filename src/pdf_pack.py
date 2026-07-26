@@ -121,6 +121,14 @@ class _ActionPackPDF(FPDF):
         self.cell(0, 4, f"Page {self.page_no()} of {{nb}}", align="R")
 
     # -- body helpers -------------------------------------------------------#
+    def _ensure_room(self, needed):
+        """Break the page BEFORE starting a row that captures get_y() —
+        otherwise the first cell can trigger the auto page break and the
+        rest of the row lands at the stale y on the new page (orphaned
+        number/bullet with its text a page later)."""
+        if self.get_y() + needed > self.page_break_trigger:
+            self.add_page()
+
     def section_title(self, title):
         if self.get_y() > self.h - 50:
             self.add_page()
@@ -134,6 +142,7 @@ class _ActionPackPDF(FPDF):
         self.ln(2)
 
     def kv_row(self, label, value):
+        self._ensure_room(6)
         y = self.get_y()
         self.set_xy(_MARGIN, y)
         self.set_font("Helvetica", "", 9)
@@ -145,6 +154,7 @@ class _ActionPackPDF(FPDF):
         self.multi_cell(0, 5.2, _latin1(value))
 
     def bullet(self, text, indent=4):
+        self._ensure_room(8)
         y = self.get_y()
         self.set_fill_color(*TEAL)
         self.ellipse(_MARGIN + indent - 3, y + 2.1, 1.3, 1.3, "F")
@@ -155,6 +165,7 @@ class _ActionPackPDF(FPDF):
         self.ln(0.8)
 
     def numbered(self, n, text):
+        self._ensure_room(8)
         y = self.get_y()
         self.set_xy(_MARGIN, y)
         self.set_font("Helvetica", "B", 9)
@@ -167,10 +178,8 @@ class _ActionPackPDF(FPDF):
         self.ln(0.8)
 
     def checkbox_item(self, text):
+        self._ensure_room(9)
         y = self.get_y()
-        if y > self.h - 30:
-            self.add_page()
-            y = self.get_y()
         self.set_draw_color(*MUTED)
         self.set_line_width(0.3)
         self.rect(_MARGIN + 1, y + 0.9, 3.4, 3.4)
@@ -187,6 +196,7 @@ class _ActionPackPDF(FPDF):
 
     def rich_bullet(self, lead, rest, indent=4):
         """Bullet whose text starts with a bold lead-in ("Where (year): ...")."""
+        self._ensure_room(10)
         y = self.get_y()
         self.set_fill_color(*TEAL)
         self.ellipse(_MARGIN + indent - 3, y + 2.1, 1.3, 1.3, "F")
@@ -203,8 +213,7 @@ class _ActionPackPDF(FPDF):
         self.ln(1.2)
 
     def exec_entry(self, name, title, focus, linkedin):
-        if self.get_y() > self.h - 40:
-            self.add_page()
+        self._ensure_room(16)
         y = self.get_y()
         self.set_fill_color(*TEAL)
         self.ellipse(_MARGIN + 1, y + 2.1, 1.3, 1.3, "F")
@@ -234,6 +243,7 @@ class _ActionPackPDF(FPDF):
             elif line.startswith("- "):
                 self.bullet(line[2:])
             elif line.endswith(":") and len(line) < 30:
+                self._ensure_room(12)
                 self.set_font("Helvetica", "B", 9)
                 self.set_text_color(*INK)
                 self.cell(0, 5.2, _latin1(line), new_x="LMARGIN", new_y="NEXT")
