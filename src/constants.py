@@ -779,6 +779,79 @@ COMPANY_CONCESSIONS = {
     },
 }
 
+# What similar communities actually won — shown in the Start Here wizard's
+# impact step so the CBA target reads as precedent, not aspiration.
+CBA_BENCHMARKS = [
+    {"community": "The Dalles", "state": "OR", "company": "Google",
+     "won": "$29M wastewater treatment upgrade + recycled-water cooling; "
+            "city capped DC draws at 25% of municipal supply"},
+    {"community": "Groton", "state": "CT", "company": "Vantage",
+     "won": "$2.5M community recreation center CBA, recorded as a zoning "
+            "condition after a year-long moratorium"},
+    {"community": "Morrow & Umatilla Counties", "state": "OR",
+     "company": "Amazon (AWS)",
+     "won": "Renegotiated tax agreements with higher annual community "
+            "payments after commissioners pushed back"},
+    {"community": "Loudoun County", "state": "VA", "company": "Multiple",
+     "won": "Hundreds of millions/year in data-center property taxes — "
+            "~38% of the county budget — by declining abatements"},
+]
+
+# Digital-organizing playbook — platform-specific tips for the Start Here
+# wizard's outreach step and the action pack PDF.
+OUTREACH_TIPS = [
+    {"platform": "Nextdoor",
+     "tips": [
+         "The highest-value platform for this fight — it is geofenced to "
+         "actual neighbors and town officials often lurk there",
+         "Lead with the household bill number, never ideology — "
+         "flag-happy moderation removes anything that smells partisan",
+         "Name a specific local landmark near the parcel; proximity is "
+         "what makes people stop scrolling",
+         "Ask neighbors to hit 'Thank' and comment a town name — both "
+         "push the post into adjacent neighborhoods",
+     ]},
+    {"platform": "Ring Neighbors",
+     "tips": [
+         "Treat it as an alert channel, not a discussion forum — short, "
+         "factual, safety-adjacent framing ('heavy truck traffic', "
+         "'survey crews spotted') performs best",
+         "No links allowed in most posts — tell people to reply for the "
+         "fact sheet instead",
+         "Great for early-stage rumors: ask if anyone has seen land "
+         "clearing, water testing, or unmarked survey stakes",
+     ]},
+    {"platform": "Facebook",
+     "tips": [
+         "Create a dedicated group ('[Town] Residents for Responsible "
+         "Development') so the fight has a home base the algorithm "
+         "can't bury",
+         "Post the fact sheet as an IMAGE — image posts outperform link "
+         "posts roughly 3:1 and can't be link-throttled",
+         "Create a Facebook Event for every hearing and invite the whole "
+         "group; RSVP counts create social proof",
+         "Go Live from public meetings — the replay reaches neighbors "
+         "who couldn't attend, and officials behave differently on "
+         "camera",
+         "Ask admins of established town groups before posting; getting "
+         "a mod to post it for you beats getting flagged",
+     ]},
+    {"platform": "WhatsApp / group texts",
+     "tips": [
+         "This is your turnout tool, not your persuasion tool — save it "
+         "for the 48 hours before a hearing",
+         "One captain per street or church/school group; forward the "
+         "flyer image, the time, and a carpool offer",
+     ]},
+    {"platform": "Local subreddit / forums",
+     "tips": [
+         "Post the documents themselves (permit screenshots, deed "
+         "records) — forums reward receipts over rhetoric",
+         "Someone will demand sources; reply with the fact sheet's "
+         "source list and you win the thread",
+     ]},
+]
+
 # Project-stage playbook — drives the "Start here" wizard (start_here_tab).
 # Each stage maps the situation a community is in to the moves that matter
 # this week and the meeting type used for the generated action pack

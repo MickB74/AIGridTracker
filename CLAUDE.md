@@ -41,7 +41,7 @@ Always run both checks. The smoke test catches runtime import errors and widget 
 
 | Tab | Module(s) | Purpose |
 |-----|-----------|---------|
-| Start here | `start_here_tab` | Guided 5-step wizard for someone facing a new proposal: situation/stage → LLC unmasking lookup → impact estimate → stage playbook (`PROJECT_STAGES`) → downloadable action pack |
+| Start here | `start_here_tab` | Guided 5-step wizard for someone facing a new proposal: situation/stage/hearing date → LLC unmasking lookup → impact estimate + `CBA_BENCHMARKS` → stage playbook (`PROJECT_STAGES`, dated countdown when a hearing date is set) → action kit (PDF pack with comment scripts/letters/`OUTREACH_TIPS`, EN/ES flyer + petition sheet, social posts, downloadable campaign site) |
 | Negotiation toolkit | `toolkit_tab` | CBA templates, data dividend calculator, model clauses, meeting checklist, meeting prep generator (downloadable brief) |
 | Community & backlash | `news_tab` | Moratorium tracker + map, live news/Reddit, town case studies, 4-company environmental scorecard, spend estimator, report-freshness checker |
 | Your utility bill | `bills_tab` | Bill anatomy, rate impact, wholesale-to-retail flow, curtailment research library |
@@ -72,6 +72,8 @@ Stacked tabs (States, Learn, Blog) have a "This tab contains…" caption at the 
   - `MORATORIUMS_DF` — data center moratorium/ban tracker
   - `MORATORIUM_OUTCOMES` — case-study outcomes (CBA secured / ban sustained / etc.)
   - `COMPANY_CONCESSIONS` — per-operator negotiation intel: documented concessions won elsewhere + a strategy read; feeds the meeting brief / action pack
+  - `CBA_BENCHMARKS` — what similar communities won (Start here impact step)
+  - `OUTREACH_TIPS` — platform-by-platform digital organizing playbook (Nextdoor/Ring/Facebook/WhatsApp/forums)
   - Environmental report headline data for all four hyperscalers:
     `GOOGLE_*` (FY2025), `META_*` (FY2024), `MICROSOFT_ENV_HEADLINE` (FY2025),
     `AWS_ENV_HEADLINE` (CY2025). Microsoft/AWS don't break out DC-only
@@ -88,7 +90,11 @@ Stacked tabs (States, Learn, Blog) have a "This tab contains…" caption at the 
 
 - **src/briefs.py** — `build_meeting_brief_data(state, operator, meeting_type, mw)`: structured meeting-brief assembly (sections of kv/bullets/numbered/advice) plus the `MEETING_ADVICE` strategy dict. `build_meeting_brief(...)` renders it as plain text (toolkit's meeting prep generator, Start here text download). Output is plain text — don't escape `$` here.
 
-- **src/pdf_pack.py** — `build_action_pack_pdf(state, stage, stage_info, brief_data)`: branded PDF rendering of the Start here action pack (fpdf2; natively drawn logo, header/footer with page numbers). Consumes `build_meeting_brief_data()` output; core fonts are cp1252-only, so all text goes through its `_latin1()` sanitizer.
+- **src/pdf_pack.py** — `build_action_pack_pdf(state, stage, stage_info, brief_data, dated_moves=, scripts=, letters=, social_posts=, outreach_tips=)`: branded PDF rendering of the Start here action pack (fpdf2; natively drawn logo, header/footer with page numbers), plus `build_flyer_pdf(...)`: one-page EN/ES community flyer + petition/sign-up sheet. Consumes `build_meeting_brief_data()` output; core fonts are cp1252-only, so all text goes through its `_latin1()` sanitizer (drops emoji). Layout gotchas the helpers already handle: call `_ensure_room()` before any row that captures `get_y()` (else orphaned bullets at page breaks), and multi_cell leaves x at the right edge (paragraph() resets it).
+
+- **src/scripts_letters.py** — `build_comment_scripts(state, mw, imp, bill, operator, lang)` (2-minute speech + 30-second topic scripts, EN/ES), `build_letters(...)` (records request / PUC inquiry / council letter), `build_social_posts(...)` (Nextdoor/Ring/Facebook, numbers pre-filled). Pure text, no Streamlit.
+
+- **src/site_builder.py** — `build_campaign_site(...)`: self-contained single-file campaign `index.html` (inline CSS, OG tags, no external assets) users host on Netlify Drop / GitHub Pages.
 
 ### Services (src/services/)
 
@@ -106,6 +112,7 @@ External data fetchers. All must be cached with `@st.cache_data` and fail gracef
 | `sec_xbrl.py` | SEC XBRL financial data |
 | `report_check.py` | Polls hyperscaler report pages for editions newer than tracked (`REPORT_REGISTRY` holds the tracked year per company; cached 24 h) |
 | `secrets.py` | API key loading from `.env` or local config |
+| `tracking.py` | Local usage analytics + newsletter signups (not a fetcher): `log_event()` appends JSON lines to `data/analytics/events.jsonl` (gitignored — subscriber emails are PII); `add_subscriber()` writes `subscribers.csv`. Wired to download buttons via `on_click=log_event`. The signup widget is `src/ui/newsletter.py::render_newsletter_signup(source)` (sidebar + Start here). Admin view: set `GRIDWATCH_ADMIN_KEY` env var and open the app with `?admin=<key>`. |
 
 ### Other files
 

@@ -6,14 +6,23 @@ model, the meeting-brief builder, and existing registries (DC_SITES_DF LLC
 attribution, MORATORIUM_OUTCOMES, STATE_PUCS_DF).
 """
 
+from datetime import date, timedelta
+
 import streamlit as st
 from src.constants import (
     PROJECT_STAGES, STATE_GRID_PROFILES, STATE_PUCS_DF, MORATORIUMS_DF,
-    MORATORIUM_OUTCOMES, DC_SITES_DF, OPERATORS_DF,
+    MORATORIUM_OUTCOMES, DC_SITES_DF, OPERATORS_DF, CBA_BENCHMARKS,
+    OUTREACH_TIPS,
 )
 from src.impact_model import estimate_facility_impact, INVESTMENT_USD_PER_MW
 from src.briefs import build_meeting_brief, build_meeting_brief_data
-from src.pdf_pack import build_action_pack_pdf
+from src.pdf_pack import build_action_pack_pdf, build_flyer_pdf
+from src.scripts_letters import (
+    build_comment_scripts, build_letters, build_social_posts,
+)
+from src.site_builder import build_campaign_site
+from src.services.tracking import log_event
+from src.ui.newsletter import render_newsletter_signup
 
 _UNKNOWN_LLC = "I don't know — I only have an LLC or company name from a filing"
 
@@ -35,6 +44,11 @@ def render_start_here_tab():
         _states = sorted(STATE_GRID_PROFILES.keys())
         _idx = _states.index(_sidebar_state) if _sidebar_state in _states else 0
         state = st.selectbox("Your state", _states, index=_idx, key="sh_state")
+        hearing_date = st.date_input(
+            "Next hearing or vote (if known)", value=None,
+            min_value=date.today(), key="sh_hearing",
+            help="Turns your checklist into a dated countdown plan and "
+                 "pre-fills the flyer and social posts.")
     with c2:
         stage = st.radio(
             "Where does the project stand?",
@@ -136,14 +150,41 @@ def render_start_here_tab():
         "Rough planning numbers — tune cooling type, grid-upgrade costs, and "
         "more in the full **Local Impact Calculator** (Learn & simulate tab)."
     )
+
+    st.markdown("**What similar communities actually won:**")
+    for _b in CBA_BENCHMARKS:
+        st.markdown(
+            f"- **{_b['community']}, {_b['state']}** ({_b['company']}) — "
+            f"{_b['won']}")
+    st.caption(
+        "Your CBA target above isn't aspirational — it's in line with what "
+        "organized communities have negotiated. Scale the ask to the MW."
+    )
     st.markdown('</div>', unsafe_allow_html=True)
 
     # ── Step 4 — what to do at this stage ──────────────────────────────── #
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown(f"### Step 4 — {stage_info['emoji']} What to do this week")
     st.info(stage_info["headline"])
-    for _move in stage_info["moves"]:
-        st.markdown(f"- {_move}")
+
+    # With a hearing date, spread the moves across the runway (last due
+    # 2 days before the hearing); without one, show the undated list.
+    dated_moves = None
+    if hearing_date:
+        _days = (hearing_date - date.today()).days
+        _n = len(stage_info["moves"])
+        dated_moves = []
+        for _i, _move in enumerate(stage_info["moves"]):
+            _offset = max(1, round((_i + 1) * max(_days - 2, 1) / _n))
+            _due = date.today() + timedelta(days=min(_offset, max(_days - 2, 1)))
+            dated_moves.append((f"{_due:%b %d}", _move))
+        st.markdown(
+            f"**⏳ {_days} days until your hearing** — your countdown plan:")
+        for _due, _move in dated_moves:
+            st.markdown(f"- **By {_due}** — {_move}")
+    else:
+        for _move in stage_info["moves"]:
+            st.markdown(f"- {_move}")
 
     # In-state pushback context + precedents from real fights
     _abbrev_row = STATE_PUCS_DF[STATE_PUCS_DF["state"] == state]
@@ -177,20 +218,47 @@ def render_start_here_tab():
         )
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # ── Step 5 — your action pack ──────────────────────────────────────── #
+    # ── Step 5 — your action kit ───────────────────────────────────────── #
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown("### Step 5 — Download your action pack")
+    st.markdown("### Step 5 — Your action kit")
     st.caption(
-        "One print-ready PDF: your situation, the operator intel, impact "
-        "numbers, meeting strategy, CBA targets, questions to ask, and your "
-        "this-week checklist. Print it and bring it."
+        "Everything below is pre-filled with your numbers: the action-pack "
+        "PDF (now with your speech, letters, and outreach playbook), a "
+        "hand-out flyer with a petition sheet, ready-to-paste social posts, "
+        "and a one-page campaign website you can host for free."
     )
+
+    _puc_name = (_abbrev_row.iloc[0]["name"] if not _abbrev_row.empty
+                 else "Your state public utility commission")
+    _puc_complaint = (_abbrev_row.iloc[0]["complaint"]
+                      if not _abbrev_row.empty else "")
+    _hearing_str = f"{hearing_date:%A, %B %d}" if hearing_date else ""
 
     _brief_data = build_meeting_brief_data(
         state, operator_for_brief, stage_info["meeting_type"], mw)
-    pack_pdf = build_action_pack_pdf(state, stage, stage_info, _brief_data)
+    _scripts_en = build_comment_scripts(
+        state, mw, imp, _upgrade_per_home_yr, operator_for_brief, "en")
+    _letters = build_letters(
+        state, operator_for_brief, mw, _puc_name, _puc_complaint)
+    _posts = build_social_posts(
+        state, mw, imp, _upgrade_per_home_yr, operator_for_brief,
+        _hearing_str)
 
-    _checklist = "".join(f"  [ ] {_m}\n" for _m in stage_info["moves"])
+    pack_pdf = build_action_pack_pdf(
+        state, stage, stage_info, _brief_data,
+        dated_moves=dated_moves, scripts=_scripts_en, letters=_letters,
+        social_posts=_posts, outreach_tips=OUTREACH_TIPS)
+
+    if dated_moves:
+        _checklist = "".join(f"  [ ] By {_d} — {_m}\n"
+                             for _d, _m in dated_moves)
+    else:
+        _checklist = "".join(f"  [ ] {_m}\n" for _m in stage_info["moves"])
+    _letters_txt = "\n\n".join(
+        f"{'-'*60}\n{_l['title'].upper()}\nTo: {_l['to']}\nRe: {_l['re']}"
+        f"\n\n{_l['body']}" for _l in _letters)
+    _topics_txt = "\n\n".join(f"[{_t}]\n{_s}"
+                              for _t, _s in _scripts_en["topics"])
     pack_txt = (
         f"START-HERE ACTION PACK\n"
         f"{'='*60}\n"
@@ -200,9 +268,15 @@ def render_start_here_tab():
         f"{_checklist}\n"
         + build_meeting_brief(state, operator_for_brief,
                               stage_info["meeting_type"], mw)
+        + f"\n{'='*60}\nYOUR 2-MINUTE PUBLIC COMMENT\n{'='*60}\n"
+        + _scripts_en["main"]
+        + f"\n\n30-SECOND TOPIC SCRIPTS\n\n{_topics_txt}\n\n"
+        + f"{'='*60}\nREADY-TO-SEND LETTERS\n{'='*60}\n\n{_letters_txt}\n"
     )
 
     _fname = f"gridwatch_action_pack_{state.replace(' ', '_')}"
+    _pack_meta = {"state": state, "stage": stage,
+                  "operator": operator_for_brief, "mw": mw}
     d1, d2 = st.columns([1, 1])
     d1.download_button(
         "📥 Download action pack (PDF)",
@@ -212,6 +286,9 @@ def render_start_here_tab():
         key="sh_download",
         type="primary",
         use_container_width=True,
+        on_click=log_event,
+        args=("action_pack_download",),
+        kwargs={"fmt": "pdf", **_pack_meta},
     )
     d2.download_button(
         "Plain text version",
@@ -220,7 +297,114 @@ def render_start_here_tab():
         "text/plain",
         key="sh_download_txt",
         use_container_width=True,
+        on_click=log_event,
+        args=("action_pack_download",),
+        kwargs={"fmt": "txt", **_pack_meta},
     )
+
+    # -- speak: 2-minute comment script -------------------------------- #
+    with st.expander("🎤 Your 2-minute public comment (pre-filled)"):
+        _lang = st.radio("Language", ["English", "Español"],
+                         horizontal=True, key="sh_script_lang")
+        _scripts_show = (_scripts_en if _lang == "English" else
+                         build_comment_scripts(state, mw, imp,
+                                               _upgrade_per_home_yr,
+                                               operator_for_brief, "es"))
+        st.text_area("Read at a normal pace — about two minutes. Fill in "
+                     "your name and practice once out loud.",
+                     _scripts_show["main"], height=340, key="sh_script_txt")
+        st.markdown("**30-second topic scripts** — assign one per speaker "
+                    "so ten neighbors make ten different arguments:")
+        for _t, _s in _scripts_show["topics"]:
+            st.markdown(f"**{_t}:** {_s}")
+
+    # -- send: ready-to-send letters ------------------------------------ #
+    with st.expander("✉️ Ready-to-send letters (records request · PUC · "
+                     "council)"):
+        st.caption("Replace the [BRACKETED] placeholders and send. All "
+                   "three are also in the action-pack PDF, one per page.")
+        for _i, _l in enumerate(_letters):
+            st.markdown(f"**{_l['title']}**  \nTo: {_l['to']}  \n"
+                        f"Re: {_l['re']}")
+            st.text_area(_l["title"], _l["body"], height=260,
+                         key=f"sh_letter_{_i}", label_visibility="collapsed")
+
+    # -- post: social media playbook ------------------------------------ #
+    with st.expander("📣 Post it — Nextdoor, Ring, Facebook & more"):
+        st.caption("Copy-paste posts with your numbers filled in — replace "
+                   "the [BRACKETS]. Then the platform playbook.")
+        for _platform, _post in _posts.items():
+            st.markdown(f"**{_platform}**")
+            st.text_area(_platform, _post, height=140,
+                         key=f"sh_post_{_platform}",
+                         label_visibility="collapsed")
+        st.markdown("---")
+        for _entry in OUTREACH_TIPS:
+            st.markdown(f"**{_entry['platform']}**")
+            for _tip in _entry["tips"]:
+                st.markdown(f"- {_tip}")
+
+    # -- rally: flyer, petition sheet, campaign site --------------------- #
+    st.markdown("#### 🪧 Rally your neighbors")
+    r1, r2, r3 = st.columns([1.2, 1.2, 0.8])
+    _meet_when = r1.text_input(
+        "Meeting date & time",
+        value=(f"{hearing_date:%A, %B %d} · 6:30 PM" if hearing_date else ""),
+        placeholder="Tuesday, Aug 12 · 6:30 PM", key="sh_meet_when")
+    _meet_where = r2.text_input(
+        "Location", placeholder="Town Hall, 123 Main St",
+        key="sh_meet_where")
+    _flyer_lang = r3.radio("Flyer language", ["English", "Español"],
+                           key="sh_flyer_lang")
+    flyer_pdf = build_flyer_pdf(
+        state, mw, imp, _upgrade_per_home_yr,
+        meeting_when=_meet_when, meeting_where=_meet_where,
+        lang="es" if _flyer_lang == "Español" else "en")
+    f1, f2 = st.columns([1, 1])
+    f1.download_button(
+        "🪧 Flyer + petition sheet (PDF)",
+        flyer_pdf,
+        f"gridwatch_flyer_{state.replace(' ', '_')}.pdf",
+        "application/pdf",
+        key="sh_flyer_dl",
+        use_container_width=True,
+        on_click=log_event,
+        args=("flyer_download",),
+        kwargs={"lang": _flyer_lang, **_pack_meta},
+    )
+
+    with st.expander("🌐 Your campaign website (free to host)"):
+        st.caption(
+            "A complete one-page site with your numbers baked in — no "
+            "coding needed. Download `index.html`, then drag it onto "
+            "**Netlify Drop** (netlify.com/drop) or upload to **GitHub "
+            "Pages** — both free — and share the link in every post."
+        )
+        s1, s2 = st.columns([1, 1])
+        _group = s1.text_input(
+            "Group name", placeholder="Smith County Residents for "
+            "Responsible Development", key="sh_site_group")
+        _contact = s2.text_input(
+            "Contact email (shown on the site)",
+            placeholder="ourgroup@gmail.com", key="sh_site_email")
+        _site_html = build_campaign_site(
+            state, mw, imp, _upgrade_per_home_yr,
+            group_name=_group, contact_email=_contact,
+            meeting_when=_meet_when, meeting_where=_meet_where,
+            operator=operator_for_brief)
+        st.download_button(
+            "🌐 Download your site (index.html)",
+            _site_html,
+            "index.html",
+            "text/html",
+            key="sh_site_dl",
+            use_container_width=True,
+            on_click=log_event,
+            args=("campaign_site_download",),
+            kwargs=_pack_meta,
+        )
+
+    render_newsletter_signup("start_here")
 
     st.info(
         "**Go deeper:** model CBA clauses and the data dividend calculator in "

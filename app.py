@@ -13,11 +13,14 @@ Run:
 
 import streamlit as st
 import streamlit.components.v1 as components
+import os
 import pathlib
 import datetime as _dt
 import json
 import base64
 import urllib.parse
+
+import pandas as pd
 
 from src.services.news import fetch_community_stories, _story_angle
 from src.constants import (
@@ -45,6 +48,8 @@ from src.ui.toolkit_tab import render_toolkit_tab
 from src.ui.consulting_tab import render_consulting_tab
 from src.ui.impact_tab import render_impact_tab
 from src.ui.start_here_tab import render_start_here_tab
+from src.ui.newsletter import render_newsletter_signup
+from src.services.tracking import load_events, load_subscribers
 
 # Load custom CSS styles
 def load_css():
@@ -164,6 +169,48 @@ with st.sidebar:
                 st.dataframe(_rdf, use_container_width=True, hide_index=True, height=150)
         else:
             st.caption(f"No results for '{_search_q}'.")
+
+    st.markdown("---")
+    render_newsletter_signup("sidebar", compact=True)
+
+    # Usage dashboard — only for the operator. Visible when GRIDWATCH_ADMIN_KEY
+    # is set and the URL carries ?admin=<that key>.
+    _admin_key = os.environ.get("GRIDWATCH_ADMIN_KEY", "")
+    if _admin_key and st.query_params.get("admin") == _admin_key:
+        st.markdown("---")
+        with st.expander("📊 Admin — usage data", expanded=False):
+            _events = load_events()
+            _subs = load_subscribers()
+            _packs = (
+                _events[_events["event"] == "action_pack_download"]
+                if not _events.empty and "event" in _events.columns
+                else pd.DataFrame()
+            )
+            a1, a2 = st.columns(2)
+            a1.metric("Action packs downloaded", len(_packs))
+            a2.metric("Newsletter subscribers", len(_subs))
+            if not _packs.empty and "state" in _packs.columns:
+                st.caption("Downloads by state")
+                st.dataframe(
+                    _packs["state"].value_counts().rename("downloads"),
+                    use_container_width=True,
+                )
+            if not _events.empty:
+                st.download_button(
+                    "Download all events (CSV)",
+                    _events.to_csv(index=False),
+                    "gridwatch_events.csv",
+                    "text/csv",
+                    key="admin_events_dl",
+                )
+            if not _subs.empty:
+                st.download_button(
+                    "Download subscribers (CSV)",
+                    _subs.to_csv(index=False),
+                    "gridwatch_subscribers.csv",
+                    "text/csv",
+                    key="admin_subs_dl",
+                )
 
 # --- Hero banner with background image and overlay content ----------------- #
 _hero_path = pathlib.Path(__file__).resolve().parent / "assets" / "hero.png"

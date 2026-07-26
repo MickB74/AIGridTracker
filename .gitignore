@@ -20,5 +20,8 @@ venv/
 # Cached daily Reddit snapshot (regenerated at runtime)
 reddit_corpus.parquet
 
+# Local analytics + newsletter subscribers (contains PII — never commit)
+data/analytics/
+
 # Facilities-research generated output (regenerate with src/research/dc_finder.py)
 research_output/

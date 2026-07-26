@@ -33,7 +33,9 @@ def _latin1(text):
     covers em/en dashes, curly quotes, and bullets natively)."""
     for src, dst in _CHAR_MAP.items():
         text = text.replace(src, dst)
-    return text.encode("cp1252", "replace").decode("cp1252")
+    # drop (not "?") anything outside the glyph set — emoji in social posts
+    # should vanish on paper, not litter it with question marks
+    return text.encode("cp1252", "ignore").decode("cp1252")
 
 
 class _ActionPackPDF(FPDF):
@@ -190,9 +192,13 @@ class _ActionPackPDF(FPDF):
         self.ln(1.2)
 
     def paragraph(self, text, style="", size=9, color=INK):
+        # multi_cell leaves x at the cell's right edge; a paragraph always
+        # starts at the left margin, else back-to-back paragraphs get zero
+        # width ("Not enough horizontal space").
+        self.set_x(self.l_margin)
         self.set_font("Helvetica", style, size)
         self.set_text_color(*color)
-        self.multi_cell(0, 5.2, _latin1(text))
+        self.multi_cell(0, 5.2, _latin1(text), new_x="LMARGIN", new_y="NEXT")
 
     def rich_bullet(self, lead, rest, indent=4):
         """Bullet whose text starts with a bold lead-in ("Where (year): ...")."""
@@ -251,11 +257,18 @@ class _ActionPackPDF(FPDF):
                 self.paragraph(line)
 
 
-def build_action_pack_pdf(state, stage, stage_info, brief_data):
+def build_action_pack_pdf(state, stage, stage_info, brief_data,
+                          dated_moves=None, scripts=None, letters=None,
+                          social_posts=None, outreach_tips=None):
     """Render the Start Here action pack. Returns PDF bytes.
 
     `stage`/`stage_info` come from PROJECT_STAGES; `brief_data` from
-    build_meeting_brief_data().
+    build_meeting_brief_data(). Optional extras:
+      - dated_moves:   [(due_str, move), ...] replaces the undated checklist
+      - scripts:       build_comment_scripts() output
+      - letters:       build_letters() output (each letter gets its own page)
+      - social_posts:  build_social_posts() output
+      - outreach_tips: OUTREACH_TIPS registry
     """
     pdf = _ActionPackPDF(
         doc_title="START-HERE ACTION PACK",
@@ -279,9 +292,14 @@ def build_action_pack_pdf(state, stage, stage_info, brief_data):
     pdf.ln(1)
     pdf.paragraph(stage_info["headline"])
 
-    pdf.section_title("This week — your checklist")
-    for move in stage_info["moves"]:
-        pdf.checkbox_item(move)
+    if dated_moves:
+        pdf.section_title("Your countdown checklist")
+        for due, move in dated_moves:
+            pdf.checkbox_item(f"By {due} — {move}")
+    else:
+        pdf.section_title("This week — your checklist")
+        for move in stage_info["moves"]:
+            pdf.checkbox_item(move)
 
     for sec in brief_data["sections"]:
         pdf.section_title(sec["title"])
@@ -305,5 +323,248 @@ def build_action_pack_pdf(state, stage, stage_info, brief_data):
             pdf.ln(2)
             for c in sec["items"]:
                 pdf.rich_bullet(f"{c['where']} ({c['year']}): ", c["what"])
+
+    if scripts:
+        pdf.section_title("Your 2-minute public comment")
+        pdf.paragraph("Read at a normal pace this runs about two minutes. "
+                      "Fill in your name, practice it once out loud, and "
+                      "hand the board a printed copy.",
+                      style="I", color=MUTED)
+        pdf.ln(2)
+        for para in scripts["main"].split("\n\n"):
+            pdf.paragraph(para)
+            pdf.ln(1.5)
+        pdf.section_title("30-second topic scripts (divide the speakers)")
+        for title, text in scripts["topics"]:
+            pdf.rich_bullet(f"{title}: ", text)
+
+    if social_posts or outreach_tips:
+        pdf.section_title("Spread the word online")
+        if social_posts:
+            pdf.paragraph("Copy-paste posts — replace the [BRACKETS] and "
+                          "post. Numbers are already filled in.",
+                          style="I", color=MUTED)
+            pdf.ln(2)
+            for platform, post in social_posts.items():
+                pdf._ensure_room(20)
+                pdf.paragraph(platform, style="B")
+                pdf.paragraph(post, color=MUTED)
+                pdf.ln(2)
+        if outreach_tips:
+            pdf.paragraph("Platform playbook:", style="B")
+            pdf.ln(1)
+            for entry in outreach_tips:
+                pdf._ensure_room(16)
+                pdf.paragraph(entry["platform"], style="B")
+                for tip in entry["tips"]:
+                    pdf.bullet(tip)
+                pdf.ln(1)
+
+    if letters:
+        for letter in letters:
+            pdf.add_page()
+            pdf.section_title(f"Ready to send — {letter['title']}")
+            pdf.kv_row("To", letter["to"])
+            pdf.kv_row("Re", letter["re"])
+            pdf.ln(2)
+            for para in letter["body"].split("\n\n"):
+                for line in para.split("\n"):
+                    pdf.paragraph(line)
+                pdf.ln(2)
+
+    return bytes(pdf.output())
+
+
+# ---------------------------------------------------------------------- #
+# Community flyer + petition sheet
+# ---------------------------------------------------------------------- #
+
+_FLYER_STRINGS = {
+    "en": {
+        "doc_title": "COMMUNITY FACT SHEET",
+        "headline": "A {mw} MW data center is proposed near you",
+        "sub": "What it means for {state} households — planning estimates "
+               "with sources at the link below.",
+        "stat_power": "homes' worth of electricity",
+        "stat_water": "gallons of water per year",
+        "stat_bill": "per household per year if WE fund the grid upgrades",
+        "stat_cba": "per year — the community benefit agreement to ask for",
+        "asks_title": "What we're asking for — before any approval",
+        "asks": [
+            "A binding community benefit agreement (~{cba}/year), recorded "
+            "as a condition of approval — not a side letter",
+            "The developer pays 100% of grid upgrades, so they never "
+            "appear on our electric bills",
+            "An enforceable water cap, a 45 dBA noise limit at homes, and "
+            "quarterly public reporting",
+        ],
+        "meeting_title": "Show up — decisions are made by those in the room",
+        "learn": "Fact sources & tools: GridWatch AI — ask the person who "
+                 "shared this sheet for the link.",
+        "petition_title": "Petition — conditions before approval",
+        "petition_body": "We, the undersigned residents, ask our elected "
+                         "officials to require a binding community benefit "
+                         "agreement, developer-funded grid upgrades, and "
+                         "enforceable water and noise limits as conditions "
+                         "of any data center approval near {state_loc}.",
+        "cols": ["#", "Name", "Street address", "Email", "Phone",
+                 "Signature"],
+    },
+    "es": {
+        "doc_title": "HOJA INFORMATIVA COMUNITARIA",
+        "headline": "Se propone un centro de datos de {mw} MW cerca de usted",
+        "sub": "Lo que significa para los hogares de {state} — estimaciones "
+               "de planificación con fuentes en el enlace de abajo.",
+        "stat_power": "hogares en consumo de electricidad",
+        "stat_water": "galones de agua al año",
+        "stat_bill": "por hogar al año si NOSOTROS pagamos las mejoras "
+                     "de la red",
+        "stat_cba": "al año — el acuerdo de beneficios comunitarios que "
+                    "debemos exigir",
+        "asks_title": "Lo que pedimos — antes de cualquier aprobación",
+        "asks": [
+            "Un acuerdo de beneficios comunitarios vinculante (~{cba}/año), "
+            "registrado como condición de la aprobación — no una carta "
+            "aparte",
+            "Que el desarrollador pague el 100% de las mejoras de la red, "
+            "para que nunca aparezcan en nuestras facturas de luz",
+            "Un límite de agua exigible, un límite de ruido de 45 dBA en "
+            "las viviendas y reportes públicos trimestrales",
+        ],
+        "meeting_title": "Asista — las decisiones las toman los presentes",
+        "learn": "Fuentes y herramientas: GridWatch AI — pida el enlace a "
+                 "quien le compartió esta hoja.",
+        "petition_title": "Petición — condiciones antes de aprobar",
+        "petition_body": "Nosotros, los residentes abajo firmantes, pedimos "
+                         "a nuestros funcionarios electos que exijan un "
+                         "acuerdo de beneficios comunitarios vinculante, "
+                         "mejoras de red pagadas por el desarrollador y "
+                         "límites exigibles de agua y ruido como condiciones "
+                         "de cualquier aprobación de un centro de datos "
+                         "cerca de {state_loc}.",
+        "cols": ["#", "Nombre", "Dirección", "Correo", "Teléfono", "Firma"],
+    },
+}
+
+
+def build_flyer_pdf(state, mw, imp, upgrade_per_home_yr,
+                    meeting_when="", meeting_where="", lang="en"):
+    """One-page hand-out flyer + petition/sign-up sheet. Returns PDF bytes.
+
+    `imp` is estimate_facility_impact() output; `meeting_when`/`where` are
+    free-text (already formatted). lang: "en" or "es".
+    """
+    s = _FLYER_STRINGS.get(lang, _FLYER_STRINGS["en"])
+    cba_str = f"${imp['data_dividend_usd'] / 1e6:.1f}M"
+
+    pdf = _ActionPackPDF(
+        doc_title=s["doc_title"],
+        doc_subtitle=f"{state} · {date.today():%B %d, %Y}",
+    )
+    pdf.add_page()
+
+    pdf.set_font("Helvetica", "B", 19)
+    pdf.set_text_color(*INK)
+    pdf.set_x(_MARGIN)
+    pdf.multi_cell(0, 8.5, _latin1(s["headline"].format(mw=mw)), new_x="LMARGIN", new_y="NEXT")
+    pdf.set_font("Helvetica", "", 9.5)
+    pdf.set_text_color(*MUTED)
+    pdf.set_x(_MARGIN)
+    pdf.multi_cell(0, 5.2, _latin1(s["sub"].format(state=state)), new_x="LMARGIN", new_y="NEXT")
+    pdf.ln(4)
+
+    # 2x2 stat grid
+    stats = [
+        (f"{imp['homes_equiv']:,.0f}", s["stat_power"]),
+        (f"{imp['annual_water_mgal']:,.0f}M", s["stat_water"]),
+        (f"${upgrade_per_home_yr:,.0f}", s["stat_bill"]),
+        (cba_str, s["stat_cba"]),
+    ]
+    col_w = (pdf.w - 2 * _MARGIN - 8) / 2
+    row_h = 30
+    top = pdf.get_y()
+    for i, (big, label) in enumerate(stats):
+        x = _MARGIN + (i % 2) * (col_w + 8)
+        y = top + (i // 2) * (row_h + 5)
+        pdf.set_draw_color(*RULE)
+        pdf.set_line_width(0.3)
+        pdf.rect(x, y, col_w, row_h, "D")
+        pdf.set_xy(x + 5, y + 5)
+        pdf.set_font("Helvetica", "B", 21)
+        pdf.set_text_color(*TEAL)
+        pdf.cell(col_w - 10, 9, _latin1(big))
+        pdf.set_xy(x + 5, y + 15.5)
+        pdf.set_font("Helvetica", "", 8.5)
+        pdf.set_text_color(*INK)
+        pdf.multi_cell(col_w - 10, 4.2, _latin1(label))
+    pdf.set_y(top + 2 * row_h + 5 + 6)
+
+    pdf.section_title(s["asks_title"])
+    for ask in s["asks"]:
+        pdf.bullet(ask.format(cba=cba_str))
+
+    # meeting box
+    pdf.ln(3)
+    box_y = pdf.get_y()
+    box_h = 26
+    pdf.set_draw_color(*TEAL)
+    pdf.set_line_width(0.6)
+    pdf.rect(_MARGIN, box_y, pdf.w - 2 * _MARGIN, box_h, "D")
+    pdf.set_xy(_MARGIN + 5, box_y + 4)
+    pdf.set_font("Helvetica", "B", 11)
+    pdf.set_text_color(*TEAL)
+    pdf.cell(0, 6, _latin1(s["meeting_title"]))
+    pdf.set_xy(_MARGIN + 5, box_y + 12)
+    pdf.set_font("Helvetica", "B", 12)
+    pdf.set_text_color(*INK)
+    when = meeting_when if meeting_when else "[DATE & TIME]"
+    where = meeting_where if meeting_where else "[LOCATION]"
+    pdf.multi_cell(pdf.w - 2 * _MARGIN - 10, 6, _latin1(f"{when} — {where}"))
+    pdf.set_y(box_y + box_h + 4)
+
+    pdf.set_font("Helvetica", "I", 8.5)
+    pdf.set_text_color(*MUTED)
+    pdf.set_x(_MARGIN)
+    pdf.multi_cell(0, 4.6, _latin1(s["learn"]), new_x="LMARGIN", new_y="NEXT")
+
+    # -- petition / sign-up sheet ---------------------------------------- #
+    pdf.add_page()
+    pdf.set_font("Helvetica", "B", 15)
+    pdf.set_text_color(*INK)
+    pdf.set_x(_MARGIN)
+    pdf.multi_cell(0, 7, _latin1(s["petition_title"]), new_x="LMARGIN", new_y="NEXT")
+    pdf.ln(1)
+    pdf.set_font("Helvetica", "", 9.5)
+    pdf.set_x(_MARGIN)
+    pdf.multi_cell(0, 5.2, _latin1(
+        s["petition_body"].format(state_loc=f"[{'CIUDAD' if lang == 'es' else 'TOWN'}], {state}")))
+    pdf.ln(4)
+
+    widths = [9, 38, 50, 40, 23, 20]
+    header_h, row_h = 8, 11
+    x0, y0 = _MARGIN, pdf.get_y()
+    # rect() doesn't auto-paginate — fit rows to the space above the footer
+    n_rows = int((pdf.page_break_trigger - y0 - header_h - 2) // row_h)
+    pdf.set_font("Helvetica", "B", 8.5)
+    pdf.set_text_color(*INK)
+    pdf.set_draw_color(*MUTED)
+    pdf.set_line_width(0.25)
+    x = x0
+    for w, col in zip(widths, s["cols"]):
+        pdf.rect(x, y0, w, header_h, "D")
+        pdf.set_xy(x + 1.5, y0 + 2)
+        pdf.cell(w - 3, 4, _latin1(col))
+        x += w
+    for r in range(n_rows):
+        y = y0 + header_h + r * row_h
+        x = x0
+        pdf.set_font("Helvetica", "", 8)
+        pdf.set_text_color(*MUTED)
+        for ci, w in enumerate(widths):
+            pdf.rect(x, y, w, row_h, "D")
+            if ci == 0:
+                pdf.set_xy(x + 1.5, y + 3.5)
+                pdf.cell(w - 3, 4, str(r + 1))
+            x += w
 
     return bytes(pdf.output())

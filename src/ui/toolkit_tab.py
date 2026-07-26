@@ -14,6 +14,7 @@ from src.constants import (
 )
 from src.briefs import build_meeting_brief
 from src.helpers import src_link
+from src.services.tracking import log_event
 
 
 # ── Real-world CBA examples database ─────────────────────────────────────── #
@@ -716,6 +717,9 @@ def render_toolkit_tab():
         file_name="landowner-bloc-negotiation-checklist.txt",
         mime="text/plain",
         key="tk_bloc_dl",
+        on_click=log_event,
+        args=("toolkit_download",),
+        kwargs={"item": "bloc_checklist"},
     )
 
     st.warning(
@@ -962,6 +966,8 @@ def render_toolkit_tab():
 
     if st.button("📝 Generate meeting brief", type="primary", key="mg_generate"):
         brief = build_meeting_brief(mg_state, mg_operator, mg_meeting, mg_mw)
+        log_event("meeting_brief_generated", state=mg_state,
+                  operator=mg_operator, meeting=mg_meeting, mw=mg_mw)
 
         st.success("Brief generated! Review below and download.")
         st.text(brief)
@@ -971,6 +977,10 @@ def render_toolkit_tab():
             f"meeting_brief_{mg_state.replace(' ', '_')}_{mg_meeting.split()[0].lower()}.txt",
             "text/plain",
             key="mg_download",
+            on_click=log_event,
+            args=("toolkit_download",),
+            kwargs={"item": "meeting_brief", "state": mg_state,
+                    "operator": mg_operator, "mw": mg_mw},
         )
 
     st.markdown("</div>", unsafe_allow_html=True)
