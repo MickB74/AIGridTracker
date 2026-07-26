@@ -16,7 +16,7 @@ def render_newsletter_signup(source: str, compact: bool = False) -> None:
     if not compact:
         st.markdown("#### 📬 The GridWatch Dispatch")
     st.caption(
-        "Occasional email updates: new moratoriums, rate cases, and "
+        "One email per week: new moratoriums, rate cases, and "
         "negotiation wins — filtered to your state. No spam, unsubscribe "
         "anytime."
     )

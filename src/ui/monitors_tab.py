@@ -17,6 +17,7 @@ sidebar "My Community" state is set, the relevant grid's monitor is surfaced.
 import streamlit as st
 from src.constants import MARKET_MONITORS_DF, ADVOCACY_ORGS_DF, SOURCES
 from src.helpers import src_link
+from src.services.report_check import check_monitor_freshness
 
 # Rough state → grid map, so a sidebar state selection can highlight the
 # monitor that covers it. Only the clear-cut single-grid states are listed;
@@ -99,11 +100,37 @@ def render_monitors_tab():
             )
             st.markdown("")
 
-    st.caption(
-        "Reports are edition-dated above; monitors publish the prior year's "
-        "annual report in spring. Check the linked landing page for the newest "
-        "edition before quoting a figure."
-    )
+    with st.expander("🔄 Check for newer editions (live)"):
+        st.caption(
+            "Scans each monitor's landing page for report years newer than "
+            "the edition tracked above. Checked once per day."
+        )
+        freshness = check_monitor_freshness()
+        any_newer = False
+        for item in freshness:
+            if item["status"] == "newer":
+                any_newer = True
+                st.warning(
+                    f"**{item['grid']}:** a **{item['latest_seen']}** edition "
+                    f"may be available (we track {item['have']}).  \n"
+                    f"→ [Check the page]({item['url']})"
+                )
+            elif item["status"] == "current":
+                st.markdown(
+                    f"**{item['grid']}:** ✅ current (tracking {item['have']})"
+                )
+            elif item["status"] == "unreachable":
+                st.markdown(
+                    f"**{item['grid']}:** ⚠️ page unreachable — "
+                    f"[check manually]({item['url']})"
+                )
+            else:
+                st.markdown(
+                    f"**{item['grid']}:** ❓ couldn't detect edition year — "
+                    f"[check manually]({item['url']})"
+                )
+        if not any_newer:
+            st.success("All tracked editions appear current.")
 
     st.divider()
 
