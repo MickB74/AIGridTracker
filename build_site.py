@@ -115,6 +115,18 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .statelist { columns:2; font-size:14.5px; }
 @media (min-width:640px){ .statelist{ columns:4; } }
 .statelist a { display:block; padding:3px 0; text-decoration:none; }
+.us-map { max-width:100%; height:auto; margin:20px auto; display:block; }
+.us-map path { fill:var(--card); stroke:var(--rule); stroke-width:.6;
+               cursor:pointer; transition:fill .15s; }
+.us-map path:hover { fill:var(--teal); }
+.us-map text { fill:var(--muted); font-size:3.8px; pointer-events:none;
+               text-anchor:middle; font-weight:600;
+               font-family:system-ui,-apple-system,sans-serif; }
+.us-map path:hover + text, .us-map path:hover ~ text { fill:var(--bg); }
+.map-tooltip { position:fixed; background:var(--card); border:1px solid var(--teal);
+               border-radius:8px; padding:6px 12px; font-size:13px;
+               color:var(--ink); pointer-events:none; z-index:999;
+               display:none; white-space:nowrap; }
 .post-meta { color:var(--muted); font-size:14px; margin:8px 0 6px; }
 .tags { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 20px; }
 .tag { background:var(--card); border:1px solid var(--rule);
@@ -434,17 +446,113 @@ def build_state(state):
         body, f"{SITE_URL}/states/{slugify(state)}", depth=1)
 
 
+_US_MAP_PATHS = {
+    "AL": "M628,396 L628,444 L622,458 L630,466 L628,468 L608,468 L606,396Z",
+    "AK": "M120,490 L148,490 L156,484 L168,488 L174,480 L184,480 L184,494 L170,510 L158,510 L154,516 L138,520 L124,518 L110,524 L98,520 L86,524 L80,518 L66,520 L62,516 L74,508 L72,500 L80,496 L90,498 L100,492 L108,492Z",
+    "AZ": "M168,390 L230,400 L222,448 L218,458 L224,462 L168,452 L172,418 L166,414Z",
+    "AR": "M546,400 L600,396 L604,402 L604,438 L560,440 L546,442 L546,424 L540,420 L546,414Z",
+    "CA": "M58,244 L108,260 L128,316 L120,346 L134,372 L134,396 L128,402 L104,392 L84,368 L68,346 L52,310 L48,282 L52,260Z",
+    "CO": "M252,286 L352,296 L348,348 L246,338Z",
+    "CT": "M814,200 L838,192 L844,210 L830,220 L818,218Z",
+    "DE": "M770,280 L782,276 L788,296 L778,308 L770,302Z",
+    "FL": "M628,468 L698,448 L724,460 L730,476 L716,512 L696,534 L682,528 L676,510 L658,498 L640,490 L626,490 L620,482 L618,470Z",
+    "GA": "M640,394 L688,382 L700,392 L706,436 L698,448 L628,468 L628,444 L628,396Z",
+    "HI": "M258,484 L274,482 L280,488 L276,496 L264,498 L256,492Z M282,476 L294,474 L298,480 L290,486Z M232,500 L248,496 L252,502 L244,508 L234,506Z",
+    "ID": "M170,136 L208,148 L212,164 L202,188 L216,232 L204,248 L166,240 L158,212 L166,186 L160,168 L170,152Z",
+    "IL": "M578,254 L590,252 L598,264 L600,308 L608,332 L604,348 L592,358 L578,360 L570,348 L574,312 L566,286 L568,266Z",
+    "IN": "M608,266 L640,262 L644,336 L638,350 L612,356 L604,348 L608,332 L600,308 L598,264Z",
+    "IA": "M468,238 L556,230 L566,250 L566,286 L560,298 L528,304 L476,308 L466,290 L460,258Z",
+    "KS": "M360,326 L470,330 L470,376 L358,374Z",
+    "KY": "M592,358 L604,348 L612,356 L638,350 L644,336 L650,340 L668,328 L700,328 L700,340 L688,362 L656,374 L598,384 L586,374Z",
+    "LA": "M546,442 L560,440 L604,438 L604,468 L610,480 L598,492 L582,492 L576,498 L560,490 L546,496 L544,480 L552,462 L546,450Z",
+    "ME": "M836,108 L850,98 L864,108 L860,142 L852,162 L842,168 L832,156 L826,136 L830,118Z",
+    "MD": "M714,284 L770,270 L782,276 L778,308 L766,302 L744,318 L740,300 L720,312 L714,300Z",
+    "MA": "M824,186 L856,178 L860,186 L848,194 L834,196 L824,192Z",
+    "MI": "M576,164 L592,158 L606,168 L612,192 L620,200 L636,200 L640,218 L636,252 L608,266 L598,264 L590,252 L578,254 L576,236 L582,218 L576,202 L564,196 L560,184 L568,176Z M582,140 L594,130 L612,136 L626,156 L614,166 L596,156 L582,158Z",
+    "MN": "M462,118 L536,112 L544,140 L556,168 L556,228 L468,238 L460,208 L454,170 L468,170 L468,130Z",
+    "MS": "M582,492 L598,492 L610,480 L606,468 L608,396 L628,396 L628,444 L610,460 L600,460 L598,476 L590,490Z",
+    "MO": "M476,308 L528,304 L560,298 L566,286 L574,312 L570,348 L578,360 L586,374 L568,394 L546,400 L546,414 L540,420 L530,400 L516,378 L476,376 L476,340Z",
+    "MT": "M178,106 L308,120 L302,184 L280,182 L242,178 L214,168 L212,164 L208,148 L178,136Z",
+    "NE": "M340,268 L448,264 L466,290 L476,308 L476,330 L360,326 L342,310Z",
+    "NV": "M118,214 L168,228 L166,240 L140,336 L104,392 L88,358 L96,290 L108,260Z",
+    "NH": "M832,118 L842,112 L842,168 L834,180 L824,178 L822,148 L828,132Z",
+    "NJ": "M778,236 L790,232 L794,256 L790,278 L778,294 L770,280 L772,260 L778,248Z",
+    "NM": "M194,382 L280,390 L274,448 L218,458 L222,448 L230,400 L200,396Z",
+    "NY": "M722,174 L740,166 L776,168 L800,156 L810,168 L814,200 L806,210 L792,218 L778,236 L774,248 L764,238 L746,236 L724,218 L722,194Z",
+    "NC": "M654,376 L692,360 L736,342 L762,340 L778,348 L770,362 L746,368 L724,382 L706,382 L690,382 L662,388Z",
+    "ND": "M340,118 L448,118 L462,118 L454,170 L340,164Z",
+    "OH": "M640,262 L674,248 L694,266 L700,300 L700,328 L668,328 L650,340 L644,336Z",
+    "OK": "M354,374 L358,398 L370,398 L420,404 L470,398 L470,410 L538,404 L546,414 L546,400 L546,398 L540,398 L530,398 L524,398 L470,376 L354,378Z",
+    "OR": "M56,144 L140,168 L160,168 L158,212 L118,214 L108,260 L58,244 L48,202 L56,168Z",
+    "PA": "M718,230 L778,220 L778,236 L774,248 L770,270 L714,284 L712,264Z",
+    "RI": "M842,198 L848,194 L852,204 L846,210Z",
+    "SC": "M672,384 L700,370 L718,370 L740,376 L710,406 L690,396 L672,394Z",
+    "SD": "M340,164 L454,170 L460,208 L460,258 L448,264 L340,268Z",
+    "TN": "M588,376 L656,374 L688,362 L700,340 L736,342 L692,360 L654,376 L598,384Z",
+    "TX": "M310,404 L370,398 L420,404 L470,410 L538,404 L546,442 L546,450 L536,476 L520,504 L490,530 L454,534 L418,520 L392,500 L370,510 L348,502 L330,484 L320,458 L310,432Z",
+    "UT": "M184,240 L246,248 L246,338 L194,330 L204,280 L184,278Z",
+    "VT": "M810,126 L826,118 L832,156 L824,178 L812,172 L810,148Z",
+    "VA": "M688,306 L724,296 L762,296 L778,308 L778,348 L762,340 L736,342 L700,340 L700,328Z",
+    "WA": "M68,68 L168,88 L172,120 L170,136 L160,148 L128,136 L68,126 L56,108Z",
+    "WV": "M688,306 L700,300 L700,328 L688,340 L680,342 L672,354 L664,362 L656,374 L654,376 L660,350 L674,322 L682,312Z",
+    "WI": "M524,144 L560,140 L576,164 L568,176 L560,184 L564,196 L576,202 L582,218 L576,236 L566,250 L556,230 L468,238 L460,208 L474,196 L486,170 L508,158Z",
+    "WY": "M218,194 L308,200 L302,268 L252,262 L218,258 L216,232Z",
+    "DC": "M750,300 L756,296 L758,302 L752,306Z",
+}
+
+_US_MAP_LABELS = {
+    "AL": (618, 432), "AK": (128, 506), "AZ": (196, 428), "AR": (564, 420),
+    "CA": (88, 334), "CO": (298, 318), "CT": (830, 206), "DE": (780, 292),
+    "FL": (678, 480), "GA": (664, 424), "HI": (264, 492), "ID": (184, 196),
+    "IL": (584, 308), "IN": (626, 308), "IA": (514, 268), "KS": (414, 354),
+    "KY": (650, 352), "LA": (572, 464), "ME": (848, 134), "MD": (746, 294),
+    "MA": (842, 188), "MI": (612, 224), "MN": (502, 168), "MS": (606, 438),
+    "MO": (536, 352), "MT": (242, 148), "NE": (404, 290), "NV": (130, 290),
+    "NH": (834, 148), "NJ": (784, 260), "NM": (240, 418), "NY": (764, 196),
+    "NC": (714, 366), "ND": (396, 142), "OH": (670, 294), "OK": (448, 394),
+    "OR": (104, 188), "PA": (744, 250), "RI": (848, 204), "SC": (704, 388),
+    "SD": (396, 212), "TN": (644, 368), "TX": (424, 462), "UT": (218, 288),
+    "VT": (820, 148), "VA": (730, 326), "WA": (110, 98), "WV": (680, 332),
+    "WI": (530, 188), "WY": (262, 232), "DC": (754, 302),
+}
+
+_ABBREV_TO_FULL = {v: k for k, v in _ABBREV.items()}
+
+
+def _build_us_map_svg():
+    paths = []
+    for abbr, d in _US_MAP_PATHS.items():
+        full = _ABBREV_TO_FULL.get(abbr, abbr)
+        slug = slugify(full)
+        paths.append(
+            f'<a href="{slug}.html">'
+            f'<path d="{d}" data-state="{esc(full)}" data-abbr="{abbr}"/>'
+            f'</a>')
+    labels = []
+    for abbr, (x, y) in _US_MAP_LABELS.items():
+        labels.append(f'<text x="{x}" y="{y}">{abbr}</text>')
+    return (
+        '<svg class="us-map" viewBox="30 60 850 480" '
+        'xmlns="http://www.w3.org/2000/svg">\n'
+        + "\n".join(paths) + "\n" + "\n".join(labels)
+        + "\n</svg>"
+    )
+
+
 def build_states_index():
     links = "\n".join(
         f'<a href="{slugify(s)}.html">{esc(s)}</a>'
         for s in sorted(STATE_GRID_PROFILES))
+    us_map = _build_us_map_svg()
     body = f"""
 <header>
   <div class="kicker">State briefings</div>
   <h1>Pick your state</h1>
   <p class="sub">Facilities, grid impact, water stress, and your public
-  utility commission — one page per state.</p>
+  utility commission — one page per state. Click a state on the map or
+  choose from the list below.</p>
 </header>
+<section>{us_map}</section>
 <section><div class="statelist">{links}</div></section>
 """
     return page(
