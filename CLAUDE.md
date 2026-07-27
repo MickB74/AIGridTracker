@@ -56,7 +56,7 @@ of how urgent the user's situation is:
 | Negotiation toolkit | `toolkit_tab` | CBA templates, data dividend calculator, model clauses, meeting checklist, meeting prep generator (downloadable brief) |
 | Estimate & simulate | `impact_tab` + `sandbox_tab` | Local impact calculator + interactive siting simulator |
 | Token calculator | `calc_tab`, `live_tab`, `compare_tab`, `grid_tab`, `method_tab` (nested sub-tabs) | Per-token footprint model, live benchmarks, source comparison, grid timing, and the source coefficients behind them |
-| Live intel | `news_feed_tab` + `news_tab` + `monitors_tab` | Top stories, community backlash / case studies, market monitors + report-freshness checker |
+| Live intel | `news_feed_tab` + `news_tab` + `monitors_tab` | Top stories, community backlash / flashpoints / `TOWN_CASES`, per-operator news feed, market monitors + report-freshness checker. Static content was stripped out of `news_tab`: the hyperscaler scorecard and spend estimator moved to `corporate_tab`, and the moratorium tracker is now a link-out to the site's `moratoriums.html` |
 | Reference | `bills_tab`, `learn_tab`, `dc_tab`, `corporate_tab`, `studies_tab` + `officials_tab`, `macro_tab` (nested sub-tabs) | Background reading and directories **staged for migration to the static site** — see below |
 | Consulting | `consulting_tab` | Consulting pitch + intake form |
 

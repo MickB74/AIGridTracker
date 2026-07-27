@@ -800,8 +800,9 @@ def render_corporate_tab():
             "**2.** Company profiles directory · "
             "**3.** Revenue growth over time · "
             "**4.** Hyperscaler environmental comparison · "
-            "**5.** Environmental deep-dives (Google / Microsoft / Amazon / Meta — tabbed) · "
-            "**6.** Key corporate players & sustainability directors"
+            "**5.** What they pay for electricity · "
+            "**6.** Environmental deep-dives (Google / Microsoft / Amazon / Meta — tabbed) · "
+            "**7.** Key corporate players & sustainability directors"
         )
 
     # Live stock prices (Yahoo Finance) for all public tickers, fetched once.
@@ -1104,6 +1105,145 @@ def render_corporate_tab():
     st.download_button(
         "📥 Download comparison data (CSV)",
         _comp_csv, "hyperscaler_environmental_comparison.csv", "text/csv")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # ------------------------------------------------------------------ #
+    # ESTIMATED UTILITY SPEND
+    # ------------------------------------------------------------------ #
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown("#### 💵 What do they actually pay for electricity?")
+    st.caption(
+        "None of these companies disclose their utility spend or the rates they "
+        "negotiate. But we can estimate it from their published consumption and "
+        "public data on industrial electricity rates. Adjust the assumptions below."
+    )
+
+    rc1, rc2 = st.columns(2)
+    with rc1:
+        dc_rate = st.slider(
+            "Estimated data center rate ($/kWh)",
+            min_value=0.02, max_value=0.10, value=0.05, step=0.005,
+            format="$%.3f", key="corp_dc_rate",
+            help="Large-load industrial contracts typically range "
+                 "\\$0.03–0.06/kWh. Some economic-development tariffs go as "
+                 "low as \\$0.02.")
+    with rc2:
+        res_rate = st.slider(
+            "Your residential rate ($/kWh)",
+            min_value=0.08, max_value=0.30, value=0.16, step=0.01,
+            format="$%.2f", key="corp_res_rate",
+            help="U.S. average residential rate is ~\\$0.16/kWh (EIA, 2025). "
+                 "Ranges from \\$0.10 (LA, WV) to \\$0.30+ (CT, MA, CA).")
+
+    g_twh = g["dc_twh"]
+    m_twh = m["dc_twh"]
+    ms_twh = ms["dc_twh"]
+    aw_twh = aw["dc_twh"]
+    all_twh = g_twh + m_twh + ms_twh + aw_twh
+
+    g_spend = g_twh * 1e9 * dc_rate
+    m_spend = m_twh * 1e9 * dc_rate
+    ms_spend = ms_twh * 1e9 * dc_rate
+    aw_spend = aw_twh * 1e9 * dc_rate
+    all_spend = g_spend + m_spend + ms_spend + aw_spend
+    rate_ratio = res_rate / dc_rate
+
+    all_equiv_homes = all_twh * 1e6 / 10.5
+
+    sp1, sp2, sp3, sp4 = st.columns(4)
+    sp1.metric("Google est. spend",
+               f"${g_spend / 1e9:.1f}B/yr",
+               f"{g_twh} TWh × ${dc_rate:.3f}")
+    sp2.metric("AWS est. spend",
+               f"${aw_spend / 1e9:.1f}B/yr",
+               f"~{aw_twh} TWh × ${dc_rate:.3f}")
+    sp3.metric("Microsoft est. spend",
+               f"${ms_spend / 1e9:.1f}B/yr",
+               f"~{ms_twh} TWh × ${dc_rate:.3f}")
+    sp4.metric("Meta est. spend",
+               f"${m_spend / 1e9:.1f}B/yr",
+               f"{m_twh} TWh × ${dc_rate:.3f}")
+
+    sq1, sq2, sq3 = st.columns(3)
+    sq1.metric("All four combined",
+               f"${all_spend / 1e9:.1f}B/yr",
+               f"{all_twh:.0f} TWh total")
+    sq2.metric("Rate discount vs. you",
+               f"{rate_ratio:.1f}×",
+               f"You pay ${res_rate:.2f} — they pay ~${dc_rate:.3f}")
+    sq3.metric("Combined household equiv.",
+               f"{all_equiv_homes / 1e6:.1f}M homes",
+               "at 10,500 kWh/yr avg")
+
+    spend_data = []
+    for yr_row in GOOGLE_DC_ELECTRICITY.itertuples():
+        spend_data.append({
+            "Year": str(yr_row.year), "Company": "Google",
+            "Spend": yr_row.dc_mwh * 1e3 * dc_rate / 1e9,
+        })
+    for yr_row in META_DC_ELECTRICITY.itertuples():
+        spend_data.append({
+            "Year": str(yr_row.year), "Company": "Meta",
+            "Spend": yr_row.dc_mwh * 1e3 * dc_rate / 1e9,
+        })
+    spend_df = pd.DataFrame(spend_data)
+
+    spend_chart = (
+        alt.Chart(spend_df)
+        .mark_line(point=True, strokeWidth=3)
+        .encode(
+            x=alt.X("Year:O", title="Year"),
+            y=alt.Y("Spend:Q", title="Estimated Spend ($ Billions)"),
+            color=alt.Color("Company:N",
+                scale=alt.Scale(domain=["Google", "Meta"],
+                                range=["#34a853", "#0866ff"]),
+                legend=alt.Legend(title="")),
+            tooltip=["Company:N", "Year:O",
+                     alt.Tooltip("Spend:Q", format="$.2f",
+                                 title="Est. Spend ($B)")],
+        ).properties(height=260)
+    )
+    st.altair_chart(spend_chart, use_container_width=True)
+
+    st.caption(
+        f"At **\\${dc_rate:.3f}/kWh**, the four hyperscalers' combined estimated "
+        f"electricity spend is **\\${all_spend / 1e9:.1f}B/year** on "
+        f"**{all_twh:.0f} TWh** — roughly "
+        f"**{all_equiv_homes / 1e6:.1f} million U.S. households** of consumption. "
+        f"You pay **{rate_ratio:.1f}× more per kWh** than they do. "
+        "These are estimates — actual rates are negotiated confidentially and "
+        "filed under seal with state PUCs; no hyperscaler discloses utility spend. "
+        "The chart shows Google and Meta only (the two that publish multi-year "
+        "electricity series). Consumption: "
+        + src_link("google_env_2026") + " · "
+        + src_link("meta_env_2025") + " · "
+        + src_link("msft_env_2025") + " · "
+        + src_link("amzn_env_2025")
+    )
+    st.info(
+        "**Why does this matter?** Large data centers often negotiate rates 60–80% "
+        "below what residential customers pay, plus tax abatements and infrastructure "
+        "subsidies. When their load raises system peak demand, the resulting capacity "
+        "charges are spread across *all* ratepayers. Your bill subsidizes their discount. "
+        "See the **Your utility bill** section under **Reference** for how this works."
+    )
+
+    _spend_summary = (
+        f"Estimated Hyperscaler Electricity Spend (at ${dc_rate:.3f}/kWh)\n\n"
+        f"Google (FY2025): {g_twh} TWh → ${g_spend/1e9:.1f}B/year\n"
+        f"AWS (CY2025, est.): {aw_twh} TWh → ${aw_spend/1e9:.1f}B/year\n"
+        f"Microsoft (FY2025, est.): {ms_twh} TWh → ${ms_spend/1e9:.1f}B/year\n"
+        f"Meta (FY2024): {m_twh} TWh → ${m_spend/1e9:.1f}B/year\n"
+        f"Combined: {all_twh:.0f} TWh → ${all_spend/1e9:.1f}B/year\n"
+        f"Rate discount vs residential (${res_rate:.2f}/kWh): {rate_ratio:.1f}x\n"
+        f"Household equivalent: {all_equiv_homes/1e6:.1f}M homes\n\n"
+        "Note: These are estimates. Actual rates are negotiated confidentially. "
+        "Microsoft/AWS TWh derived from reported growth rates."
+    )
+    st.download_button(
+        "📥 Download spend estimate (text)",
+        _spend_summary, "electricity_spend_estimate.txt", "text/plain",
+        use_container_width=False)
     st.markdown('</div>', unsafe_allow_html=True)
 
     # ------------------------------------------------------------------ #
