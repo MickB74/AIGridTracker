@@ -241,7 +241,7 @@ def build_index():
 </header>
 <div class="stats">
   <div class="stat"><b>{n_dc:,}</b><span>tracked U.S. data center facilities</span></div>
-  <div class="stat"><b>{twh:,.0f} TWh</b><span>estimated annual electricity, {n_states} states</span></div>
+  <div class="stat"><b>{twh:,.0f} TWh</b><span>estimated annual electricity, all 50 states + D.C.</span></div>
   <div class="stat"><b>{n_mora}</b><span>tracked moratorium &amp; pushback efforts</span></div>
   <div class="stat"><b>325&ndash;580 TWh</b><span>projected U.S. data center demand by 2030 (Berkeley Lab)</span></div>
 </div>

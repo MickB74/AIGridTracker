@@ -86,7 +86,7 @@ this page" expander for navigation.
   - `STATE_DC_DF` — 50-state facility count and TWh/year
   - `STATE_GRID_PROFILES` — 51-state residential rate ($/kWh), grid carbon (gCO2/kWh), water stress; feeds the impact calculator and meeting prep generator
   - `MEGA_PROJECTS_DF` — top 10 megaprojects under construction
-  - `STATE_PUCS_DF` — 51 state PUC commissions with website and complaint links
+  - `STATE_PUCS_DF` — 51 PUC commissions (50 states + D.C.) with website and complaint links
   - `LOCAL_BODIES_DF` / `LOCAL_OFFICIALS_DF` — town/county governing bodies
     (meeting schedule, agenda URL, public-comment process) and named local
     officials for localities with an active fight. **Every row carries `source`
