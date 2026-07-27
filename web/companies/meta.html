@@ -69,6 +69,18 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .statelist { columns:2; font-size:14.5px; }
 @media (min-width:640px){ .statelist{ columns:4; } }
 .statelist a { display:block; padding:3px 0; text-decoration:none; }
+.us-map { max-width:100%; height:auto; margin:20px auto; display:block; }
+.us-map path { fill:var(--card); stroke:var(--rule); stroke-width:.6;
+               cursor:pointer; transition:fill .15s; }
+.us-map path:hover { fill:var(--teal); }
+.us-map text { fill:var(--muted); font-size:3.8px; pointer-events:none;
+               text-anchor:middle; font-weight:600;
+               font-family:system-ui,-apple-system,sans-serif; }
+.us-map path:hover + text, .us-map path:hover ~ text { fill:var(--bg); }
+.map-tooltip { position:fixed; background:var(--card); border:1px solid var(--teal);
+               border-radius:8px; padding:6px 12px; font-size:13px;
+               color:var(--ink); pointer-events:none; z-index:999;
+               display:none; white-space:nowrap; }
 .post-meta { color:var(--muted); font-size:14px; margin:8px 0 6px; }
 .tags { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 20px; }
 .tag { background:var(--card); border:1px solid var(--rule);
