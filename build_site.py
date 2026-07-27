@@ -456,7 +456,7 @@ def _build_us_map_svg():
         full = _ABBREV_TO_FULL.get(abbr, abbr)
         slug = slugify(full)
         paths.append(
-            f'<a href="{slug}.html">'
+            f'<a href="/states/{slug}.html">'
             f'<path d="{d}" data-state="{esc(full)}" data-abbr="{abbr}"/>'
             f'</a>')
     labels = []
@@ -472,7 +472,7 @@ def _build_us_map_svg():
 
 def build_states_index():
     links = "\n".join(
-        f'<a href="{slugify(s)}.html">{esc(s)}</a>'
+        f'<a href="/states/{slugify(s)}.html">{esc(s)}</a>'
         for s in sorted(STATE_GRID_PROFILES))
     us_map = _build_us_map_svg()
     body = f"""
