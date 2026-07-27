@@ -14,6 +14,7 @@ from src.constants import (
 )
 from src.briefs import build_meeting_brief
 from src.helpers import src_link
+from src.impact_model import LOAD_FACTOR_AI_CLUSTER, facility_annual_kwh
 from src.services.tracking import log_event
 
 
@@ -419,7 +420,7 @@ def render_toolkit_tab():
         help="A surcharge on the facility's electricity consumption that funds "
              "a local trust fund. 1–3% is reasonable.",
     )
-    annual_kwh = facility_mw * 8760 * 0.85 * 1000  # 85% utilization
+    annual_kwh = facility_annual_kwh(facility_mw, LOAD_FACTOR_AI_CLUSTER)
     avg_rate = 0.07  # $/kWh wholesale
     annual_elec_cost = annual_kwh * avg_rate
     annual_infra_fee = annual_elec_cost * (infra_fee_pct / 100)
@@ -1229,7 +1230,7 @@ def render_toolkit_tab():
 
         st.markdown("**What it means for your community:**")
         sev_mw = facility_mw
-        sev_kwh = sev_mw * 8760 * 0.85 * 1000
+        sev_kwh = facility_annual_kwh(sev_mw, LOAD_FACTOR_AI_CLUSTER)
         sev_revenue = sev_kwh * 0.011
         sev_rev_str = f"\\${sev_revenue/1e6:.1f}M/year"
         st.info(

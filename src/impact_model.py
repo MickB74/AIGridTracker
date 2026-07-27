@@ -12,8 +12,25 @@ COOLING_PROFILES = {
     "Evaporative (water-cooled)": (1.12, 2.0),
     "Dry cooling (air-cooled)":   (1.22, 0.02),
     "Hybrid":                     (1.15, 0.80),
+    "Direct-to-chip (liquid)":    (1.05, 0.10),
 }
 DEFAULT_COOLING = "Evaporative (water-cooled)"
+
+# The siting sandbox labels the same physics differently; map its choices onto
+# the profiles above rather than re-declaring the coefficients.
+SANDBOX_COOLING_ALIASES = {
+    "Open-Loop":      "Evaporative (water-cooled)",
+    "Closed-Loop":    "Dry cooling (air-cooled)",
+    "Direct-to-chip": "Direct-to-chip (liquid)",
+}
+
+# Share of nameplate MW actually drawn, averaged over a year.
+# 1.0 is the conservative planning assumption used for community impact
+# estimates (wizard, calculator, meeting brief) — it answers "how bad can this
+# get". 0.85 reflects observed utilization at AI training campuses and is used
+# where the question is expected revenue rather than worst-case impact.
+LOAD_FACTOR_FULL = 1.0
+LOAD_FACTOR_AI_CLUSTER = 0.85
 
 HOME_KWH_PER_YEAR = 10_500         # EIA average US household consumption
 INVESTMENT_USD_PER_MW = 2_000_000  # rough data-center capex benchmark
@@ -21,7 +38,25 @@ DATA_DIVIDEND_SHARE = 0.02         # 2% of investment as annual CBA target
 DC_INDUSTRIAL_RATE = 0.05          # $/kWh typical negotiated DC rate
 
 
-def estimate_facility_impact(mw, state, cooling=DEFAULT_COOLING):
+def cooling_profile(cooling):
+    """(PUE, gal water per IT kWh) for a cooling label, accepting either a
+    COOLING_PROFILES key or a sandbox label prefix."""
+    if cooling in COOLING_PROFILES:
+        return COOLING_PROFILES[cooling]
+    for prefix, canonical in SANDBOX_COOLING_ALIASES.items():
+        if cooling.startswith(prefix):
+            return COOLING_PROFILES[canonical]
+    return COOLING_PROFILES[DEFAULT_COOLING]
+
+
+def facility_annual_kwh(mw, load_factor=LOAD_FACTOR_FULL, pue=1.0):
+    """Annual kWh for an `mw` facility. Leave `pue` at 1.0 for IT load only;
+    pass a PUE to get total facility draw including cooling and overhead."""
+    return mw * 8760 * load_factor * pue * 1000
+
+
+def estimate_facility_impact(mw, state, cooling=DEFAULT_COOLING,
+                             load_factor=LOAD_FACTOR_FULL):
     """Annual impact estimates for a facility of `mw` megawatts in `state`.
 
     Returns a dict with energy (TWh), water (M gal), carbon (tCO2e),
@@ -33,11 +68,10 @@ def estimate_facility_impact(mw, state, cooling=DEFAULT_COOLING):
     gco2 = prof.get("gco2", 400)
     water_stress = prof.get("water_stress", "medium")
 
-    pue, water_gal_per_kwh = COOLING_PROFILES.get(
-        cooling, COOLING_PROFILES[DEFAULT_COOLING])
+    pue, water_gal_per_kwh = cooling_profile(cooling)
 
-    annual_mwh = mw * 8760 * pue
-    annual_kwh = annual_mwh * 1000
+    annual_kwh = facility_annual_kwh(mw, load_factor, pue)
+    annual_mwh = annual_kwh / 1000
     investment_musd = mw * INVESTMENT_USD_PER_MW / 1e6
 
     return {

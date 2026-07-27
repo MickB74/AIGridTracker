@@ -9,6 +9,10 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
+from src.impact_model import (
+    LOAD_FACTOR_AI_CLUSTER, cooling_profile, facility_annual_kwh)
+
+
 def render_sandbox_tab():
     st.subheader("🎮 AI Datacenter Siting Sandbox")
     st.caption(
@@ -117,19 +121,15 @@ def render_sandbox_tab():
     cooling_cost_adj = 0.0
     water_rate = 0.0 # gallons per kWh
     
+    pue, water_rate = cooling_profile(cooling)
     if cooling.startswith("Open-Loop"):
-        pue = 1.12
-        water_rate = 2.0
         cooling_cost_adj = 0.0
     elif cooling.startswith("Closed-Loop"):
-        pue = 1.22
-        water_rate = 0.02
         cooling_cost_adj = 0.5 # million $ per MW
     else: # Direct-to-chip
-        pue = 1.05
-        water_rate = 0.10
         cooling_cost_adj = 1.5 # million $ per MW
-        
+
+
     # Regional profiles: (PUE adjustment, queue wait months, grid gCO2/kWh)
     REGION_PROFILES = {
         "Northern Virginia (PJM)":              (0.02, 60, 380),
@@ -208,10 +208,10 @@ def render_sandbox_tab():
     total_capex = campus_size * (base_cost_per_mw + cooling_cost_adj + power_cost_adj)
 
     # 4. Energy and Carbon Calculations
-    # Assume 85% utilization (load factor) for AI clusters
-    load_factor = 0.85
-    annual_power_mwh = campus_size * 8760 * load_factor * pue
-    
+    annual_power_mwh = facility_annual_kwh(
+        campus_size, LOAD_FACTOR_AI_CLUSTER, pue) / 1000
+
+
     # Apply procurement strategies
     carbon_intensity = grid_intensity
     if power.startswith("24/7"):
