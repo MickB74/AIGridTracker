@@ -26,6 +26,7 @@ from src.services.news import fetch_community_stories, _story_angle
 from src.constants import (
     POLICY_ALERTS, STATE_PUCS_DF, MORATORIUMS_DF, STATE_DC_DF,
     EXECUTIVES_DF, OPERATORS_DF, DC_SITES_DF, VIDEO_TOPICS,
+    STATE_GRID_PROFILES,
 )
 from src.ui.calc_tab import render_calc_tab
 from src.ui.compare_tab import render_compare_tab
@@ -177,11 +178,14 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("#### 🌐 On aigridwatch.com")
     st.caption("Shareable pages you can send to neighbours or a reporter.")
-    _state_slug = (st.session_state.get("my_state", "") or "").lower().replace(" ", "-")
-    st.markdown(
-        f"- [Your state briefing]({SITE}/states/{_state_slug}.html)\n"
-        if _state_slug else f"- [State briefings]({SITE}/states)\n"
-    )
+    # Only deep-link when a real state is selected — the picker's default
+    # ("All states") has no page of its own.
+    _my_state = st.session_state.get("my_state", "")
+    if _my_state in STATE_GRID_PROFILES:
+        _slug = _my_state.lower().replace(" ", "-")
+        st.markdown(f"- [{_my_state} briefing]({SITE}/states/{_slug}.html)")
+    else:
+        st.markdown(f"- [State briefings]({SITE}/states)")
     st.markdown(
         f"- [Company profiles]({SITE}/companies)\n"
         f"- [Moratorium tracker]({SITE}/moratoriums)\n"
