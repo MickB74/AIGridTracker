@@ -33,7 +33,12 @@
     .footer a { color: #5cb85f; }
     .sample-banner { background: #1c2a18; border-color: #5cb85f; color: #5cb85f; }
     .masthead { border-color: #5cb85f; }
+    .logo-wordmark { fill: #EAF0F7; }
     .section-header { border-color: #2e2e2a; }
+    .cta-block { background: #1c2a18; border-color: #2e3e2a; }
+    .cta-block p { color: #a8a8a2; }
+    .cta-block strong { color: #e8e6e1; }
+    .cta-btn { background: #5cb85f; color: #161614; }
   }
 
   .newsletter {
@@ -46,6 +51,12 @@
     padding: 24px 0 20px;
     border-bottom: 3px solid #2d6a30;
     margin-bottom: 24px;
+  }
+  .masthead-logo {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: 0 auto 12px;
   }
   .masthead-label {
     font-family: 'SF Mono', 'Cascadia Code', Consolas, monospace;
@@ -198,15 +209,44 @@
   .rate-table tr:last-child td { border-bottom: none; }
   .rate-up { font-weight: 600; color: #c0392b; }
   .rate-pending { color: #b8860b; }
+  .cta-block {
+    text-align: center;
+    margin: 28px 0 0;
+    padding: 20px 16px;
+    background: #e8f0e8;
+    border: 1px solid #d0e0d0;
+    border-radius: 6px;
+  }
+  .cta-block p {
+    font-size: 14px;
+    color: #5a5a56;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  .cta-block strong { color: #1a1a1a; }
+  .cta-btn {
+    display: inline-block;
+    background: #2d6a30;
+    color: #ffffff;
+    font-family: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 28px;
+    border-radius: 5px;
+  }
   .footer {
     border-top: 1px solid #e2e0db;
-    margin-top: 30px;
+    margin-top: 20px;
     padding-top: 16px;
     text-align: center;
     font-size: 11px;
     color: #8a8a84;
     line-height: 1.6;
   }
+  .logo-wordmark { fill: #1a1a1a; }
   .footer a { color: #2d6a30; text-decoration: none; }
   @media (max-width: 500px) {
     .stat-row { grid-template-columns: 1fr; gap: 6px; }
@@ -221,6 +261,68 @@
   </div>
 
   <div class="masthead">
+    <svg class="masthead-logo" viewBox="0 0 540 120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#2DD4BF"/>
+          <stop offset="100%" stop-color="#14B8A6"/>
+        </linearGradient>
+        <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#F98866"/>
+          <stop offset="50%" stop-color="#FBBF24"/>
+          <stop offset="100%" stop-color="#F98866"/>
+        </linearGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="pulseGlow">
+          <feGaussianBlur stdDeviation="2.5" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <g transform="translate(55, 52)">
+        <polygon points="0,-45 39,-22.5 39,22.5 0,45 -39,22.5 -39,-22.5"
+                 fill="none" stroke="url(#tealGrad)" stroke-width="2.2" opacity="0.9"/>
+        <polygon points="0,-28 24.2,-14 24.2,14 0,28 -24.2,14 -24.2,-14"
+                 fill="none" stroke="url(#tealGrad)" stroke-width="1.3" opacity="0.5"/>
+        <line x1="-39" y1="0" x2="39" y2="0" stroke="#2DD4BF" stroke-width="0.8" opacity="0.3"/>
+        <line x1="-19.5" y1="-33.5" x2="19.5" y2="33.5" stroke="#2DD4BF" stroke-width="0.8" opacity="0.3"/>
+        <line x1="19.5" y1="-33.5" x2="-19.5" y2="33.5" stroke="#2DD4BF" stroke-width="0.8" opacity="0.3"/>
+        <circle cx="0" cy="-45" r="2.5" fill="#2DD4BF" opacity="0.7"/>
+        <circle cx="39" cy="-22.5" r="2.5" fill="#2DD4BF" opacity="0.7"/>
+        <circle cx="39" cy="22.5" r="2.5" fill="#2DD4BF" opacity="0.7"/>
+        <circle cx="0" cy="45" r="2.5" fill="#2DD4BF" opacity="0.7"/>
+        <circle cx="-39" cy="22.5" r="2.5" fill="#2DD4BF" opacity="0.7"/>
+        <circle cx="-39" cy="-22.5" r="2.5" fill="#2DD4BF" opacity="0.7"/>
+        <polyline points="-6,-23 3,-5 -5,-5 6,23"
+                  fill="none" stroke="url(#pulseGrad)" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  filter="url(#pulseGlow)"/>
+        <circle cx="0" cy="0" r="3.2" fill="#FBBF24" filter="url(#glow)" opacity="0.9"/>
+        <path d="M 0,-37 A 37,37 0 0,1 32,-18.5"
+              fill="none" stroke="#2DD4BF" stroke-width="1.8" opacity="0.6"
+              stroke-linecap="round"/>
+        <path d="M 32,18.5 A 37,37 0 0,1 0,37"
+              fill="none" stroke="#2DD4BF" stroke-width="1.8" opacity="0.4"
+              stroke-linecap="round"/>
+      </g>
+      <g transform="translate(115, 52)">
+        <rect x="0" y="-14" width="42" height="26" rx="5"
+              fill="url(#tealGrad)" opacity="0.15"/>
+        <rect x="0" y="-14" width="42" height="26" rx="5"
+              fill="none" stroke="#2DD4BF" stroke-width="1.1" opacity="0.5"/>
+        <text x="21" y="4" font-family="'IBM Plex Mono', ui-monospace, monospace"
+              font-size="15" font-weight="600" text-anchor="middle"
+              fill="#2DD4BF">AI</text>
+        <text x="54" y="7" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif"
+              font-size="40" font-weight="700" letter-spacing="-0.03em"
+              class="logo-wordmark">Grid<tspan fill="url(#tealGrad)">Watch</tspan></text>
+        <text x="56" y="30" font-family="'Space Grotesk', system-ui, sans-serif"
+              font-size="11" font-weight="400" letter-spacing="0.12em"
+              fill="#6B7789">COMMUNITY ENERGY INTELLIGENCE</text>
+      </g>
+    </svg>
     <div class="masthead-label accent">The GridWatch Dispatch</div>
     <h1>Week of July 21, 2026</h1>
     <div class="masthead-meta">Issue #14 &middot; 5 min read</div>
@@ -306,6 +408,11 @@
     <span class="story-tag tag-alert">Research</span>
     <h3>Kleinman Center: data center load growth is repricing capacity markets nationwide</h3>
     <p class="text-secondary">New UPenn analysis links PJM&rsquo;s capacity auction spike &mdash; from $2.2B to $14.7B &mdash; directly to data center demand outpacing new generation.</p>
+  </div>
+
+  <div class="cta-block">
+    <p><strong>Deal scorecards, CBA templates, impact calculators, and tools for every stage of the fight</strong> &mdash; all free, all open.</p>
+    <a href="https://aigridwatch.com" class="cta-btn">Explore aigridwatch.com &rarr;</a>
   </div>
 
   <div class="footer">
