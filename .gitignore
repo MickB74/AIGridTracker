@@ -25,3 +25,6 @@ data/analytics/
 
 # Facilities-research generated output (regenerate with src/research/dc_finder.py)
 research_output/
+
+# npm package pulled only to extract SVG state outlines into src/us_map_data.py
+node_modules/
