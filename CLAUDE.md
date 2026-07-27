@@ -39,22 +39,40 @@ Always run both checks. The smoke test catches runtime import errors and widget 
 
 ### Tab layout (app.py)
 
+**The app is the workshop; `web/` is the encyclopedia.** The static site owns
+reference and lookup content (state briefings, company profiles, blog, health
+risks, moratorium tracker) because it is shareable, indexable, and has no cold
+start. The Streamlit app owns what a static page can't do: stateful wizards,
+document generators, live fetches, and interactive models. **Don't add
+reference/explainer content to the app — add it to `build_site.py`.** The
+sidebar links out to the site's key pages.
+
+Seven top-level tabs — the first five are all "do something", in rough order
+of how urgent the user's situation is:
+
 | Tab | Module(s) | Purpose |
 |-----|-----------|---------|
 | Start here | `start_here_tab` | Guided 5-step wizard for someone facing a new proposal: situation/stage/hearing date → LLC unmasking lookup → impact estimate + `CBA_BENCHMARKS` → stage playbook (`PROJECT_STAGES`, dated countdown when a hearing date is set) → action kit (PDF pack with comment scripts/letters/`OUTREACH_TIPS`, EN/ES flyer + petition sheet, social posts, downloadable campaign site) |
 | Negotiation toolkit | `toolkit_tab` | CBA templates, data dividend calculator, model clauses, meeting checklist, meeting prep generator (downloadable brief) |
-| Community & backlash | `news_tab` | Moratorium tracker + map, live news/Reddit, town case studies, 4-company environmental scorecard, spend estimator, report-freshness checker |
-| Your utility bill | `bills_tab` | Bill anatomy, rate impact, wholesale-to-retail flow, curtailment research library |
-| States & officials | `studies_tab` + `officials_tab` | State market profiles, local (town/county) officials, Congress/governor directory, PUC directory |
-| Data centers | `dc_tab` | Interactive map, market power, ERCOT queue, campuses, operators, executives, competitors, FERC response, 50-state stats, mega-projects |
-| Corporate profiles | `corporate_tab` | Google/Meta/Microsoft/AWS environmental deep-dives, sustainability directors |
-| Macro outlook | `macro_tab` | IEA forecasts, geographic shift analysis |
-| Learn & simulate | `learn_tab` + `impact_tab` + `health_tab` + `sandbox_tab` | Data center explainer + local impact calculator + health risks module (`HEALTH_RISKS`, sourced six-panel cards + infographic PDF via `build_health_pdf`) + interactive siting simulator |
-| Technical deep-dive | `calc_tab`, `live_tab`, `compare_tab`, `grid_tab` (nested sub-tabs) | Token calculator, live benchmarks, source comparison, grid timing |
-| Blog & methodology | `blog_tab` + `method_tab` | Blog posts + source coefficients |
+| Estimate & simulate | `impact_tab` + `sandbox_tab` | Local impact calculator + interactive siting simulator |
+| Token calculator | `calc_tab`, `live_tab`, `compare_tab`, `grid_tab`, `method_tab` (nested sub-tabs) | Per-token footprint model, live benchmarks, source comparison, grid timing, and the source coefficients behind them |
+| Live intel | `news_feed_tab` + `news_tab` + `monitors_tab` | Top stories, community backlash / case studies, market monitors + report-freshness checker |
+| Reference | `bills_tab`, `learn_tab`, `dc_tab`, `corporate_tab`, `studies_tab` + `officials_tab`, `macro_tab` (nested sub-tabs) | Background reading and directories **staged for migration to the static site** — see below |
 | Consulting | `consulting_tab` | Consulting pitch + intake form |
 
-Stacked tabs (States, Learn, Blog) have a "This tab contains…" caption at the top and a divider between modules. Long tabs (Data centers, Toolkit, Learn, Bills, News, Corporate) have an "On this page" expander for navigation.
+The Reference tab is a holding pen, not a permanent home. Its sub-tabs cover
+content the site doesn't publish yet (bill anatomy, the data-center explainer
+and glossary, ERCOT queue / megaprojects / executives, hyperscaler financials,
+state market profiles, the Congress + PUC directories, IEA macro forecasts).
+As each is ported to `build_site.py`, drop the sub-tab and link out instead.
+
+`blog_tab` and `health_tab` were removed — `web/blog/` and
+`web/health-risks.html` render the same `BLOG_STORIES` / `HEALTH_RISKS` data.
+`build_health_pdf` is still used by the site generator.
+
+Stacked tabs (Estimate & simulate, Live intel) have a "This tab contains…"
+caption at the top and a divider between modules. Long modules have an "On
+this page" expander for navigation.
 
 ### Data layer
 

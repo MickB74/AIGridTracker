@@ -38,7 +38,6 @@ from src.ui.officials_tab import render_officials_tab
 from src.ui.macro_tab import render_macro_tab
 from src.ui.method_tab import render_method_tab
 from src.ui.monitors_tab import render_monitors_tab
-from src.ui.blog_tab import render_blog_tab
 from src.ui.learn_tab import render_learn_tab
 from src.ui.corporate_tab import render_corporate_tab
 from src.ui.studies_tab import render_studies_tab
@@ -47,9 +46,13 @@ from src.ui.bills_tab import render_bills_tab
 from src.ui.toolkit_tab import render_toolkit_tab
 from src.ui.consulting_tab import render_consulting_tab
 from src.ui.impact_tab import render_impact_tab
-from src.ui.health_tab import render_health_tab
 from src.ui.start_here_tab import render_start_here_tab
 from src.ui.newsletter import render_newsletter_signup
+
+# Static front door. Reference content (state briefings, company profiles,
+# blog, health risks, moratorium tracker) is published there, not here.
+SITE = "https://aigridwatch.com"
+SITE_LABEL = "aigridwatch.com"
 from src.services.tracking import load_events, load_subscribers
 
 # Load custom CSS styles
@@ -170,6 +173,21 @@ with st.sidebar:
                 st.dataframe(_rdf, use_container_width=True, hide_index=True, height=150)
         else:
             st.caption(f"No results for '{_search_q}'.")
+
+    st.markdown("---")
+    st.markdown("#### 🌐 On aigridwatch.com")
+    st.caption("Shareable pages you can send to neighbours or a reporter.")
+    _state_slug = (st.session_state.get("my_state", "") or "").lower().replace(" ", "-")
+    st.markdown(
+        f"- [Your state briefing]({SITE}/states/{_state_slug}.html)\n"
+        if _state_slug else f"- [State briefings]({SITE}/states)\n"
+    )
+    st.markdown(
+        f"- [Company profiles]({SITE}/companies)\n"
+        f"- [Moratorium tracker]({SITE}/moratoriums)\n"
+        f"- [Health risks]({SITE}/health-risks)\n"
+        f"- [Blog]({SITE}/blog)"
+    )
 
     st.markdown("---")
     render_newsletter_signup("sidebar", compact=True)
@@ -611,17 +629,14 @@ st.info(
     "🚨 **New here because of a local proposal?** Open **Start here** — the "
     "first tab below — for a five-step guided plan and a downloadable action pack."
 )
-(tab_start, tab_news, tab_newsfeed, tab_bills,
- tab_states, tab_dc,
- tab_toolkit, tab_learn,
- tab_corporate, tab_macro,
- tab_technical, tab_blog, tab_consulting) = st.tabs([
+(tab_start, tab_toolkit, tab_simulate, tab_technical,
+ tab_intel, tab_reference, tab_consulting) = st.tabs([
     "🚨 Start here",
-    "🗞️ Community & backlash", "📰 News", "💡 Your utility bill",
-    "🗂️ States & officials", "🏢 Data centers",
-    "🛡️ Negotiation toolkit", "🎓 Learn & simulate",
-    "💼 Corporate profiles", "🌍 Macro outlook",
-    "🔬 Technical deep-dive", "📝 Blog & methodology",
+    "🛡️ Negotiation toolkit",
+    "🎮 Estimate & simulate",
+    "🔬 Token calculator",
+    "📡 Live intel",
+    "📚 Reference",
     "🤝 Consulting",
 ])
 
@@ -629,62 +644,28 @@ st.info(
 with tab_start:
     render_start_here_tab()
 
-# ── Community & advocacy (lead tabs) ─────────────────────────────────── #
+# ── Negotiation toolkit (generators: CBA, dividend, meeting prep) ─────── #
 with tab_toolkit:
     render_toolkit_tab()
 
-with tab_news:
-    render_news_tab()
-
-with tab_newsfeed:
-    render_news_feed_tab()
-
-with tab_bills:
-    render_bills_tab()
-
-with tab_states:
-    st.caption("This tab contains: **State studies & market profiles** "
-               "· **Congress & governor directory** · **State PUC directory** "
-               "— scroll down for each section.")
-    render_studies_tab()
-    st.divider()
-    render_officials_tab()
-
-# ── Industry landscape ────────────────────────────────────────────────── #
-with tab_dc:
-    render_dc_tab()
-
-with tab_corporate:
-    render_corporate_tab()
-
-with tab_macro:
-    render_macro_tab()
-
-# ── Learn ─────────────────────────────────────────────────────────────── #
-with tab_learn:
-    st.caption("This tab contains: **Data center explainer** "
-               "· **Local impact calculator** "
-               "· **Health risks** (sourced, printable) "
-               "· **AI Datacenter Siting Sandbox** (interactive simulation) "
-               "— scroll down for each section.")
-    render_learn_tab()
-    st.divider()
+# ── Estimate & simulate (interactive models) ──────────────────────────── #
+with tab_simulate:
+    st.caption("This tab contains: **Local impact calculator** "
+               "· **AI Datacenter Siting Sandbox** — scroll down for each.")
     render_impact_tab()
-    st.divider()
-    render_health_tab()
     st.divider()
     render_sandbox_tab()
 
-# ── Technical deep-dive (calculator, grid timing, model data) ─────────── #
+# ── Token calculator (the LLM footprint model + its coefficients) ─────── #
 with tab_technical:
-    st.subheader("🔬 Technical deep-dive")
+    st.subheader("🔬 Token calculator")
     st.caption(
         "Per-token energy modeling, live model benchmarks, source comparisons, "
         "and grid carbon timing tools. The data behind the advocacy."
     )
-    (sub_calc, sub_live, sub_compare, sub_grid) = st.tabs([
+    (sub_calc, sub_live, sub_compare, sub_grid, sub_method) = st.tabs([
         "🧮 Footprint calculator", "🔬 Live models",
-        "📊 Compare sources", "🕐 Grid timing",
+        "📊 Compare sources", "🕐 Grid timing", "📐 Methodology",
     ])
     with sub_calc:
         render_calc_tab()
@@ -694,18 +675,45 @@ with tab_technical:
         render_compare_tab()
     with sub_grid:
         render_grid_tab()
+    with sub_method:
+        render_method_tab()
 
-# ── Reference ─────────────────────────────────────────────────────────── #
-with tab_blog:
-    st.caption("This tab contains: **Blog posts & analysis** "
-               "· **Market monitors & advocacy** "
-               "· **Methodology & source coefficients** "
-               "— scroll down for each section.")
-    render_blog_tab()
+# ── Live intel (things that change: news, filings, report editions) ───── #
+with tab_intel:
+    st.caption("This tab contains: **Top stories** · **Community & backlash** "
+               "· **Market monitors** — scroll down for each section.")
+    render_news_feed_tab()
+    st.divider()
+    render_news_tab()
     st.divider()
     render_monitors_tab()
-    st.divider()
-    render_method_tab()
+
+# ── Reference (background reading; migrating to aigridwatch.com) ──────── #
+with tab_reference:
+    st.caption(
+        "Background reading and directories. State briefings, company "
+        f"profiles, blog posts, and health risks now live on [{SITE_LABEL}]"
+        f"({SITE}) — this tab holds what hasn't moved yet."
+    )
+    (ref_bills, ref_learn, ref_dc, ref_corp,
+     ref_states, ref_macro) = st.tabs([
+        "💡 Your bill", "🎓 Learn", "🏢 Data centers",
+        "💼 Companies", "🗂️ States & officials", "🌍 Macro outlook",
+    ])
+    with ref_bills:
+        render_bills_tab()
+    with ref_learn:
+        render_learn_tab()
+    with ref_dc:
+        render_dc_tab()
+    with ref_corp:
+        render_corporate_tab()
+    with ref_states:
+        render_studies_tab()
+        st.divider()
+        render_officials_tab()
+    with ref_macro:
+        render_macro_tab()
 
 # ── Consulting ───────────────────────────────────────────────────────── #
 with tab_consulting:
