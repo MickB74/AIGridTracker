@@ -2082,4 +2082,216 @@ Three things maximize that leverage:
 > record with the people who actually vote on the rezoning.
 """,
     },
+    # ── Resource-extraction precedent: property-value guarantees & data dividends ──
+    {
+        "id": "resource-extraction-precedent-2026",
+        "section": "stories",
+        "title": "They Figured This Out Fifty Years Ago: What Oil, Wind, and Pipeline Towns Already Know About Protecting Neighbors",
+        "date": _dt.date(2026, 7, 26),
+        "author": "GridWatch AI",
+        "tags": ["property values", "buyouts", "Alaska model", "data dividends",
+                 "community benefits", "precedent", "wind", "pipeline", "oil",
+                 "negotiation", "toolkit"],
+        "summary": (
+            "Property-value guarantees, voluntary buyouts, and community dividend "
+            "funds aren't new ideas — they're battle-tested tools from decades of "
+            "oil, wind, and pipeline fights. Data center communities are just the "
+            "latest to need them, and the first to have the leverage to demand "
+            "them all at once."
+        ),
+        "body": """\
+Every few years a new extractive industry discovers rural America and acts
+like no one has ever negotiated with a community before. Right now it's data
+centers. A decade ago it was wind farms. Before that, pipelines. Before that,
+oil and gas. The technology changes; the playbook doesn't — and the communities
+that know the playbook get fundamentally different deals than the ones that don't.
+
+This post is about three tools that resource-extraction communities perfected
+long before anyone heard the phrase "hyperscaler" — and why data center towns
+should be demanding all three right now.
+
+---
+
+### Tool 1: Property-value guarantees
+
+**The precedent:** In the early 2010s, wind energy developers in the Midwest
+ran into a problem. Residents near proposed turbine sites objected that the
+projects would crater their property values. The developers responded that
+studies showed "no measurable effect." Both sides had a point — regional
+studies did find minimal average impact, but the family 800 feet from a
+300-foot turbine had a different experience than the family two miles away.
+
+The resolution was a mechanism called a **property-value assurance program
+(PVAP)**: the developer gets an independent appraisal of nearby homes
+*before* construction, then commits in writing that if the homeowner sells
+within a set period (typically 5–10 years) and the sale price is below the
+pre-project appraisal, **the developer pays the difference.**
+
+PVAPs showed up in wind siting agreements across Illinois, Wisconsin, and
+Ontario. Pipeline companies offered similar "diminution of value" payments
+during contentious FERC certificate proceedings. The legal structure exists.
+The accounting is straightforward. The mechanism works.
+
+**Why data centers should be next:** The argument is identical. Developers
+cite regional studies. Neighbors 300 feet from the fence line experience
+noise, light pollution, traffic, and visual blight that don't register in a
+county-wide average. A property-value guarantee doesn't argue about whether
+the impact is real — it simply says: if you're right that it won't hurt
+values, this costs you nothing; if the neighbors are right, you make them
+whole.
+
+**The honest caveat:** PVAPs are well-established in wind and pipeline siting
+but still uncommon in data center deals specifically. That means the community
+that demands one *first* sets the benchmark — and it's a reasonable ask
+precisely because the mechanism is proven in analogous contexts.
+
+---
+
+### Tool 2: Voluntary buyouts
+
+When mitigation and guarantees aren't enough — when the home is simply too
+close to live comfortably — the next step is a **voluntary buyout**: the
+developer purchases the property at a fair or above-market price so the
+family can relocate.
+
+This isn't hypothetical.
+
+**Mason County, West Virginia** created a formal "Good Neighbors" buyout
+program for homes closest to a data center site. The program offers the
+highest of three independent appraisals plus a relocation premium — meaning
+the homeowner gets *above* fair market value by design. The structure borrows
+directly from flood-buyout programs that FEMA has administered for decades,
+adapted for industrial siting.
+
+**Ashburn, Virginia** — the epicenter of U.S. data center development — has
+seen developers offer homeowners adjacent to expanding campuses approximately
+**\\$4 million per home** to assemble buffer land around their facilities. These
+aren't charitable gestures; they're land-assembly economics. A \\$4M buyout is
+a rounding error on a \\$2B campus, and clearing the adjacent parcels eliminates
+the noise complaints, the zoning opposition, and the litigation risk in one
+transaction.
+
+**The key principles** for a fair buyout program:
+
+- **Voluntary.** The owner decides whether to sell. A program that pressures
+  holdouts is a forced taking in disguise.
+- **Above-market pricing.** The highest of multiple independent appraisals,
+  plus a premium for involuntary disruption.
+- **Relocation assistance.** Moving costs, temporary housing, and a
+  reasonable timeline (6–12 months minimum).
+- **Leverage note:** If the project requires a rezoning that needs unanimous
+  or near-unanimous consent, holdouts have real negotiating power. Use it
+  to negotiate, not just to block.
+
+---
+
+### Tool 3: The Alaska Model — community dividend funds
+
+This is the big idea, and it comes from the biggest resource-extraction deal
+in American history.
+
+In 1976, as North Slope oil revenues flooded into Alaska, Governor Jay Hammond
+faced a choice: let the legislature spend the windfall year by year, or create
+a structure that would pay Alaskans directly — and permanently. He chose the
+**Alaska Permanent Fund**: a constitutionally protected trust that invests oil
+royalties and distributes annual dividends to every resident of the state.
+Since 1982, the fund has paid out over **\\$30,000 per person** in cumulative
+dividends. The principal now exceeds **\\$80 billion**.
+
+The logic is simple: *if they're extracting your resources, you deserve a
+share of the value — not just jobs and a press release, but actual money.*
+
+**Why this applies to data centers:**
+
+A data center consumes the same kinds of community resources that oil
+extraction does — just in a different form:
+
+| Oil & gas | Data center equivalent |
+|-----------|----------------------|
+| Mineral rights | Land (often farmland at 10–40x agricultural value) |
+| Water for fracking | Water for cooling (millions of gallons/day) |
+| Pipeline capacity | Grid capacity (substations, transmission lines) |
+| Road damage from trucks | Grid strain on ratepayers' bills |
+| Royalty payments | Nothing — unless you negotiate |
+
+The last row is the one that matters. Oil-producing states levy severance
+taxes and require royalty payments because the resource is finite and the
+community bears the costs of extraction. Data center communities bear
+equivalent costs — water drawdown, grid strain, noise, property-value
+risk — but most get nothing beyond the developer's property tax bill
+(which is often abated anyway).
+
+**The data dividend model:**
+
+1. **Levy the fee.** A small surcharge (1–3%) on the facility's annual
+   electricity consumption — not a tax on the company, but a fee for the
+   community infrastructure their load demands. Virginia's H.B. 30 (2026)
+   already established a \\$0.011/kWh consumption tax on data centers with
+   a \\$600M annual revenue cap.
+2. **Create the fund.** Revenues flow into a ring-fenced Community Data
+   Dividend Trust — a separate account that cannot be raided for general
+   spending, governed by an independent board with resident representation.
+3. **Distribute the dividend.** The fund pays out annually as direct
+   payments to households, free or reduced childcare, technical education
+   scholarships, or residential utility bill credits. The community votes
+   on the allocation.
+
+A 200 MW facility paying a 2% infrastructure fee would generate roughly
+**\\$2M per year** — or **\\$80 per household per year** in a community of
+25,000 homes. Over 20 years, that's a \\$40M trust fund from a single facility.
+
+The Alaska Permanent Fund works because it was constitutionally protected
+from legislative raids and because the revenue source (oil) was large
+enough to matter. Data centers meet both conditions: the revenue is real,
+and a ring-fenced trust can be structured to survive changes in local
+government.
+
+---
+
+### Why all three at once
+
+These aren't alternatives — they're layers. A community facing a data center
+proposal should demand:
+
+1. **Property-value guarantees** for the closest neighbors — because the
+   developer claims there's no impact, so the guarantee should cost them
+   nothing.
+2. **A voluntary buyout program** for homes within the immediate impact
+   zone — because some proximity effects can't be mitigated by a sound
+   wall.
+3. **A community dividend fund** for everyone — because the facility
+   extracts community resources for 20+ years and the community deserves
+   an ongoing share of that value.
+
+None of these are radical. Property-value guarantees are standard in wind
+siting. Buyout programs exist in flood zones, pipeline corridors, and now
+in Mason County, WV. Community dividend funds are the operating model of a
+state that has paid residents from resource extraction since 1982.
+
+What's radical is accepting a data center without any of them.
+
+---
+
+### The leverage moment
+
+Data center developers need three things from your community that they
+cannot get anywhere else: **your land, your water, and your grid.** Those
+are the same categories of resource that oil companies need from Alaska,
+that pipeline companies need from Appalachia, and that wind developers need
+from the Great Plains.
+
+In every one of those industries, the communities that organized early and
+demanded structured protections — royalties, value guarantees, buyout
+programs, trust funds — got fundamentally different outcomes than the ones
+that took the first offer. The playbook exists. The legal structures exist.
+The precedent exists.
+
+The only question is whether your community knows to ask.
+
+> Use the **Negotiation Toolkit** tab to model the Data Dividend for your
+> community, explore model CBA clauses, and see the "Protecting the closest
+> neighbors" section for the full five-remedy ladder — from developer-paid
+> mitigation through litigation as a backstop.
+""",
+    },
 ]
