@@ -9,6 +9,7 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
+from src.constants import SITING_REGION_PROFILES
 from src.impact_model import (
     LOAD_FACTOR_AI_CLUSTER, cooling_profile, facility_annual_kwh)
 
@@ -16,8 +17,11 @@ from src.impact_model import (
 def render_sandbox_tab():
     st.subheader("🎮 AI Datacenter Siting Sandbox")
     st.caption(
-        "You are the Director of Infrastructure Planning. Design a new high-density AI compute campus "
-        "and simulate its construction cost, power draw, carbon footprint, and local regulatory feasibility."
+        "**You play the developer.** You are the Director of Infrastructure Planning: design a new "
+        "high-density AI compute campus and simulate its construction cost, power draw, carbon footprint, "
+        "and local regulatory feasibility — to see how siting decisions actually get made. "
+        "(To score *your own town* from the community's side, use the Community Siting Evaluator "
+        "in **📚 Reference → 🎓 Learn**.)"
     )
 
     # Layout: Sidebar inputs on left, outcomes on right
@@ -38,58 +42,7 @@ def render_sandbox_tab():
         
         region = st.selectbox(
             "Siting Region / Grid Zone",
-            options=[
-                "Northern Virginia (PJM)",
-                "West Texas (ERCOT)",
-                "Central Iowa (MISO)",
-                "Pacific Northwest (BPA / PacifiCorp)",
-                "Central Ohio (PJM)",
-                "Georgia / Atlanta Metro (SERC)",
-                "Phoenix, Arizona (SPP West)",
-                "South Carolina Midlands (Duke / SERC)",
-                "North Carolina Piedmont (Duke / PJM)",
-                "Chicago / NE Illinois (PJM / ComEd)",
-                "Dallas–Fort Worth (ERCOT)",
-                "Salt Lake City, Utah (PacifiCorp)",
-                "New York Metro (NYISO)",
-                "Mississippi Delta (MISO South)",
-                "Southeast Michigan (MISO / DTE)",
-                "El Paso, Texas (ERCOT West)",
-                "San Antonio, Texas (ERCOT / CPS Energy)",
-                "Kansas City (SPP)",
-                "Indiana (MISO / AES Indiana)",
-                "Nashville, Tennessee (TVA)",
-                "Memphis, Tennessee (TVA / MLGW)",
-                "Reno / Sparks, Nevada (NV Energy)",
-                "Las Vegas, Nevada (NV Energy)",
-                "Cheyenne, Wyoming (WAPA / PacifiCorp)",
-                "Quincy, Washington (Grant County PUD)",
-                "The Dalles, Oregon (BPA / PGE)",
-                "Loudoun County, Virginia (Dominion / PJM)",
-                "Prince William County, Virginia (PJM)",
-                "Rural Maine (ISO-NE / Versant)",
-                "Central Pennsylvania (PJM / PPL)",
-                "Upstate New York (NYISO North)",
-                "New Albany, Ohio (AEP / PJM)",
-                "Papillion / Sarpy County, Nebraska (OPPD)",
-                "Albuquerque, New Mexico (PNM / SPP)",
-                "Sacramento, California (CAISO / SMUD)",
-                "San Jose, California (CAISO / PG&E)",
-                "Henrico County, Virginia (Dominion / PJM)",
-                "Abilene, Texas (ERCOT / AEP)",
-                "Stillwater, Oklahoma (SPP / OG&E)",
-                "Montgomery County, Missouri (MISO / Ameren)",
-                "Farmington, Minnesota (MISO / Xcel)",
-                "Jackson, Mississippi (Entergy / MISO South)",
-                "Starke County, Indiana (MISO / NIPSCO)",
-                "ACE Basin, South Carolina (Duke / Santee Cooper)",
-                "Stokes County, North Carolina (Duke)",
-                "Pittsylvania County, Virginia (AEP / PJM)",
-                "Morgan County, Georgia (Georgia Power / SERC)",
-                "El Paso County, Texas (ERCOT West / El Paso Electric)",
-                "Mount Pleasant, Wisconsin (MISO / WE Energies)",
-                "Lousiana Gulf Coast (MISO South / Entergy)",
-            ],
+            options=list(SITING_REGION_PROFILES),
             help="Determines baseline grid carbon intensity, regional temperatures, and interconnection queue lengths."
         )
         
@@ -130,60 +83,7 @@ def render_sandbox_tab():
         cooling_cost_adj = 1.5 # million $ per MW
 
 
-    # Regional profiles: (PUE adjustment, queue wait months, grid gCO2/kWh)
-    REGION_PROFILES = {
-        "Northern Virginia (PJM)":              (0.02, 60, 380),
-        "West Texas (ERCOT)":                   (0.05, 24, 340),
-        "Central Iowa (MISO)":                  (0.01, 48, 410),
-        "Pacific Northwest (BPA / PacifiCorp)": (0.00, 54, 180),
-        "Central Ohio (PJM)":                   (0.02, 54, 420),
-        "Georgia / Atlanta Metro (SERC)":       (0.04, 36, 370),
-        "Phoenix, Arizona (SPP West)":          (0.08, 30, 390),
-        "South Carolina Midlands (Duke / SERC)":(0.04, 36, 340),
-        "North Carolina Piedmont (Duke / PJM)": (0.03, 42, 350),
-        "Chicago / NE Illinois (PJM / ComEd)":  (0.01, 48, 310),
-        "Dallas–Fort Worth (ERCOT)":            (0.05, 24, 360),
-        "Salt Lake City, Utah (PacifiCorp)":    (0.02, 42, 440),
-        "New York Metro (NYISO)":               (0.01, 60, 250),
-        "Mississippi Delta (MISO South)":       (0.06, 30, 400),
-        "Southeast Michigan (MISO / DTE)":      (0.02, 42, 390),
-        "El Paso, Texas (ERCOT West)":          (0.07, 24, 350),
-        "San Antonio, Texas (ERCOT / CPS Energy)":(0.06, 24, 340),
-        "Kansas City (SPP)":                    (0.03, 36, 420),
-        "Indiana (MISO / AES Indiana)":         (0.02, 42, 430),
-        "Nashville, Tennessee (TVA)":           (0.04, 30, 350),
-        "Memphis, Tennessee (TVA / MLGW)":      (0.05, 30, 370),
-        "Reno / Sparks, Nevada (NV Energy)":    (0.04, 36, 330),
-        "Las Vegas, Nevada (NV Energy)":        (0.08, 36, 380),
-        "Cheyenne, Wyoming (WAPA / PacifiCorp)":(0.00, 36, 460),
-        "Quincy, Washington (Grant County PUD)":(0.00, 42, 80),
-        "The Dalles, Oregon (BPA / PGE)":       (0.00, 48, 120),
-        "Loudoun County, Virginia (Dominion / PJM)": (0.02, 60, 380),
-        "Prince William County, Virginia (PJM)":(0.02, 60, 380),
-        "Rural Maine (ISO-NE / Versant)":       (0.00, 48, 200),
-        "Central Pennsylvania (PJM / PPL)":     (0.01, 54, 350),
-        "Upstate New York (NYISO North)":       (0.00, 54, 180),
-        "New Albany, Ohio (AEP / PJM)":         (0.02, 54, 420),
-        "Papillion / Sarpy County, Nebraska (OPPD)": (0.02, 36, 440),
-        "Albuquerque, New Mexico (PNM / SPP)":  (0.06, 36, 370),
-        "Sacramento, California (CAISO / SMUD)":(0.04, 60, 220),
-        "San Jose, California (CAISO / PG&E)":  (0.02, 60, 220),
-        "Henrico County, Virginia (Dominion / PJM)": (0.03, 60, 380),
-        "Abilene, Texas (ERCOT / AEP)":         (0.06, 24, 360),
-        "Stillwater, Oklahoma (SPP / OG&E)":    (0.05, 30, 410),
-        "Montgomery County, Missouri (MISO / Ameren)": (0.03, 36, 430),
-        "Farmington, Minnesota (MISO / Xcel)":  (0.01, 42, 340),
-        "Jackson, Mississippi (Entergy / MISO South)": (0.06, 30, 400),
-        "Starke County, Indiana (MISO / NIPSCO)":(0.02, 42, 440),
-        "ACE Basin, South Carolina (Duke / Santee Cooper)": (0.04, 36, 320),
-        "Stokes County, North Carolina (Duke)": (0.03, 42, 350),
-        "Pittsylvania County, Virginia (AEP / PJM)": (0.03, 54, 370),
-        "Morgan County, Georgia (Georgia Power / SERC)": (0.04, 36, 370),
-        "El Paso County, Texas (ERCOT West / El Paso Electric)": (0.07, 24, 350),
-        "Mount Pleasant, Wisconsin (MISO / WE Energies)": (0.01, 42, 380),
-        "Lousiana Gulf Coast (MISO South / Entergy)": (0.06, 30, 380),
-    }
-    pue_adj, queue_wait, grid_intensity = REGION_PROFILES.get(
+    pue_adj, queue_wait, grid_intensity = SITING_REGION_PROFILES.get(
         region, (0.03, 36, 350))
     pue += pue_adj
 

@@ -9,40 +9,30 @@ import pandas as pd
 import altair as alt
 import requests
 
+from src.constants import GRID_REGION_ROLLUP
+
 
 # ── Community Siting Evaluator — lookup tables ───────────────────────────── #
 
+# Spare grid capacity and fiber density by ISO (0–10). Queue wait and grid
+# carbon for the same regions come from GRID_REGION_ROLLUP, which averages the
+# campus locations in src.constants.SITING_REGIONS.
+_REGION_INFRA = {
+    "PJM (Mid-Atlantic / Ohio Valley)": {"power": 8, "fiber": 9},
+    "ERCOT (Texas)":                    {"power": 9, "fiber": 7},
+    "MISO (Midwest)":                   {"power": 7, "fiber": 5},
+    "SPP (Great Plains)":               {"power": 6, "fiber": 4},
+    "CAISO (California)":               {"power": 5, "fiber": 8},
+    "BPA / PacifiCorp (Northwest)":     {"power": 7, "fiber": 5},
+    "ISO-NE (New England)":             {"power": 4, "fiber": 7},
+    "NYISO (New York)":                 {"power": 5, "fiber": 8},
+    "SERC (Southeast)":                 {"power": 7, "fiber": 6},
+    "Not sure / Other":                 {"power": 6, "fiber": 5},
+}
+
 _GRID_REGIONS = {
-    "PJM (Mid-Atlantic / Ohio Valley)": {
-        "power": 8, "fiber": 9, "queue_months": 60, "grid_intensity": 380,
-    },
-    "ERCOT (Texas)": {
-        "power": 9, "fiber": 7, "queue_months": 24, "grid_intensity": 340,
-    },
-    "MISO (Midwest)": {
-        "power": 7, "fiber": 5, "queue_months": 48, "grid_intensity": 410,
-    },
-    "SPP (Great Plains)": {
-        "power": 6, "fiber": 4, "queue_months": 42, "grid_intensity": 370,
-    },
-    "CAISO (California)": {
-        "power": 5, "fiber": 8, "queue_months": 48, "grid_intensity": 210,
-    },
-    "BPA / PacifiCorp (Northwest)": {
-        "power": 7, "fiber": 5, "queue_months": 54, "grid_intensity": 180,
-    },
-    "ISO-NE (New England)": {
-        "power": 4, "fiber": 7, "queue_months": 54, "grid_intensity": 290,
-    },
-    "NYISO (New York)": {
-        "power": 5, "fiber": 8, "queue_months": 48, "grid_intensity": 250,
-    },
-    "SERC (Southeast)": {
-        "power": 7, "fiber": 6, "queue_months": 36, "grid_intensity": 400,
-    },
-    "Not sure / Other": {
-        "power": 6, "fiber": 5, "queue_months": 42, "grid_intensity": 350,
-    },
+    region: {**infra, **GRID_REGION_ROLLUP[region]}
+    for region, infra in _REGION_INFRA.items()
 }
 
 # State → grid region key (for auto-detection from geocoded address)
@@ -257,9 +247,15 @@ def _render_community_evaluator():
     st.markdown("## 🏘️ Could they build here?")
     st.markdown("#### Community Siting Evaluator")
     st.markdown(
-        "Enter your town or address to see how it scores on the 8 factors "
-        "data-center developers use to choose sites. Scores are auto-populated "
-        "from public data — adjust any slider if you have better local knowledge."
+        "**You look at your own town.** Enter your town or address to see how it "
+        "scores on the 8 factors data-center developers use to choose sites — is "
+        "your community already a target? Scores are auto-populated from public "
+        "data; adjust any slider if you have better local knowledge."
+    )
+    st.caption(
+        "Want the other side of the table? The **🎮 Estimate & simulate** tab puts "
+        "you in the developer's chair to design a campus and see its cost, carbon, "
+        "water, and permitting risk."
     )
 
     place = st.text_input(
@@ -581,8 +577,7 @@ def render_learn_tab():
             "**5.** Inputs & outputs · "
             "**6.** Efficiency (PUE, WUE, CUE) · "
             "**7.** Site selection & community siting evaluator · "
-            "**8.** Key terms glossary · "
-            "**Also below:** 🎮 AI Datacenter Siting Sandbox (interactive simulation)"
+            "**8.** Key terms glossary"
         )
 
     # ══════════════════════════════════════════════════════════════════════════

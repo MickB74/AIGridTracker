@@ -1164,6 +1164,89 @@ STATE_GRID_PROFILES = {
     "Wyoming":        {"rate": 0.111, "gco2": 460, "water_stress": "low"},
 }
 
+# Named campus siting locations: regional temperature penalty on PUE,
+# interconnection queue wait (months), and grid carbon (gCO2/kWh). `iso` is
+# the regional grid operator the site sits under; the community siting
+# evaluator rolls these rows up by ISO rather than keeping its own table.
+# Queue waits from LBNL "Queued Up" (2025) + ISO interconnection dashboards;
+# carbon from eGRID 2022 subregion averages.
+SITING_REGIONS = [
+    {"region": "Northern Virginia (PJM)",                     "iso": "PJM (Mid-Atlantic / Ohio Valley)", "pue_adj": 0.02, "queue_months": 60, "gco2": 380},
+    {"region": "West Texas (ERCOT)",                          "iso": "ERCOT (Texas)",                    "pue_adj": 0.05, "queue_months": 24, "gco2": 340},
+    {"region": "Central Iowa (MISO)",                         "iso": "MISO (Midwest)",                   "pue_adj": 0.01, "queue_months": 48, "gco2": 410},
+    {"region": "Pacific Northwest (BPA / PacifiCorp)",        "iso": "BPA / PacifiCorp (Northwest)",     "pue_adj": 0.00, "queue_months": 54, "gco2": 180},
+    {"region": "Central Ohio (PJM)",                          "iso": "PJM (Mid-Atlantic / Ohio Valley)", "pue_adj": 0.02, "queue_months": 54, "gco2": 420},
+    {"region": "Georgia / Atlanta Metro (SERC)",              "iso": "SERC (Southeast)",                 "pue_adj": 0.04, "queue_months": 36, "gco2": 370},
+    {"region": "Phoenix, Arizona (SPP West)",                 "iso": "SPP (Great Plains)",               "pue_adj": 0.08, "queue_months": 30, "gco2": 390},
+    {"region": "South Carolina Midlands (Duke / SERC)",       "iso": "SERC (Southeast)",                 "pue_adj": 0.04, "queue_months": 36, "gco2": 340},
+    {"region": "North Carolina Piedmont (Duke / PJM)",        "iso": "SERC (Southeast)",                 "pue_adj": 0.03, "queue_months": 42, "gco2": 350},
+    {"region": "Chicago / NE Illinois (PJM / ComEd)",         "iso": "PJM (Mid-Atlantic / Ohio Valley)", "pue_adj": 0.01, "queue_months": 48, "gco2": 310},
+    {"region": "Dallas–Fort Worth (ERCOT)",                   "iso": "ERCOT (Texas)",                    "pue_adj": 0.05, "queue_months": 24, "gco2": 360},
+    {"region": "Salt Lake City, Utah (PacifiCorp)",           "iso": "BPA / PacifiCorp (Northwest)",     "pue_adj": 0.02, "queue_months": 42, "gco2": 440},
+    {"region": "New York Metro (NYISO)",                      "iso": "NYISO (New York)",                 "pue_adj": 0.01, "queue_months": 60, "gco2": 250},
+    {"region": "Mississippi Delta (MISO South)",              "iso": "MISO (Midwest)",                   "pue_adj": 0.06, "queue_months": 30, "gco2": 400},
+    {"region": "Southeast Michigan (MISO / DTE)",             "iso": "MISO (Midwest)",                   "pue_adj": 0.02, "queue_months": 42, "gco2": 390},
+    {"region": "El Paso, Texas (ERCOT West)",                 "iso": "ERCOT (Texas)",                    "pue_adj": 0.07, "queue_months": 24, "gco2": 350},
+    {"region": "San Antonio, Texas (ERCOT / CPS Energy)",     "iso": "ERCOT (Texas)",                    "pue_adj": 0.06, "queue_months": 24, "gco2": 340},
+    {"region": "Kansas City (SPP)",                           "iso": "SPP (Great Plains)",               "pue_adj": 0.03, "queue_months": 36, "gco2": 420},
+    {"region": "Indiana (MISO / AES Indiana)",                "iso": "MISO (Midwest)",                   "pue_adj": 0.02, "queue_months": 42, "gco2": 430},
+    {"region": "Nashville, Tennessee (TVA)",                  "iso": "SERC (Southeast)",                 "pue_adj": 0.04, "queue_months": 30, "gco2": 350},
+    {"region": "Memphis, Tennessee (TVA / MLGW)",             "iso": "SERC (Southeast)",                 "pue_adj": 0.05, "queue_months": 30, "gco2": 370},
+    {"region": "Reno / Sparks, Nevada (NV Energy)",           "iso": "Not sure / Other",                 "pue_adj": 0.04, "queue_months": 36, "gco2": 330},
+    {"region": "Las Vegas, Nevada (NV Energy)",               "iso": "Not sure / Other",                 "pue_adj": 0.08, "queue_months": 36, "gco2": 380},
+    {"region": "Cheyenne, Wyoming (WAPA / PacifiCorp)",       "iso": "BPA / PacifiCorp (Northwest)",     "pue_adj": 0.00, "queue_months": 36, "gco2": 460},
+    {"region": "Quincy, Washington (Grant County PUD)",       "iso": "BPA / PacifiCorp (Northwest)",     "pue_adj": 0.00, "queue_months": 42, "gco2": 80},
+    {"region": "The Dalles, Oregon (BPA / PGE)",              "iso": "BPA / PacifiCorp (Northwest)",     "pue_adj": 0.00, "queue_months": 48, "gco2": 120},
+    {"region": "Loudoun County, Virginia (Dominion / PJM)",   "iso": "PJM (Mid-Atlantic / Ohio Valley)", "pue_adj": 0.02, "queue_months": 60, "gco2": 380},
+    {"region": "Prince William County, Virginia (PJM)",       "iso": "PJM (Mid-Atlantic / Ohio Valley)", "pue_adj": 0.02, "queue_months": 60, "gco2": 380},
+    {"region": "Rural Maine (ISO-NE / Versant)",              "iso": "ISO-NE (New England)",             "pue_adj": 0.00, "queue_months": 48, "gco2": 200},
+    {"region": "Central Pennsylvania (PJM / PPL)",            "iso": "PJM (Mid-Atlantic / Ohio Valley)", "pue_adj": 0.01, "queue_months": 54, "gco2": 350},
+    {"region": "Upstate New York (NYISO North)",              "iso": "NYISO (New York)",                 "pue_adj": 0.00, "queue_months": 54, "gco2": 180},
+    {"region": "New Albany, Ohio (AEP / PJM)",                "iso": "PJM (Mid-Atlantic / Ohio Valley)", "pue_adj": 0.02, "queue_months": 54, "gco2": 420},
+    {"region": "Papillion / Sarpy County, Nebraska (OPPD)",   "iso": "SPP (Great Plains)",               "pue_adj": 0.02, "queue_months": 36, "gco2": 440},
+    {"region": "Albuquerque, New Mexico (PNM / SPP)",         "iso": "SPP (Great Plains)",               "pue_adj": 0.06, "queue_months": 36, "gco2": 370},
+    {"region": "Sacramento, California (CAISO / SMUD)",       "iso": "CAISO (California)",               "pue_adj": 0.04, "queue_months": 60, "gco2": 220},
+    {"region": "San Jose, California (CAISO / PG&E)",         "iso": "CAISO (California)",               "pue_adj": 0.02, "queue_months": 60, "gco2": 220},
+    {"region": "Henrico County, Virginia (Dominion / PJM)",   "iso": "PJM (Mid-Atlantic / Ohio Valley)", "pue_adj": 0.03, "queue_months": 60, "gco2": 380},
+    {"region": "Abilene, Texas (ERCOT / AEP)",                "iso": "ERCOT (Texas)",                    "pue_adj": 0.06, "queue_months": 24, "gco2": 360},
+    {"region": "Stillwater, Oklahoma (SPP / OG&E)",           "iso": "SPP (Great Plains)",               "pue_adj": 0.05, "queue_months": 30, "gco2": 410},
+    {"region": "Montgomery County, Missouri (MISO / Ameren)", "iso": "MISO (Midwest)",                   "pue_adj": 0.03, "queue_months": 36, "gco2": 430},
+    {"region": "Farmington, Minnesota (MISO / Xcel)",         "iso": "MISO (Midwest)",                   "pue_adj": 0.01, "queue_months": 42, "gco2": 340},
+    {"region": "Jackson, Mississippi (Entergy / MISO South)", "iso": "MISO (Midwest)",                   "pue_adj": 0.06, "queue_months": 30, "gco2": 400},
+    {"region": "Starke County, Indiana (MISO / NIPSCO)",      "iso": "MISO (Midwest)",                   "pue_adj": 0.02, "queue_months": 42, "gco2": 440},
+    {"region": "ACE Basin, South Carolina (Duke / Santee Cooper)", "iso": "SERC (Southeast)",            "pue_adj": 0.04, "queue_months": 36, "gco2": 320},
+    {"region": "Stokes County, North Carolina (Duke)",        "iso": "SERC (Southeast)",                 "pue_adj": 0.03, "queue_months": 42, "gco2": 350},
+    {"region": "Pittsylvania County, Virginia (AEP / PJM)",   "iso": "PJM (Mid-Atlantic / Ohio Valley)", "pue_adj": 0.03, "queue_months": 54, "gco2": 370},
+    {"region": "Morgan County, Georgia (Georgia Power / SERC)", "iso": "SERC (Southeast)",               "pue_adj": 0.04, "queue_months": 36, "gco2": 370},
+    {"region": "El Paso County, Texas (ERCOT West / El Paso Electric)", "iso": "ERCOT (Texas)",          "pue_adj": 0.07, "queue_months": 24, "gco2": 350},
+    {"region": "Mount Pleasant, Wisconsin (MISO / WE Energies)", "iso": "MISO (Midwest)",                "pue_adj": 0.01, "queue_months": 42, "gco2": 380},
+    {"region": "Lousiana Gulf Coast (MISO South / Entergy)",  "iso": "MISO (Midwest)",                   "pue_adj": 0.06, "queue_months": 30, "gco2": 380},
+]
+
+# Site name → (PUE adjustment, queue months, grid gCO2/kWh) for the sandbox.
+SITING_REGION_PROFILES = {
+    r["region"]: (r["pue_adj"], r["queue_months"], r["gco2"])
+    for r in SITING_REGIONS
+}
+
+# ISO-level rollup of SITING_REGIONS — the average queue wait and grid carbon
+# across the campus locations in each grid operator's footprint. "Not sure /
+# Other" is the fleet-wide average across every location.
+GRID_REGION_ROLLUP = {
+    iso: {
+        "queue_months": round(sum(r["queue_months"] for r in rows) / len(rows)),
+        "grid_intensity": round(sum(r["gco2"] for r in rows) / len(rows)),
+    }
+    for iso, rows in (
+        (iso, [r for r in SITING_REGIONS if r["iso"] == iso])
+        for iso in dict.fromkeys(r["iso"] for r in SITING_REGIONS)
+    )
+}
+GRID_REGION_ROLLUP["Not sure / Other"] = {
+    "queue_months": round(sum(r["queue_months"] for r in SITING_REGIONS) / len(SITING_REGIONS)),
+    "grid_intensity": round(sum(r["gco2"] for r in SITING_REGIONS) / len(SITING_REGIONS)),
+}
+
 # Farmland price baseline — USDA NASS "Land Values 2024 Summary" (Aug 2024),
 # average CROPLAND value ($/acre) by state, 2024. This is the agricultural
 # baseline a community can price against when a data-center developer comes
