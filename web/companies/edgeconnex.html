@@ -162,6 +162,49 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 @media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
 .official { font-size:14px; }
 .official .role { color:var(--muted); font-size:13px; }
+.hero-grid { display:grid; grid-template-columns:1fr; gap:24px;
+  align-items:center; padding:44px 0 10px; }
+@media (min-width:820px){ .hero-grid{ grid-template-columns:1.15fr .85fr; padding:56px 0 20px; } }
+.hero-grid header { padding:0; }
+.hero-art { width:100%; max-width:420px; margin:0 auto; display:block;
+  filter:drop-shadow(0 8px 24px rgba(45,212,191,.12)); }
+.hero-art .glow { animation:pulse 3.2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:.35} 50%{opacity:1} }
+@media (prefers-reduced-motion:reduce){ .hero-art .glow{ animation:none; opacity:.7 } }
+.iconcard { display:flex; gap:14px; align-items:flex-start; }
+.iconcard .ico { flex-shrink:0; width:40px; height:40px; border-radius:10px;
+  background:rgba(45,212,191,.12); display:flex; align-items:center;
+  justify-content:center; color:var(--teal); }
+.iconcard .ico svg { width:22px; height:22px; }
+.iconcard .body h3 { margin:0 0 4px; }
+.demand-chart { margin:14px 0 6px; }
+.demand-chart .row { display:grid; grid-template-columns:minmax(80px,90px) 1fr minmax(90px,110px);
+  gap:12px; align-items:center; padding:6px 0; font-size:14px; }
+.demand-chart .yr { color:var(--muted); font-variant-numeric:tabular-nums; }
+.demand-chart .bar { height:22px; border-radius:6px;
+  background:linear-gradient(90deg, rgba(45,212,191,.85), rgba(45,212,191,.55));
+  position:relative; }
+.demand-chart .bar.range { background:linear-gradient(90deg,
+  rgba(251,191,36,.85) 0%, rgba(251,191,36,.85) var(--lo,50%),
+  rgba(251,191,36,.35) var(--lo,50%), rgba(251,191,36,.35) 100%); }
+.demand-chart .val { color:var(--ink); font-variant-numeric:tabular-nums;
+  font-weight:600; text-align:right; }
+.grid-flow-svg { width:100%; height:auto; max-width:820px; margin:14px auto;
+  display:block; }
+.grid-flow-svg text { font:600 12px system-ui,-apple-system,sans-serif;
+  fill:var(--ink); }
+.grid-flow-svg text.small { font-size:10.5px; font-weight:500; fill:var(--muted); }
+.grid-flow-svg .flow-dot { fill:var(--teal); }
+.grid-flow-svg .flow-dot.a1 { animation:flowa 3s linear infinite; }
+.grid-flow-svg .flow-dot.a2 { animation:flowb 3s linear infinite; animation-delay:1s; }
+.grid-flow-svg .flow-dot.a3 { animation:flowc 3s linear infinite; animation-delay:2s; }
+@keyframes flowa { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@keyframes flowb { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@keyframes flowc { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@media (prefers-reduced-motion:reduce){ .grid-flow-svg .flow-dot{ animation:none } }
 </style>
 </head>
 <body>

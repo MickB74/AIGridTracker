@@ -248,6 +248,49 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 @media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
 .official { font-size:14px; }
 .official .role { color:var(--muted); font-size:13px; }
+.hero-grid { display:grid; grid-template-columns:1fr; gap:24px;
+  align-items:center; padding:44px 0 10px; }
+@media (min-width:820px){ .hero-grid{ grid-template-columns:1.15fr .85fr; padding:56px 0 20px; } }
+.hero-grid header { padding:0; }
+.hero-art { width:100%; max-width:420px; margin:0 auto; display:block;
+  filter:drop-shadow(0 8px 24px rgba(45,212,191,.12)); }
+.hero-art .glow { animation:pulse 3.2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:.35} 50%{opacity:1} }
+@media (prefers-reduced-motion:reduce){ .hero-art .glow{ animation:none; opacity:.7 } }
+.iconcard { display:flex; gap:14px; align-items:flex-start; }
+.iconcard .ico { flex-shrink:0; width:40px; height:40px; border-radius:10px;
+  background:rgba(45,212,191,.12); display:flex; align-items:center;
+  justify-content:center; color:var(--teal); }
+.iconcard .ico svg { width:22px; height:22px; }
+.iconcard .body h3 { margin:0 0 4px; }
+.demand-chart { margin:14px 0 6px; }
+.demand-chart .row { display:grid; grid-template-columns:minmax(80px,90px) 1fr minmax(90px,110px);
+  gap:12px; align-items:center; padding:6px 0; font-size:14px; }
+.demand-chart .yr { color:var(--muted); font-variant-numeric:tabular-nums; }
+.demand-chart .bar { height:22px; border-radius:6px;
+  background:linear-gradient(90deg, rgba(45,212,191,.85), rgba(45,212,191,.55));
+  position:relative; }
+.demand-chart .bar.range { background:linear-gradient(90deg,
+  rgba(251,191,36,.85) 0%, rgba(251,191,36,.85) var(--lo,50%),
+  rgba(251,191,36,.35) var(--lo,50%), rgba(251,191,36,.35) 100%); }
+.demand-chart .val { color:var(--ink); font-variant-numeric:tabular-nums;
+  font-weight:600; text-align:right; }
+.grid-flow-svg { width:100%; height:auto; max-width:820px; margin:14px auto;
+  display:block; }
+.grid-flow-svg text { font:600 12px system-ui,-apple-system,sans-serif;
+  fill:var(--ink); }
+.grid-flow-svg text.small { font-size:10.5px; font-weight:500; fill:var(--muted); }
+.grid-flow-svg .flow-dot { fill:var(--teal); }
+.grid-flow-svg .flow-dot.a1 { animation:flowa 3s linear infinite; }
+.grid-flow-svg .flow-dot.a2 { animation:flowb 3s linear infinite; animation-delay:1s; }
+.grid-flow-svg .flow-dot.a3 { animation:flowc 3s linear infinite; animation-delay:2s; }
+@keyframes flowa { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@keyframes flowb { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@keyframes flowc { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@media (prefers-reduced-motion:reduce){ .grid-flow-svg .flow-dot{ animation:none } }
 """
 
 
@@ -375,6 +418,7 @@ def build_index():
         f"({esc(b['company'])}) — {esc(b['won'])}</li>"
         for b in CBA_BENCHMARKS)
     body = f"""
+<div class="hero-grid">
 <header>
   <div class="kicker">AI GridWatch</div>
   <h1>A data center is coming to town.<br>Negotiate like you know the numbers.</h1>
@@ -386,6 +430,8 @@ def build_index():
     <a class="btn ghost" href="health-risks.html">The health risks, sourced</a>
   </p>
 </header>
+{_hero_art_svg()}
+</div>
 <div class="stats">
   <div class="stat"><b>{n_dc:,}</b><span>tracked U.S. data center facilities</span></div>
   <div class="stat"><b>{twh:,.0f} TWh</b><span>estimated annual electricity, all 50 states + D.C.</span></div>
@@ -393,17 +439,39 @@ def build_index():
   <div class="stat"><b>325&ndash;580 TWh</b><span>projected U.S. data center demand by 2030 (Berkeley Lab)</span></div>
 </div>
 <section>
+  <h2>The trajectory</h2>
+  <p class="muted" style="margin-bottom:6px">U.S. data-center electricity demand, actual and projected — TWh per year.</p>
+  <div class="demand-chart">
+    <div class="row"><span class="yr">2018</span>
+      <div class="bar" style="width:14%"></div><span class="val">76 TWh</span></div>
+    <div class="row"><span class="yr">2023</span>
+      <div class="bar" style="width:32%"></div><span class="val">176 TWh</span></div>
+    <div class="row"><span class="yr">2028</span>
+      <div class="bar range" style="width:59%; --lo:56%"></div><span class="val">325&ndash;580</span></div>
+    <div class="row"><span class="yr">2030</span>
+      <div class="bar range" style="width:100%; --lo:56%"></div><span class="val">up to 580</span></div>
+  </div>
+  <p class="src">Source: Lawrence Berkeley National Laboratory,
+  <em>2024 U.S. Data Center Energy Usage Report</em> (Dec 2024). 2028&ndash;2030 range reflects low/high AI-adoption scenarios.</p>
+</section>
+<section>
   <h2>What you get</h2>
   <div class="grid3">
-    <div class="card"><h3>📥 Action pack</h3><p class="muted">A personalized
-    PDF: impact numbers, meeting strategy, CBA targets, a 2-minute speech,
-    and ready-to-send letters.</p></div>
-    <div class="card"><h3>🪧 Flyer + petition</h3><p class="muted">A one-page
-    hand-out with your community's numbers, in English and Spanish, with a
-    sign-up sheet.</p></div>
-    <div class="card"><h3>🌐 Campaign site</h3><p class="muted">A complete
-    one-page website with your numbers baked in — free to host, no coding
-    needed.</p></div>
+    <div class="card"><div class="iconcard">
+      <div class="ico">{_ico_doc()}</div><div class="body">
+      <h3>Action pack</h3><p class="muted">A personalized
+      PDF: impact numbers, meeting strategy, CBA targets, a 2-minute speech,
+      and ready-to-send letters.</p></div></div></div>
+    <div class="card"><div class="iconcard">
+      <div class="ico">{_ico_flyer()}</div><div class="body">
+      <h3>Flyer + petition</h3><p class="muted">A one-page
+      hand-out with your community's numbers, in English and Spanish, with a
+      sign-up sheet.</p></div></div></div>
+    <div class="card"><div class="iconcard">
+      <div class="ico">{_ico_globe()}</div><div class="body">
+      <h3>Campaign site</h3><p class="muted">A complete
+      one-page website with your numbers baked in — free to host, no coding
+      needed.</p></div></div></div>
   </div>
   <p class="muted" style="margin-top:10px">All generated in the free
   <a href="{APP_URL}">GridWatch toolkit</a> — no signup required.</p>
@@ -641,6 +709,135 @@ def build_state(state):
 
 
 _ABBREV_TO_FULL = {v: k for k, v in _ABBREV.items()}
+
+
+def _hero_art_svg():
+    return '''<svg class="hero-art" viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration: a data center campus connected to a transmission tower by high-voltage lines">
+  <defs>
+    <linearGradient id="hg-sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#1a2a48"/><stop offset="1" stop-color="#0b1220"/>
+    </linearGradient>
+    <linearGradient id="hg-teal" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity=".2"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="420" height="300" rx="18" fill="url(#hg-sky)"/>
+  <circle cx="330" cy="60" r="28" fill="#2dd4bf" opacity=".08"/>
+  <circle cx="330" cy="60" r="16" fill="#2dd4bf" opacity=".14"/>
+  <g stroke="#22304a" stroke-width="1" fill="none">
+    <line x1="0" y1="240" x2="420" y2="240"/>
+    <line x1="0" y1="260" x2="420" y2="260" opacity=".6"/>
+  </g>
+  <g stroke="#2dd4bf" stroke-width="1.5" fill="none" opacity=".55">
+    <path d="M 78,120 Q 200,150 322,110"/>
+    <path d="M 78,140 Q 200,170 322,130"/>
+  </g>
+  <g transform="translate(40,90)">
+    <path d="M 38,0 L 4,150 M 38,0 L 72,150 M 12,110 L 64,110 M 20,70 L 56,70 M 26,40 L 50,40"
+          stroke="#93a1b5" stroke-width="1.6" fill="none"/>
+    <rect x="30" y="-8" width="16" height="10" fill="#93a1b5"/>
+  </g>
+  <g transform="translate(250,150)">
+    <rect x="0" y="0" width="140" height="90" rx="6" fill="#121c30" stroke="#22304a" stroke-width="1.5"/>
+    <rect x="0" y="0" width="140" height="14" fill="#22304a"/>
+    <circle cx="8" cy="7" r="2" fill="#2dd4bf"/>
+    <circle cx="16" cy="7" r="2" fill="#fbbf24" opacity=".8"/>
+    <g fill="#2dd4bf">
+      <rect x="10" y="22" width="120" height="6" opacity=".65"/>
+      <rect x="10" y="34" width="90" height="6" opacity=".45"/>
+      <rect x="10" y="46" width="120" height="6" opacity=".65"/>
+      <rect x="10" y="58" width="70" height="6" opacity=".35"/>
+      <rect x="10" y="70" width="120" height="6" opacity=".55"/>
+    </g>
+    <rect x="150" y="20" width="30" height="70" rx="3" fill="#121c30" stroke="#22304a"/>
+    <rect x="154" y="26" width="22" height="6" fill="#93a1b5" opacity=".6"/>
+    <rect x="154" y="36" width="22" height="6" fill="#93a1b5" opacity=".6"/>
+    <rect x="154" y="46" width="22" height="6" fill="#93a1b5" opacity=".6"/>
+  </g>
+  <g class="glow">
+    <circle cx="140" cy="118" r="3" fill="#2dd4bf"/>
+    <circle cx="200" cy="128" r="3" fill="#2dd4bf"/>
+    <circle cx="260" cy="122" r="3" fill="#2dd4bf"/>
+  </g>
+  <g fill="#93a1b5" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">
+    <text x="40" y="260">345 kV transmission</text>
+    <text x="250" y="260">Hyperscale campus</text>
+  </g>
+</svg>'''
+
+
+def _ico_doc():
+    return ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+            'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
+            '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>'
+            '<path d="M14 3v5h5"/><path d="M9 14l2 2 4-4"/></svg>')
+
+
+def _ico_flyer():
+    return ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+            'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
+            '<path d="M4 4h16v13H4z"/><path d="M4 21h16"/>'
+            '<path d="M8 8h8"/><path d="M8 12h5"/></svg>')
+
+
+def _ico_globe():
+    return ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+            'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
+            '<circle cx="12" cy="12" r="9"/>'
+            '<path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg>')
+
+
+def _grid_flow_svg():
+    return '''<svg class="grid-flow-svg" viewBox="0 0 820 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: how a data center connects to the grid, from power plant through transmission and substation">
+  <defs>
+    <marker id="gf-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2dd4bf"/>
+    </marker>
+  </defs>
+  <line x1="110" y1="105" x2="230" y2="105" stroke="#2dd4bf" stroke-width="2" marker-end="url(#gf-arrow)"/>
+  <line x1="330" y1="105" x2="450" y2="105" stroke="#2dd4bf" stroke-width="2" marker-end="url(#gf-arrow)"/>
+  <line x1="550" y1="105" x2="670" y2="105" stroke="#2dd4bf" stroke-width="2" marker-end="url(#gf-arrow)"/>
+  <g transform="translate(20,55)">
+    <rect x="0" y="20" width="90" height="60" rx="6" fill="#121c30" stroke="#22304a" stroke-width="1.5"/>
+    <path d="M 15,20 Q 25,0 45,10 Q 65,-5 75,20" fill="none" stroke="#93a1b5" stroke-width="1.5"/>
+    <rect x="10" y="45" width="20" height="30" fill="#22304a"/>
+    <rect x="35" y="35" width="20" height="40" fill="#22304a"/>
+    <rect x="60" y="50" width="20" height="25" fill="#22304a"/>
+    <text x="45" y="105" text-anchor="middle">Generation</text>
+    <text x="45" y="120" text-anchor="middle" class="small">Gas, wind, solar, nuclear</text>
+  </g>
+  <g transform="translate(240,45)">
+    <path d="M 45,10 L 15,120 M 45,10 L 75,120 M 25,80 L 65,80 M 30,55 L 60,55" stroke="#93a1b5" stroke-width="1.5" fill="none"/>
+    <rect x="38" y="4" width="14" height="8" fill="#93a1b5"/>
+    <path d="M 8,55 Q 45,45 82,55" stroke="#2dd4bf" stroke-width="1.2" fill="none" opacity=".7"/>
+    <path d="M 8,80 Q 45,70 82,80" stroke="#2dd4bf" stroke-width="1.2" fill="none" opacity=".7"/>
+    <text x="45" y="140" text-anchor="middle">Transmission</text>
+    <text x="45" y="155" text-anchor="middle" class="small">115&#8211;765 kV, long distance</text>
+  </g>
+  <g transform="translate(460,55)">
+    <rect x="0" y="20" width="90" height="60" rx="6" fill="#121c30" stroke="#22304a" stroke-width="1.5"/>
+    <circle cx="25" cy="50" r="10" fill="none" stroke="#93a1b5" stroke-width="1.5"/>
+    <circle cx="45" cy="50" r="10" fill="none" stroke="#93a1b5" stroke-width="1.5"/>
+    <circle cx="65" cy="50" r="10" fill="none" stroke="#93a1b5" stroke-width="1.5"/>
+    <line x1="10" y1="72" x2="80" y2="72" stroke="#93a1b5" stroke-width="1.5"/>
+    <text x="45" y="105" text-anchor="middle">Substation</text>
+    <text x="45" y="120" text-anchor="middle" class="small">Step-down to 12&#8211;34 kV</text>
+  </g>
+  <g transform="translate(680,55)">
+    <rect x="0" y="20" width="120" height="60" rx="6" fill="#121c30" stroke="#2dd4bf" stroke-width="1.5"/>
+    <rect x="0" y="20" width="120" height="10" fill="#22304a"/>
+    <g fill="#2dd4bf">
+      <rect x="6" y="35" width="108" height="5" opacity=".6"/>
+      <rect x="6" y="44" width="80" height="5" opacity=".45"/>
+      <rect x="6" y="53" width="108" height="5" opacity=".6"/>
+      <rect x="6" y="62" width="66" height="5" opacity=".35"/>
+      <rect x="6" y="71" width="108" height="5" opacity=".55"/>
+    </g>
+    <text x="60" y="105" text-anchor="middle">Data center</text>
+    <text x="60" y="120" text-anchor="middle" class="small">50&#8211;300+ MW continuous</text>
+  </g>
+</svg>'''
 
 
 def _build_us_map_svg():
@@ -1630,6 +1827,9 @@ def build_learn():
   </div>
   <p class="muted">From small server rooms to 300+ MW campuses. Growth is
   driven largely by AI workloads.</p>
+  <h3 style="font-size:16px; color:var(--teal); margin:22px 0 4px">How a data center connects to the grid</h3>
+  <p class="muted" style="margin-bottom:0">Electricity travels from a power plant across long-distance high-voltage lines, gets stepped down at a substation, then feeds the campus &mdash; often on a dedicated tap.</p>
+  {_grid_flow_svg()}
 </section>
 
 <section>
