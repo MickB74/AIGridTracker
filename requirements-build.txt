@@ -11,4 +11,9 @@
 # Raise a bound consciously after testing, rather than discovering it live.
 pandas>=2.0,<4
 markdown>=3.4,<4
-fpdf2>=2.8,<3
+# EXACT pin, not a range. build_site.py commits a generated PDF into web/,
+# and fpdf2 2.8.5 and 2.8.7 emit different bytes for identical input. With a
+# range, CI and a developer's machine resolve differently and each rebuild
+# reverts the other's binary — an infinite no-op commit loop. Pinned to the
+# version already installed locally so nobody has to upgrade.
+fpdf2==2.8.5
