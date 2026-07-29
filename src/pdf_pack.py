@@ -12,7 +12,7 @@ Core PDF fonts cover WinAnsi/cp1252 only, so all text passes through
 _latin1() (kept name; it sanitizes to the cp1252 glyph set).
 """
 
-from datetime import date
+from datetime import date, datetime, time
 
 from fpdf import FPDF
 
@@ -591,6 +591,12 @@ def build_health_pdf(health_risks, sources):
         doc_title="THE HEALTH RISKS OF DATA CENTERS",
         doc_subtitle=f"Community briefing · {date.today():%B %d, %Y}",
     )
+    # This PDF is a build artifact committed to web/, so it must be
+    # byte-reproducible for a given day. fpdf stamps the current time into the
+    # document metadata by default, which made every CI rebuild produce a
+    # "changed" file and an endless stream of no-op commits. Pinning to
+    # midnight means it only changes when the printed date does.
+    pdf.set_creation_date(datetime.combine(date.today(), time.min))
     pdf.add_page()
 
     pdf.set_font("Helvetica", "B", 19)
