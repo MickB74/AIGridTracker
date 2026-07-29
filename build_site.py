@@ -27,6 +27,7 @@ import pathlib
 import shutil
 
 import markdown
+import pandas as pd
 
 from src.blog_content import BLOG_STORIES, ABOUT_SECTION
 from src.constants import (
@@ -40,7 +41,7 @@ from src.constants import (
     EDGECONNEX_2024_HEADLINE, STACK_2023_HEADLINE,
     CYRUSONE_2023_HEADLINE, VANTAGE_2023_HEADLINE,
     COREWEAVE_PROFILE, QTS_PROFILE, SWITCH_PROFILE, COMPASS_PROFILE,
-    SOURCES, registry_provenance,
+    SOURCES, registry_provenance, has_value,
 )
 from src.pdf_pack import build_health_pdf
 from src.us_map_data import US_MAP_PATHS, US_MAP_LABELS, US_MAP_VIEWBOX
@@ -399,8 +400,8 @@ def build_state(state):
         site_rows = "\n".join(
             f"<tr><td>{esc(str(s.operator))}</td>"
             f"<td>{esc(str(s.location))}</td>"
-            f"<td>{esc(str(s.tenant)) if str(s.tenant) != 'nan' else '—'}</td>"
-            f"<td>{esc(str(s.filing_llc)) if str(s.filing_llc) != 'nan' else '—'}</td></tr>"
+            f"<td>{cell(s.tenant)}</td>"
+            f"<td>{cell(s.filing_llc)}</td></tr>"
             for s in sites.itertuples())
         sites_html = (
             f'<section><h2>Known data center campuses in {esc(state)}</h2>'
@@ -838,6 +839,23 @@ def build_impact_calculator():
         "Estimate the electricity, water, carbon, and rate impact of a "
         "data center in your state — free community calculator.",
         body, f"{SITE_URL}/impact")
+
+
+def cell(value, dash="—"):
+    """Render a possibly-missing DataFrame value, escaped, or an em-dash.
+
+    Do NOT test `str(v) != "nan"` here. Whether a missing object-column value
+    arrives as None or as NaN depends on the pandas major version: 2.x keeps
+    None (so str() gives "None") while 3.x coerces to NaN. Comparing against
+    the *string* silently rendered the literal word "None" on five state pages
+    in production, and only surfaced because CI built on a different pandas
+    than the machine that generated the committed HTML. pd.isna() handles
+    both.
+    """
+    if value is None or (not isinstance(value, str) and pd.isna(value)):
+        return dash
+    text = str(value).strip()
+    return esc(text) if text and text.lower() != "nan" else dash
 
 
 def _srcref(key):
@@ -1967,7 +1985,7 @@ def build_search():
                        "u": f"search.html"})
     for _, r in EXECUTIVES_DF.iterrows():
         # Don't present an unconfirmed title as fact in search results.
-        suffix = "" if r["verified"] else " · unverified"
+        suffix = "" if has_value(r["verified"]) else " · unverified"
         index.append({"t": r["name"], "k": "executive",
                        "d": f"{r['company']} · {r['title']}{suffix}",
                        "u": f"search.html"})
@@ -1976,7 +1994,7 @@ def build_search():
         st = str(r.get("state", ""))
         index.append({"t": f"{r['operator']} — {loc}",
                        "k": "site",
-                       "d": f"{st} · {r.get('tenant', '—')}",
+                       "d": f"{st} · {cell(r.get('tenant'))}",
                        "u": f"states/{slugify(STATE_PUCS_DF[STATE_PUCS_DF['abbrev'] == st].iloc[0]['state'])}.html" if not STATE_PUCS_DF[STATE_PUCS_DF['abbrev'] == st].empty else "states/index.html"})
     for s in sorted(STATE_GRID_PROFILES):
         index.append({"t": s, "k": "state",

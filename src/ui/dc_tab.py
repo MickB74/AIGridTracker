@@ -8,7 +8,7 @@ from src.constants import (DATACENTERS_DF, DC_METRICS, ERCOT_LL_VINTAGE,
                            HYPERSCALER_COLORS, AI_COMPETITOR_SITES_DF,
                            AI_COMPETITORS_DF, STATE_DC_DF, STATE_DC_NATIONAL,
                            MEGA_PROJECTS_DF, OPERATORS_DF, DC_SITES_DF,
-                           OPERATORS, EXECUTIVES_DF)
+                           OPERATORS, EXECUTIVES_DF, has_value)
 from src.helpers import src_link, render_freshness
 from src.services.ercot import ercot_largeload_latest
 from src.services.eia import eia_latest_demand
@@ -516,7 +516,7 @@ def render_dc_tab():
     # Per-row provenance: verified rows were read off the company's own
     # leadership page and link to it; the rest have no first-party source.
     exec_df["status"] = exec_df["verified"].apply(
-        lambda v: f"✅ Verified {v}" if v else "⚠️ Unverified")
+        lambda v: f"✅ Verified {v}" if has_value(v) else "⚠️ Unverified")
 
     st.dataframe(
         exec_df[["company", "name", "title", "status", "verified_source",

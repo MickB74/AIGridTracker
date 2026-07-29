@@ -2344,6 +2344,23 @@ EXEC_VERIFIED = {
     ("Stack Infrastructure", "Bobby Hollis"): "https://www.stackinfra.com/about/meet-the-team/",
 }
 
+def has_value(v):
+    """True if a DataFrame cell holds real content rather than a blank.
+
+    Never write `if row["verified"]` against an object column. A missing value
+    arrives as None on pandas 2.x but as NaN on 3.x, and **NaN is truthy** — so
+    the naive test silently flips meaning across a pandas upgrade. That is not
+    hypothetical: it made every "unverified" marker disappear from the site's
+    search index when CI built on a newer pandas than the machine that
+    generated the committed HTML.
+    """
+    if v is None:
+        return False
+    if isinstance(v, str):
+        return bool(v.strip()) and v.strip().lower() not in ("nan", "none")
+    return bool(pd.notna(v))
+
+
 EXECUTIVES_DF = pd.DataFrame(EXECUTIVES)
 EXECUTIVES_DF["verified"] = [
     _EXEC_VERIFIED_ON if (c, n) in EXEC_VERIFIED else None

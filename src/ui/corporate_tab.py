@@ -17,7 +17,7 @@ from src.constants import (
     META_DC_ELECTRICITY, META_DC_CAMPUS_ELECTRICITY, META_GHG,
     META_WATER, META_EFFICIENCY, META_2024_HEADLINE,
     MICROSOFT_ENV_HEADLINE, AWS_ENV_HEADLINE,
-    EXECUTIVES_DF, SHARES_OUTSTANDING,
+    EXECUTIVES_DF, SHARES_OUTSTANDING, has_value,
 )
 from src.helpers import src_link, render_freshness
 from src.services.sec_xbrl import fetch_dynamic_financials
@@ -1299,7 +1299,7 @@ def render_corporate_tab():
         corp_exec = corp_exec[mask]
 
     corp_exec["status"] = corp_exec["verified"].apply(
-        lambda v: f"✅ Verified {v}" if v else "⚠️ Unverified")
+        lambda v: f"✅ Verified {v}" if has_value(v) else "⚠️ Unverified")
 
     st.dataframe(
         corp_exec[["company", "name", "title", "status", "verified_source",
