@@ -43,7 +43,6 @@ from src.ui.learn_tab import render_learn_tab
 from src.ui.corporate_tab import render_corporate_tab
 from src.ui.studies_tab import render_studies_tab
 from src.ui.sandbox_tab import render_sandbox_tab
-from src.ui.bills_tab import render_bills_tab
 from src.ui.toolkit_tab import render_toolkit_tab
 from src.ui.consulting_tab import render_consulting_tab
 from src.ui.impact_tab import render_impact_tab
@@ -696,16 +695,21 @@ with tab_intel:
 with tab_reference:
     st.caption(
         "Background reading and directories. State briefings, company "
-        f"profiles, blog posts, and health risks now live on [{SITE_LABEL}]"
-        f"({SITE}) — this tab holds what hasn't moved yet."
+        f"profiles, blog posts, health risks, and the utility-bill explainer "
+        f"now live on [{SITE_LABEL}]({SITE}) — this tab holds what hasn't "
+        "moved yet."
     )
-    (ref_bills, ref_learn, ref_dc, ref_corp,
+    st.info(
+        f"**Why is my bill going up?** moved to the site: "
+        f"[{SITE_LABEL}/bills]({SITE}/bills) — the full explainer on capacity "
+        "markets, peak load, and how data center costs reach residential "
+        "ratepayers."
+    )
+    (ref_learn, ref_dc, ref_corp,
      ref_states, ref_macro) = st.tabs([
-        "💡 Your bill", "🎓 Learn", "🏢 Data centers",
+        "🎓 Learn", "🏢 Data centers",
         "💼 Companies", "🗂️ States & officials", "🌍 Macro outlook",
     ])
-    with ref_bills:
-        render_bills_tab()
     with ref_learn:
         render_learn_tab()
     with ref_dc:

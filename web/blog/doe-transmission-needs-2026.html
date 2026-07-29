@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DOE Just Named Data Centers the #1 Reason America Needs New Power Lines. Here&#x27;s Why Your Community Should Read the Fine Print. — AI GridWatch</title>
 <meta name="description" content="The Department of Energy&#x27;s draft 2026 National Transmission Needs Study makes it official: load growth — led by data centers — is now the main reason the U.S. needs new transmission. Congestion already adds $11 billion a year to wholesale power costs, tens of billions in new lines are approved, and the study feeds directly into federal corridor designations that can override local siting authority. Public comments are open until September 7, 2026 — and the draft is full of numbers communities can use.">
-<link rel="canonical" href="https://gridwatch-ai.vercel.app/blog/doe-transmission-needs-2026">
+<link rel="canonical" href="https://aigridwatch.com/blog/doe-transmission-needs-2026">
 <link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
-      href="https://gridwatch-ai.vercel.app/blog/feed.xml">
+      href="https://aigridwatch.com/blog/feed.xml">
 <meta property="og:title" content="DOE Just Named Data Centers the #1 Reason America Needs New Power Lines. Here&#x27;s Why Your Community Should Read the Fine Print. — AI GridWatch">
 <meta property="og:description" content="The Department of Energy&#x27;s draft 2026 National Transmission Needs Study makes it official: load growth — led by data centers — is now the main reason the U.S. needs new transmission. Congestion already adds $11 billion a year to wholesale power costs, tens of billions in new lines are approved, and the study feeds directly into federal corridor designations that can override local siting authority. Public comments are open until September 7, 2026 — and the draft is full of numbers communities can use.">
 <meta property="og:type" content="article">
@@ -68,6 +68,32 @@ a { color:var(--teal); }
 .freshness.stale { border-left-color:var(--amber);
   background:rgba(251,191,36,.07); }
 .freshness p { margin:0; }
+.note { border-left:3px solid var(--rule); padding:12px 16px; margin:18px 0;
+  border-radius:0 8px 8px 0; font-size:14.5px; line-height:1.55; }
+.note.info { border-left-color:var(--teal); background:rgba(45,212,191,.07); }
+.note.warn { border-left-color:var(--amber); background:rgba(251,191,36,.07); }
+.note.bad  { border-left-color:#ef4444; background:rgba(239,68,68,.08); }
+.note.good { border-left-color:#34d399; background:rgba(52,211,153,.07); }
+.note p { margin:0; }
+details.more { border:1px solid var(--rule); border-radius:10px;
+  padding:0 16px; margin:16px 0; background:rgba(255,255,255,.02); }
+details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
+  color:var(--teal); font-size:14.5px; }
+details.more[open] { padding-bottom:10px; }
+.billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
+  margin:20px 0 12px; }
+.billbar > div { display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:14px; }
+.barkey { display:flex; flex-wrap:wrap; gap:14px; font-size:13px;
+  color:var(--muted); }
+.barkey span { display:flex; align-items:center; gap:6px; }
+.barkey i { width:12px; height:12px; border-radius:3px; }
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px; margin:18px 0; }
+.flow .step { border:1px solid var(--rule); border-radius:10px; padding:12px 14px;
+  background:rgba(255,255,255,.02); font-size:14px; }
+.flow .step b { display:block; margin-bottom:4px; }
+.flow .step.end { border-color:#ef4444; background:rgba(239,68,68,.08); }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -136,6 +162,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <a href="../health-risks.html">Health risks</a>
   <a href="../moratoriums.html">Moratoriums</a>
   <a href="../impact.html">Calculator</a>
+  <a href="../bills.html">Your bill</a>
   <a href="../companies/index.html">Companies</a>
   <a href="../blog/index.html">Blog</a>
   <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>

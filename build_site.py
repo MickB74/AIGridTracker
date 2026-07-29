@@ -45,7 +45,10 @@ from src.constants import (
 from src.pdf_pack import build_health_pdf
 from src.us_map_data import US_MAP_PATHS, US_MAP_LABELS, US_MAP_VIEWBOX
 
-SITE_URL = os.environ.get("SITE_URL", "https://gridwatch-ai.vercel.app")
+# The live domain. Canonical tags and the sitemap are built from this, so it
+# must be the domain users actually reach — pointing them at the *.vercel.app
+# deployment URL tells search engines that subdomain is the real site.
+SITE_URL = os.environ.get("SITE_URL", "https://aigridwatch.com")
 APP_URL = os.environ.get("APP_URL", "https://aigridtracker.streamlit.app")
 
 # Third-party existing-facility directory (SOURCES["datacentermap"]). State
@@ -140,6 +143,32 @@ a { color:var(--teal); }
 .freshness.stale { border-left-color:var(--amber);
   background:rgba(251,191,36,.07); }
 .freshness p { margin:0; }
+.note { border-left:3px solid var(--rule); padding:12px 16px; margin:18px 0;
+  border-radius:0 8px 8px 0; font-size:14.5px; line-height:1.55; }
+.note.info { border-left-color:var(--teal); background:rgba(45,212,191,.07); }
+.note.warn { border-left-color:var(--amber); background:rgba(251,191,36,.07); }
+.note.bad  { border-left-color:#ef4444; background:rgba(239,68,68,.08); }
+.note.good { border-left-color:#34d399; background:rgba(52,211,153,.07); }
+.note p { margin:0; }
+details.more { border:1px solid var(--rule); border-radius:10px;
+  padding:0 16px; margin:16px 0; background:rgba(255,255,255,.02); }
+details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
+  color:var(--teal); font-size:14.5px; }
+details.more[open] { padding-bottom:10px; }
+.billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
+  margin:20px 0 12px; }
+.billbar > div { display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:14px; }
+.barkey { display:flex; flex-wrap:wrap; gap:14px; font-size:13px;
+  color:var(--muted); }
+.barkey span { display:flex; align-items:center; gap:6px; }
+.barkey i { width:12px; height:12px; border-radius:3px; }
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px; margin:18px 0; }
+.flow .step { border:1px solid var(--rule); border-radius:10px; padding:12px 14px;
+  background:rgba(255,255,255,.02); font-size:14px; }
+.flow .step b { display:block; margin-bottom:4px; }
+.flow .step.end { border-color:#ef4444; background:rgba(239,68,68,.08); }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -229,6 +258,7 @@ def page(title, description, body, canonical, depth=0,
   <a href="{p}health-risks.html">Health risks</a>
   <a href="{p}moratoriums.html">Moratoriums</a>
   <a href="{p}impact.html">Calculator</a>
+  <a href="{p}bills.html">Your bill</a>
   <a href="{p}companies/index.html">Companies</a>
   <a href="{p}blog/index.html">Blog</a>
   <a class="cta" href="{APP_URL}">Open the toolkit &rarr;</a>
@@ -808,6 +838,432 @@ def build_impact_calculator():
         "Estimate the electricity, water, carbon, and rate impact of a "
         "data center in your state — free community calculator.",
         body, f"{SITE_URL}/impact")
+
+
+def _srcref(key):
+    """Inline markdown-free source link from SOURCES, or "" if unknown."""
+    if key not in SOURCES:
+        return ""
+    name, url = SOURCES[key]
+    return f'<a href="{esc(url)}" rel="nofollow">{esc(name)}</a>'
+
+
+# Composition of expenses for major U.S. investor-owned utilities, 2023
+# (FERC Form 1 via EIA EPA table 8.3) per LBNL Retail Price & Cost Trends 2024.
+# Ported from bills_tab's Altair chart — same numbers, drawn in CSS.
+_BILL_PARTS = [
+    ("Fuel &amp; purchased power", 36, "#3b82f6"),
+    ("Operations &amp; maintenance", 23, "#f59e0b"),
+    ("Depreciation", 16, "#ef4444"),
+    ("General &amp; administrative", 13, "#a855f7"),
+    ("Taxes &amp; other", 12, "#6b7280"),
+]
+
+
+def build_bills():
+    """Utility-bill explainer — ported from src/ui/bills_tab.py.
+
+    All prose and tables move across unchanged; the one Altair chart becomes a
+    CSS bar. Streamlit's `\\$` escapes are dropped — this is HTML, not Streamlit
+    markdown, so dollar signs are literal.
+    """
+    bar = "".join(
+        f'<div style="width:{pct}%;background:{c}">{pct}%</div>'
+        for _, pct, c in _BILL_PARTS)
+    key = "".join(
+        f'<span><i style="background:{c}"></i>{name}</span>'
+        for name, _, c in _BILL_PARTS)
+
+    body = f"""
+<header>
+  <div class="kicker">Explainer</div>
+  <h1>Your utility bill: what's actually driving it up</h1>
+  <p class="sub">How electricity bills work, why peak demand sets your annual
+  cost, and what the research says about data centers and ratepayer cost
+  shifts.</p>
+</header>
+
+<section>
+  <h2>Anatomy of your electric bill</h2>
+  <p>You see one blended rate. But every dollar splits into two very different
+  things: the electricity you <strong>use</strong>, and the grid capacity that
+  must <strong>exist</strong> to serve the single highest moment of demand all
+  year. Data-center growth hits the second kind hardest.</p>
+  <div class="billbar">{bar}</div>
+  <div class="barkey">{key}</div>
+  <p class="src" style="margin-top:10px">Composition of expenses for major U.S.
+  investor-owned utilities in 2023, per {_srcref('lbnl_price_trends')}. Fuel and
+  purchased power is the only large piece that scales with how much electricity
+  you use — the rest is largely fixed: the plants, wires, people, and capital
+  that must exist to run the system. On a home bill it all arrives as one
+  blended per-kWh rate.</p>
+  <div class="stats">
+    <div class="stat"><b>~36%</b><span>tracks your usage — fuel &amp; purchased power</span></div>
+    <div class="stat"><b>~64%</b><span>fixed system costs — plants, wires, staff &amp; capital</span></div>
+  </div>
+  <details class="more"><summary>Read more — what each charge actually is</summary>
+    <h3>Fuel &amp; purchased power — what you use</h3>
+    <p>The fuel and wholesale power a utility buys to serve you — the largest
+    single expense (~36%) and the most volatile. It drove the 2021–22 bill spike
+    as natural-gas prices surged (gas sets ~40% of U.S. generation), and eased
+    as they fell back.</p>
+    <h3>The grid — what must exist</h3>
+    <p>Wires, substations, and their upkeep, sized for the single highest moment
+    of demand, not the average. Distribution is now the largest and
+    fastest-growing slice of utility investment — capital spending on it grew
+    ~50% from 2019–2023, even as spending on power plants fell.</p>
+    <h3>The long-run shift</h3>
+    <p>Over two decades the balance has tilted from producing power toward
+    delivering it: EIA finds power production fell from 69% (2006) to 54% of
+    utility costs while delivery climbed to 46%. New large loads accelerate that
+    grid spending — and it's recovered from everyone.</p>
+  </details>
+  <div class="note info"><p><strong>Key insight:</strong> The fastest-growing
+  part of your bill is the grid itself. Utility capital spending on the
+  distribution network grew ~50% from 2019 to 2023 — now the single largest
+  category of investment (44%) — while spending on power plants fell. New peak
+  loads like data centers require exactly this kind of grid buildout, and those
+  costs are recovered from every ratepayer on the system.</p></div>
+</section>
+
+<section>
+  <h2>Three customers, three completely different bills</h2>
+  <p>Everyone pays for the same grid, but costs land radically differently:
+  <strong>homes</strong> get one blended rate they can't see into or manage;
+  <strong>businesses</strong> get a demand meter and actively shave peaks;
+  <strong>data centers</strong> negotiate custom tariffs with dedicated energy
+  teams.</p>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th></th><th>Residential</th><th>Commercial</th><th>Industrial / data center</th></tr>
+    <tr><td><strong>Sees demand charges?</strong></td><td>No — buried in kWh rate</td><td>Yes — explicit $/kW line item</td><td>Yes — negotiated and managed</td></tr>
+    <tr><td><strong>Has a demand meter?</strong></td><td>Rarely</td><td>Yes — 15-min interval</td><td>Yes — 5–15 min interval</td></tr>
+    <tr><td><strong>Can manage peak usage?</strong></td><td>Barely — no real-time signal</td><td>Yes — building automation</td><td>Yes — dedicated energy team</td></tr>
+    <tr><td><strong>Capacity cost allocation</strong></td><td>Socialized across all ratepayers</td><td>Partly based on individual peak</td><td>Negotiated; often discounted</td></tr>
+    <tr><td><strong>Benefits from curtailment?</strong></td><td>No direct savings</td><td>Yes — lower demand charge</td><td>Yes — but won't do it (SLAs)</td></tr>
+    <tr><td><strong>Typical monthly bill</strong></td><td>$150–250</td><td>$5,000–50,000</td><td>$500,000–5,000,000+</td></tr>
+  </table>
+  </div>
+  <div class="note bad"><p><strong>The core inequity:</strong> Industrial
+  customers like data centers have dedicated demand meters, energy management
+  teams, and negotiated rates that let them optimize their costs. Residential
+  customers have none of these tools — yet when data center growth drives up
+  system-wide capacity costs, those costs are socialized into the blended
+  per-kWh rate that homeowners pay. The customers with the least ability to
+  respond bear a disproportionate share of the cost caused by the customers
+  with the most ability to respond.</p></div>
+  <details class="more"><summary>How this works in different market structures</summary>
+    <p><strong>Deregulated markets (PJM, ISO-NE, NYISO)</strong> — Capacity is
+    procured through auctions. The cost is allocated to utilities based on their
+    total load during system peak hours, then passed through to customers.
+    Residential customers see it as a line item or bundled into the default
+    service rate. C&amp;I customers see explicit demand and capacity charges and
+    can manage them.</p>
+    <p><strong>Regulated / vertically integrated markets (Duke, Southern,
+    Entergy)</strong> — No separate capacity market. The utility owns generation
+    and recovers costs through base rates set in rate cases. When it builds new
+    capacity to serve data center growth, the capital is rate-based and
+    recovered from all customers through higher per-kWh rates.</p>
+    <p><strong>ERCOT (Texas)</strong> — No capacity market at all. Texas uses an
+    energy-only market where scarcity pricing during peak hours is supposed to
+    incentivize generation investment. Residential customers on variable-rate
+    plans are directly exposed to wholesale spikes (which is why bills exploded
+    during Winter Storm Uri). Data centers can negotiate bilateral PPAs that
+    lock in low prices, shifting scarcity cost to the remaining pool.</p>
+    <p>In all three structures the pattern holds: large industrial loads have
+    tools, tariffs, and negotiating power to manage their exposure. Residential
+    customers absorb socialized costs with no visibility and no control.</p>
+  </details>
+</section>
+
+<section>
+  <h2>Peak load: why the hottest afternoon sets your annual bill</h2>
+  <div class="flow">
+    <div class="step"><b>New 200 MW data center</b>Adds constant baseload</div>
+    <div class="step"><b>System peak rises</b>Grid must build for the highest hour</div>
+    <div class="step"><b>New capacity needed</b>Substations, transmission, plants</div>
+    <div class="step end"><b>Your bill goes up $15–21/mo</b>Costs socialized to all ratepayers</div>
+  </div>
+  <p>Electricity can't be stored cheaply at scale, so the grid must be built for
+  the single highest hour of demand each year. When a big new load raises that
+  peak, every customer's capacity allocation increases.</p>
+  <div class="stats">
+    <div class="stat"><b>+833%</b><span>PJM capacity auction — $28.92 to $269.92/MW-day</span></div>
+    <div class="stat"><b>63%</b><span>of the price increase driven by data centers</span></div>
+    <div class="stat"><b>+$15–21/mo</b><span>bill impact in affected PJM zones</span></div>
+  </div>
+  <details class="more"><summary>Read more — how the peak drives costs</summary>
+    <p><strong>Capacity obligation</strong> — grid operators run auctions years
+    in advance so power plants commit to being available during peak. Those
+    commitments cost money whether or not the plants run.</p>
+    <p><strong>Peaker plants</strong> — gas plants that run only 50–200 hours a
+    year but must be maintained year-round. Their per-MWh cost is enormous.</p>
+    <p><strong>Transmission upgrades</strong> — wires are sized for the peak,
+    not the average. Building for a 2 GW peak instead of 1.5 GW can mean
+    billions in new lines.</p>
+    <p><strong>The "coincident peak" trap</strong> — many utilities set your
+    capacity charge from your usage during the single highest-demand hour across
+    the grid that year. A large new load raises that peak, and every customer's
+    allocation increases, even those whose own usage didn't change.</p>
+  </details>
+</section>
+
+<section>
+  <h2>How wholesale MW charges actually land on your bill</h2>
+  <div class="flow">
+    <div class="step"><b>Step 1</b>Capacity auction clears at $269.92/MW-day</div>
+    <div class="step"><b>Step 2</b>Your utility buys in bulk: $800M–$1.2B</div>
+    <div class="step"><b>Step 3</b>Your "capacity tag" is set by 5 peak hours</div>
+    <div class="step end"><b>Step 4</b>Shows up as a line item — or buried in your rate</div>
+  </div>
+  <details class="more"><summary>Read more — the four-step chain, in detail</summary>
+    <p><strong>Your utility buys capacity in bulk.</strong> It must procure
+    enough to cover every customer's share of the system peak, plus a reserve
+    margin. For a utility serving 1 million homes in PJM, the 2025/26 auction
+    cost roughly $800M–$1.2B in capacity obligations alone — before a single
+    electron flows.</p>
+    <p><strong>Allocation via your capacity tag.</strong> In PJM every customer
+    gets a Peak Load Contribution — your usage during the five highest-demand
+    hours of the prior summer, averaged. Ran the AC hard on those afternoons?
+    You carry a bigger share. Most customers have no idea which hours set it.</p>
+    <p><strong>Line item — or buried.</strong> Deregulated utilities (Pepco,
+    BGE, PECO) show an explicit capacity line item; regulated ones (Duke,
+    Dominion, Southern) roll it into a blended supply rate; co-ops bury it in
+    the base rate. Pepco customers got a notice in spring 2025 that capacity
+    charges were rising ~$10/month.</p>
+    <p><strong>Time-of-use pricing.</strong> Some utilities charge more during
+    peak hours (2–7 PM summer weekdays) to push usage off-peak — your bill
+    depends on when you use power, not just how much.</p>
+  </details>
+  <h3>A worked example: the PJM capacity cost on a typical home</h3>
+  <div class="stats">
+    <div class="stat"><b>2.5 kW</b><span>typical residential capacity tag (PLC)</span></div>
+    <div class="stat"><b>$2.20/mo</b><span>2024/25 capacity cost — before the jump</span></div>
+    <div class="stat"><b>$20.50/mo</b><span>2025/26 capacity cost — after the 833% increase</span></div>
+  </div>
+  <p>That <strong>$18.30/month increase</strong> — about <strong>$220 a
+  year</strong> — is entirely from the capacity market. Your usage didn't
+  change. Your appliances didn't change. The grid's obligation changed because
+  total system peak demand grew, driven largely by data center load.</p>
+  <div class="note info"><p><strong>What you can do:</strong> In PJM territory
+  your capacity tag is set by usage during the ~5 hottest summer afternoons. If
+  you can cut AC use during 2–6 PM on the hottest July/August weekdays — by
+  pre-cooling, raising the thermostat, or using a smart thermostat's
+  demand-response mode — you lower your PLC and your share of capacity costs for
+  the following year. Some utilities run peak-time rebate programs paying
+  $1–2/kWh for reducing usage during those hours.</p></div>
+</section>
+
+<section>
+  <h2>How data centers specifically affect your bill</h2>
+  <p>Data centers draw large, constant loads — often 50–300+ MW per campus,
+  running 24/7. Here's how that translates into bill impacts for residential
+  customers.</p>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Mechanism</th><th>How it works</th><th>Estimated impact</th></tr>
+    <tr><td><strong>Capacity market costs</strong></td><td>Load growth forces utilities to procure more generation capacity at auction. Costs are socialized across all ratepayers.</td><td>+$15–21/month in PJM zones (2025/26)</td></tr>
+    <tr><td><strong>Transmission upgrades</strong></td><td>New substations, high-voltage lines, and interconnections to serve campuses. Costs are rate-based and recovered from all customers.</td><td>$3–7B planned in Northern Virginia alone</td></tr>
+    <tr><td><strong>Rate case increases</strong></td><td>Utilities file rate cases to recover capital invested in serving new large loads. All customers share the revenue requirement.</td><td>Residential rates up 6% nationally in 2025 (2× inflation)</td></tr>
+    <tr><td><strong>Reduced reserve margins</strong></td><td>Rapid load growth without matching new generation tightens supply, raising wholesale prices for everyone.</td><td>PJM wholesale prices up 76% (2026 delivery year)</td></tr>
+    <tr><td><strong>Stranded asset risk</strong></td><td>If load doesn't materialize as projected, ratepayers may still pay for overbuilt infrastructure.</td><td>Under investigation by multiple PUCs</td></tr>
+  </table>
+  </div>
+  <div class="note warn"><p><strong>The counterargument:</strong>
+  Industry-funded studies (notably E3/Amazon, Dec 2025) argue that data centers
+  generate surplus utility revenue — paying more than their cost to serve —
+  which should benefit other ratepayers. Critics note these studies assume full
+  build-out and don't account for the capacity market externalities and
+  transmission costs borne by all customers.</p></div>
+</section>
+
+<section>
+  <h2>Key research: Duke University on load flexibility</h2>
+  <p>In February 2025 the Nicholas Institute for Energy, Environment &amp;
+  Sustainability at Duke University published a landmark study led by Tyler
+  Norris introducing the concept of <em>curtailment-enabled headroom</em>.</p>
+  <blockquote>The existing U.S. power grid could accommodate up to 98 GW of new
+  large loads — more than all data centers use globally today — if those loads
+  agree to curtail usage during just 0.5% of annual hours (about 44 hours a
+  year on average, with a maximum of 177 hours in the most constrained
+  regions).</blockquote>
+  <div class="stats">
+    <div class="stat"><b>98 GW</b><span>grid headroom with flexibility — more than global DC demand today</span></div>
+    <div class="stat"><b>0.5%</b><span>of annual hours curtailed — ~44 hrs/yr avg, 177 max</span></div>
+    <div class="stat"><b>$150B+</b><span>avoided generation and transmission investment</span></div>
+  </div>
+  <p>If data centers participate in demand response — briefly reducing load
+  during the handful of hours each year when the grid is most stressed — the
+  need for expensive new peaker plants and transmission disappears. That means
+  the capacity costs driving up your bill could be dramatically reduced.</p>
+  <p><strong>The catch:</strong> most operators currently refuse curtailment
+  because of strict uptime SLAs. The Duke study shows the technical potential is
+  there — the barrier is contractual and commercial, not engineering.</p>
+  <details class="more"><summary>Study details and methodology</summary>
+    <ul>
+      <li><strong>Scope:</strong> 22 of the largest U.S. balancing areas (~80% of demand)</li>
+      <li><strong>Method:</strong> production cost modelling with incremental load additions and curtailment constraints</li>
+      <li><strong>Key innovation:</strong> the curtailment-enabled headroom metric — how much load can be added before reliability standards are violated, at a given curtailment rate</li>
+      <li><strong>Result:</strong> at 0.5% curtailment, headroom ranges from 2–15 GW per balancing area, ~98 GW nationally</li>
+      <li><strong>Comparison:</strong> existing demand response programs already curtail at comparable rates (FERC Order 2222 resources average 1–3%)</li>
+    </ul>
+    <p class="src">Norris, T. et al. (2025). "Curtailment-Enabled Headroom: How
+    Flexible Large Loads Can Accelerate Grid Integration." Nicholas Institute,
+    Duke University.</p>
+  </details>
+</section>
+
+<section>
+  <h2>Why don't data centers voluntarily curtail?</h2>
+  <p>If 44 hours a year of curtailment could save $150B in grid costs, why isn't
+  it happening? Three barriers — all business and contractual, none technical:
+  misaligned incentives, sacred uptime SLAs, and no regulatory mandate.</p>
+  <details class="more"><summary>Read more — the three barriers, unpacked</summary>
+    <h3>Misaligned incentives</h3>
+    <p>When a data center drives up the system peak, the resulting capacity
+    charges are spread across all ratepayers — the incremental cost it imposes
+    is socialized. There's no price signal saying "your load this hour just cost
+    the grid $50M in capacity obligations." And curtailing saves the operator
+    nothing on its own bill, since auction prices are set months in advance,
+    while every hour of curtailment risks SLA penalties and lost revenue.</p>
+    <h3>Uptime SLAs are contractually sacred</h3>
+    <p>Cloud contracts guarantee 99.99–99.999% uptime. Voluntary curtailment
+    triggers SLA breach penalties (millions per incident), customer churn, and
+    liability exposure. The irony: AI training is actually flexible — runs can
+    pause and resume — but operators bundle training and inference on shared
+    infrastructure and apply the strictest SLA to everything.</p>
+    <h3>No regulatory mandate</h3>
+    <p>Unlike power plants, data centers have no obligation to participate in
+    demand response — they're treated as ordinary load.</p>
+  </details>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Missing mechanism</th><th>Why it matters</th></tr>
+    <tr><td><strong>Marginal capacity pricing</strong></td><td>Current rates charge average cost, not the marginal cost a new load imposes. If data centers paid the true incremental capacity cost of their peak-hour consumption, curtailment would become profitable overnight.</td></tr>
+    <tr><td><strong>Interruptible tariffs with teeth</strong></td><td>Some utilities offer interruptible rates, but participation is voluntary and discounts are too small to offset SLA risk. Making participation mandatory above a load threshold (say 10+ MW) would change the calculus.</td></tr>
+    <tr><td><strong>Behind-the-meter flexibility markets</strong></td><td>Data centers could bid flexible workloads (training, batch processing, backups) into demand response markets, earning revenue for curtailment. PJM and ERCOT are exploring this but adoption is minimal.</td></tr>
+    <tr><td><strong>Differentiated SLAs for AI training</strong></td><td>Separating training (flexible, delay-tolerant) from inference (latency-critical) would let operators curtail training load without touching customer-facing services.</td></tr>
+  </table>
+  </div>
+  <div class="note bad"><p><strong>The core problem in one sentence:</strong>
+  Data centers externalize peak-load costs onto all ratepayers, face no
+  regulatory requirement to curtail, and have financial incentives that reward
+  consuming as much power as possible at all hours — even when the grid is at
+  its breaking point.</p></div>
+</section>
+
+<section>
+  <h2>Research library</h2>
+  <details class="more"><summary>LBNL / DOE — 2024 Data Center Energy Report</summary>
+    <p>{_srcref('lbnl')}</p>
+    <ul>
+      <li>U.S. data center electricity climbed from 58 TWh (2014) to 176 TWh (2023)</li>
+      <li>Projected 325–580 TWh by 2028 (6.7–12% of total U.S. electricity)</li>
+      <li>Demand growth has tripled over the past decade and is projected to double or triple again by 2028</li>
+      <li>In some regions AI-driven demand is outpacing capacity, forcing companies to install inefficient on-site generators</li>
+    </ul>
+    <p><strong>Reliability incident (Jul 2024):</strong> a voltage fluctuation in
+    Northern Virginia triggered simultaneous disconnection of 60 data centers —
+    a 1,500 MW surplus requiring emergency grid adjustments to prevent cascading
+    outages.</p>
+  </details>
+  <details class="more"><summary>Harvard Belfer Center — AI, Data Centers, and the U.S. Electric Grid (2026)</summary>
+    <p>{_srcref('belfer')}</p>
+    <ul>
+      <li>Traditional load forecasting is failing — AI demand is growing faster than any historical precedent</li>
+      <li>Regional concentration creates localized reliability risks that national statistics obscure</li>
+      <li>Recommends mandatory demand response for large loads and reformed interconnection processes</li>
+    </ul>
+  </details>
+  <details class="more"><summary>E3 / Amazon — Tailored for Scale (Dec 2025), the industry counterargument</summary>
+    <p>{_srcref('e3_amazon')}</p>
+    <ul>
+      <li>Studied Amazon facilities across four utility territories (PG&amp;E, Umatilla, Dominion, Entergy)</li>
+      <li>Found data centers generate $3.4M surplus revenue per 100 MW facility (2025), rising to $6.1M by 2030</li>
+      <li>Concludes data centers are net contributors, not subsidized</li>
+    </ul>
+    <p><strong>Important context:</strong> the study examines individual
+    facilities in isolation and does not model the system-wide capacity market
+    and transmission effects PJM's market monitor attributes to data center
+    growth. Both findings can be true — a facility can pay more than its direct
+    cost-to-serve while still driving up socialized system-wide costs.</p>
+  </details>
+  <details class="more"><summary>Columbia — Grid-Enhancing Technologies (2025)</summary>
+    <p>{_srcref('columbia_get')}</p>
+    <ul>
+      <li>Dynamic line ratings, power flow controllers, and topology optimization could release 20–40% more capacity from existing transmission without new construction</li>
+      <li>Combined with demand response, could ease price pressure through 2030</li>
+      <li>Estimated to defer $10–30B in transmission investment nationally</li>
+    </ul>
+  </details>
+  <details class="more"><summary>UC Berkeley Energy Institute — What will data centers do to your electric bill? (2025)</summary>
+    <p>{_srcref('ucb_haas')}</p>
+    <ul>
+      <li>Investor-owned utilities sought $18 billion in rate increases in 2025 — the most since the mid-1980s</li>
+      <li>Residential prices rose 6% nominal (2× inflation)</li>
+      <li>Capacity market costs are the fastest-growing bill component in RTO markets, with data centers the primary demand driver</li>
+      <li>Recommends large loads bear their full marginal cost of service, not just embedded average costs</li>
+    </ul>
+  </details>
+</section>
+
+<section>
+  <h2>What can be done? Policy and market solutions</h2>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Solution</th><th>How it helps</th><th>Status</th></tr>
+    <tr><td><strong>Mandatory demand response</strong></td><td>Require data centers to curtail during peak hours, reducing the need for new peaker plants</td><td>Proposed in 5+ state legislatures (2026)</td></tr>
+    <tr><td><strong>Cost-causation rate design</strong></td><td>Charge large loads for the capacity and transmission they actually cause, rather than socializing costs</td><td>Under review at FERC; several PUCs investigating</td></tr>
+    <tr><td><strong>Grid-enhancing technologies</strong></td><td>Squeeze more capacity from existing wires via sensors and software</td><td>Deployed in pockets; DOE pushing broader adoption</td></tr>
+    <tr><td><strong>Load flexibility contracts</strong></td><td>Offer lower rates in exchange for contractual curtailment rights</td><td>Duke and Dominion piloting programs</td></tr>
+    <tr><td><strong>On-site generation requirements</strong></td><td>Require large loads to provide their own backup/peaking capacity</td><td>Proposed in NC, VA, GA</td></tr>
+    <tr><td><strong>Interconnection reform</strong></td><td>Speed up queue processing; require deposits to prevent speculative capacity hoarding</td><td>FERC Order 2023 reforms underway</td></tr>
+    <tr><td><strong>Moratoriums &amp; impact fees</strong></td><td>Pause construction until infrastructure catches up; charge fees to fund upgrades</td><td>14+ states with active or proposed moratoriums</td></tr>
+  </table>
+  </div>
+  <div class="note good"><p><strong>The bottom line:</strong> The Duke research
+  shows the technical solution exists — brief, modest curtailment can avoid tens
+  of billions in new infrastructure costs. The challenge is creating the
+  regulatory and commercial frameworks to make data centers participate. Until
+  then, residential ratepayers bear the cost of keeping the grid ready for loads
+  that refuse to flex.</p></div>
+</section>
+
+<section>
+  <h2>Sources &amp; further reading</h2>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Source</th><th>Title</th><th>Date</th></tr>
+    <tr><td>Duke Nicholas Institute</td><td><a href="https://nicholasinstitute.duke.edu/publications/curtailment-enabled-headroom-how-flexible-large-loads-can-accelerate-decarbonization" rel="nofollow">Curtailment-Enabled Headroom</a></td><td>Feb 2025</td></tr>
+    <tr><td>Lawrence Berkeley National Lab</td><td><a href="https://eta.lbl.gov/publications/2024-united-states-data-center-energy" rel="nofollow">2024 U.S. Data Center Energy Usage Report</a></td><td>Jan 2025</td></tr>
+    <tr><td>Harvard Belfer Center</td><td><a href="https://www.belfercenter.org/publication/ai-data-centers-and-us-electric-grid" rel="nofollow">AI, Data Centers, and the U.S. Electric Grid</a></td><td>Feb 2026</td></tr>
+    <tr><td>E3 / Amazon</td><td><a href="https://www.ethree.com/wp-content/uploads/2025/01/Tailored-for-Scale-Report.pdf" rel="nofollow">Tailored for Scale</a></td><td>Dec 2025</td></tr>
+    <tr><td>Columbia University</td><td><a href="https://energypolicy.columbia.edu/publications/grid-enhancing-technologies/" rel="nofollow">Grid-Enhancing Technologies</a></td><td>2025</td></tr>
+    <tr><td>UC Berkeley Energy Institute</td><td><a href="https://energyathaas.wordpress.com/2025/09/08/what-will-data-centers-do-to-your-electric-bill/" rel="nofollow">What will data centers do to your electric bill?</a></td><td>Sep 2025</td></tr>
+    <tr><td>PJM Interconnection</td><td><a href="https://www.monitoringanalytics.com/reports/Reports/2025.shtml" rel="nofollow">Market Monitor capacity auction reports</a></td><td>2025–2026</td></tr>
+    <tr><td>IEEFA</td><td><a href="https://ieefa.org/resources/projected-data-center-growth-spurs-pjm-capacity-prices-factor-10" rel="nofollow">Data center growth spurs PJM capacity prices 10×</a></td><td>2025</td></tr>
+    <tr><td>DOE</td><td><a href="https://www.energy.gov/policy/articles/clean-energy-resources-meet-data-center-electricity-demand" rel="nofollow">Clean energy to meet data center demand</a></td><td>2025</td></tr>
+    <tr><td>FERC</td><td><a href="https://www.ferc.gov/media/e-1-rm22-14-000" rel="nofollow">Order 2023 — interconnection queue reform</a></td><td>2023</td></tr>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>Take this to your utility commission</h2>
+  <p>Your state PUC decides rate cases — that's where the cost-shift argument on
+  this page actually gets made. Your state briefing has its contact details and
+  complaint link, and the free toolkit has model CBA clauses for grid-upgrade
+  cost allocation and rate caps.</p>
+  <p><a class="btn" href="states/index.html">Find your state &rarr;</a>
+  <a class="btn ghost" href="{APP_URL}">Open the toolkit</a></p>
+</section>
+"""
+    return page(
+        "Why your electric bill is going up: data centers, capacity markets & peak load",
+        "How electricity bills work, why peak demand sets your annual cost, and "
+        "what the research says about data centers shifting costs onto "
+        "residential ratepayers.",
+        body, f"{SITE_URL}/bills")
 
 
 def build_moratoriums():
@@ -1742,6 +2198,7 @@ def main():
     (WEB / "health-risks.html").write_text(build_health(), encoding="utf-8")
     (WEB / "moratoriums.html").write_text(build_moratoriums(), encoding="utf-8")
     (WEB / "impact.html").write_text(build_impact_calculator(), encoding="utf-8")
+    (WEB / "bills.html").write_text(build_bills(), encoding="utf-8")
     (WEB / "about.html").write_text(build_about(), encoding="utf-8")
     (WEB / "search.html").write_text(build_search(), encoding="utf-8")
     (WEB / "dividend.html").write_text(build_data_dividend(), encoding="utf-8")
@@ -1771,7 +2228,7 @@ def main():
         (WEB / "companies" / f"{ld['slug']}.html").write_text(
             build_limited_scorecard(ld), encoding="utf-8")
 
-    paths = ["", "health-risks", "moratoriums", "impact", "about",
+    paths = ["", "health-risks", "moratoriums", "impact", "bills", "about",
              "search", "dividend", "companies/", "states/", "blog/"]
     paths.extend(f"companies/{h['slug']}" for h in _HYPERSCALERS)
     paths.extend(f"companies/{h['slug']}" for h in _OPERATORS)
