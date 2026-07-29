@@ -36,7 +36,6 @@ from src.ui.dc_tab import render_dc_tab
 from src.ui.news_tab import render_news_tab
 from src.ui.news_feed_tab import render_news_feed_tab
 from src.ui.officials_tab import render_officials_tab
-from src.ui.macro_tab import render_macro_tab
 from src.ui.method_tab import render_method_tab
 from src.ui.monitors_tab import render_monitors_tab
 from src.ui.learn_tab import render_learn_tab
@@ -700,15 +699,15 @@ with tab_reference:
         "moved yet."
     )
     st.info(
-        f"**Why is my bill going up?** moved to the site: "
-        f"[{SITE_LABEL}/bills]({SITE}/bills) — the full explainer on capacity "
-        "markets, peak load, and how data center costs reach residential "
-        "ratepayers."
+        f"**Moved to the site:** "
+        f"[{SITE_LABEL}/bills]({SITE}/bills) — why your electric bill is going "
+        f"up, capacity markets and peak load · "
+        f"[{SITE_LABEL}/outlook]({SITE}/outlook) — global and US electricity "
+        "forecasts to 2035, and where new facilities are being built."
     )
-    (ref_learn, ref_dc, ref_corp,
-     ref_states, ref_macro) = st.tabs([
+    (ref_learn, ref_dc, ref_corp, ref_states) = st.tabs([
         "🎓 Learn", "🏢 Data centers",
-        "💼 Companies", "🗂️ States & officials", "🌍 Macro outlook",
+        "💼 Companies", "🗂️ States & officials",
     ])
     with ref_learn:
         render_learn_tab()
@@ -720,8 +719,6 @@ with tab_reference:
         render_studies_tab()
         st.divider()
         render_officials_tab()
-    with ref_macro:
-        render_macro_tab()
 
 # ── Consulting ───────────────────────────────────────────────────────── #
 with tab_consulting:

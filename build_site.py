@@ -42,6 +42,8 @@ from src.constants import (
     CYRUSONE_2023_HEADLINE, VANTAGE_2023_HEADLINE,
     COREWEAVE_PROFILE, QTS_PROFILE, SWITCH_PROFILE, COMPASS_PROFILE,
     SOURCES, registry_provenance, has_value,
+    IEA_OUTLOOK, DC_FORECASTS, DC_FORECASTS_US,
+    PEW_RURAL_2026, PEW_STATE_COUNTS,
 )
 from src.pdf_pack import build_health_pdf
 from src.us_map_data import US_MAP_PATHS, US_MAP_LABELS, US_MAP_VIEWBOX
@@ -170,6 +172,17 @@ details.more[open] { padding-bottom:10px; }
   background:rgba(255,255,255,.02); font-size:14px; }
 .flow .step b { display:block; margin-bottom:4px; }
 .flow .step.end { border-color:#ef4444; background:rgba(239,68,68,.08); }
+.hbars { margin:18px 0; display:flex; flex-direction:column; gap:8px; }
+.hbar-row { display:grid; grid-template-columns:minmax(90px,1.1fr) 2.4fr
+  minmax(90px,1.3fr); gap:10px; align-items:center; font-size:13.5px; }
+.hbar-label { color:var(--ink); }
+.hbar-track { background:rgba(255,255,255,.06); border-radius:5px; height:16px; }
+.hbar-fill { height:16px; border-radius:5px; }
+.hbar-val { color:var(--muted); font-variant-numeric:tabular-nums; }
+@media (max-width:640px) {
+  .hbar-row { grid-template-columns:1fr; gap:2px; }
+  .hbar-track { height:12px; }
+}
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -260,6 +273,7 @@ def page(title, description, body, canonical, depth=0,
   <a href="{p}moratoriums.html">Moratoriums</a>
   <a href="{p}impact.html">Calculator</a>
   <a href="{p}bills.html">Your bill</a>
+  <a href="{p}outlook.html">Outlook</a>
   <a href="{p}companies/index.html">Companies</a>
   <a href="{p}blog/index.html">Blog</a>
   <a class="cta" href="{APP_URL}">Open the toolkit &rarr;</a>
@@ -1284,6 +1298,159 @@ def build_bills():
         body, f"{SITE_URL}/bills")
 
 
+def hbars(rows, unit="", color="var(--teal)"):
+    """Horizontal bar chart as plain CSS. rows = [(label, value, note), ...].
+
+    Replaces the Altair charts the Streamlit tabs use. Bars are scaled to the
+    largest value in the set, so the eye compares within a chart, never
+    across two.
+    """
+    if not rows:
+        return ""
+    top = max(v for _, v, _ in rows) or 1
+    out = []
+    for label, value, note in rows:
+        pct = max(2.0, value / top * 100)
+        tail = f' <span class="muted">{esc(note)}</span>' if note else ""
+        out.append(
+            f'<div class="hbar-row">'
+            f'<div class="hbar-label">{esc(label)}</div>'
+            f'<div class="hbar-track"><div class="hbar-fill" '
+            f'style="width:{pct:.1f}%;background:{color}"></div></div>'
+            f'<div class="hbar-val">{value:,}{esc(unit)}{tail}</div>'
+            f'</div>')
+    return f'<div class="hbars">{"".join(out)}</div>'
+
+
+def build_outlook():
+    """Global & US data-center electricity outlook — ported from macro_tab.py.
+
+    The three Altair charts become CSS bars; the Pew section reads from the
+    PEW_* registries rather than the numbers that were inlined in the tab.
+    """
+    iea_rows = [(str(int(r.year)), int(r.twh), "")
+                for r in IEA_OUTLOOK.itertuples()]
+    fc_rows = [(f"{r.source} · {int(r.year)}", int(r.twh), "")
+               for r in DC_FORECASTS.sort_values("twh").itertuples()]
+    us_rows = [(r.source, int(r.twh), str(r.note))
+               for r in DC_FORECASTS_US.sort_values("twh").itertuples()]
+
+    pew = PEW_RURAL_2026
+    pew_rows = "".join(
+        f"<tr><td>{esc(r.state)}</td><td>{r.operating:,}</td>"
+        f"<td>{r.planned:,}</td><td><strong>{r.total:,}</strong></td></tr>"
+        for r in PEW_STATE_COUNTS.sort_values("total", ascending=False)
+                                 .itertuples())
+
+    forecasters = " · ".join(
+        _srcref(k) for k in ["iea_2025", "bnef", "gartner", "sp_451",
+                             "epri_pi", "lbnl", "wri_range"]
+        if k in SOURCES)
+
+    body = f"""
+<header>
+  <div class="kicker">Outlook</div>
+  <h1>How much electricity will data centers actually use?</h1>
+  <p class="sub">The global and US forecasts, side by side — and why
+  credible forecasters disagree by a factor of three.</p>
+</header>
+
+<section>
+  <h2>Global data-center electricity — the IEA outlook</h2>
+  {hbars(iea_rows, unit=" TWh")}
+  <div class="stats">
+    <div class="stat"><b>415 &rarr; 945 TWh</b><span>2024 to 2030 — roughly Japan's total demand</span></div>
+    <div class="stat"><b>~3%</b><span>share of global electricity by 2030</span></div>
+    <div class="stat"><b>~1%</b><span>of global CO&#8322; emissions by 2030</span></div>
+  </div>
+  <ul>
+    <li>AI's slice of data-center power is projected to climb from 5–15% recently to <strong>35–50% by 2030</strong>.</li>
+    <li><strong>Inference dominates.</strong> It accounts for the majority of a model's lifetime energy — over 90% by some operator accounts. Usage, not training, is the lever.</li>
+    <li><strong>Jevons paradox.</strong> Per-query efficiency keeps improving (Gemini fell ~33× in a year), but cheaper inference drives more usage, so total load still rises.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Forecasts disagree — a lot</h2>
+  <p>Third-party projections of <strong>global</strong> data-center electricity
+  vary widely by forecaster, year, and scenario. They measure the same thing,
+  so they are comparable; the gap between them is honest uncertainty, not
+  error.</p>
+  {hbars(fc_rows, unit=" TWh", color="var(--teal)")}
+  <h3>US only, 2030</h3>
+  <p>The spread is the whole point: central estimates run about 2.8× from low
+  to high.</p>
+  {hbars(us_rows, unit=" TWh", color="var(--amber)")}
+  <ul>
+    <li><strong>In capacity terms:</strong> BloombergNEF sees US data-center
+    power reaching ~106 GW by 2035, up from ~25 GW in 2024 — 8.6% of all US
+    electricity, more than double today's 3.5%. {_srcref('bnef_106')}</li>
+    <li><strong>Why the spread:</strong> forecasts hinge on how much announced
+    pipeline actually gets built and powered — interconnection queues are
+    heavily speculative — plus efficiency gains and utilisation assumptions.</li>
+  </ul>
+  <p class="src">Forecasters: {forecasters}</p>
+  <div class="note info"><p>If a developer cites a single forecast at your
+  hearing, ask which one and why. There is no consensus number, and the
+  choice between 350 TWh and 970 TWh is doing a lot of work in any argument
+  about whether the grid can absorb a new campus.</p></div>
+</section>
+
+<section>
+  <h2>The rural migration</h2>
+  <p>Pew Research Center analysed where new US facilities are going
+  ({esc(pew['as_of'])}). The finding that matters for community advocacy: the
+  build-out has moved to rural counties, most of which have never hosted a
+  data center and have no zoning precedent for one.</p>
+  <div class="stats">
+    <div class="stat"><b>{pew['planned_rural_pct']}%</b><span>of planned facilities are rural — against {pew['operating_rural_pct']}% of those operating today</span></div>
+    <div class="stat"><b>{pew['new_counties_pct']}%</b><span>are landing in counties with zero current data centers</span></div>
+    <div class="stat"><b>{pew['americans_within_5mi_planned_pct']}%</b><span>of Americans will live within 5 miles of one, up from {pew['americans_within_5mi_now_pct']}%</span></div>
+  </div>
+  <ul>
+    <li><strong>Regional drivers:</strong> the South and Midwest are capturing
+    three-quarters of all planned US developments. The South alone accounts for
+    {pew['south_share_pct']}% of upcoming sites.</li>
+    <li><strong>Growth speed:</strong> planned developments represent a
+    {pew['south_growth_pct']}% increase in total facilities for the South and
+    {pew['midwest_growth_pct']}% for the Midwest, relative to current counts.</li>
+    <li><strong>Tight clusters:</strong> {pew['clustered_within_5mi_pct']}% of
+    all operating and planned sites are within 5 miles of another. The first
+    approval in a county is rarely the last.</li>
+  </ul>
+  <details class="more"><summary>Top states by planned &amp; operating facilities</summary>
+    <div style="overflow-x:auto">
+    <table>
+      <tr><th>State</th><th>Operating</th><th>Planned</th><th>Total</th></tr>
+      {pew_rows}
+    </table>
+    </div>
+    <p class="src">Pew Research Center, {esc(pew['as_of'])}; facility counts via
+    DataCenterMap. Counts, not megawatts — a small network room counts the same
+    as a gigawatt campus. {_srcref('pew_rural_2026')}</p>
+  </details>
+  <div class="note warn"><p><strong>Why this lands on you:</strong> a county
+  that has never permitted a data center has no template — no zoning overlay,
+  no noise ordinance, no water study, and often no staff who have read one of
+  these applications before. That is the gap the toolkit is built for.</p></div>
+</section>
+
+<section>
+  <h2>What this means where you live</h2>
+  <p>National forecasts don't decide anything. Your state's grid, rates, and
+  regulator do.</p>
+  <p><a class="btn" href="states/index.html">Your state briefing &rarr;</a>
+  <a class="btn ghost" href="bills.html">How this reaches your bill</a></p>
+</section>
+"""
+    return page(
+        "Data center electricity forecasts: global and US outlook to 2035",
+        "IEA, BloombergNEF, LBNL and EPRI projections for data-center "
+        "electricity — why they disagree by 3×, and where new US facilities "
+        "are actually being built.",
+        body, f"{SITE_URL}/outlook")
+
+
 def build_moratoriums():
     total = len(MORATORIUMS_DF)
     n_states = MORATORIUMS_DF["state"].nunique()
@@ -2217,6 +2384,7 @@ def main():
     (WEB / "moratoriums.html").write_text(build_moratoriums(), encoding="utf-8")
     (WEB / "impact.html").write_text(build_impact_calculator(), encoding="utf-8")
     (WEB / "bills.html").write_text(build_bills(), encoding="utf-8")
+    (WEB / "outlook.html").write_text(build_outlook(), encoding="utf-8")
     (WEB / "about.html").write_text(build_about(), encoding="utf-8")
     (WEB / "search.html").write_text(build_search(), encoding="utf-8")
     (WEB / "dividend.html").write_text(build_data_dividend(), encoding="utf-8")
@@ -2246,7 +2414,7 @@ def main():
         (WEB / "companies" / f"{ld['slug']}.html").write_text(
             build_limited_scorecard(ld), encoding="utf-8")
 
-    paths = ["", "health-risks", "moratoriums", "impact", "bills", "about",
+    paths = ["", "health-risks", "moratoriums", "impact", "bills", "outlook", "about",
              "search", "dividend", "companies/", "states/", "blog/"]
     paths.extend(f"companies/{h['slug']}" for h in _HYPERSCALERS)
     paths.extend(f"companies/{h['slug']}" for h in _OPERATORS)

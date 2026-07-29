@@ -158,6 +158,42 @@ DC_FORECASTS_US = pd.DataFrame([
     {"source": "BCG",                      "twh": 970, "note": "high end",        "src": "wri_range"},
 ])
 
+# Pew Research Center, April 2026 — where new US data centers are being sited.
+# The headline finding for community advocacy: the build-out has moved to rural
+# counties, most of which have never hosted a facility and have no zoning
+# precedent for one. See SOURCES["pew_rural_2026"].
+PEW_RURAL_2026 = {
+    "planned_rural_pct": 67,
+    "operating_rural_pct": 13,
+    "planned_urban_pct": 33,
+    "operating_urban_pct": 87,
+    "new_counties_pct": 39,
+    "americans_within_5mi_now_pct": 38,
+    "americans_within_5mi_planned_pct": 42,
+    "clustered_within_5mi_pct": 90,
+    "south_share_pct": 48,
+    "south_growth_pct": 62,
+    "midwest_growth_pct": 64,
+    "as_of": "April 2026",
+}
+
+# Top states by operating vs planned facilities (Pew 2026, counts via
+# DataCenterMap). Facility counts, not megawatts — see REGISTRY_PROVENANCE.
+PEW_STATE_COUNTS = pd.DataFrame([
+    {"state": "Virginia",       "operating": 398, "planned": 287},
+    {"state": "Texas",          "operating": 296, "planned": 170},
+    {"state": "Georgia",        "operating":  94, "planned": 141},
+    {"state": "Illinois",       "operating": 139, "planned": 123},
+    {"state": "Arizona",        "operating":  98, "planned":  86},
+    {"state": "Indiana",        "operating":  38, "planned":  54},
+    {"state": "Ohio",           "operating": 166, "planned":  57},
+    {"state": "Pennsylvania",   "operating":  78, "planned":  51},
+    {"state": "North Carolina", "operating":  72, "planned":  41},
+    {"state": "Iowa",           "operating":  64, "planned":  41},
+])
+PEW_STATE_COUNTS["total"] = (PEW_STATE_COUNTS["operating"]
+                             + PEW_STATE_COUNTS["planned"])
+
 # Major data-center markets — OPERATIONAL commissioned power (MW), ~2025.
 # Market-level totals from broker inventories (CBRE / Cushman & Wakefield /
 # datacenterHawk) — NOT per-facility disclosures, which operators don't publish.
@@ -2693,25 +2729,6 @@ GOOGLE_NEWS_RSS = ("https://news.google.com/rss/search?q={q}"
                    "&hl=en-US&gl=US&ceid=US:en")
 
 # Third-party projections of global/US data-center electricity (TWh)
-DC_FORECASTS = pd.DataFrame([
-    {"source": "IEA (base)",     "year": 2030, "twh": 945,  "src": "iea_2025"},
-    {"source": "IEA (base)",     "year": 2035, "twh": 1200, "src": "iea_2025"},
-    {"source": "IEA (lift-off)", "year": 2035, "twh": 1700, "src": "iea_2025"},
-    {"source": "Gartner",        "year": 2030, "twh": 980,  "src": "gartner"},
-    {"source": "451 Research",   "year": 2030, "twh": 1587, "src": "sp_451"},
-    {"source": "BloombergNEF",   "year": 2035, "twh": 1200, "src": "bnef"},
-    {"source": "BloombergNEF",   "year": 2050, "twh": 3700, "src": "bnef"},
-])
-
-DC_FORECASTS_US = pd.DataFrame([
-    {"source": "Goldman Sachs / McKinsey", "twh": 350, "note": "~300–400 range", "src": "wri_range"},
-    {"source": "IEA",                      "twh": 425, "note": "~8% of US power", "src": "iea_2025"},
-    {"source": "LBNL (Berkeley Lab)",      "twh": 450, "note": "range 325–580",  "src": "lbnl"},
-    {"source": "EPRI (medium)",            "twh": 590, "note": "13% of US power", "src": "epri_pi"},
-    {"source": "EPRI (high)",              "twh": 790, "note": "17% of US power", "src": "epri_pi"},
-    {"source": "BCG",                      "twh": 970, "note": "high end",        "src": "wri_range"},
-])
-
 COMPANY_STATEMENTS = [
     # --- Hyperscalers & AI cloud ---
     ("Hyperscalers & AI cloud", "Amazon / AWS",
