@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Environmental impact — AI GridWatch</title>
+<meta name="description" content="Side-by-side environmental footprint of Google, Meta, Microsoft, and AWS: electricity, carbon, water, and what they pay.">
+<link rel="canonical" href="https://aigridwatch.com/environment">
+<link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
+      href="https://aigridwatch.com/blog/feed.xml">
+<meta property="og:title" content="Environmental impact — AI GridWatch">
+<meta property="og:description" content="Side-by-side environmental footprint of Google, Meta, Microsoft, and AWS: electricity, carbon, water, and what they pay.">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Environment", "item": "https://aigridwatch.com/environment"}]}</script>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<style>
+:root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
+        --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
+* { box-sizing:border-box; margin:0; }
+body { background:var(--bg); color:var(--ink);
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.wrap { max-width:900px; margin:0 auto; padding:20px 20px 64px; }
+nav { display:flex; align-items:center; gap:14px; padding:14px 0;
+      border-bottom:1px solid var(--rule); flex-wrap:wrap; }
+nav img { height:34px; }
+nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+nav a:hover { color:var(--teal); }
+nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
+           font-weight:700; padding:8px 16px; border-radius:8px; }
+header { padding:44px 0 10px; }
+.kicker { color:var(--teal); font-weight:700; letter-spacing:.12em;
+          text-transform:uppercase; font-size:13px; }
+h1 { font-size:clamp(28px,5vw,44px); line-height:1.12; margin:10px 0; }
+.sub { color:var(--muted); max-width:640px; }
+.stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+         margin:30px 0; }
+@media (min-width:640px){ .stats{ grid-template-columns:repeat(4,1fr);} }
+.stat { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:16px; }
+.stat b { display:block; font-size:24px; color:var(--teal); }
+.stat span { font-size:13px; color:var(--muted); }
+section { margin:34px 0; }
+h2 { font-size:20px; color:var(--teal); margin-bottom:12px;
+     border-bottom:1px solid var(--rule); padding-bottom:8px; }
+ul { padding-left:22px; } li { margin:9px 0; }
+a { color:var(--teal); }
+.btn { display:inline-block; background:var(--teal); color:#06251f;
+       font-weight:700; padding:12px 22px; border-radius:10px;
+       text-decoration:none; margin:8px 8px 0 0; }
+.btn.ghost { background:transparent; color:var(--teal);
+             border:1px solid var(--teal); }
+.muted { color:var(--muted); font-size:14px; }
+.grid3 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid3{ grid-template-columns:repeat(3,1fr);} }
+.card { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:18px; }
+.card h3 { margin-bottom:6px; font-size:16px; }
+.panel { border-radius:14px; padding:18px; color:#fff; }
+.panel h3 { margin-bottom:8px; }
+.panel p { font-size:14px; color:rgba(255,255,255,.85); }
+.ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
+       border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
+.src { font-size:12.5px; color:var(--muted); }
+.freshness { border-left:3px solid var(--rule); padding:10px 14px;
+  margin:14px 0; background:rgba(255,255,255,.02); border-radius:0 8px 8px 0;
+  font-size:13.5px; }
+.freshness.stale { border-left-color:var(--amber);
+  background:rgba(251,191,36,.07); }
+.freshness p { margin:0; }
+.note { border-left:3px solid var(--rule); padding:12px 16px; margin:18px 0;
+  border-radius:0 8px 8px 0; font-size:14.5px; line-height:1.55; }
+.note.info { border-left-color:var(--teal); background:rgba(45,212,191,.07); }
+.note.warn { border-left-color:var(--amber); background:rgba(251,191,36,.07); }
+.note.bad  { border-left-color:#ef4444; background:rgba(239,68,68,.08); }
+.note.good { border-left-color:#34d399; background:rgba(52,211,153,.07); }
+.note p { margin:0; }
+details.more { border:1px solid var(--rule); border-radius:10px;
+  padding:0 16px; margin:16px 0; background:rgba(255,255,255,.02); }
+details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
+  color:var(--teal); font-size:14.5px; }
+details.more[open] { padding-bottom:10px; }
+.billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
+  margin:20px 0 12px; }
+.billbar > div { display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:14px; }
+.barkey { display:flex; flex-wrap:wrap; gap:14px; font-size:13px;
+  color:var(--muted); }
+.barkey span { display:flex; align-items:center; gap:6px; }
+.barkey i { width:12px; height:12px; border-radius:3px; }
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px; margin:18px 0; }
+.flow .step { border:1px solid var(--rule); border-radius:10px; padding:12px 14px;
+  background:rgba(255,255,255,.02); font-size:14px; }
+.flow .step b { display:block; margin-bottom:4px; }
+.flow .step.end { border-color:#ef4444; background:rgba(239,68,68,.08); }
+.hbars { margin:18px 0; display:flex; flex-direction:column; gap:8px; }
+.hbar-row { display:grid; grid-template-columns:minmax(90px,1.1fr) 2.4fr
+  minmax(90px,1.3fr); gap:10px; align-items:center; font-size:13.5px; }
+.hbar-label { color:var(--ink); }
+.hbar-track { background:rgba(255,255,255,.06); border-radius:5px; height:16px; }
+.hbar-fill { height:16px; border-radius:5px; }
+.hbar-val { color:var(--muted); font-variant-numeric:tabular-nums; }
+@media (max-width:640px) {
+  .hbar-row { grid-template-columns:1fr; gap:2px; }
+  .hbar-track { height:12px; }
+}
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+th { color:var(--muted); font-weight:600; }
+footer { margin-top:48px; border-top:1px solid var(--rule);
+         padding-top:16px; font-size:13px; color:var(--muted); }
+.statelist { columns:2; font-size:14.5px; }
+@media (min-width:640px){ .statelist{ columns:4; } }
+.statelist a { display:block; padding:3px 0; text-decoration:none; }
+.us-map { max-width:100%; height:auto; margin:20px auto; display:block; }
+.us-map path { fill:var(--card); stroke:var(--rule); stroke-width:.6;
+               cursor:pointer; transition:fill .15s; }
+.us-map path:hover { fill:var(--teal); }
+.us-map text { fill:var(--muted); font-size:7px; pointer-events:none;
+               text-anchor:middle; font-weight:600;
+               font-family:system-ui,-apple-system,sans-serif; }
+.us-map path:hover + text, .us-map path:hover ~ text { fill:var(--bg); }
+.map-tooltip { position:fixed; background:var(--card); border:1px solid var(--teal);
+               border-radius:8px; padding:6px 12px; font-size:13px;
+               color:var(--ink); pointer-events:none; z-index:999;
+               display:none; white-space:nowrap; }
+.post-meta { color:var(--muted); font-size:14px; margin:8px 0 6px; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 20px; }
+.tag { background:var(--card); border:1px solid var(--rule);
+       border-radius:20px; padding:3px 11px; font-size:12px;
+       color:var(--muted); }
+.prose h3 { font-size:17px; color:var(--teal); margin:24px 0 8px; }
+.prose p { margin:10px 0; }
+.prose blockquote { border-left:3px solid var(--teal); margin:16px 0;
+                    padding:6px 16px; color:var(--muted); }
+.prose table { margin:16px 0; }
+.prose ul, .prose ol { margin:10px 0; }
+.prose hr { border:none; border-top:1px solid var(--rule); margin:24px 0; }
+.post-nav { display:flex; justify-content:space-between; gap:14px;
+            margin:32px 0 0; padding:18px 0 0;
+            border-top:1px solid var(--rule); font-size:14px; }
+.post-nav a { max-width:45%; }
+.post-nav .dir { color:var(--muted); font-size:12px; display:block; }
+.blog-list { list-style:none; padding:0; }
+.blog-list li { border-bottom:1px solid var(--rule); padding:18px 0; }
+.blog-list li:last-child { border-bottom:none; }
+.blog-list h3 { font-size:17px; margin:0 0 4px; }
+.blog-list h3 a { text-decoration:none; }
+.blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
+.badge { display:inline-block; font-size:12px; font-weight:700;
+         padding:2px 9px; border-radius:6px; }
+.badge-enacted { background:#065f46; color:#6ee7b7; }
+.badge-proposed { background:#713f12; color:#fde68a; }
+.badge-rejected { background:#7f1d1d; color:#fca5a5; }
+.badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.outcome { border-left:3px solid var(--teal); padding:10px 14px;
+           margin:10px 0; }
+.outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
+                text-transform:uppercase; letter-spacing:.08em; }
+.grid2 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
+.official { font-size:14px; }
+.official .role { color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="index.html"><img src="assets/logo.svg" alt="AI GridWatch"></a>
+  <a href="index.html">Home</a>
+  <a href="states/index.html">Your state</a>
+  <a href="health-risks.html">Health risks</a>
+  <a href="moratoriums.html">Moratoriums</a>
+  <a href="impact.html">Calculator</a>
+  <a href="bills.html">Your bill</a>
+  <a href="outlook.html">Outlook</a>
+  <a href="learn.html">Learn</a>
+  <a href="puc.html">PUCs</a>
+  <a href="data-centers.html">Data centers</a>
+  <a href="environment.html">Environment</a>
+  <a href="companies/index.html">Companies</a>
+  <a href="blog/index.html">Blog</a>
+  <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
+</nav>
+
+<header>
+  <div class="kicker">Environment</div>
+  <h1>Hyperscaler environmental impact</h1>
+  <p class="sub">Side-by-side environmental footprint of Google, Meta,
+  Microsoft, and AWS &mdash; the four companies that build and operate the
+  AI grid. Data from their latest sustainability reports.</p>
+</header>
+
+<details class="more"><summary>On this page</summary>
+  <ol style="font-size:14px">
+    <li>Hyperscaler environmental comparison</li>
+    <li>What do they actually pay for electricity?</li>
+    <li>Environmental deep-dives (Google, Microsoft, AWS, Meta)</li>
+    <li>Revenue growth context (2022&ndash;2025)</li>
+  </ol>
+</details>
+
+<section>
+  <h2>1. Hyperscaler environmental comparison</h2>
+  <p>Four companies consume more electricity than many countries. Here is
+  how their data-center footprints compare on electricity, carbon, and
+  water.</p>
+
+  <h3>Data center electricity consumption</h3>
+  
+<div class="stats">
+  <div class="stat"><b>42.4 TWh</b><span>Google (FY2025)</span></div>
+  <div class="stat"><b>38.0 TWh</b><span>AWS (CY2025, est.)</span></div>
+  <div class="stat"><b>29.8 TWh</b><span>Microsoft (FY2025)</span></div>
+  <div class="stat"><b>18.1 TWh</b><span>Meta (FY2024)</span></div>
+</div>
+  <div class="hbars"><div class="hbar-row"><div class="hbar-label">Google</div><div class="hbar-track"><div class="hbar-fill" style="width:100.0%;background:var(--teal)"></div></div><div class="hbar-val">42.4 TWh <span class="muted">FY2025</span></div></div><div class="hbar-row"><div class="hbar-label">AWS (Amazon)</div><div class="hbar-track"><div class="hbar-fill" style="width:89.6%;background:var(--teal)"></div></div><div class="hbar-val">38.0 TWh <span class="muted">CY2025 (est.)</span></div></div><div class="hbar-row"><div class="hbar-label">Microsoft</div><div class="hbar-track"><div class="hbar-fill" style="width:70.3%;background:var(--teal)"></div></div><div class="hbar-val">29.8 TWh <span class="muted">FY2025</span></div></div><div class="hbar-row"><div class="hbar-label">Meta</div><div class="hbar-track"><div class="hbar-fill" style="width:42.7%;background:var(--teal)"></div></div><div class="hbar-val">18.1 TWh <span class="muted">FY2024</span></div></div></div>
+
+  <h3>Carbon emissions (Scope 2 location-based)</h3>
+  <p class="muted">Location-based = actual grid carbon intensity at each
+  facility. All four claim 100% renewable matching via certificates/PPAs
+  (market-based), but that does not change what the grid actually burns.
+  Google is the only one reporting hourly CFE matching (vs. annual).</p>
+  <div class="hbars"><div class="hbar-row"><div class="hbar-label">Google</div><div class="hbar-track"><div class="hbar-fill" style="width:100.0%;background:var(--amber)"></div></div><div class="hbar-val">15.1 Mt <span class="muted">FY2025</span></div></div><div class="hbar-row"><div class="hbar-label">AWS (Amazon)</div><div class="hbar-track"><div class="hbar-fill" style="width:78.8%;background:var(--amber)"></div></div><div class="hbar-val">11.9 Mt <span class="muted">CY2025 (est.)</span></div></div><div class="hbar-row"><div class="hbar-label">Microsoft</div><div class="hbar-track"><div class="hbar-fill" style="width:64.2%;background:var(--amber)"></div></div><div class="hbar-val">9.7 Mt <span class="muted">FY2025</span></div></div><div class="hbar-row"><div class="hbar-label">Meta</div><div class="hbar-track"><div class="hbar-fill" style="width:39.7%;background:var(--amber)"></div></div><div class="hbar-val">6.0 Mt <span class="muted">FY2024</span></div></div></div>
+
+  <h3>Full comparison table</h3>
+  <div style="overflow-x:auto"><table class="registry"><tr><th>Company</th><th>Report Year</th><th>DC Electricity (TWh)</th><th>Scope 2 Location (Mt)</th><th>Scope 2 Market (Mt)</th><th>Water Consumed (M gal)</th><th>Renewable Match</th></tr><tr><td>Google</td><td>FY2025</td><td>42.4</td><td>15.1</td><td>2.81</td><td>10,523</td><td>65% hourly</td></tr><tr><td>Meta</td><td>FY2024</td><td>18.1</td><td>6.0</td><td>0.00</td><td>825</td><td>100% annual</td></tr><tr><td>Microsoft</td><td>FY2025</td><td>29.8</td><td>9.7</td><td>2.7</td><td>6,441</td><td>100% annual</td></tr><tr><td>AWS (Amazon)</td><td>CY2025</td><td>38.0</td><td>11.9</td><td>0.0</td><td>4,600</td><td>100% annual</td></tr></table></div>
+  <div class="note info"><p><strong>Caveats:</strong> AWS DC electricity is
+  estimated (Amazon reports total company, not DC-only). Report years differ.
+  Water measurement methods vary. Microsoft and Meta report annual renewable
+  matching; Google reports hourly CFE. Market-based Scope 2 near zero for all
+  four reflects certificate purchasing, not grid decarbonization.</p></div>
+</section>
+
+<section>
+  <h2>2. What do they actually pay for electricity?</h2>
+  <p>None of these companies disclose their utility spend or the rates they
+  negotiate. But we can estimate it from their published consumption and
+  public data on industrial electricity rates. The figures below use default
+  assumptions of <strong>$0.05/kWh</strong> (data center rate) and
+  <strong>$0.16/kWh</strong> (U.S. average residential rate).</p>
+
+  <div class="stats">
+    <div class="stat"><b>$2.1B/yr</b><span>Google est. spend (42.4 TWh)</span></div>
+    <div class="stat"><b>$1.9B/yr</b><span>AWS est. spend (~38.0 TWh)</span></div>
+    <div class="stat"><b>$1.5B/yr</b><span>Microsoft est. spend (~29.8 TWh)</span></div>
+    <div class="stat"><b>$0.9B/yr</b><span>Meta est. spend (18.1 TWh)</span></div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>$6.4B/yr</b><span>All four combined (128 TWh)</span></div>
+    <div class="stat"><b>3.2x</b><span>Rate discount vs. residential ($0.16 vs. $0.050)</span></div>
+    <div class="stat"><b>12.2M homes</b><span>Household equivalent (at 10,500 kWh/yr)</span></div>
+  </div>
+
+  <div class="note info"><p><strong>Why does this matter?</strong> Large data
+  centers often negotiate rates 60&ndash;80% below what residential customers
+  pay, plus tax abatements and infrastructure subsidies. When their load
+  raises system peak demand, the resulting capacity charges are spread across
+  <em>all</em> ratepayers. Your bill subsidizes their discount. See the
+  <a href="bills.html">Your utility bill</a> page for how this works.</p></div>
+  <p class="muted">These are estimates &mdash; actual rates are negotiated
+  confidentially and filed under seal with state PUCs; no hyperscaler discloses
+  utility spend. Consumption: <a href="https://sustainability.google/reports/google-2026-environmental-report/" rel="nofollow">Google 2026 Environmental Report (FY2025) — first-party, third-party limited assurance (KPMG). Electricity, GHG, Water, PUE, CFE.</a> &middot;
+  <a href="https://sustainability.atmeta.com/wp-content/uploads/2025/10/Meta_2025-Environmental-Data-Index.pdf" rel="nofollow">Meta 2025 Environmental Data Index (FY2024) — Electricity, GHG, Water, PUE/WUE per campus. sustainability.atmeta.com</a> &middot; <a href="https://www.microsoft.com/en-us/corporate-responsibility/sustainability/report" rel="nofollow">Microsoft 2025 Environmental Sustainability Report (FY2025, published Jul 2026) — total emissions 20.29 Mt (+25%), Scope 2 market 2.7 Mt after dropping unbundled RECs</a> &middot;
+  <a href="https://sustainability.aboutamazon.com/2025-report" rel="nofollow">Amazon 2025 Sustainability Report (CY2025, published Jul 2026) — 80.85 Mt total (+16%), purchased-electricity emissions +34%, PUE 1.14, WUE 0.12</a></p>
+</section>
+
+<section>
+  <h2>3. Environmental deep-dives</h2>
+  <p>Detailed environmental data from each company&rsquo;s latest
+  sustainability report. Google and Meta publish granular time-series;
+  Microsoft and AWS publish headline metrics.</p>
+
+  <details class="more"><summary>Google (FY2025)</summary>
+    <p class="muted">First-party data from Google&rsquo;s 2026 Environmental
+    Report (FY2025), subject to third-party limited assurance by KPMG.
+    <a href="https://sustainability.google/reports/google-2026-environmental-report/" rel="nofollow">Google 2026 Environmental Report (FY2025) — first-party, third-party limited assurance (KPMG). Electricity, GHG, Water, PUE, CFE.</a></p>
+
+    <h3>Key metrics</h3>
+    <div class="stats">
+      <div class="stat"><b>42.4 TWh</b><span>DC electricity</span></div>
+      <div class="stat"><b>1.09</b><span>Fleet-wide PUE</span></div>
+      <div class="stat"><b>65%</b><span>Hourly CFE match</span></div>
+      <div class="stat"><b>10,869M gal</b><span>Water consumed</span></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>2.81M tCO2e</b><span>Scope 2 (market)</span></div>
+      <div class="stat"><b>15.1M tCO2e</b><span>Scope 2 (location)</span></div>
+      <div class="stat"><b>12 GW</b><span>Clean energy signed</span></div>
+      <div class="stat"><b>58M tCO2e</b><span>Emissions avoided</span></div>
+    </div>
+
+    <h3>Electricity trend (2021&ndash;2025)</h3>
+    <p class="muted">Google data centers grew from 17.4 TWh in 2021 to
+    42.4 TWh in 2025 &mdash; a 143% increase in four years.</p>
+    <div style="overflow-x:auto"><table class="registry"><tr><th>Year</th><th>DC Electricity (TWh)</th><th>Total (incl. offices) (TWh)</th></tr><tr><td>2021</td><td>17.4</td><td>18.1</td></tr><tr><td>2022</td><td>20.6</td><td>21.6</td></tr><tr><td>2023</td><td>24.0</td><td>25.0</td></tr><tr><td>2024</td><td>30.6</td><td>31.7</td></tr><tr><td>2025</td><td>42.4</td><td>43.6</td></tr></table></div>
+
+    <h3>GHG emissions (2019&ndash;2025)</h3>
+    <p class="muted">Location-based tracks actual grid carbon intensity &mdash;
+    up 2.9x since 2019 as electricity demand surged. Market-based is far lower
+    because Google retires renewable energy certificates against consumption.</p>
+    <div style="overflow-x:auto"><table class="registry"><tr><th>Year</th><th>Scope 2 Location (Mt)</th><th>Scope 2 Market (Mt)</th><th>Total Ambition (Mt)</th></tr><tr><td>2019</td><td>5.17</td><td>0.79</td><td>8.00</td></tr><tr><td>2020</td><td>5.84</td><td>0.92</td><td>7.15</td></tr><tr><td>2021</td><td>6.50</td><td>1.77</td><td>8.46</td></tr><tr><td>2022</td><td>7.96</td><td>2.43</td><td>9.56</td></tr><tr><td>2023</td><td>9.09</td><td>3.29</td><td>10.91</td></tr><tr><td>2024</td><td>11.07</td><td>2.90</td><td>12.23</td></tr><tr><td>2025</td><td>15.15</td><td>2.81</td><td>14.47</td></tr></table></div>
+
+    <h3>Water use (2021&ndash;2025)</h3>
+    <p class="muted">DC water consumption reached 10.5 billion gallons in 2025.
+    Google replenished 78% of freshwater consumed via 165 stewardship projects
+    across 97 watersheds.</p>
+    <div style="overflow-x:auto"><table class="registry"><tr><th>Year</th><th>Withdrawal (M gal)</th><th>Consumption (M gal)</th></tr><tr><td>2021</td><td>6,297</td><td>4,562</td></tr><tr><td>2022</td><td>7,600</td><td>5,565</td></tr><tr><td>2023</td><td>8,653</td><td>6,352</td></tr><tr><td>2024</td><td>11,011</td><td>8,135</td></tr><tr><td>2025</td><td>14,689</td><td>10,869</td></tr></table></div>
+
+    <h3>Carbon-free energy by U.S. grid region (hourly, 2025)</h3>
+    <p class="muted">Google&rsquo;s hourly CFE match per grid region.
+    &ldquo;Google CFE&rdquo; = total CFE attributed (contracted + consumed
+    grid). &ldquo;Grid CFE&rdquo; = the underlying grid&rsquo;s own clean
+    energy share without Google&rsquo;s contracts.</p>
+    <div style="overflow-x:auto"><table class="registry"><tr><th>Grid Region</th><th>Google CFE %</th><th>Contracted %</th><th>Consumed Grid %</th><th>Grid CFE %</th></tr><tr><td>Arizona Salt River Project (SRP)</td><td>86%</td><td>73%</td><td>13%</td><td>56%</td></tr><tr><td>Bonneville Power Administration (BPA)</td><td>83%</td><td>0%</td><td>83%</td><td>84%</td></tr><tr><td>Duke Energy Carolinas (DUKE)</td><td>65%</td><td>18%</td><td>47%</td><td>57%</td></tr><tr><td>ERCOT (Texas)</td><td>83%</td><td>73%</td><td>10%</td><td>46%</td></tr><tr><td>MISO (Midwest)</td><td>88%</td><td>83%</td><td>5%</td><td>36%</td></tr><tr><td>NV Energy (NVE)</td><td>65%</td><td>55%</td><td>10%</td><td>32%</td></tr><tr><td>PJM (Mid-Atlantic)</td><td>57%</td><td>29%</td><td>28%</td><td>40%</td></tr><tr><td>South Carolina (SC)</td><td>31%</td><td>8%</td><td>23%</td><td>25%</td></tr><tr><td>Southern Company (SOCO)</td><td>42%</td><td>14%</td><td>28%</td><td>33%</td></tr><tr><td>Southwest Power Pool (SPP)</td><td>84%</td><td>77%</td><td>7%</td><td>47%</td></tr><tr><td>Tennessee Valley Authority (TVA)</td><td>58%</td><td>20%</td><td>38%</td><td>47%</td></tr></table></div>
+
+    <h3>PUE per data center campus (2025)</h3>
+    <p class="muted">Lower is better. Industry average PUE = 1.54 (Uptime
+    Institute 2025). Google&rsquo;s best campus (Central Ohio Lancaster):
+    1.04. Fleet average: 1.09.</p>
+    <div style="overflow-x:auto"><table class="registry"><tr><th>Location</th><th>Region</th><th>PUE (2025)</th></tr><tr><td>Central Ohio (Lancaster), OH</td><td>US</td><td>1.04</td></tr><tr><td>Omaha, NE</td><td>US</td><td>1.05</td></tr><tr><td>New Albany, OH</td><td>US</td><td>1.06</td></tr><tr><td>Columbus, OH</td><td>US</td><td>1.06</td></tr><tr><td>The Dalles, OR (2nd)</td><td>US</td><td>1.06</td></tr><tr><td>Eemshaven, Netherlands</td><td>Europe</td><td>1.07</td></tr><tr><td>Fredericia, Denmark</td><td>Europe</td><td>1.07</td></tr><tr><td>Council Bluffs, IA (2nd)</td><td>US</td><td>1.08</td></tr><tr><td>Dublin, Ireland</td><td>Europe</td><td>1.08</td></tr><tr><td>St. Ghislain, Belgium</td><td>Europe</td><td>1.08</td></tr><tr><td>Loudoun County, VA (1st)</td><td>US</td><td>1.08</td></tr><tr><td>Loudoun County, VA (2nd)</td><td>US</td><td>1.08</td></tr><tr><td>Quilicura, Chile</td><td>LatAm</td><td>1.08</td></tr><tr><td>Berkeley County, SC</td><td>US</td><td>1.09</td></tr><tr><td>Montgomery County, TN</td><td>US</td><td>1.09</td></tr><tr><td>Henderson, NV</td><td>US</td><td>1.09</td></tr><tr><td>Douglas County, GA</td><td>US</td><td>1.09</td></tr><tr><td>Bristol, VA</td><td>US</td><td>1.09</td></tr><tr><td>Papillion, NE</td><td>US</td><td>1.09</td></tr><tr><td>Hamina, Finland</td><td>Europe</td><td>1.10</td></tr><tr><td>Midlothian, TX</td><td>US</td><td>1.10</td></tr><tr><td>Lenoir, NC</td><td>US</td><td>1.10</td></tr><tr><td>Jackson County, AL</td><td>US</td><td>1.10</td></tr><tr><td>The Dalles, OR (1st)</td><td>US</td><td>1.10</td></tr><tr><td>Council Bluffs, IA (1st)</td><td>US</td><td>1.11</td></tr><tr><td>Mayes County, OK</td><td>US</td><td>1.12</td></tr><tr><td>Inzai, Japan</td><td>APAC</td><td>1.12</td></tr><tr><td>Singapore (1st)</td><td>APAC</td><td>1.12</td></tr><tr><td>Changhua County, Taiwan</td><td>APAC</td><td>1.13</td></tr><tr><td>Singapore (2nd)</td><td>APAC</td><td>1.14</td></tr><tr><td>Storey County, NV</td><td>US</td><td>1.14</td></tr></table></div>
+  </details>
+
+  <details class="more"><summary>Microsoft (FY2025)</summary>
+    <p class="muted">First-party data from Microsoft&rsquo;s 2025
+    Environmental Sustainability Report (FY2025) and their January 2026
+    Community-First AI Infrastructure initiative.
+    <a href="https://www.microsoft.com/en-us/corporate-responsibility/sustainability/report" rel="nofollow">Microsoft 2025 Environmental Sustainability Report (FY2025, published Jul 2026) — total emissions 20.29 Mt (+25%), Scope 2 market 2.7 Mt after dropping unbundled RECs</a> &middot; <a href="https://blogs.microsoft.com/on-the-issues/2026/01/13/community-first-ai-infrastructure/" rel="nofollow">Microsoft — Building Community-First AI Infrastructure Framework (January 2026)</a></p>
+
+    <h3>Key metrics</h3>
+    <div class="stats">
+      <div class="stat"><b>20.29M tCO2e</b><span>Total GHG emissions</span></div>
+      <div class="stat"><b>29.8 TWh (est.)</b><span>DC electricity</span></div>
+      <div class="stat"><b>1.18</b><span>Fleet PUE</span></div>
+      <div class="stat"><b>37%</b><span>Water replenished</span></div>
+    </div>
+
+    <div class="note info"><p><strong>The transparency story:</strong>
+    Microsoft stopped counting non-additional, unbundled RECs &mdash; and its
+    market-based Scope 2 jumped from 0.26 to <strong>2.7M tCO2e</strong>,
+    revealing real grid impact that certificates had masked. A rare accounting
+    choice that makes a company&rsquo;s numbers look <em>worse</em> while
+    being more honest.</p></div>
+
+    <h3>The REC gap &mdash; Scope 2 location vs. market (FY2025)</h3>
+    <div class="hbars"><div class="hbar-row"><div class="hbar-label">Scope 2 (location-based)</div><div class="hbar-track"><div class="hbar-fill" style="width:100.0%;background:#00a4ef"></div></div><div class="hbar-val">9.7 Mt <span class="muted">actual grid carbon</span></div></div><div class="hbar-row"><div class="hbar-label">Scope 2 (market-based)</div><div class="hbar-track"><div class="hbar-fill" style="width:27.8%;background:#00a4ef"></div></div><div class="hbar-val">2.7 Mt <span class="muted">after clean-energy contracts</span></div></div></div>
+    <p class="muted">Location-based (9.7 Mt) = carbon from the electrons
+    actually consumed. Market-based (2.7 Mt) = after net-new clean-energy
+    contracts. Because Microsoft now counts only additional carbon-free
+    energy, the remaining gap reflects genuine grid impact rather than paper
+    certificates. <a href="https://www.microsoft.com/en-us/corporate-responsibility/sustainability/report" rel="nofollow">Microsoft 2025 Environmental Sustainability Report (FY2025, published Jul 2026) — total emissions 20.29 Mt (+25%), Scope 2 market 2.7 Mt after dropping unbundled RECs</a></p>
+
+    <details class="more"><summary>Accounting shift and Community-First framework</summary>
+      <p><strong>Methodological shift.</strong> Microsoft paused the purchase
+      of non-additional, unbundled Renewable Energy Certificates (RECs) to
+      focus entirely on investing in net-new grid-decarbonizing carbon-free
+      electricity (CFE). This drove reported Scope 2 emissions up from 2% to
+      13% of its footprint &mdash; reflecting the raw reality of grid
+      consumption. Upstream construction materials (steel, concrete) and server
+      hardware manufacturing (Scope 3) remain the largest share of the total
+      footprint.</p>
+      <p><strong>The Community-First AI Infrastructure Framework (January
+      2026).</strong> Launched by President Brad Smith to set a &ldquo;high
+      bar&rdquo; for datacenter civic responsibility across five pillars:</p>
+      <ol>
+        <li><strong>Electricity (ratepayer protection):</strong> a pledge to
+        pay their own way for grid upgrades &mdash; working with utilities and
+        PUCs to set large-customer tariffs so transmission and substation
+        costs are not passed to residential bills.</li>
+        <li><strong>Water net-positivity:</strong> minimize draws and replenish
+        more water than consumed in local basins.</li>
+        <li><strong>Local employment:</strong> local construction-hiring
+        mandates plus regional vocational and digital-skills programs.</li>
+        <li><strong>Local tax base:</strong> property-tax revenue for municipal
+        schools, hospitals, parks, and libraries.</li>
+        <li><strong>Community investment:</strong> direct funding for local
+        nonprofits and AI-literacy training in host counties.</li>
+      </ol>
+    </details>
+  </details>
+
+  <details class="more"><summary>Amazon AWS (CY2025)</summary>
+    <p class="muted">First-party data from Amazon&rsquo;s 2025 Sustainability
+    Report (CY2025), its June 2026 Water Stewardship disclosures, and the
+    AWS in Communities program.
+    <a href="https://sustainability.aboutamazon.com/water" rel="nofollow">AWS — Water stewardship, consumption disclosures, and 2030 water-positive progress (June 2026)</a> &middot; <a href="https://sustainability.aboutamazon.com/2025-report" rel="nofollow">Amazon 2025 Sustainability Report (CY2025, published Jul 2026) — 80.85 Mt total (+16%), purchased-electricity emissions +34%, PUE 1.14, WUE 0.12</a></p>
+
+    <h3>Key metrics</h3>
+    <div class="stats">
+      <div class="stat"><b>38.0 TWh (est.)</b><span>DC electricity</span></div>
+      <div class="stat"><b>0.12 L/kWh</b><span>Fleet WUE (best of the four)</span></div>
+      <div class="stat"><b>1.14</b><span>Fleet PUE</span></div>
+      <div class="stat"><b>75%</b><span>Water replenished</span></div>
+    </div>
+
+    <div class="note info"><p><strong>Best-in-class cooling, first-time
+    disclosure:</strong> AWS runs the lowest WUE of the four majors
+    (0.12 L/kWh), and in June 2026 published its first detailed water
+    footprint &mdash; 2.5B gallons of global withdrawals &mdash; after years
+    of utility pressure. But its market-based Scope 2 of 0.0 Mt sits against
+    an estimated 11.9 Mt of real grid carbon.</p></div>
+
+    <h3>The REC gap &mdash; Scope 2 location vs. market (CY2025)</h3>
+    <div class="hbars"><div class="hbar-row"><div class="hbar-label">Scope 2 (location-based)</div><div class="hbar-track"><div class="hbar-fill" style="width:100.0%;background:#ff9900"></div></div><div class="hbar-val">11.9 Mt <span class="muted">est. grid carbon</span></div></div><div class="hbar-row"><div class="hbar-label">Scope 2 (market-based)</div><div class="hbar-track"><div class="hbar-fill" style="width:2.0%;background:#ff9900"></div></div><div class="hbar-val">0.0 Mt <span class="muted">100% renewable-matched</span></div></div></div>
+    <p class="muted">Market-based Scope 2 is 0.0 Mt &mdash; 100%
+    renewable-matched on paper &mdash; while location-based grid impact is an
+    estimated 11.9 Mt. The entire gap is certificates and PPAs, not grid
+    decarbonization. Amazon does not break out DC-only figures, so the
+    location-based estimate is derived from reported growth rates.
+    <a href="https://sustainability.aboutamazon.com/2025-report" rel="nofollow">Amazon 2025 Sustainability Report (CY2025, published Jul 2026) — 80.85 Mt total (+16%), purchased-electricity emissions +34%, PUE 1.14, WUE 0.12</a></p>
+
+    <details class="more"><summary>Water sourcing and community programs</summary>
+      <p><strong>Recycled sourcing.</strong> AWS targets non-drinking water
+      (recycled municipal wastewater) for server cooling to protect public
+      aquifers &mdash; currently supplying over 100 campuses, with a goal of
+      120 campuses by 2030.</p>
+      <p><strong>Transparency milestone.</strong> In June 2026, AWS published
+      its first detailed annual water footprint, reporting 2.5 billion gallons
+      of global withdrawals and addressing long-standing utility requests.</p>
+      <p><strong>AWS in Communities.</strong> Sponsors local infrastructure
+      training bootcamps (fiber-optic cabling, cloud systems support) in major
+      cluster metros such as Loudoun County, VA and Morrow County, OR to build
+      a local operations-staff pipeline.</p>
+    </details>
+  </details>
+
+  <details class="more"><summary>Meta (FY2024)</summary>
+    <p class="muted">First-party data from Meta&rsquo;s 2025 Environmental
+    Data Index (FY2024). Covers electricity consumption by campus, GHG
+    emissions, water stewardship, PUE and WUE.
+    <a href="https://sustainability.atmeta.com/wp-content/uploads/2025/10/Meta_2025-Environmental-Data-Index.pdf" rel="nofollow">Meta 2025 Environmental Data Index (FY2024) — Electricity, GHG, Water, PUE/WUE per campus. sustainability.atmeta.com</a></p>
+
+    <h3>Key metrics</h3>
+    <div class="stats">
+      <div class="stat"><b>18.1 TWh</b><span>DC electricity</span></div>
+      <div class="stat"><b>1.08</b><span>Fleet-wide PUE</span></div>
+      <div class="stat"><b>0.19 L/kWh</b><span>Fleet-wide WUE</span></div>
+      <div class="stat"><b>100%</b><span>Renewable match</span></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>1,358 tCO2e</b><span>Scope 2 (market)</span></div>
+      <div class="stat"><b>6.0M tCO2e</b><span>Scope 2 (location)</span></div>
+      <div class="stat"><b>8.2M tCO2e</b><span>Scope 3 (value chain)</span></div>
+      <div class="stat"><b>1,590M gal</b><span>Water restored</span></div>
+    </div>
+
+    <h3>Electricity trend (2020&ndash;2024)</h3>
+    <p class="muted">Meta DC electricity grew from 7.0 TWh in 2020 to 18.1 TWh
+    in 2024 &mdash; +159% in four years, driven by AI infrastructure buildout
+    and new campus openings.</p>
+    <div style="overflow-x:auto"><table class="registry"><tr><th>Year</th><th>DC Electricity (TWh)</th><th>Total (incl. offices) (TWh)</th></tr><tr><td>2020</td><td>7.0</td><td>7.2</td></tr><tr><td>2021</td><td>9.1</td><td>9.4</td></tr><tr><td>2022</td><td>11.2</td><td>11.5</td></tr><tr><td>2023</td><td>15.0</td><td>15.3</td></tr><tr><td>2024</td><td>18.1</td><td>18.4</td></tr></table></div>
+
+    <h3>GHG emissions (2020&ndash;2024)</h3>
+    <p class="muted">Meta&rsquo;s market-based Scope 2 is near-zero (1,358
+    tCO2e in 2024) thanks to 100% REC matching. Location-based tells the real
+    grid-impact story: 5.97M tCO2e from actual electrons consumed. Scope 3
+    (hardware mfg., logistics, sold products) dominates the total footprint at
+    8.15M tCO2e.</p>
+    <div style="overflow-x:auto"><table class="registry"><tr><th>Year</th><th>Scope 2 Location (Mt)</th><th>Scope 2 Market (Mt)</th><th>Scope 3 (Mt)</th></tr><tr><td>2020</td><td>2.72</td><td>0.01</td><td>5.09</td></tr><tr><td>2021</td><td>3.08</td><td>0.00</td><td>5.77</td></tr><tr><td>2022</td><td>3.92</td><td>0.00</td><td>8.47</td></tr><tr><td>2023</td><td>5.14</td><td>0.00</td><td>7.45</td></tr><tr><td>2024</td><td>5.97</td><td>0.00</td><td>8.15</td></tr></table></div>
+
+    <h3>PUE and WUE trend (2020&ndash;2024)</h3>
+    <p class="muted">Meta&rsquo;s fleet PUE improved from 1.10 to 1.08 and WUE
+    from 0.30 to 0.19 L/kWh, reflecting continued investment in liquid
+    cooling, airside economization, and AI-optimized airflow management.</p>
+    <div style="overflow-x:auto"><table class="registry"><tr><th>Year</th><th>PUE</th><th>WUE (L/kWh)</th></tr><tr><td>2020</td><td>1.10</td><td>0.30</td></tr><tr><td>2021</td><td>1.09</td><td>0.26</td></tr><tr><td>2022</td><td>1.08</td><td>0.20</td></tr><tr><td>2023</td><td>1.08</td><td>0.18</td></tr><tr><td>2024</td><td>1.08</td><td>0.19</td></tr></table></div>
+
+    <h3>Electricity by data center campus (2024)</h3>
+    <p class="muted">Top consumers: Prineville OR (1.73 TWh), Altoona IA
+    (1.59 TWh), Sarpy NE (1.26 TWh), and leased facilities (3.07 TWh).</p>
+    <div style="overflow-x:auto"><table class="registry"><tr><th>Campus</th><th>Region</th><th>MWh (2024)</th><th>TWh (2024)</th></tr><tr><td>Leased facilities</td><td>Various</td><td>3,069,504</td><td>3.070</td></tr><tr><td>Prineville, OR</td><td>US</td><td>1,728,291</td><td>1.728</td></tr><tr><td>Altoona, IA</td><td>US</td><td>1,585,392</td><td>1.585</td></tr><tr><td>Sarpy, NE</td><td>US</td><td>1,258,239</td><td>1.258</td></tr><tr><td>Stanton Springs, GA</td><td>US</td><td>1,184,380</td><td>1.184</td></tr><tr><td>Los Lunas, NM</td><td>US</td><td>1,143,067</td><td>1.143</td></tr><tr><td>Eagle Mountain, UT</td><td>US</td><td>1,115,619</td><td>1.116</td></tr><tr><td>Fort Worth, TX</td><td>US</td><td>1,109,004</td><td>1.109</td></tr><tr><td>Clonee, Ireland</td><td>Europe</td><td>1,076,961</td><td>1.077</td></tr><tr><td>Henrico, VA</td><td>US</td><td>948,859</td><td>0.949</td></tr><tr><td>Huntsville, AL</td><td>US</td><td>865,803</td><td>0.866</td></tr><tr><td>Odense, Denmark</td><td>Europe</td><td>569,374</td><td>0.569</td></tr><tr><td>Forest City, NC</td><td>US</td><td>535,555</td><td>0.536</td></tr><tr><td>New Albany, OH</td><td>US</td><td>521,217</td><td>0.521</td></tr><tr><td>Luleå, Sweden</td><td>Europe</td><td>468,809</td><td>0.469</td></tr><tr><td>DeKalb, IL</td><td>US</td><td>372,339</td><td>0.372</td></tr><tr><td>Gallatin, TN</td><td>US</td><td>359,730</td><td>0.360</td></tr><tr><td>Mesa, AZ</td><td>US</td><td>24,657</td><td>0.025</td></tr><tr><td>Kansas City, MO</td><td>US</td><td>22,963</td><td>0.023</td></tr></table></div>
+
+    <div class="note info"><p><strong>Community grants:</strong> Since 2011,
+    Meta has contributed over $74 million globally (with $24 million through
+    direct local Community Action Grants) to fund technology integration and
+    STEAM education in regional public schools. In 2026, the program awarded
+    328 grants across data center communities, expanding to seven new host
+    regions. <a href="https://sustainability.atmeta.com/community/" rel="nofollow">Meta — Data Center Community Action Grants &amp; Local Investment (2026)</a></p></div>
+  </details>
+</section>
+
+<section>
+  <h2>4. Revenue growth (2022&ndash;2025)</h2>
+  <p>Context for the environmental figures above: the companies behind this
+  infrastructure are among the largest on earth by revenue. The AI boom has
+  accelerated their growth &mdash; and with it, their electricity and water
+  consumption.</p>
+  <div style="overflow-x:auto"><table class="registry"><tr><th>Year</th><th>Company</th><th>Revenue</th></tr><tr><td>2022</td><td>Microsoft</td><td>$198.3B</td></tr><tr><td>2023</td><td>Microsoft</td><td>$211.9B</td></tr><tr><td>2024</td><td>Microsoft</td><td>$245.1B</td></tr><tr><td>2025</td><td>Microsoft</td><td>$280.5B</td></tr><tr><td>2022</td><td>Google (Alphabet)</td><td>$282.8B</td></tr><tr><td>2023</td><td>Google (Alphabet)</td><td>$307.4B</td></tr><tr><td>2024</td><td>Google (Alphabet)</td><td>$355.2B</td></tr><tr><td>2025</td><td>Google (Alphabet)</td><td>$400.1B</td></tr><tr><td>2022</td><td>NVIDIA</td><td>$27.0B</td></tr><tr><td>2023</td><td>NVIDIA</td><td>$27.0B</td></tr><tr><td>2024</td><td>NVIDIA</td><td>$60.9B</td></tr><tr><td>2025</td><td>NVIDIA</td><td>$120.8B</td></tr><tr><td>2022</td><td>Amazon</td><td>$514.0B</td></tr><tr><td>2023</td><td>Amazon</td><td>$574.8B</td></tr><tr><td>2024</td><td>Amazon</td><td>$630.5B</td></tr><tr><td>2025</td><td>Amazon</td><td>$685.2B</td></tr><tr><td>2022</td><td>Meta Platforms</td><td>$116.6B</td></tr><tr><td>2023</td><td>Meta Platforms</td><td>$134.9B</td></tr><tr><td>2024</td><td>Meta Platforms</td><td>$160.2B</td></tr><tr><td>2025</td><td>Meta Platforms</td><td>$185.5B</td></tr></table></div>
+  <p class="muted">Revenue figures from SEC 10-K filings. NVIDIA included for
+  context as the dominant GPU supplier driving data center buildout.</p>
+</section>
+
+<section>
+  <p><a class="btn" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
+  <a class="btn ghost" href="companies/index.html">Company scorecards</a></p>
+</section>
+
+<footer>
+  <a href="about.html">About</a> · <a href="search.html">Search</a>
+  · <a href="dividend.html">Data dividend calculator</a>
+  <br>AI GridWatch — community energy intelligence. Planning estimates, not
+  engineering studies; every number is sourced in the
+  <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.
+</footer>
+</div>
+</body>
+</html>

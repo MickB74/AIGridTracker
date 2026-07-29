@@ -703,8 +703,10 @@ with tab_reference:
         f"[{SITE_LABEL}/outlook]({SITE}/outlook) — electricity forecasts · "
         f"[{SITE_LABEL}/learn]({SITE}/learn) — data center explainer · "
         f"[{SITE_LABEL}/puc]({SITE}/puc) — PUC directory · "
-        f"[{SITE_LABEL}/executives]({SITE}/executives) — executives & "
-        "megaprojects."
+        f"[{SITE_LABEL}/executives]({SITE}/executives) — executives · "
+        f"[{SITE_LABEL}/data-centers]({SITE}/data-centers) — market data · "
+        f"[{SITE_LABEL}/environment]({SITE}/environment) — environmental "
+        "impact."
     )
     (ref_dc, ref_corp, ref_states) = st.tabs([
         "🏢 Data centers",

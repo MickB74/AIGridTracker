@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data center market — AI GridWatch</title>
+<meta name="description" content="U.S. data center market by state — facility counts, power draw, operator ownership, ERCOT large-load queue, SEC 10-K filings, and grid-operator responses.">
+<link rel="canonical" href="https://aigridwatch.com/data-centers">
+<link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
+      href="https://aigridwatch.com/blog/feed.xml">
+<meta property="og:title" content="Data center market — AI GridWatch">
+<meta property="og:description" content="U.S. data center market by state — facility counts, power draw, operator ownership, ERCOT large-load queue, SEC 10-K filings, and grid-operator responses.">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Data centers", "item": "https://aigridwatch.com/data-centers"}]}</script>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<style>
+:root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
+        --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
+* { box-sizing:border-box; margin:0; }
+body { background:var(--bg); color:var(--ink);
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.wrap { max-width:900px; margin:0 auto; padding:20px 20px 64px; }
+nav { display:flex; align-items:center; gap:14px; padding:14px 0;
+      border-bottom:1px solid var(--rule); flex-wrap:wrap; }
+nav img { height:34px; }
+nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+nav a:hover { color:var(--teal); }
+nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
+           font-weight:700; padding:8px 16px; border-radius:8px; }
+header { padding:44px 0 10px; }
+.kicker { color:var(--teal); font-weight:700; letter-spacing:.12em;
+          text-transform:uppercase; font-size:13px; }
+h1 { font-size:clamp(28px,5vw,44px); line-height:1.12; margin:10px 0; }
+.sub { color:var(--muted); max-width:640px; }
+.stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+         margin:30px 0; }
+@media (min-width:640px){ .stats{ grid-template-columns:repeat(4,1fr);} }
+.stat { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:16px; }
+.stat b { display:block; font-size:24px; color:var(--teal); }
+.stat span { font-size:13px; color:var(--muted); }
+section { margin:34px 0; }
+h2 { font-size:20px; color:var(--teal); margin-bottom:12px;
+     border-bottom:1px solid var(--rule); padding-bottom:8px; }
+ul { padding-left:22px; } li { margin:9px 0; }
+a { color:var(--teal); }
+.btn { display:inline-block; background:var(--teal); color:#06251f;
+       font-weight:700; padding:12px 22px; border-radius:10px;
+       text-decoration:none; margin:8px 8px 0 0; }
+.btn.ghost { background:transparent; color:var(--teal);
+             border:1px solid var(--teal); }
+.muted { color:var(--muted); font-size:14px; }
+.grid3 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid3{ grid-template-columns:repeat(3,1fr);} }
+.card { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:18px; }
+.card h3 { margin-bottom:6px; font-size:16px; }
+.panel { border-radius:14px; padding:18px; color:#fff; }
+.panel h3 { margin-bottom:8px; }
+.panel p { font-size:14px; color:rgba(255,255,255,.85); }
+.ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
+       border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
+.src { font-size:12.5px; color:var(--muted); }
+.freshness { border-left:3px solid var(--rule); padding:10px 14px;
+  margin:14px 0; background:rgba(255,255,255,.02); border-radius:0 8px 8px 0;
+  font-size:13.5px; }
+.freshness.stale { border-left-color:var(--amber);
+  background:rgba(251,191,36,.07); }
+.freshness p { margin:0; }
+.note { border-left:3px solid var(--rule); padding:12px 16px; margin:18px 0;
+  border-radius:0 8px 8px 0; font-size:14.5px; line-height:1.55; }
+.note.info { border-left-color:var(--teal); background:rgba(45,212,191,.07); }
+.note.warn { border-left-color:var(--amber); background:rgba(251,191,36,.07); }
+.note.bad  { border-left-color:#ef4444; background:rgba(239,68,68,.08); }
+.note.good { border-left-color:#34d399; background:rgba(52,211,153,.07); }
+.note p { margin:0; }
+details.more { border:1px solid var(--rule); border-radius:10px;
+  padding:0 16px; margin:16px 0; background:rgba(255,255,255,.02); }
+details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
+  color:var(--teal); font-size:14.5px; }
+details.more[open] { padding-bottom:10px; }
+.billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
+  margin:20px 0 12px; }
+.billbar > div { display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:14px; }
+.barkey { display:flex; flex-wrap:wrap; gap:14px; font-size:13px;
+  color:var(--muted); }
+.barkey span { display:flex; align-items:center; gap:6px; }
+.barkey i { width:12px; height:12px; border-radius:3px; }
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px; margin:18px 0; }
+.flow .step { border:1px solid var(--rule); border-radius:10px; padding:12px 14px;
+  background:rgba(255,255,255,.02); font-size:14px; }
+.flow .step b { display:block; margin-bottom:4px; }
+.flow .step.end { border-color:#ef4444; background:rgba(239,68,68,.08); }
+.hbars { margin:18px 0; display:flex; flex-direction:column; gap:8px; }
+.hbar-row { display:grid; grid-template-columns:minmax(90px,1.1fr) 2.4fr
+  minmax(90px,1.3fr); gap:10px; align-items:center; font-size:13.5px; }
+.hbar-label { color:var(--ink); }
+.hbar-track { background:rgba(255,255,255,.06); border-radius:5px; height:16px; }
+.hbar-fill { height:16px; border-radius:5px; }
+.hbar-val { color:var(--muted); font-variant-numeric:tabular-nums; }
+@media (max-width:640px) {
+  .hbar-row { grid-template-columns:1fr; gap:2px; }
+  .hbar-track { height:12px; }
+}
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+th { color:var(--muted); font-weight:600; }
+footer { margin-top:48px; border-top:1px solid var(--rule);
+         padding-top:16px; font-size:13px; color:var(--muted); }
+.statelist { columns:2; font-size:14.5px; }
+@media (min-width:640px){ .statelist{ columns:4; } }
+.statelist a { display:block; padding:3px 0; text-decoration:none; }
+.us-map { max-width:100%; height:auto; margin:20px auto; display:block; }
+.us-map path { fill:var(--card); stroke:var(--rule); stroke-width:.6;
+               cursor:pointer; transition:fill .15s; }
+.us-map path:hover { fill:var(--teal); }
+.us-map text { fill:var(--muted); font-size:7px; pointer-events:none;
+               text-anchor:middle; font-weight:600;
+               font-family:system-ui,-apple-system,sans-serif; }
+.us-map path:hover + text, .us-map path:hover ~ text { fill:var(--bg); }
+.map-tooltip { position:fixed; background:var(--card); border:1px solid var(--teal);
+               border-radius:8px; padding:6px 12px; font-size:13px;
+               color:var(--ink); pointer-events:none; z-index:999;
+               display:none; white-space:nowrap; }
+.post-meta { color:var(--muted); font-size:14px; margin:8px 0 6px; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 20px; }
+.tag { background:var(--card); border:1px solid var(--rule);
+       border-radius:20px; padding:3px 11px; font-size:12px;
+       color:var(--muted); }
+.prose h3 { font-size:17px; color:var(--teal); margin:24px 0 8px; }
+.prose p { margin:10px 0; }
+.prose blockquote { border-left:3px solid var(--teal); margin:16px 0;
+                    padding:6px 16px; color:var(--muted); }
+.prose table { margin:16px 0; }
+.prose ul, .prose ol { margin:10px 0; }
+.prose hr { border:none; border-top:1px solid var(--rule); margin:24px 0; }
+.post-nav { display:flex; justify-content:space-between; gap:14px;
+            margin:32px 0 0; padding:18px 0 0;
+            border-top:1px solid var(--rule); font-size:14px; }
+.post-nav a { max-width:45%; }
+.post-nav .dir { color:var(--muted); font-size:12px; display:block; }
+.blog-list { list-style:none; padding:0; }
+.blog-list li { border-bottom:1px solid var(--rule); padding:18px 0; }
+.blog-list li:last-child { border-bottom:none; }
+.blog-list h3 { font-size:17px; margin:0 0 4px; }
+.blog-list h3 a { text-decoration:none; }
+.blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
+.badge { display:inline-block; font-size:12px; font-weight:700;
+         padding:2px 9px; border-radius:6px; }
+.badge-enacted { background:#065f46; color:#6ee7b7; }
+.badge-proposed { background:#713f12; color:#fde68a; }
+.badge-rejected { background:#7f1d1d; color:#fca5a5; }
+.badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.outcome { border-left:3px solid var(--teal); padding:10px 14px;
+           margin:10px 0; }
+.outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
+                text-transform:uppercase; letter-spacing:.08em; }
+.grid2 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
+.official { font-size:14px; }
+.official .role { color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="index.html"><img src="assets/logo.svg" alt="AI GridWatch"></a>
+  <a href="index.html">Home</a>
+  <a href="states/index.html">Your state</a>
+  <a href="health-risks.html">Health risks</a>
+  <a href="moratoriums.html">Moratoriums</a>
+  <a href="impact.html">Calculator</a>
+  <a href="bills.html">Your bill</a>
+  <a href="outlook.html">Outlook</a>
+  <a href="learn.html">Learn</a>
+  <a href="puc.html">PUCs</a>
+  <a href="data-centers.html">Data centers</a>
+  <a href="environment.html">Environment</a>
+  <a href="companies/index.html">Companies</a>
+  <a href="blog/index.html">Blog</a>
+  <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
+</nav>
+
+<header>
+  <div class="kicker">Market data</div>
+  <h1>U.S. data center market: state profiles, operators &amp; grid queue</h1>
+  <p class="sub">All 50 states and D.C. &mdash; facility counts, power draw,
+  operator ownership, the ERCOT large-load funnel, SEC filings, and how the
+  grid is responding to the demand wave.</p>
+</header>
+
+<details class="more"><summary>On this page</summary>
+  <ol style="font-size:14px">
+    <li>All 50 states: facility count &amp; power draw</li>
+    <li>Owners, operators &amp; shell LLCs</li>
+    <li>ERCOT large-load interconnection queue</li>
+    <li>SEC 10-K competitor analysis</li>
+    <li>The demand wave &mdash; ERCOT &amp; PJM</li>
+    <li>How the grid operators &amp; FERC are responding</li>
+  </ol>
+</details>
+
+<section>
+  <h2>All 51 states: data center facility count &amp; power draw</h2>
+  <div class="stats">
+    <div class="stat"><b>4,500</b><span>active facilities</span></div>
+    <div class="stat"><b>176 TWh/yr</b><span>4.4% of U.S. power</span></div>
+    <div class="stat"><b>~700</b><span>under construction</span></div>
+    <div class="stat"><b>~16M</b><span>homes-equivalent</span></div>
+  </div>
+
+  <input type="text" id="dc-search" placeholder="Search by state or hub..."
+         autocomplete="off"
+         style="width:100%;max-width:400px;background:var(--card);color:var(--ink);
+         border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+         font-size:15px;margin-bottom:14px">
+  <div style="overflow-x:auto">
+  <table id="dc-table">
+    <tr><th>State</th><th>Abbrev</th><th>Facilities</th><th>TWh/yr</th>
+    <th>Major hubs</th><th>Upcoming</th></tr>
+    <tr><td>Alabama</td><td>AL</td><td>35</td><td>0.6</td><td>Birmingham, Huntsville</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Alaska</td><td>AK</td><td>5</td><td>0.1</td><td>Anchorage</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Arizona</td><td>AZ</td><td>190</td><td>10.5</td><td>Phoenix (Mesa, Goodyear, Chandler) — Microsoft, Apple, Vantage, QTS, Iron Mountain</td><td style="text-align:center">&#10003;</td></tr>
+<tr><td>Arkansas</td><td>AR</td><td>15</td><td>0.3</td><td>West Memphis — Google</td><td style="text-align:center">&#10003;</td></tr>
+<tr><td>California</td><td>CA</td><td>321</td><td>11.0</td><td>Silicon Valley, Los Angeles — Equinix, Digital Realty, CoreSite, Vantage</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Colorado</td><td>CO</td><td>70</td><td>1.8</td><td>Denver, Colorado Springs — Flexential, Viawest</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Connecticut</td><td>CT</td><td>60</td><td>1.0</td><td>Stamford, Hartford</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Delaware</td><td>DE</td><td>22</td><td>0.4</td><td>Wilmington</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Dist. of Columbia</td><td>DC</td><td>12</td><td>0.3</td><td>Washington D.C.</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Florida</td><td>FL</td><td>135</td><td>4.2</td><td>Miami, Tampa, Jacksonville — Equinix, Digital Realty, CyrusOne</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Georgia</td><td>GA</td><td>162</td><td>9.0</td><td>Atlanta (Douglasville, Palmetto) — Switch, Google, Microsoft, QTS</td><td style="text-align:center">&#10003;</td></tr>
+<tr><td>Hawaii</td><td>HI</td><td>8</td><td>0.1</td><td>Honolulu</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Idaho</td><td>ID</td><td>12</td><td>0.2</td><td>Boise</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Illinois</td><td>IL</td><td>244</td><td>12.0</td><td>Chicago (Elk Grove Village, Aurora) — Microsoft, Equinix, Digital Realty, Meta</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Indiana</td><td>IN</td><td>85</td><td>2.0</td><td>Lebanon, La Porte, Indianapolis — Amazon ($15B), Meta ($10B), Microsoft ($1B)</td><td style="text-align:center">&#10003;</td></tr>
+<tr><td>Iowa</td><td>IA</td><td>115</td><td>3.8</td><td>Des Moines, Altoona — Apple, Google, Meta</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Kansas</td><td>KS</td><td>22</td><td>0.4</td><td>Kansas City metro, Wichita</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Kentucky</td><td>KY</td><td>40</td><td>0.6</td><td>Louisville, Lexington</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Louisiana</td><td>LA</td><td>30</td><td>0.5</td><td>Richland Parish, Caddo &amp; Bossier Parishes — Meta ($27B), Amazon ($12B), Hut 8</td><td style="text-align:center">&#10003;</td></tr>
+<tr><td>Maine</td><td>ME</td><td>8</td><td>0.1</td><td>Portland</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Maryland</td><td>MD</td><td>48</td><td>0.9</td><td>Baltimore, Frederick</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Massachusetts</td><td>MA</td><td>58</td><td>1.1</td><td>Boston, Holyoke, Cambridge</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Michigan</td><td>MI</td><td>62</td><td>1.1</td><td>Detroit, Grand Rapids</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Minnesota</td><td>MN</td><td>78</td><td>1.5</td><td>Minneapolis, Shakopee</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Mississippi</td><td>MS</td><td>20</td><td>0.3</td><td>Madison County, Meridian — Amazon ($16B+), Compass ($10B)</td><td style="text-align:center">&#10003;</td></tr>
+<tr><td>Missouri</td><td>MO</td><td>55</td><td>1.2</td><td>Kansas City, St. Louis — Google ($2B)</td><td style="text-align:center">&#10003;</td></tr>
+<tr><td>Montana</td><td>MT</td><td>12</td><td>0.2</td><td>Billings, Missoula</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Nebraska</td><td>NE</td><td>42</td><td>2.1</td><td>Omaha, Lincoln — Google, Meta</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Nevada</td><td>NV</td><td>72</td><td>2.8</td><td>Las Vegas (Henderson), Reno — Switch (SUPERNAP), Google, Apple</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>New Hampshire</td><td>NH</td><td>14</td><td>0.2</td><td>Manchester</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>New Jersey</td><td>NJ</td><td>95</td><td>2.2</td><td>Secaucus, Piscataway (NYC Metro) — Equinix, Digital Realty</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>New Mexico</td><td>NM</td><td>28</td><td>1.6</td><td>Albuquerque, Los Lunas — Meta</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>New York</td><td>NY</td><td>155</td><td>4.5</td><td>NYC Metro, Buffalo — Equinix, DataBank, Digital Realty</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>North Carolina</td><td>NC</td><td>115</td><td>4.5</td><td>Charlotte, Research Triangle, Richmond County — Apple, Google, Amazon ($10B)</td><td style="text-align:center">&#10003;</td></tr>
+<tr><td>North Dakota</td><td>ND</td><td>18</td><td>0.3</td><td>Fargo</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Ohio</td><td>OH</td><td>203</td><td>7.5</td><td>Columbus (New Albany), Hebron — Google, Meta, Amazon ($10B), Microsoft</td><td style="text-align:center">&#10003;</td></tr>
+<tr><td>Oklahoma</td><td>OK</td><td>38</td><td>0.6</td><td>Oklahoma City, Tulsa</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Oregon</td><td>OR</td><td>148</td><td>6.5</td><td>Hillsboro, Prineville, The Dalles — Apple, Meta, Google</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Pennsylvania</td><td>PA</td><td>98</td><td>2.5</td><td>Salem Twp., Fairless Hills, Lancaster — Amazon ($20B), CoreWeave ($6B)</td><td style="text-align:center">&#10003;</td></tr>
+<tr><td>Rhode Island</td><td>RI</td><td>8</td><td>0.2</td><td>Providence</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>South Carolina</td><td>SC</td><td>40</td><td>0.6</td><td>Aiken County, Charleston — Meta ($800M)</td><td style="text-align:center">&#10003;</td></tr>
+<tr><td>South Dakota</td><td>SD</td><td>10</td><td>0.1</td><td>Sioux Falls</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Tennessee</td><td>TN</td><td>68</td><td>1.8</td><td>Nashville, Memphis — Oracle ($1.5B), xAI ($1B+)</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Texas</td><td>TX</td><td>413</td><td>17.0</td><td>Dallas–Fort Worth, Austin, San Antonio, West Texas — Google ($40B), Meta, Stargate</td><td style="text-align:center">&#10003;</td></tr>
+<tr><td>Utah</td><td>UT</td><td>48</td><td>2.6</td><td>Salt Lake City, Bluffdale — Meta, Google</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Vermont</td><td>VT</td><td>5</td><td>0.1</td><td>Burlington</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Virginia</td><td>VA</td><td>665</td><td>24.0</td><td>Ashburn (&#x27;Data Center Alley&#x27;), Loudoun Co., Prince William — AWS, Microsoft, Google, Equinix</td><td style="text-align:center">&#10003;</td></tr>
+<tr><td>Washington</td><td>WA</td><td>142</td><td>4.2</td><td>Quincy, Seattle, Moses Lake — Microsoft, Amazon</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>West Virginia</td><td>WV</td><td>8</td><td>0.1</td><td>Charleston</td><td style="text-align:center">&mdash;</td></tr>
+<tr><td>Wisconsin</td><td>WI</td><td>52</td><td>0.9</td><td>Mount Pleasant, Milwaukee — Microsoft ($3.3B)</td><td style="text-align:center">&#10003;</td></tr>
+<tr><td>Wyoming</td><td>WY</td><td>18</td><td>0.5</td><td>Cheyenne — Microsoft</td><td style="text-align:center">&mdash;</td></tr>
+  </table>
+  </div>
+  <p class="muted" id="dc-count">51 states</p>
+
+  <h3 style="margin-top:24px">Top 15 states by annual power draw</h3>
+  <div class="hbars"><div class="hbar-row"><div class="hbar-label">Virginia</div><div class="hbar-track"><div class="hbar-fill" style="width:100.0%;background:var(--teal)"></div></div><div class="hbar-val">24.0 TWh <span class="muted">665 facilities</span></div></div><div class="hbar-row"><div class="hbar-label">Texas</div><div class="hbar-track"><div class="hbar-fill" style="width:70.8%;background:var(--teal)"></div></div><div class="hbar-val">17.0 TWh <span class="muted">413 facilities</span></div></div><div class="hbar-row"><div class="hbar-label">Illinois</div><div class="hbar-track"><div class="hbar-fill" style="width:50.0%;background:var(--teal)"></div></div><div class="hbar-val">12.0 TWh <span class="muted">244 facilities</span></div></div><div class="hbar-row"><div class="hbar-label">California</div><div class="hbar-track"><div class="hbar-fill" style="width:45.8%;background:var(--teal)"></div></div><div class="hbar-val">11.0 TWh <span class="muted">321 facilities</span></div></div><div class="hbar-row"><div class="hbar-label">Arizona</div><div class="hbar-track"><div class="hbar-fill" style="width:43.8%;background:var(--teal)"></div></div><div class="hbar-val">10.5 TWh <span class="muted">190 facilities</span></div></div><div class="hbar-row"><div class="hbar-label">Georgia</div><div class="hbar-track"><div class="hbar-fill" style="width:37.5%;background:var(--teal)"></div></div><div class="hbar-val">9.0 TWh <span class="muted">162 facilities</span></div></div><div class="hbar-row"><div class="hbar-label">Ohio</div><div class="hbar-track"><div class="hbar-fill" style="width:31.2%;background:var(--teal)"></div></div><div class="hbar-val">7.5 TWh <span class="muted">203 facilities</span></div></div><div class="hbar-row"><div class="hbar-label">Oregon</div><div class="hbar-track"><div class="hbar-fill" style="width:27.1%;background:var(--teal)"></div></div><div class="hbar-val">6.5 TWh <span class="muted">148 facilities</span></div></div><div class="hbar-row"><div class="hbar-label">New York</div><div class="hbar-track"><div class="hbar-fill" style="width:18.8%;background:var(--teal)"></div></div><div class="hbar-val">4.5 TWh <span class="muted">155 facilities</span></div></div><div class="hbar-row"><div class="hbar-label">North Carolina</div><div class="hbar-track"><div class="hbar-fill" style="width:18.8%;background:var(--teal)"></div></div><div class="hbar-val">4.5 TWh <span class="muted">115 facilities</span></div></div><div class="hbar-row"><div class="hbar-label">Florida</div><div class="hbar-track"><div class="hbar-fill" style="width:17.5%;background:var(--teal)"></div></div><div class="hbar-val">4.2 TWh <span class="muted">135 facilities</span></div></div><div class="hbar-row"><div class="hbar-label">Washington</div><div class="hbar-track"><div class="hbar-fill" style="width:17.5%;background:var(--teal)"></div></div><div class="hbar-val">4.2 TWh <span class="muted">142 facilities</span></div></div><div class="hbar-row"><div class="hbar-label">Iowa</div><div class="hbar-track"><div class="hbar-fill" style="width:15.8%;background:var(--teal)"></div></div><div class="hbar-val">3.8 TWh <span class="muted">115 facilities</span></div></div><div class="hbar-row"><div class="hbar-label">Nevada</div><div class="hbar-track"><div class="hbar-fill" style="width:11.7%;background:var(--teal)"></div></div><div class="hbar-val">2.8 TWh <span class="muted">72 facilities</span></div></div><div class="hbar-row"><div class="hbar-label">Utah</div><div class="hbar-track"><div class="hbar-fill" style="width:10.8%;background:var(--teal)"></div></div><div class="hbar-val">2.6 TWh <span class="muted">48 facilities</span></div></div></div>
+
+  <div class="freshness"><p><strong>As of July 2026 · changes over months</strong> · Source: <a href="https://www.electricchoice.com/datacenters/" rel="nofollow">ElectricChoice.com — U.S. Data Center Power Map by State (2026; updated July 2026; CC-BY 4.0; cites LBNL, EPRINC, EIA)</a></p><p class="muted" style="margin:6px 0 0">Facility counts vary by directory because each one draws the boundary differently — DataCenterMap lists 44 in Alabama where this table says 35, since it counts small network rooms alongside hyperscale campuses. Cite the TWh figure rather than the facility count when you can; it is the number that speaks to grid impact. Underlying load research is LBNL-2001637 (Dec 2024).</p></div>
+  <p class="src">Sources: <a href="https://www.electricchoice.com/datacenters/" rel="nofollow">ElectricChoice.com — U.S. Data Center Power Map by State (2026; updated July 2026; CC-BY 4.0; cites LBNL, EPRINC, EIA)</a> &middot; <a href="https://eta.lbl.gov/publications/2024-united-states-data-center-energy" rel="nofollow">Lawrence Berkeley National Lab — US data centers 325–580 TWh by 2030</a></p>
+</section>
+
+<section>
+  <h2>Owners, operators &amp; shell LLCs</h2>
+  <p>A campus has up to three separate parties &mdash; the <strong>operator</strong>
+  (who runs it), the <strong>owner</strong> (often a PE fund), and the
+  <strong>tenant</strong> (who actually consumes the power). Land is bought
+  through single-purpose <strong>shell LLCs</strong>, the join key back to
+  county deed records.</p>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Operator</th><th>Category</th><th>Owner / PE parent</th>
+    <th>Model</th><th>Tenant disclosed</th><th>Filing LLCs</th></tr>
+    <tr><td>Google</td><td>Hyperscaler (owns &amp; consumes)</td><td>Public (Alphabet, NASDAQ: GOOGL)</td><td>Own</td><td>Self-consumed</td><td>Land-acquisition shells: Jet Stream LLC, Sharka LLC</td></tr>
+<tr><td>Meta</td><td>Hyperscaler (owns &amp; consumes)</td><td>Public (NASDAQ: META)</td><td>Own</td><td>Self-consumed</td><td>Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain</td></tr>
+<tr><td>Microsoft</td><td>Hyperscaler (owns &amp; consumes)</td><td>Public (NASDAQ: MSFT)</td><td>Mixed</td><td>Self-consumed</td><td>Project-name / generic &#x27;Holdings LLC&#x27;; less consistently codenamed</td></tr>
+<tr><td>Amazon (AWS)</td><td>Hyperscaler (owns &amp; consumes)</td><td>Public (NASDAQ: AMZN)</td><td>Own</td><td>Self-consumed</td><td>Vadata, Inc. — AWS&#x27;s build/operating entity on many permits</td></tr>
+<tr><td>xAI (Colossus)</td><td>AI / neocloud</td><td>Private (xAI)</td><td>Mixed</td><td>Sometimes</td><td>Site/retrofit LLCs (e.g. former Electrolux plant, Memphis)</td></tr>
+<tr><td>OpenAI · Oracle (Stargate)</td><td>AI / neocloud</td><td>JV: OpenAI · Oracle · SoftBank; sites developed by Oracle/Crusoe/Vantage</td><td>Mixed</td><td>Sometimes</td><td>Per-site developer LLCs (Crusoe/Lancium at Abilene, etc.)</td></tr>
+<tr><td>CoreWeave</td><td>AI / neocloud</td><td>Public (NASDAQ: CRWV, IPO Mar 2025)</td><td>Lease</td><td>Rarely</td><td>Mostly TENANT in partners&#x27; buildings: Core Scientific, Chirisa/Bulk, Flexential, Lincoln, TierPoint, Digital Realty, DataBank, Switch, Galaxy, Applied Digital</td></tr>
+<tr><td>Digital Realty</td><td>Colocation / wholesale REIT</td><td>Public REIT (NYSE: DLR)</td><td>Mixed</td><td>Rarely</td><td>&#x27;Digital [City]/[Address] LLC&#x27;; legacy Telx entities; Ascenty (LatAm)</td></tr>
+<tr><td>QTS</td><td>Colocation / wholesale REIT</td><td>Blackstone take-private ~$10B, closed 2021</td><td>Own</td><td>Rarely</td><td>&#x27;QTS ... LLC&#x27; + Blackstone holding entities; early generic project LLCs</td></tr>
+<tr><td>Vantage</td><td>Colocation / wholesale REIT</td><td>$9.2B equity round closed Jun 2024</td><td>Own</td><td>Rarely</td><td>Per-campus &#x27;Vantage ... LLC&#x27; site entities</td></tr>
+<tr><td>CyrusOne</td><td>Colocation / wholesale REIT</td><td>~$15B take-private, closed 2022</td><td>Own</td><td>Rarely</td><td>&#x27;CyrusOne LLC&#x27; subsidiaries</td></tr>
+<tr><td>Aligned</td><td>Colocation / wholesale REIT</td><td>~$40B acquisition announced Oct 2025, close H1 2026 (press)</td><td>Own</td><td>Rarely</td><td>Per-site LLCs</td></tr>
+<tr><td>Switch</td><td>Colocation / wholesale REIT</td><td>~$11B EV take-private, closed 2022</td><td>Own</td><td>Rarely</td><td>&#x27;Switch ... LLC&#x27;; campuses branded &#x27;Primes&#x27;</td></tr>
+<tr><td>Stack Infrastructure</td><td>Colocation / wholesale REIT</td><td>Blue Owl acquired IPI Partners, 2025</td><td>Own</td><td>Rarely</td><td>Per-site LLCs</td></tr>
+<tr><td>EdgeConneX</td><td>Colocation / wholesale REIT</td><td>EQT-backed</td><td>Own</td><td>Rarely</td><td>Per-site LLCs</td></tr>
+<tr><td>Equinix</td><td>Colocation / wholesale REIT</td><td>Public REIT (NASDAQ: EQIX)</td><td>Mixed</td><td>Rarely</td><td>IBX-branded site entities</td></tr>
+<tr><td>Core Scientific</td><td>Colocation / wholesale REIT</td><td>Public (NASDAQ: CORZ); CoreWeave acquisition proposed Jul 2025 — outcome uncertain, verify</td><td>Own</td><td>Sometimes</td><td>Site LLCs; ~10 US facilities (~840 MW HPC + ~500 MW crypto; ~1.3 GW gross)</td></tr>
+  </table>
+  </div>
+  <div class="freshness stale"><p><strong>&#9203; No verification date recorded · changes over months</strong> · Source: <a href="https://dgtlinfra.com/data-center-companies/" rel="nofollow">Data-center operator ownership &amp; M&amp;A — compiled from trade press (Data Center Dynamics, dgtlinfra, ABI Research) + operator releases; automated fact-check pending</a></p><p class="muted" style="margin:6px 0 0">Each row carries its own attribution level — first-party rows come from the operator&#x27;s own site, but colocation and REIT ownership was compiled from trade press and never passed an independent fact-check. Check the attribution column before citing a row.</p></div>
+  <div class="note info"><p><strong>LLC resolution:</strong> county assessor /
+  GIS parcel &rarr; grantee LLC on the deed &rarr; state Secretary-of-State
+  business database &rarr; registered agent &amp; principals.</p></div>
+  <p class="src">Sources: <a href="https://dgtlinfra.com/data-center-companies/" rel="nofollow">Data-center operator ownership &amp; M&amp;A — compiled from trade press (Data Center Dynamics, dgtlinfra, ABI Research) + operator releases; automated fact-check pending</a> &middot;
+  <a href="https://vantage-dc.com/news/vantage-data-centers-completes-9-2-billion-equity-investment-led-by-digitalbridge-and-silver-lake/" rel="nofollow">Vantage Data Centers — $9.2B equity investment led by DigitalBridge &amp; Silver Lake (closed Jun 2024)</a> &middot; <a href="https://dgtlinfra.com/digitalbridge-ifm-switch-inc-data-center/" rel="nofollow">Switch, Inc. — DigitalBridge &amp; IFM Investors take-private (~$11B EV, 2022)</a> &middot;
+  <a href="https://www.coreweave.com/news/coreweave-to-acquire-core-scientific" rel="nofollow">CoreWeave to acquire Core Scientific — all-stock ~$9B (announced Jul 2025)</a></p>
+</section>
+
+<section>
+  <h2>ERCOT large-load interconnection queue</h2>
+  <p>ERCOT is the only ISO that publishes an aggregate large-load (not
+  generation) interconnection picture and breaks out the data-center share.
+  The story is the <strong>funnel</strong>: what&rsquo;s requested dwarfs
+  what&rsquo;s approved, which dwarfs what&rsquo;s actually running.
+  Data as of March 26, 2026.</p>
+  <div class="stats">
+    <div class="stat"><b>410 GW</b>
+      <span>large load requested (~87% data centers)</span></div>
+    <div class="stat"><b>357 GW</b>
+      <span>large-load DC share</span></div>
+    <div class="stat"><b>3.8 GW</b>
+      <span>actually running today (0.9% of requested)</span></div>
+  </div>
+
+  <div class="hbars"><div class="hbar-row"><div class="hbar-label">Seeking interconnection</div><div class="hbar-track"><div class="hbar-fill" style="width:100.0%;background:var(--teal)"></div></div><div class="hbar-val">410,000 MW</div></div><div class="hbar-row"><div class="hbar-label">Approved to energize</div><div class="hbar-track"><div class="hbar-fill" style="width:2.2%;background:var(--teal)"></div></div><div class="hbar-val">9,042 MW</div></div><div class="hbar-row"><div class="hbar-label">Actually operational</div><div class="hbar-track"><div class="hbar-fill" style="width:2.0%;background:var(--teal)"></div></div><div class="hbar-val">3,801 MW</div></div></div>
+  <ul>
+    <li><strong>Seeking interconnection</strong> (410,000 MW) &mdash; Total large-load capacity requesting to connect. ~87% is data centers. Mostly speculative — many projects never energize. <a href="https://www.ercot.com/files/docs/2026/04/01/ERCOT_LargeLoad_Update_April2026_B-C_-Hearing.pdf" rel="nofollow">ERCOT — Large Load Update to Senate Committee on Business &amp; Commerce (Apr 1 2026; data as of Mar 26 2026)</a></li>
+<li><strong>Approved to energize</strong> (9,042 MW) &mdash; Received Approval to Energize from ERCOT Operations — cleared to turn on. <a href="https://www.ercot.com/files/docs/2026/03/12/March-TAC-Report.pdf" rel="nofollow">ERCOT — Large Load Interconnection status, March TAC report (Mar 13 2026)</a></li>
+<li><strong>Actually operational</strong> (3,801 MW) &mdash; Simultaneous monthly peak ERCOT has actually had to serve — real load on the grid right now (non-simultaneous observed peak: 3,883 MW). <a href="https://www.ercot.com/files/docs/2026/03/12/March-TAC-Report.pdf" rel="nofollow">ERCOT — Large Load Interconnection status, March TAC report (Mar 13 2026)</a></li>
+  </ul>
+  <div class="note warn"><p>The bar chart uses a linear scale; the
+  &ldquo;seeking interconnection&rdquo; bar dwarfs the others because most of
+  that capacity is speculative. Many projects never energize.</p></div>
+  <p class="src">Sources: <a href="https://www.ercot.com/files/docs/2026/04/01/ERCOT_LargeLoad_Update_April2026_B-C_-Hearing.pdf" rel="nofollow">ERCOT — Large Load Update to Senate Committee on Business &amp; Commerce (Apr 1 2026; data as of Mar 26 2026)</a> &middot;
+  <a href="https://www.ercot.com/files/docs/2026/03/12/March-TAC-Report.pdf" rel="nofollow">ERCOT — Large Load Interconnection status, March TAC report (Mar 13 2026)</a> &middot; <a href="https://www.ercot.com/services/rq/large-load-integration" rel="nofollow">ERCOT — Large Load Integration (forms, reports &amp; Batch Zero)</a></p>
+</section>
+
+<section>
+  <h2>SEC 10-K competitor analysis</h2>
+  <p>What the six largest cloud / AI filers tell the SEC about who they compete
+  with &mdash; a useful cross-reference of how these companies see each
+  other.</p>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Filer</th><th>Names rivals?</th><th>10-K language</th>
+    <th>Named</th><th>Editorial cross-ref</th></tr>
+    <tr><td>Alphabet (Google)</td><td>No</td><td style="font-size:13px;font-style:italic">“developers and providers of AI products and services”; also “providers of enterprise cloud services” and consumer-hardware makers.</td><td>—</td><td>OpenAI, Anthropic, Microsoft, Amazon (AWS), Meta, xAI</td></tr>
+<tr><td>Meta</td><td>No</td><td style="font-size:13px;font-style:italic">“companies in the development and application of AI, particularly with respect to the development of frontier AI models.”</td><td>—</td><td>OpenAI, Google (Alphabet), Anthropic, xAI, Microsoft</td></tr>
+<tr><td>Microsoft</td><td>No</td><td style="font-size:13px;font-style:italic">“AI-first application companies”; Azure’s “AI offerings compete with AI products from hyperscalers … and … open source offerings.”</td><td>—</td><td>Google, Amazon (AWS), OpenAI, Anthropic, Meta, Oracle, Salesforce</td></tr>
+<tr><td>Amazon (AWS)</td><td>No</td><td style="font-size:13px;font-style:italic">competition intensified by “practical applications of artificial intelligence and machine learning” in “web and infrastructure computing services.”</td><td>—</td><td>Microsoft (Azure), Google Cloud, Oracle (OCI), CoreWeave, NVIDIA, OpenAI, Anthropic</td></tr>
+<tr><td>Oracle</td><td>Yes</td><td style="font-size:13px;font-style:italic">cloud/software/hardware offerings “compete directly with … Alphabet Inc., Amazon.com, Inc., … IBM … Microsoft Corporation, Salesforce, Inc. and SAP SE …”</td><td>Adobe, Alphabet, Amazon.com, Cisco, Intel, IBM, Microsoft, Salesforce, SAP, HPE, Workday</td><td>Amazon (AWS), Microsoft (Azure), Alphabet (Google Cloud), IBM, CoreWeave</td></tr>
+<tr><td>CoreWeave</td><td>No</td><td style="font-size:13px;font-style:italic">“We primarily compete with hyperscalers … several of which are also customers … We also compete with smaller cloud service providers.”</td><td>—</td><td>Amazon (AWS), Microsoft (Azure), Google Cloud, Oracle (OCI), Lambda, Nebius</td></tr>
+  </table>
+  </div>
+  <p class="src">Sources: <a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm" rel="nofollow">Alphabet Inc. — Form 10-K FY2024, Item 1 “Competition” (SEC EDGAR)</a> &middot; <a href="https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm" rel="nofollow">Meta Platforms, Inc. — Form 10-K FY2025, Item 1 “Competition” (SEC EDGAR)</a>
+  &middot; <a href="https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm" rel="nofollow">Microsoft Corp. — Form 10-K FY2025, Item 1 “Competition” (SEC EDGAR)</a> &middot; <a href="https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm" rel="nofollow">Amazon.com, Inc. — Form 10-K FY2025, Item 1 “Competition” (SEC EDGAR)</a> &middot;
+  <a href="https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm" rel="nofollow">Oracle Corp. — Form 10-K FY2026, Item 1 “Competition” (SEC EDGAR)</a> &middot; <a href="https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm" rel="nofollow">CoreWeave, Inc. — Form 10-K FY2025, Item 1 “Competition” (SEC EDGAR)</a></p>
+</section>
+
+<div class="note info"><p><strong>EIA pilot survey:</strong> In March 2026 the
+EIA launched its first-ever pilot survey of energy use at data centers &mdash;
+the federal government&rsquo;s first attempt to measure an industry that
+currently self-reports nothing.
+<a href="https://www.eia.gov/pressroom/releases/press585.php" rel="nofollow">EIA — Pilot survey on energy use at data centers (Mar 2026)</a> &middot; <a href="https://www.eia.gov/opendata/browser/electricity/rto/fuel-type-data" rel="nofollow">EIA-930 — hourly net generation by fuel type (API v2, free key)</a></p></div>
+
+<section>
+  <h2>The demand wave &mdash; ERCOT &amp; PJM</h2>
+  <p>The two ISOs with the most data-center load growth tell opposite stories
+  about how fast the grid can absorb it.</p>
+  <div class="stats">
+    <div class="stat"><b>~233 GW</b><span>ERCOT queue (72.9% DCs)</span></div>
+    <div class="stat"><b>+32 GW</b><span>PJM peak-load growth (94% DCs)</span></div>
+    <div class="stat"><b>23.9 GW</b><span>Dominion zone (+23% vs 2019)</span></div>
+  </div>
+  <div class="note info"><p><strong>ERCOT</strong> has ~233 GW of large-load
+  interconnection requests, 72.9% data centers. Only a fraction will energize
+  &mdash; see the funnel above.</p>
+  <p><strong>PJM</strong> projects +32 GW of peak-load growth over the next
+  decade, 94% from data centers. Dominion Energy Virginia&rsquo;s zone alone
+  shows 23.9 GW of load, up 23% from 2019.</p></div>
+  <p class="src">Sources: <a href="https://www.ercot.com/services/rq/large-load-integration" rel="nofollow">ERCOT — Large Load Integration (forms, reports &amp; Batch Zero)</a> &middot; <a href="https://www.pjm.com/-/media/DotCom/library/reports-notices/load-forecast/2025-load-report.pdf" rel="nofollow">PJM — 2025 Long-Term Load Forecast (data-center-driven growth)</a>
+  &middot; <a href="https://www.eia.gov/todayinenergy/detail.php?id=67664" rel="nofollow">EIA — Commercial electricity sales in Virginia driven by data centers (2025)</a></p>
+</section>
+
+<section>
+  <h2>How the grid operators &amp; FERC are responding</h2>
+  <div class="stats">
+    <div class="stat"><b>3 RTOs</b><span>FERC orders (PJM + MISO + SPP)</span></div>
+    <div class="stat"><b>~$16.4B</b><span>PJM capacity auction (record)</span></div>
+    <div class="stat"><b>$50k/MW</b><span>Texas SB 6 interconnection fee</span></div>
+  </div>
+  <div class="note info"><p>The through-line: <strong>co-location</strong>
+  (data centers siting next to power plants to bypass grid queues) and
+  <strong>cost allocation</strong> (who pays for the transmission upgrades
+  these loads require).</p></div>
+
+  <details class="more"><summary>FERC, PJM, ERCOT, MISO &amp; SPP &mdash;
+  what each is doing</summary>
+
+  <h3>FERC</h3>
+  <p>In December 2025 FERC directed PJM to write co-location rules for data
+  centers siting next to power plants. In June 2026 FERC issued show-cause
+  orders to MISO, SPP, and other RTOs requiring them to adopt large-load
+  interconnection standards. <a href="https://www.ferc.gov/news-events/news/fact-sheet-ferc-directs-nations-largest-grid-operator-create-new-rules-embrace" rel="nofollow">FERC — directs PJM to write co-location rules for data centers (Dec 18, 2025 fact sheet; Docket EL25-49/AD24-11)</a> &middot;
+  <a href="https://www.ferc.gov/news-events/news/ferc-launches-aggressive-targeted-action-speed-large-load-integration" rel="nofollow">FERC — show-cause orders to MISO, SPP &amp; other RTOs on large-load interconnection (Jun 18, 2026)</a></p>
+
+  <h3>PJM</h3>
+  <p>The 2025 capacity auction cleared at record prices (~$16.4B total across
+  13 states), driven in large part by data-center load growth. PJM is
+  developing new co-location rules per FERC&rsquo;s order.
+  <a href="https://www.utilitydive.com/news/data-centers-pjm-capacity-auction/808951/" rel="nofollow">PJM 2025 capacity auction — record $16.4B; data centers ~40% ($6.5B) of cost</a></p>
+
+  <h3>ERCOT / Texas SB 6</h3>
+  <p>Texas SB 6 (signed 2025) authorizes ERCOT to curtail or disconnect large
+  loads (&ge;75 MW) in emergencies, establishes new interconnection standards,
+  and imposes a $50,000/MW fee on new large-load interconnections.
+  <a href="https://www.utilitydive.com/news/texas-law-gives-grid-operator-power-to-disconnect-data-centers-during-crisi/751587/" rel="nofollow">Texas SB 6 — ERCOT may curtail/disconnect large loads (≥75 MW) in emergencies; new interconnection standards (2025)</a> &middot; <a href="https://www.forbes.com/sites/davidblackmon/2025/06/22/gov-greg-abbott-signs-sb-6-to-improve-texas-grid-reliability/" rel="nofollow">Gov. Abbott signs SB 6 — large-load grid rules (2025)</a></p>
+
+  <h3>MISO</h3>
+  <p>MISO launched its Large Load Interconnection Reliability (LLIR) process,
+  requiring 90-day reliability studies for loads &ge;100 MW before
+  interconnection.
+  <a href="https://www.misoenergy.org/planning/large-loads---container-page/large-load-additions/" rel="nofollow">MISO — Large Load Additions &amp; Large Load Interconnection Reliability Requirements (2025–26)</a></p>
+
+  <h3>SPP</h3>
+  <p>SPP adopted its High Impact Large Load (HILL) 90-day study process for
+  loads that would materially change system conditions.
+  <a href="https://perkinscoie.com/insights/update/new-southwest-power-pool-rule-could-supercharge-industrial-and-data-center" rel="nofollow">SPP — High Impact Large Load (HILL) 90-day study process (RR696, 2025)</a></p>
+  </details>
+</section>
+
+<section>
+  <h2>What to do with this</h2>
+  <p>Use the state data to benchmark your community, the operator table to
+  identify who you&rsquo;re negotiating with, and the queue data to gauge
+  how much more is coming.</p>
+  <p>
+    <a class="btn" href="https://aigridtracker.streamlit.app">Open the toolkit &mdash; meeting prep &amp; CBA templates</a>
+    <a class="btn ghost" href="states/index.html">Your state briefing</a>
+    <a class="btn ghost" href="executives.html">Executives &amp; megaprojects</a>
+  </p>
+</section>
+
+<script>
+(function() {
+  var q = document.getElementById('dc-search');
+  var table = document.getElementById('dc-table');
+  var ct = document.getElementById('dc-count');
+  var rows = Array.from(table.querySelectorAll('tr')).slice(1);
+  q.addEventListener('input', function() {
+    var s = q.value.toLowerCase();
+    var n = 0;
+    rows.forEach(function(r) {
+      var show = !s || r.textContent.toLowerCase().indexOf(s) >= 0;
+      r.style.display = show ? '' : 'none';
+      if (show) n++;
+    });
+    ct.textContent = n + ' state' + (n === 1 ? '' : 's');
+  });
+})();
+</script>
+
+<footer>
+  <a href="about.html">About</a> · <a href="search.html">Search</a>
+  · <a href="dividend.html">Data dividend calculator</a>
+  <br>AI GridWatch — community energy intelligence. Planning estimates, not
+  engineering studies; every number is sourced in the
+  <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.
+</footer>
+</div>
+</body>
+</html>

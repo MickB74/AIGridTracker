@@ -61,13 +61,17 @@ of how urgent the user's situation is:
 | Consulting | `consulting_tab` | Consulting pitch + intake form |
 
 The Reference tab is a holding pen, not a permanent home. Its sub-tabs cover
-content the site doesn't publish yet (ERCOT queue / megaprojects / executives,
-hyperscaler financials, state market profiles, the Congress + PUC directories).
-As each is ported to `build_site.py`, drop the sub-tab and link out instead.
-Already migrated: `bills_tab` → `web/bills.html`, `macro_tab` →
-`web/outlook.html`, `learn_tab` → `web/learn.html`. The Siting Evaluator
-(interactive geocoding tool) remains in `learn_tab.py` but is accessed via
-the Streamlit app link on the learn page.
+content the site doesn't publish yet (interactive maps, live EIA/SEC/Yahoo
+Finance data, the Congress + PUC directories). As each is ported to
+`build_site.py`, drop the sub-tab and link out instead. Already migrated:
+`bills_tab` → `web/bills.html`, `macro_tab` → `web/outlook.html`,
+`learn_tab` → `web/learn.html`, PUC directory → `web/puc.html`,
+executives/megaprojects → `web/executives.html`, 50-state profiles /
+operators / ERCOT queue / SEC 10-K / grid operators → `web/data-centers.html`,
+environmental comparison / deep-dives / spend estimator →
+`web/environment.html`. The Siting Evaluator (interactive geocoding tool)
+remains in `learn_tab.py` but is accessed via the Streamlit app link on the
+learn page.
 
 `blog_tab` and `health_tab` were removed — `web/blog/` and
 `web/health-risks.html` render the same `BLOG_STORIES` / `HEALTH_RISKS` data.
@@ -138,7 +142,7 @@ this page" expander for navigation.
 
 ### Static site (web/ — Vercel front door)
 
-- **build_site.py** — Python static-site generator; renders `web/` from the same constants registries: landing page, 51 enriched state one-pagers (`states/<slug>.html` — PUC, moratoriums, DC sites, local officials, CBA benchmarks, case studies, muni league), sourced health-risks page, moratorium tracker (`moratoriums.html` — full table + 6 case study outcomes), client-side impact calculator (`impact.html` — MW slider + state picker, same coefficients as `impact_model.py`, runs in vanilla JS with embedded `STATE_GRID_PROFILES` JSON), utility-bill explainer (`bills.html`), global/US electricity outlook (`outlook.html`), data-center explainer and glossary (`learn.html` — ported from `learn_tab.py`; the interactive Siting Evaluator remains in Streamlit), blog index + individual post pages (`blog/<slug>.html`, from `src/blog_content.BLOG_STORIES`), health infographic PDF, sitemap/robots/vercel.json. Blog posts are markdown converted to HTML via the `markdown` library; Streamlit `\$` escapes are stripped automatically. Regenerate with `python3 build_site.py` (env overrides: `SITE_URL`, `APP_URL`) and commit the output whenever constants change — Vercel serves `web/` as-is (Root Directory = `web`, framework "Other", no build step). Preview locally with the `static-site` entry in `.claude/launch.json` (port 8777). The Streamlit app is NOT hosted on Vercel — the site links to it via `APP_URL`.
+- **build_site.py** — Python static-site generator; renders `web/` from the same constants registries: landing page, 51 enriched state one-pagers (`states/<slug>.html`), sourced health-risks page, moratorium tracker (`moratoriums.html`), client-side impact calculator (`impact.html`), utility-bill explainer (`bills.html`), electricity outlook (`outlook.html`), data-center explainer/glossary (`learn.html`), PUC directory (`puc.html`), executives/megaprojects (`executives.html`), data-center market data (`data-centers.html` — 50-state profiles, operators, ERCOT queue, SEC 10-K, grid operators/FERC), hyperscaler environmental impact (`environment.html` — comparison, spend estimator, deep-dives, revenue growth), company scorecards, blog posts, health infographic PDF, sitemap/robots/vercel.json. Blog posts are markdown converted to HTML via the `markdown` library; Streamlit `\$` escapes are stripped automatically. Regenerate with `python3 build_site.py` (env overrides: `SITE_URL`, `APP_URL`) and commit the output whenever constants change — Vercel serves `web/` as-is (Root Directory = `web`, framework "Other", no build step). Preview locally with the `static-site` entry in `.claude/launch.json` (port 8777). The Streamlit app is NOT hosted on Vercel — the site links to it via `APP_URL`.
 
 ### Services (src/services/)
 

@@ -32,12 +32,19 @@ import pandas as pd
 
 from src.blog_content import BLOG_STORIES, ABOUT_SECTION
 from src.constants import (
-    STATE_GRID_PROFILES, STATE_DC_DF, STATE_PUCS_DF, MORATORIUMS_DF,
+    AI_COMPETITORS_DF,
+    STATE_GRID_PROFILES, STATE_DC_DF, STATE_DC_NATIONAL,
+    STATE_PUCS_DF, MORATORIUMS_DF,
     MORATORIUM_OUTCOMES, HEALTH_RISKS, CBA_BENCHMARKS, COMPANY_CONCESSIONS,
     DC_SITES_DF, LOCAL_OFFICIALS_DF, LOCAL_BODIES_DF, STATE_MUNI_LEAGUES,
     OPERATORS_DF, EXECUTIVES_DF, MEGA_PROJECTS_DF,
+    ERCOT_LL_VINTAGE, ERCOT_LL_DC_SHARE, ERCOT_LL_FUNNEL,
     GOOGLE_2025_HEADLINE, META_2024_HEADLINE,
     MICROSOFT_ENV_HEADLINE, AWS_ENV_HEADLINE,
+    GOOGLE_DC_ELECTRICITY, GOOGLE_GHG, GOOGLE_WATER,
+    GOOGLE_PUE_FLEET, GOOGLE_PUE_SITES_DF, GOOGLE_CFE_BY_GRID_DF,
+    META_DC_ELECTRICITY, META_DC_CAMPUS_ELECTRICITY, META_GHG,
+    META_WATER, META_EFFICIENCY,
     EQUINIX_2024_HEADLINE, DIGITAL_REALTY_2024_HEADLINE,
     EDGECONNEX_2024_HEADLINE, STACK_2023_HEADLINE,
     CYRUSONE_2023_HEADLINE, VANTAGE_2023_HEADLINE,
@@ -284,6 +291,8 @@ def page(title, description, body, canonical, depth=0,
   <a href="{p}outlook.html">Outlook</a>
   <a href="{p}learn.html">Learn</a>
   <a href="{p}puc.html">PUCs</a>
+  <a href="{p}data-centers.html">Data centers</a>
+  <a href="{p}environment.html">Environment</a>
   <a href="{p}companies/index.html">Companies</a>
   <a href="{p}blog/index.html">Blog</a>
   <a class="cta" href="{APP_URL}">Open the toolkit &rarr;</a>
@@ -2854,6 +2863,897 @@ def build_rss():
 """
 
 
+def build_data_centers():
+    """Data center market page — state profiles, operators, ERCOT queue, SEC
+    10-K competitor analysis, demand wave, and grid-operator responses.
+    """
+    nat = STATE_DC_NATIONAL
+    n_states = len(STATE_DC_DF)
+
+    # -- Section 1: state facility table & top-15 bar chart ----------------
+    top15 = STATE_DC_DF.nlargest(15, "twh_year")
+    state_bars = hbars(
+        [(r["state"], r["twh_year"], f'{r["dc_count"]} facilities')
+         for _, r in top15.iterrows()],
+        unit=" TWh")
+
+    def _upcoming_mark(v):
+        return "&#10003;" if v else "&mdash;"
+
+    state_rows = "\n".join(
+        f"<tr><td>{esc(r['state'])}</td><td>{esc(r['abbrev'])}</td>"
+        f"<td>{r['dc_count']}</td><td>{r['twh_year']}</td>"
+        f"<td>{esc(r['major_hubs'])}</td>"
+        f"<td style=\"text-align:center\">{_upcoming_mark(r['upcoming'])}</td></tr>"
+        for _, r in STATE_DC_DF.iterrows())
+
+    # -- Section 2: operators table ----------------------------------------
+    tier_labels = {"hyperscaler": "Hyperscaler (owns &amp; consumes)",
+                   "ai": "AI / neocloud",
+                   "colo": "Colocation / wholesale REIT"}
+
+    def _tier_label(t):
+        return tier_labels.get(t, esc(str(t)))
+
+    op_rows = "\n".join(
+        f"<tr><td>{esc(r['operator'])}</td>"
+        f"<td>{_tier_label(r['tier'])}</td>"
+        f"<td>{cell(r['owner'])}</td>"
+        f"<td>{esc(r['model'])}</td>"
+        f"<td>{cell(r['discloses_tenant'])}</td>"
+        f"<td>{cell(r['filing_llc'])}</td></tr>"
+        for _, r in OPERATORS_DF.iterrows())
+
+    # -- Section 3: ERCOT funnel -------------------------------------------
+    requested = ERCOT_LL_FUNNEL[0][1]
+    live_mw = ERCOT_LL_FUNNEL[2][1]
+    dc_gw = requested * ERCOT_LL_DC_SHARE / 1000
+
+    ercot_bars = hbars(
+        [(stage, mw, "") for stage, mw, _, _ in ERCOT_LL_FUNNEL],
+        unit=" MW")
+
+    ercot_bullets = "\n".join(
+        f"<li><strong>{esc(stage)}</strong> ({mw:,} MW) &mdash; "
+        f"{esc(blurb)} {_srcref(src)}</li>"
+        for stage, mw, blurb, src in ERCOT_LL_FUNNEL)
+
+    # -- Section 4: SEC 10-K competitor table ------------------------------
+    def _names_yn(v):
+        return "Yes" if v else "No"
+
+    sec_rows = "\n".join(
+        f"<tr><td>{esc(r['filer'])}</td>"
+        f"<td>{_names_yn(r['names'])}</td>"
+        f"<td style=\"font-size:13px;font-style:italic\">{esc(r['quote'])}</td>"
+        f"<td>{cell(r['named'])}</td>"
+        f"<td>{esc(r['rivals'])}</td></tr>"
+        for _, r in AI_COMPETITORS_DF.iterrows())
+
+    body = f"""
+<header>
+  <div class="kicker">Market data</div>
+  <h1>U.S. data center market: state profiles, operators &amp; grid queue</h1>
+  <p class="sub">All 50 states and D.C. &mdash; facility counts, power draw,
+  operator ownership, the ERCOT large-load funnel, SEC filings, and how the
+  grid is responding to the demand wave.</p>
+</header>
+
+<details class="more"><summary>On this page</summary>
+  <ol style="font-size:14px">
+    <li>All 50 states: facility count &amp; power draw</li>
+    <li>Owners, operators &amp; shell LLCs</li>
+    <li>ERCOT large-load interconnection queue</li>
+    <li>SEC 10-K competitor analysis</li>
+    <li>The demand wave &mdash; ERCOT &amp; PJM</li>
+    <li>How the grid operators &amp; FERC are responding</li>
+  </ol>
+</details>
+
+<section>
+  <h2>All {n_states} states: data center facility count &amp; power draw</h2>
+  <div class="stats">
+    <div class="stat"><b>{nat['active_facilities']:,}</b><span>active facilities</span></div>
+    <div class="stat"><b>{nat['twh_annual']} TWh/yr</b><span>{nat['pct_us_power']}% of U.S. power</span></div>
+    <div class="stat"><b>~{nat['under_construction']:,}</b><span>under construction</span></div>
+    <div class="stat"><b>~{nat['homes_equivalent_millions']}M</b><span>homes-equivalent</span></div>
+  </div>
+
+  <input type="text" id="dc-search" placeholder="Search by state or hub..."
+         autocomplete="off"
+         style="width:100%;max-width:400px;background:var(--card);color:var(--ink);
+         border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+         font-size:15px;margin-bottom:14px">
+  <div style="overflow-x:auto">
+  <table id="dc-table">
+    <tr><th>State</th><th>Abbrev</th><th>Facilities</th><th>TWh/yr</th>
+    <th>Major hubs</th><th>Upcoming</th></tr>
+    {state_rows}
+  </table>
+  </div>
+  <p class="muted" id="dc-count">{n_states} states</p>
+
+  <h3 style="margin-top:24px">Top 15 states by annual power draw</h3>
+  {state_bars}
+
+  {provenance_html("STATE_DC_DF")}
+  <p class="src">Sources: {_srcref('electricchoice')} &middot; {_srcref('lbnl')}</p>
+</section>
+
+<section>
+  <h2>Owners, operators &amp; shell LLCs</h2>
+  <p>A campus has up to three separate parties &mdash; the <strong>operator</strong>
+  (who runs it), the <strong>owner</strong> (often a PE fund), and the
+  <strong>tenant</strong> (who actually consumes the power). Land is bought
+  through single-purpose <strong>shell LLCs</strong>, the join key back to
+  county deed records.</p>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Operator</th><th>Category</th><th>Owner / PE parent</th>
+    <th>Model</th><th>Tenant disclosed</th><th>Filing LLCs</th></tr>
+    {op_rows}
+  </table>
+  </div>
+  {provenance_html("DC_SITES_DF")}
+  <div class="note info"><p><strong>LLC resolution:</strong> county assessor /
+  GIS parcel &rarr; grantee LLC on the deed &rarr; state Secretary-of-State
+  business database &rarr; registered agent &amp; principals.</p></div>
+  <p class="src">Sources: {_srcref('dc_ownership')} &middot;
+  {_srcref('vantage_dbsl')} &middot; {_srcref('switch_dbif')} &middot;
+  {_srcref('crwv_coresci')}</p>
+</section>
+
+<section>
+  <h2>ERCOT large-load interconnection queue</h2>
+  <p>ERCOT is the only ISO that publishes an aggregate large-load (not
+  generation) interconnection picture and breaks out the data-center share.
+  The story is the <strong>funnel</strong>: what&rsquo;s requested dwarfs
+  what&rsquo;s approved, which dwarfs what&rsquo;s actually running.
+  Data as of {esc(ERCOT_LL_VINTAGE)}.</p>
+  <div class="stats">
+    <div class="stat"><b>{requested / 1000:.0f} GW</b>
+      <span>large load requested (~{ERCOT_LL_DC_SHARE * 100:.0f}% data centers)</span></div>
+    <div class="stat"><b>{dc_gw:.0f} GW</b>
+      <span>large-load DC share</span></div>
+    <div class="stat"><b>{live_mw / 1000:.1f} GW</b>
+      <span>actually running today ({live_mw / requested * 100:.1f}% of requested)</span></div>
+  </div>
+
+  {ercot_bars}
+  <ul>
+    {ercot_bullets}
+  </ul>
+  <div class="note warn"><p>The bar chart uses a linear scale; the
+  &ldquo;seeking interconnection&rdquo; bar dwarfs the others because most of
+  that capacity is speculative. Many projects never energize.</p></div>
+  <p class="src">Sources: {_srcref('ercot_ll_bc')} &middot;
+  {_srcref('ercot_ll_tac')} &middot; {_srcref('ercot_ll')}</p>
+</section>
+
+<section>
+  <h2>SEC 10-K competitor analysis</h2>
+  <p>What the six largest cloud / AI filers tell the SEC about who they compete
+  with &mdash; a useful cross-reference of how these companies see each
+  other.</p>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Filer</th><th>Names rivals?</th><th>10-K language</th>
+    <th>Named</th><th>Editorial cross-ref</th></tr>
+    {sec_rows}
+  </table>
+  </div>
+  <p class="src">Sources: {_srcref('goog_10k')} &middot; {_srcref('meta_10k')}
+  &middot; {_srcref('msft_10k')} &middot; {_srcref('amzn_10k')} &middot;
+  {_srcref('orcl_10k')} &middot; {_srcref('crwv_10k')}</p>
+</section>
+
+<div class="note info"><p><strong>EIA pilot survey:</strong> In March 2026 the
+EIA launched its first-ever pilot survey of energy use at data centers &mdash;
+the federal government&rsquo;s first attempt to measure an industry that
+currently self-reports nothing.
+{_srcref('eia_pilot')} &middot; {_srcref('eia930')}</p></div>
+
+<section>
+  <h2>The demand wave &mdash; ERCOT &amp; PJM</h2>
+  <p>The two ISOs with the most data-center load growth tell opposite stories
+  about how fast the grid can absorb it.</p>
+  <div class="stats">
+    <div class="stat"><b>~233 GW</b><span>ERCOT queue (72.9% DCs)</span></div>
+    <div class="stat"><b>+32 GW</b><span>PJM peak-load growth (94% DCs)</span></div>
+    <div class="stat"><b>23.9 GW</b><span>Dominion zone (+23% vs 2019)</span></div>
+  </div>
+  <div class="note info"><p><strong>ERCOT</strong> has ~233 GW of large-load
+  interconnection requests, 72.9% data centers. Only a fraction will energize
+  &mdash; see the funnel above.</p>
+  <p><strong>PJM</strong> projects +32 GW of peak-load growth over the next
+  decade, 94% from data centers. Dominion Energy Virginia&rsquo;s zone alone
+  shows 23.9 GW of load, up 23% from 2019.</p></div>
+  <p class="src">Sources: {_srcref('ercot_ll')} &middot; {_srcref('pjm_lf')}
+  &middot; {_srcref('eia_va')}</p>
+</section>
+
+<section>
+  <h2>How the grid operators &amp; FERC are responding</h2>
+  <div class="stats">
+    <div class="stat"><b>3 RTOs</b><span>FERC orders (PJM + MISO + SPP)</span></div>
+    <div class="stat"><b>~$16.4B</b><span>PJM capacity auction (record)</span></div>
+    <div class="stat"><b>$50k/MW</b><span>Texas SB 6 interconnection fee</span></div>
+  </div>
+  <div class="note info"><p>The through-line: <strong>co-location</strong>
+  (data centers siting next to power plants to bypass grid queues) and
+  <strong>cost allocation</strong> (who pays for the transmission upgrades
+  these loads require).</p></div>
+
+  <details class="more"><summary>FERC, PJM, ERCOT, MISO &amp; SPP &mdash;
+  what each is doing</summary>
+
+  <h3>FERC</h3>
+  <p>In December 2025 FERC directed PJM to write co-location rules for data
+  centers siting next to power plants. In June 2026 FERC issued show-cause
+  orders to MISO, SPP, and other RTOs requiring them to adopt large-load
+  interconnection standards. {_srcref('ferc_pjm_colo')} &middot;
+  {_srcref('ferc_showcause')}</p>
+
+  <h3>PJM</h3>
+  <p>The 2025 capacity auction cleared at record prices (~$16.4B total across
+  13 states), driven in large part by data-center load growth. PJM is
+  developing new co-location rules per FERC&rsquo;s order.
+  {_srcref('pjm_auction25')}</p>
+
+  <h3>ERCOT / Texas SB 6</h3>
+  <p>Texas SB 6 (signed 2025) authorizes ERCOT to curtail or disconnect large
+  loads (&ge;75 MW) in emergencies, establishes new interconnection standards,
+  and imposes a $50,000/MW fee on new large-load interconnections.
+  {_srcref('tx_sb6_ll')} &middot; {_srcref('tx_sb6')}</p>
+
+  <h3>MISO</h3>
+  <p>MISO launched its Large Load Interconnection Reliability (LLIR) process,
+  requiring 90-day reliability studies for loads &ge;100 MW before
+  interconnection.
+  {_srcref('miso_llir')}</p>
+
+  <h3>SPP</h3>
+  <p>SPP adopted its High Impact Large Load (HILL) 90-day study process for
+  loads that would materially change system conditions.
+  {_srcref('spp_hill')}</p>
+  </details>
+</section>
+
+<section>
+  <h2>What to do with this</h2>
+  <p>Use the state data to benchmark your community, the operator table to
+  identify who you&rsquo;re negotiating with, and the queue data to gauge
+  how much more is coming.</p>
+  <p>
+    <a class="btn" href="{APP_URL}">Open the toolkit &mdash; meeting prep &amp; CBA templates</a>
+    <a class="btn ghost" href="states/index.html">Your state briefing</a>
+    <a class="btn ghost" href="executives.html">Executives &amp; megaprojects</a>
+  </p>
+</section>
+
+<script>
+(function() {{
+  var q = document.getElementById('dc-search');
+  var table = document.getElementById('dc-table');
+  var ct = document.getElementById('dc-count');
+  var rows = Array.from(table.querySelectorAll('tr')).slice(1);
+  q.addEventListener('input', function() {{
+    var s = q.value.toLowerCase();
+    var n = 0;
+    rows.forEach(function(r) {{
+      var show = !s || r.textContent.toLowerCase().indexOf(s) >= 0;
+      r.style.display = show ? '' : 'none';
+      if (show) n++;
+    }});
+    ct.textContent = n + ' state' + (n === 1 ? '' : 's');
+  }});
+}})();
+</script>
+"""
+    return page(
+        "Data center market — AI GridWatch",
+        "U.S. data center market by state — facility counts, power draw, "
+        "operator ownership, ERCOT large-load queue, SEC 10-K filings, "
+        "and grid-operator responses.",
+        body, f"{SITE_URL}/data-centers",
+        jsonld=_breadcrumb(("Home", SITE_URL),
+                           ("Data centers", f"{SITE_URL}/data-centers")))
+
+
+def build_environment():
+    """Hyperscaler environmental data page — comparison, spend estimator,
+    and per-company deep-dives ported from src/ui/corporate_tab.py.
+
+    All Altair charts become CSS hbars() and HTML tables; sliders become
+    static calculations with default assumptions.
+    """
+
+    g = GOOGLE_2025_HEADLINE
+    m = META_2024_HEADLINE
+    ms = MICROSOFT_ENV_HEADLINE
+    aw = AWS_ENV_HEADLINE
+
+    # ---- helpers for this page ------------------------------------------ #
+
+    def _trend_table(headers, rows):
+        """Render a simple HTML table with header row and data rows."""
+        hdr = "".join(f"<th>{esc(h)}</th>" for h in headers)
+        body_rows = "".join(f"<tr>{''.join(f'<td>{c}</td>' for c in r)}</tr>"
+                           for r in rows)
+        return (f'<div style="overflow-x:auto">'
+                f'<table class="registry"><tr>{hdr}</tr>{body_rows}</table></div>')
+
+    def _fmt_mt(val):
+        """Format tCO2e to Mt with 2 decimals."""
+        return f"{val / 1e6:.2f}"
+
+    def _fmt_twh(mwh):
+        """Convert MWh to TWh with 1 decimal."""
+        return f"{mwh / 1e6:.1f}"
+
+    # ---- Section 1: Cross-company comparison ----------------------------- #
+
+    # Stat cards for DC electricity
+    elec_cards = f"""
+<div class="stats">
+  <div class="stat"><b>{g['dc_twh']} TWh</b><span>Google (FY2025)</span></div>
+  <div class="stat"><b>{aw['dc_twh']} TWh</b><span>AWS ({aw['report_year']}, est.)</span></div>
+  <div class="stat"><b>{ms['dc_twh']} TWh</b><span>Microsoft ({ms['report_year']})</span></div>
+  <div class="stat"><b>{m['dc_twh']} TWh</b><span>Meta (FY2024)</span></div>
+</div>"""
+
+    # hbars for DC electricity
+    elec_bars = hbars([
+        ("Google", g["dc_twh"], "FY2025"),
+        ("AWS (Amazon)", aw["dc_twh"], f"{aw['report_year']} (est.)"),
+        ("Microsoft", ms["dc_twh"], ms["report_year"]),
+        ("Meta", m["dc_twh"], "FY2024"),
+    ], unit=" TWh", color="var(--teal)")
+
+    # Carbon emissions comparison
+    g_scope2_loc = g["scope2_location_tco2e"] / 1e6
+    m_scope2_loc = m["scope2_location_tco2e"] / 1e6
+    carbon_bars = hbars([
+        ("Google", round(g_scope2_loc, 1), "FY2025"),
+        ("AWS (Amazon)", round(aw["scope2_location_mt"], 1), f"{aw['report_year']} (est.)"),
+        ("Microsoft", round(ms["scope2_location_mt"], 1), ms["report_year"]),
+        ("Meta", round(m_scope2_loc, 1), "FY2024"),
+    ], unit=" Mt", color="var(--amber)")
+
+    # Full comparison table
+    m_water_mgal = round(m["water_consumption_ml"] * 0.264172)
+    comp_rows = [
+        ("Google", "FY2025",
+         f"{g['dc_twh']}", f"{g_scope2_loc:.1f}",
+         f"{g['scope2_market_tco2e'] / 1e6:.2f}",
+         f"{g['water_dc_mgal']:,}", f"{g['global_cfe_pct']}% hourly"),
+        ("Meta", "FY2024",
+         f"{m['dc_twh']}", f"{m_scope2_loc:.1f}",
+         f"{m['scope2_market_tco2e'] / 1e6:.2f}",
+         f"{m_water_mgal:,}", f"{m['renewable_match_pct']}% annual"),
+        ("Microsoft", ms["report_year"],
+         f"{ms['dc_twh']}", f"{ms['scope2_location_mt']}",
+         f"{ms['scope2_market_mt']}",
+         f"{ms['water_consumption_mgal']:,}", f"{ms['renewable_pct']}% annual"),
+        ("AWS (Amazon)", aw["report_year"],
+         f"{aw['dc_twh']}", f"{aw['scope2_location_mt']}",
+         f"{aw['scope2_market_mt']}",
+         f"{aw['water_consumption_mgal']:,}", f"{aw['renewable_pct']}% annual"),
+    ]
+    comp_table_rows = "".join(
+        f"<tr><td>{esc(co)}</td><td>{esc(yr)}</td><td>{twh}</td>"
+        f"<td>{s2l}</td><td>{s2m}</td><td>{w}</td><td>{ren}</td></tr>"
+        for co, yr, twh, s2l, s2m, w, ren in comp_rows)
+    comp_table = (
+        '<div style="overflow-x:auto">'
+        '<table class="registry">'
+        "<tr><th>Company</th><th>Report Year</th>"
+        "<th>DC Electricity (TWh)</th>"
+        "<th>Scope 2 Location (Mt)</th>"
+        "<th>Scope 2 Market (Mt)</th>"
+        "<th>Water Consumed (M gal)</th>"
+        "<th>Renewable Match</th></tr>"
+        f"{comp_table_rows}</table></div>")
+
+    # ---- Section 2: Spend estimator (static, default rates) -------------- #
+
+    dc_rate = 0.05
+    res_rate = 0.16
+    g_twh = g["dc_twh"]
+    m_twh = m["dc_twh"]
+    ms_twh = ms["dc_twh"]
+    aw_twh = aw["dc_twh"]
+    all_twh = g_twh + m_twh + ms_twh + aw_twh
+
+    g_spend = g_twh * 1e9 * dc_rate
+    m_spend = m_twh * 1e9 * dc_rate
+    ms_spend = ms_twh * 1e9 * dc_rate
+    aw_spend = aw_twh * 1e9 * dc_rate
+    all_spend = g_spend + m_spend + ms_spend + aw_spend
+    rate_ratio = res_rate / dc_rate
+    all_equiv_homes = all_twh * 1e6 / 10.5
+
+    # ---- Section 3: Deep-dives ------------------------------------------- #
+
+    # 3a: Google deep-dive tables
+    g_elec_rows = []
+    for _, row in GOOGLE_DC_ELECTRICITY.iterrows():
+        g_elec_rows.append((
+            str(int(row["year"])),
+            _fmt_twh(row["dc_mwh"]),
+            _fmt_twh(row["total_mwh"]),
+        ))
+    g_elec_table = _trend_table(
+        ["Year", "DC Electricity (TWh)", "Total (incl. offices) (TWh)"],
+        g_elec_rows)
+
+    g_ghg_rows = []
+    for _, row in GOOGLE_GHG.iterrows():
+        g_ghg_rows.append((
+            str(int(row["year"])),
+            _fmt_mt(row["scope2_location"]),
+            _fmt_mt(row["scope2_market"]),
+            _fmt_mt(row["total_ambition"]),
+        ))
+    g_ghg_table = _trend_table(
+        ["Year", "Scope 2 Location (Mt)", "Scope 2 Market (Mt)",
+         "Total Ambition (Mt)"],
+        g_ghg_rows)
+
+    g_water_rows = []
+    for _, row in GOOGLE_WATER.iterrows():
+        g_water_rows.append((
+            str(int(row["year"])),
+            f"{int(row['withdrawal']):,}",
+            f"{int(row['consumption']):,}",
+        ))
+    g_water_table = _trend_table(
+        ["Year", "Withdrawal (M gal)", "Consumption (M gal)"],
+        g_water_rows)
+
+    g_cfe_rows = []
+    for _, row in GOOGLE_CFE_BY_GRID_DF.iterrows():
+        g_cfe_rows.append((
+            esc(str(row["grid"])),
+            f"{int(row['google_cfe'])}%",
+            f"{int(row['contracted_cfe'])}%",
+            f"{int(row['consumed_grid_cfe'])}%",
+            f"{int(row['grid_cfe'])}%",
+        ))
+    g_cfe_table = _trend_table(
+        ["Grid Region", "Google CFE %", "Contracted %",
+         "Consumed Grid %", "Grid CFE %"],
+        g_cfe_rows)
+
+    pue_df = GOOGLE_PUE_SITES_DF.sort_values("pue_2025")
+    g_pue_rows = []
+    for _, row in pue_df.iterrows():
+        g_pue_rows.append((
+            esc(str(row["location"])),
+            esc(str(row["region"])),
+            f"{row['pue_2025']:.2f}",
+        ))
+    g_pue_table = _trend_table(
+        ["Location", "Region", "PUE (2025)"],
+        g_pue_rows)
+
+    # 3d: Meta deep-dive tables
+    m_elec_rows = []
+    for _, row in META_DC_ELECTRICITY.iterrows():
+        m_elec_rows.append((
+            str(int(row["year"])),
+            _fmt_twh(row["dc_mwh"]),
+            _fmt_twh(row["total_mwh"]),
+        ))
+    m_elec_table = _trend_table(
+        ["Year", "DC Electricity (TWh)", "Total (incl. offices) (TWh)"],
+        m_elec_rows)
+
+    m_ghg_rows = []
+    for _, row in META_GHG.iterrows():
+        m_ghg_rows.append((
+            str(int(row["year"])),
+            _fmt_mt(row["scope2_location"]),
+            _fmt_mt(row["scope2_market"]),
+            _fmt_mt(row["scope3"]),
+        ))
+    m_ghg_table = _trend_table(
+        ["Year", "Scope 2 Location (Mt)", "Scope 2 Market (Mt)",
+         "Scope 3 (Mt)"],
+        m_ghg_rows)
+
+    m_eff_rows = []
+    for _, row in META_EFFICIENCY.iterrows():
+        m_eff_rows.append((
+            str(int(row["year"])),
+            f"{row['pue']:.2f}",
+            f"{row['wue']:.2f}",
+        ))
+    m_eff_table = _trend_table(
+        ["Year", "PUE", "WUE (L/kWh)"],
+        m_eff_rows)
+
+    campus_df = META_DC_CAMPUS_ELECTRICITY.sort_values(
+        "mwh_2024", ascending=False)
+    m_campus_rows = []
+    for _, row in campus_df.iterrows():
+        m_campus_rows.append((
+            esc(str(row["campus"])),
+            esc(str(row["region"])),
+            f"{int(row['mwh_2024']):,}",
+            f"{row['mwh_2024'] / 1e6:.3f}",
+        ))
+    m_campus_table = _trend_table(
+        ["Campus", "Region", "MWh (2024)", "TWh (2024)"],
+        m_campus_rows)
+
+    # Meta water in M gal
+    _water_restored_mgal = round(m["water_restoration_ml"] * 0.264172)
+
+    # ---- Section 4: Revenue growth --------------------------------------- #
+
+    _GROWTH_DATA = [
+        {"Year": 2022, "Company": "Microsoft", "Revenue": 198.3},
+        {"Year": 2023, "Company": "Microsoft", "Revenue": 211.9},
+        {"Year": 2024, "Company": "Microsoft", "Revenue": 245.1},
+        {"Year": 2025, "Company": "Microsoft", "Revenue": 280.5},
+        {"Year": 2022, "Company": "Google (Alphabet)", "Revenue": 282.8},
+        {"Year": 2023, "Company": "Google (Alphabet)", "Revenue": 307.4},
+        {"Year": 2024, "Company": "Google (Alphabet)", "Revenue": 355.2},
+        {"Year": 2025, "Company": "Google (Alphabet)", "Revenue": 400.1},
+        {"Year": 2022, "Company": "NVIDIA", "Revenue": 27.0},
+        {"Year": 2023, "Company": "NVIDIA", "Revenue": 27.0},
+        {"Year": 2024, "Company": "NVIDIA", "Revenue": 60.9},
+        {"Year": 2025, "Company": "NVIDIA", "Revenue": 120.8},
+        {"Year": 2022, "Company": "Amazon", "Revenue": 514.0},
+        {"Year": 2023, "Company": "Amazon", "Revenue": 574.8},
+        {"Year": 2024, "Company": "Amazon", "Revenue": 630.5},
+        {"Year": 2025, "Company": "Amazon", "Revenue": 685.2},
+        {"Year": 2022, "Company": "Meta Platforms", "Revenue": 116.6},
+        {"Year": 2023, "Company": "Meta Platforms", "Revenue": 134.9},
+        {"Year": 2024, "Company": "Meta Platforms", "Revenue": 160.2},
+        {"Year": 2025, "Company": "Meta Platforms", "Revenue": 185.5},
+    ]
+    growth_rows = "".join(
+        f"<tr><td>{d['Year']}</td><td>{esc(d['Company'])}</td>"
+        f"<td>${d['Revenue']:.1f}B</td></tr>"
+        for d in _GROWTH_DATA)
+    growth_table = (
+        '<div style="overflow-x:auto">'
+        '<table class="registry">'
+        "<tr><th>Year</th><th>Company</th><th>Revenue</th></tr>"
+        f"{growth_rows}</table></div>")
+
+    # ---- REC gap bars for Microsoft and AWS ------------------------------ #
+
+    ms_rec_gap = hbars([
+        ("Scope 2 (location-based)", ms["scope2_location_mt"], "actual grid carbon"),
+        ("Scope 2 (market-based)", ms["scope2_market_mt"], "after clean-energy contracts"),
+    ], unit=" Mt", color="#00a4ef")
+
+    aw_rec_gap = hbars([
+        ("Scope 2 (location-based)", aw["scope2_location_mt"], "est. grid carbon"),
+        ("Scope 2 (market-based)", aw["scope2_market_mt"], "100% renewable-matched"),
+    ], unit=" Mt", color="#ff9900")
+
+    # ---- Assemble body --------------------------------------------------- #
+
+    body = f"""
+<header>
+  <div class="kicker">Environment</div>
+  <h1>Hyperscaler environmental impact</h1>
+  <p class="sub">Side-by-side environmental footprint of Google, Meta,
+  Microsoft, and AWS &mdash; the four companies that build and operate the
+  AI grid. Data from their latest sustainability reports.</p>
+</header>
+
+<details class="more"><summary>On this page</summary>
+  <ol style="font-size:14px">
+    <li>Hyperscaler environmental comparison</li>
+    <li>What do they actually pay for electricity?</li>
+    <li>Environmental deep-dives (Google, Microsoft, AWS, Meta)</li>
+    <li>Revenue growth context (2022&ndash;2025)</li>
+  </ol>
+</details>
+
+<section>
+  <h2>1. Hyperscaler environmental comparison</h2>
+  <p>Four companies consume more electricity than many countries. Here is
+  how their data-center footprints compare on electricity, carbon, and
+  water.</p>
+
+  <h3>Data center electricity consumption</h3>
+  {elec_cards}
+  {elec_bars}
+
+  <h3>Carbon emissions (Scope 2 location-based)</h3>
+  <p class="muted">Location-based = actual grid carbon intensity at each
+  facility. All four claim 100% renewable matching via certificates/PPAs
+  (market-based), but that does not change what the grid actually burns.
+  Google is the only one reporting hourly CFE matching (vs. annual).</p>
+  {carbon_bars}
+
+  <h3>Full comparison table</h3>
+  {comp_table}
+  <div class="note info"><p><strong>Caveats:</strong> AWS DC electricity is
+  estimated (Amazon reports total company, not DC-only). Report years differ.
+  Water measurement methods vary. Microsoft and Meta report annual renewable
+  matching; Google reports hourly CFE. Market-based Scope 2 near zero for all
+  four reflects certificate purchasing, not grid decarbonization.</p></div>
+</section>
+
+<section>
+  <h2>2. What do they actually pay for electricity?</h2>
+  <p>None of these companies disclose their utility spend or the rates they
+  negotiate. But we can estimate it from their published consumption and
+  public data on industrial electricity rates. The figures below use default
+  assumptions of <strong>$0.05/kWh</strong> (data center rate) and
+  <strong>$0.16/kWh</strong> (U.S. average residential rate).</p>
+
+  <div class="stats">
+    <div class="stat"><b>${g_spend / 1e9:.1f}B/yr</b><span>Google est. spend ({g_twh} TWh)</span></div>
+    <div class="stat"><b>${aw_spend / 1e9:.1f}B/yr</b><span>AWS est. spend (~{aw_twh} TWh)</span></div>
+    <div class="stat"><b>${ms_spend / 1e9:.1f}B/yr</b><span>Microsoft est. spend (~{ms_twh} TWh)</span></div>
+    <div class="stat"><b>${m_spend / 1e9:.1f}B/yr</b><span>Meta est. spend ({m_twh} TWh)</span></div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>${all_spend / 1e9:.1f}B/yr</b><span>All four combined ({all_twh:.0f} TWh)</span></div>
+    <div class="stat"><b>{rate_ratio:.1f}x</b><span>Rate discount vs. residential (${res_rate:.2f} vs. ${dc_rate:.3f})</span></div>
+    <div class="stat"><b>{all_equiv_homes / 1e6:.1f}M homes</b><span>Household equivalent (at 10,500 kWh/yr)</span></div>
+  </div>
+
+  <div class="note info"><p><strong>Why does this matter?</strong> Large data
+  centers often negotiate rates 60&ndash;80% below what residential customers
+  pay, plus tax abatements and infrastructure subsidies. When their load
+  raises system peak demand, the resulting capacity charges are spread across
+  <em>all</em> ratepayers. Your bill subsidizes their discount. See the
+  <a href="bills.html">Your utility bill</a> page for how this works.</p></div>
+  <p class="muted">These are estimates &mdash; actual rates are negotiated
+  confidentially and filed under seal with state PUCs; no hyperscaler discloses
+  utility spend. Consumption: {_srcref("google_env_2026")} &middot;
+  {_srcref("meta_env_2025")} &middot; {_srcref("msft_env_2025")} &middot;
+  {_srcref("amzn_env_2025")}</p>
+</section>
+
+<section>
+  <h2>3. Environmental deep-dives</h2>
+  <p>Detailed environmental data from each company&rsquo;s latest
+  sustainability report. Google and Meta publish granular time-series;
+  Microsoft and AWS publish headline metrics.</p>
+
+  <details class="more"><summary>Google (FY2025)</summary>
+    <p class="muted">First-party data from Google&rsquo;s 2026 Environmental
+    Report (FY2025), subject to third-party limited assurance by KPMG.
+    {_srcref("google_env_2026")}</p>
+
+    <h3>Key metrics</h3>
+    <div class="stats">
+      <div class="stat"><b>{g['dc_twh']} TWh</b><span>DC electricity</span></div>
+      <div class="stat"><b>{g['fleet_pue']}</b><span>Fleet-wide PUE</span></div>
+      <div class="stat"><b>{g['global_cfe_pct']}%</b><span>Hourly CFE match</span></div>
+      <div class="stat"><b>{g['water_consumption_mgal']:,}M gal</b><span>Water consumed</span></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>{g['scope2_market_tco2e'] / 1e6:.2f}M tCO2e</b><span>Scope 2 (market)</span></div>
+      <div class="stat"><b>{g['scope2_location_tco2e'] / 1e6:.1f}M tCO2e</b><span>Scope 2 (location)</span></div>
+      <div class="stat"><b>{g['clean_energy_gw_signed']} GW</b><span>Clean energy signed</span></div>
+      <div class="stat"><b>{g['avoided_tco2e_m']}M tCO2e</b><span>Emissions avoided</span></div>
+    </div>
+
+    <h3>Electricity trend (2021&ndash;2025)</h3>
+    <p class="muted">Google data centers grew from 17.4 TWh in 2021 to
+    42.4 TWh in 2025 &mdash; a 143% increase in four years.</p>
+    {g_elec_table}
+
+    <h3>GHG emissions (2019&ndash;2025)</h3>
+    <p class="muted">Location-based tracks actual grid carbon intensity &mdash;
+    up 2.9x since 2019 as electricity demand surged. Market-based is far lower
+    because Google retires renewable energy certificates against consumption.</p>
+    {g_ghg_table}
+
+    <h3>Water use (2021&ndash;2025)</h3>
+    <p class="muted">DC water consumption reached 10.5 billion gallons in 2025.
+    Google replenished 78% of freshwater consumed via 165 stewardship projects
+    across 97 watersheds.</p>
+    {g_water_table}
+
+    <h3>Carbon-free energy by U.S. grid region (hourly, 2025)</h3>
+    <p class="muted">Google&rsquo;s hourly CFE match per grid region.
+    &ldquo;Google CFE&rdquo; = total CFE attributed (contracted + consumed
+    grid). &ldquo;Grid CFE&rdquo; = the underlying grid&rsquo;s own clean
+    energy share without Google&rsquo;s contracts.</p>
+    {g_cfe_table}
+
+    <h3>PUE per data center campus (2025)</h3>
+    <p class="muted">Lower is better. Industry average PUE = 1.54 (Uptime
+    Institute 2025). Google&rsquo;s best campus (Central Ohio Lancaster):
+    1.04. Fleet average: 1.09.</p>
+    {g_pue_table}
+  </details>
+
+  <details class="more"><summary>Microsoft (FY2025)</summary>
+    <p class="muted">First-party data from Microsoft&rsquo;s 2025
+    Environmental Sustainability Report (FY2025) and their January 2026
+    Community-First AI Infrastructure initiative.
+    {_srcref("msft_env_2025")} &middot; {_srcref("msft_community_2026")}</p>
+
+    <h3>Key metrics</h3>
+    <div class="stats">
+      <div class="stat"><b>{ms['total_emissions_mt']}M tCO2e</b><span>Total GHG emissions</span></div>
+      <div class="stat"><b>{ms['dc_twh']} TWh (est.)</b><span>DC electricity</span></div>
+      <div class="stat"><b>{ms['pue']}</b><span>Fleet PUE</span></div>
+      <div class="stat"><b>{ms['water_replenish_pct']}%</b><span>Water replenished</span></div>
+    </div>
+
+    <div class="note info"><p><strong>The transparency story:</strong>
+    Microsoft stopped counting non-additional, unbundled RECs &mdash; and its
+    market-based Scope 2 jumped from 0.26 to <strong>2.7M tCO2e</strong>,
+    revealing real grid impact that certificates had masked. A rare accounting
+    choice that makes a company&rsquo;s numbers look <em>worse</em> while
+    being more honest.</p></div>
+
+    <h3>The REC gap &mdash; Scope 2 location vs. market (FY2025)</h3>
+    {ms_rec_gap}
+    <p class="muted">Location-based (9.7 Mt) = carbon from the electrons
+    actually consumed. Market-based (2.7 Mt) = after net-new clean-energy
+    contracts. Because Microsoft now counts only additional carbon-free
+    energy, the remaining gap reflects genuine grid impact rather than paper
+    certificates. {_srcref("msft_env_2025")}</p>
+
+    <details class="more"><summary>Accounting shift and Community-First framework</summary>
+      <p><strong>Methodological shift.</strong> Microsoft paused the purchase
+      of non-additional, unbundled Renewable Energy Certificates (RECs) to
+      focus entirely on investing in net-new grid-decarbonizing carbon-free
+      electricity (CFE). This drove reported Scope 2 emissions up from 2% to
+      13% of its footprint &mdash; reflecting the raw reality of grid
+      consumption. Upstream construction materials (steel, concrete) and server
+      hardware manufacturing (Scope 3) remain the largest share of the total
+      footprint.</p>
+      <p><strong>The Community-First AI Infrastructure Framework (January
+      2026).</strong> Launched by President Brad Smith to set a &ldquo;high
+      bar&rdquo; for datacenter civic responsibility across five pillars:</p>
+      <ol>
+        <li><strong>Electricity (ratepayer protection):</strong> a pledge to
+        pay their own way for grid upgrades &mdash; working with utilities and
+        PUCs to set large-customer tariffs so transmission and substation
+        costs are not passed to residential bills.</li>
+        <li><strong>Water net-positivity:</strong> minimize draws and replenish
+        more water than consumed in local basins.</li>
+        <li><strong>Local employment:</strong> local construction-hiring
+        mandates plus regional vocational and digital-skills programs.</li>
+        <li><strong>Local tax base:</strong> property-tax revenue for municipal
+        schools, hospitals, parks, and libraries.</li>
+        <li><strong>Community investment:</strong> direct funding for local
+        nonprofits and AI-literacy training in host counties.</li>
+      </ol>
+    </details>
+  </details>
+
+  <details class="more"><summary>Amazon AWS (CY2025)</summary>
+    <p class="muted">First-party data from Amazon&rsquo;s 2025 Sustainability
+    Report (CY2025), its June 2026 Water Stewardship disclosures, and the
+    AWS in Communities program.
+    {_srcref("aws_water_2026")} &middot; {_srcref("amzn_env_2025")}</p>
+
+    <h3>Key metrics</h3>
+    <div class="stats">
+      <div class="stat"><b>{aw['dc_twh']} TWh (est.)</b><span>DC electricity</span></div>
+      <div class="stat"><b>0.12 L/kWh</b><span>Fleet WUE (best of the four)</span></div>
+      <div class="stat"><b>{aw['pue']}</b><span>Fleet PUE</span></div>
+      <div class="stat"><b>{aw['water_replenish_pct']}%</b><span>Water replenished</span></div>
+    </div>
+
+    <div class="note info"><p><strong>Best-in-class cooling, first-time
+    disclosure:</strong> AWS runs the lowest WUE of the four majors
+    (0.12 L/kWh), and in June 2026 published its first detailed water
+    footprint &mdash; 2.5B gallons of global withdrawals &mdash; after years
+    of utility pressure. But its market-based Scope 2 of 0.0 Mt sits against
+    an estimated 11.9 Mt of real grid carbon.</p></div>
+
+    <h3>The REC gap &mdash; Scope 2 location vs. market (CY2025)</h3>
+    {aw_rec_gap}
+    <p class="muted">Market-based Scope 2 is 0.0 Mt &mdash; 100%
+    renewable-matched on paper &mdash; while location-based grid impact is an
+    estimated 11.9 Mt. The entire gap is certificates and PPAs, not grid
+    decarbonization. Amazon does not break out DC-only figures, so the
+    location-based estimate is derived from reported growth rates.
+    {_srcref("amzn_env_2025")}</p>
+
+    <details class="more"><summary>Water sourcing and community programs</summary>
+      <p><strong>Recycled sourcing.</strong> AWS targets non-drinking water
+      (recycled municipal wastewater) for server cooling to protect public
+      aquifers &mdash; currently supplying over 100 campuses, with a goal of
+      120 campuses by 2030.</p>
+      <p><strong>Transparency milestone.</strong> In June 2026, AWS published
+      its first detailed annual water footprint, reporting 2.5 billion gallons
+      of global withdrawals and addressing long-standing utility requests.</p>
+      <p><strong>AWS in Communities.</strong> Sponsors local infrastructure
+      training bootcamps (fiber-optic cabling, cloud systems support) in major
+      cluster metros such as Loudoun County, VA and Morrow County, OR to build
+      a local operations-staff pipeline.</p>
+    </details>
+  </details>
+
+  <details class="more"><summary>Meta (FY2024)</summary>
+    <p class="muted">First-party data from Meta&rsquo;s 2025 Environmental
+    Data Index (FY2024). Covers electricity consumption by campus, GHG
+    emissions, water stewardship, PUE and WUE.
+    {_srcref("meta_env_2025")}</p>
+
+    <h3>Key metrics</h3>
+    <div class="stats">
+      <div class="stat"><b>{m['dc_twh']} TWh</b><span>DC electricity</span></div>
+      <div class="stat"><b>{m['fleet_pue']}</b><span>Fleet-wide PUE</span></div>
+      <div class="stat"><b>{m['fleet_wue']} L/kWh</b><span>Fleet-wide WUE</span></div>
+      <div class="stat"><b>{m['renewable_match_pct']}%</b><span>Renewable match</span></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>{m['scope2_market_tco2e']:,} tCO2e</b><span>Scope 2 (market)</span></div>
+      <div class="stat"><b>{m['scope2_location_tco2e'] / 1e6:.1f}M tCO2e</b><span>Scope 2 (location)</span></div>
+      <div class="stat"><b>{m['scope3_tco2e'] / 1e6:.1f}M tCO2e</b><span>Scope 3 (value chain)</span></div>
+      <div class="stat"><b>{_water_restored_mgal:,}M gal</b><span>Water restored</span></div>
+    </div>
+
+    <h3>Electricity trend (2020&ndash;2024)</h3>
+    <p class="muted">Meta DC electricity grew from 7.0 TWh in 2020 to 18.1 TWh
+    in 2024 &mdash; +159% in four years, driven by AI infrastructure buildout
+    and new campus openings.</p>
+    {m_elec_table}
+
+    <h3>GHG emissions (2020&ndash;2024)</h3>
+    <p class="muted">Meta&rsquo;s market-based Scope 2 is near-zero (1,358
+    tCO2e in 2024) thanks to 100% REC matching. Location-based tells the real
+    grid-impact story: 5.97M tCO2e from actual electrons consumed. Scope 3
+    (hardware mfg., logistics, sold products) dominates the total footprint at
+    8.15M tCO2e.</p>
+    {m_ghg_table}
+
+    <h3>PUE and WUE trend (2020&ndash;2024)</h3>
+    <p class="muted">Meta&rsquo;s fleet PUE improved from 1.10 to 1.08 and WUE
+    from 0.30 to 0.19 L/kWh, reflecting continued investment in liquid
+    cooling, airside economization, and AI-optimized airflow management.</p>
+    {m_eff_table}
+
+    <h3>Electricity by data center campus (2024)</h3>
+    <p class="muted">Top consumers: Prineville OR (1.73 TWh), Altoona IA
+    (1.59 TWh), Sarpy NE (1.26 TWh), and leased facilities (3.07 TWh).</p>
+    {m_campus_table}
+
+    <div class="note info"><p><strong>Community grants:</strong> Since 2011,
+    Meta has contributed over $74 million globally (with $24 million through
+    direct local Community Action Grants) to fund technology integration and
+    STEAM education in regional public schools. In 2026, the program awarded
+    328 grants across data center communities, expanding to seven new host
+    regions. {_srcref("meta_community_2026")}</p></div>
+  </details>
+</section>
+
+<section>
+  <h2>4. Revenue growth (2022&ndash;2025)</h2>
+  <p>Context for the environmental figures above: the companies behind this
+  infrastructure are among the largest on earth by revenue. The AI boom has
+  accelerated their growth &mdash; and with it, their electricity and water
+  consumption.</p>
+  {growth_table}
+  <p class="muted">Revenue figures from SEC 10-K filings. NVIDIA included for
+  context as the dominant GPU supplier driving data center buildout.</p>
+</section>
+
+<section>
+  <p><a class="btn" href="{APP_URL}">Open the toolkit &rarr;</a>
+  <a class="btn ghost" href="companies/index.html">Company scorecards</a></p>
+</section>
+"""
+    return page(
+        "Environmental impact — AI GridWatch",
+        "Side-by-side environmental footprint of Google, Meta, Microsoft, "
+        "and AWS: electricity, carbon, water, and what they pay.",
+        body, f"{SITE_URL}/environment",
+        jsonld=_breadcrumb(
+            ("Home", SITE_URL),
+            ("Environment", f"{SITE_URL}/environment")))
+
+
 def build_about():
     body_html = _md_to_html(ABOUT_SECTION["body"])
     body = f"""
@@ -3134,6 +4034,8 @@ def main():
     (WEB / "about.html").write_text(build_about(), encoding="utf-8")
     (WEB / "search.html").write_text(build_search(), encoding="utf-8")
     (WEB / "dividend.html").write_text(build_data_dividend(), encoding="utf-8")
+    (WEB / "data-centers.html").write_text(build_data_centers(), encoding="utf-8")
+    (WEB / "environment.html").write_text(build_environment(), encoding="utf-8")
     (WEB / "states" / "index.html").write_text(
         build_states_index(), encoding="utf-8")
 
@@ -3162,7 +4064,7 @@ def main():
 
     paths = ["", "health-risks", "moratoriums", "impact", "bills", "outlook",
              "learn", "puc", "executives", "about", "search", "dividend",
-             "companies/", "states/", "blog/"]
+             "data-centers", "environment", "companies/", "states/", "blog/"]
     paths.extend(f"companies/{h['slug']}" for h in _HYPERSCALERS)
     paths.extend(f"companies/{h['slug']}" for h in _OPERATORS)
     paths.extend(f"companies/{ld['slug']}" for ld in _LIMITED_DISCLOSURE)
