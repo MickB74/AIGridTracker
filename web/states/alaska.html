@@ -61,6 +61,12 @@ a { color:var(--teal); }
 .ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
        border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
 .src { font-size:12.5px; color:var(--muted); }
+.freshness { border-left:3px solid var(--rule); padding:10px 14px;
+  margin:14px 0; background:rgba(255,255,255,.02); border-radius:0 8px 8px 0;
+  font-size:13.5px; }
+.freshness.stale { border-left-color:var(--amber);
+  background:rgba(251,191,36,.07); }
+.freshness p { margin:0; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -146,6 +152,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <div class="stat"><b>22.9&cent;</b><span>residential rate per kWh</span></div>
   <div class="stat"><b>450</b><span>grid gCO&#8322;/kWh · water stress: low</span></div>
 </div>
+<div class="freshness"><p><strong>As of July 2026 · changes over months</strong> · Source: <a href="https://www.electricchoice.com/datacenters/" rel="nofollow">ElectricChoice.com — U.S. Data Center Power Map by State (2026; updated July 2026; CC-BY 4.0; cites LBNL, EPRINC, EIA)</a></p><p class="muted" style="margin:6px 0 0">Facility counts vary by directory because each one draws the boundary differently — DataCenterMap lists 44 in Alabama where this table says 35, since it counts small network rooms alongside hyperscale campuses. Cite the TWh figure rather than the facility count when you can; it is the number that speaks to grid impact. Underlying load research is LBNL-2001637 (Dec 2024).</p></div>
 <section><h2>Your regulator</h2><p><strong>Regulatory Commission of Alaska</strong> — <a href="https://rca.alaska.gov/">website</a> · <a href="https://rca.alaska.gov/RCAWeb/ForConsumers/SubmitInformalComplaint.aspx">file a complaint</a></p></section>
 
 

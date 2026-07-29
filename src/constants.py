@@ -1,3 +1,4 @@
+import datetime as _dt
 import pathlib
 import pandas as pd
 
@@ -553,9 +554,9 @@ VIDEO_TOPICS = {
 }
 
 # Data-center moratoriums / bans — POINT-IN-TIME SNAPSHOT (mid-2026). Compiled
-# from public trackers (see MORATORIUM_TRACKERS); dozens more churn weekly, so
-# treat as illustrative, not exhaustive — follow the tracker links for current
-# status. level: Local/State. status: Enacted/Proposed/Rejected/Vetoed.
+# from public trackers; dozens more churn weekly, so treat as illustrative, not
+# exhaustive. Provenance shown to users lives in REGISTRY_PROVENANCE.
+# level: Local/State. status: Enacted/Proposed/Rejected/Vetoed.
 MORATORIUMS = [
     # locality, state, level, status, when, note, lat, lon
     ("Minneapolis", "MN", "Local", "Enacted", "May 2026", "", 44.98, -93.27),
@@ -2403,6 +2404,163 @@ STATE_PUCS = [
      "website": "https://psc.wyo.gov/", "complaint": "https://psc.wyo.gov/home/file-a-complaint"},
 ]
 STATE_PUCS_DF = pd.DataFrame(STATE_PUCS)
+
+# --------------------------------------------------------------------------- #
+# REGISTRY PROVENANCE — when each dataset was last known good, and how fast it
+# rots. A resident who cites a number at a hearing and gets asked "as of when?"
+# has to be able to answer; a stale figure they can't date destroys their
+# credibility for everything else they say.
+#
+# The LOCAL_* registries carry per-row `source` + `as_of`, which is the better
+# pattern. The registries below predate it and were compiled in bulk, so the
+# honest unit of provenance is the dataset, not the row.
+#
+# RULE: `as_of=None` means "not recorded" — never a guess. A fabricated date is
+# worse than no date, because it invites a citation the user can't defend. The
+# renderer shows those as "verify before citing" rather than hiding them.
+#
+# churn = how quickly rows go wrong on their own:
+#   low    — institutional facts (a PUC does not move)
+#   medium — capital projects (announcements shift over quarters)
+#   high   — contested/personnel facts (votes and job titles change weekly)
+# --------------------------------------------------------------------------- #
+
+REGISTRY_PROVENANCE = {
+    "STATE_DC_DF": {
+        "label": "State data center counts & electricity use",
+        "as_of": "July 2026",
+        "source": "electricchoice",
+        "churn": "medium",
+        "caveat": (
+            "Facility counts vary by directory because each one draws the "
+            "boundary differently — DataCenterMap lists 44 in Alabama where "
+            "this table says 35, since it counts small network rooms "
+            "alongside hyperscale campuses. Cite the TWh figure rather than "
+            "the facility count when you can; it is the number that speaks "
+            "to grid impact. Underlying load research is LBNL-2001637 "
+            "(Dec 2024)."),
+    },
+    "MORATORIUMS_DF": {
+        "label": "Moratorium & ban tracker",
+        "as_of": "mid-2026",
+        "source": None,
+        "churn": "high",
+        "caveat": (
+            "A point-in-time snapshot, illustrative rather than exhaustive — "
+            "dozens of localities churn weekly. Confirm a locality's current "
+            "status with its own clerk before citing it as precedent."),
+    },
+    "MEGA_PROJECTS_DF": {
+        "label": "Megaprojects under construction",
+        "as_of": "2026",
+        "source": "electricchoice",
+        "churn": "medium",
+        "caveat": (
+            "Announced investment and capacity figures are the developer's "
+            "own claims, repeated by trade press. Treat them as what the "
+            "company said, not as verified build-out."),
+    },
+    "DC_SITES_DF": {
+        "label": "Campus registry (operator / tenant / filing LLC)",
+        "as_of": None,
+        "source": "dc_ownership",
+        "churn": "medium",
+        "caveat": (
+            "Each row carries its own attribution level — first-party rows "
+            "come from the operator's own site, but colocation and REIT "
+            "ownership was compiled from trade press and never passed an "
+            "independent fact-check. Check the attribution column before "
+            "citing a row."),
+    },
+    "EXECUTIVES_DF": {
+        "label": "Executive directory",
+        "as_of": "mid-2025",
+        "source": None,
+        "churn": "high",
+        "caveat": (
+            "This is the stalest table in the app — titles were recorded in "
+            "mid-2025 and executives move constantly. Confirm a name against "
+            "the company's own leadership page before addressing a letter to "
+            "them, and never read a name out at a hearing without checking "
+            "it first."),
+    },
+    "STATE_PUCS_DF": {
+        "label": "Public utility commission directory",
+        "as_of": None,
+        "source": None,
+        "churn": "low",
+        "caveat": (
+            "Commission names and complaint URLs are stable year to year, "
+            "but no verification date is recorded. The linked site is "
+            "authoritative if a URL has moved."),
+    },
+}
+
+_CHURN_NOTE = {
+    "low": "rarely changes",
+    "medium": "changes over months",
+    "high": "changes weekly — re-check before citing",
+}
+
+# How old a dataset may get before it is flagged, by churn rate.
+_STALE_AFTER_MONTHS = {"low": 36, "medium": 18, "high": 9}
+
+_MONTHS = {m: i for i, m in enumerate(
+    ["january", "february", "march", "april", "may", "june", "july",
+     "august", "september", "october", "november", "december"], start=1)}
+
+
+def _as_of_months_old(as_of, today=None):
+    """Months elapsed since a coarse `as_of` string, or None if unparseable.
+
+    Handles the three shapes used above: "July 2026", "mid-2026", "2026".
+    Coarse forms resolve to the middle//end of their period so the age is
+    never overstated — an unflagged dataset is a smaller error than a
+    falsely-flagged one.
+    """
+    if not as_of:
+        return None
+    text = as_of.strip().lower()
+    year = None
+    for token in text.replace("-", " ").split():
+        if token.isdigit() and len(token) == 4:
+            year = int(token)
+    if year is None:
+        return None
+    month = next((v for k, v in _MONTHS.items() if k in text), None)
+    if month is None:
+        # "mid-YYYY" → June; bare "YYYY" → December (newest reading).
+        month = 6 if "mid" in text else 12
+    today = today or _dt.date.today()
+    return (today.year - year) * 12 + (today.month - month)
+
+
+def registry_provenance(key, today=None):
+    """Provenance for a registry, or None if untracked.
+
+    Returns a dict with a rendered `line` suitable for a caption, plus the
+    raw fields, `months_old`, and a `stale` flag. `as_of=None` renders as an
+    explicit warning, never a guess.
+    """
+    p = REGISTRY_PROVENANCE.get(key)
+    if not p:
+        return None
+    out = dict(p)
+    months = _as_of_months_old(p["as_of"], today=today)
+    limit = _STALE_AFTER_MONTHS.get(p["churn"], 18)
+    out["months_old"] = months
+    # No recorded date is treated as stale: it cannot be shown to be current.
+    out["stale"] = months is None or months > limit
+
+    when = (f"As of {p['as_of']}" if p["as_of"]
+            else "No verification date recorded")
+    if months is not None and months >= 12:
+        when += f" ({months // 12}y {months % 12}m ago)"
+    elif months is not None and months >= 2:
+        when += f" ({months}m ago)"
+    out["line"] = f"{when} · {_CHURN_NOTE.get(p['churn'], '')}"
+    return out
+
 
 # --------------------------------------------------------------------------- #
 # LIVE DATA CONFIGS

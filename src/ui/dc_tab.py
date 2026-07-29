@@ -9,7 +9,7 @@ from src.constants import (DATACENTERS_DF, DC_METRICS, ERCOT_LL_VINTAGE,
                            AI_COMPETITORS_DF, STATE_DC_DF, STATE_DC_NATIONAL,
                            MEGA_PROJECTS_DF, OPERATORS_DF, DC_SITES_DF,
                            OPERATORS, EXECUTIVES_DF)
-from src.helpers import src_link
+from src.helpers import src_link, render_freshness
 from src.services.ercot import ercot_largeload_latest
 from src.services.eia import eia_latest_demand
 from src.services.secrets import load_local_secrets
@@ -458,6 +458,7 @@ def render_dc_tab():
         "usually just the **operator**. Land is bought through single-purpose "
         "**shell LLCs**, the join key back to county deed records. Ownership "
         "facts are press-sourced.")
+    render_freshness(st, "DC_SITES_DF")
 
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     tier_labels = {"hyperscaler": "Hyperscaler (owns & consumes)",
@@ -487,8 +488,8 @@ def render_dc_tab():
     st.caption(
         "CEO and data-center leadership at every tracked operator and "
         "mega-project sponsor. LinkedIn links open a people search for "
-        "the executive — verify the profile before reaching out. Titles "
-        "are as of mid-2025; confirm current roles before outreach.")
+        "the executive — verify the profile before reaching out.")
+    render_freshness(st, "EXECUTIVES_DF")
 
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
 
@@ -688,6 +689,7 @@ your large-load rules within 60 days, or reform them. {src_link('ferc_showcause'
         "Facility counts = active data centers as of 2026; TWh/year = annual electricity "
         "consumption; 🔜 = states with major projects under construction or announced."
     )
+    render_freshness(st, "STATE_DC_DF")
 
     # --- National headline stats ---
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
@@ -791,6 +793,7 @@ your large-load rules within 60 days, or reform them. {src_link('ferc_showcause'
         "Represents hundreds of billions in committed capital and tens of GW of new AI compute capacity. "
         f"Source: {src_link('electricchoice')} · {src_link('stargate')} · {src_link('xai_memphis')}"
     )
+    render_freshness(st, "MEGA_PROJECTS_DF")
 
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     mp = MEGA_PROJECTS_DF.copy()

@@ -3,7 +3,7 @@ import urllib.parse
 from src.constants import (
     COMPANY_STATEMENTS, COMPANY_FEED_TERMS, MORATORIUMS_DF,
 )
-from src.helpers import src_link
+from src.helpers import src_link, render_freshness
 from src.services.news import fetch_news
 from src.services.report_check import check_report_freshness, REPORT_REGISTRY
 
@@ -288,6 +288,7 @@ def render_news_tab():
         "consideration**. Nationally, trackers report 50+ localities enacted "
         "(North Carolina alone has 20+)."
     )
+    render_freshness(st, "MORATORIUMS_DF")
     st.markdown(
         "📍 **[Full tracker — table, map and case-study outcomes]"
         "(https://aigridwatch.com/moratoriums)** on the GridWatch site."

@@ -19,7 +19,7 @@ from src.constants import (
     MICROSOFT_ENV_HEADLINE, AWS_ENV_HEADLINE,
     EXECUTIVES_DF, SHARES_OUTSTANDING,
 )
-from src.helpers import src_link
+from src.helpers import src_link, render_freshness
 from src.services.sec_xbrl import fetch_dynamic_financials
 from src.services.marketdata import fetch_live_quotes
 
@@ -1279,6 +1279,7 @@ def render_corporate_tab():
         "hyperscalers — the people shaping energy sourcing, water policy, "
         "and community engagement. Filtered from the full executive "
         "directory on the **Data centers** tab.")
+    render_freshness(st, "EXECUTIVES_DF")
 
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
 

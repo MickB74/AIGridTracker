@@ -40,7 +40,7 @@ from src.constants import (
     EDGECONNEX_2024_HEADLINE, STACK_2023_HEADLINE,
     CYRUSONE_2023_HEADLINE, VANTAGE_2023_HEADLINE,
     COREWEAVE_PROFILE, QTS_PROFILE, SWITCH_PROFILE, COMPASS_PROFILE,
-    SOURCES,
+    SOURCES, registry_provenance,
 )
 from src.pdf_pack import build_health_pdf
 from src.us_map_data import US_MAP_PATHS, US_MAP_LABELS, US_MAP_VIEWBOX
@@ -51,6 +51,28 @@ APP_URL = os.environ.get("APP_URL", "https://aigridtracker.streamlit.app")
 # Third-party existing-facility directory (SOURCES["datacentermap"]). State
 # slugs match slugify(state) for all 51 US entries.
 DCMAP_BASE = "https://www.datacentermap.com/usa"
+
+
+def provenance_html(registry_key, depth=0):
+    """Freshness note for a registry, as an HTML block. "" if untracked.
+
+    Mirrors helpers.render_freshness for the static site: a dataset past its
+    shelf life is called out rather than quietly captioned, because these
+    pages are what people print and carry into a hearing.
+    """
+    p = registry_provenance(registry_key)
+    if not p:
+        return ""
+    src = ""
+    if p.get("source") and p["source"] in SOURCES:
+        name, url = SOURCES[p["source"]]
+        src = f' · Source: <a href="{esc(url)}" rel="nofollow">{esc(name)}</a>'
+    cls = "freshness stale" if p["stale"] else "freshness"
+    icon = "&#9203; " if p["stale"] else ""
+    caveat = (f'<p class="muted" style="margin:6px 0 0">{esc(p["caveat"])}</p>'
+              if p.get("caveat") else "")
+    return (f'<div class="{cls}"><p><strong>{icon}{esc(p["line"])}</strong>'
+            f'{src}</p>{caveat}</div>')
 
 ROOT = pathlib.Path(__file__).resolve().parent
 WEB = ROOT / "web"
@@ -112,6 +134,12 @@ a { color:var(--teal); }
 .ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
        border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
 .src { font-size:12.5px; color:var(--muted); }
+.freshness { border-left:3px solid var(--rule); padding:10px 14px;
+  margin:14px 0; background:rgba(255,255,255,.02); border-radius:0 8px 8px 0;
+  font-size:13.5px; }
+.freshness.stale { border-left-color:var(--amber);
+  background:rgba(251,191,36,.07); }
+.freshness p { margin:0; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -331,7 +359,8 @@ def build_state(state):
         mora_html = (
             f'<section><h2>Pushback already happening in {esc(state)}</h2>'
             f'<table><tr><th>Where</th><th>Level</th><th>Status</th>'
-            f'<th>Note</th></tr>{rows}</table></section>')
+            f'<th>Note</th></tr>{rows}</table>'
+            f'{provenance_html("MORATORIUMS_DF")}</section>')
 
     # DC sites in this state
     sites = DC_SITES_DF[DC_SITES_DF["state"] == abbrev]
@@ -347,7 +376,8 @@ def build_state(state):
             f'<section><h2>Known data center campuses in {esc(state)}</h2>'
             f'<table><tr><th>Operator</th><th>Location</th>'
             f'<th>Tenant</th><th>Filing LLC</th></tr>'
-            f'{site_rows}</table></section>')
+            f'{site_rows}</table>'
+            f'{provenance_html("DC_SITES_DF")}</section>')
 
     # Existing-facility directory link-out. DataCenterMap's state slugs are
     # exactly slugify(state) for all 51 — verified against the live /usa/ index,
@@ -459,6 +489,7 @@ def build_state(state):
   <div class="stat"><b>{prof['rate'] * 100:.1f}&cent;</b><span>residential rate per kWh</span></div>
   <div class="stat"><b>{prof['gco2']}</b><span>grid gCO&#8322;/kWh · water stress: {esc(prof['water_stress'])}</span></div>
 </div>
+{provenance_html("STATE_DC_DF")}
 {puc_html}
 {mora_html}
 {outcome_html}
@@ -823,6 +854,7 @@ def build_moratoriums():
   <th>Status</th><th>When</th><th>Note</th></tr>
   {rows}</table>
   </div>
+  {provenance_html("MORATORIUMS_DF")}
   <p class="muted" style="margin-top:10px">See the full interactive map and
   filters in the <a href="{APP_URL}">GridWatch toolkit</a>.</p>
 </section>

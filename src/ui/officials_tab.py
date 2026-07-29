@@ -2,7 +2,7 @@ import re
 import html as _html
 import streamlit as st
 import pandas as pd
-from src.helpers import src_link
+from src.helpers import src_link, render_freshness
 from src.constants import STATE_PUCS_DF, MORATORIUMS_DF, DC_SITES_DF
 from src.local_officials import (
     build_lookup_links, covered_localities, curated, split_label,
@@ -424,6 +424,7 @@ def render_officials_tab():
         "rules — they decide whether data center costs land on residential "
         "bills. Every state has one. File a complaint or intervene in a "
         "rate case to make your voice heard.")
+    render_freshness(st, "STATE_PUCS_DF")
 
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
 

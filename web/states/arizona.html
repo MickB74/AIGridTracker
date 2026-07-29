@@ -61,6 +61,12 @@ a { color:var(--teal); }
 .ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
        border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
 .src { font-size:12.5px; color:var(--muted); }
+.freshness { border-left:3px solid var(--rule); padding:10px 14px;
+  margin:14px 0; background:rgba(255,255,255,.02); border-radius:0 8px 8px 0;
+  font-size:13.5px; }
+.freshness.stale { border-left-color:var(--amber);
+  background:rgba(251,191,36,.07); }
+.freshness p { margin:0; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -146,11 +152,12 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <div class="stat"><b>13.9&cent;</b><span>residential rate per kWh</span></div>
   <div class="stat"><b>390</b><span>grid gCO&#8322;/kWh · water stress: high</span></div>
 </div>
+<div class="freshness"><p><strong>As of July 2026 · changes over months</strong> · Source: <a href="https://www.electricchoice.com/datacenters/" rel="nofollow">ElectricChoice.com — U.S. Data Center Power Map by State (2026; updated July 2026; CC-BY 4.0; cites LBNL, EPRINC, EIA)</a></p><p class="muted" style="margin:6px 0 0">Facility counts vary by directory because each one draws the boundary differently — DataCenterMap lists 44 in Alabama where this table says 35, since it counts small network rooms alongside hyperscale campuses. Cite the TWh figure rather than the facility count when you can; it is the number that speaks to grid impact. Underlying load research is LBNL-2001637 (Dec 2024).</p></div>
 <section><h2>Your regulator</h2><p><strong>Arizona Corporation Commission</strong> — <a href="https://www.azcc.gov/">website</a> · <a href="https://www.azcc.gov/utilities/consumer-services">file a complaint</a></p></section>
 
 <section><h2>Case studies</h2><div class="outcome"><div class="cat">CBA secured</div><p><strong>Mesa</strong> — Residents won noise and water protections mid-construction</p><p class="muted">After residents organized against Apple and Google campus noise, Mesa adopted a data center overlay zone requiring 55 dBA limits, water recycling plans, and quarterly community reporting. Existing facilities were grandfathered but agreed to voluntary retrofits.</p></div></section>
 <section><h2>Known data center campuses in Arizona</h2><table><tr><th>Operator</th><th>Location</th><th>Tenant</th><th>Filing LLC</th></tr><tr><td>Meta</td><td>Mesa</td><td>Meta</td><td>Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain</td></tr>
-<tr><td>Microsoft</td><td>Goodyear (Greater Phoenix)</td><td>Microsoft</td><td>Project-name / generic &#x27;Holdings LLC&#x27;; less consistently codenamed</td></tr></table></section>
+<tr><td>Microsoft</td><td>Goodyear (Greater Phoenix)</td><td>Microsoft</td><td>Project-name / generic &#x27;Holdings LLC&#x27;; less consistently codenamed</td></tr></table><div class="freshness stale"><p><strong>&#9203; No verification date recorded · changes over months</strong> · Source: <a href="https://dgtlinfra.com/data-center-companies/" rel="nofollow">Data-center operator ownership &amp; M&amp;A — compiled from trade press (Data Center Dynamics, dgtlinfra, ABI Research) + operator releases; automated fact-check pending</a></p><p class="muted" style="margin:6px 0 0">Each row carries its own attribution level — first-party rows come from the operator&#x27;s own site, but colocation and REIT ownership was compiled from trade press and never passed an independent fact-check. Check the attribution column before citing a row.</p></div></section>
 <section><h2>Every data center already built in Arizona</h2><p>The campuses above are the ones GridWatch tracks by operator and filing LLC. For the full inventory — street addresses of every existing facility, including the smaller colocation and network sites — DataCenterMap keeps a public directory for Arizona.</p><p><a class="btn ghost" href="https://www.datacentermap.com/usa/arizona/" rel="nofollow noopener">Browse the Arizona directory &rarr;</a></p><p class="muted">Two caveats before you cite it at a hearing: it lists facilities that already exist, so a newly proposed campus will not appear; and it counts a small network room the same as a hyperscale campus, so the facility count is not a measure of power draw or community impact.</p></section>
 
 
