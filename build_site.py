@@ -48,6 +48,10 @@ from src.us_map_data import US_MAP_PATHS, US_MAP_LABELS, US_MAP_VIEWBOX
 SITE_URL = os.environ.get("SITE_URL", "https://gridwatch-ai.vercel.app")
 APP_URL = os.environ.get("APP_URL", "https://aigridtracker.streamlit.app")
 
+# Third-party existing-facility directory (SOURCES["datacentermap"]). State
+# slugs match slugify(state) for all 51 US entries.
+DCMAP_BASE = "https://www.datacentermap.com/usa"
+
 ROOT = pathlib.Path(__file__).resolve().parent
 WEB = ROOT / "web"
 
@@ -345,6 +349,38 @@ def build_state(state):
             f'<th>Tenant</th><th>Filing LLC</th></tr>'
             f'{site_rows}</table></section>')
 
+    # Existing-facility directory link-out. DataCenterMap's state slugs are
+    # exactly slugify(state) for all 51 — verified against the live /usa/ index,
+    # not guessed. Their counts are deliberately not reproduced here: the
+    # directory is colocation-weighted (a carrier hotel counts the same as a
+    # gigawatt campus), so it would contradict the dc_count stat above.
+    # 21 states have no rows in DC_SITES_DF, so the lead sentence can't assume
+    # a campus table sits above it.
+    if sites.empty:
+        dcmap_lead = (
+            f'GridWatch does not yet track a named hyperscale campus in '
+            f'{esc(state)}, but that does not mean the state has none. '
+            f'DataCenterMap keeps a public directory of existing facilities '
+            f'— street addresses included — for {esc(state)}.')
+    else:
+        dcmap_lead = (
+            f'The campuses above are the ones GridWatch tracks by operator and '
+            f'filing LLC. For the full inventory — street addresses of every '
+            f'existing facility, including the smaller colocation and network '
+            f'sites — DataCenterMap keeps a public directory for {esc(state)}.')
+
+    dcmap_html = (
+        f'<section><h2>Every data center already built in {esc(state)}</h2>'
+        f'<p>{dcmap_lead}</p>'
+        f'<p><a class="btn ghost" href="{DCMAP_BASE}/{slugify(state)}/" '
+        f'rel="nofollow noopener">Browse the {esc(state)} directory &rarr;</a></p>'
+        f'<p class="muted">Two caveats before you cite it at a hearing: it lists '
+        f'facilities that already exist, so a newly proposed campus will not '
+        f'appear; and it counts a small network room the same as a hyperscale '
+        f'campus, so the facility count is not a measure of power draw or '
+        f'community impact.</p>'
+        f'</section>')
+
     # CBA benchmarks for this state
     state_cbas = [b for b in CBA_BENCHMARKS if b["state"] == abbrev]
     cba_html = ""
@@ -427,6 +463,7 @@ def build_state(state):
 {mora_html}
 {outcome_html}
 {sites_html}
+{dcmap_html}
 {cba_html}
 {officials_html}
 {muni_html}
