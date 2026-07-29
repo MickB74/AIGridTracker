@@ -1510,8 +1510,10 @@ def build_search():
                        "d": f"{r['tier']} · {r['model']}",
                        "u": f"search.html"})
     for _, r in EXECUTIVES_DF.iterrows():
+        # Don't present an unconfirmed title as fact in search results.
+        suffix = "" if r["verified"] else " · unverified"
         index.append({"t": r["name"], "k": "executive",
-                       "d": f"{r['company']} · {r['title']}",
+                       "d": f"{r['company']} · {r['title']}{suffix}",
                        "u": f"search.html"})
     for _, r in DC_SITES_DF.iterrows():
         loc = str(r.get("location", ""))

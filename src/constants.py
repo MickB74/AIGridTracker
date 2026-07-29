@@ -2208,9 +2208,8 @@ EXECUTIVES = [
     {"company": "Microsoft",    "name": "Noelle Walsh",       "title": "CVP, Cloud Operations & Innovation",
      "category": "infrastructure", "focus": "Global Azure cloud infrastructure construction and operations.",
      "linkedin": _li("Noelle Walsh", "Microsoft")},
-    {"company": "Microsoft",    "name": "Bobby Hollis",       "title": "VP of Energy",
-     "category": "sustainability", "focus": "Global energy sourcing, grid integration, and PPAs.",
-     "linkedin": _li("Bobby Hollis", "Microsoft")},
+    # Left Microsoft for STACK, announced May 5 2026 — was Microsoft's VP of
+    # Energy. Kept under STACK below; do not re-add him to Microsoft.
     {"company": "Microsoft",    "name": "Melanie Nakagawa",   "title": "Chief Sustainability Officer",
      "category": "sustainability", "focus": "Corporate climate and sustainability policies (carbon negative by 2030).",
      "linkedin": _li("Melanie Nakagawa", "Microsoft")},
@@ -2246,8 +2245,8 @@ EXECUTIVES = [
     {"company": "CoreWeave",    "name": "Michael Intrator",   "title": "CEO & Co-founder",
      "category": "leadership", "focus": "Corporate strategy and capital raises for GPU hosting.",
      "linkedin": _li("Michael Intrator", "CoreWeave")},
-    {"company": "CoreWeave",    "name": "Brian Venturo",      "title": "CTO & Co-founder",
-     "category": "infrastructure", "focus": "Hardware architecture and high-density cluster cooling.",
+    {"company": "CoreWeave",    "name": "Brian Venturo",      "title": "Chief Strategy Officer & Co-founder",
+     "category": "leadership", "focus": "Corporate strategy; was CTO until March 2024.",
      "linkedin": _li("Brian Venturo", "CoreWeave")},
     # --- Colocation / wholesale REITs ---
     {"company": "Digital Realty", "name": "Andy Power",       "title": "President & CEO",
@@ -2259,24 +2258,42 @@ EXECUTIVES = [
     {"company": "Digital Realty", "name": "Aaron Binkley",    "title": "VP of Sustainability",
      "category": "sustainability", "focus": "Global environmental reporting, carbon reduction, and green tariffs.",
      "linkedin": _li("Aaron Binkley", "Digital Realty")},
-    {"company": "QTS",          "name": "Chad Williams",      "title": "Founder & Executive Chairman",
+    # Chad Williams (founder) no longer appears on QTS's leadership page; QTS
+    # now lists co-CEOs. Removed rather than kept with a guessed title.
+    {"company": "QTS",          "name": "Thomas A. \"Tag\" Greason", "title": "Co-Chief Executive Officer",
      "category": "leadership", "focus": "QTS strategy under Blackstone ownership.",
-     "linkedin": _li("Chad Williams", "QTS Data Centers")},
+     "linkedin": _li("Tag Greason", "QTS Data Centers")},
+    {"company": "QTS",          "name": "David Robey",        "title": "Co-Chief Executive Officer",
+     "category": "leadership", "focus": "QTS operations and delivery under Blackstone ownership.",
+     "linkedin": _li("David Robey", "QTS Data Centers")},
+    {"company": "QTS",          "name": "Brian Herlihy",      "title": "Chief Energy Strategy Officer",
+     "category": "sustainability", "focus": "Power procurement and grid strategy for QTS campuses.",
+     "linkedin": _li("Brian Herlihy", "QTS Data Centers")},
+    {"company": "QTS",          "name": "Theo Yedinsky",      "title": "Chief External Affairs Officer",
+     "category": "policy", "focus": "Government relations and community engagement — the contact for siting disputes.",
+     "linkedin": _li("Theo Yedinsky", "QTS Data Centers")},
     {"company": "Vantage",      "name": "Sureel Choksi",     "title": "President & CEO",
      "category": "leadership", "focus": "Vantage global expansion and hyperscale campus development.",
      "linkedin": _li("Sureel Choksi", "Vantage Data Centers")},
     {"company": "CyrusOne",     "name": "Eric Schwartz",     "title": "CEO",
      "category": "leadership", "focus": "CyrusOne strategy under KKR/GIP ownership.",
      "linkedin": _li("Eric Schwartz", "CyrusOne")},
-    {"company": "Aligned",      "name": "Andrew Schaap",     "title": "CEO & Co-founder",
+    {"company": "Aligned",      "name": "Andrew Schaap",     "title": "CEO",
      "category": "leadership", "focus": "Adaptive data center design and Nvidia/BlackRock acquisition.",
      "linkedin": _li("Andrew Schaap", "Aligned Data Centers")},
-    {"company": "Switch",       "name": "Thomas Morton",     "title": "CEO",
-     "category": "leadership", "focus": "Switch strategy under DigitalBridge ownership.",
-     "linkedin": _li("Thomas Morton", "Switch")},
-    {"company": "Stack Infrastructure", "name": "Brian Cox",  "title": "CEO",
-     "category": "leadership", "focus": "Hyperscale campus development for Stack/IPI Partners.",
+    {"company": "Switch",       "name": "Rob Roy",           "title": "Founder & CEO",
+     "category": "leadership", "focus": "Switch strategy under DigitalBridge ownership; designer of the Prime campuses.",
+     "linkedin": _li("Rob Roy", "Switch")},
+    # STACK runs regional CEOs, not one global CEO — name the right region.
+    {"company": "Stack Infrastructure", "name": "Matt VanderZanden", "title": "CEO, STACK Americas",
+     "category": "leadership", "focus": "US hyperscale campus development for STACK/Blue Owl.",
+     "linkedin": _li("Matt VanderZanden", "Stack Infrastructure")},
+    {"company": "Stack Infrastructure", "name": "Brian Cox",  "title": "Interim CEO, STACK EMEA",
+     "category": "leadership", "focus": "STACK EMEA; was CEO of STACK Americas from 2018.",
      "linkedin": _li("Brian Cox", "Stack Infrastructure")},
+    {"company": "Stack Infrastructure", "name": "Bobby Hollis", "title": "Chief Development Officer, STACK Americas",
+     "category": "sustainability", "focus": "Site selection, preconstruction, and power strategy. Was Microsoft's VP of Energy until May 2026.",
+     "linkedin": _li("Bobby Hollis", "Stack Infrastructure")},
     {"company": "EdgeConneX",   "name": "Randy Brouckman",   "title": "CEO",
      "category": "leadership", "focus": "Edge and hyperscale data center development.",
      "linkedin": _li("Randy Brouckman", "EdgeConneX")},
@@ -2290,7 +2307,50 @@ EXECUTIVES = [
      "category": "leadership", "focus": "HPC/AI pivot and CoreWeave acquisition negotiations.",
      "linkedin": _li("Adam Sullivan", "Core Scientific")},
 ]
+# Verification log — read off each company's OWN leadership page on the date
+# shown. Keyed by (company, name). Kept separate from the rows above because
+# it is provenance, not identity: a name/title is a claim, this is the receipt.
+#
+# A row absent from this map is NOT verified, and renders as "Unverified" in
+# the UI. That is the honest state for most VP- and director-level people:
+# no company publishes a leadership page that lists them, so there is no
+# first-party source to check them against. Search results and third-party
+# profiles do not count — the same rule the LOCAL_OFFICIALS rows follow.
+_EXEC_VERIFIED_ON = "2026-07-29"
+EXEC_VERIFIED = {
+    ("Microsoft", "Satya Nadella"):        "https://news.microsoft.com/leadership/",
+    ("Meta", "Mark Zuckerberg"):           "https://www.meta.com/media-gallery/executives/",
+    ("Meta", "Susan Li"):                  "https://www.meta.com/media-gallery/executives/",
+    ("Amazon (AWS)", "Andy Jassy"):        "https://www.aboutamazon.com/news/workplace/amazon-s-team-members",
+    ("Amazon (AWS)", "Matt Garman"):       "https://www.aboutamazon.com/news/workplace/amazon-s-team-members",
+    ("OpenAI · Oracle (Stargate)", "Masayoshi Son"): "https://group.softbank/en/about/officer",
+    ("CoreWeave", "Michael Intrator"):     "https://www.coreweave.com/leadership/mike-intrator",
+    ("CoreWeave", "Brian Venturo"):        "https://www.coreweave.com/leadership/brian-venturo",
+    ("Digital Realty", "Andy Power"):      "https://www.digitalrealty.com/about/leadership",
+    ("Digital Realty", "Chris Sharp"):     "https://www.digitalrealty.com/about/leadership",
+    ("Vantage", "Sureel Choksi"):          "https://vantage-dc.com/leadership/",
+    ("CyrusOne", "Eric Schwartz"):         "https://cyrusone.com/leadership/",
+    ("Aligned", "Andrew Schaap"):          "https://aligneddc.com/team/andrew-schaap/",
+    ("Switch", "Rob Roy"):                 "https://www.switch.com/executive-team/",
+    ("EdgeConneX", "Randy Brouckman"):     "https://www.edgeconnex.com/company/management-team/randy-brouckman/",
+    ("Equinix", "Adaire Fox-Martin"):      "https://investor.equinix.com/about-equinix/leadership-team",
+    ("Core Scientific", "Adam Sullivan"):  "https://corescientific.com/about/leadership/",
+    ("QTS", "Thomas A. \"Tag\" Greason"):  "https://q.com/company/leadership",
+    ("QTS", "David Robey"):                "https://q.com/company/leadership",
+    ("QTS", "Brian Herlihy"):              "https://q.com/company/leadership",
+    ("QTS", "Theo Yedinsky"):              "https://q.com/company/leadership",
+    ("Stack Infrastructure", "Matt VanderZanden"): "https://www.stackinfra.com/about/meet-the-team/",
+    ("Stack Infrastructure", "Brian Cox"): "https://www.stackinfra.com/about/meet-the-team/",
+    ("Stack Infrastructure", "Bobby Hollis"): "https://www.stackinfra.com/about/meet-the-team/",
+}
+
 EXECUTIVES_DF = pd.DataFrame(EXECUTIVES)
+EXECUTIVES_DF["verified"] = [
+    _EXEC_VERIFIED_ON if (c, n) in EXEC_VERIFIED else None
+    for c, n in zip(EXECUTIVES_DF["company"], EXECUTIVES_DF["name"])]
+EXECUTIVES_DF["verified_source"] = [
+    EXEC_VERIFIED.get((c, n))
+    for c, n in zip(EXECUTIVES_DF["company"], EXECUTIVES_DF["name"])]
 
 # --------------------------------------------------------------------------- #
 # STATE PUBLIC UTILITY COMMISSIONS (PUCs) — 50 states + DC
@@ -2474,15 +2534,19 @@ REGISTRY_PROVENANCE = {
     },
     "EXECUTIVES_DF": {
         "label": "Executive directory",
-        "as_of": "mid-2025",
+        "as_of": "July 2026",
         "source": None,
         "churn": "high",
         "caveat": (
-            "This is the stalest table in the app — titles were recorded in "
-            "mid-2025 and executives move constantly. Confirm a name against "
-            "the company's own leadership page before addressing a letter to "
-            "them, and never read a name out at a hearing without checking "
-            "it first."),
+            "Only some rows are verified. Every row marked Verified was read "
+            "off that company's own leadership page on the date shown, and "
+            "links to it. Rows marked Unverified are mostly VP- and "
+            "director-level people: no company publishes a page listing them, "
+            "so there is no first-party source to check them against, and "
+            "their titles may be a year or more out of date. Confirm any "
+            "name before you put it in a letter or read it out at a hearing. "
+            "The July 2026 sweep found five people whose entries were wrong, "
+            "including one who had changed companies."),
     },
     "STATE_PUCS_DF": {
         "label": "Public utility commission directory",

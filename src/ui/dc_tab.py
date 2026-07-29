@@ -513,25 +513,36 @@ def render_dc_tab():
     if cat_filter:
         exec_df = exec_df[exec_df["category"].isin(cat_filter)]
 
+    # Per-row provenance: verified rows were read off the company's own
+    # leadership page and link to it; the rest have no first-party source.
+    exec_df["status"] = exec_df["verified"].apply(
+        lambda v: f"✅ Verified {v}" if v else "⚠️ Unverified")
+
     st.dataframe(
-        exec_df[["company", "name", "title", "category", "focus", "linkedin"]],
+        exec_df[["company", "name", "title", "status", "verified_source",
+                 "category", "focus", "linkedin"]],
         use_container_width=True, hide_index=True,
         column_config={
             "company": st.column_config.TextColumn("Company"),
             "name": st.column_config.TextColumn("Name"),
             "title": st.column_config.TextColumn("Title"),
+            "status": st.column_config.TextColumn("Status"),
+            "verified_source": st.column_config.LinkColumn(
+                "Checked against", display_text="company page"),
             "category": st.column_config.TextColumn("Category"),
             "focus": st.column_config.TextColumn("Focus", width="large"),
             "linkedin": st.column_config.LinkColumn(
                 "LinkedIn", display_text="search"),
         })
+    _n_ver = int(exec_df["verified"].notna().sum())
     st.caption(
         f"Showing {len(exec_df)} executives across "
-        f"{exec_df['company'].nunique()} companies. "
-        "Titles sourced from company websites and SEC filings; LinkedIn "
-        "links are search URLs — verify the profile matches before "
-        "connecting. Executives change roles; always confirm current "
-        "status.")
+        f"{exec_df['company'].nunique()} companies — "
+        f"**{_n_ver} verified** against the company's own leadership page, "
+        f"**{len(exec_df) - _n_ver} unverified**. Unverified rows are mostly "
+        "VP- and director-level people who appear on no public leadership "
+        "page; treat their titles as a lead to confirm, not a fact. LinkedIn "
+        "links are search URLs — check the profile matches before connecting.")
     st.markdown('</div>', unsafe_allow_html=True)
 
     # --- Who each company names as a competitor (from SEC 10-K filings) --------

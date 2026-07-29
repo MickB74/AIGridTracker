@@ -1298,20 +1298,32 @@ def render_corporate_tab():
                 corp_exec["focus"].str.lower().str.contains(q))
         corp_exec = corp_exec[mask]
 
+    corp_exec["status"] = corp_exec["verified"].apply(
+        lambda v: f"✅ Verified {v}" if v else "⚠️ Unverified")
+
     st.dataframe(
-        corp_exec[["company", "name", "title", "focus", "linkedin"]],
+        corp_exec[["company", "name", "title", "status", "verified_source",
+                   "focus", "linkedin"]],
         use_container_width=True, hide_index=True,
         column_config={
             "company": st.column_config.TextColumn("Company", width="medium"),
             "name": st.column_config.TextColumn("Name", width="medium"),
             "title": st.column_config.TextColumn("Title", width="large"),
+            "status": st.column_config.TextColumn("Status", width="small"),
+            "verified_source": st.column_config.LinkColumn(
+                "Checked against", display_text="company page", width="small"),
             "focus": st.column_config.TextColumn("Focus", width="large"),
             "linkedin": st.column_config.LinkColumn(
                 "LinkedIn", display_text="search", width="small"),
         })
+    _n_ver = int(corp_exec["verified"].notna().sum())
     st.caption(
         f"Showing {len(corp_exec)} infrastructure / sustainability / policy "
-        f"executives. Full directory (all {len(EXECUTIVES_DF)} executives "
-        f"including CEOs) is on the **Data centers** tab.")
+        f"executives — **{_n_ver} verified** against the company's own "
+        f"leadership page, **{len(corp_exec) - _n_ver} unverified**. This "
+        "slice skews to VP- and director-level roles, which is exactly the "
+        "tier no company publishes, so most rows here need confirming. Full "
+        f"directory (all {len(EXECUTIVES_DF)} executives including CEOs) is "
+        "on the **Data centers** tab.")
     st.markdown('</div>', unsafe_allow_html=True)
 
