@@ -112,7 +112,7 @@ this page" expander for navigation.
     `src/services/report_check.py`.
   - Grid coefficients, model parameters, ERCOT large-load data
 
-- **src/helpers.py** — Three utility functions: `human_energy()`, `human_water()`, `src_link()`.
+- **src/helpers.py** — `human_energy()`, `human_water()`, `src_link()`, plus `freshness_caption(registry_key)` / `render_freshness(st, registry_key)` for dataset provenance (see Data sourcing below). `render_freshness` takes `st` as an argument so the module stays Streamlit-free at import time.
 
 - **src/impact_model.py** — `estimate_facility_impact(mw, state, cooling)`: the single shared facility-impact model (PUE/water by cooling type, homes-equivalent, investment/data-dividend economics). Used by the impact calculator, meeting prep generator, and Start here wizard — never duplicate these coefficients inline in a tab.
 
@@ -170,6 +170,8 @@ External data fetchers. All must be cached with `@st.cache_data` and fail gracef
 
 ### Data sourcing
 - Every numeric claim gets a source key in `SOURCES` and a link via `src_link(key)`.
+- **Every registry declares its freshness.** New bulk registries get an entry in `REGISTRY_PROVENANCE` (`src/constants.py`): `as_of`, `source`, `churn` (low/medium/high), and a plain-language `caveat`. Render it with `render_freshness(st, "MY_DF")` in the app and `provenance_html("MY_DF")` in `build_site.py` — both flag a dataset past its churn-based shelf life (low 36mo / medium 18mo / high 9mo) instead of quietly captioning it. Per-row `source` + `as_of` (the `LOCAL_*` pattern) is better where rows are added individually; `REGISTRY_PROVENANCE` is for datasets compiled in bulk.
+- **Never invent an `as_of`.** Set it to `None` if the verification date isn't known — it renders as "No verification date recorded" and counts as stale. A fabricated date is worse than no date: it invites a citation the user can't defend at a hearing.
 - Distinguish **marginal** (load-shifting) vs **average** (fuel-mix) carbon intensity.
 - Shared registries live in `constants.py` — never duplicate data inline in tab modules. If two tabs need the same data, one filters the shared DataFrame.
 
