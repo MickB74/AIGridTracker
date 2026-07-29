@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Project, Two Stories: How Data Center Developers Shop the Gaps Between Agencies — AI GridWatch</title>
+<meta name="description" content="In Tucker County, West Virginia, one developer told the DEP it controlled 10,000 acres — and told the Department of Commerce its project was merely &quot;conceptual.&quot; Both agencies say there&#x27;s no contradiction, because neither one reviews the whole project. That gap isn&#x27;t a West Virginia quirk. It&#x27;s the buildout&#x27;s default operating mode, and it shows up in seven recognizable forms — from &quot;nonroad engine&quot; turbine exemptions in Memphis to shell-company NDAs in Wisconsin to by-right zoning in Virginia. Here&#x27;s the taxonomy, and the questions that close each gap.">
+<link rel="canonical" href="https://aigridwatch.com/blog/oversight-gaps-agency-shopping-2026">
+<link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
+      href="https://aigridwatch.com/blog/feed.xml">
+<meta property="og:title" content="One Project, Two Stories: How Data Center Developers Shop the Gaps Between Agencies — AI GridWatch">
+<meta property="og:description" content="In Tucker County, West Virginia, one developer told the DEP it controlled 10,000 acres — and told the Department of Commerce its project was merely &quot;conceptual.&quot; Both agencies say there&#x27;s no contradiction, because neither one reviews the whole project. That gap isn&#x27;t a West Virginia quirk. It&#x27;s the buildout&#x27;s default operating mode, and it shows up in seven recognizable forms — from &quot;nonroad engine&quot; turbine exemptions in Memphis to shell-company NDAs in Wisconsin to by-right zoning in Virginia. Here&#x27;s the taxonomy, and the questions that close each gap.">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-07-26">
+<meta property="article:author" content="GridWatch AI">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<style>
+:root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
+        --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
+* { box-sizing:border-box; margin:0; }
+body { background:var(--bg); color:var(--ink);
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.wrap { max-width:900px; margin:0 auto; padding:20px 20px 64px; }
+nav { display:flex; align-items:center; gap:14px; padding:14px 0;
+      border-bottom:1px solid var(--rule); flex-wrap:wrap; }
+nav img { height:34px; }
+nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+nav a:hover { color:var(--teal); }
+nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
+           font-weight:700; padding:8px 16px; border-radius:8px; }
+header { padding:44px 0 10px; }
+.kicker { color:var(--teal); font-weight:700; letter-spacing:.12em;
+          text-transform:uppercase; font-size:13px; }
+h1 { font-size:clamp(28px,5vw,44px); line-height:1.12; margin:10px 0; }
+.sub { color:var(--muted); max-width:640px; }
+.stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+         margin:30px 0; }
+@media (min-width:640px){ .stats{ grid-template-columns:repeat(4,1fr);} }
+.stat { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:16px; }
+.stat b { display:block; font-size:24px; color:var(--teal); }
+.stat span { font-size:13px; color:var(--muted); }
+section { margin:34px 0; }
+h2 { font-size:20px; color:var(--teal); margin-bottom:12px;
+     border-bottom:1px solid var(--rule); padding-bottom:8px; }
+ul { padding-left:22px; } li { margin:9px 0; }
+a { color:var(--teal); }
+.btn { display:inline-block; background:var(--teal); color:#06251f;
+       font-weight:700; padding:12px 22px; border-radius:10px;
+       text-decoration:none; margin:8px 8px 0 0; }
+.btn.ghost { background:transparent; color:var(--teal);
+             border:1px solid var(--teal); }
+.muted { color:var(--muted); font-size:14px; }
+.grid3 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid3{ grid-template-columns:repeat(3,1fr);} }
+.card { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:18px; }
+.card h3 { margin-bottom:6px; font-size:16px; }
+.panel { border-radius:14px; padding:18px; color:#fff; }
+.panel h3 { margin-bottom:8px; }
+.panel p { font-size:14px; color:rgba(255,255,255,.85); }
+.ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
+       border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
+.src { font-size:12.5px; color:var(--muted); }
+.freshness { border-left:3px solid var(--rule); padding:10px 14px;
+  margin:14px 0; background:rgba(255,255,255,.02); border-radius:0 8px 8px 0;
+  font-size:13.5px; }
+.freshness.stale { border-left-color:var(--amber);
+  background:rgba(251,191,36,.07); }
+.freshness p { margin:0; }
+.note { border-left:3px solid var(--rule); padding:12px 16px; margin:18px 0;
+  border-radius:0 8px 8px 0; font-size:14.5px; line-height:1.55; }
+.note.info { border-left-color:var(--teal); background:rgba(45,212,191,.07); }
+.note.warn { border-left-color:var(--amber); background:rgba(251,191,36,.07); }
+.note.bad  { border-left-color:#ef4444; background:rgba(239,68,68,.08); }
+.note.good { border-left-color:#34d399; background:rgba(52,211,153,.07); }
+.note p { margin:0; }
+details.more { border:1px solid var(--rule); border-radius:10px;
+  padding:0 16px; margin:16px 0; background:rgba(255,255,255,.02); }
+details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
+  color:var(--teal); font-size:14.5px; }
+details.more[open] { padding-bottom:10px; }
+.billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
+  margin:20px 0 12px; }
+.billbar > div { display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:14px; }
+.barkey { display:flex; flex-wrap:wrap; gap:14px; font-size:13px;
+  color:var(--muted); }
+.barkey span { display:flex; align-items:center; gap:6px; }
+.barkey i { width:12px; height:12px; border-radius:3px; }
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px; margin:18px 0; }
+.flow .step { border:1px solid var(--rule); border-radius:10px; padding:12px 14px;
+  background:rgba(255,255,255,.02); font-size:14px; }
+.flow .step b { display:block; margin-bottom:4px; }
+.flow .step.end { border-color:#ef4444; background:rgba(239,68,68,.08); }
+.hbars { margin:18px 0; display:flex; flex-direction:column; gap:8px; }
+.hbar-row { display:grid; grid-template-columns:minmax(90px,1.1fr) 2.4fr
+  minmax(90px,1.3fr); gap:10px; align-items:center; font-size:13.5px; }
+.hbar-label { color:var(--ink); }
+.hbar-track { background:rgba(255,255,255,.06); border-radius:5px; height:16px; }
+.hbar-fill { height:16px; border-radius:5px; }
+.hbar-val { color:var(--muted); font-variant-numeric:tabular-nums; }
+@media (max-width:640px) {
+  .hbar-row { grid-template-columns:1fr; gap:2px; }
+  .hbar-track { height:12px; }
+}
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+th { color:var(--muted); font-weight:600; }
+footer { margin-top:48px; border-top:1px solid var(--rule);
+         padding-top:16px; font-size:13px; color:var(--muted); }
+.statelist { columns:2; font-size:14.5px; }
+@media (min-width:640px){ .statelist{ columns:4; } }
+.statelist a { display:block; padding:3px 0; text-decoration:none; }
+.us-map { max-width:100%; height:auto; margin:20px auto; display:block; }
+.us-map path { fill:var(--card); stroke:var(--rule); stroke-width:.6;
+               cursor:pointer; transition:fill .15s; }
+.us-map path:hover { fill:var(--teal); }
+.us-map text { fill:var(--muted); font-size:7px; pointer-events:none;
+               text-anchor:middle; font-weight:600;
+               font-family:system-ui,-apple-system,sans-serif; }
+.us-map path:hover + text, .us-map path:hover ~ text { fill:var(--bg); }
+.map-tooltip { position:fixed; background:var(--card); border:1px solid var(--teal);
+               border-radius:8px; padding:6px 12px; font-size:13px;
+               color:var(--ink); pointer-events:none; z-index:999;
+               display:none; white-space:nowrap; }
+.post-meta { color:var(--muted); font-size:14px; margin:8px 0 6px; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 20px; }
+.tag { background:var(--card); border:1px solid var(--rule);
+       border-radius:20px; padding:3px 11px; font-size:12px;
+       color:var(--muted); }
+.prose h3 { font-size:17px; color:var(--teal); margin:24px 0 8px; }
+.prose p { margin:10px 0; }
+.prose blockquote { border-left:3px solid var(--teal); margin:16px 0;
+                    padding:6px 16px; color:var(--muted); }
+.prose table { margin:16px 0; }
+.prose ul, .prose ol { margin:10px 0; }
+.prose hr { border:none; border-top:1px solid var(--rule); margin:24px 0; }
+.post-nav { display:flex; justify-content:space-between; gap:14px;
+            margin:32px 0 0; padding:18px 0 0;
+            border-top:1px solid var(--rule); font-size:14px; }
+.post-nav a { max-width:45%; }
+.post-nav .dir { color:var(--muted); font-size:12px; display:block; }
+.blog-list { list-style:none; padding:0; }
+.blog-list li { border-bottom:1px solid var(--rule); padding:18px 0; }
+.blog-list li:last-child { border-bottom:none; }
+.blog-list h3 { font-size:17px; margin:0 0 4px; }
+.blog-list h3 a { text-decoration:none; }
+.blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
+.badge { display:inline-block; font-size:12px; font-weight:700;
+         padding:2px 9px; border-radius:6px; }
+.badge-enacted { background:#065f46; color:#6ee7b7; }
+.badge-proposed { background:#713f12; color:#fde68a; }
+.badge-rejected { background:#7f1d1d; color:#fca5a5; }
+.badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.outcome { border-left:3px solid var(--teal); padding:10px 14px;
+           margin:10px 0; }
+.outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
+                text-transform:uppercase; letter-spacing:.08em; }
+.grid2 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
+.official { font-size:14px; }
+.official .role { color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="../index.html"><img src="../assets/logo.svg" alt="AI GridWatch"></a>
+  <a href="../index.html">Home</a>
+  <a href="../states/index.html">Your state</a>
+  <a href="../health-risks.html">Health risks</a>
+  <a href="../moratoriums.html">Moratoriums</a>
+  <a href="../impact.html">Calculator</a>
+  <a href="../bills.html">Your bill</a>
+  <a href="../outlook.html">Outlook</a>
+  <a href="../companies/index.html">Companies</a>
+  <a href="../blog/index.html">Blog</a>
+  <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
+</nav>
+
+<header>
+  <div class="kicker">Blog</div>
+  <h1>One Project, Two Stories: How Data Center Developers Shop the Gaps Between Agencies</h1>
+  <div class="post-meta">Jul 26, 2026
+  &middot; GridWatch AI</div>
+  <div class="tags"><span class="tag">West Virginia</span> <span class="tag">permitting</span> <span class="tag">preemption</span> <span class="tag">NDAs</span> <span class="tag">shell LLCs</span> <span class="tag">air permits</span> <span class="tag">zoning</span> <span class="tag">transparency</span> <span class="tag">analysis</span></div>
+  <p class="sub">In Tucker County, West Virginia, one developer told the DEP it controlled 10,000 acres — and told the Department of Commerce its project was merely &quot;conceptual.&quot; Both agencies say there&#x27;s no contradiction, because neither one reviews the whole project. That gap isn&#x27;t a West Virginia quirk. It&#x27;s the buildout&#x27;s default operating mode, and it shows up in seven recognizable forms — from &quot;nonroad engine&quot; turbine exemptions in Memphis to shell-company NDAs in Wisconsin to by-right zoning in Virginia. Here&#x27;s the taxonomy, and the questions that close each gap.</p>
+</header>
+<section class="prose">
+  <p>On July 1, 2026, West Virginia's Department of Commerce decided that a data
+center proposed less than a mile from the towns of Davis and Thomas was
+"conceptual" — the developer, Fundamental Data, didn't have legal control of
+the land, so there was nothing yet to review.</p>
+<p>There was one problem with that finding. The West Virginia Department of
+Environmental Protection had <em>already</em> issued Fundamental Data an air pollution
+permit for the gas plant meant to power the site — a permit that rested in part
+on the company demonstrating control of that same ground.</p>
+<p>Same company. Same 10,000 acres. Two agencies, two answers.</p>
+<p>Asked about it by
+<a href="https://mountainstatespotlight.org/2026/07/23/data-center-sidestep-oversight/">Mountain State Spotlight</a>,
+both departments sent <em>identical</em> statements denying any discrepancy — and the
+explanation is the whole story. Air permitting accepts "a lease, purchase
+agreement, option to purchase, or another legally recognized arrangement."
+Commerce's High Impact Data Center program uses "distinct statutory criteria,
+such as recorded deeds and binding commitments, which operate independently of
+WVDEP's air permitting requirements."</p>
+<p>Both statements are true. Neither agency is lying. And that is precisely the
+point: <strong>no one in West Virginia state government is responsible for evaluating
+the project as a project.</strong> During the 2025 comment period, DEP regulators told
+residents repeatedly that their authority extended only to the natural gas
+plant — not to the data center the gas plant existed to power.</p>
+<p>Tucker United's Nikki Forrester put it more bluntly than any regulator would:
+the company "lives in the brackish zone between being a microgrid and data
+center-related project and not having anything to do with data centers so they
+can skirt regulations and state rules."</p>
+<hr />
+<h3>The detail that makes it a national story</h3>
+<p>Five days after Commerce withdrew its demand for information, a Fundamental
+Data representative named Ted McGavran appeared before the city council in
+<strong>Belmont, North Carolina</strong> — his own hometown — to argue for data center zoning
+ordinances there. In the same presentation he described the Tucker County
+project as targeting large-scale clients and <strong>3–5 gigawatts</strong> of generation.
+Nothing conceptual about it.</p>
+<p>He also said his company helped write West Virginia's data center law, and
+summed up the result: <em>"We can do pretty much whatever we want to do up there."</em></p>
+<p>(Fundamental Data spokesperson Andrea Khoury told the outlet McGavran "is not
+authorized to speak on behalf of the company," that his remarks were "solely in
+his personal capacity," and denied the company had a hand in drafting the law.)</p>
+<p>Forrester's response is the line worth carrying into your own hearing: <strong>"Even
+data center developers don't want these things in their own backyard."</strong></p>
+<p>The reason he <em>could</em> advocate for zoning in Belmont while his company faced
+none in Tucker County is West Virginia
+<a href="https://www.wvlegislature.gov/Bill_Text_HTML/2025_SESSIONS/RS/bills/hb2014%20sub1%20enr.pdf">HB 2014</a>,
+the Power Generation and Consumption Act, effective July 11, 2025. Certified
+microgrid districts and certified high-impact data centers <strong>may not be subject
+to county or municipal zoning, noise, viewshed, lighting, development, or land
+use ordinances.</strong> The state didn't just fragment review — it deleted the one
+layer of government that answers a phone call from a resident.</p>
+<hr />
+<h3>Seven versions of the same move</h3>
+<p>Tucker County isn't an outlier. It's one instance of a repeatable pattern:
+<em>route the project to the venue with the narrowest mandate.</em> Here are the other
+six forms it takes, each documented somewhere else in the country.</p>
+<p><strong>1. Agency-shopping on facts.</strong> <em>(Tucker County, WV)</em> Tell each regulator the
+version of the project that fits its checklist. Because no agency reviews
+cumulative impact, the versions never have to reconcile.</p>
+<p><strong>2. Statutory preemption of the local layer.</strong> <em>(WV HB 2014)</em> If certification
+comes from the state Commerce Secretary and local ordinances are void by
+statute, the planning-commission hearing — the one place residents reliably get
+standing — simply never happens. West Virginia went furthest, but per
+<a href="https://www.multistate.us/insider/2026/4/14/federal-ai-data-center-policy-meets-resistance-from-state-lawmakers">MultiState's 2026 tracker</a>
+and
+<a href="https://prismreports.org/2026/05/18/more-states-are-trying-to-block-cities-from-regulating-ai-data-centers/">Prism</a>,
+a growing number of states have taken up preemption bills. Some WV lawmakers
+are now moving to restore local control.</p>
+<p><strong>3. Reclassifying the equipment.</strong> <em>(Memphis, TN)</em> xAI ran gas turbines at its
+Colossus site while asserting an "operational waiver" to run up to 364 days
+without a permit; the Shelby County Health Department treated temporary
+turbines as <strong>"nonroad engines"</strong> exempt from permitting. The NAACP and the
+<a href="https://www.selc.org/press-release/groups-appeal-permit-for-xais-south-memphis-data-center-decisions-around-unpermitted-methane-gas-turbines/">Southern Environmental Law Center</a>
+sued and appealed, arguing no Clean Air Act framework allows installing and
+operating that generation permit-free. The turbines eventually got a permit
+covering 15 units — as <em>secondary emergency backup</em>.</p>
+<p><strong>4. Sizing to stay under the threshold.</strong> Backup generation is routinely
+permitted as <strong>synthetic minor</strong> — a permit whose explicit purpose is to cap
+hours so the site never becomes a Title V major source. One Georgia data center
+permit covering <strong>50-plus diesel generators</strong> states outright that it exists
+"for the purpose of establishing practically enforceable emission limitations
+such that the facility will not be considered a major source." That's legal and
+routine. It also means the community's public-participation rights are set by
+an hours cap that most residents never see and no one independently meters.</p>
+<p><strong>5. Contracting away disclosure.</strong> <em>(WI, MN, TN, AZ)</em> Wisconsin Watch found at
+least four Wisconsin communities signed NDAs before any public process:
+<strong>Beaver Dam</strong> signed with <strong>Balloonist LLC</strong> on Dec 1, 2023 — barred from even
+confirming "the existence of the project" — and the $1B, 520-acre Meta project
+wasn't announced for <strong>14 months</strong>. <strong>Menomonie</strong> signed with the same shell in
+Feb 2024 ($1.6B, announced July 2025); <strong>Kenosha</strong> with Microsoft in May 2024;
+<strong>Janesville</strong> with Viridian in Sept 2025 ($8B). Minnesota officials used the
+code name <strong>"Project Bigfoot"</strong> in public documents for over a year while Meta
+worked through <strong>Jimnist LLC</strong>. Public Citizen reports <strong>80% of Virginia
+localities</strong> with data centers have NDAs in place, and that
+<a href="https://www.citizen.org/news/the-secret-data-center-buildout-how-states-can-stop-big-techs-abuse-of-ndas/">at least ten states</a>
+have introduced bills to restrict them. As one Oklahoma legislator framed it:
+<em>where you want to put your data center is not a trade secret.</em></p>
+<p><strong>6. Zoning it by right.</strong> <em>(VA)</em> You don't need preemption if the land is
+already zoned for it. In <strong>Franklin County, Virginia</strong>, data centers are
+permitted by right in the Regional Enterprise Park district and face no
+restriction at all on unzoned property — meaning a campus can be built with
+<strong>no public hearing and no supervisors' vote</strong>, only site plans and building
+permits. <strong>Goochland</strong> permits them by right across most of a designated
+district. Loudoun County has been unwinding exactly this fast-track status.</p>
+<p><strong>7. Redacting the price.</strong> Even when a project reaches a public regulator, the
+economics often don't. The Illinois Attorney General sought a contested hearing
+over <strong>"heavily redacted"</strong> ComEd data center special contracts. In Montana,
+advocates challenged the PSC's ability to keep data center terms secret. And
+Earthjustice's May 2026 Mississippi report argues incremental system costs were
+cloaked in NDAs in a way with <strong>no known analogue anywhere else in the
+country</strong>. If the contract is sealed, no one can verify who's paying for the
+interconnection — which is the only number that determines whether your bill
+moves.</p>
+<hr />
+<h3>What these have in common</h3>
+<p>Every one of the seven is <em>legal</em>. None requires anyone to lie. They work
+because permitting authority in the U.S. is sliced by <strong>medium</strong> (air, water,
+land) and by <strong>jurisdiction</strong> (federal, state, county), while a gigawatt-scale
+data center is a single decision with effects that cross all of them.</p>
+<p>The developer sees one project. The law sees eight unrelated filings. The gap
+between those two views is the product.</p>
+<p>The federal layer is starting to notice — FERC's December 2025 PJM co-location
+order forced tariff changes precisely because co-located load was escaping the
+cost-allocation rules that apply to everyone else, on the principle that "costs
+must be allocated to those who cause them and benefit from them." State
+ratepayer advocates told FERC in July 2026 it still doesn't go far enough. But
+federal cost-allocation reform doesn't help you at a county hearing next month.</p>
+<hr />
+<h3>Six questions that close the gaps</h3>
+<p>Put these in writing — to the developer, the agency, and your elected officials.
+A refusal to answer is itself a public record you can cite.</p>
+<ol>
+<li><strong>"List every permit, certification, and approval this project requires, and
+   name the agency and decision-maker for each."</strong> Ask for the <em>whole</em> list.
+   The list itself reveals which venues you still have standing in — and the
+   deadlines you're about to miss.</li>
+<li><strong>"What did you tell each of those agencies about land control, project
+   size, and generating capacity?"</strong> Then compare the filings. Discrepancies
+   like Tucker County's are only visible if someone reads them side by side.</li>
+<li><strong>"Which agency is evaluating cumulative impact — air, water, noise, traffic,
+   and rates together?"</strong> If the honest answer is <em>none</em>, that is the finding.
+   Say it out loud at the hearing and ask your council to request one.</li>
+<li><strong>"Are the generators permitted as emergency, synthetic minor, or major
+   source — and what is the annual hours cap?"</strong> Then ask who verifies the
+   hours and whether run-time logs are public.</li>
+<li><strong>"Has any official here signed an NDA relating to this project? Produce it."</strong>
+   Ask at an open meeting, on the record. In several states this question alone
+   has driven legislation.</li>
+<li><strong>"Is the utility's contract for this load public and unredacted?"</strong> If not,
+   your PUC — not your planning board — is where the money gets decided. Find
+   yours in the <strong>States &amp; officials</strong> tab.</li>
+</ol>
+<hr />
+<h3>The bottom line</h3>
+<p>The Tucker County story will get read as a West Virginia story about one
+awkward developer. It isn't. It's a demonstration that a project can hold two
+contradictory identities at the same time — real enough for an air permit,
+conceptual enough to dodge disclosure — and that under current law, <strong>both can
+be true simultaneously.</strong></p>
+<p>Communities keep losing these fights not because they show up unprepared, but
+because they show up at the <em>one</em> venue that was never empowered to consider
+what they came to say. Map the venues first. Then decide where to spend your
+people.</p>
+<p><em>Sources: <a href="https://mountainstatespotlight.org/2026/07/23/data-center-sidestep-oversight/">Mountain State Spotlight, "Tucker County residents want to know what
+Fundamental Data is planning," July 23, 2026</a>;
+<a href="https://www.wvlegislature.gov/Bill_Text_HTML/2025_SESSIONS/RS/bills/hb2014%20sub1%20enr.pdf">WV HB 2014 (enrolled)</a>;
+<a href="https://www.selc.org/press-release/groups-appeal-permit-for-xais-south-memphis-data-center-decisions-around-unpermitted-methane-gas-turbines/">Southern Environmental Law Center on xAI turbine permits</a>;
+<a href="https://wisconsinwatch.org/2026/01/wisconsin-data-center-secrecy-deals-nda-nondisclosure-agreement/">Wisconsin Watch, "At least four Wisconsin communities signed secrecy deals," Jan 2026</a>;
+<a href="https://www.citizen.org/news/the-secret-data-center-buildout-how-states-can-stop-big-techs-abuse-of-ndas/">Public Citizen, "The Secret Data Center Buildout"</a>;
+<a href="https://www.startribune.com/ndas-code-names-and-shell-companies-how-minnesota-officials-support-data-center-secrecy/601499182">Star Tribune on Minnesota code names and shell companies</a>;
+<a href="https://www.utilitydive.com/news/ferc-data-center-pjm-transmission-costs/825760/">Utility Dive on FERC and PJM data center transmission costs</a>;
+<a href="https://www.utilitydive.com/news/illinois-ag-files-objections-to-comed-data-center-agreements-at-ferc/809576/">Illinois AG objections to ComEd data center contracts</a>;
+<a href="https://www.multistate.us/insider/2026/4/14/federal-ai-data-center-policy-meets-resistance-from-state-lawmakers">MultiState 2026 state data center tracker</a>.</em></p>
+</section>
+<div class="post-nav"><a href="pjm-capacity-auction-ratepayer-shock-2026.html"><span class="dir">&larr; Previous</span>Five Auctions, $29 Billion: How Data Centers Took Over the PJM Capacity Market — and Sent Your Bill to the Moon</a><a href="doe-transmission-needs-2026.html" style="text-align:right"><span class="dir">Next &rarr;</span>DOE Just Named Data Centers the #1 Reason America Needs New Power Lines. Here&#x27;s Why Your Community Should Read the Fine Print.</a></div>
+
+<footer>
+  <a href="../about.html">About</a> · <a href="../search.html">Search</a>
+  · <a href="../dividend.html">Data dividend calculator</a>
+  <br>AI GridWatch — community energy intelligence. Planning estimates, not
+  engineering studies; every number is sourced in the
+  <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.
+</footer>
+</div>
+</body>
+</html>

@@ -12,7 +12,8 @@ Core PDF fonts cover WinAnsi/cp1252 only, so all text passes through
 _latin1() (kept name; it sanitizes to the cp1252 glyph set).
 """
 
-from datetime import date, datetime, time
+import datetime as _dt
+from datetime import date
 
 from fpdf import FPDF
 
@@ -587,16 +588,25 @@ def build_health_pdf(health_risks, sources):
     `health_risks` is the HEALTH_RISKS registry; `sources` is SOURCES
     (used to print the citation name + URL under each fact).
     """
+    # This PDF is a build artifact committed to web/, so it must be
+    # byte-reproducible on any machine. Two things have to be pinned, and
+    # both bit us:
+    #   1. the clock — fpdf stamps the current time by default, so every
+    #      rebuild differed;
+    #   2. the TIME ZONE — a naive datetime makes fpdf write the builder's
+    #      UTC offset, so CI emitted "D:...Z" and a laptop in EDT emitted
+    #      "D:...-04'00'". Six bytes, and enough to make CI and local
+    #      rebuilds revert each other forever.
+    # Everything here is UTC, including the date printed on the cover, so the
+    # output depends only on the day.
+    built = _dt.datetime.now(_dt.timezone.utc)
     pdf = _ActionPackPDF(
         doc_title="THE HEALTH RISKS OF DATA CENTERS",
-        doc_subtitle=f"Community briefing · {date.today():%B %d, %Y}",
+        doc_subtitle=f"Community briefing · {built.date():%B %d, %Y}",
     )
-    # This PDF is a build artifact committed to web/, so it must be
-    # byte-reproducible for a given day. fpdf stamps the current time into the
-    # document metadata by default, which made every CI rebuild produce a
-    # "changed" file and an endless stream of no-op commits. Pinning to
-    # midnight means it only changes when the printed date does.
-    pdf.set_creation_date(datetime.combine(date.today(), time.min))
+    pdf.set_creation_date(
+        _dt.datetime.combine(built.date(), _dt.time.min,
+                             tzinfo=_dt.timezone.utc))
     pdf.add_page()
 
     pdf.set_font("Helvetica", "B", 19)

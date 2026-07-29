@@ -67,18 +67,16 @@ jobs:
       - name: Commit regenerated site
         if: github.ref == 'refs/heads/master'
         run: |
-          # The generated PDF is not byte-reproducible across environments:
-          # CI and a developer machine emit different bytes for identical
-          # input even with fpdf2 pinned. Committing that delta means CI and
-          # local rebuilds revert each other forever. Since the difference is
-          # metadata rather than content, a PDF-only diff is discarded — the
-          # PDF is only ever updated by a real build committed by a human.
-          if git diff --quiet -- web/ ':(exclude)web/assets/*.pdf'; then
-            echo "No content changes. Discarding any PDF-only delta."
-            git checkout -- web/ 2>/dev/null || true
+          # Everything in web/, including the generated PDF, is byte-
+          # reproducible: build_site.py stamps the PDF in UTC, so a build here
+          # and a build on a laptop in any time zone agree. If this ever starts
+          # committing on every run again, something has become
+          # environment-dependent — check "Record build environment" above
+          # rather than adding an exclusion here.
+          if git diff --quiet -- web/; then
+            echo "Nothing to commit."
             exit 0
           fi
-          echo "Content changed — committing (including any PDF delta)."
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add web/

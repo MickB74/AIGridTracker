@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search — AI GridWatch</title>
+<meta name="description" content="Search data center moratoriums, operators, executives, sites, and state briefings.">
+<link rel="canonical" href="https://aigridwatch.com/search">
+<link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
+      href="https://aigridwatch.com/blog/feed.xml">
+<meta property="og:title" content="Search — AI GridWatch">
+<meta property="og:description" content="Search data center moratoriums, operators, executives, sites, and state briefings.">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<style>
+:root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
+        --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
+* { box-sizing:border-box; margin:0; }
+body { background:var(--bg); color:var(--ink);
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.wrap { max-width:900px; margin:0 auto; padding:20px 20px 64px; }
+nav { display:flex; align-items:center; gap:14px; padding:14px 0;
+      border-bottom:1px solid var(--rule); flex-wrap:wrap; }
+nav img { height:34px; }
+nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+nav a:hover { color:var(--teal); }
+nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
+           font-weight:700; padding:8px 16px; border-radius:8px; }
+header { padding:44px 0 10px; }
+.kicker { color:var(--teal); font-weight:700; letter-spacing:.12em;
+          text-transform:uppercase; font-size:13px; }
+h1 { font-size:clamp(28px,5vw,44px); line-height:1.12; margin:10px 0; }
+.sub { color:var(--muted); max-width:640px; }
+.stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+         margin:30px 0; }
+@media (min-width:640px){ .stats{ grid-template-columns:repeat(4,1fr);} }
+.stat { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:16px; }
+.stat b { display:block; font-size:24px; color:var(--teal); }
+.stat span { font-size:13px; color:var(--muted); }
+section { margin:34px 0; }
+h2 { font-size:20px; color:var(--teal); margin-bottom:12px;
+     border-bottom:1px solid var(--rule); padding-bottom:8px; }
+ul { padding-left:22px; } li { margin:9px 0; }
+a { color:var(--teal); }
+.btn { display:inline-block; background:var(--teal); color:#06251f;
+       font-weight:700; padding:12px 22px; border-radius:10px;
+       text-decoration:none; margin:8px 8px 0 0; }
+.btn.ghost { background:transparent; color:var(--teal);
+             border:1px solid var(--teal); }
+.muted { color:var(--muted); font-size:14px; }
+.grid3 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid3{ grid-template-columns:repeat(3,1fr);} }
+.card { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:18px; }
+.card h3 { margin-bottom:6px; font-size:16px; }
+.panel { border-radius:14px; padding:18px; color:#fff; }
+.panel h3 { margin-bottom:8px; }
+.panel p { font-size:14px; color:rgba(255,255,255,.85); }
+.ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
+       border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
+.src { font-size:12.5px; color:var(--muted); }
+.freshness { border-left:3px solid var(--rule); padding:10px 14px;
+  margin:14px 0; background:rgba(255,255,255,.02); border-radius:0 8px 8px 0;
+  font-size:13.5px; }
+.freshness.stale { border-left-color:var(--amber);
+  background:rgba(251,191,36,.07); }
+.freshness p { margin:0; }
+.note { border-left:3px solid var(--rule); padding:12px 16px; margin:18px 0;
+  border-radius:0 8px 8px 0; font-size:14.5px; line-height:1.55; }
+.note.info { border-left-color:var(--teal); background:rgba(45,212,191,.07); }
+.note.warn { border-left-color:var(--amber); background:rgba(251,191,36,.07); }
+.note.bad  { border-left-color:#ef4444; background:rgba(239,68,68,.08); }
+.note.good { border-left-color:#34d399; background:rgba(52,211,153,.07); }
+.note p { margin:0; }
+details.more { border:1px solid var(--rule); border-radius:10px;
+  padding:0 16px; margin:16px 0; background:rgba(255,255,255,.02); }
+details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
+  color:var(--teal); font-size:14.5px; }
+details.more[open] { padding-bottom:10px; }
+.billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
+  margin:20px 0 12px; }
+.billbar > div { display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:14px; }
+.barkey { display:flex; flex-wrap:wrap; gap:14px; font-size:13px;
+  color:var(--muted); }
+.barkey span { display:flex; align-items:center; gap:6px; }
+.barkey i { width:12px; height:12px; border-radius:3px; }
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px; margin:18px 0; }
+.flow .step { border:1px solid var(--rule); border-radius:10px; padding:12px 14px;
+  background:rgba(255,255,255,.02); font-size:14px; }
+.flow .step b { display:block; margin-bottom:4px; }
+.flow .step.end { border-color:#ef4444; background:rgba(239,68,68,.08); }
+.hbars { margin:18px 0; display:flex; flex-direction:column; gap:8px; }
+.hbar-row { display:grid; grid-template-columns:minmax(90px,1.1fr) 2.4fr
+  minmax(90px,1.3fr); gap:10px; align-items:center; font-size:13.5px; }
+.hbar-label { color:var(--ink); }
+.hbar-track { background:rgba(255,255,255,.06); border-radius:5px; height:16px; }
+.hbar-fill { height:16px; border-radius:5px; }
+.hbar-val { color:var(--muted); font-variant-numeric:tabular-nums; }
+@media (max-width:640px) {
+  .hbar-row { grid-template-columns:1fr; gap:2px; }
+  .hbar-track { height:12px; }
+}
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+th { color:var(--muted); font-weight:600; }
+footer { margin-top:48px; border-top:1px solid var(--rule);
+         padding-top:16px; font-size:13px; color:var(--muted); }
+.statelist { columns:2; font-size:14.5px; }
+@media (min-width:640px){ .statelist{ columns:4; } }
+.statelist a { display:block; padding:3px 0; text-decoration:none; }
+.us-map { max-width:100%; height:auto; margin:20px auto; display:block; }
+.us-map path { fill:var(--card); stroke:var(--rule); stroke-width:.6;
+               cursor:pointer; transition:fill .15s; }
+.us-map path:hover { fill:var(--teal); }
+.us-map text { fill:var(--muted); font-size:7px; pointer-events:none;
+               text-anchor:middle; font-weight:600;
+               font-family:system-ui,-apple-system,sans-serif; }
+.us-map path:hover + text, .us-map path:hover ~ text { fill:var(--bg); }
+.map-tooltip { position:fixed; background:var(--card); border:1px solid var(--teal);
+               border-radius:8px; padding:6px 12px; font-size:13px;
+               color:var(--ink); pointer-events:none; z-index:999;
+               display:none; white-space:nowrap; }
+.post-meta { color:var(--muted); font-size:14px; margin:8px 0 6px; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 20px; }
+.tag { background:var(--card); border:1px solid var(--rule);
+       border-radius:20px; padding:3px 11px; font-size:12px;
+       color:var(--muted); }
+.prose h3 { font-size:17px; color:var(--teal); margin:24px 0 8px; }
+.prose p { margin:10px 0; }
+.prose blockquote { border-left:3px solid var(--teal); margin:16px 0;
+                    padding:6px 16px; color:var(--muted); }
+.prose table { margin:16px 0; }
+.prose ul, .prose ol { margin:10px 0; }
+.prose hr { border:none; border-top:1px solid var(--rule); margin:24px 0; }
+.post-nav { display:flex; justify-content:space-between; gap:14px;
+            margin:32px 0 0; padding:18px 0 0;
+            border-top:1px solid var(--rule); font-size:14px; }
+.post-nav a { max-width:45%; }
+.post-nav .dir { color:var(--muted); font-size:12px; display:block; }
+.blog-list { list-style:none; padding:0; }
+.blog-list li { border-bottom:1px solid var(--rule); padding:18px 0; }
+.blog-list li:last-child { border-bottom:none; }
+.blog-list h3 { font-size:17px; margin:0 0 4px; }
+.blog-list h3 a { text-decoration:none; }
+.blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
+.badge { display:inline-block; font-size:12px; font-weight:700;
+         padding:2px 9px; border-radius:6px; }
+.badge-enacted { background:#065f46; color:#6ee7b7; }
+.badge-proposed { background:#713f12; color:#fde68a; }
+.badge-rejected { background:#7f1d1d; color:#fca5a5; }
+.badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.outcome { border-left:3px solid var(--teal); padding:10px 14px;
+           margin:10px 0; }
+.outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
+                text-transform:uppercase; letter-spacing:.08em; }
+.grid2 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
+.official { font-size:14px; }
+.official .role { color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="index.html"><img src="assets/logo.svg" alt="AI GridWatch"></a>
+  <a href="index.html">Home</a>
+  <a href="states/index.html">Your state</a>
+  <a href="health-risks.html">Health risks</a>
+  <a href="moratoriums.html">Moratoriums</a>
+  <a href="impact.html">Calculator</a>
+  <a href="bills.html">Your bill</a>
+  <a href="outlook.html">Outlook</a>
+  <a href="companies/index.html">Companies</a>
+  <a href="blog/index.html">Blog</a>
+  <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
+</nav>
+
+<header>
+  <div class="kicker">Search</div>
+  <h1>Find anything</h1>
+  <p class="sub">Search across moratoriums, operators, executives, data
+  center sites, states, and blog posts.</p>
+</header>
+<section>
+  <input type="text" id="q" placeholder="Type to search..."
+         autofocus autocomplete="off"
+         style="width:100%;background:var(--card);color:var(--ink);
+         border:1px solid var(--rule);border-radius:10px;padding:12px 16px;
+         font-size:16px;margin-bottom:14px">
+  <div id="results"></div>
+  <p class="muted" id="count"></p>
+</section>
+<script>
+(function() {
+  var IX = [{"t": "Minneapolis", "k": "moratorium", "d": "MN \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Denver", "k": "moratorium", "d": "CO \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Baltimore City", "k": "moratorium", "d": "MD \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Reno", "k": "moratorium", "d": "NV \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Dubuque County", "k": "moratorium", "d": "IA \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Bloomington", "k": "moratorium", "d": "IL \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Normal", "k": "moratorium", "d": "IL \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Iron County", "k": "moratorium", "d": "UT \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Manitowoc County", "k": "moratorium", "d": "WI \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Smithfield", "k": "moratorium", "d": "RI \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Meridian Township", "k": "moratorium", "d": "MI \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Washington Township (Macomb Co.)", "k": "moratorium", "d": "MI \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Hill County", "k": "moratorium", "d": "TX \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "DeKalb County", "k": "moratorium", "d": "GA \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Lysander (Onondaga Co.)", "k": "moratorium", "d": "NY \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Perth (Fulton Co.)", "k": "moratorium", "d": "NY \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Groton", "k": "moratorium", "d": "CT \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Peculiar", "k": "moratorium", "d": "MO \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Bangor", "k": "moratorium", "d": "ME \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Gates County", "k": "moratorium", "d": "NC \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Brevard", "k": "moratorium", "d": "NC \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Clay County", "k": "moratorium", "d": "NC \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Canton", "k": "moratorium", "d": "NC \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Chatham County", "k": "moratorium", "d": "NC \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Kings Mountain", "k": "moratorium", "d": "NC \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Boone", "k": "moratorium", "d": "NC \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Apex", "k": "moratorium", "d": "NC \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Orange County", "k": "moratorium", "d": "NC \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Rowan County", "k": "moratorium", "d": "NC \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Swain County", "k": "moratorium", "d": "NC \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Watauga County", "k": "moratorium", "d": "NC \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Madison County", "k": "moratorium", "d": "NC \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Clyde", "k": "moratorium", "d": "NC \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Charlotte", "k": "moratorium", "d": "NC \u00b7 Proposed", "u": "moratoriums.html"}, {"t": "Durham", "k": "moratorium", "d": "NC \u00b7 Proposed", "u": "moratoriums.html"}, {"t": "Harnett County", "k": "moratorium", "d": "NC \u00b7 Proposed", "u": "moratoriums.html"}, {"t": "Cumberland County", "k": "moratorium", "d": "NC \u00b7 Proposed", "u": "moratoriums.html"}, {"t": "Fayetteville", "k": "moratorium", "d": "NC \u00b7 Proposed", "u": "moratoriums.html"}, {"t": "Seattle", "k": "moratorium", "d": "WA \u00b7 Proposed", "u": "moratoriums.html"}, {"t": "Indianapolis", "k": "moratorium", "d": "IN \u00b7 Proposed", "u": "moratoriums.html"}, {"t": "Pulaski County", "k": "moratorium", "d": "AR \u00b7 Proposed", "u": "moratoriums.html"}, {"t": "St. Lawrence County", "k": "moratorium", "d": "NY \u00b7 Proposed", "u": "moratoriums.html"}, {"t": "Cheyenne", "k": "moratorium", "d": "WY \u00b7 Rejected", "u": "moratoriums.html"}, {"t": "New York (statewide)", "k": "moratorium", "d": "NY \u00b7 Enacted", "u": "moratoriums.html"}, {"t": "Georgia (HB 1012)", "k": "moratorium", "d": "GA \u00b7 Proposed", "u": "moratoriums.html"}, {"t": "Maine (statewide)", "k": "moratorium", "d": "ME \u00b7 Vetoed", "u": "moratoriums.html"}, {"t": "Ohio (ballot measure)", "k": "moratorium", "d": "OH \u00b7 Rejected", "u": "moratoriums.html"}, {"t": "Google", "k": "operator", "d": "hyperscaler \u00b7 Own", "u": "search.html"}, {"t": "Meta", "k": "operator", "d": "hyperscaler \u00b7 Own", "u": "search.html"}, {"t": "Microsoft", "k": "operator", "d": "hyperscaler \u00b7 Mixed", "u": "search.html"}, {"t": "Amazon (AWS)", "k": "operator", "d": "hyperscaler \u00b7 Own", "u": "search.html"}, {"t": "xAI (Colossus)", "k": "operator", "d": "ai \u00b7 Mixed", "u": "search.html"}, {"t": "OpenAI \u00b7 Oracle (Stargate)", "k": "operator", "d": "ai \u00b7 Mixed", "u": "search.html"}, {"t": "CoreWeave", "k": "operator", "d": "ai \u00b7 Lease", "u": "search.html"}, {"t": "Digital Realty", "k": "operator", "d": "colo \u00b7 Mixed", "u": "search.html"}, {"t": "QTS", "k": "operator", "d": "colo \u00b7 Own", "u": "search.html"}, {"t": "Vantage", "k": "operator", "d": "colo \u00b7 Own", "u": "search.html"}, {"t": "CyrusOne", "k": "operator", "d": "colo \u00b7 Own", "u": "search.html"}, {"t": "Aligned", "k": "operator", "d": "colo \u00b7 Own", "u": "search.html"}, {"t": "Switch", "k": "operator", "d": "colo \u00b7 Own", "u": "search.html"}, {"t": "Stack Infrastructure", "k": "operator", "d": "colo \u00b7 Own", "u": "search.html"}, {"t": "EdgeConneX", "k": "operator", "d": "colo \u00b7 Own", "u": "search.html"}, {"t": "Equinix", "k": "operator", "d": "colo \u00b7 Mixed", "u": "search.html"}, {"t": "Core Scientific", "k": "operator", "d": "colo \u00b7 Own", "u": "search.html"}, {"t": "Sundar Pichai", "k": "executive", "d": "Google \u00b7 CEO, Alphabet / Google \u00b7 unverified", "u": "search.html"}, {"t": "Ruth Porat", "k": "executive", "d": "Google \u00b7 President & CIO, Alphabet \u00b7 unverified", "u": "search.html"}, {"t": "Joe Kava", "k": "executive", "d": "Google \u00b7 VP, Global Data Centers \u00b7 unverified", "u": "search.html"}, {"t": "Kate Brandt", "k": "executive", "d": "Google \u00b7 Chief Sustainability Officer \u00b7 unverified", "u": "search.html"}, {"t": "Michael Terrell", "k": "executive", "d": "Google \u00b7 Senior Director, Energy & Climate \u00b7 unverified", "u": "search.html"}, {"t": "Ben Townsend", "k": "executive", "d": "Google \u00b7 Global Head, Infrastructure Planning & Water Policy \u00b7 unverified", "u": "search.html"}, {"t": "Mark Zuckerberg", "k": "executive", "d": "Meta \u00b7 CEO", "u": "search.html"}, {"t": "Susan Li", "k": "executive", "d": "Meta \u00b7 CFO", "u": "search.html"}, {"t": "Rachel Peterson", "k": "executive", "d": "Meta \u00b7 VP, Data Centers \u00b7 unverified", "u": "search.html"}, {"t": "Urvi Parekh", "k": "executive", "d": "Meta \u00b7 Head of Renewable Energy \u00b7 unverified", "u": "search.html"}, {"t": "Blair Anderson", "k": "executive", "d": "Meta \u00b7 Director, State & Local Public Policy \u00b7 unverified", "u": "search.html"}, {"t": "Satya Nadella", "k": "executive", "d": "Microsoft \u00b7 Chairman & CEO", "u": "search.html"}, {"t": "Noelle Walsh", "k": "executive", "d": "Microsoft \u00b7 CVP, Cloud Operations & Innovation \u00b7 unverified", "u": "search.html"}, {"t": "Melanie Nakagawa", "k": "executive", "d": "Microsoft \u00b7 Chief Sustainability Officer \u00b7 unverified", "u": "search.html"}, {"t": "Andy Jassy", "k": "executive", "d": "Amazon (AWS) \u00b7 CEO, Amazon", "u": "search.html"}, {"t": "Matt Garman", "k": "executive", "d": "Amazon (AWS) \u00b7 CEO, AWS", "u": "search.html"}, {"t": "Kevin Miller", "k": "executive", "d": "Amazon (AWS) \u00b7 VP, Global Data Centers \u00b7 unverified", "u": "search.html"}, {"t": "Chris Roe", "k": "executive", "d": "Amazon (AWS) \u00b7 Director, Energy & Sustainable Operations \u00b7 unverified", "u": "search.html"}, {"t": "Jenna Leiner", "k": "executive", "d": "Amazon (AWS) \u00b7 Lead, Water Sustainability \u00b7 unverified", "u": "search.html"}, {"t": "Elon Musk", "k": "executive", "d": "xAI (Colossus) \u00b7 CEO, xAI \u00b7 unverified", "u": "search.html"}, {"t": "Sam Altman", "k": "executive", "d": "OpenAI \u00b7 Oracle (Stargate) \u00b7 CEO, OpenAI \u00b7 unverified", "u": "search.html"}, {"t": "Larry Ellison", "k": "executive", "d": "OpenAI \u00b7 Oracle (Stargate) \u00b7 CTO & Chairman, Oracle \u00b7 unverified", "u": "search.html"}, {"t": "Masayoshi Son", "k": "executive", "d": "OpenAI \u00b7 Oracle (Stargate) \u00b7 CEO, SoftBank Group", "u": "search.html"}, {"t": "Michael Intrator", "k": "executive", "d": "CoreWeave \u00b7 CEO & Co-founder", "u": "search.html"}, {"t": "Brian Venturo", "k": "executive", "d": "CoreWeave \u00b7 Chief Strategy Officer & Co-founder", "u": "search.html"}, {"t": "Andy Power", "k": "executive", "d": "Digital Realty \u00b7 President & CEO", "u": "search.html"}, {"t": "Chris Sharp", "k": "executive", "d": "Digital Realty \u00b7 CTO", "u": "search.html"}, {"t": "Aaron Binkley", "k": "executive", "d": "Digital Realty \u00b7 VP of Sustainability \u00b7 unverified", "u": "search.html"}, {"t": "Thomas A. \"Tag\" Greason", "k": "executive", "d": "QTS \u00b7 Co-Chief Executive Officer", "u": "search.html"}, {"t": "David Robey", "k": "executive", "d": "QTS \u00b7 Co-Chief Executive Officer", "u": "search.html"}, {"t": "Brian Herlihy", "k": "executive", "d": "QTS \u00b7 Chief Energy Strategy Officer", "u": "search.html"}, {"t": "Theo Yedinsky", "k": "executive", "d": "QTS \u00b7 Chief External Affairs Officer", "u": "search.html"}, {"t": "Sureel Choksi", "k": "executive", "d": "Vantage \u00b7 President & CEO", "u": "search.html"}, {"t": "Eric Schwartz", "k": "executive", "d": "CyrusOne \u00b7 CEO", "u": "search.html"}, {"t": "Andrew Schaap", "k": "executive", "d": "Aligned \u00b7 CEO", "u": "search.html"}, {"t": "Rob Roy", "k": "executive", "d": "Switch \u00b7 Founder & CEO", "u": "search.html"}, {"t": "Matt VanderZanden", "k": "executive", "d": "Stack Infrastructure \u00b7 CEO, STACK Americas", "u": "search.html"}, {"t": "Brian Cox", "k": "executive", "d": "Stack Infrastructure \u00b7 Interim CEO, STACK EMEA", "u": "search.html"}, {"t": "Bobby Hollis", "k": "executive", "d": "Stack Infrastructure \u00b7 Chief Development Officer, STACK Americas", "u": "search.html"}, {"t": "Randy Brouckman", "k": "executive", "d": "EdgeConneX \u00b7 CEO", "u": "search.html"}, {"t": "Adaire Fox-Martin", "k": "executive", "d": "Equinix \u00b7 CEO", "u": "search.html"}, {"t": "Christopher Wellise", "k": "executive", "d": "Equinix \u00b7 VP, Global Sustainability \u00b7 unverified", "u": "search.html"}, {"t": "Adam Sullivan", "k": "executive", "d": "Core Scientific \u00b7 CEO", "u": "search.html"}, {"t": "Google \u2014 The Dalles", "k": "site", "d": "OR \u00b7 Google", "u": "states/oregon.html"}, {"t": "Google \u2014 Council Bluffs", "k": "site", "d": "IA \u00b7 Google", "u": "states/iowa.html"}, {"t": "Google \u2014 Douglas County", "k": "site", "d": "GA \u00b7 Google", "u": "states/georgia.html"}, {"t": "Google \u2014 Ellis County", "k": "site", "d": "TX \u00b7 Google", "u": "states/texas.html"}, {"t": "Google \u2014 Henderson", "k": "site", "d": "NV \u00b7 Google", "u": "states/nevada.html"}, {"t": "Google \u2014 New Carlisle", "k": "site", "d": "IN \u00b7 Google", "u": "states/indiana.html"}, {"t": "Google \u2014 Jackson County", "k": "site", "d": "AL \u00b7 Google", "u": "states/alabama.html"}, {"t": "Google \u2014 Lenoir", "k": "site", "d": "NC \u00b7 Google", "u": "states/north-carolina.html"}, {"t": "Google \u2014 Mayes County", "k": "site", "d": "OK \u00b7 Google", "u": "states/oklahoma.html"}, {"t": "Google \u2014 Midlothian", "k": "site", "d": "TX \u00b7 Google", "u": "states/texas.html"}, {"t": "Google \u2014 Montgomery County", "k": "site", "d": "TN \u00b7 Google", "u": "states/tennessee.html"}, {"t": "Google \u2014 Northern Virginia", "k": "site", "d": "VA \u00b7 Google", "u": "states/virginia.html"}, {"t": "Google \u2014 Papillion", "k": "site", "d": "NE \u00b7 Google", "u": "states/nebraska.html"}, {"t": "Google \u2014 Red Oak", "k": "site", "d": "TX \u00b7 Google", "u": "states/texas.html"}, {"t": "Google \u2014 Storey County", "k": "site", "d": "NV \u00b7 Google", "u": "states/nevada.html"}, {"t": "Google \u2014 New Albany (Central Ohio)", "k": "site", "d": "OH \u00b7 Google", "u": "states/ohio.html"}, {"t": "Google \u2014 Omaha", "k": "site", "d": "NE \u00b7 Google", "u": "states/nebraska.html"}, {"t": "Google \u2014 The Lowcountry (Berkeley Co.)", "k": "site", "d": "SC \u00b7 Google", "u": "states/south-carolina.html"}, {"t": "Meta \u2014 Prineville", "k": "site", "d": "OR \u00b7 Meta", "u": "states/oregon.html"}, {"t": "Meta \u2014 Altoona", "k": "site", "d": "IA \u00b7 Meta", "u": "states/iowa.html"}, {"t": "Meta \u2014 Fort Worth", "k": "site", "d": "TX \u00b7 Meta", "u": "states/texas.html"}, {"t": "Meta \u2014 Temple", "k": "site", "d": "TX \u00b7 Meta", "u": "states/texas.html"}, {"t": "Meta \u2014 El Paso", "k": "site", "d": "TX \u00b7 Meta", "u": "states/texas.html"}, {"t": "Meta \u2014 Los Lunas", "k": "site", "d": "NM \u00b7 Meta", "u": "states/new-mexico.html"}, {"t": "Meta \u2014 New Albany", "k": "site", "d": "OH \u00b7 Meta", "u": "states/ohio.html"}, {"t": "Meta \u2014 Bowling Green", "k": "site", "d": "OH \u00b7 Meta", "u": "states/ohio.html"}, {"t": "Meta \u2014 DeKalb", "k": "site", "d": "IL \u00b7 Meta", "u": "states/illinois.html"}, {"t": "Meta \u2014 Forest City", "k": "site", "d": "NC \u00b7 Meta", "u": "states/north-carolina.html"}, {"t": "Meta \u2014 Gallatin", "k": "site", "d": "TN \u00b7 Meta", "u": "states/tennessee.html"}, {"t": "Meta \u2014 Stanton Springs (Newton Co.)", "k": "site", "d": "GA \u00b7 Meta", "u": "states/georgia.html"}, {"t": "Meta \u2014 Sarpy County", "k": "site", "d": "NE \u00b7 Meta", "u": "states/nebraska.html"}, {"t": "Meta \u2014 Eagle Mountain", "k": "site", "d": "UT \u00b7 Meta", "u": "states/utah.html"}, {"t": "Meta \u2014 Mesa", "k": "site", "d": "AZ \u00b7 Meta", "u": "states/arizona.html"}, {"t": "Meta \u2014 Huntsville", "k": "site", "d": "AL \u00b7 Meta", "u": "states/alabama.html"}, {"t": "Meta \u2014 Montgomery", "k": "site", "d": "AL \u00b7 Meta", "u": "states/alabama.html"}, {"t": "Meta \u2014 Kuna", "k": "site", "d": "ID \u00b7 Meta", "u": "states/idaho.html"}, {"t": "Meta \u2014 Jeffersonville", "k": "site", "d": "IN \u00b7 Meta", "u": "states/indiana.html"}, {"t": "Meta \u2014 Lebanon", "k": "site", "d": "IN \u00b7 Meta", "u": "states/indiana.html"}, {"t": "Meta \u2014 Richland Parish", "k": "site", "d": "LA \u00b7 Meta", "u": "states/louisiana.html"}, {"t": "Meta \u2014 Rosemount", "k": "site", "d": "MN \u00b7 Meta", "u": "states/minnesota.html"}, {"t": "Meta \u2014 Kansas City", "k": "site", "d": "MO \u00b7 Meta", "u": "states/missouri.html"}, {"t": "Meta \u2014 Tulsa", "k": "site", "d": "OK \u00b7 Meta", "u": "states/oklahoma.html"}, {"t": "Meta \u2014 Aiken", "k": "site", "d": "SC \u00b7 Meta", "u": "states/south-carolina.html"}, {"t": "Meta \u2014 Henrico", "k": "site", "d": "VA \u00b7 Meta", "u": "states/virginia.html"}, {"t": "Meta \u2014 Beaver Dam", "k": "site", "d": "WI \u00b7 Meta", "u": "states/wisconsin.html"}, {"t": "Meta \u2014 Cheyenne", "k": "site", "d": "WY \u00b7 Meta", "u": "states/wyoming.html"}, {"t": "Microsoft \u2014 Goodyear (Greater Phoenix)", "k": "site", "d": "AZ \u00b7 Microsoft", "u": "states/arizona.html"}, {"t": "Microsoft \u2014 Santa Clara / San Jose", "k": "site", "d": "CA \u00b7 Microsoft", "u": "states/california.html"}, {"t": "Microsoft \u2014 Greater Atlanta", "k": "site", "d": "GA \u00b7 Microsoft", "u": "states/georgia.html"}, {"t": "Microsoft \u2014 Chicago", "k": "site", "d": "IL \u00b7 Microsoft", "u": "states/illinois.html"}, {"t": "Microsoft \u2014 Northern Indiana (LaPorte)", "k": "site", "d": "IN \u00b7 Microsoft", "u": "states/indiana.html"}, {"t": "Microsoft \u2014 West Des Moines", "k": "site", "d": "IA \u00b7 Microsoft", "u": "states/iowa.html"}, {"t": "Microsoft \u2014 Southeast Michigan", "k": "site", "d": "MI \u00b7 Microsoft", "u": "states/michigan.html"}, {"t": "Microsoft \u2014 Las Vegas", "k": "site", "d": "NV \u00b7 Microsoft", "u": "states/nevada.html"}, {"t": "Microsoft \u2014 Maiden (Catawba Co.)", "k": "site", "d": "NC \u00b7 Microsoft", "u": "states/north-carolina.html"}, {"t": "Microsoft \u2014 Northern Virginia", "k": "site", "d": "VA \u00b7 Microsoft", "u": "states/virginia.html"}, {"t": "Microsoft \u2014 Central Ohio (Heath)", "k": "site", "d": "OH \u00b7 Microsoft", "u": "states/ohio.html"}, {"t": "Microsoft \u2014 Boydton (Southern Virginia)", "k": "site", "d": "VA \u00b7 Microsoft", "u": "states/virginia.html"}, {"t": "Microsoft \u2014 Greater San Antonio", "k": "site", "d": "TX \u00b7 Microsoft", "u": "states/texas.html"}, {"t": "Microsoft \u2014 Quincy (Central Washington)", "k": "site", "d": "WA \u00b7 Microsoft", "u": "states/washington.html"}, {"t": "Microsoft \u2014 Mount Pleasant (Racine Co.)", "k": "site", "d": "WI \u00b7 Microsoft", "u": "states/wisconsin.html"}, {"t": "Microsoft \u2014 Cheyenne", "k": "site", "d": "WY \u00b7 Microsoft", "u": "states/wyoming.html"}, {"t": "Amazon (AWS) \u2014 Northern Virginia (Loudoun Co.)", "k": "site", "d": "VA \u00b7 Amazon (AWS)", "u": "states/virginia.html"}, {"t": "Amazon (AWS) \u2014 Central Ohio (New Albany)", "k": "site", "d": "OH \u00b7 Amazon (AWS)", "u": "states/ohio.html"}, {"t": "Amazon (AWS) \u2014 Umatilla / Boardman", "k": "site", "d": "OR \u00b7 Amazon (AWS)", "u": "states/oregon.html"}, {"t": "Amazon (AWS) \u2014 New Carlisle (Northern Indiana)", "k": "site", "d": "IN \u00b7 Amazon (AWS)", "u": "states/indiana.html"}, {"t": "Amazon (AWS) \u2014 Madison County", "k": "site", "d": "MS \u00b7 Amazon (AWS)", "u": "states/mississippi.html"}, {"t": "Amazon (AWS) \u2014 Warren County (Vicksburg)", "k": "site", "d": "MS \u00b7 Amazon (AWS)", "u": "states/mississippi.html"}, {"t": "Amazon (AWS) \u2014 Richmond County (Rockingham)", "k": "site", "d": "NC \u00b7 Amazon (AWS)", "u": "states/north-carolina.html"}, {"t": "Amazon (AWS) \u2014 Luzerne County (Salem Twp.)", "k": "site", "d": "PA \u00b7 Amazon (AWS)", "u": "states/pennsylvania.html"}, {"t": "Amazon (AWS) \u2014 Falls Township (Bucks Co.)", "k": "site", "d": "PA \u00b7 Amazon (AWS)", "u": "states/pennsylvania.html"}, {"t": "Amazon (AWS) \u2014 Caddo / Bossier Parish", "k": "site", "d": "LA \u00b7 Amazon (AWS)", "u": "states/louisiana.html"}, {"t": "xAI (Colossus) \u2014 Memphis (Boxtown / President's Island)", "k": "site", "d": "TN \u00b7 xAI (Colossus)", "u": "states/tennessee.html"}, {"t": "xAI (Colossus) \u2014 Memphis (Whitehaven)", "k": "site", "d": "TN \u00b7 xAI (Colossus)", "u": "states/tennessee.html"}, {"t": "OpenAI \u00b7 Oracle (Stargate) \u2014 Abilene (Lancium Clean Campus)", "k": "site", "d": "TX \u00b7 OpenAI", "u": "states/texas.html"}, {"t": "OpenAI \u00b7 Oracle (Stargate) \u2014 Shackelford County", "k": "site", "d": "TX \u00b7 OpenAI", "u": "states/texas.html"}, {"t": "OpenAI \u00b7 Oracle (Stargate) \u2014 Do\u00f1a Ana County", "k": "site", "d": "NM \u00b7 OpenAI", "u": "states/new-mexico.html"}, {"t": "OpenAI \u00b7 Oracle (Stargate) \u2014 Milam County (Rockdale)", "k": "site", "d": "TX \u00b7 OpenAI", "u": "states/texas.html"}, {"t": "OpenAI \u00b7 Oracle (Stargate) \u2014 Lordstown", "k": "site", "d": "OH \u00b7 OpenAI", "u": "states/ohio.html"}, {"t": "CoreWeave \u2014 Kenilworth (NEST11)", "k": "site", "d": "NJ \u00b7 \u2014", "u": "states/new-jersey.html"}, {"t": "CoreWeave \u2014 Las Vegas (Core Campus / LAS1)", "k": "site", "d": "NV \u00b7 \u2014", "u": "states/nevada.html"}, {"t": "CoreWeave \u2014 Lancaster", "k": "site", "d": "PA \u00b7 \u2014", "u": "states/pennsylvania.html"}, {"t": "CoreWeave \u2014 Denton (Core Scientific host)", "k": "site", "d": "TX \u00b7 \u2014", "u": "states/texas.html"}, {"t": "CoreWeave \u2014 Port of Muskogee (Core Scientific host)", "k": "site", "d": "OK \u00b7 \u2014", "u": "states/oklahoma.html"}, {"t": "Alabama", "k": "state", "d": "State briefing", "u": "states/alabama.html"}, {"t": "Alaska", "k": "state", "d": "State briefing", "u": "states/alaska.html"}, {"t": "Arizona", "k": "state", "d": "State briefing", "u": "states/arizona.html"}, {"t": "Arkansas", "k": "state", "d": "State briefing", "u": "states/arkansas.html"}, {"t": "California", "k": "state", "d": "State briefing", "u": "states/california.html"}, {"t": "Colorado", "k": "state", "d": "State briefing", "u": "states/colorado.html"}, {"t": "Connecticut", "k": "state", "d": "State briefing", "u": "states/connecticut.html"}, {"t": "Delaware", "k": "state", "d": "State briefing", "u": "states/delaware.html"}, {"t": "District of Columbia", "k": "state", "d": "State briefing", "u": "states/district-of-columbia.html"}, {"t": "Florida", "k": "state", "d": "State briefing", "u": "states/florida.html"}, {"t": "Georgia", "k": "state", "d": "State briefing", "u": "states/georgia.html"}, {"t": "Hawaii", "k": "state", "d": "State briefing", "u": "states/hawaii.html"}, {"t": "Idaho", "k": "state", "d": "State briefing", "u": "states/idaho.html"}, {"t": "Illinois", "k": "state", "d": "State briefing", "u": "states/illinois.html"}, {"t": "Indiana", "k": "state", "d": "State briefing", "u": "states/indiana.html"}, {"t": "Iowa", "k": "state", "d": "State briefing", "u": "states/iowa.html"}, {"t": "Kansas", "k": "state", "d": "State briefing", "u": "states/kansas.html"}, {"t": "Kentucky", "k": "state", "d": "State briefing", "u": "states/kentucky.html"}, {"t": "Louisiana", "k": "state", "d": "State briefing", "u": "states/louisiana.html"}, {"t": "Maine", "k": "state", "d": "State briefing", "u": "states/maine.html"}, {"t": "Maryland", "k": "state", "d": "State briefing", "u": "states/maryland.html"}, {"t": "Massachusetts", "k": "state", "d": "State briefing", "u": "states/massachusetts.html"}, {"t": "Michigan", "k": "state", "d": "State briefing", "u": "states/michigan.html"}, {"t": "Minnesota", "k": "state", "d": "State briefing", "u": "states/minnesota.html"}, {"t": "Mississippi", "k": "state", "d": "State briefing", "u": "states/mississippi.html"}, {"t": "Missouri", "k": "state", "d": "State briefing", "u": "states/missouri.html"}, {"t": "Montana", "k": "state", "d": "State briefing", "u": "states/montana.html"}, {"t": "Nebraska", "k": "state", "d": "State briefing", "u": "states/nebraska.html"}, {"t": "Nevada", "k": "state", "d": "State briefing", "u": "states/nevada.html"}, {"t": "New Hampshire", "k": "state", "d": "State briefing", "u": "states/new-hampshire.html"}, {"t": "New Jersey", "k": "state", "d": "State briefing", "u": "states/new-jersey.html"}, {"t": "New Mexico", "k": "state", "d": "State briefing", "u": "states/new-mexico.html"}, {"t": "New York", "k": "state", "d": "State briefing", "u": "states/new-york.html"}, {"t": "North Carolina", "k": "state", "d": "State briefing", "u": "states/north-carolina.html"}, {"t": "North Dakota", "k": "state", "d": "State briefing", "u": "states/north-dakota.html"}, {"t": "Ohio", "k": "state", "d": "State briefing", "u": "states/ohio.html"}, {"t": "Oklahoma", "k": "state", "d": "State briefing", "u": "states/oklahoma.html"}, {"t": "Oregon", "k": "state", "d": "State briefing", "u": "states/oregon.html"}, {"t": "Pennsylvania", "k": "state", "d": "State briefing", "u": "states/pennsylvania.html"}, {"t": "Rhode Island", "k": "state", "d": "State briefing", "u": "states/rhode-island.html"}, {"t": "South Carolina", "k": "state", "d": "State briefing", "u": "states/south-carolina.html"}, {"t": "South Dakota", "k": "state", "d": "State briefing", "u": "states/south-dakota.html"}, {"t": "Tennessee", "k": "state", "d": "State briefing", "u": "states/tennessee.html"}, {"t": "Texas", "k": "state", "d": "State briefing", "u": "states/texas.html"}, {"t": "Utah", "k": "state", "d": "State briefing", "u": "states/utah.html"}, {"t": "Vermont", "k": "state", "d": "State briefing", "u": "states/vermont.html"}, {"t": "Virginia", "k": "state", "d": "State briefing", "u": "states/virginia.html"}, {"t": "Washington", "k": "state", "d": "State briefing", "u": "states/washington.html"}, {"t": "West Virginia", "k": "state", "d": "State briefing", "u": "states/west-virginia.html"}, {"t": "Wisconsin", "k": "state", "d": "State briefing", "u": "states/wisconsin.html"}, {"t": "Wyoming", "k": "state", "d": "State briefing", "u": "states/wyoming.html"}, {"t": "Five Auctions, $29 Billion: How Data Centers Took Over the PJM Capacity Market \u2014 and Sent Your Bill to the Moon", "k": "blog", "d": "Jul 2026", "u": "blog/pjm-capacity-auction-ratepayer-shock-2026.html"}, {"t": "One Project, Two Stories: How Data Center Developers Shop the Gaps Between Agencies", "k": "blog", "d": "Jul 2026", "u": "blog/oversight-gaps-agency-shopping-2026.html"}, {"t": "DOE Just Named Data Centers the #1 Reason America Needs New Power Lines. Here's Why Your Community Should Read the Fine Print.", "k": "blog", "d": "Jul 2026", "u": "blog/doe-transmission-needs-2026.html"}, {"t": "They Figured This Out Fifty Years Ago: What Oil, Wind, and Pipeline Towns Already Know About Protecting Neighbors", "k": "blog", "d": "Jul 2026", "u": "blog/resource-extraction-precedent-2026.html"}, {"t": "One in Five Electrons: BNEF Says Data Centers Will Consume 20% of U.S. Power by 2035", "k": "blog", "d": "Jul 2026", "u": "blog/bnef-194gw-forecast-2026.html"}, {"t": "Amazon Says It Picks Sites Where the Grid Needs Help. Here's What Communities Should Hear.", "k": "blog", "d": "Jul 2026", "u": "blog/amazon-oyer-site-selection-2026.html"}, {"t": "A $15B Data Center Made Wisconsin Farmers Millionaires \u2014 and the Same Playbook Is Headed for 10 More Markets", "k": "blog", "d": "Jul 2026", "u": "blog/port-washington-stargate-land-rush-2026.html"}, {"t": "Morgan Stanley Says Community Opposition Is the Biggest Threat to the Data Center Buildout. Are They Right?", "k": "blog", "d": "Jul 2026", "u": "blog/morgan-stanley-opposition-bottleneck-2026.html"}, {"t": "New York Just Changed the Game: What EO 62 Means for Every Community Fighting a Data Center", "k": "blog", "d": "Jul 2026", "u": "blog/ny-moratorium-eo62-2026.html"}, {"t": "Why Your Electric Bill Is Going Up \u2014 and What Data Centers Have to Do With It", "k": "blog", "d": "Jul 2026", "u": "blog/utility-bill-explainer-2026.html"}, {"t": "How the Industry Files Your Protest: 'Social License' and the $64B Risk Column", "k": "blog", "d": "Jul 2026", "u": "blog/social-license-risk-2026.html"}, {"t": "The Moratorium Wave: Why 14 States Are Pressing Pause on Data Centers", "k": "blog", "d": "Jul 2026", "u": "blog/moratorium-wave-2026.html"}, {"t": "The Hidden Water Cost of Your AI Query: What the Data Actually Shows", "k": "blog", "d": "Jul 2026", "u": "blog/hidden-water-cost.html"}, {"t": "233 GW of Demand Is Waiting in Line: Inside ERCOT's Data Center Queue", "k": "blog", "d": "Jun 2026", "u": "blog/ercot-queue-explainer.html"}, {"t": "Google", "k": "company", "d": "FY2025 \u00b7 PUE 1.09", "u": "companies/google.html"}, {"t": "Meta", "k": "company", "d": "FY2024 \u00b7 PUE 1.08", "u": "companies/meta.html"}, {"t": "Microsoft", "k": "company", "d": "FY2025 \u00b7 PUE 1.18", "u": "companies/microsoft.html"}, {"t": "Amazon (AWS)", "k": "company", "d": "CY2025 \u00b7 PUE 1.14", "u": "companies/aws.html"}, {"t": "Equinix", "k": "company", "d": "FY2024 \u00b7 PUE 1.39", "u": "companies/equinix.html"}, {"t": "Digital Realty", "k": "company", "d": "FY2024 \u00b7 PUE 1.38", "u": "companies/digital-realty.html"}, {"t": "EdgeConneX", "k": "company", "d": "FY2024 \u00b7 PUE 1.33", "u": "companies/edgeconnex.html"}, {"t": "STACK Infrastructure", "k": "company", "d": "FY2023 \u00b7 PUE 1.35", "u": "companies/stack.html"}, {"t": "CyrusOne", "k": "company", "d": "FY2023 \u00b7 PUE 1.46", "u": "companies/cyrusone.html"}, {"t": "Vantage Data Centers", "k": "company", "d": "CY2023 \u00b7 PUE 1.26", "u": "companies/vantage.html"}, {"t": "CoreWeave", "k": "company", "d": "disclosure: none", "u": "companies/coreweave.html"}, {"t": "QTS (Blackstone)", "k": "company", "d": "disclosure: partial", "u": "companies/qts.html"}, {"t": "Switch (DigitalBridge)", "k": "company", "d": "disclosure: marketing only", "u": "companies/switch.html"}, {"t": "Compass Datacenters", "k": "company", "d": "disclosure: partial", "u": "companies/compass.html"}];
+  var q = document.getElementById('q');
+  var box = document.getElementById('results');
+  var ct = document.getElementById('count');
+  var kinds = {moratorium:'#ef4444', operator:'#3b82f6', executive:'#a855f7',
+                site:'#f59e0b', state:'#2dd4bf', blog:'#6366f1',
+                company:'#f472b6'};
+  function render(items) {
+    if (!q.value.trim()) { box.innerHTML = ''; ct.textContent = IX.length + ' items indexed'; return; }
+    if (!items.length) { box.innerHTML = '<p style="color:var(--muted)">No results.</p>'; ct.textContent = ''; return; }
+    box.innerHTML = items.slice(0, 40).map(function(it) {
+      var c = kinds[it.k] || 'var(--muted)';
+      return '<div style="padding:10px 0;border-bottom:1px solid var(--rule)">'
+        + '<a href="' + it.u + '" style="text-decoration:none">'
+        + '<span class="badge" style="background:' + c + '22;color:' + c + '">' + it.k + '</span> '
+        + '<strong>' + it.t + '</strong></a>'
+        + '<div class="muted" style="font-size:13px">' + it.d + '</div></div>';
+    }).join('');
+    ct.textContent = items.length + ' result' + (items.length === 1 ? '' : 's');
+  }
+  q.addEventListener('input', function() {
+    var v = q.value.toLowerCase().trim();
+    if (!v) { render([]); return; }
+    var words = v.split(/\s+/);
+    var hits = IX.filter(function(it) {
+      var hay = (it.t + ' ' + it.d + ' ' + it.k).toLowerCase();
+      return words.every(function(w) { return hay.indexOf(w) >= 0; });
+    });
+    render(hits);
+  });
+  render([]);
+})();
+</script>
+
+<footer>
+  <a href="about.html">About</a> · <a href="search.html">Search</a>
+  · <a href="dividend.html">Data dividend calculator</a>
+  <br>AI GridWatch — community energy intelligence. Planning estimates, not
+  engineering studies; every number is sourced in the
+  <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.
+</footer>
+</div>
+</body>
+</html>
