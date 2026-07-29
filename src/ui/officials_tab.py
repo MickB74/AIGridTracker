@@ -2,7 +2,7 @@ import re
 import html as _html
 import streamlit as st
 import pandas as pd
-from src.helpers import src_link, render_freshness
+from src.helpers import src_link
 from src.constants import STATE_PUCS_DF, MORATORIUMS_DF, DC_SITES_DF
 from src.local_officials import (
     build_lookup_links, covered_localities, curated, split_label,
@@ -414,67 +414,10 @@ def render_officials_tab():
             "Dividend Calculator to bring to meetings.")
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # ------------------------------------------------------------------ #
-    # State PUC directory
-    # ------------------------------------------------------------------ #
     st.divider()
-    st.subheader("Your state Public Utility Commission (PUC)")
-    st.caption(
-        "PUCs approve rate cases, large-load tariffs, and interconnection "
-        "rules — they decide whether data center costs land on residential "
-        "bills. Every state has one. File a complaint or intervene in a "
-        "rate case to make your voice heard.")
-    render_freshness(st, "STATE_PUCS_DF")
-
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-
-    puc_df = STATE_PUCS_DF.copy()
-
-    # Sync the filter to the sidebar "My Community" state whenever it changes,
-    # while still letting the user override the dropdown manually afterward.
-    # (A multiselect with both default= and key= ignores default on reruns, so
-    # a later sidebar change never propagates — hence the explicit sync.)
-    _sidebar_state = st.session_state.get("my_state", "All states")
-    if st.session_state.get("_puc_last_sidebar") != _sidebar_state:
-        st.session_state["_puc_last_sidebar"] = _sidebar_state
-        st.session_state["puc_state_filter"] = (
-            [_sidebar_state]
-            if _sidebar_state != "All states" and _sidebar_state in puc_df["state"].values
-            else []
-        )
-    puc_filter = st.multiselect(
-        "Filter by state", sorted(puc_df["state"].unique()),
-        key="puc_state_filter",
-        placeholder="All states — or pick yours")
-    if puc_filter:
-        puc_df = puc_df[puc_df["state"].isin(puc_filter)]
-
-    st.dataframe(
-        puc_df, use_container_width=True, hide_index=True,
-        column_config={
-            "state": st.column_config.TextColumn("State"),
-            "abbrev": st.column_config.TextColumn("Abbrev.", width="small"),
-            "name": st.column_config.TextColumn("Commission Name", width="large"),
-            "website": st.column_config.LinkColumn("Website", display_text="site"),
-            "complaint": st.column_config.LinkColumn(
-                "File complaint / intervene", display_text="complaint"),
-        })
-
-    st.caption(
-        f"Showing {len(puc_df)} of {len(STATE_PUCS_DF)} commissions. "
-        "URLs are official state PUC pages. Complaint links open the "
-        "consumer-assistance or formal-complaint portal — procedures "
-        "vary by state. Nebraska (public power state) has a Power Review "
-        "Board with no separate consumer-complaint portal, so its "
-        "complaint cell is blank. Texas (PUCT) has deregulated retail but "
-        "still regulates transmission and distribution rates.")
-
     st.info(
-        "**How to use this:** When a data center developer applies for a "
-        "large-load interconnection or a utility files a rate case to "
-        "recover grid upgrade costs, you can intervene at your PUC. "
-        "Filing a consumer complaint puts your concerns on the record. "
-        "See the **Utility bill** tab for how wholesale costs flow to "
-        "your bill, and the **Negotiation toolkit** for model rate-"
-        "protection clauses.")
-    st.markdown('</div>', unsafe_allow_html=True)
+        "**PUC directory moved to the site:** "
+        "[aigridwatch.com/puc](https://aigridwatch.com/puc) — "
+        "all 51 state Public Utility Commissions with website and "
+        "complaint links. Your state page also shows your PUC."
+    )

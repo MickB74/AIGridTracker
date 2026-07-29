@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What is a data center? A plain-language guide</title>
+<meta name="description" content="What goes in, what comes out, how AI data centers differ from traditional ones, and what companies look for when choosing where to build.">
+<link rel="canonical" href="https://aigridwatch.com/learn">
+<link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
+      href="https://aigridwatch.com/blog/feed.xml">
+<meta property="og:title" content="What is a data center? A plain-language guide">
+<meta property="og:description" content="What goes in, what comes out, how AI data centers differ from traditional ones, and what companies look for when choosing where to build.">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://aigridwatch.com/learn"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "PUE", "acceptedAnswer": {"@type": "Answer", "text": "Power Usage Effectiveness — ratio of total facility energy to IT energy. Lower is better."}}, {"@type": "Question", "name": "WUE", "acceptedAnswer": {"@type": "Answer", "text": "Water Usage Effectiveness — liters of water per kWh of IT energy. Lower is better."}}, {"@type": "Question", "name": "CFE", "acceptedAnswer": {"@type": "Answer", "text": "Carbon-Free Energy — electricity from zero-carbon sources (solar, wind, nuclear, hydro)."}}, {"@type": "Question", "name": "Hyperscaler", "acceptedAnswer": {"@type": "Answer", "text": "The largest cloud/AI companies that build their own data centers (Google, Microsoft, Amazon, Meta)."}}, {"@type": "Question", "name": "Colocation (colo)", "acceptedAnswer": {"@type": "Answer", "text": "A data center operator that leases space, power, and cooling to tenants."}}, {"@type": "Question", "name": "Interconnection queue", "acceptedAnswer": {"@type": "Answer", "text": "The list of projects waiting for grid connection approval from the regional operator (e.g., PJM, ERCOT)."}}, {"@type": "Question", "name": "Moratorium", "acceptedAnswer": {"@type": "Answer", "text": "A temporary ban or pause on new data-center construction, usually enacted by local or state government."}}, {"@type": "Question", "name": "PPA", "acceptedAnswer": {"@type": "Answer", "text": "Power Purchase Agreement — a long-term contract to buy electricity from a specific generator, often renewable."}}, {"@type": "Question", "name": "Rack density", "acceptedAnswer": {"@type": "Answer", "text": "The amount of power drawn per server rack, measured in kW. AI racks are 40–120+ kW vs. 5–15 kW traditional."}}, {"@type": "Question", "name": "GPU", "acceptedAnswer": {"@type": "Answer", "text": "Graphics Processing Unit — specialized chips (like NVIDIA H100/B200) that power AI training and inference."}}, {"@type": "Question", "name": "Inference", "acceptedAnswer": {"@type": "Answer", "text": "Running a trained AI model to generate responses — what happens when you use ChatGPT, Gemini, etc."}}, {"@type": "Question", "name": "Training", "acceptedAnswer": {"@type": "Answer", "text": "The initial process of building an AI model by processing massive datasets. Extremely energy-intensive."}}, {"@type": "Question", "name": "Evaporative cooling", "acceptedAnswer": {"@type": "Answer", "text": "Cooling method that evaporates water to remove heat. Effective but water-intensive."}}, {"@type": "Question", "name": "Liquid cooling", "acceptedAnswer": {"@type": "Answer", "text": "Piping coolant directly to server chips. More efficient for high-density AI workloads."}}, {"@type": "Question", "name": "Marginal emissions", "acceptedAnswer": {"@type": "Answer", "text": "The CO₂ rate of the next power plant that would turn on to serve new load. The right signal for load-shifting."}}]}</script>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<style>
+:root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
+        --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
+* { box-sizing:border-box; margin:0; }
+body { background:var(--bg); color:var(--ink);
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.wrap { max-width:900px; margin:0 auto; padding:20px 20px 64px; }
+nav { display:flex; align-items:center; gap:14px; padding:14px 0;
+      border-bottom:1px solid var(--rule); flex-wrap:wrap; }
+nav img { height:34px; }
+nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+nav a:hover { color:var(--teal); }
+nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
+           font-weight:700; padding:8px 16px; border-radius:8px; }
+header { padding:44px 0 10px; }
+.kicker { color:var(--teal); font-weight:700; letter-spacing:.12em;
+          text-transform:uppercase; font-size:13px; }
+h1 { font-size:clamp(28px,5vw,44px); line-height:1.12; margin:10px 0; }
+.sub { color:var(--muted); max-width:640px; }
+.stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+         margin:30px 0; }
+@media (min-width:640px){ .stats{ grid-template-columns:repeat(4,1fr);} }
+.stat { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:16px; }
+.stat b { display:block; font-size:24px; color:var(--teal); }
+.stat span { font-size:13px; color:var(--muted); }
+section { margin:34px 0; }
+h2 { font-size:20px; color:var(--teal); margin-bottom:12px;
+     border-bottom:1px solid var(--rule); padding-bottom:8px; }
+ul { padding-left:22px; } li { margin:9px 0; }
+a { color:var(--teal); }
+.btn { display:inline-block; background:var(--teal); color:#06251f;
+       font-weight:700; padding:12px 22px; border-radius:10px;
+       text-decoration:none; margin:8px 8px 0 0; }
+.btn.ghost { background:transparent; color:var(--teal);
+             border:1px solid var(--teal); }
+.muted { color:var(--muted); font-size:14px; }
+.grid3 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid3{ grid-template-columns:repeat(3,1fr);} }
+.card { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:18px; }
+.card h3 { margin-bottom:6px; font-size:16px; }
+.panel { border-radius:14px; padding:18px; color:#fff; }
+.panel h3 { margin-bottom:8px; }
+.panel p { font-size:14px; color:rgba(255,255,255,.85); }
+.ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
+       border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
+.src { font-size:12.5px; color:var(--muted); }
+.freshness { border-left:3px solid var(--rule); padding:10px 14px;
+  margin:14px 0; background:rgba(255,255,255,.02); border-radius:0 8px 8px 0;
+  font-size:13.5px; }
+.freshness.stale { border-left-color:var(--amber);
+  background:rgba(251,191,36,.07); }
+.freshness p { margin:0; }
+.note { border-left:3px solid var(--rule); padding:12px 16px; margin:18px 0;
+  border-radius:0 8px 8px 0; font-size:14.5px; line-height:1.55; }
+.note.info { border-left-color:var(--teal); background:rgba(45,212,191,.07); }
+.note.warn { border-left-color:var(--amber); background:rgba(251,191,36,.07); }
+.note.bad  { border-left-color:#ef4444; background:rgba(239,68,68,.08); }
+.note.good { border-left-color:#34d399; background:rgba(52,211,153,.07); }
+.note p { margin:0; }
+details.more { border:1px solid var(--rule); border-radius:10px;
+  padding:0 16px; margin:16px 0; background:rgba(255,255,255,.02); }
+details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
+  color:var(--teal); font-size:14.5px; }
+details.more[open] { padding-bottom:10px; }
+.billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
+  margin:20px 0 12px; }
+.billbar > div { display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:14px; }
+.barkey { display:flex; flex-wrap:wrap; gap:14px; font-size:13px;
+  color:var(--muted); }
+.barkey span { display:flex; align-items:center; gap:6px; }
+.barkey i { width:12px; height:12px; border-radius:3px; }
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px; margin:18px 0; }
+.flow .step { border:1px solid var(--rule); border-radius:10px; padding:12px 14px;
+  background:rgba(255,255,255,.02); font-size:14px; }
+.flow .step b { display:block; margin-bottom:4px; }
+.flow .step.end { border-color:#ef4444; background:rgba(239,68,68,.08); }
+.hbars { margin:18px 0; display:flex; flex-direction:column; gap:8px; }
+.hbar-row { display:grid; grid-template-columns:minmax(90px,1.1fr) 2.4fr
+  minmax(90px,1.3fr); gap:10px; align-items:center; font-size:13.5px; }
+.hbar-label { color:var(--ink); }
+.hbar-track { background:rgba(255,255,255,.06); border-radius:5px; height:16px; }
+.hbar-fill { height:16px; border-radius:5px; }
+.hbar-val { color:var(--muted); font-variant-numeric:tabular-nums; }
+@media (max-width:640px) {
+  .hbar-row { grid-template-columns:1fr; gap:2px; }
+  .hbar-track { height:12px; }
+}
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+th { color:var(--muted); font-weight:600; }
+footer { margin-top:48px; border-top:1px solid var(--rule);
+         padding-top:16px; font-size:13px; color:var(--muted); }
+.statelist { columns:2; font-size:14.5px; }
+@media (min-width:640px){ .statelist{ columns:4; } }
+.statelist a { display:block; padding:3px 0; text-decoration:none; }
+.us-map { max-width:100%; height:auto; margin:20px auto; display:block; }
+.us-map path { fill:var(--card); stroke:var(--rule); stroke-width:.6;
+               cursor:pointer; transition:fill .15s; }
+.us-map path:hover { fill:var(--teal); }
+.us-map text { fill:var(--muted); font-size:7px; pointer-events:none;
+               text-anchor:middle; font-weight:600;
+               font-family:system-ui,-apple-system,sans-serif; }
+.us-map path:hover + text, .us-map path:hover ~ text { fill:var(--bg); }
+.map-tooltip { position:fixed; background:var(--card); border:1px solid var(--teal);
+               border-radius:8px; padding:6px 12px; font-size:13px;
+               color:var(--ink); pointer-events:none; z-index:999;
+               display:none; white-space:nowrap; }
+.post-meta { color:var(--muted); font-size:14px; margin:8px 0 6px; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 20px; }
+.tag { background:var(--card); border:1px solid var(--rule);
+       border-radius:20px; padding:3px 11px; font-size:12px;
+       color:var(--muted); }
+.prose h3 { font-size:17px; color:var(--teal); margin:24px 0 8px; }
+.prose p { margin:10px 0; }
+.prose blockquote { border-left:3px solid var(--teal); margin:16px 0;
+                    padding:6px 16px; color:var(--muted); }
+.prose table { margin:16px 0; }
+.prose ul, .prose ol { margin:10px 0; }
+.prose hr { border:none; border-top:1px solid var(--rule); margin:24px 0; }
+.post-nav { display:flex; justify-content:space-between; gap:14px;
+            margin:32px 0 0; padding:18px 0 0;
+            border-top:1px solid var(--rule); font-size:14px; }
+.post-nav a { max-width:45%; }
+.post-nav .dir { color:var(--muted); font-size:12px; display:block; }
+.blog-list { list-style:none; padding:0; }
+.blog-list li { border-bottom:1px solid var(--rule); padding:18px 0; }
+.blog-list li:last-child { border-bottom:none; }
+.blog-list h3 { font-size:17px; margin:0 0 4px; }
+.blog-list h3 a { text-decoration:none; }
+.blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
+.badge { display:inline-block; font-size:12px; font-weight:700;
+         padding:2px 9px; border-radius:6px; }
+.badge-enacted { background:#065f46; color:#6ee7b7; }
+.badge-proposed { background:#713f12; color:#fde68a; }
+.badge-rejected { background:#7f1d1d; color:#fca5a5; }
+.badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.outcome { border-left:3px solid var(--teal); padding:10px 14px;
+           margin:10px 0; }
+.outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
+                text-transform:uppercase; letter-spacing:.08em; }
+.grid2 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
+.official { font-size:14px; }
+.official .role { color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="index.html"><img src="assets/logo.svg" alt="AI GridWatch"></a>
+  <a href="index.html">Home</a>
+  <a href="states/index.html">Your state</a>
+  <a href="health-risks.html">Health risks</a>
+  <a href="moratoriums.html">Moratoriums</a>
+  <a href="impact.html">Calculator</a>
+  <a href="bills.html">Your bill</a>
+  <a href="outlook.html">Outlook</a>
+  <a href="learn.html">Learn</a>
+  <a href="puc.html">PUCs</a>
+  <a href="companies/index.html">Companies</a>
+  <a href="blog/index.html">Blog</a>
+  <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
+</nav>
+
+<header>
+  <div class="kicker">Learn</div>
+  <h1>What is a data center &mdash; and why does it matter?</h1>
+  <p class="sub">A plain-language guide to the buildings behind AI: what goes
+  in, what comes out, how AI facilities differ from traditional ones, and what
+  companies look for when choosing where to build.</p>
+</header>
+
+<details class="more"><summary>On this page</summary>
+  <ol style="font-size:14px">
+    <li>What is a data center?</li>
+    <li>How are AI data centers different?</li>
+    <li>What happens inside an AI data center</li>
+    <li>Using the right model for the task</li>
+    <li>Inputs &amp; outputs</li>
+    <li>Efficiency (PUE, WUE, CUE)</li>
+    <li>Site selection</li>
+    <li>Key terms glossary</li>
+  </ol>
+</details>
+
+<section>
+  <h2>1. What is a data center?</h2>
+  <p>A <strong>warehouse for computing</strong> &mdash; thousands of servers
+  running 24/7 behind every video stream, banking app, and AI chatbot, kept
+  alive by dedicated power, cooling, and fiber.</p>
+  <div class="stats">
+    <div class="stat"><b>~11,000+</b><span>global facilities with 1 MW+ capacity (2025)</span></div>
+    <div class="stat"><b>~485 TWh</b><span>global electricity use (2025, IEA) &mdash; ~2% of world total</span></div>
+    <div class="stat"><b>~945 TWh</b><span>projected by 2030 &mdash; could double in 5 years</span></div>
+  </div>
+  <p class="muted">From small server rooms to 300+ MW campuses. Growth is
+  driven largely by AI workloads.</p>
+</section>
+
+<section>
+  <h2>2. How are AI data centers different?</h2>
+  <div class="grid3">
+    <div class="card">
+      <h3>Power density</h3>
+      <p><strong style="color:var(--teal)">40&ndash;120 kW/rack</strong></p>
+      <p class="muted">vs 5&ndash;15 kW traditional &mdash; up to 10&times;
+      more power in the same space, and far more heat.</p>
+    </div>
+    <div class="card">
+      <h3>Cooling</h3>
+      <p><strong style="color:var(--teal)">Liquid-cooled</strong></p>
+      <p class="muted">Air can&rsquo;t keep up. Evaporative towers can consume
+      millions of gallons a day.</p>
+    </div>
+    <div class="card">
+      <h3>Grid draw</h3>
+      <p><strong style="color:var(--teal)">50&ndash;100 MW</strong></p>
+      <p class="muted">Per training cluster &mdash; the continuous load of a
+      small city.</p>
+    </div>
+  </div>
+  <div class="note info"><p><strong>In one sentence:</strong> a traditional
+  data center serves millions of small, quick requests; an AI data center
+  runs fewer, far heavier workloads that demand extreme power density and
+  advanced cooling.</p></div>
+  <details class="more"><summary>Read more &mdash; why the difference matters</summary>
+    <p>Traditional data centers run <strong>general workloads</strong> &mdash;
+    web hosting, email, databases, video streaming &mdash; on standard CPUs
+    drawing moderate power.</p>
+    <ul>
+      <li><strong>Power density:</strong> AI racks packed with GPUs like
+      NVIDIA&rsquo;s H100 or B200 draw <strong>40&ndash;120 kW per rack</strong>
+      vs 5&ndash;15 kW for traditional servers. AI facilities need vastly more
+      power per square foot and generate far more heat.</li>
+      <li><strong>Cooling:</strong> Standard air cooling can&rsquo;t handle GPU
+      heat loads, so AI facilities use <strong>liquid cooling</strong> (piping
+      coolant to chips) or rear-door heat exchangers. Some rely on evaporative
+      cooling towers that consume millions of gallons of water per day.</li>
+      <li><strong>Grid impact:</strong> When dozens of 50&ndash;100 MW clusters
+      concentrate in one region (Northern Virginia, Central Texas), they strain
+      the grid, drive up electricity rates, and require billions in new
+      transmission infrastructure.</li>
+    </ul>
+  </details>
+</section>
+
+<section>
+  <h2>3. What actually happens inside an AI data center?</h2>
+  <p>Two kinds of work with very different power profiles:
+  <strong>training</strong> (building the model &mdash; one massive,
+  months-long burn) and <strong>inference</strong> (using it &mdash; a smaller
+  but endless drip, billions of requests a day).</p>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Attribute</th><th>Training</th><th>Inference</th></tr>
+    <tr><td>Duration</td><td>Weeks&ndash;months (one-time)</td><td>Forever (24/7)</td></tr>
+    <tr><td>GPU usage</td><td>Thousands in lockstep</td><td>Spread across clusters</td></tr>
+    <tr><td>Power profile</td><td>Steady, flat, 24/7</td><td>Spiky, follows the clock</td></tr>
+    <tr><td>Total lifetime energy</td><td>~20&ndash;30%</td><td>~70&ndash;80%</td></tr>
+  </table>
+  </div>
+  <div class="note info"><p><strong>Rule of thumb:</strong> <em>Training</em>
+  is a one-time, massive, steady burst to build the model. <em>Inference</em>
+  is the endless drip of everyday use. Training gets the headlines; inference
+  quietly dominates the long-run footprint.</p></div>
+  <details class="more"><summary>Read more &mdash; training vs inference, in depth</summary>
+    <div class="grid2">
+      <div>
+        <h3>Training &mdash; <em>building</em> the model</h3>
+        <p>Engineers feed enormous datasets &mdash; much of the public internet,
+        books, code &mdash; and the model adjusts billions of internal parameters
+        until it can predict language well.</p>
+        <ul>
+          <li><strong>Runs once per model</strong>, but for <strong>weeks or
+          months</strong> without stopping.</li>
+          <li><strong>Thousands of GPUs in lockstep</strong> &mdash; a 50&ndash;
+          100+ MW cluster running flat-out, 24/7.</li>
+          <li>A near-constant, city-sized electrical load that&rsquo;s hard for
+          a grid to absorb.</li>
+          <li>A single frontier model can consume <strong>tens of
+          gigawatt-hours</strong> &mdash; as much electricity as thousands of
+          homes use in a year.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Inference &mdash; <em>using</em> the model</h3>
+        <p>Your prompt goes to a data center, runs through the trained model, and
+        a response comes back &mdash; usually in under a second.</p>
+        <ul>
+          <li><strong>Runs constantly, forever</strong> &mdash; every chat message
+          and search summary.</li>
+          <li>Each request is small, but there are <strong>billions per
+          day</strong> across all users.</li>
+          <li>Load is <strong>spiky and follows the clock</strong> &mdash; easier
+          to shift toward cleaner grid hours.</li>
+          <li>Over a model&rsquo;s lifetime, <strong>inference usually dwarfs
+          training</strong> in total energy.</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <h3>The full lifecycle, start to finish</h3>
+  <div class="hbars"><div class="hbar-row"><div class="hbar-label">1. Data prep</div><div class="hbar-track"><div class="hbar-fill" style="width:20.0%;background:var(--amber)"></div></div><div class="hbar-val">2/10 <span class="muted">Moderate</span></div></div><div class="hbar-row"><div class="hbar-label">2. Training</div><div class="hbar-track"><div class="hbar-fill" style="width:100.0%;background:var(--amber)"></div></div><div class="hbar-val">10/10 <span class="muted">HUGE</span></div></div><div class="hbar-row"><div class="hbar-label">3. Fine-tuning</div><div class="hbar-track"><div class="hbar-fill" style="width:30.0%;background:var(--amber)"></div></div><div class="hbar-val">3/10 <span class="muted">Moderate</span></div></div><div class="hbar-row"><div class="hbar-label">4. Deployment</div><div class="hbar-track"><div class="hbar-fill" style="width:10.0%;background:var(--amber)"></div></div><div class="hbar-val">1/10 <span class="muted">Low</span></div></div><div class="hbar-row"><div class="hbar-label">5. Inference</div><div class="hbar-track"><div class="hbar-fill" style="width:70.0%;background:var(--amber)"></div></div><div class="hbar-val">7/10 <span class="muted">Relentless</span></div></div><div class="hbar-row"><div class="hbar-label">6. Retraining</div><div class="hbar-track"><div class="hbar-fill" style="width:100.0%;background:var(--amber)"></div></div><div class="hbar-val">10/10 <span class="muted">HUGE</span></div></div></div>
+  <div class="grid3">
+    <div class="card"><p><strong>One-time burst:</strong> Training &amp;
+    retraining are the biggest single energy draws</p></div>
+    <div class="card"><p><strong>Never stops:</strong> Inference runs 24/7 for
+    the life of the model</p></div>
+    <div class="card"><p><strong>The cycle repeats:</strong> Each new model
+    generation starts the process over</p></div>
+  </div>
+  <p class="muted">This is why AI facilities come in two flavors:
+  <strong>training campuses</strong> built for massive, constant power, and
+  <strong>inference campuses</strong> placed close to users for low latency.
+  Some sites do both.</p>
+</section>
+
+<section>
+  <h2>4. Using the right model for the task</h2>
+  <p>A frontier model can use <strong>10&ndash;100&times; more energy per
+  response</strong> than a small one &mdash; and for most everyday tasks, the
+  small model answers just as well. Sending every request to the largest model
+  is like taking a semi-truck to pick up groceries.</p>
+  <div class="note info"><p><strong>The takeaway:</strong> the greenest AI
+  request is often the one that never touches a giant model. Right-sizing
+  &mdash; the <em>right</em> model, a <em>short</em> prompt, a <em>cached</em>
+  answer when possible &mdash; cuts energy dramatically with no visible drop
+  in quality.</p></div>
+  <details class="more"><summary>How teams right-size in practice</summary>
+    <ul>
+      <li><strong>Model routing</strong> &mdash; a lightweight system sends easy
+      questions to a small model and only escalates hard ones to a large
+      model.</li>
+      <li><strong>Distillation</strong> &mdash; training a small, cheap model to
+      mimic a big one for a specific task, keeping most of the quality at a
+      fraction of the cost.</li>
+      <li><strong>Caching &amp; retrieval</strong> &mdash; reusing past answers
+      or looking facts up in a database instead of re-running the model from
+      scratch.</li>
+      <li><strong>Shorter prompts &amp; outputs</strong> &mdash; energy scales
+      with tokens processed, so concise in-and-out means less compute.</li>
+    </ul>
+    <p>Small &ldquo;mini&rdquo; models already handle the bulk of real traffic
+    &mdash; classification, summarizing, autocomplete, simple Q&amp;A &mdash;
+    at a fraction of the energy. Large frontier models shine at hard reasoning
+    and complex code, but are overkill for routine requests.</p>
+  </details>
+</section>
+
+<section>
+  <h2>5. Inputs and outputs &mdash; what goes in, what comes out</h2>
+  <div class="grid2">
+    <div>
+      <h3>What goes IN</h3>
+      <div class="card" style="margin:8px 0"><p><strong>Electricity</strong> &mdash; 50&ndash;300+ MW</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Water</strong> &mdash; 1&ndash;5M gal/day</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Land</strong> &mdash; 50&ndash;500+ acres</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Fiber</strong> &mdash; Redundant paths</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Hardware</strong> &mdash; Refreshed every 3&ndash;5 yrs</p></div>
+    </div>
+    <div>
+      <h3>What comes OUT</h3>
+      <div class="card" style="margin:8px 0"><p><strong>Compute services</strong> &mdash; AI &amp; cloud (the product)</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Waste heat</strong> &mdash; Rarely recaptured in US</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Noise</strong> &mdash; 50&ndash;70+ dB at property line</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>CO&#8322; emissions</strong> &mdash; Varies by grid mix</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Jobs</strong> &mdash; 50&ndash;150 permanent</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Tax revenue</strong> &mdash; Often reduced by abatements</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>6. How can data centers be more efficient?</h2>
+  <p>The industry uses several strategies to reduce energy, water, and carbon
+  footprint. Not all operators adopt all of these &mdash; and the gap between
+  the best and worst performers is wide.</p>
+  <h3>PUE comparison</h3>
+  <div class="hbars"><div class="hbar-row"><div class="hbar-label">Older / poorly designed</div><div class="hbar-track"><div class="hbar-fill" style="width:100.0%;background:var(--teal)"></div></div><div class="hbar-val">1.8 PUE</div></div><div class="hbar-row"><div class="hbar-label">Industry average (2024)</div><div class="hbar-track"><div class="hbar-fill" style="width:86.1%;background:var(--teal)"></div></div><div class="hbar-val">1.55 PUE</div></div><div class="hbar-row"><div class="hbar-label">Good modern facility</div><div class="hbar-track"><div class="hbar-fill" style="width:66.7%;background:var(--teal)"></div></div><div class="hbar-val">1.2 PUE</div></div><div class="hbar-row"><div class="hbar-label">Best-in-class (Google/Meta)</div><div class="hbar-track"><div class="hbar-fill" style="width:61.1%;background:var(--teal)"></div></div><div class="hbar-val">1.1 PUE</div></div></div>
+  <p class="muted">Lower is better. Every 0.1 improvement saves ~7&ndash;10%
+  total energy. Theoretical perfect PUE is 1.0 (impossible).</p>
+  <div class="stats">
+    <div class="stat"><b>1.55</b><span>industry avg PUE &mdash; best-in-class: 1.10</span></div>
+    <div class="stat"><b>12&ndash;18%</b><span>typical server utilization &mdash; could be 60%+</span></div>
+    <div class="stat"><b>30&ndash;50%</b><span>liquid cooling saves this much cooling energy</span></div>
+  </div>
+  <details class="more"><summary>The six efficiency levers, explained</summary>
+    <div class="grid2">
+      <div>
+        <h3>Power efficiency (PUE)</h3>
+        <p>Total facility energy &divide; IT equipment energy. 1.0 = perfect
+        (impossible); 1.1&ndash;1.2 = best-in-class (Google, Meta); industry
+        average &asymp; 1.55 (Uptime Institute, 2024). Every 0.1 reduction saves
+        ~7&ndash;10% of total energy.</p>
+        <h3>Liquid cooling</h3>
+        <p>Direct-to-chip cooling removes heat far more efficiently than air
+        &mdash; 30&ndash;50% less cooling energy, and increasingly required for
+        AI GPU racks drawing 60+ kW.</p>
+        <h3>Free cooling</h3>
+        <p>Cold-climate facilities (Nordics, Pacific Northwest, Ireland) use
+        outside air much of the year, drastically cutting water and chiller
+        energy.</p>
+      </div>
+      <div>
+        <h3>Renewable energy</h3>
+        <p>Leading operators sign PPAs for wind and solar. The gold standard is
+        <strong>24/7 Carbon-Free Energy</strong> &mdash; matching consumption
+        with clean energy hour-by-hour on the same grid, not just annually
+        through credits.</p>
+        <h3>Water efficiency (WUE)</h3>
+        <p>Liters of water per kWh of IT energy. 0.0 = air-cooled;
+        0.2&ndash;0.5 = efficient evaporative; 1.0&ndash;2.0 = heavy use.
+        Arid-region facilities are switching to closed-loop chillers that use
+        zero water at the cost of more energy.</p>
+        <h3>Compute efficiency</h3>
+        <p>The cheapest watt is the one you never draw: raise server utilization
+        (industry average is just 12&ndash;18%), optimize models (quantization
+        and distillation cut inference energy 2&ndash;10&times;), right-size
+        hardware, and schedule deferrable jobs into off-peak, high-renewable
+        hours.</p>
+      </div>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2>7. Where do companies build &mdash; and what do they look for?</h2>
+  <p>Site selection is driven by a specific checklist of requirements.
+  Understanding what companies prioritize explains why data centers cluster in
+  certain regions &mdash; and why some communities are targeted more than
+  others.</p>
+  <h3>Site-selection factors by importance</h3>
+  <div class="hbars"><div class="hbar-row"><div class="hbar-label">1. Power availability</div><div class="hbar-track"><div class="hbar-fill" style="width:100.0%;background:var(--amber)"></div></div><div class="hbar-val">10/10 <span class="muted">50–300+ MW of firm electricity</span></div></div><div class="hbar-row"><div class="hbar-label">2. Fiber connectivity</div><div class="hbar-track"><div class="hbar-fill" style="width:80.0%;background:var(--amber)"></div></div><div class="hbar-val">8/10 <span class="muted">Dense fiber with low latency</span></div></div><div class="hbar-row"><div class="hbar-label">3. Tax incentives</div><div class="hbar-track"><div class="hbar-fill" style="width:70.0%;background:var(--amber)"></div></div><div class="hbar-val">7/10 <span class="muted">Abatements, exemptions</span></div></div><div class="hbar-row"><div class="hbar-label">4. Permitting speed</div><div class="hbar-track"><div class="hbar-fill" style="width:70.0%;background:var(--amber)"></div></div><div class="hbar-val">7/10 <span class="muted">Fast zoning &amp; building permits</span></div></div><div class="hbar-row"><div class="hbar-label">5. Land (cheap &amp; flat)</div><div class="hbar-track"><div class="hbar-fill" style="width:60.0%;background:var(--amber)"></div></div><div class="hbar-val">6/10 <span class="muted">50–500 acres, no flood zones</span></div></div><div class="hbar-row"><div class="hbar-label">6. Water access</div><div class="hbar-track"><div class="hbar-fill" style="width:60.0%;background:var(--amber)"></div></div><div class="hbar-val">6/10 <span class="muted">Reliable municipal or well supply</span></div></div><div class="hbar-row"><div class="hbar-label">7. Disaster safety</div><div class="hbar-track"><div class="hbar-fill" style="width:50.0%;background:var(--amber)"></div></div><div class="hbar-val">5/10 <span class="muted">Low quake/hurricane/tornado risk</span></div></div><div class="hbar-row"><div class="hbar-label">8. Workforce</div><div class="hbar-track"><div class="hbar-fill" style="width:40.0%;background:var(--amber)"></div></div><div class="hbar-val">4/10 <span class="muted">Electricians, HVAC, network engineers</span></div></div></div>
+  <p class="muted">Power is king &mdash; everything else follows. Without
+  available grid capacity, no amount of tax incentives matters.</p>
+  <div class="note warn"><p><strong>What&rsquo;s often missing from this
+  checklist:</strong> community input, cumulative impact on local water and
+  power resources, noise standards, and long-term rate impacts on existing
+  ratepayers. These are the gaps this tracker aims to make visible.</p></div>
+  <div class="note info"><p><strong>Could they build in your town?</strong>
+  The <a href="https://aigridtracker.streamlit.app">full toolkit</a> includes a
+  <strong>Community Siting Evaluator</strong> &mdash; enter your town or
+  address to see how it scores on these 8 factors, with auto-populated data
+  from public sources.</p></div>
+</section>
+
+<section>
+  <h2>8. Key terms glossary</h2>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Term</th><th>Definition</th></tr>
+    <tr><td><strong>PUE</strong></td><td>Power Usage Effectiveness — ratio of total facility energy to IT energy. Lower is better.</td></tr>
+<tr><td><strong>WUE</strong></td><td>Water Usage Effectiveness — liters of water per kWh of IT energy. Lower is better.</td></tr>
+<tr><td><strong>CFE</strong></td><td>Carbon-Free Energy — electricity from zero-carbon sources (solar, wind, nuclear, hydro).</td></tr>
+<tr><td><strong>Hyperscaler</strong></td><td>The largest cloud/AI companies that build their own data centers (Google, Microsoft, Amazon, Meta).</td></tr>
+<tr><td><strong>Colocation (colo)</strong></td><td>A data center operator that leases space, power, and cooling to tenants.</td></tr>
+<tr><td><strong>Interconnection queue</strong></td><td>The list of projects waiting for grid connection approval from the regional operator (e.g., PJM, ERCOT).</td></tr>
+<tr><td><strong>Moratorium</strong></td><td>A temporary ban or pause on new data-center construction, usually enacted by local or state government.</td></tr>
+<tr><td><strong>PPA</strong></td><td>Power Purchase Agreement — a long-term contract to buy electricity from a specific generator, often renewable.</td></tr>
+<tr><td><strong>Rack density</strong></td><td>The amount of power drawn per server rack, measured in kW. AI racks are 40–120+ kW vs. 5–15 kW traditional.</td></tr>
+<tr><td><strong>GPU</strong></td><td>Graphics Processing Unit — specialized chips (like NVIDIA H100/B200) that power AI training and inference.</td></tr>
+<tr><td><strong>Inference</strong></td><td>Running a trained AI model to generate responses — what happens when you use ChatGPT, Gemini, etc.</td></tr>
+<tr><td><strong>Training</strong></td><td>The initial process of building an AI model by processing massive datasets. Extremely energy-intensive.</td></tr>
+<tr><td><strong>Evaporative cooling</strong></td><td>Cooling method that evaporates water to remove heat. Effective but water-intensive.</td></tr>
+<tr><td><strong>Liquid cooling</strong></td><td>Piping coolant directly to server chips. More efficient for high-density AI workloads.</td></tr>
+<tr><td><strong>Marginal emissions</strong></td><td>The CO₂ rate of the next power plant that would turn on to serve new load. The right signal for load-shifting.</td></tr>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>What to do with this</h2>
+  <p>Now you know how these facilities work and what makes your community a
+  target. Next steps:</p>
+  <p>
+    <a class="btn" href="https://aigridtracker.streamlit.app">Start here &mdash; the 5-step wizard</a>
+    <a class="btn ghost" href="health-risks.html">The health risks, sourced</a>
+    <a class="btn ghost" href="bills.html">How this reaches your bill</a>
+  </p>
+  <p class="src">Sources: IEA <em>Energy and AI</em> (2025), Uptime Institute
+  Global Survey (2024), EPRI <em>Powering Intelligence</em> (2025), Google
+  Environmental Report (2024), US DOE Data Center Primer.</p>
+</section>
+
+<footer>
+  <a href="about.html">About</a> · <a href="search.html">Search</a>
+  · <a href="dividend.html">Data dividend calculator</a>
+  <br>AI GridWatch — community energy intelligence. Planning estimates, not
+  engineering studies; every number is sourced in the
+  <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.
+</footer>
+</div>
+</body>
+</html>

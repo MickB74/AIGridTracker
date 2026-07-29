@@ -22,6 +22,7 @@ the repo, set Root Directory to `web`, framework "Other", no build step.
 """
 
 import html
+import json
 import os
 import pathlib
 import shutil
@@ -34,7 +35,7 @@ from src.constants import (
     STATE_GRID_PROFILES, STATE_DC_DF, STATE_PUCS_DF, MORATORIUMS_DF,
     MORATORIUM_OUTCOMES, HEALTH_RISKS, CBA_BENCHMARKS, COMPANY_CONCESSIONS,
     DC_SITES_DF, LOCAL_OFFICIALS_DF, LOCAL_BODIES_DF, STATE_MUNI_LEAGUES,
-    OPERATORS_DF, EXECUTIVES_DF,
+    OPERATORS_DF, EXECUTIVES_DF, MEGA_PROJECTS_DF,
     GOOGLE_2025_HEADLINE, META_2024_HEADLINE,
     MICROSOFT_ENV_HEADLINE, AWS_ENV_HEADLINE,
     EQUINIX_2024_HEADLINE, DIGITAL_REALTY_2024_HEADLINE,
@@ -244,8 +245,14 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 
 
 def page(title, description, body, canonical, depth=0,
-         og_type="website", og_extra=""):
+         og_type="website", og_extra="", jsonld=None):
     p = "../" * depth
+    ld_block = ""
+    if jsonld:
+        items = jsonld if isinstance(jsonld, list) else [jsonld]
+        ld_block = "\n".join(
+            f'<script type="application/ld+json">{json.dumps(s, ensure_ascii=False)}</script>'
+            for s in items)
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -260,6 +267,7 @@ def page(title, description, body, canonical, depth=0,
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:type" content="{og_type}">
 {og_extra}
+{ld_block}
 <link rel="icon" href="{p}assets/logo.svg" type="image/svg+xml">
 <style>{CSS}</style>
 </head>
@@ -274,6 +282,8 @@ def page(title, description, body, canonical, depth=0,
   <a href="{p}impact.html">Calculator</a>
   <a href="{p}bills.html">Your bill</a>
   <a href="{p}outlook.html">Outlook</a>
+  <a href="{p}learn.html">Learn</a>
+  <a href="{p}puc.html">PUCs</a>
   <a href="{p}companies/index.html">Companies</a>
   <a href="{p}blog/index.html">Blog</a>
   <a class="cta" href="{APP_URL}">Open the toolkit &rarr;</a>
@@ -290,6 +300,57 @@ def page(title, description, body, canonical, depth=0,
 </body>
 </html>
 """
+
+
+_ORG = {
+    "@type": "Organization",
+    "name": "AI GridWatch",
+    "url": SITE_URL,
+    "description": "Free community tools for negotiating with data center "
+                   "developers: impact calculators, CBA templates, health "
+                   "evidence, and sourced data.",
+    "logo": f"{SITE_URL}/assets/logo.svg",
+}
+
+
+def _breadcrumb(*items):
+    """BreadcrumbList schema. items = [(name, url), ...]."""
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": i + 1,
+             "name": name, "item": url}
+            for i, (name, url) in enumerate(items)
+        ],
+    }
+
+
+def _faq_schema(pairs):
+    """FAQPage schema. pairs = [(question, answer), ...]."""
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": q,
+             "acceptedAnswer": {"@type": "Answer", "text": a}}
+            for q, a in pairs
+        ],
+    }
+
+
+def _article_schema(title, description, url, date_str, author="AI GridWatch"):
+    """Article schema for blog posts."""
+    return {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": description,
+        "url": url,
+        "datePublished": date_str,
+        "author": {"@type": "Organization", "name": author},
+        "publisher": {**_ORG, "@context": "https://schema.org"},
+    }
 
 
 def build_index():
@@ -363,11 +424,20 @@ def build_index():
   <div class="statelist">{states_links}</div>
 </section>
 """
+    home_ld = [
+        {"@context": "https://schema.org", **_ORG},
+        {"@context": "https://schema.org",
+         "@type": "WebSite", "name": "AI GridWatch", "url": SITE_URL,
+         "potentialAction": {
+             "@type": "SearchAction",
+             "target": f"{SITE_URL}/search?q={{search_term_string}}",
+             "query-input": "required name=search_term_string"}},
+    ]
     return page(
         "AI GridWatch — data center impact tools for communities",
         "Free calculators, negotiation playbooks, and sourced health "
         "evidence for communities facing data center development.",
-        body, f"{SITE_URL}/")
+        body, f"{SITE_URL}/", jsonld=home_ld)
 
 
 def _status_badge(status):
@@ -557,7 +627,8 @@ def build_state(state):
         f"{state} data centers: electricity, water & who to call",
         f"Data center facilities, grid impact, and regulator contacts for "
         f"{state} — free community negotiation tools from AI GridWatch.",
-        body, f"{SITE_URL}/states/{slugify(state)}", depth=1)
+        body, f"{SITE_URL}/states/{slugify(state)}", depth=1,
+        jsonld=_breadcrumb(("Home", SITE_URL), ("States", f"{SITE_URL}/states/"), (state, f"{SITE_URL}/states/{slugify(state)}")))
 
 
 _ABBREV_TO_FULL = {v: k for k, v in _ABBREV.items()}
@@ -603,7 +674,8 @@ def build_states_index():
         "State data center briefings — AI GridWatch",
         "Data center impact briefings for all 50 states + DC: facilities, "
         "electricity, water stress, and regulator contacts.",
-        body, f"{SITE_URL}/states/", depth=1)
+        body, f"{SITE_URL}/states/", depth=1,
+        jsonld=_breadcrumb(("Home", SITE_URL), ("States", f"{SITE_URL}/states/")))
 
 
 def build_health():
@@ -644,7 +716,8 @@ def build_health():
         "Air, noise, light, bills, water, and climate: the documented "
         "health impacts of data centers, with sources and the permit "
         "conditions that address them.",
-        body, f"{SITE_URL}/health-risks")
+        body, f"{SITE_URL}/health-risks",
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Health risks", f"{SITE_URL}/health-risks")))
 
 
 def _md_to_html(text):
@@ -686,7 +759,8 @@ def build_blog_index():
         "Blog — AI GridWatch",
         "Analysis and explainers on data center development, grid impact, "
         "and community advocacy from AI GridWatch.",
-        body, f"{SITE_URL}/blog/", depth=1)
+        body, f"{SITE_URL}/blog/", depth=1,
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Blog", f"{SITE_URL}/blog/")))
 
 
 def build_blog_post(story, prev_post, next_post):
@@ -735,7 +809,11 @@ def build_blog_post(story, prev_post, next_post):
         f"{title_clean} — AI GridWatch",
         summary_clean,
         body, f"{SITE_URL}/blog/{story['id']}", depth=1,
-        og_type="article", og_extra=og_extra)
+        og_type="article", og_extra=og_extra,
+        jsonld=[
+            _breadcrumb(("Home", SITE_URL), ("Blog", f"{SITE_URL}/blog/"), (title_clean, f"{SITE_URL}/blog/{story['id']}")),
+            _article_schema(title_clean, summary_clean, f"{SITE_URL}/blog/{story['id']}", story["date"].isoformat(), story["author"]),
+        ])
 
 
 def build_impact_calculator():
@@ -852,7 +930,8 @@ def build_impact_calculator():
         "Data center impact calculator — AI GridWatch",
         "Estimate the electricity, water, carbon, and rate impact of a "
         "data center in your state — free community calculator.",
-        body, f"{SITE_URL}/impact")
+        body, f"{SITE_URL}/impact",
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Calculator", f"{SITE_URL}/impact")))
 
 
 def cell(value, dash="—"):
@@ -1295,7 +1374,8 @@ def build_bills():
         "How electricity bills work, why peak demand sets your annual cost, and "
         "what the research says about data centers shifting costs onto "
         "residential ratepayers.",
-        body, f"{SITE_URL}/bills")
+        body, f"{SITE_URL}/bills",
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Your bill", f"{SITE_URL}/bills")))
 
 
 def hbars(rows, unit="", color="var(--teal)"):
@@ -1448,7 +1528,663 @@ def build_outlook():
         "IEA, BloombergNEF, LBNL and EPRI projections for data-center "
         "electricity — why they disagree by 3×, and where new US facilities "
         "are actually being built.",
-        body, f"{SITE_URL}/outlook")
+        body, f"{SITE_URL}/outlook",
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Outlook", f"{SITE_URL}/outlook")))
+
+
+def build_learn():
+    """Data-center explainer — ported from src/ui/learn_tab.py.
+
+    All prose, metrics, tables, and charts move across; the two Altair bar
+    charts become hbars(). The interactive Community Siting Evaluator stays
+    in the Streamlit app (needs live geocoding).
+    """
+    lifecycle_rows = [
+        ("1. Data prep", 2, "Moderate"),
+        ("2. Training", 10, "HUGE"),
+        ("3. Fine-tuning", 3, "Moderate"),
+        ("4. Deployment", 1, "Low"),
+        ("5. Inference", 7, "Relentless"),
+        ("6. Retraining", 10, "HUGE"),
+    ]
+
+    pue_rows = [
+        ("Older / poorly designed", 1.80, ""),
+        ("Industry average (2024)", 1.55, ""),
+        ("Good modern facility", 1.20, ""),
+        ("Best-in-class (Google/Meta)", 1.10, ""),
+    ]
+
+    site_rows = [
+        ("1. Power availability", 10, "50–300+ MW of firm electricity"),
+        ("2. Fiber connectivity", 8, "Dense fiber with low latency"),
+        ("3. Tax incentives", 7, "Abatements, exemptions"),
+        ("4. Permitting speed", 7, "Fast zoning & building permits"),
+        ("5. Land (cheap & flat)", 6, "50–500 acres, no flood zones"),
+        ("6. Water access", 6, "Reliable municipal or well supply"),
+        ("7. Disaster safety", 5, "Low quake/hurricane/tornado risk"),
+        ("8. Workforce", 4, "Electricians, HVAC, network engineers"),
+    ]
+
+    glossary_rows = [
+        ("PUE", "Power Usage Effectiveness — ratio of total facility energy to IT energy. Lower is better."),
+        ("WUE", "Water Usage Effectiveness — liters of water per kWh of IT energy. Lower is better."),
+        ("CFE", "Carbon-Free Energy — electricity from zero-carbon sources (solar, wind, nuclear, hydro)."),
+        ("Hyperscaler", "The largest cloud/AI companies that build their own data centers (Google, Microsoft, Amazon, Meta)."),
+        ("Colocation (colo)", "A data center operator that leases space, power, and cooling to tenants."),
+        ("Interconnection queue", "The list of projects waiting for grid connection approval from the regional operator (e.g., PJM, ERCOT)."),
+        ("Moratorium", "A temporary ban or pause on new data-center construction, usually enacted by local or state government."),
+        ("PPA", "Power Purchase Agreement — a long-term contract to buy electricity from a specific generator, often renewable."),
+        ("Rack density", "The amount of power drawn per server rack, measured in kW. AI racks are 40–120+ kW vs. 5–15 kW traditional."),
+        ("GPU", "Graphics Processing Unit — specialized chips (like NVIDIA H100/B200) that power AI training and inference."),
+        ("Inference", "Running a trained AI model to generate responses — what happens when you use ChatGPT, Gemini, etc."),
+        ("Training", "The initial process of building an AI model by processing massive datasets. Extremely energy-intensive."),
+        ("Evaporative cooling", "Cooling method that evaporates water to remove heat. Effective but water-intensive."),
+        ("Liquid cooling", "Piping coolant directly to server chips. More efficient for high-density AI workloads."),
+        ("Marginal emissions", "The CO₂ rate of the next power plant that would turn on to serve new load. The right signal for load-shifting."),
+    ]
+    glossary_html = "\n".join(
+        f"<tr><td><strong>{esc(term)}</strong></td><td>{esc(defn)}</td></tr>"
+        for term, defn in glossary_rows)
+
+    body = f"""
+<header>
+  <div class="kicker">Learn</div>
+  <h1>What is a data center &mdash; and why does it matter?</h1>
+  <p class="sub">A plain-language guide to the buildings behind AI: what goes
+  in, what comes out, how AI facilities differ from traditional ones, and what
+  companies look for when choosing where to build.</p>
+</header>
+
+<details class="more"><summary>On this page</summary>
+  <ol style="font-size:14px">
+    <li>What is a data center?</li>
+    <li>How are AI data centers different?</li>
+    <li>What happens inside an AI data center</li>
+    <li>Using the right model for the task</li>
+    <li>Inputs &amp; outputs</li>
+    <li>Efficiency (PUE, WUE, CUE)</li>
+    <li>Site selection</li>
+    <li>Key terms glossary</li>
+  </ol>
+</details>
+
+<section>
+  <h2>1. What is a data center?</h2>
+  <p>A <strong>warehouse for computing</strong> &mdash; thousands of servers
+  running 24/7 behind every video stream, banking app, and AI chatbot, kept
+  alive by dedicated power, cooling, and fiber.</p>
+  <div class="stats">
+    <div class="stat"><b>~11,000+</b><span>global facilities with 1 MW+ capacity (2025)</span></div>
+    <div class="stat"><b>~485 TWh</b><span>global electricity use (2025, IEA) &mdash; ~2% of world total</span></div>
+    <div class="stat"><b>~945 TWh</b><span>projected by 2030 &mdash; could double in 5 years</span></div>
+  </div>
+  <p class="muted">From small server rooms to 300+ MW campuses. Growth is
+  driven largely by AI workloads.</p>
+</section>
+
+<section>
+  <h2>2. How are AI data centers different?</h2>
+  <div class="grid3">
+    <div class="card">
+      <h3>Power density</h3>
+      <p><strong style="color:var(--teal)">40&ndash;120 kW/rack</strong></p>
+      <p class="muted">vs 5&ndash;15 kW traditional &mdash; up to 10&times;
+      more power in the same space, and far more heat.</p>
+    </div>
+    <div class="card">
+      <h3>Cooling</h3>
+      <p><strong style="color:var(--teal)">Liquid-cooled</strong></p>
+      <p class="muted">Air can&rsquo;t keep up. Evaporative towers can consume
+      millions of gallons a day.</p>
+    </div>
+    <div class="card">
+      <h3>Grid draw</h3>
+      <p><strong style="color:var(--teal)">50&ndash;100 MW</strong></p>
+      <p class="muted">Per training cluster &mdash; the continuous load of a
+      small city.</p>
+    </div>
+  </div>
+  <div class="note info"><p><strong>In one sentence:</strong> a traditional
+  data center serves millions of small, quick requests; an AI data center
+  runs fewer, far heavier workloads that demand extreme power density and
+  advanced cooling.</p></div>
+  <details class="more"><summary>Read more &mdash; why the difference matters</summary>
+    <p>Traditional data centers run <strong>general workloads</strong> &mdash;
+    web hosting, email, databases, video streaming &mdash; on standard CPUs
+    drawing moderate power.</p>
+    <ul>
+      <li><strong>Power density:</strong> AI racks packed with GPUs like
+      NVIDIA&rsquo;s H100 or B200 draw <strong>40&ndash;120 kW per rack</strong>
+      vs 5&ndash;15 kW for traditional servers. AI facilities need vastly more
+      power per square foot and generate far more heat.</li>
+      <li><strong>Cooling:</strong> Standard air cooling can&rsquo;t handle GPU
+      heat loads, so AI facilities use <strong>liquid cooling</strong> (piping
+      coolant to chips) or rear-door heat exchangers. Some rely on evaporative
+      cooling towers that consume millions of gallons of water per day.</li>
+      <li><strong>Grid impact:</strong> When dozens of 50&ndash;100 MW clusters
+      concentrate in one region (Northern Virginia, Central Texas), they strain
+      the grid, drive up electricity rates, and require billions in new
+      transmission infrastructure.</li>
+    </ul>
+  </details>
+</section>
+
+<section>
+  <h2>3. What actually happens inside an AI data center?</h2>
+  <p>Two kinds of work with very different power profiles:
+  <strong>training</strong> (building the model &mdash; one massive,
+  months-long burn) and <strong>inference</strong> (using it &mdash; a smaller
+  but endless drip, billions of requests a day).</p>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Attribute</th><th>Training</th><th>Inference</th></tr>
+    <tr><td>Duration</td><td>Weeks&ndash;months (one-time)</td><td>Forever (24/7)</td></tr>
+    <tr><td>GPU usage</td><td>Thousands in lockstep</td><td>Spread across clusters</td></tr>
+    <tr><td>Power profile</td><td>Steady, flat, 24/7</td><td>Spiky, follows the clock</td></tr>
+    <tr><td>Total lifetime energy</td><td>~20&ndash;30%</td><td>~70&ndash;80%</td></tr>
+  </table>
+  </div>
+  <div class="note info"><p><strong>Rule of thumb:</strong> <em>Training</em>
+  is a one-time, massive, steady burst to build the model. <em>Inference</em>
+  is the endless drip of everyday use. Training gets the headlines; inference
+  quietly dominates the long-run footprint.</p></div>
+  <details class="more"><summary>Read more &mdash; training vs inference, in depth</summary>
+    <div class="grid2">
+      <div>
+        <h3>Training &mdash; <em>building</em> the model</h3>
+        <p>Engineers feed enormous datasets &mdash; much of the public internet,
+        books, code &mdash; and the model adjusts billions of internal parameters
+        until it can predict language well.</p>
+        <ul>
+          <li><strong>Runs once per model</strong>, but for <strong>weeks or
+          months</strong> without stopping.</li>
+          <li><strong>Thousands of GPUs in lockstep</strong> &mdash; a 50&ndash;
+          100+ MW cluster running flat-out, 24/7.</li>
+          <li>A near-constant, city-sized electrical load that&rsquo;s hard for
+          a grid to absorb.</li>
+          <li>A single frontier model can consume <strong>tens of
+          gigawatt-hours</strong> &mdash; as much electricity as thousands of
+          homes use in a year.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Inference &mdash; <em>using</em> the model</h3>
+        <p>Your prompt goes to a data center, runs through the trained model, and
+        a response comes back &mdash; usually in under a second.</p>
+        <ul>
+          <li><strong>Runs constantly, forever</strong> &mdash; every chat message
+          and search summary.</li>
+          <li>Each request is small, but there are <strong>billions per
+          day</strong> across all users.</li>
+          <li>Load is <strong>spiky and follows the clock</strong> &mdash; easier
+          to shift toward cleaner grid hours.</li>
+          <li>Over a model&rsquo;s lifetime, <strong>inference usually dwarfs
+          training</strong> in total energy.</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <h3>The full lifecycle, start to finish</h3>
+  {hbars([(s, e, t) for s, e, t in lifecycle_rows],
+         unit="/10", color="var(--amber)")}
+  <div class="grid3">
+    <div class="card"><p><strong>One-time burst:</strong> Training &amp;
+    retraining are the biggest single energy draws</p></div>
+    <div class="card"><p><strong>Never stops:</strong> Inference runs 24/7 for
+    the life of the model</p></div>
+    <div class="card"><p><strong>The cycle repeats:</strong> Each new model
+    generation starts the process over</p></div>
+  </div>
+  <p class="muted">This is why AI facilities come in two flavors:
+  <strong>training campuses</strong> built for massive, constant power, and
+  <strong>inference campuses</strong> placed close to users for low latency.
+  Some sites do both.</p>
+</section>
+
+<section>
+  <h2>4. Using the right model for the task</h2>
+  <p>A frontier model can use <strong>10&ndash;100&times; more energy per
+  response</strong> than a small one &mdash; and for most everyday tasks, the
+  small model answers just as well. Sending every request to the largest model
+  is like taking a semi-truck to pick up groceries.</p>
+  <div class="note info"><p><strong>The takeaway:</strong> the greenest AI
+  request is often the one that never touches a giant model. Right-sizing
+  &mdash; the <em>right</em> model, a <em>short</em> prompt, a <em>cached</em>
+  answer when possible &mdash; cuts energy dramatically with no visible drop
+  in quality.</p></div>
+  <details class="more"><summary>How teams right-size in practice</summary>
+    <ul>
+      <li><strong>Model routing</strong> &mdash; a lightweight system sends easy
+      questions to a small model and only escalates hard ones to a large
+      model.</li>
+      <li><strong>Distillation</strong> &mdash; training a small, cheap model to
+      mimic a big one for a specific task, keeping most of the quality at a
+      fraction of the cost.</li>
+      <li><strong>Caching &amp; retrieval</strong> &mdash; reusing past answers
+      or looking facts up in a database instead of re-running the model from
+      scratch.</li>
+      <li><strong>Shorter prompts &amp; outputs</strong> &mdash; energy scales
+      with tokens processed, so concise in-and-out means less compute.</li>
+    </ul>
+    <p>Small &ldquo;mini&rdquo; models already handle the bulk of real traffic
+    &mdash; classification, summarizing, autocomplete, simple Q&amp;A &mdash;
+    at a fraction of the energy. Large frontier models shine at hard reasoning
+    and complex code, but are overkill for routine requests.</p>
+  </details>
+</section>
+
+<section>
+  <h2>5. Inputs and outputs &mdash; what goes in, what comes out</h2>
+  <div class="grid2">
+    <div>
+      <h3>What goes IN</h3>
+      <div class="card" style="margin:8px 0"><p><strong>Electricity</strong> &mdash; 50&ndash;300+ MW</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Water</strong> &mdash; 1&ndash;5M gal/day</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Land</strong> &mdash; 50&ndash;500+ acres</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Fiber</strong> &mdash; Redundant paths</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Hardware</strong> &mdash; Refreshed every 3&ndash;5 yrs</p></div>
+    </div>
+    <div>
+      <h3>What comes OUT</h3>
+      <div class="card" style="margin:8px 0"><p><strong>Compute services</strong> &mdash; AI &amp; cloud (the product)</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Waste heat</strong> &mdash; Rarely recaptured in US</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Noise</strong> &mdash; 50&ndash;70+ dB at property line</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>CO&#8322; emissions</strong> &mdash; Varies by grid mix</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Jobs</strong> &mdash; 50&ndash;150 permanent</p></div>
+      <div class="card" style="margin:8px 0"><p><strong>Tax revenue</strong> &mdash; Often reduced by abatements</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>6. How can data centers be more efficient?</h2>
+  <p>The industry uses several strategies to reduce energy, water, and carbon
+  footprint. Not all operators adopt all of these &mdash; and the gap between
+  the best and worst performers is wide.</p>
+  <h3>PUE comparison</h3>
+  {hbars(pue_rows, unit=" PUE")}
+  <p class="muted">Lower is better. Every 0.1 improvement saves ~7&ndash;10%
+  total energy. Theoretical perfect PUE is 1.0 (impossible).</p>
+  <div class="stats">
+    <div class="stat"><b>1.55</b><span>industry avg PUE &mdash; best-in-class: 1.10</span></div>
+    <div class="stat"><b>12&ndash;18%</b><span>typical server utilization &mdash; could be 60%+</span></div>
+    <div class="stat"><b>30&ndash;50%</b><span>liquid cooling saves this much cooling energy</span></div>
+  </div>
+  <details class="more"><summary>The six efficiency levers, explained</summary>
+    <div class="grid2">
+      <div>
+        <h3>Power efficiency (PUE)</h3>
+        <p>Total facility energy &divide; IT equipment energy. 1.0 = perfect
+        (impossible); 1.1&ndash;1.2 = best-in-class (Google, Meta); industry
+        average &asymp; 1.55 (Uptime Institute, 2024). Every 0.1 reduction saves
+        ~7&ndash;10% of total energy.</p>
+        <h3>Liquid cooling</h3>
+        <p>Direct-to-chip cooling removes heat far more efficiently than air
+        &mdash; 30&ndash;50% less cooling energy, and increasingly required for
+        AI GPU racks drawing 60+ kW.</p>
+        <h3>Free cooling</h3>
+        <p>Cold-climate facilities (Nordics, Pacific Northwest, Ireland) use
+        outside air much of the year, drastically cutting water and chiller
+        energy.</p>
+      </div>
+      <div>
+        <h3>Renewable energy</h3>
+        <p>Leading operators sign PPAs for wind and solar. The gold standard is
+        <strong>24/7 Carbon-Free Energy</strong> &mdash; matching consumption
+        with clean energy hour-by-hour on the same grid, not just annually
+        through credits.</p>
+        <h3>Water efficiency (WUE)</h3>
+        <p>Liters of water per kWh of IT energy. 0.0 = air-cooled;
+        0.2&ndash;0.5 = efficient evaporative; 1.0&ndash;2.0 = heavy use.
+        Arid-region facilities are switching to closed-loop chillers that use
+        zero water at the cost of more energy.</p>
+        <h3>Compute efficiency</h3>
+        <p>The cheapest watt is the one you never draw: raise server utilization
+        (industry average is just 12&ndash;18%), optimize models (quantization
+        and distillation cut inference energy 2&ndash;10&times;), right-size
+        hardware, and schedule deferrable jobs into off-peak, high-renewable
+        hours.</p>
+      </div>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2>7. Where do companies build &mdash; and what do they look for?</h2>
+  <p>Site selection is driven by a specific checklist of requirements.
+  Understanding what companies prioritize explains why data centers cluster in
+  certain regions &mdash; and why some communities are targeted more than
+  others.</p>
+  <h3>Site-selection factors by importance</h3>
+  {hbars(site_rows, unit="/10", color="var(--amber)")}
+  <p class="muted">Power is king &mdash; everything else follows. Without
+  available grid capacity, no amount of tax incentives matters.</p>
+  <div class="note warn"><p><strong>What&rsquo;s often missing from this
+  checklist:</strong> community input, cumulative impact on local water and
+  power resources, noise standards, and long-term rate impacts on existing
+  ratepayers. These are the gaps this tracker aims to make visible.</p></div>
+  <div class="note info"><p><strong>Could they build in your town?</strong>
+  The <a href="{APP_URL}">full toolkit</a> includes a
+  <strong>Community Siting Evaluator</strong> &mdash; enter your town or
+  address to see how it scores on these 8 factors, with auto-populated data
+  from public sources.</p></div>
+</section>
+
+<section>
+  <h2>8. Key terms glossary</h2>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Term</th><th>Definition</th></tr>
+    {glossary_html}
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>What to do with this</h2>
+  <p>Now you know how these facilities work and what makes your community a
+  target. Next steps:</p>
+  <p>
+    <a class="btn" href="{APP_URL}">Start here &mdash; the 5-step wizard</a>
+    <a class="btn ghost" href="health-risks.html">The health risks, sourced</a>
+    <a class="btn ghost" href="bills.html">How this reaches your bill</a>
+  </p>
+  <p class="src">Sources: IEA <em>Energy and AI</em> (2025), Uptime Institute
+  Global Survey (2024), EPRI <em>Powering Intelligence</em> (2025), Google
+  Environmental Report (2024), US DOE Data Center Primer.</p>
+</section>
+"""
+    learn_ld = [
+        _breadcrumb(("Home", SITE_URL), ("Learn", f"{SITE_URL}/learn")),
+        _faq_schema(glossary_rows),
+    ]
+    return page(
+        "What is a data center? A plain-language guide",
+        "What goes in, what comes out, how AI data centers differ from "
+        "traditional ones, and what companies look for when choosing "
+        "where to build.",
+        body, f"{SITE_URL}/learn", jsonld=learn_ld)
+
+
+def build_puc():
+    """State PUC directory — ported from officials_tab.py.
+
+    The 51-commission table is fully static (STATE_PUCS_DF). The page adds
+    context on what PUCs do and how to intervene — the kind of explainer
+    content that belongs on the static site, not in the app.
+    """
+    n = len(STATE_PUCS_DF)
+
+    def _puc_complaint(v):
+        if has_value(v):
+            return f'<a href="{esc(v)}">file complaint</a>'
+        return "—"
+
+    rows = "\n".join(
+        f"<tr><td>{esc(r['state'])}</td><td>{esc(r['abbrev'])}</td>"
+        f"<td>{esc(r['name'])}</td>"
+        f'<td><a href="{esc(r["website"])}">website</a></td>'
+        f"<td>{_puc_complaint(r['complaint'])}</td>"
+        f"</tr>"
+        for _, r in STATE_PUCS_DF.iterrows())
+
+    body = f"""
+<header>
+  <div class="kicker">Directory</div>
+  <h1>Every state Public Utility Commission (PUC)</h1>
+  <p class="sub">PUCs approve rate cases, large-load tariffs, and
+  interconnection rules &mdash; they decide whether data center costs land on
+  residential bills. Every state has one. File a complaint or intervene in a
+  rate case to make your voice heard.</p>
+</header>
+
+{provenance_html("STATE_PUCS_DF")}
+
+<section>
+  <h2>What a PUC does &mdash; and why it matters to you</h2>
+  <div class="grid3">
+    <div class="card">
+      <h3>Rate cases</h3>
+      <p class="muted">When a utility wants to raise rates &mdash; often to pay
+      for grid upgrades driven by data center load &mdash; it files a rate case
+      with the PUC. You can intervene.</p>
+    </div>
+    <div class="card">
+      <h3>Large-load tariffs</h3>
+      <p class="muted">PUCs set the rules for how large industrial customers
+      like data centers connect to and pay for the grid. Custom tariffs can
+      shift costs to residential ratepayers.</p>
+    </div>
+    <div class="card">
+      <h3>Consumer complaints</h3>
+      <p class="muted">Filing a complaint puts your concerns on the public
+      record. PUCs are required to respond, and pattern complaints can trigger
+      investigations.</p>
+    </div>
+  </div>
+  <div class="note info"><p><strong>How to use this:</strong> When a data center
+  developer applies for a large-load interconnection or a utility files a rate
+  case to recover grid upgrade costs, you can intervene at your PUC. Filing a
+  consumer complaint puts your concerns on the record. See
+  <a href="bills.html">Your bill</a> for how wholesale costs flow to your
+  bill.</p></div>
+</section>
+
+<section>
+  <h2>All {n} commissions</h2>
+  <input type="text" id="puc-search" placeholder="Search by state name..."
+         autocomplete="off"
+         style="width:100%;max-width:400px;background:var(--card);color:var(--ink);
+         border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+         font-size:15px;margin-bottom:14px">
+  <div style="overflow-x:auto">
+  <table id="puc-table">
+    <tr><th>State</th><th>Abbrev</th><th>Commission</th><th>Website</th>
+    <th>File complaint</th></tr>
+    {rows}
+  </table>
+  </div>
+  <p class="muted" id="puc-count">{n} commissions</p>
+  <p class="muted">URLs are official state PUC pages. Complaint links open the
+  consumer-assistance or formal-complaint portal &mdash; procedures vary by
+  state. Nebraska (public power state) has a Power Review Board with no
+  separate consumer-complaint portal. Texas (PUCT) has deregulated retail but
+  still regulates transmission and distribution rates.</p>
+</section>
+
+<section>
+  <h2>What to do next</h2>
+  <p>
+    <a class="btn" href="{APP_URL}">Open the toolkit &mdash; meeting prep &amp; CBA templates</a>
+    <a class="btn ghost" href="bills.html">How data center costs reach your bill</a>
+    <a class="btn ghost" href="states/index.html">Your state briefing</a>
+  </p>
+</section>
+
+<script>
+(function() {{
+  var q = document.getElementById('puc-search');
+  var table = document.getElementById('puc-table');
+  var ct = document.getElementById('puc-count');
+  var rows = Array.from(table.querySelectorAll('tr')).slice(1);
+  q.addEventListener('input', function() {{
+    var s = q.value.toLowerCase();
+    var n = 0;
+    rows.forEach(function(r) {{
+      var show = !s || r.textContent.toLowerCase().indexOf(s) >= 0;
+      r.style.display = show ? '' : 'none';
+      if (show) n++;
+    }});
+    ct.textContent = n + ' commission' + (n === 1 ? '' : 's');
+  }});
+}})();
+</script>
+"""
+    return page(
+        "State PUC directory — every Public Utility Commission",
+        "All 51 state Public Utility Commissions with official websites "
+        "and complaint portals. File a complaint or intervene when data "
+        "center costs hit your electric bill.",
+        body, f"{SITE_URL}/puc",
+        jsonld=_breadcrumb(("Home", SITE_URL), ("PUC directory", f"{SITE_URL}/puc")))
+
+
+def build_executives():
+    """Executives directory + megaprojects — ported from dc_tab.py.
+
+    Both tables are pure constants data. The executives table includes
+    verification status from EXEC_VERIFIED. Megaprojects is the top-10
+    leaderboard.
+    """
+    n_exec = len(EXECUTIVES_DF)
+    n_companies = EXECUTIVES_DF["company"].nunique()
+    n_verified = int(EXECUTIVES_DF["verified"].apply(
+        lambda v: has_value(v)).sum())
+    n_mega = len(MEGA_PROJECTS_DF)
+
+    cat_labels = {"leadership": "Leadership", "infrastructure": "Infrastructure",
+                  "sustainability": "Sustainability", "policy": "Policy"}
+
+    def _link_or_dash(url, text):
+        if has_value(url):
+            return f'<a href="{esc(url)}">{text}</a>'
+        return "—"
+
+    def _exec_row(r):
+        status = ("&#9989; " + esc(str(r["verified"]))
+                  if has_value(r["verified"]) else "&#9888;&#65039; Unverified")
+        return (f"<tr><td>{esc(r['company'])}</td><td>{esc(r['name'])}</td>"
+                f"<td>{esc(r['title'])}</td>"
+                f"<td>{esc(cat_labels.get(r['category'], r['category']))}</td>"
+                f"<td>{status}</td>"
+                f"<td>{_link_or_dash(r['verified_source'], 'source')}</td>"
+                f"<td>{_link_or_dash(r['linkedin'], 'search')}</td>"
+                f"</tr>")
+
+    exec_rows = "\n".join(_exec_row(r) for _, r in EXECUTIVES_DF.iterrows())
+
+    mega_rows = "\n".join(
+        f"<tr><td>{esc(r.project)}</td><td>{esc(r.company)}</td>"
+        f"<td>{esc(r.location)}</td><td>{esc(r.invest)}</td>"
+        f"<td>{esc(r.capacity)}</td><td>{esc(r.status)}</td></tr>"
+        for r in MEGA_PROJECTS_DF.itertuples())
+
+    # Operators table
+    tier_labels = {"hyperscaler": "Hyperscaler", "ai": "AI / neocloud",
+                   "colo": "Colocation / wholesale REIT"}
+    op_rows = "\n".join(
+        f"<tr><td>{esc(r.operator)}</td><td>{esc(tier_labels.get(r.tier, r.tier))}</td>"
+        f"<td>{esc(str(r.owner))}</td><td>{esc(r.model)}</td>"
+        f"<td>{cell(r.filing_llc)}</td></tr>"
+        for r in OPERATORS_DF.itertuples())
+
+    body = f"""
+<header>
+  <div class="kicker">Directory</div>
+  <h1>Data center operators, executives &amp; megaprojects</h1>
+  <p class="sub">Who builds them, who runs them, and the biggest projects under
+  construction &mdash; the people and companies behind the campuses in your
+  community.</p>
+</header>
+
+<section>
+  <h2>Operators &amp; owners</h2>
+  <p>A campus has up to three separate parties &mdash; the operator (who runs
+  it), the owner (often a PE fund), and the tenant (who actually consumes the
+  power). Land is bought through single-purpose <strong>shell LLCs</strong>,
+  the join key back to county deed records.</p>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Operator</th><th>Category</th><th>Owner / PE parent</th>
+    <th>Model</th><th>Filing LLCs</th></tr>
+    {op_rows}
+  </table>
+  </div>
+  <p class="muted">Resolving a shell LLC &rarr; operator: county assessor / GIS
+  parcel &rarr; grantee LLC on the deed &rarr; state Secretary-of-State business
+  database &rarr; registered agent &amp; principals.</p>
+</section>
+
+<section>
+  <h2>Key executives</h2>
+  <p>CEO and data-center leadership at every tracked operator and mega-project
+  sponsor. {n_exec} executives across {n_companies} companies &mdash;
+  <strong>{n_verified} verified</strong> against the company&rsquo;s own
+  leadership page, <strong>{n_exec - n_verified} unverified</strong>.</p>
+  {provenance_html("EXECUTIVES_DF")}
+  <input type="text" id="exec-search" placeholder="Search by name or company..."
+         autocomplete="off"
+         style="width:100%;max-width:400px;background:var(--card);color:var(--ink);
+         border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+         font-size:15px;margin-bottom:14px">
+  <div style="overflow-x:auto">
+  <table id="exec-table">
+    <tr><th>Company</th><th>Name</th><th>Title</th><th>Category</th>
+    <th>Status</th><th>Checked against</th><th>LinkedIn</th></tr>
+    {exec_rows}
+  </table>
+  </div>
+  <p class="muted" id="exec-count">{n_exec} executives</p>
+  <div class="note warn"><p>Unverified rows are mostly VP- and director-level
+  people who appear on no public leadership page; treat their titles as a lead
+  to confirm, not a fact. LinkedIn links are search URLs &mdash; check the
+  profile matches before connecting.</p></div>
+</section>
+
+<section>
+  <h2>Megaprojects under construction</h2>
+  <p>Top {n_mega} individual megaprojects ranked by announced investment &mdash;
+  hundreds of billions in committed capital and tens of GW of new AI compute
+  capacity.</p>
+  {provenance_html("MEGA_PROJECTS_DF")}
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Project</th><th>Company</th><th>Location</th><th>Investment</th>
+    <th>Power capacity</th><th>Status</th></tr>
+    {mega_rows}
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>What to do with this</h2>
+  <p>Know who you&rsquo;re negotiating with. These are the decision-makers and
+  the projects driving the build-out.</p>
+  <p>
+    <a class="btn" href="{APP_URL}">Open the toolkit &mdash; meeting prep generator</a>
+    <a class="btn ghost" href="companies/index.html">Company environmental scorecards</a>
+    <a class="btn ghost" href="moratoriums.html">Moratorium tracker</a>
+  </p>
+</section>
+
+<script>
+(function() {{
+  var q = document.getElementById('exec-search');
+  var table = document.getElementById('exec-table');
+  var ct = document.getElementById('exec-count');
+  var rows = Array.from(table.querySelectorAll('tr')).slice(1);
+  q.addEventListener('input', function() {{
+    var s = q.value.toLowerCase();
+    var n = 0;
+    rows.forEach(function(r) {{
+      var show = !s || r.textContent.toLowerCase().indexOf(s) >= 0;
+      r.style.display = show ? '' : 'none';
+      if (show) n++;
+    }});
+    ct.textContent = n + ' executive' + (n === 1 ? '' : 's');
+  }});
+}})();
+</script>
+"""
+    return page(
+        "Data center operators, executives & megaprojects",
+        "Who builds, owns, and runs US data centers — operator registry, "
+        "executive directory with verification status, and the largest "
+        "projects under construction.",
+        body, f"{SITE_URL}/executives",
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Executives", f"{SITE_URL}/executives")))
 
 
 def build_moratoriums():
@@ -1517,7 +2253,8 @@ def build_moratoriums():
         "Data center moratoriums & community pushback — AI GridWatch",
         f"{total} data center moratoriums and community actions tracked "
         f"across {n_states} states, with case study outcomes.",
-        body, f"{SITE_URL}/moratoriums")
+        body, f"{SITE_URL}/moratoriums",
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Moratoriums", f"{SITE_URL}/moratoriums")))
 
 
 _HYPERSCALERS = [
@@ -1878,7 +2615,8 @@ def build_scorecards_index():
         "Corporate environmental scorecards — AI GridWatch",
         "Environmental data for 14 data center companies: hyperscalers, "
         "operators, and developers — side by side.",
-        body, f"{SITE_URL}/companies/", depth=1)
+        body, f"{SITE_URL}/companies/", depth=1,
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Companies", f"{SITE_URL}/companies/")))
 
 
 def build_scorecard(h):
@@ -1946,7 +2684,8 @@ def build_scorecard(h):
         f"{h['name']} environmental scorecard — AI GridWatch",
         f"Environmental data for {h['name']}: {h['twh']} TWh, PUE "
         f"{h['pue']}, water and carbon metrics from {h['report']}.",
-        body, f"{SITE_URL}/companies/{h['slug']}", depth=1)
+        body, f"{SITE_URL}/companies/{h['slug']}", depth=1,
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Companies", f"{SITE_URL}/companies/"), (h["name"], f"{SITE_URL}/companies/{h['slug']}")))
 
 
 def build_operator_scorecard(h):
@@ -2030,7 +2769,8 @@ def build_operator_scorecard(h):
         f"{h['name']} environmental scorecard — AI GridWatch",
         f"Environmental data for {h['name']}: {desc_detail}, "
         f"carbon and water metrics from {h['report']}.",
-        body, f"{SITE_URL}/companies/{h['slug']}", depth=1)
+        body, f"{SITE_URL}/companies/{h['slug']}", depth=1,
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Companies", f"{SITE_URL}/companies/"), (h["name"], f"{SITE_URL}/companies/{h['slug']}")))
 
 
 def build_limited_scorecard(ld):
@@ -2085,7 +2825,8 @@ def build_limited_scorecard(ld):
         f"{ld['name']} — AI GridWatch",
         f"{ld['name']}: {ld.get('scale', '')} — disclosure level: "
         f"{ld['disclosure']}.",
-        body, f"{SITE_URL}/companies/{ld['slug']}", depth=1)
+        body, f"{SITE_URL}/companies/{ld['slug']}", depth=1,
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Companies", f"{SITE_URL}/companies/"), (ld["name"], f"{SITE_URL}/companies/{ld['slug']}")))
 
 
 def build_rss():
@@ -2136,7 +2877,8 @@ def build_about():
     return page(
         "About — AI GridWatch",
         ABOUT_SECTION["tagline"],
-        body, f"{SITE_URL}/about")
+        body, f"{SITE_URL}/about",
+        jsonld=_breadcrumb(("Home", SITE_URL), ("About", f"{SITE_URL}/about")))
 
 
 def build_search():
@@ -2149,13 +2891,12 @@ def build_search():
     for _, r in OPERATORS_DF.iterrows():
         index.append({"t": r["operator"], "k": "operator",
                        "d": f"{r['tier']} · {r['model']}",
-                       "u": f"search.html"})
+                       "u": "executives.html"})
     for _, r in EXECUTIVES_DF.iterrows():
-        # Don't present an unconfirmed title as fact in search results.
         suffix = "" if has_value(r["verified"]) else " · unverified"
         index.append({"t": r["name"], "k": "executive",
                        "d": f"{r['company']} · {r['title']}{suffix}",
-                       "u": f"search.html"})
+                       "u": "executives.html"})
     for _, r in DC_SITES_DF.iterrows():
         loc = str(r.get("location", ""))
         st = str(r.get("state", ""))
@@ -2238,7 +2979,8 @@ def build_search():
         "Search — AI GridWatch",
         "Search data center moratoriums, operators, executives, sites, and "
         "state briefings.",
-        body, f"{SITE_URL}/search")
+        body, f"{SITE_URL}/search",
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Search", f"{SITE_URL}/search")))
 
 
 def build_data_dividend():
@@ -2357,7 +3099,8 @@ def build_data_dividend():
         "Data dividend calculator — AI GridWatch",
         "Estimate the CBA target, tax revenue, and per-household benefit "
         "your community should negotiate from a data center.",
-        body, f"{SITE_URL}/dividend")
+        body, f"{SITE_URL}/dividend",
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Dividend calculator", f"{SITE_URL}/dividend")))
 
 
 def build_sitemap(paths):
@@ -2385,6 +3128,9 @@ def main():
     (WEB / "impact.html").write_text(build_impact_calculator(), encoding="utf-8")
     (WEB / "bills.html").write_text(build_bills(), encoding="utf-8")
     (WEB / "outlook.html").write_text(build_outlook(), encoding="utf-8")
+    (WEB / "learn.html").write_text(build_learn(), encoding="utf-8")
+    (WEB / "puc.html").write_text(build_puc(), encoding="utf-8")
+    (WEB / "executives.html").write_text(build_executives(), encoding="utf-8")
     (WEB / "about.html").write_text(build_about(), encoding="utf-8")
     (WEB / "search.html").write_text(build_search(), encoding="utf-8")
     (WEB / "dividend.html").write_text(build_data_dividend(), encoding="utf-8")
@@ -2414,8 +3160,9 @@ def main():
         (WEB / "companies" / f"{ld['slug']}.html").write_text(
             build_limited_scorecard(ld), encoding="utf-8")
 
-    paths = ["", "health-risks", "moratoriums", "impact", "bills", "outlook", "about",
-             "search", "dividend", "companies/", "states/", "blog/"]
+    paths = ["", "health-risks", "moratoriums", "impact", "bills", "outlook",
+             "learn", "puc", "executives", "about", "search", "dividend",
+             "companies/", "states/", "blog/"]
     paths.extend(f"companies/{h['slug']}" for h in _HYPERSCALERS)
     paths.extend(f"companies/{h['slug']}" for h in _OPERATORS)
     paths.extend(f"companies/{ld['slug']}" for ld in _LIMITED_DISCLOSURE)

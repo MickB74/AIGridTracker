@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data center operators, executives &amp; megaprojects</title>
+<meta name="description" content="Who builds, owns, and runs US data centers — operator registry, executive directory with verification status, and the largest projects under construction.">
+<link rel="canonical" href="https://aigridwatch.com/executives">
+<link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
+      href="https://aigridwatch.com/blog/feed.xml">
+<meta property="og:title" content="Data center operators, executives &amp; megaprojects">
+<meta property="og:description" content="Who builds, owns, and runs US data centers — operator registry, executive directory with verification status, and the largest projects under construction.">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Executives", "item": "https://aigridwatch.com/executives"}]}</script>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<style>
+:root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
+        --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
+* { box-sizing:border-box; margin:0; }
+body { background:var(--bg); color:var(--ink);
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.wrap { max-width:900px; margin:0 auto; padding:20px 20px 64px; }
+nav { display:flex; align-items:center; gap:14px; padding:14px 0;
+      border-bottom:1px solid var(--rule); flex-wrap:wrap; }
+nav img { height:34px; }
+nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+nav a:hover { color:var(--teal); }
+nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
+           font-weight:700; padding:8px 16px; border-radius:8px; }
+header { padding:44px 0 10px; }
+.kicker { color:var(--teal); font-weight:700; letter-spacing:.12em;
+          text-transform:uppercase; font-size:13px; }
+h1 { font-size:clamp(28px,5vw,44px); line-height:1.12; margin:10px 0; }
+.sub { color:var(--muted); max-width:640px; }
+.stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+         margin:30px 0; }
+@media (min-width:640px){ .stats{ grid-template-columns:repeat(4,1fr);} }
+.stat { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:16px; }
+.stat b { display:block; font-size:24px; color:var(--teal); }
+.stat span { font-size:13px; color:var(--muted); }
+section { margin:34px 0; }
+h2 { font-size:20px; color:var(--teal); margin-bottom:12px;
+     border-bottom:1px solid var(--rule); padding-bottom:8px; }
+ul { padding-left:22px; } li { margin:9px 0; }
+a { color:var(--teal); }
+.btn { display:inline-block; background:var(--teal); color:#06251f;
+       font-weight:700; padding:12px 22px; border-radius:10px;
+       text-decoration:none; margin:8px 8px 0 0; }
+.btn.ghost { background:transparent; color:var(--teal);
+             border:1px solid var(--teal); }
+.muted { color:var(--muted); font-size:14px; }
+.grid3 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid3{ grid-template-columns:repeat(3,1fr);} }
+.card { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:18px; }
+.card h3 { margin-bottom:6px; font-size:16px; }
+.panel { border-radius:14px; padding:18px; color:#fff; }
+.panel h3 { margin-bottom:8px; }
+.panel p { font-size:14px; color:rgba(255,255,255,.85); }
+.ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
+       border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
+.src { font-size:12.5px; color:var(--muted); }
+.freshness { border-left:3px solid var(--rule); padding:10px 14px;
+  margin:14px 0; background:rgba(255,255,255,.02); border-radius:0 8px 8px 0;
+  font-size:13.5px; }
+.freshness.stale { border-left-color:var(--amber);
+  background:rgba(251,191,36,.07); }
+.freshness p { margin:0; }
+.note { border-left:3px solid var(--rule); padding:12px 16px; margin:18px 0;
+  border-radius:0 8px 8px 0; font-size:14.5px; line-height:1.55; }
+.note.info { border-left-color:var(--teal); background:rgba(45,212,191,.07); }
+.note.warn { border-left-color:var(--amber); background:rgba(251,191,36,.07); }
+.note.bad  { border-left-color:#ef4444; background:rgba(239,68,68,.08); }
+.note.good { border-left-color:#34d399; background:rgba(52,211,153,.07); }
+.note p { margin:0; }
+details.more { border:1px solid var(--rule); border-radius:10px;
+  padding:0 16px; margin:16px 0; background:rgba(255,255,255,.02); }
+details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
+  color:var(--teal); font-size:14.5px; }
+details.more[open] { padding-bottom:10px; }
+.billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
+  margin:20px 0 12px; }
+.billbar > div { display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:14px; }
+.barkey { display:flex; flex-wrap:wrap; gap:14px; font-size:13px;
+  color:var(--muted); }
+.barkey span { display:flex; align-items:center; gap:6px; }
+.barkey i { width:12px; height:12px; border-radius:3px; }
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px; margin:18px 0; }
+.flow .step { border:1px solid var(--rule); border-radius:10px; padding:12px 14px;
+  background:rgba(255,255,255,.02); font-size:14px; }
+.flow .step b { display:block; margin-bottom:4px; }
+.flow .step.end { border-color:#ef4444; background:rgba(239,68,68,.08); }
+.hbars { margin:18px 0; display:flex; flex-direction:column; gap:8px; }
+.hbar-row { display:grid; grid-template-columns:minmax(90px,1.1fr) 2.4fr
+  minmax(90px,1.3fr); gap:10px; align-items:center; font-size:13.5px; }
+.hbar-label { color:var(--ink); }
+.hbar-track { background:rgba(255,255,255,.06); border-radius:5px; height:16px; }
+.hbar-fill { height:16px; border-radius:5px; }
+.hbar-val { color:var(--muted); font-variant-numeric:tabular-nums; }
+@media (max-width:640px) {
+  .hbar-row { grid-template-columns:1fr; gap:2px; }
+  .hbar-track { height:12px; }
+}
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+th { color:var(--muted); font-weight:600; }
+footer { margin-top:48px; border-top:1px solid var(--rule);
+         padding-top:16px; font-size:13px; color:var(--muted); }
+.statelist { columns:2; font-size:14.5px; }
+@media (min-width:640px){ .statelist{ columns:4; } }
+.statelist a { display:block; padding:3px 0; text-decoration:none; }
+.us-map { max-width:100%; height:auto; margin:20px auto; display:block; }
+.us-map path { fill:var(--card); stroke:var(--rule); stroke-width:.6;
+               cursor:pointer; transition:fill .15s; }
+.us-map path:hover { fill:var(--teal); }
+.us-map text { fill:var(--muted); font-size:7px; pointer-events:none;
+               text-anchor:middle; font-weight:600;
+               font-family:system-ui,-apple-system,sans-serif; }
+.us-map path:hover + text, .us-map path:hover ~ text { fill:var(--bg); }
+.map-tooltip { position:fixed; background:var(--card); border:1px solid var(--teal);
+               border-radius:8px; padding:6px 12px; font-size:13px;
+               color:var(--ink); pointer-events:none; z-index:999;
+               display:none; white-space:nowrap; }
+.post-meta { color:var(--muted); font-size:14px; margin:8px 0 6px; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 20px; }
+.tag { background:var(--card); border:1px solid var(--rule);
+       border-radius:20px; padding:3px 11px; font-size:12px;
+       color:var(--muted); }
+.prose h3 { font-size:17px; color:var(--teal); margin:24px 0 8px; }
+.prose p { margin:10px 0; }
+.prose blockquote { border-left:3px solid var(--teal); margin:16px 0;
+                    padding:6px 16px; color:var(--muted); }
+.prose table { margin:16px 0; }
+.prose ul, .prose ol { margin:10px 0; }
+.prose hr { border:none; border-top:1px solid var(--rule); margin:24px 0; }
+.post-nav { display:flex; justify-content:space-between; gap:14px;
+            margin:32px 0 0; padding:18px 0 0;
+            border-top:1px solid var(--rule); font-size:14px; }
+.post-nav a { max-width:45%; }
+.post-nav .dir { color:var(--muted); font-size:12px; display:block; }
+.blog-list { list-style:none; padding:0; }
+.blog-list li { border-bottom:1px solid var(--rule); padding:18px 0; }
+.blog-list li:last-child { border-bottom:none; }
+.blog-list h3 { font-size:17px; margin:0 0 4px; }
+.blog-list h3 a { text-decoration:none; }
+.blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
+.badge { display:inline-block; font-size:12px; font-weight:700;
+         padding:2px 9px; border-radius:6px; }
+.badge-enacted { background:#065f46; color:#6ee7b7; }
+.badge-proposed { background:#713f12; color:#fde68a; }
+.badge-rejected { background:#7f1d1d; color:#fca5a5; }
+.badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.outcome { border-left:3px solid var(--teal); padding:10px 14px;
+           margin:10px 0; }
+.outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
+                text-transform:uppercase; letter-spacing:.08em; }
+.grid2 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
+.official { font-size:14px; }
+.official .role { color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="index.html"><img src="assets/logo.svg" alt="AI GridWatch"></a>
+  <a href="index.html">Home</a>
+  <a href="states/index.html">Your state</a>
+  <a href="health-risks.html">Health risks</a>
+  <a href="moratoriums.html">Moratoriums</a>
+  <a href="impact.html">Calculator</a>
+  <a href="bills.html">Your bill</a>
+  <a href="outlook.html">Outlook</a>
+  <a href="learn.html">Learn</a>
+  <a href="puc.html">PUCs</a>
+  <a href="companies/index.html">Companies</a>
+  <a href="blog/index.html">Blog</a>
+  <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
+</nav>
+
+<header>
+  <div class="kicker">Directory</div>
+  <h1>Data center operators, executives &amp; megaprojects</h1>
+  <p class="sub">Who builds them, who runs them, and the biggest projects under
+  construction &mdash; the people and companies behind the campuses in your
+  community.</p>
+</header>
+
+<section>
+  <h2>Operators &amp; owners</h2>
+  <p>A campus has up to three separate parties &mdash; the operator (who runs
+  it), the owner (often a PE fund), and the tenant (who actually consumes the
+  power). Land is bought through single-purpose <strong>shell LLCs</strong>,
+  the join key back to county deed records.</p>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Operator</th><th>Category</th><th>Owner / PE parent</th>
+    <th>Model</th><th>Filing LLCs</th></tr>
+    <tr><td>Google</td><td>Hyperscaler</td><td>Public (Alphabet, NASDAQ: GOOGL)</td><td>Own</td><td>Land-acquisition shells: Jet Stream LLC, Sharka LLC</td></tr>
+<tr><td>Meta</td><td>Hyperscaler</td><td>Public (NASDAQ: META)</td><td>Own</td><td>Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain</td></tr>
+<tr><td>Microsoft</td><td>Hyperscaler</td><td>Public (NASDAQ: MSFT)</td><td>Mixed</td><td>Project-name / generic &#x27;Holdings LLC&#x27;; less consistently codenamed</td></tr>
+<tr><td>Amazon (AWS)</td><td>Hyperscaler</td><td>Public (NASDAQ: AMZN)</td><td>Own</td><td>Vadata, Inc. — AWS&#x27;s build/operating entity on many permits</td></tr>
+<tr><td>xAI (Colossus)</td><td>AI / neocloud</td><td>Private (xAI)</td><td>Mixed</td><td>Site/retrofit LLCs (e.g. former Electrolux plant, Memphis)</td></tr>
+<tr><td>OpenAI · Oracle (Stargate)</td><td>AI / neocloud</td><td>JV: OpenAI · Oracle · SoftBank; sites developed by Oracle/Crusoe/Vantage</td><td>Mixed</td><td>Per-site developer LLCs (Crusoe/Lancium at Abilene, etc.)</td></tr>
+<tr><td>CoreWeave</td><td>AI / neocloud</td><td>Public (NASDAQ: CRWV, IPO Mar 2025)</td><td>Lease</td><td>Mostly TENANT in partners&#x27; buildings: Core Scientific, Chirisa/Bulk, Flexential, Lincoln, TierPoint, Digital Realty, DataBank, Switch, Galaxy, Applied Digital</td></tr>
+<tr><td>Digital Realty</td><td>Colocation / wholesale REIT</td><td>Public REIT (NYSE: DLR)</td><td>Mixed</td><td>&#x27;Digital [City]/[Address] LLC&#x27;; legacy Telx entities; Ascenty (LatAm)</td></tr>
+<tr><td>QTS</td><td>Colocation / wholesale REIT</td><td>Blackstone take-private ~$10B, closed 2021</td><td>Own</td><td>&#x27;QTS ... LLC&#x27; + Blackstone holding entities; early generic project LLCs</td></tr>
+<tr><td>Vantage</td><td>Colocation / wholesale REIT</td><td>$9.2B equity round closed Jun 2024</td><td>Own</td><td>Per-campus &#x27;Vantage ... LLC&#x27; site entities</td></tr>
+<tr><td>CyrusOne</td><td>Colocation / wholesale REIT</td><td>~$15B take-private, closed 2022</td><td>Own</td><td>&#x27;CyrusOne LLC&#x27; subsidiaries</td></tr>
+<tr><td>Aligned</td><td>Colocation / wholesale REIT</td><td>~$40B acquisition announced Oct 2025, close H1 2026 (press)</td><td>Own</td><td>Per-site LLCs</td></tr>
+<tr><td>Switch</td><td>Colocation / wholesale REIT</td><td>~$11B EV take-private, closed 2022</td><td>Own</td><td>&#x27;Switch ... LLC&#x27;; campuses branded &#x27;Primes&#x27;</td></tr>
+<tr><td>Stack Infrastructure</td><td>Colocation / wholesale REIT</td><td>Blue Owl acquired IPI Partners, 2025</td><td>Own</td><td>Per-site LLCs</td></tr>
+<tr><td>EdgeConneX</td><td>Colocation / wholesale REIT</td><td>EQT-backed</td><td>Own</td><td>Per-site LLCs</td></tr>
+<tr><td>Equinix</td><td>Colocation / wholesale REIT</td><td>Public REIT (NASDAQ: EQIX)</td><td>Mixed</td><td>IBX-branded site entities</td></tr>
+<tr><td>Core Scientific</td><td>Colocation / wholesale REIT</td><td>Public (NASDAQ: CORZ); CoreWeave acquisition proposed Jul 2025 — outcome uncertain, verify</td><td>Own</td><td>Site LLCs; ~10 US facilities (~840 MW HPC + ~500 MW crypto; ~1.3 GW gross)</td></tr>
+  </table>
+  </div>
+  <p class="muted">Resolving a shell LLC &rarr; operator: county assessor / GIS
+  parcel &rarr; grantee LLC on the deed &rarr; state Secretary-of-State business
+  database &rarr; registered agent &amp; principals.</p>
+</section>
+
+<section>
+  <h2>Key executives</h2>
+  <p>CEO and data-center leadership at every tracked operator and mega-project
+  sponsor. 43 executives across 17 companies &mdash;
+  <strong>24 verified</strong> against the company&rsquo;s own
+  leadership page, <strong>19 unverified</strong>.</p>
+  <div class="freshness"><p><strong>As of July 2026 · changes weekly — re-check before citing</strong></p><p class="muted" style="margin:6px 0 0">Only some rows are verified. Every row marked Verified was read off that company&#x27;s own leadership page on the date shown, and links to it. Rows marked Unverified are mostly VP- and director-level people: no company publishes a page listing them, so there is no first-party source to check them against, and their titles may be a year or more out of date. Confirm any name before you put it in a letter or read it out at a hearing. The July 2026 sweep found five people whose entries were wrong, including one who had changed companies.</p></div>
+  <input type="text" id="exec-search" placeholder="Search by name or company..."
+         autocomplete="off"
+         style="width:100%;max-width:400px;background:var(--card);color:var(--ink);
+         border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+         font-size:15px;margin-bottom:14px">
+  <div style="overflow-x:auto">
+  <table id="exec-table">
+    <tr><th>Company</th><th>Name</th><th>Title</th><th>Category</th>
+    <th>Status</th><th>Checked against</th><th>LinkedIn</th></tr>
+    <tr><td>Google</td><td>Sundar Pichai</td><td>CEO, Alphabet / Google</td><td>Leadership</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Sundar+Pichai+Alphabet">search</a></td></tr>
+<tr><td>Google</td><td>Ruth Porat</td><td>President &amp; CIO, Alphabet</td><td>Leadership</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Ruth+Porat+Alphabet">search</a></td></tr>
+<tr><td>Google</td><td>Joe Kava</td><td>VP, Global Data Centers</td><td>Infrastructure</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Joe+Kava+Google">search</a></td></tr>
+<tr><td>Google</td><td>Kate Brandt</td><td>Chief Sustainability Officer</td><td>Sustainability</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Kate+Brandt+Google">search</a></td></tr>
+<tr><td>Google</td><td>Michael Terrell</td><td>Senior Director, Energy &amp; Climate</td><td>Sustainability</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Terrell+Google">search</a></td></tr>
+<tr><td>Google</td><td>Ben Townsend</td><td>Global Head, Infrastructure Planning &amp; Water Policy</td><td>Infrastructure</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Ben+Townsend+Google">search</a></td></tr>
+<tr><td>Meta</td><td>Mark Zuckerberg</td><td>CEO</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://www.meta.com/media-gallery/executives/">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Mark+Zuckerberg+Meta">search</a></td></tr>
+<tr><td>Meta</td><td>Susan Li</td><td>CFO</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://www.meta.com/media-gallery/executives/">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Susan+Li+Meta">search</a></td></tr>
+<tr><td>Meta</td><td>Rachel Peterson</td><td>VP, Data Centers</td><td>Infrastructure</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Rachel+Peterson+Meta">search</a></td></tr>
+<tr><td>Meta</td><td>Urvi Parekh</td><td>Head of Renewable Energy</td><td>Sustainability</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Urvi+Parekh+Meta">search</a></td></tr>
+<tr><td>Meta</td><td>Blair Anderson</td><td>Director, State &amp; Local Public Policy</td><td>Policy</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Blair+Anderson+Meta">search</a></td></tr>
+<tr><td>Microsoft</td><td>Satya Nadella</td><td>Chairman &amp; CEO</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://news.microsoft.com/leadership/">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Satya+Nadella+Microsoft">search</a></td></tr>
+<tr><td>Microsoft</td><td>Noelle Walsh</td><td>CVP, Cloud Operations &amp; Innovation</td><td>Infrastructure</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Noelle+Walsh+Microsoft">search</a></td></tr>
+<tr><td>Microsoft</td><td>Melanie Nakagawa</td><td>Chief Sustainability Officer</td><td>Sustainability</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Melanie+Nakagawa+Microsoft">search</a></td></tr>
+<tr><td>Amazon (AWS)</td><td>Andy Jassy</td><td>CEO, Amazon</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://www.aboutamazon.com/news/workplace/amazon-s-team-members">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Andy+Jassy+Amazon">search</a></td></tr>
+<tr><td>Amazon (AWS)</td><td>Matt Garman</td><td>CEO, AWS</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://www.aboutamazon.com/news/workplace/amazon-s-team-members">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Matt+Garman+AWS">search</a></td></tr>
+<tr><td>Amazon (AWS)</td><td>Kevin Miller</td><td>VP, Global Data Centers</td><td>Infrastructure</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Kevin+Miller+AWS">search</a></td></tr>
+<tr><td>Amazon (AWS)</td><td>Chris Roe</td><td>Director, Energy &amp; Sustainable Operations</td><td>Sustainability</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Roe+AWS">search</a></td></tr>
+<tr><td>Amazon (AWS)</td><td>Jenna Leiner</td><td>Lead, Water Sustainability</td><td>Sustainability</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Jenna+Leiner+AWS">search</a></td></tr>
+<tr><td>xAI (Colossus)</td><td>Elon Musk</td><td>CEO, xAI</td><td>Leadership</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Elon+Musk+xAI">search</a></td></tr>
+<tr><td>OpenAI · Oracle (Stargate)</td><td>Sam Altman</td><td>CEO, OpenAI</td><td>Leadership</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Sam+Altman+OpenAI">search</a></td></tr>
+<tr><td>OpenAI · Oracle (Stargate)</td><td>Larry Ellison</td><td>CTO &amp; Chairman, Oracle</td><td>Leadership</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Larry+Ellison+Oracle">search</a></td></tr>
+<tr><td>OpenAI · Oracle (Stargate)</td><td>Masayoshi Son</td><td>CEO, SoftBank Group</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://group.softbank/en/about/officer">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Masayoshi+Son+SoftBank">search</a></td></tr>
+<tr><td>CoreWeave</td><td>Michael Intrator</td><td>CEO &amp; Co-founder</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://www.coreweave.com/leadership/mike-intrator">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Intrator+CoreWeave">search</a></td></tr>
+<tr><td>CoreWeave</td><td>Brian Venturo</td><td>Chief Strategy Officer &amp; Co-founder</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://www.coreweave.com/leadership/brian-venturo">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Brian+Venturo+CoreWeave">search</a></td></tr>
+<tr><td>Digital Realty</td><td>Andy Power</td><td>President &amp; CEO</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://www.digitalrealty.com/about/leadership">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Andy+Power+Digital+Realty">search</a></td></tr>
+<tr><td>Digital Realty</td><td>Chris Sharp</td><td>CTO</td><td>Infrastructure</td><td>&#9989; 2026-07-29</td><td><a href="https://www.digitalrealty.com/about/leadership">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Sharp+Digital+Realty">search</a></td></tr>
+<tr><td>Digital Realty</td><td>Aaron Binkley</td><td>VP of Sustainability</td><td>Sustainability</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Aaron+Binkley+Digital+Realty">search</a></td></tr>
+<tr><td>QTS</td><td>Thomas A. &quot;Tag&quot; Greason</td><td>Co-Chief Executive Officer</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://q.com/company/leadership">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Tag+Greason+QTS+Data+Centers">search</a></td></tr>
+<tr><td>QTS</td><td>David Robey</td><td>Co-Chief Executive Officer</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://q.com/company/leadership">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=David+Robey+QTS+Data+Centers">search</a></td></tr>
+<tr><td>QTS</td><td>Brian Herlihy</td><td>Chief Energy Strategy Officer</td><td>Sustainability</td><td>&#9989; 2026-07-29</td><td><a href="https://q.com/company/leadership">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Brian+Herlihy+QTS+Data+Centers">search</a></td></tr>
+<tr><td>QTS</td><td>Theo Yedinsky</td><td>Chief External Affairs Officer</td><td>Policy</td><td>&#9989; 2026-07-29</td><td><a href="https://q.com/company/leadership">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Theo+Yedinsky+QTS+Data+Centers">search</a></td></tr>
+<tr><td>Vantage</td><td>Sureel Choksi</td><td>President &amp; CEO</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://vantage-dc.com/leadership/">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Sureel+Choksi+Vantage+Data+Centers">search</a></td></tr>
+<tr><td>CyrusOne</td><td>Eric Schwartz</td><td>CEO</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://cyrusone.com/leadership/">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Eric+Schwartz+CyrusOne">search</a></td></tr>
+<tr><td>Aligned</td><td>Andrew Schaap</td><td>CEO</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://aligneddc.com/team/andrew-schaap/">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Andrew+Schaap+Aligned+Data+Centers">search</a></td></tr>
+<tr><td>Switch</td><td>Rob Roy</td><td>Founder &amp; CEO</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://www.switch.com/executive-team/">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Rob+Roy+Switch">search</a></td></tr>
+<tr><td>Stack Infrastructure</td><td>Matt VanderZanden</td><td>CEO, STACK Americas</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://www.stackinfra.com/about/meet-the-team/">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Matt+VanderZanden+Stack+Infrastructure">search</a></td></tr>
+<tr><td>Stack Infrastructure</td><td>Brian Cox</td><td>Interim CEO, STACK EMEA</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://www.stackinfra.com/about/meet-the-team/">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Brian+Cox+Stack+Infrastructure">search</a></td></tr>
+<tr><td>Stack Infrastructure</td><td>Bobby Hollis</td><td>Chief Development Officer, STACK Americas</td><td>Sustainability</td><td>&#9989; 2026-07-29</td><td><a href="https://www.stackinfra.com/about/meet-the-team/">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Bobby+Hollis+Stack+Infrastructure">search</a></td></tr>
+<tr><td>EdgeConneX</td><td>Randy Brouckman</td><td>CEO</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://www.edgeconnex.com/company/management-team/randy-brouckman/">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Randy+Brouckman+EdgeConneX">search</a></td></tr>
+<tr><td>Equinix</td><td>Adaire Fox-Martin</td><td>CEO</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://investor.equinix.com/about-equinix/leadership-team">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Adaire+Fox-Martin+Equinix">search</a></td></tr>
+<tr><td>Equinix</td><td>Christopher Wellise</td><td>VP, Global Sustainability</td><td>Sustainability</td><td>&#9888;&#65039; Unverified</td><td>—</td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Christopher+Wellise+Equinix">search</a></td></tr>
+<tr><td>Core Scientific</td><td>Adam Sullivan</td><td>CEO</td><td>Leadership</td><td>&#9989; 2026-07-29</td><td><a href="https://corescientific.com/about/leadership/">source</a></td><td><a href="https://www.linkedin.com/search/results/people/?keywords=Adam+Sullivan+Core+Scientific">search</a></td></tr>
+  </table>
+  </div>
+  <p class="muted" id="exec-count">43 executives</p>
+  <div class="note warn"><p>Unverified rows are mostly VP- and director-level
+  people who appear on no public leadership page; treat their titles as a lead
+  to confirm, not a fact. LinkedIn links are search URLs &mdash; check the
+  profile matches before connecting.</p></div>
+</section>
+
+<section>
+  <h2>Megaprojects under construction</h2>
+  <p>Top 10 individual megaprojects ranked by announced investment &mdash;
+  hundreds of billions in committed capital and tens of GW of new AI compute
+  capacity.</p>
+  <div class="freshness"><p><strong>As of 2026 · changes over months</strong> · Source: <a href="https://www.electricchoice.com/datacenters/" rel="nofollow">ElectricChoice.com — U.S. Data Center Power Map by State (2026; updated July 2026; CC-BY 4.0; cites LBNL, EPRINC, EIA)</a></p><p class="muted" style="margin:6px 0 0">Announced investment and capacity figures are the developer&#x27;s own claims, repeated by trade press. Treat them as what the company said, not as verified build-out.</p></div>
+  <div style="overflow-x:auto">
+  <table>
+    <tr><th>Project</th><th>Company</th><th>Location</th><th>Investment</th>
+    <th>Power capacity</th><th>Status</th></tr>
+    <tr><td>Stargate</td><td>OpenAI / Oracle / SoftBank</td><td>Abilene, TX</td><td>$100B+</td><td>1+ GW</td><td>Under Construction</td></tr>
+<tr><td>West Texas campus</td><td>Google</td><td>West Texas (3 sites)</td><td>$40B</td><td>multi-GW</td><td>Under Construction</td></tr>
+<tr><td>Meta Hyperion</td><td>Meta / Blue Owl</td><td>Richland Parish, LA</td><td>$27B</td><td>2–5 GW</td><td>Under Construction</td></tr>
+<tr><td>Vantage Frontier</td><td>Vantage Data Centers</td><td>Shackelford Co., TX</td><td>$25B</td><td>1.4 GW</td><td>Under Construction</td></tr>
+<tr><td>AWS Mississippi</td><td>Amazon (AWS)</td><td>Mississippi</td><td>$25B</td><td>multi-site</td><td>Under Construction</td></tr>
+<tr><td>xAI Colossus</td><td>xAI</td><td>Memphis, TN</td><td>$20B</td><td>~2 GW</td><td>Under Construction</td></tr>
+<tr><td>AWS Pennsylvania</td><td>Amazon (AWS)</td><td>Pennsylvania</td><td>$20B</td><td>2+ GW</td><td>Under Construction</td></tr>
+<tr><td>EdgeCore Virginia</td><td>EdgeCore</td><td>Louisa County, VA</td><td>$17B</td><td>1.1+ GW</td><td>Under Construction</td></tr>
+<tr><td>AWS Northern Indiana</td><td>Amazon (AWS)</td><td>Northern Indiana</td><td>$15B</td><td>2.4 GW</td><td>Under Construction</td></tr>
+<tr><td>QTS Cedar Rapids</td><td>QTS Data Centers</td><td>Cedar Rapids, IA</td><td>$10B</td><td>GW-scale</td><td>Under Construction</td></tr>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>What to do with this</h2>
+  <p>Know who you&rsquo;re negotiating with. These are the decision-makers and
+  the projects driving the build-out.</p>
+  <p>
+    <a class="btn" href="https://aigridtracker.streamlit.app">Open the toolkit &mdash; meeting prep generator</a>
+    <a class="btn ghost" href="companies/index.html">Company environmental scorecards</a>
+    <a class="btn ghost" href="moratoriums.html">Moratorium tracker</a>
+  </p>
+</section>
+
+<script>
+(function() {
+  var q = document.getElementById('exec-search');
+  var table = document.getElementById('exec-table');
+  var ct = document.getElementById('exec-count');
+  var rows = Array.from(table.querySelectorAll('tr')).slice(1);
+  q.addEventListener('input', function() {
+    var s = q.value.toLowerCase();
+    var n = 0;
+    rows.forEach(function(r) {
+      var show = !s || r.textContent.toLowerCase().indexOf(s) >= 0;
+      r.style.display = show ? '' : 'none';
+      if (show) n++;
+    });
+    ct.textContent = n + ' executive' + (n === 1 ? '' : 's');
+  });
+})();
+</script>
+
+<footer>
+  <a href="about.html">About</a> · <a href="search.html">Search</a>
+  · <a href="dividend.html">Data dividend calculator</a>
+  <br>AI GridWatch — community energy intelligence. Planning estimates, not
+  engineering studies; every number is sourced in the
+  <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.
+</footer>
+</div>
+</body>
+</html>

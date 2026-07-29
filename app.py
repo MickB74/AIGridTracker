@@ -38,7 +38,6 @@ from src.ui.news_feed_tab import render_news_feed_tab
 from src.ui.officials_tab import render_officials_tab
 from src.ui.method_tab import render_method_tab
 from src.ui.monitors_tab import render_monitors_tab
-from src.ui.learn_tab import render_learn_tab
 from src.ui.corporate_tab import render_corporate_tab
 from src.ui.studies_tab import render_studies_tab
 from src.ui.sandbox_tab import render_sandbox_tab
@@ -700,17 +699,17 @@ with tab_reference:
     )
     st.info(
         f"**Moved to the site:** "
-        f"[{SITE_LABEL}/bills]({SITE}/bills) — why your electric bill is going "
-        f"up, capacity markets and peak load · "
-        f"[{SITE_LABEL}/outlook]({SITE}/outlook) — global and US electricity "
-        "forecasts to 2035, and where new facilities are being built."
+        f"[{SITE_LABEL}/bills]({SITE}/bills) — your electric bill · "
+        f"[{SITE_LABEL}/outlook]({SITE}/outlook) — electricity forecasts · "
+        f"[{SITE_LABEL}/learn]({SITE}/learn) — data center explainer · "
+        f"[{SITE_LABEL}/puc]({SITE}/puc) — PUC directory · "
+        f"[{SITE_LABEL}/executives]({SITE}/executives) — executives & "
+        "megaprojects."
     )
-    (ref_learn, ref_dc, ref_corp, ref_states) = st.tabs([
-        "🎓 Learn", "🏢 Data centers",
+    (ref_dc, ref_corp, ref_states) = st.tabs([
+        "🏢 Data centers",
         "💼 Companies", "🗂️ States & officials",
     ])
-    with ref_learn:
-        render_learn_tab()
     with ref_dc:
         render_dc_tab()
     with ref_corp:

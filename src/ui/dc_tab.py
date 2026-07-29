@@ -7,8 +7,8 @@ from src.constants import (DATACENTERS_DF, DC_METRICS, ERCOT_LL_VINTAGE,
                            ERCOT_LL_DC_SHARE, ERCOT_LL_FUNNEL, HYPERSCALERS_DF,
                            HYPERSCALER_COLORS, AI_COMPETITOR_SITES_DF,
                            AI_COMPETITORS_DF, STATE_DC_DF, STATE_DC_NATIONAL,
-                           MEGA_PROJECTS_DF, OPERATORS_DF, DC_SITES_DF,
-                           OPERATORS, EXECUTIVES_DF, has_value)
+                           OPERATORS_DF, DC_SITES_DF,
+                           OPERATORS)
 from src.helpers import src_link, render_freshness
 from src.services.ercot import ercot_largeload_latest
 from src.services.eia import eia_latest_demand
@@ -482,68 +482,13 @@ def render_dc_tab():
                      ["dc_ownership", "vantage_dbsl", "switch_dbif", "crwv_coresci"]))
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # --- Key executives at data center operators & sponsors --------------------
     st.divider()
-    st.subheader("Key executives — who runs these companies")
-    st.caption(
-        "CEO and data-center leadership at every tracked operator and "
-        "mega-project sponsor. LinkedIn links open a people search for "
-        "the executive — verify the profile before reaching out.")
-    render_freshness(st, "EXECUTIVES_DF")
-
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-
-    exec_df = EXECUTIVES_DF.copy()
-
-    ef1, ef2 = st.columns(2)
-    ex_filter = ef1.multiselect(
-        "Filter by company", sorted(exec_df["company"].unique()),
-        default=[], key="exec_company_filter",
-        placeholder="All companies")
-    cat_labels = {"leadership": "Leadership", "infrastructure": "Infrastructure",
-                  "sustainability": "Sustainability & energy",
-                  "policy": "Policy & government relations"}
-    cat_filter = ef2.multiselect(
-        "Filter by role category",
-        list(cat_labels.keys()), default=[],
-        format_func=lambda x: cat_labels[x],
-        key="exec_cat_filter", placeholder="All categories")
-    if ex_filter:
-        exec_df = exec_df[exec_df["company"].isin(ex_filter)]
-    if cat_filter:
-        exec_df = exec_df[exec_df["category"].isin(cat_filter)]
-
-    # Per-row provenance: verified rows were read off the company's own
-    # leadership page and link to it; the rest have no first-party source.
-    exec_df["status"] = exec_df["verified"].apply(
-        lambda v: f"✅ Verified {v}" if has_value(v) else "⚠️ Unverified")
-
-    st.dataframe(
-        exec_df[["company", "name", "title", "status", "verified_source",
-                 "category", "focus", "linkedin"]],
-        use_container_width=True, hide_index=True,
-        column_config={
-            "company": st.column_config.TextColumn("Company"),
-            "name": st.column_config.TextColumn("Name"),
-            "title": st.column_config.TextColumn("Title"),
-            "status": st.column_config.TextColumn("Status"),
-            "verified_source": st.column_config.LinkColumn(
-                "Checked against", display_text="company page"),
-            "category": st.column_config.TextColumn("Category"),
-            "focus": st.column_config.TextColumn("Focus", width="large"),
-            "linkedin": st.column_config.LinkColumn(
-                "LinkedIn", display_text="search"),
-        })
-    _n_ver = int(exec_df["verified"].notna().sum())
-    st.caption(
-        f"Showing {len(exec_df)} executives across "
-        f"{exec_df['company'].nunique()} companies — "
-        f"**{_n_ver} verified** against the company's own leadership page, "
-        f"**{len(exec_df) - _n_ver} unverified**. Unverified rows are mostly "
-        "VP- and director-level people who appear on no public leadership "
-        "page; treat their titles as a lead to confirm, not a fact. LinkedIn "
-        "links are search URLs — check the profile matches before connecting.")
-    st.markdown('</div>', unsafe_allow_html=True)
+    st.info(
+        "**Executives & megaprojects moved to the site:** "
+        "[aigridwatch.com/executives](https://aigridwatch.com/executives) — "
+        "operator registry, executive directory with verification status, "
+        "and the top 10 megaprojects under construction."
+    )
 
     # --- Who each company names as a competitor (from SEC 10-K filings) --------
     st.divider()
@@ -796,34 +741,4 @@ your large-load rules within 60 days, or reform them. {src_link('ferc_showcause'
     )
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # --- Mega-projects leaderboard ---
-    st.divider()
-    st.subheader("💰 Largest data center projects under construction (2024–2028)")
-    st.caption(
-        "Top 10 individual megaprojects ranked by announced investment. "
-        "Represents hundreds of billions in committed capital and tens of GW of new AI compute capacity. "
-        f"Source: {src_link('electricchoice')} · {src_link('stargate')} · {src_link('xai_memphis')}"
-    )
-    render_freshness(st, "MEGA_PROJECTS_DF")
-
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    mp = MEGA_PROJECTS_DF.copy()
-    st.dataframe(
-        mp,
-        use_container_width=True,
-        hide_index=True,
-        column_config={
-            "project":  st.column_config.TextColumn("Project"),
-            "company":  st.column_config.TextColumn("Company"),
-            "location": st.column_config.TextColumn("Location"),
-            "invest":   st.column_config.TextColumn("Investment"),
-            "capacity": st.column_config.TextColumn("Power Capacity"),
-            "status":   st.column_config.TextColumn("Status"),
-        }
-    )
-    st.caption(
-        "Scroll up to **Key executives** for the leadership behind these "
-        "projects. See the **States & officials** tab for elected officials "
-        "in these states and the **Negotiation toolkit** for CBA templates.")
-    st.markdown('</div>', unsafe_allow_html=True)
 
