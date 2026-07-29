@@ -1,0 +1,14 @@
+# Dependencies for `python3 build_site.py` only — this is what Vercel installs.
+#
+# Deliberately excludes streamlit, altair, plotly, pydeck, requests, pyarrow,
+# beautifulsoup4 and lxml: the static site generator reads the constants
+# registries and renders HTML, so it never imports the app or any fetcher.
+# Keeping this slim is what makes the Vercel build fast enough to run on every
+# push. If a build ever fails on a missing import, add it here — do not point
+# Vercel at requirements.txt.
+# Upper bounds are deliberate. This runs on every push to production, so a new
+# major release of one of these must not be able to silently break the build.
+# Raise a bound consciously after testing, rather than discovering it live.
+pandas>=2.0,<4
+markdown>=3.4,<4
+fpdf2>=2.8,<3
