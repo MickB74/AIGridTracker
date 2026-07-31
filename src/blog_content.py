@@ -156,26 +156,96 @@ was rejected — responded that the pledge, absent enforcement, is
 [cold comfort](https://earthjustice.org/press/2026/earthjustice-clients-in-louisiana-respond-to-white-house-ratepayer-protection-pledge)
 in states where the approval clock is already running.
 
-### What to take from this if you're a community
+### Ten lessons for a community facing a hyperscale project
 
-Three practical lessons for anyone facing a hyperscale project:
+Louisiana is not the first state to run this play, and it will not be the
+last. Here is what to take from it, in the order the fights actually
+happen:
 
-1. **Ask what \"pays for its own power\" actually covers.** Contract
-   electricity? Yes. Transmission? Rarely. Capacity-market ripple effects?
-   Almost never. Stranded-asset risk on 30-year power plants? Never.
-   Model clauses that separate these buckets and assign each one explicitly
-   are the single most valuable thing a CBA negotiator can push for.
+**1. Ask what \"pays for its own power\" actually covers.**
+Contract electricity at the meter? Yes. Transmission built to reach the
+site? Rarely. Substation upgrades? Sometimes. Capacity-market and
+regional-grid ripple effects? Almost never. Stranded-asset risk on 30-year
+power plants if the tenant leaves? Never. Model clauses that separate these
+buckets and assign each one **by name** to Meta or to ratepayers are the
+single most valuable thing a CBA negotiator can push for. \"Full cost\" is
+a marketing phrase, not a rate structure.
 
-2. **Watch the schedule as closely as the substance.** The Louisiana PSC
-   didn't lose the argument on the merits — it advanced the vote to the
-   point where the argument couldn't be had. If your local hearing gets
-   moved up on short notice, that is the fight.
+**2. The size you're told is the floor, not the ceiling.**
+Meta announced Hyperion as a \\$10 billion project. It became \\$27 billion.
+It is now over \\$50 billion, 5 GW, and ten gas plants — up from an initial
+three. Anchor every objection you file, every impact estimate you cite, and
+every clause you negotiate to the **build-out ceiling** the developer's own
+site plan permits, not the number in the press release.
 
-3. **Get the utility's own numbers on the record.** The \\$8–13/month figure
-   didn't come from an advocacy group. It came from the PSC's independent
-   monitor, filed on the docket. The single most damaging document in a
-   hearing is the utility's own witness testimony, filed under oath, that
-   the community can quote back to the commissioners.
+**3. Fight the docket schedule, not just the docket contents.**
+The 2025 Louisiana PSC vote didn't lose on the merits — it was moved forward
+months and noticed with a week's warning. If your local hearing suddenly
+jumps up on the calendar, that is the substantive fight. Motions for
+continuance, procedural objections, and a public paper trail on the schedule
+change are more valuable in that moment than another expert filing on the
+merits.
+
+**4. The regulator's own independent monitor is your most credible witness.**
+The \\$8–13/month figure came from the PSC's monitor's filed report, not
+from an advocacy group. Every state PUC has an equivalent — a consumer
+advocate, an independent monitor, an office of ratepayer counsel — with
+subpoena power the utility can't ignore. Their filings are the most
+quotable documents in any commissioner's inbox. Find yours before the
+first hearing.
+
+**5. Transmission is where the cost hides.**
+The \\$470M+ 60-mile line is going into Entergy's rate base, meaning every
+Louisiana customer pays it off over decades. Whenever a developer commits
+to \"paying for on-site infrastructure,\" ask specifically: **which side of
+the utility fence?** On-site substations may be theirs. The line reaching
+that substation almost never is.
+
+**6. Beware the \"customer savings\" framing.**
+Meta's \\$2.65B customer-savings figure is calculated **versus a hypothetical
+counter-factual** — what customers would have paid if the plants were built
+under a different rate design. It is not \"your bill goes down.\" Any time
+you see a benefits number, ask: *savings compared to what?* If the answer
+isn't a specific alternative filed on the docket, treat it as advertising.
+
+**7. State attorneys general and governors are leverage — use them.**
+Gov. Landry publicly warned about a separate Entergy plant purchase in
+June 2026. That single statement, from a Republican governor of the state
+hosting the deal, is worth more than fifty comment letters. Identify the
+elected officials in your state who have said *anything* skeptical, put
+their words on the record, and ask commissioners to respond to them by
+name.
+
+**8. Federal pledges without state enforcement mean nothing.**
+The 2026 White House ratepayer-protection pledge sounds like coverage. It
+provides none. Rate design happens at state PUCs. If your fight is at the
+PUC, cite the federal pledge as a floor — then insist on a state-level
+enforcement mechanism, because the White House cannot compel a Louisiana
+commissioner to do anything.
+
+**9. Frame the debate around asset lifespans, not press releases.**
+Meta signs 10-to-15-year lease commitments. The gas plants Entergy is
+building have 30-to-40-year physical lives and financing to match. The
+question every commissioner should have to answer on the record: *what
+happens in year sixteen?* Force that question into the hearing transcript
+and you have changed the shape of every future proceeding.
+
+**10. Get the ripple effects on the record early.**
+Louisiana isn't in PJM, so the direct capacity-market spillover is limited —
+but the MISO-South zone still sees rate impacts from load additions of this
+size, and Louisiana's neighbors are already asking about cost allocation.
+Even if your state's fight is local, the RTO or independent operator
+serving it has a filing docket where the *neighboring* impacts get argued.
+Enter appearances there too. Precedents set in one state are cited in
+every state after it.
+
+Bundle these together and the pattern is clear: **hyperscale approvals are
+not won on the merits, they're won on process, timing, and paperwork.** The
+same utility that assured Louisiana ratepayers they wouldn't pay a dime is
+now, on the docket, asking them to pay hundreds of millions. Both statements
+were made in good faith by people convinced of their own version of the
+truth. The community's job is to make sure the second version — the one
+filed under oath — is the one commissioners have to answer for.
 
 > Louisiana isn't alone. If you want to see whether your state's PUC has
 > opened a docket on data-center cost allocation, the
