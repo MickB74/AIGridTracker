@@ -4279,8 +4279,18 @@ def main():
     (WEB / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n",
         encoding="utf-8")
+    _blog_redirects = [
+        {"source": f"/{s['id']}", "destination": f"/blog/{s['id']}",
+         "permanent": True}
+        for s in _sorted_posts()
+    ]
     (WEB / "vercel.json").write_text(
-        '{ "cleanUrls": true, "trailingSlash": false }\n', encoding="utf-8")
+        json.dumps({
+            "cleanUrls": True,
+            "trailingSlash": False,
+            "redirects": _blog_redirects,
+        }, indent=2) + "\n",
+        encoding="utf-8")
 
     n = len(list(WEB.rglob("*.html")))
     print(f"built web/ — {n} pages, sitemap, robots.txt, vercel.json")
