@@ -51,6 +51,153 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── Meta Hyperion (Richland Parish, LA) — who pays for 5 GW ──────────
+    {
+        "id": "meta-hyperion-louisiana-ratepayer-fight-2026",
+        "section": "stories",
+        "title": "\"Meta pays the full cost.\" Louisiana ratepayers pay \\$8–13 a month. Both are true.",
+        "date": _dt.date(2026, 7, 30),
+        "author": "GridWatch AI",
+        "tags": ["Meta", "Louisiana", "Entergy", "gas plants", "ratepayers",
+                 "PSC", "Richland Parish", "transmission",
+                 "cost allocation", "analysis"],
+        "summary": (
+            "Meta's Hyperion campus in rural Louisiana is now a 5-gigawatt, "
+            "\\$50-billion-plus build — powered by ten new Entergy gas plants "
+            "and a 60-mile transmission line whose \\$470M+ cost falls on "
+            "ordinary customers. Meta says it pays the full cost of its "
+            "electricity. State watchdogs say average Entergy Louisiana "
+            "households will still pay \\$8–13 more per month. Both can be "
+            "true. Here's how."
+        ),
+        "body": """\
+On July 27, the *New York Times* joined a long line of Louisiana reporters,
+consumer advocates, and clean-energy groups documenting what has become the
+largest data-center-driven grid buildout in the American South: **Meta's
+\"Hyperion\" campus** in Richland Parish, and the ten new natural-gas power
+plants Entergy Louisiana is racing to build to serve it.
+
+The project is now **5 gigawatts of compute at more than \\$50 billion in
+capex** — roughly double the \\$27 billion Meta announced when it broke ground
+in early 2026 ([nola.com](https://www.nola.com/news/business/meta-louisiana-ai-data-center-richland-parish/article_d1308014-c718-4c34-a75f-476a151ef1a7.html),
+[Yahoo Finance](https://finance.yahoo.com/technology/articles/meta-expands-louisiana-hyperion-data-121522809.html)).
+It is the largest single data center Meta has ever attempted, and one of the
+largest anywhere in the world.
+
+Meta has been consistent in its public message: **it pays the full cost of
+the energy, water, and infrastructure it consumes**, and the deal with
+Entergy is projected to deliver **\\$2.65 billion in customer savings over
+twenty years** ([Meta](https://datacenters.atmeta.com/richland-parish-data-center/)).
+
+State consumer advocates and the Louisiana Public Service Commission's own
+independent monitor have been just as consistent: **the average Entergy
+Louisiana household will pay an extra \\$8–13 per month** because of the
+buildout, plus a share of at least **\\$470 million for a new 60-mile
+transmission line** whose primary purpose is to serve one tenant
+([Alliance for Affordable Energy](https://www.all4energy.org/watchdog/meta-data-center-to-cause-entergy-bill-increase/),
+[Union of Concerned Scientists](https://blog.ucs.org/paul-arbaje/entergy-wants-to-fast-track-gas-plants-for-meta-data-center-leaving-ratepayers-with-the-bill/)).
+
+Both statements are true at the same time. Understanding how is the
+difference between a good faith debate and a marketing war — and it is a
+model every community facing a hyperscale project should study.
+
+### What Meta actually pays for
+
+Meta's contract with Entergy Louisiana covers the **direct** electricity it
+consumes at the meter, plus a set of dedicated infrastructure upgrades tied
+to the campus. That is a real and non-trivial commitment. In most states,
+this is exactly the argument developers make: *we are net-positive because
+we buy our own power under a special large-load tariff*.
+
+The clean way to read that promise is narrow. It does **not** cover:
+
+- **Transmission built to serve the load.** The \\$470M+ 60-mile line
+  connecting two substations is being placed in Entergy's general rate base,
+  meaning it's paid off across all Louisiana customers over the life of the
+  asset ([UCS](https://blog.ucs.org/paul-arbaje/entergy-wants-to-fast-track-gas-plants-for-meta-data-center-leaving-ratepayers-with-the-bill/)).
+- **Stranded-asset risk on the ten new gas plants.** Six in Richland Parish,
+  three in Pointe Coupee, one in St. Charles ([The Next Web](https://thenextweb.com/news/meta-200-billion-hyperion-data-center-louisiana)).
+  If the AI buildout slows, or if Meta walks after year 10 of a 30-year
+  asset, ratepayers own the shortfall.
+- **System-wide capacity effects.** Adding 5 GW of new load to a regional
+  grid pushes up capacity clearing prices for everyone — the same dynamic
+  we mapped in the [PJM auction post](pjm-capacity-auction-ratepayer-shock-2026).
+- **Financing risk.** Earthjustice's clients asked the PSC in early 2026
+  to open a probe into the financing structure of the deal. The PSC
+  **declined** ([Earthjustice](https://earthjustice.org/press/2026/consumer-groups-alarmed-as-louisiana-psc-declines-to-take-up-probe-into-meta-risky-financing-deal)).
+
+So when Meta says \"we pay the full cost,\" it is telling the truth about
+the meter reading. When advocates say \"households will pay \\$8–13 more per
+month,\" they are telling the truth about the rate base. **The two numbers
+describe different things.** The trick, for a community negotiating a similar
+deal, is to make sure both are on the table.
+
+### How the vote actually happened
+
+The August 2025 PSC vote that approved the first three gas plants is worth
+remembering, because it is the template being repeated now for the additional
+seven plants ([UCS](https://blog.ucs.org/paul-arbaje/whats-next-after-louisianas-gas-plant-approval-for-meta-data-center/)):
+
+- The vote was **moved forward months** ahead of its originally scheduled date.
+- The public was given **just over one week's notice**.
+- Community members and consumer groups who traveled to the hearing to
+  object were on the record before a decision that had, by most accounts,
+  already been made.
+
+Governor Jeff Landry publicly warned about a separate Entergy plant purchase
+in June 2026 ([Louisiana Illuminator](https://lailluminator.com/2026/06/23/gov-landry-warns-power-plant-purchase/)),
+suggesting the political consensus in Baton Rouge is less unified than the
+approval schedule implies.
+
+Meanwhile, the White House issued a **ratepayer protection pledge** in mid-2026
+promising that new data-center load would not be subsidized by ordinary
+customers. Earthjustice's Louisiana clients — the same ones whose PSC probe
+was rejected — responded that the pledge, absent enforcement, is
+[cold comfort](https://earthjustice.org/press/2026/earthjustice-clients-in-louisiana-respond-to-white-house-ratepayer-protection-pledge)
+in states where the approval clock is already running.
+
+### What to take from this if you're a community
+
+Three practical lessons for anyone facing a hyperscale project:
+
+1. **Ask what \"pays for its own power\" actually covers.** Contract
+   electricity? Yes. Transmission? Rarely. Capacity-market ripple effects?
+   Almost never. Stranded-asset risk on 30-year power plants? Never.
+   Model clauses that separate these buckets and assign each one explicitly
+   are the single most valuable thing a CBA negotiator can push for.
+
+2. **Watch the schedule as closely as the substance.** The Louisiana PSC
+   didn't lose the argument on the merits — it advanced the vote to the
+   point where the argument couldn't be had. If your local hearing gets
+   moved up on short notice, that is the fight.
+
+3. **Get the utility's own numbers on the record.** The \\$8–13/month figure
+   didn't come from an advocacy group. It came from the PSC's independent
+   monitor, filed on the docket. The single most damaging document in a
+   hearing is the utility's own witness testimony, filed under oath, that
+   the community can quote back to the commissioners.
+
+> Louisiana isn't alone. If you want to see whether your state's PUC has
+> opened a docket on data-center cost allocation, the
+> [PUC directory](/puc.html) has commission websites and complaint links
+> for all 50 states plus D.C. If you're facing a similar buildout, the
+> [Start here wizard](https://aigridtracker.streamlit.app) will generate
+> a comment script, meeting brief, and letter template with your numbers
+> baked in.
+
+### Sources
+
+- [The New York Times — Meta's Louisiana Data Center (July 27, 2026)](https://www.nytimes.com/2026/07/27/technology/meta-data-center-louisiana.html)
+- [nola.com — \\$40B expansion coverage](https://www.nola.com/news/business/meta-louisiana-ai-data-center-richland-parish/article_d1308014-c718-4c34-a75f-476a151ef1a7.html)
+- [Meta — Richland Parish data center page](https://datacenters.atmeta.com/richland-parish-data-center/)
+- [Union of Concerned Scientists — Entergy fast-track analysis](https://blog.ucs.org/paul-arbaje/entergy-wants-to-fast-track-gas-plants-for-meta-data-center-leaving-ratepayers-with-the-bill/)
+- [UCS — What's next after PSC approval](https://blog.ucs.org/paul-arbaje/whats-next-after-louisianas-gas-plant-approval-for-meta-data-center/)
+- [Alliance for Affordable Energy — Entergy bill increase](https://www.all4energy.org/watchdog/meta-data-center-to-cause-entergy-bill-increase/)
+- [Earthjustice — PSC declines to probe financing](https://earthjustice.org/press/2026/consumer-groups-alarmed-as-louisiana-psc-declines-to-take-up-probe-into-meta-risky-financing-deal)
+- [Earthjustice — response to White House ratepayer pledge](https://earthjustice.org/press/2026/earthjustice-clients-in-louisiana-respond-to-white-house-ratepayer-protection-pledge)
+- [Louisiana Illuminator — Gov. Landry on plant purchase](https://lailluminator.com/2026/06/23/gov-landry-warns-power-plant-purchase/)
+""",
+    },
     # ── PJM capacity auction / ratepayer cost allocation ─────────────────
     {
         "id": "pjm-capacity-auction-ratepayer-shock-2026",

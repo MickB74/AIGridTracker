@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/meta-hyperion-louisiana-ratepayer-fight-2026",
+      "destination": "/blog/meta-hyperion-louisiana-ratepayer-fight-2026",
+      "permanent": true
+    },
+    {
       "source": "/pjm-capacity-auction-ratepayer-shock-2026",
       "destination": "/blog/pjm-capacity-auction-ratepayer-shock-2026",
       "permanent": true
