@@ -4285,7 +4285,12 @@ def main():
         for s in _sorted_posts()
     ]
     (WEB / "vercel.json").write_text(
+        '{ "cleanUrls": true, "trailingSlash": false }\n', encoding="utf-8")
+    # The load-bearing config Vercel actually reads lives at the repo root.
+    # Keep outputDirectory/cleanUrls/trailingSlash intact; refresh redirects.
+    (ROOT / "vercel.json").write_text(
         json.dumps({
+            "outputDirectory": "web",
             "cleanUrls": True,
             "trailingSlash": False,
             "redirects": _blog_redirects,
