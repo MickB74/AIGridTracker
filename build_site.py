@@ -4399,6 +4399,13 @@ def main():
          "permanent": True}
         for s in _sorted_posts()
     ]
+    # Root-level shortcuts for the 51 state pages, so /indiana → /states/indiana.
+    _state_redirects = [
+        {"source": f"/{slugify(row['state'])}",
+         "destination": f"/states/{slugify(row['state'])}",
+         "permanent": False}
+        for _, row in STATE_PUCS_DF.iterrows()
+    ]
     (WEB / "vercel.json").write_text(
         '{ "cleanUrls": true, "trailingSlash": false }\n', encoding="utf-8")
     # The load-bearing config Vercel actually reads lives at the repo root.
@@ -4408,7 +4415,7 @@ def main():
             "outputDirectory": "web",
             "cleanUrls": True,
             "trailingSlash": False,
-            "redirects": _blog_redirects,
+            "redirects": _blog_redirects + _state_redirects,
         }, indent=2) + "\n",
         encoding="utf-8")
 

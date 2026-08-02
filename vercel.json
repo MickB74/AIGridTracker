@@ -77,6 +77,261 @@
       "source": "/ercot-queue-explainer",
       "destination": "/blog/ercot-queue-explainer",
       "permanent": true
+    },
+    {
+      "source": "/alabama",
+      "destination": "/states/alabama",
+      "permanent": false
+    },
+    {
+      "source": "/alaska",
+      "destination": "/states/alaska",
+      "permanent": false
+    },
+    {
+      "source": "/arizona",
+      "destination": "/states/arizona",
+      "permanent": false
+    },
+    {
+      "source": "/arkansas",
+      "destination": "/states/arkansas",
+      "permanent": false
+    },
+    {
+      "source": "/california",
+      "destination": "/states/california",
+      "permanent": false
+    },
+    {
+      "source": "/colorado",
+      "destination": "/states/colorado",
+      "permanent": false
+    },
+    {
+      "source": "/connecticut",
+      "destination": "/states/connecticut",
+      "permanent": false
+    },
+    {
+      "source": "/delaware",
+      "destination": "/states/delaware",
+      "permanent": false
+    },
+    {
+      "source": "/district-of-columbia",
+      "destination": "/states/district-of-columbia",
+      "permanent": false
+    },
+    {
+      "source": "/florida",
+      "destination": "/states/florida",
+      "permanent": false
+    },
+    {
+      "source": "/georgia",
+      "destination": "/states/georgia",
+      "permanent": false
+    },
+    {
+      "source": "/hawaii",
+      "destination": "/states/hawaii",
+      "permanent": false
+    },
+    {
+      "source": "/idaho",
+      "destination": "/states/idaho",
+      "permanent": false
+    },
+    {
+      "source": "/illinois",
+      "destination": "/states/illinois",
+      "permanent": false
+    },
+    {
+      "source": "/indiana",
+      "destination": "/states/indiana",
+      "permanent": false
+    },
+    {
+      "source": "/iowa",
+      "destination": "/states/iowa",
+      "permanent": false
+    },
+    {
+      "source": "/kansas",
+      "destination": "/states/kansas",
+      "permanent": false
+    },
+    {
+      "source": "/kentucky",
+      "destination": "/states/kentucky",
+      "permanent": false
+    },
+    {
+      "source": "/louisiana",
+      "destination": "/states/louisiana",
+      "permanent": false
+    },
+    {
+      "source": "/maine",
+      "destination": "/states/maine",
+      "permanent": false
+    },
+    {
+      "source": "/maryland",
+      "destination": "/states/maryland",
+      "permanent": false
+    },
+    {
+      "source": "/massachusetts",
+      "destination": "/states/massachusetts",
+      "permanent": false
+    },
+    {
+      "source": "/michigan",
+      "destination": "/states/michigan",
+      "permanent": false
+    },
+    {
+      "source": "/minnesota",
+      "destination": "/states/minnesota",
+      "permanent": false
+    },
+    {
+      "source": "/mississippi",
+      "destination": "/states/mississippi",
+      "permanent": false
+    },
+    {
+      "source": "/missouri",
+      "destination": "/states/missouri",
+      "permanent": false
+    },
+    {
+      "source": "/montana",
+      "destination": "/states/montana",
+      "permanent": false
+    },
+    {
+      "source": "/nebraska",
+      "destination": "/states/nebraska",
+      "permanent": false
+    },
+    {
+      "source": "/nevada",
+      "destination": "/states/nevada",
+      "permanent": false
+    },
+    {
+      "source": "/new-hampshire",
+      "destination": "/states/new-hampshire",
+      "permanent": false
+    },
+    {
+      "source": "/new-jersey",
+      "destination": "/states/new-jersey",
+      "permanent": false
+    },
+    {
+      "source": "/new-mexico",
+      "destination": "/states/new-mexico",
+      "permanent": false
+    },
+    {
+      "source": "/new-york",
+      "destination": "/states/new-york",
+      "permanent": false
+    },
+    {
+      "source": "/north-carolina",
+      "destination": "/states/north-carolina",
+      "permanent": false
+    },
+    {
+      "source": "/north-dakota",
+      "destination": "/states/north-dakota",
+      "permanent": false
+    },
+    {
+      "source": "/ohio",
+      "destination": "/states/ohio",
+      "permanent": false
+    },
+    {
+      "source": "/oklahoma",
+      "destination": "/states/oklahoma",
+      "permanent": false
+    },
+    {
+      "source": "/oregon",
+      "destination": "/states/oregon",
+      "permanent": false
+    },
+    {
+      "source": "/pennsylvania",
+      "destination": "/states/pennsylvania",
+      "permanent": false
+    },
+    {
+      "source": "/rhode-island",
+      "destination": "/states/rhode-island",
+      "permanent": false
+    },
+    {
+      "source": "/south-carolina",
+      "destination": "/states/south-carolina",
+      "permanent": false
+    },
+    {
+      "source": "/south-dakota",
+      "destination": "/states/south-dakota",
+      "permanent": false
+    },
+    {
+      "source": "/tennessee",
+      "destination": "/states/tennessee",
+      "permanent": false
+    },
+    {
+      "source": "/texas",
+      "destination": "/states/texas",
+      "permanent": false
+    },
+    {
+      "source": "/utah",
+      "destination": "/states/utah",
+      "permanent": false
+    },
+    {
+      "source": "/vermont",
+      "destination": "/states/vermont",
+      "permanent": false
+    },
+    {
+      "source": "/virginia",
+      "destination": "/states/virginia",
+      "permanent": false
+    },
+    {
+      "source": "/washington",
+      "destination": "/states/washington",
+      "permanent": false
+    },
+    {
+      "source": "/west-virginia",
+      "destination": "/states/west-virginia",
+      "permanent": false
+    },
+    {
+      "source": "/wisconsin",
+      "destination": "/states/wisconsin",
+      "permanent": false
+    },
+    {
+      "source": "/wyoming",
+      "destination": "/states/wyoming",
+      "permanent": false
     }
   ]
 }
