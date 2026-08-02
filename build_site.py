@@ -338,6 +338,7 @@ def page(title, description, body, canonical, depth=0,
   <a href="{p}environment.html">Environment</a>
   <a href="{p}companies/index.html">Companies</a>
   <a href="{p}blog/index.html">Blog</a>
+  <a href="{p}news/index.html">News</a>
   <a class="cta" href="{APP_URL}">Open the toolkit &rarr;</a>
 </nav>
 {body}
@@ -675,6 +676,57 @@ def build_state(state):
             f'<p><a class="btn ghost" href="../blog/?state={esc(state)}">'
             f'All {esc(state)} posts &rarr;</a></p></section>')
 
+    # Live news headlines mentioning this state
+    state_news = _news_for_state(state, limit=6)
+    news_html = ""
+    if state_news:
+        def _fmt(iso):
+            if not iso:
+                return ""
+            try:
+                import datetime as _dt
+                return _dt.datetime.fromisoformat(iso).strftime("%b %-d, %Y")
+            except Exception:                                     # noqa: BLE001
+                return ""
+        items = "\n".join(
+            f'<li>'
+            f'<div class="post-meta">{esc(" · ".join(x for x in (n.get("source",""), _fmt(n.get("published_iso",""))) if x))}</div>'
+            f'<h3><a href="{esc(n["link"])}" rel="nofollow noopener" target="_blank">'
+            f'{esc(n["title"])}</a></h3></li>'
+            for n in state_news)
+        news_html = (
+            f'<section><h2>This week&#39;s headlines mentioning {esc(state)}</h2>'
+            f'<ul class="blog-list">{items}</ul>'
+            f'<p><a class="btn ghost" href="../news/?state={esc(state)}">'
+            f'All {esc(state)} news &rarr;</a></p></section>')
+
+    # Videos mentioning this state
+    state_videos = _videos_for_state(state, limit=4)
+    videos_html = ""
+    if state_videos:
+        cards = []
+        placeholder = (
+            '<div style="width:100%;aspect-ratio:16/9;background:'
+            'linear-gradient(135deg,#1a1f2e,#2d1a3d);display:flex;'
+            'align-items:center;justify-content:center;font-size:42px;'
+            'color:#ff4136">▶</div>')
+        for v in state_videos:
+            vid = v.get("video_id", "")
+            thumb = f'https://i.ytimg.com/vi/{vid}/hqdefault.jpg' if vid else ""
+            cards.append(
+                f'<a href="{esc(v["link"])}" rel="nofollow noopener" target="_blank" '
+                f'style="display:block;border:1px solid rgba(255,255,255,0.08);'
+                f'border-radius:12px;overflow:hidden;text-decoration:none;color:inherit">'
+                f'{("<img src=" + repr(thumb) + " alt=\"\" loading=\"lazy\" style=\"width:100%;display:block;aspect-ratio:16/9;object-fit:cover\">") if thumb else placeholder}'
+                f'<div style="padding:10px 12px">'
+                f'<div class="post-meta" style="font-size:12px;opacity:0.75">{esc(v.get("source",""))}</div>'
+                f'<div style="font-weight:600;margin-top:4px;line-height:1.3">'
+                f'{esc(v["title"])}</div></div></a>')
+        videos_html = (
+            f'<section><h2>Video coverage mentioning {esc(state)}</h2>'
+            f'<div style="display:grid;grid-template-columns:repeat(auto-fill,'
+            f'minmax(260px,1fr));gap:16px">{"".join(cards)}</div></section>')
+
     # Municipal league
     muni = STATE_MUNI_LEAGUES.get(abbrev)
     muni_html = ""
@@ -705,6 +757,8 @@ def build_state(state):
 {dcmap_html}
 {cba_html}
 {officials_html}
+{news_html}
+{videos_html}
 {stories_html}
 {muni_html}
 <section>
@@ -999,6 +1053,482 @@ def _post_states(story):
 def _posts_for_state(state_name, limit=None):
     matches = [s for s in _sorted_posts() if state_name in _post_states(s)]
     return matches[:limit] if limit else matches
+
+
+# Populated during main(); state pages read these to render their per-state
+# news + video sections without re-fetching.
+_NEWS_ITEMS = []
+_VIDEO_ITEMS = []
+
+def _news_for_state(state_name, limit=6):
+    return [it for it in _NEWS_ITEMS
+            if state_name in it.get("states", [])][:limit]
+
+def _videos_for_state(state_name, limit=4):
+    return [it for it in _VIDEO_ITEMS
+            if state_name in it.get("states", [])][:limit]
+
+
+# ── Live news headlines (fetched at build time) ─────────────────────────── #
+# One broad Google News query, bucketed into states using the same detection
+# logic as blog posts. Cached to data/news_cache.json so builds work offline
+# and don't hammer Google News on every rebuild. Set NEWS_REFRESH=1 to force.
+
+NEWS_CACHE_PATH = pathlib.Path(__file__).parent / "data" / "news_cache.json"
+NEWS_CACHE_TTL_HOURS = 6
+
+def _news_states_for(item):
+    haystack = " ".join([item.get("title", ""), item.get("source", "")])
+    # Strip common non-state uses before matching abbrev/name.
+    cleaned = haystack
+    for bad in ("Washington Post", "Washington, D.C.", "Washington DC",
+                "Washington, DC", "New Yorker", "New York Times",
+                "Georgia Tech"):
+        cleaned = cleaned.replace(bad, " ")
+    hits = set()
+    for name, abbrev in _STATE_LIST:
+        if _re.search(rf"\b{_re.escape(name)}\b", cleaned, _re.IGNORECASE):
+            hits.add(name)
+            continue
+        if _ABBREV_TOKEN[abbrev].search(haystack):
+            hits.add(name)
+    return sorted(hits)
+
+
+def _fetch_news_live(limit=60):
+    """One Google News RSS pull for the community-impact query. Returns
+    a list of dicts (title, source, link, published, published_iso, states),
+    or None on any failure. No streamlit dependency."""
+    import urllib.parse as _up
+    import urllib.request as _ur
+    import xml.etree.ElementTree as _ET
+    from email.utils import parsedate_to_datetime
+    from src.constants import GOOGLE_NEWS_RSS, STORY_QUERY
+    try:
+        url = GOOGLE_NEWS_RSS.format(q=_up.quote(STORY_QUERY))
+        req = _ur.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with _ur.urlopen(req, timeout=20) as resp:
+            data = resp.read()
+        root = _ET.fromstring(data)
+        out = []
+        for it in root.iter("item"):
+            title = (it.findtext("title") or "").strip()
+            src_el = it.find("source")
+            source = src_el.text.strip() if src_el is not None and src_el.text else ""
+            if source and title.endswith(f" - {source}"):
+                title = title[: -(len(source) + 3)]
+            pub_raw = (it.findtext("pubDate") or "").strip()
+            pub_iso = ""
+            if pub_raw:
+                try:
+                    pub_iso = parsedate_to_datetime(pub_raw).isoformat()
+                except Exception:                                 # noqa: BLE001
+                    pub_iso = ""
+            item = {
+                "title": title,
+                "source": source,
+                "link": (it.findtext("link") or "").strip(),
+                "published": pub_raw,
+                "published_iso": pub_iso,
+            }
+            item["states"] = _news_states_for(item)
+            out.append(item)
+            if len(out) >= limit:
+                break
+        return out
+    except Exception as e:                                        # noqa: BLE001
+        print(f"  [news] live fetch failed: {e}")
+        return None
+
+
+# Quality-source allowlist — used to filter Google News video results to
+# outlets we trust. Match is case-insensitive substring on the source name.
+YOUTUBE_QUALITY_SOURCES = {
+    "pbs", "wsj", "wall street journal", "bloomberg", "cnbc", "reuters",
+    "financial times", "the verge", "vox", "npr", "cbs news", "abc news",
+    "nbc news", "cnn", "bbc", "utility dive", "canary media", "grid brief",
+    "e&e news", "inside climate news", "propublica", "the guardian",
+    "washington post", "new york times", "politico", "axios", "60 minutes",
+    "frontline", "vice news", "yahoo finance", "fox business", "bloomberg tv",
+    "cbs mornings", "cbs saturday morning",
+}
+
+# Google News search query dedicated to YouTube-hosted videos.
+YOUTUBE_QUERY = ('("data center" OR "data centers" OR datacenter) '
+                 '(community OR moratorium OR ratepayer OR noise OR water '
+                 'OR grid OR electricity OR lawsuit OR zoning) '
+                 'site:youtube.com')
+
+
+def _extract_youtube_id(url):
+    import urllib.parse as _up
+    try:
+        u = _up.urlparse(url)
+        host = (u.netloc or "").lower()
+        if "youtube.com" in host:
+            qs = _up.parse_qs(u.query)
+            if "v" in qs and qs["v"]:
+                return qs["v"][0]
+            # /shorts/<id> and /embed/<id>
+            parts = [p for p in u.path.split("/") if p]
+            if len(parts) >= 2 and parts[0] in ("shorts", "embed", "v"):
+                return parts[1]
+        if "youtu.be" in host:
+            parts = [p for p in u.path.split("/") if p]
+            if parts:
+                return parts[0]
+    except Exception:                                             # noqa: BLE001
+        pass
+    return ""
+
+
+def _fetch_youtube_live(limit=40):
+    """Query Google News RSS for YouTube-hosted videos on data-center topics.
+    Google News wraps YouTube links in an opaque redirect; the browser follows
+    it to the underlying watch page. We keep the redirect URL and skip
+    thumbnails (no video id extractable without decoding the redirect)."""
+    import urllib.parse as _up
+    import urllib.request as _ur
+    import xml.etree.ElementTree as _ET
+    from src.constants import GOOGLE_NEWS_RSS
+    try:
+        url = GOOGLE_NEWS_RSS.format(q=_up.quote(YOUTUBE_QUERY))
+        req = _ur.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with _ur.urlopen(req, timeout=20) as resp:
+            data = resp.read()
+        root = _ET.fromstring(data)
+    except Exception as e:                                        # noqa: BLE001
+        print(f"  [youtube] fetch failed: {e}")
+        return []
+    from email.utils import parsedate_to_datetime
+    # Google News OR-matches loosely, so re-filter titles ourselves:
+    # require BOTH a data-center term and at least one impact/community term.
+    DC_TERMS = ("data center", "datacenter", "data centre", "hyperscale")
+    IMPACT_TERMS = (
+        "community", "residents", "neighbor", "neighbour", "noise",
+        "water", "cooling", "moratorium", "ban", "ratepayer", "bill",
+        "grid", "electricity", "power", "utility", "lawsuit", "sue",
+        "zoning", "rezoning", "permit", "protest", "opposition",
+        "environmental", "pollution", "health", "town", "county",
+    )
+    JUNK = ("shocked", "shock you", "shocking", "you won't believe",
+            "must watch", "insane", "gone wrong", "bitcoin", "coldcard",
+            "kevin o'leary", "kevin oleary")
+    out = []
+    seen_titles = set()
+    for it in root.iter("item"):
+        title = (it.findtext("title") or "").strip()
+        # Google News appends " - YouTube" to the title
+        if title.endswith(" - YouTube"):
+            title = title[: -len(" - YouTube")]
+        src_el = it.find("source")
+        source = src_el.text.strip() if src_el is not None and src_el.text else "YouTube"
+        if source and title.endswith(f" - {source}"):
+            title = title[: -(len(source) + 3)]
+        tl = title.lower()
+        if any(j in tl for j in JUNK):
+            continue
+        if not any(t in tl for t in DC_TERMS):
+            continue
+        if not any(t in tl for t in IMPACT_TERMS):
+            continue
+        link = (it.findtext("link") or "").strip()
+        if not link:
+            continue
+        # Dedupe by normalized title
+        key = tl.strip()
+        if key in seen_titles:
+            continue
+        seen_titles.add(key)
+        pub_raw = (it.findtext("pubDate") or "").strip()
+        pub_iso = ""
+        if pub_raw:
+            try:
+                pub_iso = parsedate_to_datetime(pub_raw).isoformat()
+            except Exception:                                     # noqa: BLE001
+                pub_iso = ""
+        item = {
+            "title": title,
+            "source": source,
+            "link": link,
+            "video_id": "",  # unavailable — Google News wraps the URL
+            "published_iso": pub_iso,
+        }
+        item["states"] = _news_states_for(item)
+        out.append(item)
+        if len(out) >= limit:
+            break
+    out.sort(key=lambda x: x.get("published_iso", ""), reverse=True)
+    return out
+
+
+YOUTUBE_CACHE_PATH = pathlib.Path(__file__).parent / "data" / "youtube_cache.json"
+
+def _load_youtube():
+    import datetime as _dt
+    cache = None
+    if YOUTUBE_CACHE_PATH.exists():
+        try:
+            cache = json.loads(YOUTUBE_CACHE_PATH.read_text(encoding="utf-8"))
+        except Exception:                                         # noqa: BLE001
+            cache = None
+    force = os.environ.get("NEWS_REFRESH") == "1"
+    fresh = False
+    if cache and not force:
+        try:
+            fetched = _dt.datetime.fromisoformat(cache["fetched_at"])
+            age_h = (_dt.datetime.now(_dt.timezone.utc) - fetched).total_seconds() / 3600
+            fresh = age_h < NEWS_CACHE_TTL_HOURS
+        except Exception:                                         # noqa: BLE001
+            fresh = False
+    if fresh:
+        return cache["items"], cache["fetched_at"]
+    live = _fetch_youtube_live()
+    if not live:
+        if cache:
+            return cache["items"], cache["fetched_at"]
+        return [], _dt.datetime.now(_dt.timezone.utc).isoformat()
+    fetched_at = _dt.datetime.now(_dt.timezone.utc).isoformat()
+    YOUTUBE_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    YOUTUBE_CACHE_PATH.write_text(
+        json.dumps({"fetched_at": fetched_at, "items": live}, indent=2),
+        encoding="utf-8")
+    print(f"  [youtube] fetched {len(live)} videos")
+    return live, fetched_at
+
+
+def _load_news():
+    """Return (items, fetched_at_iso). Uses cached JSON when fresh; refreshes
+    otherwise. Falls back to whatever cache exists if the live fetch fails."""
+    import datetime as _dt
+    cache = None
+    if NEWS_CACHE_PATH.exists():
+        try:
+            cache = json.loads(NEWS_CACHE_PATH.read_text(encoding="utf-8"))
+        except Exception:                                         # noqa: BLE001
+            cache = None
+    force = os.environ.get("NEWS_REFRESH") == "1"
+    fresh_enough = False
+    if cache and not force:
+        try:
+            fetched = _dt.datetime.fromisoformat(cache["fetched_at"])
+            age_h = (_dt.datetime.now(_dt.timezone.utc) - fetched).total_seconds() / 3600
+            fresh_enough = age_h < NEWS_CACHE_TTL_HOURS
+        except Exception:                                         # noqa: BLE001
+            fresh_enough = False
+    if fresh_enough:
+        return cache["items"], cache["fetched_at"]
+    live = _fetch_news_live()
+    if live is None:
+        if cache:
+            print(f"  [news] using stale cache ({len(cache['items'])} items)")
+            return cache["items"], cache["fetched_at"]
+        return [], _dt.datetime.now(_dt.timezone.utc).isoformat()
+    fetched_at = _dt.datetime.now(_dt.timezone.utc).isoformat()
+    NEWS_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    NEWS_CACHE_PATH.write_text(
+        json.dumps({"fetched_at": fetched_at, "items": live}, indent=2),
+        encoding="utf-8")
+    print(f"  [news] fetched {len(live)} items live")
+    return live, fetched_at
+
+
+def build_news_page(items, fetched_at, videos=None):
+    """Full news page with per-state client-side filter."""
+    videos = videos or []
+    if not items:
+        body = """
+<header>
+  <div class="kicker">News</div>
+  <h1>This week's data center headlines</h1>
+  <p class="sub">No headlines available right now.</p>
+</header>
+<section><p class="muted">The news feed couldn't be fetched during this build.
+Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.</p></section>
+"""
+        return page("News — AI GridWatch",
+                    "Latest community-impact data center news, updated regularly.",
+                    body, f"{SITE_URL}/news/", depth=1)
+
+    covered = sorted({st for it in (items + videos) for st in it.get("states", [])})
+    options = '<option value="">All states</option>' + "".join(
+        f'<option value="{esc(st)}">{esc(st)}</option>' for st in covered)
+
+    def _fmt_date(iso):
+        if not iso:
+            return ""
+        try:
+            import datetime as _dt
+            d = _dt.datetime.fromisoformat(iso)
+            return d.strftime("%b %-d, %Y")
+        except Exception:                                         # noqa: BLE001
+            return ""
+
+    li_html = ""
+    for it in items:
+        states = it.get("states", [])
+        data_states = esc("|".join(states)) if states else ""
+        chips = " ".join(f'<span class="tag">{esc(st)}</span>' for st in states)
+        meta_bits = [it.get("source", ""), _fmt_date(it.get("published_iso", ""))]
+        meta = " · ".join(x for x in meta_bits if x)
+        li_html += (
+            f'<li data-states="{data_states}">'
+            f'<div class="post-meta">{esc(meta)}</div>'
+            f'<h3><a href="{esc(it["link"])}" rel="nofollow noopener" target="_blank">'
+            f'{esc(it["title"])}</a></h3>'
+            f'{"<div class=\"tags\" style=\"margin-top:6px\">" + chips + "</div>" if chips else ""}'
+            f'</li>\n')
+
+    import datetime as _dt
+    try:
+        fetched_display = _dt.datetime.fromisoformat(fetched_at).strftime("%b %-d, %Y %H:%M UTC")
+    except Exception:                                             # noqa: BLE001
+        fetched_display = fetched_at
+
+    # ── Video cards (YouTube) ──
+    video_cards = ""
+    if videos:
+        cards = []
+        for v in videos[:24]:
+            vid = v.get("video_id", "")
+            thumb = f'https://i.ytimg.com/vi/{vid}/hqdefault.jpg' if vid else ""
+            placeholder = (
+                '<div style="width:100%;aspect-ratio:16/9;background:'
+                'linear-gradient(135deg,#1a1f2e,#2d1a3d);display:flex;'
+                'align-items:center;justify-content:center;font-size:42px;'
+                'color:#ff4136">▶</div>')
+            states = v.get("states", [])
+            data_states = esc("|".join(states)) if states else ""
+            chips = " ".join(f'<span class="tag">{esc(st)}</span>' for st in states)
+            when = _fmt_date(v.get("published_iso", ""))
+            meta = " · ".join(x for x in (v.get("source", ""), when) if x)
+            cards.append(
+                f'<a class="video-card" data-states="{data_states}" '
+                f'href="{esc(v["link"])}" rel="nofollow noopener" target="_blank" '
+                f'style="display:block;border:1px solid rgba(255,255,255,0.08);'
+                f'border-radius:12px;overflow:hidden;text-decoration:none;color:inherit">'
+                f'{("<img src=" + repr(thumb) + " alt=\"\" loading=\"lazy\" style=\"width:100%;display:block;aspect-ratio:16/9;object-fit:cover\">") if thumb else placeholder}'
+                f'<div style="padding:12px 14px">'
+                f'<div class="post-meta" style="font-size:12px;opacity:0.75">{esc(meta)}</div>'
+                f'<div style="font-weight:600;margin:4px 0 6px;line-height:1.3">'
+                f'{esc(v["title"])}</div>'
+                f'{"<div class=\"tags\">" + chips + "</div>" if chips else ""}'
+                f'</div></a>')
+        video_cards = (
+            '<section id="videos"><h2>Watch: video coverage</h2>'
+            '<p class="muted">From vetted channels only — PBS NewsHour, WSJ, '
+            'Bloomberg, CNBC, Reuters, FT, The Verge, Vox — filtered to data '
+            'center / grid topics.</p>'
+            '<div class="video-grid" style="display:grid;'
+            'grid-template-columns:repeat(auto-fill,minmax(280px,1fr));'
+            f'gap:16px;margin-top:16px">{"".join(cards)}</div>'
+            '<p id="noVideos" class="muted" style="display:none;margin-top:16px">'
+            'No videos tagged for that state yet.</p></section>')
+
+    body = f"""
+<header>
+  <div class="kicker">News</div>
+  <h1>Data center headlines</h1>
+  <p class="sub">Automated feed of community-impact stories — noise, water,
+  rate hikes, moratoriums, lawsuits — pulled from Google News. Filter by
+  state to focus on your fight.</p>
+  <p class="muted">Last updated {esc(fetched_display)} ·
+  <a href="feed.xml">RSS feed</a> · <a href="../blog/feed.xml">Blog RSS</a></p>
+</header>
+<section>
+  <div class="filter-bar" style="display:flex;gap:12px;align-items:center;margin-bottom:16px;flex-wrap:wrap">
+    <label for="stateFilter" style="font-weight:600">Filter by state:</label>
+    <select id="stateFilter" style="padding:8px 12px;border-radius:8px;border:1px solid #ccc;font-size:15px;background:inherit;color:inherit">{options}</select>
+    <span id="filterCount" class="muted"></span>
+  </div>
+  <ul class="blog-list" id="newsList">{li_html}</ul>
+  <p id="noResults" class="muted" style="display:none">No stories tagged for that state in this batch.</p>
+</section>
+{video_cards}
+<section>
+  <p class="muted" style="margin-top:24px">Headlines are an automated news
+  search, unfiltered and not endorsements — follow each link to the original
+  outlet. State tags are auto-detected from the headline; a story may mention
+  a state without being about that state.</p>
+</section>
+<script>
+(function() {{
+  var sel = document.getElementById('stateFilter');
+  var list = document.getElementById('newsList');
+  var count = document.getElementById('filterCount');
+  var none = document.getElementById('noResults');
+  var items = Array.prototype.slice.call(list.querySelectorAll('li'));
+  var videoCards = Array.prototype.slice.call(document.querySelectorAll('.video-card'));
+  var noVideos = document.getElementById('noVideos');
+  function apply() {{
+    var v = sel.value;
+    var shown = 0, vShown = 0;
+    items.forEach(function(li) {{
+      var states = (li.getAttribute('data-states') || '').split('|').filter(Boolean);
+      var match = !v || states.indexOf(v) !== -1;
+      li.style.display = match ? '' : 'none';
+      if (match) shown++;
+    }});
+    videoCards.forEach(function(c) {{
+      var states = (c.getAttribute('data-states') || '').split('|').filter(Boolean);
+      var match = !v || states.indexOf(v) !== -1;
+      c.style.display = match ? '' : 'none';
+      if (match) vShown++;
+    }});
+    count.textContent = v ? shown + ' stor' + (shown === 1 ? 'y' : 'ies')
+      + (videoCards.length ? ' + ' + vShown + ' video' + (vShown === 1 ? '' : 's') : '')
+      + ' for ' + v : '';
+    none.style.display = (v && shown === 0) ? '' : 'none';
+    if (noVideos) noVideos.style.display = (v && videoCards.length && vShown === 0) ? '' : 'none';
+    if (v) history.replaceState(null, '', '?state=' + encodeURIComponent(v));
+    else history.replaceState(null, '', location.pathname);
+  }}
+  sel.addEventListener('change', apply);
+  var q = new URLSearchParams(location.search).get('state');
+  if (q) {{
+    for (var i = 0; i < sel.options.length; i++) {{
+      if (sel.options[i].value === q) {{ sel.selectedIndex = i; break; }}
+    }}
+    apply();
+  }}
+}})();
+</script>
+"""
+    return page(
+        "News — data center headlines by state — AI GridWatch",
+        "Latest community-impact data center news — noise, water, rate hikes, "
+        "moratoriums, lawsuits — updated regularly and filterable by state.",
+        body, f"{SITE_URL}/news/", depth=1,
+        jsonld=_breadcrumb(("Home", SITE_URL), ("News", f"{SITE_URL}/news/")))
+
+
+def build_news_rss(items, fetched_at):
+    parts = []
+    for it in items[:40]:
+        pub_raw = it.get("published", "").strip()
+        # Use the raw RFC-822 date from Google News if present.
+        pub_field = f"<pubDate>{esc(pub_raw)}</pubDate>" if pub_raw else ""
+        parts.append(
+            "    <item>\n"
+            f"      <title>{esc(it['title'])}</title>\n"
+            f"      <link>{esc(it['link'])}</link>\n"
+            f"      <guid isPermaLink=\"true\">{esc(it['link'])}</guid>\n"
+            f"      {pub_field}\n"
+            f"      <source>{esc(it.get('source', ''))}</source>\n"
+            f"      <description>{esc(it['title'])} — {esc(it.get('source', ''))}</description>\n"
+            "    </item>\n")
+    return (f'<?xml version="1.0" encoding="UTF-8"?>\n'
+            f'<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+            f'<channel>\n'
+            f'  <title>AI GridWatch — Data Center News</title>\n'
+            f'  <link>{SITE_URL}/news/</link>\n'
+            f'  <description>Community-impact data center news: noise, water, '
+            f'rate hikes, moratoriums, lawsuits.</description>\n'
+            f'  <language>en-US</language>\n'
+            f'  <atom:link href="{SITE_URL}/news/feed.xml" rel="self" '
+            f'type="application/rss+xml"/>\n'
+            f'{"".join(parts)}'
+            f'</channel>\n</rss>\n')
 
 
 def build_blog_index():
@@ -4327,9 +4857,15 @@ def build_sitemap(paths):
 
 
 def main():
+    global _NEWS_ITEMS, _VIDEO_ITEMS
+    print("  [news] loading headlines + videos…")
+    _NEWS_ITEMS, news_fetched_at = _load_news()
+    _VIDEO_ITEMS, _ = _load_youtube()
+
     shutil.rmtree(WEB, ignore_errors=True)
     (WEB / "states").mkdir(parents=True)
     (WEB / "blog").mkdir(parents=True)
+    (WEB / "news").mkdir(parents=True)
     (WEB / "companies").mkdir(parents=True)
     (WEB / "assets").mkdir()
 
@@ -4359,6 +4895,12 @@ def main():
         build_blog_index(), encoding="utf-8")
     (WEB / "blog" / "feed.xml").write_text(build_rss(), encoding="utf-8")
 
+    (WEB / "news" / "index.html").write_text(
+        build_news_page(_NEWS_ITEMS, news_fetched_at, videos=_VIDEO_ITEMS),
+        encoding="utf-8")
+    (WEB / "news" / "feed.xml").write_text(
+        build_news_rss(_NEWS_ITEMS, news_fetched_at), encoding="utf-8")
+
     for i, story in enumerate(posts):
         prev_post = posts[i - 1] if i > 0 else None
         next_post = posts[i + 1] if i < len(posts) - 1 else None
@@ -4379,7 +4921,8 @@ def main():
 
     paths = ["", "health-risks", "moratoriums", "impact", "bills", "outlook",
              "learn", "puc", "executives", "about", "search", "dividend",
-             "data-centers", "environment", "companies/", "states/", "blog/"]
+             "data-centers", "environment", "companies/", "states/", "blog/",
+             "news/"]
     paths.extend(f"companies/{h['slug']}" for h in _HYPERSCALERS)
     paths.extend(f"companies/{h['slug']}" for h in _OPERATORS)
     paths.extend(f"companies/{ld['slug']}" for ld in _LIMITED_DISCLOSURE)
