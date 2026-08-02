@@ -4424,7 +4424,10 @@ def build_environment():
          "Consumed Grid %", "Grid CFE %"],
         g_cfe_rows)
 
-    pue_df = GOOGLE_PUE_SITES_DF.sort_values("pue_2025")
+    # Secondary key on `location` keeps ties (many sites share the same PUE)
+    # in a deterministic order across runs — pandas' default sort is not
+    # stable, and the drift was churning web/environment.html on every rebuild.
+    pue_df = GOOGLE_PUE_SITES_DF.sort_values(["pue_2025", "location"])
     g_pue_rows = []
     for _, row in pue_df.iterrows():
         g_pue_rows.append((
