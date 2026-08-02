@@ -1551,11 +1551,6 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
             f'{"<div class=\"tags\" style=\"margin-top:6px\">" + chips + "</div>" if chips else ""}'
             f'</li>\n')
 
-    # Map theme display name → the underlying Google News query. Used to build
-    # the Reddit link-out server-side so we don't need to duplicate NEWS_THEMES
-    # in JS.
-    theme_queries_json = json.dumps({k: v for k, v in NEWS_THEMES.items()})
-
     import datetime as _dt
     try:
         fetched_display = _dt.datetime.fromisoformat(fetched_at).strftime("%b %-d, %Y %H:%M UTC")
@@ -1640,16 +1635,8 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
   background:rgba(255,255,255,.04); color:var(--ink); font-size:14px;
   min-width:180px; }}
 .feed-controls input[type=search] {{ flex:1; min-width:200px; }}
-.feed-controls .source {{ display:flex; gap:14px; }}
-.feed-controls .source label {{ color:var(--ink); font-weight:600;
-  cursor:pointer; }}
-.feed-controls .source input {{ margin-right:6px; }}
 .tag-theme {{ background:rgba(45,212,191,.14); color:var(--teal);
   border:1px solid rgba(45,212,191,.28); }}
-#redditNotice {{ background:rgba(255,138,76,.08); border:1px solid #ff8a4c;
-  border-radius:12px; padding:14px 16px; margin:14px 0;
-  font-size:14px; color:var(--ink); }}
-#redditNotice a {{ color:#ffb37a; font-weight:600; }}
 </style>
 
 {top_html}
@@ -1657,10 +1644,6 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
 <section id="browse">
   <h2>Browse the feed</h2>
   <div class="feed-controls">
-    <div class="row source" role="radiogroup" aria-label="Source">
-      <label><input type="radio" name="source" value="news" checked>📰 News</label>
-      <label><input type="radio" name="source" value="reddit">👥 Reddit</label>
-    </div>
     <div class="row">
       <label>Theme
         <select id="themeFilter">{theme_options}</select>
@@ -1678,13 +1661,6 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
     </div>
   </div>
 
-  <div id="redditNotice" hidden>
-    <p style="margin:0 0 8px"><strong>Reddit sentiment</strong> is user posts —
-    anecdotal and unverified; a read on local sentiment, not reporting.
-    Rendering Reddit threads inline lives in the Streamlit app.</p>
-    <p style="margin:0"><a id="redditLink" href="https://www.reddit.com/search/?q=data+center&amp;sort=new" target="_blank" rel="noopener">Open this search on Reddit &rarr;</a> · <a href="{APP_URL}" target="_blank" rel="noopener">Open the full sentiment view in the app &rarr;</a></p>
-  </div>
-
   <ul class="blog-list" id="newsList">{li_html}</ul>
   <p id="noResults" class="muted" style="display:none">No stories match those filters. Try a broader theme or clear the keyword.</p>
 </section>
@@ -1700,7 +1676,6 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
 
 <script>
 (function() {{
-  var THEME_QUERIES = {theme_queries_json};
   var themeSel = document.getElementById('themeFilter');
   var stateSel = document.getElementById('stateFilter');
   var kw = document.getElementById('keywordFilter');
@@ -1708,32 +1683,11 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
   var count = document.getElementById('filterCount');
   var none = document.getElementById('noResults');
   var reset = document.getElementById('resetFilters');
-  var sourceInputs = document.querySelectorAll('input[name=source]');
-  var redditNotice = document.getElementById('redditNotice');
-  var redditLink = document.getElementById('redditLink');
   var items = Array.prototype.slice.call(list.querySelectorAll('li'));
   var videoCards = Array.prototype.slice.call(document.querySelectorAll('.video-card'));
   var noVideos = document.getElementById('noVideos');
 
-  function currentSource() {{
-    for (var i = 0; i < sourceInputs.length; i++) {{
-      if (sourceInputs[i].checked) return sourceInputs[i].value;
-    }}
-    return 'news';
-  }}
-
-  function updateRedditLink() {{
-    var theme = themeSel.value;
-    var state = stateSel.value;
-    var kwVal = (kw.value || '').trim();
-    var q = THEME_QUERIES[theme] || 'data center residents';
-    if (state) q += ' ' + state;
-    if (kwVal) q += ' ' + kwVal;
-    redditLink.href = 'https://www.reddit.com/search/?q=' +
-      encodeURIComponent(q) + '&sort=new';
-  }}
-
-  function applyNews() {{
+  function apply() {{
     var theme = themeSel.value;
     var state = stateSel.value;
     var kwVal = (kw.value || '').trim().toLowerCase();
@@ -1775,32 +1729,13 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
     history.replaceState(null, '', qStr ? ('?' + qStr) : location.pathname);
   }}
 
-  function apply() {{
-    var src = currentSource();
-    var isReddit = src === 'reddit';
-    redditNotice.hidden = !isReddit;
-    list.hidden = isReddit;
-    none.hidden = isReddit;
-    if (noVideos) noVideos.hidden = isReddit;
-    if (isReddit) {{
-      updateRedditLink();
-      count.textContent = 'Reddit view opens in a new tab.';
-    }} else {{
-      applyNews();
-    }}
-  }}
-
   themeSel.addEventListener('change', apply);
   stateSel.addEventListener('change', apply);
   kw.addEventListener('input', apply);
-  Array.prototype.forEach.call(sourceInputs, function(el) {{
-    el.addEventListener('change', apply);
-  }});
   reset.addEventListener('click', function() {{
     themeSel.value = '';
     stateSel.value = '';
     kw.value = '';
-    sourceInputs[0].checked = true;
     apply();
   }});
 
