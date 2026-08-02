@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-02T12:09:15.915639+00:00",
+  "fetched_at": "2026-08-02T12:36:28.367055+00:00",
   "items": [
     {
       "title": "Residents want a judge to pause Lowell data center expansion",
@@ -12,14 +12,12 @@
     },
     {
       "title": "Goochland residents rebuff data center developer Tract ahead of permit application",
-      "source": "Virginia Mercury",
+      "source": "virginiamercury.com",
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQb0VQRmlVUmhSTDI5VFhLTjVZMzVuOEF3RFdTaGNuWDV1OG1uY0dMUWo2LWtSM1k1eTI2cHZzbmJiejNFQnZ6LTNfRHBBbXRmblotem9zVTU0NzlYQTNxUElwSzBEdnhmMUoxWlRWalNZMTZIb09uQnFiVXBwdHNJYk1xc1NLSlVQQ3Ezc3lUT20wZmhGNWFKTHFodVJGNFJKZFNNcFNTSFhLQ0FpRnhBVHhmal9NWlZBYklZdUJDQQ?oc=5",
       "published": "Mon, 27 Jul 2026 09:29:40 GMT",
       "published_iso": "2026-07-27T09:29:40+00:00",
       "age_days": 6,
-      "states": [
-        "Virginia"
-      ]
+      "states": []
     },
     {
       "title": "Michigan Residents Sue Over AI Data Center Noise\u2014They\u2019re Not Alone",
@@ -34,7 +32,7 @@
     },
     {
       "title": "Water supply concerns remain top hindrance for AI data centers, says FAU expert",
-      "source": "wlrn.org",
+      "source": "WLRN",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPWGJGNjRxejFPdHE4X1kwX2U2WFRqVy0xeVJSYUlZaGN2ZzNKTDViaWJnS3BibWhhOHBhdU5pTW5KVWlIZUpLMHh4dUxQdTZpbEMzeEhsX3lMUWhsUE5Da2FCa1Z3OE03ekNsU3FHSkRTSUk5NTNQRkFwSHRwSnE4dENwSHVfQXFYcktIbUZoX1FScXd6MjNz?oc=5",
       "published": "Thu, 30 Jul 2026 10:00:00 GMT",
       "published_iso": "2026-07-30T10:00:00+00:00",
@@ -74,7 +72,7 @@
     },
     {
       "title": "In pausing data centers, Minnesota courts did what local officials wouldn\u2019t",
-      "source": "minnpost.com",
+      "source": "MinnPost",
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUHMxYzRodHNFRlZqS2NVZlhVdk42SWlrT3EzLWRpdzk1anJDUlA4cW9rVTF2aGFfRXdhVXY4a0RZQWZSRUgtY3YzenZYTXNBWFJXaWx1clFDcnl0VnVVcV9zejBXM1M2TEE0d0Rta0ZNc2xEeERjMzRwNGlHS0xuekt5SVhHaHI5cXNYZ05SWGZxRWFNY2xVcTlVYU5hdVhDV2RMazF0X1kwX1E2a3l4eDg2T2FxXzgxOU9kZUN3TTdIRTQ?oc=5",
       "published": "Mon, 27 Jul 2026 10:00:00 GMT",
       "published_iso": "2026-07-27T10:00:00+00:00",
@@ -219,11 +217,20 @@
     },
     {
       "title": "Data centers show the downside to federal land ownership",
-      "source": "The Washington Post",
+      "source": "washingtonpost.com",
       "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQTWhvWmE0dnNvQUJUUHhTRXhLLUNrS1VpNWV1dTc0MndSd1dGVnFIMjdJWWJSZ1lJSVhqT3NMci1DS3ZTQjJmRlNnb015NmJWaVh4SUp5RjdoUWVPRURhYThpal9ScGxKM2JtYkRxU3hnTThrQTFfclFjX25vSWZmejdTMzNCdGhsdEJsVUpTVlk3Y2p5Q0tncVFZMTZBRUwyYklfTkptdGJ6RWZkcmlJMGNNbENZdTMzR2hGTHpqRUw2dDlaaGRYM0ZYSDlZRVlqZEVxaTJB?oc=5",
       "published": "Wed, 29 Jul 2026 05:30:00 GMT",
       "published_iso": "2026-07-29T05:30:00+00:00",
       "age_days": 4,
+      "states": []
+    },
+    {
+      "title": "Capacity limits push Amherst residents outside as zoning board hears data center proposal",
+      "source": "cleveland19.com",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOQ0l3MkRMTTh4S1ZtZ2xNTXJ4Z0JPTUNHSVR0OFNMaExBNU9WOTE0ZUUxbVIxZFNUVkQ4Rnl1eVp6WjRPbnhfekYxVklLUnNTN2NpbnhWYS05NTZMRGRVQkl0eFpWa05JbWFhM0tTVW1HRllrRXE4Sk1MWS0yWUw2TnU5MUQybnlZd0RmdktXUDcxZEt1WllMMXdWLXN2YzNvTWJYakRoYWhZSXhwT0VQbHpaTlNFc2xPMjZxaE9KWURnMkhG0gHYAUFVX3lxTE5jOFlUSjJJOGdwRS1razZTeFlvUGwyalNIcDMzX1o1ZEVwU3NXZGYxVnFrbDdoWmZJaFhueURHb3l6eTFYdGR2WEJWMFp4RGhhNkUtRWxWX3ZXWUJrel9sWDFHZk9TVVljSnNKM3VxbFlOVmRjNzFJUktFUUo0ZnBXUjhlS2ZKcW1PN3BoWmxPSHlmR2dyYnduS0NHVjBienRhWXNJOFdNZVhsbnRZWGhKS3NZQlRjMjAyTFg0eFhFSmVPS1FDYkNqZlJfTlJWQnI3VzRBQXVITQ?oc=5",
+      "published": "Thu, 30 Jul 2026 03:25:00 GMT",
+      "published_iso": "2026-07-30T03:25:00+00:00",
+      "age_days": 3,
       "states": []
     },
     {
@@ -253,15 +260,6 @@
       "published": "Thu, 30 Jul 2026 17:43:52 GMT",
       "published_iso": "2026-07-30T17:43:52+00:00",
       "age_days": 2,
-      "states": []
-    },
-    {
-      "title": "Capacity limits push Amherst residents outside as zoning board hears data center proposal",
-      "source": "Cleveland 19 News",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOQ0l3MkRMTTh4S1ZtZ2xNTXJ4Z0JPTUNHSVR0OFNMaExBNU9WOTE0ZUUxbVIxZFNUVkQ4Rnl1eVp6WjRPbnhfekYxVklLUnNTN2NpbnhWYS05NTZMRGRVQkl0eFpWa05JbWFhM0tTVW1HRllrRXE4Sk1MWS0yWUw2TnU5MUQybnlZd0RmdktXUDcxZEt1WllMMXdWLXN2YzNvTWJYakRoYWhZSXhwT0VQbHpaTlNFc2xPMjZxaE9KWURnMkhG0gHYAUFVX3lxTE5jOFlUSjJJOGdwRS1razZTeFlvUGwyalNIcDMzX1o1ZEVwU3NXZGYxVnFrbDdoWmZJaFhueURHb3l6eTFYdGR2WEJWMFp4RGhhNkUtRWxWX3ZXWUJrel9sWDFHZk9TVVljSnNKM3VxbFlOVmRjNzFJUktFUUo0ZnBXUjhlS2ZKcW1PN3BoWmxPSHlmR2dyYnduS0NHVjBienRhWXNJOFdNZVhsbnRZWGhKS3NZQlRjMjAyTFg0eFhFSmVPS1FDYkNqZlJfTlJWQnI3VzRBQXVITQ?oc=5",
-      "published": "Thu, 30 Jul 2026 03:25:00 GMT",
-      "published_iso": "2026-07-30T03:25:00+00:00",
-      "age_days": 3,
       "states": []
     },
     {
@@ -304,7 +302,7 @@
     },
     {
       "title": "\u2018We will not be bullied\u2019: Plymouth Township pushes back against proposed Conshohocken data center",
-      "source": "WHYY",
+      "source": "whyy.org",
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQZHVsekpKZFlmdHVrLVlaaF81UEJ2WXlwTjZYX256NWwzR1AtY2xHR3ppM1J5dlBWUVdnNUt3MlEwSkZQZW1zS1I0U2pDamxtZTNaZGd6Q1FzSXVEbkxfaG5iM1JKRzByVkVJTFlXcmxfUXNBUUM2UWxhRkFJZ2gwUjZ4aFg3UTRsdlVtTUxDVV9uSGRn?oc=5",
       "published": "Mon, 27 Jul 2026 21:32:34 GMT",
       "published_iso": "2026-07-27T21:32:34+00:00",
@@ -351,11 +349,11 @@
     },
     {
       "title": "Falls Township moves to update zoning to curb data centers",
-      "source": "phillyburbs.com",
+      "source": "PhillyBurbs",
       "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxON3A1dWNROUxUbFQ3ZnVSeGt0blJlNjBjb192YkV0ZnZRQURxWGFuMUVBSTJXSGNyWUN3c19fRHBSNFZnSXI1b0dvTm14VU9HZ3VLUVhJNlJ0U1U5a0xGU21IUDJ3UGlmYm13ZXJSc2ZGUjkxNXpnT0pNMXhXamRpZEhMejZiZEVzLUJ1aW83dHEtUVozT080S1ZkRVdUeEdPdFBac0tDaGxNTmgyWUJvQnBXUWk1Tm54SjFVM0hQZVR1TWdWYUZuN3hMN1NsbE1UbW92OTFYUEVMTGF4THhVYlRMcWNYRnZSUGhEbDZyNA?oc=5",
       "published": "Fri, 31 Jul 2026 12:15:00 GMT",
       "published_iso": "2026-07-31T12:15:00+00:00",
-      "age_days": 1,
+      "age_days": 2,
       "states": []
     },
     {
@@ -463,7 +461,7 @@
     },
     {
       "title": "Residents along pipeline route for data center worry about safety, property values, and lack of transparency",
-      "source": "bgindependentmedia.org",
+      "source": "BG Independent News",
       "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNbktKU0FfNnZRekZLS1lxTDR1R0ZWR0dOblV3OXBKNlRWWEFBZjVfSnZDVVFhRkp3TGxJV0RUTi1wemVsS1FKRWxMblpWaXF1aENQMlZEZHFtb0NYR3VoZXRmTzlMeXhJVWlQZkZyOWFOS3Q1Z1dlY2hEdlB2dXl3dVpYeFh1SEJ6bWRHOXYyMDE2LWw3V3A4blZTQm51MUpxUFV4djV4U1YyZDlEM3RSbEJGS3NCTTdZT0J2MnhDXzI3Mk1VZUIzVnFBS2NzLUpw?oc=5",
       "published": "Wed, 29 Jul 2026 23:46:21 GMT",
       "published_iso": "2026-07-29T23:46:21+00:00",
@@ -496,6 +494,17 @@
       "published_iso": "2026-07-31T11:12:00+00:00",
       "age_days": 2,
       "states": []
+    },
+    {
+      "title": "Competing visions emerge over data center regulations",
+      "source": "Kentucky New Era",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQRHVOdXUxc1lLbDczRlRGYUwteXVZY2RnbkpNTWhHM0NQYlpjbWRQYWdNNHYxSlduZ0FsVFcxN3AtX3ZuMV8xcTFraDVfSHRTYlJwR09UQTJWWUJlMHBmWGxRa2k3VzRLUmRHR1ZaRllJV2hVYzBBQmNWVnJUOXJEenJDNkIxR1lQVFh4b0ZuZ0Nwc3dSd1dYTTJJZWNlSFU?oc=5",
+      "published": "Thu, 30 Jul 2026 05:00:00 GMT",
+      "published_iso": "2026-07-30T05:00:00+00:00",
+      "age_days": 3,
+      "states": [
+        "Kentucky"
+      ]
     },
     {
       "title": "Residents sue Guadalupe County over proposed data center tax incentives, alleging violations of state law",
@@ -532,17 +541,6 @@
       "published_iso": "2026-07-28T00:17:45+00:00",
       "age_days": 5,
       "states": []
-    },
-    {
-      "title": "Competing visions emerge over data center regulations",
-      "source": "Kentucky New Era",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQRHVOdXUxc1lLbDczRlRGYUwteXVZY2RnbkpNTWhHM0NQYlpjbWRQYWdNNHYxSlduZ0FsVFcxN3AtX3ZuMV8xcTFraDVfSHRTYlJwR09UQTJWWUJlMHBmWGxRa2k3VzRLUmRHR1ZaRllJV2hVYzBBQmNWVnJUOXJEenJDNkIxR1lQVFh4b0ZuZ0Nwc3dSd1dYTTJJZWNlSFU?oc=5",
-      "published": "Thu, 30 Jul 2026 05:00:00 GMT",
-      "published_iso": "2026-07-30T05:00:00+00:00",
-      "age_days": 3,
-      "states": [
-        "Kentucky"
-      ]
     },
     {
       "title": "Residents press Commission to reject data center",
@@ -720,7 +718,7 @@
       },
       {
         "title": "Echoes of the Past in Pennsylvania Coal Towns\u2019 Fight Against Data Centers",
-        "source": "Inside Climate News",
+        "source": "insideclimatenews.org",
         "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOT3UzMFpCNWVmYWRyWERXMURfUU11cG8yZ3hRaDQ2MDF3TGZURktxaXRQSm5QZk9LOXpyR1JaaElRdHQyb19BWkNiNFZjMTVNUkRrV0pzRjRRVXlXRHk3eUtzeklOYndZYVhTOUFySE5hV1NsT3RCemJVaXVpbVZXejRDMzkzX3hCcEQ4OUtyckRQOWlq?oc=5",
         "published": "Thu, 02 Jul 2026 07:00:00 GMT",
         "published_iso": "2026-07-02T07:00:00+00:00",
@@ -810,7 +808,7 @@
       },
       {
         "title": "El Paso seeks statewide protections for residents from data center costs",
-        "source": "El Paso Times",
+        "source": "elpasotimes.com",
         "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNeGhHUFJhYUM1U0w5T1YxZTdQRzZrd2FGbkV6NWZlTGZzOVdRS20yYWN5d2EyelNzVTZtZTdPRzhJVHBEbm5VS2tTdjdWVHJTSTJ4ZWdQSnJ5SXczcDVVdFg0T25QeGNrT2J5c1diVzRnd0daRkowLVdGaG5uNlFwZ0xHeDVtRk54MF9Lc0FXR0xqWU5OSnZ2N3psMUlyaVVrT2J1c3hpSkJ3bmxubDNjaWE1X1JUTVp5RWdXMWZlaGtkTDB0?oc=5",
         "published": "Wed, 29 Jul 2026 17:03:00 GMT",
         "published_iso": "2026-07-29T17:03:00+00:00",
@@ -830,7 +828,7 @@
       },
       {
         "title": "FERC Defends Data Center Push as Democrats Warn of Ratepayer Costs",
-        "source": "legis1.com",
+        "source": "Legis1",
         "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5TZWNQMzIwM0cwQXZyRkNTclM3UzgzZ2Q3d2lhcWVUaURaQnozWHB6bFJxbnlpdi1TSTBpZHBzUlRGMzJGanVIMU56WXUyZFR5bmVVbXdvUGtQai1wRWN6Y1JkdUc3MzJKdnV6eU9lXzNOZ1kwWUxnQXNYWWw?oc=5",
         "published": "Wed, 29 Jul 2026 07:41:17 GMT",
         "published_iso": "2026-07-29T07:41:17+00:00",
@@ -862,7 +860,7 @@
       },
       {
         "title": "Texas Pushes AI Data Centers to Pay Their Own Grid Costs",
-        "source": "Data Center Knowledge",
+        "source": "datacenterknowledge.com",
         "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPYUx0REg4MUpMUVB4NnhMclQ2YUcxTGRqdkEzN0hPeGtGcWRuS1IzY2tyRHJ6ckJYNGlVdm1qaTEzaHJQY0MxaE9NdFJmV3psY0lESy1hbkVleE4zdy0wbG9xWW45YlZ6S01Lb0tVNTdZSlJTVUQyanM3bGNnMlc3eGo2MUNyektLd3c2eVRGc1RkWV9ac0V6MHBxWlZfUzI0TUx5bFlPdw?oc=5",
         "published": "Mon, 27 Jul 2026 15:44:05 GMT",
         "published_iso": "2026-07-27T15:44:05+00:00",
@@ -898,7 +896,7 @@
         "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5tblR3LS1ZcEp1WnI2eWROZF9GRGdsRXlOaGZnblB4eDhlM285UUMtaHFxSVZuOVljM0dFTjFTTFFEQ0RaY0JnTnJjNkFIMXZpczRSbWJJVUMzeVRPbVloZmJUYXVSOUZrbkI5Y0tFSEFfR1huZXZacHdyQQ?oc=5",
         "published": "Wed, 29 Jul 2026 12:26:34 GMT",
         "published_iso": "2026-07-29T12:26:34+00:00",
-        "age_days": 3,
+        "age_days": 4,
         "states": [
           "Kentucky",
           "Pennsylvania"
@@ -929,7 +927,7 @@
       },
       {
         "title": "N.J. Gov. Sherrill signs legislation to make data centers pay for infrastructure, energy",
-        "source": "WHYY",
+        "source": "whyy.org",
         "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOR05oc0RFZUFWSkpPeUNTYmJ2TUxDQzRXRWtVYmRLRWFPSTg1RGJtcHVRUG1aUlNhVENXN2VUN2pENklYQXJKblRjZDFaMml1TF9EWkN1N2Q1SjZTUFljNk5YdnZabFdSeXJhWW4ydjYxVW51VWwxQ0tzalh4LWtSaUJsakZWemRLZFFQLTRR?oc=5",
         "published": "Fri, 10 Jul 2026 07:00:00 GMT",
         "published_iso": "2026-07-10T07:00:00+00:00",
@@ -971,7 +969,7 @@
       },
       {
         "title": "White House Expands Data Center Ratepayer Pledge as Congress Moves to Codify Protections",
-        "source": "POWER Magazine",
+        "source": "powermag.com",
         "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPNF9pRGxlUTVSS0JJTC1jZW5za3NUWWZNN0V6Mkx0ZGdXTEU1LVNnRGdBZ0JGUDdCZ3gwUzFGU1dkOEpGaUkyRUpHUU9fMWdWZS1rc1VjR0VTX0ZTWGdSaG1nTTFmWGVHNFZqMnZ6MkIxRHoyLWEzRm40X0ZrekpyUGN3YTA1WU1SaV9jRmZoTE00ZHRBb0xUWFJZdHFJSEFJNmV6eHZCNDdONnJySzZMR3FkQ3Y?oc=5",
         "published": "Thu, 23 Jul 2026 22:31:03 GMT",
         "published_iso": "2026-07-23T22:31:03+00:00",
@@ -980,12 +978,12 @@
         "theme": "Electricity bills & grid strain"
       },
       {
-        "title": "House Committee Approves Package to Address Data Centers\u2019 Growing Energy Demands",
-        "source": "Broadband Breakfast",
-        "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOclpXWkVLZ0RqYV84OFVDNTk2ZFROdUJTZGJPelhYbW1OTHIxQVo4ODJXc3pndFhEZHVjR1M1dXNkM1hPdWFJQjdYa1A0Z215VndmbnVWRHZTWjYwc0JrQWh4TEYxVHhLb2hIRXJYX3VXSWZnbl9TYUxLanNFTU4zZVZ0d0JPTWExc1Mza2pWQ3dCT2ZuN3F4LXhTcUZ5ZE9rclJrUmY4SHhzSU5MWkdiWA?oc=5",
-        "published": "Wed, 22 Jul 2026 07:00:00 GMT",
-        "published_iso": "2026-07-22T07:00:00+00:00",
-        "age_days": 11,
+        "title": "Duke Rate Case Underscores Complexities of Data Center Grid Impacts",
+        "source": "RTO Insider",
+        "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNazNyMzFiZUwycWRpWkE3Ylp5QTF4Y08yUlcyVWQtNVpyNGFDdzJFdGN5SUhGamFObUJnVzhXNmx3d2xHMFlZdlBlUmQ2NnNGS1NBZHF0RkNYSWR3Q3hOOXg2OER2R2w1MjI5SFJJZXd5U2haZzF2UUF5MFpNZ3dHSUI0T0xLbWtkQzREVGFJV0M?oc=5",
+        "published": "Sun, 26 Jul 2026 17:50:04 GMT",
+        "published_iso": "2026-07-26T17:50:04+00:00",
+        "age_days": 6,
         "states": [],
         "theme": "Electricity bills & grid strain"
       },
@@ -1025,7 +1023,7 @@
       },
       {
         "title": "Not enough water for UK\u2019s datacentre plans, trade body says",
-        "source": "The Guardian",
+        "source": "theguardian.com",
         "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQX1RENlYwUlRlb2x6T08zVWFOTnRoSkNtLWluZXpxMWVVeWZKemt1bUt3eWNPZmJRYldVNFRHSFlLS2VnWTBRcnVpYWItX1Y0MVhHM2x1V1lyU1FlNmFfMjJWQ0pZV2VrU3NlbDBIRmZqOUpxMy1YWExJMVNXaFBSZ2NXNVUwVk9WNE1iZUlyYm9fakpORUpGRjdjYThYRm9KT2tVb2E5UmxxYUQ2c1E?oc=5",
         "published": "Tue, 21 Jul 2026 07:00:00 GMT",
         "published_iso": "2026-07-21T07:00:00+00:00",
@@ -1055,14 +1053,12 @@
       },
       {
         "title": "Data centers can guzzle serious water. As some Nebraskans worry, tech giants seek solutions.",
-        "source": "Nebraska Examiner",
+        "source": "nebraskaexaminer.com",
         "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOZVZiUWIyb2dQdmJmRHV6VmplTS02anFaVllwdE9lamhyQkFqbzlld20wSGxQejF4UE0zSi1FTlBWMEdfT0Q0bnpqbGhodnNvS2ZudUVsYl90MWw2T2F0VWV3MjNIWGZ5aFhPbzl5blhIUXhPZ2hrWm9xS2EyNHJMTWVoX3IzR3hfS1owWFROQUVsTDNKbU9RY1doZWNieE8wNWlZSG9DbzFhbG9fWERncmVBUU9PdjdVbFVla3lCdmRYVms2bko2LUhn?oc=5",
         "published": "Thu, 09 Jul 2026 07:00:00 GMT",
         "published_iso": "2026-07-09T07:00:00+00:00",
         "age_days": 24,
-        "states": [
-          "Nebraska"
-        ],
+        "states": [],
         "theme": "Water use"
       },
       {
@@ -1077,7 +1073,7 @@
       },
       {
         "title": "Google's Nebraska data centers used 732 million gallons as drought fears mount",
-        "source": "Yahoo",
+        "source": "yahoo.com",
         "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMldoU29MbUwxTHAtanpJdjJROGZxc1FGY3RCMEtxQzYyUkxGV3BSZXhDaVdHLXc0bG5jRDZjSUtDRXVUaXlZd1RsRmxCN0pXdXFNYzcydktiOFFIYS1ZdjJnZkwtaEhrM2xrUjBEUHNLSUdOV2ZSQWpjVllwcDdfdE9rVzdxeEp6NzZjZnJNc2xpb2J0Qm1Oag?oc=5",
         "published": "Mon, 13 Jul 2026 07:00:00 GMT",
         "published_iso": "2026-07-13T07:00:00+00:00",
@@ -1165,14 +1161,12 @@
       },
       {
         "title": "Amid statewide drought conditions, data centers face same restrictions as all water customers",
-        "source": "Virginia Mercury",
+        "source": "virginiamercury.com",
         "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPXzY4LWR0TzE1YzhEY0FUMWY3LTJIYXZKRHBYVFFYUkVyZWQySWV5VWU2Zkx3dUdaQVByZVBHNUFReGxvU2FYbkluVDJJemRiNC1qWWFnS1V5VGpKdGFEQklHaS00WUp4UVN5LVNfTHpPMGcxTkNOa19WSjNUeVZZNUY4V3oyQkNPQkFoUjZSeFNESkRiQkI3M193UnZIbjVRbm5kbmlqQWJtT3VwTjB6ZHJVa0VDel9YdV91OUhRX2UyQXN5R2o4cU5qdHE?oc=5",
         "published": "Mon, 22 Jun 2026 07:00:00 GMT",
         "published_iso": "2026-06-22T07:00:00+00:00",
         "age_days": 41,
-        "states": [
-          "Virginia"
-        ],
+        "states": [],
         "theme": "Water use"
       },
       {
@@ -1189,7 +1183,7 @@
       },
       {
         "title": "Majority of US\u2019s new AI datacenters to be built on drought-hit land",
-        "source": "The Guardian",
+        "source": "theguardian.com",
         "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNQzZQbVpwMUx6TEFPNGdpT05LSXVGS2NCR0xac2lOeFRCWE1zT0pya21rMjdYeGlRWHdzZnhBbWdyQTAwbjB5eDlXVnlXQ2hUZFlnTk5HQ2pldEo1Wk1tT2ZNa1RhQjF2d3ExbWxfZmRTYnF5VGVfMV81NFRuOElxdA?oc=5",
         "published": "Mon, 08 Jun 2026 07:00:00 GMT",
         "published_iso": "2026-06-08T07:00:00+00:00",
@@ -1243,7 +1237,7 @@
       },
       {
         "title": "The Complete Story: The High-Stakes Battle Over \"Project Cosmos\" Data Center in Commerical Point",
-        "source": "sciotopost.com",
+        "source": "Scioto Post",
         "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPU0g1TXpEd3dmdzR4cDZhcFdISnhoYjBXYlZ1M3NwREVaQXZjNU1QbXZwNUthYVVJS0h3LXRZT2FKc3ZiX3FFY3lPY09oWXJSTS1fMGxDakJ2bVBGbFV5TmM4dXN4RWJDR1pYTnpMenFaMTBlMDhPSTFsQVNfUUN1SktEdmc4dGRHRE43TGctNnVKdEU4RTlHNVpjVHQwSktlVnlBZ2lQcDNDZWZiU2ZNeVk2eUZ6WTlzMU1NTy1n?oc=5",
         "published": "Sun, 19 Jul 2026 07:00:00 GMT",
         "published_iso": "2026-07-19T07:00:00+00:00",
@@ -1481,7 +1475,7 @@
       },
       {
         "title": "Data Center Noise Litigation 2026: Plaintiffs' Bar Targets AI Infrastructure With Nuisance and Negligence Claims",
-        "source": "crowell.com",
+        "source": "Crowell & Moring LLP",
         "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNRFJ6dGl5LXB6ZnFSaGxsc1ZWSDNGU0xySHFwajBOVjVhRW1vZmVwemgwMTFpSzFmQnVtOC1uOWtiZUpBcFlkYjZQcXpNQjdrLTVUVjhIa0htSXZwY01qbjNDc3dEY1UydXhKcWtwanVuSHRqX2ZYczctUHluV3VIUHN3eDViYXB6MnhUZG5leGpXdnpCa0NSVmMwVkVSalZMaEs3cE41ekFIQkhjMDhGQkVUS0JSekRmVlNJRUl3UVJvVHZFd1VlWVpEbXFEeTFEZHdLbURqVFJ0dXlz?oc=5",
         "published": "Wed, 29 Jul 2026 01:40:26 GMT",
         "published_iso": "2026-07-29T01:40:26+00:00",
@@ -1725,7 +1719,7 @@
       },
       {
         "title": "A state study found that data center tax break was Virginia's 2nd best incentive, producing $6.10 of labor income for every $1 in exemptions",
-        "source": "cardinalnews.org",
+        "source": "Cardinal News",
         "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOb01pMVdzQXNua1hvTnNMM1pHTUV5MXE2OExwQ0szSnN0RjlON3hWR0loQ0UxeTZyZUNmZnlUT29CWmVKa1BGbUFiSmlDOXVtSlczWVdwRWdCN3luckRjUkF3TEpGaTVxcW1HdDRPUlo4R2dBNngxSGt3UVlFeUFKOV9KSF8zeDhSakhsNnVGeEE2MEVmVEU3UXoteFdWamRQR3pGbDluVW5jV242ejdhN2lqRUpSU0JIZ1ZXOE5fVzdJNHdzcmNSRWdIc0dvY3F0blEtNUl5elNSbkZGeGI0TUFvRF80RU5HSG5Qb2VqZU9zMzh3ek9IclFqdmVmaTEtSUE?oc=5",
         "published": "Fri, 19 Jun 2026 07:00:00 GMT",
         "published_iso": "2026-06-19T07:00:00+00:00",
