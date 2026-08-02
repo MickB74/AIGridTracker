@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-02T13:48:57.724351+00:00",
+  "fetched_at": "2026-08-02T14:28:30.485172+00:00",
   "items": [
     {
       "title": "Data Center Noise",
@@ -16,16 +16,6 @@
       "video_id": "",
       "published_iso": "2026-08-01T03:25:03+00:00",
       "states": []
-    },
-    {
-      "title": "Virginia senator calls for data center moratorium",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBJN2wtM2h6R3VvRXdHbklYdmdyRmZKbzhfeFliTXBaSkxzYkNaelJCT002eUFrVXlBZHdTSjhJQ1hETzdrbENtbEJHYzQ1a29XSmRxQmZn?oc=5",
-      "video_id": "",
-      "published_iso": "2026-08-01T03:16:20+00:00",
-      "states": [
-        "Virginia"
-      ]
     },
     {
       "title": "Lexington planners recommend approval of new data center zoning rules for Fayette County",
@@ -312,6 +302,14 @@
       "states": [
         "Virginia"
       ]
+    },
+    {
+      "title": "Data Center Power Flow: From Utility Grid to Server Rack",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8ydEprNXlOeGdDeDlKd0ZTYXBhVFRoOWRPRGV0dUY4NkpoaFlVMjJZVjFWUksycXI1aF9MbWItRDdGX1pRdE9oT3BwOWZpZGNNa0ZLN3Jn?oc=5",
+      "video_id": "",
+      "published_iso": "2026-02-27T21:54:46+00:00",
+      "states": []
     },
     {
       "title": "I Live Next To Amazon's Largest Data Center. They're Stealing Our Water",
