@@ -51,6 +51,300 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── Questions to ask before approving a data center (checklist) ─────
+    {
+        "id": "questions-to-ask-data-center-checklist-2026",
+        "section": "stories",
+        "title": "Before You Approve a Data Center: 26 Questions Every Community Should Ask",
+        "date": _dt.date(2026, 8, 2),
+        "author": "GridWatch AI",
+        "tags": ["checklist", "community advocacy", "CBA", "negotiation",
+                 "public engagement", "NDAs", "decommissioning",
+                 "ratepayers", "process", "analysis"],
+        "summary": (
+            "A working synthesis of the checklists published by RFD-TV, "
+            "Public Knowledge, EDF, the AI Now Institute, and the Alliance "
+            "for the Great Lakes — collapsed into 26 questions, grouped by "
+            "topic, with the reason each one matters and what a good answer "
+            "looks like. Print it, bring it to the hearing, ask them all."
+        ),
+        "body": """\
+Half a dozen advocacy groups have published \"questions to ask a data center
+developer\" guides in the last six months. They mostly agree with each other
+— and that consensus is the point. When RFD-TV's rural readers, Public
+Knowledge's D.C. tech-policy shop, EDF's environmental lawyers, the AI Now
+Institute, and the Alliance for the Great Lakes all converge on the same
+questions, a community that walks into a hearing with those 26 questions is
+walking in with the current professional consensus of what a diligent local
+official is supposed to ask.
+
+This is that combined list. Each question has a **why it matters** line and
+a **what a good answer looks like** line — because a question you can't
+interpret is easy for a developer to deflect. Nothing here is exotic. What's
+exotic is asking them all before the ink is dry.
+
+**Sources synthesized:** RFD-TV
+([Tony St. James, Jul 2026](https://www.rfdtv.com/before-approving-a-data-center-experts-say-communities-should-ask-tough-questions)),
+Public Knowledge
+([Nat Purser, Apr 2026](https://publicknowledge.org/what-to-ask-when-a-data-center-comes-to-town/)),
+EDF Energy Exchange
+([Benson & Calhoun, Jul 2026](https://blogs.edf.org/energyexchange/2026/07/14/laying-the-foundation-communities-deserve-a-voice-in-the-data-center-boom/)),
+AI Now Institute community toolkit, and the Alliance for the Great Lakes
+[Community Checklist for Evaluating Data Center Impacts](https://greatlakes.org/wp-content/uploads/2026/03/AGL_CommCheck_EvalDataCenter_2026_Final.pdf).
+
+---
+
+### 1. Who pays for the infrastructure this facility demands?
+
+This is the single most important question and the one developers try
+hardest to compress into a soundbite. A hyperscale campus routinely requires
+new substations, new transmission lines, water main upgrades, road
+improvements, and often new generation capacity. All five sources agree that
+communities must ask, in writing, **who pays for each of those**.
+
+**1. Will the developer cover the cost of the new substation and any
+distribution upgrades — or will the utility recover them from all
+ratepayers?**
+*Why it matters:* Most large-load tariffs make the developer pay for
+\"direct\" upgrades but silently place \"shared\" upgrades into the general
+rate base. That's how a single tenant can raise everyone's bill.
+*What a good answer looks like:* A dollar figure, a cost-allocation clause
+in the tariff filing, and a public commitment to a **minimum bill floor** or
+**exit fee** if the tenant leaves early.
+
+**2. Who pays for new transmission lines built to serve the load?**
+*Why it matters:* Transmission is the biggest hidden subsidy in the current
+buildout. Louisiana's Meta deal put a \\$470M+ 60-mile line into Entergy's
+general rate base — costs shared across every household in the state
+([Alliance for Affordable Energy](https://www.all4energy.org/watchdog/meta-data-center-to-cause-entergy-bill-increase/)).
+*What a good answer looks like:* A signed cost-allocation agreement that
+names the developer as the sole beneficiary and assigns them the incremental
+cost.
+
+**3. What is the term of the developer's power contract vs. the payback
+period of the infrastructure being built?**
+*Why it matters:* A 15-year contract that requires 30 years of infrastructure
+means ratepayers own the second half. Meta/Entergy is the current textbook
+case.
+*What a good answer looks like:* Matched terms, or explicit stranded-asset
+protection paid for by the developer.
+
+**4. Has the developer signed a Large Load Interconnection Agreement, and
+can we see the tariff?**
+*Why it matters:* The public tariff is the enforceable document. Everything
+in press releases is marketing.
+*What a good answer looks like:* A publicly filed tariff and a link to the
+Public Utility Commission docket.
+
+### 2. Water
+
+**5. What is the projected annual and peak-summer water consumption, and in
+what units?**
+*Why it matters:* Peak summer draw is the number that stresses drought-year
+supplies. Annual averages hide it.
+*What a good answer looks like:* Gallons per day at peak, an independent
+hydrologist's review, and a commitment to publish actual consumption
+quarterly.
+
+**6. What is the water source — groundwater, municipal, surface, or
+recycled?**
+*Why it matters:* Groundwater draw depletes aquifers permanently in some
+basins; municipal draw competes with residential supply during shortages.
+*What a good answer looks like:* A signed water-supply agreement naming the
+source, volume, and priority tier during drought restrictions.
+
+**7. What cooling technology will be used — evaporative, closed-loop, dry
+cooling, or hybrid?**
+*Why it matters:* Cooling choice is the single biggest lever on water use.
+Dry cooling uses ~1% of the water of evaporative cooling but costs more
+capex.
+*What a good answer looks like:* Named technology, PUE and WUE
+(Water Usage Effectiveness) commitments, and a design review shared with
+the local water utility.
+
+**8. During declared drought restrictions, does the facility comply — or
+is it exempt?**
+*Why it matters:* Several state deals exempt data centers from local
+watering restrictions. Residents cutting lawn watering while a facility
+draws millions of gallons is a political flashpoint.
+*What a good answer looks like:* Explicit inclusion under existing drought
+ordinances with no carve-outs.
+
+### 3. Power, emissions, and backup generation
+
+**9. What is the peak electrical demand in megawatts, and over what
+ramp-up period?**
+*Why it matters:* The MW number determines everything downstream — grid
+upgrades, gas plants, capacity charges.
+*What a good answer looks like:* A single, unqualified number and a
+commissioning schedule.
+
+**10. How many backup generators, what fuel, how much on-site fuel storage,
+and how many hours per year of testing?**
+*Why it matters:* Backup generators are usually diesel or natural gas. Their
+testing schedule determines local air quality — and in some cases, they
+operate as \"non-emergency\" peakers that skip air-permit review entirely.
+xAI's Memphis facility ran gas turbines without air permits in a
+predominantly Black community with the region's highest pollution-related
+illness rates
+([Public Knowledge](https://publicknowledge.org/what-to-ask-when-a-data-center-comes-to-town/)).
+*What a good answer looks like:* Named generator count, fuel type, testing
+hours capped in the permit, and full air-permit compliance before turn-on.
+
+**11. Will the facility meet or exceed carbon-intensity benchmarks
+(hourly matching, 24/7 CFE), or only annual RECs?**
+*Why it matters:* Annual renewable energy credits let a developer claim
+\"100% renewable\" while running on gas at night. Hourly matching or 24/7
+carbon-free energy is the real test.
+*What a good answer looks like:* A public 24/7 CFE commitment with
+transparent reporting.
+
+### 4. Local economics — what your community actually gets
+
+**12. How many permanent jobs after construction ends, and at what wages?**
+*Why it matters:* Construction employment is real but temporary. Permanent
+staffing is usually 30–150 people for a hyperscale campus — often far less
+than the developer's talking points imply.
+*What a good answer looks like:* A contractually binding minimum, broken
+out by role and wage, with a local-hire clause.
+
+**13. What is the tax revenue projection AFTER all abatements, exemptions,
+and PILOT agreements?**
+*Why it matters:* Headline tax revenue is gross. Net revenue after
+abatements can be a small fraction. Prince William County, VA saw data
+center tax revenues rise from \\$6.5M to \\$166.4M between 2012 and 2023
+— but rate pressure on residents rose with it
+([Public Knowledge](https://publicknowledge.org/what-to-ask-when-a-data-center-comes-to-town/)).
+*What a good answer looks like:* A ten-year net-revenue projection signed
+by an independent economist, not the developer.
+
+**14. Is there a Community Benefit Agreement, and is it enforceable in
+the permit — not a side letter?**
+*Why it matters:* A CBA that lives outside the permit is a promise with no
+teeth. A CBA written into the permit is a legal obligation.
+*What a good answer looks like:* A CBA drafted as a permit condition, with
+clear remedies for breach and a named community signatory who can enforce
+it.
+
+### 5. Noise, land use, and daily life
+
+**15. What are the noise levels at the property boundary and at the nearest
+residence — measured in dBA and in low-frequency dB(C)?**
+*Why it matters:* dBA understates the low-frequency hum that data center
+cooling produces. The 24/7 low-frequency component is what triggers
+resident lawsuits.
+*What a good answer looks like:* Both measurements, with limits written
+into the permit and third-party acoustic monitoring after commissioning.
+
+**16. What are the setbacks from residences, schools, and hospitals?**
+*Why it matters:* Setbacks are the cheapest and most durable community
+protection. They cannot be negotiated away later.
+*What a good answer looks like:* Larger than the zoning minimum, in
+writing.
+
+**17. Can the developer expand the site later without triggering a new
+public review?**
+*Why it matters:* Many projects double or triple in size after approval.
+Language allowing \"as-of-right\" expansion is a trap door.
+*What a good answer looks like:* Every phase requires a fresh public
+hearing.
+
+### 6. Transparency and process
+
+**18. Has any local official been asked to sign an NDA?**
+*Why it matters:* The AI Now toolkit and every other source in this list
+say the same thing: **local officials should not sign NDAs**, and communities
+should adopt ordinances banning them.
+*What a good answer looks like:* No NDAs. Full disclosure of every entity
+in the developer's corporate structure — shell LLCs included.
+
+**19. Who exactly is the developer, and every parent, subsidiary, and
+tenant?**
+*Why it matters:* Data-center deals routinely surface through shell LLCs
+that hide the ultimate tenant (Amazon, Microsoft, Meta, xAI). Communities
+have a right to know who they are negotiating with.
+*What a good answer looks like:* A signed disclosure identifying the LLC
+chain and the anchor tenant. If the tenant is \"confidential,\" walk away.
+
+**20. Have there been public meetings advertised in advance, held at times
+when working people can attend?**
+*Why it matters:* A 2 p.m. Tuesday hearing is engineered for low turnout.
+*What a good answer looks like:* Minimum two evening or weekend meetings
+before approval, with 30 days' notice.
+
+**21. Will the developer publish an annual environmental impact report to
+the community — water, power, emissions, noise complaints — with third-party
+audit?**
+*Why it matters:* Without ongoing reporting, promises decay.
+*What a good answer looks like:* A binding reporting clause in the permit
+with a named enforcement path.
+
+### 7. Closure and accountability
+
+**22. Is a decommissioning plan required, filed, and approved BEFORE
+construction begins?**
+*Why it matters:* Data centers are built to depreciate over 10–15 years,
+but the buildings, transformers, batteries, and cooling infrastructure can
+sit derelict for decades if the operator walks. Fixing decommissioning
+after the fact is impossible.
+*What a good answer looks like:* A plan filed as a permit exhibit before
+groundbreaking.
+
+**23. Is there a financial assurance mechanism — a surety bond, escrow, or
+letter of credit — sized to the full removal cost?**
+*Why it matters:* Bankruptcy or sale can leave the community with an
+abandoned facility. Financial assurance is the only thing that protects
+against that.
+*What a good answer looks like:* A bond sized by an independent cost
+estimator, updated every five years for inflation.
+
+**24. Who is liable if the parent company sells, spins off, or goes
+bankrupt?**
+*Why it matters:* Corporate structures shift. Rights of first refusal on
+sale, successor-liability language, and personal guarantees from the
+parent are all standard tools.
+*What a good answer looks like:* Successor liability written into the CBA
+and land-use agreement.
+
+**25. Does the site have to be restored to its prior productive use — and
+who decides what \"restored\" means?**
+*Why it matters:* \"Restoration\" without a definition means slab and
+gravel. Farmland restoration means topsoil.
+*What a good answer looks like:* A written restoration standard signed by
+a state agricultural or land-use agency, not the developer.
+
+**26. What's the enforcement mechanism if any commitment is broken?**
+*Why it matters:* All of the above is worthless without a way to enforce
+it. Communities usually assume the county attorney will handle enforcement.
+County attorneys are usually not staffed for a multi-year fight with a
+Fortune 100 company.
+*What a good answer looks like:* Named enforcement authority, funded
+enforcement budget, and third-party arbitration.
+
+---
+
+### How to use this list
+
+You are unlikely to get 26 clean answers in one hearing. That's the point.
+Ask them, publish the ones the developer refuses to answer, and let the
+gap between the questions asked and the answers given become part of the
+public record.
+
+If your community is at the beginning of a fight, GridWatch has three tools
+that pair with this checklist:
+
+- **[Start Here wizard](/impact.html)** — pick your state, size the impact,
+  see what similar communities have won.
+- **The negotiation toolkit in the app** — CBA templates, model clauses,
+  and a meeting-prep generator that produces a downloadable brief for your
+  specific hearing.
+- **[PUC directory](/puc.html)** — every state Public Utility Commission
+  and where to file a comment on the tariff.
+
+The best time to ask these questions was before the developer picked your
+county. The second-best time is at the next public hearing.
+""",
+    },
     # ── Meta Hyperion (Richland Parish, LA) — who pays for 5 GW ──────────
     {
         "id": "meta-hyperion-louisiana-ratepayer-fight-2026",

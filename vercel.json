@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/questions-to-ask-data-center-checklist-2026",
+      "destination": "/blog/questions-to-ask-data-center-checklist-2026",
+      "permanent": true
+    },
+    {
       "source": "/meta-hyperion-louisiana-ratepayer-fight-2026",
       "destination": "/blog/meta-hyperion-louisiana-ratepayer-fight-2026",
       "permanent": true
