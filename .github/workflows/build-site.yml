@@ -6,10 +6,11 @@ name: Build static site
 # constants.py — the exact failure REGISTRY_PROVENANCE exists to prevent,
 # reintroduced at the deploy layer. This runs the build instead.
 #
-# The weekly schedule is not busywork: registry_provenance() computes dataset
-# age from date.today() at BUILD time, so on a static site the "1y 1m ago"
-# strings and stale flags freeze at whenever the site was last built. A
-# periodic rebuild keeps them honest without anyone touching the repo.
+# The daily schedule is not busywork: /news/ and the per-state headline
+# sections are fetched at BUILD time, so on a static site "this week's
+# headlines" freeze at whenever the site was last built — a weekly cadence
+# left them up to six days stale. Daily also keeps registry_provenance()'s
+# "1y 1m ago" strings and stale flags honest without anyone touching the repo.
 
 on:
   push:
@@ -19,7 +20,7 @@ on:
     # Actions log readable.)
     paths-ignore: ['web/**']
   schedule:
-    - cron: '17 6 * * 1'   # Mondays 06:17 UTC — refresh build-time dates
+    - cron: '17 10 * * *'  # daily 10:17 UTC (early-morning US) — fresh news
   workflow_dispatch:
 
 permissions:
@@ -51,7 +52,9 @@ jobs:
         run: python -c "import sys,pandas,fpdf,markdown; print('python', sys.version.split()[0]); print('pandas', pandas.__version__); print('fpdf2', fpdf.__version__); print('markdown', markdown.__version__)"
 
       - name: Build site
-        run: python build_site.py
+        # NEWS_REFRESH=1 bypasses the 6h news/YouTube cache TTL so every CI
+        # build ships current headlines regardless of the committed cache age.
+        run: NEWS_REFRESH=1 python build_site.py
 
       - name: Show what changed
         run: |
@@ -67,18 +70,17 @@ jobs:
       - name: Commit regenerated site
         if: github.ref == 'refs/heads/master'
         run: |
-          # Everything in web/, including the generated PDF, is byte-
-          # reproducible: build_site.py stamps the PDF in UTC, so a build here
-          # and a build on a laptop in any time zone agree. If this ever starts
-          # committing on every run again, something has become
-          # environment-dependent — check "Record build environment" above
-          # rather than adding an exclusion here.
-          if git diff --quiet -- web/; then
+          # The news/YouTube caches are committed alongside web/ so the repo
+          # records exactly what the published site was built from. Daily
+          # commits are expected now — the news feed changes every day. What
+          # would still be a bug is web/ churning when data/ *didn't* change;
+          # check "Record build environment" above if that starts happening.
+          if git diff --quiet -- web/ data/news_cache.json data/youtube_cache.json; then
             echo "Nothing to commit."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add web/
+          git add web/ data/news_cache.json data/youtube_cache.json
           git commit -m "chore: rebuild static site [skip ci]"
           git push
