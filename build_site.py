@@ -659,6 +659,22 @@ def build_state(state):
                 f'{esc(b["source"][:60])}</a> · as of {b["as_of"]}</p>'
                 f'</section>')
 
+    # Latest blog posts that mention this state
+    state_posts = _posts_for_state(state, limit=6)
+    stories_html = ""
+    if state_posts:
+        items = "\n".join(
+            f'<li><div class="post-meta">{p["date"].strftime("%b %-d, %Y")}</div>'
+            f'<h3><a href="../blog/{p["id"]}.html">'
+            f'{esc(p["title"].replace(chr(92) + "$", "$"))}</a></h3>'
+            f'<p class="summary">{esc(p["summary"].replace(chr(92) + "$", "$"))}</p></li>'
+            for p in state_posts)
+        stories_html = (
+            f'<section><h2>Latest stories about {esc(state)}</h2>'
+            f'<ul class="blog-list">{items}</ul>'
+            f'<p><a class="btn ghost" href="../blog/?state={esc(state)}">'
+            f'All {esc(state)} posts &rarr;</a></p></section>')
+
     # Municipal league
     muni = STATE_MUNI_LEAGUES.get(abbrev)
     muni_html = ""
@@ -689,6 +705,7 @@ def build_state(state):
 {dcmap_html}
 {cba_html}
 {officials_html}
+{stories_html}
 {muni_html}
 <section>
   <h2>A data center was proposed near you?</h2>
@@ -937,17 +954,75 @@ def _sorted_posts():
     return sorted(BLOG_STORIES, key=lambda s: s["date"], reverse=True)
 
 
+# Build a (state name, abbrev) list from STATE_PUCS_DF so we can auto-detect
+# which posts mention which states. Two-letter abbrevs are matched only as
+# whole tokens preceded by a comma/space (e.g. "Ashburn, VA") to avoid the
+# classic "OR/IN/OK" false positives inside prose.
+_STATE_LIST = [(r["state"], r["abbrev"]) for _, r in STATE_PUCS_DF.iterrows()]
+
+import re as _re
+_ABBREV_TOKEN = {
+    abbrev: _re.compile(rf"(?:,\s*|\bstate\s+of\s+){_re.escape(abbrev)}\b"
+                        rf"|\b{_re.escape(abbrev)}(?=\s+(?:H\.?B\.?|S\.?B\.?|PUC|PSC))")
+    for _, abbrev in _STATE_LIST
+}
+
+def _post_states(story):
+    """Return sorted list of state names mentioned in a post's title/summary/body/tags."""
+    cached = story.get("_states")
+    if cached is not None:
+        return cached
+    haystack = " ".join([
+        story.get("title", ""),
+        story.get("summary", ""),
+        story.get("body", ""),
+        " ".join(story.get("tags", [])),
+    ])
+    hits = set()
+    # Strip out well-known non-state uses of state names before matching.
+    cleaned = haystack
+    for bad in ("Washington Post", "Washington, D.C.", "Washington DC",
+                "Washington, DC", "New Yorker", "New York Times",
+                "Georgia Tech"):
+        cleaned = cleaned.replace(bad, " ")
+    for name, abbrev in _STATE_LIST:
+        if _re.search(rf"\b{_re.escape(name)}\b", cleaned, _re.IGNORECASE):
+            hits.add(name)
+            continue
+        # Fall back to abbrev only in tight postal-style contexts
+        if _ABBREV_TOKEN[abbrev].search(haystack):
+            hits.add(name)
+    story["_states"] = sorted(hits)
+    return story["_states"]
+
+
+def _posts_for_state(state_name, limit=None):
+    matches = [s for s in _sorted_posts() if state_name in _post_states(s)]
+    return matches[:limit] if limit else matches
+
+
 def build_blog_index():
     posts = _sorted_posts()
+    # Collect the set of states that actually appear in at least one post so
+    # the dropdown doesn't offer states with zero results.
+    covered_states = sorted({st for s in posts for st in _post_states(s)})
+    options = '<option value="">All states</option>' + "".join(
+        f'<option value="{esc(st)}">{esc(st)}</option>' for st in covered_states)
     items = ""
     for s in posts:
         title_clean = s["title"].replace("\\$", "$")
         summary_clean = s["summary"].replace("\\$", "$")
+        states = _post_states(s)
+        data_states = esc("|".join(states)) if states else ""
+        state_chips = " ".join(
+            f'<span class="tag">{esc(st)}</span>' for st in states)
         items += (
-            f'<li><div class="post-meta">{s["date"].strftime("%b %-d, %Y")}'
-            f"</div>"
+            f'<li data-states="{data_states}">'
+            f'<div class="post-meta">{s["date"].strftime("%b %-d, %Y")}</div>'
             f'<h3><a href="{s["id"]}.html">{esc(title_clean)}</a></h3>'
-            f'<p class="summary">{esc(summary_clean)}</p></li>\n'
+            f'<p class="summary">{esc(summary_clean)}</p>'
+            f'{"<div class=\"tags\" style=\"margin-top:6px\">" + state_chips + "</div>" if state_chips else ""}'
+            f'</li>\n'
         )
     body = f"""
 <header>
@@ -958,8 +1033,48 @@ def build_blog_index():
   your electric bill.</p>
 </header>
 <section>
-  <ul class="blog-list">{items}</ul>
+  <div class="filter-bar" style="display:flex;gap:12px;align-items:center;margin-bottom:16px;flex-wrap:wrap">
+    <label for="stateFilter" style="font-weight:600">Filter by state:</label>
+    <select id="stateFilter" style="padding:8px 12px;border-radius:8px;border:1px solid #ccc;font-size:15px;background:inherit;color:inherit">{options}</select>
+    <span id="filterCount" class="muted"></span>
+  </div>
+  <ul class="blog-list" id="blogList">{items}</ul>
+  <p id="noResults" class="muted" style="display:none">No posts tagged for that state yet.</p>
 </section>
+<script>
+(function() {{
+  var sel = document.getElementById('stateFilter');
+  var list = document.getElementById('blogList');
+  var count = document.getElementById('filterCount');
+  var none = document.getElementById('noResults');
+  var items = Array.prototype.slice.call(list.querySelectorAll('li'));
+  function apply() {{
+    var v = sel.value;
+    var shown = 0;
+    items.forEach(function(li) {{
+      var states = (li.getAttribute('data-states') || '').split('|').filter(Boolean);
+      var match = !v || states.indexOf(v) !== -1;
+      li.style.display = match ? '' : 'none';
+      if (match) shown++;
+    }});
+    count.textContent = v ? shown + ' post' + (shown === 1 ? '' : 's') + ' for ' + v : '';
+    none.style.display = (v && shown === 0) ? '' : 'none';
+    if (v) {{
+      history.replaceState(null, '', '?state=' + encodeURIComponent(v));
+    }} else {{
+      history.replaceState(null, '', location.pathname);
+    }}
+  }}
+  sel.addEventListener('change', apply);
+  var q = new URLSearchParams(location.search).get('state');
+  if (q) {{
+    for (var i = 0; i < sel.options.length; i++) {{
+      if (sel.options[i].value === q) {{ sel.selectedIndex = i; break; }}
+    }}
+    apply();
+  }}
+}})();
+</script>
 """
     return page(
         "Blog — AI GridWatch",
