@@ -52,6 +52,7 @@ from src.constants import (
     SOURCES, registry_provenance, has_value,
     IEA_OUTLOOK, DC_FORECASTS, DC_FORECASTS_US,
     PEW_RURAL_2026, PEW_STATE_COUNTS,
+    NEWS_THEMES, STORY_ANGLES, STORY_IMPACT_WEIGHTS,
 )
 from src.pdf_pack import build_health_pdf
 from src.us_map_data import US_MAP_PATHS, US_MAP_LABELS, US_MAP_VIEWBOX
@@ -1095,50 +1096,126 @@ def _news_states_for(item):
     return sorted(hits)
 
 
-def _fetch_news_live(limit=60):
-    """One Google News RSS pull for the community-impact query. Returns
-    a list of dicts (title, source, link, published, published_iso, states),
-    or None on any failure. No streamlit dependency."""
+def _fetch_google_news_rss(query, limit=60):
+    """Fetch and parse one Google News RSS query. Returns a list of item dicts
+    (title/source/link/published/published_iso/age_days) or [] on failure. No
+    streamlit dependency, no ranking, no theme/state tagging — pure I/O."""
     import urllib.parse as _up
     import urllib.request as _ur
     import xml.etree.ElementTree as _ET
+    import datetime as _dt
     from email.utils import parsedate_to_datetime
-    from src.constants import GOOGLE_NEWS_RSS, STORY_QUERY
+    from src.constants import GOOGLE_NEWS_RSS
     try:
-        url = GOOGLE_NEWS_RSS.format(q=_up.quote(STORY_QUERY))
+        url = GOOGLE_NEWS_RSS.format(q=_up.quote(query))
         req = _ur.Request(url, headers={"User-Agent": "Mozilla/5.0"})
         with _ur.urlopen(req, timeout=20) as resp:
             data = resp.read()
         root = _ET.fromstring(data)
-        out = []
-        for it in root.iter("item"):
-            title = (it.findtext("title") or "").strip()
-            src_el = it.find("source")
-            source = src_el.text.strip() if src_el is not None and src_el.text else ""
-            if source and title.endswith(f" - {source}"):
-                title = title[: -(len(source) + 3)]
-            pub_raw = (it.findtext("pubDate") or "").strip()
-            pub_iso = ""
-            if pub_raw:
-                try:
-                    pub_iso = parsedate_to_datetime(pub_raw).isoformat()
-                except Exception:                                 # noqa: BLE001
-                    pub_iso = ""
-            item = {
-                "title": title,
-                "source": source,
-                "link": (it.findtext("link") or "").strip(),
-                "published": pub_raw,
-                "published_iso": pub_iso,
-            }
-            item["states"] = _news_states_for(item)
-            out.append(item)
-            if len(out) >= limit:
-                break
-        return out
     except Exception as e:                                        # noqa: BLE001
-        print(f"  [news] live fetch failed: {e}")
+        print(f"  [news] fetch failed for query {query!r}: {e}")
+        return []
+    now = _dt.datetime.now(_dt.timezone.utc)
+    out = []
+    for it in root.iter("item"):
+        title = (it.findtext("title") or "").strip()
+        src_el = it.find("source")
+        source = src_el.text.strip() if src_el is not None and src_el.text else ""
+        if source and title.endswith(f" - {source}"):
+            title = title[: -(len(source) + 3)]
+        pub_raw = (it.findtext("pubDate") or "").strip()
+        pub_iso = ""
+        age_days = None
+        if pub_raw:
+            try:
+                parsed = parsedate_to_datetime(pub_raw)
+                pub_iso = parsed.isoformat()
+                age_days = (now - parsed).days
+            except Exception:                                     # noqa: BLE001
+                pub_iso = ""
+                age_days = None
+        out.append({
+            "title": title,
+            "source": source,
+            "link": (it.findtext("link") or "").strip(),
+            "published": pub_raw,
+            "published_iso": pub_iso,
+            "age_days": age_days,
+        })
+        if len(out) >= limit:
+            break
+    return out
+
+
+def _fetch_news_live(limit=60):
+    """Broad community-impact query used by state pages and the flat feed.
+    Returns a list of items (each tagged with `states`) or None on failure."""
+    from src.constants import STORY_QUERY
+    items = _fetch_google_news_rss(STORY_QUERY, limit=limit)
+    if not items:
         return None
+    for it in items:
+        it["states"] = _news_states_for(it)
+    return items
+
+
+def _story_angle_build(title):
+    """Build-time port of src.services.news._story_angle (no streamlit dep)."""
+    t = (title or "").lower()
+    for keys, emoji, blurb in STORY_ANGLES:
+        if any(k in t for k in keys):
+            return emoji, blurb
+    return "⚠️", "A community is pushing back on a nearby data center."
+
+
+def _rank_stories_build(items, top_n=5):
+    """Build-time port of src.services.news.rank_stories. Score = recency +
+    summed weights of high-stakes keywords in the title. Returns new dicts
+    annotated with score/angle_emoji/angle_blurb, most-important first."""
+    scored = []
+    for it in items or []:
+        title = it.get("title") or ""
+        t = title.lower()
+        weight = sum(w for kw, w in STORY_IMPACT_WEIGHTS.items() if kw in t)
+        age = it.get("age_days")
+        recency = 3.0 if age is None else max(0.0, 3.0 - 0.4 * age)
+        emoji, blurb = _story_angle_build(title)
+        scored.append({**it, "score": round(weight + recency, 2),
+                       "angle_emoji": emoji, "angle_blurb": blurb})
+    scored.sort(key=lambda s: s["score"], reverse=True)
+    return scored[:top_n]
+
+
+def _fetch_themes_live(limit_per_theme=20):
+    """One RSS pull per NEWS_THEMES entry. Returns dict of theme→items (each
+    tagged with `states`). Missing themes get an empty list, never omitted."""
+    out = {}
+    for theme, query in NEWS_THEMES.items():
+        items = _fetch_google_news_rss(query, limit=limit_per_theme)
+        for it in items:
+            it["states"] = _news_states_for(it)
+            it["theme"] = theme
+        out[theme] = items
+        print(f"  [news] theme {theme!r}: {len(items)} items")
+    return out
+
+
+def _rank_top_stories_from_themes(themes, max_age_days=7, top_n=5):
+    """Pool every theme's items, dedupe by link, gate to the last week, rank.
+    Uses the theme pulls (already fetched) instead of a separate STORY_QUERY
+    call — one fewer HTTP round-trip per build."""
+    seen, pooled = set(), []
+    for items in themes.values():
+        for it in items:
+            link = it.get("link", "")
+            if not link or link in seen:
+                continue
+            age = it.get("age_days")
+            if age is not None and age > max_age_days:
+                continue
+            seen.add(link)
+            pooled.append(it)
+    return _rank_stories_build(pooled, top_n=top_n)
 
 
 # Quality-source allowlist — used to filter Google News video results to
@@ -1298,8 +1375,11 @@ def _load_youtube():
 
 
 def _load_news():
-    """Return (items, fetched_at_iso). Uses cached JSON when fresh; refreshes
-    otherwise. Falls back to whatever cache exists if the live fetch fails."""
+    """Return (items, themes, top_stories, fetched_at_iso). Uses cached JSON
+    when fresh; refreshes otherwise. Falls back to whatever cache exists if
+    the live fetch fails. `items` is the flat community-impact feed used by
+    state pages and the RSS; `themes` maps NEWS_THEMES keys to their per-theme
+    feeds; `top_stories` are ranked most-important-first for the last 7 days."""
     import datetime as _dt
     cache = None
     if NEWS_CACHE_PATH.exists():
@@ -1316,27 +1396,62 @@ def _load_news():
             fresh_enough = age_h < NEWS_CACHE_TTL_HOURS
         except Exception:                                         # noqa: BLE001
             fresh_enough = False
+    # Older caches don't have `themes`/`top_stories` — treat those as stale
+    # even within TTL so the new UX has data to render.
+    if fresh_enough and ("themes" not in cache or "top_stories" not in cache):
+        fresh_enough = False
     if fresh_enough:
-        return cache["items"], cache["fetched_at"]
-    live = _fetch_news_live()
-    if live is None:
+        return (cache["items"], cache["themes"], cache["top_stories"],
+                cache["fetched_at"])
+
+    items = _fetch_news_live()
+    themes = _fetch_themes_live()
+    if items is None and not any(themes.values()):
+        # Total network failure: fall back to whatever we had.
         if cache:
-            print(f"  [news] using stale cache ({len(cache['items'])} items)")
-            return cache["items"], cache["fetched_at"]
-        return [], _dt.datetime.now(_dt.timezone.utc).isoformat()
+            print(f"  [news] using stale cache ({len(cache.get('items', []))} items)")
+            return (cache.get("items", []),
+                    cache.get("themes", {}),
+                    cache.get("top_stories", []),
+                    cache["fetched_at"])
+        return [], {}, [], _dt.datetime.now(_dt.timezone.utc).isoformat()
+
+    if items is None:
+        items = []
+    top_stories = _rank_top_stories_from_themes(themes)
     fetched_at = _dt.datetime.now(_dt.timezone.utc).isoformat()
     NEWS_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
     NEWS_CACHE_PATH.write_text(
-        json.dumps({"fetched_at": fetched_at, "items": live}, indent=2),
+        json.dumps({
+            "fetched_at": fetched_at,
+            "items": items,
+            "themes": themes,
+            "top_stories": top_stories,
+        }, indent=2),
         encoding="utf-8")
-    print(f"  [news] fetched {len(live)} items live")
-    return live, fetched_at
+    theme_total = sum(len(v) for v in themes.values())
+    print(f"  [news] fetched {len(items)} broad + {theme_total} across "
+          f"{len(themes)} themes; top {len(top_stories)} ranked")
+    return items, themes, top_stories, fetched_at
 
 
-def build_news_page(items, fetched_at, videos=None):
-    """Full news page with per-state client-side filter."""
+def build_news_page(items, fetched_at, videos=None, themes=None,
+                    top_stories=None):
+    """News page with three layers of live intel: ranked top-stories block,
+    theme/state/keyword-filterable browse feed, and video coverage. Themes
+    are pooled and deduped for the browse list; each item carries every
+    theme bucket it appeared in so filtering picks up the union."""
     videos = videos or []
-    if not items:
+    themes = themes or {}
+    top_stories = top_stories or []
+
+    # The browse feed prefers the per-theme corpus (richer + tagged) but falls
+    # back to the flat broad-query items so an offline/degraded build still
+    # renders something instead of an empty list.
+    theme_items = [it for bucket in themes.values() for it in bucket]
+    if not theme_items and items:
+        theme_items = items
+    if not (theme_items or items or top_stories):
         body = """
 <header>
   <div class="kicker">News</div>
@@ -1350,9 +1465,13 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
                     "Latest community-impact data center news, updated regularly.",
                     body, f"{SITE_URL}/news/", depth=1)
 
-    covered = sorted({st for it in (items + videos) for st in it.get("states", [])})
-    options = '<option value="">All states</option>' + "".join(
+    covered = sorted({st for it in (theme_items + items + videos)
+                      for st in it.get("states", [])})
+    state_options = '<option value="">All states</option>' + "".join(
         f'<option value="{esc(st)}">{esc(st)}</option>' for st in covered)
+    theme_options = '<option value="">All themes</option>' + "".join(
+        f'<option value="{esc(name)}">{esc(name)}</option>'
+        for name in themes.keys())
 
     def _fmt_date(iso):
         if not iso:
@@ -1364,20 +1483,78 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
         except Exception:                                         # noqa: BLE001
             return ""
 
+    def _age_label(age_days):
+        if age_days is None:
+            return ""
+        if age_days <= 0:
+            return "today"
+        if age_days == 1:
+            return "yesterday"
+        return f"{age_days} days ago"
+
+    # ── Top stories block ─────────────────────────────────────────────────── #
+    top_html = ""
+    if top_stories:
+        cards = []
+        for i, s in enumerate(top_stories, 1):
+            meta_bits = [s.get("source", ""), _age_label(s.get("age_days"))]
+            meta = " · ".join(x for x in meta_bits if x)
+            cards.append(
+                '<li class="top-story">'
+                f'<div class="rank">{i}</div>'
+                f'<div class="angle">{esc(s.get("angle_emoji", "•"))}</div>'
+                '<div class="top-body">'
+                f'<h3><a href="{esc(s.get("link", ""))}" rel="nofollow noopener" '
+                f'target="_blank">{esc(s.get("title", ""))}</a></h3>'
+                f'<p class="blurb">{esc(s.get("angle_blurb", ""))}</p>'
+                f'<p class="meta">{esc(meta)}</p>'
+                '</div></li>')
+        top_html = (
+            '<section id="topStories"><h2>Top stories this week</h2>'
+            '<p class="muted">Ranked automatically from the last 7 days by '
+            'freshness plus urgency keywords — lawsuits, moratoriums, and rate '
+            'hikes float highest. Heuristic, not editorial.</p>'
+            f'<ol class="top-stories-list">{"".join(cards)}</ol></section>')
+
+    # ── Browse feed: dedupe by link, union theme tags per item ───────────── #
+    by_link = {}
+    for it in theme_items:
+        link = it.get("link", "")
+        if not link:
+            continue
+        row = by_link.setdefault(link, {**it, "themes": []})
+        theme_key = it.get("theme")
+        if theme_key and theme_key not in row["themes"]:
+            row["themes"].append(theme_key)
+    # Sort newest first (published_iso), unknown dates last.
+    feed_rows = sorted(by_link.values(),
+                       key=lambda r: r.get("published_iso") or "",
+                       reverse=True)
+
     li_html = ""
-    for it in items:
+    for it in feed_rows:
         states = it.get("states", [])
+        item_themes = it.get("themes", [])
         data_states = esc("|".join(states)) if states else ""
-        chips = " ".join(f'<span class="tag">{esc(st)}</span>' for st in states)
-        meta_bits = [it.get("source", ""), _fmt_date(it.get("published_iso", ""))]
+        data_themes = esc("|".join(item_themes)) if item_themes else ""
+        chips = "".join(
+            [f'<span class="tag tag-theme">{esc(t)}</span>' for t in item_themes]
+            + [f'<span class="tag">{esc(st)}</span>' for st in states])
+        meta_bits = [it.get("source", ""),
+                     _fmt_date(it.get("published_iso", ""))]
         meta = " · ".join(x for x in meta_bits if x)
         li_html += (
-            f'<li data-states="{data_states}">'
+            f'<li data-states="{data_states}" data-themes="{data_themes}">'
             f'<div class="post-meta">{esc(meta)}</div>'
-            f'<h3><a href="{esc(it["link"])}" rel="nofollow noopener" target="_blank">'
-            f'{esc(it["title"])}</a></h3>'
+            f'<h3><a href="{esc(it["link"])}" rel="nofollow noopener" '
+            f'target="_blank">{esc(it["title"])}</a></h3>'
             f'{"<div class=\"tags\" style=\"margin-top:6px\">" + chips + "</div>" if chips else ""}'
             f'</li>\n')
+
+    # Map theme display name → the underlying Google News query. Used to build
+    # the Reddit link-out server-side so we don't need to duplicate NEWS_THEMES
+    # in JS.
+    theme_queries_json = json.dumps({k: v for k, v in NEWS_THEMES.items()})
 
     import datetime as _dt
     try:
@@ -1428,69 +1605,211 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
     body = f"""
 <header>
   <div class="kicker">News</div>
-  <h1>Data center headlines</h1>
-  <p class="sub">Automated feed of community-impact stories — noise, water,
-  rate hikes, moratoriums, lawsuits — pulled from Google News. Filter by
-  state to focus on your fight.</p>
+  <h1>Live intel — data center headlines</h1>
+  <p class="sub">A live, automated read on what's happening: the top stories
+  of the week ranked by impact, plus a browsable feed by theme, state, and
+  keyword. Headlines come from Google News — follow each link to the original
+  outlet.</p>
   <p class="muted">Last updated {esc(fetched_display)} ·
   <a href="feed.xml">RSS feed</a> · <a href="../blog/feed.xml">Blog RSS</a></p>
 </header>
-<section>
-  <div class="filter-bar" style="display:flex;gap:12px;align-items:center;margin-bottom:16px;flex-wrap:wrap">
-    <label for="stateFilter" style="font-weight:600">Filter by state:</label>
-    <select id="stateFilter" style="padding:8px 12px;border-radius:8px;border:1px solid #ccc;font-size:15px;background:inherit;color:inherit">{options}</select>
-    <span id="filterCount" class="muted"></span>
+
+<style>
+.top-stories-list {{ list-style:none; padding:0; margin:16px 0; display:grid;
+  gap:12px; }}
+.top-story {{ display:grid; grid-template-columns:36px 40px 1fr; gap:12px;
+  align-items:start; padding:14px 16px; background:var(--card);
+  border:1px solid var(--rule); border-radius:12px; }}
+.top-story .rank {{ font-size:22px; font-weight:800; color:var(--teal);
+  line-height:1; text-align:center; }}
+.top-story .angle {{ font-size:24px; line-height:1; }}
+.top-story .top-body h3 {{ font-size:16px; margin:0 0 4px; line-height:1.35; }}
+.top-story .top-body h3 a {{ text-decoration:none; }}
+.top-story .blurb {{ font-size:13.5px; color:var(--muted); margin:0 0 4px; }}
+.top-story .meta {{ font-size:12.5px; color:var(--muted); margin:0; }}
+
+.feed-controls {{ display:grid; gap:12px; margin:14px 0 18px;
+  background:var(--card); border:1px solid var(--rule); border-radius:12px;
+  padding:14px 16px; }}
+.feed-controls .row {{ display:flex; gap:14px; flex-wrap:wrap;
+  align-items:center; }}
+.feed-controls label {{ font-size:13.5px; color:var(--muted); display:flex;
+  gap:6px; align-items:center; }}
+.feed-controls select, .feed-controls input[type=search] {{
+  padding:7px 11px; border-radius:8px; border:1px solid var(--rule);
+  background:rgba(255,255,255,.04); color:var(--ink); font-size:14px;
+  min-width:180px; }}
+.feed-controls input[type=search] {{ flex:1; min-width:200px; }}
+.feed-controls .source {{ display:flex; gap:14px; }}
+.feed-controls .source label {{ color:var(--ink); font-weight:600;
+  cursor:pointer; }}
+.feed-controls .source input {{ margin-right:6px; }}
+.tag-theme {{ background:rgba(45,212,191,.14); color:var(--teal);
+  border:1px solid rgba(45,212,191,.28); }}
+#redditNotice {{ background:rgba(255,138,76,.08); border:1px solid #ff8a4c;
+  border-radius:12px; padding:14px 16px; margin:14px 0;
+  font-size:14px; color:var(--ink); }}
+#redditNotice a {{ color:#ffb37a; font-weight:600; }}
+</style>
+
+{top_html}
+
+<section id="browse">
+  <h2>Browse the feed</h2>
+  <div class="feed-controls">
+    <div class="row source" role="radiogroup" aria-label="Source">
+      <label><input type="radio" name="source" value="news" checked>📰 News</label>
+      <label><input type="radio" name="source" value="reddit">👥 Reddit</label>
+    </div>
+    <div class="row">
+      <label>Theme
+        <select id="themeFilter">{theme_options}</select>
+      </label>
+      <label>State
+        <select id="stateFilter">{state_options}</select>
+      </label>
+      <label style="flex:1">Keyword
+        <input id="keywordFilter" type="search" placeholder="e.g. Loudoun, moratorium, water">
+      </label>
+    </div>
+    <div class="row" style="justify-content:space-between">
+      <span id="filterCount" class="muted"></span>
+      <button id="resetFilters" class="btn ghost" style="padding:6px 12px;font-size:13px" type="button">Reset</button>
+    </div>
   </div>
+
+  <div id="redditNotice" hidden>
+    <p style="margin:0 0 8px"><strong>Reddit sentiment</strong> is user posts —
+    anecdotal and unverified; a read on local sentiment, not reporting.
+    Rendering Reddit threads inline lives in the Streamlit app.</p>
+    <p style="margin:0"><a id="redditLink" href="https://www.reddit.com/search/?q=data+center&amp;sort=new" target="_blank" rel="noopener">Open this search on Reddit &rarr;</a> · <a href="{APP_URL}" target="_blank" rel="noopener">Open the full sentiment view in the app &rarr;</a></p>
+  </div>
+
   <ul class="blog-list" id="newsList">{li_html}</ul>
-  <p id="noResults" class="muted" style="display:none">No stories tagged for that state in this batch.</p>
+  <p id="noResults" class="muted" style="display:none">No stories match those filters. Try a broader theme or clear the keyword.</p>
 </section>
+
 {video_cards}
+
 <section>
   <p class="muted" style="margin-top:24px">Headlines are an automated news
   search, unfiltered and not endorsements — follow each link to the original
   outlet. State tags are auto-detected from the headline; a story may mention
   a state without being about that state.</p>
 </section>
+
 <script>
 (function() {{
-  var sel = document.getElementById('stateFilter');
+  var THEME_QUERIES = {theme_queries_json};
+  var themeSel = document.getElementById('themeFilter');
+  var stateSel = document.getElementById('stateFilter');
+  var kw = document.getElementById('keywordFilter');
   var list = document.getElementById('newsList');
   var count = document.getElementById('filterCount');
   var none = document.getElementById('noResults');
+  var reset = document.getElementById('resetFilters');
+  var sourceInputs = document.querySelectorAll('input[name=source]');
+  var redditNotice = document.getElementById('redditNotice');
+  var redditLink = document.getElementById('redditLink');
   var items = Array.prototype.slice.call(list.querySelectorAll('li'));
   var videoCards = Array.prototype.slice.call(document.querySelectorAll('.video-card'));
   var noVideos = document.getElementById('noVideos');
-  function apply() {{
-    var v = sel.value;
+
+  function currentSource() {{
+    for (var i = 0; i < sourceInputs.length; i++) {{
+      if (sourceInputs[i].checked) return sourceInputs[i].value;
+    }}
+    return 'news';
+  }}
+
+  function updateRedditLink() {{
+    var theme = themeSel.value;
+    var state = stateSel.value;
+    var kwVal = (kw.value || '').trim();
+    var q = THEME_QUERIES[theme] || 'data center residents';
+    if (state) q += ' ' + state;
+    if (kwVal) q += ' ' + kwVal;
+    redditLink.href = 'https://www.reddit.com/search/?q=' +
+      encodeURIComponent(q) + '&sort=new';
+  }}
+
+  function applyNews() {{
+    var theme = themeSel.value;
+    var state = stateSel.value;
+    var kwVal = (kw.value || '').trim().toLowerCase();
     var shown = 0, vShown = 0;
     items.forEach(function(li) {{
       var states = (li.getAttribute('data-states') || '').split('|').filter(Boolean);
-      var match = !v || states.indexOf(v) !== -1;
+      var themes = (li.getAttribute('data-themes') || '').split('|').filter(Boolean);
+      var text = li.textContent.toLowerCase();
+      var match = (!theme || themes.indexOf(theme) !== -1)
+                && (!state || states.indexOf(state) !== -1)
+                && (!kwVal || text.indexOf(kwVal) !== -1);
       li.style.display = match ? '' : 'none';
       if (match) shown++;
     }});
     videoCards.forEach(function(c) {{
       var states = (c.getAttribute('data-states') || '').split('|').filter(Boolean);
-      var match = !v || states.indexOf(v) !== -1;
+      var match = !state || states.indexOf(state) !== -1;
       c.style.display = match ? '' : 'none';
       if (match) vShown++;
     }});
-    count.textContent = v ? shown + ' stor' + (shown === 1 ? 'y' : 'ies')
-      + (videoCards.length ? ' + ' + vShown + ' video' + (vShown === 1 ? '' : 's') : '')
-      + ' for ' + v : '';
-    none.style.display = (v && shown === 0) ? '' : 'none';
-    if (noVideos) noVideos.style.display = (v && videoCards.length && vShown === 0) ? '' : 'none';
-    if (v) history.replaceState(null, '', '?state=' + encodeURIComponent(v));
-    else history.replaceState(null, '', location.pathname);
-  }}
-  sel.addEventListener('change', apply);
-  var q = new URLSearchParams(location.search).get('state');
-  if (q) {{
-    for (var i = 0; i < sel.options.length; i++) {{
-      if (sel.options[i].value === q) {{ sel.selectedIndex = i; break; }}
+    var parts = [];
+    if (theme || state || kwVal) {{
+      parts.push(shown + ' stor' + (shown === 1 ? 'y' : 'ies'));
+      if (theme) parts.push('theme: ' + theme);
+      if (state) parts.push('state: ' + state);
+      if (kwVal) parts.push('"' + kwVal + '"');
+      count.textContent = parts.join(' · ');
+    }} else {{
+      count.textContent = items.length + ' items · newest first';
     }}
-    apply();
+    none.style.display = ((theme || state || kwVal) && shown === 0) ? '' : 'none';
+    if (noVideos) noVideos.style.display = (state && videoCards.length && vShown === 0) ? '' : 'none';
+    // Persist theme/state/keyword to URL for shareable links.
+    var qs = new URLSearchParams();
+    if (theme) qs.set('theme', theme);
+    if (state) qs.set('state', state);
+    if (kwVal) qs.set('q', kwVal);
+    var qStr = qs.toString();
+    history.replaceState(null, '', qStr ? ('?' + qStr) : location.pathname);
   }}
+
+  function apply() {{
+    var src = currentSource();
+    var isReddit = src === 'reddit';
+    redditNotice.hidden = !isReddit;
+    list.hidden = isReddit;
+    none.hidden = isReddit;
+    if (noVideos) noVideos.hidden = isReddit;
+    if (isReddit) {{
+      updateRedditLink();
+      count.textContent = 'Reddit view opens in a new tab.';
+    }} else {{
+      applyNews();
+    }}
+  }}
+
+  themeSel.addEventListener('change', apply);
+  stateSel.addEventListener('change', apply);
+  kw.addEventListener('input', apply);
+  Array.prototype.forEach.call(sourceInputs, function(el) {{
+    el.addEventListener('change', apply);
+  }});
+  reset.addEventListener('click', function() {{
+    themeSel.value = '';
+    stateSel.value = '';
+    kw.value = '';
+    sourceInputs[0].checked = true;
+    apply();
+  }});
+
+  // Restore filters from URL (?theme=…&state=…&q=…)
+  var q = new URLSearchParams(location.search);
+  if (q.get('theme')) themeSel.value = q.get('theme');
+  if (q.get('state')) stateSel.value = q.get('state');
+  if (q.get('q')) kw.value = q.get('q');
+  apply();
 }})();
 </script>
 """
@@ -4859,7 +5178,7 @@ def build_sitemap(paths):
 def main():
     global _NEWS_ITEMS, _VIDEO_ITEMS
     print("  [news] loading headlines + videos…")
-    _NEWS_ITEMS, news_fetched_at = _load_news()
+    _NEWS_ITEMS, news_themes, top_stories, news_fetched_at = _load_news()
     _VIDEO_ITEMS, _ = _load_youtube()
 
     shutil.rmtree(WEB, ignore_errors=True)
@@ -4896,7 +5215,10 @@ def main():
     (WEB / "blog" / "feed.xml").write_text(build_rss(), encoding="utf-8")
 
     (WEB / "news" / "index.html").write_text(
-        build_news_page(_NEWS_ITEMS, news_fetched_at, videos=_VIDEO_ITEMS),
+        build_news_page(_NEWS_ITEMS, news_fetched_at,
+                        videos=_VIDEO_ITEMS,
+                        themes=news_themes,
+                        top_stories=top_stories),
         encoding="utf-8")
     (WEB / "news" / "feed.xml").write_text(
         build_news_rss(_NEWS_ITEMS, news_fetched_at), encoding="utf-8")
