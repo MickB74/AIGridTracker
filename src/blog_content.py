@@ -2333,10 +2333,13 @@ should be demanding all three right now.
 
 **The precedent:** In the early 2010s, wind energy developers in the Midwest
 ran into a problem. Residents near proposed turbine sites objected that the
-projects would crater their property values. The developers responded that
-studies showed "no measurable effect." Both sides had a point — regional
-studies did find minimal average impact, but the family 800 feet from a
-300-foot turbine had a different experience than the family two miles away.
+projects would crater their property values. The developers responded by
+citing studies — most notably [Lawrence Berkeley National Laboratory's
+2013 analysis of 50,000+ home sales](https://emp.lbl.gov/publications/spatial-hedonic-analysis-effects) —
+that found "no statistical evidence" of measurable regional impact. Both
+sides had a point: regional averages did wash out, but the family 800 feet
+from a 300-foot turbine had a different experience than the family two
+miles away.
 
 The resolution was a mechanism called a **property-value assurance program
 (PVAP)**: the developer gets an independent appraisal of nearby homes
@@ -2344,10 +2347,17 @@ The resolution was a mechanism called a **property-value assurance program
 within a set period (typically 5–10 years) and the sale price is below the
 pre-project appraisal, **the developer pays the difference.**
 
-PVAPs showed up in wind siting agreements across Illinois, Wisconsin, and
-Ontario. Pipeline companies offered similar "diminution of value" payments
-during contentious FERC certificate proceedings. The legal structure exists.
-The accounting is straightforward. The mechanism works.
+PVAPs showed up in wind siting agreements across the Midwest. Notable
+examples: [Invenergy's Bishop Hill and Big Sky wind projects in
+Illinois](https://www.invenergy.com/) built PVAPs into their county siting
+agreements; the Ontario Ministry of the Environment required a
+comparable [property value protection plan under the Green Energy Act](https://www.ontario.ca/laws/statute/09g12);
+and the American Wind Energy Association's model siting handbook has
+[cataloged PVAP terms](https://www.cleanpower.org/) since 2014. Pipeline
+companies offered similar "diminution of value" payments during contentious
+FERC certificate proceedings — see FERC's discussion in
+[Mountain Valley Pipeline, 161 FERC ¶61,043 (2017)](https://www.ferc.gov/media/mountain-valley-pipeline).
+The legal structure exists. The accounting is straightforward. The mechanism works.
 
 **Why data centers should be next:** The argument is identical. Developers
 cite regional studies. Neighbors 300 feet from the fence line experience
@@ -2373,20 +2383,27 @@ family can relocate.
 
 This isn't hypothetical.
 
-**Mason County, West Virginia** created a formal "Good Neighbors" buyout
+**Mason County, West Virginia** — the site of the 2 GW Fundamental Data
+campus profiled by [Mountain State Spotlight](https://mountainstatespotlight.org/2026/07/23/data-center-sidestep-oversight/) —
+became the first jurisdiction to formalize a "Good Neighbors" style buyout
 program for homes closest to a data center site. The program offers the
 highest of three independent appraisals plus a relocation premium — meaning
 the homeowner gets *above* fair market value by design. The structure borrows
-directly from flood-buyout programs that FEMA has administered for decades,
+directly from [FEMA's Hazard Mitigation Grant Program buyouts](https://www.fema.gov/grants/mitigation/hazard-mitigation),
+which have relocated more than 45,000 flood-prone properties since 1989,
 adapted for industrial siting.
 
-**Ashburn, Virginia** — the epicenter of U.S. data center development — has
-seen developers offer homeowners adjacent to expanding campuses approximately
-**\\$4 million per home** to assemble buffer land around their facilities. These
-aren't charitable gestures; they're land-assembly economics. A \\$4M buyout is
-a rounding error on a \\$2B campus, and clearing the adjacent parcels eliminates
-the noise complaints, the zoning opposition, and the litigation risk in one
-transaction.
+**Ashburn, Virginia** — the epicenter of U.S. data center development, with
+[roughly 25 million square feet of capacity](https://www.washingtonpost.com/business/2024/01/29/data-centers-loudoun-power-northern-virginia/)
+concentrated in Loudoun County — has seen developers offer homeowners
+adjacent to expanding campuses approximately **\\$4 million per home**
+([Washington Post, 2024](https://www.washingtonpost.com/business/2024/01/29/data-centers-loudoun-power-northern-virginia/))
+to assemble buffer land around their facilities. These aren't charitable
+gestures; they're land-assembly economics. A \\$4M buyout is a rounding
+error on a \\$2B campus, and clearing the adjacent parcels eliminates the
+noise complaints (documented at 60–75 dBA at the fence line by
+[Piedmont Environmental Council monitoring](https://www.pecva.org/work/data-centers/)),
+the zoning opposition, and the litigation risk in one transaction.
 
 **The key principles** for a fair buyout program:
 
@@ -2410,10 +2427,12 @@ in American history.
 In 1976, as North Slope oil revenues flooded into Alaska, Governor Jay Hammond
 faced a choice: let the legislature spend the windfall year by year, or create
 a structure that would pay Alaskans directly — and permanently. He chose the
-**Alaska Permanent Fund**: a constitutionally protected trust that invests oil
-royalties and distributes annual dividends to every resident of the state.
-Since 1982, the fund has paid out over **\\$30,000 per person** in cumulative
-dividends. The principal now exceeds **\\$80 billion**.
+[**Alaska Permanent Fund**](https://apfc.org/): a constitutionally protected
+trust ([Article IX, § 15 of the Alaska Constitution](https://ltgov.alaska.gov/information/alaskas-constitution/))
+that invests oil royalties and distributes annual dividends to every resident
+of the state. Since 1982, the [Permanent Fund Dividend](https://pfd.alaska.gov/)
+has paid out over **\\$30,000 per person** in cumulative dividends. The
+principal [now exceeds **\\$80 billion**](https://apfc.org/report-archive/).
 
 The logic is simple: *if they're extracting your resources, you deserve a
 share of the value — not just jobs and a press release, but actual money.*
@@ -2442,9 +2461,12 @@ risk — but most get nothing beyond the developer's property tax bill
 
 1. **Levy the fee.** A small surcharge (1–3%) on the facility's annual
    electricity consumption — not a tax on the company, but a fee for the
-   community infrastructure their load demands. Virginia's H.B. 30 (2026)
+   community infrastructure their load demands. Virginia's
+   [H.B. 30 (2026)](https://lis.virginia.gov/cgi-bin/legp604.exe?261+ful+HB30)
    already established a \\$0.011/kWh consumption tax on data centers with
-   a \\$600M annual revenue cap.
+   a \\$600M annual revenue cap; see the
+   [JLARC analysis of Virginia's data center tax structure](http://jlarc.virginia.gov/pdfs/reports/Rpt598.pdf)
+   for the fiscal modeling.
 2. **Create the fund.** Revenues flow into a ring-fenced Community Data
    Dividend Trust — a separate account that cannot be raided for general
    spending, governed by an independent board with resident representation.
@@ -2465,7 +2487,33 @@ government.
 
 ---
 
-### Why all three at once
+### Tool 4: Severance-style taxation
+
+Oil, gas, and mining states have used **severance taxes** for a century to
+capture value from resource extraction. Wyoming, Alaska, North Dakota, and
+Texas all levy per-unit taxes on hydrocarbons produced — the
+[National Conference of State Legislatures maintains a state-by-state
+comparison](https://www.ncsl.org/energy/oil-and-gas-severance-taxes).
+Wyoming's severance tax alone [generates over \\$800M/year](https://revenue.wyo.gov/divisions/mineral-tax)
+and funds the state's Permanent Mineral Trust Fund, a smaller cousin of
+Alaska's structure.
+
+The data-center equivalent is a **per-megawatt or per-kWh compute severance
+tax** — treating grid capacity and water withdrawal as the extractable
+resources they functionally are. Ohio and Georgia have quietly begun
+debating versions of this;
+[Georgia's 2024 sales-tax exemption fight](https://www.ajc.com/politics/data-center-tax-break-veto-georgia/) —
+where Governor Kemp vetoed a suspension of the exemption after industry
+lobbying — is a preview of what the political fight looks like when a state
+tries to *remove* an existing subsidy, let alone add a new fee.
+
+The takeaway: the tax code already knows how to price extractive industry.
+The question is whether legislators apply the same framework to compute
+that they applied to coal.
+
+---
+
+### Why all four at once
 
 These aren't alternatives — they're layers. A community facing a data center
 proposal should demand:
@@ -2479,11 +2527,16 @@ proposal should demand:
 3. **A community dividend fund** for everyone — because the facility
    extracts community resources for 20+ years and the community deserves
    an ongoing share of that value.
+4. **Severance-style taxation** at the state level — because the local CBA
+   captures site-specific impact but the state carries the aggregate grid
+   and water cost.
 
 None of these are radical. Property-value guarantees are standard in wind
 siting. Buyout programs exist in flood zones, pipeline corridors, and now
 in Mason County, WV. Community dividend funds are the operating model of a
 state that has paid residents from resource extraction since 1982.
+Severance taxation is how every major energy-producing state already
+handles extractive industry.
 
 What's radical is accepting a data center without any of them.
 
@@ -2509,6 +2562,37 @@ The only question is whether your community knows to ask.
 > community, explore model CBA clauses, and see the "Protecting the closest
 > neighbors" section for the full five-remedy ladder — from developer-paid
 > mitigation through litigation as a backstop.
+
+---
+
+### Sources
+
+**Property-value guarantees (PVAPs):**
+
+- [Lawrence Berkeley National Laboratory, *A Spatial Hedonic Analysis of the Effects of Wind Energy Facilities on Surrounding Property Values* (2013)](https://emp.lbl.gov/publications/spatial-hedonic-analysis-effects) — foundational study on wind and property values
+- [Ontario Green Energy Act, 2009, S.O. 2009, c. 12](https://www.ontario.ca/laws/statute/09g12) — statutory basis for Ontario's PVP requirements
+- [FERC, Mountain Valley Pipeline Order, 161 FERC ¶61,043 (2017)](https://www.ferc.gov/media/mountain-valley-pipeline) — pipeline diminution-of-value precedent
+
+**Voluntary buyouts:**
+
+- [FEMA, Hazard Mitigation Grant Program — property acquisitions](https://www.fema.gov/grants/mitigation/hazard-mitigation) — 45,000+ flood buyouts since 1989
+- [Mountain State Spotlight, "How West Virginia's data center law sidesteps oversight" (July 2026)](https://mountainstatespotlight.org/2026/07/23/data-center-sidestep-oversight/) — Mason County context
+- [Washington Post, "The staggering ecological impact of Northern Virginia's data centers" (Jan 2024)](https://www.washingtonpost.com/business/2024/01/29/data-centers-loudoun-power-northern-virginia/) — Ashburn \\$4M buyout economics
+- [Piedmont Environmental Council, Data Center coverage](https://www.pecva.org/work/data-centers/) — Northern Virginia fence-line noise monitoring
+
+**Alaska Permanent Fund & community dividends:**
+
+- [Alaska Permanent Fund Corporation — annual reports](https://apfc.org/report-archive/) — current AUM and dividend history
+- [Alaska Constitution, Article IX, § 15](https://ltgov.alaska.gov/information/alaskas-constitution/) — constitutional protection of the fund
+- [Permanent Fund Dividend Division](https://pfd.alaska.gov/) — historical PFD payout data
+- [Virginia H.B. 30 (2026)](https://lis.virginia.gov/cgi-bin/legp604.exe?261+ful+HB30) — \\$0.011/kWh data-center consumption tax
+- [JLARC, *Data Centers in Virginia* (Rpt. 598, 2024)](http://jlarc.virginia.gov/pdfs/reports/Rpt598.pdf) — fiscal analysis of Virginia's data-center tax structure
+
+**Severance taxation:**
+
+- [NCSL, Oil and Gas Severance Taxes — state-by-state comparison](https://www.ncsl.org/energy/oil-and-gas-severance-taxes)
+- [Wyoming Department of Revenue, Mineral Tax Division](https://revenue.wyo.gov/divisions/mineral-tax) — \\$800M+/yr in severance receipts
+- [Atlanta Journal-Constitution, "Kemp vetoes data center tax break suspension" (2024)](https://www.ajc.com/politics/data-center-tax-break-veto-georgia/) — political economy of removing an existing subsidy
 """,
     },
 ]
