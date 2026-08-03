@@ -113,12 +113,36 @@ nav { display:flex; align-items:center; gap:14px; padding:14px 0;
 nav img { height:34px; }
 nav a { color:var(--muted); text-decoration:none; font-size:14px; }
 nav a:hover { color:var(--teal); }
+nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+/* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
+.nav-burger { display:none; }
+.nav-links { display:contents; }
+@media (max-width:820px) {
+  nav { gap:8px; }
+  nav img { height:30px; }
+  .nav-burger { display:block; order:3; font-size:20px; line-height:1;
+    color:var(--muted); cursor:pointer; padding:5px 8px; border-radius:8px;
+    border:1px solid var(--rule); user-select:none; }
+  .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
+  nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  .nav-links { order:4; display:none; flex-basis:100%;
+    flex-direction:column; gap:0; padding:4px 0 2px; }
+  #navToggle:checked ~ .nav-links { display:flex; }
+  .nav-links a { padding:10px 2px; font-size:15px;
+    border-bottom:1px solid rgba(255,255,255,.05); }
+  .nav-links a:last-child { border-bottom:none; }
+}
+.skip { position:absolute; left:-9999px; }
+.skip:focus { position:fixed; left:16px; top:10px; z-index:1000;
+  background:var(--teal); color:#06251f; font-weight:700;
+  padding:9px 16px; border-radius:8px; }
 header { padding:44px 0 10px; }
 .kicker { color:var(--teal); font-weight:700; letter-spacing:.12em;
           text-transform:uppercase; font-size:13px; }
-h1 { font-size:clamp(28px,5vw,44px); line-height:1.12; margin:10px 0; }
+h1 { font-size:clamp(28px,5vw,44px); line-height:1.12; margin:10px 0;
+     text-wrap:balance; }
 .sub { color:var(--muted); max-width:640px; }
 .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
          margin:30px 0; }
@@ -230,7 +254,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .post-nav a { max-width:45%; }
 .post-nav .dir { color:var(--muted); font-size:12px; display:block; }
 .blog-list { list-style:none; padding:0; }
-.blog-list li { border-bottom:1px solid var(--rule); padding:18px 0; }
+.blog-list li { border-bottom:1px solid var(--rule); padding:18px 0;
+  content-visibility:auto; contain-intrinsic-size:auto 110px; }
 .blog-list li:last-child { border-bottom:none; }
 .blog-list h3 { font-size:17px; margin:0 0 4px; }
 .blog-list h3 a { text-decoration:none; }
@@ -295,6 +320,38 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 """
 
 
+NAV_LINKS = [
+    ("Home", "index.html"),
+    ("Your state", "states/index.html"),
+    ("Health risks", "health-risks.html"),
+    ("Moratoriums", "moratoriums.html"),
+    ("Calculator", "impact.html"),
+    ("Your bill", "bills.html"),
+    ("Outlook", "outlook.html"),
+    ("Learn", "learn.html"),
+    ("PUCs", "puc.html"),
+    ("Data centers", "data-centers.html"),
+    ("Environment", "environment.html"),
+    ("Companies", "companies/index.html"),
+    ("Blog", "blog/index.html"),
+    ("News", "news/index.html"),
+]
+
+
+def _nav_links_html(p, canonical):
+    """Nav links with aria-current on the section the page belongs to.
+    Section = first path element of the canonical URL, so /blog/any-post
+    lights up Blog and /states/ohio lights up Your state."""
+    rel = canonical[len(SITE_URL):].strip("/") if canonical.startswith(SITE_URL) else ""
+    page_section = (rel.split("/")[0].replace(".html", "") or "index")
+    out = []
+    for label, target in NAV_LINKS:
+        section = target.split("/")[0].replace(".html", "")
+        cur = ' aria-current="page"' if section == page_section else ""
+        out.append(f'<a href="{p}{target}"{cur}>{label}</a>')
+    return "\n    ".join(out)
+
+
 def page(title, description, body, canonical, depth=0,
          og_type="website", og_extra="", jsonld=None):
     p = "../" * depth
@@ -309,6 +366,7 @@ def page(title, description, body, canonical, depth=0,
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1220">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
 <link rel="canonical" href="{canonical}">
@@ -323,26 +381,21 @@ def page(title, description, body, canonical, depth=0,
 <style>{CSS}</style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
 <nav>
   <a href="{p}index.html"><img src="{p}assets/logo.svg" alt="AI GridWatch"></a>
-  <a href="{p}index.html">Home</a>
-  <a href="{p}states/index.html">Your state</a>
-  <a href="{p}health-risks.html">Health risks</a>
-  <a href="{p}moratoriums.html">Moratoriums</a>
-  <a href="{p}impact.html">Calculator</a>
-  <a href="{p}bills.html">Your bill</a>
-  <a href="{p}outlook.html">Outlook</a>
-  <a href="{p}learn.html">Learn</a>
-  <a href="{p}puc.html">PUCs</a>
-  <a href="{p}data-centers.html">Data centers</a>
-  <a href="{p}environment.html">Environment</a>
-  <a href="{p}companies/index.html">Companies</a>
-  <a href="{p}blog/index.html">Blog</a>
-  <a href="{p}news/index.html">News</a>
+  <input type="checkbox" id="navToggle" hidden>
+  <label for="navToggle" class="nav-burger" aria-label="Menu"
+         role="button">&#9776;</label>
+  <div class="nav-links">
+    {_nav_links_html(p, canonical)}
+  </div>
   <a class="cta" href="{APP_URL}">Open the toolkit &rarr;</a>
 </nav>
+<main id="main">
 {body}
+</main>
 <footer>
   <a href="{p}about.html">About</a> · <a href="{p}search.html">Search</a>
   · <a href="{p}dividend.html">Data dividend calculator</a>
