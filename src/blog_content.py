@@ -51,6 +51,168 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── Data center tax-break cost blowouts (Good Jobs First, June 2026) ─
+    {
+        "id": "data-center-tax-break-blowouts-2026",
+        "section": "stories",
+        "title": "The \\$327 Million Guess That Became \\$2.5 Billion: States Are Finally Learning What Data Center Tax Breaks Cost",
+        "date": _dt.date(2026, 8, 4),
+        "author": "GridWatch AI",
+        "tags": ["tax breaks", "subsidies", "Good Jobs First", "Georgia",
+                 "Ohio", "Texas", "Virginia", "Indiana", "state budgets",
+                 "transparency", "analysis"],
+        "summary": (
+            "Four states now lose more than \\$1 billion a year to data "
+            "center sales-tax exemptions — and every one of them originally "
+            "projected a fraction of that. Georgia revised its estimate up "
+            "664% in one January. Ohio's real cost came in at 12 times its "
+            "projection. Indiana admitted 83% of its subsidy went to one "
+            "company: Amazon. Fourteen states still won't publish a number "
+            "at all. Here's what the June 2026 Good Jobs First report "
+            "found, and what it means for the fiscal-note fight in your "
+            "county."
+        ),
+        "body": """\
+A headline crossed our [news feed](../news/) this week —
+[\"Data Center Tax Breaks Promised 'No Significant Fiscal Impact': States
+Are Losing Billions\"](https://www.techtimes.com/articles/322775/20260803/data-center-tax-breaks-promised-no-significant-fiscal-impact-states-are-losing-billions.htm)
+(Tech Times, August 3). The story behind the headline is a June 2026
+report from **Good Jobs First**, the subsidy-watchdog group, with the
+memorable title
+[*Even Cloudier with a Greater Loss of Spending Control*](https://goodjobsfirst.org/even-cloudier-with-a-greater-loss-of-spending-control-how-data-center-tax-abatements-undermine-public-budgets/)
+(Kasia Tarczynska). It is the most complete accounting yet of what data
+center tax exemptions actually cost states — and the pattern it documents
+is the same one we keep finding in
+[capacity markets](pjm-capacity-auction-ratepayer-shock-2026) and
+[ratepayer fights](meta-hyperion-louisiana-ratepayer-fight-2026): the
+original estimate is always wrong, and always wrong in the same direction.
+
+### The tire and the chip
+
+The report opens with the cleanest explanation of this subsidy we've seen.
+When General Motors buys an \\$80 tire to build a car, it pays no sales
+tax — correctly, because GM isn't the end user; the car buyer pays tax on
+the whole car at the dealership. But when Amazon Web Services or Google
+buys an Nvidia AI chip for \\$30,000–\\$50,000, **in 37 states it also
+pays no sales tax** — even though the data center *is* the end user. There
+is no downstream consumer purchase where the tax gets collected. It's
+simply gone. Multiply by tens of thousands of chips per hyperscale
+campus — plus servers, generators, cooling systems, and in some states
+electricity and building materials — against an industry that spent
+roughly **\\$375 billion** on AI infrastructure in 2025 and has slated
+about twice that for 2026.
+
+### Every estimate was wrong, and all in the same direction
+
+What makes the report unusual is that it isn't projections — it's the
+record of what happened when states finally checked:
+
+- **Georgia** projected its data center exemption would cost \\$327
+  million in FY 2026. In January 2026 it revised that to **\\$2.5
+  billion** — a 664% increase — and projected **almost \\$3 billion for FY
+  2027**. Three-year cumulative cost, 2025–2027: **\\$7.3 billion**.
+- **Ohio** initially projected \\$135.8 million. In May 2026 the
+  Department of Taxation revealed the real 2025 cost: **\\$1.6 billion**
+  at the state level alone — **12 times the projection** — after \\$555
+  million in 2024. Days after the numbers became public, Gov. Mike DeWine
+  paused the program for new applications. (Existing contracts keep their
+  breaks.)
+- **Indiana** didn't disclose at all until Good Jobs First called it out
+  in April 2026. It then admitted to **\\$655.6 million** in cumulative
+  losses — and that **83% went to a single company, Amazon**: \\$50.5
+  million in 2024, then \\$561 million in 2025, a **1,011% one-year
+  increase** to one firm.
+- **Texas** projects \\$1.3 billion for FY 2026, rising to \\$1.75
+  billion by FY 2030 — a cumulative **\\$9 billion** between 2025 and
+  2030.
+- **Virginia**'s exemption cost \\$136 million in FY 2022. For FY 2025,
+  counting state and local losses, it's **\\$1.94 billion** — a
+  fourteen-fold increase in three years.
+- **North Carolina**'s 2015 fiscal note projected **\\$4 million a
+  year**. Current estimates: \\$45–57 million annually — and if planned
+  projects are built, an additional **\\$1.5–2.3 billion** during
+  construction. Gov. Josh Stein's own words: \"When this tax break was
+  enacted in 2006 and then widened in 2015, we lived in an entirely
+  different world.\"
+- **Wisconsin**'s number only exists because a state senator forced the
+  Legislative Fiscal Bureau to produce it: **\\$1.5 billion** during
+  construction of four planned projects, then \\$269 million a year.
+- Smaller programs are blowing out at the same rate: **Pennsylvania** up
+  180% in one year (\\$41M → \\$114.8M), **Arizona** up 98% (\\$19.4M →
+  \\$38.5M).
+
+The report's summary of the mechanism: these exemptions were written for
+an era of small server rooms, and are now being claimed by \\$50-billion
+hyperscale campuses under the same statutes. Most programs have **no
+caps**, no sunset dates, and — critically — **no requirement that
+companies report how much tax they avoided**. States are guessing, and
+the guesses are systematically low.
+
+### Fourteen states won't publish a number
+
+Per [Stateline's coverage](https://stateline.org/2026/04/15/many-states-dont-report-losses-from-data-center-tax-breaks-study-says/)
+(Kevin Hardy, April 2026), fourteen states with data center exemptions
+disclose no aggregate cost at all: Alabama, Arkansas, Idaho, Iowa,
+Indiana*, Louisiana, Maryland, Mississippi, Missouri, North Carolina,
+North Dakota, Oklahoma, South Carolina, and Utah. Good Jobs First argues
+this violates Governmental Accounting Standards Board reporting standards
+for tax abatements. As executive director Greg LeRoy put it: \"No form of
+state spending is more out of control today than data center tax
+abatements.\"
+
+*\\*Indiana disclosed after the April report — see above.*
+
+The local layer is worse-documented still. Sales-tax exemptions granted
+by states silently drain **local** budgets too: Georgia localities are
+projected to lose **\\$1.1 billion in 2026** and \\$1.4 billion in 2027.
+And that's before local property-tax abatements — in Oregon, data centers
+owned by Amazon, Apple, Alphabet, and Meta collected **\\$616 million**
+in property tax abatements between 2016 and 2025, with annual costs up
+762% over the period.
+
+### The turn has started
+
+The same report season produced the fastest wave of subsidy pullbacks
+this industry has seen:
+
+- **Ohio** paused its program for new applicants (May 2026).
+- **Illinois**' governor called for suspending the exemption; the state
+  hasn't disclosed annual losses since 2023 (\\$361 million).
+- **Maine** approved the country's first statewide moratorium on data
+  centers over 20 MW, through November 2027.
+- **North Carolina** is moving to phase out its exemptions.
+- **Oklahoma** passed ratepayer protections; **New Jersey** froze a
+  program; **Arizona** paused incentives.
+
+Good Jobs First's own recommendation goes further — end the subsidies, or
+at minimum impose moratoriums until costs are known, and add caps,
+sunsets, transparency requirements, and construction-phase-only
+eligibility to anything that survives.
+
+### What this means at your county hearing
+
+Every one of these numbers started as a fiscal note that said \"no
+significant impact.\" That's question 13 on our
+[26-question checklist](questions-to-ask-data-center-checklist-2026):
+demand the tax revenue projection **after** all abatements, signed by an
+independent economist — not the developer. This report is the evidence
+for why that demand is reasonable. When the official estimates in
+Georgia, Ohio, and North Carolina were off by 8×, 12×, and 14×, \"trust
+the fiscal note\" is not a plan.
+
+Three GridWatch tools pair with this story:
+
+- **[Your bill, explained](/bills)** — how data center load shows up on
+  residential electric bills, the other half of the subsidy story.
+- **[Data dividend calculator](/dividend)** — what a revenue-sharing
+  deal would look like if your community negotiated one instead.
+- **[PUC directory](/puc)** — where to file comments in your state.
+
+If a developer's pitch deck says the tax break \"pays for itself,\" ask
+which of these ten states' fiscal offices reviewed the math. The answer
+so far, everywhere anyone has checked, is that nobody did.
+""",
+    },
     # ── Questions to ask before approving a data center (checklist) ─────
     {
         "id": "questions-to-ask-data-center-checklist-2026",
