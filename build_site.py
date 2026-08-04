@@ -50,6 +50,7 @@ from src.constants import (
     CYRUSONE_2023_HEADLINE, VANTAGE_2023_HEADLINE,
     COREWEAVE_PROFILE, QTS_PROFILE, SWITCH_PROFILE, COMPASS_PROFILE,
     SOURCES, registry_provenance, has_value,
+    QUERY_COEFFS, TOKEN_COEFFS, GRID_INTENSITY, ONSITE_WUE, OFFSITE_WATER,
     IEA_OUTLOOK, DC_FORECASTS, DC_FORECASTS_US,
     PEW_RURAL_2026, PEW_STATE_COUNTS,
     NEWS_THEMES, STORY_ANGLES, STORY_IMPACT_WEIGHTS,
@@ -323,6 +324,9 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 NAV_LINKS = [
     ("Home", "index.html"),
     ("Your state", "states/index.html"),
+    ("Case studies", "case-studies.html"),
+    ("Clauses", "cba-clauses.html"),
+    ("Hearing prep", "hearing-questions.html"),
     ("Health risks", "health-risks.html"),
     ("Moratoriums", "moratoriums.html"),
     ("Calculator", "impact.html"),
@@ -397,11 +401,19 @@ def page(title, description, body, canonical, depth=0,
 {body}
 </main>
 <footer>
-  <a href="{p}about.html">About</a> · <a href="{p}search.html">Search</a>
-  · <a href="{p}dividend.html">Data dividend calculator</a>
-  <br>AI GridWatch — community energy intelligence. Planning estimates, not
+  <p style="margin-bottom:8px"><strong>Reference</strong> ·
+    <a href="{p}methodology.html">Methodology</a> ·
+    <a href="{p}studies.html">State studies</a> ·
+    <a href="{p}officials.html">Officials directory</a> ·
+    <a href="{p}glossary.html">Glossary</a> ·
+    <a href="{p}dividend.html">Data dividend</a></p>
+  <p style="margin-bottom:8px"><strong>Site</strong> ·
+    <a href="{p}about.html">About</a> ·
+    <a href="{p}consulting.html">Consulting</a> ·
+    <a href="{p}search.html">Search</a></p>
+  <p>AI GridWatch — community energy intelligence. Planning estimates, not
   engineering studies; every number is sourced in the
-  <a href="{APP_URL}">full toolkit</a>. Built from public data.
+  <a href="{APP_URL}">full toolkit</a>. Built from public data.</p>
 </footer>
 </div>
 </body>
@@ -4909,6 +4921,699 @@ def build_environment():
             ("Environment", f"{SITE_URL}/environment")))
 
 
+def _load_ast_literal(path, var_name):
+    """Read a top-level assignment target from a .py source file as a Python
+    literal. Lets us reuse dict-literal data from Streamlit tab modules
+    without importing streamlit here."""
+    import ast
+    tree = ast.parse(pathlib.Path(path).read_text(encoding="utf-8"))
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Assign):
+            for target in node.targets:
+                if getattr(target, "id", None) == var_name:
+                    return ast.literal_eval(node.value)
+    raise KeyError(f"{var_name} not found in {path}")
+
+
+def build_methodology():
+    """Static twin of src/ui/method_tab.py — token-calculator methodology."""
+    src_keys = [
+        "google_2025", "openai_2025", "epoch_2025", "hungry_2025",
+        "mlenergy", "iea_2025", "gpt5_report", "eia930", "pjm_dm2",
+        "cbre_dc", "cbre_glob", "jll_dc", "cushman_dc", "google_dc",
+        "meta_dc", "imasons", "bnef", "bnef_106", "gartner", "wri_range",
+        "sp_451", "epri_pi", "lbnl", "ercot_ll", "ercot_ll_bc",
+        "ercot_ll_tac", "pjm_lf", "eia_va", "eia_pilot",
+        "ferc_pjm_colo", "ferc_showcause", "pjm_auction25", "tx_sb6_ll",
+        "spp_hill", "miso_llir", "google_news", "reddit", "icap_mor",
+        "dcbans", "dcopp", "dcwatch", "dcresp", "dctrack", "gjf_mor",
+        "rockinst", "elmaps", "watttime", "gridstatus", "datacentermap",
+        "msft_community_2026", "aws_water_2026", "meta_community_2026",
+    ]
+    src_html = "\n".join(
+        f'<li><a href="{esc(SOURCES[k][1])}" rel="nofollow">{esc(SOURCES[k][0])}</a></li>'
+        for k in src_keys if k in SOURCES)
+
+    rows = []
+    for label, v in QUERY_COEFFS.items():
+        wh = f"{v['energy_wh']:.2f}"
+        co2 = f"{v['co2_g']:.2f}" if v.get("co2_g") is not None else "—"
+        h2o = f"{v['water_ml']:.2f}" if v.get("water_ml") is not None else "—"
+        note = esc(v.get("note", ""))
+        rows.append(
+            f'<tr><td>{esc(label)}</td><td>{wh}</td>'
+            f'<td>{co2}</td><td>{h2o}</td>'
+            f'<td class="muted" style="font-size:13px">{note}</td></tr>')
+    tbl_html = (
+        '<div style="overflow-x:auto"><table>'
+        '<tr><th>Source</th><th>Wh</th><th>gCO₂e</th>'
+        '<th>mL water</th><th>Note</th></tr>'
+        + "\n".join(rows) + "</table></div>")
+
+    token_rows = "\n".join(
+        f"<tr><td>{esc(k)}</td><td>{v:.4f} Wh/token</td></tr>"
+        for k, v in TOKEN_COEFFS.items())
+    grid_rows = "\n".join(
+        f"<tr><td>{esc(k)}</td><td>{v} gCO₂/kWh</td></tr>"
+        for k, v in GRID_INTENSITY.items())
+    wue_rows = "\n".join(
+        f"<tr><td>{esc(k)}</td><td>{v['l_per_kwh']:.2f} L/kWh</td></tr>"
+        for k, v in ONSITE_WUE.items())
+    off_rows = "\n".join(
+        f"<tr><td>{esc(k)}</td><td>{v['l_per_kwh']:.2f} L/kWh</td></tr>"
+        for k, v in OFFSITE_WATER.items())
+
+    body = f"""
+<header>
+  <div class="kicker">Methodology</div>
+  <h1>How the numbers on this site are calculated</h1>
+  <p class="sub">Every coefficient the calculator uses, every source it cites,
+  and the caveats worth reading before you quote a figure at a hearing.</p>
+</header>
+
+<section>
+  <h2>Read the numbers carefully</h2>
+  <ul>
+    <li><strong>Scope matters most.</strong> Chip-only figures
+    (~0.10 Wh/query) roughly halve full-stack (~0.24 Wh). Google's chip-only
+    number excludes training, network, and end-user device energy.</li>
+    <li><strong>Carbon accounting.</strong> Market-based (PPA/certificate)
+    intensity can be ~⅓ of location-based grid intensity. The calculator lets
+    you pick.</li>
+    <li><strong>ML.ENERGY live numbers</strong> are min-energy (max-batch)
+    configs on H100/B200 — a well-utilised server, so a lower bound vs.
+    bursty real traffic.</li>
+    <li><strong>Text only.</strong> Image, video, and reasoning prompts cost
+    materially more per query.</li>
+    <li><strong>Water is indirect too.</strong> Most disclosures count cooling
+    water; almost none count water embedded in generating the electricity.
+    Both matter — the calculator adds them.</li>
+    <li><strong>Grid timing.</strong> Marginal intensity is the right signal
+    for load-shifting; average (fuel-mix) intensity answers a different
+    question. PJM Data Miner 2 provides marginal CO₂ live; other ISOs use
+    stylized curves until a live feed is wired.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Per-query coefficients (median text prompt)</h2>
+  {tbl_html}
+</section>
+
+<section>
+  <h2>Per-token energy references</h2>
+  <table>{token_rows}</table>
+</section>
+
+<section>
+  <h2>Grid carbon intensity presets</h2>
+  <table>{grid_rows}</table>
+</section>
+
+<section>
+  <h2>Water — on-site cooling (fleet WUE)</h2>
+  <p class="muted">L per kWh of IT load. Note L/kWh == mL/Wh, so these
+  multiply query Wh into query mL.</p>
+  <table>{wue_rows}</table>
+</section>
+
+<section>
+  <h2>Water — off-site (grid generation)</h2>
+  <p class="muted">Consumption (evaporated), not withdrawal — withdrawal
+  figures run considerably higher.</p>
+  <table>{off_rows}</table>
+</section>
+
+<section>
+  <h2>Every source we cite</h2>
+  <ul>{src_html}</ul>
+</section>
+"""
+    return page(
+        "Methodology — AI GridWatch",
+        "Every coefficient and source used in the AI GridWatch calculators.",
+        body, f"{SITE_URL}/methodology",
+        jsonld=_breadcrumb(
+            ("Home", SITE_URL),
+            ("Methodology", f"{SITE_URL}/methodology")))
+
+
+def build_studies():
+    """Static twin of src/ui/studies_tab.py — state study library."""
+    studies = _load_ast_literal("src/ui/studies_tab.py", "STATE_STUDIES")
+    cards = []
+    for state, s in studies.items():
+        findings = "\n".join(f"<li>{_md_to_html(f).replace('<p>', '').replace('</p>', '')}</li>"
+                             for f in s.get("findings", []))
+        metrics = "\n".join(
+            f"<tr><td><strong>{esc(k)}</strong></td><td>{esc(v)}</td></tr>"
+            for k, v in s.get("metrics", {}).items())
+        src = ""
+        if s.get("src_key") in SOURCES:
+            name, url = SOURCES[s["src_key"]]
+            src = f' · <a href="{esc(url)}" rel="nofollow">{esc(name)}</a>'
+        pdf = ""
+        if s.get("pdf_url"):
+            pdf = f' · <a href="{esc(s["pdf_url"])}" rel="nofollow">Read the PDF</a>'
+        cards.append(f"""
+<section id="{slugify(state)}">
+  <h2>{esc(state)}</h2>
+  <p><strong>{esc(s['title'])}</strong><br>
+  <span class="muted">{esc(s['author'])}{src}{pdf}</span></p>
+  <p>{esc(s['summary'])}</p>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">Key findings</h3>
+  <ul>{findings}</ul>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">At a glance</h3>
+  <table>{metrics}</table>
+</section>""")
+
+    toc = "\n".join(f'<li><a href="#{slugify(s)}">{esc(s)}</a></li>' for s in studies)
+    body = f"""
+<header>
+  <div class="kicker">Studies library</div>
+  <h1>Official state studies of data-center impact</h1>
+  <p class="sub">A curated directory of state-commissioned reports,
+  legislative audits, and PUC filings on data centers. The papers your
+  planning commissioner will actually recognize.</p>
+</header>
+<details class="more" open><summary>On this page</summary><ol>{toc}</ol></details>
+{"".join(cards)}
+<section>
+  <p class="muted"><em>Missing your state?</em> If your legislature, PUC, or
+  audit agency has published a data-center study we should track, tell us and
+  we'll add it — sources only, no press releases.</p>
+</section>
+"""
+    return page(
+        "Official state studies — AI GridWatch",
+        "State-commissioned reports on data-center impact: Michigan CRC, Virginia JLARC, Georgia, Oregon, Maryland, Indiana, New Jersey.",
+        body, f"{SITE_URL}/studies",
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Studies", f"{SITE_URL}/studies")))
+
+
+def build_cba_clauses():
+    """Model CBA clause library ported from src/ui/toolkit_tab.py."""
+    clauses = _load_ast_literal("src/ui/toolkit_tab.py", "_MODEL_CLAUSES")
+    cards = []
+    for name, c in clauses.items():
+        rng = ""
+        if c.get("range_low"):
+            unit = esc(c.get("unit") or "")
+            rng = (f'<p class="muted">Typical range: <strong>'
+                   f'${c["range_low"]:,}–${c["range_high"]:,}</strong> '
+                   f'{unit}</p>')
+        clause_text = esc(c["clause"]).replace("\\$", "$").replace("$", "&#36;")
+        why_html = _md_to_html(c["why"].replace("\\$", "$"))
+        cards.append(f"""
+<section id="{slugify(name)}">
+  <h2>{esc(c.get('icon',''))} {esc(name)}</h2>
+  <div class="note info"><p><strong>Model clause:</strong></p>
+    <pre style="white-space:pre-wrap;font:14px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;margin-top:8px">{clause_text}</pre>
+  </div>
+  <div class="prose">{why_html}</div>
+  {rng}
+</section>""")
+
+    toc = "\n".join(f'<li><a href="#{slugify(n)}">{esc(n)}</a></li>' for n in clauses)
+    body = f"""
+<header>
+  <div class="kicker">Model clauses</div>
+  <h1>Model Community Benefits Agreement clauses</h1>
+  <p class="sub">Copy-paste contract language for the terms communities most
+  often need to secure in a data-center approval: water caps, noise limits,
+  grid-cost allocation, decommissioning bonds, waste-heat recovery, and more.
+  Every clause carries the reasoning and precedent behind it.</p>
+</header>
+<div class="note warn"><p><strong>Not legal advice.</strong> These are
+starting points drafted from real precedents; a licensed attorney in your
+state should tailor them before they go in front of a commission.</p></div>
+<details class="more" open><summary>On this page</summary><ol>{toc}</ol></details>
+{"".join(cards)}
+"""
+    return page(
+        "Model CBA clauses — AI GridWatch",
+        "Copy-paste contract language for community benefits agreements: water caps, noise limits, grid-cost allocation, decommissioning bonds, waste heat.",
+        body, f"{SITE_URL}/cba-clauses",
+        jsonld=_breadcrumb(
+            ("Home", SITE_URL),
+            ("CBA clauses", f"{SITE_URL}/cba-clauses")))
+
+
+def build_officials():
+    """State-level directory of Congressional + local lookup links, snapshot-only."""
+    from src.local_officials import build_lookup_links
+    a2f = dict(zip(STATE_PUCS_DF["abbrev"], STATE_PUCS_DF["state"]))
+    cards = []
+    for state in sorted(STATE_GRID_PROFILES):
+        abbr = _ABBREV.get(state, "")
+        senate = f"https://www.senate.gov/senators/index.htm"
+        house = f"https://www.house.gov/representatives/find-your-representative"
+        gov_link = f"https://duckduckgo.com/?q={html.escape(f'{state} governor site:.gov')}"
+        leg_search = f"https://openstates.org/{abbr.lower()}/legislators/" if abbr else ""
+        lookups = build_lookup_links(abbr, "")
+        lookup_html = "\n".join(
+            f'<li><a href="{esc(lk["url"])}" rel="nofollow">{esc(lk["label"])}</a>'
+            f' — <span class="muted">{esc(lk["why"])}</span></li>'
+            for lk in lookups)
+        leg_html = (
+            f' · <a href="{esc(leg_search)}" rel="nofollow">State legislators (OpenStates)</a>'
+            if leg_search else "")
+        cards.append(f"""
+<section id="{slugify(state)}">
+  <h2>{esc(state)}</h2>
+  <p><strong>Federal</strong> —
+    <a href="{esc(senate)}" rel="nofollow">Your senators (senate.gov)</a> ·
+    <a href="{esc(house)}" rel="nofollow">Find your representative (house.gov)</a></p>
+  <p><strong>State</strong> —
+    <a href="{esc(gov_link)}" rel="nofollow">Governor's office</a>{leg_html}</p>
+  <p><strong>Local</strong>:</p>
+  <ul style="font-size:14px">{lookup_html}</ul>
+</section>""")
+
+    toc = '<div class="statelist">' + "\n".join(
+        f'<a href="#{slugify(s)}">{esc(s)}</a>' for s in sorted(STATE_GRID_PROFILES)
+    ) + "</div>"
+    body = f"""
+<header>
+  <div class="kicker">Officials directory</div>
+  <h1>Who to call, by state</h1>
+  <p class="sub">Land-use votes happen at the county and town level, but
+  federal and state officials shape the ratepayer rules. Every jump-off point
+  you need — Senate, House, governor, state legislature, county government —
+  in one place.</p>
+</header>
+<details class="more" open><summary>Jump to your state</summary>{toc}</details>
+{"".join(cards)}
+<section>
+  <p class="muted">Sources: senate.gov, house.gov, OpenStates, NACo, USA.gov,
+  state municipal leagues. Each state's PUC has its own dedicated
+  <a href="puc.html">PUC directory page</a>. Curated town/county rosters for
+  localities with an active fight live in the
+  <a href="{APP_URL}">GridWatch toolkit</a> (they change too often for a
+  static page).</p>
+</section>
+"""
+    return page(
+        "Officials directory — AI GridWatch",
+        "Senate, House, governor, state legislature, and county government contact links for all 50 states plus D.C.",
+        body, f"{SITE_URL}/officials",
+        jsonld=_breadcrumb(
+            ("Home", SITE_URL),
+            ("Officials", f"{SITE_URL}/officials")))
+
+
+def build_consulting():
+    body = f"""
+<header>
+  <div class="kicker">Consulting</div>
+  <h1>GridWatch Consulting</h1>
+  <p class="sub">Data-driven negotiation support for communities facing data
+  center development. We help you win better deals — and only get paid when
+  you do.</p>
+  <p><span style="display:inline-block;background:rgba(45,212,191,.14);
+  border:1px solid var(--teal);border-radius:999px;padding:6px 14px;
+  font-size:13px;color:var(--teal);font-weight:600">Success-fee model —
+  no results, no cost</span></p>
+</header>
+
+<section>
+  <h2>The problem</h2>
+  <div class="grid2">
+    <div class="card"><p>A hyperscaler shows up with a $2B proposal, a team
+    of lawyers, and promises of "500 construction jobs." Your planning
+    commission has 30 days to respond. The developer's hired consultants
+    produce a glossy economic impact study. Your community has… a Facebook
+    group and a lot of questions.</p></div>
+    <div class="note bad"><p><strong>The asymmetry is the problem.</strong>
+    The developer knows exactly what your land, water, and grid capacity are
+    worth to them. You don't. That's where we come in.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>What we deliver</h2>
+  <div class="grid3">
+    <div class="card"><h3>Impact analysis</h3>
+      <ul>
+        <li>Energy load modeling using real grid data (PJM, EIA-930)</li>
+        <li>Water consumption estimates by cooling type</li>
+        <li>Residential rate impact projections</li>
+        <li>Grid strain and reliability analysis</li>
+        <li>Counter-analysis to the developer's economic study</li>
+      </ul>
+    </div>
+    <div class="card"><h3>Deal structuring</h3>
+      <ul>
+        <li>Custom Community Benefits Agreement drafting</li>
+        <li>Data Dividend fund design (the Alaska model)</li>
+        <li>Tax-abatement analysis — what you're actually giving up</li>
+        <li>Clawback provisions and performance guarantees</li>
+        <li>Decommissioning bond sizing</li>
+      </ul>
+    </div>
+    <div class="card"><h3>Hearing support</h3>
+      <ul>
+        <li>Expert testimony at planning and zoning hearings</li>
+        <li>Data presentations for public comment periods</li>
+        <li>Talking points for elected officials</li>
+        <li>Media briefing materials</li>
+        <li>Post-approval compliance monitoring</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>How we get paid</h2>
+  <p>Communities shouldn't have to pay upfront to defend their own resources.
+  We use a <strong>success-fee model</strong> that aligns our incentives with
+  yours.</p>
+  <div class="grid3">
+    <div class="card"><h3>Free</h3><p class="muted"><strong>Initial
+    consultation</strong></p>
+      <ul>
+        <li>60-minute situation assessment</li>
+        <li>Preliminary impact estimate</li>
+        <li>Recommendation on whether a CBA is achievable</li>
+        <li>No obligation</li>
+      </ul>
+    </div>
+    <div class="card"><h3>Success fee</h3><p class="muted"><strong>Full
+    engagement</strong></p>
+      <ul>
+        <li>Small percentage of annual community benefits secured</li>
+        <li>Fee only applies to <strong>new</strong> benefits we help negotiate</li>
+        <li>Capped at a fair maximum — we're not the developer</li>
+        <li>If we don't improve the deal, you pay nothing</li>
+      </ul>
+    </div>
+    <div class="card"><h3>Flat fee</h3><p class="muted"><strong>Alternative
+    structure</strong></p>
+      <ul>
+        <li>For communities that prefer fixed pricing</li>
+        <li>Scoped to specific deliverables</li>
+        <li>Payment milestones tied to project phases</li>
+        <li>Available for grant-funded engagements</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Why communities trust us</h2>
+  <div class="stats">
+    <div class="stat"><b>345+</b><span>active opposition groups across 37 states</span></div>
+    <div class="stat"><b>$64B+</b><span>in blocked or delayed projects nationwide</span></div>
+    <div class="stat"><b>300+</b><span>bills filed in 30 states (2026)</span></div>
+    <div class="stat"><b>50+</b><span>CBA precedents tracked and analyzed</span></div>
+  </div>
+  <div class="note info"><p>We built <strong>AI GridWatch</strong> — the
+  open-source platform used by communities nationwide to understand
+  data-center impacts. The same data and models that power the free tool
+  power our consulting analysis, with deeper customization for your specific
+  situation.</p></div>
+</section>
+
+<section>
+  <h2>Request a free consultation</h2>
+  <p>Tell us about your situation. We'll respond within 48 hours with a
+  preliminary assessment and recommended next steps.</p>
+  <p><a class="btn" href="mailto:hello@aigridwatch.com?subject=Consulting%20request%20—%20AI%20GridWatch&body=Community%3A%20%0AState%3A%20%0ADeveloper%20%28if%20known%29%3A%20%0AFacility%20size%3A%20%0AStage%20of%20the%20process%3A%20%0ADescribe%20your%20situation%3A%20">Email us to start</a>
+  <a class="btn ghost" href="{APP_URL}">Or use the free toolkit &rarr;</a></p>
+</section>
+"""
+    return page(
+        "Consulting — AI GridWatch",
+        "Data-driven negotiation support for communities facing data-center development. Success-fee model.",
+        body, f"{SITE_URL}/consulting",
+        jsonld=_breadcrumb(
+            ("Home", SITE_URL),
+            ("Consulting", f"{SITE_URL}/consulting")))
+
+
+def build_case_studies():
+    """Merge MORATORIUM_OUTCOMES + CBA_BENCHMARKS + COMPANY_CONCESSIONS."""
+    cat_class = {
+        "CBA secured": "good",
+        "Ban sustained": "info",
+        "No protections": "bad",
+        "Political shift": "warn",
+    }
+    outcome_cards = []
+    for o in MORATORIUM_OUTCOMES:
+        cls = cat_class.get(o["category"], "info")
+        outcome_cards.append(f"""
+<div class="note {cls}">
+  <p><strong>{esc(o['locality'])}, {esc(o['state'])}</strong> —
+  <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
+  {esc(o['category'])}</span></p>
+  <p><strong>{esc(o['headline'])}</strong></p>
+  <p>{esc(o['outcome'])}</p>
+</div>""")
+
+    bench_rows = "\n".join(
+        f"<tr><td><strong>{esc(b['community'])}, {esc(b['state'])}</strong></td>"
+        f"<td>{esc(b['company'])}</td>"
+        f"<td>{esc(b['won'])}</td></tr>"
+        for b in CBA_BENCHMARKS)
+
+    concession_sections = []
+    for company, info in COMPANY_CONCESSIONS.items():
+        concessions = "\n".join(
+            f"<li><strong>{esc(c['where'])}</strong> "
+            f"({esc(c['year'])}) — {esc(c['what'])}</li>"
+            for c in info["concessions"])
+        concession_sections.append(f"""
+<section id="{slugify(company)}">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">{esc(company)}</h3>
+  <p class="muted"><em>Negotiation pattern:</em> {esc(info['pattern'])}</p>
+  <ul>{concessions}</ul>
+</section>""")
+
+    body = f"""
+<header>
+  <div class="kicker">Case studies</div>
+  <h1>What communities have actually won — and lost</h1>
+  <p class="sub">Documented outcomes from six moratorium fights, four
+  benchmark CBAs, and every hyperscaler's documented pattern of concession.
+  If you want to know what's realistic to ask for, this is where to start.</p>
+</header>
+
+<section>
+  <h2>Moratorium outcomes</h2>
+  <p class="muted">Six real cases; the categories reflect what the community
+  ended up with, not what was originally proposed.</p>
+  {"".join(outcome_cards)}
+</section>
+
+<section>
+  <h2>Benchmark CBAs — what similar communities won</h2>
+  <div style="overflow-x:auto"><table>
+    <tr><th>Community</th><th>Developer</th><th>What they won</th></tr>
+    {bench_rows}
+  </table></div>
+  <p class="muted">Every one of these happened <em>before</em> final approval.
+  Timing is the leverage.</p>
+</section>
+
+<section>
+  <h2>How each hyperscaler negotiates</h2>
+  <p class="muted">Documented concessions and the pattern behind them. Use
+  these to anchor your ask to what the same company has already agreed to
+  elsewhere.</p>
+  {"".join(concession_sections)}
+</section>
+
+<section>
+  <p class="muted"><strong>See also:</strong>
+  <a href="cba-clauses.html">Model CBA clauses</a> ·
+  <a href="moratoriums.html">Full moratorium tracker</a> ·
+  <a href="{APP_URL}">Generate a meeting brief with these precedents pre-loaded</a></p>
+</section>
+"""
+    return page(
+        "Case studies — AI GridWatch",
+        "What communities have actually won and lost in data-center fights: moratorium outcomes, benchmark CBAs, per-hyperscaler negotiation patterns.",
+        body, f"{SITE_URL}/case-studies",
+        jsonld=_breadcrumb(
+            ("Home", SITE_URL),
+            ("Case studies", f"{SITE_URL}/case-studies")))
+
+
+def build_hearing_questions():
+    """Printable one-pager: questions to ask at your hearing."""
+    body = f"""
+<header>
+  <div class="kicker">Hearing prep</div>
+  <h1>Questions to ask at your next hearing</h1>
+  <p class="sub">A one-page cheat sheet distilled from the wizard. Print it,
+  screenshot it, hand it to a neighbor. Every question is designed to force
+  a specific answer onto the record.</p>
+</header>
+
+<section>
+  <h2>Power &amp; the grid</h2>
+  <ol>
+    <li>What is the <strong>peak MW draw</strong> at full build-out, not
+    at commissioning?</li>
+    <li>What transmission and substation upgrades does this project require,
+    and <strong>which side of the utility fence</strong> pays for each?</li>
+    <li>If any transmission goes into the utility's rate base, what is the
+    <strong>projected monthly impact on residential customers</strong>, per
+    the utility's own filed testimony?</li>
+    <li>Will the developer accept a <strong>large-load tariff</strong>
+    guaranteeing 100% of grid-upgrade costs stay off residential bills?</li>
+    <li>What backup generation is planned, how many hours per year is it
+    permitted to run, and are the units <strong>Tier 4 or battery</strong>
+    rather than legacy diesel?</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Water</h2>
+  <ol>
+    <li>What is the <strong>daily and annual water withdrawal</strong> at
+    full build-out?</li>
+    <li>What percentage of the municipal supply does that represent?</li>
+    <li>Will the developer commit to a <strong>hard cap in gallons per
+    day</strong>, with a surcharge for exceeding it, filed as a permit
+    condition?</li>
+    <li>If evaporative cooling is proposed, will the developer commit to
+    <strong>recycled or non-potable water</strong> as Microsoft has for
+    its new builds?</li>
+    <li>Will water usage reports be filed as <strong>public record</strong>,
+    not marked proprietary?</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Money &amp; taxes</h2>
+  <ol>
+    <li>What is the <strong>total value of all tax abatements</strong>
+    (property, equipment, sales) over the abatement period?</li>
+    <li>What annual <strong>community benefit payment</strong> is on offer,
+    in $/MW/year, and is it CPI-adjusted?</li>
+    <li>Are there <strong>clawback provisions</strong> if the developer
+    doesn't hit hiring or investment targets?</li>
+    <li>Will data-center tax revenue be <strong>allocated to reduce
+    residential property taxes</strong>, as Loudoun County does?</li>
+    <li>What is the <strong>decommissioning bond</strong>, in $/MW, and when
+    is it posted?</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Noise &amp; light</h2>
+  <ol>
+    <li>What is the <strong>maximum modeled noise level</strong> at the
+    nearest residential property line, and what limit will be recorded as
+    a permit condition?</li>
+    <li>Will noise be <strong>measured after commissioning</strong>, not
+    just modeled beforehand, and reported publicly?</li>
+    <li>Will exterior lighting be <strong>full-cutoff, shielded, and at or
+    below 3000K</strong> per AMA community guidance?</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Process &amp; transparency</h2>
+  <ol>
+    <li>Who is the <strong>ultimate parent</strong> of the LLC on the
+    application? What is the tenant chain?</li>
+    <li>Are there <strong>NDAs</strong> between the developer and any
+    municipal official or utility that limit what can be disclosed at this
+    hearing?</li>
+    <li>What is the <strong>proposed build-out ceiling</strong> on this
+    parcel — not phase one, but the full site plan?</li>
+    <li>Will the developer agree to <strong>quarterly public reporting</strong>
+    on water, noise, and generator hours as a permit condition?</li>
+    <li>What happens if the tenant walks after <strong>year ten</strong> of
+    the abatement — who owns the stranded infrastructure?</li>
+  </ol>
+</section>
+
+<section>
+  <div class="note info"><p><strong>Bring receipts.</strong> Every one of
+  these questions has a documented precedent elsewhere. The
+  <a href="case-studies.html">case studies</a> page has the citations; the
+  <a href="cba-clauses.html">CBA clause library</a> has drop-in language
+  to attach to any answer you're not satisfied with.</p></div>
+  <p><a class="btn" href="{APP_URL}">Generate a personalized brief with your community's numbers &rarr;</a></p>
+</section>
+"""
+    return page(
+        "Questions to ask at your hearing — AI GridWatch",
+        "A printable one-pager of the specific questions communities should ask a data-center developer at a planning or PUC hearing.",
+        body, f"{SITE_URL}/hearing-questions",
+        jsonld=_breadcrumb(
+            ("Home", SITE_URL),
+            ("Hearing questions", f"{SITE_URL}/hearing-questions")))
+
+
+def build_glossary():
+    terms = [
+        ("PUE", "Power Usage Effectiveness — ratio of total facility energy to IT energy. Lower is better; hyperscalers target 1.10–1.20."),
+        ("WUE", "Water Usage Effectiveness — liters of water per kWh of IT energy. Google fleet ~1.1 L/kWh; Meta claims 0.19."),
+        ("CFE", "Carbon-Free Energy — electricity from zero-carbon sources (solar, wind, nuclear, hydro). Distinct from RECs."),
+        ("Hyperscaler", "The largest cloud/AI companies that build their own data centers at massive scale (Google, Microsoft, Amazon, Meta)."),
+        ("Colocation (colo)", "A data-center operator that leases space, power, and cooling to tenants — Equinix, Digital Realty, QTS, etc."),
+        ("Interconnection queue", "The list of projects waiting for grid connection approval from the regional operator (PJM, ERCOT, MISO, etc.)."),
+        ("Moratorium", "A temporary ban or pause on new data-center construction, usually enacted by local or state government."),
+        ("PPA", "Power Purchase Agreement — a long-term contract to buy electricity from a specific generator, often renewable."),
+        ("Rack density", "The amount of power drawn per server rack, measured in kW. AI racks are 40–120+ kW vs. 5–15 kW traditional."),
+        ("GPU", "Graphics Processing Unit — specialized chips (NVIDIA H100, B200) that power AI training and inference."),
+        ("Inference", "Running a trained AI model to generate responses — what happens when you use ChatGPT, Gemini, etc."),
+        ("Training", "The initial process of building an AI model by processing massive datasets. Extremely energy-intensive."),
+        ("Evaporative cooling", "Cooling method that evaporates water to remove heat. Effective but water-intensive."),
+        ("Liquid cooling", "Piping coolant directly to server chips. More efficient for high-density AI workloads."),
+        ("Marginal emissions", "The CO₂ rate of the next power plant that would turn on to serve new load. The right signal for load-shifting."),
+        ("Average emissions", "The fuel-mix intensity of the whole grid. Answers a different question from marginal — used for inventory accounting."),
+        ("Location-based carbon", "Carbon accounting using the actual grid mix where energy is consumed. What a data center's real footprint looks like."),
+        ("Market-based carbon", "Carbon accounting after applying PPAs and certificates. Can be a fraction of location-based intensity."),
+        ("Large-load tariff", "A utility rate structure requiring very large customers to pay their own grid-upgrade costs, not socialize them onto ratepayers."),
+        ("Capacity market", "A market where utilities pay generators to be available on future peak days. Data-center demand is driving prices to record highs in PJM."),
+        ("CBA", "Community Benefits Agreement — a binding contract between a community and a developer setting terms like water caps, noise limits, and community payments."),
+        ("Data dividend", "A community fund into which per-MW annual payments are placed, distributed or reinvested locally — modelled on Alaska's oil dividend."),
+        ("Clawback", "A contractual provision allowing tax abatements or incentives to be recovered if the developer fails to meet promised commitments."),
+        ("Decommissioning bond", "A financial guarantee posted by the developer to cover site cleanup if the facility ceases operations."),
+        ("Proffer", "In Virginia land-use practice, a voluntary condition offered by a developer as part of a rezoning application. Should be recorded as binding."),
+        ("Shell LLC", "A limited-liability company (often with a fanciful name) used by hyperscalers to acquire land and file permits without revealing the parent."),
+        ("Certificate of Public Convenience and Necessity (CPCN)", "A regulatory approval a utility or generator must obtain before building. Some states exempt data-center backup power."),
+        ("Substation", "The facility that steps voltage down (typically from 115–765 kV transmission to 12–34 kV distribution) at the edge of a data-center campus."),
+        ("RTO / ISO", "Regional Transmission Organization / Independent System Operator — the operators that run the wholesale grid (PJM, ERCOT, MISO, SPP, CAISO, NYISO, ISO-NE)."),
+        ("FERC", "The Federal Energy Regulatory Commission — regulates interstate wholesale electricity and transmission. ERCOT is the notable exception (Texas-only)."),
+        ("EIA-930", "The U.S. Energy Information Administration's real-time grid demand and generation dataset. What the calculator's Live Grid mode uses."),
+    ]
+    rows = "\n".join(
+        f'<tr id="{slugify(t)}"><td><strong>{esc(t)}</strong></td>'
+        f'<td>{esc(d)}</td></tr>'
+        for t, d in terms)
+    body = f"""
+<header>
+  <div class="kicker">Glossary</div>
+  <h1>Data-center vocabulary — what the terms actually mean</h1>
+  <p class="sub">The jargon developers use in hearings and filings, translated
+  into plain English. Every term links, so you can share
+  <code>/glossary#pue</code> in a comment thread.</p>
+</header>
+<div style="overflow-x:auto"><table>
+  <tr><th style="width:26%">Term</th><th>Definition</th></tr>
+  {rows}
+</table></div>
+<section>
+  <p class="muted">Missing a term? Tell us and we'll add it. For the
+  full technical background, see the <a href="learn.html">Learn</a> page.</p>
+</section>
+"""
+    return page(
+        "Glossary — AI GridWatch",
+        "Plain-English definitions of the technical and legal terms used in data-center hearings and filings.",
+        body, f"{SITE_URL}/glossary",
+        jsonld=_breadcrumb(
+            ("Home", SITE_URL),
+            ("Glossary", f"{SITE_URL}/glossary")))
+
+
 def build_about():
     body_html = _md_to_html(ABOUT_SECTION["body"])
     body = f"""
@@ -5197,6 +5902,15 @@ def main():
     (WEB / "dividend.html").write_text(build_data_dividend(), encoding="utf-8")
     (WEB / "data-centers.html").write_text(build_data_centers(), encoding="utf-8")
     (WEB / "environment.html").write_text(build_environment(), encoding="utf-8")
+    (WEB / "methodology.html").write_text(build_methodology(), encoding="utf-8")
+    (WEB / "studies.html").write_text(build_studies(), encoding="utf-8")
+    (WEB / "cba-clauses.html").write_text(build_cba_clauses(), encoding="utf-8")
+    (WEB / "officials.html").write_text(build_officials(), encoding="utf-8")
+    (WEB / "consulting.html").write_text(build_consulting(), encoding="utf-8")
+    (WEB / "case-studies.html").write_text(build_case_studies(), encoding="utf-8")
+    (WEB / "hearing-questions.html").write_text(
+        build_hearing_questions(), encoding="utf-8")
+    (WEB / "glossary.html").write_text(build_glossary(), encoding="utf-8")
     (WEB / "states" / "index.html").write_text(
         build_states_index(), encoding="utf-8")
 
@@ -5234,8 +5948,10 @@ def main():
 
     paths = ["", "health-risks", "moratoriums", "impact", "bills", "outlook",
              "learn", "puc", "executives", "about", "search", "dividend",
-             "data-centers", "environment", "companies/", "states/", "blog/",
-             "news/"]
+             "data-centers", "environment", "methodology", "studies",
+             "cba-clauses", "officials", "consulting", "case-studies",
+             "hearing-questions", "glossary",
+             "companies/", "states/", "blog/", "news/"]
     paths.extend(f"companies/{h['slug']}" for h in _HYPERSCALERS)
     paths.extend(f"companies/{h['slug']}" for h in _OPERATORS)
     paths.extend(f"companies/{ld['slug']}" for ld in _LIMITED_DISCLOSURE)

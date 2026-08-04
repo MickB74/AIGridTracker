@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b1220">
-<title>Data center impact calculator — AI GridWatch</title>
-<meta name="description" content="Estimate the electricity, water, carbon, and rate impact of a data center in your state — free community calculator.">
-<link rel="canonical" href="https://aigridwatch.com/impact">
+<title>Glossary — AI GridWatch</title>
+<meta name="description" content="Plain-English definitions of the technical and legal terms used in data-center hearings and filings.">
+<link rel="canonical" href="https://aigridwatch.com/glossary">
 <link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
       href="https://aigridwatch.com/blog/feed.xml">
-<meta property="og:title" content="Data center impact calculator — AI GridWatch">
-<meta property="og:description" content="Estimate the electricity, water, carbon, and rate impact of a data center in your state — free community calculator.">
+<meta property="og:title" content="Glossary — AI GridWatch">
+<meta property="og:description" content="Plain-English definitions of the technical and legal terms used in data-center hearings and filings.">
 <meta property="og:type" content="website">
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Calculator", "item": "https://aigridwatch.com/impact"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Glossary", "item": "https://aigridwatch.com/glossary"}]}</script>
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <style>
 :root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
@@ -249,7 +249,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
     <a href="hearing-questions.html">Hearing prep</a>
     <a href="health-risks.html">Health risks</a>
     <a href="moratoriums.html">Moratoriums</a>
-    <a href="impact.html" aria-current="page">Calculator</a>
+    <a href="impact.html">Calculator</a>
     <a href="bills.html">Your bill</a>
     <a href="outlook.html">Outlook</a>
     <a href="learn.html">Learn</a>
@@ -265,154 +265,50 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <main id="main">
 
 <header>
-  <div class="kicker">Community calculator</div>
-  <h1>What does a data center cost your community?</h1>
-  <p class="sub">Pick a size and your state. The calculator estimates annual
-  electricity, water draw, carbon emissions, rate pressure, and the CBA
-  target your community should be negotiating — all sourced from the same
-  model the full toolkit uses.</p>
+  <div class="kicker">Glossary</div>
+  <h1>Data-center vocabulary — what the terms actually mean</h1>
+  <p class="sub">The jargon developers use in hearings and filings, translated
+  into plain English. Every term links, so you can share
+  <code>/glossary#pue</code> in a comment thread.</p>
 </header>
+<div style="overflow-x:auto"><table>
+  <tr><th style="width:26%">Term</th><th>Definition</th></tr>
+  <tr id="pue"><td><strong>PUE</strong></td><td>Power Usage Effectiveness — ratio of total facility energy to IT energy. Lower is better; hyperscalers target 1.10–1.20.</td></tr>
+<tr id="wue"><td><strong>WUE</strong></td><td>Water Usage Effectiveness — liters of water per kWh of IT energy. Google fleet ~1.1 L/kWh; Meta claims 0.19.</td></tr>
+<tr id="cfe"><td><strong>CFE</strong></td><td>Carbon-Free Energy — electricity from zero-carbon sources (solar, wind, nuclear, hydro). Distinct from RECs.</td></tr>
+<tr id="hyperscaler"><td><strong>Hyperscaler</strong></td><td>The largest cloud/AI companies that build their own data centers at massive scale (Google, Microsoft, Amazon, Meta).</td></tr>
+<tr id="colocation-(colo)"><td><strong>Colocation (colo)</strong></td><td>A data-center operator that leases space, power, and cooling to tenants — Equinix, Digital Realty, QTS, etc.</td></tr>
+<tr id="interconnection-queue"><td><strong>Interconnection queue</strong></td><td>The list of projects waiting for grid connection approval from the regional operator (PJM, ERCOT, MISO, etc.).</td></tr>
+<tr id="moratorium"><td><strong>Moratorium</strong></td><td>A temporary ban or pause on new data-center construction, usually enacted by local or state government.</td></tr>
+<tr id="ppa"><td><strong>PPA</strong></td><td>Power Purchase Agreement — a long-term contract to buy electricity from a specific generator, often renewable.</td></tr>
+<tr id="rack-density"><td><strong>Rack density</strong></td><td>The amount of power drawn per server rack, measured in kW. AI racks are 40–120+ kW vs. 5–15 kW traditional.</td></tr>
+<tr id="gpu"><td><strong>GPU</strong></td><td>Graphics Processing Unit — specialized chips (NVIDIA H100, B200) that power AI training and inference.</td></tr>
+<tr id="inference"><td><strong>Inference</strong></td><td>Running a trained AI model to generate responses — what happens when you use ChatGPT, Gemini, etc.</td></tr>
+<tr id="training"><td><strong>Training</strong></td><td>The initial process of building an AI model by processing massive datasets. Extremely energy-intensive.</td></tr>
+<tr id="evaporative-cooling"><td><strong>Evaporative cooling</strong></td><td>Cooling method that evaporates water to remove heat. Effective but water-intensive.</td></tr>
+<tr id="liquid-cooling"><td><strong>Liquid cooling</strong></td><td>Piping coolant directly to server chips. More efficient for high-density AI workloads.</td></tr>
+<tr id="marginal-emissions"><td><strong>Marginal emissions</strong></td><td>The CO₂ rate of the next power plant that would turn on to serve new load. The right signal for load-shifting.</td></tr>
+<tr id="average-emissions"><td><strong>Average emissions</strong></td><td>The fuel-mix intensity of the whole grid. Answers a different question from marginal — used for inventory accounting.</td></tr>
+<tr id="location-based-carbon"><td><strong>Location-based carbon</strong></td><td>Carbon accounting using the actual grid mix where energy is consumed. What a data center&#x27;s real footprint looks like.</td></tr>
+<tr id="market-based-carbon"><td><strong>Market-based carbon</strong></td><td>Carbon accounting after applying PPAs and certificates. Can be a fraction of location-based intensity.</td></tr>
+<tr id="large-load-tariff"><td><strong>Large-load tariff</strong></td><td>A utility rate structure requiring very large customers to pay their own grid-upgrade costs, not socialize them onto ratepayers.</td></tr>
+<tr id="capacity-market"><td><strong>Capacity market</strong></td><td>A market where utilities pay generators to be available on future peak days. Data-center demand is driving prices to record highs in PJM.</td></tr>
+<tr id="cba"><td><strong>CBA</strong></td><td>Community Benefits Agreement — a binding contract between a community and a developer setting terms like water caps, noise limits, and community payments.</td></tr>
+<tr id="data-dividend"><td><strong>Data dividend</strong></td><td>A community fund into which per-MW annual payments are placed, distributed or reinvested locally — modelled on Alaska&#x27;s oil dividend.</td></tr>
+<tr id="clawback"><td><strong>Clawback</strong></td><td>A contractual provision allowing tax abatements or incentives to be recovered if the developer fails to meet promised commitments.</td></tr>
+<tr id="decommissioning-bond"><td><strong>Decommissioning bond</strong></td><td>A financial guarantee posted by the developer to cover site cleanup if the facility ceases operations.</td></tr>
+<tr id="proffer"><td><strong>Proffer</strong></td><td>In Virginia land-use practice, a voluntary condition offered by a developer as part of a rezoning application. Should be recorded as binding.</td></tr>
+<tr id="shell-llc"><td><strong>Shell LLC</strong></td><td>A limited-liability company (often with a fanciful name) used by hyperscalers to acquire land and file permits without revealing the parent.</td></tr>
+<tr id="certificate-of-public-convenience-and-necessity-(cpcn)"><td><strong>Certificate of Public Convenience and Necessity (CPCN)</strong></td><td>A regulatory approval a utility or generator must obtain before building. Some states exempt data-center backup power.</td></tr>
+<tr id="substation"><td><strong>Substation</strong></td><td>The facility that steps voltage down (typically from 115–765 kV transmission to 12–34 kV distribution) at the edge of a data-center campus.</td></tr>
+<tr id="rto-/-iso"><td><strong>RTO / ISO</strong></td><td>Regional Transmission Organization / Independent System Operator — the operators that run the wholesale grid (PJM, ERCOT, MISO, SPP, CAISO, NYISO, ISO-NE).</td></tr>
+<tr id="ferc"><td><strong>FERC</strong></td><td>The Federal Energy Regulatory Commission — regulates interstate wholesale electricity and transmission. ERCOT is the notable exception (Texas-only).</td></tr>
+<tr id="eia-930"><td><strong>EIA-930</strong></td><td>The U.S. Energy Information Administration&#x27;s real-time grid demand and generation dataset. What the calculator&#x27;s Live Grid mode uses.</td></tr>
+</table></div>
 <section>
-  <h2>Facility size</h2>
-  <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
-    <input type="range" id="mw-slider" min="10" max="500" value="100"
-           step="10" style="flex:1;min-width:200px;accent-color:var(--teal)">
-    <span id="mw-label" style="font-size:28px;font-weight:700;color:var(--teal);min-width:80px">100 MW</span>
-  </div>
-  <p class="muted" style="margin-top:6px">10 MW = small edge facility &middot;
-  100 MW = typical hyperscaler campus &middot; 500 MW = mega-project</p>
+  <p class="muted">Missing a term? Tell us and we'll add it. For the
+  full technical background, see the <a href="learn.html">Learn</a> page.</p>
 </section>
-<section>
-  <h2>Your state</h2>
-  <select id="state-select" style="background:var(--card);color:var(--ink);
-    border:1px solid var(--rule);border-radius:8px;padding:8px 14px;
-    font-size:15px;width:100%;max-width:320px">
-    <option value="Alabama">Alabama</option>
-<option value="Alaska">Alaska</option>
-<option value="Arizona">Arizona</option>
-<option value="Arkansas">Arkansas</option>
-<option value="California">California</option>
-<option value="Colorado">Colorado</option>
-<option value="Connecticut">Connecticut</option>
-<option value="Delaware">Delaware</option>
-<option value="District of Columbia">District of Columbia</option>
-<option value="Florida">Florida</option>
-<option value="Georgia">Georgia</option>
-<option value="Hawaii">Hawaii</option>
-<option value="Idaho">Idaho</option>
-<option value="Illinois">Illinois</option>
-<option value="Indiana">Indiana</option>
-<option value="Iowa">Iowa</option>
-<option value="Kansas">Kansas</option>
-<option value="Kentucky">Kentucky</option>
-<option value="Louisiana">Louisiana</option>
-<option value="Maine">Maine</option>
-<option value="Maryland">Maryland</option>
-<option value="Massachusetts">Massachusetts</option>
-<option value="Michigan">Michigan</option>
-<option value="Minnesota">Minnesota</option>
-<option value="Mississippi">Mississippi</option>
-<option value="Missouri">Missouri</option>
-<option value="Montana">Montana</option>
-<option value="Nebraska">Nebraska</option>
-<option value="Nevada">Nevada</option>
-<option value="New Hampshire">New Hampshire</option>
-<option value="New Jersey">New Jersey</option>
-<option value="New Mexico">New Mexico</option>
-<option value="New York">New York</option>
-<option value="North Carolina">North Carolina</option>
-<option value="North Dakota">North Dakota</option>
-<option value="Ohio">Ohio</option>
-<option value="Oklahoma">Oklahoma</option>
-<option value="Oregon">Oregon</option>
-<option value="Pennsylvania">Pennsylvania</option>
-<option value="Rhode Island">Rhode Island</option>
-<option value="South Carolina">South Carolina</option>
-<option value="South Dakota">South Dakota</option>
-<option value="Tennessee">Tennessee</option>
-<option value="Texas">Texas</option>
-<option value="Utah">Utah</option>
-<option value="Vermont">Vermont</option>
-<option value="Virginia">Virginia</option>
-<option value="Washington">Washington</option>
-<option value="West Virginia">West Virginia</option>
-<option value="Wisconsin">Wisconsin</option>
-<option value="Wyoming">Wyoming</option>
-  </select>
-</section>
-<div class="stats" id="results">
-  <div class="stat"><b id="r-energy">—</b><span>annual electricity (MWh)</span></div>
-  <div class="stat"><b id="r-homes">—</b><span>homes equivalent</span></div>
-  <div class="stat"><b id="r-water">—</b><span>annual water (million gal)</span></div>
-  <div class="stat"><b id="r-co2">—</b><span>annual CO&#8322; (metric tons)</span></div>
-</div>
-<section>
-  <h2>Economic impact</h2>
-  <div class="grid2">
-    <div class="card">
-      <h3>Rate pressure</h3>
-      <p>Residents pay <strong id="r-ratio">—</strong>&times; what the data
-      center pays per kWh (<span id="r-resrate">—</span> vs $0.05).</p>
-    </div>
-    <div class="card">
-      <h3>CBA target</h3>
-      <p>At 2% of estimated investment, your community should negotiate at
-      least <strong id="r-dividend">—</strong>/year in community benefits.</p>
-    </div>
-  </div>
-  <p class="muted" style="margin-top:8px">Grid carbon:
-  <span id="r-gco2">—</span> gCO&#8322;/kWh &middot; Water stress:
-  <span id="r-stress">—</span> &middot; Cooling: evaporative (PUE 1.12)</p>
-</section>
-<section>
-  <h2>What to do with these numbers</h2>
-  <p>Print this page, or use the full toolkit to generate a complete action
-  pack — a meeting brief, comment scripts, letters to officials, and a
-  community flyer with these numbers baked in.</p>
-  <p><a class="btn" href="https://aigridtracker.streamlit.app">Generate your action pack &rarr;</a>
-  <a class="btn ghost" href="health-risks.html">The health risks, sourced</a></p>
-</section>
-<script>
-(function() {
-  var P = {"Alabama": {"rate": 0.146, "gco2": 380, "water_stress": "low"}, "Alaska": {"rate": 0.229, "gco2": 450, "water_stress": "low"}, "Arizona": {"rate": 0.139, "gco2": 390, "water_stress": "high"}, "Arkansas": {"rate": 0.124, "gco2": 410, "water_stress": "low"}, "California": {"rate": 0.285, "gco2": 210, "water_stress": "high"}, "Colorado": {"rate": 0.15, "gco2": 420, "water_stress": "medium"}, "Connecticut": {"rate": 0.268, "gco2": 200, "water_stress": "low"}, "Delaware": {"rate": 0.155, "gco2": 370, "water_stress": "low"}, "District of Columbia": {"rate": 0.158, "gco2": 340, "water_stress": "low"}, "Florida": {"rate": 0.157, "gco2": 370, "water_stress": "low"}, "Georgia": {"rate": 0.143, "gco2": 370, "water_stress": "low"}, "Hawaii": {"rate": 0.41, "gco2": 550, "water_stress": "high"}, "Idaho": {"rate": 0.112, "gco2": 120, "water_stress": "medium"}, "Illinois": {"rate": 0.154, "gco2": 310, "water_stress": "low"}, "Indiana": {"rate": 0.149, "gco2": 430, "water_stress": "low"}, "Iowa": {"rate": 0.139, "gco2": 410, "water_stress": "low"}, "Kansas": {"rate": 0.142, "gco2": 420, "water_stress": "medium"}, "Kentucky": {"rate": 0.126, "gco2": 460, "water_stress": "low"}, "Louisiana": {"rate": 0.117, "gco2": 380, "water_stress": "low"}, "Maine": {"rate": 0.228, "gco2": 180, "water_stress": "low"}, "Maryland": {"rate": 0.16, "gco2": 340, "water_stress": "low"}, "Massachusetts": {"rate": 0.28, "gco2": 280, "water_stress": "low"}, "Michigan": {"rate": 0.186, "gco2": 390, "water_stress": "low"}, "Minnesota": {"rate": 0.151, "gco2": 350, "water_stress": "low"}, "Mississippi": {"rate": 0.131, "gco2": 400, "water_stress": "low"}, "Missouri": {"rate": 0.131, "gco2": 440, "water_stress": "low"}, "Montana": {"rate": 0.125, "gco2": 340, "water_stress": "low"}, "Nebraska": {"rate": 0.121, "gco2": 420, "water_stress": "low"}, "Nevada": {"rate": 0.138, "gco2": 330, "water_stress": "high"}, "New Hampshire": {"rate": 0.243, "gco2": 190, "water_stress": "low"}, "New Jersey": {"rate": 0.187, "gco2": 250, "water_stress": "low"}, "New Mexico": {"rate": 0.143, "gco2": 410, "water_stress": "high"}, "New York": {"rate": 0.223, "gco2": 250, "water_stress": "low"}, "North Carolina": {"rate": 0.132, "gco2": 350, "water_stress": "low"}, "North Dakota": {"rate": 0.117, "gco2": 510, "water_stress": "low"}, "Ohio": {"rate": 0.144, "gco2": 420, "water_stress": "low"}, "Oklahoma": {"rate": 0.121, "gco2": 350, "water_stress": "medium"}, "Oregon": {"rate": 0.128, "gco2": 140, "water_stress": "medium"}, "Pennsylvania": {"rate": 0.171, "gco2": 310, "water_stress": "low"}, "Rhode Island": {"rate": 0.265, "gco2": 280, "water_stress": "low"}, "South Carolina": {"rate": 0.146, "gco2": 300, "water_stress": "low"}, "South Dakota": {"rate": 0.128, "gco2": 250, "water_stress": "low"}, "Tennessee": {"rate": 0.125, "gco2": 350, "water_stress": "low"}, "Texas": {"rate": 0.142, "gco2": 350, "water_stress": "medium"}, "Utah": {"rate": 0.114, "gco2": 440, "water_stress": "high"}, "Vermont": {"rate": 0.207, "gco2": 30, "water_stress": "low"}, "Virginia": {"rate": 0.142, "gco2": 330, "water_stress": "low"}, "Washington": {"rate": 0.112, "gco2": 80, "water_stress": "medium"}, "West Virginia": {"rate": 0.131, "gco2": 520, "water_stress": "low"}, "Wisconsin": {"rate": 0.162, "gco2": 380, "water_stress": "low"}, "Wyoming": {"rate": 0.111, "gco2": 460, "water_stress": "low"}};
-  var PUE = 1.12, WG = 2.0, HOME = 10500, INV = 2000000, DIV = 0.02, DCR = 0.05;
-  var slider = document.getElementById('mw-slider');
-  var label = document.getElementById('mw-label');
-  var sel = document.getElementById('state-select');
-  function fmt(n) {
-    if (n >= 1e9) return (n/1e9).toFixed(1) + 'B';
-    if (n >= 1e6) return (n/1e6).toFixed(1) + 'M';
-    if (n >= 1e3) return Math.round(n).toLocaleString();
-    return n.toFixed(1);
-  }
-  function usd(n) {
-    if (n >= 1e9) return '$' + (n/1e9).toFixed(1) + 'B';
-    if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
-    if (n >= 1e3) return '$' + Math.round(n).toLocaleString();
-    return '$' + n.toFixed(0);
-  }
-  function calc() {
-    var mw = +slider.value;
-    var st = sel.value;
-    var prof = P[st] || {rate:0.12, gco2:400, water_stress:'medium'};
-    label.textContent = mw + ' MW';
-    var kwh = mw * 8760 * PUE * 1000;
-    var mwh = kwh / 1000;
-    document.getElementById('r-energy').textContent = fmt(mwh);
-    document.getElementById('r-homes').textContent = fmt(kwh / HOME);
-    document.getElementById('r-water').textContent = (kwh * WG / 1e6).toFixed(1);
-    document.getElementById('r-co2').textContent = fmt(mwh * prof.gco2 / 1e6);
-    document.getElementById('r-ratio').textContent = (prof.rate / DCR).toFixed(1);
-    document.getElementById('r-resrate').textContent = '$' + prof.rate.toFixed(3);
-    document.getElementById('r-dividend').textContent = usd(mw * INV * DIV);
-    document.getElementById('r-gco2').textContent = prof.gco2;
-    document.getElementById('r-stress').textContent = prof.water_stress;
-  }
-  slider.addEventListener('input', calc);
-  sel.addEventListener('change', calc);
-  calc();
-})();
-</script>
 
 </main>
 <footer>

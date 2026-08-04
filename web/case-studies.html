@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b1220">
-<title>Data center impact calculator — AI GridWatch</title>
-<meta name="description" content="Estimate the electricity, water, carbon, and rate impact of a data center in your state — free community calculator.">
-<link rel="canonical" href="https://aigridwatch.com/impact">
+<title>Case studies — AI GridWatch</title>
+<meta name="description" content="What communities have actually won and lost in data-center fights: moratorium outcomes, benchmark CBAs, per-hyperscaler negotiation patterns.">
+<link rel="canonical" href="https://aigridwatch.com/case-studies">
 <link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
       href="https://aigridwatch.com/blog/feed.xml">
-<meta property="og:title" content="Data center impact calculator — AI GridWatch">
-<meta property="og:description" content="Estimate the electricity, water, carbon, and rate impact of a data center in your state — free community calculator.">
+<meta property="og:title" content="Case studies — AI GridWatch">
+<meta property="og:description" content="What communities have actually won and lost in data-center fights: moratorium outcomes, benchmark CBAs, per-hyperscaler negotiation patterns.">
 <meta property="og:type" content="website">
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Calculator", "item": "https://aigridwatch.com/impact"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Case studies", "item": "https://aigridwatch.com/case-studies"}]}</script>
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <style>
 :root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
@@ -244,12 +244,12 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="states/index.html">Your state</a>
-    <a href="case-studies.html">Case studies</a>
+    <a href="case-studies.html" aria-current="page">Case studies</a>
     <a href="cba-clauses.html">Clauses</a>
     <a href="hearing-questions.html">Hearing prep</a>
     <a href="health-risks.html">Health risks</a>
     <a href="moratoriums.html">Moratoriums</a>
-    <a href="impact.html" aria-current="page">Calculator</a>
+    <a href="impact.html">Calculator</a>
     <a href="bills.html">Your bill</a>
     <a href="outlook.html">Outlook</a>
     <a href="learn.html">Learn</a>
@@ -265,154 +265,125 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <main id="main">
 
 <header>
-  <div class="kicker">Community calculator</div>
-  <h1>What does a data center cost your community?</h1>
-  <p class="sub">Pick a size and your state. The calculator estimates annual
-  electricity, water draw, carbon emissions, rate pressure, and the CBA
-  target your community should be negotiating — all sourced from the same
-  model the full toolkit uses.</p>
+  <div class="kicker">Case studies</div>
+  <h1>What communities have actually won — and lost</h1>
+  <p class="sub">Documented outcomes from six moratorium fights, four
+  benchmark CBAs, and every hyperscaler's documented pattern of concession.
+  If you want to know what's realistic to ask for, this is where to start.</p>
 </header>
+
 <section>
-  <h2>Facility size</h2>
-  <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
-    <input type="range" id="mw-slider" min="10" max="500" value="100"
-           step="10" style="flex:1;min-width:200px;accent-color:var(--teal)">
-    <span id="mw-label" style="font-size:28px;font-weight:700;color:var(--teal);min-width:80px">100 MW</span>
-  </div>
-  <p class="muted" style="margin-top:6px">10 MW = small edge facility &middot;
-  100 MW = typical hyperscaler campus &middot; 500 MW = mega-project</p>
-</section>
-<section>
-  <h2>Your state</h2>
-  <select id="state-select" style="background:var(--card);color:var(--ink);
-    border:1px solid var(--rule);border-radius:8px;padding:8px 14px;
-    font-size:15px;width:100%;max-width:320px">
-    <option value="Alabama">Alabama</option>
-<option value="Alaska">Alaska</option>
-<option value="Arizona">Arizona</option>
-<option value="Arkansas">Arkansas</option>
-<option value="California">California</option>
-<option value="Colorado">Colorado</option>
-<option value="Connecticut">Connecticut</option>
-<option value="Delaware">Delaware</option>
-<option value="District of Columbia">District of Columbia</option>
-<option value="Florida">Florida</option>
-<option value="Georgia">Georgia</option>
-<option value="Hawaii">Hawaii</option>
-<option value="Idaho">Idaho</option>
-<option value="Illinois">Illinois</option>
-<option value="Indiana">Indiana</option>
-<option value="Iowa">Iowa</option>
-<option value="Kansas">Kansas</option>
-<option value="Kentucky">Kentucky</option>
-<option value="Louisiana">Louisiana</option>
-<option value="Maine">Maine</option>
-<option value="Maryland">Maryland</option>
-<option value="Massachusetts">Massachusetts</option>
-<option value="Michigan">Michigan</option>
-<option value="Minnesota">Minnesota</option>
-<option value="Mississippi">Mississippi</option>
-<option value="Missouri">Missouri</option>
-<option value="Montana">Montana</option>
-<option value="Nebraska">Nebraska</option>
-<option value="Nevada">Nevada</option>
-<option value="New Hampshire">New Hampshire</option>
-<option value="New Jersey">New Jersey</option>
-<option value="New Mexico">New Mexico</option>
-<option value="New York">New York</option>
-<option value="North Carolina">North Carolina</option>
-<option value="North Dakota">North Dakota</option>
-<option value="Ohio">Ohio</option>
-<option value="Oklahoma">Oklahoma</option>
-<option value="Oregon">Oregon</option>
-<option value="Pennsylvania">Pennsylvania</option>
-<option value="Rhode Island">Rhode Island</option>
-<option value="South Carolina">South Carolina</option>
-<option value="South Dakota">South Dakota</option>
-<option value="Tennessee">Tennessee</option>
-<option value="Texas">Texas</option>
-<option value="Utah">Utah</option>
-<option value="Vermont">Vermont</option>
-<option value="Virginia">Virginia</option>
-<option value="Washington">Washington</option>
-<option value="West Virginia">West Virginia</option>
-<option value="Wisconsin">Wisconsin</option>
-<option value="Wyoming">Wyoming</option>
-  </select>
-</section>
-<div class="stats" id="results">
-  <div class="stat"><b id="r-energy">—</b><span>annual electricity (MWh)</span></div>
-  <div class="stat"><b id="r-homes">—</b><span>homes equivalent</span></div>
-  <div class="stat"><b id="r-water">—</b><span>annual water (million gal)</span></div>
-  <div class="stat"><b id="r-co2">—</b><span>annual CO&#8322; (metric tons)</span></div>
+  <h2>Moratorium outcomes</h2>
+  <p class="muted">Six real cases; the categories reflect what the community
+  ended up with, not what was originally proposed.</p>
+  
+<div class="note good">
+  <p><strong>Groton, CT</strong> —
+  <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
+  CBA secured</span></p>
+  <p><strong>Moratorium led to permanent zoning controls</strong></p>
+  <p>After a year-long moratorium, Groton adopted permanent zoning amendments restricting data centers to industrial zones with noise limits of 45 dBA at property lines and mandatory stormwater management. The developer (Vantage) agreed to a CBA funding a $2.5M community recreation center.</p>
 </div>
-<section>
-  <h2>Economic impact</h2>
-  <div class="grid2">
-    <div class="card">
-      <h3>Rate pressure</h3>
-      <p>Residents pay <strong id="r-ratio">—</strong>&times; what the data
-      center pays per kWh (<span id="r-resrate">—</span> vs $0.05).</p>
-    </div>
-    <div class="card">
-      <h3>CBA target</h3>
-      <p>At 2% of estimated investment, your community should negotiate at
-      least <strong id="r-dividend">—</strong>/year in community benefits.</p>
-    </div>
-  </div>
-  <p class="muted" style="margin-top:8px">Grid carbon:
-  <span id="r-gco2">—</span> gCO&#8322;/kWh &middot; Water stress:
-  <span id="r-stress">—</span> &middot; Cooling: evaporative (PUE 1.12)</p>
+<div class="note info">
+  <p><strong>Peculiar, MO</strong> —
+  <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
+  Ban sustained</span></p>
+  <p><strong>Outright ban held after legal challenge</strong></p>
+  <p>The city&#x27;s ban on data centers survived a developer lawsuit. The court ruled that municipalities have broad police-power authority over land use. Peculiar cited water supply concerns — the proposed 50 MW facility would have consumed 30% of the city&#x27;s water allocation.</p>
+</div>
+<div class="note bad">
+  <p><strong>Cheyenne, WY</strong> —
+  <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
+  No protections</span></p>
+  <p><strong>Moratorium voted down — developer fast-tracked permits</strong></p>
+  <p>The city council rejected a moratorium 8-1, citing potential tax revenue. Microsoft broke ground on a 300 MW campus 4 months later. Residential electricity rates rose 11% the following year, partly attributed to grid upgrade costs. A CBA was not negotiated.</p>
+</div>
+<div class="note warn">
+  <p><strong>Prince William County, VA</strong> —
+  <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
+  Political shift</span></p>
+  <p><strong>Data center backlash reshaped county politics</strong></p>
+  <p>Years of unchecked data center growth (70+ facilities) triggered a voter revolt in 2023. Anti-data-center candidates won board seats. The county now requires noise studies, visual screening, and CBA negotiations for new facilities. Property values near existing campuses remain 8-15% below comparable areas.</p>
+</div>
+<div class="note good">
+  <p><strong>The Dalles, OR</strong> —
+  <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
+  CBA secured</span></p>
+  <p><strong>Water fight forced Google to fund infrastructure</strong></p>
+  <p>Community opposition to Google&#x27;s water usage led to a negotiated agreement: Google funded a $29M wastewater treatment upgrade and committed to using recycled water for cooling. The city capped total data center water draws at 25% of municipal supply.</p>
+</div>
+<div class="note good">
+  <p><strong>Mesa, AZ</strong> —
+  <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
+  CBA secured</span></p>
+  <p><strong>Residents won noise and water protections mid-construction</strong></p>
+  <p>After residents organized against Apple and Google campus noise, Mesa adopted a data center overlay zone requiring 55 dBA limits, water recycling plans, and quarterly community reporting. Existing facilities were grandfathered but agreed to voluntary retrofits.</p>
+</div>
 </section>
+
 <section>
-  <h2>What to do with these numbers</h2>
-  <p>Print this page, or use the full toolkit to generate a complete action
-  pack — a meeting brief, comment scripts, letters to officials, and a
-  community flyer with these numbers baked in.</p>
-  <p><a class="btn" href="https://aigridtracker.streamlit.app">Generate your action pack &rarr;</a>
-  <a class="btn ghost" href="health-risks.html">The health risks, sourced</a></p>
+  <h2>Benchmark CBAs — what similar communities won</h2>
+  <div style="overflow-x:auto"><table>
+    <tr><th>Community</th><th>Developer</th><th>What they won</th></tr>
+    <tr><td><strong>The Dalles, OR</strong></td><td>Google</td><td>$29M wastewater treatment upgrade + recycled-water cooling; city capped DC draws at 25% of municipal supply</td></tr>
+<tr><td><strong>Groton, CT</strong></td><td>Vantage</td><td>$2.5M community recreation center CBA, recorded as a zoning condition after a year-long moratorium</td></tr>
+<tr><td><strong>Morrow &amp; Umatilla Counties, OR</strong></td><td>Amazon (AWS)</td><td>Renegotiated tax agreements with higher annual community payments after commissioners pushed back</td></tr>
+<tr><td><strong>Loudoun County, VA</strong></td><td>Multiple</td><td>Hundreds of millions/year in data-center property taxes — ~38% of the county budget — by declining abatements</td></tr>
+  </table></div>
+  <p class="muted">Every one of these happened <em>before</em> final approval.
+  Timing is the leverage.</p>
 </section>
-<script>
-(function() {
-  var P = {"Alabama": {"rate": 0.146, "gco2": 380, "water_stress": "low"}, "Alaska": {"rate": 0.229, "gco2": 450, "water_stress": "low"}, "Arizona": {"rate": 0.139, "gco2": 390, "water_stress": "high"}, "Arkansas": {"rate": 0.124, "gco2": 410, "water_stress": "low"}, "California": {"rate": 0.285, "gco2": 210, "water_stress": "high"}, "Colorado": {"rate": 0.15, "gco2": 420, "water_stress": "medium"}, "Connecticut": {"rate": 0.268, "gco2": 200, "water_stress": "low"}, "Delaware": {"rate": 0.155, "gco2": 370, "water_stress": "low"}, "District of Columbia": {"rate": 0.158, "gco2": 340, "water_stress": "low"}, "Florida": {"rate": 0.157, "gco2": 370, "water_stress": "low"}, "Georgia": {"rate": 0.143, "gco2": 370, "water_stress": "low"}, "Hawaii": {"rate": 0.41, "gco2": 550, "water_stress": "high"}, "Idaho": {"rate": 0.112, "gco2": 120, "water_stress": "medium"}, "Illinois": {"rate": 0.154, "gco2": 310, "water_stress": "low"}, "Indiana": {"rate": 0.149, "gco2": 430, "water_stress": "low"}, "Iowa": {"rate": 0.139, "gco2": 410, "water_stress": "low"}, "Kansas": {"rate": 0.142, "gco2": 420, "water_stress": "medium"}, "Kentucky": {"rate": 0.126, "gco2": 460, "water_stress": "low"}, "Louisiana": {"rate": 0.117, "gco2": 380, "water_stress": "low"}, "Maine": {"rate": 0.228, "gco2": 180, "water_stress": "low"}, "Maryland": {"rate": 0.16, "gco2": 340, "water_stress": "low"}, "Massachusetts": {"rate": 0.28, "gco2": 280, "water_stress": "low"}, "Michigan": {"rate": 0.186, "gco2": 390, "water_stress": "low"}, "Minnesota": {"rate": 0.151, "gco2": 350, "water_stress": "low"}, "Mississippi": {"rate": 0.131, "gco2": 400, "water_stress": "low"}, "Missouri": {"rate": 0.131, "gco2": 440, "water_stress": "low"}, "Montana": {"rate": 0.125, "gco2": 340, "water_stress": "low"}, "Nebraska": {"rate": 0.121, "gco2": 420, "water_stress": "low"}, "Nevada": {"rate": 0.138, "gco2": 330, "water_stress": "high"}, "New Hampshire": {"rate": 0.243, "gco2": 190, "water_stress": "low"}, "New Jersey": {"rate": 0.187, "gco2": 250, "water_stress": "low"}, "New Mexico": {"rate": 0.143, "gco2": 410, "water_stress": "high"}, "New York": {"rate": 0.223, "gco2": 250, "water_stress": "low"}, "North Carolina": {"rate": 0.132, "gco2": 350, "water_stress": "low"}, "North Dakota": {"rate": 0.117, "gco2": 510, "water_stress": "low"}, "Ohio": {"rate": 0.144, "gco2": 420, "water_stress": "low"}, "Oklahoma": {"rate": 0.121, "gco2": 350, "water_stress": "medium"}, "Oregon": {"rate": 0.128, "gco2": 140, "water_stress": "medium"}, "Pennsylvania": {"rate": 0.171, "gco2": 310, "water_stress": "low"}, "Rhode Island": {"rate": 0.265, "gco2": 280, "water_stress": "low"}, "South Carolina": {"rate": 0.146, "gco2": 300, "water_stress": "low"}, "South Dakota": {"rate": 0.128, "gco2": 250, "water_stress": "low"}, "Tennessee": {"rate": 0.125, "gco2": 350, "water_stress": "low"}, "Texas": {"rate": 0.142, "gco2": 350, "water_stress": "medium"}, "Utah": {"rate": 0.114, "gco2": 440, "water_stress": "high"}, "Vermont": {"rate": 0.207, "gco2": 30, "water_stress": "low"}, "Virginia": {"rate": 0.142, "gco2": 330, "water_stress": "low"}, "Washington": {"rate": 0.112, "gco2": 80, "water_stress": "medium"}, "West Virginia": {"rate": 0.131, "gco2": 520, "water_stress": "low"}, "Wisconsin": {"rate": 0.162, "gco2": 380, "water_stress": "low"}, "Wyoming": {"rate": 0.111, "gco2": 460, "water_stress": "low"}};
-  var PUE = 1.12, WG = 2.0, HOME = 10500, INV = 2000000, DIV = 0.02, DCR = 0.05;
-  var slider = document.getElementById('mw-slider');
-  var label = document.getElementById('mw-label');
-  var sel = document.getElementById('state-select');
-  function fmt(n) {
-    if (n >= 1e9) return (n/1e9).toFixed(1) + 'B';
-    if (n >= 1e6) return (n/1e6).toFixed(1) + 'M';
-    if (n >= 1e3) return Math.round(n).toLocaleString();
-    return n.toFixed(1);
-  }
-  function usd(n) {
-    if (n >= 1e9) return '$' + (n/1e9).toFixed(1) + 'B';
-    if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
-    if (n >= 1e3) return '$' + Math.round(n).toLocaleString();
-    return '$' + n.toFixed(0);
-  }
-  function calc() {
-    var mw = +slider.value;
-    var st = sel.value;
-    var prof = P[st] || {rate:0.12, gco2:400, water_stress:'medium'};
-    label.textContent = mw + ' MW';
-    var kwh = mw * 8760 * PUE * 1000;
-    var mwh = kwh / 1000;
-    document.getElementById('r-energy').textContent = fmt(mwh);
-    document.getElementById('r-homes').textContent = fmt(kwh / HOME);
-    document.getElementById('r-water').textContent = (kwh * WG / 1e6).toFixed(1);
-    document.getElementById('r-co2').textContent = fmt(mwh * prof.gco2 / 1e6);
-    document.getElementById('r-ratio').textContent = (prof.rate / DCR).toFixed(1);
-    document.getElementById('r-resrate').textContent = '$' + prof.rate.toFixed(3);
-    document.getElementById('r-dividend').textContent = usd(mw * INV * DIV);
-    document.getElementById('r-gco2').textContent = prof.gco2;
-    document.getElementById('r-stress').textContent = prof.water_stress;
-  }
-  slider.addEventListener('input', calc);
-  sel.addEventListener('change', calc);
-  calc();
-})();
-</script>
+
+<section>
+  <h2>How each hyperscaler negotiates</h2>
+  <p class="muted">Documented concessions and the pattern behind them. Use
+  these to anchor your ask to what the same company has already agreed to
+  elsewhere.</p>
+  
+<section id="google">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Google</h3>
+  <p class="muted"><em>Negotiation pattern:</em> Negotiates through PR-friendly commitments — water stewardship pledges, community grants — but its largest concessions came only under permit leverage and records-transparency pressure. Secrecy is standard practice (NDAs with local officials, shell LLCs like &#x27;Design LLC&#x27;) until approvals are locked; forcing early disclosure of water and power demands shifts the balance.</p>
+  <ul><li><strong>The Dalles, OR</strong> (2021-22) — Funded a ~$29M water/wastewater infrastructure upgrade and committed to recycled-water cooling after the city tied expansion approval to water guarantees; dropped its fight to keep water-use records secret after a local newspaper&#x27;s public-records lawsuit.</li>
+<li><strong>Mesa, AZ</strong> (2023) — Accepted voluntary noise retrofits and quarterly community reporting under the city&#x27;s data-center overlay zone.</li>
+<li><strong>Multiple campuses</strong> (ongoing) — Routinely funds local community grants near campuses — treat these as table stakes, not a substitute for a binding CBA.</li></ul>
+</section>
+<section id="meta">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Meta</h3>
+  <p class="muted"><em>Negotiation pattern:</em> Runs a standardized siting playbook behind shell LLCs (in Los Lunas it arrived as &#x27;Greater Kudu LLC&#x27;) and moves fast once incentives are locked. Its public &#x27;water positive by 2030&#x27; pledge is leverage: communities have converted it into binding local water caps, restoration funding, and reporting terms.</p>
+  <ul><li><strong>Los Lunas, NM</strong> (2016-22) — Agreed to water-use limits and funded Rio Grande basin water-restoration projects after drought-driven scrutiny of the campus&#x27;s cooling demand.</li>
+<li><strong>Multiple campuses</strong> (ongoing) — Funds community action grants and local infrastructure near campuses; amounts are negotiated site by site — get them written into approval conditions.</li></ul>
+</section>
+<section id="microsoft">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Microsoft</h3>
+  <p class="muted"><em>Negotiation pattern:</em> The most willing of the hyperscalers to accept transparency and design conditions: it has publicly committed new builds to zero-water evaporative cooling designs and has paid for its own water treatment where municipal systems pushed back. Use its published sustainability commitments as the floor of your ask, not the ceiling.</p>
+  <ul><li><strong>Quincy, WA</strong> (2010s) — Funded and built water treatment/reuse capacity after the city objected to cooling discharge loads on the municipal system.</li>
+<li><strong>San Antonio, TX</strong> (ongoing) — Runs cooling on recycled municipal wastewater instead of potable supply.</li>
+<li><strong>New builds (announced)</strong> (2024) — Committed next-generation data center designs to zero water for cooling — cite this when a developer claims evaporative water draw is unavoidable.</li></ul>
+</section>
+<section id="amazon-(aws)">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Amazon (AWS)</h3>
+  <p class="muted"><em>Negotiation pattern:</em> The hardest bargainer on taxes — AWS extracts enterprise-zone abatements and has litigated assessments — but its Oregon deals prove terms are reopenable when officials organize. Leverage sits with whoever controls the next approval; its &#x27;water positive by 2030&#x27; pledge is a hook for binding water terms.</p>
+  <ul><li><strong>Morrow &amp; Umatilla Counties, OR</strong> (2022) — Renegotiated enterprise-zone tax agreements to raise annual community payments after county commissioners and residents pushed back on earlier abatements.</li>
+<li><strong>Loudoun County, VA</strong> (ongoing) — Pays hundreds of millions per year in data-center property taxes — precedent that a jurisdiction with market power can decline abatements entirely.</li></ul>
+</section>
+<section id="qts">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">QTS</h3>
+  <p class="muted"><em>Negotiation pattern:</em> Blackstone-owned and growth-driven — entitlement delay is its biggest cost, which makes timeline leverage real. In contested Virginia rezonings QTS offered proffers (buffers, transmission undergrounding contributions, community funds) to keep projects moving. Get proffers recorded as binding conditions of approval, not letters of intent.</p>
+  <ul><li><strong>Prince William County, VA</strong> (2022-23) — Offered rezoning proffers — setbacks, buffering, and community contributions — during the contested Digital Gateway rezoning; the approval was later challenged in court, a reminder to secure commitments that survive litigation.</li></ul>
+</section>
+<section id="vantage">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Vantage</h3>
+  <p class="muted"><em>Negotiation pattern:</em> Colocation developer that needs local zoning wins to serve hyperscaler tenants; it has accepted CBAs as zoning conditions when boards held firm through a moratorium.</p>
+  <ul><li><strong>Groton, CT</strong> (2023) — Agreed to a CBA funding a $2.5M community recreation center as part of permanent zoning controls adopted after a year-long moratorium.</li></ul>
+</section>
+</section>
+
+<section>
+  <p class="muted"><strong>See also:</strong>
+  <a href="cba-clauses.html">Model CBA clauses</a> ·
+  <a href="moratoriums.html">Full moratorium tracker</a> ·
+  <a href="https://aigridtracker.streamlit.app">Generate a meeting brief with these precedents pre-loaded</a></p>
+</section>
 
 </main>
 <footer>

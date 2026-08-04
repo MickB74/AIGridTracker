@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1220">
+<title>Official state studies — AI GridWatch</title>
+<meta name="description" content="State-commissioned reports on data-center impact: Michigan CRC, Virginia JLARC, Georgia, Oregon, Maryland, Indiana, New Jersey.">
+<link rel="canonical" href="https://aigridwatch.com/studies">
+<link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
+      href="https://aigridwatch.com/blog/feed.xml">
+<meta property="og:title" content="Official state studies — AI GridWatch">
+<meta property="og:description" content="State-commissioned reports on data-center impact: Michigan CRC, Virginia JLARC, Georgia, Oregon, Maryland, Indiana, New Jersey.">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Studies", "item": "https://aigridwatch.com/studies"}]}</script>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<style>
+:root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
+        --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
+* { box-sizing:border-box; margin:0; }
+body { background:var(--bg); color:var(--ink);
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.wrap { max-width:900px; margin:0 auto; padding:20px 20px 64px; }
+nav { display:flex; align-items:center; gap:14px; padding:14px 0;
+      border-bottom:1px solid var(--rule); flex-wrap:wrap; }
+nav img { height:34px; }
+nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+nav a:hover { color:var(--teal); }
+nav a[aria-current] { color:var(--teal); font-weight:600; }
+nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
+           font-weight:700; padding:8px 16px; border-radius:8px; }
+/* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
+.nav-burger { display:none; }
+.nav-links { display:contents; }
+@media (max-width:820px) {
+  nav { gap:8px; }
+  nav img { height:30px; }
+  .nav-burger { display:block; order:3; font-size:20px; line-height:1;
+    color:var(--muted); cursor:pointer; padding:5px 8px; border-radius:8px;
+    border:1px solid var(--rule); user-select:none; }
+  .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
+  nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  .nav-links { order:4; display:none; flex-basis:100%;
+    flex-direction:column; gap:0; padding:4px 0 2px; }
+  #navToggle:checked ~ .nav-links { display:flex; }
+  .nav-links a { padding:10px 2px; font-size:15px;
+    border-bottom:1px solid rgba(255,255,255,.05); }
+  .nav-links a:last-child { border-bottom:none; }
+}
+.skip { position:absolute; left:-9999px; }
+.skip:focus { position:fixed; left:16px; top:10px; z-index:1000;
+  background:var(--teal); color:#06251f; font-weight:700;
+  padding:9px 16px; border-radius:8px; }
+header { padding:44px 0 10px; }
+.kicker { color:var(--teal); font-weight:700; letter-spacing:.12em;
+          text-transform:uppercase; font-size:13px; }
+h1 { font-size:clamp(28px,5vw,44px); line-height:1.12; margin:10px 0;
+     text-wrap:balance; }
+.sub { color:var(--muted); max-width:640px; }
+.stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+         margin:30px 0; }
+@media (min-width:640px){ .stats{ grid-template-columns:repeat(4,1fr);} }
+.stat { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:16px; }
+.stat b { display:block; font-size:24px; color:var(--teal); }
+.stat span { font-size:13px; color:var(--muted); }
+section { margin:34px 0; }
+h2 { font-size:20px; color:var(--teal); margin-bottom:12px;
+     border-bottom:1px solid var(--rule); padding-bottom:8px; }
+ul { padding-left:22px; } li { margin:9px 0; }
+a { color:var(--teal); }
+.btn { display:inline-block; background:var(--teal); color:#06251f;
+       font-weight:700; padding:12px 22px; border-radius:10px;
+       text-decoration:none; margin:8px 8px 0 0; }
+.btn.ghost { background:transparent; color:var(--teal);
+             border:1px solid var(--teal); }
+.muted { color:var(--muted); font-size:14px; }
+.grid3 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid3{ grid-template-columns:repeat(3,1fr);} }
+.card { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:18px; }
+.card h3 { margin-bottom:6px; font-size:16px; }
+.panel { border-radius:14px; padding:18px; color:#fff; }
+.panel h3 { margin-bottom:8px; }
+.panel p { font-size:14px; color:rgba(255,255,255,.85); }
+.ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
+       border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
+.src { font-size:12.5px; color:var(--muted); }
+.freshness { border-left:3px solid var(--rule); padding:10px 14px;
+  margin:14px 0; background:rgba(255,255,255,.02); border-radius:0 8px 8px 0;
+  font-size:13.5px; }
+.freshness.stale { border-left-color:var(--amber);
+  background:rgba(251,191,36,.07); }
+.freshness p { margin:0; }
+.note { border-left:3px solid var(--rule); padding:12px 16px; margin:18px 0;
+  border-radius:0 8px 8px 0; font-size:14.5px; line-height:1.55; }
+.note.info { border-left-color:var(--teal); background:rgba(45,212,191,.07); }
+.note.warn { border-left-color:var(--amber); background:rgba(251,191,36,.07); }
+.note.bad  { border-left-color:#ef4444; background:rgba(239,68,68,.08); }
+.note.good { border-left-color:#34d399; background:rgba(52,211,153,.07); }
+.note p { margin:0; }
+details.more { border:1px solid var(--rule); border-radius:10px;
+  padding:0 16px; margin:16px 0; background:rgba(255,255,255,.02); }
+details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
+  color:var(--teal); font-size:14.5px; }
+details.more[open] { padding-bottom:10px; }
+.billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
+  margin:20px 0 12px; }
+.billbar > div { display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:14px; }
+.barkey { display:flex; flex-wrap:wrap; gap:14px; font-size:13px;
+  color:var(--muted); }
+.barkey span { display:flex; align-items:center; gap:6px; }
+.barkey i { width:12px; height:12px; border-radius:3px; }
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px; margin:18px 0; }
+.flow .step { border:1px solid var(--rule); border-radius:10px; padding:12px 14px;
+  background:rgba(255,255,255,.02); font-size:14px; }
+.flow .step b { display:block; margin-bottom:4px; }
+.flow .step.end { border-color:#ef4444; background:rgba(239,68,68,.08); }
+.hbars { margin:18px 0; display:flex; flex-direction:column; gap:8px; }
+.hbar-row { display:grid; grid-template-columns:minmax(90px,1.1fr) 2.4fr
+  minmax(90px,1.3fr); gap:10px; align-items:center; font-size:13.5px; }
+.hbar-label { color:var(--ink); }
+.hbar-track { background:rgba(255,255,255,.06); border-radius:5px; height:16px; }
+.hbar-fill { height:16px; border-radius:5px; }
+.hbar-val { color:var(--muted); font-variant-numeric:tabular-nums; }
+@media (max-width:640px) {
+  .hbar-row { grid-template-columns:1fr; gap:2px; }
+  .hbar-track { height:12px; }
+}
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+th { color:var(--muted); font-weight:600; }
+footer { margin-top:48px; border-top:1px solid var(--rule);
+         padding-top:16px; font-size:13px; color:var(--muted); }
+.statelist { columns:2; font-size:14.5px; }
+@media (min-width:640px){ .statelist{ columns:4; } }
+.statelist a { display:block; padding:3px 0; text-decoration:none; }
+.us-map { max-width:100%; height:auto; margin:20px auto; display:block; }
+.us-map path { fill:var(--card); stroke:var(--rule); stroke-width:.6;
+               cursor:pointer; transition:fill .15s; }
+.us-map path:hover { fill:var(--teal); }
+.us-map text { fill:var(--muted); font-size:7px; pointer-events:none;
+               text-anchor:middle; font-weight:600;
+               font-family:system-ui,-apple-system,sans-serif; }
+.us-map path:hover + text, .us-map path:hover ~ text { fill:var(--bg); }
+.map-tooltip { position:fixed; background:var(--card); border:1px solid var(--teal);
+               border-radius:8px; padding:6px 12px; font-size:13px;
+               color:var(--ink); pointer-events:none; z-index:999;
+               display:none; white-space:nowrap; }
+.post-meta { color:var(--muted); font-size:14px; margin:8px 0 6px; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 20px; }
+.tag { background:var(--card); border:1px solid var(--rule);
+       border-radius:20px; padding:3px 11px; font-size:12px;
+       color:var(--muted); }
+.prose h3 { font-size:17px; color:var(--teal); margin:24px 0 8px; }
+.prose p { margin:10px 0; }
+.prose blockquote { border-left:3px solid var(--teal); margin:16px 0;
+                    padding:6px 16px; color:var(--muted); }
+.prose table { margin:16px 0; }
+.prose ul, .prose ol { margin:10px 0; }
+.prose hr { border:none; border-top:1px solid var(--rule); margin:24px 0; }
+.post-nav { display:flex; justify-content:space-between; gap:14px;
+            margin:32px 0 0; padding:18px 0 0;
+            border-top:1px solid var(--rule); font-size:14px; }
+.post-nav a { max-width:45%; }
+.post-nav .dir { color:var(--muted); font-size:12px; display:block; }
+.blog-list { list-style:none; padding:0; }
+.blog-list li { border-bottom:1px solid var(--rule); padding:18px 0;
+  content-visibility:auto; contain-intrinsic-size:auto 110px; }
+.blog-list li:last-child { border-bottom:none; }
+.blog-list h3 { font-size:17px; margin:0 0 4px; }
+.blog-list h3 a { text-decoration:none; }
+.blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
+.badge { display:inline-block; font-size:12px; font-weight:700;
+         padding:2px 9px; border-radius:6px; }
+.badge-enacted { background:#065f46; color:#6ee7b7; }
+.badge-proposed { background:#713f12; color:#fde68a; }
+.badge-rejected { background:#7f1d1d; color:#fca5a5; }
+.badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.outcome { border-left:3px solid var(--teal); padding:10px 14px;
+           margin:10px 0; }
+.outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
+                text-transform:uppercase; letter-spacing:.08em; }
+.grid2 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
+.official { font-size:14px; }
+.official .role { color:var(--muted); font-size:13px; }
+.hero-grid { display:grid; grid-template-columns:1fr; gap:24px;
+  align-items:center; padding:44px 0 10px; }
+@media (min-width:820px){ .hero-grid{ grid-template-columns:1.15fr .85fr; padding:56px 0 20px; } }
+.hero-grid header { padding:0; }
+.hero-art { width:100%; max-width:420px; margin:0 auto; display:block;
+  filter:drop-shadow(0 8px 24px rgba(45,212,191,.12)); }
+.hero-art .glow { animation:pulse 3.2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:.35} 50%{opacity:1} }
+@media (prefers-reduced-motion:reduce){ .hero-art .glow{ animation:none; opacity:.7 } }
+.iconcard { display:flex; gap:14px; align-items:flex-start; }
+.iconcard .ico { flex-shrink:0; width:40px; height:40px; border-radius:10px;
+  background:rgba(45,212,191,.12); display:flex; align-items:center;
+  justify-content:center; color:var(--teal); }
+.iconcard .ico svg { width:22px; height:22px; }
+.iconcard .body h3 { margin:0 0 4px; }
+.demand-chart { margin:14px 0 6px; }
+.demand-chart .row { display:grid; grid-template-columns:minmax(80px,90px) 1fr minmax(90px,110px);
+  gap:12px; align-items:center; padding:6px 0; font-size:14px; }
+.demand-chart .yr { color:var(--muted); font-variant-numeric:tabular-nums; }
+.demand-chart .bar { height:22px; border-radius:6px;
+  background:linear-gradient(90deg, rgba(45,212,191,.85), rgba(45,212,191,.55));
+  position:relative; }
+.demand-chart .bar.range { background:linear-gradient(90deg,
+  rgba(251,191,36,.85) 0%, rgba(251,191,36,.85) var(--lo,50%),
+  rgba(251,191,36,.35) var(--lo,50%), rgba(251,191,36,.35) 100%); }
+.demand-chart .val { color:var(--ink); font-variant-numeric:tabular-nums;
+  font-weight:600; text-align:right; }
+.grid-flow-svg { width:100%; height:auto; max-width:820px; margin:14px auto;
+  display:block; }
+.grid-flow-svg text { font:600 12px system-ui,-apple-system,sans-serif;
+  fill:var(--ink); }
+.grid-flow-svg text.small { font-size:10.5px; font-weight:500; fill:var(--muted); }
+.grid-flow-svg .flow-dot { fill:var(--teal); }
+.grid-flow-svg .flow-dot.a1 { animation:flowa 3s linear infinite; }
+.grid-flow-svg .flow-dot.a2 { animation:flowb 3s linear infinite; animation-delay:1s; }
+.grid-flow-svg .flow-dot.a3 { animation:flowc 3s linear infinite; animation-delay:2s; }
+@keyframes flowa { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@keyframes flowb { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@keyframes flowc { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@media (prefers-reduced-motion:reduce){ .grid-flow-svg .flow-dot{ animation:none } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<nav>
+  <a href="index.html"><img src="assets/logo.svg" alt="AI GridWatch"></a>
+  <input type="checkbox" id="navToggle" hidden>
+  <label for="navToggle" class="nav-burger" aria-label="Menu"
+         role="button">&#9776;</label>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="states/index.html">Your state</a>
+    <a href="case-studies.html">Case studies</a>
+    <a href="cba-clauses.html">Clauses</a>
+    <a href="hearing-questions.html">Hearing prep</a>
+    <a href="health-risks.html">Health risks</a>
+    <a href="moratoriums.html">Moratoriums</a>
+    <a href="impact.html">Calculator</a>
+    <a href="bills.html">Your bill</a>
+    <a href="outlook.html">Outlook</a>
+    <a href="learn.html">Learn</a>
+    <a href="puc.html">PUCs</a>
+    <a href="data-centers.html">Data centers</a>
+    <a href="environment.html">Environment</a>
+    <a href="companies/index.html">Companies</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="news/index.html">News</a>
+  </div>
+  <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
+</nav>
+<main id="main">
+
+<header>
+  <div class="kicker">Studies library</div>
+  <h1>Official state studies of data-center impact</h1>
+  <p class="sub">A curated directory of state-commissioned reports,
+  legislative audits, and PUC filings on data centers. The papers your
+  planning commissioner will actually recognize.</p>
+</header>
+<details class="more" open><summary>On this page</summary><ol><li><a href="#michigan">Michigan</a></li>
+<li><a href="#virginia">Virginia</a></li>
+<li><a href="#georgia">Georgia</a></li>
+<li><a href="#oregon">Oregon</a></li>
+<li><a href="#maryland">Maryland</a></li>
+<li><a href="#indiana">Indiana</a></li>
+<li><a href="#new-jersey">New Jersey</a></li></ol></details>
+
+<section id="michigan">
+  <h2>Michigan</h2>
+  <p><strong>Data Centers in Michigan: Evaluation of Policy Controversies Regarding Hyperscale Data Center Development (June 2026)</strong><br>
+  <span class="muted">Citizens Research Council of Michigan (Report 426) · <a href="https://crcmich.org/publications/data-centers-in-michigan-evaluation-controversies-hyperscale-development" rel="nofollow">Citizens Research Council of Michigan — Data Centers in Michigan: Policy Controversies (June 2026)</a> · <a href="https://crcmich.org/PUBLICAT/2020s/2026/rpt426-data_centers_in_Michigan.pdf" rel="nofollow">Read the PDF</a></span></p>
+  <p>Evaluation of tax policies, local grid capacity, water usage, and localized noise impacts.</p>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">Key findings</h3>
+  <ul><li><strong>Modest Economic Multiplier</strong>: High temporary construction impact (1,000+ workers), but low permanent operational jobs (a few dozen per campus). Host communities benefit most from local property taxes and Community Benefit Agreements.</li>
+<li><strong>Grid Capacity &amp; Rates</strong>: Michigan's grid can accommodate load under current policies, but rapid load growth risks shifting infrastructure costs onto residential ratepayers. The Michigan Public Service Commission (MPSC) now requires utilities to prove large load additions will not raise rates for other customers.</li>
+<li><strong>Clean Energy Goals</strong>: The 2023 Clean Energy Law requires 100% clean targets. Heavy data center draw risks forcing fossil-fuel runtimes if generation buildout lag behind. Most developers in MI are now investing directly in storage/renewables to mitigate this.</li>
+<li><strong>Water Resources</strong>: Unlikely to threaten overall water resources due to closed-loop or evaporative cooling designs, but localized groundwater draw should be monitored.</li>
+<li><strong>Noise Pollution</strong>: Identified as the most concerning localized community impact; requires strict zoning and noise mitigation from local permitting agencies.</li></ul>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">At a glance</h3>
+  <table><tr><td><strong>Peak Construction Jobs</strong></td><td>1,000+ workers</td></tr>
+<tr><td><strong>Permanent Jobs</strong></td><td>20–50 per hyperscale site</td></tr>
+<tr><td><strong>Water Threat Level</strong></td><td>Low (closed-loop standard)</td></tr>
+<tr><td><strong>Primary Local Benefit</strong></td><td>Property Taxes / CBA</td></tr></table>
+</section>
+<section id="virginia">
+  <h2>Virginia</h2>
+  <p><strong>Joint Legislative Audit and Review Commission (JLARC) Data Center Study (December 2024)</strong><br>
+  <span class="muted">Commonwealth of Virginia (Report 591) · <a href="https://jlarc.virginia.gov/pdfs/reports/Rpt591.pdf" rel="nofollow">Virginia JLARC — Data Center Impact Study (Report 591, Dec 2024)</a> · <a href="https://jlarc.virginia.gov/pdfs/reports/Rpt591.pdf" rel="nofollow">Read the PDF</a></span></p>
+  <p>Comprehensive analysis of Loudoun County (&#x27;Data Center Alley&#x27;) density, PJM transmission bottlenecks, and tax revenues.</p>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">Key findings</h3>
+  <ul><li><strong>Tax Revenue Windfall</strong>: Data centers generated over $1B in annual local tax revenue in Northern Virginia, significantly subsidizing residential public school systems and services.</li>
+<li><strong>Transmission Constraints</strong>: Unprecedented cluster density in Loudoun &amp; Prince William counties has triggered PJM transmission constraints, requiring billions in grid upgrades (e.g. 500kV lines) funded by all grid ratepayers.</li>
+<li><strong>Clean Energy Backlash</strong>: Meeting hyperscaler green commitments (100% renewable matching) has led to massive solar land-use debates across rural Virginia counties.</li>
+<li><strong>Water Stewardship</strong>: Transitioning away from open-loop evaporative cooling towards air-cooling has reduced water intensity, but older facilities still consume millions of gallons daily.</li></ul>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">At a glance</h3>
+  <table><tr><td><strong>State DC Power Draw</strong></td><td>3,000+ MW (largest globally)</td></tr>
+<tr><td><strong>Annual Local Tax Revenue</strong></td><td>$1.2+ Billion</td></tr>
+<tr><td><strong>Grid Bottleneck Level</strong></td><td>High (PJM queues restricted)</td></tr>
+<tr><td><strong>Zoning Controversy</strong></td><td>Agricultural land-use conversion</td></tr></table>
+</section>
+<section id="georgia">
+  <h2>Georgia</h2>
+  <p><strong>Joint Committee on Data Center Tax Incentives &amp; Grid Reliability (2024–2025)</strong><br>
+  <span class="muted">Georgia General Assembly Special Study Committee · <a href="https://www.house.ga.gov/" rel="nofollow">Georgia House of Representatives — Joint Committee on Data Center Tax Incentives (2024)</a> · <a href="https://www.house.ga.gov/" rel="nofollow">Read the PDF</a></span></p>
+  <p>Legislative review of state sales-tax breaks for data centers and rising grid capacity warnings.</p>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">Key findings</h3>
+  <ul><li><strong>Incentive Suspensions</strong>: Recommended temporary suspension or capping of sales-tax exemptions on data center equipment, arguing that the low operational employment does not justify the foregone state revenue.</li>
+<li><strong>Grid Capacity Crisis</strong>: Georgia Power warned regulators that data centers are the primary driver of a massive upward revision in its peak load projections, prompting proposals to construct new fossil-fueled generation.</li>
+<li><strong>Local Benefits vs. State Cost</strong>: While local counties gain substantial property taxes, the state loses sales tax revenue on server upgrades (which occur every 3-4 years).</li></ul>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">At a glance</h3>
+  <table><tr><td><strong>State Incentive Status</strong></td><td>Suspended / Capped (2025)</td></tr>
+<tr><td><strong>Georgia Power Peak Revision</strong></td><td>+3,400 MW load forecast</td></tr>
+<tr><td><strong>Fossil-Fuel Runtimes</strong></td><td>Increased (new gas units approved)</td></tr>
+<tr><td><strong>Employment Multiplier</strong></td><td>Low (capital intensive)</td></tr></table>
+</section>
+<section id="oregon">
+  <h2>Oregon</h2>
+  <p><strong>Data Centers and Energy Use in Oregon (2024)</strong><br>
+  <span class="muted">Oregon Department of Energy (ODOE) Sector Report · <a href="https://www.oregon.gov/energy/Data-Center-Energy-Use.aspx" rel="nofollow">Oregon Department of Energy — Data Centers and Energy Use in Oregon (2024)</a> · <a href="https://www.oregon.gov/energy/Data-Center-Energy-Use.aspx" rel="nofollow">Read the PDF</a></span></p>
+  <p>Statewide review of energy draw, water rights in The Dalles (Columbia River), and utility disclosure laws.</p>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">Key findings</h3>
+  <ul><li><strong>Columbia River Water Draw</strong>: Spotlights Google's major campus at The Dalles. Evaporative cooling draws significant water from the municipal aquifer, causing municipal water rights disputes during dry seasons.</li>
+<li><strong>Hydroelectric Load</strong>: Historically attracted by cheap Bonneville Power Administration (BPA) hydropower. However, hydro capacity is fully allocated, forcing new expansion to draw from mixed Pacific Northwest grids with higher carbon intensities.</li>
+<li><strong>Transparency Laws</strong>: Led to new state laws regarding municipal utility disclosure. Utilities are now permitted to release actual water consumption figures, which were previously protected as proprietary trade secrets.</li></ul>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">At a glance</h3>
+  <table><tr><td><strong>Water Source</strong></td><td>Columbia River / Aquifer</td></tr>
+<tr><td><strong>Energy Source</strong></td><td>BPA Hydropower + Mixed Grid</td></tr>
+<tr><td><strong>Transparency Level</strong></td><td>Improved (New state disclosure laws)</td></tr>
+<tr><td><strong>Primary Issue</strong></td><td>Water rights vs. Agricultural demand</td></tr></table>
+</section>
+<section id="maryland">
+  <h2>Maryland</h2>
+  <p><strong>Critical Infrastructure Streamlining Act of 2024 &amp; State Data Center Impact Mandate (2024)</strong><br>
+  <span class="muted">Maryland General Assembly (CISA / SB 116) · <a href="https://mgaleg.maryland.gov/" rel="nofollow">Maryland General Assembly — Critical Infrastructure Streamlining Act of 2024 (CISA / SB 116)</a> · <a href="https://mgaleg.maryland.gov/" rel="nofollow">Read the PDF</a></span></p>
+  <p>Legislative response to utility generator permit denials and creation of state-wide environmental impact study.</p>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">Key findings</h3>
+  <ul><li><strong>Backup Generator Controversy</strong>: Aligned Data Centers canceled a massive $30B project in late 2023 after the Maryland PSC denied a permit for 168 diesel backup generators due to air quality emissions thresholds.</li>
+<li><strong>Regulatory Streamlining (CISA)</strong>: In May 2024, Maryland enacted the Critical Infrastructure Streamlining Act to exempt data center backup power from Certificate of Public Convenience and Necessity (CPCN) reviews to attract investment.</li>
+<li><strong>Environmental Safeguards</strong>: Environmental groups expressed concern over local particulate and carbon emissions from diesel backup arrays, prompting the state to commission a comprehensive data center impact study due September 1, 2026.</li></ul>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">At a glance</h3>
+  <table><tr><td><strong>Streamlining Bill (CISA)</strong></td><td>Passed (May 2024)</td></tr>
+<tr><td><strong>Canceled Project Investment</strong></td><td>$30 Billion</td></tr>
+<tr><td><strong>Controversial Hardware</strong></td><td>168 Diesel Generators</td></tr>
+<tr><td><strong>Comprehensive Study Due</strong></td><td>Sept 1, 2026</td></tr></table>
+</section>
+<section id="indiana">
+  <h2>Indiana</h2>
+  <p><strong>Indiana Utility Regulatory Commission Grid &amp; Water Studies (2026)</strong><br>
+  <span class="muted">Indiana General Assembly / IURC (HB 1245) · <a href="https://iga.in.gov/" rel="nofollow">Indiana General Assembly — IURC Large Load Energy &amp; Water Study (HB 1245, 2026)</a> · <a href="https://iga.in.gov/" rel="nofollow">Read the PDF</a></span></p>
+  <p>Administrative mandates on ratepayer protection, utility load forecasts, and local water inventory reviews.</p>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">Key findings</h3>
+  <ul><li><strong>Ratepayer Cost-Shifting</strong>: House Bill 1245 was introduced in the 2026 session to mandate that the IURC study how data center demand affects retail electric rates, ensuring residential users do not subsidize transmission expansions.</li>
+<li><strong>Statewide Water Inventory</strong>: Due to significant Meta ($10B in La Porte) and Amazon ($15B in Lebanon) campuses, the state is currently building a statewide water inventory by end of 2026 to monitor large industrial draws.</li>
+<li><strong>County-Level Moratoriums</strong>: Due to perceived gaps in state environmental oversight, multiple Indiana counties and cities (including Indianapolis) have enacted temporary data center construction moratoriums to protect local resources.</li></ul>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">At a glance</h3>
+  <table><tr><td><strong>IURC Study Mandate</strong></td><td>Active (HB 1245, 2026)</td></tr>
+<tr><td><strong>Featured Projects</strong></td><td>Amazon ($15B), Meta ($10B)</td></tr>
+<tr><td><strong>Local Moratoriums</strong></td><td>Enacted (multiple counties)</td></tr>
+<tr><td><strong>State Water Inventory</strong></td><td>Due Late 2026</td></tr></table>
+</section>
+<section id="new-jersey">
+  <h2>New Jersey</h2>
+  <p><strong>New Jersey Hyperscale Grid Studies &amp; Market Inventory (2025–2026)</strong><br>
+  <span class="muted">NJBPU / New Jersey Policy Perspective (NJPP) Research · <a href="https://www.nj.gov/bpu/" rel="nofollow">New Jersey BPU &amp; Legislature — Ratepayer Subsidy Study &amp; Large Load Tariffs (P.L. 2025 c. 98 / A-796)</a> · <a href="https://www.nj.gov/bpu/" rel="nofollow">Read the PDF</a></span></p>
+  <p>Administrative investigations on grid costs alongside independent market assessments of wholesale compute capacity.</p>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">Key findings</h3>
+  <ul><li><strong>Market Capacity Inventory</strong>: NJ holds approximately <strong>1.04 GW</strong> of total data center power capacity in 2026, projected to reach <strong>1.23 GW by 2031</strong>. This makes the state a top-5 U.S. data center market.</li>
+<li><strong>Operational vs. Planned</strong>: NJ hosts <strong>12 active wholesale/colocation campuses</strong> representing roughly <strong>325 MW</strong> of operational draw. There are <strong>7 major planned expansion projects</strong> in the pipeline representing an additional <strong>640 MW</strong> of capacity.</li>
+<li><strong>Severe Supply Constraints</strong>: Driven by NYC-proximity financial trading links and AI cloud deployments, NJ's vacancy rate is under <strong>4%</strong> (occupancy at 96%). Major hubs are concentrated in Secaucus, Piscataway, and Carteret (Equinix, Digital Realty, DataBank).</li>
+<li><strong>Grid Cost Shifting (P.L. 2025 c. 98 / A-796)</strong>: The NJBPU and independent watchdogs (NJPP) warn that data centers trigger massive utility transmission cost-sharing. In July 2026, Governor Sherrill signed A-796 requiring specific large load tariffs (&gt;= 50 MW) to make operators pay for their own grid upgrades.</li></ul>
+  <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">At a glance</h3>
+  <table><tr><td><strong>Total Power Capacity</strong></td><td>1.04 GW (2026)</td></tr>
+<tr><td><strong>Operational / Planned</strong></td><td>325 MW / 640 MW</td></tr>
+<tr><td><strong>Market Vacancy Rate</strong></td><td>Under 4% (Highly constrained)</td></tr>
+<tr><td><strong>Featured Hubs</strong></td><td>Secaucus, Piscataway, Carteret</td></tr></table>
+</section>
+<section>
+  <p class="muted"><em>Missing your state?</em> If your legislature, PUC, or
+  audit agency has published a data-center study we should track, tell us and
+  we'll add it — sources only, no press releases.</p>
+</section>
+
+</main>
+<footer>
+  <p style="margin-bottom:8px"><strong>Reference</strong> ·
+    <a href="methodology.html">Methodology</a> ·
+    <a href="studies.html">State studies</a> ·
+    <a href="officials.html">Officials directory</a> ·
+    <a href="glossary.html">Glossary</a> ·
+    <a href="dividend.html">Data dividend</a></p>
+  <p style="margin-bottom:8px"><strong>Site</strong> ·
+    <a href="about.html">About</a> ·
+    <a href="consulting.html">Consulting</a> ·
+    <a href="search.html">Search</a></p>
+  <p>AI GridWatch — community energy intelligence. Planning estimates, not
+  engineering studies; every number is sourced in the
+  <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.</p>
+</footer>
+</div>
+</body>
+</html>

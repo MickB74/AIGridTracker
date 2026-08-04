@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b1220">
-<title>Data center impact calculator — AI GridWatch</title>
-<meta name="description" content="Estimate the electricity, water, carbon, and rate impact of a data center in your state — free community calculator.">
-<link rel="canonical" href="https://aigridwatch.com/impact">
+<title>Model CBA clauses — AI GridWatch</title>
+<meta name="description" content="Copy-paste contract language for community benefits agreements: water caps, noise limits, grid-cost allocation, decommissioning bonds, waste heat.">
+<link rel="canonical" href="https://aigridwatch.com/cba-clauses">
 <link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
       href="https://aigridwatch.com/blog/feed.xml">
-<meta property="og:title" content="Data center impact calculator — AI GridWatch">
-<meta property="og:description" content="Estimate the electricity, water, carbon, and rate impact of a data center in your state — free community calculator.">
+<meta property="og:title" content="Model CBA clauses — AI GridWatch">
+<meta property="og:description" content="Copy-paste contract language for community benefits agreements: water caps, noise limits, grid-cost allocation, decommissioning bonds, waste heat.">
 <meta property="og:type" content="website">
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Calculator", "item": "https://aigridwatch.com/impact"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "CBA clauses", "item": "https://aigridwatch.com/cba-clauses"}]}</script>
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <style>
 :root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
@@ -245,11 +245,11 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
     <a href="index.html">Home</a>
     <a href="states/index.html">Your state</a>
     <a href="case-studies.html">Case studies</a>
-    <a href="cba-clauses.html">Clauses</a>
+    <a href="cba-clauses.html" aria-current="page">Clauses</a>
     <a href="hearing-questions.html">Hearing prep</a>
     <a href="health-risks.html">Health risks</a>
     <a href="moratoriums.html">Moratoriums</a>
-    <a href="impact.html" aria-current="page">Calculator</a>
+    <a href="impact.html">Calculator</a>
     <a href="bills.html">Your bill</a>
     <a href="outlook.html">Outlook</a>
     <a href="learn.html">Learn</a>
@@ -265,154 +265,98 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <main id="main">
 
 <header>
-  <div class="kicker">Community calculator</div>
-  <h1>What does a data center cost your community?</h1>
-  <p class="sub">Pick a size and your state. The calculator estimates annual
-  electricity, water draw, carbon emissions, rate pressure, and the CBA
-  target your community should be negotiating — all sourced from the same
-  model the full toolkit uses.</p>
+  <div class="kicker">Model clauses</div>
+  <h1>Model Community Benefits Agreement clauses</h1>
+  <p class="sub">Copy-paste contract language for the terms communities most
+  often need to secure in a data-center approval: water caps, noise limits,
+  grid-cost allocation, decommissioning bonds, waste-heat recovery, and more.
+  Every clause carries the reasoning and precedent behind it.</p>
 </header>
-<section>
-  <h2>Facility size</h2>
-  <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
-    <input type="range" id="mw-slider" min="10" max="500" value="100"
-           step="10" style="flex:1;min-width:200px;accent-color:var(--teal)">
-    <span id="mw-label" style="font-size:28px;font-weight:700;color:var(--teal);min-width:80px">100 MW</span>
+<div class="note warn"><p><strong>Not legal advice.</strong> These are
+starting points drafted from real precedents; a licensed attorney in your
+state should tailor them before they go in front of a commission.</p></div>
+<details class="more" open><summary>On this page</summary><ol><li><a href="#landowner-bloc:-no-individual-deals-pact">Landowner bloc: no-individual-deals pact</a></li>
+<li><a href="#direct-financial-payments">Direct financial payments</a></li>
+<li><a href="#water-consumption-cap">Water consumption cap</a></li>
+<li><a href="#grid-upgrade-cost-allocation">Grid upgrade cost allocation</a></li>
+<li><a href="#residential-tax-offset">Residential tax offset</a></li>
+<li><a href="#noise-standards">Noise standards</a></li>
+<li><a href="#local-hiring-&-workforce">Local hiring &amp; workforce</a></li>
+<li><a href="#waste-heat-recovery">Waste heat recovery</a></li>
+<li><a href="#decommissioning-bond">Decommissioning bond</a></li></ol></details>
+
+<section id="landowner-bloc:-no-individual-deals-pact">
+  <h2>🤝 Landowner bloc: no-individual-deals pact</h2>
+  <div class="note info"><p><strong>Model clause:</strong></p>
+    <pre style="white-space:pre-wrap;font:14px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;margin-top:8px">The undersigned landowners agree to negotiate the sale or lease of their parcels to [Developer / any data-center developer] solely as a group, through [designated representative or attorney]. No signatory shall enter into any individual sale, option, or letter of intent on terms below those secured for the group. Net proceeds shall be shared pro rata by contributed acreage. If any signatory is offered superior terms, those terms shall be extended to all signatories (most-favored-nation). A signatory who sells individually in breach shall [forfeit &#36;[X] / grant the group a right of first refusal]. This agreement expires on [date] if no group transaction has closed.</pre>
   </div>
-  <p class="muted" style="margin-top:6px">10 MW = small edge facility &middot;
-  100 MW = typical hyperscaler campus &middot; 500 MW = mega-project</p>
+  <div class="prose"><p>Unlike the other entries here, this is a landowner-to-landowner agreement — the foundation of bloc negotiation (see 'Negotiate as a bloc' above), not a term you hand the developer. It denies the developer its favorite tactic: buying owners one at a time and sweetening a single holdout to break ranks. Salem Township, PA landowners used exactly this alignment to pool ~1,700 acres and sell together for ~$586M. Have a licensed real-estate attorney draft the binding version for your state.</p></div>
+  
 </section>
-<section>
-  <h2>Your state</h2>
-  <select id="state-select" style="background:var(--card);color:var(--ink);
-    border:1px solid var(--rule);border-radius:8px;padding:8px 14px;
-    font-size:15px;width:100%;max-width:320px">
-    <option value="Alabama">Alabama</option>
-<option value="Alaska">Alaska</option>
-<option value="Arizona">Arizona</option>
-<option value="Arkansas">Arkansas</option>
-<option value="California">California</option>
-<option value="Colorado">Colorado</option>
-<option value="Connecticut">Connecticut</option>
-<option value="Delaware">Delaware</option>
-<option value="District of Columbia">District of Columbia</option>
-<option value="Florida">Florida</option>
-<option value="Georgia">Georgia</option>
-<option value="Hawaii">Hawaii</option>
-<option value="Idaho">Idaho</option>
-<option value="Illinois">Illinois</option>
-<option value="Indiana">Indiana</option>
-<option value="Iowa">Iowa</option>
-<option value="Kansas">Kansas</option>
-<option value="Kentucky">Kentucky</option>
-<option value="Louisiana">Louisiana</option>
-<option value="Maine">Maine</option>
-<option value="Maryland">Maryland</option>
-<option value="Massachusetts">Massachusetts</option>
-<option value="Michigan">Michigan</option>
-<option value="Minnesota">Minnesota</option>
-<option value="Mississippi">Mississippi</option>
-<option value="Missouri">Missouri</option>
-<option value="Montana">Montana</option>
-<option value="Nebraska">Nebraska</option>
-<option value="Nevada">Nevada</option>
-<option value="New Hampshire">New Hampshire</option>
-<option value="New Jersey">New Jersey</option>
-<option value="New Mexico">New Mexico</option>
-<option value="New York">New York</option>
-<option value="North Carolina">North Carolina</option>
-<option value="North Dakota">North Dakota</option>
-<option value="Ohio">Ohio</option>
-<option value="Oklahoma">Oklahoma</option>
-<option value="Oregon">Oregon</option>
-<option value="Pennsylvania">Pennsylvania</option>
-<option value="Rhode Island">Rhode Island</option>
-<option value="South Carolina">South Carolina</option>
-<option value="South Dakota">South Dakota</option>
-<option value="Tennessee">Tennessee</option>
-<option value="Texas">Texas</option>
-<option value="Utah">Utah</option>
-<option value="Vermont">Vermont</option>
-<option value="Virginia">Virginia</option>
-<option value="Washington">Washington</option>
-<option value="West Virginia">West Virginia</option>
-<option value="Wisconsin">Wisconsin</option>
-<option value="Wyoming">Wyoming</option>
-  </select>
-</section>
-<div class="stats" id="results">
-  <div class="stat"><b id="r-energy">—</b><span>annual electricity (MWh)</span></div>
-  <div class="stat"><b id="r-homes">—</b><span>homes equivalent</span></div>
-  <div class="stat"><b id="r-water">—</b><span>annual water (million gal)</span></div>
-  <div class="stat"><b id="r-co2">—</b><span>annual CO&#8322; (metric tons)</span></div>
-</div>
-<section>
-  <h2>Economic impact</h2>
-  <div class="grid2">
-    <div class="card">
-      <h3>Rate pressure</h3>
-      <p>Residents pay <strong id="r-ratio">—</strong>&times; what the data
-      center pays per kWh (<span id="r-resrate">—</span> vs $0.05).</p>
-    </div>
-    <div class="card">
-      <h3>CBA target</h3>
-      <p>At 2% of estimated investment, your community should negotiate at
-      least <strong id="r-dividend">—</strong>/year in community benefits.</p>
-    </div>
+<section id="direct-financial-payments">
+  <h2>💰 Direct financial payments</h2>
+  <div class="note info"><p><strong>Model clause:</strong></p>
+    <pre style="white-space:pre-wrap;font:14px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;margin-top:8px">Developer shall pay an annual Community Benefit Payment of &#36;[X] per MW of contracted power capacity into a Community Benefit Fund administered by [County/Town]. Payments commence upon certificate of occupancy and adjust annually by CPI.</pre>
   </div>
-  <p class="muted" style="margin-top:8px">Grid carbon:
-  <span id="r-gco2">—</span> gCO&#8322;/kWh &middot; Water stress:
-  <span id="r-stress">—</span> &middot; Cooling: evaporative (PUE 1.12)</p>
+  <div class="prose"><p>A per-MW annual payment creates a predictable, inflation-protected revenue stream tied to the facility's actual size. $500–$2,000/MW/year is the emerging range in negotiated deals.</p></div>
+  <p class="muted">Typical range: <strong>$500–$2,000</strong> per MW per year</p>
 </section>
-<section>
-  <h2>What to do with these numbers</h2>
-  <p>Print this page, or use the full toolkit to generate a complete action
-  pack — a meeting brief, comment scripts, letters to officials, and a
-  community flyer with these numbers baked in.</p>
-  <p><a class="btn" href="https://aigridtracker.streamlit.app">Generate your action pack &rarr;</a>
-  <a class="btn ghost" href="health-risks.html">The health risks, sourced</a></p>
+<section id="water-consumption-cap">
+  <h2>💧 Water consumption cap</h2>
+  <div class="note info"><p><strong>Model clause:</strong></p>
+    <pre style="white-space:pre-wrap;font:14px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;margin-top:8px">Total facility water withdrawal shall not exceed [X] gallons per day. Developer shall install metering equipment accessible to [Municipal Water Authority] and pay a surcharge of &#36;[Y] per 1,000 gallons exceeding the cap. Annual water usage reports shall be public record.</pre>
+  </div>
+  <div class="prose"><p>Without a hard cap, evaporative cooling can consume millions of gallons daily. The penalty surcharge creates a financial incentive to stay under the cap and funds water infrastructure if they exceed it.</p></div>
+  
 </section>
-<script>
-(function() {
-  var P = {"Alabama": {"rate": 0.146, "gco2": 380, "water_stress": "low"}, "Alaska": {"rate": 0.229, "gco2": 450, "water_stress": "low"}, "Arizona": {"rate": 0.139, "gco2": 390, "water_stress": "high"}, "Arkansas": {"rate": 0.124, "gco2": 410, "water_stress": "low"}, "California": {"rate": 0.285, "gco2": 210, "water_stress": "high"}, "Colorado": {"rate": 0.15, "gco2": 420, "water_stress": "medium"}, "Connecticut": {"rate": 0.268, "gco2": 200, "water_stress": "low"}, "Delaware": {"rate": 0.155, "gco2": 370, "water_stress": "low"}, "District of Columbia": {"rate": 0.158, "gco2": 340, "water_stress": "low"}, "Florida": {"rate": 0.157, "gco2": 370, "water_stress": "low"}, "Georgia": {"rate": 0.143, "gco2": 370, "water_stress": "low"}, "Hawaii": {"rate": 0.41, "gco2": 550, "water_stress": "high"}, "Idaho": {"rate": 0.112, "gco2": 120, "water_stress": "medium"}, "Illinois": {"rate": 0.154, "gco2": 310, "water_stress": "low"}, "Indiana": {"rate": 0.149, "gco2": 430, "water_stress": "low"}, "Iowa": {"rate": 0.139, "gco2": 410, "water_stress": "low"}, "Kansas": {"rate": 0.142, "gco2": 420, "water_stress": "medium"}, "Kentucky": {"rate": 0.126, "gco2": 460, "water_stress": "low"}, "Louisiana": {"rate": 0.117, "gco2": 380, "water_stress": "low"}, "Maine": {"rate": 0.228, "gco2": 180, "water_stress": "low"}, "Maryland": {"rate": 0.16, "gco2": 340, "water_stress": "low"}, "Massachusetts": {"rate": 0.28, "gco2": 280, "water_stress": "low"}, "Michigan": {"rate": 0.186, "gco2": 390, "water_stress": "low"}, "Minnesota": {"rate": 0.151, "gco2": 350, "water_stress": "low"}, "Mississippi": {"rate": 0.131, "gco2": 400, "water_stress": "low"}, "Missouri": {"rate": 0.131, "gco2": 440, "water_stress": "low"}, "Montana": {"rate": 0.125, "gco2": 340, "water_stress": "low"}, "Nebraska": {"rate": 0.121, "gco2": 420, "water_stress": "low"}, "Nevada": {"rate": 0.138, "gco2": 330, "water_stress": "high"}, "New Hampshire": {"rate": 0.243, "gco2": 190, "water_stress": "low"}, "New Jersey": {"rate": 0.187, "gco2": 250, "water_stress": "low"}, "New Mexico": {"rate": 0.143, "gco2": 410, "water_stress": "high"}, "New York": {"rate": 0.223, "gco2": 250, "water_stress": "low"}, "North Carolina": {"rate": 0.132, "gco2": 350, "water_stress": "low"}, "North Dakota": {"rate": 0.117, "gco2": 510, "water_stress": "low"}, "Ohio": {"rate": 0.144, "gco2": 420, "water_stress": "low"}, "Oklahoma": {"rate": 0.121, "gco2": 350, "water_stress": "medium"}, "Oregon": {"rate": 0.128, "gco2": 140, "water_stress": "medium"}, "Pennsylvania": {"rate": 0.171, "gco2": 310, "water_stress": "low"}, "Rhode Island": {"rate": 0.265, "gco2": 280, "water_stress": "low"}, "South Carolina": {"rate": 0.146, "gco2": 300, "water_stress": "low"}, "South Dakota": {"rate": 0.128, "gco2": 250, "water_stress": "low"}, "Tennessee": {"rate": 0.125, "gco2": 350, "water_stress": "low"}, "Texas": {"rate": 0.142, "gco2": 350, "water_stress": "medium"}, "Utah": {"rate": 0.114, "gco2": 440, "water_stress": "high"}, "Vermont": {"rate": 0.207, "gco2": 30, "water_stress": "low"}, "Virginia": {"rate": 0.142, "gco2": 330, "water_stress": "low"}, "Washington": {"rate": 0.112, "gco2": 80, "water_stress": "medium"}, "West Virginia": {"rate": 0.131, "gco2": 520, "water_stress": "low"}, "Wisconsin": {"rate": 0.162, "gco2": 380, "water_stress": "low"}, "Wyoming": {"rate": 0.111, "gco2": 460, "water_stress": "low"}};
-  var PUE = 1.12, WG = 2.0, HOME = 10500, INV = 2000000, DIV = 0.02, DCR = 0.05;
-  var slider = document.getElementById('mw-slider');
-  var label = document.getElementById('mw-label');
-  var sel = document.getElementById('state-select');
-  function fmt(n) {
-    if (n >= 1e9) return (n/1e9).toFixed(1) + 'B';
-    if (n >= 1e6) return (n/1e6).toFixed(1) + 'M';
-    if (n >= 1e3) return Math.round(n).toLocaleString();
-    return n.toFixed(1);
-  }
-  function usd(n) {
-    if (n >= 1e9) return '$' + (n/1e9).toFixed(1) + 'B';
-    if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
-    if (n >= 1e3) return '$' + Math.round(n).toLocaleString();
-    return '$' + n.toFixed(0);
-  }
-  function calc() {
-    var mw = +slider.value;
-    var st = sel.value;
-    var prof = P[st] || {rate:0.12, gco2:400, water_stress:'medium'};
-    label.textContent = mw + ' MW';
-    var kwh = mw * 8760 * PUE * 1000;
-    var mwh = kwh / 1000;
-    document.getElementById('r-energy').textContent = fmt(mwh);
-    document.getElementById('r-homes').textContent = fmt(kwh / HOME);
-    document.getElementById('r-water').textContent = (kwh * WG / 1e6).toFixed(1);
-    document.getElementById('r-co2').textContent = fmt(mwh * prof.gco2 / 1e6);
-    document.getElementById('r-ratio').textContent = (prof.rate / DCR).toFixed(1);
-    document.getElementById('r-resrate').textContent = '$' + prof.rate.toFixed(3);
-    document.getElementById('r-dividend').textContent = usd(mw * INV * DIV);
-    document.getElementById('r-gco2').textContent = prof.gco2;
-    document.getElementById('r-stress').textContent = prof.water_stress;
-  }
-  slider.addEventListener('input', calc);
-  sel.addEventListener('change', calc);
-  calc();
-})();
-</script>
+<section id="grid-upgrade-cost-allocation">
+  <h2>⚡ Grid upgrade cost allocation</h2>
+  <div class="note info"><p><strong>Model clause:</strong></p>
+    <pre style="white-space:pre-wrap;font:14px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;margin-top:8px">Developer shall bear 100% of the cost of all transmission and distribution upgrades, including substation construction, required to serve the facility. No portion of these costs shall be allocated to existing ratepayers through base rate adjustments or capacity charges.</pre>
+  </div>
+  <div class="prose"><p>Without this clause, utilities socialize grid upgrade costs across all ratepayers — meaning households subsidize industrial infrastructure. New Jersey's Large Load Tariff (2025) codifies this at the state level.</p></div>
+  
+</section>
+<section id="residential-tax-offset">
+  <h2>🏠 Residential tax offset</h2>
+  <div class="note info"><p><strong>Model clause:</strong></p>
+    <pre style="white-space:pre-wrap;font:14px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;margin-top:8px">Revenue from data center property taxes, equipment taxes, and any negotiated fees shall be applied to reduce the residential property tax rate before being allocated to general fund expenditures. Annual reporting shall demonstrate the residential rate reduction attributable to data center revenue.</pre>
+  </div>
+  <div class="prose"><p>Loudoun County, VA demonstrates the model: data center taxes fund ~32% of the county budget, keeping residential rates among the lowest in the state. Without explicit allocation, the revenue can be absorbed into general spending without visible resident benefit.</p></div>
+  
+</section>
+<section id="noise-standards">
+  <h2>🔊 Noise standards</h2>
+  <div class="note info"><p><strong>Model clause:</strong></p>
+    <pre style="white-space:pre-wrap;font:14px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;margin-top:8px">Facility operations shall not exceed [X] dBA at any residential property line, measured as a 1-hour Leq. Developer shall conduct third-party noise monitoring quarterly for the first 3 years and annually thereafter. Results shall be filed with [County] and made available to the public.</pre>
+  </div>
+  <div class="prose"><p>Cooling systems run 24/7 and produce a constant low-frequency hum. Loudoun County's 38 dBA standard at the property line is the benchmark. Without a negotiated standard, state noise laws may allow 55–65 dBA.</p></div>
+  
+</section>
+<section id="local-hiring-&-workforce">
+  <h2>👷 Local hiring &amp; workforce</h2>
+  <div class="note info"><p><strong>Model clause:</strong></p>
+    <pre style="white-space:pre-wrap;font:14px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;margin-top:8px">Developer shall use best efforts to ensure that [X]% of construction labor and [Y]% of permanent operations staff are sourced from [County/Region]. Developer shall fund a workforce training program at [local community college] of not less than &#36;[Z] per year for [N] years, focused on electrical, HVAC, and network operations certifications.</pre>
+  </div>
+  <div class="prose"><p>Data centers create 50–150 permanent jobs per facility — far fewer than the thousands promised during construction. Workforce training commitments create lasting value beyond the build phase.</p></div>
+  
+</section>
+<section id="waste-heat-recovery">
+  <h2>🌡️ Waste heat recovery</h2>
+  <div class="note info"><p><strong>Model clause:</strong></p>
+    <pre style="white-space:pre-wrap;font:14px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;margin-top:8px">Developer shall conduct a waste heat feasibility study within 12 months of certificate of occupancy and, where technically viable, make waste heat available at no cost to [municipal district heating / school district / community greenhouse] within [X] miles of the facility.</pre>
+  </div>
+  <div class="prose"><p>Data centers reject enormous amounts of heat — typically at 30–45°C, usable for space heating, greenhouses, and aquaculture. European facilities already pipe heat to district networks. US communities should demand this as standard.</p></div>
+  
+</section>
+<section id="decommissioning-bond">
+  <h2>🏗️ Decommissioning bond</h2>
+  <div class="note info"><p><strong>Model clause:</strong></p>
+    <pre style="white-space:pre-wrap;font:14px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;margin-top:8px">Developer shall post a decommissioning bond or letter of credit equal to &#36;[X] per MW within 90 days of certificate of occupancy, to fund site remediation and restoration if the facility ceases operations.</pre>
+  </div>
+  <div class="prose"><p>Without a bond, a bankrupt or departing operator can leave the community with a derelict industrial site and no funds for cleanup. Typical bonds range from $5,000–$15,000 per MW.</p></div>
+  <p class="muted">Typical range: <strong>$5,000–$15,000</strong> per MW (one-time bond)</p>
+</section>
 
 </main>
 <footer>
