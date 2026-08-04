@@ -51,6 +51,140 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── Ezra Klein "The A.I. Revolt Is Here" — backlash goes mainstream ──
+    {
+        "id": "ezra-klein-ai-revolt-mainstream-2026",
+        "section": "stories",
+        "title": "\"The A.I. Revolt Is Here\": When Ezra Klein Covers Your Zoning Fight, the Politics Have Changed",
+        "date": _dt.date(2026, 8, 4),
+        "author": "GridWatch AI",
+        "tags": ["Ezra Klein", "Jasmine Sun", "backlash", "moratoriums",
+                 "New York", "public opinion", "politics", "media",
+                 "community advocacy", "analysis"],
+        "summary": (
+            "The Ezra Klein Show's August 4 episode is titled \"The A.I. "
+            "Revolt Is Here,\" and its subject is data centers — the "
+            "bipartisan opposition, Hochul's New York moratorium, and the "
+            "100-plus moratorium proposals nationwide. When the country's "
+            "flagship policy podcast frames local zoning fights as a "
+            "national political force, the leverage map has changed. "
+            "Here's what the episode covers, what our own tracker shows, "
+            "and why this moment favors communities that are ready to "
+            "negotiate."
+        ),
+        "body": """\
+The Ezra Klein Show's August 4 episode is titled
+[\"The A.I. Revolt Is Here\"](https://www.nytimes.com/2026/08/04/opinion/ezra-klein-podcast-jasmine-sun.html)
+([also on YouTube](https://www.youtube.com/watch?v=rbgvTlt1VB8)), and the
+opening question tells you everything about where this issue now sits:
+what's big and ugly and has united Republicans and Democrats? **A.I. data
+centers.**
+
+Klein's guest is [Jasmine Sun](https://jasmine.substack.com/), whose
+newsletter covers both the culture inside the A.I. companies and the anger
+building against them — and who had just returned from a Midwest reporting
+trip interviewing people on every side of a data center fight. The episode
+runs 78 minutes, and its framing rests on three facts that will be
+familiar to anyone reading this site:
+
+1. **An overwhelming majority of Americans say they'd oppose a data
+   center built near where they live.**
+2. **New York Gov. Kathy Hochul just imposed a one-year moratorium on
+   data center construction** — the same executive order we broke down
+   [when it happened](ny-moratorium-eo62-2026).
+3. **There are more than 100 local or statewide moratorium proposals**
+   across the country.
+
+Klein's question is whether A.I.'s momentum has finally met, in the
+show's words, \"the messy politics of getting things done in the real
+world\" — and whether the backlash is about the buildings or about A.I.
+itself.
+
+### Why this episode matters more than most coverage
+
+Not because the facts are new. Our
+[moratorium tracker](/moratoriums) currently documents **47
+moratoriums and bans, 34 of them enacted** — we called this
+[the moratorium wave](moratorium-wave-2026) back in the spring, and the
+[Morgan Stanley analysis](morgan-stanley-opposition-bottleneck-2026)
+identifying community opposition as the industry's binding constraint is
+five months old.
+
+What's new is **who is saying it**. The Ezra Klein Show is the closest
+thing American liberalism has to a policy seminar of record — the
+audience is staffers, regulators, journalists, and the people who write
+the next round of legislation. For two years, data center opposition has
+been covered as a local-news story: a county board here, an angry hearing
+there. The national frame was \"NIMBYs vs. progress.\" This episode
+retires that frame. When the flagship abundance-agenda podcast — hosted
+by the co-author of a book *about how America should build more,
+faster* — leads with the revolt rather than the buildout, the opposition
+has stopped being a nuisance narrative and become a political fact both
+parties have to plan around.
+
+That's consistent with what the polling has shown all year: opposition
+to nearby data centers isn't a partisan position, it's a
+near-consensus one — and it's strongest in the rural and exurban
+counties where the projects actually land, the same places we mapped in
+our [rural buildout coverage](/states/).
+
+### The question Klein asks is the question that matters
+
+Midway through the framing there's a distinction worth sitting with: how
+much of the backlash is about **the construction** — the noise, the
+water, the transmission lines, the tax deals — and how much is about
+**A.I. itself**: job anxiety, Sun's \"permanent underclass\" essay, the
+sense that a handful of companies are reshaping the economy without
+asking anyone.
+
+For communities, the honest answer is: it doesn't matter, and the
+distinction mostly benefits developers. Every concrete grievance in the
+first category is negotiable — that's what
+[CBAs](questions-to-ask-data-center-checklist-2026), water agreements,
+noise limits in permits, and
+[tax-deal transparency](data-center-tax-break-blowouts-2026) are for.
+The second category is why the leverage exists. A developer who can no
+longer count on the national narrative treating opponents as cranks has
+a much stronger incentive to sign something enforceable.
+
+### Moratoriums are negotiating positions, not endings
+
+The episode asks whether slowing A.I. down is good or bad. Our outcome
+data suggests that's the wrong binary. Of the six resolved moratorium
+fights we've documented in the
+[tracker's case studies](/moratoriums), **three ended with the community
+securing a Community Benefit Agreement** — the moratorium wasn't the end
+state, it was the leverage that produced a deal. One produced a
+sustained ban, one a political shift, and only one ended with no
+protections. A pause that forces real terms onto paper is not
+anti-growth; it's the mechanism by which growth starts paying its own
+way.
+
+That's the reading we'd offer of Hochul's New York order, too: a
+one-year clock during which the state writes rules — not a wall. The
+communities that come out of these pauses best are the ones that spend
+the year preparing, not celebrating.
+
+### If the revolt is here, be ready to negotiate
+
+A national spotlight raises leverage; it doesn't exercise it for you.
+Three places to start:
+
+- **[The 26-question checklist](questions-to-ask-data-center-checklist-2026)**
+  — the questions to put on the record while attention is high.
+- **[The moratorium tracker](/moratoriums)** — what 47 other
+  jurisdictions did, and what happened next.
+- **The negotiation toolkit in the
+  [GridWatch app](https://aigridtracker.streamlit.app)** — CBA templates,
+  the data-dividend calculator, and a meeting-prep brief generator for
+  your specific hearing.
+
+The episode's title is a diagnosis. Whether the revolt produces
+enforceable community wins or just louder hearings is decided county by
+county — usually in the ninety days after everyone else stops paying
+attention.
+""",
+    },
     # ── Data center tax-break cost blowouts (Good Jobs First, June 2026) ─
     {
         "id": "data-center-tax-break-blowouts-2026",
