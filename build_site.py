@@ -6648,14 +6648,27 @@ def build_alerts_outputs():
             "alerts": alerts,
         }, indent=2) + "\n", encoding="utf-8")
 
-    # pubDate is the day the deadline was computed from, not "now" — an
-    # unchanged alert should not resurface as new in a reader every night.
-    now = _dt.datetime.now(_dt.timezone.utc)
+    # Both timestamps are derived, never `now()`. Two reasons, and the second
+    # is the one that bites: an unchanged alert re-dated every build resurfaces
+    # as new in a reader, and — worse — the file's bytes change on every build,
+    # so CI would commit alerts.xml on every single run. That is exactly the
+    # "web/ churning when data didn't change" failure build-site.yml warns
+    # about. Per item: the day the alert entered the lookahead window, which is
+    # a fixed function of its expiry. Feed-level: midnight today, so the file
+    # is byte-identical across same-day rebuilds.
+    def _entered(a):
+        end = _dt.date.fromisoformat(a["expires"])
+        return _dt.datetime.combine(
+            end - _dt.timedelta(days=ALERT_LOOKAHEAD),
+            _dt.time(0, 0), tzinfo=_dt.timezone.utc)
+
+    now = _dt.datetime.combine(_dt.date.today(), _dt.time(0, 0),
+                               tzinfo=_dt.timezone.utc)
     items = "\n".join(f"""  <item>
     <title>{esc(a['title'])}</title>
     <link>{SITE_URL}/moratoriums#data</link>
     <guid isPermaLink="false">{esc(a['id'])}</guid>
-    <pubDate>{format_datetime(now)}</pubDate>
+    <pubDate>{format_datetime(_entered(a))}</pubDate>
     <description>{esc(a['body'])}</description>
   </item>""" for a in alerts)
     feed = f"""<?xml version="1.0" encoding="UTF-8"?>
