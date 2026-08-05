@@ -3485,6 +3485,9 @@ def build_moratoriums():
         for m in MORATORIUMS_DF.itertuples())
 
     outcomes = "\n".join(_outcome_card(o) for o in MORATORIUM_OUTCOMES)
+    schema_rows = "\n".join(
+        f"<tr><td><code>{esc(c)}</code></td><td>{esc(d)}</td></tr>"
+        for c, d in MORATORIUM_SCHEMA)
 
     body = f"""
 <header>
@@ -3518,6 +3521,36 @@ def build_moratoriums():
   {provenance_html("MORATORIUMS_DF")}
   <p class="muted" style="margin-top:10px">See the full interactive map and
   filters in the <a href="{APP_URL}">GridWatch toolkit</a>.</p>
+</section>
+<section id="data">
+  <h2>Use this data</h2>
+  <p>The whole tracker, with per-row sources, verification dates and derived
+  expiry, as a documented download. Free to reuse with attribution
+  (<a href="{DATA_LICENSE_URL}" rel="license noopener">{DATA_LICENSE}</a>) —
+  cite it, chart it, or load it into your own tracker.</p>
+  <p><a class="btn" href="data/moratoriums.json">moratoriums.json</a>
+     <a class="btn ghost" href="data/moratoriums.csv">moratoriums.csv</a></p>
+  <details class="more">
+    <summary>Schema — {len(MORATORIUM_SCHEMA)} fields</summary>
+    <div style="overflow-x:auto">
+    <table><tr><th>Field</th><th>Meaning</th></tr>
+    {schema_rows}</table>
+    </div>
+    <p class="muted" style="margin-top:10px">Read <code>effective_status</code>,
+    not <code>status</code>: a moratorium whose documented term has run out
+    reads <em>Expired</em> there, and that is the field the page itself
+    renders. Rows with <code>verified: false</code> have no source on record —
+    they are leads to check, not facts to cite.</p>
+  </details>
+  <details class="more">
+    <summary>Embed the tracker on your own site</summary>
+    <p class="muted">Self-contained and filterable by state. It updates when
+    this page does, so you are not maintaining a copy.</p>
+    <pre style="overflow-x:auto"><code>&lt;iframe src="{SITE_URL}/embed/moratoriums.html"
+        width="100%" height="560" style="border:0"
+        title="Data center moratorium tracker"&gt;&lt;/iframe&gt;</code></pre>
+    <p><a href="embed/moratoriums.html" target="_blank" rel="noopener">Preview it &rarr;</a></p>
+  </details>
 </section>
 <section>
   <h2>What happened next: case studies</h2>
@@ -6483,6 +6516,163 @@ def build_sitemap(paths):
             f'{urls}\n</urlset>\n')
 
 
+DATA_LICENSE = "CC BY 4.0"
+DATA_LICENSE_URL = "https://creativecommons.org/licenses/by/4.0/"
+
+# Column → what it means. Published with the data because a tracker without a
+# stated schema is what every other data-center moratorium list already is:
+# a table you cannot reuse without emailing whoever made it.
+MORATORIUM_SCHEMA = [
+    ("locality", "Town, city or county taking the action; 'X (statewide)' for state-level"),
+    ("state", "USPS two-letter code"),
+    ("level", "Local or State"),
+    ("status", "As recorded: Enacted, Proposed, Rejected, Vetoed or Rescinded"),
+    ("effective_status", "Status today. Equals `status`, except an Enacted row past its `expires` date reads Expired. Use this one"),
+    ("expired", "true when a documented term has run out"),
+    ("days_left", "Days until `expires`; negative once past, null when no end date is recorded"),
+    ("when", "Human-readable date of the action, as reported"),
+    ("expires", "ISO date the term lapses, or null when permanent, condition-based, or not documented"),
+    ("note", "Scope, threshold, vote count and other detail"),
+    ("source", "URL this row was read from, or null if unverified"),
+    ("as_of", "Date the source was read, or null"),
+    ("verified", "true when a source is recorded. false means nobody has checked this row — treat it as a lead"),
+    ("lat", "Latitude, null for state-level rows"),
+    ("lon", "Longitude, null for state-level rows"),
+]
+
+
+def _mora_records():
+    """MORATORIUMS_DF as plain JSON-able dicts, nulls where data is missing."""
+    cols = [c for c, _ in MORATORIUM_SCHEMA]
+    out = []
+    for r in MORATORIUMS_DF.to_dict("records"):
+        rec = {}
+        for c in cols:
+            v = r.get(c)
+            if isinstance(v, (bool, int, float)) and not isinstance(v, bool):
+                rec[c] = None if pd.isna(v) else v
+            elif isinstance(v, bool):
+                rec[c] = v
+            else:
+                rec[c] = str(v) if has_value(v) else None
+        out.append(rec)
+    return out
+
+
+def build_moratorium_data():
+    """Write the tracker as JSON + CSV so it can be cited, not just read.
+
+    The provenance work only pays off if someone else can use it. Nobody
+    else publishes moratorium data with per-row sourcing and a derived
+    expiry, so shipping it as a documented, licensed download is the
+    cheapest distribution this project has — journalists cite what they can
+    query and researchers cite what they can download.
+    """
+    import csv
+    import datetime as _dt
+    import io
+
+    records = _mora_records()
+    payload = {
+        "name": "AI GridWatch data center moratorium tracker",
+        "generated": _dt.date.today().isoformat(),
+        "license": DATA_LICENSE,
+        "license_url": DATA_LICENSE_URL,
+        "attribution": f"AI GridWatch ({SITE_URL})",
+        "source_page": f"{SITE_URL}/moratoriums",
+        "count": len(records),
+        "verified_count": sum(1 for r in records if r["verified"]),
+        "caveat": (registry_provenance("MORATORIUMS_DF") or {}).get("caveat", ""),
+        "schema": {c: d for c, d in MORATORIUM_SCHEMA},
+        "moratoriums": records,
+    }
+    (WEB / "data").mkdir(parents=True, exist_ok=True)
+    (WEB / "data" / "moratoriums.json").write_text(
+        json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=[c for c, _ in MORATORIUM_SCHEMA],
+                       lineterminator="\n")
+    w.writeheader()
+    w.writerows(records)
+    (WEB / "data" / "moratoriums.csv").write_text(buf.getvalue(),
+                                                  encoding="utf-8")
+    return len(records)
+
+
+def build_moratorium_embed():
+    """Standalone iframe-able tracker for other people's sites.
+
+    Rendered server-side rather than fetching the JSON: an embed that depends
+    on a cross-origin fetch fails silently on somebody else's page, and the
+    whole point is that it keeps working somewhere we cannot see. Self-
+    contained, noindex (the canonical page should rank, not this), and it
+    carries attribution back — that is the deal the licence asks for.
+    """
+    rows = "\n".join(
+        f'<tr data-state="{esc(str(m.state))}">'
+        f"<td>{esc(str(m.locality))}</td><td>{esc(str(m.state))}</td>"
+        f'<td><span class="s s-{esc(str(m.effective_status).lower())}">'
+        f"{esc(str(m.effective_status))}</span></td>"
+        f"<td>{esc(str(m.when))}</td>"
+        f"<td>{'<a href=' + chr(34) + esc(str(m.source)) + chr(34) + ' target=_blank rel=noopener>source</a>' if has_value(m.source) else '<span class=u>unverified</span>'}</td>"
+        f"</tr>"
+        for m in MORATORIUMS_DF.itertuples())
+    states = "".join(
+        f'<option value="{esc(s)}">{esc(s)}</option>'
+        for s in sorted(MORATORIUMS_DF["state"].unique()))
+    in_force = len(MORATORIUMS_DF[MORATORIUMS_DF["effective_status"] == "Enacted"])
+    return f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Data center moratorium tracker — AI GridWatch</title>
+<style>
+ :root {{ color-scheme: light dark; }}
+ body {{ margin:0; font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+        background:#0b1220; color:#e6edf7; }}
+ .wrap {{ padding:14px; }}
+ h1 {{ font-size:15px; margin:0 0 2px; }}
+ .sub {{ color:#93a1b5; font-size:12px; margin:0 0 10px; }}
+ select {{ background:#121c30; color:#e6edf7; border:1px solid #22304a;
+           border-radius:6px; padding:5px 8px; font-size:13px; margin-bottom:10px; }}
+ .scroll {{ max-height:420px; overflow:auto; border:1px solid #22304a; border-radius:8px; }}
+ table {{ border-collapse:collapse; width:100%; }}
+ th,td {{ text-align:left; padding:7px 9px; border-bottom:1px solid #1b2740; font-size:13px; }}
+ th {{ position:sticky; top:0; background:#121c30; font-size:11px;
+       text-transform:uppercase; letter-spacing:.05em; color:#93a1b5; }}
+ a {{ color:#2dd4bf; }}
+ .u {{ color:#fca5a5; font-size:12px; }}
+ .s {{ font-size:11px; font-weight:700; padding:1px 7px; border-radius:5px; }}
+ .s-enacted {{ background:#065f46; color:#6ee7b7; }}
+ .s-proposed {{ background:#713f12; color:#fde68a; }}
+ .s-rejected {{ background:#7f1d1d; color:#fca5a5; }}
+ .s-vetoed,.s-rescinded {{ background:#4c1d95; color:#c4b5fd; }}
+ .s-expired {{ background:#374151; color:#d1d5db; }}
+ footer {{ margin-top:9px; font-size:11px; color:#93a1b5; }}
+</style></head><body><div class="wrap">
+<h1>Data center moratoriums &amp; pushback</h1>
+<p class="sub">{len(MORATORIUMS_DF)} tracked actions · {in_force} in force today ·
+status shown is what applies now, so a lapsed term reads Expired.</p>
+<select id="f" aria-label="Filter by state">
+  <option value="">All states</option>{states}</select>
+<div class="scroll"><table>
+<tr><th>Locality</th><th>State</th><th>Status</th><th>When</th><th>Source</th></tr>
+{rows}</table></div>
+<footer>Data: <a href="{SITE_URL}/moratoriums" target="_blank" rel="noopener">AI
+GridWatch</a> · <a href="{DATA_LICENSE_URL}" target="_blank" rel="license noopener">{DATA_LICENSE}</a>
+· <a href="{SITE_URL}/data/moratoriums.json" target="_blank" rel="noopener">JSON</a></footer>
+</div>
+<script>
+document.getElementById('f').addEventListener('change', function (e) {{
+  var v = e.target.value;
+  document.querySelectorAll('tr[data-state]').forEach(function (r) {{
+    r.style.display = (!v || r.dataset.state === v) ? '' : 'none';
+  }});
+}});
+</script></body></html>"""
+
+
 def main():
     global _NEWS_ITEMS, _VIDEO_ITEMS
     print("  [news] loading headlines + videos…")
@@ -6506,6 +6696,11 @@ def main():
     (WEB / "index.html").write_text(build_index(), encoding="utf-8")
     (WEB / "health-risks.html").write_text(build_health(), encoding="utf-8")
     (WEB / "moratoriums.html").write_text(build_moratoriums(), encoding="utf-8")
+    _n_data = build_moratorium_data()
+    (WEB / "embed").mkdir(parents=True, exist_ok=True)
+    (WEB / "embed" / "moratoriums.html").write_text(
+        build_moratorium_embed(), encoding="utf-8")
+    print(f"  [data] published {_n_data} moratoriums as JSON + CSV + embed")
     (WEB / "impact.html").write_text(build_impact_calculator(), encoding="utf-8")
     (WEB / "bills.html").write_text(build_bills(), encoding="utf-8")
     (WEB / "outlook.html").write_text(build_outlook(), encoding="utf-8")

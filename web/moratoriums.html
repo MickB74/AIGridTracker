@@ -426,6 +426,50 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <p class="muted" style="margin-top:10px">See the full interactive map and
   filters in the <a href="https://aigridtracker.streamlit.app">GridWatch toolkit</a>.</p>
 </section>
+<section id="data">
+  <h2>Use this data</h2>
+  <p>The whole tracker, with per-row sources, verification dates and derived
+  expiry, as a documented download. Free to reuse with attribution
+  (<a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>) —
+  cite it, chart it, or load it into your own tracker.</p>
+  <p><a class="btn" href="data/moratoriums.json">moratoriums.json</a>
+     <a class="btn ghost" href="data/moratoriums.csv">moratoriums.csv</a></p>
+  <details class="more">
+    <summary>Schema — 15 fields</summary>
+    <div style="overflow-x:auto">
+    <table><tr><th>Field</th><th>Meaning</th></tr>
+    <tr><td><code>locality</code></td><td>Town, city or county taking the action; &#x27;X (statewide)&#x27; for state-level</td></tr>
+<tr><td><code>state</code></td><td>USPS two-letter code</td></tr>
+<tr><td><code>level</code></td><td>Local or State</td></tr>
+<tr><td><code>status</code></td><td>As recorded: Enacted, Proposed, Rejected, Vetoed or Rescinded</td></tr>
+<tr><td><code>effective_status</code></td><td>Status today. Equals `status`, except an Enacted row past its `expires` date reads Expired. Use this one</td></tr>
+<tr><td><code>expired</code></td><td>true when a documented term has run out</td></tr>
+<tr><td><code>days_left</code></td><td>Days until `expires`; negative once past, null when no end date is recorded</td></tr>
+<tr><td><code>when</code></td><td>Human-readable date of the action, as reported</td></tr>
+<tr><td><code>expires</code></td><td>ISO date the term lapses, or null when permanent, condition-based, or not documented</td></tr>
+<tr><td><code>note</code></td><td>Scope, threshold, vote count and other detail</td></tr>
+<tr><td><code>source</code></td><td>URL this row was read from, or null if unverified</td></tr>
+<tr><td><code>as_of</code></td><td>Date the source was read, or null</td></tr>
+<tr><td><code>verified</code></td><td>true when a source is recorded. false means nobody has checked this row — treat it as a lead</td></tr>
+<tr><td><code>lat</code></td><td>Latitude, null for state-level rows</td></tr>
+<tr><td><code>lon</code></td><td>Longitude, null for state-level rows</td></tr></table>
+    </div>
+    <p class="muted" style="margin-top:10px">Read <code>effective_status</code>,
+    not <code>status</code>: a moratorium whose documented term has run out
+    reads <em>Expired</em> there, and that is the field the page itself
+    renders. Rows with <code>verified: false</code> have no source on record —
+    they are leads to check, not facts to cite.</p>
+  </details>
+  <details class="more">
+    <summary>Embed the tracker on your own site</summary>
+    <p class="muted">Self-contained and filterable by state. It updates when
+    this page does, so you are not maintaining a copy.</p>
+    <pre style="overflow-x:auto"><code>&lt;iframe src="https://aigridwatch.com/embed/moratoriums.html"
+        width="100%" height="560" style="border:0"
+        title="Data center moratorium tracker"&gt;&lt;/iframe&gt;</code></pre>
+    <p><a href="embed/moratoriums.html" target="_blank" rel="noopener">Preview it &rarr;</a></p>
+  </details>
+</section>
 <section>
   <h2>What happened next: case studies</h2>
   <p class="muted" style="margin-bottom:14px">Six communities that took
