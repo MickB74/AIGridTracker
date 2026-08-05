@@ -103,8 +103,32 @@ this page" expander for navigation.
     Blank `stance` means "not recorded", never "neutral".
   - `STATE_MUNI_LEAGUES` — 49 state municipal leagues (per NLC). Hawaii has
     none: no independent municipalities, county government only.
-  - `MORATORIUMS_DF` — data center moratorium/ban tracker
-  - `MORATORIUM_OUTCOMES` — case-study outcomes (CBA secured / ban sustained / etc.)
+  - `MORATORIUMS_DF` — data center moratorium/ban tracker. **Per-row `source`
+    + `as_of` + `expires`**, same discipline as the `LOCAL_*` tables: a row
+    with `source=None` renders as *Unverified* everywhere and is never
+    presented as fact. `expires` (ISO date, or `None` when permanent,
+    condition-based, or undocumented) drives `moratorium_status()`, which
+    derives the `effective_status` / `expired` / `days_left` /
+    `expiring_soon` / `verified` columns at import. **Read
+    `effective_status`, never `status`** — a lapsed moratorium cited as
+    current is the fastest way for a resident to lose a hearing. `Expired` is
+    derived and never stored; `Rescinded` is a real stored status.
+    Maintained by `scripts/verify_moratoriums.py` (audits what is published)
+    and `scripts/scan_moratorium_candidates.py` (finds what is missing) — see
+    Data maintenance scripts below.
+  - `MORATORIUM_OUTCOMES` — six case studies, each with `sources` (a list of
+    URLs) and `as_of`. The Start here wizard labels these "precedents worth
+    citing" and a resident reads them aloud at a hearing, so the bar is higher
+    than for the tracker: **say only what the sources say, and render the
+    sources alongside the claim** (`_outcome_card()` in `build_site.py`, the
+    expander in `start_here_tab.py`). All six were rewritten on 2026-08-04
+    after none survived verification — the originals asserted wins no source
+    supports (a $2.5M rec centre in Groton, a 25%-of-supply water cap in The
+    Dalles, quarterly reporting in Mesa) plus a Cheyenne timeline set in the
+    future. When the real outcome is worse than the story, say so: The Dalles
+    is now categorised *Mixed outcome* precisely because a community planning
+    around a cap that was never won is worse off than one that knows it still
+    has to win it.
   - `COMPANY_CONCESSIONS` — per-operator negotiation intel: documented concessions won elsewhere + a strategy read; feeds the meeting brief / action pack
   - `CBA_BENCHMARKS` — what similar communities won (Start here impact step)
   - `OUTREACH_TIPS` — platform-by-platform digital organizing playbook (Nextdoor/Ring/Facebook/WhatsApp/forums)
@@ -180,8 +204,20 @@ External data fetchers. All must be cached with `@st.cache_data` and fail gracef
 - **Every registry declares its freshness.** New bulk registries get an entry in `REGISTRY_PROVENANCE` (`src/constants.py`): `as_of`, `source`, `churn` (low/medium/high), and a plain-language `caveat`. Render it with `render_freshness(st, "MY_DF")` in the app and `provenance_html("MY_DF")` in `build_site.py` — both flag a dataset past its churn-based shelf life (low 36mo / medium 18mo / high 9mo) instead of quietly captioning it. Per-row `source` + `as_of` (the `LOCAL_*` pattern) is better where rows are added individually; `REGISTRY_PROVENANCE` is for datasets compiled in bulk.
 - **Never test a DataFrame cell for emptiness with `if v` or `str(v) != "nan"`.** A missing object-column value is `None` on pandas 2.x but `NaN` on 3.x — and `NaN` is truthy. Use `has_value(v)` from `src/constants.py` (or `cell(v)` in `build_site.py`, which also escapes and falls back to an em-dash). Both bugs this caused shipped to production: the literal word "None" in the Tenant column on five state pages, and every "unverified" marker vanishing from the search index. `web/` is generated on whatever pandas the builder has, so this diverges silently.
 - **Never invent an `as_of`.** Set it to `None` if the verification date isn't known — it renders as "No verification date recorded" and counts as stale. A fabricated date is worse than no date: it invites a citation the user can't defend at a hearing.
+- **Derive time-sensitive status, never store it.** A registry row whose truth expires (a moratorium term, a comment deadline, a rate case) gets the end date as data and a pure function that computes the current state from it — `moratorium_status()` is the reference implementation. Storing "Enacted" means the page keeps asserting it forever; deriving it means the daily CI rebuild corrects the page with no edit. Consumers must read the derived column (`effective_status`), not the stored one.
 - Distinguish **marginal** (load-shifting) vs **average** (fuel-mix) carbon intensity.
 - Shared registries live in `constants.py` — never duplicate data inline in tab modules. If two tabs need the same data, one filters the shared DataFrame.
+
+### Data maintenance scripts (`scripts/`)
+
+Stdlib-only on purpose — they run in CI off `requirements-build.txt`, which excludes `requests` and `streamlit`. Neither script edits a registry: promotion and verification are human steps, because that is where `source` and `as_of` come from.
+
+| Script | What it does |
+|---|---|
+| `verify_moratoriums.py` | Audits `MORATORIUMS_DF` **and `MORATORIUM_OUTCOMES`**: lapsed terms, dead source links (403/405/429 reported as *blocked*, not dead), rows with no source, `as_of` older than 180 days, and time-limited rows with no recorded end date. `--offline` skips link checks, `--out`/`--json` write the worklist, `--strict` exits non-zero. |
+| `scan_moratorium_candidates.py` | Mines the Google News RSS feed for moratoriums not yet tracked and appends them to `data/moratorium_candidates.json`. Entries keep `first_seen`; anything a human marks `"status": "dismissed"` is never re-raised. |
+
+`.github/workflows/verify-moratoriums.yml` runs both weekly and commits the queue. It deliberately does **not** fail the build — a stale row is a chore, not a broken deploy, and a weekly red X gets trained away. The signal is the committed diff in `data/` plus the job summary.
 
 ### Network calls
 - All external fetches use `@st.cache_data` with a TTL.

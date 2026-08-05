@@ -279,14 +279,19 @@ def render_news_tab():
 
     st.divider()
     st.markdown("#### Moratorium & ban tracker")
-    _enacted = len(MORATORIUMS_DF[MORATORIUMS_DF.status == "Enacted"])
-    _proposed = len(MORATORIUMS_DF[MORATORIUMS_DF.status == "Proposed"])
+    # effective_status, not status: a moratorium whose documented term has run
+    # out must not be counted as still in force.
+    _enacted = len(MORATORIUMS_DF[MORATORIUMS_DF.effective_status == "Enacted"])
+    _proposed = len(MORATORIUMS_DF[MORATORIUMS_DF.effective_status == "Proposed"])
+    _verified = int(MORATORIUMS_DF.verified.sum())
     st.markdown(
         f"**{len(MORATORIUMS_DF)} tracked actions** across "
-        f"{MORATORIUMS_DF.state.nunique()} states — **{_enacted} enacted** "
-        f"moratoriums or bans and **{_proposed} proposed or under "
-        "consideration**. Nationally, trackers report 50+ localities enacted "
-        "(North Carolina alone has 20+)."
+        f"{MORATORIUMS_DF.state.nunique()} states — **{_enacted} in force "
+        f"today** and **{_proposed} proposed or under consideration**. "
+        f"{_verified} of {len(MORATORIUMS_DF)} rows have been read against a "
+        "primary source; the rest are leads to check, not facts to cite. "
+        "Nationally, trackers report 50+ localities enacted (North Carolina "
+        "alone has 20+)."
     )
     render_freshness(st, "MORATORIUMS_DF")
     st.markdown(

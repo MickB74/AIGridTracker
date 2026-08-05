@@ -132,8 +132,8 @@ def render_impact_tab():
     _local_sites = DC_SITES_DF[DC_SITES_DF["state"] == _abbrev] if "state" in DC_SITES_DF.columns else pd.DataFrame()
 
     if not _local_moras.empty:
-        enacted = (_local_moras["status"] == "Enacted").sum()
-        proposed = (_local_moras["status"] == "Proposed").sum()
+        enacted = (_local_moras["effective_status"] == "Enacted").sum()
+        proposed = (_local_moras["effective_status"] == "Proposed").sum()
         parts = []
         if enacted:
             parts.append(f"**{enacted} enacted**")

@@ -203,11 +203,24 @@ def render_start_here_tab():
         if c["locality"] in ("The Dalles", "Groton", "Cheyenne")
     ]
     st.markdown("**Precedents worth citing:**")
+    st.caption(
+        "Open the source links before you quote one of these — a precedent "
+        "you cannot cite is worse than none at all."
+    )
     for _case in _shown:
         with st.expander(
                 f"{_case['locality']}, {_case['state']} — {_case['headline']} "
                 f"({_case['category']})"):
-            st.markdown(_case["outcome"])
+            st.markdown(_case["outcome"].replace("$", "\\$"))
+            _srcs = _case.get("sources") or []
+            if _srcs:
+                st.caption(
+                    " · ".join(f"[Source {_i}]({_u})"
+                               for _i, _u in enumerate(_srcs, 1))
+                    + f" · verified {_case.get('as_of') or '—'}"
+                )
+            else:
+                st.warning("Unverified — do not cite this one.")
 
     if not _abbrev_row.empty:
         _puc = _abbrev_row.iloc[0]

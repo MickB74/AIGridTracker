@@ -180,6 +180,12 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .badge-proposed { background:#713f12; color:#fde68a; }
 .badge-rejected { background:#7f1d1d; color:#fca5a5; }
 .badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.badge-expired { background:#374151; color:#d1d5db; }
+.badge-rescinded { background:#4c1d95; color:#c4b5fd; }
+.badge-note { font-size:11px; font-weight:600; color:var(--muted);
+              display:block; margin-top:3px; }
+.unverified { font-size:12px; color:#fca5a5; font-weight:600; }
+.verified-on { font-size:12px; color:var(--muted); white-space:nowrap; }
 .outcome { border-left:3px solid var(--teal); padding:10px 14px;
            margin:10px 0; }
 .outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
@@ -277,47 +283,47 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <p class="muted">Six real cases; the categories reflect what the community
   ended up with, not what was originally proposed.</p>
   
-<div class="note good">
+<div class="note info">
   <p><strong>Groton, CT</strong> —
   <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
-  CBA secured</span></p>
-  <p><strong>Moratorium led to permanent zoning controls</strong></p>
-  <p>After a year-long moratorium, Groton adopted permanent zoning amendments restricting data centers to industrial zones with noise limits of 45 dBA at property lines and mandatory stormwater management. The developer (Vantage) agreed to a CBA funding a $2.5M community recreation center.</p>
+  Permanent limits adopted</span></p>
+  <p><strong>A one-year pause turned into a permanent size cap</strong></p>
+  <p>Groton&#x27;s Planning and Zoning Commission adopted a one-year moratorium on data centers over 5,000 sq ft in June 2022 — and spent that year writing rules rather than letting it lapse. After a final public hearing in June 2023 the town adopted data center regulations, effective that July, capping data center buildings at 12,500 sq ft. Hyperscale campuses typically run 150,000–350,000 sq ft, so the cap excludes them by size instead of by argument. The moratorium was only the mechanism; the size cap is what holds.</p>
 </div>
 <div class="note info">
   <p><strong>Peculiar, MO</strong> —
   <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
-  Ban sustained</span></p>
-  <p><strong>Outright ban held after legal challenge</strong></p>
-  <p>The city&#x27;s ban on data centers survived a developer lawsuit. The court ruled that municipalities have broad police-power authority over land use. Peculiar cited water supply concerns — the proposed 50 MW facility would have consumed 30% of the city&#x27;s water allocation.</p>
+  Project blocked</span></p>
+  <p><strong>The town deleted &#x27;data center&#x27; from its zoning code</strong></p>
+  <p>Peculiar had already cleared the way for Diode Ventures&#x27; $1.5B Harper Road Technology Park by adding a &#x27;data center&#x27; definition to its light-industrial zoning code. After hundreds of residents from Peculiar and neighbouring Raymore turned out against it, the Board of Aldermen voted unanimously in October 2024 to strike that definition back out — blocking the project without ever passing a moratorium. Removing a permitted use is a quieter tool than a ban, and here it was a faster one.</p>
 </div>
 <div class="note bad">
   <p><strong>Cheyenne, WY</strong> —
   <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
   No protections</span></p>
-  <p><strong>Moratorium voted down — developer fast-tracked permits</strong></p>
-  <p>The city council rejected a moratorium 8-1, citing potential tax revenue. Microsoft broke ground on a 300 MW campus 4 months later. Residential electricity rates rose 11% the following year, partly attributed to grid upgrade costs. A CBA was not negotiated.</p>
+  <p><strong>Council rejected a pause with a 3,200-acre expansion already moving</strong></p>
+  <p>Microsoft announced a 3,200-acre expansion of its Cheyenne campus in April 2026, and Wyoming DEQ approved permits for 30 gas-fired engines plus emergency generators. On May 27, 2026 the city council voted 8–1 against a 12-month moratorium after three and a half hours of public comment — supporters raising water and noise, opponents raising jobs and tax base. The ratepayer question is being handled through Black Hills Energy&#x27;s Large Power Contract Service tariff, under which Microsoft pays directly for the infrastructure it needs, rather than through anything the city negotiated. No community benefit agreement appears in the reporting.</p>
 </div>
 <div class="note warn">
   <p><strong>Prince William County, VA</strong> —
   <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
   Political shift</span></p>
-  <p><strong>Data center backlash reshaped county politics</strong></p>
-  <p>Years of unchecked data center growth (70+ facilities) triggered a voter revolt in 2023. Anti-data-center candidates won board seats. The county now requires noise studies, visual screening, and CBA negotiations for new facilities. Property values near existing campuses remain 8-15% below comparable areas.</p>
+  <p><strong>Voters removed the board chair; the courts voided the rezoning</strong></p>
+  <p>In 2022 a board majority led by Chair Ann Wheeler rezoned more than 2,000 acres of farmland for the Prince William Digital Gateway. On June 20, 2023 Wheeler lost the Democratic primary to Deshundra Jefferson, who had campaigned against large-scale data centers. The board approved the rezoning 4–3 that December regardless — and it was the courts, not the ballot box, that ended it: the rezoning was voided on appeal and a developer withdrew, effectively killing the project. Statewide, Virginia voter support for new data centers fell from 69% in 2023 to 35%. Elections changed who was in the room; litigation changed the outcome.</p>
 </div>
-<div class="note good">
+<div class="note info">
   <p><strong>The Dalles, OR</strong> —
   <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
-  CBA secured</span></p>
-  <p><strong>Water fight forced Google to fund infrastructure</strong></p>
-  <p>Community opposition to Google&#x27;s water usage led to a negotiated agreement: Google funded a $29M wastewater treatment upgrade and committed to using recycled water for cooling. The city capped total data center water draws at 25% of municipal supply.</p>
+  Mixed outcome</span></p>
+  <p><strong>Google funded the water system — and its share of the water kept climbing</strong></p>
+  <p>Under a 2021 agreement Google paid roughly $28.5M toward upgrades to The Dalles&#x27; water treatment and storage, including an aquifer storage and recovery system it later handed to the city, and bought and donated 3.88 million gallons/day of water rights from a closed aluminium smelter. What the deal did not include was a cap on Google&#x27;s own draw. When The Oregonian sued for the usage records, the city spent 13 months fighting disclosure before settling — and the records showed the campus using about 29% of the city&#x27;s water, rising to roughly 40% (some 550 million gallons a year) by 2025. Infrastructure money is not the same protection as a volume limit. This is the case that shows the difference, and the reason to put a cap in writing.</p>
 </div>
-<div class="note good">
+<div class="note info">
   <p><strong>Mesa, AZ</strong> —
   <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
-  CBA secured</span></p>
-  <p><strong>Residents won noise and water protections mid-construction</strong></p>
-  <p>After residents organized against Apple and Google campus noise, Mesa adopted a data center overlay zone requiring 55 dBA limits, water recycling plans, and quarterly community reporting. Existing facilities were grandfathered but agreed to voluntary retrofits.</p>
+  Permanent limits adopted</span></p>
+  <p><strong>Zoning rules instead of a moratorium: setbacks, height caps, sound study</strong></p>
+  <p>With 15 data centers built, approved or proposed on roughly 1,500 acres in six years, Mesa&#x27;s council introduced zoning controls 6–0 and adopted them in July 2025. Data centers are now allowed only where the council specifically authorises a Planned Area Development overlay on industrial land, and each must sit at least 400 feet from residential, stay under 60 feet tall, screen its mechanical equipment, and submit a sound study. Water cooling was argued in council — Councilwoman Jenn Duff pushed to restrict it during drought — but did not make it into the adopted rules. Worth reading as a list of what a council will grant without a moratorium, and what it won&#x27;t.</p>
 </div>
 </section>
 

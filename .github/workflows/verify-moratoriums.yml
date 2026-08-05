@@ -1,0 +1,79 @@
+name: Verify moratorium tracker
+
+# The moratorium page is the one piece of this site people quote out loud at
+# hearings, and its data decays faster than anything else here — terms lapse,
+# councils extend, developers sue and win. Nothing about the daily site
+# rebuild catches that: it re-renders the same rows, so a stale claim just
+# gets a fresh timestamp.
+#
+# So this runs weekly and does two things a rebuild cannot:
+#   1. audits the rows we publish (dead source links, lapsed terms, rows
+#      nobody ever verified) and commits the worklist to data/
+#   2. scans the news feed for moratoriums we are not tracking and appends
+#      them to a review queue
+#
+# Neither step edits MORATORIUMS_DF. Promotion is a human step because that is
+# where `source` and `as_of` come from, and a fabricated as_of is worse than a
+# missing row — see the Data sourcing rules in CLAUDE.md.
+#
+# It does not fail the build. A stale row is a chore, not a broken deploy, and
+# a red X every Monday would be trained away within a month. The signal is the
+# committed diff in data/, plus the job summary.
+
+on:
+  schedule:
+    - cron: '23 13 * * 1'   # Mondays 13:23 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Shares the group with build-site.yml / news-refresh.yml: all three commit to
+# master, and two pushes racing would conflict.
+concurrency:
+  group: build-site
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-build.txt
+
+      # Both scripts are stdlib-only on purpose, so this stays the slim
+      # build dependency set — no streamlit, no requests.
+      - name: Install build dependencies
+        run: python -m pip install --quiet -r requirements-build.txt
+
+      - name: Audit tracked rows
+        run: |
+          python scripts/verify_moratoriums.py \
+            --out data/moratorium_review.md \
+            --json data/moratorium_review.json
+
+      - name: Scan news for untracked moratoriums
+        run: python scripts/scan_moratorium_candidates.py
+
+      - name: Job summary
+        run: cat data/moratorium_review.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit the worklist
+        run: |
+          if git diff --quiet -- data/moratorium_review.md \
+                                 data/moratorium_review.json \
+                                 data/moratorium_candidates.json; then
+            echo "No change to the review queue."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/moratorium_review.md data/moratorium_review.json \
+                  data/moratorium_candidates.json
+          git commit -m "chore: refresh moratorium review queue [skip ci]"
+          git push

@@ -180,6 +180,12 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .badge-proposed { background:#713f12; color:#fde68a; }
 .badge-rejected { background:#7f1d1d; color:#fca5a5; }
 .badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.badge-expired { background:#374151; color:#d1d5db; }
+.badge-rescinded { background:#4c1d95; color:#c4b5fd; }
+.badge-note { font-size:11px; font-weight:600; color:var(--muted);
+              display:block; margin-top:3px; }
+.unverified { font-size:12px; color:#fca5a5; font-weight:600; }
+.verified-on { font-size:12px; color:var(--muted); white-space:nowrap; }
 .outcome { border-left:3px solid var(--teal); padding:10px 14px;
            margin:10px 0; }
 .outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
@@ -278,7 +284,11 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 </div>
 <div class="freshness"><p><strong>As of July 2026 · changes over months</strong> · Source: <a href="https://www.electricchoice.com/datacenters/" rel="nofollow">ElectricChoice.com — U.S. Data Center Power Map by State (2026; updated July 2026; CC-BY 4.0; cites LBNL, EPRINC, EIA)</a></p><p class="muted" style="margin:6px 0 0">Facility counts vary by directory because each one draws the boundary differently — DataCenterMap lists 44 in Alabama where this table says 35, since it counts small network rooms alongside hyperscale campuses. Cite the TWh figure rather than the facility count when you can; it is the number that speaks to grid impact. Underlying load research is LBNL-2001637 (Dec 2024).</p></div>
 <section><h2>Your regulator</h2><p><strong>Public Utility Commission of Texas</strong> — <a href="https://www.puc.texas.gov/">website</a> · <a href="https://www.puc.texas.gov/consumer/complaint/">file a complaint</a></p></section>
-<section><h2>Pushback already happening in Texas</h2><table><tr><th>Where</th><th>Level</th><th>Status</th><th>Note</th></tr><tr><td>Hill County</td><td>Local</td><td><span class="badge badge-enacted">Enacted</span></td><td>Under developer lawsuit</td></tr></table><div class="freshness"><p><strong>As of mid-2026 (2m ago) · changes weekly — re-check before citing</strong></p><p class="muted" style="margin:6px 0 0">A point-in-time snapshot, illustrative rather than exhaustive — dozens of localities churn weekly. Confirm a locality&#x27;s current status with its own clerk before citing it as precedent.</p></div></section>
+<section><h2>Pushback already happening in Texas</h2><table><tr><th>Where</th><th>Level</th><th>Status</th><th>Note</th><th>Source</th></tr><tr><td>Hill County</td><td>Local</td><td><span class="badge badge-rescinded">Rescinded</span></td><td>1-year moratorium passed May 2026, rescinded after a $100M federal suit argued Texas counties lack moratorium authority; suit dismissed Jul 2026. Replaced with a disclosure checklist for large projects</td><td><a href="https://www.texastribune.org/2026/06/05/texas-hill-county-moratorium-rescinded-data-centers/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-04</span></td></tr></table><div class="freshness"><p><strong>As of August 2026 · changes weekly — re-check before citing</strong></p><p class="muted" style="margin:6px 0 0">Illustrative rather than exhaustive — dozens of localities churn weekly, and this tracks the ones we have read a source for.
+
+**Each row carries its own provenance.** Rows showing a verification date link to the ordinance, the enacting body&#x27;s own page, or a datable report of the vote, and were read on that date. Rows marked *unverified* came from bulk compilation and have not been checked against a primary source — the locality, the year, and the status may all be off. Verify one of those with the town clerk before citing it as precedent.
+
+**Expiry is derived, not asserted.** A row with a documented end date flips to *Expired* on its own once that date passes. A time-limited moratorium whose start date was never documented keeps showing as enacted — that is a known gap, not a claim that it is still in force. Moratoriums are also routinely extended, so an expiry date is the earliest it could have ended, not proof that it did.</p></div></section>
 
 <section><h2>Known data center campuses in Texas</h2><table><tr><th>Operator</th><th>Location</th><th>Tenant</th><th>Filing LLC</th></tr><tr><td>Google</td><td>Ellis County</td><td>Google</td><td>Land-acquisition shells: Jet Stream LLC, Sharka LLC</td></tr>
 <tr><td>Google</td><td>Midlothian</td><td>Google</td><td>Land-acquisition shells: Jet Stream LLC, Sharka LLC</td></tr>
