@@ -12,7 +12,7 @@ import streamlit as st
 from src.constants import (
     PROJECT_STAGES, STATE_GRID_PROFILES, STATE_PUCS_DF, MORATORIUMS_DF,
     MORATORIUM_OUTCOMES, DC_SITES_DF, OPERATORS_DF, CBA_BENCHMARKS,
-    OUTREACH_TIPS,
+    OUTREACH_TIPS, ENTITY_TELLS, lookup_filing_entity,
 )
 from src.alerts import alerts_for_state
 from src.impact_model import estimate_facility_impact, INVESTMENT_USD_PER_MW
@@ -94,6 +94,34 @@ def render_start_here_tab():
             "Name on the deed, permit, or utility filing",
             key="sh_llc", placeholder="e.g. Jet Stream LLC, Greasewood LLC")
         if llc_q:
+            # Entity registry first: it maps a specific filed name to a
+            # parent with a citation, which is the actual question. The site
+            # registry below only holds operator-level patterns, so it can
+            # confirm a well-known shell but will miss most real filings.
+            _ent = lookup_filing_entity(llc_q)
+            if not _ent.empty:
+                for _, _e in _ent.iterrows():
+                    _who_is = (_e["parent"] if _e["parent"] != _e["entity"]
+                               else _e["entity"])
+                    st.success(
+                        f"**{_e['entity']} → {_who_is}** "
+                        f"({_e['role']} entity, {_e['locality']}"
+                        f"{', ' + _e['state'] if _e['state'] else ''})"
+                    )
+                    st.markdown(
+                        f"{_e['note']}\n\n"
+                        f"[Source]({_e['source']}) · read {_e['as_of']}"
+                    )
+                    # Carry a named parent into the brief so the meeting pack
+                    # is about the company, not the shell.
+                    if _e["parent"] in _ops:
+                        operator_for_brief = _e["parent"]
+                st.caption(
+                    "Take the source to the meeting. An operator named from "
+                    "a citation is a fact on the record; one named from a "
+                    "hunch is the thing their lawyer corrects you on."
+                )
+
             _mask = (
                 DC_SITES_DF["filing_llc"].str.contains(
                     llc_q, case=False, na=False, regex=False)
@@ -115,11 +143,15 @@ def render_start_here_tab():
                     use_container_width=True, hide_index=True)
                 if len(_found_ops) == 1 and _found_ops[0] in _ops:
                     operator_for_brief = _found_ops[0]
-            else:
+            elif _ent.empty:
+                # Only when BOTH registries miss. Saying "no match" after the
+                # entity registry just named the parent would read as a
+                # contradiction.
                 st.warning(
                     f"No match for \"{llc_q}\" in our registry — that doesn't "
-                    "mean it's not a data center. Here's how to unmask an LLC "
-                    "yourself:"
+                    "mean it's not a data center. Most filings are one-off "
+                    "shells that appear in no public list until someone pulls "
+                    "the records. Here's how to do that:"
                 )
                 st.markdown(
                     "- **County recorder:** pull the deed — note the LLC's "
@@ -132,6 +164,14 @@ def render_start_here_tab():
                     "- **Planning department:** records requests for "
                     "pre-application meetings usually name the actual company"
                 )
+                with st.expander("What to look for once you have the filing"):
+                    for _name, _tell in ENTITY_TELLS:
+                        st.markdown(f"- **{_name}** — {_tell}")
+                    st.caption(
+                        "Found one? Send it to us with the record you found "
+                        "it in and it goes into the registry for the next "
+                        "community."
+                    )
     else:
         operator_for_brief = who
         _op_row = OPERATORS_DF[OPERATORS_DF["operator"] == who]

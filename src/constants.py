@@ -468,6 +468,131 @@ DC_SITES_DF = pd.DataFrame(_role_rows(), columns=[
     "operator", "owner", "tenant", "location", "state",
     "lat", "lon", "filing_llc", "attribution", "src"])
 
+# --------------------------------------------------------------------------- #
+# FILING ENTITIES — the shell-LLC → parent mapping
+# --------------------------------------------------------------------------- #
+# The one question this project answers that nobody else does: a resident has
+# a name off a deed or a rezoning notice and no idea who is actually behind it.
+#
+# DC_SITES_DF.filing_llc cannot answer it. That column holds an operator-level
+# *pattern* ("Land-acquisition shells: Jet Stream LLC, Sharka LLC") repeated
+# across every row for that operator — useful colour, useless as a lookup,
+# because the entity on a resident's notice is usually a name that appears
+# nowhere in it.
+#
+# This is the lookup table instead: one row per named entity, each tied to the
+# reporting or filing that established the link, with the date it was read.
+# Entities are added only where the link is documented — a plausible guess
+# here would send someone to a public hearing to accuse the wrong company,
+# which is worse than saying "we don't know, here's how to find out."
+#
+# `role` distinguishes what the entity actually is, because it changes who a
+# resident should be addressing:
+#   land       — buys the parcels quietly, pre-announcement
+#   project    — the named development entity on permits and rezonings
+#   developer  — a third party building for a tenant, not the end user
+FILING_ENTITIES = [
+    {"entity": "Sharka LLC", "parent": "Google", "role": "land",
+     "locality": "Midlothian (Ellis Co.)", "state": "TX",
+     "note": "Acquired 375 acres in Railport Business Park, May 2017; a "
+             "$500M campus and a 10-year county tax abatement followed. "
+             "Registered through Corporation Service Company in Delaware.",
+     "as_of": "2026-08-05",
+     "source": "https://www.datacenterdynamics.com/en/news/google-is-behind-500m-sharka-data-center-in-midlothian-texas/"},
+    {"entity": "Jet Stream LLC", "parent": "Google", "role": "land",
+     "locality": "Multiple", "state": "",
+     "note": "Google's land-acquisition shell before Sharka; same Delaware "
+             "registered agent.",
+     "as_of": "2026-08-05",
+     "source": "https://www.datacenterdynamics.com/en/news/google-is-behind-500m-sharka-data-center-in-midlothian-texas/"},
+    {"entity": "Willowbend Capital LLC", "parent": "Google", "role": "land",
+     "locality": "Little Rock (Pulaski Co.)", "state": "AR",
+     "note": "Bought ~380 acres at the Port of Little Rock for ~$23M per "
+             "Pulaski County property records. Managed by Michael Montfort, "
+             "the same name on Google's Indiana and West Memphis shells.",
+     "as_of": "2026-08-05",
+     "source": "https://www.arkansasonline.com/news/2026/jan/14/tech-giant-google-behind-1-billion-little-rock/"},
+    {"entity": "Forgelight Ventures LLC", "parent": "Google", "role": "land",
+     "locality": "Conway (Faulkner Co.)", "state": "AR",
+     "note": "Delaware front company organised by the same manager as "
+             "Willowbend Capital.",
+     "as_of": "2026-08-05",
+     "source": "https://www.arkansasonline.com/news/2026/jan/14/tech-giant-google-behind-1-billion-little-rock/"},
+    {"entity": "Groot LLC", "parent": "Google", "role": "land",
+     "locality": "West Memphis (Crittenden Co.)", "state": "AR",
+     "note": "Front company on the West Memphis project, later confirmed as "
+             "Google.",
+     "as_of": "2026-08-05",
+     "source": "https://www.arkansasonline.com/news/2025/sep/05/google-behind-10b-data-center-in-west-memphis/"},
+    {"entity": "Greater Kudu LLC", "parent": "Meta", "role": "project",
+     "locality": "Los Lunas (Valencia Co.)", "state": "NM",
+     "note": "The named counterparty on the village's March 2025 water and "
+             "wastewater service agreement — the entity a resident would find "
+             "on the municipal contract, not 'Meta'.",
+     "as_of": "2026-08-05",
+     "source": "https://www.news-bulletin.com/news/tax-break-water-deal-for-meta-data-center/article_d4ff8540-163d-4c73-8a17-a5ec65209c42.html"},
+    {"entity": "RCM Hill LLC", "parent": "Not publicly attributed", "role": "developer",
+     "locality": "Hill County", "state": "TX",
+     "note": "Sued Hill County over its moratorium for >$100M, holding "
+             "contracts on 800+ acres worth $80M+. The county rescinded; the "
+             "suit was dropped. No parent has been publicly identified.",
+     "as_of": "2026-08-05",
+     "source": "https://www.texastribune.org/2026/06/05/texas-hill-county-moratorium-rescinded-data-centers/"},
+    {"entity": "GW Acquisition Co", "parent": "QTS Data Centers", "role": "project",
+     "locality": "Prince William County", "state": "VA",
+     "note": "QTS affiliate that carried the Digital Gateway appeals, and "
+             "whose withdrawal ended the project.",
+     "as_of": "2026-08-05",
+     "source": "https://virginiabusiness.com/prince-william-digital-gateway-data-center-project-officially-dies/"},
+    {"entity": "Nscale", "parent": "Nscale", "role": "developer",
+     "locality": "Mason County", "state": "WV",
+     "note": "Developer of the Monarch Compute Campus north of Point "
+             "Pleasant, and the party running the voluntary 'Good Neighbors' "
+             "buyout of 53 adjacent homes.",
+     "as_of": "2026-08-05",
+     "source": "https://wchstv.com/news/local/voluntary-buyout-offers-rolled-out-for-meadowlands-estates-homes-near-data-center"},
+    {"entity": "Diode Ventures", "parent": "Black & Veatch", "role": "developer",
+     "locality": "Peculiar (Cass Co.)", "state": "MO",
+     "note": "Proposed the $1.5B Harper Road Technology Park; blocked when "
+             "the Board of Aldermen removed 'data center' from the zoning "
+             "code.",
+     "as_of": "2026-08-05",
+     "source": "https://www.kshb.com/news/local-news/peculiar-reverses-zoning-for-data-center-after-cries-from-neighbors"},
+]
+FILING_ENTITIES_DF = pd.DataFrame(FILING_ENTITIES)
+
+# Names that keep turning up as the registered agent or alias behind these
+# entities. Not a lookup — a hint for someone reading a filing themselves,
+# because recognising the agent is often what tells you a shell is a
+# hyperscaler rather than a local developer.
+ENTITY_TELLS = [
+    ("Corporation Service Company (CSC)",
+     "Delaware registered agent used by both Google and Meta shells. Seeing "
+     "CSC on a small-town filing is a strong hint the buyer is much larger "
+     "than the entity name suggests."),
+    ("Repeated manager names",
+     "The same individual often manages shells across states — Michael "
+     "Montfort appears on Google's Arkansas and Indiana entities. Search the "
+     "manager's name in other states' business registries."),
+    ("Meta aliases",
+     "Meta has negotiated as Raven Northbrook, Greater Kudu and Stadion."),
+]
+
+
+def lookup_filing_entity(query):
+    """Rows whose entity name matches `query` (case-insensitive substring).
+
+    Substring rather than exact because a resident types what is printed on a
+    notice — "Greater Kudu", "GREATER KUDU LLC", "Kudu" — and an exact match
+    would fail all three.
+    """
+    q = str(query or "").strip().lower()
+    if len(q) < 3:
+        return FILING_ENTITIES_DF.iloc[0:0]
+    return FILING_ENTITIES_DF[
+        FILING_ENTITIES_DF["entity"].str.lower().str.contains(q, regex=False)]
+
+
 def _tenant_disclosure(tier, discloses):
     if tier == "hyperscaler":
         return "Self-consumed"
