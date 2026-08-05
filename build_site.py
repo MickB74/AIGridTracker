@@ -512,7 +512,7 @@ def build_index():
         for s in sorted(STATE_GRID_PROFILES))
     benches = "\n".join(
         f"<li><strong>{esc(b['community'])}, {esc(b['state'])}</strong> "
-        f"({esc(b['company'])}) — {esc(b['won'])}</li>"
+        f"({esc(b['company'])}) — {esc(b['won'])}{_prov_links(b)}</li>"
         for b in CBA_BENCHMARKS)
     body = f"""
 <div class="hero-grid">
@@ -634,6 +634,24 @@ def _mora_status_cell(m):
         word = "expires" if not m.expiring_soon else "expires soon —"
         html += f'<span class="badge-note">{word} {esc(str(m.expires))}</span>'
     return html
+
+
+def _prov_links(item, label="Source"):
+    """Inline `sources` + `as_of` for any registry row that carries them.
+
+    Shared by CBA benchmarks and operator concessions: both get quoted at a
+    negotiating table, so the citation has to travel with the claim rather
+    than living in a methodology page nobody opens. An unsourced row says so
+    out loud instead of rendering a confident blank.
+    """
+    srcs = item.get("sources") or []
+    if not srcs:
+        return ' <span class="unverified">(unverified — do not cite)</span>'
+    links = " · ".join(
+        f'<a href="{esc(u)}" rel="nofollow noopener" target="_blank">'
+        f'{label} {i}</a>' for i, u in enumerate(srcs, 1))
+    on = f" · verified {esc(str(item['as_of']))}" if item.get("as_of") else ""
+    return f' <span class="verified-on">{links}{on}</span>'
 
 
 def _outcome_card(o):
@@ -761,7 +779,7 @@ def build_state(state):
     if state_cbas:
         items = "\n".join(
             f"<li><strong>{esc(b['community'])}</strong> ({esc(b['company'])}) "
-            f"— {esc(b['won'])}</li>"
+            f"— {esc(b['won'])}{_prov_links(b)}</li>"
             for b in state_cbas)
         cba_html = (
             f'<section><h2>What communities in {esc(state)} have won</h2>'
@@ -3901,7 +3919,7 @@ def build_scorecard(h):
     if concessions.get("concessions"):
         rows = "\n".join(
             f'<tr><td>{esc(c["where"])}</td><td>{esc(c["year"])}</td>'
-            f'<td>{esc(c["what"])}</td></tr>'
+            f'<td>{esc(c["what"])}{_prov_links(c)}</td></tr>'
             for c in concessions["concessions"])
         concession_html = (
             f'<section><h2>What communities have won from {esc(h["name"])}</h2>'
@@ -5467,14 +5485,14 @@ def build_case_studies():
     bench_rows = "\n".join(
         f"<tr><td><strong>{esc(b['community'])}, {esc(b['state'])}</strong></td>"
         f"<td>{esc(b['company'])}</td>"
-        f"<td>{esc(b['won'])}</td></tr>"
+        f"<td>{esc(b['won'])}{_prov_links(b)}</td></tr>"
         for b in CBA_BENCHMARKS)
 
     concession_sections = []
     for company, info in COMPANY_CONCESSIONS.items():
         concessions = "\n".join(
             f"<li><strong>{esc(c['where'])}</strong> "
-            f"({esc(c['year'])}) — {esc(c['what'])}</li>"
+            f"({esc(c['year'])}) — {esc(c['what'])}{_prov_links(c)}</li>"
             for c in info["concessions"])
         concession_sections.append(f"""
 <section id="{slugify(company)}">

@@ -249,4 +249,11 @@ def build_meeting_brief(state, operator, meeting_type, mw):
             brief += f"{sec['pattern']}\n\n"
             for c in sec["items"]:
                 brief += f"  - {c['where']} ({c['year']}): {c['what']}\n"
+                # The citation travels with the claim. Someone reads this at a
+                # table with the company's own representative across it, and
+                # "where did you get that" is the first question back.
+                for u in (c.get("sources") or []):
+                    brief += f"      source: {u}\n"
+                if not c.get("sources"):
+                    brief += "      (unverified — do not cite)\n"
     return brief

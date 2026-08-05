@@ -40,7 +40,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.constants import (                                   # noqa: E402
-    MORATORIUMS_DF, MORATORIUM_OUTCOMES, EXPIRING_SOON_DAYS, has_value,
+    MORATORIUMS_DF, MORATORIUM_OUTCOMES, CBA_BENCHMARKS,
+    COMPANY_CONCESSIONS, EXPIRING_SOON_DAYS, has_value,
 )
 from scripts._linkcheck import check_url as _check_url, classify  # noqa: E402
 
@@ -60,6 +61,24 @@ def _days_since(iso):
         return (dt.date.today() - dt.date.fromisoformat(str(iso))).days
     except (ValueError, TypeError):
         return None
+
+
+def _sourced_items():
+    """Every registry row that claims a fact and carries its own citations.
+
+    Yields (item, label, state, kind). Kept in one place so a new registry of
+    this shape gets audited by adding a line here, rather than by someone
+    remembering to. That is the failure this exists to prevent: the case
+    studies were fixed on 2026-08-04 while the identical fabrications sat
+    untouched in CBA_BENCHMARKS for another day.
+    """
+    for o in MORATORIUM_OUTCOMES:
+        yield o, f"{o['locality']} case study", o["state"], o.get("category", "")
+    for b in CBA_BENCHMARKS:
+        yield b, f"{b['community']} benchmark", b["state"], b.get("company", "")
+    for company, info in COMPANY_CONCESSIONS.items():
+        for c in info.get("concessions", []):
+            yield c, f"{company}: {c['where']}", "", "concession"
 
 
 def _looks_time_limited(note):
@@ -119,41 +138,43 @@ def audit(check_links=True):
                 "note describes a fixed term but no end date is recorded — "
                 "the page cannot expire it. Find the adoption date")
 
-    # Case studies get the same audit. They are labelled "precedents worth
-    # citing" in the Start here wizard, which makes an unsourced one the most
-    # dangerous text in the repo — it is read out loud at a hearing.
-    for o in MORATORIUM_OUTCOMES:
-        srcs = o.get("sources") or []
-        where = f"{o['locality']} case study"
+    # Everything that carries `sources` + `as_of` gets the same audit. These
+    # three registries are what a resident quotes out loud — case studies as
+    # precedent, benchmarks as the ask, concessions to the company's own
+    # representative — so an unsourced row here is the most dangerous text in
+    # the repo. Both fabrications found on 2026-08-05 had propagated across
+    # two of them, which is why this checks all three rather than the one that
+    # happened to be noticed.
+    for item, label, state, kind in _sourced_items():
+        srcs = item.get("sources") or []
         if not srcs:
             findings.append({
-                "kind": "missing-source", "locality": where,
-                "state": o["state"], "status": o.get("category", ""),
-                "detail": "case study cites nothing; it renders as "
-                          "'do not cite'. Source it or drop it",
+                "kind": "missing-source", "locality": label, "state": state,
+                "status": kind,
+                "detail": "cites nothing; it renders as 'do not cite'. "
+                          "Source it or drop it",
                 "source": None})
             continue
-        age = _days_since(o.get("as_of"))
+        age = _days_since(item.get("as_of"))
         if age is None:
             findings.append({
-                "kind": "missing-source", "locality": where,
-                "state": o["state"], "status": o.get("category", ""),
-                "detail": f"unusable as_of: {o.get('as_of')!r}",
+                "kind": "missing-source", "locality": label, "state": state,
+                "status": kind,
+                "detail": f"unusable as_of: {item.get('as_of')!r}",
                 "source": srcs[0]})
         elif age > STALE_AFTER_DAYS:
             findings.append({
-                "kind": "stale-as-of", "locality": where,
-                "state": o["state"], "status": o.get("category", ""),
+                "kind": "stale-as-of", "locality": label, "state": state,
+                "status": kind,
                 "detail": f"last read {age}d ago (limit {STALE_AFTER_DAYS})",
                 "source": srcs[0]})
 
     if check_links:
-        # (row-or-outcome label, url) pairs, checked in one pass.
+        # (row-or-item label, url) pairs, checked in one pass.
         targets = [(r, str(r.source)) for r in rows if has_value(r.source)]
-        targets += [({"locality": f"{o['locality']} case study",
-                      "state": o["state"], "status": o.get("category", "")}, u)
-                    for o in MORATORIUM_OUTCOMES
-                    for u in (o.get("sources") or [])]
+        targets += [({"locality": label, "state": state, "status": kind}, u)
+                    for item, label, state, kind in _sourced_items()
+                    for u in (item.get("sources") or [])]
         with ThreadPoolExecutor(max_workers=8) as pool:
             results = list(pool.map(lambda t: _check_url(t[1]), targets))
         for (owner, url), (code, err) in zip(targets, results):
@@ -178,14 +199,15 @@ def audit(check_links=True):
 def render(findings, checked_links):
     total = len(MORATORIUMS_DF)
     verified = int(MORATORIUMS_DF["verified"].sum())
-    cases = len(MORATORIUM_OUTCOMES)
-    cases_ok = sum(1 for o in MORATORIUM_OUTCOMES if o.get("sources"))
+    items = list(_sourced_items())
+    cases = len(items)
+    cases_ok = sum(1 for i, *_ in items if i.get("sources"))
     counts = {k: sum(1 for f in findings if f["kind"] == k) for k in SEVERITY}
 
     out = ["# Moratorium tracker review queue",
            f"_Generated {dt.date.today().isoformat()} · {verified}/{total} "
-           f"tracker rows and {cases_ok}/{cases} case studies "
-           f"source-verified_", ""]
+           f"tracker rows and {cases_ok}/{cases} quotable claims "
+           f"(case studies, benchmarks, concessions) source-verified_", ""]
     if not checked_links:
         out.append("_Link checking skipped (--offline)._\n")
     if not findings:

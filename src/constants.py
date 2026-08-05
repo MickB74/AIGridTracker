@@ -1381,143 +1381,192 @@ MORATORIUM_OUTCOMES = [
 # a read on how the company negotiates. Keyed by OPERATORS_DF operator name;
 # operators without a well-documented track record are simply absent (the
 # brief/action pack skips the section). Feeds build_meeting_brief_data().
+# Per-operator negotiation intel: documented concessions won elsewhere plus a
+# read on how the company negotiates. Feeds the meeting brief and action pack,
+# so a resident may say these out loud to the company's own representative —
+# every concession therefore carries `sources`, and the `pattern` read is
+# labelled as interpretation rather than fact.
+#
+# Rewritten 2026-08-05. Two entries were deleted outright rather than fixed:
+# Google/Mesa ("voluntary noise retrofits and quarterly community reporting")
+# and the entire Vantage entry ("$2.5M community recreation center"). Neither
+# is supported by any source found, and Vantage's whole strategy read rested
+# on that one claim. Operators with no documented track record are simply
+# absent — the brief skips the section, which is the correct outcome.
 COMPANY_CONCESSIONS = {
     "Google": {
         "pattern": (
             "Negotiates through PR-friendly commitments — water stewardship "
-            "pledges, community grants — but its largest concessions came only "
-            "under permit leverage and records-transparency pressure. Secrecy "
-            "is standard practice (NDAs with local officials, shell LLCs like "
-            "'Design LLC') until approvals are locked; forcing early "
-            "disclosure of water and power demands shifts the balance."
+            "pledges, community grants — but its documented concessions came "
+            "under permit leverage and records-transparency pressure, not "
+            "goodwill. Shell LLCs and confidentiality are standard practice "
+            "until approvals are locked, so forcing early disclosure of water "
+            "and power demands is where the leverage is. (Strategy read, not "
+            "a sourced fact.)"
         ),
         "concessions": [
-            {"where": "The Dalles, OR", "year": "2021-22",
-             "what": "Funded a ~$29M water/wastewater infrastructure upgrade "
-                     "and committed to recycled-water cooling after the city "
-                     "tied expansion approval to water guarantees; dropped its "
-                     "fight to keep water-use records secret after a local "
-                     "newspaper's public-records lawsuit."},
-            {"where": "Mesa, AZ", "year": "2023",
-             "what": "Accepted voluntary noise retrofits and quarterly "
-                     "community reporting under the city's data-center "
-                     "overlay zone."},
-            {"where": "Multiple campuses", "year": "ongoing",
-             "what": "Routinely funds local community grants near campuses — "
-                     "treat these as table stakes, not a substitute for a "
-                     "binding CBA."},
+            {"as_of": "2026-08-05", "where": "The Dalles, OR", "year": "2021-24",
+             "what": "Paid ~$28.5M toward city water treatment and storage, "
+                     "including an aquifer storage and recovery system later "
+                     "transferred to the city, and donated 3.88M gallons/day "
+                     "of purchased water rights. Note what is absent: no cap "
+                     "on its own draw, which reached ~40% of city supply.",
+             "sources": ["https://www.thedalles.org/news_detail_T4_R207.php"]},
+            {"as_of": "2026-08-05", "where": "The Dalles, OR", "year": "2022",
+             "what": "Dropped its fight to keep water-use records secret "
+                     "after The Oregonian sued; the city had spent 13 months "
+                     "resisting disclosure before settling.",
+             "sources": ["https://www.rcfp.org/dalles-google-oregonian-settlement/"]},
         ],
     },
     "Meta": {
         "pattern": (
-            "Runs a standardized siting playbook behind shell LLCs (in Los "
-            "Lunas it arrived as 'Greater Kudu LLC') and moves fast once "
-            "incentives are locked. Its public 'water positive by 2030' "
-            "pledge is leverage: communities have converted it into binding "
-            "local water caps, restoration funding, and reporting terms."
+            "Runs a standardized siting playbook behind shell LLCs — in Los "
+            "Lunas it arrived as 'Greater Kudu LLC' — and moves fast once "
+            "incentives are locked. Its public water-restoration programme is "
+            "leverage: it has been converted into agreement terms elsewhere, "
+            "so ask for the terms, not the pledge. (Strategy read.)"
         ),
         "concessions": [
-            {"where": "Los Lunas, NM", "year": "2016-22",
-             "what": "Agreed to water-use limits and funded Rio Grande basin "
-                     "water-restoration projects after drought-driven "
-                     "scrutiny of the campus's cooling demand."},
-            {"where": "Multiple campuses", "year": "ongoing",
-             "what": "Funds community action grants and local infrastructure "
-                     "near campuses; amounts are negotiated site by site — "
-                     "get them written into approval conditions."},
+            {"as_of": "2026-08-05", "where": "Los Lunas, NM", "year": "2025",
+             "what": "Village water/wastewater agreement with Greater Kudu "
+                     "LLC guarantees up to 3M gallons/day but suspends supply "
+                     "during a declared Stage 3 water emergency — a usable "
+                     "template for drought-conditioned service.",
+             "sources": ["https://www.news-bulletin.com/news/tax-break-water-deal-for-meta-data-center/article_d4ff8540-163d-4c73-8a17-a5ec65209c42.html"]},
+            {"as_of": "2026-08-05", "where": "Rio Grande watershed", "year": "ongoing",
+             "what": "Funds eight watershed restoration projects returning "
+                     "~172M gallons/year. Restoration is not the same as "
+                     "reduced local draw — treat it as additional, not as an "
+                     "offset against your own supply.",
+             "sources": ["https://datacenters.atmeta.com/2026/04/restoring-water-in-our-data-center-communities/"]},
+            {"as_of": "2026-08-05", "where": "Data center communities", "year": "ongoing",
+             "what": "Community Action Grants to schools and nonprofits near "
+                     "campuses, administered via ChangeX. Table stakes, not a "
+                     "substitute for a binding agreement.",
+             "sources": ["https://datacenters.atmeta.com/community-action-grants/"]},
         ],
     },
     "Microsoft": {
         "pattern": (
-            "The most willing of the hyperscalers to accept transparency and "
-            "design conditions: it has publicly committed new builds to "
-            "zero-water evaporative cooling designs and has paid for its own "
-            "water treatment where municipal systems pushed back. Use its "
-            "published sustainability commitments as the floor of your ask, "
-            "not the ceiling."
+            "The most willing of the hyperscalers to accept design and "
+            "transparency conditions, and the one whose own published "
+            "commitments give you the most to hold it to. Use its zero-water "
+            "design as the floor of the ask: it has already built it, so "
+            "'evaporative draw is unavoidable' is not available to a "
+            "developer proposing otherwise. (Strategy read.)"
         ),
         "concessions": [
-            {"where": "Quincy, WA", "year": "2010s",
-             "what": "Funded and built water treatment/reuse capacity after "
-                     "the city objected to cooling discharge loads on the "
-                     "municipal system."},
-            {"where": "San Antonio, TX", "year": "ongoing",
-             "what": "Runs cooling on recycled municipal wastewater instead "
-                     "of potable supply."},
-            {"where": "New builds (announced)", "year": "2024",
-             "what": "Committed next-generation data center designs to zero "
-                     "water for cooling — cite this when a developer claims "
-                     "evaporative water draw is unavoidable."},
+            {"as_of": "2026-08-05", "where": "New builds", "year": "2024",
+             "what": "All datacenter designs from August 2024 use chip-level "
+                     "closed-loop cooling consuming zero water, avoiding "
+                     ">125M litres/year per facility. Announced Dec 2024; "
+                     "sites online from late 2027.",
+             "sources": ["https://www.microsoft.com/en-us/microsoft-cloud/blog/2024/12/09/sustainable-by-design-next-generation-datacenters-consume-zero-water-for-cooling/"]},
+            {"as_of": "2026-08-05", "where": "Quincy WA / San Antonio TX", "year": "ongoing",
+             "what": "Runs cooling largely on recycled, reused or non-potable "
+                     "water — 74% in Quincy, 79% in San Antonio — rather than "
+                     "potable municipal supply.",
+             "sources": ["https://blogs.microsoft.com/blog/2026/06/24/inside-microsofts-two-decade-push-to-cut-water-intensity-while-scaling-for-growth/"]},
         ],
     },
     "Amazon (AWS)": {
         "pattern": (
-            "The hardest bargainer on taxes — AWS extracts enterprise-zone "
-            "abatements and has litigated assessments — but its Oregon deals "
-            "prove terms are reopenable when officials organize. Leverage "
-            "sits with whoever controls the next approval; its 'water "
-            "positive by 2030' pledge is a hook for binding water terms."
+            "The hardest bargainer on taxes, and the one most likely to hold "
+            "an abatement rather than pay. Where communities have extracted "
+            "terms, it has been through payment-in-lieu deals negotiated "
+            "before approval — leverage sits entirely with whoever controls "
+            "the next permit. (Strategy read.)"
         ),
         "concessions": [
-            {"where": "Morrow & Umatilla Counties, OR", "year": "2022",
-             "what": "Renegotiated enterprise-zone tax agreements to raise "
-                     "annual community payments after county commissioners "
-                     "and residents pushed back on earlier abatements."},
-            {"where": "Loudoun County, VA", "year": "ongoing",
-             "what": "Pays hundreds of millions per year in data-center "
-                     "property taxes — precedent that a jurisdiction with "
-                     "market power can decline abatements entirely."},
+            {"as_of": "2026-08-05", "where": "Morrow County, OR", "year": "2023",
+             "what": "Agreed to pay ~$40M in fees over 15 years across five "
+                     "new data centers, in exchange for enterprise-zone "
+                     "abatements estimated at $1B. Read both halves of that "
+                     "trade before citing it as a win.",
+             "sources": ["https://www.opb.org/article/2023/05/19/amazon-data-center-oregon-morrow-county/"]},
         ],
     },
     "QTS": {
         "pattern": (
-            "Blackstone-owned and growth-driven — entitlement delay is its "
-            "biggest cost, which makes timeline leverage real. In contested "
-            "Virginia rezonings QTS offered proffers (buffers, transmission "
-            "undergrounding contributions, community funds) to keep projects "
-            "moving. Get proffers recorded as binding conditions of approval, "
-            "not letters of intent."
+            "Blackstone-owned and growth-driven, so entitlement delay is a "
+            "real cost and timeline pressure is genuine leverage. But Prince "
+            "William is the cautionary case: proffers offered late in a "
+            "contested rezoning were judged too late to evaluate, and the "
+            "rezoning was later voided on appeal. Get proffers recorded as "
+            "binding conditions early, or they are worth nothing. (Strategy "
+            "read.)"
         ),
         "concessions": [
-            {"where": "Prince William County, VA", "year": "2022-23",
-             "what": "Offered rezoning proffers — setbacks, buffering, and "
-                     "community contributions — during the contested Digital "
-                     "Gateway rezoning; the approval was later challenged in "
-                     "court, a reminder to secure commitments that survive "
-                     "litigation."},
-        ],
-    },
-    "Vantage": {
-        "pattern": (
-            "Colocation developer that needs local zoning wins to serve "
-            "hyperscaler tenants; it has accepted CBAs as zoning conditions "
-            "when boards held firm through a moratorium."
-        ),
-        "concessions": [
-            {"where": "Groton, CT", "year": "2023",
-             "what": "Agreed to a CBA funding a $2.5M community recreation "
-                     "center as part of permanent zoning controls adopted "
-                     "after a year-long moratorium."},
+            {"as_of": "2026-08-05", "where": "Prince William County, VA", "year": "2023",
+             "what": "Added proffers during the contested Digital Gateway "
+                     "rezoning — additional public space and strengthened "
+                     "power-line placement language — after 24 hours of "
+                     "public comment. Staff and some supervisors said the "
+                     "amendments came too late to assess; the rezoning was "
+                     "voided on appeal in 2026 and the project died.",
+             "sources": ["https://www.datacenterdynamics.com/en/news/prince-william-county-officials-vote-in-favor-of-pw-digital-gateway-data-center-rezoning-in-manassas-virginia/",
+                         "https://virginiabusiness.com/prince-william-digital-gateway-data-center-project-officially-dies/"]},
         ],
     },
 }
 
 # What similar communities actually won — shown in the Start Here wizard's
 # impact step so the CBA target reads as precedent, not aspiration.
+# What comparable communities actually won. This is the *ask* — the number a
+# resident carries into a negotiation — which makes it the highest-stakes list
+# in the repo. Every row carries `sources` + `as_of`, and says only what those
+# sources say.
+#
+# Rewritten 2026-08-05 after verification. The prior version claimed a
+# $2.5M recreation centre in Groton and a 25%-of-supply water cap in The
+# Dalles; neither exists. Both had propagated here from MORATORIUM_OUTCOMES,
+# which is the lesson: an unsourced claim does not stay in one registry. If a
+# win cannot be sourced, it does not belong on the list at all — demanding
+# something because "Groton got it" when Groton didn't is how a campaign loses
+# the room in one meeting.
 CBA_BENCHMARKS = [
-    {"community": "The Dalles", "state": "OR", "company": "Google",
-     "won": "$29M wastewater treatment upgrade + recycled-water cooling; "
-            "city capped DC draws at 25% of municipal supply"},
-    {"community": "Groton", "state": "CT", "company": "Vantage",
-     "won": "$2.5M community recreation center CBA, recorded as a zoning "
-            "condition after a year-long moratorium"},
-    {"community": "Morrow & Umatilla Counties", "state": "OR",
-     "company": "Amazon (AWS)",
-     "won": "Renegotiated tax agreements with higher annual community "
-            "payments after commissioners pushed back"},
     {"community": "Loudoun County", "state": "VA", "company": "Multiple",
-     "won": "Hundreds of millions/year in data-center property taxes — "
-            "~38% of the county budget — by declining abatements"},
+     "won": "Declined abatements and taxed data centers instead: the FY2027 "
+            "budget puts them at roughly $1.3B — about 45% of all county tax "
+            "revenue — on ~4% of commercial parcels. The benchmark for what a "
+            "jurisdiction with market power can simply refuse to give away",
+     "as_of": "2026-08-05",
+     "sources": ["https://www.loudoun.gov/Faq.aspx?QID=1793"]},
+    {"community": "Groton", "state": "CT", "company": "Multiple",
+     "won": "A hard size cap, not a cheque: data center buildings limited to "
+            "12,500 sq ft in the zoning adopted June 2023, after a one-year "
+            "moratorium. Hyperscale campuses run 150,000–350,000 sq ft, so "
+            "the cap excludes them by geometry rather than by argument",
+     "as_of": "2026-08-05",
+     "sources": ["https://theday.com/local-news/20220621/groton-approves-one-year-moratorium-on-large-scale-data-centers",
+                 "https://datacenters.ainowinstitute.org/local/"]},
+    {"community": "Los Lunas", "state": "NM", "company": "Meta",
+     "won": "A water agreement with terms: the March 2025 village agreement "
+            "with Greater Kudu LLC (Meta's filing entity) guarantees up to 3M "
+            "gallons/day but suspends supply in a declared Stage 3 water "
+            "emergency. Meta also funds eight Rio Grande watershed "
+            "restoration projects, ~172M gallons/year",
+     "as_of": "2026-08-05",
+     "sources": ["https://datacenters.atmeta.com/2026/04/restoring-water-in-our-data-center-communities/",
+                 "https://www.news-bulletin.com/news/tax-break-water-deal-for-meta-data-center/article_d4ff8540-163d-4c73-8a17-a5ec65209c42.html"]},
+    {"community": "Morrow County", "state": "OR", "company": "Amazon (AWS)",
+     "won": "Fees in lieu of taxes, negotiated in the open: ~$40M over 15 "
+            "years across five new data centers in exchange for enterprise-"
+            "zone abatements worth an estimated $1B (2023). Cited here as a "
+            "benchmark of what a payment-in-lieu deal looks like — including "
+            "how much is forgone to get it",
+     "as_of": "2026-08-05",
+     "sources": ["https://www.opb.org/article/2023/05/19/amazon-data-center-oregon-morrow-county/"]},
+    {"community": "The Dalles", "state": "OR", "company": "Google",
+     "won": "Infrastructure money, but no cap — the cautionary benchmark. "
+            "Google paid ~$28.5M toward city water treatment and storage and "
+            "donated 3.88M gallons/day of water rights, yet nothing limited "
+            "its own draw, which reached ~40% of city supply by 2025. Ask for "
+            "the volume limit in writing, not just the capital contribution",
+     "as_of": "2026-08-05",
+     "sources": ["https://www.thedalles.org/news_detail_T4_R207.php",
+                 "https://waterwatch.org/googles-water-use-is-soaring-in-the-dalles-records-show-with-two-more-data-centers-to-come-2/"]},
 ]
 
 # Digital-organizing playbook — platform-specific tips for the Start Here

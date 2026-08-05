@@ -324,6 +324,14 @@ def build_action_pack_pdf(state, stage, stage_info, brief_data,
             pdf.ln(2)
             for c in sec["items"]:
                 pdf.rich_bullet(f"{c['where']} ({c['year']}): ", c["what"])
+                # Printed pack: the reader has no hyperlink to fall back on,
+                # so the URL goes on the page. A concession quoted at a
+                # hearing without a citation is worse than one left out.
+                for u in (c.get("sources") or []):
+                    pdf.paragraph(f"    source: {u}", size=7, color=MUTED)
+                if not c.get("sources"):
+                    pdf.paragraph("    (unverified - do not cite)",
+                                  size=7, color=MUTED)
 
     if scripts:
         pdf.section_title("Your 2-minute public comment")
