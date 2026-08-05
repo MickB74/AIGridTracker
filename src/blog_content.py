@@ -2,6 +2,11 @@
 Blog content — curated stories and project narrative for the GridWatch AI blog tab.
 Each story is a dict with: id, section, title, date, author, summary, body (markdown),
 and optional tags. Sections: "stories" for reported pieces, "about" for project mission.
+
+`art` names the generated hero illustration (see `src/blog_art.py` for the theme
+keys). It's optional — `blog_art.theme_for()` guesses from the id/title/tags when
+it's missing — but set it explicitly: the keyword guess reads the whole tag list
+and picks up the wrong subject often enough not to be trusted.
 """
 
 import datetime as _dt
@@ -54,6 +59,7 @@ BLOG_STORIES = [
     # ── Ezra Klein "The A.I. Revolt Is Here" — backlash goes mainstream ──
     {
         "id": "ezra-klein-ai-revolt-mainstream-2026",
+        "art": "media",
         "section": "stories",
         "title": "\"The A.I. Revolt Is Here\": When Ezra Klein Covers Your Zoning Fight, the Politics Have Changed",
         "date": _dt.date(2026, 8, 4),
@@ -188,6 +194,7 @@ attention.
     # ── Data center tax-break cost blowouts (Good Jobs First, June 2026) ─
     {
         "id": "data-center-tax-break-blowouts-2026",
+        "art": "money",
         "section": "stories",
         "title": "The \\$327 Million Guess That Became \\$2.5 Billion: States Are Finally Learning What Data Center Tax Breaks Cost",
         "date": _dt.date(2026, 8, 4),
@@ -350,6 +357,7 @@ so far, everywhere anyone has checked, is that nobody did.
     # ── Questions to ask before approving a data center (checklist) ─────
     {
         "id": "questions-to-ask-data-center-checklist-2026",
+        "art": "checklist",
         "section": "stories",
         "title": "Before You Approve a Data Center: 26 Questions Every Community Should Ask",
         "date": _dt.date(2026, 8, 2),
@@ -644,6 +652,7 @@ county. The second-best time is at the next public hearing.
     # ── Meta Hyperion (Richland Parish, LA) — who pays for 5 GW ──────────
     {
         "id": "meta-hyperion-louisiana-ratepayer-fight-2026",
+        "art": "transmission",
         "section": "stories",
         "title": "\"Meta pays the full cost.\" Louisiana ratepayers pay \\$8–13 a month. Both are true.",
         "date": _dt.date(2026, 7, 30),
@@ -861,6 +870,7 @@ filed under oath — is the one commissioners have to answer for.
     # ── PJM capacity auction / ratepayer cost allocation ─────────────────
     {
         "id": "pjm-capacity-auction-ratepayer-shock-2026",
+        "art": "bills",
         "section": "stories",
         "title": "Five Auctions, \\$29 Billion: How Data Centers Took Over the PJM Capacity Market — and Sent Your Bill to the Moon",
         "date": _dt.date(2026, 7, 26),
@@ -1056,6 +1066,7 @@ heard of. Now you've heard of it — and you know who's driving the price.
     # ── Regulatory gap-shopping / oversight sidestep ────────────────────
     {
         "id": "oversight-gaps-agency-shopping-2026",
+        "art": "oversight",
         "section": "stories",
         "title": "One Project, Two Stories: How Data Center Developers Shop the Gaps Between Agencies",
         "date": _dt.date(2026, 7, 26),
@@ -1284,6 +1295,7 @@ Fundamental Data is planning," July 23, 2026](https://mountainstatespotlight.org
     # ── DOE National Transmission Needs Study (July 2026 draft) ─────────
     {
         "id": "doe-transmission-needs-2026",
+        "art": "transmission",
         "section": "stories",
         "title": "DOE Just Named Data Centers the #1 Reason America Needs New Power Lines. Here's Why Your Community Should Read the Fine Print.",
         "date": _dt.date(2026, 7, 26),
@@ -1442,6 +1454,7 @@ February 2025.*
     # ── BNEF 194 GW forecast ─────────────────────────────────────────────
     {
         "id": "bnef-194gw-forecast-2026",
+        "art": "forecast",
         "section": "stories",
         "title": "One in Five Electrons: BNEF Says Data Centers Will Consume 20% of U.S. Power by 2035",
         "date": _dt.date(2026, 7, 21),
@@ -1620,6 +1633,7 @@ sites and break ground.
     # ── Amazon site-selection interview ───────────────────────────────────
     {
         "id": "amazon-oyer-site-selection-2026",
+        "art": "grid",
         "section": "stories",
         "title": "Amazon Says It Picks Sites Where the Grid Needs Help. Here's What Communities Should Hear.",
         "date": _dt.date(2026, 7, 20),
@@ -1824,6 +1838,7 @@ But "can benefit" and "will benefit" are separated by a contract. Get it in writ
     # ── Port Washington / Stargate land rush ────────────────────────────────
     {
         "id": "port-washington-stargate-land-rush-2026",
+        "art": "land",
         "section": "stories",
         "title": "A \\$15B Data Center Made Wisconsin Farmers Millionaires — and the Same Playbook Is Headed for 10 More Markets",
         "date": _dt.date(2026, 7, 18),
@@ -2084,6 +2099,7 @@ loses.
     # ── Morgan Stanley opposition analysis ──────────────────────────────────
     {
         "id": "morgan-stanley-opposition-bottleneck-2026",
+        "art": "community",
         "section": "stories",
         "title": "Morgan Stanley Says Community Opposition Is the Biggest Threat to the Data Center Buildout. Are They Right?",
         "date": _dt.date(2026, 7, 15),
@@ -2238,6 +2254,7 @@ question is whether your community gets a fair deal when they do.
     # ── NY Moratorium ───────────────────────────────────────────────────────
     {
         "id": "ny-moratorium-eo62-2026",
+        "art": "moratorium",
         "section": "stories",
         "title": "New York Just Changed the Game: What EO 62 Means for Every Community Fighting a Data Center",
         "date": _dt.date(2026, 7, 15),
@@ -2337,6 +2354,7 @@ proved that states can act — and communities should demand it.
     # ── Story 0 ──────────────────────────────────────────────────────────────
     {
         "id": "utility-bill-explainer-2026",
+        "art": "bills",
         "section": "stories",
         "title": "Why Your Electric Bill Is Going Up — and What Data Centers Have to Do With It",
         "date": _dt.date(2026, 7, 12),
@@ -2559,6 +2577,7 @@ grid ready for loads that refuse to flex.
     # ── Story 1 ──────────────────────────────────────────────────────────────
     {
         "id": "moratorium-wave-2026",
+        "art": "moratorium",
         "section": "stories",
         "title": "The Moratorium Wave: Why 14 States Are Pressing Pause on Data Centers",
         "date": _dt.date(2026, 7, 8),
@@ -2624,6 +2643,7 @@ genuine community benefit will find smoother paths than those that don't.
     # ── Story 2 ──────────────────────────────────────────────────────────────
     {
         "id": "hidden-water-cost",
+        "art": "water",
         "section": "stories",
         "title": "The Hidden Water Cost of Your AI Query: What the Data Actually Shows",
         "date": _dt.date(2026, 7, 3),
@@ -2690,6 +2710,7 @@ The point isn't to stop using AI. It's to ensure that:
     # ── Story 3 ──────────────────────────────────────────────────────────────
     {
         "id": "ercot-queue-explainer",
+        "art": "queue",
         "section": "stories",
         "title": "233 GW of Demand Is Waiting in Line: Inside ERCOT's Data Center Queue",
         "date": _dt.date(2026, 6, 25),
@@ -2769,6 +2790,7 @@ signaled that legislators are paying attention.
     # ── Story 4 ──────────────────────────────────────────────────────────────
     {
         "id": "social-license-risk-2026",
+        "art": "community",
         "section": "stories",
         "title": "How the Industry Files Your Protest: 'Social License' and the \\$64B Risk Column",
         "date": _dt.date(2026, 7, 11),
@@ -2892,6 +2914,7 @@ Three things maximize that leverage:
     # ── Resource-extraction precedent: property-value guarantees & data dividends ──
     {
         "id": "resource-extraction-precedent-2026",
+        "art": "extraction",
         "section": "stories",
         "title": "They Figured This Out Fifty Years Ago: What Oil, Wind, and Pipeline Towns Already Know About Protecting Neighbors",
         "date": _dt.date(2026, 7, 26),
