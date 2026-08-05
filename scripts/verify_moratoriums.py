@@ -34,8 +34,6 @@ import argparse
 import datetime as dt
 import json
 import sys
-import urllib.error
-import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -44,17 +42,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from src.constants import (                                   # noqa: E402
     MORATORIUMS_DF, MORATORIUM_OUTCOMES, EXPIRING_SOON_DAYS, has_value,
 )
+from scripts._linkcheck import check_url as _check_url, classify  # noqa: E402
 
 # High-churn data. Past this, "verified" is a claim about a different year.
 STALE_AFTER_DAYS = 180
-LINK_TIMEOUT = 20
-UA = ("Mozilla/5.0 (compatible; GridWatchLinkCheck/1.0; "
-      "+https://aigridwatch.com)")
-
-# Refusal, not absence. A 403 from a paywalled newsroom says nothing about
-# whether the article is still there, so it must not be reported as a dead
-# link — that would train the reader to ignore the check.
-BLOCKED_CODES = {401, 403, 405, 406, 429, 999}
 
 # Words that mean "this ends at some point" in a note field.
 TERM_WORDS = ("-month", "-year", "year-long", "yearlong", "temporary",
@@ -62,29 +53,6 @@ TERM_WORDS = ("-month", "-year", "year-long", "yearlong", "temporary",
 
 SEVERITY = ["expired", "dead-link", "missing-source", "undated-term",
             "stale-as-of", "expiring", "blocked"]
-
-
-def _check_url(url):
-    """(status_code_or_None, error_string_or_None) for a URL.
-
-    HEAD first because it is cheap, then GET: plenty of newsrooms answer HEAD
-    with 405 while serving the article fine.
-    """
-    for method in ("HEAD", "GET"):
-        req = urllib.request.Request(url, method=method,
-                                     headers={"User-Agent": UA})
-        try:
-            with urllib.request.urlopen(req, timeout=LINK_TIMEOUT) as r:
-                return r.status, None
-        except urllib.error.HTTPError as e:
-            if method == "HEAD" and e.code in (405, 501):
-                continue
-            return e.code, None
-        except Exception as e:                                # noqa: BLE001
-            if method == "HEAD":
-                continue
-            return None, f"{type(e).__name__}: {e}"
-    return None, "unreachable"
 
 
 def _days_since(iso):
@@ -197,12 +165,11 @@ def audit(check_links=True):
                                      "detail": detail, "source": url})
                 else:
                     add(owner, kind, detail)
-            if err:
-                _add_link("dead-link", f"{err} — {url}")
-            elif code in BLOCKED_CODES:
+            verdict = classify(code, err)
+            if verdict == "dead":
+                _add_link("dead-link", f"{err or f'HTTP {code}'} — {url}")
+            elif verdict == "blocked":
                 _add_link("blocked", f"HTTP {code} (bot-blocked, check by hand)")
-            elif code and code >= 400:
-                _add_link("dead-link", f"HTTP {code} — {url}")
 
     findings.sort(key=lambda f: SEVERITY.index(f["kind"]))
     return findings
