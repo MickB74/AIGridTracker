@@ -109,8 +109,10 @@ itself.
 ### Why this episode matters more than most coverage
 
 Not because the facts are new. Our
-[moratorium tracker](/moratoriums) currently documents **47
-moratoriums and bans, 34 of them enacted** — we called this
+[moratorium tracker](/moratoriums) currently documents **99
+moratoriums and bans, 73 of them enacted** across 29 states — and that is
+still a floor, not a census: every week of local reporting turns up more,
+and our review queue is never empty. We called this
 [the moratorium wave](moratorium-wave-2026) back in the spring, and the
 [Morgan Stanley analysis](morgan-stanley-opposition-bottleneck-2026)
 identifying community opposition as the industry's binding constraint is
