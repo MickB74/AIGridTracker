@@ -30,6 +30,7 @@ import shutil
 import markdown
 import pandas as pd
 
+from src.blog_art import art_svg
 from src.blog_content import BLOG_STORIES, ABOUT_SECTION
 from src.constants import (
     AI_COMPETITORS_DF,
@@ -258,6 +259,20 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .blog-list li { border-bottom:1px solid var(--rule); padding:18px 0;
   content-visibility:auto; contain-intrinsic-size:auto 110px; }
 .blog-list li:last-child { border-bottom:none; }
+/* Only posts carry art — news/video lists reuse .blog-list without a thumb,
+   so the two-column grid is scoped to .has-art rather than the whole list. */
+.blog-list li.has-art { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:680px){ .blog-list li.has-art {
+  grid-template-columns:200px 1fr; gap:18px; align-items:start;
+  contain-intrinsic-size:auto 150px; } }
+.blog-list .thumb { width:100%; height:auto; display:block; border-radius:10px;
+  border:1px solid var(--rule); }
+.post-art { width:100%; height:auto; display:block; border-radius:14px;
+  border:1px solid var(--rule); margin:4px 0 24px;
+  filter:drop-shadow(0 8px 24px rgba(45,212,191,.10)); }
+.post-art .glow, .thumb .glow { animation:pulse 3.2s ease-in-out infinite; }
+@media (prefers-reduced-motion:reduce){
+  .post-art .glow, .thumb .glow { animation:none; opacity:.7 } }
 .blog-list h3 { font-size:17px; margin:0 0 4px; }
 .blog-list h3 a { text-decoration:none; }
 .blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
@@ -324,6 +339,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 NAV_LINKS = [
     ("Home", "index.html"),
     ("Your state", "states/index.html"),
+    ("Siting score", "siting.html"),
     ("Case studies", "case-studies.html"),
     ("Clauses", "cba-clauses.html"),
     ("Tax breaks", "tax-breaks.html"),
@@ -380,6 +396,12 @@ def page(title, description, body, canonical, depth=0,
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:type" content="{og_type}">
+<meta property="og:url" content="{canonical}">
+<meta property="og:site_name" content="AI GridWatch">
+<meta property="og:image" content="{SITE_URL}/assets/hero.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="479">
+<meta name="twitter:card" content="summary_large_image">
 {og_extra}
 {ld_block}
 <link rel="icon" href="{p}assets/logo.svg" type="image/svg+xml">
@@ -1867,13 +1889,18 @@ def build_blog_index():
         data_states = esc("|".join(states)) if states else ""
         state_chips = " ".join(
             f'<span class="tag">{esc(st)}</span>' for st in states)
+        # uid must be unique per document — every post's art lives in this one
+        # page, and duplicate gradient ids would all resolve to the first.
+        thumb = art_svg(s, cls="thumb", uid=f"t-{s['id']}")
         items += (
-            f'<li data-states="{data_states}">'
+            f'<li class="has-art" data-states="{data_states}">'
+            f'<a href="{s["id"]}.html" aria-hidden="true" tabindex="-1">{thumb}</a>'
+            f'<div>'
             f'<div class="post-meta">{s["date"].strftime("%b %-d, %Y")}</div>'
             f'<h3><a href="{s["id"]}.html">{esc(title_clean)}</a></h3>'
             f'<p class="summary">{esc(summary_clean)}</p>'
             f'{"<div class=\"tags\" style=\"margin-top:6px\">" + state_chips + "</div>" if state_chips else ""}'
-            f'</li>\n'
+            f'</div></li>\n'
         )
     body = f"""
 <header>
@@ -1968,6 +1995,7 @@ def build_blog_post(story, prev_post, next_post):
   <div class="tags">{tags_html}</div>
   <p class="sub">{esc(summary_clean)}</p>
 </header>
+{art_svg(story, cls="post-art")}
 <section class="prose">
   {body_html}
 </section>
@@ -5617,6 +5645,341 @@ def build_glossary():
             ("Glossary", f"{SITE_URL}/glossary")))
 
 
+_ZIP3_TO_STATE = {
+    # USPS zip3 → USPS state code. Ranges compressed to (lo, hi, state).
+    "MA": [(10, 27)], "RI": [(28, 29)], "NH": [(30, 38)], "ME": [(39, 49)],
+    "VT": [(50, 59)], "CT": [(60, 69)], "NJ": [(70, 89)],
+    "NY": [(100, 149), (63, 63)],  # 005 is Holtsville NY (IRS)
+    "PA": [(150, 196)], "DE": [(197, 199)],
+    # Northern VA (Ashburn/Loudoun) uses the 201 prefix but neighboring 200
+    # and 202-205 stay with DC. Keep the two ranges separate.
+    "DC": [(200, 200), (202, 205), (569, 569)],
+    "MD": [(206, 219)],
+    "VA": [(201, 201), (220, 246)],
+    "WV": [(247, 268)],
+    "NC": [(270, 289)], "SC": [(290, 299)], "GA": [(300, 319), (398, 399)],
+    "FL": [(320, 349)], "AL": [(350, 369)], "TN": [(370, 385)],
+    "MS": [(386, 397)],
+    "KY": [(400, 427)], "OH": [(430, 459)], "IN": [(460, 479)],
+    "MI": [(480, 499)], "IA": [(500, 528)], "WI": [(530, 549)],
+    "MN": [(550, 567)], "SD": [(570, 577)], "ND": [(580, 588)],
+    "MT": [(590, 599)], "IL": [(600, 629)], "MO": [(630, 658)],
+    "KS": [(660, 679)], "NE": [(680, 693)],
+    "LA": [(700, 714)], "AR": [(716, 729)], "OK": [(730, 749)],
+    "TX": [(750, 799), (885, 885)],
+    "CO": [(800, 816)], "WY": [(820, 831)], "ID": [(832, 838)],
+    "UT": [(840, 847)], "AZ": [(850, 865)], "NM": [(870, 884)],
+    "NV": [(889, 898)], "CA": [(900, 961)], "HI": [(967, 968)],
+    "OR": [(970, 979)], "WA": [(980, 994)], "AK": [(995, 999)],
+}
+
+
+def _siting_profiles():
+    """Per-state siting scorecard, built from constants at build time and
+    embedded into the /siting page as JSON. Six subscores 0-100 (higher =
+    more attractive to a data-center developer)."""
+    hubs = {
+        # Rough proximity-to-existing-cluster scores. Fiber follows clusters.
+        "VA": 100, "TX": 95, "CA": 90, "OH": 85, "GA": 85, "AZ": 85,
+        "OR": 82, "WA": 82, "IL": 80, "NY": 78, "NJ": 78, "IA": 75,
+        "NV": 74, "NE": 72, "IN": 70, "NC": 68, "PA": 68, "CO": 65,
+        "MN": 60, "FL": 60, "SC": 58, "TN": 58, "MI": 55, "MO": 55,
+        "OK": 55, "UT": 55, "LA": 55, "WI": 50, "MD": 50,
+        "KY": 48, "MA": 48, "CT": 45, "NM": 45, "KS": 45,
+        "AL": 42, "AR": 40, "MS": 40, "ID": 40, "SD": 38, "ND": 38,
+        "MT": 35, "WY": 35, "ME": 35, "NH": 35, "VT": 30, "RI": 35,
+        "DE": 40, "WV": 35, "HI": 20, "AK": 15, "DC": 55,
+    }
+    scores = {}
+    for state, prof in STATE_GRID_PROFILES.items():
+        row = STATE_DC_DF[STATE_DC_DF["state"] == state]
+        abbr = _ABBREV.get(state, "")
+        dc_count = int(row.iloc[0]["dc_count"]) if not row.empty else 0
+        twh = float(row.iloc[0]["twh_year"]) if not row.empty else 0.0
+        major_hubs = str(row.iloc[0]["major_hubs"]) if not row.empty else ""
+        upcoming = bool(row.iloc[0]["upcoming"]) if not row.empty else False
+        moras = MORATORIUMS_DF[MORATORIUMS_DF["state"] == abbr]
+
+        # Power: cheap + carbon-considered. Rates and carbon both normalized.
+        rate = prof.get("rate", 0.14)
+        gco2 = prof.get("gco2", 400)
+        power_price = max(0, min(100, int((0.30 - rate) / 0.20 * 100)))
+        power_carbon = max(0, min(100, int((600 - gco2) / 400 * 100)))
+        power = int(power_price * 0.65 + power_carbon * 0.35)
+
+        # Fiber: based on cluster proximity table.
+        fiber = hubs.get(abbr, 40)
+
+        # Land: bigger existing footprint = more industrial availability,
+        # but too-established markets are saturated. U-shaped scoring.
+        if dc_count == 0:
+            land = 20
+        elif dc_count < 20:
+            land = 55
+        elif dc_count < 100:
+            land = 80
+        elif dc_count < 250:
+            land = 75
+        else:
+            land = 60
+
+        # Water: from stress category. High-stress states are harder now.
+        stress = prof.get("water_stress", "medium")
+        water = {"low": 85, "medium": 55, "high": 25}.get(stress, 50)
+
+        # Tax climate: presence in the SALT-friendly / DC-tax-exemption cohort.
+        friendly = {"VA", "TX", "GA", "OH", "OR", "AZ", "NV", "NC", "NE",
+                    "IA", "OK", "SC", "TN", "MS", "IN", "KS", "PA", "MO",
+                    "IL", "MI", "WI", "MN"}
+        hostile = {"NY", "NJ", "CT", "MA", "RI", "VT", "CA", "HI"}
+        if abbr in friendly:
+            tax = 85
+        elif abbr in hostile:
+            tax = 35
+        else:
+            tax = 60
+
+        # Politics: existing moratoriums = harder path.
+        mora_count = len(moras)
+        if mora_count == 0:
+            politics = 80
+        elif mora_count <= 2:
+            politics = 55
+        elif mora_count <= 5:
+            politics = 35
+        else:
+            politics = 20
+
+        overall = int((power * 0.28 + fiber * 0.22 + land * 0.15
+                       + water * 0.14 + tax * 0.13 + politics * 0.08))
+        if overall >= 80: grade = "A"
+        elif overall >= 70: grade = "B"
+        elif overall >= 60: grade = "C"
+        elif overall >= 45: grade = "D"
+        else: grade = "F"
+
+        scores[abbr] = {
+            "state": state, "abbr": abbr, "slug": slugify(state),
+            "grade": grade, "overall": overall,
+            "power": power, "fiber": fiber, "land": land,
+            "water": water, "tax": tax, "politics": politics,
+            "rate_cents": round(rate * 100, 1), "gco2": gco2,
+            "water_stress": stress, "dc_count": dc_count, "twh": twh,
+            "major_hubs": major_hubs, "upcoming": upcoming,
+            "moratoriums": mora_count,
+            "tax_class": ("friendly" if abbr in friendly
+                          else "hostile" if abbr in hostile else "neutral"),
+        }
+    return scores
+
+
+def build_siting():
+    import json as _json
+    profiles = _siting_profiles()
+    zip_map = _json.dumps(_ZIP3_TO_STATE)
+    profile_json = _json.dumps(profiles)
+    body = f"""
+<header>
+  <div class="kicker">Siting evaluator</div>
+  <h1>Would a data center want to build in your town?</h1>
+  <p class="sub">Enter a zip code or pick a state. You'll get a
+  six-factor siting scorecard — power, fiber, land, water, tax climate,
+  political risk — plus a plain-English read on why a hyperscaler's
+  site-selection team probably has your county on a spreadsheet
+  somewhere.</p>
+</header>
+
+<section>
+  <h2>Look up your area</h2>
+  <div class="card">
+    <label for="s-zip" style="display:block;font-weight:600;margin-bottom:6px">Zip code (5 digits) or town name</label>
+    <input id="s-zip" type="text" placeholder="e.g. 20147 or Ashburn"
+      style="width:100%;padding:10px 12px;border:1px solid var(--rule);
+      border-radius:8px;background:var(--bg);color:var(--ink);
+      font:15px system-ui;">
+    <p style="margin:12px 0 6px;color:var(--muted);font-size:13px">…or pick a state:</p>
+    <select id="s-state" style="width:100%;padding:10px 12px;
+      border:1px solid var(--rule);border-radius:8px;background:var(--bg);
+      color:var(--ink);font:15px system-ui">
+      <option value="">— pick a state —</option>
+      {"".join(f'<option value="{p["abbr"]}">{esc(p["state"])}</option>' for p in profiles.values())}
+    </select>
+    <p><button id="s-go" class="btn" style="margin-top:14px;border:none;cursor:pointer">Show me the report &rarr;</button></p>
+    <p id="s-err" class="muted" style="color:#fca5a5;display:none;margin-top:6px"></p>
+  </div>
+</section>
+
+<div id="s-report" style="display:none">
+  <section id="s-summary"></section>
+  <section id="s-cards"></section>
+  <section id="s-narrative"></section>
+  <section id="s-nextsteps">
+    <h2>What to do with this</h2>
+    <ul>
+      <li>Read the <a href="tax-breaks.html">opportunity-cost briefing</a> before your next council meeting — the higher your score, the more leverage you have.</li>
+      <li>Bring the <a href="hearing-questions.html">hearing questions</a> and the <a href="cba-clauses.html">CBA clause library</a> to any public comment period.</li>
+      <li>Use the <a href="{APP_URL}">Start here wizard</a> for an interactive impact estimate at the parcel level (this page is state-level; the app can do geocoded lookups).</li>
+      <li>Check the <a href="case-studies.html">case studies</a> for what similar communities won or lost.</li>
+    </ul>
+  </section>
+  <p class="src" style="margin-top:18px">Scores are heuristic composites built
+  from state-level data on the site: retail electricity rates, grid carbon,
+  known data-center count and TWh, water-stress category, state tax posture
+  toward data centers, and moratorium tracker counts. They describe the
+  <em>state</em> a zip code sits in — actual siting decisions are made at
+  the parcel level and depend on factors this tool can't see (fiber routes,
+  substation capacity, land title). Treat as a starting frame, not a
+  verdict.</p>
+</div>
+
+<script>
+const ZIP_MAP = {zip_map};
+const PROFILES = {profile_json};
+
+function zipToState(zip) {{
+  const z = parseInt(zip.substring(0,3), 10);
+  if (isNaN(z)) return null;
+  for (const [state, ranges] of Object.entries(ZIP_MAP)) {{
+    for (const [lo, hi] of ranges) {{
+      if (z >= lo && z <= hi) return state;
+    }}
+  }}
+  return null;
+}}
+
+const NARRATIVES = {{
+  power: (p) => p.power >= 75
+    ? `${{p.state}}'s retail electricity is around ${{p.rate_cents}}¢/kWh — well below the coastal average — and its grid carbon runs about ${{p.gco2}} gCO₂/kWh. Cheap firm power is the single strongest signal for hyperscaler siting.`
+    : p.power >= 50
+    ? `${{p.state}} sits mid-pack on power: retail rates around ${{p.rate_cents}}¢/kWh and grid carbon near ${{p.gco2}} gCO₂/kWh. Attractive if a specific tariff or PPA is on the table; not a decisive advantage.`
+    : `${{p.state}}'s retail power runs high (${{p.rate_cents}}¢/kWh) and the grid emissions profile (${{p.gco2}} gCO₂/kWh) puts it below the shortlist for cost-sensitive tenants. Developers who build here usually have a specific renewables deal locked.`,
+  fiber: (p) => p.fiber >= 75
+    ? `${{p.state}} sits on the top tier of the US fiber map — dense backbone, low latency to the coasts, and a well-worn path for permitting. Peer developers are already there, which is both a positive (proven) and a negative (competition for the best parcels).`
+    : p.fiber >= 50
+    ? `${{p.state}} has adequate fiber for edge and mid-tier cloud, but is not a Tier-1 backbone hub. A developer with a specific latency requirement is more likely to look at neighboring states.`
+    : `${{p.state}} is fiber-thin for hyperscale. Long-haul routes exist but a new campus would likely need to co-fund fiber build-out — that shows up as an operator ask early in negotiations.`,
+  land: (p) => p.dc_count >= 100
+    ? `${{p.state}} already hosts ${{p.dc_count}} tracked facilities. Land in the established hubs is spoken for; new campuses tend to push into second-tier counties nearby. Expect displacement pressure.`
+    : p.dc_count >= 20
+    ? `${{p.state}}'s ${{p.dc_count}} tracked facilities mean the industrial land market understands data-center buyers — brokers know the drill, county assessors have templates.`
+    : `${{p.state}} has only ${{p.dc_count}} tracked facilities. Land is cheaper but the local permitting apparatus is unfamiliar; expect a longer entitlement cycle.`,
+  water: (p) => p.water_stress === "low"
+    ? `Low water stress. Municipal or well supply is unlikely to constrain a cooling design here, which is exactly why arid-state hyperscalers are increasingly hunting parcels in states like this.`
+    : p.water_stress === "high"
+    ? `High water stress. Evaporative cooling is politically radioactive; expect any credible proposal to lead with air-cooling or closed-loop designs — and expect the community to still push back on both.`
+    : `Medium water stress. Cooling design will be scrutinized; watershed authorities are the most likely veto point.`,
+  tax: (p) => p.tax_class === "friendly"
+    ? `${{p.state}} has an existing data-center sales-tax exemption or equivalent posture. That's the incentive most developers assume before they walk in. Don't treat it as a concession you got — you gave it.`
+    : p.tax_class === "hostile"
+    ? `${{p.state}} runs a heavier tax regime and lacks the standard data-center carve-outs. A hyperscaler looking here is doing so despite the tax bill, which means the other factors have to compensate.`
+    : `${{p.state}} sits in the middle of the tax-posture pack. Custom abatements are usually still on the table for large enough projects.`,
+  politics: (p) => p.moratoriums === 0
+    ? `No moratoriums tracked in-state. Politically, the runway is clear — that's an argument for organizing early, not for assuming the fight isn't coming.`
+    : p.moratoriums <= 2
+    ? `${{p.moratoriums}} tracked moratorium(s) in-state. Precedent for pushback exists; find the organizers and read what they filed.`
+    : `${{p.moratoriums}} tracked moratoriums in-state — a real political pattern. Any new proposal here will run into an experienced opposition network.`,
+}};
+
+function factorCard(label, score, narrative, key) {{
+  const color = score >= 70 ? "#34d399" : score >= 50 ? "#fbbf24" : "#f87171";
+  return `<div class="card" style="margin-bottom:14px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <h3 style="margin:0">${{label}}</h3>
+      <span style="font-size:22px;font-weight:700;color:${{color}}">${{score}}</span>
+    </div>
+    <div style="height:6px;border-radius:3px;background:rgba(255,255,255,.06);overflow:hidden;margin-bottom:10px">
+      <div style="height:6px;width:${{score}}%;background:${{color}};border-radius:3px"></div>
+    </div>
+    <p class="muted" style="margin:0;font-size:14px">${{narrative}}</p>
+  </div>`;
+}}
+
+function render(state) {{
+  const p = PROFILES[state];
+  if (!p) {{
+    document.getElementById("s-err").style.display = "block";
+    document.getElementById("s-err").textContent = "State not recognized.";
+    return;
+  }}
+  document.getElementById("s-err").style.display = "none";
+  document.getElementById("s-report").style.display = "block";
+
+  const gradeColor = ({{"A":"#34d399","B":"#6ee7b7","C":"#fbbf24","D":"#f97316","F":"#ef4444"}})[p.grade] || "#93a1b5";
+  document.getElementById("s-summary").innerHTML = `
+    <h2>${{p.state}} — siting attractiveness</h2>
+    <div class="card" style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center">
+      <div style="text-align:center">
+        <div style="font-size:64px;line-height:1;font-weight:800;color:${{gradeColor}}">${{p.grade}}</div>
+        <div class="muted" style="margin-top:4px">overall</div>
+      </div>
+      <div>
+        <p style="margin:0 0 6px"><strong>Composite score:</strong> ${{p.overall}} / 100</p>
+        <p class="muted" style="margin:0">${{p.dc_count}} tracked data centers · ${{p.twh}} TWh/yr · ${{p.moratoriums}} moratorium(s) recorded · ${{p.major_hubs || "no major hubs yet"}}${{p.upcoming ? " · upcoming projects flagged" : ""}}</p>
+      </div>
+    </div>`;
+
+  document.getElementById("s-cards").innerHTML = `
+    <h2>The six factors</h2>
+    ${{factorCard("Power (price + carbon)", p.power, NARRATIVES.power(p), "power")}}
+    ${{factorCard("Fiber & cluster proximity", p.fiber, NARRATIVES.fiber(p), "fiber")}}
+    ${{factorCard("Land availability", p.land, NARRATIVES.land(p), "land")}}
+    ${{factorCard("Water", p.water, NARRATIVES.water(p), "water")}}
+    ${{factorCard("Tax climate", p.tax, NARRATIVES.tax(p), "tax")}}
+    ${{factorCard("Political risk", p.politics, NARRATIVES.politics(p), "politics")}}`;
+
+  const leverage = p.overall >= 75
+    ? "Your area is on any serious hyperscaler shortlist. That's leverage — the developer will invest months of siting cost before ever walking into your hearing. Treat the tax package as a negotiation, not a check-the-box approval."
+    : p.overall >= 55
+    ? "Your area is competitive but not automatic. A developer here has options; so do you. Focus on what raises your score (fiber, tariff design) as a bargaining chip in either direction."
+    : "Your area is unlikely to see a hyperscale project without a specific push — a state incentive or a nearby cluster spillover. If a proposal appears anyway, ask why: something on the developer's spreadsheet is compensating for what this scorecard says is missing.";
+
+  document.getElementById("s-narrative").innerHTML = `
+    <h2>What this means for your leverage</h2>
+    <div class="note info"><p>${{leverage}}</p></div>
+    <p><a href="states/${{p.slug}}.html" class="btn ghost">Full ${{p.state}} state briefing &rarr;</a></p>`;
+}}
+
+function lookup() {{
+  const zip = document.getElementById("s-zip").value.trim();
+  const stateSel = document.getElementById("s-state").value;
+  if (zip && /^\\d{{3,5}}$/.test(zip)) {{
+    const state = zipToState(zip);
+    if (state) return render(state);
+    document.getElementById("s-err").style.display = "block";
+    document.getElementById("s-err").textContent =
+      "Zip prefix not recognized (military APO/FPO or a US territory outside the 50 states + DC). Try picking a state below.";
+    return;
+  }}
+  if (stateSel) return render(stateSel);
+  // Try town lookup by matching against known localities.
+  if (zip) {{
+    const needle = zip.toLowerCase();
+    for (const p of Object.values(PROFILES)) {{
+      if (p.major_hubs && p.major_hubs.toLowerCase().includes(needle)) {{
+        return render(p.abbr);
+      }}
+    }}
+  }}
+  document.getElementById("s-err").style.display = "block";
+  document.getElementById("s-err").textContent =
+    "Enter a 5-digit US zip code, a recognizable town, or pick a state from the dropdown.";
+}}
+
+document.getElementById("s-go").addEventListener("click", lookup);
+document.getElementById("s-zip").addEventListener("keydown", (e) => {{
+  if (e.key === "Enter") {{ e.preventDefault(); lookup(); }}
+}});
+</script>
+"""
+    return page(
+        "Siting evaluator — AI GridWatch",
+        "Enter a zip code or state and get a six-factor scorecard of how attractive that area is to a data-center developer, plus what it means for your leverage.",
+        body, f"{SITE_URL}/siting",
+        jsonld=_breadcrumb(
+            ("Home", SITE_URL),
+            ("Siting evaluator", f"{SITE_URL}/siting")))
+
+
 def build_tax_breaks():
     """The 'we'll build elsewhere' framing argument."""
     body = f"""
@@ -6050,6 +6413,9 @@ def main():
     (WEB / "assets").mkdir()
 
     shutil.copy(ROOT / "assets" / "logo.svg", WEB / "assets" / "logo.svg")
+    # Default og:image for every page — social platforms won't render an SVG
+    # card, so the per-post inline art can't serve double duty here.
+    shutil.copy(ROOT / "assets" / "hero.png", WEB / "assets" / "hero.png")
     (WEB / "assets" / "gridwatch_health_risks.pdf").write_bytes(
         build_health_pdf(HEALTH_RISKS, SOURCES))
 
@@ -6077,6 +6443,7 @@ def main():
         build_hearing_questions(), encoding="utf-8")
     (WEB / "glossary.html").write_text(build_glossary(), encoding="utf-8")
     (WEB / "tax-breaks.html").write_text(build_tax_breaks(), encoding="utf-8")
+    (WEB / "siting.html").write_text(build_siting(), encoding="utf-8")
     (WEB / "states" / "index.html").write_text(
         build_states_index(), encoding="utf-8")
 
@@ -6116,7 +6483,7 @@ def main():
              "learn", "puc", "executives", "about", "search", "dividend",
              "data-centers", "environment", "methodology", "studies",
              "cba-clauses", "officials", "consulting", "case-studies",
-             "hearing-questions", "glossary", "tax-breaks",
+             "hearing-questions", "glossary", "tax-breaks", "siting",
              "companies/", "states/", "blog/", "news/"]
     paths.extend(f"companies/{h['slug']}" for h in _HYPERSCALERS)
     paths.extend(f"companies/{h['slug']}" for h in _OPERATORS)

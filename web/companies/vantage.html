@@ -12,6 +12,12 @@
 <meta property="og:title" content="Vantage Data Centers environmental scorecard — AI GridWatch">
 <meta property="og:description" content="Environmental data for Vantage Data Centers: PUE 1.26, carbon and water metrics from CY2023.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://aigridwatch.com/companies/vantage">
+<meta property="og:site_name" content="AI GridWatch">
+<meta property="og:image" content="https://aigridwatch.com/assets/hero.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="479">
+<meta name="twitter:card" content="summary_large_image">
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Companies", "item": "https://aigridwatch.com/companies/"}, {"@type": "ListItem", "position": 3, "name": "Vantage Data Centers", "item": "https://aigridwatch.com/companies/vantage"}]}</script>
 <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
@@ -171,6 +177,20 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .blog-list li { border-bottom:1px solid var(--rule); padding:18px 0;
   content-visibility:auto; contain-intrinsic-size:auto 110px; }
 .blog-list li:last-child { border-bottom:none; }
+/* Only posts carry art — news/video lists reuse .blog-list without a thumb,
+   so the two-column grid is scoped to .has-art rather than the whole list. */
+.blog-list li.has-art { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:680px){ .blog-list li.has-art {
+  grid-template-columns:200px 1fr; gap:18px; align-items:start;
+  contain-intrinsic-size:auto 150px; } }
+.blog-list .thumb { width:100%; height:auto; display:block; border-radius:10px;
+  border:1px solid var(--rule); }
+.post-art { width:100%; height:auto; display:block; border-radius:14px;
+  border:1px solid var(--rule); margin:4px 0 24px;
+  filter:drop-shadow(0 8px 24px rgba(45,212,191,.10)); }
+.post-art .glow, .thumb .glow { animation:pulse 3.2s ease-in-out infinite; }
+@media (prefers-reduced-motion:reduce){
+  .post-art .glow, .thumb .glow { animation:none; opacity:.7 } }
 .blog-list h3 { font-size:17px; margin:0 0 4px; }
 .blog-list h3 a { text-decoration:none; }
 .blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
@@ -244,6 +264,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <div class="nav-links">
     <a href="../index.html">Home</a>
     <a href="../states/index.html">Your state</a>
+    <a href="../siting.html">Siting score</a>
     <a href="../case-studies.html">Case studies</a>
     <a href="../cba-clauses.html">Clauses</a>
     <a href="../tax-breaks.html">Tax breaks</a>

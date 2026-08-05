@@ -12,6 +12,12 @@
 <meta property="og:title" content="What is a data center? A plain-language guide">
 <meta property="og:description" content="What goes in, what comes out, how AI data centers differ from traditional ones, and what companies look for when choosing where to build.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://aigridwatch.com/learn">
+<meta property="og:site_name" content="AI GridWatch">
+<meta property="og:image" content="https://aigridwatch.com/assets/hero.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="479">
+<meta name="twitter:card" content="summary_large_image">
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://aigridwatch.com/learn"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "PUE", "acceptedAnswer": {"@type": "Answer", "text": "Power Usage Effectiveness — ratio of total facility energy to IT energy. Lower is better."}}, {"@type": "Question", "name": "WUE", "acceptedAnswer": {"@type": "Answer", "text": "Water Usage Effectiveness — liters of water per kWh of IT energy. Lower is better."}}, {"@type": "Question", "name": "CFE", "acceptedAnswer": {"@type": "Answer", "text": "Carbon-Free Energy — electricity from zero-carbon sources (solar, wind, nuclear, hydro)."}}, {"@type": "Question", "name": "Hyperscaler", "acceptedAnswer": {"@type": "Answer", "text": "The largest cloud/AI companies that build their own data centers (Google, Microsoft, Amazon, Meta)."}}, {"@type": "Question", "name": "Colocation (colo)", "acceptedAnswer": {"@type": "Answer", "text": "A data center operator that leases space, power, and cooling to tenants."}}, {"@type": "Question", "name": "Interconnection queue", "acceptedAnswer": {"@type": "Answer", "text": "The list of projects waiting for grid connection approval from the regional operator (e.g., PJM, ERCOT)."}}, {"@type": "Question", "name": "Moratorium", "acceptedAnswer": {"@type": "Answer", "text": "A temporary ban or pause on new data-center construction, usually enacted by local or state government."}}, {"@type": "Question", "name": "PPA", "acceptedAnswer": {"@type": "Answer", "text": "Power Purchase Agreement — a long-term contract to buy electricity from a specific generator, often renewable."}}, {"@type": "Question", "name": "Rack density", "acceptedAnswer": {"@type": "Answer", "text": "The amount of power drawn per server rack, measured in kW. AI racks are 40–120+ kW vs. 5–15 kW traditional."}}, {"@type": "Question", "name": "GPU", "acceptedAnswer": {"@type": "Answer", "text": "Graphics Processing Unit — specialized chips (like NVIDIA H100/B200) that power AI training and inference."}}, {"@type": "Question", "name": "Inference", "acceptedAnswer": {"@type": "Answer", "text": "Running a trained AI model to generate responses — what happens when you use ChatGPT, Gemini, etc."}}, {"@type": "Question", "name": "Training", "acceptedAnswer": {"@type": "Answer", "text": "The initial process of building an AI model by processing massive datasets. Extremely energy-intensive."}}, {"@type": "Question", "name": "Evaporative cooling", "acceptedAnswer": {"@type": "Answer", "text": "Cooling method that evaporates water to remove heat. Effective but water-intensive."}}, {"@type": "Question", "name": "Liquid cooling", "acceptedAnswer": {"@type": "Answer", "text": "Piping coolant directly to server chips. More efficient for high-density AI workloads."}}, {"@type": "Question", "name": "Marginal emissions", "acceptedAnswer": {"@type": "Answer", "text": "The CO₂ rate of the next power plant that would turn on to serve new load. The right signal for load-shifting."}}]}</script>
@@ -172,6 +178,20 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .blog-list li { border-bottom:1px solid var(--rule); padding:18px 0;
   content-visibility:auto; contain-intrinsic-size:auto 110px; }
 .blog-list li:last-child { border-bottom:none; }
+/* Only posts carry art — news/video lists reuse .blog-list without a thumb,
+   so the two-column grid is scoped to .has-art rather than the whole list. */
+.blog-list li.has-art { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:680px){ .blog-list li.has-art {
+  grid-template-columns:200px 1fr; gap:18px; align-items:start;
+  contain-intrinsic-size:auto 150px; } }
+.blog-list .thumb { width:100%; height:auto; display:block; border-radius:10px;
+  border:1px solid var(--rule); }
+.post-art { width:100%; height:auto; display:block; border-radius:14px;
+  border:1px solid var(--rule); margin:4px 0 24px;
+  filter:drop-shadow(0 8px 24px rgba(45,212,191,.10)); }
+.post-art .glow, .thumb .glow { animation:pulse 3.2s ease-in-out infinite; }
+@media (prefers-reduced-motion:reduce){
+  .post-art .glow, .thumb .glow { animation:none; opacity:.7 } }
 .blog-list h3 { font-size:17px; margin:0 0 4px; }
 .blog-list h3 a { text-decoration:none; }
 .blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
@@ -245,6 +265,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="states/index.html">Your state</a>
+    <a href="siting.html">Siting score</a>
     <a href="case-studies.html">Case studies</a>
     <a href="cba-clauses.html">Clauses</a>
     <a href="tax-breaks.html">Tax breaks</a>
