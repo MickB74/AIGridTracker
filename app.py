@@ -136,7 +136,8 @@ with st.sidebar:
             )
         ]
         if not _m_hits.empty:
-            _results.append(("Moratoriums", _m_hits[["locality", "state", "status", "when"]].head(5)))
+            _results.append(("Moratoriums", _m_hits[
+                ["locality", "state", "effective_status", "when"]].head(5)))
 
         _e_hits = EXECUTIVES_DF[
             EXECUTIVES_DF.apply(

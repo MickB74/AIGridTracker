@@ -100,8 +100,11 @@ def build_meeting_brief_data(state, operator, meeting_type, mw):
     _moras = MORATORIUMS_DF[MORATORIUMS_DF["state"] == _abbrev]
     _mora_text = ""
     if not _moras.empty:
-        enacted = (_moras["status"] == "Enacted").sum()
-        proposed = (_moras["status"] == "Proposed").sum()
+        # effective_status — this text ends up in the meeting brief and the
+        # printed action pack, where a lapsed moratorium cited as current is
+        # the single easiest way for a resident to lose the room.
+        enacted = (_moras["effective_status"] == "Enacted").sum()
+        proposed = (_moras["effective_status"] == "Proposed").sum()
         parts = []
         if enacted:
             parts.append(f"{enacted} enacted")

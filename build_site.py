@@ -282,6 +282,12 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .badge-proposed { background:#713f12; color:#fde68a; }
 .badge-rejected { background:#7f1d1d; color:#fca5a5; }
 .badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.badge-expired { background:#374151; color:#d1d5db; }
+.badge-rescinded { background:#4c1d95; color:#c4b5fd; }
+.badge-note { font-size:11px; font-weight:600; color:var(--muted);
+              display:block; margin-top:3px; }
+.unverified { font-size:12px; color:#fca5a5; font-weight:600; }
+.verified-on { font-size:12px; color:var(--muted); white-space:nowrap; }
 .outcome { border-left:3px solid var(--teal); padding:10px 14px;
            margin:10px 0; }
 .outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
@@ -613,6 +619,60 @@ def _status_badge(status):
     return f'<span class="badge {cls}">{esc(status)}</span>'
 
 
+def _mora_status_cell(m):
+    """Status badge for a moratorium row, plus the expiry line under it.
+
+    Reads `effective_status`, never the stored `status` — a lapsed moratorium
+    must not render as "Enacted". The date is spelled out either way so a
+    reader can see whether the badge is a claim about now or about a term that
+    ran out.
+    """
+    html = _status_badge(str(m.effective_status))
+    if m.expired:
+        html += f'<span class="badge-note">term ran to {esc(str(m.expires))}</span>'
+    elif has_value(m.expires):
+        word = "expires" if not m.expiring_soon else "expires soon —"
+        html += f'<span class="badge-note">{word} {esc(str(m.expires))}</span>'
+    return html
+
+
+def _outcome_card(o):
+    """One case-study card, with its sources on the card itself.
+
+    These get read out at hearings, so the citation has to travel with the
+    claim — a reader who cannot see where it came from has no way to defend it
+    when a developer's counsel pushes back.
+    """
+    srcs = o.get("sources") or []
+    if srcs:
+        links = " · ".join(
+            f'<a href="{esc(u)}" rel="nofollow noopener" target="_blank">'
+            f'Source {i}</a>' for i, u in enumerate(srcs, 1))
+        prov = (f'<p class="verified-on">{links} · verified '
+                f'{esc(str(o.get("as_of") or "—"))}</p>')
+    else:
+        prov = '<p class="unverified">Unverified — do not cite</p>'
+    return (f'<div class="outcome"><div class="cat">{esc(o["category"])}</div>'
+            f'<p><strong>{esc(o["locality"])}, {esc(o["state"])}</strong> — '
+            f'{esc(o["headline"])}</p>'
+            f'<p class="muted">{esc(o["outcome"])}</p>{prov}</div>')
+
+
+def _mora_source_cell(m):
+    """Per-row provenance: the source link and the date it was read.
+
+    An unverified row says so in as many words. The alternative — a blank
+    cell — reads as "nothing to add" when it actually means "nobody has
+    checked this."
+    """
+    if not has_value(m.source):
+        return '<span class="unverified">Unverified</span>'
+    on = (f'<span class="verified-on">read {esc(str(m.as_of))}</span>'
+          if has_value(m.as_of) else "")
+    return (f'<a href="{esc(str(m.source))}" rel="nofollow noopener" '
+            f'target="_blank">Source</a><br>{on}')
+
+
 def build_state(state):
     prof = STATE_GRID_PROFILES[state]
     row = STATE_DC_DF[STATE_DC_DF["state"] == state]
@@ -636,13 +696,14 @@ def build_state(state):
     if not moras.empty:
         rows = "\n".join(
             f"<tr><td>{esc(str(m.locality))}</td><td>{esc(str(m.level))}</td>"
-            f"<td>{_status_badge(str(m.status))}</td>"
-            f"<td>{esc(str(m.note))}</td></tr>"
+            f"<td>{_mora_status_cell(m)}</td>"
+            f"<td>{cell(m.note, dash='')}</td>"
+            f"<td>{_mora_source_cell(m)}</td></tr>"
             for m in moras.itertuples())
         mora_html = (
             f'<section><h2>Pushback already happening in {esc(state)}</h2>'
             f'<table><tr><th>Where</th><th>Level</th><th>Status</th>'
-            f'<th>Note</th></tr>{rows}</table>'
+            f'<th>Note</th><th>Source</th></tr>{rows}</table>'
             f'{provenance_html("MORATORIUMS_DF")}</section>')
 
     # DC sites in this state
@@ -710,12 +771,7 @@ def build_state(state):
     state_outcomes = [o for o in MORATORIUM_OUTCOMES if o["state"] == abbrev]
     outcome_html = ""
     if state_outcomes:
-        cards = "\n".join(
-            f'<div class="outcome"><div class="cat">{esc(o["category"])}</div>'
-            f'<p><strong>{esc(o["locality"])}</strong> — '
-            f'{esc(o["headline"])}</p>'
-            f'<p class="muted">{esc(o["outcome"])}</p></div>'
-            for o in state_outcomes)
+        cards = "\n".join(_outcome_card(o) for o in state_outcomes)
         outcome_html = (
             f'<section><h2>Case studies</h2>{cards}</section>')
 
@@ -3393,45 +3449,52 @@ def build_executives():
 def build_moratoriums():
     total = len(MORATORIUMS_DF)
     n_states = MORATORIUMS_DF["state"].nunique()
-    enacted = len(MORATORIUMS_DF[MORATORIUMS_DF["status"] == "Enacted"])
-    proposed = len(MORATORIUMS_DF[MORATORIUMS_DF["status"] == "Proposed"])
+    # "In force" counts effective status, so an expired term stops inflating
+    # the headline number the day it lapses.
+    enacted = len(MORATORIUMS_DF[MORATORIUMS_DF["effective_status"] == "Enacted"])
+    proposed = len(MORATORIUMS_DF[MORATORIUMS_DF["effective_status"] == "Proposed"])
+    verified = int(MORATORIUMS_DF["verified"].sum())
 
     rows = "\n".join(
         f"<tr><td>{esc(str(m.locality))}</td>"
         f"<td><a href=\"states/{slugify(STATE_PUCS_DF[STATE_PUCS_DF['abbrev'] == m.state].iloc[0]['state'])}.html\">"
         f"{esc(str(m.state))}</a></td>"
         f"<td>{esc(str(m.level))}</td>"
-        f"<td>{_status_badge(str(m.status))}</td>"
+        f"<td>{_mora_status_cell(m)}</td>"
         f"<td>{esc(str(m.when))}</td>"
-        f"<td>{esc(str(m.note))}</td></tr>"
+        f"<td>{cell(m.note, dash='')}</td>"
+        f"<td>{_mora_source_cell(m)}</td></tr>"
         for m in MORATORIUMS_DF.itertuples())
 
-    outcomes = "\n".join(
-        f'<div class="outcome"><div class="cat">{esc(o["category"])}</div>'
-        f'<p><strong>{esc(o["locality"])}, {esc(o["state"])}</strong> — '
-        f'{esc(o["headline"])}</p>'
-        f'<p class="muted">{esc(o["outcome"])}</p></div>'
-        for o in MORATORIUM_OUTCOMES)
+    outcomes = "\n".join(_outcome_card(o) for o in MORATORIUM_OUTCOMES)
 
     body = f"""
 <header>
   <div class="kicker">Community tracker</div>
   <h1>Data center moratoriums &amp; pushback</h1>
   <p class="sub">Every community that pressed pause on data center
-  development — bans, moratoria, zoning fights, and the outcomes.
-  Updated as new actions are reported.</p>
+  development — bans, moratoria, zoning fights, and the outcomes. Each row
+  shows where it came from and when it was last checked.</p>
 </header>
 <div class="stats">
   <div class="stat"><b>{total}</b><span>tracked actions</span></div>
   <div class="stat"><b>{n_states}</b><span>states</span></div>
-  <div class="stat"><b>{enacted}</b><span>enacted</span></div>
+  <div class="stat"><b>{enacted}</b><span>in force today</span></div>
   <div class="stat"><b>{proposed}</b><span>proposed or pending</span></div>
+  <div class="stat"><b>{verified}/{total}</b><span>source-verified</span></div>
 </div>
 <section>
   <h2>All tracked moratoriums</h2>
+  <p class="muted" style="margin-bottom:12px">Status is what applies
+  <em>today</em>: a moratorium with a documented end date flips to
+  <span class="badge badge-expired">Expired</span> on its own once that date
+  passes. Rows marked <span class="unverified">Unverified</span> have not been
+  read against a primary source — treat them as a lead to check, not a fact to
+  cite. Extensions are common, so an expiry date is the earliest a pause could
+  have ended, not proof that it did.</p>
   <div style="overflow-x:auto">
   <table><tr><th>Locality</th><th>State</th><th>Level</th>
-  <th>Status</th><th>When</th><th>Note</th></tr>
+  <th>Status</th><th>When</th><th>Note</th><th>Source</th></tr>
   {rows}</table>
   </div>
   {provenance_html("MORATORIUMS_DF")}
@@ -6173,8 +6236,11 @@ def build_search():
     import json
     index = []
     for m in MORATORIUMS_DF.itertuples():
+        # effective_status, not status — otherwise search results keep calling
+        # a lapsed moratorium "Enacted" long after the page itself stopped.
+        _mark = "" if m.verified else " · unverified"
         index.append({"t": str(m.locality), "k": "moratorium",
-                       "d": f"{m.state} · {m.status}",
+                       "d": f"{m.state} · {m.effective_status}{_mark}",
                        "u": f"moratoriums.html"})
     for _, r in OPERATORS_DF.iterrows():
         index.append({"t": r["operator"], "k": "operator",

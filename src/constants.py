@@ -2,6 +2,28 @@ import datetime as _dt
 import pathlib
 import pandas as pd
 
+
+def has_value(v):
+    """True if a DataFrame cell holds real content rather than a blank.
+
+    Never write `if row["verified"]` against an object column. A missing value
+    arrives as None on pandas 2.x but as NaN on 3.x, and **NaN is truthy** — so
+    the naive test silently flips meaning across a pandas upgrade. That is not
+    hypothetical: it made every "unverified" marker disappear from the site's
+    search index when CI built on a newer pandas than the machine that
+    generated the committed HTML.
+
+    Defined up here rather than beside the registries because the registries
+    themselves now use it at import time (MORATORIUMS_DF derives `verified`
+    from it).
+    """
+    if v is None:
+        return False
+    if isinstance(v, str):
+        return bool(v.strip()) and v.strip().lower() not in ("nan", "none")
+    return bool(pd.notna(v))
+
+
 # --------------------------------------------------------------------------- #
 # STATIC DATA (sourced — see SOURCES and the Methodology tab)
 # --------------------------------------------------------------------------- #
@@ -589,105 +611,411 @@ VIDEO_TOPICS = {
     ],
 }
 
-# Data-center moratoriums / bans — POINT-IN-TIME SNAPSHOT (mid-2026). Compiled
-# from public trackers; dozens more churn weekly, so treat as illustrative, not
-# exhaustive. Provenance shown to users lives in REGISTRY_PROVENANCE.
-# level: Local/State. status: Enacted/Proposed/Rejected/Vetoed.
+# Data-center moratoriums / bans. Every row carries its own `source` (the
+# ordinance, the enacting body's own page, or a datable news report of the
+# vote) and `as_of` (the date that source was read) — the LOCAL_OFFICIALS_DF
+# pattern, not a bulk snapshot. Rows with source=None have NOT been verified
+# against a primary source; they render as unverified and scripts/
+# verify_moratoriums.py queues them for review. Never invent an `as_of`.
+#
+# `expires` is the date a time-limited moratorium lapses, ISO YYYY-MM-DD, or
+# None when the action is permanent, condition-based, or the term is not
+# documented. A row is NOT marked expired just because its term "sounds"
+# finished — moratorium_status() derives that from `expires` alone, so an
+# undated term stays Enacted and shows up in the validator's worklist instead
+# of being silently downgraded.
+#
+# level: Local/State. status: Enacted/Proposed/Rejected/Vetoed/Rescinded.
+# "Expired" is never stored — it is derived. See moratorium_status().
 MORATORIUMS = [
-    # locality, state, level, status, when, note, lat, lon
-    ("Minneapolis", "MN", "Local", "Enacted", "May 2026", "", 44.98, -93.27),
-    ("Denver", "CO", "Local", "Enacted", "May 2026", "", 39.74, -104.99),
-    ("Baltimore City", "MD", "Local", "Enacted", "May 2026", "", 39.29, -76.61),
-    ("Reno", "NV", "Local", "Enacted", "May 2026", "", 39.53, -119.81),
-    ("Dubuque County", "IA", "Local", "Enacted", "2026", "", 42.47, -90.88),
-    ("Bloomington", "IL", "Local", "Enacted", "2026", "", 40.48, -88.99),
-    ("Normal", "IL", "Local", "Enacted", "2026", "", 40.51, -88.99),
-    ("Iron County", "UT", "Local", "Enacted", "2026", "", 37.68, -113.06),
-    ("Manitowoc County", "WI", "Local", "Enacted", "2026", "18-month", 44.09, -87.66),
-    ("Smithfield", "RI", "Local", "Enacted", "2026", "Outright ban", 41.92, -71.55),
-    ("Meridian Township", "MI", "Local", "Enacted", "2026", "", 42.72, -84.42),
-    ("Washington Township (Macomb Co.)", "MI", "Local", "Enacted", "2026", "", 42.72, -82.92),
-    ("Hill County", "TX", "Local", "Enacted", "2026", "Under developer lawsuit", 32.01, -97.13),
-    ("DeKalb County", "GA", "Local", "Enacted", "2026", "", 33.77, -84.23),
-    ("Lysander (Onondaga Co.)", "NY", "Local", "Enacted", "May 2026", "6-month", 43.17, -76.35),
-    ("Perth (Fulton Co.)", "NY", "Local", "Enacted", "Jun 2025", "1-year", 43.05, -74.19),
-    ("Groton", "CT", "Local", "Enacted", "2025", "Year-long", 41.35, -72.08),
-    ("Peculiar", "MO", "Local", "Enacted", "2025", "Ban", 38.72, -94.46),
-    ("Bangor", "ME", "Local", "Enacted", "2025", "Temporary ban", 44.80, -68.77),
-    # North Carolina — 20+ jurisdictions since late 2025
-    ("Gates County", "NC", "Local", "Enacted", "Dec 2025", "", 36.44, -76.70),
-    ("Brevard", "NC", "Local", "Enacted", "Sep 2025", "", 35.23, -82.73),
-    ("Clay County", "NC", "Local", "Enacted", "Sep 2025", "", 35.06, -83.75),
-    ("Canton", "NC", "Local", "Enacted", "Feb 2026", "", 35.53, -82.84),
-    ("Chatham County", "NC", "Local", "Enacted", "Feb 2026", "", 35.70, -79.26),
-    ("Kings Mountain", "NC", "Local", "Enacted", "Feb 2026", "", 35.25, -81.34),
-    ("Boone", "NC", "Local", "Enacted", "Mar 2026", "", 36.22, -81.67),
-    ("Apex", "NC", "Local", "Enacted", "Apr 2026", "", 35.73, -78.85),
-    ("Orange County", "NC", "Local", "Enacted", "Apr 2026", "", 36.06, -79.12),
-    ("Rowan County", "NC", "Local", "Enacted", "Apr 2026", "", 35.64, -80.47),
-    ("Swain County", "NC", "Local", "Enacted", "Apr 2026", "", 35.49, -83.49),
-    ("Watauga County", "NC", "Local", "Enacted", "2026", "Ban", 36.23, -81.69),
-    ("Madison County", "NC", "Local", "Enacted", "2026", "Ban", 35.85, -82.70),
-    ("Clyde", "NC", "Local", "Enacted", "2026", "Ban", 35.53, -82.91),
+    {"locality": "Minneapolis", "state": "MN", "level": "Local",
+     "status": "Enacted", "when": "May 22, 2026",
+     "note": "6-month interim ordinance; facilities over 350,000 sq ft, downtown exempt",
+     "lat": 44.98, "lon": -93.27, "expires": "2026-11-21", "as_of": "2026-08-04",
+     "source": "https://www.mprnews.org/story/2026/05/22/minneapolis-city-council-imposes-six-month-halt-on-data-centers"},
+    {"locality": "Denver", "state": "CO", "level": "Local",
+     "status": "Enacted", "when": "May 21, 2026",
+     "note": "1 year or until updated data center regulations are adopted",
+     "lat": 39.74, "lon": -104.99, "expires": "2027-05-21", "as_of": "2026-08-04",
+     "source": "https://www.rmpbs.org/news/government/denver-data-centers"},
+    {"locality": "Baltimore City", "state": "MD", "level": "Local",
+     "status": "Enacted", "when": "Jun 16, 2026",
+     "note": "CB 26-0158: 1 year, facilities drawing 10 MW or more; 9-month impact study",
+     "lat": 39.29, "lon": -76.61, "expires": "2027-06-16", "as_of": "2026-08-04",
+     "source": "https://technical.ly/civics/baltimore-pauses-data-centers-to-study-grid-impacts/"},
+    {"locality": "Reno", "state": "NV", "level": "Local",
+     "status": "Enacted", "when": "Extended Jun 1, 2026",
+     "note": "Extended 6-1 through Aug 2027 while permanent rules are drafted",
+     "lat": 39.53, "lon": -119.81, "expires": "2027-08-31", "as_of": "2026-08-04",
+     "source": "https://thisisreno.com/2026/06/reno-city-council-data-center-moratorium-3/"},
+    {"locality": "Dubuque County", "state": "IA", "level": "Local",
+     "status": "Enacted", "when": "2026", "note": "",
+     "lat": 42.47, "lon": -90.88, "expires": None, "as_of": None, "source": None},
+    {"locality": "Bloomington", "state": "IL", "level": "Local",
+     "status": "Enacted", "when": "2026", "note": "",
+     "lat": 40.48, "lon": -88.99, "expires": None, "as_of": None, "source": None},
+    {"locality": "Normal", "state": "IL", "level": "Local",
+     "status": "Enacted", "when": "2026", "note": "",
+     "lat": 40.51, "lon": -88.99, "expires": None, "as_of": None, "source": None},
+    {"locality": "Iron County", "state": "UT", "level": "Local",
+     "status": "Enacted", "when": "2026", "note": "",
+     "lat": 37.68, "lon": -113.06, "expires": None, "as_of": None, "source": None},
+    {"locality": "Manitowoc County", "state": "WI", "level": "Local",
+     "status": "Enacted", "when": "2026", "note": "18-month; start date not documented",
+     "lat": 44.09, "lon": -87.66, "expires": None, "as_of": None, "source": None},
+    {"locality": "Smithfield", "state": "RI", "level": "Local",
+     "status": "Enacted", "when": "Jun 4, 2026",
+     "note": "Adopted 4-1 May 5, effective Jun 4; data centers not permitted in any zoning district",
+     "lat": 41.92, "lon": -71.55, "expires": None, "as_of": "2026-08-04",
+     "source": "https://www.wpri.com/news/local-news/northwest/smithfield-town-council-approves-ordinance-to-prevent-construction-of-data-centers/"},
+    {"locality": "Meridian Township", "state": "MI", "level": "Local",
+     "status": "Enacted", "when": "2026", "note": "",
+     "lat": 42.72, "lon": -84.42, "expires": None, "as_of": None, "source": None},
+    {"locality": "Washington Township (Macomb Co.)", "state": "MI", "level": "Local",
+     "status": "Enacted", "when": "2026", "note": "",
+     "lat": 42.72, "lon": -82.92, "expires": None, "as_of": None, "source": None},
+    {"locality": "Hill County", "state": "TX", "level": "Local",
+     "status": "Rescinded", "when": "Rescinded Jun 4, 2026",
+     "note": "1-year moratorium passed May 2026, rescinded after a $100M federal suit "
+             "argued Texas counties lack moratorium authority; suit dismissed Jul 2026. "
+             "Replaced with a disclosure checklist for large projects",
+     "lat": 32.01, "lon": -97.13, "expires": None, "as_of": "2026-08-04",
+     "source": "https://www.texastribune.org/2026/06/05/texas-hill-county-moratorium-rescinded-data-centers/"},
+    {"locality": "DeKalb County", "state": "GA", "level": "Local",
+     "status": "Enacted", "when": "2026", "note": "",
+     "lat": 33.77, "lon": -84.23, "expires": None, "as_of": None, "source": None},
+    {"locality": "Lysander (Onondaga Co.)", "state": "NY", "level": "Local",
+     "status": "Enacted", "when": "May 7, 2026",
+     "note": "6-month; no applications accepted by Town, Planning or Zoning boards",
+     "lat": 43.17, "lon": -76.35, "expires": "2026-11-06", "as_of": "2026-08-04",
+     "source": "https://www.informnny.com/news/local-news/lysander-board-approves-six-month-data-center-moratorium-residents-speak-out-against-project-proposal/"},
+    {"locality": "Perth (Fulton Co.)", "state": "NY", "level": "Local",
+     "status": "Enacted", "when": "Jun 4, 2026",
+     "note": "1-year, passed 3-0; extendable by simple resolution",
+     "lat": 43.05, "lon": -74.19, "expires": "2027-06-04", "as_of": "2026-08-04",
+     "source": "https://www.dailygazette.com/the_recorder/leader_herald/data-center-moratorium/article_28560f58-b336-4cae-8773-f0a04cd3001b.html"},
+    {"locality": "Groton", "state": "CT", "level": "Local",
+     "status": "Enacted", "when": "Jun 21, 2022",
+     "note": "1-year moratorium on data centers over 5,000 sq ft; lapsed into permanent "
+             "zoning in Jun 2023 capping buildings at 12,500 sq ft and barring water cooling",
+     "lat": 41.35, "lon": -72.08, "expires": "2023-06-21", "as_of": "2026-08-04",
+     "source": "https://theday.com/local-news/20220621/groton-approves-one-year-moratorium-on-large-scale-data-centers"},
+    {"locality": "Peculiar", "state": "MO", "level": "Local",
+     "status": "Enacted", "when": "2025",
+     "note": "Board of Aldermen removed 'data center' from the light-industrial zoning "
+             "code, blocking a $1.5B project; exact date unconfirmed",
+     "lat": 38.72, "lon": -94.46, "expires": None, "as_of": None, "source": None},
+    {"locality": "Bangor", "state": "ME", "level": "Local",
+     "status": "Enacted", "when": "2025", "note": "Temporary ban; term not documented",
+     "lat": 44.80, "lon": -68.77, "expires": None, "as_of": None, "source": None},
+    # North Carolina — 20+ jurisdictions since late 2025. Compiled in bulk and
+    # not yet verified row-by-row against each locality's own ordinance.
+    {"locality": "Gates County", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Dec 2025", "note": "",
+     "lat": 36.44, "lon": -76.70, "expires": None, "as_of": None, "source": None},
+    {"locality": "Brevard", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Sep 2025", "note": "",
+     "lat": 35.23, "lon": -82.73, "expires": None, "as_of": None, "source": None},
+    {"locality": "Clay County", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Sep 2025", "note": "",
+     "lat": 35.06, "lon": -83.75, "expires": None, "as_of": None, "source": None},
+    {"locality": "Canton", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Feb 2026", "note": "",
+     "lat": 35.53, "lon": -82.84, "expires": None, "as_of": None, "source": None},
+    {"locality": "Chatham County", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Feb 2026", "note": "",
+     "lat": 35.70, "lon": -79.26, "expires": None, "as_of": None, "source": None},
+    {"locality": "Kings Mountain", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Feb 2026", "note": "",
+     "lat": 35.25, "lon": -81.34, "expires": None, "as_of": None, "source": None},
+    {"locality": "Boone", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Mar 2026", "note": "",
+     "lat": 36.22, "lon": -81.67, "expires": None, "as_of": None, "source": None},
+    {"locality": "Apex", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Apr 2026", "note": "",
+     "lat": 35.73, "lon": -78.85, "expires": None, "as_of": None, "source": None},
+    {"locality": "Orange County", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Apr 2026", "note": "",
+     "lat": 36.06, "lon": -79.12, "expires": None, "as_of": None, "source": None},
+    {"locality": "Rowan County", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Apr 2026", "note": "",
+     "lat": 35.64, "lon": -80.47, "expires": None, "as_of": None, "source": None},
+    {"locality": "Swain County", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Apr 2026", "note": "",
+     "lat": 35.49, "lon": -83.49, "expires": None, "as_of": None, "source": None},
+    {"locality": "Watauga County", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "2026", "note": "Ban",
+     "lat": 36.23, "lon": -81.69, "expires": None, "as_of": None, "source": None},
+    {"locality": "Madison County", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "2026", "note": "Ban",
+     "lat": 35.85, "lon": -82.70, "expires": None, "as_of": None, "source": None},
+    {"locality": "Clyde", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "2026", "note": "Ban",
+     "lat": 35.53, "lon": -82.91, "expires": None, "as_of": None, "source": None},
     # Proposed / under consideration
-    ("Charlotte", "NC", "Local", "Proposed", "2026", "Council deadlocked 5–5", 35.23, -80.84),
-    ("Durham", "NC", "Local", "Proposed", "2026", "", 35.99, -78.90),
-    ("Harnett County", "NC", "Local", "Proposed", "2026", "", 35.37, -78.87),
-    ("Cumberland County", "NC", "Local", "Proposed", "2026", "", 35.05, -78.83),
-    ("Fayetteville", "NC", "Local", "Proposed", "2026", "", 35.05, -78.88),
-    ("Seattle", "WA", "Local", "Proposed", "Jun 2026", "", 47.61, -122.33),
-    ("Indianapolis", "IN", "Local", "Proposed", "Jun 2026", "Non-binding pause", 39.77, -86.16),
-    ("Pulaski County", "AR", "Local", "Proposed", "2026", "", 34.75, -92.29),
-    ("St. Lawrence County", "NY", "Local", "Proposed", "2026", "Urged municipalities", 44.59, -75.16),
+    {"locality": "Charlotte", "state": "NC", "level": "Local",
+     "status": "Proposed", "when": "2026", "note": "Council deadlocked 5–5",
+     "lat": 35.23, "lon": -80.84, "expires": None, "as_of": None, "source": None},
+    {"locality": "Durham", "state": "NC", "level": "Local",
+     "status": "Proposed", "when": "2026", "note": "",
+     "lat": 35.99, "lon": -78.90, "expires": None, "as_of": None, "source": None},
+    {"locality": "Harnett County", "state": "NC", "level": "Local",
+     "status": "Proposed", "when": "2026", "note": "",
+     "lat": 35.37, "lon": -78.87, "expires": None, "as_of": None, "source": None},
+    {"locality": "Cumberland County", "state": "NC", "level": "Local",
+     "status": "Proposed", "when": "2026", "note": "",
+     "lat": 35.05, "lon": -78.83, "expires": None, "as_of": None, "source": None},
+    {"locality": "Fayetteville", "state": "NC", "level": "Local",
+     "status": "Proposed", "when": "2026", "note": "",
+     "lat": 35.05, "lon": -78.88, "expires": None, "as_of": None, "source": None},
+    {"locality": "Seattle", "state": "WA", "level": "Local",
+     "status": "Enacted", "when": "Jun 9, 2026",
+     "note": "Emergency ordinance passed 9-0; 1 year, facilities over 20 MVA, "
+             "extendable about six months",
+     "lat": 47.61, "lon": -122.33, "expires": "2027-06-09", "as_of": "2026-08-04",
+     "source": "https://council.seattle.gov/2026/06/09/city-council-passes-emergency-data-center-moratorium-and-policy-framework/"},
+    {"locality": "Indianapolis", "state": "IN", "level": "Local",
+     "status": "Proposed", "when": "Jun 2026", "note": "Non-binding pause",
+     "lat": 39.77, "lon": -86.16, "expires": None, "as_of": None, "source": None},
+    {"locality": "Pulaski County", "state": "AR", "level": "Local",
+     "status": "Proposed", "when": "2026", "note": "",
+     "lat": 34.75, "lon": -92.29, "expires": None, "as_of": None, "source": None},
+    {"locality": "St. Lawrence County", "state": "NY", "level": "Local",
+     "status": "Proposed", "when": "2026", "note": "Urged municipalities",
+     "lat": 44.59, "lon": -75.16, "expires": None, "as_of": None, "source": None},
     # Rejected
-    ("Cheyenne", "WY", "Local", "Rejected", "2026", "Voted down 8–1", 41.14, -104.82),
+    {"locality": "Cheyenne", "state": "WY", "level": "Local",
+     "status": "Rejected", "when": "May 27, 2026",
+     "note": "12-month proposal voted down 8–1 after 3.5 hours of public comment",
+     "lat": 41.14, "lon": -104.82, "expires": None, "as_of": "2026-08-04",
+     "source": "https://wyofile.com/cheyenne-rejects-moratorium-on-data-centers/"},
     # State-level (no single map point)
-    ("New York (statewide)", "NY", "State", "Enacted", "Jul 2026", "EO 62: 1-year moratorium on 50+ MW facilities; first statewide ban", None, None),
-    ("Georgia (HB 1012)", "GA", "State", "Proposed", "2026", "Permit bar to Mar 2027", None, None),
-    ("Maine (statewide)", "ME", "State", "Vetoed", "Apr 2026", "Governor veto", None, None),
-    ("Ohio (ballot measure)", "OH", "State", "Rejected", "2026", "Failed signature threshold", None, None),
+    {"locality": "New York (statewide)", "state": "NY", "level": "State",
+     "status": "Enacted", "when": "Jul 14, 2026",
+     "note": "EO 62: first statewide pause. Holds DEC discretionary approvals for "
+             "50+ MW facilities until DPS finishes a generic environmental impact "
+             "statement — roughly a year, but tied to that study, not a fixed date",
+     "lat": None, "lon": None, "expires": None, "as_of": "2026-08-04",
+     "source": "https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops"},
+    {"locality": "Georgia (HB 1012)", "state": "GA", "level": "State",
+     "status": "Proposed", "when": "2026",
+     "note": "Would bar local permits for new data centers until Mar 1, 2027, "
+             "exempting approvals issued before Jul 1, 2026",
+     "lat": None, "lon": None, "expires": None, "as_of": "2026-08-04",
+     "source": "https://goodjobsfirst.org/data-center-moratorium-bills-are-spreading-in-2026/"},
+    {"locality": "Maine (statewide)", "state": "ME", "level": "State",
+     "status": "Vetoed", "when": "Apr 24, 2026",
+     "note": "LD 307 would have paused 20+ MW facilities to Nov 2027; governor vetoed",
+     "lat": None, "lon": None, "expires": None, "as_of": "2026-08-04",
+     "source": "https://www.rockinst.org/blog/updates-on-the-cloud-more-moratoriums-on-data-centers/"},
+    {"locality": "Ohio (ballot measure)", "state": "OH", "level": "State",
+     "status": "Rejected", "when": "2026", "note": "Failed signature threshold",
+     "lat": None, "lon": None, "expires": None, "as_of": None, "source": None},
 ]
+
+# Statuses that are already final — an expiry date cannot change them.
+_MORATORIUM_FINAL = ("Proposed", "Rejected", "Vetoed", "Rescinded")
+EXPIRING_SOON_DAYS = 60
+
+
+def moratorium_status(status, expires, today=None):
+    """Effective status of a moratorium row, given its documented expiry.
+
+    A tracker that shows a lapsed moratorium as "Enacted" is worse than no
+    tracker: someone cites it at a hearing and the developer's counsel points
+    out it ended a year ago. So "Expired" is derived here on every render
+    rather than stored, and the daily site rebuild is what keeps it honest.
+
+    Rows with no `expires` are left alone — an undocumented term is not
+    evidence of expiry, and guessing one would reintroduce the same problem
+    from the other direction. Those rows surface in the validator instead.
+
+    Returns a dict: effective status, whether it lapsed, days remaining
+    (negative once past), and an expiring-soon flag for the next
+    EXPIRING_SOON_DAYS days.
+    """
+    out = {"status": status, "expired": False,
+           "days_left": None, "expiring_soon": False}
+    if not has_value(expires) or status in _MORATORIUM_FINAL:
+        return out
+    try:
+        end = _dt.date.fromisoformat(str(expires))
+    except ValueError:
+        return out
+    today = today or _dt.date.today()
+    days = (end - today).days
+    out["days_left"] = days
+    if days < 0:
+        out["expired"] = True
+        out["status"] = "Expired"
+    elif days <= EXPIRING_SOON_DAYS:
+        out["expiring_soon"] = True
+    return out
+
+
 MORATORIUMS_DF = pd.DataFrame(
     MORATORIUMS,
-    columns=["locality", "state", "level", "status", "when", "note", "lat", "lon"])
+    columns=["locality", "state", "level", "status", "when", "note",
+             "lat", "lon", "expires", "as_of", "source"])
+# Derived at import so every consumer sees the same effective status. The
+# static site is rebuilt daily by CI, so these stay current without an edit.
+_mora_status = MORATORIUMS_DF.apply(
+    lambda r: moratorium_status(r["status"], r["expires"]), axis=1)
+MORATORIUMS_DF["effective_status"] = [s["status"] for s in _mora_status]
+MORATORIUMS_DF["expired"] = [s["expired"] for s in _mora_status]
+MORATORIUMS_DF["days_left"] = [s["days_left"] for s in _mora_status]
+MORATORIUMS_DF["expiring_soon"] = [s["expiring_soon"] for s in _mora_status]
+MORATORIUMS_DF["verified"] = MORATORIUMS_DF["source"].map(has_value)
 
-# Case study outcomes — what actually happened after a moratorium or major fight
+# Case study outcomes — what actually happened after a moratorium or major fight.
+#
+# These are labelled "precedents worth citing" in the Start here wizard, which
+# makes them the highest-stakes text in the repo: a resident reads one out at a
+# hearing. So every row carries `sources` (the reporting or the government's own
+# page) and `as_of`, and says only what those sources say.
+#
+# All six were rewritten on 2026-08-04 after none survived verification. The
+# prior versions asserted community wins that no source supports — a $2.5M
+# recreation centre in Groton, a 25%-of-supply water cap in The Dalles,
+# quarterly community reporting in Mesa — alongside a Cheyenne timeline that
+# ran into the future. Anything not in a source below stays out, however good
+# an organising story it would make. Where the real outcome is worse than the
+# story (The Dalles), the row says so: a community that plans against a cap
+# that does not exist is worse off than one that knows it has to win it.
 MORATORIUM_OUTCOMES = [
     {
         "locality": "Groton", "state": "CT",
-        "headline": "Moratorium led to permanent zoning controls",
-        "outcome": "After a year-long moratorium, Groton adopted permanent zoning amendments restricting data centers to industrial zones with noise limits of 45 dBA at property lines and mandatory stormwater management. The developer (Vantage) agreed to a CBA funding a $2.5M community recreation center.",
-        "category": "CBA secured",
+        "headline": "A one-year pause turned into a permanent size cap",
+        "outcome": "Groton's Planning and Zoning Commission adopted a "
+                   "one-year moratorium on data centers over 5,000 sq ft in "
+                   "June 2022 — and spent that year writing rules rather than "
+                   "letting it lapse. After a final public hearing in June "
+                   "2023 the town adopted data center regulations, effective "
+                   "that July, capping data center buildings at 12,500 sq ft. "
+                   "Hyperscale campuses typically run 150,000–350,000 sq ft, "
+                   "so the cap excludes them by size instead of by argument. "
+                   "The moratorium was only the mechanism; the size cap is "
+                   "what holds.",
+        "category": "Permanent limits adopted",
+        "as_of": "2026-08-04",
+        "sources": [
+            "https://theday.com/local-news/20220621/groton-approves-one-year-moratorium-on-large-scale-data-centers",
+            "https://datacenters.ainowinstitute.org/local/",
+        ],
     },
     {
         "locality": "Peculiar", "state": "MO",
-        "headline": "Outright ban held after legal challenge",
-        "outcome": "The city's ban on data centers survived a developer lawsuit. The court ruled that municipalities have broad police-power authority over land use. Peculiar cited water supply concerns — the proposed 50 MW facility would have consumed 30% of the city's water allocation.",
-        "category": "Ban sustained",
+        "headline": "The town deleted 'data center' from its zoning code",
+        "outcome": "Peculiar had already cleared the way for Diode Ventures' "
+                   "$1.5B Harper Road Technology Park by adding a 'data "
+                   "center' definition to its light-industrial zoning code. "
+                   "After hundreds of residents from Peculiar and neighbouring "
+                   "Raymore turned out against it, the Board of Aldermen voted "
+                   "unanimously in October 2024 to strike that definition back "
+                   "out — blocking the project without ever passing a "
+                   "moratorium. Removing a permitted use is a quieter tool "
+                   "than a ban, and here it was a faster one.",
+        "category": "Project blocked",
+        "as_of": "2026-08-04",
+        "sources": [
+            "https://www.kshb.com/news/local-news/peculiar-reverses-zoning-for-data-center-after-cries-from-neighbors",
+            "https://www.datacenterdynamics.com/en/news/peculiar-officials-in-missouri-remove-data-centers-from-ordinance-blocking-15bn-diode-project/",
+        ],
     },
     {
         "locality": "Cheyenne", "state": "WY",
-        "headline": "Moratorium voted down — developer fast-tracked permits",
-        "outcome": "The city council rejected a moratorium 8-1, citing potential tax revenue. Microsoft broke ground on a 300 MW campus 4 months later. Residential electricity rates rose 11% the following year, partly attributed to grid upgrade costs. A CBA was not negotiated.",
+        "headline": "Council rejected a pause with a 3,200-acre expansion already moving",
+        "outcome": "Microsoft announced a 3,200-acre expansion of its Cheyenne "
+                   "campus in April 2026, and Wyoming DEQ approved permits for "
+                   "30 gas-fired engines plus emergency generators. On May 27, "
+                   "2026 the city council voted 8–1 against a 12-month "
+                   "moratorium after three and a half hours of public comment "
+                   "— supporters raising water and noise, opponents raising "
+                   "jobs and tax base. The ratepayer question is being handled "
+                   "through Black Hills Energy's Large Power Contract Service "
+                   "tariff, under which Microsoft pays directly for the "
+                   "infrastructure it needs, rather than through anything the "
+                   "city negotiated. No community benefit agreement appears in "
+                   "the reporting.",
         "category": "No protections",
+        "as_of": "2026-08-04",
+        "sources": [
+            "https://wyofile.com/cheyenne-rejects-moratorium-on-data-centers/",
+            "https://capcity.news/business-feature-2/2026/04/14/microsoft-plans-massive-3200-acre-expansion-of-cheyenne-data-centers/",
+            "https://cowboystatedaily.com/2026/06/08/cheyenne-leaders-industry-officials-data-centers-could-lower-electricity-costs/",
+        ],
     },
     {
         "locality": "Prince William County", "state": "VA",
-        "headline": "Data center backlash reshaped county politics",
-        "outcome": "Years of unchecked data center growth (70+ facilities) triggered a voter revolt in 2023. Anti-data-center candidates won board seats. The county now requires noise studies, visual screening, and CBA negotiations for new facilities. Property values near existing campuses remain 8-15% below comparable areas.",
+        "headline": "Voters removed the board chair; the courts voided the rezoning",
+        "outcome": "In 2022 a board majority led by Chair Ann Wheeler rezoned "
+                   "more than 2,000 acres of farmland for the Prince William "
+                   "Digital Gateway. On June 20, 2023 Wheeler lost the "
+                   "Democratic primary to Deshundra Jefferson, who had "
+                   "campaigned against large-scale data centers. The board "
+                   "approved the rezoning 4–3 that December regardless — and "
+                   "it was the courts, not the ballot box, that ended it: the "
+                   "rezoning was voided on appeal and a developer withdrew, "
+                   "effectively killing the project. Statewide, Virginia voter "
+                   "support for new data centers fell from 69% in 2023 to 35%. "
+                   "Elections changed who was in the room; litigation changed "
+                   "the outcome.",
         "category": "Political shift",
+        "as_of": "2026-08-04",
+        "sources": [
+            "https://www.nbcwashington.com/news/politics/decision-2023/prince-william-county-voters-back-data-center-opponents-in-primary/3372105",
+            "https://www.wusa9.com/article/news/legal/judge-retracts-digital-gateway-prince-william-county/65-fb80c9ca-6c4a-4b03-a975-49c2fa19dc40",
+            "https://www.tomshardware.com/tech-industry/virginia-voter-support-for-new-data-centers-collapses-to-35-percent",
+        ],
     },
     {
         "locality": "The Dalles", "state": "OR",
-        "headline": "Water fight forced Google to fund infrastructure",
-        "outcome": "Community opposition to Google's water usage led to a negotiated agreement: Google funded a $29M wastewater treatment upgrade and committed to using recycled water for cooling. The city capped total data center water draws at 25% of municipal supply.",
-        "category": "CBA secured",
+        "headline": "Google funded the water system — and its share of the water kept climbing",
+        "outcome": "Under a 2021 agreement Google paid roughly $28.5M toward "
+                   "upgrades to The Dalles' water treatment and storage, "
+                   "including an aquifer storage and recovery system it later "
+                   "handed to the city, and bought and donated 3.88 million "
+                   "gallons/day of water rights from a closed aluminium "
+                   "smelter. What the deal did not include was a cap on "
+                   "Google's own draw. When The Oregonian sued for the usage "
+                   "records, the city spent 13 months fighting disclosure "
+                   "before settling — and the records showed the campus using "
+                   "about 29% of the city's water, rising to roughly 40% "
+                   "(some 550 million gallons a year) by 2025. Infrastructure "
+                   "money is not the same protection as a volume limit. This "
+                   "is the case that shows the difference, and the reason to "
+                   "put a cap in writing.",
+        "category": "Mixed outcome",
+        "as_of": "2026-08-04",
+        "sources": [
+            "https://www.thedalles.org/news_detail_T4_R207.php",
+            "https://www.rcfp.org/dalles-google-oregonian-settlement/",
+            "https://waterwatch.org/googles-water-use-is-soaring-in-the-dalles-records-show-with-two-more-data-centers-to-come-2/",
+        ],
     },
     {
         "locality": "Mesa", "state": "AZ",
-        "headline": "Residents won noise and water protections mid-construction",
-        "outcome": "After residents organized against Apple and Google campus noise, Mesa adopted a data center overlay zone requiring 55 dBA limits, water recycling plans, and quarterly community reporting. Existing facilities were grandfathered but agreed to voluntary retrofits.",
-        "category": "CBA secured",
+        "headline": "Zoning rules instead of a moratorium: setbacks, height caps, sound study",
+        "outcome": "With 15 data centers built, approved or proposed on "
+                   "roughly 1,500 acres in six years, Mesa's council "
+                   "introduced zoning controls 6–0 and adopted them in July "
+                   "2025. Data centers are now allowed only where the council "
+                   "specifically authorises a Planned Area Development overlay "
+                   "on industrial land, and each must sit at least 400 feet "
+                   "from residential, stay under 60 feet tall, screen its "
+                   "mechanical equipment, and submit a sound study. Water "
+                   "cooling was argued in council — Councilwoman Jenn Duff "
+                   "pushed to restrict it during drought — but did not make it "
+                   "into the adopted rules. Worth reading as a list of what a "
+                   "council will grant without a moratorium, and what it "
+                   "won't.",
+        "category": "Permanent limits adopted",
+        "as_of": "2026-08-04",
+        "sources": [
+            "https://www.kjzz.org/business/2025-07-14/mesa-city-council-approves-new-data-center-zoning-rules",
+            "https://www.12news.com/article/news/local/valley/new-data-center-regulations-approved-by-mesa-leaders-arizona/75-db14238c-61cd-4f89-9cfa-f7759baa5cf3",
+            "https://www.themesatribune.com/news/mesa-council-to-vote-on-data-center-controls/article_95cfba83-0015-4c0e-aa8e-116cef4c8c6e.html",
+        ],
     },
 ]
 
@@ -2380,23 +2708,6 @@ EXEC_VERIFIED = {
     ("Stack Infrastructure", "Bobby Hollis"): "https://www.stackinfra.com/about/meet-the-team/",
 }
 
-def has_value(v):
-    """True if a DataFrame cell holds real content rather than a blank.
-
-    Never write `if row["verified"]` against an object column. A missing value
-    arrives as None on pandas 2.x but as NaN on 3.x, and **NaN is truthy** — so
-    the naive test silently flips meaning across a pandas upgrade. That is not
-    hypothetical: it made every "unverified" marker disappear from the site's
-    search index when CI built on a newer pandas than the machine that
-    generated the committed HTML.
-    """
-    if v is None:
-        return False
-    if isinstance(v, str):
-        return bool(v.strip()) and v.strip().lower() not in ("nan", "none")
-    return bool(pd.notna(v))
-
-
 EXECUTIVES_DF = pd.DataFrame(EXECUTIVES)
 EXECUTIVES_DF["verified"] = [
     _EXEC_VERIFIED_ON if (c, n) in EXEC_VERIFIED else None
@@ -2555,13 +2866,26 @@ REGISTRY_PROVENANCE = {
     },
     "MORATORIUMS_DF": {
         "label": "Moratorium & ban tracker",
-        "as_of": "mid-2026",
+        "as_of": "August 2026",
         "source": None,
         "churn": "high",
         "caveat": (
-            "A point-in-time snapshot, illustrative rather than exhaustive — "
-            "dozens of localities churn weekly. Confirm a locality's current "
-            "status with its own clerk before citing it as precedent."),
+            "Illustrative rather than exhaustive — dozens of localities churn "
+            "weekly, and this tracks the ones we have read a source for.\n\n"
+            "**Each row carries its own provenance.** Rows showing a "
+            "verification date link to the ordinance, the enacting body's own "
+            "page, or a datable report of the vote, and were read on that "
+            "date. Rows marked *unverified* came from bulk compilation and "
+            "have not been checked against a primary source — the locality, "
+            "the year, and the status may all be off. Verify one of those "
+            "with the town clerk before citing it as precedent.\n\n"
+            "**Expiry is derived, not asserted.** A row with a documented end "
+            "date flips to *Expired* on its own once that date passes. A "
+            "time-limited moratorium whose start date was never documented "
+            "keeps showing as enacted — that is a known gap, not a claim that "
+            "it is still in force. Moratoriums are also routinely extended, so "
+            "an expiry date is the earliest it could have ended, not proof "
+            "that it did."),
     },
     "MEGA_PROJECTS_DF": {
         "label": "Megaprojects under construction",
