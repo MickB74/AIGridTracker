@@ -14,6 +14,7 @@ from src.constants import (
     MORATORIUM_OUTCOMES, DC_SITES_DF, OPERATORS_DF, CBA_BENCHMARKS,
     OUTREACH_TIPS,
 )
+from src.alerts import alerts_for_state
 from src.impact_model import estimate_facility_impact, INVESTMENT_USD_PER_MW
 from src.briefs import build_meeting_brief, build_meeting_brief_data
 from src.pdf_pack import build_action_pack_pdf, build_flyer_pdf
@@ -221,6 +222,15 @@ def render_start_here_tab():
     # In-state pushback context + precedents from real fights
     _abbrev_row = STATE_PUCS_DF[STATE_PUCS_DF["state"] == state]
     _abbrev = _abbrev_row.iloc[0]["abbrev"] if not _abbrev_row.empty else ""
+    # A lapsing moratorium near you is more actionable than the fact that one
+    # exists — it is a dated deadline, and the community that won the pause is
+    # usually the last to hear it is ending.
+    for _alert in alerts_for_state(_abbrev):
+        if _alert["severity"] == "expired":
+            st.error(f"⏰ **{_alert['title']}** — {_alert['body']}")
+        else:
+            st.warning(f"⏰ **{_alert['title']}** — {_alert['body']}")
+
     _local_moras = MORATORIUMS_DF[MORATORIUMS_DF["state"] == _abbrev]
     if not _local_moras.empty:
         st.warning(

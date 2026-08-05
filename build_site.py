@@ -32,6 +32,7 @@ import pandas as pd
 
 from src.blog_art import art_svg
 from src.blog_content import BLOG_STORIES, ABOUT_SECTION
+from src.alerts import build_alerts, LOOKAHEAD_DAYS as ALERT_LOOKAHEAD
 from src.constants import (
     AI_COMPETITORS_DF,
     STATE_GRID_PROFILES, STATE_DC_DF, STATE_DC_NATIONAL,
@@ -3489,6 +3490,27 @@ def build_moratoriums():
         f"<tr><td><code>{esc(c)}</code></td><td>{esc(d)}</td></tr>"
         for c, d in MORATORIUM_SCHEMA)
 
+    # Deadlines go above the table. A 900-row table is reference material;
+    # "this lapses in three days" is the thing someone needs to act on, and
+    # burying it under everything else is how it gets missed.
+    _alerts = build_alerts()
+    alerts_html = ""
+    if _alerts:
+        items = "\n".join(
+            f'<li><strong>{esc(a["title"])}</strong><br>'
+            f'<span class="muted">{esc(a["body"])}</span></li>'
+            for a in _alerts)
+        alerts_html = f"""
+<section>
+  <h2>Deadlines in the next {ALERT_LOOKAHEAD} days</h2>
+  <p class="muted" style="margin-bottom:12px">Derived from documented end
+  dates. Moratoriums are routinely extended, so treat these as the earliest a
+  pause could end — a prompt to call the clerk, not a conclusion.
+  <a href="alerts.xml">Subscribe by RSS</a> ·
+  <a href="data/alerts.json">JSON</a></p>
+  <ul>{items}</ul>
+</section>"""
+
     body = f"""
 <header>
   <div class="kicker">Community tracker</div>
@@ -3504,6 +3526,7 @@ def build_moratoriums():
   <div class="stat"><b>{proposed}</b><span>proposed or pending</span></div>
   <div class="stat"><b>{verified}/{total}</b><span>source-verified</span></div>
 </div>
+{alerts_html}
 <section>
   <h2>All tracked moratoriums</h2>
   <p class="muted" style="margin-bottom:12px">Status is what applies
@@ -6600,6 +6623,58 @@ def build_moratorium_data():
     return len(records)
 
 
+def build_alerts_outputs():
+    """Publish the expiry alerts as JSON and RSS.
+
+    RSS because it needs no account, no email address and no infrastructure
+    this project doesn't have: a resident, a reporter or a clerk subscribes
+    and gets told when a pause near them is about to lapse. Email alerts need
+    a subscriber list, which is PII, which lives outside git — so this is the
+    half that can ship today rather than the half that waits on a webhook.
+    """
+    import datetime as _dt
+    from email.utils import format_datetime
+
+    alerts = build_alerts()
+    (WEB / "data").mkdir(parents=True, exist_ok=True)
+    (WEB / "data" / "alerts.json").write_text(
+        json.dumps({
+            "generated": _dt.date.today().isoformat(),
+            "lookahead_days": ALERT_LOOKAHEAD,
+            "license": DATA_LICENSE,
+            "license_url": DATA_LICENSE_URL,
+            "attribution": f"AI GridWatch ({SITE_URL})",
+            "count": len(alerts),
+            "alerts": alerts,
+        }, indent=2) + "\n", encoding="utf-8")
+
+    # pubDate is the day the deadline was computed from, not "now" — an
+    # unchanged alert should not resurface as new in a reader every night.
+    now = _dt.datetime.now(_dt.timezone.utc)
+    items = "\n".join(f"""  <item>
+    <title>{esc(a['title'])}</title>
+    <link>{SITE_URL}/moratoriums#data</link>
+    <guid isPermaLink="false">{esc(a['id'])}</guid>
+    <pubDate>{format_datetime(now)}</pubDate>
+    <description>{esc(a['body'])}</description>
+  </item>""" for a in alerts)
+    feed = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+  <title>AI GridWatch — moratorium deadline alerts</title>
+  <link>{SITE_URL}/moratoriums</link>
+  <description>Data center moratoriums lapsing in the next {ALERT_LOOKAHEAD}
+  days, and those that recently lapsed. Derived from documented end dates —
+  moratoriums are often extended, so treat a date as the earliest a pause
+  could end, not proof that it did.</description>
+  <language>en-us</language>
+  <lastBuildDate>{format_datetime(now)}</lastBuildDate>
+{items}
+</channel></rss>
+"""
+    (WEB / "alerts.xml").write_text(feed, encoding="utf-8")
+    return len(alerts)
+
+
 def build_moratorium_embed():
     """Standalone iframe-able tracker for other people's sites.
 
@@ -6697,6 +6772,8 @@ def main():
     (WEB / "health-risks.html").write_text(build_health(), encoding="utf-8")
     (WEB / "moratoriums.html").write_text(build_moratoriums(), encoding="utf-8")
     _n_data = build_moratorium_data()
+    _n_alerts = build_alerts_outputs()
+    print(f"  [data] {_n_alerts} deadline alerts -> alerts.json + alerts.xml")
     (WEB / "embed").mkdir(parents=True, exist_ok=True)
     (WEB / "embed" / "moratoriums.html").write_text(
         build_moratorium_embed(), encoding="utf-8")
