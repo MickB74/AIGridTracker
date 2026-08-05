@@ -11,9 +11,22 @@ from src.constants import (
     STATE_PUCS_DF, DC_SITES_DF,
 )
 from src.impact_model import estimate_facility_impact
+from src.ui import share
+
+# Keys the calculator carries in a shareable link.
+COOLING_OPTIONS = ["Evaporative (water-cooled)", "Dry cooling (air-cooled)",
+                   "Hybrid"]
+
+# Guards keep a mangled or stale link from crashing the tab for the recipient.
+SHARE_SPEC = {
+    "state": ("impact_state", "str", lambda: STATE_GRID_PROFILES.keys()),
+    "mw": ("impact_mw", "int", (50, 1000)),
+    "cooling": ("impact_cooling", "str", COOLING_OPTIONS),
+}
 
 
 def render_impact_tab():
+    share.restore(st, SHARE_SPEC, "impact")
     st.subheader("📍 Local Impact Calculator")
     st.caption(
         "Estimate what a proposed data center means for your community. "
@@ -33,12 +46,13 @@ def render_impact_tab():
             "State", _states, index=_default_idx, key="impact_state")
     with c2:
         facility_mw = st.slider(
-            "Facility size (MW)", 50, 1000, 200, 50,
+            "Facility size (MW)", 50, 1000, 200, 50, key="impact_mw",
             help="A small campus is 50-100 MW; mid-size 200-500 MW; hyperscale 500+ MW.")
     with c3:
         cooling = st.selectbox(
             "Cooling type",
-            ["Evaporative (water-cooled)", "Dry cooling (air-cooled)", "Hybrid"],
+            COOLING_OPTIONS,
+            key="impact_cooling",
             help="Evaporative uses ~2 gal/kWh; dry uses ~0.02 gal/kWh; hybrid ~0.8 gal/kWh.")
     st.markdown('</div>', unsafe_allow_html=True)
 
@@ -94,6 +108,15 @@ def render_impact_tab():
         f"{gco2} gCO2/kWh",
         "Dirtier" if gco2 > 350 else "Cleaner" if gco2 < 250 else "Average")
     st.markdown('</div>', unsafe_allow_html=True)
+
+    # Right under the headline numbers — that is the screenshot people would
+    # otherwise take, and a link beats a screenshot because the recipient can
+    # change the MW and see it move.
+    share.render(
+        st, SHARE_SPEC,
+        caption=("Reopens this calculator with the same state, size and "
+                 "cooling type. Better than a screenshot — whoever you send "
+                 "it to can change the numbers and watch them move."))
 
     # ── Context: how this compares ─────────────────────────────────────── #
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)

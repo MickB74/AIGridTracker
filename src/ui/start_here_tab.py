@@ -23,11 +23,30 @@ from src.scripts_letters import (
 from src.site_builder import build_campaign_site
 from src.services.tracking import log_event
 from src.ui.newsletter import render_newsletter_signup
+from src.ui import share
 
 _UNKNOWN_LLC = "I don't know — I only have an LLC or company name from a filing"
 
 
+# Inputs worth carrying in a link. Deliberately not everything — the point is
+# that a neighbour opens the same situation, not that every scratch field is
+# reproduced. Restore runs before any widget below is created; see share.py.
+# Third element guards the value against what the widget will actually
+# accept: a link arriving with a state Streamlit has never heard of would
+# otherwise take the tab down for whoever opened it.
+SHARE_SPEC = {
+    "state": ("sh_state", "str", lambda: STATE_GRID_PROFILES.keys()),
+    "stage": ("sh_stage", "str", lambda: PROJECT_STAGES.keys()),
+    "mw": ("sh_mw", "int", (50, 1000)),
+    "who": ("sh_who", "str",
+            lambda: [_UNKNOWN_LLC] + OPERATORS_DF["operator"].unique().tolist()),
+    "llc": ("sh_llc", "str"),
+    "hearing": ("sh_hearing", "date"),
+}
+
+
 def render_start_here_tab():
+    share.restore(st, SHARE_SPEC, "start_here")
     st.subheader("🚨 A data center was proposed near me — start here")
     st.caption(
         "Five quick steps: your situation → who's behind it → what it costs "
@@ -161,6 +180,19 @@ def render_start_here_tab():
         "organized communities have negotiated. Scale the ask to the MW."
     )
     st.markdown('</div>', unsafe_allow_html=True)
+
+    # Placed here rather than at the end: this is the point where the page is
+    # worth forwarding — the numbers are on screen and specific to the reader's
+    # town. Asking someone to share before they have seen anything is asking
+    # them to vouch for a link they have not read.
+    share.render(
+        st, SHARE_SPEC,
+        caption=(
+            "Opens this page with your state, project size and stage already "
+            "filled in — so a neighbour sees the same numbers instead of "
+            "starting from a blank form. Paste it into a group chat, a "
+            "Nextdoor post, or an email to your council member."
+        ))
 
     # ── Step 4 — what to do at this stage ──────────────────────────────── #
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
