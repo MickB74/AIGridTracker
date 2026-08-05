@@ -1761,11 +1761,15 @@ HEALTH_RISKS = [
                 "data centers emit pollution linked to ~1,300 premature "
                 "deaths a year by 2030.",
      "facts": [
-         {"text": "UC Riverside & Caltech researchers project that air "
-                  "pollution from U.S. data centers could contribute to "
-                  "roughly 1,300 premature deaths and 600,000 asthma-symptom "
-                  "cases a year by 2030, with public-health costs "
-                  "approaching $20B annually.", "src": "unpaid_toll"},
+         {"text": "UC Riverside & Caltech researchers project up to ~1,300 "
+                  "premature deaths a year by 2030 from U.S. data-center air "
+                  "pollution — that is a midpoint, with a published range of "
+                  "940 to 1,590 — alongside roughly 600,000 asthma-symptom "
+                  "cases, and a total public-health burden exceeding $20B in "
+                  "2028. Quote the range rather than the midpoint: it is the "
+                  "defensible version, and a point estimate invites an "
+                  "argument about precision you do not need to have.",
+          "src": "unpaid_toll"},
          {"text": "The pollution comes from two places: the fossil-fueled "
                   "power plants supplying the electricity and on-site diesel "
                   "backup generators emitting NOx and fine particulates "
@@ -1830,10 +1834,11 @@ HEALTH_RISKS = [
      "summary": "Large loads strain the grid and shift transmission and "
                 "capacity costs onto residential ratepayers.",
      "facts": [
-         {"text": "PJM's 2025 capacity auction cleared at a record $16.4B — "
-                  "with data centers responsible for roughly 40% (~$6.5B) "
-                  "of the increase, costs that flow through to ratepayers "
-                  "across 13 states.", "src": "pjm_auction25"},
+         {"text": "PJM's 2025 capacity auction cleared at a record $16.4B, "
+                  "of which the market monitor attributes $6.3B — 38% — to "
+                  "data centers. Across PJM's last four base auctions it is "
+                  "$29.4B of $63.6B, or 46%. These costs flow through to "
+                  "ratepayers across 13 states.", "src": "pjm_auction25"},
          {"text": "Virginia's legislative audit agency (JLARC) found that "
                   "unconstrained data-center growth will raise costs for "
                   "other customers absent policy changes — in the state "
@@ -1876,9 +1881,10 @@ HEALTH_RISKS = [
                 "grid reliability, and adds local waste heat.",
      "facts": [
          {"text": "U.S. data-center electricity use is projected to reach "
-                  "325-580 TWh by 2030 (Berkeley Lab) — up to ~12% of "
-                  "national consumption — with much of the new supply "
-                  "coming from natural gas.", "src": "lbnl"},
+                  "325-580 TWh by 2028 (Berkeley Lab) — 6.7% to 12% of "
+                  "national consumption, up from 176 TWh and 4.4% in 2023 "
+                  "— with much of the new supply coming from natural gas.",
+          "src": "lbnl"},
          {"text": "The IEA projects data centers will drive one of the "
                   "largest sources of electricity demand growth this "
                   "decade, with the fuel mix determining the emissions "
@@ -2455,6 +2461,8 @@ SOURCES = {
                      "https://watttime.org/"),
     "gridstatus":   ("GridStatus.io / EIA-930 — ISO fuel mix & emissions",
                      "https://www.gridstatus.io/"),
+    "eia_rates":    ("EIA — Electric Power Monthly, Table 5.6.A: average retail price of electricity to residential customers by state (the current figure, updated monthly)",
+                     "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a"),
     "eia930":       ("EIA-930 — hourly net generation by fuel type (API v2, free key)",
                      "https://www.eia.gov/opendata/browser/electricity/rto/fuel-type-data"),
     "cbre_dc":      ("CBRE — North America Data Center Trends 2025 (market operational MW)",
@@ -2526,8 +2534,8 @@ SOURCES = {
                      "https://www.ferc.gov/news-events/news/fact-sheet-ferc-directs-nations-largest-grid-operator-create-new-rules-embrace"),
     "ferc_showcause": ("FERC — show-cause orders to MISO, SPP & other RTOs on large-load interconnection (Jun 18, 2026)",
                      "https://www.ferc.gov/news-events/news/ferc-launches-aggressive-targeted-action-speed-large-load-integration"),
-    "pjm_auction25": ("PJM 2025 capacity auction — record $16.4B; data centers ~40% ($6.5B) of cost",
-                     "https://www.utilitydive.com/news/data-centers-pjm-capacity-auction/808951/"),
+    "pjm_auction25": ("Monitoring Analytics (PJM market monitor) — data centers drove $6.3B of the record $16.4B 2025 capacity auction (38%), and $29.4B of $63.6B across the last four auctions (46%)",
+                     "https://www.utilitydive.com/news/pjm-data-centers-capacity-auction-imm-bowring/825626/"),
     "tx_sb6_ll":    ("Texas SB 6 — ERCOT may curtail/disconnect large loads (≥75 MW) in emergencies; new interconnection standards (2025)",
                      "https://www.utilitydive.com/news/texas-law-gives-grid-operator-power-to-disconnect-data-centers-during-crisi/751587/"),
     "spp_hill":     ("SPP — High Impact Large Load (HILL) integration, the 90-day study process from RR696; FERC accepted the tariff revisions effective Jan 15 2026 (first-party)",
@@ -2544,7 +2552,7 @@ SOURCES = {
                      "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/110525-global-data-center-power-demand-expected-to-almost-double-by-2030"),
     "epri_pi":      ("EPRI — Powering Intelligence 2026 (US Low/Medium/High scenarios)",
                      "https://powering-intelligence.epri.com/summary-projections.html"),
-    "lbnl":         ("Lawrence Berkeley National Lab — US data centers 325–580 TWh by 2030",
+    "lbnl":         ("Lawrence Berkeley National Lab, 2024 US Data Center Energy Usage Report — 325–580 TWh (6.7–12% of US electricity) by 2028, up from 176 TWh (4.4%) in 2023",
                      "https://eta.lbl.gov/publications/2024-united-states-data-center-energy"),
     "belfer":       ("Harvard Belfer Center — AI, Data Centers, and the U.S. Electric Grid: A Watershed Moment (Feb 2026)",
                      "https://www.belfercenter.org/research-analysis/ai-data-centers-us-electric-grid"),
@@ -3351,6 +3359,34 @@ REGISTRY_PROVENANCE = {
             "the facility count when you can; it is the number that speaks "
             "to grid impact. Underlying load research is LBNL-2001637 "
             "(Dec 2024)."),
+    },
+    "STATE_GRID_PROFILES": {
+        "label": "State residential rates, grid carbon & water stress",
+        # Inferred, not recorded. No vintage was ever stored for this
+        # registry, so this date comes from spot-checking values against
+        # published EIA annual averages — 2023 matches, later years do not.
+        # Written as an inference rather than a fact because a confident
+        # wrong date is worse than an admitted estimate.
+        "as_of": "2023 (inferred — see caveat)",
+        "source": "eia_rates",
+        "churn": "high",
+        "caveat": (
+            "**These rates are stale, and they are stale in a specific "
+            "direction.** Spot checks against 2026 figures found this table "
+            "running 12–22% low: Hawaii 41.0¢ here against 46.6¢ today, "
+            "California 28.5¢ against 33.6¢, Washington 11.2¢ against 14.4¢, "
+            "Virginia 14.2¢ against 17.4¢.\n\n"
+            "So every bill-impact number the calculator produces understates "
+            "what a household actually pays, and the residential-versus-"
+            "industrial rate gap is wider than shown, not narrower. If you "
+            "are citing a rate at a hearing, pull the current figure for your "
+            "state from EIA directly — the shape of the argument holds, but "
+            "the number on the slide should be today's.\n\n"
+            "Carbon intensities are state annual averages and move far more "
+            "slowly than prices; they remain broadly usable. Water stress is "
+            "a coarse low/medium/high banding, not a basin-level assessment — "
+            "a state marked 'low' can still contain a stressed watershed, "
+            "which is the scale that actually decides a cooling permit."),
     },
     "MORATORIUMS_DF": {
         "label": "Moratorium & ban tracker",

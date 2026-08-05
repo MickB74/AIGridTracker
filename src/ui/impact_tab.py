@@ -10,6 +10,7 @@ from src.constants import (
     STATE_GRID_PROFILES, STATE_DC_DF, MORATORIUMS_DF,
     STATE_PUCS_DF, DC_SITES_DF,
 )
+from src.helpers import render_freshness
 from src.impact_model import estimate_facility_impact
 from src.ui import share
 
@@ -211,6 +212,10 @@ def render_impact_tab():
         "recovery filings, PUC rulings, existing grid headroom, and whether the "
         "developer pays for interconnection costs directly. Your PUC decides."
     )
+    # The residential rate driving these figures is the stalest input in the
+    # app, and it is the one someone reads out at a hearing. Say so here
+    # rather than in a methodology page nobody opens.
+    render_freshness(st, "STATE_GRID_PROFILES")
     st.markdown('</div>', unsafe_allow_html=True)
 
     # ── What to demand ─────────────────────────────────────────────────── #

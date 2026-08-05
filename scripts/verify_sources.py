@@ -8,10 +8,11 @@ validator exists to catch, just spread across ~100 keys nobody re-reads.
 
 Reports three things a maintainer can act on:
 
-  dead        the URL no longer resolves (404, DNS failure)
-  orphan      the key is defined but nothing references it
-  flaky       5xx — the server had a bad minute; recheck before editing
-  blocked     the host refuses bots (403/429); a human must eyeball it
+  dead          the URL no longer resolves (404, DNS failure)
+  unregistered  a tracked registry declares no provenance at all
+  orphan        the key is defined but nothing references it
+  flaky         5xx — the server had a bad minute; recheck before editing
+  blocked       the host refuses bots (403/429); a human must eyeball it
 
 Does not judge whether a source still *says* what the label claims — no
 script can. It catches rot, not drift.
@@ -34,8 +35,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from src.constants import SOURCES                             # noqa: E402
+from src.constants import SOURCES, REGISTRY_PROVENANCE        # noqa: E402
 from scripts._linkcheck import check_many, classify           # noqa: E402
+
+# Registries whose numbers reach a reader — a page, a brief, or the printed
+# pack. Each must declare its own freshness; see REGISTRY_PROVENANCE.
+TRACKED_REGISTRIES = [
+    "STATE_GRID_PROFILES", "STATE_DC_DF", "MORATORIUMS_DF", "DC_SITES_DF",
+    "EXECUTIVES_DF", "MEGA_PROJECTS_DF",
+]
 
 # Where a src_link('key') / "key" reference could live.
 SEARCH_DIRS = ("src", "scripts")
@@ -91,7 +99,21 @@ def audit(check_links=True):
                                  "detail": f"HTTP {code} — transient, recheck "
                                            f"before touching it"})
 
-    order = ["dead", "orphan", "flaky", "blocked"]
+    # A registry with no REGISTRY_PROVENANCE entry declares nothing: no
+    # vintage, no caveat, and no stale flag can ever fire for it. That is how
+    # STATE_GRID_PROFILES sat undated while feeding every impact number and
+    # the printed action pack — the freshness machinery worked perfectly and
+    # was simply never pointed at it. Silence is the failure mode, so check
+    # for the absence rather than trusting that someone remembered.
+    for name in TRACKED_REGISTRIES:
+        if name not in REGISTRY_PROVENANCE:
+            findings.append({
+                "kind": "unregistered", "key": name, "url": "",
+                "detail": "registry has no REGISTRY_PROVENANCE entry — it can "
+                          "never be flagged stale. Add as_of, source, churn "
+                          "and a caveat"})
+
+    order = ["dead", "unregistered", "orphan", "flaky", "blocked"]
     findings.sort(key=lambda f: order.index(f["kind"]))
     return findings
 
@@ -106,7 +128,7 @@ def render(findings, checked_links):
         out.append("Every source resolves and every key is referenced.")
         return "\n".join(out)
 
-    for kind in ("dead", "orphan", "flaky", "blocked"):
+    for kind in ("dead", "unregistered", "orphan", "flaky", "blocked"):
         group = [f for f in findings if f["kind"] == kind]
         if not group:
             continue

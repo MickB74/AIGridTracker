@@ -2158,6 +2158,7 @@ def build_impact_calculator():
   community flyer with these numbers baked in.</p>
   <p><a class="btn" href="{APP_URL}">Generate your action pack &rarr;</a>
   <a class="btn ghost" href="health-risks.html">The health risks, sourced</a></p>
+  {provenance_html("STATE_GRID_PROFILES")}
 </section>
 <script>
 (function() {{

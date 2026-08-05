@@ -167,14 +167,35 @@ def scan():
     return candidates
 
 
+def duplicate_links(existing):
+    """Links used by more than one queue entry.
+
+    `link` is the dedup key, so it has to be unique per entry. Hand-added
+    candidates are the risk: four rows once shared a tracker's bare homepage
+    URL, which made three of them invisible to the dedup map and would have
+    silently swallowed any later hit on that URL. Give hand-added entries a
+    `#slug` fragment rather than reusing a landing page.
+    """
+    counts = {}
+    for e in existing:
+        link = e.get("link")
+        if link:
+            counts[link] = counts.get(link, 0) + 1
+    return {link: n for link, n in counts.items() if n > 1}
+
+
 def merge(existing, found, today):
     """Fold new hits into the queue without disturbing human decisions."""
-    by_link = {e["link"]: e for e in existing if e.get("link")}
+    by_link = {}
+    for e in existing:
+        if e.get("link"):
+            by_link.setdefault(e["link"], []).append(e)
     added = 0
     for c in found:
         prior = by_link.get(c["link"])
         if prior:
-            prior["last_seen"] = today
+            for e in prior:               # never clobber a shadowed duplicate
+                e["last_seen"] = today
             continue
         if any(e.get("status") == "dismissed"
                and e.get("title") == c["title"] for e in existing):
@@ -182,7 +203,7 @@ def merge(existing, found, today):
         c.update({"first_seen": today, "last_seen": today,
                   "status": "new", "origin": "news-scan"})
         existing.append(c)
-        by_link[c["link"]] = c
+        by_link.setdefault(c["link"], []).append(c)
         added += 1
     existing.sort(key=lambda e: (e.get("status") != "new",
                                  e.get("first_seen", "")), reverse=False)
@@ -216,6 +237,11 @@ def main():
     new_rows = [e for e in existing if e.get("status") == "new"]
     print(f"{len(found)} relevant headlines · {added} new candidate(s) · "
           f"{len(new_rows)} awaiting review · {len(existing)} total")
+
+    for link, n in sorted(duplicate_links(existing).items()):
+        print(f"  ! {n} entries share {link} — `link` is the dedup key, so "
+              f"give each a distinct #fragment", file=sys.stderr)
+
     for c in existing[:15]:
         if c.get("status") != "new":
             continue
@@ -235,7 +261,10 @@ def main():
         "the locality's own ordinance or agenda, add a row to MORATORIUMS in "
         "src/constants.py with source + as_of + expires, then set this "
         "entry's status to 'promoted'. To reject one, set status to "
-        "'dismissed' — the scanner will not raise it again."))
+        "'dismissed' — the scanner will not raise it again. `link` is the "
+        "dedup key and must be unique per entry: a hand-added candidate that "
+        "cites a tracker or index page needs a distinct #fragment, not the "
+        "bare URL."))
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
                     encoding="utf-8")
