@@ -2319,12 +2319,18 @@ SOURCES = {
     "crwv_dc":      ("CoreWeave — Our capacity plans for CoreWeave data centers (first-party) + Core Scientific host-site announcements",
                      "https://www.coreweave.com/blog/our-capacity-plans-for-coreweave-data-centers"),
     # --- Operator ownership / property-LLC structure (press-sourced) ---
-    "dc_ownership": ("Data-center operator ownership & M&A — compiled from trade press (Data Center Dynamics, dgtlinfra, ABI Research) + operator releases; automated fact-check pending",
-                     "https://dgtlinfra.com/data-center-companies/"),
+    # Composite: one key covering ownership + filing-LLC naming across several
+    # operators, so no single first-party page can back it. Points at EDGAR
+    # full-text search — the government index where a parent, a subsidiary or
+    # a property LLC can actually be looked up — rather than at a trade-press
+    # summary. Per-deal claims get their own first-party keys (switch_dbif,
+    # vantage_dbsl, …); prefer adding one of those over leaning on this.
+    "dc_ownership": ("Operator ownership & filing-LLC naming patterns — compiled from operator releases and county filings, then checked against SEC EDGAR full-text search. Composite, not a single citation: look the entity up yourself before naming it in a filing",
+                     "https://www.sec.gov/edgar/search/"),
     "vantage_dbsl": ("Vantage Data Centers — $9.2B equity investment led by DigitalBridge & Silver Lake (closed Jun 2024)",
                      "https://vantage-dc.com/news/vantage-data-centers-completes-9-2-billion-equity-investment-led-by-digitalbridge-and-silver-lake/"),
-    "switch_dbif":  ("Switch, Inc. — DigitalBridge & IFM Investors take-private (~$11B EV, 2022)",
-                     "https://dgtlinfra.com/digitalbridge-ifm-switch-inc-data-center/"),
+    "switch_dbif":  ("Switch, Inc. — DigitalBridge & IFM Investors complete $11B take-private, Dec 6 2022 (first-party)",
+                     "https://www.switch.com/digitalbridge-and-ifm-investors-complete-11-billion-take-private-of-switch/"),
     "crwv_coresci": ("CoreWeave to acquire Core Scientific — all-stock ~$9B (announced Jul 2025)",
                      "https://www.coreweave.com/news/coreweave-to-acquire-core-scientific"),
     "imasons":      ("Infrastructure Masons (iMasons) — industry & sustainability data",
