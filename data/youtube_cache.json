@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-05T00:46:20.075631+00:00",
+  "fetched_at": "2026-08-05T00:50:19.747479+00:00",
   "items": [
     {
       "title": "Interview: Town of Tonawanda Supervisor John Flynn discusses data center pause",
@@ -78,6 +78,16 @@
       "video_id": "",
       "published_iso": "2026-08-04T01:45:33+00:00",
       "states": []
+    },
+    {
+      "title": "Abbott orders audit of Texas data centers before new projects can connect to grid",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Hb0FwWEx0ZTB6bTVmOV9ZdnVtdFU5djVKSmhtci0xNVZITnhKczhQY2hxYWhkSWZaUEM0RWQwSDZUUnlpRzhuVXN5LU9LTzE3ZFByLTRn?oc=5",
+      "video_id": "",
+      "published_iso": "2026-08-03T23:15:19+00:00",
+      "states": [
+        "Texas"
+      ]
     },
     {
       "title": "Officials: Treated water from Calumet plant could supply data centers",
@@ -333,14 +343,6 @@
       "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9JVTFkWUZKX0NieVFPenhvMzNHanRzaVUxaDhHQVNIdFoxQzFTVmEyV1NmMy1SY3F1QTBCZWJXcjVfWGdtTnBhNnIxSkttSENKN190VQ?oc=5",
       "video_id": "",
       "published_iso": "2025-08-06T14:00:52+00:00",
-      "states": []
-    },
-    {
-      "title": "Data Center Tour & Technical Deep Dive into the Power, Data and Cooling Infrastructure!",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1GV2ZaQ2VOa1puYzZVZ2Rhd0hwdG1uVk5HZkJLc1kwLXNEMlhUck5XRVhXT1pVMFNYR3RkWVRMWEhubXFlRTA1MDhWZWxoc2Y5RFM3SWRR?oc=5",
-      "video_id": "",
-      "published_iso": "2024-01-29T23:27:57+00:00",
       "states": []
     }
   ]
