@@ -326,6 +326,7 @@ NAV_LINKS = [
     ("Your state", "states/index.html"),
     ("Case studies", "case-studies.html"),
     ("Clauses", "cba-clauses.html"),
+    ("Tax breaks", "tax-breaks.html"),
     ("Hearing prep", "hearing-questions.html"),
     ("Health risks", "health-risks.html"),
     ("Moratoriums", "moratoriums.html"),
@@ -406,6 +407,7 @@ def page(title, description, body, canonical, depth=0,
     <a href="{p}studies.html">State studies</a> ·
     <a href="{p}officials.html">Officials directory</a> ·
     <a href="{p}glossary.html">Glossary</a> ·
+    <a href="{p}tax-breaks.html">Tax breaks</a> ·
     <a href="{p}dividend.html">Data dividend</a></p>
   <p style="margin-bottom:8px"><strong>Site</strong> ·
     <a href="{p}about.html">About</a> ·
@@ -5426,6 +5428,7 @@ def build_case_studies():
 
 <section>
   <p class="muted"><strong>See also:</strong>
+  <a href="tax-breaks.html">The opportunity cost of subsidy packages</a> ·
   <a href="cba-clauses.html">Model CBA clauses</a> ·
   <a href="moratoriums.html">Full moratorium tracker</a> ·
   <a href="{APP_URL}">Generate a meeting brief with these precedents pre-loaded</a></p>
@@ -5612,6 +5615,168 @@ def build_glossary():
         jsonld=_breadcrumb(
             ("Home", SITE_URL),
             ("Glossary", f"{SITE_URL}/glossary")))
+
+
+def build_tax_breaks():
+    """The 'we'll build elsewhere' framing argument."""
+    body = f"""
+<header>
+  <div class="kicker">The opportunity cost</div>
+  <h1>"We'll build somewhere else." No, they won't.</h1>
+  <p class="sub">The single most effective negotiating line a data-center
+  developer uses is a bluff. Here's how to call it — and what stops being
+  free once you do.</p>
+</header>
+
+<section>
+  <h2>The threat</h2>
+  <p>It arrives in every hearing, in almost the same words: <em>if you
+  don't grant this abatement, this rate, this exemption, we'll build
+  somewhere else.</em> It's delivered with a folder of comparative site
+  data and the quiet suggestion that the neighboring county is more
+  reasonable.</p>
+  <div class="note bad"><p><strong>The threat is almost always a
+  bluff.</strong> A company only reaches your hearing after it has already
+  decided your site is competitive. Cheap and abundant power, a reliable
+  grid, fiber trunks, tens of acres of flat land, water — the shortlist
+  of parcels that clear all five is short, and yours is on it.</p></div>
+</section>
+
+<section>
+  <h2>What actually put you on the shortlist</h2>
+  <p>Data centers site around five constraints, in roughly this order:</p>
+  <ol>
+    <li><strong>Firm power</strong> — 50 to 500+ MW available on a
+    utility that will interconnect this decade, not next.</li>
+    <li><strong>Fiber</strong> — dense, redundant, low-latency backbone
+    within reach.</li>
+    <li><strong>Land</strong> — flat, cheap, out of flood plains, in
+    an industrial or industrial-adjacent zone.</li>
+    <li><strong>Water</strong> — reliable municipal or well supply, or
+    a permit path to it.</li>
+    <li><strong>Speed of approval</strong> — a jurisdiction that will
+    say yes on the developer's schedule.</li>
+  </ol>
+  <p>Tax abatements sit <em>below</em> all five. They shape the last mile
+  of the decision, not the shortlist. The team on the other side of the
+  table has already spent months of siting analysis to conclude yours is
+  one of the very few parcels that clears the technical bars. That
+  analysis is a sunk cost the developer doesn't want to redo.</p>
+</section>
+
+<section>
+  <h2>The revenue left on the table</h2>
+  <p>Because officials treat the abatement offer as an all-or-nothing
+  question, the negotiation collapses into <em>whether</em> to give it
+  rather than <em>how much</em>. A different starting question changes
+  the outcome:</p>
+  <div class="note info"><p><strong>Start here:</strong> what's the
+  full public value of this site to the developer, and what fraction of
+  that value is the community capturing?</p></div>
+  <p>The gap between what a hyperscaler is willing to pay for a 200 MW
+  parcel and what it usually ends up paying — after abatements — is the
+  opportunity cost. Loudoun County, Virginia is the counter-example that
+  proves the frame: by declining the standard abatement package, its
+  data-center property taxes now fund roughly a third of the county
+  budget while keeping residential rates among the lowest in the state.</p>
+  <p>A tax break is not a one-line item. It is one line in a much longer
+  ledger the community rarely sees at once.</p>
+</section>
+
+<section>
+  <h2>The full menu of giveaways</h2>
+  <p>By the time a project is approved, the same community has typically
+  handed over some combination of:</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Local &amp; state</h3>
+      <ul>
+        <li>Property-tax abatements (often 10–20 years)</li>
+        <li>Equipment / personal-property tax exemptions</li>
+        <li>Sales-tax exemptions on servers and networking gear</li>
+        <li>Data-center-specific sales-tax carve-outs on electricity</li>
+        <li>Fee waivers on permits, impact fees, connection charges</li>
+        <li>Publicly funded road, water, and sewer extensions</li>
+        <li>Enterprise-zone or opportunity-zone stacking</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Utility &amp; federal</h3>
+      <ul>
+        <li>Large-load tariffs with grid-upgrade costs socialized onto
+        residential ratepayers</li>
+        <li>Transmission built for one tenant and placed in the general
+        rate base</li>
+        <li>Federal investment tax credits on on-site renewables and storage</li>
+        <li>Accelerated depreciation (MACRS) on server infrastructure</li>
+        <li>Federal Opportunity Zone capital-gains deferral, where applicable</li>
+      </ul>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:12px">Individually each line looks
+  modest. Stacked, a single hyperscale campus can extract
+  <strong>billions of dollars</strong> in combined public support over
+  its lifetime — from some of the most profitable companies in the world.</p>
+</section>
+
+<section>
+  <h2>The right test</h2>
+  <p>Before approving the next package, the question is not <em>does
+  this attract the project?</em> The project is already here. The
+  question is:</p>
+  <blockquote style="border-left:3px solid var(--teal);margin:16px 0;
+   padding:8px 16px;font-size:17px;color:var(--ink)">
+    Does this deal serve the public interest — or is it padding the
+    profits of some of the world's wealthiest corporations at the
+    community's expense?
+  </blockquote>
+  <p>The answer depends on the numbers, not the rhetoric. Every hyperscaler
+  publishes its revenue. Compare it to the value of the package on the
+  table. If the ratio doesn't make sense on that math, it's not a good
+  deal — no matter how many jobs are in the press release.</p>
+</section>
+
+<section>
+  <h2>What to do with this at your next hearing</h2>
+  <ol>
+    <li>Ask the developer, on the record, for its
+    <strong>own siting analysis</strong> — the ranked list of alternative
+    parcels considered and the reasons each was scored below yours.
+    They rarely produce it. That refusal is itself the answer.</li>
+    <li>Ask your assessor to produce the <strong>full stacked value</strong>
+    of every subsidy line — local, state, utility, and federal — over
+    the life of the abatement. Insist on a single dollar figure.</li>
+    <li>Ask the developer to identify <strong>which subsidy lines it
+    would walk away over</strong>. If the answer is "all of them,"
+    the bluff is exposed. If the answer is specific, you know what's
+    negotiable.</li>
+    <li>Bring the <a href="case-studies.html">case-studies</a> page.
+    Loudoun County declined abatements and still hosts more data
+    centers than any jurisdiction on earth. Precedent matters.</li>
+    <li>Use the <a href="cba-clauses.html">CBA clause library</a> to
+    trade specific tax concessions for specific written commitments,
+    not soft promises.</li>
+  </ol>
+</section>
+
+<section>
+  <div class="note good"><p><strong>The bottom line:</strong> local
+  officials rarely have leverage this concrete over Fortune-100 companies.
+  A data center at your door is proof you already have it. Every subsidy
+  line the community gives away without asking is money left on the
+  table — from a counterparty whose next-best alternative is almost
+  always worse than yours.</p></div>
+  <p><a class="btn" href="{APP_URL}">Generate a meeting brief with these questions pre-loaded &rarr;</a>
+  <a class="btn ghost" href="hearing-questions.html">Full hearing checklist</a></p>
+</section>
+"""
+    return page(
+        "Tax breaks & the opportunity cost — AI GridWatch",
+        "\"We'll build somewhere else\" is almost always a bluff. What communities are actually leaving on the table when they hand a data center a subsidy package.",
+        body, f"{SITE_URL}/tax-breaks",
+        jsonld=_breadcrumb(
+            ("Home", SITE_URL),
+            ("Tax breaks", f"{SITE_URL}/tax-breaks")))
 
 
 def build_about():
@@ -5911,6 +6076,7 @@ def main():
     (WEB / "hearing-questions.html").write_text(
         build_hearing_questions(), encoding="utf-8")
     (WEB / "glossary.html").write_text(build_glossary(), encoding="utf-8")
+    (WEB / "tax-breaks.html").write_text(build_tax_breaks(), encoding="utf-8")
     (WEB / "states" / "index.html").write_text(
         build_states_index(), encoding="utf-8")
 
@@ -5950,7 +6116,7 @@ def main():
              "learn", "puc", "executives", "about", "search", "dividend",
              "data-centers", "environment", "methodology", "studies",
              "cba-clauses", "officials", "consulting", "case-studies",
-             "hearing-questions", "glossary",
+             "hearing-questions", "glossary", "tax-breaks",
              "companies/", "states/", "blog/", "news/"]
     paths.extend(f"companies/{h['slug']}" for h in _HYPERSCALERS)
     paths.extend(f"companies/{h['slug']}" for h in _OPERATORS)

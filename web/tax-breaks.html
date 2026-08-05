@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b1220">
-<title>Microsoft environmental scorecard — AI GridWatch</title>
-<meta name="description" content="Environmental data for Microsoft: 29.8 TWh, PUE 1.18, water and carbon metrics from FY2025.">
-<link rel="canonical" href="https://aigridwatch.com/companies/microsoft">
+<title>Tax breaks &amp; the opportunity cost — AI GridWatch</title>
+<meta name="description" content="&quot;We&#x27;ll build somewhere else&quot; is almost always a bluff. What communities are actually leaving on the table when they hand a data center a subsidy package.">
+<link rel="canonical" href="https://aigridwatch.com/tax-breaks">
 <link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
       href="https://aigridwatch.com/blog/feed.xml">
-<meta property="og:title" content="Microsoft environmental scorecard — AI GridWatch">
-<meta property="og:description" content="Environmental data for Microsoft: 29.8 TWh, PUE 1.18, water and carbon metrics from FY2025.">
+<meta property="og:title" content="Tax breaks &amp; the opportunity cost — AI GridWatch">
+<meta property="og:description" content="&quot;We&#x27;ll build somewhere else&quot; is almost always a bluff. What communities are actually leaving on the table when they hand a data center a subsidy package.">
 <meta property="og:type" content="website">
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Companies", "item": "https://aigridwatch.com/companies/"}, {"@type": "ListItem", "position": 3, "name": "Microsoft", "item": "https://aigridwatch.com/companies/microsoft"}]}</script>
-<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Tax breaks", "item": "https://aigridwatch.com/tax-breaks"}]}</script>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <style>
 :root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
         --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
@@ -180,6 +180,12 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .badge-proposed { background:#713f12; color:#fde68a; }
 .badge-rejected { background:#7f1d1d; color:#fca5a5; }
 .badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.badge-expired { background:#374151; color:#d1d5db; }
+.badge-rescinded { background:#4c1d95; color:#c4b5fd; }
+.badge-note { font-size:11px; font-weight:600; color:var(--muted);
+              display:block; margin-top:3px; }
+.unverified { font-size:12px; color:#fca5a5; font-weight:600; }
+.verified-on { font-size:12px; color:var(--muted); white-space:nowrap; }
 .outcome { border-left:3px solid var(--teal); padding:10px 14px;
            margin:10px 0; }
 .outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
@@ -237,85 +243,197 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
 <nav>
-  <a href="../index.html"><img src="../assets/logo.svg" alt="AI GridWatch"></a>
+  <a href="index.html"><img src="assets/logo.svg" alt="AI GridWatch"></a>
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
   <div class="nav-links">
-    <a href="../index.html">Home</a>
-    <a href="../states/index.html">Your state</a>
-    <a href="../case-studies.html">Case studies</a>
-    <a href="../cba-clauses.html">Clauses</a>
-    <a href="../tax-breaks.html">Tax breaks</a>
-    <a href="../hearing-questions.html">Hearing prep</a>
-    <a href="../health-risks.html">Health risks</a>
-    <a href="../moratoriums.html">Moratoriums</a>
-    <a href="../impact.html">Calculator</a>
-    <a href="../bills.html">Your bill</a>
-    <a href="../outlook.html">Outlook</a>
-    <a href="../learn.html">Learn</a>
-    <a href="../puc.html">PUCs</a>
-    <a href="../data-centers.html">Data centers</a>
-    <a href="../environment.html">Environment</a>
-    <a href="../companies/index.html" aria-current="page">Companies</a>
-    <a href="../blog/index.html">Blog</a>
-    <a href="../news/index.html">News</a>
+    <a href="index.html">Home</a>
+    <a href="states/index.html">Your state</a>
+    <a href="case-studies.html">Case studies</a>
+    <a href="cba-clauses.html">Clauses</a>
+    <a href="tax-breaks.html" aria-current="page">Tax breaks</a>
+    <a href="hearing-questions.html">Hearing prep</a>
+    <a href="health-risks.html">Health risks</a>
+    <a href="moratoriums.html">Moratoriums</a>
+    <a href="impact.html">Calculator</a>
+    <a href="bills.html">Your bill</a>
+    <a href="outlook.html">Outlook</a>
+    <a href="learn.html">Learn</a>
+    <a href="puc.html">PUCs</a>
+    <a href="data-centers.html">Data centers</a>
+    <a href="environment.html">Environment</a>
+    <a href="companies/index.html">Companies</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="news/index.html">News</a>
   </div>
   <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
 </nav>
 <main id="main">
 
 <header>
-  <div class="kicker">Corporate scorecard</div>
-  <h1>Microsoft environmental profile</h1>
-  <p class="sub">Key environmental metrics from the FY2025
-  sustainability report. Numbers communities cite at hearings.</p>
+  <div class="kicker">The opportunity cost</div>
+  <h1>"We'll build somewhere else." No, they won't.</h1>
+  <p class="sub">The single most effective negotiating line a data-center
+  developer uses is a bluff. Here's how to call it — and what stops being
+  free once you do.</p>
 </header>
-<div class="stats">
-  <div class="stat"><b>29.8 TWh (est.)</b><span>data center electricity</span></div>
-  <div class="stat"><b>1.18</b><span>fleet PUE</span></div>
-  <div class="stat"><b>9.7M</b><span>Scope 2 (location) tCO2e</span></div>
-  <div class="stat"><b>6,441</b><span>water consumption (Mgal)</span></div>
-</div>
+
 <section>
-  <h2>Key metrics</h2>
-  <table>
-    <tr><td>Scope 2 (market-based)</td><td><strong>2.7M tCO2e</strong></td></tr>
-    <tr><td>Renewable / CFE claim</td><td><strong>100% renewable</strong></td></tr>
-    <tr><td>Water stewardship</td><td><strong>37% replenished</strong></td></tr>
-    <tr><td>Total emissions</td><td><strong>20.3 Mt CO2e</strong></td></tr>
-<tr><td>YoY emissions growth</td><td><strong>+25%</strong></td></tr>
-  </table>
-  <div class="ask" style="margin-top:18px"><strong>Methodology note:</strong> Total emissions 20.29 Mt (+25% YoY), driven by data center build-out. Market-based Scope 2 jumped 0.26 → 2.7 Mt after Microsoft stopped counting non-additional unbundled RECs — a transparency win that reveals real grid impact. Electricity +24% YoY; 40 GW renewable portfolio across 26 countries. DC TWh and location-based Scope 2 are estimates from reported growth rates; water is FY2024.</div>
+  <h2>The threat</h2>
+  <p>It arrives in every hearing, in almost the same words: <em>if you
+  don't grant this abatement, this rate, this exemption, we'll build
+  somewhere else.</em> It's delivered with a folder of comparative site
+  data and the quiet suggestion that the neighboring county is more
+  reasonable.</p>
+  <div class="note bad"><p><strong>The threat is almost always a
+  bluff.</strong> A company only reaches your hearing after it has already
+  decided your site is competitive. Cheap and abundant power, a reliable
+  grid, fiber trunks, tens of acres of flat land, water — the shortlist
+  of parcels that clear all five is short, and yours is on it.</p></div>
 </section>
-<section><h2>What communities have won from Microsoft</h2><p class="muted" style="margin-bottom:10px">The most willing of the hyperscalers to accept transparency and design conditions: it has publicly committed new builds to zero-water evaporative cooling designs and has paid for its own water treatment where municipal systems pushed back. Use its published sustainability commitments as the floor of your ask, not the ceiling.</p><table><tr><th>Where</th><th>Year</th><th>What</th></tr><tr><td>Quincy, WA</td><td>2010s</td><td>Funded and built water treatment/reuse capacity after the city objected to cooling discharge loads on the municipal system.</td></tr>
-<tr><td>San Antonio, TX</td><td>ongoing</td><td>Runs cooling on recycled municipal wastewater instead of potable supply.</td></tr>
-<tr><td>New builds (announced)</td><td>2024</td><td>Committed next-generation data center designs to zero water for cooling — cite this when a developer claims evaporative water draw is unavoidable.</td></tr></table></section>
+
 <section>
-  <h2>What this means for your community</h2>
-  <p>The gap between <strong>market-based</strong> and
-  <strong>location-based</strong> Scope 2 emissions shows how much carbon
-  the grid actually emits vs. what the company claims after buying renewable
-  energy certificates (RECs). A large gap means the facility runs on fossil
-  power but papers it over with certificates — your community breathes the
-  actual emissions.</p>
-  <p><a class="btn" href="https://aigridtracker.streamlit.app">Run the numbers for your community &rarr;</a>
-  <a class="btn ghost" href="../companies/index.html">All scorecards</a></p>
+  <h2>What actually put you on the shortlist</h2>
+  <p>Data centers site around five constraints, in roughly this order:</p>
+  <ol>
+    <li><strong>Firm power</strong> — 50 to 500+ MW available on a
+    utility that will interconnect this decade, not next.</li>
+    <li><strong>Fiber</strong> — dense, redundant, low-latency backbone
+    within reach.</li>
+    <li><strong>Land</strong> — flat, cheap, out of flood plains, in
+    an industrial or industrial-adjacent zone.</li>
+    <li><strong>Water</strong> — reliable municipal or well supply, or
+    a permit path to it.</li>
+    <li><strong>Speed of approval</strong> — a jurisdiction that will
+    say yes on the developer's schedule.</li>
+  </ol>
+  <p>Tax abatements sit <em>below</em> all five. They shape the last mile
+  of the decision, not the shortlist. The team on the other side of the
+  table has already spent months of siting analysis to conclude yours is
+  one of the very few parcels that clears the technical bars. That
+  analysis is a sunk cost the developer doesn't want to redo.</p>
+</section>
+
+<section>
+  <h2>The revenue left on the table</h2>
+  <p>Because officials treat the abatement offer as an all-or-nothing
+  question, the negotiation collapses into <em>whether</em> to give it
+  rather than <em>how much</em>. A different starting question changes
+  the outcome:</p>
+  <div class="note info"><p><strong>Start here:</strong> what's the
+  full public value of this site to the developer, and what fraction of
+  that value is the community capturing?</p></div>
+  <p>The gap between what a hyperscaler is willing to pay for a 200 MW
+  parcel and what it usually ends up paying — after abatements — is the
+  opportunity cost. Loudoun County, Virginia is the counter-example that
+  proves the frame: by declining the standard abatement package, its
+  data-center property taxes now fund roughly a third of the county
+  budget while keeping residential rates among the lowest in the state.</p>
+  <p>A tax break is not a one-line item. It is one line in a much longer
+  ledger the community rarely sees at once.</p>
+</section>
+
+<section>
+  <h2>The full menu of giveaways</h2>
+  <p>By the time a project is approved, the same community has typically
+  handed over some combination of:</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Local &amp; state</h3>
+      <ul>
+        <li>Property-tax abatements (often 10–20 years)</li>
+        <li>Equipment / personal-property tax exemptions</li>
+        <li>Sales-tax exemptions on servers and networking gear</li>
+        <li>Data-center-specific sales-tax carve-outs on electricity</li>
+        <li>Fee waivers on permits, impact fees, connection charges</li>
+        <li>Publicly funded road, water, and sewer extensions</li>
+        <li>Enterprise-zone or opportunity-zone stacking</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Utility &amp; federal</h3>
+      <ul>
+        <li>Large-load tariffs with grid-upgrade costs socialized onto
+        residential ratepayers</li>
+        <li>Transmission built for one tenant and placed in the general
+        rate base</li>
+        <li>Federal investment tax credits on on-site renewables and storage</li>
+        <li>Accelerated depreciation (MACRS) on server infrastructure</li>
+        <li>Federal Opportunity Zone capital-gains deferral, where applicable</li>
+      </ul>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:12px">Individually each line looks
+  modest. Stacked, a single hyperscale campus can extract
+  <strong>billions of dollars</strong> in combined public support over
+  its lifetime — from some of the most profitable companies in the world.</p>
+</section>
+
+<section>
+  <h2>The right test</h2>
+  <p>Before approving the next package, the question is not <em>does
+  this attract the project?</em> The project is already here. The
+  question is:</p>
+  <blockquote style="border-left:3px solid var(--teal);margin:16px 0;
+   padding:8px 16px;font-size:17px;color:var(--ink)">
+    Does this deal serve the public interest — or is it padding the
+    profits of some of the world's wealthiest corporations at the
+    community's expense?
+  </blockquote>
+  <p>The answer depends on the numbers, not the rhetoric. Every hyperscaler
+  publishes its revenue. Compare it to the value of the package on the
+  table. If the ratio doesn't make sense on that math, it's not a good
+  deal — no matter how many jobs are in the press release.</p>
+</section>
+
+<section>
+  <h2>What to do with this at your next hearing</h2>
+  <ol>
+    <li>Ask the developer, on the record, for its
+    <strong>own siting analysis</strong> — the ranked list of alternative
+    parcels considered and the reasons each was scored below yours.
+    They rarely produce it. That refusal is itself the answer.</li>
+    <li>Ask your assessor to produce the <strong>full stacked value</strong>
+    of every subsidy line — local, state, utility, and federal — over
+    the life of the abatement. Insist on a single dollar figure.</li>
+    <li>Ask the developer to identify <strong>which subsidy lines it
+    would walk away over</strong>. If the answer is "all of them,"
+    the bluff is exposed. If the answer is specific, you know what's
+    negotiable.</li>
+    <li>Bring the <a href="case-studies.html">case-studies</a> page.
+    Loudoun County declined abatements and still hosts more data
+    centers than any jurisdiction on earth. Precedent matters.</li>
+    <li>Use the <a href="cba-clauses.html">CBA clause library</a> to
+    trade specific tax concessions for specific written commitments,
+    not soft promises.</li>
+  </ol>
+</section>
+
+<section>
+  <div class="note good"><p><strong>The bottom line:</strong> local
+  officials rarely have leverage this concrete over Fortune-100 companies.
+  A data center at your door is proof you already have it. Every subsidy
+  line the community gives away without asking is money left on the
+  table — from a counterparty whose next-best alternative is almost
+  always worse than yours.</p></div>
+  <p><a class="btn" href="https://aigridtracker.streamlit.app">Generate a meeting brief with these questions pre-loaded &rarr;</a>
+  <a class="btn ghost" href="hearing-questions.html">Full hearing checklist</a></p>
 </section>
 
 </main>
 <footer>
   <p style="margin-bottom:8px"><strong>Reference</strong> ·
-    <a href="../methodology.html">Methodology</a> ·
-    <a href="../studies.html">State studies</a> ·
-    <a href="../officials.html">Officials directory</a> ·
-    <a href="../glossary.html">Glossary</a> ·
-    <a href="../tax-breaks.html">Tax breaks</a> ·
-    <a href="../dividend.html">Data dividend</a></p>
+    <a href="methodology.html">Methodology</a> ·
+    <a href="studies.html">State studies</a> ·
+    <a href="officials.html">Officials directory</a> ·
+    <a href="glossary.html">Glossary</a> ·
+    <a href="tax-breaks.html">Tax breaks</a> ·
+    <a href="dividend.html">Data dividend</a></p>
   <p style="margin-bottom:8px"><strong>Site</strong> ·
-    <a href="../about.html">About</a> ·
-    <a href="../consulting.html">Consulting</a> ·
-    <a href="../search.html">Search</a></p>
+    <a href="about.html">About</a> ·
+    <a href="consulting.html">Consulting</a> ·
+    <a href="search.html">Search</a></p>
   <p>AI GridWatch — community energy intelligence. Planning estimates, not
   engineering studies; every number is sourced in the
   <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.</p>
