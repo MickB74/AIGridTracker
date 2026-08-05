@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-05T23:17:14.622996+00:00",
+  "fetched_at": "2026-08-05T23:22:01.718760+00:00",
   "items": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -88,7 +88,7 @@
     },
     {
       "title": "Trump\u2019s Push for More A.I. Data Centers Will Mean Major Air Pollution",
-      "source": "The New York Times",
+      "source": "nytimes.com",
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQem5tczhQSXlXWkQyRU1XaTYyUmRaUElYZzlCbmtXRGI4WVgySklmZ2ctQ0s1UWJ2N1MzTU1xX1phbVdlTDIxM2NmcDVvdWpCT0EwcXFvZDlJMjJhdDBZaUpBODg4RnlnMWc3NWZaYXJYWi10VmhiNlU4MXVadlNXZmVZcHFXY3FQb1FHdjl0QQ?oc=5",
       "published": "Wed, 05 Aug 2026 21:36:58 GMT",
       "published_iso": "2026-08-05T21:36:58+00:00",
@@ -237,15 +237,6 @@
       "states": []
     },
     {
-      "title": "Westlake approves 87-acre data center with added conditions",
-      "source": "NBC 5 Dallas-Fort Worth",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUzg1N280WmhkVXVEZFVoa2gxUDFEbHE5cmhZM2Vtb0NiNEt3dkxvZ3hvWTFJcHNRajVTeHZINkw2Ui1lM2d6M2xTSTdvUHVEeTU4RU9WenZoQ3hCNU54Q215WjVOZlV5a2VGOGhPdkVzZTN5bVVtaGRscFR4eTAwZEFSMEJTdmdheUhPOXhhV09XakFCVFVZZ3UyNXBWbDdfRWpfSdIBrAFBVV95cUxObWtrMDhpbkJGeWV1QXZsRHJ5MTVFMWtIV2tQYXF3WVR3MGtSWW9qTnYxWllnYkZiU25MNFRYUTFsWkhqWGk0UzE4S2tPR1l4U0ZpWTBjZFRnWkR2ZnVuMVFvbGdiTVJuWlI1SVY5X3pCUHdmNFNFeGVNc05xQ2RhdU5iV1JjbnlnajFRc2FqaHdjZTl6bHJXWjRvOTZHcnhuZkRnM1FfLTlINzFm?oc=5",
-      "published": "Wed, 05 Aug 2026 03:00:57 GMT",
-      "published_iso": "2026-08-05T03:00:57+00:00",
-      "age_days": 0,
-      "states": []
-    },
-    {
       "title": "How Aurora and DeKalb are dealing with data centers",
       "source": "WGLT",
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNVEdDRmloU0RveE4xbU80VlJUYll4MHp4MHVpZEc4SGduNm1hNG41d3hOODdGWFZua3JDRE4zVjZwR3RyMFEwY3REcTY0czdwRldQcXRJNk90XzNjdGhTVnRBVExTa2M1ZURuZnVUc2Q2LS0xTFJ2WWN2Wm1qbWhsQjczRzh5YkNrNVQ4QWxSWE92eWQ2N2RDbnBUM2RuMWk1UzE2d1lLRQ?oc=5",
@@ -261,6 +252,15 @@
       "published": "Tue, 04 Aug 2026 03:41:48 GMT",
       "published_iso": "2026-08-04T03:41:48+00:00",
       "age_days": 1,
+      "states": []
+    },
+    {
+      "title": "Westlake approves 87-acre data center with added conditions",
+      "source": "NBC 5 Dallas-Fort Worth",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUzg1N280WmhkVXVEZFVoa2gxUDFEbHE5cmhZM2Vtb0NiNEt3dkxvZ3hvWTFJcHNRajVTeHZINkw2Ui1lM2d6M2xTSTdvUHVEeTU4RU9WenZoQ3hCNU54Q215WjVOZlV5a2VGOGhPdkVzZTN5bVVtaGRscFR4eTAwZEFSMEJTdmdheUhPOXhhV09XakFCVFVZZ3UyNXBWbDdfRWpfSdIBrAFBVV95cUxObWtrMDhpbkJGeWV1QXZsRHJ5MTVFMWtIV2tQYXF3WVR3MGtSWW9qTnYxWllnYkZiU25MNFRYUTFsWkhqWGk0UzE4S2tPR1l4U0ZpWTBjZFRnWkR2ZnVuMVFvbGdiTVJuWlI1SVY5X3pCUHdmNFNFeGVNc05xQ2RhdU5iV1JjbnlnajFRc2FqaHdjZTl6bHJXWjRvOTZHcnhuZkRnM1FfLTlINzFm?oc=5",
+      "published": "Wed, 05 Aug 2026 03:00:57 GMT",
+      "published_iso": "2026-08-05T03:00:57+00:00",
+      "age_days": 0,
       "states": []
     },
     {
@@ -721,16 +721,6 @@
         "theme": "Community opposition & moratoria"
       },
       {
-        "title": "Davie County leaders consider data center moratorium as residents voice opposition - WXII",
-        "source": "WXII",
-        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQXzRybWkyX3IxX2hfdzg2YTZndmRidzNlc05IUHBscmo4aTBUNWNFVVV6SUJhR2hMQ1N1d0NISS1vMnVhay00MVlLSlRCdnh0MjUwbkJXMkVYVjlsejlYYldkUm1yQllVWk5qdGJaaVFUSFpzeEdpV2NJR3o4LWxfeGVRTzlDQUxRMWdN?oc=5",
-        "published": "Mon, 06 Jul 2026 07:00:00 GMT",
-        "published_iso": "2026-07-06T07:00:00+00:00",
-        "age_days": 30,
-        "states": [],
-        "theme": "Community opposition & moratoria"
-      },
-      {
         "title": "Superior joins growing number of Wisconsin communities to pass data center moratorium",
         "source": "WPR",
         "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQOS1aeUlqYVNIaVpmcHVOWTFGUGpKR2prNUNSWFFsXzdUTlNSczA4NGMxR2pfbmVISVBOQWFoMnZfT1NHNm5mZ0xyYjRRdzMwVmx4SXJ1M0RPNmtQS3pzeXo3ajk1ZEhmaG1fa1VudXRfTm9icFpSOHZ1Wmh3ZXY1dGo2ZkZDRFFFVkw4dzN6STh3cG1RajF2UVIzZWpadEJudXpDYW9vQVdsMGVvLXF3?oc=5",
@@ -744,7 +734,7 @@
       },
       {
         "title": "Amid stark opposition, data center developers think twice about Florida",
-        "source": "Politico",
+        "source": "politico.com",
         "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZndXZERja0Z1QkR3ZG0tSkpfaTdjbkp1VUZONGhKVXY0eVJsdEUtLVJZaDd6VzJTTWhZU3J3X3lkTWEyeHdRMGdxSVYxc21CM0pVNUFKUTgwTG9XN3BuREZzRm5lQUdIVkh3N1I1VTlTV2xRN2YwVUZzWkVXTTVRRHVPcG9DcjJ0eGxoYWxZRHd6cTE2U0pv?oc=5",
         "published": "Mon, 29 Jun 2026 07:00:00 GMT",
         "published_iso": "2026-06-29T07:00:00+00:00",
@@ -752,6 +742,16 @@
         "states": [
           "Florida"
         ],
+        "theme": "Community opposition & moratoria"
+      },
+      {
+        "title": "Davie County leaders consider data center moratorium as residents voice opposition - WXII",
+        "source": "WXII",
+        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQXzRybWkyX3IxX2hfdzg2YTZndmRidzNlc05IUHBscmo4aTBUNWNFVVV6SUJhR2hMQ1N1d0NISS1vMnVhay00MVlLSlRCdnh0MjUwbkJXMkVYVjlsejlYYldkUm1yQllVWk5qdGJaaVFUSFpzeEdpV2NJR3o4LWxfeGVRTzlDQUxRMWdN?oc=5",
+        "published": "Mon, 06 Jul 2026 07:00:00 GMT",
+        "published_iso": "2026-07-06T07:00:00+00:00",
+        "age_days": 30,
+        "states": [],
         "theme": "Community opposition & moratoria"
       },
       {
@@ -765,12 +765,12 @@
         "theme": "Community opposition & moratoria"
       },
       {
-        "title": "Taylor County Commission votes down data center moratorium, residents wonder what comes next",
-        "source": "WCTV",
-        "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOaUxBOTNqOGNoR1Myam10WXUwcXc0VVQxSkxTS1ZxSGtZTHRhaWNtcDE4NlF2dk9NMWZlVlFXZU9WTUxFOXlpZDRjX3NzNC1PUFdPYUo3aXZoZzloQ3VwYTEtX2t2emtRRVNaSGYtM2pEM2taQ21DcEgtTG5aY0NEWUNDaGxxbC1kUEFjT0RYbWlReUVMcUlfNHVwMjJxSjE5aGhJRTVkcUVxUHNlaUlOZTZLdU9SR3JMX3M4WVRFbGvSAdQBQVVfeXFMTWhBbTBkX200RDZOTTBQVG5pTG4wenNfNWs1bWJhc0liWXpzSUFfZWhqejVFa3EtR2VzSjlCMjBPcFRIWnBsSkc2OEs1R0FXMG4tQ2dQQzdyR0cwYjVleTFCYVNoak00azVnY3B0bGlTTk9pWF9FYlFTNDNXdnJ2NzktTzdyYlZ5YVhRRkd0a3RkaUhPcE1TTWd4cC03U1VLekNoWGd6Z0RtVU50Q3E3NGp4aW5pVkVRa0dOSkl3Q3NhSGVpVGFlckN5ZFpaR3JBbFprZko?oc=5",
-        "published": "Mon, 06 Jul 2026 07:00:00 GMT",
-        "published_iso": "2026-07-06T07:00:00+00:00",
-        "age_days": 30,
+        "title": "Data center moratorium fever for NC local governments",
+        "source": "Carolina Public Press",
+        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNlNSdEw1NlNFa2NjNFdERUpVRTR3NzI0bEVlQ29NRThsSmpKaWp0OFBkb2VaYnpxbjh1WWp4ZFFGdmI4RzBhdmNQdllISWhTcVFfQ1pwSlF2UWVFLTYtcmhraFhHSEZVT3ZtNURReWlDOWNQQ2syMzluTWNzUDJWclFVMl83QTREamp3YzBFWTJxMTFWLXpjZA?oc=5",
+        "published": "Thu, 11 Jun 2026 07:00:00 GMT",
+        "published_iso": "2026-06-11T07:00:00+00:00",
+        "age_days": 55,
         "states": [],
         "theme": "Community opposition & moratoria"
       }
@@ -1358,7 +1358,7 @@
       },
       {
         "title": "Arizona city rejects data center after AI lobbying push",
-        "source": "Politico",
+        "source": "politico.com",
         "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPV2hFTTNRa0QyTk1hbjFQOWhuVXFNUnJFUDJvQWtrdEF0c09TdW41SDYyN0pjdkFDQWJtQlkwaFhyUFZ0WVY4VnBzWk9mME9jc3AxS01IU0wwcW5Bc0dCeHYwaHJ5T0o1ZUZuTG9tMVItNzl2c0ZwR2ltWFp2Q0syM3htYlFsMmdqSTh5dGxBdDFob3dsZ3ZMQkcyekJiSm1KRlV0ZGxTYjI?oc=5",
         "published": "Fri, 12 Dec 2025 08:00:00 GMT",
         "published_iso": "2025-12-12T08:00:00+00:00",
@@ -1736,7 +1736,7 @@
       },
       {
         "title": "Pritzker hits pause on data center subsidies in Illinois",
-        "source": "Politico",
+        "source": "politico.com",
         "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPek1KcG4tMFFvMjBzXzdoRDUyTDdEOWdVRm5xd0hnMmg1TlZYTHZ5QU5sZHFRbFBaZEhLblZxTHpHLTZsRFIyS1ljSFBnSkhVWGZxTlZvN3hESkhqUkRUMGhDNlBaRFJVamxyUWxndVQzRUkyWDFYQjRndktFbjJydjRYdkFEaUE?oc=5",
         "published": "Fri, 05 Jun 2026 07:00:00 GMT",
         "published_iso": "2026-06-05T07:00:00+00:00",
