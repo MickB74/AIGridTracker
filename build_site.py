@@ -91,7 +91,7 @@ DCMAP_BASE = "https://www.datacentermap.com/usa"
 # NOT added to src/site_builder.py campaign sites: those are residents' own
 # pages hosted on their own accounts, and putting our analytics on them
 # would be surveillance, not product feedback.
-GC_URL = os.environ.get("GC_URL", "https://aigridwatch.goatcounter.com/count")
+GC_URL = os.environ.get("GC_URL", "https://mjb.goatcounter.com/count")
 
 _ANALYTICS = """
 <script data-goatcounter="__GC_URL__" async src="//gc.zgo.at/count.js"></script>
