@@ -3954,6 +3954,56 @@ LOCAL_BODIES = [
      "phone": "703-792-4311", "email": "",
      "website": "https://www.pwcva.gov/department/board-county-supervisors/contact-us",
      "as_of": "2026-07-26", "source": "https://www.pwcva.gov/department/board-county-supervisors/contact-us"},
+
+    {"locality": "San Marcos", "state": "TX",
+     "body": "City Council",
+     "decides": "Ordinances, resolutions, the annual budget and the city tax "
+                "rate — and, unusually, the city's own water, electric and "
+                "wastewater rates. San Marcos was the first Texas city to ban "
+                "data centers.",
+     "meets": "1st and 3rd Tuesday monthly — 3:00 p.m. work/executive session, "
+              "6:00 p.m. regular meeting",
+     "where": "City Council Chambers, City Hall, 630 E Hopkins, San Marcos, TX 78666",
+     "agenda_url": "https://www.sanmarcostx.gov/AgendaCenter/City-Council-4",
+     "comment_process": "Regular meetings include citizen comment. The sign-up "
+                        "process and rules are on the city's Citizen Comments "
+                        "page and the Legistar agenda portal "
+                        "(san-marcos-tx.legistar.com).",
+     "phone": "512-393-8000", "email": "councilmembers@sanmarcostx.gov",
+     "website": "https://www.sanmarcostx.gov/149/City-Council",
+     "as_of": "2026-08-05", "source": "https://www.sanmarcostx.gov/149/City-Council"},
+
+    {"locality": "Chesterfield County", "state": "VA",
+     "body": "Board of Supervisors",
+     "decides": "Rezonings, conditional use permits and comprehensive plan "
+                "amendments across five magisterial districts — the body that "
+                "rules on data center rezonings in a county seeing heavy data "
+                "center interest.",
+     "meets": "See the county's published 2026 meeting schedule (Board Meetings page)",
+     "where": "Public Meeting Room, 10001 Iron Bridge Road, Chesterfield, VA 23831",
+     "agenda_url": "https://www.chesterfield.gov/244/Agendas-and-Minutes",
+     "comment_process": "Regular meetings include public comment periods; see "
+                        "the county's Public Comments page. Public hearing "
+                        "notices are posted for rezoning items.",
+     "phone": "804-748-1200", "email": "WilsonSu@chesterfield.gov",
+     "website": "https://www.chesterfield.gov/1218/Board-of-Supervisors",
+     "as_of": "2026-08-05", "source": "https://www.chesterfield.gov/1218/Board-of-Supervisors"},
+
+    {"locality": "Manatee County", "state": "FL",
+     "body": "Board of County Commissioners",
+     "decides": "Land use, rezonings and the county budget across five districts "
+                "plus two at-large seats. The District 1 seat is vacant (as of "
+                "Aug 2026). The county has advanced a data center moratorium.",
+     "meets": "Regular meeting the 25th of each month; Land Use meeting the 6th; "
+              "both 9:00 a.m.-5:00 p.m.",
+     "where": "Manatee County Administration Building, 1112 Manatee Ave West, "
+              "Bradenton, FL 34205",
+     "agenda_url": "https://agendaonline.mymanatee.org",
+     "comment_process": "Residents sign up through the county's 'Sign up to Speak "
+                        "at a Public Meeting' page; agendas are on Agenda Online.",
+     "phone": "", "email": "",
+     "website": "https://www.mymanatee.org/government/government-information/board-of-county-commissioners",
+     "as_of": "2026-08-05", "source": "https://www.mymanatee.org/government/government-information/board-of-county-commissioners"},
 ]
 LOCAL_BODIES_DF = pd.DataFrame(LOCAL_BODIES)
 
@@ -4094,5 +4144,87 @@ LOCAL_OFFICIALS = [
      "role": "Supervisor", "district": "Woodbridge", "email": "JLaCroix@pwcgov.org",
      "phone": "", "stance": "", "as_of": "2026-07-26",
      "source": "https://www.pwcva.gov/department/board-county-supervisors/contact-us"},
+
+    # San Marcos, TX — https://www.sanmarcostx.gov/149/City-Council
+    # Mayor + 6 at-large "Place" seats; the city publishes a shared council
+    # address (councilmembers@sanmarcostx.gov), not per-member emails.
+    {"locality": "San Marcos", "state": "TX", "body": "City Council",
+     "name": "Jane Hughson", "role": "Mayor", "district": "At-large",
+     "email": "", "phone": "", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.sanmarcostx.gov/149/City-Council"},
+    {"locality": "San Marcos", "state": "TX", "body": "City Council",
+     "name": "Matthew Mendoza", "role": "Council Member", "district": "Place 1",
+     "email": "", "phone": "", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.sanmarcostx.gov/149/City-Council"},
+    {"locality": "San Marcos", "state": "TX", "body": "City Council",
+     "name": "Josh Paselk", "role": "Council Member", "district": "Place 2",
+     "email": "", "phone": "", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.sanmarcostx.gov/149/City-Council"},
+    {"locality": "San Marcos", "state": "TX", "body": "City Council",
+     "name": "Alyssa Garza", "role": "Council Member", "district": "Place 3",
+     "email": "", "phone": "", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.sanmarcostx.gov/149/City-Council"},
+    {"locality": "San Marcos", "state": "TX", "body": "City Council",
+     "name": "Shane Scott", "role": "Council Member", "district": "Place 4",
+     "email": "", "phone": "", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.sanmarcostx.gov/149/City-Council"},
+    {"locality": "San Marcos", "state": "TX", "body": "City Council",
+     "name": "Lorenzo Gonzalez", "role": "Council Member", "district": "Place 5",
+     "email": "", "phone": "", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.sanmarcostx.gov/149/City-Council"},
+    {"locality": "San Marcos", "state": "TX", "body": "City Council",
+     "name": "Amanda Rodriguez", "role": "Council Member", "district": "Place 6",
+     "email": "", "phone": "", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.sanmarcostx.gov/149/City-Council"},
+
+    # Chesterfield County, VA — https://www.chesterfield.gov/1218/Board-of-Supervisors
+    # Five magisterial districts; only the general board line is published.
+    {"locality": "Chesterfield County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Mark S. Miller", "role": "Chair", "district": "Midlothian",
+     "email": "", "phone": "804-748-1200", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.chesterfield.gov/1218/Board-of-Supervisors"},
+    {"locality": "Chesterfield County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Kevin Carroll", "role": "Vice Chair", "district": "Matoaca",
+     "email": "", "phone": "804-748-1200", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.chesterfield.gov/1218/Board-of-Supervisors"},
+    {"locality": "Chesterfield County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Jim Ingle", "role": "Supervisor", "district": "Bermuda",
+     "email": "", "phone": "804-748-1200", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.chesterfield.gov/1218/Board-of-Supervisors"},
+    {"locality": "Chesterfield County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Jessica Schneider", "role": "Supervisor", "district": "Clover Hill",
+     "email": "", "phone": "804-748-1200", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.chesterfield.gov/1218/Board-of-Supervisors"},
+    {"locality": "Chesterfield County", "state": "VA", "body": "Board of Supervisors",
+     "name": "LeQuan M. Hylton", "role": "Supervisor", "district": "Dale",
+     "email": "", "phone": "804-748-1200", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.chesterfield.gov/1218/Board-of-Supervisors"},
+
+    # Manatee County, FL — https://www.mymanatee.org/government/government-information/board-of-county-commissioners
+    # Five districts + two at-large; District 1 vacant as of Aug 2026.
+    {"locality": "Manatee County", "state": "FL", "body": "Board of County Commissioners",
+     "name": "Amanda Ballard", "role": "Commissioner", "district": "District 2",
+     "email": "", "phone": "941-745-3702", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.mymanatee.org/government/government-information/board-of-county-commissioners"},
+    {"locality": "Manatee County", "state": "FL", "body": "Board of County Commissioners",
+     "name": "Tal Siddique", "role": "Chair", "district": "District 3",
+     "email": "", "phone": "", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.mymanatee.org/government/government-information/board-of-county-commissioners"},
+    {"locality": "Manatee County", "state": "FL", "body": "Board of County Commissioners",
+     "name": "Mike Rahn", "role": "Commissioner", "district": "District 4",
+     "email": "", "phone": "941-745-3713", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.mymanatee.org/government/government-information/board-of-county-commissioners"},
+    {"locality": "Manatee County", "state": "FL", "body": "Board of County Commissioners",
+     "name": "Dr. Bob McCann", "role": "Commissioner", "district": "District 5",
+     "email": "", "phone": "941-398-6758", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.mymanatee.org/government/government-information/board-of-county-commissioners"},
+    {"locality": "Manatee County", "state": "FL", "body": "Board of County Commissioners",
+     "name": "George Kruse", "role": "Commissioner", "district": "At-large",
+     "email": "", "phone": "941-745-3714", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.mymanatee.org/government/government-information/board-of-county-commissioners"},
+    {"locality": "Manatee County", "state": "FL", "body": "Board of County Commissioners",
+     "name": "Jason Bearden", "role": "Commissioner", "district": "At-large",
+     "email": "", "phone": "941-705-8709", "stance": "", "as_of": "2026-08-05",
+     "source": "https://www.mymanatee.org/government/government-information/board-of-county-commissioners"},
 ]
 LOCAL_OFFICIALS_DF = pd.DataFrame(LOCAL_OFFICIALS)
