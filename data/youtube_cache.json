@@ -1,6 +1,14 @@
 {
-  "fetched_at": "2026-08-06T01:05:45.657410+00:00",
+  "fetched_at": "2026-08-06T03:29:41.741157+00:00",
   "items": [
+    {
+      "title": "Cle Elum adopts emergency moratorium as $200M AI data center plan stirs concerns",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9aMXlBTU1RcUFFNHZUNVJXenNpTlBZZjBHTk5BYmFCZXRTUVBsek12cXRHYktqLW1xR0FlVS1Ma3IzdjlpUXk0ekZReGwzMGw4U0dSUUZn?oc=5",
+      "video_id": "",
+      "published_iso": "2026-08-06T00:56:38+00:00",
+      "states": []
+    },
     {
       "title": "Colorado town places 5-year moratorium on data centers",
       "source": "YouTube",
@@ -27,6 +35,14 @@
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE13SXBQd2U4bVQxb0ROYlMyaTBDVS12NHF3SDlBbjRXYzF5MWhBdWVCZ1lfM1Z3MGUzN2hPeWhLMExxOW1tVWtuQXY5NDdCWDlKcUNrczZn?oc=5",
       "video_id": "",
       "published_iso": "2026-08-05T22:40:19+00:00",
+      "states": []
+    },
+    {
+      "title": "Sanford City Council extends data center moratorium another 180 days",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE15SG1lSmZCLTdWeUVTaHNPNUNub0R6Tm1lYi1TMlJ2OFRpdU80MXZQMGk3UU9VZTljVFF2dEZBM19yUFB5VVI1SElMa1l4YlZaUGlqWkdB?oc=5",
+      "video_id": "",
+      "published_iso": "2026-08-05T20:19:57+00:00",
       "states": []
     },
     {
@@ -236,6 +252,16 @@
       "states": []
     },
     {
+      "title": "AI data centers in Michigan: Grid and building explainer",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBLY3hIR2RvYlJrOFBBQ2hQRTZuUTl1Wjg1NmJrYXpYa041aGV2TjJISWNRdFV2QmVPam9ldGU0WW9DNUJBUUxweUdpUWRKLXM0c005dnNn?oc=5",
+      "video_id": "",
+      "published_iso": "2026-07-30T20:01:21+00:00",
+      "states": [
+        "Michigan"
+      ]
+    },
+    {
       "title": "The Town That Wants a Data Center Next Door",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1ZFYwQ2Zfa0IwZW1HRmlMcmJpd01YMlp5WmhJYmdPd3FISndHNjlxSEQzdUUwUjVxckFrVHdWQ01YN2g3eUdSRXBIa04zaHhscW5EQkl3?oc=5",
@@ -257,14 +283,6 @@
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5adUJFSjVqY3hZOFRIcUZaNGVVVWMwYU9ZTXJjMHdpNTRsTWV0amxGY1M0dEVPLXVpWW9aVUJJRDRldGUxeGVIOEcwcVBiMXcycHBLVlln?oc=5",
       "video_id": "",
       "published_iso": "2026-07-29T20:07:28+00:00",
-      "states": []
-    },
-    {
-      "title": "Could data centers overload the power grid? Expert explains",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5Bamk1dTVFMjRfMnl3TWoxYUpLclpFYzB5ekJ2TS04MGxrOWlEc2JpTFZfREdQWk5wcWljbmhTVHNyVXhidVE5aXRxVGI0VUI2dVlXUkZR?oc=5",
-      "video_id": "",
-      "published_iso": "2026-07-29T00:54:08+00:00",
       "states": []
     },
     {
@@ -320,27 +338,11 @@
       ]
     },
     {
-      "title": "Erin Brockovich Is Taking On a New Issue: AI Data Centers | Amanpour and Company",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE55ZVlQbnFuMzZhM0REeXpQVFJRMGVIV25ZNzg1RGQ1WWpPVm1WbTBmYmRwb2hlLUVkSFFobmpjbTJaRDduRjd0RE1aZENkSURiQ3hnQU93?oc=5",
-      "video_id": "",
-      "published_iso": "2026-06-16T20:59:24+00:00",
-      "states": []
-    },
-    {
       "title": "Data Center Power Flow: From Utility Grid to Server Rack",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8ydEprNXlOeGdDeDlKd0ZTYXBhVFRoOWRPRGV0dUY4NkpoaFlVMjJZVjFWUksycXI1aF9MbWItRDdGX1pRdE9oT3BwOWZpZGNNa0ZLN3Jn?oc=5",
       "video_id": "",
       "published_iso": "2026-02-27T21:54:46+00:00",
-      "states": []
-    },
-    {
-      "title": "The Real Cost of Your AI Use: Inside a Power-Hungry Data Center",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9JVTFkWUZKX0NieVFPenhvMzNHanRzaVUxaDhHQVNIdFoxQzFTVmEyV1NmMy1SY3F1QTBCZWJXcjVfWGdtTnBhNnIxSkttSENKN190VQ?oc=5",
-      "video_id": "",
-      "published_iso": "2025-08-06T14:00:52+00:00",
       "states": []
     }
   ]
