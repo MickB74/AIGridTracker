@@ -70,6 +70,52 @@ APP_URL = os.environ.get("APP_URL", "https://aigridtracker.streamlit.app")
 # slugs match slugify(state) for all 51 US entries.
 DCMAP_BASE = "https://www.datacentermap.com/usa"
 
+# ── Usage tracking (GoatCounter) ───────────────────────────────────────── #
+# One free, open-source, cookieless counter for both pageviews and events —
+# no consent banner needed, which is the right posture for this audience.
+# count.js skips localhost on its own, so the 8777 preview never pollutes
+# the numbers. Nothing records until the GoatCounter site exists: sign up
+# at goatcounter.com and claim the code in GC_URL (or override the env
+# var). Events are pseudo-paths with an `event` flag, so they appear in the
+# same dashboard as pages, prefixed to sort together.
+#
+# Events are click-delegated so every page gets them without per-page
+# wiring. Names are few and low-cardinality on purpose — the funnel
+# questions are "which pages send people to the toolkit" and "which
+# artifacts get taken to meetings", not per-visitor telemetry:
+#   toolkit-click/<page>  — any link out to the Streamlit app (the #1 conversion)
+#   pdf-download/<file>   — our printable artifacts (same-origin only, not
+#                           the long tail of external ordinance PDFs)
+#   data-download/<file>  — moratoriums.json / .csv / the embed preview
+#
+# NOT added to src/site_builder.py campaign sites: those are residents' own
+# pages hosted on their own accounts, and putting our analytics on them
+# would be surveillance, not product feedback.
+GC_URL = os.environ.get("GC_URL", "https://aigridwatch.goatcounter.com/count")
+
+_ANALYTICS = """
+<script data-goatcounter="__GC_URL__" async src="//gc.zgo.at/count.js"></script>
+<script>
+function gwevent(path) {
+  if (window.goatcounter && window.goatcounter.count)
+    window.goatcounter.count({ path: path, event: true });
+}
+document.addEventListener('click', function (e) {
+  var a = e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  var file = href.split('/').pop().split('?')[0];
+  if (a.href.indexOf('__APP_URL__') === 0) {
+    gwevent('toolkit-click' + location.pathname.replace(/\\.html$/, ''));
+  } else if (/\\.pdf($|\\?)/.test(href) && a.host === location.host) {
+    gwevent('pdf-download/' + file);
+  } else if (href.indexOf('data/moratoriums.') !== -1 || href.indexOf('embed/moratoriums') !== -1) {
+    gwevent('data-download/' + file);
+  }
+});
+</script>
+""".replace("__APP_URL__", APP_URL).replace("__GC_URL__", GC_URL)
+
 
 def provenance_html(registry_key, depth=0):
     """Freshness note for a registry, as an HTML block. "" if untracked.
@@ -447,6 +493,7 @@ def page(title, description, body, canonical, depth=0,
   <a href="{APP_URL}">full toolkit</a>. Built from public data.</p>
 </footer>
 </div>
+{_ANALYTICS}
 </body>
 </html>
 """
@@ -2198,6 +2245,21 @@ def build_impact_calculator():
   }}
   slider.addEventListener('input', calc);
   sel.addEventListener('change', calc);
+  // Usage event: fires once per settled interaction (not per slider tick),
+  // after the user stops adjusting for 1.2s. gwevent() comes from the
+  // shared template; mw is bucketed to keep event cardinality low.
+  var pingT;
+  function ping() {{
+    clearTimeout(pingT);
+    pingT = setTimeout(function () {{
+      var mw = +slider.value;
+      var bucket = mw < 50 ? 'under-50' : mw < 150 ? '50-150' :
+                   mw < 300 ? '150-300' : '300-plus';  // slider is 10-500 MW
+      gwevent('impact-calc/' + sel.value + '/' + bucket);
+    }}, 1200);
+  }}
+  slider.addEventListener('input', ping);
+  sel.addEventListener('change', ping);
   calc();
 }})();
 </script>
@@ -6752,6 +6814,10 @@ status shown is what applies now, so a lapsed term reads Expired.</p>
 GridWatch</a> · <a href="{DATA_LICENSE_URL}" target="_blank" rel="license noopener">{DATA_LICENSE}</a>
 · <a href="{SITE_URL}/data/moratoriums.json" target="_blank" rel="noopener">JSON</a></footer>
 </div>
+<!-- Pageviews only: each iframe load on a host site registers as a view of
+     /embed/moratoriums, which is the embed-adoption metric. No click events
+     here — clicks inside someone else's page are their visitors, not ours. -->
+<script data-goatcounter="{GC_URL}" async src="//gc.zgo.at/count.js"></script>
 <script>
 document.getElementById('f').addEventListener('change', function (e) {{
   var v = e.target.value;

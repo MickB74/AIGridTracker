@@ -443,6 +443,21 @@ The refresh moved rates up a mean of 18.6%, and 48 of 51 states rose. The larges
   }
   slider.addEventListener('input', calc);
   sel.addEventListener('change', calc);
+  // Usage event: fires once per settled interaction (not per slider tick),
+  // after the user stops adjusting for 1.2s. gwevent() comes from the
+  // shared template; mw is bucketed to keep event cardinality low.
+  var pingT;
+  function ping() {
+    clearTimeout(pingT);
+    pingT = setTimeout(function () {
+      var mw = +slider.value;
+      var bucket = mw < 50 ? 'under-50' : mw < 150 ? '50-150' :
+                   mw < 300 ? '150-300' : '300-plus';  // slider is 10-500 MW
+      gwevent('impact-calc/' + sel.value + '/' + bucket);
+    }, 1200);
+  }
+  slider.addEventListener('input', ping);
+  sel.addEventListener('change', ping);
   calc();
 })();
 </script>
@@ -465,5 +480,27 @@ The refresh moved rates up a mean of 18.6%, and 48 of 51 states rose. The larges
   <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.</p>
 </footer>
 </div>
+
+<script data-goatcounter="https://aigridwatch.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+function gwevent(path) {
+  if (window.goatcounter && window.goatcounter.count)
+    window.goatcounter.count({ path: path, event: true });
+}
+document.addEventListener('click', function (e) {
+  var a = e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  var file = href.split('/').pop().split('?')[0];
+  if (a.href.indexOf('https://aigridtracker.streamlit.app') === 0) {
+    gwevent('toolkit-click' + location.pathname.replace(/\.html$/, ''));
+  } else if (/\.pdf($|\?)/.test(href) && a.host === location.host) {
+    gwevent('pdf-download/' + file);
+  } else if (href.indexOf('data/moratoriums.') !== -1 || href.indexOf('embed/moratoriums') !== -1) {
+    gwevent('data-download/' + file);
+  }
+});
+</script>
+
 </body>
 </html>

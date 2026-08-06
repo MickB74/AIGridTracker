@@ -362,5 +362,27 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.</p>
 </footer>
 </div>
+
+<script data-goatcounter="https://aigridwatch.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+function gwevent(path) {
+  if (window.goatcounter && window.goatcounter.count)
+    window.goatcounter.count({ path: path, event: true });
+}
+document.addEventListener('click', function (e) {
+  var a = e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  var file = href.split('/').pop().split('?')[0];
+  if (a.href.indexOf('https://aigridtracker.streamlit.app') === 0) {
+    gwevent('toolkit-click' + location.pathname.replace(/\.html$/, ''));
+  } else if (/\.pdf($|\?)/.test(href) && a.host === location.host) {
+    gwevent('pdf-download/' + file);
+  } else if (href.indexOf('data/moratoriums.') !== -1 || href.indexOf('embed/moratoriums') !== -1) {
+    gwevent('data-download/' + file);
+  }
+});
+</script>
+
 </body>
 </html>
