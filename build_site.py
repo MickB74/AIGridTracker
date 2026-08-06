@@ -614,6 +614,7 @@ def page(title, description, body, canonical, depth=0,
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b1220">
+<meta name="google-site-verification" content="kkgrLvRLdgGg12Y1ka456PlN9iNsyWGCyJIS-8ip9I4">
 <title>{esc(title_serp)}</title>
 <meta name="description" content="{esc(desc_serp)}">
 <link rel="canonical" href="{canonical}">
