@@ -114,6 +114,26 @@ document.addEventListener('click', function (e) {
     gwevent('data-download/' + file);
   }
 });
+// Nav dropdowns: one open at a time, closing on click-away or Escape. CSS
+// already reveals menus on hover/focus; this tidies the click path without
+// fighting the native <details> toggle — sibling-close runs off the toggle
+// event, and the click-away handler bails on any click inside the nav.
+document.querySelectorAll('.navgroup').forEach(function (g) {
+  g.addEventListener('toggle', function () {
+    if (!g.open) return;
+    document.querySelectorAll('.navgroup[open]').forEach(function (o) {
+      if (o !== g) o.open = false;
+    });
+  });
+});
+document.addEventListener('click', function (e) {
+  if (e.target.closest && e.target.closest('.navgroup')) return;
+  document.querySelectorAll('.navgroup[open]').forEach(function (g) { g.open = false; });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape')
+    document.querySelectorAll('.navgroup[open]').forEach(function (g) { g.open = false; });
+});
 </script>
 """.replace("__APP_URL__", APP_URL).replace("__GC_URL__", GC_URL)
 
@@ -170,6 +190,26 @@ nav .nav-search { display:inline-flex; align-items:center; gap:6px;
   font-size:14px; padding:6px 10px; border-radius:8px;
   border:1px solid var(--rule); color:var(--muted); }
 nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
+/* Grouped dropdowns (desktop). Menus reveal on hover, keyboard focus, or the
+   native <details> toggle; the summary marker is replaced with a caret. */
+.navgroup { position:relative; }
+.navgroup > summary { list-style:none; cursor:pointer; color:var(--muted);
+  font-size:14px; padding:2px 0; display:inline-flex; align-items:center; }
+.navgroup > summary::-webkit-details-marker { display:none; }
+.navgroup > summary::after { content:"\\25BE"; font-size:10px; margin-left:5px;
+  opacity:.55; }
+.navgroup:hover > summary, .navgroup[open] > summary,
+.navgroup > summary.active { color:var(--teal); }
+.navmenu { display:none; position:absolute; top:calc(100% + 8px); left:0;
+  background:var(--card); border:1px solid var(--rule); border-radius:10px;
+  padding:6px; min-width:190px; flex-direction:column; gap:1px; z-index:60;
+  box-shadow:0 10px 28px rgba(0,0,0,.4); }
+.navgroup:hover > .navmenu, .navgroup:focus-within > .navmenu,
+.navgroup[open] > .navmenu { display:flex; }
+.navmenu a { padding:8px 12px; border-radius:6px; font-size:14px;
+  white-space:nowrap; color:var(--muted); }
+.navmenu a:hover { background:rgba(45,212,191,.1); color:var(--teal); }
+.navmenu a[aria-current] { color:var(--teal); font-weight:600; }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -186,9 +226,17 @@ nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
-  .nav-links a { padding:10px 2px; font-size:15px;
+  .nav-links > a { padding:10px 2px; font-size:15px;
     border-bottom:1px solid rgba(255,255,255,.05); }
-  .nav-links a:last-child { border-bottom:none; }
+  /* Groups become inline accordions: the menu stacks under its summary and
+     is revealed by the native <details> tap, not an absolute overlay. */
+  .navgroup { position:static; border-bottom:1px solid rgba(255,255,255,.05); }
+  .navgroup > summary { padding:11px 2px; font-size:15px; justify-content:space-between; }
+  .navgroup[open] > summary::after { transform:rotate(180deg); }
+  .navmenu { position:static; display:none; box-shadow:none; border:none;
+    background:transparent; padding:0 0 6px 12px; min-width:0; gap:0; }
+  .navgroup[open] > .navmenu { display:flex; }
+  .navmenu a { padding:8px 10px; font-size:14px; }
 }
 .skip { position:absolute; left:-9999px; }
 .skip:focus { position:fixed; left:16px; top:10px; z-index:1000;
@@ -397,40 +445,76 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 """
 
 
-NAV_LINKS = [
-    ("Home", "index.html"),
-    ("Your state", "states/index.html"),
-    ("Siting score", "siting.html"),
-    ("Case studies", "case-studies.html"),
-    ("Clauses", "cba-clauses.html"),
-    ("Tax breaks", "tax-breaks.html"),
-    ("Hearing prep", "hearing-questions.html"),
-    ("Health risks", "health-risks.html"),
-    ("Moratoriums", "moratoriums.html"),
-    ("Calculator", "impact.html"),
-    ("Your bill", "bills.html"),
-    ("Outlook", "outlook.html"),
-    ("Learn", "learn.html"),
-    ("PUCs", "puc.html"),
-    ("Data centers", "data-centers.html"),
-    ("Environment", "environment.html"),
-    ("Companies", "companies/index.html"),
-    ("Blog", "blog/index.html"),
-    ("News", "news/index.html"),
+# Nav grouped into five task-shaped menus, mirroring the app's tab logic and
+# ordered by urgency: what you do about a proposal, then your locality, then
+# the evidence, then the industry, then the feed. Home stays a standalone
+# link (the logo also points there). Flattens to a single accordion inside
+# the mobile burger. Keep group membership in sync with the section any page
+# belongs to — the first path element of its canonical URL — so the parent
+# menu lights up on a child page (e.g. /states/ohio highlights "Your area").
+NAV_GROUPS = [
+    ("Act", [
+        ("Siting score", "siting.html"),
+        ("Hearing prep", "hearing-questions.html"),
+        ("Model clauses", "cba-clauses.html"),
+        ("Case studies", "case-studies.html"),
+        ("Impact calculator", "impact.html"),
+    ]),
+    ("Your area", [
+        ("Your state", "states/index.html"),
+        ("Public utility commissions", "puc.html"),
+        ("Moratoriums", "moratoriums.html"),
+    ]),
+    ("The facts", [
+        ("Health risks", "health-risks.html"),
+        ("Your electric bill", "bills.html"),
+        ("Tax breaks", "tax-breaks.html"),
+        ("Environment", "environment.html"),
+        ("Learn the basics", "learn.html"),
+    ]),
+    ("Industry", [
+        ("Data centers", "data-centers.html"),
+        ("Companies", "companies/index.html"),
+        ("Electricity outlook", "outlook.html"),
+    ]),
+    ("Updates", [
+        ("Blog", "blog/index.html"),
+        ("News", "news/index.html"),
+    ]),
 ]
 
 
 def _nav_links_html(p, canonical):
-    """Nav links with aria-current on the section the page belongs to.
+    """Home link + five grouped dropdowns, with the current section marked.
+
     Section = first path element of the canonical URL, so /blog/any-post
-    lights up Blog and /states/ohio lights up Your state."""
+    lights up the Updates group and /states/ohio lights up Your area. The
+    active leaf gets aria-current; its parent summary gets class="active" so
+    the group label turns teal even when the menu is closed. The <details>
+    are deliberately left un-`open` — desktop reveals menus on hover and
+    mobile on tap, and a stored open attribute would jam one dropdown open on
+    desktop.
+    """
     rel = canonical[len(SITE_URL):].strip("/") if canonical.startswith(SITE_URL) else ""
     page_section = (rel.split("/")[0].replace(".html", "") or "index")
-    out = []
-    for label, target in NAV_LINKS:
-        section = target.split("/")[0].replace(".html", "")
-        cur = ' aria-current="page"' if section == page_section else ""
-        out.append(f'<a href="{p}{target}"{cur}>{label}</a>')
+
+    home_cur = ' aria-current="page"' if page_section == "index" else ""
+    out = [f'<a href="{p}index.html"{home_cur}>Home</a>']
+
+    for group_label, links in NAV_GROUPS:
+        items, group_active = [], False
+        for label, target in links:
+            section = target.split("/")[0].replace(".html", "")
+            active = section == page_section
+            group_active = group_active or active
+            cur = ' aria-current="page"' if active else ""
+            items.append(f'<a href="{p}{target}"{cur}>{label}</a>')
+        summary_cls = ' class="active"' if group_active else ""
+        out.append(
+            f'<details class="navgroup">'
+            f'<summary{summary_cls}>{group_label}</summary>'
+            f'<div class="navmenu">{"".join(items)}</div>'
+            f'</details>')
     return "\n    ".join(out)
 
 

@@ -40,6 +40,26 @@ nav .nav-search { display:inline-flex; align-items:center; gap:6px;
   font-size:14px; padding:6px 10px; border-radius:8px;
   border:1px solid var(--rule); color:var(--muted); }
 nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
+/* Grouped dropdowns (desktop). Menus reveal on hover, keyboard focus, or the
+   native <details> toggle; the summary marker is replaced with a caret. */
+.navgroup { position:relative; }
+.navgroup > summary { list-style:none; cursor:pointer; color:var(--muted);
+  font-size:14px; padding:2px 0; display:inline-flex; align-items:center; }
+.navgroup > summary::-webkit-details-marker { display:none; }
+.navgroup > summary::after { content:"\25BE"; font-size:10px; margin-left:5px;
+  opacity:.55; }
+.navgroup:hover > summary, .navgroup[open] > summary,
+.navgroup > summary.active { color:var(--teal); }
+.navmenu { display:none; position:absolute; top:calc(100% + 8px); left:0;
+  background:var(--card); border:1px solid var(--rule); border-radius:10px;
+  padding:6px; min-width:190px; flex-direction:column; gap:1px; z-index:60;
+  box-shadow:0 10px 28px rgba(0,0,0,.4); }
+.navgroup:hover > .navmenu, .navgroup:focus-within > .navmenu,
+.navgroup[open] > .navmenu { display:flex; }
+.navmenu a { padding:8px 12px; border-radius:6px; font-size:14px;
+  white-space:nowrap; color:var(--muted); }
+.navmenu a:hover { background:rgba(45,212,191,.1); color:var(--teal); }
+.navmenu a[aria-current] { color:var(--teal); font-weight:600; }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -56,9 +76,17 @@ nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
-  .nav-links a { padding:10px 2px; font-size:15px;
+  .nav-links > a { padding:10px 2px; font-size:15px;
     border-bottom:1px solid rgba(255,255,255,.05); }
-  .nav-links a:last-child { border-bottom:none; }
+  /* Groups become inline accordions: the menu stacks under its summary and
+     is revealed by the native <details> tap, not an absolute overlay. */
+  .navgroup { position:static; border-bottom:1px solid rgba(255,255,255,.05); }
+  .navgroup > summary { padding:11px 2px; font-size:15px; justify-content:space-between; }
+  .navgroup[open] > summary::after { transform:rotate(180deg); }
+  .navmenu { position:static; display:none; box-shadow:none; border:none;
+    background:transparent; padding:0 0 6px 12px; min-width:0; gap:0; }
+  .navgroup[open] > .navmenu { display:flex; }
+  .navmenu a { padding:8px 10px; font-size:14px; }
 }
 .skip { position:absolute; left:-9999px; }
 .skip:focus { position:fixed; left:16px; top:10px; z-index:1000;
@@ -278,24 +306,11 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
      title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     <a href="../index.html">Home</a>
-    <a href="../states/index.html" aria-current="page">Your state</a>
-    <a href="../siting.html">Siting score</a>
-    <a href="../case-studies.html">Case studies</a>
-    <a href="../cba-clauses.html">Clauses</a>
-    <a href="../tax-breaks.html">Tax breaks</a>
-    <a href="../hearing-questions.html">Hearing prep</a>
-    <a href="../health-risks.html">Health risks</a>
-    <a href="../moratoriums.html">Moratoriums</a>
-    <a href="../impact.html">Calculator</a>
-    <a href="../bills.html">Your bill</a>
-    <a href="../outlook.html">Outlook</a>
-    <a href="../learn.html">Learn</a>
-    <a href="../puc.html">PUCs</a>
-    <a href="../data-centers.html">Data centers</a>
-    <a href="../environment.html">Environment</a>
-    <a href="../companies/index.html">Companies</a>
-    <a href="../blog/index.html">Blog</a>
-    <a href="../news/index.html">News</a>
+    <details class="navgroup"><summary>Act</summary><div class="navmenu"><a href="../siting.html">Siting score</a><a href="../hearing-questions.html">Hearing prep</a><a href="../cba-clauses.html">Model clauses</a><a href="../case-studies.html">Case studies</a><a href="../impact.html">Impact calculator</a></div></details>
+    <details class="navgroup"><summary class="active">Your area</summary><div class="navmenu"><a href="../states/index.html" aria-current="page">Your state</a><a href="../puc.html">Public utility commissions</a><a href="../moratoriums.html">Moratoriums</a></div></details>
+    <details class="navgroup"><summary>The facts</summary><div class="navmenu"><a href="../health-risks.html">Health risks</a><a href="../bills.html">Your electric bill</a><a href="../tax-breaks.html">Tax breaks</a><a href="../environment.html">Environment</a><a href="../learn.html">Learn the basics</a></div></details>
+    <details class="navgroup"><summary>Industry</summary><div class="navmenu"><a href="../data-centers.html">Data centers</a><a href="../companies/index.html">Companies</a><a href="../outlook.html">Electricity outlook</a></div></details>
+    <details class="navgroup"><summary>Updates</summary><div class="navmenu"><a href="../blog/index.html">Blog</a><a href="../news/index.html">News</a></div></details>
   </div>
   <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
 </nav>
@@ -385,6 +400,26 @@ document.addEventListener('click', function (e) {
   } else if (href.indexOf('data/moratoriums.') !== -1 || href.indexOf('embed/moratoriums') !== -1) {
     gwevent('data-download/' + file);
   }
+});
+// Nav dropdowns: one open at a time, closing on click-away or Escape. CSS
+// already reveals menus on hover/focus; this tidies the click path without
+// fighting the native <details> toggle — sibling-close runs off the toggle
+// event, and the click-away handler bails on any click inside the nav.
+document.querySelectorAll('.navgroup').forEach(function (g) {
+  g.addEventListener('toggle', function () {
+    if (!g.open) return;
+    document.querySelectorAll('.navgroup[open]').forEach(function (o) {
+      if (o !== g) o.open = false;
+    });
+  });
+});
+document.addEventListener('click', function (e) {
+  if (e.target.closest && e.target.closest('.navgroup')) return;
+  document.querySelectorAll('.navgroup[open]').forEach(function (g) { g.open = false; });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape')
+    document.querySelectorAll('.navgroup[open]').forEach(function (g) { g.open = false; });
 });
 </script>
 
