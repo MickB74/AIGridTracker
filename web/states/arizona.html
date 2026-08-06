@@ -36,6 +36,10 @@ nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -47,6 +51,8 @@ nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
     border:1px solid var(--rule); user-select:none; }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
@@ -136,6 +142,7 @@ details.more[open] { padding-bottom:10px; }
   .hbar-row { grid-template-columns:1fr; gap:2px; }
   .hbar-track { height:12px; }
 }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -267,6 +274,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
+  <a class="nav-search" href="../search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     <a href="../index.html">Home</a>
     <a href="../states/index.html" aria-current="page">Your state</a>
@@ -308,8 +317,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <section><h2>Your regulator</h2><p><strong>Arizona Corporation Commission</strong> — <a href="https://www.azcc.gov/">website</a> · <a href="https://www.azcc.gov/utilities/consumer-services">file a complaint</a></p></section>
 
 <section><h2>Case studies</h2><div class="outcome"><div class="cat">Permanent limits adopted</div><p><strong>Mesa, AZ</strong> — Zoning rules instead of a moratorium: setbacks, height caps, sound study</p><p class="muted">With 15 data centers built, approved or proposed on roughly 1,500 acres in six years, Mesa&#x27;s council introduced zoning controls 6–0 and adopted them in July 2025. Data centers are now allowed only where the council specifically authorises a Planned Area Development overlay on industrial land, and each must sit at least 400 feet from residential, stay under 60 feet tall, screen its mechanical equipment, and submit a sound study. Water cooling was argued in council — Councilwoman Jenn Duff pushed to restrict it during drought — but did not make it into the adopted rules. Worth reading as a list of what a council will grant without a moratorium, and what it won&#x27;t.</p><p class="verified-on"><a href="https://www.kjzz.org/business/2025-07-14/mesa-city-council-approves-new-data-center-zoning-rules" rel="nofollow noopener" target="_blank">Source 1</a> · <a href="https://www.12news.com/article/news/local/valley/new-data-center-regulations-approved-by-mesa-leaders-arizona/75-db14238c-61cd-4f89-9cfa-f7759baa5cf3" rel="nofollow noopener" target="_blank">Source 2</a> · <a href="https://www.themesatribune.com/news/mesa-council-to-vote-on-data-center-controls/article_95cfba83-0015-4c0e-aa8e-116cef4c8c6e.html" rel="nofollow noopener" target="_blank">Source 3</a> · verified 2026-08-04</p></div></section>
-<section><h2>Known data center campuses in Arizona</h2><table><tr><th>Operator</th><th>Location</th><th>Tenant</th><th>Filing LLC</th></tr><tr><td>Meta</td><td>Mesa</td><td>Meta</td><td>Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain</td></tr>
-<tr><td>Microsoft</td><td>Goodyear (Greater Phoenix)</td><td>Microsoft</td><td>Project-name / generic &#x27;Holdings LLC&#x27;; less consistently codenamed</td></tr></table><div class="freshness stale"><p><strong>&#9203; No verification date recorded · changes over months</strong> · Source: <a href="https://www.sec.gov/edgar/search/" rel="nofollow">Operator ownership &amp; filing-LLC naming patterns — compiled from operator releases and county filings, then checked against SEC EDGAR full-text search. Composite, not a single citation: look the entity up yourself before naming it in a filing</a></p><p class="muted" style="margin:6px 0 0">Each row carries its own attribution level — first-party rows come from the operator&#x27;s own site, but colocation and REIT ownership was compiled from trade press and never passed an independent fact-check. Check the attribution column before citing a row.</p></div></section>
+<section><h2>Known data center campuses in Arizona</h2><div class="table-scroll"><table><tr><th>Operator</th><th>Location</th><th>Tenant</th><th>Filing LLC</th></tr><tr><td>Meta</td><td>Mesa</td><td>Meta</td><td>Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain</td></tr>
+<tr><td>Microsoft</td><td>Goodyear (Greater Phoenix)</td><td>Microsoft</td><td>Project-name / generic &#x27;Holdings LLC&#x27;; less consistently codenamed</td></tr></table></div><div class="freshness stale"><p><strong>&#9203; No verification date recorded · changes over months</strong> · Source: <a href="https://www.sec.gov/edgar/search/" rel="nofollow">Operator ownership &amp; filing-LLC naming patterns — compiled from operator releases and county filings, then checked against SEC EDGAR full-text search. Composite, not a single citation: look the entity up yourself before naming it in a filing</a></p><p class="muted" style="margin:6px 0 0">Each row carries its own attribution level — first-party rows come from the operator&#x27;s own site, but colocation and REIT ownership was compiled from trade press and never passed an independent fact-check. Check the attribution column before citing a row.</p></div></section>
 <section><h2>Every data center already built in Arizona</h2><p>The campuses above are the ones GridWatch tracks by operator and filing LLC. For the full inventory — street addresses of every existing facility, including the smaller colocation and network sites — DataCenterMap keeps a public directory for Arizona.</p><p><a class="btn ghost" href="https://www.datacentermap.com/usa/arizona/" rel="nofollow noopener">Browse the Arizona directory &rarr;</a></p><p class="muted">Two caveats before you cite it at a hearing: it lists facilities that already exist, so a newly proposed campus will not appear; and it counts a small network room the same as a hyperscale campus, so the facility count is not a measure of power draw or community impact.</p></section>
 
 

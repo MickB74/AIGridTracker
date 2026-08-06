@@ -13,6 +13,12 @@ venv/
 
 # macOS
 .DS_Store
+# Finder duplicate artifacts ("companies 2/", "states 3/"). These once shipped
+# into web/ and got served + indexed as stale pages; never commit them. The
+# build_site.py guard also fails the build if one survives a rebuild.
+* [0-9]/
+* copy/
+* copy [0-9]/
 
 # Streamlit
 .streamlit/secrets.toml

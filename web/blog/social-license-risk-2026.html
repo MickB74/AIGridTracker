@@ -38,6 +38,10 @@ nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -49,6 +53,8 @@ nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
     border:1px solid var(--rule); user-select:none; }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
@@ -138,6 +144,7 @@ details.more[open] { padding-bottom:10px; }
   .hbar-row { grid-template-columns:1fr; gap:2px; }
   .hbar-track { height:12px; }
 }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -269,6 +276,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
+  <a class="nav-search" href="../search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     <a href="../index.html">Home</a>
     <a href="../states/index.html">Your state</a>
@@ -335,7 +344,7 @@ fail on power. They fail on public trust."</em></p>
 <h3>Why the reframing happened: the numbers got real</h3>
 <p>Community opposition stopped being a soft, hand-wavy concern the moment it started
 showing up on balance sheets:</p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Metric</th>
@@ -372,7 +381,7 @@ showing up on balance sheets:</p>
 <td>300+ across 30+ states</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>That's a 5x growth in organized opposition groups in eighteen months. When a risk grows
 that fast and carries a ten-figure price tag, it stops being a PR footnote and becomes a
 column in the underwriting model.</p>

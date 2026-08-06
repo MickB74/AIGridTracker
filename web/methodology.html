@@ -36,6 +36,10 @@ nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -47,6 +51,8 @@ nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
     border:1px solid var(--rule); user-select:none; }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
@@ -136,6 +142,7 @@ details.more[open] { padding-bottom:10px; }
   .hbar-row { grid-template-columns:1fr; gap:2px; }
   .hbar-track { height:12px; }
 }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -267,6 +274,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
+  <a class="nav-search" href="search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="states/index.html">Your state</a>
@@ -345,39 +354,39 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 
 <section>
   <h2>Per-token energy references</h2>
-  <table><tr><td>Epoch AI midpoint (2025)</td><td>0.0005 Wh/token</td></tr>
+  <div class="table-scroll"><table><tr><td>Epoch AI midpoint (2025)</td><td>0.0005 Wh/token</td></tr>
 <tr><td>Epoch AI low (efficient)</td><td>0.0001 Wh/token</td></tr>
 <tr><td>Epoch AI high</td><td>0.0020 Wh/token</td></tr>
-<tr><td>LLaMA-65B, older GPU (~3.5 J/token)</td><td>0.0010 Wh/token</td></tr></table>
+<tr><td>LLaMA-65B, older GPU (~3.5 J/token)</td><td>0.0010 Wh/token</td></tr></table></div>
 </section>
 
 <section>
   <h2>Grid carbon intensity presets</h2>
-  <table><tr><td>Google market-based (~2024 fleet)</td><td>125 gCO₂/kWh</td></tr>
+  <div class="table-scroll"><table><tr><td>Google market-based (~2024 fleet)</td><td>125 gCO₂/kWh</td></tr>
 <tr><td>US grid average</td><td>385 gCO₂/kWh</td></tr>
 <tr><td>Global grid average</td><td>480 gCO₂/kWh</td></tr>
-<tr><td>Coal-heavy grid</td><td>700 gCO₂/kWh</td></tr></table>
+<tr><td>Coal-heavy grid</td><td>700 gCO₂/kWh</td></tr></table></div>
 </section>
 
 <section>
   <h2>Water — on-site cooling (fleet WUE)</h2>
   <p class="muted">L per kWh of IT load. Note L/kWh == mL/Wh, so these
   multiply query Wh into query mL.</p>
-  <table><tr><td>Google fleet average (2024)</td><td>1.10 L/kWh</td></tr>
+  <div class="table-scroll"><table><tr><td>Google fleet average (2024)</td><td>1.10 L/kWh</td></tr>
 <tr><td>Microsoft fleet average (2024)</td><td>1.80 L/kWh</td></tr>
 <tr><td>Meta fleet average (2024)</td><td>0.19 L/kWh</td></tr>
-<tr><td>AWS fleet average (2025)</td><td>0.12 L/kWh</td></tr></table>
+<tr><td>AWS fleet average (2025)</td><td>0.12 L/kWh</td></tr></table></div>
 </section>
 
 <section>
   <h2>Water — off-site (grid generation)</h2>
   <p class="muted">Consumption (evaporated), not withdrawal — withdrawal
   figures run considerably higher.</p>
-  <table><tr><td>US grid average</td><td>1.20 L/kWh</td></tr>
+  <div class="table-scroll"><table><tr><td>US grid average</td><td>1.20 L/kWh</td></tr>
 <tr><td>Coal-heavy grid</td><td>1.70 L/kWh</td></tr>
 <tr><td>Gas-heavy grid</td><td>0.90 L/kWh</td></tr>
 <tr><td>Nuclear-heavy grid</td><td>2.00 L/kWh</td></tr>
-<tr><td>High-renewables grid</td><td>0.10 L/kWh</td></tr></table>
+<tr><td>High-renewables grid</td><td>0.10 L/kWh</td></tr></table></div>
 </section>
 
 <section>

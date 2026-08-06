@@ -36,6 +36,10 @@ nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -47,6 +51,8 @@ nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
     border:1px solid var(--rule); user-select:none; }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
@@ -136,6 +142,7 @@ details.more[open] { padding-bottom:10px; }
   .hbar-row { grid-template-columns:1fr; gap:2px; }
   .hbar-track { height:12px; }
 }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -267,6 +274,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
+  <a class="nav-search" href="../search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     <a href="../index.html">Home</a>
     <a href="../states/index.html">Your state</a>
@@ -301,14 +310,14 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <div class="stats"><div class="stat"><b>8.17 TWh*</b><span>electricity</span></div><div class="stat"><b>1.39</b><span>fleet PUE</span></div><div class="stat"><b>2.6M</b><span>Scope 2 (location) tCO2e</span></div><div class="stat"><b>1,104</b><span>water (Mgal)</span></div></div>
 <section>
   <h2>Key metrics</h2>
-  <table>
+  <div class="table-scroll"><table>
     <tr><td>Scope 2 (market-based)</td><td><strong>253K tCO2e</strong></td></tr><tr><td>Renewable / CFE claim</td><td><strong>96% renewable</strong></td></tr><tr><td>Water</td><td><strong>37% non-potable; WUE 0.95</strong></td></tr>
     <tr><td>Scale</td><td><strong>268 data centers · 74 markets · 35 countries</strong></td></tr><tr><td>Revenue</td><td><strong>$8.7B</strong></td></tr>
     <tr><td>Scope 1</td><td><strong>59,400 tCO2e</strong></td></tr>
 <tr><td>Scope 3</td><td><strong>1.44M tCO2e</strong></td></tr>
 <tr><td>Net zero target</td><td><strong>2040 (SBTi validated)</strong></td></tr>
 <tr><td>Heat exported</td><td><strong>14.5 GWh to communities (+245% YoY)</strong></td></tr>
-  </table>
+  </table></div>
   
 </section>
 <section>

@@ -36,6 +36,10 @@ nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -47,6 +51,8 @@ nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
     border:1px solid var(--rule); user-select:none; }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
@@ -136,6 +142,7 @@ details.more[open] { padding-bottom:10px; }
   .hbar-row { grid-template-columns:1fr; gap:2px; }
   .hbar-track { height:12px; }
 }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -267,6 +274,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
+  <a class="nav-search" href="../search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     <a href="../index.html">Home</a>
     <a href="../states/index.html">Your state</a>
@@ -306,7 +315,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 </div>
 <section>
   <h2>Key metrics</h2>
-  <table>
+  <div class="table-scroll"><table>
     <tr><td>Scope 2 (market-based)</td><td><strong>2.8M tCO2e</strong></td></tr>
     <tr><td>Renewable / CFE claim</td><td><strong>65% CFE</strong></td></tr>
     <tr><td>Water stewardship</td><td><strong>78% replenished</strong></td></tr>
@@ -314,11 +323,11 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <tr><td>Clean energy signed</td><td><strong>12 GW</strong></td></tr>
 <tr><td>Avoided emissions</td><td><strong>58M tCO2e</strong></td></tr>
 <tr><td>Gemini efficiency</td><td><strong>33x vs 2019 model</strong></td></tr>
-  </table>
+  </table></div>
   
 </section>
-<section><h2>What communities have won from Google</h2><p class="muted" style="margin-bottom:10px">Negotiates through PR-friendly commitments — water stewardship pledges, community grants — but its documented concessions came under permit leverage and records-transparency pressure, not goodwill. Shell LLCs and confidentiality are standard practice until approvals are locked, so forcing early disclosure of water and power demands is where the leverage is. (Strategy read, not a sourced fact.)</p><table><tr><th>Where</th><th>Year</th><th>What</th></tr><tr><td>The Dalles, OR</td><td>2021-24</td><td>Paid ~$28.5M toward city water treatment and storage, including an aquifer storage and recovery system later transferred to the city, and donated 3.88M gallons/day of purchased water rights. Note what is absent: no cap on its own draw, which reached ~40% of city supply. <span class="verified-on"><a href="https://www.thedalles.org/news_detail_T4_R207.php" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></td></tr>
-<tr><td>The Dalles, OR</td><td>2022</td><td>Dropped its fight to keep water-use records secret after The Oregonian sued; the city had spent 13 months resisting disclosure before settling. <span class="verified-on"><a href="https://www.rcfp.org/dalles-google-oregonian-settlement/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></td></tr></table></section>
+<section><h2>What communities have won from Google</h2><p class="muted" style="margin-bottom:10px">Negotiates through PR-friendly commitments — water stewardship pledges, community grants — but its documented concessions came under permit leverage and records-transparency pressure, not goodwill. Shell LLCs and confidentiality are standard practice until approvals are locked, so forcing early disclosure of water and power demands is where the leverage is. (Strategy read, not a sourced fact.)</p><div class="table-scroll"><table><tr><th>Where</th><th>Year</th><th>What</th></tr><tr><td>The Dalles, OR</td><td>2021-24</td><td>Paid ~$28.5M toward city water treatment and storage, including an aquifer storage and recovery system later transferred to the city, and donated 3.88M gallons/day of purchased water rights. Note what is absent: no cap on its own draw, which reached ~40% of city supply. <span class="verified-on"><a href="https://www.thedalles.org/news_detail_T4_R207.php" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></td></tr>
+<tr><td>The Dalles, OR</td><td>2022</td><td>Dropped its fight to keep water-use records secret after The Oregonian sued; the city had spent 13 months resisting disclosure before settling. <span class="verified-on"><a href="https://www.rcfp.org/dalles-google-oregonian-settlement/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></td></tr></table></div></section>
 <section>
   <h2>What this means for your community</h2>
   <p>The gap between <strong>market-based</strong> and

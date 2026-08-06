@@ -36,6 +36,10 @@ nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -47,6 +51,8 @@ nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
     border:1px solid var(--rule); user-select:none; }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
@@ -136,6 +142,7 @@ details.more[open] { padding-bottom:10px; }
   .hbar-row { grid-template-columns:1fr; gap:2px; }
   .hbar-track { height:12px; }
 }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -267,6 +274,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
+  <a class="nav-search" href="../search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     <a href="../index.html">Home</a>
     <a href="../states/index.html" aria-current="page">Your state</a>
@@ -306,18 +315,18 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 </div>
 <div class="freshness"><p><strong>As of July 2026 · changes over months</strong> · Source: <a href="https://www.electricchoice.com/datacenters/" rel="nofollow">ElectricChoice.com — U.S. Data Center Power Map by State (2026; updated July 2026; CC-BY 4.0; cites LBNL, EPRINC, EIA)</a></p><p class="muted" style="margin:6px 0 0">Facility counts vary by directory because each one draws the boundary differently — DataCenterMap lists 44 in Alabama where this table says 35, since it counts small network rooms alongside hyperscale campuses. Cite the TWh figure rather than the facility count when you can; it is the number that speaks to grid impact. Underlying load research is LBNL-2001637 (Dec 2024).</p></div>
 <section><h2>Your regulator</h2><p><strong>Indiana Utility Regulatory Commission</strong> — <a href="https://www.in.gov/iurc/">website</a> · <a href="https://www.in.gov/iurc/customer-assistance/">file a complaint</a></p></section>
-<section><h2>Pushback already happening in Indiana</h2><table><tr><th>Where</th><th>Level</th><th>Status</th><th>Note</th><th>Source</th></tr><tr><td>Merrillville</td><td>Local</td><td><span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-05-31</span></td><td>1-year moratorium running Jun 1, 2026 to May 31, 2027 — council explicitly wants to watch the campus under construction in neighbouring Hobart before writing rules</td><td><a href="https://nwitimes.com/news/local/lake/merrillville/article_f506303d-f5ce-4bcc-bb4c-a6abf68fb24d.html" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-04</span></td></tr>
-<tr><td>Indianapolis</td><td>Local</td><td><span class="badge badge-proposed">Proposed</span></td><td>Non-binding pause</td><td><span class="unverified">Unverified</span></td></tr></table><div class="freshness"><p><strong>As of August 2026 · changes weekly — re-check before citing</strong></p><p class="muted" style="margin:6px 0 0">Illustrative rather than exhaustive — dozens of localities churn weekly, and this tracks the ones we have read a source for.
+<section><h2>Pushback already happening in Indiana</h2><div class="table-scroll"><table><tr><th>Where</th><th>Level</th><th>Status</th><th>Note</th><th>Source</th></tr><tr><td>Merrillville</td><td>Local</td><td><span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-05-31</span></td><td>1-year moratorium running Jun 1, 2026 to May 31, 2027 — council explicitly wants to watch the campus under construction in neighbouring Hobart before writing rules</td><td><a href="https://nwitimes.com/news/local/lake/merrillville/article_f506303d-f5ce-4bcc-bb4c-a6abf68fb24d.html" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-04</span></td></tr>
+<tr><td>Indianapolis</td><td>Local</td><td><span class="badge badge-proposed">Proposed</span></td><td>Non-binding pause</td><td><span class="unverified">Unverified</span></td></tr></table></div><div class="freshness"><p><strong>As of August 2026 · changes weekly — re-check before citing</strong></p><p class="muted" style="margin:6px 0 0">Illustrative rather than exhaustive — dozens of localities churn weekly, and this tracks the ones we have read a source for.
 
 **Each row carries its own provenance.** Rows showing a verification date link to the ordinance, the enacting body&#x27;s own page, or a datable report of the vote, and were read on that date. Rows marked *unverified* came from bulk compilation and have not been checked against a primary source — the locality, the year, and the status may all be off. Verify one of those with the town clerk before citing it as precedent.
 
 **Expiry is derived, not asserted.** A row with a documented end date flips to *Expired* on its own once that date passes. A time-limited moratorium whose start date was never documented keeps showing as enacted — that is a known gap, not a claim that it is still in force. Moratoriums are also routinely extended, so an expiry date is the earliest it could have ended, not proof that it did.</p></div></section>
 
-<section><h2>Known data center campuses in Indiana</h2><table><tr><th>Operator</th><th>Location</th><th>Tenant</th><th>Filing LLC</th></tr><tr><td>Google</td><td>New Carlisle</td><td>Google</td><td>Land-acquisition shells: Jet Stream LLC, Sharka LLC</td></tr>
+<section><h2>Known data center campuses in Indiana</h2><div class="table-scroll"><table><tr><th>Operator</th><th>Location</th><th>Tenant</th><th>Filing LLC</th></tr><tr><td>Google</td><td>New Carlisle</td><td>Google</td><td>Land-acquisition shells: Jet Stream LLC, Sharka LLC</td></tr>
 <tr><td>Meta</td><td>Jeffersonville</td><td>Meta</td><td>Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain</td></tr>
 <tr><td>Meta</td><td>Lebanon</td><td>Meta</td><td>Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain</td></tr>
 <tr><td>Microsoft</td><td>Northern Indiana (LaPorte)</td><td>Microsoft</td><td>Project-name / generic &#x27;Holdings LLC&#x27;; less consistently codenamed</td></tr>
-<tr><td>Amazon (AWS)</td><td>New Carlisle (Northern Indiana)</td><td>Amazon (AWS)</td><td>Vadata, Inc. — AWS&#x27;s build/operating entity on many permits</td></tr></table><div class="freshness stale"><p><strong>&#9203; No verification date recorded · changes over months</strong> · Source: <a href="https://www.sec.gov/edgar/search/" rel="nofollow">Operator ownership &amp; filing-LLC naming patterns — compiled from operator releases and county filings, then checked against SEC EDGAR full-text search. Composite, not a single citation: look the entity up yourself before naming it in a filing</a></p><p class="muted" style="margin:6px 0 0">Each row carries its own attribution level — first-party rows come from the operator&#x27;s own site, but colocation and REIT ownership was compiled from trade press and never passed an independent fact-check. Check the attribution column before citing a row.</p></div></section>
+<tr><td>Amazon (AWS)</td><td>New Carlisle (Northern Indiana)</td><td>Amazon (AWS)</td><td>Vadata, Inc. — AWS&#x27;s build/operating entity on many permits</td></tr></table></div><div class="freshness stale"><p><strong>&#9203; No verification date recorded · changes over months</strong> · Source: <a href="https://www.sec.gov/edgar/search/" rel="nofollow">Operator ownership &amp; filing-LLC naming patterns — compiled from operator releases and county filings, then checked against SEC EDGAR full-text search. Composite, not a single citation: look the entity up yourself before naming it in a filing</a></p><p class="muted" style="margin:6px 0 0">Each row carries its own attribution level — first-party rows come from the operator&#x27;s own site, but colocation and REIT ownership was compiled from trade press and never passed an independent fact-check. Check the attribution column before citing a row.</p></div></section>
 <section><h2>Every data center already built in Indiana</h2><p>The campuses above are the ones GridWatch tracks by operator and filing LLC. For the full inventory — street addresses of every existing facility, including the smaller colocation and network sites — DataCenterMap keeps a public directory for Indiana.</p><p><a class="btn ghost" href="https://www.datacentermap.com/usa/indiana/" rel="nofollow noopener">Browse the Indiana directory &rarr;</a></p><p class="muted">Two caveats before you cite it at a hearing: it lists facilities that already exist, so a newly proposed campus will not appear; and it counts a small network room the same as a hyperscale campus, so the facility count is not a measure of power draw or community impact.</p></section>
 
 

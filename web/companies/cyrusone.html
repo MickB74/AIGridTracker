@@ -36,6 +36,10 @@ nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -47,6 +51,8 @@ nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
     border:1px solid var(--rule); user-select:none; }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
@@ -136,6 +142,7 @@ details.more[open] { padding-bottom:10px; }
   .hbar-row { grid-template-columns:1fr; gap:2px; }
   .hbar-track { height:12px; }
 }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -267,6 +274,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
+  <a class="nav-search" href="../search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     <a href="../index.html">Home</a>
     <a href="../states/index.html">Your state</a>
@@ -301,7 +310,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <div class="stats"><div class="stat"><b>1.46</b><span>fleet PUE</span></div><div class="stat"><b>402K</b><span>Scope 2 (market) tCO2e</span></div></div>
 <section>
   <h2>Key metrics</h2>
-  <table>
+  <div class="table-scroll"><table>
     <tr><td>Renewable / CFE claim</td><td><strong>61.6% carbon-free</strong></td></tr><tr><td>Water</td><td><strong>Net Positive Water at 12 facilities</strong></td></tr>
     <tr><td>Scale</td><td><strong>50+ data centers globally</strong></td></tr>
     <tr><td>Scope 1</td><td><strong>27,710 tCO2e</strong></td></tr>
@@ -309,7 +318,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <tr><td>vs SBTi target</td><td><strong>−29.4% since 2021 (exceeded by &gt;16 ppts)</strong></td></tr>
 <tr><td>EcoVadis</td><td><strong>Gold (top 5%) — 3rd consecutive year</strong></td></tr>
 <tr><td>Green financing</td><td><strong>$11.2B sustainability-linked (2024)</strong></td></tr>
-  </table>
+  </table></div>
   <div class="ask" style="margin-top:18px"><strong>Methodology note:</strong> Private since April 2022 (KKR/GIP, $15B). TWh and absolute water consumption not disclosed.</div>
 </section>
 <section>

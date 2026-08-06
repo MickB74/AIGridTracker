@@ -36,6 +36,10 @@ nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -47,6 +51,8 @@ nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
     border:1px solid var(--rule); user-select:none; }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
@@ -136,6 +142,7 @@ details.more[open] { padding-bottom:10px; }
   .hbar-row { grid-template-columns:1fr; gap:2px; }
   .hbar-track { height:12px; }
 }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -267,6 +274,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
+  <a class="nav-search" href="../search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     <a href="../index.html">Home</a>
     <a href="../states/index.html" aria-current="page">Your state</a>
@@ -308,11 +317,11 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <section><h2>Your regulator</h2><p><strong>Virginia State Corporation Commission</strong> — <a href="https://www.scc.virginia.gov/">website</a> · <a href="https://www.scc.virginia.gov/consumers/public-utility/utility-complaints/">file a complaint</a></p></section>
 
 <section><h2>Case studies</h2><div class="outcome"><div class="cat">Political shift</div><p><strong>Prince William County, VA</strong> — Voters removed the board chair; the courts voided the rezoning</p><p class="muted">In 2022 a board majority led by Chair Ann Wheeler rezoned more than 2,000 acres of farmland for the Prince William Digital Gateway. On June 20, 2023 Wheeler lost the Democratic primary to Deshundra Jefferson, who had campaigned against large-scale data centers. The board approved the rezoning 4–3 that December regardless — and it was the courts, not the ballot box, that ended it: the rezoning was voided on appeal and a developer withdrew, effectively killing the project. Statewide, Virginia voter support for new data centers fell from 69% in 2023 to 35%. Elections changed who was in the room; litigation changed the outcome.</p><p class="verified-on"><a href="https://www.nbcwashington.com/news/politics/decision-2023/prince-william-county-voters-back-data-center-opponents-in-primary/3372105" rel="nofollow noopener" target="_blank">Source 1</a> · <a href="https://www.wusa9.com/article/news/legal/judge-retracts-digital-gateway-prince-william-county/65-fb80c9ca-6c4a-4b03-a975-49c2fa19dc40" rel="nofollow noopener" target="_blank">Source 2</a> · <a href="https://www.tomshardware.com/tech-industry/virginia-voter-support-for-new-data-centers-collapses-to-35-percent" rel="nofollow noopener" target="_blank">Source 3</a> · verified 2026-08-04</p></div></section>
-<section><h2>Known data center campuses in Virginia</h2><table><tr><th>Operator</th><th>Location</th><th>Tenant</th><th>Filing LLC</th></tr><tr><td>Google</td><td>Northern Virginia</td><td>Google</td><td>Land-acquisition shells: Jet Stream LLC, Sharka LLC</td></tr>
+<section><h2>Known data center campuses in Virginia</h2><div class="table-scroll"><table><tr><th>Operator</th><th>Location</th><th>Tenant</th><th>Filing LLC</th></tr><tr><td>Google</td><td>Northern Virginia</td><td>Google</td><td>Land-acquisition shells: Jet Stream LLC, Sharka LLC</td></tr>
 <tr><td>Meta</td><td>Henrico</td><td>Meta</td><td>Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain</td></tr>
 <tr><td>Microsoft</td><td>Northern Virginia</td><td>Microsoft</td><td>Project-name / generic &#x27;Holdings LLC&#x27;; less consistently codenamed</td></tr>
 <tr><td>Microsoft</td><td>Boydton (Southern Virginia)</td><td>Microsoft</td><td>Project-name / generic &#x27;Holdings LLC&#x27;; less consistently codenamed</td></tr>
-<tr><td>Amazon (AWS)</td><td>Northern Virginia (Loudoun Co.)</td><td>Amazon (AWS)</td><td>Vadata, Inc. — AWS&#x27;s build/operating entity on many permits</td></tr></table><div class="freshness stale"><p><strong>&#9203; No verification date recorded · changes over months</strong> · Source: <a href="https://www.sec.gov/edgar/search/" rel="nofollow">Operator ownership &amp; filing-LLC naming patterns — compiled from operator releases and county filings, then checked against SEC EDGAR full-text search. Composite, not a single citation: look the entity up yourself before naming it in a filing</a></p><p class="muted" style="margin:6px 0 0">Each row carries its own attribution level — first-party rows come from the operator&#x27;s own site, but colocation and REIT ownership was compiled from trade press and never passed an independent fact-check. Check the attribution column before citing a row.</p></div></section>
+<tr><td>Amazon (AWS)</td><td>Northern Virginia (Loudoun Co.)</td><td>Amazon (AWS)</td><td>Vadata, Inc. — AWS&#x27;s build/operating entity on many permits</td></tr></table></div><div class="freshness stale"><p><strong>&#9203; No verification date recorded · changes over months</strong> · Source: <a href="https://www.sec.gov/edgar/search/" rel="nofollow">Operator ownership &amp; filing-LLC naming patterns — compiled from operator releases and county filings, then checked against SEC EDGAR full-text search. Composite, not a single citation: look the entity up yourself before naming it in a filing</a></p><p class="muted" style="margin:6px 0 0">Each row carries its own attribution level — first-party rows come from the operator&#x27;s own site, but colocation and REIT ownership was compiled from trade press and never passed an independent fact-check. Check the attribution column before citing a row.</p></div></section>
 <section><h2>Every data center already built in Virginia</h2><p>The campuses above are the ones GridWatch tracks by operator and filing LLC. For the full inventory — street addresses of every existing facility, including the smaller colocation and network sites — DataCenterMap keeps a public directory for Virginia.</p><p><a class="btn ghost" href="https://www.datacentermap.com/usa/virginia/" rel="nofollow noopener">Browse the Virginia directory &rarr;</a></p><p class="muted">Two caveats before you cite it at a hearing: it lists facilities that already exist, so a newly proposed campus will not appear; and it counts a small network room the same as a hyperscale campus, so the facility count is not a measure of power draw or community impact.</p></section>
 <section><h2>What communities in Virginia have won</h2><ul><li><strong>Loudoun County</strong> (Multiple) — Declined abatements and taxed data centers instead: the FY2027 budget puts them at roughly $1.3B — about 45% of all county tax revenue — on ~4% of commercial parcels. The benchmark for what a jurisdiction with market power can simply refuse to give away <span class="verified-on"><a href="https://www.loudoun.gov/Faq.aspx?QID=1793" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></li></ul></section>
 <section><h2>Goochland County — Board of Supervisors</h2><div class="grid2"><div class="official"><strong>Jonathan Christy</strong><span class="role"> — Chair, District 1</span></div>

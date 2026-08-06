@@ -36,6 +36,10 @@ nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -47,6 +51,8 @@ nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
     border:1px solid var(--rule); user-select:none; }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
@@ -136,6 +142,7 @@ details.more[open] { padding-bottom:10px; }
   .hbar-row { grid-template-columns:1fr; gap:2px; }
   .hbar-track { height:12px; }
 }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -267,6 +274,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
+  <a class="nav-search" href="../search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     <a href="../index.html">Home</a>
     <a href="../states/index.html" aria-current="page">Your state</a>
@@ -306,7 +315,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 </div>
 <div class="freshness"><p><strong>As of July 2026 · changes over months</strong> · Source: <a href="https://www.electricchoice.com/datacenters/" rel="nofollow">ElectricChoice.com — U.S. Data Center Power Map by State (2026; updated July 2026; CC-BY 4.0; cites LBNL, EPRINC, EIA)</a></p><p class="muted" style="margin:6px 0 0">Facility counts vary by directory because each one draws the boundary differently — DataCenterMap lists 44 in Alabama where this table says 35, since it counts small network rooms alongside hyperscale campuses. Cite the TWh figure rather than the facility count when you can; it is the number that speaks to grid impact. Underlying load research is LBNL-2001637 (Dec 2024).</p></div>
 <section><h2>Your regulator</h2><p><strong>Rhode Island Public Utilities Commission</strong> — <a href="https://ripuc.ri.gov/">website</a> · <a href="https://ripuc.ri.gov/consumer-information/how-file-complaint">file a complaint</a></p></section>
-<section><h2>Pushback already happening in Rhode Island</h2><table><tr><th>Where</th><th>Level</th><th>Status</th><th>Note</th><th>Source</th></tr><tr><td>Smithfield</td><td>Local</td><td><span class="badge badge-enacted">Enacted</span></td><td>Adopted 4-1 May 5, effective Jun 4; data centers not permitted in any zoning district</td><td><a href="https://www.wpri.com/news/local-news/northwest/smithfield-town-council-approves-ordinance-to-prevent-construction-of-data-centers/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-04</span></td></tr></table><div class="freshness"><p><strong>As of August 2026 · changes weekly — re-check before citing</strong></p><p class="muted" style="margin:6px 0 0">Illustrative rather than exhaustive — dozens of localities churn weekly, and this tracks the ones we have read a source for.
+<section><h2>Pushback already happening in Rhode Island</h2><div class="table-scroll"><table><tr><th>Where</th><th>Level</th><th>Status</th><th>Note</th><th>Source</th></tr><tr><td>Smithfield</td><td>Local</td><td><span class="badge badge-enacted">Enacted</span></td><td>Adopted 4-1 May 5, effective Jun 4; data centers not permitted in any zoning district</td><td><a href="https://www.wpri.com/news/local-news/northwest/smithfield-town-council-approves-ordinance-to-prevent-construction-of-data-centers/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-04</span></td></tr></table></div><div class="freshness"><p><strong>As of August 2026 · changes weekly — re-check before citing</strong></p><p class="muted" style="margin:6px 0 0">Illustrative rather than exhaustive — dozens of localities churn weekly, and this tracks the ones we have read a source for.
 
 **Each row carries its own provenance.** Rows showing a verification date link to the ordinance, the enacting body&#x27;s own page, or a datable report of the vote, and were read on that date. Rows marked *unverified* came from bulk compilation and have not been checked against a primary source — the locality, the year, and the status may all be off. Verify one of those with the town clerk before citing it as precedent.
 

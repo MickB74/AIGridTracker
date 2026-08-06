@@ -36,6 +36,10 @@ nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -47,6 +51,8 @@ nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
     border:1px solid var(--rule); user-select:none; }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
@@ -136,6 +142,7 @@ details.more[open] { padding-bottom:10px; }
   .hbar-row { grid-template-columns:1fr; gap:2px; }
   .hbar-track { height:12px; }
 }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -267,6 +274,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
+  <a class="nav-search" href="../search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     <a href="../index.html">Home</a>
     <a href="../states/index.html">Your state</a>
@@ -306,19 +315,19 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 </div>
 <section>
   <h2>Key metrics</h2>
-  <table>
+  <div class="table-scroll"><table>
     <tr><td>Scope 2 (market-based)</td><td><strong>1K tCO2e</strong></td></tr>
     <tr><td>Renewable / CFE claim</td><td><strong>100% renewable</strong></td></tr>
     <tr><td>Water stewardship</td><td><strong>1,590 Mgal restored</strong></td></tr>
     <tr><td>Fleet WUE</td><td><strong>0.19 L/kWh</strong></td></tr>
 <tr><td>LEED Gold</td><td><strong>100% of campuses</strong></td></tr>
 <tr><td>Scope 3</td><td><strong>8,151,769 tCO2e</strong></td></tr>
-  </table>
+  </table></div>
   
 </section>
-<section><h2>What communities have won from Meta</h2><p class="muted" style="margin-bottom:10px">Runs a standardized siting playbook behind shell LLCs — in Los Lunas it arrived as &#x27;Greater Kudu LLC&#x27; — and moves fast once incentives are locked. Its public water-restoration programme is leverage: it has been converted into agreement terms elsewhere, so ask for the terms, not the pledge. (Strategy read.)</p><table><tr><th>Where</th><th>Year</th><th>What</th></tr><tr><td>Los Lunas, NM</td><td>2025</td><td>Village water/wastewater agreement with Greater Kudu LLC guarantees up to 3M gallons/day but suspends supply during a declared Stage 3 water emergency — a usable template for drought-conditioned service. <span class="verified-on"><a href="https://www.news-bulletin.com/news/tax-break-water-deal-for-meta-data-center/article_d4ff8540-163d-4c73-8a17-a5ec65209c42.html" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></td></tr>
+<section><h2>What communities have won from Meta</h2><p class="muted" style="margin-bottom:10px">Runs a standardized siting playbook behind shell LLCs — in Los Lunas it arrived as &#x27;Greater Kudu LLC&#x27; — and moves fast once incentives are locked. Its public water-restoration programme is leverage: it has been converted into agreement terms elsewhere, so ask for the terms, not the pledge. (Strategy read.)</p><div class="table-scroll"><table><tr><th>Where</th><th>Year</th><th>What</th></tr><tr><td>Los Lunas, NM</td><td>2025</td><td>Village water/wastewater agreement with Greater Kudu LLC guarantees up to 3M gallons/day but suspends supply during a declared Stage 3 water emergency — a usable template for drought-conditioned service. <span class="verified-on"><a href="https://www.news-bulletin.com/news/tax-break-water-deal-for-meta-data-center/article_d4ff8540-163d-4c73-8a17-a5ec65209c42.html" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></td></tr>
 <tr><td>Rio Grande watershed</td><td>ongoing</td><td>Funds eight watershed restoration projects returning ~172M gallons/year. Restoration is not the same as reduced local draw — treat it as additional, not as an offset against your own supply. <span class="verified-on"><a href="https://datacenters.atmeta.com/2026/04/restoring-water-in-our-data-center-communities/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></td></tr>
-<tr><td>Data center communities</td><td>ongoing</td><td>Community Action Grants to schools and nonprofits near campuses, administered via ChangeX. Table stakes, not a substitute for a binding agreement. <span class="verified-on"><a href="https://datacenters.atmeta.com/community-action-grants/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></td></tr></table></section>
+<tr><td>Data center communities</td><td>ongoing</td><td>Community Action Grants to schools and nonprofits near campuses, administered via ChangeX. Table stakes, not a substitute for a binding agreement. <span class="verified-on"><a href="https://datacenters.atmeta.com/community-action-grants/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></td></tr></table></div></section>
 <section>
   <h2>What this means for your community</h2>
   <p>The gap between <strong>market-based</strong> and

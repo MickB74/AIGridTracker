@@ -36,6 +36,10 @@ nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -47,6 +51,8 @@ nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
     border:1px solid var(--rule); user-select:none; }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
@@ -136,6 +142,7 @@ details.more[open] { padding-bottom:10px; }
   .hbar-row { grid-template-columns:1fr; gap:2px; }
   .hbar-track { height:12px; }
 }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -267,6 +274,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
+  <a class="nav-search" href="search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="states/index.html">Your state</a>
@@ -319,10 +328,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <li><strong>Water Resources</strong>: Unlikely to threaten overall water resources due to closed-loop or evaporative cooling designs, but localized groundwater draw should be monitored.</li>
 <li><strong>Noise Pollution</strong>: Identified as the most concerning localized community impact; requires strict zoning and noise mitigation from local permitting agencies.</li></ul>
   <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">At a glance</h3>
-  <table><tr><td><strong>Peak Construction Jobs</strong></td><td>1,000+ workers</td></tr>
+  <div class="table-scroll"><table><tr><td><strong>Peak Construction Jobs</strong></td><td>1,000+ workers</td></tr>
 <tr><td><strong>Permanent Jobs</strong></td><td>20–50 per hyperscale site</td></tr>
 <tr><td><strong>Water Threat Level</strong></td><td>Low (closed-loop standard)</td></tr>
-<tr><td><strong>Primary Local Benefit</strong></td><td>Property Taxes / CBA</td></tr></table>
+<tr><td><strong>Primary Local Benefit</strong></td><td>Property Taxes / CBA</td></tr></table></div>
 </section>
 <section id="virginia">
   <h2>Virginia</h2>
@@ -335,10 +344,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <li><strong>Clean Energy Backlash</strong>: Meeting hyperscaler green commitments (100% renewable matching) has led to massive solar land-use debates across rural Virginia counties.</li>
 <li><strong>Water Stewardship</strong>: Transitioning away from open-loop evaporative cooling towards air-cooling has reduced water intensity, but older facilities still consume millions of gallons daily.</li></ul>
   <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">At a glance</h3>
-  <table><tr><td><strong>State DC Power Draw</strong></td><td>3,000+ MW (largest globally)</td></tr>
+  <div class="table-scroll"><table><tr><td><strong>State DC Power Draw</strong></td><td>3,000+ MW (largest globally)</td></tr>
 <tr><td><strong>Annual Local Tax Revenue</strong></td><td>$1.2+ Billion</td></tr>
 <tr><td><strong>Grid Bottleneck Level</strong></td><td>High (PJM queues restricted)</td></tr>
-<tr><td><strong>Zoning Controversy</strong></td><td>Agricultural land-use conversion</td></tr></table>
+<tr><td><strong>Zoning Controversy</strong></td><td>Agricultural land-use conversion</td></tr></table></div>
 </section>
 <section id="georgia">
   <h2>Georgia</h2>
@@ -350,10 +359,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <li><strong>Grid Capacity Crisis</strong>: Georgia Power warned regulators that data centers are the primary driver of a massive upward revision in its peak load projections, prompting proposals to construct new fossil-fueled generation.</li>
 <li><strong>Local Benefits vs. State Cost</strong>: While local counties gain substantial property taxes, the state loses sales tax revenue on server upgrades (which occur every 3-4 years).</li></ul>
   <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">At a glance</h3>
-  <table><tr><td><strong>State Incentive Status</strong></td><td>Suspended / Capped (2025)</td></tr>
+  <div class="table-scroll"><table><tr><td><strong>State Incentive Status</strong></td><td>Suspended / Capped (2025)</td></tr>
 <tr><td><strong>Georgia Power Peak Revision</strong></td><td>+3,400 MW load forecast</td></tr>
 <tr><td><strong>Fossil-Fuel Runtimes</strong></td><td>Increased (new gas units approved)</td></tr>
-<tr><td><strong>Employment Multiplier</strong></td><td>Low (capital intensive)</td></tr></table>
+<tr><td><strong>Employment Multiplier</strong></td><td>Low (capital intensive)</td></tr></table></div>
 </section>
 <section id="oregon">
   <h2>Oregon</h2>
@@ -365,10 +374,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <li><strong>Hydroelectric Load</strong>: Historically attracted by cheap Bonneville Power Administration (BPA) hydropower. However, hydro capacity is fully allocated, forcing new expansion to draw from mixed Pacific Northwest grids with higher carbon intensities.</li>
 <li><strong>Transparency Laws</strong>: Led to new state laws regarding municipal utility disclosure. Utilities are now permitted to release actual water consumption figures, which were previously protected as proprietary trade secrets.</li></ul>
   <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">At a glance</h3>
-  <table><tr><td><strong>Water Source</strong></td><td>Columbia River / Aquifer</td></tr>
+  <div class="table-scroll"><table><tr><td><strong>Water Source</strong></td><td>Columbia River / Aquifer</td></tr>
 <tr><td><strong>Energy Source</strong></td><td>BPA Hydropower + Mixed Grid</td></tr>
 <tr><td><strong>Transparency Level</strong></td><td>Improved (New state disclosure laws)</td></tr>
-<tr><td><strong>Primary Issue</strong></td><td>Water rights vs. Agricultural demand</td></tr></table>
+<tr><td><strong>Primary Issue</strong></td><td>Water rights vs. Agricultural demand</td></tr></table></div>
 </section>
 <section id="maryland">
   <h2>Maryland</h2>
@@ -380,10 +389,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <li><strong>Regulatory Streamlining (CISA)</strong>: In May 2024, Maryland enacted the Critical Infrastructure Streamlining Act to exempt data center backup power from Certificate of Public Convenience and Necessity (CPCN) reviews to attract investment.</li>
 <li><strong>Environmental Safeguards</strong>: Environmental groups expressed concern over local particulate and carbon emissions from diesel backup arrays, prompting the state to commission a comprehensive data center impact study due September 1, 2026.</li></ul>
   <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">At a glance</h3>
-  <table><tr><td><strong>Streamlining Bill (CISA)</strong></td><td>Passed (May 2024)</td></tr>
+  <div class="table-scroll"><table><tr><td><strong>Streamlining Bill (CISA)</strong></td><td>Passed (May 2024)</td></tr>
 <tr><td><strong>Canceled Project Investment</strong></td><td>$30 Billion</td></tr>
 <tr><td><strong>Controversial Hardware</strong></td><td>168 Diesel Generators</td></tr>
-<tr><td><strong>Comprehensive Study Due</strong></td><td>Sept 1, 2026</td></tr></table>
+<tr><td><strong>Comprehensive Study Due</strong></td><td>Sept 1, 2026</td></tr></table></div>
 </section>
 <section id="indiana">
   <h2>Indiana</h2>
@@ -395,10 +404,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <li><strong>Statewide Water Inventory</strong>: Due to significant Meta ($10B in La Porte) and Amazon ($15B in Lebanon) campuses, the state is currently building a statewide water inventory by end of 2026 to monitor large industrial draws.</li>
 <li><strong>County-Level Moratoriums</strong>: Due to perceived gaps in state environmental oversight, multiple Indiana counties and cities (including Indianapolis) have enacted temporary data center construction moratoriums to protect local resources.</li></ul>
   <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">At a glance</h3>
-  <table><tr><td><strong>IURC Study Mandate</strong></td><td>Active (HB 1245, 2026)</td></tr>
+  <div class="table-scroll"><table><tr><td><strong>IURC Study Mandate</strong></td><td>Active (HB 1245, 2026)</td></tr>
 <tr><td><strong>Featured Projects</strong></td><td>Amazon ($15B), Meta ($10B)</td></tr>
 <tr><td><strong>Local Moratoriums</strong></td><td>Enacted (multiple counties)</td></tr>
-<tr><td><strong>State Water Inventory</strong></td><td>Due Late 2026</td></tr></table>
+<tr><td><strong>State Water Inventory</strong></td><td>Due Late 2026</td></tr></table></div>
 </section>
 <section id="new-jersey">
   <h2>New Jersey</h2>
@@ -411,10 +420,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <li><strong>Severe Supply Constraints</strong>: Driven by NYC-proximity financial trading links and AI cloud deployments, NJ's vacancy rate is under <strong>4%</strong> (occupancy at 96%). Major hubs are concentrated in Secaucus, Piscataway, and Carteret (Equinix, Digital Realty, DataBank).</li>
 <li><strong>Grid Cost Shifting (P.L. 2025 c. 98 / A-796)</strong>: The NJBPU and independent watchdogs (NJPP) warn that data centers trigger massive utility transmission cost-sharing. In July 2026, Governor Sherrill signed A-796 requiring specific large load tariffs (&gt;= 50 MW) to make operators pay for their own grid upgrades.</li></ul>
   <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">At a glance</h3>
-  <table><tr><td><strong>Total Power Capacity</strong></td><td>1.04 GW (2026)</td></tr>
+  <div class="table-scroll"><table><tr><td><strong>Total Power Capacity</strong></td><td>1.04 GW (2026)</td></tr>
 <tr><td><strong>Operational / Planned</strong></td><td>325 MW / 640 MW</td></tr>
 <tr><td><strong>Market Vacancy Rate</strong></td><td>Under 4% (Highly constrained)</td></tr>
-<tr><td><strong>Featured Hubs</strong></td><td>Secaucus, Piscataway, Carteret</td></tr></table>
+<tr><td><strong>Featured Hubs</strong></td><td>Secaucus, Piscataway, Carteret</td></tr></table></div>
 </section>
 <section>
   <p class="muted"><em>Missing your state?</em> If your legislature, PUC, or

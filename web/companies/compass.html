@@ -36,6 +36,10 @@ nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -47,6 +51,8 @@ nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
     border:1px solid var(--rule); user-select:none; }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
@@ -136,6 +142,7 @@ details.more[open] { padding-bottom:10px; }
   .hbar-row { grid-template-columns:1fr; gap:2px; }
   .hbar-track { height:12px; }
 }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -267,6 +274,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
+  <a class="nav-search" href="../search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     <a href="../index.html">Home</a>
     <a href="../states/index.html">Your state</a>
@@ -303,9 +312,9 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <p>Build-to-suit model: tenants control operations, so Compass&#x27;s Scope 1/2 covers only corporate offices (~3,700 tCO2e). The real DC energy footprint sits in Scope 3 Category 13 — easy to misread as &#x27;low-impact.&#x27;</p>
 </section>
 
-<section><h2>What they do report</h2><table><tr><td>Design PUE</td><td><strong>1.25</strong></td></tr>
+<section><h2>What they do report</h2><div class="table-scroll"><table><tr><td>Design PUE</td><td><strong>1.25</strong></td></tr>
 <tr><td>WUE</td><td><strong>0 (waterless cooling)</strong></td></tr>
-<tr><td>Embodied carbon</td><td><strong>−33% per MW (2022-2024)</strong></td></tr></table></section>
+<tr><td>Embodied carbon</td><td><strong>−33% per MW (2022-2024)</strong></td></tr></table></div></section>
 <section><h2>What they don't report</h2><ul><li>Scope 1/2 for data centers (only corporate offices reported)</li><li>Total capacity / campus count</li><li>Revenue</li></ul></section>
 <section>
   <h2>Why this matters</h2>

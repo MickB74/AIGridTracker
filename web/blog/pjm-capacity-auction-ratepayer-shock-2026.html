@@ -38,6 +38,10 @@ nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -49,6 +53,8 @@ nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
     border:1px solid var(--rule); user-select:none; }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
@@ -138,6 +144,7 @@ details.more[open] { padding-bottom:10px; }
   .hbar-row { grid-template-columns:1fr; gap:2px; }
   .hbar-track { height:12px; }
 }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -269,6 +276,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
+  <a class="nav-search" href="../search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     <a href="../index.html">Home</a>
     <a href="../states/index.html">Your state</a>
@@ -341,7 +350,7 @@ auction" or not.</p>
 <p>PJM's capacity market pays power plants to <em>exist</em> — to be available on the
 hottest summer afternoon even if they don't run. The clearing price determines
 how much consumers pay for that insurance. Here is what has happened to it:</p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Delivery year</th>
@@ -382,7 +391,7 @@ how much consumers pay for that insurance. Here is what has happened to it:</p>
 <td>~$16.4 B</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Read that first jump again. In a single year, the price that sets roughly 20%
 of your electricity bill rose by a factor of <em>nine</em>. And it has stayed there
 for four straight auctions, pinned at or near the FERC-approved price cap.</p>
@@ -401,7 +410,7 @@ first RTO-wide capacity shortfall in the market's history.</p>
 <p>PJM's Independent Market Monitor — the neutral referee Congress created to
 keep wholesale markets honest — has now quantified data centers' share of the
 bill. The numbers are stark.</p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Metric</th>
@@ -426,7 +435,7 @@ bill. The numbers are stark.</p>
 <td><strong>67 million</strong> across 13 states + D.C.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Market Monitor president Joseph Bowring put it plainly: <strong>"This is not
 something the data centers are actually paying themselves. This is a cost
 being imposed on all customers in the PJM footprint."</strong></p>

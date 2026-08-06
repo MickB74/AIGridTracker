@@ -25,6 +25,7 @@ import html
 import json
 import os
 import pathlib
+import re
 import shutil
 
 import markdown
@@ -165,6 +166,10 @@ nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -176,6 +181,8 @@ nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
     border:1px solid var(--rule); user-select:none; }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
@@ -265,6 +272,7 @@ details.more[open] { padding-bottom:10px; }
   .hbar-row { grid-template-columns:1fr; gap:2px; }
   .hbar-track { height:12px; }
 }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -426,9 +434,32 @@ def _nav_links_html(p, canonical):
     return "\n    ".join(out)
 
 
+_TABLE_RE = re.compile(r"<table\b.*?</table>", re.DOTALL)
+
+
+def _wrap_tables(body):
+    """Give every bare <table> its own horizontal-scroll box.
+
+    A wide table (moratoriums, data centers, executives) with no wrapper
+    blows out the page width on a phone — the one device someone actually
+    reads this on at a hearing. Most builder functions already emit their
+    own <div style="overflow-x:auto"> around a table; this catches the ones
+    that don't and lets future tables skip the ceremony. Idempotent: a table
+    already inside an overflow wrapper is left untouched, so it never
+    double-wraps.
+    """
+    def repl(m):
+        preceding = body[max(0, m.start() - 60):m.start()]
+        if "overflow-x" in preceding or "table-scroll" in preceding:
+            return m.group(0)
+        return f'<div class="table-scroll">{m.group(0)}</div>'
+    return _TABLE_RE.sub(repl, body)
+
+
 def page(title, description, body, canonical, depth=0,
          og_type="website", og_extra="", jsonld=None):
     p = "../" * depth
+    body = _wrap_tables(body)
     ld_block = ""
     if jsonld:
         items = jsonld if isinstance(jsonld, list) else [jsonld]
@@ -468,6 +499,8 @@ def page(title, description, body, canonical, depth=0,
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
+  <a class="nav-search" href="{p}search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     {_nav_links_html(p, canonical)}
   </div>
@@ -6959,6 +6992,20 @@ def main():
             "redirects": _blog_redirects + _state_redirects,
         }, indent=2) + "\n",
         encoding="utf-8")
+
+    # rmtree(ignore_errors=True) can silently leave a locked file behind, and
+    # Finder / a bad merge can drop a "states 3"-style duplicate directory in
+    # after a build. Either way the stale pages get served and indexed, so
+    # fail loudly rather than ship them.
+    expected_dirs = {"assets", "blog", "companies", "data", "embed", "news",
+                     "states"}
+    actual_dirs = {d.name for d in WEB.iterdir() if d.is_dir()}
+    unexpected = actual_dirs - expected_dirs
+    if unexpected:
+        raise SystemExit(
+            f"build guard: unexpected director{'y' if len(unexpected)==1 else 'ies'} "
+            f"in web/ — {sorted(unexpected)}. Delete the duplicate(s) (likely a "
+            f"Finder 'name 2' copy) or add to expected_dirs if intentional.")
 
     n = len(list(WEB.rglob("*.html")))
     print(f"built web/ — {n} pages, sitemap, robots.txt, vercel.json")

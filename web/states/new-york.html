@@ -36,6 +36,10 @@ nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
 nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
            font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 /* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
 .nav-burger { display:none; }
 .nav-links { display:contents; }
@@ -47,6 +51,8 @@ nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
     border:1px solid var(--rule); user-select:none; }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
@@ -136,6 +142,7 @@ details.more[open] { padding-bottom:10px; }
   .hbar-row { grid-template-columns:1fr; gap:2px; }
   .hbar-track { height:12px; }
 }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
 th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
 th { color:var(--muted); font-weight:600; }
@@ -267,6 +274,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
+  <a class="nav-search" href="../search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
   <div class="nav-links">
     <a href="../index.html">Home</a>
     <a href="../states/index.html" aria-current="page">Your state</a>
@@ -306,14 +315,14 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 </div>
 <div class="freshness"><p><strong>As of July 2026 · changes over months</strong> · Source: <a href="https://www.electricchoice.com/datacenters/" rel="nofollow">ElectricChoice.com — U.S. Data Center Power Map by State (2026; updated July 2026; CC-BY 4.0; cites LBNL, EPRINC, EIA)</a></p><p class="muted" style="margin:6px 0 0">Facility counts vary by directory because each one draws the boundary differently — DataCenterMap lists 44 in Alabama where this table says 35, since it counts small network rooms alongside hyperscale campuses. Cite the TWh figure rather than the facility count when you can; it is the number that speaks to grid impact. Underlying load research is LBNL-2001637 (Dec 2024).</p></div>
 <section><h2>Your regulator</h2><p><strong>New York Public Service Commission</strong> — <a href="https://www.dps.ny.gov/">website</a> · <a href="https://dps.ny.gov/file-complaint">file a complaint</a></p></section>
-<section><h2>Pushback already happening in New York</h2><table><tr><th>Where</th><th>Level</th><th>Status</th><th>Note</th><th>Source</th></tr><tr><td>Lysander (Onondaga Co.)</td><td>Local</td><td><span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-11-06</span></td><td>6-month; no applications accepted by Town, Planning or Zoning boards</td><td><a href="https://www.informnny.com/news/local-news/lysander-board-approves-six-month-data-center-moratorium-residents-speak-out-against-project-proposal/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-04</span></td></tr>
+<section><h2>Pushback already happening in New York</h2><div class="table-scroll"><table><tr><th>Where</th><th>Level</th><th>Status</th><th>Note</th><th>Source</th></tr><tr><td>Lysander (Onondaga Co.)</td><td>Local</td><td><span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-11-06</span></td><td>6-month; no applications accepted by Town, Planning or Zoning boards</td><td><a href="https://www.informnny.com/news/local-news/lysander-board-approves-six-month-data-center-moratorium-residents-speak-out-against-project-proposal/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-04</span></td></tr>
 <tr><td>Perth (Fulton Co.)</td><td>Local</td><td><span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-06-04</span></td><td>1-year, passed 3-0; extendable by simple resolution</td><td><a href="https://www.dailygazette.com/the_recorder/leader_herald/data-center-moratorium/article_28560f58-b336-4cae-8773-f0a04cd3001b.html" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-04</span></td></tr>
 <tr><td>Tonawanda (Erie Co.)</td><td>Local</td><td><span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-08-03</span></td><td>Local Law 2-2026: 1-year pause on facilities drawing 20 MW or more — a lower threshold than the state EO&#x27;s 50 MW</td><td><a href="https://www.beenews.com/ken_ton_bee/ken_ton_bee/news/town-adopts-one-year-moratorium-on-data-centers/article_b2afd139-7437-48f8-af10-1787cf849858.html" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-04</span></td></tr>
 <tr><td>Newfield (Tompkins Co.)</td><td>Local</td><td><span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-07-09</span></td><td>1-year townwide pause on data processing centers and cryptocurrency mining; town is drafting comprehensive-plan amendments before it lapses</td><td><a href="https://www.tompkinsweekly.com/events/newfield-approves-one-year-moratorium-on-data-centers-fdcffc41" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-04</span></td></tr>
 <tr><td>St. Lawrence County</td><td>Local</td><td><span class="badge badge-proposed">Proposed</span></td><td>The county did not adopt a moratorium of its own — it passed a resolution affirming local zoning authority and urging its municipalities to consider one. Tracked as a signal, not a restriction</td><td><a href="https://www.rockinst.org/blog/updates-on-the-cloud-more-moratoriums-on-data-centers/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-04</span></td></tr>
 <tr><td>Mohawk (Montgomery Co.)</td><td>Local</td><td><span class="badge badge-proposed">Proposed</span></td><td>6-month pause to write zoning rules; public hearing Aug 13, 2026. Supervisor cites the state EO&#x27;s 50 MW floor as leaving smaller facilities unregulated. Would run to Feb 13, 2027 if adopted</td><td><a href="https://www.dailygazette.com/leader_herald/the_recorder/news/govt_politics/town-of-mohawk-proposes-data-center-moratorium/article_4b6168e8-568e-4a86-8bd8-bfd298eb59b5.html" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-04</span></td></tr>
 <tr><td>New York (statewide)</td><td>State</td><td><span class="badge badge-enacted">Enacted</span></td><td>EO 62: first statewide pause. Holds DEC discretionary approvals for 50+ MW facilities until DPS finishes a generic environmental impact statement — roughly a year, but tied to that study, not a fixed date</td><td><a href="https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-04</span></td></tr>
-<tr><td>New York (S10642/A11560)</td><td>State</td><td><span class="badge badge-proposed">Proposed</span></td><td>Responsible Data Center Development Act: 1-year moratorium on state permits for 20+ MW facilities, plus a dedicated utility rate class, a DEC impact study, and a host-community benefit program. Passed the Senate 43-17. Per the Senate&#x27;s own record it had not been delivered to the Governor as of Aug 4, 2026 — Hochul acted by executive order (EO 62, 50 MW floor) instead. Still live, and stricter than the EO</td><td><a href="https://www.nysenate.gov/legislation/bills/2025/S10642" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-04</span></td></tr></table><div class="freshness"><p><strong>As of August 2026 · changes weekly — re-check before citing</strong></p><p class="muted" style="margin:6px 0 0">Illustrative rather than exhaustive — dozens of localities churn weekly, and this tracks the ones we have read a source for.
+<tr><td>New York (S10642/A11560)</td><td>State</td><td><span class="badge badge-proposed">Proposed</span></td><td>Responsible Data Center Development Act: 1-year moratorium on state permits for 20+ MW facilities, plus a dedicated utility rate class, a DEC impact study, and a host-community benefit program. Passed the Senate 43-17. Per the Senate&#x27;s own record it had not been delivered to the Governor as of Aug 4, 2026 — Hochul acted by executive order (EO 62, 50 MW floor) instead. Still live, and stricter than the EO</td><td><a href="https://www.nysenate.gov/legislation/bills/2025/S10642" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-04</span></td></tr></table></div><div class="freshness"><p><strong>As of August 2026 · changes weekly — re-check before citing</strong></p><p class="muted" style="margin:6px 0 0">Illustrative rather than exhaustive — dozens of localities churn weekly, and this tracks the ones we have read a source for.
 
 **Each row carries its own provenance.** Rows showing a verification date link to the ordinance, the enacting body&#x27;s own page, or a datable report of the vote, and were read on that date. Rows marked *unverified* came from bulk compilation and have not been checked against a primary source — the locality, the year, and the status may all be off. Verify one of those with the town clerk before citing it as precedent.
 
