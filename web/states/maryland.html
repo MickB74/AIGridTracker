@@ -292,6 +292,47 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 @keyframes flowc { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
   80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
 @media (prefers-reduced-motion:reduce){ .grid-flow-svg .flow-dot{ animation:none } }
+
+/* Print: this is a handout. People print state briefings, hearing questions
+   and the health-risk page to carry into a meeting, so drop the dark theme
+   (wastes ink, reads badly on paper), strip the chrome that can't be tapped,
+   expand collapsed sections, and print source URLs after links so a citation
+   survives the photocopier. */
+@media print {
+  :root { --bg:#fff; --card:#fff; --ink:#111; --muted:#444; --rule:#bbb;
+          --teal:#0a7d70; --amber:#8a6d00; }
+  * { box-shadow:none !important; text-shadow:none !important;
+      filter:none !important; animation:none !important; }
+  body { background:#fff; color:#111; font-size:11.5pt; }
+  .wrap { max-width:none; padding:0; }
+  nav, footer, .nav-search, .cta, .nav-burger, .skip,
+  .hero-art, .us-map, .grid-flow-svg, .flow-dot, .blog-list .thumb,
+  .post-art, .demand-chart { display:none !important; }
+  a { color:#111; text-decoration:underline; }
+  /* Show the destination of real links, not internal .html jumps or buttons. */
+  main a[href^="http"]:not(.btn):not(.tag)::after {
+    content:" (" attr(href) ")"; font-size:9pt; color:#555;
+    word-break:break-all; text-decoration:none; }
+  .btn { border:1px solid #111 !important; color:#111 !important;
+         background:#fff !important; padding:4px 10px; }
+  .card, .panel, .note, .freshness, .glass-card, .outcome, details.more,
+  .stat { background:#fff !important; border:1px solid #ccc !important;
+          color:#111 !important; }
+  .panel *, .note * { color:#111 !important; }
+  .kicker, h2, .stat b, .prose h3 { color:#0a7d70 !important; }
+  .badge { border:1px solid #333; color:#111 !important;
+           background:#fff !important; }
+  /* Expand collapsed disclosures so nothing prints hidden. */
+  details[open] > summary { color:#111; }
+  details:not([open]) > *:not(summary) { display:block !important; }
+  details > summary::after, details > summary::-webkit-details-marker {
+    display:none !important; }
+  section, .card, tr, li, .outcome, .note { break-inside:avoid; }
+  h1, h2, h3 { break-after:avoid; }
+  table, .table-scroll { overflow:visible !important; }
+  th, td { border-bottom:1px solid #ccc; }
+  @page { margin:1.6cm; }
+}
 </style>
 </head>
 <body>
