@@ -2014,57 +2014,57 @@ PROJECT_STAGES = {
 # and grid carbon intensity (gCO2/kWh, eGRID 2022 subregion averages
 # mapped to dominant state grid). Used by the local impact calculator.
 STATE_GRID_PROFILES = {
-    "Alabama":        {"rate": 0.146, "gco2": 380, "water_stress": "low"},
-    "Alaska":         {"rate": 0.229, "gco2": 450, "water_stress": "low"},
-    "Arizona":        {"rate": 0.139, "gco2": 390, "water_stress": "high"},
-    "Arkansas":       {"rate": 0.124, "gco2": 410, "water_stress": "low"},
-    "California":     {"rate": 0.285, "gco2": 210, "water_stress": "high"},
-    "Colorado":       {"rate": 0.150, "gco2": 420, "water_stress": "medium"},
-    "Connecticut":    {"rate": 0.268, "gco2": 200, "water_stress": "low"},
-    "Delaware":       {"rate": 0.155, "gco2": 370, "water_stress": "low"},
-    "District of Columbia": {"rate": 0.158, "gco2": 340, "water_stress": "low"},
-    "Florida":        {"rate": 0.157, "gco2": 370, "water_stress": "low"},
-    "Georgia":        {"rate": 0.143, "gco2": 370, "water_stress": "low"},
-    "Hawaii":         {"rate": 0.410, "gco2": 550, "water_stress": "high"},
-    "Idaho":          {"rate": 0.112, "gco2": 120, "water_stress": "medium"},
-    "Illinois":       {"rate": 0.154, "gco2": 310, "water_stress": "low"},
-    "Indiana":        {"rate": 0.149, "gco2": 430, "water_stress": "low"},
-    "Iowa":           {"rate": 0.139, "gco2": 410, "water_stress": "low"},
-    "Kansas":         {"rate": 0.142, "gco2": 420, "water_stress": "medium"},
-    "Kentucky":       {"rate": 0.126, "gco2": 460, "water_stress": "low"},
-    "Louisiana":      {"rate": 0.117, "gco2": 380, "water_stress": "low"},
-    "Maine":          {"rate": 0.228, "gco2": 180, "water_stress": "low"},
-    "Maryland":       {"rate": 0.160, "gco2": 340, "water_stress": "low"},
-    "Massachusetts":  {"rate": 0.280, "gco2": 280, "water_stress": "low"},
-    "Michigan":       {"rate": 0.186, "gco2": 390, "water_stress": "low"},
-    "Minnesota":      {"rate": 0.151, "gco2": 350, "water_stress": "low"},
-    "Mississippi":    {"rate": 0.131, "gco2": 400, "water_stress": "low"},
-    "Missouri":       {"rate": 0.131, "gco2": 440, "water_stress": "low"},
-    "Montana":        {"rate": 0.125, "gco2": 340, "water_stress": "low"},
-    "Nebraska":       {"rate": 0.121, "gco2": 420, "water_stress": "low"},
-    "Nevada":         {"rate": 0.138, "gco2": 330, "water_stress": "high"},
-    "New Hampshire":  {"rate": 0.243, "gco2": 190, "water_stress": "low"},
-    "New Jersey":     {"rate": 0.187, "gco2": 250, "water_stress": "low"},
-    "New Mexico":     {"rate": 0.143, "gco2": 410, "water_stress": "high"},
-    "New York":       {"rate": 0.223, "gco2": 250, "water_stress": "low"},
-    "North Carolina": {"rate": 0.132, "gco2": 350, "water_stress": "low"},
-    "North Dakota":   {"rate": 0.117, "gco2": 510, "water_stress": "low"},
-    "Ohio":           {"rate": 0.144, "gco2": 420, "water_stress": "low"},
-    "Oklahoma":       {"rate": 0.121, "gco2": 350, "water_stress": "medium"},
-    "Oregon":         {"rate": 0.128, "gco2": 140, "water_stress": "medium"},
-    "Pennsylvania":   {"rate": 0.171, "gco2": 310, "water_stress": "low"},
-    "Rhode Island":   {"rate": 0.265, "gco2": 280, "water_stress": "low"},
-    "South Carolina": {"rate": 0.146, "gco2": 300, "water_stress": "low"},
-    "South Dakota":   {"rate": 0.128, "gco2": 250, "water_stress": "low"},
-    "Tennessee":      {"rate": 0.125, "gco2": 350, "water_stress": "low"},
-    "Texas":          {"rate": 0.142, "gco2": 350, "water_stress": "medium"},
-    "Utah":           {"rate": 0.114, "gco2": 440, "water_stress": "high"},
-    "Vermont":        {"rate": 0.207, "gco2": 30,  "water_stress": "low"},
-    "Virginia":       {"rate": 0.142, "gco2": 330, "water_stress": "low"},
-    "Washington":     {"rate": 0.112, "gco2": 80,  "water_stress": "medium"},
-    "West Virginia":  {"rate": 0.131, "gco2": 520, "water_stress": "low"},
-    "Wisconsin":      {"rate": 0.162, "gco2": 380, "water_stress": "low"},
-    "Wyoming":        {"rate": 0.111, "gco2": 460, "water_stress": "low"},
+    "Alabama":        {"rate": 0.1677, "gco2": 380, "water_stress": "low"},
+    "Alaska":         {"rate": 0.2823, "gco2": 450, "water_stress": "low"},
+    "Arizona":        {"rate": 0.1523, "gco2": 390, "water_stress": "high"},
+    "Arkansas":       {"rate": 0.1436, "gco2": 410, "water_stress": "low"},
+    "California":     {"rate": 0.3325, "gco2": 210, "water_stress": "high"},
+    "Colorado":       {"rate": 0.1616, "gco2": 420, "water_stress": "medium"},
+    "Connecticut":    {"rate": 0.2737, "gco2": 200, "water_stress": "low"},
+    "Delaware":       {"rate": 0.1938, "gco2": 370, "water_stress": "low"},
+    "District of Columbia": {"rate": 0.254, "gco2": 340, "water_stress": "low"},
+    "Florida":        {"rate": 0.1517, "gco2": 370, "water_stress": "low"},
+    "Georgia":        {"rate": 0.1584, "gco2": 370, "water_stress": "low"},
+    "Hawaii":         {"rate": 0.52, "gco2": 550, "water_stress": "high"},
+    "Idaho":          {"rate": 0.1235, "gco2": 120, "water_stress": "medium"},
+    "Illinois":       {"rate": 0.2385, "gco2": 310, "water_stress": "low"},
+    "Indiana":        {"rate": 0.1815, "gco2": 430, "water_stress": "low"},
+    "Iowa":           {"rate": 0.1414, "gco2": 410, "water_stress": "low"},
+    "Kansas":         {"rate": 0.1513, "gco2": 420, "water_stress": "medium"},
+    "Kentucky":       {"rate": 0.1498, "gco2": 460, "water_stress": "low"},
+    "Louisiana":      {"rate": 0.1415, "gco2": 380, "water_stress": "low"},
+    "Maine":          {"rate": 0.2863, "gco2": 180, "water_stress": "low"},
+    "Maryland":       {"rate": 0.2177, "gco2": 340, "water_stress": "low"},
+    "Massachusetts":  {"rate": 0.2882, "gco2": 280, "water_stress": "low"},
+    "Michigan":       {"rate": 0.2201, "gco2": 390, "water_stress": "low"},
+    "Minnesota":      {"rate": 0.1695, "gco2": 350, "water_stress": "low"},
+    "Mississippi":    {"rate": 0.1616, "gco2": 400, "water_stress": "low"},
+    "Missouri":       {"rate": 0.1368, "gco2": 440, "water_stress": "low"},
+    "Montana":        {"rate": 0.1467, "gco2": 340, "water_stress": "low"},
+    "Nebraska":       {"rate": 0.1359, "gco2": 420, "water_stress": "low"},
+    "Nevada":         {"rate": 0.136, "gco2": 330, "water_stress": "high"},
+    "New Hampshire":  {"rate": 0.2733, "gco2": 190, "water_stress": "low"},
+    "New Jersey":     {"rate": 0.2327, "gco2": 250, "water_stress": "low"},
+    "New Mexico":     {"rate": 0.1412, "gco2": 410, "water_stress": "high"},
+    "New York":       {"rate": 0.2993, "gco2": 250, "water_stress": "low"},
+    "North Carolina": {"rate": 0.1509, "gco2": 350, "water_stress": "low"},
+    "North Dakota":   {"rate": 0.1361, "gco2": 510, "water_stress": "low"},
+    "Ohio":           {"rate": 0.1952, "gco2": 420, "water_stress": "low"},
+    "Oklahoma":       {"rate": 0.1338, "gco2": 350, "water_stress": "medium"},
+    "Oregon":         {"rate": 0.1627, "gco2": 140, "water_stress": "medium"},
+    "Pennsylvania":   {"rate": 0.2155, "gco2": 310, "water_stress": "low"},
+    "Rhode Island":   {"rate": 0.2946, "gco2": 280, "water_stress": "low"},
+    "South Carolina": {"rate": 0.1618, "gco2": 300, "water_stress": "low"},
+    "South Dakota":   {"rate": 0.1573, "gco2": 250, "water_stress": "low"},
+    "Tennessee":      {"rate": 0.1447, "gco2": 350, "water_stress": "low"},
+    "Texas":          {"rate": 0.1644, "gco2": 350, "water_stress": "medium"},
+    "Utah":           {"rate": 0.1296, "gco2": 440, "water_stress": "high"},
+    "Vermont":        {"rate": 0.2489, "gco2": 30,  "water_stress": "low"},
+    "Virginia":       {"rate": 0.1761, "gco2": 330, "water_stress": "low"},
+    "Washington":     {"rate": 0.1495, "gco2": 80,  "water_stress": "medium"},
+    "West Virginia":  {"rate": 0.168, "gco2": 520, "water_stress": "low"},
+    "Wisconsin":      {"rate": 0.1974, "gco2": 380, "water_stress": "low"},
+    "Wyoming":        {"rate": 0.148, "gco2": 460, "water_stress": "low"},
 }
 
 # Named campus siting locations: regional temperature penalty on PUE,
@@ -3362,31 +3362,28 @@ REGISTRY_PROVENANCE = {
     },
     "STATE_GRID_PROFILES": {
         "label": "State residential rates, grid carbon & water stress",
-        # Inferred, not recorded. No vintage was ever stored for this
-        # registry, so this date comes from spot-checking values against
-        # published EIA annual averages — 2023 matches, later years do not.
-        # Written as an inference rather than a fact because a confident
-        # wrong date is worse than an admitted estimate.
-        "as_of": "2023 (inferred — see caveat)",
+        "as_of": "May 2026",
         "source": "eia_rates",
         "churn": "high",
         "caveat": (
-            "**These rates are stale, and they are stale in a specific "
-            "direction.** Spot checks against 2026 figures found this table "
-            "running 12–22% low: Hawaii 41.0¢ here against 46.6¢ today, "
-            "California 28.5¢ against 33.6¢, Washington 11.2¢ against 14.4¢, "
-            "Virginia 14.2¢ against 17.4¢.\n\n"
-            "So every bill-impact number the calculator produces understates "
-            "what a household actually pays, and the residential-versus-"
-            "industrial rate gap is wider than shown, not narrower. If you "
-            "are citing a rate at a hearing, pull the current figure for your "
-            "state from EIA directly — the shape of the argument holds, but "
-            "the number on the slide should be today's.\n\n"
-            "Carbon intensities are state annual averages and move far more "
-            "slowly than prices; they remain broadly usable. Water stress is "
-            "a coarse low/medium/high banding, not a basin-level assessment — "
-            "a state marked 'low' can still contain a stressed watershed, "
-            "which is the scale that actually decides a cooling permit."),
+            "**Rates** are EIA Electric Power Monthly Table 5.6.A, May 2026 — "
+            "all 51 refreshed together from the published table rather than "
+            "spot-edited, so cross-state comparisons stay valid. Note this is "
+            "a single month, not an annual average: residential prices are "
+            "seasonal, and May is a shoulder month, so summer-peaking states "
+            "may run higher than shown.\n\n"
+            "The refresh moved rates up a mean of 18.6%, and 48 of 51 states "
+            "rose. The largest increases land in the PJM footprint and other "
+            "data-center-dense markets — D.C. +61%, Illinois +55%, Maryland "
+            "+36%, Ohio +36%, New York +34% — which is the correlation worth "
+            "raising at a hearing, though correlation is all it is: this "
+            "table cannot attribute a rate increase to a cause.\n\n"
+            "**Carbon intensities** are state annual averages and move far "
+            "more slowly than prices; they were not part of this refresh and "
+            "remain broadly usable. **Water stress** is a coarse "
+            "low/medium/high banding, not a basin-level assessment — a state "
+            "marked 'low' can still contain a stressed watershed, which is "
+            "the scale that actually decides a cooling permit."),
     },
     "MORATORIUMS_DF": {
         "label": "Moratorium & ban tracker",
