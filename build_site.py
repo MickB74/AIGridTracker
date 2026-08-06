@@ -582,10 +582,26 @@ def _wrap_tables(body):
     return _TABLE_RE.sub(repl, body)
 
 
+def _seo_clip(text, limit):
+    """Trim to `limit` chars at a word boundary, adding an ellipsis.
+
+    Only the SERP-facing <title> and <meta name=description> are clipped —
+    keywords are front-loaded, so the tail is what Google would cut anyway.
+    The og:* tags keep the full text, since social cards do their own
+    truncation and a complete headline reads better there.
+    """
+    t = " ".join(str(text).split())
+    if len(t) <= limit:
+        return t
+    return t[:limit].rsplit(" ", 1)[0].rstrip(" ,.;:—-") + "…"
+
+
 def page(title, description, body, canonical, depth=0,
          og_type="website", og_extra="", jsonld=None):
     p = "../" * depth
     body = _wrap_tables(body)
+    title_serp = _seo_clip(title, 60)      # ~600px SERP cap
+    desc_serp = _seo_clip(description, 155)  # Google shows ~155-160 chars
     ld_block = ""
     if jsonld:
         items = jsonld if isinstance(jsonld, list) else [jsonld]
@@ -598,8 +614,8 @@ def page(title, description, body, canonical, depth=0,
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b1220">
-<title>{esc(title)}</title>
-<meta name="description" content="{esc(description)}">
+<title>{esc(title_serp)}</title>
+<meta name="description" content="{esc(desc_serp)}">
 <link rel="canonical" href="{canonical}">
 <link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
       href="{SITE_URL}/blog/feed.xml">
@@ -6874,9 +6890,18 @@ def build_data_dividend():
         jsonld=_breadcrumb(("Home", SITE_URL), ("Dividend calculator", f"{SITE_URL}/dividend")))
 
 
-def build_sitemap(paths):
+def build_sitemap(entries):
+    """entries: list of (path, lastmod) — lastmod is a W3C date (YYYY-MM-DD).
+
+    lastmod is what tells a crawler this daily-rebuilt site is worth
+    re-fetching; without it Google has no freshness signal beyond its own
+    last visit. Blog posts carry their real publish date so old articles
+    aren't claimed to change every day; data- and news-driven pages carry the
+    build date because they genuinely regenerate daily.
+    """
     urls = "\n".join(
-        f"  <url><loc>{SITE_URL}/{p}</loc></url>" for p in paths)
+        f"  <url><loc>{SITE_URL}/{p}</loc><lastmod>{lm}</lastmod></url>"
+        for p, lm in entries)
     return (f'<?xml version="1.0" encoding="UTF-8"?>\n'
             f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
             f'{urls}\n</urlset>\n')
@@ -7213,7 +7238,14 @@ def main():
             build_state(state), encoding="utf-8")
         paths.append(f"states/{slug}")
 
-    (WEB / "sitemap.xml").write_text(build_sitemap(paths), encoding="utf-8")
+    # lastmod: blog posts keep their real publish date; everything else uses
+    # the build date, since those pages carry daily-refreshed news/data.
+    import datetime as _smdt
+    _build_date = _smdt.datetime.now(_smdt.timezone.utc).date().isoformat()
+    _post_lastmod = {f"blog/{s['id']}": s["date"].isoformat() for s in posts}
+    _sitemap_entries = [(p, _post_lastmod.get(p, _build_date)) for p in paths]
+    (WEB / "sitemap.xml").write_text(
+        build_sitemap(_sitemap_entries), encoding="utf-8")
     (WEB / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n",
         encoding="utf-8")
