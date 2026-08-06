@@ -521,6 +521,7 @@ NAV_GROUPS = [
     ("Updates", [
         ("Blog", "blog/index.html"),
         ("News", "news/index.html"),
+        ("Videos", "videos.html"),
     ]),
 ]
 
@@ -1095,7 +1096,10 @@ def build_state(state):
         videos_html = (
             f'<section><h2>Video coverage mentioning {esc(state)}</h2>'
             f'<div style="display:grid;grid-template-columns:repeat(auto-fill,'
-            f'minmax(260px,1fr));gap:16px">{"".join(cards)}</div></section>')
+            f'minmax(260px,1fr));gap:16px">{"".join(cards)}</div>'
+            f'<p class="muted" style="margin-top:12px">'
+            f'<a href="../videos?state={esc(state)}">All video coverage for '
+            f'{esc(state)} &rarr;</a></p></section>')
 
     # Municipal league
     muni = STATE_MUNI_LEAGUES.get(abbrev)
@@ -1834,7 +1838,7 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
                     "Latest community-impact data center news, updated regularly.",
                     body, f"{SITE_URL}/news/", depth=1)
 
-    covered = sorted({st for it in (theme_items + items + videos)
+    covered = sorted({st for it in (theme_items + items)
                       for st in it.get("states", [])})
     state_options = '<option value="">All states</option>' + "".join(
         f'<option value="{esc(st)}">{esc(st)}</option>' for st in covered)
@@ -1926,45 +1930,17 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
     except Exception:                                             # noqa: BLE001
         fetched_display = fetched_at
 
-    # ── Video cards (YouTube) ──
-    video_cards = ""
+    # Video coverage now lives on its own page — link across rather than
+    # stacking it under the headlines. Only surface the link when there is
+    # something to watch.
+    videos_link = ""
     if videos:
-        cards = []
-        for v in videos[:24]:
-            vid = v.get("video_id", "")
-            thumb = f'https://i.ytimg.com/vi/{vid}/hqdefault.jpg' if vid else ""
-            placeholder = (
-                '<div style="width:100%;aspect-ratio:16/9;background:'
-                'linear-gradient(135deg,#1a1f2e,#2d1a3d);display:flex;'
-                'align-items:center;justify-content:center;font-size:42px;'
-                'color:#ff4136">▶</div>')
-            states = v.get("states", [])
-            data_states = esc("|".join(states)) if states else ""
-            chips = " ".join(f'<span class="tag">{esc(st)}</span>' for st in states)
-            when = _fmt_date(v.get("published_iso", ""))
-            meta = " · ".join(x for x in (v.get("source", ""), when) if x)
-            cards.append(
-                f'<a class="video-card" data-states="{data_states}" '
-                f'href="{esc(v["link"])}" rel="nofollow noopener" target="_blank" '
-                f'style="display:block;border:1px solid rgba(255,255,255,0.08);'
-                f'border-radius:12px;overflow:hidden;text-decoration:none;color:inherit">'
-                f'{("<img src=" + repr(thumb) + " alt=\"\" loading=\"lazy\" style=\"width:100%;display:block;aspect-ratio:16/9;object-fit:cover\">") if thumb else placeholder}'
-                f'<div style="padding:12px 14px">'
-                f'<div class="post-meta" style="font-size:12px;opacity:0.75">{esc(meta)}</div>'
-                f'<div style="font-weight:600;margin:4px 0 6px;line-height:1.3">'
-                f'{esc(v["title"])}</div>'
-                f'{"<div class=\"tags\">" + chips + "</div>" if chips else ""}'
-                f'</div></a>')
-        video_cards = (
-            '<section id="videos"><h2>Watch: video coverage</h2>'
-            '<p class="muted">From vetted channels only — PBS NewsHour, WSJ, '
-            'Bloomberg, CNBC, Reuters, FT, The Verge, Vox — filtered to data '
-            'center / grid topics.</p>'
-            '<div class="video-grid" style="display:grid;'
-            'grid-template-columns:repeat(auto-fill,minmax(280px,1fr));'
-            f'gap:16px;margin-top:16px">{"".join(cards)}</div>'
-            '<p id="noVideos" class="muted" style="display:none;margin-top:16px">'
-            'No videos tagged for that state yet.</p></section>')
+        videos_link = (
+            '<section id="videos"><div class="note info"><p>'
+            '<strong>Prefer to watch?</strong> Explainers and reporting from '
+            'vetted channels — PBS NewsHour, WSJ, Bloomberg, CNBC, Reuters, FT '
+            '— now live on their own page. '
+            '<a href="../videos">Video coverage &rarr;</a></p></div></section>')
 
     body = f"""
 <header>
@@ -2034,7 +2010,7 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
   <p id="noResults" class="muted" style="display:none">No stories match those filters. Try a broader theme or clear the keyword.</p>
 </section>
 
-{video_cards}
+{videos_link}
 
 <section>
   <p class="muted" style="margin-top:24px">Headlines are an automated news
@@ -2053,14 +2029,12 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
   var none = document.getElementById('noResults');
   var reset = document.getElementById('resetFilters');
   var items = Array.prototype.slice.call(list.querySelectorAll('li'));
-  var videoCards = Array.prototype.slice.call(document.querySelectorAll('.video-card'));
-  var noVideos = document.getElementById('noVideos');
 
   function apply() {{
     var theme = themeSel.value;
     var state = stateSel.value;
     var kwVal = (kw.value || '').trim().toLowerCase();
-    var shown = 0, vShown = 0;
+    var shown = 0;
     items.forEach(function(li) {{
       var states = (li.getAttribute('data-states') || '').split('|').filter(Boolean);
       var themes = (li.getAttribute('data-themes') || '').split('|').filter(Boolean);
@@ -2070,12 +2044,6 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
                 && (!kwVal || text.indexOf(kwVal) !== -1);
       li.style.display = match ? '' : 'none';
       if (match) shown++;
-    }});
-    videoCards.forEach(function(c) {{
-      var states = (c.getAttribute('data-states') || '').split('|').filter(Boolean);
-      var match = !state || states.indexOf(state) !== -1;
-      c.style.display = match ? '' : 'none';
-      if (match) vShown++;
     }});
     var parts = [];
     if (theme || state || kwVal) {{
@@ -2088,7 +2056,6 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
       count.textContent = items.length + ' items · newest first';
     }}
     none.style.display = ((theme || state || kwVal) && shown === 0) ? '' : 'none';
-    if (noVideos) noVideos.style.display = (state && videoCards.length && vShown === 0) ? '' : 'none';
     // Persist theme/state/keyword to URL for shareable links.
     var qs = new URLSearchParams();
     if (theme) qs.set('theme', theme);
@@ -2123,6 +2090,161 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
         "moratoriums, lawsuits — updated regularly and filterable by state.",
         body, f"{SITE_URL}/news/", depth=1,
         jsonld=_breadcrumb(("Home", SITE_URL), ("News", f"{SITE_URL}/news/")))
+
+
+def _fmt_news_date(iso):
+    """'%b %-d, %Y' for an ISO date, or '' when absent/unparseable."""
+    if not iso:
+        return ""
+    try:
+        import datetime as _dt
+        return _dt.datetime.fromisoformat(iso).strftime("%b %-d, %Y")
+    except Exception:                                             # noqa: BLE001
+        return ""
+
+
+def _video_card_html(v):
+    """One YouTube result as a linked card. Shared by the videos page.
+
+    data-states drives the client-side state filter; a missing video_id (Google
+    News wraps the URL so the id isn't always extractable) falls back to a play
+    glyph rather than a broken thumbnail."""
+    vid = v.get("video_id", "")
+    thumb = f'https://i.ytimg.com/vi/{vid}/hqdefault.jpg' if vid else ""
+    placeholder = (
+        '<div style="width:100%;aspect-ratio:16/9;background:'
+        'linear-gradient(135deg,#1a1f2e,#2d1a3d);display:flex;'
+        'align-items:center;justify-content:center;font-size:42px;'
+        'color:#ff4136">&#9654;</div>')
+    states = v.get("states", [])
+    data_states = esc("|".join(states)) if states else ""
+    chips = " ".join(f'<span class="tag">{esc(st)}</span>' for st in states)
+    meta = " · ".join(x for x in (v.get("source", ""),
+                                  _fmt_news_date(v.get("published_iso", ""))) if x)
+    img = (f'<img src={thumb!r} alt="" loading="lazy" style="width:100%;'
+           f'display:block;aspect-ratio:16/9;object-fit:cover">') if thumb else placeholder
+    return (
+        f'<a class="video-card" data-states="{data_states}" '
+        f'href="{esc(v["link"])}" rel="nofollow noopener" target="_blank" '
+        f'style="display:block;border:1px solid rgba(255,255,255,0.08);'
+        f'border-radius:12px;overflow:hidden;text-decoration:none;color:inherit">'
+        f'{img}'
+        f'<div style="padding:12px 14px">'
+        f'<div class="post-meta" style="font-size:12px;opacity:0.75">{esc(meta)}</div>'
+        f'<div style="font-weight:600;margin:4px 0 6px;line-height:1.3">'
+        f'{esc(v["title"])}</div>'
+        f'{"<div class=\"tags\">" + chips + "</div>" if chips else ""}'
+        f'</div></a>')
+
+
+def build_videos_page(videos, fetched_at):
+    """Standalone video coverage, split out from the news feed so headlines
+    and watchable segments each get their own page. Same vetted-channel
+    YouTube results, filterable by state; deep-linkable with ?state=."""
+    videos = videos or []
+    back = ('<p class="muted"><a href="news/">&larr; Back to news headlines</a></p>')
+
+    if not videos:
+        body = f"""
+<header>
+  <div class="kicker">Videos</div>
+  <h1>Watch: data center video coverage</h1>
+  <p class="sub">No videos available right now.</p>
+</header>
+{back}
+<section><p class="muted">The video feed couldn't be fetched during this
+build. Try again shortly, or read the <a href="news/">news headlines</a>.</p></section>
+"""
+        return page("Videos — data center coverage — AI GridWatch",
+                    "Vetted-channel video coverage of data center and grid "
+                    "issues, filterable by state.",
+                    body, f"{SITE_URL}/videos", depth=0)
+
+    covered = sorted({st for v in videos for st in v.get("states", [])})
+    state_options = '<option value="">All states</option>' + "".join(
+        f'<option value="{esc(st)}">{esc(st)}</option>' for st in covered)
+    cards = "".join(_video_card_html(v) for v in videos[:48])
+
+    import datetime as _dt
+    try:
+        fetched_display = _dt.datetime.fromisoformat(fetched_at).strftime("%b %-d, %Y %H:%M UTC")
+    except Exception:                                             # noqa: BLE001
+        fetched_display = fetched_at
+
+    body = f"""
+<header>
+  <div class="kicker">Videos</div>
+  <h1>Watch: data center video coverage</h1>
+  <p class="sub">Explainers and reporting on data centers, the grid, water, and
+  local fights — from vetted channels only: PBS NewsHour, WSJ, Bloomberg, CNBC,
+  Reuters, FT, The Verge, Vox. Filtered to data-center / grid topics.</p>
+  <p class="muted">Last updated {esc(fetched_display)} · <a href="news/">News headlines &rarr;</a></p>
+</header>
+
+<style>
+.vid-controls {{ display:flex; gap:14px; flex-wrap:wrap; align-items:center;
+  margin:14px 0 18px; background:var(--card); border:1px solid var(--rule);
+  border-radius:12px; padding:14px 16px; }}
+.vid-controls label {{ font-size:13.5px; color:var(--muted); display:flex;
+  gap:6px; align-items:center; }}
+.vid-controls select {{ padding:7px 11px; border-radius:8px;
+  border:1px solid var(--rule); background:rgba(255,255,255,.04);
+  color:var(--ink); font-size:14px; min-width:180px; }}
+.video-grid {{ display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }}
+</style>
+
+<section id="videos">
+  <div class="vid-controls">
+    <label>State
+      <select id="vidStateFilter">{state_options}</select>
+    </label>
+    <span id="vidCount" class="muted"></span>
+  </div>
+  <div class="video-grid">{cards}</div>
+  <p id="noVideos" class="muted" style="display:none;margin-top:16px">
+    No videos tagged for that state yet.</p>
+</section>
+
+<section>
+  <p class="muted" style="margin-top:24px">Video results are an automated,
+  channel-restricted search, not endorsements — follow each link to the
+  original video. State tags are auto-detected and may be approximate.</p>
+</section>
+
+<script>
+(function() {{
+  var sel = document.getElementById('vidStateFilter');
+  var count = document.getElementById('vidCount');
+  var none = document.getElementById('noVideos');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.video-card'));
+  function apply() {{
+    var state = sel.value;
+    var shown = 0;
+    cards.forEach(function(c) {{
+      var states = (c.getAttribute('data-states') || '').split('|').filter(Boolean);
+      var match = !state || states.indexOf(state) !== -1;
+      c.style.display = match ? '' : 'none';
+      if (match) shown++;
+    }});
+    count.textContent = state ? (shown + ' video' + (shown === 1 ? '' : 's') + ' · ' + state)
+                              : (cards.length + ' videos');
+    none.style.display = (state && shown === 0) ? '' : 'none';
+    history.replaceState(null, '', state ? ('?state=' + encodeURIComponent(state)) : location.pathname);
+  }}
+  sel.addEventListener('change', apply);
+  var q = new URLSearchParams(location.search);
+  if (q.get('state')) sel.value = q.get('state');
+  apply();
+}})();
+</script>
+"""
+    return page(
+        "Videos — data center coverage by state — AI GridWatch",
+        "Vetted-channel video coverage of data center and grid issues — "
+        "explainers and reporting, filterable by state.",
+        body, f"{SITE_URL}/videos", depth=0,
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Videos", f"{SITE_URL}/videos")))
 
 
 def build_news_rss(items, fetched_at):
@@ -7054,6 +7176,8 @@ def main():
         encoding="utf-8")
     (WEB / "news" / "feed.xml").write_text(
         build_news_rss(_NEWS_ITEMS, news_fetched_at), encoding="utf-8")
+    (WEB / "videos.html").write_text(
+        build_videos_page(_VIDEO_ITEMS, news_fetched_at), encoding="utf-8")
 
     for i, story in enumerate(posts):
         prev_post = posts[i - 1] if i > 0 else None
@@ -7078,7 +7202,7 @@ def main():
              "data-centers", "environment", "methodology", "studies",
              "cba-clauses", "officials", "consulting", "case-studies",
              "hearing-questions", "glossary", "tax-breaks", "siting",
-             "companies/", "states/", "blog/", "news/"]
+             "companies/", "states/", "blog/", "news/", "videos"]
     paths.extend(f"companies/{h['slug']}" for h in _HYPERSCALERS)
     paths.extend(f"companies/{h['slug']}" for h in _OPERATORS)
     paths.extend(f"companies/{ld['slug']}" for ld in _LIMITED_DISCLOSURE)
