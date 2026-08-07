@@ -134,15 +134,16 @@ near us. Electricity of {homes} homes, {water} gallons of water/yr, and \
   <section class="prec">
     <h2>Communities that organized, won</h2>
     <ul>
-      <li><b>The Dalles, OR</b> — Google funded a $29M wastewater upgrade
-      and the city capped data-center water draws.</li>
-      <li><b>Groton, CT</b> — a $2.5M community benefit agreement became a
-      zoning condition after a year-long moratorium.</li>
-      <li><b>Morrow County, OR</b> — commissioners reopened Amazon's tax
-      deals and won higher annual community payments.</li>
+      <li><b>The Dalles, OR</b> — Google funded about $28.5M of the city's
+      water system (though it won no cap on its own draw — ask for the
+      volume limit in writing).</li>
+      <li><b>Groton, CT</b> — capped data-center buildings at 12,500 sq ft
+      as a zoning condition after a one-year moratorium.</li>
+      <li><b>Loudoun County, VA</b> — declined abatements and taxed data
+      centers instead, ~45% of county tax revenue.</li>
     </ul>
-    <p class="muted">Every one of these happened <em>before</em> final
-    approval. Timing is the leverage.</p>
+    <p class="muted">Every one of these happened <em>before</em> or in place
+    of an unconditional approval. Timing is the leverage.</p>
   </section>
 
   <section>
