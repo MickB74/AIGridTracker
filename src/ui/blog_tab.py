@@ -2,6 +2,9 @@
 Blog tab — curated stories and project mission for GridWatch AI.
 Renders an 'Our Mission' section and a feed of authored blog posts with
 tags, summaries, and full-body markdown expansion.
+
+Unused: content is rendered by web/blog/ from the same BLOG_STORIES data
+(see CLAUDE.md). Not imported by app.py. Kept for reference.
 """
 
 import streamlit as st

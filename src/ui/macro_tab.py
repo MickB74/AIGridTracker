@@ -1,3 +1,10 @@
+"""
+Macro tab — global data-center electricity outlook (IEA).
+
+Unused: content was ported to web/outlook.html (see CLAUDE.md). Not
+imported by app.py. Kept for reference.
+"""
+
 import streamlit as st
 import altair as alt
 from src.constants import IEA_OUTLOOK, DC_FORECASTS, DC_FORECASTS_US

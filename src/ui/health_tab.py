@@ -5,6 +5,11 @@ every fact wired to SOURCES and a "what to demand" ask per risk. Format
 inspired by the Environmental Health Project's "Health Risks of Data
 Centers" infographic (SOURCES["ehp_health"]). Stacked in the Learn tab;
 ships with a downloadable infographic PDF for hearings.
+
+Unused: content is rendered by web/health-risks.html from the same
+HEALTH_RISKS data (see CLAUDE.md). `build_health_pdf` is still live —
+called directly from src/pdf_pack.py — but this render function and its
+import of it are not. Not imported by app.py. Kept for reference.
 """
 
 import streamlit as st

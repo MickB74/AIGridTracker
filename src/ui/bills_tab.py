@@ -2,6 +2,9 @@
 Bills tab — explains what drives utility bills up, how capacity charges and
 peak loads work, and what academic research says about data center load
 flexibility and ratepayer impacts.
+
+Unused: content was ported to web/bills.html (see CLAUDE.md). Not imported
+by app.py. Kept for reference.
 """
 
 import streamlit as st
