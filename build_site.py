@@ -413,6 +413,26 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .proj h3 { margin:0 0 4px; }
 .proj .meta { font-size:13px; color:var(--muted); margin:2px 0 8px; }
 .proj .next { font-size:14px; margin:8px 0 0; }
+/* Download cards — a consistent, scannable presentation for every file the
+   site hands out (PDF briefings, JSON/CSV datasets). */
+.dl-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:12px; margin:16px 0; }
+.dl-card { display:flex; gap:14px; align-items:center; padding:14px 16px;
+  border:1px solid var(--rule); border-radius:12px; background:var(--card);
+  text-decoration:none; color:var(--ink);
+  transition:border-color .15s ease, transform .15s ease; }
+.dl-card:hover { border-color:var(--teal); transform:translateY(-1px); }
+.dl-ico { font-size:26px; line-height:1; flex:0 0 auto; }
+.dl-body { flex:1; min-width:0; }
+.dl-title { font-weight:700; font-size:15px; display:flex; gap:8px;
+  align-items:center; flex-wrap:wrap; }
+.dl-fmt { font-size:10px; font-weight:800; letter-spacing:.06em;
+  text-transform:uppercase; padding:2px 7px; border-radius:5px;
+  background:rgba(45,212,191,.15); color:var(--teal); }
+.dl-meta { font-size:13px; color:var(--muted); margin-top:3px; }
+.dl-arrow { color:var(--muted); font-size:20px; flex:0 0 auto; font-weight:700; }
+.dl-card:hover .dl-arrow { color:var(--teal); }
+@media print { .dl-card { border-color:#ccc; } .dl-card:hover { transform:none; } }
 .badge-note { font-size:11px; font-weight:600; color:var(--muted);
               display:block; margin-top:3px; }
 .unverified { font-size:12px; color:#fca5a5; font-weight:600; }
@@ -896,6 +916,50 @@ def build_index():
 def _status_badge(status):
     cls = f"badge-{status.lower().replace(' ', '-')}"
     return f'<span class="badge {cls}">{esc(status)}</span>'
+
+
+_DL_ICONS = {"pdf": "📄", "json": "🗂️", "csv": "📊", "txt": "📝", "zip": "🗜️"}
+
+
+def _file_kb(rel_path):
+    """Human file size for a path under web/, or '' if it doesn't exist yet.
+
+    Best-effort: some artifacts are written after the page that links them, so
+    a missing size just drops silently rather than guessing.
+    """
+    f = WEB / rel_path
+    try:
+        n = f.stat().st_size
+    except OSError:
+        return ""
+    if n >= 1024 * 1024:
+        return f"{n / (1024 * 1024):.1f} MB"
+    if n >= 1024:
+        return f"{round(n / 1024)} KB"
+    return f"{n} B"
+
+
+def _download_card(href, title, fmt, meta="", icon=None, size_from=None):
+    """One download card: icon, title, format badge, a meta line, and size.
+
+    `fmt` is the short format label (pdf/json/csv…). `meta` is a one-line
+    description. `size_from` is a web-relative path to stat for the file size;
+    pass it when the file exists at build time (it appends to `meta`).
+    """
+    ic = icon or _DL_ICONS.get(fmt.lower(), "📥")
+    size = _file_kb(size_from) if size_from else ""
+    meta_parts = [m for m in (meta, size) if m]
+    meta_html = (f'<div class="dl-meta">{esc(" · ".join(meta_parts))}</div>'
+                 if meta_parts else "")
+    return (f'<a class="dl-card" href="{esc(href)}">'
+            f'<span class="dl-ico">{ic}</span>'
+            f'<span class="dl-body"><span class="dl-title">{esc(title)} '
+            f'<span class="dl-fmt">{esc(fmt)}</span></span>{meta_html}</span>'
+            f'<span class="dl-arrow">&darr;</span></a>')
+
+
+def _dl_grid(*cards):
+    return f'<div class="dl-grid">{"".join(c for c in cards if c)}</div>'
 
 
 def _mora_status_cell(m):
@@ -1441,9 +1505,12 @@ def build_health():
   it. Format inspired by the
   <a href="{esc(SOURCES['ehp_health'][1])}">Environmental Health Project's
   community infographic</a>.</p>
-  <p><a class="btn" href="assets/gridwatch_health_risks.pdf">📥 Print the
-  infographic (PDF)</a>
-  <a class="btn ghost" href="{APP_URL}">Open the full toolkit</a></p>
+  <p><a class="btn ghost" href="{APP_URL}">Open the full toolkit</a></p>
+  {_dl_grid(_download_card(
+      "assets/gridwatch_health_risks.pdf",
+      "Health & community impacts — infographic", "pdf",
+      "Print-ready briefing · one page per impact · sourced",
+      size_from="assets/gridwatch_health_risks.pdf"))}
 </header>
 {groups}
 """
@@ -4835,8 +4902,13 @@ def build_moratoriums():
   expiry, as a documented download. Free to reuse with attribution
   (<a href="{DATA_LICENSE_URL}" rel="license noopener">{DATA_LICENSE}</a>) —
   cite it, chart it, or load it into your own tracker.</p>
-  <p><a class="btn" href="data/moratoriums.json">moratoriums.json</a>
-     <a class="btn ghost" href="data/moratoriums.csv">moratoriums.csv</a></p>
+  {_dl_grid(
+      _download_card("data/moratoriums.json", "moratoriums.json", "json",
+                     f"{total} tracked actions · sources + derived expiry",
+                     size_from="data/moratoriums.json"),
+      _download_card("data/moratoriums.csv", "moratoriums.csv", "csv",
+                     "Spreadsheet-ready · one row per action",
+                     size_from="data/moratoriums.csv"))}
   <details class="more">
     <summary>Schema — {len(MORATORIUM_SCHEMA)} fields</summary>
     <div style="overflow-x:auto">
@@ -5402,8 +5474,13 @@ def build_projects():
   <p>The whole tracker — per-project sources, verification dates, derived
   stage, and the event log — as a documented download. Free to reuse with
   attribution (<a href="{DATA_LICENSE_URL}" rel="license noopener">{DATA_LICENSE}</a>).</p>
-  <p><a class="btn" href="data/projects.json">projects.json</a>
-     <a class="btn ghost" href="data/projects.csv">projects.csv</a></p>
+  {_dl_grid(
+      _download_card("data/projects.json", "projects.json", "json",
+                     f"{total} projects · with per-project event log",
+                     size_from="data/projects.json"),
+      _download_card("data/projects.csv", "projects.csv", "csv",
+                     "Spreadsheet-ready · one row per project",
+                     size_from="data/projects.csv"))}
   <details class="more">
     <summary>Schema — {len(PROJECT_SCHEMA)} fields</summary>
     <div style="overflow-x:auto">
@@ -8492,8 +8569,11 @@ def main():
 
     (WEB / "index.html").write_text(build_index(), encoding="utf-8")
     (WEB / "health-risks.html").write_text(build_health(), encoding="utf-8")
-    (WEB / "moratoriums.html").write_text(build_moratoriums(), encoding="utf-8")
+    # Write the datasets BEFORE the pages that link them, so the download
+    # cards can stat the files and show real sizes.
     _n_data = build_moratorium_data()
+    _n_projects = build_projects_data()
+    (WEB / "moratoriums.html").write_text(build_moratoriums(), encoding="utf-8")
     _n_alerts = build_alerts_outputs()
     print(f"  [data] {_n_alerts} deadline alerts -> alerts.json + alerts.xml")
     (WEB / "embed").mkdir(parents=True, exist_ok=True)
@@ -8501,7 +8581,6 @@ def main():
         build_moratorium_embed(), encoding="utf-8")
     print(f"  [data] published {_n_data} moratoriums as JSON + CSV + embed")
     (WEB / "projects.html").write_text(build_projects(), encoding="utf-8")
-    _n_projects = build_projects_data()
     print(f"  [data] published {_n_projects} projects as JSON + CSV")
     (WEB / "impact.html").write_text(build_impact_calculator(), encoding="utf-8")
     (WEB / "start-here.html").write_text(build_start_here(), encoding="utf-8")
