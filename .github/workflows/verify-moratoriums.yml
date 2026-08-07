@@ -60,6 +60,13 @@ jobs:
       - name: Scan news for untracked moratoriums
         run: python scripts/scan_moratorium_candidates.py
 
+      # Sibling of the moratorium scan: mines news + known megaprojects for
+      # data-center projects not yet in data/projects.json, into a review
+      # queue. Stdlib-only (no --online), so it needs nothing beyond the build
+      # deps. Promotion into the tracker is a human step, same as above.
+      - name: Scan for untracked projects
+        run: python scripts/scan_project_candidates.py
+
       # Every numeric claim on the site renders a SOURCES link next to it, so
       # a rotted entry here is a citation a resident cannot defend. Nothing
       # else re-reads these ~145 keys.
@@ -75,7 +82,8 @@ jobs:
       - name: Commit the worklist
         run: |
           FILES="data/moratorium_review.md data/moratorium_review.json
-                 data/moratorium_candidates.json data/source_review.md"
+                 data/moratorium_candidates.json data/project_candidates.json
+                 data/source_review.md"
           if git diff --quiet -- $FILES; then
             echo "No change to the review queue."
             exit 0

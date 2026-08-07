@@ -39,6 +39,7 @@ from src.constants import (
     AI_COMPETITORS_DF,
     STATE_GRID_PROFILES, STATE_DC_DF, STATE_DC_NATIONAL,
     STATE_PUCS_DF, MORATORIUMS_DF,
+    PROJECTS, PROJECTS_DF, PROJECT_EVENTS, project_status,
     MORATORIUM_OUTCOMES, HEALTH_RISKS, CBA_BENCHMARKS, COMPANY_CONCESSIONS,
     PROJECT_STAGES, OUTREACH_TIPS, ENTITY_TELLS, FILING_ENTITIES,
     DC_SITES_DF, LOCAL_OFFICIALS_DF, LOCAL_BODIES_DF, STATE_MUNI_LEAGUES,
@@ -112,7 +113,8 @@ document.addEventListener('click', function (e) {
     gwevent('toolkit-click' + location.pathname.replace(/\\.html$/, ''));
   } else if (/\\.pdf($|\\?)/.test(href) && a.host === location.host) {
     gwevent('pdf-download/' + file);
-  } else if (href.indexOf('data/moratoriums.') !== -1 || href.indexOf('embed/moratoriums') !== -1) {
+  } else if (href.indexOf('data/moratoriums.') !== -1 || href.indexOf('embed/moratoriums') !== -1
+             || href.indexOf('data/projects.') !== -1) {
     gwevent('data-download/' + file);
   }
 });
@@ -389,6 +391,27 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .badge-vetoed { background:#4c1d95; color:#c4b5fd; }
 .badge-expired { background:#374151; color:#d1d5db; }
 .badge-rescinded { background:#4c1d95; color:#c4b5fd; }
+/* Project-stage badges — coloured by urgency, not by win/loss. */
+.badge-hearing-scheduled { background:#78350f; color:#fcd34d; }
+.badge-awaiting-decision { background:#1e3a5f; color:#93c5fd; }
+.badge-in-review { background:#134e4a; color:#5eead4; }
+.badge-rumored { background:#374151; color:#9ca3af; }
+.badge-approved { background:#7f1d1d; color:#fca5a5; }
+.badge-denied { background:#065f46; color:#6ee7b7; }
+.badge-withdrawn { background:#334155; color:#cbd5e1; }
+.timeline { list-style:none; padding:0; margin:10px 0 0;
+            border-left:2px solid var(--rule); }
+.timeline li { position:relative; padding:0 0 12px 18px; }
+.timeline li::before { content:""; position:absolute; left:-6px; top:5px;
+   width:10px; height:10px; border-radius:50%; background:var(--teal); }
+.timeline .tl-date { font-size:12px; font-weight:700; color:var(--teal); }
+.timeline .tl-kind { font-size:11px; text-transform:uppercase;
+   letter-spacing:.06em; color:var(--muted); margin-left:6px; }
+.proj { border:1px solid var(--rule); border-radius:12px; padding:16px 18px;
+        margin:14px 0; background:var(--card); }
+.proj h3 { margin:0 0 4px; }
+.proj .meta { font-size:13px; color:var(--muted); margin:2px 0 8px; }
+.proj .next { font-size:14px; margin:8px 0 0; }
 .badge-note { font-size:11px; font-weight:600; color:var(--muted);
               display:block; margin-top:3px; }
 .unverified { font-size:12px; color:#fca5a5; font-weight:600; }
@@ -508,6 +531,7 @@ NAV_GROUPS = [
         ("Your state", "states/index.html"),
         ("Public utility commissions", "puc.html"),
         ("Moratoriums", "moratoriums.html"),
+        ("Projects tracker", "projects.html"),
     ]),
     ("The facts", [
         ("Health risks", "health-risks.html"),
@@ -5095,6 +5119,384 @@ _LIMITED_DISCLOSURE = [
 ]
 
 
+# --------------------------------------------------------------------------- #
+# IDENTIFIED PROJECT TRACKER PAGE (web/projects.html)
+# --------------------------------------------------------------------------- #
+
+# Flat schema for the data download. Nested `events` are JSON-only (they don't
+# fit a CSV cell), so the CSV carries these columns and the JSON adds `events`.
+PROJECT_SCHEMA = [
+    ("id", "Stable slug, unique per project."),
+    ("name", "Project or code name."),
+    ("operator", "Operator/developer, or blank if unknown."),
+    ("owner", "Owner/financier, or blank."),
+    ("tenant", "Named end tenant, or blank."),
+    ("filing_llc", "Shell LLC on the filing (ties to the campus registry), or blank."),
+    ("locality", "Town or county the project sits in."),
+    ("state", "Two-letter state abbreviation."),
+    ("lat", "Approximate locality latitude, or blank."),
+    ("lon", "Approximate locality longitude, or blank."),
+    ("size_mw", "Planned IT/critical load in MW, or blank."),
+    ("acres", "Site acreage, or blank."),
+    ("announced", "ISO date first publicly proposed, or blank."),
+    ("rezoning_filed", "ISO date the rezoning/permit application was filed, or blank."),
+    ("hearing_date", "ISO date of the next/decisive public hearing, or blank."),
+    ("decided_date", "ISO date a terminal decision was reached, or blank."),
+    ("outcome", "approved | denied | withdrawn | blank (blank = still live)."),
+    ("stage", "DERIVED status shown on the page (Hearing scheduled, Awaiting decision, In review, Proposed, Rumored, Approved, Denied, Withdrawn)."),
+    ("days_to_hearing", "DERIVED days until the hearing (negative once past), or blank."),
+    ("note", "One-line plain-language status."),
+    ("source", "Primary URL backing the current status."),
+    ("as_of", "ISO date the source was read, or blank."),
+    ("verified", "true if a source is on record."),
+]
+
+# Live stages before terminal ones; within live, soonest hearing first.
+_PROJECT_PHASE_ORDER = {"hearing": 0, "awaiting": 1, "review": 2,
+                        "proposed": 3, "rumored": 4,
+                        "approved": 5, "denied": 6, "withdrawn": 7}
+
+
+def _project_sort_key(p):
+    s = project_status(p)
+    days = s["days_to_hearing"]
+    # Soonest upcoming hearing first; past/none sink within the phase.
+    d = days if (days is not None and days >= 0) else 10_000
+    return (_PROJECT_PHASE_ORDER.get(s["phase"], 9), d, str(p.get("name")))
+
+
+def _project_size(p):
+    if has_value(p.get("size_mw")):
+        return f"{int(p['size_mw']):,} MW"
+    if has_value(p.get("acres")):
+        return f"{int(p['acres']):,} ac"
+    return "—"
+
+
+def _project_stage_cell(status):
+    """Stage badge plus a timing note (days to hearing)."""
+    html = _status_badge(status["stage"])
+    days = status["days_to_hearing"]
+    if status["phase"] == "hearing" and days is not None:
+        word = "in 1 day" if days == 1 else f"in {days} days"
+        html += f'<span class="badge-note">hearing {word}</span>'
+    return html
+
+
+def _project_source_cell(p):
+    if not has_value(p.get("source")):
+        return '<span class="unverified">Unverified</span>'
+    on = (f'<span class="verified-on">read {esc(str(p["as_of"]))}</span>'
+          if has_value(p.get("as_of")) else "")
+    return (f'<a href="{esc(str(p["source"]))}" rel="nofollow noopener" '
+            f'target="_blank">Source</a><br>{on}')
+
+
+def _project_timeline(events):
+    """The dated, sourced intelligence log for one project."""
+    if not events:
+        return ""
+    items = []
+    for e in sorted(events, key=lambda x: str(x.get("date") or "")):
+        src = ""
+        if has_value(e.get("source")):
+            src = (f' · <a href="{esc(str(e["source"]))}" rel="nofollow noopener" '
+                   f'target="_blank">source</a>')
+        kind = f'<span class="tl-kind">{esc(str(e.get("kind","")))}</span>' \
+            if has_value(e.get("kind")) else ""
+        items.append(
+            f'<li><span class="tl-date">{esc(str(e.get("date","")))}</span>{kind}'
+            f'<br>{esc(str(e.get("summary","")))}{src}</li>')
+    return f'<ul class="timeline">{"".join(items)}</ul>'
+
+
+def _project_dossier(p):
+    """One project card: identity, ownership, next action, event timeline."""
+    status = project_status(p)
+    bits = []
+    for label, key in (("Operator", "operator"), ("Owner", "owner"),
+                       ("Tenant", "tenant"), ("Filing LLC", "filing_llc")):
+        if has_value(p.get(key)):
+            bits.append(f"{label}: {esc(str(p[key]))}")
+    meta = " · ".join(bits) if bits else "Ownership not yet identified"
+    events = PROJECT_EVENTS.get(p.get("id"), [])
+    tl = _project_timeline(events)
+    tl_block = (f'<details class="more"><summary>Intelligence log '
+                f'({len(events)} event{"s" if len(events) != 1 else ""})</summary>'
+                f'{tl}</details>') if events else ""
+    state_link = _state_href(p.get("state"))
+    where = f'{esc(str(p.get("locality","")))}, '
+    where += (f'<a href="{state_link}">{esc(str(p.get("state","")))}</a>'
+              if state_link else esc(str(p.get("state", ""))))
+    return f"""
+<div class="proj" id="p-{esc(str(p.get('id','')))}">
+  <h3>{esc(str(p.get('name','')))} {_status_badge(status['stage'])}</h3>
+  <p class="meta">{where} · {_project_size(p)} · {meta}</p>
+  <p>{esc(str(p.get('note','')))}</p>
+  <p class="next"><strong>Next step:</strong> {esc(status['next_action'])}</p>
+  <p>{_project_source_cell(p)}</p>
+  {tl_block}
+</div>"""
+
+
+def _state_href(abbrev):
+    """web/states/<slug>.html for a state abbrev, or '' if unknown."""
+    if not has_value(abbrev):
+        return ""
+    row = STATE_PUCS_DF[STATE_PUCS_DF["abbrev"] == str(abbrev)]
+    if row.empty:
+        return ""
+    return f"states/{slugify(row.iloc[0]['state'])}.html"
+
+
+def build_projects():
+    """Identified-project tracker — web/projects.html.
+
+    The workshop's missing middle layer: each proposal as its own tracked
+    entity with a stage that MOVES (derived from milestone dates, never
+    stored) and a dated, sourced intelligence log. Leads are mined into
+    data/project_candidates.json by scan_project_candidates.py and promoted
+    into data/projects.json by hand — the same source + as_of discipline as
+    the moratorium tracker. Sorted actionable-first: soonest hearing at the
+    top, settled projects at the bottom.
+    """
+    ordered = sorted(PROJECTS, key=_project_sort_key)
+    total = len(ordered)
+    n_states = PROJECTS_DF["state"].nunique() if total else 0
+    verified = int(PROJECTS_DF["verified"].sum()) if total else 0
+    live = int((~PROJECTS_DF["terminal"]).sum()) if total else 0
+
+    # Upcoming hearings, soonest first — the thing someone needs to act on.
+    upcoming = [(p, project_status(p)) for p in ordered]
+    upcoming = [(p, s) for p, s in upcoming if s["phase"] == "hearing"]
+    upcoming.sort(key=lambda ps: ps[1]["days_to_hearing"])
+    hearings_html = ""
+    if upcoming:
+        items = "\n".join(
+            f'<li><strong>{esc(str(p.get("name")))} — '
+            f'{esc(str(p.get("locality")))}, {esc(str(p.get("state")))}</strong>'
+            f'<br><span class="muted">{esc(s["next_action"])}</span></li>'
+            for p, s in upcoming)
+        hearings_html = f"""
+<section>
+  <h2>Hearings coming up</h2>
+  <p class="muted" style="margin-bottom:12px">Public hearings and decisive
+  votes on the horizon. Hearings get moved — treat each as the earliest to act
+  by, and confirm with the clerk.</p>
+  <ul>{items}</ul>
+</section>"""
+
+    rows = []
+    for p in ordered:
+        s = project_status(p)
+        state_link = _state_href(p.get("state"))
+        state_cell = (f'<a href="{state_link}">{esc(str(p.get("state","")))}</a>'
+                      if state_link else esc(str(p.get("state", ""))))
+        when = "—"
+        if s["phase"] == "hearing" and has_value(p.get("hearing_date")):
+            when = esc(str(p["hearing_date"]))
+        elif s["phase"] == "awaiting" and has_value(p.get("hearing_date")):
+            when = f'heard {esc(str(p["hearing_date"]))}'
+        elif s["terminal"] and has_value(p.get("decided_date")):
+            when = esc(str(p["decided_date"]))
+        rows.append(
+            f'<tr><td><a href="#p-{esc(str(p.get("id","")))}">'
+            f'{esc(str(p.get("name","")))}</a></td>'
+            f'<td>{state_cell}</td>'
+            f'<td>{esc(str(p.get("locality","")))}</td>'
+            f'<td>{_project_size(p)}</td>'
+            f'<td>{_project_stage_cell(s)}</td>'
+            f'<td>{when}</td>'
+            f'<td>{_project_source_cell(p)}</td></tr>')
+    rows_html = "\n".join(rows)
+
+    dossiers = "\n".join(_project_dossier(p) for p in ordered)
+    schema_rows = "\n".join(
+        f"<tr><td><code>{esc(c)}</code></td><td>{esc(d)}</td></tr>"
+        for c, d in PROJECT_SCHEMA)
+
+    body = f"""
+<header>
+  <div class="kicker">Project intelligence</div>
+  <h1>Data center projects we're tracking</h1>
+  <p class="sub">Individual data center proposals, followed from rumor to
+  hearing to decision. Each project carries its own sources and a dated
+  intelligence log, and its status is recomputed every day — so a hearing
+  that has passed stops reading &ldquo;scheduled.&rdquo;</p>
+</header>
+<div class="stats">
+  <div class="stat"><b>{total}</b><span>projects tracked</span></div>
+  <div class="stat"><b>{live}</b><span>still live</span></div>
+  <div class="stat"><b>{n_states}</b><span>states</span></div>
+  <div class="stat"><b>{verified}/{total}</b><span>source-verified</span></div>
+</div>
+{hearings_html}
+<section>
+  <h2>All tracked projects</h2>
+  <p class="muted" style="margin-bottom:12px">Sorted by urgency — soonest
+  hearing first, settled projects last. Stage is derived from each project's
+  milestone dates on every rebuild. Rows marked
+  <span class="unverified">Unverified</span> have no source on record yet:
+  a lead to check, not a fact to cite.</p>
+  <input type="text" id="proj-search" placeholder="Search project, operator, locality or state..."
+         autocomplete="off"
+         style="width:100%;max-width:440px;background:var(--card);color:var(--ink);
+         border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+         font-size:15px;margin-bottom:14px">
+  <div style="overflow-x:auto">
+  <table id="proj-table"><tr><th>Project</th><th>State</th><th>Locality</th>
+  <th>Size</th><th>Stage</th><th>Next step</th><th>Source</th></tr>
+  {rows_html}</table>
+  </div>
+  <p class="muted" id="proj-count">{total} projects</p>
+  {provenance_html("PROJECTS_DF")}
+</section>
+<section>
+  <h2>Project dossiers</h2>
+  <p class="muted" style="margin-bottom:8px">The full record for each project,
+  with ownership, the next thing to do, and the sourced timeline of what has
+  happened so far.</p>
+  {dossiers}
+</section>
+<section id="data">
+  <h2>Use this data</h2>
+  <p>The whole tracker — per-project sources, verification dates, derived
+  stage, and the event log — as a documented download. Free to reuse with
+  attribution (<a href="{DATA_LICENSE_URL}" rel="license noopener">{DATA_LICENSE}</a>).</p>
+  <p><a class="btn" href="data/projects.json">projects.json</a>
+     <a class="btn ghost" href="data/projects.csv">projects.csv</a></p>
+  <details class="more">
+    <summary>Schema — {len(PROJECT_SCHEMA)} fields</summary>
+    <div style="overflow-x:auto">
+    <table><tr><th>Field</th><th>Meaning</th></tr>
+    {schema_rows}</table>
+    </div>
+    <p class="muted" style="margin-top:10px">Read <code>stage</code>, not
+    <code>outcome</code>: stage is what applies today and is recomputed on
+    every build. The JSON adds an <code>events</code> log per project that the
+    CSV can't hold.</p>
+  </details>
+</section>
+<section>
+  <h2>How this list is built — and how to add to it</h2>
+  <p>A weekly scan of local news and known megaprojects surfaces leads into a
+  review queue; a human reads the governing body's own agenda or the reporting
+  before anything lands here, which is where each row's source and date come
+  from. That means this is a working set, not a census — most of the country's
+  activity isn't in here yet.</p>
+  <p><strong>Know a project we're missing?</strong> Email the locality, a link
+  to the county agenda or the reporting, and what stage it's at to
+  <a href="mailto:hello@aigridwatch.com?subject=Project%20to%20track">hello@aigridwatch.com</a>
+  and we'll verify and add it.</p>
+</section>
+<section>
+  <h2>Facing one of these?</h2>
+  <p>The free wizard turns a proposal near you into an impact estimate, a
+  stage-by-stage playbook, and a downloadable action pack.</p>
+  <p><a class="btn" href="start-here.html">Start here &rarr;</a>
+  <a class="btn ghost" href="moratoriums.html">Moratorium tracker</a></p>
+</section>
+<script>
+(function() {{
+  var q = document.getElementById('proj-search');
+  var table = document.getElementById('proj-table');
+  var ct = document.getElementById('proj-count');
+  if (!q || !table) return;
+  var rows = Array.from(table.querySelectorAll('tr')).slice(1);
+  q.addEventListener('input', function() {{
+    var s = q.value.toLowerCase();
+    var n = 0;
+    rows.forEach(function(r) {{
+      var show = !s || r.textContent.toLowerCase().indexOf(s) >= 0;
+      r.style.display = show ? '' : 'none';
+      if (show) n++;
+    }});
+    ct.textContent = s ? (n + ' match' + (n === 1 ? '' : 'es')) : ({total} + ' projects');
+  }});
+}})();
+</script>
+"""
+    return page(
+        "Data center projects tracker — proposals, hearings & outcomes",
+        f"{total} identified data center projects tracked from proposal to "
+        f"decision across {n_states} states — each with sources, a derived "
+        f"stage, and a dated intelligence log.",
+        body, f"{SITE_URL}/projects",
+        jsonld=[
+            _breadcrumb(("Home", SITE_URL),
+                        ("Projects", f"{SITE_URL}/projects")),
+            _dataset_schema(
+                "U.S. data center project tracker",
+                f"{total} identified data center projects across {n_states} "
+                f"states, each with a primary source, verification date, "
+                f"derived stage, and a dated event log.",
+                f"{SITE_URL}/projects",
+                [("application/json", f"{SITE_URL}/data/projects.json"),
+                 ("text/csv", f"{SITE_URL}/data/projects.csv")],
+                keywords=["data center project", "data center proposal",
+                          "rezoning", "public hearing", "data center tracker",
+                          "AI data center"]),
+        ])
+
+
+def _project_records():
+    """Flat records for the data download — PROJECT_SCHEMA columns."""
+    cols = [c for c, _ in PROJECT_SCHEMA]
+    out = []
+    for p in PROJECTS:
+        s = project_status(p)
+        rec = {}
+        for c in cols:
+            if c == "stage":
+                rec[c] = s["stage"]
+            elif c == "days_to_hearing":
+                rec[c] = s["days_to_hearing"]
+            elif c == "verified":
+                rec[c] = has_value(p.get("source"))
+            else:
+                v = p.get(c)
+                rec[c] = v if has_value(v) else ""
+        out.append(rec)
+    return out
+
+
+def build_projects_data():
+    """Publish the project tracker as projects.json (+ events) and projects.csv."""
+    import csv
+    import datetime as _dt
+    import io
+
+    records = _project_records()
+    payload = {
+        "name": "AI GridWatch data center project tracker",
+        "generated": _dt.date.today().isoformat(),
+        "license": DATA_LICENSE,
+        "license_url": DATA_LICENSE_URL,
+        "attribution": f"AI GridWatch ({SITE_URL})",
+        "source_page": f"{SITE_URL}/projects",
+        "count": len(records),
+        "verified_count": sum(1 for r in records if r["verified"]),
+        "caveat": (registry_provenance("PROJECTS_DF") or {}).get("caveat", ""),
+        "schema": {c: d for c, d in PROJECT_SCHEMA},
+        "projects": [
+            {**rec, "events": PROJECT_EVENTS.get(p.get("id"), [])}
+            for rec, p in zip(records, PROJECTS)
+        ],
+    }
+    (WEB / "data").mkdir(parents=True, exist_ok=True)
+    (WEB / "data" / "projects.json").write_text(
+        json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8")
+
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=[c for c, _ in PROJECT_SCHEMA],
+                       lineterminator="\n")
+    w.writeheader()
+    w.writerows(records)
+    (WEB / "data" / "projects.csv").write_text(buf.getvalue(), encoding="utf-8")
+    return len(records)
+
+
 def _fmt_co2(t):
     if t >= 1e6:
         return f"{t / 1e6:.1f}M"
@@ -8059,6 +8461,9 @@ def main():
     (WEB / "embed" / "moratoriums.html").write_text(
         build_moratorium_embed(), encoding="utf-8")
     print(f"  [data] published {_n_data} moratoriums as JSON + CSV + embed")
+    (WEB / "projects.html").write_text(build_projects(), encoding="utf-8")
+    _n_projects = build_projects_data()
+    print(f"  [data] published {_n_projects} projects as JSON + CSV")
     (WEB / "impact.html").write_text(build_impact_calculator(), encoding="utf-8")
     (WEB / "start-here.html").write_text(build_start_here(), encoding="utf-8")
     (WEB / "bills.html").write_text(build_bills(), encoding="utf-8")
@@ -8122,8 +8527,8 @@ def main():
         (WEB / "companies" / f"{ld['slug']}.html").write_text(
             build_limited_scorecard(ld), encoding="utf-8")
 
-    paths = ["", "start-here", "health-risks", "moratoriums", "impact",
-             "bills", "outlook",
+    paths = ["", "start-here", "health-risks", "moratoriums", "projects",
+             "impact", "bills", "outlook",
              "learn", "puc", "executives", "about", "search", "dividend",
              "data-centers", "environment", "studies",
              "cba-clauses", "officials", "consulting", "case-studies",

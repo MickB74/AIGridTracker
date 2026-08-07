@@ -1,4 +1,5 @@
 import datetime as _dt
+import json
 import pathlib
 import pandas as pd
 
@@ -1501,6 +1502,136 @@ MORATORIUM_OUTCOMES = [
         ],
     },
 ]
+
+
+# --------------------------------------------------------------------------- #
+# IDENTIFIED PROJECT TRACKER
+#
+# One row per identified data-center project, loaded from data/projects.json
+# (a plain JSON file so leads can be edited and community-submitted without
+# touching Python). Each row carries its own `source` + `as_of` and an
+# append-only `events` log — the same per-row provenance discipline as the
+# LOCAL_* and MORATORIUMS tables. Leads are mined into
+# data/project_candidates.json by scripts/scan_project_candidates.py and
+# promoted here BY HAND, because that human read is where source + as_of come
+# from.
+#
+# Status is DERIVED (project_status), never stored: the stage a resident acts
+# on — "Hearing scheduled", "Awaiting decision", "Approved", "Withdrawn" — is
+# a function of today's date, so the daily CI rebuild keeps it honest without
+# an edit. A hearing date that has passed stops reading "scheduled"; a project
+# with a documented outcome reads that outcome. Same lesson as
+# moratorium_status(): storing a stage means the page asserts it forever.
+# --------------------------------------------------------------------------- #
+
+PROJECTS_PATH = pathlib.Path(__file__).resolve().parent.parent / "data" / "projects.json"
+
+_PROJECT_TERMINAL = ("approved", "denied", "withdrawn")
+PROJECT_HEARING_SOON_DAYS = 45
+
+
+def project_status(row, today=None):
+    """Derive a project's current stage from its milestone dates + outcome.
+
+    `row` is a mapping with keys announced / rezoning_filed / hearing_date /
+    decided_date / outcome. Returns a dict: human `stage`, a machine `phase`
+    key, whether it is `terminal`, `days_to_hearing` (None, or negative once
+    past), a `hearing_soon` flag, and a plain-language `next_action` a resident
+    can act on. Computed on every render, never stored — see the block comment.
+    """
+    today = today or _dt.date.today()
+    out = {"stage": "Rumored", "phase": "rumored", "terminal": False,
+           "days_to_hearing": None, "hearing_soon": False, "next_action": ""}
+
+    def _date(v):
+        if not has_value(v):
+            return None
+        try:
+            return _dt.date.fromisoformat(str(v)[:10])
+        except ValueError:
+            return None
+
+    outcome = str(row.get("outcome")).strip().lower() if has_value(row.get("outcome")) else ""
+    if outcome in _PROJECT_TERMINAL:
+        stage = {"approved": "Approved", "denied": "Denied",
+                 "withdrawn": "Withdrawn"}[outcome]
+        action = {
+            "approved": "Approved — pivot from stopping it to a binding CBA: "
+                        "enforceable caps on noise, water and cost, plus a "
+                        "community benefit.",
+            "denied": "Denied — watch for a re-filing or a scaled-down "
+                      "resubmission; ask the clerk to add you to the "
+                      "notification list.",
+            "withdrawn": "Withdrawn — confirm it is dead in the record and "
+                         "watch for the same site resurfacing under a new name "
+                         "or LLC.",
+        }[outcome]
+        out.update(stage=stage, phase=outcome, terminal=True, next_action=action)
+        return out
+
+    hd = _date(row.get("hearing_date"))
+    if hd is not None:
+        days = (hd - today).days
+        out["days_to_hearing"] = days
+        if days >= 0:
+            plural = "" if days == 1 else "s"
+            out.update(stage="Hearing scheduled", phase="hearing",
+                       hearing_soon=days <= PROJECT_HEARING_SOON_DAYS,
+                       next_action=(f"Public hearing in {days} day{plural} "
+                                    f"({hd.isoformat()}). Sign up to speak and "
+                                    f"file written comment before then."))
+            return out
+        out.update(stage="Awaiting decision", phase="awaiting",
+                   next_action=(f"Heard {hd.isoformat()}; decision pending. "
+                                f"Call the board clerk for the vote date and "
+                                f"get on the notification list."))
+        return out
+
+    if has_value(row.get("rezoning_filed")):
+        out.update(stage="In review", phase="review",
+                   next_action=("Application filed. Ask the planning office "
+                                "for the hearing date and request formal "
+                                "notice."))
+        return out
+    if has_value(row.get("announced")):
+        out.update(stage="Proposed", phase="proposed",
+                   next_action=("Early stage. File a public-records request "
+                                "for the application and site plan."))
+        return out
+    out["next_action"] = ("Rumored only. Confirm with the planning office and "
+                          "file a records request to pin down what is real.")
+    return out
+
+
+def _load_projects():
+    """Project records from data/projects.json. [] if missing/unreadable."""
+    try:
+        payload = json.loads(PROJECTS_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+    return payload.get("projects", [])
+
+
+PROJECTS = _load_projects()
+PROJECT_EVENTS = {p.get("id"): p.get("events", []) for p in PROJECTS}
+
+_PROJECT_COLS = ["id", "name", "operator", "owner", "tenant", "filing_llc",
+                 "locality", "state", "lat", "lon", "size_mw", "acres",
+                 "announced", "rezoning_filed", "hearing_date", "decided_date",
+                 "outcome", "note", "source", "as_of"]
+PROJECTS_DF = pd.DataFrame(
+    [{c: p.get(c) for c in _PROJECT_COLS} for p in PROJECTS],
+    columns=_PROJECT_COLS)
+# Derived at import so every consumer (site page, downloads, alerts) sees the
+# same effective stage. The daily rebuild is what keeps it current.
+_proj_status = [project_status(p) for p in PROJECTS]
+PROJECTS_DF["stage"] = [s["stage"] for s in _proj_status]
+PROJECTS_DF["phase"] = [s["phase"] for s in _proj_status]
+PROJECTS_DF["terminal"] = [s["terminal"] for s in _proj_status]
+PROJECTS_DF["days_to_hearing"] = [s["days_to_hearing"] for s in _proj_status]
+PROJECTS_DF["hearing_soon"] = [s["hearing_soon"] for s in _proj_status]
+PROJECTS_DF["next_action"] = [s["next_action"] for s in _proj_status]
+PROJECTS_DF["verified"] = PROJECTS_DF["source"].map(has_value)
 
 # Negotiation intel per operator — documented concessions won elsewhere plus
 # a read on how the company negotiates. Keyed by OPERATORS_DF operator name;
@@ -3418,6 +3549,27 @@ REGISTRY_PROVENANCE = {
             "Announced investment and capacity figures are the developer's "
             "own claims, repeated by trade press. Treat them as what the "
             "company said, not as verified build-out."),
+    },
+    "PROJECTS_DF": {
+        "label": "Identified project tracker",
+        "as_of": "August 2026",
+        "source": None,
+        "churn": "high",
+        "caveat": (
+            "A working set of identified proposals a community can track, not "
+            "a census — most of the country's activity is not in here yet.\n\n"
+            "**Each row carries its own provenance.** Rows showing a "
+            "verification date link to reporting or the governing body's own "
+            "record and were read on that date; rows marked *unverified* have "
+            "no source on record — a lead to check, not a fact to cite.\n\n"
+            "**Stage is derived, not asserted.** *Hearing scheduled*, "
+            "*Awaiting decision*, *Approved* and *Withdrawn* are computed from "
+            "each row's milestone dates on every rebuild, so a hearing date "
+            "that has passed stops reading 'scheduled'. Hearings get moved and "
+            "projects re-file under new names — treat a scheduled date as the "
+            "earliest to act by, and confirm with the clerk before relying on "
+            "it. Leads are mined into data/project_candidates.json and promoted "
+            "here only after a human reads a primary source."),
     },
     "DC_SITES_DF": {
         "label": "Campus registry (operator / tenant / filing LLC)",
