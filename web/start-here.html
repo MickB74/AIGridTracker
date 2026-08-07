@@ -381,11 +381,19 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <main id="main">
 
 <style>
-  .wiz select,.wiz input[type=text],.wiz input[type=date],.wiz textarea{
+  .wiz select,.wiz input[type=text],.wiz input[type=date],
+  .wiz input[type=time],.wiz textarea{
     background:var(--card);color:var(--ink);border:1px solid var(--rule);
     border-radius:8px;padding:9px 12px;font-size:15px;width:100%;
     font-family:inherit}
   .wiz textarea{min-height:150px;line-height:1.5;resize:vertical}
+  /* Make the native calendar/clock picker obvious on the dark theme and let
+     a click anywhere in the field open it (see the showPicker wiring in JS). */
+  .wiz input[type=date],.wiz input[type=time]{cursor:pointer}
+  .wiz input[type=date]::-webkit-calendar-picker-indicator,
+  .wiz input[type=time]::-webkit-calendar-picker-indicator{
+    filter:invert(1) brightness(1.7);opacity:.85;cursor:pointer;
+    font-size:1.1em}
   .wiz label.fld{display:block;font-size:13px;color:var(--muted);
     margin:0 0 5px;font-weight:600}
   .wiz .row{display:grid;gap:16px;grid-template-columns:1fr;margin:0 0 4px}
@@ -522,8 +530,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
     </details>
     <h3 style="margin:20px 0 8px;font-size:16px">&#129706; Rally your neighbors</h3>
     <div class="row two">
-      <div><label class="fld" for="w-meet-when">Meeting date &amp; time</label>
-        <input type="text" id="w-meet-when" placeholder="Tuesday, Aug 12 &middot; 6:30 PM"></div>
+      <div><label class="fld" for="w-meet-date">Meeting date &amp; time</label>
+        <div style="display:flex;gap:8px">
+          <input type="date" id="w-meet-date" style="flex:1" aria-label="Meeting date">
+          <input type="time" id="w-meet-time" style="flex:0 0 44%" aria-label="Meeting time"></div></div>
       <div><label class="fld" for="w-meet-where">Location</label>
         <input type="text" id="w-meet-where" placeholder="Town Hall, 123 Main St"></div>
     </div>
@@ -858,6 +868,9 @@ function render(){
   var mw=+$('w-mw').value;
   var whoSel=$('w-who').value;
   var hearingVal=$('w-hearing').value;
+  // Seed the rally meeting date from the hearing date (only when still blank,
+  // so it never overrides a date the user picked themselves).
+  if(hearingVal && !$('w-meet-date').value) $('w-meet-date').value=hearingVal;
   $('w-mwlabel').textContent=mw+' MW';
 
   // Step 2 — operator resolution
@@ -995,12 +1008,24 @@ $('w-print').addEventListener('click',function(){window.print();});
 $('w-txt').addEventListener('click',function(){
   dl('gridwatch_action_pack_'+cur.state.replace(/ /g,'_')+'.txt',cur.pack);
   if(window.gwevent)gwevent('action-pack/'+cur.state);});
+// Meeting date/time come from native pickers; compose the friendly string
+// ("Tuesday, August 12 · 6:30 PM") the flyer/campaign site want.
+function meetingWhenStr(){
+  var dv=$('w-meet-date').value, tv=$('w-meet-time').value, out='';
+  if(dv){out=new Date(dv+'T00:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});}
+  if(tv){var p=tv.split(':'),h=+p[0],ap=h>=12?'PM':'AM',h12=(h%12)||12;out+=(out?' · ':'')+h12+':'+p[1]+' '+ap;}
+  return out;
+}
 $('w-site').addEventListener('click',function(){
-  var html=campaignSite(cur.state,cur.mw,cur.impact,cur.bill,$('w-group').value,$('w-email').value,$('w-meet-when').value,$('w-meet-where').value,cur.operator);
+  var html=campaignSite(cur.state,cur.mw,cur.impact,cur.bill,$('w-group').value,$('w-email').value,meetingWhenStr(),$('w-meet-where').value,cur.operator);
   dl('index.html',html,'text/html;charset=utf-8');
   if(window.gwevent)gwevent('campaign-site/'+cur.state);});
-$('w-meet-when').addEventListener('input',render);
-$('w-meet-where').addEventListener('input',render);
+// A click anywhere in a date/time field opens the native calendar/clock —
+// easier than hunting for the small picker icon. Falls back silently where
+// showPicker() is unsupported (the field still works as a normal input).
+Array.prototype.forEach.call(
+  document.querySelectorAll('#wiz-app input[type=date],#wiz-app input[type=time]'),
+  function(inp){inp.addEventListener('click',function(){try{if(inp.showPicker)inp.showPicker();}catch(e){}});});
 $('w-share').addEventListener('click',function(){
   var p=new URLSearchParams();p.set('state',$('w-state').value);p.set('mw',$('w-mw').value);
   p.set('stage',$('w-stage').value);var w=$('w-who').value;if(w!==UNKNOWN_UI)p.set('who',w);
