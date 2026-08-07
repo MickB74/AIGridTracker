@@ -2029,6 +2029,25 @@ HEALTH_RISKS = [
             "agreements so the facility sheds load in grid emergencies."},
 ]
 
+# Two groups, because not every panel is a health risk: air/noise/light/water
+# have a documented personal-health pathway, while higher bills is an economic
+# harm and climate/reliability is environmental. Presenting "Higher bills" as a
+# health risk is inaccurate, so the page and PDF render these under separate
+# headings. `title` per group is the section label; membership is by `key`.
+HEALTH_RISK_GROUPS = [
+    ("health", "Health risks",
+     "Documented pathways from a facility to the health of the people who "
+     "live near it."),
+    ("impacts", "Bills & environment",
+     "Not health risks, but the other ways a facility lands on a community — "
+     "economic and environmental."),
+]
+_HEALTH_RISK_GROUP = {"air": "health", "noise": "health", "light": "health",
+                      "water": "health", "costs": "impacts",
+                      "climate": "impacts"}
+for _hr in HEALTH_RISKS:
+    _hr["group"] = _HEALTH_RISK_GROUP.get(_hr["key"], "health")
+
 # Project-stage playbook — drives the "Start here" wizard (start_here_tab).
 # Each stage maps the situation a community is in to the moves that matter
 # this week and the meeting type used for the generated action pack

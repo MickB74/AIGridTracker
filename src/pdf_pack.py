@@ -609,7 +609,7 @@ def build_health_pdf(health_risks, sources):
     # output depends only on the day.
     built = _dt.datetime.now(_dt.timezone.utc)
     pdf = _ActionPackPDF(
-        doc_title="THE HEALTH RISKS OF DATA CENTERS",
+        doc_title="HEALTH & COMMUNITY IMPACTS OF DATA CENTERS",
         doc_subtitle=f"Community briefing · {built.date():%B %d, %Y}",
     )
     pdf.set_creation_date(
@@ -619,14 +619,15 @@ def build_health_pdf(health_risks, sources):
 
     pdf.set_font("Helvetica", "B", 19)
     pdf.set_text_color(*INK)
-    pdf.cell(0, 9, "The Health Risks of Data Centers",
+    pdf.cell(0, 9, "Health & Community Impacts of Data Centers",
              new_x="LMARGIN", new_y="NEXT")
     pdf.set_font("Helvetica", "", 9.5)
     pdf.set_text_color(*MUTED)
     pdf.multi_cell(0, 5.2, _latin1(
-        "Six ways a data center affects the people who live near one — "
-        "every claim sourced on the pages that follow, with the permit "
-        "condition that addresses it."), new_x="LMARGIN", new_y="NEXT")
+        "Six ways a data center affects the people who live near one — the "
+        "health risks plus higher bills and the environment. Every claim "
+        "sourced on the pages that follow, with the permit condition that "
+        "addresses it."), new_x="LMARGIN", new_y="NEXT")
     pdf.ln(4)
 
     # 2-column x 3-row panel grid

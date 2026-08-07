@@ -40,7 +40,8 @@ from src.constants import (
     STATE_GRID_PROFILES, STATE_DC_DF, STATE_DC_NATIONAL,
     STATE_PUCS_DF, MORATORIUMS_DF,
     PROJECTS, PROJECTS_DF, PROJECT_EVENTS, project_status,
-    MORATORIUM_OUTCOMES, HEALTH_RISKS, CBA_BENCHMARKS, COMPANY_CONCESSIONS,
+    MORATORIUM_OUTCOMES, HEALTH_RISKS, HEALTH_RISK_GROUPS,
+    CBA_BENCHMARKS, COMPANY_CONCESSIONS,
     PROJECT_STAGES, OUTREACH_TIPS, ENTITY_TELLS, FILING_ENTITIES,
     DC_SITES_DF, LOCAL_OFFICIALS_DF, LOCAL_BODIES_DF, STATE_MUNI_LEAGUES,
     OPERATORS_DF, EXECUTIVES_DF, MEGA_PROJECTS_DF,
@@ -1400,16 +1401,14 @@ def build_states_index():
         jsonld=_breadcrumb(("Home", SITE_URL), ("States", f"{SITE_URL}/states/")))
 
 
-def build_health():
-    panels = ""
-    for r in HEALTH_RISKS:
-        facts = ""
-        for f in r["facts"]:
-            name, url = SOURCES[f["src"]]
-            facts += (f'<li>{esc(f["text"])} '
-                      f'<span class="src">— <a href="{esc(url)}">'
-                      f'{esc(name.split(" — ")[0])}</a></span></li>')
-        panels += f"""
+def _health_panel(r):
+    facts = ""
+    for f in r["facts"]:
+        name, url = SOURCES[f["src"]]
+        facts += (f'<li>{esc(f["text"])} '
+                  f'<span class="src">— <a href="{esc(url)}">'
+                  f'{esc(name.split(" — ")[0])}</a></span></li>')
+    return f"""
 <section>
   <div class="panel" style="background:{r['color']}">
     <h3>{r['icon']} {esc(r['title'])}</h3>
@@ -1418,30 +1417,45 @@ def build_health():
   <ul>{facts}</ul>
   <div class="ask"><strong>What to demand:</strong> {esc(r['ask'])}</div>
 </section>"""
+
+
+def build_health():
+    # Grouped so "Higher bills" (economic) and "Climate" (environmental) are
+    # not presented as health risks — see HEALTH_RISK_GROUPS.
+    groups = ""
+    for gkey, glabel, gblurb in HEALTH_RISK_GROUPS:
+        members = [r for r in HEALTH_RISKS if r.get("group") == gkey]
+        if not members:
+            continue
+        groups += f"""
+<h2 style="margin-top:36px">{esc(glabel)}</h2>
+<p class="muted" style="margin:-4px 0 6px">{esc(gblurb)}</p>
+{"".join(_health_panel(r) for r in members)}"""
     body = f"""
 <header>
   <div class="kicker">Community briefing</div>
-  <h1>The health risks of data centers</h1>
+  <h1>Health &amp; community impacts of data centers</h1>
   <p class="sub">Six ways a facility affects the people who live near one —
-  every claim sourced, every risk paired with the permit condition that
-  addresses it. Format inspired by the
+  from the documented health risks to higher bills and the environment. Every
+  claim sourced, every impact paired with the permit condition that addresses
+  it. Format inspired by the
   <a href="{esc(SOURCES['ehp_health'][1])}">Environmental Health Project's
   community infographic</a>.</p>
   <p><a class="btn" href="assets/gridwatch_health_risks.pdf">📥 Print the
   infographic (PDF)</a>
   <a class="btn ghost" href="{APP_URL}">Open the full toolkit</a></p>
 </header>
-{panels}
+{groups}
 """
     return page(
-        "The health risks of data centers — sourced community briefing",
-        "Air, noise, light, bills, water, and climate: the documented "
-        "health impacts of data centers, with sources and the permit "
+        "Health & community impacts of data centers — sourced briefing",
+        "Air, noise, light, water, bills, and climate: the documented health "
+        "and community impacts of data centers, with sources and the permit "
         "conditions that address them.",
         body, f"{SITE_URL}/health-risks",
         jsonld=[
             _breadcrumb(("Home", SITE_URL),
-                        ("Health risks", f"{SITE_URL}/health-risks")),
+                        ("Health & community impacts", f"{SITE_URL}/health-risks")),
             # Questions map 1:1 to the six panels; answers are the panel
             # summaries verbatim, so the rich result never diverges from the
             # sourced content on the page.
