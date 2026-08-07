@@ -396,6 +396,228 @@
           "source": "https://earthjustice.org/press/2026/xai-sued-for-illegal-power-plant"
         }
       ]
+    },
+    {
+      "id": "nordson-campus-amherst-oh",
+      "name": "Nordson campus data center (Cervenka)",
+      "operator": null,
+      "owner": null,
+      "tenant": null,
+      "filing_llc": "Cervenka Development Partners LLC",
+      "locality": "Amherst (Lorain County)",
+      "state": "OH",
+      "lat": 41.4,
+      "lon": -82.22,
+      "size_mw": null,
+      "acres": null,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": "2026-07-30",
+      "outcome": "denied",
+      "note": "Use variance to convert three newer buildings on the longtime Nordson Corporation campus into a data center complex - denied by the Board of Zoning Appeals on July 30, 2026, less than 24 hours after a hearing where 100+ residents packed City Hall and spilled onto the lawn. The developer's remaining path is an appeal in Lorain County Common Pleas Court.",
+      "source": "https://chroniclet.com/news/472013/amherst-board-of-zoning-appeals-denies-proposed-data-center-variance-for-former-nordson-property/",
+      "as_of": "2026-08-07",
+      "events": [
+        {
+          "date": "2026-07-30",
+          "kind": "vote",
+          "summary": "Amherst Board of Zoning Appeals denied the use variance, releasing its decision less than 24 hours after a packed hearing (100+ residents, capacity limits pushed the crowd outside).",
+          "source": "https://www.news5cleveland.com/news/local-news/amherst-zoning-board-rejects-variance-for-data-center-project-on-longtime-nordson-campus"
+        }
+      ]
+    },
+    {
+      "id": "hexa-monroe-township-nj",
+      "name": "Hexa Builders data center (Black Horse Pike)",
+      "operator": null,
+      "owner": null,
+      "tenant": null,
+      "filing_llc": "Hexa Builders LLC",
+      "locality": "Monroe Township (Gloucester County)",
+      "state": "NJ",
+      "lat": 39.68,
+      "lon": -74.99,
+      "size_mw": null,
+      "acres": null,
+      "announced": null,
+      "rezoning_filed": "2026-04-01",
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": null,
+      "note": "Previously-approved warehouse project at 3043 South Black Horse Pike amended in early April 2026 to include a 1,000,000 sq ft data center. Two weeks later the township council stripped data-center permissions from the site and banned data centers township-wide; the planning board then deemed the amended application incomplete. Hexa is now suing the township for $300M+. Not dead - the litigation decides it.",
+      "source": "https://wjrz.com/2026/07/30/hexa-files-300m-lawsuit-against-monroe-township-over-data-center-prohibition/",
+      "as_of": "2026-08-07",
+      "events": [
+        {
+          "date": "2026-04-01",
+          "kind": "filing",
+          "summary": "Hexa Builders filed an amended application in early April 2026 converting one approved warehouse into a 1M sq ft data center at 3043 South Black Horse Pike.",
+          "source": "https://42freeway.com/news/one-million-square-foot-data-center-proposal-in-monroe-twp-still-active-application-completeness-review-may-12/"
+        },
+        {
+          "date": "2026-04-22",
+          "kind": "vote",
+          "summary": "Township council passed two ordinances: one stripping data-center permissions from the specific site, the other banning data centers township-wide.",
+          "source": "https://njrecorder.com/monroe-township-blocks-major-ai-data-center-proposal-after-new-ban-takes-effect/"
+        },
+        {
+          "date": "2026-05-12",
+          "kind": "meeting",
+          "summary": "Planning board unanimously deemed the amended site-plan application incomplete - blocking the project without rejecting it on the merits.",
+          "source": "https://42freeway.com/news/one-million-square-foot-data-center-proposal-in-monroe-twp-still-active-application-completeness-review-may-12/"
+        },
+        {
+          "date": "2026-07-30",
+          "kind": "ruling",
+          "summary": "Hexa Builders sued Monroe Township for more than $300 million in damages over the ban and the completeness review.",
+          "source": "https://wjrz.com/2026/07/30/hexa-files-300m-lawsuit-against-monroe-township-over-data-center-prohibition/"
+        }
+      ]
+    },
+    {
+      "id": "project-taurus-colorado-springs-co",
+      "name": "Project Taurus (Raeden)",
+      "operator": "Raeden",
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Colorado Springs (El Paso County)",
+      "state": "CO",
+      "lat": 38.9,
+      "lon": -104.85,
+      "size_mw": null,
+      "acres": null,
+      "announced": null,
+      "rezoning_filed": "2026-06-01",
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": null,
+      "note": "Retrofit of an existing building on Garden of the Gods Road into the city's first AI data center, by California-based Raeden. Administratively approved by city staff in June 2026; the planning commission denied residents' appeals after a marathon hearing; two new appeals now send it to City Council, whose hearing must fall between Aug 29 and Sept 28 (likely mid-September - date not yet set). Chelsea Glen neighbors cite power, water, and noise from a prior Bitcoin operation at the site.",
+      "source": "https://gazette.com/2026/08/03/appeals-filed-to-send-project-taurus-decision-to-the-colorado-springs-city-council/",
+      "as_of": "2026-08-07",
+      "events": [
+        {
+          "date": "2026-06-01",
+          "kind": "filing",
+          "summary": "City planning department administratively approved the Project Taurus application in June 2026; neighbors immediately announced an appeal.",
+          "source": "https://www.koaa.com/news/local-news/in-your-community/west-side/neighbors-plan-appeal-after-city-planning-department-approves-project-taurus-data-center-application"
+        },
+        {
+          "date": "2026-06-23",
+          "kind": "filing",
+          "summary": "Five appeals - including one from Chelsea Glen residents and the transparency group Integrity Matters - met the city's requirements to proceed.",
+          "source": "https://gazette.com/2026/06/23/five-project-taurus-data-center-appeals-meet-requirements-city-says/"
+        },
+        {
+          "date": "2026-07-23",
+          "kind": "vote",
+          "summary": "Planning Commission denied the citizens' appeals after a ~14-hour hearing, upholding the approval 6-2.",
+          "source": "https://krdo.com/news/2026/07/23/colorado-springs-planning-commission-holds-appeal-hearing-for-project-taurus-data-center/"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "filing",
+          "summary": "Two new appeals filed, sending the decision to City Council - the final local authority. Hearing must occur between Aug 29 and Sept 28, 2026.",
+          "source": "https://www.coloradopolitics.com/2026/08/03/appeals-filed-to-send-project-taurus-decision-to-the-colorado-springs-city-council/"
+        }
+      ]
+    },
+    {
+      "id": "deep-green-lansing-mi",
+      "name": "Deep Green downtown data center",
+      "operator": "Deep Green (UK)",
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Lansing (Ingham County)",
+      "state": "MI",
+      "lat": 42.73,
+      "lon": -84.55,
+      "size_mw": 24,
+      "acres": 2.5,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": "2026-04-06",
+      "outcome": "withdrawn",
+      "note": "24 MW data center plus a 16 MW fuel-cell plant on 2.5 acres near the Grand River downtown, with a closed-loop water-glycol cooling system (~500,000 gal/yr). The Planning Commission recommended the rezoning 5-2 in March 2026, but Deep Green withdrew its rezoning request on April 6, 2026, ending the proposal before a council vote.",
+      "source": "https://michiganadvance.com/2026/04/06/deep-green-pulls-request-to-rezone-downtown-lansing-parcel-axing-data-center-proposal/",
+      "as_of": "2026-08-07",
+      "events": [
+        {
+          "date": "2026-03-04",
+          "kind": "vote",
+          "summary": "Lansing City Planning Commission voted 5-2 to recommend the rezoning for the 24 MW data center + 16 MW fuel-cell plant.",
+          "source": "https://michiganadvance.com/2026/03/04/lansing-city-planning-commission-recommends-rezoning-for-data-center/"
+        },
+        {
+          "date": "2026-04-06",
+          "kind": "filing",
+          "summary": "Deep Green withdrew its rezoning application, axing the downtown proposal before City Council voted.",
+          "source": "https://michiganadvance.com/2026/04/06/deep-green-pulls-request-to-rezone-downtown-lansing-parcel-axing-data-center-proposal/"
+        }
+      ]
+    },
+    {
+      "id": "stargate-abilene-tx",
+      "name": "Stargate Abilene",
+      "operator": "Crusoe",
+      "owner": "OpenAI / Oracle / SoftBank (Stargate)",
+      "tenant": "OpenAI / Oracle",
+      "filing_llc": null,
+      "locality": "Abilene (Taylor County)",
+      "state": "TX",
+      "lat": 32.45,
+      "lon": -99.73,
+      "size_mw": 1200,
+      "acres": null,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": "approved",
+      "note": "The flagship Stargate site, built by Crusoe on Lancium's Clean Campus - the most complete Stargate location, with roughly four of eight buildings operational (~0.3 GW live) as of mid-2026. OpenAI and Oracle capped the site at 1.2 GW in March 2026, dropping further expansion amid grid-interconnection delays exceeding a year. Power is a mix of on-site natural gas and grid supply.",
+      "source": "https://epoch.ai/publications/openai-stargate-where-the-us-sites-stand",
+      "as_of": "2026-08-07",
+      "events": [
+        {
+          "date": "2026-03-01",
+          "kind": "news",
+          "summary": "In March 2026 OpenAI and Oracle capped the Abilene site at 1.2 GW, dropping expansion plans amid grid delays of more than a year; later buildings have run behind their permitted schedules.",
+          "source": "https://www.datacenterdynamics.com/en/news/oracleopenai-drop-plans-to-expand-flagship-abilene-stargate-site-meta-in-talks-to-pick-up-crusoe-capacity-with-nvidias-help/"
+        }
+      ]
+    },
+    {
+      "id": "edgecore-louisa-county-va",
+      "name": "EdgeCore Shannon Hill campus",
+      "operator": "EdgeCore Digital Infrastructure",
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Louisa County (Shannon Hill)",
+      "state": "VA",
+      "lat": 37.87,
+      "lon": -78.08,
+      "size_mw": 1100,
+      "acres": 697,
+      "announced": "2025-06-01",
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": "approved",
+      "note": "697 acres purchased in the Shannon Hill Regional Business Park for a 3.9M sq ft, 1.1+ GW campus - a $17B+ investment announced June 2025, phased over several years. No construction start date or tenants disclosed at announcement. Part of a data-center surge in a small county that already hosts an AWS campus.",
+      "source": "https://edgecore.com/resources/press-releases/new-louisa-county-virginia-data-center-campus",
+      "as_of": "2026-08-07",
+      "events": [
+        {
+          "date": "2025-06-01",
+          "kind": "news",
+          "summary": "EdgeCore announced the land purchase (697 ac, Shannon Hill Regional Business Park) and $17B+ phased campus plan in June 2025; construction timing and tenants undisclosed.",
+          "source": "https://edgecore.com/resources/press-releases/new-louisa-county-virginia-data-center-campus"
+        }
+      ]
     }
   ]
 }
