@@ -657,7 +657,6 @@ def page(title, description, body, canonical, depth=0,
 </main>
 <footer>
   <p style="margin-bottom:8px"><strong>Reference</strong> ·
-    <a href="{p}methodology.html">Methodology</a> ·
     <a href="{p}studies.html">State studies</a> ·
     <a href="{p}officials.html">Officials directory</a> ·
     <a href="{p}glossary.html">Glossary</a> ·
@@ -8072,7 +8071,10 @@ def main():
     (WEB / "dividend.html").write_text(build_data_dividend(), encoding="utf-8")
     (WEB / "data-centers.html").write_text(build_data_centers(), encoding="utf-8")
     (WEB / "environment.html").write_text(build_environment(), encoding="utf-8")
-    (WEB / "methodology.html").write_text(build_methodology(), encoding="utf-8")
+    # Token/footprint methodology (build_methodology) is intentionally NOT
+    # published — GridWatch is a community-advocacy site, not an LLM-footprint
+    # calculator. The function is kept for easy restore; see also the removed
+    # footer link and sitemap entry.
     (WEB / "studies.html").write_text(build_studies(), encoding="utf-8")
     (WEB / "cba-clauses.html").write_text(build_cba_clauses(), encoding="utf-8")
     (WEB / "officials.html").write_text(build_officials(), encoding="utf-8")
@@ -8123,7 +8125,7 @@ def main():
     paths = ["", "start-here", "health-risks", "moratoriums", "impact",
              "bills", "outlook",
              "learn", "puc", "executives", "about", "search", "dividend",
-             "data-centers", "environment", "methodology", "studies",
+             "data-centers", "environment", "studies",
              "cba-clauses", "officials", "consulting", "case-studies",
              "hearing-questions", "glossary", "tax-breaks", "siting",
              "companies/", "states/", "blog/", "news/", "videos"]
