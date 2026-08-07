@@ -8,6 +8,14 @@ GridWatch AI is an open-source Streamlit application that gives communities, res
 ![Streamlit](https://img.shields.io/badge/streamlit-1.36+-red)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+### 🌐 [aigridwatch.com](https://aigridwatch.com) — live site · [Open the free toolkit](https://aigridtracker.streamlit.app)
+
+- 🧮 [Data center impact calculator](https://aigridwatch.com/impact) — electricity, water, carbon, and rate impact for any facility size, in your state
+- 📋 [Moratorium tracker](https://aigridwatch.com/moratoriums) — 99 U.S. data center moratoriums and community actions, each sourced and dated — **open data ([JSON](https://aigridwatch.com/data/moratoriums.json) · [CSV](https://aigridwatch.com/data/moratoriums.csv)), CC BY 4.0**
+- 🏛️ [Model CBA clause library](https://aigridwatch.com/cba-clauses) · [Questions to ask at your hearing](https://aigridwatch.com/hearing-questions)
+- ⚕️ [The health risks of data centers](https://aigridwatch.com/health-risks), sourced · [Why your electric bill is going up](https://aigridwatch.com/bills)
+- 📍 [State briefings — all 50 states + D.C.](https://aigridwatch.com/states/) · [Methodology](https://aigridwatch.com/methodology) — every coefficient, its source, and its caveats
+
 ---
 
 ## Why this exists

@@ -418,6 +418,6 @@ def render_officials_tab():
     st.info(
         "**PUC directory moved to the site:** "
         "[aigridwatch.com/puc](https://aigridwatch.com/puc) — "
-        "all 51 state Public Utility Commissions with website and "
+        "Public Utility Commissions for all 50 states and D.C. with website and "
         "complaint links. Your state page also shows your PUC."
     )

@@ -3760,7 +3760,7 @@ def build_puc():
 """
     return page(
         "State PUC directory — every Public Utility Commission",
-        "All 51 state Public Utility Commissions with official websites "
+        "Public Utility Commissions for all 50 states and D.C. with official websites "
         "and complaint portals. File a complaint or intervene when data "
         "center costs hit your electric bill.",
         body, f"{SITE_URL}/puc",
@@ -4774,7 +4774,7 @@ def build_data_centers():
 </details>
 
 <section>
-  <h2>All {n_states} states: data center facility count &amp; power draw</h2>
+  <h2>All 50 states and D.C.: data center facility count &amp; power draw</h2>
   <div class="stats">
     <div class="stat"><b>{nat['active_facilities']:,}</b><span>active facilities</span></div>
     <div class="stat"><b>{nat['twh_annual']} TWh/yr</b><span>{nat['pct_us_power']}% of U.S. power</span></div>
@@ -4794,7 +4794,7 @@ def build_data_centers():
     {state_rows}
   </table>
   </div>
-  <p class="muted" id="dc-count">{n_states} states</p>
+  <p class="muted" id="dc-count">50 states and D.C.</p>
 
   <h3 style="margin-top:24px">Top 15 states by annual power draw</h3>
   {state_bars}
@@ -4968,7 +4968,7 @@ currently self-reports nothing.
       r.style.display = show ? '' : 'none';
       if (show) n++;
     }});
-    ct.textContent = n + ' state' + (n === 1 ? '' : 's');
+    ct.textContent = s ? (n + ' match' + (n === 1 ? '' : 'es')) : '50 states and D.C.';
   }});
 }})();
 </script>
