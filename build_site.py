@@ -778,7 +778,7 @@ def build_index():
   impact calculators, negotiation playbooks, health evidence, and the
   documents to bring to your next hearing — all sourced.</p>
   <p>
-    <a class="btn" href="{APP_URL}">Start here — the 5-step wizard</a>
+    <a class="btn" href="start-here.html">Start here — the 5-step wizard</a>
     <a class="btn ghost" href="health-risks.html">The health risks, sourced</a>
   </p>
 </header>
@@ -1189,7 +1189,7 @@ def build_state(state):
   behind the LLC, what it costs your community, what to do this week, and
   a downloadable action pack — speech, letters, flyer, and CBA targets
   included.</p>
-  <p><a class="btn" href="{APP_URL}">Start here &rarr;</a>
+  <p><a class="btn" href="../start-here.html">Start here &rarr;</a>
   <a class="btn ghost" href="../health-risks.html">The health risks, sourced</a></p>
 </section>
 """
@@ -4387,7 +4387,7 @@ def build_learn():
   <p>Now you know how these facilities work and what makes your community a
   target. Next steps:</p>
   <p>
-    <a class="btn" href="{APP_URL}">Start here &mdash; the 5-step wizard</a>
+    <a class="btn" href="start-here.html">Start here &mdash; the 5-step wizard</a>
     <a class="btn ghost" href="health-risks.html">The health risks, sourced</a>
     <a class="btn ghost" href="bills.html">How this reaches your bill</a>
   </p>
@@ -4807,7 +4807,7 @@ def build_moratoriums():
   <h2>Your community is next?</h2>
   <p>The toolkit generates a full action pack — impact numbers, CBA targets,
   meeting scripts, and letters — customized for your state and situation.</p>
-  <p><a class="btn" href="{APP_URL}">Start here &rarr;</a>
+  <p><a class="btn" href="start-here.html">Start here &rarr;</a>
   <a class="btn ghost" href="health-risks.html">The health risks, sourced</a></p>
 </section>
 """

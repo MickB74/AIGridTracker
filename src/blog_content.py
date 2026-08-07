@@ -1004,7 +1004,7 @@ public record.
 If your community is at the beginning of a fight, GridWatch has three tools
 that pair with this checklist:
 
-- **[Start Here wizard](/impact.html)** — pick your state, size the impact,
+- **[Start Here wizard](/start-here.html)** — pick your state, size the impact,
   see what similar communities have won.
 - **The negotiation toolkit in the app** — CBA templates, model clauses,
   and a meeting-prep generator that produces a downloadable brief for your
@@ -1217,7 +1217,7 @@ filed under oath — is the one commissioners have to answer for.
 > opened a docket on data-center cost allocation, the
 > [PUC directory](/puc.html) has commission websites and complaint links
 > for all 50 states plus D.C. If you're facing a similar buildout, the
-> [Start here wizard](https://aigridtracker.streamlit.app) will generate
+> [Start here wizard](/start-here.html) will generate
 > a comment script, meeting brief, and letter template with your numbers
 > baked in.
 
