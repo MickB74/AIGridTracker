@@ -1046,11 +1046,20 @@ def build_state(state):
     puc_html = ""
     if not puc_row.empty:
         p = puc_row.iloc[0]
+        # EIA state profile: lowercase, no spaces/periods (verified pattern,
+        # e.g. /electricity/state/northcarolina/). Official federal data a
+        # resident can cite without a credibility argument.
+        eia_slug = state.lower().replace(" ", "").replace(".", "")
         puc_html = (
             f'<section><h2>Your regulator</h2>'
             f'<p><strong>{esc(p["name"])}</strong> — '
             f'<a href="{esc(p["website"])}">website</a> · '
             f'<a href="{esc(p["complaint"])}">file a complaint</a></p>'
+            f'<p class="muted">Official state energy data: '
+            f'<a href="https://www.eia.gov/electricity/state/{eia_slug}/" '
+            f'rel="nofollow">EIA {esc(state)} electricity profile</a> — '
+            f'generation, prices, and consumption from the U.S. Energy '
+            f'Information Administration.</p>'
             f'</section>')
 
     mora_html = ""
@@ -6081,7 +6090,7 @@ def build_data_centers():
   {state_bars}
 
   {provenance_html("STATE_DC_DF")}
-  <p class="src">Sources: {_srcref('electricchoice')} &middot; {_srcref('lbnl')}</p>
+  <p class="src">Sources: {_srcref('lbnl')} &middot; {_srcref('eia_state')} &middot; {_srcref('electricchoice')}</p>
 </section>
 
 <section>
