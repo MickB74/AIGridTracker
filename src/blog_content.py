@@ -128,19 +128,51 @@ noting their findings may be "more applicable in areas with constrained
 housing demand." In a flat or cooling market, the same facility could read
 very differently.
 
+### Where the discount actually lives: the first few hundred feet
+
+Here is the detail the aggregate studies quietly bury. They measure homes
+"within 1.5 miles" — but a data center's effect isn't spread evenly across a
+mile and a half. It concentrates at the fence line. A Northern Virginia paired
+case makes the gap concrete: a four-bedroom home roughly **200 feet** from a
+hyperscale campus listed at **\\$580,000**, against comparable homes with no
+data-center adjacency at
+[\\$685,000–\\$710,000](https://www.ownluxuryhomes.com/markets/ai/guide/data-center-adjacent-residential-values)
+— a discount of about **15–18%**.
+
+That single case isn't a contradiction of the "no effect on average" studies —
+it's the *resolution* of them. Average one house at −18% across a 1.5-mile ring
+of hundreds of unaffected homes, and the signal vanishes. Two other findings
+fit the same shape: University of Rochester researchers found
+[little measurable effect on nearby prices](https://www.ipm.org/news/2026-04-13/will-data-centers-impact-property-values-depends-on-who-you-ask)
+overall, while a separate George Mason–led analysis found new data centers
+**slowed local home-price growth**. Even the industry-friendly work rarely
+finds a clean positive — it finds "not as much, not as fast."
+
+The practical takeaway: the closer your home is to the fence line, the less the
+countywide averages tell you, and the more the appraisal turns on the specific
+site — its setbacks, its cooling design, and which direction the substation
+faces.
+
 ### What actually moves the number
 
 The studies measure sale prices; they rarely isolate the things a neighbor
 actually experiences. Those are the externalities to name at a hearing:
 
-- **Noise** from cooling systems and generator testing, day and night.
-- **Construction traffic** for the 12–18 months of the build.
-- **Viewshed** — windowless industrial walls and substations replacing
-  farmland or tree line.
+- **Noise** — a continuous low-frequency hum from cooling systems and
+  generator testing that travels farther than ordinary sound and penetrates
+  walls. The WHO's night-noise guideline sits around **40–45 dB**, which is
+  exactly why our [model CBA clause](/cba-clauses) caps a facility at **45 dBA
+  at the nearest residential property line**. Ask what the projected level is
+  at *your* lot line, not at the fence.
+- **Construction traffic** for the 12–18 months of the build — heavy trucks,
+  road wear, and dust on a rural road that never carried it before.
+- **Viewshed** — windowless industrial walls, security fencing, and substations
+  replacing farmland or tree line. Appraisers price a view; they also price the
+  loss of one.
 - **Heat.** Across more than 6,000 data centers worldwide, surrounding land
   temperatures rose about
   [2°C on average from 2004 to 2024](https://fortune.com/2026/04/01/ai-data-centers-heat-island-hyperscalers/)
-  — a measurable "data heat island."
+  — a measurable "data heat island" that raises neighbors' own cooling bills.
 
 ### The bottom line — and the move
 
@@ -192,6 +224,27 @@ A code name and a shell LLC buy time: they let a project lock in land,
 rezoning, and incentives *before* organized opposition can form around the
 name of a company people recognize. By the time "Project Blue" is revealed as
 a hyperscaler, the entitlements are often already granted.
+
+### The patterns, by operator
+
+Anonymity has fingerprints. From our own [site registry](/data-centers), the
+major operators each shell their land deals in recognizable ways — and knowing
+the family is often step zero:
+
+- **Google** buys through land-acquisition shells named **Jet Stream LLC** and
+  **Sharka LLC** — the same two names recur from The Dalles, Oregon to Northern
+  Virginia.
+- **Meta** rotates codename shells: **Greater Kudu, Raven Northbrook, Stadion,
+  Pinnacle Mountain**, and **Wobniar** — which is "Rainbow" spelled backwards.
+- **Microsoft** leans on project names and generic **"Holdings LLC"** entities,
+  less consistently codenamed.
+- **xAI (Colossus)** files through site- and retrofit-specific LLCs — the
+  former Electrolux plant in Memphis is the known one.
+- **OpenAI–Oracle (Stargate)** works through per-site developer LLCs like
+  **Crusoe** and **Lancium** at Abilene, Texas.
+
+If the LLC on your deed matches a name one of these companies has used
+elsewhere, you may already have your answer before you file a single request.
 
 ### A worked example: how Amazon hid behind "Project Blue"
 
@@ -251,7 +304,14 @@ project changes everything: it tells you the true power and water demand, it
 gives you the corporate climate and community commitments you can hold the
 company to, and it reveals
 [what that operator has already conceded](/data-centers) to other communities.
-Anonymity is leverage — for them. Naming them takes it back.
+
+Los Lunas, New Mexico is the proof. When the village traced **Greater Kudu
+LLC** back to Meta, it didn't just win a name — it negotiated a water agreement
+with real teeth: up to 3 million gallons a day, **automatically suspended in a
+declared Stage 3 water emergency**, plus Meta funding for Rio Grande watershed
+restoration worth roughly 172 million gallons a year. You cannot get a clause
+like that from "Greater Kudu LLC." You get it from Meta. Anonymity is leverage
+— for them. Naming them takes it back.
 """,
     },
 
@@ -296,6 +356,13 @@ Fifty people. For a building the size of several football fields drawing the
 power of a small city. That is the operating reality of a facility designed,
 by definition, to run on automation.
 
+**And those fifty aren't the office jobs the pitch implies.** A running data
+center employs security staff, HVAC and mechanical technicians, a few
+electricians, and a small network/facilities crew. The servers are owned and
+operated remotely by the tenant; the "high-tech jobs" mostly live at a
+corporate campus in another state. What lands in your county is a hardened,
+lightly-staffed industrial building.
+
 ### The construction mirage
 
 So where do "thousands of jobs" come from? Construction. A large build can peak
@@ -317,12 +384,24 @@ are.
 
 ### The number nobody puts on the slide: cost per job
 
-Here is where it stings. The largest state data center
-[sales-tax exemptions now cost over \\$1 billion a year each](data-center-tax-break-blowouts-2026).
-Divide a subsidy that large by ~50 permanent jobs and the public cost per
-permanent job runs into the **millions** — orders of magnitude above what a
-normal economic-development deal pays per job. The jobs are real; they are
-just extraordinarily expensive to buy.
+Here is where it stings, and it's not a hypothetical — the per-job math has
+been done. Good Jobs First found that eleven of the largest data centers
+received public subsidies worth
+[about \\$1.95 million per permanent job](https://www.datacenterdynamics.com/en/news/research-us-state-subsidies-pay-2-million-per-data-center-job/).
+In Ohio, the per-job cost runs roughly **\\$1.4 million at Google's** facilities
+and **\\$1 million at Meta's**. For comparison, Good Jobs First recommends states
+cap data-center subsidies at **\\$50,000 per job** — the deals on the table today
+routinely run twenty to forty times that.
+
+Two facts make it worse. First, the giveaway is often unnecessary: Georgia's
+own analysis concluded that **about 70% of data-center projects would have
+located there even without the subsidy** — the state is paying billions for
+investment it was already getting. Second, the largest state exemptions now
+cost
+[over \\$1 billion a year each](data-center-tax-break-blowouts-2026), and Georgia
+alone raised its projected FY2026 loss to **\\$2.5 billion**. The jobs are real.
+They are just, per job, among the most expensive economic development a state
+can buy.
 
 ### The move: three questions for the record
 
