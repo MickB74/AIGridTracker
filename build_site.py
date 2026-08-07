@@ -34,11 +34,13 @@ import pandas as pd
 from src.blog_art import art_svg
 from src.blog_content import BLOG_STORIES, ABOUT_SECTION
 from src.alerts import build_alerts, LOOKAHEAD_DAYS as ALERT_LOOKAHEAD
+from src.briefs import MEETING_ADVICE
 from src.constants import (
     AI_COMPETITORS_DF,
     STATE_GRID_PROFILES, STATE_DC_DF, STATE_DC_NATIONAL,
     STATE_PUCS_DF, MORATORIUMS_DF,
     MORATORIUM_OUTCOMES, HEALTH_RISKS, CBA_BENCHMARKS, COMPANY_CONCESSIONS,
+    PROJECT_STAGES, OUTREACH_TIPS, ENTITY_TELLS, FILING_ENTITIES,
     DC_SITES_DF, LOCAL_OFFICIALS_DF, LOCAL_BODIES_DF, STATE_MUNI_LEAGUES,
     OPERATORS_DF, EXECUTIVES_DF, MEGA_PROJECTS_DF,
     ERCOT_LL_VINTAGE, ERCOT_LL_DC_SHARE, ERCOT_LL_FUNNEL,
@@ -495,6 +497,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 # menu lights up on a child page (e.g. /states/ohio highlights "Your area").
 NAV_GROUPS = [
     ("Act", [
+        ("Start here", "start-here.html"),
         ("Siting score", "siting.html"),
         ("Hearing prep", "hearing-questions.html"),
         ("Model clauses", "cba-clauses.html"),
@@ -2483,6 +2486,767 @@ def build_blog_post(story, prev_post, next_post):
         jsonld=[
             _breadcrumb(("Home", SITE_URL), ("Blog", f"{SITE_URL}/blog/"), (title_clean, f"{SITE_URL}/blog/{story['id']}")),
             _article_schema(title_clean, summary_clean, f"{SITE_URL}/blog/{story['id']}", story["date"].isoformat(), story["author"]),
+        ])
+
+
+_START_HERE_HTML = r"""
+<style>
+  .wiz select,.wiz input[type=text],.wiz input[type=date],.wiz textarea{
+    background:var(--card);color:var(--ink);border:1px solid var(--rule);
+    border-radius:8px;padding:9px 12px;font-size:15px;width:100%;
+    font-family:inherit}
+  .wiz textarea{min-height:150px;line-height:1.5;resize:vertical}
+  .wiz label.fld{display:block;font-size:13px;color:var(--muted);
+    margin:0 0 5px;font-weight:600}
+  .wiz .row{display:grid;gap:16px;grid-template-columns:1fr;margin:0 0 4px}
+  @media(min-width:640px){.wiz .row.two{grid-template-columns:1fr 1fr}}
+  .wiz .step{background:var(--card);border:1px solid var(--rule);
+    border-radius:16px;padding:22px;margin:20px 0}
+  .wiz .step>h2{border:0;padding:0;margin:0 0 4px;color:var(--ink);font-size:19px}
+  .wiz .steptag{color:var(--teal);font-weight:700;font-size:12px;
+    letter-spacing:.1em;text-transform:uppercase}
+  .wiz .btn2{display:inline-flex;align-items:center;gap:6px;background:transparent;
+    color:var(--teal);border:1px solid var(--teal);border-radius:8px;
+    padding:8px 14px;font-size:14px;font-weight:600;cursor:pointer;
+    font-family:inherit}
+  .wiz .btn2.primary{background:var(--teal);color:#06251f;border-color:var(--teal)}
+  .wiz .btn2:hover{filter:brightness(1.08)}
+  .wiz .copyrow{display:flex;gap:10px;align-items:center;
+    justify-content:space-between;margin:14px 0 4px;flex-wrap:wrap}
+  .wiz .miniftr{font-size:12.5px;color:var(--muted);margin-top:6px}
+  .wiz .lettercard{border:1px solid var(--rule);border-radius:10px;
+    padding:14px;margin:12px 0}
+  @media print{
+    nav,footer,.skip,.wiz-noprint,#wiz-app{display:none !important}
+    body,.wrap{background:#fff !important;color:#000 !important;
+      max-width:none;padding:0}
+    #wiz-print{display:block !important}
+    #wiz-print pre{white-space:pre-wrap;word-break:break-word;
+      font:12px/1.45 ui-monospace,"SFMono-Regular",Menlo,monospace;color:#000}
+  }
+  #wiz-print{display:none}
+</style>
+<div class="wiz" id="wiz-app">
+  <header>
+    <div class="kicker">Start here</div>
+    <h1>A data center was proposed near me.</h1>
+    <p class="sub">Five quick steps: your situation &rarr; who's behind it
+    &rarr; what it costs you &rarr; what to do this week &rarr; a downloadable
+    action pack for your next meeting. Free, sourced, and works without an
+    account.</p>
+  </header>
+
+  <div class="step">
+    <div class="steptag">Step 1</div>
+    <h2>Your situation</h2>
+    <div class="row two">
+      <div><label class="fld" for="w-state">Your state</label>
+        <select id="w-state"></select></div>
+      <div><label class="fld" for="w-hearing">Next hearing or vote (if known)</label>
+        <input type="date" id="w-hearing"></div>
+    </div>
+    <div class="row"><div>
+      <label class="fld" for="w-stage">Where does the project stand?</label>
+      <select id="w-stage"></select></div></div>
+  </div>
+
+  <div class="step">
+    <div class="steptag">Step 2</div>
+    <h2>Who's really behind it</h2>
+    <div class="row"><div>
+      <label class="fld" for="w-who">Who's building it?</label>
+      <select id="w-who"></select></div></div>
+    <div id="w-llc-wrap" style="margin-top:14px;display:none">
+      <label class="fld" for="w-llc">Name on the deed, permit, or utility filing</label>
+      <input type="text" id="w-llc" placeholder="e.g. Jet Stream LLC, Greater Kudu LLC">
+      <div id="w-llc-out" style="margin-top:12px"></div>
+    </div>
+    <div id="w-op-out" style="margin-top:12px"></div>
+  </div>
+
+  <div class="step">
+    <div class="steptag">Step 3</div>
+    <h2>What it will cost your community</h2>
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+      <input type="range" id="w-mw" min="50" max="1000" value="200" step="50"
+        style="flex:1;min-width:200px;accent-color:var(--teal)">
+      <span id="w-mwlabel" style="font-size:26px;font-weight:700;color:var(--teal);min-width:92px">200 MW</span>
+    </div>
+    <p class="muted" style="margin:6px 0 0">If you only know acreage: a typical
+    campus runs 50&ndash;100 MW per large building; mid-size campuses are
+    200&ndash;500 MW.</p>
+    <div class="stats" id="w-metrics"></div>
+    <div id="w-benchmarks"></div>
+    <div class="copyrow wiz-noprint">
+      <div class="miniftr">Share this page with your numbers already filled in.</div>
+      <button class="btn2" id="w-share" type="button">&#128279; Copy share link</button>
+    </div>
+    <div id="w-share-out" class="miniftr"></div>
+  </div>
+
+  <div class="step">
+    <div class="steptag">Step 4</div>
+    <h2 id="w-stage-h">What to do this week</h2>
+    <div class="note info" id="w-stage-headline"></div>
+    <div id="w-moves" style="margin-top:12px"></div>
+    <div id="w-alerts"></div>
+    <div id="w-mora"></div>
+    <h3 style="margin:18px 0 4px;font-size:16px">Precedents worth citing</h3>
+    <p class="muted">Open the source links before you quote one — a precedent
+    you cannot cite is worse than none at all.</p>
+    <div id="w-precedents"></div>
+    <div id="w-puc" style="margin-top:14px"></div>
+  </div>
+
+  <div class="step">
+    <div class="steptag">Step 5</div>
+    <h2>Your action kit</h2>
+    <p class="muted">Everything below is pre-filled with your numbers: a
+    printable action pack (speech, letters, and outreach playbook),
+    ready-to-paste social posts, and a one-page campaign website you can host
+    for free.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin:14px 0">
+      <button class="btn2 primary" id="w-print" type="button">&#128424; Print / Save as PDF</button>
+      <button class="btn2" id="w-txt" type="button">&#128196; Download action pack (.txt)</button>
+    </div>
+    <details class="more"><summary>&#127908; Your 2-minute public comment (pre-filled)</summary>
+      <div class="copyrow">
+        <div><span class="fld" style="display:inline">Language:</span>
+          <label style="margin:0 10px 0 6px"><input type="radio" name="w-lang" value="en" checked> English</label>
+          <label><input type="radio" name="w-lang" value="es"> Espa&ntilde;ol</label></div>
+        <button class="btn2" type="button" data-copy="w-script-main">Copy</button>
+      </div>
+      <textarea id="w-script-main" readonly></textarea>
+      <div id="w-script-topics" style="margin-top:10px"></div>
+    </details>
+    <details class="more"><summary>&#9993; Ready-to-send letters (records &middot; PUC &middot; council)</summary>
+      <p class="muted">Replace the [BRACKETED] placeholders and send. All three
+      are also in the action pack.</p>
+      <div id="w-letters"></div>
+    </details>
+    <details class="more"><summary>&#128226; Post it &mdash; Nextdoor, Ring, Facebook &amp; more</summary>
+      <p class="muted">Copy-paste posts with your numbers filled in &mdash;
+      replace the [BRACKETS]. Then the platform playbook.</p>
+      <div id="w-posts"></div>
+      <div id="w-outreach" style="margin-top:10px"></div>
+    </details>
+    <h3 style="margin:20px 0 8px;font-size:16px">&#129706; Rally your neighbors</h3>
+    <div class="row two">
+      <div><label class="fld" for="w-meet-when">Meeting date &amp; time</label>
+        <input type="text" id="w-meet-when" placeholder="Tuesday, Aug 12 &middot; 6:30 PM"></div>
+      <div><label class="fld" for="w-meet-where">Location</label>
+        <input type="text" id="w-meet-where" placeholder="Town Hall, 123 Main St"></div>
+    </div>
+    <details class="more"><summary>&#127760; Your campaign website (free to host)</summary>
+      <p class="muted">A complete one-page site with your numbers baked in.
+      Download <code>index.html</code>, then drag it onto
+      <a href="https://app.netlify.com/drop" rel="nofollow">Netlify Drop</a> or
+      GitHub Pages &mdash; both free &mdash; and share the link.</p>
+      <div class="row two">
+        <div><label class="fld" for="w-group">Group name</label>
+          <input type="text" id="w-group" placeholder="Smith County Residents for Responsible Development"></div>
+        <div><label class="fld" for="w-email">Contact email (shown on the site)</label>
+          <input type="text" id="w-email" placeholder="ourgroup@gmail.com"></div>
+      </div>
+      <button class="btn2" id="w-site" type="button" style="margin-top:12px">&#127760; Download your site (index.html)</button>
+    </details>
+  </div>
+
+  <section>
+    <h2>Go deeper</h2>
+    <p><a class="btn" href="cba-clauses.html">Model CBA clauses &rarr;</a>
+    <a class="btn ghost" href="hearing-questions.html">Hearing questions</a>
+    <a class="btn ghost" href="impact.html">Full impact calculator</a>
+    <a class="btn ghost" href="bills.html">How this hits your bill</a></p>
+  </section>
+</div>
+<div id="wiz-print"><pre id="wiz-print-pre"></pre></div>
+"""
+
+
+_START_HERE_JS = r"""
+(function(){
+var D = __DATA__;
+var UNKNOWN_UI = "I don't know — I only have an LLC or company name from a filing";
+var UNKNOWN_BRIEF = "Unknown / not listed";
+var opNames = D.operators.map(function(o){return o.operator;});
+var stageKeys = Object.keys(D.stages);
+
+function $(id){return document.getElementById(id);}
+function esc(s){var d=document.createElement('div');d.textContent=(s==null?'':String(s));return d.innerHTML;}
+function c0(n){return Math.round(n).toLocaleString('en-US');}
+function d1(n){return n.toFixed(1);}
+function r0(n){return String(Math.round(n));}
+function uniq(a){var o=[];a.forEach(function(x){if(o.indexOf(x)<0)o.push(x);});return o;}
+function dl(name,text,mime){var b=new Blob([text],{type:mime||'text/plain;charset=utf-8'});
+  var u=URL.createObjectURL(b);var a=document.createElement('a');a.href=u;a.download=name;
+  document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},1500);}
+
+// ---- impact model (src/impact_model.py) ------------------------------- //
+function estimateImpact(mw, state){
+  var p = D.profiles[state] || {rate:0.12, gco2:400, water_stress:'medium'};
+  var PUE=1.12, WG=2.0, HOME=10500, INV=2000000, DIV=0.02;
+  var kwh = mw*8760*1.0*PUE*1000, mwh = kwh/1000, invMusd = mw*INV/1e6;
+  return {annual_twh:mwh/1e6, annual_mwh:mwh, annual_water_mgal:kwh*WG/1e6,
+    annual_co2_t:mwh*p.gco2/1e6, homes_equiv:kwh/HOME, investment_musd:invMusd,
+    data_dividend_usd:invMusd*1e6*DIV, rate:p.rate, gco2:p.gco2,
+    water_stress:p.water_stress};
+}
+function billPerHome(mw){return mw*2000000/5e6/20;}
+
+// ---- comment scripts (src/scripts_letters.py) ------------------------- //
+// The Dalles / Groton precedent lines match the verified MORATORIUM_OUTCOMES
+// registry: ~$28.5M water funding (no cap) and a 12,500 sq ft size cap.
+function commentScripts(state, mw, imp, bill, operator, lang){
+  var homes=c0(imp.homes_equiv), twh=d1(imp.annual_twh), water=c0(imp.annual_water_mgal),
+      b=r0(bill), cba=d1(imp.data_dividend_usd/1e6), bond=d1(mw*10000/1e6);
+  var known = operator!==UNKNOWN_BRIEF;
+  if(lang==='es'){
+    var oc = known?(' respaldado por '+operator):'';
+    var main =
+      'Buenas noches. Me llamo ____________ y vivo en esta comunidad.\n\n'+
+      'Estoy aquí por el centro de datos de '+mw+' MW que se propone'+oc+'. Tres números merecen su atención esta noche.\n\n'+
+      'Primero, la electricidad. A plena capacidad, esta sola instalación consumiría unos '+twh+' TWh al año — tanta electricidad como '+homes+' hogares.\n\n'+
+      'Segundo, el agua: aproximadamente '+water+' millones de galones al año para enfriamiento.\n\n'+
+      'Tercero, el costo. Si esta junta no exige que el desarrollador pague las mejoras de la red eléctrica, terminarán en nuestras facturas — cerca de $'+b+' por hogar al año.\n\n'+
+      'Las comunidades que se organizaron lograron protecciones reales: The Dalles obtuvo de Google unos $28.5 millones para su sistema de agua; Groton hizo de un límite de 12,500 pies cuadrados por edificio una condición de zonificación.\n\n'+
+      'No pedimos que rechacen el desarrollo. Pedimos condiciones: (1) un acuerdo de beneficios comunitarios vinculante de al menos $'+cba+' millones al año; (2) que el desarrollador pague el 100% de las mejoras de la red; (3) límites de agua exigibles y reportes públicos.\n\n'+
+      'Una aprobación sin condiciones es un subsidio. Por favor, no firmen nuestros nombres en él. Gracias.';
+    var topics=[
+      ['Tarifas eléctricas','Soy cliente residencial. Las mejoras de red para una instalación de '+mw+' MW cuestan millones, y sin una orden de esta junta se reparten entre todos nosotros — unos $'+b+' por hogar al año. Pido una sola condición: que el desarrollador pague el 100% de las mejoras que causa. Eso es causalidad de costos, y otros estados ya lo exigen.'],
+      ['Agua','Esta instalación evaporaría unos '+water+' millones de galones al año. Pido tres condiciones: un límite de agua exigible en el permiso, medición pública trimestral, y que la expansión requiera nueva aprobación. En The Dalles, Google pagó unos $28.5 millones en infraestructura de agua — nosotros no deberíamos aceptar menos transparencia.'],
+      ['Responsabilidad','¿Qué pasa si esta instalación cierra en diez años? Pido una fianza de desmantelamiento de $'+bond+' millones como condición del permiso, y un acuerdo de beneficios comunitarios vinculante — no una carta de intención — de al menos $'+cba+' millones al año. Si el proyecto es tan bueno como dicen, ponerlo por escrito no debería ser un problema.']
+    ];
+    return {main:main, topics:topics};
+  }
+  var oc = known?(' backed by '+operator):'';
+  var main =
+    'Good evening. My name is ____________, and I live in this community.\n\n'+
+    "I'm here about the proposed "+mw+' MW data center'+oc+'. Three numbers deserve your attention tonight.\n\n'+
+    'First, electricity. At full build-out this single facility would draw about '+twh+' TWh a year — as much electricity as '+homes+' homes.\n\n'+
+    'Second, water: roughly '+water+' million gallons a year for cooling.\n\n'+
+    'Third, cost. Unless this board requires the developer to pay for grid upgrades, they land on our bills — about $'+b+' per household per year.\n\n'+
+    'Communities that organized won real protections: The Dalles got about $28.5 million in water-system funding from Google; Groton, CT capped data-center buildings at 12,500 sq ft as a zoning condition after a one-year moratorium.\n\n'+
+    'We are not asking you to reject growth. We are asking you to attach conditions: (1) a binding community benefit agreement of at least $'+cba+' million per year; (2) the developer pays 100% of grid upgrades; (3) enforceable water caps with public reporting.\n\n'+
+    "Approval without conditions is a subsidy. Please don't sign our names to it. Thank you.";
+  var topics=[
+    ['Electric rates',"I'm a residential ratepayer. Grid upgrades for a "+mw+' MW facility cost millions, and without an order from this board they are spread across all of us — about $'+b+' per household per year. I’m asking for one condition: the developer pays 100% of the upgrades it causes. That’s cost causation, and other states already require it.'],
+    ['Water','This facility would evaporate roughly '+water+' million gallons a year. I’m asking for three conditions: an enforceable water cap in the permit, quarterly public metering, and re-approval before any expansion. The Dalles got about $28.5 million of water infrastructure from Google — we should not accept less transparency.'],
+    ['Accountability','What happens if this facility closes in ten years? I’m asking for a $'+bond+' million decommissioning bond as a permit condition, and a binding community benefit agreement — not a letter of intent — of at least $'+cba+' million per year. If the project is as good as promised, putting it in writing should be no problem.']
+  ];
+  return {main:main, topics:topics};
+}
+
+// ---- letters (src/scripts_letters.py) --------------------------------- //
+function letters(state, operator, mw, pucName, pucComplaint){
+  var opRef = operator===UNKNOWN_BRIEF ? 'the proposed data center development'
+    : 'the proposed '+operator+' data center development';
+  var records = {title:'Public records request — planning department',
+    to:'Records Officer, [Town/County] Planning Department',
+    re:'Public records request — '+opRef,
+    body:'To whom it may concern:\n\nUnder '+state+"'s public records law, I request copies of the following records from the past 24 months:\n\n"+
+      '1. All applications, site plans, studies, and permits referencing [PARCEL NUMBER / LLC NAME / PROJECT NAME];\n'+
+      '2. Minutes, notes, presentations, or correspondence from any pre-application or economic-development meetings concerning a data center or large electric load;\n'+
+      '3. Any water or sewer will-serve letters, capacity studies, or utility correspondence for the parcel(s) above;\n'+
+      '4. Any proposed or executed tax abatement, incentive, or non-disclosure agreements related to the project.\n\n'+
+      'I ask that fees be waived because this request concerns a matter of significant public interest and is not for commercial use. If any portion of this request is denied, please cite the specific statutory exemption and release all segregable portions.\n\n'+
+      'Please confirm receipt of this request and the expected response date.\n\nSincerely,\n[NAME]\n[STREET ADDRESS]\n[EMAIL / PHONE]'};
+  var puc = {title:'Inquiry to your public utility commission', to:pucName,
+    re:'Large-load interconnection inquiry — '+opRef+' (approx. '+mw+' MW)',
+    body:'Dear Commission staff:\n\nI am a residential ratepayer in [CITY/COUNTY], '+state+'. A data center of approximately '+mw+' MW has been proposed in my community, and I request the Commission’s help with the following:\n\n'+
+      '1. Has any utility filed a large-load interconnection request, special contract, or will-serve commitment that would serve this project? If so, please provide docket numbers.\n'+
+      '2. Has a residential rate impact analysis been performed for the associated transmission and distribution upgrades?\n'+
+      '3. What is the procedure for residents to intervene or comment in any related proceeding, and what are the current deadlines?\n\n'+
+      'I would appreciate a response in writing. Thank you for your assistance.\n\nSincerely,\n[NAME]\n[STREET ADDRESS]\n[EMAIL / PHONE]\n\n(Consumer complaint portal, for reference: '+pucComplaint+')'};
+  var council = {title:'Public comment letter — council / board',
+    to:'[Council members / Planning board], [Town/County]',
+    re:'Conditions requested before any approval of '+opRef,
+    body:'Dear members of the board:\n\nI am writing about the proposed '+mw+' MW data center. I am not asking you to reject growth — I am asking you to attach binding conditions before any approval, as other communities have successfully done:\n\n'+
+      '1. A community benefit agreement, recorded as a condition of approval rather than a side letter;\n'+
+      '2. Cost causation: the developer pays 100% of substation and transmission upgrades, so they do not appear on residential bills;\n'+
+      '3. An enforceable water cap with quarterly public reporting;\n'+
+      '4. A noise limit of 45 dBA at the nearest residential property line, measured, not modeled;\n'+
+      '5. A decommissioning bond so the site is not abandoned scrap if the operator leaves.\n\n'+
+      'Precedents: The Dalles, OR secured about $28.5M in water infrastructure from Google; Groton, CT capped data-center buildings at 12,500 sq ft as a zoning condition. Communities that asked, received; communities that didn’t, paid.\n\n'+
+      'I ask that this letter be entered into the public record.\n\nRespectfully,\n[NAME]\n[STREET ADDRESS]'};
+  return [records, puc, council];
+}
+
+// ---- social posts (src/scripts_letters.py) ---------------------------- //
+function socialPosts(state, mw, imp, bill, operator, hearingStr){
+  var homes=c0(imp.homes_equiv), water=c0(imp.annual_water_mgal), b=r0(bill);
+  var opBit = operator===UNKNOWN_BRIEF ? '' : ' (operator: '+operator+')';
+  var when = hearingStr ? hearingStr : '[DATE/TIME]';
+  var nextdoor='Heads up, neighbors — a '+mw+' MW data center has been proposed near [LOCATION]'+opBit+'. That’s a facility drawing as much electricity as '+homes+' homes and evaporating ~'+water+'M gallons of water a year. Unless the developer is required to pay for grid upgrades, the cost lands on our bills (~$'+b+'/household/yr). There’s a public meeting on '+when+' — showing up is the single most effective thing we can do. I have a one-page fact sheet with sources; comment or message me and I’ll share it.';
+  var ring='Community alert: a large data center ('+mw+' MW) is proposed near [LOCATION]. Public meeting '+when+'. It affects local electric bills and water use. Reply for a one-page fact sheet — decisions are being made now.';
+  var facebook='🚨 [TOWN] — a '+mw+' MW data center is proposed near [LOCATION]'+opBit+'.\n\nWhat that means, with sources:\n⚡ Electricity: as much as '+homes+' homes\n💧 Water: ~'+water+'M gallons/year for cooling\n💸 Your bill: ~$'+b+'/household/year IF ratepayers fund the grid upgrades\n\nCommunities that organized won real protections — The Dalles got about $28.5M in water-system funding from Google; Groton capped data-center buildings at 12,500 sq ft as a zoning condition. We can too, but only BEFORE approval.\n\n🗓️ Public meeting: '+when+' at [LOCATION]\n✅ Comment ‘INFO’ and I’ll send the fact sheet + 3 asks\nPlease share to [TOWN] groups.';
+  return [['Nextdoor',nextdoor],['Ring Neighbors',ring],['Facebook',facebook]];
+}
+
+// ---- meeting brief (src/briefs.py) ------------------------------------ //
+function briefData(state, operator, meetingType, mw){
+  var imp = estimateImpact(mw, state);
+  var dc = D.stateDC[state] || {count:0, twh:0};
+  var puc = D.pucs[state] || {abbrev:'', name:'N/A', website:'', complaint:''};
+  var sections=[];
+  var glance=[['Existing DC facilities',String(dc.count)],
+    ['Existing DC load',d1(dc.twh)+' TWh/year'],
+    ['Grid carbon intensity',imp.gco2+' gCO2/kWh'],
+    ['Residential electricity rate','$'+imp.rate.toFixed(3)+'/kWh'],
+    ['Water stress',imp.water_stress],['PUC',puc.name],
+    ['PUC website',puc.website],['PUC complaint portal',puc.complaint]];
+  var mc = D.moraCounts[puc.abbrev];
+  if(mc){var parts=[];if(mc.enacted)parts.push(mc.enacted+' enacted');
+    if(mc.proposed)parts.push(mc.proposed+' proposed');
+    if(parts.length)glance.push(['Moratorium activity',parts.join(', ')]);}
+  sections.push({title:'YOUR STATE AT A GLANCE',kind:'kv',items:glance});
+  sections.push({title:'FACILITY IMPACT ESTIMATES',kind:'kv',items:[
+    ['Annual electricity',d1(imp.annual_twh)+' TWh'],
+    ['Annual carbon',c0(imp.annual_co2_t)+' tCO2e'],
+    ['Annual water (evaporative)',c0(imp.annual_water_mgal)+'M gallons'],
+    ['Homes equivalent',c0(imp.homes_equiv)],
+    ['Estimated investment','$'+r0(imp.investment_musd)+'M']]});
+  if(operator!==UNKNOWN_BRIEF){
+    var op=null;for(var i=0;i<D.operators.length;i++){if(D.operators[i].operator===operator){op=D.operators[i];break;}}
+    if(op){sections.push({title:'OPERATOR PROFILE: '+operator,kind:'kv',items:[
+      ['Tier',op.tier||'N/A'],['Owner',op.owner||'N/A'],['Business model',op.model||'N/A']]});}
+    var ol=operator.toLowerCase();
+    var ex=D.execs.filter(function(e){return e.company&&e.company.toLowerCase().indexOf(ol)>=0;}).slice(0,5);
+    if(ex.length)sections.push({title:'KEY EXECUTIVES & HOW TO REACH THEM',kind:'execs',
+      items:ex.map(function(e){return {name:e.name,title:e.title,focus:e.focus,linkedin:e.linkedin};})});
+    var cc=D.concessions[operator];
+    if(cc)sections.push({title:'TRACK RECORD — WHAT '+operator.toUpperCase()+' HAS CONCEDED ELSEWHERE',
+      kind:'concessions',pattern:cc.pattern,items:cc.concessions});
+  }
+  sections.push({title:'MEETING STRATEGY: '+meetingType.toUpperCase(),kind:'advice',
+    text:D.advice[meetingType]||''});
+  sections.push({title:'CBA TARGETS (bring these to the table)',kind:'kv',items:[
+    ['Data dividend','$'+d1(imp.data_dividend_usd/1e6)+'M/year (2% of investment)'],
+    ['Noise limit','45 dBA at residential property line'],
+    ['Water cap',c0(imp.annual_water_mgal*0.5)+'M gallons/year'],
+    ['Grid upgrades','Developer pays 100%'],
+    ['Decommissioning bond','$'+d1(mw*10000/1e6)+'M'],
+    ['Local hiring','80%+ construction labor, prevailing wage'],
+    ['Property tax lock','No abatement below $'+r0(imp.investment_musd*0.02)+'M/year']]});
+  sections.push({title:'QUESTIONS TO ASK',kind:'numbered',items:[
+    'How many MW will this facility draw at full build-out?',
+    'Who pays for grid upgrades (substation, transmission)?',
+    'What is the projected impact on residential electricity rates?',
+    'How many gallons/day will cooling consume? From which source?',
+    'What specific tax incentives are being offered, and for how long?',
+    'How many permanent local jobs (not construction)?',
+    'What is the projected noise level at the nearest home?',
+    'Is there a binding CBA? What are the annual payments?',
+    'What happens if the facility closes — is there a decommissioning bond?',
+    'Will water, noise, and emissions data be publicly reported?']});
+  return {meeting_type:meetingType, state:state, operator:operator, mw:mw, sections:sections};
+}
+function briefText(state, operator, meetingType, mw){
+  var d=briefData(state, operator, meetingType, mw);
+  var b='MEETING PREP BRIEF\n'+'='.repeat(60)+'\nGenerated by AI GridWatch\n\n'+
+    'MEETING: '+d.meeting_type+'\nSTATE: '+d.state+'\nOPERATOR: '+d.operator+'\nFACILITY: '+d.mw+' MW proposed\n';
+  d.sections.forEach(function(s){
+    b+='\n'+'─'.repeat(60)+'\n'+s.title+'\n'+'─'.repeat(60)+'\n';
+    if(s.kind==='kv'){s.items.forEach(function(it){b+='  '+it[0]+': '+it[1]+'\n';});}
+    else if(s.kind==='numbered'){s.items.forEach(function(it,i){b+='  '+(i+1)+'. '+it+'\n';});}
+    else if(s.kind==='advice'){b+=s.text+'\n';}
+    else if(s.kind==='execs'){s.items.forEach(function(e){b+='  - '+e.name+', '+e.title+'\n';
+      if(e.focus)b+='      Focus: '+e.focus+'\n';if(e.linkedin)b+='      LinkedIn: '+e.linkedin+'\n';});}
+    else if(s.kind==='concessions'){b+=s.pattern+'\n\n';s.items.forEach(function(c){
+      b+='  - '+c.where+' ('+c.year+'): '+c.what+'\n';
+      (c.sources||[]).forEach(function(u){b+='      source: '+u+'\n';});
+      if(!c.sources||!c.sources.length)b+='      (unverified — do not cite)\n';});}
+  });
+  return b;
+}
+
+// ---- campaign micro-site (src/site_builder.py; corrected precedents) --- //
+function campaignSite(state, mw, imp, bill, group, email, when, where, operator){
+  var g = group ? esc(group) : (esc(state)+' Residents');
+  var title = g+' — '+mw+' MW data center: get the facts';
+  var homes=c0(imp.homes_equiv), twh=d1(imp.annual_twh), water=c0(imp.annual_water_mgal)+'M',
+      b='$'+c0(bill), cba='$'+d1(imp.data_dividend_usd/1e6)+'M';
+  var opLine = (operator && operator!==UNKNOWN_BRIEF) ? (' The operator behind it: <strong>'+esc(operator)+'</strong>.') : '';
+  var w = when ? esc(when) : '[DATE & TIME]';
+  var wh = where ? esc(where) : '[LOCATION]';
+  var contact = email ? ('<a class="btn" href="mailto:'+esc(email)+'?subject=Count me in">Email us — count me in</a>')
+    : '<p class="muted">[Add your group’s contact email when you publish this page.]</p>';
+  return '<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'+
+    '<meta name="viewport" content="width=device-width, initial-scale=1">\n'+
+    '<title>'+esc(title)+'</title>\n'+
+    '<meta property="og:title" content="'+esc(title)+'">\n'+
+    '<meta property="og:description" content="A '+mw+' MW data center is proposed near us. Electricity of '+homes+' homes, '+water+' gallons of water/yr, and ~'+b+'/household/yr on our bills unless conditions are attached. Meeting: '+w+'.">\n'+
+    '<style>\n:root{--bg:#0b1220;--card:#121c30;--ink:#eaf0f7;--muted:#93a1b5;--teal:#2dd4bf;--amber:#fbbf24;--rule:#22304a}\n'+
+    '*{box-sizing:border-box;margin:0}body{background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}\n'+
+    '.wrap{max-width:860px;margin:0 auto;padding:24px 20px 64px}header{padding:40px 0 8px}\n'+
+    '.kicker{color:var(--teal);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:13px}\n'+
+    'h1{font-size:clamp(28px,5vw,42px);line-height:1.15;margin:10px 0}.sub{color:var(--muted);max-width:640px}\n'+
+    '.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:32px 0}@media(min-width:640px){.stats{grid-template-columns:repeat(4,1fr)}}\n'+
+    '.stat{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:18px 16px}.stat b{display:block;font-size:26px;color:var(--teal)}.stat span{font-size:13px;color:var(--muted)}\n'+
+    'section{margin:36px 0}h2{font-size:20px;color:var(--teal);margin-bottom:12px;border-bottom:1px solid var(--rule);padding-bottom:8px}ul{padding-left:22px}li{margin:10px 0}\n'+
+    '.meeting{background:var(--card);border:2px solid var(--teal);border-radius:14px;padding:22px;text-align:center}.meeting .when{font-size:22px;font-weight:700;margin:6px 0}\n'+
+    '.btn{display:inline-block;background:var(--teal);color:#06251f;font-weight:700;padding:12px 22px;border-radius:10px;text-decoration:none;margin-top:12px}.muted{color:var(--muted);font-size:14px}.prec b{color:var(--amber)}\n'+
+    'footer{margin-top:48px;border-top:1px solid var(--rule);padding-top:16px;font-size:13px;color:var(--muted)}\n</style>\n</head>\n<body>\n<div class="wrap">\n'+
+    '<header><div class="kicker">'+g+'</div><h1>A '+mw+' MW data center is proposed near us.</h1>'+
+    '<p class="sub">We’re not against growth — we’re for conditions. Here’s what this facility means for '+esc(state)+' households, using planning-level estimates.'+opLine+'</p></header>\n'+
+    '<div class="stats"><div class="stat"><b>'+homes+'</b><span>homes’ worth of electricity ('+twh+' TWh/yr)</span></div>'+
+    '<div class="stat"><b>'+water+'</b><span>gallons of cooling water per year</span></div>'+
+    '<div class="stat"><b>'+b+'</b><span>per household per year if ratepayers fund the grid upgrades</span></div>'+
+    '<div class="stat"><b>'+cba+'</b><span>per year — the community benefit agreement we should ask for</span></div></div>\n'+
+    '<section><h2>What we’re asking for — before any approval</h2><ul>'+
+    '<li>A <strong>binding community benefit agreement</strong> (~'+cba+'/year), recorded as a condition of approval — not a side letter.</li>'+
+    '<li>The developer pays <strong>100% of grid upgrades</strong>, so they never appear on our electric bills.</li>'+
+    '<li>An <strong>enforceable water cap</strong>, a 45 dBA noise limit at homes, and quarterly public reporting.</li>'+
+    '<li>A <strong>decommissioning bond</strong> so the site isn’t abandoned scrap if the operator leaves.</li></ul></section>\n'+
+    '<section class="prec"><h2>Communities that organized, won</h2><ul>'+
+    '<li><b>The Dalles, OR</b> — Google funded about $28.5M of the city’s water system (though it won no cap on its own draw — ask for the volume limit in writing).</li>'+
+    '<li><b>Groton, CT</b> — capped data-center buildings at 12,500 sq ft as a zoning condition after a one-year moratorium.</li>'+
+    '<li><b>Loudoun County, VA</b> — declined abatements and taxed data centers instead, ~45% of county tax revenue.</li></ul>'+
+    '<p class="muted">Every one of these happened <em>before</em> or in place of an unconditional approval. Timing is the leverage.</p></section>\n'+
+    '<section><div class="meeting"><div class="kicker">Show up</div><div class="when">'+w+'</div><div>'+wh+'</div>'+contact+'</div></section>\n'+
+    '<footer>Estimates are planning-level, generated with the GridWatch AI impact model (grid data by state, PUE/water by cooling type). They are not engineering studies. Page produced by '+g+'.</footer>\n</div>\n</body>\n</html>\n';
+}
+
+// ---- action pack text ------------------------------------------------- //
+function actionPack(stage, headline, checklist, brief, scripts, letters){
+  var topics = scripts.topics.map(function(t){return '['+t[0]+']\n'+t[1];}).join('\n\n');
+  var letterTxt = letters.map(function(l){return '-'.repeat(60)+'\n'+l.title.toUpperCase()+'\nTo: '+l.to+'\nRe: '+l.re+'\n\n'+l.body;}).join('\n\n');
+  return 'START-HERE ACTION PACK\n'+'='.repeat(60)+'\nSITUATION: '+stage+'\n'+headline+'\n\nTHIS WEEK\n'+checklist+'\n'+
+    brief+'\n'+'='.repeat(60)+'\nYOUR 2-MINUTE PUBLIC COMMENT\n'+'='.repeat(60)+'\n'+scripts.main+'\n\n30-SECOND TOPIC SCRIPTS\n\n'+topics+'\n\n'+
+    '='.repeat(60)+'\nREADY-TO-SEND LETTERS\n'+'='.repeat(60)+'\n\n'+letterTxt+'\n';
+}
+
+// ---- state ------------------------------------------------------------ //
+var cur = {};  // shared with download buttons
+
+function fmtShortDate(dt){
+  return dt.toLocaleDateString('en-US',{month:'short',day:'2-digit'});
+}
+
+function llcSection(q){
+  var out='', operator=UNKNOWN_BRIEF;
+  q=(q||'').trim();
+  if(!q.length) return {html:'', operator:operator};
+  var ql=q.toLowerCase();
+  var ent = ql.length>=3 ? D.entities.filter(function(e){return e.entity.toLowerCase().indexOf(ql)>=0;}) : [];
+  ent.forEach(function(e){
+    var whoIs = e.parent!==e.entity ? e.parent : e.entity;
+    out+='<div class="note good"><p><strong>'+esc(e.entity)+' → '+esc(whoIs)+'</strong> ('+esc(e.role)+' entity, '+esc(e.locality)+(e.state?', '+esc(e.state):'')+')</p>'+
+      '<p style="margin-top:6px">'+esc(e.note)+' <a href="'+esc(e.source)+'" rel="nofollow">Source</a> · read '+esc(e.as_of)+'</p></div>';
+    if(opNames.indexOf(e.parent)>=0) operator=e.parent;
+  });
+  if(ent.length) out+='<p class="muted">Take the source to the meeting. An operator named from a citation is a fact on the record; one named from a hunch is the thing their lawyer corrects you on.</p>';
+  var hits = D.sites.filter(function(s){
+    return (s.filing_llc&&s.filing_llc.toLowerCase().indexOf(ql)>=0)||
+           (s.operator&&s.operator.toLowerCase().indexOf(ql)>=0)||
+           (s.owner&&s.owner.toLowerCase().indexOf(ql)>=0);});
+  if(hits.length){
+    var found=uniq(hits.map(function(h){return h.operator;}).filter(Boolean));
+    out+='<div class="note good"><p><strong>Match.</strong> "'+esc(q)+'" appears in our site registry, linked to: <strong>'+esc(found.join(', '))+'</strong>.</p>'+
+      '<div class="table-scroll"><table><thead><tr><th>Operator</th><th>Owner</th><th>Tenant</th><th>Location</th><th>State</th><th>LLC</th></tr></thead><tbody>';
+    var seen={};
+    hits.forEach(function(h){var k=[h.operator,h.owner,h.location,h.filing_llc].join('|');if(seen[k])return;seen[k]=1;
+      out+='<tr><td>'+esc(h.operator)+'</td><td>'+esc(h.owner)+'</td><td>'+esc(h.tenant)+'</td><td>'+esc(h.location)+'</td><td>'+esc(h.state)+'</td><td>'+esc(h.filing_llc)+'</td></tr>';});
+    out+='</tbody></table></div></div>';
+    if(found.length===1&&opNames.indexOf(found[0])>=0) operator=found[0];
+  } else if(!ent.length){
+    out+='<div class="note warn"><p>No match for "'+esc(q)+'" in our registry — that doesn’t mean it’s not a data center. Most filings are one-off shells that appear in no public list until someone pulls the records. Here’s how to do that:</p></div>'+
+      '<ul><li><strong>County recorder:</strong> pull the deed — note the LLC’s mailing address and the law firm that filed it</li>'+
+      '<li><strong>Secretary of State business search:</strong> look up the LLC; the registered agent or organizer often traces to the real developer</li>'+
+      '<li><strong>Utility filings:</strong> ask your utility or PUC whether a large-load interconnection request covers the parcel</li>'+
+      '<li><strong>Planning department:</strong> records requests for pre-application meetings usually name the actual company</li></ul>'+
+      '<details class="more"><summary>What to look for once you have the filing</summary><ul>'+
+      D.tells.map(function(t){return '<li><strong>'+esc(t[0])+'</strong> — '+esc(t[1])+'</li>';}).join('')+
+      '</ul></details>';
+  }
+  return {html:out, operator:operator};
+}
+
+function render(){
+  var state=$('w-state').value;
+  var stageKey=stageKeys[+$('w-stage').value]||stageKeys[0];
+  var stage=D.stages[stageKey];
+  var mw=+$('w-mw').value;
+  var whoSel=$('w-who').value;
+  var hearingVal=$('w-hearing').value;
+  $('w-mwlabel').textContent=mw+' MW';
+
+  // Step 2 — operator resolution
+  var operator=UNKNOWN_BRIEF;
+  if(whoSel===UNKNOWN_UI){
+    $('w-llc-wrap').style.display='';
+    $('w-op-out').innerHTML='';
+    var r=llcSection($('w-llc').value);
+    $('w-llc-out').innerHTML=r.html; operator=r.operator;
+  } else {
+    $('w-llc-wrap').style.display='none';
+    $('w-llc-out').innerHTML='';
+    operator=whoSel;
+    var op=null;for(var i=0;i<D.operators.length;i++){if(D.operators[i].operator===whoSel){op=D.operators[i];break;}}
+    $('w-op-out').innerHTML= op ? ('<p class="muted"><strong>'+esc(whoSel)+'</strong> — tier: '+esc(op.tier||'N/A')+' · owner: '+esc(op.owner||'N/A')+' · model: '+esc(op.model||'N/A')+'</p>') : '';
+  }
+
+  // Step 3 — impact
+  var imp=estimateImpact(mw,state);
+  var bill=billPerHome(mw);
+  $('w-metrics').innerHTML=
+    '<div class="stat"><b>'+d1(imp.annual_twh)+' TWh/yr</b><span>electricity — '+c0(imp.homes_equiv)+' homes’ worth</span></div>'+
+    '<div class="stat"><b>'+c0(imp.annual_water_mgal)+'M gal/yr</b><span>water — '+esc(imp.water_stress)+' stress region</span></div>'+
+    '<div class="stat"><b>$'+r0(bill)+'/yr</b><span>bill risk per household if ratepayers fund upgrades</span></div>'+
+    '<div class="stat"><b>$'+d1(imp.data_dividend_usd/1e6)+'M/yr</b><span>CBA target — 2% of est. investment</span></div>';
+  $('w-benchmarks').innerHTML='<p style="margin:6px 0 4px"><strong>What similar communities actually won:</strong></p><ul>'+
+    D.cba.map(function(x){return '<li><strong>'+esc(x.community)+', '+esc(x.state)+'</strong> ('+esc(x.company)+') — '+esc(x.won)+'</li>';}).join('')+
+    '</ul><p class="muted">Your CBA target above isn’t aspirational — it’s in line with what organized communities have negotiated. Scale the ask to the MW.</p>';
+
+  // Step 4 — playbook
+  var puc=D.pucs[state]||{abbrev:'',name:'',website:'',complaint:''};
+  $('w-stage-h').textContent=(stage.emoji?stage.emoji+' ':'')+'What to do this week';
+  $('w-stage-headline').innerHTML='<p>'+esc(stage.headline)+'</p>';
+  var dated=null, movesHtml='';
+  if(hearingVal){
+    var today=new Date();today.setHours(0,0,0,0);
+    var hd=new Date(hearingVal+'T00:00:00');
+    var days=Math.round((hd-today)/86400000);
+    if(!isNaN(days)){
+      var n=stage.moves.length;dated=[];
+      for(var m=0;m<n;m++){
+        var offset=Math.max(1,Math.round((m+1)*Math.max(days-2,1)/n));
+        var due=new Date(today.getTime()+Math.min(offset,Math.max(days-2,1))*86400000);
+        dated.push([fmtShortDate(due),stage.moves[m]]);
+      }
+      movesHtml='<p><strong>⏳ '+days+' days until your hearing</strong> — your countdown plan:</p><ul>'+
+        dated.map(function(d){return '<li><strong>By '+esc(d[0])+'</strong> — '+esc(d[1])+'</li>';}).join('')+'</ul>';
+    }
+  }
+  if(!movesHtml) movesHtml='<ul>'+stage.moves.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>';
+  $('w-moves').innerHTML=movesHtml;
+
+  var alerts=D.alerts[puc.abbrev]||[];
+  $('w-alerts').innerHTML=alerts.map(function(a){
+    var cls=a.severity==='expired'?'bad':'warn';
+    return '<div class="note '+cls+'"><p>⏰ <strong>'+esc(a.title)+'</strong> — '+esc(a.body)+'</p></div>';}).join('');
+
+  var mc=D.moraCounts[puc.abbrev];
+  $('w-mora').innerHTML=(mc&&mc.total)?('<div class="note warn"><p><strong>You are not alone:</strong> '+mc.total+' tracked moratorium/pushback effort(s) in '+esc(state)+'. See the <a href="moratoriums.html">moratorium tracker</a>.</p></div>'):'';
+
+  var localOut=D.outcomes.filter(function(o){return o.state===puc.abbrev;});
+  var shown = localOut.length?localOut:D.outcomes.filter(function(o){return ['The Dalles','Groton','Cheyenne'].indexOf(o.locality)>=0;});
+  $('w-precedents').innerHTML=shown.map(function(o){
+    var srcs=(o.sources||[]).map(function(u,i){return '<a href="'+esc(u)+'" rel="nofollow">Source '+(i+1)+'</a>';}).join(' · ');
+    var ftr=srcs?('<p class="muted" style="margin-top:8px">'+srcs+' · verified '+esc(o.as_of||'—')+'</p>'):'<div class="note bad"><p>Unverified — do not cite this one.</p></div>';
+    return '<details class="more"><summary>'+esc(o.locality)+', '+esc(o.state)+' — '+esc(o.headline)+' ('+esc(o.category)+')</summary><p>'+esc(o.outcome)+'</p>'+ftr+'</details>';}).join('');
+
+  $('w-puc').innerHTML = puc.name?('<p><strong>Your regulator:</strong> '+esc(puc.name)+' — <a href="'+esc(puc.website)+'" rel="nofollow">website</a> · <a href="'+esc(puc.complaint)+'" rel="nofollow">file a complaint</a></p>'):'';
+
+  // Step 5 — action kit
+  var lang=(document.querySelector('input[name=w-lang]:checked')||{}).value||'en';
+  var scriptsEn=commentScripts(state,mw,imp,bill,operator,'en');
+  var scriptsShow=lang==='es'?commentScripts(state,mw,imp,bill,operator,'es'):scriptsEn;
+  $('w-script-main').value=scriptsShow.main;
+  $('w-script-topics').innerHTML='<p class="muted">30-second topic scripts — assign one per speaker so ten neighbors make ten different arguments:</p>'+
+    scriptsShow.topics.map(function(t){return '<p><strong>'+esc(t[0])+':</strong> '+esc(t[1])+'</p>';}).join('');
+
+  var lets=letters(state,operator,mw,puc.name||'Your state public utility commission',puc.complaint||'');
+  $('w-letters').innerHTML=lets.map(function(l,i){
+    return '<div class="lettercard"><div class="copyrow" style="margin-top:0"><div><strong>'+esc(l.title)+'</strong><br><span class="muted">To: '+esc(l.to)+' &middot; Re: '+esc(l.re)+'</span></div><button class="btn2" type="button" data-copytext="'+i+'">Copy</button></div><textarea readonly>'+esc(l.body)+'</textarea></div>';}).join('');
+  cur.letters=lets;
+
+  var hearingStr = hearingVal ? new Date(hearingVal+'T00:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}) : '';
+  var posts=socialPosts(state,mw,imp,bill,operator,hearingStr);
+  $('w-posts').innerHTML=posts.map(function(p,i){
+    return '<div class="lettercard"><div class="copyrow" style="margin-top:0"><strong>'+esc(p[0])+'</strong><button class="btn2" type="button" data-copypost="'+i+'">Copy</button></div><textarea readonly style="min-height:120px">'+esc(p[1])+'</textarea></div>';}).join('');
+  cur.posts=posts;
+  $('w-outreach').innerHTML='<hr style="border:0;border-top:1px solid var(--rule);margin:12px 0">'+
+    D.outreach.map(function(o){return '<p style="margin:8px 0 2px"><strong>'+esc(o.platform)+'</strong></p><ul>'+o.tips.map(function(t){return '<li>'+esc(t)+'</li>';}).join('')+'</ul>';}).join('');
+
+  // assemble action pack + print view
+  var checklist = dated ? dated.map(function(d){return '  [ ] By '+d[0]+' — '+d[1];}).join('\n')+'\n'
+                        : stage.moves.map(function(m){return '  [ ] '+m;}).join('\n')+'\n';
+  var brief=briefText(state,operator,stage.meeting_type,mw);
+  var pack=actionPack(stageKey,stage.headline,checklist,brief,scriptsEn,lets);
+  cur.pack=pack; cur.state=state;
+  cur.impact=imp; cur.bill=bill; cur.mw=mw; cur.operator=operator;
+  $('wiz-print-pre').textContent=pack;
+}
+
+// ---- init ------------------------------------------------------------- //
+function opt(v,t){var o=document.createElement('option');o.value=v;o.textContent=t;return o;}
+var params=new URLSearchParams(location.search);
+var stateSel=$('w-state');
+Object.keys(D.profiles).forEach(function(s){stateSel.appendChild(opt(s,s));});
+var whoSel=$('w-who');
+whoSel.appendChild(opt(UNKNOWN_UI,UNKNOWN_UI));
+opNames.forEach(function(o){whoSel.appendChild(opt(o,o));});
+var stageSel=$('w-stage');
+stageKeys.forEach(function(k,i){stageSel.appendChild(opt(String(i),k));});
+
+// restore from share params
+if(params.get('state')&&D.profiles[params.get('state')]) stateSel.value=params.get('state');
+if(params.get('mw')) $('w-mw').value=params.get('mw');
+if(params.get('stage')!==null&&stageKeys[+params.get('stage')]) stageSel.value=params.get('stage');
+if(params.get('hearing')) $('w-hearing').value=params.get('hearing');
+if(params.get('who')){var w=params.get('who');if(w===UNKNOWN_UI||opNames.indexOf(w)>=0)whoSel.value=w;}
+if(params.get('llc')) $('w-llc').value=params.get('llc');
+
+['w-state','w-stage','w-mw','w-who','w-hearing'].forEach(function(id){
+  $(id).addEventListener(id==='w-mw'?'input':'change',render);});
+$('w-llc').addEventListener('input',render);
+Array.prototype.forEach.call(document.querySelectorAll('input[name=w-lang]'),function(r){r.addEventListener('change',render);});
+
+// copy delegation
+document.addEventListener('click',function(e){
+  var t=e.target.closest?e.target.closest('button'):null;if(!t)return;
+  function copy(txt,btn){if(navigator.clipboard){navigator.clipboard.writeText(txt).then(function(){var o=btn.textContent;btn.textContent='Copied ✓';setTimeout(function(){btn.textContent=o;},1400);});}}
+  if(t.dataset.copy){copy($(t.dataset.copy).value,t);}
+  else if(t.dataset.copytext!=null&&cur.letters){copy(cur.letters[+t.dataset.copytext].body,t);}
+  else if(t.dataset.copypost!=null&&cur.posts){copy(cur.posts[+t.dataset.copypost][1],t);}
+});
+
+$('w-print').addEventListener('click',function(){window.print();});
+$('w-txt').addEventListener('click',function(){
+  dl('gridwatch_action_pack_'+cur.state.replace(/ /g,'_')+'.txt',cur.pack);
+  if(window.gwevent)gwevent('action-pack/'+cur.state);});
+$('w-site').addEventListener('click',function(){
+  var html=campaignSite(cur.state,cur.mw,cur.impact,cur.bill,$('w-group').value,$('w-email').value,$('w-meet-when').value,$('w-meet-where').value,cur.operator);
+  dl('index.html',html,'text/html;charset=utf-8');
+  if(window.gwevent)gwevent('campaign-site/'+cur.state);});
+$('w-meet-when').addEventListener('input',render);
+$('w-meet-where').addEventListener('input',render);
+$('w-share').addEventListener('click',function(){
+  var p=new URLSearchParams();p.set('state',$('w-state').value);p.set('mw',$('w-mw').value);
+  p.set('stage',$('w-stage').value);var w=$('w-who').value;if(w!==UNKNOWN_UI)p.set('who',w);
+  else if($('w-llc').value)p.set('llc',$('w-llc').value);
+  if($('w-hearing').value)p.set('hearing',$('w-hearing').value);
+  var url=location.origin+location.pathname+'?'+p.toString();
+  if(navigator.clipboard)navigator.clipboard.writeText(url);
+  $('w-share-out').textContent='Link copied — opens this page with your state, size and stage pre-filled.';});
+
+render();
+})();
+"""
+
+
+def build_start_here():
+    """Client-side port of the Streamlit 'Start here' wizard (start_here_tab.py).
+
+    A resident who just learned a data center is proposed nearby completes five
+    steps and leaves with pre-filled comment scripts, letters, social posts, a
+    meeting brief, a printable/downloadable action pack, and a hostable
+    campaign micro-site — with no Streamlit dependency. Every generator is
+    reimplemented in JS from the same registries the app uses. Keep them in
+    sync with src/impact_model.py, src/scripts_letters.py, src/briefs.py and
+    src/site_builder.py.
+
+    Two precedent claims that the app's text generators still carry were
+    corrected here to match the verified MORATORIUM_OUTCOMES / CBA_BENCHMARKS
+    registries (no "$2.5M Groton CBA", no "The Dalles water cap") — a resident
+    reads these aloud at a hearing, so the page states only what the sources
+    support. See scripts_letters.py / site_builder.py for the app-side fix.
+    """
+    import json
+
+    def _s(v):
+        return "" if v is None or (
+            not isinstance(v, str) and pd.isna(v)) else str(v)
+
+    stages = {
+        name: {"emoji": s["emoji"], "meeting_type": s["meeting_type"],
+               "headline": s["headline"], "moves": list(s["moves"])}
+        for name, s in PROJECT_STAGES.items()
+    }
+    pucs = {
+        _s(r["state"]): {"abbrev": _s(r["abbrev"]), "name": _s(r["name"]),
+                         "website": _s(r["website"]),
+                         "complaint": _s(r["complaint"])}
+        for _, r in STATE_PUCS_DF.iterrows()
+    }
+    state_dc = {
+        _s(r["state"]): {
+            "count": int(r["dc_count"]) if has_value(r["dc_count"]) else 0,
+            "twh": float(r["twh_year"]) if has_value(r["twh_year"]) else 0.0}
+        for _, r in STATE_DC_DF.iterrows()
+    }
+    operators = [
+        {"operator": _s(r["operator"]), "tier": _s(r["tier"]),
+         "owner": _s(r["owner"]), "model": _s(r["model"])}
+        for _, r in OPERATORS_DF.sort_values("operator").iterrows()
+    ]
+    execs = [
+        {"company": _s(r["company"]), "name": _s(r["name"]),
+         "title": _s(r["title"]), "focus": _s(r["focus"]),
+         "linkedin": _s(r["linkedin"])}
+        for _, r in EXECUTIVES_DF.iterrows()
+    ]
+    sites = [
+        {"operator": _s(r["operator"]), "owner": _s(r["owner"]),
+         "tenant": _s(r["tenant"]), "location": _s(r["location"]),
+         "state": _s(r["state"]), "filing_llc": _s(r["filing_llc"])}
+        for _, r in DC_SITES_DF.iterrows()
+    ]
+    mora_counts = {
+        _s(abbrev): {
+            "enacted": int((grp["effective_status"] == "Enacted").sum()),
+            "proposed": int((grp["effective_status"] == "Proposed").sum()),
+            "total": int(len(grp))}
+        for abbrev, grp in MORATORIUMS_DF.groupby("state")
+    }
+    alerts_by = {}
+    for a in build_alerts():
+        alerts_by.setdefault(a["state"], []).append(
+            {"severity": a["severity"], "title": a["title"],
+             "body": a["body"]})
+
+    data = {
+        "appUrl": APP_URL, "siteUrl": SITE_URL,
+        "profiles": {s: STATE_GRID_PROFILES[s]
+                     for s in sorted(STATE_GRID_PROFILES)},
+        "stages": stages, "pucs": pucs, "stateDC": state_dc,
+        "operators": operators, "execs": execs,
+        "concessions": COMPANY_CONCESSIONS, "advice": MEETING_ADVICE,
+        "cba": CBA_BENCHMARKS, "outcomes": MORATORIUM_OUTCOMES,
+        "outreach": OUTREACH_TIPS,
+        "tells": [[n, t] for n, t in ENTITY_TELLS],
+        "entities": FILING_ENTITIES, "sites": sites,
+        "moraCounts": mora_counts, "alerts": alerts_by,
+    }
+    data_json = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+
+    body = (_START_HERE_HTML
+            + "\n<script>\n"
+            + _START_HERE_JS.replace("__DATA__", data_json)
+            + "\n</script>\n"
+            + '<section>' + provenance_html("STATE_GRID_PROFILES") + '</section>')
+
+    return page(
+        "Start here — a data center was proposed near me",
+        "A free five-step plan for anyone facing a new data center proposal: "
+        "size up the impact, unmask the LLC, and generate a ready-to-use "
+        "action pack — comment scripts, letters, and social posts.",
+        body, f"{SITE_URL}/start-here",
+        jsonld=[
+            _breadcrumb(("Home", SITE_URL),
+                        ("Start here", f"{SITE_URL}/start-here")),
+            _faq_schema([
+                ("A data center is proposed near me — what do I do first?",
+                 "Find out where the project stands (rumors, application filed, "
+                 "hearing scheduled, approved, or operating), because your "
+                 "leverage and your next moves are different at each stage. "
+                 "This five-step plan walks you through sizing up the impact, "
+                 "unmasking the LLC behind the filing, and generating comment "
+                 "scripts and letters you can use at the next meeting."),
+                ("How do I find out who is really behind a data center LLC?",
+                 "Developers usually file under single-purpose shell LLCs. Pull "
+                 "the county recorder's deed and the Secretary of State business "
+                 "registry — the registered agent or organizer often traces to "
+                 "the real developer. This page checks a name against a registry "
+                 "of known filing entities and their parent companies."),
+                ("What conditions should a community negotiate before approval?",
+                 "A binding community benefit agreement recorded as a condition "
+                 "of approval, the developer paying 100% of grid upgrades, an "
+                 "enforceable water cap with public reporting, a noise limit at "
+                 "the property line, and a decommissioning bond. The action pack "
+                 "on this page fills these in with your project's numbers."),
+            ]),
         ])
 
 
@@ -7297,6 +8061,7 @@ def main():
         build_moratorium_embed(), encoding="utf-8")
     print(f"  [data] published {_n_data} moratoriums as JSON + CSV + embed")
     (WEB / "impact.html").write_text(build_impact_calculator(), encoding="utf-8")
+    (WEB / "start-here.html").write_text(build_start_here(), encoding="utf-8")
     (WEB / "bills.html").write_text(build_bills(), encoding="utf-8")
     (WEB / "outlook.html").write_text(build_outlook(), encoding="utf-8")
     (WEB / "learn.html").write_text(build_learn(), encoding="utf-8")
@@ -7355,7 +8120,8 @@ def main():
         (WEB / "companies" / f"{ld['slug']}.html").write_text(
             build_limited_scorecard(ld), encoding="utf-8")
 
-    paths = ["", "health-risks", "moratoriums", "impact", "bills", "outlook",
+    paths = ["", "start-here", "health-risks", "moratoriums", "impact",
+             "bills", "outlook",
              "learn", "puc", "executives", "about", "search", "dividend",
              "data-centers", "environment", "methodology", "studies",
              "cba-clauses", "officials", "consulting", "case-studies",
