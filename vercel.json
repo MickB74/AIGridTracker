@@ -4,6 +4,21 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/data-centers-property-values-2026",
+      "destination": "/blog/data-centers-property-values-2026",
+      "permanent": true
+    },
+    {
+      "source": "/unmask-data-center-llc-2026",
+      "destination": "/blog/unmask-data-center-llc-2026",
+      "permanent": true
+    },
+    {
+      "source": "/data-center-jobs-2026",
+      "destination": "/blog/data-center-jobs-2026",
+      "permanent": true
+    },
+    {
       "source": "/ezra-klein-ai-revolt-mainstream-2026",
       "destination": "/blog/ezra-klein-ai-revolt-mainstream-2026",
       "permanent": true

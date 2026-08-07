@@ -712,6 +712,34 @@ def _faq_schema(pairs):
     }
 
 
+def _dataset_schema(name, description, url, distributions,
+                    keywords=None, temporal=None):
+    """Dataset schema for citable, downloadable data.
+
+    distributions = [(encodingFormat, contentUrl), ...] — e.g. the JSON and
+    CSV downloads. Gets the tracker into Google Dataset Search and signals a
+    definitive, reusable source to journalists and crawlers.
+    """
+    d = {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": name,
+        "description": description,
+        "url": url,
+        "license": DATA_LICENSE_URL,
+        "creator": {**_ORG, "@context": "https://schema.org"},
+        "distribution": [
+            {"@type": "DataDownload", "encodingFormat": fmt, "contentUrl": u}
+            for fmt, u in distributions
+        ],
+    }
+    if keywords:
+        d["keywords"] = keywords
+    if temporal:
+        d["temporalCoverage"] = temporal
+    return d
+
+
 def _article_schema(title, description, url, date_str, author="AI GridWatch"):
     """Article schema for blog posts."""
     return {
@@ -1385,7 +1413,30 @@ def build_health():
         "health impacts of data centers, with sources and the permit "
         "conditions that address them.",
         body, f"{SITE_URL}/health-risks",
-        jsonld=_breadcrumb(("Home", SITE_URL), ("Health risks", f"{SITE_URL}/health-risks")))
+        jsonld=[
+            _breadcrumb(("Home", SITE_URL),
+                        ("Health risks", f"{SITE_URL}/health-risks")),
+            # Questions map 1:1 to the six panels; answers are the panel
+            # summaries verbatim, so the rich result never diverges from the
+            # sourced content on the page.
+            _faq_schema([
+                (_HEALTH_FAQ_Q.get(r["title"], f"{r['title']}: how do data "
+                                    f"centers affect it?"), r["summary"])
+                for r in HEALTH_RISKS
+            ]),
+        ])
+
+
+# Question phrasing for the health-risks FAQ rich result, keyed to the
+# HEALTH_RISKS panel titles. Missing titles fall back to a generic phrasing.
+_HEALTH_FAQ_Q = {
+    "Air pollution": "Do data centers cause air pollution?",
+    "Noise pollution": "Are data centers noisy?",
+    "Light pollution": "Do data centers cause light pollution?",
+    "Higher bills": "Do data centers raise electricity bills?",
+    "Water consumption": "How do data centers affect local water supplies?",
+    "Climate & reliability": "How do data centers affect climate and grid reliability?",
+}
 
 
 def _md_to_html(text):
@@ -2566,7 +2617,28 @@ def build_impact_calculator():
         "Estimate the electricity, water, carbon, and rate impact of a "
         "data center in your state — free community calculator.",
         body, f"{SITE_URL}/impact",
-        jsonld=_breadcrumb(("Home", SITE_URL), ("Calculator", f"{SITE_URL}/impact")))
+        jsonld=[
+            _breadcrumb(("Home", SITE_URL), ("Calculator", f"{SITE_URL}/impact")),
+            _faq_schema([
+                ("How much electricity does a data center use?",
+                 "A data center's draw scales with its size. A 100 MW campus — a "
+                 "typical hyperscaler facility — running around the clock at a power "
+                 "usage effectiveness of about 1.12 uses on the order of 1 million "
+                 "MWh per year, roughly the annual electricity of about 90,000 homes. "
+                 "Use the calculator above to estimate any size, in your state."),
+                ("How much water does a data center use?",
+                 "Evaporative-cooled data centers consume water twice: directly for "
+                 "cooling and indirectly through the power plants that supply them. "
+                 "This model estimates roughly 2 gallons per kWh of facility energy, "
+                 "so a 100 MW campus is on the order of 2 billion gallons a year. "
+                 "Actual use depends on cooling type and local climate."),
+                ("How much should my community negotiate in a community benefit agreement?",
+                 "As a starting benchmark, this model targets 2% of estimated project "
+                 "investment — about $2 million per MW — as an annual community-benefit "
+                 "floor. For a 100 MW project that is roughly $4 million a year. Treat "
+                 "it as a negotiating target, not a cap."),
+            ]),
+        ])
 
 
 def cell(value, dash="—"):
@@ -3010,7 +3082,33 @@ def build_bills():
         "what the research says about data centers shifting costs onto "
         "residential ratepayers.",
         body, f"{SITE_URL}/bills",
-        jsonld=_breadcrumb(("Home", SITE_URL), ("Your bill", f"{SITE_URL}/bills")))
+        jsonld=[
+            _breadcrumb(("Home", SITE_URL), ("Your bill", f"{SITE_URL}/bills")),
+            _faq_schema([
+                ("Will a data center raise my electric bill?",
+                 "It can. Data centers add to peak demand and capacity-market "
+                 "costs — the fastest-growing component of residential bills in "
+                 "RTO markets. UC Berkeley's Energy Institute found investor-owned "
+                 "utilities sought $18 billion in rate increases in 2025, the most "
+                 "since the mid-1980s, with residential prices up about 6% nominal. "
+                 "Whether those costs land on residents depends on rate design: "
+                 "cost-causation tariffs charge large loads for the capacity they "
+                 "actually cause instead of socializing it across all ratepayers."),
+                ("Why does peak demand matter more than a data center's total energy use?",
+                 "Your annual electricity cost is set largely by peak demand, because "
+                 "the grid must build and maintain enough capacity to serve the highest "
+                 "hour of the year. A data center running flat 24/7 raises peak load, "
+                 "and capacity-market costs are the fastest-growing bill component in "
+                 "RTO markets, with data centers the primary demand driver."),
+                ("Can anything stop data centers from shifting costs onto residents?",
+                 "Yes. Cost-causation rate design charges large loads for the capacity "
+                 "and transmission they cause; mandatory demand response requires "
+                 "curtailment during peak hours; and large-load tariffs can guarantee "
+                 "grid-upgrade costs stay off residential bills. Duke research shows "
+                 "brief, modest curtailment can avoid tens of billions of dollars in "
+                 "new infrastructure costs."),
+            ]),
+        ])
 
 
 def hbars(rows, unit="", color="var(--teal)"):
@@ -3954,7 +4052,41 @@ def build_moratoriums():
         f"{total} data center moratoriums and community actions tracked "
         f"across {n_states} states, with case study outcomes.",
         body, f"{SITE_URL}/moratoriums",
-        jsonld=_breadcrumb(("Home", SITE_URL), ("Moratoriums", f"{SITE_URL}/moratoriums")))
+        jsonld=[
+            _breadcrumb(("Home", SITE_URL),
+                        ("Moratoriums", f"{SITE_URL}/moratoriums")),
+            _dataset_schema(
+                "U.S. data center moratorium & community action tracker",
+                f"{total} data center moratoriums, bans, and community actions "
+                f"across {n_states} states, each with a primary source, "
+                f"verification date, and derived expiry status.",
+                f"{SITE_URL}/moratoriums",
+                [("application/json", f"{SITE_URL}/data/moratoriums.json"),
+                 ("text/csv", f"{SITE_URL}/data/moratoriums.csv")],
+                keywords=["data center moratorium", "data center ban",
+                          "zoning", "community benefit agreement",
+                          "utility rates", "AI data center"]),
+            _faq_schema([
+                ("Can a town or state ban or pause data center development?",
+                 f"Yes. Communities across the country have enacted moratoriums, "
+                 f"zoning changes, and outright bans. GridWatch tracks {total} such "
+                 f"actions across {n_states} states. A moratorium is a temporary "
+                 f"pause, usually enacted by local or state government, that gives a "
+                 f"community time for infrastructure and rules to catch up."),
+                ("Are data center moratoriums permanent?",
+                 "Usually not. Most have a documented end date and are frequently "
+                 "extended. On this tracker a moratorium with a term flips to "
+                 "“Expired” automatically once that date passes, so always "
+                 "confirm current status with the locality before citing it: an "
+                 "expiry date is the earliest a pause could have ended, not proof "
+                 "that it did."),
+                ("Can I reuse the moratorium tracker data?",
+                 "Yes. The full tracker — with per-row sources, verification "
+                 "dates, and derived expiry — is available as documented JSON "
+                 "and CSV under a CC BY 4.0 license. You're free to cite it, chart "
+                 "it, or load it into your own tracker with attribution."),
+            ]),
+        ])
 
 
 _HYPERSCALERS = [

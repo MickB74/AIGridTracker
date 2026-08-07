@@ -6,6 +6,27 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Do Data Centers Lower Property Values? What the Studies Actually Show</title>
+      <link>https://aigridwatch.com/blog/data-centers-property-values-2026</link>
+      <guid>https://aigridwatch.com/blog/data-centers-property-values-2026</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+      <description>It&#x27;s the first question at every hearing: will a data center tank my home&#x27;s value? The honest answer isn&#x27;t the scary one or the industry one. The headline studies say &quot;no measurable drag&quot; — but most were commissioned by developers, measure average distance rather than the house across the street, and come from hot markets where everything appreciates. Here&#x27;s what the evidence really says, and the move that beats arguing about it.</description>
+    </item>
+    <item>
+      <title>How to Unmask the Shell Company Behind a Data Center</title>
+      <link>https://aigridwatch.com/blog/unmask-data-center-llc-2026</link>
+      <guid>https://aigridwatch.com/blog/unmask-data-center-llc-2026</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+      <description>A project lands in your town under a code name — &quot;Project Blue,&quot; &quot;Project Rowan&quot; — bought by an LLC no one has heard of. That anonymity is a strategy, not an accident. Here&#x27;s the five-step method to find the hyperscaler actually behind it, worked through the real chain of shell companies that hid Amazon behind Tucson&#x27;s Project Blue — and why naming them changes your leverage.</description>
+    </item>
+    <item>
+      <title>How Many Jobs Does a Data Center Actually Create?</title>
+      <link>https://aigridwatch.com/blog/data-center-jobs-2026</link>
+      <guid>https://aigridwatch.com/blog/data-center-jobs-2026</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Every data center pitch leads with jobs — usually thousands of them. The number that actually matters is far smaller and fully knowable: a typical hyperscale hall runs on about 50 full-time workers, half of them contractors. Here&#x27;s the real math from Virginia&#x27;s own legislative watchdog, the construction mirage behind the big headline, and the three questions that put it on the record.</description>
+    </item>
+    <item>
       <title>&quot;The A.I. Revolt Is Here&quot;: When Ezra Klein Covers Your Zoning Fight, the Politics Have Changed</title>
       <link>https://aigridwatch.com/blog/ezra-klein-ai-revolt-mainstream-2026</link>
       <guid>https://aigridwatch.com/blog/ezra-klein-ai-revolt-mainstream-2026</guid>
@@ -123,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/hidden-water-cost</guid>
       <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
       <description>A single ChatGPT query uses about 18 mL of water — roughly a medicine-cup pour. Multiply by billions of daily queries and the numbers start to matter, especially in water-stressed regions.</description>
-    </item>
-    <item>
-      <title>233 GW of Demand Is Waiting in Line: Inside ERCOT&#x27;s Data Center Queue</title>
-      <link>https://aigridwatch.com/blog/ercot-queue-explainer</link>
-      <guid>https://aigridwatch.com/blog/ercot-queue-explainer</guid>
-      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
-      <description>Texas&#x27;s grid operator has 233 GW of large-load interconnection requests — roughly three times the state&#x27;s current peak demand. Most of the queue is data centers. Here&#x27;s what it means.</description>
     </item>
 </channel>
 </rss>

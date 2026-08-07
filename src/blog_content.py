@@ -56,6 +56,292 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── Evergreen SEO guide: property values ──
+    {
+        "id": "data-centers-property-values-2026",
+        "art": "land",
+        "section": "stories",
+        "title": "Do Data Centers Lower Property Values? What the Studies Actually Show",
+        "date": _dt.date(2026, 8, 6),
+        "author": "GridWatch AI",
+        "tags": ["property values", "home prices", "real estate", "JLARC",
+                 "Northern Virginia", "Indiana", "community advocacy",
+                 "buyouts", "explainer"],
+        "summary": (
+            "It's the first question at every hearing: will a data center "
+            "tank my home's value? The honest answer isn't the scary one or "
+            "the industry one. The headline studies say \"no measurable "
+            "drag\" — but most were commissioned by developers, measure "
+            "average distance rather than the house across the street, and "
+            "come from hot markets where everything appreciates. Here's what "
+            "the evidence really says, and the move that beats arguing about it."
+        ),
+        "body": """\
+It is the first question at almost every hearing, and the one residents are
+most often told not to worry about: *will a data center lower my home's
+value?*
+
+The honest answer is neither the frightening one nor the reassuring one the
+developer's consultant will give you. The evidence is genuinely mixed — and
+understanding **why** it's mixed is what lets you act on it.
+
+### What the headline studies say
+
+Two studies get cited constantly, and both point the same way:
+
+- **Northern Virginia, 2023.** Researchers Terry Clower and Keith Waters of
+  George Mason University's Center for Regional Analysis studied home sales
+  across Fairfax, Loudoun, and Prince William counties. Their conclusion: the
+  analysis
+  [\"fails to demonstrate statistical evidence that proximity to a data center negatively impacts housing values\"](https://www.fxbgadvance.com/p/digital-insights-home-values-and)
+  — in fact, closer homes tended to sell *higher*. The model explained 87% of
+  the variance in 2023 sales.
+- **Indiana, four counties.** Integra Realty Resources looked at single-family
+  homes within 1.5 miles of four large data centers, 2021–2026. Homes near the
+  facilities appreciated **42%** against **41%** countywide — essentially no
+  gap.
+  ([Bisnow's roundup](https://www.bisnow.com/national/news/data-center-community-relations/data-centers-may-not-be-a-drag-on-nearby-home-prices-135084)
+  covers both.)
+
+If you stop reading there — as the pitch deck wants you to — the answer is
+"no effect." But three things about these studies deserve the fine print.
+
+### Read the fine print
+
+**1. Who paid for them.** The Integra Realty analysis was an appraisal
+prepared in support of a proposed data center. Industry-commissioned studies
+reliably find industry-friendly results. That doesn't make them wrong — but it
+means they are advocacy, not neutral science.
+
+**2. Averages hide the house across the street.** That same Indiana study,
+broken out by county, is far less tidy: only one of the four counties (St.
+Joseph) showed homes near the data center gaining *more* value. In the other
+three — Allen, LaPorte, and Clark — homes near the facility appreciated **1%,
+6%, and 9% less** than the surrounding market. The headline "42 versus 41"
+washes all of that out. A county-wide average is not the appraisal on *your*
+street.
+
+**3. A rising tide hides the drag.** Both studies come from markets that were
+appreciating fast. When every home is going up 40%, a data center's drag can
+be invisible under the tide — and the George Mason authors said as much,
+noting their findings may be "more applicable in areas with constrained
+housing demand." In a flat or cooling market, the same facility could read
+very differently.
+
+### What actually moves the number
+
+The studies measure sale prices; they rarely isolate the things a neighbor
+actually experiences. Those are the externalities to name at a hearing:
+
+- **Noise** from cooling systems and generator testing, day and night.
+- **Construction traffic** for the 12–18 months of the build.
+- **Viewshed** — windowless industrial walls and substations replacing
+  farmland or tree line.
+- **Heat.** Across more than 6,000 data centers worldwide, surrounding land
+  temperatures rose about
+  [2°C on average from 2004 to 2024](https://fortune.com/2026/04/01/ai-data-centers-heat-island-hyperscalers/)
+  — a measurable "data heat island."
+
+### The bottom line — and the move
+
+"No measurable effect on average" is not "no effect on your house." The
+evidence is mixed, mostly developer-funded, and almost never isolates
+immediate adjacency in a normal market.
+
+So don't get pulled into arguing the studies — **neutralize the risk
+instead.** Communities facing pipelines, wind farms, and mines have won
+[property-value guarantees and voluntary buyout programs](resource-extraction-precedent-2026)
+for fifty years; there is no reason a \\$30-billion data center can't fund the
+same. Make a property-value protection a condition of approval, not a hope.
+Then run your own local numbers on the
+[impact calculator](/impact) and bring them to the meeting.
+""",
+    },
+
+    # ── Evergreen SEO guide: unmasking the LLC ──
+    {
+        "id": "unmask-data-center-llc-2026",
+        "art": "oversight",
+        "section": "stories",
+        "title": "How to Unmask the Shell Company Behind a Data Center",
+        "date": _dt.date(2026, 8, 6),
+        "author": "GridWatch AI",
+        "tags": ["shell companies", "LLC", "transparency", "NDAs",
+                 "Project Blue", "Amazon", "public records", "site selection",
+                 "community advocacy", "how-to"],
+        "summary": (
+            "A project lands in your town under a code name — \"Project "
+            "Blue,\" \"Project Rowan\" — bought by an LLC no one has heard "
+            "of. That anonymity is a strategy, not an accident. Here's the "
+            "five-step method to find the hyperscaler actually behind it, "
+            "worked through the real chain of shell companies that hid Amazon "
+            "behind Tucson's Project Blue — and why naming them changes your "
+            "leverage."
+        ),
+        "body": """\
+A proposal appears in your county under a code name — *Project Blue*, *Project
+Rowan*, *Project Ludi* — and the land is bought by a limited liability company
+no one has heard of, formed a few weeks earlier. You can't find out who is
+behind it, and that is not an accident. It is the plan.
+
+### Why they hide
+
+Developers manage what they call
+[\"social license to operate\"](social-license-risk-2026) as a financial risk.
+A code name and a shell LLC buy time: they let a project lock in land,
+rezoning, and incentives *before* organized opposition can form around the
+name of a company people recognize. By the time "Project Blue" is revealed as
+a hyperscaler, the entitlements are often already granted.
+
+### A worked example: how Amazon hid behind "Project Blue"
+
+Tucson's Project Blue is the textbook case, because the layers eventually came
+apart in public:
+
+- The land was purchased by **Humphrey's Peak Property, LLC**, which then
+  assigned its rights to a second shell, **Bobcat B1 LLC**, before the deal
+  [closed on 290 acres](https://www.tucsonsentinel.com/local/report/122425_project_blue_close/).
+- The named developer was **Beale Infrastructure**.
+- The actual client was **Amazon Web Services** — a fact confirmed only when a
+  Pima County
+  [non-disclosure agreement surfaced](https://azluminaria.org/2025/10/01/pima-county-nda-confirms-amazon-is-behind-project-blue-data-center/),
+  an agreement to keep Amazon's identity secret for *five years*.
+
+Two shell LLCs, a development company, and a hidden hyperscaler behind an NDA:
+that is the standard structure, not the exception. We documented the same
+pattern of one project wearing
+[different faces for different agencies](oversight-gaps-agency-shopping-2026)
+in Tucker County, West Virginia.
+
+### The five-step unmasking method
+
+You can run most of this from a laptop before the next hearing.
+
+**1. Pull the deed.** Your county recorder or assessor's property records name
+the LLC that bought or optioned the land. In most counties this is free and
+online. Note the sale date and the exact LLC name.
+
+**2. Look up the LLC.** Search that name in your Secretary of State's business
+registry. You're after the **registered agent**, the **organizer**, and the
+**formation date**. A generic corporate agent (CT Corporation, a big law firm)
+and a formation date weeks before the land deal are both tells that this is a
+purpose-built shell.
+
+**3. Match the pattern.** Hyperscalers reuse naming conventions, law firms, and
+site-selection consultants across projects. Cross-reference the LLC and its
+agent against our
+[operator and site registry](/data-centers), which maps known operators to the
+shell entities and campuses they've used elsewhere.
+
+**4. Read the utility filings.** The land deal may be anonymous, but the power
+isn't. Interconnection-queue entries and rate filings frequently name the load,
+its size in megawatts, or the consultant representing it — even when the deed
+does not.
+
+**5. Request the development agreement and any NDA.** The public body
+negotiating tax incentives holds the documents — including, as in Tucson, the
+agreement specifying *who* they promised to keep secret. A public-records
+request is the single highest-leverage step; the
+[hearing-prep questions](/hearing-questions) page has language you can adapt.
+
+### Why it's worth the effort
+
+You cannot negotiate with a shell company. Putting the real name on the
+project changes everything: it tells you the true power and water demand, it
+gives you the corporate climate and community commitments you can hold the
+company to, and it reveals
+[what that operator has already conceded](/data-centers) to other communities.
+Anonymity is leverage — for them. Naming them takes it back.
+""",
+    },
+
+    # ── Evergreen SEO guide: jobs ──
+    {
+        "id": "data-center-jobs-2026",
+        "art": "money",
+        "section": "stories",
+        "title": "How Many Jobs Does a Data Center Actually Create?",
+        "date": _dt.date(2026, 8, 6),
+        "author": "GridWatch AI",
+        "tags": ["jobs", "economic development", "JLARC", "tax breaks",
+                 "subsidies", "Virginia", "construction", "clawbacks",
+                 "community advocacy", "explainer"],
+        "summary": (
+            "Every data center pitch leads with jobs — usually thousands of "
+            "them. The number that actually matters is far smaller and fully "
+            "knowable: a typical hyperscale hall runs on about 50 full-time "
+            "workers, half of them contractors. Here's the real math from "
+            "Virginia's own legislative watchdog, the construction mirage "
+            "behind the big headline, and the three questions that put it on "
+            "the record."
+        ),
+        "body": """\
+Every data center proposal leads with jobs. The banner number is almost always
+in the thousands. The number that matters for your community is far smaller —
+and, unlike most of the pitch, it is precisely knowable.
+
+### The claim versus the reality
+
+Virginia's Joint Legislative Audit and Review Commission (JLARC) produced the
+most thorough independent study of the industry to date. Its finding on
+permanent employment:
+
+> A typical 250,000-square-foot data center employs about **50 full-time
+> workers** — roughly **one job per 5,000 square feet**, and about **half of
+> those are contractors**, not the operator's own staff.
+
+([JLARC, *Data Centers in Virginia*, 2024](https://jlarc.virginia.gov/landing-2024-data-centers-in-virginia.asp).)
+
+Fifty people. For a building the size of several football fields drawing the
+power of a small city. That is the operating reality of a facility designed,
+by definition, to run on automation.
+
+### The construction mirage
+
+So where do "thousands of jobs" come from? Construction. A large build can peak
+at **as many as 1,500 workers on site** — but the build
+[lasts just 12 to 18 months](https://www.wric.com/news/taking-action/jlarc-report-data-centers-virginia/),
+and then those workers leave for the next site. A headcount that disappears in
+eighteen months is not a tax base, and it is not what "jobs" means to a family
+deciding whether to support a rezoning.
+
+### The statewide illusion
+
+JLARC credits data centers with **74,000 jobs, \\$5.5 billion in labor income,
+and \\$9.1 billion in annual GDP** across all of Virginia. Those numbers are
+real — but the majority is construction and indirect activity, not permanent
+operations. When a developer quotes a *statewide industry total* to describe
+*your one facility*, that is the sleight of hand to watch for. The state's whole
+data center sector is not moving into your county; roughly fifty operating jobs
+are.
+
+### The number nobody puts on the slide: cost per job
+
+Here is where it stings. The largest state data center
+[sales-tax exemptions now cost over \\$1 billion a year each](data-center-tax-break-blowouts-2026).
+Divide a subsidy that large by ~50 permanent jobs and the public cost per
+permanent job runs into the **millions** — orders of magnitude above what a
+normal economic-development deal pays per job. The jobs are real; they are
+just extraordinarily expensive to buy.
+
+### The move: three questions for the record
+
+Don't argue the banner number — pin down the real one. Ask these at the
+hearing, and ask for the answers *in writing* (the
+[hearing-prep page](/hearing-questions) has more):
+
+1. **How many permanent, full-time jobs employed by the operator** — not
+   contractors — and will that floor be guaranteed in the agreement?
+2. **What is the total public subsidy, and the subsidy *per permanent job*?**
+3. **Is there a clawback** if the promised job numbers aren't met?
+
+Then set the answer next to the [tax breaks on the table](/tax-breaks) and run
+your own local figures on the [impact calculator](/impact). A project that
+genuinely creates lasting jobs will answer all three without flinching. Most
+can't.
+""",
+    },
+
     # ── Ezra Klein "The A.I. Revolt Is Here" — backlash goes mainstream ──
     {
         "id": "ezra-klein-ai-revolt-mainstream-2026",
