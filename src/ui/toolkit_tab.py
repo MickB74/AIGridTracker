@@ -194,6 +194,43 @@ _MODEL_CLAUSES = {
         "range_high": None,
         "unit": None,
     },
+    "Grid resilience & emergency curtailment": {
+        "icon": "🔋",
+        "clause": (
+            "(a) Curtailment priority. During any grid emergency declared by [RTO/ISO "
+            "or serving utility], Developer shall reduce facility load by not less "
+            "than [X]% within [Y] minutes of notice, before any involuntary "
+            "curtailment of residential customers in [County]. "
+            "(b) Grid services enrollment. Developer shall enroll all on-site battery "
+            "and backup generation capacity that is legally and technically capable "
+            "of grid export in [utility/RTO] demand-response or ancillary-services "
+            "programs within [N] months of commercial operation, and shall report "
+            "enrolled capacity to [County] annually. "
+            "(c) Community resilience hub. Developer shall fund, install, and "
+            "maintain backup power (battery storage and/or generation of not less "
+            "than [Z] kW) at [designated critical facility — emergency shelter, "
+            "water treatment plant, or school], capable of islanded operation for "
+            "not less than [H] hours, with maintenance funded for the life of the "
+            "facility. "
+            "(d) Backup generation technology. On-site backup generation shall be "
+            "[natural gas / fuel cell / battery]-based; diesel units shall be "
+            "limited to emergency operation within air-permit hour limits."
+        ),
+        "why": (
+            "A 100 MW campus carries backup generation larger than many towns' peak "
+            "load, but it cannot legally power the community as built: emergency-only "
+            "air permits, behind-the-meter wiring, and utility franchise law all "
+            "stand in the way — so a vague 'backup power for the town' promise is "
+            "unenforceable. These are the enforceable versions: curtail before "
+            "residents face outages, enroll batteries in grid services (grid-"
+            "interactive UPS is already deployed at hyperscale sites in Europe), and "
+            "fund an islandable resilience hub at one named critical site instead of "
+            "promising the whole town."
+        ),
+        "range_low": None,
+        "range_high": None,
+        "unit": None,
+    },
     "Residential tax offset": {
         "icon": "🏠",
         "clause": (
