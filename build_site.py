@@ -72,6 +72,14 @@ from src.us_map_data import US_MAP_PATHS, US_MAP_LABELS, US_MAP_VIEWBOX
 SITE_URL = os.environ.get("SITE_URL", "https://aigridwatch.com")
 APP_URL = os.environ.get("APP_URL", "https://aigridtracker.streamlit.app")
 
+# Formspree form ID for the static-site newsletter capture (the ID is public
+# by design — it ships in the HTML — so committing it here is fine, and means
+# the daily CI rebuild keeps the form without needing a secret). Create a form
+# at formspree.io, paste its ID ("mabc1234"), rebuild. Empty = no form
+# rendered; the footer falls back to linking the app's signup instead, so an
+# unconfigured build never ships a broken form.
+FORMSPREE_ID = os.environ.get("FORMSPREE_ID", "")
+
 # Third-party existing-facility directory (SOURCES["datacentermap"]). State
 # slugs match slugify(state) for all 51 US entries.
 DCMAP_BASE = "https://www.datacentermap.com/usa"
@@ -332,6 +340,16 @@ th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); 
 th { color:var(--muted); font-weight:600; }
 footer { margin-top:48px; border-top:1px solid var(--rule);
          padding-top:16px; font-size:13px; color:var(--muted); }
+.nl-box { background:var(--card); border:1px solid var(--rule);
+          border-radius:12px; padding:14px 18px; margin-bottom:18px; }
+.nl-box p { color:var(--ink); font-size:14px; margin-bottom:8px; }
+.nl-form { display:flex; gap:8px; flex-wrap:wrap; }
+.nl-form input[type=email] { flex:1; min-width:220px; background:var(--bg);
+  color:var(--ink); border:1px solid var(--rule); border-radius:8px;
+  padding:9px 12px; font-size:14px; }
+.nl-form button { background:var(--teal); color:#04211c; border:0;
+  border-radius:8px; padding:9px 18px; font-weight:700; font-size:14px;
+  cursor:pointer; }
 .statelist { columns:2; font-size:14.5px; }
 @media (min-width:640px){ .statelist{ columns:4; } }
 .statelist a { display:block; padding:3px 0; text-decoration:none; }
@@ -645,12 +663,56 @@ def _seo_clip(text, limit):
     return t[:limit].rsplit(" ", 1)[0].rstrip(" ,.;:—-") + "…"
 
 
+def _newsletter_html():
+    """Footer email capture on every static page.
+
+    With FORMSPREE_ID set this is a plain HTML POST to Formspree — no JS, no
+    backend, no PII in the repo. Unconfigured, it links the app's signup so
+    the site never ships a dead form. The hidden `source` field mirrors the
+    app-side tracking convention so both lists attribute the same way.
+    """
+    pitch = ("<strong>📬 The GridWatch Dispatch</strong> — one email a week: "
+             "new moratoriums, rate cases, and negotiation wins. No spam.")
+    if not FORMSPREE_ID:
+        return (f'<div class="nl-box"><p>{pitch} '
+                f'<a href="{APP_URL}">Subscribe in the toolkit &rarr;</a>'
+                f'</p></div>')
+    return f"""<div class="nl-box">
+  <p>{pitch}</p>
+  <form action="https://formspree.io/f/{FORMSPREE_ID}" method="POST"
+        class="nl-form">
+    <input type="email" name="email" required placeholder="you@example.com"
+           aria-label="Email address">
+    <input type="hidden" name="source" value="static-site-footer">
+    <input type="hidden" name="_subject" value="GridWatch Dispatch signup">
+    <button type="submit">Subscribe</button>
+  </form>
+</div>"""
+
+
+def _og_image(name):
+    """URL of a pre-generated OG card, or None to fall back to hero.png.
+
+    Cards are static PNGs committed under assets/og/ (drawn locally by
+    scripts/make_og_images.py — Pillow is not a build dependency, see the
+    fpdf2 note in requirements-build.txt). Checking existence here means a
+    missing card degrades to the default image instead of a 404 in the tag.
+    """
+    if (ROOT / "assets" / "og" / f"{name}.png").exists():
+        return f"{SITE_URL}/assets/og/{name}.png"
+    return None
+
+
 def page(title, description, body, canonical, depth=0,
-         og_type="website", og_extra="", jsonld=None):
+         og_type="website", og_extra="", jsonld=None, og_image=None):
     p = "../" * depth
     body = _wrap_tables(body)
     title_serp = _seo_clip(title, 60)      # ~600px SERP cap
     desc_serp = _seo_clip(description, 155)  # Google shows ~155-160 chars
+    if og_image:
+        og_img_url, og_img_w, og_img_h = og_image, 1200, 630
+    else:
+        og_img_url, og_img_w, og_img_h = f"{SITE_URL}/assets/hero.png", 1024, 479
     ld_block = ""
     if jsonld:
         items = jsonld if isinstance(jsonld, list) else [jsonld]
@@ -674,9 +736,9 @@ def page(title, description, body, canonical, depth=0,
 <meta property="og:type" content="{og_type}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:site_name" content="AI GridWatch">
-<meta property="og:image" content="{SITE_URL}/assets/hero.png">
-<meta property="og:image:width" content="1024">
-<meta property="og:image:height" content="479">
+<meta property="og:image" content="{og_img_url}">
+<meta property="og:image:width" content="{og_img_w}">
+<meta property="og:image:height" content="{og_img_h}">
 <meta name="twitter:card" content="summary_large_image">
 {og_extra}
 {ld_block}
@@ -702,6 +764,7 @@ def page(title, description, body, canonical, depth=0,
 {body}
 </main>
 <footer>
+{_newsletter_html()}
   <p style="margin-bottom:8px"><strong>Reference</strong> ·
     <a href="{p}studies.html">State studies</a> ·
     <a href="{p}officials.html">Officials directory</a> ·
@@ -1066,7 +1129,8 @@ def build_state(state):
     mora_html = ""
     if not moras.empty:
         rows = "\n".join(
-            f"<tr><td>{esc(str(m.locality))}</td><td>{esc(str(m.level))}</td>"
+            f"<tr><td><a href=\"../communities/{_loc_slug(m.locality, m.state)}.html\">"
+            f"{esc(str(m.locality))}</a></td><td>{esc(str(m.level))}</td>"
             f"<td>{_mora_status_cell(m)}</td>"
             f"<td>{cell(m.note, dash='')}</td>"
             f"<td>{_mora_source_cell(m)}</td></tr>"
@@ -1298,6 +1362,7 @@ def build_state(state):
         f"Data center facilities, grid impact, and regulator contacts for "
         f"{state} — free community negotiation tools from AI GridWatch.",
         body, f"{SITE_URL}/states/{slugify(state)}", depth=1,
+        og_image=_og_image(f"state-{slugify(state)}"),
         jsonld=_breadcrumb(("Home", SITE_URL), ("States", f"{SITE_URL}/states/"), (state, f"{SITE_URL}/states/{slugify(state)}")))
 
 
@@ -1532,6 +1597,7 @@ def build_health():
         "and community impacts of data centers, with sources and the permit "
         "conditions that address them.",
         body, f"{SITE_URL}/health-risks",
+        og_image=_og_image("health-risks"),
         jsonld=[
             _breadcrumb(("Home", SITE_URL),
                         ("Health & community impacts", f"{SITE_URL}/health-risks")),
@@ -3522,6 +3588,7 @@ def build_impact_calculator():
         "Estimate the electricity, water, carbon, and rate impact of a "
         "data center in your state — free community calculator.",
         body, f"{SITE_URL}/impact",
+        og_image=_og_image("impact"),
         jsonld=[
             _breadcrumb(("Home", SITE_URL), ("Calculator", f"{SITE_URL}/impact")),
             _faq_schema([
@@ -3987,6 +4054,7 @@ def build_bills():
         "what the research says about data centers shifting costs onto "
         "residential ratepayers.",
         body, f"{SITE_URL}/bills",
+        og_image=_og_image("bills"),
         jsonld=[
             _breadcrumb(("Home", SITE_URL), ("Your bill", f"{SITE_URL}/bills")),
             _faq_schema([
@@ -4838,7 +4906,8 @@ def build_moratoriums():
     verified = int(MORATORIUMS_DF["verified"].sum())
 
     rows = "\n".join(
-        f"<tr><td>{esc(str(m.locality))}</td>"
+        f"<tr><td><a href=\"communities/{_loc_slug(m.locality, m.state)}.html\">"
+        f"{esc(str(m.locality))}</a></td>"
         f"<td><a href=\"states/{slugify(STATE_PUCS_DF[STATE_PUCS_DF['abbrev'] == m.state].iloc[0]['state'])}.html\">"
         f"{esc(str(m.state))}</a></td>"
         f"<td>{esc(str(m.level))}</td>"
@@ -4939,7 +5008,12 @@ def build_moratoriums():
     this page does, so you are not maintaining a copy.</p>
     <pre style="overflow-x:auto"><code>&lt;iframe src="{SITE_URL}/embed/moratoriums.html"
         width="100%" height="560" style="border:0"
-        title="Data center moratorium tracker"&gt;&lt;/iframe&gt;</code></pre>
+        title="Data center moratorium tracker"&gt;&lt;/iframe&gt;
+&lt;p&gt;Data: &lt;a href="{SITE_URL}/moratoriums"&gt;AI GridWatch
+  moratorium tracker&lt;/a&gt; (CC BY 4.0)&lt;/p&gt;</code></pre>
+    <p class="muted">Please keep the attribution line under the widget — links
+    inside an iframe don't credit the source, and the CC BY 4.0 license asks
+    for attribution.</p>
     <p><a href="embed/moratoriums.html" target="_blank" rel="noopener">Preview it &rarr;</a></p>
   </details>
 </section>
@@ -4962,6 +5036,7 @@ def build_moratoriums():
         f"{total} data center moratoriums and community actions tracked "
         f"across {n_states} states, with case study outcomes.",
         body, f"{SITE_URL}/moratoriums",
+        og_image=_og_image("moratoriums"),
         jsonld=[
             _breadcrumb(("Home", SITE_URL),
                         ("Moratoriums", f"{SITE_URL}/moratoriums")),
@@ -4997,6 +5072,226 @@ def build_moratoriums():
                  "it, or load it into your own tracker with attribution."),
             ]),
         ])
+
+
+def _loc_slug(locality, state):
+    """URL slug for a locality page — unique because (locality, state) is.
+
+    slugify() is only safe for state names; locality names carry parens,
+    periods, apostrophes and even slashes ("New York (S10642/A11560)"),
+    so squash every non-alphanumeric run instead.
+    """
+    s = re.sub(r"[^a-z0-9]+", "-", str(locality).lower()).strip("-")
+    return f"{s}-{str(state).lower()}"
+
+
+def _abbr_to_state():
+    return dict(zip(STATE_PUCS_DF["abbrev"], STATE_PUCS_DF["state"]))
+
+
+def build_community(m):
+    """One page per tracked moratorium row — the "[town] data center" query.
+
+    The week a proposal drops, residents search their own town's name, not
+    "moratorium tracker". Everything here is derived from the same registries
+    as the tracker (MORATORIUMS_DF + LOCAL_BODIES_DF + LOCAL_OFFICIALS_DF),
+    so the daily rebuild keeps each page current with zero editing — and the
+    same provenance discipline applies: effective_status only, per-row
+    source/as_of, unverified rows say so out loud.
+    """
+    state_name = _abbr_to_state().get(str(m.state), str(m.state))
+    state_slug = slugify(state_name)
+    loc = str(m.locality)
+    is_state_level = str(m.level) == "State"
+    # "Statewide … in New York (statewide)" reads twice; the parenthetical
+    # (bill number, directive) still shows in the note and the <title>.
+    display_loc = (re.sub(r"\s*\([^)]*\)$", "", loc) if is_state_level else loc)
+    what = ("Statewide data center action" if is_state_level
+            else "The data center fight")
+
+    status_word = {
+        "Enacted": "an active data center moratorium",
+        "Proposed": "a proposed data center moratorium",
+        "Expired": "a data center moratorium whose documented term has run out",
+        "Rejected": "a rejected data center moratorium",
+        "Vetoed": "a vetoed data center moratorium",
+        "Rescinded": "a rescinded data center moratorium",
+    }.get(str(m.effective_status), "tracked data center action")
+
+    unverified_html = ""
+    if not has_value(m.source):
+        unverified_html = (
+            '<div class="note warn"><p><strong>Unverified.</strong> This row '
+            'has not been read against a primary source — treat it as a lead '
+            'to check with the locality, not a fact to cite at a hearing.'
+            '</p></div>')
+
+    # Where decisions happen — only when a curated LOCAL_BODIES_DF row exists.
+    body_html = ""
+    bodies = LOCAL_BODIES_DF[(LOCAL_BODIES_DF["locality"] == loc)
+                             & (LOCAL_BODIES_DF["state"] == str(m.state))]
+    if not bodies.empty:
+        b = bodies.iloc[0]
+        contact_bits = " · ".join(
+            x for x in (
+                f'<a href="mailto:{esc(str(b["email"]))}">{esc(str(b["email"]))}</a>'
+                if has_value(b["email"]) else "",
+                esc(str(b["phone"])) if has_value(b["phone"]) else "",
+                f'<a href="{esc(str(b["website"]))}" rel="nofollow noopener" '
+                f'target="_blank">website</a>' if has_value(b["website"]) else "",
+            ) if x)
+        agenda = (f'<p><a class="btn ghost" href="{esc(str(b["agenda_url"]))}" '
+                  f'rel="nofollow noopener" target="_blank">Meeting agendas '
+                  f'&rarr;</a></p>' if has_value(b["agenda_url"]) else "")
+        body_html = f"""
+<section>
+  <h2>Where the decision gets made</h2>
+  <p><strong>{esc(str(b["body"]))}</strong> — {esc(str(b["decides"]))}</p>
+  <p><strong>Meets:</strong> {esc(str(b["meets"]))}<br>
+  <strong>Where:</strong> {esc(str(b["where"]))}</p>
+  <p><strong>Public comment:</strong> {esc(str(b["comment_process"]))}</p>
+  {f'<p>{contact_bits}</p>' if contact_bits else ''}
+  {agenda}
+  <p class="muted">Read from
+  <a href="{esc(str(b["source"]))}" rel="nofollow noopener" target="_blank">the
+  official page</a> on {esc(str(b["as_of"]))}. Meeting details change —
+  confirm before you go.</p>
+</section>"""
+
+    officials_html = ""
+    offs = LOCAL_OFFICIALS_DF[(LOCAL_OFFICIALS_DF["locality"] == loc)
+                              & (LOCAL_OFFICIALS_DF["state"] == str(m.state))]
+    if not offs.empty:
+        rows = "\n".join(
+            f"<tr><td>{esc(str(o.name))}</td><td>{cell(o.role)}</td>"
+            f"<td>{cell(o.email)}</td><td>{cell(o.phone)}</td>"
+            # Blank stance means "not recorded", never "neutral".
+            f"<td>{cell(o.stance, dash='not recorded')}</td></tr>"
+            for o in offs.itertuples())
+        officials_html = f"""
+<section>
+  <h2>Who votes on it</h2>
+  <table><tr><th>Name</th><th>Role</th><th>Email</th><th>Phone</th>
+  <th>Recorded stance</th></tr>{rows}</table>
+  <p class="muted">From the locality's own roster page; "not recorded" means
+  no public statement is on file, not neutrality.</p>
+</section>"""
+
+    # The rest of the state's fights — internal links between locality pages.
+    sibs = MORATORIUMS_DF[(MORATORIUMS_DF["state"] == str(m.state))
+                          & (MORATORIUMS_DF["locality"] != loc)]
+    sibs_html = ""
+    if not sibs.empty:
+        items = "\n".join(
+            f'<li><a href="{_loc_slug(s.locality, s.state)}.html">'
+            f'{esc(str(s.locality))}</a> — {_mora_status_cell(s)}</li>'
+            for s in sibs.itertuples())
+        sibs_html = f"""
+<section>
+  <h2>Elsewhere in {esc(state_name)}</h2>
+  <ul>{items}</ul>
+</section>"""
+
+    note_html = (f"<p>{esc(str(m.note))}</p>" if has_value(m.note) else "")
+    body = f"""
+<header>
+  <div class="kicker">Community briefing</div>
+  <h1>{esc(what)} in {esc(display_loc)}{'' if is_state_level else f', {esc(state_name)}'}</h1>
+  <p class="sub">{esc(display_loc)} has {status_word} on this tracker. Status is
+  derived, not stored — a pause with a documented end date flips to Expired on
+  its own — and the source is right next to the claim.</p>
+</header>
+{unverified_html}
+<section>
+  <h2>Status today</h2>
+  <div class="stats">
+    <div class="stat"><b>{_mora_status_cell(m)}</b><span>status</span></div>
+    <div class="stat"><b>{esc(str(m.when))}</b><span>action taken</span></div>
+    <div class="stat"><b>{esc(str(m.level))}</b><span>level</span></div>
+  </div>
+  {note_html}
+  <p class="muted">{_mora_source_cell(m)}</p>
+  <p class="muted">An expiry date is the earliest a pause could have ended —
+  extensions are common, so confirm with the clerk before citing it.</p>
+</section>
+{body_html}
+{officials_html}
+<section>
+  <h2>What to do next</h2>
+  <ul>
+    <li><a href="../hearing-questions.html">Questions to ask at the
+    hearing</a> — force specific answers onto the record.</li>
+    <li><a href="../impact.html">Estimate the impact</a> — electricity, water,
+    and rate pressure for any facility size in {esc(state_name)}.</li>
+    <li><a href="../cba-clauses.html">Model CBA clauses</a> — copy-paste
+    language communities have actually won.</li>
+    <li><a href="../states/{state_slug}.html">{esc(state_name)} briefing</a> —
+    rates, grid carbon, PUC contacts, and every fight in the state.</li>
+  </ul>
+  <p><a class="btn" href="{APP_URL}">Generate a full action pack &rarr;</a></p>
+</section>
+{sibs_html}
+<section>
+  {provenance_html("MORATORIUMS_DF")}
+  <p class="muted">Part of the <a href="../moratoriums.html">U.S. data center
+  moratorium tracker</a> — open data, CC BY 4.0.</p>
+</section>
+"""
+    slug = _loc_slug(loc, m.state)
+    title_loc = loc if is_state_level else f"{loc}, {m.state}"
+    return page(
+        f"{title_loc} data center moratorium — status, sources & what to do",
+        f"Current status of the data center action in {loc}"
+        f"{'' if is_state_level else f', {state_name}'}: "
+        f"{str(m.effective_status).lower()}"
+        f"{' — ' + str(m.note) if has_value(m.note) else ''}. "
+        f"Sourced, dated, with next steps for residents.",
+        body, f"{SITE_URL}/communities/{slug}", depth=1,
+        og_image=_og_image(f"state-{state_slug}"),
+        jsonld=_breadcrumb(
+            ("Home", SITE_URL),
+            ("Communities", f"{SITE_URL}/communities/"),
+            (title_loc, f"{SITE_URL}/communities/{slug}")))
+
+
+def build_communities_index():
+    abbr2name = _abbr_to_state()
+    total = len(MORATORIUMS_DF)
+    n_states = MORATORIUMS_DF["state"].nunique()
+    sections = ""
+    for abbr, grp in sorted(MORATORIUMS_DF.groupby("state"),
+                            key=lambda kv: abbr2name.get(kv[0], kv[0])):
+        state_name = abbr2name.get(abbr, abbr)
+        items = "\n".join(
+            f'<li><a href="{_loc_slug(m.locality, m.state)}.html">'
+            f'{esc(str(m.locality))}</a> — {_mora_status_cell(m)}</li>'
+            for m in grp.itertuples())
+        sections += (
+            f'<section><h2><a href="../states/{slugify(state_name)}.html">'
+            f'{esc(state_name)}</a> ({len(grp)})</h2><ul>{items}</ul></section>')
+    body = f"""
+<header>
+  <div class="kicker">Community briefings</div>
+  <h1>Data center fights, town by town</h1>
+  <p class="sub">A page for every one of the {total} tracked moratoriums and
+  community actions across {n_states} states — status, sources, where the
+  decision gets made, and what to do next.</p>
+</header>
+{sections}
+<section>
+  {provenance_html("MORATORIUMS_DF")}
+  <p class="muted">All of this data is open —
+  <a href="../moratoriums.html#data">JSON and CSV, CC BY 4.0</a>.</p>
+</section>
+"""
+    return page(
+        "Data center fights, town by town — AI GridWatch",
+        f"Community briefings for {total} tracked data center moratoriums and "
+        f"actions across {n_states} states: status, sources, and next steps.",
+        body, f"{SITE_URL}/communities/", depth=1,
+        og_image=_og_image("communities"),
+        jsonld=_breadcrumb(("Home", SITE_URL),
+                           ("Communities", f"{SITE_URL}/communities/")))
 
 
 _HYPERSCALERS = [
@@ -7106,6 +7401,7 @@ state should tailor them before they go in front of a commission.</p></div>
         "Model CBA clauses — AI GridWatch",
         "Copy-paste contract language for community benefits agreements: water caps, noise limits, grid-cost allocation, decommissioning bonds, waste heat.",
         body, f"{SITE_URL}/cba-clauses",
+        og_image=_og_image("cba-clauses"),
         jsonld=_breadcrumb(
             ("Home", SITE_URL),
             ("CBA clauses", f"{SITE_URL}/cba-clauses")))
@@ -7498,6 +7794,7 @@ def build_hearing_questions():
         "Questions to ask at your hearing — AI GridWatch",
         "A printable one-pager of the specific questions communities should ask a data-center developer at a planning or PUC hearing.",
         body, f"{SITE_URL}/hearing-questions",
+        og_image=_og_image("hearing-questions"),
         jsonld=_breadcrumb(
             ("Home", SITE_URL),
             ("Hearing questions", f"{SITE_URL}/hearing-questions")))
@@ -8313,6 +8610,7 @@ def build_data_dividend():
         "Estimate the CBA target, tax revenue, and per-household benefit "
         "your community should negotiate from a data center.",
         body, f"{SITE_URL}/dividend",
+        og_image=_og_image("dividend"),
         jsonld=_breadcrumb(("Home", SITE_URL), ("Dividend calculator", f"{SITE_URL}/dividend")))
 
 
@@ -8636,6 +8934,9 @@ def main():
     # Default og:image for every page — social platforms won't render an SVG
     # card, so the per-post inline art can't serve double duty here.
     shutil.copy(ROOT / "assets" / "hero.png", WEB / "assets" / "hero.png")
+    # Pre-drawn OG cards (static, committed — see scripts/make_og_images.py).
+    if (ROOT / "assets" / "og").is_dir():
+        shutil.copytree(ROOT / "assets" / "og", WEB / "assets" / "og")
     (WEB / "assets" / "gridwatch_health_risks.pdf").write_bytes(
         build_health_pdf(HEALTH_RISKS, SOURCES))
 
@@ -8683,6 +8984,17 @@ def main():
     (WEB / "states" / "index.html").write_text(
         build_states_index(), encoding="utf-8")
 
+    (WEB / "communities").mkdir(parents=True, exist_ok=True)
+    (WEB / "communities" / "index.html").write_text(
+        build_communities_index(), encoding="utf-8")
+    _community_paths = []
+    for _m in MORATORIUMS_DF.itertuples():
+        _cslug = _loc_slug(_m.locality, _m.state)
+        (WEB / "communities" / f"{_cslug}.html").write_text(
+            build_community(_m), encoding="utf-8")
+        _community_paths.append(f"communities/{_cslug}")
+    print(f"  [pages] {len(_community_paths)} community briefings -> communities/")
+
     posts = _sorted_posts()
     (WEB / "blog" / "index.html").write_text(
         build_blog_index(), encoding="utf-8")
@@ -8723,7 +9035,9 @@ def main():
              "data-centers", "environment", "studies",
              "cba-clauses", "officials", "consulting", "case-studies",
              "hearing-questions", "glossary", "tax-breaks", "siting",
-             "companies/", "states/", "blog/", "news/", "videos"]
+             "companies/", "states/", "blog/", "news/", "videos",
+             "communities/"]
+    paths.extend(_community_paths)
     paths.extend(f"companies/{h['slug']}" for h in _HYPERSCALERS)
     paths.extend(f"companies/{h['slug']}" for h in _OPERATORS)
     paths.extend(f"companies/{ld['slug']}" for ld in _LIMITED_DISCLOSURE)
@@ -8775,8 +9089,8 @@ def main():
     # Finder / a bad merge can drop a "states 3"-style duplicate directory in
     # after a build. Either way the stale pages get served and indexed, so
     # fail loudly rather than ship them.
-    expected_dirs = {"assets", "blog", "companies", "data", "embed", "news",
-                     "states"}
+    expected_dirs = {"assets", "blog", "communities", "companies", "data",
+                     "embed", "news", "states"}
     actual_dirs = {d.name for d in WEB.iterdir() if d.is_dir()}
     unexpected = actual_dirs - expected_dirs
     if unexpected:
@@ -8784,6 +9098,18 @@ def main():
             f"build guard: unexpected director{'y' if len(unexpected)==1 else 'ies'} "
             f"in web/ — {sorted(unexpected)}. Delete the duplicate(s) (likely a "
             f"Finder 'name 2' copy) or add to expected_dirs if intentional.")
+    # Same failure, file flavor: "sitemap 3.xml"-style strays appear when two
+    # builds race or Finder deduplicates a copy. They get served and indexed
+    # as real pages, so fail just as loudly. (This fired for real on
+    # 2026-08-07 — five " 3" files at web/ root.)
+    stray_files = sorted(
+        f.name for f in WEB.rglob("*")
+        if f.is_file() and re.search(r" \d+\.[a-z]+$", f.name))
+    if stray_files:
+        raise SystemExit(
+            f"build guard: duplicate-suffixed file(s) in web/ — {stray_files}. "
+            f"Delete them; they are stale copies from a racing build or a "
+            f"Finder duplication, not build output.")
 
     n = len(list(WEB.rglob("*.html")))
     print(f"built web/ — {n} pages, sitemap, robots.txt, vercel.json")
