@@ -1,0 +1,46 @@
+# AI GridWatch
+
+> Free, sourced tools for communities facing a data center proposal: impact
+> calculators, model community-benefit-agreement (CBA) language, a health-risk
+> briefing, and an open tracker of 99 U.S. data center moratoriums and
+> community actions across 29 states. Every number links to a primary
+> source (EIA, SEC, IEA, LBNL). Not anti-development — built so communities can
+> negotiate a better deal.
+
+## Open data
+
+- [Moratorium tracker](https://aigridwatch.com/moratoriums): 99 data center moratoriums,
+  bans, and community actions, each with a primary source, verification date,
+  and derived expiry status. JSON/CSV downloads, CC BY 4.0.
+- [Moratoriums JSON](https://aigridwatch.com/data/moratoriums.json): the full dataset,
+  documented schema.
+- [Deadline alerts](https://aigridwatch.com/data/alerts.json): moratoriums with documented
+  end dates in the next window.
+
+## Key answers
+
+- [Will a data center raise my electric bill?](https://aigridwatch.com/bills): capacity
+  markets, peak load, and the research on cost-shifting to residents.
+- [Impact calculator](https://aigridwatch.com/impact): electricity, water, carbon, and rate
+  impact for any facility size, by state.
+- [Health risks](https://aigridwatch.com/health-risks): air, noise, light, bills, water,
+  climate — every claim sourced, each paired with the permit condition that
+  addresses it.
+- [Questions to ask at your hearing](https://aigridwatch.com/hearing-questions): the
+  specific questions that force answers onto the record.
+- [Model CBA clauses](https://aigridwatch.com/cba-clauses): copy-paste community benefit
+  agreement language with precedents.
+- [Data dividend calculator](https://aigridwatch.com/dividend): the Alaska-model payment a
+  community could negotiate.
+- [State briefings](https://aigridwatch.com/states/): profiles for all 50 states + D.C. —
+  rates, grid carbon, water stress, PUC contacts, active fights.
+
+## Reference
+
+- [Learn](https://aigridwatch.com/learn): how data centers work, glossary, siting basics.
+- [Company scorecards](https://aigridwatch.com/companies/): hyperscaler and operator
+  profiles with environmental disclosures.
+- [Tax breaks](https://aigridwatch.com/tax-breaks): state-by-state data center subsidies.
+- [Case studies](https://aigridwatch.com/case-studies): what communities won, lost, and
+  learned.
+- [About](https://aigridwatch.com/about): who runs this and how it's sourced.
