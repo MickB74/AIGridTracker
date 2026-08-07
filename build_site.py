@@ -27,6 +27,7 @@ import os
 import pathlib
 import re
 import shutil
+import urllib.parse
 
 import markdown
 import pandas as pd
@@ -1176,25 +1177,15 @@ def build_state(state):
                 f'{esc(b["source"][:60])}</a> · as of {b["as_of"]}</p>'
                 f'</section>')
 
-    # Latest blog posts that mention this state
-    state_posts = _posts_for_state(state, limit=6)
-    stories_html = ""
-    if state_posts:
-        items = "\n".join(
-            f'<li><div class="post-meta">{p["date"].strftime("%b %-d, %Y")}</div>'
-            f'<h3><a href="../blog/{p["id"]}.html">'
-            f'{esc(p["title"].replace(chr(92) + "$", "$"))}</a></h3>'
-            f'<p class="summary">{esc(p["summary"].replace(chr(92) + "$", "$"))}</p></li>'
-            for p in state_posts)
-        stories_html = (
-            f'<section><h2>Latest stories about {esc(state)}</h2>'
-            f'<ul class="blog-list">{items}</ul>'
-            f'<p><a class="btn ghost" href="../blog/?state={esc(state)}">'
-            f'All {esc(state)} posts &rarr;</a></p></section>')
-
-    # Live news headlines mentioning this state
+    # State news headlines. Blog posts were deliberately removed from this
+    # slot: a resident scanning their state page wants local reporting, not
+    # our essays (those live at /blog). Only ~8 of 51 states match a cached
+    # headline in any given week, so the section always renders with a live
+    # Google News search link — every state gets a working path to current
+    # local coverage even when the cache has nothing.
     state_news = _news_for_state(state, limit=6)
-    news_html = ""
+    gnews_q = urllib.parse.quote(f'"{state}" data center')
+    gnews_url = f'https://news.google.com/search?q={gnews_q}'
     if state_news:
         def _fmt(iso):
             if not iso:
@@ -1210,11 +1201,24 @@ def build_state(state):
             f'<h3><a href="{esc(n["link"])}" rel="nofollow noopener" target="_blank">'
             f'{esc(n["title"])}</a></h3></li>'
             for n in state_news)
-        news_html = (
-            f'<section><h2>This week&#39;s headlines mentioning {esc(state)}</h2>'
+        news_body = (
             f'<ul class="blog-list">{items}</ul>'
             f'<p><a class="btn ghost" href="../news/?state={esc(state)}">'
-            f'All {esc(state)} news &rarr;</a></p></section>')
+            f'All {esc(state)} news &rarr;</a> '
+            f'<a class="btn ghost" href="{gnews_url}" rel="nofollow noopener" '
+            f'target="_blank">Live news search &rarr;</a></p>')
+    else:
+        news_body = (
+            f'<p class="muted">No {esc(state)} data-center headlines in this '
+            f'week&#39;s national scan — local coverage often runs ahead of '
+            f'it.</p>'
+            f'<p><a class="btn ghost" href="{gnews_url}" rel="nofollow noopener" '
+            f'target="_blank">Search live {esc(state)} data center news &rarr;</a> '
+            f'<a class="btn ghost" href="../news/?state={esc(state)}">'
+            f'GridWatch news feed &rarr;</a></p>')
+    news_html = (
+        f'<section><h2>Latest {esc(state)} data center news</h2>'
+        f'{news_body}</section>')
 
     # Videos mentioning this state
     state_videos = _videos_for_state(state, limit=4)
@@ -1278,7 +1282,6 @@ def build_state(state):
 {officials_html}
 {news_html}
 {videos_html}
-{stories_html}
 {muni_html}
 <section>
   <h2>A data center was proposed near you?</h2>
@@ -8330,6 +8333,66 @@ def build_sitemap(entries):
             f'{urls}\n</urlset>\n')
 
 
+def build_llms_txt():
+    """llms.txt — curated site index for AI answer engines (llmstxt.org).
+
+    A growing share of "will a data center raise my bill"-type queries are
+    answered by LLM-backed search rather than blue links, and those crawlers
+    prefer a short, curated map over a 100-URL sitemap. Keep this to the pages
+    an answer engine should cite: the sourced data and the evergreen answers,
+    not every state page (the states index links those).
+    """
+    total = len(MORATORIUMS_DF)
+    n_states = MORATORIUMS_DF["state"].nunique()
+    return f"""# AI GridWatch
+
+> Free, sourced tools for communities facing a data center proposal: impact
+> calculators, model community-benefit-agreement (CBA) language, a health-risk
+> briefing, and an open tracker of {total} U.S. data center moratoriums and
+> community actions across {n_states} states. Every number links to a primary
+> source (EIA, SEC, IEA, LBNL). Not anti-development — built so communities can
+> negotiate a better deal.
+
+## Open data
+
+- [Moratorium tracker]({SITE_URL}/moratoriums): {total} data center moratoriums,
+  bans, and community actions, each with a primary source, verification date,
+  and derived expiry status. JSON/CSV downloads, CC BY 4.0.
+- [Moratoriums JSON]({SITE_URL}/data/moratoriums.json): the full dataset,
+  documented schema.
+- [Deadline alerts]({SITE_URL}/data/alerts.json): moratoriums with documented
+  end dates in the next window.
+
+## Key answers
+
+- [Will a data center raise my electric bill?]({SITE_URL}/bills): capacity
+  markets, peak load, and the research on cost-shifting to residents.
+- [Impact calculator]({SITE_URL}/impact): electricity, water, carbon, and rate
+  impact for any facility size, by state.
+- [Health risks]({SITE_URL}/health-risks): air, noise, light, bills, water,
+  climate — every claim sourced, each paired with the permit condition that
+  addresses it.
+- [Questions to ask at your hearing]({SITE_URL}/hearing-questions): the
+  specific questions that force answers onto the record.
+- [Model CBA clauses]({SITE_URL}/cba-clauses): copy-paste community benefit
+  agreement language with precedents.
+- [Data dividend calculator]({SITE_URL}/dividend): the Alaska-model payment a
+  community could negotiate.
+- [State briefings]({SITE_URL}/states/): profiles for all 50 states + D.C. —
+  rates, grid carbon, water stress, PUC contacts, active fights.
+
+## Reference
+
+- [Learn]({SITE_URL}/learn): how data centers work, glossary, siting basics.
+- [Company scorecards]({SITE_URL}/companies/): hyperscaler and operator
+  profiles with environmental disclosures.
+- [Tax breaks]({SITE_URL}/tax-breaks): state-by-state data center subsidies.
+- [Case studies]({SITE_URL}/case-studies): what communities won, lost, and
+  learned.
+- [About]({SITE_URL}/about): who runs this and how it's sourced.
+"""
+
+
 DATA_LICENSE = "CC BY 4.0"
 DATA_LICENSE_URL = "https://creativecommons.org/licenses/by/4.0/"
 
@@ -8682,6 +8745,7 @@ def main():
     (WEB / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n",
         encoding="utf-8")
+    (WEB / "llms.txt").write_text(build_llms_txt(), encoding="utf-8")
     _blog_redirects = [
         {"source": f"/{s['id']}", "destination": f"/blog/{s['id']}",
          "permanent": True}

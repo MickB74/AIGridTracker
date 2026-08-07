@@ -5,8 +5,8 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/projects",
-  "count": 4,
-  "verified_count": 4,
+  "count": 10,
+  "verified_count": 10,
   "caveat": "A working set of identified proposals a community can track, not a census — most of the country's activity is not in here yet.\n\n**Each row carries its own provenance.** Rows showing a verification date link to reporting or the governing body's own record and were read on that date; rows marked *unverified* have no source on record — a lead to check, not a fact to cite.\n\n**Stage is derived, not asserted.** *Hearing scheduled*, *Awaiting decision*, *Approved* and *Withdrawn* are computed from each row's milestone dates on every rebuild, so a hearing date that has passed stops reading 'scheduled'. Hearings get moved and projects re-file under new names — treat a scheduled date as the earliest to act by, and confirm with the clerk before relying on it. Leads are mined into data/project_candidates.json and promoted here only after a human reads a primary source.",
   "schema": {
     "id": "Stable slug, unique per project.",
@@ -193,6 +193,246 @@
           "kind": "news",
           "summary": "Campus scaled to ~5 GW and ~$27B (up from an announced $10B); Entergy's plan for ten new gas units to serve it advanced through the Louisiana PSC (early 2026).",
           "source": "https://www.nola.com/news/business/meta-louisiana-ai-data-center-richland-parish/article_d1308014-c718-4c34-a75f-476a151ef1a7.html"
+        }
+      ]
+    },
+    {
+      "id": "burkhalter-road-statesboro-ga",
+      "name": "Burkhalter Road data center (4AM Development)",
+      "operator": "",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "4AM Development, LLC",
+      "locality": "Statesboro (Bulloch County)",
+      "state": "GA",
+      "lat": 32.45,
+      "lon": -81.78,
+      "size_mw": "",
+      "acres": 26.5,
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "2026-08-18",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "Hearing scheduled",
+      "days_to_hearing": 11,
+      "note": "Two-story 230,000 sq ft data center plus a 32,000 sq ft substation on ~26.5 acres at 6539 Burkhalter Road (R-4 residential to Office & Business rezoning). Planning Commission recommended approval 5-1; City Council decides Aug 18, 2026. Bulloch County, separately, has been extending data-center moratoriums.",
+      "source": "https://www.wtoc.com/2026/08/04/statesboro-planning-commission-backs-proposed-data-center-rezoning-5-1-vote/",
+      "as_of": "2026-08-07",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-08-04",
+          "kind": "vote",
+          "summary": "Statesboro Planning Commission voted 5-1 to recommend approval of 4AM Development LLC's rezoning of ~26.5 acres at 6539 Burkhalter Road (chair dissenting), with a condition dedicating a 10-ft frontage strip for future road work.",
+          "source": "https://www.wtoc.com/2026/08/04/statesboro-planning-commission-backs-proposed-data-center-rezoning-5-1-vote/"
+        },
+        {
+          "date": "2026-08-18",
+          "kind": "meeting",
+          "summary": "Statesboro City Council scheduled to consider the rezoning request - the decisive vote.",
+          "source": "https://www.statesboroherald.com/local/statesboro-city-planning-board-recommends-zoning-change-for-burkhalter-rd-data-center/"
+        }
+      ]
+    },
+    {
+      "id": "erwin-street-tyler-tx",
+      "name": "West Erwin Street data center (Barrio Resources)",
+      "operator": "",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "Barrio Resources LLC",
+      "locality": "Tyler (Smith County)",
+      "state": "TX",
+      "lat": 32.35,
+      "lon": -95.3,
+      "size_mw": "",
+      "acres": 1.92,
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "2026-07-07",
+      "outcome": "denied",
+      "stage": "Denied",
+      "days_to_hearing": null,
+      "note": "Special use permit for a bitcoin-mining data center on ~1.92 acres near downtown (W. Erwin St & N. Ross Ave) denied 5-2 by the Planning & Zoning Commission - staff found it inconsistent with the Future Land Use Map and comprehensive plan, after resident opposition over water, noise, and proximity to homes. Applicant may appeal.",
+      "source": "https://tylerpaper.com/2026/07/08/tyler-planning-and-zoning-commission-denies-special-use-permit-for-proposed-data-center/",
+      "as_of": "2026-08-07",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-07-07",
+          "kind": "vote",
+          "summary": "Tyler P&Z denied the special use permit 5-2. Planning staff: 'inconsistent with the Future Land Use Map and the Tyler Tomorrow Comprehensive Plan.' Residents cited water use, noise, and proximity to surrounding homes.",
+          "source": "https://www.kltv.com/2026/07/07/tyler-planning-commission-denies-permit-proposed-data-center/"
+        }
+      ]
+    },
+    {
+      "id": "aligned-pataskala-oh",
+      "name": "Aligned Data Centers - Pataskala industrial park",
+      "operator": "Aligned Data Centers",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Pataskala (Licking County)",
+      "state": "OH",
+      "lat": 39.99,
+      "lon": -82.67,
+      "size_mw": 200,
+      "acres": 89,
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "2026-08-25",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "Hearing scheduled",
+      "days_to_hearing": 18,
+      "note": "200 MW campus in three buildings on ~89 acres at Broad St SW & Mink St SW. Planning & Zoning recommended rejection 5-2 after protests filled City Hall; City Council decides Aug 25, 2026 (5:30 p.m.). Council has separately advanced a ballot measure that could ban large data centers.",
+      "source": "https://www.thereportingproject.org/pataskala-planning-board-says-city-council-should-reject-aligned-data-centers-proposal/",
+      "as_of": "2026-08-07",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-06-03",
+          "kind": "vote",
+          "summary": "Pataskala Planning & Zoning Commission voted 5-2 to recommend that City Council reject Aligned's site plan, hours after residents rallied on the City Hall lawn.",
+          "source": "https://www.thereportingproject.org/pataskala-planning-board-says-city-council-should-reject-aligned-data-centers-proposal/"
+        },
+        {
+          "date": "2026-08-25",
+          "kind": "meeting",
+          "summary": "Pataskala City Council public hearing on the site plan, 5:30 p.m., council chambers - the decisive vote.",
+          "source": "https://abc6onyourside.com/news/local/pataskala-residents-rally-at-city-hall-to-fight-aligned-data-center-seek-petition-drive-ohio"
+        }
+      ]
+    },
+    {
+      "id": "king-of-prussia-mlp-pa",
+      "name": "King of Prussia campus (MLP Ventures)",
+      "operator": "MLP Ventures (Brian O'Neill)",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Upper Merion Township (Montgomery County)",
+      "state": "PA",
+      "lat": 40.09,
+      "lon": -75.38,
+      "size_mw": "",
+      "acres": "",
+      "announced": "2026-05-28",
+      "rezoning_filed": "2026-03-01",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "In review",
+      "days_to_hearing": null,
+      "note": "Five-site, 4.6M sq ft campus across King of Prussia. Applications were filed in early March 2026, roughly ten days before Upper Merion's new data-center ordinance took effect - exempting them from its residential buffer, noise, and water-use rules. The township Planning Commission voted against three of the proposals in July 2026; review continues amid packed hearings and organized opposition.",
+      "source": "https://6abc.com/post/proposed-king-prussia-data-center-campus-faces-renewed-scrutiny-review-continues/19560357/",
+      "as_of": "2026-08-07",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-03-01",
+          "kind": "filing",
+          "summary": "Applications filed in early March 2026, ~10 days before Upper Merion's new data-center ordinance took effect - grandfathering the projects out of its residential buffer, noise, and water-use requirements.",
+          "source": "https://www.inquirer.com/business/technology/data-center-proposal-kop-upper-merion-township-20260528.html"
+        },
+        {
+          "date": "2026-05-28",
+          "kind": "news",
+          "summary": "The 4.6M sq ft, five-site plan by MLP Ventures was publicly unveiled; neighbor pushback began immediately.",
+          "source": "https://www.inquirer.com/business/technology/data-center-proposal-kop-upper-merion-township-20260528.html"
+        },
+        {
+          "date": "2026-07-01",
+          "kind": "vote",
+          "summary": "In July 2026 the Upper Merion Planning Commission voted against three of the data-center proposals; hundreds of residents packed hearings in opposition. Township review continues.",
+          "source": "https://whyy.org/articles/upper-merion-data-centers-meeting-planning-commission-residents/"
+        }
+      ]
+    },
+    {
+      "id": "aws-calvert-technology-center-md",
+      "name": "AWS Calvert Technology Center",
+      "operator": "Amazon (AWS)",
+      "owner": "Constellation Energy Group (parcels)",
+      "tenant": "Amazon (AWS)",
+      "filing_llc": "Amazon Data Services Inc.",
+      "locality": "Lusby (Calvert County)",
+      "state": "MD",
+      "lat": 38.42,
+      "lon": -76.45,
+      "size_mw": "",
+      "acres": "",
+      "announced": "",
+      "rezoning_filed": "2026-05-04",
+      "hearing_date": "",
+      "decided_date": "2026-08-04",
+      "outcome": "withdrawn",
+      "stage": "Withdrawn",
+      "days_to_hearing": null,
+      "note": "Eight data center buildings (266,000-332,000 sq ft each) proposed at 1650 Calvert Cliffs Parkway on Constellation-owned parcels near the Calvert Cliffs nuclear plant. AWS formally withdrew the concept site plan on Aug 4, 2026 - after first-round county review comments and before any resubmission. Timeline documented on the county's own project page.",
+      "source": "https://www.calvertcountymd.gov/4059/Amazon-Web-Services",
+      "as_of": "2026-08-07",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-05-04",
+          "kind": "filing",
+          "summary": "Amazon Data Services Inc. submitted initial site plan documents; the application was formally accepted for processing May 27, 2026.",
+          "source": "https://www.calvertcountymd.gov/4059/Amazon-Web-Services"
+        },
+        {
+          "date": "2026-07-13",
+          "kind": "filing",
+          "summary": "County agencies completed first-round review of the concept site plan and returned comments to AWS.",
+          "source": "https://www.calvertcountymd.gov/4059/Amazon-Web-Services"
+        },
+        {
+          "date": "2026-08-04",
+          "kind": "filing",
+          "summary": "AWS formally withdrew the Calvert Technology Center concept site plan application, per the county's project page, without resubmitting a revised plan.",
+          "source": "https://www.calvertcountymd.gov/4059/Amazon-Web-Services"
+        }
+      ]
+    },
+    {
+      "id": "xai-colossus-memphis-tn",
+      "name": "xAI Colossus",
+      "operator": "xAI",
+      "owner": "",
+      "tenant": "xAI",
+      "filing_llc": "",
+      "locality": "Memphis (Shelby County)",
+      "state": "TN",
+      "lat": 35.06,
+      "lon": -90.15,
+      "size_mw": 2000,
+      "acres": "",
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "approved",
+      "stage": "Approved",
+      "days_to_hearing": null,
+      "note": "Operating and expanding (~$20B, ~2 GW ambition). The live fight is air quality: on-site gas turbines in southwest Memphis - an area already failing federal ozone standards - drew a Clean Air Act suit. Environmental groups' tracking put unpermitted turbines at 27 in Feb 2026, growing to 59 by mid-2026 across the Colossus complex (incl. Colossus 2 in Southaven, MS).",
+      "source": "https://earthjustice.org/case/xai-illegal-gas-power-plant-data-center-colossus",
+      "as_of": "2026-08-07",
+      "verified": true,
+      "events": [
+        {
+          "date": "2025-07-01",
+          "kind": "filing",
+          "summary": "In July 2025, after SELC threatened a citizen suit, the Shelby County Health Department issued an air permit covering 15 of the 30+ turbines then operating unpermitted at the Memphis site.",
+          "source": "https://www.selc.org/news/xai-built-an-illegal-power-plant-to-power-its-data-center/"
+        },
+        {
+          "date": "2026-04-14",
+          "kind": "ruling",
+          "summary": "NAACP, represented by Earthjustice and SELC, filed a Clean Air Act suit against xAI and MZX Tech (N.D. Miss.) over unpermitted gas turbines serving the Colossus complex.",
+          "source": "https://earthjustice.org/press/2026/xai-sued-for-illegal-power-plant"
         }
       ]
     }
