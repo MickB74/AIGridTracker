@@ -110,7 +110,7 @@ document.addEventListener('click', function (e) {
   if (!a) return;
   var href = a.getAttribute('href') || '';
   var file = href.split('/').pop().split('?')[0];
-  if (a.href.indexOf('__APP_URL__') === 0) {
+  if (a.href.indexOf('__APP_URL__') === 0 || /start-here\\.html$/.test(href)) {
     gwevent('toolkit-click' + location.pathname.replace(/\\.html$/, ''));
   } else if (/\\.pdf($|\\?)/.test(href) && a.host === location.host) {
     gwevent('pdf-download/' + file);
@@ -695,7 +695,7 @@ def page(title, description, body, canonical, depth=0,
   <div class="nav-links">
     {_nav_links_html(p, canonical)}
   </div>
-  <a class="cta" href="{APP_URL}">Open the toolkit &rarr;</a>
+  <a class="cta" href="{p}start-here.html">Open the toolkit &rarr;</a>
 </nav>
 <main id="main">
 {body}
@@ -713,7 +713,7 @@ def page(title, description, body, canonical, depth=0,
     <a href="{p}search.html">Search</a></p>
   <p>AI GridWatch — community energy intelligence. Planning estimates, not
   engineering studies; every number is sourced in the
-  <a href="{APP_URL}">full toolkit</a>. Built from public data.</p>
+  <a href="{p}start-here.html">toolkit</a>. Built from public data.</p>
 </footer>
 </div>
 {_ANALYTICS}
@@ -870,7 +870,7 @@ def build_index():
       needed.</p></div></div></div>
   </div>
   <p class="muted" style="margin-top:10px">All generated in the free
-  <a href="{APP_URL}">GridWatch toolkit</a> — no signup required.</p>
+  <a href="start-here.html">GridWatch toolkit</a> — no signup required.</p>
 </section>
 <section>
   <h2>Communities that organized, won</h2>
@@ -1505,7 +1505,7 @@ def build_health():
   it. Format inspired by the
   <a href="{esc(SOURCES['ehp_health'][1])}">Environmental Health Project's
   community infographic</a>.</p>
-  <p><a class="btn ghost" href="{APP_URL}">Open the full toolkit</a></p>
+  <p><a class="btn ghost" href="start-here.html">Open the full toolkit</a></p>
   {_dl_grid(_download_card(
       "assets/gridwatch_health_risks.pdf",
       "Health & community impacts — infographic", "pdf",
@@ -3444,7 +3444,7 @@ def build_impact_calculator():
   <p>Print this page, or use the full toolkit to generate a complete action
   pack — a meeting brief, comment scripts, letters to officials, and a
   community flyer with these numbers baked in.</p>
-  <p><a class="btn" href="{APP_URL}">Generate your action pack &rarr;</a>
+  <p><a class="btn" href="start-here.html">Generate your action pack &rarr;</a>
   <a class="btn ghost" href="health-risks.html">The health risks, sourced</a></p>
   {provenance_html("STATE_GRID_PROFILES")}
 </section>
@@ -3966,7 +3966,7 @@ def build_bills():
   complaint link, and the free toolkit has model CBA clauses for grid-upgrade
   cost allocation and rate caps.</p>
   <p><a class="btn" href="states/index.html">Find your state &rarr;</a>
-  <a class="btn ghost" href="{APP_URL}">Open the toolkit</a></p>
+  <a class="btn ghost" href="start-here.html">Open the toolkit</a></p>
 </section>
 """
     return page(
@@ -4495,7 +4495,7 @@ def build_learn():
   power resources, noise standards, and long-term rate impacts on existing
   ratepayers. These are the gaps this tracker aims to make visible.</p></div>
   <div class="note info"><p><strong>Could they build in your town?</strong>
-  The <a href="{APP_URL}">full toolkit</a> includes a
+  The <a href="start-here.html">full toolkit</a> includes a
   <strong>Community Siting Evaluator</strong> &mdash; enter your town or
   address to see how it scores on these 8 factors, with auto-populated data
   from public sources.</p></div>
@@ -4626,7 +4626,7 @@ def build_puc():
 <section>
   <h2>What to do next</h2>
   <p>
-    <a class="btn" href="{APP_URL}">Open the toolkit &mdash; meeting prep &amp; CBA templates</a>
+    <a class="btn" href="start-here.html">Open the toolkit &mdash; meeting prep &amp; CBA templates</a>
     <a class="btn ghost" href="bills.html">How data center costs reach your bill</a>
     <a class="btn ghost" href="states/index.html">Your state briefing</a>
   </p>
@@ -4782,7 +4782,7 @@ def build_executives():
   <p>Know who you&rsquo;re negotiating with. These are the decision-makers and
   the projects driving the build-out.</p>
   <p>
-    <a class="btn" href="{APP_URL}">Open the toolkit &mdash; meeting prep generator</a>
+    <a class="btn" href="start-here.html">Open the toolkit &mdash; meeting prep generator</a>
     <a class="btn ghost" href="companies/index.html">Company environmental scorecards</a>
     <a class="btn ghost" href="moratoriums.html">Moratorium tracker</a>
   </p>
@@ -4894,7 +4894,7 @@ def build_moratoriums():
   </div>
   {provenance_html("MORATORIUMS_DF")}
   <p class="muted" style="margin-top:10px">See the full interactive map and
-  filters in the <a href="{APP_URL}">GridWatch toolkit</a>.</p>
+  filters in the <a href="start-here.html">GridWatch toolkit</a>.</p>
 </section>
 <section id="data">
   <h2>Use this data</h2>
@@ -5789,7 +5789,7 @@ def build_scorecard(h):
   energy certificates (RECs). A large gap means the facility runs on fossil
   power but papers it over with certificates — your community breathes the
   actual emissions.</p>
-  <p><a class="btn" href="{APP_URL}">Run the numbers for your community &rarr;</a>
+  <p><a class="btn" href="../impact.html">Run the numbers for your community &rarr;</a>
   <a class="btn ghost" href="../companies/index.html">All scorecards</a></p>
 </section>
 """
@@ -5868,7 +5868,7 @@ def build_operator_scorecard(h):
   name on the permit. The environmental footprint belongs to the facility,
   not the tenant's brand. Ask the operator, not just the tenant, for their
   PUE, water, and emissions data.</p>
-  <p><a class="btn" href="{APP_URL}">Run the numbers for your community &rarr;</a>
+  <p><a class="btn" href="../impact.html">Run the numbers for your community &rarr;</a>
   <a class="btn ghost" href="../companies/index.html">All scorecards</a></p>
 </section>
 """
@@ -5930,7 +5930,7 @@ def build_limited_scorecard(ld):
   environmental data are asking communities to approve projects on trust.
   If a developer won't disclose PUE, water consumption, and emissions
   before construction, that's a question for your planning board.</p>
-  <p><a class="btn" href="{APP_URL}">Run the numbers for your community &rarr;</a>
+  <p><a class="btn" href="../impact.html">Run the numbers for your community &rarr;</a>
   <a class="btn ghost" href="../companies/index.html">All scorecards</a></p>
 </section>
 """
@@ -6229,7 +6229,7 @@ currently self-reports nothing.
   identify who you&rsquo;re negotiating with, and the queue data to gauge
   how much more is coming.</p>
   <p>
-    <a class="btn" href="{APP_URL}">Open the toolkit &mdash; meeting prep &amp; CBA templates</a>
+    <a class="btn" href="start-here.html">Open the toolkit &mdash; meeting prep &amp; CBA templates</a>
     <a class="btn ghost" href="states/index.html">Your state briefing</a>
     <a class="btn ghost" href="executives.html">Executives &amp; megaprojects</a>
   </p>
@@ -6847,7 +6847,7 @@ def build_environment():
 </section>
 
 <section>
-  <p><a class="btn" href="{APP_URL}">Open the toolkit &rarr;</a>
+  <p><a class="btn" href="start-here.html">Open the toolkit &rarr;</a>
   <a class="btn ghost" href="companies/index.html">Company scorecards</a></p>
 </section>
 """
@@ -7149,7 +7149,7 @@ def build_officials():
   state municipal leagues. Each state's PUC has its own dedicated
   <a href="puc.html">PUC directory page</a>. Curated town/county rosters for
   localities with an active fight live in the
-  <a href="{APP_URL}">GridWatch toolkit</a> (they change too often for a
+  <a href="start-here.html">GridWatch toolkit</a> (they change too often for a
   static page).</p>
 </section>
 """
@@ -7279,7 +7279,7 @@ def build_consulting():
   <p>Tell us about your situation. We'll respond within 48 hours with a
   preliminary assessment and recommended next steps.</p>
   <p><a class="btn" href="mailto:hello@aigridwatch.com?subject=Consulting%20request%20—%20AI%20GridWatch&body=Community%3A%20%0AState%3A%20%0ADeveloper%20%28if%20known%29%3A%20%0AFacility%20size%3A%20%0AStage%20of%20the%20process%3A%20%0ADescribe%20your%20situation%3A%20">Email us to start</a>
-  <a class="btn ghost" href="{APP_URL}">Or use the free toolkit &rarr;</a></p>
+  <a class="btn ghost" href="start-here.html">Or use the free toolkit &rarr;</a></p>
 </section>
 """
     return page(
@@ -7369,7 +7369,7 @@ def build_case_studies():
   <a href="tax-breaks.html">The opportunity cost of subsidy packages</a> ·
   <a href="cba-clauses.html">Model CBA clauses</a> ·
   <a href="moratoriums.html">Full moratorium tracker</a> ·
-  <a href="{APP_URL}">Generate a meeting brief with these precedents pre-loaded</a></p>
+  <a href="start-here.html">Generate a meeting brief with these precedents pre-loaded</a></p>
 </section>
 """
     return page(
@@ -7479,7 +7479,7 @@ def build_hearing_questions():
   <a href="case-studies.html">case studies</a> page has the citations; the
   <a href="cba-clauses.html">CBA clause library</a> has drop-in language
   to attach to any answer you're not satisfied with.</p></div>
-  <p><a class="btn" href="{APP_URL}">Generate a personalized brief with your community's numbers &rarr;</a></p>
+  <p><a class="btn" href="start-here.html">Generate a personalized brief with your community's numbers &rarr;</a></p>
 </section>
 """
     return page(
@@ -7728,7 +7728,7 @@ def build_siting():
     <ul>
       <li>Read the <a href="tax-breaks.html">opportunity-cost briefing</a> before your next council meeting — the higher your score, the more leverage you have.</li>
       <li>Bring the <a href="hearing-questions.html">hearing questions</a> and the <a href="cba-clauses.html">CBA clause library</a> to any public comment period.</li>
-      <li>Use the <a href="{APP_URL}">Start here wizard</a> for an interactive impact estimate at the parcel level (this page is state-level; the app can do geocoded lookups).</li>
+      <li>Use the <a href="start-here.html">Start here wizard</a> for an interactive impact estimate and a downloadable action pack tailored to your state and situation.</li>
       <li>Check the <a href="case-studies.html">case studies</a> for what similar communities won or lost.</li>
     </ul>
   </section>
@@ -8039,7 +8039,7 @@ def build_tax_breaks():
   line the community gives away without asking is money left on the
   table — from a counterparty whose next-best alternative is almost
   always worse than yours.</p></div>
-  <p><a class="btn" href="{APP_URL}">Generate a meeting brief with these questions pre-loaded &rarr;</a>
+  <p><a class="btn" href="start-here.html">Generate a meeting brief with these questions pre-loaded &rarr;</a>
   <a class="btn ghost" href="hearing-questions.html">Full hearing checklist</a></p>
 </section>
 """
@@ -8067,7 +8067,7 @@ def build_about():
   <h2>Use the tools</h2>
   <p>Everything on this site is free and requires no account.</p>
   <p>
-    <a class="btn" href="{APP_URL}">Open the toolkit &rarr;</a>
+    <a class="btn" href="start-here.html">Open the toolkit &rarr;</a>
     <a class="btn ghost" href="impact.html">Impact calculator</a>
   </p>
 </section>
@@ -8257,7 +8257,7 @@ def build_data_dividend():
   <h2>Generate the full package</h2>
   <p>The toolkit builds a complete meeting brief with these numbers, plus
   comment scripts, letters, and CBA clause templates.</p>
-  <p><a class="btn" href="{APP_URL}">Generate your action pack &rarr;</a>
+  <p><a class="btn" href="start-here.html">Generate your action pack &rarr;</a>
   <a class="btn ghost" href="impact.html">Impact calculator</a></p>
 </section>
 <script>

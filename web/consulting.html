@@ -395,7 +395,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
     <details class="navgroup"><summary>Industry</summary><div class="navmenu"><a href="data-centers.html">Data centers</a><a href="companies/index.html">Companies</a><a href="outlook.html">Electricity outlook</a></div></details>
     <details class="navgroup"><summary>Updates</summary><div class="navmenu"><a href="blog/index.html">Blog</a><a href="news/index.html">News</a><a href="videos.html">Videos</a></div></details>
   </div>
-  <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
+  <a class="cta" href="start-here.html">Open the toolkit &rarr;</a>
 </nav>
 <main id="main">
 
@@ -514,7 +514,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <p>Tell us about your situation. We'll respond within 48 hours with a
   preliminary assessment and recommended next steps.</p>
   <p><a class="btn" href="mailto:hello@aigridwatch.com?subject=Consulting%20request%20—%20AI%20GridWatch&body=Community%3A%20%0AState%3A%20%0ADeveloper%20%28if%20known%29%3A%20%0AFacility%20size%3A%20%0AStage%20of%20the%20process%3A%20%0ADescribe%20your%20situation%3A%20">Email us to start</a>
-  <a class="btn ghost" href="https://aigridtracker.streamlit.app">Or use the free toolkit &rarr;</a></p>
+  <a class="btn ghost" href="start-here.html">Or use the free toolkit &rarr;</a></p>
 </section>
 
 </main>
@@ -531,7 +531,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
     <a href="search.html">Search</a></p>
   <p>AI GridWatch — community energy intelligence. Planning estimates, not
   engineering studies; every number is sourced in the
-  <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.</p>
+  <a href="start-here.html">toolkit</a>. Built from public data.</p>
 </footer>
 </div>
 
@@ -546,7 +546,7 @@ document.addEventListener('click', function (e) {
   if (!a) return;
   var href = a.getAttribute('href') || '';
   var file = href.split('/').pop().split('?')[0];
-  if (a.href.indexOf('https://aigridtracker.streamlit.app') === 0) {
+  if (a.href.indexOf('https://aigridtracker.streamlit.app') === 0 || /start-here\.html$/.test(href)) {
     gwevent('toolkit-click' + location.pathname.replace(/\.html$/, ''));
   } else if (/\.pdf($|\?)/.test(href) && a.host === location.host) {
     gwevent('pdf-download/' + file);

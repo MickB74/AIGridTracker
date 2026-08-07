@@ -395,7 +395,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
     <details class="navgroup"><summary>Industry</summary><div class="navmenu"><a href="data-centers.html">Data centers</a><a href="companies/index.html">Companies</a><a href="outlook.html">Electricity outlook</a></div></details>
     <details class="navgroup"><summary>Updates</summary><div class="navmenu"><a href="blog/index.html">Blog</a><a href="news/index.html">News</a><a href="videos.html">Videos</a></div></details>
   </div>
-  <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
+  <a class="cta" href="start-here.html">Open the toolkit &rarr;</a>
 </nav>
 <main id="main">
 
@@ -494,7 +494,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <a href="case-studies.html">case studies</a> page has the citations; the
   <a href="cba-clauses.html">CBA clause library</a> has drop-in language
   to attach to any answer you're not satisfied with.</p></div>
-  <p><a class="btn" href="https://aigridtracker.streamlit.app">Generate a personalized brief with your community's numbers &rarr;</a></p>
+  <p><a class="btn" href="start-here.html">Generate a personalized brief with your community's numbers &rarr;</a></p>
 </section>
 
 </main>
@@ -511,7 +511,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
     <a href="search.html">Search</a></p>
   <p>AI GridWatch — community energy intelligence. Planning estimates, not
   engineering studies; every number is sourced in the
-  <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.</p>
+  <a href="start-here.html">toolkit</a>. Built from public data.</p>
 </footer>
 </div>
 
@@ -526,7 +526,7 @@ document.addEventListener('click', function (e) {
   if (!a) return;
   var href = a.getAttribute('href') || '';
   var file = href.split('/').pop().split('?')[0];
-  if (a.href.indexOf('https://aigridtracker.streamlit.app') === 0) {
+  if (a.href.indexOf('https://aigridtracker.streamlit.app') === 0 || /start-here\.html$/.test(href)) {
     gwevent('toolkit-click' + location.pathname.replace(/\.html$/, ''));
   } else if (/\.pdf($|\?)/.test(href) && a.host === location.host) {
     gwevent('pdf-download/' + file);

@@ -396,7 +396,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
     <details class="navgroup"><summary>Industry</summary><div class="navmenu"><a href="data-centers.html">Data centers</a><a href="companies/index.html">Companies</a><a href="outlook.html">Electricity outlook</a></div></details>
     <details class="navgroup"><summary>Updates</summary><div class="navmenu"><a href="blog/index.html">Blog</a><a href="news/index.html">News</a><a href="videos.html">Videos</a></div></details>
   </div>
-  <a class="cta" href="https://aigridtracker.streamlit.app">Open the toolkit &rarr;</a>
+  <a class="cta" href="start-here.html">Open the toolkit &rarr;</a>
 </nav>
 <main id="main">
 
@@ -505,7 +505,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <p>Print this page, or use the full toolkit to generate a complete action
   pack — a meeting brief, comment scripts, letters to officials, and a
   community flyer with these numbers baked in.</p>
-  <p><a class="btn" href="https://aigridtracker.streamlit.app">Generate your action pack &rarr;</a>
+  <p><a class="btn" href="start-here.html">Generate your action pack &rarr;</a>
   <a class="btn ghost" href="health-risks.html">The health risks, sourced</a></p>
   <div class="freshness"><p><strong>As of May 2026 (3m ago) · changes weekly — re-check before citing</strong> · Source: <a href="https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a" rel="nofollow">EIA — Electric Power Monthly, Table 5.6.A: average retail price of electricity to residential customers by state (the current figure, updated monthly)</a></p><p class="muted" style="margin:6px 0 0">**Rates** are EIA Electric Power Monthly Table 5.6.A, May 2026 — all 51 refreshed together from the published table rather than spot-edited, so cross-state comparisons stay valid. Note this is a single month, not an annual average: residential prices are seasonal, and May is a shoulder month, so summer-peaking states may run higher than shown.
 
@@ -584,7 +584,7 @@ The refresh moved rates up a mean of 18.6%, and 48 of 51 jurisdictions (50 state
     <a href="search.html">Search</a></p>
   <p>AI GridWatch — community energy intelligence. Planning estimates, not
   engineering studies; every number is sourced in the
-  <a href="https://aigridtracker.streamlit.app">full toolkit</a>. Built from public data.</p>
+  <a href="start-here.html">toolkit</a>. Built from public data.</p>
 </footer>
 </div>
 
@@ -599,7 +599,7 @@ document.addEventListener('click', function (e) {
   if (!a) return;
   var href = a.getAttribute('href') || '';
   var file = href.split('/').pop().split('?')[0];
-  if (a.href.indexOf('https://aigridtracker.streamlit.app') === 0) {
+  if (a.href.indexOf('https://aigridtracker.streamlit.app') === 0 || /start-here\.html$/.test(href)) {
     gwevent('toolkit-click' + location.pathname.replace(/\.html$/, ''));
   } else if (/\.pdf($|\?)/.test(href) && a.host === location.host) {
     gwevent('pdf-download/' + file);
