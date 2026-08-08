@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-07T23:43:10.494504+00:00",
+  "fetched_at": "2026-08-08T02:14:00.360667+00:00",
   "items": [
     {
       "title": "Walker County Commission delays budget vote, extends data center moratorium",
@@ -70,6 +70,14 @@
       "states": []
     },
     {
+      "title": "Marshalltown Planning and Zoning Committee considering data center ordinance",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE52TVJzNnJkYTY1NHRPOFR2dkVOXzJVcWxuWnBDMGxLclJSX19YRHZDS1k0bFphcDRycVBoZ2NEUk1wSDJ3Yl9tZHBubkQyc0ZkcFdmanVn?oc=5",
+      "video_id": "",
+      "published_iso": "2026-08-06T23:10:12+00:00",
+      "states": []
+    },
+    {
       "title": "James Talarico: We must crack down on data centers jacking up our utility bills",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5Hb0NHQm1EdWZKbDNoRDUzR3hUWHUxZEJNYVBpQkMtbk5EeTFjYU54bG1JQXdxeHVaNG5aWXlTS2FmaUc5a3FEaG1Ha1NPZG1JWTBxdA?oc=5",
@@ -83,14 +91,6 @@
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBJNGZNZHY3VWQyTV9PNUtDa3kybURfRUtGYWZZNjZSVXp3T1lEN2xCZ3I0Q0tQaEt2ZjFOeGstV19WNTFZb3BMS2RDZ3hCa0c2UHcxYzdn?oc=5",
       "video_id": "",
       "published_iso": "2026-08-06T11:15:57+00:00",
-      "states": []
-    },
-    {
-      "title": "PAX-1 data center meeting postponed due to large community turnout",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1pTVNTSC1wU2FIck5hUWkxYjRLMWhEVXJlWDV2bkI0eGx0VnAwZmR1VWZVYWtRMHY0eW1yLUNzRlRUOUUzVld1MzlmRWM5SzYwZFdQcFB3?oc=5",
-      "video_id": "",
-      "published_iso": "2026-08-06T08:21:44+00:00",
       "states": []
     },
     {
@@ -204,16 +204,6 @@
       "states": []
     },
     {
-      "title": "Another Kentucky county passes 2-year data center moratorium",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5hbE5WcmVDaF9mbWdIZ1Fja2NDZ0Q4MHo4VUwwVm5JV2xjcUVTay1WMm9uY1lvbS1ZZ0RnWG1NMTJlXzVqZFhCOVNSZWFKNHF1WVh0WktB?oc=5",
-      "video_id": "",
-      "published_iso": "2026-08-04T13:17:41+00:00",
-      "states": [
-        "Kentucky"
-      ]
-    },
-    {
       "title": "Georgia's Data Center Boom Is Straining the Grid. Here's How Solar Fits In",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1WME8yNWZrLW1ObDJtUmtDOWo4M09CYXRqZWFvb2ppY2ZwcGVQaDJINEJGRW9VNWp5SHdGWW5DZUtjY3Z2VkdwSzJjZTljbFR0M0JBUFZtRjc5NDZfQkZRdVRVOUFqUURLVHgyVjRFbkdrSjQ?oc=5",
@@ -222,6 +212,14 @@
       "states": [
         "Georgia"
       ]
+    },
+    {
+      "title": "Abbott orders pause on data center approvals until audit on power, water use completed",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAwaUJrWFlsVjJwZ204aGZuOUliaXRub1RGSTZKU3N1STg3bGpMWG4wR3RsWHRZZFFVMU82aUF2aEh5dFZpYklTa0lUSU50RlY0VlFWb0JB?oc=5",
+      "video_id": "",
+      "published_iso": "2026-08-04T03:26:46+00:00",
+      "states": []
     },
     {
       "title": "How each candidate will balance data centers and ensuring power and water for South Carolinians",
