@@ -5,7 +5,7 @@ Here wizard. These coefficients were previously duplicated inline in
 impact_tab.py and toolkit_tab.py; change them here, not in the tabs.
 """
 
-from src.constants import STATE_GRID_PROFILES
+from src.constants import STATE_GRID_PROFILES, WATER_STRESS_CLIMATE_MULTIPLIER
 
 # (PUE, gallons of cooling water per IT kWh) by cooling type
 COOLING_PROFILES = {
@@ -69,6 +69,7 @@ def estimate_facility_impact(mw, state, cooling=DEFAULT_COOLING,
     water_stress = prof.get("water_stress", "medium")
 
     pue, water_gal_per_kwh = cooling_profile(cooling)
+    water_climate_mult = WATER_STRESS_CLIMATE_MULTIPLIER.get(water_stress, 1.0)
 
     annual_kwh = facility_annual_kwh(mw, load_factor, pue)
     annual_mwh = annual_kwh / 1000
@@ -77,9 +78,10 @@ def estimate_facility_impact(mw, state, cooling=DEFAULT_COOLING,
     return {
         "pue": pue,
         "water_gal_per_kwh": water_gal_per_kwh,
+        "water_climate_mult": water_climate_mult,
         "annual_mwh": annual_mwh,
         "annual_twh": annual_mwh / 1e6,
-        "annual_water_mgal": annual_kwh * water_gal_per_kwh / 1e6,
+        "annual_water_mgal": annual_kwh * water_gal_per_kwh * water_climate_mult / 1e6,
         "annual_co2_t": annual_mwh * gco2 / 1e6,
         "homes_equiv": annual_kwh / HOME_KWH_PER_YEAR,
         "annual_dc_spend_busd": annual_kwh * DC_INDUSTRIAL_RATE / 1e9,

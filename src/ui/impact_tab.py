@@ -10,7 +10,7 @@ from src.constants import (
     STATE_GRID_PROFILES, STATE_DC_DF, MORATORIUMS_DF,
     STATE_PUCS_DF, DC_SITES_DF,
 )
-from src.helpers import render_freshness
+from src.helpers import render_freshness, src_link
 from src.impact_model import estimate_facility_impact
 from src.ui import share
 
@@ -108,6 +108,13 @@ def render_impact_tab():
         "Grid intensity",
         f"{gco2} gCO2/kWh",
         "Dirtier" if gco2 > 350 else "Cleaner" if gco2 < 250 else "Average")
+    st.caption(
+        f"Water draw scales with state water stress "
+        f"(×0.85 low, ×1.0 medium, ×1.4 high) — hot/arid sites lose more "
+        f"water per kWh to evaporation than cool/humid ones "
+        f"({src_link('lei_masanet_2022')}; state ratings: "
+        f"{src_link('wri_aqueduct')})."
+    )
     st.markdown('</div>', unsafe_allow_html=True)
 
     # Right under the headline numbers — that is the screenshot people would

@@ -59,6 +59,7 @@ from src.constants import (
     COREWEAVE_PROFILE, QTS_PROFILE, SWITCH_PROFILE, COMPASS_PROFILE,
     SOURCES, registry_provenance, has_value,
     QUERY_COEFFS, TOKEN_COEFFS, GRID_INTENSITY, ONSITE_WUE, OFFSITE_WATER,
+    WATER_STRESS_CLIMATE_MULTIPLIER,
     IEA_OUTLOOK, DC_FORECASTS, DC_FORECASTS_US,
     PEW_RURAL_2026, PEW_STATE_COUNTS,
     NEWS_THEMES, STORY_ANGLES, STORY_IMPACT_WEIGHTS,
@@ -2878,8 +2879,9 @@ function dl(name,text,mime){var b=new Blob([text],{type:mime||'text/plain;charse
 function estimateImpact(mw, state){
   var p = D.profiles[state] || {rate:0.12, gco2:400, water_stress:'medium'};
   var PUE=1.12, WG=2.0, HOME=10500, INV=2000000, DIV=0.02;
+  var wmult = (D.waterMult && D.waterMult[p.water_stress]) || 1.0;
   var kwh = mw*8760*1.0*PUE*1000, mwh = kwh/1000, invMusd = mw*INV/1e6;
-  return {annual_twh:mwh/1e6, annual_mwh:mwh, annual_water_mgal:kwh*WG/1e6,
+  return {annual_twh:mwh/1e6, annual_mwh:mwh, annual_water_mgal:kwh*WG*wmult/1e6,
     annual_co2_t:mwh*p.gco2/1e6, homes_equiv:kwh/HOME, investment_musd:invMusd,
     data_dividend_usd:invMusd*1e6*DIV, rate:p.rate, gco2:p.gco2,
     water_stress:p.water_stress};
@@ -3407,6 +3409,7 @@ def build_start_here():
         "appUrl": APP_URL, "siteUrl": SITE_URL,
         "profiles": {s: STATE_GRID_PROFILES[s]
                      for s in sorted(STATE_GRID_PROFILES)},
+        "waterMult": WATER_STRESS_CLIMATE_MULTIPLIER,
         "stages": stages, "pucs": pucs, "stateDC": state_dc,
         "operators": operators, "execs": execs,
         "concessions": COMPANY_CONCESSIONS, "advice": MEETING_ADVICE,
@@ -3461,6 +3464,9 @@ def build_impact_calculator():
     import json
     profiles_json = json.dumps(
         {s: STATE_GRID_PROFILES[s] for s in sorted(STATE_GRID_PROFILES)})
+    water_mult_json = json.dumps(WATER_STRESS_CLIMATE_MULTIPLIER)
+    lm_name, lm_url = SOURCES["lei_masanet_2022"]
+    wri_name, wri_url = SOURCES["wri_aqueduct"]
 
     state_options = "\n".join(
         f'<option value="{esc(s)}">{esc(s)}</option>'
@@ -3516,6 +3522,11 @@ def build_impact_calculator():
   <p class="muted" style="margin-top:8px">Grid carbon:
   <span id="r-gco2">—</span> gCO&#8322;/kWh &middot; Water stress:
   <span id="r-stress">—</span> &middot; Cooling: evaporative (PUE 1.12)</p>
+  <p class="muted" style="margin-top:4px">Water draw is scaled by state water
+  stress (&times;0.85 low, &times;1.0 medium, &times;1.4 high) — hot/arid
+  sites lose more water per kWh to evaporation than cool/humid ones
+  (<a href="{esc(lm_url)}">{esc(lm_name)}</a>; state stress ratings:
+  <a href="{esc(wri_url)}">{esc(wri_name)}</a>).</p>
 </section>
 <section>
   <h2>What to do with these numbers</h2>
@@ -3529,6 +3540,7 @@ def build_impact_calculator():
 <script>
 (function() {{
   var P = {profiles_json};
+  var WMULT = {water_mult_json};
   var PUE = 1.12, WG = 2.0, HOME = 10500, INV = 2000000, DIV = 0.02, DCR = 0.05;
   var slider = document.getElementById('mw-slider');
   var label = document.getElementById('mw-label');
@@ -3554,7 +3566,8 @@ def build_impact_calculator():
     var mwh = kwh / 1000;
     document.getElementById('r-energy').textContent = fmt(mwh);
     document.getElementById('r-homes').textContent = fmt(kwh / HOME);
-    document.getElementById('r-water').textContent = (kwh * WG / 1e6).toFixed(1);
+    var wmult = WMULT[prof.water_stress] || 1.0;
+    document.getElementById('r-water').textContent = (kwh * WG * wmult / 1e6).toFixed(1);
     document.getElementById('r-co2').textContent = fmt(mwh * prof.gco2 / 1e6);
     document.getElementById('r-ratio').textContent = (prof.rate / DCR).toFixed(1);
     document.getElementById('r-resrate').textContent = '$' + prof.rate.toFixed(3);

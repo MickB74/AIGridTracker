@@ -154,6 +154,18 @@ OFFSITE_WATER = {
     "High-renewables grid": {"l_per_kwh": 0.10, "src": "thirsty_2024"},  # wind/solar PV
 }
 
+# On-site evaporative-cooling water intensity varies by climate — hot/arid
+# sites lose more water per kWh of heat rejected than cool/humid ones. Lei &
+# Masanet (2022) modeled evaporative-tower WUE across 15 US climate zones and
+# found a range of 1.99-4.00 L/kWh, roughly a 2x spread between the coolest
+# and hottest/driest zones (src: lei_masanet_2022). We don't have a full
+# 51-state climate-zone mapping, so this applies that ~2x spread as a
+# conservative three-tier multiplier keyed to each state's existing
+# `water_stress` rating (STATE_GRID_PROFILES, src: wri_aqueduct) rather than
+# claiming zone-level precision. Applied to the on-site water estimate only —
+# it approximates a climate effect, not a literature value.
+WATER_STRESS_CLIMATE_MULTIPLIER = {"low": 0.85, "medium": 1.0, "high": 1.4}
+
 # IEA data-center electricity outlook (TWh), demand-side.
 IEA_OUTLOOK = pd.DataFrame({"year": [2024, 2025, 2030, 2035],
                             "twh":  [415,  485,  945,  1200]})
@@ -2160,9 +2172,10 @@ PROJECT_STAGES = {
     },
 }
 
-# State-level residential electricity rates ($/kWh, 2024 EIA average)
-# and grid carbon intensity (gCO2/kWh, eGRID 2022 subregion averages
-# mapped to dominant state grid). Used by the local impact calculator.
+# State-level residential electricity rates ($/kWh, 2024 EIA average),
+# grid carbon intensity (gCO2/kWh, eGRID 2022 subregion averages mapped to
+# dominant state grid), and baseline water stress (low/medium/high, src:
+# wri_aqueduct). Used by the local impact calculator.
 STATE_GRID_PROFILES = {
     "Alabama":        {"rate": 0.1677, "gco2": 380, "water_stress": "low"},
     "Alaska":         {"rate": 0.2823, "gco2": 450, "water_stress": "low"},
@@ -2819,6 +2832,10 @@ SOURCES = {
                      "https://arxiv.org/abs/2412.06288"),
     "siddik_2021":  ("Siddik, Shehabi & Marston — The environmental footprint of data centers in the United States (Environmental Research Letters, 2021)",
                      "https://iopscience.iop.org/article/10.1088/1748-9326/abfba1"),
+    "lei_masanet_2022": ("Lei & Masanet — Climate- and technology-specific PUE and WUE estimations for U.S. data centers using a hybrid statistical and thermodynamics-based approach (Resources, Conservation and Recycling 182, 2022)",
+                     "https://doi.org/10.1016/j.resconrec.2022.106323"),
+    "wri_aqueduct": ("World Resources Institute — Aqueduct 4.0 Water Risk Atlas (baseline water stress by basin/state)",
+                     "https://www.wri.org/aqueduct"),
     "who_noise":    ("WHO Europe — Environmental Noise Guidelines: noise & cardiovascular/metabolic mechanisms (2018)",
                      "https://www.who.int/europe/publications/i/item/WHO-EURO-2018-3009-42767-59666"),
     "eea_noise":    ("European Environment Agency — Health risks caused by environmental noise in Europe (2020)",
