@@ -131,19 +131,49 @@ def classify_angle(title):
     return "⚠️", "A community is pushing back on a nearby data center."
 
 
-def group_key_for(locality, state):
+# A state-only story (no town matched) is usually one of two very different
+# things: a genuine statewide policy/politics story (a governor, a legislature,
+# a statewide bill or tax program, statewide polling) or a specific local story
+# whose town simply isn't in the gazetteer yet. Labeling both "(locality not
+# identified)" reads as a detection failure and buries the statewide ones.
+# These signals pull the statewide ones into their own bucket; anything without
+# a signal (e.g. "a plant in her neighborhood") stays as an unidentified town.
+STATEWIDE_SIGNALS = (
+    "governor", "gov.", " gov ", "legislat", "lawmaker", "senate",
+    "assembly", "statehouse", "state house", " bill ", " bills",
+    "bill to", "tariff", "statewide",
+    "first state", "ratepayer", "tax break", "tax credit", "tax incentive",
+    "rein in", "regulators", "public utilit", "utility board", " puc",
+    " psc", " bpu", "moratorium bill", "communities are moving",
+    "residents support", "residents oppose", "half of", "state law",
+    "state to ", "state moves", "state would", "attorney general",
+)
+
+
+def is_statewide(title):
+    """True when a state-only story reads as state-level policy or politics
+    rather than a specific-but-undetected town."""
+    t = (title or "").lower()
+    return any(sig in t for sig in STATEWIDE_SIGNALS)
+
+
+def group_key_for(locality, state, statewide=False):
     if locality and state:
         return f"{locality}|{state}"
+    if state and statewide:
+        return f"statewide|{state}"
     if state:
         return f"|{state}"
     return "unclassified"
 
 
-def group_label_for(locality, state):
+def group_label_for(locality, state, statewide=False):
     if locality and state:
         return f"{locality}, {state}"
+    if state and statewide:
+        return f"{state} (statewide)"
     if state:
-        return f"{state} (locality not identified)"
+        return f"{state} (town not identified)"
     return "Not yet localized"
 
 
@@ -184,12 +214,17 @@ def group_stories(stories, min_for_summary=4):
     None — that's the "AI summary when more than 3" trigger."""
     groups = {}
     for s in stories:
-        key = group_key_for(s.get("locality"), s.get("state"))
+        loc, st = s.get("locality"), s.get("state")
+        # Statewide classification only applies to state-only stories (a town
+        # match always wins — a story about a specific town is not statewide).
+        sw = bool(st and not loc and is_statewide(s.get("title", "")))
+        key = group_key_for(loc, st, sw)
         g = groups.setdefault(key, {
             "key": key,
-            "locality": s.get("locality"),
-            "state": s.get("state"),
-            "label": group_label_for(s.get("locality"), s.get("state")),
+            "locality": loc,
+            "state": st,
+            "statewide": sw,
+            "label": group_label_for(loc, st, sw),
             "stories": [],
         })
         g["stories"].append(s)
