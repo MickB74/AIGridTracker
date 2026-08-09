@@ -8225,7 +8225,7 @@ def build_community_value():
 </section>
 """
     return page(
-        "Data centers &amp; your community — AI GridWatch",
+        "Data centers & your community — AI GridWatch",
         "How a community captures value from a data-center deal and protects "
         "residents' health, water, and quality of life — tax, jobs, CBA terms, "
         "noise/water/air limits, and questions to ask before you vote.",
@@ -9985,6 +9985,7 @@ def main():
              "learn", "puc", "executives", "about", "search", "dividend",
              "data-centers", "environment", "studies",
              "cba-clauses", "officials", "consulting", "case-studies",
+             "community-value",
              "hearing-questions", "glossary", "tax-breaks", "siting",
              "companies/", "states/", "blog/", "news/", "videos", "map",
              "communities/"]
