@@ -577,6 +577,7 @@ NAV_GROUPS = [
         ("Story tracker", "story-tracker.html"),
         ("Projects tracker", "projects.html"),
         ("Officials scorecard", "scorecard.html"),
+        ("Community playbook", "community-value.html"),
     ]),
     ("The facts", [
         ("Health risks", "health-risks.html"),
@@ -8036,6 +8037,203 @@ state should tailor them before they go in front of a commission.</p></div>
             ("CBA clauses", f"{SITE_URL}/cba-clauses")))
 
 
+_COMMUNITY_VALUE_MD = """
+**The core idea.** A data center is a one-time chance to trade a local resource
+— land, grid access, water, and a permit — for lasting community value. The
+benefits are almost never automatic. What you don't negotiate up front, you
+generally don't get. Everything below is about turning a big private facility
+into a good deal for the people who live next to it.
+
+## What a community can capture
+
+Data centers are capital-heavy and staff-light. A single campus can be a
+$1–10B+ investment yet employ only 30–100 permanent people once built. That
+shapes where the real value is: **not payroll, but tax base, infrastructure,
+and negotiated payments.**
+
+#### 🏦 Tax base & direct payments
+- **Property tax on the buildings and land** — the durable win. The servers inside get replaced every 3–5 years, resetting value.
+- **Business personal property tax** on the IT equipment itself — in Texas this can dwarf the real-estate value, but watch for abatements.
+- **Sales tax** on construction materials and, in some cases, equipment (Texas has a data-center sales-tax exemption — know whether it applies and what you're giving up).
+- **Payment In Lieu Of Taxes (PILOT)** or a Chapter 380/381 agreement — a negotiated annual payment when an abatement zeroes out normal tax.
+- **Community benefit fund** — a fixed $/MW or $/year contribution to a local fund you control (schools, parks, first responders).
+
+#### 👷 Jobs & local economy
+- **Construction phase** — hundreds to thousands of jobs for 1–3 years. Push for **local-hire and local-vendor commitments.**
+- **Operations** — modest headcount but high-wage (technicians, security, facilities). Tie any incentive to **verified wage floors.**
+- **Workforce pipeline** — fund a community-college / trade program so local residents fill the operations roles, not out-of-town hires.
+
+#### 🔌 Infrastructure the community keeps
+- **Grid upgrades** — new substations and transmission the operator pays for can improve local reliability. Get it in writing that **residents benefit, not just the campus.**
+- **Water & wastewater** — mains, treatment capacity, and reuse systems sized for the facility can also serve the town.
+- **Roads & broadband** — road improvements for construction traffic, and fiber that can be extended to underserved neighborhoods.
+- **Backup power / microgrid** — negotiate community access to on-site generation during grid emergencies.
+
+#### ⚡ Grid & energy leverage (ERCOT-specific)
+- **Demand response** — large loads that curtail during scarcity get paid and relieve the grid. Push for a **curtailment commitment** so the campus isn't competing with homes for power on peak days.
+- **New generation** — some operators fund solar/storage/gas to cover their load. Negotiate that clean capacity stays in your region.
+- **'Bring your own power'** — the strongest deals require the data center to add generation ≥ its demand, so it doesn't raise everyone else's bills.
+
+**Rule of thumb:** the headline investment number is for the press release. The
+number that matters to residents is the **net annual value after abatements** —
+new tax revenue + negotiated payments + infrastructure value, minus the cost of
+added services, water, and grid strain. Insist on seeing that net figure before
+any vote.
+
+## How a community protects itself
+
+Protection comes from **leverage used before the permit is granted** and
+**enforceable terms written into a binding agreement.** After approval, leverage
+is mostly gone. Sequence matters more than goodwill.
+
+#### Use your leverage while you still have it
+- **Zoning, permits, and utility hookups are your leverage.** The developer needs local approvals; that is the moment to negotiate.
+- **Never grant a tax abatement without matched commitments** — jobs, wages, water limits, noise limits, and a community fund, all with clawbacks if they're not met.
+- **Independent review, paid by the developer** — require the applicant to fund the town's own engineer, hydrologist, and attorney so you're not relying on the developer's studies.
+- **Phase the incentives** — abatements that step down and only continue if commitments are verified each year.
+
+#### Financial protections
+- **Clawback / recapture clauses** — if promised jobs, wages, or investment don't materialize, the abatement is repaid.
+- **Performance bonds & decommissioning escrow** — money set aside up front to remove the facility and restore the land if it's abandoned (a real risk as hardware and AI demand shift).
+- **Rate protection** — written assurance, ideally via the utility and PUC, that the campus's transmission costs are **not socialized onto residential ratepayers.**
+- **Assessment floor** — guard against the equipment value being appraised down to near-zero after a few years.
+
+#### Process protections
+- **Public hearings with real notice** and documents released *before* the meeting, not the night of.
+- **Annual public compliance reporting** — jobs, wages, water use, noise readings, tax paid — published, not filed away.
+- **A community oversight seat** — a resident/committee role in monitoring the agreement over its life.
+- **Assignment clause** — protections travel with the property if the data center is sold to another operator.
+
+**Watch for the split-vote trap.** Benefits (jobs, tax) are pitched to the whole
+county; costs (noise, water, traffic, a substation) land on the handful of
+families next to the site. A fair deal compensates the people who bear the local
+burden — not just the general fund.
+
+## Protecting residents' health & environment
+
+Data centers don't have smokestacks, but three real nuisances drive most
+community complaints: **noise, water, and backup-generator emissions.** Each is
+manageable — but only with limits written into the permit.
+
+#### 🔊 Noise — the #1 complaint at existing campuses
+- Thousands of cooling fans and chillers run 24/7, producing a constant low-frequency hum neighbors describe as the hardest to escape.
+- **Ask for:** a pre-construction **sound study**, an enforceable **property-line dB limit** (day and night), and a low-frequency standard — broad 'dBA' limits often miss the hum.
+- **Require:** setbacks from homes, sound walls / berms, enclosed or acoustically-treated equipment, and a **prohibition on evaporative/open-air fans** near residences.
+- **Enforce:** continuous noise monitoring with public data and penalties for exceedances — not a one-time test at commissioning.
+
+#### 💧 Water — cooling can consume a lot, in a state that's short on it
+- Evaporative cooling can use **millions of gallons per day**; in a drought-prone Texas county that competes directly with farms and households.
+- **Ask for:** a full **water-use disclosure** (gallons/day, source, peak-summer draw) and an independent hydrology review of aquifer / utility impact.
+- **Require:** **closed-loop, air-cooled, or reclaimed-water cooling** instead of potable water; a hard cap on consumption; and priority curtailment for the campus (not residents) during drought.
+- **Protect:** groundwater levels for neighboring wells, and wastewater/blowdown discharge quality.
+
+#### 🛢️ Backup generators — the real air-quality issue
+- Campuses keep large banks of **diesel backup generators**. Routine testing and grid outages run them, emitting NOₓ and diesel particulate — a genuine local air concern.
+- **Ask for:** the number and size of generators, fuel type, and permitted testing hours.
+- **Require:** **Tier 4 / low-emission or non-diesel backup** (natural gas, batteries, fuel cells), limited daytime testing, and setbacks from homes and schools.
+- **Verify:** air-permit compliance reporting to the community, not just to the state.
+
+#### 🌡️ Land, light, heat & habitat
+- **Visual & light** — require dark-sky-compliant, shielded lighting and vegetative screening so a 24/7 lit campus doesn't wash out a rural night sky.
+- **Heat & stormwater** — large impervious campuses shed heat and runoff; require stormwater management and landscaping.
+- **Construction phase** — dust control, truck-route limits, and restricted hours protect residents during the 1–3 year build.
+- **Site selection** — pushing the campus toward industrial land and away from homes, schools, and wells is the cheapest protection of all.
+
+**Health bottom line:** a well-sited, closed-loop, low-noise data center with
+clean backup power is a genuinely good neighbor. A poorly-conditioned one becomes
+a decade of noise, water, and air complaints. The difference is entirely in the
+conditions attached **before** the permit.
+
+## Putting it in a binding Community Benefits Agreement
+
+Goodwill is not enforceable. The tool that is: a **Community Benefits Agreement
+(CBA)** or **development agreement** — a signed contract, tied to the incentive
+and the permit, that spells out every commitment and the penalty for breaking it.
+
+| Section | What to lock in |
+|---|---|
+| **Investment & tax** | Minimum capital investment; net new tax revenue after any abatement; PILOT/380 payment schedule; assessment floor |
+| **Jobs & wages** | Permanent-job count, wage floor, local-hire %, construction local-vendor target, workforce-training funding |
+| **Community fund** | Fixed $/year or $/MW to a locally-controlled fund; escalation over time |
+| **Water** | Max gallons/day, cooling technology required, source, drought curtailment priority, well-impact protection |
+| **Noise** | Property-line dB limits (day/night + low-frequency), setbacks, continuous monitoring, penalties |
+| **Air / backup power** | Generator emissions tier, testing limits, setbacks, compliance reporting |
+| **Grid / energy** | Curtailment commitment, ratepayer-protection clause, bring-your-own-generation requirement |
+| **Accountability** | Annual public reporting, clawbacks, performance & decommissioning bonds, oversight seat, assignment clause |
+
+**The one-sentence test for any clause:** *If the operator simply ignores this,
+what specifically happens?* If the answer is 'nothing' or 'we'd ask them nicely,'
+it isn't a protection yet — it needs a number, a deadline, and a penalty.
+
+## Questions to ask before you vote
+
+A checklist for officials and residents at the public hearing.
+
+**Money**
+1. What is the **net** new annual tax revenue *after* every abatement and exemption?
+2. What added public costs (services, roads, water, grid) offset that?
+3. Is there a community benefit fund, and who controls it?
+
+**Jobs**
+4. How many *permanent* jobs, at what wages, and are those guaranteed with clawbacks?
+5. What's the commitment to hiring and buying locally?
+
+**Water**
+6. Exactly how many gallons per day, from what source, and what cooling technology?
+7. Who gets curtailed first in a drought — the campus or residents?
+
+**Power**
+8. Will this raise residential electric bills, and who guarantees it won't?
+9. Will the campus add its own generation, and curtail during grid emergencies?
+
+**Health & quality of life**
+10. What are the enforceable noise limits at the nearest home, and how are they monitored?
+11. What backup-generator emissions and testing limits apply?
+12. How far is the nearest home, school, and drinking-water well?
+
+**Accountability**
+13. Is every promise in a signed, enforceable agreement with penalties?
+14. Who reports compliance publicly each year, and what happens if the operator falls short — or sells the site?
+15. Who pays to remove the facility if it's abandoned?
+
+**If you remember one thing:** the community's leverage peaks the moment *before*
+approval and never returns. Every protection you want for the next 30 years has
+to be written down, priced, and signed **now.**
+"""
+
+
+def build_community_value():
+    """Plain-language playbook: how a community captures value from a data-center
+    deal and protects residents. Ported from the ERCOT suite (belongs here)."""
+    body = f"""
+<header>
+  <div class="kicker">Community playbook</div>
+  <h1>Data centers &amp; your community</h1>
+  <p class="sub">What value a community can capture from a data center, how to
+  write it into an enforceable deal, and how to protect residents' health, water,
+  and quality of life. Educational reference — not legal or financial advice.
+  Texas/ERCOT-oriented, but the leverage and protections apply anywhere.</p>
+</header>
+<section>{_md_to_html(_COMMUNITY_VALUE_MD)}</section>
+<section>
+  <p class="muted">General educational reference. Specific abatement law, water
+  rights, and permitting vary by jurisdiction — engage independent legal,
+  engineering, and hydrology counsel (ideally developer-funded) before entering
+  any agreement. See also the <a href="cba-clauses.html">model CBA clauses</a>,
+  <a href="hearing-questions.html">hearing questions</a>, and
+  <a href="siting.html">siting score</a>.</p>
+</section>
+"""
+    return page(
+        "Data centers &amp; your community — AI GridWatch",
+        "How a community captures value from a data-center deal and protects "
+        "residents' health, water, and quality of life — tax, jobs, CBA terms, "
+        "noise/water/air limits, and questions to ask before you vote.",
+        body, f"{SITE_URL}/community-value",
+        jsonld=_breadcrumb(("Home", SITE_URL),
+                           ("Community value", f"{SITE_URL}/community-value")))
+
+
 _GRADE_COLORS = {"A": "#16a34a", "B": "#65a30d", "C": "#d97706",
                  "D": "#ea580c", "F": "#dc2626"}
 
@@ -9726,6 +9924,7 @@ def main():
     (WEB / "cba-clauses.html").write_text(build_cba_clauses(), encoding="utf-8")
     (WEB / "officials.html").write_text(build_officials(), encoding="utf-8")
     (WEB / "scorecard.html").write_text(build_official_scorecard(), encoding="utf-8")
+    (WEB / "community-value.html").write_text(build_community_value(), encoding="utf-8")
     (WEB / "consulting.html").write_text(build_consulting(), encoding="utf-8")
     (WEB / "case-studies.html").write_text(build_case_studies(), encoding="utf-8")
     (WEB / "hearing-questions.html").write_text(
