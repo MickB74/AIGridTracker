@@ -263,8 +263,9 @@ def render_officials_tab():
         cbx1, cbx2 = st.columns(2)
         only_stance = cbx1.checkbox("Only officials with a documented "
                                     "data-center stance", value=False)
-        ec_only = cbx2.checkbox("Only House Energy & Commerce members "
-                                "(the committee with jurisdiction)", value=False)
+        ec_only = cbx2.checkbox("Only key energy committees (House Energy & "
+                                "Commerce + Senate Energy & Natural Resources)",
+                                value=False)
 
         view = odf.copy()
         if offices:
@@ -280,7 +281,8 @@ def render_officials_tab():
         if only_stance:
             view = view[view.stance.str.len() > 0]
         if ec_only:
-            view = view[view.get("committee", "") == "Energy & Commerce"]
+            view = view[view.get("committee", "").isin(
+                ["Energy & Commerce", "Energy & Natural Resources"])]
         view = view.sort_values(["state_full", "office", "name"])
 
         q1, q2, q3 = st.columns(3)
