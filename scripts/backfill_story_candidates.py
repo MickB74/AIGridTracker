@@ -18,6 +18,10 @@ Usage:
     python3 scripts/backfill_story_candidates.py            # last 28 days
     python3 scripts/backfill_story_candidates.py --days 14
     python3 scripts/backfill_story_candidates.py --dry-run
+    python3 scripts/backfill_story_candidates.py --relabel  # re-tag existing
+                                                              # entries against
+                                                              # the current
+                                                              # gazetteer
 
 Deliberately stdlib-only (urllib + ElementTree, not requests/streamlit),
 matching the other scripts/ jobs.
@@ -35,8 +39,27 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from src.constants import GOOGLE_NEWS_RSS, STORY_QUERY          # noqa: E402
+from src.constants import (                                       # noqa: E402
+    GOOGLE_NEWS_RSS, STORY_QUERY, STORY_ANGLES, STORY_IMPACT_WEIGHTS,
+)
 from src import story_tracker                                    # noqa: E402
+
+# STORY_QUERY's own OR-clause already keyword-filters at the Google end, so
+# the default path needs no local check. A custom --query (e.g. "Kenilworth
+# New Jersey data center") has no such filter and returns EVERYTHING about
+# the place — stock analysis, HQ-relocation announcements, industry-group
+# press releases — none of which is a community-impact story. This allowlist
+# (reusing the same keyword sets the live feed already classifies angles
+# and ranks urgency with) keeps a targeted deep-dive on topic.
+_RELEVANCE_KEYWORDS = (set(STORY_IMPACT_WEIGHTS)
+                      | {kw for keys, _, _ in STORY_ANGLES for kw in keys}
+                      | {"resident", "residents", "protest", "oppose",
+                         "concern", "hearing", "backlash", "outcry"})
+
+
+def _is_relevant(title):
+    t = (title or "").lower()
+    return any(kw in t for kw in _RELEVANCE_KEYWORDS)
 
 QUEUE_PATH = Path(__file__).resolve().parent.parent / "data" / "story_candidates.json"
 
@@ -44,10 +67,10 @@ UA = ("Mozilla/5.0 (compatible; GridWatchStoryBackfill/1.0; "
       "+https://aigridwatch.com)")
 
 
-def _widen_query(days):
-    widened, n = re.subn(r"when:\d+d", f"when:{days}d", STORY_QUERY)
+def _widen_query(days, base_query=STORY_QUERY):
+    widened, n = re.subn(r"when:\d+d", f"when:{days}d", base_query)
     if not n:
-        widened = f"{STORY_QUERY} when:{days}d"
+        widened = f"{base_query} when:{days}d"
     return widened
 
 
@@ -86,14 +109,52 @@ def main():
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--days", type=int, default=28,
                     help="lookback window in days (default 28)")
+    ap.add_argument("--query", default=None,
+                    help="override the base query text (default: STORY_QUERY) "
+                         "for a targeted deep-dive on one place, e.g. "
+                         "'Kenilworth New Jersey data center'")
     ap.add_argument("--queue", default=str(QUEUE_PATH),
                     help="path to the story archive JSON")
     ap.add_argument("--dry-run", action="store_true",
                     help="print what would be added, write nothing")
+    ap.add_argument("--relabel", action="store_true",
+                    help="skip fetching; re-run guess_locality/guess_state "
+                         "over every archived story and fix any that now "
+                         "match a locality added to the gazetteer since it "
+                         "was archived. Locality/state are set once at fetch "
+                         "time otherwise, so a place added to LOCAL_BODIES_DF/"
+                         "MORATORIUMS_DF/DC_SITES_DF after the fact needs this "
+                         "to retroactively group its already-archived stories.")
     args = ap.parse_args()
-
-    query = _widen_query(args.days)
     today = dt.date.today().isoformat()
+
+    if args.relabel:
+        path = Path(args.queue)
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        stories = payload.get("stories", [])
+        gazetteer = story_tracker.build_gazetteer()
+        changed = 0
+        for s in stories:
+            if s.get("locality"):
+                continue                                          # already tagged
+            locality, state = story_tracker.guess_locality(s.get("title", ""), gazetteer)
+            if not state:
+                state = story_tracker.guess_state(s.get("title", ""))
+            if locality != s.get("locality") or (locality and state != s.get("state")):
+                s["locality"], s["state"] = locality, state
+                changed += 1
+        print(f"Relabeled {changed} of {len(stories)} archived stories")
+        if args.dry_run:
+            print("(dry run — archive not written)")
+            return 0
+        payload["updated"] = today
+        path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
+                        encoding="utf-8")
+        print(f"Wrote {path}")
+        return 0
+
+    base_query = args.query or STORY_QUERY
+    query = _widen_query(args.days, base_query)
 
     try:
         found = _fetch(query)
@@ -102,6 +163,13 @@ def main():
         return 1
     print(f"Fetched {len(found)} headlines over the last {args.days} days "
           f"({query!r})")
+
+    if args.query:
+        before = len(found)
+        found = [it for it in found if _is_relevant(it["title"])]
+        print(f"  filtered to {len(found)} community-impact headlines "
+              f"(dropped {before - len(found)} off-topic — custom queries "
+              f"aren't pre-filtered by Google the way STORY_QUERY is)")
 
     gazetteer = story_tracker.build_gazetteer()
     records = []
