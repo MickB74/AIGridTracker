@@ -10,6 +10,7 @@ import pandas as pd
 import altair as alt
 
 from src.constants import SITING_REGION_PROFILES
+from src.helpers import src_link
 from src.impact_model import (
     LOAD_FACTOR_AI_CLUSTER, cooling_profile, facility_annual_kwh)
 
@@ -83,8 +84,8 @@ def render_sandbox_tab():
         cooling_cost_adj = 1.5 # million $ per MW
 
 
-    pue_adj, queue_wait, grid_intensity = SITING_REGION_PROFILES.get(
-        region, (0.03, 36, 350))
+    pue_adj, queue_wait, grid_intensity, water_climate_mult = SITING_REGION_PROFILES.get(
+        region, (0.03, 36, 350, 1.0))
     pue += pue_adj
 
     # Bypassing the grid queue with gas turbines or behind-the-meter nuclear
@@ -123,8 +124,9 @@ def render_sandbox_tab():
 
     annual_carbon_tons = (annual_power_mwh * 1000 * carbon_intensity) / 1e6
 
-    # 5. Water Consumption
-    annual_water_gallons = (annual_power_mwh * 1000 * water_rate)
+    # 5. Water Consumption — scaled by the site's climate (hot/arid regions
+    # lose more water per kWh to evaporation than cool/humid ones).
+    annual_water_gallons = (annual_power_mwh * 1000 * water_rate * water_climate_mult)
 
     # 6. Siting Feasibility & Backlash Score (0-100, higher is more feasible/less backlash)
     feasibility_score = 100
@@ -245,10 +247,18 @@ def render_sandbox_tab():
         
         m3, m4 = st.columns(2)
         m3.metric("Annual Carbon Draw", f"{annual_carbon_tons:,.0f} tCO₂e", f"{carbon_intensity} gCO₂/kWh eff.")
-        m4.metric("Annual Cooling Water", f"{annual_water_gallons/1e6:.1f} Million Gal", f"{water_rate} L/kWh rate")
-        
+        m4.metric("Annual Cooling Water", f"{annual_water_gallons/1e6:.1f} Million Gal",
+                  f"{water_rate} gal/kWh base × {water_climate_mult:.2g} climate")
+
         st.divider()
         st.markdown(f"**Calculated Fleet-Wide PUE**: `{pue:.2f}`")
+        st.caption(
+            f"Water draw is scaled for the site's regional climate "
+            f"(×0.85 low / ×1.0 medium / ×1.4 high water stress) — hot/arid "
+            f"sites lose more water per kWh to evaporation than cool/humid "
+            f"ones ({src_link('lei_masanet_2022')}; regional water-stress "
+            f"ratings: {src_link('wri_aqueduct')})."
+        )
         st.markdown('</div>', unsafe_allow_html=True)
         
         # Risk factors expander
