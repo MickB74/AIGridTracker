@@ -573,6 +573,7 @@ NAV_GROUPS = [
         ("Your state", "states/index.html"),
         ("Public utility commissions", "puc.html"),
         ("Moratoriums", "moratoriums.html"),
+        ("Map", "map.html"),
         ("Story tracker", "story-tracker.html"),
         ("Projects tracker", "projects.html"),
         ("Officials scorecard", "scorecard.html"),
@@ -6384,6 +6385,133 @@ def _project_records():
     return out
 
 
+_MAP_JS = """
+const SITES = __SITES__, PROJECTS = __PROJECTS__, MORAT = __MORAT__;
+const map = L.map('gw-map', {scrollWheelZoom:true}).setView([39.5, -98.35], 4);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  subdomains:'abcd', maxZoom:19}).addTo(map);
+function esc(s){ return (s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+function mk(lat,lon,color,r){ return L.circleMarker([lat,lon],
+  {radius:r,color:color,weight:1,fillColor:color,fillOpacity:0.8}); }
+function projColor(p){
+  if (p.hearing_soon) return '#ef4444';
+  const st=(p.stage||'').toLowerCase();
+  if (st.indexOf('approv')>-1) return '#34d399';
+  if (st.indexOf('den')>-1||st.indexOf('withdraw')>-1) return '#94a3b8';
+  return '#fbbf24';
+}
+const projLayer = L.layerGroup(), siteLayer = L.layerGroup(), morLayer = L.layerGroup();
+PROJECTS.forEach(p => mk(p.lat,p.lon,projColor(p),8).bindPopup(
+  '<b>'+esc(p.name)+'</b><br>'+esc(p.operator)+'<br>'+esc(p.locality)+', '+esc(p.state)+
+  (p.mw?' &middot; '+p.mw+' MW':'')+'<br><b>'+esc(p.stage)+'</b><br>'+
+  '<a href="projects#p-'+esc(p.id)+'">Project details &rarr;</a>').addTo(projLayer));
+SITES.forEach(s => mk(s.lat,s.lon,'#38bdf8',5).bindPopup(
+  '<b>'+esc(s.operator)+'</b>'+(s.tenant&&s.tenant!==s.operator?' &middot; tenant '+esc(s.tenant):'')+
+  '<br>'+esc(s.location)+', '+esc(s.state)).addTo(siteLayer));
+MORAT.forEach(m => mk(m.lat,m.lon,'#a855f7',5).bindPopup(
+  '<b>'+esc(m.locality)+', '+esc(m.state)+'</b><br>Moratorium: '+esc(m.status)).addTo(morLayer));
+projLayer.addTo(map); siteLayer.addTo(map);   // moratoriums off by default (dense)
+const overlays = {};
+overlays['<span style="color:#fbbf24">&#9679;</span> Tracked projects ('+PROJECTS.length+')'] = projLayer;
+overlays['<span style="color:#38bdf8">&#9679;</span> Existing data centers ('+SITES.length+')'] = siteLayer;
+overlays['<span style="color:#a855f7">&#9679;</span> Moratoriums &amp; pushback ('+MORAT.length+')'] = morLayer;
+L.control.layers(null, overlays, {collapsed:false}).addTo(map);
+"""
+
+
+def build_map():
+    """Interactive map of tracked projects, existing data-center campuses, and
+    moratoriums — Leaflet + free CARTO/OpenStreetMap tiles, no API key and no
+    billing (the reason it isn't Google Maps). Plots the lat/lon the three
+    registries already carry; project markers are colored by derived stage and
+    deep-link to the project dossier."""
+    import json as _json
+    import math as _math
+
+    def _s(v):
+        if v is None:
+            return ""
+        if isinstance(v, float) and _math.isnan(v):
+            return ""
+        t = str(v).strip()
+        return "" if t.lower() == "nan" else t
+
+    def _num(v):
+        try:
+            f = float(v)
+            return round(f, 5) if f == f else None
+        except (TypeError, ValueError):
+            return None
+
+    sites = []
+    for r in DC_SITES_DF.itertuples():
+        lat, lon = _num(r.lat), _num(r.lon)
+        if lat is None or lon is None:
+            continue
+        sites.append({"lat": lat, "lon": lon, "operator": _s(r.operator),
+                      "tenant": _s(r.tenant), "location": _s(r.location),
+                      "state": _s(r.state)})
+
+    projects = []
+    for r in PROJECTS_DF.itertuples():
+        lat, lon = _num(r.lat), _num(r.lon)
+        if lat is None or lon is None:
+            continue
+        mw = _num(r.size_mw)
+        projects.append({"lat": lat, "lon": lon, "id": _s(r.id),
+                         "name": _s(r.name), "operator": _s(r.operator),
+                         "stage": _s(r.stage), "locality": _s(r.locality),
+                         "state": _s(r.state),
+                         "mw": (int(mw) if mw is not None else None),
+                         "hearing_soon": bool(getattr(r, "hearing_soon", False))})
+
+    moratoriums = []
+    for r in MORATORIUMS_DF.itertuples():
+        lat, lon = _num(r.lat), _num(r.lon)
+        if lat is None or lon is None:
+            continue
+        moratoriums.append({"lat": lat, "lon": lon, "locality": _s(r.locality),
+                            "state": _s(r.state), "status": _s(r.effective_status)})
+
+    js = (_MAP_JS.replace("__SITES__", _json.dumps(sites))
+                 .replace("__PROJECTS__", _json.dumps(projects))
+                 .replace("__MORAT__", _json.dumps(moratoriums)))
+
+    body = f"""
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<header>
+  <div class="kicker">Map</div>
+  <h1>Where data centers are built &mdash; and fought</h1>
+  <p class="sub">Every tracked project, known campus, and community moratorium
+  on one map. Toggle the layers top-right. Projects are colored by stage; click
+  any marker for details. Built on free OpenStreetMap data &mdash; no Google
+  Maps key required.</p>
+</header>
+<div id="gw-map" style="height:72vh;min-height:460px;border-radius:14px;
+  overflow:hidden;border:1px solid var(--rule);margin:8px 0 6px"></div>
+<p class="muted" style="font-size:13px">
+  <span style="color:#ef4444">&#9679;</span> hearing soon &nbsp;
+  <span style="color:#fbbf24">&#9679;</span> proposed / in review &nbsp;
+  <span style="color:#34d399">&#9679;</span> approved &nbsp;
+  <span style="color:#94a3b8">&#9679;</span> denied / withdrawn &nbsp;
+  <span style="color:#38bdf8">&#9679;</span> existing campus &nbsp;
+  <span style="color:#a855f7">&#9679;</span> moratorium</p>
+<div class="note info"><p>Markers are placed from the coordinates in our
+open datasets and are approximate &mdash; a campus pin marks the area, not a
+parcel. Projects deep-link to the <a href="projects">project tracker</a>;
+pushback pins to the <a href="moratoriums">moratorium tracker</a>.</p></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>{js}</script>
+"""
+    return page(
+        "Map: where data centers are built and fought — AI GridWatch",
+        "Interactive map of tracked data center projects, existing campuses, "
+        "and community moratoriums across the U.S. — free, no Google Maps key.",
+        body, f"{SITE_URL}/map", depth=0,
+        jsonld=_breadcrumb(("Home", SITE_URL), ("Map", f"{SITE_URL}/map")))
+
+
 def build_projects_data():
     """Publish the project tracker as projects.json (+ events) and projects.csv."""
     import csv
@@ -9566,6 +9694,7 @@ def main():
     _n_projects = build_projects_data()
     _n_story = build_story_data(_STORY_ARCHIVE)
     (WEB / "moratoriums.html").write_text(build_moratoriums(), encoding="utf-8")
+    (WEB / "map.html").write_text(build_map(), encoding="utf-8")
     (WEB / "story-tracker.html").write_text(
         build_story_tracker(_STORY_ARCHIVE, _VIDEO_ITEMS), encoding="utf-8")
     print(f"  [data] {_n_story} archived headlines -> story-tracker.html + story_tracker.json")
@@ -9658,7 +9787,7 @@ def main():
              "data-centers", "environment", "studies",
              "cba-clauses", "officials", "consulting", "case-studies",
              "hearing-questions", "glossary", "tax-breaks", "siting",
-             "companies/", "states/", "blog/", "news/", "videos",
+             "companies/", "states/", "blog/", "news/", "videos", "map",
              "communities/"]
     paths.extend(_community_paths)
     paths.extend(f"companies/{h['slug']}" for h in _HYPERSCALERS)
