@@ -57,6 +57,70 @@ def guess_locality(title, gazetteer):
     return None, None
 
 
+_NON_STATE_PHRASES = ("Washington Post", "Washington, D.C.", "Washington DC",
+                     "Washington, DC", "New Yorker", "New York Times",
+                     "Georgia Tech")
+# Two-letter abbrevs only match in tight postal-style contexts (a comma
+# before them, "state of X", or right before a bill/regulator token) — same
+# guard build_site.py's _post_states/_news_states_for use, to avoid the
+# classic "OR/IN/OK" false positives inside ordinary prose.
+_ABBREV_TOKEN = {
+    abbrev: re.compile(rf"(?:,\s*|\bstate\s+of\s+){re.escape(abbrev)}\b"
+                       rf"|\b{re.escape(abbrev)}(?=\s+(?:H\.?B\.?|S\.?B\.?|PUC|PSC))")
+    for _, abbrev in zip(STATE_PUCS_DF["state"], STATE_PUCS_DF["abbrev"])
+}
+_STATE_NAME_TO_ABBREV = dict(zip(STATE_PUCS_DF["state"], STATE_PUCS_DF["abbrev"]))
+
+
+def guess_state(text):
+    """Best-effort state abbrev mentioned in `text` (a headline, typically),
+    or None. Used as the fallback when guess_locality finds no known town —
+    "Ohio residents sue..." still archives as OH instead of unclassified."""
+    haystack = text or ""
+    cleaned = haystack
+    for bad in _NON_STATE_PHRASES:
+        cleaned = cleaned.replace(bad, " ")
+    for name, abbrev in _STATE_NAME_TO_ABBREV.items():
+        if re.search(rf"\b{re.escape(name)}\b", cleaned, re.IGNORECASE):
+            return abbrev
+        if _ABBREV_TOKEN[abbrev].search(haystack):
+            return abbrev
+    return None
+
+
+def date_from_iso(iso, default=None):
+    """YYYY-MM-DD from an ISO datetime string, or `default` if blank/unparseable."""
+    if iso and len(iso) >= 10:
+        return iso[:10]
+    return default
+
+
+def merge_stories(existing, fresh_records, today):
+    """Fold `fresh_records` into `existing` (mutated in place), deduped by
+    link. A record already present only gets `last_seen` bumped and, if the
+    fresh copy's own published date is earlier than what's on file,
+    `first_seen` is pulled back to it — first_seen means the earliest known
+    date this coverage existed, not "the day a crawler happened to see it",
+    so a later backfill can correct an entry the live feed recorded late.
+    Returns the number of genuinely new records added."""
+    by_link = {s["link"]: s for s in existing if s.get("link")}
+    added = 0
+    for record in fresh_records:
+        link = record.get("link")
+        if not link:
+            continue
+        prior = by_link.get(link)
+        if prior:
+            prior["last_seen"] = today
+            if record.get("first_seen") and record["first_seen"] < prior.get("first_seen", today):
+                prior["first_seen"] = record["first_seen"]
+            continue
+        existing.append(record)
+        by_link[link] = record
+        added += 1
+    return added
+
+
 def classify_angle(title):
     """(emoji, one-line blurb) for the headline's dominant concern, same
     taxonomy the live app feed uses (STORY_ANGLES)."""

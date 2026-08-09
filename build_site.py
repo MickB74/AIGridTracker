@@ -2090,26 +2090,26 @@ def _persist_story_candidates(items):
                   f"({e}); leaving it untouched this build.")
             return payload.get("stories", [])
     existing = payload.get("stories", [])
-    by_link = {s["link"]: s for s in existing if s.get("link")}
 
     gazetteer = story_tracker.build_gazetteer()
-    added = 0
+    fresh = []
     for it in items or []:
         link = it.get("link")
         if not link:
             continue
-        if link in by_link:
-            by_link[link]["last_seen"] = today
-            continue
         locality, state = story_tracker.guess_locality(it.get("title", ""), gazetteer)
-        if not state and it.get("states"):
+        if not state:
             # Fall back to the state _news_states_for already tagged, mapped
             # to its abbreviation so it matches the gazetteer's convention
-            # (MORATORIUMS_DF/DC_SITES_DF store abbrevs, not full names).
-            match = STATE_PUCS_DF[STATE_PUCS_DF["state"] == it["states"][0]]
-            if not match.empty:
-                state = match.iloc[0]["abbrev"]
-        record = {
+            # (MORATORIUMS_DF/DC_SITES_DF store abbrevs, not full names), and
+            # only then to a fresh regex guess off the raw title.
+            if it.get("states"):
+                match = STATE_PUCS_DF[STATE_PUCS_DF["state"] == it["states"][0]]
+                if not match.empty:
+                    state = match.iloc[0]["abbrev"]
+            if not state:
+                state = story_tracker.guess_state(it.get("title", ""))
+        fresh.append({
             "title": it.get("title", ""),
             "outlet": it.get("source", ""),
             "link": link,
@@ -2117,13 +2117,11 @@ def _persist_story_candidates(items):
             "published_iso": it.get("published_iso", ""),
             "locality": locality,
             "state": state,
-            "first_seen": today,
+            "first_seen": story_tracker.date_from_iso(it.get("published_iso"), today),
             "last_seen": today,
-        }
-        existing.append(record)
-        by_link[link] = record
-        added += 1
+        })
 
+    added = story_tracker.merge_stories(existing, fresh, today)
     payload["updated"] = today
     payload["stories"] = existing
     STORY_CANDIDATES_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -2157,57 +2155,108 @@ def build_story_data(stories):
     return len(stories)
 
 
+def _story_group_slug(label):
+    slug = re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-")
+    return slug or "unclassified"
+
+
 def build_story_tracker(stories):
     """Every tracked community-impact headline, grouped by locality and
     searchable — the durable counterpart to the rolling 7-day /news feed.
     A locality with 4+ archived stories gets a heuristic summary (no LLM
     call) so the pattern is visible without reading every headline."""
+    import datetime as _dt
+
     groups = story_tracker.group_stories(stories, min_for_summary=4)
     n_localized = sum(1 for g in groups if g["locality"])
-    n_patterns = sum(1 for g in groups if g["summary"])
+    patterns = [g for g in groups if g["summary"]]
     states_covered = sorted({g["state"] for g in groups if g["state"]})
 
     state_options = '<option value="">All states</option>' + "".join(
         f'<option value="{esc(s)}">{esc(s)}</option>' for s in states_covered)
 
-    def _fmt_date(iso):
-        if not iso:
+    def _fmt_date(iso, fmt="%b %-d, %Y"):
+        # Accepts either a bare date (first_seen: "2026-08-08") or a full
+        # datetime (published_iso: "2026-08-08T17:00:00+00:00") — only the
+        # date portion is ever displayed.
+        d = story_tracker.date_from_iso(iso)
+        if not d:
             return ""
         try:
-            import datetime as _dt
-            return _dt.date.fromisoformat(iso).strftime("%b %-d, %Y")
+            return _dt.date.fromisoformat(d).strftime(fmt)
         except Exception:                                         # noqa: BLE001
             return iso
 
+    def _latest_iso(g):
+        return g["stories"][0].get("published_iso", "") if g["stories"] else ""
+
+    # ── "Patterns to watch" — the recurring (4+) groups, featured above the
+    # searchable grid so the signal a resident most needs isn't buried among
+    # 20+ one-off headlines. ─────────────────────────────────────────────── #
+    patterns_html = ""
+    if patterns:
+        rows = []
+        for i, g in enumerate(patterns, 1):
+            latest = g["stories"][0]
+            rows.append(
+                '<li class="top-story">'
+                f'<div class="rank">{i}</div>'
+                '<div class="angle">📍</div>'
+                '<div class="top-body">'
+                f'<h3><a href="#{_story_group_slug(g["label"])}">{esc(g["label"])}</a> '
+                f'<span class="count">{g["count"]} stories</span></h3>'
+                f'<p class="blurb">{esc(g["summary"])}</p>'
+                f'<p class="meta">Latest: <a href="{esc(latest.get("link", ""))}" '
+                f'rel="nofollow noopener" target="_blank">'
+                f'{esc(latest.get("title", ""))}</a></p>'
+                '</div></li>')
+        patterns_html = (
+            '<section id="patterns"><h2>Patterns to watch</h2>'
+            '<p class="muted">Places with 4 or more archived headlines — the '
+            'ones where separate stories add up to an ongoing fight, not a '
+            'one-off. Summaries below are template-generated from headline '
+            'keywords, not written by a person.</p>'
+            f'<ol class="top-stories-list">{"".join(rows)}</ol></section>')
+
     cards = []
     for g in groups:
-        headline_rows = "\n".join(
-            f'<li><a href="{esc(s.get("link", ""))}" rel="nofollow noopener" '
-            f'target="_blank">{esc(s.get("title", ""))}</a>'
-            f'<span class="meta">{esc(s.get("outlet", ""))}'
-            f'{" · " + _fmt_date(s.get("first_seen")) if s.get("first_seen") else ""}</span></li>'
-            for s in g["stories"])
+        headline_rows = []
+        for s in g["stories"]:
+            emoji, blurb = story_tracker.classify_angle(s.get("title", ""))
+            headline_rows.append(
+                f'<li><a href="{esc(s.get("link", ""))}" rel="nofollow noopener" '
+                f'target="_blank">{esc(s.get("title", ""))}</a>'
+                f'<span class="meta"><span class="tag" title="{esc(blurb)}">'
+                f'{emoji}</span> {esc(s.get("outlet", ""))}'
+                f'{" · " + _fmt_date(s.get("first_seen")) if s.get("first_seen") else ""}'
+                '</span></li>')
         summary_html = (f'<p class="summary">{esc(g["summary"])}</p>'
                         if g["summary"] else "")
         pattern_badge = (' <span class="badge badge-pattern">Recurring pattern</span>'
                          if g["summary"] else "")
+        last_active = _fmt_date(_latest_iso(g), fmt="%b %-d")
         search_blob = esc(" ".join([g["label"]] + [s.get("title", "") for s in g["stories"]]))
+        slug = _story_group_slug(g["label"])
         cards.append(
-            f'<article class="story-group" data-state="{esc(g["state"] or "")}" '
+            f'<article class="story-group" id="{slug}" data-state="{esc(g["state"] or "")}" '
+            f'data-count="{g["count"]}" data-latest="{esc(_latest_iso(g))}" '
+            f'data-pattern="{"1" if g["summary"] else "0"}" '
             f'data-search="{search_blob.lower()}">'
-            f'<h3>{esc(g["label"])} <span class="count">{g["count"]}'
-            f' stor{"y" if g["count"] == 1 else "ies"}</span>{pattern_badge}</h3>'
+            f'<h3><a href="#{slug}" class="anchor">{esc(g["label"])}</a> '
+            f'<span class="count">{g["count"]} stor{"y" if g["count"] == 1 else "ies"}</span>'
+            f'{pattern_badge}</h3>'
+            f'{f"<p class=\"muted\" style=\"margin:-2px 0 8px;font-size:12.5px\">last activity {last_active}</p>" if last_active else ""}'
             f'{summary_html}'
             f'<details{" open" if g["count"] <= 3 else ""}>'
-            f'<summary>{"Show" if g["count"] > 3 else ""} headlines</summary>'
-            f'<ul class="story-list">{headline_rows}</ul></details></article>')
+            f'<summary>{g["count"]} headline{"s" if g["count"] != 1 else ""}</summary>'
+            f'<ul class="story-list">{"".join(headline_rows)}</ul></details></article>')
 
     body = f"""
 <header>
   <div class="kicker">Community tracker</div>
   <h1>Story tracker — every headline, by community</h1>
   <p class="sub">The <a href="news/">news feed</a> shows the last 7 days.
-  This page keeps every community-impact headline GridWatch has ever seen,
+  This page keeps every community-impact headline GridWatch has archived,
   grouped by the town or county it's about, so a pattern spread across many
   separate stories doesn't disappear once the feed scrolls past it.</p>
 </header>
@@ -2215,8 +2264,9 @@ def build_story_tracker(stories):
   <div class="stat"><b>{len(stories)}</b><span>headlines archived</span></div>
   <div class="stat"><b>{len(groups)}</b><span>places tracked</span></div>
   <div class="stat"><b>{n_localized}</b><span>with a named locality</span></div>
-  <div class="stat"><b>{n_patterns}</b><span>recurring patterns (4+ stories)</span></div>
+  <div class="stat"><b>{len(patterns)}</b><span>recurring patterns (4+ stories)</span></div>
 </div>
+{patterns_html}
 <section id="browse">
   <h2>Look up a community</h2>
   <div class="feed-controls">
@@ -2227,13 +2277,23 @@ def build_story_tracker(stories):
       <label style="flex:1">Search
         <input id="keywordFilter" type="search" placeholder="e.g. Grayslake, Meta, lawsuit">
       </label>
+      <label>Sort
+        <select id="sortOrder">
+          <option value="count">Most stories</option>
+          <option value="recent">Most recent activity</option>
+        </select>
+      </label>
     </div>
     <div class="row" style="justify-content:space-between">
+      <label style="gap:6px">
+        <input id="patternsOnly" type="checkbox">
+        Recurring patterns only
+      </label>
       <span id="filterCount" class="muted"></span>
       <button id="resetFilters" class="btn ghost" style="padding:6px 12px;font-size:13px" type="button">Reset</button>
     </div>
   </div>
-  <div id="storyGroups">{"".join(cards)}</div>
+  <div id="storyGroups" class="story-grid">{"".join(cards)}</div>
   <p id="noResults" class="muted" style="display:none">No tracked communities match those filters.</p>
 </section>
 <section>
@@ -2256,10 +2316,15 @@ def build_story_tracker(stories):
   <a href="moratoriums.html">moratorium tracker</a>.</p>
 </section>
 <style>
+.story-grid {{ display:grid; gap:12px;
+  grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); }}
 .story-group {{ background:var(--card); border:1px solid var(--rule);
-  border-radius:12px; padding:14px 16px; margin:0 0 12px; }}
+  border-radius:12px; padding:14px 16px; }}
+.story-group[data-pattern="1"] {{ border-left:3px solid var(--teal); }}
 .story-group h3 {{ margin:0 0 6px; font-size:16px; display:flex;
   align-items:center; gap:8px; flex-wrap:wrap; }}
+.story-group h3 a.anchor {{ color:var(--ink); text-decoration:none; }}
+.story-group h3 a.anchor:hover {{ color:var(--teal); }}
 .story-group .count {{ font-size:12.5px; font-weight:400; color:var(--muted); }}
 .badge-pattern {{ font-size:11.5px; font-weight:600; padding:2px 8px;
   border-radius:999px; background:rgba(45,212,191,.14); color:var(--teal);
@@ -2268,52 +2333,95 @@ def build_story_tracker(stories):
   line-height:1.5; }}
 .story-group details summary {{ cursor:pointer; font-size:13px;
   color:var(--muted); }}
-.story-list {{ list-style:none; padding:0; margin:8px 0 0; display:grid; gap:6px; }}
+.story-list {{ list-style:none; padding:0; margin:8px 0 0; display:grid; gap:7px; }}
 .story-list li {{ font-size:14px; line-height:1.4; }}
-.story-list .meta {{ display:block; font-size:12px; color:var(--muted); }}
+.story-list .meta {{ display:flex; align-items:center; gap:5px; font-size:12px;
+  color:var(--muted); margin-top:1px; }}
+.story-list .tag {{ font-size:13px; cursor:help; }}
+.top-stories-list {{ list-style:none; padding:0; margin:16px 0; display:grid;
+  gap:12px; }}
+.top-story {{ display:grid; grid-template-columns:30px 30px 1fr; gap:10px;
+  align-items:start; padding:14px 16px; background:var(--card);
+  border:1px solid var(--rule); border-radius:12px; }}
+.top-story .rank {{ font-size:20px; font-weight:800; color:var(--teal);
+  line-height:1.3; text-align:center; }}
+.top-story .angle {{ font-size:20px; line-height:1.3; }}
+.top-story .top-body h3 {{ font-size:15.5px; margin:0 0 4px; line-height:1.35; }}
+.top-story .top-body h3 a {{ text-decoration:none; }}
+.top-story .blurb {{ font-size:13.5px; color:var(--ink); margin:0 0 4px; }}
+.top-story .meta {{ font-size:12.5px; color:var(--muted); margin:0; }}
+.top-story .meta a {{ color:var(--muted); }}
+.feed-controls label[style*="gap:6px"] {{ display:flex; align-items:center;
+  font-size:13.5px; color:var(--muted); cursor:pointer; }}
 </style>
 <script>
 (function() {{
   var stateSel = document.getElementById('stateFilter');
   var kw = document.getElementById('keywordFilter');
+  var sortSel = document.getElementById('sortOrder');
+  var patternsOnly = document.getElementById('patternsOnly');
   var wrap = document.getElementById('storyGroups');
   var count = document.getElementById('filterCount');
   var none = document.getElementById('noResults');
   var reset = document.getElementById('resetFilters');
   var cards = Array.prototype.slice.call(wrap.querySelectorAll('.story-group'));
+  var total = cards.length;
+
+  function sortCards() {{
+    var byRecent = sortSel.value === 'recent';
+    var sorted = cards.slice().sort(function(a, b) {{
+      if (byRecent) {{
+        return (b.getAttribute('data-latest') || '').localeCompare(a.getAttribute('data-latest') || '');
+      }}
+      return parseInt(b.getAttribute('data-count'), 10) - parseInt(a.getAttribute('data-count'), 10);
+    }});
+    sorted.forEach(function(el) {{ wrap.appendChild(el); }});
+  }}
 
   function apply() {{
     var state = stateSel.value;
     var kwVal = (kw.value || '').trim().toLowerCase();
+    var onlyPatterns = patternsOnly.checked;
     var shown = 0;
     cards.forEach(function(el) {{
       var match = (!state || el.getAttribute('data-state') === state)
+                && (!onlyPatterns || el.getAttribute('data-pattern') === '1')
                 && (!kwVal || (el.getAttribute('data-search') || '').indexOf(kwVal) !== -1);
       el.style.display = match ? '' : 'none';
       if (match) shown++;
     }});
-    count.textContent = (state || kwVal)
-      ? shown + ' of {len(groups)} places'
-      : '{len(groups)} places · most-covered first';
-    none.style.display = ((state || kwVal) && shown === 0) ? '' : 'none';
+    count.textContent = (state || kwVal || onlyPatterns)
+      ? shown + ' of ' + total + ' places'
+      : total + ' places';
+    none.style.display = ((state || kwVal || onlyPatterns) && shown === 0) ? '' : 'none';
     var qs = new URLSearchParams();
     if (state) qs.set('state', state);
     if (kwVal) qs.set('q', kwVal);
+    if (onlyPatterns) qs.set('patterns', '1');
+    if (sortSel.value !== 'count') qs.set('sort', sortSel.value);
     var qStr = qs.toString();
     history.replaceState(null, '', qStr ? ('?' + qStr) : location.pathname);
   }}
 
   stateSel.addEventListener('change', apply);
   kw.addEventListener('input', apply);
+  patternsOnly.addEventListener('change', apply);
+  sortSel.addEventListener('change', function() {{ sortCards(); apply(); }});
   reset.addEventListener('click', function() {{
     stateSel.value = '';
     kw.value = '';
+    patternsOnly.checked = false;
+    sortSel.value = 'count';
+    sortCards();
     apply();
   }});
 
   var q = new URLSearchParams(location.search);
   if (q.get('state')) stateSel.value = q.get('state');
   if (q.get('q')) kw.value = q.get('q');
+  if (q.get('patterns')) patternsOnly.checked = true;
+  if (q.get('sort')) sortSel.value = q.get('sort');
+  sortCards();
   apply();
 }})();
 </script>
