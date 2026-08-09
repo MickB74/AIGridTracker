@@ -4229,6 +4229,52 @@ LOCAL_BODIES = [
      "email": "",
      "website": "https://www.vinelandcity.org/planning-board/",
      "as_of": "2026-08-08", "source": "https://www.vinelandcity.org/planning-board/"},
+
+    {"locality": "Flagler County", "state": "FL",
+     "body": "Board of County Commissioners",
+     "decides": "Land use, rezonings and the county budget across five districts. "
+                "Flagler enacted a one-year data center moratorium (through Aug 2027).",
+     "meets": "1st Monday 9:00 a.m. and 3rd Monday 5:00 p.m.",
+     "where": "Government Services Building #2, 1769 E. Moody Boulevard, Bunnell, FL 32110",
+     "agenda_url": "https://www.flaglercounty.gov/Government/Board-of-County-Commissioners/Meetings-Agendas-Summaries",
+     "comment_process": "Meetings are streamed live; see the board's Rules & "
+                        "Procedures and the meetings page for the public-comment process.",
+     "phone": "386-313-4001", "email": "",
+     "website": "https://www.flaglercounty.gov/Government/Board-of-County-Commissioners",
+     "as_of": "2026-08-07", "source": "https://www.flaglercounty.gov/Government/Board-of-County-Commissioners"},
+
+    {"locality": "Hays County", "state": "TX",
+     "body": "Commissioners Court",
+     "decides": "County budget, roads and development in the unincorporated county "
+                "across four precincts, presided over by the County Judge. Hays "
+                "enacted a data center moratorium (through Dec 31, 2026); San "
+                "Marcos, the county seat, was the first Texas city to ban data centers.",
+     "meets": "Tuesdays 9:00 a.m.",
+     "where": "Hays County Historic Courthouse, 111 E. San Antonio St., San Marcos, "
+              "TX 78666 (offices at 712 South Stagecoach Trail)",
+     "agenda_url": "https://www.hayscountytx.gov/164/Commissioners-Court",
+     "comment_process": "Commissioners Court meets Tuesday mornings; see the "
+                        "county's agenda portal for the public-comment process.",
+     "phone": "512-393-7779", "email": "",
+     "website": "https://www.hayscountytx.gov/188/Commissioners-Court-Members",
+     "as_of": "2026-08-07", "source": "https://www.hayscountytx.gov/188/Commissioners-Court-Members"},
+
+    {"locality": "Broomfield", "state": "CO",
+     "body": "City Council",
+     "decides": "Ordinances, land use and budget for the consolidated City and "
+                "County of Broomfield — ten members across five wards plus an "
+                "at-large mayor. Broomfield enacted Ordinance 2313, an 18-month "
+                "data center pause (through Dec 2027).",
+     "meets": "See the city's published council meeting calendar",
+     "where": "George Di Ciero City and County Building, Broomfield, CO — check "
+              "the council calendar for time and room",
+     "agenda_url": "https://www.broomfield.org/128/Broomfield-Council",
+     "comment_process": "See 'Participate in City Council Meetings' "
+                        "(broomfield.org/467) for how to give public comment; "
+                        "meetings are also streamed.",
+     "phone": "303-438-6300", "email": "",
+     "website": "https://www.broomfield.org/954/Council-Members",
+     "as_of": "2026-08-07", "source": "https://www.broomfield.org/954/Council-Members"},
 ]
 LOCAL_BODIES_DF = pd.DataFrame(LOCAL_BODIES)
 
@@ -4451,5 +4497,95 @@ LOCAL_OFFICIALS = [
      "name": "Jason Bearden", "role": "Commissioner", "district": "At-large",
      "email": "", "phone": "941-705-8709", "stance": "", "as_of": "2026-08-05",
      "source": "https://www.mymanatee.org/government/government-information/board-of-county-commissioners"},
+
+    # Flagler County, FL — https://www.flaglercounty.gov/Government/Board-of-County-Commissioners
+    {"locality": "Flagler County", "state": "FL", "body": "Board of County Commissioners",
+     "name": "Leann Pennington", "role": "Chair", "district": "District 4",
+     "email": "", "phone": "386-313-4001", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.flaglercounty.gov/Government/Board-of-County-Commissioners"},
+    {"locality": "Flagler County", "state": "FL", "body": "Board of County Commissioners",
+     "name": "Kim Carney", "role": "Vice Chair", "district": "District 3",
+     "email": "", "phone": "386-313-4001", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.flaglercounty.gov/Government/Board-of-County-Commissioners"},
+    {"locality": "Flagler County", "state": "FL", "body": "Board of County Commissioners",
+     "name": "Andy Dance", "role": "Commissioner", "district": "District 1",
+     "email": "", "phone": "386-313-4001", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.flaglercounty.gov/Government/Board-of-County-Commissioners"},
+    {"locality": "Flagler County", "state": "FL", "body": "Board of County Commissioners",
+     "name": "Gregory Hansen", "role": "Commissioner", "district": "District 2",
+     "email": "", "phone": "386-313-4001", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.flaglercounty.gov/Government/Board-of-County-Commissioners"},
+    {"locality": "Flagler County", "state": "FL", "body": "Board of County Commissioners",
+     "name": "Pam Richardson", "role": "Commissioner", "district": "District 5",
+     "email": "", "phone": "386-313-4001", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.flaglercounty.gov/Government/Board-of-County-Commissioners"},
+
+    # Hays County, TX — https://www.hayscountytx.gov/188/Commissioners-Court-Members
+    {"locality": "Hays County", "state": "TX", "body": "Commissioners Court",
+     "name": "Ruben Becerra", "role": "County Judge (presides)", "district": "At-large",
+     "email": "", "phone": "512-393-7779", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.hayscountytx.gov/188/Commissioners-Court-Members"},
+    {"locality": "Hays County", "state": "TX", "body": "Commissioners Court",
+     "name": "Debbie Ingalsbe", "role": "Commissioner", "district": "Precinct 1",
+     "email": "", "phone": "512-393-2243", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.hayscountytx.gov/188/Commissioners-Court-Members"},
+    {"locality": "Hays County", "state": "TX", "body": "Commissioners Court",
+     "name": "Michelle Cohen", "role": "Commissioner", "district": "Precinct 2",
+     "email": "", "phone": "", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.hayscountytx.gov/188/Commissioners-Court-Members"},
+    {"locality": "Hays County", "state": "TX", "body": "Commissioners Court",
+     "name": "Morgan Hammer", "role": "Commissioner", "district": "Precinct 3",
+     "email": "", "phone": "", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.hayscountytx.gov/188/Commissioners-Court-Members"},
+    {"locality": "Hays County", "state": "TX", "body": "Commissioners Court",
+     "name": "Walt Smith", "role": "Commissioner", "district": "Precinct 4",
+     "email": "", "phone": "512-858-7268", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.hayscountytx.gov/188/Commissioners-Court-Members"},
+
+    # Broomfield, CO — https://www.broomfield.org/954/Council-Members
+    {"locality": "Broomfield", "state": "CO", "body": "City Council",
+     "name": "Guyleen Castriotta", "role": "Mayor", "district": "At-large",
+     "email": "", "phone": "303-438-6300", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.broomfield.org/954/Council-Members"},
+    {"locality": "Broomfield", "state": "CO", "body": "City Council",
+     "name": "Jean Lim", "role": "Mayor Pro Tem", "district": "Ward 3",
+     "email": "", "phone": "303-438-6300", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.broomfield.org/954/Council-Members"},
+    {"locality": "Broomfield", "state": "CO", "body": "City Council",
+     "name": "Sarah Braun", "role": "Council Member", "district": "Ward 3",
+     "email": "", "phone": "303-438-6300", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.broomfield.org/954/Council-Members"},
+    {"locality": "Broomfield", "state": "CO", "body": "City Council",
+     "name": "Julie Twiss", "role": "Council Member", "district": "Ward 1",
+     "email": "", "phone": "303-438-6300", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.broomfield.org/954/Council-Members"},
+    {"locality": "Broomfield", "state": "CO", "body": "City Council",
+     "name": "Katie Peterson", "role": "Council Member", "district": "Ward 1",
+     "email": "", "phone": "303-438-6300", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.broomfield.org/954/Council-Members"},
+    {"locality": "Broomfield", "state": "CO", "body": "City Council",
+     "name": "Paloma Delgadillo", "role": "Council Member", "district": "Ward 2",
+     "email": "", "phone": "303-438-6300", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.broomfield.org/954/Council-Members"},
+    {"locality": "Broomfield", "state": "CO", "body": "City Council",
+     "name": "Austin Ward", "role": "Council Member", "district": "Ward 2",
+     "email": "", "phone": "303-438-6300", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.broomfield.org/954/Council-Members"},
+    {"locality": "Broomfield", "state": "CO", "body": "City Council",
+     "name": "Laurie Anderson", "role": "Council Member", "district": "Ward 4",
+     "email": "", "phone": "303-438-6300", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.broomfield.org/954/Council-Members"},
+    {"locality": "Broomfield", "state": "CO", "body": "City Council",
+     "name": "Sean McKenzie", "role": "Council Member", "district": "Ward 4",
+     "email": "", "phone": "303-438-6300", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.broomfield.org/954/Council-Members"},
+    {"locality": "Broomfield", "state": "CO", "body": "City Council",
+     "name": "Heidi Henkel", "role": "Council Member", "district": "Ward 5",
+     "email": "", "phone": "303-438-6300", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.broomfield.org/954/Council-Members"},
+    {"locality": "Broomfield", "state": "CO", "body": "City Council",
+     "name": "Todd Cohen", "role": "Council Member", "district": "Ward 5",
+     "email": "", "phone": "303-438-6300", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.broomfield.org/954/Council-Members"},
 ]
 LOCAL_OFFICIALS_DF = pd.DataFrame(LOCAL_OFFICIALS)
