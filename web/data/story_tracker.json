@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 60,
+  "count": 61,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -665,6 +665,17 @@
       "published_iso": "2026-08-06T17:43:00+00:00",
       "locality": "Tulsa",
       "state": "OK",
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08"
+    },
+    {
+      "title": "Pitt County town temporarily stops data center for a year following community opposition",
+      "outlet": "wral.com",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOd21hT1lOa1hDeWp1bkxPdWJjUG44X1hBWFdSazB4dmxaSE1lVXR0Smx6NHdrQy1ycFpDc2hJaDVyRDhoVlhnMTZtVWYxNlJveEdtVGRST3Y3enVnUnozdUhZMWVXWTJCTjZuN1FrX29Kc29BdTVlaV82TkVMOWpkaTNQdHIxeC16WEhYUWJBYzlvTFRWSmJZRE9OLTZRbnlqUEZOWGdQUG5jN0NnV3hjdFlzRkxWR3ZiS193QU5keXJySEot?oc=5",
+      "published": "Tue, 04 Aug 2026 11:13:30 GMT",
+      "published_iso": "2026-08-04T11:13:30+00:00",
+      "locality": null,
+      "state": null,
       "first_seen": "2026-08-08",
       "last_seen": "2026-08-08"
     }
