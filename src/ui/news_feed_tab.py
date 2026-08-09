@@ -129,4 +129,8 @@ def render_news_feed_tab():
 
     st.info("**See also:** the **🗞️ Community & backlash** tab for the moratorium "
             "tracker, town case studies, and the hyperscaler environmental "
-            "scorecard.")
+            "scorecard. This feed only shows the last 7 days — for every "
+            "headline GridWatch has archived, grouped by town/county with a "
+            "pattern summary once a place has 4+ stories, see the "
+            "**[story tracker](https://aigridwatch.com/story-tracker)** on "
+            "the GridWatch site.")

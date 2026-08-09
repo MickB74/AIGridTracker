@@ -66,6 +66,7 @@ from src.constants import (
 )
 from src.pdf_pack import build_health_pdf
 from src.us_map_data import US_MAP_PATHS, US_MAP_LABELS, US_MAP_VIEWBOX
+from src import story_tracker
 
 # The live domain. Canonical tags and the sitemap are built from this, so it
 # must be the domain users actually reach — pointing them at the *.vercel.app
@@ -572,6 +573,7 @@ NAV_GROUPS = [
         ("Your state", "states/index.html"),
         ("Public utility commissions", "puc.html"),
         ("Moratoriums", "moratoriums.html"),
+        ("Story tracker", "story-tracker.html"),
         ("Projects tracker", "projects.html"),
     ]),
     ("The facts", [
@@ -1705,6 +1707,12 @@ def _videos_for_state(state_name, limit=4):
 NEWS_CACHE_PATH = pathlib.Path(__file__).parent / "data" / "news_cache.json"
 NEWS_CACHE_TTL_HOURS = 6
 
+# Durable archive of the same feed, grouped by locality — see
+# _persist_story_candidates / build_story_tracker below. Unlike
+# NEWS_CACHE_PATH (overwritten each fetch), entries here accumulate: a story
+# keeps its first_seen date across every build that re-fetches it.
+STORY_CANDIDATES_PATH = pathlib.Path(__file__).parent / "data" / "story_candidates.json"
+
 def _news_states_for(item):
     haystack = " ".join([item.get("title", ""), item.get("source", "")])
     # Strip common non-state uses before matching abbrev/name.
@@ -2060,6 +2068,263 @@ def _load_news():
     print(f"  [news] fetched {len(items)} broad + {theme_total} across "
           f"{len(themes)} themes; top {len(top_stories)} ranked")
     return items, themes, top_stories, fetched_at
+
+
+def _persist_story_candidates(items):
+    """Merge freshly fetched community-impact headlines into the durable,
+    locality-tagged archive at STORY_CANDIDATES_PATH. Idempotent — re-fetching
+    the same 7-day window on every build only bumps `last_seen`; a story's
+    `first_seen` and locality tag are set once and kept. This accumulation is
+    what makes the story tracker a running history instead of a rolling
+    7-day window like the news feed itself. Returns the full archive list.
+    """
+    import datetime as _dt
+    today = _dt.date.today().isoformat()
+
+    payload = {"updated": today, "stories": []}
+    if STORY_CANDIDATES_PATH.exists():
+        try:
+            payload = json.loads(STORY_CANDIDATES_PATH.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as e:
+            print(f"  [story-tracker] {STORY_CANDIDATES_PATH} is not valid JSON "
+                  f"({e}); leaving it untouched this build.")
+            return payload.get("stories", [])
+    existing = payload.get("stories", [])
+    by_link = {s["link"]: s for s in existing if s.get("link")}
+
+    gazetteer = story_tracker.build_gazetteer()
+    added = 0
+    for it in items or []:
+        link = it.get("link")
+        if not link:
+            continue
+        if link in by_link:
+            by_link[link]["last_seen"] = today
+            continue
+        locality, state = story_tracker.guess_locality(it.get("title", ""), gazetteer)
+        if not state and it.get("states"):
+            # Fall back to the state _news_states_for already tagged, mapped
+            # to its abbreviation so it matches the gazetteer's convention
+            # (MORATORIUMS_DF/DC_SITES_DF store abbrevs, not full names).
+            match = STATE_PUCS_DF[STATE_PUCS_DF["state"] == it["states"][0]]
+            if not match.empty:
+                state = match.iloc[0]["abbrev"]
+        record = {
+            "title": it.get("title", ""),
+            "outlet": it.get("source", ""),
+            "link": link,
+            "published": it.get("published", ""),
+            "published_iso": it.get("published_iso", ""),
+            "locality": locality,
+            "state": state,
+            "first_seen": today,
+            "last_seen": today,
+        }
+        existing.append(record)
+        by_link[link] = record
+        added += 1
+
+    payload["updated"] = today
+    payload["stories"] = existing
+    STORY_CANDIDATES_PATH.parent.mkdir(parents=True, exist_ok=True)
+    STORY_CANDIDATES_PATH.write_text(
+        json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"  [story-tracker] {added} new · {len(existing)} total archived")
+    return existing
+
+
+def build_story_data(stories):
+    """Write the story archive as JSON, same distribution pattern as the
+    moratorium tracker (build_moratorium_data): a documented, licensed
+    download so the archive is reusable, not just readable."""
+    import datetime as _dt
+    payload = {
+        "name": "AI GridWatch data center story tracker",
+        "generated": _dt.date.today().isoformat(),
+        "license": DATA_LICENSE,
+        "license_url": DATA_LICENSE_URL,
+        "attribution": f"AI GridWatch ({SITE_URL})",
+        "source_page": f"{SITE_URL}/story-tracker",
+        "caveat": ("Automated Google News aggregation, not human-verified — "
+                  "locality tags are regex-guessed from the headline and can "
+                  "be wrong. Treat as a lead to check, not a fact to cite."),
+        "count": len(stories),
+        "stories": stories,
+    }
+    (WEB / "data").mkdir(parents=True, exist_ok=True)
+    (WEB / "data" / "story_tracker.json").write_text(
+        json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return len(stories)
+
+
+def build_story_tracker(stories):
+    """Every tracked community-impact headline, grouped by locality and
+    searchable — the durable counterpart to the rolling 7-day /news feed.
+    A locality with 4+ archived stories gets a heuristic summary (no LLM
+    call) so the pattern is visible without reading every headline."""
+    groups = story_tracker.group_stories(stories, min_for_summary=4)
+    n_localized = sum(1 for g in groups if g["locality"])
+    n_patterns = sum(1 for g in groups if g["summary"])
+    states_covered = sorted({g["state"] for g in groups if g["state"]})
+
+    state_options = '<option value="">All states</option>' + "".join(
+        f'<option value="{esc(s)}">{esc(s)}</option>' for s in states_covered)
+
+    def _fmt_date(iso):
+        if not iso:
+            return ""
+        try:
+            import datetime as _dt
+            return _dt.date.fromisoformat(iso).strftime("%b %-d, %Y")
+        except Exception:                                         # noqa: BLE001
+            return iso
+
+    cards = []
+    for g in groups:
+        headline_rows = "\n".join(
+            f'<li><a href="{esc(s.get("link", ""))}" rel="nofollow noopener" '
+            f'target="_blank">{esc(s.get("title", ""))}</a>'
+            f'<span class="meta">{esc(s.get("outlet", ""))}'
+            f'{" · " + _fmt_date(s.get("first_seen")) if s.get("first_seen") else ""}</span></li>'
+            for s in g["stories"])
+        summary_html = (f'<p class="summary">{esc(g["summary"])}</p>'
+                        if g["summary"] else "")
+        pattern_badge = (' <span class="badge badge-pattern">Recurring pattern</span>'
+                         if g["summary"] else "")
+        search_blob = esc(" ".join([g["label"]] + [s.get("title", "") for s in g["stories"]]))
+        cards.append(
+            f'<article class="story-group" data-state="{esc(g["state"] or "")}" '
+            f'data-search="{search_blob.lower()}">'
+            f'<h3>{esc(g["label"])} <span class="count">{g["count"]}'
+            f' stor{"y" if g["count"] == 1 else "ies"}</span>{pattern_badge}</h3>'
+            f'{summary_html}'
+            f'<details{" open" if g["count"] <= 3 else ""}>'
+            f'<summary>{"Show" if g["count"] > 3 else ""} headlines</summary>'
+            f'<ul class="story-list">{headline_rows}</ul></details></article>')
+
+    body = f"""
+<header>
+  <div class="kicker">Community tracker</div>
+  <h1>Story tracker — every headline, by community</h1>
+  <p class="sub">The <a href="news/">news feed</a> shows the last 7 days.
+  This page keeps every community-impact headline GridWatch has ever seen,
+  grouped by the town or county it's about, so a pattern spread across many
+  separate stories doesn't disappear once the feed scrolls past it.</p>
+</header>
+<div class="stats">
+  <div class="stat"><b>{len(stories)}</b><span>headlines archived</span></div>
+  <div class="stat"><b>{len(groups)}</b><span>places tracked</span></div>
+  <div class="stat"><b>{n_localized}</b><span>with a named locality</span></div>
+  <div class="stat"><b>{n_patterns}</b><span>recurring patterns (4+ stories)</span></div>
+</div>
+<section id="browse">
+  <h2>Look up a community</h2>
+  <div class="feed-controls">
+    <div class="row">
+      <label>State
+        <select id="stateFilter">{state_options}</select>
+      </label>
+      <label style="flex:1">Search
+        <input id="keywordFilter" type="search" placeholder="e.g. Grayslake, Meta, lawsuit">
+      </label>
+    </div>
+    <div class="row" style="justify-content:space-between">
+      <span id="filterCount" class="muted"></span>
+      <button id="resetFilters" class="btn ghost" style="padding:6px 12px;font-size:13px" type="button">Reset</button>
+    </div>
+  </div>
+  <div id="storyGroups">{"".join(cards)}</div>
+  <p id="noResults" class="muted" style="display:none">No tracked communities match those filters.</p>
+</section>
+<section>
+  <h2>Use this data</h2>
+  <p>The whole archive — locality tags, first-seen dates, sources — as a
+  documented download. Free to reuse with attribution
+  (<a href="{DATA_LICENSE_URL}" rel="license noopener">{DATA_LICENSE}</a>).</p>
+  {_dl_grid(
+      _download_card("data/story_tracker.json", "story_tracker.json", "json",
+                     f"{len(stories)} headlines · grouped + summarized",
+                     size_from="data/story_tracker.json"))}
+</section>
+<section>
+  <p class="muted" style="margin-top:24px">Headlines are automated news
+  aggregation, not human-verified — follow each link to the original outlet.
+  Locality tags are regex-guessed from the headline text and can be wrong or
+  missing; summaries are template-generated from headline keywords, not
+  written or reviewed by a person. Treat this page as a lead to check, not a
+  source to cite at a hearing — for sourced, verified legal actions see the
+  <a href="moratoriums.html">moratorium tracker</a>.</p>
+</section>
+<style>
+.story-group {{ background:var(--card); border:1px solid var(--rule);
+  border-radius:12px; padding:14px 16px; margin:0 0 12px; }}
+.story-group h3 {{ margin:0 0 6px; font-size:16px; display:flex;
+  align-items:center; gap:8px; flex-wrap:wrap; }}
+.story-group .count {{ font-size:12.5px; font-weight:400; color:var(--muted); }}
+.badge-pattern {{ font-size:11.5px; font-weight:600; padding:2px 8px;
+  border-radius:999px; background:rgba(45,212,191,.14); color:var(--teal);
+  border:1px solid rgba(45,212,191,.28); }}
+.story-group .summary {{ font-size:14px; color:var(--ink); margin:6px 0 10px;
+  line-height:1.5; }}
+.story-group details summary {{ cursor:pointer; font-size:13px;
+  color:var(--muted); }}
+.story-list {{ list-style:none; padding:0; margin:8px 0 0; display:grid; gap:6px; }}
+.story-list li {{ font-size:14px; line-height:1.4; }}
+.story-list .meta {{ display:block; font-size:12px; color:var(--muted); }}
+</style>
+<script>
+(function() {{
+  var stateSel = document.getElementById('stateFilter');
+  var kw = document.getElementById('keywordFilter');
+  var wrap = document.getElementById('storyGroups');
+  var count = document.getElementById('filterCount');
+  var none = document.getElementById('noResults');
+  var reset = document.getElementById('resetFilters');
+  var cards = Array.prototype.slice.call(wrap.querySelectorAll('.story-group'));
+
+  function apply() {{
+    var state = stateSel.value;
+    var kwVal = (kw.value || '').trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function(el) {{
+      var match = (!state || el.getAttribute('data-state') === state)
+                && (!kwVal || (el.getAttribute('data-search') || '').indexOf(kwVal) !== -1);
+      el.style.display = match ? '' : 'none';
+      if (match) shown++;
+    }});
+    count.textContent = (state || kwVal)
+      ? shown + ' of {len(groups)} places'
+      : '{len(groups)} places · most-covered first';
+    none.style.display = ((state || kwVal) && shown === 0) ? '' : 'none';
+    var qs = new URLSearchParams();
+    if (state) qs.set('state', state);
+    if (kwVal) qs.set('q', kwVal);
+    var qStr = qs.toString();
+    history.replaceState(null, '', qStr ? ('?' + qStr) : location.pathname);
+  }}
+
+  stateSel.addEventListener('change', apply);
+  kw.addEventListener('input', apply);
+  reset.addEventListener('click', function() {{
+    stateSel.value = '';
+    kw.value = '';
+    apply();
+  }});
+
+  var q = new URLSearchParams(location.search);
+  if (q.get('state')) stateSel.value = q.get('state');
+  if (q.get('q')) kw.value = q.get('q');
+  apply();
+}})();
+</script>
+"""
+    return page(
+        "Story tracker — data center headlines by community — AI GridWatch",
+        f"{len(stories)} data center community-impact headlines archived and "
+        f"grouped by town or county, with recurring-pattern summaries.",
+        body, f"{SITE_URL}/story-tracker", depth=0,
+        jsonld=_breadcrumb(("Home", SITE_URL),
+                           ("Story tracker", f"{SITE_URL}/story-tracker")))
 
 
 def build_news_page(items, fetched_at, videos=None, themes=None,
@@ -8935,6 +9200,7 @@ def main():
     print("  [news] loading headlines + videos…")
     _NEWS_ITEMS, news_themes, top_stories, news_fetched_at = _load_news()
     _VIDEO_ITEMS, _ = _load_youtube()
+    _STORY_ARCHIVE = _persist_story_candidates(_NEWS_ITEMS)
 
     shutil.rmtree(WEB, ignore_errors=True)
     (WEB / "states").mkdir(parents=True)
@@ -8959,7 +9225,11 @@ def main():
     # cards can stat the files and show real sizes.
     _n_data = build_moratorium_data()
     _n_projects = build_projects_data()
+    _n_story = build_story_data(_STORY_ARCHIVE)
     (WEB / "moratoriums.html").write_text(build_moratoriums(), encoding="utf-8")
+    (WEB / "story-tracker.html").write_text(
+        build_story_tracker(_STORY_ARCHIVE), encoding="utf-8")
+    print(f"  [data] {_n_story} archived headlines -> story-tracker.html + story_tracker.json")
     _n_alerts = build_alerts_outputs()
     print(f"  [data] {_n_alerts} deadline alerts -> alerts.json + alerts.xml")
     (WEB / "embed").mkdir(parents=True, exist_ok=True)
@@ -9042,8 +9312,8 @@ def main():
         (WEB / "companies" / f"{ld['slug']}.html").write_text(
             build_limited_scorecard(ld), encoding="utf-8")
 
-    paths = ["", "start-here", "health-risks", "moratoriums", "projects",
-             "impact", "bills", "outlook",
+    paths = ["", "start-here", "health-risks", "moratoriums", "story-tracker",
+             "projects", "impact", "bills", "outlook",
              "learn", "puc", "executives", "about", "search", "dividend",
              "data-centers", "environment", "studies",
              "cba-clauses", "officials", "consulting", "case-studies",

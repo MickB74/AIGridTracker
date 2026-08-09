@@ -44,16 +44,21 @@ jobs:
       - name: Commit refreshed feed
         run: |
           # Only touching files that news refresh actually changes — the news
-          # page HTML/RSS and the two live-fetched caches. Everything else in
-          # web/ is data-driven and should only move on push (and never in
-          # this job's diff), so a full `git add web/` would be misleading if
+          # page HTML/RSS, the two live-fetched caches, and the story tracker
+          # (which _persist_story_candidates updates on every build since it
+          # accumulates the same fetched headlines). Everything else in web/
+          # is data-driven and should only move on push (and never in this
+          # job's diff), so a full `git add web/` would be misleading if
           # anything unrelated crept in.
-          if git diff --quiet -- web/news/ data/news_cache.json data/youtube_cache.json; then
+          FILES="web/news/ web/story-tracker.html web/data/story_tracker.json
+                 data/news_cache.json data/youtube_cache.json
+                 data/story_candidates.json"
+          if git diff --quiet -- $FILES; then
             echo "News feed unchanged — nothing to commit."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add web/news/ data/news_cache.json data/youtube_cache.json
+          git add $FILES
           git commit -m "chore: refresh news feed [skip ci]"
           git push
