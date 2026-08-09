@@ -198,6 +198,148 @@ first hearing.
 - [EPA GHG Reporting Program — power plant emissions data](https://www.epa.gov/ghgreporting/ghgrp-power-plants)
 """,
     },
+    # ── The Times' AI-chip-boom scale piece, translated for local negotiators ──
+    {
+        "id": "ai-chip-boom-scale-2026",
+        "art": "money",
+        "section": "stories",
+        "title": "20 Million Chips Today, 200 Million by 2028: What the Times' AI Numbers Mean for Your County",
+        "date": _dt.date(2026, 8, 9),
+        "author": "GridWatch AI",
+        "tags": ["AI infrastructure", "forecast", "investment", "capacity",
+                 "Epoch AI", "backlash", "midterms", "negotiation",
+                 "community advocacy", "analysis"],
+        "summary": (
+            "The Times went looking for a way to describe the scale of the "
+            "AI build-out and landed on comparisons to the railroads and the "
+            "Manhattan Project. The chip count — doubling roughly every nine "
+            "months — is the number that explains why the pipeline of new "
+            "proposals isn't slowing down. Here's what the rest of the "
+            "numbers mean if you're the one facing the next one."
+        ),
+        "body": """\
+[The *New York Times*' July 29 feature on the AI build-out](https://www.nytimes.com/interactive/2026/07/29/technology/ai-chips-data-center-boom.html)
+opens with a hard problem: how do you describe a construction boom this size
+in numbers a reader can actually hold in their head? Its answer — railroads
+in the 1800s, the New Deal, the Manhattan Project — is the kind of
+comparison that sounds like hyperbole until you look at the chip count.
+
+### The numbers worth writing down
+
+| What the Times reported | Number |
+|---|---|
+| AI chips in operation today (H100-equivalents) | **~20 million** |
+| Time to double | **~9 months** |
+| Projected by end of 2028 | **~200 million** — 10x today |
+| Global AI-infrastructure investment, 2025 | **\\$318 billion** (IDC) |
+| Global AI-infrastructure investment, forecast 2029 | **>\\$1 trillion** (IDC) |
+| 5 largest U.S. hyperscalers' capex, 2026 (est.) | **~\\$750 billion**, up from ~\\$400B in 2025 (Goldman Sachs) |
+| Cost per gigawatt of frontier AI data-center capacity | **\\$40–60 billion** (servers, land, connectivity, utility hookups) |
+| Global data-center electricity use, 2025 | **64 GW** — roughly Germany's total consumption (SemiAnalysis) |
+| Projected global data-center electricity use, end of 2030 | **~4x today** — more than South America and Africa combined |
+| U.S. data centers today | **~5,500** — about 10x the next-closest country |
+| Share of global AI compute controlled by the top U.S. hyperscalers | **~80%** (Epoch AI) |
+
+Every one of those numbers is a proxy for the same underlying fact: the
+industry believes bigger models need more chips, more chips need more
+power, and whoever builds the most capacity first wins the race. Amazon's
+Peter DeSantis, who leads the company's foundational AI models, put it
+plainly to the *Times*: "It's hard to get your mind around the scale."
+
+### Why "doubling every nine months" matters more than any single project
+
+Most community fights are fought project by project — one rezoning
+application, one interconnection request, one hearing at a time. That's the
+right way to fight the project in front of you. But the compute numbers are
+the reason there will be another one behind it, and another behind that.
+If the chip count really doubles every nine months through 2028, the
+pipeline of proposals hitting county planning boards over the next two
+years won't be a continuation of the last two — it will be several times
+larger. A county that has fielded one data-center proposal so far should
+plan for that not being the last.
+
+### The backlash the Times itself flagged
+
+Buried in the middle of the piece is a sentence worth pulling out on its
+own: data centers are shaping up as a **major issue in November's midterm
+elections**, part of a "growing national movement" pushing back on the
+industry — a trend the *Times* [documented in its own April
+piece](https://www.nytimes.com/2026/04/27/technology/ai-artificial-intelligence-backlash.html).
+That's a national newsroom confirming what this site's [story
+tracker](/story-tracker.html) and [moratorium tracker](/moratoriums.html)
+show every week in the headlines: this isn't a scattering of local NIMBY
+disputes, it's a recognized national pattern, and organizers can now cite a
+midterm-election-level story to make that case to a skeptical council
+member.
+
+### The bubble question is also a negotiating window
+
+Economists quoted in the piece — including Philippe Aghion, who won the
+2025 Nobel in economic science for research on innovation-driven growth —
+point out that every past infrastructure boom of this shape (railroads,
+electrification, the dot-com buildout) has been followed by a bust before
+the technology's benefits fully materialized. Nobody knows if or when that
+happens to AI. But the possibility cuts two ways for a community
+negotiating right now:
+
+- **Leverage now may be as good as it gets.** A developer racing to lock in
+  capacity while the "arms race" framing holds (the *Times* quotes Oxford
+  economist Carl Benedikt Frey: "if they don't invest, they are
+  acknowledging defeat") is under real time pressure to get local approval
+  fast. That urgency is exactly what makes binding community-benefit terms
+  negotiable *before* groundbreaking — see the [model CBA
+  clauses](/cba-clauses.html) — in a way they may not be once a project is
+  already operating.
+- **Decommissioning and stranded-asset language matters more, not less.**
+  If capital spending this far ahead of realized revenue does correct, the
+  facility that gets built fastest is also the one a community most needs
+  a binding decommissioning bond and site-restoration clause for. We
+  covered the same stranded-asset dynamic on the gas-plant side of this
+  equation in [our post on Meta's Louisiana
+  buildout](meta-hyperion-louisiana-ratepayer-fight-2026) — the logic holds
+  here too.
+
+### What to do with it
+
+1. **Don't wait to see if the boom slows before you organize.** The
+   Times' own numbers say it's accelerating, not cooling — if a proposal
+   is active near you, the [Start here wizard](/start-here.html) builds a
+   negotiating packet in minutes.
+2. **Translate "gigawatts of compute" into your own numbers.** The
+   \\$40–60B-per-gigawatt figure is a national average, not what's proposed
+   in your county — run the actual facility size through the [impact
+   calculator](/impact.html) for water, electricity, and rate-impact
+   estimates specific to your state.
+3. **Expect federal policy to keep favoring speed.** The same week this
+   piece ran, the *Times* reported on the [White House's AI
+   framework](https://www.nytimes.com/2026/08/04/technology/white-house-ai-framework.html)
+   pushing to fast-track approvals nationally. As we wrote after Amazon's
+   Pecos County, Texas plant, that shifts real leverage toward local air
+   permits and zoning review — the layers federal fast-tracking reaches
+   slowest.
+4. **The capital is real, which means the ask can be too.** \\$750 billion
+   in hyperscaler spending this year alone means a "we can't afford
+   community benefits" objection from a developer this size rarely
+   survives scrutiny — see what [similar communities have already
+   won](/dividend.html).
+
+The Times went looking for a comparison big enough to describe this
+build-out and landed on the Manhattan Project. Whatever you think of that
+comparison, the practical takeaway for a community is the same one that
+document always has: the people who show up to the hearing before the
+decision is made get a very different outcome than the people who show up
+after.
+
+### Sources
+
+- [The New York Times — "The Impending, Inescapable Deluge of A.I." (Jul. 29, 2026)](https://www.nytimes.com/interactive/2026/07/29/technology/ai-chips-data-center-boom.html)
+- [Epoch AI — AI chip ownership data (H100 equivalents)](https://epoch.ai/data/ai-chip-owners?view=graph&tab=h100_equivalents)
+- [IDC — AI infrastructure spending forecast to eclipse \\$1 trillion by 2029](https://www.idc.com/resource-center/blog/ai-infrastructure-spending-caps-historic-year-at-90-billion-in-q4-2025-2029-spending-to-eclipse-1-trillion/)
+- [The New York Times — the national AI backlash movement (Apr. 27, 2026)](https://www.nytimes.com/2026/04/27/technology/ai-artificial-intelligence-backlash.html)
+- [The New York Times — the White House's AI framework (Aug. 4, 2026)](https://www.nytimes.com/2026/08/04/technology/white-house-ai-framework.html)
+- [BIS Working Paper 1367 — past technology infrastructure booms and busts](https://www.bis.org/publ/work1367.pdf)
+""",
+    },
     # ── Evergreen SEO guide: property values ──
     {
         "id": "data-centers-property-values-2026",
