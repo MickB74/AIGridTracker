@@ -1,8 +1,11 @@
 name: Refresh news feed
 
-# Hourly rebuild of web/news/ so the "Last updated" timestamp isn't a lie.
-# The main build-site.yml only runs on push and a weekly cron — that's fine
-# for reference content, but the news page's whole premise is live intel.
+# Rebuild web/news/ every few hours so the "Last updated" timestamp isn't a
+# lie. The news page's premise is live intel, but *hourly* was overkill: each
+# run that finds new headlines commits and thus fires a Vercel deploy, and 24
+# of those a day was the dominant drain on the Hobby deploy budget. Every 4
+# hours keeps the feed fresh (6 deploys/day at most) without the churn. Bump
+# it back toward hourly only if the feed genuinely needs to be that live.
 #
 # NEWS_REFRESH=1 tells build_site.py to bypass the local cache TTL and pull
 # fresh headlines every run. Google News RSS needs no API key, and the
@@ -11,7 +14,7 @@ name: Refresh news feed
 
 on:
   schedule:
-    - cron: '7 * * * *'   # every hour at :07
+    - cron: '7 */4 * * *'   # every 4 hours at :07
   workflow_dispatch:
 
 permissions:

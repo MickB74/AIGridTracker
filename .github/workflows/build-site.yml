@@ -13,14 +13,15 @@ name: Build static site
 # "1y 1m ago" strings and stale flags honest without anyone touching the repo.
 
 on:
-  push:
-    branches: [master, 'ci/**', 'feat/**', 'chore/**']
-    # Never re-trigger on the bot's own output. (GITHUB_TOKEN pushes don't
-    # start workflows anyway — this is belt and braces, and it keeps the
-    # Actions log readable.)
-    paths-ignore: ['web/**']
+  # Deliberately NOT triggered on push. Every push here used to fire a full
+  # rebuild that committed web/, and *that* commit triggered its own Vercel
+  # deploy — so one source change cost two deploys, and on a busy day the
+  # Hobby deploy budget drained fast. Committers rebuild web/ locally before
+  # pushing (that is the workflow), so the push-time rebuild was almost always
+  # a no-op-plus-fresh-news-timestamp. The daily cron below still catches any
+  # drift within 24h, and `workflow_dispatch` lets you force one by hand.
   schedule:
-    - cron: '17 10 * * *'  # daily 10:17 UTC (early-morning US) — fresh news
+    - cron: '17 10 * * *'  # daily 10:17 UTC (early-morning US) — full rebuild
   workflow_dispatch:
 
 permissions:
