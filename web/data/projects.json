@@ -5,8 +5,8 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/projects",
-  "count": 16,
-  "verified_count": 16,
+  "count": 19,
+  "verified_count": 19,
   "caveat": "A working set of identified proposals a community can track, not a census — most of the country's activity is not in here yet.\n\n**Each row carries its own provenance.** Rows showing a verification date link to reporting or the governing body's own record and were read on that date; rows marked *unverified* have no source on record — a lead to check, not a fact to cite.\n\n**Stage is derived, not asserted.** *Hearing scheduled*, *Awaiting decision*, *Approved* and *Withdrawn* are computed from each row's milestone dates on every rebuild, so a hearing date that has passed stops reading 'scheduled'. Hearings get moved and projects re-file under new names — treat a scheduled date as the earliest to act by, and confirm with the clerk before relying on it. Leads are mined into data/project_candidates.json and promoted here only after a human reads a primary source.",
   "schema": {
     "id": "Stable slug, unique per project.",
@@ -673,6 +673,105 @@
           "kind": "news",
           "summary": "EdgeCore announced the land purchase (697 ac, Shannon Hill Regional Business Park) and $17B+ phased campus plan in June 2025; construction timing and tenants undisclosed.",
           "source": "https://edgecore.com/resources/press-releases/new-louisa-county-virginia-data-center-campus"
+        }
+      ]
+    },
+    {
+      "id": "google-haskell-county-tx",
+      "name": "Google West Texas campuses",
+      "operator": "Google",
+      "owner": "Google",
+      "tenant": "Google",
+      "filing_llc": "",
+      "locality": "Haskell County (+ Armstrong Co.)",
+      "state": "TX",
+      "lat": 33.16,
+      "lon": -99.73,
+      "size_mw": "",
+      "acres": "",
+      "announced": "2025-11-14",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "2025-11-14",
+      "outcome": "approved",
+      "stage": "Approved",
+      "days_to_hearing": null,
+      "note": "Part of Google's $40B Texas investment through 2027: AI data-center campuses in Haskell County (one paired with a new Intersect/TPG solar + battery storage plant) and Armstrong County, plus additional sites in Pampa and Wilbarger Counties. Company-owned and proceeding, not a contested local rezoning.",
+      "source": "https://www.texastribune.org/2025/11/14/texas-google-data-centers-ai/",
+      "as_of": "2026-08-08",
+      "verified": true,
+      "events": [
+        {
+          "date": "2025-11-14",
+          "kind": "announcement",
+          "summary": "Google announced a $40B Texas investment through 2027, including AI data-center hubs in Haskell and Armstrong Counties.",
+          "source": "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-texas/"
+        }
+      ]
+    },
+    {
+      "id": "augusta-township-thor-mi",
+      "name": "Augusta Township data center (Thor Equities)",
+      "operator": "Thor Equities",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Augusta Township (Washtenaw County)",
+      "state": "MI",
+      "lat": 42.13,
+      "lon": -83.64,
+      "size_mw": "",
+      "acres": 500,
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "2026-08-04",
+      "outcome": "denied",
+      "stage": "Denied",
+      "days_to_hearing": null,
+      "note": "The township board rezoned 500+ acres of farmland near Milan from agricultural to general industrial for a hyperscale data center by NY-based Thor Equities. Residents petitioned the decision onto the ballot and voters overturned the rezoning 89.5%-10.4% on Aug 4, 2026 — a rare referendum defeat of an already-approved data-center rezoning.",
+      "source": "https://www.wemu.org/wemu-news/2026-08-05/augusta-township-voters-overturn-data-center-rezoning",
+      "as_of": "2026-08-08",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-08-04",
+          "kind": "vote",
+          "summary": "Voters overturned the industrial rezoning 89.5% to 10.4%, blocking the Thor Equities data center.",
+          "source": "https://www.wemu.org/wemu-news/2026-08-05/augusta-township-voters-overturn-data-center-rezoning"
+        }
+      ]
+    },
+    {
+      "id": "digital-realty-astra-desoto-ks",
+      "name": "Astra data center campus (Digital Realty)",
+      "operator": "Digital Realty",
+      "owner": "Digital Realty",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "De Soto (Johnson County)",
+      "state": "KS",
+      "lat": 38.98,
+      "lon": -94.97,
+      "size_mw": 600,
+      "acres": 1435,
+      "announced": "2026-06-10",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "Proposed",
+      "days_to_hearing": null,
+      "note": "Digital Realty bought ~1,435 acres in the Astra Enterprise Park (the former Sunflower Army Ammunition Plant) to develop a ~600 MW campus across Astra North and South; first phase ~$4B excluding equipment, customer undisclosed. The second major data center proposed near the $4B Panasonic battery plant.",
+      "source": "https://www2.ljworld.com/news/general-news/2026/jun/10/a-second-major-data-center-project-has-been-proposed-in-de-soto-near-panasonic-battery-plant/",
+      "as_of": "2026-08-08",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-06-10",
+          "kind": "proposal",
+          "summary": "Digital Realty unveiled preliminary plans for a ~600 MW, ~1,435-acre campus at Astra Enterprise Park near the Panasonic battery plant.",
+          "source": "https://www2.ljworld.com/news/general-news/2026/jun/10/a-second-major-data-center-project-has-been-proposed-in-de-soto-near-panasonic-battery-plant/"
         }
       ]
     }
