@@ -575,6 +575,7 @@ NAV_GROUPS = [
         ("Moratoriums", "moratoriums.html"),
         ("Story tracker", "story-tracker.html"),
         ("Projects tracker", "projects.html"),
+        ("Officials scorecard", "scorecard.html"),
     ]),
     ("The facts", [
         ("Health risks", "health-risks.html"),
@@ -1869,7 +1870,7 @@ YOUTUBE_QUALITY_SOURCES = {
 YOUTUBE_QUERY = ('("data center" OR "data centers" OR datacenter) '
                  '(community OR moratorium OR ratepayer OR noise OR water '
                  'OR grid OR electricity OR lawsuit OR zoning) '
-                 'site:youtube.com')
+                 'when:6w site:youtube.com')
 
 
 def _extract_youtube_id(url):
@@ -2007,6 +2008,31 @@ def _load_youtube():
         encoding="utf-8")
     print(f"  [youtube] fetched {len(live)} videos")
     return live, fetched_at
+
+
+def _enrich_video_geo(videos):
+    """Give each video a best-effort locality + state via the same gazetteer the
+    news archive uses. A video titled "Tucson residents fight Project Blue"
+    names no state, so the title-only matcher left it untagged; the gazetteer
+    catches "Tucson" and resolves it to AZ. Adds `locality` (name or None) and
+    `state` (abbrev or None), and folds any newly found state into `states`
+    (the name-list the /videos filter reads) so state filtering catches more.
+    National explainers that name no place stay untagged — as they should."""
+    gaz = story_tracker.build_gazetteer()
+    abbrev_to_name = {ab: nm for nm, ab in _STATE_LIST}
+    for v in videos:
+        title = v.get("title", "")
+        loc, st = story_tracker.guess_locality(title, gaz)
+        if not st:
+            st = story_tracker.guess_state(title)
+        v["locality"] = loc
+        v["state"] = st
+        name = abbrev_to_name.get(st)
+        if name:
+            states = v.get("states") or []
+            if name not in states:
+                v["states"] = sorted(states + [name])
+    return videos
 
 
 def _load_news():
@@ -2160,14 +2186,46 @@ def _story_group_slug(label):
     return slug or "unclassified"
 
 
-def build_story_tracker(stories):
+def build_story_tracker(stories, videos=None):
     """Every tracked community-impact headline, grouped by locality and
     searchable — the durable counterpart to the rolling 7-day /news feed.
     A locality with 4+ archived stories gets a heuristic summary (no LLM
-    call) so the pattern is visible without reading every headline."""
+    call) so the pattern is visible without reading every headline.
+
+    `videos` (geo-enriched by _enrich_video_geo) are attached to the matching
+    group so a community's watchable coverage sits next to its headlines: a
+    video with a locality joins that town's group; a state-only video joins
+    the state's statewide/unlocalized group."""
     import datetime as _dt
 
+    videos = videos or []
+    vids_by_loc, vids_by_state = {}, {}
+    for v in videos:
+        loc, st = v.get("locality"), v.get("state")
+        if loc and st:
+            vids_by_loc.setdefault((loc, st), []).append(v)
+        elif st:
+            vids_by_state.setdefault(st, []).append(v)
+
     groups = story_tracker.group_stories(stories, min_for_summary=4)
+    # A state's own videos attach to exactly one group — the statewide one if
+    # it exists, else the first state group — so they don't show twice when a
+    # state has both a "(statewide)" and a "(town not identified)" bucket.
+    statewide_states = {g["state"] for g in groups if g.get("statewide")}
+    state_video_used = set()
+    for g in groups:
+        if g["locality"] and g["state"]:
+            g["videos"] = vids_by_loc.get((g["locality"], g["state"]), [])
+        elif g["state"]:
+            st = g["state"]
+            prefer = g.get("statewide") or st not in statewide_states
+            if prefer and st not in state_video_used:
+                g["videos"] = vids_by_state.get(st, [])
+                state_video_used.add(st)
+            else:
+                g["videos"] = []
+        else:
+            g["videos"] = []
     n_localized = sum(1 for g in groups if g["locality"])
     patterns = [g for g in groups if g["summary"]]
     states_covered = sorted({g["state"] for g in groups if g["state"]})
@@ -2234,6 +2292,18 @@ def build_story_tracker(stories):
                         if g["summary"] else "")
         pattern_badge = (' <span class="badge badge-pattern">Recurring pattern</span>'
                          if g["summary"] else "")
+        gv = g.get("videos") or []
+        videos_html = ""
+        if gv:
+            vid_rows = "".join(
+                f'<li><a href="{esc(v.get("link", ""))}" rel="nofollow noopener" '
+                f'target="_blank">&#9654; {esc(v.get("title", ""))}</a>'
+                f'<span class="meta">{esc(v.get("source", ""))}</span></li>'
+                for v in gv[:4])
+            videos_html = (
+                f'<details class="vids"><summary>&#128250; {len(gv)} '
+                f'video{"s" if len(gv) != 1 else ""}</summary>'
+                f'<ul class="story-list">{vid_rows}</ul></details>')
         last_active = _fmt_date(_latest_iso(g), fmt="%b %-d")
         search_blob = esc(" ".join([g["label"]] + [s.get("title", "") for s in g["stories"]]))
         slug = _story_group_slug(g["label"])
@@ -2249,7 +2319,8 @@ def build_story_tracker(stories):
             f'{summary_html}'
             f'<details{" open" if g["count"] <= 3 else ""}>'
             f'<summary>{g["count"]} headline{"s" if g["count"] != 1 else ""}</summary>'
-            f'<ul class="story-list">{"".join(headline_rows)}</ul></details></article>')
+            f'<ul class="story-list">{"".join(headline_rows)}</ul></details>'
+            f'{videos_html}</article>')
 
     body = f"""
 <header>
@@ -7793,6 +7864,116 @@ state should tailor them before they go in front of a commission.</p></div>
             ("CBA clauses", f"{SITE_URL}/cba-clauses")))
 
 
+_GRADE_COLORS = {"A": "#16a34a", "B": "#65a30d", "C": "#d97706",
+                 "D": "#ea580c", "F": "#dc2626"}
+
+
+def build_official_scorecard():
+    """Full federal + gubernatorial roster with A–F ratepayer/community-protection
+    grades and sourced stances — the static port of the Streamlit Officials tab."""
+    from src.services.officials import load_officials
+    from src.official_grades import attach_grades, RUBRIC
+
+    odf, ogen = load_officials()
+    if odf.empty:
+        body = "<header><h1>Officials scorecard</h1><p>Directory unavailable.</p></header>"
+        return page("Officials scorecard — AI GridWatch",
+                    "Data-center voting/action scorecard for Congress and governors.",
+                    body, f"{SITE_URL}/scorecard")
+    odf = odf.copy()
+    odf["party"] = odf["party"].replace({"Democrat": "Democratic"})
+    odf = attach_grades(odf)
+    graded = odf[odf["grade"] != ""].sort_values(
+        ["protect_score", "state_full"], ascending=[False, True])
+
+    # ── graded scorecard, grouped A→F ──────────────────────────────────────
+    dist = {g: int((graded["grade"] == g).sum()) for g in ["A", "B", "C", "D", "F"]}
+    chips = " ".join(
+        f'<span class="stat"><b style="color:{_GRADE_COLORS[g]}">{g}</b>'
+        f'<span>{dist[g]}</span></span>' for g in ["A", "B", "C", "D", "F"])
+    grade_rows = ""
+    for o in graded.itertuples():
+        color = _GRADE_COLORS.get(o.grade, "#888")
+        srcref = _srcref(o.stance_src)
+        src_html = f' <span class="muted">— {srcref}</span>' if srcref else ""
+        dist_lbl = f" ({cell(o.district)})" if o.office in ("Representative", "Delegate") and has_value(o.district) else ""
+        grade_rows += (
+            f'<tr><td><span class="gradebadge" style="background:{color}">{esc(o.grade)}</span></td>'
+            f"<td><strong>{esc(str(o.name))}</strong><br>"
+            f'<span class="muted">{esc(str(o.party))} · {esc(str(o.office))}{dist_lbl} · {esc(str(o.state_full))}</span></td>'
+            f"<td>{cell(o.stance, dash='—')}{src_html}</td></tr>")
+
+    # ── full directory table (searchable) ──────────────────────────────────
+    dir_rows = ""
+    for o in odf.sort_values(["state_full", "office", "name"]).itertuples():
+        web = (f'<a href="{esc(o.website)}" rel="nofollow">site</a>'
+               if has_value(o.website) else "")
+        con = (f'<a href="{esc(o.contact)}" rel="nofollow">contact</a>'
+               if has_value(o.contact) else "")
+        gbadge = (f'<span class="gradebadge" style="background:{_GRADE_COLORS.get(o.grade,"#888")}">{esc(o.grade)}</span>'
+                  if o.grade else "")
+        dir_rows += (
+            f'<tr><td>{esc(str(o.name))}</td><td>{cell(o.office)}</td>'
+            f"<td>{cell(o.state_full)}</td><td>{cell(o.district)}</td>"
+            f"<td>{cell(o.party)}</td><td>{cell(o.committee, dash='')}</td>"
+            f"<td>{gbadge}</td><td>{web}</td><td>{con}</td></tr>")
+
+    body = f"""
+<header>
+  <div class="kicker">Officials scorecard</div>
+  <h1>How your officials act on data centers</h1>
+  <p class="sub">{RUBRIC}</p>
+</header>
+<section>
+  <div class="stats">{chips}
+    <span class="stat"><b>{len(graded)}</b><span>graded</span></span>
+    <span class="stat"><b>{len(odf)}</b><span>officials</span></span></div>
+  <p class="muted">Grades cross party — this is an issue axis, not a partisan one.
+  Only officials with a documented, cited action are graded; blanks mean no public
+  record, not neutrality. Point-in-time; see the update cadence in the repo.</p>
+</section>
+<section>
+  <h2>Graded officials ({len(graded)})</h2>
+  <table><tr><th>Grade</th><th>Official</th><th>Documented action (sourced)</th></tr>
+  {grade_rows}</table>
+</section>
+<section>
+  <h2>Full contact directory ({len(odf)})</h2>
+  <p><input type="text" id="ofilter" placeholder="Filter by name, state, party, committee…"
+     onkeyup="ofilterFn()" style="width:100%;padding:10px;border-radius:8px;
+     border:1px solid #334155;background:#0b1220;color:#e2e8f0"></p>
+  <table id="otable"><tr><th>Name</th><th>Office</th><th>State</th><th>District</th>
+  <th>Party</th><th>Committee</th><th>Grade</th><th>Site</th><th>Contact</th></tr>
+  {dir_rows}</table>
+  <p class="muted">Roster: {esc(ogen)}. Senators via the official Senate contact
+  list; House via the @unitedstates congress-legislators dataset; governors from
+  the current-governors list. Members don't publish direct emails — Contact opens
+  the official webform.</p>
+</section>
+<style>
+.gradebadge{{display:inline-block;min-width:1.4em;text-align:center;padding:2px 6px;
+  border-radius:6px;color:#fff;font-weight:700;font-size:13px}}
+</style>
+<script>
+function ofilterFn(){{
+  var q=document.getElementById('ofilter').value.toLowerCase();
+  var rows=document.querySelectorAll('#otable tr');
+  for(var i=1;i<rows.length;i++){{
+    rows[i].style.display = rows[i].innerText.toLowerCase().indexOf(q)>-1 ? '' : 'none';
+  }}
+}}
+</script>
+"""
+    return page(
+        "Officials scorecard — AI GridWatch",
+        "A–F ratepayer & community-protection grades for U.S. senators, "
+        "representatives, and governors on data centers, with sourced actions "
+        "and full contact directory.",
+        body, f"{SITE_URL}/scorecard",
+        jsonld=_breadcrumb(("Home", SITE_URL),
+                           ("Officials scorecard", f"{SITE_URL}/scorecard")))
+
+
 def build_officials():
     """State-level directory of Congressional + local lookup links, snapshot-only."""
     from src.local_officials import build_lookup_links
@@ -9308,6 +9489,7 @@ def main():
     print("  [news] loading headlines + videos…")
     _NEWS_ITEMS, news_themes, top_stories, news_fetched_at = _load_news()
     _VIDEO_ITEMS, _ = _load_youtube()
+    _enrich_video_geo(_VIDEO_ITEMS)   # locality + state tags for grouping/filter
     _STORY_ARCHIVE = _persist_story_candidates(_NEWS_ITEMS)
 
     shutil.rmtree(WEB, ignore_errors=True)
@@ -9336,7 +9518,7 @@ def main():
     _n_story = build_story_data(_STORY_ARCHIVE)
     (WEB / "moratoriums.html").write_text(build_moratoriums(), encoding="utf-8")
     (WEB / "story-tracker.html").write_text(
-        build_story_tracker(_STORY_ARCHIVE), encoding="utf-8")
+        build_story_tracker(_STORY_ARCHIVE, _VIDEO_ITEMS), encoding="utf-8")
     print(f"  [data] {_n_story} archived headlines -> story-tracker.html + story_tracker.json")
     _n_alerts = build_alerts_outputs()
     print(f"  [data] {_n_alerts} deadline alerts -> alerts.json + alerts.xml")
@@ -9365,6 +9547,7 @@ def main():
     (WEB / "studies.html").write_text(build_studies(), encoding="utf-8")
     (WEB / "cba-clauses.html").write_text(build_cba_clauses(), encoding="utf-8")
     (WEB / "officials.html").write_text(build_officials(), encoding="utf-8")
+    (WEB / "scorecard.html").write_text(build_official_scorecard(), encoding="utf-8")
     (WEB / "consulting.html").write_text(build_consulting(), encoding="utf-8")
     (WEB / "case-studies.html").write_text(build_case_studies(), encoding="utf-8")
     (WEB / "hearing-questions.html").write_text(
