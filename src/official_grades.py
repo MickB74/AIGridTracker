@@ -58,6 +58,17 @@ PROTECTION_SCORES = {
     ("Representative", "CO", "evans"): 4,       # RPA co-sponsor
     ("Representative", "NJ", "pallone"): 4,     # national moratorium call
     ("Representative", "VA", "subramanyam"): 4, # NoVA opposition + risk act
+    # Senate
+    ("Senator", "NM", "heinrich"): 4,      # GRID Savings Act
+    ("Senator", "VA", "warner"): 4,        # ratepayer + disclosure bills
+    ("Senator", "MO", "hawley"): 4,        # GRID Act
+    ("Senator", "CT", "blumenthal"): 4,    # GRID Act co-lead
+    ("Senator", "VT", "welch"): 4,         # joined ratepayer bill
+    ("Senator", "OH", "husted"): 4,        # leads ratepayer bill
+    ("Senator", "GA", "ossoff"): 3,        # investigating bill impact
+    ("Senator", "PA", "fetterman"): 1,     # opposes moratorium ("China First")
+    # Governors
+    ("Governor", "MI", "whitmer"): 3,      # accountability pledge proposal
 }
 
 _LETTER = {4: "A", 3: "B", 2: "C", 1: "D", 0: "F"}

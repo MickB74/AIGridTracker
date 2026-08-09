@@ -72,6 +72,36 @@ STANCES = {
     ("Representative", "VA", "subramanyam"): (
         "Opposes data-center expansion in his Northern Virginia district; "
         "introduced the Data Infrastructure Risk Reduction Act.", "house_subram"),
+    # ── Senate ─────────────────────────────────────────────────────────────
+    ("Senator", "NM", "heinrich"): (
+        "Introduced the GRID Savings Act (2026) — large electricity users pay "
+        "for grid infrastructure; opposes moratoriums as a race to the bottom.",
+        "sen_heinrich"),
+    ("Senator", "VA", "warner"): (
+        "Sponsored legislation so Virginians aren't stuck footing data-center "
+        "utility costs, plus an energy/water disclosure bill.", "sen_warner"),
+    ("Senator", "GA", "ossoff"): (
+        "Launched an investigation into data centers' impact on Georgians' "
+        "power bills.", "sen_ossoff"),
+    ("Senator", "PA", "fetterman"): (
+        "Blasted a proposed data-center moratorium as 'China First,' opposing "
+        "the pause approach.", "sen_fetterman"),
+    ("Senator", "MO", "hawley"): (
+        "Co-introduced the GRID Act to stop data centers from raising Americans' "
+        "electricity costs.", "sen_hawley"),
+    ("Senator", "CT", "blumenthal"): (
+        "Co-introduced the GRID Act to stop data centers from raising Americans' "
+        "electricity costs.", "sen_hawley"),
+    ("Senator", "VT", "welch"): (
+        "Joined a bill to ensure Americans aren't footing the bill for big data "
+        "centers.", "sen_welch"),
+    ("Senator", "OH", "husted"): (
+        "Leads a Senate bill to protect Americans from footing the bill for new "
+        "data centers.", "sen_husted"),
+    # ── Additional governors ───────────────────────────────────────────────
+    ("Governor", "MI", "whitmer"): (
+        "Proposed that data centers pledge to cover utility costs, protect the "
+        "environment, and provide good-paying jobs.", "gov_whitmer"),
 }
 
 
