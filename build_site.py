@@ -32,7 +32,7 @@ import urllib.parse
 import markdown
 import pandas as pd
 
-from src.blog_art import art_svg
+from src.blog_art import art_svg, ART_THEMES, theme_for
 from src.blog_content import BLOG_STORIES, ABOUT_SECTION
 from src.alerts import build_alerts, LOOKAHEAD_DAYS as ALERT_LOOKAHEAD
 from src.briefs import MEETING_ADVICE
@@ -3025,27 +3025,40 @@ def build_blog_index():
     # Collect the set of states that actually appear in at least one post so
     # the dropdown doesn't offer states with zero results.
     covered_states = sorted({st for s in posts for st in _post_states(s)})
-    options = '<option value="">All states</option>' + "".join(
+    state_options = '<option value="">All states</option>' + "".join(
         f'<option value="{esc(st)}">{esc(st)}</option>' for st in covered_states)
+    # Subject reuses each post's hero-art theme rather than its raw tags —
+    # tags run 8-12 per post and are mostly one-off (a proper noun like "TCEQ"
+    # or "Pecos County"), which makes a hopeless dropdown. Art theme is
+    # already exactly one per post and names a real subject ("Ratepayer
+    # impact", "Moratorium", "Water draw"), so it doubles as the topic
+    # taxonomy for free.
+    covered_subjects = sorted({theme_for(s) for s in posts},
+                              key=lambda k: ART_THEMES[k][0])
+    subject_options = '<option value="">All subjects</option>' + "".join(
+        f'<option value="{esc(k)}">{esc(ART_THEMES[k][0])}</option>'
+        for k in covered_subjects)
     items = ""
     for s in posts:
         title_clean = s["title"].replace("\\$", "$")
         summary_clean = s["summary"].replace("\\$", "$")
         states = _post_states(s)
+        subject = theme_for(s)
         data_states = esc("|".join(states)) if states else ""
         state_chips = " ".join(
             f'<span class="tag">{esc(st)}</span>' for st in states)
+        subject_chip = f'<span class="tag tag-theme">{esc(ART_THEMES[subject][0])}</span>'
         # uid must be unique per document — every post's art lives in this one
         # page, and duplicate gradient ids would all resolve to the first.
         thumb = art_svg(s, cls="thumb", uid=f"t-{s['id']}")
         items += (
-            f'<li class="has-art" data-states="{data_states}">'
+            f'<li class="has-art" data-states="{data_states}" data-subject="{esc(subject)}">'
             f'<a href="{s["id"]}.html" aria-hidden="true" tabindex="-1">{thumb}</a>'
             f'<div>'
             f'<div class="post-meta">{s["date"].strftime("%b %-d, %Y")}</div>'
             f'<h3><a href="{s["id"]}.html">{esc(title_clean)}</a></h3>'
             f'<p class="summary">{esc(summary_clean)}</p>'
-            f'{"<div class=\"tags\" style=\"margin-top:6px\">" + state_chips + "</div>" if state_chips else ""}'
+            f'<div class="tags" style="margin-top:6px">{subject_chip}{state_chips}</div>'
             f'</div></li>\n'
         )
     body = f"""
@@ -3058,45 +3071,58 @@ def build_blog_index():
 </header>
 <section>
   <div class="filter-bar" style="display:flex;gap:12px;align-items:center;margin-bottom:16px;flex-wrap:wrap">
+    <label for="subjectFilter" style="font-weight:600">Filter by subject:</label>
+    <select id="subjectFilter" style="padding:8px 12px;border-radius:8px;border:1px solid #ccc;font-size:15px;background:inherit;color:inherit">{subject_options}</select>
     <label for="stateFilter" style="font-weight:600">Filter by state:</label>
-    <select id="stateFilter" style="padding:8px 12px;border-radius:8px;border:1px solid #ccc;font-size:15px;background:inherit;color:inherit">{options}</select>
+    <select id="stateFilter" style="padding:8px 12px;border-radius:8px;border:1px solid #ccc;font-size:15px;background:inherit;color:inherit">{state_options}</select>
     <span id="filterCount" class="muted"></span>
   </div>
   <ul class="blog-list" id="blogList">{items}</ul>
-  <p id="noResults" class="muted" style="display:none">No posts tagged for that state yet.</p>
+  <p id="noResults" class="muted" style="display:none">No posts match those filters yet.</p>
 </section>
+<style>.tag-theme {{ background:rgba(45,212,191,.14); color:var(--teal);
+  border:1px solid rgba(45,212,191,.28); }}</style>
 <script>
 (function() {{
-  var sel = document.getElementById('stateFilter');
+  var subjectSel = document.getElementById('subjectFilter');
+  var stateSel = document.getElementById('stateFilter');
   var list = document.getElementById('blogList');
   var count = document.getElementById('filterCount');
   var none = document.getElementById('noResults');
   var items = Array.prototype.slice.call(list.querySelectorAll('li'));
   function apply() {{
-    var v = sel.value;
+    var subject = subjectSel.value;
+    var state = stateSel.value;
     var shown = 0;
     items.forEach(function(li) {{
       var states = (li.getAttribute('data-states') || '').split('|').filter(Boolean);
-      var match = !v || states.indexOf(v) !== -1;
+      var match = (!subject || li.getAttribute('data-subject') === subject)
+                && (!state || states.indexOf(state) !== -1);
       li.style.display = match ? '' : 'none';
       if (match) shown++;
     }});
-    count.textContent = v ? shown + ' post' + (shown === 1 ? '' : 's') + ' for ' + v : '';
-    none.style.display = (v && shown === 0) ? '' : 'none';
-    if (v) {{
-      history.replaceState(null, '', '?state=' + encodeURIComponent(v));
+    var parts = [];
+    if (subject || state) {{
+      parts.push(shown + ' post' + (shown === 1 ? '' : 's'));
+      if (subject) parts.push(subjectSel.options[subjectSel.selectedIndex].text);
+      if (state) parts.push(state);
+      count.textContent = parts.join(' · ');
     }} else {{
-      history.replaceState(null, '', location.pathname);
+      count.textContent = '';
     }}
+    none.style.display = ((subject || state) && shown === 0) ? '' : 'none';
+    var qs = new URLSearchParams();
+    if (subject) qs.set('subject', subject);
+    if (state) qs.set('state', state);
+    var qStr = qs.toString();
+    history.replaceState(null, '', qStr ? ('?' + qStr) : location.pathname);
   }}
-  sel.addEventListener('change', apply);
-  var q = new URLSearchParams(location.search).get('state');
-  if (q) {{
-    for (var i = 0; i < sel.options.length; i++) {{
-      if (sel.options[i].value === q) {{ sel.selectedIndex = i; break; }}
-    }}
-    apply();
-  }}
+  subjectSel.addEventListener('change', apply);
+  stateSel.addEventListener('change', apply);
+  var q = new URLSearchParams(location.search);
+  if (q.get('subject')) subjectSel.value = q.get('subject');
+  if (q.get('state')) stateSel.value = q.get('state');
+  apply();
 }})();
 </script>
 """
