@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-08",
+  "generated": "2026-08-09",
   "lookahead_days": 90,
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -9,13 +9,13 @@
     {
       "id": "mora-GA-walker-county-2026-08-08",
       "kind": "moratorium-expiry",
-      "severity": "urgent",
+      "severity": "expired",
       "locality": "Walker County",
       "state": "GA",
       "expires": "2026-08-08",
-      "days_left": 0,
-      "title": "Walker County, GA: data center moratorium expires in 0 days",
-      "body": "The documented term ends 2026-08-08. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "days_left": -1,
+      "title": "Walker County, GA: data center moratorium has lapsed",
+      "body": "The moratorium's documented term ran to 2026-08-08 (1 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
       "source": "https://walkercountyga.gov/2026/07/10/walker-county-approves-temporary-moratorium-on-data-centers/",
       "verified": true
     },
@@ -26,8 +26,8 @@
       "locality": "Cherokee County",
       "state": "GA",
       "expires": "2026-08-21",
-      "days_left": 13,
-      "title": "Cherokee County, GA: data center moratorium expires in 13 days",
+      "days_left": 12,
+      "title": "Cherokee County, GA: data center moratorium expires in 12 days",
       "body": "The documented term ends 2026-08-21. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.atlantanewsfirst.com/2026/07/22/cherokee-county-approves-data-center-moratorium/",
       "verified": true
@@ -39,8 +39,8 @@
       "locality": "Augusta",
       "state": "GA",
       "expires": "2026-09-19",
-      "days_left": 42,
-      "title": "Augusta, GA: data center moratorium expires in 42 days",
+      "days_left": 41,
+      "title": "Augusta, GA: data center moratorium expires in 41 days",
       "body": "The documented term ends 2026-09-19. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.wjbf.com/news/augusta-commissioners-delaying-approval-of-data-center-ordinance-and-extending-moratorium-by-60-days/",
       "verified": true
@@ -52,8 +52,8 @@
       "locality": "Vienna Township (Trumbull Co.)",
       "state": "OH",
       "expires": "2026-10-16",
-      "days_left": 69,
-      "title": "Vienna Township (Trumbull Co.), OH: data center moratorium expires in 69 days",
+      "days_left": 68,
+      "title": "Vienna Township (Trumbull Co.), OH: data center moratorium expires in 68 days",
       "body": "The documented term ends 2026-10-16. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.tribtoday.com/news/local-news/2026/08/vienna-extends-data-center-moratorium/",
       "verified": true
@@ -65,8 +65,8 @@
       "locality": "Lysander (Onondaga Co.)",
       "state": "NY",
       "expires": "2026-11-06",
-      "days_left": 90,
-      "title": "Lysander (Onondaga Co.), NY: data center moratorium expires in 90 days",
+      "days_left": 89,
+      "title": "Lysander (Onondaga Co.), NY: data center moratorium expires in 89 days",
       "body": "The documented term ends 2026-11-06. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.informnny.com/news/local-news/lysander-board-approves-six-month-data-center-moratorium-residents-speak-out-against-project-proposal/",
       "verified": true
