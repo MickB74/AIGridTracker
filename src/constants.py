@@ -4275,6 +4275,34 @@ LOCAL_BODIES = [
      "phone": "303-438-6300", "email": "",
      "website": "https://www.broomfield.org/954/Council-Members",
      "as_of": "2026-08-07", "source": "https://www.broomfield.org/954/Council-Members"},
+
+    {"locality": "Lakeland", "state": "FL",
+     "body": "City Commission",
+     "decides": "Ordinances, land use, the city budget and the municipal "
+                "electric utility (Lakeland Electric). Lakeland enacted a "
+                "one-year data center moratorium (through Aug 2027).",
+     "meets": "1st and 3rd Monday of the month, 9:00 a.m. (excluding holidays)",
+     "where": "City Hall, 228 S Massachusetts Avenue, Lakeland, FL 33801",
+     "agenda_url": "https://www.lakelandgov.net/departments/city-clerk/",
+     "comment_process": "Meetings air live on LGTV; contact the City Clerk for "
+                        "the agenda and public-comment process.",
+     "phone": "863-834-6005", "email": "citycommission@lakelandgov.net",
+     "website": "https://www.lakelandgov.net/government/mayor-city-commission/",
+     "as_of": "2026-08-07", "source": "https://www.lakelandgov.net/government/mayor-city-commission/"},
+
+    {"locality": "Desert Hot Springs", "state": "CA",
+     "body": "City Council",
+     "decides": "Ordinances, land use and the city budget across four districts "
+                "plus an at-large mayor. Desert Hot Springs extended its data "
+                "center moratorium to two years (through mid-2028).",
+     "meets": "See the council's published agenda calendar",
+     "where": "City Hall, 11999 Palm Drive, Desert Hot Springs, CA 92240",
+     "agenda_url": "https://cityofdhs.civicweb.net/Portal/",
+     "comment_process": "See the council's Agendas, Minutes & Videos portal for "
+                        "the public-comment process.",
+     "phone": "760-329-6411", "email": "",
+     "website": "https://www.cityofdhs.org/departments/city-council/",
+     "as_of": "2026-08-07", "source": "https://www.cityofdhs.org/departments/city-council/"},
 ]
 LOCAL_BODIES_DF = pd.DataFrame(LOCAL_BODIES)
 
@@ -4587,5 +4615,58 @@ LOCAL_OFFICIALS = [
      "name": "Todd Cohen", "role": "Council Member", "district": "Ward 5",
      "email": "", "phone": "303-438-6300", "stance": "", "as_of": "2026-08-07",
      "source": "https://www.broomfield.org/954/Council-Members"},
+
+    # Lakeland, FL — https://www.lakelandgov.net/government/mayor-city-commission/
+    # Shared address citycommission@lakelandgov.net reaches all members.
+    {"locality": "Lakeland", "state": "FL", "body": "City Commission",
+     "name": "Sara Roberts McCarley", "role": "Mayor", "district": "At-large",
+     "email": "", "phone": "863-834-6005", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.lakelandgov.net/government/mayor-city-commission/"},
+    {"locality": "Lakeland", "state": "FL", "body": "City Commission",
+     "name": "Stephanie Madden", "role": "Commissioner", "district": "At-large",
+     "email": "", "phone": "863-834-6005", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.lakelandgov.net/government/mayor-city-commission/"},
+    {"locality": "Lakeland", "state": "FL", "body": "City Commission",
+     "name": "Chad McLeod", "role": "Commissioner", "district": "At-large",
+     "email": "", "phone": "863-834-6005", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.lakelandgov.net/government/mayor-city-commission/"},
+    {"locality": "Lakeland", "state": "FL", "body": "City Commission",
+     "name": "Ashley C. Troutman", "role": "Commissioner", "district": "Southwest",
+     "email": "", "phone": "863-834-6005", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.lakelandgov.net/government/mayor-city-commission/"},
+    {"locality": "Lakeland", "state": "FL", "body": "City Commission",
+     "name": "Mike Musick", "role": "Commissioner", "district": "Southeast",
+     "email": "", "phone": "863-834-6005", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.lakelandgov.net/government/mayor-city-commission/"},
+    {"locality": "Lakeland", "state": "FL", "body": "City Commission",
+     "name": "Terry G. Coney", "role": "Commissioner", "district": "Northeast",
+     "email": "", "phone": "863-834-6005", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.lakelandgov.net/government/mayor-city-commission/"},
+    {"locality": "Lakeland", "state": "FL", "body": "City Commission",
+     "name": "Guy LaLonde Jr.", "role": "Commissioner", "district": "Northwest",
+     "email": "", "phone": "863-834-6005", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.lakelandgov.net/government/mayor-city-commission/"},
+
+    # Desert Hot Springs, CA — https://www.cityofdhs.org/departments/city-council/
+    {"locality": "Desert Hot Springs", "state": "CA", "body": "City Council",
+     "name": "Scott Matas", "role": "Mayor", "district": "At-large",
+     "email": "", "phone": "760-329-6411", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.cityofdhs.org/departments/city-council/"},
+    {"locality": "Desert Hot Springs", "state": "CA", "body": "City Council",
+     "name": "Dirk Voss", "role": "Mayor Pro Tem", "district": "District 4",
+     "email": "", "phone": "760-329-6411", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.cityofdhs.org/departments/city-council/"},
+    {"locality": "Desert Hot Springs", "state": "CA", "body": "City Council",
+     "name": "Gary Gardner", "role": "Council Member", "district": "District 1",
+     "email": "", "phone": "760-329-6411", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.cityofdhs.org/departments/city-council/"},
+    {"locality": "Desert Hot Springs", "state": "CA", "body": "City Council",
+     "name": "Daniel Pitts", "role": "Council Member", "district": "District 2",
+     "email": "", "phone": "760-329-6411", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.cityofdhs.org/departments/city-council/"},
+    {"locality": "Desert Hot Springs", "state": "CA", "body": "City Council",
+     "name": "Jan Pye", "role": "Council Member", "district": "District 3",
+     "email": "", "phone": "760-329-6411", "stance": "", "as_of": "2026-08-07",
+     "source": "https://www.cityofdhs.org/departments/city-council/"},
 ]
 LOCAL_OFFICIALS_DF = pd.DataFrame(LOCAL_OFFICIALS)
