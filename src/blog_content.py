@@ -56,6 +56,148 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── Amazon's off-grid gas plant in Pecos County, TX ──
+    {
+        "id": "amazon-pecos-county-gas-plant-2026",
+        "art": "grid",
+        "section": "stories",
+        "title": "Amazon's New Texas Data Center Could Become the Single Biggest Polluter in America",
+        "date": _dt.date(2026, 8, 9),
+        "author": "GridWatch AI",
+        "tags": ["Amazon", "Texas", "Pecos County", "natural gas", "emissions",
+                 "climate pledge", "off-grid power", "air pollution",
+                 "public health", "TCEQ", "analysis"],
+        "summary": (
+            "Amazon confirmed it's investing in a 35-turbine, 7.65-gigawatt "
+            "gas plant to power a new Texas data center — permitted to emit "
+            "up to 33 million tons of CO2 a year, more than any power plant "
+            "operating in the U.S. today. Because it won't initially connect "
+            "to the wider grid, it also won't go through a utility rate case "
+            "— which means the usual ratepayer-impact fight isn't where the "
+            "leverage is this time."
+        ),
+        "body": """\
+Amazon confirmed on Friday that it is investing in a large, dedicated
+natural-gas power plant in Pecos County, Texas, built to run alongside a new
+AI data center on the same site. According to permitting records reviewed by
+[the *New York Times*](https://www.nytimes.com/2026/08/08/climate/amazon-data-center-texas-pollution.html),
+the plant is permitted to release up to **33 million tons of carbon dioxide a
+year** — enough, if it operates anywhere near that ceiling, to make it the
+single largest source of climate pollution of any power plant in the country.
+
+That is a genuinely large number, and it is worth being precise about why.
+Natural gas burns cleaner than coal per unit of electricity generated. But
+the current record-holder for U.S. power-plant emissions is a coal
+plant — the James H. Miller Jr. plant in Quinton, Alabama, which
+[reports](https://www.epa.gov/ghgreporting/ghgrp-power-plants) about 16
+million tons of CO2 a year to the EPA. The Pecos County plant's *permitted
+ceiling* is roughly double that. Scale beats fuel type: a gas plant built
+big enough can out-pollute a coal plant even while burning the "cleaner"
+fuel.
+
+### The build, in numbers
+
+Per the permits described in the *Times*' reporting, the plant will run
+**35 natural-gas turbines** generating **up to 7.65 gigawatts** — enough
+capacity to rank among the largest power plants in the country regardless of
+fuel — dedicated to Amazon's data center. Two details matter more than the
+headline number:
+
+- **It won't initially connect to the wider grid.** This is a
+  behind-the-meter, on-site plant, not a utility asset feeding the Texas
+  grid ERCOT manages. Amazon says it's also evaluating solar and battery
+  storage for the site.
+- **It's in a remote part of West Texas, near the state's major
+  gas-producing basins** — chosen, in part, precisely *because* fuel is
+  cheap and close, and because bypassing the interconnection queue avoids
+  the multi-year wait a grid-connected project would face.
+
+Amazon spokeswoman Margaret Callahan said the plant would be "powered by new
+on-site generation that won't raise electricity costs for Texas families."
+That statement is narrowly true and worth taking seriously — and it is also
+the whole reason this deal looks nothing like the ratepayer fights this site
+usually covers. More on that below.
+
+### A climate pledge under real strain
+
+Amazon co-founded the Climate Pledge, a voluntary commitment to eliminate
+its net carbon emissions by 2040. Its own emissions have risen every year
+for the past several, and the company has acknowledged that AI data-center
+growth is a direct threat to that goal — a tension the *Times* covered in
+detail in [a companion piece on corporate climate
+commitments](https://www.nytimes.com/2026/07/17/climate/company-climate-change-commitments-renege.html)
+last month. Amazon's own framing hasn't changed: "our commitment hasn't
+changed," Callahan said. Building the single largest emitting power plant in
+the country is the test of whether that survives contact with an AI buildout
+this size.
+
+This isn't happening in a vacuum. The *Times*' ["Dirtier Air, Dirtier
+Water" series](https://www.nytimes.com/2026/08/05/climate/data-centers-pollution-trump-ai-energy.html)
+has been documenting how the Trump administration's "energy dominance"
+push — fast-tracking data-center permitting, favoring oil, gas, and coal over
+renewables — is directly shaping where and how this generation gets built.
+Developers are choosing on-site gas plants specifically because they are
+the fastest path to power that doesn't require years in a utility's
+interconnection queue.
+
+Michael Thomas, founder of Cleanview, the firm that
+[first reported](https://newsletter.cleanview.co/p/scoop-amazon-is-behind-one-of-the)
+Amazon's role in the project, called it a possible "foreshadowing of what's
+to come": Amazon has historically bought its power from the ordinary utility
+mix, and a shift to dedicated off-grid gas at this scale signals, in his
+words, "an explosion of off-grid gas projects" in Texas and beyond.
+
+### Why this doesn't fit the usual playbook
+
+Every negotiating framework on this site — the [impact
+calculator](/impact.html), the [PUC directory](/puc.html), the [model CBA
+clauses](/cba-clauses.html) — assumes a data center is buying its power from
+a regulated utility, which means there's a rate case, a docket, and a
+ratepayer-impact number a community can put in front of a commissioner. An
+off-grid, behind-the-meter power plant sidesteps that structure entirely.
+There's no utility rate case to intervene in, because ratepayers aren't
+paying for it — which is exactly what "won't raise electricity costs for
+Texas families" means, and exactly why it's true.
+
+That doesn't mean there's no leverage. It means the leverage moves to
+different doors:
+
+- **Air permits, not rate cases.** A 35-turbine gas plant needs air-quality
+  permits from the Texas Commission on Environmental Quality (TCEQ), and
+  TCEQ permits have public-comment periods and contested-case hearing
+  rights. That's the process where local air-quality and health impacts —
+  the smog-forming pollutants tied to heart disease and asthma that Public
+  Citizen's Kathryn Guerra flagged in the *Times*' reporting — actually get
+  argued on the record.
+- **County tax abatements are still on the table.** Texas's data-center
+  incentive statutes and county-level abatement agreements are negotiated
+  locally, independent of how the facility gets its power. That's still the
+  point where a community can attach binding community-benefit conditions.
+- **Land use and zoning haven't gone anywhere.** A 7.65 GW gas plant is a
+  large industrial facility in its own right, sited on land Pecos County
+  still has zoning and permitting authority over.
+
+The lesson for any community facing a similar "we'll build our own power"
+pitch: ask *immediately* whether the plant will be grid-connected. If the
+answer is no, the ratepayer argument disappears — and the fight has to move
+to the air permit and the local land-use process on day one, not after the
+first hearing.
+
+> If a facility like this is proposed near you, the state and county air
+> permit is usually where public comment actually lands — check your
+> [state profile](/states/) for the environmental regulator to watch, and
+> use the [story tracker](/story-tracker.html) to see whether other
+> communities are already organizing around it.
+
+### Sources
+
+- [The New York Times — "New Amazon Data Center Stokes Worry It Would Be the Most Polluting Power Plant in the U.S." (Aug. 8, 2026)](https://www.nytimes.com/2026/08/08/climate/amazon-data-center-texas-pollution.html)
+- [The New York Times — "Trump's Vision for A.I. Dominance Comes With Major Air Pollution" (Aug. 5, 2026)](https://www.nytimes.com/2026/08/05/climate/data-centers-pollution-trump-ai-energy.html)
+- [The New York Times — "How to Abandon Your Climate Commitments and Get Away With It" (Jul. 17, 2026)](https://www.nytimes.com/2026/07/17/climate/company-climate-change-commitments-renege.html)
+- [Cleanview — Amazon's involvement in the Pecos County plant](https://newsletter.cleanview.co/p/scoop-amazon-is-behind-one-of-the)
+- [EPA GHG Reporting Program — power plant emissions data](https://www.epa.gov/ghgreporting/ghgrp-power-plants)
+""",
+    },
     # ── Evergreen SEO guide: property values ──
     {
         "id": "data-centers-property-values-2026",

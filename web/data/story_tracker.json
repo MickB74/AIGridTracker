@@ -1,12 +1,12 @@
 {
   "name": "AI GridWatch data center story tracker",
-  "generated": "2026-08-08",
+  "generated": "2026-08-09",
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 643,
+  "count": 648,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -28,7 +28,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Vineland residents pack into meeting over AI data center linked to humming noise",
@@ -39,7 +39,7 @@
       "locality": "Vineland",
       "state": "NJ",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Cumberland County residents sound off on data center development",
@@ -50,7 +50,7 @@
       "locality": "Cumberland County",
       "state": "NC",
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Inside the secretive deal for a $10 billion data center in rural North Carolina",
@@ -61,7 +61,7 @@
       "locality": null,
       "state": "NC",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Big tech, residents clash over data centers",
@@ -72,7 +72,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "AI data center discussion sparks skepticism in Butte County residents",
@@ -83,7 +83,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Data center controversy continues in Georgia",
@@ -94,7 +94,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Fayetteville residents urge city council to ban data centers",
@@ -105,7 +105,7 @@
       "locality": "Fayetteville",
       "state": "NC",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "As data center debate roars in Wisconsin Rapids, mayor says lack of state rules harms cities",
@@ -116,7 +116,7 @@
       "locality": null,
       "state": "WI",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Jeffersonville passes year-long data center moratorium amid resident outcry and major utility disclosures",
@@ -127,7 +127,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "‘Concrete jungle’: As Amazon details plans for new Ashburn data centers, some residents are fed up",
@@ -138,7 +138,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Washington Residents Voice Concern Over West Plains Data Center",
@@ -149,7 +149,7 @@
       "locality": null,
       "state": "WA",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Trump’s Vision for A.I. Dominance Comes With Major Air Pollution",
@@ -160,7 +160,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Rep. Wendy Dant Chesser Addresses Resident Concerns Over Meta Data Center, Water Capacity, and AI Regulations",
@@ -171,7 +171,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Butte County residents voice concerns over data centers",
@@ -182,7 +182,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Data center concerns dominate Fayetteville City Council public forum",
@@ -193,7 +193,7 @@
       "locality": "Fayetteville",
       "state": "NC",
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Vineland data center makes case for on-site power generation during 6-hour hearing",
@@ -204,7 +204,7 @@
       "locality": "Vineland",
       "state": "NJ",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Louisville mayor calls for a data center moratorium as city considers regulations",
@@ -215,7 +215,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Rural residents challenged a data center project near Ann Arbor. Nearly 90% of voters said no.",
@@ -226,7 +226,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Richmond County residents request respite from data center development",
@@ -237,7 +237,7 @@
       "locality": "Richmond County",
       "state": "NC",
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Meta data center town hall turns tense as residents press water, power officials",
@@ -248,7 +248,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Data center moratorium dominates Louisville public comment meeting",
@@ -259,7 +259,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Shreveport residents pack town hall over data center concerns",
@@ -270,7 +270,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Ohio residents sue to stop data center",
@@ -281,7 +281,7 @@
       "locality": null,
       "state": "OH",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Former New York City Mayor Eric Adams Tried to Sell Wisconsin Residents on a Massive Data Center. He Was Met With Boos",
@@ -303,7 +303,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Wytheville data center boom draws resident pushback over land, water, and electric rates",
@@ -314,7 +314,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "'Project of unprecedented scale': Lake County residents file lawsuit to block 472-acre data center campus in Grayslake",
@@ -325,7 +325,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Pittsburg residents want city to pause data center project",
@@ -336,7 +336,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "AI data centers spark noise, environmental concerns as South Florida communities weigh moratoriums",
@@ -347,7 +347,7 @@
       "locality": null,
       "state": "FL",
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "In letters: Zeroing in on environmental harm from data centers and plastics | Opinion",
@@ -358,7 +358,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Amazon abandons plans for data center campus at Calvert Cliffs",
@@ -369,7 +369,7 @@
       "locality": null,
       "state": "MD",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Wrightstown residents to vote on AI data center referendum on Aug. 11",
@@ -380,7 +380,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Board makes no decision as data center plan faces opposition in Plymouth Twp.",
@@ -391,7 +391,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Lyon County developing data center ordinance",
@@ -402,7 +402,7 @@
       "locality": null,
       "state": "NV",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Petersburg area residents fight back against data centers",
@@ -424,7 +424,7 @@
       "locality": null,
       "state": "OH",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Ramaswamy says new Ohio data centers should pay residents’ electric bills",
@@ -435,7 +435,7 @@
       "locality": null,
       "state": "OH",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "In the region: Effingham County residents, officials visit Meta data centers",
@@ -446,7 +446,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Oregonians want data center moratorium and no more tax breaks, poll finds",
@@ -457,7 +457,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Coming to Some of Pennsylvania’s Most Picturesque Places: Data Centers",
@@ -479,7 +479,7 @@
       "locality": "Madison County",
       "state": "MS",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "North Texas data center clears key hurdle despite strong opposition from neighboring residents",
@@ -490,7 +490,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "'Just to give us a say': Eastern Jackson County city, residents take proactive steps on data centers",
@@ -501,7 +501,7 @@
       "locality": "Jackson County",
       "state": "AL",
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "City officials evaluating what statewide data center audit means for Fort Worth projects",
@@ -512,7 +512,7 @@
       "locality": "Fort Worth",
       "state": "TX",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Two data centers beat Hillsboro to the finish line on permitting ban",
@@ -523,7 +523,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Pittsburg pledges greater public scrutiny of data centers after backlash",
@@ -534,7 +534,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Sanford City Council extends data center moratorium 180 days amid resident concerns",
@@ -556,7 +556,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Butte County has no plans for AI data centers — at least not yet",
@@ -567,7 +567,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Westlake approves 87-acre data center with added conditions",
@@ -578,7 +578,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Familiarity with data centers",
@@ -589,7 +589,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Hillsborough County moves toward moratorium on AI data centers",
@@ -600,7 +600,7 @@
       "locality": null,
       "state": "FL",
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Adelanto moves toward data center zoning update following San Diego tour",
@@ -611,7 +611,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Residents pack meeting to oppose data centers",
@@ -622,7 +622,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Little Rock city director defends her vote against moratorium on data center permits",
@@ -644,7 +644,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Survey shows data centers face broad resistance in Kewanee",
@@ -655,7 +655,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Data centers are coming to Oklahoma. Leaders at a recent Tulsa forum advise turning the challenge into an opportunity",
@@ -666,7 +666,7 @@
       "locality": "Tulsa",
       "state": "OK",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
     },
     {
       "title": "Pitt County town temporarily stops data center for a year following community opposition",
@@ -7079,7 +7079,62 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-09"
+    },
+    {
+      "title": "Residents, environmental group challenge Spartanburg County data center project before PSC",
+      "outlet": "FOX Carolina News",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPakR1S2hMTE1EZUU1ekJLekk0aUdfX0RTQ2VOSUx3NlVtMUE3RFVmSlFtNDkzSUxqcFoxQ0I4SXdMeUUyNi1HZXdlQ1lQWVRjdVdVNkRWSS1tR29uY3VQbXFTUmpqdzJTZjU0bWM3MnpCeGpLcGhKSEt5a01JNEZyWlkxR0psWHBfTVZfS3d1RTljZ1VVbktqMURVc05jV0dxMjZIZFdOcHFjZ3FHM2Jz0gHDAUFVX3lxTFBxaFZDdFVhbjlRQkJQcFpfbjA3Rjl3TVBpakJOOUhod2JkWFpUeFFsX1plbm5lYTBJbm0yOHIzRkh6bVowRWVObW1ENHFoMk9MaG5wM29xZS1NZGE3eGNiQ1o3VUFBSFh2V1JFZFZ3U3c2VEFkWXI3Wk5XXzdMY1NOeU1lN0FVdGtFc3dJc0cwczF1RVJjdmxrd2RiZ3gxWnhWanNFdzNWS1kzWlM1eTZGVjZVYU4ydFo3SVlwOGxSV1U4Zw?oc=5",
+      "published": "Wed, 05 Aug 2026 14:02:00 GMT",
+      "published_iso": "2026-08-05T14:02:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-09"
+    },
+    {
+      "title": "Ramaswamy wants data centers to pay Ohioans' electric bills",
+      "outlet": "The Columbus Dispatch",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQTW14TEtuR3hmbnJ5Nlg5ZkpMT3h3RUY2cW16eVRiMEV0WGwyaHZTNzlwek5UbVFUcHNoM3gzb0QwblJ3aFQzOHh3OFE0aXFlem5qMU41UUJQcDFxT1dUOGFGMDlnd3UyZlBDVk43d3VlcWhVZVVPd0cxVUU0Smt4RllSQW15SXZJVWNUMjFQVlNSYng3Y0hHTmxIMGZvQ0lEeFl4M3RXSFJJZFhoNUdUekEwMXdUcW1uMlpzVk45RnFmdFNBclE?oc=5",
+      "published": "Thu, 06 Aug 2026 19:35:00 GMT",
+      "published_iso": "2026-08-06T19:35:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-09"
+    },
+    {
+      "title": "Wytheville Data Center Boom Draws Resident Pushback Over Land, Water, and Electric Rates",
+      "outlet": "WLBT",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQQWZRVmNGNGk3Vk1pckhQbWVhWG1mS0R6SFcyTVVVdjdfMk45d0lrOHZvT21UR0NBVzRpZWc5T2txdG9vNDZKbmNSQUdvS1lFRVd0OXhjbzBkVXVONWVoeTdyREpDX21YdEpiZ25QLVhPb1B2UG1sN3RUbTN3Ni1tZWUxWVBYTXhZSzRmMjRnMHpROWRWSEJiVVhKT0dIZ0tQa2FoTzlqd0d2WTdPMUlubjJ0eVM4RVYySC1wWkhn?oc=5",
+      "published": "Sat, 08 Aug 2026 03:24:00 GMT",
+      "published_iso": "2026-08-08T03:24:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-09"
+    },
+    {
+      "title": "With more data centers on the horizon, communities worry about rising electricity bills",
+      "outlet": "WEKU",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNQzlPUUM3Q0NWeFhPNE0ydzY2TTdZZ1NmYlUtaW5vTjBvWDFuS1BSQmFlWEtVY1NlajB3SVZ6cE9uLTdxOHZkZnk0Mlo4NldmSkFESXBKRXRLSnJCS0tFTkg2ZDJJYXJjX2pRZzBhOVBUOEt4RXo1LWtkYklrLThUUGZfLXh2MEhlMVJIYVNXUExVNzB6UGhta1JpazlHWVA2cWlQQnVsVDUwTGRUOHd1OXM2WWZkRk80bnFYTWl0Mm1GZHE0VzZXckdlMFdNZw?oc=5",
+      "published": "Sun, 09 Aug 2026 12:00:00 GMT",
+      "published_iso": "2026-08-09T12:00:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-09",
+      "last_seen": "2026-08-09"
+    },
+    {
+      "title": "Wytheville Data Center Boom Draws Resident Pushback Over Land, Water, and Electric Rates",
+      "outlet": "FOX5 Vegas",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNVm9IOEdZX0ZCNVViNGFnV0F0TzRITnBhem1jUV9XT2dHa2hLNlJGbENJLVQ0X0ljQzRtMzhITzJfalBFRmdxeG1tTVpqajlIQTlDelZGQ0tzMkZSWUZyRlBwS1ZhSUtHaFdPSHhoM1A0bmdFeGJwUjhBX3loUm5oWExRSm9sMlR5b3dTT1phYmtXMHJDcENGeWh6Ui1zNjJvR1pkVnlWNEZNZmk1X3lWWkF1Sm5pMHZvU3RwOFhJZWtuWjVp?oc=5",
+      "published": "Sat, 08 Aug 2026 03:24:00 GMT",
+      "published_iso": "2026-08-08T03:24:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-09"
     }
   ]
 }

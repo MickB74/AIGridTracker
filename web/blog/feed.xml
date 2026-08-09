@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Amazon&#x27;s New Texas Data Center Could Become the Single Biggest Polluter in America</title>
+      <link>https://aigridwatch.com/blog/amazon-pecos-county-gas-plant-2026</link>
+      <guid>https://aigridwatch.com/blog/amazon-pecos-county-gas-plant-2026</guid>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Amazon confirmed it&#x27;s investing in a 35-turbine, 7.65-gigawatt gas plant to power a new Texas data center — permitted to emit up to 33 million tons of CO2 a year, more than any power plant operating in the U.S. today. Because it won&#x27;t initially connect to the wider grid, it also won&#x27;t go through a utility rate case — which means the usual ratepayer-impact fight isn&#x27;t where the leverage is this time.</description>
+    </item>
+    <item>
       <title>Do Data Centers Lower Property Values? What the Studies Actually Show</title>
       <link>https://aigridwatch.com/blog/data-centers-property-values-2026</link>
       <guid>https://aigridwatch.com/blog/data-centers-property-values-2026</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/moratorium-wave-2026</guid>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
       <description>From Virginia&#x27;s Loudoun County to rural Indiana, a rolling wave of moratorium bills and local zoning freezes is reshaping where the next generation of AI data centers can be built.</description>
-    </item>
-    <item>
-      <title>The Hidden Water Cost of Your AI Query: What the Data Actually Shows</title>
-      <link>https://aigridwatch.com/blog/hidden-water-cost</link>
-      <guid>https://aigridwatch.com/blog/hidden-water-cost</guid>
-      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
-      <description>A single ChatGPT query uses about 18 mL of water — roughly a medicine-cup pour. Multiply by billions of daily queries and the numbers start to matter, especially in water-stressed regions.</description>
     </item>
 </channel>
 </rss>
