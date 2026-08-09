@@ -9,6 +9,7 @@ from src.local_officials import (
     verification_note,
 )
 from src.services.officials import load_officials
+from src.official_grades import attach_grades, RUBRIC
 from src.services.news import fetch_news
 from src.services.openstates import fetch_state_legislators
 from src.services.reddit import load_reddit_corpus
@@ -228,6 +229,11 @@ def render_officials_tab():
         st.warning("Couldn't load the officials directory.")
         st.caption(f"Detail: {ogen}")
     else:
+        # normalize inconsistent party labels ("Democrat" -> "Democratic") so
+        # the party filter doesn't split into duplicate options, then grade.
+        odf = odf.copy()
+        odf["party"] = odf["party"].replace({"Democrat": "Democratic"})
+        odf = attach_grades(odf)
         nS = (odf.office == "Senator").sum()
         nH = odf.office.isin(["Representative", "Delegate"]).sum()
         nG = (odf.office == "Governor").sum()
@@ -260,12 +266,14 @@ def render_officials_tab():
         _default_states = [_focus_state] if _focus_state else []
         states = f3.multiselect("State / territory", sorted(odf.state_full.unique()),
                                 default=_default_states)
-        cbx1, cbx2 = st.columns(2)
+        cbx1, cbx2, cbx3 = st.columns(3)
         only_stance = cbx1.checkbox("Only officials with a documented "
                                     "data-center stance", value=False)
         ec_only = cbx2.checkbox("Only key energy committees (House Energy & "
                                 "Commerce + Senate Energy & Natural Resources)",
                                 value=False)
+        graded_only = cbx3.checkbox("Only graded officials", value=False)
+        st.caption("🅰️ **Grade** — " + RUBRIC)
 
         view = odf.copy()
         if offices:
@@ -283,21 +291,23 @@ def render_officials_tab():
         if ec_only:
             view = view[view.get("committee", "").isin(
                 ["Energy & Commerce", "Energy & Natural Resources"])]
+        if graded_only:
+            view = view[view.grade != ""]
         view = view.sort_values(["state_full", "office", "name"])
 
         q1, q2, q3 = st.columns(3)
         q1.metric("Officials shown", f"{len(view)}")
-        q2.metric("House members",
-                  f"{view.office.isin(['Representative','Delegate']).sum()}")
+        q2.metric("Graded", f"{(view.grade != '').sum()}")
         q3.metric("With sourced stance", f"{(view.stance.str.len()>0).sum()}")
 
         show = view[["name", "office", "state_full", "district", "party",
-                     "committee", "stance", "website", "contact"]].copy()
+                     "grade", "committee", "stance", "website", "contact"]].copy()
         st.dataframe(
             show, use_container_width=True, hide_index=True, height=560,
             column_config={
                 "name": "Name", "office": "Office", "state_full": "State",
                 "district": "District", "party": "Party",
+                "grade": st.column_config.TextColumn("Grade", help=RUBRIC),
                 "committee": st.column_config.TextColumn("Committee"),
                 "stance": st.column_config.TextColumn("Data-center stance (sourced)",
                                                       width="large"),
