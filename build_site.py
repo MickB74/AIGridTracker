@@ -2010,6 +2010,50 @@ def _load_youtube():
     return live, fetched_at
 
 
+VIDEO_ARCHIVE_PATH = pathlib.Path(__file__).parent / "data" / "video_candidates.json"
+
+
+def _persist_video_candidates(videos, today):
+    """Accumulate fetched videos into a durable archive, same running-history
+    pattern as _persist_story_candidates. Google News RSS returns only a recent
+    slice, so a single fetch can't reach six weeks back — but merging every
+    daily fetch, keyed by link with first_seen kept, grows the pool to weeks of
+    coverage over time. Returns the full archive (newest first), which is what
+    the /videos page and the story tracker then read instead of the thin live
+    slice. Enrichment (locality/state) is preserved: fresh records carry it and
+    merge_stories keeps the older stored copy's tags."""
+    payload = {"updated": today, "videos": []}
+    if VIDEO_ARCHIVE_PATH.exists():
+        try:
+            payload = json.loads(VIDEO_ARCHIVE_PATH.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as e:
+            print(f"  [videos] {VIDEO_ARCHIVE_PATH} is not valid JSON ({e}); "
+                  f"leaving it untouched this build.")
+            return payload.get("videos", [])
+    existing = payload.get("videos", [])
+
+    fresh = []
+    for v in videos or []:
+        if not v.get("link"):
+            continue
+        rec = dict(v)
+        rec.setdefault("first_seen",
+                       story_tracker.date_from_iso(v.get("published_iso"), today))
+        rec["last_seen"] = today
+        fresh.append(rec)
+
+    added = story_tracker.merge_stories(existing, fresh, today)
+    # Newest first by published date, unknown dates last.
+    existing.sort(key=lambda v: v.get("published_iso") or "", reverse=True)
+    payload["updated"] = today
+    payload["videos"] = existing
+    VIDEO_ARCHIVE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    VIDEO_ARCHIVE_PATH.write_text(
+        json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"  [videos] {added} new · {len(existing)} total archived")
+    return existing
+
+
 def _enrich_video_geo(videos):
     """Give each video a best-effort locality + state via the same gazetteer the
     news archive uses. A video titled "Tucson residents fight Project Blue"
@@ -9488,8 +9532,13 @@ def main():
     global _NEWS_ITEMS, _VIDEO_ITEMS
     print("  [news] loading headlines + videos…")
     _NEWS_ITEMS, news_themes, top_stories, news_fetched_at = _load_news()
-    _VIDEO_ITEMS, _ = _load_youtube()
-    _enrich_video_geo(_VIDEO_ITEMS)   # locality + state tags for grouping/filter
+    _live_videos, _ = _load_youtube()
+    _enrich_video_geo(_live_videos)   # locality + state tags for grouping/filter
+    # Accumulate across builds so the video pool reaches ~6 weeks rather than
+    # the thin live slice Google News RSS returns in one call.
+    import datetime as _vdt
+    _VIDEO_ITEMS = _persist_video_candidates(
+        _live_videos, _vdt.date.today().isoformat())
     _STORY_ARCHIVE = _persist_story_candidates(_NEWS_ITEMS)
 
     shutil.rmtree(WEB, ignore_errors=True)
