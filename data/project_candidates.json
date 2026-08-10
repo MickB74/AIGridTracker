@@ -1,6 +1,474 @@
 {
-  "updated": "2026-08-07",
+  "updated": "2026-08-10",
   "candidates": [
+    {
+      "title": "Hanover Township data center hearing halted amid dispute over zoning process",
+      "outlet": "The Business Journals",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxORnV5bzhWbFVmSGZkNTUtcHZVeWNxb1k3RkF4eTF6WDc0Z19uNm4xX1NFTThyOXE5Q0lBTHVpdzB3cVZZczBVZTRuYVZmVGFCQXprZ3ktV3NPZGVaRHBVNmxvbkdXNmM0NjFPNFdHM0lsYmNDYXFud0VrYXN4aUx6MWc2eHdiRThVSy1BMXNaLUkxQXZ0OEpj?oc=5",
+      "published": "Thu, 06 Aug 2026",
+      "guess_locality": "Hanover",
+      "guess_state": null,
+      "query": "data center rezoning public hearing",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Planning and zoning commission to review development company's South Franklin rezoning requests, hold data center study session",
+      "outlet": "Kirksville Daily Express",
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOTEg1YjRNc0RRenN5R0dnVG1wLVBCUVZMcjRSWlVzZjdhOU9YWi1hY241SHhmTk5sc2FQaU9FMXRVT2l2bWF4NEFMMm8weHlPeWhNREw2Y25OZWI1NXJuMUhYbHlxY0N4TnAtbkoyNjAxRXViUmdvWkE4Y282VkZVa284VS1DWHYwUnFrOTI1ZVdQMllnRFFOSkxtWDltRHF6c21zWExxdXdCZFdMdzRITWpPejROUk1SM2NCdUNyTGE0OFltTF9FRm05bWh0RF9lSTM0dDRZNDZHdklUaDZua2tZODJ0UQ?oc=5",
+      "published": "Thu, 06 Aug 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center rezoning public hearing",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "status": "new"
+    },
+    {
+      "title": "Zoning hearing addresses data center application in Lawrence County",
+      "outlet": "WKBN.com",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOeGEyNzVoM2NiVXl2WEt6dkxZeWxlaW9zNFFtc0VUak9oOGROVklRT2MzZ1NoWmZEbXF4enhPWDZhMEJ5SmhkTDc3UG9XanVuSzJrZVYtTk8tS2l4UDZ1NjY0eFhLYXVhMElKMG9hck1hZ1poUGx2cjZIVjB1ZzcyR1piUkNBem9HVUh3N3FEUlVWZ0VtRlBjVnhNYkdIU3lxTjVjaG0wYS3SAa4BQVVfeXFMTmVZY1dEa3E0cGJickZOVmZrVlhWckNNRXAtR0taal84ZXg0MDFHRmNfQ1ZtS2VsS3dES0NvbHEyem8tdmVOU0tBWnNCR2VTSk1HdlYxdU1BeFRtaFJNNnhPZWV0LVNuU01JMjhEbjljVm5FLUVJLUJlWjg5U2JOdE9BQVgyc3dwdXE3d01aSGF1NFFwdnd0ZXlzak91UVIxUUwyZFI4OTVxU2Ftelhn?oc=5",
+      "published": "Wed, 05 Aug 2026",
+      "guess_locality": "Lawrence",
+      "guess_state": null,
+      "query": "data center rezoning public hearing",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Posey commissioners say they'd vote no on rezoning for data center",
+      "outlet": "Courier & Press",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQRFV4NjRKcGtidlVRN3prWnNnTWxXX0xMRE4zSEd4VHhINEl1eFFnYkhlbEprWDVydkIwbHNKRDViQ09lc3BNb1UtQzg0RVdrN05DS2liNjk5Q1ZUbGNSaWJxT1Z3Y0hrV3hqRmtWa1BrbFB6dUNUa3BsMnVNcTh1OXptMHpua0xHODhiNm51NWtvcm5FR1FTZ0NWMzNIbWhSOHhoTVFITmhuaWJXSk9IRHFVZ3NQSlVxZG54cU5FUWlsTldIS1FWNkZNRnIwRHcx?oc=5",
+      "published": "Tue, 04 Aug 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center rezoning public hearing",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "status": "new"
+    },
+    {
+      "title": "This Week Ahead: Zoning hearing meetings scheduled for proposed data center",
+      "outlet": "New Castle News",
+      "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOU2I1Y0EtZVo1YjhMSXVVekdXejZuLWt6LTdhYmE4R3UyVHMzRElpUFczT21HSnItVGZBdlM0M0o3bUhlTG1QRzNhVXNLNTljRERJdC1yQnhsMDN4OVFzNFp4TWZ3MGFCbGMzNmVIZzY0blF6LUxQNlRTMlZqdzRyTk9jbHh4aDlrMDhfbnBVOTdQYVgzYmdSR0U4bUl1WnM1WERhVVUwc09KMVdaQ3Q2ZmFxM3NSTGJGMFNBTzEyeHBsQnozSExCcFlOR3ctcTRiNFRJRU92M25Bak1Ca2Y0LUNsVUhEVHdxVUVfcHVYMzBRclp2VmJBQzZqZmNKQQ?oc=5",
+      "published": "Mon, 03 Aug 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center rezoning public hearing",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "status": "new"
+    },
+    {
+      "title": "Zoning hearing addresses data center application in Lawrence County",
+      "outlet": "WKBN.com",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOLWN3YWtDbjIzc2Y4blBNazZfYWZnM2xYMzZhQmthUGtIUFVVckxhNFpycmp3QTJNQ3NhM3o1RHBjdlcyeVlONGFEaTQ4UTNTOEZYckhJSmR0V2RRckYtOUFhRU9McndLRW0yOS0wOEdOc1k0WHdGdjlVUi1FSGpYbDEzbWE1WVlvTWxlTFhCTnpxZHZEV0hsOWVJcE9heTZzcUJaa25mUQ?oc=5",
+      "published": "Wed, 05 Aug 2026",
+      "guess_locality": "Lawrence",
+      "guess_state": null,
+      "query": "data center rezoning public hearing",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "status": "new"
+    },
+    {
+      "title": "Planning Commission approves conditional use permit for proposed Iron County data center",
+      "outlet": "St. George News",
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQTDc4N21DMzJqd0FZY0wtaHVrSjlFSy1RY0RhTTA1NTNPdXd4T1ZRRE1tdlBSdUVndDRnckJwN3U1WWNRUGRuamlhWmg3eGUyOG1JR3dRWUhDZ1JZZVd6WEs1VVo3TDByaWt0QzVMLTZqQS1uUUZlVS1DVHhjSU96eXVxeUdXeTQ2U0ZBRUdGWF85a0FYTFZ4UkN1NVpaQ0phaFJzVUVzS0dRQnBVRDJFTHRnclgtck9jU0FEZkpXNWJ6LXhSRFFBV2p3Q09YejhoaXdpQVhKSW0wVFktYng3X3BReWY0R09fbk55WURqd3g5emRTdk1rZ0NSd1daZUxiZUE?oc=5",
+      "published": "Sat, 06 Jun 2026",
+      "guess_locality": "Iron",
+      "guess_state": null,
+      "query": "data center special use permit planning commission",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Social Circle Planning Commission recommends latest data center request",
+      "outlet": "The Covington News",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOY0E0T3Q5aUFKOWpoVDZXeWFxUzZoOWxlLUpLcFV4RnllSXJlbzNsc1VzUWNMNjE2R0NLUURrR1ZTNG5SNmNaRlowR2IycjRyV3EyS1c3dEFZVm9FWFlRSnF3aDI5UVdXa1d4eGhDOFhmc1RZaEoydVVXdjFQMmFQWHl2S2tuVFhyVXU4U1VFOTRaVURreEZFeXlLOThlUjFPcVNLMUNqdlMyZFV1?oc=5",
+      "published": "Sun, 19 Apr 2026",
+      "guess_locality": "Social Circle",
+      "guess_state": null,
+      "query": "data center special use permit planning commission",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "status": "new"
+    },
+    {
+      "title": "Warrick County Commissioners schedule special meeting on data center zoning",
+      "outlet": "WFIE | 14 News",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZ1ZZdkF1Nk13TFVBSmloak9BenZuUWdKYnpnc0ZMa0h3cnNNX08xN0J5Z1kyczFzSWNKeUNTcG5uVDdUek5GTkp1Z0Y5NFNscUpMaDI3VmdheHZiQTdMYnlUMGJjOVpwVGtZZ0FFSVo4aHRmenJnZWhBUHBpV09TOWRqVkc4TEZhZVFxaGNVNlB1M0VFQ191VGl0ZGFLV0hJdTIzRFl5eVJiWnc?oc=5",
+      "published": "Fri, 31 Jul 2026",
+      "guess_locality": "Warrick",
+      "guess_state": null,
+      "query": "data center proposed county board zoning",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Hood County judge dismisses lawsuit seeking automatic approval of proposed data centers",
+      "outlet": "KERA News",
+      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOYUx4N3VMMW1JaXlxMWV1X2tCNkVVRTdCYzJSWlhTMUVmWmpuMTZLN3F4T0V1dXBTZktMWTdsRjlIc25uUE5Edk11enBJaHJ6anMtOXR4UFU2a3BtMW1Ed1lzN2FqT29CMlVPVHBTcTJJMkhZcmZIdHBWQ3dHMGtKbGZHdXp4NWVRSnhlaFZENVJlejkzRE9kWkw4NmtoSDYzMG1jcXplOXRZQUszNVRVWjlCN05HN1ZEcnl3bkVaeS0tSDZnZnZUUTRNYWl3SUt6VENqTGNJZWVjUQ?oc=5",
+      "published": "Mon, 20 Jul 2026",
+      "guess_locality": "Hood",
+      "guess_state": null,
+      "query": "data center site plan application approved",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Data center application reveals key details on Monticello Tech proposal",
+      "outlet": "hometownsource.com",
+      "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOVTdpcEN4MmxBbllEVVc5T2V2d2pxR0hWbnU1MGxwVHdDMGpXN0F0MUw4SXdiTUdsclVQYWwxWnBjeHNzcmtnUXZwcDl1em9QaFVVaW9TS08yd1Z0dWpFUWEyUlktdXJydjVOQkxuVUlfTkdqUE9GckNQRWhnQVktbzVPM3JxeDBxNlpka3JiRjJ3LWZYVFJOY1d2QldSNWFpMW1DSWZIRXgxekEycU5EVFIwSDZ3Qklvc3Q2ZGhWU2ZLemZVX3VkZXlpZkJ0bXBsUy1sanJVZThMODZ3ZmpKb182SGtMeEdVUVlxd0dubmp5RjZPVHNCUGR4cG9FZw?oc=5",
+      "published": "Mon, 20 Jul 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center site plan application approved",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Land in N.J. town is ‘data center approved.’ But residents worry it’s not hypothetical. ‘We don’t want it.’",
+      "outlet": "NJ.com",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPSkNvVmNxMmh6VG9iUXlQTHYyd2UxUVRsWnFPVHBnZm9Dc29EWmpBd1ZyTUE5OURBU0F6RVhmRGljTnFIUERRZUtjbEg4QTJlN3FLeHI0WWtISlZRZkNVLWNQSGQtNVhxekV5Z3Q2QUI4c1ZEc3JQUXBrS1ZPQ1JxekxFdWFFX1pUQnRTLUdMS3lybUlZZTEycjFmZm9MS1JNaGxDODdkeW85Ny1CcFJUYVZudXRSU0QzS2VMU1FaUGJlOXBuaC1IZ2RzRkNtUdIB4gFBVV95cUxNaEN2Um4xazNJdWdFcFVEdnFuRUVUZXgxQXhDb3ItdWZXY2hHTlZJNXdQa1IwUzhVMjF0R2RjQTUwd1h0SDNyeElfb19jNFVfUFJDZ3lhcXJTV2tJbkNLYzdLbmJqZTlaaldUbjVUaXQ2Vm85RXBpSDdfRkZMMG92Zk9KRXcxbEtLYVF6MWs3cW5RV2E5eW03LVVJSTZIMzQzYnVWQW1CUEs3WGxFd3VUUVRHZzdkRmFpcTU3UmxTcXFuUjhqbTc5WmZEVUh0WWhkTmJuV0Y2REwwMW5wdlZVMHBB?oc=5",
+      "published": "Sun, 12 Jul 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center site plan application approved",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "East Lyme Zoning Commission Approves 3 Coastal Home Rebuilds, Forms Data Center",
+      "outlet": "Patch",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWGttVDhMZHU1MXcyQlh6NTE2Ylk3VHE2aVhvZWhLQld6NkM2c2xBYnRMblJDZDREb29sd0hEa0JyYU5DVjNwM1U5cGltczAtMHk4Ni1ERTRRdG56OVplOFFZbC1IanBIRE02TEMyc1VzSTZWUzBGOXpwTWtmclpRYVA4Q1BGcVUwckwwT1JNeVV0YXRLZk5NRHFBeHVLNy1IZGlSOXhNLW5KUHVQOU9yWVczZTNCRVRO?oc=5",
+      "published": "Tue, 14 Jul 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center site plan application approved",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "GENESEE COUNTY/Alabama Planning Board expected to vote July 6th on data center site plan approval",
+      "outlet": "Video News Service",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOa210UW02dlF5SGJfeUVwSW5JVjg0dkMtZjgxSGFuNF8zdXFNTHVTRFp4RDd4VXdVZ2otb0ZQajJwMHpxOVByMVduNU5KSF8tV3MwZ0xvemFzVXZ4SEc5R3dHbzh1Q0R4LWxpWmNibkJxZXBhcHZUR2VrUWI3MnZTa1c5ZWQyOUJXdG1TMWNnYVNYQi1vYmNJcnNyTlNVRDdDc1V2VVBsdzJHanRaVHpveE5pZGZGbzZXclVxRlhTMEtDNnl6Nm01eHFmTU0xSjNnZGxqUmxQTndUWmNkMG5FUVpR?oc=5",
+      "published": "Wed, 17 Jun 2026",
+      "guess_locality": "Alabama",
+      "guess_state": "AL",
+      "query": "data center site plan application approved",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Renderings show vision for massive data center proposed in Utah, but permits could take years",
+      "outlet": "Utah News Dispatch",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQek1GR2pnYXBPUHlRYW13cHBrNlQySmxfX3loNzVJdTVaVzN5QkVHY2J1UzBBNVhqMVZFdmg1QmlkUmkzSUlMZEpUb0JRYUFXVEVXWGszUlRfLUFGR0haSWdHTGIyYURmaWpicmRpOGlFTVg0ZTBfbEkxVlZqX1FLblVGekI4RktOU1dKakhjWkNzTGMxQVhna256cThuU001UTJOdkxuWVFvV1NBX3RTcUpMODFSakk?oc=5",
+      "published": "Tue, 19 May 2026",
+      "guess_locality": null,
+      "guess_state": "UT",
+      "query": "data center site plan application approved",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "‘There’s just a lot missing’: Lansing planning board takes first look at 401-page data center plan",
+      "outlet": "The Ithaca Voice",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQOTJzcXh5MFpWUl9IOWlkYmNtcmtOM0NJRzFhLXJ4MExBbGZoMFN3d2xCQzNiYjNtTnJQajJEYlJzX3ZnYzlIeEJ1dHRxeHJJUzhmb0NiX3A0eElOWmRQZ0V5V0ZwRnA5enJXRFJGdXNMRW1EQ09sdEd5NUNHWW1IX3pkU1g3Y0o4cURJRjVDZUY3aUdzTFd0Z0kzeUE4alhQWWdhb2VQX2VudGhVNk0yZHJHc3Zta0NzeFpWazRNcDNZWUJQNWc?oc=5",
+      "published": "Thu, 30 Apr 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center site plan application approved",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "status": "new"
+    },
+    {
+      "title": "Updated plans for proposed Dickerson data center now online for public view",
+      "outlet": "bethesdamagazine.com",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTF9OSDN6bTBJbGw3MHpnM2lESkxnS1BPdjdvQkpWMDdjdWVTLWlOenBVMktxZGlqYWM2ZXlpLVB1MEo1NzI2WWRKVVBSYktjZXYtQ0VvX0N6dVZsazIwclF1RTlWcXlxNGdqUjRiMHN5Z0VMYjhDT0VMZHA0Z3k4MlhyUG1WWXhUUnRvbXpNTWE3QWRBVFE?oc=5",
+      "published": "Fri, 22 May 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center site plan application approved",
+      "origin": "news-scan",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Vantage Frontier — Vantage Data Centers (Shackelford Co., TX); $25B, 1.4 GW, Under Construction",
+      "outlet": "MEGA_PROJECTS_DF",
+      "link": "https://aigridwatch.com/data-centers#mega-vantage-frontier",
+      "published": "",
+      "guess_locality": "Shackelford Co., TX",
+      "guess_state": "TX",
+      "query": "megaprojects",
+      "origin": "megaprojects",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "AWS Mississippi — Amazon (AWS) (Mississippi); $25B, multi-site, Under Construction",
+      "outlet": "MEGA_PROJECTS_DF",
+      "link": "https://aigridwatch.com/data-centers#mega-aws-mississippi",
+      "published": "",
+      "guess_locality": "Mississippi",
+      "guess_state": "MS",
+      "query": "megaprojects",
+      "origin": "megaprojects",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "AWS Pennsylvania — Amazon (AWS) (Pennsylvania); $20B, 2+ GW, Under Construction",
+      "outlet": "MEGA_PROJECTS_DF",
+      "link": "https://aigridwatch.com/data-centers#mega-aws-pennsylvania",
+      "published": "",
+      "guess_locality": "Pennsylvania",
+      "guess_state": "PA",
+      "query": "megaprojects",
+      "origin": "megaprojects",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "AWS Northern Indiana — Amazon (AWS) (Northern Indiana); $15B, 2.4 GW, Under Construction",
+      "outlet": "MEGA_PROJECTS_DF",
+      "link": "https://aigridwatch.com/data-centers#mega-aws-northern-indiana",
+      "published": "",
+      "guess_locality": "Northern Indiana",
+      "guess_state": "IN",
+      "query": "megaprojects",
+      "origin": "megaprojects",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "QTS Cedar Rapids — QTS Data Centers (Cedar Rapids, IA); $10B, GW-scale, Under Construction",
+      "outlet": "MEGA_PROJECTS_DF",
+      "link": "https://aigridwatch.com/data-centers#mega-qts-cedar-rapids",
+      "published": "",
+      "guess_locality": "Cedar Rapids, IA",
+      "guess_state": "IA",
+      "query": "megaprojects",
+      "origin": "megaprojects",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Ohio zoning board rejects 45-megawatt data center plan for 3 Nordson buildings",
+      "outlet": "The Cool Down",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNQ3ZiaVpnclNwNjZNZWhweHRxQ1dlMFFaS1NEWHdxdGxPNVk2Y25mY3FRcS1NX0hpUEpwNzYwUGMyS2Vka3BsVlFISk9hdFRUU3pwd1V6SFVEaVdKM2pGMVB3OWNUT1NIdndZalZWSHd0LWgtWUNiSU94d3EtYkZ2SkdyLVY4aWQyS2R4b3o0dWVWSzQ?oc=5",
+      "published": "Mon, 10 Aug 2026",
+      "guess_locality": null,
+      "guess_state": "OH",
+      "query": "data center rezoning public hearing",
+      "origin": "news-scan",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Data center concerns resurrect issue of countywide zoning",
+      "outlet": "alamancenews.com",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOSnhHS09IU3Y1RXp4cjBndl9ER3pNckQzWnlZdmFMTmk2cklYZU1seHoxRHFqSDZ3ZkRKZllRRnVzb2Y5VTh5aXFZYmdzbmctVm5sWm4yUlFHYTVRU1NGNEo4bTBzR1FES2Y3ZXZrNVVHM04xelA5Wml5enFFYmhDVXY0dDJvMU1jNFg4?oc=5",
+      "published": "Sun, 09 Aug 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center rezoning public hearing",
+      "origin": "news-scan",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Moosic to weigh comprehensive data center zoning ordinance on Monday",
+      "outlet": "Scranton Times-Tribune",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNdkFuV0ZweUxoQk53OFRTNGlURU81b3B5cXVFSHdvZVRUYlNNM21xOTBvaU0wYkhvM1lINzNLQURWZVFyYUgwdFNyVTRpYndrbHdXWHpVbkdfWjdrR0F6WW5NTFptSVhYaVZMMWdVcnMtUUlrdHY1U2VqWERXU05qV3NEYmpsRWdJaWZTdlU5c2R2STA1eWRnQXZ2cWZKWUxZQlhWSldCMXpNZmFkVmJuSGQtZw?oc=5",
+      "published": "Fri, 07 Aug 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center rezoning public hearing",
+      "origin": "news-scan",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Adelanto moves toward data center zoning update following San Diego tour",
+      "outlet": "vvdailypress.com",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPVGpvVmU5QXR3aGljNXdrOU1ET240QnhveFZRNFZvbjREeDVPRWVib3Z2QTZXZlFVTzRucV9fWmlJUUp5VGFxZldBUUFZNHNHMmdXbFRiOXN3UlRUdk80ejhqQTlTOXRWdjdnR2xqa3pIV2JZcDJWcTFQY2JLblE4clJjdEpub0duN1cwOEJtTzhPVmpuczltbUdaRWs0NmNfSTUwQThWTQ?oc=5",
+      "published": "Fri, 07 Aug 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center rezoning public hearing",
+      "origin": "news-scan",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Norristown denied party status in Plymouth data center zoning case",
+      "outlet": "timesherald.com",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbkVVQXJ4czRvTzNqaDc4YlhEbDl4R2ExaGxDQ0l2eW5vNUxVeEZCbF93Q1h1Z01BcWhabjFfem9SYVg1V3RpS2NJejRGRWhyQVNvZFBIdktYYnY4ZWJZYUJkMjkxYTBZYjdmT0VYSzRnekVqR2M2aHhDbzVoUVpETDl6ZnB1X1NVZUI1ZVdkczBBNE5OVmIzZXhfSFNRU1FjcW10aEJTYnphZw?oc=5",
+      "published": "Fri, 07 Aug 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center rezoning public hearing",
+      "origin": "news-scan",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Data center neighbors turn to county court after township board punts on zoning fight",
+      "outlet": "PennLive.com",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNUDM2VDFUbDkwa0VPMUt5VklDRk12TmFuMDZwbTF2Wmd4Yk1VdEFwQmZvdkNPRWlWcENfaUxQd1RSMUsyNzItMkFHa2lIZlNIYVB4QjhvY2NGdDlSdm1NZ2M4eDdYVlRPTGxkZUNDZHFLZU1iaEtoUDljNXo2NXlETGlQRC1YWUxKajJCWDRhTTFuQmItQ3JvZWlpUnpYb19MZVU4TDhQWVFqdUNCOUlmQ2sxc2FOZVExYlVQaFJPc3Nkc3lBZHhF0gHbAUFVX3lxTE5tVGNyS1NaR3hEVlpxY1F0MnAxYlU4U29sWWhfTzFwYjByWHBZQlgtY0Q2aVFFQklkeUlFNm5qQ09lSU5oWURtaEo3REZTdWh5cmxJOVhfZU9wTVZNTWxmMmw1VjlNcDBLYTJqQ3c3QlB3cE10VWRLMjF2M3hCeWgyOTUtN2E1VXg5c1JjTkxMWmpFaGlHbU1lVlBOUVd2V2NtaWt3dlo4QmFEcFhWb2lkdzdyR2U1TUZxUlJfU08zejhtYWhMSlhZend4QUctZlg5MHBXaWtnZGFLUQ?oc=5",
+      "published": "Fri, 07 Aug 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center rezoning public hearing",
+      "origin": "news-scan",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Canton passes data center zoning rules after packed public hearing",
+      "outlet": "Canton Repository",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPYXRvbGhPdUQ2SU15S1hBOUQ0RkpNeWFPaVpkMDZselE4Z29pRHVzQkRZZ1o1dUZYVU5DYW5TU3BpbUNZTTZSZDRCdXpoZHQwZlFEYUlLNmtUSndqZ0FyNElJcUh1VWJ6TGpOaVJoMW90TlFUUS10QnZQLXBrMUtuNkVFOUctNkNHcDZ0ZnZwQXl0bE1qSF95Tm5YSVpfWW5WMnlQck5fS2FjVXR3WWZycC1fQUlZcUF0YkFpd19RZFl0RG9s?oc=5",
+      "published": "Tue, 28 Jul 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center rezoning public hearing",
+      "origin": "news-scan",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Almost full house for Conshohocken data center hearing before Plymouth Township's zoning hearing board",
+      "outlet": "MoreThanTheCurve",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNVjhoZG55bnRkbFRmQzZWZ2RLVnFNandiXzBDSHRqTDFzTXQya0hFUkt2N0RDUmNSeTJMLXhUYVB2T2N5ZlctZmJXcFFmNkFFOW9MRDNKSnFDTGV1N1NFUmNVNDF6OHpmd2x3cUNxRm1NNVZnMWZYTWc1cHVSeHkwR2p4MjNKYnhTbWdpN0tucTltaGRPRjJZcmtKbUxGeWpFaGlxTmEwSjdyakJWVkJ1dER6ZnpfbWpTX0FPZEpKYUszQVNHMnNSc2poaw?oc=5",
+      "published": "Fri, 07 Aug 2026",
+      "guess_locality": "Plymouth",
+      "guess_state": null,
+      "query": "data center rezoning public hearing",
+      "origin": "news-scan",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "E'town locals say 'no' to residential rezoning, data centers",
+      "outlet": "thenewsenterprise.com",
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNemFHZkt5SEgyVUo0YWdyTkhsaXJGX081c3NtQkZSOHFuQlU4dzFUV1FJZkJ0LTVScjNiS3VrMHZ0SlY4X3RmNnliQXlqcFJiUjYtRTA3ZE9PYkhaX0pCankwLUxFeF9zMTZZM05KekNxNm01ODVXX2JVTTlqQnlXZ2RHOUVKXzBuczNSRVFOM1o1UlJmR28yVG9KbGQxNFA5OFZvTzU2MV9jbnZMeUVDWndjekVCSmlkR1E3Zi1heW92MlcxRl82dEFBTHduT2czaTktV0pEbXlCN1dQUGtNbEJINzM0dw?oc=5",
+      "published": "Tue, 04 Aug 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center rezoning public hearing",
+      "origin": "news-scan",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Hillsboro planning commission tables data center zoning decision",
+      "outlet": "KWTX",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNeUpHTkVMQWF5ZkduY1lhVDFpZEdFQm80bWVtSDhQTl9UbUwycDJCai1VVnZvYnVwWVBVbUttR1RBbm8zLWNhZll1WEhRcUtvSkFOQjlNd3AzMFJsSUxhaG8zV1NKSzM4VWhxZDBsRURzd1pQdVVvNXFtVWVZWUxtMGtTMDh6aUFPUHJHY0k2NXhSWm1VbW1tSGJzWmx2d9IBsgFBVV95cUxPOTctRUFzWlpyM1ZRSFBKMmw2T2pRcXpoNnRkRnFtOEExaEJmMXl4d01CRmYxX1gxRUJTMmN0eDQwam9LOWtqZzM4Vi1JaU5aRklRU2tnaGNRSmhkNDZhX3BTV3U3a1l6N01MWkZobTQtMXdnalNDVUJnZGVGR1pXNjFCNzR0ejNzMEFIY19oczRYSzhMSzBHQmJybVMtbUt0ZHlsWWpqQzJnU1hCbVM2TExB?oc=5",
+      "published": "Mon, 11 May 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center special use permit planning commission",
+      "origin": "news-scan",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Public notice issues strike again: Prince William commission to rehear data center district proposal",
+      "outlet": "InsideNoVa.com",
+      "link": "https://news.google.com/rss/articles/CBMiogJBVV95cUxPZjZXa0RrUTRtcTd0bUVoeERtZ0JENHNHdnltalNqOElmN3FaemZ2RTRkQ0pHY3YzUVIwblZuMjF6TFZlRFJNRlJPbk1vYWRmemw2aXY2UnM0N3pIUU5PUXFSR1hSMXZDRVpiSHBSSDFRdXEzNU5tWTR0elFDWnlMRVM4MlhWQXpma3dUZi1PVWRjU3lpeHhvbnQxb2VXekRGYnMxRVZtVXlVZ1pZd001UXdzYl91cXY0LVJId1ZvMVZEWHJVS29LcHYyRnFvRE5EUWN0OHV5MC1EQzNOdzJqNmpjYXRUdHRtd2F3aV83R1dWVlpkZXFsaTZzblVrREFOTXUwZk9ieFhhZHFva3RudXEwNXBFNXhic2ZXajNZOEp0QQ?oc=5",
+      "published": "Wed, 29 Jul 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center proposed county board zoning",
+      "origin": "news-scan",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "How to regulate data centers in Illinois at the center of latest proposal",
+      "outlet": "Chicago Tribune",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQ2RrV3V4RFJ2TmwwVlIxY1JGOFZNOUF1YktySC1WRkpnbW9sVkdXdXIzcGttYVBtdm5PWF9ZMksxR1ZvSTNrSEdLSUE4eUJsTmxTcUxXUjRLUXNBZkpjZ3l3VEpXd1NpZmwxM084ZElFcGd3Q1EzM0wxWEJ5X1pScEJqelFRQUdMaXJ2eUstM2ZfR2JTcEE?oc=5",
+      "published": "Fri, 07 Aug 2026",
+      "guess_locality": null,
+      "guess_state": "IL",
+      "query": "hyperscale data center campus proposed",
+      "origin": "news-scan",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Calvert Moves to Pause Data Center Site Plans",
+      "outlet": "southernmarylandchronicle.com",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdEVuSGRpVHdZVmRlSk5jQ2hRVE9GSWhDT2RKNUpmOTdQZ3kzaU9pWVJzV0xiNGNXVUY1ZmpmMU5YVXZZV1U1MDZ0TzlDR21lRDlFNW9nQUwwaUZ4OG0zMlRoS0M3N1A0QTdtQTJEZXBvNm1QR0RqcjFtNk5IRzhpVVp6dFNlenp0T2otZTUtVElmX3NUWVNVZF9qWQ?oc=5",
+      "published": "Wed, 05 Aug 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center site plan application approved",
+      "origin": "news-scan",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
+    {
+      "title": "Project Flex data center eyes final Lyon Township approval amid pushback from nearby residents",
+      "outlet": "WXYZ Channel 7",
+      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPNjNPejlXeHJiUGFZQjlWN1Uwc2ZudUtreXdEd1lfYzgtMDVZVlhuaEd2V0dXZjJnRXV1T1J5LXhjUFpXS2loZ2RSdEJ2bi10d0IwaTNmTWVBV1ZhdzNOYkxVN01pTU5jTXoyRFFFSk1vNUdaeDRSQkx1QjVyYkFFbEdZenZNVC14enJRSmk5Q01HZnVhTWRxbTh6aVk3WE5TNU5uc1dqcHhZXy1VejRaSDFKcE0tTEVtbTNZN2hmSXZXTk9DY2s2QlY2ZUNGWFJYTVc2QzJyTkI2dw?oc=5",
+      "published": "Thu, 16 Jul 2026",
+      "guess_locality": "Lyon",
+      "guess_state": null,
+      "query": "data center site plan application approved",
+      "origin": "news-scan",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "status": "new"
+    },
     {
       "title": "City Of Adelanto To Hold Public Hearing On Zoning Update That Could Open Door To Data Centers",
       "outlet": "vvng.com",
@@ -11,7 +479,7 @@
       "query": "data center rezoning public hearing",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "dismissed"
     },
     {
@@ -24,21 +492,8 @@
       "query": "data center rezoning public hearing",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "dismissed"
-    },
-    {
-      "title": "Hanover Township data center hearing halted amid dispute over zoning process",
-      "outlet": "The Business Journals",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxORnV5bzhWbFVmSGZkNTUtcHZVeWNxb1k3RkF4eTF6WDc0Z19uNm4xX1NFTThyOXE5Q0lBTHVpdzB3cVZZczBVZTRuYVZmVGFCQXprZ3ktV3NPZGVaRHBVNmxvbkdXNmM0NjFPNFdHM0lsYmNDYXFud0VrYXN4aUx6MWc2eHdiRThVSy1BMXNaLUkxQXZ0OEpj?oc=5",
-      "published": "Thu, 06 Aug 2026",
-      "guess_locality": "Hanover",
-      "guess_state": null,
-      "query": "data center rezoning public hearing",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
     },
     {
       "title": "Rochester looks to block data centers with zoning law. Will it work?",
@@ -50,7 +505,7 @@
       "query": "data center rezoning public hearing",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "dismissed"
     },
     {
@@ -63,7 +518,7 @@
       "query": "data center rezoning public hearing",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "promoted"
     },
     {
@@ -89,21 +544,8 @@
       "query": "data center rezoning public hearing",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "dismissed"
-    },
-    {
-      "title": "Planning and zoning commission to review development company's South Franklin rezoning requests, hold data center study session",
-      "outlet": "Kirksville Daily Express",
-      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOTEg1YjRNc0RRenN5R0dnVG1wLVBCUVZMcjRSWlVzZjdhOU9YWi1hY241SHhmTk5sc2FQaU9FMXRVT2l2bWF4NEFMMm8weHlPeWhNREw2Y25OZWI1NXJuMUhYbHlxY0N4TnAtbkoyNjAxRXViUmdvWkE4Y282VkZVa284VS1DWHYwUnFrOTI1ZVdQMllnRFFOSkxtWDltRHF6c21zWExxdXdCZFdMdzRITWpPejROUk1SM2NCdUNyTGE0OFltTF9FRm05bWh0RF9lSTM0dDRZNDZHdklUaDZua2tZODJ0UQ?oc=5",
-      "published": "Thu, 06 Aug 2026",
-      "guess_locality": null,
-      "guess_state": null,
-      "query": "data center rezoning public hearing",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
     },
     {
       "title": "Statesboro panel recommends data center rezoning after heated public debate",
@@ -132,19 +574,6 @@
       "status": "promoted"
     },
     {
-      "title": "Zoning hearing addresses data center application in Lawrence County",
-      "outlet": "WKBN.com",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOeGEyNzVoM2NiVXl2WEt6dkxZeWxlaW9zNFFtc0VUak9oOGROVklRT2MzZ1NoWmZEbXF4enhPWDZhMEJ5SmhkTDc3UG9XanVuSzJrZVYtTk8tS2l4UDZ1NjY0eFhLYXVhMElKMG9hck1hZ1poUGx2cjZIVjB1ZzcyR1piUkNBem9HVUh3N3FEUlVWZ0VtRlBjVnhNYkdIU3lxTjVjaG0wYS3SAa4BQVVfeXFMTmVZY1dEa3E0cGJickZOVmZrVlhWckNNRXAtR0taal84ZXg0MDFHRmNfQ1ZtS2VsS3dES0NvbHEyem8tdmVOU0tBWnNCR2VTSk1HdlYxdU1BeFRtaFJNNnhPZWV0LVNuU01JMjhEbjljVm5FLUVJLUJlWjg5U2JOdE9BQVgyc3dwdXE3d01aSGF1NFFwdnd0ZXlzak91UVIxUUwyZFI4OTVxU2Ftelhn?oc=5",
-      "published": "Wed, 05 Aug 2026",
-      "guess_locality": "Lawrence",
-      "guess_state": null,
-      "query": "data center rezoning public hearing",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
-    },
-    {
       "title": "Woodbury Co. Zoning Commission schedules public hearings for data center regulations",
       "outlet": "ABC7 WWSB",
       "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPWU9ZTGZSb3h6WXY2MThkOWJTTkEwVzdEcjhMd3RrMWk3UmV5N2lOUlhIUGVMQ0NXTU1JUzAzZFg0SVhyZ2RhS0ZDTHFFa0NfTmhaNzBDcGxYSV9BOHRVNmdaOERmdHhYLWQ3NTdCOFNEUlNoek51SThLa0VmNmc5Z2xUeWczZmpqc1pPU3lURkxGYjhRTVBEZUI2YmdnRkNlOHhCN01HMnk1amdGeUhWR1F5SzNjVHRVWU1xeXV2VHN3QQ?oc=5",
@@ -156,19 +585,6 @@
       "first_seen": "2026-08-07",
       "last_seen": "2026-08-07",
       "status": "dismissed"
-    },
-    {
-      "title": "Posey commissioners say they'd vote no on rezoning for data center",
-      "outlet": "Courier & Press",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQRFV4NjRKcGtidlVRN3prWnNnTWxXX0xMRE4zSEd4VHhINEl1eFFnYkhlbEprWDVydkIwbHNKRDViQ09lc3BNb1UtQzg0RVdrN05DS2liNjk5Q1ZUbGNSaWJxT1Z3Y0hrV3hqRmtWa1BrbFB6dUNUa3BsMnVNcTh1OXptMHpua0xHODhiNm51NWtvcm5FR1FTZ0NWMzNIbWhSOHhoTVFITmhuaWJXSk9IRHFVZ3NQSlVxZG54cU5FUWlsTldIS1FWNkZNRnIwRHcx?oc=5",
-      "published": "Tue, 04 Aug 2026",
-      "guess_locality": null,
-      "guess_state": null,
-      "query": "data center rezoning public hearing",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
     },
     {
       "title": "Public hearing for Morton County planning and zoning commission about data centers",
@@ -236,19 +652,6 @@
       "status": "dismissed"
     },
     {
-      "title": "This Week Ahead: Zoning hearing meetings scheduled for proposed data center",
-      "outlet": "New Castle News",
-      "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOU2I1Y0EtZVo1YjhMSXVVekdXejZuLWt6LTdhYmE4R3UyVHMzRElpUFczT21HSnItVGZBdlM0M0o3bUhlTG1QRzNhVXNLNTljRERJdC1yQnhsMDN4OVFzNFp4TWZ3MGFCbGMzNmVIZzY0blF6LUxQNlRTMlZqdzRyTk9jbHh4aDlrMDhfbnBVOTdQYVgzYmdSR0U4bUl1WnM1WERhVVUwc09KMVdaQ3Q2ZmFxM3NSTGJGMFNBTzEyeHBsQnozSExCcFlOR3ctcTRiNFRJRU92M25Bak1Ca2Y0LUNsVUhEVHdxVUVfcHVYMzBRclp2VmJBQzZqZmNKQQ?oc=5",
-      "published": "Mon, 03 Aug 2026",
-      "guess_locality": null,
-      "guess_state": null,
-      "query": "data center rezoning public hearing",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
-    },
-    {
       "title": "Woodbury Co. Zoning Commission schedules public hearings for data center regulations",
       "outlet": "AZ Family",
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNT1ZKaTRyT0x0T1FqR1g0aHJKY1g4c3NzZ3RtMDlJMkdZWmdCY2Iwa0tjYTFscFgwb3diOHU3dFEwbW1pU2FoZGNCcnlOUG5pYWNYUzIzWjdqaWJkRHdhal9JMmlxal9GZ0NyemoydEZNNm5aNlNvSEl6R00wMWEzX2NSOGF3d0ZLckktaHE0bnJ1cDNNNDBGdFFrUWJnVmhDcTFzQ0p5M3d2S3dYdEFGTnZKU1F0TFgxbEJITW5ocw?oc=5",
@@ -260,19 +663,6 @@
       "first_seen": "2026-08-07",
       "last_seen": "2026-08-07",
       "status": "dismissed"
-    },
-    {
-      "title": "Zoning hearing addresses data center application in Lawrence County",
-      "outlet": "WKBN.com",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOLWN3YWtDbjIzc2Y4blBNazZfYWZnM2xYMzZhQmthUGtIUFVVckxhNFpycmp3QTJNQ3NhM3o1RHBjdlcyeVlONGFEaTQ4UTNTOEZYckhJSmR0V2RRckYtOUFhRU9McndLRW0yOS0wOEdOc1k0WHdGdjlVUi1FSGpYbDEzbWE1WVlvTWxlTFhCTnpxZHZEV0hsOWVJcE9heTZzcUJaa25mUQ?oc=5",
-      "published": "Wed, 05 Aug 2026",
-      "guess_locality": "Lawrence",
-      "guess_state": null,
-      "query": "data center rezoning public hearing",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
     },
     {
       "title": "Morton County Planning and Zoning Commission to discuss handling data center proposals",
@@ -336,7 +726,7 @@
       "query": "data center special use permit planning commission",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "dismissed"
     },
     {
@@ -375,7 +765,7 @@
       "query": "data center special use permit planning commission",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "dismissed"
     },
     {
@@ -405,19 +795,6 @@
       "status": "promoted"
     },
     {
-      "title": "Planning Commission approves conditional use permit for proposed Iron County data center",
-      "outlet": "St. George News",
-      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQTDc4N21DMzJqd0FZY0wtaHVrSjlFSy1RY0RhTTA1NTNPdXd4T1ZRRE1tdlBSdUVndDRnckJwN3U1WWNRUGRuamlhWmg3eGUyOG1JR3dRWUhDZ1JZZVd6WEs1VVo3TDByaWt0QzVMLTZqQS1uUUZlVS1DVHhjSU96eXVxeUdXeTQ2U0ZBRUdGWF85a0FYTFZ4UkN1NVpaQ0phaFJzVUVzS0dRQnBVRDJFTHRnclgtck9jU0FEZkpXNWJ6LXhSRFFBV2p3Q09YejhoaXdpQVhKSW0wVFktYng3X3BReWY0R09fbk55WURqd3g5emRTdk1rZ0NSd1daZUxiZUE?oc=5",
-      "published": "Sat, 06 Jun 2026",
-      "guess_locality": "Iron",
-      "guess_state": null,
-      "query": "data center special use permit planning commission",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
-    },
-    {
       "title": "Columbia Planning and Zoning Commission to discuss data center standards",
       "outlet": "ABC17NEWS",
       "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOWhHakRHUmFaZUFDcXlGZW5EeEJSV3FJMGhEdndmSUEtVHdEU1NOZE05c2pZaDF0blgxcnJWRXd0cEFaVndfMUZUOEZJZVRDeWM3OTJLXy1iV1R2QTgyaXNfNXlyb01VaFpLSmJ6QmUwOGV4QkJ6VjZOajJVY1ZUNi1za3ZaUWIzRG5vM2xvUGVncktzSjNYMTctRmtyZW1NX0RDVVZOd1pwZ1dMS1l2SzVhOEI1YmMtR2pJaTlIVzM?oc=5",
@@ -427,7 +804,7 @@
       "query": "data center special use permit planning commission",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "dismissed"
     },
     {
@@ -479,21 +856,8 @@
       "query": "data center special use permit planning commission",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "dismissed"
-    },
-    {
-      "title": "Social Circle Planning Commission recommends latest data center request",
-      "outlet": "The Covington News",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOY0E0T3Q5aUFKOWpoVDZXeWFxUzZoOWxlLUpLcFV4RnllSXJlbzNsc1VzUWNMNjE2R0NLUURrR1ZTNG5SNmNaRlowR2IycjRyV3EyS1c3dEFZVm9FWFlRSnF3aDI5UVdXa1d4eGhDOFhmc1RZaEoydVVXdjFQMmFQWHl2S2tuVFhyVXU4U1VFOTRaVURreEZFeXlLOThlUjFPcVNLMUNqdlMyZFV1?oc=5",
-      "published": "Sun, 19 Apr 2026",
-      "guess_locality": "Social Circle",
-      "guess_state": null,
-      "query": "data center special use permit planning commission",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
     },
     {
       "title": "Tyler Planning and Zoning set to discuss Data Center proposal on Tuesday",
@@ -518,7 +882,7 @@
       "query": "data center proposed county board zoning",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "dismissed"
     },
     {
@@ -544,7 +908,7 @@
       "query": "data center proposed county board zoning",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "dismissed"
     },
     {
@@ -561,19 +925,6 @@
       "status": "dismissed"
     },
     {
-      "title": "Warrick County Commissioners schedule special meeting on data center zoning",
-      "outlet": "WFIE | 14 News",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZ1ZZdkF1Nk13TFVBSmloak9BenZuUWdKYnpnc0ZMa0h3cnNNX08xN0J5Z1kyczFzSWNKeUNTcG5uVDdUek5GTkp1Z0Y5NFNscUpMaDI3VmdheHZiQTdMYnlUMGJjOVpwVGtZZ0FFSVo4aHRmenJnZWhBUHBpV09TOWRqVkc4TEZhZVFxaGNVNlB1M0VFQ191VGl0ZGFLV0hJdTIzRFl5eVJiWnc?oc=5",
-      "published": "Fri, 31 Jul 2026",
-      "guess_locality": "Warrick",
-      "guess_state": null,
-      "query": "data center proposed county board zoning",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
-    },
-    {
       "title": "Bulloch County officials advance proposal to block data centers",
       "outlet": "WJCL",
       "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBXOFhwZno4dWZfMXBfeDlXRGFoVG5vX0E3YTQ0Tk50dGxZSXl4WUJNZEJYQnRMQ0NvN3o4UktxQ0FqT21LQm9YNG1rcmVqRk56cks0ZmNIU2ZMUkZTeGxKeWhmMWRRUllPZ0pfMzVYNENVWWdMVnNRM0x1UQ?oc=5",
@@ -583,7 +934,7 @@
       "query": "data center proposed county board zoning",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "dismissed"
     },
     {
@@ -596,7 +947,7 @@
       "query": "data center proposed county board zoning",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "promoted"
     },
     {
@@ -622,7 +973,7 @@
       "query": "data center proposed county board zoning",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "dismissed"
     },
     {
@@ -674,7 +1025,7 @@
       "query": "hyperscale data center campus proposed",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "dismissed"
     },
     {
@@ -687,7 +1038,7 @@
       "query": "hyperscale data center campus proposed",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "promoted"
     },
     {
@@ -700,21 +1051,8 @@
       "query": "hyperscale data center campus proposed",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "promoted"
-    },
-    {
-      "title": "Hood County judge dismisses lawsuit seeking automatic approval of proposed data centers",
-      "outlet": "KERA News",
-      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOYUx4N3VMMW1JaXlxMWV1X2tCNkVVRTdCYzJSWlhTMUVmWmpuMTZLN3F4T0V1dXBTZktMWTdsRjlIc25uUE5Edk11enBJaHJ6anMtOXR4UFU2a3BtMW1Ed1lzN2FqT29CMlVPVHBTcTJJMkhZcmZIdHBWQ3dHMGtKbGZHdXp4NWVRSnhlaFZENVJlejkzRE9kWkw4NmtoSDYzMG1jcXplOXRZQUszNVRVWjlCN05HN1ZEcnl3bkVaeS0tSDZnZnZUUTRNYWl3SUt6VENqTGNJZWVjUQ?oc=5",
-      "published": "Mon, 20 Jul 2026",
-      "guess_locality": "Hood",
-      "guess_state": null,
-      "query": "data center site plan application approved",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
     },
     {
       "title": "De Soto reviewing site application for what could be city's second data center project",
@@ -730,32 +1068,6 @@
       "status": "promoted"
     },
     {
-      "title": "Data center application reveals key details on Monticello Tech proposal",
-      "outlet": "hometownsource.com",
-      "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOVTdpcEN4MmxBbllEVVc5T2V2d2pxR0hWbnU1MGxwVHdDMGpXN0F0MUw4SXdiTUdsclVQYWwxWnBjeHNzcmtnUXZwcDl1em9QaFVVaW9TS08yd1Z0dWpFUWEyUlktdXJydjVOQkxuVUlfTkdqUE9GckNQRWhnQVktbzVPM3JxeDBxNlpka3JiRjJ3LWZYVFJOY1d2QldSNWFpMW1DSWZIRXgxekEycU5EVFIwSDZ3Qklvc3Q2ZGhWU2ZLemZVX3VkZXlpZkJ0bXBsUy1sanJVZThMODZ3ZmpKb182SGtMeEdVUVlxd0dubmp5RjZPVHNCUGR4cG9FZw?oc=5",
-      "published": "Mon, 20 Jul 2026",
-      "guess_locality": null,
-      "guess_state": null,
-      "query": "data center site plan application approved",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
-    },
-    {
-      "title": "Land in N.J. town is ‘data center approved.’ But residents worry it’s not hypothetical. ‘We don’t want it.’",
-      "outlet": "NJ.com",
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPSkNvVmNxMmh6VG9iUXlQTHYyd2UxUVRsWnFPVHBnZm9Dc29EWmpBd1ZyTUE5OURBU0F6RVhmRGljTnFIUERRZUtjbEg4QTJlN3FLeHI0WWtISlZRZkNVLWNQSGQtNVhxekV5Z3Q2QUI4c1ZEc3JQUXBrS1ZPQ1JxekxFdWFFX1pUQnRTLUdMS3lybUlZZTEycjFmZm9MS1JNaGxDODdkeW85Ny1CcFJUYVZudXRSU0QzS2VMU1FaUGJlOXBuaC1IZ2RzRkNtUdIB4gFBVV95cUxNaEN2Um4xazNJdWdFcFVEdnFuRUVUZXgxQXhDb3ItdWZXY2hHTlZJNXdQa1IwUzhVMjF0R2RjQTUwd1h0SDNyeElfb19jNFVfUFJDZ3lhcXJTV2tJbkNLYzdLbmJqZTlaaldUbjVUaXQ2Vm85RXBpSDdfRkZMMG92Zk9KRXcxbEtLYVF6MWs3cW5RV2E5eW03LVVJSTZIMzQzYnVWQW1CUEs3WGxFd3VUUVRHZzdkRmFpcTU3UmxTcXFuUjhqbTc5WmZEVUh0WWhkTmJuV0Y2REwwMW5wdlZVMHBB?oc=5",
-      "published": "Sun, 12 Jul 2026",
-      "guess_locality": null,
-      "guess_state": null,
-      "query": "data center site plan application approved",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
-    },
-    {
       "title": "Data center site plan application received in Calvert",
       "outlet": "SoMdNews.com",
       "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxONnp2dFgyUzZ2V19DR2JOZmtxOG11MDlJUXdmVTRCN1BoeVJINDVOR0FFTU9jSktNSlcxQWtXdGpGMkxtZ2Nad1ZVZ1pOODZFZ2JPVFM4X21kbG9NTUI2dkNDcWVLXy1oS0JQWkFZN3VLVVJVX2IwUFNya1ZjSjY3ZGJ5cWRnMC0wcEEza3RrYS1qVnIxdDZPYkhtQVBLcUZ3Vkd3ZG1zMlI1OENVc29HY25wMEVOUFp6aldBQjhmdEh0clctUVFHRi16V0syekhVNFpiYTNyLWYxSHp0YjNRQ29n?oc=5",
@@ -765,21 +1077,8 @@
       "query": "data center site plan application approved",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "promoted"
-    },
-    {
-      "title": "East Lyme Zoning Commission Approves 3 Coastal Home Rebuilds, Forms Data Center",
-      "outlet": "Patch",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWGttVDhMZHU1MXcyQlh6NTE2Ylk3VHE2aVhvZWhLQld6NkM2c2xBYnRMblJDZDREb29sd0hEa0JyYU5DVjNwM1U5cGltczAtMHk4Ni1ERTRRdG56OVplOFFZbC1IanBIRE02TEMyc1VzSTZWUzBGOXpwTWtmclpRYVA4Q1BGcVUwckwwT1JNeVV0YXRLZk5NRHFBeHVLNy1IZGlSOXhNLW5KUHVQOU9yWVczZTNCRVRO?oc=5",
-      "published": "Tue, 14 Jul 2026",
-      "guess_locality": null,
-      "guess_state": null,
-      "query": "data center site plan application approved",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
     },
     {
       "title": "Neighbors plan appeal after city planning department approves Project Taurus data center application",
@@ -808,32 +1107,6 @@
       "status": "promoted"
     },
     {
-      "title": "GENESEE COUNTY/Alabama Planning Board expected to vote July 6th on data center site plan approval",
-      "outlet": "Video News Service",
-      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOa210UW02dlF5SGJfeUVwSW5JVjg0dkMtZjgxSGFuNF8zdXFNTHVTRFp4RDd4VXdVZ2otb0ZQajJwMHpxOVByMVduNU5KSF8tV3MwZ0xvemFzVXZ4SEc5R3dHbzh1Q0R4LWxpWmNibkJxZXBhcHZUR2VrUWI3MnZTa1c5ZWQyOUJXdG1TMWNnYVNYQi1vYmNJcnNyTlNVRDdDc1V2VVBsdzJHanRaVHpveE5pZGZGbzZXclVxRlhTMEtDNnl6Nm01eHFmTU0xSjNnZGxqUmxQTndUWmNkMG5FUVpR?oc=5",
-      "published": "Wed, 17 Jun 2026",
-      "guess_locality": "Alabama",
-      "guess_state": "AL",
-      "query": "data center site plan application approved",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
-    },
-    {
-      "title": "Renderings show vision for massive data center proposed in Utah, but permits could take years",
-      "outlet": "Utah News Dispatch",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQek1GR2pnYXBPUHlRYW13cHBrNlQySmxfX3loNzVJdTVaVzN5QkVHY2J1UzBBNVhqMVZFdmg1QmlkUmkzSUlMZEpUb0JRYUFXVEVXWGszUlRfLUFGR0haSWdHTGIyYURmaWpicmRpOGlFTVg0ZTBfbEkxVlZqX1FLblVGekI4RktOU1dKakhjWkNzTGMxQVhna256cThuU001UTJOdkxuWVFvV1NBX3RTcUpMODFSakk?oc=5",
-      "published": "Tue, 19 May 2026",
-      "guess_locality": null,
-      "guess_state": "UT",
-      "query": "data center site plan application approved",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
-    },
-    {
       "title": "Calvert County Receives AWS Data Center Site Plan",
       "outlet": "- The Southern Maryland Chronicle",
       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSG81YTVueFlOUDgzSHFEZkUwMHJvZ2xscHZnNmhMNjM5bWxnb2pHdi14Q1VCQ3VacU1KalkxbWt4MmVBbzZzVjNJX2RtR1BXUXlLYkxFSUtUQUlYTkdVNE5LdEVDemcxT1VKcWVQendqd2ZYOE16bTRzYmhMR1Z6WGpwZzBQc0xNQzc3TWNocG52TVVWRS1nUkR1QQ?oc=5",
@@ -843,21 +1116,8 @@
       "query": "data center site plan application approved",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "promoted"
-    },
-    {
-      "title": "‘There’s just a lot missing’: Lansing planning board takes first look at 401-page data center plan",
-      "outlet": "The Ithaca Voice",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQOTJzcXh5MFpWUl9IOWlkYmNtcmtOM0NJRzFhLXJ4MExBbGZoMFN3d2xCQzNiYjNtTnJQajJEYlJzX3ZnYzlIeEJ1dHRxeHJJUzhmb0NiX3A0eElOWmRQZ0V5V0ZwRnA5enJXRFJGdXNMRW1EQ09sdEd5NUNHWW1IX3pkU1g3Y0o4cURJRjVDZUY3aUdzTFd0Z0kzeUE4alhQWWdhb2VQX2VudGhVNk0yZHJHc3Zta0NzeFpWazRNcDNZWUJQNWc?oc=5",
-      "published": "Thu, 30 Apr 2026",
-      "guess_locality": null,
-      "guess_state": null,
-      "query": "data center site plan application approved",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
     },
     {
       "title": "One Million-Square-Foot Data Center Proposal in Monroe Twp Still Active; Application Completeness Review May 12",
@@ -869,21 +1129,8 @@
       "query": "data center site plan application approved",
       "origin": "news-scan",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "promoted"
-    },
-    {
-      "title": "Updated plans for proposed Dickerson data center now online for public view",
-      "outlet": "bethesdamagazine.com",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTF9OSDN6bTBJbGw3MHpnM2lESkxnS1BPdjdvQkpWMDdjdWVTLWlOenBVMktxZGlqYWM2ZXlpLVB1MEo1NzI2WWRKVVBSYktjZXYtQ0VvX0N6dVZsazIwclF1RTlWcXlxNGdqUjRiMHN5Z0VMYjhDT0VMZHA0Z3k4MlhyUG1WWXhUUnRvbXpNTWE3QWRBVFE?oc=5",
-      "published": "Fri, 22 May 2026",
-      "guess_locality": null,
-      "guess_state": null,
-      "query": "data center site plan application approved",
-      "origin": "news-scan",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
     },
     {
       "title": "Stargate — OpenAI / Oracle / SoftBank (Abilene, TX); $100B+, 1+ GW, Under Construction",
@@ -895,7 +1142,7 @@
       "query": "megaprojects",
       "origin": "megaprojects",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "promoted"
     },
     {
@@ -908,34 +1155,8 @@
       "query": "megaprojects",
       "origin": "megaprojects",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "promoted"
-    },
-    {
-      "title": "Vantage Frontier — Vantage Data Centers (Shackelford Co., TX); $25B, 1.4 GW, Under Construction",
-      "outlet": "MEGA_PROJECTS_DF",
-      "link": "https://aigridwatch.com/data-centers#mega-vantage-frontier",
-      "published": "",
-      "guess_locality": "Shackelford Co., TX",
-      "guess_state": "TX",
-      "query": "megaprojects",
-      "origin": "megaprojects",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
-    },
-    {
-      "title": "AWS Mississippi — Amazon (AWS) (Mississippi); $25B, multi-site, Under Construction",
-      "outlet": "MEGA_PROJECTS_DF",
-      "link": "https://aigridwatch.com/data-centers#mega-aws-mississippi",
-      "published": "",
-      "guess_locality": "Mississippi",
-      "guess_state": "MS",
-      "query": "megaprojects",
-      "origin": "megaprojects",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
     },
     {
       "title": "xAI Colossus — xAI (Memphis, TN); $20B, ~2 GW, Under Construction",
@@ -951,19 +1172,6 @@
       "status": "promoted"
     },
     {
-      "title": "AWS Pennsylvania — Amazon (AWS) (Pennsylvania); $20B, 2+ GW, Under Construction",
-      "outlet": "MEGA_PROJECTS_DF",
-      "link": "https://aigridwatch.com/data-centers#mega-aws-pennsylvania",
-      "published": "",
-      "guess_locality": "Pennsylvania",
-      "guess_state": "PA",
-      "query": "megaprojects",
-      "origin": "megaprojects",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
-    },
-    {
       "title": "EdgeCore Virginia — EdgeCore (Louisa County, VA); $17B, 1.1+ GW, Under Construction",
       "outlet": "MEGA_PROJECTS_DF",
       "link": "https://aigridwatch.com/data-centers#mega-edgecore-virginia",
@@ -973,34 +1181,8 @@
       "query": "megaprojects",
       "origin": "megaprojects",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-10",
       "status": "promoted"
-    },
-    {
-      "title": "AWS Northern Indiana — Amazon (AWS) (Northern Indiana); $15B, 2.4 GW, Under Construction",
-      "outlet": "MEGA_PROJECTS_DF",
-      "link": "https://aigridwatch.com/data-centers#mega-aws-northern-indiana",
-      "published": "",
-      "guess_locality": "Northern Indiana",
-      "guess_state": "IN",
-      "query": "megaprojects",
-      "origin": "megaprojects",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
-    },
-    {
-      "title": "QTS Cedar Rapids — QTS Data Centers (Cedar Rapids, IA); $10B, GW-scale, Under Construction",
-      "outlet": "MEGA_PROJECTS_DF",
-      "link": "https://aigridwatch.com/data-centers#mega-qts-cedar-rapids",
-      "published": "",
-      "guess_locality": "Cedar Rapids, IA",
-      "guess_state": "IA",
-      "query": "megaprojects",
-      "origin": "megaprojects",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "status": "new"
     }
   ],
   "_readme": "Review queue for the identified-project tracker. Entries are UNVERIFIED leads from a news/registry scan and are never published. To promote one: read the governing body's own agenda or the reporting, add a record to data/projects.json with source + as_of (and any known milestone dates), then set this entry's status to 'promoted'. To reject one, set status to 'dismissed' — the scanner will not raise it again. `link` is the dedup key and must be unique per entry; a hand-added lead that cites an index page needs a distinct #fragment."
