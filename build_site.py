@@ -2232,7 +2232,7 @@ def _story_group_slug(label):
     return slug or "unclassified"
 
 
-def build_story_tracker(stories, videos=None):
+def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
     """Every tracked community-impact headline, grouped by locality and
     searchable — the durable counterpart to the rolling 7-day /news feed.
     A locality with 4+ archived stories gets a heuristic summary (no LLM
@@ -2241,10 +2241,22 @@ def build_story_tracker(stories, videos=None):
     `videos` (geo-enriched by _enrich_video_geo) are attached to the matching
     group so a community's watchable coverage sits next to its headlines: a
     video with a locality joins that town's group; a state-only video joins
-    the state's statewide/unlocalized group."""
+    the state's statewide/unlocalized group.
+
+    `groups` lets the caller pass an already-computed
+    story_tracker.group_stories() result instead of recomputing it (main()
+    needs the same grouping for the per-locality community pages too).
+    `locality_slugs` maps (locality, state) -> the actual community-page
+    slug, which for a moratorium-tracker town is built from its raw,
+    parenthetical-carrying MORATORIUMS_DF locality
+    ("monroe-township-gloucester-co-nj") rather than the gazetteer's cleaned
+    group locality ("monroe-township-nj") — without this map the link here
+    would point at a page that doesn't exist.
+    """
     import datetime as _dt
 
     videos = videos or []
+    locality_slugs = locality_slugs or {}
     vids_by_loc, vids_by_state = {}, {}
     for v in videos:
         loc, st = v.get("locality"), v.get("state")
@@ -2253,7 +2265,8 @@ def build_story_tracker(stories, videos=None):
         elif st:
             vids_by_state.setdefault(st, []).append(v)
 
-    groups = story_tracker.group_stories(stories, min_for_summary=4)
+    groups = groups if groups is not None else story_tracker.group_stories(
+        stories, min_for_summary=4)
     # A state's own videos attach to exactly one group — the statewide one if
     # it exists, else the first state group — so they don't show twice when a
     # state has both a "(statewide)" and a "(town not identified)" bucket.
@@ -2357,8 +2370,14 @@ def build_story_tracker(stories, videos=None):
         # the moratorium-tracker one (build_community) or the news-only one
         # (build_locality_news_page) — so link straight to it whenever a
         # town/county was actually identified, not just the state bucket.
-        page_link = (f' · <a href="communities/{slug}.html">Full page &rarr;</a>'
-                    if g["locality"] else "")
+        # The page's real slug can differ from this card's own anchor slug
+        # (see locality_slugs docstring above) — fall back to the anchor
+        # slug only if the map is missing an entry, so a link is never worse
+        # than what shipped before this parameter existed.
+        page_link = ""
+        if g["locality"]:
+            _page_slug = locality_slugs.get((g["locality"], g["state"]), slug)
+            page_link = f' · <a href="communities/{_page_slug}.html">Full page &rarr;</a>'
         cards.append(
             f'<article class="story-group" id="{slug}" data-state="{esc(g["state"] or "")}" '
             f'data-count="{g["count"]}" data-latest="{esc(_latest_iso(g))}" '
@@ -10077,6 +10096,27 @@ def main():
         _live_videos, _vdt.date.today().isoformat())
     _STORY_ARCHIVE = _persist_story_candidates(_NEWS_ITEMS)
 
+    # Computed once, shared by the story tracker page and every per-locality
+    # community page below, so a town with archived news gets a "Recent
+    # news" section on its moratorium page (if it has one) or its own
+    # news-only page (if it doesn't) — see build_community/
+    # build_locality_news_page and _story_news_section_html. MORATORIUMS_DF
+    # localities carry parentheticals the gazetteer strips for matching
+    # ("Monroe Township (Gloucester Co.)" -> "Monroe Township"), so every
+    # comparison here goes through story_tracker.clean_locality() — comparing
+    # the raw string once produced a second, wrong page for the same town.
+    _story_groups = story_tracker.group_stories(_STORY_ARCHIVE, min_for_summary=4)
+    _groups_by_locality = {(g["locality"], g["state"]): g
+                           for g in _story_groups if g["locality"]}
+    _mora_localities = {(story_tracker.clean_locality(str(_m.locality)), str(_m.state))
+                        for _m in MORATORIUMS_DF.itertuples()}
+    _news_only = [(loc, st, g) for (loc, st), g in _groups_by_locality.items()
+                 if (loc, st) not in _mora_localities]
+    _locality_slugs = {(story_tracker.clean_locality(str(_m.locality)), str(_m.state)):
+                       _loc_slug(_m.locality, _m.state)
+                       for _m in MORATORIUMS_DF.itertuples()}
+    _locality_slugs.update({(loc, st): _loc_slug(loc, st) for loc, st, _ in _news_only})
+
     shutil.rmtree(WEB, ignore_errors=True)
     (WEB / "states").mkdir(parents=True)
     (WEB / "blog").mkdir(parents=True)
@@ -10104,7 +10144,8 @@ def main():
     (WEB / "moratoriums.html").write_text(build_moratoriums(), encoding="utf-8")
     (WEB / "map.html").write_text(build_map(), encoding="utf-8")
     (WEB / "story-tracker.html").write_text(
-        build_story_tracker(_STORY_ARCHIVE, _VIDEO_ITEMS), encoding="utf-8")
+        build_story_tracker(_STORY_ARCHIVE, _VIDEO_ITEMS, groups=_story_groups,
+                           locality_slugs=_locality_slugs), encoding="utf-8")
     print(f"  [data] {_n_story} archived headlines -> story-tracker.html + story_tracker.json")
     _n_alerts = build_alerts_outputs()
     print(f"  [data] {_n_alerts} deadline alerts -> alerts.json + alerts.xml")
@@ -10145,26 +10186,16 @@ def main():
     (WEB / "states" / "index.html").write_text(
         build_states_index(), encoding="utf-8")
 
-    # Computed once and reused by both the story tracker page and the
-    # per-locality community pages, so a town with archived news gets a
-    # "Recent news" section on its moratorium page (if it has one) or its
-    # own news-only page (if it doesn't) — see build_community/
-    # build_locality_news_page and _story_news_section_html.
-    _story_groups = story_tracker.group_stories(_STORY_ARCHIVE, min_for_summary=4)
-    _groups_by_locality = {(g["locality"], g["state"]): g
-                           for g in _story_groups if g["locality"]}
-    _mora_localities = {(str(_m.locality), str(_m.state))
-                        for _m in MORATORIUMS_DF.itertuples()}
-    _news_only = [(loc, st, g) for (loc, st), g in _groups_by_locality.items()
-                 if (loc, st) not in _mora_localities]
-
+    # _story_groups/_groups_by_locality/_mora_localities/_news_only were
+    # already computed above, before the story tracker page was written.
     (WEB / "communities").mkdir(parents=True, exist_ok=True)
     (WEB / "communities" / "index.html").write_text(
         build_communities_index(_news_only), encoding="utf-8")
     _community_paths = []
     for _m in MORATORIUMS_DF.itertuples():
         _cslug = _loc_slug(_m.locality, _m.state)
-        _news_group = _groups_by_locality.get((str(_m.locality), str(_m.state)))
+        _news_group = _groups_by_locality.get(
+            (story_tracker.clean_locality(str(_m.locality)), str(_m.state)))
         (WEB / "communities" / f"{_cslug}.html").write_text(
             build_community(_m, news_group=_news_group), encoding="utf-8")
         _community_paths.append(f"communities/{_cslug}")

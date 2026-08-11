@@ -22,7 +22,7 @@ _PAREN_RE = re.compile(r"\s*\(.*?\)\s*")
 _STATE_NAMES_LOWER = {str(n).strip().lower() for n in STATE_PUCS_DF["state"]}
 
 
-def _clean_locality(name):
+def clean_locality(name):
     return _PAREN_RE.sub(" ", str(name)).strip()
 
 
@@ -35,7 +35,7 @@ def build_gazetteer():
     for df, col in ((DC_SITES_DF, "location"), (LOCAL_BODIES_DF, "locality"),
                     (MORATORIUMS_DF, "locality")):
         for _, row in df.iterrows():
-            name = _clean_locality(row[col])
+            name = clean_locality(row[col])
             state = str(row["state"]).strip()
             if not name or not state or state == "nan":
                 continue
