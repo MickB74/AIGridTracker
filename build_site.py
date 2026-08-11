@@ -2353,6 +2353,12 @@ def build_story_tracker(stories, videos=None):
         last_active = _fmt_date(_latest_iso(g), fmt="%b %-d")
         search_blob = esc(" ".join([g["label"]] + [s.get("title", "") for s in g["stories"]]))
         slug = _story_group_slug(g["label"])
+        # Every locality group now has a dedicated community page — either
+        # the moratorium-tracker one (build_community) or the news-only one
+        # (build_locality_news_page) — so link straight to it whenever a
+        # town/county was actually identified, not just the state bucket.
+        page_link = (f' · <a href="communities/{slug}.html">Full page &rarr;</a>'
+                    if g["locality"] else "")
         cards.append(
             f'<article class="story-group" id="{slug}" data-state="{esc(g["state"] or "")}" '
             f'data-count="{g["count"]}" data-latest="{esc(_latest_iso(g))}" '
@@ -2360,7 +2366,7 @@ def build_story_tracker(stories, videos=None):
             f'data-search="{search_blob.lower()}">'
             f'<h3><a href="#{slug}" class="anchor">{esc(g["label"])}</a> '
             f'<span class="count">{g["count"]} stor{"y" if g["count"] == 1 else "ies"}</span>'
-            f'{pattern_badge}</h3>'
+            f'{pattern_badge}{page_link}</h3>'
             f'{f"<p class=\"muted\" style=\"margin:-2px 0 8px;font-size:12.5px\">last activity {last_active}</p>" if last_active else ""}'
             f'{summary_html}'
             f'<details{" open" if g["count"] <= 3 else ""}>'
@@ -5646,7 +5652,105 @@ def _abbr_to_state():
     return dict(zip(STATE_PUCS_DF["abbrev"], STATE_PUCS_DF["state"]))
 
 
-def build_community(m):
+def _local_body_section_html(locality, state):
+    """"Where the decision gets made" section — only when a curated
+    LOCAL_BODIES_DF row exists for this (locality, state). Shared by
+    build_community() (moratorium towns) and build_locality_news_page()
+    (news-only towns), so both surface the same verified governing-body info
+    whenever it's on file."""
+    bodies = LOCAL_BODIES_DF[(LOCAL_BODIES_DF["locality"] == locality)
+                             & (LOCAL_BODIES_DF["state"] == str(state))]
+    if bodies.empty:
+        return ""
+    b = bodies.iloc[0]
+    contact_bits = " · ".join(
+        x for x in (
+            f'<a href="mailto:{esc(str(b["email"]))}">{esc(str(b["email"]))}</a>'
+            if has_value(b["email"]) else "",
+            esc(str(b["phone"])) if has_value(b["phone"]) else "",
+            f'<a href="{esc(str(b["website"]))}" rel="nofollow noopener" '
+            f'target="_blank">website</a>' if has_value(b["website"]) else "",
+        ) if x)
+    agenda = (f'<p><a class="btn ghost" href="{esc(str(b["agenda_url"]))}" '
+              f'rel="nofollow noopener" target="_blank">Meeting agendas '
+              f'&rarr;</a></p>' if has_value(b["agenda_url"]) else "")
+    return f"""
+<section>
+  <h2>Where the decision gets made</h2>
+  <p><strong>{esc(str(b["body"]))}</strong> — {esc(str(b["decides"]))}</p>
+  <p><strong>Meets:</strong> {esc(str(b["meets"]))}<br>
+  <strong>Where:</strong> {esc(str(b["where"]))}</p>
+  <p><strong>Public comment:</strong> {esc(str(b["comment_process"]))}</p>
+  {f'<p>{contact_bits}</p>' if contact_bits else ''}
+  {agenda}
+  <p class="muted">Read from
+  <a href="{esc(str(b["source"]))}" rel="nofollow noopener" target="_blank">the
+  official page</a> on {esc(str(b["as_of"]))}. Meeting details change —
+  confirm before you go.</p>
+</section>"""
+
+
+def _local_officials_section_html(locality, state):
+    """"Who votes on it" section — only when curated LOCAL_OFFICIALS_DF rows
+    exist for this (locality, state). Shared the same way as
+    _local_body_section_html above."""
+    offs = LOCAL_OFFICIALS_DF[(LOCAL_OFFICIALS_DF["locality"] == locality)
+                              & (LOCAL_OFFICIALS_DF["state"] == str(state))]
+    if offs.empty:
+        return ""
+    rows = "\n".join(
+        f"<tr><td>{esc(str(o.name))}</td><td>{cell(o.role)}</td>"
+        f"<td>{cell(o.email)}</td><td>{cell(o.phone)}</td>"
+        # Blank stance means "not recorded", never "neutral".
+        f"<td>{cell(o.stance, dash='not recorded')}</td></tr>"
+        for o in offs.itertuples())
+    return f"""
+<section>
+  <h2>Who votes on it</h2>
+  <table><tr><th>Name</th><th>Role</th><th>Email</th><th>Phone</th>
+  <th>Recorded stance</th></tr>{rows}</table>
+  <p class="muted">From the locality's own roster page; "not recorded" means
+  no public statement is on file, not neutrality.</p>
+</section>"""
+
+
+def _story_news_section_html(group, heading="Recent news"):
+    """Headline list + heuristic summary for a story_tracker group, with the
+    same "automated, not verified" framing the story tracker page itself
+    uses. `group` is one entry from story_tracker.group_stories(), or None —
+    returns "" when there's nothing tracked so callers can splice it in
+    unconditionally."""
+    if not group or not group.get("stories"):
+        return ""
+    rows = []
+    for s in group["stories"][:12]:
+        emoji, blurb = story_tracker.classify_angle(s.get("title", ""))
+        date = s.get("first_seen", "")
+        rows.append(
+            f'<li><a href="{esc(s.get("link", ""))}" rel="nofollow noopener" '
+            f'target="_blank">{esc(s.get("title", ""))}</a>'
+            f'<span class="meta"><span title="{esc(blurb)}">{emoji}</span> '
+            f'{esc(s.get("outlet", ""))}{" · " + esc(date) if date else ""}'
+            f'</span></li>')
+    more = ""
+    if group["count"] > 12:
+        more = (f'<p class="muted">+{group["count"] - 12} more on the '
+                f'<a href="../story-tracker.html">story tracker</a>.</p>')
+    summary_html = (f'<p>{esc(group["summary"])}</p>' if group.get("summary") else "")
+    return f"""
+<section>
+  <h2>{esc(heading)}</h2>
+  {summary_html}
+  <ul class="story-list">{"".join(rows)}</ul>
+  {more}
+  <p class="muted">Automated news aggregation, not human-verified — follow
+  each link to the original outlet. Part of the
+  <a href="../story-tracker.html">story tracker</a>, {group["count"]}
+  headline{"s" if group["count"] != 1 else ""} archived.</p>
+</section>"""
+
+
+def build_community(m, news_group=None):
     """One page per tracked moratorium row — the "[town] data center" query.
 
     The week a proposal drops, residents search their own town's name, not
@@ -5654,7 +5758,9 @@ def build_community(m):
     as the tracker (MORATORIUMS_DF + LOCAL_BODIES_DF + LOCAL_OFFICIALS_DF),
     so the daily rebuild keeps each page current with zero editing — and the
     same provenance discipline applies: effective_status only, per-row
-    source/as_of, unverified rows say so out loud.
+    source/as_of, unverified rows say so out loud. `news_group` (a
+    story_tracker.group_stories() entry) adds a "Recent news" section when
+    the story tracker has archived coverage for this same locality.
     """
     state_name = _abbr_to_state().get(str(m.state), str(m.state))
     state_slug = slugify(state_name)
@@ -5683,56 +5789,9 @@ def build_community(m):
             'to check with the locality, not a fact to cite at a hearing.'
             '</p></div>')
 
-    # Where decisions happen — only when a curated LOCAL_BODIES_DF row exists.
-    body_html = ""
-    bodies = LOCAL_BODIES_DF[(LOCAL_BODIES_DF["locality"] == loc)
-                             & (LOCAL_BODIES_DF["state"] == str(m.state))]
-    if not bodies.empty:
-        b = bodies.iloc[0]
-        contact_bits = " · ".join(
-            x for x in (
-                f'<a href="mailto:{esc(str(b["email"]))}">{esc(str(b["email"]))}</a>'
-                if has_value(b["email"]) else "",
-                esc(str(b["phone"])) if has_value(b["phone"]) else "",
-                f'<a href="{esc(str(b["website"]))}" rel="nofollow noopener" '
-                f'target="_blank">website</a>' if has_value(b["website"]) else "",
-            ) if x)
-        agenda = (f'<p><a class="btn ghost" href="{esc(str(b["agenda_url"]))}" '
-                  f'rel="nofollow noopener" target="_blank">Meeting agendas '
-                  f'&rarr;</a></p>' if has_value(b["agenda_url"]) else "")
-        body_html = f"""
-<section>
-  <h2>Where the decision gets made</h2>
-  <p><strong>{esc(str(b["body"]))}</strong> — {esc(str(b["decides"]))}</p>
-  <p><strong>Meets:</strong> {esc(str(b["meets"]))}<br>
-  <strong>Where:</strong> {esc(str(b["where"]))}</p>
-  <p><strong>Public comment:</strong> {esc(str(b["comment_process"]))}</p>
-  {f'<p>{contact_bits}</p>' if contact_bits else ''}
-  {agenda}
-  <p class="muted">Read from
-  <a href="{esc(str(b["source"]))}" rel="nofollow noopener" target="_blank">the
-  official page</a> on {esc(str(b["as_of"]))}. Meeting details change —
-  confirm before you go.</p>
-</section>"""
-
-    officials_html = ""
-    offs = LOCAL_OFFICIALS_DF[(LOCAL_OFFICIALS_DF["locality"] == loc)
-                              & (LOCAL_OFFICIALS_DF["state"] == str(m.state))]
-    if not offs.empty:
-        rows = "\n".join(
-            f"<tr><td>{esc(str(o.name))}</td><td>{cell(o.role)}</td>"
-            f"<td>{cell(o.email)}</td><td>{cell(o.phone)}</td>"
-            # Blank stance means "not recorded", never "neutral".
-            f"<td>{cell(o.stance, dash='not recorded')}</td></tr>"
-            for o in offs.itertuples())
-        officials_html = f"""
-<section>
-  <h2>Who votes on it</h2>
-  <table><tr><th>Name</th><th>Role</th><th>Email</th><th>Phone</th>
-  <th>Recorded stance</th></tr>{rows}</table>
-  <p class="muted">From the locality's own roster page; "not recorded" means
-  no public statement is on file, not neutrality.</p>
-</section>"""
+    body_html = _local_body_section_html(loc, m.state)
+    officials_html = _local_officials_section_html(loc, m.state)
+    news_html = _story_news_section_html(news_group)
 
     # The rest of the state's fights — internal links between locality pages.
     sibs = MORATORIUMS_DF[(MORATORIUMS_DF["state"] == str(m.state))
@@ -5771,6 +5830,7 @@ def build_community(m):
   <p class="muted">An expiry date is the earliest a pause could have ended —
   extensions are common, so confirm with the clerk before citing it.</p>
 </section>
+{news_html}
 {body_html}
 {officials_html}
 <section>
@@ -5811,7 +5871,75 @@ def build_community(m):
             (title_loc, f"{SITE_URL}/communities/{slug}")))
 
 
-def build_communities_index():
+def build_locality_news_page(locality, state, group):
+    """Sibling to build_community() for a place the story tracker has
+    archived coverage for but that has no tracked moratorium/ban action —
+    Vineland NJ, Kenilworth NJ, Butte County CA, etc. Same governing-body and
+    officials sections when a curated row exists, but the headline content is
+    the archived news itself, clearly framed as automated/unverified rather
+    than the moratorium tracker's sourced-and-dated status claims.
+    """
+    state_name = _abbr_to_state().get(str(state), str(state))
+    state_slug = slugify(state_name)
+    slug = _loc_slug(locality, state)
+
+    body_html = _local_body_section_html(locality, state)
+    officials_html = _local_officials_section_html(locality, state)
+    news_html = _story_news_section_html(group, heading="What's been reported")
+
+    body = f"""
+<header>
+  <div class="kicker">Community briefing</div>
+  <h1>Data center coverage in {esc(locality)}, {esc(state_name)}</h1>
+  <p class="sub">{group["count"]} headline{"s" if group["count"] != 1 else ""}
+  archived for {esc(locality)} — no documented moratorium or ban on file
+  here yet. See the <a href="../moratoriums.html">moratorium tracker</a> for
+  towns that have taken formal action, or the full
+  <a href="../story-tracker.html">story tracker</a> to browse every place
+  we're following.</p>
+</header>
+{news_html}
+{body_html}
+{officials_html}
+<section>
+  <h2>What to do next</h2>
+  <ul>
+    <li><a href="../hearing-questions.html">Questions to ask at the
+    hearing</a> — force specific answers onto the record.</li>
+    <li><a href="../impact.html">Estimate the impact</a> — electricity, water,
+    and rate pressure for any facility size in {esc(state_name)}.</li>
+    <li><a href="../cba-clauses.html">Model CBA clauses</a> — copy-paste
+    language communities have actually won.</li>
+    <li><a href="../states/{state_slug}.html">{esc(state_name)} briefing</a> —
+    rates, grid carbon, PUC contacts, and every fight in the state.</li>
+  </ul>
+  <p><a class="btn" href="{APP_URL}">Generate a full action pack &rarr;</a></p>
+</section>
+<section>
+  <p class="muted">Part of the <a href="../story-tracker.html">story
+  tracker</a> — automated news aggregation, CC BY 4.0.</p>
+</section>
+"""
+    return page(
+        f"{locality}, {state_name} data center news — AI GridWatch",
+        f"{group['count']} archived headlines about data center development "
+        f"in {locality}, {state_name}, updated as new coverage appears. No "
+        f"documented moratorium on file for this locality.",
+        body, f"{SITE_URL}/communities/{slug}", depth=1,
+        og_image=_og_image(f"state-{state_slug}"),
+        jsonld=_breadcrumb(
+            ("Home", SITE_URL),
+            ("Communities", f"{SITE_URL}/communities/"),
+            (f"{locality}, {state}", f"{SITE_URL}/communities/{slug}")))
+
+
+def build_communities_index(news_only_groups=None):
+    """`news_only_groups`: list of (locality, state, group) for localities the
+    story tracker has archived coverage for but that have no MORATORIUMS_DF
+    row — rendered as a second, clearly-separate list so "tracked moratorium"
+    and "news coverage only" are never presented as the same kind of claim.
+    """
+    news_only_groups = news_only_groups or []
     abbr2name = _abbr_to_state()
     total = len(MORATORIUMS_DF)
     n_states = MORATORIUMS_DF["state"].nunique()
@@ -5826,6 +5954,33 @@ def build_communities_index():
         sections += (
             f'<section><h2><a href="../states/{slugify(state_name)}.html">'
             f'{esc(state_name)}</a> ({len(grp)})</h2><ul>{items}</ul></section>')
+
+    news_section = ""
+    if news_only_groups:
+        by_state = {}
+        for locality, state, group in news_only_groups:
+            by_state.setdefault(state, []).append((locality, group))
+        news_items = ""
+        for abbr, rows in sorted(by_state.items(),
+                                 key=lambda kv: abbr2name.get(kv[0], kv[0])):
+            state_name = abbr2name.get(abbr, abbr)
+            lis = "\n".join(
+                f'<li><a href="{_loc_slug(loc, abbr)}.html">{esc(loc)}</a> '
+                f'— {g["count"]} headline{"s" if g["count"] != 1 else ""}</li>'
+                for loc, g in sorted(rows, key=lambda r: -r[1]["count"]))
+            news_items += (
+                f'<section><h3><a href="../states/{slugify(state_name)}.html">'
+                f'{esc(state_name)}</a> ({len(rows)})</h3><ul>{lis}</ul></section>')
+        news_section = f"""
+<section>
+  <h2>Other active fights we're following</h2>
+  <p class="muted">News coverage archived by the
+  <a href="../story-tracker.html">story tracker</a> for places with no
+  documented moratorium or ban on file yet — automated aggregation, not
+  verified the way the tracker above is.</p>
+  {news_items}
+</section>"""
+
     body = f"""
 <header>
   <div class="kicker">Community briefings</div>
@@ -5835,6 +5990,7 @@ def build_communities_index():
   decision gets made, and what to do next.</p>
 </header>
 {sections}
+{news_section}
 <section>
   {provenance_html("MORATORIUMS_DF")}
   <p class="muted">All of this data is open —
@@ -9989,16 +10145,36 @@ def main():
     (WEB / "states" / "index.html").write_text(
         build_states_index(), encoding="utf-8")
 
+    # Computed once and reused by both the story tracker page and the
+    # per-locality community pages, so a town with archived news gets a
+    # "Recent news" section on its moratorium page (if it has one) or its
+    # own news-only page (if it doesn't) — see build_community/
+    # build_locality_news_page and _story_news_section_html.
+    _story_groups = story_tracker.group_stories(_STORY_ARCHIVE, min_for_summary=4)
+    _groups_by_locality = {(g["locality"], g["state"]): g
+                           for g in _story_groups if g["locality"]}
+    _mora_localities = {(str(_m.locality), str(_m.state))
+                        for _m in MORATORIUMS_DF.itertuples()}
+    _news_only = [(loc, st, g) for (loc, st), g in _groups_by_locality.items()
+                 if (loc, st) not in _mora_localities]
+
     (WEB / "communities").mkdir(parents=True, exist_ok=True)
     (WEB / "communities" / "index.html").write_text(
-        build_communities_index(), encoding="utf-8")
+        build_communities_index(_news_only), encoding="utf-8")
     _community_paths = []
     for _m in MORATORIUMS_DF.itertuples():
         _cslug = _loc_slug(_m.locality, _m.state)
+        _news_group = _groups_by_locality.get((str(_m.locality), str(_m.state)))
         (WEB / "communities" / f"{_cslug}.html").write_text(
-            build_community(_m), encoding="utf-8")
+            build_community(_m, news_group=_news_group), encoding="utf-8")
         _community_paths.append(f"communities/{_cslug}")
-    print(f"  [pages] {len(_community_paths)} community briefings -> communities/")
+    for _loc, _st, _g in _news_only:
+        _cslug = _loc_slug(_loc, _st)
+        (WEB / "communities" / f"{_cslug}.html").write_text(
+            build_locality_news_page(_loc, _st, _g), encoding="utf-8")
+        _community_paths.append(f"communities/{_cslug}")
+    print(f"  [pages] {len(_community_paths)} community briefings "
+          f"({len(_news_only)} news-only) -> communities/")
 
     posts = _sorted_posts()
     (WEB / "blog" / "index.html").write_text(

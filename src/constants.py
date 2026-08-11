@@ -4348,6 +4348,22 @@ LOCAL_BODIES = [
      "phone": "760-329-6411", "email": "",
      "website": "https://www.cityofdhs.org/departments/city-council/",
      "as_of": "2026-08-07", "source": "https://www.cityofdhs.org/departments/city-council/"},
+
+    {"locality": "Butte County", "state": "CA",
+     "body": "Water Commission",
+     "decides": "Advisory body that studies water issues and recommends "
+                "solutions to the Board of Supervisors; not a permitting "
+                "authority. County zoning does not currently allow data "
+                "centers in unincorporated areas and no project has been "
+                "proposed — a commissioner requested this review specifically "
+                "so the county has a policy position before a proposal arrives.",
+     "meets": "1st Wednesday of the month, 1:30 p.m.",
+     "where": "Board of Supervisors Chambers, 25 County Center Drive, Suite 205, Oroville, CA 95965",
+     "agenda_url": "https://buttecounty.granicus.com/boards/w/839ba29f34a61ab5/boards/34489",
+     "comment_process": "In person, or electronically to BCWATER@BUTTECOUNTY.NET.",
+     "phone": "530-552-3595", "email": "BCWATER@BUTTECOUNTY.NET",
+     "website": "https://www.buttecounty.net/1221/Water-Commission",
+     "as_of": "2026-08-10", "source": "https://buttecounty.granicus.com/boards/w/839ba29f34a61ab5/boards/34489"},
 ]
 LOCAL_BODIES_DF = pd.DataFrame(LOCAL_BODIES)
 
