@@ -3255,6 +3255,7 @@ _START_HERE_HTML = r"""
     <div class="row"><div>
       <label class="fld" for="w-stage">Where does the project stand?</label>
       <select id="w-stage"></select></div></div>
+    <div id="w-state-info"></div>
   </div>
 
   <div class="step">
@@ -3633,6 +3634,30 @@ function fmtShortDate(dt){
   return dt.toLocaleDateString('en-US',{month:'short',day:'2-digit'});
 }
 
+// ---- state database of projects (DC_SITES_DF / STATE_DC_DF) ----------- //
+function stateInfoHtml(state, puc){
+  var dc = D.stateDC[state] || {count:0, twh:0};
+  var abbrev = puc.abbrev;
+  var sites = D.sites.filter(function(s){return s.state===abbrev;});
+  var slug = state.toLowerCase().replace(/ /g,'-');
+  var out = '<div class="note info" style="margin-top:12px">';
+  if(dc.count){
+    out+='<p><strong>'+esc(state)+'</strong> already hosts an estimated <strong>'+dc.count+'</strong> tracked data center facilit'+(dc.count===1?'y':'ies')+', drawing about <strong>'+d1(dc.twh)+' TWh/year</strong>.</p>';
+  } else {
+    out+='<p>GridWatch doesn’t have a facility-count estimate for <strong>'+esc(state)+'</strong> yet.</p>';
+  }
+  if(sites.length){
+    var shown=sites.slice(0,6);
+    out+='<p style="margin-top:8px"><strong>Known campuses GridWatch tracks here:</strong></p><ul style="margin:4px 0 0 20px">'+
+      shown.map(function(s){return '<li>'+esc(s.operator)+' — '+esc(s.location)+(s.tenant?' ('+esc(s.tenant)+')':'')+'</li>';}).join('')+
+      '</ul>';
+    if(sites.length>shown.length) out+='<p class="muted" style="margin-top:4px">+'+(sites.length-shown.length)+' more — see the full profile below.</p>';
+  }
+  out+='<p class="muted" style="margin-top:8px"><a href="states/'+esc(slug)+'.html">Full '+esc(state)+' profile — moratoriums, officials, PUC &rarr;</a></p>';
+  out+='</div>';
+  return out;
+}
+
 function llcSection(q){
   var out='', operator=UNKNOWN_BRIEF;
   q=(q||'').trim();
@@ -3684,6 +3709,10 @@ function render(){
   if(hearingVal && !$('w-meet-date').value) $('w-meet-date').value=hearingVal;
   $('w-mwlabel').textContent=mw+' MW';
 
+  // Step 1 — state database of tracked projects
+  var puc=D.pucs[state]||{abbrev:'',name:'',website:'',complaint:''};
+  $('w-state-info').innerHTML=stateInfoHtml(state,puc);
+
   // Step 2 — operator resolution
   var operator=UNKNOWN_BRIEF;
   if(whoSel===UNKNOWN_UI){
@@ -3712,7 +3741,6 @@ function render(){
     '</ul><p class="muted">Your CBA target above isn’t aspirational — it’s in line with what organized communities have negotiated. Scale the ask to the MW.</p>';
 
   // Step 4 — playbook
-  var puc=D.pucs[state]||{abbrev:'',name:'',website:'',complaint:''};
   $('w-stage-h').textContent=(stage.emoji?stage.emoji+' ':'')+'What to do this week';
   $('w-stage-headline').innerHTML='<p>'+esc(stage.headline)+'</p>';
   var dated=null, movesHtml='';
