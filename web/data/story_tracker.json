@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 707,
+  "count": 715,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -50,7 +50,7 @@
       "locality": "Cumberland County",
       "state": "NC",
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-10"
+      "last_seen": "2026-08-12"
     },
     {
       "title": "Inside the secretive deal for a $10 billion data center in rural North Carolina",
@@ -7783,6 +7783,94 @@
       "locality": "Wytheville",
       "state": "VA",
       "first_seen": "2026-08-08",
+      "last_seen": "2026-08-12"
+    },
+    {
+      "title": "Michigan Voters Just Sent a Resounding Message About Data Centers",
+      "outlet": "Inside Climate News",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNNnpYd1pOZUh0MVh4QUk2aDlYd3dQMV8wTkRwa24yWDlmdy1wR3czSEdRTlpjWS1uc3NacjYtdEZhaVdTVHJ5STc5RXBiWDlydU1lWUQ4TjcyTVpBcVBuMFN6dnFYMGFOZXdHSFo1NjhDSU90MWdGMzVvb2dFTmZPbEZTQjJDci1IM3M1RnZQNndnZw?oc=5",
+      "published": "Wed, 12 Aug 2026 08:50:00 GMT",
+      "published_iso": "2026-08-12T08:50:00+00:00",
+      "locality": null,
+      "state": "MI",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-12"
+    },
+    {
+      "title": "A Kentucky county passes a data center moratorium — with a city-sized hole",
+      "outlet": "Louisville Public Media",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdDhQbTNHdm51Q0hHVi0wVllPdHZZbExob2JYSUoxUFc3VlJBdE1YZWR2SmVOOW9zYmhhRlgtMzhZeWRxMl84RXR2OVBBenpNamFMX0dMYzZVTWg2NUNUSzFCUE1YclpyeVFhQXRxa0ViWEJpbXl6LWZVVE1rOV96bjVqd1lwRWlNR2pKakU0cWg2Y1YtOW1LSHNaVF9OSWpXcVFod3pjRWtOZlhv?oc=5",
+      "published": "Wed, 12 Aug 2026 18:46:00 GMT",
+      "published_iso": "2026-08-12T18:46:00+00:00",
+      "locality": null,
+      "state": "KY",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-12"
+    },
+    {
+      "title": "Residents Raise Concerns About Data Centers, WGN Site",
+      "outlet": "journal-topics.com",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSUZUWDlfVWRJRjBqZnB6MnFqeVUxSWpzcWlwTDliREc1OTBFUHRVWWRMaU4wUDI2TlZGYVpyYVp3TDkybG5WUTdocVExSDNyRzlTT1ZySVhTVzNOOElVcFc3YlFLS2VTTllFREQ5MDVidGR0aUtvNEJpRHExU3pDakxGYTdHRGEyUE03M3V2Uk5qZEp2VDhxMQ?oc=5",
+      "published": "Wed, 12 Aug 2026 20:18:47 GMT",
+      "published_iso": "2026-08-12T20:18:47+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-12"
+    },
+    {
+      "title": "Modesto residents pack City Council meeting, call for ban on AI data centers",
+      "outlet": "Modesto Bee",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9jLV9uOFJ6cXptdHlpU20xM1htSElHZlNjdkVHVFJ0Z0FfdnMwN0JLYTZXeUJZNk5BTHJMMGJCVFNzbEhlRS1ydWt5ekFudkpMNkxkaVUycDJ4NngzSzdFb1pSNW1SeG9Ec2R1RjhmSHhRa0R3QmFGUtIBeEFVX3lxTFB1bDduSF8xOFpXdXVQWG1TSXUzYkRtRk1BQlNVdE5mY1N1RGRNb1d6c2lKelNWZ0Y4NVBxVWg0YThxMDlFU2dkek9yaGFMZTV2ZDUwQ2VNb2RyX0RiODBSYVBrZ21yZ3hSX2tfV3laZEZldlJ6c0VEYg?oc=5",
+      "published": "Wed, 12 Aug 2026 20:48:07 GMT",
+      "published_iso": "2026-08-12T20:48:07+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-12"
+    },
+    {
+      "title": "Data-center developer sues Oakland County city",
+      "outlet": "MLive.com",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPaVB5UmxLalQ1bnZYT2V6T3FXVkJUZlctaFYzR0VjVnBsQ2k3dm1yU25FTGJmdEdYc0x3SG5tVXFMNWpqZ2RJdmRpYXNoMmhSYU9EcFFDQnQzOTAxNVBpc1d3MGtuZHl6S05Pa2pBZDhUaEtwM1Uxb2VuQTNJU2d6Ny1RMS1WMmZWRmVpR0ozdm9iODJ5NnRRbGJR0gGuAUFVX3lxTE9MaGZoSy0yRHlOZVY0Zzd1X2VtdG92TGZ0dVcwcGRrQWUydjNKN3dqTHZNSmxrTHpYLVRqMHZnOG1vLVRlVHRGMTcyRlhBLUpGLW1UX0xmOVZsU1FoSnFtR0swZGhiUkItX0pUTDdIdG83ZUoyQmlaN0I4bVIwWkdvLWFQNU1NTUt5QmdNWlhaeTVuT3o1RlZfNHpfRHdPRUJUT1RRdTZNNWhfY0pYdw?oc=5",
+      "published": "Tue, 11 Aug 2026 20:06:00 GMT",
+      "published_iso": "2026-08-11T20:06:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-12"
+    },
+    {
+      "title": "A Michigan town is fighting back against data centers — residents say it’s giving them hope",
+      "outlet": "MLive.com",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNVkVUU3Jlc2xRcXFHY0lXZVBuamVNSHVQRXhXUm9weWZUeTd3bWF5UzhNdmxkVURjMFNuZXMxZERHc2dwMFBEQUxiNVF4bElQQ1NYUmtzaVNsNW14czVRUlJOV3p2YmkyVnpxTUQ2aVZVNHFGSGJWZTk4ZGg1aUpVUlF6OFZ1c1N6bkY2TWJobHBaUGsyVUxhbDJ3RDk1UTVkRVV6MUpUNWxKejRlNkExWEZGRS1aTUJuTTAzTmNVTUZYY3J0NHpZdkhGLWZSc0JsYkHSAeYBQVVfeXFMTklwZ3MwOHpBb2dxTi15VGZLc3RuRHZNTnA1aThVaHBFWmlvZkZXQmhlaFJZNEFhSFVjcFVSR1B3Vy1FQXNKbm5aUkFrNXJueWRTZTdXMWZIQ3NSZG8tX0tfcDdYeWJqb1VuSEo0dHFsRF9UbzNmS3dEaHlPOGNnODlrYTBUZGZQYTdibjduZ2JkTDlacXcyN1hUbndUeUxDVXAtV1ZaZzNUMXM5bWNBM1N4akVRd2tlWFE5RUJtWk5UbE1LQ1ljMWIyY3FQNkoxcjJsVlBHVDk3d0ROdlRCTnNRYzFlRmc?oc=5",
+      "published": "Wed, 12 Aug 2026 20:20:00 GMT",
+      "published_iso": "2026-08-12T20:20:00+00:00",
+      "locality": null,
+      "state": "MI",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-12"
+    },
+    {
+      "title": "Data center industry contributes thousands to Paxton campaign",
+      "outlet": "KERA News",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNM3dXNmRtR0d2MXZLMm1XYmd5cHpxS01OSmtQOUI0N2NKTGRvMjFkUXpIUG9CVzJSZVJGSG1yUWhuN1RnQVBkWklreDhGMEU5NXg0MDhDYndYSHgwQkJhRHNiSFBRWmY4QVpZMENLUXo3Ykx0bFFUMGwxOEZJSW96X0ZfUmRmQ0wzVzJWT09vTnpTYlNvajFHdnBrR3RnVjc2RFI5RVY0SXBveERZbmRyRTIyOFUwTFVCSVdEMHEtQjZzMzFEUThSdkRFRnFreWdqUXcxOVRrcFprcnFE?oc=5",
+      "published": "Tue, 11 Aug 2026 17:20:00 GMT",
+      "published_iso": "2026-08-11T17:20:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-12"
+    },
+    {
+      "title": "Small town of Lochbuie approves 5-year moratorium on data centers, longest pause in Colorado",
+      "outlet": "9News",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOMGhsR1N3NU5mUkRhb3NuSVZyRExMaGVzVy1WRnh4eFE1SEVwajRlakxNa244UldUZDJfSmduMDBEWTNuSzZHaE1fbFhFOWNUSVVtNjd5NU1IekFQVzdyNkpuTGY3TER2b2NpVVVWLThhbnc0Y1hwblRObFF1RERPY3FNcDcyLVJXSHNXYXVZa0ZSaVJER0JQZU12SU9BODl2bmFERlpRR24yYzdJQ2dOUGg2bHR0UHNhZ3ZNTg?oc=5",
+      "published": "Wed, 05 Aug 2026 22:02:00 GMT",
+      "published_iso": "2026-08-05T22:02:00+00:00",
+      "locality": "Lochbuie",
+      "state": "CO",
+      "first_seen": "2026-08-05",
       "last_seen": "2026-08-12"
     }
   ]
