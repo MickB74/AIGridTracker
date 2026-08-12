@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 690,
+  "count": 695,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -7596,6 +7596,61 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-05",
+      "last_seen": "2026-08-12"
+    },
+    {
+      "title": "Moratorium fails again as Fayetteville revises data center protections",
+      "outlet": "fayobserver.com",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQbm52VGs3cEVMaldPY3VJeC1sNWlHTGdHQ2lpMjVUVC1YOUc1RXNGUWh5T3pRV1A5LXNHdC1YdFZCal9RNlRXbTNWbnBTZ0p3LTNPeVJVRlByYmQ2Q2tVLWFjVVBWMThiYWhfYkI1RzRpSWU0Q0NZMTA5aXQteGZsVFZSR2toTVA1bzczemMzYUpqLUtObHJqOFNYeWNfV2lGYUl0bVlGVWoxVWtrZm9uR2FBQjJhRHN3UXplODNCVG1WLWZlaXJiZ3FGVy1Cdw?oc=5",
+      "published": "Wed, 12 Aug 2026 09:08:00 GMT",
+      "published_iso": "2026-08-12T09:08:00+00:00",
+      "locality": "Fayetteville",
+      "state": "NC",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-12"
+    },
+    {
+      "title": "Wrightstown residents vote no on data center referendum",
+      "outlet": "WBAY",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQNEt2RE02eVYzMVUzcVZnWEZERE1ETFJ3YUFlVDJMYW9pS2hzYWwxQm03bWNYeUNqdGVfVkZPcDdEZVM4WFR4STc0UklrRG1uck1NVk1mWVJ4eThLcktiYzFHQy1oa1lDLVU1NzcwamctNjAzSDlUM3JZRFhjX0ZfMWQxSVpjd2R5dV9fcWtn0gGiAUFVX3lxTE13MG02MG5yT1FtVnJBbURrUUdWTU0xT0s3cTBDa1ViNGF2UHU3T3pUbVhRN3h5d3dKR2M4alJQTmI1aXh3cDBoNk9NamxhczBVOEVZTC1IN1RXakxSdkdMbW9rcUxlNlJyV0IycjlJa0ItV2VoWEdTWEU2WVZLU0hybVhUVWtKUTRKdkMtYTlnZ0VkZHRCMXFtNXdlUndRVWVTUQ?oc=5",
+      "published": "Wed, 12 Aug 2026 00:39:00 GMT",
+      "published_iso": "2026-08-12T00:39:00+00:00",
+      "locality": "Wrightstown",
+      "state": "WI",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-12"
+    },
+    {
+      "title": "Linn County will not rezone district near nuclear plant for data centers",
+      "outlet": "kcrg.com",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUkJybTNhTXZFQlV1UWFnRU1WS0RVdnpTU3kyMTdQbExIN2xNTWE4NjU4OC1haFhGeEhJcmotclpuUmVvYnVyUml2cXZ5TTRHNTNZTU0xeUhIb3FjM250X18yaHJrN0o1NEk5TE5jWnVNc2ZVUzJmRkwyUjdwNTY5N2sweGFLOUdJVVBUNU1TamVQWk95T1ZtbFBmdUVvVExxaGNv?oc=5",
+      "published": "Mon, 10 Aug 2026 16:47:00 GMT",
+      "published_iso": "2026-08-10T16:47:00+00:00",
+      "locality": "Linn County",
+      "state": "IA",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-12"
+    },
+    {
+      "title": "Will El Segundo Become a Center for AI-Development? Residents Worry It Will.",
+      "outlet": "westsidecurrent.com",
+      "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNa0RsTTlZUjlnN1diY2xXQUZxdkdja0d1VUhNcXBMUEY2azZUajBDSjVmb3UzMl9GY2JGMFJZb2FMakt3ZFE0UnhNY3pfbVVsT2xES01KUF84enk1OEZLbWVMemZPMWxiY0NnLXRWMFFUZnpsMTlrNHhmUjZSaEFMcWJSUmF0LWRxR1ZpOUdPUVplb3QxMWF3UE5YRFpEWm82aWp2UTFid0pxX0lHUlZRRDZ0UTFPcFVjajBiWFFtMWJMUXhUdFREUGN5QTE4RVFQN0ZHOURmWFpoTlNxV1ltNmpZZGZUaFF0Y2twNWcxUVp4Qm92V1Y3eU5FdEg?oc=5",
+      "published": "Mon, 10 Aug 2026 10:00:00 GMT",
+      "published_iso": "2026-08-10T10:00:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-12"
+    },
+    {
+      "title": "Wytheville Data Center Boom Draws Resident Pushback Over Land, Water, and Electric Rates",
+      "outlet": "WIBW",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNd0o4RExuMmlFOHFPRVdhRXdkUzItQTVKLUcxdmVfWVJYLWhMRGdvb05INk03aXBLNmtMV3FNU0YwaXZrMlBWOUFKWmp3Zmk2ZmRZZHlJVGwzVWdlcDVZS2VCeXowTzdPdGVqYnJmaURNMGhtNEJaOEdTQmxlb0M4TkRFQlR6YkRJdzNmeklwaXItTTRsaTZfZXAzajQxSEYzSFR5dFNNdGJkaDZrdENXeU9BU2RVc1pXWVh5aUZn?oc=5",
+      "published": "Sat, 08 Aug 2026 03:24:00 GMT",
+      "published_iso": "2026-08-08T03:24:00+00:00",
+      "locality": "Wytheville",
+      "state": "VA",
+      "first_seen": "2026-08-08",
       "last_seen": "2026-08-12"
     }
   ]
