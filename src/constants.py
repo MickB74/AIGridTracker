@@ -1307,6 +1307,21 @@ MORATORIUMS = [
     {"locality": "Ohio (ballot measure)", "state": "OH", "level": "State",
      "status": "Rejected", "when": "2026", "note": "Failed signature threshold",
      "lat": None, "lon": None, "expires": None, "as_of": None, "source": None},
+    {"locality": "Bell County", "state": "KY", "level": "Local",
+     "status": "Enacted", "when": "Jul 2, 2026",
+     "note": "2-year moratorium, passed unanimously by the fiscal court; "
+             "halted a Murray Industries hyperscale project that had already "
+             "begun clearing land along the Bell-Knox county line",
+     "lat": 36.75, "lon": -83.55, "expires": "2028-07-02", "as_of": "2026-08-11",
+     "source": "https://www.wymt.com/2026/07/02/bell-county-passes-data-center-moratorium-halting-construction-2-years/"},
+    {"locality": "Citrus County", "state": "FL", "level": "Local",
+     "status": "Enacted", "when": "May 26, 2026",
+     "note": "1-year freeze on new data-center rezoning applications, "
+             "development orders and building permits, adopted unanimously; "
+             "the Holder Industrial Park project it was aimed at was later "
+             "withdrawn by the developer",
+     "lat": 28.83, "lon": -82.33, "expires": "2027-05-26", "as_of": "2026-08-11",
+     "source": "https://www.fox13news.com/news/citrus-county-commission-approves-freeze-ai-data-center-rezoning-applications"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.
@@ -4364,6 +4379,65 @@ LOCAL_BODIES = [
      "phone": "530-552-3595", "email": "BCWATER@BUTTECOUNTY.NET",
      "website": "https://www.buttecounty.net/1221/Water-Commission",
      "as_of": "2026-08-10", "source": "https://buttecounty.granicus.com/boards/w/839ba29f34a61ab5/boards/34489"},
+
+    {"locality": "Spartanburg County", "state": "SC",
+     "body": "County Council",
+     "decides": "Zoning, land-use ordinances, and the county budget. A "
+                "lawsuit (Southern Environmental Law Center) accuses the "
+                "county of letting the $2.8B, 457 MW NorthMark/Valara data "
+                "center on Pine Street bypass the Planning Commission by "
+                "treating it as two 'minor' developments instead of one "
+                "'major' one, which would have required public review.",
+     "meets": "See the council's published meeting calendar; regular "
+              "meetings are typically 5:15 p.m. in Council Chambers.",
+     "where": "Spartanburg County Administration Building, 366 North Church "
+              "Street, Spartanburg, SC 29303",
+     "agenda_url": "https://www.spartanburgcounty.gov/189/County-Council",
+     "comment_process": "See the council's published agenda/meeting calendar "
+                        "for the public-comment process.",
+     "phone": "864-596-2528", "email": "",
+     "website": "https://www.spartanburgcounty.gov/189/County-Council",
+     "as_of": "2026-08-11", "source": "https://www.spartanburgcounty.gov/189/County-Council"},
+
+    {"locality": "Effingham County", "state": "GA",
+     "body": "Board of Commissioners",
+     "decides": "Zoning, land use, and county budget across five districts "
+                "plus an at-large chairman. Negotiated a $20B OpenAI data "
+                "center deal (Savannah Gateway Industrial Hub, Rincon) with "
+                "the county's Industrial Development Authority before any "
+                "public vote or comment — the announcement itself is what "
+                "drew nearly 1,000 residents to a since-held open house.",
+     "meets": "1st and 3rd Tuesday of the month, 5:00 p.m.",
+     "where": "Effingham Administration Complex, Commissioner Meeting Room, "
+              "804 S. Laurel Street, Springfield, GA 31329",
+     "agenda_url": "https://www.effinghamcounty.org/384/County-Board-of-Commissioners",
+     "comment_process": "See the 'Meeting Appearance/Presentation Procedures' "
+                        "document in the county's Document Center.",
+     "phone": "912-754-2123", "email": "effinghamclerk@effinghamcounty.org",
+     "website": "https://www.effinghamcounty.org/384/County-Board-of-Commissioners",
+     "as_of": "2026-08-11", "source": "https://www.effinghamcounty.org/384/County-Board-of-Commissioners"},
+
+    {"locality": "Plymouth Township", "state": "PA",
+     "body": "Zoning Hearing Board",
+     "decides": "Special-exception and variance applications, including "
+                "developer Brian O'Neill's proposal to convert the former "
+                "Cleveland-Cliffs steel mill at 900 Conshohocken Road into a "
+                "2-million-sq-ft data center. Township Council has separately "
+                "issued a public statement opposing the project and listed "
+                "43 conditions it says the proposal would need to meet.",
+     "meets": "Hearings are scheduled individually and announced on the "
+              "township website; recent sessions have been held at Colonial "
+              "Middle School, 716 Belvoir Road, Plymouth Meeting, PA.",
+     "where": "Colonial Middle School, 716 Belvoir Road, Plymouth Meeting, PA 19462",
+     "agenda_url": "https://www.plymouthtownship.org/data-center-update/",
+     "comment_process": "Public comment is not taken at procedural/opening "
+                        "hearings; the township announces in advance which "
+                        "session will take resident testimony. Use the "
+                        "Citizen Request option at plymouthtownship.org/"
+                        "citizen-action-line/ for general contact.",
+     "phone": "", "email": "",
+     "website": "https://www.plymouthtownship.org/data-center-update/",
+     "as_of": "2026-08-11", "source": "https://www.plymouthtownship.org/zoning-hearing-board-meeting-scheduled-for-special-exception-for-proposed-data-center/"},
 ]
 LOCAL_BODIES_DF = pd.DataFrame(LOCAL_BODIES)
 
