@@ -1413,6 +1413,69 @@ MORATORIUMS = [
              "adopted rather than a fixed date.",
      "lat": 36.21, "lon": -115.98, "expires": None, "as_of": "2026-08-12",
      "source": "https://pvtimes.com/news/nye-county-approves-data-center-moratorium-186722/"},
+    {"locality": "Farmville", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Aug 3, 2026",
+     "note": "12-month moratorium on data-center development, approved "
+             "unanimously by the town's Board of Commissioners to allow "
+             "staff time to research impacts and draft ordinance language, "
+             "after East Energy Renewables (headquartered in Farmville) "
+             "pitched a data-center network to town leaders in February.",
+     "lat": 35.60, "lon": -77.60, "expires": "2027-08-03", "as_of": "2026-08-12",
+     "source": "https://www.witn.com/2026/08/04/farmville-board-adopts-12-month-moratorium-potential-data-center-after-residents-voice-opposition/"},
+    {"locality": "Summit", "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": "Jun 16, 2026",
+     "note": "Ordinance banning AI data centers (20+ MW or significant "
+             "municipal water impact) and, separately, detention centers, "
+             "passed the same night — the data-center ban is permanent "
+             "zoning, not a time-limited pause, aimed partly at keeping one "
+             "off the former Bristol Myers Squibb campus. Some residents say "
+             "the ordinance's enforcement mechanism falls short.",
+     "lat": 40.72, "lon": -74.36, "expires": None, "as_of": "2026-08-12",
+     "source": "https://www.tapinto.net/towns/summit/sections/government/articles/summit-council-takes-up-controversial-ai-data-center-and-detention-ban"},
+    {"locality": "Newberry County", "state": "SC", "level": "Local",
+     "status": "Enacted", "when": "Jul 16, 2026",
+     "note": "12-month moratorium on accepting new data-center permits, "
+             "confirmed unanimously after the council unanimously denied "
+             "the 'Project Altair' land-sale ordinance in June. Staff "
+             "directed to research appropriate locations for future "
+             "data-center development.",
+     "lat": 34.27, "lon": -81.62, "expires": "2027-07-16", "as_of": "2026-08-12",
+     "source": "https://www.foxcarolina.com/2026/07/16/newberry-county-council-unanimously-confirms-year-long-moratorium-data-centers/"},
+    {"locality": "Colleton County", "state": "SC", "level": "Local",
+     "status": "Enacted", "when": "Jul 7, 2026",
+     "note": "6-month moratorium on special exceptions, conditional-use "
+             "approvals, and other land-use/development approvals for "
+             "data centers (Ordinance 26-O-04), adopted unanimously. "
+             "Planning Commission separately approved a 'digital "
+             "infrastructure overlay district' text amendment.",
+     "lat": 32.90, "lon": -80.67, "expires": "2027-01-07", "as_of": "2026-08-12",
+     "source": "https://scdailygazette.com/2026/06/26/sc-counties-enacting-data-center-moratoriums/"},
+    {"locality": "Dodge County", "state": "WI", "level": "Local",
+     "status": "Enacted", "when": "Aug 10, 2026",
+     "note": "18-month moratorium on data-center development in "
+             "county-zoned unincorporated areas, approved 29-2 by the "
+             "Board of Supervisors after a public hearing. Initiated by "
+             "Supervisor Cathy Houchin following constituent concerns "
+             "about a Beaver Dam-area data center's impact on water.",
+     "lat": 43.42, "lon": -88.73, "expires": "2028-02-10", "as_of": "2026-08-12",
+     "source": "https://dailydodge.com/dodge-county-to-hold-public-hearing-on-proposed-data-center-moratorium/"},
+    {"locality": "Salix", "state": "IA", "level": "Local",
+     "status": "Proposed", "when": "Aug 12, 2026",
+     "note": "1-year moratorium on data centers, formal vote scheduled "
+             "Aug 12, 2026. Council voted 3-2 (Jul 8) to advance the "
+             "concept after 100+ residents debated a MidAmerican Energy "
+             "data center on ~900 acres of annexed farmland.",
+     "lat": 42.28, "lon": -96.29, "expires": None, "as_of": "2026-08-12",
+     "source": "https://www.ktiv.com/2026/08/12/salix-city-council-consider-data-center-moratorium/"},
+    {"locality": "Hogansville", "state": "GA", "level": "Local",
+     "status": "Enacted", "when": "2025",
+     "note": "90-day moratorium on data-center applications, extended "
+             "30 days in Jul 2026 (to approximately early Sep 2026) "
+             "while the city develops a new data-center ordinance with "
+             "consultant Canvas Planning and a citizen input committee. "
+             "QTS (Eagle South LLC) has proposed a 600 MW facility.",
+     "lat": 33.17, "lon": -84.91, "expires": None, "as_of": "2026-08-12",
+     "source": None},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.
@@ -4960,6 +5023,672 @@ LOCAL_BODIES = [
      "phone": "219-996-4572", "email": "",
      "website": "https://lakecountyin.gov/departments/eagle-creek-township",
      "as_of": "2026-08-12", "source": "https://lakecountyin.gov/departments/eagle-creek-township"},
+
+    {"locality": "Shreveport", "state": "LA",
+     "body": "City Council",
+     "decides": "Zoning and land use. Residents packed a town hall over "
+                "data-center concerns; no vote confirmed yet.",
+     "meets": "2nd and 4th Tuesday, 3:00 p.m.",
+     "where": "Government Plaza, 505 Travis St., 1st Floor, Shreveport, LA 71101",
+     "agenda_url": "https://www.shreveportla.gov/201/City-Council",
+     "comment_process": "See the council's published agendas for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.shreveportla.gov/201/City-Council",
+     "as_of": "2026-08-12", "source": "https://www.shreveportla.gov/201/City-Council"},
+
+    {"locality": "Caddo Parish", "state": "LA",
+     "body": "Parish Commission",
+     "decides": "Zoning and land use across 12 single-member districts. "
+                "Residents have raised water and wildlife concerns over a "
+                "proposed data center.",
+     "meets": "Regular session the Thursday after the 1st and 3rd Tuesday; "
+              "work session the preceding Monday.",
+     "where": "Caddo Parish, Shreveport, LA",
+     "agenda_url": "https://caddo.gov/commission-clerks-office/",
+     "comment_process": "See the commission's published agendas for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://caddo.gov/commission-clerks-office/",
+     "as_of": "2026-08-12", "source": "https://caddo.gov/commission-clerks-office/"},
+
+    {"locality": "Mason County", "state": "WV",
+     "body": "County Commission",
+     "decides": "County-level land use. Residents have pressed commissioners "
+                "on the Monarch Compute Campus, a 1,100-acre hyperscale "
+                "complex (North Point Pleasant + an expansion at Lakin); no "
+                "moratorium confirmed.",
+     "meets": "4 regular sessions/year at the courthouse (statutory "
+              "minimum); see the county's agenda page for the full schedule.",
+     "where": "Mason County Courthouse, Point Pleasant, WV",
+     "agenda_url": "https://masoncountywv.gov/agenda/",
+     "comment_process": "See the commission's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://masoncountywv.gov/government/mason-county-commissioners/",
+     "as_of": "2026-08-12", "source": "https://masoncountywv.gov/government/mason-county-commissioners/"},
+
+    {"locality": "Mason County", "state": "KY",
+     "body": "Fiscal Court",
+     "decides": "County-level land use. Voted May 22, 2026 to rezone 28 "
+                "properties (2,080 acres north of Germantown Road) for rural "
+                "industrial use — proposed by the Maysville-Mason County "
+                "Industrial Authority for a 6-building, undisclosed "
+                "'Fortune 50' data-center campus. A real, already-decided "
+                "outcome, not an open fight.",
+     "meets": "See the Maysville data-center information page for hearing-"
+              "specific dates.",
+     "where": "Mason County, Maysville, KY",
+     "agenda_url": "https://www.cityofmaysvilleky.gov/departments/codes_department/data_center.php",
+     "comment_process": "Contact Planning & Zoning Administrator George "
+                        "Larger, 606-564-2719, georgelarger@cityofmaysvilleky.gov.",
+     "phone": "606-564-2719", "email": "georgelarger@cityofmaysvilleky.gov",
+     "website": "https://www.cityofmaysvilleky.gov/departments/codes_department/data_center.php",
+     "as_of": "2026-08-12", "source": "https://www.weku.org/the-commonwealth/2026-05-26/mason-county-gives-final-approval-on-rezoning-properties-for-data-center-construction"},
+
+    {"locality": "Amherst", "state": "OH",
+     "body": "Board of Zoning Appeals",
+     "decides": "Use variances. Heard a proposal to convert a Nordson Drive "
+                "industrial site into a data center; a July 30, 2026 hearing "
+                "drew hundreds, with many turned away at a capacity limit.",
+     "meets": "Last Wednesday of the month, 6:30 p.m.",
+     "where": "Council Chambers, 206 South Main Street, Amherst, OH 44001",
+     "agenda_url": "https://amherstohio.org/planning-commission/board-of-zoning-appeals/",
+     "comment_process": "Request an agenda/minutes by mail (self-addressed "
+                        "stamped envelope to the Building Department) or in "
+                        "person, 480 Park Avenue.",
+     "phone": "", "email": "",
+     "website": "https://amherstohio.org/planning-commission/board-of-zoning-appeals/",
+     "as_of": "2026-08-12", "source": "https://www.cleveland19.com/2026/07/30/capacity-limits-push-amherst-residents-outside-zoning-board-hears-data-center-proposal/"},
+
+    {"locality": "Wisconsin Rapids", "state": "WI",
+     "body": "Common Council",
+     "decides": "Zoning, land use and city budget, 8-member council. "
+                "Residents have pressed for answers at a heated data-center "
+                "meeting; no vote confirmed yet.",
+     "meets": "See the city's Agenda Center for the current schedule.",
+     "where": "City Hall Council Chambers, 444 West Grand Avenue, Wisconsin Rapids, WI 54494",
+     "agenda_url": "https://www.wirapids.gov/AgendaCenter",
+     "comment_process": "See the council's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.wirapids.gov/161/Common-Council",
+     "as_of": "2026-08-12", "source": "https://www.wirapids.gov/161/Common-Council"},
+
+    {"locality": "Forsyth County", "state": "NC",
+     "body": "Board of Commissioners",
+     "decides": "Zoning, land use and county budget, 7-member board. "
+                "Weighing a data-center decision amid statewide debate over "
+                "how NC counties should respond to the industry.",
+     "meets": "Briefings 2:00 p.m. two Mondays/month; meetings 2:00 p.m. two "
+              "Thursdays/month (one at 6:00 p.m. quarterly).",
+     "where": "Forsyth County, Winston-Salem, NC",
+     "agenda_url": "https://coforsythnc.civicweb.net/portal/",
+     "comment_process": "See the board's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://co.forsyth.nc.us/Commissioners/default.aspx",
+     "as_of": "2026-08-12", "source": "https://co.forsyth.nc.us/Commissioners/default.aspx"},
+
+    {"locality": "Chesterfield County", "state": "VA",
+     "body": "Board of Supervisors",
+     "decides": "Zoning and land use. Approved three Google data-center "
+                "campuses ($9B+ investment) in a public vote; residents say "
+                "the county used NDAs and concealed Google's involvement "
+                "until after approval, raising transparency concerns.",
+     "meets": "See the county's published Board of Supervisors meeting "
+              "calendar.",
+     "where": "Chesterfield County Public Meeting Room, 10001 Iron Bridge Road, Chesterfield, VA 23832",
+     "agenda_url": "https://www.chesterfield.gov/datacenters",
+     "comment_process": "See the board's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.chesterfield.gov/datacenters",
+     "as_of": "2026-08-12", "source": "https://www.chesterfield.gov/datacenters"},
+
+    {"locality": "Edgewater", "state": "FL",
+     "body": "City Council",
+     "decides": "Zoning and land use. Considering a November 2026 ballot "
+                "measure that would ban data centers citywide (there are "
+                "none in Edgewater today) — ask this locality's own page "
+                "whether the referendum passed before citing a status.",
+     "meets": "1st Monday of the month, 6:00 p.m.",
+     "where": "Council Chambers, 104 N. Riverside Drive, Edgewater, FL 32132",
+     "agenda_url": "https://cityofedgewater.granicus.com/MediaPlayer.php?view_id=2",
+     "comment_process": "See the council's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.cityofedgewater.org/citycouncil/page/council-meeting",
+     "as_of": "2026-08-12", "source": "https://www.clickorlando.com/news/local/2026/07/20/edgewater-could-let-voters-decide-whether-to-ban-data-centers-citywide/"},
+
+    {"locality": "North Richland Hills", "state": "TX",
+     "body": "City Council",
+     "decides": "Zoning and land use. A second data center is under "
+                "discussion after an earlier approval; many residents "
+                "oppose it.",
+     "meets": "2nd and 4th Monday, 7:00 p.m.",
+     "where": "Council Chamber, City Hall, 4301 City Point Drive, North Richland Hills, TX 76180",
+     "agenda_url": "https://nrhtx.legistar.com/MainBody.aspx",
+     "comment_process": "Complete a Public Meeting Appearance Form before "
+                        "the meeting; 3-minute limit per speaker.",
+     "phone": "", "email": "",
+     "website": "https://www.nrhtx.com/359/City-Council",
+     "as_of": "2026-08-12", "source": "https://www.nrhtx.com/359/City-Council"},
+
+    {"locality": "Castro County", "state": "TX",
+     "body": "Commissioners Court",
+     "decides": "County-level land use. Residents cite water, land and "
+                "pollution fears over a proposed data center.",
+     "meets": "See the county's published Commissioners Court minutes page.",
+     "where": "100 E. Bedford, Room 111, Dimmitt, TX 79027",
+     "agenda_url": "https://www.co.castro.tx.us/page/castro.Commissioners.Court",
+     "comment_process": "See the court's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "806-647-3338", "email": "",
+     "website": "https://www.co.castro.tx.us/page/castro.Commissioners.Court",
+     "as_of": "2026-08-12", "source": "https://www.co.castro.tx.us/page/castro.Commissioners.Court"},
+
+    {"locality": "Archer County", "state": "TX",
+     "body": "Commissioners Court",
+     "decides": "County-level land use. Held a public forum on data-center "
+                "and battery-storage (BESS) projects; officials have "
+                "encouraged residents to attend court meetings with "
+                "concerns.",
+     "meets": "See the county's published public-notices page.",
+     "where": "Archer County Courthouse, 100 S Center St., Archer City, TX 76351",
+     "agenda_url": "https://www.co.archer.tx.us/page/archer.Commissioners.Court",
+     "comment_process": "See the court's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.co.archer.tx.us/page/archer.Commissioners.Court",
+     "as_of": "2026-08-12", "source": "https://www.archercountynews.com/county-holds-public-forum-over-data-center-bess-projects"},
+
+    {"locality": "Guadalupe County", "state": "TX",
+     "body": "Commissioners Court",
+     "decides": "Tax-abatement and development agreements. Sued by the Data "
+                "Center Action Coalition and residents over the CloudBurst "
+                "and Palomino Alpha data-center agreements, alleging Texas "
+                "Open Meetings Act violations and an undisclosed conflict of "
+                "interest (County Judge Kyle Kutscher's family owns land "
+                "within the Palomino Alpha site).",
+     "meets": "See the county's published Commissioners Court calendar.",
+     "where": "Guadalupe County, Seguin, TX",
+     "agenda_url": "https://www.co.guadalupe.tx.us/",
+     "comment_process": "See the court's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.co.guadalupe.tx.us/",
+     "as_of": "2026-08-12", "source": "https://www.ksat.com/news/local/2026/07/24/data-centers-draw-backlash-lawsuit-in-guadalupe-county-as-residents-raise-transparency-concerns/"},
+
+    {"locality": "Cass County", "state": "NE",
+     "body": "Board of Commissioners",
+     "decides": "County-level land use, 5-member board. Residents are "
+                "pushing back on a proposed data center over water and "
+                "farmland concerns.",
+     "meets": "Every other Tuesday, 8:00 a.m.",
+     "where": "Cass County Courthouse, Room 101, Plattsmouth, NE 68048",
+     "agenda_url": "https://www.casscountyne.gov/board-of-commissioners-meetings-agendas",
+     "comment_process": "See the board's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "402-296-9304", "email": "",
+     "website": "https://www.casscountyne.gov/board-of-commissioners",
+     "as_of": "2026-08-12", "source": "https://www.casscountyne.gov/board-of-commissioners"},
+
+    {"locality": "Posey County", "state": "IN",
+     "body": "Board of Commissioners",
+     "decides": "County-level land use. Commissioners acknowledged signing "
+                "an NDA with a developer after residents raised data-center "
+                "concerns; no application has been filed, though farmers "
+                "near Boberg and Hoenert roads have been approached about "
+                "leasing land.",
+     "meets": "1st and 3rd Tuesday, 9:00 a.m.",
+     "where": "Hovey House, Posey County, IN",
+     "agenda_url": "https://www.poseycountyin.gov/meetings/",
+     "comment_process": "See the county's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.poseycountyin.gov/welcome/",
+     "as_of": "2026-08-12", "source": "https://www.14news.com/2026/07/21/amidst-data-center-concerns-posey-co-commissioners-reveal-theyve-signed-an-nda/"},
+
+    {"locality": "Hallam", "state": "NE",
+     "body": "Village Board",
+     "decides": "Zoning/site approval. Monolith (a carbon-black producer, "
+                "partnering with AI-factory firm Crusoe) is seeking a text "
+                "amendment and site approval for a 10-acre, 35 MW data "
+                "center on its Olive Creek Campus; asked for village-board "
+                "approval by Sep 7, 2026.",
+     "meets": "See the village's meeting minutes for the current schedule.",
+     "where": "Hallam, NE",
+     "agenda_url": "https://nebraskapublicmedia.org/en/news/news-articles/hallam-residents-pack-town-hall-for-monoliths-proposed-data-center-expansion/",
+     "comment_process": "See the village's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://nebraskapublicmedia.org/en/news/news-articles/we-need-to-embrace-it-hallam-commission-hears-data-center-plans/",
+     "as_of": "2026-08-12", "source": "https://nebraskapublicmedia.org/en/news/news-articles/hallam-residents-pack-town-hall-for-monoliths-proposed-data-center-expansion/"},
+
+    {"locality": "Allegheny County", "state": "PA",
+     "body": "County Council",
+     "decides": "Legislative branch, 15 members. Residents have asked the "
+                "county to step in on data-center impacts (air quality, "
+                "water, electricity, property values) via its Climate "
+                "Action Plan process, but county regulatory power is "
+                "limited — Pennsylvania municipalities, not counties, "
+                "control zoning, and a legal land use can't simply be "
+                "prohibited. The county is drafting a model zoning ordinance "
+                "for municipalities to adopt.",
+     "meets": "2 Tuesdays/month, 5:00 p.m.",
+     "where": "Allegheny County Courthouse, Suite 119, 436 Grant Street, Pittsburgh, PA 15219",
+     "agenda_url": "https://www.alleghenycounty.us/Government/Row-Offices/County-Council/Council-Meetings",
+     "comment_process": "See the council's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.alleghenycounty.us/Government/Row-Offices/County-Council",
+     "as_of": "2026-08-12", "source": "https://www.monvalleyindependent.com/2026/06/24/data-center-concerns-have-residents-asking-allegheny-county-to-step-in-but-its-power-may-be-limited/"},
+
+    {"locality": "LeRay", "state": "NY",
+     "body": "Town Board",
+     "decides": "Zoning and land use. A real-estate broker has been "
+                "marketing hundreds of acres in the town for a data center; "
+                "the board agreed to widen a proposed moratorium to 12 "
+                "months after resident pushback, with a public hearing and "
+                "vote set for Aug 13, 2026 — confirm the outcome before "
+                "citing a status.",
+     "meets": "2nd Thursday of the month (except Nov.), 4:00 p.m.",
+     "where": "Municipal Office Building, 8650 LeRay Street, Evans Mills, NY 13637",
+     "agenda_url": "https://www.townofleray.gov/town-board",
+     "comment_process": "See the town's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.townofleray.gov/",
+     "as_of": "2026-08-12", "source": "https://www.northcountrypublicradio.org/news/story/53719/20260720/near-watertown-locals-push-to-restrict-data-centers-as-talks-of-a-new-facility-loom"},
+
+    {"locality": "Limerick Township", "state": "PA",
+     "body": "Board of Supervisors",
+     "decides": "Conditional-use approvals. Held Data Center Conditional "
+                "Use Hearings with increased security measures amid resident "
+                "opposition; no outcome confirmed yet.",
+     "meets": "1st and 3rd Tuesday, 7:00 p.m.",
+     "where": "Limerick Township Municipal Building, 646 W Ridge Pike, Limerick, PA 19468",
+     "agenda_url": "https://www.limerickpa.org/AgendaCenter/Board-of-Supervisors-2/",
+     "comment_process": "See the board's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "610-495-6432", "email": "",
+     "website": "https://www.limerickpa.org/202/Board-of-Supervisors",
+     "as_of": "2026-08-12", "source": "https://www.limerickpa.org/m/newsflash/home/detail/437"},
+
+    {"locality": "Prairie Township", "state": "OH",
+     "body": "Board of Trustees",
+     "decides": "Zoning (via the Commercial Building and Zoning "
+                "Department) and the Big Darby Accord, a land-use agreement "
+                "protecting the Big Darby Creek watershed. Drafting a zoning "
+                "amendment for data centers; residents have raised concerns "
+                "about a potential facility on Big Darby Accord land.",
+     "meets": "Every other Wednesday, 7:00 p.m.",
+     "where": "Township Hall, 23 Maple Drive, Columbus, OH 43228",
+     "agenda_url": "https://www.prairietownship.org/AgendaCenter",
+     "comment_process": "See the township's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.prairietownship.org/142/Darby-Accord",
+     "as_of": "2026-08-12", "source": "https://www.prairietownship.org/142/Darby-Accord"},
+
+    {"locality": "Shalersville Township", "state": "OH",
+     "body": "Board of Trustees",
+     "decides": "Zoning and land use. A local developer and Bitdeer (global "
+                "AI-computing firm) have a contract to buy ~257 acres at the "
+                "Turnpike Commerce Center for a 15-building AI data-center "
+                "hub; residents are outraged.",
+     "meets": "1st Tuesday 7:00 p.m. and 3rd Tuesday 5:30 p.m.",
+     "where": "Town Hall, 9090 St. Rt. 44, Ravenna, OH 44266",
+     "agenda_url": "https://www.shalersvilletwp.com/meeting-minutes",
+     "comment_process": "See the township's published minutes for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "Shalersvilletownship@yahoo.com",
+     "website": "https://www.shalersvilletwp.com/",
+     "as_of": "2026-08-12", "source": "https://www.news5cleveland.com/news/local-news/local-developer-global-tech-firm-plan-major-data-center-project-in-portage-county"},
+
+    {"locality": "Middleton Township", "state": "OH",
+     "body": "Board of Trustees",
+     "decides": "Zoning. Voted (split, July 2026) to approve rezoning 32 "
+                "more acres — 13 parcels from residential/agricultural to "
+                "M-1 industrial — for a $750M Fortune 200 data center near "
+                "I-75/SR-582. A real, already-decided outcome.",
+     "meets": "1st and 3rd Wednesday, 6:00 p.m.",
+     "where": "Township Building, 21745 N. Dixie Highway, Bowling Green, OH 43402",
+     "agenda_url": "https://www.middletontownship.com/",
+     "comment_process": "See the township's published minutes for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.middletontownship.com/",
+     "as_of": "2026-08-12", "source": "https://bgindependentmedia.org/with-split-vote-middleton-township-approves-zoning-change-for-acreage-bordering-data-center/"},
+
+    {"locality": "Brownhelm Township", "state": "OH",
+     "body": "Board of Trustees",
+     "decides": "Zoning and land use. No project has been proposed, but "
+                "trustees have begun discussing a data-center regulation "
+                "modeled on Montour County, PA's ordinance and say data "
+                "centers are 'neither wanted nor welcome' in the township.",
+     "meets": "2nd Monday of the month, 6:00 p.m.",
+     "where": "Township Hall, 1940 N. Ridge Rd., Vermilion, OH 44089",
+     "agenda_url": "https://www.brownhelm.us/minutes",
+     "comment_process": "See the township's published minutes for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "440-984-2243", "email": "office@brownhelm.us",
+     "website": "https://www.brownhelm.us/",
+     "as_of": "2026-08-12", "source": "https://www.news5cleveland.com/news/local-news/oh-lorain/fighting-a-ghost-lorain-county-community-hopes-to-get-ahead-of-possible-data-center-development"},
+
+    {"locality": "South Strabane Township", "state": "PA",
+     "body": "Board of Supervisors",
+     "decides": "Zoning and ordinances. Unanimously adopted two data-center "
+                "ordinances (Jun 2026) after 6+ months of public meetings: a "
+                "development ordinance (1,500-ft residential setback, "
+                "30-acre minimum lot size, height limits) and a separate "
+                "noise/dust ordinance — real, already-decided regulatory "
+                "outcomes, not a pause or ban.",
+     "meets": "4th Tuesday, 6:30 p.m.",
+     "where": "South Strabane Township, Washington County, PA",
+     "agenda_url": "https://www.southstrabane.com/board-supervisors",
+     "comment_process": "See the board's published minutes for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.southstrabane.com/board-supervisors",
+     "as_of": "2026-08-12", "source": "https://www.observer-reporter.com/news/local-news/2026/jun/11/south-strabane-adopts-data-center-noise-ordinances/"},
+
+    {"locality": "Asbury Park", "state": "NJ",
+     "body": "City Council",
+     "decides": "Zoning and city budget. Adopted Resolution 2026-264 urging "
+                "Gov. Sherrill and the NJ Legislature to enact a statewide "
+                "data-center moratorium — a policy statement, not a local "
+                "zoning ban.",
+     "meets": "See the city's published agenda for the current schedule.",
+     "where": "City Hall, 1 Municipal Plaza, Asbury Park, NJ 07712",
+     "agenda_url": "https://www.cityofasburypark.com/129/City-Council-Meetings",
+     "comment_process": "See the council's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.cityofasburypark.com/158/Mayor-City-Council",
+     "as_of": "2026-08-12", "source": "https://www.cityofasburypark.com/158/Mayor-City-Council"},
+
+    {"locality": "Martindale-Brightwood", "state": "IN",
+     "body": "Metropolitan Development Commission (Indianapolis)",
+     "decides": "Rezoning within Indianapolis/Marion County. Approved "
+                "rezoning (Apr 2026) for a $500M Metrobloks data center on "
+                "14 acres near Brightwood Plaza despite months of pushback; "
+                "five residents and the Hoosier Environmental Council sued "
+                "in Marion County Superior Court (May 2026) seeking an "
+                "injunction, citing noise, air quality, water use, "
+                "brownfield contamination and environmental-justice concerns "
+                "in a historically Black neighborhood shaped by decades of "
+                "industrial and rail activity.",
+     "meets": "See the Indianapolis MDC's published meeting schedule.",
+     "where": "Indianapolis, IN",
+     "agenda_url": "https://www.indy.gov/agency/metropolitan-development-commission",
+     "comment_process": "See the MDC's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.indy.gov/agency/metropolitan-development-commission",
+     "as_of": "2026-08-12", "source": "https://www.wfyi.org/wfyi-news/2026-05-12/martindale-brightwood-data-center-court-challenge"},
+
+    {"locality": "Bristol", "state": "IN",
+     "body": "Town Council",
+     "decides": "Zoning (jointly with the Elkhart County Plan Commission). "
+                "The 'Bristol Innovation Project' rezoning — nearly 1,000 "
+                "acres of farmland for a planned unit development that "
+                "could include a data center — was withdrawn by the "
+                "petitioner Aug 3, 2026, after the county Plan Commission "
+                "sent it to county council with an unfavorable recommendation "
+                "following a 5-hour, 500+-person hearing. A real, "
+                "already-decided outcome: the rezoning did not happen.",
+     "meets": "See the town's published meeting packets.",
+     "where": "Bristol, IN",
+     "agenda_url": "https://bristol.in.gov/",
+     "comment_process": "See the town's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://bristol.in.gov/",
+     "as_of": "2026-08-12", "source": "https://www.insideindianabusiness.com/articles/bristol-council-accepts-withdrawal-of-rezoning-application-after-july-uproar"},
+
+    {"locality": "Wolfe County", "state": "KY",
+     "body": "Fiscal Court",
+     "decides": "County-level land use. A resident has complained about "
+                "ongoing industrial hum from a data center; no vote "
+                "confirmed yet.",
+     "meets": "2nd Tuesday of the month, 1:30 p.m.",
+     "where": "Wolfe County Courthouse, Campton, KY",
+     "agenda_url": "https://www.wolfecountyky.com/home/resources/",
+     "comment_process": "See the court's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "606-668-3040", "email": "",
+     "website": "https://www.wolfecountyky.com/home/resources/",
+     "as_of": "2026-08-12", "source": "https://www.lex18.com/"},
+
+    {"locality": "Saline Township", "state": "MI",
+     "body": "Township Board",
+     "decides": "Zoning and land use. Oracle/OpenAI's $43B 'The Barn' data "
+                "center is under construction after a consent judgment "
+                "resolved a developer lawsuit. Board voted 5-0 to approve a "
+                "12-year, 50% tax abatement; an earlier cap was dropped "
+                "after township counsel warned it violated the consent "
+                "judgment. EGLE wastewater discharge permit for the Saline "
+                "River is under public review through Aug 24, 2026.",
+     "meets": "2nd Wednesday of the month, 7:00 p.m.",
+     "where": "Saline Township Hall, 5731 Braun Rd, Saline, MI 48176",
+     "agenda_url": "https://salinetownship.org/meeting-agendas.php",
+     "comment_process": "Contact the Clerk to be added to the agenda. "
+                        "Planning Commission meets 1st Tuesday at 7:00 p.m.",
+     "phone": "734-429-9968", "email": "salinetownship@gmail.com",
+     "website": "https://salinetownship.org/",
+     "as_of": "2026-08-12",
+     "source": "https://salinetownship.org/board.html"},
+
+    {"locality": "Lubbock", "state": "TX",
+     "body": "City Council",
+     "decides": "Zoning and annexation. Council approved (Jul 29, 2026) "
+                "annexation of an 8-acre tract and rezoning of 52 acres "
+                "from residential to industrial, tied to LEDA data-center "
+                "recruitment; separately approved 'Project Infrared' "
+                "(50,000 sq ft inference data center). Nearly 2,500 "
+                "residents signed a petition for an 18-month moratorium; "
+                "mayor has indicated the council opposes a moratorium.",
+     "meets": "2nd and 4th Tuesday of the month, 2:00 p.m.",
+     "where": "City Council Chambers, Citizens Tower, 1314 Avenue K, "
+              "Lubbock, TX 79401",
+     "agenda_url": "https://www.mylubbock.us/AgendaCenter/City-Council-52/",
+     "comment_process": "In-person: sign up outside chambers by 2:00 p.m. "
+                        "Remote: submit to City Secretary by 11:00 a.m. "
+                        "on the meeting date.",
+     "phone": "806-775-2061", "email": "",
+     "website": "https://www.mylubbock.us/170/City-Council-Mayor",
+     "as_of": "2026-08-12",
+     "source": "https://www.mylubbock.us/170/City-Council-Mayor"},
+
+    {"locality": "Statesboro", "state": "GA",
+     "body": "City Council",
+     "decides": "Zoning and annexation (with Planning Commission). "
+                "Planning Commission recommended rezoning for a Burkhalter "
+                "Road data center; council has final say.",
+     "meets": "1st Tuesday at 9:00 a.m., 3rd Tuesday at 5:30 p.m.",
+     "where": "Statesboro City Hall, Statesboro, GA 30458",
+     "agenda_url": "https://www.statesboroga.gov/",
+     "comment_process": "See the city's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.statesboroga.gov/",
+     "as_of": "2026-08-12",
+     "source": "https://www.statesboroga.gov/"},
+
+    {"locality": "Newberry County", "state": "SC",
+     "body": "County Council",
+     "decides": "Land use and zoning (7 members, Council-Administrator). "
+                "Unanimously denied 'Project Altair' land-sale ordinance "
+                "(Jun 2026) and confirmed a 12-month moratorium on new "
+                "data-center permits (Jul 16, 2026). Staff directed to "
+                "research where data centers would be appropriate.",
+     "meets": "1st and 3rd Wednesday of the month, 6:00 p.m.",
+     "where": "Newberry County Courthouse Annex, 1309 College Street, "
+              "Newberry, SC 29108",
+     "agenda_url": "https://www.newberrycounty.gov/agendas-minutes",
+     "comment_process": "Sign up before the meeting begins. Contact the "
+                        "county office (803-321-2100) for details.",
+     "phone": "803-321-2100", "email": "",
+     "website": "https://www.newberrycounty.gov/county-council",
+     "as_of": "2026-08-12",
+     "source": "https://www.newberrycounty.gov/county-council"},
+
+    {"locality": "Hogansville", "state": "GA",
+     "body": "City Council",
+     "decides": "Zoning and ordinances (Mayor + 5 council members). QTS "
+                "(Eagle South LLC) has proposed a 600 MW data center on "
+                "~435 acres. Council approved a 90-day moratorium (late "
+                "2025), extended 30 days in Jul 2026; developing a new "
+                "data-center ordinance with consultant Canvas Planning and "
+                "a citizen input committee.",
+     "meets": "1st and 3rd Monday of the month, 7:00 p.m.",
+     "where": "Council Chambers, 111 High Street, Hogansville, GA 30230",
+     "agenda_url": "https://www.cityofhogansville.org/AgendasAndMinutes.aspx",
+     "comment_process": "Meeting participation requests must be submitted "
+                        "no later than noon on the Wednesday before the "
+                        "meeting.",
+     "phone": "706-637-8629",
+     "email": "cityhall@cityofhogansville.org",
+     "website": "https://www.cityofhogansville.org/MayorAndCouncil.aspx",
+     "as_of": "2026-08-12",
+     "source": "https://www.cityofhogansville.org/MayorAndCouncil.aspx"},
+
+    {"locality": "Ottawa", "state": "KS",
+     "body": "City Commission",
+     "decides": "Land use and contracts (5 commissioners, commission-manager "
+                "form). Approved a $5.3M sale of Proximity Park (300 acres) "
+                "to Lightfield Energy LLC for data centers + 440 MW gas "
+                "plant (Dec 2024). Community group 'Ottawa United' launched "
+                "a ballot petition to ban data centers over 25 MW; aiming "
+                "for 600 signatures.",
+     "meets": "Wednesdays: 1st at 7:00 p.m., 2nd at 4:00 p.m., "
+              "3rd at 10:00 a.m., 4th at 4:00 p.m. (study session).",
+     "where": "City Hall, 101 S. Hickory, Ottawa, KS 66067",
+     "agenda_url": "https://www.ottawaks.gov/AgendaCenter",
+     "comment_process": "Persons may address the Commission on agenda "
+                        "items as each is called. Non-agenda items when "
+                        "called upon by the Mayor. 3-minute limit.",
+     "phone": "785-229-3600", "email": "",
+     "website": "https://www.ottawaks.gov/",
+     "as_of": "2026-08-12",
+     "source": "https://www.ottawaks.gov/"},
+
+    {"locality": "St. Charles Parish", "state": "LA",
+     "body": "Parish Council",
+     "decides": "Zoning and ordinances (9 members, Home Rule Charter). "
+                "Rejected a proposed 8-month moratorium (Apr 2026, 5-3) "
+                "but unanimously adopted the parish's first data-center "
+                "zoning regulations (Jun 2026): M-1/M-2 zones only, "
+                "300-ft buffer from residences, 55 dB noise limit, "
+                "backup generator testing weekdays 7a-6p only.",
+     "meets": "1st and 3rd Monday of the month, 6:00 p.m.",
+     "where": "Council Chambers, 2nd Floor, St. Charles Parish Courthouse, "
+              "15045 River Road, Hahnville, LA 70057",
+     "agenda_url": "https://www.stcharlesparish.gov/government/council-meeting",
+     "comment_process": "Submit a written request to address the Council. "
+                        "5-minute limit per speaker; additional 3 minutes "
+                        "with two-thirds consent.",
+     "phone": "985-783-5125", "email": "",
+     "website": "https://www.stcharlesparish.gov/government/parish-council",
+     "as_of": "2026-08-12",
+     "source": "https://www.stcharlesparish.gov/government/parish-council"},
+
+    {"locality": "Colleton County", "state": "SC",
+     "body": "County Council",
+     "decides": "Zoning and land use (5 members, Council-Administrator). "
+                "Unanimously adopted a 6-month moratorium on data-center "
+                "approvals (Jul 7, 2026) via Ordinance 26-O-04. Planning "
+                "Commission has approved a 'digital infrastructure overlay "
+                "district' text amendment; council has final say.",
+     "meets": "1st Monday of the month, 6:00 p.m.",
+     "where": "Council Chambers, Old Jail Building, 109 Benson Street, "
+              "2nd Floor, Walterboro, SC 29488",
+     "agenda_url": "https://www.colletoncounty.org/county-council/agendas-minutes",
+     "comment_process": "Online comments at colletoncounty.org/public-comments. "
+                        "In-person comment available at meetings.",
+     "phone": "843-549-1725",
+     "email": "administration@colletoncounty.org",
+     "website": "https://www.colletoncounty.org/county-council",
+     "as_of": "2026-08-12",
+     "source": "https://www.colletoncounty.org/county-council"},
+
+    {"locality": "Salix", "state": "IA",
+     "body": "City Council",
+     "decides": "Zoning and land use (Mayor + 5 council members). "
+                "MidAmerican Energy proposed a data center on ~900 acres "
+                "of farmland annexed in Apr 2026. Council voted 3-2 "
+                "(Jul 8, 2026) to advance a 1-year moratorium concept; "
+                "formal moratorium vote scheduled Aug 12, 2026.",
+     "meets": "2nd Wednesday of the month, 7:00 p.m.",
+     "where": "Council Chambers behind City Hall, 317 Tipton Street, "
+              "Salix, IA 51052",
+     "agenda_url": "https://salixiowa.com/",
+     "comment_process": "Public hearings held for zoning/annexation "
+                        "matters. Contact the Clerk for details.",
+     "phone": "712-946-5645",
+     "email": "salixiowa@gmail.com",
+     "website": "https://salixiowa.com/council",
+     "as_of": "2026-08-12",
+     "source": "https://salixiowa.com/council"},
+
+    {"locality": "Dodge County", "state": "WI",
+     "body": "Board of Supervisors",
+     "decides": "Zoning in unincorporated areas (29 supervisors). Board "
+                "voted 29-2 (Aug 2026) to approve an 18-month moratorium "
+                "on data-center development in county-zoned unincorporated "
+                "areas, after concerns about a Beaver Dam-area data "
+                "center's impact on neighbors' water.",
+     "meets": "3rd Tuesday of most months, 6:00 p.m. (Apr and Nov: 9:00 a.m.)",
+     "where": "County Board Room, 4th floor, Dodge County Administration "
+              "Building, 127 E. Oak Street, Juneau, WI 53039",
+     "agenda_url": "https://www.co.dodge.wi.gov/government/county-board/meetings",
+     "comment_process": "Public hearings held per Wisconsin open-meetings "
+                        "rules. Contact the County Clerk for details.",
+     "phone": "", "email": "",
+     "website": "https://www.co.dodge.wi.gov/government/county-board",
+     "as_of": "2026-08-12",
+     "source": "https://www.co.dodge.wi.gov/government/county-board"},
+
+    {"locality": "Harris County", "state": "GA",
+     "body": "Board of Commissioners",
+     "decides": "Land use and zoning (5 districts). Resident petition "
+                "with ~150 signatures requested a 1-year moratorium on "
+                "hyperscale data center approvals (Aug 5, 2026); "
+                "commissioners took no action. County is updating its "
+                "comprehensive land use plan.",
+     "meets": "1st and 3rd Tuesday of the month, 6:30 p.m.",
+     "where": "Courthouse, 102 N. College St., Hamilton, GA 31811",
+     "agenda_url": "https://www.harriscountyga.gov/minutes_agendas_fy22-23/",
+     "comment_process": "Residents may speak at commission meetings. "
+                        "See the board's published agenda for details.",
+     "phone": "706-628-4958", "email": "",
+     "website": "https://www.harriscountyga.gov/board-of-commissioners/",
+     "as_of": "2026-08-12",
+     "source": "https://www.harriscountyga.gov/board-of-commissioners/"},
+
+    {"locality": "Gilroy", "state": "CA",
+     "body": "City Council",
+     "decides": "Zoning and land use (7 members, charter city). Amazon "
+                "is building a ~49 MW data center on 56 acres under a "
+                "1981 industrial zoning — approved at staff level with "
+                "no council vote or Planning Commission review. The "
+                "45-day CEQA comment window (Aug-Sep 2024) closed before "
+                "most residents learned of the project.",
+     "meets": "1st and 3rd Monday of the month, 6:00 p.m.",
+     "where": "City Council Chambers, 7351 Rosanna Street, Gilroy, CA 95020",
+     "agenda_url": "https://cityofgilroy.org/965/Agendas-Minutes",
+     "comment_process": "In-person: up to 3 min (scaled to 2 or 1 min "
+                        "for 11+ or 20+ speakers). Zoom participation "
+                        "available. Written comments to "
+                        "publiccomments@cityofgilroy.org by 1:00 p.m. "
+                        "on the meeting date.",
+     "phone": "408-846-0204",
+     "email": "publiccomments@cityofgilroy.org",
+     "website": "https://www.cityofgilroy.org/341/City-Council",
+     "as_of": "2026-08-12",
+     "source": "https://www.cityofgilroy.org/341/City-Council"},
 ]
 LOCAL_BODIES_DF = pd.DataFrame(LOCAL_BODIES)
 
