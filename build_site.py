@@ -23,6 +23,7 @@ the repo, set Root Directory to `web`, framework "Other", no build step.
 
 import html
 import json
+import math
 import os
 import pathlib
 import re
@@ -6465,6 +6466,29 @@ def build_projects():
         f"<tr><td><code>{esc(c)}</code></td><td>{esc(d)}</td></tr>"
         for c, d in PROJECT_SCHEMA)
 
+    geo_projects = _projects_geo()
+    map_html = ""
+    if geo_projects:
+        map_js = _PROJECTS_MAP_JS.replace("__PROJECTS__", json.dumps(geo_projects))
+        map_html = f"""
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<section>
+  <h2>Map</h2>
+  <p class="muted" style="margin-bottom:12px">{len(geo_projects)} of {total}
+  projects have a mapped locality. Scroll or use the +/&minus; buttons to zoom,
+  click a marker for details. The <a href="map">full map</a> layers in existing
+  campuses and moratoriums too.</p>
+  <div id="proj-map" style="height:56vh;min-height:380px;border-radius:14px;
+    overflow:hidden;border:1px solid var(--rule);margin:0 0 6px"></div>
+  <p class="muted" style="font-size:13px">
+  <span style="color:#ef4444">&#9679;</span> hearing soon &nbsp;
+  <span style="color:#fbbf24">&#9679;</span> proposed / in review &nbsp;
+  <span style="color:#34d399">&#9679;</span> approved &nbsp;
+  <span style="color:#94a3b8">&#9679;</span> denied / withdrawn</p>
+</section>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>{map_js}</script>"""
+
     body = f"""
 <header>
   <div class="kicker">Project intelligence</div>
@@ -6480,6 +6504,7 @@ def build_projects():
   <div class="stat"><b>{n_states}</b><span>states</span></div>
   <div class="stat"><b>{verified}/{total}</b><span>source-verified</span></div>
 </div>
+{map_html}
 {hearings_html}
 <section>
   <h2>All tracked projects</h2>
@@ -6615,6 +6640,69 @@ def _project_records():
     return out
 
 
+def _geo_s(v):
+    """Stringify a possibly-NaN/None cell for map JSON payloads."""
+    if v is None:
+        return ""
+    if isinstance(v, float) and math.isnan(v):
+        return ""
+    t = str(v).strip()
+    return "" if t.lower() == "nan" else t
+
+
+def _geo_num(v):
+    """Round a lat/lon-ish cell to 5dp, or None if it isn't numeric."""
+    try:
+        f = float(v)
+        return round(f, 5) if f == f else None
+    except (TypeError, ValueError):
+        return None
+
+
+def _projects_geo():
+    """PROJECTS_DF rows with a usable lat/lon, as compact map-marker dicts."""
+    out = []
+    for r in PROJECTS_DF.itertuples():
+        lat, lon = _geo_num(r.lat), _geo_num(r.lon)
+        if lat is None or lon is None:
+            continue
+        mw = _geo_num(r.size_mw)
+        out.append({"lat": lat, "lon": lon, "id": _geo_s(r.id),
+                    "name": _geo_s(r.name), "operator": _geo_s(r.operator),
+                    "stage": _geo_s(r.stage), "locality": _geo_s(r.locality),
+                    "state": _geo_s(r.state),
+                    "mw": (int(mw) if mw is not None else None),
+                    "hearing_soon": bool(getattr(r, "hearing_soon", False))})
+    return out
+
+
+_PROJECTS_MAP_JS = """
+const PROJECTS = __PROJECTS__;
+const map = L.map('proj-map', {scrollWheelZoom:true}).setView([39.5, -98.35], 4);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  subdomains:'abcd', maxZoom:19}).addTo(map);
+function esc(s){ return (s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+function projColor(p){
+  if (p.hearing_soon) return '#ef4444';
+  const st=(p.stage||'').toLowerCase();
+  if (st.indexOf('approv')>-1) return '#34d399';
+  if (st.indexOf('den')>-1||st.indexOf('withdraw')>-1) return '#94a3b8';
+  return '#fbbf24';
+}
+const bounds = [];
+PROJECTS.forEach(function(p) {
+  L.circleMarker([p.lat, p.lon], {radius:8, color:projColor(p), weight:1,
+    fillColor:projColor(p), fillOpacity:0.85}).addTo(map)
+    .bindPopup('<b>'+esc(p.name)+'</b><br>'+esc(p.locality)+', '+esc(p.state)+
+      (p.mw ? ' &middot; '+p.mw+' MW' : '')+'<br><b>'+esc(p.stage)+'</b><br>'+
+      '<a href="#p-'+esc(p.id)+'">Jump to dossier &darr;</a>');
+  bounds.push([p.lat, p.lon]);
+});
+if (bounds.length) map.fitBounds(bounds, {padding:[30,30], maxZoom:6});
+"""
+
+
 _MAP_JS = """
 const SITES = __SITES__, PROJECTS = __PROJECTS__, MORAT = __MORAT__;
 const map = L.map('gw-map', {scrollWheelZoom:true}).setView([39.5, -98.35], 4);
@@ -6656,57 +6744,28 @@ def build_map():
     billing (the reason it isn't Google Maps). Plots the lat/lon the three
     registries already carry; project markers are colored by derived stage and
     deep-link to the project dossier."""
-    import json as _json
-    import math as _math
-
-    def _s(v):
-        if v is None:
-            return ""
-        if isinstance(v, float) and _math.isnan(v):
-            return ""
-        t = str(v).strip()
-        return "" if t.lower() == "nan" else t
-
-    def _num(v):
-        try:
-            f = float(v)
-            return round(f, 5) if f == f else None
-        except (TypeError, ValueError):
-            return None
-
     sites = []
     for r in DC_SITES_DF.itertuples():
-        lat, lon = _num(r.lat), _num(r.lon)
+        lat, lon = _geo_num(r.lat), _geo_num(r.lon)
         if lat is None or lon is None:
             continue
-        sites.append({"lat": lat, "lon": lon, "operator": _s(r.operator),
-                      "tenant": _s(r.tenant), "location": _s(r.location),
-                      "state": _s(r.state)})
+        sites.append({"lat": lat, "lon": lon, "operator": _geo_s(r.operator),
+                      "tenant": _geo_s(r.tenant), "location": _geo_s(r.location),
+                      "state": _geo_s(r.state)})
 
-    projects = []
-    for r in PROJECTS_DF.itertuples():
-        lat, lon = _num(r.lat), _num(r.lon)
-        if lat is None or lon is None:
-            continue
-        mw = _num(r.size_mw)
-        projects.append({"lat": lat, "lon": lon, "id": _s(r.id),
-                         "name": _s(r.name), "operator": _s(r.operator),
-                         "stage": _s(r.stage), "locality": _s(r.locality),
-                         "state": _s(r.state),
-                         "mw": (int(mw) if mw is not None else None),
-                         "hearing_soon": bool(getattr(r, "hearing_soon", False))})
+    projects = _projects_geo()
 
     moratoriums = []
     for r in MORATORIUMS_DF.itertuples():
-        lat, lon = _num(r.lat), _num(r.lon)
+        lat, lon = _geo_num(r.lat), _geo_num(r.lon)
         if lat is None or lon is None:
             continue
-        moratoriums.append({"lat": lat, "lon": lon, "locality": _s(r.locality),
-                            "state": _s(r.state), "status": _s(r.effective_status)})
+        moratoriums.append({"lat": lat, "lon": lon, "locality": _geo_s(r.locality),
+                            "state": _geo_s(r.state), "status": _geo_s(r.effective_status)})
 
-    js = (_MAP_JS.replace("__SITES__", _json.dumps(sites))
-                 .replace("__PROJECTS__", _json.dumps(projects))
-                 .replace("__MORAT__", _json.dumps(moratoriums)))
+    js = (_MAP_JS.replace("__SITES__", json.dumps(sites))
+                 .replace("__PROJECTS__", json.dumps(projects))
+                 .replace("__MORAT__", json.dumps(moratoriums)))
 
     body = f"""
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
