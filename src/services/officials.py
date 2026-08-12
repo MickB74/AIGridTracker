@@ -1,9 +1,9 @@
 import pathlib
 import json
+import functools
 import pandas as pd
-import streamlit as st
 
-@st.cache_data(show_spinner=False)
+@functools.lru_cache(maxsize=1)
 def load_officials():
     """US senators + governors directory from officials.json (built from the
     official Senate contact XML and the current-governors list). Returns
