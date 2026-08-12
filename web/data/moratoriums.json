@@ -5,8 +5,8 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 109,
-  "verified_count": 78,
+  "count": 112,
+  "verified_count": 81,
   "caveat": "Illustrative rather than exhaustive \u2014 dozens of localities churn weekly, and this tracks the ones we have read a source for.\n\n**Each row carries its own provenance.** Rows showing a verification date link to the ordinance, the enacting body's own page, or a datable report of the vote, and were read on that date. Rows marked *unverified* came from bulk compilation and have not been checked against a primary source \u2014 the locality, the year, and the status may all be off. Verify one of those with the town clerk before citing it as precedent.\n\n**Expiry is derived, not asserted.** A row with a documented end date flips to *Expired* on its own once that date passes. A time-limited moratorium whose start date was never documented keeps showing as enacted \u2014 that is a known gap, not a claim that it is still in force. Moratoriums are also routinely extended, so an expiry date is the earliest it could have ended, not proof that it did.",
   "schema": {
     "locality": "Town, city or county taking the action; 'X (statewide)' for state-level",
@@ -1878,6 +1878,57 @@
       "verified": true,
       "lat": 37.13,
       "lon": -85.96
+    },
+    {
+      "locality": "Sanford",
+      "state": "ME",
+      "level": "Local",
+      "status": "Enacted",
+      "effective_status": "Enacted",
+      "expired": false,
+      "days_left": 172.0,
+      "when": "Extended Aug 5, 2026",
+      "expires": "2027-01-31",
+      "note": "91-day emergency moratorium enacted May 19, 2026, halting a proposed Mousam River data center project; extended unanimously for 180 more days on Aug 5, 2026.",
+      "source": "https://www.pressherald.com/2026/08/05/sanford-extends-data-center-moratorium-for-180-days/",
+      "as_of": "2026-08-12",
+      "verified": true,
+      "lat": 43.44,
+      "lon": -70.77
+    },
+    {
+      "locality": "Socorro County",
+      "state": "NM",
+      "level": "Local",
+      "status": "Enacted",
+      "effective_status": "Enacted",
+      "expired": false,
+      "days_left": 301.0,
+      "when": "Jun 9, 2026",
+      "expires": "2027-06-09",
+      "note": "1-year moratorium on data centers and related infrastructure on unincorporated county land, adopted unanimously after 2+ months of opposition to the proposed Green Data Center; also began forming an advisory committee to recommend regulations.",
+      "source": "https://www.kob.com/news/top-news/new-mexico-county-approves-1-year-data-center-moratorium/",
+      "as_of": "2026-08-12",
+      "verified": true,
+      "lat": 34.06,
+      "lon": -106.89
+    },
+    {
+      "locality": "Nye County",
+      "state": "NV",
+      "level": "Local",
+      "status": "Enacted",
+      "effective_status": "Enacted",
+      "expired": false,
+      "days_left": null,
+      "when": "Jun 2, 2026",
+      "expires": null,
+      "note": "Countywide moratorium on new commercial data-center applications, approved unanimously after the Nye County Water District's governing board raised Pahrump Valley water-supply concerns; stays in place until a regulatory ordinance is adopted rather than a fixed date.",
+      "source": "https://pvtimes.com/news/nye-county-approves-data-center-moratorium-186722/",
+      "as_of": "2026-08-12",
+      "verified": true,
+      "lat": 36.21,
+      "lon": -115.98
     }
   ]
 }

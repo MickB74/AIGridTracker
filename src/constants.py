@@ -1389,6 +1389,30 @@ MORATORIUMS = [
              "for the suit's dismissal.",
      "lat": 37.13, "lon": -85.96, "expires": "2027-05-20", "as_of": "2026-08-12",
      "source": "https://www.wbko.com/2026/05/21/cave-city-council-enacts-12-month-moratorium-data-centers/"},
+    {"locality": "Sanford", "state": "ME", "level": "Local",
+     "status": "Enacted", "when": "Extended Aug 5, 2026",
+     "note": "91-day emergency moratorium enacted May 19, 2026, halting a "
+             "proposed Mousam River data center project; extended "
+             "unanimously for 180 more days on Aug 5, 2026.",
+     "lat": 43.44, "lon": -70.77, "expires": "2027-01-31", "as_of": "2026-08-12",
+     "source": "https://www.pressherald.com/2026/08/05/sanford-extends-data-center-moratorium-for-180-days/"},
+    {"locality": "Socorro County", "state": "NM", "level": "Local",
+     "status": "Enacted", "when": "Jun 9, 2026",
+     "note": "1-year moratorium on data centers and related infrastructure "
+             "on unincorporated county land, adopted unanimously after 2+ "
+             "months of opposition to the proposed Green Data Center; also "
+             "began forming an advisory committee to recommend regulations.",
+     "lat": 34.06, "lon": -106.89, "expires": "2027-06-09", "as_of": "2026-08-12",
+     "source": "https://www.kob.com/news/top-news/new-mexico-county-approves-1-year-data-center-moratorium/"},
+    {"locality": "Nye County", "state": "NV", "level": "Local",
+     "status": "Enacted", "when": "Jun 2, 2026",
+     "note": "Countywide moratorium on new commercial data-center "
+             "applications, approved unanimously after the Nye County Water "
+             "District's governing board raised Pahrump Valley water-supply "
+             "concerns; stays in place until a regulatory ordinance is "
+             "adopted rather than a fixed date.",
+     "lat": 36.21, "lon": -115.98, "expires": None, "as_of": "2026-08-12",
+     "source": "https://pvtimes.com/news/nye-county-approves-data-center-moratorium-186722/"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.
@@ -4833,6 +4857,109 @@ LOCAL_BODIES = [
      "phone": "", "email": "",
      "website": "https://www.clarkcountynv.gov/government/board_of_county_commissioners/index.php",
      "as_of": "2026-08-12", "source": "https://nevadacurrent.com/2026/07/08/clark-county-commission-hears-push-for-data-center-moratorium-but-takes-no-action/"},
+
+    {"locality": "St. Joseph", "state": "MO",
+     "body": "City Council",
+     "decides": "Zoning and land use. A proposed data center on Pickett "
+                "Road drew a town-hall-style informational meeting Jul 16, "
+                "2026 at the Missouri Theater; no moratorium confirmed.",
+     "meets": "Every other Monday, 5:30 p.m.",
+     "where": "Council Chamber, City Hall, 1100 Frederick Avenue, St. Joseph, MO 64501",
+     "agenda_url": "https://www.stjosephmo.gov/AgendaCenter",
+     "comment_process": "See the city's published agendas for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "816-271-4730", "email": "",
+     "website": "https://www.stjosephmo.gov/169/Agendas-Minutes",
+     "as_of": "2026-08-12", "source": "https://www.stjosephmo.gov/169/Agendas-Minutes"},
+
+    {"locality": "Alliance", "state": "OH",
+     "body": "City Council",
+     "decides": "Zoning and land use. Residents have organized opposition "
+                "to a proposed data center ('We don't need them here') and "
+                "the council has taken some action in response; confirm the "
+                "specifics before citing a status.",
+     "meets": "1st and 3rd Monday, 6:00 p.m.",
+     "where": "Alliance Municipal Court Chambers, 470 E. Market St., Alliance, OH 44601",
+     "agenda_url": "https://www.cityofalliance.com/agendacenter",
+     "comment_process": "See the city's published agendas for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.cityofalliance.com/220/City-Council",
+     "as_of": "2026-08-12", "source": "https://www.cityofalliance.com/220/City-Council"},
+
+    {"locality": "Montour County", "state": "PA",
+     "body": "Board of Commissioners",
+     "decides": "Zoning and land use. Denied a data-center rezoning "
+                "request; a real outcome, though short of a moratorium.",
+     "meets": "See the county's published meeting agendas.",
+     "where": "Montour County Administration Center, Conference Room B, 435 East Front Street, Danville, PA 17821",
+     "agenda_url": "https://www.montourcounty.gov/home/minutes-and-agendas",
+     "comment_process": "See the county's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "570-271-3000", "email": "",
+     "website": "https://www.montourcounty.gov/departments/commissioners",
+     "as_of": "2026-08-12", "source": "https://www.montourcounty.gov/home/minutes-and-agendas"},
+
+    {"locality": "Fairfax County", "state": "VA",
+     "body": "Board of Supervisors",
+     "decides": "Zoning and land use in one of the country's largest data "
+                "center markets. Residents have publicly questioned Dominion "
+                "Energy over a specific data-center proposal's power needs.",
+     "meets": "2 Tuesdays per month.",
+     "where": "Board Auditorium, Fairfax County Government Center, 12000 Government Center Parkway, Fairfax, VA 22035",
+     "agenda_url": "https://www.fairfaxcounty.gov/boardofsupervisors/board-supervisors-meetings",
+     "comment_process": "See the board's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.fairfaxcounty.gov/boardofsupervisors/",
+     "as_of": "2026-08-12", "source": "https://www.fairfaxcounty.gov/boardofsupervisors/board-supervisors-meetings"},
+
+    {"locality": "Loudoun County", "state": "VA",
+     "body": "Board of Supervisors",
+     "decides": "Zoning and land use in 'Data Center Alley', the largest "
+                "concentration of data centers in the world. Adopted a Data "
+                "Center Standards & Locations Comprehensive Plan Amendment "
+                "and Zoning Ordinance Amendment requiring Special Exception "
+                "approval for new data-center uses; residents separately "
+                "report a rising flood of noise and fumes complaints.",
+     "meets": "See the board's published meeting calendar.",
+     "where": "Board Room, Loudoun County Government Center, 1 Harrison Street SE, Leesburg, VA 20175",
+     "agenda_url": "https://www.loudoun.gov/3426/Board-of-Supervisors-Meetings-Packets",
+     "comment_process": "See the board's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.loudoun.gov/86/Board-of-Supervisors",
+     "as_of": "2026-08-12", "source": "https://www.loudoun.gov/6221/Phase-1-Project-Plan-for-Data-Center-Sta"},
+
+    {"locality": "Lee County", "state": "NC",
+     "body": "Board of Commissioners",
+     "decides": "Zoning, land use and county budget, seven-member board. "
+                "Residents have demanded a pause on a data center proposal, "
+                "alleging the approval process involved deception.",
+     "meets": "One work session and one regular business meeting per "
+              "month (except Dec/Jun).",
+     "where": "Lee County, Sanford, NC",
+     "agenda_url": "https://leecountync.gov/government/board_of_commissions/meeting_videos.php",
+     "comment_process": "Public comment accepted at any regular business "
+                        "meeting.",
+     "phone": "", "email": "",
+     "website": "https://leecountync.gov/",
+     "as_of": "2026-08-12", "source": "https://leecountync.gov/news_detail_T12_R264.php"},
+
+    {"locality": "Eagle Creek Township", "state": "IN",
+     "body": "Lake County Council",
+     "decides": "County-level zoning approval for townships including Eagle "
+                "Creek Township. Approved zoning for a data center there "
+                "despite resident opposition — a real, already-decided "
+                "outcome, not an open fight.",
+     "meets": "See the county's published meeting schedule.",
+     "where": "Lake County Government Center, Crown Point, IN",
+     "agenda_url": "https://lakecountyin.gov/",
+     "comment_process": "See the county's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "219-996-4572", "email": "",
+     "website": "https://lakecountyin.gov/departments/eagle-creek-township",
+     "as_of": "2026-08-12", "source": "https://lakecountyin.gov/departments/eagle-creek-township"},
 ]
 LOCAL_BODIES_DF = pd.DataFrame(LOCAL_BODIES)
 
