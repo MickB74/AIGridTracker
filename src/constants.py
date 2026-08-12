@@ -1332,6 +1332,63 @@ MORATORIUMS = [
              "in effect regardless.",
      "lat": 34.75, "lon": -92.29, "expires": None, "as_of": "2026-08-12",
      "source": "https://www.nwaonline.com/news/2026/aug/04/little-rock-data-center-moratorium-falls-short-in/"},
+    {"locality": "Coachella", "state": "CA", "level": "Local",
+     "status": "Enacted", "when": "Jun 4, 2026",
+     "note": "45-day moratorium on new data-center applications, adopted "
+             "unanimously alongside terminating the city's agreement with "
+             "Stronghold Power over a 400+-acre, six-data-center campus; "
+             "extended Jul 9, 2026 as the council moves toward a permanent "
+             "ban. Treat any specific expiry as unconfirmed — the council "
+             "was actively extending it as of this writing.",
+     "lat": 33.68, "lon": -116.17, "expires": None, "as_of": "2026-08-12",
+     "source": "https://www.nbcpalmsprings.com/2026/06/04/coachella-approves-data-center-moratorium-ends-stronghold-power-agreement"},
+    {"locality": "Aurora", "state": "CO", "level": "Local",
+     "status": "Rejected", "when": "Aug 10, 2026",
+     "note": "Emergency resolution for a 6-month moratorium on data-center "
+             "construction failed 6-5, Mayor Mike Coffman casting the "
+             "tiebreaking vote against; council instead passed a resolution "
+             "to develop data-center standards (water/zoning) within 35 days, "
+             "without a pause.",
+     "lat": 39.73, "lon": -104.83, "expires": None, "as_of": "2026-08-12",
+     "source": "https://www.denver7.com/news/local-news/in-your-community/aurora-arapahoe-county/aurora-city-council-rejects-six-month-data-center-ban-as-it-pursues-new-regulations"},
+    {"locality": "DeSoto County", "state": "FL", "level": "Local",
+     "status": "Enacted", "when": "Jul 29, 2026",
+     "note": "1-year moratorium on new data-center rezoning, approved 4-0 "
+             "(one commissioner recused). Does not apply to rezoning "
+             "applications already tied to an 800+-acre data-center project "
+             "proposed earlier in 2026, which can still advance.",
+     "lat": 27.22, "lon": -81.86, "expires": "2027-07-29", "as_of": "2026-08-12",
+     "source": "https://www.wgcu.org/top-story/2026-07-29/desoto-approves-data-center-moratorium-but-controversial-project-can-advance"},
+    {"locality": "Snohomish County", "state": "WA", "level": "Local",
+     "status": "Enacted", "when": "Jun 24, 2026",
+     "note": "6-month emergency zoning moratorium on new data-center "
+             "development in unincorporated Snohomish County, adopted "
+             "unanimously so the council can craft a permanent policy.",
+     "lat": 48.03, "lon": -122.13, "expires": "2026-12-24", "as_of": "2026-08-12",
+     "source": "https://www.heraldnet.com/2026/06/25/snohomish-county-council-approves-emergency-data-center-moratorium/"},
+    {"locality": "Taylor County", "state": "FL", "level": "Local",
+     "status": "Rejected", "when": "Jul 7, 2026",
+     "note": "Motion to impose a data-center moratorium failed at the "
+             "commission's first public discussion on data centers; "
+             "commissioners instead scheduled a public workshop for Aug 25.",
+     "lat": 30.11, "lon": -83.58, "expires": None, "as_of": "2026-08-12",
+     "source": "https://www.wctv.tv/2026/07/07/taylor-county-commission-votes-down-data-center-moratorium-residents-wonder-what-comes-next/"},
+    {"locality": "Clinton", "state": "IA", "level": "Local",
+     "status": "Rejected", "when": "Jun 9, 2026",
+     "note": "Proposed moratorium rejected 5-2 as QTS considers an AI data "
+             "center campus north of US-30/west of Mill Creek Parkway; "
+             "council members argued a pause could send the wrong message "
+             "to developers.",
+     "lat": 41.84, "lon": -90.19, "expires": None, "as_of": "2026-08-12",
+     "source": "https://qctimes.com/news/local/government-politics/article_5827c520-3b42-407e-9610-c8a6421385e5.html"},
+    {"locality": "Cave City", "state": "KY", "level": "Local",
+     "status": "Enacted", "when": "May 20, 2026",
+     "note": "12-month moratorium on new data centers, approved 4-1 on "
+             "second reading to allow time to draft zoning language; the "
+             "city was subsequently sued over the moratorium and has asked "
+             "for the suit's dismissal.",
+     "lat": 37.13, "lon": -85.96, "expires": "2027-05-20", "as_of": "2026-08-12",
+     "source": "https://www.wbko.com/2026/05/21/cave-city-council-enacts-12-month-moratorium-data-centers/"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.
@@ -4575,6 +4632,207 @@ LOCAL_BODIES = [
      "phone": "", "email": "",
      "website": "https://littlerock.gov/government/board-of-directors/",
      "as_of": "2026-08-12", "source": "https://littlerock.gov/government/board-of-directors/board-meeting-calendar/"},
+
+    {"locality": "Topeka", "state": "KS",
+     "body": "City Council",
+     "decides": "Zoning code and conditional-use permits. Discussed defining "
+                "data centers under the zoning code and requiring "
+                "Conditional Use Permits for future proposals at a Jul 7, "
+                "2026 presentation.",
+     "meets": "1st three Tuesdays of the month, 6:00 p.m.",
+     "where": "City Council Chambers, 214 SE 8th Street, 2nd Floor, Topeka, KS 66603",
+     "agenda_url": "https://topeka.granicus.com/ViewPublisher.php?view_id=1",
+     "comment_process": "Contact the city clerk's office (785-368-3940, "
+                        "cclerk@topeka.org) by 5:00 p.m. the day of the "
+                        "meeting to sign up; or comment online at "
+                        "topekaspeaks.org.",
+     "phone": "785-368-3940", "email": "cclerk@topeka.org",
+     "website": "https://www.topeka.org/citycouncil/",
+     "as_of": "2026-08-12", "source": "https://www.topeka.org/citycouncil/sign-up-to-speak-at-a-council-committee-meeting/"},
+
+    {"locality": "Sturtevant", "state": "WI",
+     "body": "Village Board",
+     "decides": "Zoning and land use. Residents filed a class-action suit "
+                "against Microsoft over noise from its data center; the "
+                "company says it hosted a June 23, 2026 open house and "
+                "considers the complaints resolved.",
+     "meets": "1st and 3rd Tuesday, 6:00 p.m.",
+     "where": "Village Hall, Sturtevant, WI",
+     "agenda_url": "https://www.sturtevant-wi.gov/meetings",
+     "comment_process": "See the village's published agendas for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "262-886-7201", "email": "",
+     "website": "https://www.sturtevant-wi.gov/villageboard",
+     "as_of": "2026-08-12", "source": "https://www.sturtevant-wi.gov/villageboard"},
+
+    {"locality": "Davie County", "state": "NC",
+     "body": "Board of Commissioners",
+     "decides": "Zoning, land use and county budget across a five-member "
+                "board. Residents have asked the board to consider a "
+                "data-center moratorium; no vote confirmed yet.",
+     "meets": "See the county's published agendas & minutes page.",
+     "where": "Administrative Office Building, 123 South Main Street, Mocksville, NC 27028",
+     "agenda_url": "https://www.daviecountync.gov/264/Agendas-Minutes",
+     "comment_process": "See the board's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.daviecountync.gov/107/County-Commissioners",
+     "as_of": "2026-08-12", "source": "https://www.daviecountync.gov/1201/Board-Members-and-Meetings"},
+
+    {"locality": "Sangamon County", "state": "IL",
+     "body": "County Board",
+     "decides": "Zoning and land use. Residents near a proposed data center "
+                "have filed a lawsuit as the county works through the "
+                "project's land-use questions.",
+     "meets": "See the county's published events list.",
+     "where": "Sangamon County, Springfield, IL",
+     "agenda_url": "https://sangamonil.gov/eventslist?category=county-board-meetings",
+     "comment_process": "See the county's published agendas for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "217-753-6700", "email": "",
+     "website": "https://sangamonil.gov/",
+     "as_of": "2026-08-12", "source": "https://sangamonil.gov/eventslist?category=county-board-meetings"},
+
+    {"locality": "Guilderland", "state": "NY",
+     "body": "Town Board",
+     "decides": "Zoning and land use. Opened discussion on whether to adopt "
+                "its own data-center moratorium and set a Sep 15, 2026 "
+                "public hearing to continue the conversation; a separate "
+                "statewide executive order from Gov. Hochul already pauses "
+                "server farms needing 50+ MW for one year.",
+     "meets": "See the town's Agenda Center for the current schedule.",
+     "where": "Guilderland Town Hall, NY",
+     "agenda_url": "https://townofguilderland.org/AgendaCenter",
+     "comment_process": "See the town's published agenda for the "
+                        "public-comment process for the Sep 15, 2026 public "
+                        "hearing or other meetings.",
+     "phone": "", "email": "",
+     "website": "https://www.townofguilderland.gov/",
+     "as_of": "2026-08-12", "source": "https://www.news10.com/top-stories/guilderland-residents-ask-town-board-to-place-moratorium-on-data-centers/"},
+
+    {"locality": "Tonganoxie", "state": "KS",
+     "body": "Governing Body (City Council)",
+     "decides": "Zoning and land use. Residents submitted a petition for an "
+                "18-month moratorium on data centers.",
+     "meets": "1st and 3rd Monday of the month.",
+     "where": "Tonganoxie, KS",
+     "agenda_url": "https://www.tonganoxie.org/minutes-and-agendas",
+     "comment_process": "Contact the City Clerk (913-845-2620) by 1:00 p.m. "
+                        "the day of the meeting to sign up; comment limited "
+                        "to 3 minutes per person.",
+     "phone": "913-845-2620", "email": "",
+     "website": "https://www.tonganoxie.org/city-council",
+     "as_of": "2026-08-12", "source": "https://www.tonganoxie.org/city-council"},
+
+    {"locality": "Osawatomie", "state": "KS",
+     "body": "City Council",
+     "decides": "Zoning and land use. Alcove Development presented a "
+                "roughly $1B data-center project proposal at a Jun 25, 2026 "
+                "special meeting; residents have pushed back on the meeting "
+                "format itself.",
+     "meets": "2nd and 4th Thursday, 6:00 p.m. (temporarily relocated to "
+              "City Auditorium, 439 Main Street, during Memorial Hall "
+              "construction).",
+     "where": "City Auditorium, 439 Main Street, Osawatomie, KS 66064",
+     "agenda_url": "https://www.osawatomieks.org/mayor-city-council/pages/council-meetings",
+     "comment_process": "See the city's published agendas for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.osawatomieks.org/mayor-city-council",
+     "as_of": "2026-08-12", "source": "https://www.osawatomieks.org/mayor-city-council"},
+
+    {"locality": "Allen Park", "state": "MI",
+     "body": "City Council",
+     "decides": "Zoning, land use and city budget. Residents have pushed "
+                "for a data-center moratorium amid growing opposition; no "
+                "vote confirmed yet.",
+     "meets": "2nd and 4th Tuesday, 6:00 p.m.",
+     "where": "Allen Park City Hall, 15915 Southfield Rd, Allen Park, MI 48101",
+     "agenda_url": "https://cityofallenpark.org/government/agenda_and_minutes/allen_park_michigan_city_council.php",
+     "comment_process": "See the city's published agendas for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://cityofallenpark.org/",
+     "as_of": "2026-08-12", "source": "https://cityofallenpark.org/government/agenda_and_minutes/allen_park_michigan_city_council.php"},
+
+    {"locality": "Nelson County", "state": "KY",
+     "body": "Fiscal Court",
+     "decides": "County-level land use and budget. County officials have "
+                "publicly opposed hyperscale data centers as residents call "
+                "for a moratorium; no vote confirmed yet.",
+     "meets": "1st Tuesday 9:00 a.m. and 3rd Tuesday 6:00 p.m.",
+     "where": "Fiscal Court Room, 2nd Floor, Old Courthouse Building, One Court Square, Bardstown, KY 40004",
+     "agenda_url": "https://nelsoncountyky.gov/fiscal-court-meetings-agenda/",
+     "comment_process": "See the court's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "nelsoncoky@nelsoncountyky.gov",
+     "website": "https://nelsoncountyky.gov/fiscal-court-meetings-agenda/",
+     "as_of": "2026-08-12", "source": "https://nelsoncountyky.gov/fiscal-court-meetings-agenda/"},
+
+    {"locality": "Garfield Township", "state": "MI",
+     "body": "Township Board (Grand Traverse County)",
+     "decides": "Zoning and land use, in a township that relies on the City "
+                "of Traverse City for water/sewer service. Its Planning "
+                "Commission voted Jul 8, 2026 to recommend a zoning "
+                "amendment letting the board freeze data-center "
+                "applications for up to a year (extendable 6 months); the "
+                "board had not yet acted on the recommendation as of this "
+                "writing.",
+     "meets": "See the township's published meetings page.",
+     "where": "Garfield Township, Grand Traverse County, MI",
+     "agenda_url": "https://www.garfield-twp.com/meetings.asp",
+     "comment_process": "See the township's published agendas for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.garfield-twp.com/",
+     "as_of": "2026-08-12", "source": "https://www.traverseticker.com/news/garfield-township-tees-up-data-center-moratorium-incomplete-application-submitted-for-project/"},
+
+    {"locality": "Harrison County", "state": "KY",
+     "body": "Fiscal Court",
+     "decides": "County-level land use and budget. Judge-Executive Jason "
+                "Marshall held a Jul 28, 2026 public forum on data centers "
+                "(no proposal currently pending) where nearly every attendee "
+                "raised a hand in opposition; the court had a data-center "
+                "moratorium vote scheduled for its Aug 11, 2026 meeting — "
+                "confirm the outcome before citing a status.",
+     "meets": "See the court's published meeting schedule.",
+     "where": "Old Courthouse, Cynthiana, KY",
+     "agenda_url": "http://www.harrisoncountyfiscalcourt.com/",
+     "comment_process": "See the court's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "http://www.harrisoncountyfiscalcourt.com/",
+     "as_of": "2026-08-12", "source": "https://www.wkyt.com/2026/07/29/harrison-county-leaders-hear-public-opposition-data-centers-ahead-moratorium-vote/"},
+
+    {"locality": "Lowndes County", "state": "GA",
+     "body": "Board of Commissioners",
+     "decides": "Zoning, land use and county budget. Residents have "
+                "continued pushing for a data-center moratorium; no vote "
+                "confirmed yet.",
+     "meets": "See the county's published Board of Commissioners calendar.",
+     "where": "Board of Commissioners Administration Building, 327 N. Ashley Street, Valdosta, GA 31601",
+     "agenda_url": "https://www.lowndescounty.com/AgendaCenter/Board-of-Commissioners-1",
+     "comment_process": "See the board's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.lowndescounty.com/181/Board-of-Commissioners",
+     "as_of": "2026-08-12", "source": "https://www.lowndescounty.com/181/Board-of-Commissioners"},
+
+    {"locality": "Clark County", "state": "NV",
+     "body": "Board of County Commissioners",
+     "decides": "Zoning and land-use approval for data centers in "
+                "unincorporated Clark County. Discussed the application/"
+                "approval process at a Jul 2026 meeting (requested by "
+                "Commissioner Tick Segerblom) amid environmental-group calls "
+                "for a moratorium, but took no action on a pause.",
+     "meets": "See the county's published Commission meeting calendar.",
+     "where": "Clark County Government Center, 500 S Grand Central Pkwy, Las Vegas, NV 89106",
+     "agenda_url": "https://www.clarkcountynv.gov/government/board_of_county_commissioners/index.php",
+     "comment_process": "See the county's published agenda for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.clarkcountynv.gov/government/board_of_county_commissioners/index.php",
+     "as_of": "2026-08-12", "source": "https://nevadacurrent.com/2026/07/08/clark-county-commission-hears-push-for-data-center-moratorium-but-takes-no-action/"},
 ]
 LOCAL_BODIES_DF = pd.DataFrame(LOCAL_BODIES)
 
