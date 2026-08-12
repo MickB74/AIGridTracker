@@ -1322,6 +1322,16 @@ MORATORIUMS = [
              "withdrawn by the developer",
      "lat": 28.83, "lon": -82.33, "expires": "2027-05-26", "as_of": "2026-08-11",
      "source": "https://www.fox13news.com/news/citrus-county-commission-approves-freeze-ai-data-center-rezoning-applications"},
+    {"locality": "Little Rock", "state": "AR", "level": "Local",
+     "status": "Rejected", "when": "Aug 4, 2026",
+     "note": "18-month permitting halt on hyperscale data centers "
+             "(250,000+ sq ft or 75+ MW), including a planned Google "
+             "facility at the Port of Little Rock; failed 4-4 with two "
+             "directors absent. The city's June 3, 2026 data-center "
+             "regulations (no groundwater cooling, noise monitors) remain "
+             "in effect regardless.",
+     "lat": 34.75, "lon": -92.29, "expires": None, "as_of": "2026-08-12",
+     "source": "https://www.nwaonline.com/news/2026/aug/04/little-rock-data-center-moratorium-falls-short-in/"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.
@@ -4438,6 +4448,133 @@ LOCAL_BODIES = [
      "phone": "", "email": "",
      "website": "https://www.plymouthtownship.org/data-center-update/",
      "as_of": "2026-08-11", "source": "https://www.plymouthtownship.org/zoning-hearing-board-meeting-scheduled-for-special-exception-for-proposed-data-center/"},
+
+    {"locality": "Wytheville", "state": "VA",
+     "body": "Town Council",
+     "decides": "Ordinances, land use, and town budget. Residents have "
+                "pushed back on a data center boom in the town over land, "
+                "water, and electric-rate impacts.",
+     "meets": "2nd and 4th Monday, 5:00 p.m.",
+     "where": "Wytheville Municipal Building, 150 E. Monroe Street, Wytheville, VA 24382",
+     "agenda_url": "https://www.wytheville.org/town-council",
+     "comment_process": "See the town's Agendas & Minutes page for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "276-223-3333", "email": "",
+     "website": "https://www.wytheville.org/town-council",
+     "as_of": "2026-08-12", "source": "https://www.wytheville.org/town-council"},
+
+    {"locality": "Dowagiac", "state": "MI",
+     "body": "City Council",
+     "decides": "Ordinances, land use, and town budget. Hyperscale Data, "
+                "Inc.'s existing bitcoin-mining site (over 48 acres) is "
+                "converting to AI computing; residents have filed a "
+                "class-action lawsuit over noise, and Mayor Patrick Bakeman "
+                "publicly gave the company 45 days to submit formal plans.",
+     "meets": "See the council's published agendas & minutes page.",
+     "where": "Dowagiac City Hall, 241 S. Front Street, Dowagiac, MI 49047",
+     "agenda_url": "https://www.cityofdowagiac.com/government/city_council/agendas___minutes.php",
+     "comment_process": "See the council's published agenda for a specific "
+                        "meeting's public-comment process.",
+     "phone": "269-782-2195", "email": "",
+     "website": "https://www.cityofdowagiac.com/",
+     "as_of": "2026-08-12", "source": "https://www.cityofdowagiac.com/"},
+
+    {"locality": "Pittsburg", "state": "CA",
+     "body": "City Council",
+     "decides": "Zoning, land use and city budget. Held a public workshop "
+                "on data-center development after residents raised concerns "
+                "at a June 2026 meeting; a data center is already operating "
+                "in the city.",
+     "meets": "1st and 3rd Monday, 7:00 p.m.",
+     "where": "Pittsburg Civic Center, City Council Chambers, 65 Civic Avenue, Pittsburg, CA 94565",
+     "agenda_url": "https://www.pittsburgca.gov/services/city-council/council-meetings",
+     "comment_process": "Agendas are posted at City Hall, the Pittsburg "
+                        "Library, and the city website; emailed 10 days in "
+                        "advance to those who request notice.",
+     "phone": "", "email": "",
+     "website": "https://www.pittsburgca.gov/government/city-council-1594",
+     "as_of": "2026-08-12", "source": "https://www.pittsburgca.gov/services/city-council/council-meetings"},
+
+    {"locality": "Westlake", "state": "TX",
+     "body": "Town Council",
+     "decides": "Zoning and land use; approved an 87-acre data center with "
+                "added conditions, and a separate proposed campus near a "
+                "Buddhist monastery has drawn pushback from Westlake "
+                "residents and neighboring Keller.",
+     "meets": "See the council's published Agenda Center for the current "
+              "meeting calendar.",
+     "where": "Westlake Town Hall, 1500 Solana Boulevard, Building 7, Suite 7200, Westlake, TX 76262",
+     "agenda_url": "https://westlake-tx.legistar.com/",
+     "comment_process": "Submit feedback via the town's official comment "
+                        "form, or attend a meeting (streamed live and "
+                        "archived on demand).",
+     "phone": "817-430-0941", "email": "",
+     "website": "https://www.westlake-tx.org/148/Town-Council",
+     "as_of": "2026-08-12", "source": "https://www.westlake-tx.org/148/Town-Council"},
+
+    {"locality": "Hoffman Estates", "state": "IL",
+     "body": "Plan Commission / Village Board",
+     "decides": "Rezoning and land-use applications. The Plan Commission "
+                "voted 4-2 against rezoning the 'Plum Farms' site (Higgins "
+                "Road & Route 59) for a data center after a packed 3-hour "
+                "hearing; the developer withdrew its request July 1, 2026.",
+     "meets": "Village Board meets 1st and 3rd Monday, 7:00 p.m.",
+     "where": "Village Hall Council Chambers, 1900 Hassell Road, Hoffman Estates, IL 60169",
+     "agenda_url": "https://www.hoffmanestates.org/updates/meeting-agendas-packets-minutes/village-board",
+     "comment_process": "See the village's published agendas for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://www.hoffmanestates.org/",
+     "as_of": "2026-08-12", "source": "https://www.hoffmanestates.org/updates/meeting-agendas-packets-minutes/village-board"},
+
+    {"locality": "Grayslake", "state": "IL",
+     "body": "Village Board",
+     "decides": "Zoning and land use; approved the T5 Data Center Campus "
+                "near Peterson Road after multiple Plan Commission and "
+                "Village Board meetings. Opponents have since sued to try "
+                "to stop construction.",
+     "meets": "Twice monthly, 6:00 p.m.",
+     "where": "Village Hall, 10 S Seymour Avenue, Grayslake, IL 60030",
+     "agenda_url": "https://www.villageofgrayslake.com/6/Agendas-Minutes",
+     "comment_process": "See the village's published agendas for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "847-223-8515", "email": "",
+     "website": "https://www.villageofgrayslake.com/881/Approved-T5-Data-Center-Campus-Informati",
+     "as_of": "2026-08-12", "source": "https://www.villageofgrayslake.com/881/Approved-T5-Data-Center-Campus-Informati"},
+
+    {"locality": "Wrightstown", "state": "WI",
+     "body": "Village Board",
+     "decides": "Zoning and infrastructure decisions. Put an advisory "
+                "referendum on the Aug. 11, 2026 ballot asking whether the "
+                "village should support utility infrastructure for a "
+                "large-scale data center (developer: Cloverleaf "
+                "Infrastructure); voters said no.",
+     "meets": "1st and 3rd Tuesday, 6:00 p.m.",
+     "where": "352 High Street, Wrightstown, WI 54180",
+     "agenda_url": "https://www.wrightstown.us/agendas/",
+     "comment_process": "See the village's published agendas for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "920-532-5567", "email": "",
+     "website": "https://www.wrightstown.us/",
+     "as_of": "2026-08-12", "source": "https://www.wrightstown.us/agendas/"},
+
+    {"locality": "Little Rock", "state": "AR",
+     "body": "Board of Directors",
+     "decides": "City ordinances, permits and zoning. Passed data-center "
+                "regulations (groundwater cooling ban, noise monitors, "
+                "generator-testing limits) June 3, 2026; a separate 18-month "
+                "permitting moratorium on hyperscale facilities — including "
+                "a planned Google data center at the Port of Little Rock — "
+                "failed on a 4-4 vote August 4, 2026.",
+     "meets": "Regular meetings 1st & 3rd Tuesday, 6:00 p.m.; Agenda "
+              "meetings 2nd & 4th Tuesday, 4:00 p.m.",
+     "where": "City Hall, 500 W. Markham Street, Little Rock, AR 72201",
+     "agenda_url": "https://littlerock.gov/government/board-of-directors/board-meeting-calendar/",
+     "comment_process": "See the board's published meeting agendas for the "
+                        "public-comment process for a specific meeting.",
+     "phone": "", "email": "",
+     "website": "https://littlerock.gov/government/board-of-directors/",
+     "as_of": "2026-08-12", "source": "https://littlerock.gov/government/board-of-directors/board-meeting-calendar/"},
 ]
 LOCAL_BODIES_DF = pd.DataFrame(LOCAL_BODIES)
 

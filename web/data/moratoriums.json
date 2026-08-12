@@ -5,8 +5,8 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 101,
-  "verified_count": 70,
+  "count": 102,
+  "verified_count": 71,
   "caveat": "Illustrative rather than exhaustive \u2014 dozens of localities churn weekly, and this tracks the ones we have read a source for.\n\n**Each row carries its own provenance.** Rows showing a verification date link to the ordinance, the enacting body's own page, or a datable report of the vote, and were read on that date. Rows marked *unverified* came from bulk compilation and have not been checked against a primary source \u2014 the locality, the year, and the status may all be off. Verify one of those with the town clerk before citing it as precedent.\n\n**Expiry is derived, not asserted.** A row with a documented end date flips to *Expired* on its own once that date passes. A time-limited moratorium whose start date was never documented keeps showing as enacted \u2014 that is a known gap, not a claim that it is still in force. Moratoriums are also routinely extended, so an expiry date is the earliest it could have ended, not proof that it did.",
   "schema": {
     "locality": "Town, city or county taking the action; 'X (statewide)' for state-level",
@@ -1742,6 +1742,23 @@
       "verified": true,
       "lat": 28.83,
       "lon": -82.33
+    },
+    {
+      "locality": "Little Rock",
+      "state": "AR",
+      "level": "Local",
+      "status": "Rejected",
+      "effective_status": "Rejected",
+      "expired": false,
+      "days_left": null,
+      "when": "Aug 4, 2026",
+      "expires": null,
+      "note": "18-month permitting halt on hyperscale data centers (250,000+ sq ft or 75+ MW), including a planned Google facility at the Port of Little Rock; failed 4-4 with two directors absent. The city's June 3, 2026 data-center regulations (no groundwater cooling, noise monitors) remain in effect regardless.",
+      "source": "https://www.nwaonline.com/news/2026/aug/04/little-rock-data-center-moratorium-falls-short-in/",
+      "as_of": "2026-08-12",
+      "verified": true,
+      "lat": 34.75,
+      "lon": -92.29
     }
   ]
 }
