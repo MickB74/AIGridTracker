@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 728,
+  "count": 730,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -8014,6 +8014,28 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Fort Worth makes major moves towards data center moratorium, regulations",
+      "outlet": "Fort Worth Star-Telegram",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFB3emlQbTBvYTZtbnd1UXE1QjdpcWt6dG1OdGE4aVFoZHY0Z1NZTExVVUt2NW4yakFNYm9xSzNmMzFOblJkRWpRYkphWkhrMHNFWEF3LXpmRmVhNUFWa2ppUmM0SWtBRFR1VnFkLTJOM19pTmRxSXVZRUYweWRpQdIBfkFVX3lxTE9zc3V3MlJKSjEwSEF0U0lteG1yMDdfR1FQLVY2MTh4ZVNwallvVUNiMVZQa3FUdjlNN1VTb2k0b3Fhb2VjS0xxamtFV0lVaTNtUHZHd1hZN0pjaTZ1bkQycjNHOWpWRWhaLWRXcEM1WkFUcGh6ZTd6OEh0S19JQQ?oc=5",
+      "published": "Wed, 12 Aug 2026 05:46:30 GMT",
+      "published_iso": "2026-08-12T05:46:30+00:00",
+      "locality": "Fort Worth",
+      "state": "TX",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Residents ask questions after Path One presents data center plans in Ida County",
+      "outlet": "fox10tv.com",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPbG5lU3k5c2xKTzJubTBkRk5DZi16My0ydDhzazNWMWF4LVl2SU5DZkttNVBiaFhlWkQ1bERDMjFNNVBhTThsbXJSYmVVdjMycGN0SmNNRGc5V0ZNSnVQVVJHMzFSM1lkMGJEV3pnaFVlQ0tvNXZ1RlYtMFc0b09PMWZHS0cwX0RhM3JlN2NDSTVFbndPclk1TGxfQ0c5YUp4Z2xBSW1QT2ZOcnJMcnY3WHo5eE5YTUVTcmc?oc=5",
+      "published": "Wed, 12 Aug 2026 03:48:00 GMT",
+      "published_iso": "2026-08-12T03:48:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-12",
       "last_seen": "2026-08-13"
     }
   ]
