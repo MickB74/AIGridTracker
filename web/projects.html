@@ -474,44 +474,60 @@ if (bounds.length) map.fitBounds(bounds, {padding:[30,30], maxZoom:6});
   <p class="muted" style="margin-bottom:12px">Public hearings and decisive
   votes on the horizon. Hearings get moved — treat each as the earliest to act
   by, and confirm with the clerk.</p>
-  <ul><li><strong>Burkhalter Road data center (4AM Development) — Statesboro (Bulloch County), GA</strong><br><span class="muted">Public hearing in 5 days (2026-08-18). Sign up to speak and file written comment before then.</span></li>
-<li><strong>Aligned Data Centers - Pataskala industrial park — Pataskala (Licking County), OH</strong><br><span class="muted">Public hearing in 12 days (2026-08-25). Sign up to speak and file written comment before then.</span></li>
-<li><strong>Plaza 500 (Lincolnia) — Lincolnia (Fairfax County), VA</strong><br><span class="muted">Public hearing in 42 days (2026-09-24). Sign up to speak and file written comment before then.</span></li></ul>
+  <ul><li><strong>Burkhalter Road data center (4AM Development) — Statesboro (Bulloch County), GA</strong><br><span class="muted">Built by 4AM Development, LLC <span class="muted" style="font-size:12px;white-space:nowrap">(filing LLC)</span> · Public hearing in 5 days (2026-08-18). Sign up to speak and file written comment before then.</span></li>
+<li><strong>Aligned Data Centers - Pataskala industrial park — Pataskala (Licking County), OH</strong><br><span class="muted">Built by Aligned Data Centers · Public hearing in 12 days (2026-08-25). Sign up to speak and file written comment before then.</span></li>
+<li><strong>Plaza 500 (Lincolnia) — Lincolnia (Fairfax County), VA</strong><br><span class="muted">Built by Starwood Capital Group · Public hearing in 42 days (2026-09-24). Sign up to speak and file written comment before then.</span></li></ul>
 </section>
 <section>
   <h2>All tracked projects</h2>
   <p class="muted" style="margin-bottom:12px">Sorted by urgency — soonest
-  hearing first, settled projects last. Stage is derived from each project's
+  hearing first, settled projects last. Click a column header to re-sort;
+  click again to flip the direction. Stage is derived from each project's
   milestone dates on every rebuild. Rows marked
   <span class="unverified">Unverified</span> have no source on record yet:
   a lead to check, not a fact to cite.</p>
-  <input type="text" id="proj-search" placeholder="Search project, operator, locality or state..."
-         autocomplete="off"
-         style="width:100%;max-width:440px;background:var(--card);color:var(--ink);
-         border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
-         font-size:15px;margin-bottom:14px">
+  <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px">
+    <input type="text" id="proj-search" placeholder="Search project, operator, locality or state..."
+           autocomplete="off"
+           style="flex:1 1 240px;max-width:440px;background:var(--card);color:var(--ink);
+           border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+           font-size:15px">
+    <select id="proj-stage" aria-label="Filter by stage" style="background:var(--card);color:var(--ink);border:1px solid var(--rule);border-radius:10px;padding:10px 14px;font-size:15px">
+      <option value="">All stages</option><option value="Hearing scheduled">Hearing scheduled</option><option value="Awaiting decision">Awaiting decision</option><option value="In review">In review</option><option value="Proposed">Proposed</option><option value="Approved">Approved</option><option value="Denied">Denied</option><option value="Withdrawn">Withdrawn</option></select>
+    <select id="proj-state" aria-label="Filter by state" style="background:var(--card);color:var(--ink);border:1px solid var(--rule);border-radius:10px;padding:10px 14px;font-size:15px">
+      <option value="">All states</option><option value="CO">CO</option><option value="GA">GA</option><option value="KS">KS</option><option value="LA">LA</option><option value="MD">MD</option><option value="MI">MI</option><option value="NC">NC</option><option value="NJ">NJ</option><option value="OH">OH</option><option value="PA">PA</option><option value="TN">TN</option><option value="TX">TX</option><option value="VA">VA</option></select>
+    <button type="button" id="proj-reset" style="background:var(--card);color:var(--ink);border:1px solid var(--rule);border-radius:10px;padding:10px 14px;font-size:15px;cursor:pointer;display:none">
+      Reset &#x21ba;</button>
+  </div>
   <div style="overflow-x:auto">
-  <table id="proj-table"><tr><th>Project</th><th>State</th><th>Locality</th>
-  <th>Size</th><th>Stage</th><th>Next step</th><th>Source</th></tr>
-  <tr><td><a href="#p-burkhalter-road-statesboro-ga">Burkhalter Road data center (4AM Development)</a></td><td><a href="states/georgia.html">GA</a></td><td>Statesboro (Bulloch County)</td><td>26 ac</td><td><span class="badge badge-hearing-scheduled">Hearing scheduled</span><span class="badge-note">hearing in 5 days</span></td><td>2026-08-18</td><td><a href="https://www.wtoc.com/2026/08/04/statesboro-planning-commission-backs-proposed-data-center-rezoning-5-1-vote/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
-<tr><td><a href="#p-aligned-pataskala-oh">Aligned Data Centers - Pataskala industrial park</a></td><td><a href="states/ohio.html">OH</a></td><td>Pataskala (Licking County)</td><td>200 MW</td><td><span class="badge badge-hearing-scheduled">Hearing scheduled</span><span class="badge-note">hearing in 12 days</span></td><td>2026-08-25</td><td><a href="https://www.thereportingproject.org/pataskala-planning-board-says-city-council-should-reject-aligned-data-centers-proposal/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
-<tr><td><a href="#p-plaza-500-lincolnia-va">Plaza 500 (Lincolnia)</a></td><td><a href="states/virginia.html">VA</a></td><td>Lincolnia (Fairfax County)</td><td>34 ac</td><td><span class="badge badge-hearing-scheduled">Hearing scheduled</span><span class="badge-note">hearing in 42 days</span></td><td>2026-09-24</td><td><a href="https://www.ffxnow.com/2026/08/04/pressure-grows-on-fairfax-county-to-deny-substation-for-data-center-in-lincolnia/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
-<tr><td><a href="#p-project-iron-spur-rural-hall-nc">Project Iron Spur</a></td><td><a href="states/north-carolina.html">NC</a></td><td>Rural Hall (Forsyth County)</td><td>129 ac</td><td><span class="badge badge-awaiting-decision">Awaiting decision</span></td><td>heard 2026-07-30</td><td><a href="https://www.wfdd.org/politics-government/2026-07-28/proposed-rural-hall-data-center-up-for-public-hearing-thursday" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
-<tr><td><a href="#p-hexa-monroe-township-nj">Hexa Builders data center (Black Horse Pike)</a></td><td><a href="states/new-jersey.html">NJ</a></td><td>Monroe Township (Gloucester County)</td><td>—</td><td><span class="badge badge-in-review">In review</span></td><td>—</td><td><a href="https://wjrz.com/2026/07/30/hexa-files-300m-lawsuit-against-monroe-township-over-data-center-prohibition/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
-<tr><td><a href="#p-king-of-prussia-mlp-pa">King of Prussia campus (MLP Ventures)</a></td><td><a href="states/pennsylvania.html">PA</a></td><td>Upper Merion Township (Montgomery County)</td><td>—</td><td><span class="badge badge-in-review">In review</span></td><td>—</td><td><a href="https://6abc.com/post/proposed-king-prussia-data-center-campus-faces-renewed-scrutiny-review-continues/19560357/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
-<tr><td><a href="#p-project-taurus-colorado-springs-co">Project Taurus (Raeden)</a></td><td><a href="states/colorado.html">CO</a></td><td>Colorado Springs (El Paso County)</td><td>—</td><td><span class="badge badge-in-review">In review</span></td><td>—</td><td><a href="https://gazette.com/2026/08/03/appeals-filed-to-send-project-taurus-decision-to-the-colorado-springs-city-council/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
-<tr><td><a href="#p-digital-realty-astra-desoto-ks">Astra data center campus (Digital Realty)</a></td><td><a href="states/kansas.html">KS</a></td><td>De Soto (Johnson County)</td><td>600 MW</td><td><span class="badge badge-proposed">Proposed</span></td><td>—</td><td><a href="https://www2.ljworld.com/news/general-news/2026/jun/10/a-second-major-data-center-project-has-been-proposed-in-de-soto-near-panasonic-battery-plant/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-08</span></td></tr>
-<tr><td><a href="#p-edgecore-louisa-county-va">EdgeCore Shannon Hill campus</a></td><td><a href="states/virginia.html">VA</a></td><td>Louisa County (Shannon Hill)</td><td>1,100 MW</td><td><span class="badge badge-approved">Approved</span></td><td>—</td><td><a href="https://edgecore.com/resources/press-releases/new-louisa-county-virginia-data-center-campus" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
-<tr><td><a href="#p-google-haskell-county-tx">Google West Texas campuses</a></td><td><a href="states/texas.html">TX</a></td><td>Haskell County (+ Armstrong Co.)</td><td>—</td><td><span class="badge badge-approved">Approved</span></td><td>2025-11-14</td><td><a href="https://www.texastribune.org/2025/11/14/texas-google-data-centers-ai/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-08</span></td></tr>
-<tr><td><a href="#p-meta-hyperion-richland-parish-la">Meta Hyperion</a></td><td><a href="states/louisiana.html">LA</a></td><td>Richland Parish</td><td>5,000 MW</td><td><span class="badge badge-approved">Approved</span></td><td>2026-01-01</td><td><a href="https://www.nola.com/news/business/meta-louisiana-ai-data-center-richland-parish/article_d1308014-c718-4c34-a75f-476a151ef1a7.html" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
-<tr><td><a href="#p-stargate-abilene-tx">Stargate Abilene</a></td><td><a href="states/texas.html">TX</a></td><td>Abilene (Taylor County)</td><td>1,200 MW</td><td><span class="badge badge-approved">Approved</span></td><td>—</td><td><a href="https://epoch.ai/publications/openai-stargate-where-the-us-sites-stand" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
-<tr><td><a href="#p-xai-colossus-memphis-tn">xAI Colossus</a></td><td><a href="states/tennessee.html">TN</a></td><td>Memphis (Shelby County)</td><td>2,000 MW</td><td><span class="badge badge-approved">Approved</span></td><td>—</td><td><a href="https://earthjustice.org/case/xai-illegal-gas-power-plant-data-center-colossus" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
-<tr><td><a href="#p-augusta-township-thor-mi">Augusta Township data center (Thor Equities)</a></td><td><a href="states/michigan.html">MI</a></td><td>Augusta Township (Washtenaw County)</td><td>500 ac</td><td><span class="badge badge-denied">Denied</span></td><td>2026-08-04</td><td><a href="https://www.wemu.org/wemu-news/2026-08-05/augusta-township-voters-overturn-data-center-rezoning" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-08</span></td></tr>
-<tr><td><a href="#p-nordson-campus-amherst-oh">Nordson campus data center (Cervenka)</a></td><td><a href="states/ohio.html">OH</a></td><td>Amherst (Lorain County)</td><td>—</td><td><span class="badge badge-denied">Denied</span></td><td>2026-07-30</td><td><a href="https://chroniclet.com/news/472013/amherst-board-of-zoning-appeals-denies-proposed-data-center-variance-for-former-nordson-property/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
-<tr><td><a href="#p-erwin-street-tyler-tx">West Erwin Street data center (Barrio Resources)</a></td><td><a href="states/texas.html">TX</a></td><td>Tyler (Smith County)</td><td>1 ac</td><td><span class="badge badge-denied">Denied</span></td><td>2026-07-07</td><td><a href="https://tylerpaper.com/2026/07/08/tyler-planning-and-zoning-commission-denies-special-use-permit-for-proposed-data-center/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
-<tr><td><a href="#p-aws-calvert-technology-center-md">AWS Calvert Technology Center</a></td><td><a href="states/maryland.html">MD</a></td><td>Lusby (Calvert County)</td><td>—</td><td><span class="badge badge-withdrawn">Withdrawn</span></td><td>2026-08-04</td><td><a href="https://www.calvertcountymd.gov/4059/Amazon-Web-Services" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
-<tr><td><a href="#p-deep-green-lansing-mi">Deep Green downtown data center</a></td><td><a href="states/michigan.html">MI</a></td><td>Lansing (Ingham County)</td><td>24 MW</td><td><span class="badge badge-withdrawn">Withdrawn</span></td><td>2026-04-06</td><td><a href="https://michiganadvance.com/2026/04/06/deep-green-pulls-request-to-rezone-downtown-lansing-parcel-axing-data-center-proposal/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
-<tr><td><a href="#p-pw-digital-gateway-va">PW Digital Gateway</a></td><td><a href="states/virginia.html">VA</a></td><td>Prince William County</td><td>2,100 ac</td><td><span class="badge badge-withdrawn">Withdrawn</span></td><td>2026-04-01</td><td><a href="https://northernvirginiamag.com/news/2026/07/08/prince-william-county-votes-against-massive-data-center-plan/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr></table>
+  <table id="proj-table"><tr>
+  <th data-key="name">Project<span class="arr"></span></th>
+  <th data-key="state">State<span class="arr"></span></th>
+  <th data-key="locality">Locality<span class="arr"></span></th>
+  <th data-key="builder">Who's building it<span class="arr"></span></th>
+  <th data-key="size" title="Projects with a known MW figure sort above acre-only ones">Size<span class="arr"></span></th>
+  <th data-key="phase">Stage<span class="arr"></span></th>
+  <th data-key="date">Next step<span class="arr"></span></th>
+  <th data-key="verified">Source<span class="arr"></span></th></tr>
+  <tr data-urgency="0" data-name="burkhalter road data center (4am development)" data-state="GA" data-locality="statesboro (bulloch county)" data-builder="4am development, llc" data-size="26.5" data-stage="Hearing scheduled" data-phase="0" data-date="2026-08-18" data-verified="1"><td><a href="#p-burkhalter-road-statesboro-ga">Burkhalter Road data center (4AM Development)</a></td><td><a href="states/georgia.html">GA</a></td><td>Statesboro (Bulloch County)</td><td>4AM Development, LLC <span class="muted" style="font-size:12px;white-space:nowrap">(filing LLC)</span></td><td>26 ac</td><td><span class="badge badge-hearing-scheduled">Hearing scheduled</span><span class="badge-note">hearing in 5 days</span></td><td>2026-08-18</td><td><a href="https://www.wtoc.com/2026/08/04/statesboro-planning-commission-backs-proposed-data-center-rezoning-5-1-vote/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
+<tr data-urgency="1" data-name="aligned data centers - pataskala industrial park" data-state="OH" data-locality="pataskala (licking county)" data-builder="aligned data centers" data-size="1.0002e+06" data-stage="Hearing scheduled" data-phase="0" data-date="2026-08-25" data-verified="1"><td><a href="#p-aligned-pataskala-oh">Aligned Data Centers - Pataskala industrial park</a></td><td><a href="states/ohio.html">OH</a></td><td>Pataskala (Licking County)</td><td>Aligned Data Centers</td><td>200 MW</td><td><span class="badge badge-hearing-scheduled">Hearing scheduled</span><span class="badge-note">hearing in 12 days</span></td><td>2026-08-25</td><td><a href="https://www.thereportingproject.org/pataskala-planning-board-says-city-council-should-reject-aligned-data-centers-proposal/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
+<tr data-urgency="2" data-name="plaza 500 (lincolnia)" data-state="VA" data-locality="lincolnia (fairfax county)" data-builder="starwood capital group" data-size="34" data-stage="Hearing scheduled" data-phase="0" data-date="2026-09-24" data-verified="1"><td><a href="#p-plaza-500-lincolnia-va">Plaza 500 (Lincolnia)</a></td><td><a href="states/virginia.html">VA</a></td><td>Lincolnia (Fairfax County)</td><td>Starwood Capital Group</td><td>34 ac</td><td><span class="badge badge-hearing-scheduled">Hearing scheduled</span><span class="badge-note">hearing in 42 days</span></td><td>2026-09-24</td><td><a href="https://www.ffxnow.com/2026/08/04/pressure-grows-on-fairfax-county-to-deny-substation-for-data-center-in-lincolnia/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
+<tr data-urgency="3" data-name="project iron spur" data-state="NC" data-locality="rural hall (forsyth county)" data-builder="project iron spur" data-size="129" data-stage="Awaiting decision" data-phase="1" data-date="2026-07-30" data-verified="1"><td><a href="#p-project-iron-spur-rural-hall-nc">Project Iron Spur</a></td><td><a href="states/north-carolina.html">NC</a></td><td>Rural Hall (Forsyth County)</td><td>Project Iron Spur <span class="muted" style="font-size:12px;white-space:nowrap">(filing LLC)</span></td><td>129 ac</td><td><span class="badge badge-awaiting-decision">Awaiting decision</span></td><td>heard 2026-07-30</td><td><a href="https://www.wfdd.org/politics-government/2026-07-28/proposed-rural-hall-data-center-up-for-public-hearing-thursday" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
+<tr data-urgency="4" data-name="hexa builders data center (black horse pike)" data-state="NJ" data-locality="monroe township (gloucester county)" data-builder="hexa builders llc" data-size="-1" data-stage="In review" data-phase="2" data-date="" data-verified="1"><td><a href="#p-hexa-monroe-township-nj">Hexa Builders data center (Black Horse Pike)</a></td><td><a href="states/new-jersey.html">NJ</a></td><td>Monroe Township (Gloucester County)</td><td>Hexa Builders LLC <span class="muted" style="font-size:12px;white-space:nowrap">(filing LLC)</span></td><td>—</td><td><span class="badge badge-in-review">In review</span></td><td>—</td><td><a href="https://wjrz.com/2026/07/30/hexa-files-300m-lawsuit-against-monroe-township-over-data-center-prohibition/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
+<tr data-urgency="5" data-name="king of prussia campus (mlp ventures)" data-state="PA" data-locality="upper merion township (montgomery county)" data-builder="mlp ventures (brian o&#x27;neill)" data-size="-1" data-stage="In review" data-phase="2" data-date="" data-verified="1"><td><a href="#p-king-of-prussia-mlp-pa">King of Prussia campus (MLP Ventures)</a></td><td><a href="states/pennsylvania.html">PA</a></td><td>Upper Merion Township (Montgomery County)</td><td>MLP Ventures (Brian O&#x27;Neill)</td><td>—</td><td><span class="badge badge-in-review">In review</span></td><td>—</td><td><a href="https://6abc.com/post/proposed-king-prussia-data-center-campus-faces-renewed-scrutiny-review-continues/19560357/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
+<tr data-urgency="6" data-name="project taurus (raeden)" data-state="CO" data-locality="colorado springs (el paso county)" data-builder="raeden" data-size="-1" data-stage="In review" data-phase="2" data-date="" data-verified="1"><td><a href="#p-project-taurus-colorado-springs-co">Project Taurus (Raeden)</a></td><td><a href="states/colorado.html">CO</a></td><td>Colorado Springs (El Paso County)</td><td>Raeden</td><td>—</td><td><span class="badge badge-in-review">In review</span></td><td>—</td><td><a href="https://gazette.com/2026/08/03/appeals-filed-to-send-project-taurus-decision-to-the-colorado-springs-city-council/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
+<tr data-urgency="7" data-name="astra data center campus (digital realty)" data-state="KS" data-locality="de soto (johnson county)" data-builder="digital realty" data-size="1.0006e+06" data-stage="Proposed" data-phase="3" data-date="" data-verified="1"><td><a href="#p-digital-realty-astra-desoto-ks">Astra data center campus (Digital Realty)</a></td><td><a href="states/kansas.html">KS</a></td><td>De Soto (Johnson County)</td><td>Digital Realty</td><td>600 MW</td><td><span class="badge badge-proposed">Proposed</span></td><td>—</td><td><a href="https://www2.ljworld.com/news/general-news/2026/jun/10/a-second-major-data-center-project-has-been-proposed-in-de-soto-near-panasonic-battery-plant/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-08</span></td></tr>
+<tr data-urgency="8" data-name="edgecore shannon hill campus" data-state="VA" data-locality="louisa county (shannon hill)" data-builder="edgecore digital infrastructure" data-size="1.0011e+06" data-stage="Approved" data-phase="5" data-date="" data-verified="1"><td><a href="#p-edgecore-louisa-county-va">EdgeCore Shannon Hill campus</a></td><td><a href="states/virginia.html">VA</a></td><td>Louisa County (Shannon Hill)</td><td>EdgeCore Digital Infrastructure</td><td>1,100 MW</td><td><span class="badge badge-approved">Approved</span></td><td>—</td><td><a href="https://edgecore.com/resources/press-releases/new-louisa-county-virginia-data-center-campus" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
+<tr data-urgency="9" data-name="google west texas campuses" data-state="TX" data-locality="haskell county (+ armstrong co.)" data-builder="google" data-size="-1" data-stage="Approved" data-phase="5" data-date="2025-11-14" data-verified="1"><td><a href="#p-google-haskell-county-tx">Google West Texas campuses</a></td><td><a href="states/texas.html">TX</a></td><td>Haskell County (+ Armstrong Co.)</td><td>Google</td><td>—</td><td><span class="badge badge-approved">Approved</span></td><td>2025-11-14</td><td><a href="https://www.texastribune.org/2025/11/14/texas-google-data-centers-ai/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-08</span></td></tr>
+<tr data-urgency="10" data-name="meta hyperion" data-state="LA" data-locality="richland parish" data-builder="meta" data-size="1.005e+06" data-stage="Approved" data-phase="5" data-date="2026-01-01" data-verified="1"><td><a href="#p-meta-hyperion-richland-parish-la">Meta Hyperion</a></td><td><a href="states/louisiana.html">LA</a></td><td>Richland Parish</td><td>Meta</td><td>5,000 MW</td><td><span class="badge badge-approved">Approved</span></td><td>2026-01-01</td><td><a href="https://www.nola.com/news/business/meta-louisiana-ai-data-center-richland-parish/article_d1308014-c718-4c34-a75f-476a151ef1a7.html" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
+<tr data-urgency="11" data-name="stargate abilene" data-state="TX" data-locality="abilene (taylor county)" data-builder="crusoe" data-size="1.0012e+06" data-stage="Approved" data-phase="5" data-date="" data-verified="1"><td><a href="#p-stargate-abilene-tx">Stargate Abilene</a></td><td><a href="states/texas.html">TX</a></td><td>Abilene (Taylor County)</td><td>Crusoe</td><td>1,200 MW</td><td><span class="badge badge-approved">Approved</span></td><td>—</td><td><a href="https://epoch.ai/publications/openai-stargate-where-the-us-sites-stand" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
+<tr data-urgency="12" data-name="xai colossus" data-state="TN" data-locality="memphis (shelby county)" data-builder="xai" data-size="1.002e+06" data-stage="Approved" data-phase="5" data-date="" data-verified="1"><td><a href="#p-xai-colossus-memphis-tn">xAI Colossus</a></td><td><a href="states/tennessee.html">TN</a></td><td>Memphis (Shelby County)</td><td>xAI</td><td>2,000 MW</td><td><span class="badge badge-approved">Approved</span></td><td>—</td><td><a href="https://earthjustice.org/case/xai-illegal-gas-power-plant-data-center-colossus" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
+<tr data-urgency="13" data-name="augusta township data center (thor equities)" data-state="MI" data-locality="augusta township (washtenaw county)" data-builder="thor equities" data-size="500" data-stage="Denied" data-phase="6" data-date="2026-08-04" data-verified="1"><td><a href="#p-augusta-township-thor-mi">Augusta Township data center (Thor Equities)</a></td><td><a href="states/michigan.html">MI</a></td><td>Augusta Township (Washtenaw County)</td><td>Thor Equities</td><td>500 ac</td><td><span class="badge badge-denied">Denied</span></td><td>2026-08-04</td><td><a href="https://www.wemu.org/wemu-news/2026-08-05/augusta-township-voters-overturn-data-center-rezoning" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-08</span></td></tr>
+<tr data-urgency="14" data-name="nordson campus data center (cervenka)" data-state="OH" data-locality="amherst (lorain county)" data-builder="cervenka development partners llc" data-size="-1" data-stage="Denied" data-phase="6" data-date="2026-07-30" data-verified="1"><td><a href="#p-nordson-campus-amherst-oh">Nordson campus data center (Cervenka)</a></td><td><a href="states/ohio.html">OH</a></td><td>Amherst (Lorain County)</td><td>Cervenka Development Partners LLC <span class="muted" style="font-size:12px;white-space:nowrap">(filing LLC)</span></td><td>—</td><td><span class="badge badge-denied">Denied</span></td><td>2026-07-30</td><td><a href="https://chroniclet.com/news/472013/amherst-board-of-zoning-appeals-denies-proposed-data-center-variance-for-former-nordson-property/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
+<tr data-urgency="15" data-name="west erwin street data center (barrio resources)" data-state="TX" data-locality="tyler (smith county)" data-builder="barrio resources llc" data-size="1.92" data-stage="Denied" data-phase="6" data-date="2026-07-07" data-verified="1"><td><a href="#p-erwin-street-tyler-tx">West Erwin Street data center (Barrio Resources)</a></td><td><a href="states/texas.html">TX</a></td><td>Tyler (Smith County)</td><td>Barrio Resources LLC <span class="muted" style="font-size:12px;white-space:nowrap">(filing LLC)</span></td><td>1 ac</td><td><span class="badge badge-denied">Denied</span></td><td>2026-07-07</td><td><a href="https://tylerpaper.com/2026/07/08/tyler-planning-and-zoning-commission-denies-special-use-permit-for-proposed-data-center/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
+<tr data-urgency="16" data-name="aws calvert technology center" data-state="MD" data-locality="lusby (calvert county)" data-builder="amazon (aws)" data-size="-1" data-stage="Withdrawn" data-phase="7" data-date="2026-08-04" data-verified="1"><td><a href="#p-aws-calvert-technology-center-md">AWS Calvert Technology Center</a></td><td><a href="states/maryland.html">MD</a></td><td>Lusby (Calvert County)</td><td>Amazon (AWS)</td><td>—</td><td><span class="badge badge-withdrawn">Withdrawn</span></td><td>2026-08-04</td><td><a href="https://www.calvertcountymd.gov/4059/Amazon-Web-Services" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
+<tr data-urgency="17" data-name="deep green downtown data center" data-state="MI" data-locality="lansing (ingham county)" data-builder="deep green (uk)" data-size="1.00002e+06" data-stage="Withdrawn" data-phase="7" data-date="2026-04-06" data-verified="1"><td><a href="#p-deep-green-lansing-mi">Deep Green downtown data center</a></td><td><a href="states/michigan.html">MI</a></td><td>Lansing (Ingham County)</td><td>Deep Green (UK)</td><td>24 MW</td><td><span class="badge badge-withdrawn">Withdrawn</span></td><td>2026-04-06</td><td><a href="https://michiganadvance.com/2026/04/06/deep-green-pulls-request-to-rezone-downtown-lansing-parcel-axing-data-center-proposal/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr>
+<tr data-urgency="18" data-name="pw digital gateway" data-state="VA" data-locality="prince william county" data-builder="compass datacenters / qts" data-size="2100" data-stage="Withdrawn" data-phase="7" data-date="2026-04-01" data-verified="1"><td><a href="#p-pw-digital-gateway-va">PW Digital Gateway</a></td><td><a href="states/virginia.html">VA</a></td><td>Prince William County</td><td>Compass Datacenters / QTS</td><td>2,100 ac</td><td><span class="badge badge-withdrawn">Withdrawn</span></td><td>2026-04-01</td><td><a href="https://northernvirginiamag.com/news/2026/07/08/prince-william-county-votes-against-massive-data-center-plan/" rel="nofollow noopener" target="_blank">Source</a><br><span class="verified-on">read 2026-08-07</span></td></tr></table>
   </div>
   <p class="muted" id="proj-count">19 projects</p>
   <div class="freshness"><p><strong>As of August 2026 · changes weekly — re-check before citing</strong></p><p class="muted" style="margin:6px 0 0">A working set of identified proposals a community can track, not a census — most of the country&#x27;s activity is not in here yet.
@@ -756,22 +772,89 @@ if (bounds.length) map.fitBounds(bounds, {padding:[30,30], maxZoom:6});
   <p><a class="btn" href="start-here.html">Start here &rarr;</a>
   <a class="btn ghost" href="moratoriums.html">Moratorium tracker</a></p>
 </section>
+<style>
+#proj-table th[data-key] { cursor: pointer; user-select: none; white-space: nowrap; }
+#proj-table th[data-key]:hover { color: var(--accent, #34d399); }
+#proj-table th .arr { display: inline-block; min-width: 1em; opacity: .9; }
+</style>
 <script>
 (function() {
   var q = document.getElementById('proj-search');
+  var stageSel = document.getElementById('proj-stage');
+  var stateSel = document.getElementById('proj-state');
+  var reset = document.getElementById('proj-reset');
   var table = document.getElementById('proj-table');
   var ct = document.getElementById('proj-count');
   if (!q || !table) return;
   var rows = Array.from(table.querySelectorAll('tr')).slice(1);
-  q.addEventListener('input', function() {
+  var body = rows[0] ? rows[0].parentNode : table;
+  var total = rows.length;
+  var heads = Array.from(table.querySelectorAll('th[data-key]'));
+  var sorted = false;
+
+  function apply() {
     var s = q.value.toLowerCase();
+    var stage = stageSel ? stageSel.value : '';
+    var state = stateSel ? stateSel.value : '';
     var n = 0;
     rows.forEach(function(r) {
-      var show = !s || r.textContent.toLowerCase().indexOf(s) >= 0;
+      var show = (!s || r.textContent.toLowerCase().indexOf(s) >= 0) &&
+                 (!stage || r.dataset.stage === stage) &&
+                 (!state || r.dataset.state === state);
       r.style.display = show ? '' : 'none';
       if (show) n++;
     });
-    ct.textContent = s ? (n + ' match' + (n === 1 ? '' : 'es')) : (19 + ' projects');
+    var active = s || stage || state;
+    ct.textContent = active ? (n + ' of ' + total + ' projects shown')
+                            : (total + ' projects');
+    if (reset) reset.style.display = (active || sorted) ? '' : 'none';
+  }
+
+  function clearArrows() {
+    heads.forEach(function(h) {
+      h.removeAttribute('data-dir');
+      h.querySelector('.arr').textContent = '';
+    });
+  }
+
+  function sortBy(h) {
+    var k = h.dataset.key;
+    var numeric = (k === 'size' || k === 'phase' || k === 'verified');
+    // First click: biggest/verified first for size+source, A-to-Z otherwise.
+    var desc = h.dataset.dir ? h.dataset.dir === 'asc'
+                             : (k === 'size' || k === 'verified');
+    clearArrows();
+    h.dataset.dir = desc ? 'desc' : 'asc';
+    h.querySelector('.arr').textContent = desc ? ' \u2193' : ' \u2191';
+    rows.slice().sort(function(a, b) {
+      var av = a.dataset[k] || '', bv = b.dataset[k] || '';
+      if (numeric) { av = parseFloat(av || '-1'); bv = parseFloat(bv || '-1'); }
+      else if (k === 'date') { av = av || '9999'; bv = bv || '9999'; }
+      if (av < bv) return desc ? 1 : -1;
+      if (av > bv) return desc ? -1 : 1;
+      return a.dataset.urgency - b.dataset.urgency;
+    }).forEach(function(r) { body.appendChild(r); });
+    sorted = true;
+    if (reset) reset.style.display = '';
+  }
+
+  heads.forEach(function(h) {
+    h.addEventListener('click', function() { sortBy(h); });
+  });
+
+  q.addEventListener('input', apply);
+  if (stageSel) stageSel.addEventListener('change', apply);
+  if (stateSel) stateSel.addEventListener('change', apply);
+  if (reset) reset.addEventListener('click', function() {
+    q.value = '';
+    if (stageSel) stageSel.value = '';
+    if (stateSel) stateSel.value = '';
+    clearArrows();
+    rows.slice().sort(function(a, b) {
+      return a.dataset.urgency - b.dataset.urgency;
+    }).forEach(function(r) { body.appendChild(r); });
+    sorted = false;
+    apply();
   });
 })();
 </script>

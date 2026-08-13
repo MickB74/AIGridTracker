@@ -6434,6 +6434,25 @@ def _project_size(p):
     return "—"
 
 
+# Shared look for the filter controls next to the search box.
+_PROJ_SEL_STYLE = ("background:var(--card);color:var(--ink);border:1px solid "
+                   "var(--rule);border-radius:10px;padding:10px 14px;font-size:15px")
+
+
+def _project_builder(p):
+    """Who's behind it: operator, else owner, else the filing LLC (flagged as
+    a shell so a reader knows it's a mask, not a company)."""
+    if has_value(p.get("operator")):
+        return esc(str(p["operator"]))
+    if has_value(p.get("owner")):
+        return esc(str(p["owner"]))
+    if has_value(p.get("filing_llc")):
+        return (f'{esc(str(p["filing_llc"]))} '
+                f'<span class="muted" style="font-size:12px;white-space:nowrap">'
+                f'(filing LLC)</span>')
+    return "—"
+
+
 def _project_stage_cell(status):
     """Stage badge plus a timing note (days to hearing)."""
     html = _status_badge(status["stage"])
@@ -6536,7 +6555,8 @@ def build_projects():
         items = "\n".join(
             f'<li><strong>{esc(str(p.get("name")))} — '
             f'{esc(str(p.get("locality")))}, {esc(str(p.get("state")))}</strong>'
-            f'<br><span class="muted">{esc(s["next_action"])}</span></li>'
+            f'<br><span class="muted">Built by {_project_builder(p)} · '
+            f'{esc(s["next_action"])}</span></li>'
             for p, s in upcoming)
         hearings_html = f"""
 <section>
@@ -6548,28 +6568,64 @@ def build_projects():
 </section>"""
 
     rows = []
-    for p in ordered:
+    stage_names = []           # unique stages, already in urgency order
+    state_names = set()
+    for i, p in enumerate(ordered):
         s = project_status(p)
         state_link = _state_href(p.get("state"))
         state_cell = (f'<a href="{state_link}">{esc(str(p.get("state","")))}</a>'
                       if state_link else esc(str(p.get("state", ""))))
         when = "—"
+        iso_when = ""
         if s["phase"] == "hearing" and has_value(p.get("hearing_date")):
             when = esc(str(p["hearing_date"]))
+            iso_when = str(p["hearing_date"])
         elif s["phase"] == "awaiting" and has_value(p.get("hearing_date")):
             when = f'heard {esc(str(p["hearing_date"]))}'
+            iso_when = str(p["hearing_date"])
         elif s["terminal"] and has_value(p.get("decided_date")):
             when = esc(str(p["decided_date"]))
+            iso_when = str(p["decided_date"])
+        builder_plain = next(
+            (str(p[k]) for k in ("operator", "owner", "filing_llc")
+             if has_value(p.get(k))), "")
+        # One sortable size number: MW-known rows (offset 1e6) always rank
+        # above acre-only rows, which rank above unknowns (-1).
+        if has_value(p.get("size_mw")):
+            size_key = 1_000_000 + float(p["size_mw"])
+        elif has_value(p.get("acres")):
+            size_key = float(p["acres"])
+        else:
+            size_key = -1
+        if s["stage"] not in stage_names:
+            stage_names.append(s["stage"])
+        if has_value(p.get("state")):
+            state_names.add(str(p["state"]))
         rows.append(
-            f'<tr><td><a href="#p-{esc(str(p.get("id","")))}">'
+            f'<tr data-urgency="{i}"'
+            f' data-name="{esc(str(p.get("name","")).lower())}"'
+            f' data-state="{esc(str(p.get("state","")))}"'
+            f' data-locality="{esc(str(p.get("locality","")).lower())}"'
+            f' data-builder="{esc(builder_plain.lower())}"'
+            f' data-size="{size_key:g}"'
+            f' data-stage="{esc(s["stage"])}"'
+            f' data-phase="{_PROJECT_PHASE_ORDER.get(s["phase"], 9)}"'
+            f' data-date="{esc(iso_when)}"'
+            f' data-verified="{1 if has_value(p.get("source")) else 0}">'
+            f'<td><a href="#p-{esc(str(p.get("id","")))}">'
             f'{esc(str(p.get("name","")))}</a></td>'
             f'<td>{state_cell}</td>'
             f'<td>{esc(str(p.get("locality","")))}</td>'
+            f'<td>{_project_builder(p)}</td>'
             f'<td>{_project_size(p)}</td>'
             f'<td>{_project_stage_cell(s)}</td>'
             f'<td>{when}</td>'
             f'<td>{_project_source_cell(p)}</td></tr>')
     rows_html = "\n".join(rows)
+    stage_opts = "".join(f'<option value="{esc(x)}">{esc(x)}</option>'
+                         for x in stage_names)
+    state_opts = "".join(f'<option value="{esc(x)}">{esc(x)}</option>'
+                         for x in sorted(state_names))
 
     dossiers = "\n".join(_project_dossier(p) for p in ordered)
     schema_rows = "\n".join(
@@ -6619,18 +6675,34 @@ def build_projects():
 <section>
   <h2>All tracked projects</h2>
   <p class="muted" style="margin-bottom:12px">Sorted by urgency — soonest
-  hearing first, settled projects last. Stage is derived from each project's
+  hearing first, settled projects last. Click a column header to re-sort;
+  click again to flip the direction. Stage is derived from each project's
   milestone dates on every rebuild. Rows marked
   <span class="unverified">Unverified</span> have no source on record yet:
   a lead to check, not a fact to cite.</p>
-  <input type="text" id="proj-search" placeholder="Search project, operator, locality or state..."
-         autocomplete="off"
-         style="width:100%;max-width:440px;background:var(--card);color:var(--ink);
-         border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
-         font-size:15px;margin-bottom:14px">
+  <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px">
+    <input type="text" id="proj-search" placeholder="Search project, operator, locality or state..."
+           autocomplete="off"
+           style="flex:1 1 240px;max-width:440px;background:var(--card);color:var(--ink);
+           border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+           font-size:15px">
+    <select id="proj-stage" aria-label="Filter by stage" style="{_PROJ_SEL_STYLE}">
+      <option value="">All stages</option>{stage_opts}</select>
+    <select id="proj-state" aria-label="Filter by state" style="{_PROJ_SEL_STYLE}">
+      <option value="">All states</option>{state_opts}</select>
+    <button type="button" id="proj-reset" style="{_PROJ_SEL_STYLE};cursor:pointer;display:none">
+      Reset &#x21ba;</button>
+  </div>
   <div style="overflow-x:auto">
-  <table id="proj-table"><tr><th>Project</th><th>State</th><th>Locality</th>
-  <th>Size</th><th>Stage</th><th>Next step</th><th>Source</th></tr>
+  <table id="proj-table"><tr>
+  <th data-key="name">Project<span class="arr"></span></th>
+  <th data-key="state">State<span class="arr"></span></th>
+  <th data-key="locality">Locality<span class="arr"></span></th>
+  <th data-key="builder">Who's building it<span class="arr"></span></th>
+  <th data-key="size" title="Projects with a known MW figure sort above acre-only ones">Size<span class="arr"></span></th>
+  <th data-key="phase">Stage<span class="arr"></span></th>
+  <th data-key="date">Next step<span class="arr"></span></th>
+  <th data-key="verified">Source<span class="arr"></span></th></tr>
   {rows_html}</table>
   </div>
   <p class="muted" id="proj-count">{total} projects</p>
@@ -6686,22 +6758,89 @@ def build_projects():
   <p><a class="btn" href="start-here.html">Start here &rarr;</a>
   <a class="btn ghost" href="moratoriums.html">Moratorium tracker</a></p>
 </section>
+<style>
+#proj-table th[data-key] {{ cursor: pointer; user-select: none; white-space: nowrap; }}
+#proj-table th[data-key]:hover {{ color: var(--accent, #34d399); }}
+#proj-table th .arr {{ display: inline-block; min-width: 1em; opacity: .9; }}
+</style>
 <script>
 (function() {{
   var q = document.getElementById('proj-search');
+  var stageSel = document.getElementById('proj-stage');
+  var stateSel = document.getElementById('proj-state');
+  var reset = document.getElementById('proj-reset');
   var table = document.getElementById('proj-table');
   var ct = document.getElementById('proj-count');
   if (!q || !table) return;
   var rows = Array.from(table.querySelectorAll('tr')).slice(1);
-  q.addEventListener('input', function() {{
+  var body = rows[0] ? rows[0].parentNode : table;
+  var total = rows.length;
+  var heads = Array.from(table.querySelectorAll('th[data-key]'));
+  var sorted = false;
+
+  function apply() {{
     var s = q.value.toLowerCase();
+    var stage = stageSel ? stageSel.value : '';
+    var state = stateSel ? stateSel.value : '';
     var n = 0;
     rows.forEach(function(r) {{
-      var show = !s || r.textContent.toLowerCase().indexOf(s) >= 0;
+      var show = (!s || r.textContent.toLowerCase().indexOf(s) >= 0) &&
+                 (!stage || r.dataset.stage === stage) &&
+                 (!state || r.dataset.state === state);
       r.style.display = show ? '' : 'none';
       if (show) n++;
     }});
-    ct.textContent = s ? (n + ' match' + (n === 1 ? '' : 'es')) : ({total} + ' projects');
+    var active = s || stage || state;
+    ct.textContent = active ? (n + ' of ' + total + ' projects shown')
+                            : (total + ' projects');
+    if (reset) reset.style.display = (active || sorted) ? '' : 'none';
+  }}
+
+  function clearArrows() {{
+    heads.forEach(function(h) {{
+      h.removeAttribute('data-dir');
+      h.querySelector('.arr').textContent = '';
+    }});
+  }}
+
+  function sortBy(h) {{
+    var k = h.dataset.key;
+    var numeric = (k === 'size' || k === 'phase' || k === 'verified');
+    // First click: biggest/verified first for size+source, A-to-Z otherwise.
+    var desc = h.dataset.dir ? h.dataset.dir === 'asc'
+                             : (k === 'size' || k === 'verified');
+    clearArrows();
+    h.dataset.dir = desc ? 'desc' : 'asc';
+    h.querySelector('.arr').textContent = desc ? ' \\u2193' : ' \\u2191';
+    rows.slice().sort(function(a, b) {{
+      var av = a.dataset[k] || '', bv = b.dataset[k] || '';
+      if (numeric) {{ av = parseFloat(av || '-1'); bv = parseFloat(bv || '-1'); }}
+      else if (k === 'date') {{ av = av || '9999'; bv = bv || '9999'; }}
+      if (av < bv) return desc ? 1 : -1;
+      if (av > bv) return desc ? -1 : 1;
+      return a.dataset.urgency - b.dataset.urgency;
+    }}).forEach(function(r) {{ body.appendChild(r); }});
+    sorted = true;
+    if (reset) reset.style.display = '';
+  }}
+
+  heads.forEach(function(h) {{
+    h.addEventListener('click', function() {{ sortBy(h); }});
+  }});
+
+  q.addEventListener('input', apply);
+  if (stageSel) stageSel.addEventListener('change', apply);
+  if (stateSel) stateSel.addEventListener('change', apply);
+  if (reset) reset.addEventListener('click', function() {{
+    q.value = '';
+    if (stageSel) stageSel.value = '';
+    if (stateSel) stateSel.value = '';
+    clearArrows();
+    rows.slice().sort(function(a, b) {{
+      return a.dataset.urgency - b.dataset.urgency;
+    }}).forEach(function(r) {{ body.appendChild(r); }});
+    sorted = false;
+    apply();
   }});
 }})();
 </script>
