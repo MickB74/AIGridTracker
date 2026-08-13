@@ -1,6 +1,71 @@
 {
-  "updated": "2026-08-12",
+  "updated": "2026-08-13",
   "candidates": [
+    {
+      "name": "Ida",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Residents ask questions after Path One presents data center plans in Ida County",
+          "outlet": "KTIV",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNVVBNMjZVT3lLUXdnSVRwak5lcTdSQWNTTXlmc3ZuSFVUZHNfNGtjX1JScVZkVDZPc2xuLXhyUHNBTkRnZ2VCNzBkMmlkYVRuaFY2ZXdYelkxT2pPWmpNbmJ1TDA3TnZFcTJwOUhTcUc1VmoySWJ2XzdSblR4aEowM08xYnc2b1BGVHI1Tmp0aDdzakFiRkVhSG1pbE94U1dTWDNvSHRMQURGZFZuQjQ0a2p3WDh6QQ?oc=5"
+        },
+        {
+          "title": "Residents ask questions after Path One presents data center plans in Ida County",
+          "outlet": "fox10tv.com",
+          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPbG5lU3k5c2xKTzJubTBkRk5DZi16My0ydDhzazNWMWF4LVl2SU5DZkttNVBiaFhlWkQ1bERDMjFNNVBhTThsbXJSYmVVdjMycGN0SmNNRGc5V0ZNSnVQVVJHMzFSM1lkMGJEV3pnaFVlQ0tvNXZ1RlYtMFc0b09PMWZHS0cwX0RhM3JlN2NDSTVFbndPclk1TGxfQ0c5YUp4Z2xBSW1QT2ZOcnJMcnY3WHo5eE5YTUVTcmc?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "status": "new"
+    },
+    {
+      "name": "Hall County",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Hall County residents raise water, housing concerns over $10B data center near Turkey",
+          "outlet": "KVII",
+          "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQNDN1b0ZGM2hjMkJhMkZsVEpXT21HQmttbHhhalJtTk1STEhqR29OTzV3Q0hOTk9fZ1A1U3lwbjQ5bDZaOXE0R1d6THk3bm9IOFdBMkw1LWNDWElZUWVEXzdMNmxBZEpSUkp1eVpFQW9pbmROb0xOX0k3by02YTNZM3B0ZzlLeGtiQWJsNWs5RWxucWxubmZYeGdqMzhKUVhiWER4cVhnendxLWNtR0NHYTFtNkszV2JnZ05PTzZBVS1zcWJkelJpSWJfNTV3a2R5WmxYcS1MSVlQOFNnemZLVGwwMy0wZTFnUC1OQ3UwZjFHdk1PVTBRa1M1UzRHZVRSSVhkRDNR?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "status": "new"
+    },
+    {
+      "name": "Kershaw County",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Kershaw County Council considers one-year moratorium on data centers",
+          "outlet": "WLTX",
+          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQX2R6NnhwTFR5OFlYbFM3NGhLOWlFcHNGRUdKTUFPdkY1cFBHMGJocWtmYjRzTmlYajBCX0FxREt4MC1LbmszZ3JQMnZlYUtmMzZDYlFPRVVpNDlxeFR1ZUkwZ1BhbEpfbC1xbVhsUlVia3V0dHlOS0t4MmJ1VFR3UHQwT2puUHZmbkpVc2trclprLW9fUm1Ea1Jjc1VoQlVGeUJ1T2VhY1c2UDd6RWJtS2ZKU0pBRld0Qjl2TmMycjZLX2lR?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "status": "new"
+    },
+    {
+      "name": "Modesto",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Modesto residents demand city leaders stop data centers from coming to city",
+          "outlet": "CBS News",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNZ2Z6UjhaaGw3N2tNQTdtelVSWDZCYjloNWFzdWpSS0RtR3hrdlptVXlQUzY2V1pnYlhfUTNmM25iZi04U1pyU1J2bUFNVUNadHd2YlJqUGxnenNMOWNzdGhXM3d0YzMya2diRjN5blU2b3haZ0oyN0FnVms1d2lCU0h5bTRNMUFodWhjZGJDaGhtek9Gc0pMSXp0WWpjcGM?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "status": "new"
+    },
     {
       "name": "South Jersey",
       "count": 3,
@@ -25,7 +90,7 @@
       "first_seen": "2026-08-12",
       "last_seen": "2026-08-12",
       "status": "dismissed",
-      "dismiss_reason": "This is Vineland, NJ \u2014 already tracked in LOCAL_BODIES_DF"
+      "dismiss_reason": "This is Vineland, NJ — already tracked in LOCAL_BODIES_DF"
     },
     {
       "name": "Saline",
@@ -67,7 +132,7 @@
       "first_seen": "2026-08-12",
       "last_seen": "2026-08-12",
       "status": "dismissed",
-      "dismiss_reason": "Parse artifact from 'Data Center In Union County' headline \u2014 Union County NJ is covered by Summit NJ moratorium"
+      "dismiss_reason": "Parse artifact from 'Data Center In Union County' headline — Union County NJ is covered by Summit NJ moratorium"
     },
     {
       "name": "Shreveport",
@@ -99,7 +164,7 @@
       "first_seen": "2026-08-12",
       "last_seen": "2026-08-12",
       "status": "dismissed",
-      "dismiss_reason": "Pitt County NC \u2014 the town referenced is Farmville NC, already tracked in MORATORIUMS_DF"
+      "dismiss_reason": "Pitt County NC — the town referenced is Farmville NC, already tracked in MORATORIUMS_DF"
     },
     {
       "name": "Mass.",
@@ -122,7 +187,7 @@
       "count": 1,
       "examples": [
         {
-          "title": "Small plots of land fuel big suspicions among Lubbock residents, who fear it\u2019s for a data center",
+          "title": "Small plots of land fuel big suspicions among Lubbock residents, who fear it’s for a data center",
           "outlet": "The Texas Tribune",
           "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPR1pQQzdjQ21zRXN6MmNHZWVvWVdoTjVFdHRVR1ZET2dsODdpRVp5c3h1LXBjZmFtdDdtTGFuVmNrQjY4NEI0U0xjLTFuRDhYYmNyLVBEUU4yLW1XMWk3Wk9pSWpXenc2cm1mS24waTMyZ2tZbHlRV0VuVXdqM1VwUDJDSlhIZw?oc=5"
         }
@@ -259,7 +324,7 @@
       "first_seen": "2026-08-12",
       "last_seen": "2026-08-12",
       "status": "dismissed",
-      "dismiss_reason": "Parse artifact from 'Fight Over AI Data Center Intensifies In Union County' \u2014 duplicate of Union County NJ"
+      "dismiss_reason": "Parse artifact from 'Fight Over AI Data Center Intensifies In Union County' — duplicate of Union County NJ"
     },
     {
       "name": "Summit",
@@ -355,7 +420,7 @@
       "first_seen": "2026-08-12",
       "last_seen": "2026-08-12",
       "status": "dismissed",
-      "dismiss_reason": "Parse artifact from 'North Richland Hills' headline \u2014 already tracked in LOCAL_BODIES_DF as North Richland Hills, TX"
+      "dismiss_reason": "Parse artifact from 'North Richland Hills' headline — already tracked in LOCAL_BODIES_DF as North Richland Hills, TX"
     },
     {
       "name": "Guadalupe",
@@ -483,7 +548,7 @@
       "first_seen": "2026-08-12",
       "last_seen": "2026-08-12",
       "status": "dismissed",
-      "dismiss_reason": "No verifiable official township website found (Washington County OH); county-level letter of intent may be the more relevant governing action but insufficient time to confirm \u2014 revisit later"
+      "dismiss_reason": "No verifiable official township website found (Washington County OH); county-level letter of intent may be the more relevant governing action but insufficient time to confirm — revisit later"
     },
     {
       "name": "Archer County",
@@ -595,7 +660,7 @@
       "first_seen": "2026-08-12",
       "last_seen": "2026-08-12",
       "status": "dismissed",
-      "dismiss_reason": "Duplicate of Mason County \u2014 already tracked in LOCAL_BODIES_DF as Mason County, KY"
+      "dismiss_reason": "Duplicate of Mason County — already tracked in LOCAL_BODIES_DF as Mason County, KY"
     },
     {
       "name": "Brownhelm",
@@ -682,7 +747,7 @@
       "count": 1,
       "examples": [
         {
-          "title": "'It\u2019s not politics': Ottawa residents gather signatures for proposed ordinance to ban data centers",
+          "title": "'It’s not politics': Ottawa residents gather signatures for proposed ordinance to ban data centers",
           "outlet": "KSHB 41 Kansas City",
           "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxORDRzYWhpZ1RZWEMwTXl2LUwzNHR3bUFNN3dHSGJkcjNUWnpqNW1mLVNDa09taEg2WDFDSGFCXzBEQ1YyOFBhV1BPd1VxcmU3NDBwT0JpVjFXdUlsZjdpR3BWbzJxa21XRU5MM0k4THZVMEZMcFFRcDVMQ2FhbVVRaVFsWWxZVUtST0RLZGR3bk9nMTFCblYwQWZVVHU1ekFFRVBpaGp2aTNpMXlUa3EwWWlub2RLTnA1WFJ3bmF6cVgyMWMtclhZRThoaE5vNDJmLTYzUXJQbWlIMG9p?oc=5"
         }
@@ -794,7 +859,7 @@
       "count": 1,
       "examples": [
         {
-          "title": "Amazon circumvents community vote for massive AI data center using 45-year-old rules \u2014 Gilroy residents locked out of public comment window",
+          "title": "Amazon circumvents community vote for massive AI data center using 45-year-old rules — Gilroy residents locked out of public comment window",
           "outlet": "Tom's Hardware",
           "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOUjJQV3RNbHNna09RcnBqbTdWV3BnRW5yTW5BUmROd0V0djdKeFdBNUxCMnhNZVlmWjdUYWVzYS0tLU5nM2c0MkdTalk2RGk2WUR6YlFoUmdQSFVGUjBDY29wb29kSXNzQm1DTUdOZUlGVkY3N203dGxMcWJVNlA3THhzc2FLSk03OG5YTlBLWjRaVG9OVDQyXzRRbFl1ZTdPWWFEU25Md29iekswLUM5ZGtJb2xXVFJFRU9TMl9BS04zZFBwem54ZUdEME5UZ3J3aVlFTXBGdFRWYl9mT1o0YndBTEV1TnRqWm1aR0l3VURzVXRuMFZVaVIzQWRtQ0d2RmxpUUVwMDFXVFU0ZmpWLXRwUGZoamVhellIYm9Qbw?oc=5"
         }
@@ -806,5 +871,5 @@
       "promote_reason": "Added to LOCAL_BODIES_DF as Gilroy, CA"
     }
   ],
-  "_readme": "Review queue for towns/counties recurring in archived-but-unlocalized story tracker headlines (data/story_candidates.json). Generated by scripts/scan_locality_candidates.py, capped at --max-new (default 39) newly-surfaced names per run. Nothing here is published or cited anywhere on the site. To promote a candidate: research its governing body (its own .gov/town page, never a search snippet) and, if it has taken a real vote, its outcome from the vote's own coverage; add a LOCAL_BODIES_DF row (ongoing fight) and/or a MORATORIUMS_DF row (a confirmed enacted/rejected/proposed vote) in src/constants.py, then run `scripts/backfill_story_candidates.py --relabel` so already-archived stories for that place regroup correctly. Set this entry's status to 'promoted' once done, or 'dismissed' if it's not a real distinct place (a stopword slipped through, or it's already covered under a different name) \u2014 dismissed entries are never re-queued."
+  "_readme": "Review queue for towns/counties recurring in archived-but-unlocalized story tracker headlines (data/story_candidates.json). Generated by scripts/scan_locality_candidates.py, capped at --max-new (default 39) newly-surfaced names per run. Nothing here is published or cited anywhere on the site. To promote a candidate: research its governing body (its own .gov/town page, never a search snippet) and, if it has taken a real vote, its outcome from the vote's own coverage; add a LOCAL_BODIES_DF row (ongoing fight) and/or a MORATORIUMS_DF row (a confirmed enacted/rejected/proposed vote) in src/constants.py, then run `scripts/backfill_story_candidates.py --relabel` so already-archived stories for that place regroup correctly. Set this entry's status to 'promoted' once done, or 'dismissed' if it's not a real distinct place (a stopword slipped through, or it's already covered under a different name) — dismissed entries are never re-queued."
 }
