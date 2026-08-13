@@ -483,7 +483,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .iconcard .ico svg { width:22px; height:22px; }
 .iconcard .body h3 { margin:0 0 4px; }
 .demand-chart { margin:14px 0 6px; }
-.demand-chart .row { display:grid; grid-template-columns:minmax(80px,90px) 1fr minmax(90px,110px);
+.demand-chart .row { display:grid; grid-template-columns:minmax(80px,90px) 1fr auto;
   gap:12px; align-items:center; padding:6px 0; font-size:14px; }
 .demand-chart .yr { color:var(--muted); font-variant-numeric:tabular-nums; }
 .demand-chart .bar { height:22px; border-radius:6px;
@@ -494,6 +494,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   rgba(251,191,36,.35) var(--lo,50%), rgba(251,191,36,.35) 100%); }
 .demand-chart .val { color:var(--ink); font-variant-numeric:tabular-nums;
   font-weight:600; text-align:right; }
+.demand-chart .val .homes { display:block; color:var(--muted); font-weight:400;
+  font-size:12px; white-space:nowrap; }
 .grid-flow-svg { width:100%; height:auto; max-width:820px; margin:14px auto;
   display:block; }
 .grid-flow-svg text { font:600 12px system-ui,-apple-system,sans-serif;
@@ -907,19 +909,21 @@ def build_index():
 </div>
 <section>
   <h2>The trajectory</h2>
-  <p class="muted" style="margin-bottom:6px">U.S. data-center electricity demand, actual and projected — TWh per year.</p>
+  <p class="muted" style="margin-bottom:6px">U.S. data-center electricity demand, actual and projected — TWh per year, with the equivalent number of average U.S. homes powered and the share of all U.S. electricity.</p>
   <div class="demand-chart">
     <div class="row"><span class="yr">2018</span>
-      <div class="bar" style="width:14%"></div><span class="val">76 TWh</span></div>
+      <div class="bar" style="width:14%"></div><span class="val">76 TWh<span class="homes">&asymp; 7.2M homes</span><span class="homes">1.9% of U.S. electricity</span></span></div>
     <div class="row"><span class="yr">2023</span>
-      <div class="bar" style="width:32%"></div><span class="val">176 TWh</span></div>
+      <div class="bar" style="width:32%"></div><span class="val">176 TWh<span class="homes">&asymp; 16.8M homes</span><span class="homes">4.4% of U.S. electricity</span></span></div>
     <div class="row"><span class="yr">2028</span>
-      <div class="bar range" style="width:59%; --lo:56%"></div><span class="val">325&ndash;580</span></div>
+      <div class="bar range" style="width:59%; --lo:56%"></div><span class="val">325&ndash;580<span class="homes">&asymp; 31&ndash;55M homes</span><span class="homes">6.7&ndash;12% of U.S. electricity</span></span></div>
     <div class="row"><span class="yr">2030</span>
-      <div class="bar range" style="width:100%; --lo:56%"></div><span class="val">up to 580</span></div>
+      <div class="bar range" style="width:100%; --lo:56%"></div><span class="val">up to 580<span class="homes">&asymp; up to 55M homes</span><span class="homes">up to &sim;12% of U.S. electricity</span></span></div>
   </div>
+  <p class="muted" style="margin-top:8px">At the high end, that is the electricity of roughly <b>40% of all U.S. households</b> (~132 million) going to data centers by 2030.</p>
   <p class="src">Source: Lawrence Berkeley National Laboratory,
-  <em>2024 U.S. Data Center Energy Usage Report</em> (Dec 2024). 2028&ndash;2030 range reflects low/high AI-adoption scenarios.</p>
+  <em>2024 U.S. Data Center Energy Usage Report</em> (Dec 2024). 2028&ndash;2030 range reflects low/high AI-adoption scenarios; electricity shares are the report&rsquo;s own figures.
+  Homes equivalence uses the EIA average U.S. household consumption of 10,500 kWh/year; household count per U.S. Census.</p>
 </section>
 <section>
   <h2>What you get</h2>

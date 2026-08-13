@@ -317,7 +317,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .iconcard .ico svg { width:22px; height:22px; }
 .iconcard .body h3 { margin:0 0 4px; }
 .demand-chart { margin:14px 0 6px; }
-.demand-chart .row { display:grid; grid-template-columns:minmax(80px,90px) 1fr minmax(90px,110px);
+.demand-chart .row { display:grid; grid-template-columns:minmax(80px,90px) 1fr auto;
   gap:12px; align-items:center; padding:6px 0; font-size:14px; }
 .demand-chart .yr { color:var(--muted); font-variant-numeric:tabular-nums; }
 .demand-chart .bar { height:22px; border-radius:6px;
@@ -328,6 +328,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   rgba(251,191,36,.35) var(--lo,50%), rgba(251,191,36,.35) 100%); }
 .demand-chart .val { color:var(--ink); font-variant-numeric:tabular-nums;
   font-weight:600; text-align:right; }
+.demand-chart .val .homes { display:block; color:var(--muted); font-weight:400;
+  font-size:12px; white-space:nowrap; }
 .grid-flow-svg { width:100%; height:auto; max-width:820px; margin:14px auto;
   display:block; }
 .grid-flow-svg text { font:600 12px system-ui,-apple-system,sans-serif;
@@ -449,7 +451,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 
 <section>
   <h2>Elsewhere in Connecticut</h2>
-  <ul><li><a href="morris-ct.html">Morris</a> — <span class="badge badge-enacted">Enacted</span></li>
+  <ul><li><a href="morris-ct.html">Morris</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2028-05-20</span></li>
 <li><a href="new-haven-ct.html">New Haven</a> — <span class="badge badge-proposed">Proposed</span></li></ul>
 </section>
 <section>
