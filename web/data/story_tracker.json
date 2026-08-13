@@ -1,12 +1,12 @@
 {
   "name": "AI GridWatch data center story tracker",
-  "generated": "2026-08-12",
+  "generated": "2026-08-13",
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 715,
+  "count": 721,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -61,7 +61,7 @@
       "locality": "Lee County",
       "state": "NC",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Big tech, residents clash over data centers",
@@ -72,7 +72,7 @@
       "locality": "Lowell",
       "state": "MA",
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "AI data center discussion sparks skepticism in Butte County residents",
@@ -116,7 +116,7 @@
       "locality": "Wisconsin Rapids",
       "state": "WI",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Jeffersonville passes year-long data center moratorium amid resident outcry and major utility disclosures",
@@ -160,7 +160,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Rep. Wendy Dant Chesser Addresses Resident Concerns Over Meta Data Center, Water Capacity, and AI Regulations",
@@ -204,7 +204,7 @@
       "locality": "Vineland",
       "state": "NJ",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Louisville mayor calls for a data center moratorium as city considers regulations",
@@ -325,7 +325,7 @@
       "locality": "Grayslake",
       "state": "IL",
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Pittsburg residents want city to pause data center project",
@@ -501,7 +501,7 @@
       "locality": "Jackson County",
       "state": "AL",
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "City officials evaluating what statewide data center audit means for Fort Worth projects",
@@ -7101,7 +7101,7 @@
       "locality": "Ohio",
       "state": "OH",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Wytheville Data Center Boom Draws Resident Pushback Over Land, Water, and Electric Rates",
@@ -7156,7 +7156,7 @@
       "locality": "Weld County",
       "state": "CO",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "‘We have to go further’: Kentucky governor signs data center order amid mixed reaction",
@@ -7167,7 +7167,7 @@
       "locality": "Kentucky",
       "state": "KY",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Why it’s so hard to find information about Texas data centers",
@@ -7200,7 +7200,7 @@
       "locality": "Kentucky",
       "state": "KY",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "The data center fight in Kentucky is about democracy",
@@ -7211,7 +7211,7 @@
       "locality": "Kentucky",
       "state": "KY",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Colleton County considering digital infrastructure overlay district, data center development",
@@ -7233,7 +7233,7 @@
       "locality": "Butte County",
       "state": "CA",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Effingham County residents are coming to grips with their neighbor-to-be: OpenAI",
@@ -7255,7 +7255,7 @@
       "locality": "Fayetteville",
       "state": "NC",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Data center fight reveals hard truth for rural Alabama: Counties have little say",
@@ -7277,7 +7277,7 @@
       "locality": "Richmond County",
       "state": "NC",
       "first_seen": "2026-08-09",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Ohio Supreme Court sides with Ashville residents trying to overturn data center agreement",
@@ -7310,7 +7310,7 @@
       "locality": "Gilroy",
       "state": "CA",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Indy council advances pause on data centers, sends to commission for final approval",
@@ -7321,7 +7321,7 @@
       "locality": "Indianapolis",
       "state": "IN",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "AI data centers on the Suncoast: Community meeting draws 150 as North Port schedules expert workshop",
@@ -7332,7 +7332,7 @@
       "locality": "North Port",
       "state": "FL",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Aurora City Council rejects six-month data center ban as it pursues new regulations",
@@ -7343,7 +7343,7 @@
       "locality": "Aurora",
       "state": "CO",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Mayor Brandon Johnson to sign executive order regulating data centers in Chicago",
@@ -7354,7 +7354,7 @@
       "locality": "Chicago",
       "state": "IL",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "WNY weighs AI data center expansion as residents raise noise and environmental concerns",
@@ -7365,7 +7365,7 @@
       "locality": "Western New York",
       "state": "NY",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Chicago Mayor Brandon Johnson signs executive order for stricter data center regulations, calls for a temporary moratorium",
@@ -7376,7 +7376,7 @@
       "locality": "Chicago",
       "state": "IL",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Rochester Hills extends data center moratorium",
@@ -7387,7 +7387,7 @@
       "locality": "Rochester Hills",
       "state": "MI",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Salix city council to consider data center moratorium",
@@ -7409,7 +7409,7 @@
       "locality": "Effingham County",
       "state": "GA",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "In data center hubs Aurora and DeKalb, two different approaches to setting restrictions",
@@ -7420,7 +7420,7 @@
       "locality": "DeKalb",
       "state": "IL",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "As Data Centers Spread, Cities Fight to Keep Up",
@@ -7431,7 +7431,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Nicholasville passes six-month moratorium on data centers",
@@ -7442,7 +7442,7 @@
       "locality": "Nicholasville",
       "state": "KY",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Fort Worth lays out plan to regulate data centers",
@@ -7453,7 +7453,7 @@
       "locality": "Fort Worth",
       "state": "TX",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Augusta data center meeting draws questions on noise, water and power",
@@ -7464,7 +7464,7 @@
       "locality": "Augusta",
       "state": "GA",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Data center industry contributes thousands to Paxton campaign",
@@ -7475,7 +7475,7 @@
       "locality": "Texas",
       "state": "TX",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Court orders pause Lowell data center expansion",
@@ -7497,7 +7497,7 @@
       "locality": "Dodge County",
       "state": "WI",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Wrightstown residents vote no on data center referendum",
@@ -7530,7 +7530,7 @@
       "locality": "Grayslake",
       "state": "IL",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Harris County leaders say data center moratorium unnecessary. Columbus area coalition forms",
@@ -7541,7 +7541,7 @@
       "locality": "Harris County",
       "state": "GA",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Wytheville Data Center Boom Draws Resident Pushback Over Land, Water, and Electric Rates",
@@ -7607,7 +7607,7 @@
       "locality": "Fayetteville",
       "state": "NC",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Wrightstown residents vote no on data center referendum",
@@ -7618,7 +7618,7 @@
       "locality": "Wrightstown",
       "state": "WI",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Linn County will not rezone district near nuclear plant for data centers",
@@ -7629,7 +7629,7 @@
       "locality": "Linn County",
       "state": "IA",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Will El Segundo Become a Center for AI-Development? Residents Worry It Will.",
@@ -7640,7 +7640,7 @@
       "locality": "El Segundo",
       "state": "CA",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Wytheville Data Center Boom Draws Resident Pushback Over Land, Water, and Electric Rates",
@@ -7662,7 +7662,7 @@
       "locality": "Gilroy",
       "state": "CA",
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Wytheville Data Center Boom Draws Resident Pushback Over Land, Water, and Electric Rates",
@@ -7684,7 +7684,7 @@
       "locality": "Salem",
       "state": "OR",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Fort Worth weighs moratorium and new rules as data center projects spark neighborhood concerns",
@@ -7695,7 +7695,7 @@
       "locality": "Fort Worth",
       "state": "TX",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Modesto residents push back against potential data centers",
@@ -7706,7 +7706,7 @@
       "locality": "Modesto",
       "state": "CA",
       "first_seen": "2026-08-09",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "First of two meetings on Upper Merion data center plan to be held Wednesday",
@@ -7717,7 +7717,7 @@
       "locality": "Upper Merion Township",
       "state": "PA",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Newly formed commission set to advise Fort Worth on data center regulations",
@@ -7728,7 +7728,7 @@
       "locality": "Fort Worth",
       "state": "TX",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Data center lawsuit could cost Inver Grove Heights taxpayers millions; path to avoid it moves forward",
@@ -7739,7 +7739,7 @@
       "locality": "Inver Grove Heights",
       "state": "MN",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Data center moratorium takes first steps after Fort Worth City Council’s unanimous vote",
@@ -7750,7 +7750,7 @@
       "locality": "Fort Worth",
       "state": "TX",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Court orders pause Lowell data center expansion",
@@ -7761,7 +7761,7 @@
       "locality": "Lowell",
       "state": "MA",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Plain City Village Council enacts one-year data center development ban",
@@ -7772,7 +7772,7 @@
       "locality": "Plain City",
       "state": "OH",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Wytheville Data Center Boom Draws Resident Pushback Over Land, Water, and Electric Rates",
@@ -7794,7 +7794,7 @@
       "locality": "Michigan",
       "state": "MI",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "A Kentucky county passes a data center moratorium — with a city-sized hole",
@@ -7805,7 +7805,7 @@
       "locality": "Kentucky",
       "state": "KY",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Residents Raise Concerns About Data Centers, WGN Site",
@@ -7816,7 +7816,7 @@
       "locality": "Chicago",
       "state": "IL",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Modesto residents pack City Council meeting, call for ban on AI data centers",
@@ -7827,7 +7827,7 @@
       "locality": "Modesto",
       "state": "CA",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Data-center developer sues Oakland County city",
@@ -7838,7 +7838,7 @@
       "locality": "Michigan",
       "state": "MI",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "A Michigan town is fighting back against data centers — residents say it’s giving them hope",
@@ -7849,7 +7849,7 @@
       "locality": "Michigan",
       "state": "MI",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Data center industry contributes thousands to Paxton campaign",
@@ -7860,7 +7860,7 @@
       "locality": "Texas",
       "state": "TX",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-13"
     },
     {
       "title": "Small town of Lochbuie approves 5-year moratorium on data centers, longest pause in Colorado",
@@ -7872,6 +7872,72 @@
       "state": "CO",
       "first_seen": "2026-08-05",
       "last_seen": "2026-08-12"
+    },
+    {
+      "title": "Residents In Michigan Are Suing A Data Center Over Noise Pollution",
+      "outlet": "bgr.com",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPNUJnZjV3MXZMVDl6WUhPUkRKMEgyQ0o0aW1QaEJIUUY0VmhsYzlCcG9yNDFJT3prSDB6dUZSRDVtMnB3TU5Wd1NXazg0clZuSEZTREFXcHN3SXRFbF8tZHFkWlp5WUVRQndBQURuUWpja3gxZm9ZdTZkY0MzRlBBOWI0ZmNHOVJCb1UyUFF0NDc3ajFJa1pocg?oc=5",
+      "published": "Wed, 12 Aug 2026 23:17:00 GMT",
+      "published_iso": "2026-08-12T23:17:00+00:00",
+      "locality": null,
+      "state": "MI",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Hall County residents raise water, housing concerns over $10B data center near Turkey",
+      "outlet": "KVII",
+      "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQNDN1b0ZGM2hjMkJhMkZsVEpXT21HQmttbHhhalJtTk1STEhqR29OTzV3Q0hOTk9fZ1A1U3lwbjQ5bDZaOXE0R1d6THk3bm9IOFdBMkw1LWNDWElZUWVEXzdMNmxBZEpSUkp1eVpFQW9pbmROb0xOX0k3by02YTNZM3B0ZzlLeGtiQWJsNWs5RWxucWxubmZYeGdqMzhKUVhiWER4cVhnendxLWNtR0NHYTFtNkszV2JnZ05PTzZBVS1zcWJkelJpSWJfNTV3a2R5WmxYcS1MSVlQOFNnemZLVGwwMy0wZTFnUC1OQ3UwZjFHdk1PVTBRa1M1UzRHZVRSSVhkRDNR?oc=5",
+      "published": "Wed, 12 Aug 2026 22:50:26 GMT",
+      "published_iso": "2026-08-12T22:50:26+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Residents ask questions after Path One presents data center plans in Ida County",
+      "outlet": "KTIV",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNVVBNMjZVT3lLUXdnSVRwak5lcTdSQWNTTXlmc3ZuSFVUZHNfNGtjX1JScVZkVDZPc2xuLXhyUHNBTkRnZ2VCNzBkMmlkYVRuaFY2ZXdYelkxT2pPWmpNbmJ1TDA3TnZFcTJwOUhTcUc1VmoySWJ2XzdSblR4aEowM08xYnc2b1BGVHI1Tmp0aDdzakFiRkVhSG1pbE94U1dTWDNvSHRMQURGZFZuQjQ0a2p3WDh6QQ?oc=5",
+      "published": "Wed, 12 Aug 2026 03:48:00 GMT",
+      "published_iso": "2026-08-12T03:48:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Fort Worth City Council Issues Moratorium on New Data Centers",
+      "outlet": "Texas Scorecard",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOaWt4Z1g5bldFNlhfdmZPV3NKYnhhUzVlc0h3NnVoRjU1UHVBNi1KalhrZXF5d29EQm9qdWp3RmVJRGZSYUE2ZHh3eDl5WUlRNG1kNGdWUTBxS1pzVl9PdjlobXNHZjlqVGVQNTg2a19YYTBWRDFud0JFVUp3ZHA4bmY4TFJDWXllakRqVGJtSDZmaXJKTXU0cWpqWQ?oc=5",
+      "published": "Wed, 12 Aug 2026 19:51:36 GMT",
+      "published_iso": "2026-08-12T19:51:36+00:00",
+      "locality": "Fort Worth",
+      "state": "TX",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Kershaw County Council considers one-year moratorium on data centers",
+      "outlet": "WLTX",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQX2R6NnhwTFR5OFlYbFM3NGhLOWlFcHNGRUdKTUFPdkY1cFBHMGJocWtmYjRzTmlYajBCX0FxREt4MC1LbmszZ3JQMnZlYUtmMzZDYlFPRVVpNDlxeFR1ZUkwZ1BhbEpfbC1xbVhsUlVia3V0dHlOS0t4MmJ1VFR3UHQwT2puUHZmbkpVc2trclprLW9fUm1Ea1Jjc1VoQlVGeUJ1T2VhY1c2UDd6RWJtS2ZKU0pBRld0Qjl2TmMycjZLX2lR?oc=5",
+      "published": "Wed, 12 Aug 2026 23:29:00 GMT",
+      "published_iso": "2026-08-12T23:29:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Growing Pushback Against Data Centers in Chicago, Colorado, and Massachusetts",
+      "outlet": "ConstructConnect News",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNUUdfRzdNVEV6elh6TEtONlJlYWV6MU04elFreDdZUC1rWWlJX05oXzdfcVdVeVZlVzdVY1FlQW16a3NRSFAyZ1RYeF9tSnU0RER6cVE5QkpWdHAycGxPYXdJb3RROFJ1bjFDdjRXN1hpdS0zYVlrc3lpNkpXXzYzc1hZV1dvOVgtS0FoWDh5Q0QwcEZ4ekhjeFNYNzJEZ0xMbzBVd0gxZHV5ZjZCYVNrdU1VeFpsaEY2TnFYWHNn0gG-AUFVX3lxTE1RR19HN01URXp6WHpMS042UmVhZXoxTTh6UWt4N1lQLWtZaUlfTmhfN19xV1V5VmVXN1VjUWVBbXprc1FIUDJnVFh4X21KdTRERHpxUTlCSlZ0cDJwbE9hd0lvdFE4UnVuMUN2NFc3WGl1LTNhWWtzeWk2SldfNjNzWFlXV285WC1LQWhYOHlDRDBwRnh6SGN4U1g3MkRnTExvMFV3SDFkdXlmNkJhU2t1TVV4WmxoRjZOcVhYc2c?oc=5",
+      "published": "Wed, 12 Aug 2026 22:10:29 GMT",
+      "published_iso": "2026-08-12T22:10:29+00:00",
+      "locality": "Chicago",
+      "state": "IL",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-13"
     }
   ]
 }
