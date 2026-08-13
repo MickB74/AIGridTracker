@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 731,
+  "count": 738,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -8047,6 +8047,83 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-11",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Data center protesters rally outside Amazon open house near Tri-Cities",
+      "outlet": "Tri-City Herald",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBFbmVkNl9BdnFQZTJXT1Jka043YjZvS2hnRkpqeHdFWnNlbjJrMlFKVGlzeEpyRUo0R3BqWWpnbmZQZWFDaG14V1p4RkJvbzdqOGtoNk5wdlE5MmtnblBYc09vM1htdFJkcG1YZ3ZhMjhRQkRm0gF0QVVfeXFMUFZCMXoxOWpXYmRPbTVpLXQzcGM5N2psQ2lzWjh3R0ZNTGFVMHNDYkU3dm9PdWpIMjMwR1FTcElOTmk4QmRWNEx6REhqc0dsZ19yZGh6Z3VySWxkal9fcmZHTnE2SGJDSVNtV3E2WnUxbzBWN3U?oc=5",
+      "published": "Wed, 12 Aug 2026 19:55:24 GMT",
+      "published_iso": "2026-08-12T19:55:24+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Henrico residents voice concerns about data centers, Flock cameras at supervisors’ meeting",
+      "outlet": "Henrico Citizen",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxObFhtSTB4N0ppQmZIamI2bjNRZFd3ZHZBRTdkR3E2STNzT3NQbDd4ajdBLTh3VEYzMVRINVJKaWlZT2MtSmRRVkRsZ2QzX1hzZDhHQkdNTHhUbG5FYjVoVlBCRF9VdFJ2YzZyU2Q1cjV3YUF3cjNsaUxSRmEyeHZSM0tXT2lIYTl2eVB6ZkxjZXMtMmI3aElvbU9xSnJtdlBjdkVIUkczN05JWlZ0UVFZcFRsanRibC1mXzE1RA?oc=5",
+      "published": "Thu, 13 Aug 2026 19:21:53 GMT",
+      "published_iso": "2026-08-13T19:21:53+00:00",
+      "locality": "Henrico",
+      "state": "VA",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Douglas County approves $19M tax rebate for Parker data center",
+      "outlet": "Denver7",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNZlpZdHJrQ0tRdFo5MGhWMkdKaWZmVjFSb0JkcmJMcC00RnFnX1F6M0VWaEwxckVEbkdQbWNvWHItZkRIVFV0b2RYcEt5V2pkVDFMNUdkZ2RWR2FJOVJWQUIzR0JPTUxkV3lVZnhyREtySWh5cmEtaFhPUTlDN2VZejUzWkNxWTZyWmQ3ZmxCeXY3M05oUHZUVmJJR19sQUNEWFBoSUVrdnRQSUJRU19jRFE4ZTYybEtqYUg3aEpySEhOLW5Y?oc=5",
+      "published": "Wed, 12 Aug 2026 00:34:29 GMT",
+      "published_iso": "2026-08-12T00:34:29+00:00",
+      "locality": "Douglas County",
+      "state": "GA",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Incentives, jobs and residents' concerns: Amazon open house stirs more dialogue",
+      "outlet": "union-bulletin.com",
+      "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxPcVBmdjg0MnZ6alJuWFE3QTZmaU95WnlNZDYwM2NQTDQxRzBJeFNmSkhYUnVBM3hfVDhubDhuOE0yNEZEN0t4eERONXo1c0lidFk0QVB0dDFnTEEtZ0dpZWZHMFNKS0p6YjhzQjE0cjF2VmZNZ3M2QnZSY0RMRTZmR25ESV9kRU9CRHZxNnZVZHk2UXdwZnU3X1gxWUhxRUdlTWtpTWVGVjlfMTI3dUQ0Ykh0SXdvNzV1OUZFenpFZktOZ283eVFKQVpXN1hCY3ZCalZIRmR2WnlaLWpLblFtRzF0OFVpOXh2bzZzNzdMVWl6V0RfRW9jcXJhR0FtZDFkUHdKOUJGUmNTRld1?oc=5",
+      "published": "Thu, 13 Aug 2026 00:30:00 GMT",
+      "published_iso": "2026-08-13T00:30:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Residents pack Ida Grove meeting with questions about proposed data centers",
+      "outlet": "KTIV",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOUE8zMU1lVlctTmlSN3k3aTRJaVdESHIzTDhZcmlZU2ZPSVFKVE5HN0o4a3BwOVFNRXEyc0Jjc09lRjJWWG5ZTkozbHNHQWl4cEhiLVhrZTRVSE9VR0toQzJaN0I2MURqcWU1elRuUUJMQmlMVWxsZFh0VU1pdVZFQWJ5MkRUUGNGR1pvb3NNZVljdHRrNDZRUnJpVnJCZzRuU3hLWUFSRmJzYTg30gHAAUFVX3lxTE1fM2Nod2J3LVpzVkYxV0dibzhOVTNFZEI3UUFDM1hJWDFKTWszRGttMWNLYm8xRVl5ODlvLS1Ua1RQaFl5c0RFclpzQjBETEJPbm45SWpNX3YwT0ZWbVNlWGY0S0NKVE9DVDV0N25hcnhSWEpkbXo3azB1QXhycnNXOWhKMk9pZUpRY3FIN0JhRkZTWkFpcFA2TjVWdFFRS28wOE9oSW5BalJkYmRWNmJQVm5SczdHSHU1S2RNZU43Mw?oc=5",
+      "published": "Wed, 12 Aug 2026 03:48:00 GMT",
+      "published_iso": "2026-08-12T03:48:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Coachella inches toward ban on data centers with final vote expected at the end of the month",
+      "outlet": "kvcrnews.org",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQMGxPRmZJVHZBUnR5dENaQURWdmxrUEItRWpkZlpaemJYOFVWWGFqYkpIV3MzX2ZWcS1IcE5FR1AxLXZOeEQwYTVKLUpCeFpsMC1jc1BOZS1EWW9BSHZkTlNmbTQ5bkEtemUwRV9hSVJ5RDZBcEt4V3BVWE41ZExuMmUweXJNOWNIMG81NVEtaTR2OUxiVnRuQkZaYWNBUWxlZ3VDRkFKd3FSdTZEMU00bTM4VUkxbndvYkQ1Q29DRk9YTlhROXhpU1Y5WnpjVmdfZkNIZXZ3?oc=5",
+      "published": "Thu, 13 Aug 2026 13:04:00 GMT",
+      "published_iso": "2026-08-13T13:04:00+00:00",
+      "locality": "Coachella",
+      "state": "CA",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Residents ask questions after Path One presents data center plans in Ida County",
+      "outlet": "KTTC | Rochester, MN",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPQ1Jtd1lSLUVnYXNCeXBhSUV5WTZXQVk4TkVxTTdRQUIwd09yVElnN0Z0NzJnQnJRMm5oTzdTeUZKc1Y4Q1Z1eGlwdzRYZWRqRVpNOFJhZ3V1SWlHdWdPcnA0YnEwTF9mRUN2N2x3eDBmbG5PN2ZvLXM2OG1FVV9adG9DMXI4a2tHUy13aVUwa1poeV9JX0ltWC13di1rOVhlNl9lRTdkSU1HSGlHNzZmaG83LXRvQQ?oc=5",
+      "published": "Wed, 12 Aug 2026 03:48:00 GMT",
+      "published_iso": "2026-08-12T03:48:00+00:00",
+      "locality": "Ida County",
+      "state": "IA",
+      "first_seen": "2026-08-12",
       "last_seen": "2026-08-13"
     }
   ]
