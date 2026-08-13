@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 735,
+  "count": 737,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -8091,6 +8091,28 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-11",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Coachella inches toward ban on data centers with final vote expected at the end of the month",
+      "outlet": "kvcrnews.org",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQMGxPRmZJVHZBUnR5dENaQURWdmxrUEItRWpkZlpaemJYOFVWWGFqYkpIV3MzX2ZWcS1IcE5FR1AxLXZOeEQwYTVKLUpCeFpsMC1jc1BOZS1EWW9BSHZkTlNmbTQ5bkEtemUwRV9hSVJ5RDZBcEt4V3BVWE41ZExuMmUweXJNOWNIMG81NVEtaTR2OUxiVnRuQkZaYWNBUWxlZ3VDRkFKd3FSdTZEMU00bTM4VUkxbndvYkQ1Q29DRk9YTlhROXhpU1Y5WnpjVmdfZkNIZXZ3?oc=5",
+      "published": "Thu, 13 Aug 2026 13:04:00 GMT",
+      "published_iso": "2026-08-13T13:04:00+00:00",
+      "locality": "Coachella",
+      "state": "CA",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "title": "Experts urge Augusta to look beyond zoning in data center debate",
+      "outlet": "The Augusta Press",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQbFcxcEk5cXIzMzluLVlaNXVaY2FNbkN2SmJkOEM4amZqUWhTNDA5TVJ1NXRhR1E3NVV1RVlkZm1lV3B0cFZrek03UnQ1b015RWRFQ2JTZWg2RFhsVVhlX25Za2xoRHVfOERDZXhLT0NVME5QR2xVOVJraDNpRE9FQjBrVzFxMlVENGpNUG9aeUF1aEg2Z293ZA?oc=5",
+      "published": "Thu, 13 Aug 2026 08:46:26 GMT",
+      "published_iso": "2026-08-13T08:46:26+00:00",
+      "locality": "Augusta",
+      "state": "GA",
+      "first_seen": "2026-08-13",
       "last_seen": "2026-08-13"
     }
   ]
