@@ -56,6 +56,278 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── Texas freezes 474 GW ERCOT data center queue ──
+    {
+        "id": "texas-ercot-queue-freeze-2026",
+        "art": "queue",
+        "section": "stories",
+        "title": "Texas Just Froze 474 GW of Data Center Interconnections. Here's What It Means.",
+        "date": _dt.date(2026, 8, 13),
+        "author": "GridWatch AI",
+        "tags": ["ERCOT", "Texas", "grid", "demand", "infrastructure",
+                 "moratorium", "Governor Abbott", "PUC", "analysis"],
+        "summary": (
+            "On August 3, Governor Abbott directed ERCOT and the PUC of Texas "
+            "to halt all data center interconnection progress pending a "
+            "comprehensive audit. The queue holds roughly 474 GW of requests "
+            "— five times the state's record peak demand — and about 90% of "
+            "them are data centers. It may be the single most consequential "
+            "action any government has taken against the data center buildout."
+        ),
+        "body": """\
+Six weeks ago, we wrote about [ERCOT's data center queue hitting
+233 GW](/blog/ercot-queue-explainer.html) — a number so large it was hard to
+take seriously. Since then, the queue has more than doubled. It now stands at
+roughly **474 GW** of interconnection requests, according to filings reviewed
+by [Utility Dive](https://www.utilitydive.com/news/texas-hits-pause-data-center-interconnections/827046/)
+and multiple law firms tracking the situation. About **90% of those requests
+are data centers**.
+
+On August 3, Governor Greg Abbott did something no one in Texas energy policy
+expected: he told ERCOT to stop.
+
+### What happened
+
+Abbott issued a
+[directive](https://gov.texas.gov/news/post/governor-abbott-directs-comprehensive-data-center-audit)
+to the Public Utility Commission of Texas (PUCT) and ERCOT ordering a
+"comprehensive verification and audit" of every data center project in the
+interconnection queue. His language was blunt: the scale of development "could
+endanger the reliability and stability of the Texas electric grid," and "any
+data center project that fails to comply with the verification and audit
+process... must be denied."
+
+ERCOT responded immediately:
+
+- **Halted "Batch Zero"** — the large-load transmission planning study
+  created under SB 6 (2025) to process applications of 75 MW or more.
+  Approximately 204 GW was eligible; another 270 GW was applying but
+  ineligible
+- **Suspended classification notifications** that were scheduled for August 7,
+  which would have told applicants whether their projects could move forward
+- **Filed for a "good cause exception"** from the PUCT, to be heard at the
+  [August 20 open meeting](https://www.ercot.com/services/comm/mkt_notices/M-A080326-01)
+
+Until the audit is complete, no new data center project can advance through
+ERCOT's interconnection process. There is no stated end date.
+
+### The scale
+
+To understand why this matters, compare the queue to the grid it's trying to
+connect to:
+
+| Metric | Value |
+|--------|-------|
+| ERCOT interconnection queue | **~474 GW** |
+| Data center share of queue | **~90%** (~427 GW) |
+| Texas record peak demand | ~91.3 GW (Jul 22, 2026) |
+| Ratio: queue to peak | **5.2x** |
+| Share of total US DC pipeline | ~20% (~49.8 GW near-term) |
+| Revenue at risk (BNEF est.) | \\$8--15 billion by Q1 2027 |
+
+Not every project in the queue will be built — most won't. Interconnection
+queues are speculative by nature, and the attrition rate is typically 70-80%.
+But even if only 10% of this queue materialises, that's 47 GW of new demand on
+a grid that set its all-time peak of 91.3 GW just two weeks before the freeze.
+ERCOT projects demand reaching approximately 175 GW by 2032 — roughly double
+the current record.
+
+Bloomberg New Energy Finance
+[estimates](https://www.powermag.com/texas-audit-could-delay-49-8-gw-of-data-center-load-cost-projects-up-to-15-billion-bnef-warns/)
+that 49.8 GW of data center load — nearly 20% of the entire U.S. development
+pipeline — faces delays. Revenue at risk: \\$8 billion cumulative by Q1 2027,
+rising to \\$15 billion in a worst case.
+
+### What the audit covers
+
+The directive's scope goes far beyond the usual grid-reliability review. Each
+project must disclose:
+
+1. **Tax incentives and public financial assistance** — what breaks are these
+   projects getting, and are they worth it?
+2. **Electricity demand projections** — projected annual and peak consumption,
+   and whether the grid can serve the load
+3. **On-site generation plans** — are developers building their own power
+   (like Amazon's [7.65 GW gas plant in Pecos County](/blog/amazon-pecos-county-gas-plant-2026.html)),
+   or relying on the shared grid?
+4. **Water sourcing and reuse** — critical in a state where 64 public water
+   systems are currently
+   [limiting usage](https://www.tceq.texas.gov/drinkingwater/trot/droughtw.html)
+   to avoid shortages, and data center water consumption could reach
+   [399 billion gallons annually](https://texasscorecard.com/state/texas-data-centers-thirst-for-water-challenging-state-infrastructure/)
+   by 2030
+5. **Cooling technologies** — air-cooled, closed-loop, or water-efficient
+6. **Community impacts** — noise, lighting, setbacks, traffic, emergency
+   response
+7. **Project ownership** — identifying all controlling interests
+
+That last item is notable. Texas has seen a pattern of projects filed under
+opaque shell companies, making it difficult for communities and regulators to
+assess the financial backing or track record of applicants. The ownership audit
+could force transparency that the market hasn't provided on its own.
+
+### What triggered the survey stat
+
+A proximate trigger was embarrassing data. When the PUCT sent a voluntary
+survey to data center operators asking about water and power usage, only **28
+of 377 companies responded** — a 7.4% response rate covering just 92
+facilities. State Rep. Brad Buckley (R-Salado)
+[called](https://www.texastribune.org/2026/06/23/texas-data-centers-puc-water-survey/)
+participation "pretty pathetic" and said "bad data, bad study." The Data Center
+Coalition's Dan Diorio cited concerns about "proprietary, confidential, and
+competitive information." Non-compliance? A Class C misdemeanor — maximum \\$500
+fine.
+
+That stonewalling gave Abbott political cover. If the industry won't
+self-report, the state will audit.
+
+### What's exempt
+
+The directive carves out two categories:
+
+- **Projects with on-site generation** — if a developer is building its own
+  power plant rather than drawing from the shared grid, the queue freeze
+  doesn't apply. This effectively rewards the Amazon/Pecos County model (build
+  your own gas plant) while penalising developers who planned to tap the grid.
+- **Areas outside ERCOT** — El Paso (on the Western Interconnection) and parts
+  of East Texas (on the Eastern Interconnection) are unaffected.
+
+QTS Data Centers has already
+[agreed to comply](https://gov.texas.gov/news/post/governor-abbott-announces-qts-data-centers-will-meet-texas-standards),
+committing to closed-loop cooling, dedicated on-site power generation, and
+ensuring projects don't increase residential electricity costs — becoming the
+first major operator to publicly meet Abbott's standards. Meanwhile, Diode
+Ventures
+[withdrew](https://gov.texas.gov/news/post/east-texas-data-center-withdraws-after-falling-short-of-governor-abbotts-standards)
+its proposed data center near Cedar Creek Lake after failing to meet them.
+Abbott: "Data centers that want to do business in Texas must meet a clear
+standard. This project did not."
+
+### Abbott's reversal
+
+The political arc is striking. In November 2025, Abbott celebrated Texas as
+"the epicenter of AI development" when Google announced a \\$40 billion
+investment. By June 10, 2026, he was issuing standards requiring data centers
+to provide their own power and water. By June 30, he called for banning data
+centers from "rural Texas neighborhoods." By August 3, he froze the entire
+interconnection queue.
+
+What changed? Three forces converged:
+
+**Grid stress.** ERCOT set a new all-time peak of
+[91,308 MW on July 22](https://www.eia.gov/todayinenergy/detail.php?id=67906),
+and CEO Pablo Vegas warned that "the ease at which we got through last week's
+peaks would not be the way I would characterize the future in two to three
+years." Peak demand pressure is shifting to late evening when solar drops and
+batteries deplete.
+
+**Rural backlash.** Nearly half of planned facilities now target unincorporated
+rural areas (up from 12%), and nearly two-thirds of rural Texans oppose
+construction in their communities, per a UT/Texas Politics Project poll. Most
+facilities are in districts with Republican representatives. Communities across
+Texas — San Marcos, Hays County, Fort Worth, Denton — have been fighting data
+center proposals for months. Nationally, **285 communities across 35 states**
+have now enacted or proposed moratoriums, according to our
+[tracker](/moratoriums.html). Hill County passed the state's first local data
+center moratorium in May 2026 but
+[rescinded it](https://www.texastribune.org/2026/06/05/texas-hill-county-moratorium-rescinded-data-centers/)
+after a developer sued for \\$100 million — a cautionary tale about the limits
+of local action.
+
+**Bipartisan pressure.** Perhaps the most remarkable signal: Texas Agriculture
+Commissioner Sid Miller, a Republican, called Abbott's directive
+"[all hat and no cattle](https://www.texastribune.org/2026/08/06/sid-miller-republicans-elections-data-centers-abbott/),"
+demanded a special session, and said Abbott should return campaign donations
+from data center companies. "Republicans should be on this issue and we're
+not," Miller said. "The Democrats are, and they're right." He warned
+Republicans will lose statewide elections over data centers. When a Republican
+statewide official tells his own party to follow the Democrats on an
+infrastructure issue in Texas, the political ground has shifted.
+
+### What it means for developers
+
+Multiple law firms have published client advisories since the directive, and
+the consensus is that this is not a temporary inconvenience:
+
+- [Foley & Lardner](https://www.foley.com/insights/publications/2026/08/governor-abbott-pauses-texas-data-center-interconnections-and-calls-for-verification-and-audit-what-data-center-developers-need-to-know-now/):
+  "open-ended approval delays" with "no one knowing how long audits will take."
+  Advises developers to prepare comprehensive audit documentation immediately
+- [Morrison & Foerster](https://www.mofo.com/resources/insights/260811-texas-governor-orders-data-center-moratorium-disrupting):
+  the moratorium "disrupts projects under construction and challenges the
+  ability of parties to existing transactions to comply with their contractual
+  obligations"
+- [Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/08/texas-gov-abbott-directs-data-center-audit):
+  "political strategy is now as critical as securing land and power access"
+- [Troutman Pepper](https://www.troutman.com/insights/texas-hits-pause-on-data-center-grid-connections-amid-growing-oversight-push/):
+  advises reviewing contracts for "change in law" and "force majeure" triggers
+
+Oncor CEO Allen Nye
+[maintained](https://www.utilitydive.com/news/fate-of-oncors-nearly-300-gw-load-pipeline-unclear-following-texas-data-ce/827303/)
+confidence — "we continue to have really strong growth" — but Oncor's
+\\$47.5 billion capital plan does not yet include Batch Zero spending. Sempra
+CEO Jeff Martin backed the pause, supporting "durable long-term outcomes."
+
+### What it means for communities
+
+This is the most powerful signal yet that the "build first, ask permission
+later" era of data center development may be ending — at least in Texas.
+
+For communities currently fighting data center proposals, the audit provides
+new leverage. If the state itself is questioning whether these projects are
+worth the cost, a local planning board has cover to ask the same questions.
+
+For communities where projects are already approved, the freeze changes nothing
+directly. But the audit's findings — particularly on tax incentives and
+community impacts — could reshape the terms of future negotiations everywhere.
+
+### What to watch
+
+- **August 20**: PUCT open meeting where ERCOT presents its "good cause
+  exception" request. This will signal how long the freeze is likely to last.
+- **The QTS model**: If individual projects can proceed upon completing their
+  own audit (as
+  [Jones Day notes](https://www.jonesday.com/en/insights/2026/08/texas-pauses-data-center-approvals-for-statewide-audit-stops-short-of-ban)
+  is ambiguous in the directive), the freeze becomes a compliance filter rather
+  than a blanket pause. Good actors advance; speculators exit.
+- **On-site generation carve-out**: If the freeze pushes more developers toward
+  building private gas plants to bypass the queue, the environmental
+  implications could be significant — trading grid reliability risk for
+  emissions risk.
+- **January 2027 legislature**: PUCT has indicated it will seek expanded
+  statutory authority when the 90th Texas Legislature convenes. Abbott has
+  signaled he will pursue legislation codifying audit requirements, mandatory
+  annual reporting of electricity and water usage, and repeal of data center
+  sales tax exemptions.
+- **Other states watching**: Ohio, Arizona, Illinois, and Oregon have already
+  paused data center tax incentives. A Texas-scale queue freeze could inspire
+  similar actions in PJM, SPP, or MISO territories where large-load queues
+  are also growing.
+
+### Unprecedented
+
+ERCOT has never frozen its entire interconnection queue. The Batch Zero process
+itself was brand new — created by SB 6 in 2025 — so the freeze hit the very
+first cohort of applicants. For comparison, the last time Texas's grid was this
+much in the national spotlight was February 2021, when
+[Winter Storm Uri](https://energy.utexas.edu/research/ercot-blackout-2021)
+caused 34 GW of unplanned outages, left 4.5+ million homes without power, and
+killed at least 57 people. Since then, about 40,000 MW of generation has been
+added. But NERC has warned that data centers' round-the-clock consumption makes
+it harder to sustain supply during extreme demand — the very scenario Uri
+demonstrated.
+
+The freeze is Abbott's answer to a question Texas hasn't had to ask before:
+what happens when the demand side of the grid grows faster than the supply side
+can keep up?
+
+---
+
+*The [ERCOT queue explainer](/blog/ercot-queue-explainer.html) provides
+background on how the interconnection process works and why the queue grew so
+fast. Our [moratorium tracker](/moratoriums.html) tracks all 285 local and
+state-level actions nationwide.*
+""",
+    },
     # ── Amazon's off-grid gas plant in Pecos County, TX ──
     {
         "id": "amazon-pecos-county-gas-plant-2026",

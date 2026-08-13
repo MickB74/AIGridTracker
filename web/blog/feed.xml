@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Texas Just Froze 474 GW of Data Center Interconnections. Here&#x27;s What It Means.</title>
+      <link>https://aigridwatch.com/blog/texas-ercot-queue-freeze-2026</link>
+      <guid>https://aigridwatch.com/blog/texas-ercot-queue-freeze-2026</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <description>On August 3, Governor Abbott directed ERCOT and the PUC of Texas to halt all data center interconnection progress pending a comprehensive audit. The queue holds roughly 474 GW of requests — five times the state&#x27;s record peak demand — and about 90% of them are data centers. It may be the single most consequential action any government has taken against the data center buildout.</description>
+    </item>
+    <item>
       <title>Amazon&#x27;s New Texas Data Center Could Become the Single Biggest Polluter in America</title>
       <link>https://aigridwatch.com/blog/amazon-pecos-county-gas-plant-2026</link>
       <guid>https://aigridwatch.com/blog/amazon-pecos-county-gas-plant-2026</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/utility-bill-explainer-2026</guid>
       <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
       <description>Capacity charges, peak load auctions, and the coincident-peak trap: a plain-language guide to the parts of your electric bill you&#x27;ve never heard of — and why data center growth is making them explode.</description>
-    </item>
-    <item>
-      <title>How the Industry Files Your Protest: &#x27;Social License&#x27; and the $64B Risk Column</title>
-      <link>https://aigridwatch.com/blog/social-license-risk-2026</link>
-      <guid>https://aigridwatch.com/blog/social-license-risk-2026</guid>
-      <pubDate>Sat, 11 Jul 2026 00:00:00 GMT</pubDate>
-      <description>Data-center developers don&#x27;t have a risk category called &#x27;protests.&#x27; They have &#x27;social license to operate&#x27; — and organized community opposition has now blocked or delayed an estimated $64 billion in projects. Here&#x27;s how the industry actually scores the risk that you&#x27;ll show up to a hearing.</description>
     </item>
 </channel>
 </rss>

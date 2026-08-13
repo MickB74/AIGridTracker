@@ -8335,7 +8335,7 @@ def build_methodology():
 
 def build_studies():
     """Static twin of src/ui/studies_tab.py — state study library."""
-    studies = _load_ast_literal("src/ui/studies_tab.py", "STATE_STUDIES")
+    studies = _load_ast_literal("src/ui/state_detail.py", "STATE_STUDIES")
     cards = []
     for state, s in studies.items():
         findings = "\n".join(f"<li>{_md_to_html(f).replace('<p>', '').replace('</p>', '')}</li>"

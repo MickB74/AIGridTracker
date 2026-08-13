@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/texas-ercot-queue-freeze-2026",
+      "destination": "/blog/texas-ercot-queue-freeze-2026",
+      "permanent": true
+    },
+    {
       "source": "/amazon-pecos-county-gas-plant-2026",
       "destination": "/blog/amazon-pecos-county-gas-plant-2026",
       "permanent": true

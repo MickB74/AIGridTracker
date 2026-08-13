@@ -45,6 +45,7 @@ from src.ui.toolkit_tab import render_toolkit_tab
 from src.ui.consulting_tab import render_consulting_tab
 from src.ui.impact_tab import render_impact_tab
 from src.ui.start_here_tab import render_start_here_tab
+from src.ui.map_tab import render_map_tab
 from src.ui.newsletter import render_newsletter_signup
 
 # Static front door. Reference content (state briefings, company profiles,
@@ -631,9 +632,10 @@ st.info(
     "🚨 **New here because of a local proposal?** Open **Start here** — the "
     "first tab below — for a five-step guided plan and a downloadable action pack."
 )
-(tab_start, tab_toolkit, tab_simulate, tab_technical,
+(tab_start, tab_map, tab_toolkit, tab_simulate, tab_technical,
  tab_intel, tab_reference, tab_consulting) = st.tabs([
     "🚨 Start here",
+    "🗺️ Map",
     "🛡️ Negotiation toolkit",
     "🎮 Estimate & simulate",
     "🔬 Token calculator",
@@ -645,6 +647,10 @@ st.info(
 # ── Start here (guided wizard) ────────────────────────────────────────── #
 with tab_start:
     render_start_here_tab()
+
+# ── Map (unified interactive map) ────────────────────────────────────── #
+with tab_map:
+    render_map_tab()
 
 # ── Negotiation toolkit (generators: CBA, dividend, meeting prep) ─────── #
 with tab_toolkit:

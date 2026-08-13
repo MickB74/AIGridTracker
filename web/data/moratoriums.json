@@ -1634,9 +1634,9 @@
       "days_left": null,
       "when": "Aug 3, 2026",
       "expires": null,
-      "note": "Governor's directive pausing data center grid-connection approvals pending an audit of tax breaks, power and water use, community mitigation and ownership; ERCOT paused its 'batch zero' review. Excludes projects building on-site generation and areas outside ERCOT. No end date, and critics call the scope vague \u2014 treat as a hold on the queue, not a construction ban",
+      "note": "Governor directed ERCOT and PUC to freeze all data center interconnection progress pending a comprehensive audit. ERCOT halted 'Batch Zero' large-load study and suspended Aug 7 classification notifications. Queue holds ~474 GW (~90%% data centers) \u2014 5x Texas's record peak demand. Audit scope: tax incentives, water, community impacts, on-site generation, ownership. Excludes projects with on-site generation and areas outside ERCOT. PUCT open meeting Aug 20. No end date \u2014 treat as a hold on the queue, not a construction ban",
       "source": "https://www.texastribune.org/2026/08/03/texas-data-center-project-audit-greg-abbott/",
-      "as_of": "2026-08-04",
+      "as_of": "2026-08-13",
       "verified": true,
       "lat": null,
       "lon": null
