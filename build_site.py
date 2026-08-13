@@ -1875,6 +1875,74 @@ YOUTUBE_QUERY = ('("data center" OR "data centers" OR datacenter) '
                  'OR grid OR electricity OR lawsuit OR zoning) '
                  'when:6w site:youtube.com')
 
+# Data-center title terms shared by the Google News video search re-filter
+# and the curated channel feeds below.
+VIDEO_DC_TERMS = ("data center", "datacenter", "data centre", "hyperscale")
+
+# Channels beyond the newsroom allowlist, polled directly via YouTube's
+# per-channel RSS (no API key). Curated by hand: creators, advocacy groups,
+# and investigative outfits that cover data-center fights but rarely surface
+# through the Google News search above. Because membership is curated, a
+# data-center-titled upload from one of these is on-topic by construction —
+# only the data-center term filter applies here, not the impact-term/junk
+# heuristics the open search needs. Channel IDs verified 2026-08-13 against
+# each channel's canonical feed link.
+VIDEO_CHANNELS = [
+    ("More Perfect Union", "UCehBVAPy-bxmnbNARF-_tvA"),
+    ("Food & Water Watch", "UCwLpzY6cUOEZAOwmIAez26A"),
+    ("Climate Town", "UCuVLG9pThvBABcYCm7pkNkA"),
+    ("Gamers Nexus", "UChIs72whgZI9w6d6FhwGGHA"),
+    ("Practical Engineering", "UCMOqf8ab-42UUQIdVoKwjlQ"),
+    ("Adam Something", "UCcvfHa-GHSOHFAjU0-Ie57A"),
+]
+
+
+def _fetch_channel_videos():
+    """Poll each curated channel's YouTube RSS feed (last ~15 uploads) for
+    data-center-titled videos. Unlike the Google News redirect links, these
+    entries carry a real video id, so their cards get thumbnails."""
+    import urllib.request as _ur
+    import xml.etree.ElementTree as _ET
+    ATOM = "{http://www.w3.org/2005/Atom}"
+    YT = "{http://www.youtube.com/xml/schemas/2015}"
+    out = []
+    for name, channel_id in VIDEO_CHANNELS:
+        url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
+        try:
+            req = _ur.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with _ur.urlopen(req, timeout=20) as resp:
+                root = _ET.fromstring(resp.read())
+        except Exception as e:                                    # noqa: BLE001
+            print(f"  [youtube] channel feed failed ({name}): {e}")
+            continue
+        for entry in root.iter(f"{ATOM}entry"):
+            title = (entry.findtext(f"{ATOM}title") or "").strip()
+            if not any(t in title.lower() for t in VIDEO_DC_TERMS):
+                continue
+            vid = (entry.findtext(f"{YT}videoId") or "").strip()
+            if not vid:
+                continue
+            item = {
+                "title": title,
+                "source": name,
+                "link": f"https://www.youtube.com/watch?v={vid}",
+                "video_id": vid,
+                "published_iso": (entry.findtext(f"{ATOM}published") or "").strip(),
+                "category": "independent",
+            }
+            item["states"] = _news_states_for(item)
+            out.append(item)
+    return out
+
+
+def _video_category(v):
+    """'news' or 'independent'. A stored category (channel-feed items carry
+    one) wins; everything else came through the Google News video search —
+    mostly TV-station and outlet uploads — and Google reports its source as
+    just "YouTube", so the pipeline itself is the only reliable classifier:
+    no stored category means the news search found it."""
+    return v.get("category") or "news"
+
 
 def _extract_youtube_id(url):
     import urllib.parse as _up
@@ -1919,7 +1987,6 @@ def _fetch_youtube_live(limit=40):
     from email.utils import parsedate_to_datetime
     # Google News OR-matches loosely, so re-filter titles ourselves:
     # require BOTH a data-center term and at least one impact/community term.
-    DC_TERMS = ("data center", "datacenter", "data centre", "hyperscale")
     IMPACT_TERMS = (
         "community", "residents", "neighbor", "neighbour", "noise",
         "water", "cooling", "moratorium", "ban", "ratepayer", "bill",
@@ -1944,7 +2011,7 @@ def _fetch_youtube_live(limit=40):
         tl = title.lower()
         if any(j in tl for j in JUNK):
             continue
-        if not any(t in tl for t in DC_TERMS):
+        if not any(t in tl for t in VIDEO_DC_TERMS):
             continue
         if not any(t in tl for t in IMPACT_TERMS):
             continue
@@ -2000,6 +2067,16 @@ def _load_youtube():
     if fresh:
         return cache["items"], cache["fetched_at"]
     live = _fetch_youtube_live()
+    # Pool in the curated channel feeds. Dedupe by link is enough: Google News
+    # items carry opaque redirect URLs, channel items canonical watch URLs, so
+    # cross-source overlap is invisible anyway — the archive merge downstream
+    # is what keeps one record per link over time.
+    channel_vids = _fetch_channel_videos()
+    seen_links = {v["link"] for v in live}
+    live += [v for v in channel_vids if v["link"] not in seen_links]
+    live.sort(key=lambda x: x.get("published_iso", ""), reverse=True)
+    if channel_vids:
+        print(f"  [youtube] {len(channel_vids)} from curated channels")
     if not live:
         if cache:
             return cache["items"], cache["fetched_at"]
@@ -2909,8 +2986,10 @@ def _video_card_html(v):
 
 def build_videos_page(videos, fetched_at):
     """Standalone video coverage, split out from the news feed so headlines
-    and watchable segments each get their own page. Same vetted-channel
-    YouTube results, filterable by state; deep-linkable with ?state=."""
+    and watchable segments each get their own page. Two sections: newsroom
+    segments (Google News search, allowlist-classified) and everything else
+    (curated channel feeds + unmatched uploads). Filterable by state;
+    deep-linkable with ?state=."""
     videos = videos or []
     back = ('<p class="muted"><a href="news/">&larr; Back to news headlines</a></p>')
 
@@ -2933,7 +3012,11 @@ build. Try again shortly, or read the <a href="news/">news headlines</a>.</p></s
     covered = sorted({st for v in videos for st in v.get("states", [])})
     state_options = '<option value="">All states</option>' + "".join(
         f'<option value="{esc(st)}">{esc(st)}</option>' for st in covered)
-    cards = "".join(_video_card_html(v) for v in videos[:48])
+    news_vids = [v for v in videos if _video_category(v) == "news"][:48]
+    indie_vids = [v for v in videos if _video_category(v) != "news"][:48]
+    news_cards = "".join(_video_card_html(v) for v in news_vids)
+    indie_cards = "".join(_video_card_html(v) for v in indie_vids)
+    channel_names = ", ".join(esc(n) for n, _ in VIDEO_CHANNELS)
 
     import datetime as _dt
     try:
@@ -2946,8 +3029,9 @@ build. Try again shortly, or read the <a href="news/">news headlines</a>.</p></s
   <div class="kicker">Videos</div>
   <h1>Watch: data center video coverage</h1>
   <p class="sub">Explainers and reporting on data centers, the grid, water, and
-  local fights — from vetted channels only: PBS NewsHour, WSJ, Bloomberg, CNBC,
-  Reuters, FT, The Verge, Vox. Filtered to data-center / grid topics.</p>
+  local fights — newsroom segments (PBS NewsHour, WSJ, Bloomberg, CNBC, Reuters
+  and peers) plus independent creators, advocacy groups, and community uploads.
+  Filtered to data-center / grid topics.</p>
   <p class="muted">Last updated {esc(fetched_display)} · <a href="news/">News headlines &rarr;</a></p>
 </header>
 
@@ -2964,22 +3048,36 @@ build. Try again shortly, or read the <a href="news/">news headlines</a>.</p></s
   grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }}
 </style>
 
-<section id="videos">
-  <div class="vid-controls">
-    <label>State
-      <select id="vidStateFilter">{state_options}</select>
-    </label>
-    <span id="vidCount" class="muted"></span>
-  </div>
-  <div class="video-grid">{cards}</div>
-  <p id="noVideos" class="muted" style="display:none;margin-top:16px">
-    No videos tagged for that state yet.</p>
+<div class="vid-controls">
+  <label>State
+    <select id="vidStateFilter">{state_options}</select>
+  </label>
+  <span id="vidCount" class="muted"></span>
+</div>
+
+<section class="video-section" id="videos">
+  <h2>From the news search</h2>
+  <p class="muted">TV segments and outlet uploads surfaced by the automated
+  news search — mostly local stations covering hearings, moratoriums, and
+  rate fights.</p>
+  <div class="video-grid">{news_cards}</div>
 </section>
 
+<section class="video-section" id="community-videos">
+  <h2>Beyond the newsrooms</h2>
+  <p class="muted">Independent creators and advocacy channels we follow
+  directly — {channel_names} — voices the news search misses.</p>
+  <div class="video-grid">{indie_cards}</div>
+</section>
+
+<p id="noVideos" class="muted" style="display:none;margin-top:16px">
+  No videos tagged for that state yet.</p>
+
 <section>
-  <p class="muted" style="margin-top:24px">Video results are an automated,
-  channel-restricted search, not endorsements — follow each link to the
-  original video. State tags are auto-detected and may be approximate.</p>
+  <p class="muted" style="margin-top:24px">Video results are automated — a
+  channel-restricted news search plus feeds from a curated set of independent
+  channels — not endorsements. Follow each link to the original video. State
+  tags are auto-detected and may be approximate.</p>
 </section>
 
 <script>
@@ -2988,6 +3086,7 @@ build. Try again shortly, or read the <a href="news/">news headlines</a>.</p></s
   var count = document.getElementById('vidCount');
   var none = document.getElementById('noVideos');
   var cards = Array.prototype.slice.call(document.querySelectorAll('.video-card'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('.video-section'));
   function apply() {{
     var state = sel.value;
     var shown = 0;
@@ -2996,6 +3095,13 @@ build. Try again shortly, or read the <a href="news/">news headlines</a>.</p></s
       var match = !state || states.indexOf(state) !== -1;
       c.style.display = match ? '' : 'none';
       if (match) shown++;
+    }});
+    sections.forEach(function(s) {{
+      var visible = s.querySelectorAll('.video-card').length &&
+        Array.prototype.some.call(s.querySelectorAll('.video-card'), function(c) {{
+          return c.style.display !== 'none';
+        }});
+      s.style.display = visible ? '' : 'none';
     }});
     count.textContent = state ? (shown + ' video' + (shown === 1 ? '' : 's') + ' · ' + state)
                               : (cards.length + ' videos');
@@ -3011,8 +3117,8 @@ build. Try again shortly, or read the <a href="news/">news headlines</a>.</p></s
 """
     return page(
         "Videos — data center coverage by state — AI GridWatch",
-        "Vetted-channel video coverage of data center and grid issues — "
-        "explainers and reporting, filterable by state.",
+        "Video coverage of data center and grid issues — newsroom segments "
+        "plus independent creators and community uploads, filterable by state.",
         body, f"{SITE_URL}/videos", depth=0,
         jsonld=_breadcrumb(("Home", SITE_URL), ("Videos", f"{SITE_URL}/videos")))
 
