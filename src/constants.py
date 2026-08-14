@@ -5295,6 +5295,29 @@ STORY_QUERY = ('data center residents (noise OR water OR "electric bill" OR '
                'rates OR lawsuit OR complaints OR moratorium OR pollution OR '
                '"property values") when:7d')
 
+# Companion query without the "residents" anchor: bans, lawsuits, ordinances,
+# and statehouse action routinely run under headlines that never say
+# "residents" ("Millville Bans Data Centers…", "Legislature votes to
+# eliminate…"), so STORY_QUERY alone missed most of the NJ ban/lawsuit wave.
+# Pooled with STORY_QUERY (deduped by link) everywhere the community-impact
+# feed is fetched.
+STORY_QUERY_ACTIONS = ('data center (ban OR moratorium OR lawsuit OR '
+                       'ordinance OR rezoning OR "planning board" OR '
+                       '"town council" OR "public hearing" OR "tax credits" '
+                       'OR legislation) when:7d')
+
+# Per-state feeds for states with unusually hot fights — broad "<state> data
+# center" pulls so town-level stories that match no impact keyword still make
+# the archive. Key = full state name (matches _news_states_for / STATE_PUCS_DF
+# "state" column); items fetched from one of these are force-tagged with that
+# state. Used at site-build time only (build_site.py), not by the app carousel.
+STORY_STATE_QUERIES = {
+    "New Jersey": '"New Jersey" data center when:7d',
+    "Virginia": '"Virginia" data center when:7d',
+    "Georgia": '"Georgia" data center when:7d',
+    "Texas": '"Texas" data center when:7d',
+}
+
 STORY_ANGLES = [
     (("noise", "hum", "sound", "decibel"), "🔊",
      "Noise from the facility is drawing resident complaints."),

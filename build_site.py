@@ -1790,16 +1790,40 @@ def _fetch_google_news_rss(query, limit=60):
     return out
 
 
-def _fetch_news_live(limit=60):
-    """Broad community-impact query used by state pages and the flat feed.
-    Returns a list of items (each tagged with `states`) or None on failure."""
-    from src.constants import STORY_QUERY
-    items = _fetch_google_news_rss(STORY_QUERY, limit=limit)
-    if not items:
-        return None
-    for it in items:
-        it["states"] = _news_states_for(it)
-    return items
+def _fetch_news_live(limit=100):
+    """Community-impact feed used by state pages and the flat feed: the
+    resident-impact query pooled with the bans/lawsuits/legislation query and
+    the per-state hot-state queries, deduped by link (Google News article
+    links are deterministic per article, so cross-query dupes collapse).
+    Items from a per-state query are force-tagged with that state — those
+    headlines often name only the town ("Millville Bans Data Centers"), which
+    _news_states_for can't place. Returns a list of items (each tagged with
+    `states`) or None on total failure."""
+    from src.constants import (
+        STORY_QUERY, STORY_QUERY_ACTIONS, STORY_STATE_QUERIES,
+    )
+    seen, out = set(), []
+
+    def _add(query, label, force_state=None):
+        items = _fetch_google_news_rss(query, limit=limit)
+        fresh = 0
+        for it in items:
+            link = it.get("link")
+            if not link or link in seen:
+                continue
+            seen.add(link)
+            it["states"] = _news_states_for(it)
+            if force_state and force_state not in it["states"]:
+                it["states"] = sorted(it["states"] + [force_state])
+            out.append(it)
+            fresh += 1
+        print(f"  [news] {label}: {len(items)} items, {fresh} new")
+
+    _add(STORY_QUERY, "impact query")
+    _add(STORY_QUERY_ACTIONS, "actions query")
+    for state, query in STORY_STATE_QUERIES.items():
+        _add(query, f"state query {state!r}", force_state=state)
+    return out or None
 
 
 def _story_angle_build(title):
@@ -6921,7 +6945,9 @@ def _projects_geo():
                     "stage": _geo_s(r.stage), "locality": _geo_s(r.locality),
                     "state": _geo_s(r.state),
                     "mw": (int(mw) if mw is not None else None),
-                    "hearing_soon": bool(getattr(r, "hearing_soon", False))})
+                    "hearing_soon": bool(getattr(r, "hearing_soon", False)),
+                    "hearing_date": _geo_s(getattr(r, "hearing_date", "")),
+                    "next_action": _geo_s(getattr(r, "next_action", ""))})
     return out
 
 
@@ -6943,9 +6969,11 @@ const bounds = [];
 PROJECTS.forEach(function(p) {
   L.circleMarker([p.lat, p.lon], {radius:8, color:projColor(p), weight:1,
     fillColor:projColor(p), fillOpacity:0.85}).addTo(map)
-    .bindPopup('<b>'+esc(p.name)+'</b><br>'+esc(p.locality)+', '+esc(p.state)+
-      (p.mw ? ' &middot; '+p.mw+' MW' : '')+'<br><b>'+esc(p.stage)+'</b><br>'+
-      '<a href="#p-'+esc(p.id)+'">Jump to dossier &darr;</a>');
+    .bindPopup('<b>'+esc(p.name)+'</b><br>'+esc(p.operator)+'<br>'+esc(p.locality)+', '+esc(p.state)+
+      (p.mw ? ' &middot; '+p.mw+' MW' : '')+'<br><b>'+esc(p.stage)+'</b>'+
+      (p.hearing_date?'<br>Hearing: '+esc(p.hearing_date):'')+
+      (p.next_action?'<br><em>'+esc(p.next_action)+'</em>':'')+
+      '<br><a href="#p-'+esc(p.id)+'">Jump to dossier &darr;</a>');
   bounds.push([p.lat, p.lon]);
 });
 if (bounds.length) map.fitBounds(bounds, {padding:[30,30], maxZoom:6});
@@ -6971,13 +6999,23 @@ function projColor(p){
 const projLayer = L.layerGroup(), siteLayer = L.layerGroup(), morLayer = L.layerGroup();
 PROJECTS.forEach(p => mk(p.lat,p.lon,projColor(p),8).bindPopup(
   '<b>'+esc(p.name)+'</b><br>'+esc(p.operator)+'<br>'+esc(p.locality)+', '+esc(p.state)+
-  (p.mw?' &middot; '+p.mw+' MW':'')+'<br><b>'+esc(p.stage)+'</b><br>'+
-  '<a href="projects#p-'+esc(p.id)+'">Project details &rarr;</a>').addTo(projLayer));
+  (p.mw?' &middot; '+p.mw+' MW':'')+'<br><b>'+esc(p.stage)+'</b>'+
+  (p.hearing_date?'<br>Hearing: '+esc(p.hearing_date):'')+
+  (p.next_action?'<br><em>'+esc(p.next_action)+'</em>':'')+
+  '<br><a href="projects#p-'+esc(p.id)+'">Project details &rarr;</a>').addTo(projLayer));
 SITES.forEach(s => mk(s.lat,s.lon,'#38bdf8',5).bindPopup(
-  '<b>'+esc(s.operator)+'</b>'+(s.tenant&&s.tenant!==s.operator?' &middot; tenant '+esc(s.tenant):'')+
-  '<br>'+esc(s.location)+', '+esc(s.state)).addTo(siteLayer));
+  '<b>'+esc(s.operator)+'</b>'+
+  (s.owner?'<br>Owner: '+esc(s.owner):'')+
+  (s.tenant&&s.tenant!==s.operator?'<br>Tenant: '+esc(s.tenant):'')+
+  '<br>'+esc(s.location)+', '+esc(s.state)+
+  (s.stateLink?'<br><a href="states/'+esc(s.stateLink)+'">State profile &rarr;</a>':'')).addTo(siteLayer));
 MORAT.forEach(m => mk(m.lat,m.lon,'#a855f7',5).bindPopup(
-  '<b>'+esc(m.locality)+', '+esc(m.state)+'</b><br>Moratorium: '+esc(m.status)).addTo(morLayer));
+  '<b>'+esc(m.locality)+', '+esc(m.state)+'</b><br>'+
+  (m.level?esc(m.level)+' &middot; ':'')+
+  'Moratorium: '+esc(m.status)+
+  (m.when?'<br>Enacted: '+esc(m.when):'')+
+  (m.expires?'<br>Expires: '+esc(m.expires):'')+
+  '<br><a href="moratoriums">Moratorium tracker &rarr;</a>').addTo(morLayer));
 projLayer.addTo(map); siteLayer.addTo(map);   // moratoriums off by default (dense)
 const overlays = {};
 overlays['<span style="color:#fbbf24">&#9679;</span> Tracked projects ('+PROJECTS.length+')'] = projLayer;
@@ -6998,9 +7036,19 @@ def build_map():
         lat, lon = _geo_num(r.lat), _geo_num(r.lon)
         if lat is None or lon is None:
             continue
+        owner = _geo_s(getattr(r, "owner", ""))
+        if owner == "self":
+            owner = "Self-owned"
+        state_slug = _geo_s(r.state).strip()
+        # Build the full state name for linking from STATE_DC_DF
+        _st_match = STATE_DC_DF[STATE_DC_DF["abbrev"] == state_slug]
+        state_link = ""
+        if not _st_match.empty:
+            state_link = _st_match.iloc[0]["state"].lower().replace(" ", "-")
         sites.append({"lat": lat, "lon": lon, "operator": _geo_s(r.operator),
-                      "tenant": _geo_s(r.tenant), "location": _geo_s(r.location),
-                      "state": _geo_s(r.state)})
+                      "owner": owner, "tenant": _geo_s(r.tenant),
+                      "location": _geo_s(r.location), "state": state_slug,
+                      "stateLink": state_link})
 
     projects = _projects_geo()
 
@@ -7010,7 +7058,10 @@ def build_map():
         if lat is None or lon is None:
             continue
         moratoriums.append({"lat": lat, "lon": lon, "locality": _geo_s(r.locality),
-                            "state": _geo_s(r.state), "status": _geo_s(r.effective_status)})
+                            "state": _geo_s(r.state), "status": _geo_s(r.effective_status),
+                            "level": _geo_s(getattr(r, "level", "")),
+                            "when": _geo_s(getattr(r, "when", "")),
+                            "expires": _geo_s(getattr(r, "expires", ""))})
 
     js = (_MAP_JS.replace("__SITES__", json.dumps(sites))
                  .replace("__PROJECTS__", json.dumps(projects))

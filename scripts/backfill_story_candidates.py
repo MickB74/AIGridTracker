@@ -54,7 +54,13 @@ from src import story_tracker                                    # noqa: E402
 _RELEVANCE_KEYWORDS = (set(STORY_IMPACT_WEIGHTS)
                       | {kw for keys, _, _ in STORY_ANGLES for kw in keys}
                       | {"resident", "residents", "protest", "oppose",
-                         "concern", "hearing", "backlash", "outcry"})
+                         "concern", "hearing", "backlash", "outcry",
+                         # bans/lawsuits/statehouse terms, matching
+                         # STORY_QUERY_ACTIONS so a targeted --query keeps
+                         # the same stories the live feed now pulls
+                         "ordinance", "rezoning", "zoning", "legislation",
+                         "legislature", "regulate", "regulation", "tax credit",
+                         "guardrail", "governor"})
 
 
 def _is_relevant(title):
