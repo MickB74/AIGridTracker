@@ -63,40 +63,32 @@ def _abbrev_to_state(abbrev):
 
 
 def render_map_tab():
-    st.subheader("Interactive Map")
-    st.caption(
-        "All tracked data center campuses, active projects, and moratoriums "
-        "on one map. Click any point for full details."
-    )
+    # ── Compact controls — layers + region in one row, filters collapsed ── #
+    all_ops = sorted(DC_SITES_DF["operator"].unique())
+    all_states = sorted(set(
+        list(DC_SITES_DF["state"].unique()) +
+        list(MORATORIUMS_DF["state"].unique()) +
+        list(PROJECTS_DF["state"].unique())
+    ))
+    my_state = st.session_state.get("my_state_abbrev")
 
-    # ── Controls ──────────────────────────────────────────────────────── #
-    ctrl1, ctrl2, ctrl3 = st.columns([2, 2, 2])
+    c1, c2, c3, c4, c5 = st.columns([1, 1, 1, 1, 2])
+    show_campuses = c1.checkbox("Campuses", value=True, key="umap_l_campus")
+    show_projects = c2.checkbox("Projects", value=True, key="umap_l_proj")
+    show_morats = c3.checkbox("Moratoriums", value=True, key="umap_l_morat")
+    show_markets = c4.checkbox("Markets", value=False, key="umap_l_market")
+    preset = c5.selectbox("Region", list(_REGION_PRESETS.keys()),
+                          key="umap_preset", label_visibility="collapsed")
 
-    with ctrl1:
-        all_ops = sorted(DC_SITES_DF["operator"].unique())
-        selected_ops = st.multiselect(
-            "Filter operators", all_ops, default=all_ops, key="umap_ops")
-
-    with ctrl2:
-        all_states = sorted(set(
-            list(DC_SITES_DF["state"].unique()) +
-            list(MORATORIUMS_DF["state"].unique()) +
-            list(PROJECTS_DF["state"].unique())
-        ))
-        my_state = st.session_state.get("my_state_abbrev")
-        default_states = [my_state] if my_state and my_state in all_states else all_states
-        selected_states = st.multiselect(
-            "Filter states", all_states, default=default_states, key="umap_states")
-
-    with ctrl3:
-        preset = st.selectbox("Jump to region", list(_REGION_PRESETS.keys()),
-                              key="umap_preset")
-
-    layer_cols = st.columns(4)
-    show_campuses = layer_cols[0].checkbox("Campuses", value=True, key="umap_l_campus")
-    show_projects = layer_cols[1].checkbox("Projects", value=True, key="umap_l_proj")
-    show_morats = layer_cols[2].checkbox("Moratoriums", value=True, key="umap_l_morat")
-    show_markets = layer_cols[3].checkbox("Markets (MW)", value=False, key="umap_l_market")
+    with st.expander("Filter by operator or state", expanded=False):
+        f1, f2 = st.columns(2)
+        with f1:
+            selected_ops = st.multiselect(
+                "Operators", all_ops, default=all_ops, key="umap_ops")
+        with f2:
+            default_states = [my_state] if my_state and my_state in all_states else all_states
+            selected_states = st.multiselect(
+                "States", all_states, default=default_states, key="umap_states")
 
     # ── Metrics row ───────────────────────────────────────────────────── #
     campus_count = len(DC_SITES_DF[
