@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 1525,
+  "count": 1538,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -9400,7 +9400,7 @@
       "locality": "Coachella",
       "state": "CA",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-13"
+      "last_seen": "2026-08-14"
     },
     {
       "title": "‘Do the right thing’: Residents oppose potential data center in Tooele County",
@@ -9543,7 +9543,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-13"
+      "last_seen": "2026-08-14"
     },
     {
       "title": "Collingswood Bans Data Centers and Computing Nodes Boroughwide, Sets New Public EV Charging Rates",
@@ -16571,7 +16571,7 @@
       "published_iso": "2026-08-14T03:45:00+00:00",
       "locality": "Pulaski County",
       "state": "AR",
-      "first_seen": "2026-08-14",
+      "first_seen": "2026-08-13",
       "last_seen": "2026-08-14"
     },
     {
@@ -16615,7 +16615,7 @@
       "published_iso": "2026-08-14T01:48:55+00:00",
       "locality": null,
       "state": null,
-      "first_seen": "2026-08-14",
+      "first_seen": "2026-08-12",
       "last_seen": "2026-08-14"
     },
     {
@@ -16781,6 +16781,149 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-08-11",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "title": "Opposition to Okmulgee data center gains momentum",
+      "outlet": "MVSKOKE Media",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNUHNZSFRDa2Z6blZMc1Q1UEw3cWZndlpvMmxoRnMtTkw2bWlMd2dyMGhHZFhMcE80VVc5VVE1QXdTamxqSVhtWGZ2Q281U1FfTkZyVXNod1JQOXpzTkVpU2lWczkySHdIVmxRblNwLW5kZnJUVjk4dHh4Z3c5S2dhQUs3RE5WZw?oc=5",
+      "published": "Fri, 14 Aug 2026 08:01:01 GMT",
+      "published_iso": "2026-08-14T08:01:01+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "title": "The King of Prussia data center complex is rejected by Upper Merion Township officials",
+      "outlet": "Inquirer.com",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPUlJMblR6Zno4SmJDeUtuOWhEVXlDUEU0UDAwRWhhcm1zTUFWUkhvOWRxNnlGLWpSTXZ6SmQteHRsb19sQ3Z4eXZ1VU1CZEJqYWcwN0Q3SGVrTUFlS1JCQTJFaXB5Qm45R0RQOVFQWkVWdDVIa2ZMUDlLR05qUW4tMDU1LUNHNmJ1TV9uODNob3MxRE5rZWg0Z1pyWm5YZnlLM1FrcllmRHBUT215STB0STdHeFliWWFxRlYwZlBB?oc=5",
+      "published": "Fri, 14 Aug 2026 03:10:47 GMT",
+      "published_iso": "2026-08-14T03:10:47+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "title": "Springdale-area residents express their concerns about a data center coming to their town",
+      "outlet": "community.triblive.com",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8xS3U2UjlzNmJhLU5LOFlSaUVWdDZmLUxEb3pTR2loVjRQcXVTVDlKZkdtc0hBOUNadjhid2xyZW52VDFWSUVveHY4UVFfZU9iUDhXY3ln?oc=5",
+      "published": "Wed, 12 Aug 2026 03:29:10 GMT",
+      "published_iso": "2026-08-12T03:29:10+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "title": "Hayward Council to consider move to ban data centers at its Sept. 15 meeting",
+      "outlet": "City of Hayward (.gov)",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPdHJQcHMyOU80T3dBMDNhME9MNWRuczRiWU9PMjdoSWgtVWpXRF9ENnNvMUJXeEJYcFplTFp6a0RsbHpJZWZXcHlOTVZHLWtYOTZ3LUlHUDUwTXAxc3lNTVhvRUhoMXpNWmh5VUlaZHJMWUFiTzR0MnhJSi1EbmtaamI5VnVzX0pFY2RrYjFzaWlZOHEzY0VzLTJiNDd5LWVWZTV2cW45TUY1MDBmRnc?oc=5",
+      "published": "Fri, 14 Aug 2026 02:56:54 GMT",
+      "published_iso": "2026-08-14T02:56:54+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "title": "Negaunee City Council narrowly passes strict data center ordinance",
+      "outlet": "myupnow.com",
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOU3dPZUVuTV90bDZFM0g1WmhxYi00aVVyZzVpMmREV25FNzcwRnYxWGRDX3ZDejhGWWdoUjdwb2JwU3FTd0RKY2M5c1pLdGdROGNGSHFaczJPNHljczZNSnNOMHl2Q0hQN21ET3BkdjZsak1FWWJkQmJ5VDJITklBc0g0NTJfeDAzY1JCTFdOLU1Ld2NYSXJfRkVVY1J2WUw4RmFyX3F0NGtLbThiMlRscE9GUVYzYWdzdTNjVkc4Xy1JclRGTUhYQUJQbFFSWFZObjZGWTZJeUx6U3lnRlE?oc=5",
+      "published": "Fri, 14 Aug 2026 01:47:00 GMT",
+      "published_iso": "2026-08-14T01:47:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "title": "Texas Data Center Moratorium: What It Means For The Queue",
+      "outlet": "Enverus",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeTM0TDFWQy01RjJGRV9JdVRjR2c2dXY5bm55aXpfVlJzTlo0cXIwZmFVekQ0X2dpNVl3Q1lqNE95RlhNaUgtUlFqWE8wQ2Z6NlhhVnJEZVhIOThVblpDTDhVbk1jd3FzZWUzNGxicXBaNndUTWxDSUltcXhTMjhKSA?oc=5",
+      "published": "Thu, 13 Aug 2026 14:34:42 GMT",
+      "published_iso": "2026-08-13T14:34:42+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "title": "Cleveland reveals group shaping data center policies during moratorium",
+      "outlet": "Crain's Cleveland Business",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOX0NsTHdQcGxpY3ZKN2t6akVYV1ZVOEROaG1pT2hkTTB4OG02d2NSQ1FKNGhDc1pacEdrcHFtanE5RHhTQVNQNEdVcXdtVWowTTgtSnpJSUhkZTBKaUlyUHU5NlVKSHV1eGh0ZEZZN0lRNkpEZnlMYmtCSGhJWlU0SGdodkRGdnZzdEdLN0g5bjgyR19vNW0xM05Ta21ob0VsLUNnYXJib2ptSGwyeFE?oc=5",
+      "published": "Wed, 12 Aug 2026 18:13:00 GMT",
+      "published_iso": "2026-08-12T18:13:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "title": "Upper Merion Board of Supervisors Clears Legal Hurdle to Meet on Data Center Extensions",
+      "outlet": "thesunpapers.com",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOOUNEcWUzTF8xT3dyTTZob1Npc3pZc084VkhSa0E1S2QwYVNJa1A3Q1QxQ3JXSWg1SDV4WmRkV2o5QklTeFBidVFVaklVZFhVNm4wTGNXenczM2hEN1dGZU9LNzluejgtNHNOdUJNQTBSbFBtWXZNUXJ4bDZNRUFFSy1PYlRqd2oycEZudjAtazZsakQ0?oc=5",
+      "published": "Thu, 13 Aug 2026 23:48:22 GMT",
+      "published_iso": "2026-08-13T23:48:22+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "title": "Data Center Debate Draws Crowd as Residents Demand Transparency, Local Control",
+      "outlet": "Royal Examiner",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOdkd1Vi1lT1dZdkZ6NXdBYl92dW1JREhiUGcwWkVGY0Y4Nk16YlBHeFF0bEdKYkR6d3dYTHJ2MFNCRmkyVDhvOXY5R2VpQTVMNWpVeS1iV01LLUJrT3FMOGVyVkNmTnpmV0N5TklzQzlQTzVyREV2STcwTy1YN3dFWk9OZ1VBWVppWUhub0hkZThCYUh5OWxUWU5GWko3Ny1lRFRvUEhiRQ?oc=5",
+      "published": "Thu, 13 Aug 2026 18:50:07 GMT",
+      "published_iso": "2026-08-13T18:50:07+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "title": "Virginia workers built the backbone of the internet. Why tear it all down? | Guest column",
+      "outlet": "Richmond Times-Dispatch",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZDdUM1FJdmtIMWMwdjJGeGpzYXIxcVhReTlNdEpMVFdxTk5hX21icG5RRzFYUTExUjZXd3puNlh6VkQ4LVRsd0Q3UUoxaG9WUW9mV2VpNFFyYVZXZ3VuX3ZKcjg3ODZfRmEtV1NmNFRhdkdnZm5FR3kwejk5V0swZThpV0w5ZFhOcjhLYTBR?oc=5",
+      "published": "Fri, 14 Aug 2026 09:00:00 GMT",
+      "published_iso": "2026-08-14T09:00:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "title": "Rural Georgia residents say data center rules were passed with no hearing, no warning",
+      "outlet": "thecooldown.com",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOLWJhR2JGU3NOWGRvWkpfVEFhcnhDQnRiUE9MN1BlcDh1X1h0aG83YUxJbnJZdHYySjM2SHU3dG9FTzlDQVVnUVhaUjJvWFhVMDA0RzNrZ2RBYzRJOXhwRWFYV05BS0JvRm5XeXJTRU9mbFN6UzBRcjlKX1RQYVd0NTl3VHlsQkk?oc=5",
+      "published": "Fri, 14 Aug 2026 02:59:00 GMT",
+      "published_iso": "2026-08-14T02:59:00+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "title": "Georgia Electricity Rates (August 2026)",
+      "outlet": "ElectricChoice.com",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBXaE1UejZOc2k3XzJiNm1saVFGTFJFeWtmdzdYRzh3bjBYS1JsTzNLb2l5Z2NMZjBqbWZWU3JnOEphcDdtVnN3eHlubFpMaXBqN3NPNm56M0dXLUdpZzBLVjd4NFVIdk1tVjlFdndtT1EybnJUNkE?oc=5",
+      "published": "Wed, 12 Aug 2026 03:30:27 GMT",
+      "published_iso": "2026-08-12T03:30:27+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "title": "While Data Centers Boom in Texas, Their Plans Stay Shrouded in Secrecy",
+      "outlet": "Pulitzer Center",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPWjNISGpXQS1FV3dLbWdnU3E2cVd6RWE4X3JDNEpmSXV3aDJCaUhfV1dXWFdfTzhDcVJBXzhPRXRVV0YtQmhTWFZsenRGTU43TjlLeXBBcjlReG5mTHd4V1Bkck1lN21VOFhIVTNTWEpnV0ZjQmduRERYMlhjcGo1Zm1mUzdheFNmWnlaZVV3X0hqc011SGRrZkw4NnRJR3c?oc=5",
+      "published": "Mon, 10 Aug 2026 07:00:00 GMT",
+      "published_iso": "2026-08-10T07:00:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-10",
       "last_seen": "2026-08-14"
     }
   ]
