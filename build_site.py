@@ -7016,20 +7016,39 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 function esc(s){ return (s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
 function mk(lat,lon,color,r){ return L.circleMarker([lat,lon],
   {radius:r,color:color,weight:1,fillColor:color,fillOpacity:0.8}); }
-function projColor(p){
+function stageColor(p){
   if (p.hearing_soon) return '#ef4444';
   const st=(p.stage||'').toLowerCase();
   if (st.indexOf('approv')>-1) return '#34d399';
   if (st.indexOf('den')>-1||st.indexOf('withdraw')>-1) return '#94a3b8';
   return '#fbbf24';
 }
-const projLayer = L.layerGroup(), siteLayer = L.layerGroup(), morLayer = L.layerGroup();
-PROJECTS.forEach(p => mk(p.lat,p.lon,projColor(p),8).bindPopup(
-  '<b>'+esc(p.name)+'</b><br>'+esc(p.operator)+'<br>'+esc(p.locality)+', '+esc(p.state)+
+const OP_COLORS = __OP_COLORS__;
+function opColor(p){ return OP_COLORS[p.operator]||'#9ca3af'; }
+let colorMode = 'company';
+function projColor(p){ return colorMode==='company' ? opColor(p) : stageColor(p); }
+function popupHtml(p){
+  return '<b>'+esc(p.name)+'</b><br>'+esc(p.operator)+'<br>'+esc(p.locality)+', '+esc(p.state)+
   (p.mw?' &middot; '+p.mw+' MW':'')+'<br><b>'+esc(p.stage)+'</b>'+
   (p.hearing_date?'<br>Hearing: '+esc(p.hearing_date):'')+
   (p.next_action?'<br><em>'+esc(p.next_action)+'</em>':'')+
-  '<br><a href="projects#p-'+esc(p.id)+'">Project details &rarr;</a>').addTo(projLayer));
+  '<br><a href="projects#p-'+esc(p.id)+'">Project details &rarr;</a>';
+}
+const projLayer = L.layerGroup(), siteLayer = L.layerGroup(), morLayer = L.layerGroup();
+const projMarkers = [];
+PROJECTS.forEach(p => {
+  const m = mk(p.lat,p.lon,projColor(p),8).bindPopup(popupHtml(p));
+  m._gwProj = p;
+  projMarkers.push(m);
+  m.addTo(projLayer);
+});
+function recolor(){
+  projMarkers.forEach(m => {
+    const c = projColor(m._gwProj);
+    m.setStyle({color:c, fillColor:c});
+  });
+  updateLegend();
+}
 SITES.forEach(s => mk(s.lat,s.lon,'#38bdf8',5).bindPopup(
   '<b>'+esc(s.operator)+'</b>'+
   (s.owner?'<br>Owner: '+esc(s.owner):'')+
@@ -7043,12 +7062,36 @@ MORAT.forEach(m => mk(m.lat,m.lon,'#a855f7',5).bindPopup(
   (m.when?'<br>Enacted: '+esc(m.when):'')+
   (m.expires?'<br>Expires: '+esc(m.expires):'')+
   '<br><a href="moratoriums">Moratorium tracker &rarr;</a>').addTo(morLayer));
-projLayer.addTo(map); siteLayer.addTo(map);   // moratoriums off by default (dense)
+projLayer.addTo(map); siteLayer.addTo(map);
 const overlays = {};
 overlays['<span style="color:#fbbf24">&#9679;</span> Tracked projects ('+PROJECTS.length+')'] = projLayer;
 overlays['<span style="color:#38bdf8">&#9679;</span> Existing data centers ('+SITES.length+')'] = siteLayer;
 overlays['<span style="color:#a855f7">&#9679;</span> Moratoriums &amp; pushback ('+MORAT.length+')'] = morLayer;
 L.control.layers(null, overlays, {collapsed:false}).addTo(map);
+// Color-by toggle
+document.getElementById('color-stage').addEventListener('click', function(){
+  colorMode='stage'; recolor();
+  this.classList.add('active'); document.getElementById('color-company').classList.remove('active');
+});
+document.getElementById('color-company').addEventListener('click', function(){
+  colorMode='company'; recolor();
+  this.classList.add('active'); document.getElementById('color-stage').classList.remove('active');
+});
+// Legend
+const legendEl = document.getElementById('map-legend');
+function updateLegend(){
+  if(colorMode==='company'){
+    const ops = {}; PROJECTS.forEach(p=>{ if(p.operator) ops[p.operator]=opColor(p); });
+    legendEl.innerHTML = Object.entries(ops).sort((a,b)=>a[0].localeCompare(b[0]))
+      .map(([n,c])=>'<span style="color:'+c+'">&#9679;</span> '+esc(n)).join(' &nbsp; ');
+  } else {
+    legendEl.innerHTML = '<span style="color:#ef4444">&#9679;</span> hearing soon &nbsp; '+
+      '<span style="color:#fbbf24">&#9679;</span> proposed &nbsp; '+
+      '<span style="color:#34d399">&#9679;</span> approved &nbsp; '+
+      '<span style="color:#94a3b8">&#9679;</span> denied/withdrawn';
+  }
+}
+updateLegend();
 """
 
 
@@ -7090,9 +7133,19 @@ def build_map():
                             "when": _geo_s(getattr(r, "when", "")),
                             "expires": _geo_s(getattr(r, "expires", ""))})
 
+    # Operator color palette for "color by company" mode
+    _OP_PALETTE = [
+        "#f472b6", "#fb923c", "#facc15", "#4ade80", "#22d3ee",
+        "#818cf8", "#e879f9", "#f87171", "#a3e635", "#38bdf8",
+        "#c084fc", "#fb7185", "#34d399", "#fbbf24",
+    ]
+    op_names = sorted({p["operator"] for p in projects if p.get("operator")})
+    op_colors = {n: _OP_PALETTE[i % len(_OP_PALETTE)] for i, n in enumerate(op_names)}
+
     js = (_MAP_JS.replace("__SITES__", json.dumps(sites))
                  .replace("__PROJECTS__", json.dumps(projects))
-                 .replace("__MORAT__", json.dumps(moratoriums)))
+                 .replace("__MORAT__", json.dumps(moratoriums))
+                 .replace("__OP_COLORS__", json.dumps(op_colors)))
 
     body = f"""
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -7100,17 +7153,31 @@ def build_map():
   <div class="kicker">Map</div>
   <h1>Where data centers are built &mdash; and fought</h1>
   <p class="sub">Every tracked project, known campus, and community moratorium
-  on one map. Toggle the layers top-right. Projects are colored by stage; click
-  any marker for details. Built on free OpenStreetMap data &mdash; no Google
+  on one map. Toggle the layers top-right; color projects by company or stage.
+  Click any marker for details. Built on free OpenStreetMap data &mdash; no Google
   Maps key required.</p>
 </header>
+<div style="display:flex;align-items:center;gap:10px;margin:10px 0 6px">
+  <span style="font-size:13px;color:var(--muted)">Color projects by:</span>
+  <button id="color-company" class="toggle-btn active">Company</button>
+  <button id="color-stage" class="toggle-btn">Stage</button>
+</div>
+<style>
+.toggle-btn {{
+  background:var(--card-bg,#1e293b);border:1px solid var(--rule,#334155);
+  color:var(--fg,#e2e8f0);padding:5px 14px;border-radius:6px;cursor:pointer;
+  font-size:13px;transition:background .15s,border-color .15s;
+}}
+.toggle-btn.active {{
+  background:var(--accent,#38bdf8);color:#0f172a;border-color:var(--accent,#38bdf8);
+  font-weight:600;
+}}
+.toggle-btn:hover {{ border-color:var(--accent,#38bdf8); }}
+</style>
 <div id="gw-map" style="height:72vh;min-height:460px;border-radius:14px;
   overflow:hidden;border:1px solid var(--rule);margin:8px 0 6px"></div>
-<p class="muted" style="font-size:13px">
-  <span style="color:#ef4444">&#9679;</span> hearing soon &nbsp;
-  <span style="color:#fbbf24">&#9679;</span> proposed / in review &nbsp;
-  <span style="color:#34d399">&#9679;</span> approved &nbsp;
-  <span style="color:#94a3b8">&#9679;</span> denied / withdrawn &nbsp;
+<div id="map-legend" class="muted" style="font-size:13px;line-height:1.8"></div>
+<p class="muted" style="font-size:13px;margin-top:4px">
   <span style="color:#38bdf8">&#9679;</span> existing campus &nbsp;
   <span style="color:#a855f7">&#9679;</span> moratorium</p>
 <div class="note info"><p>Markers are placed from the coordinates in our
