@@ -6535,8 +6535,9 @@ def _project_timeline(events):
                    f'target="_blank">source</a>')
         kind = f'<span class="tl-kind">{esc(str(e.get("kind","")))}</span>' \
             if has_value(e.get("kind")) else ""
+        when = esc(str(e["date"])) if has_value(e.get("date")) else "undated"
         items.append(
-            f'<li><span class="tl-date">{esc(str(e.get("date","")))}</span>{kind}'
+            f'<li><span class="tl-date">{when}</span>{kind}'
             f'<br>{esc(str(e.get("summary","")))}{src}</li>')
     return f'<ul class="timeline">{"".join(items)}</ul>'
 
