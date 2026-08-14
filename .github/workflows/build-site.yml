@@ -66,6 +66,13 @@ jobs:
       - name: Scan for untracked localities
         run: python scripts/scan_locality_candidates.py
 
+      # Mines the same story archive for moratorium-related headlines that
+      # aren't in MORATORIUMS_DF yet — broader keyword net than the weekly
+      # news-scan scanner. Writes to the same moratorium_candidates.json
+      # review queue; promotion is still a human step.
+      - name: Sweep archive for moratorium candidates
+        run: python scripts/sweep_moratoriums_from_archive.py
+
       - name: Show what changed
         run: |
           if git diff --quiet -- web/; then
@@ -85,12 +92,12 @@ jobs:
           # commits are expected now — the news feed changes every day. What
           # would still be a bug is web/ churning when data/ *didn't* change;
           # check "Record build environment" above if that starts happening.
-          if git diff --quiet -- web/ data/news_cache.json data/youtube_cache.json data/story_candidates.json data/locality_candidates.json; then
+          if git diff --quiet -- web/ data/news_cache.json data/youtube_cache.json data/story_candidates.json data/locality_candidates.json data/moratorium_candidates.json; then
             echo "Nothing to commit."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add web/ data/news_cache.json data/youtube_cache.json data/story_candidates.json data/locality_candidates.json
+          git add web/ data/news_cache.json data/youtube_cache.json data/story_candidates.json data/locality_candidates.json data/moratorium_candidates.json
           git commit -m "chore: rebuild static site [skip ci]"
           git push
