@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13",
+  "updated": "2026-08-14",
   "candidates": [
     {
       "name": "Ida",
@@ -19,6 +19,26 @@
       "guess_state": null,
       "first_seen": "2026-08-13",
       "last_seen": "2026-08-13",
+      "status": "new"
+    },
+    {
+      "name": "Chippewa",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Chippewa County passes 12-month moratorium on data centers",
+          "outlet": "wqow.com",
+          "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOdTNFLWlXTHlrYVFwTnlFRXNiaWhqUktuWG5yMjdSbkRJVXFVMWtHNHE0MmVIY2JGejdUZ3EyQjVPb2h6bXZ0eTdHRUF2bjRXb1FxYl9Cb0FIb0hQQkhsOVlSYW0zdWxmWjhRdjEzZHlQUFNiOVFMYVRPS1NvaXZlWHN0VEtoQ3NKMTZIVzVFNkJzWDFuaXdXbmpxWUFrVUM0dWM1RVZqTGJlYlh1Y0trazFVYnpfUkhWbUhkYU9TWXJQc2dOTE1DQ3RCTGFqLTg?oc=5"
+        },
+        {
+          "title": "Chippewa County passes 12-month moratorium on data centers",
+          "outlet": "WKOW",
+          "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNMGVBVHBQQkc3eWJhcENoY0Fac1plM3NZTGdCT1p3RS00VjRrb0d1R1RHN2VzdlFudHFPNEdwRk91U2hLWWdnQzVOcXdKUk5MN2owdGhlOEYxTGpBT2FNV0gzNVFDZ0MxNFIwVmlZSHdhbzdRZEl1Z3U5RGRzY2lCOWlEQXN0c2tPejRJSjJvLUphMTIyVVNWMS0zcjJSZ1laOFhiWlNjYmpXZGhEOG4wck5nMktUSlVrRVdTeEF6aHlHcW1JTUtvNjdlM3J4ZDA?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
       "status": "new"
     },
     {
@@ -48,7 +68,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-08-14",
       "status": "new"
     },
     {
@@ -63,7 +83,577 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Sahuarita",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Sahuarita residents voice concerns about data centers at Town Hall",
+          "outlet": "KGUN 9",
+          "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPbEc0aGdtdFVwNDdkaTNfc3dzS2lTNVdfQmE2V20xelRMbTBlUmdYdFA4RmlRcEJ0N2MxbC0ycER6NkxqWGVmeHpyRWg0bkEyTHpIVldIUU4zb2IzU1V3TDdTMFJHaC1rcXQ2NUdlWEJ4Z3hWeGhKVTZLejB5ZGlrTjF1RW96U0NzNExIZHZTQm1iemhkLXFOQUxLdVI4TV9IeTgzUkM4U1pRNnVwWVd1Q3gxSFpBalNPbjhsaFdyX0w0LUlTbXl0WWtwQUVUZE8tT1dWTmlJNFVRRjhra3dmLUZWbXJja1ZlTC0w?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Plain City Village",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Plain City Village Council enacts one-year data center development ban",
+          "outlet": "The Columbus Dispatch",
+          "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNSXg0a191bElDYXJtNVNHeVRQaXpSQ0JEQkJrTGw0aUlMOWRRVUJHMlRSSUpmOXFqMlFpUF9lYUhpR1F4OERyYTVRcUM3NzNKSVl3OEhoQjNkclh4alo0RENab3hPd050X2VMdjI2cGI1VzctdFp0YUVSNjktTlAwVk5LUlhkM2ljRXMyeGxRQndfS1BhZEJZQTk4T0x5SGM3ZXV6UTZfR3lSb0ZieC1yUTRpQTU2dFNoM1Z5WFNWSng1ZldYTTIxMUFJMDAwY3dVbXE5WHFDZlFCVFJZekgw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Botetourt County",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Botetourt County Planning Commission split on water pipeline permit amid Google data center concerns",
+          "outlet": "WDBJ7",
+          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPT0pfT1V2MFA0bFZEY3Q2bVFOV0ZYMV9fd2E3TWEtMzNLQzRWbGFMbnk4MzAwS3YyRHRrTHIzekdkVXYxT0FGQmpoYkQ5dmhuczg0TUhUVnhzVk5memJkNHFva2hwZWR2SG5pZ1NNN2hyc0FhNDJNRF9EZThYU282ZXdNSlN5QVRCTGU5MU5CbkRrbnhNYnVxR2hiSExoellQelhWOVVhOV84aDdSOGZ2LS1DSnpsa1c4c1JIb3NETjl6eFNCdVHSAdoBQVVfeXFMTXZhaTJfWXhncS1kNGVJLTB0Z0xiUnhVZ1RORFNmV0FidlRVTkE0aFFjMkdoaWVvWWtUMWlUTkZHdDRNUTlndnc2X2kza3hDcjZ6bTJ5bGFkV2ZNOWIxbm1TTmgtbnR3ak9fX2dRSE4yWHEwZm5oWkZvOHY1MFZHUERtQUQ3VWdGX2VjUTNtNzZjV0QyazRwbUNYeTU0bGVDUTVlbUhUdnp5VmkxWmJNVTdRR3pnMFF1WTNjVmNJcXdFSC1lcGRfeWlqRWdFNEZJbWEtUFZYN0F1YUE?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Moffat",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Moffat County commissioners discuss data center moratorium, address transparency questions",
+          "outlet": "Steamboat Pilot",
+          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZXFMMndmRzZ2SlFSdXdhUXZyZms1MkR1Z2pueW84NzkyZTFpZnAtQzBOcmFBbWdQS0NTM3o2ZjQtRzN6WHRxaDZpSzIwVFJQMUw3VHd6RnM5d2lXcXB5QkI4VmQ2Y2Vmenl0dFRyVXB0U3dwLXF0dXhVaEM4QzJoRGpSWWxVNkNpMkRHdzZtS3VtdDNjZ1dfcHV1SVJmWnNzS2RyUjFrdDNrQXJMMXJQUGRXUklZS2lvcDdBRmFGQW1rTFFw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Oakland",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Data center developer sues Oakland County suburb over moratorium",
+          "outlet": "Crain's Detroit",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPaGxieFB3MG5WNktTQUJJLVFuUEk5cGlhc1JmWkhNbmZ0UWozUldyUEF1LXpEdk50VllTWVp5anp6cWdBeWMzbDhib0cxZTYtNUtoMzlVQ2lKRnduTlpzVVpBMWU0bHU3Z3RpclpSbzhlY1h4QVhrakQxZGVfb3pGRXpjNThxZ28xTXNFNHZsZ3d0Zw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Volusia County",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Volusia County Council to vote on data center moratorium. What's next?",
+          "outlet": "news-journalonline.com",
+          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOYTVkYnp0dzdwZW8xS1JnQVdqaERaM1NwYXZybm9HNmlNdzE0cDUtRW02MGVSYkJnMmtoVUxVbjlDMDM2NkF6RmkxdUVkWVpCRmhuaG5UazNkUFVrLUloWXhyb3JiVG5Pb0ZmS3BMX2Zsd0FuX1ZMWVFyRjllTm0taGtLNlZZVzVWd3NFa0dWQzItTEVpNHRjZDFpYmh3bG1ZdUZjOFdCSW44b0JBVVB2TWdiZm9pXzJOS0JCaTdEczhXMU1xNTh4WHZ0TlVjVXUwZGc?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Lyon County",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Lyon County Commissioners vote to allow new data center north of Yerington",
+          "outlet": "KTVN",
+          "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPSEFEZkg4Qzg3Q0w4TkRmMXNjQmNKb2VsdEtRWXk5VkxaTmVtUlNpanJsNDNwaTJDWDBzbzBKVTUzSXRfYXZXUEJscDdCd1YySW1La0lWaThSQ2RIdEFKcERYbC1Iek14dEUxQWo1M1ZRQ3FPamlIczFqbzBERTF2NXEzbmJ2S050LWxldzhOM3RiZjNCWkZHMDk0RGRSRTNwb0ZLcWNSYmhDZnNMNC13Ukl2TGN4V3pUQ3gxUUt5UXNCVWw4a1JRUHZKSjhiaUtlZFRfUm9feEotX2pDTnF1azUzWnlEdktkOWJFVlJB?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Crestview City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Crestview City Council votes to move toward data center ban",
+          "outlet": "Get The Coast",
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNYjIwNHhGa2dzNUZ6akp5VXM1ZE1jZ3RkWXRMd1liTU5KZ0hvMF9yQ19BNVVVNnJReXNUUVB1X2xEcEVQM09zVXZCNGdFRDNYZW1zWFBrRDJYMDRndm9qV0VKVDRKZUs5OXVLdFpESzk0b01qOS1JSFl1dkR0Wk8wX1E5OHpBa09ja19Wbw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Shawnee",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Shawnee County commissioners approve temporary moratorium for new data center applications",
+          "outlet": "WIBW",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNNjZNNklYRG1VTUtfZlprSUNyTmxwU2VqWnd1TUxiQ3JjNy1fMHlYSS1lc2preVRIZjhXQUozTVZQenpQN3BTcWlsbDhBOEFUc1pvVG1ERlViMDhVTFB3R0tnM05Sbm9OdHcyM0FlZ05RNGhJRnJBMHVCbzVENE5mN3lKSkRoUmFaa1NtUWhOUDdXdDJpajVqYdIBrAFBVV95cUxQVjRLQ2NEdGtDRDlHTDBPQ2UzRWpLNkNZTjlNeFBRcmV6VUxjY2hXbXJTel81OW1icldpOEUwd1haQ180VFJKSXNQSUJvS1dEU3FQU1ppSUYzT2QxUVVveU00OWlwUTBsQ0otN2ljYUp1NW92Vmk2VDQxdjZ2NmZMUGIzeEhlRFFVQllCU0NsVVNsRDhUNzcyZG1WazFoQVg0clBOQnF5LVJxVE9t?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Macon County",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Macon County Planning Board sends data center amendment forward",
+          "outlet": "highlandsnews.com",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPSGFSZ09PZmlTMFJOT01pcGotbnBLZmlqcDFuUTZjVzF4eFVDM2tXbkl5V01RRHItaWpBZXNKZG1jTG0wYjZWbUw5LXJ1LXlIV1NZaGQwVE4zUFBHSDZ0cHo5alNhTmZvYll5dEJySVUwOUhNdXVTYUNtaWxEZ0dJV1k1MW1Od0NZYVhCSDJCcks0b0wzSUNTX2dsb0E5MVpETTdleg?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Mount Vernon City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Mount Vernon City Council approves 6-month data center moratorium",
+          "outlet": "goskagit.com",
+          "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPMWJ1M3hsOWltZjhvSnJBVFV0Tk9SVXFaVkItTnFDR0d1Nl9RdmRSSm9CWmxyaUxQRzRPV290N0IweDZ2c2VEQlJXcFFKdWw3bUQzMFl2SFJ2R1dWRXljZFUzUTh6OWFsSnhyMzhLcWk4UXZsUlVMUjdwdmJWeXpsVjNLRmdUOWJXUmI0dmlOcmlZVnhhZExmajVjc0x1UUhVUkpnZnZPc1BTNHl3T1dWTWwzM1A2RHFFZkF5bGM5RUQ5NVo1YXZNZGQzRXlhVHR2ZHdKQlNfOG14R2VMTXc?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Sterling",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Amid ‘constant' data center noise, Sterling residents also worry about health impact",
+          "outlet": "NBC4 Washington",
+          "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNMVhRU2cxNEljem9YNTd0OUttR0Juck52aDBzamNncHZZRlFTZVZ3eFZTYXlRUi1pWjRtXzZ1a0hPTnhfdjZYZlVXLVpHd0VGQjBKZ3BEX2dtNS0yMkpmX0s2M2ZYUzdiZlNnYURXTU9LZVFFQXJwTktsVkZjSXJPdUdBR1NVWG9OZV9vVjRKdzF0NGNPb1ptYll1ZHJDNndZUXlON0ZPeUo1b0Y1RzRvTy1lS0tTNTZDTWJmS28wbWRET1NUSGswSmprcEtFQVU5ZGx1bzNwd1Z2QzRWc21oV3dxVdIB6wFBVV95cUxPQUJGWURTY1ZkeDMtTzFTQ0k2UFJ6cEhKWHlNXzVQRnRJVVRVbnQyUXA5R0ZrR25yMmVTSHpuN3hNR0ExLXE1aEswTUYxRkxFbzRab3BlVGI3eExjWmZ4M285OHhkQ3Jzc3Iwel9rSFVrb3R3dDRXakx1Wmh5UHB5V3BJNXgxMHh2QlNaaS1EdW00VDlCZGpjWGlVQlplUlZ0am5uYnduZkN3S2E1eFc0b01kYXF2T1FYdUtURkJpQzVxb05CR1RxVHJoUUFFWkdzYlJYRUhGVENMeTgtTHBjd29ZNkVaS0pDUDVN?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Frederick",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Residents fear Frederick County will be the new ‘data center alley’",
+          "outlet": "CNS Maryland",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPUXAwT3NtT2FseHVWaFdmdnZKVzRUMEh2TEZ3WmV4WVVFVHBUdmZ4MmJDRkxxdzNSR2hVcUw3dFFHQzgxUXJnLTBJY1BGS3FNU3BISXBkVVhlUGFYakRwSm54VkZ1N2xwYWp0RndqbngxaGxkaXdnLWk0Y3ZNakxmWnBTc3VzVGNoc2dkYU5jcnZKWnY5SUx2bkswRWw1UzRsLWUw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Pahrump",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Pahrump residents protest proposed AI data center, citing water and utility concerns",
+          "outlet": "FOX5 Vegas",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQV0I5Q0JpM2tNd0FfRHd3QzR4Tm1MOTM1RFpCcFE0TkJXcjl3bWZSdzdLQXJsMDJ6c2VEZ2JiRXg3Ql9NTzBzMm40RFBoUVNOZ2hMcmY4SzVIellUY3BWa21YOE1MYXRXNDRHU0xwT05sQjNFTWY0aDlUVGktWmwwbWd2Q1AxbnVGcDV1YjVLVXU3Wl9FVnhqUGxnVGxvUmdYcFJpdjNDeGdxYUdUYmRKWnZhdUthTFFC0gHMAUFVX3lxTE9yRTBQRVBSYmF1dW1xVXJ3VUNVamRfVTFITzVqaUpFT1phNmxfLW5kbjloUUJzSXNocFBYdTJDN1Q5azV5ZXBOUFF3N3NMR2pQYm5ESmRlWm1qSHJSTk0ydXlJRE8tZC1JZjY3NWlIdWZpNG0yZ1UxenVlNHN0V3BRSUtldUlNeHlnR3dDZHVLeEFEZGlXR0M4bi1zMlVOUWFKcGpMTTRNNlJqVjVFdVpHUFJBbXZ2akp5UlVuZ3FFNGItS0s2MHB4ckxMMQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Monroe County",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Monroe County residents petition for 18-month moratorium on data center development",
+          "outlet": "news8000.com",
+          "link": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQdzhvYlFuV1FwSzB5MVFua21FbG5JMGctTFNmdUZ6NmNuTW9PSVhmUkx4Z09seHJmY0s1LUgyZ2tuU2E4TU5Ra251bzNiR1NCYVhsUGhHTGNXNUNmcHkyX0l2akU1NmdJV0lROFlGWHhvanNrVnRibGRhSkROcEpUY2dBZ250SWN4a1lmaXd5aVJueXZXbkx4SUllajAtcUZla0s0R3ZjakRQRUFvZ28tVUVtelZhY21abWFpNXA5QTFaLU1OajlWR2dmdUxBOVVCSWJTNlJrX0lWR0NwRE1TTVJiTTI4c0NBNTRSa2VhVXk4UzRQbTJWMl80ajlrMGFIY3VUTTVwWGE3TUxBVmc?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Gage",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Gage County Planning and Zoning Commission recommends 18-month moratorium on data centers",
+          "outlet": "Nebraska Public Media",
+          "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPZlRMNngzUURtMG4zMWdGRzEyY1JxRklQa2hYV0VON2ZxMk1YT1duNTQ5OU8yYlFINVBodWZDb0xPSkotcktoOG9qV0JDYjFLZEh3MnhTdndrbl9DVUthQkJ1aEZZVENVYzlWZm5hMUxNMGJPVV8yMmdESVE2LTRkOUdnYTJpZlVKNzViZHNYVGd2anNQdVBkQUpialo4NURVY01zeUNzQ0NYUmZaLUxkNFM3NUY2VjQ3Y2p6VkNod3FibXVTNHQzclZraVVRZlBuVjZPcllYUlY0Zw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Vance County",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Drought worsens data center concerns for some Vance County residents",
+          "outlet": "Spectrum News",
+          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQSU51UmpxYkVSSEJFNHo5dngtcjlmVDZ1eGwyMEhMOUhoWlRiT1l4VmoyaGlJZk9iVDlyMlZXdmxfRXN4bHpmeE1FTExOak0tSXNOMXUtTFJmQTVXR2VTTG5WSzBqT1ZlWXc1QndZUlNkU25WZVNBOFN3N0tKTmVROGEwVmlPaF9QdERFSU5HTlA3MzRqblJhTVF2NEhSeGFJaGJrb25uN1k?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Jefferson",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Jefferson County Issues Temporary Moratorium on Data Centers",
+          "outlet": "Jefferson County",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkU0FjZXZIOERZSnBGS2YtWWFnRUtqSXlDMVdIcEJndVMySTM1ZWUteXZ3akF2LUs2aXFQXzdrRDRoNXdfckJDVWZrd3drYmliX09ockk5MlBYRmhjRnc?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Gloucester",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Developer challenges Gloucester County data center ban on free-speech grounds",
+          "outlet": "The Jersey Vindicator",
+          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQWHRLUFJyVkM0bkIwSlNMNkJvOVFkUHAtamV1ZzlZTnRSTHNZUUlJdV9abXk0X0VGVHZFTjdpTUd6RUt3SGVkTjVOQU53ZDRXUzVLelVSWGt2S0tqQkdBZmdRTER2LW5vVDhxdDR1Y2F5eWVQYnNtUXYyUnJjdE84UkhBV2prZjBtZVIwcjUzNF80NWs2LUpNNjYyWnp5S1BpWnpfcmluZU1CU0xPZUdlVkd4TVNCMnk3NGc?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Metro",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Metro Council advances bills related to data centers",
+          "outlet": "Nashville Banner",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQc3lQTThnemFVRzUtVnhQZDMwUU9yWVUxdm1TRjNMR2FHNVlIV3JMSUt3dm9wZENQSUZSUFpQSV9yYVh2SmtJS2RMQmFaTHpDaHE0VEM5eklmci02dXNDekhHamZYdUJjd2p5OG9rZGRoQ0lXa2M1QWFjaVhmNnNYbTRTTXVUV3RL?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Kent",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Kent County adopts data center regulations, may consider future ban",
+          "outlet": "Spotlight Delaware",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcDBBSDhKRWIyVWlTNXB2NWVhOEVycXU5cHpSam1vTnA0ZkZYM0ZhZ055SDJsaDVCNkppRVBkUmJjaU9BWmt1eVdXMDdqZ082ZVZlNmxoTzA2cEhwMlFyblBNaXpWX2ZHR05ZcTJ3NzAyeEZidUNzWGQxdzZEQUtVMlJRS3RNUUMxR0NoeEFXenB1X1hWZGJ2OFNBZWRmcC13aGJqMS1reGI2ZU5J?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Palo",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Palo city council approves data center ordinance despite resident opposition",
+          "outlet": "KCRG",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRFhscVZsQXZVVDRGVThqNjlYYWdGR3hXN3F4OVJJLUcydmRLcUFHOUFhVzk5Y3pSQldDOUROTDZjbDVaSTNaemF1RzFadGFyY01sWVJQS0dQSFFJdElxSnJVTU56UFM1V0FNdHNMV1FvalBmUjFwazVGV2EtcnN4bTBNbnBuek1sSGd4M0x6bl9mV29vVDRpWThtN09pcUxsNmZXX0tNMVF4MldfX3fSAcIBQVVfeXFMUHpSWmRGS2JjbGd2QzNMZlFpVWdQUWpMSUJiZjc5UlpiYmRHNk1JVjJUNWZuSk9tenU2RnpQMTBDNVJPaHc0cnhiQzduNkZwbVhNUTd6eXdNMU16NDFfSk5hTFZKZm9qU3M3WHI4ZnZ4OUliWmprRnZIajlaVzljN19vNFhBTUhkZk43SEp3bTd5aHk3Q1Y0LUJBMGNUaUU1dHpGa0V0WDNSN0JrYllBMk9RQjI4SktNYTIyemhDaXh1WEE?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Americus City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Americus City Council discusses data center ordinance",
+          "outlet": "Americus Times-Recorder",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQamc5ZnRlOVB4VW5HVEtIbTNFN291QmhSQ2s3elNvSFFqUTBxaWpCdnpuSWF4TDhYUE5sRlFWc0prSVM1X3c2NVExb0w3dG93ZkFGaXVQcXBpNTJ3TTNsdjdiTF9GMGNraXB0TXRzeU9aTWthdEpEc0lJanQyekdxbUMxQ0tCcmhWQzV5ak0yMVhhbVkxX1VJck9aZjhJVkJf?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Jackson City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "‘Not ready for a data center’: Jackson City Council approves moratorium on data centers",
+          "outlet": "WLBT",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdDFHZDRfbDlEa3Qxb2VuNG42dkpDUHFFN0hBcVlIdnFfUXZsWXA5dURTd0U2UThHdlRtT3FZcjl4aXFneUZka0w1TE9oSXB3WDhuZGN4bXNjeE1XNzFISlVpWmcxbnR1MXVESm5PNk5VTVNxV2RUREtEZlpuNThHekQ0V0lNMXAyWXdYSDVPMkZRSFlfR2ZBTExpT3lTMFhPUFFvYWNPWktKYjlP0gHAAUFVX3lxTE1tRWtUUVpHQngwaWVSM05CMktiNm8wcXFMVEtyYmtqWVpSMHRlRDU3SlU0NHMzR2E4LVFDTnlwYy14bV9pal8zZlU5QmFINmhUWHdLSFBWMnNVRU1LcDVaajNVNUxoRURvaktDamtrUnVJLVdxM1U0SlZuVl9tM0VxUFhUQTZJWWF4UWNTOEJtbHprRnZrX2w4QTN4NjJZYmhPeEZycVhvWk1fYVkwclhCaVNIZ2pfLW5NcnAxZ1duYQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Sussex",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Sussex County town officially bans data centers after public pushback",
+          "outlet": "New Jersey Herald",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTUZiY1dqN3dvMGNoZkZ2Q21xaHhjZ1V2eHZNYXdwWkpFSjMyeFdyVDBzMGIxM1VrVm9rdWplcGZpcnQtQVJudVFDR3dTR0pDSTd4UlZUOV9uaDc0b3RpMXptMU9sdkkwcmQ2YXV0ellLVUhrRjR0c1BUcEkzd2l2RVA5cklJN3IxWXB3WVg4NjQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Wythe",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Gigawatt data center project planned for Wythe County",
+          "outlet": "Cardinal News",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUGlhQlFoRUQ1WkRQaHRvbktBbU5tTkt5VnhhdUg0QUhtMUZOUXo0cGQ4eWpFYkJ5RHJEYVJZRVV2c2l0WG9URWhXbVJWYUNtMDdfcDQ3d2NaY2N1OEMxNGtDNDJpM3Vvd3B3cTg0UWR6TXVOVUdHWThmMzEtYm1XMGxNVzRLT3g2ZklWTnR1UGNWM0F5?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Raritan",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Raritan Township Expresses Opposition to Data Centers",
+          "outlet": "TAPinto",
+          "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNbHN5ZU9UbzByaVl3c241MnFTWkJoY2R6akoydDd5MHBwNkxraklHa2pCakZlX1pSSDJSZnU2OHJ5aE85SHRpX1RQb0ZLbjVEd3lTc25lWUFuZ1pCUGxuQ2RQRnY3Mko1blNzZ0xwQWVDUFV3YWxqSk5VeE1sRXpQYXBCSk8yT2pJT3ZNeEFXVDFmNlpaQ2RWMHVTTEx1M1VfM2VNSmplaW9rWmMzT21CSk5Bajg5YkFsNUEtZktGZURJSEdYcy00RllrcmYyb2lXMk9N?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Most American",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Exclusive | Most American voters have favorable view of AI — despite media focus on controversies: poll",
+          "outlet": "nypost.com",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxObUdadWZ3WGQ3TFhiTDBiakFIT21Obi1IUFZLejVSUTVQQTRmeW01RnhSQ1ZmYlI1OXlqc2FUTTRFbHR6Nk4xZEtwSk9sUlRiMlpQclI1SUwwc0RkM0xOWUZxdmxVaDZ2dGd4ZGRCYzBjeF90N0Zyc0d5TWFLbkhFM3FYdmY4T2l2YlNULVFGcnRpX2VocW8wSmM5V3VPcUUzMlN0Q2lvd1FMSWt5dzNTZzQwd3hmM2YtLVNnVnZNNjE2bk1QdnB3?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Neptune",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Neptune Township bans data centers and ICE detention facilities",
+          "outlet": "The Jersey Vindicator",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNUkNXVnF2ZHU3S0xtbERBNWY0ZVQzcmMzQkw3SWh5aTVBN3V1Zm1IbUtrMzhyUTlIU1Z4TERFZll3WUEwUDhNeEtyYkdQWklucnlHU3FqYzRNYmdDYWtpcVV3RUJuUzRLMnNMazlacFk3anBEUWdJSEZ1c3VnaWExXzYtaTZrUFpIeHQtUXNtdWk0OXh6ckRWdkZVaXNlLThyOGtjbUJDQQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Hudson County",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Hudson County Commissioners Back State Data Center Regulations as Bayonne Debate Continues",
+          "outlet": "TAPinto",
+          "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQVUl1Xy1vLUhSSExwTGxoTVJFMWFJXzFScmc4VXVCS2xNejFZRGJfV2UyMVF6MkJPOUVlZTd6VE00bHdFZGlOYUNSS2REQXNhVUZNRjR1VjE3VEdyb2FiTGYxemlFa3hEN1B0MWlVWVBTLWMyMVowTW1XSGpzYnZlbW1aZWNfTloyVG5XaURZbUlUai1kREU3WFB5cWs1QUpJbXlSRTRMYWRwOVR5VEpVMHpXeFlxN09GdEsteEJ3bEowMHVuYjk5NmZhMFk4Q2RLczRveFlJSGd5ZEw0WkZrbFo1Uy0xNi1SazhMaW5TVFpSeVVaOTBQMw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "But",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Land in N.J. town is ‘data center approved.’ But residents worry it’s not hypothetical. ‘We don’t want it.’",
+          "outlet": "NJ.com",
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPSkNvVmNxMmh6VG9iUXlQTHYyd2UxUVRsWnFPVHBnZm9Dc29EWmpBd1ZyTUE5OURBU0F6RVhmRGljTnFIUERRZUtjbEg4QTJlN3FLeHI0WWtISlZRZkNVLWNQSGQtNVhxekV5Z3Q2QUI4c1ZEc3JQUXBrS1ZPQ1JxekxFdWFFX1pUQnRTLUdMS3lybUlZZTEycjFmZm9MS1JNaGxDODdkeW85Ny1CcFJUYVZudXRSU0QzS2VMU1FaUGJlOXBuaC1IZ2RzRkNtUdIB4gFBVV95cUxNaEN2Um4xazNJdWdFcFVEdnFuRUVUZXgxQXhDb3ItdWZXY2hHTlZJNXdQa1IwUzhVMjF0R2RjQTUwd1h0SDNyeElfb19jNFVfUFJDZ3lhcXJTV2tJbkNLYzdLbmJqZTlaaldUbjVUaXQ2Vm85RXBpSDdfRkZMMG92Zk9KRXcxbEtLYVF6MWs3cW5RV2E5eW03LVVJSTZIMzQzYnVWQW1CUEs3WGxFd3VUUVRHZzdkRmFpcTU3UmxTcXFuUjhqbTc5WmZEVUh0WWhkTmJuV0Y2REwwMW5wdlZVMHBB?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Bernards",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Data center ban proposed in Bernards Township",
+          "outlet": "New Jersey Hills Media Group",
+          "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOdVdHWlUyQ25CMnkzTlJjcG9abnRfMmtERjNfWmNJeFFmOEFpekNsQlN0MlU2SEY5SG5sMFVoX1RNWHd0cFgxM3kyaHFYU0NoQnpLUk4taGQ1UEdpcEtyOXpvaERzSGFINDROUEpzWnZEaTJOd3Q3QS1QcUFfU19jX0tqZnVDVmtTSUtTeFlRNmFMQVd4THBZVzRIRVRCd2Joa3hMb1FmODVtc3B4ZGk2OW1hbXNNUkZDdGhMdGhxZW1Tb0pCcGlGaUpoYUhzOFRRbmE1NHcwNXRTNjBjeEhzMkZ2S04?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Pecos County",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Pecos County residents voice concerns over incoming Amazon data center project",
+          "outlet": "newswest9.com",
+          "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNbTVpdlBGWU1aTkZXbnVmQ09qY0VWbE9TZ1dDOEtVZl95R3k4MV92SkZkM1B4NFZOU1NWMVNZU1JvcFVwemlBU204LVdxc3Npbm82RlVxc2VYMmhvblBuczF1SW5VZjVxeHhVTGpUYWVaRHFJX2xrSXNVczdtTDJJcURoSEVrQk93RDNyM3N3NzB6b1E2aWpIcmxXUGJoNXlWUUxaNEdJX0QwWVhpajRHQUI1b25EeHlJcnVmekNNQUpCNm9Ba1MwWHZyWExNZ2NLT2V2OEl0LUhVb1NfVFI0YkJ6WFk?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Prichard",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Prichard residents voice strong opposition to proposed data center at public hearing",
+          "outlet": "mynbc15.com",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQSFhwUk5saWJ2VVVoSjZnQnFkU2c4djZSSGZvdWlKUlNpR0taeDhfckU1ZTVXRGdTdUNvSGRkR2kzSUkxT3lnZ3pPc090eF8xTkl3aE9IeHA5cjFLUWVENFdfZnoxSG5kamE0ODBiNW9HWFZqLURYWC1wdnk0bTdkRkQxRHJPUlBVdkhoWkFadUxjRmJCd1VDMUl5QlJVYTdnREdVZ0dXNmJlcUN6XzN2cVdrV1pPdw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Upper Merion Township",
+      "count": 1,
+      "examples": [
+        {
+          "title": "The King of Prussia data center complex is rejected by Upper Merion Township officials",
+          "outlet": "Inquirer.com",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPUlJMblR6Zno4SmJDeUtuOWhEVXlDUEU0UDAwRWhhcm1zTUFWUkhvOWRxNnlGLWpSTXZ6SmQteHRsb19sQ3Z4eXZ1VU1CZEJqYWcwN0Q3SGVrTUFlS1JCQTJFaXB5Qm45R0RQOVFQWkVWdDVIa2ZMUDlLR05qUW4tMDU1LUNHNmJ1TV9uODNob3MxRE5rZWg0Z1pyWm5YZnlLM1FrcllmRHBUT215STB0STdHeFliWWFxRlYwZlBB?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Springdale-area",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Springdale-area residents express their concerns about a data center coming to their town",
+          "outlet": "community.triblive.com",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8xS3U2UjlzNmJhLU5LOFlSaUVWdDZmLUxEb3pTR2loVjRQcXVTVDlKZkdtc0hBOUNadjhid2xyZW52VDFWSUVveHY4UVFfZU9iUDhXY3ln?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Hayward",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Hayward Council to consider move to ban data centers at its Sept. 15 meeting",
+          "outlet": "City of Hayward (.gov)",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPdHJQcHMyOU80T3dBMDNhME9MNWRuczRiWU9PMjdoSWgtVWpXRF9ENnNvMUJXeEJYcFplTFp6a0RsbHpJZWZXcHlOTVZHLWtYOTZ3LUlHUDUwTXAxc3lNTVhvRUhoMXpNWmh5VUlaZHJMWUFiTzR0MnhJSi1EbmtaamI5VnVzX0pFY2RrYjFzaWlZOHEzY0VzLTJiNDd5LWVWZTV2cW45TUY1MDBmRnc?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "status": "new"
+    },
+    {
+      "name": "Negaunee City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Negaunee City Council narrowly passes strict data center ordinance",
+          "outlet": "myupnow.com",
+          "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOU3dPZUVuTV90bDZFM0g1WmhxYi00aVVyZzVpMmREV25FNzcwRnYxWGRDX3ZDejhGWWdoUjdwb2JwU3FTd0RKY2M5c1pLdGdROGNGSHFaczJPNHljczZNSnNOMHl2Q0hQN21ET3BkdjZsak1FWWJkQmJ5VDJITklBc0g0NTJfeDAzY1JCTFdOLU1Ld2NYSXJfRkVVY1J2WUw4RmFyX3F0NGtLbThiMlRscE9GUVYzYWdzdTNjVkc4Xy1JclRGTUhYQUJQbFFSWFZObjZGWTZJeUx6U3lnRlE?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
       "status": "new"
     },
     {
