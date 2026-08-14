@@ -293,6 +293,9 @@ def _render_community_evaluator():
                 st.markdown(f"**State**  \n{state}")
     else:
         st.warning("Could not geocode this location — select your state below and adjust sliders manually.")
+    if lat is not None:
+        st.info("Switch to the **Map** tab to see nearby data centers, moratoriums, "
+                "and active projects in this area.")
     st.markdown("</div>", unsafe_allow_html=True)
 
     # ── Compute defaults ──────────────────────────────────────────────── #

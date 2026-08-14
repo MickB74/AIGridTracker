@@ -1,7 +1,7 @@
 """
 Unified Map tab — consolidates all geographic views into a single interactive
-Plotly Mapbox map with togglable layers and a click-to-select info panel that
-shows everything about the selected point.
+Plotly scatter_geo map with togglable layers and a click-to-select info panel
+that shows everything about the selected point.
 """
 
 import streamlit as st
@@ -15,22 +15,16 @@ from src.helpers import src_link
 from src.ui.state_detail import render_state_profile
 
 _REGION_PRESETS = {
-    "Full USA": {"lat": 39.5, "lon": -98.5, "zoom": 3.2},
-    "Data Center Alley (NoVA)": {"lat": 39.04, "lon": -77.5, "zoom": 9},
-    "Dallas-Fort Worth": {"lat": 32.78, "lon": -96.8, "zoom": 9},
-    "Silicon Valley / Bay Area": {"lat": 37.4, "lon": -122.0, "zoom": 9},
-    "Central Ohio": {"lat": 40.08, "lon": -82.8, "zoom": 9},
-    "Phoenix / Mesa, AZ": {"lat": 33.45, "lon": -111.9, "zoom": 9},
-    "Pacific NW (OR / WA)": {"lat": 45.5, "lon": -120.5, "zoom": 7},
-    "Texas (statewide)": {"lat": 31.5, "lon": -99.5, "zoom": 5.5},
-    "Memphis, TN (xAI)": {"lat": 35.06, "lon": -90.06, "zoom": 10},
-    "Abilene, TX (Stargate)": {"lat": 32.45, "lon": -99.7, "zoom": 10},
-}
-
-_MAP_STYLES = {
-    "Dark": "carto-darkmatter",
-    "Road": "open-street-map",
-    "Light": "carto-positron",
+    "Full USA": {"lat": 39.5, "lon": -98.5, "scale": 1},
+    "Data Center Alley (NoVA)": {"lat": 39.04, "lon": -77.5, "scale": 8},
+    "Dallas-Fort Worth": {"lat": 32.78, "lon": -96.8, "scale": 8},
+    "Silicon Valley / Bay Area": {"lat": 37.4, "lon": -122.0, "scale": 8},
+    "Central Ohio": {"lat": 40.08, "lon": -82.8, "scale": 8},
+    "Phoenix / Mesa, AZ": {"lat": 33.45, "lon": -111.9, "scale": 8},
+    "Pacific NW (OR / WA)": {"lat": 45.5, "lon": -120.5, "scale": 5},
+    "Texas (statewide)": {"lat": 31.5, "lon": -99.5, "scale": 4},
+    "Memphis, TN (xAI)": {"lat": 35.06, "lon": -90.06, "scale": 10},
+    "Abilene, TX (Stargate)": {"lat": 32.45, "lon": -99.7, "scale": 10},
 }
 
 _STAGE_COLORS = {
@@ -76,7 +70,7 @@ def render_map_tab():
     )
 
     # ── Controls ──────────────────────────────────────────────────────── #
-    ctrl1, ctrl2, ctrl3, ctrl4 = st.columns([2, 2, 1.5, 1.5])
+    ctrl1, ctrl2, ctrl3 = st.columns([2, 2, 2])
 
     with ctrl1:
         all_ops = sorted(DC_SITES_DF["operator"].unique())
@@ -97,10 +91,6 @@ def render_map_tab():
     with ctrl3:
         preset = st.selectbox("Jump to region", list(_REGION_PRESETS.keys()),
                               key="umap_preset")
-
-    with ctrl4:
-        map_style = st.radio("Style", list(_MAP_STYLES.keys()),
-                             horizontal=True, key="umap_style")
 
     layer_cols = st.columns(4)
     show_campuses = layer_cols[0].checkbox("Campuses", value=True, key="umap_l_campus")
@@ -125,7 +115,7 @@ def render_map_tab():
     mc2.metric("Projects", f"{proj_count}", f"{int(hearing_count)} hearing soon" if hearing_count else None)
     mc3.metric("Moratoriums", morat_count)
 
-    # ── Build figure ──────────────────────────────────────────────────── #
+    # ── Build figure (scatter_geo — click selection works reliably) ──── #
     fig = go.Figure()
     vp = _REGION_PRESETS[preset]
     op_colors = {name: m[6] for name, m in OPERATORS.items()}
@@ -143,11 +133,11 @@ def render_map_tab():
             cdf["_color"] = cdf["operator"].map(
                 lambda o: op_colors.get(o, "#6b7280"))
             cdf["_layer"] = "campus"
-            fig.add_trace(go.Scattermapbox(
+            fig.add_trace(go.Scattergeo(
                 lat=cdf["lat"], lon=cdf["lon"],
                 mode="markers",
                 marker=dict(size=9, color=cdf["_color"],
-                            opacity=0.85),
+                            opacity=0.85, line=dict(width=0.5, color="white")),
                 text=cdf["operator"] + " — " + cdf["location"] + ", " + cdf["state"],
                 customdata=list(zip(
                     cdf["_layer"], cdf.index,
@@ -176,11 +166,12 @@ def render_map_tab():
             pdf["_mw_str"] = pdf["size_mw"].apply(
                 lambda v: f"{v:.0f} MW" if has_value(v) else "TBD")
             pdf["_layer"] = "project"
-            fig.add_trace(go.Scattermapbox(
+            fig.add_trace(go.Scattergeo(
                 lat=pdf["lat"], lon=pdf["lon"],
                 mode="markers",
-                marker=dict(size=12, color=pdf["_color"],
-                            opacity=0.9, symbol="circle"),
+                marker=dict(size=13, color=pdf["_color"],
+                            opacity=0.9, line=dict(width=1, color="white"),
+                            symbol="diamond"),
                 text=pdf["name"] + " — " + pdf["locality"] + ", " + pdf["state"],
                 customdata=list(zip(
                     pdf["_layer"], pdf["id"],
@@ -208,10 +199,11 @@ def render_map_tab():
             mdf["_note"] = mdf["note"].apply(lambda v: v if has_value(v) else "")
             mdf["_layer"] = "moratorium"
             mdf["_verified"] = mdf["verified"].map({True: "Verified", False: "Unverified"})
-            fig.add_trace(go.Scattermapbox(
+            fig.add_trace(go.Scattergeo(
                 lat=mdf["lat"], lon=mdf["lon"],
                 mode="markers",
-                marker=dict(size=8, color="#a855f7", opacity=0.8),
+                marker=dict(size=7, color="#a855f7", opacity=0.7,
+                            line=dict(width=0.3, color="white")),
                 text=mdf["locality"] + ", " + mdf["state"] + " — " + mdf["effective_status"],
                 customdata=list(zip(
                     mdf["_layer"], mdf.index,
@@ -235,13 +227,14 @@ def render_map_tab():
         if not mkdf.empty:
             mkdf["_layer"] = "market"
             mkdf["_mw_total"] = mkdf[["mw", "uc", "planned"]].sum(axis=1)
-            fig.add_trace(go.Scattermapbox(
+            fig.add_trace(go.Scattergeo(
                 lat=mkdf["lat"], lon=mkdf["lon"],
                 mode="markers",
                 marker=dict(
-                    size=mkdf["_mw_total"].clip(lower=100) / 80,
-                    color="#ff5a1f", opacity=0.5,
+                    size=mkdf["_mw_total"].clip(lower=100) / 100,
+                    color="#ff5a1f", opacity=0.4,
                     sizemode="area",
+                    line=dict(width=0.5, color="#ff5a1f"),
                 ),
                 text=mkdf["market"],
                 customdata=list(zip(
@@ -264,14 +257,24 @@ def render_map_tab():
                 showlegend=True,
             ))
 
-    fig.update_layout(
-        mapbox=dict(
-            style=_MAP_STYLES[map_style],
-            center=dict(lat=vp["lat"], lon=vp["lon"]),
-            zoom=vp["zoom"],
+    fig.update_geos(
+        scope="usa",
+        bgcolor="rgba(0,0,0,0)",
+        landcolor="#1c1d21",
+        lakecolor="rgba(0,0,0,0)",
+        subunitcolor="#3c3f44",
+        showsubunits=True,
+        countrycolor="#3c3f44",
+        showlakes=False,
+        projection=dict(
+            type="albers usa",
+            scale=vp.get("scale", 1),
         ),
+        center=dict(lat=vp["lat"], lon=vp["lon"]),
+    )
+    fig.update_layout(
         margin=dict(l=0, r=0, t=0, b=0),
-        height=560,
+        height=520,
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         legend=dict(
@@ -279,16 +282,17 @@ def render_map_tab():
             bgcolor="rgba(0,0,0,0.4)", font=dict(color="white", size=11),
         ),
         showlegend=True,
+        clickmode="event+select",
+        dragmode="select",
     )
 
     event = st.plotly_chart(fig, use_container_width=True,
-                            on_select="rerun", key="unified_map",
-                            selection_mode="points")
+                            on_select="rerun", selection_mode="points",
+                            key="unified_map")
 
     st.caption(
-        "Click any point for full details. "
-        "Map tiles: CARTO/OpenStreetMap. Campus coordinates are "
-        "town/county/metro centroids, not surveyed GPS positions."
+        "**Click and drag** a small box around a point to select it. "
+        "Campus coordinates are town/county/metro centroids, not surveyed GPS positions."
     )
 
     # ── Click handler — unified info panel ────────────────────────────── #
@@ -300,8 +304,9 @@ def render_map_tab():
         pass
 
     if not picked_points:
-        st.info("Click a point on the map to see full details — site info, state context, "
-                "moratoriums, officials, projects, and news, all in one place.")
+        st.info("**Click and drag** a small box around a point to select it. "
+                "Full details appear below — site info, state context, "
+                "moratoriums, officials, projects, and negotiation intel.")
         return
 
     point = picked_points[0]
@@ -310,7 +315,6 @@ def render_map_tab():
         return
 
     layer_type = cd[0]
-    row_id = cd[1]
 
     st.divider()
 
@@ -500,11 +504,12 @@ def _render_state_context(state_name, state_abbrev):
         c1, c2, c3 = st.columns(3)
         c1.metric("Facilities", row["dc_count"])
         c2.metric("Power Draw", f"{row['twh_year']:.1f} TWh/yr")
-        c3.metric("Major Hubs", row["major_hubs"][:30] + "..." if len(str(row["major_hubs"])) > 30 else row["major_hubs"])
+        hubs = str(row["major_hubs"])
+        c3.metric("Major Hubs", hubs[:30] + "..." if len(hubs) > 30 else hubs)
         if grid_prof:
             g1, g2, g3 = st.columns(3)
             g1.metric("Residential Rate", f"\\${grid_prof.get('rate', 0):.2f}/kWh")
-            g2.metric("Grid Carbon", f"{grid_prof.get('gco2', 0)} gCO\\u2082/kWh")
+            g2.metric("Grid Carbon", f"{grid_prof.get('gco2', 0)} gCO₂/kWh")
             g3.metric("Water Stress", grid_prof.get("water_stress", "unknown").title())
         st.caption(f"[Full state profile on aigridwatch.com](https://aigridwatch.com/states/{state_name.lower().replace(' ', '-')})")
 
