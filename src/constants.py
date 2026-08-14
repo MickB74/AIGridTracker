@@ -1377,13 +1377,13 @@ MORATORIUMS = [
      "note": "12-month proposal voted down 8–1 after 3.5 hours of public comment",
      "lat": 41.14, "lon": -104.82, "expires": None, "as_of": "2026-08-04",
      "source": "https://wyofile.com/cheyenne-rejects-moratorium-on-data-centers/"},
-    # State-level (no single map point)
+    # State-level — lat/lon set to state capital for map placement
     {"locality": "New York (statewide)", "state": "NY", "level": "State",
      "status": "Enacted", "when": "Jul 14, 2026",
      "note": "EO 62: first statewide pause. Holds DEC discretionary approvals for "
              "50+ MW facilities until DPS finishes a generic environmental impact "
              "statement — roughly a year, but tied to that study, not a fixed date",
-     "lat": None, "lon": None, "expires": None, "as_of": "2026-08-04",
+     "lat": 42.65, "lon": -73.76, "expires": None, "as_of": "2026-08-04",
      "source": "https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops"},
     {"locality": "New York (S10642/A11560)", "state": "NY", "level": "State",
      "status": "Proposed", "when": "Passed both houses Jun 4, 2026",
@@ -1393,7 +1393,7 @@ MORATORIUMS = [
              "Senate 43-17. Per the Senate's own record it had not been delivered to "
              "the Governor as of Aug 4, 2026 — Hochul acted by executive order "
              "(EO 62, 50 MW floor) instead. Still live, and stricter than the EO",
-     "lat": None, "lon": None, "expires": None, "as_of": "2026-08-04",
+     "lat": 42.65, "lon": -73.76, "expires": None, "as_of": "2026-08-04",
      "source": "https://www.nysenate.gov/legislation/bills/2025/S10642"},
     {"locality": "Texas (Abbott directive)", "state": "TX", "level": "State",
      "status": "Enacted", "when": "Aug 3, 2026",
@@ -1406,24 +1406,24 @@ MORATORIUMS = [
              "ownership. Excludes projects with on-site generation and areas "
              "outside ERCOT. PUCT open meeting Aug 20. No end date — treat "
              "as a hold on the queue, not a construction ban",
-     "lat": None, "lon": None, "expires": None, "as_of": "2026-08-13",
+     "lat": 30.27, "lon": -97.74, "expires": None, "as_of": "2026-08-13",
      "source": "https://www.texastribune.org/2026/08/03/texas-data-center-project-audit-greg-abbott/"},
     {"locality": "Oregon (statewide)", "state": "OR", "level": "State",
      "status": "Proposed", "when": "Aug 4, 2026",
      "note": "Democratic lawmakers proposed a three-year moratorium on new large "
              "data centers",
-     "lat": None, "lon": None, "expires": None, "as_of": "2026-08-04",
+     "lat": 44.94, "lon": -123.03, "expires": None, "as_of": "2026-08-04",
      "source": "https://centraloregonian.com/2026/08/04/democratic-lawmakers-propose-three-year-moratorium-on-new-large-data-centers-in-oregon/"},
     {"locality": "Georgia (HB 1012)", "state": "GA", "level": "State",
      "status": "Proposed", "when": "2026",
      "note": "Would bar local permits for new data centers until Mar 1, 2027, "
              "exempting approvals issued before Jul 1, 2026",
-     "lat": None, "lon": None, "expires": None, "as_of": "2026-08-04",
+     "lat": 33.75, "lon": -84.39, "expires": None, "as_of": "2026-08-04",
      "source": "https://goodjobsfirst.org/data-center-moratorium-bills-are-spreading-in-2026/"},
     {"locality": "Maine (statewide)", "state": "ME", "level": "State",
      "status": "Vetoed", "when": "Apr 24, 2026",
      "note": "LD 307 would have paused 20+ MW facilities to Nov 2027; governor vetoed",
-     "lat": None, "lon": None, "expires": None, "as_of": "2026-08-04",
+     "lat": 44.31, "lon": -69.78, "expires": None, "as_of": "2026-08-04",
      "source": "https://www.rockinst.org/blog/updates-on-the-cloud-more-moratoriums-on-data-centers/"},
     {"locality": "Ohio (ballot measure)", "state": "OH", "level": "State",
      "status": "Rejected", "when": "Jul 1, 2026",
@@ -1431,7 +1431,7 @@ MORATORIUMS = [
              "centers over 25 MW gathered only ~70,000 of the required 413,488 "
              "signatures by the Jul 1 deadline. Organizers plan to try again "
              "for the 2027 ballot",
-     "lat": None, "lon": None, "expires": None, "as_of": "2026-08-13",
+     "lat": 39.96, "lon": -82.99, "expires": None, "as_of": "2026-08-13",
      "source": "https://ballotpedia.org/Ohio_Prohibition_of_Data_Center_Construction_Amendment_(2026)"},
     {"locality": "Bell County", "state": "KY", "level": "Local",
      "status": "Enacted", "when": "Jul 2, 2026",
