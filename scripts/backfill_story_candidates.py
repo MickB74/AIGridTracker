@@ -141,12 +141,17 @@ def main():
         gazetteer = story_tracker.build_gazetteer()
         changed = 0
         for s in stories:
-            if s.get("locality"):
-                continue                                          # already tagged
+            stored = (s.get("locality") or "").strip()
+            # A valid tag is set once and kept — but a bare state name stored
+            # as a locality is a legacy bug (tagged before build_gazetteer
+            # excluded state names) and gets re-guessed like an untagged row.
+            if stored and stored.lower() not in story_tracker._STATE_NAMES_LOWER:
+                continue
             locality, state = story_tracker.guess_locality(s.get("title", ""), gazetteer)
             if not state:
-                state = story_tracker.guess_state(s.get("title", ""))
-            if locality != s.get("locality") or (locality and state != s.get("state")):
+                state = (story_tracker.guess_state(s.get("title", ""))
+                         or s.get("state"))
+            if locality != s.get("locality") or state != s.get("state"):
                 s["locality"], s["state"] = locality, state
                 changed += 1
         print(f"Relabeled {changed} of {len(stories)} archived stories")

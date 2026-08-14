@@ -157,6 +157,53 @@ def is_statewide(title):
     return any(sig in t for sig in STATEWIDE_SIGNALS)
 
 
+# Topic taxonomy for organizing stories that share a group — and for giving
+# the no-place-at-all stories (national policy, industry, finance) real
+# groups instead of one undifferentiated "Not yet localized" blob. Checked in
+# order, first match wins; keywords are \b-prefixed regexes so "ban" matches
+# "ban/bans/banning" but not "urban".
+STORY_TOPICS = [
+    ("bans", "Bans & moratoriums",
+     ("moratorium", "ban", "ordinance", "rezon", "zoning", "pause")),
+    ("legal", "Lawsuits & legal fights",
+     ("lawsuit", "sue", "sued", "court", "litigation", "legal", "settlement",
+      "judge", "appeal")),
+    ("policy", "Policy & legislation",
+     ("legislat", "bill", "governor", "gov.", "regulat", "tax credit",
+      "tax break", "tax incentive", "lawmaker", "senate", "congress",
+      "guardrail", "oversight", "statehouse", "moratorium bill")),
+    ("grid", "Electric bills & the grid",
+     ("electric bill", "power bill", "utility bill", "ratepayer", "rate hike",
+      "rates", "grid", "transmission", "pjm", "ercot", "electricity",
+      "power demand", "energy cost")),
+    ("water", "Water & environment",
+     ("water", "drought", "aquifer", "pollution", "emission", "air quality",
+      "environment", "diesel", "climate")),
+    ("noise", "Noise & health",
+     ("noise", "hum", "decibel", "health")),
+    ("pushback", "Community pushback",
+     ("protest", "oppos", "backlash", "outcry", "resident", "hearing",
+      "packed", "rally", "fight", "revolt", "pushback")),
+    ("build", "Projects & construction",
+     ("construction", "build", "approv", "propos", "campus", "megawatt",
+      "gigawatt", "expansion", "breaks ground", "invest")),
+]
+_TOPIC_PATTERNS = [
+    (key, label, re.compile("|".join(rf"\b{re.escape(k)}" for k in kws),
+                            re.IGNORECASE))
+    for key, label, kws in STORY_TOPICS
+]
+
+
+def classify_topic(title):
+    """(key, label) for the headline's dominant topic; ("other",
+    "Other coverage") when nothing matches."""
+    for key, label, pattern in _TOPIC_PATTERNS:
+        if pattern.search(title or ""):
+            return key, label
+    return "other", "Other coverage"
+
+
 def group_key_for(locality, state, statewide=False):
     if locality and state:
         return f"{locality}|{state}"
@@ -218,13 +265,22 @@ def group_stories(stories, min_for_summary=4):
         # Statewide classification only applies to state-only stories (a town
         # match always wins — a story about a specific town is not statewide).
         sw = bool(st and not loc and is_statewide(s.get("title", "")))
-        key = group_key_for(loc, st, sw)
+        if not loc and not st:
+            # No place at all — national policy, industry, finance. One
+            # "Not yet localized" blob is unreadable at scale, so these
+            # group by topic instead.
+            tkey, tlabel = classify_topic(s.get("title", ""))
+            key = f"topic:{tkey}"
+            label = f"National & industry — {tlabel}"
+        else:
+            key = group_key_for(loc, st, sw)
+            label = group_label_for(loc, st, sw)
         g = groups.setdefault(key, {
             "key": key,
             "locality": loc,
             "state": st,
             "statewide": sw,
-            "label": group_label_for(loc, st, sw),
+            "label": label,
             "stories": [],
         })
         g["stories"].append(s)

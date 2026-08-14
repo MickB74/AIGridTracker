@@ -644,6 +644,26 @@ st.info(
     "🤝 Consulting",
 ])
 
+# Deep-link support: ?tab=map (or start, toolkit, simulate, …) clicks the tab
+_TAB_SLUGS = ["start", "map", "toolkit", "simulate", "calculator", "intel",
+              "reference", "consulting"]
+_requested_tab = st.query_params.get("tab", "").lower()
+if _requested_tab in _TAB_SLUGS:
+    _tab_idx = _TAB_SLUGS.index(_requested_tab)
+    import streamlit.components.v1 as _components
+    _components.html(
+        f"""<script>
+        const tabs = window.parent.document.querySelectorAll(
+            '[data-baseweb="tab-list"] button[role="tab"]');
+        if (tabs.length > {_tab_idx}) {{
+            tabs[{_tab_idx}].click();
+            const bar = tabs[0].closest('[data-baseweb="tab-list"]');
+            if (bar) bar.scrollIntoView({{block: 'start'}});
+        }}
+        </script>""",
+        height=0,
+    )
+
 # ── Start here (guided wizard) ────────────────────────────────────────── #
 with tab_start:
     render_start_here_tab()

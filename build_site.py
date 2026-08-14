@@ -2441,18 +2441,40 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
             'keywords, not written by a person.</p>'
             f'<ol class="top-stories-list">{"".join(rows)}</ol></section>')
 
+    def _headline_li(s):
+        emoji, blurb = story_tracker.classify_angle(s.get("title", ""))
+        return (
+            f'<li><a href="{esc(s.get("link", ""))}" rel="nofollow noopener" '
+            f'target="_blank">{esc(s.get("title", ""))}</a>'
+            f'<span class="meta"><span class="tag" title="{esc(blurb)}">'
+            f'{emoji}</span> {esc(s.get("outlet", ""))}'
+            f'{" · " + _fmt_date(s.get("first_seen")) if s.get("first_seen") else ""}'
+            '</span></li>')
+
+    _topic_order = [label for _, label, _ in story_tracker.STORY_TOPICS]
+    _topic_order.append("Other coverage")
+
     cards = []
     for g in groups:
         headline_rows = []
-        for s in g["stories"]:
-            emoji, blurb = story_tracker.classify_angle(s.get("title", ""))
-            headline_rows.append(
-                f'<li><a href="{esc(s.get("link", ""))}" rel="nofollow noopener" '
-                f'target="_blank">{esc(s.get("title", ""))}</a>'
-                f'<span class="meta"><span class="tag" title="{esc(blurb)}">'
-                f'{emoji}</span> {esc(s.get("outlet", ""))}'
-                f'{" · " + _fmt_date(s.get("first_seen")) if s.get("first_seen") else ""}'
-                '</span></li>')
+        if g["count"] >= 10:
+            # A 10+ story list is a wall — organize it under topic subheaders
+            # (bans, lawsuits, legislation, …) so the shape of a big fight is
+            # scannable. Stories stay newest-first within each topic.
+            by_topic = {}
+            for s in g["stories"]:
+                _, tlabel = story_tracker.classify_topic(s.get("title", ""))
+                by_topic.setdefault(tlabel, []).append(s)
+            for tlabel in _topic_order:
+                bucket = by_topic.get(tlabel)
+                if not bucket:
+                    continue
+                headline_rows.append(
+                    f'<li class="topic-sub">{esc(tlabel)} '
+                    f'<span class="count">({len(bucket)})</span></li>')
+                headline_rows.extend(_headline_li(s) for s in bucket)
+        else:
+            headline_rows.extend(_headline_li(s) for s in g["stories"])
         summary_html = (f'<p class="summary">{esc(g["summary"])}</p>'
                         if g["summary"] else "")
         pattern_badge = (' <span class="badge badge-pattern">Recurring pattern</span>'
@@ -2586,6 +2608,11 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
 .story-list .meta {{ display:flex; align-items:center; gap:5px; font-size:12px;
   color:var(--muted); margin-top:1px; }}
 .story-list .tag {{ font-size:13px; cursor:help; }}
+.story-list .topic-sub {{ font-size:12px; font-weight:700; color:var(--muted);
+  text-transform:uppercase; letter-spacing:.04em; margin-top:10px;
+  padding-bottom:3px; border-bottom:1px solid var(--rule); }}
+.story-list .topic-sub .count {{ font-weight:400; }}
+.story-list li.topic-sub:first-child {{ margin-top:2px; }}
 .top-stories-list {{ list-style:none; padding:0; margin:16px 0; display:grid;
   gap:12px; }}
 .top-story {{ display:grid; grid-template-columns:30px 30px 1fr; gap:10px;
