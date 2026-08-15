@@ -208,6 +208,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .tag { background:var(--card); border:1px solid var(--rule);
        border-radius:20px; padding:3px 11px; font-size:12px;
        color:var(--muted); }
+.tag-btn { cursor:pointer; font:inherit; font-size:12px; line-height:1.2;
+       transition:filter .12s ease, background .12s ease; }
+.tag-btn:hover { filter:brightness(1.25); }
+.tag-btn:focus-visible { outline:2px solid var(--teal); outline-offset:2px; }
 .prose h3 { font-size:17px; color:var(--teal); margin:24px 0 8px; }
 .prose p { margin:10px 0; }
 .prose blockquote { border-left:3px solid var(--teal); margin:16px 0;

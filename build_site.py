@@ -373,6 +373,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .tag { background:var(--card); border:1px solid var(--rule);
        border-radius:20px; padding:3px 11px; font-size:12px;
        color:var(--muted); }
+.tag-btn { cursor:pointer; font:inherit; font-size:12px; line-height:1.2;
+       transition:filter .12s ease, background .12s ease; }
+.tag-btn:hover { filter:brightness(1.25); }
+.tag-btn:focus-visible { outline:2px solid var(--teal); outline-offset:2px; }
 .prose h3 { font-size:17px; color:var(--teal); margin:24px 0 8px; }
 .prose p { margin:10px 0; }
 .prose blockquote { border-left:3px solid var(--teal); margin:16px 0;
@@ -2813,8 +2817,14 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
         data_states = esc("|".join(states)) if states else ""
         data_themes = esc("|".join(item_themes)) if item_themes else ""
         chips = "".join(
-            [f'<span class="tag tag-theme">{esc(t)}</span>' for t in item_themes]
-            + [f'<span class="tag">{esc(st)}</span>' for st in states])
+            [f'<button type="button" class="tag tag-theme tag-btn" '
+             f'data-filter-theme="{esc(t)}" '
+             f'title="Filter by theme: {esc(t)}">{esc(t)}</button>'
+             for t in item_themes]
+            + [f'<button type="button" class="tag tag-btn" '
+               f'data-filter-state="{esc(st)}" '
+               f'title="Filter by state: {esc(st)}">{esc(st)}</button>'
+               for st in states])
         meta_bits = [it.get("source", ""),
                      _fmt_date(it.get("published_iso", ""))]
         meta = " · ".join(x for x in meta_bits if x)
@@ -2970,6 +2980,30 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
   themeSel.addEventListener('change', apply);
   stateSel.addEventListener('change', apply);
   kw.addEventListener('input', apply);
+
+  // Click a chip to filter by that theme/state. Only sets the filter if the
+  // value is a real <select> option (theme/state chips always are).
+  function setSelect(sel, val) {{
+    var ok = Array.prototype.some.call(sel.options, function(o) {{ return o.value === val; }});
+    if (ok) sel.value = val;
+    return ok;
+  }}
+  list.addEventListener('click', function(e) {{
+    var btn = e.target.closest('.tag-btn');
+    if (!btn) return;
+    e.preventDefault();
+    var changed = false;
+    if (btn.hasAttribute('data-filter-theme')) {{
+      changed = setSelect(themeSel, btn.getAttribute('data-filter-theme'));
+    }} else if (btn.hasAttribute('data-filter-state')) {{
+      changed = setSelect(stateSel, btn.getAttribute('data-filter-state'));
+    }}
+    if (changed) {{
+      apply();
+      var browse = document.getElementById('browse');
+      if (browse) browse.scrollIntoView({{ behavior: 'smooth', block: 'start' }});
+    }}
+  }});
   reset.addEventListener('click', function() {{
     themeSel.value = '';
     stateSel.value = '';
@@ -3020,7 +3054,11 @@ def _video_card_html(v):
         'color:#ff4136">&#9654;</div>')
     states = v.get("states", [])
     data_states = esc("|".join(states)) if states else ""
-    chips = " ".join(f'<span class="tag">{esc(st)}</span>' for st in states)
+    chips = " ".join(
+        f'<span class="tag tag-btn" role="button" tabindex="0" '
+        f'data-filter-state="{esc(st)}" '
+        f'title="Filter videos by state: {esc(st)}">{esc(st)}</span>'
+        for st in states)
     meta = " · ".join(x for x in (v.get("source", ""),
                                   _fmt_news_date(v.get("published_iso", ""))) if x)
     img = (f'<img src={thumb!r} alt="" loading="lazy" style="width:100%;'
@@ -3164,6 +3202,33 @@ build. Try again shortly, or read the <a href="news/">news headlines</a>.</p></s
     history.replaceState(null, '', state ? ('?state=' + encodeURIComponent(state)) : location.pathname);
   }}
   sel.addEventListener('change', apply);
+
+  // Click a state chip inside a card to filter by that state, without
+  // following the card's link. Chips are spans (nesting a button in the
+  // card's <a> is invalid HTML), so wire click + keyboard by hand.
+  function chipFilter(chip) {{
+    var val = chip.getAttribute('data-filter-state');
+    var ok = Array.prototype.some.call(sel.options, function(o) {{ return o.value === val; }});
+    if (!ok) return;
+    sel.value = val;
+    apply();
+    window.scrollTo({{ top: 0, behavior: 'smooth' }});
+  }}
+  document.addEventListener('click', function(e) {{
+    var chip = e.target.closest('.tag-btn[data-filter-state]');
+    if (!chip) return;
+    e.preventDefault();
+    e.stopPropagation();
+    chipFilter(chip);
+  }});
+  document.addEventListener('keydown', function(e) {{
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var chip = e.target.closest && e.target.closest('.tag-btn[data-filter-state]');
+    if (!chip) return;
+    e.preventDefault();
+    chipFilter(chip);
+  }});
+
   var q = new URLSearchParams(location.search);
   if (q.get('state')) sel.value = q.get('state');
   apply();
@@ -3233,8 +3298,15 @@ def build_blog_index():
         subject = theme_for(s)
         data_states = esc("|".join(states)) if states else ""
         state_chips = " ".join(
-            f'<span class="tag">{esc(st)}</span>' for st in states)
-        subject_chip = f'<span class="tag tag-theme">{esc(ART_THEMES[subject][0])}</span>'
+            f'<button type="button" class="tag tag-btn" '
+            f'data-filter-state="{esc(st)}" '
+            f'title="Filter by state: {esc(st)}">{esc(st)}</button>'
+            for st in states)
+        subject_chip = (
+            f'<button type="button" class="tag tag-theme tag-btn" '
+            f'data-filter-subject="{esc(subject)}" '
+            f'title="Filter by subject: {esc(ART_THEMES[subject][0])}">'
+            f'{esc(ART_THEMES[subject][0])}</button>')
         # uid must be unique per document — every post's art lives in this one
         # page, and duplicate gradient ids would all resolve to the first.
         thumb = art_svg(s, cls="thumb", uid=f"t-{s['id']}")
@@ -3306,6 +3378,29 @@ def build_blog_index():
   }}
   subjectSel.addEventListener('change', apply);
   stateSel.addEventListener('change', apply);
+
+  // Click a chip to set the matching filter.
+  function setSelect(sel, val) {{
+    var ok = Array.prototype.some.call(sel.options, function(o) {{ return o.value === val; }});
+    if (ok) sel.value = val;
+    return ok;
+  }}
+  list.addEventListener('click', function(e) {{
+    var btn = e.target.closest('.tag-btn');
+    if (!btn) return;
+    e.preventDefault();
+    var changed = false;
+    if (btn.hasAttribute('data-filter-subject')) {{
+      changed = setSelect(subjectSel, btn.getAttribute('data-filter-subject'));
+    }} else if (btn.hasAttribute('data-filter-state')) {{
+      changed = setSelect(stateSel, btn.getAttribute('data-filter-state'));
+    }}
+    if (changed) {{
+      apply();
+      window.scrollTo({{ top: 0, behavior: 'smooth' }});
+    }}
+  }});
+
   var q = new URLSearchParams(location.search);
   if (q.get('subject')) subjectSel.value = q.get('subject');
   if (q.get('state')) stateSel.value = q.get('state');
