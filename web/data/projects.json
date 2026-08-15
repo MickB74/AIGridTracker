@@ -1203,10 +1203,94 @@
       "verified": true,
       "events": [
         {
+          "date": "2019-03-01",
+          "kind": "filing",
+          "summary": "Louisa County completed its purchase of 684 acres at the Shannon Hill exit off I-64 for $2.6 million to establish the Shannon Hill Regional Business Park, as reported in March 2019.",
+          "source": "https://www.virginiabusiness.com/article/louisa-purchases-land-for-industrial-park/"
+        },
+        {
+          "date": "2022-01-13",
+          "kind": "incentive",
+          "summary": "Virginia awarded Louisa County $300,000 through the Virginia Business Ready Sites Program for site readiness at the Shannon Hill Regional Business Park.",
+          "source": "https://www.vedp.org/press-release/2022-01/2022-virginia-business-ready-sites-program"
+        },
+        {
+          "date": "2023-01-23",
+          "kind": "incentive",
+          "summary": "Louisa County received an $11.5 million state grant to bring water infrastructure to the 700-acre Shannon Hill Regional Business Park, the third-largest such grant awarded by the state.",
+          "source": "https://www.29news.com/2023/01/23/louisa-county-using-11m-grant-develop-shannon-hill-regional-business-park/"
+        },
+        {
           "date": "2025-06-01",
           "kind": "news",
           "summary": "EdgeCore announced the land purchase (697 ac, Shannon Hill Regional Business Park) and $17B+ phased campus plan in June 2025; construction timing and tenants undisclosed.",
           "source": "https://edgecore.com/resources/press-releases/new-louisa-county-virginia-data-center-campus"
+        },
+        {
+          "date": "2025-06-25",
+          "kind": "announcement",
+          "summary": "EdgeCore Digital Infrastructure announced the purchase of 697 acres at Shannon Hill Regional Business Park for $42 million and plans for a 1.1+ GW, 3.9 million sq ft data center campus with $17 billion total investment.",
+          "source": "https://edgecore.com/new-louisa-county-virginia-data-center-campus/"
+        },
+        {
+          "date": "2025-06-25",
+          "kind": "announcement",
+          "summary": "Governor Youngkin praised the EdgeCore deal; a spokesperson confirmed the commonwealth provided no state incentives, though Virginia had previously awarded $300,000 in site-readiness funds in 2022.",
+          "source": "https://virginiabusiness.com/17b-louisa-county-data-center-edgecore/"
+        },
+        {
+          "date": "2025-06-25",
+          "kind": "coverage",
+          "summary": "Bisnow reported Louisa County had invested approximately $29.5 million in utilities infrastructure at Shannon Hill using $13.6 million in grants and $17 million in debt, with the county purchasing the land in 2018 for $2.6 million and rezoning it in 2019 for technology uses.",
+          "source": "https://www.bisnow.com/national/news/data-center/17b-campus-continues-data-center-surge-in-small-virginia-county-129918"
+        },
+        {
+          "date": "2025-06-25",
+          "kind": "coverage",
+          "summary": "CBS19 reported EdgeCore plans a closed-loop air-cooled system with minimal water usage and significant landscape buffers; Rappahannock Electric Cooperative and its affiliate Hyperscale Energy Services will provide power.",
+          "source": "https://www.cbs19news.com/news/another-data-center-to-be-built-in-louisa-county/article_94b3c0f9-07f9-4525-ba22-4d12397de4a8.html"
+        },
+        {
+          "date": "2025-06-26",
+          "kind": "coverage",
+          "summary": "Information Charlottesville reported the Shannon Hill sale closed for $42 million; IDA Chairman Dustin Madison stated the announcement marks a realization of the park's full benefits; proceeds will pay down county debt early.",
+          "source": "https://infocville.com/2025/06/26/louisa-county-sells-shannon-hill-regional-business-park-to-data-center-company/"
+        },
+        {
+          "date": "2025-06-30",
+          "kind": "coverage",
+          "summary": "Local newsletter reported that EdgeCore's Shannon Hill campus will draw water from the James River via a pipeline expected mid-2026, not from the local Northeast Creek Reservoir, differentiating it from the concurrent AWS proposal.",
+          "source": "https://tammypurcell.substack.com/p/at-town-hall-adams-says-he-opposes"
+        },
+        {
+          "date": "2025-12-01",
+          "kind": "vote",
+          "summary": "Louisa County Board of Supervisors unanimously approved a performance agreement with EdgeCore providing annual performance grants of 15% of real and business personal property tax revenue, capped at $15 million total, with payments from 2027 through 2041.",
+          "source": "https://www.thecentralvirginian.com/news/bos-oks-performance-agreement-with-edgecore/article_7ca8c1b2-b65c-4297-b5eb-391ecfd3f4fc.html"
+        },
+        {
+          "date": "2025-12-02",
+          "kind": "coverage",
+          "summary": "GovTech reported Louisa County sold Shannon Hill to EdgeCore and proceeded with the project despite resident concerns, contrasting it with Amazon's separate withdrawal under stronger community opposition.",
+          "source": "https://www.govtech.com/products/richmond-va-area-counties-split-on-data-centers"
+        },
+        {
+          "date": "2026-01-13",
+          "kind": "announcement",
+          "summary": "EdgeCore reported entering 2026 with 1.8 GW of capacity delivered or under development across six markets including Louisa County, with $5.9 billion in equity and debt committed and $16.1 billion planned for future development.",
+          "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-enters-2026-with-1-8gw-of-data-center-capacity-delivered-or-under-development"
+        },
+        {
+          "date": "2026-06-22",
+          "kind": "coverage",
+          "summary": "Louisa County Supervisor Manning Woodward stated EdgeCore will operate behind-the-meter power generation at Shannon Hill rather than drawing from the grid; gas-fired generation is the near-term option, with small modular reactors described as far off.",
+          "source": "https://tammypurcell.substack.com/p/woodward-edgecore-to-bring-its-own"
+        },
+        {
+          "date": "2026-08-01",
+          "kind": "permit",
+          "summary": "U.S. Army Corps of Engineers Norfolk District published public notice NAO-2025-00089 / MRC-2026-1381 for EdgeCore Louisa Phase 2, proposing fill of 4.20 acres of wetlands and 6,302 linear feet of stream for three data center buildings and substations on 187 acres, filed via EDI Louisa 1, LLC.",
+          "source": "https://www.nao.usace.army.mil/Media/Public-Notices/Article/4562787/nao-2025-00089-mrc-2026-1381-edgecore-louisa-phase-2-louisa-county-virginia/"
         }
       ]
     },
@@ -1302,10 +1386,76 @@
       "verified": true,
       "events": [
         {
+          "date": "2026-04-30",
+          "kind": "financing",
+          "summary": "Digital Realty's operating partnership closed the acquisition of approximately 1,440 acres at Astra Enterprise Park in De Soto for approximately $475 million in cash and operating partnership units, as disclosed in the company's June 22 press release.",
+          "source": "https://www.stocktitan.net/news/DLR/digital-realty-announces-transactions-to-drive-continued-platform-v50566doihnh.html"
+        },
+        {
+          "date": "2026-06-04",
+          "kind": "hearing",
+          "summary": "Digital Realty presented preliminary plans for the Astra North data center campus to the De Soto City Council, describing nine buildings on 280 acres requiring 600 MW of power and up to 1 million gallons of water per day.",
+          "source": "https://www2.ljworld.com/news/general-news/2026/jun/10/a-second-major-data-center-project-has-been-proposed-in-de-soto-near-panasonic-battery-plant/"
+        },
+        {
+          "date": "2026-06-09",
+          "kind": "coverage",
+          "summary": "Ingram's reported Digital Realty unveiled plans for a $4 billion data center campus at Astra Enterprise Park in De Soto with 600 MW capacity across nine buildings, noting the land was purchased in April 2026 from Sunflower Redevelopment.",
+          "source": "https://ingrams.com/article/digital-realty-wants-to-build-600mw-data-center-campus-in-de-soto/"
+        },
+        {
           "date": "2026-06-10",
           "kind": "proposal",
           "summary": "Digital Realty unveiled preliminary plans for a ~600 MW, ~1,435-acre campus at Astra Enterprise Park near the Panasonic battery plant.",
           "source": "https://www2.ljworld.com/news/general-news/2026/jun/10/a-second-major-data-center-project-has-been-proposed-in-de-soto-near-panasonic-battery-plant/"
+        },
+        {
+          "date": "2026-06-22",
+          "kind": "announcement",
+          "summary": "Digital Realty officially announced the Astra Enterprise Park acquisition in an investor press release, disclosing the $475 million price, the Evergy Energy Service Agreement for 600 MW by early 2028 scalable to 2 GW, and that planning and phased development is underway.",
+          "source": "https://www.stocktitan.net/news/DLR/digital-realty-announces-transactions-to-drive-continued-platform-v50566doihnh.html"
+        },
+        {
+          "date": "2026-06-23",
+          "kind": "coverage",
+          "summary": "KCUR reported De Soto Mayor Rick Walker welcomed data center growth as an opportunity to fund city functions, while resident Toni Caldwell raised concerns about lack of environmental impact studies and rapid development pace.",
+          "source": "https://www.kcur.org/podcast/up-to-date/2026-06-23/de-soto-mayor-data-centers"
+        },
+        {
+          "date": "2026-06-25",
+          "kind": "coverage",
+          "summary": "Commercial Property Executive reported Digital Realty entered the Kansas City market with its $475 million acquisition of 1,440 acres at Astra Enterprise Park, noting it secured an Evergy energy service agreement for 600 MW by early 2028.",
+          "source": "https://www.commercialsearch.com/news/digital-realty-enters-kansas-city-to-build-600mw-campus/"
+        },
+        {
+          "date": "2026-06-29",
+          "kind": "coverage",
+          "summary": "Johnson County Post reported the Digital Realty campus would be De Soto's second data center, that the land is already zoned for data centers so no public hearing is required for site plan review, and that Digital Realty committed to fund over $300 million in power transmission upgrades.",
+          "source": "https://johnsoncountypost.com/2026/06/29/de-soto-digital-realty-data-center-289786/"
+        },
+        {
+          "date": "2026-07-22",
+          "kind": "coverage",
+          "summary": "The New Lede reported on De Soto residents organizing against data center development, including a national Facebook group 'Say NO to data centers' with 175,000 members run by De Soto-based resident Dally Holloway.",
+          "source": "https://www.thenewlede.org/2026/07/kansas-ai-data-center-opposition/"
+        },
+        {
+          "date": "2026-07-23",
+          "kind": "hearing",
+          "summary": "Digital Realty held a community information session from 5-7 pm at DYM Event Space in De Soto; residents attended with questions about water usage, noise, and the approval process, and some noted the company was more transparent than other Kansas data center developers.",
+          "source": "https://www.desotoks.us/498/Digital-Realty-Data-Center"
+        },
+        {
+          "date": "2026-07-23",
+          "kind": "filing",
+          "summary": "On its Q2 2026 earnings call, Digital Realty referenced its expansion into the Kansas City metro with 600 MW of utility power beginning to ramp in early 2028 and a long-term runway of up to 2 GW.",
+          "source": "https://finance.biggo.com/news/US_DLR_2026-07-23"
+        },
+        {
+          "date": "2026-08-01",
+          "kind": "permit",
+          "summary": "Digital Realty submitted a site plan application for the Astra North campus to De Soto, with the Planning Commission expected to review it in August 2026; city staff review is underway.",
+          "source": "https://www.kshb.com/news/local-news/data-centers/de-soto-reviewing-site-application-for-what-could-be-citys-second-data-center-project"
         }
       ]
     },
@@ -1405,6 +1555,96 @@
           "kind": "announcement",
           "summary": "Amazon announced a $15B plan for new Northern Indiana data center campuses on top of the earlier $11B St. Joseph County investment, with 2.4 GW of power secured via a NIPSCO cost-coverage arrangement. (Amazon's page carries no publication date; the announcement date is not asserted here.)",
           "source": "https://www.aboutamazon.com/news/company-news/amazon-15-billion-indiana-data-centers"
+        },
+        {
+          "date": "2023-11-09",
+          "kind": "announcement",
+          "summary": "St. Joseph County approved a development facilitation agreement with shell company Razor5 LLC to evaluate 840 acres of farmland near New Carlisle for light-industrial use; Razor5 deposited $1 million in escrow for survey rights.",
+          "source": "https://www.wndu.com/2023/11/09/agreement-could-bring-another-big-development-new-carlisle-area/"
+        },
+        {
+          "date": "2024-02-22",
+          "kind": "rezoning",
+          "summary": "St. Joseph County Plan Commission recommended rezoning 640 acres south of the Indiana Enterprise Center from agricultural to industrial for the Razor5 project; a county council vote was scheduled for the following week.",
+          "source": "https://www.wvpe.org/wvpe-news/2024-02-22/st-joseph-county-leaders-move-forward-with-multibillion-dollar-data-center-project"
+        },
+        {
+          "date": "2024-04-10",
+          "kind": "filing",
+          "summary": "Razor5 LLC presented preliminary plans to the St. Joseph County Council showing a potential total project investment of approximately $11 billion and filed a real property tax abatement application; the company behind Razor5 had not yet been publicly identified.",
+          "source": "https://wsbt.com/news/local/razor5-development-project-billion-investment-jobs-full-time-potential-general-motors-gm-samsung-battery-plant-land-county-council-state-road-2-st-joseph-indiana"
+        },
+        {
+          "date": "2024-04-25",
+          "kind": "announcement",
+          "summary": "Governor Holcomb announced that Amazon Web Services would invest $11 billion to build a data center campus at the Indiana Enterprise Center near New Carlisle, creating at least 1,000 jobs — the largest capital investment in Indiana history.",
+          "source": "https://events.in.gov/event/gov-holcomb-announces-amazon-web-services-plans-to-invest-11b-to-create-a-new-data-center-campus-in-northern-indiana"
+        },
+        {
+          "date": "2024-08-13",
+          "kind": "vote",
+          "summary": "St. Joseph County Council voted 7-2 to approve a 10-year 50% property tax abatement and a 35-year enterprise technology exemption (85% on data center equipment) for Amazon; the package included a $143 million community enhancement agreement for parks, schools, fire departments, and infrastructure.",
+          "source": "https://www.insideindianabusiness.com/articles/incentives-approved-for-amazon-data-center-project"
+        },
+        {
+          "date": "2024-09-30",
+          "kind": "construction",
+          "summary": "AWS held a ceremonial groundbreaking at the Century Center in South Bend for its $11 billion data center campus on 870 acres near New Carlisle; construction was already underway, with the first four of 16 planned buildings targeted for completion by end of 2024.",
+          "source": "https://www.wndu.com/2024/09/30/amazon-holds-groundbreaking-ceremony-new-data-center-new-carlisle/"
+        },
+        {
+          "date": "2025-04-30",
+          "kind": "hearing",
+          "summary": "More than 100 people attended an IDEM public hearing in New Carlisle on Amazon's Section 401 water quality certification application to fill approximately 10 acres of wetlands and reroute streams in the Kankakee River watershed; the Hoosier Environmental Council argued the proposed mitigation was insufficient.",
+          "source": "https://www.hecweb.org/2025/05/08/wetland-loss-and-data-center-clash-at-idem-public-hearing/"
+        },
+        {
+          "date": "2025-08-13",
+          "kind": "ruling",
+          "summary": "IDEM cited Amazon for impacting nearly one acre of wetlands without authorization at the New Carlisle campus, ordered construction in state waters to cease, and required Amazon to withdraw its January 2025 permit application and resubmit with an additional 30% mitigation requirement.",
+          "source": "https://wsbt.com/news/local/wetland-impact-idem-sends-letter-halts-some-work-over-amazons-data-center-construction-impact-indiana-department-environmental-management-application-process-unauthorized-impact-st-joseph-county"
+        },
+        {
+          "date": "2025-08-14",
+          "kind": "filing",
+          "summary": "Amazon announced plans to resubmit its IDEM wetland permit application after acknowledging its contractor Walbridge had impacted wetlands without authorization in late summer 2024; Amazon had not notified IDEM of the incident until May 2025.",
+          "source": "https://www.wvpe.org/wvpe-news/2025-08-14/amazon-looking-to-resubmit-idem-application-after-contractors-unauthorized-wetland-impact"
+        },
+        {
+          "date": "2025-09-24",
+          "kind": "ruling",
+          "summary": "The Indiana Utility Regulatory Commission approved NiSource's petition to create NIPSCO Generation LLC (GenCo), a first-in-the-nation subsidiary utility to own, build, and manage generation assets exclusively for data centers in Northern Indiana, shielding existing NIPSCO retail customers from related costs.",
+          "source": "https://www.nisource.com/news/article/nisource-achieves-iurc-regulatory-approval-for-genco-strategy"
+        },
+        {
+          "date": "2025-10-29",
+          "kind": "operational",
+          "summary": "Amazon announced that Project Rainier, its $11 billion data center campus in New Carlisle dedicated to training Anthropic's Claude AI models on approximately 500,000 Trainium2 chips, was now operational; CNBC reported it as the company's biggest AI data center.",
+          "source": "https://wsbt.com/news/local/amazons-project-rainier-starts-operations-create-jobs-ai-billion-dollar-project-near-new-carlisle-st-joseph-county-indiana"
+        },
+        {
+          "date": "2025-11-24",
+          "kind": "announcement",
+          "summary": "Amazon announced an additional $15 billion investment to build new data center campuses in Northern Indiana, adding up to 3 GW of capacity; NIPSCO would supply power under a 15-year contract beginning January 2027, with GenCo planning two 1.3 GW gas plants and 400 MW of battery storage.",
+          "source": "https://www.wndu.com/2025/11/24/amazon-announces-15-billion-investment-data-center-campuses-northern-indiana/"
+        },
+        {
+          "date": "2026-06-24",
+          "kind": "report",
+          "summary": "Four Republican St. Joseph County Council members sent a letter to Amazon requesting voluntary contributions toward homeowner property tax relief, noting AWS had nearly $38 million in abated property taxes in the first half of 2026 alone.",
+          "source": "https://www.wvpe.org/wvpe-news/2026-06-24/council-members-asking-amazon-to-pay-despite-tax-abatement"
+        },
+        {
+          "date": "2026-07-10",
+          "kind": "coverage",
+          "summary": "Indiana Citizen reported that the New Carlisle campus had 935 full-time employees as of December 2025 (average $40.99/hour), with construction traffic more than doubling the town's population daily at peak; Amazon requested permanent filling of over 9 acres of wetlands and rerouting of 5,000 feet of streams.",
+          "source": "https://indianacitizen.org/uncertain-future-new-carlisle-offer-lessons-to-other-communities-as-data-centers-arrive/"
+        },
+        {
+          "date": "2026-07-23",
+          "kind": "construction",
+          "summary": "WNDU reported that AWS investment in the St. Joseph County campus had surpassed $13.8 billion, with approximately 18 of 30 planned buildings operational and over 1,000 people hired; a planned diverging diamond interchange at SR 2 and Larrison Boulevard had not yet begun construction.",
+          "source": "https://www.wndu.com/2026/07/23/amazon-web-services-investment-st-joseph-county-data-center-campus-surpasses-138-billion/"
         }
       ]
     },
@@ -2025,10 +2265,88 @@
       "verified": true,
       "events": [
         {
+          "date": "2024-03-06",
+          "kind": "announcement",
+          "summary": "Talen Energy disclosed in an investor presentation that AWS acquired the 1,200-acre Cumulus data center campus co-located with the Susquehanna nuclear plant for $650 million ($350M at closing, $300M escrowed pending zoning milestones), with plans to develop up to 960 MW.",
+          "source": "https://www.datacenterfrontier.com/hyperscale/article/33038288/aws-eyes-960-mw-for-newly-acquired-nuclear-power-data-center-in-pennsylvania"
+        },
+        {
+          "date": "2024-05-28",
+          "kind": "rezoning",
+          "summary": "Salem Township supervisors voted to rezone approximately 1,582 acres into a new industrial Special Data Center Overlay District, enabling AWS to build up to 15 data center buildings; the township also agreed to a 10-year LERTA tax break at a 70 percent discount for Amazon.",
+          "source": "https://www.phillyvoice.com/amazon-pennsylvania-data-center-salem-luzerne-county/"
+        },
+        {
+          "date": "2024-06-03",
+          "kind": "filing",
+          "summary": "PJM Interconnection filed with FERC for an amended interconnection service agreement to increase behind-the-meter power delivery from the Susquehanna nuclear plant to the co-located AWS data center from 300 MW to 480 MW.",
+          "source": "https://www.utilitydive.com/news/ferc-interconnection-isa-talen-amazon-data-center-susquehanna-exelon/731841/"
+        },
+        {
+          "date": "2024-06-24",
+          "kind": "filing",
+          "summary": "American Electric Power and Exelon filed a protest with FERC challenging the amended ISA, arguing the co-location deal could shift up to $140 million in annual transmission costs onto other PJM ratepayers.",
+          "source": "https://www.utilitydive.com/news/aep-exelon-pjm-interconnection-amazon-data-center-talen-ferc-isa/719869/"
+        },
+        {
+          "date": "2024-08-23",
+          "kind": "financing",
+          "summary": "Talen Energy announced that the $300 million escrowed portion of the Cumulus campus purchase price was released after completion of zoning milestones allowing development of the AWS campus to 960 MW.",
+          "source": "https://www.globenewswire.com/news-release/2024/08/26/2935361/0/en/Talen-Energy-Announces-Receipt-of-Escrowed-Funds-for-Cumulus-Data-Center-Campus-Transaction.html"
+        },
+        {
+          "date": "2024-11-01",
+          "kind": "ruling",
+          "summary": "FERC voted 2-1 to reject the amended interconnection service agreement that would have increased behind-the-meter power from Susquehanna to the AWS data center from 300 MW to 480 MW, finding PJM failed to justify the departure from its standard agreement.",
+          "source": "https://www.utilitydive.com/news/ferc-interconnection-isa-talen-amazon-data-center-susquehanna-exelon/731841/"
+        },
+        {
+          "date": "2024-12-23",
+          "kind": "filing",
+          "summary": "FERC issued an order deferring Talen Energy's November 20, 2024 rehearing request on the Susquehanna ISA rejection, stating it would address the request in a future order.",
+          "source": "https://www.globenewswire.com/news-release/2024/12/23/3001345/0/en/Talen-Energy-Statement-on-FERC-Order-Deferring-its-Request-for-Rehearing-of-Susquehanna-ISA.html"
+        },
+        {
+          "date": "2025-01-16",
+          "kind": "lawsuit",
+          "summary": "Talen Energy filed suit in the U.S. Court of Appeals for the Fifth Circuit challenging FERC's November 2024 order rejecting the behind-the-meter interconnection agreement for the AWS data center at Susquehanna.",
+          "source": "https://www.eenews.net/articles/talen-energy-sues-over-fercs-rejection-of-nuclear-powered-data-center/"
+        },
+        {
+          "date": "2025-04-10",
+          "kind": "ruling",
+          "summary": "FERC upheld its rejection of the amended interconnection service agreement between PJM and Susquehanna Nuclear on rehearing, reaffirming its November 2024 order blocking expanded behind-the-meter power sales to the AWS data center.",
+          "source": "https://www.ans.org/news/2025-04-16/article-6937/ferc-denies-talen-amazon-agreementagain/"
+        },
+        {
+          "date": "2025-06-01",
+          "kind": "coverage",
+          "summary": "Spotlight PA reported in June 2025 that Amazon's data centers qualify for Pennsylvania's sales tax exemption on data center equipment (enacted 2016, expanded 2021), with the state projecting $43 million in lost revenue for fiscal year 2025-26; critics noted no mandatory reporting of exempt transaction costs.",
+          "source": "https://www.spotlightpa.org/news/2025/06/amazon-data-centers-pennsylvania-tax-break-energy-grid/"
+        },
+        {
           "date": "2025-06-09",
           "kind": "announcement",
           "summary": "Amazon and Gov. Shapiro announced at least $20 billion for data center campuses in Pennsylvania, with initial sites in Salem Township (alongside the Susquehanna nuclear plant, with Talen Energy agreeing to provide 960 MW) and Falls Township, creating at least 1,250 permanent jobs.",
           "source": "https://www.inquirer.com/business/amazon-data-centers-pennsylvania-20250609.html"
+        },
+        {
+          "date": "2025-06-11",
+          "kind": "financing",
+          "summary": "Talen Energy and Amazon finalized a restructured 17-year, $18 billion power purchase agreement supplying up to 1,920 MW from Susquehanna via a grid-connected front-of-meter retail structure, bypassing the rejected behind-the-meter model; deliveries to ramp to 840-1,200 MW by 2029 and 1,680-1,920 MW by 2032.",
+          "source": "https://www.powermag.com/talen-amazon-launch-18b-nuclear-ppa-a-grid-connected-ipp-model-for-the-data-center-era/"
+        },
+        {
+          "date": "2025-10-01",
+          "kind": "filing",
+          "summary": "FERC argued in an October 2025 brief to the Fifth Circuit that Talen's lawsuit should be dismissed as moot because the company had already contracted to abandon the behind-the-meter co-location arrangement at issue in the appeal.",
+          "source": "https://news.bloomberglaw.com/environment-and-energy/updated-amazon-nuclear-power-deal-moots-lawsuit-ferc-argues"
+        },
+        {
+          "date": "2026-03-25",
+          "kind": "construction",
+          "summary": "QTS (owned by Blackstone) completed acquisition of approximately 1,700 acres from 96 Salem Township landowners for over $500 million, planning a 12-to-17 building data center campus adjacent to the AWS site using water-free cooling technology.",
+          "source": "https://pennsnortheast.com/news/article/qts-plans-580m-sustainable-data-center-in-salem-township"
         }
       ]
     },
@@ -3937,7 +4255,104 @@
       "source": "https://drive.google.com/file/d/1p7aY9syz319IcEuyukgIIvzmhTNKRS6p/view?usp=sharing",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2022-06-30",
+          "kind": "rezoning",
+          "summary": "Fayetteville City Council voted 5-0 to annex and rezone 412 acres from R-70 residential to Business Park for a data center office park, with 18 rezoning conditions attached; approximately 24 residents spoke in opposition, some in tears.",
+          "source": "https://thecitizen.com/2022/06/30/its-a-data-center-for-the-center-of-fayette/"
+        },
+        {
+          "date": "2022-08-15",
+          "kind": "financing",
+          "summary": "QTS purchased 615 acres in Fayetteville for $153.8 million (approximately $250,000 per acre) from the Fayette County Development Authority, brokered by CBRE, for what it called the world's largest multi-tenant data center campus.",
+          "source": "https://www.connectcre.com/stories/qts-buys-154m-of-land-in-fayetteville-for-worlds-largest-data-center-campus/"
+        },
+        {
+          "date": "2022-09-19",
+          "kind": "announcement",
+          "summary": "QTS publicly announced Project Excalibur: a planned 6.6 million sq ft campus of 16 data center buildings plus 400,000 sq ft of office space on the 615-acre Fayetteville site, with construction to start in 2023 and full build-out by 2032, investing over $1 billion.",
+          "source": "https://www.bisnow.com/atlanta/news/data-center/qts-project-excalibur-to-span-7m-sf-in-fayetteville-115472"
+        },
+        {
+          "date": "2023-02-28",
+          "kind": "permit",
+          "summary": "Fayetteville Planning and Zoning Commission approved the conceptual site plan and schematic building elevations for the Excalibur Data Center after a 5-6 month Development of Regional Impact review involving GDOT and the Georgia Department of Community Affairs.",
+          "source": "https://www.fayette-news.net/government/fayetteville-planning-commission-approves-qts-site-plan-elevations/article_74353c8e-bd34-11ed-8c59-f769b4557cf4.html"
+        },
+        {
+          "date": "2023-04-01",
+          "kind": "construction",
+          "summary": "Land clearing began at the QTS Project Excalibur site in April 2023, per Epoch AI satellite imagery analysis.",
+          "source": "https://epoch.ai/data/ai-data-centers/directory/microsoft-fairwater-atlanta"
+        },
+        {
+          "date": "2023-06-15",
+          "kind": "permit",
+          "summary": "Fayetteville City Council unanimously approved a development agreement between the City and National Acquisition Company, LLC (QTS affiliate) for the 612-acre data center campus at 1435 Highway 54 West.",
+          "source": "https://thecitizen.com/2023/06/19/fayetteville-approves-development-agreement-for-612-acre-qts-data-center-on-hwy-54-west/"
+        },
+        {
+          "date": "2024-03-19",
+          "kind": "announcement",
+          "summary": "The Fayette County Development Authority proposed 'Project Rita,' a 96 MW data center campus on 145.5 acres in Tyrone (adjacent to the QTS site), comprising two buildings totaling 490,000 sq ft with a requested Business Technology Park rezoning; the Town Council hearing was scheduled for March 21.",
+          "source": "https://thecitizen.com/2024/03/19/now-its-tyrones-turn-for-a-big-data-center-project/"
+        },
+        {
+          "date": "2024-03-28",
+          "kind": "vote",
+          "summary": "Tyrone Town Council approved the rezoning for the Microsoft data center (Project Rita) on approximately 147 acres on North Highway 74, following Planning Commission and Town Council public hearings on February 22 and March 21 respectively.",
+          "source": "https://www.tyronega.gov/datacenter"
+        },
+        {
+          "date": "2025-05-01",
+          "kind": "construction",
+          "summary": "The first building on the QTS campus received its certificate of occupancy in May 2025, per the AJC, with a construction completion certificate issued September 25, 2025.",
+          "source": "https://www.ajc.com/business/2025/11/microsofts-newest-ai-superfactory-opens-at-sprawling-fayetteville-campus/"
+        },
+        {
+          "date": "2025-05-15",
+          "kind": "report",
+          "summary": "Fayette County Water System sent a letter to QTS revealing that a water meter installed during a system-wide smart-meter upgrade had not been read electronically, resulting in approximately 13 million gallons of unrecorded usage and a retroactive bill of approximately $147,000; the issue was discovered after a neighbor reported low water pressure.",
+          "source": "https://thecitizen.com/2026/05/11/behind-fayettes-qts-water-controversy-a-missed-meter-8000-workers-and-a-massive-construction-project/"
+        },
+        {
+          "date": "2025-10-01",
+          "kind": "operational",
+          "summary": "Microsoft's Fairwater 2 data center on the QTS campus began operations in October 2025, spanning more than 1 million sq ft and using closed-loop cooling described as consuming almost zero water.",
+          "source": "https://www.ajc.com/business/2025/11/microsofts-newest-ai-superfactory-opens-at-sprawling-fayetteville-campus/"
+        },
+        {
+          "date": "2025-11-12",
+          "kind": "announcement",
+          "summary": "Microsoft CEO Satya Nadella announced the Fayetteville facility as part of the world's first AI superfactory, connecting the Atlanta Fairwater 2 site with Fairwater 1 in Wisconsin across a single flat network to train AI models at planet scale.",
+          "source": "https://blogs.microsoft.com/blog/2025/11/12/infinite-scale-the-architecture-behind-the-azure-ai-superfactory/"
+        },
+        {
+          "date": "2026-01-01",
+          "kind": "moratorium",
+          "summary": "In January 2026 Fayetteville City Council passed a 90-day moratorium on new data center development applications while working to revise the Unified Development Ordinance; City Manager Ray Gibson stated 'we do not want anymore data centers in our community.'",
+          "source": "https://www.fayette-news.net/news/fayetteville-passes-90-day-moratorium-for-data-center-developments/article_d3771825-8187-49fa-b117-ae54b4738ef3.html"
+        },
+        {
+          "date": "2026-02-22",
+          "kind": "coverage",
+          "summary": "WBRC reported on community impacts from the QTS/Microsoft campus, with resident Diana Dietz citing heavy truck traffic on residential roads, transmission lines through neighborhoods, and concerns over rising power and water bills; QTS stated it uses water-free cooling and is committed to paying its fair share of power costs.",
+          "source": "https://www.wbrc.com/2026/02/22/georgia-data-center-boom-what-its-like-have-one-your-community/"
+        },
+        {
+          "date": "2026-03-18",
+          "kind": "withdrawal",
+          "summary": "Crow Holdings Development withdrew its appeal of a denied data center project on Highway 85 North in Fayetteville one day before the scheduled City Council hearing; the city had also enacted UDO changes on March 5 that made data centers no longer permissible.",
+          "source": "https://thecitizen.com/2026/03/19/data-center-appeal-withdrawn-in-fayetteville-the-power-of-the-people/"
+        },
+        {
+          "date": "2026-06-08",
+          "kind": "financing",
+          "summary": "QTS Fayetteville I DC1-2, LLC began sounding out investors for $5.4 billion in new debt ($4.9 billion secured bond plus $500 million term loan) to finance expansion of the Fayetteville campus leased to Microsoft, under an updated green bond framework with a PUE threshold tightened from 1.5 to 1.4.",
+          "source": "https://anthropocenefii.org/bond-spotlight/qts-fayetteville-microsoft-tied-data-centre-green-bond"
+        }
+      ]
     },
     {
       "id": "anthropic-amazon-new-carlisle",
@@ -3963,7 +4378,104 @@
       "source": "https://drive.google.com/file/d/1BKiTFNUk2KDaUaiHG7fz0KlkNSBTHzbb/view?usp=sharing",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2023-11-09",
+          "kind": "filing",
+          "summary": "St. Joseph County Redevelopment Commission approved Resolution 2023-16, a development facilitation agreement between the Commission, the Indiana Economic Development Corporation, and Razor5 LLC for pre-development activities on 640 acres in the New Carlisle Economic Development Area.",
+          "source": "https://www.sjcparks.org/AgendaCenter/ViewFile/Minutes/_11092023-1809"
+        },
+        {
+          "date": "2024-02-17",
+          "kind": "coverage",
+          "summary": "Local media reported construction activity already underway on the Razor5 site near New Carlisle, including an electrical substation pad on 45 acres near Edison Road and excavation on the northern parcel, before the developer's identity was publicly confirmed.",
+          "source": "https://hometownnewsnow.com/local-news/729629/mystery-project-near-new-carlisle-already-underway"
+        },
+        {
+          "date": "2024-02-20",
+          "kind": "hearing",
+          "summary": "St. Joseph County Area Plan Commission voted 6-1 to give a favorable recommendation for rezoning over 800 acres at 31000 State Road 2 from agricultural to industrial classification for the Razor5 project, sparking complaints from New Carlisle residents.",
+          "source": "https://www.wndu.com/2024/02/21/new-rezoning-development-new-carlisle-sparks-complaints-residents/"
+        },
+        {
+          "date": "2024-03-12",
+          "kind": "vote",
+          "summary": "St. Joseph County Council voted 8-1 to rezone approximately 640 acres of agricultural land near New Carlisle to industrial use for the Razor5 LLC project, with Council Republican Joe Thomas casting the lone dissenting vote.",
+          "source": "https://wsbt.com/news/local/development-zoning-vote-meeting-jobs-company-industrial-land-gm-samsung-electric-vehicle-battery-plant-ev-farm-state-road-2-larrison-granger-council-area-plan-commission-st-joseph-county-indiana"
+        },
+        {
+          "date": "2024-04-11",
+          "kind": "filing",
+          "summary": "Tax abatement proposal documents presented to the St. Joseph County Council revealed the Razor5 project would total $11 billion in investment across 640 acres and a secondary 280-acre parcel, projecting 400 full-time jobs at approximately $30 per hour.",
+          "source": "https://www.wvpe.org/wvpe-news/2024-04-11/razor5-project-could-total-11-billion-in-investment-documents-say"
+        },
+        {
+          "date": "2024-04-25",
+          "kind": "announcement",
+          "summary": "Governor Eric Holcomb announced Amazon Web Services plans to invest $11 billion to build a data center campus near New Carlisle, the largest capital investment in Indiana history, with at least 1,000 jobs over 10 years; state incentives included up to $18.3 million in tax credits, $55 million in Hoosier Business Investment credits, and $7 million for State Road 2 improvements.",
+          "source": "https://www.iedc.in.gov/events/news/details/2024/04/25/gov.-holcomb-announces-amazon-web-services-plans-to-invest-11b-to-create-a-new-data-center-campus-in-northern-indiana"
+        },
+        {
+          "date": "2024-05-28",
+          "kind": "hearing",
+          "summary": "St. Joseph County Council committee voted a favorable recommendation on the Amazon data center tax abatement declaratory resolution, advancing it to the full county council for a public hearing scheduled for June 11.",
+          "source": "https://wsbt.com/news/local/amazon-data-center-tax-abatement-revenue-infrastructure-real-personal-property-investment-council-meeting-new-carlisle-st-joseph-county-indiana"
+        },
+        {
+          "date": "2024-08-13",
+          "kind": "incentive",
+          "summary": "St. Joseph County Council voted 7-2 to approve the Amazon data center incentive package: a 10-year 50% real property tax abatement on 870 acres, an 85% enterprise technology exemption on personal property for 35 years, and a community enhancement agreement valued at approximately $143 million.",
+          "source": "https://www.insideindianabusiness.com/articles/incentives-approved-for-amazon-data-center-project"
+        },
+        {
+          "date": "2024-09-30",
+          "kind": "construction",
+          "summary": "Amazon held a ceremonial groundbreaking for Project Rainier at Century Center in South Bend, attended by Governor Holcomb and AWS VP Kevin Miller; construction on the 870-acre site had already been underway for months prior to the ceremony.",
+          "source": "https://www.wndu.com/2024/09/30/amazon-holds-groundbreaking-ceremony-new-data-center-new-carlisle/"
+        },
+        {
+          "date": "2025-09-01",
+          "kind": "ruling",
+          "summary": "In September 2025, the Indiana Utility Regulatory Commission unanimously approved the creation of NIPSCO Generation LLC (GenCo), described as America's first data center-only utility subsidiary, to generate and sell electricity exclusively to hyperscale data centers including the Amazon New Carlisle campus.",
+          "source": "https://www.circleofblue.org/2026/water-energy/inside-americas-first-data-center-only-utility/"
+        },
+        {
+          "date": "2025-10-29",
+          "kind": "operational",
+          "summary": "Amazon announced Project Rainier was operational in New Carlisle with seven data center buildings running approximately 500,000 Trainium2 chips dedicated to training Anthropic's Claude AI models, making it the largest known deployment of non-Nvidia compute in the world.",
+          "source": "https://wsbt.com/news/local/amazons-project-rainier-starts-operations-create-jobs-ai-billion-dollar-project-near-new-carlisle-st-joseph-county-indiana"
+        },
+        {
+          "date": "2025-11-24",
+          "kind": "announcement",
+          "summary": "Amazon announced an additional $15 billion investment in new data center campuses across northern Indiana, bringing total committed investment to approximately $26 billion, with a NIPSCO energy deal projected to save existing ratepayers $1 billion over 15 years.",
+          "source": "https://www.wndu.com/2025/11/24/amazon-announces-15-billion-investment-data-center-campuses-northern-indiana/"
+        },
+        {
+          "date": "2025-11-25",
+          "kind": "filing",
+          "summary": "NIPSCO filed plans to supply up to 3 GW to Amazon data centers in northern Indiana through GenCo, which will build two 1.3-GW gas-fired power plants and a 400-MW battery storage system, with power deliveries beginning January 1, 2027, and ramping to 2.4 GW by end of 2032.",
+          "source": "https://www.utilitydive.com/news/nisource-nipsco-amazon-data-centers-indiana/806396/"
+        },
+        {
+          "date": "2026-03-30",
+          "kind": "coverage",
+          "summary": "Four Republican members of the St. Joseph County Council sent Amazon a letter asking it to renegotiate its 35-year property tax abatement, citing Microsoft's national policy of forgoing local tax breaks and the region's inherent advantages including one of the nation's richest aquifers.",
+          "source": "https://www.wvpe.org/wvpe-news/2026-03-30/council-members-ask-amazon-to-renegotiate-data-center-tax-break"
+        },
+        {
+          "date": "2026-06-03",
+          "kind": "coverage",
+          "summary": "Amazon granted local media the first look at the New Carlisle data center campus administration building and workforce development programs; the first work-based learning cohort of 58 local graduates had completed training in machine learning and data center operations.",
+          "source": "https://wsbt.com/news/local/first-look-at-amazons-new-carlisle-data-centers-administration-building-campus-11-billion-dollar-investment-recruit-workers-technical-careers-multiple-buildings"
+        },
+        {
+          "date": "2026-07-23",
+          "kind": "construction",
+          "summary": "AWS announced its New Carlisle campus investment had reached $13.8 billion with 18 of approximately 30 planned buildings operational, over 1,000 employees hired (approximately 450 from St. Joseph County), and up to 4,000 construction workers on site during peak phases.",
+          "source": "https://www.wndu.com/2026/07/23/amazon-web-services-investment-st-joseph-county-data-center-campus-surpasses-138-billion/"
+        }
+      ]
     },
     {
       "id": "meta-prometheus",
@@ -4046,7 +4558,92 @@
       "source": "https://blogs.microsoft.com/blog/2025/09/18/inside-the-worlds-most-powerful-ai-datacenter/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2023-03-30",
+          "kind": "vote",
+          "summary": "Mount Pleasant Village Board unanimously approved three agreements with Microsoft for the purchase and development of approximately 315 acres in Tax Increment District No. 5 for $50,085,000.",
+          "source": "https://spectrumnews1.com/wi/milwaukee/news/2023/03/31/mount-pleasant-village-board-approves-agreements-with-microsoft"
+        },
+        {
+          "date": "2023-04-19",
+          "kind": "vote",
+          "summary": "Racine County Board of Supervisors voted 18-1 to approve Microsoft's $1 billion data center project on 315 acres in Mount Pleasant; Microsoft required to purchase the land for $50 million by July 31, 2023.",
+          "source": "https://www.wbay.com/2023/04/19/board-oks-microsoft-data-center-near-foxconn-racine-county/"
+        },
+        {
+          "date": "2023-05-30",
+          "kind": "financing",
+          "summary": "Microsoft completed the $50 million purchase of 315 acres in Mount Pleasant's Tax Increment District 5, land originally acquired by Foxconn in 2017; Foxconn received proceeds as partial reimbursement.",
+          "source": "https://dailyreporter.com/2023/05/30/microsoft-completes-50m-land-purchase-deal-with-mount-pleasant/"
+        },
+        {
+          "date": "2023-08-27",
+          "kind": "construction",
+          "summary": "Earthwork and excavation began on the Microsoft data center site in Mount Pleasant, with Walsh Construction (Chicago) leading construction services on the 215-acre campus.",
+          "source": "https://www.constructiondive.com/news/walsh-1b-microsoft-data-center-former-foxconn-site-construction-mount-pleasant-wisconsin/693073/"
+        },
+        {
+          "date": "2024-05-08",
+          "kind": "announcement",
+          "summary": "Microsoft announced a $3.3 billion investment in an AI data center campus in Mount Pleasant; President Biden joined Microsoft President Brad Smith at Gateway Technical College for the announcement, which included 2,300 union construction jobs and a 250 MW solar project.",
+          "source": "https://news.microsoft.com/source/2024/05/08/microsoft-announces-3-3-billion-investment-in-wisconsin-to-spur-artificial-intelligence-innovation-and-economic-growth/"
+        },
+        {
+          "date": "2024-12-23",
+          "kind": "construction",
+          "summary": "Microsoft paused construction on portions of its Mount Pleasant data center site, stating it was 'refining our data center design'; the first phase remained on track for 2026 completion.",
+          "source": "https://dailyreporter.com/2024/12/23/microsoft-pauses-some-work-at-mount-pleasant-data-center-site/"
+        },
+        {
+          "date": "2025-03-20",
+          "kind": "construction",
+          "summary": "Microsoft paused construction again on a 900-acre expansion area west of the main campus, citing evaluation of 'scope and recent changes in technology'; the company's $3.3 billion commitment and first-phase 2026 timeline remained intact.",
+          "source": "https://www.wpr.org/news/microsoft-pauses-construction-on-parts-of-mount-pleasant-site-again"
+        },
+        {
+          "date": "2025-09-18",
+          "kind": "announcement",
+          "summary": "Microsoft announced an additional $4 billion investment for a second data center in Mount Pleasant, bringing total Wisconsin investment to over $7 billion; the second facility is expected to be completed by 2028.",
+          "source": "https://spectrumnews1.com/wi/milwaukee/news/2025/09/18/racine-county--data-center--addition--4-billion--microsoft"
+        },
+        {
+          "date": "2025-09-29",
+          "kind": "rezoning",
+          "summary": "Caledonia Plan Commission voted 5-2 to rezone 245 acres from agricultural to light industrial for Microsoft's third data center (Project Nova) near the We Energies Oak Creek Power Plant, after more than 40 residents spoke against it.",
+          "source": "https://www.wpr.org/news/caledonia-rezoning-microsoft-data-center-wisconsin"
+        },
+        {
+          "date": "2026-01-20",
+          "kind": "announcement",
+          "summary": "Microsoft proposed a $13.3 billion expansion in Mount Pleasant with two new campuses totaling 15 data centers across more than 1,300 acres, potentially generating over $76 million in annual property tax revenue.",
+          "source": "https://racinecountyeye.com/2026/01/20/microsoft-13b-expand-mount-pleasant/"
+        },
+        {
+          "date": "2026-01-26",
+          "kind": "vote",
+          "summary": "Mount Pleasant Village Board unanimously approved site plans for 15 additional Microsoft data centers on two campuses (9 buildings on 791 acres near Durand Avenue, 6 buildings on 530 acres along International Drive), with anticipated power demand of approximately 2 gigawatts when fully developed.",
+          "source": "https://www.wpr.org/news/mount-pleasant-approves-site-plans-microsoft-data-center-expansion"
+        },
+        {
+          "date": "2026-04-01",
+          "kind": "operational",
+          "summary": "In April 2026, Microsoft brought equipment online and began startup activities at the Fairwater data center, its first facility in Mount Pleasant.",
+          "source": "https://news.microsoft.com/source/2026/06/23/microsoft-completes-construction-on-first-datacenter-facility-in-mount-pleasant-wisconsin/"
+        },
+        {
+          "date": "2026-06-23",
+          "kind": "operational",
+          "summary": "Microsoft announced the Fairwater data center in Mount Pleasant is fully operational, calling it 'the world's most powerful supercomputer'; the 1.2-million-square-foot facility employs approximately 550 full-time workers and was built by nearly 10,000 construction workers over two years.",
+          "source": "https://news.microsoft.com/source/2026/06/23/microsoft-completes-construction-on-first-datacenter-facility-in-mount-pleasant-wisconsin/"
+        },
+        {
+          "date": "2026-07-02",
+          "kind": "lawsuit",
+          "summary": "Three Sturtevant residents filed a class-action lawsuit against Microsoft in U.S. District Court for the Eastern District of Wisconsin, alleging significant noise pollution from diesel generators and HVAC systems at the Fairwater data center, seeking to represent over 1,000 households within 1.5 miles.",
+          "source": "https://www.wpr.org/news/microsoft-sued-noise-complaints-at-new-mount-pleasant-data-center"
+        }
+      ]
     },
     {
       "id": "google-columbus",
