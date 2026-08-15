@@ -4314,6 +4314,8 @@ SOURCES = {
                       "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=SB6"),
     "az_energy_promise_2026":("Arizona Governor's Office — Arizona Energy Promise Taskforce Report (Executive Order 2025-13; released April 2026)",
                       "https://azgovernor.gov/office-arizona-governor/news/2026/04/governor-katie-hobbs-arizona-energy-promise-taskforce-delivers"),
+    "nc_eptf_2026":   ("North Carolina Energy Policy Task Force — Interim Report (Executive Order No. 23; February 2026)",
+                      "https://governor.nc.gov/news/press-releases/2026/02/16/governor-steins-energy-policy-task-force-releases-interim-report"),
     "pew_rural_2026": ("Pew Research Center — Most new data centers in the U.S. are coming to rural areas (April 13, 2026)",
                       "https://www.pewresearch.org/short-reads/2026/04/13/most-new-data-centers-in-the-us-are-coming-to-rural-areas/"),
     "datacentermap":  ("DataCenterMap.com — U.S. Data Center Directory & Industry Map",

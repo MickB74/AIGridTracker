@@ -152,6 +152,70 @@ STATE_STUDIES = {
             "Market Vacancy Rate": "Under 4% (Highly constrained)",
             "Featured Hubs": "Secaucus, Piscataway, Carteret"
         }
+    },
+    "Texas": {
+        "title": "Senate Bill 6 (89th Legislature): Large-Load Interconnection Standards & the 2026 ERCOT Queue Audit",
+        "author": "Texas Legislature (Senate Research Center); 2026 audit directive by the Office of the Governor",
+        "src_key": "tx_sb6_2025",
+        "pdf_url": "https://capitol.texas.gov/tlodocs/89R/analysis/pdf/SB00006F.pdf",
+        "as_of": "2026-08-15",
+        "summary": "State rules for connecting data centers and other large loads to the ERCOT grid — cost allocation, mandatory curtailment during grid emergencies, and a separate 2026 gubernatorial audit of the interconnection queue.",
+        "findings": [
+            "**Large-load interconnection standards (SB 6)**: Signed June 20, 2025, SB 6 directs the Public Utility Commission of Texas (PUCT) to set statewide standards for connecting large loads to ERCOT, applying to new or expanded sites above a 75 MW demand threshold (the PUCT may set it lower).",
+            "**Residents share of load shed**: The statute's stated goals include protecting residential customers during shortages by requiring large loads to share the load-shed obligation, and it directs the PUCT to reevaluate the Four Coincident Peak (4CP) transmission cost-allocation method by December 31, 2026.",
+            "**Mandatory curtailment**: Transmission-voltage large loads connected after December 31, 2025 must install equipment allowing them to be curtailed during firm load shed; a new demand-management service can direct loads of at least 75 MW to curtail for the duration of an Energy Emergency Alert with 24-hour notice.",
+            "**Cost and disclosure conditions**: Large loads face a minimum \\$100,000 interconnection study fee, per-MW financial security, proof of site control, and disclosure of duplicative 'substantially similar' requests at other sites, and must contribute to the utility's cost to connect them.",
+            "**2026 queue audit (separate, gubernatorial)**: On August 3, 2026 the Governor directed the PUCT and ERCOT to audit data centers in the interconnection queue before projects proceed. BloombergNEF — an analyst firm, not a state body — projects the review could delay roughly 49.8 GW of load and cost projects up to \\$15 billion; treat those figures as a projection, not a state finding."
+        ],
+        "metrics": {
+            "Instrument": "SB 6, 89th Legislature (June 2025)",
+            "Large-load threshold": "75 MW (PUCT may lower)",
+            "Emergency curtailment": "Large loads shed during grid emergencies",
+            "Queue under audit": "~474 GW of requests, ~90% data centers (Gov., 2026)"
+        }
+    },
+    "Arizona": {
+        "title": "Arizona Energy Promise Taskforce Report (2026)",
+        "author": "Arizona Energy Promise Taskforce (Gov. Katie Hobbs, Executive Order 2025-13)",
+        "src_key": "az_energy_promise_2026",
+        "pdf_url": "https://resilient.az.gov/sites/default/files/2026-04/arizona-energy-promise-taskforce-report.pdf",
+        "as_of": "2026-08-15",
+        "summary": "A 36-member governor's taskforce delivered 31 consensus recommendations on meeting Arizona's fast-growing electricity demand, several aimed squarely at large-load data-center customers.",
+        "findings": [
+            "**Cost-shift protection via the ACC**: The taskforce backs the Arizona Corporation Commission's existing large-load process (Docket E-00000A-25-0069) 'to prevent cost shifts, mitigate stranded asset risks, and increase development transparency.'",
+            "**Bring-your-own-capacity**: It recommends exploring BYOC initiatives so large loads work with utilities to help deliver their own power.",
+            "**Tax and financial incentives**: It recommends the state 'update tax and financial incentives for large load customers' — news coverage framed this as revisiting the data-center sales-tax exemption, and three members (the Data Center Coalition, Microsoft, and Google) dissented. Cite the taskforce's own softer wording.",
+            "**Community engagement**: It recommends requiring or incentivizing large-load customers to engage communities and invest in community-identified priorities, and to help local governments navigate large-load development.",
+            "**Water**: Among overarching recommendations it calls to 'encourage transparent and responsible water use in project development' — notably not framed as a data-center-specific mandate, despite Arizona's water stress."
+        ],
+        "metrics": {
+            "Instrument": "Executive Order 2025-13",
+            "Recommendations": "31 (36-member taskforce)",
+            "Projected peak demand": "Up to +40% over 15 years",
+            "Report released": "April 2026"
+        }
+    },
+    "North Carolina": {
+        "title": "North Carolina Energy Policy Task Force — Interim Report (February 2026)",
+        "author": "NC Energy Policy Task Force (Gov. Josh Stein, Executive Order No. 23)",
+        "src_key": "nc_eptf_2026",
+        "pdf_url": "https://governor.nc.gov/nceptf2026interimreport/open",
+        "as_of": "2026-08-15",
+        "summary": "The governor's task force found data centers driving much of North Carolina's projected load growth, warned of cost-shifting to other ratepayers, and made nine preliminary recommendations.",
+        "findings": [
+            "**Load growth**: Total net load on Duke's two NC systems is projected to rise 16%–60% over 15 years, versus just 7% statewide over the prior two decades — a large share driven by data centers and other large loads.",
+            "**Cost-shifting warning**: Meeting large-load growth needs new generation and transmission that 'could increase rates on all customers unless the primary users of new infrastructure bear the cost burden.'",
+            "**No reliable data-center data**: The report finds 'there is not reliable public data for the total number and size of existing and proposed data centers in North Carolina,' leaving a historically wide range in load forecasts.",
+            "**Concentrated demand**: Data centers are about 30% of Duke's economic-development pipeline but roughly 80% of its projected demand (a Duke figure reproduced in the report), while residential bills rose ~30% from 2017–2024 — nearly two-thirds of that from fuel costs.",
+            "**Carbon target**: North Carolina's statutory target (HB 951, 2021) requires Duke generation to be carbon-neutral by 2050; the report finds load growth may challenge that target but, with the right policies, could be an opportunity to build more carbon-free power.",
+            "**Two data-center-specific asks**: Of nine preliminary recommendations, two target data centers directly — reviewing the value of their sales-and-use tax exemptions, and requiring energy and water usage reporting."
+        ],
+        "metrics": {
+            "Instrument": "Executive Order No. 23 (Aug 2025)",
+            "Projected load growth": "16%–60% over 15 years (Duke NC)",
+            "Data-center demand share": "~80% of Duke pipeline demand",
+            "Recommendations": "9 preliminary (2 data-center-specific)"
+        }
     }
 }
 
