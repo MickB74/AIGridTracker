@@ -11,7 +11,7 @@ from src.constants import (STATE_DC_DF, HYPERSCALERS_DF, AI_COMPETITOR_SITES_DF,
                            MORATORIUMS_DF, PROJECTS_DF, LOCAL_BODIES_DF,
                            LOCAL_OFFICIALS_DF, STATE_GRID_PROFILES,
                            COMPANY_CONCESSIONS, has_value)
-from src.helpers import src_link
+from src.helpers import src_link, render_freshness
 from src.services.news import fetch_news
 from src.services.reddit import load_reddit_corpus
 
@@ -21,6 +21,7 @@ STATE_STUDIES = {
         "author": "Citizens Research Council of Michigan (Report 426)",
         "src_key": "crc_mich_2026",
         "pdf_url": "https://crcmich.org/PUBLICAT/2020s/2026/rpt426-data_centers_in_Michigan.pdf",
+        "as_of": "2026-08-13",
         "summary": "Evaluation of tax policies, local grid capacity, water usage, and localized noise impacts.",
         "findings": [
             "**Modest Economic Multiplier**: High temporary construction impact (1,000+ workers), but low permanent operational jobs (a few dozen per campus). Host communities benefit most from local property taxes and Community Benefit Agreements.",
@@ -41,6 +42,7 @@ STATE_STUDIES = {
         "author": "Commonwealth of Virginia (Report 591)",
         "src_key": "jlarc_va_2024",
         "pdf_url": "https://jlarc.virginia.gov/pdfs/reports/Rpt591.pdf",
+        "as_of": "2026-08-13",
         "summary": "Comprehensive analysis of Loudoun County ('Data Center Alley') density, PJM transmission bottlenecks, and tax revenues.",
         "findings": [
             "**Tax Revenue Windfall**: Data centers generated over \\$1B in annual local tax revenue in Northern Virginia, significantly subsidizing residential public school systems and services.",
@@ -60,6 +62,7 @@ STATE_STUDIES = {
         "author": "Georgia General Assembly Special Study Committee",
         "src_key": "ga_house_2024",
         "pdf_url": "https://www.house.ga.gov/",
+        "as_of": "2026-08-13",
         "summary": "Legislative review of state sales-tax breaks for data centers and rising grid capacity warnings.",
         "findings": [
             "**Incentive Suspensions**: Recommended temporary suspension or capping of sales-tax exemptions on data center equipment, arguing that the low operational employment does not justify the foregone state revenue.",
@@ -77,7 +80,8 @@ STATE_STUDIES = {
         "title": "Data Centers and Energy Use in Oregon (2024)",
         "author": "Oregon Department of Energy (ODOE) Sector Report",
         "src_key": "oregon_doe_2024",
-        "pdf_url": "https://www.oregon.gov/energy/Data-Center-Energy-Use.aspx",
+        "pdf_url": "https://www.oregon.gov/energy/data-and-reports/pages/biennial-energy-report.aspx",
+        "as_of": "2026-08-15",
         "summary": "Statewide review of energy draw, water rights in The Dalles (Columbia River), and utility disclosure laws.",
         "findings": [
             "**Columbia River Water Draw**: Spotlights Google's major campus at The Dalles. Evaporative cooling draws significant water from the municipal aquifer, causing municipal water rights disputes during dry seasons.",
@@ -96,6 +100,7 @@ STATE_STUDIES = {
         "author": "Maryland General Assembly (CISA / SB 116)",
         "src_key": "md_assembly_2024",
         "pdf_url": "https://mgaleg.maryland.gov/",
+        "as_of": "2026-08-13",
         "summary": "Legislative response to utility generator permit denials and creation of state-wide environmental impact study.",
         "findings": [
             "**Backup Generator Controversy**: Aligned Data Centers canceled a massive \\$30B project in late 2023 after the Maryland PSC denied a permit for 168 diesel backup generators due to air quality emissions thresholds.",
@@ -114,6 +119,7 @@ STATE_STUDIES = {
         "author": "Indiana General Assembly / IURC (HB 1245)",
         "src_key": "iurc_indiana_2026",
         "pdf_url": "https://iga.in.gov/",
+        "as_of": "2026-08-13",
         "summary": "Administrative mandates on ratepayer protection, utility load forecasts, and local water inventory reviews.",
         "findings": [
             "**Ratepayer Cost-Shifting**: House Bill 1245 was introduced in the 2026 session to mandate that the IURC study how data center demand affects retail electric rates, ensuring residential users do not subsidize transmission expansions.",
@@ -132,6 +138,7 @@ STATE_STUDIES = {
         "author": "NJBPU / New Jersey Policy Perspective (NJPP) Research",
         "src_key": "nj_bpu_2026",
         "pdf_url": "https://www.nj.gov/bpu/",
+        "as_of": "2026-08-13",
         "summary": "Administrative investigations on grid costs alongside independent market assessments of wholesale compute capacity.",
         "findings": [
             "**Market Capacity Inventory**: NJ holds approximately **1.04 GW** of total data center power capacity in 2026, projected to reach **1.23 GW by 2031**. This makes the state a top-5 U.S. data center market.",
@@ -169,7 +176,9 @@ def render_state_profile(selected_state):
 
     if is_curated:
         study = STATE_STUDIES[selected_state]
-        st.caption(f"**Curated Policy Deep-Dive** · Reference: {src_link(study['src_key'])}")
+        _verified = study.get("as_of")
+        _verified_note = f" · Verified {_verified}" if _verified else " · Verification date not recorded"
+        st.caption(f"**Curated Policy Deep-Dive** · Reference: {src_link(study['src_key'])}{_verified_note}")
         st.markdown(f"*{study['summary']}*")
 
         cols = st.columns(len(study["metrics"]))
@@ -187,6 +196,7 @@ def render_state_profile(selected_state):
         dcl1, dcl2 = st.columns(2)
         dcl1.markdown(f"[Download Full Official Study PDF]({study['pdf_url']})")
         dcl2.markdown(f"[View {selected_state} Directory on Data Center Map]({dc_map_url})")
+        render_freshness(st, "STATE_STUDIES")
     else:
         st.caption(f"**Data Center Market Profile** · Source: {src_link('electricchoice')} / Lawrence Berkeley Lab")
 

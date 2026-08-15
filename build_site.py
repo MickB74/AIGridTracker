@@ -8635,11 +8635,13 @@ def build_studies():
         pdf = ""
         if s.get("pdf_url"):
             pdf = f' · <a href="{esc(s["pdf_url"])}" rel="nofollow">Read the PDF</a>'
+        verified = (f' · Verified {esc(str(s["as_of"]))}' if s.get("as_of")
+                    else ' · Verification date not recorded')
         cards.append(f"""
 <section id="{slugify(state)}">
   <h2>{esc(state)}</h2>
   <p><strong>{esc(s['title'])}</strong><br>
-  <span class="muted">{esc(s['author'])}{src}{pdf}</span></p>
+  <span class="muted">{esc(s['author'])}{src}{pdf}{verified}</span></p>
   <p>{esc(s['summary'])}</p>
   <h3 style="font-size:15px;color:var(--teal);margin:16px 0 6px">Key findings</h3>
   <ul>{findings}</ul>
@@ -8656,6 +8658,7 @@ def build_studies():
   legislative audits, and PUC filings on data centers. The papers your
   planning commissioner will actually recognize.</p>
 </header>
+{provenance_html("STATE_STUDIES")}
 <details class="more" open><summary>On this page</summary><ol>{toc}</ol></details>
 {"".join(cards)}
 <section>

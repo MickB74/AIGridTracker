@@ -5163,6 +5163,27 @@ REGISTRY_PROVENANCE = {
             "The July 2026 sweep found five people whose entries were wrong, "
             "including one who had changed companies."),
     },
+    "STATE_STUDIES": {
+        "label": "Official state studies of data-center impact",
+        "as_of": "August 2026",
+        "source": None,
+        "churn": "medium",
+        "caveat": (
+            "A curated shortlist of state-commissioned reports, legislative "
+            "audits, and PUC filings — not every state, and not every study. "
+            "Each entry carries its own `as_of` (the date we last read it "
+            "against the primary source); the collection was assembled in "
+            "August 2026.\n\n"
+            "The report itself does not go stale — a JLARC or CRC report is "
+            "still that report next year — but two things do: a state can "
+            "publish a **newer edition** that supersedes what is summarised "
+            "here, and a linked PDF can **move or 404**. "
+            "scripts/verify_studies.py checks the links and flags entries that "
+            "have gone unverified too long; scripts/scan_study_candidates.py "
+            "mines the news feed for new state studies to add. Both are "
+            "review aids — promoting or refreshing a study is a human step, "
+            "read from the source, which is where the `as_of` comes from."),
+    },
     "STATE_PUCS_DF": {
         "label": "Public utility commission directory",
         "as_of": None,
