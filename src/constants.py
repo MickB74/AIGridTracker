@@ -1340,11 +1340,12 @@ MORATORIUMS = [
      "lat": 41.00, "lon": -74.74, "expires": None, "as_of": "2026-08-04",
      "source": "https://nj1015.com/andover-township-data-center-ban/"},
     {"locality": "La Crosse", "state": "WI", "level": "Local",
-     "status": "Proposed", "when": "Aug 3, 2026",
-     "note": "City plan commission advanced an 18-month moratorium, matching the "
-             "county's; still needs council adoption",
-     "lat": 43.80, "lon": -91.24, "expires": None, "as_of": "2026-08-04",
-     "source": "https://www.news8000.com/lifestyle/technology/la-crosse-city-plan-commission-advances-18-month-moratorium-on-data-center-development/article_30c5ee0a-61f9-48e3-9b24-ec2f90ae5e17.html"},
+     "status": "Enacted", "when": "Aug 14, 2026",
+     "note": "18-month moratorium approved by Common Council, matching the county's "
+             "Jun 18 moratorium. Covers facilities >1 PB or >2 MW. Plan commission "
+             "advanced it Aug 3",
+     "lat": 43.80, "lon": -91.24, "expires": "2028-02-14", "as_of": "2026-08-15",
+     "source": "https://www.seehafernews.com/2026/08/14/la-crosse-common-council-approves-moratorium-on-data-center-developments/"},
     {"locality": "Yakima County", "state": "WA", "level": "Local",
      "status": "Enacted", "when": "2026",
      "note": "6-month moratorium in unincorporated areas, unanimous. Studying "
@@ -1761,6 +1762,48 @@ MORATORIUMS = [
              "Also created a Data Center & Infrastructure Committee",
      "lat": 32.75, "lon": -97.33, "expires": None, "as_of": "2026-08-13",
      "source": "https://fortworthreport.org/2026/08/12/data-center-moratorium-takes-first-steps-after-fort-worth-city-councils-unanimous-vote/"},
+    {"locality": "Knox County", "state": "TN", "level": "Local",
+     "status": "Enacted", "when": "Jun 22, 2026",
+     "note": "1-year moratorium passed unanimously 10-0 by county commission. "
+             "Planning commission developing zoning recommendations",
+     "lat": 35.99, "lon": -83.94, "expires": "2027-06-22", "as_of": "2026-08-15",
+     "source": "https://commission.knoxcountytn.gov/forums/topic/data-center-moratorium/"},
+    {"locality": "Knoxville", "state": "TN", "level": "Local",
+     "status": "Enacted", "when": "Jul 8, 2026",
+     "note": "1-year moratorium on large data centers (10+ MW peak demand). "
+             "Pauses permits, building approvals, utility extensions, and "
+             "development agreements. Expires Jul 7, 2027 or when zoning amendments "
+             "take effect, whichever is first",
+     "lat": 35.96, "lon": -83.92, "expires": "2027-07-07", "as_of": "2026-08-15",
+     "source": "https://www.knoxvilletn.gov/news/2026/cc_approves_waterfront_plan_data_ctr_moratorium"},
+    {"locality": "Massillon", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Apr 2026",
+     "note": "180-day moratorium (expired Aug 14). Replaced by permanent zoning "
+             "rules voted 7-1 on Aug 3: data centers restricted to I-2 industrial "
+             "zones, 400 ft minimum from residential, utility capacity certification "
+             "and noise limits required",
+     "lat": 40.80, "lon": -81.52, "expires": "2026-08-14", "as_of": "2026-08-15",
+     "source": "https://www.news5cleveland.com/news/local-news/we-follow-through/massillon-puts-limits-on-future-data-centers-with-new-zoning-rules"},
+    {"locality": "Lavon", "state": "TX", "level": "Local",
+     "status": "Enacted", "when": "Aug 7, 2026",
+     "note": "90-day moratorium on data center projects approved at special "
+             "council meeting while the city reviews zoning and infrastructure",
+     "lat": 33.03, "lon": -96.43, "expires": "2026-11-05", "as_of": "2026-08-15",
+     "source": "https://www.wfaa.com/video/tech/city-of-lavon-discussing-data-center-moratorium/287-bda49564-1e93-43c5-ad74-4dbb71af0464"},
+    {"locality": "San Antonio", "state": "TX", "level": "Local",
+     "status": "Proposed", "when": "Aug 7, 2026",
+     "note": "Three council members (Galvan, Castillo, Meza Gonzalez) filed memo "
+             "requesting 3-6 month moratorium on all data center development. "
+             "Special council meeting requested by Aug 31",
+     "lat": 29.42, "lon": -98.49, "expires": None, "as_of": "2026-08-15",
+     "source": "https://foxsanantonio.com/newsletter-daily/san-antonio-councilmembers-seek-temporary-moratorium-on-new-data-centers"},
+    {"locality": "Columbia County", "state": "GA", "level": "Local",
+     "status": "Proposed", "when": "Aug 2026",
+     "note": "180-day moratorium proposed at commission meeting by chair candidate "
+             "Cambrey Wood; citizens group also presented model ordinance. Would "
+             "not affect two already-approved data centers. No vote yet",
+     "lat": 33.55, "lon": -82.27, "expires": None, "as_of": "2026-08-15",
+     "source": "https://www.wfxg.com/news/columbia-county-commission-chair-hopeful-proposes-new-data-center-legislation/article_42377dc5-1418-4aa6-8860-70c604fb4323.html"},
     {"locality": "Denton", "state": "TX", "level": "Local",
      "status": "Proposed", "when": "Aug 5, 2026",
      "note": "Council voted 4-3 to proceed with a possible 90-day moratorium; "
