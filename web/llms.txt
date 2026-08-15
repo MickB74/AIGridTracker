@@ -9,11 +9,17 @@
 
 ## Open data
 
+- [Open data hub](https://aigridwatch.com/open-data): all datasets in one place — download,
+  cite, build on it. JSON/CSV, CC BY 4.0, documented schemas.
 - [Moratorium tracker](https://aigridwatch.com/moratoriums): 301 data center moratoriums,
   bans, and community actions, each with a primary source, verification date,
   and derived expiry status. JSON/CSV downloads, CC BY 4.0.
-- [Moratoriums JSON](https://aigridwatch.com/data/moratoriums.json): the full dataset,
-  documented schema.
+- [Project tracker](https://aigridwatch.com/projects): individual data center proposals
+  tracked from rumor to hearing to decision, with dated event logs.
+- [Facility registry](https://aigridwatch.com/data/facilities.json): tracked data center
+  campuses with operator, owner, tenant, and filing LLC.
+- [State profiles](https://aigridwatch.com/data/states.json): all 50 states + D.C. —
+  facility count, power draw, rates, grid carbon, water stress.
 - [Deadline alerts](https://aigridwatch.com/data/alerts.json): moratoriums with documented
   end dates in the next window.
 

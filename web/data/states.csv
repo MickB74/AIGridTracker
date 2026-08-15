@@ -1,0 +1,52 @@
+state,abbrev,dc_count,twh_year,major_hubs,rate_cents,grid_carbon,water_stress
+Alabama,AL,35,0.6,"Birmingham, Huntsville",0.1677,,low
+Alaska,AK,5,0.1,Anchorage,0.2823,,low
+Arizona,AZ,190,10.5,"Phoenix (Mesa, Goodyear, Chandler) — Microsoft, Apple, Vantage, QTS, Iron Mountain",0.1523,,high
+Arkansas,AR,15,0.3,West Memphis — Google,0.1436,,low
+California,CA,321,11.0,"Silicon Valley, Los Angeles — Equinix, Digital Realty, CoreSite, Vantage",0.3325,,high
+Colorado,CO,70,1.8,"Denver, Colorado Springs — Flexential, Viawest",0.1616,,medium
+Connecticut,CT,60,1.0,"Stamford, Hartford",0.2737,,low
+Delaware,DE,22,0.4,Wilmington,0.1938,,low
+Dist. of Columbia,DC,12,0.3,Washington D.C.,,,
+Florida,FL,135,4.2,"Miami, Tampa, Jacksonville — Equinix, Digital Realty, CyrusOne",0.1517,,low
+Georgia,GA,162,9.0,"Atlanta (Douglasville, Palmetto) — Switch, Google, Microsoft, QTS",0.1584,,low
+Hawaii,HI,8,0.1,Honolulu,0.52,,high
+Idaho,ID,12,0.2,Boise,0.1235,,medium
+Illinois,IL,244,12.0,"Chicago (Elk Grove Village, Aurora) — Microsoft, Equinix, Digital Realty, Meta",0.2385,,low
+Indiana,IN,85,2.0,"Lebanon, La Porte, Indianapolis — Amazon ($15B), Meta ($10B), Microsoft ($1B)",0.1815,,low
+Iowa,IA,115,3.8,"Des Moines, Altoona — Apple, Google, Meta",0.1414,,low
+Kansas,KS,22,0.4,"Kansas City metro, Wichita",0.1513,,medium
+Kentucky,KY,40,0.6,"Louisville, Lexington",0.1498,,low
+Louisiana,LA,30,0.5,"Richland Parish, Caddo & Bossier Parishes — Meta ($27B), Amazon ($12B), Hut 8",0.1415,,low
+Maine,ME,8,0.1,Portland,0.2863,,low
+Maryland,MD,48,0.9,"Baltimore, Frederick",0.2177,,low
+Massachusetts,MA,58,1.1,"Boston, Holyoke, Cambridge",0.2882,,low
+Michigan,MI,62,1.1,"Detroit, Grand Rapids",0.2201,,low
+Minnesota,MN,78,1.5,"Minneapolis, Shakopee",0.1695,,low
+Mississippi,MS,20,0.3,"Madison County, Meridian — Amazon ($16B+), Compass ($10B)",0.1616,,low
+Missouri,MO,55,1.2,"Kansas City, St. Louis — Google ($2B)",0.1368,,low
+Montana,MT,12,0.2,"Billings, Missoula",0.1467,,low
+Nebraska,NE,42,2.1,"Omaha, Lincoln — Google, Meta",0.1359,,low
+Nevada,NV,72,2.8,"Las Vegas (Henderson), Reno — Switch (SUPERNAP), Google, Apple",0.136,,high
+New Hampshire,NH,14,0.2,Manchester,0.2733,,low
+New Jersey,NJ,95,2.2,"Secaucus, Piscataway (NYC Metro) — Equinix, Digital Realty",0.2327,,low
+New Mexico,NM,28,1.6,"Albuquerque, Los Lunas — Meta",0.1412,,high
+New York,NY,155,4.5,"NYC Metro, Buffalo — Equinix, DataBank, Digital Realty",0.2993,,low
+North Carolina,NC,115,4.5,"Charlotte, Research Triangle, Richmond County — Apple, Google, Amazon ($10B)",0.1509,,low
+North Dakota,ND,18,0.3,Fargo,0.1361,,low
+Ohio,OH,203,7.5,"Columbus (New Albany), Hebron — Google, Meta, Amazon ($10B), Microsoft",0.1952,,low
+Oklahoma,OK,38,0.6,"Oklahoma City, Tulsa",0.1338,,medium
+Oregon,OR,148,6.5,"Hillsboro, Prineville, The Dalles — Apple, Meta, Google",0.1627,,medium
+Pennsylvania,PA,98,2.5,"Salem Twp., Fairless Hills, Lancaster — Amazon ($20B), CoreWeave ($6B)",0.2155,,low
+Rhode Island,RI,8,0.2,Providence,0.2946,,low
+South Carolina,SC,40,0.6,"Aiken County, Charleston — Meta ($800M)",0.1618,,low
+South Dakota,SD,10,0.1,Sioux Falls,0.1573,,low
+Tennessee,TN,68,1.8,"Nashville, Memphis — Oracle ($1.5B), xAI ($1B+)",0.1447,,low
+Texas,TX,413,17.0,"Dallas–Fort Worth, Austin, San Antonio, West Texas — Google ($40B), Meta, Stargate",0.1644,,medium
+Utah,UT,48,2.6,"Salt Lake City, Bluffdale — Meta, Google",0.1296,,high
+Vermont,VT,5,0.1,Burlington,0.2489,,low
+Virginia,VA,665,24.0,"Ashburn ('Data Center Alley'), Loudoun Co., Prince William — AWS, Microsoft, Google, Equinix",0.1761,,low
+Washington,WA,142,4.2,"Quincy, Seattle, Moses Lake — Microsoft, Amazon",0.1495,,medium
+West Virginia,WV,8,0.1,Charleston,0.168,,low
+Wisconsin,WI,52,0.9,"Mount Pleasant, Milwaukee — Microsoft ($3.3B)",0.1974,,low
+Wyoming,WY,18,0.5,Cheyenne — Microsoft,0.148,,low

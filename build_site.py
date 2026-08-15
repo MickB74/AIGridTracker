@@ -598,6 +598,7 @@ NAV_GROUPS = [
         ("Data centers", "data-centers.html"),
         ("Companies", "companies/index.html"),
         ("Electricity outlook", "outlook.html"),
+        ("Open data", "open-data.html"),
     ]),
     ("Updates", [
         ("Blog", "blog/index.html"),
@@ -790,6 +791,7 @@ def page(title, description, body, canonical, depth=0,
     <a href="{p}dividend.html">Data dividend</a></p>
   <p style="margin-bottom:8px"><strong>Site</strong> ·
     <a href="{p}about.html">About</a> ·
+    <a href="{p}open-data.html">Open data</a> ·
     <a href="{p}consulting.html">Consulting</a> ·
     <a href="{p}search.html">Search</a></p>
   <p>AI GridWatch — community energy intelligence. Planning estimates, not
@@ -1348,6 +1350,9 @@ def build_state(state):
   <h1>{esc(state)}: data centers &amp; your electric bill</h1>
   <p class="sub">The numbers residents cite at hearings — grid, water, and
   regulator contacts for {esc(state)}, from the free GridWatch toolkit.</p>
+  <p class="muted" style="margin-top:4px">
+  <a href="../feeds/{slugify(state)}.xml">Subscribe by RSS</a> —
+  moratorium changes and community headlines for {esc(state)}.</p>
 </header>
 <div class="stats">
   <div class="stat"><b>{dc_count:,}</b><span>tracked data center facilities</span></div>
@@ -1376,13 +1381,54 @@ def build_state(state):
   <a class="btn ghost" href="../health-risks.html">The health risks, sourced</a></p>
 </section>
 """
+    mora_count = len(moras)
+    rate_c = prof.get("rate")
+    faq_pairs = [
+        (f"How many data centers are in {state}?",
+         f"{state} has approximately {dc_count:,} tracked data center "
+         f"facilities consuming an estimated {twh:.1f} TWh of electricity "
+         f"per year. Counts vary by directory because each draws the boundary "
+         f"differently — cite the TWh figure rather than the facility count "
+         f"when possible."),
+    ]
+    if mora_count:
+        faq_pairs.append((
+            f"Are there data center moratoriums in {state}?",
+            f"Yes. {state} has {mora_count} tracked moratorium"
+            f"{'s' if mora_count != 1 else ''} or community action"
+            f"{'s' if mora_count != 1 else ''} on file. See the full list "
+            f"on this page or the moratorium tracker for nationwide data."))
+    else:
+        faq_pairs.append((
+            f"Are there data center moratoriums in {state}?",
+            f"No documented moratoriums or bans are currently on file for "
+            f"{state}. Communities can still negotiate community benefit "
+            f"agreements — see the toolkit for model language."))
+    if rate_c:
+        faq_pairs.append((
+            f"How much does electricity cost in {state}?",
+            f"The average residential rate in {state} is {rate_c:.1f}¢/kWh. "
+            f"Large data center loads can affect rates through capacity market "
+            f"charges and transmission upgrades — see the electric bill "
+            f"explainer for the mechanism."))
+
+    _state_feed_link = (
+        f'<link rel="alternate" type="application/rss+xml" '
+        f'title="{esc(state)} data center updates — AI GridWatch" '
+        f'href="{SITE_URL}/feeds/{slugify(state)}.xml">')
+
     return page(
         f"{state} data centers: electricity, water & who to call",
         f"Data center facilities, grid impact, and regulator contacts for "
         f"{state} — free community negotiation tools from AI GridWatch.",
         body, f"{SITE_URL}/states/{slugify(state)}", depth=1,
         og_image=_og_image(f"state-{slugify(state)}"),
-        jsonld=_breadcrumb(("Home", SITE_URL), ("States", f"{SITE_URL}/states/"), (state, f"{SITE_URL}/states/{slugify(state)}")))
+        og_extra=_state_feed_link,
+        jsonld=[
+            _breadcrumb(("Home", SITE_URL), ("States", f"{SITE_URL}/states/"),
+                        (state, f"{SITE_URL}/states/{slugify(state)}")),
+            _faq_schema(faq_pairs),
+        ])
 
 
 _ABBREV_TO_FULL = {v: k for k, v in _ABBREV.items()}
@@ -2714,8 +2760,19 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
         f"{len(stories)} data center community-impact headlines archived and "
         f"grouped by town or county, with recurring-pattern summaries.",
         body, f"{SITE_URL}/story-tracker", depth=0,
-        jsonld=_breadcrumb(("Home", SITE_URL),
-                           ("Story tracker", f"{SITE_URL}/story-tracker")))
+        jsonld=[
+            _breadcrumb(("Home", SITE_URL),
+                        ("Story tracker", f"{SITE_URL}/story-tracker")),
+            _dataset_schema(
+                "Data center community-impact story archive",
+                f"{len(stories)} community-impact headlines archived and "
+                f"grouped by town or county, with heuristic summaries for "
+                f"recurring patterns.",
+                f"{SITE_URL}/story-tracker",
+                [("application/json", f"{SITE_URL}/data/story_tracker.json")],
+                keywords=["data center", "community impact", "local news",
+                          "story tracker", "moratorium"]),
+        ])
 
 
 def build_news_page(items, fetched_at, videos=None, themes=None,
@@ -8129,14 +8186,36 @@ currently self-reports nothing.
 }})();
 </script>
 """
+    n_fac = len(DC_SITES_DF)
+    n_st = len(STATE_DC_DF)
     return page(
         "Data center market — AI GridWatch",
         "U.S. data center market by state — facility counts, power draw, "
         "operator ownership, ERCOT large-load queue, SEC 10-K filings, "
         "and grid-operator responses.",
         body, f"{SITE_URL}/data-centers",
-        jsonld=_breadcrumb(("Home", SITE_URL),
-                           ("Data centers", f"{SITE_URL}/data-centers")))
+        jsonld=[
+            _breadcrumb(("Home", SITE_URL),
+                        ("Data centers", f"{SITE_URL}/data-centers")),
+            _dataset_schema(
+                "U.S. data center facility registry",
+                f"{n_fac} tracked data center campuses with operator, owner, "
+                f"tenant, and filing LLC.",
+                f"{SITE_URL}/data-centers",
+                [("application/json", f"{SITE_URL}/data/facilities.json"),
+                 ("text/csv", f"{SITE_URL}/data/facilities.csv")],
+                keywords=["data center", "data center campus",
+                          "operator", "LLC", "AI data center"]),
+            _dataset_schema(
+                "U.S. data center state profiles",
+                f"All {n_st} states and D.C. — facility count, power draw, "
+                f"residential rate, grid carbon, and water stress.",
+                f"{SITE_URL}/data-centers",
+                [("application/json", f"{SITE_URL}/data/states.json"),
+                 ("text/csv", f"{SITE_URL}/data/states.csv")],
+                keywords=["data center", "electricity", "grid carbon",
+                          "water stress", "state profile"]),
+        ])
 
 
 def build_environment():
@@ -10531,11 +10610,17 @@ def build_llms_txt():
 
 ## Open data
 
+- [Open data hub]({SITE_URL}/open-data): all datasets in one place — download,
+  cite, build on it. JSON/CSV, CC BY 4.0, documented schemas.
 - [Moratorium tracker]({SITE_URL}/moratoriums): {total} data center moratoriums,
   bans, and community actions, each with a primary source, verification date,
   and derived expiry status. JSON/CSV downloads, CC BY 4.0.
-- [Moratoriums JSON]({SITE_URL}/data/moratoriums.json): the full dataset,
-  documented schema.
+- [Project tracker]({SITE_URL}/projects): individual data center proposals
+  tracked from rumor to hearing to decision, with dated event logs.
+- [Facility registry]({SITE_URL}/data/facilities.json): tracked data center
+  campuses with operator, owner, tenant, and filing LLC.
+- [State profiles]({SITE_URL}/data/states.json): all 50 states + D.C. —
+  facility count, power draw, rates, grid carbon, water stress.
 - [Deadline alerts]({SITE_URL}/data/alerts.json): moratoriums with documented
   end dates in the next window.
 
@@ -10591,6 +10676,31 @@ MORATORIUM_SCHEMA = [
     ("verified", "true when a source is recorded. false means nobody has checked this row — treat it as a lead"),
     ("lat", "Latitude, null for state-level rows"),
     ("lon", "Longitude, null for state-level rows"),
+]
+
+
+FACILITY_SCHEMA = [
+    ("operator", "Primary operator or developer"),
+    ("owner", "Owner or financier, if different from operator"),
+    ("tenant", "Named end tenant, if known"),
+    ("location", "City, town or locality"),
+    ("state", "USPS two-letter code"),
+    ("lat", "Latitude"),
+    ("lon", "Longitude"),
+    ("filing_llc", "Shell LLC on local filings, if known"),
+    ("attribution", "How the operator-to-LLC link was established"),
+    ("src", "Source URL or citation"),
+]
+
+STATE_DATA_SCHEMA = [
+    ("state", "Full state name"),
+    ("abbrev", "USPS two-letter code"),
+    ("dc_count", "Number of tracked data center facilities"),
+    ("twh_year", "Estimated annual data center electricity consumption (TWh)"),
+    ("major_hubs", "Key metro areas and operators"),
+    ("rate_cents", "Residential electricity rate (cents/kWh)"),
+    ("grid_carbon", "Grid carbon intensity (gCO2/kWh)"),
+    ("water_stress", "Water stress level (low/medium/high)"),
 ]
 
 
@@ -10651,6 +10761,416 @@ def build_moratorium_data():
     (WEB / "data" / "moratoriums.csv").write_text(buf.getvalue(),
                                                   encoding="utf-8")
     return len(records)
+
+
+def build_facilities_data():
+    """Write DC_SITES_DF as JSON + CSV — the campus-level facility registry."""
+    import csv
+    import datetime as _dt
+    import io
+
+    cols = [c for c, _ in FACILITY_SCHEMA]
+    records = []
+    for r in DC_SITES_DF.to_dict("records"):
+        rec = {}
+        for c in cols:
+            v = r.get(c)
+            if isinstance(v, (int, float)) and not isinstance(v, bool):
+                rec[c] = None if pd.isna(v) else v
+            else:
+                rec[c] = str(v) if has_value(v) else None
+        records.append(rec)
+
+    payload = {
+        "name": "AI GridWatch data center facility registry",
+        "generated": _dt.date.today().isoformat(),
+        "license": DATA_LICENSE,
+        "license_url": DATA_LICENSE_URL,
+        "attribution": f"AI GridWatch ({SITE_URL})",
+        "source_page": f"{SITE_URL}/data-centers",
+        "count": len(records),
+        "caveat": (registry_provenance("DC_SITES_DF") or {}).get("caveat", ""),
+        "schema": {c: d for c, d in FACILITY_SCHEMA},
+        "facilities": records,
+    }
+    (WEB / "data").mkdir(parents=True, exist_ok=True)
+    (WEB / "data" / "facilities.json").write_text(
+        json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=cols, lineterminator="\n")
+    w.writeheader()
+    w.writerows(records)
+    (WEB / "data" / "facilities.csv").write_text(buf.getvalue(),
+                                                  encoding="utf-8")
+    return len(records)
+
+
+def build_states_data():
+    """Write state-level DC stats as JSON + CSV."""
+    import csv
+    import datetime as _dt
+    import io
+
+    cols = [c for c, _ in STATE_DATA_SCHEMA]
+    records = []
+    for _, r in STATE_DC_DF.iterrows():
+        st = str(r["state"])
+        prof = STATE_GRID_PROFILES.get(st, {})
+        rec = {
+            "state": st,
+            "abbrev": str(r["abbrev"]),
+            "dc_count": int(r["dc_count"]),
+            "twh_year": float(r["twh_year"]),
+            "major_hubs": str(r["major_hubs"]) if has_value(r.get("major_hubs")) else None,
+            "rate_cents": prof.get("rate"),
+            "grid_carbon": prof.get("carbon"),
+            "water_stress": prof.get("water_stress"),
+        }
+        records.append(rec)
+
+    payload = {
+        "name": "AI GridWatch U.S. data center state profiles",
+        "generated": _dt.date.today().isoformat(),
+        "license": DATA_LICENSE,
+        "license_url": DATA_LICENSE_URL,
+        "attribution": f"AI GridWatch ({SITE_URL})",
+        "source_page": f"{SITE_URL}/data-centers",
+        "count": len(records),
+        "caveat": (registry_provenance("STATE_DC_DF") or {}).get("caveat", ""),
+        "schema": {c: d for c, d in STATE_DATA_SCHEMA},
+        "states": records,
+    }
+    (WEB / "data").mkdir(parents=True, exist_ok=True)
+    (WEB / "data" / "states.json").write_text(
+        json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=cols, lineterminator="\n")
+    w.writeheader()
+    w.writerows(records)
+    (WEB / "data" / "states.csv").write_text(buf.getvalue(),
+                                              encoding="utf-8")
+    return len(records)
+
+
+def build_state_feeds(story_archive):
+    """Per-state RSS feeds combining moratorium status + archived headlines.
+
+    One feed per state that has any moratorium or archived story. Linked from
+    the state page via <link rel="alternate">. A journalist or advocate
+    subscribes once and gets told when something changes in their state — no
+    signup, no email, no infrastructure.
+    """
+    import datetime as _dt
+    from email.utils import format_datetime
+
+    feeds_dir = WEB / "feeds"
+    feeds_dir.mkdir(parents=True, exist_ok=True)
+
+    abbr2name = {v: k for k, v in _ABBREV.items()}
+    now = _dt.datetime.combine(_dt.date.today(), _dt.time(0, 0),
+                                tzinfo=_dt.timezone.utc)
+
+    states_with_content = set(MORATORIUMS_DF["state"].unique())
+    for s in story_archive:
+        if s.get("state"):
+            states_with_content.add(s["state"])
+
+    count = 0
+    for abbr in sorted(states_with_content):
+        state_name = abbr2name.get(abbr, abbr)
+        slug = slugify(state_name)
+        items = []
+
+        moras = MORATORIUMS_DF[MORATORIUMS_DF["state"] == abbr]
+        for m in moras.itertuples():
+            as_of = str(m.as_of) if has_value(m.as_of) else None
+            pub_dt = now
+            if as_of and len(as_of) >= 10:
+                try:
+                    pub_dt = _dt.datetime.combine(
+                        _dt.date.fromisoformat(as_of[:10]),
+                        _dt.time(0, 0), tzinfo=_dt.timezone.utc)
+                except ValueError:
+                    pass
+            loc = str(m.locality) if has_value(m.locality) else abbr
+            status = str(m.effective_status) if has_value(m.effective_status) else str(m.status)
+            note = str(m.note) if has_value(m.note) else ""
+            title = f"{loc}: data center moratorium — {status}"
+            desc = note or f"Moratorium status: {status}"
+            guid = f"mora-{slugify(loc)}-{abbr}".lower()
+            items.append((pub_dt, title, desc, guid,
+                          f"{SITE_URL}/communities/{_loc_slug(loc, abbr)}"))
+
+        stories = [s for s in story_archive
+                   if s.get("state") == abbr and s.get("title")]
+        for s in stories:
+            pub_dt = now
+            iso = s.get("published_iso", "")
+            if iso and len(iso) >= 10:
+                try:
+                    pub_dt = _dt.datetime.combine(
+                        _dt.date.fromisoformat(iso[:10]),
+                        _dt.time(0, 0), tzinfo=_dt.timezone.utc)
+                except ValueError:
+                    pass
+            link = s.get("link", f"{SITE_URL}/story-tracker")
+            outlet = s.get("outlet", "")
+            title = s["title"]
+            desc = f"Via {outlet}" if outlet else ""
+            guid = f"story-{hash(s.get('link', title)) & 0xffffffff:08x}"
+            items.append((pub_dt, title, desc, guid, link))
+
+        items.sort(key=lambda x: x[0], reverse=True)
+        items = items[:50]
+
+        xml_items = "\n".join(f"""  <item>
+    <title>{esc(t)}</title>
+    <link>{esc(lnk)}</link>
+    <guid isPermaLink="false">{esc(g)}</guid>
+    <pubDate>{format_datetime(dt)}</pubDate>
+    <description>{esc(d)}</description>
+  </item>""" for dt, t, d, g, lnk in items)
+
+        feed = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+  <title>AI GridWatch — {esc(state_name)} data center updates</title>
+  <link>{SITE_URL}/states/{slug}</link>
+  <description>Data center moratoriums, proposals, and community-impact
+  headlines for {esc(state_name)}, from AI GridWatch.</description>
+  <language>en-us</language>
+  <lastBuildDate>{format_datetime(now)}</lastBuildDate>
+{xml_items}
+</channel></rss>
+"""
+        (feeds_dir / f"{slug}.xml").write_text(feed, encoding="utf-8")
+        count += 1
+
+    return count
+
+
+def _cite_snippet(title, year=None):
+    """APA-style citation snippet for a dataset."""
+    import datetime as _dt
+    y = year or _dt.date.today().year
+    return (f'AI GridWatch. ({y}). <em>{esc(title)}</em> [Data set]. '
+            f'CC BY 4.0. {SITE_URL}/open-data')
+
+
+def build_open_data():
+    """Landing page for all open datasets — makes the data discoverable,
+    citable, and machine-readable via Dataset schema markup."""
+    import datetime as _dt
+
+    n_mora = len(MORATORIUMS_DF)
+    n_mora_states = MORATORIUMS_DF["state"].nunique()
+    n_projects = len(PROJECTS)
+    n_facilities = len(DC_SITES_DF)
+    n_states = len(STATE_DC_DF)
+    year = _dt.date.today().year
+
+    datasets = [
+        {
+            "title": "Moratorium & community action tracker",
+            "desc": (f"{n_mora} data center moratoriums, bans, and community "
+                     f"actions across {n_mora_states} states. Each row carries "
+                     f"a primary source, verification date, and derived expiry "
+                     f"status — so a lapsed moratorium is never cited as current."),
+            "page": "moratoriums",
+            "json": "data/moratoriums.json",
+            "csv": "data/moratoriums.csv",
+            "schema": MORATORIUM_SCHEMA,
+            "count": n_mora,
+            "ds_name": "U.S. data center moratorium & community action tracker",
+            "keywords": ["data center moratorium", "data center ban",
+                         "zoning", "community benefit agreement"],
+        },
+        {
+            "title": "Project intelligence tracker",
+            "desc": (f"{n_projects} identified data center proposals tracked "
+                     f"from rumor to hearing to decision. Each project carries "
+                     f"a dated intelligence log so you can see what changed "
+                     f"and when."),
+            "page": "projects",
+            "json": "data/projects.json",
+            "csv": "data/projects.csv",
+            "schema": PROJECT_SCHEMA,
+            "count": n_projects,
+            "ds_name": "U.S. data center project tracker",
+            "keywords": ["data center project", "data center proposal",
+                         "rezoning", "public hearing"],
+        },
+        {
+            "title": "Facility registry",
+            "desc": (f"{n_facilities} tracked data center campuses with "
+                     f"operator, owner, tenant, and the shell LLC on local "
+                     f"filings — so a resident can see who is really behind "
+                     f"a proposal."),
+            "page": "data-centers",
+            "json": "data/facilities.json",
+            "csv": "data/facilities.csv",
+            "schema": FACILITY_SCHEMA,
+            "count": n_facilities,
+            "ds_name": "U.S. data center facility registry",
+            "keywords": ["data center", "data center campus",
+                         "operator", "LLC"],
+        },
+        {
+            "title": "State profiles",
+            "desc": (f"All {n_states} states and D.C. — facility count, power "
+                     f"draw, residential rate, grid carbon intensity, and water "
+                     f"stress. The numbers a resident cites at a hearing."),
+            "page": "data-centers",
+            "json": "data/states.json",
+            "csv": "data/states.csv",
+            "schema": STATE_DATA_SCHEMA,
+            "count": n_states,
+            "ds_name": "U.S. data center state profiles",
+            "keywords": ["data center", "electricity", "grid carbon",
+                         "water stress", "state profile"],
+        },
+        {
+            "title": "Story tracker archive",
+            "desc": ("Every community-impact headline GridWatch has archived, "
+                     "grouped by the town or county it's about. A running "
+                     "record so patterns spread across months of coverage "
+                     "don't disappear when the feed scrolls past."),
+            "page": "story-tracker",
+            "json": "data/story_tracker.json",
+            "csv": None,
+            "schema": None,
+            "count": None,
+            "ds_name": "Data center community-impact story archive",
+            "keywords": ["data center", "community impact", "news",
+                         "local news", "story tracker"],
+        },
+        {
+            "title": "Moratorium deadline alerts",
+            "desc": ("Moratoriums with documented end dates approaching or "
+                     "recently lapsed. Also available as RSS — subscribe once, "
+                     "get notified before a pause expires in your area."),
+            "page": "moratoriums",
+            "json": "data/alerts.json",
+            "csv": None,
+            "schema": None,
+            "count": None,
+            "ds_name": "Data center moratorium deadline alerts",
+            "keywords": ["moratorium", "deadline", "expiry", "alert"],
+            "rss": "alerts.xml",
+        },
+    ]
+
+    cards = ""
+    jsonld_datasets = []
+    for ds in datasets:
+        dl_links = f'<a href="{ds["json"]}">JSON</a>'
+        if ds.get("csv"):
+            dl_links += f' · <a href="{ds["csv"]}">CSV</a>'
+        if ds.get("rss"):
+            dl_links += f' · <a href="{ds["rss"]}">RSS</a>'
+
+        sizes = []
+        json_size = _file_kb(ds["json"])
+        if json_size:
+            sizes.append(f"JSON {json_size}")
+        if ds.get("csv"):
+            csv_size = _file_kb(ds["csv"])
+            if csv_size:
+                sizes.append(f"CSV {csv_size}")
+        size_note = f' · {" · ".join(sizes)}' if sizes else ""
+
+        schema_html = ""
+        if ds["schema"]:
+            schema_rows = "\n".join(
+                f"<tr><td><code>{esc(c)}</code></td><td>{esc(d)}</td></tr>"
+                for c, d in ds["schema"])
+            schema_html = (
+                f'<details><summary>Schema — {len(ds["schema"])} fields</summary>'
+                f'<table><tr><th>Column</th><th>Description</th></tr>'
+                f'{schema_rows}</table></details>')
+
+        count_note = f"{ds['count']:,} records · " if ds["count"] else ""
+        cite = _cite_snippet(ds["ds_name"], year)
+
+        cards += f"""
+<section class="glass-card">
+  <h2>{esc(ds["title"])}</h2>
+  <p>{ds["desc"]}</p>
+  <p><strong>Download:</strong> {dl_links}{size_note}</p>
+  <p class="muted">{count_note}CC BY 4.0 ·
+  <a href="{ds["page"]}.html">source page</a></p>
+  {schema_html}
+  <details><summary>Cite this dataset</summary>
+  <p class="muted">{cite}</p></details>
+</section>
+"""
+        distributions = [("application/json", f"{SITE_URL}/{ds['json']}")]
+        if ds.get("csv"):
+            distributions.append(("text/csv", f"{SITE_URL}/{ds['csv']}"))
+        jsonld_datasets.append(
+            _dataset_schema(ds["ds_name"], ds["desc"],
+                            f"{SITE_URL}/{ds['page']}",
+                            distributions, keywords=ds.get("keywords")))
+
+    body = f"""
+<header>
+  <div class="kicker">Open data</div>
+  <h1>Download, cite, build on it</h1>
+  <p class="sub">Every dataset GridWatch publishes — moratoriums, projects,
+  facilities, state profiles, and the headline archive — is free to download,
+  licensed CC&nbsp;BY&nbsp;4.0, and documented with a schema so you can
+  actually use it. Researchers cite what they can query; journalists cite what
+  they can download.</p>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>{len(datasets)}</b><span>datasets</span></div>
+  <div class="stat"><b>{n_mora + n_projects + n_facilities + n_states:,}</b><span>total records</span></div>
+  <div class="stat"><b>CC BY 4.0</b><span>license</span></div>
+  <div class="stat"><b>Daily</b><span>rebuild cadence</span></div>
+</div>
+
+{cards}
+
+<section>
+  <h2>License</h2>
+  <p>All datasets are published under the
+  <a href="{DATA_LICENSE_URL}">Creative Commons Attribution 4.0 International</a>
+  license. You may share, adapt, and build on the data for any purpose,
+  including commercial, as long as you credit AI&nbsp;GridWatch and link back.
+  Suggested attribution:</p>
+  <blockquote>Data from <a href="{SITE_URL}">AI GridWatch</a>,
+  licensed CC&nbsp;BY&nbsp;4.0.</blockquote>
+</section>
+
+<section>
+  <h2>Freshness</h2>
+  <p>Every file is regenerated on each site build (currently daily). The
+  <code>generated</code> field in each JSON envelope is the build date. Per-row
+  <code>as_of</code> fields tell you when each individual record was last
+  verified against its source — a dataset can be freshly generated while
+  individual rows are months old.</p>
+</section>
+
+<section>
+  <h2>API access</h2>
+  <p>There is no API yet — the JSON downloads are the interface. If you are
+  building something that needs programmatic access or real-time updates,
+  <a href="about.html">get in touch</a> and we will figure it out.</p>
+</section>
+"""
+    return page(
+        "Open data — download, cite, build on it — AI GridWatch",
+        f"Free, licensed datasets on U.S. data center moratoriums, projects, "
+        f"facilities, and state profiles — JSON, CSV, documented schemas, "
+        f"CC BY 4.0.",
+        body, f"{SITE_URL}/open-data",
+        jsonld=[
+            _breadcrumb(("Home", SITE_URL),
+                        ("Open data", f"{SITE_URL}/open-data")),
+            *jsonld_datasets,
+        ])
 
 
 def build_alerts_outputs():
@@ -10823,7 +11343,7 @@ def main():
     _mora_localities = {(story_tracker.clean_locality(str(_m.locality)), str(_m.state))
                         for _m in MORATORIUMS_DF.itertuples()}
     _news_only = [(loc, st, g) for (loc, st), g in _groups_by_locality.items()
-                 if (loc, st) not in _mora_localities]
+                 if (loc, st) not in _mora_localities and g["count"] >= 4]
     _locality_slugs = {(story_tracker.clean_locality(str(_m.locality)), str(_m.state)):
                        _loc_slug(_m.locality, _m.state)
                        for _m in MORATORIUMS_DF.itertuples()}
@@ -10852,6 +11372,8 @@ def main():
     # cards can stat the files and show real sizes.
     _n_data = build_moratorium_data()
     _n_projects = build_projects_data()
+    _n_facilities = build_facilities_data()
+    _n_states_data = build_states_data()
     _n_story = build_story_data(_STORY_ARCHIVE)
     (WEB / "moratoriums.html").write_text(build_moratoriums(), encoding="utf-8")
     (WEB / "map.html").write_text(build_map(), encoding="utf-8")
@@ -10867,6 +11389,10 @@ def main():
     print(f"  [data] published {_n_data} moratoriums as JSON + CSV + embed")
     (WEB / "projects.html").write_text(build_projects(), encoding="utf-8")
     print(f"  [data] published {_n_projects} projects as JSON + CSV")
+    print(f"  [data] published {_n_facilities} facilities + {_n_states_data} states as JSON + CSV")
+    (WEB / "open-data.html").write_text(build_open_data(), encoding="utf-8")
+    _n_feeds = build_state_feeds(_STORY_ARCHIVE)
+    print(f"  [feeds] {_n_feeds} per-state RSS feeds -> feeds/")
     (WEB / "impact.html").write_text(build_impact_calculator(), encoding="utf-8")
     (WEB / "start-here.html").write_text(build_start_here(), encoding="utf-8")
     (WEB / "bills.html").write_text(build_bills(), encoding="utf-8")
@@ -10958,7 +11484,7 @@ def main():
              "learn", "puc", "executives", "about", "search", "dividend",
              "data-centers", "environment", "studies",
              "cba-clauses", "officials", "consulting", "case-studies",
-             "community-value",
+             "community-value", "open-data",
              "hearing-questions", "glossary", "tax-breaks", "siting",
              "companies/", "states/", "blog/", "news/", "videos", "map",
              "communities/"]
@@ -11047,7 +11573,7 @@ def main():
     # after a build. Either way the stale pages get served and indexed, so
     # fail loudly rather than ship them.
     expected_dirs = {"assets", "blog", "communities", "companies", "data",
-                     "embed", "news", "states"}
+                     "embed", "feeds", "news", "states"}
     actual_dirs = {d.name for d in WEB.iterdir() if d.is_dir()}
     unexpected = actual_dirs - expected_dirs
     if unexpected:

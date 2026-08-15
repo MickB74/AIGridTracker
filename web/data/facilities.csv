@@ -1,0 +1,85 @@
+operator,owner,tenant,location,state,lat,lon,filing_llc,attribution,src
+Google,self,Google,The Dalles,OR,45.59,-121.18,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,Council Bluffs,IA,41.26,-95.86,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,Douglas County,GA,33.75,-84.75,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,Ellis County,TX,32.35,-96.85,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,Henderson,NV,36.04,-114.98,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,New Carlisle,IN,41.7,-86.51,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,Jackson County,AL,34.75,-85.86,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,Lenoir,NC,35.91,-81.54,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,Mayes County,OK,36.31,-95.32,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,Midlothian,TX,32.48,-96.99,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,Montgomery County,TN,36.53,-87.36,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,Northern Virginia,VA,39.02,-77.48,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,Papillion,NE,41.15,-96.04,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,Red Oak,TX,32.52,-96.8,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,Storey County,NV,39.44,-119.42,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,New Albany (Central Ohio),OH,40.08,-82.81,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,Omaha,NE,41.26,-95.94,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Google,self,Google,The Lowcountry (Berkeley Co.),SC,33.2,-80.01,"Land-acquisition shells: Jet Stream LLC, Sharka LLC",first_party,google_dc
+Meta,self,Meta,Prineville,OR,44.3,-120.83,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Altoona,IA,41.64,-93.46,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Fort Worth,TX,32.76,-97.33,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Temple,TX,31.1,-97.34,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,El Paso,TX,31.76,-106.49,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Los Lunas,NM,34.81,-106.73,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,New Albany,OH,40.08,-82.8,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Bowling Green,OH,41.37,-83.65,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,DeKalb,IL,41.93,-88.75,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Forest City,NC,35.33,-81.86,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Gallatin,TN,36.39,-86.45,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Stanton Springs (Newton Co.),GA,33.6,-83.71,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Sarpy County,NE,41.1,-96.11,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Eagle Mountain,UT,40.31,-112.01,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Mesa,AZ,33.42,-111.83,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Huntsville,AL,34.73,-86.59,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Montgomery,AL,32.37,-86.3,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Kuna,ID,43.49,-116.42,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Jeffersonville,IN,38.28,-85.74,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Lebanon,IN,40.05,-86.47,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Richland Parish,LA,32.47,-91.75,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Rosemount,MN,44.74,-93.13,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Kansas City,MO,39.1,-94.58,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Tulsa,OK,36.15,-95.99,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Aiken,SC,33.56,-81.72,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Henrico,VA,37.56,-77.4,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Beaver Dam,WI,43.46,-88.84,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Meta,self,Meta,Cheyenne,WY,41.14,-104.82,"Codename shells: Greater Kudu, Raven Northbrook, Stadion, Wobniar, Pinnacle Mountain",first_party,meta_dc
+Microsoft,self,Microsoft,Goodyear (Greater Phoenix),AZ,33.44,-112.36,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Microsoft,self,Microsoft,Santa Clara / San Jose,CA,37.35,-121.95,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Microsoft,self,Microsoft,Greater Atlanta,GA,33.75,-84.39,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Microsoft,self,Microsoft,Chicago,IL,41.85,-87.65,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Microsoft,self,Microsoft,Northern Indiana (LaPorte),IN,41.61,-86.72,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Microsoft,self,Microsoft,West Des Moines,IA,41.58,-93.71,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Microsoft,self,Microsoft,Southeast Michigan,MI,42.17,-83.78,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Microsoft,self,Microsoft,Las Vegas,NV,36.17,-115.14,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Microsoft,self,Microsoft,Maiden (Catawba Co.),NC,35.58,-81.21,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Microsoft,self,Microsoft,Northern Virginia,VA,39.02,-77.48,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Microsoft,self,Microsoft,Central Ohio (Heath),OH,40.02,-82.44,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Microsoft,self,Microsoft,Boydton (Southern Virginia),VA,36.67,-78.39,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Microsoft,self,Microsoft,Greater San Antonio,TX,29.42,-98.49,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Microsoft,self,Microsoft,Quincy (Central Washington),WA,47.23,-119.85,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Microsoft,self,Microsoft,Mount Pleasant (Racine Co.),WI,42.72,-87.85,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Microsoft,self,Microsoft,Cheyenne,WY,41.14,-104.82,Project-name / generic 'Holdings LLC'; less consistently codenamed,first_party,microsoft_dc
+Amazon (AWS),self,Amazon (AWS),Northern Virginia (Loudoun Co.),VA,39.08,-77.65,"Vadata, Inc. — AWS's build/operating entity on many permits",first_party,aws_dc
+Amazon (AWS),self,Amazon (AWS),Central Ohio (New Albany),OH,40.08,-82.81,"Vadata, Inc. — AWS's build/operating entity on many permits",first_party,aws_dc
+Amazon (AWS),self,Amazon (AWS),Umatilla / Boardman,OR,45.84,-119.7,"Vadata, Inc. — AWS's build/operating entity on many permits",first_party,aws_dc
+Amazon (AWS),self,Amazon (AWS),New Carlisle (Northern Indiana),IN,41.7,-86.51,"Vadata, Inc. — AWS's build/operating entity on many permits",first_party,aws_dc
+Amazon (AWS),self,Amazon (AWS),Madison County,MS,32.63,-90.03,"Vadata, Inc. — AWS's build/operating entity on many permits",first_party,aws_dc
+Amazon (AWS),self,Amazon (AWS),Warren County (Vicksburg),MS,32.35,-90.88,"Vadata, Inc. — AWS's build/operating entity on many permits",first_party,aws_dc
+Amazon (AWS),self,Amazon (AWS),Richmond County (Rockingham),NC,34.97,-79.76,"Vadata, Inc. — AWS's build/operating entity on many permits",first_party,aws_dc
+Amazon (AWS),self,Amazon (AWS),Luzerne County (Salem Twp.),PA,41.15,-76.04,"Vadata, Inc. — AWS's build/operating entity on many permits",first_party,aws_dc
+Amazon (AWS),self,Amazon (AWS),Falls Township (Bucks Co.),PA,40.17,-74.76,"Vadata, Inc. — AWS's build/operating entity on many permits",first_party,aws_dc
+Amazon (AWS),self,Amazon (AWS),Caddo / Bossier Parish,LA,32.52,-93.75,"Vadata, Inc. — AWS's build/operating entity on many permits",first_party,aws_dc
+xAI (Colossus),self,xAI (Colossus),Memphis (Boxtown / President's Island),TN,35.08,-90.11,"Site/retrofit LLCs (e.g. former Electrolux plant, Memphis)",first_party,xai_memphis
+xAI (Colossus),self,xAI (Colossus),Memphis (Whitehaven),TN,35.04,-90.02,"Site/retrofit LLCs (e.g. former Electrolux plant, Memphis)",first_party,xai_memphis
+OpenAI · Oracle (Stargate),self,OpenAI,Abilene (Lancium Clean Campus),TX,32.45,-99.73,"Per-site developer LLCs (Crusoe/Lancium at Abilene, etc.)",first_party,stargate
+OpenAI · Oracle (Stargate),self,OpenAI,Shackelford County,TX,32.74,-99.33,"Per-site developer LLCs (Crusoe/Lancium at Abilene, etc.)",first_party,stargate
+OpenAI · Oracle (Stargate),self,OpenAI,Doña Ana County,NM,32.35,-106.87,"Per-site developer LLCs (Crusoe/Lancium at Abilene, etc.)",first_party,stargate
+OpenAI · Oracle (Stargate),self,OpenAI,Milam County (Rockdale),TX,30.65,-96.97,"Per-site developer LLCs (Crusoe/Lancium at Abilene, etc.)",first_party,stargate
+OpenAI · Oracle (Stargate),self,OpenAI,Lordstown,OH,41.17,-80.85,"Per-site developer LLCs (Crusoe/Lancium at Abilene, etc.)",first_party,stargate
+CoreWeave,self,,Kenilworth (NEST11),NJ,40.68,-74.29,"Mostly TENANT in partners' buildings: Core Scientific, Chirisa/Bulk, Flexential, Lincoln, TierPoint, Digital Realty, DataBank, Switch, Galaxy, Applied Digital",leasing_news,crwv_dc
+CoreWeave,self,,Las Vegas (Core Campus / LAS1),NV,36.1,-115.15,"Mostly TENANT in partners' buildings: Core Scientific, Chirisa/Bulk, Flexential, Lincoln, TierPoint, Digital Realty, DataBank, Switch, Galaxy, Applied Digital",leasing_news,crwv_dc
+CoreWeave,self,,Lancaster,PA,40.04,-76.3,"Mostly TENANT in partners' buildings: Core Scientific, Chirisa/Bulk, Flexential, Lincoln, TierPoint, Digital Realty, DataBank, Switch, Galaxy, Applied Digital",leasing_news,crwv_dc
+CoreWeave,self,,Denton (Core Scientific host),TX,33.21,-97.13,"Mostly TENANT in partners' buildings: Core Scientific, Chirisa/Bulk, Flexential, Lincoln, TierPoint, Digital Realty, DataBank, Switch, Galaxy, Applied Digital",leasing_news,crwv_dc
+CoreWeave,self,,Port of Muskogee (Core Scientific host),OK,35.74,-95.37,"Mostly TENANT in partners' buildings: Core Scientific, Chirisa/Bulk, Flexential, Lincoln, TierPoint, Digital Realty, DataBank, Switch, Galaxy, Applied Digital",leasing_news,crwv_dc
