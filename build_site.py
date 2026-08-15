@@ -21,6 +21,7 @@ Commit the regenerated web/ whenever constants change. On Vercel: import
 the repo, set Root Directory to `web`, framework "Other", no build step.
 """
 
+import hashlib
 import html
 import json
 import math
@@ -756,6 +757,9 @@ def page(title, description, body, canonical, depth=0,
 {og_extra}
 {ld_block}
 <link rel="icon" href="{p}assets/logo.svg" type="image/svg+xml">
+<link rel="preload" href="{p}assets/logo.svg" as="image" type="image/svg+xml">
+<link rel="dns-prefetch" href="//gc.zgo.at">
+<link rel="preconnect" href="//gc.zgo.at" crossorigin>
 <style>{CSS}</style>
 </head>
 <body>
@@ -1316,7 +1320,7 @@ def build_state(state):
                 f'<a href="{esc(v["link"])}" rel="nofollow noopener" target="_blank" '
                 f'style="display:block;border:1px solid rgba(255,255,255,0.08);'
                 f'border-radius:12px;overflow:hidden;text-decoration:none;color:inherit">'
-                f'{("<img src=" + repr(thumb) + " alt=\"\" loading=\"lazy\" style=\"width:100%;display:block;aspect-ratio:16/9;object-fit:cover\">") if thumb else placeholder}'
+                f'{("<img src=" + repr(thumb) + " alt=\"" + esc(v.get("title", "")) + "\" loading=\"lazy\" style=\"width:100%;display:block;aspect-ratio:16/9;object-fit:cover\">") if thumb else placeholder}'
                 f'<div style="padding:10px 12px">'
                 f'<div class="post-meta" style="font-size:12px;opacity:0.75">{esc(v.get("source",""))}</div>'
                 f'<div style="font-weight:600;margin-top:4px;line-height:1.3">'
@@ -3061,7 +3065,7 @@ def _video_card_html(v):
         for st in states)
     meta = " · ".join(x for x in (v.get("source", ""),
                                   _fmt_news_date(v.get("published_iso", ""))) if x)
-    img = (f'<img src={thumb!r} alt="" loading="lazy" style="width:100%;'
+    img = (f'<img src={thumb!r} alt="{esc(v.get("title", ""))}" loading="lazy" style="width:100%;'
            f'display:block;aspect-ratio:16/9;object-fit:cover">') if thumb else placeholder
     return (
         f'<a class="video-card" data-states="{data_states}" '
@@ -7283,13 +7287,39 @@ document.getElementById('color-company').addEventListener('click', function(){
   colorMode='company'; recolor();
   this.classList.add('active'); document.getElementById('color-stage').classList.remove('active');
 });
-// Legend
+// Legend + per-company multi-select filter
 const legendEl = document.getElementById('map-legend');
+// Count projects per operator; "" (unknown) grouped under a placeholder key.
+const OP_COUNTS = {};
+PROJECTS.forEach(p=>{ const k=p.operator||''; OP_COUNTS[k]=(OP_COUNTS[k]||0)+1; });
+const OP_LIST = Object.keys(OP_COUNTS).sort((a,b)=>a.localeCompare(b));
+// activeOps holds the operators currently shown. Starts with all of them.
+const activeOps = new Set(OP_LIST);
+function applyFilter(){
+  projMarkers.forEach(m=>{
+    const on = activeOps.has(m._gwProj.operator||'');
+    if(on){ if(!projLayer.hasLayer(m)) m.addTo(projLayer); }
+    else { if(projLayer.hasLayer(m)) projLayer.removeLayer(m); }
+  });
+}
 function updateLegend(){
   if(colorMode==='company'){
-    const ops = {}; PROJECTS.forEach(p=>{ if(p.operator) ops[p.operator]=opColor(p); });
-    legendEl.innerHTML = Object.entries(ops).sort((a,b)=>a[0].localeCompare(b[0]))
-      .map(([n,c])=>'<span style="color:'+c+'">&#9679;</span> '+esc(n)).join(' &nbsp; ');
+    const shown = OP_LIST.reduce((n,op)=>n+(activeOps.has(op)?OP_COUNTS[op]:0),0);
+    let html = '<div style="display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-bottom:6px">'+
+      '<strong style="color:var(--ink)">Companies</strong>'+
+      '<span class="muted">showing '+shown+' of '+PROJECTS.length+' projects</span>'+
+      '<button type="button" data-mapfilter="all" class="mf-link">Select all</button>'+
+      '<button type="button" data-mapfilter="none" class="mf-link">Clear</button></div>'+
+      '<div style="display:flex;flex-wrap:wrap;gap:4px 14px">';
+    OP_LIST.forEach(op=>{
+      const c = op ? (OP_COLORS[op]||'#9ca3af') : '#9ca3af';
+      const label = op ? esc(op) : 'Unspecified';
+      const checked = activeOps.has(op) ? ' checked' : '';
+      html += '<label class="mf-op"><input type="checkbox" data-op="'+esc(op)+'"'+checked+'>'+
+        '<span style="color:'+c+'">&#9679;</span> '+label+
+        ' <span class="muted">('+OP_COUNTS[op]+')</span></label>';
+    });
+    legendEl.innerHTML = html+'</div>';
   } else {
     legendEl.innerHTML = '<span style="color:#ef4444">&#9679;</span> hearing soon &nbsp; '+
       '<span style="color:#fbbf24">&#9679;</span> proposed &nbsp; '+
@@ -7297,6 +7327,21 @@ function updateLegend(){
       '<span style="color:#94a3b8">&#9679;</span> denied/withdrawn';
   }
 }
+// Delegated handlers — the legend HTML is rebuilt on every update, so bind once.
+legendEl.addEventListener('change', function(e){
+  const cb = e.target.closest('input[data-op]');
+  if(!cb) return;
+  const op = cb.getAttribute('data-op');
+  if(cb.checked) activeOps.add(op); else activeOps.delete(op);
+  applyFilter(); updateLegend();
+});
+legendEl.addEventListener('click', function(e){
+  const btn = e.target.closest('[data-mapfilter]');
+  if(!btn) return;
+  activeOps.clear();
+  if(btn.getAttribute('data-mapfilter')==='all') OP_LIST.forEach(op=>activeOps.add(op));
+  applyFilter(); updateLegend();
+});
 updateLegend();
 """
 
@@ -7379,6 +7424,11 @@ def build_map():
   font-weight:600;
 }}
 .toggle-btn:hover {{ border-color:var(--accent,#38bdf8); }}
+.mf-op {{ display:inline-flex; align-items:center; gap:5px; font-size:13px;
+  cursor:pointer; white-space:nowrap; }}
+.mf-op input {{ cursor:pointer; margin:0; }}
+.mf-link {{ background:none; border:0; color:var(--accent,#38bdf8);
+  cursor:pointer; font-size:12.5px; padding:0; text-decoration:underline; }}
 </style>
 <div id="gw-map" style="height:72vh;min-height:460px;border-radius:14px;
   overflow:hidden;border:1px solid var(--rule);margin:8px 0 6px"></div>
@@ -10923,12 +10973,44 @@ def main():
             build_state(state), encoding="utf-8")
         paths.append(f"states/{slug}")
 
-    # lastmod: blog posts keep their real publish date; everything else uses
-    # the build date, since those pages carry daily-refreshed news/data.
+    # lastmod: content-hash tracking so lastmod only updates when a page
+    # actually changes, rather than claiming every page changed on every build.
+    # Blog posts keep their real publish date regardless of content hash.
     import datetime as _smdt
     _build_date = _smdt.datetime.now(_smdt.timezone.utc).date().isoformat()
+    _hash_file = ROOT / "data" / "sitemap_hashes.json"
+    _prev_hashes = {}
+    if _hash_file.exists():
+        try:
+            _prev_hashes = json.loads(_hash_file.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            pass
+    _new_hashes = {}
     _post_lastmod = {f"blog/{s['id']}": s["date"].isoformat() for s in posts}
-    _sitemap_entries = [(p, _post_lastmod.get(p, _build_date)) for p in paths]
+    _sitemap_entries = []
+    for p in paths:
+        if p in _post_lastmod:
+            _sitemap_entries.append((p, _post_lastmod[p]))
+            continue
+        html_path = WEB / (p.rstrip("/") + ".html" if not p.endswith("/") else p + "index.html")
+        if html_path.exists():
+            _content_hash = hashlib.sha256(
+                html_path.read_bytes()).hexdigest()[:16]
+        else:
+            _content_hash = ""
+        _new_hashes[p] = _content_hash
+        prev = _prev_hashes.get(p)
+        if prev and isinstance(prev, dict) and prev.get("hash") == _content_hash:
+            _sitemap_entries.append((p, prev["lastmod"]))
+        else:
+            _sitemap_entries.append((p, _build_date))
+    _hash_data = {
+        p: {"hash": _new_hashes[p], "lastmod": lm}
+        for p, lm in _sitemap_entries if p in _new_hashes
+    }
+    _hash_file.write_text(
+        json.dumps(_hash_data, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8")
     (WEB / "sitemap.xml").write_text(
         build_sitemap(_sitemap_entries), encoding="utf-8")
     (WEB / "robots.txt").write_text(

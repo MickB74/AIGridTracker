@@ -22,6 +22,9 @@
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Map", "item": "https://aigridwatch.com/map"}]}</script>
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preload" href="assets/logo.svg" as="image" type="image/svg+xml">
+<link rel="dns-prefetch" href="//gc.zgo.at">
+<link rel="preconnect" href="//gc.zgo.at" crossorigin>
 <style>
 :root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
         --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
@@ -440,6 +443,11 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   font-weight:600;
 }
 .toggle-btn:hover { border-color:var(--accent,#38bdf8); }
+.mf-op { display:inline-flex; align-items:center; gap:5px; font-size:13px;
+  cursor:pointer; white-space:nowrap; }
+.mf-op input { cursor:pointer; margin:0; }
+.mf-link { background:none; border:0; color:var(--accent,#38bdf8);
+  cursor:pointer; font-size:12.5px; padding:0; text-decoration:underline; }
 </style>
 <div id="gw-map" style="height:72vh;min-height:460px;border-radius:14px;
   overflow:hidden;border:1px solid var(--rule);margin:8px 0 6px"></div>
@@ -522,13 +530,39 @@ document.getElementById('color-company').addEventListener('click', function(){
   colorMode='company'; recolor();
   this.classList.add('active'); document.getElementById('color-stage').classList.remove('active');
 });
-// Legend
+// Legend + per-company multi-select filter
 const legendEl = document.getElementById('map-legend');
+// Count projects per operator; "" (unknown) grouped under a placeholder key.
+const OP_COUNTS = {};
+PROJECTS.forEach(p=>{ const k=p.operator||''; OP_COUNTS[k]=(OP_COUNTS[k]||0)+1; });
+const OP_LIST = Object.keys(OP_COUNTS).sort((a,b)=>a.localeCompare(b));
+// activeOps holds the operators currently shown. Starts with all of them.
+const activeOps = new Set(OP_LIST);
+function applyFilter(){
+  projMarkers.forEach(m=>{
+    const on = activeOps.has(m._gwProj.operator||'');
+    if(on){ if(!projLayer.hasLayer(m)) m.addTo(projLayer); }
+    else { if(projLayer.hasLayer(m)) projLayer.removeLayer(m); }
+  });
+}
 function updateLegend(){
   if(colorMode==='company'){
-    const ops = {}; PROJECTS.forEach(p=>{ if(p.operator) ops[p.operator]=opColor(p); });
-    legendEl.innerHTML = Object.entries(ops).sort((a,b)=>a[0].localeCompare(b[0]))
-      .map(([n,c])=>'<span style="color:'+c+'">&#9679;</span> '+esc(n)).join(' &nbsp; ');
+    const shown = OP_LIST.reduce((n,op)=>n+(activeOps.has(op)?OP_COUNTS[op]:0),0);
+    let html = '<div style="display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-bottom:6px">'+
+      '<strong style="color:var(--ink)">Companies</strong>'+
+      '<span class="muted">showing '+shown+' of '+PROJECTS.length+' projects</span>'+
+      '<button type="button" data-mapfilter="all" class="mf-link">Select all</button>'+
+      '<button type="button" data-mapfilter="none" class="mf-link">Clear</button></div>'+
+      '<div style="display:flex;flex-wrap:wrap;gap:4px 14px">';
+    OP_LIST.forEach(op=>{
+      const c = op ? (OP_COLORS[op]||'#9ca3af') : '#9ca3af';
+      const label = op ? esc(op) : 'Unspecified';
+      const checked = activeOps.has(op) ? ' checked' : '';
+      html += '<label class="mf-op"><input type="checkbox" data-op="'+esc(op)+'"'+checked+'>'+
+        '<span style="color:'+c+'">&#9679;</span> '+label+
+        ' <span class="muted">('+OP_COUNTS[op]+')</span></label>';
+    });
+    legendEl.innerHTML = html+'</div>';
   } else {
     legendEl.innerHTML = '<span style="color:#ef4444">&#9679;</span> hearing soon &nbsp; '+
       '<span style="color:#fbbf24">&#9679;</span> proposed &nbsp; '+
@@ -536,6 +570,21 @@ function updateLegend(){
       '<span style="color:#94a3b8">&#9679;</span> denied/withdrawn';
   }
 }
+// Delegated handlers — the legend HTML is rebuilt on every update, so bind once.
+legendEl.addEventListener('change', function(e){
+  const cb = e.target.closest('input[data-op]');
+  if(!cb) return;
+  const op = cb.getAttribute('data-op');
+  if(cb.checked) activeOps.add(op); else activeOps.delete(op);
+  applyFilter(); updateLegend();
+});
+legendEl.addEventListener('click', function(e){
+  const btn = e.target.closest('[data-mapfilter]');
+  if(!btn) return;
+  activeOps.clear();
+  if(btn.getAttribute('data-mapfilter')==='all') OP_LIST.forEach(op=>activeOps.add(op));
+  applyFilter(); updateLegend();
+});
 updateLegend();
 </script>
 
