@@ -360,10 +360,76 @@
       "verified": true,
       "events": [
         {
+          "date": "2023-12-15",
+          "kind": "filing",
+          "summary": "4AM Development LLC, the applicant on the Burkhalter Road rezoning, was registered with the State of Georgia on December 15, 2023, with a principal office in Appling, Georgia and authorizing member Bobby Bagwell.",
+          "source": "https://www.statesboroherald.com/local/developers-seek-to-build-data-center-on-burkhalter-rd-inside-statesboros-edge/"
+        },
+        {
+          "date": "2024-01-01",
+          "kind": "rezoning",
+          "summary": "In January 2024, Four Guys Development LLC obtained city annexation of the roughly 26.94-acre Burkhalter Road parcel, then proposing a 'cottage court' subdivision of about 87 homes (later rezoned R-4).",
+          "source": "https://www.statesboroherald.com/local/developers-seek-to-build-data-center-on-burkhalter-rd-inside-statesboros-edge/"
+        },
+        {
+          "date": "2025-01-10",
+          "kind": "filing",
+          "summary": "On January 10, 2025, Habersham Development Group purchased the Burkhalter Road property for approximately $2.75 million.",
+          "source": "https://www.statesboroherald.com/local/developers-seek-to-build-data-center-on-burkhalter-rd-inside-statesboros-edge/"
+        },
+        {
+          "date": "2025-08-29",
+          "kind": "filing",
+          "summary": "On August 29, 2025, 4AM Development LLC acquired the roughly 27-acre Burkhalter Road parcel from Habersham Development Group in a zero-dollar transfer.",
+          "source": "https://www.statesboroherald.com/local/developers-seek-to-build-data-center-on-burkhalter-rd-inside-statesboros-edge/"
+        },
+        {
+          "date": "2026-02-01",
+          "kind": "announcement",
+          "summary": "A February 2026 intergovernmental agreement between Statesboro and Bulloch County established the jointly funded Burkhalter Road / Highway 67 corridor improvement project.",
+          "source": "https://www.statesboroherald.com/local/statesboro-and-bulloch-select-design-firm-for-jointly-funded-burkhalter-rd-upgrades/"
+        },
+        {
+          "date": "2026-02-17",
+          "kind": "vote",
+          "summary": "On February 17, 2026, the Bulloch County Board of Commissioners approved a resolution imposing a 90-day moratorium on the permitting of data centers in unincorporated Bulloch County.",
+          "source": "https://www.thegeorgiavirtue.com/bulloch-local-government/bulloch-commissioners-voice-opposition-to-data-centers-vote-to-extend-moratorium/"
+        },
+        {
+          "date": "2026-05-01",
+          "kind": "report",
+          "summary": "An economic impact study commissioned by the Development Authority of Bulloch County, dated May 2026, forecast the Burkhalter Road data center would draw $1.2 billion in total investment over 10 years while creating only 12 jobs with a $1.2 million annual payroll.",
+          "source": "https://www.statesboroherald.com/local/burkhalter-data-center-forecast-by-dabc-ordered-study-to-bring-12b-investment/"
+        },
+        {
+          "date": "2026-05-05",
+          "kind": "vote",
+          "summary": "On May 5, 2026, the Bulloch County Board of Commissioners voted 5-0 to extend its data center moratorium through December 31, 2026, and voiced opposition to data centers in the unincorporated county.",
+          "source": "https://www.thegeorgiavirtue.com/bulloch-local-government/bulloch-commissioners-voice-opposition-to-data-centers-vote-to-extend-moratorium/"
+        },
+        {
+          "date": "2026-06-02",
+          "kind": "vote",
+          "summary": "On June 2, 2026, Statesboro City Council approved its Data Center Ordinance on second reading in a 3-1 vote, with Councilwoman Shari Barr opposing.",
+          "source": "https://www.thegeorgiavirtue.com/bulloch-local-government/statesboro-council-approves-data-center-ordinance-in-3-1-vote/"
+        },
+        {
           "date": "2026-08-04",
           "kind": "vote",
           "summary": "Statesboro Planning Commission voted 5-1 to recommend approval of 4AM Development LLC's rezoning of ~26.5 acres at 6539 Burkhalter Road (chair dissenting), with a condition dedicating a 10-ft frontage strip for future road work.",
           "source": "https://www.wtoc.com/2026/08/04/statesboro-planning-commission-backs-proposed-data-center-rezoning-5-1-vote/"
+        },
+        {
+          "date": "2026-08-04",
+          "kind": "vote",
+          "summary": "On August 4, 2026, Statesboro City Council (morning meeting) and the Bulloch County Board of Commissioners (evening meeting) each authorized negotiations with Kimley-Horn & Associates to design jointly funded Burkhalter Road corridor upgrades.",
+          "source": "https://www.statesboroherald.com/local/statesboro-and-bulloch-select-design-firm-for-jointly-funded-burkhalter-rd-upgrades/"
+        },
+        {
+          "date": "2026-08-08",
+          "kind": "protest",
+          "summary": "Dozens of Bulloch County residents gathered outside Statesboro City Hall on Saturday, August 8, 2026, carrying signs and chanting to oppose the proposed Burkhalter Road data center rezoning, citing noise, air pollution, water usage and wildlife concerns.",
+          "source": "https://www.wtoc.com/2026/08/08/statesboro-residents-protest-proposed-data-center-rezoning/"
         },
         {
           "date": "2026-08-18",
@@ -432,10 +498,46 @@
       "verified": true,
       "events": [
         {
+          "date": "2023-01-01",
+          "kind": "financing",
+          "summary": "Aligned Data Centers purchased three parcels totaling about 89.4 acres at 6770 Mink St. in Pataskala for $13.9 million (year reported as 2023).",
+          "source": "https://baxtel.com/data-center/aligned-pataskala"
+        },
+        {
+          "date": "2025-11-01",
+          "kind": "filing",
+          "summary": "Aligned filed its site plan application with the City of Pataskala to begin the review process for the three-building data center campus (reported as November 2025).",
+          "source": "https://baxtel.com/data-center/aligned-pataskala"
+        },
+        {
           "date": "2026-06-03",
           "kind": "vote",
           "summary": "Pataskala Planning & Zoning Commission voted 5-2 to recommend that City Council reject Aligned's site plan, hours after residents rallied on the City Hall lawn.",
           "source": "https://www.thereportingproject.org/pataskala-planning-board-says-city-council-should-reject-aligned-data-centers-proposal/"
+        },
+        {
+          "date": "2026-06-04",
+          "kind": "coverage",
+          "summary": "Ohio Free Press reported that residents at the June 3 zoning meeting raised concerns the campus would use Bloom Energy fuel cells requiring roughly 15,000 decatherms of natural gas and cited noise from a comparable Aligned facility in Sandusky, Ohio.",
+          "source": "https://freepress.org/article/pataskala-ohio-zoning-votes-down-data-center-application"
+        },
+        {
+          "date": "2026-06-26",
+          "kind": "protest",
+          "summary": "Pataskala organizers reported a petition drive underway to put a charter amendment banning data centers with peak load over 25 megawatts on the ballot, needing at least 310 valid signatures (goal 500) and planning to submit them the week of July 6.",
+          "source": "https://www.yahoo.com/news/us/articles/sunbury-pataskala-residents-seek-fall-184602788.html"
+        },
+        {
+          "date": "2026-06-30",
+          "kind": "coverage",
+          "summary": "The Columbus Dispatch reported that Pataskala planning and zoning staff had recommended approval of Aligned's 200-megawatt plan, but the planning and zoning commission voted 5-2 to recommend rejection, sending the decision to City Council's Aug. 25 hearing.",
+          "source": "https://www.aol.com/articles/pataskala-allow-data-center-industrial-180844000.html"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "vote",
+          "summary": "Pataskala City Council passed an ordinance placing a charter amendment that could ban large data centers on the November ballot, expediting the vote to meet the Aug. 5 filing deadline for the Nov. 3 ballot.",
+          "source": "https://abc6onyourside.com/news/local/pataskala-council-advances-ballot-measure-that-could-ban-large-data-centers"
         },
         {
           "date": "2026-08-25",
@@ -687,10 +789,88 @@
       "verified": true,
       "events": [
         {
+          "date": "2019-09-23",
+          "kind": "rezoning",
+          "summary": "Monroe Township Council adopted Resolution R:221-2019, declaring the Commercial Corridor Rehabilitation Area along Black Horse Pike (Block 8401, Lots 8, 9, and 10, approximately 158 acres) an area in need of redevelopment.",
+          "source": "https://pinelandsalliance.org/datacenters/"
+        },
+        {
+          "date": "2023-02-01",
+          "kind": "rezoning",
+          "summary": "Monroe Township adopted Ordinance O:04-2023, approving the Hexa Builders Redevelopment Plan (revised November 15, 2022) permitting warehouse, storage, and distribution uses on the 158-acre site; data centers were not included as a permitted use.",
+          "source": "https://www.nj.gov/pinelands/home/hearings/MO%20Ord.%20O-04-2023_adopted.pdf"
+        },
+        {
+          "date": "2023-03-16",
+          "kind": "hearing",
+          "summary": "The New Jersey Pinelands Commission published a public notice and scheduled a hearing on Monroe Township Ordinance O:04-2023 to determine whether the Hexa Builders Redevelopment Plan conformed with the Pinelands Comprehensive Management Plan.",
+          "source": "https://www.nj.gov/pinelands/home/hearings/Monroe%20Public%20Notice.pdf"
+        },
+        {
+          "date": "2025-03-12",
+          "kind": "rezoning",
+          "summary": "Monroe Township Council adopted Ordinance O:02-2025, amending the Hexa Builders Redevelopment Plan to add data centers and associated infrastructure (electrical systems, cooling equipment, network infrastructure, emissions control) as a permitted use.",
+          "source": "https://pinelandsalliance.org/datacenters/"
+        },
+        {
+          "date": "2025-12-23",
+          "kind": "filing",
+          "summary": "Residents within 200 feet of the Hexa Builders redevelopment site received certified mail notice of a January 8, 2026 planning board meeting regarding a 1.6-million-square-foot warehouse proposal at 3043 South Black Horse Pike.",
+          "source": "https://pinelandsalliance.org/datacenters/"
+        },
+        {
+          "date": "2026-01-08",
+          "kind": "meeting",
+          "summary": "At a January 8 Monroe Planning Board meeting, residents objected to the data center proposal, but the board approved Hexa's project that evening.",
+          "source": "https://jerseyvindicator.org/2026/08/01/developer-challenges-gloucester-county-data-center-ban-on-free-speech-grounds"
+        },
+        {
+          "date": "2026-01-28",
+          "kind": "vote",
+          "summary": "On January 28 the Monroe Township Council directed the planning board to develop stricter data center standards, citing resident opposition.",
+          "source": "https://jerseyvindicator.org/2026/08/01/developer-challenges-gloucester-county-data-center-ban-on-free-speech-grounds"
+        },
+        {
+          "date": "2026-02-02",
+          "kind": "ruling",
+          "summary": "On February 2 the Monroe Planning Board memorialized its approval of Hexa's project in a written resolution.",
+          "source": "https://jerseyvindicator.org/2026/08/01/developer-challenges-gloucester-county-data-center-ban-on-free-speech-grounds"
+        },
+        {
+          "date": "2026-03-11",
+          "kind": "meeting",
+          "summary": "More than 100 residents packed a Monroe Township Council meeting lasting five hours; environmental groups including CRAN, Sustain South Jersey, Pinelands Alliance, and Food and Water Watch attended and raised concerns about the data center's water, energy, and noise impacts.",
+          "source": "https://followsouthjersey.com/2026/04/23/data-center-in-monroe-twp-shuttered-before-development-starts/"
+        },
+        {
+          "date": "2026-03-16",
+          "kind": "announcement",
+          "summary": "Mayor Gregory Wolfe announced in a Facebook video that a data center would not be coming to Monroe Township and that the council would remove data centers as a permitted use from the Hexa Redevelopment Plan at the March 25 meeting.",
+          "source": "https://pinelandsalliance.org/data-center-victories-local-actions-drive-regional-change/"
+        },
+        {
+          "date": "2026-03-25",
+          "kind": "vote",
+          "summary": "At a March 25 council meeting, Monroe Township leaders heard resident concerns and approved a motion to change the ordinance so data centers could not be built in the community.",
+          "source": "https://www.nbcphiladelphia.com/news/local/data-center-hexa-builders-monroe-township-gloucester-township-new-jersey/4374688/"
+        },
+        {
+          "date": "2026-03-25",
+          "kind": "filing",
+          "summary": "Council introduced Ordinance O:20-2026 to eliminate data center use from the Hexa Builders Redevelopment Plan; all council members except John Valentine voted to introduce it, with Valentine wanting a broader ban and better public notification instead.",
+          "source": "https://southjersey.media/williamstown-news/council-introduces-ordinance-banning-data-center-usage-from-redevelopment-plan/"
+        },
+        {
           "date": "2026-04-01",
           "kind": "filing",
           "summary": "Hexa Builders filed an amended application in early April 2026 converting one approved warehouse into a 1M sq ft data center at 3043 South Black Horse Pike.",
           "source": "https://42freeway.com/news/one-million-square-foot-data-center-proposal-in-monroe-twp-still-active-application-completeness-review-may-12/"
+        },
+        {
+          "date": "2026-04-08",
+          "kind": "vote",
+          "summary": "The Monroe Township council and ordinance committee voted to introduce a separate township-wide data center ban ordinance, with a final adoption vote scheduled for April 22.",
+          "source": "https://southjersey.media/williamstown-news/monroe-township-council-takes-first-steps-in-banning-data-centers-completely/"
         },
         {
           "date": "2026-04-22",
@@ -699,16 +879,94 @@
           "source": "https://njrecorder.com/monroe-township-blocks-major-ai-data-center-proposal-after-new-ban-takes-effect/"
         },
         {
+          "date": "2026-05-08",
+          "kind": "coverage",
+          "summary": "CBS Philadelphia reported on the ban, quoting Mayor Wolfe stating that Monroe Township has now banned any data center use from ever coming to the township.",
+          "source": "https://www.cbsnews.com/philadelphia/news/monroe-gloucester-new-jersey-data-center-ban-law/"
+        },
+        {
           "date": "2026-05-12",
           "kind": "meeting",
           "summary": "Planning board unanimously deemed the amended site-plan application incomplete - blocking the project without rejecting it on the merits.",
           "source": "https://42freeway.com/news/one-million-square-foot-data-center-proposal-in-monroe-twp-still-active-application-completeness-review-may-12/"
         },
         {
+          "date": "2026-05-12",
+          "kind": "ruling",
+          "summary": "At the completeness review, township planner Christopher Dochney cited multiple application deficiencies including a missing environmental assessment, no Pinelands Certificate of Filing, unsigned plans, absent stormwater maintenance schedule, and incomplete electrical infrastructure documentation covering 3+ acres.",
+          "source": "https://woodburywarbler.com/hexa-builders-sues-monroe-township-over-data-center-ban-seeks-more-than-300-million-in-damages/"
+        },
+        {
+          "date": "2026-05-13",
+          "kind": "operational",
+          "summary": "Monroe Township's data center ban officially took effect on May 13.",
+          "source": "https://www.inquirer.com/south-jersey/monroe-new-jersey-data-center-ban-lawsuit-20260717.html"
+        },
+        {
+          "date": "2026-05-13",
+          "kind": "public-comment",
+          "summary": "A coalition of 60 environmental, labor, and community organizations sent a letter to Governor Sherrill urging her to use emergency powers to impose a statewide moratorium on data centers consuming 20+ megawatts; Monroe Township resident Aleasha Whipple was quoted as a local organizer.",
+          "source": "https://www.foodandwaterwatch.org/2026/05/14/60-groups-to-gov-sherrill-protect-new-jersey-from-data-centers/"
+        },
+        {
+          "date": "2026-05-22",
+          "kind": "hearing",
+          "summary": "On May 22 Hexa presented its still-pending application, including the data center component, at a packed special planning board meeting attended by opposed residents.",
+          "source": "https://www.inquirer.com/south-jersey/monroe-new-jersey-data-center-ban-lawsuit-20260717.html"
+        },
+        {
+          "date": "2026-06-05",
+          "kind": "lawsuit",
+          "summary": "On June 5 Hexa Builders filed a 104-page, 20-count lawsuit in New Jersey Superior Court alleging First and 14th Amendment and state-law violations and seeking $300 million after Monroe denied its application.",
+          "source": "https://www.inquirer.com/south-jersey/monroe-new-jersey-data-center-ban-lawsuit-20260717.html"
+        },
+        {
+          "date": "2026-07-06",
+          "kind": "filing",
+          "summary": "On July 6 the case was moved from New Jersey Superior Court to federal court in Camden; the Superior Court case closed.",
+          "source": "https://www.inquirer.com/south-jersey/monroe-new-jersey-data-center-ban-lawsuit-20260717.html"
+        },
+        {
+          "date": "2026-07-09",
+          "kind": "meeting",
+          "summary": "At a July 9 planning board session, resident John Romano questioned how Hexa's application advanced and raised concerns about potential noise and pollution impacts on his property.",
+          "source": "https://www.inquirer.com/south-jersey/monroe-new-jersey-data-center-ban-lawsuit-20260717.html"
+        },
+        {
+          "date": "2026-07-14",
+          "kind": "hearing",
+          "summary": "A case management conference was held in the Hexa Builders LLC and 3043 Williamstown Urban Renewal LLC v. Monroe Township case (Docket No. GLO-L-805-26).",
+          "source": "https://woodburywarbler.com/hexa-builders-sues-monroe-township-over-data-center-ban-seeks-more-than-300-million-in-damages/"
+        },
+        {
+          "date": "2026-07-17",
+          "kind": "coverage",
+          "summary": "Township Solicitor Sandra Graise stated the municipality is committed to vigorously and zealously defending the lawsuit while protecting residents' interests.",
+          "source": "https://www.inquirer.com/south-jersey/monroe-new-jersey-data-center-ban-lawsuit-20260717.html"
+        },
+        {
+          "date": "2026-07-28",
+          "kind": "filing",
+          "summary": "On July 28 Monroe attorney Todd Gelfand filed a four-page letter seeking dismissal, arguing the ban does not regulate the content of speech, a speaker, a message, or the plaintiffs' ability to engage in expressive activity.",
+          "source": "https://www.inquirer.com/south-jersey/monroe-township-data-center-lawsuit-ban-collingswood-20260805.html"
+        },
+        {
           "date": "2026-07-30",
           "kind": "ruling",
           "summary": "Hexa Builders sued Monroe Township for more than $300 million in damages over the ban and the completeness review.",
           "source": "https://wjrz.com/2026/07/30/hexa-files-300m-lawsuit-against-monroe-township-over-data-center-prohibition/"
+        },
+        {
+          "date": "2026-08-01",
+          "kind": "filing",
+          "summary": "On August 1 Hexa's attorney Jim Maley asked the federal judge to reject Monroe Township's request to dismiss the lawsuit.",
+          "source": "https://www.inquirer.com/south-jersey/monroe-township-data-center-lawsuit-ban-collingswood-20260805.html"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "filing",
+          "summary": "Hexa attorney Jim Maley filed a letter requesting remand of the non-constitutional state-law claims back to New Jersey Superior Court, arguing state courts have more expertise on local land use laws.",
+          "source": "https://www.inquirer.com/south-jersey/monroe-township-data-center-lawsuit-ban-collingswood-20260805.html"
         }
       ]
     },
@@ -738,10 +996,34 @@
       "verified": true,
       "events": [
         {
+          "date": "2026-04-01",
+          "kind": "announcement",
+          "summary": "KKTV reported that Oakland, California-based Raeden proposed 'Project Taurus,' a roughly 50-megawatt data center to replace a former Intel manufacturing plant near Garden of the Gods, and that a neighborhood meeting to hear resident concerns was scheduled for April 7, 2026, at the Hyatt Place hotel.",
+          "source": "https://www.kktv.com/2026/04/02/new-data-center-planned-colorado-springs-sparks-concerns-community/"
+        },
+        {
           "date": "2026-06-01",
           "kind": "filing",
           "summary": "City planning department administratively approved the Project Taurus application in June 2026; neighbors immediately announced an appeal.",
           "source": "https://www.koaa.com/news/local-news/in-your-community/west-side/neighbors-plan-appeal-after-city-planning-department-approves-project-taurus-data-center-application"
+        },
+        {
+          "date": "2026-06-11",
+          "kind": "filing",
+          "summary": "KRDO reported the city Planning Department administratively approved the Development Plan Modification on June 11, 2026, for the 21.96-acre former Intel site at 1565 High Tech Way, with residents given until 5 p.m. on June 22 to file appeals.",
+          "source": "https://krdo.com/news/2026/06/15/project-taurus-data-center-moves-forward/"
+        },
+        {
+          "date": "2026-06-15",
+          "kind": "coverage",
+          "summary": "KRDO reported Raeden COO Jason Green said the company made voluntary modifications including generator relocation, enhanced noise monitoring, a $1 million bond, and third-party post-construction audits, while Integrity Matters' Dana Duggan criticized that residents were not notified until a day after the June 11 approval.",
+          "source": "https://krdo.com/news/2026/06/15/project-taurus-data-center-moves-forward/"
+        },
+        {
+          "date": "2026-06-22",
+          "kind": "protest",
+          "summary": "Per Integrity Matters, a citizen petition requesting a moratorium on data center approvals had gathered 5,349 signatures as of June 22, 2026, and a coalition of 33 appellants led by Katherine Kent and Ron Graham-Becker filed a formal appeal (City File No. DEPN-26-0039) challenging the Project Taurus approval.",
+          "source": "https://www.integritymatterscos.org/project-taurus-data-center"
         },
         {
           "date": "2026-06-23",
@@ -760,6 +1042,12 @@
           "kind": "filing",
           "summary": "Two new appeals filed, sending the decision to City Council - the final local authority. Hearing must occur between Aug 29 and Sept 28, 2026.",
           "source": "https://www.coloradopolitics.com/2026/08/03/appeals-filed-to-send-project-taurus-decision-to-the-colorado-springs-city-council/"
+        },
+        {
+          "date": "2026-08-11",
+          "kind": "hearing",
+          "summary": "KRDO reported the Colorado Springs City Council announced its special meeting to hear the Project Taurus appeal would be held September 17, 2026, at 9 a.m. at the Pikes Peak Center for the Performing Arts, with up to 120 speakers allowed two minutes each.",
+          "source": "https://krdo.com/news/2026/08/11/city-council-announces-special-meeting-to-hear-project-taurus-appeal/"
         }
       ]
     },
@@ -1146,16 +1434,82 @@
       "verified": true,
       "events": [
         {
+          "date": "2025-08-07",
+          "kind": "filing",
+          "summary": "Walbridge submitted the Project Flex site plan application to Lyon Township planning authorities for the 1.8-million-square-foot, 172-acre data center campus.",
+          "source": "https://www.blackridgeresearch.com/project-profiles/lyon-township-data-center-project-oakland-county-location-map-developers-contractors-investors-latest-updates"
+        },
+        {
           "date": "2025-09-08",
           "kind": "vote",
           "summary": "Lyon Township Planning Commission gave initial approval to Project Flex.",
           "source": "https://www.wxyz.com/news/region/oakland-county/project-flex-data-center-eyes-final-lyon-township-approval-amid-pushback-from-nearby-residents"
         },
         {
+          "date": "2025-12-01",
+          "kind": "protest",
+          "summary": "In December 2025 a Facebook opposition group titled 'NO DATA CENTER in Lyon Township' grew to roughly 2,000 members, citing concerns about electricity infrastructure, water usage, and environmental impacts.",
+          "source": "https://www.blackridgeresearch.com/project-profiles/lyon-township-data-center-project-oakland-county-location-map-developers-contractors-investors-latest-updates"
+        },
+        {
+          "date": "2025-12-11",
+          "kind": "announcement",
+          "summary": "Lyon Township issued an official press release/statement addressing questions about the Project Flex data center site plan.",
+          "source": "https://bluewaterhealthyliving.com/news/local-news/michigan/1-8-million-square-foot-data-center-approved-for-172-acres-in-lyon-township/"
+        },
+        {
+          "date": "2026-01-07",
+          "kind": "report",
+          "summary": "Consulting firm Kimley-Horn completed a noise study for Project Flex, a condition of the site-plan approval.",
+          "source": "https://planetdetroit.org/2026/01/lyon-township-data-center-plan/"
+        },
+        {
+          "date": "2026-01-08",
+          "kind": "coverage",
+          "summary": "Lyon Township issued a statement indicating the Planning Commission may be revisiting the conditional site-plan approval, saying final approval depends on independent review of the sound study and energy audit.",
+          "source": "https://planetdetroit.org/2026/01/lyon-township-data-center-plan/"
+        },
+        {
+          "date": "2026-01-12",
+          "kind": "protest",
+          "summary": "About 125 residents attended a Lyon Township Planning Commission meeting to voice opposition to the 1.8-million-square-foot data center.",
+          "source": "https://planetdetroit.org/2026/01/lyon-township-data-center-plan/"
+        },
+        {
+          "date": "2026-01-22",
+          "kind": "hearing",
+          "summary": "Lyon Township held a study/informational meeting on the Project Flex data center; residents staged a protest outside before the meeting.",
+          "source": "https://www.wxyz.com/news/data-centers/lyon-township-holds-study-meeting-on-data-center-project-residents-protest-plan"
+        },
+        {
+          "date": "2026-03-02",
+          "kind": "vote",
+          "summary": "The Lyon Township Board of Trustees enacted a six-month moratorium on new data centers and facilities over 100,000 square feet, running through September 8, 2026, while it reviews ordinances.",
+          "source": "https://www.whmi.com/news/article/lyon-twp-board-enacts-six-month-moratorium-on-new-data-center-projects"
+        },
+        {
+          "date": "2026-04-27",
+          "kind": "filing",
+          "summary": "The Oakland County Election Commission approved recall petition language targeting all seven Lyon Township trustees, an effort organizers tied to opposition to Project Flex.",
+          "source": "https://www.clickondetroit.com/news/local/2026/04/29/residents-fight-back-data-center-controversy-sparks-recall-attempt-against-lyon-township-leaders/"
+        },
+        {
           "date": "2026-05-27",
           "kind": "filing",
           "summary": "An attorney for Verrus submitted a Final Site Plan response letter arguing the project meets township codes and warning of legal action if approval is further delayed.",
           "source": "https://www.wxyz.com/news/region/oakland-county/project-flex-data-center-eyes-final-lyon-township-approval-amid-pushback-from-nearby-residents"
+        },
+        {
+          "date": "2026-06-08",
+          "kind": "hearing",
+          "summary": "At a Lyon Township Planning Commission meeting, dozens of residents, including State Sen. Jim Runestad, spoke during public comment opposing Project Flex.",
+          "source": "https://www.cbsnews.com/detroit/news/residents-oppose-data-center-lyon-townhship/"
+        },
+        {
+          "date": "2026-07-01",
+          "kind": "vote",
+          "summary": "In July 2026 Lyon Township postponed a decision on the data center, including whether to accept a $10 million community-benefits offer from Verrus.",
+          "source": "https://www.greatlakesnow.org/2026/08/13/are-data-centers-the-roads-of-the-future-inside-the-ai-infrastructure-debate/"
         },
         {
           "date": "2026-08-24",
@@ -1191,6 +1545,48 @@
       "verified": true,
       "events": [
         {
+          "date": "2025-08-14",
+          "kind": "financing",
+          "summary": "Concurrent with the August 14, 2025 lease announcement, TeraWulf reported securing a multi-billion-dollar investment from Google tied to its expansion, with the Lansing site projecting about $400 million in redevelopment investment, roughly 500 temporary construction jobs, and 100 permanent positions.",
+          "source": "https://www.ithaca.com/news/tompkins_county/data-center-developer-secures-long-term-lease-of-cayuga-power-plant/article_af47439f-e785-4519-9018-6ad0a9de5048.html"
+        },
+        {
+          "date": "2025-09-22",
+          "kind": "hearing",
+          "summary": "On September 22, 2025 the Lansing Town Board held a public hearing on a proposed year-long development moratorium that would have paused major construction while the town rewrote its zoning laws; the final vote was deferred to a later meeting.",
+          "source": "https://www.ithaca.com/news/tompkins_county/data-center-developer-secures-long-term-lease-of-cayuga-power-plant/article_af47439f-e785-4519-9018-6ad0a9de5048.html"
+        },
+        {
+          "date": "2025-11-05",
+          "kind": "vote",
+          "summary": "On November 5, 2025 the Lansing Town Board voted 3-2 not to withdraw its proposed construction moratorium, before reversing course later that month.",
+          "source": "https://www.cornellsun.com/article/2025/12/lansing-board-withdraws-ordinance-that-would-have-stalled-terawulf-data-center"
+        },
+        {
+          "date": "2025-11-14",
+          "kind": "lawsuit",
+          "summary": "As reported November 14, 2025, a letter from TeraWulf's representatives called for withdrawal of the proposed moratorium and demanded the immediate resignation of Town Supervisor Ruth Groff and board member Joseph Wetmore, alleging Open Meetings Law, FOIL, and Lobbying Act violations.",
+          "source": "https://www.cornellsun.com/article/2025/11/tensions-over-terawulf-data-center-in-tompkins-county-grow-with-threatened-lawsuit"
+        },
+        {
+          "date": "2025-11-19",
+          "kind": "vote",
+          "summary": "On November 19, 2025 the Lansing Town Board unanimously voted to withdraw its proposed one-year land-use moratorium, without discussion or explanation, clearing a path for the TeraWulf project to advance.",
+          "source": "https://www.cornellsun.com/article/2025/12/lansing-board-withdraws-ordinance-that-would-have-stalled-terawulf-data-center"
+        },
+        {
+          "date": "2025-12-22",
+          "kind": "vote",
+          "summary": "On December 22, 2025 the Town of Lansing Zoning Board of Appeals voted 3-2 to classify TeraWulf's Cayuga site as 'general processing,' allowing the data center to proceed without additional rezoning or variances; it was the company's third appeal after prior rejections of 'scientific research laboratory' and 'warehouse' classifications.",
+          "source": "https://finance.yahoo.com/news/terawulf-secures-zoning-approval-ny-153335651.html"
+        },
+        {
+          "date": "2026-01-30",
+          "kind": "lawsuit",
+          "summary": "On January 30, 2026, Cayuga Lake Environmental Action Now (CLEAN) and FLX Strong filed an Article 78 petition in New York State Supreme Court against the Lansing Zoning Board of Appeals and TeraWulf, seeking to annul the ZBA's December 2025 'general processing' classification as containing errors of law and procedural violations.",
+          "source": "https://ithacavoice.org/2026/01/local-groups-file-suit-against-terawulf-lansing-zoning-board-over-data-center/"
+        },
+        {
           "date": "2026-04-27",
           "kind": "hearing",
           "summary": "Lansing Planning Board reviewed TeraWulf's site-plan application, deemed it incomplete, and requested additional documentation (lease details, construction traffic data, landscaping clarification).",
@@ -1201,6 +1597,24 @@
           "kind": "ruling",
           "summary": "Court ruled that petitioners in the environmental groups' January lawsuit challenging the Zoning Board's permit interpretation have standing to proceed; arguments scheduled for June 18, 2026.",
           "source": "https://www.ithaca.com/news/regional_news/terawulf-s-proposed-data-center-faces-local-delays-pushback/article_8949eab1-47fd-46df-87ec-841b76a6527b.html"
+        },
+        {
+          "date": "2026-06-17",
+          "kind": "protest",
+          "summary": "On June 17, 2026 a coalition of Finger Lakes organizations held a press event outside Lansing town hall to deliver the 'Reject the Development of an AI Data Center on Cayuga Lake' petition, which had gathered roughly 20,000 signatures (about 17,000 from New York State residents).",
+          "source": "https://www.ithaca.com/news/regional_news/cayuga-lake-residents-deliver-petition-against-proposed-terawulf-data-center/article_be2ce31f-0ea9-4f1c-aff2-d695d3c7ad15.html"
+        },
+        {
+          "date": "2026-06-25",
+          "kind": "protest",
+          "summary": "Opposition groups No Data Center FLX and FLX Strong hosted a public presentation on June 25, 2026 at the First Unitarian Society in Ithaca about data-center harms and the Lansing proposal.",
+          "source": "https://www.ithaca.com/news/regional_news/cayuga-lake-residents-deliver-petition-against-proposed-terawulf-data-center/article_be2ce31f-0ea9-4f1c-aff2-d695d3c7ad15.html"
+        },
+        {
+          "date": "2026-07-14",
+          "kind": "moratorium",
+          "summary": "As reported July 14, 2026, Gov. Kathy Hochul signed Executive Order No. 62 establishing a statewide moratorium halting state permitting for data centers of 50+ MW pending a Department of Public Service environmental review; the order exempts local-government permits, and TeraWulf said it does not change its Lansing plans.",
+          "source": "https://ithacavoice.org/2026/07/terawulf-data-center-hochul-executive-order/"
         }
       ]
     },
@@ -1329,6 +1743,54 @@
       "verified": true,
       "events": [
         {
+          "date": "2025-02-03",
+          "kind": "hearing",
+          "summary": "A GCEDC public hearing was held February 3, 2025 on the original Stream/Project Double Reed incentive proposal at STAMP, ahead of staff bringing a recommendation to the STAMP committee and full board.",
+          "source": "https://orleanshub.com/gcedc-staff-recommend-project-double-reed-data-center-project-at-stamp/"
+        },
+        {
+          "date": "2025-03-06",
+          "kind": "vote",
+          "summary": "The GCEDC Board of Directors approved the original 900,000-square-foot, 250-megawatt Project Double Reed data center plan for Stream U.S. Data Centers at STAMP on March 6, 2025.",
+          "source": "https://www.wxxinews.org/local-news/2025-09-18/genesee-county-stamp-site-data-center-on-hold-as-expansion-gets-pursued"
+        },
+        {
+          "date": "2025-07-13",
+          "kind": "lawsuit",
+          "summary": "The Tonawanda Seneca Nation and the Sierra Club filed suit in New York State Supreme Court alleging GCEDC violated SEQRA by awarding $472 million in subsidies to Stream U.S. Data Centers without conducting a full environmental review or requiring detailed project plans.",
+          "source": "https://nativenewsonline.net/environment/tonawanda-seneca-nation-and-sierra-club-file-litigation-challenging-environmental-review-process-of-massive-data-center/"
+        },
+        {
+          "date": "2025-09-18",
+          "kind": "withdrawal",
+          "summary": "The GCEDC board voted to withdraw the State Environmental Quality Review determination for the approved 900,000-square-foot project after Stream said it had identified an opportunity to secure additional capacity and increase the project's scale, with Stream to submit an amended, larger application; a Tonawanda Seneca chief called the withdrawal a win.",
+          "source": "https://www.wxxinews.org/local-news/2025-09-18/genesee-county-stamp-site-data-center-on-hold-as-expansion-gets-pursued"
+        },
+        {
+          "date": "2026-02-18",
+          "kind": "filing",
+          "summary": "Stream submitted a revised GCEDC SEQR application dated February 18, 2026 increasing the campus to a $19.46 billion, roughly 500 MW, 2.2 million-square-foot three-building project on about 90 acres, with roughly 125 permanent jobs.",
+          "source": "https://servercountry.org/data/projects/stream-data-centers-stamp-campus-ny/"
+        },
+        {
+          "date": "2026-03-31",
+          "kind": "hearing",
+          "summary": "At a March 31, 2026 meeting, a Wendel Companies engineer walked the Town of Alabama Planning Board through the Stream site plan (water, sanitary sewer, noise studies, generators, roads, emergency services, parking); the board made no decisions and scheduled a public hearing for April 20 at the Alabama Fire Department.",
+          "source": "https://videonewsservice.net/index.php/2026/03/31/genesee-county-alabama-planning-board-tackles-data-center-site-plan/"
+        },
+        {
+          "date": "2026-05-04",
+          "kind": "hearing",
+          "summary": "The Alabama Planning Board held a public hearing on the $19.46 billion Stream project at the Alabama Fire Hall with almost 75 speakers, a majority opposed over noise, water, wetlands and impacts near the Tonawanda Seneca Nation, while some trades union representatives supported it; Stream design manager Colm Curran presented the project.",
+          "source": "https://videonewsservice.net/index.php/2026/05/05/genesee-county-town-of-alabama-planning-board-continues-to-study-the-site-plan-for-stream-u-s-data-centers-proposed-19-46-billion-project/"
+        },
+        {
+          "date": "2026-06-02",
+          "kind": "hearing",
+          "summary": "On June 2, 2026, Wendel Companies engineers updated the Alabama Planning Board on draft site-plan conditions dated May 26, 2026 covering annual noise readings, construction traffic routes, a heat-island memorandum, stormwater, grading, utilities and safety; the board chair said there was no deadline for a decision.",
+          "source": "https://videonewsservice.net/index.php/2026/06/02/genesee-county-engineers-update-the-alabama-planning-board-on-potential-conditions-when-considering-approval-of-the-proposed-19-46-billion-stream-u-s-data-centers-project/"
+        },
+        {
           "date": "2026-06-16",
           "kind": "hearing",
           "summary": "Alabama Planning Board met for over 3.5 hours on the Stream site plan amid resident opposition; conditions discussed included lifetime annual noise monitoring and a one-year construction-start deadline, with a site-plan approval vote expected July 6.",
@@ -1339,6 +1801,24 @@
           "kind": "announcement",
           "summary": "Town supervisor announced the July 6 and July 20 Planning Board meetings were cancelled - GCEDC could not complete SEQRA documentation in time - with the next regular meeting set for Aug 3, 2026.",
           "source": "https://videonewsservice.net/index.php/2026/07/02/genesee-county-alabama-town-supervisor-advises-july-planning-board-meetings-have-been-cancelled/"
+        },
+        {
+          "date": "2026-07-14",
+          "kind": "lawsuit",
+          "summary": "The Tonawanda Seneca Nation and the Sierra Club filed a lawsuit in New York State Supreme Court seeking to invalidate the zoning agreement between the Town of Alabama and the GCEDC that underpins development at the STAMP industrial park.",
+          "source": "https://www.yahoo.com/news/politics/articles/tonawanda-seneca-nation-sierra-club-040100049.html"
+        },
+        {
+          "date": "2026-07-14",
+          "kind": "ruling",
+          "summary": "Governor Kathy Hochul signed an executive order on July 14, 2026 establishing New York's first statewide moratorium of up to one year, pausing the Department of Environmental Conservation from issuing discretionary environmental permits for new hyperscale data centers while the state builds a regulatory framework and Community Investment Framework.",
+          "source": "https://www.governor.ny.gov/news/first-statewide-moratorium-new-hyperscale-data-centers-launched-governor-kathy-hochul"
+        },
+        {
+          "date": "2026-07-29",
+          "kind": "coverage",
+          "summary": "On July 29, 2026 Governor Hochul held a roundtable in Henrietta defending the one-year data center moratorium she signed July 14, saying New York does not need to be first but wants to be the first to get it right and that developers should bear infrastructure costs; coverage tied the pause to Stream's proposed $19.5 billion STAMP campus in the Town of Alabama.",
+          "source": "https://rbj.net/2026/07/29/hochul-data-center-moratorium-power-concerns-henrietta/"
         }
       ]
     },
@@ -1407,6 +1887,18 @@
           "source": "https://www.observer-reporter.com/news/local-news/2026/aug/07/hanover-township-continues-starpointe-data-center-meeting/"
         },
         {
+          "date": "2026-03-01",
+          "kind": "rezoning",
+          "summary": "Hanover Township adopted an ordinance regulating data center development during a meeting in March 2026, before Prime Data Centers LLC submitted its Starpointe application.",
+          "source": "https://www.observer-reporter.com/news/local-news/2026/aug/05/hanover-township-to-hold-hearing-on-starpointe-data-center-application/"
+        },
+        {
+          "date": "2026-07-27",
+          "kind": "coverage",
+          "summary": "CBS Pittsburgh reported that residents were mounting an 11th-hour fight against the proposed Starpointe data center ahead of the Aug. 5 hearing, citing health concerns from infrasound, noise and emissions and criticizing the township's data center ordinance as insufficiently protective on setbacks and noise.",
+          "source": "https://www.cbsnews.com/pittsburgh/news/hanover-township-washington-county-data-center/"
+        },
+        {
           "date": "2026-08-05",
           "kind": "hearing",
           "summary": "Conditional-use hearing before Hanover Township supervisors drew hundreds of residents; roughly three dozen were granted party standing, and residents' attorneys argued the zoning hearing board must first determine the data center's comparable use, so the hearing was continued to Aug. 31.",
@@ -1446,10 +1938,58 @@
       "verified": true,
       "events": [
         {
+          "date": "2025-10-01",
+          "kind": "vote",
+          "summary": "The Plymouth Township Planning Agency voted 4-0 not to recommend a special exception to allow a data center at 900 Conshohocken Road.",
+          "source": "https://morethanthecurve.com/plymouth-townships-planning-agency-votes-4-0-to-not-recommend-data-center-on-conshohocken-steel-plant-site/"
+        },
+        {
+          "date": "2025-10-20",
+          "kind": "protest",
+          "summary": "A resident petition opposing the proposal had reached more than 400 signatures, led by Patricia Smith, citing environmental, proximity, and utility-cost concerns; the article noted the Cleveland-Cliffs mill was scheduled to close the following month.",
+          "source": "https://www.bisnow.com/philadelphia/news/data-center-development/conshohocken-pushback-cleveland-cliffs-steel-mill-131443"
+        },
+        {
+          "date": "2025-11-17",
+          "kind": "withdrawal",
+          "summary": "A zoning hearing ended abruptly Monday night when the developer withdrew its application; the township solicitor said the applicant lacked legal standing because the agreement of sale had not been finalized.",
+          "source": "https://www.inquirer.com/news/pennsylvania/conshohocken-ai-data-center-proposal-zoning-20260505.html"
+        },
+        {
+          "date": "2026-05-01",
+          "kind": "filing",
+          "summary": "Plymouth Township announced it had received a resubmitted zoning application from an entity tied to developer Brian O'Neill seeking a special exception for a data center in the Heavy Industrial district at 900 Conshohocken Road.",
+          "source": "https://morethanthecurve.com/zoning-application-for-data-center-at-former-steel-plant-in-conshohocken-submitted-to-plymouth-township/"
+        },
+        {
+          "date": "2026-06-08",
+          "kind": "announcement",
+          "summary": "Plymouth Township Council issued a formal statement setting out its perspective on the proposed 900 Conshohocken Road data center and the zoning proceedings, and noted the public hearing set for June 25 at Colonial Middle School.",
+          "source": "https://www.plymouthtownship.org/township-council-issues-statement-regarding-proposed-data-center/"
+        },
+        {
+          "date": "2026-06-25",
+          "kind": "hearing",
+          "summary": "The zoning hearing kicked off at Colonial Middle School focused on procedural matters; party status was granted to Plymouth Township, the property owner's representatives, nearby residents, and the Borough of Conshohocken Authority, with no testimony taken.",
+          "source": "https://morethanthecurve.com/zoning-hearing-for-proposed-data-center-in-conshohocken-kicks-off-in-plymouth-township/"
+        },
+        {
+          "date": "2026-07-27",
+          "kind": "coverage",
+          "summary": "Council Chair Lynne Viscio accused developer Brian O'Neill of bullying, saying the township would not be bullied or intimidated; O'Neill called the accusations a 'bold-faced lie,' and he challenged the validity of the township's zoning ordinance.",
+          "source": "https://www.inquirer.com/news/pennsylvania/conshohocken-ai-data-center-brian-oneill-king-of-prussia-20260728.html"
+        },
+        {
           "date": "2026-08-06",
           "kind": "hearing",
           "summary": "Zoning hearing board session at Colonial Middle School drew a nearly full 750-seat auditorium; the applicant's engineer began testimony comparing the data center to permitted heavy-industrial uses, and party-status requests from neighboring municipalities and residents were taken up.",
           "source": "https://morethanthecurve.com/almost-full-house-for-conshohocken-data-center-hearing-before-plymouth-townships-zoning-hearing-board/"
+        },
+        {
+          "date": "2026-08-06",
+          "kind": "hearing",
+          "summary": "At the Zoning Hearing Board session, residents booed and cursed as a witness testified data centers resemble manufacturing; the board rejected several legal motions filed by opponents and indicated it would continue the case in September.",
+          "source": "https://whyy.org/articles/conshohocken-data-center-plymouth-township-pushback/"
         },
         {
           "date": "2026-08-17",
@@ -1884,10 +2424,40 @@
       "verified": true,
       "events": [
         {
+          "date": "2026-06-18",
+          "kind": "permit",
+          "summary": "Pacifico's engineer submitted two mass-grading permit applications to Bastrop County (one for the data center campus, one for the power facility), both in preliminary review.",
+          "source": "https://communityimpact.com/bastrop-cedar-creek/business/new-22b-cedar-creek-data-center-project-abatements-under-review/"
+        },
+        {
+          "date": "2026-06-24",
+          "kind": "filing",
+          "summary": "Pacifico Cedar Creek LLC filed an application with the Texas Comptroller for a JETI (Jobs, Energy, Technology and Innovation Act) agreement, listing a $2.2 billion investment, 25 permanent jobs and $6.2 million in annual payroll.",
+          "source": "https://communityimpact.com/bastrop-cedar-creek/business/new-22b-cedar-creek-data-center-project-abatements-under-review/"
+        },
+        {
+          "date": "2026-07-15",
+          "kind": "coverage",
+          "summary": "Community Impact published its first detailed report on the proposed 2,842-acre, $2.2 billion Cedar Creek data center and 710 MW gas power campus near Earl Callahan Road, with two 100% county tax-abatement applications under review.",
+          "source": "https://communityimpact.com/bastrop-cedar-creek/business/new-22b-cedar-creek-data-center-project-abatements-under-review/"
+        },
+        {
           "date": "2026-07-20",
           "kind": "filing",
           "summary": "Neighboring property owners (the Jenkins and Lewis families) filed motions asking TCEQ to overturn two construction stormwater permits issued to Black Chamber and Pacifico Energy for the BCG Cedar Creek Campus.",
           "source": "https://communityimpact.com/bastrop-cedar-creek/government/bastrop-county-residents-challenge-tceq-data-center-permits-as-officials-table-request-for-more-authority/"
+        },
+        {
+          "date": "2026-07-22",
+          "kind": "protest",
+          "summary": "More than 100 residents attended a town hall at Bastrop's Hampton Inn and Suites, organized by the League of Independent Voters of Texas, calling for guardrails on data center development including the Cedar Creek projects; attorney Nick Lealos proposed a 'Bastrop Bill of Rights' framework.",
+          "source": "https://communityimpact.com/bastrop-cedar-creek/government/bastrop-county-residents-organize-for-data-center-transparency-local-guardrails/"
+        },
+        {
+          "date": "2026-07-27",
+          "kind": "hearing",
+          "summary": "A Bastrop County Commissioners Court public hearing was scheduled on proposed tax-abatement guidelines that would require companies to disclose environmental impacts and create at least 25 local jobs.",
+          "source": "https://communityimpact.com/bastrop-cedar-creek/government/bastrop-county-residents-organize-for-data-center-transparency-local-guardrails/"
         },
         {
           "date": "2026-08-10",
@@ -1995,16 +2565,52 @@
       "verified": true,
       "events": [
         {
+          "date": "2026-07-15",
+          "kind": "filing",
+          "summary": "Manse Technology Campus LLC was formed as a Nevada limited liability company, the entity behind Gigawatt Development's proposed Pahrump data center campus.",
+          "source": "https://thenevadaindependent.com/article/opinion-big-pahrump-data-center-proposal-turns-heads-of-skeptical-residents"
+        },
+        {
+          "date": "2026-07-18",
+          "kind": "protest",
+          "summary": "Several dozen Pahrump residents rallied at the intersection of Highway 160 and Highway 372 as part of the AI Data Center National Day of Protest, citing concerns about the town's sole-source aquifer, electricity costs, and noise.",
+          "source": "https://pvtimes.com/news/pahrump-participates-in-data-center-day-of-protest-188971/"
+        },
+        {
+          "date": "2026-07-18",
+          "kind": "report",
+          "summary": "Pahrump resident Justyne Lobello hosted an 'AI and Data Centers: 101' educational presentation at the Pahrump Community Library at 1 p.m., drawing a large crowd of concerned residents amid the proposed data center development.",
+          "source": "https://pvtimes.com/news/ai-and-data-centers-101-draws-a-crown-of-concerned-residents-189026/"
+        },
+        {
+          "date": "2026-07-21",
+          "kind": "announcement",
+          "summary": "Manse Technology issued a press release announcing project details, describing an estimated $18.4 billion technology campus with no property tax abatements proposed.",
+          "source": "https://pvtimes.com/news/manse-tech-campus-aiming-to-assuage-community-concerns-189023/"
+        },
+        {
           "date": "2026-07-25",
           "kind": "hearing",
           "summary": "Nye County held a town hall/forum on the proposed Manse Technology Campus at the commission building in Pahrump; a large crowd attended inside and outside the venue, with residents opposing the project chiefly over water use.",
           "source": "https://www.fox5vegas.com/2026/07/26/nye-county-holds-town-hall-proposed-manse-technology-campus-pahrump/"
         },
         {
+          "date": "2026-08-03",
+          "kind": "hearing",
+          "summary": "The Manse Technology Campus team scheduled a public informational meeting for August 3 at 6 p.m. at the Pahrump Nugget Events Center to present the project and take questions.",
+          "source": "https://pvtimes.com/news/manse-tech-campus-aiming-to-assuage-community-concerns-189023/"
+        },
+        {
           "date": "2026-08-04",
           "kind": "hearing",
           "summary": "Nye County Bill 2026-11, a proposed ban on data centers in areas without elected town boards, did not come to a vote; Commissioner Jabbour successfully moved to pursue a ballot question instead, with a possible special election to be discussed Aug 18. Over 3,400 people signed a petition supporting the ban and hundreds attended, most speaking against data center development.",
           "source": "https://pvtimes.com/news/data-center-ban-fails-189362/"
+        },
+        {
+          "date": "2026-08-06",
+          "kind": "hearing",
+          "summary": "The Nye County Water District Governing Board held a roughly two-and-a-half-hour discussion on August 6 featuring a presentation on the proposed Manse Technology Campus by Russ Meads of Double M Construction.",
+          "source": "https://pvtimes.com/news/manse-tech-rep-speaks-at-water-board-meeting-189459/"
         }
       ]
     },
@@ -2151,16 +2757,58 @@
       "verified": true,
       "events": [
         {
+          "date": "2026-07-01",
+          "kind": "endorsement",
+          "summary": "The Cobb Chamber of Commerce approved the Prime Group data center project in July 2026, according to Atlanta News First.",
+          "source": "https://www.atlantanewsfirst.com/2026/08/13/marietta-city-council-approves-zoning-second-data-center-heated-meeting/"
+        },
+        {
+          "date": "2026-07-02",
+          "kind": "coverage",
+          "summary": "East Cobb News reported that a request to rezone 10.7 acres at 1155 Powers Ferry Place to allow an 18-megawatt data center in the existing Prime Storage building, with about 21,570 square feet of mission-critical space, was set to be heard by the city; the applicant's name was blacked out on the zoning application.",
+          "source": "https://eastcobbnews.com/marietta-to-hear-data-center-proposal-off-delk-road/"
+        },
+        {
           "date": "2026-07-08",
           "kind": "vote",
           "summary": "The council passed a six-month moratorium on new data center applications (through Dec. 31, 2026); the 18 MW Powers Ferry Place application, filed before the freeze took effect, was not covered by it.",
           "source": "https://dmnews.com/dmn-r-marietta-georgia-just-approved-a-second-data-center-in-a-5-2-vote-despite-a-six-month-moratorium-the-council-passed-last-month-because-the-18-megawatt-application-was-filed-before-the-freeze-too/"
         },
         {
+          "date": "2026-07-08",
+          "kind": "vote",
+          "summary": "At the July 8 council meeting, Councilwoman Cheryl Richardson moved to table the Powers Ferry Place data center proposal, citing noise and asking for a sound and light study plus additional buffer space; the proposal was tabled until August 12.",
+          "source": "https://www.ngacan.org/post/the-data-center-fight-isn-t-over-what-really-happened-at-marietta-city-council-on-wednesday-july-8"
+        },
+        {
+          "date": "2026-07-08",
+          "kind": "coverage",
+          "summary": "Atlanta Press Collective reported the Marietta Planning Commission voted 4-3 to recommend approval of the 1155 Powers Ferry Place data center rezoning, a shift from previous data center approvals that had passed unanimously, amid growing community opposition.",
+          "source": "https://atlpresscollective.com/2026/07/08/powers-ferry-road-marietta-data-center/"
+        },
+        {
+          "date": "2026-07-14",
+          "kind": "coverage",
+          "summary": "CRE Daily reported residents pushing back on Prime Group's plan, noting the Marietta Planning Commission had endorsed the project about a week before the council delayed its decision and imposed a six-month moratorium through December 31.",
+          "source": "https://www.credaily.com/briefs/marietta-residents-push-back-on-prime-group-data-center-plan/"
+        },
+        {
+          "date": "2026-07-28",
+          "kind": "protest",
+          "summary": "Community organizers, including the group Marietta BLU, scheduled a town hall for July 28 near the proposed data center site.",
+          "source": "https://www.ngacan.org/post/the-data-center-fight-isn-t-over-what-really-happened-at-marietta-city-council-on-wednesday-july-8"
+        },
+        {
           "date": "2026-08-12",
           "kind": "vote",
           "summary": "After more than two hours of public comment at a capacity meeting, the council approved the rezoning 5-2, with conditions including silencers, an independent sound study, site monitoring, and no municipal water/electricity connection.",
           "source": "https://eastcobbnews.com/marietta-city-council-approves-data-center-off-delk-road/"
+        },
+        {
+          "date": "2026-08-12",
+          "kind": "protest",
+          "summary": "During the Marietta City Council meeting some protesters were escorted out by police, and residents raised concerns about noise and environmental pollution, especially to the nearby Rottenwood Creek.",
+          "source": "https://www.atlantanewsfirst.com/2026/08/13/marietta-city-council-approves-zoning-second-data-center-heated-meeting/"
         }
       ]
     },
@@ -2523,16 +3171,106 @@
       "verified": true,
       "events": [
         {
+          "date": "2025-10-22",
+          "kind": "vote",
+          "summary": "The township held a public hearing on its data center ordinance on October 22, 2025, and the ordinance passed.",
+          "source": "https://smithfieldtownship.com/otp/datacenter/"
+        },
+        {
+          "date": "2025-11-01",
+          "kind": "filing",
+          "summary": "In November 2025 DEPG submitted the initial sketch plan application and supporting documents for the Smithfield Gateway data center (Phases 1B, 2A, and 2B).",
+          "source": "https://smithfieldtownship.com/odp/gatewaydc/"
+        },
+        {
+          "date": "2025-12-01",
+          "kind": "filing",
+          "summary": "In December 2025 the Township Engineer issued Sketch Plan Review No. 1 after the applicant submitted a conceptual site plan, grading plans, and cross-section plans.",
+          "source": "https://smithfieldtownship.com/odp/gatewaydc/"
+        },
+        {
+          "date": "2026-02-02",
+          "kind": "filing",
+          "summary": "The applicant resubmitted revised sketch plan materials, including revised conceptual plans, preliminary renderings, a sound study, and response letters to the Township Engineer.",
+          "source": "https://smithfieldtownship.com/odp/gatewaydc/"
+        },
+        {
+          "date": "2026-02-11",
+          "kind": "filing",
+          "summary": "The Township Engineer issued Sketch Plan Review No. 2 for the Smithfield Gateway data center sketch plan.",
+          "source": "https://smithfieldtownship.com/odp/gatewaydc/"
+        },
+        {
+          "date": "2026-02-14",
+          "kind": "protest",
+          "summary": "A Change.org petition titled 'Stop the massive data center in Stroudsburg, PA' opposing the Smithfield Gateway Project was launched, citing energy use, deforestation, noise and light pollution, and questioning promised job benefits.",
+          "source": "https://www.change.org/p/stop-the-massive-data-center-in-stroudsburg-pa"
+        },
+        {
+          "date": "2026-03-12",
+          "kind": "coverage",
+          "summary": "DataCenterDynamics reported the Smithfield Gateway project, discussed by the Planning Commission in mid-February, would consist of two 250,000 sq ft data centers linked to Legend Properties with no disclosed end-user, and that an opposition petition had passed 800 signatures.",
+          "source": "https://www.datacenterdynamics.com/en/news/data-center-could-come-to-stroudsburg-pennsylvania/"
+        },
+        {
+          "date": "2026-04-03",
+          "kind": "filing",
+          "summary": "DEPG Mosier Associates LP and DEPG of Shawnee II LP submitted the conditional use application for a two-building data center at Smithfield Gateway, including a statement of purpose, conditional use plan, environmental impact summary, traffic statement, and sound emissions study.",
+          "source": "https://smithfieldtownship.com/odp/gatewaydc/"
+        },
+        {
+          "date": "2026-04-22",
+          "kind": "hearing",
+          "summary": "The township scheduled an April 22, 2026 6:00 p.m. hearing on a data center ordinance amendment.",
+          "source": "https://smithfieldtownship.com/otp/datacenter/"
+        },
+        {
           "date": "2026-05-06",
           "kind": "filing",
           "summary": "Curative amendment application filed; 180-day MPC review period begins.",
           "source": "https://smithfieldtownship.com/otp/dcca/"
         },
         {
+          "date": "2026-06-01",
+          "kind": "filing",
+          "summary": "In June 2026 the Township Engineer (T&M Associates) issued Review No. 1 on the data center conditional use application.",
+          "source": "https://smithfieldtownship.com/odp/gatewaydc/"
+        },
+        {
+          "date": "2026-06-03",
+          "kind": "hearing",
+          "summary": "The township scheduled a Board of Supervisors meeting for June 3, 2026 at 6:00 p.m. at J.T. Lambert Intermediate School to discuss data center ordinance updates.",
+          "source": "https://smithfieldtownship.com/otp/datacenter/"
+        },
+        {
+          "date": "2026-08-11",
+          "kind": "filing",
+          "summary": "The applicant resubmitted the conditional use application with revised documents, including conditional use plans, a Kaplin-Stewart resubmission letter, traffic memorandum, acoustical evaluation, emergency response plan, detailed load study report, and water and sewer letters.",
+          "source": "https://smithfieldtownship.com/odp/gatewaydc/"
+        },
+        {
           "date": "2026-08-12",
           "kind": "hearing",
           "summary": "Board of Supervisors public hearing and curative amendment vote at JT Lambert Intermediate School.",
           "source": "https://monroecountypa.com/event/2026/08/board-supervisors-meeting-smithfield-township-curative-amendment-data-center-vote"
+        },
+        {
+          "date": "2026-08-12",
+          "kind": "coverage",
+          "summary": "Fox56 covered the public hearing at J.T. Lambert Intermediate School where residents voiced opposition to the proposed data center zoning, quoting resident Joel Raffaeli saying the community could come up with something better.",
+          "source": "https://fox56.com/news/local/smithfield-board-of-supervisors-vote-on-data-center-zoning-ordinance"
+        },
+        {
+          "date": "2026-08-13",
+          "kind": "hearing",
+          "summary": "Township newsletter states the Planning Commission will review the conditional use application for the proposed data center and vote on a recommendation to the Board of Supervisors on Thursday, August 13 at 7:00 p.m.",
+          "source": "https://smithfieldtownship.com/news/august-2026-newsletter/"
+        },
+        {
+          "date": "2026-09-09",
+          "kind": "hearing",
+          "summary": "Township newsletter announces the Board of Supervisors will open the conditional use hearing on the proposed data center on Wednesday, September 9 at 6:00 p.m. at J.T. Lambert Intermediate School, where party status requests are due.",
+          "source": "https://smithfieldtownship.com/news/august-2026-newsletter/"
         }
       ]
     },
@@ -2595,10 +3333,34 @@
       "verified": true,
       "events": [
         {
+          "date": "2021-09-01",
+          "kind": "rezoning",
+          "summary": "In September 2021 the Township Committee adopted Resolution 2021-91, designating approximately 812 acres along the Route 206 corridor (43 tax lots, including the Stickles Pond Road parcel) as a Non-Condemnation Area in Need of Redevelopment.",
+          "source": "https://www.insidernj.com/ai-data-center-sparks-sussex-collision/"
+        },
+        {
+          "date": "2024-01-01",
+          "kind": "permit",
+          "summary": "In 2024 the 97-acre property at 248 Stickles Pond Road received approval for a 660,000-square-foot warehouse development with little public opposition.",
+          "source": "https://www.govtech.com/artificial-intelligence/new-jersey-town-to-ban-all-data-centers-after-chaotic-meeting"
+        },
+        {
+          "date": "2025-08-01",
+          "kind": "announcement",
+          "summary": "In August 2025 township officials first publicly discussed a potential data center at a committee meeting.",
+          "source": "https://www.govtech.com/artificial-intelligence/old-new-jersey-airport-could-house-new-ai-data-center"
+        },
+        {
           "date": "2025-09-01",
           "kind": "filing",
           "summary": "Township passes ordinance allowing data centers in Route 206 redevelopment zone.",
           "source": "https://www.tapinto.net/towns/newton/sections/sussex-county-news/articles/andover-residents-protest-data-center-proposed-for-stickles-pond-road"
+        },
+        {
+          "date": "2025-10-01",
+          "kind": "financing",
+          "summary": "Approximately 33 days after the September 2025 ordinance permitting data centers, the property owner satisfied a $1.28 million mortgage on the Stickles Pond Road parcel.",
+          "source": "https://njtoday.news/2026/05/08/secret-andover-township-data-center-scheme-triggers-fireworks-amid-denials/"
         },
         {
           "date": "2025-12-01",
@@ -2613,10 +3375,28 @@
           "source": "https://nj1015.com/andover-residents-protest-data-center/"
         },
         {
+          "date": "2026-04-24",
+          "kind": "filing",
+          "summary": "Attorney Anand Dash, representing community group Andover Responsible Development (a fiscally sponsored member of the NJ Highlands Coalition), filed a legal notice challenging Ordinances 2025-15 and 2026-08 as violations of state Municipal Land Use Law, threatening suit if they were not rescinded by May 7.",
+          "source": "https://www.govtech.com/artificial-intelligence/old-new-jersey-airport-could-house-new-ai-data-center"
+        },
+        {
           "date": "2026-05-07",
           "kind": "hearing",
           "summary": "Chaotic meeting with ~300 residents opposing data center; police confrontation.",
           "source": "https://nj1015.com/andover-residents-protest-data-center/"
+        },
+        {
+          "date": "2026-05-07",
+          "kind": "vote",
+          "summary": "At the same contentious meeting, the Township Committee voted 4-1 to introduce an ordinance creating additional data center standards including closed-loop water cooling, noise controls, and electric substation requirements; five days later they reversed course and introduced a ban instead.",
+          "source": "https://www.govtech.com/artificial-intelligence/developer-sues-new-jersey-town-after-data-center-ban"
+        },
+        {
+          "date": "2026-05-08",
+          "kind": "coverage",
+          "summary": "NJTODAY reported that the township attorney confirmed preliminary PILOT financial discussions had taken place behind closed doors, and identified recently formed entities Bridge AIX LLC and Bridge AI Group LLC linked to the project through Delaware registrations.",
+          "source": "https://njtoday.news/2026/05/08/secret-andover-township-data-center-scheme-triggers-fireworks-amid-denials/"
         },
         {
           "date": "2026-05-09",
@@ -2659,6 +3439,12 @@
           "kind": "report",
           "summary": "The Sussex County Democratic Committee issued a written statement criticizing township officials over the ordinance's vulnerability to the developer's lawsuit.",
           "source": "https://nj1015.com/nj-data-center-lawsuit-andover/"
+        },
+        {
+          "date": "2026-07-27",
+          "kind": "coverage",
+          "summary": "Insider NJ reported Mayor Walsh stated the township has funding in place to defend the ordinance; Sussex County Republican chair Joseph LaBarbera denied Democratic allegations that the GOP was lobbying for data centers, calling the claim a deliberate lie.",
+          "source": "https://www.insidernj.com/ai-data-center-sparks-sussex-collision/"
         }
       ]
     },
@@ -2823,10 +3609,34 @@
           "source": "https://www.kctv5.com/2026/03/18/leavenworth-county-residents-pack-forum-over-proposed-data-center/"
         },
         {
+          "date": "2026-03-26",
+          "kind": "announcement",
+          "summary": "Coverage identified Cloverleaf Infrastructure as the developer of Project Bluestem, a conceptual 1,000-acre data center near Tonganoxie that could require up to 1.2 gigawatts of power and would receive a 100% sales and use tax abatement for 20 years, with no formal applications yet submitted.",
+          "source": "https://www.yahoo.com/news/articles/project-bluestem-paves-way-data-001118622.html"
+        },
+        {
+          "date": "2026-04-26",
+          "kind": "protest",
+          "summary": "The opposition group Citizens Against Bluestem held its inaugural meeting at the Tonganoxie VFW Post Home, drawing roughly 150 attendees; speakers included County Commissioner Mike Stieben and a Sierra Club representative.",
+          "source": "https://www.tonganoxiemirror.com/top-news/2026/apr/29/tonganoxie-group-against-data-center-airs-concerns/"
+        },
+        {
           "date": "2026-05-01",
           "kind": "vote",
           "summary": "Leavenworth County Commission passes 90-day moratorium on data center applications.",
           "source": "https://www.kshb.com/news/local-news/kansas/leavenworth-county/leavenworth-county-commissioners-pass-90-day-moratorium-on-data-centers"
+        },
+        {
+          "date": "2026-05-19",
+          "kind": "protest",
+          "summary": "The Tongie Data Center Watch Dog Group planned to present a petition to the Tonganoxie City Council at 7 p.m. on Monday, May 19, seeking an 18-month moratorium on data center development.",
+          "source": "https://www.kctv5.com/2026/05/16/tonganoxie-group-wants-pull-plug-ai-data-center/"
+        },
+        {
+          "date": "2026-06-09",
+          "kind": "meeting",
+          "summary": "Project Bluestem representatives held an open house at 304 Venue in Tonganoxie to address resident concerns about the proposed data center.",
+          "source": "https://www.tonganoxiemirror.com/top-news/2026/jun/18/data-center-discussed-at-tonganoxie-city-council-meeting/"
         },
         {
           "date": "2026-08-05",
@@ -2839,6 +3649,12 @@
           "kind": "vote",
           "summary": "Officials reverse course, direct P&Z to delay recommendations until joint work session in September.",
           "source": "https://www2.ljworld.com/news/general-news/2026/aug/13/leavenworth-co-officials-reverse-course-slow-down-on-data-center-proposed-for-site-near-tonganoxie/"
+        },
+        {
+          "date": "2026-08-14",
+          "kind": "hearing",
+          "summary": "About 100 protesters organized by the Tongie Data Center WatchDog Group packed the Leavenworth County planning meeting, where the planning commission voted 8-1 to revisit data center regulations.",
+          "source": "https://www.kcur.org/politics-elections-and-government/2026-08-14/leavenworth-county-kansas-data-center"
         }
       ]
     },
@@ -2931,6 +3747,18 @@
           "source": "https://www.urbanacitizen.com/2026/02/18/data-center-plans-revealed-at-city-meeting/"
         },
         {
+          "date": "2026-02-23",
+          "kind": "announcement",
+          "summary": "Thor Equities issued a public statement on the proposed data center, describing it as a $1 billion private investment and pledging water conservation, stable electric rates, and community investment.",
+          "source": "https://www.urbanacitizen.com/2026/02/23/thor-equities-issues-statement-on-data-center/"
+        },
+        {
+          "date": "2026-03-03",
+          "kind": "vote",
+          "summary": "Urbana City Council passed a 12-month moratorium on new data centers by a 6-1 vote, with Audra Bean the sole dissenter; about 40 residents spoke afterward mostly in support.",
+          "source": "https://www.springfieldnewssun.com/news/urbana-city-council-passes-12-month-moratorium-on-data-centers/article_e14c275f-6fe9-5209-9c25-c841fe600c75.html"
+        },
+        {
           "date": "2026-03-20",
           "kind": "filing",
           "summary": "Thor Equities formally appeals city's determination that application was incomplete.",
@@ -2943,6 +3771,18 @@
           "source": "https://www.peakofohio.com/local-news/urbana-bza-denies-appeal-on-proposed-data-center-site-plan/"
         },
         {
+          "date": "2026-04-21",
+          "kind": "announcement",
+          "summary": "Thor Equities launched a project information website, urbanaohiodatacenter.com, with a project overview, economic-benefit claims, and a contact form.",
+          "source": "https://www.peakofohio.com/local-news/39642/"
+        },
+        {
+          "date": "2026-05-01",
+          "kind": "report",
+          "summary": "Thor Equities publicized economic-impact figures for the project: over $1 billion investment, more than $5.8 million in annual local tax revenue, over 1,000 construction jobs, and 30 to 80 permanent positions.",
+          "source": "https://www.peakofohio.com/local-news/thor-equities-highlights-economic-impact-of-proposed-urbana-data-center/"
+        },
+        {
           "date": "2026-05-21",
           "kind": "vote",
           "summary": "City council adopts new zoning codes removing data centers as permitted use in M-1 district.",
@@ -2953,6 +3793,42 @@
           "kind": "filing",
           "summary": "Thor Equities files federal lawsuit against City of Urbana in US District Court, Southern District of Ohio.",
           "source": "https://www.urbanacitizen.com/2026/06/19/thor-sues-urbana-in-federal-court/"
+        },
+        {
+          "date": "2026-07-07",
+          "kind": "protest",
+          "summary": "Two Urbana residents launched petitions: Nicole Nawman began a charter-amendment petition to bar hyperscale data centers, and James Cropper began a petition to recall Mayor Bill Bean over alleged lack of transparency.",
+          "source": "https://www.wyso.org/news/2026-07-15/two-urbana-residents-start-petitions-in-response-to-data-center-dispute"
+        },
+        {
+          "date": "2026-07-15",
+          "kind": "filing",
+          "summary": "Nicole Nawman turned in the charter-amendment petition packet to the Champaign County Board of Elections, saying signatures well surpassed the required minimum.",
+          "source": "https://www.wyso.org/news/2026-07-15/two-urbana-residents-start-petitions-in-response-to-data-center-dispute"
+        },
+        {
+          "date": "2026-07-17",
+          "kind": "vote",
+          "summary": "The Champaign County Board of Elections reported the mayoral recall petitions collected enough valid signatures for the recall question to appear on the November 3 general election ballot.",
+          "source": "https://www.urbanacitizen.com/2026/07/20/mayoral-recall-charter-amendment-on-nov-ballot/"
+        },
+        {
+          "date": "2026-08-04",
+          "kind": "vote",
+          "summary": "Urbana City Council approved emergency Ordinance No. 4640-26, sending the proposed data-center-ban charter amendment to the November 3, 2026 ballot, suspending rules to meet the August 5 filing deadline.",
+          "source": "https://www.peakofohio.com/featured-news/urbana-council-sends-proposed-data-center-ban-to-november-ballot/"
+        },
+        {
+          "date": "2026-08-05",
+          "kind": "filing",
+          "summary": "Three candidates filed petitions by the August 5 deadline to replace Mayor Bean if he is recalled; Eugene Fields Jr. and Nicole Nawman met the 169-signature threshold while Taylor Armstrong fell four signatures short.",
+          "source": "https://www.urbanacitizen.com/2026/08/07/candidates-file-to-replace-mayor-bean/"
+        },
+        {
+          "date": "2026-08-07",
+          "kind": "ruling",
+          "summary": "The Champaign County Board of Elections forwarded the charter-amendment petition to the Ohio Secretary of State after finding a typographical error referencing Article VII instead of Article VIII, leaving its ballot status uncertain.",
+          "source": "https://www.urbanacitizen.com/2026/08/07/charter-amendment-petition-contains-error/"
         }
       ]
     },
@@ -4399,10 +5275,22 @@
       "verified": true,
       "events": [
         {
+          "date": "2024-08-08",
+          "kind": "vote",
+          "summary": "The Vineland Planning Board approved Resolution 6652, authorizing NEP Real Estate of Vineland NJ Urban Renewal LLC to build 2,647,628 square feet of data centers in four phases over twelve years on the site off South Lincoln and Sheridan avenues.",
+          "source": "https://pinelandsalliance.org/datacenters/"
+        },
+        {
           "date": "2025-03-05",
           "kind": "announcement",
           "summary": "Nebius announced a phased New Jersey data center expandable up to 300 MW total capacity, with first capacity expected as early as summer 2025 and 100 MW targeted by end of 2025.",
           "source": "https://nebius.com/newsroom/nebius-accelerates-us-expansion-adding-up-to-300-mw-capacity-at-new-data-center-in-new-jersey"
+        },
+        {
+          "date": "2025-07-09",
+          "kind": "vote",
+          "summary": "The Vineland Planning Board approved Resolution 6720, amending the site plan to change the applicant to DataOne USA LLC and adding three power generation buildings to the campus.",
+          "source": "https://pinelandsalliance.org/datacenters/"
         },
         {
           "date": "2025-09-10",
@@ -4435,6 +5323,60 @@
           "source": "https://www.inquirer.com/news/new-jersey/ai-data-center-vineland-south-jersey-expansion-20260122.html"
         },
         {
+          "date": "2026-02-24",
+          "kind": "environmental",
+          "summary": "DataOne released an environmental impact statement for the Vineland data center facility, after phase-one construction was already underway and partially operational.",
+          "source": "https://pinelandsalliance.org/datacenters/"
+        },
+        {
+          "date": "2026-03-01",
+          "kind": "vote",
+          "summary": "The Vineland City Council approved a resolution reducing public comment speaking time from five minutes to three minutes, after four months of longer-than-usual meetings driven by data center opposition.",
+          "source": "https://www.thevinelandvoice.com/news/council-approves-22-resolutions-including-reduced-public-speaking-time/article_24eefe00-e90b-44e0-aaf1-9fb521c5725f.html"
+        },
+        {
+          "date": "2026-03-10",
+          "kind": "ruling",
+          "summary": "The Cumberland County Department of Health inspected the DataOne site and issued a Notice of Violation for noise exceeding 50 decibels between 10 p.m. and 7 a.m.",
+          "source": "https://www.govtech.com/artificial-intelligence/new-jersey-neighbors-sue-over-humming-noise-from-data-center"
+        },
+        {
+          "date": "2026-03-21",
+          "kind": "protest",
+          "summary": "About 100 residents rallied at Giampietro Memorial Park in Vineland against the data center; the event was organized by congressional candidate Bayly Winder and advocacy group Sustain SJ.",
+          "source": "https://snjtoday.com/vineland-residents-protest-ai-data-center/"
+        },
+        {
+          "date": "2026-03-23",
+          "kind": "hearing",
+          "summary": "The Vineland Planning Board postponed a special meeting on DataOne's phase-two expansion (originally scheduled for March 26) to May 28, 2026, to give the company time to share plans with the public.",
+          "source": "https://www.vinelandcity.org/wp-content/uploads/2026/03/POSTPONEMENT-of-Planning-Board-Special-Meeting-on-3-26-2026-Post-3.23.pdf"
+        },
+        {
+          "date": "2026-05-16",
+          "kind": "public-comment",
+          "summary": "More than 60 environmental, labor, and community organizations signed a letter to Governor Sherrill calling for a moratorium on new data centers consuming at least 20 MW of electricity, citing Vineland among their concerns.",
+          "source": "https://www.govtech.com/artificial-intelligence/new-jersey-groups-seek-moratorium-on-new-data-centers"
+        },
+        {
+          "date": "2026-05-26",
+          "kind": "lawsuit",
+          "summary": "Residents Scott Montgomery and Michael Gentile filed a class-action lawsuit (Case 1:26-cv-05972) in U.S. District Court for the District of New Jersey against DataOne USA LLC, alleging private nuisance, public nuisance, and negligence from continuous noise affecting approximately 1,013 households within one mile.",
+          "source": "https://www.wilmerhale.com/en/insights/client-alerts/20260713-data-centers-in-court-the-emerging-wave-of-nuisance-environmental-and-land-use-litigation"
+        },
+        {
+          "date": "2026-05-27",
+          "kind": "announcement",
+          "summary": "Governor Mikie Sherrill announced a four-pillar comprehensive plan to regulate data centers in New Jersey, including fair-share energy rules, transparency requirements, community benefit agreement standards, and prevailing wage mandates.",
+          "source": "https://www.nj.gov/governor/news/2026/20260527a.shtml"
+        },
+        {
+          "date": "2026-06-19",
+          "kind": "ruling",
+          "summary": "The Montgomery v. DataOne USA class-action lawsuit was voluntarily dismissed without prejudice after the court issued an order to show cause questioning subject-matter jurisdiction on June 12.",
+          "source": "https://www.wilmerhale.com/en/insights/client-alerts/20260713-data-centers-in-court-the-emerging-wave-of-nuisance-environmental-and-land-use-litigation"
+        },
+        {
           "date": "2026-08-05",
           "kind": "hearing",
           "summary": "The Vineland Planning Board held a hearing at the Landis Theatre on DataOne's amended site plan for a phase-two expansion (adding a 587,980-square-foot building) to the 300 MW Nebius campus; opponent Helen Petrites presented 2,900 signatures and the board issued no decision that night.",
@@ -4451,6 +5393,24 @@
           "kind": "hearing",
           "summary": "NJBIA research analyst Jack Ramirez submitted written testimony to the Vineland Planning Board in support of the data center development.",
           "source": "https://njbia.org/njbia-testifies-in-support-of-responsible-data-center-development-in-vineland/"
+        },
+        {
+          "date": "2026-08-06",
+          "kind": "permit",
+          "summary": "The City of Vineland issued a stop-construction order for an LNG tank being installed at the DataOne site without prior approvals or permits.",
+          "source": "https://whyy.org/articles/vineland-data-center-stop-work-orders/"
+        },
+        {
+          "date": "2026-08-10",
+          "kind": "permit",
+          "summary": "The City of Vineland issued a second stop-construction order at the DataOne site, halting Bloom Energy fuel-cell installation work that was proceeding with no prior approvals, plans, or permits; violations carry $2,000 penalties per violation per day.",
+          "source": "https://whyy.org/articles/vineland-data-center-stop-work-orders/"
+        },
+        {
+          "date": "2026-08-11",
+          "kind": "coverage",
+          "summary": "DA Davidson analyst Gil Luria cut the Nebius (NBIS) price target from $250 to $175, citing construction delays at the Vineland facility that he said may remove potential upside from 2026 guidance.",
+          "source": "https://www.tipranks.com/news/d-a-davidson-cuts-nebius-stock-nbis-price-target-ahead-of-q2-earnings-says-vineland-delays-challenge-narrative"
         }
       ]
     },

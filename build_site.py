@@ -5744,8 +5744,19 @@ def build_moratoriums():
     proposed = len(MORATORIUMS_DF[MORATORIUMS_DF["effective_status"] == "Proposed"])
     verified = int(MORATORIUMS_DF["verified"].sum())
 
+    # A row's filterable status is its effective status, plus a "Unverified"
+    # pseudo-status so the filter can isolate rows with no source on record —
+    # that's the badge the table itself shows for them.
+    def _row_status(m):
+        vals = [str(getattr(m, "effective_status", "") or "")]
+        if not bool(getattr(m, "verified", True)):
+            vals.append("Unverified")
+        return "|".join(v for v in vals if v)
+
     rows = "\n".join(
-        f"<tr><td><a href=\"communities/{_loc_slug(m.locality, m.state)}.html\">"
+        f"<tr data-state=\"{esc(str(m.state))}\" "
+        f"data-status=\"{esc(_row_status(m))}\">"
+        f"<td><a href=\"communities/{_loc_slug(m.locality, m.state)}.html\">"
         f"{esc(str(m.locality))}</a></td>"
         f"<td><a href=\"states/{slugify(STATE_PUCS_DF[STATE_PUCS_DF['abbrev'] == m.state].iloc[0]['state'])}.html\">"
         f"{esc(str(m.state))}</a></td>"
@@ -5755,6 +5766,20 @@ def build_moratoriums():
         f"<td>{cell(m.note, dash='')}</td>"
         f"<td>{_mora_source_cell(m)}</td></tr>"
         for m in MORATORIUMS_DF.itertuples())
+
+    # Filter options. State dropdown labels use full state names (looked up
+    # from the PUC table) but filter on the abbreviation the column carries.
+    _abbrev_to_name = dict(zip(STATE_PUCS_DF["abbrev"], STATE_PUCS_DF["state"]))
+    _covered = sorted(MORATORIUMS_DF["state"].dropna().unique(),
+                      key=lambda a: _abbrev_to_name.get(a, a))
+    mora_state_options = '<option value="">All states</option>' + "".join(
+        f'<option value="{esc(str(a))}">{esc(_abbrev_to_name.get(a, str(a)))}</option>'
+        for a in _covered)
+    _statuses = sorted(MORATORIUMS_DF["effective_status"].dropna().unique())
+    if not bool(MORATORIUMS_DF["verified"].all()):
+        _statuses = _statuses + ["Unverified"]
+    mora_status_options = '<option value="">All statuses</option>' + "".join(
+        f'<option value="{esc(str(s))}">{esc(str(s))}</option>' for s in _statuses)
 
     outcomes = "\n".join(_outcome_card(o) for o in MORATORIUM_OUTCOMES)
     schema_rows = "\n".join(
@@ -5807,11 +5832,96 @@ def build_moratoriums():
   read against a primary source — treat them as a lead to check, not a fact to
   cite. Extensions are common, so an expiry date is the earliest a pause could
   have ended, not proof that it did.</p>
+  <div class="mora-controls">
+    <label>State
+      <select id="moraStateFilter">{mora_state_options}</select>
+    </label>
+    <label>Status
+      <select id="moraStatusFilter">{mora_status_options}</select>
+    </label>
+    <label style="flex:1">Search
+      <input id="moraKeyword" type="search" placeholder="locality, note, e.g. Loudoun, zoning, 350,000">
+    </label>
+    <button id="moraReset" class="btn ghost" type="button"
+      style="padding:6px 12px;font-size:13px">Reset</button>
+  </div>
+  <p id="moraCount" class="muted" style="margin:0 0 10px"></p>
   <div style="overflow-x:auto">
-  <table><tr><th>Locality</th><th>State</th><th>Level</th>
+  <table id="moraTable"><tr><th>Locality</th><th>State</th><th>Level</th>
   <th>Status</th><th>When</th><th>Note</th><th>Source</th></tr>
   {rows}</table>
   </div>
+  <p id="moraNoResults" class="muted" style="display:none">No moratoriums match
+  those filters. Try a broader status or clear the search.</p>
+  <style>
+  .mora-controls {{ display:flex; gap:14px; flex-wrap:wrap; align-items:center;
+    margin:14px 0 12px; background:var(--card); border:1px solid var(--rule);
+    border-radius:12px; padding:14px 16px; }}
+  .mora-controls label {{ font-size:13.5px; color:var(--muted); display:flex;
+    gap:6px; align-items:center; }}
+  .mora-controls select, .mora-controls input[type=search] {{ padding:7px 11px;
+    border-radius:8px; border:1px solid var(--rule);
+    background:rgba(255,255,255,.04); color:var(--ink); font-size:14px;
+    min-width:160px; }}
+  .mora-controls input[type=search] {{ flex:1; min-width:200px; }}
+  </style>
+  <script>
+  (function() {{
+    var stateSel = document.getElementById('moraStateFilter');
+    var statusSel = document.getElementById('moraStatusFilter');
+    var kw = document.getElementById('moraKeyword');
+    var reset = document.getElementById('moraReset');
+    var count = document.getElementById('moraCount');
+    var none = document.getElementById('moraNoResults');
+    var rows = Array.prototype.slice.call(
+      document.querySelectorAll('#moraTable tr[data-state]'));
+
+    function apply() {{
+      var state = stateSel.value;
+      var status = statusSel.value;
+      var kwVal = (kw.value || '').trim().toLowerCase();
+      var shown = 0;
+      rows.forEach(function(tr) {{
+        var statuses = (tr.getAttribute('data-status') || '').split('|').filter(Boolean);
+        var text = tr.textContent.toLowerCase();
+        var match = (!state || tr.getAttribute('data-state') === state)
+                  && (!status || statuses.indexOf(status) !== -1)
+                  && (!kwVal || text.indexOf(kwVal) !== -1);
+        tr.style.display = match ? '' : 'none';
+        if (match) shown++;
+      }});
+      if (state || status || kwVal) {{
+        var parts = [shown + (shown === 1 ? ' moratorium' : ' moratoriums')];
+        if (state) parts.push(stateSel.options[stateSel.selectedIndex].text);
+        if (status) parts.push(status);
+        if (kwVal) parts.push('"' + kwVal + '"');
+        count.textContent = parts.join(' · ');
+      }} else {{
+        count.textContent = rows.length + ' tracked actions';
+      }}
+      none.style.display = ((state || status || kwVal) && shown === 0) ? '' : 'none';
+      var qs = new URLSearchParams();
+      if (state) qs.set('state', state);
+      if (status) qs.set('status', status);
+      if (kwVal) qs.set('q', kwVal);
+      var qStr = qs.toString();
+      history.replaceState(null, '', qStr ? ('?' + qStr) : location.pathname);
+    }}
+
+    stateSel.addEventListener('change', apply);
+    statusSel.addEventListener('change', apply);
+    kw.addEventListener('input', apply);
+    reset.addEventListener('click', function() {{
+      stateSel.value = ''; statusSel.value = ''; kw.value = ''; apply();
+    }});
+
+    var q = new URLSearchParams(location.search);
+    if (q.get('state')) stateSel.value = q.get('state');
+    if (q.get('status')) statusSel.value = q.get('status');
+    if (q.get('q')) kw.value = q.get('q');
+    apply();
+  }})();
+  </script>
   {provenance_html("MORATORIUMS_DF")}
   <p class="muted" style="margin-top:10px">See the full interactive map and
   filters in the <a href="start-here.html">GridWatch toolkit</a>.</p>
