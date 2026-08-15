@@ -60,10 +60,46 @@
       "verified": true,
       "events": [
         {
+          "date": "2022-11-02",
+          "kind": "vote",
+          "summary": "Prince William Board of Supervisors voted 5-2 to approve the comprehensive plan amendment (CPA2021-00004) changing roughly 2,100 acres of the rural crescent to technology/flex zoning, after a 14-hour meeting that began the evening of November 1.",
+          "source": "https://www.potomaclocal.com/2022/11/02/supervisors-approve-prince-william-digital-gateway-comp-plan-amendment/"
+        },
+        {
+          "date": "2023-03-15",
+          "kind": "hearing",
+          "summary": "Prince William County Historical Commission voted to recommend designating Pageland Farm (9-3) and Rock Hill Farm (9-4) as county registered historic sites within the proposed Digital Gateway corridor, citing Civil War-era significance including Second Manassas battlefield positions.",
+          "source": "https://www.princewilliamtimes.com/news/prince-william-county-historical-commission-moves-to-protect-historic-sites-near-the-pw-digital-gateway/article_b96bfd74-c36a-11ed-963a-7b12753bb78a.html"
+        },
+        {
+          "date": "2023-11-09",
+          "kind": "vote",
+          "summary": "Prince William Planning Commission recommended denial of all three rezoning applications (Compass 6-2, both QTS applications 6-2) after a nearly 24-hour public hearing that concluded November 9.",
+          "source": "https://wtop.com/prince-william-county/2023/11/prince-william-planning-commission-recommends-denial-of-pw-digital-gateway-data-center-project/"
+        },
+        {
           "date": "2023-12-13",
           "kind": "vote",
           "summary": "Prince William Board of Supervisors approved the rezoning 4-3-1 after a ~27-hour public hearing - roughly 2,100 acres / 23M sq ft along Pageland Lane, billed as the world's largest data center corridor.",
           "source": "https://www.datacenterfrontier.com/site-selection/article/33016383/rezoning-for-pw-digital-gateway-data-centers-approved-by-virginias-prince-william-county-supervisors"
+        },
+        {
+          "date": "2025-08-08",
+          "kind": "ruling",
+          "summary": "Prince William Circuit Court Judge Kimberly Irving declared the December 2023 rezonings void ab initio, ruling the county's advertised hearing notice did not comply with Virginia Code or county ordinance, with defects caused solely by the county.",
+          "source": "https://wtop.com/prince-william-county/2025/08/judge-voids-digital-gateway-rezoning-in-prince-william-county/"
+        },
+        {
+          "date": "2025-09-11",
+          "kind": "vote",
+          "summary": "Board of Supervisors voted 4-2 to approve spending additional taxpayer funds to appeal the circuit court ruling voiding the Digital Gateway rezonings.",
+          "source": "https://protectpwc.org/2025/09/11/13121/"
+        },
+        {
+          "date": "2025-11-17",
+          "kind": "ruling",
+          "summary": "Virginia Court of Appeals ordered that Compass and QTS are barred from land disturbance or construction on the Digital Gateway site pending resolution of the appeal.",
+          "source": "https://wtop.com/prince-william-county/2025/11/digital-gateway-data-center-builders-barred-from-beginning-construction-until-legal-challenge-plays-out/"
         },
         {
           "date": "2026-03-01",
@@ -76,6 +112,24 @@
           "kind": "filing",
           "summary": "County dropped its legal appeals (~$1.7M spent defending the project) and the developer withdrew, terminating the approved Digital Gateway (April 2026).",
           "source": "https://northernvirginiamag.com/news/2026/07/08/prince-william-county-votes-against-massive-data-center-plan/"
+        },
+        {
+          "date": "2026-04-14",
+          "kind": "vote",
+          "summary": "Board of Supervisors voted unanimously to abandon its legal defense of the Digital Gateway; the county had spent roughly $1.7 million in taxpayer funds defending the project as of March 31.",
+          "source": "https://www.princewilliamtimes.com/localnews/breaking-prince-william-county-drops-legal-fight-for-pw-digital-gateway/article_e7152a10-cbf9-4a7a-80ef-55fa9e13770b.html"
+        },
+        {
+          "date": "2026-04-30",
+          "kind": "filing",
+          "summary": "QTS filed a last-minute petition for appeal to the Virginia Supreme Court hours before the 11:59 p.m. deadline, becoming the sole remaining party seeking to revive the project after Compass Datacenters dropped its appeal on April 28.",
+          "source": "https://virginiabusiness.com/prince-william-digital-gateway-data-center-project-officially-dies/"
+        },
+        {
+          "date": "2026-07-02",
+          "kind": "withdrawal",
+          "summary": "QTS affiliate GW Acquisition Co. withdrew its Virginia Supreme Court petition, officially ending the Digital Gateway project; QTS stated it decided 'after careful consideration' to terminate and proceed with a responsible wind-down.",
+          "source": "https://www.potomaclocal.com/2026/07/03/qts-withdraws-supreme-court-appeal-ending-proposed-digital-gateway-data-center-project/"
         }
       ]
     },
@@ -105,10 +159,40 @@
       "verified": true,
       "events": [
         {
+          "date": "2022-01-01",
+          "kind": "financing",
+          "summary": "An affiliate of Starwood Capital Group purchased the 34-acre Plaza 500 property at 6299 Edsall Road for $165 million in 2022.",
+          "source": "https://commercialobserver.com/2026/07/starwood-data-center-virginia/"
+        },
+        {
           "date": "2024-07-26",
           "kind": "filing",
           "summary": "Dominion Energy filed its application with Virginia's State Corporation Commission for the Edsall transmission line connecting the future substation to the Van Dorn substation.",
           "source": "https://www.dominionenergy.com/about/delivering-energy/electric-projects/power-line-projects/edsall"
+        },
+        {
+          "date": "2024-09-01",
+          "kind": "rezoning",
+          "summary": "In September 2024 the Fairfax County Board of Supervisors adopted new data center zoning restrictions, though the Plaza 500 site plan was exempt from them due to prior acceptance.",
+          "source": "https://annandaletoday.com/board-to-consider-restrictions-for-substations/"
+        },
+        {
+          "date": "2024-11-01",
+          "kind": "filing",
+          "summary": "The Virginia SCC scheduled a local public hearing in Fairfax County on Dominion Energy's application (Case PUR-2024-00135) to build 230 kV transmission Lines #210 and #243 Extension and the Edsall Substation serving the Plaza 500 data center.",
+          "source": "https://www.scc.virginia.gov/about-the-scc/newsreleases/release/fairfax-hearing-on-proposed-dev-trans-line/local-hearing-scheduled-in-fairfax-on-proposed-dev-trans-line.html"
+        },
+        {
+          "date": "2024-12-02",
+          "kind": "public-comment",
+          "summary": "Annandale Today reported that HOAs for Bren Pointe, Jefferson Green, Overlook, and the Ridges of Edsall hired an attorney to oppose Dominion's proposed Edsall substation and transmission line at the upcoming SCC hearings.",
+          "source": "https://annandaletoday.com/community-urged-to-oppose-huge-power-lines-for-a-data-center/"
+        },
+        {
+          "date": "2024-12-05",
+          "kind": "hearing",
+          "summary": "The Virginia SCC held a local public hearing at North Springfield Elementary School (7-10 p.m.) to receive testimony on Dominion Energy's proposed Edsall substation and transmission line (Case PUR-2024-00135).",
+          "source": "https://www.scc.virginia.gov/about-the-scc/newsreleases/release/fairfax-hearing-on-proposed-dev-trans-line/local-hearing-scheduled-in-fairfax-on-proposed-dev-trans-line.html"
         },
         {
           "date": "2025-08-08",
@@ -117,10 +201,34 @@
           "source": "https://www.dominionenergy.com/about/delivering-energy/electric-projects/power-line-projects/edsall"
         },
         {
+          "date": "2025-10-01",
+          "kind": "vote",
+          "summary": "In October 2025 the Fairfax County Planning Commission approved recommendations for new substation zoning rules including a 200-foot residential setback (up from 100 feet) and a special-exception process for substations adjacent to homes.",
+          "source": "https://annandaletoday.com/board-to-consider-restrictions-for-substations/"
+        },
+        {
+          "date": "2025-12-09",
+          "kind": "vote",
+          "summary": "The Fairfax County Board of Supervisors held a public hearing and vote on new substation zoning restrictions — expanded 200-foot setbacks, special-exception reviews, and co-location requirements — that could affect the Edsall substation's compliance.",
+          "source": "https://annandaletoday.com/board-to-consider-restrictions-for-substations/"
+        },
+        {
           "date": "2026-07-16",
           "kind": "filing",
           "summary": "Starwood Capital filed permit applications and building plans for Plaza 500 South, the first of two data center buildings on the 34-acre 6299 Edsall Road site (by-right, no rezoning hearing required).",
           "source": "https://www.ffxnow.com/2026/08/04/pressure-grows-on-fairfax-county-to-deny-substation-for-data-center-in-lincolnia/"
+        },
+        {
+          "date": "2026-07-22",
+          "kind": "coverage",
+          "summary": "Northern Virginia Magazine reported that Starwood Capital filed permit applications for two data centers at Plaza 500, with the first phase a 226,469-sq-ft, 75-foot-tall building and estimated shell construction cost of $5 million.",
+          "source": "https://northernvirginiamag.com/news/2026/07/22/developer-files-plans-for-2-data-centers-near-alexandria/"
+        },
+        {
+          "date": "2026-07-22",
+          "kind": "coverage",
+          "summary": "Commercial Observer reported that Starwood Capital advanced its 226,469-square-foot Plaza 500 South data center in Fairfax County, noting the 34-acre site was acquired for $165 million in 2022.",
+          "source": "https://commercialobserver.com/2026/07/starwood-data-center-virginia/"
         },
         {
           "date": "2026-07-27",
@@ -135,10 +243,28 @@
           "source": "https://annandaletoday.com/community-members-speak-out-against-a-substation-at-plaza-500/"
         },
         {
+          "date": "2026-07-29",
+          "kind": "coverage",
+          "summary": "NBC Washington reported that about 100 residents attended an information session where they grilled Dominion Energy over the proposed Edsall Road substation, raising concerns about noise, water quality, and electricity rates.",
+          "source": "https://www.nbcwashington.com/news/local/residents-grill-dominion-energy-over-fairfax-county-data-center-proposal/4135715/"
+        },
+        {
           "date": "2026-07-30",
           "kind": "news",
           "summary": "Rep. Don Beyer sent an official letter dated July 30 to the Fairfax County Planning Commission requesting denial of the 2232 permit application for Dominion's proposed Edsall Road substation.",
           "source": "https://m.connectionnewspapers.com/news/2026/aug/04/beyer-urges-denial-of-edsall-data-center-substation/"
+        },
+        {
+          "date": "2026-07-30",
+          "kind": "hearing",
+          "summary": "Dominion Energy presented its substation plans to the Mason District Land Use Committee at 7:30 p.m. at the Mason District Governmental Center; opposition noted the Van Dorn substation alternative would cost Dominion roughly $50 million more.",
+          "source": "https://patch.com/virginia/oldtownalexandria/plaza-500-data-center-foes-urge-residents-attend-tuesday-night-substation"
+        },
+        {
+          "date": "2026-07-31",
+          "kind": "ruling",
+          "summary": "The Virginia SCC issued a final order directing Dominion Energy to develop a policy assigning high-voltage transmission and substation costs to data centers and large-load users rather than spreading them across all ratepayers.",
+          "source": "https://annandaletoday.com/data-centers-must-pay-for-transmission-infrastructure/"
         },
         {
           "date": "2026-08-03",
@@ -151,6 +277,18 @@
           "kind": "news",
           "summary": "Rep. Don Beyer, Alexandria's mayor and city council, and residents pressed Fairfax County to deny the substation that would power the campus - proposed within ~100 ft of homes.",
           "source": "https://www.ffxnow.com/2026/08/04/pressure-grows-on-fairfax-county-to-deny-substation-for-data-center-in-lincolnia/"
+        },
+        {
+          "date": "2026-08-05",
+          "kind": "coverage",
+          "summary": "ALXnow reported that Mayor Alyia Gaskins and the full Alexandria City Council submitted a letter to Fairfax County's Planning Commission requesting denial of the Edsall substation, citing incompatibility of heavy industrial use with residential areas and health risks from diesel generator emissions.",
+          "source": "https://www.alxnow.com/2026/08/05/mayor-alexandria-city-council-ask-fairfax-county-to-reject-substation-tied-to-data-center/"
+        },
+        {
+          "date": "2026-08-06",
+          "kind": "coverage",
+          "summary": "Alexandria Brief reported that Mason District Supervisor Andres Jimenez asked the Planning Commission to deny the Edsall substation, noting the proposed site is only 67 feet from homes — violating the county's 100-foot setback standard adopted in 2025.",
+          "source": "https://www.alexandriabrief.com/mason-district-supervisor-asks-fairfax-planners-to-deny-edsall-road-substation/"
         },
         {
           "date": "2026-08-07",
@@ -552,6 +690,24 @@
           "source": "https://baxtel.com/data-center/aligned-pataskala"
         },
         {
+          "date": "2026-03-04",
+          "kind": "hearing",
+          "summary": "Pataskala Planning and Zoning Commission held a public hearing on the Aligned Data Centers proposal, one of several commission hearings prior to the June 3 recommendation vote.",
+          "source": "https://www.youtube.com/watch?v=Z6TlTY6-tuo"
+        },
+        {
+          "date": "2026-04-01",
+          "kind": "hearing",
+          "summary": "Residents packed a standing-room-only Planning and Zoning Commission meeting in Pataskala, voicing skepticism about the proposed data center and calling for a pause before any approval; resident Grace Franklin said she would support a statewide ballot amendment and help collect signatures.",
+          "source": "https://www.yahoo.com/news/articles/pataskala-residents-remain-skeptical-proposed-032924279.html"
+        },
+        {
+          "date": "2026-05-04",
+          "kind": "public-comment",
+          "summary": "Pataskala City Council's development committee reported that Planning and Zoning had offered feedback to inform criteria the council may use for future data center developer plans.",
+          "source": "https://citizenportal.ai/articles/7900483/ohio/licking-county/pataskala-city/ohio/licking-county/pataskala-city/Ohio/Licking-County/Pataskala-City/Development-committee-to-lift-local-marijuana-moratorium-data-center-planning-discussed"
+        },
+        {
           "date": "2026-06-03",
           "kind": "vote",
           "summary": "Pataskala Planning & Zoning Commission voted 5-2 to recommend that City Council reject Aligned's site plan, hours after residents rallied on the City Hall lawn.",
@@ -797,6 +953,24 @@
       "as_of": "2026-08-07",
       "verified": true,
       "events": [
+        {
+          "date": "2026-04-01",
+          "kind": "operational",
+          "summary": "Nordson campus buildings at 100-300 Nordson Drive listed for sale (the property had been on the market since April, per the developer's hearing testimony), after Nordson relocated manufacturing to South Carolina.",
+          "source": "https://spectrumnews1.com/oh/toledo/news/2026/07/30/developer-appeals-for-new-data-center"
+        },
+        {
+          "date": "2026-07-14",
+          "kind": "filing",
+          "summary": "Cervenka Development Partners LLC filed a use variance application with the Amherst Board of Zoning Appeals for 100, 200, and 300 Nordson Drive, proposing to convert approximately 240,000 sq ft of former Nordson industrial space into a 45 MW data center.",
+          "source": "https://www.news5cleveland.com/news/local-news/a-developer-wants-to-turn-three-lorain-county-industrial-buildings-into-a-data-center-campus"
+        },
+        {
+          "date": "2026-07-29",
+          "kind": "hearing",
+          "summary": "Over 100 Amherst residents packed City Hall for the BZA hearing on the data center variance; fire-code capacity limits restricted entry to 60 people while others listened from the lawn on their phones; attorney Gerald Phillips argued the application was defective because Cervenka lacks ownership or documented authorization from Nordson.",
+          "source": "https://www.cleveland19.com/2026/07/30/capacity-limits-push-amherst-residents-outside-zoning-board-hears-data-center-proposal/"
+        },
         {
           "date": "2026-07-30",
           "kind": "vote",
@@ -1329,6 +1503,12 @@
       "verified": true,
       "events": [
         {
+          "date": "2019-02-19",
+          "kind": "vote",
+          "summary": "Louisa County Board of Supervisors voted 6-1 to authorize a $2,620,000 budget supplement (Resolution RES-2019-40) for the purchase of approximately 700 acres in the Shannon Hill area for a regional business park, having previously voted to exercise purchase options on January 22, 2019.",
+          "source": "https://louisacountyva.iqm2.com/Citizens/Detail_LegiFile.aspx?CssClass=&Frame=&ID=5621&MediaPosition=&MeetingID=1422"
+        },
+        {
           "date": "2019-03-01",
           "kind": "filing",
           "summary": "Louisa County completed its purchase of 684 acres at the Shannon Hill exit off I-64 for $2.6 million to establish the Shannon Hill Regional Business Park, as reported in March 2019.",
@@ -1345,6 +1525,18 @@
           "kind": "incentive",
           "summary": "Louisa County received an $11.5 million state grant to bring water infrastructure to the 700-acre Shannon Hill Regional Business Park, the third-largest such grant awarded by the state.",
           "source": "https://www.29news.com/2023/01/23/louisa-county-using-11m-grant-develop-shannon-hill-regional-business-park/"
+        },
+        {
+          "date": "2024-04-01",
+          "kind": "permit",
+          "summary": "The James River Water Authority received a permit from the U.S. Army Corps of Engineers in April 2024, following an April 8 Memorandum of Agreement, clearing construction of a raw water intake, pump station, and four-mile pipeline on the James River that will serve Shannon Hill Regional Business Park among other areas.",
+          "source": "https://tammypurcell.substack.com/p/army-corps-green-lights-james-river"
+        },
+        {
+          "date": "2024-09-04",
+          "kind": "financing",
+          "summary": "EdgeCore Digital Infrastructure completed a $1.9 billion equity raise led by Partners Group, its third financing transaction of 2024 bringing total capital raised that year to over $4 billion, to support hyperscale data center development across its portfolio including Virginia campuses.",
+          "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-completes-1-9-billion-equity-investment-to-fuel-continued-rapid-development-of-hyperscale-data-centers-designed-for-density"
         },
         {
           "date": "2025-06-01",
@@ -1377,6 +1569,12 @@
           "source": "https://www.cbs19news.com/news/another-data-center-to-be-built-in-louisa-county/article_94b3c0f9-07f9-4525-ba22-4d12397de4a8.html"
         },
         {
+          "date": "2025-06-25",
+          "kind": "coverage",
+          "summary": "Data Center Dynamics reported EdgeCore's Louisa County campus would total 1.1 GW across 3.1 million square feet and six buildings on 697 acres, with power provided by Rappahannock Electric Cooperative.",
+          "source": "https://www.datacenterdynamics.com/en/news/edgecore-to-develop-11gw-data-center-in-louisa-county-virginia/"
+        },
+        {
           "date": "2025-06-26",
           "kind": "coverage",
           "summary": "Information Charlottesville reported the Shannon Hill sale closed for $42 million; IDA Chairman Dustin Madison stated the announcement marks a realization of the park's full benefits; proceeds will pay down county debt early.",
@@ -1389,10 +1587,28 @@
           "source": "https://tammypurcell.substack.com/p/at-town-hall-adams-says-he-opposes"
         },
         {
+          "date": "2025-07-14",
+          "kind": "protest",
+          "summary": "Louisa County residents mobilized against data center expansion with a Facebook group of nearly 500 members, a petition with over 660 signatures, and yard signs reading 'Don't Loudoun my Louisa'; opposition focused on the concurrent AWS proposal but reflected broader concern about all data center development in the county including EdgeCore.",
+          "source": "https://tammypurcell.substack.com/p/residents-ramp-up-opposition-to-proposed"
+        },
+        {
+          "date": "2025-10-27",
+          "kind": "coverage",
+          "summary": "Engage Louisa reported that EdgeCore Digital Infrastructure plans to develop a third data center campus at Shannon Hill Regional Business Park, in the context of the Board of Supervisors unanimously approving a separate performance agreement with AWS.",
+          "source": "https://tammypurcell.substack.com/p/county-asks-for-residents-input-ahead"
+        },
+        {
           "date": "2025-12-01",
           "kind": "vote",
           "summary": "Louisa County Board of Supervisors unanimously approved a performance agreement with EdgeCore providing annual performance grants of 15% of real and business personal property tax revenue, capped at $15 million total, with payments from 2027 through 2041.",
           "source": "https://www.thecentralvirginian.com/news/bos-oks-performance-agreement-with-edgecore/article_7ca8c1b2-b65c-4297-b5eb-391ecfd3f4fc.html"
+        },
+        {
+          "date": "2025-12-01",
+          "kind": "coverage",
+          "summary": "The Piedmont Environmental Council listed the December 1 Louisa County Board of Supervisors meeting agenda as including a resolution to approve a local performance agreement with EdgeCore, the data center company developing Shannon Hill Regional Business Park.",
+          "source": "https://www.pecva.org/region/albemarle-charlottesville-region/cville-area-land-use-week-ahead-for-november-30-2025/"
         },
         {
           "date": "2025-12-02",
@@ -1407,10 +1623,22 @@
           "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-enters-2026-with-1-8gw-of-data-center-capacity-delivered-or-under-development"
         },
         {
+          "date": "2026-04-06",
+          "kind": "financing",
+          "summary": "Louisa County Board of Supervisors moved to appropriate $33 million from Shannon Hill sale proceeds for water and wastewater infrastructure upgrades -- $11.5 million for a clarifier at Ferncliff Water Treatment Plant and $21.5 million for New Bridge Wastewater Treatment Plant expansion -- paying cash rather than issuing new debt.",
+          "source": "https://tammypurcell.substack.com/p/bos-expected-to-appropriate-33-million"
+        },
+        {
           "date": "2026-06-22",
           "kind": "coverage",
           "summary": "Louisa County Supervisor Manning Woodward stated EdgeCore will operate behind-the-meter power generation at Shannon Hill rather than drawing from the grid; gas-fired generation is the near-term option, with small modular reactors described as far off.",
           "source": "https://tammypurcell.substack.com/p/woodward-edgecore-to-bring-its-own"
+        },
+        {
+          "date": "2026-06-29",
+          "kind": "incentive",
+          "summary": "Virginia's state budget deal preserved the data center sales tax exemption through 2035, while introducing a new energy consumption tax of 1.1 cents per kilowatt-hour capped at $600 million annually; Louisa County Board Chair Duane Adams praised the decision as maintaining the state's commitment to the industry.",
+          "source": "https://tammypurcell.substack.com/p/state-budget-deal-keeps-data-center"
         },
         {
           "date": "2026-08-01",
@@ -4575,10 +4803,52 @@
       "verified": true,
       "events": [
         {
+          "date": "2025-04-22",
+          "kind": "rezoning",
+          "summary": "Urbana City Council approved a zoning code modification permitting data centers in the M-1 Light Manufacturing District and annexed Thor Equities' property.",
+          "source": "https://www.urbanacitizen.com/2026/05/21/process-ongoing-to-reverse-data-center-zoning/"
+        },
+        {
+          "date": "2025-08-22",
+          "kind": "financing",
+          "summary": "Urbana Owner I LLC (linked to Thor Equities) purchased a 47.6-acre parcel near the proposed site for $2,143,665.",
+          "source": "https://www.urbanacitizen.com/2026/01/23/data-center-interest-confirmed-urbana-officials-address-residents-concerns/"
+        },
+        {
+          "date": "2025-11-01",
+          "kind": "incentive",
+          "summary": "In November 2025, city council approved a Community Reinvestment Area (CRA2) tax abatement agreement for the data center site after three readings.",
+          "source": "https://www.wyso.org/environment-news/2026-06-23/urbana-backed-down-from-rules-paving-way-for-big-data-centers-now-a-developer-is-suing"
+        },
+        {
+          "date": "2025-11-18",
+          "kind": "financing",
+          "summary": "Highland55 Investments LLC purchased 85.6 acres southwest of Urbana for $3,210,712.50, the second major land assembly for the campus.",
+          "source": "https://www.urbanacitizen.com/2026/01/23/data-center-interest-confirmed-urbana-officials-address-residents-concerns/"
+        },
+        {
+          "date": "2026-01-23",
+          "kind": "announcement",
+          "summary": "City Director of Administration Spencer Mitchell publicly confirmed for the first time that a property owner had approached the city about developing a data center.",
+          "source": "https://www.urbanacitizen.com/2026/01/23/data-center-interest-confirmed-urbana-officials-address-residents-concerns/"
+        },
+        {
+          "date": "2026-02-04",
+          "kind": "hearing",
+          "summary": "Council members discussed data center concerns at a regular meeting and directed Law Director Feinstein to prepare moratorium legislation for the February 17 meeting.",
+          "source": "https://www.peakofohio.com/local-news/urbana-city-council-mulls-moratorium-for-potential-data-center/"
+        },
+        {
           "date": "2026-02-13",
           "kind": "filing",
           "summary": "Site plan application submitted by Choice One Engineering on behalf of Thor Equities; deemed incomplete by city staff.",
           "source": "https://www.springfieldnewssun.com/news/urbana-officials-release-public-notice-with-overview-timeline-of-proposed-data-center/MZ42L743BVE5PCILD3FHAHR5GU/"
+        },
+        {
+          "date": "2026-02-17",
+          "kind": "vote",
+          "summary": "City council voted 5-2 to remove a proposed 12-month data center moratorium from the agenda; approximately 50 residents attended the meeting.",
+          "source": "https://www.peakofohio.com/local-news/data-center-talk-stirs-controversy-at-urbana-city-council-meeting/"
         },
         {
           "date": "2026-02-18",
@@ -4597,6 +4867,12 @@
           "kind": "vote",
           "summary": "Urbana City Council passed a 12-month moratorium on new data centers by a 6-1 vote, with Audra Bean the sole dissenter; about 40 residents spoke afterward mostly in support.",
           "source": "https://www.springfieldnewssun.com/news/urbana-city-council-passes-12-month-moratorium-on-data-centers/article_e14c275f-6fe9-5209-9c25-c841fe600c75.html"
+        },
+        {
+          "date": "2026-03-04",
+          "kind": "coverage",
+          "summary": "Ideastream reported the moratorium left the $1 billion proposal in limbo and identified CyrusOne as a project partner alongside Thor Equities; an online petition opposing the project had gathered over 4,000 signatures within two weeks.",
+          "source": "https://www.ideastream.org/2026-03-04/urbana-passes-moratorium-on-new-data-centers-leaving-1b-proposal-in-limbo"
         },
         {
           "date": "2026-03-20",
@@ -4629,16 +4905,46 @@
           "source": "https://www.urbanacitizen.com/2026/05/21/process-ongoing-to-reverse-data-center-zoning/"
         },
         {
+          "date": "2026-06-05",
+          "kind": "financing",
+          "summary": "Thor Equities purchased approximately 97 acres from Organ Farms LLC for about $3.4 million, adding a southern access point from U.S. Highway 68 to the proposed campus.",
+          "source": "https://www.peakofohio.com/local-news/urbana-city-council-reverses-data-center-zoning-change/"
+        },
+        {
+          "date": "2026-06-09",
+          "kind": "hearing",
+          "summary": "A public hearing was held on the proposed ordinance to reverse the 2025 zoning amendment and remove data centers as a permitted use in the M-1 district.",
+          "source": "https://www.peakofohio.com/local-news/urbana-city-council-reverses-data-center-zoning-change/"
+        },
+        {
+          "date": "2026-06-16",
+          "kind": "vote",
+          "summary": "City council unanimously passed Ordinance 4635-26, restoring the pre-2025 zoning code and completing the removal of data centers as a permitted M-1 use; residents applauded the vote.",
+          "source": "https://www.peakofohio.com/local-news/urbana-city-council-reverses-data-center-zoning-change/"
+        },
+        {
           "date": "2026-06-19",
           "kind": "filing",
           "summary": "Thor Equities files federal lawsuit against City of Urbana in US District Court, Southern District of Ohio.",
           "source": "https://www.urbanacitizen.com/2026/06/19/thor-sues-urbana-in-federal-court/"
         },
         {
+          "date": "2026-07-01",
+          "kind": "coverage",
+          "summary": "In July 2026, Thor Equities launched a direct mail, television, and digital advertising campaign aimed at Urbana residents, describing it as an educational effort to counter misinformation about the project.",
+          "source": "https://www.springfieldnewssun.com/local/urbana-data-center-saga-continues-with-charter-amendment-mayor-recall-developer-campaign/article_3615a5d3-c607-524d-8b52-4f2a12435996.html"
+        },
+        {
           "date": "2026-07-07",
           "kind": "protest",
           "summary": "Two Urbana residents launched petitions: Nicole Nawman began a charter-amendment petition to bar hyperscale data centers, and James Cropper began a petition to recall Mayor Bill Bean over alleged lack of transparency.",
           "source": "https://www.wyso.org/news/2026-07-15/two-urbana-residents-start-petitions-in-response-to-data-center-dispute"
+        },
+        {
+          "date": "2026-07-08",
+          "kind": "announcement",
+          "summary": "City Law Director Mark Feinstein submitted his resignation to Mayor Bean, effective August 7, 2026, citing a new legal opportunity and family priorities; the city began recruiting a replacement.",
+          "source": "https://www.peakofohio.com/local-news/city-of-urbana-announces-law-director-feinsteins-resignation/"
         },
         {
           "date": "2026-07-15",
@@ -4651,6 +4957,12 @@
           "kind": "vote",
           "summary": "The Champaign County Board of Elections reported the mayoral recall petitions collected enough valid signatures for the recall question to appear on the November 3 general election ballot.",
           "source": "https://www.urbanacitizen.com/2026/07/20/mayoral-recall-charter-amendment-on-nov-ballot/"
+        },
+        {
+          "date": "2026-07-20",
+          "kind": "ruling",
+          "summary": "A Champaign County Common Pleas judge ordered the city to provide a complete transcript of the April 13 BZA hearing and set briefing deadlines through October 2026; the ruling did not decide the merits of the case.",
+          "source": "https://www.peakofohio.com/featured-news/court-grants-thor-equities-request-in-urbana-data-center-case/"
         },
         {
           "date": "2026-08-04",
@@ -5025,10 +5337,28 @@
       "verified": true,
       "events": [
         {
+          "date": "2022-04-21",
+          "kind": "announcement",
+          "summary": "Meta announced a further expansion of its New Albany data center campus, adding buildings that brought total investment in Ohio to more than $1.5 billion and supporting 300 operational jobs and 1,200 peak construction workers.",
+          "source": "https://abc6onyourside.com/news/local/meta-new-albany-data-center-announces-expansion-investment-over-billions-dollars-jobs-renewable-energy-stem-learning-central-ohio-thursday-4-21-2022"
+        },
+        {
+          "date": "2025-03-27",
+          "kind": "filing",
+          "summary": "Power Engineering reported that Will-Power (Williams Companies) had filed with the Ohio Power Siting Board for two behind-the-meter natural gas plants, Socrates North and Socrates South, each 200 MW, at Meta's New Albany International Business Park campus, with a planned in-service date of Q3 2026.",
+          "source": "https://www.power-eng.com/news/onsite-gas-plants-proposed-for-data-centers-in-ohio/"
+        },
+        {
           "date": "2025-06-09",
           "kind": "approval",
           "summary": "The Ohio Power Siting Board approved the Socrates South Power Generation Project, a 200 MW behind-the-meter natural gas plant in Licking County to be built by Will-Power OH (a Williams Companies subsidiary) to serve exclusively Sidecat, part of Meta Platforms, on its 740-acre New Albany Business Park campus.",
           "source": "https://www.powermag.com/new-200-mw-gas-fired-plant-in-ohio-will-power-meta-data-center/"
+        },
+        {
+          "date": "2025-06-11",
+          "kind": "construction",
+          "summary": "Power Engineering reported that construction on the Socrates South 200 MW natural gas plant serving Sidecat (Meta) in New Albany was planned to begin in June 2025 with expected completion in November 2026, detailing the turbine fleet including Solar Turbines Titan 250s, Siemens SGT400s, and Caterpillar reciprocating engines.",
+          "source": "https://www.power-eng.com/onsite-power/onsite-gas-turbines-reciprocating-engines-to-power-meta-data-center/"
         },
         {
           "date": "2025-07-14",
@@ -5043,6 +5373,12 @@
           "source": "https://engineering.fb.com/2025/09/29/data-infrastructure/metas-infrastructure-evolution-and-the-advent-of-ai/"
         },
         {
+          "date": "2025-11-01",
+          "kind": "coverage",
+          "summary": "In early November 2025, Turner Construction evacuated over 1,000 workers from the Prometheus data center construction site in New Albany after a terminated contractor returned and threatened a supervisor with a firearm; security confiscated the weapon and law enforcement responded.",
+          "source": "https://constructionreviewonline.com/construction-work-resumes-on-metas-prometheus-data-center-in-ohio-after-firearm-incident/"
+        },
+        {
           "date": "2025-11-17",
           "kind": "coverage",
           "summary": "Spectrum News 1 reported on Meta's Prometheus in New Albany as potentially the world's first gigawatt-scale data center, noting on-site gas-fired power plants; Mayor Sloan Spalding said the facility would not draw energy off the grid, and residents raised concerns about local power reliability.",
@@ -5053,6 +5389,48 @@
           "kind": "financing",
           "summary": "Meta announced nuclear energy agreements with Oklo, Vistra and TerraPower for up to 6.6 GW by 2035, stating the projects will deliver power to grids supporting its operations including the Prometheus supercluster in New Albany, Ohio.",
           "source": "https://about.fb.com/news/2026/01/meta-nuclear-energy-projects-power-american-ai-leadership/"
+        },
+        {
+          "date": "2026-01-19",
+          "kind": "report",
+          "summary": "WOSU reported that a University of Virginia/Joyce Foundation study found Columbus will become the second-largest data center hub in the Great Lakes region behind Chicago, noting Meta is wrapping up construction on its Prometheus gigawatt-scale data center in New Albany and that Ohio data centers currently consume 5.3% of the state's energy, projected to reach 10.9% within four years.",
+          "source": "https://www.wosu.org/2026-01-19/columbus-will-become-second-largest-data-center-hub-in-the-great-lakes-region-report-says"
+        },
+        {
+          "date": "2026-01-27",
+          "kind": "financing",
+          "summary": "Corning and Meta announced a multiyear agreement worth up to $6 billion for Corning to supply optical fiber, cable, and connectivity solutions for Meta's U.S. data center buildout, with Corning expanding its Hickory, North Carolina, manufacturing facility where Meta will be the anchor customer.",
+          "source": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-and-Meta-Announce-Multiyear-up-to-6-Billion-Agreement-to-Accelerate-US-Data-Center-Buildout/default.aspx"
+        },
+        {
+          "date": "2026-03-05",
+          "kind": "coverage",
+          "summary": "The American Prospect reported that Meta opened its first Ohio data center in 2017 under the operating name Sidecat LLC after state lawmakers approved $37 million in tax breaks, and that Meta plans to open its one-gigawatt Prometheus AI cluster housed in five or more buildings in 2026.",
+          "source": "https://prospect.org/2026/03/05/ohio-tech-ai-data-centers-meta-amazon-google-energy/"
+        },
+        {
+          "date": "2026-03-16",
+          "kind": "construction",
+          "summary": "Energies Media reported that Williams expects to bring each of its Socrates power generation facilities in New Albany online around the end of 2026, with construction anticipated to begin during 2025 and a one-year commissioning period following construction start.",
+          "source": "https://energiesmedia.com/williams-moves-the-socrates-infrastructure/"
+        },
+        {
+          "date": "2026-05-27",
+          "kind": "incentive",
+          "summary": "Governor DeWine ordered the Ohio Tax Credit Authority to pause consideration of new data center sales tax exemption requests after the state underestimated the 2025 cost of the exemption by more than $1.4 billion, directing the pause to take effect after the Authority's June 1 meeting while a Joint Data Center Committee studies the issue.",
+          "source": "https://www.statenews.org/government-politics/2026-05-27/gov-dewine-freezes-controversial-data-center-tax-break-for-now"
+        },
+        {
+          "date": "2026-06-26",
+          "kind": "approval",
+          "summary": "The Ohio Power Siting Board authorized construction of the Socrates the Younger (STY) Power Generation Facility, a 250 MW natural gas plant with 116 MW battery storage on 109 acres in Licking County, New Albany, to serve Sidecat LLC (Meta) behind-the-meter, subject to 36 conditions.",
+          "source": "https://www.knoxpages.com/2026/06/26/opsb-authorizes-construction-of-licking-county-power-plant/"
+        },
+        {
+          "date": "2026-08-10",
+          "kind": "announcement",
+          "summary": "Mark Zuckerberg announced the $1 billion Future Is for Everyone Fund to invest in communities where Meta owns or is building data centers, including New Albany, targeting locally identified priorities such as schools, teachers, first responders, and energy and water infrastructure.",
+          "source": "https://www.alreporter.com/2026/08/11/meta-launches-1-billion-fund-supporting-data-center-communities/"
         }
       ]
     },
@@ -5191,7 +5569,74 @@
       "source": "https://www.datacenterdynamics.com/en/news/google-breaks-ground-on-columbus-ohio-data-center/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2021-03-01",
+          "kind": "incentive",
+          "summary": "In March 2021 the Columbus City Council voted 6-to-1 to approve a 15-year, 100% property tax abatement worth $54.3 million for Magellan Enterprises LLC (later revealed to be a Google subsidiary) for a $300 million data center at 5076 S. High Street; council members did not learn the applicant was Google until months later.",
+          "source": "https://www.governing.com/infrastructure/ohio-throws-hundreds-of-millions-to-tech-giants-data-centers"
+        },
+        {
+          "date": "2021-05-01",
+          "kind": "filing",
+          "summary": "In May 2021 Google, operating as Magellan Enterprises LLC, purchased the 480-acre former Hartman Stock Farm property at 5076 S. High Street in Columbus for more than $30 million, according to Franklin County Auditor records.",
+          "source": "https://columbusconstruction.org/work-underway-on-two-more-google-datacenters-in-ohio/"
+        },
+        {
+          "date": "2022-06-23",
+          "kind": "construction",
+          "summary": "Google broke ground on its $300 million, 150,000-square-foot Columbus data center at the former Hartman Farm site, ahead of schedule, with an expected completion by end of 2025 and 20 permanent jobs; the company also signed a Good Neighbor Agreement with the Far South Columbus Area Commission to preserve roughly one-third of the 496-acre site as green space.",
+          "source": "https://baxtel.com/news/google-breaks-ground-on-its-300m-ohio-data-center"
+        },
+        {
+          "date": "2023-05-04",
+          "kind": "announcement",
+          "summary": "Google publicly confirmed plans for two new data centers in Columbus (5076 S. High St., ~500 acres, ~$300 million) and Lancaster (104 Whiley Road, ~120 acres, $120 million) as part of its over-$2 billion total Ohio investment since 2019.",
+          "source": "https://www.constructiondive.com/news/google-plans-2-new-data-centers-ohio-columbus-lancaster/649470/"
+        },
+        {
+          "date": "2023-08-30",
+          "kind": "financing",
+          "summary": "Google announced an additional $1.7 billion investment across its three central Ohio data center campuses in Columbus, Lancaster, and New Albany to complete the Columbus and Lancaster facilities and expand New Albany, bringing total Ohio data center investment past $2 billion.",
+          "source": "https://www.constructiondive.com/news/google-ohio-data-center-campus-expansion-columbus-lancaster-new-albany/692216/"
+        },
+        {
+          "date": "2024-01-01",
+          "kind": "operational",
+          "summary": "The Google Lockbourne data center at 5076 S. High Street in Columbus became fully operational in 2024, comprising four buildings (Metro Park, Cloud Center, Cloud Ridge, and Cloud Station) on the campus.",
+          "source": "https://baxtel.com/data-center/google-lockbourne-oh"
+        },
+        {
+          "date": "2024-06-18",
+          "kind": "financing",
+          "summary": "Google announced an additional $2.3 billion investment in its three central Ohio data center campuses (Columbus, New Albany, Lancaster) for cloud services and AI infrastructure, bringing total Ohio investment past $4.4 billion since 2019.",
+          "source": "https://www.wosu.org/2024-06-18/google-to-invest-another-2-3-billion-in-central-ohio-data-centers"
+        },
+        {
+          "date": "2024-11-01",
+          "kind": "environmental",
+          "summary": "In November 2024 the Columbus City Council voted 9-0 to raise water and sewer rates; Google's Far South Side data center consumed 177 million gallons of water in 2024 during its first year of operation.",
+          "source": "https://freepress.org/article/google-s-columbus-data-center-secrets-exposed"
+        },
+        {
+          "date": "2025-11-12",
+          "kind": "financing",
+          "summary": "Google signed a 15-year power purchase agreement with TotalEnergies for the 49-MW Montpelier solar farm in Williams County, Ohio, to supply 1.5 TWh of renewable electricity to its Ohio data center operations.",
+          "source": "https://www.solarpowerworldonline.com/2025/11/google-inks-ppa-for-49-mw-solar-project-to-power-ohio-data-center-operations/"
+        },
+        {
+          "date": "2025-12-23",
+          "kind": "coverage",
+          "summary": "WOSU reported that data centers are a main driver of rising utility costs in Columbus, with AEP Ohio, Columbia Gas, and Columbus Water all seeking rate increases projected to add $36/month for average customers by 2027; PUCO held public hearings in December 2025.",
+          "source": "https://www.wosu.org/politics-government/2025-12-23/columbus-may-see-higher-electric-gas-and-water-costs-caused-by-data-center-energy-demands"
+        },
+        {
+          "date": "2026-03-06",
+          "kind": "coverage",
+          "summary": "The Columbus Free Press reported that Google's Far South Side facility used 177 million gallons of water in 2024, documented visible steam emissions near residential areas, and quoted former Far South Side area commissioner Bruce Miller saying hundreds of resident voices were ignored during the approval process.",
+          "source": "https://freepress.org/article/google-s-columbus-data-center-secrets-exposed"
+        }
+      ]
     },
     {
       "id": "google-new-albany",
@@ -5217,7 +5662,86 @@
       "source": "https://drive.google.com/file/d/1KN7o-wQOyt1UEud8wpM8PymXJF479r0n/view?usp=sharing",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2018-12-01",
+          "kind": "announcement",
+          "summary": "In December 2018, Google affiliate Montauk Innovations LLC announced it was considering New Albany for a $600 million data center and acquired over 440 acres in Franklin and Licking counties for $54.5 million.",
+          "source": "https://614now.com/2018/development/google-throwing-money-at-central-ohio"
+        },
+        {
+          "date": "2018-12-01",
+          "kind": "incentive",
+          "summary": "In December 2018, the Ohio Tax Credit Authority approved a 100%, 15-year sales tax exemption for Google's Montauk Innovations data center project, valued at approximately $43.5 million over the life of the credit and renewable for up to 40 years.",
+          "source": "https://www.constructiondive.com/news/google-starts-construction-on-600m-data-center-in-unlikely-burgeoning-tech/566813/"
+        },
+        {
+          "date": "2019-11-01",
+          "kind": "construction",
+          "summary": "Holder Construction broke ground on November 1, 2019 on Google's $600 million data center on 440 acres in New Albany, part of Google's $13 billion 2019 expansion plan for seven new U.S. data centers.",
+          "source": "https://www.constructiondive.com/news/google-starts-construction-on-600m-data-center-in-unlikely-burgeoning-tech/566813/"
+        },
+        {
+          "date": "2019-11-01",
+          "kind": "incentive",
+          "summary": "New Albany's incentive package for Google included 100% property tax abatement for 15 years and a waiver of up to $250,000 in building and permitting fees, with a minimum annual revenue generation requirement of $750,000 beginning in 2021.",
+          "source": "https://www.constructiondive.com/news/google-starts-construction-on-600m-data-center-in-unlikely-burgeoning-tech/566813/"
+        },
+        {
+          "date": "2021-01-01",
+          "kind": "operational",
+          "summary": "Google's New Albany data center was completed and became operational in 2021, according to property records listing the year built as 2021.",
+          "source": "https://baxtel.com/data-center/google-new-albany-ohio"
+        },
+        {
+          "date": "2021-08-20",
+          "kind": "announcement",
+          "summary": "On August 20, 2021, Google announced an additional $1 billion investment to expand its New Albany data center campus and disclosed it had acquired 618 more acres (500 in Columbus, approximately 120 in Lancaster) for potential future data centers, bringing total Ohio acreage to over 1,000.",
+          "source": "https://www.datacenterfrontier.com/cloud/article/11427996/google-plans-1-billion-data-center-expansion-in-ohio-cloud-cluster"
+        },
+        {
+          "date": "2022-05-24",
+          "kind": "operational",
+          "summary": "Google launched its Columbus Ohio cloud region (us-east5) on May 24, 2022, its 2nd Midwest region, 10th in North America, and 33rd globally, with three availability zones served by the New Albany data center infrastructure.",
+          "source": "https://cloud.google.com/blog/products/infrastructure/new-google-cloud-region-in-columbus-ohio-is-open"
+        },
+        {
+          "date": "2023-05-04",
+          "kind": "announcement",
+          "summary": "On May 4, 2023, Google announced it would build two additional data centers in Columbus and Lancaster, Ohio, expanding beyond its existing New Albany campus to create a trio of Central Ohio facilities.",
+          "source": "https://www.constructiondive.com/news/google-plans-2-new-data-centers-ohio-columbus-lancaster/649470/"
+        },
+        {
+          "date": "2023-08-29",
+          "kind": "financing",
+          "summary": "On August 29, 2023, Google announced a $1.7 billion investment to support its three Central Ohio data center campuses in New Albany, Columbus, and Lancaster, bringing cumulative Ohio investment to over $3.7 billion; each facility generates roughly 1,200 construction jobs and several hundred permanent positions.",
+          "source": "https://www.statenews.org/government-politics/2023-08-29/google-announces-1-7-billion-investment-in-3-central-ohio-data-centers"
+        },
+        {
+          "date": "2024-06-18",
+          "kind": "financing",
+          "summary": "On June 18, 2024, Google announced an additional $2.3 billion investment across its Columbus, New Albany, and Lancaster data center sites, bringing cumulative Ohio spending to over $4.4 billion since 2019.",
+          "source": "https://www.wosu.org/2024-06-18/google-to-invest-another-2-3-billion-in-central-ohio-data-centers"
+        },
+        {
+          "date": "2025-05-01",
+          "kind": "filing",
+          "summary": "In May 2025, Google subsidiary Montauk Innovations acquired an additional 85-acre parcel on Harrison Road Northwest in New Albany's business park in Licking County for $63 million.",
+          "source": "https://abc6onyourside.com/news/local/google-montauk-innovations-acquires-85-acre-site-new-albany-potential-project-data-center-columbus-central-ohio-licking-county-auditor-tech-silicon-heartland"
+        },
+        {
+          "date": "2025-11-12",
+          "kind": "utility",
+          "summary": "On November 12, 2025, TotalEnergies announced a 15-year power purchase agreement to supply Google's Ohio data centers with 1.5 TWh of certified renewable electricity from the Montpelier solar farm in Ohio, connected to the PJM grid.",
+          "source": "https://totalenergies.com/news/press-releases/united-states-totalenergies-supply-renewable-power-googles-data-centers-15"
+        },
+        {
+          "date": "2026-04-02",
+          "kind": "public-comment",
+          "summary": "On April 2, 2026, the Ohio Ballot Board unanimously approved a petition drive for a constitutional amendment to ban new data centers consuming over 25 MW monthly, requiring 400,000+ signatures by July 2026; the campaign cited New Albany-area data center impacts including rising electric rates and farmland loss.",
+          "source": "https://abc6onyourside.com/news/local/ohio-ballot-board-unanimously-approves-petition-drive-data-center-ban-constitutional-amendment-new-albany-dublin-hilliard-columbus"
+        }
+      ]
     },
     {
       "id": "google-council-bluffs-east",
@@ -5295,7 +5819,44 @@
       "source": "https://sustainability.google/reports/google-2026-environmental-report/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2023-01-01",
+          "kind": "operational",
+          "summary": "Google's Prince William County data center campus in Bristow, a roughly 290,000-square-foot facility on the 250-acre Mango Farm site at 13001 Rollins Ford Road, was built and became operational in 2023, according to Virginia Business.",
+          "source": "https://virginiabusiness.com/google-investing-1b-in-va-data-center-campuses/"
+        },
+        {
+          "date": "2023-11-01",
+          "kind": "filing",
+          "summary": "In November 2023, Delaware-based Sharpless Enterprises LLC, a shell company linked to Google, submitted plans to the U.S. Army Corps of Engineers for a 181-acre data center campus with four buildings, an electric substation, and auxiliary structures on Wellington Road in western Prince William County, on the former Atlantic Research Corporation site.",
+          "source": "https://www.insidenova.com/news/business/army-corps-of-engineers-greenlights-bristow-data-center-complex/article_49d8ed9a-dd87-11ee-9f08-d383b6399e7e.html"
+        },
+        {
+          "date": "2024-03-07",
+          "kind": "permit",
+          "summary": "The U.S. Army Corps of Engineers approved Sharpless Enterprises' application for the 181-acre data center complex at 6201 Wellington Road near Bristow, after reviewing potential impacts on nearby wetlands and streams; Corps biologist Anna Lawston said nothing substantial changed between the initial application and final approval.",
+          "source": "https://www.insidenova.com/news/business/army-corps-of-engineers-greenlights-bristow-data-center-complex/article_49d8ed9a-dd87-11ee-9f08-d383b6399e7e.html"
+        },
+        {
+          "date": "2024-04-26",
+          "kind": "announcement",
+          "summary": "Google announced a $1 billion investment to expand its Virginia data centers, including its newly opened Prince William County campus and two Loudoun County sites, bringing total Virginia investment to over $4.2 billion; Governor Youngkin attended the announcement at Google's Reston headquarters.",
+          "source": "https://wtop.com/virginia/2024/04/google-announces-1b-for-data-center-expansion-in-loudoun-prince-william-counties/"
+        },
+        {
+          "date": "2025-08-27",
+          "kind": "announcement",
+          "summary": "Google announced an additional $9 billion investment in Virginia through the end of 2026 for cloud and AI infrastructure, including expansion of existing facilities in Prince William County; the Bristow Mango Farm complex is included in the investment, per the Prince William Times.",
+          "source": "https://www.vedp.org/press-release/2025-08/google-chesterfield"
+        },
+        {
+          "date": "2025-08-28",
+          "kind": "coverage",
+          "summary": "The Prince William Times reported that Google's Mango Farm data center complex at 13001 Rollins Ford Road in Bristow, next to Gainesville High School, occupies 250 acres with one operational data center of about 290,000 square feet, is valued at $1.2 billion by Prince William County, and has plans filed for at least two more data centers on the site.",
+          "source": "https://www.fauquier.com/news/data-centers-near-gainesville-high-part-of-googles-9b-spend-in-virginia/article_3c08e482-9803-55ee-b3d3-1cfa98ecb2c7.html"
+        }
+      ]
     },
     {
       "id": "colossus-1",
@@ -5504,7 +6065,86 @@
       "source": "https://qtsdatacenters.com/data-centers/richmond-1/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2010-04-05",
+          "kind": "announcement",
+          "summary": "QTS announced plans to convert the former 210-acre Qimonda semiconductor plant in Sandston, VA into a data center campus, having acquired it through bankruptcy court for $12 million; the site included 1.3 million sq ft of buildings and 100 MW of power capacity.",
+          "source": "https://www.datacenterknowledge.com/operations-and-management/qts-plans-huge-virginia-data-center"
+        },
+        {
+          "date": "2010-11-03",
+          "kind": "operational",
+          "summary": "QTS opened the first 50,000 sq ft phase of its Richmond data center two months ahead of schedule, with up to 18 MW of power and an unnamed government agency as its first tenant.",
+          "source": "https://www.datacenterknowledge.com/operations-and-management/qts-opens-huge-richmond-data-center"
+        },
+        {
+          "date": "2011-03-16",
+          "kind": "financing",
+          "summary": "QTS announced it had invested $100 million in converting the former Qimonda site, with renovation about 5% complete and approximately 50 employees on site, projecting growth to 200 employees.",
+          "source": "https://www.12onyourside.com/story/14265036/qts-invests-100-million-in-former-qimonda-site/"
+        },
+        {
+          "date": "2017-05-01",
+          "kind": "operational",
+          "summary": "In May 2017, QTS positioned Richmond as a hyperscale cloud campus, citing 110 MW from Dominion Virginia Power, 1.3 million sq ft across three buildings, and Henrico County's data center equipment tax rate reduction to $0.40 per $100 assessed value.",
+          "source": "https://www.datacenterfrontier.com/cloud/article/11430780/thinking-hyperscale-qts-positions-richmond-as-cloud-campus"
+        },
+        {
+          "date": "2019-11-19",
+          "kind": "filing",
+          "summary": "QTS submitted plans to Henrico County for approximately 1.2 million sq ft of new data center space on a 73-acre parcel south of its main campus along Portugee Road, comprising three 330,000 sq ft buildings and one 165,000 sq ft facility.",
+          "source": "https://baxtel.com/news/qts-is-planning-to-expand-richmond-site-in-henrico-county"
+        },
+        {
+          "date": "2021-06-07",
+          "kind": "financing",
+          "summary": "Blackstone announced it would acquire QTS Realty Trust for $78 per share in an all-cash transaction valued at approximately $10 billion including debt assumption, a 21% premium to the June 4 closing price.",
+          "source": "https://q.com/news/qts-realty-trust-to-be-acquired-by-blackstone-funds-in-10-billion-transaction/"
+        },
+        {
+          "date": "2022-07-13",
+          "kind": "announcement",
+          "summary": "QTS announced it had acquired 200 additional acres at its Richmond Mega Data Center campus for expansion of up to 240 MW across 1.5 million sq ft of new capacity at White Oak Technology Park.",
+          "source": "https://www.prnewswire.com/news-releases/qts-richmond-mega-data-center-campus-earns-status-as-premier-global-interconnection-hub-301586093.html"
+        },
+        {
+          "date": "2023-12-01",
+          "kind": "financing",
+          "summary": "In December 2023, QTS purchased approximately 225 acres of land in Sandston for $18 million in initial transactions assembling the White Oak Technology Park II site.",
+          "source": "https://virginiabusiness.com/qts-acquires-rezoned-henrico-tech-park-land/"
+        },
+        {
+          "date": "2024-05-01",
+          "kind": "rezoning",
+          "summary": "In May 2024, the Henrico County Board of Supervisors approved rezoning of 622 acres on both sides of East Williamsburg Road at Technology Boulevard for data center and manufacturing use, creating White Oak Technology Park II.",
+          "source": "https://virginiabusiness.com/qts-acquires-rezoned-henrico-tech-park-land/"
+        },
+        {
+          "date": "2024-06-28",
+          "kind": "financing",
+          "summary": "QTS completed acquisition of approximately 397 acres from Hourigan LLC for $118.8 million, giving QTS control of all 622 acres of the rezoned White Oak Technology Park II site; Hourigan had purchased the parcels from Atlantic Crossing ($38.05M) and Vienna Finance ($20.5M) the same day.",
+          "source": "https://virginiabusiness.com/qts-acquires-rezoned-henrico-tech-park-land/"
+        },
+        {
+          "date": "2024-09-01",
+          "kind": "financing",
+          "summary": "In September 2024, a QTS-affiliated LLC purchased approximately 98 acres from LL Flooring adjacent to the White Oak campus.",
+          "source": "https://www.richmonder.org/henrico-became-a-data-center-hub-seemingly-overnight-how-did-it-happen-and-what-are-the-impacts/"
+        },
+        {
+          "date": "2025-01-10",
+          "kind": "rezoning",
+          "summary": "Henrico County's new provisional use permit (PUP) requirement for all hyperscale data centers took effect, including in White Oak Technology Park, requiring board-level approval for new facilities that previously could proceed by right in industrial zones.",
+          "source": "https://www.datacenterfrontier.com/hyperscale/article/55296394/henrico-county-virginia-moves-to-slow-data-center-growth"
+        },
+        {
+          "date": "2025-06-10",
+          "kind": "vote",
+          "summary": "The Henrico County Board of Supervisors approved new data center regulations including 500-foot tree buffers from residential areas, generator testing limits, mandatory equipment screening, and closed-loop cooling requirements; rules apply retroactively to rezoned projects without final site plan approval.",
+          "source": "https://www.datacenterfrontier.com/hyperscale/article/55296394/henrico-county-virginia-moves-to-slow-data-center-growth"
+        }
+      ]
     },
     {
       "id": "meta-rosemount",
@@ -5741,7 +6381,50 @@
       "source": "https://qtsdatacenters.com/data-centers/richmond-1/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2019-11-19",
+          "kind": "announcement",
+          "summary": "QTS announced plans to expand its Richmond campus eastward with 1.2 million square feet of new data center space comprising three 330,000 SF buildings and one 165,000 SF facility on 210 owned acres.",
+          "source": "https://baxtel.com/news/qts-is-planning-to-expand-richmond-site-in-henrico-county"
+        },
+        {
+          "date": "2022-02-01",
+          "kind": "construction",
+          "summary": "In February 2022, QTS began construction of Richmond 2 DC1, a two-story 36 MW data center building on the Sandston campus.",
+          "source": "https://q.com/resources/new-builds-two-multi-story-data-centers-for-richmond-va/"
+        },
+        {
+          "date": "2022-03-01",
+          "kind": "financing",
+          "summary": "In March 2022, QTS purchased approximately 200 acres from the Henrico County Economic Development Authority for roughly $18 million to expand its Richmond data center campus.",
+          "source": "https://www.bisnow.com/national/news/data-center/qts-adds-15m-sf-in-virginia-amid-expansion-push-113982"
+        },
+        {
+          "date": "2022-09-01",
+          "kind": "construction",
+          "summary": "In September 2022, QTS began construction of Richmond 2 DC2, a two-story 36 MW data center building, after receiving an air permit for the site.",
+          "source": "https://q.com/resources/new-builds-two-multi-story-data-centers-for-richmond-va/"
+        },
+        {
+          "date": "2023-01-01",
+          "kind": "operational",
+          "summary": "QTS Richmond 2 DC1 (51 MW capacity, 256,114 square feet) became operational in 2023 in Henrico County, Virginia.",
+          "source": "https://cleanview.co/data-centers/virginia/873/qts-richmond-ric2-dc1"
+        },
+        {
+          "date": "2023-01-01",
+          "kind": "operational",
+          "summary": "QTS Richmond 2 DC2 (50 MW capacity, 253,711 square feet) became operational in 2023 in Henrico County, Virginia.",
+          "source": "https://cleanview.co/data-centers/virginia/2953/qts-richmond-ric2-dc2"
+        },
+        {
+          "date": "2026-01-01",
+          "kind": "operational",
+          "summary": "QTS Richmond 2 DC6 (50 MW capacity, 253,752 square feet) became operational in 2026 in Henrico County, Virginia.",
+          "source": "https://cleanview.co/data-centers/virginia/2956/qts-richmond-ric2-dc6"
+        }
+      ]
     },
     {
       "id": "qts-richmond-3",
@@ -5767,7 +6450,44 @@
       "source": "https://q.com/data-centers/richmond-3/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2022-07-13",
+          "kind": "announcement",
+          "summary": "QTS announced acquisition of 200 acres at its Richmond Mega Data Center campus for an expansion of up to 240 MW across 1.5 million square feet of additional capacity at the White Oak Technology Park in Henrico County.",
+          "source": "https://www.prnewswire.com/news-releases/qts-richmond-mega-data-center-campus-earns-status-as-premier-global-interconnection-hub-301586093.html"
+        },
+        {
+          "date": "2022-08-12",
+          "kind": "coverage",
+          "summary": "Data Center Frontier reported QTS acquired 200 acres at its Richmond campus in Henrico County for expansion of up to 240 MW across 1.5 million square feet.",
+          "source": "https://www.datacenterfrontier.com/cloud/article/11427149/land-and-expand-compass-datacenters-qts-data-centers-google-cloud"
+        },
+        {
+          "date": "2022-12-13",
+          "kind": "construction",
+          "summary": "QTS blog post documented construction progress on two new multi-story data centers at Richmond 2 (DC1 at 36 MW and DC2 at 36 MW), noting QTS Richmond owns 200+ acres of land for future growth capacity.",
+          "source": "https://q.com/resources/new-builds-two-multi-story-data-centers-for-richmond-va/"
+        },
+        {
+          "date": "2024-07-19",
+          "kind": "financing",
+          "summary": "QTS completed approximately $137 million in land purchases for the White Oak Technology Park II site, including $118.8 million for 397 acres from Hourigan LLC and a prior December 2023 purchase of approximately 225 acres for $18 million; Henrico County Board of Supervisors had approved rezoning of the 622-acre site on May 14, 2024.",
+          "source": "https://virginiabusiness.com/qts-finishes-purchase-of-rezoned-henrico-tech-park-land/"
+        },
+        {
+          "date": "2026-04-02",
+          "kind": "permit",
+          "summary": "The Federal Permitting Improvement Steering Council granted FAST-41 coverage to QTS Richmond Technology Park Data Center 5 (RIC5), the first data center project to receive this federal permitting coordination; anticipated construction start is January 2028.",
+          "source": "https://www.permitting.gov/newsroom/press-releases/first-data-center-project-gains-permitting-councils-fast-41-coverage"
+        },
+        {
+          "date": "2026-05-18",
+          "kind": "coverage",
+          "summary": "Richmond BizSense reported QTS is progressing on a 1,100-acre expansion adding 17 buildings across two new campuses (RIC4 and RIC5), totaling nearly 8 million square feet, with development plans approved by Henrico County; QTS already operates 12 buildings spanning over 3 million square feet at the site.",
+          "source": "https://richmondbizsense.com/2026/05/18/data-center-giant-qts-preparing-1100-acre-expansion-that-would-add-17-buildings-to-its-henrico-hub/"
+        }
+      ]
     },
     {
       "id": "meta-montgomery",
@@ -6123,7 +6843,62 @@
       "source": "https://www.bisnow.com/national/news/data-center/google-investing-1b-to-improve-northern-virginia-data-centers-124025",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2017-11-30",
+          "kind": "announcement",
+          "summary": "Google confirmed it purchased a 91-acre site at Arcola Center in Loudoun County for $58 million and a 57-acre site at Stonewall Business Park near Leesburg for $31 million, totaling 148 acres for $89 million, marking its entry into owned data center property in Northern Virginia.",
+          "source": "https://www.datacenterfrontier.com/cloud/article/11430462/google-buys-two-data-center-sites-in-northern-virginia"
+        },
+        {
+          "date": "2018-05-01",
+          "kind": "rezoning",
+          "summary": "In May 2018, the developer Arcola LLC proposed major proffer revisions for the Arcola Center site to convert 45 acres from commercial retail to industrial park (data center) use, delete commercial and residential phasing, and revise road construction timelines.",
+          "source": "https://loudounnow.com/2018/05/24/arcola-center-proposes-major-revision-for-google-plans/"
+        },
+        {
+          "date": "2018-09-12",
+          "kind": "hearing",
+          "summary": "The Loudoun County Board of Supervisors held a public hearing on Google's Arcola Center rezoning application to expand data center development beyond the 1.5 million sq ft permitted by-right to up to 2.35 million sq ft; county staff had recommended against the proposal citing concerns about data centers becoming the dominant land use.",
+          "source": "https://www.loudountimes.com/news/nearby-residents-hoping-for-progress-at-loudouns-arcola-center/article_19cfce22-b833-11e8-b8f4-4392524b2e09.html"
+        },
+        {
+          "date": "2018-10-25",
+          "kind": "vote",
+          "summary": "The Loudoun County Board of Supervisors approved Google's Arcola Center rezoning 6-0 (2 absent, 1 abstention), permitting up to 2.35 million sq ft of data center development in exchange for $25.3 million in proffers including road improvements, $5.2 million toward a Route 50 interchange, land and $5.6 million for an elementary school, and nearly $4 million in capital facilities contributions.",
+          "source": "https://www.loudounnow.com/archives/supervisors-approve-45-more-acres-of-google-data-centers/article_228c43ae-2e0d-5ed6-8c7c-a801519ddd7d.html"
+        },
+        {
+          "date": "2019-06-01",
+          "kind": "financing",
+          "summary": "In June 2019, Google announced a $600 million investment to expand its Loudoun County data center campuses at Arcola Center and Stonewall Business Park, bringing its total Virginia investment to $1.2 billion, alongside $200,000 in STEM education grants to local foundations.",
+          "source": "https://technical.ly/startups/google-is-investing-600m-into-loudoun-county/"
+        },
+        {
+          "date": "2020-01-01",
+          "kind": "operational",
+          "summary": "Google's first data center building at the Dulles Arcola Center campus (Building 1, short code ARA1A) at 42575 Arcola Blvd, Sterling, VA became operational, listed with a year built of 2020.",
+          "source": "https://baxtel.com/data-center/google-dulles-arcola-center"
+        },
+        {
+          "date": "2022-01-01",
+          "kind": "construction",
+          "summary": "Google's Arcola 2 building on the Arcola campus became operational, listed with a year built of 2022.",
+          "source": "https://baxtel.com/data-center/google-arcola-2"
+        },
+        {
+          "date": "2024-04-26",
+          "kind": "financing",
+          "summary": "Google announced a $1 billion investment to expand its Virginia data center campuses, including the two Loudoun County sites (Arcola and Leesburg) and a Prince William County facility, bringing total Virginia investment to over $4.2 billion; the announcement was made by Google President Ruth Porat alongside Governor Glenn Youngkin at Google's Reston headquarters.",
+          "source": "https://wjla.com/news/local/virginia-data-center-campuses-campus-google-1-billion-dollar-investment-prince-william-county-governor-glenn-youngkin-residents-debate-controversy-jobs-resources"
+        },
+        {
+          "date": "2024-04-26",
+          "kind": "announcement",
+          "summary": "Alongside the $1 billion expansion, Google announced a $75 million AI Opportunity Fund for workforce development and confirmed its Arcola and Leesburg campuses are located within Loudoun County's data center overlay district.",
+          "source": "https://www.insidenova.com/headlines/google-announces-1b-for-data-center-expansion-in-loudoun-prince-william-counties/article_9433c720-03ed-11ef-8ddb-5392b0e1e83f.html"
+        }
+      ]
     },
     {
       "id": "microsoft-project-osmium",
@@ -6227,7 +7002,74 @@
       "source": "https://www.datacenterdynamics.com/en/news/google-to-build-two-more-data-centers-in-columbus-ohio/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2021-08-01",
+          "kind": "announcement",
+          "summary": "Google announced Lancaster as the site for a future data center on Whiley Road in the Rock Mill Industrial Park; the city's Economic Development Director Mike Pettit had worked over a year to secure the project, and Google purchased approximately 120 acres of farmland for close to $4 million in August 2021.",
+          "source": "https://www.sciotopost.com/google-to-open-data-center-in-lancaster-ohio/"
+        },
+        {
+          "date": "2023-05-03",
+          "kind": "announcement",
+          "summary": "Google formally announced construction of two new data centers in Columbus and Lancaster, bringing its total Ohio investment to over $2 billion; Lancaster Mayor David Scheffler confirmed a 15-year, 100% tax abatement on real estate improvements, buildings, and equipment, plus a $700,000 roadwork grant from the Ohio Department of Development.",
+          "source": "https://abc6onyourside.com/news/local/google-company-increasing-investment-central-ohio-governor-mike-dewine-corporate-leaders-announcement"
+        },
+        {
+          "date": "2023-05-03",
+          "kind": "construction",
+          "summary": "Construction began on Google's Lancaster campus at 104 Whiley Road on approximately 120 acres, with union labor from the Columbus/Central Ohio Building and Construction Trades Council (over 18,000 workers across 21 affiliated local unions); Google also awarded a $100,000 grant to the Columbus Building Futures Program.",
+          "source": "https://columbusconstruction.org/work-underway-on-two-more-google-datacenters-in-ohio/"
+        },
+        {
+          "date": "2023-05-03",
+          "kind": "coverage",
+          "summary": "Ohio Governor Mike DeWine and Google VP of Government Affairs Mark Isakowitz announced the two new central Ohio data centers; Isakowitz stated Google would have three operational data centers in central Ohio, and the $120 million Lancaster campus was described as being built on roughly 120 acres of farmland.",
+          "source": "https://www.statenews.org/government-politics/2023-05-03/google-to-build-two-new-data-centers-in-ohio-in-addition-to-an-existing-one-in-columbus"
+        },
+        {
+          "date": "2023-08-29",
+          "kind": "financing",
+          "summary": "Google announced an additional $1.7 billion investment across its three central Ohio data center campuses in Columbus, New Albany, and Lancaster, to complete the Columbus and Lancaster centers and expand New Albany; each center was estimated to create approximately 1,200 construction jobs and a few hundred permanent employees.",
+          "source": "https://www.wosu.org/2023-08-29/google-announces-1-7-billion-investment-in-3-central-ohio-data-centers"
+        },
+        {
+          "date": "2023-08-30",
+          "kind": "coverage",
+          "summary": "Construction Dive reported Google's $1.7 billion investment across its three Ohio campuses, with Ohio Lt. Gov. Jon Husted stating that Ohio is establishing itself as a premier destination for technology investment.",
+          "source": "https://www.constructiondive.com/news/google-ohio-data-center-campus-expansion-columbus-lancaster-new-albany/692216/"
+        },
+        {
+          "date": "2024-01-01",
+          "kind": "operational",
+          "summary": "The first data center building on Google's Lancaster campus was completed and became operational in 2024, according to Baxtel's facility tracker.",
+          "source": "https://baxtel.com/data-center/google-lancaster-oh"
+        },
+        {
+          "date": "2024-06-18",
+          "kind": "financing",
+          "summary": "Google announced a further $2.3 billion investment in its three Ohio data center campuses (Columbus, New Albany, and Lancaster), bringing total Ohio investment to over $4.4 billion since 2019; Lt. Gov. Jon Husted called central Ohio an important tech hub.",
+          "source": "https://www.wosu.org/2024-06-18/google-to-invest-another-2-3-billion-in-central-ohio-data-centers"
+        },
+        {
+          "date": "2025-01-01",
+          "kind": "operational",
+          "summary": "A second building on Google's Lancaster campus (designated Lancaster 2 / 'Core Plaza') was completed and became operational in 2025, according to Baxtel's facility tracker.",
+          "source": "https://baxtel.com/data-center/google-lancaster-2"
+        },
+        {
+          "date": "2025-01-01",
+          "kind": "incentive",
+          "summary": "A Governing.com investigation confirmed Google has a Community Reinvestment Area (CRA) agreement with Lancaster but Google declined to disclose the specific terms; a related Google subsidiary (Magellan Enterprises LLC) received a 100%, 15-year CRA in Columbus valued at $54 million for 20 projected jobs.",
+          "source": "https://www.governing.com/infrastructure/ohio-throws-hundreds-of-millions-to-tech-giants-data-centers"
+        },
+        {
+          "date": "2025-11-12",
+          "kind": "utility",
+          "summary": "Google signed a 15-year power purchase agreement with TotalEnergies for 1.5 TWh of renewable electricity from TotalEnergies' 49 MW Montpelier solar farm in Ohio, connected to the PJM grid to support Google's Ohio data center operations including Lancaster.",
+          "source": "https://www.solarpowerworldonline.com/2025/11/google-inks-ppa-for-49-mw-solar-project-to-power-ohio-data-center-operations/"
+        }
+      ]
     },
     {
       "id": "google-mesa",
@@ -6472,7 +7314,80 @@
       "source": "https://www.datacenterdynamics.com/en/news/chirisa-secures-200-million-loan-to-fit-out-virginia-data-center-for-coreweave/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2023-06-05",
+          "kind": "announcement",
+          "summary": "Chirisa Technology Parks offers the former Capital One data center in Virginia to hyperscaler tenants, per Data Center Dynamics.",
+          "source": "https://www.datacenterdynamics.com/en/news/chirisa-offers-former-capital-one-data-center-in-virginia-to-hyperscalers/"
+        },
+        {
+          "date": "2023-09-19",
+          "kind": "financing",
+          "summary": "Chirisa secures a $200 million loan to fit out the Virginia data center for CoreWeave, per Data Center Dynamics.",
+          "source": "https://www.datacenterdynamics.com/en/news/chirisa-secures-200-million-loan-to-fit-out-virginia-data-center-for-coreweave/"
+        },
+        {
+          "date": "2024-01-23",
+          "kind": "announcement",
+          "summary": "Chirisa announces 150 MW of expansion across U.S. sites including a 300 MW substation and up to 1 million sq ft at the former Capital One campus in Meadowville Technology Park, Chesterfield County; Chesterfield Board Chairman Jim Holland praises the campus transformation.",
+          "source": "https://www.prnewswire.com/news-releases/chirisa-technology-parks-announces-at-ptc-major-150mw-expansion-initiatives-across-the-usa-focused-on-hyperscale-and-ai-workloads-302042230.html"
+        },
+        {
+          "date": "2024-04-10",
+          "kind": "announcement",
+          "summary": "Chirisa plans a 20 MW data center in Chesterfield County, Virginia, per Data Center Dynamics.",
+          "source": "https://www.datacenterdynamics.com/en/news/chirisa-plans-20mw-data-center-in-chesterfield-county-virginia/"
+        },
+        {
+          "date": "2024-07-08",
+          "kind": "announcement",
+          "summary": "Chirisa announces senior hires to lead hyperscale build-to-suit delivery, citing its CTP-01 data center in Chesterfield, VA and a pipeline exceeding 600 MW under development.",
+          "source": "https://www.prnewswire.com/news-releases/chirisa-technology-parks-announces-new-hires-to-lead-design-development-and-delivery-of-build-to-suit-hyperscale-datacenter-capacity-302191162.html"
+        },
+        {
+          "date": "2024-08-29",
+          "kind": "financing",
+          "summary": "Blue Owl Capital, Chirisa, and PowerHouse Data Centers announce the first phase of a $5 billion joint venture with CoreWeave as anchor customer for an initial 120 MW on Chirisa's 350-acre campus near Richmond, Virginia, for 2025-2026 delivery.",
+          "source": "https://www.prnewswire.com/news-releases/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-first-phase-of-5-billion-joint-venture-development-partnership-302233967.html"
+        },
+        {
+          "date": "2024-09-27",
+          "kind": "announcement",
+          "summary": "Chirisa and PowerHouse plan a 1 GW data center campus outside Richmond, Virginia, per Data Center Dynamics.",
+          "source": "https://www.datacenterdynamics.com/en/news/chirisa-and-powerhouse-plan-1gw-campus-outside-richmond-virginia/"
+        },
+        {
+          "date": "2024-12-16",
+          "kind": "financing",
+          "summary": "A Societe Generale-led syndicate closes a $600 million construction loan for a 50 MW build-to-suit data center preleased to CoreWeave at the 300-plus-acre Chirisa Technology Park near Richmond; the project broke ground in 2024.",
+          "source": "https://www.commercialsearch.com/news/blue-owl-chirisa-powerhouse-get-600m-for-nova-data-center"
+        },
+        {
+          "date": "2025-08-20",
+          "kind": "operational",
+          "summary": "A fire is contained inside the Chirisa data center in Chesterfield County; WRIC ABC 8News reports questions remain about the incident.",
+          "source": "https://www.wric.com/news/local-news/a-unique-situation-fire-contained-inside-chesterfield-data-center-questions-remain/"
+        },
+        {
+          "date": "2025-09-08",
+          "kind": "operational",
+          "summary": "A second fire in three weeks occurs at the Chirisa data center in Chesterfield County, Virginia, per Data Center Dynamics.",
+          "source": "https://www.datacenterdynamics.com/en/news/chirisa-data-center-in-virginia-suffers-second-fire-in-three-weeks/"
+        },
+        {
+          "date": "2025-09-12",
+          "kind": "operational",
+          "summary": "After four fires in 12 months at its Chesterfield data center, Chirisa blames defective batteries as the root cause, per The Progress Index.",
+          "source": "https://www.progress-index.com/story/news/local/2025/09/12/chesterfield-data-center-four-fires-defective-batteries-chirisa/"
+        },
+        {
+          "date": "2026-01-06",
+          "kind": "construction",
+          "summary": "Chirisa and American Real Estate Partners plan two new 100 MW data center buildings (380,000 sq ft total) at 1600 Digital Drive on the former Cartograf site in Chesterfield County, acquired for $16.5 million; CoreWeave will operate inside the data halls, with the first building targeted for late 2027.",
+          "source": "https://w.media/chirisa-plans-two-new-data-centers-in-virginia/"
+        }
+      ]
     },
     {
       "id": "aws-berwick",
@@ -6664,7 +7579,26 @@
       "source": "https://www.stackinfra.com/locations/americas/northern-virginia/nva02/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2020-01-22",
+          "kind": "announcement",
+          "summary": "STACK Infrastructure and Peterson Companies announced development of a 125-acre hyperscale data center campus in Prince William County (Manassas) at 9604 and 9750 Hornbaker Rd, with over 250 MW total critical load capacity and an initial 25-acre, 72 MW, 700,000 sq ft phase targeted for late 2020.",
+          "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-and-peterson-companies-announce-development-of-125-acre-hyperscale-data-center-campus-in-prince-william-county-va/"
+        },
+        {
+          "date": "2020-01-23",
+          "kind": "coverage",
+          "summary": "Patch reported the campus would be built on land acquired for $15 million ($12M for 87 acres, $3M for 35.6 acres) within the Innovation @ Prince William business park, with four pad sites already cleared and graded.",
+          "source": "https://patch.com/virginia/manassas/massive-data-center-campus-coming-manassas"
+        },
+        {
+          "date": "2023-01-06",
+          "kind": "construction",
+          "summary": "ConnectCRE reported STACK Infrastructure broke ground on a 40-acre, nearly 100 MW data center campus in Prince William County, its seventh Northern Virginia campus, with the first 36 MW building targeting delivery by Q1 2024; power supplied by Northern Virginia Electric Cooperative (NOVEC) with a 300 MW substation planned.",
+          "source": "https://www.connectcre.com/stories/stack-infrastructure-breaks-ground-on-100mw-data-center-campus-in-nova/"
+        }
+      ]
     },
     {
       "id": "anthropic-lake-mariner",
@@ -7411,7 +8345,104 @@
       "source": "https://www.datacenterdynamics.com/en/news/openai-announces-five-more-us-stargate-data-centers-with-oracle-and-softbank/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-01-21",
+          "kind": "announcement",
+          "summary": "The Stargate Project was announced at the White House as a $500 billion venture by SoftBank, OpenAI, Oracle, and MGX to build AI data center infrastructure in the United States, with SoftBank as financial lead and OpenAI as operational lead.",
+          "source": "https://group.softbank/en/news/press/20250122"
+        },
+        {
+          "date": "2025-08-04",
+          "kind": "financing",
+          "summary": "Foxconn announced the sale of its 6.2 million-square-foot former GM assembly plant in Lordstown to SoftBank for $375 million; the buyer was later identified as SoftBank's affiliate Crescent Dune LLC, a Delaware entity formed in July 2025.",
+          "source": "https://businessjournaldaily.com/report-softbank-acquires-foxconn-lordstown-plant/"
+        },
+        {
+          "date": "2025-08-18",
+          "kind": "announcement",
+          "summary": "Foxconn Chairman Young Liu announced a joint venture with SoftBank to manufacture AI data center equipment at the Lordstown plant, with Foxconn and SoftBank each holding 50% of the manufacturing operation while SoftBank owns the facility and equipment outright.",
+          "source": "https://www.manufacturingdive.com/news/foxconn-softbank-joint-data-center-equipment-factory-apple-ai-lordstown-ohio/757995/"
+        },
+        {
+          "date": "2025-09-24",
+          "kind": "announcement",
+          "summary": "OpenAI, Oracle, and SoftBank announced five new Stargate data center sites including Lordstown, Ohio; SoftBank said it had already broken ground on an advanced data center at the site, with the facility on track to be operational in 2026.",
+          "source": "https://www.ohiotechnews.com/stargate-ohio-expands-official/"
+        },
+        {
+          "date": "2025-09-24",
+          "kind": "filing",
+          "summary": "Crescent Dune LLC (SoftBank affiliate) recorded the property transfer of the former GM Lordstown plant and nearly 600 acres from Foxconn EV Property Development LLC with the Trumbull County Auditor, listing a sale price of $88 million for the building and land.",
+          "source": "https://businessjournaldaily.com/softbank-affiliate-takes-title-to-lordstown-plant/"
+        },
+        {
+          "date": "2025-10-20",
+          "kind": "filing",
+          "summary": "Bristolville 25 Developer LLC, a separate New York-based developer, submitted a site plan proposal to Lordstown zoning for a $3.6 billion, 1.65 million-square-foot data center on 133 acres adjacent to the Stargate campus.",
+          "source": "https://www.vindy.com/news/business-news/2025/10/developer-proposes-3-6b-data-center-in-lordstown/"
+        },
+        {
+          "date": "2025-10-28",
+          "kind": "construction",
+          "summary": "Preparation work began on the Lordstown Stargate data center, with crews clearing space in front of the former GM plant near the northwest corner along Hallock Young Road and dismantling a solar array near the former paint facility.",
+          "source": "https://businessjournaldaily.com/preparation-work-begins-on-lordstown-data-center/"
+        },
+        {
+          "date": "2025-11-03",
+          "kind": "vote",
+          "summary": "Lordstown Village Council voted 6-0 to ban all future data centers in the village, with approximately 100 residents attending and the majority speaking in opposition to data center development; the ban was set to take effect December 3.",
+          "source": "https://www.tribtoday.com/news/local-news/2025/11/lordstown-votes-to-ban-data-centers/"
+        },
+        {
+          "date": "2025-11-14",
+          "kind": "lawsuit",
+          "summary": "Bristolville 25 Developer LLC and BHGH Properties LLC filed a petition for a writ of mandamus in the Ohio Supreme Court to compel Lordstown to accept, review, and act upon the developer's site plan submission under Ohio law.",
+          "source": "https://businessjournaldaily.com/developers-petition-ohio-supreme-court-in-lordstown-data-center-project/"
+        },
+        {
+          "date": "2025-11-17",
+          "kind": "environmental",
+          "summary": "Crescent Dune LLC filed wetland and stream delineation documents with the Ohio EPA for a 160-acre expansion behind the Lordstown plant for modular data center and server manufacturing, assembly for IT server racks, and related components.",
+          "source": "https://businessjournaldaily.com/documents-shed-light-on-potential-expansion-at-foxconns-lordstown-plant/"
+        },
+        {
+          "date": "2025-12-01",
+          "kind": "vote",
+          "summary": "Lordstown Village Council repealed its data center ban on the advice of the village solicitor, who stated Ohio courts favor moratoriums over outright bans; a public hearing on a replacement 180-day moratorium was scheduled for January 5, 2026.",
+          "source": "https://www.tribtoday.com/news/local-news/2025/12/lordstown-repeals-data-center-ban/"
+        },
+        {
+          "date": "2025-12-24",
+          "kind": "ruling",
+          "summary": "The Ohio Supreme Court issued an entry denying Lordstown's motion to dismiss the Bristolville 25 mandamus case against the village and its zoning inspector, while granting dismissal of the village solicitor as a party; the court also granted an alternative writ.",
+          "source": "https://businessjournaldaily.com/developers-petition-ohio-supreme-court-in-lordstown-data-center-project/"
+        },
+        {
+          "date": "2026-01-05",
+          "kind": "moratorium",
+          "summary": "Lordstown Village Council unanimously approved a 180-day moratorium on new data center permits after a public hearing attended by more than 50 residents, most of whom spoke against data centers; the moratorium was set to expire July 4, 2026.",
+          "source": "https://www.tribtoday.com/news/local-news/2026/01/lordstown-council-approves-moratorium-on-data-centers/"
+        },
+        {
+          "date": "2026-03-25",
+          "kind": "hearing",
+          "summary": "Lordstown officials heard from land-use planner Brian Frantz, who advised the village to define data centers in zoning codes, designate appropriate locations, and use conditional-use permits to control placement, design, noise, and lighting.",
+          "source": "https://www.tribtoday.com/news/local-news/2026/03/land-use-planner-talks-data-centers-in-lordstown/"
+        },
+        {
+          "date": "2026-05-05",
+          "kind": "moratorium",
+          "summary": "Lordstown council approved a consulting agreement with planner Brian Frantz (not to exceed $7,625) for zoning and data center matters and advertised a public hearing to extend the data center moratorium for an additional 180 days.",
+          "source": "https://www.tribtoday.com/news/local-news/2026/05/lordstown-looks-to-extend-moratorium-on-data-centers/"
+        },
+        {
+          "date": "2026-06-16",
+          "kind": "moratorium",
+          "summary": "Lordstown Village Council approved by emergency reading a 180-day extension of the data center moratorium, effective July 5, 2026 through January 2, 2027, to allow continued development of zoning standards for setbacks, noise, water usage, and other data center impacts.",
+          "source": "https://www.tribtoday.com/news/local-news/2026/06/lordstown-extends-data-center-moratorium/"
+        }
+      ]
     },
     {
       "id": "openai-stargate-michigan",
