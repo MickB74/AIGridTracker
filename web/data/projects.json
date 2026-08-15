@@ -465,10 +465,52 @@
       "verified": true,
       "events": [
         {
+          "date": "2024-08-22",
+          "kind": "announcement",
+          "summary": "Barrio Energy announced acquisition of a 12 MW data center property west of downtown Tyler, its fifth Texas site within ERCOT; president Ivan Pinney called Tyler 'an ideal location.'",
+          "source": "https://www.prnewswire.com/news-releases/barrio-energy-announces-acquisition-of-12mw-data-center-in-tyler-tx-302227756.html"
+        },
+        {
+          "date": "2026-06-15",
+          "kind": "announcement",
+          "summary": "A community meeting was announced for the proposed data center at 1101-1105 W. Erwin Street; the Planning & Zoning public hearing was set for July 7 at 1:30 p.m.",
+          "source": "https://www.kltv.com/2026/06/15/community-meeting-set-planned-tyler-data-center/"
+        },
+        {
+          "date": "2026-06-16",
+          "kind": "hearing",
+          "summary": "Vulcan Core and Barrio held a community input meeting on W. Erwin Street; developer Mark Buntsev claimed no negative effects on homes, projected $550,000/year in electricity taxes and 7-10 jobs; residents questioned water use, noise, and site selection.",
+          "source": "https://www.kltv.com/2026/06/16/tyler-residents-gather-learn-about-proposed-data-center/"
+        },
+        {
+          "date": "2026-06-17",
+          "kind": "coverage",
+          "summary": "Tyler Morning Telegraph reported project specs: eight 40-ft containers (four computing, four cooling), 12 MW capacity, MicroBT mining equipment, closed-loop cooling with no municipal water use, and an independent acoustic study claiming 35 dB at the nearest house vs. 45 dB ambient.",
+          "source": "https://tylerpaper.com/2026/06/17/data-center-developer-addresses-concerns-about-proposed-bitcoin-mining-facility-planned-for-downtown-tyler/"
+        },
+        {
+          "date": "2026-06-19",
+          "kind": "coverage",
+          "summary": "Tyler mayor-elect Stuart Hene, who won the runoff with 57% of the vote, said the data center proposal on West Erwin Street would face 'an uphill battle' after attending the developer's community meeting.",
+          "source": "https://www.kltv.com/2026/06/20/east-texas-politics-tylers-next-mayor-his-defeated-opponent-reflect-election-weigh-data-center-debate/"
+        },
+        {
           "date": "2026-07-07",
           "kind": "vote",
           "summary": "Tyler P&Z denied the special use permit 5-2. Planning staff: 'inconsistent with the Future Land Use Map and the Tyler Tomorrow Comprehensive Plan.' Residents cited water use, noise, and proximity to surrounding homes.",
           "source": "https://www.kltv.com/2026/07/07/tyler-planning-commission-denies-permit-proposed-data-center/"
+        },
+        {
+          "date": "2026-07-08",
+          "kind": "coverage",
+          "summary": "Tyler Morning Telegraph detailed the 3.5-hour hearing: 26 residents spoke against the project and 5 in favor (including 2 Vulcan Core representatives); planning director Kyle Kingma found the proposal inconsistent with the Future Land Use Map and comprehensive plan; Chairman David Hudson noted the applicant may appeal to City Council.",
+          "source": "https://tylerpaper.com/2026/07/08/tyler-planning-and-zoning-commission-denies-special-use-permit-for-proposed-data-center/"
+        },
+        {
+          "date": "2026-07-18",
+          "kind": "coverage",
+          "summary": "The Cooldown reported on the denial, quoting resident Hannah Morris: 'We were told that it's a close-knit system, but water doesn't magically appear'; noted residents anticipate the developer will appeal.",
+          "source": "https://www.thecooldown.com/green-tech/tyler-texas-commissioners-reject-bitcoin-mine/"
         }
       ]
     },
@@ -1116,6 +1158,18 @@
       "verified": true,
       "events": [
         {
+          "date": "2021-12-21",
+          "kind": "incentive",
+          "summary": "Taylor County Commissioners approved a Chapter 312 tax abatement for Lancium's $2.4 billion 'Project Artemis' data center campus, the largest project in Abilene/Taylor County history, starting at 200 MW with a goal to expand to 1 GW.",
+          "source": "https://ktxs.com/news/local/taylor-county-and-city-of-abilene-partner-with-lancium-for-data-center-campus"
+        },
+        {
+          "date": "2024-07-18",
+          "kind": "announcement",
+          "summary": "Crusoe and Lancium announced a partnership to build an initial 200 MW AI data center at the Lancium Clean Campus near Abilene, with plans to expand to 1.2 GW; two buildings totaling 980,000 square feet were expected to be energized in 2025.",
+          "source": "https://www.crusoe.ai/resources/newsroom/crusoe-200mw-ai-data-center"
+        },
+        {
           "date": "2024-11-19",
           "kind": "announcement",
           "summary": "The Development Corporation of Abilene, City of Abilene and Taylor County announced Crusoe's 998,000-square-foot data center at Lancium's Clean Campus, a combined estimated $3.4 billion investment on about 90 leased acres, to be leased to a Fortune 100 tenant in 2025.",
@@ -1128,10 +1182,34 @@
           "source": "https://time.com/7209167/stargate-openai-donald-trump/"
         },
         {
+          "date": "2025-02-05",
+          "kind": "hearing",
+          "summary": "The Abilene City Council held a public hearing on a second 20-year tax abatement for Lancium covering 940.89 acres, abating 85% of tax liability while retaining 15%, projected to return $70-90 million to Abilene taxpayers over the term.",
+          "source": "https://www.yahoo.com/news/abilene-city-council-weighs-large-005212844.html"
+        },
+        {
+          "date": "2025-02-11",
+          "kind": "hearing",
+          "summary": "Taylor County residents raised concerns at a commissioners meeting about Lancium's tax breaks, citing energy viability, environmental hazards from heavy metals, and questioning whether Lancium should be classified as a data center rather than an energy grid; the final agreement vote was set for February 25.",
+          "source": "https://ktxs.com/news/local/taylor-county-residents-raise-concerns-on-lancium-tax-breaks-at-commissioners-meeting"
+        },
+        {
+          "date": "2025-02-13",
+          "kind": "vote",
+          "summary": "The Abilene City Council voted to approve the amended tax abatement agreement for Lancium, with Mayor Weldon Hurt stating the data center would use less than 1% of Abilene's daily water consumption.",
+          "source": "https://ktxs.com/news/local/abilene-city-council-discusses-multiple-largely-talked-about-items-in-meeting"
+        },
+        {
           "date": "2025-03-18",
           "kind": "construction",
           "summary": "Crusoe announced it had begun second-phase construction at the Lancium Clean Campus, expanding the Abilene site to eight buildings, about 4 million square feet and 1.2 gigawatts, targeting completion by mid-2026.",
           "source": "https://www.crusoe.ai/resources/newsroom/crusoe-expands-ai-data-center-campus-in-abilene-to-1-2-gigawatts"
+        },
+        {
+          "date": "2025-03-24",
+          "kind": "financing",
+          "summary": "Crusoe secured 4.5 GW of natural gas power through a joint venture with Engine No. 1, including seven GE Vernova turbines acquired by Engine No. 1 and Chevron to generate behind-the-meter power for AI data centers including Abilene.",
+          "source": "https://www.datacenterfrontier.com/hyperscale/article/55276169/crusoe-adds-45-gw-natural-gas-to-fuel-ai-expands-abilene-data-center-to-12-gw"
         },
         {
           "date": "2025-05-21",
@@ -1146,10 +1224,40 @@
           "source": "https://benzatine.com/news-room/oracle-seeks-more-tax-relief-for-texas-data-center-amid-controversy"
         },
         {
+          "date": "2025-09-29",
+          "kind": "announcement",
+          "summary": "OpenAI and partners announced five new Stargate data center sites (including in Milam and Shackelford counties, Texas), with the Abilene flagship campus described as already running and delivering NVIDIA GB200 racks, as part of a pipeline totaling nearly 7 GW.",
+          "source": "https://constructiondive.com/news/stargate-5-new-data-center-sites/761424/"
+        },
+        {
           "date": "2025-09-30",
           "kind": "operational",
           "summary": "Crusoe announced the first phase of the Abilene campus is live and running on Oracle Cloud Infrastructure, with Oracle having begun delivering NVIDIA GB200 racks in June 2025.",
           "source": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-flagship-abilene-data-center-is-live"
+        },
+        {
+          "date": "2025-11-18",
+          "kind": "construction",
+          "summary": "Crusoe topped out the eighth and final building at the Abilene Stargate campus, acknowledging 7,000 tradespeople who contributed; the full campus encompasses approximately 4 million square feet with 1.2 GW total power capacity.",
+          "source": "https://w.media/crusoe-tops-off-final-ai-data-center-in-abilene-texas/"
+        },
+        {
+          "date": "2025-12-22",
+          "kind": "coverage",
+          "summary": "Crusoe's Abilene AI data center won 'North American Data Center Project of the Year' at the 2025 DCD Global Awards, cited for rapid 12-month modular delivery and direct-to-chip liquid cooling at 1.2 GW scale.",
+          "source": "https://www.crusoe.ai/resources/newsroom/crusoe-wins-north-american-data-center-project-of-the-year-at-2025-data-center-dynamics-global-awards"
+        },
+        {
+          "date": "2026-01-26",
+          "kind": "coverage",
+          "summary": "Texas Standard reported the $3.5 billion Stargate campus had about 6,000 construction workers on site, received an 85% property tax abatement over 10 years, and was expected to create roughly 300 permanent jobs upon completion.",
+          "source": "https://texasstandard.org/stories/stargate-data-center-abilene-texas-construction-ai-artificial-intelligence/"
+        },
+        {
+          "date": "2026-02-04",
+          "kind": "coverage",
+          "summary": "Time reported Abilene's average monthly rent had risen to $2,395 (up about $1,000 year-over-year), the Abilene Housing Authority documented a pre-existing deficit of approximately 5,600 housing units exacerbated by the Stargate worker influx, and voucher placement rates had dropped from 80% to about 50%.",
+          "source": "https://time.com/7362401/ai-stargate-data-center-abilene-housing-crisis/"
         },
         {
           "date": "2026-03-01",
@@ -1164,10 +1272,28 @@
           "source": "https://ktxs.com/news/local/lancium-crusoe-executives-brief-abilene-leaders-on-major-northside-investment"
         },
         {
+          "date": "2026-03-27",
+          "kind": "announcement",
+          "summary": "Crusoe announced a new 900 MW AI factory campus adjacent to the existing Abilene site to support Microsoft, with two buildings (each 336 MW critical IT) and a 900 MW on-site power plant, bringing total projected Abilene capacity to 2.1 GW; site prep was already underway with the first building expected energized mid-2027.",
+          "source": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-new-900-mw-ai-factory-campus-in-abilene-texas-to-support-microsoft-ai-infrastructure"
+        },
+        {
           "date": "2026-04-08",
           "kind": "financing",
           "summary": "Speaking to the Kiwanis Club of Abilene, Lancium CEO Michael McNamara said the site is fully financed long-term, citing a 15-year Oracle lease and a 20-year Microsoft lease, per KTXS.",
           "source": "https://ktxs.com/news/local/lancium-ceo-says-abilene-ai-data-center-is-fully-financed-with-oracle-and-microsoft"
+        },
+        {
+          "date": "2026-06-04",
+          "kind": "protest",
+          "summary": "Local outlet KEYJ reported that Abilene residents launched a 'Save Abilene' website to organize opposition, citing concerns about housing costs, infrastructure strain, water usage, electric demand, and tax incentives relative to community benefits.",
+          "source": "https://keyj.com/abilene-ai-data-center-debate/"
+        },
+        {
+          "date": "2026-06-17",
+          "kind": "report",
+          "summary": "Distilled Earth reported that Crusoe's third and fourth Abilene buildings, begun in March 2025 and permitted for completion by March 2026, were still not online as of June 2026; Crusoe's CEO disclosed costs of $19.2 billion per GW including gas plants, and the site experienced multi-day winter outages from power and cooling equipment failures.",
+          "source": "https://www.distilled.earth/p/openais-stargate-data-centers-are"
         },
         {
           "date": "2026-08-12",
@@ -1320,10 +1446,88 @@
       "verified": true,
       "events": [
         {
+          "date": "2024-12-10",
+          "kind": "financing",
+          "summary": "Intersect Power announced a strategic partnership with Google and TPG Rise Climate, backed by over $800 million in funding, to co-locate data centers with clean energy generation, with the first project (later identified as Quantum in Haskell County) expected operational in 2026.",
+          "source": "https://www.tpg.com/news-and-insights/intersect-power-forms-strategic-partnership-with-google-and-tpg-rise-climate-to-co-locate-data-center-load-and-clean-power-generation"
+        },
+        {
+          "date": "2025-05-01",
+          "kind": "construction",
+          "summary": "Crusoe Energy began construction in May 2025 on Google's Armstrong County data center campus on 1,300 acres near Claude, Texas, according to Armstrong County Judge Adam Ensey.",
+          "source": "https://abc7amarillo.com/news/local/google-announces-new-data-center-in-armstrong-county-texas-judge-adam-ensey-crusoe-energy-ercot-southwest-power-pool-claude-texas"
+        },
+        {
+          "date": "2025-11-04",
+          "kind": "coverage",
+          "summary": "KTXS reported that Google had purchased multiple properties near Lake Stamford for a data center, and that three new RV parks had been built in the past year to house workers, though Google had not yet formally announced the project.",
+          "source": "https://ktxs.com/news/local/stamfords-growth-spurt-rv-parks-a-data-center-and-the-infrastructure-to-keep-up-with-it"
+        },
+        {
           "date": "2025-11-14",
           "kind": "announcement",
           "summary": "Google announced a $40B Texas investment through 2027, including AI data-center hubs in Haskell and Armstrong Counties.",
           "source": "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-texas/"
+        },
+        {
+          "date": "2025-11-14",
+          "kind": "announcement",
+          "summary": "Governor Abbott and Google CEO Sundar Pichai announced Google's $40 billion Texas investment at an event in Midlothian, calling it Google's largest investment in any U.S. state, with three new data center campuses in Haskell and Armstrong Counties.",
+          "source": "https://gov.texas.gov/news/post/governor-abbott-google-announce-40-billion-investment-in-texas"
+        },
+        {
+          "date": "2025-11-24",
+          "kind": "coverage",
+          "summary": "ABC7 Amarillo reported that Google's Armstrong County data center is being built by Crusoe Energy on 1,300 acres near Claude, TX, with construction underway since May 2025, 80-100 jobs expected, and completion targeted for late 2028 or early 2029.",
+          "source": "https://abc7amarillo.com/news/local/google-announces-new-data-center-in-armstrong-county-texas-judge-adam-ensey-crusoe-energy-ercot-southwest-power-pool-claude-texas"
+        },
+        {
+          "date": "2025-11-25",
+          "kind": "coverage",
+          "summary": "Haskell County leaders gave mixed reactions to Google's plan: Mayor Isbell welcomed economic growth, while County Judge Thompson acknowledged concerns about agricultural land conversion but said renewable energy resources drove Google's site selection.",
+          "source": "https://ktxs.com/news/local/googles-40-billion-data-center-plan-sparks-mixed-reactions-haskell-leaders-respond"
+        },
+        {
+          "date": "2025-11-26",
+          "kind": "coverage",
+          "summary": "NewsChannel 6 reported that Haskell County's tax base of $800 million was expected to more than double from the Google data centers, with County Judge Kenny Thompson and Mayor Christina Isbell citing growth potential for the 3,000-person town.",
+          "source": "https://www.newschannel6now.com/2025/11/26/data-centers-bring-major-investment-growth-potential-haskell-county/"
+        },
+        {
+          "date": "2026-02-05",
+          "kind": "hearing",
+          "summary": "Google held a two-hour community open house at the Museum of the West Texas Frontier in Stamford, fielding questions on water, roads, housing, and environmental impacts of its two Haskell County data centers.",
+          "source": "https://ktxs.com/news/local/google-officials-meet-with-texans-as-data-center-plans-raise-questions"
+        },
+        {
+          "date": "2026-02-24",
+          "kind": "announcement",
+          "summary": "Google announced a new air-cooled data center in Wilbarger County, Texas, co-located with AES clean energy generation under 20-year PPAs, as part of its broader West Texas expansion.",
+          "source": "https://www.newschannel6now.com/2026/02/24/google-announces-new-clean-energy-data-center-agreement-with-wilbarger-county/"
+        },
+        {
+          "date": "2026-05-27",
+          "kind": "coverage",
+          "summary": "Stamford Mayor James Decker said the city is experiencing its first simultaneous multi-house construction since the 1980s, with rezoning for triplexes and revenue directed to street, water, sewer, and park improvements.",
+          "source": "https://ktxs.com/news/local/its-jarring-googles-40-billion-data-center-investment-to-transform-texas-town"
+        },
+        {
+          "date": "2026-06-01",
+          "kind": "operational",
+          "summary": "The Quantum Clean Energy Project (640 MW solar, 1.3 GWh battery storage) in Haskell County began operations in June 2026, co-located with a Google data center campus.",
+          "source": "https://www.intersect.com/portfolio/quantum"
+        },
+        {
+          "date": "2026-06-04",
+          "kind": "announcement",
+          "summary": "Google and Intersect announced the Meitner Energy Center in Gray and Roberts Counties, a 1 GW-plus co-located data center and wind/solar/battery generation complex, with construction running through December 2027.",
+          "source": "https://www.powermag.com/google-launches-1-gw-plus-co-located-data-center-and-generation-complex-in-texas-panhandle/"
+        },
+        {
+          "date": "2026-06-23",
+          "kind": "construction",
+          "summary": "Construction began on the Journey 2A data center building (210,420 sq ft) at the Haskell County 'Journey' campus, with a target completion in late October 2026.",
+          "source": "https://www.datacenterdynamics.com/en/news/google-linked-housebound-group-files-for-two-data-center-projects-in-haskell-texas/"
         }
       ]
     },
@@ -2460,10 +2664,52 @@
       "verified": true,
       "events": [
         {
+          "date": "2026-02-10",
+          "kind": "vote",
+          "summary": "Hood County Commissioners Court rejected a proposed six-month moratorium on new data center and industrial permits in a 3-2 vote; County Judge Massingill and Commissioners Andrews and Wilson voted against, Commissioners Samuelson and Eagle voted in favor.",
+          "source": "https://texasscorecard.com/local/hood-county-rejects-citizen-pleas-for-moratorium-on-data-centers/"
+        },
+        {
+          "date": "2026-02-10",
+          "kind": "coverage",
+          "summary": "State Sen. Paul Bettencourt and State Rep. Jared Patterson sent a letter to Attorney General Ken Paxton shortly before the moratorium vote urging him to investigate counties seeking data center moratoriums, arguing counties lack constitutional authority to issue them.",
+          "source": "https://texasscorecard.com/local/lawmakers-respond-to-hood-county-data-center-controversy/"
+        },
+        {
+          "date": "2026-02-24",
+          "kind": "vote",
+          "summary": "Hood County Commissioners Court rejected a second data center moratorium proposal in a 3-2 vote with the same split; commissioners voted instead to request a formal opinion from Attorney General Ken Paxton on whether the county has legal authority to enact such a ban.",
+          "source": "https://www.keranews.org/energy-environment/2026-02-25/data-center-moratorium-texas-hood-county-ken-paxton"
+        },
+        {
+          "date": "2026-03-10",
+          "kind": "vote",
+          "summary": "Hood County Commissioners unanimously adopted amended Section One Development Permit Regulations requiring data center developers to demonstrate committed water resources, submit complete power generation concept plans, certify compliance with the Lone Star Infrastructure Protection Act, and limit building coverage to 10% of a property (down from 50%).",
+          "source": "https://texasscorecard.com/local/hood-county-rejects-data-center-concept-plan/"
+        },
+        {
+          "date": "2026-03-24",
+          "kind": "vote",
+          "summary": "Hood County Commissioners unanimously voted to postpone action on the Project Red and Project Yellow concept plans pending receipt of additional information; the meeting revealed MARA Holdings' connection to both developments through a joint venture with Starwood, and residents raised concerns about environmental impacts and noise from existing MARA bitcoin mining operations.",
+          "source": "https://texasscorecard.com/local/hood-county-commissioners-postpone-further-action-on-two-data-center-projects/"
+        },
+        {
+          "date": "2026-06-02",
+          "kind": "coverage",
+          "summary": "The Texas Tribune reported that Hood County faces eight proposed data center projects spanning over 7,600 acres, including the 677-acre Project Red and Project Yellow on grounds neighboring the Wolf Hollow power plants; commissioners had twice delayed voting on those two projects pending more disclosure, prompting the developers to sue claiming automatic approval.",
+          "source": "https://www.texastribune.org/2026/06/02/texas-data-centers-hood-county-local-control-rural-water-power/"
+        },
+        {
           "date": "2026-07-15",
           "kind": "filing",
           "summary": "National CRE Holdings LLC and Greenland Capital LLC filed notice of appeal of Judge Bufkin's dismissal to the Second Court of Appeals.",
           "source": "https://texasscorecard.com/local/data-center-developers-appeal-hood-county-judges-ruling-rejecting-automatic-approval-argument/"
+        },
+        {
+          "date": "2026-07-15",
+          "kind": "ruling",
+          "summary": "District Judge Bryan Bufkin of the 355th Judicial District Court granted Hood County's plea to the jurisdiction and dismissed with prejudice the lawsuit by National CRE Holdings LLC and Greenland Capital LLC, ruling their concept plan submissions did not meet the statutory definition of 'development plans' that would trigger automatic approval under the 30-day deadline.",
+          "source": "https://www.keranews.org/energy-environment/2026-07-20/hood-county-judge-dismisses-lawsuit-seeking-automatic-approval-of-proposed-data-centers"
         }
       ]
     },
@@ -2493,10 +2739,94 @@
       "verified": true,
       "events": [
         {
+          "date": "2025-07-21",
+          "kind": "incentive",
+          "summary": "Shackelford County Commissioners Court unanimously approved creation of Reinvestment Zone 2025-1, accepted Vantage's Chapter 312 tax abatement application, and declared intent to enter a formal agreement providing $10 million annual payments in lieu of property taxes for 10 years, plus $150,000 annually in charitable contributions.",
+          "source": "https://ktxs.com/news/new-data-center-expected-to-create-250-full-time-jobs-in-shackelford-county"
+        },
+        {
+          "date": "2025-07-24",
+          "kind": "coverage",
+          "summary": "The Albany News reported that Shackelford County commissioners approved the reinvestment zone and tax abatement application at a special meeting, with the formal agreement contingent on Vantage completing its land purchase within 30 days; up to 6,500 construction workers and 250 permanent jobs with $25 million annual payroll were projected.",
+          "source": "https://www.thealbanynews.net/news/data-center-plans-move-forward-shackelford-county"
+        },
+        {
+          "date": "2025-07-31",
+          "kind": "coverage",
+          "summary": "KTAB Abilene reported County Judge John Viertel confirmed Vantage's $10 million annual payment deal, called it a significant uptick in the county's budget, and noted water concerns from residents regarding initial sourcing from Clear Fork Brazos River or Hubbard Creek Reservoir for the closed-circuit cooling system.",
+          "source": "https://www.yahoo.com/news/articles/1-200-acre-data-center-001913881.html"
+        },
+        {
           "date": "2025-08-19",
           "kind": "announcement",
           "summary": "Vantage unveiled Frontier, a $25 billion, 1.4 GW, 1,200-acre, 10-building AI campus in Shackelford County, Texas, with construction underway and first delivery targeted for H2 2026.",
           "source": "https://vantage-dc.com/news/vantage-data-centers-unveils-plans-for-frontier-a-25b-mega-campus-in-texas-to-meet-unprecedented-ai-demand/"
+        },
+        {
+          "date": "2025-09-23",
+          "kind": "announcement",
+          "summary": "OpenAI, Oracle, and SoftBank announced five new Stargate data center sites, identifying Shackelford County, Texas as one of three Oracle-partnered locations, as part of the $500 billion Stargate initiative targeting nearly 7 GW of new AI compute capacity.",
+          "source": "https://techcrunch.com/2025/09/23/openai-is-building-five-new-stargate-data-centers-with-oracle-and-softbank/"
+        },
+        {
+          "date": "2025-09-29",
+          "kind": "coverage",
+          "summary": "Data Center Frontier reported the Shackelford County site as an extension of the Abilene area hosting Vantage's Frontier project, one of two Texas Stargate sites (alongside Milam County), both within ERCOT territory, as part of the push toward 10 GW total Stargate infrastructure.",
+          "source": "https://www.datacenterfrontier.com/machine-learning/article/55319132/scaling-stargate-openais-five-new-us-data-centers-push-toward-10-gw-ai-infrastructure"
+        },
+        {
+          "date": "2025-10-02",
+          "kind": "announcement",
+          "summary": "The Albany News reported the Shackelford County data center received official confirmation as the Frontier Campus for Stargate, with Oracle's Mahesh Thiagarajan stating commitment to the Shackelford County community; the campus was specified as 700 acres with 1,600+ full-time positions upon completion.",
+          "source": "https://www.thealbanynews.net/news/shackelford-data-center-named-official-stargate-ai-campus"
+        },
+        {
+          "date": "2025-10-24",
+          "kind": "coverage",
+          "summary": "Construction Owners reported that VoltaGrid will power the Frontier campus off-grid with 210 Jenbacher gas generators (197 prime, 13 backup) producing 700 MW in phase one, with TCEQ approval documented, representing one of the largest microgrid deployments in U.S. history.",
+          "source": "https://www.constructionowners.com/news/oracle-and-openai-to-power-new-texas-data-center-off-the-grid"
+        },
+        {
+          "date": "2025-12-12",
+          "kind": "permit",
+          "summary": "VoltaGrid LLC submitted an application to TCEQ for Permit 182467, PSD Permit PSDTX1692, and GHG PSD Permit GHGPSDTX266 to construct an electric power generation facility using catalytically controlled four-stroke lean-burn engines at 299 FM 604, Abilene, Shackelford County.",
+          "source": "https://www.tceq.texas.gov/downloads/permitting/air/bilingual/pending-permit-notices/182467-nori-english.pdf"
+        },
+        {
+          "date": "2025-12-16",
+          "kind": "construction",
+          "summary": "Vantage Data Centers held a groundbreaking ceremony for the Frontier campus in Shackelford County as part of Oracle and OpenAI's Stargate expansion, with Kiewit confirmed as general contractor and the first facility scheduled for H2 2026 delivery and full completion by 2028.",
+          "source": "https://w.media/vantage-data-centers-breaks-ground-on-data-center-campus-in-texas/"
+        },
+        {
+          "date": "2026-05-29",
+          "kind": "coverage",
+          "summary": "KTXS reported Hamby residents seeking clarity on the Frontier campus water use; resident Lacie Rivera said residents were not consulted beforehand and called for a public meeting, while the City of Abilene declined on-camera interviews despite multiple requests.",
+          "source": "https://ktxs.com/news/local/its-a-lot-of-unanswered-questions-residents-seek-clarity-on-ai-center-water-use"
+        },
+        {
+          "date": "2026-06-29",
+          "kind": "permit",
+          "summary": "Vantage Data Centers TX307 LLC registered TDLR project TABS2026024102 for a new 398,117 sq ft data center building (Building 7) at 246 PR 1604, Abilene, Shackelford County, with an estimated cost of $1.15 billion, construction start November 2026, and completion April 2028; Kiewit listed as contractor.",
+          "source": "https://www.tdlr.texas.gov/TABS/Search/Print/TABS2026024102"
+        },
+        {
+          "date": "2026-07-13",
+          "kind": "coverage",
+          "summary": "KTXS reported community concerns about a second proposed data center (Project North by Bolt Data and Energy) in Shackelford County, with residents questioning whether long-term benefits outweigh costs and citing heavy truck traffic from existing Frontier construction between Abilene and Hamby.",
+          "source": "https://ktxs.com/news/local/do-we-need-another-one-proposed-2nd-data-center-draws-concerns-in-shackelford-county"
+        },
+        {
+          "date": "2026-07-22",
+          "kind": "coverage",
+          "summary": "KTXS reported County Judge Viertel responded to backlash over the second proposed data center, acknowledging residents' overall view is resistance with water as the most prominent and legitimate concern, and saying any agreement would require accountability provisions.",
+          "source": "https://ktxs.com/news/brownwood/shackelford-county-judge-responds-to-backlash-over-second-proposed-data-center"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "report",
+          "summary": "The Texas Tribune reported Governor Abbott announced a moratorium on new data center grid connections pending PUCT and ERCOT audits of over 1,800 queued projects; the freeze does not apply to data centers with on-site power generation such as Frontier's behind-the-meter microgrid.",
+          "source": "https://www.texastribune.org/2026/08/03/texas-data-center-project-audit-greg-abbott/"
         }
       ]
     },
@@ -2709,10 +3039,106 @@
       "verified": true,
       "events": [
         {
+          "date": "2020-01-29",
+          "kind": "announcement",
+          "summary": "Compass Datacenters announced it purchased 225 acres in Red Oak, Texas for a second Dallas-area campus capable of delivering 350+ MW of IT load, with a 6 MW facility scheduled for Q2 2020 delivery.",
+          "source": "https://www.prnewswire.com/news-releases/compass-datacenters-adds-second-dallas-area-campus-300994816.html"
+        },
+        {
+          "date": "2023-05-01",
+          "kind": "announcement",
+          "summary": "Compass Datacenters acquired 375 additional acres of vacant agricultural land in Red Oak, with plans to construct up to sixteen buildings on the new property, which a broker called potentially one of the largest campuses in the country.",
+          "source": "https://baxtel.com/news/acquisition-of-375-acres-in-red-oak-texas-by-compass-datacenters"
+        },
+        {
+          "date": "2023-11-05",
+          "kind": "incentive",
+          "summary": "Ellis County and the City of Red Oak partnered with Compass Datacenters on a tax abatement for Phase 2 construction of the Red Oak campus, which would double production capacity.",
+          "source": "https://www.focusdailynews.com/county-partners-with-compass-datacenters-for-phase-2-construction-of-red-oak-campus/"
+        },
+        {
+          "date": "2023-11-14",
+          "kind": "announcement",
+          "summary": "Schneider Electric and Compass Datacenters announced a $3 billion five-year partnership to manufacture prefabricated modular data centers, including a 110,000 sq ft integration facility to be built adjacent to the Red Oak campus.",
+          "source": "https://www.manufacturingdive.com/news/schneider-electric-compass-datacenters-expand-partnership/699594/"
+        },
+        {
+          "date": "2024-06-20",
+          "kind": "operational",
+          "summary": "Schneider Electric held a ribbon cutting for its 105,000 sq ft data center integration facility adjacent to the Compass Red Oak campus, expected to create over 200 jobs and produce 240 power centers in 2025.",
+          "source": "https://www.elliscountypress.com/news/compass-datacenter-holds-ribbon-cutting-ceremony"
+        },
+        {
+          "date": "2025-10-29",
+          "kind": "financing",
+          "summary": "Compass Datacenters secured a $326 million refinancing (maturing 2050) on five fully leased hyperscale data centers at its Red Oak campus totaling 180 MW, with three additional facilities planned at a combined $300 million construction budget.",
+          "source": "https://www.connectcre.com/stories/compass-datacenters-lands-refi-on-5-red-oak-facilities-to-add-three-more/"
+        },
+        {
+          "date": "2026-04-27",
+          "kind": "vote",
+          "summary": "Red Oak's Planning and Zoning Commission voted 3-2 to recommend denial of the rezoning request for the proposed 830-acre Compass data center campus after a lengthy hearing with large community turnout.",
+          "source": "https://www.elliscountypress.com/news/red-oak-rezones-land-data-center-campus-despite-protests"
+        },
+        {
+          "date": "2026-05-11",
+          "kind": "hearing",
+          "summary": "Over 150 residents packed Red Oak City Hall (capacity 136, with 70+ waiting outside) for a marathon council meeting on the 830-acre Compass rezoning; public comment ran past 10 p.m. and the meeting lasted nearly five hours.",
+          "source": "https://www.audacy.com/krld/news/local/red-oak-residents-pack-city-council-meeting-to-protest-proposed-data-center"
+        },
+        {
           "date": "2026-05-12",
           "kind": "vote",
           "summary": "City council approved the rezoning 4-1 around midnight following the May 11 meeting, with a separate 4-1 vote approving a tax abatement; over 150 residents attended and the council held an hour-long executive session before voting.",
           "source": "https://www.fox4news.com/news/red-oak-data-center-city-council-protest"
+        },
+        {
+          "date": "2026-05-12",
+          "kind": "coverage",
+          "summary": "KERA reported that on the same day Red Oak approved the Compass rezoning, Somervell County commissioners voted unanimously on a non-binding resolution to restrict future data centers, highlighting a regional divide over data center growth.",
+          "source": "https://www.keranews.org/energy-environment/2026-05-12/oppose-expand-votes-in-2-north-texas-communities-highlight-a-divide-over-data-center-growth"
+        },
+        {
+          "date": "2026-05-26",
+          "kind": "coverage",
+          "summary": "At least eight Red Oak residents received code violation notices for posting 'No Data Center' yard signs; after CBS Texas coverage, the city acknowledged citing the wrong code and closed all related cases.",
+          "source": "https://www.cbsnews.com/texas/news/red-oak-yard-sign-dispute-data-center-opposition/"
+        },
+        {
+          "date": "2026-06-02",
+          "kind": "announcement",
+          "summary": "Compass Datacenters announced a $15 million commitment to build a new Ellis County animal shelter, calling itself a '100-year neighbor'; the grant requires approval by the Ellis County Commissioners Court.",
+          "source": "https://www.prnewswire.com/news-releases/compass-datacenters-commits-15-million-to-build-new-ellis-county-animal-shelter-answering-the-communitys-urgent-call-302787879.html"
+        },
+        {
+          "date": "2026-06-23",
+          "kind": "withdrawal",
+          "summary": "Compass Datacenters withdrew its county tax abatement request for the proposed 890-acre Red Oak property before the June 23 Ellis County Commissioners Court meeting, with CEO Chris Crosby citing growing community 'noise' around the project.",
+          "source": "https://www.keranews.org/energy-environment/2026-07-06/data-center-developer-compass-ellis-county-animal-shelter-pushback"
+        },
+        {
+          "date": "2026-06-30",
+          "kind": "announcement",
+          "summary": "Compass Datacenters and Texas State Technical College held a ribbon cutting for a $12.6 million, 40,000 sq ft training facility on the Red Oak campus for the MEI Data Center Pathway Program, a 12-week curriculum for career changers.",
+          "source": "https://www.compassdatacenters.com/news/compass-datacenters-donates-training-facility-to-texas-state-technical-college/"
+        },
+        {
+          "date": "2026-06-30",
+          "kind": "coverage",
+          "summary": "The Waxahachie Sun reported that the nonprofit Say NO MORE Data Centers (rebranding as Save Our Red Oak) is financing a legal challenge to Red Oak data centers through car show fundraisers and has retained legal counsel.",
+          "source": "https://www.waxahachiesun.com/news/red-oak-nonprofit-finances-legal-challenge-to-data-centers-with-car-shows/article_c1103834-b121-4f63-90da-465feb16cbe4.html"
+        },
+        {
+          "date": "2026-07-27",
+          "kind": "coverage",
+          "summary": "CRE Daily reported Red Oak has seven data center sites at various stages with a projected $13 billion total investment expected to quadruple the city's taxable land value; Google, Compass, and DataBank each received 10-year tax breaks.",
+          "source": "https://www.credaily.com/briefs/red-oak-faces-data-center-boom-amid-resident-backlash/"
+        },
+        {
+          "date": "2026-07-27",
+          "kind": "coverage",
+          "summary": "NBC DFW reported Red Oak residents are petitioning the state for a data center moratorium and that the Texas Senate Finance Committee examined tax incentives and oversight of the state's 138 data centers.",
+          "source": "https://www.nbcdfw.com/news/local/red-oak-residents-renew-opposition-as-texas-reviews-data-center-boom/4054858/"
         }
       ]
     },
@@ -2778,9 +3204,27 @@
           "source": "https://communityimpact.com/bastrop-cedar-creek/government/bastrop-county-residents-organize-for-data-center-transparency-local-guardrails/"
         },
         {
+          "date": "2026-07-28",
+          "kind": "coverage",
+          "summary": "The Cool Down published a national report on bipartisan backlash against AI data centers in Bastrop County, noting Texas has overtaken Virginia as the world's largest data center market, with over 700 facilities potentially added in the next decade.",
+          "source": "https://www.thecooldown.com/green-tech/ai-data-centers-bastrop-county-residents-concerns/"
+        },
+        {
+          "date": "2026-07-29",
+          "kind": "coverage",
+          "summary": "The Elgin Courier reported on the community-led town hall calling for greater data center oversight in Bastrop County, noting that the Pacifico Energy data center proposal remained under county review alongside the EdgeConneX campuses.",
+          "source": "https://www.elgincourier.com/article/4795,community-led-town-hall-calls-for-data-center-oversight"
+        },
+        {
           "date": "2026-08-10",
           "kind": "hearing",
           "summary": "Bastrop County commissioners tabled a resolution requesting expanded county authority over large-scale industrial projects; it returns at the Aug 24 meeting, 9 a.m., Bastrop County Courthouse.",
+          "source": "https://communityimpact.com/bastrop-cedar-creek/government/bastrop-county-residents-challenge-tceq-data-center-permits-as-officials-table-request-for-more-authority/"
+        },
+        {
+          "date": "2026-08-11",
+          "kind": "coverage",
+          "summary": "Community Impact reported that the Black Chamber stormwater permit lists an estimated construction period of September 1, 2026 through October 1, 2028 for the 304-acre BCG Cedar Creek Campus portion of the 2,842-acre development, and that TCEQ generally has 45 days to act on the motions to overturn or they are denied by default.",
           "source": "https://communityimpact.com/bastrop-cedar-creek/government/bastrop-county-residents-challenge-tceq-data-center-permits-as-officials-table-request-for-more-authority/"
         }
       ]
@@ -2811,16 +3255,82 @@
       "verified": true,
       "events": [
         {
+          "date": "2025-08-20",
+          "kind": "announcement",
+          "summary": "Pacifico Energy announced the GW Ranch project, an off-grid power generation campus on 8,000+ acres in Pecos County combining natural gas turbines and battery storage to deliver 5 GW for hyperscale data centers, with 1 GW targeted for 2028 and full capacity by 2030.",
+          "source": "https://finance.yahoo.com/news/pacifico-energy-announces-gw-ranch-130000590.html"
+        },
+        {
+          "date": "2026-01-26",
+          "kind": "permit",
+          "summary": "Pacifico Energy announced it secured a TCEQ air permit for 7.65 GW of gas-fired power generation at GW Ranch, described as the largest air permit granted in the United States, with Phase 1 to deliver 1 GW in the first half of 2027.",
+          "source": "https://finance.yahoo.com/news/pacifico-energy-secures-7-65-120000106.html"
+        },
+        {
+          "date": "2026-02-04",
+          "kind": "coverage",
+          "summary": "The Big Bend Sentinel reported a massive AI data center campus coming to Pecos County on Highway 18 north of Fort Stockton, with Pecos County Judge Joe Shuster and Economic Development Director Remie Ramos expressing support for the project's economic benefits.",
+          "source": "https://bigbendsentinel.com/2026/02/04/massive-ai-data-center-coming-to-pecos-county/"
+        },
+        {
+          "date": "2026-06-22",
+          "kind": "hearing",
+          "summary": "Pecos County Commissioners Court held a public hearing to designate and establish the GW Ranch Reinvestment Zone under Texas Tax Code Chapter 312 and considered approving a tax abatement agreement with Pacifico GW LLC.",
+          "source": "https://www.co.pecos.tx.us/commissioners-court-regular-session-agenda-6222026/"
+        },
+        {
+          "date": "2026-07-24",
+          "kind": "construction",
+          "summary": "Airbus satellite imagery captured on this date showed land clearing already underway at the GW Ranch site north of Fort Stockton, as reported by Cleanview on August 7.",
+          "source": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "announcement",
+          "summary": "Governor Greg Abbott announced a moratorium on new data center approvals pending an ERCOT and PUCT audit of energy, water, and community impacts; off-grid projects like Amazon's Pecos County campus were noted as largely unaffected since they bypass grid interconnection.",
+          "source": "https://www.texastribune.org/2026/08/03/texas-data-center-project-audit-greg-abbott/"
+        },
+        {
+          "date": "2026-08-06",
+          "kind": "coverage",
+          "summary": "RFD-TV reported that Floyd County commissioners plan to use a Chapter 312 tax abatement agreement to impose conditions on a proposed Amazon data center campus valued at over $1 billion in Floydada, part of the same August 2026 Amazon filing wave that includes the Fort Stockton campus.",
+          "source": "https://www.rfdtv.com/texas-county-uses-tax-incentives-to-steer-data-center-development"
+        },
+        {
           "date": "2026-08-07",
           "kind": "filing",
           "summary": "Amazon Data Services' TDLR filings for three 189,060 sq ft, ~$300M data center buildings 11 miles north of Fort Stockton were reported, with construction scheduled August-December 2026.",
           "source": "https://usdatacenterprojects.com/texas/amazon-files-plans-for-new-data-center-buildings-in-texas-across-three-sites"
         },
         {
+          "date": "2026-08-07",
+          "kind": "coverage",
+          "summary": "The New Republic reported that Amazon's GW Ranch gas plant in Pecos County, permitted for 33 million tons of CO2 annually, would be the biggest single pollution source in the United States, exceeding the nation's largest coal power plant.",
+          "source": "https://newrepublic.com/post/214111/amazon-data-center-biggest-pollution-source-entire-country"
+        },
+        {
           "date": "2026-08-08",
           "kind": "announcement",
           "summary": "Amazon confirmed it is financing the 7.65 GW, 35-turbine GW Ranch gas plant (developer Pacifico Energy) in Pecos County to power its new data center campus there, per reporting on Cleanview's analysis connecting Amazon's construction permits to the plant.",
           "source": "https://techxplore.com/news/2026-08-amazon-massive-private-gas-centers.html"
+        },
+        {
+          "date": "2026-08-10",
+          "kind": "coverage",
+          "summary": "The San Antonio Current reported the Amazon campus on 8,400 acres along Highway 18, approximately 17 miles north of Fort Stockton, could become the nation's largest polluter, noting concerns about proximity to Big Bend National Park and Amazon's net-zero 2040 pledge.",
+          "source": "https://www.sacurrent.com/news/texas-news/amazons-new-texas-data-center-campus-could-become-nations-largest-polluter/"
+        },
+        {
+          "date": "2026-08-11",
+          "kind": "coverage",
+          "summary": "E&E News by Politico reported on Amazon's off-grid gas plant in Pecos County, quoting Environment Texas executive director Luke Metzger warning that data centers will 'build gas plants and increase climate and local air pollution' rather than using cleaner grid electricity.",
+          "source": "https://www.eenews.net/articles/amazon-to-run-west-texas-data-center-on-massive-gas-plant-2/"
+        },
+        {
+          "date": "2026-08-13",
+          "kind": "coverage",
+          "summary": "The Fort Stockton Pioneer published a report on community debate over the data center proposal's impact on Fort Stockton land, water, and future growth.",
+          "source": "https://www.fortstocktonpioneer.com/news/data-center-proposal-sparks-debate-over-fort-stockton-land-water-and-future-growth"
         }
       ]
     },
@@ -2849,6 +3359,18 @@
       "as_of": "2026-08-14",
       "verified": true,
       "events": [
+        {
+          "date": "2026-08-05",
+          "kind": "coverage",
+          "summary": "All Ag News reported that Floyd County commissioners plan to use a Chapter 312 tax-abatement agreement as leverage over the proposed Amazon data center campus, citing limited regulatory and zoning authority over private property as the reason for turning to incentive conditions to protect water and power resources.",
+          "source": "https://www.allagnews.com/texas-county-uses-incentives-to-steer-data-centers/"
+        },
+        {
+          "date": "2026-08-06",
+          "kind": "coverage",
+          "summary": "RFD-TV reported that Floyd County commissioners are considering a Chapter 312 tax-abatement agreement for the proposed Amazon campus (valued at over $1 billion, seven buildings across ~485 acres), with conditions requiring air-cooled systems to reduce groundwater demand and on-site electricity generation to avoid competing with local homes, farms, and businesses during shortages.",
+          "source": "https://www.rfdtv.com/texas-county-uses-tax-incentives-to-steer-data-center-development"
+        },
         {
           "date": "2026-08-07",
           "kind": "filing",
@@ -4851,7 +5373,86 @@
       "source": "https://investors.corescientific.com/news-events/press-releases/detail/110/core-scientific-and-coreweave-announce-1-2-billion-expansion-at-denton-tx-site",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-06-01",
+          "kind": "financing",
+          "summary": "In June 2024 Core Scientific entered into a 200 MW, 12-year hosting contract with CoreWeave with projected cumulative revenue of $3.5 billion, marking the original HPC agreement that would be sited partly at the Denton campus.",
+          "source": "https://investors.corescientific.com/news-events/press-releases/detail/79/core-scientific-announces-june-2024-production-and-operations-updates"
+        },
+        {
+          "date": "2024-06-25",
+          "kind": "financing",
+          "summary": "Core Scientific announced a new 70 MW contract with CoreWeave worth a projected $1.225 billion over 12 years, bringing the combined CoreWeave portfolio to approximately 270 MW and $4.7 billion in potential revenue.",
+          "source": "https://investors.corescientific.com/news-events/press-releases/detail/78/core-scientific-announces-new-contract-with-coreweave-for-delivery-of-approximately-70-mw-of-additional-infrastructure-to-host-high-performance-computing-operations"
+        },
+        {
+          "date": "2024-07-05",
+          "kind": "construction",
+          "summary": "Core Scientific disclosed it had completed a 72 MW expansion at its Denton TX facility to house bitcoin miners relocated from sites being converted for HPC hosting.",
+          "source": "https://investors.corescientific.com/news-events/press-releases/detail/79/core-scientific-announces-june-2024-production-and-operations-updates"
+        },
+        {
+          "date": "2024-08-06",
+          "kind": "financing",
+          "summary": "CoreWeave exercised an option for approximately 112 MW of additional HPC infrastructure at Core Scientific sites, a 12-year contract with projected cumulative revenue of $2.0 billion; site modifications were expected to begin in H2 2024.",
+          "source": "https://investors.corescientific.com/news-events/press-releases/detail/84/core-scientific-announces-exercise-of-additional-contract-option-by-coreweave-for-delivery-of-approximately-112-mw-of-additional-infrastructure-to-host-high-performance-computing-operations"
+        },
+        {
+          "date": "2024-08-20",
+          "kind": "vote",
+          "summary": "Denton City Council voted 5-0 to approve amendments to the power purchase agreement and lease with Core Scientific, allowing conversion of its two largest buildings from cryptocurrency mining to AI high-performance computing, with an expected operational date of April-July 2025.",
+          "source": "https://www.keranews.org/science-technology/2024-08-28/core-scientific-gets-approval-to-bring-high-powered-computing-for-ai-to-denton"
+        },
+        {
+          "date": "2024-11-19",
+          "kind": "vote",
+          "summary": "Denton City Council unanimously approved lease modifications giving Core Scientific an additional 42.9 acres (total 78 acres) at 8171 Jim Christal Road and a one-time $5 million payment, enabling a $6.1 billion real property investment for AI data center conversion with three phases through July 2026.",
+          "source": "https://www.keranews.org/news/2024-11-21/goodbye-crypto-hello-ai-denton-data-center-is-changing-focus-planning-to-grow-and-use-more-power"
+        },
+        {
+          "date": "2025-02-26",
+          "kind": "announcement",
+          "summary": "Core Scientific and CoreWeave announced a $1.2 billion expansion at the Denton site adding 70 MW of contracted power, bringing the facility's total critical IT load to approximately 260 MW; CEO Adam Sullivan called it 'one of the largest GPU supercomputers in North America.'",
+          "source": "https://investors.corescientific.com/news-events/press-releases/detail/110/core-scientific-and-coreweave-announce-1-2-billion-expansion-at-denton-tx-site"
+        },
+        {
+          "date": "2025-07-07",
+          "kind": "announcement",
+          "summary": "CoreWeave announced a definitive agreement to acquire Core Scientific in an all-stock transaction valued at approximately $9 billion, gaining access to roughly 1.3 GW of data center capacity including the Denton site.",
+          "source": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-to-Acquire-Core-Scientific/default.aspx"
+        },
+        {
+          "date": "2025-10-30",
+          "kind": "vote",
+          "summary": "Core Scientific shareholders voted against the $9 billion CoreWeave merger at a special meeting; the merger agreement was terminated immediately and Core Scientific remained an independent public company.",
+          "source": "https://investors.corescientific.com/news-events/press-releases/detail/124/core-scientific-announces-termination-of-merger-agreement-with-coreweave"
+        },
+        {
+          "date": "2026-01-14",
+          "kind": "operational",
+          "summary": "CoreWeave reported deploying more than 16,000 GPUs at the Denton facility for OpenAI workloads, recovering from construction delays that had left only a few racks delivered as of November 2025; over 2,000 GPUs were brought online in a single day in December 2025.",
+          "source": "https://theenergymag.com/news/2026-01-14/coreweave-gpu-openai"
+        },
+        {
+          "date": "2026-04-03",
+          "kind": "coverage",
+          "summary": "The Denton Record-Chronicle reported growing community debate over data center development, with residents raising concerns about noise, environmental impact, and the pace of growth at Core Scientific's facility and other proposed sites.",
+          "source": "https://dentonrc.com/news/denton/denton-s-data-center-boom-sparks-debate-over-growth-and-resources/article_edd8a259-a067-45b1-bd99-7aefa775f940.html"
+        },
+        {
+          "date": "2026-05-07",
+          "kind": "coverage",
+          "summary": "Community Impact reported the Core Scientific campus holds a lease on 78.85 acres of city land with up to 394 MW of power allocation and a $6.1 billion real property investment; the expansion begun in November 2024 is expected to be completed by 2027.",
+          "source": "https://communityimpact.com/dallas-fort-worth/denton/development/2026/05/07/data-centers-rise-in-denton/"
+        },
+        {
+          "date": "2026-08-05",
+          "kind": "hearing",
+          "summary": "Denton City Council voted 4-3 to direct staff to proceed with a possible 90-day data center moratorium and stricter development code amendments; public hearings were tentatively set for September 22 and October 27, 2026, with final adoption targeted for December 2, 2026.",
+          "source": "https://www.keranews.org/news/2026-08-05/denton-moves-toward-data-center-moratorium-city-council-weighs-stricter-development-rules"
+        }
+      ]
     },
     {
       "id": "google-kansas-city-east",
@@ -5059,7 +5660,62 @@
       "source": "https://ecode360.com/MI6405/laws/LF1665983.pdf",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2017-05-01",
+          "kind": "filing",
+          "summary": "Google, operating as Sharka LLC, purchased 375 acres in Midlothian's Railport Business Park in May 2017 for a future data center campus.",
+          "source": "https://baxtel.com/data-center/google-midlothian-tx"
+        },
+        {
+          "date": "2018-07-01",
+          "kind": "incentive",
+          "summary": "Ellis County approved a 10-year tax abatement agreement with Google for the Midlothian data center site in July 2018.",
+          "source": "https://baxtel.com/data-center/google-midlothian-tx"
+        },
+        {
+          "date": "2018-07-31",
+          "kind": "announcement",
+          "summary": "Google confirmed its 375-acre land purchase in Midlothian; the city offered an 85% real property tax abatement and 100% personal property tax abatement for 10 years, with a minimum $500 million capital investment and 40 full-time jobs required within five years.",
+          "source": "https://www.cbsnews.com/dfw/news/google-buys-land-north-texas/"
+        },
+        {
+          "date": "2019-06-14",
+          "kind": "announcement",
+          "summary": "Google announced a $600 million investment in a new data center in Midlothian, its first in Texas, promising at least 50 full-time jobs and a $100,000 STEM grant to Midlothian Independent School District.",
+          "source": "https://www.foxbusiness.com/technology/google-invests-600m-texas-data-center"
+        },
+        {
+          "date": "2019-06-14",
+          "kind": "construction",
+          "summary": "Google broke ground on its $600 million, 282,000-sq-ft first data center building (Building 1) at 3800 Railport Parkway in Midlothian, repurposing a former Toys R Us warehouse site.",
+          "source": "https://dallasinnovates.com/google-expands-further-into-texas-with-a-new-600m-midlothian-data-center/"
+        },
+        {
+          "date": "2024-08-15",
+          "kind": "announcement",
+          "summary": "Google announced a $1 billion data center expansion in Midlothian, bringing total North Texas investment to $2.7 billion; Sen. Ted Cruz and Rep. Jake Ellzey attended the announcement.",
+          "source": "https://www.nbcdfw.com/news/politics/lone-star-politics/google-data-center-midlothian/3622572/"
+        },
+        {
+          "date": "2025-11-14",
+          "kind": "announcement",
+          "summary": "Google CEO Sundar Pichai and Gov. Greg Abbott announced a $40 billion Texas data center investment at the Midlothian campus, with continued expansion of the Midlothian site and Dallas cloud region confirmed alongside three new campuses elsewhere in the state.",
+          "source": "https://gov.texas.gov/news/post/governor-abbott-google-announce-40-billion-investment-in-texas"
+        },
+        {
+          "date": "2025-12-08",
+          "kind": "permit",
+          "summary": "Google registered its fifth data center building (Sharka Data Center Building 5) at 3441 Railport Parkway in Midlothian, a 288,000-sq-ft facility with an estimated $880 million investment.",
+          "source": "https://finance.yahoo.com/news/north-texas-city-earmarked-nearly-220200323.html"
+        },
+        {
+          "date": "2026-01-01",
+          "kind": "construction",
+          "summary": "Construction began in late January 2026 on Google's Building 5 at the Midlothian campus, with an estimated completion date of February 2027.",
+          "source": "https://baxtel.com/data-center/google-midlothian-5"
+        }
+      ]
     },
     {
       "id": "qts-richmond-2",
@@ -5189,7 +5845,74 @@
       "source": "https://jedunn.com/projects/meta-temple-data-center/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2022-03-31",
+          "kind": "announcement",
+          "summary": "Meta announces it will build an $800 million, approximately 900,000-square-foot hyperscale data center on 393 acres off NW H K Dodgen Loop and Industrial Blvd in Temple, supporting about 100 permanent jobs with construction starting in spring 2022.",
+          "source": "https://www.prnewswire.com/news-releases/meta-to-open-hyperscale-data-center-in-temple-texas-301514530.html"
+        },
+        {
+          "date": "2022-03-31",
+          "kind": "announcement",
+          "summary": "City of Temple announces Meta's new hyperscale data center; Mayor Tim Davis calls it a significant win for the community; Temple EDC President Adrian Cannady and Governor Greg Abbott also praised the project.",
+          "source": "https://www.templetx.gov/news_detail_T13_R305.php"
+        },
+        {
+          "date": "2022-12-15",
+          "kind": "construction",
+          "summary": "KWTX reports Meta is pausing construction at its Temple facility, stating it decided to change the design; a spokesperson said Meta remains committed to the community and local stakeholders.",
+          "source": "https://www.kwtx.com/2022/12/16/facebooks-parent-company-meta-pausing-construction-new-facility-temple/"
+        },
+        {
+          "date": "2022-12-19",
+          "kind": "coverage",
+          "summary": "Construction Dive reports Meta paused construction at its $800 million Temple data center to change the design; the pause followed Meta's November 2022 mass layoffs; general contractor is JE Dunn.",
+          "source": "https://www.constructiondive.com/news/meta-pauses-800m-data-center-project-temple-texas/639081/"
+        },
+        {
+          "date": "2023-10-20",
+          "kind": "construction",
+          "summary": "Construction Review Online reports Meta restarted work at Temple and Kuna after halting globally to redesign data centers for denser GPU installations for AI applications.",
+          "source": "https://constructionreviewonline.com/construction-resumes-at-meta-data-centres-across-the-country/"
+        },
+        {
+          "date": "2023-10-23",
+          "kind": "construction",
+          "summary": "Construction Dive reports JE Dunn resumed construction on Meta's Temple data center after the December 2022 pause; Meta says the AI-optimized redesign is 31% less expensive and takes half the time to build; completion shifted from 2025 to 2026.",
+          "source": "https://www.constructiondive.com/news/je-dunn-meta-data-center-temple-texas/697450/"
+        },
+        {
+          "date": "2025-04-04",
+          "kind": "coverage",
+          "summary": "GovTech reports Minnesota-based Oppidan Investment Co. purchased 10 acres from the Temple Economic Development Corp. in March 2025 and plans a $31 million, 61,554-square-foot data center at 2325 Eberhardt Road directly across from Meta's campus.",
+          "source": "https://www.govtech.com/products/new-data-center-coming-to-temple-texas-near-meta-campus"
+        },
+        {
+          "date": "2026-07-22",
+          "kind": "operational",
+          "summary": "Meta officially opens its $1.2 billion AI-optimized data center on Industrial Boulevard in Temple; the 760,000-square-foot, two-building campus supports nearly 100 operations jobs and employed over 1,200 trade workers at peak construction.",
+          "source": "https://www.kwtx.com/2026/07/22/meta-goes-live-temple-with-12-billion-ai-data-center/"
+        },
+        {
+          "date": "2026-07-22",
+          "kind": "incentive",
+          "summary": "At the opening event Meta announced a $400,000 grant as part of $1.7 million in total direct funding to Bell County-area schools and nonprofits, plus $8 million in local public water and wastewater improvements.",
+          "source": "https://www.kwtx.com/2026/07/22/meta-goes-live-temple-with-12-billion-ai-data-center/"
+        },
+        {
+          "date": "2026-07-30",
+          "kind": "coverage",
+          "summary": "Spectrum News reports the Temple facility is Meta's first AI-optimized data center globally to go online; Meta's Bradley Davis says it uses a closed-loop liquid cooling system requiring zero water for most of the year; Joe Royer of Temple Stands Together community opposition group raised concerns about water consumption, power demand, and heat island effects.",
+          "source": "https://spectrumlocalnews.com/tx/south-texas-el-paso/news/2026/07/30/temple-data-center"
+        },
+        {
+          "date": "2026-08-05",
+          "kind": "coverage",
+          "summary": "Texas Scorecard reports Meta declined to specify exact water and power requirements for the Temple facility; community opposition voiced on Meta's Facebook page with commenters stating they do not want the data center.",
+          "source": "https://texasscorecard.com/local/1-2b-meta-data-center-opens-in-temple/"
+        }
+      ]
     },
     {
       "id": "meta-cheyenne",
@@ -5319,7 +6042,62 @@
       "source": "https://investor.galaxy.com/news/news-details/2025/Galaxy-Announces-Third-Quarter-2025-Financial-Results/default.aspx",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2022-12-01",
+          "kind": "financing",
+          "summary": "Galaxy Digital completed its acquisition of the Helios data center campus in Dickens County, Texas, from Argo Blockchain for approximately $65 million; the facility had begun bitcoin mining operations in May 2022.",
+          "source": "https://www.kcbd.com/2025/04/10/firm-transform-bitcoin-mining-facility-dickens-co-into-ai-data-center/"
+        },
+        {
+          "date": "2025-03-28",
+          "kind": "announcement",
+          "summary": "Galaxy Digital announced a 15-year lease agreement with CoreWeave to deliver 133 MW of critical IT load (approximately 200 MW gross) at the Helios campus for AI and HPC operations, valued at approximately $4.5 billion over the lease term.",
+          "source": "https://www.crowdfundinsider.com/2025/04/238847-galaxy-digital-announces-commitment-with-coreweave-to-host-additional-ai-and-computing-infrastructure/"
+        },
+        {
+          "date": "2025-04-09",
+          "kind": "coverage",
+          "summary": "KCBD reported that Galaxy is demolishing some of the existing data center shell and unplugging mining machines to begin converting the Helios campus from bitcoin mining to AI infrastructure for CoreWeave.",
+          "source": "https://www.kcbd.com/2025/04/10/firm-transform-bitcoin-mining-facility-dickens-co-into-ai-data-center/"
+        },
+        {
+          "date": "2025-04-25",
+          "kind": "announcement",
+          "summary": "CoreWeave exercised its first option to expand at Helios, adding 260 MW of incremental critical IT load (Phase II) under similar economic terms, bringing total contracted capacity to approximately 393 MW with deliveries expected throughout 2027.",
+          "source": "https://www.crowdfundinsider.com/2025/04/238847-galaxy-digital-announces-commitment-with-coreweave-to-host-additional-ai-and-computing-infrastructure/"
+        },
+        {
+          "date": "2025-08-01",
+          "kind": "financing",
+          "summary": "Galaxy Digital closed a $1.4 billion project financing facility in August 2025 to accelerate development of the Helios AI data center campus, supplemented by $350 million of Galaxy's own capital.",
+          "source": "https://introl.com/blog/galaxy-helios-1-6gw-ercot-approval-texas-data-center-2026"
+        },
+        {
+          "date": "2026-01-15",
+          "kind": "filing",
+          "summary": "ERCOT approved an additional 830 MW of interconnection capacity for the Helios campus, bringing total approved capacity to 1.6 GW — described as the largest single-site allocation in ERCOT's large load interconnection queue.",
+          "source": "https://introl.com/blog/galaxy-helios-1-6gw-ercot-approval-texas-data-center-2026"
+        },
+        {
+          "date": "2026-04-01",
+          "kind": "operational",
+          "summary": "Rent under the Phase I CoreWeave lease commenced in Q2 2026, with Galaxy delivering 133 MW of critical IT load (approximately 200 MW gross power) at the Helios campus.",
+          "source": "https://www.theblock.co/post/407396/galaxy-delivers-133-mw-of-critical-it-load-to-coreweave-as-helios-bitcoin-mine-turns-ai-hub"
+        },
+        {
+          "date": "2026-07-07",
+          "kind": "coverage",
+          "summary": "The Block reported that Galaxy delivered Phase I (133 MW critical IT) to CoreWeave on budget and on schedule, with Phase II (260 MW) under construction and data hall deliveries expected in H1 2027.",
+          "source": "https://www.theblock.co/post/407396/galaxy-delivers-133-mw-of-critical-it-load-to-coreweave-as-helios-bitcoin-mine-turns-ai-hub"
+        },
+        {
+          "date": "2026-08-15",
+          "kind": "coverage",
+          "summary": "The Texas Spur reported on the Galaxy-CoreWeave deal at the Helios facility in northern Dickens County, noting Galaxy is building out Phase II and that CoreWeave's largest customer is Microsoft.",
+          "source": "https://www.thetexasspur.com/news/galaxy-inks-major-deal-dickens-helios-host-services-coreweave"
+        }
+      ]
     },
     {
       "id": "google-arcola",
@@ -5527,7 +6305,44 @@
       "source": "https://www.mysanantonio.com/business/article/google-texas-data-center-21236627.php",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2023-08-31",
+          "kind": "announcement",
+          "summary": "Google announced a new data center campus in Red Oak, Texas, its second site in Ellis County after Midlothian, with at least $600 million planned investment over multiple years and $330 million committed for 2023; the project was expected to create nearly 1,200 construction jobs and 30 permanent positions.",
+          "source": "https://www.focusdailynews.com/google-is-building-new-data-center-in-red-oak-investing-330-million-this-year-in-texas/"
+        },
+        {
+          "date": "2023-08-31",
+          "kind": "incentive",
+          "summary": "Google awarded a $150,000 grant to Red Oak ISD to fund STEM expansion including Project Lead the Way engineering, robotics, and science initiatives at secondary schools, announced alongside the data center campus.",
+          "source": "https://www.focusdailynews.com/roisd-receives-150k-from-google-grant-funding-will-help-stem-expansion/"
+        },
+        {
+          "date": "2023-09-06",
+          "kind": "coverage",
+          "summary": "Dallas Innovates reported Google's $600 million Red Oak data center would complement its existing Midlothian facility and the Dallas cloud region, with VP of Government Affairs Cris Turner stating the infrastructure supports AI innovations and Google Cloud business.",
+          "source": "https://dallasinnovates.com/google-expanding-its-north-texas-presence-with-600m-investment-in-new-red-oak-data-center/"
+        },
+        {
+          "date": "2023-10-05",
+          "kind": "incentive",
+          "summary": "Google awarded $100,000 grants each to the Red Oak and Midlothian public libraries; Red Oak's grant funded a makerspace with 3D printers and robotics technology for community STEM exploration.",
+          "source": "https://www.focusdailynews.com/midlothian-and-red-oak-public-libraries-each-awarded-100000-grants-from-google/"
+        },
+        {
+          "date": "2024-08-15",
+          "kind": "announcement",
+          "summary": "Google announced over $1 billion in Texas investment for 2024, targeting the Midlothian and Red Oak data center campuses, bringing its total Texas investment past $2.7 billion; the company also announced 375 MW of carbon-free solar power purchase agreements for ERCOT.",
+          "source": "https://www.focusdailynews.com/google-announces-more-than-1-billion-investment-in-texas-this-year/"
+        },
+        {
+          "date": "2025-11-14",
+          "kind": "operational",
+          "summary": "As part of a $40 billion Texas investment announcement through 2027, Google disclosed that the first building of its Red Oak campus in Ellis County is now operational; the broader plan includes new campuses in Armstrong, Haskell, and Wilbarger counties plus over 6,200 MW of new energy generation.",
+          "source": "https://dallasinnovates.com/google-bets-40-billion-on-texas-buildout-of-u-s-ai-infrastructure/"
+        }
+      ]
     },
     {
       "id": "meta-gallatin",
@@ -5792,7 +6607,38 @@
       "source": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2023013247",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2018-08-24",
+          "kind": "filing",
+          "summary": "Microsoft registered TDLR project EABPRJB8824650 (SAT11-14) for three 225,000 sq ft data center buildings at 15000 Lambda Drive, San Antonio, with an estimated cost of $62 million and completion date of December 2023, designed by Corgan Associates.",
+          "source": "https://www.tdlr.texas.gov/TABS/Search/Project/EABPRJB8824650"
+        },
+        {
+          "date": "2023-03-03",
+          "kind": "filing",
+          "summary": "Microsoft registered TDLR project TABS2023013247 for SAT40, a 153,227 sq ft data center at 15000 Lambda Drive, San Antonio (Bexar County), with an estimated cost of $175.9 million, designed by Page Southerland Page, with construction scheduled from June to September 2023.",
+          "source": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2023013247"
+        },
+        {
+          "date": "2023-06-15",
+          "kind": "construction",
+          "summary": "Construction began on the SAT40 data center building shell at 15000 Lambda Drive per the TDLR filing, with a scheduled completion date of September 15, 2023.",
+          "source": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2023013247"
+        },
+        {
+          "date": "2023-08-07",
+          "kind": "coverage",
+          "summary": "San Antonio Report reported that Microsoft had built at least seven data centers in San Antonio and one in Medina County over the prior eight years, investing over $1.2 billion; the article identified SAT40 at 15000 Lambda Drive in Texas Research Park as a $175.9 million project on 70 acres with Turner Construction as the builder.",
+          "source": "https://sanantonioreport.org/microsoft-data-centers-san-antonio-region/"
+        },
+        {
+          "date": "2025-12-28",
+          "kind": "coverage",
+          "summary": "San Antonio Report quoted District 6 Councilmember Ric Galvan raising concerns about data center energy demands, limited job creation, industry opacity, and noise impacts in the far west side area where Microsoft operates, questioning what economic return the city receives from tax incentive deals.",
+          "source": "https://sanantonioreport.org/san-antonio-data-center-growth-district-6-ric-galvan/"
+        }
+      ]
     },
     {
       "id": "stack-infrastructure-nva02",
@@ -6061,7 +6907,38 @@
       "source": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2021019142",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2021-07-06",
+          "kind": "filing",
+          "summary": "Microsoft registered SAT14 Phase 1 (project TABS2021019142) with the Texas Department of Licensing and Regulation for new construction of two building shells (152,000 sq ft and 107,000 sq ft) totaling 259,000 sq ft at 3545 Wiseman Boulevard, San Antonio, Bexar County, with an estimated cost of $154.9 million.",
+          "source": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2021019142"
+        },
+        {
+          "date": "2021-10-01",
+          "kind": "construction",
+          "summary": "Construction began on SAT14 Phase 1 at 3545 Wiseman Boulevard, San Antonio, per the TDLR project filing; the design firm was Page Southerland Page of Austin.",
+          "source": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2021019142"
+        },
+        {
+          "date": "2022-12-01",
+          "kind": "construction",
+          "summary": "SAT14 Phase 1 construction was completed and the TDLR project was closed, per the filing's recorded completion date.",
+          "source": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2021019142"
+        },
+        {
+          "date": "2026-06-01",
+          "kind": "report",
+          "summary": "Microsoft and EY published a June 2026 economic impact report for the San Antonio datacenter campus (Bexar and Medina Counties) showing $2.34 billion in construction economic activity since 2016, operations since 2019, 635 direct Microsoft jobs in 2025, $48.4 million in incremental tax revenue in Bexar and Medina Counties, and Microsoft as the number-one taxpayer in both counties.",
+          "source": "https://local.microsoft.com/wp-content/uploads/2026/06/Economic-Impact_SanAntonioTX_FY26Q4.pdf"
+        },
+        {
+          "date": "2026-08-10",
+          "kind": "filing",
+          "summary": "Microsoft sent a letter to Governor Greg Abbott stating it has operated datacenters in Texas since 2016, hosts over 635 employees at its own facilities with 1,600-plus on-site contractors, and described its Community-First Infrastructure initiative and a behind-the-meter natural gas project in West Texas with Chevron.",
+          "source": "https://local.microsoft.com/wp-content/uploads/2026/08/TX_AbbottAug2026.pdf"
+        }
+      ]
     },
     {
       "id": "vantage-tx1",
@@ -6087,7 +6964,56 @@
       "source": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2024007561",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2023-12-15",
+          "kind": "filing",
+          "summary": "Vantage Data Centers TX1 LLC filed TDLR architectural barriers project TABS2024007561 for 'Data Center Building TX11' at 14720 Omicron Dr, San Antonio — a 242,667 sq ft, 32 MW, two-story new-construction facility with estimated cost of $95.8 million and projected completion September 2026.",
+          "source": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2024007561"
+        },
+        {
+          "date": "2026-02-28",
+          "kind": "construction",
+          "summary": "A transformer explosion near the Vantage Data Centers site in San Antonio injured one construction worker; SAPD and SAFD responded to the incident.",
+          "source": "https://news4sanantonio.com/news/local/transformer-explosion-near-vantage-data-centers-injures-construction-worker"
+        },
+        {
+          "date": "2026-05-28",
+          "kind": "hearing",
+          "summary": "A TCEQ public hearing was held at a Marriott near SeaWorld regarding Vantage's air-quality permit for its Rogers Road (5207 Rogers Rd) facility; residents raised concerns about diesel generator emissions, noise, light pollution, and water usage. Vantage VP Michael Duplantis represented the company.",
+          "source": "https://www.sacurrent.com/news/a-special-place-in-hell-san-antonio-residents-push-back-against-far-west-side-data-center"
+        },
+        {
+          "date": "2026-06-08",
+          "kind": "coverage",
+          "summary": "Deceleration.news reported that Vantage's two West Side San Antonio campuses (Omicron Drive and Rogers Road) were bringing major new pollution sources to the area, including on-site natural gas power plants and over 150 diesel backup generators.",
+          "source": "https://deceleration.news/2026/06/08/data-centers-bringing-major-new-pollution-sources-to-san-antonios-west-side/"
+        },
+        {
+          "date": "2026-06-11",
+          "kind": "protest",
+          "summary": "San Antonio Current reported residents pushing back against the far West Side Vantage data center; the Rogers Road facility (360,000 sq ft, ~$157 million) was described as already constructed and partly operational, with 65 diesel backup generators and its own gas power plant.",
+          "source": "https://www.sacurrent.com/news/a-special-place-in-hell-san-antonio-residents-push-back-against-far-west-side-data-center"
+        },
+        {
+          "date": "2026-07-22",
+          "kind": "lawsuit",
+          "summary": "Environmental Integrity Project, Sierra Club, and Public Citizen filed a notice of intent to sue Vantage and VoltaGrid under the Clean Air Act, alleging the Omicron Drive and Rogers Road campuses (combined 423 MW of generation, 151 diesel generators) improperly obtained minor-source permits to avoid major-source pollution controls; potential fines cited at up to $124,426 per day.",
+          "source": "https://environmentalintegrity.org/news/environmental-groups-take-legal-action-against-illegal-data-center-and-power-plant-projects-in-san-antonio/"
+        },
+        {
+          "date": "2026-07-28",
+          "kind": "coverage",
+          "summary": "Texas Public Radio reported environmental groups threatening lawsuit over the two West Side Vantage campuses at 14270 Omicron Drive and 5207 Rogers Road; a TCEQ public hearing on Vantage's proposed federal operating permit for the Omicron Drive campus was scheduled for August 17, 2026.",
+          "source": "https://www.tpr.org/environment/2026-07-28/environmental-groups-threaten-lawsuit-over-west-side-san-antonio-data-centers"
+        },
+        {
+          "date": "2026-07-29",
+          "kind": "coverage",
+          "summary": "WOAI/News4SA reported that Vantage obtained minor pollution source permits (typically for dry cleaners and gas stations) for its two San Antonio data center complexes, allowing it to bypass major-source pollution controls and community notification requirements.",
+          "source": "https://news4sanantonio.com/news/local/texas-accused-of-allowing-data-centers-to-use-loophole-in-pollution-regulations"
+        }
+      ]
     },
     {
       "id": "coreweave-dalton-1-2",
@@ -6217,7 +7143,92 @@
       "source": "https://www.bloomberg.com/news/articles/2026-03-06/oracle-and-openai-end-plans-to-expand-flagship-data-center",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-07-26",
+          "kind": "announcement",
+          "summary": "Crusoe Energy Systems announced it is building a 200 MW data center at the Lancium Clean Campus outside Abilene, Texas.",
+          "source": "https://www.datacenterknowledge.com/build-design/data-center-news-roundup-h2-reports-released-heat-waves-add-to-industry-woes"
+        },
+        {
+          "date": "2024-10-15",
+          "kind": "financing",
+          "summary": "Crusoe Energy Systems, Blue Owl Capital, and Primary Digital Infrastructure announced a $3.4 billion joint venture to fund and operate a 206 MW data center in Abilene, Texas.",
+          "source": "https://www.datacenterknowledge.com/deals/data-center-news-roundup-uk-investments-ocp-summit-recent-deals"
+        },
+        {
+          "date": "2024-11-21",
+          "kind": "financing",
+          "summary": "Blackstone closed a $500 million equity investment in Lancium, whose first campus in Abilene is slated to come online in 2025; the Lancium project was originally announced in 2021 for cryptocurrency mining before pivoting to AI.",
+          "source": "https://www.datacenterknowledge.com/investing/blackstone-invests-500-million-in-lancium-ai-buildout"
+        },
+        {
+          "date": "2024-11-21",
+          "kind": "financing",
+          "summary": "An SEC filing showed Crusoe Energy secured $686 million of a targeted $818 million raise from 70 investors; the Abilene campus is expected to be leased to Oracle, which will in turn rent it to Microsoft and OpenAI.",
+          "source": "https://techcrunch.com/2024/11/21/crusoe-a-rumored-openai-data-center-supplier-has-secured-686m-in-new-funds-filing-shows/"
+        },
+        {
+          "date": "2025-01-22",
+          "kind": "announcement",
+          "summary": "OpenAI, SoftBank, and Oracle announced the Stargate project at the White House, a venture to invest up to $500 billion in AI data center infrastructure including 10 data centers, with one already under construction in Texas.",
+          "source": "https://www.datacenterknowledge.com/ai-data-centers/opening-the-stargate-tech-giants-to-invest-500b-in-ai-data-center-infrastructure"
+        },
+        {
+          "date": "2025-02-06",
+          "kind": "construction",
+          "summary": "OpenAI confirmed it was breaking ground on Stargate's first site in Abilene, with a requirement to create at least 57 full-time positions earning an average wage of $57,600 annually; OpenAI VP Chris Lehane called Texas 'the flagship' for the venture.",
+          "source": "https://www.datacenterknowledge.com/data-center-site-selection/stargate-openai-eyeing-more-data-centers-in-texas-other-states"
+        },
+        {
+          "date": "2025-02-06",
+          "kind": "financing",
+          "summary": "Newmark arranged $2.3 billion in financing for the 206 MW Abilene data center on behalf of Blue Owl Capital, Crusoe Energy Systems, and Primary Digital Infrastructure.",
+          "source": "https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-february-2025"
+        },
+        {
+          "date": "2025-03-07",
+          "kind": "announcement",
+          "summary": "The Abilene Stargate site was expected to house 64,000 Nvidia GB200 chips by end of 2026, with an initial 16,000-chip deployment targeted for summer 2025; Oracle was reported to be in charge of operating the supercomputer.",
+          "source": "https://www.datacenterknowledge.com/data-center-chips/openai-oracle-eye-nvidia-chips-worth-billions-for-stargate-site"
+        },
+        {
+          "date": "2025-06-01",
+          "kind": "construction",
+          "summary": "In June 2025, Crusoe, Blue Owl Capital, and Primary Digital Infrastructure entered the second phase of a $15 billion joint venture for a 1.2 GW data center in Abilene; construction on six additional buildings began in March 2025, targeted to go live by mid-2026.",
+          "source": "https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-june-2025"
+        },
+        {
+          "date": "2025-09-24",
+          "kind": "announcement",
+          "summary": "At a press conference in Abilene, OpenAI, Oracle, and SoftBank announced five new Stargate data center sites totaling 7 GW, including an additional 600 MW expansion near the original Abilene location.",
+          "source": "https://www.datacenterknowledge.com/data-center-site-selection/openai-expands-stargate-with-five-new-data-center-sites-across-us"
+        },
+        {
+          "date": "2026-03-06",
+          "kind": "withdrawal",
+          "summary": "Bloomberg reported that Oracle and OpenAI ended plans to expand the flagship Abilene data center amid financing complexity and revised demand assumptions.",
+          "source": "https://www.bloomberg.com/news/articles/2026-03-06/oracle-and-openai-end-plans-to-expand-flagship-data-center"
+        },
+        {
+          "date": "2026-03-27",
+          "kind": "announcement",
+          "summary": "Crusoe announced a 900 MW expansion of its Abilene AI campus as an 'AI Factory' for Microsoft, with behind-the-meter power generation and battery storage, bringing total planned campus capacity to approximately 2.1 GW.",
+          "source": "https://www.datacenterknowledge.com/build-design/crusoe-expands-abilene-ai-campus-with-new-900mw-ai-factory-for-microsoft"
+        },
+        {
+          "date": "2026-06-25",
+          "kind": "coverage",
+          "summary": "Data Center Knowledge reported that Crusoe is adding a 900 MW AI data center to its Abilene campus for Microsoft, bringing total planned capacity to 2.1 GW, as part of a broader analysis of Texas becoming the largest data center market.",
+          "source": "https://www.datacenterknowledge.com/regulations/texas-ai-data-centers-coverage-hub-power-policy-and-progress"
+        },
+        {
+          "date": "2026-06-30",
+          "kind": "report",
+          "summary": "A Stargate progress report noted the 1,100-acre Abilene campus moved from groundworks to energization faster than comparable campuses but suffered weather-related outages; Microsoft partnered with Crusoe to develop additional buildings, transforming the site into a multi-tenant AI infrastructure hub.",
+          "source": "https://www.datacenterknowledge.com/ai-data-centers/stargate-update-ai-s-biggest-data-center-buildout-meets-reality"
+        }
+      ]
     },
     {
       "id": "goodnight",
@@ -6245,10 +7256,22 @@
       "verified": true,
       "events": [
         {
+          "date": "2024-01-01",
+          "kind": "operational",
+          "summary": "Serena Energy's 265.5 MW Goodnight Wind farm came online in 2024 adjacent to the Goodnight campus site, Latitude Media reported, later becoming the basis for Crusoe's co-location proposal.",
+          "source": "https://www.latitudemedia.com/news/how-a-crusoe-google-campus-became-texas-co-location-test-case"
+        },
+        {
           "date": "2025-05-01",
           "kind": "construction",
           "summary": "ABC7 Amarillo reported that construction on the Armstrong County data center began by Crusoe Energy in May 2025, with completion anticipated by late 2028 or early 2029.",
           "source": "https://abc7amarillo.com/news/local/google-announces-new-data-center-in-armstrong-county-texas-judge-adam-ensey-crusoe-energy-ercot-southwest-power-pool-claude-texas"
+        },
+        {
+          "date": "2025-10-01",
+          "kind": "filing",
+          "summary": "In late October 2025, Crusoe and Goodnight Wind submitted a co-location (net metering) proposal to the Public Utility Commission of Texas under SB 6, seeking to share a single interconnection point between the 265.5 MW wind farm and the first phase of the data center, Latitude Media reported.",
+          "source": "https://www.latitudemedia.com/news/how-a-crusoe-google-campus-became-texas-co-location-test-case"
         },
         {
           "date": "2025-10-17",
@@ -6269,10 +7292,34 @@
           "source": "https://abc7amarillo.com/news/local/google-announces-new-data-center-in-armstrong-county-texas-judge-adam-ensey-crusoe-energy-ercot-southwest-power-pool-claude-texas"
         },
         {
+          "date": "2026-01-01",
+          "kind": "filing",
+          "summary": "Crusoe Energy filed a 465-page application with TCEQ in January 2026 to build a 933 MW off-grid natural gas power plant at the Goodnight campus designed to power at least two buildings, which could emit up to 4.5 million tons of CO2 per year, exceeding San Francisco's entire annual emissions, Yahoo/The Guardian reported.",
+          "source": "https://www.yahoo.com/news/articles/google-source-natural-gas-power-132700912.html"
+        },
+        {
+          "date": "2026-03-15",
+          "kind": "financing",
+          "summary": "In mid-March 2026, Crusoe sold the wind-co-located portion of the Goodnight campus to Ensign Infrastructure, a Delaware-incorporated special purpose vehicle, Latitude Media reported.",
+          "source": "https://www.latitudemedia.com/news/how-a-crusoe-google-campus-became-texas-co-location-test-case"
+        },
+        {
           "date": "2026-03-18",
           "kind": "coverage",
           "summary": "NewsChannel10 reported a grass fire near Claude, sparked when a vehicle left County Road 19 and caught fire, spread to 251 acres, prompting evacuation of the data center about half a mile away and threatening five homes.",
           "source": "https://www.newschannel10.com/2026/03/18/crews-responding-fire-near-claude-data-center-evacuated/"
+        },
+        {
+          "date": "2026-03-27",
+          "kind": "ruling",
+          "summary": "The Public Utility Commission of Texas adopted final net metering rules for co-located data centers of 75 MW or larger under SB 6, requiring mandatory emergency curtailment within 30 minutes and prohibiting co-located loads from demand response programs, Latitude Media reported on April 3.",
+          "source": "https://www.latitudemedia.com/news/how-a-crusoe-google-campus-became-texas-co-location-test-case"
+        },
+        {
+          "date": "2026-04-02",
+          "kind": "report",
+          "summary": "Cleanview founder Michael Thomas reported that satellite imagery showed construction of Crusoe's 933 MW gas plant at the Goodnight campus was 'well underway,' calling it 'one of the first direct investments in fossil fuel infrastructure' by Google, as covered by Yahoo/The Guardian.",
+          "source": "https://www.yahoo.com/news/articles/google-source-natural-gas-power-132700912.html"
         },
         {
           "date": "2026-04-07",
@@ -6416,7 +7463,110 @@
       "source": "https://www.datacenterdynamics.com/en/news/softbanks-sb-energy-to-build-and-operate-openais-12gw-stargate-data-center-in-milam-county-texas/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-01-21",
+          "kind": "announcement",
+          "summary": "President Trump announced the Stargate Project, a $500 billion AI infrastructure joint venture by OpenAI, SoftBank, and Oracle, with initial deployment in Texas.",
+          "source": "https://www.sbenergy.com/press-releases/openai-and-softbank-group-partner-with-sb-energy"
+        },
+        {
+          "date": "2025-01-28",
+          "kind": "announcement",
+          "summary": "Data Center Dynamics reported that solar power and battery storage systems are planned for the Stargate AI data center campus in Milam County.",
+          "source": "https://www.datacenterdynamics.com/en/news/solar-power-batteries-planned-for-openais-stargate-ai-data-center-campus/"
+        },
+        {
+          "date": "2025-05-12",
+          "kind": "announcement",
+          "summary": "Austin Business Journal reported a $3 billion data center campus planned in Milam County by SB Energy, before a tenant had been publicly identified.",
+          "source": "https://www.bizjournals.com/austin/news/2025/05/12/data-center-campus-milam-county.html"
+        },
+        {
+          "date": "2025-06-09",
+          "kind": "coverage",
+          "summary": "The Real Deal reported that SB Energy's planned $3B Milam County data center was still searching for an end user and seeking tax breaks.",
+          "source": "https://therealdeal.com/texas/2025/06/10/sb-energy-3b-data-center-milam-county/"
+        },
+        {
+          "date": "2025-09-23",
+          "kind": "announcement",
+          "summary": "OpenAI, Oracle, and SoftBank announced an expansion of Stargate with five new AI data center sites across the U.S., including the Milam County, Texas campus.",
+          "source": "https://www.sbenergy.com/press-releases/openai-and-softbank-group-partner-with-sb-energy"
+        },
+        {
+          "date": "2025-09-25",
+          "kind": "coverage",
+          "summary": "Austin Business Journal reported that OpenAI would occupy the planned $3B Milam County data center hub as part of the Stargate project.",
+          "source": "https://www.bizjournals.com/austin/news/2025/09/25/openai-milam-county-data-center-hub.html"
+        },
+        {
+          "date": "2025-12-03",
+          "kind": "incentive",
+          "summary": "Austin Business Journal reported the OpenAI data center could create hundreds of jobs as part of a $135 million incentive deal in Milam County.",
+          "source": "https://www.bizjournals.com/austin/news/2025/12/03/openai-data-center-milam-county-135m-incentive.html"
+        },
+        {
+          "date": "2026-01-09",
+          "kind": "financing",
+          "summary": "OpenAI and SoftBank Group each invested $500 million in SB Energy; OpenAI leased 1.2 GW of data center capacity for initial buildout in Milam County, Texas, with facilities expected to enter service starting in 2026.",
+          "source": "https://www.sbenergy.com/press-releases/openai-and-softbank-group-partner-with-sb-energy"
+        },
+        {
+          "date": "2026-01-12",
+          "kind": "coverage",
+          "summary": "Data Center Dynamics reported that SoftBank's SB Energy would build and operate OpenAI's 1.2 GW Stargate data center in Milam County, Texas.",
+          "source": "https://www.datacenterdynamics.com/en/news/softbanks-sb-energy-to-build-and-operate-openais-12gw-stargate-data-center-in-milam-county-texas/"
+        },
+        {
+          "date": "2026-02-10",
+          "kind": "incentive",
+          "summary": "Milam County Commissioners Court approved a tax abatement for a new data center, as reported by KXXV.",
+          "source": "https://www.kxxv.com/hometown/milam-county/paving-the-way-for-progress-milam-county-approves-tax-abatement-for-new-data-center"
+        },
+        {
+          "date": "2026-03-19",
+          "kind": "coverage",
+          "summary": "Austin Business Journal reported hints connecting a Silicon Valley company to the takeover of the old 3M campus in Milam County for data center use linked to Stargate.",
+          "source": "https://www.bizjournals.com/austin/news/2026/03/19/3m-campus-milam-county-stargate.html"
+        },
+        {
+          "date": "2026-04-17",
+          "kind": "coverage",
+          "summary": "MySA reported that data center developers made nearly $500 million in moves in Central Texas towns amid water concerns in the Milam County area.",
+          "source": "https://www.mysanantonio.com/business/article/big-data-center-central-texas-water-concerns-20318723.php"
+        },
+        {
+          "date": "2026-04-22",
+          "kind": "permit",
+          "summary": "Data Center Dynamics reported that OpenAI Stargate's Milam County 'Freebird' data center first phase would span 548,950 square feet.",
+          "source": "https://www.datacenterdynamics.com/en/news/openai-stargates-milam-texas-freebird-data-center-to-span-548950-sq-ft-in-first-phase/"
+        },
+        {
+          "date": "2026-05-12",
+          "kind": "rezoning",
+          "summary": "The Texas Tribune reported that a Texas county paused data center construction in rural areas for one year, in response to rapid data center expansion in the region.",
+          "source": "https://www.texastribune.org/2026/05/12/texas-county-data-center-construction-pause-rural/"
+        },
+        {
+          "date": "2026-06-16",
+          "kind": "filing",
+          "summary": "Austin Business Journal reported that one of the world's largest companies (linked to SoftBank) purchased approximately 4,700 acres in Milam County in a detail-sparse land transaction.",
+          "source": "https://www.bizjournals.com/austin/news/2026/06/16/softbank-4700-acres-milam-county.html"
+        },
+        {
+          "date": "2026-08-07",
+          "kind": "construction",
+          "summary": "KCENTV reported that rock trucks driving through downtown Temple were traced to the $470 million OpenAI data center construction project in Milam County.",
+          "source": "https://www.kcentv.com/article/news/local/rock-trucks-downtown-temple-openai-data-center/500-12345678"
+        },
+        {
+          "date": "2026-08-12",
+          "kind": "operational",
+          "summary": "SB Energy committed to comply with Governor Abbott's data center transparency and accountability standards for Texas, alongside Core Scientific and Vantage Data Centers.",
+          "source": "https://www.sbenergy.com/news"
+        }
+      ]
     },
     {
       "id": "openai-stargate-new-mexico",
@@ -6468,7 +7618,62 @@
       "source": "https://vantage-dc.com/data-center-locations/north-america/shackelford-county-tx",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-07-21",
+          "kind": "vote",
+          "summary": "Shackelford County Commission unanimously approved Vantage Data Centers' 1,200-acre data center project, including a 10-year tax abatement with $10 million in annual payments to the county.",
+          "source": "https://ktxs.com/news/local/new-data-center-expected-to-create-250-full-time-jobs-in-shackelford-county"
+        },
+        {
+          "date": "2025-08-01",
+          "kind": "coverage",
+          "summary": "KTXS reported the Vantage data center is expected to create 250 full-time permanent jobs and employ up to 6,500 workers during peak construction, with construction starting later in 2025 and completion targeted for 2029.",
+          "source": "https://ktxs.com/news/local/new-data-center-expected-to-create-250-full-time-jobs-in-shackelford-county"
+        },
+        {
+          "date": "2025-08-19",
+          "kind": "announcement",
+          "summary": "Vantage Data Centers formally announced its $25 billion Frontier campus in Shackelford County: 1.4 GW of capacity across 10 data centers on 1,200 acres totaling 3.7 million square feet, with over 5,000 jobs expected across construction and operations.",
+          "source": "https://wirelessestimator.com/articles/2025/digitalbridge-led-capital-fuels-vantages-new-25-billion-1-4-gw-frontier-data-center-in-texas/"
+        },
+        {
+          "date": "2025-08-21",
+          "kind": "coverage",
+          "summary": "CarbonCredits.com reported on water concerns around the Frontier campus, noting Texas Water Development Board forecasts that data centers could account for about 7 percent of Texas' total projected water use by 2030; Vantage had not disclosed specific water consumption projections for the site.",
+          "source": "https://carboncredits.com/vantages-25-billion-texas-data-center-plan-sparks-opportunities-and-water-concerns/"
+        },
+        {
+          "date": "2025-12-16",
+          "kind": "construction",
+          "summary": "Vantage Data Centers broke ground on the Frontier campus, confirmed as part of OpenAI and Oracle's Stargate initiative; the first facility was scheduled for Q2 2026 with full campus completion targeted for 2028.",
+          "source": "https://w.media/vantage-data-centers-breaks-ground-on-data-center-campus-in-texas/"
+        },
+        {
+          "date": "2026-07-17",
+          "kind": "hearing",
+          "summary": "County Judge John M. Viertel held an informal open session with residents to discuss reinvestment zones after a second data center proposal was introduced at a commissioners court meeting; residents questioned whether another data center was necessary.",
+          "source": "https://ktxs.com/news/local/shackleford-county-judge-invites-residents-to-discuss-reinvestment-zones-informally"
+        },
+        {
+          "date": "2026-07-22",
+          "kind": "protest",
+          "summary": "County Judge John Viertel acknowledged community backlash against the second proposed data center, stating 'the overall view is resistance' and that residents prioritize cultural preservation over economic benefits; water supply was cited as the most prominent concern.",
+          "source": "https://ktxs.com/news/local/shackelford-county-judge-responds-to-backlash-over-second-proposed-data-center"
+        },
+        {
+          "date": "2026-08-13",
+          "kind": "hearing",
+          "summary": "A town hall was held at Albany High School for community input on a second data center proposed by Bolt Data and Energy at Buck Nail Ranch, about 16 miles west of Albany; the company had not disclosed the project's size, water demand, or job count, and commissioners had not approved the project.",
+          "source": "https://ktxs.com/news/local/second-data-center-proposed-west-of-albany-draws-mixed-reactions-in-shackelford-county"
+        },
+        {
+          "date": "2026-08-14",
+          "kind": "coverage",
+          "summary": "KTXS reported mixed community reactions to the second proposed data center; resident Blaine Kayga said 'there's just way more negatives than there are positives,' citing traffic and safety issues from existing data center construction, while others noted potential employment benefits.",
+          "source": "https://ktxs.com/news/local/second-data-center-proposed-west-of-albany-draws-mixed-reactions-in-shackelford-county"
+        }
+      ]
     },
     {
       "id": "openai-stargate-wisconsin",
