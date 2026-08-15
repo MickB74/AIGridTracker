@@ -377,6 +377,76 @@
       "source": "/wyoming",
       "destination": "/states/wyoming",
       "permanent": false
+    },
+    {
+      "source": "/google",
+      "destination": "/companies/google",
+      "permanent": false
+    },
+    {
+      "source": "/meta",
+      "destination": "/companies/meta",
+      "permanent": false
+    },
+    {
+      "source": "/microsoft",
+      "destination": "/companies/microsoft",
+      "permanent": false
+    },
+    {
+      "source": "/aws",
+      "destination": "/companies/aws",
+      "permanent": false
+    },
+    {
+      "source": "/equinix",
+      "destination": "/companies/equinix",
+      "permanent": false
+    },
+    {
+      "source": "/digital-realty",
+      "destination": "/companies/digital-realty",
+      "permanent": false
+    },
+    {
+      "source": "/edgeconnex",
+      "destination": "/companies/edgeconnex",
+      "permanent": false
+    },
+    {
+      "source": "/stack",
+      "destination": "/companies/stack",
+      "permanent": false
+    },
+    {
+      "source": "/cyrusone",
+      "destination": "/companies/cyrusone",
+      "permanent": false
+    },
+    {
+      "source": "/vantage",
+      "destination": "/companies/vantage",
+      "permanent": false
+    },
+    {
+      "source": "/coreweave",
+      "destination": "/companies/coreweave",
+      "permanent": false
+    },
+    {
+      "source": "/qts",
+      "destination": "/companies/qts",
+      "permanent": false
+    },
+    {
+      "source": "/switch",
+      "destination": "/companies/switch",
+      "permanent": false
+    },
+    {
+      "source": "/compass",
+      "destination": "/companies/compass",
+      "permanent": false
     }
   ]
 }

@@ -11555,6 +11555,12 @@ def main():
          "permanent": False}
         for _, row in STATE_PUCS_DF.iterrows()
     ]
+    # Root-level shortcuts for company scorecards, so /cyrusone → /companies/cyrusone.
+    _company_redirects = [
+        {"source": f"/{h['slug']}", "destination": f"/companies/{h['slug']}",
+         "permanent": False}
+        for h in _HYPERSCALERS + _OPERATORS + _LIMITED_DISCLOSURE
+    ]
     (WEB / "vercel.json").write_text(
         '{ "cleanUrls": true, "trailingSlash": false }\n', encoding="utf-8")
     # The load-bearing config Vercel actually reads lives at the repo root.
@@ -11564,7 +11570,7 @@ def main():
             "outputDirectory": "web",
             "cleanUrls": True,
             "trailingSlash": False,
-            "redirects": _blog_redirects + _state_redirects,
+            "redirects": _blog_redirects + _state_redirects + _company_redirects,
         }, indent=2) + "\n",
         encoding="utf-8")
 
