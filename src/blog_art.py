@@ -367,6 +367,46 @@ def _extraction(u):
   </g>'''
 
 
+def _review(u):
+    """Week-in-review: a calendar page beside stacked headline cards."""
+    return f'''
+  <g transform="translate(60,50)">
+    <rect x="0" y="0" width="120" height="140" rx="8" fill="{_CARD}" stroke="{_RULE}" stroke-width="1.5"/>
+    <rect x="0" y="0" width="120" height="28" rx="8" fill="{_RULE}"/>
+    <rect x="0" y="14" width="120" height="14" fill="{_RULE}"/>
+    <g fill="{_MUTED}" font-size="11" text-anchor="middle" opacity=".8">
+      <text x="20" y="22" font-weight="bold" fill="{_TEAL}">S</text>
+      <text x="40" y="22">M</text><text x="60" y="22">T</text>
+      <text x="80" y="22">W</text><text x="100" y="22">T</text>
+    </g>
+    <g fill="{_MUTED}" font-size="9" text-anchor="middle" opacity=".5">
+      <text x="20" y="50">10</text><text x="40" y="50">11</text><text x="60" y="50">12</text>
+      <text x="80" y="50">13</text><text x="100" y="50">14</text>
+      <text x="20" y="70">17</text><text x="40" y="70">18</text>
+    </g>
+    <circle cx="60" cy="66" r="11" fill="none" stroke="{_TEAL}" stroke-width="2"/>
+    <circle cx="80" cy="46" r="11" fill="none" stroke="{_AMBER}" stroke-width="1.6" opacity=".7"/>
+  </g>
+  <g transform="translate(260,44)">
+    <rect x="0" y="0" width="300" height="44" rx="6" fill="{_CARD}" stroke="{_RULE}" stroke-width="1.2"/>
+    <rect x="12" y="12" width="200" height="7" rx="3.5" fill="{_TEAL}" opacity=".6"/>
+    <rect x="12" y="27" width="140" height="6" rx="3" fill="{_MUTED}" opacity=".35"/>
+  </g>
+  <g transform="translate(270,100)">
+    <rect x="0" y="0" width="300" height="44" rx="6" fill="{_CARD}" stroke="{_RULE}" stroke-width="1.2"/>
+    <rect x="12" y="12" width="180" height="7" rx="3.5" fill="{_AMBER}" opacity=".55"/>
+    <rect x="12" y="27" width="120" height="6" rx="3" fill="{_MUTED}" opacity=".35"/>
+  </g>
+  <g transform="translate(280,156)">
+    <rect x="0" y="0" width="300" height="44" rx="6" fill="{_CARD}" stroke="{_RULE}" stroke-width="1.2"/>
+    <rect x="12" y="12" width="220" height="7" rx="3.5" fill="{_TEAL}" opacity=".45"/>
+    <rect x="12" y="27" width="100" height="6" rx="3" fill="{_MUTED}" opacity=".35"/>
+  </g>
+  <g stroke="{_TEAL}" stroke-width="1.4" fill="none" opacity=".35" stroke-dasharray="5 5">
+    <path d="M 180,120 L 256,80"/><path d="M 180,130 L 266,140"/>
+  </g>'''
+
+
 ART_THEMES = {
     "grid":         ("Grid interconnection", "Illustration: a transmission tower feeding a hyperscale data center campus", _grid_campus),
     "transmission": ("Transmission buildout", "Illustration: a line of high-voltage transmission towers receding into the distance", _transmission),
@@ -382,6 +422,7 @@ ART_THEMES = {
     "oversight":    ("Oversight gap", "Illustration: a stack of permit documents under a magnifying glass with a visible gap", _oversight),
     "community":    ("Community response", "Illustration: a row of houses with residents below and a speech bubble above", _community),
     "extraction":   ("Extraction precedent", "Illustration: a headframe over geological strata beside a modern data center and a clock", _extraction),
+    "review":       ("Week in review", "Illustration: a calendar page beside stacked headline cards", _review),
 }
 
 # First match wins, so order matters: the more specific themes come first.
@@ -400,6 +441,7 @@ _KEYWORDS = [
     ("land",         ("land", "site selection", "siting", "zoning", "rezoning", "land rush")),
     ("community",    ("backlash", "opposition", "social license", "community", "protest")),
     ("extraction",   ("extraction", "precedent", "coal", "mining", "boomtown")),
+    ("review",       ("week in review", "weekly review", "roundup")),
 ]
 
 

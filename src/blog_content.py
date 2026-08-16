@@ -4131,4 +4131,258 @@ The only question is whether your community knows to ask.
 - [Atlanta Journal-Constitution, "Kemp vetoes data center tax break suspension" (2024)](https://www.ajc.com/politics/data-center-tax-break-veto-georgia/) — political economy of removing an existing subsidy
 """,
     },
+    # ── Week in Review ──────────────────────────────────────────────────────
+    {
+        "id": "week-in-review-2026-08-16",
+        "art": "review",
+        "section": "stories",
+        "title": "Week in Review: Amazon Walks Away, UK Rations Water, and Texas Hits the Brakes",
+        "date": _dt.date(2026, 8, 16),
+        "author": "GridWatch AI",
+        "tags": ["week in review", "moratorium", "water", "Texas", "Maryland",
+                 "UK", "noise", "community", "policy"],
+        "summary": (
+            "This week Amazon abandoned a data center campus in Maryland after "
+            "community pushback, UK data centers faced water rationing during a "
+            "drought, and Texas launched an audit of 300 data center projects. "
+            "Plus: Michigan residents sued over noise, Chicago signed an executive "
+            "order, and moratorium proposals multiplied from Indiana to San Antonio."
+        ),
+        "body": """\
+Welcome to the first GridWatch AI Week in Review — a Sunday roundup of the
+most important data center stories from the past seven days, what they mean
+for communities, and what you can learn from each one.
+
+---
+
+### 1. Amazon abandons Calvert County data centers after community pushback
+
+**What happened:** Amazon scrapped plans for a data center campus in
+Calvert County, Maryland, citing what it called a changed business
+environment. Residents had organized sustained opposition over water use,
+noise, and the transformation of agricultural land.
+
+**Why it matters:** This is one of the clearest examples of community
+opposition directly influencing a hyperscaler's site-selection decision.
+Calvert County isn't a regulatory powerhouse — it's a rural county of about
+93,000 people. What residents had was organization, turnout at public
+hearings, and specific demands. Amazon didn't lose a lawsuit. It decided the
+political cost wasn't worth it.
+
+**The lesson:** Site selection is a business decision. When communities make
+a project politically expensive — through organized testimony, media
+coverage, and specific conditions — developers will go elsewhere. That's
+leverage, and it works even without a moratorium.
+
+*Source: [Capital Gazette, Aug 14](https://www.capitalgazette.com/)*
+
+---
+
+### 2. UK data centers hit with water rationing during drought
+
+**What happened:** Data centers in the United Kingdom were placed under
+water-rationing orders as a drought forced regulators to prioritize
+residential and agricultural use. The restrictions affected cooling
+operations at multiple facilities.
+
+**Why it matters:** This is the first time a major Western economy has
+explicitly rationed water *away* from data centers during a drought.
+Data centers using evaporative cooling consume roughly
+[1.8 liters per kWh](/blog/hidden-water-cost) of electricity — a 100 MW
+campus can draw over a million gallons per day. When that competes with
+drinking water, regulators face a stark choice.
+
+**What to learn — how data center cooling actually works:**
+
+Most large data centers reject heat one of three ways:
+
+| Method | Water use | Efficiency | Cost |
+|--------|-----------|------------|------|
+| **Evaporative (wet) cooling** | High — 1.8 L/kWh | Best (PUE 1.1–1.2) | Lowest capex |
+| **Air-cooled (dry) cooling** | Near zero | Good (PUE 1.3–1.4) | Higher capex, needs more land |
+| **Closed-loop / liquid-to-chip** | Low — recirculates coolant | Excellent (PUE 1.05–1.15) | Highest capex |
+
+Developers default to evaporative cooling because it's cheapest. But "cheapest
+for the developer" isn't the same as "cheapest for the community" once you
+account for the water those towers consume. When negotiating a CBA, asking
+**what cooling technology will be used** is one of the most important
+questions — and the answer directly determines your community's water exposure.
+
+*Source: [The Telegraph, Aug 14](https://www.telegraph.co.uk/)*
+
+---
+
+### 3. Texas launches audit of up to 300 data center projects
+
+**What happened:** Following Governor Abbott's executive order, ERCOT
+confirmed it will audit up to 300 large-load projects — most of them data
+centers — currently in its interconnection queue. The audit could take
+months to complete.
+
+**Why it matters:** Texas's grid operator has
+[233 GW of large-load requests](/blog/ercot-queue-explainer) waiting in line.
+The audit is the state's first attempt to separate real projects from
+speculative queue-squatting. Meanwhile, companies including Meta and Amazon
+have signed voluntary commitments to Abbott's proposed standards, signaling
+the industry would rather negotiate than face legislation.
+
+**What to learn — the interconnection queue, explained:**
+
+Before a data center can draw power from the grid, it files an
+**interconnection request** — essentially raising its hand and saying
+"I'd like 200 MW at this location." The grid operator studies whether
+the transmission system can handle it, what upgrades are needed, and
+who pays.
+
+The problem: filing is cheap, and there's no penalty for filing
+speculatively. Developers file early to hold their place, even if the
+project is years from breaking ground — or may never be built. This clogs
+the queue, delays legitimate projects, and forces grid planners to model
+a future that will never arrive.
+
+Abbott's audit is asking a simple question: **which of these 300 projects
+are real?** That's a question every community with a proposed data center
+should be asking too.
+
+*Sources: [Houston Public Media, Aug 15](https://www.houstonpublicmedia.org/);
+[fox34.com, Aug 15](https://www.fox34.com/)*
+
+---
+
+### 4. Michigan residents sue data center over noise pollution
+
+**What happened:** Residents near a data center in Michigan filed a lawsuit
+alleging persistent noise pollution from cooling equipment. The complaint
+describes low-frequency hum and fan noise that disrupts sleep and daily life.
+
+**Why it matters:** Noise is one of the most common complaints about
+operational data centers, and one of the hardest to fix after construction.
+Cooling fans, backup generators, and HVAC systems run 24/7. The sound
+isn't always loud in decibel terms — it's the *constancy* and the
+low-frequency character that makes it debilitating.
+
+**What to learn — how to negotiate noise protections *before* a project is
+approved:**
+
+1. **Demand a noise study** as part of the site plan review. The developer
+   should model expected dBA levels at the nearest property line — not just
+   at the facility boundary.
+
+2. **Set a hard limit**, not a guideline. Many communities use 55 dBA during
+   the day and 45 dBA at night, measured at the nearest residence.
+   Write it into the CBA or zoning conditions with an enforcement mechanism.
+
+3. **Require sound walls and equipment enclosures** as conditions of
+   approval, not voluntary commitments. Once the permit is issued, voluntary
+   measures evaporate.
+
+4. **Include a complaint-response protocol.** The CBA should specify who
+   residents call, how quickly the operator must respond, and what happens
+   if readings exceed the limit.
+
+*Source: [bgr.com, Aug 12](https://www.bgr.com/)*
+
+---
+
+### 5. Chicago mayor signs executive order for stricter data center regulations
+
+**What happened:** Mayor Brandon Johnson signed an executive order
+establishing new standards for data center development in Chicago,
+including stricter noise limits, water-use reporting requirements, and
+a community-engagement process for proposed facilities.
+
+**Why it matters:** Chicago is one of the largest cities to use executive
+authority — rather than waiting for legislation — to set data center
+standards. The order creates a framework that other mayors can replicate
+without going through a city council vote.
+
+**The lesson:** Executive orders are faster than ordinances but weaker —
+the next mayor can revoke them. If your city's mayor issues an EO, the
+next step is to push for a permanent ordinance that codifies the same
+protections.
+
+*Sources: [CBS News, Aug 11](https://www.cbsnews.com/);
+[ABC7 Chicago, Aug 11](https://abc7chicago.com/)*
+
+---
+
+### 6. Moratorium wave continues: Indiana, San Antonio, Virginia Beach, and more
+
+**What happened this week:**
+
+- **Indianapolis** — City council advanced a data center pause to the
+  planning commission for final approval
+- **San Antonio** — Councilmember Galvan called for a moratorium on new
+  data center construction
+- **Virginia Beach** — City is considering a 12-month pause on new data
+  center applications to develop regulations
+- **St. Croix County, WI** — Committee sent a moratorium ordinance to the
+  county board
+- **Statesville, NC** — City council weighing a moratorium proposal
+- **Aurora, CO** — Council considering a 6-month pause alongside
+  development restrictions
+
+**What to learn — the anatomy of a moratorium:**
+
+A moratorium is a **temporary pause**, not a permanent ban. Its purpose is
+to give a community time to write the rules before more projects get
+approved under inadequate ones. Here's how they typically work:
+
+- **Duration:** Usually 6–18 months. Longer pauses face legal challenges.
+- **Scope:** Can cover all new applications, just large facilities
+  (>5 MW), or specific zoning districts.
+- **Legal basis:** The community's police power to regulate land use.
+  Courts generally uphold temporary pauses if they're tied to a stated
+  planning purpose (e.g., "to develop zoning standards for high-intensity
+  industrial uses").
+- **What happens during the pause:** The planning commission drafts new
+  standards — noise limits, setbacks, water-use caps, visual screening,
+  community-benefit requirements. The moratorium buys time for this work.
+- **What doesn't stop:** Projects with already-issued permits typically
+  aren't affected. The pause covers *new* applications.
+
+A moratorium is the opening move, not the endgame. The real work is what
+the community writes during the pause.
+
+> Track active moratoriums on the
+> [Moratorium Tracker](/moratoriums.html) and see what other communities
+> have won on the [Start here](/app) tab.
+
+---
+
+### 7. The data center PR blitz is backfiring
+
+**What happened:** Multiple outlets this week noted that the industry's
+public-relations campaign — emphasizing jobs and economic development —
+is generating more skepticism than support. NC Newsline published an
+analysis calling the PR strategy counterproductive; the San Antonio Report
+argued residents need to organize independently of state-level action.
+
+**Why it matters:** The data center industry's standard pitch —
+"jobs, tax revenue, innovation" — worked when communities didn't have
+information. It's less effective now that residents can look up how many
+permanent jobs a data center actually creates (50–150 per facility),
+how much water it uses, and what happened to electricity rates in Northern
+Virginia. Information asymmetry was the industry's advantage.
+**Platforms like this one exist to close that gap.**
+
+---
+
+### What to watch next week
+
+- **ERCOT audit timeline** — will the scope narrow under industry pressure?
+- **Virginia Beach** — 12-month pause vote expected
+- **Congressional hearings** — data center policy continues to surface as
+  a midterm issue
+- **Water disclosure** — following the UK rationing, pressure for mandatory
+  water-use reporting is building in several US states
+
+---
+
+*This is the first of our weekly roundups. Every Sunday we'll cover the
+week's most important data center stories, explain the underlying concepts,
+and point you to the tools you need. Know a story we should cover? Reach
+out through the [consulting tab](/app) or the newsletter signup.*
+""",
+    },
 ]

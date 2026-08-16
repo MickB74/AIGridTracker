@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/week-in-review-2026-08-16",
+      "destination": "/blog/week-in-review-2026-08-16",
+      "permanent": true
+    },
+    {
       "source": "/texas-ercot-queue-freeze-2026",
       "destination": "/blog/texas-ercot-queue-freeze-2026",
       "permanent": true

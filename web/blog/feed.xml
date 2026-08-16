@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Week in Review: Amazon Walks Away, UK Rations Water, and Texas Hits the Brakes</title>
+      <link>https://aigridwatch.com/blog/week-in-review-2026-08-16</link>
+      <guid>https://aigridwatch.com/blog/week-in-review-2026-08-16</guid>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+      <description>This week Amazon abandoned a data center campus in Maryland after community pushback, UK data centers faced water rationing during a drought, and Texas launched an audit of 300 data center projects. Plus: Michigan residents sued over noise, Chicago signed an executive order, and moratorium proposals multiplied from Indiana to San Antonio.</description>
+    </item>
+    <item>
       <title>Texas Just Froze 474 GW of Data Center Interconnections. Here&#x27;s What It Means.</title>
       <link>https://aigridwatch.com/blog/texas-ercot-queue-freeze-2026</link>
       <guid>https://aigridwatch.com/blog/texas-ercot-queue-freeze-2026</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/ny-moratorium-eo62-2026</guid>
       <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
       <description>Governor Hochul signed the nation&#x27;s first statewide data center moratorium on July 14 — a 1-year pause on 50+ MW facilities that sets a precedent for community negotiating power nationwide.</description>
-    </item>
-    <item>
-      <title>Why Your Electric Bill Is Going Up — and What Data Centers Have to Do With It</title>
-      <link>https://aigridwatch.com/blog/utility-bill-explainer-2026</link>
-      <guid>https://aigridwatch.com/blog/utility-bill-explainer-2026</guid>
-      <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
-      <description>Capacity charges, peak load auctions, and the coincident-peak trap: a plain-language guide to the parts of your electric bill you&#x27;ve never heard of — and why data center growth is making them explode.</description>
     </item>
 </channel>
 </rss>
