@@ -3511,6 +3511,305 @@ LOBBY_META_SOURCES = [
                 "all 50 states."},
 ]
 
+# ---------------------------------------------------------------------------
+# Tactics playbook — techniques used by BOTH sides, mined from 1700+ community
+# headlines. Each entry has keywords for auto-matching stories at build time.
+# ---------------------------------------------------------------------------
+TACTICS_PLAYBOOK = [
+    # --- INDUSTRY TACTICS (what they do) ---
+    {
+        "name": "NDA / gag clause",
+        "side": "industry",
+        "icon": "🔒",
+        "summary": "Developers pressure officials into non-disclosure agreements "
+                   "before sharing project details, cutting the public out of "
+                   "decisions that affect them.",
+        "why_it_works": "Prevents organized opposition from forming before permits "
+                        "are locked in. By the time residents learn, approvals are "
+                        "already granted.",
+        "how_to_counter": "Demand sunshine-law compliance. File FOIA requests for "
+                          "any agreement between the developer and local government. "
+                          "NDAs on public-interest decisions are legally vulnerable "
+                          "in most states.",
+        "keywords": ["nda", "non-disclosure", "gag order", "confidential",
+                     "secret deal", "behind closed", "secretive"],
+    },
+    {
+        "name": "LLC shell game",
+        "side": "industry",
+        "icon": "🪆",
+        "summary": "Projects file under anonymous LLCs so residents can't identify "
+                   "the real operator or its track record until it's too late.",
+        "why_it_works": "Prevents residents from researching the operator's history "
+                        "of noise complaints, water use, or broken promises in "
+                        "other communities.",
+        "how_to_counter": "Search state corporation records for the LLC's registered "
+                          "agent. Cross-reference the site address with DC_SITES_DF. "
+                          "Ask planning boards to require beneficial-ownership "
+                          "disclosure as a permit condition.",
+        "keywords": ["llc", "shell compan", "subsidiary", "unnamed",
+                     "mystery", "undisclosed"],
+    },
+    {
+        "name": "Rushed approval",
+        "side": "industry",
+        "icon": "⏩",
+        "summary": "Developers push for emergency or expedited review, compressing "
+                   "public comment periods and bypassing standard environmental "
+                   "or zoning review.",
+        "why_it_works": "Fewer review cycles means fewer chances for residents to "
+                        "organize, hire experts, or build coalitions.",
+        "how_to_counter": "Request the full public-comment period mandated by state "
+                          "law. Move for a moratorium to buy time. Document the "
+                          "rush and present it to council as a red flag.",
+        "keywords": ["fast-track", "fast track", "expedit", "rush",
+                     "streamline", "bypass", "waiv", "emergency approv"],
+    },
+    {
+        "name": "Jobs promise inflation",
+        "side": "industry",
+        "icon": "📊",
+        "summary": "Headline job numbers (e.g. '5.5 million jobs') use indirect "
+                   "and induced multipliers. Actual permanent on-site employment "
+                   "is typically 30–50 per facility.",
+        "why_it_works": "Big numbers dominate headlines and give elected officials "
+                        "political cover for approvals.",
+        "how_to_counter": "Ask for permanent on-site FTEs, not construction or "
+                          "supply-chain estimates. Compare to the jobs displaced "
+                          "when residential land is rezoned industrial.",
+        "keywords": ["create job", "bring job", "thousand job", "new job",
+                     "workforce", "hiring"],
+    },
+    {
+        "name": "Tax incentive capture",
+        "side": "industry",
+        "icon": "💰",
+        "summary": "Developers negotiate multi-year tax abatements that waive "
+                   "most of the projected revenue, then cite pre-abatement figures "
+                   "as 'economic impact.'",
+        "why_it_works": "Councils see gross revenue projections without subtracting "
+                        "the abatement. The net contribution is often negative "
+                        "after infrastructure costs.",
+        "how_to_counter": "Demand net-of-incentive projections. Pass clawback clauses "
+                          "for underperformance. Compare the per-job subsidy to other "
+                          "industries.",
+        "keywords": ["tax break", "tax incentive", "tax credit", "tax abatement",
+                     "tax exempt", "subsid", "enterprise zone", "free land"],
+    },
+    {
+        "name": "Water use obscured",
+        "side": "industry",
+        "icon": "💧",
+        "summary": "Operators avoid disclosing actual water consumption, classify "
+                   "it as trade secrets, or cite 'efficiency improvements' "
+                   "without absolute numbers.",
+        "why_it_works": "Without hard numbers, residents can't compare facility "
+                        "demand to municipal supply or drought reserves.",
+        "how_to_counter": "File public records requests for water-use permits. "
+                          "Cite state right-to-know laws. Push for annual "
+                          "disclosure as a permit condition.",
+        "keywords": ["water usage", "water consumption", "million gallons",
+                     "water demand", "aquifer", "water supply", "drought",
+                     "water table"],
+    },
+    {
+        "name": "Noise / health minimization",
+        "side": "industry",
+        "icon": "🔊",
+        "summary": "Operators claim noise levels are 'within code' using property-line "
+                   "measurements that ignore cumulative and low-frequency impacts "
+                   "on nearby homes.",
+        "why_it_works": "Most local noise ordinances weren't written for industrial "
+                        "cooling systems running 24/7. Code compliance ≠ livability.",
+        "how_to_counter": "Hire an independent acoustics expert. Demand interior-dB "
+                          "measurements, not just property line. Push for nighttime "
+                          "limits and low-frequency standards.",
+        "keywords": ["noise", "decibel", "diesel", "generator", "fume",
+                     "health impact", "sleep", "vibrat", "humming"],
+    },
+    {
+        "name": "Grid cost shifting",
+        "side": "industry",
+        "icon": "⚡",
+        "summary": "Transmission upgrades needed for data centers enter the general "
+                   "rate base, spreading costs across all ratepayers while the "
+                   "developer pays only the interconnection fee.",
+        "why_it_works": "Rate-base mechanics are opaque to most residents. The "
+                        "cost shows up as a slow rise in electric bills, not "
+                        "a single visible charge.",
+        "how_to_counter": "Track PUC filings for transmission cost allocation. "
+                          "Support ratepayer protection bills. Demand cost-causer-pays "
+                          "interconnection terms.",
+        "keywords": ["rate increase", "electric bill", "grid strain",
+                     "power demand", "rate hike", "ratepayer", "utility bill",
+                     "brownout", "blackout", "grid capacity"],
+    },
+    {
+        "name": "Lawsuit threat / SLAPP",
+        "side": "industry",
+        "icon": "⚖️",
+        "summary": "Developers sue communities that pass moratoriums or deny permits, "
+                   "claiming regulatory takings or equal-protection violations to "
+                   "chill opposition.",
+        "why_it_works": "Small towns can't afford prolonged litigation. The threat "
+                        "alone is often enough to reverse a moratorium vote.",
+        "how_to_counter": "Document the lawsuit pattern — it's a lobbying tactic, "
+                          "not a legal inevitability. Push for anti-SLAPP protections. "
+                          "Connect with communities that prevailed in court.",
+        "keywords": ["suing", "lawsuit against", "legal threat", "legal action",
+                     "injunction", "regulatory taking"],
+    },
+    {
+        "name": "Greenwashing",
+        "side": "industry",
+        "icon": "🌿",
+        "summary": "Operators announce 'net zero' or '100% renewable' commitments "
+                   "based on unbundled RECs or PPAs that don't deliver additionality "
+                   "to the local grid.",
+        "why_it_works": "Green branding neutralizes environmental objections and "
+                        "gives council members a talking point.",
+        "how_to_counter": "Ask whether the renewables are co-located or bundled. "
+                          "Distinguish RECs from actual electrons. Request location-based "
+                          "Scope 2 reporting, not market-based.",
+        "keywords": ["carbon neutral", "net zero", "100% renewable",
+                     "clean energy", "sustainability", "renewable energy"],
+    },
+    # --- COMMUNITY TACTICS (what works) ---
+    {
+        "name": "Moratorium / temporary ban",
+        "side": "community",
+        "icon": "⏸️",
+        "summary": "A temporary freeze on new data center permits gives the community "
+                   "time to study impacts and draft protective zoning before projects "
+                   "are locked in.",
+        "why_it_works": "Shifts the timeline advantage from developer to community. "
+                        "Allows proper environmental review, traffic studies, and "
+                        "fiscal analysis.",
+        "how_to_counter": None,
+        "keywords": ["moratorium", "ban", "pause", "freeze", "halt",
+                     "temporary ban", "building moratorium"],
+    },
+    {
+        "name": "Packed hearing / resident turnout",
+        "side": "community",
+        "icon": "🏛️",
+        "summary": "Mass attendance at planning and council meetings demonstrates "
+                   "the depth of community concern and puts political pressure on "
+                   "elected officials.",
+        "why_it_works": "Elected officials respond to visible constituent anger. "
+                        "A packed room is local news, which amplifies the message.",
+        "how_to_counter": None,
+        "keywords": ["packed", "standing room", "overflow", "hundreds of residents",
+                     "filled the room", "crowd", "public comment",
+                     "public hearing", "town hall"],
+    },
+    {
+        "name": "Ballot measure / referendum",
+        "side": "community",
+        "icon": "🗳️",
+        "summary": "When councils won't act, residents can force a public vote "
+                   "on zoning changes or development agreements through petition "
+                   "and referendum.",
+        "why_it_works": "Direct democracy bypasses captured councils. High margins "
+                        "(e.g. 90% no in Scio Township) send an unambiguous message.",
+        "how_to_counter": None,
+        "keywords": ["ballot", "referendum", "vote no", "voter", "petition",
+                     "signatures", "voted"],
+    },
+    {
+        "name": "FOIA / transparency demand",
+        "side": "community",
+        "icon": "📋",
+        "summary": "Public records requests expose developer-government agreements, "
+                   "water permits, tax abatement terms, and traffic studies that "
+                   "were not voluntarily disclosed.",
+        "why_it_works": "Forces facts into the public record. Redacted or withheld "
+                        "documents become their own story.",
+        "how_to_counter": None,
+        "keywords": ["foia", "public record", "open record", "right to know",
+                     "sunshine", "transparency"],
+    },
+    {
+        "name": "Coalition building",
+        "side": "community",
+        "icon": "🤝",
+        "summary": "Cross-neighborhood and cross-issue coalitions (environmental, "
+                   "fiscal, property rights) present a broader front than a single "
+                   "NIMBY complaint.",
+        "why_it_works": "Diverse coalitions are harder to dismiss as 'a few loud "
+                        "neighbors.' They bring different expertise and media contacts.",
+        "how_to_counter": None,
+        "keywords": ["coalition", "alliance", "unite", "together",
+                     "united front", "organize"],
+    },
+    {
+        "name": "Ratepayer protection legislation",
+        "side": "community",
+        "icon": "🛡️",
+        "summary": "State bills requiring data centers to pay the full cost of "
+                   "grid upgrades — not socialize them across all ratepayers.",
+        "why_it_works": "Shifts the cost-allocation debate from individual PUC "
+                        "dockets to statewide policy, which is harder for one "
+                        "developer to influence.",
+        "how_to_counter": None,
+        "keywords": ["rate protect", "ratepayer protect", "cost allocation",
+                     "customer protect", "cost-causer"],
+    },
+    {
+        "name": "Zoning defense",
+        "side": "community",
+        "icon": "🗺️",
+        "summary": "Tightening conditional-use requirements, adding setbacks, "
+                   "noise limits, and water-use caps into the zoning code before "
+                   "a project can vest.",
+        "why_it_works": "Protective zoning is proactive: it applies to all future "
+                        "projects, not just the one in front of you.",
+        "how_to_counter": None,
+        "keywords": ["zoning", "conditional use", "special use", "variance",
+                     "setback", "land use", "rezoning", "rezone"],
+    },
+    {
+        "name": "Media / investigative exposure",
+        "side": "community",
+        "icon": "📰",
+        "summary": "Local and national media coverage of noise, water use, tax "
+                   "giveaways, or broken promises creates political risk for "
+                   "officials who approved the project.",
+        "why_it_works": "Developers protect their brand. Negative press reaches "
+                        "investors, other host communities, and regulators.",
+        "how_to_counter": None,
+        "keywords": ["investigat", "expose", "reveal", "uncover", "found that",
+                     "viral", "backlash", "outcry", "pushback"],
+    },
+    {
+        "name": "Lawsuit / legal challenge",
+        "side": "community",
+        "icon": "⚖️",
+        "summary": "Residents file suit over procedural violations, environmental "
+                   "review failures, or zoning noncompliance to block or delay "
+                   "projects.",
+        "why_it_works": "Forces developers into costly litigation and discovery. "
+                        "Even the threat can bring them to the negotiating table.",
+        "how_to_counter": None,
+        "keywords": ["residents sue", "file lawsuit", "legal challenge",
+                     "class-action", "court", "appeal"],
+    },
+    {
+        "name": "Project withdrawal",
+        "side": "community",
+        "icon": "🏆",
+        "summary": "Sustained community pressure — moratoriums, lawsuits, media "
+                   "coverage, or political risk — causes the developer to withdraw "
+                   "the project entirely.",
+        "why_it_works": "Developers need community consent to operate long-term. "
+                        "Hostile environments increase costs, delay timelines, and "
+                        "create reputational risk.",
+        "how_to_counter": None,
+        "keywords": ["withdrawn", "pulled out", "cancelled", "canceled",
+                     "shelved", "abandon", "project killed", "project dies"],
+    },
+]
+
 # What similar communities actually won — shown in the Start Here wizard's
 # impact step so the CBA target reads as precedent, not aspiration.
 # What comparable communities actually won. This is the *ask* — the number a

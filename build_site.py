@@ -45,6 +45,7 @@ from src.constants import (
     PROJECTS, PROJECTS_DF, PROJECT_EVENTS, project_status,
     MORATORIUM_OUTCOMES, HEALTH_RISKS, HEALTH_RISK_GROUPS,
     CBA_BENCHMARKS, COMPANY_CONCESSIONS, INDUSTRY_LOBBY, LOBBY_META_SOURCES,
+    TACTICS_PLAYBOOK,
     PROJECT_STAGES, OUTREACH_TIPS, ENTITY_TELLS, FILING_ENTITIES,
     DC_SITES_DF, LOCAL_OFFICIALS_DF, LOCAL_BODIES_DF, STATE_MUNI_LEAGUES,
     OPERATORS_DF, EXECUTIVES_DF, MEGA_PROJECTS_DF,
@@ -413,6 +414,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
 .badge { display:inline-block; font-size:12px; font-weight:700;
          padding:2px 9px; border-radius:6px; }
+.pill { display:inline-block; font-weight:600; text-transform:uppercase;
+        letter-spacing:.04em; }
+.pill.bad  { background:rgba(239,68,68,.12); color:#ef4444; }
+.pill.good { background:rgba(52,211,153,.12); color:#34d399; }
 .badge-enacted { background:#065f46; color:#6ee7b7; }
 .badge-proposed { background:#713f12; color:#fde68a; }
 .badge-rejected { background:#7f1d1d; color:#fca5a5; }
@@ -10025,73 +10030,132 @@ def build_opposition():
 {esc(m['summary'])}</li>"""
         for m in LOBBY_META_SOURCES)
 
-    # --- "In the wild" — real headlines showing industry claims in action ---
+    # --- Tactics playbook — auto-mined from story archive ---
+    all_stories = []
+    try:
+        import json as _json
+        _sc = pathlib.Path("data/story_candidates.json")
+        if _sc.exists():
+            _sa = _json.loads(_sc.read_text(encoding="utf-8"))
+            all_stories = _sa.get("stories", [])
+    except Exception:
+        pass
+
+    industry_tactics = [t for t in TACTICS_PLAYBOOK if t["side"] == "industry"]
+    community_tactics = [t for t in TACTICS_PLAYBOOK if t["side"] == "community"]
+    total_story_matches = 0
+
+    def _tactic_card(t, stories):
+        nonlocal total_story_matches
+        kws = t["keywords"]
+        hits = []
+        for s in stories:
+            tl = s.get("title", "").lower()
+            if any(kw in tl for kw in kws):
+                hits.append(s)
+            if len(hits) >= 5:
+                break
+        total_story_matches += len(hits)
+        examples_html = ""
+        if hits:
+            items = "\n".join(
+                f'<li>{esc(h["title"][:120])} '
+                f'<span class="muted">({esc(h.get("outlet",""))})</span></li>'
+                for h in hits)
+            examples_html = (
+                f'<details style="margin-top:8px"><summary style="cursor:pointer;'
+                f'font-size:13px;color:var(--teal)">📰 {len(hits)} headline'
+                f'{"s" if len(hits) != 1 else ""} in the archive</summary>'
+                f'<ul style="font-size:13px;margin:6px 0 0">{items}</ul></details>')
+        side_cls = "bad" if t["side"] == "industry" else "good"
+        counter_html = ""
+        if t.get("how_to_counter"):
+            label = "How to counter" if t["side"] == "industry" else "How to use"
+            counter_html = (
+                f'<p style="margin:8px 0 0;font-size:13px;color:var(--teal)">'
+                f'<strong>{label}:</strong> {esc(t["how_to_counter"])}</p>')
+        return f"""
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>{t['icon']} {esc(t['name'])}</strong>
+  <span class="pill {side_cls}" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">{esc(t['side'])}</span></p>
+  <p style="margin:0 0 4px;font-size:14px">{esc(t['summary'])}</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  {esc(t['why_it_works'])}</p>
+  {counter_html}
+  {examples_html}
+</div>"""
+
+    industry_cards = "\n".join(_tactic_card(t, all_stories) for t in industry_tactics)
+    community_cards = "\n".join(_tactic_card(t, all_stories) for t in community_tactics)
+
+    # --- "In the wild" (legacy categories kept for broader coverage) ---
     wild_categories = [
         ("Electricity rates", [
             "lowering your electric", "not raising rate", "don't raise rate",
-            "e3 report", "no rate impact", "ratepayer", "rate hike",
-            "shield ratepayer", "ratepayer protection",
-        ]),
-        ("Tax breaks contested", [
-            "tax break", "tax incentive", "strip tax", "no more tax",
+            "e3 report", "no rate impact",
         ]),
         ("Good neighbor claims", [
             "good neighbor", "data center day",
         ]),
     ]
     wild_html = ""
-    try:
-        import json as _json
-        _sc = pathlib.Path("data/story_candidates.json")
-        if _sc.exists():
-            _sa = _json.loads(_sc.read_text(encoding="utf-8"))
-            _all_stories = _sa.get("stories", [])
-            for cat_name, cat_kws in wild_categories:
-                hits = []
-                for s in _all_stories:
-                    tl = s.get("title", "").lower()
-                    if any(kw in tl for kw in cat_kws):
-                        hits.append(s)
-                    if len(hits) >= 6:
-                        break
-                if hits:
-                    items = "\n".join(
-                        f'<li>{esc(h["title"][:120])} '
-                        f'<span class="muted">({esc(h.get("outlet",""))})</span></li>'
-                        for h in hits[:5])
-                    wild_html += (
-                        f'<h3 style="font-size:15px;margin-top:16px">{esc(cat_name)}</h3>'
-                        f'<ul style="font-size:14px">{items}</ul>')
-    except Exception:
-        pass
+    for cat_name, cat_kws in wild_categories:
+        hits = []
+        for s in all_stories:
+            tl = s.get("title", "").lower()
+            if any(kw in tl for kw in cat_kws):
+                hits.append(s)
+            if len(hits) >= 6:
+                break
+        if hits:
+            items = "\n".join(
+                f'<li>{esc(h["title"][:120])} '
+                f'<span class="muted">({esc(h.get("outlet",""))})</span></li>'
+                for h in hits[:5])
+            wild_html += (
+                f'<h3 style="font-size:15px;margin-top:16px">{esc(cat_name)}</h3>'
+                f'<ul style="font-size:14px">{items}</ul>')
 
+    wild_section = ""
     if wild_html:
         wild_section = (
             '<section>\n'
-            '  <h2>These claims in the wild</h2>\n'
-            '  <p class="muted">Recent headlines where industry talking points met '
+            '  <h2>Specific claims in the wild</h2>\n'
+            '  <p class="muted">Headlines where specific industry talking points met '
             'community pushback. Pulled automatically from our '
             '<a href="story-tracker.html">story tracker</a> archive.</p>\n'
             + wild_html +
             '\n</section>')
-    else:
-        wild_section = ""
 
     body = f"""
 <header>
   <div class="kicker">Know the opposition</div>
-  <h1>Industry lobby playbook</h1>
-  <p class="sub">{len(INDUSTRY_LOBBY)} organizations, {total_claims} documented claims,
-  and the sourced counter-arguments you need at the hearing. These are the
-  groups shaping the narrative around data center development &mdash; know
-  their arguments before you walk into the room.</p>
+  <h1>Industry lobby &amp; tactics playbook</h1>
+  <p class="sub">{len(INDUSTRY_LOBBY)} lobby organizations, {len(TACTICS_PLAYBOOK)} documented tactics
+  ({len(industry_tactics)} industry, {len(community_tactics)} community),
+  and {total_story_matches}+ matching headlines auto-mined from our archive of {len(all_stories):,}
+  community-impact stories. Know their moves before you walk into the room.</p>
 </header>
-<input type="text" id="opp-search" placeholder="Search claims — e.g. jobs, tax, water, PUE..."
+<input type="text" id="opp-search" placeholder="Search organizations, tactics, claims..."
        autocomplete="off"
        style="width:100%;max-width:440px;background:var(--card);color:var(--ink);
        border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
        font-size:15px;margin-bottom:14px">
 <p class="muted" id="opp-count"></p>
+
+<nav style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px">
+  <a href="#lobby-orgs" class="btn btn-sm">Lobby organizations</a>
+  <a href="#industry-tactics" class="btn btn-sm">Industry tactics</a>
+  <a href="#community-tactics" class="btn btn-sm">Community tactics</a>
+  <a href="#playbook-summary" class="btn btn-sm">Playbook summary</a>
+</nav>
+
+<section id="lobby-orgs">
+  <h2>Lobby organizations</h2>
+  <p class="muted">{len(INDUSTRY_LOBBY)} groups shaping the narrative around data center development.</p>
+</section>
 
 <div id="opp-sections">
 {"".join(org_sections)}
@@ -10102,29 +10166,64 @@ def build_opposition():
   <ul>{meta_cards}</ul>
 </section>
 
+<section id="industry-tactics">
+  <h2>Industry tactics &mdash; what they do</h2>
+  <p class="muted">{len(industry_tactics)} documented tactics used by data center developers
+  and their lobbyists. Each is paired with real headlines from our archive and
+  a concrete counter-strategy.</p>
+  <div class="tactics-grid">
+  {industry_cards}
+  </div>
+</section>
+
+<section id="community-tactics">
+  <h2>Community tactics &mdash; what works</h2>
+  <p class="muted">{len(community_tactics)} proven approaches communities have used to win
+  protections, delay bad projects, or stop them entirely. Headlines show
+  these tactics in action.</p>
+  <div class="tactics-grid">
+  {community_cards}
+  </div>
+</section>
+
 {wild_section}
 
-<section>
+<section id="playbook-summary">
   <h2>The playbook at a glance</h2>
-  <div class="note warn"><p>Six core industry claims to prepare for:</p>
-  <ol>
-    <li><strong>Jobs</strong> &mdash; Headline figures (5.5M) use indirect/induced
-    multipliers. Ask for <em>permanent on-site FTEs</em>, not construction or
-    supply-chain estimates.</li>
-    <li><strong>Tax revenue</strong> &mdash; Often paired with abatements that waive
-    most of the revenue. Ask for the <em>net</em> after incentives.</li>
-    <li><strong>Electricity rates</strong> &mdash; "We don&rsquo;t raise rates" is
-    based on a DCC-commissioned study. PUC filings in multiple states show
-    transmission upgrades entering the rate base.</li>
-    <li><strong>National security</strong> &mdash; The "critical infrastructure"
-    frame is used to bypass local review. Data centers are private commercial
-    facilities.</li>
-    <li><strong>Clean energy</strong> &mdash; PPA announcements are not the same as
-    additionality. Buyer concentration is rising, not broadening.</li>
-    <li><strong>Self-regulation</strong> &mdash; PUE measures building efficiency,
-    not absolute impact. Only 23% of operators report all three scopes of
-    emissions.</li>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:16px">
+  <div class="note bad" style="margin:0">
+  <p><strong>Their playbook (what to watch for):</strong></p>
+  <ol style="font-size:14px">
+    <li><strong>Secrecy first</strong> &mdash; NDAs, LLCs, and rushed timelines
+    prevent organized opposition from forming.</li>
+    <li><strong>Inflate the benefits</strong> &mdash; Headline job and tax numbers
+    use multipliers or ignore abatements.</li>
+    <li><strong>Obscure the costs</strong> &mdash; Water use is "proprietary," grid
+    costs are socialized, noise is "within code."</li>
+    <li><strong>Divide the community</strong> &mdash; Target different messages to
+    different groups. Offer small concessions to peel off moderates.</li>
+    <li><strong>Sue if blocked</strong> &mdash; Threaten regulatory-takings suits
+    to chill moratorium votes.</li>
+    <li><strong>Greenwash</strong> &mdash; PPA announcements without additionality.
+    Net-zero pledges with decade-long timelines.</li>
   </ol></div>
+  <div class="note good" style="margin:0">
+  <p><strong>Your playbook (what actually works):</strong></p>
+  <ol style="font-size:14px">
+    <li><strong>Buy time</strong> &mdash; Moratoriums give communities months to study
+    impacts and organize.</li>
+    <li><strong>Pack the room</strong> &mdash; Visible turnout is the single most
+    effective pressure on elected officials.</li>
+    <li><strong>Force transparency</strong> &mdash; FOIA the agreements. Demand
+    water/energy/noise disclosure as permit conditions.</li>
+    <li><strong>Build a broad coalition</strong> &mdash; Environmental + fiscal +
+    property-rights allies are harder to dismiss.</li>
+    <li><strong>Go to the ballot</strong> &mdash; Direct democracy bypasses captured
+    councils (90% no in Scio Township).</li>
+    <li><strong>Make it a pattern story</strong> &mdash; Media coverage of noise,
+    broken promises, or tax giveaways creates political risk.</li>
+  </ol></div>
+  </div>
 </section>
 
 <section>
@@ -10134,6 +10233,8 @@ def build_opposition():
   <a href="cba-clauses.html">Model CBA clauses</a> &middot;
   <a href="tax-breaks.html">The real cost of tax breaks</a></p>
   <p class="muted" style="font-size:12px">Last updated: {INDUSTRY_LOBBY[0]['as_of'] if INDUSTRY_LOBBY else 'unknown'}.
+  Tactics are matched to headlines automatically from our {len(all_stories):,}-story archive &mdash;
+  this page refreshes with every site rebuild.
   Industry claims and counter-arguments are sourced; see individual links.
   This page is educational reference, not legal advice.</p>
 </section>
@@ -10142,6 +10243,7 @@ def build_opposition():
 (function() {{
   var q = document.getElementById('opp-search');
   var orgs = Array.from(document.querySelectorAll('.opp-org'));
+  var tactics = Array.from(document.querySelectorAll('.tactic-card'));
   var ct = document.getElementById('opp-count');
   q.addEventListener('input', function() {{
     var s = q.value.toLowerCase();
@@ -10152,6 +10254,7 @@ def build_opposition():
       if (!s) {{
         sec.style.display = '';
         claims.forEach(function(c) {{ c.style.opacity = '1'; }});
+        shown++;
         return;
       }}
       var headerMatch = sec.querySelector('.note').textContent.toLowerCase().indexOf(s) >= 0;
@@ -10164,7 +10267,23 @@ def build_opposition():
       sec.style.display = anyMatch ? '' : 'none';
       if (anyMatch) shown++;
     }});
-    ct.textContent = s ? (shown + ' organization' + (shown === 1 ? '' : 's') + ' match') : '';
+    var tacticShown = 0;
+    tactics.forEach(function(card) {{
+      if (!s) {{
+        card.style.display = '';
+        tacticShown++;
+        return;
+      }}
+      var match = card.textContent.toLowerCase().indexOf(s) >= 0;
+      card.style.display = match ? '' : 'none';
+      if (match) tacticShown++;
+    }});
+    if (s) {{
+      ct.textContent = shown + ' org' + (shown === 1 ? '' : 's') +
+        ', ' + tacticShown + ' tactic' + (tacticShown === 1 ? '' : 's');
+    }} else {{
+      ct.textContent = '';
+    }}
   }});
 }})();
 </script>

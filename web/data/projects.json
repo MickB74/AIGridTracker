@@ -7136,7 +7136,44 @@
       "source": "https://datacenters.atmeta.com/wp-content/uploads/2025/02/Meta_s-Jeffersonville-Data-Center.pdf",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-01-25",
+          "kind": "announcement",
+          "summary": "Indiana Governor Eric Holcomb announced Meta will build an $800 million, roughly 700,000-square-foot data center campus at River Ridge Commerce Center in Jeffersonville, Meta's 18th U.S. and 22nd global data center.",
+          "source": "https://cityofjeff.net/2024/01/25/meta-announces-800m-jeffersonville-data-center/"
+        },
+        {
+          "date": "2024-01-25",
+          "kind": "coverage",
+          "summary": "Construction on the Jeffersonville facility was set to begin that month and be complete in 2026, supporting more than 1,250 construction jobs and 100 permanent tech jobs.",
+          "source": "https://www.wave3.com/2024/01/25/meta-build-800m-data-center-jeffersonville/"
+        },
+        {
+          "date": "2025-10-04",
+          "kind": "protest",
+          "summary": "Community groups including Hoosier Action and Clark County Moms held a meeting to organize opposition to the Meta data center, citing concerns the facility could use up to 5 million gallons of water daily and raise local utility costs.",
+          "source": "https://www.wave3.com/2025/10/05/jeffersonville-community-pushes-back-against-meta-data-center/"
+        },
+        {
+          "date": "2025-10-07",
+          "kind": "coverage",
+          "summary": "Meta said it had contributed nearly $500,000 to schools and nonprofits since its 2024 groundbreaking and announced a new Community Action Grants program for Clark County, amid community concerns over a Duke Energy 11% residential rate increase set to take effect in early 2026.",
+          "source": "https://www.wdrb.com/news/business/meta-addresses-community-concerns-over-southern-indiana-data-center/article_15435d3e-4f78-4258-a157-e201d2ab95f8.html"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "moratorium",
+          "summary": "The Jeffersonville City Council unanimously passed a one-year moratorium on new data center development (suspending normal rules to push it through three readings in one session), but the Meta facility already under construction at River Ridge is exempt due to federal/state control of the former Indiana Army Ammunition Plant site.",
+          "source": "https://www.wave3.com/2026/08/04/jeffersonville-passes-year-long-data-center-moratorium-amid-resident-outcry-major-utility-disclosures/"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "coverage",
+          "summary": "The city disclosed that Meta paid $4 million upfront in wastewater capacity fees and is projected to generate $300,000-$400,000 in monthly recurring sewer utility revenue once the facility is operational.",
+          "source": "https://www.wave3.com/2026/08/04/jeffersonville-passes-year-long-data-center-moratorium-amid-resident-outcry-major-utility-disclosures/"
+        }
+      ]
     },
     {
       "id": "google-the-dalles",
@@ -7462,7 +7499,38 @@
       "source": "https://datacenters.atmeta.com/2024/05/hello-montgomery/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-05-02",
+          "kind": "announcement",
+          "summary": "Governor Kay Ivey announced Meta's plans to build an $800 million, 715,000-square-foot AI-optimized data center off Interstate 65 in Montgomery, expected to support 100 operational jobs and open by the end of 2026.",
+          "source": "https://governor.alabama.gov/newsroom/2024/05/governor-ivey-announces-meta-plans-to-build-800-million-next-generation-data-center-in-montgomery/"
+        },
+        {
+          "date": "2024-05-09",
+          "kind": "construction",
+          "summary": "Hensel Phelps announced it was awarded the general contractor role for Meta's $800+ million, 715,000-square-foot Montgomery data center, its second campus project with Meta.",
+          "source": "https://www.henselphelps.com/meta-awards-hensel-phelps-montgomery-data-center/"
+        },
+        {
+          "date": "2025-09-23",
+          "kind": "announcement",
+          "summary": "Meta announced it is expanding the Montgomery Data Center campus with two new buildings, bringing the campus to nearly 1.3 million square feet and increasing total investment to more than $1.5 billion.",
+          "source": "https://datacenters.atmeta.com/2025/09/montgomery-were-growing/"
+        },
+        {
+          "date": "2025-12-02",
+          "kind": "ruling",
+          "summary": "The Alabama Public Service Commission approved the Stockton I (80 MW) and Stockton II (180 MW) solar projects in Baldwin County, financed by Meta subsidiary Dotier LLC to supply renewable energy to Meta's Montgomery data center, on a timeline that met only a 20-day review window against the Commission's own 30-day submission rule.",
+          "source": "https://mynbc15.com/news/reality-check/nbc-15-reality-check-records-raise-questions-on-timing-of-stockton-solar-project-approval"
+        },
+        {
+          "date": "2026-02-09",
+          "kind": "protest",
+          "summary": "A town hall was scheduled in Baldwin County after residents said they received no advance public notice of the Stockton I/II solar projects approved to power Meta's Montgomery data center, and opposition groups formed online over land-use and environmental concerns.",
+          "source": "https://mynbc15.com/news/reality-check/nbc-15-reality-check-records-raise-questions-on-timing-of-stockton-solar-project-approval"
+        }
+      ]
     },
     {
       "id": "meta-kuna",
@@ -7488,7 +7556,80 @@
       "source": "https://datacenters.atmeta.com/wp-content/uploads/2025/02/Meta_s-Kuna-Data-Center.pdf",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2021-12-22",
+          "kind": "filing",
+          "summary": "Idaho Power filed an application with the Idaho Public Utilities Commission (Case No. IPC-E-21-42) for approval of a special contract and Tariff Schedule 33 to provide electric service to Brisbie LLC — the shell entity used for Meta's then-unannounced Kuna project.",
+          "source": "https://puc.idaho.gov/Fileroom/PublicFiles/ELEC/IPC/IPCE2142/CaseFiles/20211222Application.pdf"
+        },
+        {
+          "date": "2022-02-16",
+          "kind": "announcement",
+          "summary": "Idaho Commerce announced Meta would build an $800 million, 960,000-square-foot data center in Kuna, bringing about 100 permanent jobs and up to 1,200 construction jobs, with Meta also funding a $50 million water/sewer system for the city.",
+          "source": "https://commerce.idaho.gov/press-releases/meta-announces-kuna-as-location-of-new-data-center/"
+        },
+        {
+          "date": "2022-02-17",
+          "kind": "coverage",
+          "summary": "Data Center Frontier reported the Kuna facility would be at least 80% more water-efficient than the average data center and would use outside air for cooling at least 50% of the year, and noted Idaho Power developed a new green tariff so Meta could run on 100% renewable energy.",
+          "source": "https://www.datacenterfrontier.com/virtual-reality/article/11427590/meta-is-building-a-giant-800-million-data-center-in-idaho"
+        },
+        {
+          "date": "2022-02-24",
+          "kind": "construction",
+          "summary": "Meta awarded Hensel Phelps the $800 million Kuna data center project (preconstruction and construction services), with groundbreaking scheduled for September 2022 and construction expected to continue through 2025.",
+          "source": "https://www.henselphelps.com/meta-formerly-the-facebook-company-awards-hensel-phelps-kuna-data-center/"
+        },
+        {
+          "date": "2022-11-01",
+          "kind": "vote",
+          "summary": "The Kuna City Council formally approved the Urban Renewal Plan for the Kuna East Urban Renewal Project via Ordinance No. 2022-34, establishing the district around the Meta project site.",
+          "source": "https://www.kunacity.id.gov/543/Kuna-East-Urban-Renewal-District"
+        },
+        {
+          "date": "2023-03-30",
+          "kind": "vote",
+          "summary": "The Idaho Senate passed House Bill 328, legislation explicitly tied to Kuna's creation of an urban renewal area around the Meta data center, restricting data centers claiming the state sales-tax exemption from also sitting in new urban renewal revenue-allocation areas.",
+          "source": "https://blog.idahoreports.idahoptv.org/2023/03/30/bill-passed-to-exclude-data-center-from-urban-renewal-area/"
+        },
+        {
+          "date": "2023-10-12",
+          "kind": "ruling",
+          "summary": "The Idaho Public Utilities Commission issued Order No. 35958 in Case No. IPC-E-21-42, giving final approval of the special contract and Schedule 33 tariff for the Brisbie LLC (Meta) Kuna data center facility.",
+          "source": "https://puc.idaho.gov/case/Details/6792"
+        },
+        {
+          "date": "2024-05-16",
+          "kind": "filing",
+          "summary": "Idaho Power filed an application with the IPUC (Case No. IPC-E-24-20) to amend its power purchase agreement with PVS 2, LLC — the Pleasant Valley Solar project developed to supply renewable power for Meta's Kuna load — moving the commercial operation date from December 31, 2026 to May 31, 2026.",
+          "source": "https://puc.idaho.gov/Fileroom/PublicFiles/ELEC/IPC/IPCE2420/CaseFiles/20240516Application.pdf"
+        },
+        {
+          "date": "2024-10-25",
+          "kind": "coverage",
+          "summary": "Idaho Business Review reported the Kuna data center was running right on schedule per Meta's community development manager, on track for a 2025 completion despite an earlier roughly eight-month redesign pause to accommodate AI infrastructure.",
+          "source": "https://idahobusinessreview.com/2024/10/25/metas-mega-data-center-in-kuna-on-track-to-be-completed-by-2025/"
+        },
+        {
+          "date": "2025-12-17",
+          "kind": "coverage",
+          "summary": "Meta stated it invested over $70 million to build a water and wastewater treatment facility at the Kuna site that has since been gifted to the city of Kuna.",
+          "source": "https://about.fb.com/news/2025/12/advancing-water-stewardship-in-metas-data-center-communities/"
+        },
+        {
+          "date": "2026-03-04",
+          "kind": "coverage",
+          "summary": "Deseret Magazine reported the Kuna facility would use about 70,000 gallons of water daily in winter months (drawing on water rights for roughly 3 million gallons/day), was in final construction stages, and quoted a nearby resident objecting to the power demands.",
+          "source": "https://www.deseret.com/magazine/2026/03/04/idaho-data-centers-agriculture-water-future/"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "coverage",
+          "summary": "Gem State Chronicle reported the Kuna facility's assessed valuation crossed $1 billion in 2025, triggering Idaho's $400 million taxable-value cap for qualifying data centers, and that Meta had separately paid the city an $8.2 million one-time mitigation payment.",
+          "source": "https://gemstatechronicle.com/2026/08/micron-meta-data-center-property-tax/"
+        }
+      ]
     },
     {
       "id": "meta-temple",
@@ -7607,7 +7748,68 @@
       "source": "https://datacenters.atmeta.com/2024/07/hello-cheyenne/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2023-11-07",
+          "kind": "permit",
+          "summary": "The Cheyenne Public Services Committee approved a development agreement for 'Project Cosmo,' a data center development by Goat Systems LLC on 945 acres in the High Plains Business Park.",
+          "source": "https://www.wyomingnews.com/news/local_news/cheyenne-city-council-committee-approves-project-cosmo/article_b042937c-7dd5-11ee-b0fb-7b03130c6b48.html"
+        },
+        {
+          "date": "2024-05-09",
+          "kind": "coverage",
+          "summary": "As of this date Meta had not yet been publicly named as the company behind Project Cosmo/Goat Systems LLC, though Fortis Construction had roughly 800 workers on site clearing the 945-acre parcel and a public announcement was planned for early July 2024.",
+          "source": "https://cowboystatedaily.com/2024/05/09/exclusive-work-underway-on-multibillion-dollar-meta-data-center-in-wyoming/"
+        },
+        {
+          "date": "2024-07-02",
+          "kind": "announcement",
+          "summary": "Meta formally announced its Cheyenne data center: an $800 million, 715,000-square-foot campus at High Plains Business Park expected to support about 100 jobs, with over 1,000 construction workers at peak and a 2027 online target, built by Fortis Construction with Black Hills Energy supplying grid resources.",
+          "source": "https://www.wyomingpublicmedia.org/wyoming-economy/2024-07-08/meta-announces-800-million-data-center-in-cheyenne"
+        },
+        {
+          "date": "2025-05-26",
+          "kind": "vote",
+          "summary": "Cheyenne City Council voted 8-1 against a proposed 12-month moratorium on new data center development, after nearly four hours of public comment citing water supply, noise, farmland conversion, and pace-of-change concerns.",
+          "source": "https://www.cheyennechamber.org/post/cheyenne-votes-down-data-center-moratorium-what-happened-and-what-s-actually-confirmed"
+        },
+        {
+          "date": "2026-01-15",
+          "kind": "environmental",
+          "summary": "The Cheyenne Board of Public Utilities discovered white bacterial colonies during routine wastewater system testing, later traced to Meta's Cheyenne Data Center contractor.",
+          "source": "https://wyofile.com/white-colonies-of-petri-dish-bacteria-led-to-data-center-pollution-fine/"
+        },
+        {
+          "date": "2026-02-23",
+          "kind": "environmental",
+          "summary": "The Wyoming Public Health Laboratory identified the bacteria found in Cheyenne's reclaimed water system as Cupriavidus gilardii, an unusual soil bacterium.",
+          "source": "https://wyofile.com/white-colonies-of-petri-dish-bacteria-led-to-data-center-pollution-fine/"
+        },
+        {
+          "date": "2026-03-24",
+          "kind": "environmental",
+          "summary": "Investigators confirmed the same bacteria was present at Meta's predischarge storage tank, and Cheyenne's Board of Public Utilities revoked Goat Systems LLC's industrial discharge permit for the Meta data center.",
+          "source": "https://wyofile.com/white-colonies-of-petri-dish-bacteria-led-to-data-center-pollution-fine/"
+        },
+        {
+          "date": "2026-06-26",
+          "kind": "environmental",
+          "summary": "The Cheyenne Board of Public Utilities issued its first public statement on the contamination, about four months after the bacteria was first discovered, citing the Meta data center operator for 'serious noncompliance' with wastewater discharge standards and a $10,000 fine.",
+          "source": "https://wyofile.com/white-colonies-of-petri-dish-bacteria-led-to-data-center-pollution-fine/"
+        },
+        {
+          "date": "2026-07-02",
+          "kind": "environmental",
+          "summary": "The Cheyenne Board of Public Utilities announced it would stop accepting industrial wastewater from data-center fill-and-flush and closed-loop cooling operations citywide following the Meta contamination incident.",
+          "source": "https://cowboystatedaily.com/2026/07/02/cheyenne-wont-take-data-center-wastewater-after-meta-company-contaminated-system/"
+        },
+        {
+          "date": "2026-07-20",
+          "kind": "lawsuit",
+          "summary": "Meta/Goat Systems filed a six-page appeal disputing the source of the bacteria contamination, asking the Cheyenne Board of Public Utilities for a contested-case hearing and a refund of the $10,000 fine.",
+          "source": "https://wyofile.com/meta-wants-hearing-10k-fine-refunded-in-data-center-water-case/"
+        }
+      ]
     },
     {
       "id": "amazon-ridgeland",
@@ -7659,7 +7861,32 @@
       "source": "https://plateauexcavation.com/projects/huntsville-meta-data-center-meta-project-ferris/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2018-05-24",
+          "kind": "vote",
+          "summary": "Huntsville City Council unanimously approved the sale of 340 acres in the North Huntsville Industrial Park to Facebook's project entity, Starbelt LLC, for $8.5 million.",
+          "source": "https://governor.alabama.gov/newsroom/2018/06/governor-ivey-announces-facebook-to-invest-750-million-in-new-data-center-in-huntsville/"
+        },
+        {
+          "date": "2018-06-14",
+          "kind": "announcement",
+          "summary": "Governor Kay Ivey announced Facebook would invest $750 million to build a data center in Huntsville, projected to create about 100 jobs at an average annual salary of $80,000, with Facebook set to receive an estimated $86.25 million in Alabama Jobs Act credits over 10 years.",
+          "source": "https://governor.alabama.gov/newsroom/2018/06/governor-ivey-announces-facebook-to-invest-750-million-in-new-data-center-in-huntsville/"
+        },
+        {
+          "date": "2022-12-16",
+          "kind": "construction",
+          "summary": "Meta announced a temporary work stoppage on the Huntsville data center expansion, with a company spokesperson attributing it to changes in the data center's design.",
+          "source": "https://www.waff.com/2022/12/16/construction-slowing-down-meta-huntsville-data-center/"
+        },
+        {
+          "date": "2022-12-20",
+          "kind": "coverage",
+          "summary": "Meta confirmed it halted construction on a portion of its $1.5 billion Huntsville expansion to change the facility's design, part of a broader pullback that also paused a Temple, Texas project and canceled a planned Odense, Denmark facility amid the company's shift toward AI infrastructure.",
+          "source": "https://www.theregister.com/off-prem/2022/12/20/meta-puts-15b-alabama-datacenter-on-hold-pending-redesign/493260"
+        }
+      ]
     },
     {
       "id": "meta-aiken",

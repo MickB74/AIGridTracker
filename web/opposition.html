@@ -249,6 +249,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
 .badge { display:inline-block; font-size:12px; font-weight:700;
          padding:2px 9px; border-radius:6px; }
+.pill { display:inline-block; font-weight:600; text-transform:uppercase;
+        letter-spacing:.04em; }
+.pill.bad  { background:rgba(239,68,68,.12); color:#ef4444; }
+.pill.good { background:rgba(52,211,153,.12); color:#34d399; }
 .badge-enacted { background:#065f46; color:#6ee7b7; }
 .badge-proposed { background:#713f12; color:#fde68a; }
 .badge-rejected { background:#7f1d1d; color:#fca5a5; }
@@ -420,18 +424,30 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 
 <header>
   <div class="kicker">Know the opposition</div>
-  <h1>Industry lobby playbook</h1>
-  <p class="sub">9 organizations, 10 documented claims,
-  and the sourced counter-arguments you need at the hearing. These are the
-  groups shaping the narrative around data center development &mdash; know
-  their arguments before you walk into the room.</p>
+  <h1>Industry lobby &amp; tactics playbook</h1>
+  <p class="sub">9 lobby organizations, 20 documented tactics
+  (10 industry, 10 community),
+  and 88+ matching headlines auto-mined from our archive of 1,792
+  community-impact stories. Know their moves before you walk into the room.</p>
 </header>
-<input type="text" id="opp-search" placeholder="Search claims — e.g. jobs, tax, water, PUE..."
+<input type="text" id="opp-search" placeholder="Search organizations, tactics, claims..."
        autocomplete="off"
        style="width:100%;max-width:440px;background:var(--card);color:var(--ink);
        border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
        font-size:15px;margin-bottom:14px">
 <p class="muted" id="opp-count"></p>
+
+<nav style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px">
+  <a href="#lobby-orgs" class="btn btn-sm">Lobby organizations</a>
+  <a href="#industry-tactics" class="btn btn-sm">Industry tactics</a>
+  <a href="#community-tactics" class="btn btn-sm">Community tactics</a>
+  <a href="#playbook-summary" class="btn btn-sm">Playbook summary</a>
+</nav>
+
+<section id="lobby-orgs">
+  <h2>Lobby organizations</h2>
+  <p class="muted">9 groups shaping the narrative around data center development.</p>
+</section>
 
 <div id="opp-sections">
 
@@ -589,42 +605,376 @@ Documents DCC revenue growth, Virginia Connects video campaigns, national securi
 Comprehensive overview of data center policy landscape across all 50 states.</li></ul>
 </section>
 
-<section>
-  <h2>These claims in the wild</h2>
-  <p class="muted">Recent headlines where industry talking points met community pushback. Pulled automatically from our <a href="story-tracker.html">story tracker</a> archive.</p>
-<h3 style="font-size:15px;margin-top:16px">Electricity rates</h3><ul style="font-size:14px"><li>Pennsylvania Public Utility Commission advances measure that aims to protect ratepayers from data center demand <span class="muted">(WHYY)</span></li>
-<li>The pledge to protect ratepayers from AI data center costs needs enforcement <span class="muted">(Brookings)</span></li>
-<li>State Data Center Ratepayer Protection Bills: Comparing 5 Approaches <span class="muted">(MultiState)</span></li>
-<li>New Study Confirms What We’ve Been Saying: Data Centers Are Lowering Your Electric Bill <span class="muted">(NetChoice)</span></li>
-<li>Utilities say their rules protect ratepayers against big data centers. Some argue more can be done. <span class="muted">(Kentucky Lantern)</span></li></ul><h3 style="font-size:15px;margin-top:16px">Tax breaks contested</h3><ul style="font-size:14px"><li>Oregonians want data center moratorium and no more tax breaks, poll finds <span class="muted">(OregonLive.com)</span></li>
+<section id="industry-tactics">
+  <h2>Industry tactics &mdash; what they do</h2>
+  <p class="muted">10 documented tactics used by data center developers
+  and their lobbyists. Each is paired with real headlines from our archive and
+  a concrete counter-strategy.</p>
+  <div class="tactics-grid">
+  
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🔒 NDA / gag clause</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Developers pressure officials into non-disclosure agreements before sharing project details, cutting the public out of decisions that affect them.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Prevents organized opposition from forming before permits are locked in. By the time residents learn, approvals are already granted.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Demand sunshine-law compliance. File FOIA requests for any agreement between the developer and local government. NDAs on public-interest decisions are legally vulnerable in most states.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Inside the secretive deal for a $10 billion data center in rural North Carolina <span class="muted">(NC Newsline)</span></li>
+<li>Salem residents rage against proposed data center and city NDA that kept plans secret <span class="muted">(OregonLive.com)</span></li>
+<li>An Announcement from Kenilworth Mayor Linda Karlovitch Regarding CoreWeave <span class="muted">(tapinto.net)</span></li>
+<li>Gov. Sherrill’s plan sets new standards for N.J. AI data centers | Opinion <span class="muted">(NJ.com)</span></li>
+<li>Inside the Secretive Deal for a $10 Billion Data Center in Rural North Carolina <span class="muted">(Inside Climate News)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🪆 LLC shell game</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Projects file under anonymous LLCs so residents can&#x27;t identify the real operator or its track record until it&#x27;s too late.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Prevents residents from researching the operator&#x27;s history of noise complaints, water use, or broken promises in other communities.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Search state corporation records for the LLC&#x27;s registered agent. Cross-reference the site address with DC_SITES_DF. Ask planning boards to require beneficial-ownership disclosure as a permit condition.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 2 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Mystery on the Jersey Shore: nearly 30 dead sharks wash up in New Jersey <span class="muted">(fox4beaumont.com)</span></li>
+<li>Data Center Power Arrangements: Ring-Fencing, Subsidiary Structures, and Tariff Mechanisms Used by Local Energy Provider <span class="muted">(Dentons)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>⏩ Rushed approval</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Developers push for emergency or expedited review, compressing public comment periods and bypassing standard environmental or zoning review.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Fewer review cycles means fewer chances for residents to organize, hire experts, or build coalitions.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Request the full public-comment period mandated by state law. Move for a moratorium to buy time. Document the rush and present it to council as a red flag.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>N.J. city near major data center site rushes to stop one from coming to their town next <span class="muted">(NJ.com)</span></li>
+<li>FERC Mandates Fast-Track Data Center Grid Access, Shielding Ratepayers from Costs <span class="muted">(Tech Times)</span></li>
+<li>AI data center developers target rural territory to bypass city construction bans and regulations — rural locations allo <span class="muted">(Tom&#x27;s Hardware)</span></li>
+<li>Data-Center Backlash Leads to New Land Rush in Texas Oil Patch <span class="muted">(WSJ)</span></li>
+<li>Advocates worry San Jose will fast track data centers <span class="muted">(San José Spotlight)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>📊 Jobs promise inflation</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Headline job numbers (e.g. &#x27;5.5 million jobs&#x27;) use indirect and induced multipliers. Actual permanent on-site employment is typically 30–50 per facility.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Big numbers dominate headlines and give elected officials political cover for approvals.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Ask for permanent on-site FTEs, not construction or supply-chain estimates. Compare to the jobs displaced when residential land is rezoned industrial.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 1 headline in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Google impresses with transparency, dedication to growing West Virginia’s workforce with planned data center in Putnam C <span class="muted">(WCHS Network)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>💰 Tax incentive capture</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Developers negotiate multi-year tax abatements that waive most of the projected revenue, then cite pre-abatement figures as &#x27;economic impact.&#x27;</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Councils see gross revenue projections without subtracting the abatement. The net contribution is often negative after infrastructure costs.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Demand net-of-incentive projections. Pass clawback clauses for underperformance. Compare the per-job subsidy to other industries.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Oregonians want data center moratorium and no more tax breaks, poll finds <span class="muted">(OregonLive.com)</span></li>
 <li>Amid Affordability Crisis, New Jersey Hands $250 Million Tax Break to Data Center <span class="muted">(Inside Climate News)</span></li>
+<li>Residents Protest Kenilworth Data Center As Lawmakers Look To Eliminate Ai Tax Credits <span class="muted">(News12 | New Jersey)</span></li>
 <li>Most states offer tax breaks for AI data centers. Polls show Americans don&#x27;t want them. <span class="muted">(NBC New York)</span></li>
-<li>Backlash grows over $1.8 billion AI data center as New Jersey moves to strip tax breaks <span class="muted">(The Cool Down)</span></li>
-<li>Should local and state governments be giving big tax breaks to A.I. data centers? <span class="muted">(NBC New York)</span></li></ul><h3 style="font-size:15px;margin-top:16px">Good neighbor claims</h3><ul style="font-size:14px"><li>Residents blast data center over noise, CEO says they want to be ‘a good neighbor’ <span class="muted">(MLive.com)</span></li>
-<li>Dowagiac residents want Hyperscale Inc. to be a good neighbor <span class="muted">(The Collegiate Live)</span></li></ul>
+<li>Backlash grows over $1.8 billion AI data center as New Jersey moves to strip tax breaks <span class="muted">(The Cool Down)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>💧 Water use obscured</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Operators avoid disclosing actual water consumption, classify it as trade secrets, or cite &#x27;efficiency improvements&#x27; without absolute numbers.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Without hard numbers, residents can&#x27;t compare facility demand to municipal supply or drought reserves.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> File public records requests for water-use permits. Cite state right-to-know laws. Push for annual disclosure as a permit condition.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Water supply concerns remain top hindrance for AI data centers, says FAU expert <span class="muted">(WLRN)</span></li>
+<li>Texas law shields San Antonio-area data center water usage from public records requests <span class="muted">(KSAT)</span></li>
+<li>New Jersey Lawmakers Push for Data Center Transparency Amid Concerns over Energy and Water Demand <span class="muted">(tapinto.net)</span></li>
+<li>A loophole leaves Oklahoma data center water consumption largely untracked <span class="muted">(Investigate Midwest)</span></li>
+<li>AI data center water use collides with drought in the West <span class="muted">(qz.com)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🔊 Noise / health minimization</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Operators claim noise levels are &#x27;within code&#x27; using property-line measurements that ignore cumulative and low-frequency impacts on nearby homes.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Most local noise ordinances weren&#x27;t written for industrial cooling systems running 24/7. Code compliance ≠ livability.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Hire an independent acoustics expert. Demand interior-dB measurements, not just property line. Push for nighttime limits and low-frequency standards.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Vineland residents pack into meeting over AI data center linked to humming noise <span class="muted">(NBC10 Philadelphia)</span></li>
+<li>AI data centers spark noise, environmental concerns as South Florida communities weigh moratoriums <span class="muted">(WPTV)</span></li>
+<li>Michigan Residents Sue Over AI Data Center Noise—They’re Not Alone <span class="muted">(Newsweek)</span></li>
+<li>Mississippi homeowners blame a noisy data center plant for sleepless nights. The mayor&#x27;s advice? &quot;Consider selling.&quot; <span class="muted">(CBS News)</span></li>
+<li>Neighbors say noise from Michigan data center is 24/7 and upending their lives <span class="muted">(WXYZ Channel 7)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>⚡ Grid cost shifting</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Transmission upgrades needed for data centers enter the general rate base, spreading costs across all ratepayers while the developer pays only the interconnection fee.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Rate-base mechanics are opaque to most residents. The cost shows up as a slow rise in electric bills, not a single visible charge.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Track PUC filings for transmission cost allocation. Support ratepayer protection bills. Demand cost-causer-pays interconnection terms.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Ramaswamy says new Ohio data centers should pay residents’ electric bills <span class="muted">(Cleveland.com)</span></li>
+<li>N.J. tightens oversight of data centers amid electric bill and energy use concerns <span class="muted">(NJ.com)</span></li>
+<li>Pennsylvania Public Utility Commission advances measure that aims to protect ratepayers from data center demand <span class="muted">(WHYY)</span></li>
+<li>Data centers blamed by think tank for rise in NJ electric bills <span class="muted">(Asbury Park Press)</span></li>
+<li>The pledge to protect ratepayers from AI data center costs needs enforcement <span class="muted">(Brookings)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>⚖️ Lawsuit threat / SLAPP</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Developers sue communities that pass moratoriums or deny permits, claiming regulatory takings or equal-protection violations to chill opposition.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Small towns can&#x27;t afford prolonged litigation. The threat alone is often enough to reverse a moratorium vote.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Document the lawsuit pattern — it&#x27;s a lobbying tactic, not a legal inevitability. Push for anti-SLAPP protections. Connect with communities that prevailed in court.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Neighbors file lawsuit against Vineland AI data center over noise <span class="muted">(Press of Atlantic City)</span></li>
+<li>Developer suing Monroe Township for $300M over ban on data centers <span class="muted">(Courier-Post)</span></li>
+<li>Residents suing Hyperscale data center in Dowagiac over &#x27;unreasonable, excessive noise&#x27; <span class="muted">(WWMT)</span></li>
+<li>Judge dismisses residents’ lawsuit against Bessemer over massive data center <span class="muted">(AL.com)</span></li>
+<li>Wisconsin residents file class-action lawsuit against Microsoft&#x27;s &#x27;world&#x27;s most powerful AI data center&#x27; due to data cen <span class="muted">(Tom&#x27;s Hardware)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🌿 Greenwashing</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Operators announce &#x27;net zero&#x27; or &#x27;100% renewable&#x27; commitments based on unbundled RECs or PPAs that don&#x27;t deliver additionality to the local grid.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Green branding neutralizes environmental objections and gives council members a talking point.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Ask whether the renewables are co-located or bundled. Distinguish RECs from actual electrons. Request location-based Scope 2 reporting, not market-based.</p>
+  
+</div>
+  </div>
+</section>
+
+<section id="community-tactics">
+  <h2>Community tactics &mdash; what works</h2>
+  <p class="muted">10 proven approaches communities have used to win
+  protections, delay bad projects, or stop them entirely. Headlines show
+  these tactics in action.</p>
+  <div class="tactics-grid">
+  
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>⏸️ Moratorium / temporary ban</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">A temporary freeze on new data center permits gives the community time to study impacts and draft protective zoning before projects are locked in.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Shifts the timeline advantage from developer to community. Allows proper environmental review, traffic studies, and fiscal analysis.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Bell County passed a data center moratorium. Residents worry that work continues. <span class="muted">(kentuckylantern.com)</span></li>
+<li>Fayetteville residents urge city council to ban data centers <span class="muted">(CBS 17)</span></li>
+<li>Jeffersonville passes year-long data center moratorium amid resident outcry and major utility disclosures <span class="muted">(WDRB)</span></li>
+<li>Louisville mayor calls for a data center moratorium as city considers regulations <span class="muted">(kentuckylantern.com)</span></li>
+<li>Data center moratorium dominates Louisville public comment meeting <span class="muted">(Spectrum News)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🏛️ Packed hearing / resident turnout</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Mass attendance at planning and council meetings demonstrates the depth of community concern and puts political pressure on elected officials.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Elected officials respond to visible constituent anger. A packed room is local news, which amplifies the message.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Meta data center town hall turns tense as residents press water, power officials <span class="muted">(kfoxtv.com)</span></li>
+<li>Data center moratorium dominates Louisville public comment meeting <span class="muted">(Spectrum News)</span></li>
+<li>Shreveport residents pack town hall over data center concerns <span class="muted">(KSLA)</span></li>
+<li>‘We are angry’: Yukon crowd pushes petition to stop data center and calls for resignations <span class="muted">(KOCO)</span></li>
+<li>Westfield Residents Voice Data Center Concerns At Town Hall <span class="muted">(Patch)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🗳️ Ballot measure / referendum</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">When councils won&#x27;t act, residents can force a public vote on zoning changes or development agreements through petition and referendum.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Direct democracy bypasses captured councils. High margins (e.g. 90% no in Scio Township) send an unambiguous message.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Rural residents challenged a data center project near Ann Arbor. Nearly 90% of voters said no. <span class="muted">(MLive.com)</span></li>
+<li>Wrightstown residents to vote on AI data center referendum on Aug. 11 <span class="muted">(Green Bay Press-Gazette)</span></li>
+<li>‘We are angry’: Yukon crowd pushes petition to stop data center and calls for resignations <span class="muted">(KOCO)</span></li>
+<li>Edgewater voters could decide whether to ban certain data centers in November <span class="muted">(WKMG)</span></li>
+<li>Most N.J. voters want AI data centers banned from their towns, striking new poll numbers show <span class="muted">(NJ.com)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>📋 FOIA / transparency demand</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Public records requests expose developer-government agreements, water permits, tax abatement terms, and traffic studies that were not voluntarily disclosed.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Forces facts into the public record. Redacted or withheld documents become their own story.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Residents demand transparency on Port Washington&#x27;s $15B AI data center&#x27;s water and environmental impact <span class="muted">(TMJ4 News)</span></li>
+<li>Texas law shields San Antonio-area data center water usage from public records requests <span class="muted">(KSAT)</span></li>
+<li>Chesterfield residents call for more transparency on Google data centers <span class="muted">(VPM)</span></li>
+<li>Lawmakers back transparency on data center water, electricity use <span class="muted">(NJ Spotlight News)</span></li>
+<li>New Jersey Lawmakers Push for Data Center Transparency Amid Concerns over Energy and Water Demand <span class="muted">(tapinto.net)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🤝 Coalition building</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Cross-neighborhood and cross-issue coalitions (environmental, fiscal, property rights) present a broader front than a single NIMBY complaint.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Diverse coalitions are harder to dismiss as &#x27;a few loud neighbors.&#x27; They bring different expertise and media contacts.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Residents unite to oppose possible AI data center <span class="muted">(southjersey.media)</span></li>
+<li>Posey County residents show united front against data centers <span class="muted">(Courier &amp; Press)</span></li>
+<li>&#x27;We don&#x27;t need them here.&#x27; Alliance residents oppose data centers, council acts <span class="muted">(Canton Repository)</span></li>
+<li>Writing a single 100-word email with ChatGPT consumes approximately the volume of a standard bottle of water, the global <span class="muted">(Space Daily)</span></li>
+<li>Harris County leaders say data center moratorium unnecessary. Columbus area coalition forms <span class="muted">(ledger-enquirer.com)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🛡️ Ratepayer protection legislation</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">State bills requiring data centers to pay the full cost of grid upgrades — not socialize them across all ratepayers.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Shifts the cost-allocation debate from individual PUC dockets to statewide policy, which is harder for one developer to influence.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>State Data Center Ratepayer Protection Bills: Comparing 5 Approaches <span class="muted">(MultiState)</span></li>
+<li>Data Center Ratepayer Protections Proposed in Congress <span class="muted">(RTO Insider)</span></li>
+<li>President Expands Ratepayer Protection ‘Pledge’ For A.I. Data Centers To Pay Full Cost Of Energy, Supporting Infrastruct <span class="muted">(PA Environment Digest Blog)</span></li>
+<li>House subcommittee votes on Ratepayer Protection Act for AI data centers <span class="muted">(qz.com)</span></li>
+<li>Trump touts Ratepayer Protection Pledge as tech companies agree to cover AI data center power costs <span class="muted">(Florida’s Voice)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🗺️ Zoning defense</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Tightening conditional-use requirements, adding setbacks, noise limits, and water-use caps into the zoning code before a project can vest.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Protective zoning is proactive: it applies to all future projects, not just the one in front of you.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Adelanto moves toward data center zoning update following San Diego tour <span class="muted">(Victorville Daily Press)</span></li>
+<li>Capacity limits push Amherst residents outside as zoning board hears data center proposal <span class="muted">(Cleveland 19 News)</span></li>
+<li>Should Jackson County put the brakes on data center zoning? What residents want <span class="muted">(Kansas City Star)</span></li>
+<li>Developer Withdraws Rezoning Request for Controversial Data Center in Hoffman Estates <span class="muted">(WTTW)</span></li>
+<li>Developer withdraws rezoning request for controversial data center in Hoffman Estates <span class="muted">(Capitol News Illinois)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>📰 Media / investigative exposure</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Local and national media coverage of noise, water use, tax giveaways, or broken promises creates political risk for officials who approved the project.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Developers protect their brand. Negative press reaches investors, other host communities, and regulators.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Jeffersonville passes year-long data center moratorium amid resident outcry and major utility disclosures <span class="muted">(WDRB)</span></li>
+<li>Wytheville data center boom draws resident pushback over land, water, and electric rates <span class="muted">(WDBJ7)</span></li>
+<li>Pittsburg pledges greater public scrutiny of data centers after backlash <span class="muted">(The Mercury News)</span></li>
+<li>A company proposing a massive West Plains data center has little history, spurring outcry from concerned residents <span class="muted">(The Spokesman-Review)</span></li>
+<li>Backlash grows over $1.8 billion AI data center as New Jersey moves to strip tax breaks <span class="muted">(The Cool Down)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>⚖️ Lawsuit / legal challenge</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Residents file suit over procedural violations, environmental review failures, or zoning noncompliance to block or delay projects.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Forces developers into costly litigation and discovery. Even the threat can bring them to the negotiating table.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Ohio residents sue to stop data center <span class="muted">(Spectrum News)</span></li>
+<li>&#x27;Project of unprecedented scale&#x27;: Lake County residents file lawsuit to block 472-acre data center campus in Grayslake <span class="muted">(Lake and McHenry County Scanner)</span></li>
+<li>Michigan Residents Sue Over AI Data Center Noise—They’re Not Alone <span class="muted">(Newsweek)</span></li>
+<li>&#x27;It sounds like someone set up a vacuum, like in your living room&#x27;: Michigan residents sue AI data center emitting noise <span class="muted">(Tom&#x27;s Hardware)</span></li>
+<li>Ohio Supreme Court case to decide if residents get any say on data center in their back yards <span class="muted">(Cleveland.com)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🏆 Project withdrawal</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Sustained community pressure — moratoriums, lawsuits, media coverage, or political risk — causes the developer to withdraw the project entirely.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Developers need community consent to operate long-term. Hostile environments increase costs, delay timelines, and create reputational risk.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li>Amazon abandons plans for data center campus at Calvert Cliffs <span class="muted">(Maryland Matters)</span></li>
+<li>Deltona Corporation has withdrawn its applications for land tied to future data center in Citrus County: BOCC <span class="muted">(tampabay28.com)</span></li>
+<li>Gigawatt-scale data center in Atlanta, Georgia, withdrawn by developer <span class="muted">(Data Center Dynamics)</span></li>
+<li>400-acre data center proposal withdrawn in Lovejoy, city council to revise zoning policies <span class="muted">(WABE)</span></li>
+<li>Another N.J. town bans AI data centers after proposal to build one is withdrawn <span class="muted">(NJ.com)</span></li></ul></details>
+</div>
+  </div>
 </section>
 
 <section>
+  <h2>Specific claims in the wild</h2>
+  <p class="muted">Headlines where specific industry talking points met community pushback. Pulled automatically from our <a href="story-tracker.html">story tracker</a> archive.</p>
+<h3 style="font-size:15px;margin-top:16px">Electricity rates</h3><ul style="font-size:14px"><li>New Study Confirms What We’ve Been Saying: Data Centers Are Lowering Your Electric Bill <span class="muted">(NetChoice)</span></li></ul><h3 style="font-size:15px;margin-top:16px">Good neighbor claims</h3><ul style="font-size:14px"><li>Residents blast data center over noise, CEO says they want to be ‘a good neighbor’ <span class="muted">(MLive.com)</span></li>
+<li>Dowagiac residents want Hyperscale Inc. to be a good neighbor <span class="muted">(The Collegiate Live)</span></li></ul>
+</section>
+
+<section id="playbook-summary">
   <h2>The playbook at a glance</h2>
-  <div class="note warn"><p>Six core industry claims to prepare for:</p>
-  <ol>
-    <li><strong>Jobs</strong> &mdash; Headline figures (5.5M) use indirect/induced
-    multipliers. Ask for <em>permanent on-site FTEs</em>, not construction or
-    supply-chain estimates.</li>
-    <li><strong>Tax revenue</strong> &mdash; Often paired with abatements that waive
-    most of the revenue. Ask for the <em>net</em> after incentives.</li>
-    <li><strong>Electricity rates</strong> &mdash; "We don&rsquo;t raise rates" is
-    based on a DCC-commissioned study. PUC filings in multiple states show
-    transmission upgrades entering the rate base.</li>
-    <li><strong>National security</strong> &mdash; The "critical infrastructure"
-    frame is used to bypass local review. Data centers are private commercial
-    facilities.</li>
-    <li><strong>Clean energy</strong> &mdash; PPA announcements are not the same as
-    additionality. Buyer concentration is rising, not broadening.</li>
-    <li><strong>Self-regulation</strong> &mdash; PUE measures building efficiency,
-    not absolute impact. Only 23% of operators report all three scopes of
-    emissions.</li>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:16px">
+  <div class="note bad" style="margin:0">
+  <p><strong>Their playbook (what to watch for):</strong></p>
+  <ol style="font-size:14px">
+    <li><strong>Secrecy first</strong> &mdash; NDAs, LLCs, and rushed timelines
+    prevent organized opposition from forming.</li>
+    <li><strong>Inflate the benefits</strong> &mdash; Headline job and tax numbers
+    use multipliers or ignore abatements.</li>
+    <li><strong>Obscure the costs</strong> &mdash; Water use is "proprietary," grid
+    costs are socialized, noise is "within code."</li>
+    <li><strong>Divide the community</strong> &mdash; Target different messages to
+    different groups. Offer small concessions to peel off moderates.</li>
+    <li><strong>Sue if blocked</strong> &mdash; Threaten regulatory-takings suits
+    to chill moratorium votes.</li>
+    <li><strong>Greenwash</strong> &mdash; PPA announcements without additionality.
+    Net-zero pledges with decade-long timelines.</li>
   </ol></div>
+  <div class="note good" style="margin:0">
+  <p><strong>Your playbook (what actually works):</strong></p>
+  <ol style="font-size:14px">
+    <li><strong>Buy time</strong> &mdash; Moratoriums give communities months to study
+    impacts and organize.</li>
+    <li><strong>Pack the room</strong> &mdash; Visible turnout is the single most
+    effective pressure on elected officials.</li>
+    <li><strong>Force transparency</strong> &mdash; FOIA the agreements. Demand
+    water/energy/noise disclosure as permit conditions.</li>
+    <li><strong>Build a broad coalition</strong> &mdash; Environmental + fiscal +
+    property-rights allies are harder to dismiss.</li>
+    <li><strong>Go to the ballot</strong> &mdash; Direct democracy bypasses captured
+    councils (90% no in Scio Township).</li>
+    <li><strong>Make it a pattern story</strong> &mdash; Media coverage of noise,
+    broken promises, or tax giveaways creates political risk.</li>
+  </ol></div>
+  </div>
 </section>
 
 <section>
@@ -634,6 +984,8 @@ Comprehensive overview of data center policy landscape across all 50 states.</li
   <a href="cba-clauses.html">Model CBA clauses</a> &middot;
   <a href="tax-breaks.html">The real cost of tax breaks</a></p>
   <p class="muted" style="font-size:12px">Last updated: 2026-08-16.
+  Tactics are matched to headlines automatically from our 1,792-story archive &mdash;
+  this page refreshes with every site rebuild.
   Industry claims and counter-arguments are sourced; see individual links.
   This page is educational reference, not legal advice.</p>
 </section>
@@ -642,6 +994,7 @@ Comprehensive overview of data center policy landscape across all 50 states.</li
 (function() {
   var q = document.getElementById('opp-search');
   var orgs = Array.from(document.querySelectorAll('.opp-org'));
+  var tactics = Array.from(document.querySelectorAll('.tactic-card'));
   var ct = document.getElementById('opp-count');
   q.addEventListener('input', function() {
     var s = q.value.toLowerCase();
@@ -652,6 +1005,7 @@ Comprehensive overview of data center policy landscape across all 50 states.</li
       if (!s) {
         sec.style.display = '';
         claims.forEach(function(c) { c.style.opacity = '1'; });
+        shown++;
         return;
       }
       var headerMatch = sec.querySelector('.note').textContent.toLowerCase().indexOf(s) >= 0;
@@ -664,7 +1018,23 @@ Comprehensive overview of data center policy landscape across all 50 states.</li
       sec.style.display = anyMatch ? '' : 'none';
       if (anyMatch) shown++;
     });
-    ct.textContent = s ? (shown + ' organization' + (shown === 1 ? '' : 's') + ' match') : '';
+    var tacticShown = 0;
+    tactics.forEach(function(card) {
+      if (!s) {
+        card.style.display = '';
+        tacticShown++;
+        return;
+      }
+      var match = card.textContent.toLowerCase().indexOf(s) >= 0;
+      card.style.display = match ? '' : 'none';
+      if (match) tacticShown++;
+    });
+    if (s) {
+      ct.textContent = shown + ' org' + (shown === 1 ? '' : 's') +
+        ', ' + tacticShown + ' tactic' + (tacticShown === 1 ? '' : 's');
+    } else {
+      ct.textContent = '';
+    }
   });
 })();
 </script>
