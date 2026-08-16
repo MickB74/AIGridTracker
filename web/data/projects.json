@@ -7162,7 +7162,68 @@
       "source": "https://static1.squarespace.com/static/5e9a1686f716835e61268f2a/t/63659cb153e00407c9cd0bc9/1667603634454/SPR%2B512-22%2C%2BNOD%2C%2B10-31-22%2B%281%29.pdf",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2021-09-01",
+          "kind": "filing",
+          "summary": "The Oregonian reporter Mike Rogoway submitted a public records request to the City of The Dalles for records of Google's local water usage, which the city denied by claiming the data was a trade secret, triggering the ensuing legal fight (September 2021).",
+          "source": "https://www.columbiagorgenews.com/news/the-dalles-settles-oregonian-lawsuit-releases-google-water-records/article_d3c0cb0a-7c34-11ed-8683-9713468ff834.html"
+        },
+        {
+          "date": "2021-11-08",
+          "kind": "vote",
+          "summary": "The Dalles city council authorized an infrastructure agreement with Google (via subsidiary Design LLC) worth $28.5 million for water system improvements.",
+          "source": "https://www.opb.org/article/2026/01/15/as-googles-water-demands-grow-the-dalles-aims-to-pull-more-from-mount-hood-forest/"
+        },
+        {
+          "date": "2021-11-09",
+          "kind": "incentive",
+          "summary": "Google signed a Strategic Investment Program agreement with The Dalles providing property tax breaks in exchange for the company's investment commitments, alongside a $28.5 million infrastructure agreement.",
+          "source": "https://www.opb.org/article/2026/01/15/as-googles-water-demands-grow-the-dalles-aims-to-pull-more-from-mount-hood-forest/"
+        },
+        {
+          "date": "2022-12-14",
+          "kind": "lawsuit",
+          "summary": "The Dalles settled its lawsuit against The Oregonian, agreeing to release ten years of Google water-usage records to reporter Mike Rogoway and to have Google reimburse the city's $53,173 in legal fees to the newspaper.",
+          "source": "https://www.columbiagorgenews.com/news/the-dalles-settles-oregonian-lawsuit-releases-google-water-records/article_d3c0cb0a-7c34-11ed-8683-9713468ff834.html"
+        },
+        {
+          "date": "2024-01-30",
+          "kind": "permit",
+          "summary": "The Dalles' community development department gave Whiting-Turner Contracting Co. approval to begin construction on a 290,000-square-foot, roughly $600 million Google data center building for Google subsidiary Design LLC at the former aluminum smelter site.",
+          "source": "https://www.constructiondive.com/news/google-whiting-turner-oregon-data-center/705938/"
+        },
+        {
+          "date": "2025-01-01",
+          "kind": "construction",
+          "summary": "Google completed construction of a fourth data center building at its The Dalles campus in 2025.",
+          "source": "https://www.opb.org/article/2026/01/15/as-googles-water-demands-grow-the-dalles-aims-to-pull-more-from-mount-hood-forest/"
+        },
+        {
+          "date": "2025-12-09",
+          "kind": "vote",
+          "summary": "H.R. 655, the Dalles Watershed Development Act sponsored by Rep. Cliff Bentz, which would transfer about 150 acres of Mt. Hood National Forest land to The Dalles to expand its reservoir, passed the U.S. House and moved to the Senate Energy and Natural Resources Committee.",
+          "source": "http://bark-out.org/news/press-release-bark-coalition-of-local-orgs-pressure-wyden-to-oppose-bill-that-would-give-away-portions-of-mt-hood-nf-to-the-dalles-to-meet-googles-growing-water-demands/"
+        },
+        {
+          "date": "2026-01-15",
+          "kind": "environmental",
+          "summary": "OPB reported that Google's water consumption in The Dalles rose 316% from 2012 to 2024 (from 104 million to 434 million gallons annually) while the city's population grew only 12%, and that a bill (H.R. 655) would transfer Mount Hood National Forest land to the city to expand its reservoir.",
+          "source": "https://www.opb.org/article/2026/01/15/as-googles-water-demands-grow-the-dalles-aims-to-pull-more-from-mount-hood-forest/"
+        },
+        {
+          "date": "2026-01-23",
+          "kind": "coverage",
+          "summary": "The Dalles Mayor Richard Mays publicly called OPB's reporting on Google's data center water use inaccurate; OPB's follow-up corrected one error, noting projected residential water rate increases by 2036 were 99%, not the 7% initially reported.",
+          "source": "https://www.opb.org/article/2026/01/23/the-dalles-mayor-data-center-google/"
+        },
+        {
+          "date": "2026-02-11",
+          "kind": "protest",
+          "summary": "A coalition of 13 organizations including WaterWatch of Oregon, Bark, Columbia Riverkeeper, Sierra Club, and Oregon Wild sent a letter pressuring Senator Wyden to oppose H.R. 655, stating Google has received about $260 million in state and local tax breaks at its The Dalles campus.",
+          "source": "http://bark-out.org/news/press-release-bark-coalition-of-local-orgs-pressure-wyden-to-oppose-bill-that-would-give-away-portions-of-mt-hood-nf-to-the-dalles-to-meet-googles-growing-water-demands/"
+        }
+      ]
     },
     {
       "id": "google-midlothian",

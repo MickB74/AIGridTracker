@@ -6907,7 +6907,68 @@
       "note": "Chip types: TPU v6e,TPU v5p,TPU v7. Epoch AI estimates ~154 MW.",
       "source": "https://static1.squarespace.com/static/5e9a1686f716835e61268f2a/t/63659cb153e00407c9cd0bc9/1667603634454/SPR%2B512-22%2C%2BNOD%2C%2B10-31-22%2B%281%29.pdf",
       "as_of": "2026-08-14",
-      "events": []
+      "events": [
+        {
+          "date": "2021-09-01",
+          "kind": "filing",
+          "summary": "The Oregonian reporter Mike Rogoway submitted a public records request to the City of The Dalles for records of Google's local water usage, which the city denied by claiming the data was a trade secret, triggering the ensuing legal fight (September 2021).",
+          "source": "https://www.columbiagorgenews.com/news/the-dalles-settles-oregonian-lawsuit-releases-google-water-records/article_d3c0cb0a-7c34-11ed-8683-9713468ff834.html"
+        },
+        {
+          "date": "2021-11-08",
+          "kind": "vote",
+          "summary": "The Dalles city council authorized an infrastructure agreement with Google (via subsidiary Design LLC) worth $28.5 million for water system improvements.",
+          "source": "https://www.opb.org/article/2026/01/15/as-googles-water-demands-grow-the-dalles-aims-to-pull-more-from-mount-hood-forest/"
+        },
+        {
+          "date": "2021-11-09",
+          "kind": "incentive",
+          "summary": "Google signed a Strategic Investment Program agreement with The Dalles providing property tax breaks in exchange for the company's investment commitments, alongside a $28.5 million infrastructure agreement.",
+          "source": "https://www.opb.org/article/2026/01/15/as-googles-water-demands-grow-the-dalles-aims-to-pull-more-from-mount-hood-forest/"
+        },
+        {
+          "date": "2022-12-14",
+          "kind": "lawsuit",
+          "summary": "The Dalles settled its lawsuit against The Oregonian, agreeing to release ten years of Google water-usage records to reporter Mike Rogoway and to have Google reimburse the city's $53,173 in legal fees to the newspaper.",
+          "source": "https://www.columbiagorgenews.com/news/the-dalles-settles-oregonian-lawsuit-releases-google-water-records/article_d3c0cb0a-7c34-11ed-8683-9713468ff834.html"
+        },
+        {
+          "date": "2024-01-30",
+          "kind": "permit",
+          "summary": "The Dalles' community development department gave Whiting-Turner Contracting Co. approval to begin construction on a 290,000-square-foot, roughly $600 million Google data center building for Google subsidiary Design LLC at the former aluminum smelter site.",
+          "source": "https://www.constructiondive.com/news/google-whiting-turner-oregon-data-center/705938/"
+        },
+        {
+          "date": "2025-01-01",
+          "kind": "construction",
+          "summary": "Google completed construction of a fourth data center building at its The Dalles campus in 2025.",
+          "source": "https://www.opb.org/article/2026/01/15/as-googles-water-demands-grow-the-dalles-aims-to-pull-more-from-mount-hood-forest/"
+        },
+        {
+          "date": "2025-12-09",
+          "kind": "vote",
+          "summary": "H.R. 655, the Dalles Watershed Development Act sponsored by Rep. Cliff Bentz, which would transfer about 150 acres of Mt. Hood National Forest land to The Dalles to expand its reservoir, passed the U.S. House and moved to the Senate Energy and Natural Resources Committee.",
+          "source": "http://bark-out.org/news/press-release-bark-coalition-of-local-orgs-pressure-wyden-to-oppose-bill-that-would-give-away-portions-of-mt-hood-nf-to-the-dalles-to-meet-googles-growing-water-demands/"
+        },
+        {
+          "date": "2026-01-15",
+          "kind": "environmental",
+          "summary": "OPB reported that Google's water consumption in The Dalles rose 316% from 2012 to 2024 (from 104 million to 434 million gallons annually) while the city's population grew only 12%, and that a bill (H.R. 655) would transfer Mount Hood National Forest land to the city to expand its reservoir.",
+          "source": "https://www.opb.org/article/2026/01/15/as-googles-water-demands-grow-the-dalles-aims-to-pull-more-from-mount-hood-forest/"
+        },
+        {
+          "date": "2026-01-23",
+          "kind": "coverage",
+          "summary": "The Dalles Mayor Richard Mays publicly called OPB's reporting on Google's data center water use inaccurate; OPB's follow-up corrected one error, noting projected residential water rate increases by 2036 were 99%, not the 7% initially reported.",
+          "source": "https://www.opb.org/article/2026/01/23/the-dalles-mayor-data-center-google/"
+        },
+        {
+          "date": "2026-02-11",
+          "kind": "protest",
+          "summary": "A coalition of 13 organizations including WaterWatch of Oregon, Bark, Columbia Riverkeeper, Sierra Club, and Oregon Wild sent a letter pressuring Senator Wyden to oppose H.R. 655, stating Google has received about $260 million in state and local tax breaks at its The Dalles campus.",
+          "source": "http://bark-out.org/news/press-release-bark-coalition-of-local-orgs-pressure-wyden-to-oppose-bill-that-would-give-away-portions-of-mt-hood-nf-to-the-dalles-to-meet-googles-growing-water-demands/"
+        }
+      ]
     },
     {
       "id": "google-midlothian",
@@ -7157,7 +7218,80 @@
       "note": "Chip types: B300. Epoch AI estimates ~152 MW.",
       "source": "https://datacenters.atmeta.com/wp-content/uploads/2025/02/Meta_s-Kuna-Data-Center.pdf",
       "as_of": "2026-08-14",
-      "events": []
+      "events": [
+        {
+          "date": "2021-12-22",
+          "kind": "filing",
+          "summary": "Idaho Power filed an application with the Idaho Public Utilities Commission (Case No. IPC-E-21-42) for approval of a special contract and Tariff Schedule 33 to provide electric service to Brisbie LLC \u2014 the shell entity used for Meta's then-unannounced Kuna project.",
+          "source": "https://puc.idaho.gov/Fileroom/PublicFiles/ELEC/IPC/IPCE2142/CaseFiles/20211222Application.pdf"
+        },
+        {
+          "date": "2022-02-16",
+          "kind": "announcement",
+          "summary": "Idaho Commerce announced Meta would build an $800 million, 960,000-square-foot data center in Kuna, bringing about 100 permanent jobs and up to 1,200 construction jobs, with Meta also funding a $50 million water/sewer system for the city.",
+          "source": "https://commerce.idaho.gov/press-releases/meta-announces-kuna-as-location-of-new-data-center/"
+        },
+        {
+          "date": "2022-02-17",
+          "kind": "coverage",
+          "summary": "Data Center Frontier reported the Kuna facility would be at least 80% more water-efficient than the average data center and would use outside air for cooling at least 50% of the year, and noted Idaho Power developed a new green tariff so Meta could run on 100% renewable energy.",
+          "source": "https://www.datacenterfrontier.com/virtual-reality/article/11427590/meta-is-building-a-giant-800-million-data-center-in-idaho"
+        },
+        {
+          "date": "2022-02-24",
+          "kind": "construction",
+          "summary": "Meta awarded Hensel Phelps the $800 million Kuna data center project (preconstruction and construction services), with groundbreaking scheduled for September 2022 and construction expected to continue through 2025.",
+          "source": "https://www.henselphelps.com/meta-formerly-the-facebook-company-awards-hensel-phelps-kuna-data-center/"
+        },
+        {
+          "date": "2022-11-01",
+          "kind": "vote",
+          "summary": "The Kuna City Council formally approved the Urban Renewal Plan for the Kuna East Urban Renewal Project via Ordinance No. 2022-34, establishing the district around the Meta project site.",
+          "source": "https://www.kunacity.id.gov/543/Kuna-East-Urban-Renewal-District"
+        },
+        {
+          "date": "2023-03-30",
+          "kind": "vote",
+          "summary": "The Idaho Senate passed House Bill 328, legislation explicitly tied to Kuna's creation of an urban renewal area around the Meta data center, restricting data centers claiming the state sales-tax exemption from also sitting in new urban renewal revenue-allocation areas.",
+          "source": "https://blog.idahoreports.idahoptv.org/2023/03/30/bill-passed-to-exclude-data-center-from-urban-renewal-area/"
+        },
+        {
+          "date": "2023-10-12",
+          "kind": "ruling",
+          "summary": "The Idaho Public Utilities Commission issued Order No. 35958 in Case No. IPC-E-21-42, giving final approval of the special contract and Schedule 33 tariff for the Brisbie LLC (Meta) Kuna data center facility.",
+          "source": "https://puc.idaho.gov/case/Details/6792"
+        },
+        {
+          "date": "2024-05-16",
+          "kind": "filing",
+          "summary": "Idaho Power filed an application with the IPUC (Case No. IPC-E-24-20) to amend its power purchase agreement with PVS 2, LLC \u2014 the Pleasant Valley Solar project developed to supply renewable power for Meta's Kuna load \u2014 moving the commercial operation date from December 31, 2026 to May 31, 2026.",
+          "source": "https://puc.idaho.gov/Fileroom/PublicFiles/ELEC/IPC/IPCE2420/CaseFiles/20240516Application.pdf"
+        },
+        {
+          "date": "2024-10-25",
+          "kind": "coverage",
+          "summary": "Idaho Business Review reported the Kuna data center was running right on schedule per Meta's community development manager, on track for a 2025 completion despite an earlier roughly eight-month redesign pause to accommodate AI infrastructure.",
+          "source": "https://idahobusinessreview.com/2024/10/25/metas-mega-data-center-in-kuna-on-track-to-be-completed-by-2025/"
+        },
+        {
+          "date": "2025-12-17",
+          "kind": "coverage",
+          "summary": "Meta stated it invested over $70 million to build a water and wastewater treatment facility at the Kuna site that has since been gifted to the city of Kuna.",
+          "source": "https://about.fb.com/news/2025/12/advancing-water-stewardship-in-metas-data-center-communities/"
+        },
+        {
+          "date": "2026-03-04",
+          "kind": "coverage",
+          "summary": "Deseret Magazine reported the Kuna facility would use about 70,000 gallons of water daily in winter months (drawing on water rights for roughly 3 million gallons/day), was in final construction stages, and quoted a nearby resident objecting to the power demands.",
+          "source": "https://www.deseret.com/magazine/2026/03/04/idaho-data-centers-agriculture-water-future/"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "coverage",
+          "summary": "Gem State Chronicle reported the Kuna facility's assessed valuation crossed $1 billion in 2025, triggering Idaho's $400 million taxable-value cap for qualifying data centers, and that Meta had separately paid the city an $8.2 million one-time mitigation payment.",
+          "source": "https://gemstatechronicle.com/2026/08/micron-meta-data-center-property-tax/"
+        }
+      ]
     },
     {
       "id": "meta-temple",
@@ -7270,7 +7404,68 @@
       "note": "Chip types: B300. Epoch AI estimates ~152 MW.",
       "source": "https://datacenters.atmeta.com/2024/07/hello-cheyenne/",
       "as_of": "2026-08-14",
-      "events": []
+      "events": [
+        {
+          "date": "2023-11-07",
+          "kind": "permit",
+          "summary": "The Cheyenne Public Services Committee approved a development agreement for 'Project Cosmo,' a data center development by Goat Systems LLC on 945 acres in the High Plains Business Park.",
+          "source": "https://www.wyomingnews.com/news/local_news/cheyenne-city-council-committee-approves-project-cosmo/article_b042937c-7dd5-11ee-b0fb-7b03130c6b48.html"
+        },
+        {
+          "date": "2024-05-09",
+          "kind": "coverage",
+          "summary": "As of this date Meta had not yet been publicly named as the company behind Project Cosmo/Goat Systems LLC, though Fortis Construction had roughly 800 workers on site clearing the 945-acre parcel and a public announcement was planned for early July 2024.",
+          "source": "https://cowboystatedaily.com/2024/05/09/exclusive-work-underway-on-multibillion-dollar-meta-data-center-in-wyoming/"
+        },
+        {
+          "date": "2024-07-02",
+          "kind": "announcement",
+          "summary": "Meta formally announced its Cheyenne data center: an $800 million, 715,000-square-foot campus at High Plains Business Park expected to support about 100 jobs, with over 1,000 construction workers at peak and a 2027 online target, built by Fortis Construction with Black Hills Energy supplying grid resources.",
+          "source": "https://www.wyomingpublicmedia.org/wyoming-economy/2024-07-08/meta-announces-800-million-data-center-in-cheyenne"
+        },
+        {
+          "date": "2025-05-26",
+          "kind": "vote",
+          "summary": "Cheyenne City Council voted 8-1 against a proposed 12-month moratorium on new data center development, after nearly four hours of public comment citing water supply, noise, farmland conversion, and pace-of-change concerns.",
+          "source": "https://www.cheyennechamber.org/post/cheyenne-votes-down-data-center-moratorium-what-happened-and-what-s-actually-confirmed"
+        },
+        {
+          "date": "2026-01-15",
+          "kind": "environmental",
+          "summary": "The Cheyenne Board of Public Utilities discovered white bacterial colonies during routine wastewater system testing, later traced to Meta's Cheyenne Data Center contractor.",
+          "source": "https://wyofile.com/white-colonies-of-petri-dish-bacteria-led-to-data-center-pollution-fine/"
+        },
+        {
+          "date": "2026-02-23",
+          "kind": "environmental",
+          "summary": "The Wyoming Public Health Laboratory identified the bacteria found in Cheyenne's reclaimed water system as Cupriavidus gilardii, an unusual soil bacterium.",
+          "source": "https://wyofile.com/white-colonies-of-petri-dish-bacteria-led-to-data-center-pollution-fine/"
+        },
+        {
+          "date": "2026-03-24",
+          "kind": "environmental",
+          "summary": "Investigators confirmed the same bacteria was present at Meta's predischarge storage tank, and Cheyenne's Board of Public Utilities revoked Goat Systems LLC's industrial discharge permit for the Meta data center.",
+          "source": "https://wyofile.com/white-colonies-of-petri-dish-bacteria-led-to-data-center-pollution-fine/"
+        },
+        {
+          "date": "2026-06-26",
+          "kind": "environmental",
+          "summary": "The Cheyenne Board of Public Utilities issued its first public statement on the contamination, about four months after the bacteria was first discovered, citing the Meta data center operator for 'serious noncompliance' with wastewater discharge standards and a $10,000 fine.",
+          "source": "https://wyofile.com/white-colonies-of-petri-dish-bacteria-led-to-data-center-pollution-fine/"
+        },
+        {
+          "date": "2026-07-02",
+          "kind": "environmental",
+          "summary": "The Cheyenne Board of Public Utilities announced it would stop accepting industrial wastewater from data-center fill-and-flush and closed-loop cooling operations citywide following the Meta contamination incident.",
+          "source": "https://cowboystatedaily.com/2026/07/02/cheyenne-wont-take-data-center-wastewater-after-meta-company-contaminated-system/"
+        },
+        {
+          "date": "2026-07-20",
+          "kind": "lawsuit",
+          "summary": "Meta/Goat Systems filed a six-page appeal disputing the source of the bacteria contamination, asking the Cheyenne Board of Public Utilities for a contested-case hearing and a refund of the $10,000 fine.",
+          "source": "https://wyofile.com/meta-wants-hearing-10k-fine-refunded-in-data-center-water-case/"
+        }
+      ]
     },
     {
       "id": "amazon-ridgeland",

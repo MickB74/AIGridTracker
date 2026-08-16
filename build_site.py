@@ -2513,9 +2513,6 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
     for g in groups:
         headline_rows = []
         if g["count"] >= 10:
-            # A 10+ story list is a wall — organize it under topic subheaders
-            # (bans, lawsuits, legislation, …) so the shape of a big fight is
-            # scannable. Stories stay newest-first within each topic.
             by_topic = {}
             for s in g["stories"]:
                 _, tlabel = story_tracker.classify_topic(s.get("title", ""))
@@ -2549,30 +2546,41 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
         last_active = _fmt_date(_latest_iso(g), fmt="%b %-d")
         search_blob = esc(" ".join([g["label"]] + [s.get("title", "") for s in g["stories"]]))
         slug = _story_group_slug(g["label"])
-        # Every locality group now has a dedicated community page — either
-        # the moratorium-tracker one (build_community) or the news-only one
-        # (build_locality_news_page) — so link straight to it whenever a
-        # town/county was actually identified, not just the state bucket.
-        # The page's real slug can differ from this card's own anchor slug
-        # (see locality_slugs docstring above) — fall back to the anchor
-        # slug only if the map is missing an entry, so a link is never worse
-        # than what shipped before this parameter existed.
         page_link = ""
         if g["locality"]:
             _page_slug = locality_slugs.get((g["locality"], g["state"]), slug)
             page_link = f' · <a href="communities/{_page_slug}.html">Full page &rarr;</a>'
+        # Surface the latest headline on the card face
+        latest_story = g["stories"][0] if g["stories"] else None
+        latest_html = ""
+        if latest_story:
+            latest_html = (
+                f'<div class="card-latest"><a href="{esc(latest_story.get("link", ""))}" '
+                f'rel="nofollow noopener" target="_blank">'
+                f'{esc(latest_story.get("title", ""))}</a>'
+                f'<span class="meta">{esc(latest_story.get("outlet", ""))}'
+                f'{" · " + _fmt_date(latest_story.get("first_seen")) if latest_story.get("first_seen") else ""}'
+                f'</span></div>')
+        state_chip = ""
+        if g["state"]:
+            state_chip = (f'<button type="button" class="tag tag-btn sg-state-chip" '
+                          f'data-filter-state="{esc(g["state"])}">{esc(g["state"])}</button>')
         cards.append(
             f'<article class="story-group" id="{slug}" data-state="{esc(g["state"] or "")}" '
             f'data-count="{g["count"]}" data-latest="{esc(_latest_iso(g))}" '
             f'data-pattern="{"1" if g["summary"] else "0"}" '
             f'data-search="{search_blob.lower()}">'
-            f'<h3><a href="#{slug}" class="anchor">{esc(g["label"])}</a> '
-            f'<span class="count">{g["count"]} stor{"y" if g["count"] == 1 else "ies"}</span>'
-            f'{pattern_badge}{page_link}</h3>'
-            f'{f"<p class=\"muted\" style=\"margin:-2px 0 8px;font-size:12.5px\">last activity {last_active}</p>" if last_active else ""}'
+            f'<div class="sg-head">'
+            f'<div class="sg-title-row">'
+            f'<h3><a href="#{slug}" class="anchor">{esc(g["label"])}</a></h3>'
+            f'<span class="sg-count">{g["count"]}</span></div>'
+            f'<div class="sg-meta-row">{state_chip}{pattern_badge}'
+            f'{f"<span class=\"sg-activity\">Active {last_active}</span>" if last_active else ""}'
+            f'{page_link}</div></div>'
             f'{summary_html}'
+            f'{latest_html}'
             f'<details{" open" if g["count"] <= 3 else ""}>'
-            f'<summary>{g["count"]} headline{"s" if g["count"] != 1 else ""}</summary>'
+            f'<summary>{"All " if g["count"] > 1 else ""}{g["count"]} headline{"s" if g["count"] != 1 else ""}</summary>'
             f'<ul class="story-list">{"".join(headline_rows)}</ul></details>'
             f'{videos_html}</article>')
 
@@ -2594,7 +2602,7 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
 {patterns_html}
 <section id="browse">
   <h2>Look up a community</h2>
-  <div class="feed-controls">
+  <div class="feed-controls sticky-filters" id="stickyFilters">
     <div class="row">
       <label>State
         <select id="stateFilter">{state_options}</select>
@@ -2610,16 +2618,18 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
       </label>
     </div>
     <div class="row" style="justify-content:space-between">
-      <label style="gap:6px">
+      <label class="cb-label">
         <input id="patternsOnly" type="checkbox">
         Recurring patterns only
       </label>
       <span id="filterCount" class="muted"></span>
       <button id="resetFilters" class="btn ghost" style="padding:6px 12px;font-size:13px" type="button">Reset</button>
     </div>
+    <div id="activeChips" class="active-chips" style="display:none"></div>
   </div>
   <div id="storyGroups" class="story-grid">{"".join(cards)}</div>
   <p id="noResults" class="muted" style="display:none">No tracked communities match those filters.</p>
+  <button id="showMore" class="btn ghost show-more" type="button">Show more communities</button>
 </section>
 <section>
   <h2>Use this data</h2>
@@ -2641,20 +2651,41 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
   <a href="moratoriums.html">moratorium tracker</a>.</p>
 </section>
 <style>
-.story-grid {{ display:grid; gap:12px;
-  grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); }}
+.story-grid {{ display:grid; gap:14px;
+  grid-template-columns:repeat(auto-fill, minmax(340px, 1fr)); }}
 .story-group {{ background:var(--card); border:1px solid var(--rule);
-  border-radius:12px; padding:14px 16px; }}
+  border-radius:12px; padding:16px 18px; transition:border-color .15s; }}
+.story-group:hover {{ border-color:rgba(45,212,191,.35); }}
 .story-group[data-pattern="1"] {{ border-left:3px solid var(--teal); }}
-.story-group h3 {{ margin:0 0 6px; font-size:16px; display:flex;
-  align-items:center; gap:8px; flex-wrap:wrap; }}
-.story-group h3 a.anchor {{ color:var(--ink); text-decoration:none; }}
-.story-group h3 a.anchor:hover {{ color:var(--teal); }}
-.story-group .count {{ font-size:12.5px; font-weight:400; color:var(--muted); }}
-.badge-pattern {{ font-size:11.5px; font-weight:600; padding:2px 8px;
+.sg-head {{ margin-bottom:10px; }}
+.sg-title-row {{ display:flex; align-items:baseline; gap:10px; }}
+.sg-title-row h3 {{ margin:0; font-size:16px; flex:1; min-width:0; }}
+.sg-title-row h3 a.anchor {{ color:var(--ink); text-decoration:none; }}
+.sg-title-row h3 a.anchor:hover {{ color:var(--teal); }}
+.sg-count {{ flex-shrink:0; font-size:13px; font-weight:700;
+  background:rgba(45,212,191,.12); color:var(--teal); border-radius:999px;
+  width:30px; height:30px; display:flex; align-items:center;
+  justify-content:center; }}
+.sg-meta-row {{ display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+  margin-top:6px; font-size:12.5px; }}
+.sg-meta-row a {{ color:var(--teal); font-size:12.5px; }}
+.sg-activity {{ color:var(--muted); }}
+.sg-state-chip {{ font-size:11px !important; padding:1px 7px !important;
+  background:rgba(255,255,255,.06); border:1px solid var(--rule);
+  color:var(--muted); border-radius:999px; cursor:pointer; }}
+.sg-state-chip:hover {{ background:rgba(45,212,191,.14); color:var(--teal);
+  border-color:rgba(45,212,191,.28); }}
+.card-latest {{ margin:8px 0 10px; padding:10px 12px; background:rgba(255,255,255,.03);
+  border-radius:8px; border:1px solid var(--rule); }}
+.card-latest a {{ font-size:13.5px; line-height:1.4; color:var(--ink);
+  text-decoration:none; }}
+.card-latest a:hover {{ color:var(--teal); }}
+.card-latest .meta {{ font-size:12px; color:var(--muted); margin-top:4px;
+  display:block; }}
+.badge-pattern {{ font-size:11px; font-weight:600; padding:2px 8px;
   border-radius:999px; background:rgba(45,212,191,.14); color:var(--teal);
   border:1px solid rgba(45,212,191,.28); }}
-.story-group .summary {{ font-size:14px; color:var(--ink); margin:6px 0 10px;
+.story-group .summary {{ font-size:13.5px; color:var(--ink); margin:0 0 10px;
   line-height:1.5; }}
 .story-group details summary {{ cursor:pointer; font-size:13px;
   color:var(--muted); }}
@@ -2681,8 +2712,20 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
 .top-story .blurb {{ font-size:13.5px; color:var(--ink); margin:0 0 4px; }}
 .top-story .meta {{ font-size:12.5px; color:var(--muted); margin:0; }}
 .top-story .meta a {{ color:var(--muted); }}
-.feed-controls label[style*="gap:6px"] {{ display:flex; align-items:center;
+.sticky-filters {{ position:sticky; top:60px; z-index:90;
+  backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }}
+.cb-label {{ display:flex; align-items:center; gap:6px;
   font-size:13.5px; color:var(--muted); cursor:pointer; }}
+.active-chips {{ display:flex; gap:6px; flex-wrap:wrap; padding-top:8px;
+  border-top:1px solid var(--rule); }}
+.active-chip {{ display:inline-flex; align-items:center; gap:4px;
+  font-size:12px; padding:3px 10px; border-radius:999px;
+  background:rgba(45,212,191,.12); color:var(--teal);
+  border:1px solid rgba(45,212,191,.25); cursor:pointer; }}
+.active-chip:hover {{ background:rgba(45,212,191,.22); }}
+.active-chip .x {{ font-size:14px; line-height:1; opacity:.7; }}
+.show-more {{ display:block; margin:20px auto; padding:10px 28px;
+  font-size:14px; }}
 </style>
 <script>
 (function() {{
@@ -2694,8 +2737,12 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
   var count = document.getElementById('filterCount');
   var none = document.getElementById('noResults');
   var reset = document.getElementById('resetFilters');
+  var chipsWrap = document.getElementById('activeChips');
+  var showMoreBtn = document.getElementById('showMore');
   var cards = Array.prototype.slice.call(wrap.querySelectorAll('.story-group'));
   var total = cards.length;
+  var PAGE_SIZE = 40;
+  var showAll = false;
 
   function sortCards() {{
     var byRecent = sortSel.value === 'recent';
@@ -2708,22 +2755,60 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
     sorted.forEach(function(el) {{ wrap.appendChild(el); }});
   }}
 
+  function hasFilters() {{
+    return stateSel.value || (kw.value || '').trim() || patternsOnly.checked;
+  }}
+
+  function updateChips() {{
+    var parts = [];
+    if (stateSel.value) parts.push({{label: stateSel.value, clear: function() {{ stateSel.value = ''; }}}});
+    var kwVal = (kw.value || '').trim();
+    if (kwVal) parts.push({{label: '"' + kwVal + '"', clear: function() {{ kw.value = ''; }}}});
+    if (patternsOnly.checked) parts.push({{label: 'Recurring only', clear: function() {{ patternsOnly.checked = false; }}}});
+    if (sortSel.value === 'recent') parts.push({{label: 'Sort: recent', clear: function() {{ sortSel.value = 'count'; sortCards(); }}}});
+    chipsWrap.innerHTML = '';
+    if (!parts.length) {{ chipsWrap.style.display = 'none'; return; }}
+    chipsWrap.style.display = '';
+    parts.forEach(function(p) {{
+      var chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'active-chip';
+      chip.innerHTML = p.label + ' <span class="x">&times;</span>';
+      chip.addEventListener('click', function() {{ p.clear(); sortCards(); apply(); }});
+      chipsWrap.appendChild(chip);
+    }});
+  }}
+
   function apply() {{
     var state = stateSel.value;
     var kwVal = (kw.value || '').trim().toLowerCase();
     var onlyPatterns = patternsOnly.checked;
+    var filtering = !!(state || kwVal || onlyPatterns);
     var shown = 0;
+    var visIdx = 0;
     cards.forEach(function(el) {{
       var match = (!state || el.getAttribute('data-state') === state)
                 && (!onlyPatterns || el.getAttribute('data-pattern') === '1')
                 && (!kwVal || (el.getAttribute('data-search') || '').indexOf(kwVal) !== -1);
-      el.style.display = match ? '' : 'none';
-      if (match) shown++;
+      if (match) {{
+        visIdx++;
+        var withinPage = filtering || showAll || visIdx <= PAGE_SIZE;
+        el.style.display = withinPage ? '' : 'none';
+        if (withinPage) shown++;
+      }} else {{
+        el.style.display = 'none';
+      }}
     }});
-    count.textContent = (state || kwVal || onlyPatterns)
+    var totalMatch = filtering ? visIdx : total;
+    count.textContent = filtering
       ? shown + ' of ' + total + ' places'
-      : total + ' places';
-    none.style.display = ((state || kwVal || onlyPatterns) && shown === 0) ? '' : 'none';
+      : (showAll ? total + ' places' : 'Showing ' + Math.min(PAGE_SIZE, total) + ' of ' + total);
+    none.style.display = (filtering && visIdx === 0) ? '' : 'none';
+    showMoreBtn.style.display = (!filtering && !showAll && total > PAGE_SIZE) ? '' : 'none';
+    if (!filtering && !showAll && total > PAGE_SIZE) {{
+      showMoreBtn.textContent = 'Show all ' + total + ' communities';
+    }}
+    updateChips();
     var qs = new URLSearchParams();
     if (state) qs.set('state', state);
     if (kwVal) qs.set('q', kwVal);
@@ -2732,6 +2817,21 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
     var qStr = qs.toString();
     history.replaceState(null, '', qStr ? ('?' + qStr) : location.pathname);
   }}
+
+  showMoreBtn.addEventListener('click', function() {{
+    showAll = true;
+    apply();
+  }});
+
+  // Click a state chip on a card to filter by that state
+  wrap.addEventListener('click', function(e) {{
+    var chip = e.target.closest('.sg-state-chip');
+    if (!chip) return;
+    e.preventDefault();
+    stateSel.value = chip.getAttribute('data-filter-state') || '';
+    apply();
+    document.getElementById('stickyFilters').scrollIntoView({{behavior:'smooth'}});
+  }});
 
   stateSel.addEventListener('change', apply);
   kw.addEventListener('input', apply);
@@ -2742,6 +2842,7 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
     kw.value = '';
     patternsOnly.checked = false;
     sortSel.value = 'count';
+    showAll = false;
     sortCards();
     apply();
   }});
@@ -2750,7 +2851,8 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
   if (q.get('state')) stateSel.value = q.get('state');
   if (q.get('q')) kw.value = q.get('q');
   if (q.get('patterns')) patternsOnly.checked = true;
-  if (q.get('sort')) sortSel.value = q.get('sort');
+  if (q.get('sort')) {{ sortSel.value = q.get('sort'); sortCards(); }}
+  if (q.get('all')) showAll = true;
   sortCards();
   apply();
 }})();
