@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 1783,
+  "count": 1792,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -9708,7 +9708,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-15"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "DA Davidson Slashes Nebius Price Target 30% to $175 on New Jersey Data Center Delays",
@@ -16638,7 +16638,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "Louisville Metro Council approves 6-month moratorium on data centers",
@@ -17749,7 +17749,7 @@
       "locality": "Vineland",
       "state": "NJ",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-15"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "Concerns Over Data Centers And Rising Electricity Costs, This West Virginia Morning",
@@ -17914,7 +17914,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-14"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "Atlanta will consider data center task force",
@@ -18145,7 +18145,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-15"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "Residents ask questions after Path One presents data center plans in Ida County",
@@ -19619,6 +19619,105 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-08-11",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Will AI data centers soak up the last of the valley’s water?",
+      "outlet": "Fresno Bee",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9JbFcxXzk3ZmRjdndLQkJHb0U5ZFZpbnhuLVFPV2pQczUxQW9OREZHUUc2ZTFoR19uQ0RlRlVvcUZsQy1VOFo1VTk2dHdzQ0Nta1NfdHJZSk5zbWttRmdFMUJPWnZySURjdk9aR3k0eWZpTE9HZjBpTVF3S3MzZ9IBfkFVX3lxTE9JbFcxXzk3ZmRjdndLQkJHb0U5ZFZpbnhuLVFPV2pQczUxQW9OREZHUUc2ZTFoR19uQ0RlRlVvcUZsQy1VOFo1VTk2dHdzQ0Nta1NfdHJZSk5zbWttRmdFMUJPWnZySURjdk9aR3k0eWZpTE9HZjBpTVF3S3MzZw?oc=5",
+      "published": "Sat, 15 Aug 2026 22:53:18 GMT",
+      "published_iso": "2026-08-15T22:53:18+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Do Data Centers Pollute Local Groundwater?",
+      "outlet": "bgr.com",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9heFM2OTgzQm1jWFk2TVBWdEpzaWpnRGpjVDhMdmhNb2ZVZDhpbmhOYjM3aTZXS24zaFRLdkJ0bGo2clBkVDBnd1dBN3pXRElpaWdweVdUMHduZHlGdThVWThtVXZ4RmUtV3ZvQkJPT2FMVEFJcTE2OVNhT0ZOdw?oc=5",
+      "published": "Sun, 16 Aug 2026 17:17:00 GMT",
+      "published_iso": "2026-08-16T17:17:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Nebius Group's New Jersey Data Center Deal Sends Bloom Energy (NYSE: BE) Stock Surging 12%",
+      "outlet": "foreignpolicyjournal.com",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOYUx4UEplbXk5el9zbHIwUUx2LTlrNXVKcXl1WHJ6aXRzb3l3bkZzTWJkTzRpWVJjYW5KYTFHTkVyc3VzNkl5QVRrZTJGR2RMRnlvRWcwUWpwcExLTUlqd3NOWEFrdmpBc2ROMUNsVk9xMUQweUZZWkFrNFdMWHNzcHVNeFlacUd2NmVad0FQSW5QUHc3VVN5OVB2LTh1dXotMWprWTYwM1JuMXVoaHk3bmJzOU01RVl5SzNMQ004aFlWMGotRE9MdnpyMlhPOEE?oc=5",
+      "published": "Sun, 16 Aug 2026 16:46:00 GMT",
+      "published_iso": "2026-08-16T16:46:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Current New Jersey Mortgage And Refinance Rates",
+      "outlet": "Forbes",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5HYjNhaW5VclE5MXRMNHRqd2ZsVHBWWkxNM1ZRbHBZRkR2dHBwRGpQNXY0ZXNpVDliTjM1YjEta2FURnhiSmNJNVpDcVlDVm5vWTNGSW9ld0JsbEotVkxKODNNa0I2ck5venhFWk54dnZtN2Y2?oc=5",
+      "published": "Fri, 14 Aug 2026 09:26:00 GMT",
+      "published_iso": "2026-08-14T09:26:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Guest Commentary: Stop fighting the wrong AI battle",
+      "outlet": "Orlando Sentinel",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPd1pqdWRNMmk3NkI3UkNKYlNZTHktenM5LS1yRUhxWjNiS3FrNVZWaVAzQzJQYWhSMnNobVlFeEdvcEIyX0VQcHA2dDZZNEFaNERGQlliQ1c5bXVUaUsyUFhiVjNDbzFiWnZvVUpMaXF4MFUtekxJanZXTXlEcUFfVEx0NUlRVi11U2ZwRlZB?oc=5",
+      "published": "Sun, 16 Aug 2026 12:06:13 GMT",
+      "published_iso": "2026-08-16T12:06:13+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "AMZN Looks 6.8% Overvalued on GF Value™ Amid New Virginia Data C",
+      "outlet": "GuruFocus",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQZkZ2WE9zSnZDS3RuRUZNeWhvTGhQV0RwWjliMlZIQnFJLVZCRlNydVBfbV9sTm1ueUd2dXh6YU5jdENtRm9qU2Z4dlJGaEg4eVIwbkFHaGlSR1pLMG1YM0prSXFydXhCdWFKZXBJYkVDNzR2cnZCUk9hVEVfWDhUd05PRmkyWHpnTDBDaktPQ2dYN2tmTWdfTFg0d21id3hpRU5DU1FpS3J4Vk90NlE?oc=5",
+      "published": "Sun, 16 Aug 2026 19:40:52 GMT",
+      "published_iso": "2026-08-16T19:40:52+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Georgia voters find solidarity in their opposition to data centers",
+      "outlet": "NPR",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPSE12Ry1NRkxNYjUxazdKUkp4bXdOc1pXdGxSc3ZmVFVadGQ2XzZNeXJSS0ctcE9kdGVCem1UaW1MdnB6RHZad2NqT2VjRHNtMDhKdURQcF83THJWVFYyMlFhRnN1RWplZldUMTdtV3RKNGFpTFpRVGUwY05EQmRUa1VnaWRSaWx0TUFLeHNBSGF6U1hiMF9IMzRsZXRzelFJUkYyUms0LVJTN1FCaVBXYQ?oc=5",
+      "published": "Thu, 13 Aug 2026 08:41:31 GMT",
+      "published_iso": "2026-08-13T08:41:31+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Texas sets new rules for data center development",
+      "outlet": "cbs19.tv",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOSzlwcVFJX2lUendpNEM0ZkdfNm40dTJmWWo0aFdFMGVKNnhJNzhFOGRVbHJfR0FDaXZPSTdVY0NVNWVON1g1c2txNmR5ZVlXNTNwOEFHVm5sVXhDUUQ4RlNrc0l2QmtjdEZ3OFI1Zjl1U1RYWE42cUtyMzh4QkpVUW1sa1k3RTVpRDJ5cTZUUzBJTnJpSm9Xc29KQzJPWFE4NDJvTkw1RkZNNkdEYW91cUxRTXVLekJWZGhBbV9UaWg?oc=5",
+      "published": "Thu, 13 Aug 2026 03:58:00 GMT",
+      "published_iso": "2026-08-13T03:58:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Bloomberg NEF: Texas grid pause puts 20 percent of US data center pipeline at risk",
+      "outlet": "Data Center Dynamics",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZ0Iza0F4bGlocEZDdjdXTmNfZ0JmOU1INlBJeFZOTzV4MEhBZ0NCdlNDbkdDWjlYQ00xOXZqX2t6STBKUG9qNUpkODBxWm12ZFV2bjhaVUdqZkpzSHlPRjhUTW04Z3hsTFRkUUw3QUVqU3NSZGRrYWhyb0x4VHNmcmlUSGxfeUROVW9SbkRhLXFsZnQxVEgtM3l4VVBCMXVNVzRPcDVpZ1BNN01lUFVZWVRNbTVVMXZCNVRJUXF1LW5lMG8?oc=5",
+      "published": "Wed, 12 Aug 2026 12:00:30 GMT",
+      "published_iso": "2026-08-12T12:00:30+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-12",
       "last_seen": "2026-08-16"
     }
   ]
