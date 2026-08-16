@@ -1785,6 +1785,42 @@
       "verified": true,
       "events": [
         {
+          "date": "2025-05-28",
+          "kind": "hearing",
+          "summary": "Augusta Township Planning Commission voted 5-1 to recommend denial of the rezoning request by Thor affiliate JDS Equities II LLC for 522 acres, after dozens of residents voiced opposition citing noise, power consumption, and environmental concerns.",
+          "source": "https://www.clickondetroit.com/news/local/2025/06/03/farming-community-resists-1b-data-center-project-in-washtenaw-county/"
+        },
+        {
+          "date": "2025-06-24",
+          "kind": "hearing",
+          "summary": "Board of Trustees held a public hearing on the Thor Equities data center rezoning proposal; county officials noted Augusta's well-water system would need a major overhaul to accommodate the facility's water demands.",
+          "source": "https://www.wemu.org/wemu-news/2025-07-29/officials-expecting-development-as-augusta-data-center-plans-advance"
+        },
+        {
+          "date": "2025-07-22",
+          "kind": "rezoning",
+          "summary": "Township board unanimously approved conditional rezoning of 522 acres from agricultural residential to general industrial (Ordinance No. 2025-02) for the Thor Equities data center, overriding the planning commission's 5-1 denial recommendation.",
+          "source": "https://planetdetroit.org/2025/08/augusta-data-center-opposition/"
+        },
+        {
+          "date": "2025-08-25",
+          "kind": "filing",
+          "summary": "Protect Augusta Charter Township (PACT) submitted 957 petition signatures to the township clerk to force a voter referendum on the rezoning; 561 valid signatures were required.",
+          "source": "https://planetdetroit.org/2025/08/augusta-data-center-petition/"
+        },
+        {
+          "date": "2025-10-15",
+          "kind": "coverage",
+          "summary": "Great Lakes Now and Grist reported nationally on the ballot initiative, describing how nearly 1,000 residents in the farming community of about 8,000 signed petitions to challenge the proposed $1 billion data center on 822 acres of farmland and wetlands.",
+          "source": "https://www.greatlakesnow.org/2025/10/15/michigan-town-effots-to-stop-data-center/"
+        },
+        {
+          "date": "2026-06-23",
+          "kind": "moratorium",
+          "summary": "Township board debated and approved the first reading of a moratorium ordinance empowering the planning commission to recommend temporary 4-to-6-month moratoriums on data center development.",
+          "source": "https://planetdetroit.org/2026/07/augusta-data-center-battle-ballot/"
+        },
+        {
           "date": "2026-08-04",
           "kind": "vote",
           "summary": "Voters overturned the industrial rezoning 89.5% to 10.4%, blocking the Thor Equities data center.",
@@ -1917,10 +1953,70 @@
       "verified": true,
       "events": [
         {
+          "date": "2026-06-03",
+          "kind": "protest",
+          "summary": "Approximately 100 Posey County residents packed the Alexandrian Public Library in Mount Vernon to oppose a potential data center at Boberg and Hoenert Roads; organizers Melanie McDowell and Kristyn Tromley led the meeting and residents asked the county to extend the existing solar/wind moratorium to cover data centers.",
+          "source": "https://www.14news.com/2026/06/05/posey-co-residents-pack-meeting-over-potential-data-center-development/"
+        },
+        {
+          "date": "2026-07-09",
+          "kind": "hearing",
+          "summary": "Posey County area planning commission held a four-hour public meeting to discuss setting ordinances for data centers after continued public outcry; committee said it would revise draft ordinances and hold another special meeting.",
+          "source": "https://www.14news.com/2026/07/09/another-meeting-being-held-after-public-outcry-against-potential-data-center-posey-co/"
+        },
+        {
+          "date": "2026-07-13",
+          "kind": "hearing",
+          "summary": "Posey County Board of Zoning Appeals and Area Plan Commission met in Mount Vernon for nearly four hours to review proposed zoning ordinance revisions for data centers; APC President Joe Marvel said four groups had inquired about zoning rules and that a moratorium must come from the county commission, not zoning boards.",
+          "source": "https://www.thecooldown.com/green-tech/posey-county-indiana-residents-oppose-data-centers/"
+        },
+        {
+          "date": "2026-07-21",
+          "kind": "coverage",
+          "summary": "At a Tuesday commissioners meeting, Commission President Bill Collins disclosed that commissioners signed a non-disclosure agreement with an unnamed development company regarding a potential data center; he stated they have had nothing formally proposed to them yet. Residents including geologist Penny Padget raised concerns about water depletion and requested a two-year moratorium.",
+          "source": "https://www.14news.com/2026/07/21/amidst-data-center-concerns-posey-co-commissioners-reveal-theyve-signed-an-nda/"
+        },
+        {
+          "date": "2026-07-22",
+          "kind": "coverage",
+          "summary": "WNIN public radio reported that Posey County Commissioners signed an NDA with an unnamed data center developer; farmer David Esche said he was approached about his land and turned down the offer. Some residents suggested the retired A.B. Brown Generating Station site as an alternative location with river water access.",
+          "source": "https://news.wnin.org/2026-07-22/posey-commissioners-sign-nda-with-data-center-developer"
+        },
+        {
+          "date": "2026-07-22",
+          "kind": "coverage",
+          "summary": "The Bullet (WWBL) reported that Posey County commissioners signed an NDA with a development company and that Commissioner Bill Collins said no developments have been formally proposed; the Area Plan Commission scheduled a special session for Monday evening to discuss data centers.",
+          "source": "https://www.wwbl.com/2026/07/22/posey-county-commissioners-sign-nda-with-development-company/"
+        },
+        {
+          "date": "2026-07-27",
+          "kind": "hearing",
+          "summary": "The Posey County Area Plan Commission held a special meeting at the Hovey House in Mount Vernon that reached capacity; attendees in red 'Protect Posey County' and 'No Data Center' shirts commented on proposed amendments to the county's Unified Development Ordinance for data centers.",
+          "source": "https://www.14news.com/2026/07/27/posey-county-area-plan-commission-holds-special-meeting-possible-data-center/"
+        },
+        {
+          "date": "2026-07-28",
+          "kind": "rezoning",
+          "summary": "At a Monday special meeting, the Posey County Area Plan Commission revised its draft data center ordinance: redefined minor data centers as 100,000 sq ft or less, set maximum building height at 30 feet after fire department input about lack of ladder trucks, and increased property setbacks to 1,000 feet from non-industrial-zoned properties.",
+          "source": "https://www.aol.com/articles/key-updates-posey-county-data-090750000.html"
+        },
+        {
+          "date": "2026-07-31",
+          "kind": "coverage",
+          "summary": "14News reported that farmers near Boberg and Hoenert Roads, including 75-year-old Dennis Herrenbruck (whose family has farmed the land since 1849), were approached by an unnamed major tech company to purchase their farmland for a data center; Herrenbruck refused, saying there is not enough money to buy his land.",
+          "source": "https://www.14news.com/2026/07/31/posey-co-farmers-approached-sell-land-tech-company-data-center/"
+        },
+        {
           "date": "2026-08-04",
           "kind": "hearing",
           "summary": "Commissioners met at Hovey House in Mount Vernon; residents packed the room and delivered hundreds of opposition letters. Commissioners said they will vote no on the Boberg/Hoenert Roads data center but are still looking at proposals in other areas.",
           "source": "https://www.14news.com/2026/08/04/posey-co-commissioners-vote-no-proposed-data-center-near-boberg-hoenert-rd/"
+        },
+        {
+          "date": "2026-08-07",
+          "kind": "hearing",
+          "summary": "Posey County government posted notice of an Area Plan Commission special meeting scheduled for August 18, 2026 at 5:30 PM at the Posey County 4-H Community Center to continue discussion of data center ordinance amendments.",
+          "source": "https://www.poseycountyin.gov/notice-of-area-plan-commission-special-meeting-august-18-2026-at-530pm-at-posey-county-4h-community-center/"
         }
       ]
     },
@@ -1950,10 +2046,64 @@
       "verified": true,
       "events": [
         {
+          "date": "2025-12-06",
+          "kind": "coverage",
+          "summary": "Local media reported that Sourcecolo, a Utah-based data center consulting firm, was scheduled to present an informational presentation on data centers to the Warrick County Area Plan Commission on December 8, 2025; the company had already contacted CenterPoint utility about energy generation capacity, and a 'Just Say No to Data Centers' Facebook event drew nearly 80 interested attendees.",
+          "source": "https://bluewaterhealthyliving.com/news/national-news/indiana/company-looking-to-build-data-center-in-warrick-county-meeting-set/"
+        },
+        {
+          "date": "2025-12-08",
+          "kind": "hearing",
+          "summary": "The Sourcecolo data center presentation to the Warrick County APC was postponed from December 8 to February 9, 2026, to allow board members and county officials time to conduct their own research and prepare questions; APC Executive Director Molly Barnhill said the February meeting would be informational only.",
+          "source": "https://www.yahoo.com/news/articles/meeting-data-centers-warrick-county-152347204.html"
+        },
+        {
+          "date": "2026-05-21",
+          "kind": "hearing",
+          "summary": "The Warrick County APC scheduled a public hearing for June 8 to discuss proposed ordinance regulations establishing definitions and regulations for small, medium, and large data centers; background noted the Sourcecolo presentation had been postponed multiple times since late 2025.",
+          "source": "https://103gbfrocks.com/warrick-data-centers/"
+        },
+        {
+          "date": "2026-07-13",
+          "kind": "hearing",
+          "summary": "Nearly 200 residents attended a 3.5-hour Warrick County APC public hearing on a proposed data center ordinance classifying facilities as small (under 10,000 sq ft), medium (10,001-40,000 sq ft), and large (over 40,000 sq ft), with large data centers not a permitted use; the board voted 5-2 to table the ordinance for four months.",
+          "source": "https://www.pdclarion.com/warrick_news/news/county-tables-data-center-ordinance-after-lengthy-hearing/article_962cda90-d37a-5dfc-afb9-29bc82c75399.html"
+        },
+        {
+          "date": "2026-07-13",
+          "kind": "moratorium",
+          "summary": "At the same APC meeting, the board voted 4-3 to draft an additional ordinance placing a moratorium on all data center projects through December 2026, to be forwarded to the County Commissioners as a recommendation.",
+          "source": "https://news.wnin.org/2026-07-14/data-center-vote-warrick-area-plan-commission-tables-own-ordinance-halts-projects-in-2026"
+        },
+        {
+          "date": "2026-07-15",
+          "kind": "coverage",
+          "summary": "Wisdom 92.1 (WZDM) reported on data center opposition in Warrick County following the approximately 200-person APC hearing, noting residents' concerns about water use, noise, pollution, and loss of farmland, while proponents emphasized jobs and apprenticeship opportunities in the construction trades.",
+          "source": "https://www.wzdm.com/2026/07/15/data-centers-face-opposition-in-warrick-county/"
+        },
+        {
           "date": "2026-07-30",
           "kind": "announcement",
           "summary": "Warrick County officials and Economic Development representatives met with the Project Zora development team; no votes, commitments, or NDAs signed. Developer described control of ~1,200 acres of reclaimed mine land with ~300 acres proposed for development.",
           "source": "https://www.14news.com/2026/07/31/warrick-county-commissioners-schedule-special-meeting-data-center-zoning/"
+        },
+        {
+          "date": "2026-07-31",
+          "kind": "announcement",
+          "summary": "Warrick County Commissioners announced a special public meeting for August 11 at the Friedman Park Event Center in Newburgh to consider the APC's recommendation on amending the zoning code for data centers; commissioners disclosed the Project Zora developer expects to identify the end user by end of 2026 and will not submit permit applications before January 2027.",
+          "source": "https://www.14news.com/2026/07/31/warrick-county-commissioners-schedule-special-meeting-data-center-zoning/"
+        },
+        {
+          "date": "2026-08-10",
+          "kind": "hearing",
+          "summary": "At a Monday APC meeting, Warrick County residents pushed back against Project Zora as details emerged about the proposed data center on 1,200 acres of reclaimed mine land; commissioners confirmed they refused to sign a non-disclosure agreement with the developers and that no formal application or site review had been submitted.",
+          "source": "https://www.14news.com/2026/08/11/warrick-county-residents-push-back-potential-data-center-area-planning-meeting/"
+        },
+        {
+          "date": "2026-08-11",
+          "kind": "moratorium",
+          "summary": "Warrick County Commissioners unanimously voted to enact a 180-day moratorium pausing all data center development, stating the pause would allow time for research and regulation development; residents at the meeting expressed concerns about water usage, noise, light pollution, and wildlife disruption, with some calling for a permanent ban rather than a temporary pause.",
+          "source": "https://www.14news.com/2026/08/11/warrick-commissioners-vote-moratorium-pause-data-center-development/"
         }
       ]
     },
@@ -2519,6 +2669,72 @@
       "as_of": "2026-08-14",
       "verified": true,
       "events": [
+        {
+          "date": "2026-04-14",
+          "kind": "rezoning",
+          "summary": "Mahoning Township Board of Supervisors passed a data center zoning ordinance restricting data centers to industrial districts, despite significant resident opposition at a packed public hearing; supervisors also authorized a noise and vibration study.",
+          "source": "https://www.wfmj.com/news/ohio-pennsylvania-news/mahoning-township-residents-outraged-over-too-vague-data-center-ordinance/article_27b4ae53-b635-4cfb-9351-594865882efa.html"
+        },
+        {
+          "date": "2026-06-02",
+          "kind": "filing",
+          "summary": "S.S. Penn LLC (Stonebridge affiliate) delivered a box of preliminary land development plans to Mahoning Township for a 15- to 16-building data center campus on 568-569 acres at the Powder Mill Works site, along with checks to Mahoning Township and Lawrence County but missing the required $3,000 county escrow fee.",
+          "source": "https://www.yahoo.com/news/us/articles/second-hearing-addresses-lawrence-county-032650770.html"
+        },
+        {
+          "date": "2026-06-24",
+          "kind": "rezoning",
+          "summary": "Mahoning Township Board of Supervisors passed three additional ordinances regulating data centers, power generation, and battery storage in industrial districts, tightening setback, noise, and vibration restrictions beyond the April ordinance.",
+          "source": "https://www.wfmj.com/news/local-news/several-ordinances-passed-in-mahoning-township-to-regulate-zoning-for-data-centers/article_8f3196ac-900b-43d1-a455-5678d1645534.html"
+        },
+        {
+          "date": "2026-06-27",
+          "kind": "filing",
+          "summary": "New Castle News reported the preliminary land development plan by S.S. Penn LLC for 16 buildings on 569 acres at the Powder Mill Works site; planning commission reviews were scheduled for early July in both townships and Lawrence County.",
+          "source": "https://www.ncnewsonline.com/news/data-center-proposed-for-north-beaver-mahoning/article_3488d704-85df-4801-94ad-71b06241b459.html"
+        },
+        {
+          "date": "2026-07-08",
+          "kind": "hearing",
+          "summary": "Stonebridge principal Douglas Firstenberg presented data center plans to approximately 40 residents at a North Beaver Township planning commission meeting, projecting 400-500 permanent jobs, over $1 billion investment, and $10 million annual tax revenue for Mahoning Township.",
+          "source": "https://www.ncnewsonline.com/news/local_news/stonebridge-presents-data-center-plans-details/article_5dd3c006-0eb3-466f-92fb-c5241f737d3e.html"
+        },
+        {
+          "date": "2026-07-16",
+          "kind": "lawsuit",
+          "summary": "Attorney Louis Perrotta, representing both townships, announced he would file motions to quash lawsuits brought by S.S. Penn LLC challenging the timing of revised zoning ordinance amendments; a hearing was set before Judge Bradley Olson in Lawrence County Common Pleas Court.",
+          "source": "https://www.ncnewsonline.com/news/local_news/attorney-to-file-motions-against-data-center-lawsuits/article_a39b337a-43b8-47e2-9aa7-1126e6a49def.html"
+        },
+        {
+          "date": "2026-07-16",
+          "kind": "coverage",
+          "summary": "Data Center Dynamics reported Stonebridge plans to invest over $15 billion on the 16-building campus at the former dynamite factory site, with Penn Power providing electricity and a six-year build-out; a petition against the project had gathered 170 signatures.",
+          "source": "https://www.idcnova.com/news/Stonebridge-Proposes-15B-Data-Center-Campus-on-Former-Dynamite-Factory-Site-in-Pennsylvania"
+        },
+        {
+          "date": "2026-07-20",
+          "kind": "lawsuit",
+          "summary": "WFMJ reported Stonebridge is suing both North Beaver and Mahoning townships, arguing zoning restrictions adopted after it submitted its plans should not apply under the pending-ordinance doctrine; township solicitor Perrotta contended the application was incomplete and underfunded.",
+          "source": "https://www.wfmj.com/news/lawsuit-tests-zoning-rules-for-proposed-data-center-in-lawrence-county/article_2cea0194-cbaa-4715-b110-bcdbf7e08378.html"
+        },
+        {
+          "date": "2026-07-21",
+          "kind": "protest",
+          "summary": "Approximately 150 residents packed a Stonebridge public meeting in New Castle, chanting opposition; Firstenberg outlined 16 buildings over six years, 3,000 construction and 400 permanent jobs, a 2029 construction start, and potential tenants Meta, Oracle, and Amazon AWS (none confirmed).",
+          "source": "https://www.yahoo.com/news/us/articles/residents-pack-meeting-oppose-proposed-021025527.html"
+        },
+        {
+          "date": "2026-07-21",
+          "kind": "coverage",
+          "summary": "WFMJ reported residents voiced strong frustration at the Stonebridge public presentation in New Castle, with attendees demanding design plans and criticizing the company's claims about health and environmental impacts.",
+          "source": "https://www.wfmj.com/news/local-news/pennsylvania-residents-voice-frustration-over-data-center-proposal-in-beaver-mahoning-townships/article_9c20510f-c384-4811-9369-5d28647fb25d.html"
+        },
+        {
+          "date": "2026-08-04",
+          "kind": "hearing",
+          "summary": "North Beaver Township held a zoning hearing on the Stonebridge application, focusing on whether fees were paid correctly and whether the application was timely; Stonebridge lawyer Shawn Gallagher said if the June regulations apply rather than April's, the company 'might not have a project.'",
+          "source": "https://www.aol.com/articles/zoning-hearing-addresses-data-center-022942000.html"
+        },
         {
           "date": "2026-08-05",
           "kind": "hearing",
@@ -3123,10 +3339,88 @@
       "verified": true,
       "events": [
         {
+          "date": "2025-08-19",
+          "kind": "hearing",
+          "summary": "The Monticello Planning Commission opened a public hearing on a proposed data center zoning ordinance (DCPUD) at the Mississippi Room of the Monticello Community Center, drawing large crowds.",
+          "source": "https://www.hometownsource.com/monticello_times/future-of-data-centers-fuels-debate/article_2c3cd0dd-7fe5-475d-8968-2b007c0c25cf.html"
+        },
+        {
+          "date": "2025-09-02",
+          "kind": "hearing",
+          "summary": "The Monticello Planning Commission held a continued public hearing on the DCPUD zoning ordinance; the hearing closed without a vote and the ordinance was tabled.",
+          "source": "https://www.hometownsource.com/monticello_times/future-of-data-centers-fuels-debate/article_2c3cd0dd-7fe5-475d-8968-2b007c0c25cf.html"
+        },
+        {
+          "date": "2025-11-01",
+          "kind": "environmental",
+          "summary": "In November 2025, the City of Monticello published the Draft Alternative Urban Areawide Review (AUAR) for a 550-acre industrial area and opened a 30-day public comment period running November 18 through December 18, 2025.",
+          "source": "https://www.hometownsource.com/monticello_times/what-monticello-s-adopted-auar-actually-says/article_738f12be-2c47-4844-bca2-04d1f7369f50.html"
+        },
+        {
+          "date": "2026-01-26",
+          "kind": "vote",
+          "summary": "The Monticello City Council unanimously adopted the Final AUAR and Mitigation Plan for the 550-acre Monticello Industrial area, covering two development scenarios including a 3-million-square-foot technology campus.",
+          "source": "https://www.hometownsource.com/monticello_times/council-adopts-auar-planning-study-for-possible-data-center/article_df3d6460-7c9e-442d-b460-f1d3585d63cc.html"
+        },
+        {
+          "date": "2026-02-03",
+          "kind": "vote",
+          "summary": "The Monticello Planning Commission unanimously recommended approval of the DCPUD (Data Center Planned Unit Development) zoning ordinance to the City Council.",
+          "source": "https://www.hometownsource.com/monticello_times/data-center-debate-enters-next-phase-in-monticello/article_6d6960fc-0d4b-4814-be7c-0832496d10f8.html"
+        },
+        {
+          "date": "2026-02-25",
+          "kind": "lawsuit",
+          "summary": "The Minnesota Center for Environmental Advocacy (MCEA) filed suit in Wright County District Court (Case No. 86-CV-26-1130) against the City of Monticello and Monticello Tech LLC, challenging the adequacy of the AUAR environmental review.",
+          "source": "https://www.hometownsource.com/monticello_times/environmental-group-files-lawsuit-challenging-monticello-data-center-review/article_d5ffa609-757b-485d-b8b4-ef8e3ead2694.html"
+        },
+        {
+          "date": "2026-03-08",
+          "kind": "protest",
+          "summary": "Close to 500 Monticello residents gathered at a local park to sign a statutory citizen petition seeking additional environmental review of the proposed Monticello Tech data center project.",
+          "source": "https://www.fox9.com/news/monticello-residents-rally-against-proposed-data-centers-march-2026"
+        },
+        {
+          "date": "2026-04-27",
+          "kind": "vote",
+          "summary": "The Monticello City Council approved the DCPUD zoning ordinance in a 4-1 vote, establishing setback, screening, infrastructure, and environmental standards for data center development; Council Member Charlotte Gabler cast the sole dissenting vote.",
+          "source": "https://krwc1360.com/monticello-city-council-approves-ordinance-providing-guidelines-for-potential-data-center-development/"
+        },
+        {
+          "date": "2026-04-28",
+          "kind": "coverage",
+          "summary": "MPR News reported on the newly approved Monticello DCPUD ordinance, noting data centers face new restrictions while the ordinance opens the door to building in Monticello.",
+          "source": "https://www.mprnews.org/story/2026/04/28/monticello-ordinance-data-centers-face-new-restrictions-open-door-to-building"
+        },
+        {
+          "date": "2026-04-30",
+          "kind": "ruling",
+          "summary": "Wright County District Court Judge Suzanne Bollman issued a scheduling order in the MCEA v. Monticello lawsuit, setting discovery to conclude by October 15, 2026 and a pretrial conference for December 29, 2026.",
+          "source": "https://www.hometownsource.com/monticello_times/judge-sets-timeline-in-monticello-data-center-lawsuit/article_a681759f-9fbb-4717-b4aa-f15583f7ecb3.html"
+        },
+        {
+          "date": "2026-06-29",
+          "kind": "coverage",
+          "summary": "Monticello Times reported that Monticello Tech was targeting a July application for its proposed data center site, with the city confirming no formal application had yet been submitted and pre-application discussions were ongoing.",
+          "source": "https://www.hometownsource.com/monticello_times/monticello-tech-eyes-july-application-for-proposed-data-center-site/article_e5557e00-cf36-48f4-80ab-7ff0bab30ea5.html"
+        },
+        {
           "date": "2026-07-07",
           "kind": "filing",
           "summary": "Monticello Tech submitted its formal data center application to the City of Monticello, Minnesota, ahead of the Planning Commission's tentative Aug. 4 agenda.",
           "source": "https://www.hometownsource.com/monticello_times/monticello-tech-submits-data-center-application/article_6ab432e3-3863-4b4b-b61d-b2b3c61f74b5.html"
+        },
+        {
+          "date": "2026-07-20",
+          "kind": "filing",
+          "summary": "The City of Monticello issued a nine-page letter deeming Monticello Tech's July 6 land-use applications incomplete, citing inconsistencies in applicant information, missing survey certifications, incomplete project narratives, and absent engineering and environmental documentation.",
+          "source": "https://www.hometownsource.com/monticello_times/monticello-tech-data-center-application-deemed-incomplete-by-city/article_47789552-a5f5-41f2-9b01-4e7cfa79d820.html"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "filing",
+          "summary": "Monticello Tech submitted a revised application with hundreds of pages of engineering plans and technical studies, detailing a 547-acre campus (364 acres developable) with up to 3 million sq ft across eight buildings, air-cooled design using approximately 75,000 gallons of water daily, and an estimated $73.5 million in infrastructure costs funded by the developer.",
+          "source": "https://www.hometownsource.com/monticello_times/monticello-tech-data-center-proposal-comes-into-focus/article_b494d885-bf62-477f-bbdf-d2de13154a2d.html"
         }
       ]
     },
@@ -3156,10 +3450,106 @@
       "verified": true,
       "events": [
         {
+          "date": "2025-03-01",
+          "kind": "rezoning",
+          "summary": "Iron County Planning Commission held a public hearing in March 2025 on proposed Ordinance 2025-4, which would add Chapter 17.37 to the county land use code and amend the Table of Uses and Definitions to create provisions for permitting data centers.",
+          "source": "https://www.utah.gov/pmn/files/1240381.pdf"
+        },
+        {
+          "date": "2025-04-03",
+          "kind": "hearing",
+          "summary": "Iron County Planning Commission held a public hearing on April 3, 2025 at Festival Hall in Parowan to receive public comment on proposed data center zoning amendments (Ordinance 2025-4).",
+          "source": "https://www.utah.gov/pmn/files/1249719.pdf"
+        },
+        {
+          "date": "2025-11-01",
+          "kind": "filing",
+          "summary": "Pronghorn Development LLC submitted a conditional use permit application in November 2025 for the 640-acre Antelope Data Campus, months after the county amended its zoning ordinance to allow data centers.",
+          "source": "https://www.ksl.com/article/51507699/iron-county-planning-commission-approves-conditional-use-permit-for-antelope-data-campus"
+        },
+        {
+          "date": "2026-02-20",
+          "kind": "public-comment",
+          "summary": "Iron County posted a public notice for a conditional use permit for a data center and data center power plant on 640 acres, scheduling a Planning Commission informational session for March 5 at Festival Hall in Cedar City (no action to be taken).",
+          "source": "https://www.utah.gov/pmn/sitemap/notice/1061399.html"
+        },
+        {
+          "date": "2026-03-04",
+          "kind": "coverage",
+          "summary": "SUU News reported growing resident concerns ahead of the March 5 hearing, citing drought fears, potential utility price increases, and loss of farmland from the proposed 640-acre data center.",
+          "source": "https://suunews.net/2026/03/04/residents-concerned-as-iron-county-proposes-to-build-an-ai-data-center-in-iron-county/"
+        },
+        {
+          "date": "2026-03-05",
+          "kind": "hearing",
+          "summary": "Approximately 350 residents packed Festival Hall in Cedar City for a Planning Commission hearing on the Antelope Data Center; over three hours of public comment were heard, with only one of more than 15 speakers expressing support, and concerns focused on water, air quality, noise, and wildlife.",
+          "source": "https://www.ksl.com/article/51463149/planning-commission-considers-ai-data-center-near-cedar-city"
+        },
+        {
+          "date": "2026-04-02",
+          "kind": "coverage",
+          "summary": "KUTV reported the Antelope Data Center could bring 670 direct jobs and reduce Iron County property tax rates by approximately 55%; Commissioner Mike Bleak said he shifted from skepticism to support after touring existing facilities.",
+          "source": "https://kutv.com/news/local/proposed-ai-data-center-could-bring-670-jobs-to-cedar-city-area"
+        },
+        {
+          "date": "2026-04-06",
+          "kind": "coverage",
+          "summary": "Baxtel reported plans had emerged for the 640-acre Antelope Data Center with five buildings totaling 1.35 million sq ft and an on-site 1.5 GW natural gas power plant; no formal action or public hearing occurred at a late-March Planning Commission meeting.",
+          "source": "https://baxtel.com/news/plans-emerge-for-640-acre-data-center-in-iron-county-utah"
+        },
+        {
+          "date": "2026-05-27",
+          "kind": "moratorium",
+          "summary": "Iron County Commission adopted a 180-day moratorium (Ordinance 2026-13) on new data center, power plant, and solar plant applications to review zoning regulations; the existing Pronghorn application was exempted because it had already been deemed complete.",
+          "source": "https://www.ksl.com/article/51503330/iron-county-presses-pause-on-new-ai-data-center-proposals-to-review-current-regulations"
+        },
+        {
+          "date": "2026-06-03",
+          "kind": "coverage",
+          "summary": "KJZZ reported the Antelope Data Center faced an uncertain path ahead of the June 4 Planning Commission vote; the commission could approve, deny, modify conditions, or continue the item, and Commissioner Bleak noted the project could still be several years from breaking ground.",
+          "source": "https://kjzz.com/news/local/antelope-data-center-faces-uncertain-path-at-thursday-meeting"
+        },
+        {
           "date": "2026-06-04",
           "kind": "vote",
           "summary": "Iron County Planning Commission unanimously approved a conditional use permit for the Antelope Data Campus with 62 conditions; the application was vested under existing ordinance ahead of the county's data center moratorium.",
           "source": "https://www.stgeorgeutah.com/news/planning-commission-approves-conditional-use-permit-for-proposed-iron-county-data-center/article_0a818ae9-8496-4e3e-87e0-53a09ee256c5.html"
+        },
+        {
+          "date": "2026-06-05",
+          "kind": "coverage",
+          "summary": "Utah Public Radio reported the Iron County Planning Commission unanimously approved the data center's conditional permit one week after the county paused all new applications; construction is planned over 8 to 10 years, and a 480-page impact report is publicly available.",
+          "source": "https://www.upr.org/utah-news/2026-06-05/iron-county-cedar-city-data-center"
+        },
+        {
+          "date": "2026-06-06",
+          "kind": "coverage",
+          "summary": "The Salt Lake Tribune reported the Iron County Planning Commission approved the conditional use permit for the Antelope Data Center, which would include a 1.5-gigawatt natural gas power plant approximately 15 miles northwest of Cedar City.",
+          "source": "https://www.sltrib.com/news/2026/06/06/iron-county-planning-commission/"
+        },
+        {
+          "date": "2026-06-07",
+          "kind": "coverage",
+          "summary": "KSL reported the unanimous approval of the Antelope Data Campus CUP for up to five buildings on 640 acres with phased construction over 8-10 years; Pronghorn Development stated the permit 'validates the trust we've built with our neighbors.'",
+          "source": "https://www.ksl.com/article/51507699/iron-county-planning-commission-approves-conditional-use-permit-for-antelope-data-campus"
+        },
+        {
+          "date": "2026-06-08",
+          "kind": "coverage",
+          "summary": "Iron County Today reported the approval followed months of debate and a packed March public hearing; conditions included dozens of protections, and Planning Commission Chair Erick Cox said they did their 'very best to protect the people in Iron County.'",
+          "source": "https://ironcountytoday.com/2026/06/08/after-months-of-debate-antelope-data-center-moves-forward-in-southern-utah/"
+        },
+        {
+          "date": "2026-06-10",
+          "kind": "announcement",
+          "summary": "Pronghorn Development issued a press release via Utah Policy announcing it secured the conditional use permit for the 1.5 GW Antelope Data Campus, projecting thousands of construction jobs, hundreds of permanent positions, and billions in economic impact.",
+          "source": "https://utahpolicy.com/news-release/77674-pronghorn-development-secures-conditional-use-permit-for-antelope-data-campus-in-iron-county"
+        },
+        {
+          "date": "2026-06-10",
+          "kind": "coverage",
+          "summary": "Spectrum & Daily News (SUNews) reported the approval cleared a major hurdle but noted additional permits and regulatory approvals are still required before construction can begin; Governor Cox's Executive Order 2026-03 was signed days before the June 4 vote.",
+          "source": "https://www.sunews.net/post/cedar-city-area-data-center-clears-major-hurdle-amid-statewide-debate"
         }
       ]
     },
@@ -3189,10 +3579,94 @@
       "verified": true,
       "events": [
         {
+          "date": "2026-04-24",
+          "kind": "vote",
+          "summary": "MIDA's board of directors approved four resolutions and a tax ordinance creating the Stratos Project Area, before Box Elder County had formally consented; critics later alleged MIDA also signed a development agreement the same morning.",
+          "source": "https://www.fox13now.com/news/local-news/box-elder-county/mida-violated-state-law-in-approval-process-of-box-elder-county-data-center-group-claims"
+        },
+        {
+          "date": "2026-05-04",
+          "kind": "vote",
+          "summary": "Box Elder County Commission approved Resolutions 26-11 and 26-12 consenting to the MIDA Stratos Project Area and an interlocal agreement, at a contentious meeting at the county fairgrounds in Tremonton with hundreds of opponents present and sheriff's deputies controlling the crowd.",
+          "source": "https://www.sltrib.com/news/2026/05/04/utah-data-center-final-vote-box/"
+        },
+        {
+          "date": "2026-05-07",
+          "kind": "withdrawal",
+          "summary": "The holder of an 1904-vintage water right withdrew a change application seeking to convert 1,900 acre-feet from agricultural to industrial use for the Stratos project, after more than 3,700 formal protests were filed at $15 each; the developer stated it fully intends to refile.",
+          "source": "https://www.kuer.org/business-economy/2026-05-06/utah-project-stratos-box-elder-data-center-water-rights-protest"
+        },
+        {
+          "date": "2026-05-12",
+          "kind": "coverage",
+          "summary": "Utah House Speaker Mike Schultz said he did not attend the meeting Kevin O'Leary described on Fox News and only learned of the project in early April 2026; the Deseret News reported the project's estimated cost exceeds $100 billion.",
+          "source": "https://www.deseret.com/utah/2026/05/12/everything-about-utah-stratos-project-data-center/"
+        },
+        {
+          "date": "2026-05-14",
+          "kind": "protest",
+          "summary": "Approximately 400 to 500 people rallied at the Utah Capitol against the Stratos project, delivering an opposition letter signed by over 7,500 people calling on Governor Cox, House Speaker Schultz, and Senate President Adams to order independent water and fiscal studies.",
+          "source": "https://www.ksl.com/article/51497801/hundreds-gather-at-capitol-to-rally-against-box-elder-data-center-proposal"
+        },
+        {
+          "date": "2026-05-18",
+          "kind": "environmental",
+          "summary": "Grist reported the project would raise Utah's carbon emissions by 64 percent and that a physics professor calculated 16 gigawatts of waste heat could spike Hansel Valley nighttime temperatures by as much as 28 degrees Fahrenheit.",
+          "source": "https://grist.org/business/utah-data-center-salt-lake-hyperscale-box-elder/"
+        },
+        {
           "date": "2026-05-19",
           "kind": "announcement",
           "summary": "O'Leary Digital released renderings of the proposed Stratos campus in Box Elder County; state environmental approvals were estimated at roughly two years, with air monitoring required for one year before a permit application.",
           "source": "https://www.eastidahonews.com/2026/05/renderings-show-vision-for-massive-data-center-proposed-in-utah-but-permits-could-take-years/"
+        },
+        {
+          "date": "2026-05-23",
+          "kind": "protest",
+          "summary": "Hundreds of Utahns rallied at the state Capitol a second time demanding a halt to the Box Elder data center plan, calling on state leaders to protect water, air, and land.",
+          "source": "https://www.sltrib.com/news/2026/05/23/kevin-olearys-proposed-data-center/"
+        },
+        {
+          "date": "2026-05-28",
+          "kind": "denial",
+          "summary": "Box Elder County Attorney Stephen Hadfield rejected three referendum applications challenging the May 4 commission vote, ruling the resolutions were irrevocable administrative actions rather than newly created laws and thus not referable to voters.",
+          "source": "https://www.kuer.org/politics-government/2026-05-28/box-elder-county-rejects-data-center-referendums-but-opponents-arent-giving-up"
+        },
+        {
+          "date": "2026-05-28",
+          "kind": "coverage",
+          "summary": "Governor Spencer Cox declared the Stratos project will 'never' run solely on natural gas, stating the first phase would use gas but subsequent phases should use nuclear, geothermal, and solar power.",
+          "source": "https://grist.org/accountability/data-center-natural-gas-utah-cox-box-elder-stratos/"
+        },
+        {
+          "date": "2026-06-03",
+          "kind": "lawsuit",
+          "summary": "Alliance for a Better Utah and five Box Elder County residents filed suit in Utah's 3rd District Court challenging MIDA's constitutionality and seeking to void the Stratos approval, also alleging Senate President Adams had a conflict of interest from a $135,000 PAC donation.",
+          "source": "https://betterutah.org/alliance-for-a-better-utah-box-elder-county-residents-file-lawsuit-against-midas-approval-of-the-stratos-data-center-project/"
+        },
+        {
+          "date": "2026-06-03",
+          "kind": "lawsuit",
+          "summary": "Box Elder Accountability Referendum (BEAR) filed an appeal in Utah 1st District Court in Brigham City challenging the county attorney's rejection of referendum applications on Resolutions 26-11 and 26-12, arguing the approvals were legislative acts subject to voter referendum.",
+          "source": "https://www.cachevalleydaily.com/news/stratos-project-opponents-file-promised-referendum-appeal-with-utah-first-district-court/article_d89e1640-d5cb-4ad6-814a-b90a9fec4c11.html"
+        },
+        {
+          "date": "2026-06-04",
+          "kind": "announcement",
+          "summary": "O'Leary agreed to cut the project area from roughly 40,000 acres to 20,000 acres, removing the Locomotive Springs and I-84 parcels and keeping only the Hansel Valley parcel, with 10,000 acres designated as open space.",
+          "source": "https://www.ksl.com/article/51506884/kevin-oleary-agrees-to-cut-box-elder-county-data-center-project-area-in-half"
+        },
+        {
+          "date": "2026-06-10",
+          "kind": "moratorium",
+          "summary": "Box Elder County commissioners unanimously approved a 180-day moratorium on new data centers and power plants on unincorporated land, but explicitly exempted the Stratos project whose land-use authority had been transferred to MIDA for 50 years.",
+          "source": "https://www.upr.org/utah-news/2026-06-17/box-elder-data-center-moratorium-stratos"
+        },
+        {
+          "date": "2026-07-29",
+          "kind": "coverage",
+          "summary": "Kevin O'Leary said design work on the Stratos data center is 'full steam ahead' while MIDA remains on 'pause' awaiting permit requests for the project.",
+          "source": "https://www.sltrib.com/news/2026/07/29/oleary-box-elder-county-data/"
         }
       ]
     },
@@ -3792,9 +4266,45 @@
       "verified": true,
       "events": [
         {
+          "date": "2025-05-13",
+          "kind": "rezoning",
+          "summary": "Rockingham City Council unanimously approved the voluntary annexation and rezoning of 69.23 acres on Old Cheraw Highway (the Clontz property) from rural residential to high-density residential for a planned housing subdivision by Sage Equity.",
+          "source": "https://www.newsbreak.com/the-richmond-observer-513357/4011122557444-rockingham-city-council-approves-annexation-rezoning-request-for-housing-development"
+        },
+        {
+          "date": "2025-08-15",
+          "kind": "filing",
+          "summary": "Ben and Amber Moss petitioned Rockingham to annex their adjacent 93.305-acre parcel on Old Cheraw Highway, citing interest from an entity planning a residential subdivision.",
+          "source": "https://www.newsbreak.com/the-richmond-observer-513357/4225820200600-moss-requests-annexation-by-rockingham-public-hearing-set-for-next-meeting"
+        },
+        {
+          "date": "2025-10-14",
+          "kind": "rezoning",
+          "summary": "Rockingham City Council approved the annexation and rezoning of the Moss property (93.305 acres on Old Cheraw Highway) from rural residential (R-20) to high-density residential (R-7).",
+          "source": "https://www.yourdailyjournal.com/news/265529/rockingham-council-to-hold-public-hearing-on-data-center-rezoning"
+        },
+        {
           "date": "2026-08-04",
           "kind": "vote",
           "summary": "The Rockingham Planning Board reviewed Terra Nexus Land Fund I, LLC's request to rezone ~165 acres at 316 Old Cheraw Highway from high-density residential to conditional light industrial and unanimously recommended that the City Council approve it.",
+          "source": "https://www.yourdailyjournal.com/news/265529/rockingham-council-to-hold-public-hearing-on-data-center-rezoning"
+        },
+        {
+          "date": "2026-08-09",
+          "kind": "coverage",
+          "summary": "Richmond County commissioners responded to resident data center concerns; Commissioner Andy Grooms noted the Old Cheraw Highway site falls under Rockingham city jurisdiction and said the county has no authority over it, adding he does not want additional data centers.",
+          "source": "https://www.yourdailyjournal.com/news/265469/county-commissioners-respond-to-data-center-concerns"
+        },
+        {
+          "date": "2026-08-10",
+          "kind": "coverage",
+          "summary": "WSOC-TV reported neighbors are split on the proposed third data center for Richmond County at Old Cheraw Highway; NC state Rep. Ben Moss, who once owned the land, called for transparency and public discussion before any decision.",
+          "source": "https://www.wsoctv.com/news/local/neighbors-split-proposed-third-data-center-richmond-county/IO6COLUUHFHBFAUPRYC3VDNO3M/"
+        },
+        {
+          "date": "2026-08-13",
+          "kind": "coverage",
+          "summary": "The Richmond County Daily Journal reported that the Rockingham City Council will schedule a public hearing on the Terra Nexus conditional rezoning request; city council cannot vote until after the hearing is held.",
           "source": "https://www.yourdailyjournal.com/news/265529/rockingham-council-to-hold-public-hearing-on-data-center-rezoning"
         }
       ]
@@ -4368,10 +4878,28 @@
       "verified": true,
       "events": [
         {
+          "date": "2026-03-20",
+          "kind": "incentive",
+          "summary": "Utah Inland Port Authority Board officially adopted the 2,780-acre Black Gold Project Area in Duchesne County and Roosevelt City, creating an economic development zone that the Energence Utah campus would later cite as its location.",
+          "source": "https://www.basinnow.com/black-gold-project-area-officially-adopted-by-utah-inland-port-authority/"
+        },
+        {
           "date": "2026-08-11",
           "kind": "announcement",
           "summary": "Senmiao Technology enters LOI for $5M investment for 51% stake in Energence Utah; 100 MW targeted in initial 2-year phase.",
           "source": "https://www.globenewswire.com/news-release/2026/08/11/3342525/0/en/energence-utah-partnership-positions-senmiao-to-pursue-digital-infrastructure-development-with-100-mw-targeted-during-the-initial-two-year-development-phase.html"
+        },
+        {
+          "date": "2026-08-12",
+          "kind": "coverage",
+          "summary": "Pulse 2.0 reported additional details from the LOI: the 5,046-acre campus already holds active conditional-use permits for the data campus, gas generation, energy storage, and solar PV, and has secured an initial natural gas commitment of 100,000 MMBTU per day, with Elio Energy Group serving as the development services provider.",
+          "source": "https://pulse2.com/senmiao-proposes-5-million-investment-for-51-stake-in-energence-utah-as-data-center-campus-targets-1-2-gw-of-firm-capacity/"
+        },
+        {
+          "date": "2026-08-14",
+          "kind": "filing",
+          "summary": "Senmiao Technology filed its 10-Q with the SEC disclosing that starting in 2026 the company began evaluating expansion into AI infrastructure, appointed David Nichols as strategic advisor for power infrastructure and capital formation, and in July 2026 formed Nebula Matrix AI LLC (90% owned) with Constant Energy Construction Corp. to develop AI data centers in the U.S.",
+          "source": "https://www.sec.gov/Archives/edgar/data/1711012/000121390026090099/ea0300866-10q_senmiao.htm"
         }
       ]
     },
@@ -5767,7 +6295,74 @@
       "source": "https://programs.iowadnr.gov/easyair/Public/EnSuite/Shared/Pages/Util/ServerRptViewer.aspx?sr=/IDNR/Reports/EASY/RPT_Construction_Application_A_GEN&SUBMISSION_RID=67330&SUB_FORM_RID=148293",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2007-06-01",
+          "kind": "announcement",
+          "summary": "In June 2007, Google announced a $600 million investment to build a data center at a former drive-in theater site on Veterans Memorial Highway in Council Bluffs, with the first phase targeted for completion in 2009.",
+          "source": "https://datacenters.google/locations/iowa/"
+        },
+        {
+          "date": "2013-10-03",
+          "kind": "operational",
+          "summary": "Google held a grand opening for its second Council Bluffs campus on Bunge Avenue, starting with 50 employees focused on installing, upgrading, and maintaining servers.",
+          "source": "https://www.nonpareilonline.com/news/local/google-shows-off-new-council-bluffs-data-center-at-grand/article_681daef8-2c94-11e3-937f-0019bb2963f4.html"
+        },
+        {
+          "date": "2014-03-28",
+          "kind": "announcement",
+          "summary": "Google announced a third expansion phase (Southlands) in Council Bluffs, creating 35 additional positions and bringing total investment to $1.5 billion, the largest private investment in Iowa history at that time; the state increased Google's sales and use tax abatement from $9.6 million to $16.8 million.",
+          "source": "https://en.wikipedia.org/wiki/Council_Bluffs,_Iowa"
+        },
+        {
+          "date": "2023-08-08",
+          "kind": "announcement",
+          "summary": "Google announced a $350 million expansion of its Council Bluffs data center, the third expansion since 2007, along with a $250,000 grant to Advance Southwest Iowa; the campus then spanned over 2.5 million square feet east of Interstate 29 on Bunge Avenue.",
+          "source": "https://www.wowt.com/2023/08/08/google-announces-350-million-expansion-council-bluffs-data-center/"
+        },
+        {
+          "date": "2024-07-02",
+          "kind": "announcement",
+          "summary": "Google announced an additional $1 billion investment in its Council Bluffs data center plus $1.3 million for water preservation in the Missouri River Valley Basin, bringing the campus to approximately 3 million square feet and total investment to over $6 billion.",
+          "source": "https://www.wowt.com/2024/07/02/google-investing-another-1-billion-into-council-bluffs-data-center/"
+        },
+        {
+          "date": "2025-05-30",
+          "kind": "announcement",
+          "summary": "Google announced a $7 billion investment in Iowa over the next two years for a new data center in Cedar Rapids and expansion of its existing Council Bluffs facility, plus a partnership with the Electrical Training Alliance to increase Iowa's electrical workforce pipeline by 95 percent.",
+          "source": "https://blog.google/feed/new-7-billion-investment-iowa/"
+        },
+        {
+          "date": "2025-10-27",
+          "kind": "utility",
+          "summary": "Google and NextEra Energy announced a collaboration to restart the 615 MW Duane Arnold nuclear plant in Iowa under a 25-year power purchase agreement, with operations expected by Q1 2029, to support Google's expanding Iowa data center operations.",
+          "source": "https://www.prnewswire.com/news-releases/nextera-energy-and-google-announce-new-collaboration-to-accelerate-nuclear-energy-deployment-in-the-us-302595786.html"
+        },
+        {
+          "date": "2026-06-03",
+          "kind": "environmental",
+          "summary": "Google gave $3 million to Omaha's Metropolitan Utilities District to install acoustic leak detection sensors across 500 miles of high-priority water lines, part of a $17 million water stewardship initiative across seven states including Iowa where Google operates data centers.",
+          "source": "https://thereader.com/news/google-gives-3-million-to-mud-to-reduce-water-use-in-omaha"
+        },
+        {
+          "date": "2026-06-18",
+          "kind": "vote",
+          "summary": "The Council Bluffs City Council rejected Mayor Jill Shudak's proposed 12-month moratorium on new data center construction; Public Works Director Matt Cox noted data centers request one to two million gallons of water per day and individual projects could max out sewer capacity.",
+          "source": "https://www.radioiowa.com/2026/06/18/council-bluffs-city-council-rejects-data-center-moratorium/"
+        },
+        {
+          "date": "2026-07-08",
+          "kind": "report",
+          "summary": "Flatwater Free Press reported that Google self-reported its Council Bluffs facility consumed 1.3 billion gallons of water in 2025, more than any of its other data center locations worldwide that year.",
+          "source": "https://flatwaterfreepress.org/data-centers-can-guzzle-serious-water-as-some-nebraskans-worry-tech-giants-seek-solutions/"
+        },
+        {
+          "date": "2026-08-04",
+          "kind": "construction",
+          "summary": "A construction apprentice was trapped under an elevator at Google Southlands in Council Bluffs and airlifted to a hospital after the Council Bluffs Fire Department extracted him; the incident occurred at approximately 5 p.m. during ongoing construction work.",
+          "source": "https://www.wowt.com/2026/08/04/one-hospitalized-after-being-entrapped-elevator-google-data-center-council-bluffs/"
+        }
+      ]
     },
     {
       "id": "google-lincoln",
@@ -5793,7 +6388,44 @@
       "source": "https://upload.wikimedia.org/wikipedia/commons/2/25/Application_no-_NWO-2019-00110-WEH_-_USACE-p16021coll15-1525.pdf",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2019-07-10",
+          "kind": "filing",
+          "summary": "Agate LLC, a Delaware-based company described as a front company for an undisclosed entity, filed site plans with the Lincoln-Lancaster County Planning Department for a data center with at least two buildings on approximately 590 acres at 56th and I-80 north of Lincoln.",
+          "source": "https://www.klkntv.com/large-data-center-planned-for-construction-near-lincoln/"
+        },
+        {
+          "date": "2019-08-26",
+          "kind": "rezoning",
+          "summary": "The Lincoln City Council agenda included proposals by Agate LLC to annex approximately 576 acres near I-80 and Highway 77 and rezone from AG Agriculture to I-3 Employment Center District for a planned data center; council members were tight-lipped but indicated substantial economic development, and Google was widely suspected as the operator.",
+          "source": "https://www.klkntv.com/lincoln-city-council-set-to-move-forward-on-planned-data-center/"
+        },
+        {
+          "date": "2019-11-06",
+          "kind": "filing",
+          "summary": "Agate LLC, the shell company behind the Lincoln data center, purchased approximately 600 acres northwest of the 56th Street exit on I-80 for over $18.6 million; filings projected 160 full-time employees by 2022, 480 by 2025, and 960 by 2040.",
+          "source": "https://www.klkntv.com/company-behind-lincoln-data-center-buys-large-swath-of-land/"
+        },
+        {
+          "date": "2023-08-22",
+          "kind": "announcement",
+          "summary": "Google announced it will build its third data center in Nebraska, located north of Lincoln at the northwest corner of 56th Street and Interstate 80; the announcement was made at Google's Papillion campus with Rep. Mike Flood, Sen. Deb Fischer, and Lincoln Mayor Leirion Gaylor Baird present.",
+          "source": "https://www.klkntv.com/third-google-data-center-in-nebraska-to-be-built-north-of-lincoln/"
+        },
+        {
+          "date": "2026-07-20",
+          "kind": "incentive",
+          "summary": "Governor Jim Pillen signed an executive order halting tax subsidies to large-scale data centers in Nebraska and established a data center task force to investigate environmental and water impacts; the article identifies the Google Lincoln facility at North 56th and Highway 77 as a $1.2 billion project with construction actively ongoing.",
+          "source": "https://www.klkntv.com/gov-pillens-new-executive-order-brings-hope-to-those-worried-about-data-centers/"
+        },
+        {
+          "date": "2026-08-06",
+          "kind": "coverage",
+          "summary": "Google representatives and Lincoln city leaders discussed the data center's operational status; facility manager Jake Laney said a couple hundred workers are on site, and Chief Sustainability Officer Kim Morrow said the city is not looking to add any more data centers to Lincoln for the foreseeable future.",
+          "source": "https://www.klkntv.com/google-shares-update-on-lincoln-data-center/"
+        }
+      ]
     },
     {
       "id": "google-bristow",
@@ -5882,7 +6514,86 @@
       "source": "https://drive.google.com/file/d/17WAFThn95X85ebzA_e19R1zYycwFzAl2/view?usp=sharing",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-04-01",
+          "kind": "construction",
+          "summary": "Construction began in April 2024 on the Colossus 1 facility, retrofitting the former Electrolux building in South Memphis.",
+          "source": "https://epoch.ai/data/ai-data-centers/directory/colossus-1"
+        },
+        {
+          "date": "2024-06-01",
+          "kind": "announcement",
+          "summary": "xAI selected Memphis, Tennessee as the site for its Colossus supercomputer, to be built on the former Electrolux factory site in South Memphis.",
+          "source": "https://fortune.com/2024/09/03/elon-musk-xai-nvidia-colossus/"
+        },
+        {
+          "date": "2024-08-01",
+          "kind": "operational",
+          "summary": "Colossus 1 reached its first operational milestone in August 2024 with 25,000 H100 GPUs drawing approximately 35 MW.",
+          "source": "https://epoch.ai/data/ai-data-centers/directory/colossus-1"
+        },
+        {
+          "date": "2024-09-03",
+          "kind": "operational",
+          "summary": "xAI announced Colossus came online over Labor Day weekend with 100,000 Nvidia H100 GPUs, built in 122 days, consuming approximately 150 MW and up to 1 million gallons of water daily for cooling.",
+          "source": "https://fortune.com/2024/09/03/elon-musk-xai-nvidia-colossus/"
+        },
+        {
+          "date": "2024-09-11",
+          "kind": "coverage",
+          "summary": "NPR reported on how Memphis became a battleground over Elon Musk's xAI supercomputer, covering pollution concerns from the facility's gas turbine power generation.",
+          "source": "https://www.npr.org/2024/09/11/nx-s1-5088134/elon-musk-ai-xai-supercomputer-memphis-pollution"
+        },
+        {
+          "date": "2025-02-01",
+          "kind": "operational",
+          "summary": "Colossus 1 expanded in February 2025 to 150,000 H100 GPUs plus 50,000 H200 GPUs, reaching approximately 278 MW of IT power.",
+          "source": "https://epoch.ai/data/ai-data-centers/directory/colossus-1"
+        },
+        {
+          "date": "2025-07-01",
+          "kind": "operational",
+          "summary": "Colossus 1 added 30,000 B200 GPUs in July 2025, bringing total IT power to approximately 340 MW.",
+          "source": "https://epoch.ai/data/ai-data-centers/directory/colossus-1"
+        },
+        {
+          "date": "2026-03-01",
+          "kind": "permit",
+          "summary": "A permanent 1.2 GW natural-gas turbine plant received a Mississippi Prevention of Significant Deterioration permit under the Clean Air Act in March 2026, authorizing 41 permanent turbines for the Colossus complex.",
+          "source": "https://gizmodo.com/spacex-agrees-to-remove-temporary-gas-turbines-at-colossus-data-center-by-2027-2000793559"
+        },
+        {
+          "date": "2026-04-01",
+          "kind": "lawsuit",
+          "summary": "The NAACP and Southern Environmental Law Center filed a federal lawsuit in April 2026 alleging xAI was operating 27 gas turbines without proper air permits at its Southaven, Mississippi power site serving the Colossus complex.",
+          "source": "https://gizmodo.com/spacex-agrees-to-remove-temporary-gas-turbines-at-colossus-data-center-by-2027-2000793559"
+        },
+        {
+          "date": "2026-05-06",
+          "kind": "financing",
+          "summary": "Anthropic agreed to rent all computing capacity at SpaceX's Colossus 1, accessing over 220,000 Nvidia GPUs and more than 300 MW of AI compute; financial terms were not disclosed.",
+          "source": "https://finance.yahoo.com/news/anthropic-to-rent-all-ai-capacity-at-spacexs-colossus-data-center-180327774.html"
+        },
+        {
+          "date": "2026-06-05",
+          "kind": "financing",
+          "summary": "Google agreed to rent approximately 110,000 GPUs from SpaceX at Colossus 2 for $920 million monthly through June 2029, as reported by The New York Times.",
+          "source": "https://www.nytimes.com/2026/06/05/technology/spacex-google-deal.html"
+        },
+        {
+          "date": "2026-06-16",
+          "kind": "ruling",
+          "summary": "The U.S. Department of Justice moved to intervene in and dismiss the NAACP's Clean Air Act lawsuit against xAI's Colossus data center gas turbines, as reported by The New York Times.",
+          "source": "https://www.nytimes.com/2026/06/16/climate/xai-musk-mississippi-grok-turbine-lawsuit-naacp.html"
+        },
+        {
+          "date": "2026-08-01",
+          "kind": "environmental",
+          "summary": "SpaceX agreed with the Mississippi Department of Environmental Quality to remove all 69 temporary mobile gas turbines at the Southaven power site by July 2027, with removal beginning as early as August 2026.",
+          "source": "https://gizmodo.com/spacex-agrees-to-remove-temporary-gas-turbines-at-colossus-data-center-by-2027-2000793559"
+        }
+      ]
     },
     {
       "id": "google-omaha",
@@ -5908,7 +6619,68 @@
       "source": "https://drive.google.com/file/d/1KN7o-wQOyt1UEud8wpM8PymXJF479r0n/view?usp=sharing",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2019-10-04",
+          "kind": "announcement",
+          "summary": "Google held a groundbreaking ceremony for its first Nebraska data center in Papillion, confirming a $600 million investment; Governor Pete Ricketts attended.",
+          "source": "https://www.3newsnow.com/news/local-news/google-announces-nebraska-growth-plan-that-includes-new-northwest-omaha-data-center"
+        },
+        {
+          "date": "2022-04-21",
+          "kind": "announcement",
+          "summary": "Google announced a $750 million investment to build a new data center near State Street and Blair High Road in northwest Omaha, its first in the city proper, creating 120 jobs; Governor Ricketts and Mayor Stothert attended the event at the Papillion facility.",
+          "source": "https://www.wowt.com/2022/04/21/google-building-new-data-center-northwest-omaha/"
+        },
+        {
+          "date": "2023-01-03",
+          "kind": "rezoning",
+          "summary": "Westwood Solutions LLC, representing Google, filed to rezone an additional 187 acres adjoining the existing 270-acre northwest Omaha site (totaling ~460 acres) for a data center campus of over 2.2 million gross square feet with 24/7 operations; the developer agreed to donate $100,000 for destruction of a 5-acre virgin prairie.",
+          "source": "https://www.3newsnow.com/news/local-news/google-seeks-to-stretch-farther-in-northwest-omaha"
+        },
+        {
+          "date": "2023-08-22",
+          "kind": "announcement",
+          "summary": "Google announced $1.2 billion in 2023 Nebraska investment, confirming a new $600 million Lincoln data center and Papillion expansion; the northwest Omaha campus was described as 'soon to be operational.'",
+          "source": "https://www.wowt.com/2023/08/22/google-investing-another-12-billion-papillion-lincoln-data-centers/"
+        },
+        {
+          "date": "2024-11-25",
+          "kind": "announcement",
+          "summary": "Google reported $930 million in 2024 capital investment across its Nebraska data center campuses in Papillion, Omaha, and Lincoln, bringing its five-year cumulative Nebraska investment to over $4.4 billion.",
+          "source": "https://1011now.com/2024/11/25/google-invests-more-than-930-million-nebraska-2024/"
+        },
+        {
+          "date": "2026-03-13",
+          "kind": "filing",
+          "summary": "Flatwater Free Press reported Google proposed a new Nebraska data center requiring 1,000-3,000 MW (more than all of Lincoln's 800 MW peak demand), targeting 2029 online date; Tenaska optioned 2,600+ acres across Gage, Lancaster, Cass, and Otoe counties, and Governor Pillen introduced LB1261 to allow private energy generation for the project.",
+          "source": "https://flatwaterfreepress.org/google-proposes-nebraska-data-center-requiring-more-power-than-all-of-lincoln/"
+        },
+        {
+          "date": "2026-06-02",
+          "kind": "vote",
+          "summary": "Governor Pillen signed LB1261, permitting private companies to develop on-site electrical generation for industrial customers requiring over 1,000 MW, creating an exception to public power districts' exclusive authority; the law takes effect July 18, 2026.",
+          "source": "https://nebraskapublicmedia.org/en/news/news-articles/nebraska-energy-law-touted-by-gov-pillen-state-leaders-as-development-boost/"
+        },
+        {
+          "date": "2026-06-03",
+          "kind": "environmental",
+          "summary": "Google awarded a $3 million grant to Omaha's Metropolitan Utilities District (MUD) to install acoustic leak-detection sensors across 500 miles of water lines, part of a $17 million nationwide water stewardship initiative; MUD projects the system could save up to 1 billion gallons annually.",
+          "source": "https://thereader.com/news/google-gives-3-million-to-mud-to-reduce-water-use-in-omaha"
+        },
+        {
+          "date": "2026-07-08",
+          "kind": "coverage",
+          "summary": "Flatwater Free Press reported Google's Nebraska data centers consumed approximately 732 million gallons of water in 2025, up from 46.6 million gallons in 2022; new legislation LB1010 will require data center companies to disclose annual water consumption and power demand.",
+          "source": "https://flatwaterfreepress.org/data-centers-can-guzzle-serious-water-as-some-nebraskans-worry-tech-giants-seek-solutions/"
+        },
+        {
+          "date": "2026-07-20",
+          "kind": "incentive",
+          "summary": "Governor Pillen signed an executive order suspending taxpayer-funded tax incentives for data centers and establishing a task force to identify safeguards protecting Nebraska's natural resources from data center operations.",
+          "source": "https://www.klkntv.com/data-centers-executive-order-signed-by-gov-pillen-today/"
+        }
+      ]
     },
     {
       "id": "coreweave-denton-tx",
@@ -6039,7 +6811,56 @@
       "source": "https://huntmidwest.com/2024/03/google-announces-1-billion-data-center-at-hunt-midwest-business-center/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2019-07-22",
+          "kind": "incentive",
+          "summary": "Port KC board voted to approve issuing bonds and a property tax abatement for a potential $600 million Google data center on 78 acres at Hunt Midwest Business Center in the Northland.",
+          "source": "https://flatlandkc.org/news-issues/housing/port-kc-endorses-downtown-office-projects-big-google-deal-potential-affordable-housing-discussed/"
+        },
+        {
+          "date": "2024-03-20",
+          "kind": "announcement",
+          "summary": "Google announced a $1 billion data center at Hunt Midwest Business Center on NE Parvin Road in Kansas City, with a target opening as soon as 2025, partnering with Evergy, Ranger Power, and DESRI on 400 MW of new carbon-free energy capacity from the Missouri-based Beavertail Solar farm.",
+          "source": "https://huntmidwest.com/2024/03/google-announces-1-billion-data-center-at-hunt-midwest-business-center/"
+        },
+        {
+          "date": "2024-03-20",
+          "kind": "incentive",
+          "summary": "Google committed $100,000-plus to the North Kansas City School District STEAM program and announced its Skilled Trades and Readiness (STAR) paid training program for the Kansas City area, in collaboration with the Missouri Works Initiative and Urban League.",
+          "source": "https://startlandnews.com/2024/03/google-data-center-kansas-city/"
+        },
+        {
+          "date": "2024-04-04",
+          "kind": "coverage",
+          "summary": "Flatland KC reported that Google's $1 billion data center announcement would add significantly to area electricity demand, complicating Evergy's carbon-reduction goals alongside other large projects like the Panasonic battery plant.",
+          "source": "https://flatlandkc.org/news-issues/evergy-struggles-to-cut-carbon-as-energy-demand-soars/"
+        },
+        {
+          "date": "2024-11-12",
+          "kind": "coverage",
+          "summary": "Flatland KC reported Google had arranged with Evergy, Ranger Power, and DESRI to add 400 MW of carbon-free energy capacity from the Beavertail Solar farm to power its $1 billion data facility at Hunt Midwest Business Center.",
+          "source": "https://flatlandkc.org/news-issues/mums-the-word-on-the-solar-farm-at-kansas-city-airport/"
+        },
+        {
+          "date": "2025-09-08",
+          "kind": "coverage",
+          "summary": "KCUR identified AG Rose Solutions as the Google affiliate LLC behind the Kansas City data center, noting the facility was under construction; David Thomas signed the Missouri secretary of state filing for the LLC.",
+          "source": "https://www.kcur.org/housing-development-section/2025-09-08/google-missouri-data-center-st-charles"
+        },
+        {
+          "date": "2026-03-22",
+          "kind": "construction",
+          "summary": "KCUR reported Google's first KC-area campus near Worlds of Fun was still under construction and reportedly drawing roughly 1,000 construction workers.",
+          "source": "https://www.kcur.org/housing-development-section/2026-03-22/kansas-citys-ai-data-center-building-boom-could-hurt-regional-job-market-in-the-long-term"
+        },
+        {
+          "date": "2026-04-29",
+          "kind": "incentive",
+          "summary": "Google and Keystone Community Corporation launched OnRamp, a two-part AI education initiative in Kansas City; the OnRamp Start cohort of 25 participants began May 5, 2026, with a youth-focused OnRamp Foundations track starting in June 2026.",
+          "source": "https://startlandnews.com/2026/04/google-onramp-keystone/"
+        }
+      ]
     },
     {
       "id": "qts-richmond-1",
@@ -6170,7 +6991,74 @@
       "source": "https://datacenters.atmeta.com/2024/03/hello-rosemount/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2023-09-01",
+          "kind": "coverage",
+          "summary": "Plans emerged in September 2023 that Meta intended to purchase University of Minnesota land in Rosemount for a $700 million data center, disclosed through state filings.",
+          "source": "https://www.mprnews.org/story/2023/09/02/meta-plans-major-data-center-in-twin-cities-metro"
+        },
+        {
+          "date": "2023-09-07",
+          "kind": "vote",
+          "summary": "The University of Minnesota Board of Regents approved selling approximately 280 acres of UMore Park land to Meta for $39.7 million for the data center project.",
+          "source": "https://www.kstp.com/kstp-news/local-news/rosemount-city-council-unanimously-approves-meta-data-site/"
+        },
+        {
+          "date": "2023-12-21",
+          "kind": "vote",
+          "summary": "Rosemount City Council voted unanimously to approve Meta's data center, rezoning the 280-acre UMore Park parcel from agricultural to business park planned development.",
+          "source": "https://www.kstp.com/kstp-news/local-news/rosemount-city-council-unanimously-approves-meta-data-site/"
+        },
+        {
+          "date": "2024-01-06",
+          "kind": "coverage",
+          "summary": "Alpha News reported that Rosemount approved Meta's 750,000-sq-ft data center despite residents' concerns about soil contaminants from the site's WWII munitions history, 24/7 low-frequency noise, and water usage during local restrictions; the filing entity is Jimnist LLC.",
+          "source": "https://alphanews.org/rosemount-approves-meta-data-center-despite-residents-concerns/"
+        },
+        {
+          "date": "2024-03-14",
+          "kind": "announcement",
+          "summary": "Meta officially announced its Rosemount data center: a 715,000-sq-ft, $800+ million facility optimized for AI workloads, targeting LEED Gold certification, 100% renewable energy, approximately 100 permanent jobs and over 1,000 peak construction jobs, with Mortenson as general contractor.",
+          "source": "https://datacenters.atmeta.com/2024/03/hello-rosemount/"
+        },
+        {
+          "date": "2024-03-14",
+          "kind": "coverage",
+          "summary": "Governor Tim Walz held a press conference announcing Meta's Rosemount data center, calling it Meta's 19th in the U.S. and 23rd worldwide, with a 2026 opening target.",
+          "source": "https://www.mprnews.org/story/2024/03/14/meta-to-open-data-center-in-rosemount-in-2026"
+        },
+        {
+          "date": "2025-02-18",
+          "kind": "filing",
+          "summary": "Meta purchased approximately 200 additional acres of land near its Rosemount data center site for $70 million, expanding beyond the original 280-acre UMore Park parcel.",
+          "source": "https://www.kstp.com/news/facebook-parent-meta-keeps-buying-rosemount-land/"
+        },
+        {
+          "date": "2025-10-17",
+          "kind": "filing",
+          "summary": "Meta acquired another 14-acre plot off Blaine Avenue East near 145th Street in Rosemount for $5 million via subsidiary Jimnist, bringing total known land holdings to at least 494 acres.",
+          "source": "https://www.kstp.com/news/facebook-parent-meta-keeps-buying-rosemount-land/"
+        },
+        {
+          "date": "2026-03-30",
+          "kind": "construction",
+          "summary": "Meta and Amrize deployed an AI-optimized concrete mix (BOxCrete) for the Rosemount data center foundation, achieving full structural strength 43% faster and reducing cracking risk by nearly 10%; the mix was qualified for additional areas of the facility.",
+          "source": "https://engineering.fb.com/2026/03/ai-for-american-produced-cement-and-concrete/"
+        },
+        {
+          "date": "2026-04-30",
+          "kind": "moratorium",
+          "summary": "Rosemount halted new data center proposals with a moratorium, pausing discussion of additional facilities beyond Meta's already-approved project.",
+          "source": "https://www.hometownsource.com/rosemount_town_pages/rosemount-halts-new-data-center-discussion-with-moratorium/"
+        },
+        {
+          "date": "2026-07-02",
+          "kind": "construction",
+          "summary": "InForum reported that Minnesota's first hyperscale data center is nearing completion in Rosemount.",
+          "source": "https://www.inforum.com/business/minnesota-first-hyperscale-data-center-nearing-completion-in-rosemount"
+        }
+      ]
     },
     {
       "id": "amazon-madison-mega-site",
@@ -6736,7 +7624,80 @@
       "source": "https://datacenters.atmeta.com/2024/08/hello-south-carolina/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2022-12-01",
+          "kind": "financing",
+          "summary": "In December 2022, Starskey LLC (later revealed as Meta's project entity) and affiliated buyers purchased four parcels totaling 572.58 acres in Sage Mill Industrial Park in Graniteville for $19.3 million.",
+          "source": "https://www.yahoo.com/news/project-sabal-result-investment-least-235600718.html"
+        },
+        {
+          "date": "2023-03-21",
+          "kind": "vote",
+          "summary": "Aiken County Council unanimously approved second reading of a fee-in-lieu-of-tax and incentive agreement for 'Project Sabal' (code name for Meta's data center), represented by Starskey LLC, involving at least $800 million in investment and 50 jobs.",
+          "source": "https://www.yahoo.com/news/project-sabal-result-investment-least-235600718.html"
+        },
+        {
+          "date": "2023-04-18",
+          "kind": "vote",
+          "summary": "Aiken County Council approved third and final reading of two ordinances for Project Sabal by a 7-2 vote: a fee-in-lieu-of-tax agreement and a jointly owned industrial park with Edgefield County; dissenting votes came from council members Kelley Mobley and Mike Kellems, who objected to the company's identity being withheld.",
+          "source": "https://www.yahoo.com/news/aiken-county-council-approves-incentives-235600074.html"
+        },
+        {
+          "date": "2024-08-29",
+          "kind": "announcement",
+          "summary": "Governor Henry McMaster and Meta announced Meta's $800 million data center in Aiken County at Sage Mill Industrial Park, a 715,000-square-foot campus optimized for AI workloads, creating approximately 100 operational jobs and over 1,000 construction jobs, expected operational spring 2027.",
+          "source": "https://governor.sc.gov/news/2024-08/meta-selects-aiken-county-first-south-carolina-data-center"
+        },
+        {
+          "date": "2024-08-29",
+          "kind": "announcement",
+          "summary": "Meta published a blog post announcing its Aiken County data center as its 22nd U.S. and 26th global facility, noting partnership with Aiken Electric Cooperative for 100% renewable energy matching and a commitment to LEED Gold certification.",
+          "source": "https://datacenters.atmeta.com/2024/08/hello-south-carolina/"
+        },
+        {
+          "date": "2024-08-29",
+          "kind": "coverage",
+          "summary": "WRDW reported Meta's announcement of the $800 million data center in Aiken County's Sage Mill Industrial Park, with 100 permanent jobs and 1,000 construction jobs, and Meta's pledge to launch community action grants partnering with local schools for STEAM education.",
+          "source": "https://www.wrdw.com/2024/08/29/facebook-parent-company-brings-data-center-jobs-aiken/"
+        },
+        {
+          "date": "2025-08-19",
+          "kind": "utility",
+          "summary": "Latitude Media reported Meta and Silicon Ranch partnered on a 100-megawatt solar farm in Orangeburg County, SC, with power flowing through Central Electric Power Cooperative to Aiken Electric Cooperative to serve Meta's data center; Meta will receive all renewable energy credits from the facility.",
+          "source": "https://www.latitudemedia.com/news/meta-is-using-a-familiar-energy-strategy-for-its-newest-ai-data-center/"
+        },
+        {
+          "date": "2025-08-20",
+          "kind": "financing",
+          "summary": "WRDW reported Silicon Ranch will make a $100 million investment in a 100-megawatt solar farm in Orangeburg County to help power Meta's Aiken County data center, expected to generate over $8 million in local tax revenues; both the solar farm and data center are expected online in 2027.",
+          "source": "https://www.wrdw.com/2025/08/20/100m-solar-farm-help-power-meta-data-center-aiken-county/"
+        },
+        {
+          "date": "2025-11-07",
+          "kind": "incentive",
+          "summary": "Meta donated $75,000 to the Aiken Chamber of Commerce Foundation to support the Aiken Innovation Corridor initiative, aimed at positioning Aiken as a high-tech hub leveraging proximity to Savannah River National Laboratory.",
+          "source": "https://finance.yahoo.com/news/meta-gives-75k-chamber-foundation-104800672.html"
+        },
+        {
+          "date": "2025-12-30",
+          "kind": "coverage",
+          "summary": "The Aiken Standard reported Meta's data center at Sage Mill Industrial Park is scheduled for completion in 2027, with Meta pledging to return 100% of energy used back to the grid and to achieve water-positive status by 2030.",
+          "source": "https://www.postandcourier.com/aikenstandard/news/local/discover-aiken-county-data-centers-meta/article_54d1501a-9766-4068-9ee3-2ad1d1fe9680.html"
+        },
+        {
+          "date": "2026-01-21",
+          "kind": "construction",
+          "summary": "WFXG reported the Meta data center is nearing completion: buildings are up and both electrical substations are complete, with the facility consuming 200 MW of power, using 20,000 gallons of water daily via closed-loop cooling, and generating $4.8 million in annual property taxes for Aiken County.",
+          "source": "https://www.wfxg.com/news/aiken-data-center-nearing-completion/article_4facd65f-d825-463d-91b5-1ed60eca94f9.html"
+        },
+        {
+          "date": "2026-03-18",
+          "kind": "utility",
+          "summary": "South Carolina electric cooperatives, including Aiken Electric Cooperative which serves Meta's data center, adopted a new standardized rate for customers needing 20+ MW, requiring minimum 15-year contracts, prepayment for infrastructure upgrades, and power reduction during energy shortages.",
+          "source": "https://www.wrdw.com/2026/03/18/sc-electric-co-ops-adopt-new-data-center-rate-protect-customers/"
+        }
+      ]
     },
     {
       "id": "coreweave-helios",
@@ -6924,7 +7885,56 @@
       "source": "https://newsletter.semianalysis.com/p/microsofts-ai-strategy-deconstructed",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2016-07-22",
+          "kind": "announcement",
+          "summary": "West Des Moines Mayor Steve Gaer announced Project Osmium, a $1.5-2 billion Microsoft data center campus spanning 1.7 million square feet on 200 acres across Warren County (160 acres) and Madison County (40 acres), described as the largest data center deployment Microsoft had ever built in the United States, with construction planned for spring 2017 in four phases of buildings ranging from 256,000 to 583,200 square feet each.",
+          "source": "https://www.thewintersetcitizen.net/2016/07/microsoft-announcement-impacts-madison-county/"
+        },
+        {
+          "date": "2016-07-23",
+          "kind": "coverage",
+          "summary": "CircleID reported that Project Osmium would bring Microsoft's cumulative West Des Moines investment to nearly $3.5 billion and contribute over $12 million annually in property taxes to local school districts, counties, and municipalities.",
+          "source": "https://circleid.com/posts/20160723_microsoft_reveals_project_osmium_largest_data_center_in_us"
+        },
+        {
+          "date": "2020-01-01",
+          "kind": "construction",
+          "summary": "In 2020, the first building at the Project Osmium campus was constructed at 5855 SW Kerry Street, West Des Moines.",
+          "source": "https://baxtel.com/data-center/microsoft-des-moines-project-osmium"
+        },
+        {
+          "date": "2021-01-01",
+          "kind": "permit",
+          "summary": "In 2021, Microsoft was granted permission for the third of five planned buildings at the Project Osmium site by West Des Moines city officials, for a 241,000-square-foot data center facility.",
+          "source": "https://baxtel.com/data-center/microsoft-des-moines-project-osmium"
+        },
+        {
+          "date": "2022-12-01",
+          "kind": "permit",
+          "summary": "In December 2022, Microsoft received a building permit valued at $255 million for the fourth building at the Project Osmium campus at 5855 SW Kerry Street, West Des Moines.",
+          "source": "https://baxtel.com/news/microsoft-expands-in-des-moines-iowa"
+        },
+        {
+          "date": "2023-08-16",
+          "kind": "permit",
+          "summary": "A building permit valued at $345 million was issued for the fifth and final 250,000-square-foot building at the Project Osmium complex at 5855 SW Kerry Street, completing the planned buildout of the 1.7-million-square-foot campus.",
+          "source": "https://baxtel.com/data-center/microsoft-des-moines-project-osmium"
+        },
+        {
+          "date": "2023-09-01",
+          "kind": "environmental",
+          "summary": "In September 2023, Futurism reported that Microsoft's West Des Moines data centers, where OpenAI's GPT-4 was trained, consumed 11.5 million gallons of water in July 2022 and 13.4 million gallons in August 2022 during drought conditions, making Microsoft consistently one of the top three water consumers in the district since 2020.",
+          "source": "https://futurism.com/critics-microsoft-water-train-ai-drought"
+        },
+        {
+          "date": "2025-05-01",
+          "kind": "coverage",
+          "summary": "In May 2025, WPR reported that Microsoft's five data center campuses in West Des Moines, including Project Osmium, represent a total investment of $5-6 billion, employ over 600 people, consumed 68.5 million gallons of water in 2024 (2.62% of the district total), and account for over 10% of the city's tax base.",
+          "source": "https://www.wpr.org/news/microsoft-data-center-iowa-wisconsin-expect"
+        }
+      ]
     },
     {
       "id": "google-storey-county",
@@ -6950,7 +7960,62 @@
       "source": "https://ndep-onbase.nv.gov/api/Document/AeFo%C3%89pjclbkomJ7CWpPryLOjA6FQT9HFrkSuMWbMXTpKCzSR%C3%81W1f8zzFhGhik1iZCcNSpuTRRqNXD1inrrpBxtA%3D/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2017-04-17",
+          "kind": "announcement",
+          "summary": "Google purchased more than 1,200 acres near the Tesla Gigafactory at the Tahoe Reno Industrial Center in Storey County for over $29 million, with plans to build a data center.",
+          "source": "https://www.kolotv.com/content/news/Google-buying-land-in--419668113.html"
+        },
+        {
+          "date": "2020-09-16",
+          "kind": "incentive",
+          "summary": "The Nevada Governor's Office of Economic Development board approved Google (Design, LLC) for a $25 million tax abatement package (2% sales tax abatement for 20 years worth $16.8 million and 75% personal property tax abatement for 20 years worth $8.25 million) for a $600 million data center at the Tahoe Reno Industrial Center in Storey County, expected to create at least 50 jobs.",
+          "source": "https://www.carsonnow.org/story/09/16/2020/abatements-okd-google-storey-lithium-nevada-corp-henderson-bring-11b-investments"
+        },
+        {
+          "date": "2020-09-22",
+          "kind": "announcement",
+          "summary": "Google formally announced a $600 million data center investment at the Tahoe Reno Industrial Center in Storey County, expected to be fully operational in 2021 and employ at least 50 people at an average wage of $31.29 per hour.",
+          "source": "https://www.areadevelopment.com/newsitems/9-22-2020/google-data-center-storey-county-nevada.shtml"
+        },
+        {
+          "date": "2021-01-01",
+          "kind": "operational",
+          "summary": "Google's Storey County data center became operational in 2021, per Google's own site listing and multiple reports confirming the facility was built in 2021.",
+          "source": "https://datacenters.google/locations/storey-county-nevada/"
+        },
+        {
+          "date": "2023-11-28",
+          "kind": "operational",
+          "summary": "Google announced that its partnership with Fervo Energy had produced an operational 3.5 MW enhanced geothermal power project in Nevada, delivering carbon-free electricity to the grid serving Google's data centers on a 24/7 basis.",
+          "source": "https://blog.google/company-news/outreach-and-initiatives/sustainability/google-fervo-geothermal-energy-partnership/"
+        },
+        {
+          "date": "2024-06-07",
+          "kind": "utility",
+          "summary": "NV Energy filed a proposed Clean Transition Tariff with the Nevada Public Utilities Commission to purchase 115 MW of enhanced geothermal power from Fervo Energy's Corsac Station project and supply it to Google's Storey County data centers.",
+          "source": "https://www.utilitydive.com/news/google-fervo-nv-energy-nevada-puc-clean-energy-tariff/719472/"
+        },
+        {
+          "date": "2024-08-27",
+          "kind": "announcement",
+          "summary": "Google announced plans to invest more than $400 million in Nevada in 2024 to expand its data center campuses in Storey and Clark counties, bringing total state investment to over $2.2 billion since 2019.",
+          "source": "https://www.carsonnow.org/09/02/2024/google-spend-400-million-expand-nevada-data-centers-storey-clark-counties"
+        },
+        {
+          "date": "2025-05-13",
+          "kind": "ruling",
+          "summary": "The Public Utilities Commission of Nevada approved the Clean Transition Tariff enabling NV Energy to procure 115 MW of Fervo Energy enhanced geothermal power and supply it to Google's Nevada data centers.",
+          "source": "https://blog.google/feed/nevada-clean-energy/"
+        },
+        {
+          "date": "2025-05-20",
+          "kind": "coverage",
+          "summary": "MIT Technology Review reported that Google's Storey County facility withdrew 1.9 million gallons and consumed 200,000 gallons of water in 2023 using air-cooling technology, and that Google declined to specify the scale of its planned expansion.",
+          "source": "https://www.technologyreview.com/2025/05/20/1116287/ai-data-centers-nevada-water-reno-computing-environmental-impact/"
+        }
+      ]
     },
     {
       "id": "meta-eagle-mountain",
@@ -6976,7 +8041,74 @@
       "source": "https://www.facebook.com/EagleMountainDataCenter/posts/517902967007646",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2018-05-30",
+          "kind": "announcement",
+          "summary": "Facebook announced a $750 million, 970,000-square-foot data center campus on approximately 500 acres in Eagle Mountain, with Gov. Gary Herbert and state officials present; five taxing entities ratified a $150 million tax incentive package over 20 years for Phase 1.",
+          "source": "https://www.deseret.com/2018/5/30/20646041/no-surprise-facebook-to-build-data-center-in-eagle-mountain/"
+        },
+        {
+          "date": "2018-06-02",
+          "kind": "coverage",
+          "summary": "Utah Public Radio reported Facebook chose Eagle Mountain for renewable energy availability, local workforce, and community support; the company had invested approximately $100 million in infrastructure to the site.",
+          "source": "https://www.upr.org/utah-news/2018-06-02/why-did-facebook-choose-eagle-mountain-to-build-a-data-center"
+        },
+        {
+          "date": "2019-12-11",
+          "kind": "announcement",
+          "summary": "Facebook announced Phase 2, adding 500,000 square feet to the campus and raising total investment to over $1 billion; a separate tax increment financing deal returned approximately $60 million to Facebook with $6.6 million allocated to Eagle Mountain's Redevelopment Agency for affordable housing.",
+          "source": "https://www.deseret.com/utah/2019/12/11/21011091/facebook-eagle-mountain-utah-center-expansion-tax/"
+        },
+        {
+          "date": "2021-02-11",
+          "kind": "coverage",
+          "summary": "Deseret News reported Facebook's Eagle Mountain campus had logged over 4 million construction work hours and used over 12,000 tons of steel and 100,000 cubic yards of concrete, with potential tax relief across all five phases totaling $750 million over 40 years.",
+          "source": "https://www.deseret.com/utah/2021/2/11/22277090/facebook-server-farm-social-media-tax-breaks-public-subsidy-big-tech-eagle-mountain/"
+        },
+        {
+          "date": "2021-02-12",
+          "kind": "announcement",
+          "summary": "Facebook announced a further 900,000-square-foot expansion with two new buildings, bringing planned campus total to five buildings with approximately 1,500 workers at peak construction.",
+          "source": "https://www.datacenterfrontier.com/hyperscale/article/11428402/facebook-to-expand-utah-data-center-campus-by-900000-sf"
+        },
+        {
+          "date": "2021-03-08",
+          "kind": "announcement",
+          "summary": "EDCUtah, Eagle Mountain, and the Governor's Office of Economic Development jointly announced 'Project Steeplechase II,' the 900,000-square-foot, two-building expansion powered by 100% renewable energy from over 600 MW of new solar capacity on Utah's grid.",
+          "source": "https://www.edcutah.org/recent-news/project-steeplechase-ii-facebooks-eagle-mountain-data-center-expansion"
+        },
+        {
+          "date": "2021-07-14",
+          "kind": "operational",
+          "summary": "Facebook's Eagle Mountain data center began serving traffic, marking the first phase as operational; the company reported over $1 billion invested, 1,250 workers at peak construction, and approximately $2 million in community grants since 2018 groundbreaking.",
+          "source": "https://datacenters.atmeta.com/2021/07/utah-county-we-are-online/"
+        },
+        {
+          "date": "2021-10-04",
+          "kind": "coverage",
+          "summary": "Deseret News reported the first phase of Facebook's Eagle Mountain data center went live in July 2021 as Phase 2 construction continued, with over 1,200 workers at peak and plans for five total buildings on the 500-acre site.",
+          "source": "https://www.deseret.com/utah/2021/10/4/22709130/google-joins-facebook-in-eagle-mountain-utah-data-center-facebook/"
+        },
+        {
+          "date": "2022-09-30",
+          "kind": "announcement",
+          "summary": "Meta announced Phase 3, adding approximately 2 million square feet via two new buildings to bring the campus to 4.5 million square feet across seven data centers, raising total investment to $1.5 billion; the company also announced a $200,000 grant for the Hobble Creek Flow Restoration Project.",
+          "source": "https://www.deseret.com/utah/2022/9/30/23380151/facebook-meta-announces-expansion-eagle-mountain-data-center-tax-breaks/"
+        },
+        {
+          "date": "2022-09-30",
+          "kind": "environmental",
+          "summary": "Meta committed to funding water restoration projects equaling 200% of the Eagle Mountain facility's water consumption into the Provo River watershed, including 416 million gallons annually from an existing Provo River project and 467 million gallons from the new Hobble Creek project.",
+          "source": "https://www.facebook.com/EagleMountainDataCenter/posts/517902967007646"
+        },
+        {
+          "date": "2022-10-03",
+          "kind": "coverage",
+          "summary": "W.Media reported Meta's Phase 3 expansion would add two buildings totaling approximately 2 million square feet to the existing 2.4 million square feet, with Meta having invested $120 million in infrastructure upgrades (roads, electricity) before construction began.",
+          "source": "https://w.media/meta-to-expand-eagle-mountain-data-center-project/"
+        }
+      ]
     },
     {
       "id": "google-lancaster",
@@ -7095,7 +8227,80 @@
       "source": "https://www.datacenterdynamics.com/en/news/google-breaks-ground-on-mesa-data-center-campus-in-arizona/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2019-04-01",
+          "kind": "rezoning",
+          "summary": "Mesa rezoned approximately 187 acres of Morrison family farmland at Elliot and Sossaman roads for the data center project, then known by the codename Project Red Hawk, in April 2019.",
+          "source": "https://ktar.com/story/2636779/mesa-city-council-oks-deal-for-1b-google-data-center/"
+        },
+        {
+          "date": "2019-07-01",
+          "kind": "vote",
+          "summary": "Mesa City Council approved a development agreement and 25-year Government Property Lease Excise Tax (GPLET) incentive for Google's $1 billion data center on 187 acres at Elliot and Sossaman roads; the deal was negotiated under the codename Project Red Hawk with Google operating as Stone Applications LLC.",
+          "source": "https://ktar.com/story/2636779/mesa-city-council-oks-deal-for-1b-google-data-center/"
+        },
+        {
+          "date": "2019-07-02",
+          "kind": "coverage",
+          "summary": "AZBEX reported the council approval and revealed Google as the company behind Project Red Hawk, noting the project had been secret for over a year due to a confidentiality agreement; Mayor Giles said the corridor would be anchored by Apple and Google.",
+          "source": "https://azbex.com/planning-development/google-picks-mesa-for-giant-data-center/"
+        },
+        {
+          "date": "2023-06-14",
+          "kind": "permit",
+          "summary": "Mesa Design Review Board began reviewing the Phase 1 site plan for the 288,530-square-foot data center building, utility switchyard, medium-voltage substation, security kiosk, and employee office building; engineering firm HDR Inc. submitted the plans on behalf of Stone Applications LLC.",
+          "source": "https://www.commercialsearch.com/news/googles-1b-data-center-plan-begins-review-process/"
+        },
+        {
+          "date": "2023-09-06",
+          "kind": "construction",
+          "summary": "Google broke ground on its $600 million Phase 1 data center in Mesa, its first physical presence in Arizona; Governor Katie Hobbs, Mayor John Giles, and Rep. Greg Stanton attended; Google announced the facility would be 100% air-cooled and donated $150,000 to Salt River Project for watershed restoration.",
+          "source": "https://www.gpec.org/news/press-releases/google-mesa-data-center-groundbreaking/"
+        },
+        {
+          "date": "2023-09-08",
+          "kind": "coverage",
+          "summary": "Construction Dive reported on Google's $600 million Mesa data center groundbreaking, noting it was Google's first physical presence in Arizona and that a new Google Cloud region was also coming to Phoenix.",
+          "source": "https://www.constructiondive.com/news/google-data-center-mesa-arizona/693029/"
+        },
+        {
+          "date": "2023-09-10",
+          "kind": "coverage",
+          "summary": "Mesa Tribune reported that city officials were looking to slow data center growth, with Councilman Scott Somers saying Mesa had seen 'more than our fair share' of data centers; at least 15 new data center projects were reportedly eyeing Mesa, and Google's $600 million facility was noted alongside the city's concerns about low job creation per acre.",
+          "source": "https://www.themesatribune.com/news/mesa-looks-to-tap-the-brakes-on-data-centers/article_34673e28-4e97-11ee-a972-dfdf0dfd5039.html"
+        },
+        {
+          "date": "2024-04-09",
+          "kind": "hearing",
+          "summary": "Mesa Design Review Board heard informational presentations on Google's Phase 2 data center (280,000 sq ft, air-cooled, codenamed Project Redhawk) and a separate one-story Redhawk HUB office building near Elliot and Sossaman roads; no formal action was taken.",
+          "source": "https://azbex.com/planning-development/mesa-drb-hears-google-data-center-and-office-plan/"
+        },
+        {
+          "date": "2024-04-09",
+          "kind": "coverage",
+          "summary": "ABC15 reported that Google's Phase 2 design review was underway for a 280,000-square-foot building mirroring Phase 1, plus a Redhawk-HUB office building, on the campus that now represented a total $1 billion investment on over 185 acres.",
+          "source": "https://www.abc15.com/news/business/google-data-centers-next-phase-goes-to-mesa-for-review"
+        },
+        {
+          "date": "2025-07-01",
+          "kind": "operational",
+          "summary": "Google's Phase 1 data center (288,530 sq ft) at the Red Hawk campus in Mesa became operational in July 2025, powered by air-cooling architecture with no water-intensive cooling towers.",
+          "source": "https://dcpulse.com/project/google-red-hawk-mesa-arizona-ai-data-center"
+        },
+        {
+          "date": "2025-07-08",
+          "kind": "rezoning",
+          "summary": "Mesa City Council adopted new data center zoning regulations establishing 'Data Center' as a distinct land use category, after 15 data centers were constructed, approved, or proposed in the city over six years; Vice Mayor Somers called it the first step in more objective design standards.",
+          "source": "https://www.kjzz.org/business/2025-07-14/mesa-city-council-approves-new-data-center-zoning-rules"
+        },
+        {
+          "date": "2025-10-14",
+          "kind": "hearing",
+          "summary": "Mesa Design Review Board examined Phase 3 plans for a 283,500-square-foot data center building at 35 feet 10 inches tall with two server halls, including alternative compliance requests for wall and roof articulations under the Mesa Zoning Ordinance.",
+          "source": "https://azbex.com/planning-development/google-planning-next-phase-of-mesa-data-center-facility/"
+        }
+      ]
     },
     {
       "id": "meta-qts-hillsboro-2",
@@ -7121,7 +8326,86 @@
       "source": "https://q.com/data-centers/hillsboro-2/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2020-02-23",
+          "kind": "announcement",
+          "summary": "QTS announced commencement of development on its 92-acre mega data center campus in Hillsboro, Oregon, planning five buildings totaling over 1 million leasable sq ft and 250+ MW gross power capacity.",
+          "source": "https://hostingjournalist.com/news/qts-commences-development-of-mega-data-center-campus-in-hillsboro-oregon"
+        },
+        {
+          "date": "2020-10-01",
+          "kind": "operational",
+          "summary": "QTS opened Phase 1 of its Hillsboro campus, a 158,000 sq ft, 24 MW data center, with 100% of the first phase pre-leased to a global SaaS provider at approximately 4.5 MW.",
+          "source": "https://www.prnewswire.com/news-releases/qts-opens-new-mega-data-center-in-hillsboro-oregon-301143921.html"
+        },
+        {
+          "date": "2021-06-07",
+          "kind": "financing",
+          "summary": "Blackstone announced an all-cash acquisition of QTS Realty Trust at $78 per share (approximately $10 billion including debt), the largest data center M&A deal at the time; the deal was expected to close later in 2021.",
+          "source": "https://www.datacenterfrontier.com/featured/article/11428144/blackstone-to-acquire-qts-in-blockbuster-data-center-m038a-deal"
+        },
+        {
+          "date": "2021-09-01",
+          "kind": "filing",
+          "summary": "In September 2021, Portland General Electric and QTS jointly filed with the Oregon Public Utility Commission seeking approval to expand PGE's renewable energy program by 250 MW of new renewable resources to support Facebook's anticipated usage at the fully expanded QTS Hillsboro campus.",
+          "source": "https://www.datacenterfrontier.com/featured/article/11427936/facebook-eyes-major-data-center-expansion-in-hillsboro-oregon"
+        },
+        {
+          "date": "2022-01-26",
+          "kind": "announcement",
+          "summary": "Data Center Frontier reported that Meta secured a 35 MW lease at QTS's Hillsboro campus as part of its 2021 leasing activity, with QTS seeking up to 250 MW of power from PGE to support Facebook's anticipated expansion.",
+          "source": "https://www.datacenterfrontier.com/featured/article/11427641/mega-deals-by-meta-tiktok-boost-data-center-leasing-in-2021"
+        },
+        {
+          "date": "2022-05-01",
+          "kind": "coverage",
+          "summary": "In May 2022, CBRE reported 199 MW of pre-leasing in the Hillsboro data center market entering 2022, with the bulk going to one large social media company (Meta) at a single facility (QTS), and QTS planning to deploy 200 MW of IT capacity at the campus.",
+          "source": "https://www.datacenterfrontier.com/cloud/article/11427375/hillsboro-data-center-market-boosted-by-significant-pre-leasing"
+        },
+        {
+          "date": "2024-12-02",
+          "kind": "announcement",
+          "summary": "Avangrid, PGE, QTS, and Meta announced a PPA for Tower Solar, a 120 MWac (166 MWdc) solar project in Morrow County, Oregon, to supply clean energy through PGE's Green Future Impact program supporting QTS and Meta's data center operations.",
+          "source": "https://www.businesswire.com/news/home/20241202381796/en/Avangrid-and-Portland-General-Electric-Collaborate-with-QTS-and-Meta-to-Build-120-MWac-Solar-Project-in-Oregon"
+        },
+        {
+          "date": "2026-04-02",
+          "kind": "coverage",
+          "summary": "KLCC reported that Oregon data centers use 11% of the state's electricity, potentially doubling to 25% within 3-4 years, with Hillsboro identified as a key hub where industrial land has become scarce due to rapid data center development.",
+          "source": "https://www.klcc.org/podcast/oregon-on-the-record/2026-04-02/oregons-data-center-explosion-who-benefits-and-who-bears-the-cost"
+        },
+        {
+          "date": "2026-05-05",
+          "kind": "coverage",
+          "summary": "The Hillsboro Herald published an open letter citing $11 billion in data center tax breaks extended through 2051 and linking the city's $1.6 billion water infrastructure debt to System Development Charges tied to data center growth; over 3,400 signatures had been gathered on a moratorium petition.",
+          "source": "https://hillsboroherald.com/an-open-letter-to-hillsboro-stating-the-truth-about-our-data-center-future/"
+        },
+        {
+          "date": "2026-05-18",
+          "kind": "protest",
+          "summary": "Approximately 100 Hillsboro residents rallied at Shute Farm to oppose data center tax giveaways; speakers cited $67 million in annual exempted property taxes from four nearby data centers, with QTS facilities holding a $2.428 billion exemption, and a moratorium petition nearing 4,000 signatures.",
+          "source": "https://hillsboroherald.com/hillsboro-data-center-protest-shows-growing-unrest-over-millions-of-tax-giveaways/"
+        },
+        {
+          "date": "2026-06-04",
+          "kind": "public-comment",
+          "summary": "About 40 Hillsboro residents spoke at a June 2 City Council meeting demanding a halt to data center development, citing concerns over farmland consumption (470 acres), water and energy costs, noise, and limited job creation; Council President Rob Harris proposed considering a one-year moratorium.",
+          "source": "https://forestgrovenewstimes.com/2026/06/04/hillsboro-residents-demand-halt-to-data-center-development/"
+        },
+        {
+          "date": "2026-06-25",
+          "kind": "lawsuit",
+          "summary": "1000 Friends of Oregon and the Oregon Education Association filed suit challenging multiple enterprise zone tax exemption agreements for data center projects (including QTS) approved in spring 2026 before Oregon's statewide moratorium took effect on June 6.",
+          "source": "https://katu.com/news/local/lawsuit-filed-against-hillsboro-washington-county-over-data-center-tax-breaks-billionaire-environment-company-fortune-500-oregon-portland-salem-politics-business-jobs-water-privacy"
+        },
+        {
+          "date": "2026-07-27",
+          "kind": "moratorium",
+          "summary": "The Hillsboro City Council unanimously voted to impose a 120-day moratorium on new data center and battery energy storage system applications, including expansions, effective until at least November 24, 2026.",
+          "source": "https://forestgrovenewstimes.com/2026/07/27/hillsboro-puts-4-month-pause-on-building-expanding-data-centers-in-the-city/"
+        }
+      ]
     },
     {
       "id": "google-red-oak",
@@ -7210,7 +8494,86 @@
       "source": "https://datacenters.atmeta.com/wp-content/uploads/2025/02/Meta_s-Gallatin-Data-Center.pdf",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2020-05-01",
+          "kind": "filing",
+          "summary": "Woolhawk LLC (later revealed as Facebook) acquired 809 acres in Gallatin for approximately $15-20 million for a planned data center campus; the project was referred to as 'Project Woolhawk' by local officials.",
+          "source": "https://baxtel.com/data-center/facebook-gallatin-tn"
+        },
+        {
+          "date": "2020-05-11",
+          "kind": "incentive",
+          "summary": "Gallatin's Industrial Development Board advanced a PILOT (payment in lieu of taxes) agreement for Woolhawk LLC with 20-year tax abatement terms starting at $1 million per year for the first building and decreasing to $550,000 for the sixth building.",
+          "source": "https://www.pascalforgallatin.com/post/why-is-gallatin-giving-woolhawk-a-tax-break-when-they-are-considering-raising-our-property-taxes"
+        },
+        {
+          "date": "2020-08-11",
+          "kind": "announcement",
+          "summary": "Facebook announced an $800 million, 982,000-square-foot data center in Gallatin, Tennessee, culminating a three-year recruitment effort by the Gallatin EDA and TVA; the facility would support approximately 100 permanent jobs.",
+          "source": "https://www.nashvillechamber.com/blog/facebook-to-build-800-million-data-center-in-gallatin-tennessee/"
+        },
+        {
+          "date": "2020-08-12",
+          "kind": "announcement",
+          "summary": "Facebook confirmed the Gallatin data center as its 13th in the U.S., revealing the 809-acre site was purchased under Woolhawk LLC for $20 million and that the city approved $19.5 million in tax breaks; the first building was expected in approximately two years with a second 18 months later.",
+          "source": "https://www.datacenterknowledge.com/hyperscalers/facebook-announces-tennessee-data-center"
+        },
+        {
+          "date": "2020-08-12",
+          "kind": "construction",
+          "summary": "Facebook broke ground on the Gallatin data center campus, with DPR Construction as general contractor; the facility was designed to use 80% less water than an average data center, achieve LEED Gold certification, and run on 100% renewable energy.",
+          "source": "https://www.commercialsearch.com/news/facebook-breaks-ground-on-800m-tennessee-data-center/"
+        },
+        {
+          "date": "2020-08-12",
+          "kind": "utility",
+          "summary": "Facebook announced it had signed contracts for 220 MW of new solar energy generation in Tennessee through a partnership with TVA to support the Gallatin data center.",
+          "source": "https://datacenters.atmeta.com/2020/08/hello-gallatin/"
+        },
+        {
+          "date": "2020-08-12",
+          "kind": "coverage",
+          "summary": "Data Center Frontier reported the Gallatin project as Facebook's third data center announcement since the COVID-19 pandemic began, following DeKalb, Illinois and Prineville, Oregon expansions.",
+          "source": "https://www.datacenterfrontier.com/hyperscale/article/11428809/facebook-keeps-building-with-800-million-data-center-in-tennessee"
+        },
+        {
+          "date": "2022-09-23",
+          "kind": "announcement",
+          "summary": "Meta announced a nearly $1 billion expansion of the Gallatin campus with two new structures totaling approximately 2 million square feet, including a cold storage facility, with peak construction workforce reaching 1,700 workers.",
+          "source": "https://w.media/meta-expands-gallatin-data-center-with-nearly-1b-total-investment/"
+        },
+        {
+          "date": "2023-01-01",
+          "kind": "operational",
+          "summary": "Meta's first data center building on the Gallatin campus became fully operational in 2023, designated GTN 1, a two-story H-shaped building on 800 acres at 1 Meta Loop.",
+          "source": "https://baxtel.com/data-center/facebook-gallatin-tn"
+        },
+        {
+          "date": "2024-04-15",
+          "kind": "filing",
+          "summary": "Meta filed plans for a fourth data center on its Gallatin campus, a 278,000-square-foot building shaped like a stretched plus sign representing a 17% increase to its existing footprint, with a public work session set for April 29 and a vote scheduled for May 20, 2024.",
+          "source": "https://www.gallatingetsit.com/newsroom/meta-formerly-known-as-facebook-tees-up-another-data-center-in-gallatin"
+        },
+        {
+          "date": "2024-05-20",
+          "kind": "vote",
+          "summary": "Gallatin approved Meta's fourth data center building on the campus, a 276,000-square-foot structure that would bring total campus space to approximately 1.9 million square feet with total investment well beyond $1 billion.",
+          "source": "https://www.gallatingetsit.com/newsroom/meta-approved-for-another-data-center-on-gallatin-campus"
+        },
+        {
+          "date": "2024-11-15",
+          "kind": "operational",
+          "summary": "Meta officially launched its Gallatin data center campus as operational, with total investment exceeding $1.5 billion across four buildings totaling more than 1.7 million square feet and over 100 permanent employees; the Nashville Business Journal called it one of the top five largest business investments in Tennessee history.",
+          "source": "https://www.gallatingetsit.com/newsroom/metas-data-centers-in-gallatin-are-up-and-running"
+        },
+        {
+          "date": "2024-11-15",
+          "kind": "coverage",
+          "summary": "The Tennessee Municipal League reported Meta's Gallatin data center began operations, noting the company's partnership with TVA supports eight Meta projects adding 530 MW of renewable energy to Tennessee and that Meta had donated over $1 million to local nonprofits and school systems.",
+          "source": "https://ttc.tml1.org/2024/11/15/meta-data-center-begins-operations-gallatin"
+        }
+      ]
     },
     {
       "id": "meta-los-lunas",
@@ -7236,7 +8599,80 @@
       "source": "https://datacenters.atmeta.com/wp-content/uploads/2025/02/Meta_s-Los-Lunas-Data-Center.pdf",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2016-09-14",
+          "kind": "announcement",
+          "summary": "Facebook announced plans to build a new data center in Los Lunas, New Mexico, its seventh overall and fifth in the U.S., to be powered by 100% renewable energy.",
+          "source": "https://engineering.fb.com/2016/09/14/data-center-engineering/facebook-in-los-lunas-our-newest-data-center/"
+        },
+        {
+          "date": "2016-09-14",
+          "kind": "incentive",
+          "summary": "New Mexico's congressional delegation welcomed the Facebook data center announcement; senators and representatives had previously written to the PRC advocating for Los Lunas as the site.",
+          "source": "https://www.heinrich.senate.gov/press-releases/nm-delegation-welcomes-news-that-facebook-will-build-new-data-center-in-los-lunas"
+        },
+        {
+          "date": "2016-09-15",
+          "kind": "coverage",
+          "summary": "The Los Lunas Village Council had approved an up-to-$30 billion industrial revenue bond proposal in late June 2016 under the codename 'Greater Kudu' without initially knowing Facebook's involvement; the project also used codenames 'Project Antelope' and 'Project Discus' during a competitive process with Utah.",
+          "source": "https://www.inverse.com/article/21003-facebook-new-data-center-los-lunas-new-mexico-secret"
+        },
+        {
+          "date": "2016-10-11",
+          "kind": "construction",
+          "summary": "Facebook held a groundbreaking ceremony at the Huning Business Park in Los Lunas, attended by Governor Susana Martinez and Mayor Charles Griego, beginning the $250 million Phase 1 construction.",
+          "source": "https://www.inverse.com/article/21003-facebook-new-data-center-los-lunas-new-mexico-secret"
+        },
+        {
+          "date": "2019-02-07",
+          "kind": "operational",
+          "summary": "Facebook opened its Los Lunas data center campus, initially supporting over 150 jobs, with the facility pursuing LEED v4 Gold certification and backed by over 396 MW of new wind and solar resources on the New Mexico grid.",
+          "source": "https://engineering.fb.com/2019/02/07/data-center-engineering/los-lunas-data-center/"
+        },
+        {
+          "date": "2021-10-27",
+          "kind": "announcement",
+          "summary": "Facebook announced a two-building, $800 million expansion of the Los Lunas campus, bringing total investment to nearly $2 billion and projected employment to over 400 operational jobs, with a new goal to restore 200% of water consumed to New Mexico watersheds.",
+          "source": "https://datacenters.atmeta.com/2021/10/hello-again-los-lunas/"
+        },
+        {
+          "date": "2021-10-27",
+          "kind": "coverage",
+          "summary": "Facebook announced the two new buildings would form an H-shape on the southern end of the 750-acre campus, with each data hall housing 3,200 servers; ground preparation by Fortis was underway with foundation construction to begin January 2022 and first building turnover targeted for October 2024.",
+          "source": "https://www.news-bulletin.com/news/business/facebook-announces-800-million-los-lunas-data-center-expansion/article_9fcb9566-96a5-5e90-8b1d-cf7a266f2e97.html"
+        },
+        {
+          "date": "2021-10-27",
+          "kind": "coverage",
+          "summary": "The $800 million expansion was reported to bring total investment to $2.2 billion, expand the campus to nearly 3.8 million square feet across eight buildings, and employ over 1,000 construction workers with more than 70% New Mexico subcontractors.",
+          "source": "https://www.kob.com/archive/facebook-announces-800m-expansion-plan-for-los-lunas-data-center/"
+        },
+        {
+          "date": "2025-01-16",
+          "kind": "announcement",
+          "summary": "The Los Lunas Village Council unanimously approved a resolution declaring intent to issue up to six series of IRBs not exceeding $7.5 billion each for Greater Kudu LLC (Meta subsidiary) to build two new AI-dedicated buildings for $800 million, with construction expected to begin spring 2025 and take 2-3 years.",
+          "source": "https://www.news-bulletin.com/news/los-lunas-meta-data-center-introduces-expansion-dedicated-to-artificial-intelligence/article_809a47fe-d366-11ef-b76e-470988820678.html"
+        },
+        {
+          "date": "2025-02-13",
+          "kind": "incentive",
+          "summary": "The Los Lunas Village Council unanimously approved an IRB ordinance for Greater Kudu LLC and unanimously approved an amended water agreement capping daily use at 3 million gallons (reduced from 4.5 million), removing the data center's previous priority status during shortages, and keeping the annual allocation at 500 acre-feet.",
+          "source": "https://www.news-bulletin.com/news/tax-break-water-deal-for-meta-data-center/307166"
+        },
+        {
+          "date": "2025-03-01",
+          "kind": "report",
+          "summary": "The Los Lunas Village Council approved a project partnership with tax incentives requiring Meta to invest $350 million in the expansion within 10 years of the agreement.",
+          "source": "https://www.kob.com/news/top-news/report-meta-closer-to-expanding-data-center-in-los-lunas/"
+        },
+        {
+          "date": "2025-12-22",
+          "kind": "permit",
+          "summary": "Meta acquired a 474-acre parcel adjacent to its existing Los Lunas data center campus at $128,500 per acre, brokered by CBRE, within the Huning Business and Tech Park for next-generation data center facilities.",
+          "source": "https://carnm.realtor/meta-acquires-474-acre-parcel-adjacent-to-los-lunas-data-center/"
+        }
+      ]
     },
     {
       "id": "coreweave-ellendale-nd",
@@ -7262,7 +8698,110 @@
       "source": "https://ir.applieddigital.com/news-events/press-releases/detail/123/applied-digital-announces-250mw-ai-data-center-lease-with",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2022-09-08",
+          "kind": "construction",
+          "summary": "Applied Blockchain (now Applied Digital) broke ground on a 180 MW data center facility in Ellendale, North Dakota (Dickey County), its second North Dakota site, with a five-year Energy Service Agreement signed with a local utility on September 1, 2022.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/39/applied-blockchain-announces-groundbreaking-of-new-180mw"
+        },
+        {
+          "date": "2023-03-07",
+          "kind": "operational",
+          "summary": "Applied Digital announced the energization of its 180 MW Ellendale facility, completed six months after groundbreaking; Marathon Digital Holdings contracted for capacity with an option for an additional 70 MW, and the project was financed through a $20 million loan from Starion Bank.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/50/applied-digital-announces-energizing-of-facility-in"
+        },
+        {
+          "date": "2023-06-16",
+          "kind": "operational",
+          "summary": "Applied Digital held a ribbon-cutting ceremony celebrating the energization of its 180 MW Ellendale facility, attended by local congressional and state representatives; the company received final regulatory approval from the North Dakota Public Service Commission for its Electric Service Agreement.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/61/applied-digital-hosts-landmark-ribbon-cutting-celebrating"
+        },
+        {
+          "date": "2023-10-31",
+          "kind": "construction",
+          "summary": "Applied Digital broke ground on a separate 100 MW, 342,000-square-foot HPC facility at the Ellendale campus designed for AI workloads including generative AI and machine learning, with capacity for nearly 50,000 Nvidia H100 SXM-class GPUs in a liquid-cooled configuration.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/75/applied-digital-announces-groundbreaking-of"
+        },
+        {
+          "date": "2024-01-16",
+          "kind": "announcement",
+          "summary": "Applied Digital signed a conditional anchor tenant agreement at the Ellendale HPC facility for 100 MW over 10 years valued at approximately $2.2 billion, pending finalization of definitive lease documents and construction financing.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/82/applied-digital-signs-anchor-tenant-at-ellendale-hpc"
+        },
+        {
+          "date": "2024-03-08",
+          "kind": "announcement",
+          "summary": "Applied Digital extended the 45-day negotiation period for the conditional anchor tenant agreement at the Ellendale HPC facility until March 30, 2024, with the 100 MW, 10-year deal still under negotiation.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/87/applied-digital-provides-update-on-anchor-tenant-at"
+        },
+        {
+          "date": "2024-04-01",
+          "kind": "financing",
+          "summary": "Applied Digital issued a $50 million unsecured convertible debenture to a single private investor with a 54-week term and no interest payments, with proceeds directed toward construction of the Ellendale HPC data center.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/92/applied-digital-issues-50-million-unsecured-convertible"
+        },
+        {
+          "date": "2024-05-24",
+          "kind": "financing",
+          "summary": "Applied Digital issued a $42.1 million unsecured convertible debenture to advance construction of the Ellendale HPC data center, with a 54-week term, no interest, and a 5% original issue discount.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/98/applied-digital-issues-unsecured-convertible-debenture-to"
+        },
+        {
+          "date": "2024-06-07",
+          "kind": "financing",
+          "summary": "Applied Digital secured a $125 million debt facility (expandable to $200 million) from CIM Group at 12% annual interest for a 3-year term, exclusively for buildout of the Ellendale HPC campus.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/99/applied-digital-secures-private-debt-facility-of-up-to-200"
+        },
+        {
+          "date": "2024-12-17",
+          "kind": "construction",
+          "summary": "Applied Digital announced the successful energization of the on-site main substation transformer at the Ellendale HPC campus, enabling equipment commissioning; the company also submitted a petition for property annexation to the City of Ellendale and received the Community Impact award at the 18th Annual Data Center Dynamics Awards.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/114/applied-digital-announces-ellendale-hpc-data-center"
+        },
+        {
+          "date": "2025-02-12",
+          "kind": "financing",
+          "summary": "Applied Digital closed a $375 million interim financing with Sumitomo Mitsui Banking Corporation (SMBC) to repay a Macquarie Capital note and fund development of the first and second buildings at the Ellendale HPC campus.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/119/applied-digital-closes-375-million-financing-with-smbc-to"
+        },
+        {
+          "date": "2025-04-30",
+          "kind": "financing",
+          "summary": "Applied Digital entered into a $150 million convertible preferred equity facility with institutional investors to advance development of the Ellendale multi-building HPC campus, with draws at company discretion in $25 million increments over a 36-month term.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/122/applied-digital-enters-into-a-150-million-convertible"
+        },
+        {
+          "date": "2025-06-02",
+          "kind": "announcement",
+          "summary": "Applied Digital announced a 250 MW AI data center lease with CoreWeave at the Ellendale campus for approximately 15 years, with an optional 150 MW expansion to 400 MW total; the first 100 MW building expected operational in Q4 2025 and the second 150 MW building by mid-2026, with anticipated total revenue of approximately $7 billion.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/123/applied-digital-announces-250mw-ai-data-center-lease-with"
+        },
+        {
+          "date": "2025-08-29",
+          "kind": "announcement",
+          "summary": "Applied Digital finalized an additional 150 MW lease with CoreWeave at the Polaris Forge 1 campus in Ellendale, bringing total contracted capacity to 400 MW across three lease agreements with approximately 15-year terms and total anticipated revenue of approximately $11 billion.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/128/applied-digital-finalizes-additional-150mw-lease-with"
+        },
+        {
+          "date": "2025-10-27",
+          "kind": "operational",
+          "summary": "Applied Digital achieved Ready for Service for Phase 1 (50 MW) of the first 100 MW building at Polaris Forge 1 in Ellendale for CoreWeave, featuring proprietary liquid cooling with near-zero water consumption.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/133/applied-digital-achieves-ready-for-service-for-phase-1-at"
+        },
+        {
+          "date": "2026-06-09",
+          "kind": "financing",
+          "summary": "Applied Digital priced $1.59 billion in 7.000% senior secured notes due 2031 to fund construction of the fourth 150 MW building (ELN-04) at Polaris Forge 1 in Ellendale and repay a Goldman Sachs bridge loan.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/156/applied-digital-announces-pricing-of-1-59-billion-of"
+        },
+        {
+          "date": "2026-07-01",
+          "kind": "operational",
+          "summary": "Applied Digital delivered Building 2 Phase 1 at Polaris Forge 1 in Ellendale, adding 75 MW and bringing total live campus capacity to 175 MW (100 MW from Building 1 plus 75 MW from Building 2), on schedule toward the 400 MW contracted total.",
+          "source": "https://ir.applieddigital.com/news-events/press-releases/detail/157/applied-digital-delivers-second-building-at-polaris-forge-1"
+        }
+      ]
     },
     {
       "id": "meta-sarpy",
@@ -7288,7 +8827,32 @@
       "source": "https://datacenters.atmeta.com/asset/sarpy-data-center-info-sheet/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2017-01-01",
+          "kind": "announcement",
+          "summary": "Meta's info sheet states the company broke ground on the Sarpy Data Center in 2017, with a total investment of over $2.5 billion in Nebraska.",
+          "source": "https://datacenters.atmeta.com/asset/sarpy-data-center-info-sheet/"
+        },
+        {
+          "date": "2021-03-24",
+          "kind": "announcement",
+          "summary": "Facebook announced an expansion of its Sarpy County data center campus to approximately 3.6 million square feet across 8 buildings on roughly 500 acres, with total investment at that time of approximately $1.5 billion and a 2024 completion target.",
+          "source": "https://nebraskapublicmedia.org/en/news/news-articles/facebook-expanding-huge-sarpy-county-data-center-campus-again/"
+        },
+        {
+          "date": "2022-07-28",
+          "kind": "announcement",
+          "summary": "Meta announced it was adding a ninth facility to the Sarpy Data Center campus in Springfield; county records showed Meta pays $3.8 million in property taxes between two parcels of land.",
+          "source": "https://fox42kptm.com/news/local/meta-growing-data-center-in-springfield"
+        },
+        {
+          "date": "2022-09-21",
+          "kind": "construction",
+          "summary": "Construction was halted at the Meta data center in Sarpy County after racist graffiti was found on site for a recurring time, with contractor Turner Construction stopping work at the $1.5 billion project.",
+          "source": "https://fox42kptm.com/news/local/meta-growing-data-center-in-springfield"
+        }
+      ]
     },
     {
       "id": "coreweave-chester-va",
@@ -7413,7 +8977,116 @@
       "source": "https://www.nytimes.com/2025/06/24/technology/amazon-ai-data-centers.html",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-03-04",
+          "kind": "announcement",
+          "summary": "AWS acquired Talen Energy's Cumulus Data campus adjacent to the Susquehanna nuclear power station in Salem Township, Luzerne County, PA for $650 million ($350M at closing, $300M at milestones), gaining access to a 960 MW data center campus directly connected to the 2,520 MW nuclear plant.",
+          "source": "https://www.world-nuclear-news.org/articles/talen-sells-carbon-free-data-centre-to-amazon-clou"
+        },
+        {
+          "date": "2024-05-30",
+          "kind": "rezoning",
+          "summary": "AWS was granted a 1,600-acre rezoning request and announced plans for a 15-building data center campus at the Pennsylvania nuclear site in Salem Township.",
+          "source": "https://www.datacenterdynamics.com/en/news/aws-granted-1600-acre-rezoning-request-plans-15-building-campus-at-pennsylvania-nuclear-site/"
+        },
+        {
+          "date": "2024-11-01",
+          "kind": "ruling",
+          "summary": "FERC voted 2-1 to reject PJM's proposed interconnection agreement that would have expanded Amazon's co-located data center load at Susquehanna from 300 MW to 480 MW, citing concerns about cost fairness and grid reliability precedent.",
+          "source": "https://www.powermag.com/ferc-blocks-pjm-proposal-to-expand-amazon-data-center-load-at-susquehanna-nuclear-plant/"
+        },
+        {
+          "date": "2025-04-11",
+          "kind": "ruling",
+          "summary": "FERC upheld its rejection of the proposed interconnection agreement between AWS's data center and the Susquehanna nuclear plant, denying Talen Energy's rehearing request.",
+          "source": "https://www.datacenterdynamics.com/en/news/ferc-upholds-rejection-of-proposed-interconnection-agreement-between-aws-data-center-and-pennsylvania-nuclear-plant/"
+        },
+        {
+          "date": "2025-06-09",
+          "kind": "announcement",
+          "summary": "Governor Shapiro announced at a Berwick event that Amazon plans to invest at least $20 billion in Pennsylvania data centers, the largest private-sector investment in state history, with Salem Township (Luzerne County) and Falls Township (Bucks County) as the first two identified sites, creating at least 1,250 jobs.",
+          "source": "https://dced.pa.gov/newsroom/governor-josh-shapiro-announces-amazon-plans-to-invest-20-billion-in-pennsylvania/"
+        },
+        {
+          "date": "2025-06-11",
+          "kind": "financing",
+          "summary": "Talen Energy and AWS announced a restructured 17-year, $18 billion power purchase agreement for up to 1,920 MW from Susquehanna nuclear station, converting the behind-the-meter arrangement to a grid-connected front-of-the-meter model to comply with FERC's ruling, with full volume delivery by 2032.",
+          "source": "https://www.powermag.com/talen-amazon-launch-18b-nuclear-ppa/"
+        },
+        {
+          "date": "2025-10-10",
+          "kind": "construction",
+          "summary": "Amazon reported that data center campus construction in Salem Township was proceeding at a rapid pace.",
+          "source": "https://www.citizensvoice.com/news/amazon-data-center-campus-construction-in-salem-twp-on-rapid-pace/"
+        },
+        {
+          "date": "2025-12-19",
+          "kind": "coverage",
+          "summary": "Nonprofit Quarterly published an investigative feature titled 'A Canary in a Coal Mine: Amazon's Luzerne County Data Center,' examining community and environmental concerns including energy demand, water quality, tax exemptions, and employment claims.",
+          "source": "https://nonprofitquarterly.org/a-canary-in-a-coal-mine-amazons-luzerne-county-data-center/"
+        },
+        {
+          "date": "2026-03-12",
+          "kind": "utility",
+          "summary": "The Susquehanna River Basin Commission approved an increase in consumptive water use for the Amazon data center in Salem Township from 60,000 to 129,000 gallons per day (reduced from the initial request of 277,000 gpd), sourced from PA American Water (Berwick).",
+          "source": "http://paenvironmentdaily.blogspot.com/2026/03/susquehanna-river-basin-commission.html"
+        },
+        {
+          "date": "2026-03-17",
+          "kind": "announcement",
+          "summary": "Blackstone-owned QTS spent $580 million to acquire land in Salem Township for a separate data center campus adjacent to the Amazon site, with plans for 12 to 17 data centers.",
+          "source": "https://www.citizensvoice.com/news/national-developer-spends-580-million-on-land-for-salem-twp-data-centers/"
+        },
+        {
+          "date": "2026-03-18",
+          "kind": "announcement",
+          "summary": "96 Salem Township landowners completed a historic 1,700-acre land sale to QTS for more than $500 million for a major data center campus adjacent to the Amazon site, with Salem Township receiving a $9 million community benefit agreement.",
+          "source": "https://www.timesleader.com/news/1721887/96-salem-twp-landowners-complete-historic-1700-acre-sale-for-major-data-center-campus"
+        },
+        {
+          "date": "2026-03-19",
+          "kind": "coverage",
+          "summary": "WNEP reported that the community of Salem Township is now encircled by new data center developments, with multiple campuses under construction or planned in the area.",
+          "source": "https://www.wnep.com/article/news/local/columbia-county/community-encircled-new-data-center-developments-salem-township/"
+        },
+        {
+          "date": "2026-06-09",
+          "kind": "incentive",
+          "summary": "Amazon donated $250,000 to the Bloomsburg Area YMCA for a new STEM lab as data center construction near Berwick continued.",
+          "source": "https://www.wnep.com/article/news/local/columbia-county/amazon-donates-250k-bloomsburg-area-ymca-new-stem-lab-data-center-construction-near-berwick/"
+        },
+        {
+          "date": "2026-06-15",
+          "kind": "coverage",
+          "summary": "The Citizens' Voice reported that a third data center in Salem Township could generate $1.2 billion for landowners, reflecting the scale of data center land acquisition in the area.",
+          "source": "https://www.citizensvoice.com/news/3rd-data-center-in-salem-twp-could-generate-1-2-billion-for-landowners/"
+        },
+        {
+          "date": "2026-06-23",
+          "kind": "coverage",
+          "summary": "The Center Square reported on the role of big money and enforced silence (NDAs) in Pennsylvania's data center push, covering the Salem Township/Amazon development.",
+          "source": "https://www.thecentersquare.com/pennsylvania/article_big-money-enforced-silence-data-center-pennsylvania.html"
+        },
+        {
+          "date": "2026-07-29",
+          "kind": "moratorium",
+          "summary": "Salem Township paused new data center projects pending a zoning amendment, responding to community concerns about the pace of development.",
+          "source": "https://www.citizensvoice.com/news/salem-twp-pauses-new-data-center-projects-pending-zoning-amendment/"
+        },
+        {
+          "date": "2026-07-30",
+          "kind": "coverage",
+          "summary": "State representatives were denied access to the Amazon data center in Salem Township, as reported by the Citizens' Voice.",
+          "source": "https://www.citizensvoice.com/news/state-reps-denied-access-to-salem-twp-amazon-data-center/"
+        },
+        {
+          "date": "2026-08-14",
+          "kind": "environmental",
+          "summary": "PA DEP published notice inviting public comments (deadline September 14, 2026) on an air quality permit for 84 backup diesel generators, 2 auxiliary emergency generators, and fuel storage tanks for an expansion of the existing Amazon data center in Salem Township.",
+          "source": "http://paenvironmentdaily.blogspot.com/2026/08/dep-invites-comments-on-air-quality.html"
+        }
+      ]
     },
     {
       "id": "google-papillion",
@@ -7439,7 +9112,68 @@
       "source": "https://drive.google.com/file/d/1nONzuLnpMPST0bOINDKXmSZ0ANlynYY0/view?usp=sharing",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2019-01-02",
+          "kind": "coverage",
+          "summary": "Data Center Dynamics reports that a project code-named 'Project Wizard' in Sarpy County has evidence pointing to Google as the developer of a major new data center.",
+          "source": "https://www.datacenterdynamics.com/en/news/project-wizard-sarpy-county-may-get-another-major-data-center-evidence-points-to-google/"
+        },
+        {
+          "date": "2019-10-04",
+          "kind": "announcement",
+          "summary": "Google holds a groundbreaking ceremony for a $600 million data center on a 275-acre site off Highway 50 and Schram Road in Papillion, with Governor Pete Ricketts, Congressman Don Bacon, and Mayor David Black in attendance; the facility is described as Google's 13th nationwide.",
+          "source": "https://www.3newsnow.com/news/local-news/new-google-data-center-coming-to-papillion"
+        },
+        {
+          "date": "2019-10-04",
+          "kind": "construction",
+          "summary": "KMTV reports that OPPD had been collaborating with Google on power infrastructure for approximately six years prior to the groundbreaking, and Google expects the Papillion facility to be operational within 18-24 months.",
+          "source": "https://www.3newsnow.com/news/local-news/google-to-open-new-data-center-in-sarpy-county"
+        },
+        {
+          "date": "2022-04-21",
+          "kind": "announcement",
+          "summary": "Google announces at least $750 million in new Nebraska investment including expansion of its Papillion campus at 14706 Schram Road (then employing 120 people) and a new data center in northwest Omaha, bringing total state investment past $1 billion.",
+          "source": "https://www.3newsnow.com/news/local-news/google-announces-nebraska-growth-plan-that-includes-new-northwest-omaha-data-center"
+        },
+        {
+          "date": "2023-08-22",
+          "kind": "announcement",
+          "summary": "Google announces $1.2 billion in new Nebraska investment to expand the Papillion and Omaha facilities and build a third data center in Lincoln; the Papillion facility is described as having created over 120 jobs since opening in 2019.",
+          "source": "https://www.wowt.com/2023/08/22/google-investing-another-12-billion-papillion-lincoln-data-centers/"
+        },
+        {
+          "date": "2025-11-18",
+          "kind": "coverage",
+          "summary": "In November 2025, Silicon Prairie News reports that OPPD now anticipates annual electricity demand growth of over 100 MW (up from 4 MW previously), driven by data center expansion including Google's Sarpy County facility described as its first in Nebraska.",
+          "source": "https://siliconprairienews.com/nebraska-can-take-lessons-from-virginias-data-center-boom-to-prep-its-power-grids/"
+        },
+        {
+          "date": "2026-06-03",
+          "kind": "environmental",
+          "summary": "Google announces $17 million in water stewardship grants across seven states; the Metropolitan Utilities District in Omaha receives $3 million for acoustic leak-detection sensors across 500 miles of water lines, tied to Google's three Nebraska data centers.",
+          "source": "https://nebraskapublicmedia.org/en/news/news-articles/google-gives-3-million-to-mud-to-reduce-water-use-in-omaha/"
+        },
+        {
+          "date": "2026-07-08",
+          "kind": "coverage",
+          "summary": "In July 2026, Flatwater Free Press reports that Google's Nebraska data centers consumed approximately 732 million gallons of water in 2025, up from 46.6 million gallons in 2022 and 134.7 million gallons in 2023; the Papillion facility is identified as one of three sites.",
+          "source": "https://flatwaterfreepress.org/data-centers-can-guzzle-serious-water-as-some-nebraskans-worry-tech-giants-seek-solutions/"
+        },
+        {
+          "date": "2026-07-15",
+          "kind": "report",
+          "summary": "Grist reports that Nebraska passed a law requiring data centers to disclose annual water consumption and power demand to the Department of Water, Energy, and Environment; Google's three Nebraska facilities including Papillion consumed approximately 732 million gallons in 2025.",
+          "source": "https://grist.org/technology/nebraska-wants-data-centers-to-come-clean-about-water-usage/"
+        },
+        {
+          "date": "2026-07-20",
+          "kind": "incentive",
+          "summary": "Governor Pillen signs an executive order curbing tax incentives for large data centers; KOLN reports that Nebraska data centers have received $519 million in property tax exemptions since 2021.",
+          "source": "https://www.klkntv.com/data-centers-executive-order-signed-by-gov-pillen-today/"
+        }
+      ]
     },
     {
       "id": "coreweave-marble-nc",
@@ -7624,7 +9358,50 @@
       "source": "https://investors.terawulf.com/news-events/press-releases/detail/132/terawulf-reports-fourth-quarter-and-full-year-2025-results",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-12-23",
+          "kind": "financing",
+          "summary": "TeraWulf signs binding lease agreements with Core42 for 72.5 MW of HPC hosting capacity at Lake Mariner with option to expand by 135 MW; expected to generate $1 billion over initial 10-year terms, commencing at various dates in 2025.",
+          "source": "https://investors.terawulf.com/news-events/press-releases/detail/103/terawulf-announces-binding-letter-of-intent-for-core42-as"
+        },
+        {
+          "date": "2025-08-14",
+          "kind": "financing",
+          "summary": "TeraWulf announces binding terms with Fluidstack for 200+ MW of critical IT load at Lake Mariner, with Google credit enhancement; approximately $3.7 billion in contracted revenue over initial 10-year term, phase one (~40 MW) expected H1 2026.",
+          "source": "https://investors.terawulf.com/news-events/press-releases/detail/112/terawulf-announces-binding-terms-with-fluidstack"
+        },
+        {
+          "date": "2025-11-10",
+          "kind": "report",
+          "summary": "TeraWulf Q3 2025 results detail Lake Mariner lease portfolio: La Lupa (Core42) at 72.5 MW with $1.1 billion over ten years, and Akela (Fluidstack/Google) at 450 MW with $6.7 billion over ten years.",
+          "source": "https://investors.terawulf.com/news-events/press-releases/detail/126/terawulf-announces-lease-agreement-with-core42-at-lake"
+        },
+        {
+          "date": "2026-02-26",
+          "kind": "report",
+          "summary": "TeraWulf Q4 2025 results report Lake Mariner contracted at 440 MW critical IT (Core42 60 MW, Fluidstack/Google 380 MW); CB-2 (42 MW) listed with CB2A operational and CB2B expected in March 2026.",
+          "source": "https://investors.terawulf.com/news-events/press-releases/detail/132/terawulf-reports-fourth-quarter-and-full-year-2025-results"
+        },
+        {
+          "date": "2026-04-14",
+          "kind": "operational",
+          "summary": "TeraWulf Q1 2026 preliminary results confirm CB-2 fully delivered as of March 31, 2026, with all Core42 capacity across WULF Den, CB-1, and CB-2 generating revenue; HPC hosting exceeded 50% of Q1 revenue.",
+          "source": "https://investors.terawulf.com/news-events/press-releases/detail/134/terawulf-energizes-cb-2b-at-lake-mariner"
+        },
+        {
+          "date": "2026-07-06",
+          "kind": "announcement",
+          "summary": "TeraWulf announces 20-year lease with Anthropic for 401 MW at the Justified Data campus in Hawesville, Kentucky (not Lake Mariner), expected to generate approximately $19 billion in contracted revenue; initial capacity in second half of 2027, full ramp by early 2028.",
+          "source": "https://investors.terawulf.com/news-events/press-releases/detail/142/terawulf-announces-anthropic-lease-at-justified-data-campus-and-sale-of-majority-interest-in-abernathy-joint-venture-to-fluidstack"
+        },
+        {
+          "date": "2026-08-05",
+          "kind": "operational",
+          "summary": "TeraWulf Q2 2026 results report 102 MW of revenue-generating critical IT capacity online at Lake Mariner as of early July 2026, with CB-3 completed and CB-4 entering commissioning; CB-5 targeted for early 2027.",
+          "source": "https://investors.terawulf.com/news-events/press-releases/detail/144/terawulf-reports-second-quarter-2026-results"
+        }
+      ]
     },
     {
       "id": "microsoft-nebius-new-jersey",
@@ -7815,7 +9592,32 @@
       "source": "https://www.streamdatacenters.com/locations/phoenix/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2020-07-08",
+          "kind": "announcement",
+          "summary": "Stream Data Centers announced its 157-acre Phoenix campus in Goodyear, AZ would open its first building in August 2020, with Cox Business as a key fiber provider and a 350 MW onsite APS substation.",
+          "source": "https://www.streamdatacenters.com/news/stream-data-centers-prepares-to-open-in-phoenix-this-summer-with-cox-business-as-a-key-fiber-provider/"
+        },
+        {
+          "date": "2021-01-14",
+          "kind": "operational",
+          "summary": "Stream Data Centers commissioned Phoenix I, a 418,000 sq ft data center on its Goodyear campus, completing construction on schedule despite the pandemic, with power from an onsite Arizona Public Service (APS) substation.",
+          "source": "https://www.streamdatacenters.com/news/booming-in-the-desert-stream-commissions-new-phoenix-data-center/"
+        },
+        {
+          "date": "2025-08-06",
+          "kind": "financing",
+          "summary": "Apollo Global Management announced it would acquire a majority stake in Stream Data Centers, with Phoenix listed among the company's key hyperscale campus markets; Goldman Sachs advised Stream on the deal.",
+          "source": "https://www.streamdatacenters.com/news/apollo-funds-to-acquire-majority-stake-in-stream-data-centers-forming-a-scaled-digital-infrastructure-leader/"
+        },
+        {
+          "date": "2025-11-03",
+          "kind": "financing",
+          "summary": "Apollo-managed funds completed the acquisition of a majority interest in Stream Data Centers, with Principal Asset Management taking a minority stake; Stream's 4+ GW pipeline across U.S. markets including Phoenix transferred to the new ownership structure.",
+          "source": "https://www.streamdatacenters.com/news/apollo-funds-complete-acquisition-of-stream-data-centers/"
+        }
+      ]
     },
     {
       "id": "microsoft-sat14",
@@ -7999,7 +9801,62 @@
       "source": "https://blog.google/inside-google/company-announcements/google-american-innovation-oklahoma/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2007-01-01",
+          "kind": "announcement",
+          "summary": "Google announced its initial data center investment in Mayes County, Oklahoma at MidAmerica Industrial Park, according to Google's own data center community page which lists 2007 as the year of first investment.",
+          "source": "https://datacenters.google/locations/oklahoma/"
+        },
+        {
+          "date": "2012-01-01",
+          "kind": "construction",
+          "summary": "Google completed its first campus expansion at the Mayes County data center in 2012, per Google's official facility timeline.",
+          "source": "https://datacenters.google/locations/oklahoma/"
+        },
+        {
+          "date": "2015-01-01",
+          "kind": "construction",
+          "summary": "Google completed a second expansion of the Mayes County data center campus in 2015, per Google's official facility timeline.",
+          "source": "https://datacenters.google/locations/oklahoma/"
+        },
+        {
+          "date": "2019-01-01",
+          "kind": "construction",
+          "summary": "Google completed a third expansion of the Mayes County data center campus in 2019, per Google's official facility timeline.",
+          "source": "https://datacenters.google/locations/oklahoma/"
+        },
+        {
+          "date": "2022-05-11",
+          "kind": "operational",
+          "summary": "Google announced a 9 exaflop cluster of Cloud TPU v4 pods in public preview at its Oklahoma data center, described as the world's largest publicly available ML hub, operating at 90% carbon-free energy with a PUE of 1.10.",
+          "source": "https://cloud.google.com/blog/products/compute/google-unveils-worlds-largest-publicly-available-ml-cluster"
+        },
+        {
+          "date": "2023-04-05",
+          "kind": "report",
+          "summary": "A Google Cloud blog post confirmed that all Cloud TPU v4 supercomputers are housed at the Oklahoma data center, noting approximately 6x cleaner energy than typical on-premise data centers.",
+          "source": "https://cloud.google.com/blog/topics/systems/tpu-v4-enables-performance-energy-and-co2e-efficiency-gains"
+        },
+        {
+          "date": "2024-07-19",
+          "kind": "operational",
+          "summary": "Epoch AI's data center tracker estimates Building 1 of Google Pryor (North) became operational around July 2024 with approximately 53 MW IT power, hosting an estimated 27,959 TPU v5p and 67,102 TPU v5e chips.",
+          "source": "https://epoch.ai/data"
+        },
+        {
+          "date": "2025-01-28",
+          "kind": "construction",
+          "summary": "Epoch AI satellite imagery analysis shows Building 2 at Google Pryor (North) being retrofitted from a warehouse, with roof painting, cooling tower construction, and a new substation being built south of the building.",
+          "source": "https://epoch.ai/data"
+        },
+        {
+          "date": "2025-08-13",
+          "kind": "announcement",
+          "summary": "Google announced a $9 billion investment in Oklahoma cloud and AI infrastructure over two years, including expansion of the existing Pryor facility and a new data center campus in Stillwater, bringing total Oklahoma investment to $15 billion since 2007.",
+          "source": "https://blog.google/inside-google/company-announcements/google-american-innovation-oklahoma/"
+        }
+      ]
     },
     {
       "id": "xai-qts-atlanta",
@@ -8025,7 +9882,26 @@
       "source": "https://www.developfultoncounty.com/meetings-and-minutes_239_547601452.pdf",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-01-23",
+          "kind": "incentive",
+          "summary": "Development Authority of Fulton County considered a $700,000,000 inducement and final bond resolution for X Corp. (f/k/a Twitter, Inc.) to acquire and install high-performance computing and AI infrastructure at 1025 Jefferson Street NW, Atlanta (QTS DC2), with the project described as competing with Portland and other locations.",
+          "source": "https://www.developfultoncounty.com/meetings-and-minutes_239_547601452.pdf"
+        },
+        {
+          "date": "2024-01-23",
+          "kind": "vote",
+          "summary": "Development Authority of Fulton County approved X Corp.'s $700M bond resolution 6-2 (Long and Lamont voting no), subject to a satisfactory corporate citizenship agreement, after X Corp. representatives confirmed the transaction covers equipment only and would retain 24 jobs plus 50 vendor employees.",
+          "source": "https://www.developfultoncounty.com/uploads/meetings-and-minutes_248_4126310232.pdf"
+        },
+        {
+          "date": "2024-01-23",
+          "kind": "public-comment",
+          "summary": "Howell Station Neighborhood Association president Arthur Toal submitted to the DAFC board a Georgia Tech AI PhD candidate's analysis arguing X Corp.'s $700M equipment refit would not deliver the claimed economic benefits because the investment involves no new construction.",
+          "source": "https://www.developfultoncounty.com/uploads/meetings-and-minutes_248_4126310232.pdf"
+        }
+      ]
     },
     {
       "id": "coreweave-muskogee-ok",
@@ -8051,7 +9927,44 @@
       "source": "https://investors.corescientific.com/news-events/press-releases/detail/99/core-scientific-and-port-muskogee-break-ground-on-100-mw-hpc-data-center",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-06-06",
+          "kind": "financing",
+          "summary": "Core Scientific signs initial 200 MW, 12-year hosting contract with CoreWeave valued at over $3.5 billion in cumulative revenue; no specific sites named but this is the master contract the Muskogee facility later falls under.",
+          "source": "https://investors.corescientific.com/news-events/press-releases/detail/76/core-scientific-signs-200-megawatt-contract-with-coreweave"
+        },
+        {
+          "date": "2024-07-05",
+          "kind": "financing",
+          "summary": "Core Scientific announces a second 70 MW CoreWeave hosting agreement, bringing the total to 270 MW across two 12-year contracts worth approximately $4.7 billion in cumulative revenue.",
+          "source": "https://investors.corescientific.com/news-events/press-releases/detail/79/core-scientific-signs-12-year-contract-with-coreweave"
+        },
+        {
+          "date": "2024-10-22",
+          "kind": "financing",
+          "summary": "CoreWeave exercises its final contract option for approximately 120 MW of additional critical IT load, bringing the total Core Scientific-CoreWeave commitment to approximately 500 MW across six sites with $8.7 billion in total potential revenue over 12 years.",
+          "source": "https://investors.corescientific.com/news-events/press-releases/detail/95/core-scientific-expands-coreweave-hosting-contracts"
+        },
+        {
+          "date": "2024-11-18",
+          "kind": "construction",
+          "summary": "Core Scientific and Port Muskogee break ground on a 100 MW HPC data center (70 MW for NVIDIA GPU computing load, 30 MW ancillary), part of the 500 MW CoreWeave contract; projected to generate $182 million in net local economic benefits, support 150 jobs, and bring over $12 million in property and sales taxes to local institutions; expected operational in 2026.",
+          "source": "https://investors.corescientific.com/news-events/press-releases/detail/99/core-scientific-and-port-muskogee-break-ground-on-100-mw-hpc-data-center"
+        },
+        {
+          "date": "2026-05-06",
+          "kind": "announcement",
+          "summary": "Core Scientific announces plans to expand its Muskogee campus to approximately 1.5 GW of gross power (1.0 GW leasable) through an agreement to acquire Polaris DS LLC and its 440 MW of grid-connected power under Oklahoma Gas & Electric service agreements, plus 250 acres secured for expansion; the first 70 MW building targets Q2 2026 delivery with NVIDIA GB300 platform, and a second 82.5 MW building targets Q4 2027.",
+          "source": "https://investors.corescientific.com/news-events/press-releases/detail/135/core-scientific-plans-expansion-to-1-5-gigawatts-of-gross-power-at-muskogee-oklahoma-campus"
+        },
+        {
+          "date": "2026-08-14",
+          "kind": "operational",
+          "summary": "Core Scientific completes acquisition of Polaris DS LLC for approximately $444 million in cash, securing roughly 440 MW of grid-connected power capacity under existing Oklahoma Gas & Electric service agreements to advance the planned 1.5 GW Muskogee campus expansion; next 82 MW building expected to reach customers in the second half of 2027.",
+          "source": "https://investors.corescientific.com/news-events/press-releases/detail/142/core-scientific-completes-acquisition-of-polaris-ds-advancing-planned-muskogee-expansion-to-1-5-gw-of-gross-power"
+        }
+      ]
     },
     {
       "id": "crusoe-abilene-expansion",
@@ -8319,7 +10232,128 @@
       "source": "https://www.thelocalfw.com/what-to-know-about-googles-plans-for-wetlands-in-fort-wayne/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2023-11-01",
+          "kind": "coverage",
+          "summary": "Neighbors voiced concerns about 'Project Zodiac,' a proposed data center by an unnamed Fortune 100 company on southeast Fort Wayne land, following an October 25 neighborhood meeting; residents cited noise and health worries.",
+          "source": "https://www.21alivenews.com/2023/11/02/neighbors-concerned-over-proposed-fort-wayne-data-center/"
+        },
+        {
+          "date": "2023-11-16",
+          "kind": "vote",
+          "summary": "Allen County Plan Commission unanimously approved annexation of 728 acres of county land into Fort Wayne for the Project Zodiac data center; residents expressed frustration at the decision.",
+          "source": "https://www.21alivenews.com/2023/11/16/allen-county-plan-commission-unanimously-approves-land-annexation-data-center-residents-express-frustration/"
+        },
+        {
+          "date": "2023-12-01",
+          "kind": "vote",
+          "summary": "Allen County Commissioners voted 3-0 to approve the 728-acre Project Zodiac annexation near East Paulding Road and Adams Center Road, the final annexation vote required for the project.",
+          "source": "https://www.21alivenews.com/2023/12/01/allen-county-commissioners-approve-project-zodiac-annexation/"
+        },
+        {
+          "date": "2024-04-01",
+          "kind": "announcement",
+          "summary": "Google was identified as the company behind 'Project Zodiac' at a groundbreaking ceremony in April 2024, announcing a $2 billion investment and approximately 200 jobs at the Fort Wayne data center campus.",
+          "source": "https://www.21alivenews.com/2024/06/20/idem-public-meeting-be-held-discuss-air-pollution-concerns-with-new-google-data-center-fort-wayne/"
+        },
+        {
+          "date": "2024-07-01",
+          "kind": "hearing",
+          "summary": "IDEM held a public meeting on July 1 at Ivy Tech Community College to discuss the draft Hatchworks LLC air permit for Google's data center; the public comment period closed July 8.",
+          "source": "https://www.21alivenews.com/2024/06/20/idem-public-meeting-be-held-discuss-air-pollution-concerns-with-new-google-data-center-fort-wayne/"
+        },
+        {
+          "date": "2025-08-04",
+          "kind": "filing",
+          "summary": "Indiana Michigan Power and Google filed a joint demand-response contract with the Indiana Utility Regulatory Commission to manage the data center's electricity load and grid impact.",
+          "source": "https://www.21alivenews.com/2025/08/05/im-google-file-joint-contract-support-power-companys-capacity-needs/"
+        },
+        {
+          "date": "2025-08-28",
+          "kind": "permit",
+          "summary": "Google filed an application with IDEM to build on approximately 2.47 acres of protected wetlands for Phase 2 of its Fort Wayne data center expansion.",
+          "source": "https://www.21alivenews.com/2025/08/28/google-files-application-build-protected-wetlands-site-fort-wayne-data-center/"
+        },
+        {
+          "date": "2025-09-19",
+          "kind": "permit",
+          "summary": "IDEM approved Google's permit to build on approximately 2.5 acres of protected wetlands at the Fort Wayne data center site, requiring purchase of mitigation credits.",
+          "source": "https://www.21alivenews.com/2025/09/19/googles-plan-build-protected-wetlands-fort-wayne-data-center-greenlit/"
+        },
+        {
+          "date": "2025-11-13",
+          "kind": "hearing",
+          "summary": "IDEM held a nearly three-hour public hearing at Ivy Tech on Google's request to expand from 34 to 179 backup diesel generators; the packed auditorium left more than 20 residents unable to speak, and attendees demanded the permit be denied.",
+          "source": "https://www.21alivenews.com/2025/11/14/allen-county-residents-pack-idems-public-hearing-google-data-center-permit/"
+        },
+        {
+          "date": "2025-11-18",
+          "kind": "protest",
+          "summary": "Residents rallied at Indiana Michigan Power headquarters and Fort Wayne City Council, calling on the council to pressure IDEM to deny Google's diesel generator permit, citing potential annual pollution of 900 tons and rising energy costs.",
+          "source": "https://www.21alivenews.com/2025/11/18/advocates-protest-google-data-center-amid-energy-cost-public-health-concerns/"
+        },
+        {
+          "date": "2025-12-04",
+          "kind": "permit",
+          "summary": "IDEM approved AEP's request to temporarily fill wetlands to build power infrastructure serving Google's Fort Wayne data center.",
+          "source": "https://www.21alivenews.com/2025/12/04/aep-request-temporarily-fill-wetlands-power-fort-wayne-google-data-center-approved/"
+        },
+        {
+          "date": "2025-12-11",
+          "kind": "operational",
+          "summary": "Google announced its Fort Wayne data center is operational and held a community forum at Grand Wayne Center; the company pledged $1.2 million to ACRES Land Trust to protect 22 acres of wetlands and committed to using backup generators only for testing or emergencies.",
+          "source": "https://www.21alivenews.com/2025/12/11/google-announces-fort-wayne-data-center-is-operational-ahead-thursday-night-community-forum/"
+        },
+        {
+          "date": "2026-01-13",
+          "kind": "coverage",
+          "summary": "Fort Wayne City Council reported that Google agreed to pay approximately $200,000 for stormwater drainage improvements at 6015 Adams Center Road near the data center campus.",
+          "source": "https://www.21alivenews.com/2026/01/14/city-council-google-agrees-pay-200k-stormwater-drainage-improvement/"
+        },
+        {
+          "date": "2026-02-17",
+          "kind": "coverage",
+          "summary": "Google launched a public website to address community questions and concerns about its Fort Wayne data center operations.",
+          "source": "https://www.21alivenews.com/2026/02/17/google-creates-website-address-questions-concerns-about-fort-wayne-data-center/"
+        },
+        {
+          "date": "2026-02-25",
+          "kind": "coverage",
+          "summary": "Indiana Michigan Power announced plans to lower electric rates, citing revenue from data centers including Google's Fort Wayne facility as an offset for residential customers.",
+          "source": "https://www.21alivenews.com/2026/02/25/im-lower-electric-rates-citing-revenue-data-centers/"
+        },
+        {
+          "date": "2026-03-17",
+          "kind": "permit",
+          "summary": "Google filed permits with IDEM for Phase 3 of its Fort Wayne data center, proposing three additional buildings that would expand the campus footprint to over 867,000 square feet.",
+          "source": "https://www.21alivenews.com/2026/03/17/google-requests-permit-third-phase-fort-wayne-data-center/"
+        },
+        {
+          "date": "2026-04-10",
+          "kind": "permit",
+          "summary": "IDEM approved Google's request for 140 additional emergency diesel generators (plus 5 smaller units) at the Fort Wayne data center, on top of 34 already permitted in 2024.",
+          "source": "https://www.21alivenews.com/2026/04/13/idem-approves-googles-request-additional-diesel-generators-fort-wayne-data-center/"
+        },
+        {
+          "date": "2026-04-29",
+          "kind": "ruling",
+          "summary": "Indiana Utility Regulatory Commission approved the Google-Indiana Michigan Power demand-response deal, allowing Google to curtail usage during peak grid stress in exchange for rate discounts, projected to reduce costs for all I&M customers.",
+          "source": "https://www.21alivenews.com/2026/04/30/state-regulators-approve-deal-between-google-im-aimed-minimize-fort-wayne-data-centers-impact-electric-grid/"
+        },
+        {
+          "date": "2026-06-09",
+          "kind": "vote",
+          "summary": "Fort Wayne City Council member Russ Jehl introduced three resolutions demanding Google demonstrate compliance with tax-break benchmarks, accountability for land-sale proceeds directed to southeast Fort Wayne, and creation of a permanent data center oversight board.",
+          "source": "https://www.21alivenews.com/2026/06/09/fort-wayne-council-member-seeks-accountability-google-data-center-promises/"
+        },
+        {
+          "date": "2026-08-06",
+          "kind": "environmental",
+          "summary": "Hatchworks LLC requested IDEM approval to fill 2.13 acres of forested wetlands for Phase 3, proposing a 2-to-1 mitigation ratio; a virtual public hearing is scheduled for August 25, 2026, with construction targeted to begin mid-September if approved.",
+          "source": "https://www.21alivenews.com/2026/08/06/public-hearing-planned-google-data-center-developers-request-fill-more-wetlands/"
+        }
+      ]
     },
     {
       "id": "openai-stargate-lordstown",
@@ -8468,7 +10502,128 @@
       "source": "https://www.related-digital.com/michigan",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-09-11",
+          "kind": "vote",
+          "summary": "Saline Township Board voted 4-1 to deny rezoning of 575 acres of agricultural land for Related Digital's proposed data center campus.",
+          "source": "https://planetdetroit.org/2025/09/saline-township-denies-data-center-rezoning-request-self-imposed-environmental-catastrophe/"
+        },
+        {
+          "date": "2025-09-18",
+          "kind": "lawsuit",
+          "summary": "Related Digital sued Saline Township in Washtenaw County Circuit Court alleging exclusionary zoning barred by the Michigan Constitution, days after the board's rezoning denial.",
+          "source": "https://planetdetroit.org/2025/09/data-center-developer-takes-saline-township-to-court-over-rezoning-decision/"
+        },
+        {
+          "date": "2025-10-01",
+          "kind": "vote",
+          "summary": "Saline Township Board voted 4-1 to approve a consent agreement with Related Digital allowing the data center to proceed, including $4M farmland preservation trust, $2M community investment fund, $8M for fire services, and water protections.",
+          "source": "https://planetdetroit.org/2025/12/saline-data-center-settlement-challenge/"
+        },
+        {
+          "date": "2025-10-30",
+          "kind": "announcement",
+          "summary": "Governor Whitmer announced that OpenAI and Oracle were behind the Saline Township data center, calling it the largest investment in Michigan history; the consent judgment was entered October 15, 2025.",
+          "source": "https://planetdetroit.org/2026/02/judge-denies-data-center-intervention/"
+        },
+        {
+          "date": "2025-10-31",
+          "kind": "filing",
+          "summary": "DTE Energy filed an application with the Michigan Public Service Commission for fast-track approval of special electric service contracts to supply 1.4 GW to the data center, approximately 25% of DTE's entire load.",
+          "source": "https://planetdetroit.org/2025/11/dte-openai-saline-township/"
+        },
+        {
+          "date": "2025-12-01",
+          "kind": "protest",
+          "summary": "Approximately 100 people protested outside DTE Energy headquarters demanding transparency and a contested-case proceeding for the data center power contracts; speakers included Michigan Sierra Club and Washtenaw County Commissioner Yousef Rabhi.",
+          "source": "https://planetdetroit.org/2025/12/protest-dte-saline-data-center/"
+        },
+        {
+          "date": "2025-12-03",
+          "kind": "hearing",
+          "summary": "Michigan Public Service Commission held a virtual public hearing on DTE's special electric service contracts for the 1.4 GW data center; AG Nessel called the hearing 'little more than performative listening.'",
+          "source": "https://planetdetroit.org/2025/11/dte-data-center-public-hearing/"
+        },
+        {
+          "date": "2025-12-15",
+          "kind": "lawsuit",
+          "summary": "Saline Township resident Kathryn Haushalter, living 256 yards from the site, filed a motion to intervene in the consent judgment, alleging the settlement was negotiated in secret and violated Michigan's Open Meetings Act.",
+          "source": "https://planetdetroit.org/2025/12/saline-data-center-settlement-challenge/"
+        },
+        {
+          "date": "2025-12-18",
+          "kind": "ruling",
+          "summary": "Michigan Public Service Commission granted conditional approval of DTE Energy's special contracts to supply power to the 1.4 GW Saline Township data center.",
+          "source": "https://planetdetroit.org/2026/01/dte-agrees-saline-data-center-conditions/"
+        },
+        {
+          "date": "2026-01-17",
+          "kind": "ruling",
+          "summary": "DTE Energy accepted the Michigan Public Service Commission's conditions for the Saline Township data center power contracts, while reserving rights to challenge future commission decisions.",
+          "source": "https://planetdetroit.org/2026/01/dte-agrees-saline-data-center-conditions/"
+        },
+        {
+          "date": "2026-01-28",
+          "kind": "lawsuit",
+          "summary": "Saline Township residents filed a separate mandamus complaint alleging the Zoning Board of Appeals failed to hold a required hearing on temporary structures permits for the data center.",
+          "source": "https://planetdetroit.org/2026/02/judge-denies-data-center-intervention/"
+        },
+        {
+          "date": "2026-02-20",
+          "kind": "ruling",
+          "summary": "Washtenaw County Circuit Judge Julia Owdiej denied resident Kathryn Haushalter's motion to intervene in the data center settlement, ruling it came too late; developer's attorney noted a $40M nonrefundable DTE deposit and $2B in equipment had been ordered.",
+          "source": "https://planetdetroit.org/2026/02/judge-denies-data-center-intervention/"
+        },
+        {
+          "date": "2026-04-01",
+          "kind": "lawsuit",
+          "summary": "In April 2026, Michigan Attorney General Dana Nessel filed an appeal of the MPSC's conditional approval, contending the commission improperly fast-tracked approval without allowing a contested case proceeding.",
+          "source": "https://planetdetroit.org/2026/08/dte-oracle-contract-appeal-michigan/"
+        },
+        {
+          "date": "2026-04-25",
+          "kind": "financing",
+          "summary": "Related Digital secured financing through Blackstone for the project, now valued at $16 billion, with major construction reported underway.",
+          "source": "https://planetdetroit.org/2026/08/dte-oracle-contract-appeal-michigan/"
+        },
+        {
+          "date": "2026-05-15",
+          "kind": "coverage",
+          "summary": "Saline Township Treasurer Jennifer Zink resigned after six years in office citing death threats linked to the data center project, which she had originally voted against as a board member.",
+          "source": "https://planetdetroit.org/2026/05/saline-township-treasurer-resigns/"
+        },
+        {
+          "date": "2026-06-01",
+          "kind": "construction",
+          "summary": "Oracle, OpenAI, Related Digital, Blackstone, Walbridge, and Governor Whitmer held a groundbreaking ceremony for the Stargate campus nicknamed 'The Barn' in Saline Township; Sam Altman called it a 'huge bet' on AI.",
+          "source": "https://www.related-digital.com/michigan"
+        },
+        {
+          "date": "2026-07-15",
+          "kind": "incentive",
+          "summary": "Saline Township Board approved tax breaks for the data center but initially capped the abatement at $4.8 billion in valuation, smaller than the developer requested.",
+          "source": "https://planetdetroit.org/2026/07/data-center-news-saline-township/"
+        },
+        {
+          "date": "2026-07-21",
+          "kind": "incentive",
+          "summary": "Saline Township Board voted 5-0 to reverse course and remove the $4.8 billion valuation cap on the data center tax abatement after the township attorney warned the cap would violate the 2025 consent judgment.",
+          "source": "https://planetdetroit.org/2026/07/data-center-news-saline-township/"
+        },
+        {
+          "date": "2026-07-30",
+          "kind": "environmental",
+          "summary": "Oracle and OpenAI applied for a permit to discharge treated wastewater into the Saline River; Michigan EGLE opened a public comment period ending August 24.",
+          "source": "https://www.wxyz.com/news/region/washtenaw-county/saline-river-at-center-of-permit-request-tied-to-oracle-openai-data-center-in-saline-township"
+        },
+        {
+          "date": "2026-08-12",
+          "kind": "lawsuit",
+          "summary": "AG Nessel, Earthjustice, Sierra Club, Michigan Environmental Council, and NRDC filed briefs with the Michigan Court of Appeals challenging the MPSC's approval of DTE's power contracts, arguing ratepayers face nearly half a billion dollars in up-front costs.",
+          "source": "https://planetdetroit.org/2026/08/dte-oracle-contract-appeal-michigan/"
+        }
+      ]
     },
     {
       "id": "openai-stargate-milam",
