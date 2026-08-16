@@ -2468,14 +2468,24 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
     def _latest_iso(g):
         return g["stories"][0].get("published_iso", "") if g["stories"] else ""
 
+    _site_coords = {}
+    for _, _r in DC_SITES_DF.iterrows():
+        _k = (_r["location"].lower().strip(), _r["state"].strip())
+        _site_coords.setdefault(_k, (_r["lat"], _r["lon"]))
+
     def _maps_link(g):
-        """Google Maps search link for an identified locality."""
+        """Google Maps link for an identified locality — exact coords when
+        we have a known DC site, search URL otherwise."""
         loc, st = g.get("locality"), g.get("state")
         if not loc or not st:
             return ""
         from urllib.parse import quote_plus
-        q = quote_plus(f"{loc}, {st}")
-        return (f' <a href="https://www.google.com/maps/search/?api=1&amp;query={q}" '
+        coords = _site_coords.get((loc.lower(), st))
+        if coords:
+            url = f"https://www.google.com/maps/@{coords[0]},{coords[1]},13z"
+        else:
+            url = f"https://www.google.com/maps/search/?api=1&amp;query={quote_plus(f'{loc}, {st}')}"
+        return (f' <a href="{url}" '
                 f'rel="nofollow noopener" target="_blank" class="map-link" '
                 f'title="View on Google Maps">&#x1F4CD;</a>')
 
@@ -2487,13 +2497,14 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
         rows = []
         for i, g in enumerate(patterns, 1):
             latest = g["stories"][0]
+            ml = _maps_link(g)
+            pin_html = (f'<div class="angle">{ml.strip() if ml else "📍"}</div>')
             rows.append(
                 '<li class="top-story">'
                 f'<div class="rank">{i}</div>'
-                '<div class="angle">📍</div>'
+                f'{pin_html}'
                 '<div class="top-body">'
-                f'<h3><a href="#{_story_group_slug(g["label"])}">{esc(g["label"])}</a>'
-                f'{_maps_link(g)} '
+                f'<h3><a href="#{_story_group_slug(g["label"])}">{esc(g["label"])}</a> '
                 f'<span class="count">{g["count"]} stories</span></h3>'
                 f'<p class="blurb">{esc(g["summary"])}</p>'
                 f'<p class="meta">Latest: <a href="{esc(latest.get("link", ""))}" '
