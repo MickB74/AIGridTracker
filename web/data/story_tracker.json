@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 1768,
+  "count": 1775,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -8663,7 +8663,7 @@
       "locality": "Louisville",
       "state": "KY",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-14"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "Yakima County commissioners pass six-month data center moratorium",
@@ -11314,7 +11314,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-14"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "Long-time German Investor to Spend $185M, Hire 1,400 at Factory Driven by Data Center Boom",
@@ -12084,7 +12084,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-15"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "Oncor weighs impact of Texas data center freeze on nearly 300-GW load pipeline",
@@ -19454,6 +19454,83 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-08-13",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "County seeks stronger data center rules",
+      "outlet": "Henry County Enterprise",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVmdYcGNoc0JmNGhRdThhaTZ5Q3hkaHdzYTJpeUZEQ3hVVzhQVVBJSTZOT3dzZjI0dXJMcm5mWnhrWnNZUHRPVmRlWmZmQ01HeWs1cklZVXZldUFYeVlCcDFJeXI2eE1TMVpFbUdPMEZldHVVMmVaVFFJd1MyRkZwc3JheF8wN1ZzR0UtZkF3?oc=5",
+      "published": "Wed, 12 Aug 2026 22:01:00 GMT",
+      "published_iso": "2026-08-12T22:01:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Residents ask questions after Path One presents data center plans in Ida County",
+      "outlet": "WVLT",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQeDBncUJ4eWNUMkNRYmlKZWZrV0d6QmNZUTVjRnVaTm14OFVReGlBUTJqcHE3aGJRbEdPb0NuaW5KdV9McnlodVpBTjNnV0dQTERxZjFYX0QtQ0FMa2I5WE9tVUpTNnFydlZuM3hJTW5sYUlwdHpkRDd6eW40cTBHYXUxZmZEUlQyVkZTZ0dHQTFWdWtyb1JVMUhVMWdUSG1SUUU5VEVhZ3cwTFJtVjM0SUZXVU0?oc=5",
+      "published": "Wed, 12 Aug 2026 03:48:00 GMT",
+      "published_iso": "2026-08-12T03:48:00+00:00",
+      "locality": "Ida County",
+      "state": "IA",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Moffat County commissioners discuss data center moratorium, address transparency questions",
+      "outlet": "CraigDailyPress.com",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOWWFDd1FYeWVkTXM4WGRIUkVHZmRGWnN4LW9XMDdjYUVOcHBuTHlGbDRrbjljOW5fVVlpaGVnSVJ1X3R5TXJKVGw4b0hfd2Z4UTNZNVVTMUFMR0VYaHJxY0g4NTIwUmY0d3FQZThwazlsUXZkaEtnYWRrT0FaNGNkVmxvVFhtb1NreTM0VG8zaC1fVnFpejlJUDBwMkpIbzFGM1c2NmUza19ZTnZwdllVdTZaczJPZlRsWS0ySkwzTURUSHlsdUE?oc=5",
+      "published": "Wed, 12 Aug 2026 01:01:59 GMT",
+      "published_iso": "2026-08-12T01:01:59+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Data centers are coming, is Congress ready?",
+      "outlet": "Jefferson City News Tribune",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOTUlzUzIyMlN2bGMzQnR5STRrMTBIekNMUW5RUnM3aUwwdkgxQVhKTGZBM3EydTN4bFFsSkpHNW9WRWVQMW9yNzBmY3N1eGVyNjJaZ29vRXdzQ3pqZUp2dEpWM2dkWVdQT3JhaWFleWNQWVl2aFZCZThMdmdVRm1LNTltalFpZGFzUl9WSzRkaUQ?oc=5",
+      "published": "Sun, 16 Aug 2026 09:00:00 GMT",
+      "published_iso": "2026-08-16T09:00:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Collin County town mobilizes early to stop potential data center",
+      "outlet": "Dallas News",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOM1FTdmhZYkdjcmNIZFB5bDJET0JuR0RQSk5PYkNTMm5HVHNCMUxPZWtucXpKM3JPenUyWlFNWlhBUEU0cUFudXV2UktNcERPeTNkbWVfNEJjM2xFamIzVXJkT0ZMWFNjRGVuUkFfcXFaT1lfaHI1UVNqZTUydXBBdVRzc2pOYVEzQnh1aGNn?oc=5",
+      "published": "Fri, 14 Aug 2026 20:37:28 GMT",
+      "published_iso": "2026-08-14T20:37:28+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Amazon is building a new AI data center in Texas that could become the country's largest source of carbon emissions",
+      "outlet": "siliconangle.com",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQSUsycmJrRXlnS0JteWFTWXhHUGZHV1hYRXl4WUwxQ2xMQ0t4OHV6MFk0cno2SlcyNjJoaUYxbjBwbXI3VUpMNkpMdEFBZ2dXc3IyRlg4RjRod3RaQUNQNE1KNnlqZXFMZ0Q3Qlg2ZjNWR1hENUVVR0RtOU9TNmhKYUNUQ2hwTldTWnNpV3RVZ2sxUGluTUpMcHV0Y1Y1SzNFb3V1Ri1lanhHSGZMdkZDTkQ3X0xvcUpqd19lVlVjUWVYbWs?oc=5",
+      "published": "Sun, 09 Aug 2026 23:43:43 GMT",
+      "published_iso": "2026-08-09T23:43:43+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-09",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Data centers in Texas prove a key topic months away from midterm elections",
+      "outlet": "CBS News",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPUE8xenJPbTlqT2hHQVAzYVViUDN5OURWMVc0a0twUlpWMUNTNTJSUmZjNTdRX3luVmUzUmVGLVJ0M0xPNFBuemQtRG9yVVNMLTJKNUZMSmdlWl9rTy1PV1hiTlZGM1ktTmxNaFh5b1dHZHp6UEVhNmFTNEFMdFV6czExQXlsc3JTZWJlb0xGMVBtbEZSa0R3?oc=5",
+      "published": "Sun, 16 Aug 2026 11:00:14 GMT",
+      "published_iso": "2026-08-16T11:00:14+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-16",
       "last_seen": "2026-08-16"
     }
   ]
