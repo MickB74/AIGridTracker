@@ -5582,7 +5582,7 @@ def build_puc():
 </section>
 
 <section>
-  <h2>All {n} commissions</h2>
+  <h2>All 50 states &amp; D.C.</h2>
   <input type="text" id="puc-search" placeholder="Search by state name..."
          autocomplete="off"
          style="width:100%;max-width:400px;background:var(--card);color:var(--ink);
@@ -5595,7 +5595,7 @@ def build_puc():
     {rows}
   </table>
   </div>
-  <p class="muted" id="puc-count">{n} commissions</p>
+  <p class="muted" id="puc-count">50 states &amp; D.C.</p>
   <p class="muted">URLs are official state PUC pages. Complaint links open the
   consumer-assistance or formal-complaint portal &mdash; procedures vary by
   state. Nebraska (public power state) has a Power Review Board with no
@@ -5626,7 +5626,7 @@ def build_puc():
       r.style.display = show ? '' : 'none';
       if (show) n++;
     }});
-    ct.textContent = n + ' commission' + (n === 1 ? '' : 's');
+    ct.textContent = s ? (n + ' match' + (n === 1 ? '' : 'es')) : '50 states & D.C.';
   }});
 }})();
 </script>
@@ -9027,8 +9027,34 @@ def build_cba_clauses():
 <div class="note warn"><p><strong>Not legal advice.</strong> These are
 starting points drafted from real precedents; a licensed attorney in your
 state should tailor them before they go in front of a commission.</p></div>
+<input type="text" id="cba-search" placeholder="Filter clauses — e.g. water, noise, bond..."
+       autocomplete="off"
+       style="width:100%;max-width:440px;background:var(--card);color:var(--ink);
+       border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+       font-size:15px;margin-bottom:14px">
+<p class="muted" id="cba-count"></p>
 <details class="more" open><summary>On this page</summary><ol>{toc}</ol></details>
-{"".join(cards)}
+<div id="cba-sections">{"".join(cards)}</div>
+<p class="muted" id="cba-noresult" style="display:none;margin:24px 0">No clauses match your search.</p>
+<script>
+(function() {{
+  var q = document.getElementById('cba-search');
+  var secs = Array.from(document.querySelectorAll('#cba-sections > section'));
+  var ct = document.getElementById('cba-count');
+  var nr = document.getElementById('cba-noresult');
+  q.addEventListener('input', function() {{
+    var s = q.value.toLowerCase();
+    var n = 0;
+    secs.forEach(function(sec) {{
+      var show = !s || sec.textContent.toLowerCase().indexOf(s) >= 0;
+      sec.style.display = show ? '' : 'none';
+      if (show) n++;
+    }});
+    ct.textContent = s ? (n + ' clause' + (n === 1 ? '' : 's') + ' match' + (n === 1 ? 'es' : '')) : '';
+    nr.style.display = n ? 'none' : '';
+  }});
+}})();
+</script>
 """
     return page(
         "Model CBA clauses — AI GridWatch",
@@ -9390,8 +9416,15 @@ def build_officials():
   you need — Senate, House, governor, state legislature, county government —
   in one place.</p>
 </header>
+<input type="text" id="off-search" placeholder="Search by state name..."
+       autocomplete="off"
+       style="width:100%;max-width:400px;background:var(--card);color:var(--ink);
+       border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+       font-size:15px;margin-bottom:14px">
+<p class="muted" id="off-count" style="margin-bottom:8px">50 states &amp; D.C.</p>
 <details class="more" open><summary>Jump to your state</summary>{toc}</details>
-{"".join(cards)}
+<div id="off-sections">{"".join(cards)}</div>
+<p class="muted" id="off-noresult" style="display:none;margin:24px 0">No states match your search.</p>
 <section>
   <p class="muted">Sources: senate.gov, house.gov, OpenStates, NACo, USA.gov,
   state municipal leagues. Each state's PUC has its own dedicated
@@ -9400,6 +9433,25 @@ def build_officials():
   <a href="start-here.html">GridWatch toolkit</a> (they change too often for a
   static page).</p>
 </section>
+<script>
+(function() {{
+  var q = document.getElementById('off-search');
+  var secs = Array.from(document.querySelectorAll('#off-sections > section'));
+  var ct = document.getElementById('off-count');
+  var nr = document.getElementById('off-noresult');
+  q.addEventListener('input', function() {{
+    var s = q.value.toLowerCase();
+    var n = 0;
+    secs.forEach(function(sec) {{
+      var show = !s || sec.querySelector('h2').textContent.toLowerCase().indexOf(s) >= 0;
+      sec.style.display = show ? '' : 'none';
+      if (show) n++;
+    }});
+    ct.textContent = s ? (n + ' match' + (n === 1 ? '' : 'es')) : '50 states & D.C.';
+    nr.style.display = n ? 'none' : '';
+  }});
+}})();
+</script>
 """
     return page(
         "Officials directory — AI GridWatch",
@@ -9639,8 +9691,14 @@ def build_hearing_questions():
   screenshot it, hand it to a neighbor. Every question is designed to force
   a specific answer onto the record.</p>
 </header>
+<input type="text" id="hq-search" placeholder="Filter questions — e.g. water, noise, tax..."
+       autocomplete="off"
+       style="width:100%;max-width:440px;background:var(--card);color:var(--ink);
+       border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+       font-size:15px;margin-bottom:14px">
+<p class="muted" id="hq-count"></p>
 
-<section>
+<section class="hq-sec">
   <h2>Power &amp; the grid</h2>
   <ol>
     <li>What is the <strong>peak MW draw</strong> at full build-out, not
@@ -9658,7 +9716,7 @@ def build_hearing_questions():
   </ol>
 </section>
 
-<section>
+<section class="hq-sec">
   <h2>Water</h2>
   <ol>
     <li>What is the <strong>daily and annual water withdrawal</strong> at
@@ -9675,7 +9733,7 @@ def build_hearing_questions():
   </ol>
 </section>
 
-<section>
+<section class="hq-sec">
   <h2>Money &amp; taxes</h2>
   <ol>
     <li>What is the <strong>total value of all tax abatements</strong>
@@ -9691,7 +9749,7 @@ def build_hearing_questions():
   </ol>
 </section>
 
-<section>
+<section class="hq-sec">
   <h2>Noise &amp; light</h2>
   <ol>
     <li>What is the <strong>maximum modeled noise level</strong> at the
@@ -9704,7 +9762,7 @@ def build_hearing_questions():
   </ol>
 </section>
 
-<section>
+<section class="hq-sec">
   <h2>Process &amp; transparency</h2>
   <ol>
     <li>Who is the <strong>ultimate parent</strong> of the LLC on the
@@ -9729,6 +9787,29 @@ def build_hearing_questions():
   to attach to any answer you're not satisfied with.</p></div>
   <p><a class="btn" href="start-here.html">Generate a personalized brief with your community's numbers &rarr;</a></p>
 </section>
+<script>
+(function() {{
+  var q = document.getElementById('hq-search');
+  var secs = Array.from(document.querySelectorAll('.hq-sec'));
+  var ct = document.getElementById('hq-count');
+  q.addEventListener('input', function() {{
+    var s = q.value.toLowerCase();
+    var shown = 0;
+    secs.forEach(function(sec) {{
+      var items = Array.from(sec.querySelectorAll('li'));
+      var any = false;
+      items.forEach(function(li) {{
+        var match = !s || li.textContent.toLowerCase().indexOf(s) >= 0;
+        li.style.opacity = match ? '1' : '0.25';
+        if (match) any = true;
+      }});
+      sec.style.display = any ? '' : 'none';
+      if (any) shown += items.filter(function(li) {{ return li.style.opacity !== '0.25'; }}).length;
+    }});
+    ct.textContent = s ? (shown + ' question' + (shown === 1 ? '' : 's') + ' match') : '';
+  }});
+}})();
+</script>
 """
     return page(
         "Questions to ask at your hearing — AI GridWatch",
@@ -11001,14 +11082,15 @@ def build_open_data():
         },
         {
             "title": "State profiles",
-            "desc": (f"All {n_states} states and D.C. — facility count, power "
-                     f"draw, residential rate, grid carbon intensity, and water "
-                     f"stress. The numbers a resident cites at a hearing."),
+            "desc": ("All 50 states and D.C. — facility count, power "
+                     "draw, residential rate, grid carbon intensity, and water "
+                     "stress. The numbers a resident cites at a hearing."),
             "page": "data-centers",
             "json": "data/states.json",
             "csv": "data/states.csv",
             "schema": STATE_DATA_SCHEMA,
             "count": n_states,
+            "count_label": "50 states & D.C.",
             "ds_name": "U.S. data center state profiles",
             "keywords": ["data center", "electricity", "grid carbon",
                          "water stress", "state profile"],
@@ -11073,7 +11155,10 @@ def build_open_data():
                 f'<table><tr><th>Column</th><th>Description</th></tr>'
                 f'{schema_rows}</table></details>')
 
-        count_note = f"{ds['count']:,} records · " if ds["count"] else ""
+        count_note = (ds.get("count_label") or
+                      (f"{ds['count']:,} records" if ds["count"] else ""))
+        if count_note:
+            count_note += " · "
         cite = _cite_snippet(ds["ds_name"], year)
 
         cards += f"""

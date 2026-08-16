@@ -429,6 +429,12 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <div class="note warn"><p><strong>Not legal advice.</strong> These are
 starting points drafted from real precedents; a licensed attorney in your
 state should tailor them before they go in front of a commission.</p></div>
+<input type="text" id="cba-search" placeholder="Filter clauses — e.g. water, noise, bond..."
+       autocomplete="off"
+       style="width:100%;max-width:440px;background:var(--card);color:var(--ink);
+       border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+       font-size:15px;margin-bottom:14px">
+<p class="muted" id="cba-count"></p>
 <details class="more" open><summary>On this page</summary><ol><li><a href="#landowner-bloc:-no-individual-deals-pact">Landowner bloc: no-individual-deals pact</a></li>
 <li><a href="#direct-financial-payments">Direct financial payments</a></li>
 <li><a href="#water-consumption-cap">Water consumption cap</a></li>
@@ -439,7 +445,7 @@ state should tailor them before they go in front of a commission.</p></div>
 <li><a href="#local-hiring-&-workforce">Local hiring &amp; workforce</a></li>
 <li><a href="#waste-heat-recovery">Waste heat recovery</a></li>
 <li><a href="#decommissioning-bond">Decommissioning bond</a></li></ol></details>
-
+<div id="cba-sections">
 <section id="landowner-bloc:-no-individual-deals-pact">
   <h2>🤝 Landowner bloc: no-individual-deals pact</h2>
   <div class="note info"><p><strong>Model clause:</strong></p>
@@ -519,7 +525,27 @@ state should tailor them before they go in front of a commission.</p></div>
   </div>
   <div class="prose"><p>Without a bond, a bankrupt or departing operator can leave the community with a derelict industrial site and no funds for cleanup. Typical bonds range from $5,000–$15,000 per MW.</p></div>
   <p class="muted">Typical range: <strong>$5,000–$15,000</strong> per MW (one-time bond)</p>
-</section>
+</section></div>
+<p class="muted" id="cba-noresult" style="display:none;margin:24px 0">No clauses match your search.</p>
+<script>
+(function() {
+  var q = document.getElementById('cba-search');
+  var secs = Array.from(document.querySelectorAll('#cba-sections > section'));
+  var ct = document.getElementById('cba-count');
+  var nr = document.getElementById('cba-noresult');
+  q.addEventListener('input', function() {
+    var s = q.value.toLowerCase();
+    var n = 0;
+    secs.forEach(function(sec) {
+      var show = !s || sec.textContent.toLowerCase().indexOf(s) >= 0;
+      sec.style.display = show ? '' : 'none';
+      if (show) n++;
+    });
+    ct.textContent = s ? (n + ' clause' + (n === 1 ? '' : 's') + ' match' + (n === 1 ? 'es' : '')) : '';
+    nr.style.display = n ? 'none' : '';
+  });
+})();
+</script>
 
 </main>
 <footer>

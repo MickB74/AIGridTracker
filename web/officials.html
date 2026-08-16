@@ -426,6 +426,12 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   you need — Senate, House, governor, state legislature, county government —
   in one place.</p>
 </header>
+<input type="text" id="off-search" placeholder="Search by state name..."
+       autocomplete="off"
+       style="width:100%;max-width:400px;background:var(--card);color:var(--ink);
+       border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+       font-size:15px;margin-bottom:14px">
+<p class="muted" id="off-count" style="margin-bottom:8px">50 states &amp; D.C.</p>
 <details class="more" open><summary>Jump to your state</summary><div class="statelist"><a href="#alabama">Alabama</a>
 <a href="#alaska">Alaska</a>
 <a href="#arizona">Arizona</a>
@@ -477,7 +483,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <a href="#west-virginia">West Virginia</a>
 <a href="#wisconsin">Wisconsin</a>
 <a href="#wyoming">Wyoming</a></div></details>
-
+<div id="off-sections">
 <section id="alabama">
   <h2>Alabama</h2>
   <p><strong>Federal</strong> —
@@ -1088,7 +1094,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <ul style="font-size:14px"><li><a href="http://www.wyomuni.org/" rel="nofollow">Wyoming Association of Municipalities</a> — <span class="muted">Statewide association of cities and towns — member directories usually list every municipality&#x27;s clerk and council contacts.</span></li>
 <li><a href="https://www.naco.org/counties" rel="nofollow">NACo — county government directory</a> — <span class="muted">Use this when the decision is a county one (boards of supervisors, county commissions, planning commissions) — which is where most data-center land-use votes actually happen.</span></li>
 <li><a href="https://www.usa.gov/local-governments" rel="nofollow">USA.gov — state &amp; local government directory</a> — <span class="muted">Federal front door to official state, county, and municipal sites. Slower, but authoritative.</span></li></ul>
-</section>
+</section></div>
+<p class="muted" id="off-noresult" style="display:none;margin:24px 0">No states match your search.</p>
 <section>
   <p class="muted">Sources: senate.gov, house.gov, OpenStates, NACo, USA.gov,
   state municipal leagues. Each state's PUC has its own dedicated
@@ -1097,6 +1104,25 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <a href="start-here.html">GridWatch toolkit</a> (they change too often for a
   static page).</p>
 </section>
+<script>
+(function() {
+  var q = document.getElementById('off-search');
+  var secs = Array.from(document.querySelectorAll('#off-sections > section'));
+  var ct = document.getElementById('off-count');
+  var nr = document.getElementById('off-noresult');
+  q.addEventListener('input', function() {
+    var s = q.value.toLowerCase();
+    var n = 0;
+    secs.forEach(function(sec) {
+      var show = !s || sec.querySelector('h2').textContent.toLowerCase().indexOf(s) >= 0;
+      sec.style.display = show ? '' : 'none';
+      if (show) n++;
+    });
+    ct.textContent = s ? (n + ' match' + (n === 1 ? '' : 'es')) : '50 states & D.C.';
+    nr.style.display = n ? 'none' : '';
+  });
+})();
+</script>
 
 </main>
 <footer>

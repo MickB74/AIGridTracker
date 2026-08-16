@@ -460,7 +460,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 </section>
 
 <section>
-  <h2>All 51 commissions</h2>
+  <h2>All 50 states &amp; D.C.</h2>
   <input type="text" id="puc-search" placeholder="Search by state name..."
          autocomplete="off"
          style="width:100%;max-width:400px;background:var(--card);color:var(--ink);
@@ -523,7 +523,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <tr><td>Wyoming</td><td>WY</td><td>Wyoming Public Service Commission</td><td><a href="https://psc.wyo.gov/">website</a></td><td><a href="https://psc.wyo.gov/home/file-a-complaint">file complaint</a></td></tr>
   </table>
   </div>
-  <p class="muted" id="puc-count">51 commissions</p>
+  <p class="muted" id="puc-count">50 states &amp; D.C.</p>
   <p class="muted">URLs are official state PUC pages. Complaint links open the
   consumer-assistance or formal-complaint portal &mdash; procedures vary by
   state. Nebraska (public power state) has a Power Review Board with no
@@ -554,7 +554,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
       r.style.display = show ? '' : 'none';
       if (show) n++;
     });
-    ct.textContent = n + ' commission' + (n === 1 ? '' : 's');
+    ct.textContent = s ? (n + ' match' + (n === 1 ? '' : 'es')) : '50 states & D.C.';
   });
 })();
 </script>

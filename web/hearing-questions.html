@@ -425,8 +425,14 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   screenshot it, hand it to a neighbor. Every question is designed to force
   a specific answer onto the record.</p>
 </header>
+<input type="text" id="hq-search" placeholder="Filter questions — e.g. water, noise, tax..."
+       autocomplete="off"
+       style="width:100%;max-width:440px;background:var(--card);color:var(--ink);
+       border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+       font-size:15px;margin-bottom:14px">
+<p class="muted" id="hq-count"></p>
 
-<section>
+<section class="hq-sec">
   <h2>Power &amp; the grid</h2>
   <ol>
     <li>What is the <strong>peak MW draw</strong> at full build-out, not
@@ -444,7 +450,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   </ol>
 </section>
 
-<section>
+<section class="hq-sec">
   <h2>Water</h2>
   <ol>
     <li>What is the <strong>daily and annual water withdrawal</strong> at
@@ -461,7 +467,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   </ol>
 </section>
 
-<section>
+<section class="hq-sec">
   <h2>Money &amp; taxes</h2>
   <ol>
     <li>What is the <strong>total value of all tax abatements</strong>
@@ -477,7 +483,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   </ol>
 </section>
 
-<section>
+<section class="hq-sec">
   <h2>Noise &amp; light</h2>
   <ol>
     <li>What is the <strong>maximum modeled noise level</strong> at the
@@ -490,7 +496,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   </ol>
 </section>
 
-<section>
+<section class="hq-sec">
   <h2>Process &amp; transparency</h2>
   <ol>
     <li>Who is the <strong>ultimate parent</strong> of the LLC on the
@@ -515,6 +521,29 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   to attach to any answer you're not satisfied with.</p></div>
   <p><a class="btn" href="start-here.html">Generate a personalized brief with your community's numbers &rarr;</a></p>
 </section>
+<script>
+(function() {
+  var q = document.getElementById('hq-search');
+  var secs = Array.from(document.querySelectorAll('.hq-sec'));
+  var ct = document.getElementById('hq-count');
+  q.addEventListener('input', function() {
+    var s = q.value.toLowerCase();
+    var shown = 0;
+    secs.forEach(function(sec) {
+      var items = Array.from(sec.querySelectorAll('li'));
+      var any = false;
+      items.forEach(function(li) {
+        var match = !s || li.textContent.toLowerCase().indexOf(s) >= 0;
+        li.style.opacity = match ? '1' : '0.25';
+        if (match) any = true;
+      });
+      sec.style.display = any ? '' : 'none';
+      if (any) shown += items.filter(function(li) { return li.style.opacity !== '0.25'; }).length;
+    });
+    ct.textContent = s ? (shown + ' question' + (shown === 1 ? '' : 's') + ' match') : '';
+  });
+})();
+</script>
 
 </main>
 <footer>
