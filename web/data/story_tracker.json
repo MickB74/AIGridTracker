@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 1775,
+  "count": 1783,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -8421,7 +8421,7 @@
       "locality": "Abilene",
       "state": "TX",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "AI data center developers begin suing local jurisdictions behind bans and moratoriums — claims range from officials exceeding authority to violations of due process and equal protection laws",
@@ -10346,7 +10346,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-14"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "Virginia data center surge pushing Dominion into costlier energy markets - Reuters",
@@ -16902,7 +16902,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-14"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "Georgia Electricity Rates (August 2026)",
@@ -18673,7 +18673,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-15"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "'You're letting inept politicians off the hook': WA Policy Center expert says data centers aren't driving up energy costs",
@@ -19531,6 +19531,94 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Doña Ana County residents criticize local, state officials for advancing Project Jupiter",
+      "outlet": "Source New Mexico",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNa2ZldW5zLTJCUFpST1lyOXpmeWM0RDllNml0N3pEZEdBRjFqclZzaUZnTFJHQW1oc2NCTnJGb1hYNXA5TVVENEFOX0lTd0lJd1N4a0xMVzAtNkd1WURkRTFJV1NUVHZCMWRPaTRZb3IxcHVNLXZtT0xXZy0yWFhqTlRMYmpWTXNGekNzLVlzZDBaZzY1cVVvY09CUk1mck1hMHI2MFhuUzhvbHUwbXlLdkF1akFiaWpnRGZ1bQ?oc=5",
+      "published": "Wed, 12 Aug 2026 21:54:11 GMT",
+      "published_iso": "2026-08-12T21:54:11+00:00",
+      "locality": "Doña Ana County",
+      "state": "NM",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "The data center industry’s PR blitz is backfiring",
+      "outlet": "Alabama Reflector",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPbzVzUllLTndleXZsMFd3NzZPYnFZVFpBUTNrMzlCM3JCQmJoeU82YUJUY0twMUxZbko0dDBNVFlUYkNnYWxsRlQ5MENpYzYzclB0T2FTaDFsYUp2bHAyYW5YbUVILUZJXzNybGd0RGp0cnVoeVlIN1Rtem43MWNrTXJwSXFTS2tDVjVIVkV1cGxrV2s?oc=5",
+      "published": "Sat, 15 Aug 2026 15:59:47 GMT",
+      "published_iso": "2026-08-15T15:59:47+00:00",
+      "locality": null,
+      "state": "AL",
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Marietta City Council approves data center off Delk Road",
+      "outlet": "East Cobb News",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNZzdKbUZkaDFJeGV3ZDVjUTYwRGhfNThmT2owYVpLSTNvWWtkclR0QkhncmFVb2NCcFFUY2RVSkhSMVQzY0xyT2dxTDFfc3FvWHlndlRqd0dicExZWEpjYlBpV3RidFlSUlN6UmhmUnloTC0zcjA3WU5BTmVPbFVEZ3lERWo5SUJ4Vnc?oc=5",
+      "published": "Thu, 13 Aug 2026 20:59:31 GMT",
+      "published_iso": "2026-08-13T20:59:31+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Why is Texas Gov. Greg Abbott pausing permits to build new data centers?",
+      "outlet": "NPR",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQekQ3OFN5YTZPSmVWUDRFQWNGeXExSmRxcmFQZURXeHg5YWlKNlNZV21fdXVRQjhtNUFRa0hMTjBKUExzRHdSbnI3S3hLUV9zSGJMcTJHMlhmYUdtOW0zVUhWTzNuMmxla0pxMUxNQ1RoWmgwRDhJc09nRFoxZ2EzbHRtQ050eUkxVzJjTE1ObXdrWkk1QTdtREdCdThndmltSlVveFNDWC1Ca2s1NUJ6VzRMTnB6QQ?oc=5",
+      "published": "Mon, 10 Aug 2026 21:12:39 GMT",
+      "published_iso": "2026-08-10T21:12:39+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Texas counties push for say in where data centers can be built",
+      "outlet": "KXII",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOUp5OGxadk1oN1M0Mm8zS3ZPeVkzcm90Z0JmTzF0bnRhdHBOSFBpVnFxcU0wRGxldDV2ZHhkYjUzN2Z4cHByNzhneWJoMGY3bkhUd3RpZjZtXzhOTjE4U3FXZm8zOVM2VkQ1YU5vMWJ5THh5QjdlSVJSOV9zaVFjT0FqQWdteWwxaTV0UDhUR1FkNUkzcldxaGRB?oc=5",
+      "published": "Tue, 11 Aug 2026 03:54:00 GMT",
+      "published_iso": "2026-08-11T03:54:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "CyrusOne wants to earn Texans’ trust amid data center boom",
+      "outlet": "San Antonio Express-News",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNzM4bFc2UlBad1drVFlLUUZTbGotSVNPSXpmbERLY3VLOEtMaXg1ZGczbU9EQUdUZjB2VG9TWXEzUVoxamRiXzBGOU14VEx0TDk0bFlQbllpaHNoVkI2QXVUYzBONTVGTjlWRm9oSjJ4V0JmNmFRcjJ0ZlI3bFE5YzM5QlNOSHUzYzlGOTlkcHlrc0hyNWhxanFxenBoY2Y0bjJTRnpCUXhrRV9IS1M0?oc=5",
+      "published": "Sun, 16 Aug 2026 13:05:23 GMT",
+      "published_iso": "2026-08-16T13:05:23+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Amid data center controversy, lawmakers in Texas react to Governor's pause",
+      "outlet": "CBS News",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZGhkdHJDX0VjTDd3WjhBblYxUHVrMUtSYW9lalpiekJkbDZzUmE4V2VhNnVOZV91TXI2c2dxM0o0WGNOUTIwODhYdjQ2ajl5bF9FME5Nd0tjcHZSTmZibF9EOVpDZlJDaUQtWDk3RDR2YXAyU0ljT3FtbzBEcFNVVTY4S1pkTzFGZWJ1V0doZVcwNlUyWlB0VEJ6OWhGd2lYYXFTQUVFYUVUaEpRYlE?oc=5",
+      "published": "Sun, 16 Aug 2026 12:30:00 GMT",
+      "published_iso": "2026-08-16T12:30:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Rowan agrees to new data center audits in Texas",
+      "outlet": "KCENTV.com",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQT3JKZ2d0VVZLejlfOXBJd0F6WFFRcFNsUXpqZ0RycFM5T3h3dktHZGNfZEtiYXNCTGVCS1pvSVVXWVdMckd6eHplVHVnV1E0WjZlcmpkeE5tOFVqd01sUVNQQjFFak5QaGQyOVpfQUNxeEFUSS1xRnlXU3VCUnFCS1RydTlNRUtuUXFrVEdtUVFvajB6WW45QTJraG5wWUZPTlIyYmhiX3B1and1Vms2Sjd1ZElOMGlZS3Q5eUpiQVJvLWxFNEJz?oc=5",
+      "published": "Tue, 11 Aug 2026 23:10:00 GMT",
+      "published_iso": "2026-08-11T23:10:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-11",
       "last_seen": "2026-08-16"
     }
   ]
