@@ -10059,7 +10059,8 @@ def build_opposition():
         examples_html = ""
         if hits:
             items = "\n".join(
-                f'<li>{esc(h["title"][:120])} '
+                f'<li><a href="{esc(h.get("link",""))}" target="_blank" '
+                f'rel="noopener">{esc(h["title"][:120])}</a> '
                 f'<span class="muted">({esc(h.get("outlet",""))})</span></li>'
                 for h in hits)
             examples_html = (
@@ -10111,7 +10112,8 @@ def build_opposition():
                 break
         if hits:
             items = "\n".join(
-                f'<li>{esc(h["title"][:120])} '
+                f'<li><a href="{esc(h.get("link",""))}" target="_blank" '
+                f'rel="noopener">{esc(h["title"][:120])}</a> '
                 f'<span class="muted">({esc(h.get("outlet",""))})</span></li>'
                 for h in hits[:5])
             wild_html += (
