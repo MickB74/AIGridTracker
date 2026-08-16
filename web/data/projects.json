@@ -7084,7 +7084,56 @@
       "source": "https://drive.google.com/file/d/1lhSF8TBA7fNWsN4Onj-nfL7X_-BN573r/view?usp=sharing",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-01-25",
+          "kind": "announcement",
+          "summary": "Amazon Web Services announced plans to invest $10 billion to build multiple data center complexes in two Madison County industrial parks, creating at least 1,000 high-paying jobs, with a 10-year, 100% corporate income tax exemption incentive package.",
+          "source": "https://mississippi.org/news/amazon-web-services-to-invest-record-shattering-10-billion/"
+        },
+        {
+          "date": "2024-05-20",
+          "kind": "construction",
+          "summary": "AWS held a ceremonial groundbreaking at the Madison County Mega Site spec building, attended by Governor Tate Reeves, Senators Roger Wicker and Cindy Hyde-Smith, and Representatives Michael Guest and Bennie Thompson.",
+          "source": "https://governorreeves.ms.gov/amazon-web-services-breaks-ground-on-largest-economic-development-project-in-mississippi-history/"
+        },
+        {
+          "date": "2025-10-29",
+          "kind": "operational",
+          "summary": "AWS's Project Rainier — the AI training cluster powering Anthropic's Claude, spread across Pennsylvania, Indiana, and Mississippi — was reported operational, with its Mississippi campus near Canton in Madison County cited at more than 350 MW of IT capacity and set to ramp past 1 GW.",
+          "source": "https://www.semafor.com/article/10/29/2025/aws-massive-multi-state-ai-data-center-is-powering-anthropics-claude"
+        },
+        {
+          "date": "2026-02-19",
+          "kind": "coverage",
+          "summary": "Residents of the Idlebriar subdivision in Canton, next to the Amazon data center construction site, reported two years of construction dust, noise and traffic, with one resident's teenage daughter having multiple ER visits for asthma flare-ups the prior year, while the Madison County Economic Development Authority said it lacks funds to buy out the subdivision.",
+          "source": "https://arktimes.com/arkansas-blog/2026/02/19/a-subdivision-struggles-with-the-massive-data-center-moving-in-next-door"
+        },
+        {
+          "date": "2026-04-09",
+          "kind": "announcement",
+          "summary": "Governor Tate Reeves and Amazon announced an additional $11 billion expansion of Madison County data center operations (700 new jobs) plus a $1 billion facility in Clinton/Hinds County (100 jobs), bringing Amazon total Mississippi investment commitment to $25 billion and over 2,000 jobs.",
+          "source": "https://magnoliatribune.com/2026/04/09/amazon-investing-another-12-billion-in-central-mississippi/"
+        },
+        {
+          "date": "2026-04-10",
+          "kind": "environmental",
+          "summary": "Coverage noted Amazon's environmental commitments: Canton will use recycled water for cooling, the Ridgeland campus will draw groundwater only 9% of the time, and the Clinton facility will operate without water, alongside plans for over 800 diesel generators across the Madison County campuses.",
+          "source": "https://www.mississippifreepress.org/amazon-is-expanding-data-centers-in-central-mississippi-governor-announces/"
+        },
+        {
+          "date": "2026-04-22",
+          "kind": "coverage",
+          "summary": "Canton residents described construction dust, noise and pollution fears; Madison County constable Johnny Sims said construction dust had worsened his teenage daughter's asthma, and Amazon stated it is committed to being a responsible community partner.",
+          "source": "https://www.mississippifreepress.org/amazons-canton-data-center-promises-prosperity-for-neighbors-its-bringing-dust-noise-and-pollution-fears/"
+        },
+        {
+          "date": "2026-06-09",
+          "kind": "coverage",
+          "summary": "Of Amazon four announced Mississippi data center facilities, the Canton campus in Madison County was reported as the one currently operating, with more than 700 diesel generators planned across the two Madison County campuses and the Canton facility set to transition to 100% recycled wastewater for cooling by 2027.",
+          "source": "https://mississippitoday.org/2026/06/09/amazon-data-centers-mississippi/"
+        }
+      ]
     },
     {
       "id": "microsoft-goodyear",
@@ -7878,7 +7927,50 @@
       "source": "https://drive.google.com/file/d/1dQ5Pxl7rQAHLvHoTYrpOX32WAolo46d7/view?usp=sharing",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-01-25",
+          "kind": "incentive",
+          "summary": "Mississippi lawmakers passed three bills (SB 2001 'Project Atlas', HB 1, HB 2) during a special session, approving incentives for AWS's $10 billion investment to build two data center complexes in Madison County, including a site in Ridgeland near Tougaloo College.",
+          "source": "https://magnoliatribune.com/2024/01/25/mississippi-lawmakers-back-10-billion-amazon-project/"
+        },
+        {
+          "date": "2024-05-20",
+          "kind": "construction",
+          "summary": "AWS held a ceremonial groundbreaking in Madison County for the $10 billion data center project, attended by Governor Tate Reeves and U.S. Senators Roger Wicker and Cindy Hyde-Smith.",
+          "source": "https://magnoliatribune.com/2024/05/20/amazon-web-services-holds-ceremonial-groundbreaking-in-madison-county/"
+        },
+        {
+          "date": "2024-09-18",
+          "kind": "construction",
+          "summary": "Construction was underway on both Madison County sites (which began fall 2023), with three general contractors building roughly 16 buildings at the Canton site and building pads underway at the 786-acre Ridgeland campus, targeting first building online by January 2025 and full campus completion by mid-2027.",
+          "source": "https://www.constructionequipmentguide.com/several-top-regional-contractors-are-building-10b-twin-aws-data-centers-in-mississippi/65887"
+        },
+        {
+          "date": "2026-04-01",
+          "kind": "rezoning",
+          "summary": "The Ridgeland mayor and Board of Aldermen approved amendments to the city's zoning ordinance in April 2026 to better govern data center facilities, a move made in response to AWS's presence in the city.",
+          "source": "https://www.wlbt.com/2026/06/02/another-city-consider-zoning-ordinance-changes-tackle-data-centers/"
+        },
+        {
+          "date": "2026-04-09",
+          "kind": "announcement",
+          "summary": "At a Ridgeland press conference, Amazon and Governor Tate Reeves announced a further $13 billion expansion of data centers in Madison County and Clinton, bringing Amazon cumulative Mississippi investment to $25 billion and projecting 2,000 total jobs.",
+          "source": "https://www.mississippifreepress.org/amazon-is-expanding-data-centers-in-central-mississippi-governor-announces/"
+        },
+        {
+          "date": "2026-04-09",
+          "kind": "environmental",
+          "summary": "As part of the expansion announcement, Amazon said the Canton facility would transition to 100% recycled wastewater cooling by 2027 and cited a $300 million grid-improvement partnership with Entergy Mississippi.",
+          "source": "https://www.aboutamazon.com/news/company-news/amazon-25-billion-mississippi-data-centers"
+        },
+        {
+          "date": "2026-05-07",
+          "kind": "utility",
+          "summary": "AWS is investing about $37 million directly in Ridgeland water and sewer system improvements (new wells, a one-million-gallon storage tank, sewer expansion) tied to its $10.5 billion Ridgeland-area construction, plus an additional $26.4 million in state-loan-funded public projects to be repaid from AWS property tax revenue.",
+          "source": "https://www.wlbt.com/2026/05/07/63m-water-sewer-upgrades-tap-ridgeland-thanks-aws-investment/"
+        }
+      ]
     },
     {
       "id": "meta-huntsville",
@@ -10106,7 +10198,32 @@
       "source": "https://corescientific.com/high-density-data-centers/dalton-ga-dnn1-2/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-07-07",
+          "kind": "financing",
+          "summary": "CoreWeave announced a definitive agreement to acquire Core Scientific in an all-stock transaction (implied equity value ~$9.0 billion), which would have given CoreWeave ownership of Core Scientific's ~1.3 GW gross power footprint, including its Georgia facilities.",
+          "source": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-to-Acquire-Core-Scientific/default.aspx"
+        },
+        {
+          "date": "2025-10-30",
+          "kind": "coverage",
+          "summary": "Core Scientific shareholders voted against the proposed $9 billion CoreWeave merger (20.8M for, 203.5M against). The merger agreement was terminated with immediate effect; Core Scientific continues operating independently.",
+          "source": "https://www.cnbc.com/2025/10/30/core-scientific-shareholders-reject-9-billion-coreweave-offer-deal-terminated.html"
+        },
+        {
+          "date": "2026-05-06",
+          "kind": "operational",
+          "summary": "In its Q1 FY2026 earnings materials, Core Scientific stated that its Dalton, GA site has delivered Phase 1 (30 MW) with full completion targeted for early 2027, and that Dalton is one of five sites under its anchor hosting agreement with CoreWeave, with approximately 175 MW of contracted capacity.",
+          "source": "https://www.investing.com/news/company-news/core-scientific-q1-fy2026-slides-10b-ai-contracts-3-gw-pipeline-93CH-4665996"
+        },
+        {
+          "date": "2026-05-25",
+          "kind": "permit",
+          "summary": "Georgia EPD opened a public comment period on Application No. 29946, an air permit for Core Scientific's Dalton 01 facility at 2205 Industrial South Road covering 8 standby diesel generators with a combined maximum output of 21.6 MW.",
+          "source": "https://daltoncitizen.com/2026/05/30/two-air-permits-in-process-for-local-core-scientific-data-center-sites/"
+        }
+      ]
     },
     {
       "id": "google-pryor-north",
@@ -10537,7 +10654,44 @@
       "source": "https://cdn.misoenergy.org/NEW%20LOAD%20ANNOUNCEMENTS%20IN%20MISO%20REGIONS%2012062024684954.pdf",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-03-21",
+          "kind": "announcement",
+          "summary": "Cedar Rapids officials publicly confirmed that Google was the company behind the previously unnamed, proposed ~$576 million, 1,396-acre data center project on the city's southwest side.",
+          "source": "https://www.kcrg.com/2024/03/21/google-data-center-coming-cedar-rapids/"
+        },
+        {
+          "date": "2025-01-28",
+          "kind": "vote",
+          "summary": "The Cedar Rapids City Council approved a development agreement/urban renewal ordinance for Google's data center in the Big Cedar Industrial Center, setting terms including a minimum $576 million investment, construction start within three years, and at least 31 new full-time jobs.",
+          "source": "https://www.datacenterfrontier.com/site-selection/article/55268088/cedar-rapids-iowa-gets-approval-for-two-major-data-center-investments-by-google-and-qts"
+        },
+        {
+          "date": "2025-05-30",
+          "kind": "announcement",
+          "summary": "Google held a celebration event in Cedar Rapids to officially confirm its data center project at Alliant Energy's Big Cedar Industrial Center and announced an additional $7 billion investment in Iowa over the next two years for cloud and AI infrastructure.",
+          "source": "https://www.kcrg.com/2025/05/30/google-holds-celebration-new-data-center-cedar-rapids/"
+        },
+        {
+          "date": "2025-05-30",
+          "kind": "financing",
+          "summary": "Google announced $7 billion in Iowa investment covering the new Cedar Rapids data center and expansion of its existing Council Bluffs facility, plus a workforce-development partnership with the electrical training ALLIANCE aimed at increasing Iowa's electrical workforce pipeline by 95%.",
+          "source": "https://blog.google/feed/new-7-billion-investment-iowa/"
+        },
+        {
+          "date": "2026-06-22",
+          "kind": "coverage",
+          "summary": "The Cedar Rapids City Council was set to vote on an indemnification agreement giving Google a temporary certificate of occupancy for the first data center building while impacts were evaluated — the concern centered on heat and steam plumes potentially interfering with landings at the nearby Eastern Iowa Airport.",
+          "source": "https://www.kcrg.com/2026/06/22/cedar-rapids-set-agreement-with-google-regarding-data-center-impacts/"
+        },
+        {
+          "date": "2026-07-23",
+          "kind": "coverage",
+          "summary": "Cedar Rapids Mayor Tiffany O'Donnell denied allegations that council members received kickbacks tied to the Google and QTS data center projects; reporting found the city manager and utilities business manager had signed NDAs with Google and QTS early in the projects' development.",
+          "source": "https://www.kcrg.com/2026/07/24/cedar-rapids-mayor-defends-data-center-projects-amid-kickback-claims-nda-questions/"
+        }
+      ]
     },
     {
       "id": "google-fort-wayne",
@@ -11109,7 +11263,56 @@
       "source": "https://projectjupitertogether.com/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-02-25",
+          "kind": "announcement",
+          "summary": "Governor Michelle Lujan Grisham announced a partnership with BorderPlex Digital Assets to build a $5 billion digital infrastructure campus in Santa Teresa, expected to create 1,000 jobs — the first announcement of the site that would become Project Jupiter.",
+          "source": "https://www.governor.state.nm.us/2025/02/25/governor-announces-partnership-with-borderplex-digital-digital-infrastructure-campus-represents-5-billion-investment-in-santa-teresa-expected-to-create-1000-jobs/"
+        },
+        {
+          "date": "2025-09-19",
+          "kind": "vote",
+          "summary": "Dona Ana County Board of County Commissioners voted 4-1 to approve an ordinance authorizing issuance of up to $165 billion in Industrial Revenue Bonds for Project Jupiter, including an initial $50 billion investment within five years, a 30-year property-tax abatement offset by PILOT payments, $50 million for water/wastewater infrastructure, and a $6.9 million community investment fund.",
+          "source": "https://www.donaana.gov/news_detail_T7_R35.php"
+        },
+        {
+          "date": "2025-09-23",
+          "kind": "announcement",
+          "summary": "TechCrunch reported OpenAI is building five new Stargate data centers with Oracle and SoftBank, bringing Stargate's planned capacity to 7 gigawatts; Dona Ana County, New Mexico was named as one of three new sites being developed with Oracle.",
+          "source": "https://techcrunch.com/2025/09/23/openai-is-building-five-new-stargate-data-centers-with-oracle-and-softbank/"
+        },
+        {
+          "date": "2025-09-25",
+          "kind": "coverage",
+          "summary": "El Paso Matters reported OpenAI and Oracle had confirmed their partnership on the $165 billion Project Jupiter data center in Santa Teresa as part of the Stargate initiative, with $50 billion planned over five years, 2,500 construction jobs, and 750 permanent jobs.",
+          "source": "https://elpasomatters.org/2025/09/25/stargate-open-ai-oracle-project-jupiter-data-center-dona-ana-new-mexico-el-paso-texas/"
+        },
+        {
+          "date": "2026-03-01",
+          "kind": "public-comment",
+          "summary": "Food and Water Watch reported that community members submitted over 7,000 comments to the New Mexico Environment Department regarding Project Jupiter's initial proposed gas plant (March 2026).",
+          "source": "https://www.foodandwaterwatch.org/2026/07/23/project-jupiter-data-center-new-mexico/"
+        },
+        {
+          "date": "2026-05-07",
+          "kind": "permit",
+          "summary": "The Bureau of Land Management used emergency permitting authority to fast-track a construction review of the Green Chile natural gas pipeline, shortening the federal environmental review from about a year to 14 days; the ~18-mile, $60 million pipeline would carry 400 million cubic feet of gas per day to serve Project Jupiter.",
+          "source": "https://sourcenm.com/2026/05/07/blm-fast-tracks-green-chile-pipeline-construction-review-for-new-mexico-data-center-project-jupiter/"
+        },
+        {
+          "date": "2026-07-01",
+          "kind": "hearing",
+          "summary": "The New Mexico Environment Department announced it would hold a public hearing on the air permit application for Project Jupiter's microgrid in response to community opposition (July 2026).",
+          "source": "https://www.foodandwaterwatch.org/2026/07/23/project-jupiter-data-center-new-mexico/"
+        },
+        {
+          "date": "2026-07-28",
+          "kind": "protest",
+          "summary": "A Dona Ana County Commission meeting on Project Jupiter escalated into a physical confrontation: Commission Chair Manny Sanchez capped public comment at 30 speakers despite roughly 60 signed up; a Security Concepts guard pushed a woman to the ground, and she and two others were arrested. The guard was referred for potential felony assault charges, which prosecutors later declined to file.",
+          "source": "https://technical.ly/civics/new-mexico-data-center-meeting-turns-physical/"
+        }
+      ]
     },
     {
       "id": "openai-stargate-shackelford",
@@ -11339,7 +11542,38 @@
       "source": "https://q.com/data-centers/eagle-mountain/",
       "as_of": "2026-08-14",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-10-29",
+          "kind": "construction",
+          "summary": "Eagle Mountain City announced QTS had broken ground on a new data center campus situated west of the existing Meta facility, calling it a significant economic development win.",
+          "source": "https://eaglemountain.gov/qts-begins-construction-on-new-datacenter-campus-in-eagle-mountain/"
+        },
+        {
+          "date": "2025-10-29",
+          "kind": "construction",
+          "summary": "Eagle Mountain City reported that construction on the QTS data center campus had resumed after a brief delay to ensure the necessary energy infrastructure and resources were in place, citing an expected 2,000-3,000 temporary construction jobs and 100-200 permanent positions.",
+          "source": "https://eaglemountain.gov/construction-restarts-on-qts-data-center-in-eagle-mountain/"
+        },
+        {
+          "date": "2026-04-17",
+          "kind": "construction",
+          "summary": "QTS and Layton Construction held a topping-out ceremony after placing the final structural beam on the first phase's third building, attended by about 2,000 construction workers.",
+          "source": "https://eaglemountain.gov/eagle-mountain-city-celebrates-major-milestone-with-qts-topping-out-ceremony/"
+        },
+        {
+          "date": "2026-04-20",
+          "kind": "coverage",
+          "summary": "A news report detailed the project: a 193-acre campus with an initial three buildings of 579,000-592,000 square feet each, backed by a $6 billion QTS investment, with a closed-loop cooling system needing only an initial water fill with no additional draw for cooling once operational.",
+          "source": "https://www.standard.net/news/2026/apr/20/eagle-mountain-193-acre-data-center-campus-is-set-to-be-done-this-year-with-big-water-promises/"
+        },
+        {
+          "date": "2026-04-21",
+          "kind": "coverage",
+          "summary": "KUTV reported that Utah House Bill 76, passed earlier in 2026, now requires large data centers to report water consumption, but the law applies only to facilities that become operational after July 2026 — potentially exempting already-approved projects.",
+          "source": "https://kutv.com/news/utah-water/questions-grow-over-water-use-at-massive-qts-data-center-in-eagle-mountain"
+        }
+      ]
     }
   ]
 }

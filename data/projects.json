@@ -6838,7 +6838,56 @@
       "note": "Part of Project Rainier. Chip types: Trainium2. Epoch AI estimates ~284 MW.",
       "source": "https://drive.google.com/file/d/1lhSF8TBA7fNWsN4Onj-nfL7X_-BN573r/view?usp=sharing",
       "as_of": "2026-08-14",
-      "events": []
+      "events": [
+        {
+          "date": "2024-01-25",
+          "kind": "announcement",
+          "summary": "Amazon Web Services announced plans to invest $10 billion to build multiple data center complexes in two Madison County industrial parks, creating at least 1,000 high-paying jobs, with a 10-year, 100% corporate income tax exemption incentive package.",
+          "source": "https://mississippi.org/news/amazon-web-services-to-invest-record-shattering-10-billion/"
+        },
+        {
+          "date": "2024-05-20",
+          "kind": "construction",
+          "summary": "AWS held a ceremonial groundbreaking at the Madison County Mega Site spec building, attended by Governor Tate Reeves, Senators Roger Wicker and Cindy Hyde-Smith, and Representatives Michael Guest and Bennie Thompson.",
+          "source": "https://governorreeves.ms.gov/amazon-web-services-breaks-ground-on-largest-economic-development-project-in-mississippi-history/"
+        },
+        {
+          "date": "2025-10-29",
+          "kind": "operational",
+          "summary": "AWS's Project Rainier \u2014 the AI training cluster powering Anthropic's Claude, spread across Pennsylvania, Indiana, and Mississippi \u2014 was reported operational, with its Mississippi campus near Canton in Madison County cited at more than 350 MW of IT capacity and set to ramp past 1 GW.",
+          "source": "https://www.semafor.com/article/10/29/2025/aws-massive-multi-state-ai-data-center-is-powering-anthropics-claude"
+        },
+        {
+          "date": "2026-02-19",
+          "kind": "coverage",
+          "summary": "Residents of the Idlebriar subdivision in Canton, next to the Amazon data center construction site, reported two years of construction dust, noise and traffic, with one resident's teenage daughter having multiple ER visits for asthma flare-ups the prior year, while the Madison County Economic Development Authority said it lacks funds to buy out the subdivision.",
+          "source": "https://arktimes.com/arkansas-blog/2026/02/19/a-subdivision-struggles-with-the-massive-data-center-moving-in-next-door"
+        },
+        {
+          "date": "2026-04-09",
+          "kind": "announcement",
+          "summary": "Governor Tate Reeves and Amazon announced an additional $11 billion expansion of Madison County data center operations (700 new jobs) plus a $1 billion facility in Clinton/Hinds County (100 jobs), bringing Amazon total Mississippi investment commitment to $25 billion and over 2,000 jobs.",
+          "source": "https://magnoliatribune.com/2026/04/09/amazon-investing-another-12-billion-in-central-mississippi/"
+        },
+        {
+          "date": "2026-04-10",
+          "kind": "environmental",
+          "summary": "Coverage noted Amazon's environmental commitments: Canton will use recycled water for cooling, the Ridgeland campus will draw groundwater only 9% of the time, and the Clinton facility will operate without water, alongside plans for over 800 diesel generators across the Madison County campuses.",
+          "source": "https://www.mississippifreepress.org/amazon-is-expanding-data-centers-in-central-mississippi-governor-announces/"
+        },
+        {
+          "date": "2026-04-22",
+          "kind": "coverage",
+          "summary": "Canton residents described construction dust, noise and pollution fears; Madison County constable Johnny Sims said construction dust had worsened his teenage daughter's asthma, and Amazon stated it is committed to being a responsible community partner.",
+          "source": "https://www.mississippifreepress.org/amazons-canton-data-center-promises-prosperity-for-neighbors-its-bringing-dust-noise-and-pollution-fears/"
+        },
+        {
+          "date": "2026-06-09",
+          "kind": "coverage",
+          "summary": "Of Amazon four announced Mississippi data center facilities, the Canton campus in Madison County was reported as the one currently operating, with more than 700 diesel generators planned across the two Madison County campuses and the Canton facility set to transition to 100% recycled wastewater for cooling by 2027.",
+          "source": "https://mississippitoday.org/2026/06/09/amazon-data-centers-mississippi/"
+        }
+      ]
     },
     {
       "id": "microsoft-goodyear",
@@ -6861,7 +6910,50 @@
       "note": "Chip types: H100,B200. Epoch AI estimates ~202 MW.",
       "source": "https://gis.maricopa.gov/aqd/recordsviewer/#",
       "as_of": "2026-08-14",
-      "events": []
+      "events": [
+        {
+          "date": "2018-08-01",
+          "kind": "financing",
+          "summary": "Microsoft purchased 279 acres in Goodyear from Carefree Partners Investments for $48 million, land later used for its data center campus south of I-10 and Phoenix Goodyear Airport.",
+          "source": "https://www.westvalleyview.com/news/microsoft-reveals-goodyear-plans-purchases-more-land/article_461ce5a6-6b8d-11e9-8d40-fbe26d862a33.html"
+        },
+        {
+          "date": "2018-12-01",
+          "kind": "rezoning",
+          "summary": "Goodyear City Council approved rezoning of Microsoft's parcel from final planned area development to I-1 (light industrial park) with a PAD overlay (December 2018).",
+          "source": "https://www.westvalleyview.com/news/microsoft-reveals-goodyear-plans-purchases-more-land/article_461ce5a6-6b8d-11e9-8d40-fbe26d862a33.html"
+        },
+        {
+          "date": "2019-03-01",
+          "kind": "permit",
+          "summary": "Goodyear City Council approved a site plan and an expedited self-certification construction process for Microsoft's project (March 2019).",
+          "source": "https://www.westvalleyview.com/news/microsoft-reveals-goodyear-plans-purchases-more-land/article_461ce5a6-6b8d-11e9-8d40-fbe26d862a33.html"
+        },
+        {
+          "date": "2019-05-02",
+          "kind": "announcement",
+          "summary": "Microsoft publicly revealed its Goodyear data center plans, having also acquired an additional 147 acres from DRI FR Goodyear LLC for $37 million at Citrus and Indian School roads.",
+          "source": "https://www.westvalleyview.com/news/microsoft-reveals-goodyear-plans-purchases-more-land/article_461ce5a6-6b8d-11e9-8d40-fbe26d862a33.html"
+        },
+        {
+          "date": "2021-06-15",
+          "kind": "operational",
+          "summary": "The first of Microsoft's three planned West Valley (Arizona) data centers, part of the West US 3 Azure region anchored by El Mirage and Goodyear campuses, went online.",
+          "source": "https://ktar.com/story/4499461/tech-giant-microsoft-flips-switch-to-on-at-new-west-valley-data-centers/"
+        },
+        {
+          "date": "2023-03-06",
+          "kind": "vote",
+          "summary": "Goodyear City Council unanimously approved an amended development agreement requiring Microsoft's fourth and fifth buildings to use air cooling instead of direct evaporative cooling, with Microsoft committing $36 million toward a $90 million expansion of the 157th Avenue Wastewater Treatment Plant, a $5 million financial-assurance deposit for a new sewer line, and $800,000 for a city coordinator position.",
+          "source": "https://www.aztechcouncil.org/microsoft-agrees-to-make-data-centers-air-cooled-amid-water-infrastructure-challenges-in-goodyear/"
+        },
+        {
+          "date": "2026-06-09",
+          "kind": "financing",
+          "summary": "Microsoft paid $130 million for an additional 100-acre development site in Goodyear, about 27 miles west of Phoenix.",
+          "source": "https://crenews.com/2026/06/09/microsoft-pays-130mln-for-100-acre-development-site-in-goodyear-ariz/"
+        }
+      ]
     },
     {
       "id": "meta-jeffersonville",
@@ -6884,7 +6976,44 @@
       "note": "Chip types: B300. Epoch AI estimates ~178 MW.",
       "source": "https://datacenters.atmeta.com/wp-content/uploads/2025/02/Meta_s-Jeffersonville-Data-Center.pdf",
       "as_of": "2026-08-14",
-      "events": []
+      "events": [
+        {
+          "date": "2024-01-25",
+          "kind": "announcement",
+          "summary": "Indiana Governor Eric Holcomb announced Meta will build an $800 million, roughly 700,000-square-foot data center campus at River Ridge Commerce Center in Jeffersonville, Meta's 18th U.S. and 22nd global data center.",
+          "source": "https://cityofjeff.net/2024/01/25/meta-announces-800m-jeffersonville-data-center/"
+        },
+        {
+          "date": "2024-01-25",
+          "kind": "coverage",
+          "summary": "Construction on the Jeffersonville facility was set to begin that month and be complete in 2026, supporting more than 1,250 construction jobs and 100 permanent tech jobs.",
+          "source": "https://www.wave3.com/2024/01/25/meta-build-800m-data-center-jeffersonville/"
+        },
+        {
+          "date": "2025-10-04",
+          "kind": "protest",
+          "summary": "Community groups including Hoosier Action and Clark County Moms held a meeting to organize opposition to the Meta data center, citing concerns the facility could use up to 5 million gallons of water daily and raise local utility costs.",
+          "source": "https://www.wave3.com/2025/10/05/jeffersonville-community-pushes-back-against-meta-data-center/"
+        },
+        {
+          "date": "2025-10-07",
+          "kind": "coverage",
+          "summary": "Meta said it had contributed nearly $500,000 to schools and nonprofits since its 2024 groundbreaking and announced a new Community Action Grants program for Clark County, amid community concerns over a Duke Energy 11% residential rate increase set to take effect in early 2026.",
+          "source": "https://www.wdrb.com/news/business/meta-addresses-community-concerns-over-southern-indiana-data-center/article_15435d3e-4f78-4258-a157-e201d2ab95f8.html"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "moratorium",
+          "summary": "The Jeffersonville City Council unanimously passed a one-year moratorium on new data center development (suspending normal rules to push it through three readings in one session), but the Meta facility already under construction at River Ridge is exempt due to federal/state control of the former Indiana Army Ammunition Plant site.",
+          "source": "https://www.wave3.com/2026/08/04/jeffersonville-passes-year-long-data-center-moratorium-amid-resident-outcry-major-utility-disclosures/"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "coverage",
+          "summary": "The city disclosed that Meta paid $4 million upfront in wastewater capacity fees and is projected to generate $300,000-$400,000 in monthly recurring sewer utility revenue once the facility is operational.",
+          "source": "https://www.wave3.com/2026/08/04/jeffersonville-passes-year-long-data-center-moratorium-amid-resident-outcry-major-utility-disclosures/"
+        }
+      ]
     },
     {
       "id": "google-the-dalles",
@@ -7195,7 +7324,38 @@
       "note": "Chip types: B300. Epoch AI estimates ~153 MW.",
       "source": "https://datacenters.atmeta.com/2024/05/hello-montgomery/",
       "as_of": "2026-08-14",
-      "events": []
+      "events": [
+        {
+          "date": "2024-05-02",
+          "kind": "announcement",
+          "summary": "Governor Kay Ivey announced Meta's plans to build an $800 million, 715,000-square-foot AI-optimized data center off Interstate 65 in Montgomery, expected to support 100 operational jobs and open by the end of 2026.",
+          "source": "https://governor.alabama.gov/newsroom/2024/05/governor-ivey-announces-meta-plans-to-build-800-million-next-generation-data-center-in-montgomery/"
+        },
+        {
+          "date": "2024-05-09",
+          "kind": "construction",
+          "summary": "Hensel Phelps announced it was awarded the general contractor role for Meta's $800+ million, 715,000-square-foot Montgomery data center, its second campus project with Meta.",
+          "source": "https://www.henselphelps.com/meta-awards-hensel-phelps-montgomery-data-center/"
+        },
+        {
+          "date": "2025-09-23",
+          "kind": "announcement",
+          "summary": "Meta announced it is expanding the Montgomery Data Center campus with two new buildings, bringing the campus to nearly 1.3 million square feet and increasing total investment to more than $1.5 billion.",
+          "source": "https://datacenters.atmeta.com/2025/09/montgomery-were-growing/"
+        },
+        {
+          "date": "2025-12-02",
+          "kind": "ruling",
+          "summary": "The Alabama Public Service Commission approved the Stockton I (80 MW) and Stockton II (180 MW) solar projects in Baldwin County, financed by Meta subsidiary Dotier LLC to supply renewable energy to Meta's Montgomery data center, on a timeline that met only a 20-day review window against the Commission's own 30-day submission rule.",
+          "source": "https://mynbc15.com/news/reality-check/nbc-15-reality-check-records-raise-questions-on-timing-of-stockton-solar-project-approval"
+        },
+        {
+          "date": "2026-02-09",
+          "kind": "protest",
+          "summary": "A town hall was scheduled in Baldwin County after residents said they received no advance public notice of the Stockton I/II solar projects approved to power Meta's Montgomery data center, and opposition groups formed online over land-use and environmental concerns.",
+          "source": "https://mynbc15.com/news/reality-check/nbc-15-reality-check-records-raise-questions-on-timing-of-stockton-solar-project-approval"
+        }
+      ]
     },
     {
       "id": "meta-kuna",
@@ -7488,7 +7648,50 @@
       "note": "Part of Project Rainier. Chip types: Trainium2. Epoch AI estimates ~228 MW.",
       "source": "https://drive.google.com/file/d/1dQ5Pxl7rQAHLvHoTYrpOX32WAolo46d7/view?usp=sharing",
       "as_of": "2026-08-14",
-      "events": []
+      "events": [
+        {
+          "date": "2024-01-25",
+          "kind": "incentive",
+          "summary": "Mississippi lawmakers passed three bills (SB 2001 'Project Atlas', HB 1, HB 2) during a special session, approving incentives for AWS's $10 billion investment to build two data center complexes in Madison County, including a site in Ridgeland near Tougaloo College.",
+          "source": "https://magnoliatribune.com/2024/01/25/mississippi-lawmakers-back-10-billion-amazon-project/"
+        },
+        {
+          "date": "2024-05-20",
+          "kind": "construction",
+          "summary": "AWS held a ceremonial groundbreaking in Madison County for the $10 billion data center project, attended by Governor Tate Reeves and U.S. Senators Roger Wicker and Cindy Hyde-Smith.",
+          "source": "https://magnoliatribune.com/2024/05/20/amazon-web-services-holds-ceremonial-groundbreaking-in-madison-county/"
+        },
+        {
+          "date": "2024-09-18",
+          "kind": "construction",
+          "summary": "Construction was underway on both Madison County sites (which began fall 2023), with three general contractors building roughly 16 buildings at the Canton site and building pads underway at the 786-acre Ridgeland campus, targeting first building online by January 2025 and full campus completion by mid-2027.",
+          "source": "https://www.constructionequipmentguide.com/several-top-regional-contractors-are-building-10b-twin-aws-data-centers-in-mississippi/65887"
+        },
+        {
+          "date": "2026-04-01",
+          "kind": "rezoning",
+          "summary": "The Ridgeland mayor and Board of Aldermen approved amendments to the city's zoning ordinance in April 2026 to better govern data center facilities, a move made in response to AWS's presence in the city.",
+          "source": "https://www.wlbt.com/2026/06/02/another-city-consider-zoning-ordinance-changes-tackle-data-centers/"
+        },
+        {
+          "date": "2026-04-09",
+          "kind": "announcement",
+          "summary": "At a Ridgeland press conference, Amazon and Governor Tate Reeves announced a further $13 billion expansion of data centers in Madison County and Clinton, bringing Amazon cumulative Mississippi investment to $25 billion and projecting 2,000 total jobs.",
+          "source": "https://www.mississippifreepress.org/amazon-is-expanding-data-centers-in-central-mississippi-governor-announces/"
+        },
+        {
+          "date": "2026-04-09",
+          "kind": "environmental",
+          "summary": "As part of the expansion announcement, Amazon said the Canton facility would transition to 100% recycled wastewater cooling by 2027 and cited a $300 million grid-improvement partnership with Entergy Mississippi.",
+          "source": "https://www.aboutamazon.com/news/company-news/amazon-25-billion-mississippi-data-centers"
+        },
+        {
+          "date": "2026-05-07",
+          "kind": "utility",
+          "summary": "AWS is investing about $37 million directly in Ridgeland water and sewer system improvements (new wells, a one-million-gallon storage tank, sewer expansion) tied to its $10.5 billion Ridgeland-area construction, plus an additional $26.4 million in state-loan-funded public projects to be repaid from AWS property tax revenue.",
+          "source": "https://www.wlbt.com/2026/05/07/63m-water-sewer-upgrades-tap-ridgeland-thanks-aws-investment/"
+        }
+      ]
     },
     {
       "id": "meta-huntsville",
@@ -7511,7 +7714,32 @@
       "note": "Chip types: B300. Epoch AI estimates ~146 MW.",
       "source": "https://plateauexcavation.com/projects/huntsville-meta-data-center-meta-project-ferris/",
       "as_of": "2026-08-14",
-      "events": []
+      "events": [
+        {
+          "date": "2018-05-24",
+          "kind": "vote",
+          "summary": "Huntsville City Council unanimously approved the sale of 340 acres in the North Huntsville Industrial Park to Facebook's project entity, Starbelt LLC, for $8.5 million.",
+          "source": "https://governor.alabama.gov/newsroom/2018/06/governor-ivey-announces-facebook-to-invest-750-million-in-new-data-center-in-huntsville/"
+        },
+        {
+          "date": "2018-06-14",
+          "kind": "announcement",
+          "summary": "Governor Kay Ivey announced Facebook would invest $750 million to build a data center in Huntsville, projected to create about 100 jobs at an average annual salary of $80,000, with Facebook set to receive an estimated $86.25 million in Alabama Jobs Act credits over 10 years.",
+          "source": "https://governor.alabama.gov/newsroom/2018/06/governor-ivey-announces-facebook-to-invest-750-million-in-new-data-center-in-huntsville/"
+        },
+        {
+          "date": "2022-12-16",
+          "kind": "construction",
+          "summary": "Meta announced a temporary work stoppage on the Huntsville data center expansion, with a company spokesperson attributing it to changes in the data center's design.",
+          "source": "https://www.waff.com/2022/12/16/construction-slowing-down-meta-huntsville-data-center/"
+        },
+        {
+          "date": "2022-12-20",
+          "kind": "coverage",
+          "summary": "Meta confirmed it halted construction on a portion of its $1.5 billion Huntsville expansion to change the facility's design, part of a broader pullback that also paused a Temple, Texas project and canceled a planned Odense, Denmark facility amid the company's shift toward AI infrastructure.",
+          "source": "https://www.theregister.com/off-prem/2022/12/20/meta-puts-15b-alabama-datacenter-on-hold-pending-redesign/493260"
+        }
+      ]
     },
     {
       "id": "meta-aiken",
@@ -9610,7 +9838,32 @@
       "note": "Chip types: B300. Epoch AI estimates ~28 MW.",
       "source": "https://corescientific.com/high-density-data-centers/dalton-ga-dnn1-2/",
       "as_of": "2026-08-14",
-      "events": []
+      "events": [
+        {
+          "date": "2025-07-07",
+          "kind": "financing",
+          "summary": "CoreWeave announced a definitive agreement to acquire Core Scientific in an all-stock transaction (implied equity value ~$9.0 billion), which would have given CoreWeave ownership of Core Scientific's ~1.3 GW gross power footprint, including its Georgia facilities.",
+          "source": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-to-Acquire-Core-Scientific/default.aspx"
+        },
+        {
+          "date": "2025-10-30",
+          "kind": "coverage",
+          "summary": "Core Scientific shareholders voted against the proposed $9 billion CoreWeave merger (20.8M for, 203.5M against). The merger agreement was terminated with immediate effect; Core Scientific continues operating independently.",
+          "source": "https://www.cnbc.com/2025/10/30/core-scientific-shareholders-reject-9-billion-coreweave-offer-deal-terminated.html"
+        },
+        {
+          "date": "2026-05-06",
+          "kind": "operational",
+          "summary": "In its Q1 FY2026 earnings materials, Core Scientific stated that its Dalton, GA site has delivered Phase 1 (30 MW) with full completion targeted for early 2027, and that Dalton is one of five sites under its anchor hosting agreement with CoreWeave, with approximately 175 MW of contracted capacity.",
+          "source": "https://www.investing.com/news/company-news/core-scientific-q1-fy2026-slides-10b-ai-contracts-3-gw-pipeline-93CH-4665996"
+        },
+        {
+          "date": "2026-05-25",
+          "kind": "permit",
+          "summary": "Georgia EPD opened a public comment period on Application No. 29946, an air permit for Core Scientific's Dalton 01 facility at 2205 Industrial South Road covering 8 standby diesel generators with a combined maximum output of 21.6 MW.",
+          "source": "https://daltoncitizen.com/2026/05/30/two-air-permits-in-process-for-local-core-scientific-data-center-sites/"
+        }
+      ]
     },
     {
       "id": "google-pryor-north",
@@ -10023,7 +10276,44 @@
       "note": null,
       "source": "https://cdn.misoenergy.org/NEW%20LOAD%20ANNOUNCEMENTS%20IN%20MISO%20REGIONS%2012062024684954.pdf",
       "as_of": "2026-08-14",
-      "events": []
+      "events": [
+        {
+          "date": "2024-03-21",
+          "kind": "announcement",
+          "summary": "Cedar Rapids officials publicly confirmed that Google was the company behind the previously unnamed, proposed ~$576 million, 1,396-acre data center project on the city's southwest side.",
+          "source": "https://www.kcrg.com/2024/03/21/google-data-center-coming-cedar-rapids/"
+        },
+        {
+          "date": "2025-01-28",
+          "kind": "vote",
+          "summary": "The Cedar Rapids City Council approved a development agreement/urban renewal ordinance for Google's data center in the Big Cedar Industrial Center, setting terms including a minimum $576 million investment, construction start within three years, and at least 31 new full-time jobs.",
+          "source": "https://www.datacenterfrontier.com/site-selection/article/55268088/cedar-rapids-iowa-gets-approval-for-two-major-data-center-investments-by-google-and-qts"
+        },
+        {
+          "date": "2025-05-30",
+          "kind": "announcement",
+          "summary": "Google held a celebration event in Cedar Rapids to officially confirm its data center project at Alliant Energy's Big Cedar Industrial Center and announced an additional $7 billion investment in Iowa over the next two years for cloud and AI infrastructure.",
+          "source": "https://www.kcrg.com/2025/05/30/google-holds-celebration-new-data-center-cedar-rapids/"
+        },
+        {
+          "date": "2025-05-30",
+          "kind": "financing",
+          "summary": "Google announced $7 billion in Iowa investment covering the new Cedar Rapids data center and expansion of its existing Council Bluffs facility, plus a workforce-development partnership with the electrical training ALLIANCE aimed at increasing Iowa's electrical workforce pipeline by 95%.",
+          "source": "https://blog.google/feed/new-7-billion-investment-iowa/"
+        },
+        {
+          "date": "2026-06-22",
+          "kind": "coverage",
+          "summary": "The Cedar Rapids City Council was set to vote on an indemnification agreement giving Google a temporary certificate of occupancy for the first data center building while impacts were evaluated \u2014 the concern centered on heat and steam plumes potentially interfering with landings at the nearby Eastern Iowa Airport.",
+          "source": "https://www.kcrg.com/2026/06/22/cedar-rapids-set-agreement-with-google-regarding-data-center-impacts/"
+        },
+        {
+          "date": "2026-07-23",
+          "kind": "coverage",
+          "summary": "Cedar Rapids Mayor Tiffany O'Donnell denied allegations that council members received kickbacks tied to the Google and QTS data center projects; reporting found the city manager and utilities business manager had signed NDAs with Google and QTS early in the projects' development.",
+          "source": "https://www.kcrg.com/2026/07/24/cedar-rapids-mayor-defends-data-center-projects-amid-kickback-claims-nda-questions/"
+        }
+      ]
     },
     {
       "id": "google-fort-wayne",
@@ -10580,7 +10870,56 @@
       "note": "Part of Stargate.",
       "source": "https://projectjupitertogether.com/",
       "as_of": "2026-08-14",
-      "events": []
+      "events": [
+        {
+          "date": "2025-02-25",
+          "kind": "announcement",
+          "summary": "Governor Michelle Lujan Grisham announced a partnership with BorderPlex Digital Assets to build a $5 billion digital infrastructure campus in Santa Teresa, expected to create 1,000 jobs \u2014 the first announcement of the site that would become Project Jupiter.",
+          "source": "https://www.governor.state.nm.us/2025/02/25/governor-announces-partnership-with-borderplex-digital-digital-infrastructure-campus-represents-5-billion-investment-in-santa-teresa-expected-to-create-1000-jobs/"
+        },
+        {
+          "date": "2025-09-19",
+          "kind": "vote",
+          "summary": "Dona Ana County Board of County Commissioners voted 4-1 to approve an ordinance authorizing issuance of up to $165 billion in Industrial Revenue Bonds for Project Jupiter, including an initial $50 billion investment within five years, a 30-year property-tax abatement offset by PILOT payments, $50 million for water/wastewater infrastructure, and a $6.9 million community investment fund.",
+          "source": "https://www.donaana.gov/news_detail_T7_R35.php"
+        },
+        {
+          "date": "2025-09-23",
+          "kind": "announcement",
+          "summary": "TechCrunch reported OpenAI is building five new Stargate data centers with Oracle and SoftBank, bringing Stargate's planned capacity to 7 gigawatts; Dona Ana County, New Mexico was named as one of three new sites being developed with Oracle.",
+          "source": "https://techcrunch.com/2025/09/23/openai-is-building-five-new-stargate-data-centers-with-oracle-and-softbank/"
+        },
+        {
+          "date": "2025-09-25",
+          "kind": "coverage",
+          "summary": "El Paso Matters reported OpenAI and Oracle had confirmed their partnership on the $165 billion Project Jupiter data center in Santa Teresa as part of the Stargate initiative, with $50 billion planned over five years, 2,500 construction jobs, and 750 permanent jobs.",
+          "source": "https://elpasomatters.org/2025/09/25/stargate-open-ai-oracle-project-jupiter-data-center-dona-ana-new-mexico-el-paso-texas/"
+        },
+        {
+          "date": "2026-03-01",
+          "kind": "public-comment",
+          "summary": "Food and Water Watch reported that community members submitted over 7,000 comments to the New Mexico Environment Department regarding Project Jupiter's initial proposed gas plant (March 2026).",
+          "source": "https://www.foodandwaterwatch.org/2026/07/23/project-jupiter-data-center-new-mexico/"
+        },
+        {
+          "date": "2026-05-07",
+          "kind": "permit",
+          "summary": "The Bureau of Land Management used emergency permitting authority to fast-track a construction review of the Green Chile natural gas pipeline, shortening the federal environmental review from about a year to 14 days; the ~18-mile, $60 million pipeline would carry 400 million cubic feet of gas per day to serve Project Jupiter.",
+          "source": "https://sourcenm.com/2026/05/07/blm-fast-tracks-green-chile-pipeline-construction-review-for-new-mexico-data-center-project-jupiter/"
+        },
+        {
+          "date": "2026-07-01",
+          "kind": "hearing",
+          "summary": "The New Mexico Environment Department announced it would hold a public hearing on the air permit application for Project Jupiter's microgrid in response to community opposition (July 2026).",
+          "source": "https://www.foodandwaterwatch.org/2026/07/23/project-jupiter-data-center-new-mexico/"
+        },
+        {
+          "date": "2026-07-28",
+          "kind": "protest",
+          "summary": "A Dona Ana County Commission meeting on Project Jupiter escalated into a physical confrontation: Commission Chair Manny Sanchez capped public comment at 30 speakers despite roughly 60 signed up; a Security Concepts guard pushed a woman to the ground, and she and two others were arrested. The guard was referred for potential felony assault charges, which prosecutors later declined to file.",
+          "source": "https://technical.ly/civics/new-mexico-data-center-meeting-turns-physical/"
+        }
+      ]
     },
     {
       "id": "openai-stargate-shackelford",
@@ -10801,7 +11140,38 @@
       "note": null,
       "source": "https://q.com/data-centers/eagle-mountain/",
       "as_of": "2026-08-14",
-      "events": []
+      "events": [
+        {
+          "date": "2024-10-29",
+          "kind": "construction",
+          "summary": "Eagle Mountain City announced QTS had broken ground on a new data center campus situated west of the existing Meta facility, calling it a significant economic development win.",
+          "source": "https://eaglemountain.gov/qts-begins-construction-on-new-datacenter-campus-in-eagle-mountain/"
+        },
+        {
+          "date": "2025-10-29",
+          "kind": "construction",
+          "summary": "Eagle Mountain City reported that construction on the QTS data center campus had resumed after a brief delay to ensure the necessary energy infrastructure and resources were in place, citing an expected 2,000-3,000 temporary construction jobs and 100-200 permanent positions.",
+          "source": "https://eaglemountain.gov/construction-restarts-on-qts-data-center-in-eagle-mountain/"
+        },
+        {
+          "date": "2026-04-17",
+          "kind": "construction",
+          "summary": "QTS and Layton Construction held a topping-out ceremony after placing the final structural beam on the first phase's third building, attended by about 2,000 construction workers.",
+          "source": "https://eaglemountain.gov/eagle-mountain-city-celebrates-major-milestone-with-qts-topping-out-ceremony/"
+        },
+        {
+          "date": "2026-04-20",
+          "kind": "coverage",
+          "summary": "A news report detailed the project: a 193-acre campus with an initial three buildings of 579,000-592,000 square feet each, backed by a $6 billion QTS investment, with a closed-loop cooling system needing only an initial water fill with no additional draw for cooling once operational.",
+          "source": "https://www.standard.net/news/2026/apr/20/eagle-mountain-193-acre-data-center-campus-is-set-to-be-done-this-year-with-big-water-promises/"
+        },
+        {
+          "date": "2026-04-21",
+          "kind": "coverage",
+          "summary": "KUTV reported that Utah House Bill 76, passed earlier in 2026, now requires large data centers to report water consumption, but the law applies only to facilities that become operational after July 2026 \u2014 potentially exempting already-approved projects.",
+          "source": "https://kutv.com/news/utah-water/questions-grow-over-water-use-at-massive-qts-data-center-in-eagle-mountain"
+        }
+      ]
     }
   ]
 }
