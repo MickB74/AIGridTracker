@@ -2468,6 +2468,17 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
     def _latest_iso(g):
         return g["stories"][0].get("published_iso", "") if g["stories"] else ""
 
+    def _maps_link(g):
+        """Google Maps search link for an identified locality."""
+        loc, st = g.get("locality"), g.get("state")
+        if not loc or not st:
+            return ""
+        from urllib.parse import quote_plus
+        q = quote_plus(f"{loc}, {st}")
+        return (f' <a href="https://www.google.com/maps/search/?api=1&amp;query={q}" '
+                f'rel="nofollow noopener" target="_blank" class="map-link" '
+                f'title="View on Google Maps">&#x1F4CD;</a>')
+
     # ── "Patterns to watch" — the recurring (4+) groups, featured above the
     # searchable grid so the signal a resident most needs isn't buried among
     # 20+ one-off headlines. ─────────────────────────────────────────────── #
@@ -2481,7 +2492,8 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
                 f'<div class="rank">{i}</div>'
                 '<div class="angle">📍</div>'
                 '<div class="top-body">'
-                f'<h3><a href="#{_story_group_slug(g["label"])}">{esc(g["label"])}</a> '
+                f'<h3><a href="#{_story_group_slug(g["label"])}">{esc(g["label"])}</a>'
+                f'{_maps_link(g)} '
                 f'<span class="count">{g["count"]} stories</span></h3>'
                 f'<p class="blurb">{esc(g["summary"])}</p>'
                 f'<p class="meta">Latest: <a href="{esc(latest.get("link", ""))}" '
@@ -2575,6 +2587,7 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
             f'<h3><a href="#{slug}" class="anchor">{esc(g["label"])}</a></h3>'
             f'<span class="sg-count">{g["count"]}</span></div>'
             f'<div class="sg-meta-row">{state_chip}{pattern_badge}'
+            f'{_maps_link(g)}'
             f'{f"<span class=\"sg-activity\">Active {last_active}</span>" if last_active else ""}'
             f'{page_link}</div></div>'
             f'{summary_html}'
@@ -2724,6 +2737,10 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
   border:1px solid rgba(45,212,191,.25); cursor:pointer; }}
 .active-chip:hover {{ background:rgba(45,212,191,.22); }}
 .active-chip .x {{ font-size:14px; line-height:1; opacity:.7; }}
+.map-link {{ text-decoration:none; font-size:14px; opacity:.7;
+  transition:opacity .15s; }}
+.map-link:hover {{ opacity:1; }}
+.top-story .map-link {{ font-size:16px; }}
 .show-more {{ display:block; margin:20px auto; padding:10px 28px;
   font-size:14px; }}
 </style>
