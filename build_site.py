@@ -44,7 +44,7 @@ from src.constants import (
     STATE_PUCS_DF, MORATORIUMS_DF,
     PROJECTS, PROJECTS_DF, PROJECT_EVENTS, project_status,
     MORATORIUM_OUTCOMES, HEALTH_RISKS, HEALTH_RISK_GROUPS,
-    CBA_BENCHMARKS, COMPANY_CONCESSIONS,
+    CBA_BENCHMARKS, COMPANY_CONCESSIONS, INDUSTRY_LOBBY, LOBBY_META_SOURCES,
     PROJECT_STAGES, OUTREACH_TIPS, ENTITY_TELLS, FILING_ENTITIES,
     DC_SITES_DF, LOCAL_OFFICIALS_DF, LOCAL_BODIES_DF, STATE_MUNI_LEAGUES,
     OPERATORS_DF, EXECUTIVES_DF, MEGA_PROJECTS_DF,
@@ -573,6 +573,7 @@ NAV_GROUPS = [
         ("Start here", "start-here.html"),
         ("Siting score", "siting.html"),
         ("Hearing prep", "hearing-questions.html"),
+        ("Know the opposition", "opposition.html"),
         ("Model clauses", "cba-clauses.html"),
         ("Case studies", "case-studies.html"),
         ("Impact calculator", "impact.html"),
@@ -9821,6 +9822,234 @@ def build_hearing_questions():
             ("Hearing questions", f"{SITE_URL}/hearing-questions")))
 
 
+def build_opposition():
+    """Know the Opposition — catalog of industry lobby groups, their claims,
+    and sourced counter-arguments."""
+
+    tier_icons = {
+        "Primary lobby": "⚠️",
+        "Green cover": "\U0001f333",
+        "Policy & technical authority": "\U0001f3db️",
+        "Technical authority": "\U0001f4ca",
+        "Community engagement": "\U0001f91d",
+        "State-level / commissioned": "\U0001f4cd",
+    }
+    tier_cls = {
+        "Primary lobby": "bad",
+        "Green cover": "warn",
+        "Policy & technical authority": "warn",
+        "Technical authority": "info",
+        "Community engagement": "info",
+        "State-level / commissioned": "info",
+    }
+
+    org_sections = []
+    total_claims = 0
+    for org in INDUSTRY_LOBBY:
+        slug = slugify(org["name"])
+        icon = tier_icons.get(org["tier"], "")
+        cls = tier_cls.get(org["tier"], "info")
+        abbr_label = f' ({esc(org["abbr"])})' if org.get("abbr") else ""
+
+        res_links = ""
+        if org["resources"]:
+            res_items = " &middot; ".join(
+                f'<a href="{esc(url)}" target="_blank" rel="noopener">{esc(label)}</a>'
+                for label, url in org["resources"])
+            res_links = f'<p class="muted" style="font-size:13px">{res_items}</p>'
+
+        claim_cards = []
+        for c in org["claims"]:
+            total_claims += 1
+            src_link = ""
+            if c.get("source"):
+                src_link = (f' <a href="{esc(c["source"])}" target="_blank" '
+                            f'rel="noopener" style="font-size:12px">[source]</a>')
+            claim_cards.append(f"""
+<div class="opp-claim" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 8px"><strong>Industry claim:</strong> {esc(c['claim'])}{src_link}</p>
+  <p style="margin:0;color:var(--teal)"><strong>Counter:</strong> {esc(c['counter'])}</p>
+</div>""")
+
+        funding = ""
+        if org.get("funding_note"):
+            funding = (f'<p style="font-size:13px;color:var(--muted);margin-top:8px">'
+                       f'<em>{esc(org["funding_note"])}</em></p>')
+
+        org_sections.append(f"""
+<section id="{slug}" class="opp-org">
+  <div class="note {cls}" style="margin:0">
+    <p><strong style="font-size:17px">{icon} {esc(org['name'])}{abbr_label}</strong>
+    <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-left:8px">{esc(org['tier'])}</span></p>
+    <p class="muted" style="font-size:13px"><a href="{esc(org['url'])}" target="_blank" rel="noopener">{esc(org['url'])}</a></p>
+    {res_links}
+    {funding}
+  </div>
+  {"".join(claim_cards)}
+</section>""")
+
+    meta_cards = "\n".join(f"""
+<li><a href="{esc(m['url'])}" target="_blank" rel="noopener">
+<strong>{esc(m['title'])}</strong></a> ({esc(m['outlet'])}) &mdash;
+{esc(m['summary'])}</li>"""
+        for m in LOBBY_META_SOURCES)
+
+    # --- "In the wild" — real headlines showing industry claims in action ---
+    wild_categories = [
+        ("Electricity rates", [
+            "lowering your electric", "not raising rate", "don't raise rate",
+            "e3 report", "no rate impact", "ratepayer", "rate hike",
+            "shield ratepayer", "ratepayer protection",
+        ]),
+        ("Tax breaks contested", [
+            "tax break", "tax incentive", "strip tax", "no more tax",
+        ]),
+        ("Good neighbor claims", [
+            "good neighbor", "data center day",
+        ]),
+    ]
+    wild_html = ""
+    try:
+        import json as _json
+        _sc = pathlib.Path("data/story_candidates.json")
+        if _sc.exists():
+            _sa = _json.loads(_sc.read_text(encoding="utf-8"))
+            _all_stories = _sa.get("stories", [])
+            for cat_name, cat_kws in wild_categories:
+                hits = []
+                for s in _all_stories:
+                    tl = s.get("title", "").lower()
+                    if any(kw in tl for kw in cat_kws):
+                        hits.append(s)
+                    if len(hits) >= 6:
+                        break
+                if hits:
+                    items = "\n".join(
+                        f'<li>{esc(h["title"][:120])} '
+                        f'<span class="muted">({esc(h.get("outlet",""))})</span></li>'
+                        for h in hits[:5])
+                    wild_html += (
+                        f'<h3 style="font-size:15px;margin-top:16px">{esc(cat_name)}</h3>'
+                        f'<ul style="font-size:14px">{items}</ul>')
+    except Exception:
+        pass
+
+    if wild_html:
+        wild_section = (
+            '<section>\n'
+            '  <h2>These claims in the wild</h2>\n'
+            '  <p class="muted">Recent headlines where industry talking points met '
+            'community pushback. Pulled automatically from our '
+            '<a href="story-tracker.html">story tracker</a> archive.</p>\n'
+            + wild_html +
+            '\n</section>')
+    else:
+        wild_section = ""
+
+    body = f"""
+<header>
+  <div class="kicker">Know the opposition</div>
+  <h1>Industry lobby playbook</h1>
+  <p class="sub">{len(INDUSTRY_LOBBY)} organizations, {total_claims} documented claims,
+  and the sourced counter-arguments you need at the hearing. These are the
+  groups shaping the narrative around data center development &mdash; know
+  their arguments before you walk into the room.</p>
+</header>
+<input type="text" id="opp-search" placeholder="Search claims — e.g. jobs, tax, water, PUE..."
+       autocomplete="off"
+       style="width:100%;max-width:440px;background:var(--card);color:var(--ink);
+       border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+       font-size:15px;margin-bottom:14px">
+<p class="muted" id="opp-count"></p>
+
+<div id="opp-sections">
+{"".join(org_sections)}
+</div>
+
+<section>
+  <h2>Investigative reporting on the lobby</h2>
+  <ul>{meta_cards}</ul>
+</section>
+
+{wild_section}
+
+<section>
+  <h2>The playbook at a glance</h2>
+  <div class="note warn"><p>Six core industry claims to prepare for:</p>
+  <ol>
+    <li><strong>Jobs</strong> &mdash; Headline figures (5.5M) use indirect/induced
+    multipliers. Ask for <em>permanent on-site FTEs</em>, not construction or
+    supply-chain estimates.</li>
+    <li><strong>Tax revenue</strong> &mdash; Often paired with abatements that waive
+    most of the revenue. Ask for the <em>net</em> after incentives.</li>
+    <li><strong>Electricity rates</strong> &mdash; "We don&rsquo;t raise rates" is
+    based on a DCC-commissioned study. PUC filings in multiple states show
+    transmission upgrades entering the rate base.</li>
+    <li><strong>National security</strong> &mdash; The "critical infrastructure"
+    frame is used to bypass local review. Data centers are private commercial
+    facilities.</li>
+    <li><strong>Clean energy</strong> &mdash; PPA announcements are not the same as
+    additionality. Buyer concentration is rising, not broadening.</li>
+    <li><strong>Self-regulation</strong> &mdash; PUE measures building efficiency,
+    not absolute impact. Only 23% of operators report all three scopes of
+    emissions.</li>
+  </ol></div>
+</section>
+
+<section>
+  <p class="muted"><strong>See also:</strong>
+  <a href="hearing-questions.html">Questions to ask at your hearing</a> &middot;
+  <a href="case-studies.html">What communities have won and lost</a> &middot;
+  <a href="cba-clauses.html">Model CBA clauses</a> &middot;
+  <a href="tax-breaks.html">The real cost of tax breaks</a></p>
+  <p class="muted" style="font-size:12px">Last updated: {INDUSTRY_LOBBY[0]['as_of'] if INDUSTRY_LOBBY else 'unknown'}.
+  Industry claims and counter-arguments are sourced; see individual links.
+  This page is educational reference, not legal advice.</p>
+</section>
+
+<script>
+(function() {{
+  var q = document.getElementById('opp-search');
+  var orgs = Array.from(document.querySelectorAll('.opp-org'));
+  var ct = document.getElementById('opp-count');
+  q.addEventListener('input', function() {{
+    var s = q.value.toLowerCase();
+    var shown = 0;
+    orgs.forEach(function(sec) {{
+      var claims = Array.from(sec.querySelectorAll('.opp-claim'));
+      var anyMatch = false;
+      if (!s) {{
+        sec.style.display = '';
+        claims.forEach(function(c) {{ c.style.opacity = '1'; }});
+        return;
+      }}
+      var headerMatch = sec.querySelector('.note').textContent.toLowerCase().indexOf(s) >= 0;
+      claims.forEach(function(c) {{
+        var match = headerMatch || c.textContent.toLowerCase().indexOf(s) >= 0;
+        c.style.opacity = match ? '1' : '0.25';
+        if (match) anyMatch = true;
+      }});
+      if (claims.length === 0 && headerMatch) anyMatch = true;
+      sec.style.display = anyMatch ? '' : 'none';
+      if (anyMatch) shown++;
+    }});
+    ct.textContent = s ? (shown + ' organization' + (shown === 1 ? '' : 's') + ' match') : '';
+  }});
+}})();
+</script>
+"""
+    return page(
+        "Know the opposition — AI GridWatch",
+        "The data center industry's lobby groups, their claims, and the "
+        "sourced counter-arguments communities need at hearings.",
+        body, f"{SITE_URL}/opposition",
+        og_image=_og_image("opposition"),
+        jsonld=_breadcrumb(
+            ("Home", SITE_URL),
+            ("Know the opposition", f"{SITE_URL}/opposition")))
+
+
 def build_glossary():
     terms = [
         ("PUE", "Power Usage Effectiveness — ratio of total facility energy to IT energy. Lower is better; hyperscalers target 1.10–1.20."),
@@ -11486,6 +11715,7 @@ def main():
     (WEB / "case-studies.html").write_text(build_case_studies(), encoding="utf-8")
     (WEB / "hearing-questions.html").write_text(
         build_hearing_questions(), encoding="utf-8")
+    (WEB / "opposition.html").write_text(build_opposition(), encoding="utf-8")
     (WEB / "glossary.html").write_text(build_glossary(), encoding="utf-8")
     (WEB / "tax-breaks.html").write_text(build_tax_breaks(), encoding="utf-8")
     (WEB / "siting.html").write_text(build_siting(), encoding="utf-8")
@@ -11553,7 +11783,7 @@ def main():
              "data-centers", "environment", "studies",
              "cba-clauses", "officials", "consulting", "case-studies",
              "community-value", "open-data",
-             "hearing-questions", "glossary", "tax-breaks", "siting",
+             "hearing-questions", "opposition", "glossary", "tax-breaks", "siting",
              "companies/", "states/", "blog/", "news/", "videos", "map",
              "communities/"]
     paths.extend(_community_paths)

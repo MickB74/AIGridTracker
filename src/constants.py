@@ -3290,6 +3290,227 @@ COMPANY_CONCESSIONS = {
     },
 }
 
+# ---------------------------------------------------------------------------
+# Industry lobby & trade groups: who they are, what they claim, and the
+# sourced counter-argument. Feeds the "Know the opposition" static page.
+# ---------------------------------------------------------------------------
+INDUSTRY_LOBBY = [
+    {
+        "name": "Data Center Coalition",
+        "abbr": "DCC",
+        "tier": "Primary lobby",
+        "url": "https://datacentercoalition.org",
+        "resources": [
+            ("Reports & Publications", "https://www.datacentercoalition.org/reports-and-publications"),
+            ("2026 PwC impact study", "https://www.centerofyourdigitalworld.org/2026-impact-study"),
+        ],
+        "claims": [
+            {"claim": "Data centers contribute $927 billion to GDP, support 5.5 million jobs, and generate $204 billion in tax revenue.",
+             "source": "https://www.centerofyourdigitalworld.org/2026-impact-study",
+             "counter": "The 5.5M figure uses indirect and induced multiplier models "
+                        "that count any dollar touched by the supply chain. A typical "
+                        "100 MW campus employs 50–75 full-time workers. The PwC "
+                        "study was commissioned and paid for by the DCC itself."},
+            {"claim": "Data centers do not raise residential electricity rates.",
+             "source": "https://www.datacentercoalition.org/newsroom",
+             "counter": "The E3 report (May 2026) was commissioned by the DCC. "
+                        "Independent analyses by the Brattle Group and state PUCs in "
+                        "Virginia, Georgia, and the Carolinas have found data center "
+                        "load growth contributes to rate pressure through transmission "
+                        "and generation upgrades that enter the rate base."},
+        ],
+        "funding_note": "Revenue tripled from $583K (2022) to $2.5M (2023). Operates "
+                        "Virginia Connects 501(c)(4) running national-security-themed "
+                        "video ads.",
+        "as_of": "2026-08-16",
+    },
+    {
+        "name": "Chamber of Progress",
+        "abbr": None,
+        "tier": "Primary lobby",
+        "url": "https://progresschamber.org",
+        "resources": [
+            ("Loudoun tax analysis", "https://progresschamber.org/insights/loudoun-data-centers-better-services-lower-taxes/"),
+            ("NY moratorium veto letter", "https://progresschamber.org/resources/letter-to-ny-governor-veto-data-center-moratorium-s-10642-a-11560/"),
+        ],
+        "claims": [
+            {"claim": "Without data centers, Loudoun County homeowners would pay ~$5,800 more per year in property taxes.",
+             "source": "https://progresschamber.org/insights/loudoun-data-centers-better-services-lower-taxes/",
+             "counter": "Loudoun's model is the exception, not the rule — most "
+                        "jurisdictions grant abatements that waive most of the tax "
+                        "revenue data centers would otherwise generate. Even in "
+                        "Loudoun, the county chose not to offer abatements; the "
+                        "Chamber's counterfactual assumes the entire industry vanishes "
+                        "overnight, not that it pays less."},
+        ],
+        "funding_note": "Funded by Google, Amazon, Meta, Apple, and other tech giants. "
+                        "Positions itself as center-left.",
+        "as_of": "2026-08-16",
+    },
+    {
+        "name": "TechNet",
+        "abbr": None,
+        "tier": "Primary lobby",
+        "url": "https://technet.org",
+        "resources": [
+            ("2026 State Policy Principles (PDF)", "https://www.technet.org/wp-content/uploads/2025/12/TechNet-2026-State-Policy-Principles.pdf"),
+            ("State policy agenda", "https://www.technet.org/public-policy/state-policy-agenda/"),
+        ],
+        "claims": [
+            {"claim": "Data centers deserve sales and use tax exemptions, as is done for manufacturing.",
+             "source": "https://www.technet.org/wp-content/uploads/2025/12/TechNet-2026-State-Policy-Principles.pdf",
+             "counter": "Unlike manufacturing plants, data centers employ very few "
+                        "people per dollar invested. A 100 MW campus may represent "
+                        "$1–2 billion in investment but create only 50–75 "
+                        "permanent jobs — orders of magnitude fewer per dollar than "
+                        "a factory receiving comparable incentives."},
+        ],
+        "funding_note": "Lobbied on 808 bills across all 50 states in 2025, with a "
+                        "87% win rate on their policy positions.",
+        "as_of": "2026-08-16",
+    },
+    {
+        "name": "Clean Energy Buyers Association",
+        "abbr": "CEBA",
+        "tier": "Green cover",
+        "url": "https://ceba.org",
+        "resources": [
+            ("2026 State of the Market", "https://ceba.org/resources/2026-state-of-the-market/"),
+            ("Deal Tracker", "https://cebuyers.org/deal-tracker/"),
+        ],
+        "claims": [
+            {"claim": "Corporate buyers have signed 143 GW of clean energy deals since 2014.",
+             "source": "https://ceba.org/ceba-strong-clean-energy-demand-amidst-headwinds/",
+             "counter": "PPAs are contracts to purchase output, not proof of "
+                        "additionality. Many cover existing projects that would have "
+                        "been built anyway. CEBA’s own data shows the number of "
+                        "active buyers dropped 40% year-over-year — the market is "
+                        "concentrating among a handful of hyperscalers, not broadening."},
+        ],
+        "funding_note": None,
+        "as_of": "2026-08-16",
+    },
+    {
+        "name": "Information Technology Industry Council",
+        "abbr": "ITI",
+        "tier": "Policy & technical authority",
+        "url": "https://itic.org",
+        "resources": [
+            ("Energy policy", "https://www.itic.org/policy/energy"),
+            ("Data center Q&A", "https://datacenterworld.com/article/data-centers-and-public-policy-a-qa-with-itis-gordon-bitko/"),
+        ],
+        "claims": [
+            {"claim": "Data centers are critical national infrastructure requiring streamlined permitting.",
+             "source": "https://www.itic.org/news-events/news-releases/iti-to-ntia-data-centers-underpin-today-s-digital-economy",
+             "counter": "The “critical infrastructure” framing is used to "
+                        "bypass local environmental and planning review. Data centers "
+                        "are private commercial facilities; the data they store could "
+                        "be distributed across existing infrastructure. Streamlined "
+                        "permitting has meant communities lose their window to negotiate."},
+            {"claim": "PUE (Power Usage Effectiveness) proves data centers are efficient.",
+             "source": "https://www.itic.org/policy/energy",
+             "counter": "PUE only measures how efficiently a building uses power for "
+                        "computing vs. cooling. It says nothing about absolute energy "
+                        "consumption, water use, grid impact, or community burden. "
+                        "Uptime Institute found only 23% of operators report all three "
+                        "scopes of carbon emissions."},
+        ],
+        "funding_note": "Affiliate 'The Green Grid' promotes PUE as self-regulation.",
+        "as_of": "2026-08-16",
+    },
+    {
+        "name": "7x24 Exchange",
+        "abbr": None,
+        "tier": "Community engagement",
+        "url": "https://7x24exchange.org",
+        "resources": [
+            ("Art of Being a Good Neighbor", "https://www.7x24exchange.org/data-centers-the-art-of-being-a-good-neighbor/"),
+            ("International Data Center Day", "https://www.internationaldatacenterday.org/activities/"),
+        ],
+        "claims": [
+            {"claim": "Data centers are good neighbors who engage with communities proactively.",
+             "source": "https://www.7x24exchange.org/data-centers-the-art-of-being-a-good-neighbor/",
+             "counter": "The 10-step playbook focuses on PR and workforce pipeline "
+                        "(school hackathons, “Cloud Run” festivals) rather "
+                        "than binding commitments on noise, water, or tax revenue. "
+                        "Voluntary “good neighbor” pledges have no "
+                        "enforcement mechanism."},
+        ],
+        "funding_note": None,
+        "as_of": "2026-08-16",
+    },
+    {
+        "name": "Consumer Energy Alliance",
+        "abbr": "CEA",
+        "tier": "State-level / commissioned",
+        "url": "https://consumerenergyalliance.org",
+        "resources": [
+            ("Economic Benefits of Data Centers (PDF)", "https://consumerenergyalliance.org/cms/wp-content/uploads/2025/12/Economic-Impact-of-Data-Centers.pdf"),
+        ],
+        "claims": [
+            {"claim": "Data centers bring economic benefits to communities including jobs, investment, and infrastructure improvements.",
+             "source": "https://consumerenergyalliance.org/cms/wp-content/uploads/2025/12/Economic-Impact-of-Data-Centers.pdf",
+             "counter": "CEA is an industry-funded group whose board includes fossil "
+                        "fuel and utility executives. Their economic impact studies do "
+                        "not account for opportunity costs: what else that land, water, "
+                        "and grid capacity could have supported."},
+        ],
+        "funding_note": "Industry-funded; board includes fossil fuel and utility executives.",
+        "as_of": "2026-08-16",
+    },
+    {
+        "name": "Uptime Institute",
+        "abbr": None,
+        "tier": "Technical authority",
+        "url": "https://uptimeinstitute.com",
+        "resources": [
+            ("Sustainability Manager's Guide", "https://uptimeinstitute.com/resources/research-and-reports/digital-infrastructure-sustainability-a-managers-guide"),
+        ],
+        "claims": [],
+        "funding_note": "Not directly community-facing, but useful counterpoint: their "
+                        "own survey found only 23% of operators report all three scopes "
+                        "of carbon emissions, and only 41% track water usage.",
+        "as_of": "2026-08-16",
+    },
+    {
+        "name": "Northern Virginia Technology Council",
+        "abbr": "NVTC",
+        "tier": "State-level / commissioned",
+        "url": "https://nvtc.org",
+        "resources": [],
+        "claims": [
+            {"claim": "Data centers are the backbone of Northern Virginia's economy.",
+             "source": None,
+             "counter": "NVTC publishes biennial economic impact studies commissioned "
+                        "by the industry. Won TECNA’s Public Policy Advocacy Award "
+                        "for lobbying on data center tax incentives."},
+        ],
+        "funding_note": "Won TECNA's Public Policy Advocacy Award for tax incentive lobbying.",
+        "as_of": "2026-08-16",
+    },
+]
+
+INDUSTRY_LOBBY_DF = pd.DataFrame([
+    {"name": o["name"], "abbr": o.get("abbr") or "",
+     "tier": o["tier"], "url": o["url"],
+     "claims": len(o["claims"]), "as_of": o["as_of"]}
+    for o in INDUSTRY_LOBBY
+])
+
+# Meta-sources on the data center lobby (investigative reporting)
+LOBBY_META_SOURCES = [
+    {"title": "Amidst Boom, Data Center Lobby Expands Its Influence, Spending, and Tactics",
+     "outlet": "TechPolicy.Press",
+     "url": "https://www.techpolicy.press/amidst-boom-data-center-lobby-expands-its-influence-spending-and-tactics/",
+     "summary": "Documents DCC revenue growth, Virginia Connects video campaigns, "
+                "national security messaging, and coordinated state-level testimony."},
+    {"title": "The State of Data Center Policy in the United States",
+     "outlet": "TechPolicy.Press",
+     "url": "https://www.techpolicy.press/the-state-of-data-center-policy-in-the-united-states/",
+     "summary": "Comprehensive overview of data center policy landscape across "
+                "all 50 states."},
+]
+
 # What similar communities actually won — shown in the Start Here wizard's
 # impact step so the CBA target reads as precedent, not aspiration.
 # What comparable communities actually won. This is the *ask* — the number a
