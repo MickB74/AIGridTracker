@@ -9755,15 +9755,22 @@ def build_case_studies():
 
     concession_sections = []
     for company, info in COMPANY_CONCESSIONS.items():
-        concessions = "\n".join(
-            f"<li><strong>{esc(c['where'])}</strong> "
-            f"({esc(c['year'])}) — {esc(c['what'])}{_prov_links(c)}</li>"
-            for c in info["concessions"])
+        concession_items = info["concessions"]
+        if concession_items:
+            concessions = "\n".join(
+                f"<li><strong>{esc(c['where'])}</strong> "
+                f"({esc(c['year'])}) — {esc(c['what'])}{_prov_links(c)}</li>"
+                for c in concession_items)
+            concessions_html = f"<ul>{concessions}</ul>"
+        else:
+            concessions_html = ('<p class="muted"><em>No documented concessions yet '
+                                '— if your community has negotiated with this company, '
+                                '<a href="mailto:info@aigridwatch.com">let us know</a>.</em></p>')
         concession_sections.append(f"""
 <section id="{slugify(company)}">
   <h3 style="color:var(--teal);font-size:16px;margin-top:24px">{esc(company)}</h3>
   <p class="muted"><em>Negotiation pattern:</em> {esc(info['pattern'])}</p>
-  <ul>{concessions}</ul>
+  {concessions_html}
 </section>""")
 
     body = f"""

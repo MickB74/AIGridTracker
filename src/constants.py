@@ -3288,6 +3288,144 @@ COMPANY_CONCESSIONS = {
                          "https://virginiabusiness.com/prince-william-digital-gateway-data-center-project-officially-dies/"]},
         ],
     },
+    "CoreWeave": {
+        "pattern": (
+            "A GPU-cloud pure-play that leases space inside partners' buildings "
+            "(Core Scientific, Digital Realty, Switch, etc.) rather than "
+            "owning sites outright. That means the developer on a community's "
+            "permit may be the landlord, not CoreWeave — but CoreWeave's "
+            "contracted power draw is what drives the load. Leverage sits "
+            "with whoever controls the next lease or power allocation, and "
+            "CoreWeave's aggressive growth timeline (NASDAQ IPO March 2025, "
+            "$12B+ contracted revenue backlog) makes delay costly. Its "
+            "proposed acquisition of Core Scientific (~200 MW HPC hosting "
+            "deal, Jul 2025) would consolidate landlord and tenant — watch "
+            "for that closing. (Strategy read.)"
+        ),
+        "concessions": [],
+    },
+    "xAI (Colossus)": {
+        "pattern": (
+            "Moved faster than any other AI builder — the Memphis Colossus "
+            "cluster went from empty warehouse to 100k GPUs in ~122 days — "
+            "and has operated with minimal community engagement. Memphis "
+            "residents reported noise, generator exhaust, and unpermitted "
+            "cooling towers before any public meeting. Speed is xAI's entire "
+            "advantage and its vulnerability: every day of delay costs real "
+            "training revenue, so permitting leverage is unusually strong "
+            "if exercised early. (Strategy read.)"
+        ),
+        "concessions": [],
+    },
+    "OpenAI · Oracle (Stargate)": {
+        "pattern": (
+            "A joint venture (OpenAI, Oracle, SoftBank) building multiple "
+            "GW-scale campuses, with sites developed by Oracle, Crusoe, "
+            "Lancium, and Vantage. The JV structure means the entity on a "
+            "local permit is often the site developer, not OpenAI — but "
+            "the federal 'national infrastructure' framing gives the project "
+            "political cover that a solo developer wouldn't have. Community "
+            "leverage comes from state/local land-use authority, which the "
+            "federal framing cannot preempt. (Strategy read.)"
+        ),
+        "concessions": [],
+    },
+    "Digital Realty": {
+        "pattern": (
+            "The largest publicly traded data center REIT, with a global "
+            "portfolio. Operates under site-specific LLCs and legacy Telx "
+            "entities. As a REIT it is sensitive to ESG ratings and "
+            "institutional-investor pressure — sustainability commitments "
+            "are leverage if you can cite them back in a permit hearing. "
+            "(Strategy read.)"
+        ),
+        "concessions": [],
+    },
+    "Equinix": {
+        "pattern": (
+            "The world's largest colocation provider by revenue, structured "
+            "as a REIT. IBX-branded campuses in 70+ metros. Like Digital "
+            "Realty, REIT structure means institutional-investor and ESG "
+            "pressure is real leverage. Has published science-based targets "
+            "and 96% renewable energy coverage — hold it to those numbers "
+            "in permit proceedings. (Strategy read.)"
+        ),
+        "concessions": [],
+    },
+    "Vantage": {
+        "pattern": (
+            "DigitalBridge/Silver Lake-backed ($9.2B equity round, Jun 2024), "
+            "building hyperscale campuses in multiple US metros. Per-campus "
+            "LLC structure. Growth-capital-funded, so timeline pressure is "
+            "real — but less publicly visible than a public REIT, which "
+            "means less ESG leverage and more reliance on land-use authority. "
+            "(Strategy read.)"
+        ),
+        "concessions": [],
+    },
+    "CyrusOne": {
+        "pattern": (
+            "KKR/GIP-owned (~$15B take-private, 2022). Private-equity "
+            "ownership means the community negotiates with a financial "
+            "sponsor, not an operator with a public reputation to protect. "
+            "Leverage is purely through land-use and utility approvals. "
+            "(Strategy read.)"
+        ),
+        "concessions": [],
+    },
+    "Aligned": {
+        "pattern": (
+            "Pending ~$40B acquisition by Nvidia, Microsoft, and "
+            "BlackRock/MGX (announced Oct 2025). If completed, aligns the "
+            "developer with its largest tenants — reducing the tenant/ "
+            "landlord split that sometimes gives communities a second "
+            "negotiation point. Proprietary Delta³ cooling claims 80% less "
+            "water than conventional — ask for metered proof, not claims. "
+            "(Strategy read.)"
+        ),
+        "concessions": [],
+    },
+    "Switch": {
+        "pattern": (
+            "DigitalBridge/IFM-owned (~$11B take-private, 2022). Operates "
+            "large single-campus 'Primes' (Las Vegas, Reno, Atlanta, Grand "
+            "Rapids). Claims 100% renewable energy via long-term PPAs — "
+            "as with any such claim, verify whether the PPA delivers "
+            "temporally matched clean power or just annual-average offsets. "
+            "(Strategy read.)"
+        ),
+        "concessions": [],
+    },
+    "Stack Infrastructure": {
+        "pattern": (
+            "Blue Owl/IPI Partners-owned. Hyperscale-focused wholesale "
+            "provider. Lower public profile than peers — less ESG/PR "
+            "leverage, more reliance on local permitting authority. "
+            "(Strategy read.)"
+        ),
+        "concessions": [],
+    },
+    "EdgeConneX": {
+        "pattern": (
+            "EQT Infrastructure/ADIA-backed. Builds edge and hyperscale "
+            "campuses. Lower public profile — leverage is through "
+            "permitting and utility approvals rather than reputational "
+            "pressure. (Strategy read.)"
+        ),
+        "concessions": [],
+    },
+    "Core Scientific": {
+        "pattern": (
+            "Emerged from bankruptcy (Jan 2024) and pivoted from Bitcoin "
+            "mining to HPC/AI hosting, with CoreWeave as anchor tenant "
+            "(~200 MW). Proposed CoreWeave acquisition (Jul 2025) would "
+            "merge landlord and tenant. If your community has a Core "
+            "Scientific site, the power draw may grow substantially as "
+            "crypto rigs are replaced with GPU clusters — ask about the "
+            "planned load increase, not just current draw. (Strategy read.)"
+        ),
+        "concessions": [],
+    },
 }
 
 # ---------------------------------------------------------------------------
