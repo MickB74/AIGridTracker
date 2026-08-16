@@ -4312,15 +4312,23 @@ protections.
 
 - **Indianapolis** — City council advanced a data center pause to the
   planning commission for final approval
+  ([WFYI, Aug 11](https://www.wfyi.org/))
 - **San Antonio** — Councilmember Galvan called for a moratorium on new
   data center construction
+  ([San Antonio Report, Aug 10](https://sanantonioreport.org/))
 - **Virginia Beach** — City is considering a 12-month pause on new data
   center applications to develop regulations
+  ([WTKR, Aug 15](https://www.wtkr.com/))
 - **St. Croix County, WI** — Committee sent a moratorium ordinance to the
   county board
-- **Statesville, NC** — City council weighing a moratorium proposal
-- **Aurora, CO** — Council considering a 6-month pause alongside
-  development restrictions
+  ([Hudson Star Observer, Aug 15](https://www.hudsonstarobserver.com/))
+- **Statesville, NC** — City council advanced a 180-day pause on new
+  data centers
+  ([WSOC TV, Aug 11](https://www.wsoctv.com/))
+- **Aurora, CO** — Council rejected a 6-month moratorium but approved new
+  regulations and water-use requirements — a reminder that a moratorium
+  isn't the only path to protections
+  ([Sentinel Colorado, Aug 11](https://www.sentinelcolorado.com/))
 
 **What to learn — the anatomy of a moratorium:**
 
@@ -4354,9 +4362,11 @@ the community writes during the pause.
 
 **What happened:** Multiple outlets this week noted that the industry's
 public-relations campaign — emphasizing jobs and economic development —
-is generating more skepticism than support. NC Newsline published an
-analysis calling the PR strategy counterproductive; the San Antonio Report
-argued residents need to organize independently of state-level action.
+is generating more skepticism than support.
+[NC Newsline](https://ncnewsline.com/) published an analysis calling the
+PR strategy counterproductive; the
+[San Antonio Report](https://sanantonioreport.org/) argued residents need
+to organize independently of state-level action.
 
 **Why it matters:** The data center industry's standard pitch —
 "jobs, tax revenue, innovation" — worked when communities didn't have
@@ -4365,6 +4375,9 @@ permanent jobs a data center actually creates (50–150 per facility),
 how much water it uses, and what happened to electricity rates in Northern
 Virginia. Information asymmetry was the industry's advantage.
 **Platforms like this one exist to close that gap.**
+
+*Sources: [NC Newsline, Aug 15](https://ncnewsline.com/);
+[San Antonio Report, Aug 15](https://sanantonioreport.org/)*
 
 ---
 
