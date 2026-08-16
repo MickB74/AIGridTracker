@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 1758,
+  "count": 1768,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -8399,7 +8399,7 @@
       "locality": "Fairfield",
       "state": "AL",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-15"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "Coweta County residents fight 255-acre data center",
@@ -8850,7 +8850,7 @@
       "locality": "Nashville",
       "state": "TN",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-15"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "Pima County moves toward data center moratorium, tighter transparency",
@@ -8861,7 +8861,7 @@
       "locality": "Pima County",
       "state": "AZ",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-15"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "Aurora City Council rejects data center moratorium, approves new rules, water regs",
@@ -9114,7 +9114,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "Lawsuit aims to block construction of Independence data center",
@@ -9642,7 +9642,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-14"
+      "last_seen": "2026-08-16"
     },
     {
       "title": "Meeting About Proposed Data Center in Andover, NJ Turns Violent",
@@ -19344,6 +19344,116 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-08-14",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Residents ask questions after Path One presents data center plans in Ida County",
+      "outlet": "WTOC",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPVWtoMWtKbndiUlB5MVV5bHNIYzczU2ZFS21sN1FxWG5MZlJiYU1lTjl6S3lZZFp6QkJUakRFZ2dHM2hyRU5QbktWNVA0TnJjSU8yaFJWNEFrU1FkMTV2N3dEaThSa0xjZmY0WFJXckRYZENTOUJFNlRQVTBLYkZlRkg2aFhTUHJoUy1HNTFaRnJydVUzTUlKSjBlU25RYnk5N1dKSFFiR0lacDdIM1J2a0lZdzR4QQ?oc=5",
+      "published": "Wed, 12 Aug 2026 03:48:00 GMT",
+      "published_iso": "2026-08-12T03:48:00+00:00",
+      "locality": "Ida County",
+      "state": "IA",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Bemidji considers data center moratorium with possible code updates",
+      "outlet": "KAXE",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNRTFBcmk5a2lPZHotdkxoeHdjSlJ5bnI2UHNacnVFLWZvVlJXdmxETzNla0loamZLRENVY0lBczVhS3dRWVBCV1RscDRGRHBzVmVnZ1dBRDAtbDNrR2pHeGxjblVCMFI4UEJrbjN2QkhlemNPYVp6ZmdWSXFXeHFSZFBubVZMMDNGaVNuZVphWjlBalA0aGVlcEJVMDZhdmhKODFxZjlhZExyOVFyeTE0?oc=5",
+      "published": "Fri, 14 Aug 2026 17:25:00 GMT",
+      "published_iso": "2026-08-14T17:25:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Policymakers push for profit-sharing from AI data centers as states revolt against Big Tech's energy appetite",
+      "outlet": "Crypto Briefing",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE14LVZON3ZZYzVpM1Y4TGpKbHc4bFlZcVJCbGdXaUl2cC1qTmVkWjItTUdMX211WWlyUGRYNHdITUxfTVRBNHVRcUdGMk5jcHZDTFlVTEtsOGtFT1Q3NkdHdUZWMXZ6ZmZFNEdCQlZ2OEtPam1udzl5aWhkQQ?oc=5",
+      "published": "Sun, 16 Aug 2026 09:08:52 GMT",
+      "published_iso": "2026-08-16T09:08:52+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Roundhill’s memory chip ETF parks more than a quarter of its assets in a single stock",
+      "outlet": "Crypto Briefing",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFB6UFJvNjBMeG4yS2hhWG53U2NmR3l3UUhBNnRBMWRBMnhpTzJ4ZnNGM3puS21XMHhtVlc4V0pzaDUzTEw4eTVRdDZQbG9jbXdhSWhUZGNzNjk2YVBtSVRuX3JkNVRIRHdSeFVBdEZhMVEzZw?oc=5",
+      "published": "Sun, 16 Aug 2026 09:55:50 GMT",
+      "published_iso": "2026-08-16T09:55:50+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "As A.I. Data Centers Spread, Pressure Mounts to Share Profits",
+      "outlet": "The New York Times",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1Cd1RFdzhVb2VmMzFuU1U5ZjVkdjMwYUJ1MjRDaUV4VzQzX0ZBZmhpYXA4TVFUd2NTb044U0lCd2xQMHVWZHZfUEQ3bUdleExoOWIzOVpnaEJpOTlaeXlySi1pbnhFVTdRcEZVenZkbUVXdw?oc=5",
+      "published": "Sun, 16 Aug 2026 09:00:37 GMT",
+      "published_iso": "2026-08-16T09:00:37+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Georgia Power cedes more time for state regulators to review OpenAI contract for huge power supply",
+      "outlet": "Georgia Public Broadcasting",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNSHVQaGVybXdEdVdWM09WdnRJZXJpU05fcmt3VnFxNFRIYUotNjFQZDJNTXI5aXR0NG1DSHUzZ0pnY0pST214QXY3TUFrRUt6ZEdEQ0FzTUJXNUkzcXZtNDNuODhfUmxFZ1FibUpsaGVEWlNJZnBOdHAxUDlCSGZvdlFTREx0UmtSb2dZOUllMUFoNWxLREdJSWttSVRkSERjNTVXZThuUE1jdGo1UnNpTUlLU2tfc3RXQ3c?oc=5",
+      "published": "Fri, 14 Aug 2026 20:51:00 GMT",
+      "published_iso": "2026-08-14T20:51:00+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Officials say data centers can boost local economies. In Abilene, they have spurred a housing crisis",
+      "outlet": "Houston Public Media",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQOHV2NXdOR0pSZ2RydHZfMnp5TnNlSDhRMWpVeEFXT1l3RzNUNmhQUVFEd0NRRHQwb0lkRlBJRnppZmdpUktQY3owSkpieDE5MTkwOF9lN3RoVkpscTQ0TkhtcnhKSXBRUEctTUdMeDJJRlBJY0pRUXF3LU5Ddm9NOW4zejJPYlRmcmtCNW9ZbloyU0JaaWJPSVkyeFFxd0k2UjRMZk9SN0wxcngtc01qSTlOcGMtd3laM1R0UHEzLXpQV3BmWWotVHlQd9IB0wFBVV95cUxNZ0g1aE8tS3VZWnNTSllPYlhMbDlDZmpZLXRfNE5qS3JGVDZXRTFzMktLOUQxTlA0R0NnQkdYT0tuODVUMEtmemdZMW9vYWZlUXUyc2s1U1AwYTFNd1Zkcy11TkJyZnFUVWNFMDhJcVN3SE5pSHJmcEdCQjhMQTZlVE1LVmgtaFotc09ZaUVKZU93bDlESFJ1N3VQeW5HMnZ0bU9qMmNlQmxsZnhjYjNROFp6WWlERnQzcmFIei0yMWN3LVByeExMOWtXWHFLeWQtX3Bn?oc=5",
+      "published": "Wed, 12 Aug 2026 14:04:15 GMT",
+      "published_iso": "2026-08-12T14:04:15+00:00",
+      "locality": "Abilene",
+      "state": "TX",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "The Texas data-center boom didn’t happen overnight. This is how we got here.",
+      "outlet": "Houston Chronicle",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQbFg3eENlUWN5WTB2a0xhaDV1aVd4VGllNG1KRzdDX1pJMklVQjMtTjVSN3BWU2xta2pZYW5RODgxUld6WGFsTWdJTEdfTFd0QVZ0Nk05SHdQa2ZPVHF2cWVWY0FfVDVWbWxUQ3BrVm40OWwzYjA4eElRTUs1S1JwTw?oc=5",
+      "published": "Sun, 16 Aug 2026 09:00:00 GMT",
+      "published_iso": "2026-08-16T09:00:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "Caldwell County halts data center incentives amid calls for judge to resign",
+      "outlet": "Austin American-Statesman",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQQkUxQ08zT0hOTHlsbDlmczZyRVAyckptQV9XZDl1VVU2VHViOFFyU3hreTFIU2g4UVRKU1laWC1JcExqSWZuRzZoX1hGeG50NGtFcUdFWUxMd2pDUlpyTjNwLXRQRGxLQ1NVRHZHOUdPRzRDVGp4ZzdqcE1FWjJkMi1qQnFKOHNlRzdNbjItX2tXMmUtVllsdmhDeUxZZ0VfNWNRZFd6RUhnd1d0TFVxMDVHbEVNQQ?oc=5",
+      "published": "Thu, 13 Aug 2026 17:20:46 GMT",
+      "published_iso": "2026-08-13T17:20:46+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "title": "LP&L plans infrastructure for growth; outlines role in data center discussions",
+      "outlet": "KCBD",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPUkhGYk9DTUItT1R0QTN2dXoyM3B0SXFUSkhFQmQzRXVfVTNhS3llVXNOd2J3bzNDV19Kbnhkcmdkb2dVaklKNXJndENHNjNJVGRHUHdQSVlXNU13ZDFZZWE3QXp2Q3UwZTRNYmk3ZHZjSktRaFRBZmpyWDR5SFJjdjM2OFo0elc3VDhQX0EtZzdHelFvdURXUTM4cUMxQ2RESHo1ctIBuAFBVV95cUxNYTVRYzJxVzFoOVlaeThBOVV3Zm5Fc1MtM0ZJWDh4MUZUcWhZZ1dxU2R1TmpVZVpETEFPZDctZWlVc2lFSGF1RGtsaElubEZZaUN4TmUzNVl6bFJ2VVhsQWRGeWVsWVBCdFJPS0F2c1RXSkpEWEloVEVZNHJ5d1pBRWNYdVE0VWRzUEwzd2hnU2FYMjhKcXYtY1ZxbHc0dVhrdUk3QnByNTVDbWwzRXo0Ni1iRkZQRlct?oc=5",
+      "published": "Thu, 13 Aug 2026 03:23:00 GMT",
+      "published_iso": "2026-08-13T03:23:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-13",
       "last_seen": "2026-08-16"
     }
   ]
