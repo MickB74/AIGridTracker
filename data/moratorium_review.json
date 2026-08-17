@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-10",
+  "generated": "2026-08-17",
   "findings": [
     {
       "kind": "expired",
@@ -11,15 +11,183 @@
     },
     {
       "kind": "expired",
-      "locality": "Walker County",
-      "state": "GA",
+      "locality": "Brevard",
+      "state": "NC",
       "status": "Enacted",
-      "detail": "term ran to 2026-08-08; confirm whether it lapsed, was extended, or became permanent zoning",
-      "source": "https://walkercountyga.gov/2026/07/10/walker-county-approves-temporary-moratorium-on-data-centers/"
+      "detail": "term ran to 2026-06-23; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://www.transylvaniatimes.com/news/transylvania-county-not-pursuing-data-centers/article_51ca8d5c-a379-4b4b-8676-480c6bda88dd.html"
+    },
+    {
+      "kind": "expired",
+      "locality": "Madison County",
+      "state": "NC",
+      "status": "Enacted",
+      "detail": "term ran to 2024-06-13; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://news.yahoo.com/madison-county-imposes-1-moratorium-090939100.html"
+    },
+    {
+      "kind": "expired",
+      "locality": "Massillon",
+      "state": "OH",
+      "status": "Enacted",
+      "detail": "term ran to 2026-08-14; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://www.news5cleveland.com/news/local-news/we-follow-through/massillon-puts-limits-on-future-data-centers-with-new-zoning-rules"
+    },
+    {
+      "kind": "expired",
+      "locality": "Armada Township",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "term ran to 2026-07-13; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"
+    },
+    {
+      "kind": "expired",
+      "locality": "Pittsfield Township",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "term ran to 2026-05-17; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"
+    },
+    {
+      "kind": "expired",
+      "locality": "Howell Township",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "term ran to 2026-05-20; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://www.fractracker.org/2026/01/howell-township-data-center-win"
+    },
+    {
+      "kind": "expired",
+      "locality": "Pontiac",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "term ran to 2026-07-21; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"
+    },
+    {
+      "kind": "expired",
+      "locality": "Saginaw",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "term ran to 2026-07-13; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"
+    },
+    {
+      "kind": "expired",
+      "locality": "Tyrone Township",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "term ran to 2026-06-01; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"
+    },
+    {
+      "kind": "expired",
+      "locality": "Sylvan Township",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "term ran to 2026-07-22; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"
+    },
+    {
+      "kind": "expired",
+      "locality": "Lodi Township",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "term ran to 2026-08-02; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"
+    },
+    {
+      "kind": "expired",
+      "locality": "York Township",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "term ran to 2026-08-12; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"
+    },
+    {
+      "kind": "expired",
+      "locality": "Hayes Township",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "term ran to 2026-08-09; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"
+    },
+    {
+      "kind": "expired",
+      "locality": "Aurora",
+      "state": "IL",
+      "status": "Enacted",
+      "detail": "term ran to 2026-03-24; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://abc7chicago.com/post/aurora-city-council-consider-temporary-moratorium-put-pause-development-new-data-centers/17882682/"
+    },
+    {
+      "kind": "dead-link",
+      "locality": "Charlotte",
+      "state": "NC",
+      "status": "Proposed",
+      "detail": "TimeoutError: The read operation timed out \u2014 https://www.charlotteobserver.com/",
+      "source": "https://www.charlotteobserver.com/"
+    },
+    {
+      "kind": "dead-link",
+      "locality": "Lenox Township",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "HTTP 404 \u2014 https://www.lenox-mi.gov/m/newsflash/home/detail/240",
+      "source": "https://www.lenox-mi.gov/m/newsflash/home/detail/240"
+    },
+    {
+      "kind": "dead-link",
+      "locality": "Twinsburg",
+      "state": "OH",
+      "status": "Enacted",
+      "detail": "HTTP 404 \u2014 https://mytwinsburg.com/DocumentCenter/View/11167/2026-065-Establishing-Moratorium-for-Data-Centers",
+      "source": "https://mytwinsburg.com/DocumentCenter/View/11167/2026-065-Establishing-Moratorium-for-Data-Centers"
     },
     {
       "kind": "missing-source",
-      "locality": "Dubuque County",
+      "locality": "Santa Fe County",
+      "state": "NM",
+      "status": "Enacted",
+      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
+      "source": null
+    },
+    {
+      "kind": "missing-source",
+      "locality": "East Fishkill",
+      "state": "NY",
+      "status": "Enacted",
+      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
+      "source": null
+    },
+    {
+      "kind": "missing-source",
+      "locality": "Davie County",
+      "state": "NC",
+      "status": "Enacted",
+      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
+      "source": null
+    },
+    {
+      "kind": "missing-source",
+      "locality": "Nicholasville",
+      "state": "KY",
+      "status": "Enacted",
+      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
+      "source": null
+    },
+    {
+      "kind": "missing-source",
+      "locality": "Plain City",
+      "state": "OH",
+      "status": "Enacted",
+      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
+      "source": null
+    },
+    {
+      "kind": "missing-source",
+      "locality": "Jefferson County",
       "state": "IA",
       "status": "Enacted",
       "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
@@ -27,31 +195,7 @@
     },
     {
       "kind": "missing-source",
-      "locality": "Bloomington",
-      "state": "IL",
-      "status": "Enacted",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Normal",
-      "state": "IL",
-      "status": "Enacted",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Iron County",
-      "state": "UT",
-      "status": "Enacted",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Manitowoc County",
+      "locality": "Bellevue",
       "state": "WI",
       "status": "Enacted",
       "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
@@ -59,31 +203,63 @@
     },
     {
       "kind": "missing-source",
-      "locality": "Meridian Township",
-      "state": "MI",
+      "locality": "Chippewa County",
+      "state": "WI",
       "status": "Enacted",
       "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
       "source": null
     },
     {
       "kind": "missing-source",
-      "locality": "Washington Township (Macomb Co.)",
-      "state": "MI",
+      "locality": "Shawnee County",
+      "state": "KS",
       "status": "Enacted",
       "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
       "source": null
     },
     {
       "kind": "missing-source",
-      "locality": "Peculiar",
-      "state": "MO",
+      "locality": "Mount Vernon",
+      "state": "OH",
       "status": "Enacted",
       "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
       "source": null
     },
     {
       "kind": "missing-source",
-      "locality": "Bangor",
+      "locality": "Hillsboro",
+      "state": "OR",
+      "status": "Enacted",
+      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
+      "source": null
+    },
+    {
+      "kind": "missing-source",
+      "locality": "Red Bank",
+      "state": "NJ",
+      "status": "Enacted",
+      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
+      "source": null
+    },
+    {
+      "kind": "missing-source",
+      "locality": "Asbury Park",
+      "state": "NJ",
+      "status": "Enacted",
+      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
+      "source": null
+    },
+    {
+      "kind": "missing-source",
+      "locality": "Jackson",
+      "state": "MS",
+      "status": "Enacted",
+      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
+      "source": null
+    },
+    {
+      "kind": "missing-source",
+      "locality": "Eastport",
       "state": "ME",
       "status": "Enacted",
       "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
@@ -91,218 +267,250 @@
     },
     {
       "kind": "missing-source",
-      "locality": "Gates County",
-      "state": "NC",
+      "locality": "Garrett County",
+      "state": "MD",
       "status": "Enacted",
       "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
       "source": null
     },
     {
       "kind": "missing-source",
-      "locality": "Brevard",
-      "state": "NC",
+      "locality": "Franklin County",
+      "state": "VA",
       "status": "Enacted",
       "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
       "source": null
     },
     {
-      "kind": "missing-source",
-      "locality": "Clay County",
-      "state": "NC",
+      "kind": "undated-term",
+      "locality": "Yakima County",
+      "state": "WA",
       "status": "Enacted",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.yakimaherald.com/news/local/government/yakima-county-commissioners-pass-six-month-data-center-moratorium/article_997dbbc7-7fe0-476a-9d92-73179f958bf7.html"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Marshall County",
+      "state": "IN",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://wsbt.com/news/local/marshall-county-approves-permanent-ban-on-data-centers-effective-immediately-data-centers-solar-farms-industrial-size-projects-development-county-council-regulations-counties-experts-industries-marshall-county-indiana"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Pinson",
+      "state": "AL",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.trussvilletribune.com/2026/08/07/pinson-council-passes-one-year-moratorium-on-data-centers/"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Fairfield",
+      "state": "AL",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.thecooldown.com/green-tech/patmos-company-proposed-ai-data-center-fairfield-alabama/"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "City of St. Charles",
+      "state": "MO",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.ksdk.com/article/news/politics/st-charles-city-council-votes-7-1-to-effectively-ban-data-centers/63-7c9264ad-1dc5-4c38-853a-1f7cddf9c2ac"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Columbia",
+      "state": "MO",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.columbiamissourian.com/news/local/city-council-approves-data-center-definition-requests-moratorium/article_064eadce-c84e-4bfc-8f9c-b930741b94af.html"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Washington County",
+      "state": "MN",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.startribune.com/minnesota-counties-data-centers/601857833"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Taylor",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Solon Township",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Lenox Township",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.lenox-mi.gov/m/newsflash/home/detail/240"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Mercer County",
+      "state": "KY",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.wkms.org/2026-08-12/a-kentucky-county-passes-a-data-center-moratorium-with-a-city-sized-hole"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Clarke County",
+      "state": "IA",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.radioiowa.com/2026/07/08/eight-iowa-counties-have-moratoriums-on-data-center-development/"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Olyphant",
+      "state": "PA",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.thecentersquare.com/pennsylvania/article_06f92bfc-34c1-430c-9487-375bde5c9415.html"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Painesville Township",
+      "state": "OH",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.thecooldown.com/green-business/painesville-township-ohio-data-center/"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Weathersfield Township",
+      "state": "OH",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.wkbn.com/news/local-news/weathersfield-news/weathersfield-township-trustees-place-moratorium-on-approving-data-center/"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Twinsburg",
+      "state": "OH",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://mytwinsburg.com/DocumentCenter/View/11167/2026-065-Establishing-Moratorium-for-Data-Centers"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Town of Cassville",
+      "state": "WI",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://dailyreporter.com/2026/06/05/wisconsin-counties-impose-moratoriums-on-hyperscale-data-centers/"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Manitowoc County",
+      "state": "WI",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.wpr.org/news/manitowoc-county-board-approves-18-month-data-center-moratorium"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "White County",
+      "state": "IN",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://dailyjournal.net/2025/11/24/3-counties-put-moratoriums-on-data-center-projects/"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Marysville",
+      "state": "WA",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.heraldnet.com/2026/07/15/marysville-initiates-6-month-moratorium-on-data-centers/"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Pasco",
+      "state": "WA",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.datacenterdynamics.com/en/news/council-in-pasco-washington-unanimously-approves-six-month-data-center-moratorium/"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Oregon (enterprise zone tax)",
+      "state": "OR",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.dwt.com/blogs/energy--environmental-law-blog/2026/06/oregon-data-center-tax-break-moratorium"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Chesapeake",
+      "state": "VA",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://virginiabusiness.com/chesapeake-approves-8-month-pause-on-data-center-applications/"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Caroline County",
+      "state": "MD",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.wboc.com/news/caroline-county-commissioners-approve-a-one-year-moratorium-on-new-data-centers/article_e2b4c188-c810-4704-a33a-d95e0e029f28.html"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Dorchester County",
+      "state": "MD",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "http://www.stardem.com/news/data_centers/dorchester-county-council-hopes-to-get-ahead-on-regulating-data-center-proposals/article_af7ff49c-f072-4e08-85e9-1cd10bf1ca33.html"
+    },
+    {
+      "kind": "undated-term",
+      "locality": "Shawnee County",
+      "state": "KS",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
       "source": null
     },
     {
-      "kind": "missing-source",
-      "locality": "Canton",
-      "state": "NC",
+      "kind": "expiring",
+      "locality": "Bangor",
+      "state": "ME",
       "status": "Enacted",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
+      "detail": "ends 2026-10-10 (54.0d) \u2014 watch for an extension",
+      "source": "https://www.wabi.tv/2026/04/14/bangor-passes-180-day-moratorium-data-center-development/"
     },
     {
-      "kind": "missing-source",
-      "locality": "Chatham County",
-      "state": "NC",
-      "status": "Enacted",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
+      "kind": "expiring",
       "locality": "Kings Mountain",
       "state": "NC",
       "status": "Enacted",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Boone",
-      "state": "NC",
-      "status": "Enacted",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Apex",
-      "state": "NC",
-      "status": "Enacted",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Orange County",
-      "state": "NC",
-      "status": "Enacted",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Rowan County",
-      "state": "NC",
-      "status": "Enacted",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Swain County",
-      "state": "NC",
-      "status": "Enacted",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Watauga County",
-      "state": "NC",
-      "status": "Enacted",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Madison County",
-      "state": "NC",
-      "status": "Enacted",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Clyde",
-      "state": "NC",
-      "status": "Enacted",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Charlotte",
-      "state": "NC",
-      "status": "Proposed",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Durham",
-      "state": "NC",
-      "status": "Proposed",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Harnett County",
-      "state": "NC",
-      "status": "Proposed",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Cumberland County",
-      "state": "NC",
-      "status": "Proposed",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Fayetteville",
-      "state": "NC",
-      "status": "Proposed",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Indianapolis",
-      "state": "IN",
-      "status": "Proposed",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Pulaski County",
-      "state": "AR",
-      "status": "Proposed",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Ohio (ballot measure)",
-      "state": "OH",
-      "status": "Rejected",
-      "detail": "no source recorded; renders as unverified. Read the locality's own ordinance or agenda page",
-      "source": null
-    },
-    {
-      "kind": "undated-term",
-      "locality": "Manitowoc County",
-      "state": "WI",
-      "status": "Enacted",
-      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
-      "source": null
-    },
-    {
-      "kind": "undated-term",
-      "locality": "Bangor",
-      "state": "ME",
-      "status": "Enacted",
-      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
-      "source": null
-    },
-    {
-      "kind": "undated-term",
-      "locality": "Boardman",
-      "state": "OH",
-      "status": "Enacted",
-      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
-      "source": "https://www.vindy.com/news/local-news/2026/05/boardman-oks-1-year-data-center-moratorium/"
-    },
-    {
-      "kind": "undated-term",
-      "locality": "Morris",
-      "state": "CT",
-      "status": "Enacted",
-      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
-      "source": "https://municipal-documents.s3.amazonaws.com/uploads/Morris-CT/planning-zoning-commission/documents/generals/153088/Morris%20-%20Moratorium%20Battery%20Energy%20Storage%20Systems%20&%20Data%20Centers.pdf"
+      "detail": "ends 2026-08-25 (8.0d) \u2014 watch for an extension",
+      "source": "https://www.cityofkm.com/AgendaCenter/ViewFile/Minutes/_02242026-934"
     },
     {
       "kind": "expiring",
       "locality": "Cherokee County",
       "state": "GA",
       "status": "Enacted",
-      "detail": "ends 2026-08-21 (11.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-08-21 (4.0d) \u2014 watch for an extension",
       "source": "https://www.atlantanewsfirst.com/2026/07/22/cherokee-county-approves-data-center-moratorium/"
     },
     {
@@ -310,8 +518,64 @@
       "locality": "Augusta",
       "state": "GA",
       "status": "Enacted",
-      "detail": "ends 2026-09-19 (40.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-09-19 (33.0d) \u2014 watch for an extension",
       "source": "https://www.wjbf.com/news/augusta-commissioners-delaying-approval-of-data-center-ordinance-and-extending-moratorium-by-60-days/"
+    },
+    {
+      "kind": "expiring",
+      "locality": "Vienna Township (Trumbull Co.)",
+      "state": "OH",
+      "status": "Enacted",
+      "detail": "ends 2026-10-16 (60.0d) \u2014 watch for an extension",
+      "source": "https://www.tribtoday.com/news/local-news/2026/08/vienna-extends-data-center-moratorium/"
+    },
+    {
+      "kind": "expiring",
+      "locality": "Hogansville",
+      "state": "GA",
+      "status": "Enacted",
+      "detail": "ends 2026-09-01 (15.0d) \u2014 watch for an extension",
+      "source": "https://www.lagrangenews.com/news/hogansville-approves-90-day-moratorium-for-data-centers-9d59b175"
+    },
+    {
+      "kind": "expiring",
+      "locality": "Hall County",
+      "state": "GA",
+      "status": "Enacted",
+      "detail": "ends 2026-08-25 (8.0d) \u2014 watch for an extension",
+      "source": "https://accessnorthga.com/news/hall-co-approves-180-day-moratorium-includes-detention-centers"
+    },
+    {
+      "kind": "expiring",
+      "locality": "Birmingham",
+      "state": "AL",
+      "status": "Enacted",
+      "detail": "ends 2026-09-03 (17.0d) \u2014 watch for an extension",
+      "source": "https://www.wbrc.com/2026/03/04/birmingham-city-council-votes-pause-new-data-center-applications-six-months/"
+    },
+    {
+      "kind": "expiring",
+      "locality": "Wixom",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "ends 2026-09-24 (38.0d) \u2014 watch for an extension",
+      "source": "https://www.wixomgov.org/departments/construction-development-services-building/data-center-moratorium-ordinance"
+    },
+    {
+      "kind": "expiring",
+      "locality": "Vienna Township",
+      "state": "OH",
+      "status": "Enacted",
+      "detail": "ends 2026-10-16 (60.0d) \u2014 watch for an extension",
+      "source": "https://www.tribtoday.com/news/local-news/2026/08/vienna-extends-data-center-moratorium/"
+    },
+    {
+      "kind": "expiring",
+      "locality": "Front Royal",
+      "state": "VA",
+      "status": "Enacted",
+      "detail": "ends 2026-10-04 (48.0d) \u2014 watch for an extension",
+      "source": "https://www.nvdaily.com/nvdaily/council-oks-moratorium-on-data-center-applications/article_8bbfc9ce-d84e-5dd8-a4be-e8f9ee95cc94.html"
     },
     {
       "kind": "blocked",
@@ -331,6 +595,14 @@
     },
     {
       "kind": "blocked",
+      "locality": "Washington Township (Macomb Co.)",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.detroitnews.com/story/news/local/macomb-county/2026/05/23/washington-township-passes-six-month-moratorium-on-data-centers/90213646007/"
+    },
+    {
+      "kind": "blocked",
       "locality": "Lysander (Onondaga Co.)",
       "state": "NY",
       "status": "Enacted",
@@ -344,6 +616,30 @@
       "status": "Enacted",
       "detail": "HTTP 429 (bot-blocked, check by hand)",
       "source": "https://www.dailygazette.com/the_recorder/leader_herald/data-center-moratorium/article_28560f58-b336-4cae-8773-f0a04cd3001b.html"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Tonawanda (Erie Co.)",
+      "state": "NY",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.beenews.com/ken_ton_bee/ken_ton_bee/news/town-adopts-one-year-moratorium-on-data-centers/article_b2afd139-7437-48f8-af10-1787cf849858.html"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Chatham County",
+      "state": "NC",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.chathamcountync.gov/Home/Components/News/News/17295/19"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Clyde",
+      "state": "NC",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.themountaineer.com/"
     },
     {
       "kind": "blocked",
@@ -363,6 +659,14 @@
     },
     {
       "kind": "blocked",
+      "locality": "Boardman",
+      "state": "OH",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.wkbn.com/news/local-news/boardman-news/boardman-places-moratorium-on-data-centers/"
+    },
+    {
+      "kind": "blocked",
       "locality": "Mohawk (Montgomery Co.)",
       "state": "NY",
       "status": "Proposed",
@@ -376,6 +680,110 @@
       "status": "Proposed",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
       "source": "https://www.nysenate.gov/legislation/bills/2025/S10642"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Rochester Hills",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.detroitnews.com/story/news/local/oakland-county/2026/08/11/rochester-hills-extends-data-center-moratorium/91256551007/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Grant County",
+      "state": "IN",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.chronicle-tribune.com/news/commissioners-pass-data-center-moratorium/article_a55a569b-62b5-578c-912e-f183d461f1b9.html"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Hall County",
+      "state": "GA",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://accessnorthga.com/news/hall-co-approves-180-day-moratorium-includes-detention-centers"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Minneapolis",
+      "state": "MN",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.startribune.com/minneapolis-data-centers-moratorium/601846955"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Washington County",
+      "state": "MN",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.startribune.com/minnesota-counties-data-centers/601857833"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Wixom",
+      "state": "MI",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.wixomgov.org/departments/construction-development-services-building/data-center-moratorium-ordinance"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Jessamine County",
+      "state": "KY",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://fox56news.com/news/local/jessamine-county-approves-12-month-data-center-moratorium/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Weathersfield Township",
+      "state": "OH",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.wkbn.com/news/local-news/weathersfield-news/weathersfield-township-trustees-place-moratorium-on-approving-data-center/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Village of Wrightstown",
+      "state": "WI",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.wearegreenbay.com/news/local-news/wrightstown-places-moratorium-on-data-centers/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "White County",
+      "state": "IN",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://dailyjournal.net/2025/11/24/3-counties-put-moratoriums-on-data-center-projects/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Arizona (tax incentives)",
+      "state": "AZ",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://news.bloombergtax.com/daily-tax-report-state/arizona-data-center-tax-incentive-pause-signed-by-governor-hobbs"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Pima County",
+      "state": "AZ",
+      "status": "Proposed",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.tucsonsentinel.com/local/report/081126_pima_data_moratorium/pima-county-moves-forward-possible-data-center-moratorium"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Asheville",
+      "state": "NC",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://mountainx.com/news/local-government/council-approves-one-year-moratorium-on-data-centers/"
     }
   ]
 }

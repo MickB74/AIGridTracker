@@ -153,7 +153,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-08-17",
       "status": "new",
       "origin": "news-scan"
     },
@@ -166,7 +166,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-08-17",
       "status": "new",
       "origin": "news-scan"
     },
@@ -179,7 +179,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-08-17",
       "status": "new",
       "origin": "news-scan"
     },
@@ -742,7 +742,7 @@
       "guess_state": null,
       "query": "data center moratorium extended",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-17",
       "status": "new",
       "origin": "news-scan"
     },
@@ -950,7 +950,7 @@
       "guess_state": null,
       "query": "data center moratorium city council",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-08-17",
       "status": "new",
       "origin": "news-scan"
     },
@@ -1002,7 +1002,7 @@
       "guess_state": null,
       "query": "data center moratorium county commission approved",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-08-17",
       "status": "new",
       "origin": "news-scan"
     },
@@ -1223,7 +1223,7 @@
       "guess_state": null,
       "query": "data center moratorium extended",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-08-17",
       "status": "new",
       "origin": "news-scan"
     },
@@ -1249,7 +1249,7 @@
       "guess_state": null,
       "query": "data center moratorium extended",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-08-17",
       "status": "new",
       "origin": "news-scan"
     },
@@ -1262,7 +1262,7 @@
       "guess_state": null,
       "query": "data center moratorium extended",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-08-17",
       "status": "new",
       "origin": "news-scan"
     },
@@ -4725,6 +4725,71 @@
       "origin": "archive-sweep"
     },
     {
+      "title": "Memphis City Council to Consider Data Center Moratorium",
+      "outlet": "Memphis Flyer",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPcF9JRzRoOTJpOFYzRHFpMGdPak42VkNiazY5T3FqUXE5VTJXQ01uQzZiMHd4NkNkNS15Qmpud3g3d3pFd1ZkLUxMbV9sLTM0SXRuNllReEg0NDdZaWRELTRUUGtQdEh1cG54LXA2cG5DV21CNWFfbkpodG1sdm80eDlvRTNPREREY2hDZDl3?oc=5",
+      "published": "Mon, 17 Aug 2026",
+      "guess_locality": "Memphis",
+      "guess_state": null,
+      "query": "data center moratorium city council",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Johnson Calls for Temporary Moratorium on Data Centers",
+      "outlet": "WTTW",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPeE9qZ3lBcjB0S1lrckVrQ3F2Y3czMWxCTkI2S0hDYUhjTXNUM1R5cGJGVEdjaFhjXzNQT2FBd0xlaWVza2s2NnpFY1JEZ080YXpRdW51ZVlHNk9fMFYtcTNIZkV5VTFCRHc1Y2tZNU5hVEprYk5vTEtrZ1dka3pibXJ2MXNfMFk?oc=5",
+      "published": "Tue, 11 Aug 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium city council",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Foley Considers Temporary Moratorium on High-Demand Data Centers and Crypto Facilities",
+      "outlet": "OBA News",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxObzM5ZHdFOEgwc0JUeWMzbWktUHJGRlhUeGNYSGM1SEpGa0xKV3hNX1hsZzRYaVJsQms1RUZNa2xNNUc3QlJvQlZGV09xN2tqVnJ6Tzd2NVJxNGZNSnFlYVdGVTBvTUpzb0JtcVdLaEZRZnJWMF9yYjAxeGJhY2F6RGhwa2dRRHlGVUJtZmhYMUxRWnl4c3VYWmJGVXBWVEdKQmZkWjZoeGduelo2czZ0TjU2RQ?oc=5",
+      "published": "Mon, 17 Aug 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium city council",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Knox Co. Zoning Commission approves recommendation of one-year moratorium on data centers",
+      "outlet": "WVLT",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNeGFSYjdNbTZUQWo1NHdmcUppT2tRU1dDOEVVWmJMS2QxT09NUFo2Y3BxX1JaNzk5YU5tMFlMNGthZ0NSSk9FVWsxSFVKOUFZQlFCQ3g5T2JncG1VbnozU3JOUzRFcEZCYVNUSXdCWEt6MGpXcXQ3T2FIYTFqbGxnZmNkcDRuRjdaZWlTaG1oZXVfWkhCdmdpQy1TZHBvdGI0bmQ0SURURjNPN3F1V2NJbXZidVY?oc=5",
+      "published": "Thu, 13 Aug 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium county commission approved",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Knox Co. Zoning Commission approves recommendation of one-year moratorium on data centers",
+      "outlet": "WVLT",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPU1hsUXR5U0RQMWtINklCTk1Pellpb0pfSWVudVFMVWVUa2lFTGFVT0lSXzFMa201WGd2QTg0WWwtQV9pRWNnZ0h3WWozUFRwOWtHZkIyQzY3Qnlxcm1VeGlYU2FTWnNZX0xVYnZOaHA5R2R4Y0NzblVzRHNXYVk0Um1Nc056VWc0YkJ1VnFSVVBIN05vekJyS2NqRUhEQ1B5R2MyWWZEZjdzbV82M0k0a2FzcVl0SUNQdnlFVA?oc=5",
+      "published": "Fri, 14 Aug 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium county commission approved",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
       "title": "Salem City Council votes in favor on moratorium on AI data centers",
       "outlet": "Statesman Journal",
       "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQUDRnWTh3UDV6YjZFdVFOR09LOVJsdVlFYmRSd3NMcV9KdFRDbU1qc2dzSHN3UnVrcXktM1FmY1QtTlpkR21oN0stSEZCbGpTNzdmU2pERkxfVXhObU9XRllEYVdWZzVSOVk5bG9HSG9TRVdsbndpR1ZNeW5qQ20xcEtzc3lGVVhHNkh1MHBpWTluV253cjRmR29JZExWR0pPLUFDOEFUUDJHREE1MTh6aTF4bG1VVkVBVlBFbW54ajZpaU5OWFQ0YU9kYkVHbVpEZmFrSnE3NA?oc=5",
@@ -5058,7 +5123,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-08-17",
       "status": "promoted",
       "origin": "news-scan"
     },
@@ -5149,7 +5214,7 @@
       "guess_state": null,
       "query": "data center moratorium extended",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-08-17",
       "status": "promoted",
       "origin": "news-scan"
     },

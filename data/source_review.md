@@ -1,5 +1,8 @@
 # SOURCES review queue
-_Generated 2026-08-10 · 146 keys_
+_Generated 2026-08-17 · 149 keys_
+
+## dead (1)
+- **`nuisance_law`** — URLError: <urlopen error timed out> · <https://windhamlaw.com/what-damages-can-you-recover-in-a-data-center-nuisance-lawsuit/>
 
 ## flaky (4)
 - **`eia930`** — HTTP 503 — transient, recheck before touching it · <https://www.eia.gov/opendata/browser/electricity/rto/fuel-type-data>
