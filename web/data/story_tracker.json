@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 1795,
+  "count": 1802,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -8982,7 +8982,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-16"
+      "last_seen": "2026-08-17"
     },
     {
       "title": "Marshalltown city council passes first reading of data center moratorium",
@@ -10929,7 +10929,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-16"
+      "last_seen": "2026-08-17"
     },
     {
       "title": "Virginia Data Center Expansion: Skanska Secures $238M Contract for Second Campus Building",
@@ -10962,7 +10962,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-14"
+      "last_seen": "2026-08-17"
     },
     {
       "title": "Virginia clinics see black lung surge in coal miners",
@@ -17683,7 +17683,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-16"
+      "last_seen": "2026-08-17"
     },
     {
       "title": "Mystery on the Jersey Shore: nearly 30 dead sharks wash up in New Jersey",
@@ -18178,7 +18178,7 @@
       "locality": "Memphis",
       "state": "TN",
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16"
+      "last_seen": "2026-08-17"
     },
     {
       "title": "Hillsborough County to draft large-scale data center ban",
@@ -18244,7 +18244,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16"
+      "last_seen": "2026-08-17"
     },
     {
       "title": "Supply challenges boost value of existing data centers, enterprise deployments: JLL, Morningstar",
@@ -19751,6 +19751,83 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-08-13",
+      "last_seen": "2026-08-17"
+    },
+    {
+      "title": "U.Va.’s planned data center expands $30 million amid statewide debate over energy use",
+      "outlet": "The Cavalier Daily",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPWnZtdWlsMlRWTi11R2JPOU0yRzNaeFI1QzljQy1oMWtKX3lOWFlqa2xRZ1B0YUh1LUZGYmVuVExfVjQ0TjY1Z1JVRVk5TC1vRUE5QW5zZXQxWjF4cUw5VmtnS3ZpTHlWbndyd1BudWxzMVAtMDl3UUc5RHNnUnVWUWdhekhTbEdOSUo2VXZ5X214VEhVT1hsWTB2Q0V1Nk04NW9vVWFFWWlMNTNOdTl2LW5iR1hhS2Y4REowcUtrOGRMYTRpeVE?oc=5",
+      "published": "Mon, 17 Aug 2026 03:16:15 GMT",
+      "published_iso": "2026-08-17T03:16:15+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17"
+    },
+    {
+      "title": "Land Banking Explained: A Novel Strategy for Data Center Expansion",
+      "outlet": "Data Center Knowledge",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQeG1QdDlCaEQtZG90VnAwWFppRG9uRXV2aXJHNEpIMnJXdTNpTEJxUGxkVlFvUjRoQ2NOWTFUODNEYXlSY3NpbkhKY2owVUdZUUNOV0MweXFrRUo3M3JCOTR5NTFJdjM5ZkFUWnd2VkZ1UkM2Mk1uZE5mZmt4bEJwVTZHWHJBSzBRaDdDcEx0QklEZEw5aTlJR2pBUXduNFgzbjV1MktKZXI1QVh5MW5vTUhzMVFNVHl5TEV0MVZiY19TTThVUUpZ?oc=5",
+      "published": "Fri, 14 Aug 2026 17:53:33 GMT",
+      "published_iso": "2026-08-14T17:53:33+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-17"
+    },
+    {
+      "title": "Georgia welcomed a booming industry. Now some communities want it slowed down",
+      "outlet": "Syracuse.com",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQSTFQNlJydm1ld2Q5OUtqMlBtVUdSeGVvTFEtWkVSQVBIRmpDZmNTVGxBVHd3bFhTdDRZWlQ0WDk1MkhYNzJsNmtza2RYY2RJNW5heXVzVzA4dlZUUU1XRGJhTnJQTHNNNFFPSjUtTGlWX1FTbmFRM2lWb3VZZURqV1Y2SElDY1ROd0c2Szd4WmFWLXBQalVveC01UWl4V0kteGswUEluMHZKT09seU1pa19zVXRjLUU0VF9QSjZTMNIB0wFBVV95cUxOQXBuRmVaMGs0SHhxSzJpREdjb3RMbjZhcEF5QWZsSThvcFB4ZS1KMC1wRk5yMGJKaWxxbUVlUDcza0xrRFYxSXJmelF2aVlIb3hLQVRXQ3F5Ym56ejh0ZVVXN01OUS1xRFhmUUJoZ2Rva0JwVE1Sai1aTS1vQ0ZHY2FPN0g1TFlCUFR3cHg0ZEJvSjFWYWh1em01N0R5akVlUFhIUnRzem8wX0N0UWR3QTU0QWI4bU1WQS1lNEo0SUoybWVDbVlYd3h2ZDJHdy1tYV80?oc=5",
+      "published": "Wed, 12 Aug 2026 10:47:39 GMT",
+      "published_iso": "2026-08-12T10:47:39+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-17"
+    },
+    {
+      "title": "Environment Groups Sue EPA Over Two Semiconductor Chemicals",
+      "outlet": "benzinga.com",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQOEp0OW1sbzlZbGhlak9sbFhJc0hfRmlETHJWVm1kT3VNdHBnbHh5RWZQNWFuQkR4TFJEdy1zR1dLQXRKcm95V2hiN3c3YmsxdHJsOEJTWHRSWnZZOWtxQjFWVzEwWVhhcnZnT1JicWVPV3YwRXFjUExyQko3Q0tQLXVJaXNhaGdIUVFST2NITDVsZ2lqTVFsTGx3YXJCTUpYWnJPcmMtS0Zib3BEVWhWQlV5ajFQRXpaVnlmdQ?oc=5",
+      "published": "Sat, 15 Aug 2026 07:50:27 GMT",
+      "published_iso": "2026-08-15T07:50:27+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-17"
+    },
+    {
+      "title": "Data center backlash echoes fossil-fuel politics",
+      "outlet": "Axios",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1xMC1BLUlVc0YyR2kzRlhMc1FaSUpQUGhSLURUTWdWU2JUcHhnQWNZWTlybFR0NWRPSlpyeUgzbUxBc25Hc24tSUpreHZEbVREakNnWTV5amxBcjFRd0dZeDVvaVRBWnBqNG5McFJsYnpWT3hxZVVNWjh4Q2JhSGs?oc=5",
+      "published": "Fri, 14 Aug 2026 09:18:04 GMT",
+      "published_iso": "2026-08-14T09:18:04+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-17"
+    },
+    {
+      "title": "Rural Texas conservatives love free markets but not when it comes to data centers",
+      "outlet": "Macomb Daily",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPSnhTbjZIMF9WdTBSTlVycG14cHlJX0s0Y0ZkZWNpUFNtc0Q3dU4yeXl0dnV4b0kwWWZQRmVFdnNCZm5BYjhaZFVoMGdOdVdXOWEtZWNFWk5oMHFSOTJtWFpSVmpoRmtfUlZySE9MTG9PX3Fub0JtWEsxWFF3OVdQSFljQkszblREU0RjYjUwNlJDVXRWeTl0VjlNWkt4eFY5TmxiVUxmNGhBeGZQbTRxSHJqa3U3Wlg1b1NOcFV3?oc=5",
+      "published": "Sun, 16 Aug 2026 11:20:44 GMT",
+      "published_iso": "2026-08-16T11:20:44+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-17"
+    },
+    {
+      "title": "Give Texas your tired, your poor, your unwanted AI data centers | Thumbs",
+      "outlet": "Houston Chronicle",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQTzRWSm9YLTlZamZpZVc1bDQ4QTliWkZNdzdYUEJ3NlNPSzRhOW1KUjZEWUsxNnNyWHZJNzBWT01NWjQwR0RJUmxLREpWWkxaYWNQc2FTa3c1UDUzOUc5NzQ1dlkwWkE4WkVHLXVvb21IZkVwVHZ0TDhQNnh5dmhDcHVabWE5aDJEb3FfbVIzSHN0UTY5NGl2NnJ2S0RBam9RLXlSeg?oc=5",
+      "published": "Sat, 15 Aug 2026 12:03:01 GMT",
+      "published_iso": "2026-08-15T12:03:01+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-15",
       "last_seen": "2026-08-17"
     }
   ]
