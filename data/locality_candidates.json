@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-16",
+  "updated": "2026-08-17",
   "candidates": [
     {
       "name": "Ida",
@@ -38,7 +38,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -58,7 +58,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -78,7 +78,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -98,7 +98,27 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
+      "status": "new"
+    },
+    {
+      "name": "Moffat",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Moffat County commissioners discuss data center moratorium, address transparency questions",
+          "outlet": "Steamboat Pilot",
+          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZXFMMndmRzZ2SlFSdXdhUXZyZms1MkR1Z2pueW84NzkyZTFpZnAtQzBOcmFBbWdQS0NTM3o2ZjQtRzN6WHRxaDZpSzIwVFJQMUw3VHd6RnM5d2lXcXB5QkI4VmQ2Y2Vmenl0dFRyVXB0U3dwLXF0dXhVaEM4QzJoRGpSWWxVNkNpMkRHdzZtS3VtdDNjZ1dfcHV1SVJmWnNzS2RyUjFrdDNrQXJMMXJQUGRXUklZS2lvcDdBRmFGQW1rTFFw?oc=5"
+        },
+        {
+          "title": "Moffat County commissioners discuss data center moratorium, address transparency questions",
+          "outlet": "CraigDailyPress.com",
+          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOWWFDd1FYeWVkTXM4WGRIUkVHZmRGWnN4LW9XMDdjYUVOcHBuTHlGbDRrbjljOW5fVVlpaGVnSVJ1X3R5TXJKVGw4b0hfd2Z4UTNZNVVTMUFMR0VYaHJxY0g4NTIwUmY0d3FQZThwazlsUXZkaEtnYWRrT0FaNGNkVmxvVFhtb1NreTM0VG8zaC1fVnFpejlJUDBwMkpIbzFGM1c2NmUza19ZTnZwdllVdTZaczJPZlRsWS0ySkwzTURUSHlsdUE?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -128,7 +148,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -143,7 +163,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -158,7 +178,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -173,7 +193,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -188,22 +208,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
-      "status": "new"
-    },
-    {
-      "name": "Moffat",
-      "count": 1,
-      "examples": [
-        {
-          "title": "Moffat County commissioners discuss data center moratorium, address transparency questions",
-          "outlet": "Steamboat Pilot",
-          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZXFMMndmRzZ2SlFSdXdhUXZyZms1MkR1Z2pueW84NzkyZTFpZnAtQzBOcmFBbWdQS0NTM3o2ZjQtRzN6WHRxaDZpSzIwVFJQMUw3VHd6RnM5d2lXcXB5QkI4VmQ2Y2Vmenl0dFRyVXB0U3dwLXF0dXhVaEM4QzJoRGpSWWxVNkNpMkRHdzZtS3VtdDNjZ1dfcHV1SVJmWnNzS2RyUjFrdDNrQXJMMXJQUGRXUklZS2lvcDdBRmFGQW1rTFFw?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -218,7 +223,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -233,7 +238,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -248,7 +253,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -263,7 +268,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -278,7 +283,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -293,7 +298,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -308,7 +313,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -323,7 +328,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -338,7 +343,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -353,7 +358,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -368,7 +373,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -383,7 +388,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -398,7 +403,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -413,7 +418,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -428,7 +433,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -443,7 +448,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -458,7 +463,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -473,7 +478,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -488,7 +493,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -503,7 +508,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -518,7 +523,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -533,7 +538,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -548,7 +553,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -563,7 +568,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -578,7 +583,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -593,7 +598,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -608,7 +613,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -623,7 +628,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -638,7 +643,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -653,7 +658,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -668,7 +673,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -683,7 +688,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -698,7 +703,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -713,7 +718,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -728,7 +733,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -743,7 +748,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -758,7 +763,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -773,7 +778,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -788,7 +793,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -803,7 +808,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -818,7 +823,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -833,7 +838,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -848,7 +853,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -863,7 +868,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -878,7 +883,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -893,7 +898,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -908,7 +913,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "new"
     },
     {
@@ -1327,7 +1332,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "status": "dismissed",
       "dismiss_reason": "Already tracked in LOCAL_BODIES_DF as Allegheny County, PA"
     },
