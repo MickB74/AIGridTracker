@@ -84,6 +84,7 @@ APP_URL = os.environ.get("APP_URL", "https://aigridtracker.streamlit.app")
 # rendered; the footer falls back to linking the app's signup instead, so an
 # unconfigured build never ships a broken form.
 FORMSPREE_ID = os.environ.get("FORMSPREE_ID", "")
+FORMSPREE_SUBMIT_ID = os.environ.get("FORMSPREE_SUBMIT_ID", "xdenpwor")
 
 # Third-party existing-facility directory (SOURCES["datacentermap"]). State
 # slugs match slugify(state) for all 51 US entries.
@@ -355,6 +356,22 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .nl-form button { background:var(--teal); color:#04211c; border:0;
   border-radius:8px; padding:9px 18px; font-weight:700; font-size:14px;
   cursor:pointer; }
+.submit-box { background:var(--card); border:1px solid var(--rule);
+  border-radius:12px; padding:20px 22px; margin-top:16px; }
+.submit-box label { display:block; font-size:14px; color:var(--ink);
+  font-weight:600; margin-bottom:4px; margin-top:12px; }
+.submit-box label:first-child { margin-top:0; }
+.submit-box input, .submit-box select, .submit-box textarea {
+  width:100%; box-sizing:border-box; background:var(--bg); color:var(--ink);
+  border:1px solid var(--rule); border-radius:8px; padding:9px 12px;
+  font-size:14px; font-family:inherit; }
+.submit-box textarea { min-height:70px; resize:vertical; }
+.submit-box .row2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media (max-width:520px){ .submit-box .row2 { grid-template-columns:1fr; } }
+.submit-box button { background:var(--teal); color:#04211c; border:0;
+  border-radius:8px; padding:11px 22px; font-weight:700; font-size:15px;
+  cursor:pointer; margin-top:16px; }
+.submit-box .hint { font-size:12px; color:var(--muted); margin-top:3px; }
 .statelist { columns:2; font-size:14.5px; }
 @media (min-width:640px){ .statelist{ columns:4; } }
 .statelist a { display:block; padding:3px 0; text-decoration:none; }
@@ -6983,6 +7000,77 @@ def _state_href(abbrev):
     return f"states/{slugify(row.iloc[0]['state'])}.html"
 
 
+def _project_submit_form():
+    """Inline form for community-submitted project leads.
+
+    With FORMSPREE_SUBMIT_ID set, renders a Formspree POST form. Without it,
+    returns an empty string — the email CTA above it is always present.
+    """
+    if not FORMSPREE_SUBMIT_ID:
+        return ""
+    state_options = "".join(
+        f'<option value="{esc(name)}">{esc(name)}</option>'
+        for name, _ in _STATE_LIST)
+    return f"""<div class="submit-box">
+  <form action="https://formspree.io/f/{FORMSPREE_SUBMIT_ID}" method="POST">
+    <input type="hidden" name="_subject" value="Project submission via GridWatch">
+    <input type="hidden" name="source" value="projects-page">
+    <div class="row2">
+      <div>
+        <label for="sub-state">State</label>
+        <select id="sub-state" name="state" required>
+          <option value="">Select state&hellip;</option>{state_options}
+        </select>
+      </div>
+      <div>
+        <label for="sub-locality">City / county</label>
+        <input id="sub-locality" name="locality" required
+               placeholder="e.g. Loudoun County">
+      </div>
+    </div>
+    <label for="sub-desc">What's happening?</label>
+    <textarea id="sub-desc" name="description" required
+              placeholder="What do you know about this project? Developer name, size, proposed site, zoning status&hellip;"></textarea>
+    <label for="sub-source">Link to source</label>
+    <input id="sub-source" name="source_url" type="url"
+           placeholder="County agenda, news article, or planning document URL">
+    <p class="hint">A link helps us verify faster. County agendas and local
+    news articles work best.</p>
+    <div class="row2">
+      <div>
+        <label for="sub-stage">Stage (if you know)</label>
+        <select id="sub-stage" name="stage">
+          <option value="">Not sure</option>
+          <option value="Rumored">Rumored</option>
+          <option value="Proposed">Proposed / filed</option>
+          <option value="In review">In review</option>
+          <option value="Hearing scheduled">Hearing scheduled</option>
+          <option value="Awaiting decision">Awaiting decision</option>
+          <option value="Approved">Approved</option>
+          <option value="Denied">Denied</option>
+          <option value="Withdrawn">Withdrawn</option>
+        </select>
+      </div>
+      <div>
+        <label for="sub-email">Your email</label>
+        <input id="sub-email" name="email" type="email"
+               placeholder="Optional — so we can follow up">
+      </div>
+    </div>
+    <button type="submit">Submit project lead</button>
+  </form>
+  <script>
+  (function(){{{{
+    var f=document.querySelector('.submit-box form');
+    if(f) f.addEventListener('submit',function(){{{{
+      var st=f.querySelector('[name=state]');
+      if(typeof gwevent==='function') gwevent('project-submit/'+(st?st.value:'unknown'));
+    }}}});
+  }}}})();
+  </script>
+</div>"""
+
+
 def build_projects():
     """Identified-project tracker — web/projects.html.
 
@@ -7111,6 +7199,7 @@ def build_projects():
   <div class="stat"><b>{verified}/{total}</b><span>source-verified</span></div>
 </div>
 {map_html}
+{"" if not FORMSPREE_SUBMIT_ID else '<div class="note info" style="margin:0 0 16px"><p><strong>Know a project we are missing?</strong> <a href="#submit">Report it &rarr;</a></p></div>'}
 {hearings_html}
 <section>
   <h2>All tracked projects</h2>
@@ -7179,17 +7268,17 @@ def build_projects():
     CSV can't hold.</p>
   </details>
 </section>
-<section>
-  <h2>How this list is built — and how to add to it</h2>
+<section id="submit">
+  <h2>Report a project near you</h2>
   <p>A weekly scan of local news and known megaprojects surfaces leads into a
   review queue; a human reads the governing body's own agenda or the reporting
   before anything lands here, which is where each row's source and date come
   from. That means this is a working set, not a census — most of the country's
   activity isn't in here yet.</p>
-  <p><strong>Know a project we're missing?</strong> Email the locality, a link
-  to the county agenda or the reporting, and what stage it's at to
-  <a href="mailto:hello@aigridwatch.com?subject=Project%20to%20track">hello@aigridwatch.com</a>
-  and we'll verify and add it.</p>
+  <p><strong>Know a project we are missing?</strong> Tell us about it below and
+  we'll verify and add it. Alternatively, email
+  <a href="mailto:hello@aigridwatch.com?subject=Project%20to%20track">hello@aigridwatch.com</a>.</p>
+  {_project_submit_form()}
 </section>
 <section>
   <h2>Facing one of these?</h2>
