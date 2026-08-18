@@ -191,6 +191,22 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .nl-form button { background:var(--teal); color:#04211c; border:0;
   border-radius:8px; padding:9px 18px; font-weight:700; font-size:14px;
   cursor:pointer; }
+.submit-box { background:var(--card); border:1px solid var(--rule);
+  border-radius:12px; padding:20px 22px; margin-top:16px; }
+.submit-box label { display:block; font-size:14px; color:var(--ink);
+  font-weight:600; margin-bottom:4px; margin-top:12px; }
+.submit-box label:first-child { margin-top:0; }
+.submit-box input, .submit-box select, .submit-box textarea {
+  width:100%; box-sizing:border-box; background:var(--bg); color:var(--ink);
+  border:1px solid var(--rule); border-radius:8px; padding:9px 12px;
+  font-size:14px; font-family:inherit; }
+.submit-box textarea { min-height:70px; resize:vertical; }
+.submit-box .row2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media (max-width:520px){ .submit-box .row2 { grid-template-columns:1fr; } }
+.submit-box button { background:var(--teal); color:#04211c; border:0;
+  border-radius:8px; padding:11px 22px; font-weight:700; font-size:15px;
+  cursor:pointer; margin-top:16px; }
+.submit-box .hint { font-size:12px; color:var(--muted); margin-top:3px; }
 .statelist { columns:2; font-size:14.5px; }
 @media (min-width:640px){ .statelist{ columns:4; } }
 .statelist a { display:block; padding:3px 0; text-decoration:none; }
@@ -467,12 +483,12 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <section><h2>Every data center already built in New Jersey</h2><p>The campuses above are the ones GridWatch tracks by operator and filing LLC. For the full inventory — street addresses of every existing facility, including the smaller colocation and network sites — DataCenterMap keeps a public directory for New Jersey.</p><p><a class="btn ghost" href="https://www.datacentermap.com/usa/new-jersey/" rel="nofollow noopener">Browse the New Jersey directory &rarr;</a></p><p class="muted">Two caveats before you cite it at a hearing: it lists facilities that already exist, so a newly proposed campus will not appear; and it counts a small network room the same as a hyperscale campus, so the facility count is not a measure of power draw or community impact.</p></section>
 
 
-<section><h2>Latest New Jersey data center news</h2><ul class="blog-list"><li><div class="post-meta">ElectricChoice.com · Aug 12, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9acDEzM3A0SWNlUWl6NjN3UXUyZkxpRE9hZ3BtNVJkMUZ2M2dyVWkyQ0RESC1OLWZHY2oxYzlXMW1vSHdXUjNHWjZIMmNLRjhtU2d4dk53?oc=5" rel="nofollow noopener" target="_blank">US Data Center Power Consumption by State (2026)</a></h3></li>
+<section><h2>Latest New Jersey data center news</h2><ul class="blog-list"><li><div class="post-meta">Two River Times · Aug 17, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxOMDB4aVB4N1E0ajNRM3J5VjZIMXRpbkhacnF4eEdnZmNSWllsN04tRmx6eWVGVHNGaEFlRFhIcjdyUjJPRHFiZ1Z5Qk83SmpmMEhCMFZ4d3FPLWlJekxPcVRzR0RxRTlnXzZtMGhIdDhoYUxkUDdrSGJENEE4VWItR1FkQXU4X0dGMEo3clBHZ3BnS2h1eTVEanZNYUxvVVRqWDV3?oc=5" rel="nofollow noopener" target="_blank">New Jersey Needs a Statewide Strategy for Data Centers – Before It’s Too Late</a></h3></li>
 <li><div class="post-meta">The Jersey Vindicator · Aug 14, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPSWhPOW9Tb3NiMkNwY0F0X2IxNDZrcTNGWXVqUUlIUk9scWJLN2ljSTdEVkVXTjBpTnMzdUdxaGlGdFhESDBsTWRUTmt6d3l0ZWo4REUzRXlLdy12aWRKcnk5ME01VWN3NVZSVW9fN2E1VUhqcVBzc2pUVXZidG9OemJn?oc=5" rel="nofollow noopener" target="_blank">Bayonne says no to new data centers</a></h3></li>
-<li><div class="post-meta">Two River Times · Aug 17, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxOMDB4aVB4N1E0ajNRM3J5VjZIMXRpbkhacnF4eEdnZmNSWllsN04tRmx6eWVGVHNGaEFlRFhIcjdyUjJPRHFiZ1Z5Qk83SmpmMEhCMFZ4d3FPLWlJekxPcVRzR0RxRTlnXzZtMGhIdDhoYUxkUDdrSGJENEE4VWItR1FkQXU4X0dGMEo3clBHZ3BnS2h1eTVEanZNYUxvVVRqWDV3?oc=5" rel="nofollow noopener" target="_blank">New Jersey Needs a Statewide Strategy for Data Centers – Before It’s Too Late</a></h3></li>
 <li><div class="post-meta">New Jersey Hills Media Group · Aug 14, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxQbEdacFNNY0JNbzMxYUd4eUcxV0xEYlFVdG1nd0VTZ2xKbkYzRTZmaUI4ODVsaXA1ZVFrRG56eXVJaW9mMzdfRmpkR2d3Z3pfcE5pTXBFTl81VjVkZW5sOGVkT1QtOWdsUGlobzZva1puUXlVQ1BvWVlMcFZGMWp4WUtjRldLamZ6cUNsS0R0YTNpQVlGYXhfQkJBRERmNDluRjV0dks4cmJRYWxRYWFwaVA3XzI5YXdxUHEydWNhaExZc1hOeW5HS1gyazJ3NG8zZGNXZzhSbkZzcWM1YVVOTzg1a2llenItX0pxZjl2NEFPcTVtZkh3ag?oc=5" rel="nofollow noopener" target="_blank">Parsippany has a data center, but not the kind making headlines</a></h3></li>
-<li><div class="post-meta">fuelcellsworks.com · Aug 17, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxQWWFsaW5nbkFfdmhjRmFDRTNibGdIeFhFampmYmJUVDF6aXA1VUxiem5oS3YtM0xrTE1DdmZRMk1lQlNiRmNLSUZzM2Zfa3UtRTA2MlVqZlo1bm9mNjBEWjJTcnFndFpQSlhfNjctUEJ0MDQzUzN1VldwTTl1ZFc0VkN2cGIwWVd5YnRJdVNXa1FRSUNBQUlJRWlkX3dGd01xNmFBaFZHZDFFdnJvQ2FKTlpkMmF3cXJzTEg2ckNwZ1ZORkFHU0pydVkwZmNTOFJqVHc?oc=5" rel="nofollow noopener" target="_blank">Nebius Switches to Bloom Fuel Cells for NJ AI Data Center</a></h3></li>
-<li><div class="post-meta">Insider NJ · Aug 14, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPMkNuS2Jlb1ByMlBIS1pCUzZFcWhwS0lndUNOUUNKV01XTXFqdUFGWkdQTTM0TVVfYU9WU0JYODA2a3R6WThsNE5RY2lHZEZYSFFacjljU09UUHoyOF91eklkMEJIZVZMTjR0eVJyd3ptbzc5NjlFcjhXSlhfRjBORmotbzlGYU8xSDhaMGFTbDJpMG4yb01RcTIxRkpPQUdPMnoxX0Z2NFZsaWlnZDZZWTFDZG9MaUpL?oc=5" rel="nofollow noopener" target="_blank">Bayonne Bans Data Centers After Months of Pressure from Residents and Grassroots Activists</a></h3></li></ul><p><a class="btn ghost" href="../news/?state=New Jersey">All New Jersey news &rarr;</a> <a class="btn ghost" href="https://news.google.com/search?q=%22New%20Jersey%22%20data%20center" rel="nofollow noopener" target="_blank">Live news search &rarr;</a></p></section>
+<li><div class="post-meta">Fuel Cells Works · Aug 17, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxQWWFsaW5nbkFfdmhjRmFDRTNibGdIeFhFampmYmJUVDF6aXA1VUxiem5oS3YtM0xrTE1DdmZRMk1lQlNiRmNLSUZzM2Zfa3UtRTA2MlVqZlo1bm9mNjBEWjJTcnFndFpQSlhfNjctUEJ0MDQzUzN1VldwTTl1ZFc0VkN2cGIwWVd5YnRJdVNXa1FRSUNBQUlJRWlkX3dGd01xNmFBaFZHZDFFdnJvQ2FKTlpkMmF3cXJzTEg2ckNwZ1ZORkFHU0pydVkwZmNTOFJqVHc?oc=5" rel="nofollow noopener" target="_blank">Nebius Switches to Bloom Fuel Cells for NJ AI Data Center</a></h3></li>
+<li><div class="post-meta">Insider NJ · Aug 14, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPMkNuS2Jlb1ByMlBIS1pCUzZFcWhwS0lndUNOUUNKV01XTXFqdUFGWkdQTTM0TVVfYU9WU0JYODA2a3R6WThsNE5RY2lHZEZYSFFacjljU09UUHoyOF91eklkMEJIZVZMTjR0eVJyd3ptbzc5NjlFcjhXSlhfRjBORmotbzlGYU8xSDhaMGFTbDJpMG4yb01RcTIxRkpPQUdPMnoxX0Z2NFZsaWlnZDZZWTFDZG9MaUpL?oc=5" rel="nofollow noopener" target="_blank">Bayonne Bans Data Centers After Months of Pressure from Residents and Grassroots Activists</a></h3></li>
+<li><div class="post-meta">hntrbrk.com · Aug 13, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE96RG40Y2RRN2wxVmxIcDh1S2N2S3hDUFNNNFZXSGZ2NnBvaHJMU00zOGpUU2dxRjJLQlpBX2hIbS05RlI0dkN0R0xvTlNTRVR4Skd3bw?oc=5" rel="nofollow noopener" target="_blank">Nebius Said Vineland &quot;On Track&quot; Days After Stop-Work Orders</a></h3></li></ul><p><a class="btn ghost" href="../news/?state=New Jersey">All New Jersey news &rarr;</a> <a class="btn ghost" href="https://news.google.com/search?q=%22New%20Jersey%22%20data%20center" rel="nofollow noopener" target="_blank">Live news search &rarr;</a></p></section>
 
 <p class="muted" style="margin-top:16px">State municipal league: <a href="https://www.njlm.org/">New Jersey State League of Municipalities</a></p>
 <section>

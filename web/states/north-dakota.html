@@ -191,6 +191,22 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .nl-form button { background:var(--teal); color:#04211c; border:0;
   border-radius:8px; padding:9px 18px; font-weight:700; font-size:14px;
   cursor:pointer; }
+.submit-box { background:var(--card); border:1px solid var(--rule);
+  border-radius:12px; padding:20px 22px; margin-top:16px; }
+.submit-box label { display:block; font-size:14px; color:var(--ink);
+  font-weight:600; margin-bottom:4px; margin-top:12px; }
+.submit-box label:first-child { margin-top:0; }
+.submit-box input, .submit-box select, .submit-box textarea {
+  width:100%; box-sizing:border-box; background:var(--bg); color:var(--ink);
+  border:1px solid var(--rule); border-radius:8px; padding:9px 12px;
+  font-size:14px; font-family:inherit; }
+.submit-box textarea { min-height:70px; resize:vertical; }
+.submit-box .row2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media (max-width:520px){ .submit-box .row2 { grid-template-columns:1fr; } }
+.submit-box button { background:var(--teal); color:#04211c; border:0;
+  border-radius:8px; padding:11px 22px; font-weight:700; font-size:15px;
+  cursor:pointer; margin-top:16px; }
+.submit-box .hint { font-size:12px; color:var(--muted); margin-top:3px; }
 .statelist { columns:2; font-size:14.5px; }
 @media (min-width:640px){ .statelist{ columns:4; } }
 .statelist a { display:block; padding:3px 0; text-decoration:none; }
@@ -446,7 +462,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <section><h2>Every data center already built in North Dakota</h2><p>GridWatch does not yet track a named hyperscale campus in North Dakota, but that does not mean the state has none. DataCenterMap keeps a public directory of existing facilities — street addresses included — for North Dakota.</p><p><a class="btn ghost" href="https://www.datacentermap.com/usa/north-dakota/" rel="nofollow noopener">Browse the North Dakota directory &rarr;</a></p><p class="muted">Two caveats before you cite it at a hearing: it lists facilities that already exist, so a newly proposed campus will not appear; and it counts a small network room the same as a hyperscale campus, so the facility count is not a measure of power draw or community impact.</p></section>
 
 
-<section><h2>Latest North Dakota data center news</h2><ul class="blog-list"><li><div class="post-meta">North Dakota Monitor · Aug 18, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxNRU5HMHhHSDJEa1IzRExjWHN0VHpyYWZJME40Q0xEMHVrdVhidUlONVlONVZ4TUlfdGoxbnlmanpfUkVIZkY1aXJBWjdsVjNNMktjamZ1RnFaSl9jZjVPREpEc2dhd0tWTS1KQmY0X1ZhZGVYbzZWSGxoTUp0U2tGMnJQekxqTWlxTnhqTDZiQXdRT0xPQTMzam5mbjZaZEZOMHhNVzdVc1U5N0NUSjJ2RmIyZ004TDN2T1lIOEVWQmY1UlBOTFd4MEVtZw?oc=5" rel="nofollow noopener" target="_blank">No pause on data centers but North Dakota special session to debate non-disclosure deals</a></h3></li></ul><p><a class="btn ghost" href="../news/?state=North Dakota">All North Dakota news &rarr;</a> <a class="btn ghost" href="https://news.google.com/search?q=%22North%20Dakota%22%20data%20center" rel="nofollow noopener" target="_blank">Live news search &rarr;</a></p></section>
+<section><h2>Latest North Dakota data center news</h2><p class="muted">No North Dakota data-center headlines in this week&#39;s national scan — local coverage often runs ahead of it.</p><p><a class="btn ghost" href="https://news.google.com/search?q=%22North%20Dakota%22%20data%20center" rel="nofollow noopener" target="_blank">Search live North Dakota data center news &rarr;</a> <a class="btn ghost" href="../news/?state=North Dakota">GridWatch news feed &rarr;</a></p></section>
 
 <p class="muted" style="margin-top:16px">State municipal league: <a href="http://www.ndlc.org/">North Dakota League of Cities</a></p>
 <section>

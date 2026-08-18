@@ -190,6 +190,22 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .nl-form button { background:var(--teal); color:#04211c; border:0;
   border-radius:8px; padding:9px 18px; font-weight:700; font-size:14px;
   cursor:pointer; }
+.submit-box { background:var(--card); border:1px solid var(--rule);
+  border-radius:12px; padding:20px 22px; margin-top:16px; }
+.submit-box label { display:block; font-size:14px; color:var(--ink);
+  font-weight:600; margin-bottom:4px; margin-top:12px; }
+.submit-box label:first-child { margin-top:0; }
+.submit-box input, .submit-box select, .submit-box textarea {
+  width:100%; box-sizing:border-box; background:var(--bg); color:var(--ink);
+  border:1px solid var(--rule); border-radius:8px; padding:9px 12px;
+  font-size:14px; font-family:inherit; }
+.submit-box textarea { min-height:70px; resize:vertical; }
+.submit-box .row2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media (max-width:520px){ .submit-box .row2 { grid-template-columns:1fr; } }
+.submit-box button { background:var(--teal); color:#04211c; border:0;
+  border-radius:8px; padding:11px 22px; font-weight:700; font-size:15px;
+  cursor:pointer; margin-top:16px; }
+.submit-box .hint { font-size:12px; color:var(--muted); margin-top:3px; }
 .statelist { columns:2; font-size:14.5px; }
 @media (min-width:640px){ .statelist{ columns:4; } }
 .statelist a { display:block; padding:3px 0; text-decoration:none; }
@@ -445,12 +461,12 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 
 <section>
   <h2>Recent news</h2>
-  
-  <ul class="story-list"><li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNbGhubEJuZjhBQ3lRUWdxa2gteTlZNkhOWEtsWHJQTHlueUdudmFxajdVVU5QaUY3ZXNGb0RaRWRvN29wa081N3JnRU5lVTRnblpVdkdteWhmOWhCclRsUzUwbnMwSFVMLWpkZmQ5Y1k4YlFoWU9CTUdCbXE0a3JlYkFHZ3lOWGhobGs1dlVXazdsdUg3cEYwaWx5YjNJMHk1bUZHUFFn?oc=5" rel="nofollow noopener" target="_blank">Jersey City wants to ban data centers on industrial property</a><span class="meta"><span title="Local officials are moving to pause or block the project.">🛑</span> Audacy · 2026-07-17</span></li><li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE9pTjN0bXc1WTJPOWZSMlZZSG12a3B4dDVsYm9YUXRFdGx5azdFc1ZOY1c5bkd3TG5odjZDYnZja2p1cXJDdnJ0UVFYT2w5czRncGJDUVk3Qmg2OHRaXzM0c1hxVQ?oc=5" rel="nofollow noopener" target="_blank">Jersey City Bans Development of New Standalone Data Centers</a><span class="meta"><span title="Local officials are moving to pause or block the project.">🛑</span> Jersey Digs · 2026-07-09</span></li><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPa0pLRXo2SzR2QXdaZXV2XzJHU0Jwc0xPaGYxZEFBU21xbmdMbTdyb0RlUTJBWG5WaTFzM29UNC0wR3FqbFE2U19NN1Q3RzNFWDV5bXZnTU53QmVsdHoyWGRHZDFwNUoxMlYtQUM3amc2ODYtUE1XWHhpamdxWm9JTWhfNmVoa1RmYlhNUExWbTVQWmRvMEhLMUV3c29hS1I5Rm5VZjNobzI?oc=5" rel="nofollow noopener" target="_blank">Big Tech wants more data centers. Residents in this New Jersey city said not here.</a><span class="meta"><span title="A community is pushing back on a nearby data center.">⚠️</span> Business Insider · 2026-02-21</span></li></ul>
+  <p>4 stories tracked since 2026-02-21 across 4 outlets. 2× A community is pushing back on a nearby data center. 2× Local officials are moving to pause or block the project. Most recent: “Vineland, New Jersey city council approves DataOne expansion for Nebius AI data center” (Blockspace Media, 2026-08-18).</p>
+  <ul class="story-list"><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOcVE1QXhCWFdDWlhrUDhXM3BpQ281aXo1a2o3RkZIQTB6clpUMTVIdEhaQnFrazd4R1ZDeTJPeUI4VVc1b184N3UwaW80NVpGNmdJMi1aNmxPRVFLd281RUFOSlFRSWRiZkdmVjlZM3J4dzFtb3M2cmZsX0FueGxydzl4a3M5YlN2WWNveA?oc=5" rel="nofollow noopener" target="_blank">Vineland, New Jersey city council approves DataOne expansion for Nebius AI data center</a><span class="meta"><span title="A community is pushing back on a nearby data center.">⚠️</span> Blockspace Media · 2026-08-18</span></li><li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNbGhubEJuZjhBQ3lRUWdxa2gteTlZNkhOWEtsWHJQTHlueUdudmFxajdVVU5QaUY3ZXNGb0RaRWRvN29wa081N3JnRU5lVTRnblpVdkdteWhmOWhCclRsUzUwbnMwSFVMLWpkZmQ5Y1k4YlFoWU9CTUdCbXE0a3JlYkFHZ3lOWGhobGs1dlVXazdsdUg3cEYwaWx5YjNJMHk1bUZHUFFn?oc=5" rel="nofollow noopener" target="_blank">Jersey City wants to ban data centers on industrial property</a><span class="meta"><span title="Local officials are moving to pause or block the project.">🛑</span> Audacy · 2026-07-17</span></li><li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE9pTjN0bXc1WTJPOWZSMlZZSG12a3B4dDVsYm9YUXRFdGx5azdFc1ZOY1c5bkd3TG5odjZDYnZja2p1cXJDdnJ0UVFYT2w5czRncGJDUVk3Qmg2OHRaXzM0c1hxVQ?oc=5" rel="nofollow noopener" target="_blank">Jersey City Bans Development of New Standalone Data Centers</a><span class="meta"><span title="Local officials are moving to pause or block the project.">🛑</span> Jersey Digs · 2026-07-09</span></li><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPa0pLRXo2SzR2QXdaZXV2XzJHU0Jwc0xPaGYxZEFBU21xbmdMbTdyb0RlUTJBWG5WaTFzM29UNC0wR3FqbFE2U19NN1Q3RzNFWDV5bXZnTU53QmVsdHoyWGRHZDFwNUoxMlYtQUM3amc2ODYtUE1XWHhpamdxWm9JTWhfNmVoa1RmYlhNUExWbTVQWmRvMEhLMUV3c29hS1I5Rm5VZjNobzI?oc=5" rel="nofollow noopener" target="_blank">Big Tech wants more data centers. Residents in this New Jersey city said not here.</a><span class="meta"><span title="A community is pushing back on a nearby data center.">⚠️</span> Business Insider · 2026-02-21</span></li></ul>
   
   <p class="muted">Automated news aggregation, not human-verified — follow
   each link to the original outlet. Part of the
-  <a href="../story-tracker.html">story tracker</a>, 3
+  <a href="../story-tracker.html">story tracker</a>, 4
   headlines archived.</p>
 </section>
 

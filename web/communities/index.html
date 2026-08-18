@@ -190,6 +190,22 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .nl-form button { background:var(--teal); color:#04211c; border:0;
   border-radius:8px; padding:9px 18px; font-weight:700; font-size:14px;
   cursor:pointer; }
+.submit-box { background:var(--card); border:1px solid var(--rule);
+  border-radius:12px; padding:20px 22px; margin-top:16px; }
+.submit-box label { display:block; font-size:14px; color:var(--ink);
+  font-weight:600; margin-bottom:4px; margin-top:12px; }
+.submit-box label:first-child { margin-top:0; }
+.submit-box input, .submit-box select, .submit-box textarea {
+  width:100%; box-sizing:border-box; background:var(--bg); color:var(--ink);
+  border:1px solid var(--rule); border-radius:8px; padding:9px 12px;
+  font-size:14px; font-family:inherit; }
+.submit-box textarea { min-height:70px; resize:vertical; }
+.submit-box .row2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media (max-width:520px){ .submit-box .row2 { grid-template-columns:1fr; } }
+.submit-box button { background:var(--teal); color:#04211c; border:0;
+  border-radius:8px; padding:11px 22px; font-weight:700; font-size:15px;
+  cursor:pointer; margin-top:16px; }
+.submit-box .hint { font-size:12px; color:var(--muted); margin-top:3px; }
 .statelist { columns:2; font-size:14.5px; }
 @media (min-width:640px){ .statelist{ columns:4; } }
 .statelist a { display:block; padding:3px 0; text-decoration:none; }
@@ -711,10 +727,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <li><a href="pittsburg-ca.html">Pittsburg</a> — 5 headlines</li></ul></section><section><h3><a href="../states/georgia.html">Georgia</a> (2)</h3><ul><li><a href="effingham-county-ga.html">Effingham County</a> — 7 headlines</li>
 <li><a href="fayetteville-ga.html">Fayetteville</a> — 5 headlines</li></ul></section><section><h3><a href="../states/illinois.html">Illinois</a> (2)</h3><ul><li><a href="chicago-il.html">Chicago</a> — 10 headlines</li>
 <li><a href="dekalb-il.html">DeKalb</a> — 4 headlines</li></ul></section><section><h3><a href="../states/kansas.html">Kansas</a> (1)</h3><ul><li><a href="topeka-ks.html">Topeka</a> — 5 headlines</li></ul></section><section><h3><a href="../states/massachusetts.html">Massachusetts</a> (1)</h3><ul><li><a href="lowell-ma.html">Lowell</a> — 6 headlines</li></ul></section><section><h3><a href="../states/michigan.html">Michigan</a> (2)</h3><ul><li><a href="dowagiac-mi.html">Dowagiac</a> — 16 headlines</li>
-<li><a href="allen-park-mi.html">Allen Park</a> — 4 headlines</li></ul></section><section><h3><a href="../states/mississippi.html">Mississippi</a> (1)</h3><ul><li><a href="southaven-ms.html">Southaven</a> — 12 headlines</li></ul></section><section><h3><a href="../states/new-jersey.html">New Jersey</a> (2)</h3><ul><li><a href="vineland-nj.html">Vineland</a> — 37 headlines</li>
-<li><a href="kenilworth-nj.html">Kenilworth</a> — 20 headlines</li></ul></section><section><h3><a href="../states/north-carolina.html">North Carolina</a> (1)</h3><ul><li><a href="lee-county-nc.html">Lee County</a> — 4 headlines</li></ul></section><section><h3><a href="../states/tennessee.html">Tennessee</a> (1)</h3><ul><li><a href="memphis-tn.html">Memphis</a> — 5 headlines</li></ul></section><section><h3><a href="../states/texas.html">Texas</a> (4)</h3><ul><li><a href="westlake-tx.html">Westlake</a> — 8 headlines</li>
-<li><a href="el-paso-tx.html">El Paso</a> — 8 headlines</li>
-<li><a href="lubbock-tx.html">Lubbock</a> — 6 headlines</li>
+<li><a href="allen-park-mi.html">Allen Park</a> — 4 headlines</li></ul></section><section><h3><a href="../states/mississippi.html">Mississippi</a> (1)</h3><ul><li><a href="southaven-ms.html">Southaven</a> — 12 headlines</li></ul></section><section><h3><a href="../states/new-jersey.html">New Jersey</a> (2)</h3><ul><li><a href="vineland-nj.html">Vineland</a> — 42 headlines</li>
+<li><a href="kenilworth-nj.html">Kenilworth</a> — 20 headlines</li></ul></section><section><h3><a href="../states/north-carolina.html">North Carolina</a> (1)</h3><ul><li><a href="lee-county-nc.html">Lee County</a> — 4 headlines</li></ul></section><section><h3><a href="../states/tennessee.html">Tennessee</a> (1)</h3><ul><li><a href="memphis-tn.html">Memphis</a> — 5 headlines</li></ul></section><section><h3><a href="../states/texas.html">Texas</a> (4)</h3><ul><li><a href="lubbock-tx.html">Lubbock</a> — 9 headlines</li>
+<li><a href="el-paso-tx.html">El Paso</a> — 9 headlines</li>
+<li><a href="westlake-tx.html">Westlake</a> — 8 headlines</li>
 <li><a href="abilene-tx.html">Abilene</a> — 4 headlines</li></ul></section><section><h3><a href="../states/virginia.html">Virginia</a> (2)</h3><ul><li><a href="wytheville-va.html">Wytheville</a> — 11 headlines</li>
 <li><a href="prince-william-county-va.html">Prince William County</a> — 4 headlines</li></ul></section><section><h3><a href="../states/wisconsin.html">Wisconsin</a> (4)</h3><ul><li><a href="sturtevant-wi.html">Sturtevant</a> — 8 headlines</li>
 <li><a href="wisconsin-rapids-wi.html">Wisconsin Rapids</a> — 5 headlines</li>
