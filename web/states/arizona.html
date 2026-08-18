@@ -483,7 +483,17 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 
 </main>
 <footer>
-<div class="nl-box"><p><strong>📬 The GridWatch Dispatch</strong> — one email a week: new moratoriums, rate cases, and negotiation wins. No spam. <a href="https://aigridtracker.streamlit.app">Subscribe in the toolkit &rarr;</a></p></div>
+<div class="nl-box">
+  <p><strong>📬 The GridWatch Dispatch</strong> — one email a week: new moratoriums, rate cases, and negotiation wins. No spam.</p>
+  <form action="https://formspree.io/f/xljroogo" method="POST"
+        class="nl-form">
+    <input type="email" name="email" required placeholder="you@example.com"
+           aria-label="Email address">
+    <input type="hidden" name="source" value="static-site-footer">
+    <input type="hidden" name="_subject" value="GridWatch Dispatch signup">
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
   <p style="margin-bottom:8px"><strong>Reference</strong> ·
     <a href="../studies.html">State studies</a> ·
     <a href="../officials.html">Officials directory</a> ·

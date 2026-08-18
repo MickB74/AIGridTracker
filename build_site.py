@@ -83,7 +83,7 @@ APP_URL = os.environ.get("APP_URL", "https://aigridtracker.streamlit.app")
 # at formspree.io, paste its ID ("mabc1234"), rebuild. Empty = no form
 # rendered; the footer falls back to linking the app's signup instead, so an
 # unconfigured build never ships a broken form.
-FORMSPREE_ID = os.environ.get("FORMSPREE_ID", "")
+FORMSPREE_ID = os.environ.get("FORMSPREE_ID", "xljroogo")
 FORMSPREE_SUBMIT_ID = os.environ.get("FORMSPREE_SUBMIT_ID", "xdenpwor")
 
 # Third-party existing-facility directory (SOURCES["datacentermap"]). State
