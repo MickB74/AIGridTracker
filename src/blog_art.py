@@ -407,6 +407,41 @@ def _review(u):
   </g>'''
 
 
+def _negotiation(u):
+    # Two sides of a table with a document between them
+    return f'''
+  <g transform="translate(120,60)">
+    <rect x="0" y="60" width="400" height="120" rx="10" fill="{_CARD}" stroke="{_RULE}" stroke-width="1.6"/>
+    <rect x="140" y="40" width="120" height="160" rx="6" fill="{_BG_TOP}" stroke="{_TEAL}" stroke-width="1.6"/>
+    <rect x="156" y="60" width="88" height="6" rx="3" fill="{_TEAL}" opacity=".7"/>
+    <rect x="156" y="76" width="72" height="5" rx="2.5" fill="{_MUTED}" opacity=".4"/>
+    <rect x="156" y="90" width="80" height="5" rx="2.5" fill="{_MUTED}" opacity=".4"/>
+    <rect x="156" y="104" width="60" height="5" rx="2.5" fill="{_MUTED}" opacity=".35"/>
+    <rect x="156" y="118" width="75" height="5" rx="2.5" fill="{_MUTED}" opacity=".35"/>
+    <rect x="156" y="138" width="40" height="14" rx="4" fill="{_TEAL}" opacity=".5"/>
+    <rect x="206" y="138" width="40" height="14" rx="4" fill="{_AMBER}" opacity=".5"/>
+    <line x1="156" y1="162" x2="244" y2="162" stroke="{_MUTED}" stroke-width="1" stroke-dasharray="4 3" opacity=".4"/>
+    <text x="200" y="172" text-anchor="middle" fill="{_MUTED}" font-size="8"
+          font-family="system-ui,sans-serif" opacity=".5">BINDING TERMS</text>
+  </g>
+  <g transform="translate(80,96)">
+    <circle cx="24" cy="24" r="22" fill="{_CARD}" stroke="{_TEAL}" stroke-width="1.4"/>
+    <text x="24" y="30" text-anchor="middle" fill="{_TEAL}" font-size="18"
+          font-family="system-ui,sans-serif" font-weight="700">C</text>
+  </g>
+  <g transform="translate(536,96)">
+    <circle cx="24" cy="24" r="22" fill="{_CARD}" stroke="{_AMBER}" stroke-width="1.4"/>
+    <text x="24" y="30" text-anchor="middle" fill="{_AMBER}" font-size="18"
+          font-family="system-ui,sans-serif" font-weight="700">D</text>
+  </g>
+  <g fill="{_TEAL}" opacity=".3">
+    <circle cx="60" cy="200" r="3"/><circle cx="76" cy="206" r="2.5"/><circle cx="92" cy="200" r="2"/>
+  </g>
+  <g fill="{_AMBER}" opacity=".3">
+    <circle cx="560" cy="200" r="3"/><circle cx="544" cy="206" r="2.5"/><circle cx="580" cy="200" r="2"/>
+  </g>'''
+
+
 ART_THEMES = {
     "grid":         ("Grid interconnection", "Illustration: a transmission tower feeding a hyperscale data center campus", _grid_campus),
     "transmission": ("Transmission buildout", "Illustration: a line of high-voltage transmission towers receding into the distance", _transmission),
@@ -423,6 +458,7 @@ ART_THEMES = {
     "community":    ("Community response", "Illustration: a row of houses with residents below and a speech bubble above", _community),
     "extraction":   ("Extraction precedent", "Illustration: a headframe over geological strata beside a modern data center and a clock", _extraction),
     "review":       ("Week in review", "Illustration: a calendar page beside stacked headline cards", _review),
+    "negotiation":  ("Negotiation intel", "Illustration: a negotiation table with a contract document between community and developer icons", _negotiation),
 }
 
 # First match wins, so order matters: the more specific themes come first.
@@ -440,6 +476,7 @@ _KEYWORDS = [
     ("money",        ("tax break", "subsidy", "abatement", "incentive", "dividend")),
     ("land",         ("land", "site selection", "siting", "zoning", "rezoning", "land rush")),
     ("community",    ("backlash", "opposition", "social license", "community", "protest")),
+    ("negotiation",  ("negotiation", "concession", "proffer", "cba", "leverage", "bargain")),
     ("extraction",   ("extraction", "precedent", "coal", "mining", "boomtown")),
     ("review",       ("week in review", "weekly review", "roundup")),
 ]

@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/negotiation-patterns-all-operators-2026",
+      "destination": "/blog/negotiation-patterns-all-operators-2026",
+      "permanent": true
+    },
+    {
       "source": "/week-in-review-2026-08-16",
       "destination": "/blog/week-in-review-2026-08-16",
       "permanent": true

@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>How to Negotiate with Every Major Data Center Developer: A Strategy Guide</title>
+      <link>https://aigridwatch.com/blog/negotiation-patterns-all-operators-2026</link>
+      <guid>https://aigridwatch.com/blog/negotiation-patterns-all-operators-2026</guid>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+      <description>We&#x27;ve built negotiation profiles for all 17 major data center operators — from Google and Amazon to CoreWeave and xAI. Here&#x27;s what the patterns reveal: who has actually conceded terms, who hasn&#x27;t, and where your leverage really sits.</description>
+    </item>
+    <item>
       <title>Week in Review: Amazon Walks Away, UK Rations Water, and Texas Hits the Brakes</title>
       <link>https://aigridwatch.com/blog/week-in-review-2026-08-16</link>
       <guid>https://aigridwatch.com/blog/week-in-review-2026-08-16</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/morgan-stanley-opposition-bottleneck-2026</guid>
       <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
       <description>Morgan Stanley warns that $156B in data center projects were canceled or delayed in 2025, with another $130B disrupted in Q1 2026 — driven by community resistance. We checked their thesis against our data.</description>
-    </item>
-    <item>
-      <title>New York Just Changed the Game: What EO 62 Means for Every Community Fighting a Data Center</title>
-      <link>https://aigridwatch.com/blog/ny-moratorium-eo62-2026</link>
-      <guid>https://aigridwatch.com/blog/ny-moratorium-eo62-2026</guid>
-      <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
-      <description>Governor Hochul signed the nation&#x27;s first statewide data center moratorium on July 14 — a 1-year pause on 50+ MW facilities that sets a precedent for community negotiating power nationwide.</description>
     </item>
 </channel>
 </rss>
