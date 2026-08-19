@@ -2818,6 +2818,38 @@ MORATORIUMS = [
      "note": "2-year moratorium on data centers",
      "lat": 37.00, "lon": -79.89, "expires": "2028-08-07", "as_of": None,
      "source": None},
+    {"locality": "Tulare County", "state": "CA", "level": "Local",
+     "status": "Enacted", "when": "Aug 2026",
+     "note": "45-day moratorium (extendable to 10 mo 15 days) on new data "
+             "center applications in unincorporated areas",
+     "lat": 36.23, "lon": -119.32, "expires": None, "as_of": "2026-08-19",
+     "source": "https://www.yourcentralvalley.com/news/local-news/tulare-county-ai-data-center-moratorium/"},
+    {"locality": "Larimer County", "state": "CO", "level": "Local",
+     "status": "Enacted", "when": "Jan 27, 2026",
+     "note": "Initial 30-day moratorium extended 6 months after Feb 9 public "
+             "hearing; prohibits land use applications for new data centers in "
+             "unincorporated county while staff develops regulations",
+     "lat": 40.63, "lon": -105.13, "expires": "2026-08-25", "as_of": "2026-08-19",
+     "source": "https://www.larimer.gov/planning/temp-moratorium-data-centers"},
+    {"locality": "Boulder County", "state": "CO", "level": "Local",
+     "status": "Enacted", "when": "Jun 2, 2026",
+     "note": "Up to 6-month pause on planning applications for data centers "
+             "and detention centers (unanimous); county reviewing Land Use Code",
+     "lat": 40.09, "lon": -105.36, "expires": "2026-12-02", "as_of": "2026-08-19",
+     "source": "https://bouldercounty.gov/news/data-centers-and-detention-centers-commissioners-declare-moratorium/"},
+    {"locality": "Anderson County", "state": "TN", "level": "Local",
+     "status": "Enacted", "when": "Jun 15, 2026",
+     "note": "2-year moratorium (unanimous); commission will develop "
+             "regulations during pause period",
+     "lat": 36.12, "lon": -84.20, "expires": "2028-06-15", "as_of": "2026-08-19",
+     "source": "https://www.wvlt.tv/2026/06/16/anderson-county-commission-proposes-2-year-moratorium-local-data-centers/"},
+    {"locality": "Lake County", "state": "FL", "level": "Local",
+     "status": "Proposed", "when": "Jun 25, 2026",
+     "note": "Commissioners unanimously agreed to pursue a temporary ban "
+             "ordinance; Commissioner Sabatini: 'very serious commitments "
+             "to utilities and land use'",
+     "lat": 28.77, "lon": -81.71, "expires": None, "as_of": "2026-08-19",
+     "source": "https://www.cfpublic.org/2026-06-25/lake-county-commission-plans-temporary-ban-on-data-centers"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.
@@ -3302,7 +3334,23 @@ COMPANY_CONCESSIONS = {
             "deal, Jul 2025) would consolidate landlord and tenant — watch "
             "for that closing. (Strategy read.)"
         ),
-        "concessions": [],
+        "concessions": [
+            {"as_of": None, "where": "Lancaster, PA", "year": "2025",
+             "what": "20-year, ~$20M community benefits agreement — described "
+                     "as the first data-center-specific CBA in the US — "
+                     "negotiated before construction finalized. Details of "
+                     "specific commitments (noise, water, hiring) were "
+                     "questioned by residents as insufficient.",
+             "sources": ["https://lancasteronline.com/news/local/lancaster-data-center-agreement-s-benefit-to-community-questioned/article_b2654db6-c6e3-4719-8a0e-1f839c1e325e.html"]},
+            {"as_of": None, "where": "Kenilworth, NJ", "year": "2025",
+             "what": "Planning Board unanimously approved a $1.8B data center "
+                     "on the former Merck campus (May 2025). CoreWeave claims "
+                     "closed-loop cooling and 42-49 dB noise levels. Residents "
+                     "challenged notice adequacy and NDAs; no formal CBA was "
+                     "negotiated despite strong community opposition.",
+             "sources": ["https://abc7ny.com/post/community-rallies-giant-data-center-being-built-kenilworth-new-jersey/19053270/",
+                         "https://citizenportal.ai/articles/8363361/new-jersey/union-county/kenilworth/residents-press-council-to-halt-coreweave-data-center-challenge-notice-and-confidentiality-orders"]},
+        ],
     },
     "xAI (Colossus)": {
         "pattern": (
