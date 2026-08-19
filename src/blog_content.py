@@ -4585,8 +4585,7 @@ developer, we want to hear about it. Every documented concession makes the
 next community's negotiation stronger, because it proves the ask is
 realistic.
 
-You can reach us through the [consulting tab](/app), the newsletter, or
-directly at info@aigridwatch.com.
+{{CONCESSION_FORM}}
 
 ---
 

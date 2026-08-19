@@ -647,8 +647,53 @@ Vantage — we believe those terms were never made public.</p>
 developer, we want to hear about it. Every documented concession makes the
 next community's negotiation stronger, because it proves the ask is
 realistic.</p>
-<p>You can reach us through the <a href="/app">consulting tab</a>, the newsletter, or
-directly at info@aigridwatch.com.</p>
+<p><div class="submit-box" id="report-concession">
+  <h3 style="color:var(--teal);margin:0 0 8px;font-size:18px">
+    Report a negotiation outcome</h3>
+  <p style="color:var(--muted);font-size:14px;margin:0 0 14px">
+    Has your community negotiated binding terms with a data center developer?
+    Every documented concession makes the next community's ask stronger.</p>
+  <form action="https://formspree.io/f/xdenpwor" method="POST">
+    <input type="hidden" name="_subject" value="Concession report via GridWatch blog">
+    <input type="hidden" name="source" value="blog-concession-form">
+    <div class="row2">
+      <div>
+        <label for="con-operator">Developer / operator</label>
+        <select id="con-operator" name="operator" required>
+          <option value="">Select&hellip;</option>
+          <option value="Aligned">Aligned</option><option value="Amazon (AWS)">Amazon (AWS)</option><option value="Core Scientific">Core Scientific</option><option value="CoreWeave">CoreWeave</option><option value="CyrusOne">CyrusOne</option><option value="Digital Realty">Digital Realty</option><option value="EdgeConneX">EdgeConneX</option><option value="Equinix">Equinix</option><option value="Google">Google</option><option value="Meta">Meta</option><option value="Microsoft">Microsoft</option><option value="OpenAI · Oracle (Stargate)">OpenAI · Oracle (Stargate)</option><option value="QTS">QTS</option><option value="Stack Infrastructure">Stack Infrastructure</option><option value="Switch">Switch</option><option value="Vantage">Vantage</option><option value="xAI (Colossus)">xAI (Colossus)</option>
+          <option value="Other">Other (specify below)</option>
+        </select>
+      </div>
+      <div>
+        <label for="con-location">City / county, state</label>
+        <input id="con-location" name="location" required
+               placeholder="e.g. Prince William County, VA">
+      </div>
+    </div>
+    <label for="con-what">What terms were won?</label>
+    <textarea id="con-what" name="concession" required
+              placeholder="Water cap, noise limit, payment-in-lieu, decommissioning bond, hiring commitment&hellip;"></textarea>
+    <label for="con-source">Link to source (agreement, news article, meeting minutes)</label>
+    <input id="con-source" name="source_url" type="url"
+           placeholder="A public link helps us verify and cite the outcome">
+    <p class="hint">County meeting minutes, local news articles, and recorded
+    agreements work best. We won't publish without a verifiable source.</p>
+    <div class="row2">
+      <div>
+        <label for="con-year">Year negotiated</label>
+        <input id="con-year" name="year" type="text"
+               placeholder="e.g. 2025">
+      </div>
+      <div>
+        <label for="con-email">Your email (optional)</label>
+        <input id="con-email" name="email" type="email"
+               placeholder="So we can follow up">
+      </div>
+    </div>
+    <button type="submit">Submit concession report</button>
+  </form>
+</div></p>
 <hr />
 <p><em>All 17 operator profiles — including negotiation patterns, documented
 concessions, and strategy reads — are available on our

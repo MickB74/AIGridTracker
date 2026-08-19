@@ -3630,10 +3630,67 @@ def build_blog_index():
         jsonld=_breadcrumb(("Home", SITE_URL), ("Blog", f"{SITE_URL}/blog/")))
 
 
+def _concession_form():
+    """Inline 'Report a concession' Formspree form for blog posts."""
+    if not FORMSPREE_SUBMIT_ID:
+        return ""
+    operator_options = "".join(
+        f'<option value="{esc(op)}">{esc(op)}</option>'
+        for op in sorted(COMPANY_CONCESSIONS))
+    return f"""<div class="submit-box" id="report-concession">
+  <h3 style="color:var(--teal);margin:0 0 8px;font-size:18px">
+    Report a negotiation outcome</h3>
+  <p style="color:var(--muted);font-size:14px;margin:0 0 14px">
+    Has your community negotiated binding terms with a data center developer?
+    Every documented concession makes the next community's ask stronger.</p>
+  <form action="https://formspree.io/f/{FORMSPREE_SUBMIT_ID}" method="POST">
+    <input type="hidden" name="_subject" value="Concession report via GridWatch blog">
+    <input type="hidden" name="source" value="blog-concession-form">
+    <div class="row2">
+      <div>
+        <label for="con-operator">Developer / operator</label>
+        <select id="con-operator" name="operator" required>
+          <option value="">Select&hellip;</option>
+          {operator_options}
+          <option value="Other">Other (specify below)</option>
+        </select>
+      </div>
+      <div>
+        <label for="con-location">City / county, state</label>
+        <input id="con-location" name="location" required
+               placeholder="e.g. Prince William County, VA">
+      </div>
+    </div>
+    <label for="con-what">What terms were won?</label>
+    <textarea id="con-what" name="concession" required
+              placeholder="Water cap, noise limit, payment-in-lieu, decommissioning bond, hiring commitment&hellip;"></textarea>
+    <label for="con-source">Link to source (agreement, news article, meeting minutes)</label>
+    <input id="con-source" name="source_url" type="url"
+           placeholder="A public link helps us verify and cite the outcome">
+    <p class="hint">County meeting minutes, local news articles, and recorded
+    agreements work best. We won't publish without a verifiable source.</p>
+    <div class="row2">
+      <div>
+        <label for="con-year">Year negotiated</label>
+        <input id="con-year" name="year" type="text"
+               placeholder="e.g. 2025">
+      </div>
+      <div>
+        <label for="con-email">Your email (optional)</label>
+        <input id="con-email" name="email" type="email"
+               placeholder="So we can follow up">
+      </div>
+    </div>
+    <button type="submit">Submit concession report</button>
+  </form>
+</div>"""
+
+
 def build_blog_post(story, prev_post, next_post):
     title_clean = story["title"].replace("\\$", "$")
     summary_clean = story["summary"].replace("\\$", "$")
     body_html = _md_to_html(story["body"])
+    body_html = body_html.replace("{{CONCESSION_FORM}}", _concession_form())
     tags_html = " ".join(
         f'<span class="tag">{esc(t)}</span>' for t in story.get("tags", []))
 
