@@ -12423,20 +12423,135 @@
       "state": "CA",
       "lat": "",
       "lon": "",
-      "size_mw": "",
+      "size_mw": 330,
       "acres": "",
       "announced": "",
       "rezoning_filed": "",
       "hearing_date": "",
       "decided_date": "",
-      "outcome": "denied",
-      "stage": "Denied",
+      "outcome": "moratorium",
+      "stage": "Rumored",
       "days_to_hearing": null,
       "note": "~950,000-1M sq ft AI/ML data center; county supervisors approved it in April 2026 then reversed course, imposing a 45-day moratorium after water-use and air-quality opposition; developer sued over the moratorium.",
       "source": "https://calmatters.org/environment/2026/06/imperial-county-data-center/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-09-23",
+          "kind": "filing",
+          "summary": "Developer Sebastian Rucci registers Imperial Valley Computer Manufacturing, LLC and related entities in California to pursue the Imperial County AI/ML data center project.",
+          "source": "https://www.ivpressonline.com/news/major-hyperscale-data-center-proposed-near-imperial-awaits-agency-review/article_c6896ddb-b9a9-4af7-96e3-6fa77cc015c3.html"
+        },
+        {
+          "date": "2025-11-03",
+          "kind": "filing",
+          "summary": "Imperial County Planning & Development Services distributes a formal 'Request for Review and Comments' to stakeholders, opening the official agency review process for the ~950,000-1M sq ft, 330MW data center.",
+          "source": "https://www.ivpressonline.com/news/major-hyperscale-data-center-proposed-near-imperial-awaits-agency-review/article_c6896ddb-b9a9-4af7-96e3-6fa77cc015c3.html"
+        },
+        {
+          "date": "2025-11-06",
+          "kind": "environmental",
+          "summary": "Imperial County treats the project as exempt from CEQA review (citing a 2024 state 'advanced manufacturing' exemption for industrially-zoned land) and files a CEQA exemption for the grading permit, allowing preliminary site work.",
+          "source": "https://www.ivpressonline.com/news/major-hyperscale-data-center-proposed-near-imperial-awaits-agency-review/article_c6896ddb-b9a9-4af7-96e3-6fa77cc015c3.html"
+        },
+        {
+          "date": "2025-11-26",
+          "kind": "withdrawal",
+          "summary": "The City of Imperial withdraws from a recycled-wastewater supply agreement with the developer, undercutting IVCM's plan to avoid using potable/Colorado River water.",
+          "source": "https://www.western-water.com/2026/08/04/data-center-water-fight-heads-to-imperial-county-court/"
+        },
+        {
+          "date": "2025-12-01",
+          "kind": "withdrawal",
+          "summary": "The City of El Centro also backs out of a proposed recycled-water arrangement for the project.",
+          "source": "https://www.western-water.com/2026/08/04/data-center-water-fight-heads-to-imperial-county-court/"
+        },
+        {
+          "date": "2025-12-04",
+          "kind": "lawsuit",
+          "summary": "The City of Imperial files a CEQA lawsuit challenging Imperial County's decision to treat the data center (including its battery backup system) as exempt from environmental review.",
+          "source": "https://www.kpbs.org/news/environment/2026/01/21/the-plan-to-build-a-massive-data-center-in-imperial-county-without-environmental-review"
+        },
+        {
+          "date": "2025-12-04",
+          "kind": "public-comment",
+          "summary": "State Senator Steve Padilla sends a letter to the Imperial County Board of Supervisors calling for full public environmental review of the project, questioning the CEQA exemption given the facility's scale and water/energy demands.",
+          "source": "https://www.kpbs.org/news/environment/2025/12/04/california-lawmaker-calls-for-public-review-of-massive-imperial-valley-data-center-project"
+        },
+        {
+          "date": "2026-01-09",
+          "kind": "lawsuit",
+          "summary": "IVCM files a federal civil rights lawsuit against the City of Imperial and named officials, alleging a coordinated campaign of administrative obstruction and retaliation intended to derail the $10B project.",
+          "source": "https://calexicochronicle.com/2026/01/12/developer-of-10b-data-center-sues-city-of-imperial-in-fed-court/"
+        },
+        {
+          "date": "2026-01-21",
+          "kind": "coverage",
+          "summary": "KPBS reports over 2,000 residents have signed a petition opposing the project over water scarcity and grid-strain concerns, and that a lot-merger vote before the Board of Supervisors remains the final approval step.",
+          "source": "https://www.kpbs.org/news/environment/2026/01/21/the-plan-to-build-a-massive-data-center-in-imperial-county-without-environmental-review"
+        },
+        {
+          "date": "2026-04-07",
+          "kind": "vote",
+          "summary": "The Imperial County Board of Supervisors votes 4-1 to approve a lot merger clearing the way for the nearly 1-million-sq-ft data center, during a contentious hearing marked by restricted public access and at least one arrest.",
+          "source": "https://www.kpbs.org/news/environment/2026/04/07/imperial-county-supervisors-clear-path-for-massive-data-center-complex-amid-fierce-opposition"
+        },
+        {
+          "date": "2026-04-22",
+          "kind": "utility",
+          "summary": "IVCM formally applies to the Imperial Irrigation District (IID) for 880 acre-feet of water annually to supply the project.",
+          "source": "https://www.western-water.com/2026/08/04/data-center-water-fight-heads-to-imperial-county-court/"
+        },
+        {
+          "date": "2026-05-01",
+          "kind": "denial",
+          "summary": "IID denies IVCM's water request, citing Regulation 21's 300-foot restriction near municipal water supplies.",
+          "source": "https://www.western-water.com/2026/08/04/data-center-water-fight-heads-to-imperial-county-court/"
+        },
+        {
+          "date": "2026-06-04",
+          "kind": "hearing",
+          "summary": "Imperial County supervisors hold a public hearing to consider a moratorium on new data center approvals amid mounting opposition.",
+          "source": "https://inewsource.org/2026/06/04/imperial-county-data-center-moratorium-vote-supervisors-ceqa/"
+        },
+        {
+          "date": "2026-06-05",
+          "kind": "lawsuit",
+          "summary": "After reclaimed-wastewater negotiations collapse, IVCM sues the Imperial Irrigation District in Imperial County Superior Court on eight legal claims, seeking roughly 260 million gallons of Colorado River water annually — reversing its earlier pledge to avoid Colorado River water.",
+          "source": "https://www.yahoo.com/news/us/articles/data-center-vowed-avoid-colorado-143900694.html"
+        },
+        {
+          "date": "2026-06-16",
+          "kind": "moratorium",
+          "summary": "The Imperial County Board of Supervisors unanimously approves an urgency interim ordinance imposing a 45-day moratorium on approvals/permits for new or pending data center facilities in unincorporated areas, and creates a Data Center Advisory Committee.",
+          "source": "https://www.kpbs.org/news/politics/2026/06/17/after-months-of-public-pressure-imperial-county-passes-temporary-moratorium-on-data-centers"
+        },
+        {
+          "date": "2026-06-20",
+          "kind": "lawsuit",
+          "summary": "IVCM sues Imperial County in Superior Court challenging the moratorium, arguing the county used a 'manufactured emergency' pretext to reverse its April approval under public pressure.",
+          "source": "https://www.courthousenews.com/desert-data-center-developer-challenges-county-moratorium-in-court/"
+        },
+        {
+          "date": "2026-07-14",
+          "kind": "moratorium",
+          "summary": "The Board of Supervisors unanimously votes to extend the data center moratorium by 10 months and 15 days, blocking new permits until June 2027 while the advisory committee rewrites zoning rules.",
+          "source": "https://inewsource.org/2026/07/14/data-center-moratorium-imperial-county/"
+        },
+        {
+          "date": "2026-07-28",
+          "kind": "hearing",
+          "summary": "Judge Jeffrey Jones hears IVCM's challenge to the county's data center moratorium in Imperial County Superior Court; a ruling is pending.",
+          "source": "https://www.western-water.com/2026/08/04/data-center-water-fight-heads-to-imperial-county-court/"
+        },
+        {
+          "date": "2026-07-29",
+          "kind": "hearing",
+          "summary": "Judge Anderholt hears arguments in the CEQA case over whether the project requires a full environmental review; a ruling is expected within 90 days.",
+          "source": "https://mavensnotebook.com/2026/07/29/courthouse-news-desert-data-center-developer-challenges-imperial-county-moratorium-in-court/"
+        }
+      ]
     },
     {
       "id": "goodman-san-jose-ca",
