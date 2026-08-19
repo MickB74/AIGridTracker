@@ -1,5 +1,5 @@
 {
-  "_readme": "Identified data-center project tracker. One record per proposed/known project, each with per-row `source` + `as_of` and an append-only `events` log (the intelligence timeline). Status is DERIVED at import from the milestone dates and `outcome` (see project_status() in src/constants.py) \u2014 never stored, so the daily site rebuild keeps it honest. Leads from data/project_candidates.json are promoted here BY HAND, which is where source + as_of come from. Never invent an `as_of`: use null if you don't know the read date. Dates are ISO (YYYY-MM-DD); a month-only fact uses the first of the month and says the real month in the text.",
+  "_readme": "Identified data-center project tracker. One record per proposed/known project, each with per-row `source` + `as_of` and an append-only `events` log (the intelligence timeline). Status is DERIVED at import from the milestone dates and `outcome` (see project_status() in src/constants.py) — never stored, so the daily site rebuild keeps it honest. Leads from data/project_candidates.json are promoted here BY HAND, which is where source + as_of come from. Never invent an `as_of`: use null if you don't know the read date. Dates are ISO (YYYY-MM-DD); a month-only fact uses the first of the month and says the real month in the text.",
   "schema": {
     "id": "stable kebab-case slug, unique",
     "name": "project name or code name",
@@ -21,9 +21,9 @@
     "note": "one-line plain-language status",
     "source": "primary URL backing the current status",
     "as_of": "ISO date the source was read, or null",
-    "events": "list of {date, kind, summary, source} \u2014 the dated, sourced intelligence log"
+    "events": "list of {date, kind, summary, source} — the dated, sourced intelligence log"
   },
-  "generated": "2026-08-18",
+  "generated": "2026-08-19",
   "projects": [
     {
       "id": "pw-digital-gateway-va",
@@ -194,7 +194,7 @@
         {
           "date": "2025-12-09",
           "kind": "vote",
-          "summary": "The Fairfax County Board of Supervisors held a public hearing and vote on new substation zoning restrictions \u2014 expanded 200-foot setbacks, special-exception reviews, and co-location requirements \u2014 that could affect the Edsall substation's compliance.",
+          "summary": "The Fairfax County Board of Supervisors held a public hearing and vote on new substation zoning restrictions — expanded 200-foot setbacks, special-exception reviews, and co-location requirements — that could affect the Edsall substation's compliance.",
           "source": "https://annandaletoday.com/board-to-consider-restrictions-for-substations/"
         },
         {
@@ -272,7 +272,7 @@
         {
           "date": "2026-08-06",
           "kind": "coverage",
-          "summary": "Alexandria Brief reported that Mason District Supervisor Andres Jimenez asked the Planning Commission to deny the Edsall substation, noting the proposed site is only 67 feet from homes \u2014 violating the county's 100-foot setback standard adopted in 2025.",
+          "summary": "Alexandria Brief reported that Mason District Supervisor Andres Jimenez asked the Planning Commission to deny the Edsall substation, noting the proposed site is only 67 feet from homes — violating the county's 100-foot setback standard adopted in 2025.",
           "source": "https://www.alexandriabrief.com/mason-district-supervisor-asks-fairfax-planners-to-deny-edsall-road-substation/"
         },
         {
@@ -731,11 +731,11 @@
       "announced": "2026-05-28",
       "rezoning_filed": "2026-03-01",
       "hearing_date": null,
-      "decided_date": null,
-      "outcome": null,
-      "note": "Five-site, 4.6M sq ft campus across King of Prussia. Applications were filed in early March 2026, roughly ten days before Upper Merion's new data-center ordinance took effect - exempting them from its residential buffer, noise, and water-use rules. The township Planning Commission voted against three of the proposals in July 2026; review continues amid packed hearings and organized opposition.",
-      "source": "https://6abc.com/post/proposed-king-prussia-data-center-campus-faces-renewed-scrutiny-review-continues/19560357/",
-      "as_of": "2026-08-07",
+      "decided_date": "2026-08-14",
+      "outcome": "denied",
+      "note": "Five-site, 4.6M sq ft campus; Board of Supervisors denied extension requests and preliminary land development proposals Aug 14, 2026. Developer filed lawsuit; judge vacated injunction, finding township review fair. 20,000-signature petition against. Developer plans to appeal.",
+      "source": "https://6abc.com/post/judge-lifts-injunction-ahead-upper-merion-board-supervisors-vote-data-center-proposals/19674865/",
+      "as_of": "2026-08-19",
       "events": [
         {
           "date": "2026-03-01",
@@ -754,6 +754,18 @@
           "kind": "vote",
           "summary": "In July 2026 the Upper Merion Planning Commission voted against three of the data-center proposals; hundreds of residents packed hearings in opposition. Township review continues.",
           "source": "https://whyy.org/articles/upper-merion-data-centers-meeting-planning-commission-residents/"
+        },
+        {
+          "date": "2026-08-14",
+          "kind": "vote",
+          "summary": "Board of Supervisors denied extension requests and preliminary land development proposals. Developer had filed lawsuit seeking extension but judge vacated injunction, finding township review fair. 20,000-signature petition against the project.",
+          "source": "https://6abc.com/post/judge-lifts-injunction-ahead-upper-merion-board-supervisors-vote-data-center-proposals/19674865/"
+        },
+        {
+          "date": "2026-08-14",
+          "kind": "vote",
+          "summary": "Board of Supervisors denied. 20,000-signature petition. Developer lawsuit dismissed by judge.",
+          "source": "https://6abc.com/post/judge-lifts-injunction-ahead-upper-merion-board-supervisors-vote-data-center-proposals/19674865/"
         }
       ]
     },
@@ -1717,7 +1729,7 @@
       "hearing_date": null,
       "decided_date": "2026-08-04",
       "outcome": "denied",
-      "note": "The township board rezoned 500+ acres of farmland near Milan from agricultural to general industrial for a hyperscale data center by NY-based Thor Equities. Residents petitioned the decision onto the ballot and voters overturned the rezoning 89.5%-10.4% on Aug 4, 2026 \u2014 a rare referendum defeat of an already-approved data-center rezoning.",
+      "note": "The township board rezoned 500+ acres of farmland near Milan from agricultural to general industrial for a hyperscale data center by NY-based Thor Equities. Residents petitioned the decision onto the ballot and voters overturned the rezoning 89.5%-10.4% on Aug 4, 2026 — a rare referendum defeat of an already-approved data-center rezoning.",
       "source": "https://www.wemu.org/wemu-news/2026-08-05/augusta-township-voters-overturn-data-center-rezoning",
       "as_of": "2026-08-08",
       "events": [
@@ -2084,7 +2096,7 @@
         {
           "date": "2024-04-25",
           "kind": "announcement",
-          "summary": "Governor Holcomb announced that Amazon Web Services would invest $11 billion to build a data center campus at the Indiana Enterprise Center near New Carlisle, creating at least 1,000 jobs \u2014 the largest capital investment in Indiana history.",
+          "summary": "Governor Holcomb announced that Amazon Web Services would invest $11 billion to build a data center campus at the Indiana Enterprise Center near New Carlisle, creating at least 1,000 jobs — the largest capital investment in Indiana history.",
           "source": "https://events.in.gov/event/gov-holcomb-announces-amazon-web-services-plans-to-invest-11b-to-create-a-new-data-center-campus-in-northern-indiana"
         },
         {
@@ -2655,7 +2667,7 @@
     },
     {
       "id": "hanover-township-starpointe-pa",
-      "name": "Prime Data Centers \u2014 Starpointe Business Park campus",
+      "name": "Prime Data Centers — Starpointe Business Park campus",
       "operator": "Prime Data Centers",
       "owner": null,
       "tenant": null,
@@ -2725,7 +2737,7 @@
       "hearing_date": "2026-08-17",
       "decided_date": null,
       "outcome": null,
-      "note": "900 Conshohocken Road LLC, an entity of developer Brian O'Neill, seeks a special exception from Plymouth Township's zoning hearing board to convert the recently closed Cleveland-Cliffs steel mill \u2014 10 existing buildings totaling about 2 million sq ft on 66 acres along the Schuylkill River \u2014 into a data center. The Aug. 6 hearing nearly filled a 750-seat auditorium; Conshohocken Borough was granted party status while Norristown was denied. The board set a procedural-only session for Aug. 17, with testimony continuing in September; an opposition petition has topped 4,000 signatures.",
+      "note": "900 Conshohocken Road LLC, an entity of developer Brian O'Neill, seeks a special exception from Plymouth Township's zoning hearing board to convert the recently closed Cleveland-Cliffs steel mill — 10 existing buildings totaling about 2 million sq ft on 66 acres along the Schuylkill River — into a data center. The Aug. 6 hearing nearly filled a 750-seat auditorium; Conshohocken Borough was granted party status while Norristown was denied. The board set a procedural-only session for Aug. 17, with testimony continuing in September; an opposition petition has topped 4,000 signatures.",
       "source": "https://morethanthecurve.com/almost-full-house-for-conshohocken-data-center-hearing-before-plymouth-townships-zoning-hearing-board/",
       "as_of": "2026-08-14",
       "events": [
@@ -4111,7 +4123,7 @@
       "hearing_date": null,
       "decided_date": null,
       "outcome": null,
-      "note": "Terra Nexus Land Fund I, LLC asked Rockingham to rezone ~165 acres at 316 Old Cheraw Highway from high-density residential (R-7) to conditional light industrial for a $1.2B, ~30-job data center campus \u2014 Richmond County's third. The Planning Board unanimously recommended approval on Aug 4; a City Council public hearing must precede any vote, but fetched coverage (as of Aug 13) gives no confirmed hearing date.",
+      "note": "Terra Nexus Land Fund I, LLC asked Rockingham to rezone ~165 acres at 316 Old Cheraw Highway from high-density residential (R-7) to conditional light industrial for a $1.2B, ~30-job data center campus — Richmond County's third. The Planning Board unanimously recommended approval on Aug 4; a City Council public hearing must precede any vote, but fetched coverage (as of Aug 13) gives no confirmed hearing date.",
       "source": "https://www.yourdailyjournal.com/news/265529/rockingham-council-to-hold-public-hearing-on-data-center-rezoning",
       "as_of": "2026-08-14",
       "events": [
@@ -4177,7 +4189,7 @@
       "hearing_date": "2026-08-12",
       "decided_date": "2026-08-12",
       "outcome": "approved",
-      "note": "Marietta City Council voted 5-2 on Aug 12, 2026 to approve rezoning for an 18 MW, 90,000 sq ft data center at Prime Storage's ~11-acre Powers Ferry Place property near I-75 and Delk Road \u2014 the city's second data center. Conditions include silencers on coolers/generators, an independent sound study, no connection to municipal water, and Prime Storage agreeing not to build data centers at its other Marietta sites. The application predated the six-month moratorium the council passed July 8.",
+      "note": "Marietta City Council voted 5-2 on Aug 12, 2026 to approve rezoning for an 18 MW, 90,000 sq ft data center at Prime Storage's ~11-acre Powers Ferry Place property near I-75 and Delk Road — the city's second data center. Conditions include silencers on coolers/generators, an independent sound study, no connection to municipal water, and Prime Storage agreeing not to build data centers at its other Marietta sites. The application predated the six-month moratorium the council passed July 8.",
       "source": "https://eastcobbnews.com/marietta-city-council-approves-data-center-off-delk-road/",
       "as_of": "2026-08-14",
       "events": [
@@ -4255,7 +4267,7 @@
       "hearing_date": null,
       "decided_date": "2026-08-06",
       "outcome": "withdrawn",
-      "note": "Stillwater Development's 15-building, 3.5 million sq ft campus at 11760 Panhandle Road \u2014 1.25 GW at full build, sited across from Michelle Obama Elementary and Eddie White Middle school traffic \u2014 was withdrawn at an Aug 6, 2026 council meeting after strong community opposition; plans were first filed in December 2025. The developer is pivoting to residential development, and Mayor Marci Fluellyn said the city will begin updating its zoning to prohibit data centers.",
+      "note": "Stillwater Development's 15-building, 3.5 million sq ft campus at 11760 Panhandle Road — 1.25 GW at full build, sited across from Michelle Obama Elementary and Eddie White Middle school traffic — was withdrawn at an Aug 6, 2026 council meeting after strong community opposition; plans were first filed in December 2025. The developer is pivoting to residential development, and Mayor Marci Fluellyn said the city will begin updating its zoning to prohibit data centers.",
       "source": "https://www.atlantanewsfirst.com/2026/08/07/proposal-clayton-county-data-center-withdrawn/",
       "as_of": "2026-08-14",
       "events": [
@@ -4327,7 +4339,7 @@
       "hearing_date": null,
       "decided_date": "2026-06-29",
       "outcome": "approved",
-      "note": "On June 29, 2026 Mitchell County commissioners rezoned ~300 acres of agricultural land to industrial near Baconton, clearing the way for a 1,500 MW power generation facility linked in reporting to NextEra Energy and described by residents as intended to supply data centers across southwest Georgia \u2014 the rezoned project is a power plant, not a data center itself (size_mw is generation capacity). Residents are pursuing a referendum on the rezoning, a one-year data center moratorium petition, and recalls of commissioners.",
+      "note": "On June 29, 2026 Mitchell County commissioners rezoned ~300 acres of agricultural land to industrial near Baconton, clearing the way for a 1,500 MW power generation facility linked in reporting to NextEra Energy and described by residents as intended to supply data centers across southwest Georgia — the rezoned project is a power plant, not a data center itself (size_mw is generation capacity). Residents are pursuing a referendum on the rezoning, a one-year data center moratorium petition, and recalls of commissioners.",
       "source": "https://www.wctv.tv/2026/08/13/enough-is-enough-mitchell-county-residents-push-recall-commissioners-after-controversial-data-center-rezoning/",
       "as_of": "2026-08-14",
       "events": [
@@ -6854,7 +6866,7 @@
         {
           "date": "2025-10-29",
           "kind": "operational",
-          "summary": "AWS's Project Rainier \u2014 the AI training cluster powering Anthropic's Claude, spread across Pennsylvania, Indiana, and Mississippi \u2014 was reported operational, with its Mississippi campus near Canton in Madison County cited at more than 350 MW of IT capacity and set to ramp past 1 GW.",
+          "summary": "AWS's Project Rainier — the AI training cluster powering Anthropic's Claude, spread across Pennsylvania, Indiana, and Mississippi — was reported operational, with its Mississippi campus near Canton in Madison County cited at more than 350 MW of IT capacity and set to ramp past 1 GW.",
           "source": "https://www.semafor.com/article/10/29/2025/aws-massive-multi-state-ai-data-center-is-powering-anthropics-claude"
         },
         {
@@ -7382,7 +7394,7 @@
         {
           "date": "2021-12-22",
           "kind": "filing",
-          "summary": "Idaho Power filed an application with the Idaho Public Utilities Commission (Case No. IPC-E-21-42) for approval of a special contract and Tariff Schedule 33 to provide electric service to Brisbie LLC \u2014 the shell entity used for Meta's then-unannounced Kuna project.",
+          "summary": "Idaho Power filed an application with the Idaho Public Utilities Commission (Case No. IPC-E-21-42) for approval of a special contract and Tariff Schedule 33 to provide electric service to Brisbie LLC — the shell entity used for Meta's then-unannounced Kuna project.",
           "source": "https://puc.idaho.gov/Fileroom/PublicFiles/ELEC/IPC/IPCE2142/CaseFiles/20211222Application.pdf"
         },
         {
@@ -7424,7 +7436,7 @@
         {
           "date": "2024-05-16",
           "kind": "filing",
-          "summary": "Idaho Power filed an application with the IPUC (Case No. IPC-E-24-20) to amend its power purchase agreement with PVS 2, LLC \u2014 the Pleasant Valley Solar project developed to supply renewable power for Meta's Kuna load \u2014 moving the commercial operation date from December 31, 2026 to May 31, 2026.",
+          "summary": "Idaho Power filed an application with the IPUC (Case No. IPC-E-24-20) to amend its power purchase agreement with PVS 2, LLC — the Pleasant Valley Solar project developed to supply renewable power for Meta's Kuna load — moving the commercial operation date from December 31, 2026 to May 31, 2026.",
           "source": "https://puc.idaho.gov/Fileroom/PublicFiles/ELEC/IPC/IPCE2420/CaseFiles/20240516Application.pdf"
         },
         {
@@ -7892,7 +7904,7 @@
         {
           "date": "2026-01-15",
           "kind": "filing",
-          "summary": "ERCOT approved an additional 830 MW of interconnection capacity for the Helios campus, bringing total approved capacity to 1.6 GW \u2014 described as the largest single-site allocation in ERCOT's large load interconnection queue.",
+          "summary": "ERCOT approved an additional 830 MW of interconnection capacity for the Helios campus, bringing total approved capacity to 1.6 GW — described as the largest single-site allocation in ERCOT's large load interconnection queue.",
           "source": "https://introl.com/blog/galaxy-helios-1-6gw-ercot-approval-texas-data-center-2026"
         },
         {
@@ -9314,7 +9326,7 @@
         {
           "date": "2026-05-14",
           "kind": "coverage",
-          "summary": "Grist reported on the conversion of the former American Thread plant in Marble from crypto mining to an AI data center consuming as much power as a medium-sized town, noting the site plan included more than 170 diesel generators and that the Core Scientific\u2013CoreWeave merger had fallen through the prior October.",
+          "summary": "Grist reported on the conversion of the former American Thread plant in Marble from crypto mining to an AI data center consuming as much power as a medium-sized town, noting the site plan included more than 170 diesel generators and that the Core Scientific–CoreWeave merger had fallen through the prior October.",
           "source": "https://grist.org/politics/first-crypto-now-data-centers-how-tech-is-reshaping-this-north-carolina-community/"
         }
       ]
@@ -9770,7 +9782,7 @@
         {
           "date": "2023-12-15",
           "kind": "filing",
-          "summary": "Vantage Data Centers TX1 LLC filed TDLR architectural barriers project TABS2024007561 for 'Data Center Building TX11' at 14720 Omicron Dr, San Antonio \u2014 a 242,667 sq ft, 32 MW, two-story new-construction facility with estimated cost of $95.8 million and projected completion September 2026.",
+          "summary": "Vantage Data Centers TX1 LLC filed TDLR architectural barriers project TABS2024007561 for 'Data Center Building TX11' at 14720 Omicron Dr, San Antonio — a 242,667 sq ft, 32 MW, two-story new-construction facility with estimated cost of $95.8 million and projected completion September 2026.",
           "source": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2024007561"
         },
         {
@@ -10304,7 +10316,7 @@
         {
           "date": "2026-06-22",
           "kind": "coverage",
-          "summary": "The Cedar Rapids City Council was set to vote on an indemnification agreement giving Google a temporary certificate of occupancy for the first data center building while impacts were evaluated \u2014 the concern centered on heat and steam plumes potentially interfering with landings at the nearby Eastern Iowa Airport.",
+          "summary": "The Cedar Rapids City Council was set to vote on an indemnification agreement giving Google a temporary certificate of occupancy for the first data center building while impacts were evaluated — the concern centered on heat and steam plumes potentially interfering with landings at the nearby Eastern Iowa Airport.",
           "source": "https://www.kcrg.com/2026/06/22/cedar-rapids-set-agreement-with-google-regarding-data-center-impacts/"
         },
         {
@@ -10874,7 +10886,7 @@
         {
           "date": "2025-02-25",
           "kind": "announcement",
-          "summary": "Governor Michelle Lujan Grisham announced a partnership with BorderPlex Digital Assets to build a $5 billion digital infrastructure campus in Santa Teresa, expected to create 1,000 jobs \u2014 the first announcement of the site that would become Project Jupiter.",
+          "summary": "Governor Michelle Lujan Grisham announced a partnership with BorderPlex Digital Assets to build a $5 billion digital infrastructure campus in Santa Teresa, expected to create 1,000 jobs — the first announcement of the site that would become Project Jupiter.",
           "source": "https://www.governor.state.nm.us/2025/02/25/governor-announces-partnership-with-borderplex-digital-digital-infrastructure-campus-represents-5-billion-investment-in-santa-teresa-expected-to-create-1000-jobs/"
         },
         {
@@ -11168,7 +11180,7 @@
         {
           "date": "2026-04-21",
           "kind": "coverage",
-          "summary": "KUTV reported that Utah House Bill 76, passed earlier in 2026, now requires large data centers to report water consumption, but the law applies only to facilities that become operational after July 2026 \u2014 potentially exempting already-approved projects.",
+          "summary": "KUTV reported that Utah House Bill 76, passed earlier in 2026, now requires large data centers to report water consumption, but the law applies only to facilities that become operational after July 2026 — potentially exempting already-approved projects.",
           "source": "https://kutv.com/news/utah-water/questions-grow-over-water-use-at-massive-qts-data-center-in-eagle-mountain"
         }
       ]
@@ -11683,6 +11695,622 @@
       "note": "129-acre hyperscale campus; Planning Board recommended denying rezoning despite developer concessions ($80M projected tax revenue over 10 years).",
       "outcome": "denied",
       "source": "https://www.wfdd.org/politics-government/2026-06-11/planning-board-recommends-denying-rezoning-for-proposed-rural-hall-data-center",
+      "events": []
+    },
+    {
+      "id": "tract-mountain-road-hanover-va",
+      "name": "Mountain Road Technology Park",
+      "operator": "Tract",
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Hanover County",
+      "state": "VA",
+      "lat": 37.76,
+      "lon": -77.47,
+      "size_mw": null,
+      "acres": 427,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": "2026-05-27",
+      "outcome": "denied",
+      "note": "427-acre, five-building campus; up to 2M gal/day water peak. Planning Commission approved 6-1 (Apr 16) but Board of Supervisors denied rezoning, height exception, and substation permit 4-3 (May 27, 2026).",
+      "source": "https://richmondbizsense.com/2026/05/28/hanover-supervisors-reject-data-center-project-on-mountain-road/",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-04-16",
+          "kind": "vote",
+          "summary": "Hanover County Planning Commission approved the rezoning 6-1.",
+          "source": "https://richmondbizsense.com/2026/05/28/hanover-supervisors-reject-data-center-project-on-mountain-road/"
+        },
+        {
+          "date": "2026-05-27",
+          "kind": "vote",
+          "summary": "Board of Supervisors denied rezoning, height exception, and substation permit 4-3.",
+          "source": "https://richmondbizsense.com/2026/05/28/hanover-supervisors-reject-data-center-project-on-mountain-road/"
+        }
+      ]
+    },
+    {
+      "id": "project-spero-spartanburg-sc",
+      "name": "Project Spero",
+      "operator": "TigerDC / NorthMark Strategies",
+      "owner": "Valara Holdings",
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Spartanburg County",
+      "state": "SC",
+      "lat": 34.95,
+      "lon": -81.93,
+      "size_mw": 450,
+      "acres": null,
+      "announced": "2026-01-27",
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": null,
+      "note": "$3B facility seeking 450 MW (Phase 1 up to 100 MW) at Tyger River Industrial Park-North. Residents filed lawsuit demanding public planning review (Jul 8); SC PSC held oral arguments Aug 5 over whether project needs state-level review — largest PSC turnout since 2018.",
+      "source": "https://www.foxcarolina.com/2026/08/05/live-oral-arguments-begin-over-proposed-data-center-spartanburg-county/",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-01-27",
+          "kind": "announcement",
+          "summary": "TigerDC / NorthMark Strategies / Valara Holdings announced $3B, 450 MW data center at Tyger River Industrial Park-North.",
+          "source": "https://www.postandcourier.com/spartanburg/business/tigerdc-data-center-spartanburg-county-project-spero/article_08f63d91-4108-4439-92c9-51b51c081232.html"
+        },
+        {
+          "date": "2026-07-08",
+          "kind": "filing",
+          "summary": "Residents filed lawsuit demanding public planning review of the project.",
+          "source": "https://www.foxcarolina.com/2026/08/05/live-oral-arguments-begin-over-proposed-data-center-spartanburg-county/"
+        },
+        {
+          "date": "2026-08-05",
+          "kind": "hearing",
+          "summary": "SC Public Service Commission held oral arguments over whether the project needs state-level review; largest PSC hearing turnout since 2018.",
+          "source": "https://www.foxcarolina.com/2026/08/05/live-oral-arguments-begin-over-proposed-data-center-spartanburg-county/"
+        }
+      ]
+    },
+    {
+      "id": "saxum-jackson-ms",
+      "name": "Saxum Investment Data Center",
+      "operator": "Saxum Investment Co.",
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Jackson",
+      "state": "MS",
+      "lat": 32.35,
+      "lon": -90.25,
+      "size_mw": null,
+      "acres": 230,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": null,
+      "note": "230-acre rezoning request (agricultural/residential to heavy industrial) on Forest Ave in northwest Jackson. Hearing postponed May 27 after community pushback; City Council paused all DC construction June 23 pending new regulations.",
+      "source": "https://mississippitoday.org/2026/06/23/data-centers-jackson-regulations-moratorium/",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-05-27",
+          "kind": "hearing",
+          "summary": "Rezoning hearing postponed after organized community pushback.",
+          "source": "https://mississippitoday.org/2026/06/23/data-centers-jackson-regulations-moratorium/"
+        },
+        {
+          "date": "2026-06-23",
+          "kind": "vote",
+          "summary": "Jackson City Council paused all data center construction pending new regulations.",
+          "source": "https://mississippitoday.org/2026/06/23/data-centers-jackson-regulations-moratorium/"
+        }
+      ]
+    },
+    {
+      "id": "google-hermantown-mn",
+      "name": "Google Hermantown Campus",
+      "operator": "Google",
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Hermantown",
+      "state": "MN",
+      "lat": 46.8,
+      "lon": -92.24,
+      "size_mw": null,
+      "acres": 278,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": null,
+      "note": "26 parcels / 278 acres in SW Hermantown. Community pushback forced a redo of the environmental review; second public comment period on draft AUAR + mitigation plan opened June 12, 2026 (closed Jul 16).",
+      "source": "https://hermantownmn.com/community/community-highlights/second-comment-period-opens-for-google-data-center/",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2025-10-01",
+          "kind": "filing",
+          "summary": "Initial Alternative Urban Areawide Review (AUAR) adopted.",
+          "source": "https://hermantownmn.com/community/community-highlights/second-comment-period-opens-for-google-data-center/"
+        },
+        {
+          "date": "2026-06-12",
+          "kind": "filing",
+          "summary": "Second public comment period opened on revised Draft AUAR and Mitigation Plan after community pushback forced a redo of the environmental review. Comment period closed July 16.",
+          "source": "https://hermantownmn.com/community/community-highlights/second-comment-period-opens-for-google-data-center/"
+        }
+      ]
+    },
+    {
+      "id": "pseg-100-jersey-ave-nj",
+      "name": "100 Jersey Avenue AI Data Center",
+      "operator": "PSE&G",
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "New Brunswick",
+      "state": "NJ",
+      "lat": 40.49,
+      "lon": -74.45,
+      "size_mw": null,
+      "acres": null,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": "2026-02-18",
+      "outcome": "denied",
+      "note": "27,000 sq ft DC at 100 Jersey Avenue; City Council killed the proposal Feb 18, 2026 to audience applause. Hundreds held 'No data center!' signs; NAACP president cited neighborhood concerns. Site will become 600 apartments + park instead.",
+      "source": "https://patch.com/new-jersey/newbrunswick/new-brunswick-city-council-kills-proposal-build-ai-data-center-100-jersey",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-02-18",
+          "kind": "vote",
+          "summary": "City Council voted to cancel the data center. Hundreds attended with 'No data center!' signs. NAACP president Bruce Morgan cited neighborhood opposition. Site to be redeveloped as 600 apartments, warehouses, and a public park.",
+          "source": "https://patch.com/new-jersey/newbrunswick/new-brunswick-city-council-kills-proposal-build-ai-data-center-100-jersey"
+        }
+      ]
+    },
+    {
+      "id": "brookfield-paducah-ky",
+      "name": "Paducah Data Center Campus",
+      "operator": "Brookfield",
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Paducah",
+      "state": "KY",
+      "lat": 37.08,
+      "lon": -88.6,
+      "size_mw": 1800,
+      "acres": null,
+      "announced": "2026-07-29",
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": null,
+      "note": "1.8 GW campus on former DOE Paducah uranium-enrichment site; $100B+ private investment, 2 GW gas plant + 2.6 GW battery. NextEra building energy infra. ~600 permanent / 8,000 construction jobs. KY PSC approval pending. Completion target 2031.",
+      "source": "https://spectrumnews1.com/ky/louisville/news/2026/07/29/doe-announces-paducah-data-center-campus-with-100b-private-investment",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-07-29",
+          "kind": "announcement",
+          "summary": "DOE announced Brookfield selected to develop 1.8 GW data center campus on the former Paducah Gaseous Diffusion Plant site; NextEra Energy building 2 GW gas plant + 2.6 GW battery storage. $100B+ private investment.",
+          "source": "https://spectrumnews1.com/ky/louisville/news/2026/07/29/doe-announces-paducah-data-center-campus-with-100b-private-investment"
+        }
+      ]
+    },
+    {
+      "id": "qts-van-wert-oh",
+      "name": "QTS Van Wert Campus",
+      "operator": "QTS",
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Van Wert",
+      "state": "OH",
+      "lat": 40.87,
+      "lon": -84.58,
+      "size_mw": null,
+      "acres": null,
+      "announced": "2026-05-29",
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": null,
+      "note": "~$10B capital investment in northwest Ohio; first building operational ~2029, full buildout ~2032.",
+      "source": "https://mercercountyoutlook.net/2026/05/29/city-of-van-wert-and-qts-announce-data-center-campus-in-northwest-ohio/",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-05-29",
+          "kind": "announcement",
+          "summary": "City of Van Wert and QTS announced data center campus in northwest Ohio; ~$10B capital investment, first building ~2029, full buildout ~2032.",
+          "source": "https://mercercountyoutlook.net/2026/05/29/city-of-van-wert-and-qts-announce-data-center-campus-in-northwest-ohio/"
+        }
+      ]
+    },
+    {
+      "id": "southeast-raleigh-nc",
+      "name": "Southeast Raleigh Data Center",
+      "operator": null,
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Raleigh",
+      "state": "NC",
+      "lat": 35.77,
+      "lon": -78.64,
+      "size_mw": null,
+      "acres": null,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": "withdrawn",
+      "note": "Proposal pulled from City Council agenda in August 2026 after organized public opposition before it reached a vote.",
+      "source": "https://www.wunc.org/term/news/2026-08-17/data-center-southeast-raleigh-opposition-city-council",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-08-17",
+          "kind": "withdrawal",
+          "summary": "Developer pulled the proposal from the Raleigh City Council agenda after organized public opposition.",
+          "source": "https://www.wunc.org/term/news/2026-08-17/data-center-southeast-raleigh-opposition-city-council"
+        }
+      ]
+    },
+    {
+      "id": "tulare-county-moratorium-ca",
+      "name": "Tulare County Data Center (moratorium)",
+      "operator": null,
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Tulare County",
+      "state": "CA",
+      "lat": 36.23,
+      "lon": -119.32,
+      "size_mw": null,
+      "acres": null,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": null,
+      "note": "County Supervisors passed a 45-day moratorium on new data centers in August 2026, pausing all pending applications countywide.",
+      "source": "https://www.yourcentralvalley.com/news/local-news/tulare-county-ai-data-center-moratorium/",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-08-01",
+          "kind": "vote",
+          "summary": "Tulare County Board of Supervisors passed 45-day moratorium on new data center applications.",
+          "source": "https://www.yourcentralvalley.com/news/local-news/tulare-county-ai-data-center-moratorium/"
+        }
+      ]
+    },
+    {
+      "id": "meta-el-paso-tx",
+      "name": "Meta-BlackRock El Paso Data Center",
+      "operator": "Meta",
+      "owner": "BlackRock",
+      "tenant": "Meta",
+      "filing_llc": null,
+      "locality": "El Paso",
+      "state": "TX",
+      "lat": 31.76,
+      "lon": -106.44,
+      "size_mw": null,
+      "acres": null,
+      "announced": "2026-07-01",
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": null,
+      "note": "$10B+ Meta-BlackRock strategic venture; 4,000 peak construction jobs, capacity beginning 2028.",
+      "source": "https://about.fb.com/news/2026/07/meta-announces-new-strategic-venture-with-blackrock-to-develop-data-center-in-el-paso/",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-07-01",
+          "kind": "announcement",
+          "summary": "Meta announced $10B+ strategic venture with BlackRock to develop data center in El Paso; 4,000 peak construction jobs, capacity beginning 2028.",
+          "source": "https://about.fb.com/news/2026/07/meta-announces-new-strategic-venture-with-blackrock-to-develop-data-center-in-el-paso/"
+        }
+      ]
+    },
+    {
+      "id": "vermaland-la-osa-pinal-az",
+      "name": "La Osa",
+      "operator": "Vermaland",
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Pinal County (near Eloy)",
+      "state": "AZ",
+      "lat": 32.74,
+      "lon": -111.55,
+      "size_mw": 1000,
+      "acres": 3300,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": "2026-08-26",
+      "decided_date": null,
+      "outcome": null,
+      "note": "Originally 59 data centers + 2 gas plants on 3,300 acres; scaled back 80% to 11 data centers (1 GW) after ~60 verbal comments and 50 emails all opposing.",
+      "source": "https://www.kjzz.org/fronteras-desk/2026-05-28/largest-proposed-data-center-in-arizona-to-be-scaled-back-80-after-opposition",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-05-28",
+          "kind": "hearing",
+          "summary": "Board heard rezoning; ~60 verbal comments and 50 emails all opposed.",
+          "source": "https://www.kjzz.org/fronteras-desk/2026-05-28/largest-proposed-data-center-in-arizona-to-be-scaled-back-80-after-opposition"
+        }
+      ]
+    },
+    {
+      "id": "midtown-armory-st-louis-mo",
+      "name": "Midtown Data Center",
+      "operator": null,
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "St. Louis (Midtown)",
+      "state": "MO",
+      "lat": 38.63,
+      "lon": -90.23,
+      "size_mw": 120,
+      "acres": null,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": "2026-07-30",
+      "outcome": "approved",
+      "note": "120 MW / $3B campus near the Armory; CUP upheld with conditions (no diesel testing on bad air days, on-site renewables) after 11-hour hearing.",
+      "source": "https://www.stlpr.org/health-science-environment/2026-07-30/st-louis-board-allows-data-center-near-armory-to-move-forward-with-new-rules",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-07-30",
+          "kind": "vote",
+          "summary": "Board of Adjustment unanimously upheld CUP with air-quality and renewables conditions.",
+          "source": "https://www.stlpr.org/health-science-environment/2026-07-30/st-louis-board-allows-data-center-near-armory-to-move-forward-with-new-rules"
+        }
+      ]
+    },
+    {
+      "id": "douglas-county-i20-ga",
+      "name": "I-20/Liberty Road Data Center",
+      "operator": null,
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Douglas County",
+      "state": "GA",
+      "lat": 33.73,
+      "lon": -84.77,
+      "size_mw": null,
+      "acres": 700,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": "2026-07-08",
+      "outcome": "denied",
+      "note": "4.4M sq ft / 700+ acres; commissioners voted 4-1 to deny after noise demonstrations and 11 existing DCs cited.",
+      "source": "https://www.fox5atlanta.com/news/douglas-county-leaders-just-killed-massive-data-center-project",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-07-08",
+          "kind": "vote",
+          "summary": "Commission voted 4-1 to deny rezoning. Residents presented noise demos.",
+          "source": "https://www.fox5atlanta.com/news/douglas-county-leaders-just-killed-massive-data-center-project"
+        }
+      ]
+    },
+    {
+      "id": "inver-grove-heights-mn",
+      "name": "Inver Grove Heights Data Center",
+      "operator": null,
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Inver Grove Heights",
+      "state": "MN",
+      "lat": 44.85,
+      "lon": -93.05,
+      "size_mw": 5,
+      "acres": null,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": null,
+      "note": "55,000 sq ft / 5 MW; 1-year moratorium passed 3-2 after 700+ petition signatures. Developer threatening $150M+ lawsuit.",
+      "source": "https://www.fox9.com/news/inver-grove-heights-data-center-moratorium-june-26-2026",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-06-26",
+          "kind": "vote",
+          "summary": "Council voted 3-2 for 1-year moratorium. Developer threatened $150M+ suit.",
+          "source": "https://www.fox9.com/news/inver-grove-heights-data-center-moratorium-june-26-2026"
+        }
+      ]
+    },
+    {
+      "id": "dulles-cloud-south-va",
+      "name": "Dulles Cloud South",
+      "operator": null,
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Prince William County",
+      "state": "VA",
+      "lat": 38.78,
+      "lon": -77.6,
+      "size_mw": null,
+      "acres": 2000,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": "2026-07-08",
+      "outcome": "denied",
+      "note": "~2,000-acre / 43M sq ft rezoning rejected days after Digital Gateway collapsed.",
+      "source": "https://virginiamercury.com/2026/07/09/after-digital-gateway-project-fails-prince-william-supervisors-reject-dulles-cloud-south-data-center-proposal/",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-07-08",
+          "kind": "vote",
+          "summary": "Board rejected rezoning days after Digital Gateway legal fight ended.",
+          "source": "https://virginiamercury.com/2026/07/09/after-digital-gateway-project-fails-prince-william-supervisors-reject-dulles-cloud-south-data-center-proposal/"
+        }
+      ]
+    },
+    {
+      "id": "project-tango-loxahatchee-fl",
+      "name": "Project Tango",
+      "operator": null,
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Loxahatchee (Palm Beach County)",
+      "state": "FL",
+      "lat": 26.68,
+      "lon": -80.28,
+      "size_mw": null,
+      "acres": null,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": "2026-06-01",
+      "outcome": "denied",
+      "note": "Commissioners voted 5-1 to deny after 12+ hours of testimony on noise, water, traffic.",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/more-than-75-data-center-build-outs-worth-usd130-billion-have-been-successfully-blocked-in-the-first-four-months-of-2026-bipartisan-opposition-mounts-nationwide-over-fears-of-soaring-power-and-water-costs",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-06-01",
+          "kind": "vote",
+          "summary": "Palm Beach County commissioners voted 5-1 to deny after 12+ hours of testimony.",
+          "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/more-than-75-data-center-build-outs-worth-usd130-billion-have-been-successfully-blocked-in-the-first-four-months-of-2026-bipartisan-opposition-mounts-nationwide-over-fears-of-soaring-power-and-water-costs"
+        }
+      ]
+    },
+    {
+      "id": "project-marvel-bessemer-al",
+      "name": "Project Marvel",
+      "operator": "Logistics Land Investment",
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Bessemer",
+      "state": "AL",
+      "lat": 33.4,
+      "lon": -86.95,
+      "size_mw": null,
+      "acres": 700,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": null,
+      "note": "$14B, 700-acre campus; rezoning delayed amid opposition from residents and county officials.",
+      "source": null,
+      "as_of": null,
+      "events": []
+    },
+    {
+      "id": "kearney-data-center-ne",
+      "name": "Kearney Data Center",
+      "operator": "Worldwide Mission Critical",
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Kearney",
+      "state": "NE",
+      "lat": 40.7,
+      "lon": -99.08,
+      "size_mw": 368,
+      "acres": null,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": "2026-08-21",
+      "decided_date": null,
+      "outcome": null,
+      "note": "368 MW; CUP discussed at Planning Commission Aug 21. Staff recommended approval.",
+      "source": "https://rock1015.com/2026/08/18/data-center-conditional-use-permit-to-be-discussed-at-kearney-planning-commission-meeting/",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-08-21",
+          "kind": "hearing",
+          "summary": "Planning Commission to discuss CUP; staff recommends approval.",
+          "source": "https://rock1015.com/2026/08/18/data-center-conditional-use-permit-to-be-discussed-at-kearney-planning-commission-meeting/"
+        }
+      ]
+    },
+    {
+      "id": "sarasota-county-moratorium-fl",
+      "name": "Sarasota County Data Center (Cattleman Road)",
+      "operator": null,
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Sarasota County",
+      "state": "FL",
+      "lat": 27.34,
+      "lon": -82.47,
+      "size_mw": null,
+      "acres": null,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": null,
+      "note": "Unnamed company eyed Cattleman Road; county responded with unanimous 1-year moratorium (5-0). Commissioner: 'not now, never.'",
+      "source": "https://www.yourobserver.com/news/2026/jul/11/data-centers-rejected-sarasota-county/",
+      "as_of": "2026-08-19",
+      "events": [
+        {
+          "date": "2026-07-09",
+          "kind": "vote",
+          "summary": "Commission voted 5-0 for 1-year moratorium. Joins Citrus, Nassau, Hernando counties.",
+          "source": "https://www.yourobserver.com/news/2026/jul/11/data-centers-rejected-sarasota-county/"
+        }
+      ]
+    },
+    {
+      "id": "amazon-montgomery-county-mo",
+      "name": "Amazon Montgomery County Data Center",
+      "operator": "Amazon",
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Montgomery County",
+      "state": "MO",
+      "lat": 38.95,
+      "lon": -91.5,
+      "size_mw": null,
+      "acres": null,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": null,
+      "note": "Multibillion-dollar Amazon DC; announced amid statewide regulatory debate (HB 3362 failed).",
+      "source": "https://www.stlpr.org/government-politics-issues/2026-06-29/missouri-lawmakers-data-centers",
+      "as_of": "2026-08-19",
       "events": []
     }
   ]
