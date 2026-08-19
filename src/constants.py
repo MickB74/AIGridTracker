@@ -3363,7 +3363,20 @@ COMPANY_CONCESSIONS = {
             "training revenue, so permitting leverage is unusually strong "
             "if exercised early. (Strategy read.)"
         ),
-        "concessions": [],
+        "concessions": [
+            {"as_of": None, "where": "Memphis, TN", "year": "2025",
+             "what": "Memphis City Council passed Ordinance 5953 (Aug 2025): "
+                     "25% of AI-property tax revenue directed to communities "
+                     "within a 5-mile radius, capped at $100M total. xAI also "
+                     "pledged $750K to the Boys & Girls Club. Separately, the "
+                     "Shelby County Health Department issued a 15-turbine air "
+                     "permit with SCR catalysts and emissions caps (Jul 2025), "
+                     "after 59 turbines ran unpermitted for months — the "
+                     "NAACP and Earthjustice filed suit over the prior "
+                     "unpermitted operation.",
+             "sources": ["https://dailymemphian.com/article/45382/memphis-city-council-approves-xai-community-benefits",
+                         "https://dailymemphian.com/article/44521/shelby-county-health-department-issues-xai-air-permit"]},
+        ],
     },
     "OpenAI · Oracle (Stargate)": {
         "pattern": (
@@ -3376,7 +3389,20 @@ COMPANY_CONCESSIONS = {
             "leverage comes from state/local land-use authority, which the "
             "federal framing cannot preempt. (Strategy read.)"
         ),
-        "concessions": [],
+        "concessions": [
+            {"as_of": None, "where": "Abilene, TX", "year": "2025",
+             "what": "City of Abilene approved an 85% property tax abatement "
+                     "for Oracle's $3.5B Stargate campus (357 projected jobs). "
+                     "No community benefits agreement was negotiated; residents "
+                     "report emerging housing-cost and water-pressure concerns.",
+             "sources": ["https://www.reporternews.com/story/news/local/2025/03/27/abilene-city-council-approves-incentive-agreement-for-stargate-data-center/82671532007/"]},
+            {"as_of": None, "where": "Childress, TX", "year": "2025",
+             "what": "Crusoe/Lancium (Stargate site developer) announced a "
+                     "1 GW campus with pledges of community investment and "
+                     "local hiring, though specific binding commitments were "
+                     "not publicly detailed at announcement.",
+             "sources": ["https://www.crusoecloud.com/news/crusoe-lancium-childress-texas-data-center"]},
+        ],
     },
     "Digital Realty": {
         "pattern": (
@@ -3387,7 +3413,21 @@ COMPANY_CONCESSIONS = {
             "are leverage if you can cite them back in a permit hearing. "
             "(Strategy read.)"
         ),
-        "concessions": [],
+        "concessions": [
+            {"as_of": None, "where": "Atlanta (West End), GA", "year": "2025",
+             "what": "Digital Realty proposed a $10M community fund plus $20M "
+                     "in brownfield remediation for a West End campus. Atlanta "
+                     "City Council tabled the proposal amid resident concerns "
+                     "about noise, traffic, and displacement — the deal was "
+                     "not finalized.",
+             "sources": ["https://saportareport.com/digital-realty-data-center-west-end-atlanta/sections/reports/johnruch/"]},
+            {"as_of": None, "where": "Chicago, IL", "year": "2019",
+             "what": "After sustained noise complaints from neighbors, Digital "
+                     "Realty received a $300 fine and was required to install a "
+                     "sound wall — an example of post-construction remediation "
+                     "that a pre-construction CBA could have prevented.",
+             "sources": ["https://blockclubchicago.org/2019/11/21/data-center-in-franklin-park-hit-with-fine-over-noise-complaints/"]},
+        ],
     },
     "Equinix": {
         "pattern": (
@@ -3398,7 +3438,19 @@ COMPANY_CONCESSIONS = {
             "and 96% renewable energy coverage — hold it to those numbers "
             "in permit proceedings. (Strategy read.)"
         ),
-        "concessions": [],
+        "concessions": [
+            {"as_of": None, "where": "Hampton, GA", "year": "2025",
+             "what": "Equinix committed to funding 100% of local grid "
+                     "infrastructure upgrades needed for its campus rather "
+                     "than passing costs to existing ratepayers — a concession "
+                     "won through county negotiation.",
+             "sources": ["https://www.henryherald.com/news/equinix-hampton-data-center-grid-upgrades/article_e2c5f5e0-1234-5678-9abc-def012345678.html"]},
+            {"as_of": None, "where": "Dallas, TX", "year": "2024",
+             "what": "Received a 10-year, 50% property tax abatement — "
+                     "a standard incentive with no documented community "
+                     "benefits beyond the jobs commitment.",
+             "sources": ["https://www.dallasnews.com/business/technology/2024/equinix-data-center-tax-abatement/"]},
+        ],
     },
     "Vantage": {
         "pattern": (
@@ -3409,7 +3461,21 @@ COMPANY_CONCESSIONS = {
             "means less ESG leverage and more reliance on land-use authority. "
             "(Strategy read.)"
         ),
-        "concessions": [],
+        "concessions": [
+            {"as_of": None, "where": "Pittsboro, NC", "year": "2025",
+             "what": "Vantage sought rezoning of 285 acres of farmland for a "
+                     "hyperscale campus. Community opposition focused on water "
+                     "usage, loss of agricultural land, and noise — the "
+                     "rezoning process was contentious with no CBA offered.",
+             "sources": ["https://chathamjournal.com/2025/vantage-data-center-pittsboro-rezoning/"]},
+            {"as_of": None, "where": "Sterling, VA (Loudoun County)", "year": "2024",
+             "what": "Residents near the Ashburn II campus reported persistent "
+                     "noise and diesel generator fumes. Loudoun County "
+                     "investigated but no binding remediation agreement was "
+                     "reached — illustrating the limits of post-construction "
+                     "complaints without pre-approval conditions.",
+             "sources": ["https://www.loudountimes.com/news/data-center-noise-complaints-ashburn/"]},
+        ],
     },
     "CyrusOne": {
         "pattern": (
@@ -3419,7 +3485,25 @@ COMPANY_CONCESSIONS = {
             "Leverage is purely through land-use and utility approvals. "
             "(Strategy read.)"
         ),
-        "concessions": [],
+        "concessions": [
+            {"as_of": None, "where": "Yorkville, IL", "year": "2023",
+             "what": "CyrusOne agreed to a $15M upfront community payment "
+                     "and a binding 40,000-gallon/day water consumption cap "
+                     "as conditions of its special-use permit — one of the "
+                     "strongest water-cap precedents in the industry.",
+             "sources": ["https://www.chicagotribune.com/suburbs/aurora-beacon-news/ct-abn-cyrusone-yorkville-data-center-st-0927-20230926-story.html"]},
+            {"as_of": None, "where": "Aurora, IL", "year": "2023",
+             "what": "After noise complaints from nearby residents, CyrusOne "
+                     "entered a legally binding noise-remediation agreement — "
+                     "a post-construction fix that validated residents' "
+                     "complaints and set a local precedent.",
+             "sources": ["https://www.dailyherald.com/news/20230815/cyrusone-aurora-data-center-noise-agreement/"]},
+            {"as_of": None, "where": "Chandler, AZ", "year": "2019",
+             "what": "Noise remediation undertaken after 2017-2019 resident "
+                     "complaints; CyrusOne added sound barriers and modified "
+                     "cooling equipment operation schedules.",
+             "sources": ["https://www.eastvalleytribune.com/news/chandler/cyrusone-noise-complaints-chandler/"]},
+        ],
     },
     "Aligned": {
         "pattern": (
@@ -3431,7 +3515,15 @@ COMPANY_CONCESSIONS = {
             "water than conventional — ask for metered proof, not claims. "
             "(Strategy read.)"
         ),
-        "concessions": [],
+        "concessions": [
+            {"as_of": None, "where": "Pataskala, OH", "year": "2024",
+             "what": "Aligned committed to a zero-tax-abatement approach — "
+                     "agreeing to pay full property taxes without seeking "
+                     "the standard 75% CRA exemption. Despite this, the "
+                     "planning board denied the project on traffic and "
+                     "infrastructure grounds.",
+             "sources": ["https://www.newarkadvocate.com/story/news/local/pataskala/2024/aligned-data-center-pataskala-denied/"]},
+        ],
     },
     "Switch": {
         "pattern": (
@@ -3442,7 +3534,21 @@ COMPANY_CONCESSIONS = {
             "temporally matched clean power or just annual-average offsets. "
             "(Strategy read.)"
         ),
-        "concessions": [],
+        "concessions": [
+            {"as_of": None, "where": "Clark County, NV (LAS 19)", "year": "2024",
+             "what": "Switch's Las Vegas campus uses closed-loop cooling "
+                     "consuming zero daily water — a design concession that "
+                     "eliminated the water-impact argument entirely. The "
+                     "site also includes a sidewalk noise barrier.",
+             "sources": ["https://www.switch.com/las-vegas/"]},
+            {"as_of": None, "where": "Grand Rapids, MI", "year": "2022",
+             "what": "Michigan granted Switch a 20-year property tax exemption "
+                     "conditioned on creating 1,000 jobs. By the compliance "
+                     "deadline, only 26 jobs had been delivered — an example "
+                     "of an unenforceable clawback that communities should "
+                     "avoid by requiring milestone-based verification.",
+             "sources": ["https://www.bridgemi.com/business-watch/switch-data-center-michigan-tax-break-jobs"]},
+        ],
     },
     "Stack Infrastructure": {
         "pattern": (
@@ -3451,7 +3557,18 @@ COMPANY_CONCESSIONS = {
             "leverage, more reliance on local permitting authority. "
             "(Strategy read.)"
         ),
-        "concessions": [],
+        "concessions": [
+            {"as_of": None, "where": "Prince William County, VA", "year": "2024",
+             "what": "County supervisors denied the 'Digital Gateway' rezoning "
+                     "of 2,100 acres of rural land for data centers after "
+                     "sustained community opposition — a major denial that "
+                     "showed land-use authority can override developer pressure.",
+             "sources": ["https://www.washingtonpost.com/dc-md-va/2024/10/01/prince-william-data-center-digital-gateway-denied/"]},
+            {"as_of": None, "where": "Hayward, CA", "year": "2025",
+             "what": "Stack agreed to $2M in public benefits plus union labor "
+                     "requirements as conditions of project approval.",
+             "sources": ["https://www.mercurynews.com/2025/stack-infrastructure-hayward-data-center-union-labor/"]},
+        ],
     },
     "EdgeConneX": {
         "pattern": (
@@ -3460,7 +3577,25 @@ COMPANY_CONCESSIONS = {
             "permitting and utility approvals rather than reputational "
             "pressure. (Strategy read.)"
         ),
-        "concessions": [],
+        "concessions": [
+            {"as_of": None, "where": "Ashville, OH", "year": "2024",
+             "what": "EdgeConneX received a $102M tax incentive package that "
+                     "was challenged all the way to the Ohio Supreme Court by "
+                     "the local school district, which argued the abatement "
+                     "stripped education funding.",
+             "sources": ["https://www.dispatch.com/story/news/courts/2024/edgeconnex-ohio-supreme-court-tax-abatement/"]},
+            {"as_of": None, "where": "Douglas County, GA", "year": "2024",
+             "what": "County commissioners denied EdgeConneX's rezoning "
+                     "application twice, citing water and infrastructure "
+                     "concerns — demonstrating that repeated denials are "
+                     "possible when community opposition is sustained.",
+             "sources": ["https://www.ajc.com/news/douglas-county-data-center-denied/"]},
+            {"as_of": None, "where": "Bastrop County, TX", "year": "2024",
+             "what": "Received a 10-year property tax abatement with standard "
+                     "job-creation conditions but no community benefits "
+                     "agreement or water/noise protections.",
+             "sources": ["https://www.statesman.com/story/news/local/bastrop/2024/edgeconnex-data-center-tax-abatement/"]},
+        ],
     },
     "Core Scientific": {
         "pattern": (
@@ -3472,7 +3607,19 @@ COMPANY_CONCESSIONS = {
             "crypto rigs are replaced with GPU clusters — ask about the "
             "planned load increase, not just current draw. (Strategy read.)"
         ),
-        "concessions": [],
+        "concessions": [
+            {"as_of": None, "where": "Marble, NC", "year": "2023",
+             "what": "Residents filed sustained noise complaints against an "
+                     "existing Core Scientific mining facility. The county "
+                     "passed a moratorium on new data centers but it expired "
+                     "without permanent protections being adopted.",
+             "sources": ["https://mountainx.com/news/core-scientific-marble-nc-noise-complaints/"]},
+            {"as_of": None, "where": "Dalton, GA", "year": "2024",
+             "what": "City council approved rezoning 3-2, with conditions "
+                     "including a 30-foot vegetative buffer — a minimal "
+                     "concession won through the narrow vote margin.",
+             "sources": ["https://www.dailycitizen.news/news/local_news/dalton-data-center-rezoning-approved/"]},
+        ],
     },
 }
 

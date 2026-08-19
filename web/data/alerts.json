@@ -4,7 +4,7 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
-  "count": 26,
+  "count": 27,
   "alerts": [
     {
       "id": "mora-NC-brevard-2026-06-23",
@@ -160,6 +160,19 @@
       "title": "Hall County, GA: data center moratorium expires in 6 days",
       "body": "The documented term ends 2026-08-25. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://accessnorthga.com/news/hall-co-approves-180-day-moratorium-includes-detention-centers",
+      "verified": true
+    },
+    {
+      "id": "mora-CO-larimer-county-2026-08-25",
+      "kind": "moratorium-expiry",
+      "severity": "urgent",
+      "locality": "Larimer County",
+      "state": "CO",
+      "expires": "2026-08-25",
+      "days_left": 6,
+      "title": "Larimer County, CO: data center moratorium expires in 6 days",
+      "body": "The documented term ends 2026-08-25. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.larimer.gov/planning/temp-moratorium-data-centers",
       "verified": true
     },
     {
