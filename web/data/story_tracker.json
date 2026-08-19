@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 2292,
+  "count": 2307,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -17804,7 +17804,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-18"
+      "last_seen": "2026-08-19"
     },
     {
       "title": "Greensboro, Alamance and Yadkin to consider data center moratoriums",
@@ -17815,7 +17815,7 @@
       "locality": "Greensboro",
       "state": "NC",
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16"
+      "last_seen": "2026-08-19"
     },
     {
       "title": "Data centers emerge as key issue in Virginia U.S. Senate race",
@@ -22435,7 +22435,7 @@
       "locality": null,
       "state": "KY",
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-18"
+      "last_seen": "2026-08-19"
     },
     {
       "title": "South of the Mason-Dixon Line, Maryland counties scramble to respond to data centers",
@@ -25215,6 +25215,171 @@
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQLXBHM3ZINExOaGFQVjB2cnlUaGtkdndIQlhQRjVjTDZ4N1BDRll6V1RITEY5S2RnY1Y3eUVuNVp1cVlTR1F0b0ROOUtjN29oTVhlVWNkMHFOX3RNTGxPRzY0a1pjQkpIVlQ4N2NQOGFZdzBuSzZSd2pCUVhacXJ3ZU11Z21YMmNfODRhOHJiRU1VVVM0d0E?oc=5",
       "published": "Wed, 19 Aug 2026 09:32:00 GMT",
       "published_iso": "2026-08-19T09:32:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "title": "Macon County residents ask for data center moratorium",
+      "outlet": "highlandsnews.com",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQ21YZVo5XzgtS3RoNTVZTzZOMkdvcFhTNnNBanVUeHRGUkZGZ0MtRUVsNW5ReU9kb2dBWGt6RkdaZGJpdEYtSzFqT1lQNjgtZnA5ODRWcG9qMjB4UHdCc25VQXUxbW03Wkx1R0l3MURsaDM4SDFRblZVVGRpZm9MRFJHNHB4Y0kzLXREb2IzTFpYR0VHNnlJ?oc=5",
+      "published": "Wed, 19 Aug 2026 12:51:08 GMT",
+      "published_iso": "2026-08-19T12:51:08+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "title": "City Council Approves Data Center Moratorium, Residents Push for Longer",
+      "outlet": "The Greensboro Thread",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQTkJRajZhUjdFdkNkbnVzdjUxY19YazN3TGtHcDRJM25hM1l0cnI1SjQxVjR5RzBDYUdQckZPUEhTT1FPZlRmRFlFazlNZ3BlSGhjUXRfc3lZeFBTcnBlcE00VDl0MFgwQkJJUG9XRmhJd2FIVW9hUUxiQ0NWa0tzMEE1b245N1lqekV3WDFKZUxneVNnZGsw?oc=5",
+      "published": "Wed, 19 Aug 2026 12:00:00 GMT",
+      "published_iso": "2026-08-19T12:00:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "title": "Data centers activate residents; what can be done to mitigate concerns?",
+      "outlet": "Shaw Local",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQbW5hNzkwTEZEY0p0NHdhelNEVzdQQk9wMFI5U3V1YlZJMm1Ha2tYYk1SbUFaSHlZaHotRnJXcGEzMHFBNDVQVUM3LXhRTkxLOW5GOGlZaFhydXZMMl9VdkY3b0hTNnpGdWRwZ1E2VzNVTnhUXzIxa0JaZXFfaUlDQUQtRXd3Qm9vYldMZHQ4c2o3WDhwdG11X0xmcndXcEdHQjQ5X2dTTWhENk9IX0tPRkd3?oc=5",
+      "published": "Wed, 19 Aug 2026 11:00:01 GMT",
+      "published_iso": "2026-08-19T11:00:01+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "title": "Calvert County commissioners pass 6-month data center moratorium",
+      "outlet": "FOX 5 DC",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdUktcGFSTlV4X1NXVlZjQk9aU3k4b2xlbjFlMVFGeEpFWFZfdzlKb2ZWMmdGaFdUeGNTMzc5MUFKVWJwdE5ib3NaaVlZM2k2TkYzRGEtbVVFOVNkZDBpUnRmT081U3BtdzNLNFpWUFhtTjFlSXZKVU9ESFJma1djeDhSVEhmSkRaSm5DaFRQaGZUWkpPenVqQ2pabzZrUGRORHlKYm9DY9IBrAFBVV95cUxNSTlEeWk3WU0wanVzUWdUdGJCNHNNX2hzd0M2Nlg4OTdEUm9NbHRRYUhVdWhIcHhNaW94ZlJHOTIzaDFsYnFVMVFrTlR1VmRDNHdRSGxkTDZVaTBZY2llTmhlV1NGZTZRWkk4SWJBenBVa3JuaVNUVzRCcldUZFZKNmFoZkJLNnJ4eXVGTG1TVi1BMnk1SzZOMTFCZENDY0QwR1IwSHhaOV9FNFR4?oc=5",
+      "published": "Tue, 18 Aug 2026 22:07:33 GMT",
+      "published_iso": "2026-08-18T22:07:33+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "title": "N. Londonderry officials receive draft copy of proposed data center ordinance",
+      "outlet": "LebTown",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQRWxiT2phZE9LbzUxUHUtc0sydFF6ZExTWHdyUnRZMWM0WGdRRl9JQnNNcTBscGN3VWFxRFZYOEdtMDNLa0RPbFgtd0N6Ykl2Q1FLU3lSa2x1UFRpRW1zYmd6dldhZ2xSSm1PcGkzeVhZRkExSmI3cEZ3V1NRLXB3YVNxVldJVVJpMmtOb1FxSUVSaFNIbzhYRUdvYWRDQlYtOFpRQ0QwSVM2ODgw?oc=5",
+      "published": "Wed, 19 Aug 2026 11:00:00 GMT",
+      "published_iso": "2026-08-19T11:00:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "title": "A look at data centers planned in the Charlottesville area",
+      "outlet": "C-VILLE Weekly",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQYjczLXdyMHNVRHo2bDBkZllqLWxhVWx6emhDeXg1MTc5MHRXMGotRHVxalR6WUpSUnlPQTNQeU9BVXp4RENseUs5QXJsNW9jbWM1RWxNS3pYT0RoYW5HeTI4MWs3aDQxelBFU1FfZkt4Z2dwTE0xbVprZTlMaUktZkpUWVpsdw?oc=5",
+      "published": "Wed, 19 Aug 2026 10:03:32 GMT",
+      "published_iso": "2026-08-19T10:03:32+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "title": "VCU POLL: Virginians believe data center are not ‘good neighbors’",
+      "outlet": "The Commonwealth Times",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNY1Azbk8wVTVQUnlBQkFsNFltVnB4MEQ0RjZGWGNyNENkaUFGUVJ5dXE5VTY0cFVyV0FDWi1SeHM5WVdSbVlxRDRNdDZnNm1uejB3ZEI2S194akRVMzFJQXJ5SkNmVlFYektaVkxxRFZ4eDZ2STZGRE9TUVF6NVlXUlUweFlUZi1BNllTb2d1ZVktQnhRR09GOFFUOFVURkZqc0h4RHdQaw?oc=5",
+      "published": "Wed, 19 Aug 2026 11:01:22 GMT",
+      "published_iso": "2026-08-19T11:01:22+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "title": "Plans for data center campus in Virginia’s Prince William County refiled",
+      "outlet": "Data Center Dynamics",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPakdsd202Y0dRWDVOMnNjbHNWVzY1cEQ3a3g5cmJ1OUd1bllmOWU0SjRDM1AzUVRadmNtQ0pGQWxqVkFYYjJWSDRCdEtiRU5JRGhvQ3lIcUFLZkozVHljMkFrWlM2WEtnZDZoYnpiSG1Fby1qWGFEczNVMGE5UzJhZ3MwaFpTMHRpamVXN25jQ2FMOU1FS1VhNVFKT0wxcTJzUVIwU2xydlVMOEw4Z2FicE5oMXVjQQ?oc=5",
+      "published": "Wed, 19 Aug 2026 11:33:16 GMT",
+      "published_iso": "2026-08-19T11:33:16+00:00",
+      "locality": "Prince William County",
+      "state": "VA",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "title": "Duos Announces More Than $611 Million Of AI Data Center Contracts Tied To 65 MW Of Capacity",
+      "outlet": "pulse2.com",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxObnE5NUFpX0Q0QUZyWk1UMGlmeXlEZVhtRk5CTVBHSm1aTXVaelFveGFPR29KdjBoZ0d0V2xoMWR5RUhDbmdKVVg0MnVna01WN1NhZ1dULXJaNzJjZTczUWo5RHNxUG9JV2ktWU40TzFSZ0VabmNzdWYzalcyaU9xY2lOTVp5TG5GOERHR2llUnVYXzd0bmhhNTUzUVlIeXpSa0labEVTVlVHOF8zejFB0gG0AUFVX3lxTE41dmpiOEozdjZtZDNPSTdBbVNJZTlWMzFFd1FYSzdrWkFWV3VqN0pIeXFmaDM0T1ZWd1QxSjJKMW9FWkxmSkY4Wm9oQ24xWlJZZ2NmdmZ0ZktJbnFQS2V3WHpkclNHTmtvZmhUQlpzR0gzcGJEN3dvTjFNNF9tVHJiMTdMalh5UFFHSmpmd0pBZ3hCWkM5VlNfNnJMTGc3VjRrTENqaUs0cFF5STB1OXBzUWpMNQ?oc=5",
+      "published": "Wed, 19 Aug 2026 12:11:22 GMT",
+      "published_iso": "2026-08-19T12:11:22+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "title": "Amazon Explores Grid Connection for 8,000-Acre AI Campus",
+      "outlet": "Data Center Knowledge",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSEEyWUxISGh2YU5mdS1sVkZIQ3FoSEFzdWJiekhqeUkzOUZCVHV5ZHVSd1pER3NnUVZic2ZiWkNFNVBUTjhpclg1RGsydDVudUd1Wmk5OHFJLTlBUGxudHNjS1FzNkZMOVdqcmRmSmIzdjkwRzhsRTdPUVpSV19qOTcyZkFncEJHME8tYVRDZERDY2xzX29RbHBIeWpLb29ocFZPaUJ5V3JRa1RKTXVMcDN3?oc=5",
+      "published": "Mon, 17 Aug 2026 22:06:55 GMT",
+      "published_iso": "2026-08-17T22:06:55+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "title": "Texas House holds wide-ranging hearing on booming data center industry",
+      "outlet": "Community Impact",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNN0h0NFJoT0dLM3VIREJodDlTZ0libjVfR1diTFU4MmY1b1YySUstRGQ0V3ByMlpQOTctOTB6Vk84X2Vya1ItVjF1Q1J0ajl6QmozbEhxMmp6c193MFRJUkJnZ1o5cGRKS29IYzdkTnVOSHNHVy1pSV85Sk9QNFFxV2ZaLVhnRGJnT05TelZFZDJCdkJQemVPWUdxS1BDQ1o5TlpZZ3VZOE5JdFNacjBsaHRHc0JFdFBHbDFWdVpyTDJwR3pxVUFTdHgyTWFMcWsyWWVQUGVLSVl3RjlFVmRjc3FyZGxhRU9DZXM2T29uN0g?oc=5",
+      "published": "Wed, 19 Aug 2026 12:01:37 GMT",
+      "published_iso": "2026-08-19T12:01:37+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "title": "Texas lawmakers to hear testimony Wednesday on impact of data centers",
+      "outlet": "KVUE",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNc3NFNHdvX3NpdWVEQ1o3ZzZaY1dNV1RwZVhabHNkZmo5amhKQlFwUzBPVTBwY0dmbmpmX2oyYlIzbEhhOUJ6YTdMX3JQZzd6RGpVR0k3YmZwaF9NXzJwdUVFWVRYdUZINEw5QU90cTVQRVczRTJOSTNLZ3FySjVFbmpxOXVvRkhRbWYtSkFBbTZPZXBoUWhKTDlVTExTeDJhd2p2QWtJZDFESjhVOXJ0UzMtNTBFdGluYVpFb2s3dG1JTHNIaGVpNzBDQ3BwNVFLZjZvRnNPQXMtLTd5NjlTYkhWLXVlaTlJd3c?oc=5",
+      "published": "Wed, 19 Aug 2026 12:29:00 GMT",
+      "published_iso": "2026-08-19T12:29:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "title": "Google pledges $6 million to West Texas towns as data center is built",
+      "outlet": "Abilene Reporter-News",
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNYkdyNTlfOGEwZHF0VzNiTWxWWnVQTEtzOUczdWVBYTh1dGNJLXNVOFVHZXdNSzZkcDlGTDZ6T1laalREZVdEUldNQWRGNEd4TUJiUF96UUlrTWlaMXdkT3pCc3g1MFh6Q3RSa1dSYzc1SFVkR1IxVVAxRTlfOW1LYnlpd0NaYWQ3SDB6VjBTa2tVM1FMTWVYa2ZVdVpJczlFaTVZd29jYk9mSWt1d1ljM0lpSEcwckh1Ry1IRlJLdldlZmNFbFJINENILTdIbmRfUGY1eG5SQmR6MkNOYm04?oc=5",
+      "published": "Wed, 19 Aug 2026 09:46:00 GMT",
+      "published_iso": "2026-08-19T09:46:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "title": "Role of data centers in the Texas Senate election",
+      "outlet": "KTALnews.com",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQTFVuTHlRUkVVOXZxdXBQMHVtbDdkTHJXYmhUR25wSWdqYzlPUENrSHZkaFNvWkdMdVNocmhmUXg5OThCN3ZrRlJRSHVZNVVXdmxBLW9oSDdPTzhLYnZHYkNINUlLMHFLU3lrLVFuYVc4SFdqTkhVVEVkTHZPVUxxZUFYaXFmVjc0TEUwbndhRDU4ZEN0?oc=5",
+      "published": "Tue, 18 Aug 2026 23:21:37 GMT",
+      "published_iso": "2026-08-18T23:21:37+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "title": "InfraTech Capital assembles consortium for US$ 2.7 billion data center campus in Texas",
+      "outlet": "w.media",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOT3hWTi1qczRDZFVkbTVtTDFyZDVTQnJlWndRbmhKRnZtcnNQcmhFRlh2UFNFU0xoMmRHYzZSNFFrME82STJhSll6QW5NM2cyTnhnb002bzFoa0hUd0E2eDRLS3lKSXl1Q1loenU0Q2ZuOFgwUElUQlJGampvWEpjV3BRRzJSWTZzVDRuVXBFSmhUdEhuMnVfYWRXZkItOXRYeHhIRA?oc=5",
+      "published": "Wed, 19 Aug 2026 12:50:00 GMT",
+      "published_iso": "2026-08-19T12:50:00+00:00",
       "locality": null,
       "state": "TX",
       "first_seen": "2026-08-19",
