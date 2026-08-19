@@ -11670,7 +11670,7 @@
       "name": "PORTS Technology Campus (SoftBank)",
       "operator": "SB Energy",
       "owner": "SoftBank Group",
-      "tenant": "",
+      "tenant": "OpenAI",
       "filing_llc": "",
       "locality": "Piketon (Pike County)",
       "state": "OH",
@@ -11689,7 +11689,104 @@
       "source": "https://woub.org/2026/03/20/federal-government-pike-county-site-courntrys-largest-data-center-federal-trade-deal/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-04-03",
+          "kind": "announcement",
+          "summary": "DOE announced a Request for Information identifying 16 federal sites, including the Portsmouth Gaseous Diffusion Plant near Piketon, Ohio, as candidates for rapid AI data center and energy infrastructure development on DOE land.",
+          "source": "https://www.energy.gov/articles/doe-identifies-16-federal-sites-across-country-data-center-and-ai-infrastructure"
+        },
+        {
+          "date": "2025-08-01",
+          "kind": "filing",
+          "summary": "New Day Data Centers LLC was registered with the State of Ohio, later revealed as the entity behind the proposed data center campus at the Portsmouth site.",
+          "source": "https://woub.org/2025/12/02/data-center-proposed-site-former-uranium-enrichment-plant-near-piketon/"
+        },
+        {
+          "date": "2025-12-02",
+          "kind": "coverage",
+          "summary": "WOUB reported that a data center was proposed at the former Portsmouth Gaseous Diffusion Plant site near Piketon under the working name New Day Data Centers, with most details confidential under NDAs and DOE/local officials declining to share lease terms.",
+          "source": "https://woub.org/2025/12/02/data-center-proposed-site-former-uranium-enrichment-plant-near-piketon/"
+        },
+        {
+          "date": "2025-12-29",
+          "kind": "coverage",
+          "summary": "Local officials confirmed data center plans were in the works for Piketon, with the Southern Ohio Diversification Initiative saying more details would be shared in coming weeks.",
+          "source": "https://sciotovalleyguardian.com/2025/12/29/is-a-data-center-coming-to-piketon-officials-say-plans-are-in-the-works/"
+        },
+        {
+          "date": "2026-01-12",
+          "kind": "coverage",
+          "summary": "Scioto County officials began discussing the proposed new AI data center project affecting the region around Piketon.",
+          "source": "https://irontontribune.com/2026/01/12/scioto-county-will-be-discussing-new-ai-center/"
+        },
+        {
+          "date": "2026-02-01",
+          "kind": "announcement",
+          "summary": "DOE, SoftBank/SB Energy, and AEP Ohio formally announced a partnership to develop the PORTS Technology Campus, pairing a 10GW data center with up to 9.2GW of new natural gas generation on the Portsmouth site.",
+          "source": "https://www.datacenterdynamics.com/en/news/softbank-eyes-10gw-data-center-at-former-doe-nuclear-enrichment-site-in-ohio/"
+        },
+        {
+          "date": "2026-03-20",
+          "kind": "announcement",
+          "summary": "Federal officials and SoftBank Chairman Masayoshi Son held a groundbreaking ceremony for the PORTS Technology Campus, a 10GW data center project billed as potentially the world's largest, part of a $500B investment tied to the U.S.-Japan Strategic Trade and Investment Agreement, including $33.3B in Japanese-backed funding for the natural gas generation component.",
+          "source": "https://woub.org/2026/03/20/federal-government-pike-county-site-courntrys-largest-data-center-federal-trade-deal/"
+        },
+        {
+          "date": "2026-03-20",
+          "kind": "incentive",
+          "summary": "AEP Ohio announced it will partner with SB Energy on $4.2 billion in new 765kV electric transmission infrastructure for the Piketon data center campus, with SB Energy covering the full cost to avoid raising customer rates; power expected to begin flowing to the site in 2029.",
+          "source": "https://www.aep.com/news/stories/view/10823/"
+        },
+        {
+          "date": "2026-03-21",
+          "kind": "coverage",
+          "summary": "Statehouse News Bureau reported on the newly announced natural gas plant and data center project for southern Ohio, including scale and federal involvement.",
+          "source": "https://www.statenews.org/government-politics/2026-03-20/feds-announce-huge-natural-gas-plant-data-center-project-in-southern-ohio"
+        },
+        {
+          "date": "2026-04-03",
+          "kind": "filing",
+          "summary": "Ohio petitioners (Conserve Ohio) received approval to begin gathering signatures for a proposed constitutional amendment banning data centers with peak load over 25 megawatts, a response partly driven by projects like PORTS.",
+          "source": "https://ohiocapitaljournal.com/2026/04/03/data-center-ban-on-the-ohio-ballot-petitioners-get-approval-to-start-gathering-signatures/"
+        },
+        {
+          "date": "2026-04-21",
+          "kind": "utility",
+          "summary": "AEP Ohio proposed a roughly 50-mile, 765kV transmission line (Piketon Area Improvements Project) through Pike, Jackson, and Gallia counties, including a new Baku Substation near Piketon, to serve the PORTS data center; application expected to be filed with the Ohio Power Siting Board in summer 2026.",
+          "source": "https://sciotovalleyguardian.com/2026/04/21/aep-ohio-proposes-50-mile-transmission-line-through-pike-jackson-and-gallia-counties-to-power-piketon-data-center/"
+        },
+        {
+          "date": "2026-04-27",
+          "kind": "environmental",
+          "summary": "Local 12's investigative 'Fallout' report detailed decades of radioactive contamination at the Portsmouth site (including historic 'midnight rocket' venting releases), elevated local death rates, and DOE's continued assertion of 'no health threat' even as contaminated properties were being sold for industrial redevelopment tied to the data center project.",
+          "source": "https://local12.com/news/investigates/pike-county-ohio-ports-nuclear-site-contamination-cancer-duane-pohlman-cincinnati-uranium-plant-radiation-exposure-health-fallout"
+        },
+        {
+          "date": "2026-04-30",
+          "kind": "public-comment",
+          "summary": "Ohio Capital Journal reported the data center ban campaign (Conserve Ohio) had collected about 25,000 of the 413,000 signatures needed by the July 1 deadline to qualify for the November 2026 ballot.",
+          "source": "https://ohiocapitaljournal.com/2026/04/30/ohio-data-center-ban-proposal-advocates-are-trying-to-get-413000-signatures-by-july-1/"
+        },
+        {
+          "date": "2026-06-19",
+          "kind": "coverage",
+          "summary": "Organizers confirmed the proposed Ohio constitutional amendment to ban large data centers would not make the November 2026 ballot after falling short of the signature threshold; said they would continue for a possible 2027 ballot attempt.",
+          "source": "https://ohiocapitaljournal.com/2026/06/19/ohio-proposed-constitutional-amendment-to-ban-data-centers-will-not-be-on-this-years-ballot/"
+        },
+        {
+          "date": "2026-08-17",
+          "kind": "coverage",
+          "summary": "WOSU/WOUB reported OpenAI would join the data center venture at the former nuclear enrichment site in Pike County as a major tenant.",
+          "source": "https://www.wosu.org/2026-08-17/openai-joins-data-center-venture-at-former-nuclear-enrichment-site-in-pike-county"
+        },
+        {
+          "date": "2026-08-18",
+          "kind": "financing",
+          "summary": "OpenAI announced an agreement to secure roughly 8GW-IT of capacity at the PORTS-Pike Technology Campus under a 20-year lease with SB Energy, committing $40M to a local community grant fund and $84M in Codex/ChatGPT credits for Ohio college students; the deal projects 35,000 construction jobs, 2,500 long-term jobs, a six-year buildout through 2032, and first 800MW available in 2028.",
+          "source": "https://openai.com/index/openai-joins-ports-pike-project/"
+        }
+      ]
     },
     {
       "id": "panattoni-burgin-ky",
