@@ -12118,7 +12118,44 @@
       "note": "Proposed 1M-sq-ft data center at 132 Griffin Road North; surfaced at a June 26, 2026 Town Plan and Zoning Commission meeting.",
       "outcome": null,
       "source": "https://www.datacenterdynamics.com/en/news/real-estate-firm-atlas-capital-group-may-develop-1m-square-foot-data-center-in-connecticut/",
-      "events": []
+      "events": [
+        {
+          "date": "2025-06-26",
+          "kind": "hearing",
+          "summary": "Atlas Capital Group gave an informal, conceptual presentation to the Bloomfield Town Plan and Zoning Commission about a potential 1-million-square-foot data center at 132 Griffin Road North.",
+          "source": "https://hartfordbusiness.com/article/ny-developer-proposes-1m-sq-ft-data-center-in-connecticut/"
+        },
+        {
+          "date": "2025-07-01",
+          "kind": "coverage",
+          "summary": "Data Center Dynamics reported that Atlas Capital Group, a New York/LA real estate investment firm, may develop a roughly 1 million-square-foot data center in Bloomfield, Connecticut.",
+          "source": "https://www.datacenterdynamics.com/en/news/real-estate-firm-atlas-capital-group-may-develop-1m-square-foot-data-center-in-connecticut/"
+        },
+        {
+          "date": "2025-07-01",
+          "kind": "utility",
+          "summary": "Atlas Capital representative said the project planned 127,000-square-foot open-air substation is required for a facility of this size and that the company has had preliminary talks with Eversource.",
+          "source": "https://hartfordbusiness.com/article/ny-developer-proposes-1m-sq-ft-data-center-in-connecticut/"
+        },
+        {
+          "date": "2025-07-01",
+          "kind": "coverage",
+          "summary": "Stamford Advocate reported on the New York developer proposal for a massive data center in Bloomfield, covering the 44-acre former tobacco-field site and project scope.",
+          "source": "https://www.stamfordadvocate.com/business/article/ct-bloomfield-data-center-proposal-20758986.php"
+        },
+        {
+          "date": "2025-07-01",
+          "kind": "report",
+          "summary": "Sentry Commercial reported conceptual plans for a roughly 1 million-square-foot data center in Hartford County, detailing the 900,000-square-foot data hall and 127,000-square-foot substation on a 44-acre parcel.",
+          "source": "https://sentrycommercial.com/market/conceptual-plans-emerge-for-1m-sqft-data-center-in-hartford-county/"
+        },
+        {
+          "date": "2025-07-03",
+          "kind": "announcement",
+          "summary": "The Town of Bloomfield issued a public news release announcing Atlas Capital Group conceptual data center proposal for the Griffin Road North site.",
+          "source": "https://www.bloomfieldct.gov/CivicAlerts.aspx?AID=201"
+        }
+      ]
     },
     {
       "id": "ne-edge-waterford-ct",
@@ -13395,7 +13432,122 @@
       "note": "$1.6B power purchase agreement to restart TMI Unit 1 (renamed Crane Clean Energy Center) by 2028; Microsoft will buy 100% of the 835MW nuclear output for 20 years to power its AI data centers.",
       "outcome": null,
       "source": "https://www.constellationenergy.com/newsroom/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-the-Grid.html",
-      "events": []
+      "events": [
+        {
+          "date": "2024-09-04",
+          "kind": "protest",
+          "summary": "Pennsylvania anti-nuclear activists began organizing to oppose the restart, citing safety and evacuation concerns tied to the 1979 TMI-2 accident.",
+          "source": "https://stateimpact.npr.org/pennsylvania/2024/09/04/pa-activists-try-to-head-off-nuclear-restart-at-three-mile-island"
+        },
+        {
+          "date": "2024-09-20",
+          "kind": "announcement",
+          "summary": "Constellation Energy announced a 20-year power purchase agreement with Microsoft to restart the 835 MW Three Mile Island Unit 1, renamed the Crane Clean Energy Center, to supply carbon-free power for Microsoft data centers; the deal is expected to create ~3,400 jobs and add $16 billion to Pennsylvania GDP.",
+          "source": "https://www.cnbc.com/2024/09/20/constellation-energy-to-restart-three-mile-island-and-sell-the-power-to-microsoft.html"
+        },
+        {
+          "date": "2024-09-25",
+          "kind": "coverage",
+          "summary": "Local reporting captured mixed community reactions in Londonderry Township/Dauphin County, with labor groups voicing support while some residents raised fear of another accident.",
+          "source": "https://www.witf.org/2024/09/25/fear-hope-among-mixed-reactions-as-three-mile-island-plans-to-restart/"
+        },
+        {
+          "date": "2024-10-25",
+          "kind": "hearing",
+          "summary": "Constellation laid out its reopening timeline at a public hearing, telling regulators and residents it aimed to have Unit 1 producing power again by 2027-2028.",
+          "source": "https://stateimpact.npr.org/pennsylvania/2024/10/25/three-mile-island-owner-lays-out-reopening-timeline-in-public-hearing"
+        },
+        {
+          "date": "2024-11-04",
+          "kind": "filing",
+          "summary": "Constellation submitted its initial restart application to the Nuclear Regulatory Commission for Three Mile Island Unit 1 (Crane Clean Energy Center).",
+          "source": "https://www.world-nuclear-news.org/articles/us-reactor-restart-project-ahead-of-schedule"
+        },
+        {
+          "date": "2025-03-20",
+          "kind": "environmental",
+          "summary": "Constellation began evaluating the environmental impacts of the restart as part of the NRC review process, covering water use from the Susquehanna River, air quality, and spent fuel management.",
+          "source": "https://stateimpact.npr.org/pennsylvania/2025/03/20/three-mile-island-begins-evaluating-environmental-impacts-of-restart"
+        },
+        {
+          "date": "2025-04-03",
+          "kind": "lawsuit",
+          "summary": "Activist Gene Stilp sued Dauphin County commissioners and the Public Safety Department, alleging misuse of taxpayer funds to promote the plant restart.",
+          "source": "https://www.fox43.com/article/news/local/dauphin-county/gene-stilp-lawsuit-dauphin-county-commissioners-public-safety-department-three-mile-island-restart/521-9e443dd2-3ec8-4b42-8175-4c6c82559e2b"
+        },
+        {
+          "date": "2025-05-06",
+          "kind": "filing",
+          "summary": "The NRC formally accepted Constellation restart request for Three Mile Island Unit 1 for detailed technical review.",
+          "source": "https://www.eenews.net/articles/three-mile-island-restart-closes-in-on-nrc-approval/"
+        },
+        {
+          "date": "2025-08-01",
+          "kind": "public-comment",
+          "summary": "Residents told federal regulators the NRC review process feels like a charade, pressing concerns about safety, evacuation planning, and environmental impact at a public forum near the plant.",
+          "source": "https://www.witf.org/2025/08/01/feels-like-a-charade-residents-push-back-on-feds-over-restart-of-three-mile-island-nuclear-reactor/"
+        },
+        {
+          "date": "2025-08-06",
+          "kind": "hearing",
+          "summary": "The NRC held a second public meeting, this one virtual, allowing community members nationwide to comment on the proposed restart of the Crane Clean Energy Center reactor.",
+          "source": "https://www.fox43.com/article/news/local/dauphin-county/nrc-holds-second-public-meeting-on-potential-restart-of-three-mile-island-nuclear-reactor-virtually/521-2a8106c0-f172-41ef-b8ab-0cde97e2a2b0"
+        },
+        {
+          "date": "2025-08-15",
+          "kind": "filing",
+          "summary": "NRC staff issued a Request for Additional Information (RAI) to Constellation as part of the technical review of the Unit 1 restart application.",
+          "source": "https://www.world-nuclear-news.org/articles/us-reactor-restart-project-ahead-of-schedule"
+        },
+        {
+          "date": "2025-09-15",
+          "kind": "filing",
+          "summary": "Constellation submitted its response to the NRC Request for Additional Information regarding the Crane Clean Energy Center restart.",
+          "source": "https://www.world-nuclear-news.org/articles/us-reactor-restart-project-ahead-of-schedule"
+        },
+        {
+          "date": "2025-10-06",
+          "kind": "filing",
+          "summary": "NRC docket correspondence addressed to Constellation Energy regarding the Crane Clean Energy Center restart review.",
+          "source": "https://www.nrc.gov/docs/ML2526/ML25268A261.pdf"
+        },
+        {
+          "date": "2025-11-18",
+          "kind": "financing",
+          "summary": "The U.S. Department of Energy closed a $1 billion loan to Constellation Energy to help finance the roughly $1.6 billion restart of Three Mile Island Unit 1/Crane Clean Energy Center.",
+          "source": "https://www.cnbc.com/2025/11/18/trump-nuclear-three-mile-island-crane-loan-constellation-ceg.html"
+        },
+        {
+          "date": "2025-12-18",
+          "kind": "coverage",
+          "summary": "U.S. Energy Secretary Chris Wright touted the $1 billion DOE loan for the Three Mile Island restart as delivering on the Trump administration nuclear energy promises.",
+          "source": "https://www.post-gazette.com/business/powersource/2025/12/18/three-mile-island-nuclear-plant-restart-energy-doe-chris-wright/stories/202512180022"
+        },
+        {
+          "date": "2026-04-21",
+          "kind": "filing",
+          "summary": "PJM independent market monitor Monitoring Analytics filed comments with FERC opposing Constellation requested tariff waivers for the Crane restart.",
+          "source": "https://www.utilitydive.com/news/pjm-market-monitor-constellations-nuclear-crane-waiver/818216/"
+        },
+        {
+          "date": "2026-06-01",
+          "kind": "ruling",
+          "summary": "FERC approved a waiver allowing Constellation to transfer 760 MW of Capacity Interconnection Rights from its Eddystone plant to the Crane Clean Energy Center, over the objection of PJM independent market monitor.",
+          "source": "https://www.world-nuclear-news.org/articles/ferc-waiver-clears-way-for-crane-clean-nuclear-interconnection"
+        },
+        {
+          "date": "2026-07-28",
+          "kind": "report",
+          "summary": "The NRC issued draft environmental assessment findings that the Crane Clean Energy Center restart would have no significant environmental impact, opening a public comment period.",
+          "source": "https://www.witf.org/2026/07/28/three-mile-island-reactor-restart-progresses-through-environmental-review-public-comments/"
+        },
+        {
+          "date": "2026-07-28",
+          "kind": "coverage",
+          "summary": "Reporting noted continued community concern as the Crane nuclear plant restart progressed toward its targeted 2027 date, including concerns about reliance on the Susquehanna River amid climate-driven flood risk.",
+          "source": "https://penncapital-star.com/energy-environment/concern-persists-as-crane-nuclear-plant-progresses-toward-2027-restart/"
+        }
+      ]
     },
     {
       "id": "aws-caddo-parish-la",
@@ -13667,7 +13819,128 @@
       "note": "$1B hyperscale data center in Beaver Dam, Wisconsin.",
       "outcome": null,
       "source": "https://www.electricchoice.com/datacenters/",
-      "events": []
+      "events": [
+        {
+          "date": "2024-11-01",
+          "kind": "incentive",
+          "summary": "Beaver Dam city council created a tax incremental financing (TID) district to help fund infrastructure development for what was then an unnamed data center project.",
+          "source": "https://milwaukeenns.org/2026/02/01/wisconsin-data-center-secrecy-deals-nda-nondisclosure-agreement/"
+        },
+        {
+          "date": "2025-02-01",
+          "kind": "announcement",
+          "summary": "Beaver Dam Area Development Corp. and the city publicly disclosed they were working with an unnamed company on a potential data center project, and the city council voted to approve it ahead of Meta being named.",
+          "source": "https://www.wisn.com/article/meta-plans-1-billion-data-center-in-beaver-dam/69415955"
+        },
+        {
+          "date": "2025-11-12",
+          "kind": "announcement",
+          "summary": "Meta, Governor Tony Evers, and state/local officials announced a $1 billion, 700,000+ sq ft AI-optimized data center campus on roughly 500 acres in Beaver Dam Commerce Park \u2014 Meta first Wisconsin facility, expected online in 2027.",
+          "source": "https://wedc.org/meta-state-and-local-officials-announce-1-billion-data-center-investment-in-beaver-dam-project/"
+        },
+        {
+          "date": "2025-11-12",
+          "kind": "financing",
+          "summary": "Meta said it will underwrite nearly $200 million in energy infrastructure investment (substations, transmission lines, network upgrades) coordinated with Alliant Energy.",
+          "source": "https://www.alliantenergy.com/news/news-center/2025/11/111225-metabeaverdamannouncement"
+        },
+        {
+          "date": "2025-11-12",
+          "kind": "construction",
+          "summary": "Meta officially broke ground on the $1 billion AI-driven data center campus in Beaver Dam; the facility will use dry-cooling technology intended to eliminate operational cooling water demand.",
+          "source": "https://spectrumnews1.com/wi/milwaukee/news/2025/11/12/meta--ai-data-center--beaver-dam--dodge-county-"
+        },
+        {
+          "date": "2025-11-12",
+          "kind": "report",
+          "summary": "Meta published details on its 30th global data center, citing community benefits commitments and a wetlands restoration effort tied to the Beaver Dam project.",
+          "source": "https://about.fb.com/news/2025/11/metas-30th-data-center-delivering-ai-supporting-wetlands-restoration/"
+        },
+        {
+          "date": "2025-11-12",
+          "kind": "protest",
+          "summary": "Residents at groundbreaking-related coverage raised questions about the project transparency, following revelations that the deal had been developed via shell companies and nondisclosure agreements.",
+          "source": "https://www.fox6now.com/news/meta-beaver-dam-data-center-breaks-ground-residents-question-transparency"
+        },
+        {
+          "date": "2025-11-12",
+          "kind": "coverage",
+          "summary": "WEDC estimated the project would generate up to 1,000 skilled-trade construction jobs at peak and more than 100 permanent jobs, alongside eligibility for a sales tax exemption on construction materials.",
+          "source": "https://www.aol.com/articles/meta-plans-1b-beaver-dam-150000072.html"
+        },
+        {
+          "date": "2025-12-09",
+          "kind": "lawsuit",
+          "summary": "Midwest Environmental Advocates sued the Wisconsin Public Service Commission after it denied a public-records request for unredacted electrical load projections tied to Meta Beaver Dam data center.",
+          "source": "https://midwestadvocates.org/mea-files-lawsuit-to-challenge-secrecy-surrounding-energy-demands-of-metas-beaver-dam-data-center/"
+        },
+        {
+          "date": "2025-12-11",
+          "kind": "coverage",
+          "summary": "Local news reported on the Midwest Environmental Advocates lawsuit against the PSC over secrecy surrounding the Beaver Dam data center projected energy demand.",
+          "source": "https://spectrumnews1.com/wi/milwaukee/news/2025/12/11/beaver-dam--meta--data-center--lawsuit--psc--wisconsin--mea"
+        },
+        {
+          "date": "2026-01-01",
+          "kind": "coverage",
+          "summary": "Investigative reporting found at least four Wisconsin communities, including Beaver Dam, had signed nondisclosure/secrecy agreements during negotiations for billion-dollar data center projects.",
+          "source": "https://wisconsinwatch.org/2026/01/wisconsin-data-center-secrecy-deals-nda-nondisclosure-agreement/"
+        },
+        {
+          "date": "2026-02-04",
+          "kind": "announcement",
+          "summary": "Oppidan Investment Co. proposed a second, smaller ~90,000 sq ft edge data center on a 13+ acre city-owned lot near Meta campus \u2014 a separate project not affiliated with Meta.",
+          "source": "https://dailyreporter.com/2026/02/04/beaver-dam-smaller-edge-data-center-proposal/"
+        },
+        {
+          "date": "2026-03-11",
+          "kind": "public-comment",
+          "summary": "Community members organized a volunteer town hall in Beaver Dam to discuss impacts of Meta AI data center on the local community.",
+          "source": "https://www.wmtv15news.com/2026/03/11/beaver-dams-meta-ai-data-center-sparks-volunteer-town-hall-address-community-impacts/"
+        },
+        {
+          "date": "2026-04-01",
+          "kind": "environmental",
+          "summary": "Sierra Club released analyses finding overwhelming public opposition to Wisconsin data centers statewide, citing Beaver Dam-area concerns among the evidence.",
+          "source": "https://www.sierraclub.org/press-releases/2026/04/new-analyses-find-overwhelming-opposition-wisconsin-data-centers-across"
+        },
+        {
+          "date": "2026-04-01",
+          "kind": "vote",
+          "summary": "Beaver Dam Common Council approved a resolution authorizing a development and sale agreement for the second (Oppidan) data center, expanded TID 7 boundaries, and rezoned the parcel from residential to light industrial.",
+          "source": "https://dailydodge.com/beaver-dam-common-council-to-vote-on-proposed-second-data-center/"
+        },
+        {
+          "date": "2026-04-01",
+          "kind": "environmental",
+          "summary": "A Beaver Dam resident living near the Meta construction site reported the creek running through her property had gone dry, surged unpredictably, turned milky, and tested positive for heavy metals.",
+          "source": "https://finance.yahoo.com/economy/policy/articles/wisconsin-woman-says-meta-1b-100000161.html"
+        },
+        {
+          "date": "2026-04-01",
+          "kind": "protest",
+          "summary": "At a Beaver Dam city council meeting, at least 14 residents spoke in opposition citing environmental impacts, lack of transparent public input, and wildlife/water concerns.",
+          "source": "https://www.wkow.com/news/beaver-dam-city-council-hears-data-center-presentation-community-members-speak-in-opposition/article_f3708e90-225c-4bbc-bfbd-96796d936520.html"
+        },
+        {
+          "date": "2026-05-07",
+          "kind": "ruling",
+          "summary": "Wisconsin PSC approved Alliant Energy rate contract for Meta Beaver Dam data center (~220 MW demand) but sharply criticized the secretive black-box negotiation process involving NDAs, redacted filings, and corporate pseudonyms, ordering Alliant to develop a standard rate structure for future large-load customers.",
+          "source": "https://wisconsinexaminer.com/2026/05/07/public-service-commission-criticizes-meta-lack-of-transparency-while-approving-contract-with-utility/"
+        },
+        {
+          "date": "2026-05-08",
+          "kind": "coverage",
+          "summary": "Coverage noted that in the PSC proceeding, 93% of verbal public comments and 85% of written comments argued data centers should pay 100% of their own costs rather than shifting costs to ratepayers.",
+          "source": "https://urbanmilwaukee.com/2026/05/08/with-sharp-criticism-regulators-approve-electric-rates-for-facebook-meta-data-center/"
+        },
+        {
+          "date": "2026-05-08",
+          "kind": "ruling",
+          "summary": "RENEW Wisconsin reported the PSC modified and approved the Alliant-Meta data center contract, requiring additional reporting, a cost-of-service study, and an incremental cost analysis going forward.",
+          "source": "https://www.renewwisconsin.org/psc-critizes-modifies-and-approves-alliant-energy-data-center-contract/"
+        }
+      ]
     },
     {
       "id": "microsoft-catawba-county-nc",

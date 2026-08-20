@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/data-center-midterms-politics-2026",
+      "destination": "/blog/data-center-midterms-politics-2026",
+      "permanent": true
+    },
+    {
       "source": "/negotiation-patterns-all-operators-2026",
       "destination": "/blog/negotiation-patterns-all-operators-2026",
       "permanent": true

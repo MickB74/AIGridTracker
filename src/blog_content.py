@@ -4596,4 +4596,152 @@ concessions, and strategy reads — are available on our
 you select an operator.*
 """,
     },
+    # ── Data center politics go national ───────────────────────────────────
+    {
+        "id": "data-center-midterms-politics-2026",
+        "art": "community",
+        "section": "stories",
+        "title": "Data Center Opposition Just Became a National Political Force",
+        "date": _dt.date(2026, 8, 20),
+        "author": "GridWatch AI",
+        "tags": ["politics", "midterms", "community", "moratorium",
+                 "Ohio", "Texas", "Pennsylvania", "Wisconsin", "Wyoming",
+                 "Michigan", "New York", "policy", "analysis"],
+        "summary": (
+            "Axios reports that data center opposition is scrambling the 2026 "
+            "midterms. Candidates in both parties are racing to distance "
+            "themselves from projects their own leaders spent years courting. "
+            "What started as scattered local fights has become a cross-partisan "
+            "national movement — and it's changing how elections are won."
+        ),
+        "body": """\
+For two years, community opposition to data centers has been dismissed as
+NIMBY noise — localized, emotional, and destined to fade once residents
+understood the economic benefits. Today, [Axios
+reports](https://www.axios.com/2026/08/20/data-center-uproar-2026-midterms)
+that this analysis was dead wrong. Data center opposition is now a defining
+issue in the 2026 midterms, and it's rewriting the playbook in both parties.
+
+---
+
+### The political map
+
+The scope is striking. This isn't one swing-state story — it's a
+coast-to-coast realignment:
+
+- **Ohio:** Former Sen. Sherrod Brown has spent millions branding Republican
+  Sen. Jon Husted as "the face of data centers." The NRSC privately warned AI
+  companies that a Husted loss could chill industry support nationwide.
+- **Texas:** Gov. Greg Abbott — who once declared Texas "the epicenter of AI
+  development" — is now pushing to restrict data centers in rural communities
+  and strip away tax incentives after Democrat Gina Hinojosa called the state
+  the "wild west of data centers."
+- **Pennsylvania:** Gov. Josh Shapiro imposed new guardrails this week after
+  Republican challenger Stacy Garrity accused him of "rolling out the red
+  carpet" for developers.
+- **Wisconsin:** GOP nominee Tom Tiffany is running ads attacking his
+  Democratic opponent as "data center David Crowley" — putting a Trump ally
+  on the same side as a democratic socialist primary rival.
+- **Wyoming:** Republican Chuck Gray won his primary after running ads
+  promising to "stop data centers" and calling for a federal ban.
+- **Michigan:** Democratic Senate nominee Abdul El-Sayed called for state and
+  federal moratoriums days before winning his primary.
+
+This is not a partisan issue. It's a populist one. Candidates on the left
+and right are reaching the same conclusion: defending data centers costs
+votes.
+
+---
+
+### Why this matters for your community
+
+If you're organizing against a proposed data center, the political ground
+just shifted under your feet — in your favor. Here's what changed:
+
+**1. The "jobs and investment" talking point has a counter-message now.**
+
+For years, developers and their political allies have led with economic
+benefits. That message is now being turned against incumbents. When Brown
+calls Husted "the face of data centers," he's making the economic argument
+a liability. The subtext: *those jobs came at your expense.*
+
+**2. Elected officials are scrambling to get on your side.**
+
+Abbott in Texas. Shapiro in Pennsylvania. Hochul in New York. These aren't
+insurgent candidates — they're sitting governors reversing their own
+positions because the politics changed. When a governor who courted data
+center investment starts restricting it, that's a signal to every planning
+board and county commission below them.
+
+**3. The industry knows it has a problem — and its response is revealing.**
+
+Axios quotes a Republican operative saying the hyperscalers' comms teams
+"don't know how to fight" and are "just used to fluffy ads and corporate
+media." The industry's proposed solution is to expand workforce programs,
+community funds, and promises to cover infrastructure costs. That's an
+important concession — but it's also a list of things communities can
+demand in writing, with enforcement mechanisms, before any project breaks
+ground.
+
+**4. The ratepayer-protection pledge sets a new floor.**
+
+President Trump's ratepayer-protection pledge — which Google, Microsoft,
+Meta, Oracle, xAI, OpenAI, and Amazon have all signed — requires companies
+to cover power generation and grid upgrades. That's significant, but a
+pledge is not a permit condition. Communities should insist these
+commitments appear in binding agreements, not press releases.
+
+---
+
+### What to do with this moment
+
+The Axios piece captures something we've been tracking at GridWatch for
+months: the gap between how the industry talks about opposition (as a
+communications problem) and what opposition actually is (a political
+force). Here's how to use this moment:
+
+**Cite the political cost.** When you testify at a public hearing, you can
+now point to specific races where data center support is a losing position.
+Abbott reversed course in Texas. Shapiro added guardrails in Pennsylvania.
+Gray won a primary on an anti-data-center platform in Wyoming. These are
+facts your planning board can't ignore.
+
+**Demand binding conditions, not promises.** The industry is offering
+community funds and workforce programs. Good — get them in writing. Use our
+[negotiation toolkit](/app) to see what similar communities have won and
+generate a meeting brief with specific asks.
+
+**Connect with the national movement.** Your town's fight is no longer
+isolated. The [moratorium tracker](/moratoriums.html) now lists over 100
+actions across the country. Find communities in similar situations, compare
+notes, and share what's working.
+
+**Move before the election.** The window between now and November is when
+elected officials are most responsive. If your state legislators, county
+commissioners, or city council members haven't taken a public position on
+data centers, now is the time to put them on the record.
+
+---
+
+### The bottom line
+
+The industry spent years building bipartisan consensus for the AI buildout.
+That consensus is broken. What broke it wasn't an editorial board or a
+think tank — it was residents showing up at planning meetings, organizing
+on Nextdoor, and telling their elected officials that data centers are a
+voting issue.
+
+The political class is now catching up to what communities already knew:
+that the costs of data centers — to water, to electric bills, to quality
+of life — are real, and that voters will punish anyone who ignores them.
+
+If you're in the middle of a fight, this is validation. If you're just
+getting started, this is wind at your back. Use it.
+
+---
+
+*Source: [Axios, "Data center uproar scrambles the midterm election,"
+Aug 20, 2026](https://www.axios.com/2026/08/20/data-center-uproar-2026-midterms)*
+""",
+    },
 ]
