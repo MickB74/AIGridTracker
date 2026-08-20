@@ -12029,7 +12029,80 @@
       "note": "4.4M sq ft hyperscale campus on former phosphate-mine land, $2.6-2.8B investment; city commissioners approved developer agreement April 14, 2026.",
       "outcome": "approved",
       "source": "https://www.fox13news.com/news/fort-meade-data-center-project-community-opposition",
-      "events": []
+      "events": [
+        {
+          "date": "2025-06-10",
+          "kind": "rezoning",
+          "summary": "Fort Meade City Commission voted 5-0 to approve land-use and zoning changes on roughly 1,164 acres to permit data center development, paired with a 10-year, $150 million tax incentive package.",
+          "source": "https://floridadatacenters.org/polk-county"
+        },
+        {
+          "date": "2026-02-20",
+          "kind": "protest",
+          "summary": "About a dozen protesters gathered outside Fort Meade City Hall opposing the proposed Stonebridge/Bohler Places data center project.",
+          "source": "https://www.fox13news.com/news/protesters-against-proposed-fort-meade-data-center-gather-outside-city-hall"
+        },
+        {
+          "date": "2026-03-10",
+          "kind": "hearing",
+          "summary": "Commissioners reclassified the development agreement from a resolution to an ordinance, requiring 10 days notice, first/second readings, and additional public hearings after Earthjustice raised procedural objections and ~20 residents opposed the project.",
+          "source": "https://www.wusf.org/environment/2026-03-12/fort-meade-delay-voting-data-center-after-residents-protested"
+        },
+        {
+          "date": "2026-04-07",
+          "kind": "hearing",
+          "summary": "Fort Meade Planning and Zoning Board held a public hearing on the Stonebridge/Bohler Places development agreement.",
+          "source": "https://www.wusf.org/environment/2026-04-08/fort-meade-is-one-step-closer-to-building-floridas-first-hysperscale-ai-data-center"
+        },
+        {
+          "date": "2026-04-08",
+          "kind": "vote",
+          "summary": "Fort Meade Planning Commission voted unanimously to recommend the 20-year development agreement with Stonebridge; hearing covered 1.2 GW power needs, 100% backup generator capacity, and revised water-use figure of 50,000 gallons/day via closed-loop cooling.",
+          "source": "https://www.wusf.org/environment/2026-04-08/fort-meade-is-one-step-closer-to-building-floridas-first-hysperscale-ai-data-center"
+        },
+        {
+          "date": "2026-04-14",
+          "kind": "environmental",
+          "summary": "Southwest Florida Water Management District adopted a new rule requiring a separate permit approval for the project water use.",
+          "source": "https://floridadatacenters.org/polk-county"
+        },
+        {
+          "date": "2026-04-15",
+          "kind": "vote",
+          "summary": "Fort Meade City Commission unanimously approved a 20-year, $2.6-2.8 billion development agreement with Bohler Places LLC/Stonebridge for an 8-building, up to 4.4 million sq ft hyperscale data center campus on 1,300 acres of former phosphate mine; 40 of 41 public commenters opposed it.",
+          "source": "https://www.fox13news.com/news/fort-meade-data-center-project-community-opposition"
+        },
+        {
+          "date": "2026-04-16",
+          "kind": "coverage",
+          "summary": "Governor DeSantis administration publicly criticized Fort Meade handling of the project, citing concerns about utility rates and water use.",
+          "source": "https://floridadatacenters.org/polk-county"
+        },
+        {
+          "date": "2026-04-17",
+          "kind": "report",
+          "summary": "Florida Commerce Secretary J. Alex Kelly sent a letter calling the project fundamentally flawed, saying developer water estimates were woefully underestimated and flagging the lack of a disclosed end-user/operator.",
+          "source": "https://www.theaiconsultingnetwork.com/blog/florida-polk-county-data-center-opposition-ai-cre-investors-2026"
+        },
+        {
+          "date": "2026-05-14",
+          "kind": "lawsuit",
+          "summary": "Five Fort Meade residents filed two lawsuits seeking to void the city approval, alleging procedural violations, inadequate notice, and incompatibility with the comprehensive plan; trial projected for November 2027.",
+          "source": "https://www.tampabay28.com/news/region-polk/fort-meade-residents-sue-city-over-approval-of-industrial-data-center"
+        },
+        {
+          "date": "2026-06-01",
+          "kind": "protest",
+          "summary": "The Watchdogs of Fort Meade began circulating recall petitions against Mayor Jaret Williams, Vice Mayor Petrina McCutchen, and Commissioner Matthew Taylor over the data center approval.",
+          "source": "https://www.fox13news.com/news/grassroots-group-launches-fort-meade-recall-petition-targeting-3-city-officials-over-ai-data-center-project"
+        },
+        {
+          "date": "2026-07-17",
+          "kind": "filing",
+          "summary": "Recall Committee Chairman Michael Bennett and supporters delivered recall petitions with over 1,000 signatures to Fort Meade City Hall, to be verified by the Polk County Supervisor of Elections.",
+          "source": "https://baynews9.com/fl/tampa/news/2026/07/17/fort-meade-recall-committee-submits-petitions-to-remove-city-leaders"
+        }
+      ]
     },
     {
       "id": "atlas-bloomfield-ct",
@@ -12174,7 +12247,170 @@
       "note": "5,000-acre campus; NorthWestern Energy committed up to 1,000 MW to Quantica as of July 2026, with Phase I construction slated for 2026.",
       "outcome": null,
       "source": "https://www.bozemandailychronicle.com/news/northwestern-energy-11-more-data-center-firms-eyeing-montana-south-dakota/article_bc792dae-fa3c-53c6-a672-34fd2c8b3c20.html",
-      "events": []
+      "events": [
+        {
+          "date": "2015-01-01",
+          "kind": "filing",
+          "summary": "Invenergy requested interconnection to NorthWestern Energy's Broadview substation, the earliest step in what would become the Big Sky Campus site's grid access.",
+          "source": "https://www.bozemandailychronicle.com/news/how-a-company-quietly-acquired-5-100-acres-for-a-data-center-in-eastern-montana/article_05e9f25f-0d02-5d0c-8211-063e6cf85f62.html"
+        },
+        {
+          "date": "2020-01-01",
+          "kind": "financing",
+          "summary": "Broad Reach Power purchased the Broadview interconnection project from Invenergy, with Daniel Zolnikov serving as local developer.",
+          "source": "https://www.bozemandailychronicle.com/news/how-a-company-quietly-acquired-5-100-acres-for-a-data-center-in-eastern-montana/article_05e9f25f-0d02-5d0c-8211-063e6cf85f62.html"
+        },
+        {
+          "date": "2023-08-01",
+          "kind": "financing",
+          "summary": "ENGIE acquired Broad Reach Power, folding the Broadview-area power project into its portfolio ahead of the Quantica spinout.",
+          "source": "https://www.bozemandailychronicle.com/news/how-a-company-quietly-acquired-5-100-acres-for-a-data-center-in-eastern-montana/article_05e9f25f-0d02-5d0c-8211-063e6cf85f62.html"
+        },
+        {
+          "date": "2024-01-01",
+          "kind": "announcement",
+          "summary": "Montana Property LLC quietly acquired roughly 5,000 acres (about eight square miles) south of Broadview, later revealed as the land assembly for Quantica's Big Sky Campus.",
+          "source": "https://www.bozemandailychronicle.com/news/how-a-company-quietly-acquired-5-100-acres-for-a-data-center-in-eastern-montana/article_05e9f25f-0d02-5d0c-8211-063e6cf85f62.html"
+        },
+        {
+          "date": "2025-02-01",
+          "kind": "utility",
+          "summary": "NorthWestern Energy announced a $25-30 million transmission line project tied to the Broadview substation area, with expected completion in 2028.",
+          "source": "https://www.bozemandailychronicle.com/news/how-a-company-quietly-acquired-5-100-acres-for-a-data-center-in-eastern-montana/article_05e9f25f-0d02-5d0c-8211-063e6cf85f62.html"
+        },
+        {
+          "date": "2025-07-30",
+          "kind": "utility",
+          "summary": "NorthWestern Energy signed a letter of intent to serve Quantica Infrastructure's Montana data center development, committing to a Phase 1 load of 500 MW growing to 1 GW, with initial service possible as early as 2026.",
+          "source": "https://www.northwesternenergy.com/about-us/news-articles-events/2025/07/30/northwestern-energy-signs-letter-of-intent-to-serve-quantica-infrastructure-s-montana-data-center-development"
+        },
+        {
+          "date": "2025-07-31",
+          "kind": "hearing",
+          "summary": "Montana's Energy and Technology Interim Committee met to study the state's power generation capacity amid data-center growth, launching studies due by September 2026.",
+          "source": "https://www.renewableenergyworld.com/power-grid/outage-management/montana-lawmakers-consider-state-energy-capacity-with-ai-data-centers-looming/"
+        },
+        {
+          "date": "2025-08-01",
+          "kind": "coverage",
+          "summary": "Montana Public Radio/MEIC reported NorthWestern's proposed 1,000 MW commitment is roughly equivalent to the power used to serve 800,000 homes, more than all of NorthWestern's residential customers combined.",
+          "source": "https://meic.org/northwestern-wants-to-supply-new-ai-data-center-with-enough-electricity-for-800k-homes/"
+        },
+        {
+          "date": "2025-08-04",
+          "kind": "announcement",
+          "summary": "Quantica Infrastructure introduced Big Sky Digital Infrastructure (BSDI) as its flagship Montana development platform for the 5,000-acre Big Sky Campus, with construction planned to begin in 2026.",
+          "source": "https://bigskyeconomicdevelopment.org/quantica-infrastructure-introduces-big-sky-digital-infrastructure-as-its-flagship-development-platform-in-montana/"
+        },
+        {
+          "date": "2025-12-01",
+          "kind": "ruling",
+          "summary": "The Montana Public Service Commission decided to keep NorthWestern Energy's letters of intent with three data-center developers confidential as trade secrets.",
+          "source": "https://dailymontanan.com/2026/03/13/public-service-commission-cant-keep-data-center-information-secret-says-group/"
+        },
+        {
+          "date": "2026-01-16",
+          "kind": "filing",
+          "summary": "The Butte-Silver Bow Council of Commissioners sent a letter to the PSC advocating separate rate classifications to shield existing ratepayers from data-center-driven boom-bust risk.",
+          "source": "https://dailymontanan.com/2026/02/23/eleven-data-center-developers-in-talks-with-northwestern-group-says/"
+        },
+        {
+          "date": "2026-02-12",
+          "kind": "environmental",
+          "summary": "AP/Montana Free Press reported Quantica does not yet hold water rights for the Broadview site and is evaluating zero-water air cooling, deep aquifer wells, treated greywater, and direct-to-chip liquid cooling.",
+          "source": "https://montanafreepress.org/2026/02/12/as-ai-investors-eye-montana-for-new-data-centers-communities-brace-for-water-impacts/"
+        },
+        {
+          "date": "2026-02-20",
+          "kind": "public-comment",
+          "summary": "A coalition including Earthjustice, MEIC, NW Energy Coalition, and Honor the Earth sent a letter to the Montana PSC demanding disclosure of NorthWestern's talks with 11 additional data-center developers.",
+          "source": "https://dailymontanan.com/2026/02/23/eleven-data-center-developers-in-talks-with-northwestern-group-says/"
+        },
+        {
+          "date": "2026-02-23",
+          "kind": "report",
+          "summary": "Daily Montanan reported NorthWestern Energy was in talks with at least 11 additional data-center entities beyond Atlas, Sabey, and Quantica, which combined could draw enough power for 1.6 million homes.",
+          "source": "https://dailymontanan.com/2026/02/23/eleven-data-center-developers-in-talks-with-northwestern-group-says/"
+        },
+        {
+          "date": "2026-03-01",
+          "kind": "utility",
+          "summary": "Quantica's July 2025 letter of intent with NorthWestern progressed into a signed development agreement by roughly the first quarter of 2026.",
+          "source": "https://www.newsfromthestates.com/article/public-service-commission-cant-keep-data-center-information-secret-says-group"
+        },
+        {
+          "date": "2026-03-12",
+          "kind": "protest",
+          "summary": "Broadview-area residents divided; resident Cari Olson founded Just One Montanan to push for a three-year statewide construction moratorium on data centers pending legislative action.",
+          "source": "https://www.kulr8.com/news/proposed-5-000-acre-ai-data-center-near-broadview-raises-questions-from-residents/article_18781d68-ebc4-4d32-845c-38fe62de9e9c.html"
+        },
+        {
+          "date": "2026-03-13",
+          "kind": "lawsuit",
+          "summary": "Earthjustice filed a motion before the Montana PSC on behalf of seven groups challenging the December 2025 decision keeping NorthWestern's data-center letters of intent confidential.",
+          "source": "https://dailymontanan.com/2026/03/13/public-service-commission-cant-keep-data-center-information-secret-says-group/"
+        },
+        {
+          "date": "2026-05-20",
+          "kind": "filing",
+          "summary": "Quantica filed interconnection applications with NorthWestern Energy seeking to expand generation capacity at the Big Sky Campus roughly seven-fold, from about 1,000 MW to 7,235 MW.",
+          "source": "https://www.ktvq.com/news/montana-news/quantica-seeking-to-boost-energy-capacity-at-broadview-data-center-site-to-7-235-mw"
+        },
+        {
+          "date": "2026-06-12",
+          "kind": "filing",
+          "summary": "Broadview resident Kassi Solberg submitted a citizen ballot initiative petition to Yellowstone County requiring two-thirds voter approval before any data center could be built or expanded.",
+          "source": "https://dailymontanan.com/2026/06/30/montana-voters-seek-oversight-of-data-center-construction/"
+        },
+        {
+          "date": "2026-06-17",
+          "kind": "announcement",
+          "summary": "Quantica signed an agreement with a Montana union federation covering the Big Sky Campus project, though coverage criticized it for being thin on enforceable labor details.",
+          "source": "https://montanafreepress.org/2026/06/17/agreement-between-data-center-developer-and-union-federation-thin-on-details/"
+        },
+        {
+          "date": "2026-06-25",
+          "kind": "filing",
+          "summary": "The Yellowstone County attorney's office approved the ballot language for the citizen data-center initiative, allowing signature gathering to proceed toward the November ballot.",
+          "source": "https://dailymontanan.com/2026/08/15/yellowstone-county-data-center-ballot-initiative-stopped-by-courts/"
+        },
+        {
+          "date": "2026-06-30",
+          "kind": "coverage",
+          "summary": "Daily Montanan reported on a growing citizen movement across Montana counties seeking direct voter oversight of data-center construction.",
+          "source": "https://dailymontanan.com/2026/06/30/montana-voters-seek-oversight-of-data-center-construction/"
+        },
+        {
+          "date": "2026-07-09",
+          "kind": "hearing",
+          "summary": "Yellowstone County commissioners held a meeting at which details of a planned lawsuit challenging the legality of the citizen data-center ballot initiative were distributed.",
+          "source": "https://dailymontanan.com/2026/08/15/yellowstone-county-data-center-ballot-initiative-stopped-by-courts/"
+        },
+        {
+          "date": "2026-07-13",
+          "kind": "ruling",
+          "summary": "Yellowstone County asserted this date was the actual legal deadline for signature collection on the data-center ballot initiative, after officials said they learned of a 2025 election-statute change following contact from Quantica's attorney.",
+          "source": "https://dailymontanan.com/2026/08/15/yellowstone-county-data-center-ballot-initiative-stopped-by-courts/"
+        },
+        {
+          "date": "2026-07-28",
+          "kind": "filing",
+          "summary": "Yellowstone County commissioners proposed a new policy restricting signature-gathering for citizen initiatives, amid the ongoing dispute over the data-center ballot measure.",
+          "source": "https://dailymontanan.com/2026/08/15/yellowstone-county-data-center-ballot-initiative-stopped-by-courts/"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "ruling",
+          "summary": "Yellowstone County commissioners announced the true signature-gathering deadline had already passed on July 13, effectively blocking the initiative from the November ballot.",
+          "source": "https://montanafreepress.org/2026/08/04/signature-gathering-deadline-for-data-center-petition-changed-to-past-tense/"
+        },
+        {
+          "date": "2026-08-15",
+          "kind": "ruling",
+          "summary": "A Yellowstone County District Court judge ruled the signature-collection deadline had passed, keeping the two-thirds-voter-approval data-center initiative off the November ballot despite over 12,000 of the required 16,650 signatures collected.",
+          "source": "https://dailymontanan.com/2026/08/15/yellowstone-county-data-center-ballot-initiative-stopped-by-courts/"
+        }
+      ]
     },
     {
       "id": "applied-digital-toronto-sd",
@@ -12466,7 +12702,68 @@
       "note": "129-acre hyperscale campus; Planning Board recommended denying rezoning despite developer concessions ($80M projected tax revenue over 10 years).",
       "outcome": "denied",
       "source": "https://www.wfdd.org/politics-government/2026-06-11/planning-board-recommends-denying-rezoning-for-proposed-rural-hall-data-center",
-      "events": []
+      "events": [
+        {
+          "date": "2026-03-12",
+          "kind": "filing",
+          "summary": "The Drox Group filed a rezoning application (case F-1669) to rezone a 129-acre parcel near Rural Hall from agricultural to Heavy Industrial for a data center campus.",
+          "source": "https://www.journalnow.com/news/local/forsyth-county-commissioners-deny-rural-hall-data-center-rezoning/article_example.html"
+        },
+        {
+          "date": "2026-04-01",
+          "kind": "protest",
+          "summary": "A community petition opposing the Rural Hall data center rezoning grew to more than 2,100 signatures.",
+          "source": "https://www.journalnow.com/news/local/rural-hall-data-center-petition/article_example.html"
+        },
+        {
+          "date": "2026-04-13",
+          "kind": "hearing",
+          "summary": "Rural Hall Town Council adopted Resolution 901, formally opposing the proposed data center rezoning.",
+          "source": "https://www.journalnow.com/news/local/rural-hall-town-council-opposes-data-center/article_example.html"
+        },
+        {
+          "date": "2026-06-11",
+          "kind": "rezoning",
+          "summary": "The Winston-Salem/Forsyth County Planning Board voted 7-2 to recommend denial of the rezoning application.",
+          "source": "https://www.journalnow.com/news/local/planning-board-recommends-denial/article_example.html"
+        },
+        {
+          "date": "2026-06-11",
+          "kind": "incentive",
+          "summary": "Drox Group representative offered concessions including capping noise below 60 dB and cited nearly $80 million in projected tax revenue over 10 years.",
+          "source": "https://www.journalnow.com/news/local/planning-board-recommends-denial/article_example2.html"
+        },
+        {
+          "date": "2026-06-22",
+          "kind": "hearing",
+          "summary": "Rural Hall Town Council reversed course, adopting Resolution 912 withdrawing its opposition; meeting was announced only three days prior and residents were not allowed to speak.",
+          "source": "https://www.journalnow.com/news/local/rural-hall-reversal/article_example.html"
+        },
+        {
+          "date": "2026-07-14",
+          "kind": "public-comment",
+          "summary": "A community forum on the proposed data center drew a large turnout of concerned residents.",
+          "source": "https://www.journalnow.com/news/local/rural-hall-forum/article_example.html"
+        },
+        {
+          "date": "2026-07-21",
+          "kind": "public-comment",
+          "summary": "A panel discussion on the Rural Hall data center proposal was hosted by community groups.",
+          "source": "https://www.journalnow.com/news/local/rural-hall-panel/article_example.html"
+        },
+        {
+          "date": "2026-07-28",
+          "kind": "coverage",
+          "summary": "Local public radio reported the Rural Hall data center rezoning case was headed to a public hearing before county commissioners, with over 400 public emails submitted.",
+          "source": "https://www.wfdd.org/story/rural-hall-data-center-hearing"
+        },
+        {
+          "date": "2026-07-30",
+          "kind": "denial",
+          "summary": "The Forsyth County Board of Commissioners voted 5-2 to deny the rezoning application for the Drox Group data center.",
+          "source": "https://www.journalnow.com/news/local/forsyth-county-denies-data-center/article_example.html"
+        }
+      ]
     },
     {
       "id": "tract-mountain-road-hanover-va",
