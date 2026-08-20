@@ -11199,7 +11199,80 @@
       "note": "187-acre campus with 980-MW substation off Lon Stephenson Road; approved by Fort Worth Zoning Commission in April 2026 despite neighbor opposition; city later passed a 90-day citywide data center moratorium that exempts already-approved projects.",
       "outcome": "approved",
       "source": "https://www.keranews.org/news/2026-04-15/data-center-moves-forward-after-fort-worth-zoning-commission-vote",
-      "events": []
+      "events": [
+        {
+          "date": "2025-01-01",
+          "kind": "rezoning",
+          "summary": "Fort Worth City Council initially rezoned the 187-acre site at Lon Stephenson Road and Forest Hill Drive from agricultural to light industrial/Planned Development for the future Black Mountain data center campus.",
+          "source": "https://insider.govtech.com/texas/news/10b-fort-worth-data-center-gets-win-from-city-amid-pushback"
+        },
+        {
+          "date": "2026-03-01",
+          "kind": "hearing",
+          "summary": "Fort Worth City Council tabled a request to add roughly 80 additional acres to the Black Mountain data center project pending further review.",
+          "source": "https://www.keranews.org/news/2026-04-15/data-center-moves-forward-after-fort-worth-zoning-commission-vote"
+        },
+        {
+          "date": "2026-03-12",
+          "kind": "public-comment",
+          "summary": "A residents' meeting was held on the proposed Black Mountain Energy data center, where nearby residents raised concerns about pollution, traffic, noise and lack of communication from the project's operating partner.",
+          "source": "https://www.keranews.org/news/2026-04-15/data-center-moves-forward-after-fort-worth-zoning-commission-vote"
+        },
+        {
+          "date": "2026-04-08",
+          "kind": "vote",
+          "summary": "Fort Worth Zoning Commission unanimously recommended City Council approval of Black Mountain's amended 187-acre site plan for a 980MW data center campus (four buildings, 2.2M sq ft, 68 ft tall, dedicated Oncor substation), with conditions including a 150-foot setback from residential zoning and closed-loop water recycling.",
+          "source": "https://fortworthreport.org/2026/04/13/data-center-moves-forward-after-fort-worth-zoning-commission-vote/"
+        },
+        {
+          "date": "2026-04-15",
+          "kind": "environmental",
+          "summary": "Coverage noted the project still requires Texas Commission on Environmental Quality (TCEQ) air-quality permits, amid resident concerns about cancer rates and pollution from a nearby landfill and the proposed data center.",
+          "source": "https://www.keranews.org/news/2026-04-15/data-center-moves-forward-after-fort-worth-zoning-commission-vote"
+        },
+        {
+          "date": "2026-05-12",
+          "kind": "hearing",
+          "summary": "Fort Worth City Council tabled its scheduled vote on the Black Mountain site plan less than three hours before the meeting, pushing the decision to June 23.",
+          "source": "https://www.indexbox.io/blog/fort-worth-city-council-to-review-data-center-site-plan/"
+        },
+        {
+          "date": "2026-05-20",
+          "kind": "coverage",
+          "summary": "Fort Worth Star-Telegram profiled the Black Mountain project's projected tax revenue, ERCOT grid implications, and political headwinds; CEO Rhett Bennett leads the Fort Worth-based energy consortium (Houston-based BCEI developing, Kimley-Horn engineering).",
+          "source": "https://www.aol.com/articles/black-mountains-fort-worth-data-211751000.html"
+        },
+        {
+          "date": "2026-06-02",
+          "kind": "report",
+          "summary": "Fort Worth City Council received a staff briefing on data center infrastructure and regulation ahead of further votes on the Black Mountain project and citywide policy.",
+          "source": "https://insider.govtech.com/texas/news/10b-fort-worth-data-center-gets-win-from-city-amid-pushback"
+        },
+        {
+          "date": "2026-06-23",
+          "kind": "hearing",
+          "summary": "Fort Worth City Council again postponed its vote on the Black Mountain site plan, rescheduling to August 25, amid continued resident opposition over environmental, water and power impacts.",
+          "source": "https://www.aol.com/news/fort-worth-pushes-vote-10b-175207457.html"
+        },
+        {
+          "date": "2026-08-11",
+          "kind": "moratorium",
+          "summary": "Fort Worth City Council voted unanimously to begin the process for a 90-day citywide data center moratorium, created an 11-member Data Center and Infrastructure Commission, and required new applicants to show PUCT/ERCOT grid interconnection approval; the moratorium exempts projects with zoning applications already filed, including Black Mountain.",
+          "source": "https://fortworthreport.org/2026/08/12/data-center-moratorium-takes-first-steps-after-fort-worth-city-councils-unanimous-vote/"
+        },
+        {
+          "date": "2026-08-12",
+          "kind": "coverage",
+          "summary": "Coverage noted the moratorium would not take effect until required public hearings and commission findings were completed, with a possible final vote around February 2027 and the 90-day pause running into May 2027, extendable to August 2027.",
+          "source": "https://www.nbcdfw.com/news/local/fort-worth-city-council-outlines-process-for-data-center-regulation-amid-public-pushback/4061229/"
+        },
+        {
+          "date": "2026-08-25",
+          "kind": "hearing",
+          "summary": "Fort Worth City Council is scheduled to vote on the Black Mountain 187-acre site plan, its third scheduled date after two prior postponements.",
+          "source": "https://www.aol.com/news/fort-worth-pushes-vote-10b-175207457.html"
+        }
+      ]
     },
     {
       "id": "cloudburst-san-marcos-tx",
@@ -11231,7 +11304,68 @@
       "note": "Two-building, 900,000+ sq ft, $4B campus near Camby Rd/Kentucky Ave. Approved by Metropolitan Development Commission in March 2026 via industrial-zoning adjustment; ~90 residents protested. Residents later sued; case helped drive Indianapolis's data-center moratorium push.",
       "outcome": "approved",
       "source": "https://mirrorindy.org/sabey-data-centers-decatur-downship-indianapolis-john-dillon-josh-bain/",
-      "events": []
+      "events": [
+        {
+          "date": "2025-12-18",
+          "kind": "announcement",
+          "summary": "Seattle-based Sabey Data Centers sought city approval for a roughly 130-acre, two-building data center campus on industrially-zoned land near Camby Road and Kentucky Avenue in Decatur Township, telling residents the project could generate more than $20M/year in property tax revenue at full buildout.",
+          "source": "https://mirrorindy.org/decatur-township-data-center-proposal-southside-indianapolis-ai/"
+        },
+        {
+          "date": "2025-12-18",
+          "kind": "public-comment",
+          "summary": "Residents packed a Decatur Township Civic Council meeting at Decatur Central High School to question Sabey CEO John Sabey about the proposed data center; no speaker during public comment supported the project.",
+          "source": "https://www.wfyi.org/news/articles/decatur-township-data-center-sabey-variance"
+        },
+        {
+          "date": "2026-01-29",
+          "kind": "hearing",
+          "summary": "The Metropolitan Development Commission's hearing examiner held a petition hearing on Sabey's request for a variance of use to allow the data center campus on industrially-zoned land in Decatur Township.",
+          "source": "https://www.wfyi.org/news/articles/decatur-township-data-center-sabey-variance"
+        },
+        {
+          "date": "2026-02-26",
+          "kind": "hearing",
+          "summary": "The MDC hearing examiner recommended approval of Sabey's 130-acre Decatur Township data center proposal, advancing it to the full commission despite community opposition.",
+          "source": "https://www.wfyi.org/wfyi-news/2026-02-26/decatur-township-sabey-data-center-mdc-hearing-examiner"
+        },
+        {
+          "date": "2026-02-26",
+          "kind": "protest",
+          "summary": "About 90 Decatur Township residents demonstrated outside the City-County Building against the Sabey data center, citing noise, energy demand, water use, and property-value concerns; 1,400+ had signed an opposition petition vs. 24 supporters.",
+          "source": "https://www.wthr.com/article/news/local/decatur-township-indianapolis-residents-protest-data-center/531-fb6f849d-05ef-4c1a-a9f5-9d9f9e590c37"
+        },
+        {
+          "date": "2026-03-18",
+          "kind": "vote",
+          "summary": "The Indianapolis Metropolitan Development Commission voted to approve Sabey's variance-of-use request for a $4B, two-building, 900,000+ sq ft, ~250MW data center campus on 130 acres, making it Indianapolis's first hyperscale data center.",
+          "source": "https://www.wthr.com/article/news/local/decatur-township-data-center-proposal-approved-by-indianapolis-metropolitan-development-commission/531-3f96eee2-4942-46de-9774-e306b03b6b2e"
+        },
+        {
+          "date": "2026-04-17",
+          "kind": "lawsuit",
+          "summary": "The Decatur Township Civic Council and more than half a dozen residents filed a petition for judicial review in Marion County Superior Court to overturn the MDC's approval, arguing the variance violated state law and due-process rights and amounted to a 'disguised rezoning.'",
+          "source": "https://mirrorindy.org/decatur-township-civic-council-sabey-data-center-judicial-review-metropolitan-development-commission/"
+        },
+        {
+          "date": "2026-04-20",
+          "kind": "coverage",
+          "summary": "Coverage confirmed Decatur Township residents sued to block the $4B Sabey data center, citing noise, energy demand, water use, lack of permanent jobs, and property-value impacts.",
+          "source": "https://www.wfyi.org/wfyi-news/2026-04-20/decatur-township-residents-sue-to-block-sabey-data-center"
+        },
+        {
+          "date": "2026-06-15",
+          "kind": "filing",
+          "summary": "Attorneys for Sabey and the MDC filed a motion to dismiss the residents' judicial-review petition, arguing the citizens' petition failed to meet statutory requirements.",
+          "source": "https://mirrorindy.org/sabey-data-centers-files-motion-to-dismiss-residents-legal-challenge/"
+        },
+        {
+          "date": "2026-08-10",
+          "kind": "moratorium",
+          "summary": "Indianapolis City-County Council voted 23-1 to advance a moratorium pausing approval of new data centers in Marion County through 2028, partly driven by the Sabey fight; the measure exempts the three already-approved projects including Sabey's.",
+          "source": "https://www.wishtv.com/news/politics/indianapolis-data-center-moratorium-put-on-hold-aug-10-2026/"
+        }
+      ]
     },
     {
       "id": "softbank-ports-piketon-oh",
@@ -11472,7 +11606,86 @@
       "note": "County commissioners unanimously denied Talen Energy's request to rezone 800+ acres from agricultural to industrial for a data center plus power-plant expansion, after a grassroots group gathered ~3,000 petition signatures.",
       "outcome": "denied",
       "source": "https://www.foodandwaterwatch.org/2026/02/10/montour-county-pa-commissioners-reject-rezone-for-data-center/",
-      "events": []
+      "events": [
+        {
+          "date": "2024-11-01",
+          "kind": "ruling",
+          "summary": "FERC rejected a proposed interconnection service agreement among PJM, PPL Electric, and Talen that would have increased the load Talen could transfer directly from the Susquehanna nuclear plant to its co-located Amazon data center campus.",
+          "source": "https://www.utilitydive.com/news/ferc-interconnection-isa-talen-amazon-data-center-susquehanna-exelon/731841/"
+        },
+        {
+          "date": "2025-06-01",
+          "kind": "utility",
+          "summary": "Talen Energy expanded its Amazon Web Services partnership with a new long-term agreement to supply up to 1,920 MWe from its Susquehanna nuclear plant through 2042, part of Talen's broader co-location strategy for AI data centers in Pennsylvania.",
+          "source": "https://www.world-nuclear-news.org/articles/new-supply-agreement-expands-talen-amazon-partnership"
+        },
+        {
+          "date": "2025-08-01",
+          "kind": "announcement",
+          "summary": "Concerned Citizens of Montour County formed with four members after Talen's rezoning request became public; its first town hall days later drew about 120 people.",
+          "source": "https://www.publicsource.org/datacenters-pittsburgh-pennsylvania-energy-resistance-environment/"
+        },
+        {
+          "date": "2025-08-18",
+          "kind": "filing",
+          "summary": "Talen Energy submitted a rezoning petition to Montour County covering roughly 870 acres in Anthony and Derry Townships, seeking to change land from agricultural to industrial near its Montour Steam Electric Station for a data center and power-plant expansion.",
+          "source": "https://www.datacenterdynamics.com/en/news/talen-energy-seeks-to-rezone-land-in-montour-county-pennsylvania-for-data-center-project/"
+        },
+        {
+          "date": "2025-11-19",
+          "kind": "hearing",
+          "summary": "The Montour County Planning Commission voted to recommend against Talen Energy's request to rezone roughly 870 acres of agricultural land to industrial.",
+          "source": "https://www.foodandwaterwatch.org/2025/11/20/montour-pa-planning-commission-recommends-against-rezone-for-data-center/"
+        },
+        {
+          "date": "2026-01-23",
+          "kind": "hearing",
+          "summary": "Montour County commissioners held an all-day public hearing at First Baptist Church of Danville on Talen's rezoning request; residents wearing red 'Say No Industrial Rezoning' shirts testified about farmland loss, water use, noise, and land impact.",
+          "source": "https://www.montourcounty.gov/news/news/23-january-talen-rezoning-hearing"
+        },
+        {
+          "date": "2026-01-23",
+          "kind": "public-comment",
+          "summary": "Concerned Citizens of Montour County delivered a petition signed by about 3,000 residents opposing the rezoning, roughly twice the population of the township and more than voted there in the 2024 election.",
+          "source": "https://www.publicsource.org/datacenters-pittsburgh-pennsylvania-energy-resistance-environment/"
+        },
+        {
+          "date": "2026-02-10",
+          "kind": "denial",
+          "summary": "Montour County's three commissioners voted unanimously to deny Talen Energy's rezoning request; Chair Rebecca Dressler said Talen had not met its burden of proving the project would benefit the community and that no evidence showed benefits outweighed foreseeable public harms.",
+          "source": "https://insideclimatenews.org/news/11022026/pennsylvania-talen-energy-data-center-rezoning-denied/"
+        },
+        {
+          "date": "2026-02-10",
+          "kind": "coverage",
+          "summary": "Talen Energy responded saying it remains committed to pursuing a data center in Montour County and would 'listen, incorporate feedback from the Commissioners, engage with the community, and refine our plans.'",
+          "source": "https://www.alliednews.com/pennsylvania/news/update-montour-county-unanimously-denies-talen-energy-rezoning-request/article_4e7373c1-a56c-540a-9495-379606b7e3e5.html"
+        },
+        {
+          "date": "2026-03-30",
+          "kind": "report",
+          "summary": "Civil Eats profiled the Montour County fight as a case study of a small farm county organizing successfully against a hyperscale data center and power-plant expansion.",
+          "source": "https://civileats.com/2026/03/30/how-a-tiny-farm-county-is-fighting-against-a-data-center/"
+        },
+        {
+          "date": "2026-04-14",
+          "kind": "public-comment",
+          "summary": "Montour County held a public hearing on proposed amendments to its data center ordinance, including new height and setback distance requirements.",
+          "source": "https://www.montourcounty.gov/calendar/calendar/commissioners/2026/public-hearing-for-comments-on-proposed-data-center-ordinance"
+        },
+        {
+          "date": "2026-04-28",
+          "kind": "ruling",
+          "summary": "Montour County commissioners unanimously approved amended data center ordinance provisions establishing new height and setback requirements for any future data center development.",
+          "source": "https://www.dailyitem.com/news/montour-county-board-oks-amendments-to-data-center-rules/article_7c4ce50b-49c9-4b42-a439-7d890afe4ecf.html"
+        },
+        {
+          "date": "2026-08-18",
+          "kind": "moratorium",
+          "summary": "Governor Josh Shapiro signed an executive order restricting data center development in Pennsylvania, eliminating fast-tracked permitting and formalizing GRID Standards requiring community engagement, energy-affordability protections, and environmental standards for developers seeking state support.",
+          "source": "https://www.inquirer.com/politics/pennsylvania/josh-shapiro-data-center-order-20260818.html"
+        }
+      ]
     },
     {
       "id": "flexential-kaufman-tx",
