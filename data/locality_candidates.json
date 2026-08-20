@@ -1,6 +1,31 @@
 {
-  "updated": "2026-08-19",
+  "updated": "2026-08-20",
   "candidates": [
+    {
+      "name": "Calvert",
+      "count": 4,
+      "examples": [
+        {
+          "title": "Calvert County board passes 6-month moratorium on new data centers",
+          "outlet": "The Baltimore Banner",
+          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNU3dGeU1FMUpKQUpyMm1RQ0p2VXdpT2MydWpBYTdSNHhScDZOZXEyYzlVbF8zZzJudDNWVHp3UWY5OGtuNzZPRUtsUVF6MmdHWmlxOU5iNkJTSS16X0EwR0NfU2lsY0drWDVCOTJxQ1pGcnBGMVBCcFJXTWpoQnVsUEc2di1wVFU2Q1dSc2V6U1gwUXFxRTRBTkJDVzN3ZkhLWGVIYlpHRHZ0OWpuMk9IZXJsaWtYQ3NCR1k5TzhPOHA?oc=5"
+        },
+        {
+          "title": "Calvert County Passes Six-Month Moratorium On Data Centers",
+          "outlet": "The BayNet",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPR3YtTW1qN3pOUGxGM3Q5UUhfT1ZwQmpEUEUyNG02aWhKSnBUWE9PWFctdjdXdW9FNm1YaG84QnF6WTFwSkthTEhSaDluSEwwX1JMWmREU1dxTXRfdzRMUnp4NjFDSVNjeEh5aU91WURJOGQ5MjJacWxOMkNqMXRJOVNISzBESmRB?oc=5"
+        },
+        {
+          "title": "Calvert County considers 6-month data center moratorium after Amazon pullout",
+          "outlet": "baltimoresun.com",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQeDhNT3Jtb0RlZVVmR3NJMHp5Wl9UbWdET0RvTjNSQUY3eEVxSGRBbkEwbk1yOUlEejdMY0Rxa0Y5ZGhvNzY2bUFXVFJIZEVvOHA1VlR2d1N3NzN1amxpX2tUNktKRng3WXJ5ZzVYWVlwZF9qRHhOekQzYUxadzFDbk1jUGc?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
     {
       "name": "Elkhart",
       "count": 3,
@@ -23,32 +48,32 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
-      "name": "Calvert",
+      "name": "Alamance",
       "count": 3,
       "examples": [
         {
-          "title": "Calvert County board passes 6-month moratorium on new data centers",
-          "outlet": "The Baltimore Banner",
-          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNU3dGeU1FMUpKQUpyMm1RQ0p2VXdpT2MydWpBYTdSNHhScDZOZXEyYzlVbF8zZzJudDNWVHp3UWY5OGtuNzZPRUtsUVF6MmdHWmlxOU5iNkJTSS16X0EwR0NfU2lsY0drWDVCOTJxQ1pGcnBGMVBCcFJXTWpoQnVsUEc2di1wVFU2Q1dSc2V6U1gwUXFxRTRBTkJDVzN3ZkhLWGVIYlpHRHZ0OWpuMk9IZXJsaWtYQ3NCR1k5TzhPOHA?oc=5"
+          "title": "BREAKING MON. NIGHT: Alamance County commissioners vote unanimously for one year moratorium on data centers",
+          "outlet": "alamancenews.com",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxObjZNVVlUVlhMaXZ1QWowek15ZVR5OFR0QlgzVm95TVBudTNudi1xZFMyU041bUlQcWhlSWpRTk01MU1IWG56bjlRa1lSd3BWZFkwbTg3enVQQXRZOWhIemlabjVNcE9oRnBjZGNra0UtSXlKR0FnSE5FX2VLMVFYU2VoREp1RHhpazZlbEF2RVNNMWh2VEREWlc1X04ySFlSeXNfNEZHbnJ5NHhnS1VtVEc1QkhUaXdYSG53U3lfY0hFb2hQX3pfbjNyMA?oc=5"
         },
         {
-          "title": "Calvert County Passes Six-Month Moratorium On Data Centers",
-          "outlet": "The BayNet",
-          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPR3YtTW1qN3pOUGxGM3Q5UUhfT1ZwQmpEUEUyNG02aWhKSnBUWE9PWFctdjdXdW9FNm1YaG84QnF6WTFwSkthTEhSaDluSEwwX1JMWmREU1dxTXRfdzRMUnp4NjFDSVNjeEh5aU91WURJOGQ5MjJacWxOMkNqMXRJOVNISzBESmRB?oc=5"
+          "title": "Alamance County commissioners approve 1-year data center moratorium",
+          "outlet": "FOX8 WGHP",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTjJTS3RWMFdGbU8wTGcxNU90VHhiUVVpTzJNNHpOYTR4SDlmSldWZGJoelBkUHpVTFpPdEJBVlB4ZTBHb2tiM2FzN1BLX21rR0ZXOGxCU1FXUEZjbU9WOVAtRkFCYl9JNGZPNnBNMDhnNVAzemRibWVfblRET2hUQ3F2anZNeVJWZmM4LWx1SmUwbkVuZkZqdUVsbkVwWktvMnF4bG5XaWRvSWdTSFY3d1BESHBPM2JPeFNJUNIBvAFBVV95cUxPTjJTS3RWMFdGbU8wTGcxNU90VHhiUVVpTzJNNHpOYTR4SDlmSldWZGJoelBkUHpVTFpPdEJBVlB4ZTBHb2tiM2FzN1BLX21rR0ZXOGxCU1FXUEZjbU9WOVAtRkFCYl9JNGZPNnBNMDhnNVAzemRibWVfblRET2hUQ3F2anZNeVJWZmM4LWx1SmUwbkVuZkZqdUVsbkVwWktvMnF4bG5XaWRvSWdTSFY3d1BESHBPM2JPeFNJUA?oc=5"
         },
         {
-          "title": "Calvert County considers 6-month data center moratorium after Amazon pullout",
-          "outlet": "baltimoresun.com",
-          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQeDhNT3Jtb0RlZVVmR3NJMHp5Wl9UbWdET0RvTjNSQUY3eEVxSGRBbkEwbk1yOUlEejdMY0Rxa0Y5ZGhvNzY2bUFXVFJIZEVvOHA1VlR2d1N3NzN1amxpX2tUNktKRng3WXJ5ZzVYWVlwZF9qRHhOekQzYUxadzFDbk1jUGc?oc=5"
+          "title": "Alamance County commissioners approve 1-year data center moratorium",
+          "outlet": "FOX8 WGHP",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOTlNDRmhsTUt0VndnNHVvYlByZkdzSVFNbDRLallzdkxJSmtNdXBpS3MwcVVMREJqQVp0dVEwaG04SWxuTy1GLUhwMWswMlVSejQ5Y1UzSDN4X0xHUFlxVjNEbWwwNHRDZjBsWUc5VnBPNFhqRWRPdWpzOWhSWlFaNkJEb09BT2NNTmZCV21uaENVODRSNndHZHF4ZTFHV1pxQzhQQ2NlMzJmanAzU0swekJycnFyTknSAbwBQVVfeXFMT04yU0t0VjBXRm1PMExnMTVPdFR4YlFVaU8yTTR6TmE0eEg5ZkpXVmRiaHpQZFB6VUxaT3RCQVZQeGUwR29rYjNhczdQS19ta0dGVzhsQlNRV1BGY21PVjlQLUZBQmJfSTRmTzZwTTA4ZzVQM3pkYm1lX25URE9oVENxdmp2TXlSVmZjOC1sdUplMG5FbmZGanVFbG5FcFpLbzJxeGxuV2lkb0lnU0hWN3dQREhwTzNiT3hTSVA?oc=5"
         }
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -88,7 +113,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -108,7 +133,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -128,7 +153,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -148,7 +173,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -168,7 +193,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -188,7 +213,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -208,7 +233,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -228,7 +253,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -248,27 +273,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
-      "status": "new"
-    },
-    {
-      "name": "Alamance",
-      "count": 2,
-      "examples": [
-        {
-          "title": "BREAKING MON. NIGHT: Alamance County commissioners vote unanimously for one year moratorium on data centers",
-          "outlet": "alamancenews.com",
-          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxObjZNVVlUVlhMaXZ1QWowek15ZVR5OFR0QlgzVm95TVBudTNudi1xZFMyU041bUlQcWhlSWpRTk01MU1IWG56bjlRa1lSd3BWZFkwbTg3enVQQXRZOWhIemlabjVNcE9oRnBjZGNra0UtSXlKR0FnSE5FX2VLMVFYU2VoREp1RHhpazZlbEF2RVNNMWh2VEREWlc1X04ySFlSeXNfNEZHbnJ5NHhnS1VtVEc1QkhUaXdYSG53U3lfY0hFb2hQX3pfbjNyMA?oc=5"
-        },
-        {
-          "title": "Alamance County commissioners approve 1-year data center moratorium",
-          "outlet": "FOX8 WGHP",
-          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTjJTS3RWMFdGbU8wTGcxNU90VHhiUVVpTzJNNHpOYTR4SDlmSldWZGJoelBkUHpVTFpPdEJBVlB4ZTBHb2tiM2FzN1BLX21rR0ZXOGxCU1FXUEZjbU9WOVAtRkFCYl9JNGZPNnBNMDhnNVAzemRibWVfblRET2hUQ3F2anZNeVJWZmM4LWx1SmUwbkVuZkZqdUVsbkVwWktvMnF4bG5XaWRvSWdTSFY3d1BESHBPM2JPeFNJUNIBvAFBVV95cUxPTjJTS3RWMFdGbU8wTGcxNU90VHhiUVVpTzJNNHpOYTR4SDlmSldWZGJoelBkUHpVTFpPdEJBVlB4ZTBHb2tiM2FzN1BLX21rR0ZXOGxCU1FXUEZjbU9WOVAtRkFCYl9JNGZPNnBNMDhnNVAzemRibWVfblRET2hUQ3F2anZNeVJWZmM4LWx1SmUwbkVuZkZqdUVsbkVwWktvMnF4bG5XaWRvSWdTSFY3d1BESHBPM2JPeFNJUA?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -288,7 +293,67 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Macon County",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Macon County Planning Board sends data center amendment forward",
+          "outlet": "highlandsnews.com",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPSGFSZ09PZmlTMFJOT01pcGotbnBLZmlqcDFuUTZjVzF4eFVDM2tXbkl5V01RRHItaWpBZXNKZG1jTG0wYjZWbUw5LXJ1LXlIV1NZaGQwVE4zUFBHSDZ0cHo5alNhTmZvYll5dEJySVUwOUhNdXVTYUNtaWxEZ0dJV1k1MW1Od0NZYVhCSDJCcks0b0wzSUNTX2dsb0E5MVpETTdleg?oc=5"
+        },
+        {
+          "title": "Macon County residents ask for data center moratorium",
+          "outlet": "highlandsnews.com",
+          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQ21YZVo5XzgtS3RoNTVZTzZOMkdvcFhTNnNBanVUeHRGUkZGZ0MtRUVsNW5ReU9kb2dBWGt6RkdaZGJpdEYtSzFqT1lQNjgtZnA5ODRWcG9qMjB4UHdCc25VQXUxbW03Wkx1R0l3MURsaDM4SDFRblZVVGRpZm9MRFJHNHB4Y0kzLXREb2IzTFpYR0VHNnlJ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "San Jose",
+      "count": 2,
+      "examples": [
+        {
+          "title": "San Jose residents push for data center moratorium",
+          "outlet": "San José Spotlight",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNV19OdGMyU0dldjl5ZDEzTnFqMVNneFRlLTFjRHNuR3lCbFpOYmhqRlcxWC1XLWVKVk9qbDFXMURJWmpNeDJRY2d1MW5yVVlZSDVlaThjWnJ1WEVEQ0hXNnl2SkxVaDlVYzBaRGpELTdEMWFkdDlwc0xmemg5bVNnN0YxTTJFNHM?oc=5"
+        },
+        {
+          "title": "San Jose residents push back on new AI data centers during city listening session",
+          "outlet": "KTVU",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxON0M3OXFabUZMTjZYcDBqMkxXMHBwQXNhb0J0ZXgxYXBub3ZsQXV2MFJDRUhxbDFwVjNJWHNCMnY1Rk02Ry1VaU9vN2tSc2pSSXEzZV9wRU5zNjUtSndFbzdoeUlyOGc0QkItMWlISlBfODBOV1kwVlQxeGgwcTlSbGl2THlVQnhTMlg0clk2c1VLRUpHZ3JQM1VsYWduclJVMEpZR1Zuc9IBrAFBVV95cUxPcnNtb3p2V1YyT0hXSjA4dXZMOG11M0xIZjR1S3pNeDRDa2pacDAwbXhKNXdZZkNpdUEzVmV0c3hhalRFM1VmLWlqZncyTzRJMklGQ2NqbHBEcTdkRFJSQ0lrajdHS1BUelZzZ0R6MFpXUlgxUGNXXzlKc3B1UGVJY1N4cFVyUlZSMHNLbjd0aWEzZVdRUHVRcTh2bWZIendqeC15ZGRDa0g3dmxU?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Tulare",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Tulare County stalls data center developments with moratorium. It could be extended",
+          "outlet": "Fresno Bee",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOMzBOVFdFbnZ3LUNLRWZ2UzQ3S0h0b011dmU4QVNVM19GNTBBOU1fOE02NVJwWHJoazAxdmRVRTY3bjMzenoxM0tORWRyR3lyNTdVMjNWNmFzQ1Y2N3ZUM1dYVUtldnpFNjRuVWctaE1aWFZMdjRCNXZpUzFYNDlfVmswVUrSAYQBQVVfeXFMT0pIajJHUEdJZURfaERtWEJGTVROY0FSdkJTdVNrWHFEZzI1N0NWUXNSXzVMcllMYTdFNlVVc21JWTNLekJVSlRCbjBCNUVuY1NhUXB1dVJZb0dZLU9fY3pUSkJ3UGttQlQyY216dHRyVWExUHdEYWRRbWxfLWZfVnRDZHQw?oc=5"
+        },
+        {
+          "title": "Hanford, Tulare County weigh in on AI data centers during Tuesday meetings",
+          "outlet": "YourCentralValley.com",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNnRKSjM1MUtEZHl0VDBHcFZZX3JfN0pTT0Nid01TRWg2MDVVdlJ4dVJyWFpsZW1wc3RBRTRudlFuWmRpYnhfVDF1T1hIalZDZmlfczM0cGcxRjVHRTVVUHlEcmtrTnFBaVZkMjhRQmxvQkNCNGlqMTA0RUxFTVpkLUFRSnlmbFcyT1R4dy1Pc1BSNmJs0gGaAUFVX3lxTE44YlpONjRKVVNGNEpCN3FWMjNORndEQWJid2txMFRPVDViWEJsWWpHUFBQQkRvYl9iU05scVM3OVBVb2M2b1gwb3VFQzFPTHdNYzJrN3BjZzBKSllEa0FRLXBQQ3ZXMlhyWEFlX2d6cWxPR21XVEhWVFlXbWRpNjA0RE5pNzRSTmFJRmo5OUt0d3hTVGF3T0VLMGc?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -318,7 +383,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -333,7 +398,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -348,7 +413,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -363,7 +428,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -378,7 +443,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -393,7 +458,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -408,7 +473,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -423,7 +488,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -438,7 +503,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -453,22 +518,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
-      "status": "new"
-    },
-    {
-      "name": "Macon County",
-      "count": 1,
-      "examples": [
-        {
-          "title": "Macon County Planning Board sends data center amendment forward",
-          "outlet": "highlandsnews.com",
-          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPSGFSZ09PZmlTMFJOT01pcGotbnBLZmlqcDFuUTZjVzF4eFVDM2tXbkl5V01RRHItaWpBZXNKZG1jTG0wYjZWbUw5LXJ1LXlIV1NZaGQwVE4zUFBHSDZ0cHo5alNhTmZvYll5dEJySVUwOUhNdXVTYUNtaWxEZ0dJV1k1MW1Od0NZYVhCSDJCcks0b0wzSUNTX2dsb0E5MVpETTdleg?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -483,7 +533,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -498,7 +548,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -513,7 +563,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -528,7 +578,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -543,7 +593,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -558,7 +608,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -573,7 +623,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -588,7 +638,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -603,7 +653,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -618,7 +668,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -633,7 +683,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -648,7 +698,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -663,7 +713,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -678,7 +728,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -693,7 +743,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -708,7 +758,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -723,7 +773,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -738,7 +788,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -753,7 +803,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -768,7 +818,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -783,7 +833,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -798,7 +848,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -813,7 +863,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -828,7 +878,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -858,7 +908,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -873,7 +923,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -888,7 +938,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -903,7 +953,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -918,7 +968,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -933,7 +983,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -948,7 +998,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -963,7 +1013,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -978,22 +1028,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-19",
-      "status": "new"
-    },
-    {
-      "name": "San Jose",
-      "count": 1,
-      "examples": [
-        {
-          "title": "San Jose residents push for data center moratorium",
-          "outlet": "San José Spotlight",
-          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNV19OdGMyU0dldjl5ZDEzTnFqMVNneFRlLTFjRHNuR3lCbFpOYmhqRlcxWC1XLWVKVk9qbDFXMURJWmpNeDJRY2d1MW5yVVlZSDVlaThjWnJ1WEVEQ0hXNnl2SkxVaDlVYzBaRGpELTdEMWFkdDlwc0xmemg5bVNnN0YxTTJFNHM?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1008,7 +1043,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1023,7 +1058,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1038,7 +1073,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1053,7 +1088,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1068,7 +1103,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1083,7 +1118,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1098,7 +1133,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1113,7 +1148,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1128,7 +1163,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1143,7 +1178,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1158,7 +1193,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1173,7 +1208,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1188,7 +1223,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1203,22 +1238,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
-      "status": "new"
-    },
-    {
-      "name": "Tulare",
-      "count": 1,
-      "examples": [
-        {
-          "title": "Tulare County stalls data center developments with moratorium. It could be extended",
-          "outlet": "Fresno Bee",
-          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOMzBOVFdFbnZ3LUNLRWZ2UzQ3S0h0b011dmU4QVNVM19GNTBBOU1fOE02NVJwWHJoazAxdmRVRTY3bjMzenoxM0tORWRyR3lyNTdVMjNWNmFzQ1Y2N3ZUM1dYVUtldnpFNjRuVWctaE1aWFZMdjRCNXZpUzFYNDlfVmswVUrSAYQBQVVfeXFMT0pIajJHUEdJZURfaERtWEJGTVROY0FSdkJTdVNrWHFEZzI1N0NWUXNSXzVMcllMYTdFNlVVc21JWTNLekJVSlRCbjBCNUVuY1NhUXB1dVJZb0dZLU9fY3pUSkJ3UGttQlQyY216dHRyVWExUHdEYWRRbWxfLWZfVnRDZHQw?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1233,7 +1253,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1248,7 +1268,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1263,7 +1283,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1278,7 +1298,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1293,7 +1313,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1308,7 +1328,277 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "N. Londonderry",
+      "count": 1,
+      "examples": [
+        {
+          "title": "N. Londonderry officials receive draft copy of proposed data center ordinance",
+          "outlet": "LebTown",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQRWxiT2phZE9LbzUxUHUtc0sydFF6ZExTWHdyUnRZMWM0WGdRRl9JQnNNcTBscGN3VWFxRFZYOEdtMDNLa0RPbFgtd0N6Ykl2Q1FLU3lSa2x1UFRpRW1zYmd6dldhZ2xSSm1PcGkzeVhZRkExSmI3cEZ3V1NRLXB3YVNxVldJVVJpMmtOb1FxSUVSaFNIbzhYRUdvYWRDQlYtOFpRQ0QwSVM2ODgw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Rock Island",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Residents raise concerns over proposed Rock Island County data center",
+          "outlet": "KWQC",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUjhQa3hvOTJJVnQtV0tnWEcwbjIyd1hvcWxlbEJkeG1jOGM5TnhEbFNKRmNqWlZ0Z2duY3RQMHZjOXVrOWQ0TGVINzQ2Q2dqTnRpUkJSeExxU1RGbkR0Mk8yQ0FXdUhQV1hLaUVxWTRWYzZfb1MwcEtqbG9KTWVfcXZLVEY0NDk1VUo4bHFxSmloek8zWkpnX2dUTWRFSlpOTXZFbNIBuAFBVV95cUxNc09CMkdxbDNFMUlhcE9oUGNPNDJkOFAwcVd4VXVmaURDaWRLMXFXR3BvQ2RiSS1xS3VZdzlQWlZsTWFHZnQyOTJOc2hfYlBXeUVGVFVBMndfcnVic1E1cmItN0p4b0JLRVM2NXNEVHZ5MWJKZ0RjOHh6S3kyRERqQjcweDVLUWl0Y0JySGFiM2VyeVhiM3NTeTFqUXZNTkJyYUJkRjRtcFh4eUpoSm1wbjNGZjhNTWJV?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Athol",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Athol Planning Board advances data center moratorium",
+          "outlet": "Athol Daily News",
+          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONVlpNjNVaTFkODlqVm1VSDRUS0VRTmNiZF9tb3pRYWZoR001aGZhSjJ1UHBvUVlBbUZTWnFzRE5menljcE5NSzJQZ0FNOVdYc2VZcUdHN3ZxZDdCQmZtc1phZXJwZlVPWlBldVhiaGZFb2VxSU51N1QzdUpxdTV2UW8xS2pPU1RNNWQ0M0Q3SVBLbTdUdVE?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Ellsworth City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Ellsworth City Council approves data center moratorium",
+          "outlet": "ellsworthamerican.com",
+          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQWm1xZzg2U1RCTGtHS3J1b0wzSk9uUlcyeGc0OUNWMkZ3RHlQUDM2MjczeVJQR2RkX0RpWGNybXdSTHJRNmxMSW5TMGNmYjZ0bHFIV2NzTXozUGtrclE0d1pJVDAtVk84SXo3OG9sLVV5X3FfbzlGOWNlNFRBQjNyQ1FjbUVhbzZRVS0yT0Q0ak1DaEF6c0o4a25ybjJWcUFSeDBmWlB3dlhkekwyeGtsY0dpanVVWkFXNE1CSEI3a0RORkJOM194V3RPYmxtTF9rZjB2cW85OWhBOTA?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Volusia",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Volusia County considers permanent ban on large-scale data centers",
+          "outlet": "WFTV",
+          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNb0Z0eFpaSGdnX1k5QmVqY0tVbXFyam5zZHNULW1oVjZYQ2dKMHJ4YnlDOFloQUxKendBQXh3Y3JGSVh2NmgtZE9BamcxZVpHVVRKcDE0OVljMjFmWWFhRzVjMWRPbThTZC1DMDRvQi1OT0dfYlV2aGxBM25MTzFPZUhiSjFvOWV2TkVQUHkyMVFFQVNXNjJhRnlSeEpKRW5PWnJvTnBOUkJXTGc2M3F5MW5RWGFzdDlCX0JIV21ZVkI4R3o0eWFNNXVoc2lTSDVTaEFXYdIB6AFBVV95cUxQSkl1Q3RESXU3TjlRS2Y4R0owNDc1ajNQbVI3Mi1fWENLa2VhTFhQMFN0X0czdUJDZlVZYllDYmFnc2pjWVhNZUpSQ2V6bWRsNTBZUWx2eUZzcndQalJQTUMzNHpXQmx5WG9QdjUtbFoxeTZ1R0dEQmcwQ3duazJwc0dDTGNjTWh2bXhHVDJrQkwtR2xnZHFNcUQzeWk0MlctZVQzbWdxbVZ6SDV6TjZHQm1RLUdnZkRXWGZDTlgycTZNUVl2eUJFLXFNaWlsd1RLbzY5Yl84SXVSSE53X0xyT0FYdTNGYk9w?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Marion",
+      "count": 1,
+      "examples": [
+        {
+          "title": "New data centers temporarily banned in Marion County",
+          "outlet": "WFYI",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWGRUTDV6ZXY4SVBUdnk5dUtrQnRGSGVlLVV1UENLeEN0RExfc20zUm1vQUxzakVDZHRienlXRFNaVXF4X2V3Y1ExbWVGdVhUOVFkYkpZc3YxSXNVbEdGV3FXakJCZDJETUFYYmVyRjV0UmYwSHdib2RyRGpuLURoaVFSVUktckxNeFhTc0xPUXJZQWdGT19lM0dR?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Brownsville",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Brownsville residents keep up pressure opposing data centers",
+          "outlet": "ValleyCentral.com",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNX3hya1k4VHdnd1NCMFlVa1ZFdWlPelhxb055QXZVN2xVN3RYOFRRZzM2SXZBek9kM1Nub3JEV0p4bWRTS0hpZkduQy14Q3hQWHZEZktqVkdLR2ZxOGY0eWNrSnVDbjRhbU40VWN3MHY4VFpybnlTQlFNZjBjUlVkeXN4ejMxcGhlQ2dpbUtSdXBaNUk4X3daRVhycDFVek1vSVhMY1Q4Qi13UDTSAbABQVVfeXFMTnJISmg4YWs3RmhjMGplWmtwcnZqMlpkRUdPdTU0UlNlcGdyVFM5NGh4UWdnZ01idU51RnZFVGYwbDl4T19qY0F3cG9GcnlTUHB1dHdCMklRR015MUs1LUJaN20tZzhTX2NGeUR2clQzSnRCZWhMSF95U0g1SnNXblZBSXZEbDZWUkxuYjF5ODBoZDZVLUFGVEl6VjJVTjlja09CQV9hN2s5d0t4SW05QVk?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Bay City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Bay City residents voice opposition to data centers at planning commission meeting",
+          "outlet": "MLive.com",
+          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPZUhPMjBCZkcybzR2VDBYS3dDM2d6ejg0NVE4aXNNUmxXY2FSVTNyQUIyLW9GRHoxMWpTV1NBQ1JTV2tiOUhMQUFnQmlzMldQeERrd1czbHN0VGM0LXJ2YXBXTGJjUXB3SlIyU1ZoX0tBcGRaVS1yQ2VEekl1dDg0Uzk0akgwUXdPaHU1OHBIcGZjcmE2cnF3WDh4dmdVZ0ZTTS0wZW1DZVc4NXZSYVhBOHhjUG1YXzBVMV83TllzVVpFUXc1R3ZxUnZkbmVjb1dRNnRqYkVR0gHqAUFVX3lxTE1MbUthb3hteVY0MmtXeDlFbF9XQnZuN19SbnF1SjFTX0xxZHk0MkNnMXNwckd1U2FqQXFhQkhBSFhaZVlhbmtsTjl1M1dnc0d0YXlIcGhTdXdsT2xDMkl2Z2lUVjNfY2JIS1Q1anQ0NEdrdldxWDJ4OGF2bjItVERtQ0dSa3RWQUlrTFBEN1lDQzdIMzdmcExuZTNQYWRWVm1iTXBHbmwyX1gxbXBZVVVNUkRLOWFzd3V5N1pmLThGb29DeEVRakJ1WjNkUlJrUHVpM2ZqVzJobGZSckx4WmVURlBIQkNnRHFSZw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Granville",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Village of Granville voters to decide whether to ban large data centers",
+          "outlet": "The Newark Advocate",
+          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOWDU1dEZHR1NSM3ZsOThEbFpqOV9DYlY5N3E3YmRGSUZleTg0akt0VG9ad2RoZXU5ZW5nOFNEdVhWWGY3MXNjSjZxU1hYbGZGQW5XVjE2S3hibGhtQU5vVkE1RVdqUHNlSHlBTlJHMi1sR1VhLXZhRkVGa1Q1T0pweTJEZ0xPMmw2LUROSWNuNVN0Vy12SVVYUXA0NnBQQWN3OEk5MHdoekVMNXZ4aklHNEpHeVlnR3UzaDZmYUdwUXhJb1ZLb0hXN3A4MkduTFJYVGJJQ2JB?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Anniston",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Anniston Council Approves Data Center Moratorium, CDBG Plan and Budget Amendment",
+          "outlet": "Calhoun Journal",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQaW92VmgtdmFUM3d6dWNKczhkY3ZhX1Y1Ymc1SWo5ZGxJZTZUdG1QalNXVjNFaDdIcFp4elQ0RV9yMkw0ME9nX2V6X095aGQyS1RDYTk4cFRudU5ZZzZKRVRhWEVyeHF3TWlWTEoxSVh2a1R4NGpYRUg2U1JXRnFoalBaeFRvNTJ2a1NlNDZRTEFLaEE4ZlVoTzdMM2VQMG5zREk5SnZFUjR5Um8?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Tallahassee",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Midday Update: Tallahassee city commission election, Data Center concerns in Valdosta, FAMU move-in, and more",
+          "outlet": "WTXL ABC 27 Tallahassee News",
+          "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNUHkxeUFhTExYNUpMMDc4eXNuWUZidTJQX0ZzTXhvWGFGZ0p6QUg3RlV4TVdkZ2M3Ym5HcU45a3ZHMHdJZHl4V3lpZ0VZc2xoeUdaZHN3djBaMnVyLVlCMDVvUFIxS1RLYkpKMms0MW44R3lqdV9sM2VUQ05vMmFEYW44TTc3WkRnNmxicVBYbzN6NFNZM2JhenlaT2RTeG9lNmVxbUs5SEg5M0hReXdVeG1JVUJVRUZOZkljR3d3VVh6V3dRRHI0dE9rNkZpNGFaRFljb2pjdjhEZw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Thurston",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Thurston County looks to ban AI data centers for a year. Are any planned here?",
+          "outlet": "theolympian.com",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1uQmxMeDR6cjRXZVdMRXZPekkxb09hMHNpMUplVk5NUUdiTnFLZGlNdDR3bUxtRk5ySXgzRF93by1mWk5UR2pEQjRiSkNGQW1JNEhzYkxfWWdKUnJvYWJ4UW82LXpwUWpidGZuTNIBbEFVX3lxTE9pM0xCQTJhWld5b1E1d3dRT3dVMjJ0LTZJRVl4UHRoNUs0eWhxbWpLVHF0MWpWWVdmTVJRT2tjQm5qZ0RlR1hQQlh4ejhvYjRaSG5WRndGTXdFU2ZuM1RKX19CRV9xaHFBYm11Zg?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Oneida",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Oneida County passes one-year data center moratorium",
+          "outlet": "WXPR",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOeUhmcXk3Z0s5T3lqZGhXbkJyeGpGSmFoUF8yTGN3OWpqUkVCZi1JUzg4TlVxcmZmWnlHbjJCUF9RLVFWYTVJOVlWazFibzgxOUxvTFNZM1VoMjlJTFUtZmxvNkVXODdTRGl3eVRLNDU3aDBNb3Z6SGZQWVljVU5JMXplOGhBdnVvbFJfZEdDRDdhSlVyekd4bVZvMk12NXl5UXZJblhR?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Winnebago",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Data center pause affects 4 Winnebago County townships: What to know",
+          "outlet": "Oshkosh Northwestern",
+          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNOGZ4MVRHR3p2Z3J5bXNLc2hibkZCYkJYN2pzd3JfcVRTN1lxenZERUNVT1Y0LVdjN0dwQnllRTdUbGlURzRBN1Q0YXJDZ3gtQTRwQ3pyYV9hMldjb1IyU1NRVWNOeXpabzd1T0JybVU1VVV5YlRrdzdyenJYTXA1bURqazJHdS0xZmlQTEc4WmVJRjhUbU15T2NGNFFtaXR2OUpIcmRHQ29OSEhpQTQ4N0xKOEtVVEdXUER2UmVQZXJQODJZRmRkalJ3?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Lyon",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Data center moratorium ordinance passes unanimously in Lyon County",
+          "outlet": "WPSD Local 6",
+          "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNa2xqSnQtalRpR3E1dHhiOXZRYm91ajFWWWptbEpwRXdva19ZUjV2S1Rzc3dCWC05T0dCbUdfVUc5dGdMeDFNejVLVGlqZE1xZnlwVWYyWVY4bnI5ajZXdVROak1vd2FVcXlKaDlCS2JOYnp5Nm1DWERkMzgyUk9qeVd4VjBOZ3k4RmZMeWJ4ci0tZXU1Y0RkMG9HYTZZaXZ3T0RZQnh1bmR1ZDJ6MUc1OTBoSG9KcFB2dEpOemJzd1pFLS1oQWVxVzhRdUhodGo2X0w0ZW5qZlQ5cWRtMGJGRUNR?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "Freeborn",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Freeborn County extends data center moratorium for another year",
+          "outlet": "kaaltv.com",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOa0QxUVludnh2Z2EyU3lyNWQwcTBEWDFSeFAzNFBtc1pJWWE0dGZZOHp3OUgwcmxaS3Rzakc0STlOT2RjZDJ6UDlpalRLTUJlTHB0bVRVaGdBNlVCbEJMLXY3Yi0tVWpsTU9RVXBkdk03Yk9Md2RlSk4zLTlCRzE4M2VnR3Y4bi1NVEVJVzNDNGxtUDk2SjQtQmhwRTkxNkV3dFV3?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "North Loop",
+      "count": 1,
+      "examples": [
+        {
+          "title": "North Loop residents question developers over proposed data center at former Star Tribune site",
+          "outlet": "CBS News",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNSDEtcXhoRFBxTzBTaUNZbkhnZktoTGRza3ctRWF5WmhCc014cnppbDlidVNJOERiZklVRUZvaUtmSFlrNnhDSnpBVmNSX1Z3cFNzd183a0RrM01GX09JaFpraU9yVHRkcWtIdWQ4MGJ4YUhHbG92NGZZSVB6OVdYaGJuUC1sQzJ2aGV5eFlMRDVOY192M3N6R1RyajZtUQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "McDonald",
+      "count": 1,
+      "examples": [
+        {
+          "title": "McDonald residents address council over data center concerns",
+          "outlet": "WFMJ",
+          "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaWJ2Y3dKcXJ0YjlfdkdRTHpXQ2VCN2RHQTNZNThvOWhjVTlSd1lyWmxZTW9lX2syZm9LX2VodTVhSXFrNG9Ja2FpTnZQRGNXc0RLV1ZEWkZWNDJYT0hqeHk0N29vMkk3TWdyMDY3c2FxS2RGeThYOTRsdEdUN3lMR2JBeHR3ai1sYTNUdlNJVnFOdXpUSVNJdUVsQ21KcXZERS1RSk9xRGdtRi0xUEVLZlUwODBtcE5lbzYzZFBQNmREeTVqLVFlNEZGUFJwREUwZlpJN01rc1lxSjM3aHctTg?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
       "status": "new"
     },
     {
@@ -1727,7 +2017,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "status": "dismissed",
       "dismiss_reason": "Already tracked in LOCAL_BODIES_DF as Allegheny County, PA"
     },
