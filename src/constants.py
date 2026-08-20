@@ -2850,6 +2850,40 @@ MORATORIUMS = [
              "to utilities and land use'",
      "lat": 28.77, "lon": -81.71, "expires": None, "as_of": "2026-08-19",
      "source": "https://www.cfpublic.org/2026-06-25/lake-county-commission-plans-temporary-ban-on-data-centers"},
+    {"locality": "Fayetteville", "state": "GA", "level": "Local",
+     "status": "Enacted", "when": "2026",
+     "note": "Data center prohibition in effect",
+     "lat": 33.45, "lon": -84.46, "expires": None, "as_of": "2026-08-19",
+     "source": None},
+    {"locality": "Atlanta", "state": "GA", "level": "Local",
+     "status": "Enacted", "when": "2026",
+     "note": "Data center prohibition in effect",
+     "lat": 33.75, "lon": -84.39, "expires": None, "as_of": "2026-08-19",
+     "source": None},
+    {"locality": "New Jersey (Fair Share Act)", "state": "NJ", "level": "State",
+     "status": "Enacted", "when": "Jul 7, 2026",
+     "note": "Requires data centers to make 10-year commitments covering "
+             "their fair share of grid infrastructure and community impacts",
+     "lat": 40.22, "lon": -74.76, "expires": None, "as_of": "2026-08-19",
+     "source": None},
+    {"locality": "Virginia (tax/zoning)", "state": "VA", "level": "State",
+     "status": "Enacted", "when": "Jun 30, 2026",
+     "note": "State-level restrictions on data center tax incentives and "
+             "new zoning requirements",
+     "lat": 37.43, "lon": -78.66, "expires": None, "as_of": "2026-08-19",
+     "source": None},
+    {"locality": "Vermont (S.205)", "state": "VT", "level": "State",
+     "status": "Proposed", "when": "2026",
+     "note": "S.205 — proposed statewide moratorium on new data centers "
+             "until 2030; in committee",
+     "lat": 44.26, "lon": -72.58, "expires": None, "as_of": "2026-08-19",
+     "source": None},
+    {"locality": "Oklahoma (SB 1488)", "state": "OK", "level": "State",
+     "status": "Proposed", "when": "2026",
+     "note": "SB 1488 — proposed statewide moratorium on new data centers "
+             "until Nov 2029; in committee",
+     "lat": 35.47, "lon": -97.52, "expires": None, "as_of": "2026-08-19",
+     "source": None},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.
