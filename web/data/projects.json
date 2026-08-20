@@ -12381,7 +12381,110 @@
       "source": "https://beavercountyradio.com/news/align-data-centers-llc-closes-deal-to-build-data-center-campus-near-former-bruce-mansfield-power-plant-for-just-over-223-million/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2022-01-01",
+          "kind": "coverage",
+          "summary": "Frontier Group acquired the former Bruce Mansfield coal-fired power plant site (660 acres) from Energy Harbor Corp, cleared coal piles, and began marketing the property as Shippingport Industrial Park.",
+          "source": "https://baxtel.com/data-center/aligned-shippingport-industrial-park"
+        },
+        {
+          "date": "2025-01-01",
+          "kind": "filing",
+          "summary": "Shippingport Borough solicitor began drafting the borough initial data-center zoning ordinance in anticipation of large-scale proposals at the former Bruce Mansfield site.",
+          "source": "http://www.tmia.com/content/beaver-valley-becomes-data-center-target"
+        },
+        {
+          "date": "2025-03-01",
+          "kind": "vote",
+          "summary": "Shippingport Borough Council passed a new data-center zoning ordinance establishing use and permitting rules ahead of Aligned formal application.",
+          "source": "http://www.tmia.com/content/beaver-valley-becomes-data-center-target"
+        },
+        {
+          "date": "2025-08-01",
+          "kind": "coverage",
+          "summary": "A Vistra subsidiary purchased a 74-acre farm in nearby Hookstown for $4.2 million, underscoring the broader wave of AI/data-center-driven land acquisition around Shippingport and Beaver Valley.",
+          "source": "http://www.tmia.com/content/beaver-valley-becomes-data-center-target"
+        },
+        {
+          "date": "2025-09-01",
+          "kind": "public-comment",
+          "summary": "Residents and officials raised transparency concerns about Frontier Group plans at a Shippingport borough meeting, prompting Gov. Shapiro to later say too many such projects have been shrouded in secrecy.",
+          "source": "http://www.tmia.com/content/beaver-valley-becomes-data-center-target"
+        },
+        {
+          "date": "2025-10-01",
+          "kind": "financing",
+          "summary": "BlackRock led a roughly $40 billion deal to acquire Aligned Data Centers, the developer behind the proposed Shippingport Project Phoenix campus.",
+          "source": "http://www.tmia.com/content/beaver-valley-becomes-data-center-target"
+        },
+        {
+          "date": "2025-12-05",
+          "kind": "filing",
+          "summary": "Aligned Data Centers filed a conditional-use application with Shippingport Borough for Project Phoenix on the former Bruce Mansfield power plant site.",
+          "source": "http://www.tmia.com/content/beaver-valley-becomes-data-center-target"
+        },
+        {
+          "date": "2025-12-15",
+          "kind": "hearing",
+          "summary": "Aligned held its first public information meeting in Shippingport to present Project Phoenix to residents; a company representative apologized for confusion surrounding the proposal.",
+          "source": "http://www.tmia.com/content/beaver-valley-becomes-data-center-target"
+        },
+        {
+          "date": "2026-01-28",
+          "kind": "vote",
+          "summary": "Shippingport Borough Council approved most of Aligned conditional-use permit for up to three data center buildings totaling roughly 2 million square feet plus an on-site natural gas power plant; only about four residents attended.",
+          "source": "https://community.triblive.com/news/3974611"
+        },
+        {
+          "date": "2026-02-05",
+          "kind": "announcement",
+          "summary": "Coverage detailed Aligned roughly $10 billion Shippingport Industrial Park campus plan on the ~660-acre former Bruce Mansfield site, with conditional use permits approved and the project in pre-construction planning.",
+          "source": "https://thejobwalk.com/p/aligned-data-centers-plans-10b-shippingport-data-center-campus-in-pennsylvania"
+        },
+        {
+          "date": "2026-02-08",
+          "kind": "coverage",
+          "summary": "Pittsburgh Post-Gazette reported Beaver Valley becoming a regional data-center target, noting Aligned natural gas plan alongside a separate Vistra-Meta power purchase agreement tied to the Beaver Valley nuclear plant.",
+          "source": "https://www.cbsnews.com/pittsburgh/news/ai-infrastructure-beaver-valley/"
+        },
+        {
+          "date": "2026-02-09",
+          "kind": "report",
+          "summary": "Detailed site-plan figures: 593 acres, three two-story buildings up to 59 feet tall (1.95 million sq ft combined), a 70-acre natural gas power-generation pad, and 250 parking spaces; six parcels still needed acquisition.",
+          "source": "https://bcbizpa.com/data-centers-beaver-county-cant-seem-to-get-enough-of-them/"
+        },
+        {
+          "date": "2026-02-09",
+          "kind": "permit",
+          "summary": "Aligned/Frontier applied for mass grading, NPDES, and stormwater permits plus variances for 59-ft building height, up to 75% woodland clearing, 65-dB operational noise limits, and round-the-clock construction noise.",
+          "source": "https://bcbizpa.com/data-centers-beaver-county-cant-seem-to-get-enough-of-them/"
+        },
+        {
+          "date": "2026-02-09",
+          "kind": "utility",
+          "summary": "Frontier Group plan to convert adjacent former Bruce Mansfield coal units to natural gas generation (up to 3.6 GW, ~$3.2 billion via EQT and National Fuel Gas) cited as the eventual power source for the Aligned campus.",
+          "source": "https://community.triblive.com/news/3974611"
+        },
+        {
+          "date": "2026-02-09",
+          "kind": "public-comment",
+          "summary": "Mixed local reaction: some welcomed jobs while Beaver County economic development president cautioned that blindly chasing data centers is not the way to go; residents cited property-value and mine-subsidence concerns.",
+          "source": "https://www.cbsnews.com/pittsburgh/news/ai-infrastructure-beaver-valley/"
+        },
+        {
+          "date": "2026-06-25",
+          "kind": "vote",
+          "summary": "Pennsylvania House voted 197-5 to pass HB 2198 repealing the state Computer Data Center Equipment sales-tax incentive program, projected to cost $188.4 million in FY2026-27 growing to $517 million by 2030.",
+          "source": "https://www.cityandstatepa.com/policy/2026/06/bipartisan-fashion-pa-lawmakers-vote-repeal-tax-incentives-data-centers/414437/"
+        },
+        {
+          "date": "2026-07-29",
+          "kind": "financing",
+          "summary": "Aligned Data Centers closed its purchase of 650.89 acres in Shippingport from Frontier Group for $223,150,865 to build its nearly 2-million-square-foot data center campus.",
+          "source": "https://beavercountyradio.com/news/align-data-centers-llc-closes-deal-to-build-data-center-campus-near-former-bruce-mansfield-power-plant-for-just-over-223-million/"
+        }
+      ]
     },
     {
       "id": "talen-montour-pa",
@@ -12642,7 +12745,80 @@
       "source": "https://www.dailyherald.com/20260716/news/mount-prospect-hires-outside-firm-to-handle-data-center-permitting/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2021-06-01",
+          "kind": "financing",
+          "summary": "CloudHQ acquired the 49.7-acre former United Airlines world headquarters campus in Mount Prospect, Illinois.",
+          "source": "https://baxtel.com/news/cloudhq-to-buy-united-airlines-mount-prospect-campus-for-mega-data-center-development"
+        },
+        {
+          "date": "2021-12-01",
+          "kind": "filing",
+          "summary": "Mount Prospect Village Board held a first reading of an ordinance granting a preliminary plat of subdivision and conditional use for CloudHQ proposed data center campus.",
+          "source": "https://www.journal-topics.com/articles/united-airlines-selling-former-mount-prospect-campus-to-cloud-hq/"
+        },
+        {
+          "date": "2021-12-10",
+          "kind": "announcement",
+          "summary": "Daily Herald reported details of CloudHQ proposed $2.5 billion redevelopment of the former United Airlines headquarters site into a data center campus.",
+          "source": "https://www.dailyherald.com/20211210/business/what-cloudhqs-2-5-billion-redevelopment-of-former-united-headquarters-would-mean-for-mount-prospec/"
+        },
+        {
+          "date": "2022-06-01",
+          "kind": "rezoning",
+          "summary": "Mount Prospect Village Board held a first reading of an ordinance granting a conditional use for a final planned unit development and final plat for the three-building CloudHQ data center campus.",
+          "source": "https://www.journal-topics.com/articles/data-center-development-may-mean-new-outdoor-recreation-area-for-mount-prospects-south-side/"
+        },
+        {
+          "date": "2022-08-23",
+          "kind": "construction",
+          "summary": "CloudHQ and ComEd broke ground on the $2.5 billion, 1.5 million-square-foot hyperscale data center campus on the former United Airlines site, with three buildings (each over 80MW) and a new ComEd substation.",
+          "source": "https://www.dailyherald.com/business/20220823/25-billion-cloudhq-data-center-brings-data-revolution-to-mount-prospect"
+        },
+        {
+          "date": "2022-08-23",
+          "kind": "coverage",
+          "summary": "ComEd and CloudHQ jointly announced the groundbreaking, citing a first-of-its-kind onsite substation, projected 1,000+ construction jobs per building, and first building completion targeted for 2024.",
+          "source": "https://www.datacenterfrontier.com/featured/article/11427128/cloudhq-breaks-ground-on-25-billion-chicago-data-center-campus"
+        },
+        {
+          "date": "2022-11-15",
+          "kind": "incentive",
+          "summary": "Mount Prospect Village Board approved an inducement resolution supporting CloudHQ application for a Cook County Class 6b property tax incentive, assessing the property at 10% of market value for the first 10 years.",
+          "source": "https://www.mountprospect.org/services/community-information-and-fact-check-portal/cloud-hq-data-center"
+        },
+        {
+          "date": "2024-12-16",
+          "kind": "utility",
+          "summary": "Village Manager said the ComEd substation needed to power the CloudHQ site was expected complete by June; the village board also considered a $60,000 lobbying contract amid lingering state legislative hurdles.",
+          "source": "https://www.dailyherald.com/20241216/news/mount-prospect-data-center-waiting-on-comed-substation-possible-legal-issues/"
+        },
+        {
+          "date": "2025-10-28",
+          "kind": "rezoning",
+          "summary": "Mount Prospect Village Board adopted an ordinance amending the conditional use, allowing CloudHQ to revise from three two-story buildings to two three-story buildings, a second substation, and mechanical yard; first building retargeted to 2027.",
+          "source": "https://www.mountprospect.org/services/community-information-and-fact-check-portal/cloud-hq-data-center"
+        },
+        {
+          "date": "2025-11-17",
+          "kind": "incentive",
+          "summary": "Mount Prospect trustees prepared to approve $3 million in CloudHQ developer contributions toward public improvements: multiuse path, street lighting, and Park District splash pad.",
+          "source": "https://www.dailyherald.com/20251117/news/mount-prospect-data-center-developer-prepared-to-donate-3-million-for-recreation-street-upgrades/"
+        },
+        {
+          "date": "2025-11-18",
+          "kind": "coverage",
+          "summary": "The Real Deal reported on CloudHQ $3 million community-benefits package tied to the Mount Prospect megaproject.",
+          "source": "https://therealdeal.com/chicago/2025/11/18/cloud-hq-to-spend-3-million-on-extras-in-chicago-area-deal/"
+        },
+        {
+          "date": "2026-07-16",
+          "kind": "permit",
+          "summary": "Mount Prospect hired outside firm HR Green at up to $22,500 to handle three CloudHQ permit reviews, citing roughly 3,700 sheets of construction drawings and 1,500+ pages of structural calculations.",
+          "source": "https://www.dailyherald.com/20260716/news/mount-prospect-hires-outside-firm-to-handle-data-center-permitting/"
+        }
+      ]
     },
     {
       "id": "vantage-nv1-storey-county-nv",
@@ -13653,7 +13829,86 @@
       "source": "https://www.deseret.com/u-s-world/2026/07/01/valar-atomics-nvidia-milestone/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-02-20",
+          "kind": "announcement",
+          "summary": "Valar Atomics emerged from stealth with a $19 million seed round led by Riot Ventures and announced plans to build small modular nuclear reactors, initially with a pilot site agreement in the Philippines.",
+          "source": "https://techcrunch.com/2025/02/20/valar-atomics-comes-out-of-stealth-with-19m-and-a-pilot-reactor-site"
+        },
+        {
+          "date": "2025-06-18",
+          "kind": "announcement",
+          "summary": "U.S. Department of Energy issued a Request for Application for its Reactor Pilot Program, an expedited authorization pathway for advanced test reactors with a goal of at least three reactors reaching criticality by July 4, 2026.",
+          "source": "https://www.world-nuclear-news.org/articles/valar-atomics-achieves-criticality-in-doe-reactor-pilot-program"
+        },
+        {
+          "date": "2025-07-08",
+          "kind": "public-comment",
+          "summary": "Emery County Commission hosted a town hall where Valar Atomics representatives answered citizen questions and safety concerns about the proposed Ward 250 test reactor at the San Rafael Energy Lab.",
+          "source": "https://www.castlecountryradio.com/2025/07/14/valar-atomics-hears-questions-and-concerns-from-emery-county-citizens-in-town-hall-hearing/"
+        },
+        {
+          "date": "2025-08-01",
+          "kind": "announcement",
+          "summary": "DOE announced Valar Atomics as one of 10 companies selected for its Reactor Pilot Program, authorizing construction and testing of the Ward 250 reactor at Utah San Rafael Energy Lab in Orangeville.",
+          "source": "https://partnershipforglobalsecurity.org/status-of-the-doe-reactor-pilot-project/"
+        },
+        {
+          "date": "2025-09-17",
+          "kind": "construction",
+          "summary": "Valar Atomics and the Utah San Rafael Energy Lab broke ground on the Ward 250 test reactor site in Orangeville, Emery County.",
+          "source": "https://www.utahbusiness.com/press-releases/2025/09/17/valar-atomics-breaks-ground-test-reactor-utah-san-rafael-energy-lab-oed/"
+        },
+        {
+          "date": "2025-11-13",
+          "kind": "financing",
+          "summary": "Valar Atomics raised $130 million in Series A funding led by Snowpoint, Day One, and Dream Ventures, bringing total funding to over $150 million.",
+          "source": "https://www.ans.org/news/2025-11-13/article-7540/new-financing-round-benefits-valar/"
+        },
+        {
+          "date": "2026-02-01",
+          "kind": "permit",
+          "summary": "Valar Atomics received preliminary Documented Safety Analysis (DSA) approval under the DOE Reactor Pilot Program for the Ward 250 test reactor.",
+          "source": "https://www.powermag.com/valar-atomics-ward-250-becomes-second-reactor-to-go-critical-under-doe-pilot-program/"
+        },
+        {
+          "date": "2026-02-15",
+          "kind": "construction",
+          "summary": "The Ward 250 reactor core was transported via three U.S. Air Force C-17 aircraft from March Air Reserve Base to Hill Air Force Base, then trucked to the Utah San Rafael Energy Lab, targeting operation by July 4, 2026.",
+          "source": "https://www.moabtimes.com/articles/u-s-military-flew-a-small-nuclear-reactor-to-utah/"
+        },
+        {
+          "date": "2026-02-19",
+          "kind": "incentive",
+          "summary": "Emery County Commission approved a letter of support for Valar Atomics as the Ward 250 reactor arrived in the Castle Country region, citing job and tax base benefits.",
+          "source": "https://www.castlecountryradio.com/2026/02/19/emery-county-commission-approves-letter-of-support-for-valar-atomics-as-ward250-reactor-arrives-in-the-castle-country/"
+        },
+        {
+          "date": "2026-04-23",
+          "kind": "permit",
+          "summary": "Valar Atomics received final Documented Safety Analysis (DSA) approval, clearing the way for power ascension testing of the Ward 250 reactor.",
+          "source": "https://www.powermag.com/valar-atomics-ward-250-becomes-second-reactor-to-go-critical-under-doe-pilot-program/"
+        },
+        {
+          "date": "2026-06-18",
+          "kind": "operational",
+          "summary": "Valar Atomics Ward 250 high-temperature gas reactor achieved zero-power criticality at the San Rafael Energy Lab, becoming the second reactor to go critical under the DOE Reactor Pilot Program and the first DOE-authorized reactor built entirely outside a national laboratory.",
+          "source": "https://www.neimagazine.com/news/valars-ward-250-achieves-criticality/"
+        },
+        {
+          "date": "2026-07-01",
+          "kind": "announcement",
+          "summary": "Valar Atomics and Nvidia announced a partnership to explore a 30-megawatt, nearly waterless AI data center in Orangeville powered by roughly six Ward-class reactors, using Nvidia DSX liquid-cooling technology; the Ward 250 also powered an Nvidia DGX Spark AI chip, a first for U.S. nuclear power.",
+          "source": "https://www.deseret.com/u-s-world/2026/07/01/valar-atomics-nvidia-milestone/"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "financing",
+          "summary": "Valar Atomics raised a $1 billion Series B round led by Sequoia Capital (plus a $200 million credit facility), tripling its valuation to $6 billion, to fund mass production of factory-built nuclear reactors for AI data centers.",
+          "source": "https://www.techtimes.com/articles/322886/20260803/valar-atomics-raises-1b-build-factory-nuclear-after-powering-nvidias-ai-chip.htm"
+        }
+      ]
     },
     {
       "id": "drox-rural-hall-nc",
@@ -14713,7 +14968,110 @@
       "source": "https://www.electricchoice.com/datacenters/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-01-21",
+          "kind": "announcement",
+          "summary": "OpenAI, SoftBank, and Oracle announce the $500 billion Stargate joint venture to build massive U.S. AI data center infrastructure.",
+          "source": "https://www.datacenterfrontier.com/machine-learning/article/55319132/scaling-stargate-openais-five-new-us-data-centers-push-toward-10-gw-ai-infrastructure"
+        },
+        {
+          "date": "2025-02-01",
+          "kind": "announcement",
+          "summary": "New Mexico Governor Michelle Lujan Grisham and BorderPlex Digital Assets Chairman Lanham Napier jointly announce plans for a large digital infrastructure campus in Santa Teresa, Dona Ana County.",
+          "source": "https://www.abqjournal.com/business/doa-ana-countys-project-jupiter-joins-500-billion-stargate-initiative-led-by-openai-oracle/493927"
+        },
+        {
+          "date": "2025-05-01",
+          "kind": "utility",
+          "summary": "Dona Ana Board of County Commissioners votes to terminate the joint powers agreement that created the Camino Real Regional Utility Authority, affecting local water/utility governance ahead of the data center buildout.",
+          "source": "https://truthout.org/articles/secretive-new-mexico-data-center-plan-races-forward-despite-community-pushback/"
+        },
+        {
+          "date": "2025-09-01",
+          "kind": "construction",
+          "summary": "Construction begins on the Project Jupiter data center campus along NM-136 near the Santa Teresa Port of Entry in Dona Ana County.",
+          "source": "https://www.forbes.com/sites/ianpalmer/2026/01/08/principals-developers-plan-hyperscale-data-center-in-new-mexico/"
+        },
+        {
+          "date": "2025-09-19",
+          "kind": "vote",
+          "summary": "Dona Ana County commissioners approve an unprecedented $165 billion industrial revenue bond to help finance Project Jupiter; the vote draws protests outside the County Government Center in Las Cruces.",
+          "source": "https://truthout.org/articles/secretive-new-mexico-data-center-plan-races-forward-despite-community-pushback/"
+        },
+        {
+          "date": "2025-09-23",
+          "kind": "announcement",
+          "summary": "Project Jupiter is officially named as one of five sites in the $500 billion Stargate Project, the OpenAI/Oracle/SoftBank AI infrastructure initiative.",
+          "source": "https://www.abqjournal.com/business/doa-ana-countys-project-jupiter-joins-500-billion-stargate-initiative-led-by-openai-oracle/493927"
+        },
+        {
+          "date": "2025-10-31",
+          "kind": "lawsuit",
+          "summary": "New Mexico Environmental Law Center files a lawsuit on behalf of residents challenging the Dona Ana County commissioners funding ordinance approvals for Project Jupiter.",
+          "source": "https://truthout.org/articles/secretive-new-mexico-data-center-plan-races-forward-despite-community-pushback/"
+        },
+        {
+          "date": "2025-12-01",
+          "kind": "permit",
+          "summary": "Air quality permit applications for Project Jupiter are filed with the New Mexico Environment Department, showing potential emissions of up to 14 million tons of carbon dioxide annually.",
+          "source": "https://truthout.org/articles/secretive-new-mexico-data-center-plan-races-forward-despite-community-pushback/"
+        },
+        {
+          "date": "2025-12-20",
+          "kind": "report",
+          "summary": "BorderPlex Digital Assets presents renewable energy plans targeting 500 MW of renewables by 2028 and 1,000 MW by 2032 to offset Project Jupiter power draw.",
+          "source": "https://www.forbes.com/sites/ianpalmer/2026/01/08/principals-developers-plan-hyperscale-data-center-in-new-mexico/"
+        },
+        {
+          "date": "2026-01-08",
+          "kind": "coverage",
+          "summary": "Forbes profiles the developers and scale of Project Jupiter, detailing plans for four data center buildings, microgrids, and phased power buildout from 700-900 MW toward 4 GW.",
+          "source": "https://www.forbes.com/sites/ianpalmer/2026/01/08/principals-developers-plan-hyperscale-data-center-in-new-mexico/"
+        },
+        {
+          "date": "2026-04-27",
+          "kind": "environmental",
+          "summary": "Oracle, BorderPlex, and Bloom Energy announce Project Jupiter will switch from natural gas turbines to a 2.45 GW Bloom Energy solid-oxide fuel cell microgrid, cutting NOx emissions roughly 92% and using negligible water, after community pushback.",
+          "source": "https://www.oracle.com/news/announcement/oracle-borderplex-and-bloom-energy-to-power-project-jupiter-with-fuel-cell-technology-2026-04-27/"
+        },
+        {
+          "date": "2026-07-16",
+          "kind": "hearing",
+          "summary": "New Mexico Environment Department schedules an October 19 public hearing on Project Jupiter air quality permit application.",
+          "source": "https://sourcenm.com/2026/07/16/nm-environment-department-schedules-october-hearing-for-project-jupiter-air-quality-permit/"
+        },
+        {
+          "date": "2026-07-23",
+          "kind": "coverage",
+          "summary": "Food and Water Watch publishes an analysis arguing Project Jupiter exemplifies Big Tech playbook for pushing through data centers with limited transparency.",
+          "source": "https://www.foodandwaterwatch.org/2026/07/23/project-jupiter-data-center-new-mexico/"
+        },
+        {
+          "date": "2026-07-28",
+          "kind": "protest",
+          "summary": "Dona Ana County commissioners meeting on Project Jupiter turns disruptive: three protesters are arrested/ejected, Oracle VP pledges 7,000 peak construction jobs and no public drinking water use, and state Rep. Rubio says public comment was suppressed.",
+          "source": "https://www.santafenewmexican.com/news/local_news/demonstrators-arrested-jobs-promised-at-rowdy-project-jupiter-meeting/article_1103bf1d-1b21-4f98-b868-c7cb4ab5e795.html"
+        },
+        {
+          "date": "2026-07-31",
+          "kind": "hearing",
+          "summary": "Project Jupiter air quality permit public hearing is rescheduled from October to September.",
+          "source": "https://sourcenm.com/2026/07/31/hearing-for-project-jupiter-data-centers-air-quality-permit-application-rescheduled-to-september/"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "hearing",
+          "summary": "New Mexico Environmental Law Center reports the Project Jupiter air quality permit hearing date was moved again amid disputes over scheduling.",
+          "source": "https://nmelc.org/2026/08/03/jupiter-air-quality-permit-hearing-moved-up/"
+        },
+        {
+          "date": "2026-08-19",
+          "kind": "lawsuit",
+          "summary": "Center for Biological Diversity asks the New Mexico Supreme Court to pause Project Jupiter air quality permit hearing, disputing the rescheduled hearing date.",
+          "source": "https://sourcenm.com/2026/08/19/environmental-group-asks-nm-supreme-court-to-pause-project-jupiters-air-quality-permit-hearing/"
+        }
+      ]
     },
     {
       "id": "pa-data-center-partners-cumberland-pa",
@@ -14843,7 +15201,92 @@
       "source": "https://www.electricchoice.com/datacenters/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-11-01",
+          "kind": "filing",
+          "summary": "Groot LLC, a Google-linked entity, paid $16.5 million to buy roughly 1,117 acres of agricultural land on Bollinger Road in West Memphis, Crittenden County.",
+          "source": "https://www.arkansasbusiness.com/article/google-data-center-west-memphis/"
+        },
+        {
+          "date": "2025-05-15",
+          "kind": "vote",
+          "summary": "West Memphis City Council unanimously approved a MOU, development agreement, and PILOT incentive package with Groot LLC for a project valued at up to $10 billion, with potential for up to $50 billion in personal-property tax abatements over 30 years.",
+          "source": "https://www.arkansasonline.com/news/2025/may/22/data-center-campus-planned-for-west-memphis-after/"
+        },
+        {
+          "date": "2025-09-01",
+          "kind": "filing",
+          "summary": "Entergy Arkansas and Google jointly sought Arkansas Public Service Commission approval of a special electricity rate contract to power the West Memphis data center.",
+          "source": "https://talkbusiness.net/2025/09/entergy-arkansas-google-seek-psc-approval-for-west-memphis-data-center-agreement/"
+        },
+        {
+          "date": "2025-09-05",
+          "kind": "coverage",
+          "summary": "Reporting confirmed Google (via Groot LLC) as the company behind the planned $10 billion, five-building data center campus on 1,178 acres south of Bollinger Road, dubbed Project Pyramid.",
+          "source": "https://www.arkansasonline.com/news/2025/sep/05/google-behind-10b-data-center-in-west-memphis/"
+        },
+        {
+          "date": "2025-10-02",
+          "kind": "announcement",
+          "summary": "Google, Governor Sarah Sanders, and state/local officials formally announced a $4 billion AI/cloud data center project in West Memphis — Google first data center in Arkansas — with a $25 million Energy Impact Fund for low-income households in Crittenden County.",
+          "source": "https://talkbusiness.net/2025/10/google-announces-plan-to-build-4-billion-data-center-in-west-memphis/"
+        },
+        {
+          "date": "2025-10-02",
+          "kind": "utility",
+          "summary": "Entergy Arkansas announced it would power the Google project with a 600 MW Cypress Solar project and 350 MW of battery storage, with Google saying the deal would deliver over $1.1 billion in net benefits to Entergy customers.",
+          "source": "https://www.entergy.com/news/entergy-arkansas-powers-googles-4b-investment-in-the-state"
+        },
+        {
+          "date": "2025-11-17",
+          "kind": "hearing",
+          "summary": "Arkansas PSC held a hearing on the special rate contract between Entergy and Google; the public was asked to leave during portions covering confidential contract details, drawing transparency criticism.",
+          "source": "https://www.arkansasonline.com/news/2025/nov/17/special-rate-contract-between-google-and-entergy/"
+        },
+        {
+          "date": "2025-12-05",
+          "kind": "ruling",
+          "summary": "Arkansas PSC approved Entergy special rate contract with Google but denied the utility requested ratemaking treatment and deferred a decision on investment tax credit treatment for the Cypress Solar facility.",
+          "source": "https://www.nwaonline.com/news/2025/dec/05/psc-approves-google-entergy-power-contract/"
+        },
+        {
+          "date": "2025-12-12",
+          "kind": "coverage",
+          "summary": "Arkansas Advocate reported state officials were largely declining to scrutinize fiscal and environmental tradeoffs of the data center boom out of fear of losing investment to other states.",
+          "source": "https://arkansasadvocate.com/2025/12/12/fear-of-missing-out-on-data-center-boom-leads-arkansas-officials-to-ignore-hard-questions/"
+        },
+        {
+          "date": "2026-01-01",
+          "kind": "ruling",
+          "summary": "Arkansas PSC issued a follow-up order reversing itself to allow investment tax credits from the Cypress Solar facility to be used in pricing under the Google contract.",
+          "source": "https://arkansasadvocate.com/2025/12/12/fear-of-missing-out-on-data-center-boom-leads-arkansas-officials-to-ignore-hard-questions/"
+        },
+        {
+          "date": "2026-02-26",
+          "kind": "coverage",
+          "summary": "Google began actively hiring for electrical engineer and facilities technician roles at the West Memphis data center, which remained under construction with an expected 18-24 month build timeline.",
+          "source": "https://www.actionnews5.com/2026/02/26/google-hiring-new-west-memphis-data-center/"
+        },
+        {
+          "date": "2026-05-03",
+          "kind": "coverage",
+          "summary": "Reporting revealed Google and Entergy were keeping the full terms of their energy rate contract sealed/confidential, raising transparency concerns among ratepayer advocates.",
+          "source": "https://www.arkansasonline.com/news/2026/may/03/google-entergy-keeping-energy-rate-contract/"
+        },
+        {
+          "date": "2026-06-04",
+          "kind": "financing",
+          "summary": "Reporting detailed that bond issuances tied to the West Memphis Google data center PILOT financing could total as much as $60 billion in permanent financing authority over the deal 30-year term.",
+          "source": "https://www.arkansasonline.com/news/2026/jun/04/google-data-center-poises-west-memphis-for-boom/"
+        },
+        {
+          "date": "2026-07-29",
+          "kind": "public-comment",
+          "summary": "At an Arkansas PSC hearing on Entergy proposed residential rate increase, speakers including the Little Rock NAACP chapter head cited the sealed Google contract as evidence of a lack of transparency.",
+          "source": "https://arktimes.com/arkansas-blog/2026/07/29/entergy-gets-earful-about-rate-increase-and-secret-dealings-with-google-data-center"
+        }
+      ]
     },
     {
       "id": "applied-digital-harwood-nd",
