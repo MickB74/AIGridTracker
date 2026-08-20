@@ -13554,7 +13554,116 @@
       "source": "https://www.sdpb.org/business-economics/2025-08-15/la-based-company-looking-to-build-data-center-in-sioux-falls",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2023-12-01",
+          "kind": "financing",
+          "summary": "Gemini Data Center SD LLC acquired roughly 164 acres from Xcel Energy adjacent to Xcel Split Rock Substation in northeast Sioux Falls, laying groundwork for the proposed 500 MW Sioux Falls Technology Park.",
+          "source": "https://www.datacenterdynamics.com/en/news/164-acre-data-center-could-come-to-sioux-falls-south-dakota/"
+        },
+        {
+          "date": "2025-08-06",
+          "kind": "vote",
+          "summary": "Sioux Falls City Council approved reclassifying the property from Tier III to Tier I growth-priority area, an unusual leapfrogging of the normal phased growth sequence.",
+          "source": "https://siouxfalls.business/hyperscale-data-center-seeking-city-approvals-to-build-northeast-of-sioux-falls/"
+        },
+        {
+          "date": "2025-08-15",
+          "kind": "announcement",
+          "summary": "SDPB reported LA-based Gemini Capital through Gemini Data Center SD LLC is seeking to build a hyperscale data center on land bought from Xcel Energy; project representative Kyle Peters confirmed an internal 500 MW capacity target contingent on state tax incentives.",
+          "source": "https://www.sdpb.org/business-economics/2025-08-15/la-based-company-looking-to-build-data-center-in-sioux-falls"
+        },
+        {
+          "date": "2025-10-07",
+          "kind": "vote",
+          "summary": "City Council voted 7-0 to annex approximately 164 acres east of Veterans Parkway for the Gemini project; city filed a notice of claim making Gemini responsible for future infrastructure costs if it walks away.",
+          "source": "https://citizenportal.ai/articles/7381265/south-dakota/minnehaha-county/sioux-falls/sioux-falls-annexes-164-acre-site-for-proposed-data-center"
+        },
+        {
+          "date": "2026-01-06",
+          "kind": "hearing",
+          "summary": "City Council held a nearly six-hour public hearing on the rezoning with overflow attendance; more than 50 speakers, mostly opposed, raised concerns about energy consumption, water use, electronic waste, and lack of community benefit.",
+          "source": "https://siouxfalls.business/hyperscale-data-center-gains-rezoning-vote-after-hours-of-opposing-testimony/"
+        },
+        {
+          "date": "2026-01-06",
+          "kind": "rezoning",
+          "summary": "Council voted 7-0 to rezone roughly 145.6 acres from agricultural to light industrial with conditions: 200-ft setback, ~17 acres conservation, closed-loop cooling, domestic-only water use, city noise standards.",
+          "source": "https://www.sdpb.org/politics/2026-01-07/sioux-falls-city-council-approves-rezoning-of-proposed-data-center-land"
+        },
+        {
+          "date": "2026-01-08",
+          "kind": "protest",
+          "summary": "Following the rezoning vote, opponents shouted expletives and criticism at the dais, prompting a five-minute recess; local coverage captured the outrage.",
+          "source": "https://www.dakotanewsnow.com/2026/01/08/out-order-attendees-react-city-council-vote-data-center/"
+        },
+        {
+          "date": "2026-01-10",
+          "kind": "public-comment",
+          "summary": "Grassroots group Let Sioux Falls Vote launched a petition drive seeking to force a citywide referendum on the rezoning, needing 6,704 valid signatures by January 29.",
+          "source": "https://dakotafreepress.com/2026/01/10/sioux-falls-petitioners-seek-referendum-on-rezoning-for-data-center/"
+        },
+        {
+          "date": "2026-01-26",
+          "kind": "coverage",
+          "summary": "Reporting confirmed Gemini completed its interconnection application and system impact study with Xcel Energy and is funding a facility study; a formal power agreement (subject to PUC review) still to be negotiated.",
+          "source": "https://siouxfalls.business/sioux-falls-data-center-developers-detail-next-steps/"
+        },
+        {
+          "date": "2026-01-29",
+          "kind": "filing",
+          "summary": "Let Sioux Falls Vote submitted 378 petition sheets to the city clerk after more than 100 volunteers canvassed for 20 days in sub-zero temperatures.",
+          "source": "https://www.yahoo.com/news/articles/did-let-sioux-falls-vote-233748835.html"
+        },
+        {
+          "date": "2026-01-30",
+          "kind": "ruling",
+          "summary": "City announced the referendum petition contained only 5,012 valid signatures, about 1,700 short of the 6,704 required; the petition was rejected and the rezoning remained in effect.",
+          "source": "https://www.keloland.com/news/local-news/data-center-re-zone-petition-fails-in-sioux-falls/"
+        },
+        {
+          "date": "2026-02-04",
+          "kind": "vote",
+          "summary": "SD House State Affairs Committee voted 9-3 to kill HB 1005, which would have granted data centers a 50-year sales-and-use tax exemption; an amendment offering a tiered 10-35 year exemption also failed.",
+          "source": "https://www.sdpb.org/politics/2026-02-04/house-committee-says-no-to-sales-tax-exemptions-for-data-centers"
+        },
+        {
+          "date": "2026-02-18",
+          "kind": "vote",
+          "summary": "SD Senate committee advanced SB 135, the Data Center Bill of Rights for Citizens, requiring large data centers to cover costs tied to meeting their power demands including exit costs if a project falls through.",
+          "source": "https://www.sdpb.org/politics/2026-02-18/senate-committee-approves-bill-keeping-door-open-on-data-centers"
+        },
+        {
+          "date": "2026-02-19",
+          "kind": "lawsuit",
+          "summary": "A1 Development Solutions (Gemini local consulting firm) sued its own project representative Kyle Peters (Gov. Noem son-in-law) alleging he covertly diverted the data-center client and others while still under contract.",
+          "source": "https://www.siouxfallslive.com/news/south-dakota/company-accuses-kristi-noems-son-in-law-of-stealing-data-center-client-among-others"
+        },
+        {
+          "date": "2026-02-20",
+          "kind": "vote",
+          "summary": "SD Senate passed SB 135 34-0 after striking language that would have banned state/local tax exemptions for data centers.",
+          "source": "https://southdakotasearchlight.com/2026/02/20/data-center-regulation-bill-passes-state-senate-sans-tax-incentive-ban/"
+        },
+        {
+          "date": "2026-03-02",
+          "kind": "coverage",
+          "summary": "Gemini launched a public website for the Sioux Falls Technology Park describing Gemini Family Office role in land ownership, planning, permitting, and coordination.",
+          "source": "https://www.keloland.com/keloland-com-original/gemini-launches-website-for-proposed-sf-data-center/"
+        },
+        {
+          "date": "2026-03-05",
+          "kind": "vote",
+          "summary": "SD House passed SB 135 60-7 with amendment applying the law to data centers with 10 MW or greater peak electrical use, requiring those projects to cover power-demand costs.",
+          "source": "https://southdakotasearchlight.com/2026/03/05/data-center-regulation-bill-passes-south-dakota-house/"
+        },
+        {
+          "date": "2026-03-30",
+          "kind": "incentive",
+          "summary": "Governor signed SB 135, the Data Center Bill of Rights, into law — statewide cost-protection rules for large data center power demands (10 MW+) applicable to the Gemini project eventual Xcel service agreement.",
+          "source": "https://legiscan.com/SD/bill/SB135/2026"
+        }
+      ]
     },
     {
       "id": "microsoft-cheyenne-expansion",
@@ -15207,7 +15316,134 @@
       "source": "https://www.electricchoice.com/datacenters/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-10-01",
+          "kind": "filing",
+          "summary": "Memorandums of purchase and sale filed for two tracts totaling over 810 acres for what became the AWS/STACK campuses — one at Resilient Technology Park in west Shreveport, the other along State Line Road near Blanchard.",
+          "source": "https://www.shreveportbossieradvocate.com/business/caddo-parish-data-center-close-to-announcement/article_2b119d88-7a64-4844-bc0f-01899e534f75.html"
+        },
+        {
+          "date": "2025-12-01",
+          "kind": "incentive",
+          "summary": "Caddo Parish Commission voted in support of a PILOT incentive package to help attract the AWS data center campus.",
+          "source": "https://www.1012industryreport.com/technology/ai/caddo-parish-aims-to-tap-the-brakes-on-data-center-tax-incentives/"
+        },
+        {
+          "date": "2025-12-03",
+          "kind": "denial",
+          "summary": "Shreveport Metropolitan Planning Commission denied the special use permit for the then-unnamed data center project at the Resilient Technology Park campus.",
+          "source": "https://www.ktbs.com/news/city-council-votes-yes-to-shreveport-data-center/article_f75ee252-d0b1-4a8e-988e-40efbd6d4bee.html"
+        },
+        {
+          "date": "2025-12-18",
+          "kind": "vote",
+          "summary": "Shreveport City Council voted 7-0 to overturn the Planning Commission denial and approve the special use permit for the west Shreveport data center.",
+          "source": "https://www.ktbs.com/news/city-council-votes-yes-to-shreveport-data-center/article_f75ee252-d0b1-4a8e-988e-40efbd6d4bee.html"
+        },
+        {
+          "date": "2026-01-01",
+          "kind": "lawsuit",
+          "summary": "Three plaintiffs filed suit in Caddo Parish District Court seeking judicial review of the City Council decision overturning the Planning Commission denial, putting the west Shreveport project in legal limbo for roughly 90 days.",
+          "source": "https://www.thecentersquare.com/louisiana/article_e6380178-359c-493e-93ee-b3dac084d94b.html"
+        },
+        {
+          "date": "2026-02-23",
+          "kind": "announcement",
+          "summary": "Gov. Landry and Amazon publicly announced a $12 billion, multi-site AWS data center buildout across Caddo and Bossier Parishes developed with STACK Infrastructure; expected to create 540 direct jobs and support 1,710 additional FTE positions.",
+          "source": "https://www.opportunitylouisiana.gov/news/amazon-selects-louisiana-for-12-billion-data-center-campuses-in-major-u-s-expansion"
+        },
+        {
+          "date": "2026-02-23",
+          "kind": "incentive",
+          "summary": "Amazon detailed state incentives including LED FastStart workforce training, High Impact Jobs Program, Data Center Sales Tax Exemption, plus commitments to pay 100% of its own electricity costs and invest roughly $400 million in public water infrastructure.",
+          "source": "https://lailluminator.com/2026/02/23/amazon-data-center/"
+        },
+        {
+          "date": "2026-02-23",
+          "kind": "utility",
+          "summary": "AEP/SWEPCO stated that no costs associated with serving the new Amazon data centers would be passed along to existing utility ratepayers.",
+          "source": "https://lailluminator.com/2026/02/23/amazon-data-center/"
+        },
+        {
+          "date": "2026-02-24",
+          "kind": "coverage",
+          "summary": "Local coverage confirmed the specific campus locations spanning Bossier and Caddo Parishes, including the Resilient Technology Park and Stateline Road sites.",
+          "source": "https://www.ksla.com/2026/02/24/campuses-newly-announced-amazon-data-center-spanning-bossier-caddo-parishes-confirmed/"
+        },
+        {
+          "date": "2026-02-25",
+          "kind": "public-comment",
+          "summary": "Shreveport residents raised concerns at public meetings over the Amazon data center impact on utilities, water supply and the environment, including questions about roughly 7.5 million gallons of water per day.",
+          "source": "https://www.ksla.com/2026/02/25/shreveport-residents-raise-concerns-over-amazon-web-services-data-center-project/"
+        },
+        {
+          "date": "2026-03-01",
+          "kind": "protest",
+          "summary": "Community organizers held a town hall The Truth About Data Centers drawing nearly 100 attendees opposed to the project over environmental impact, infrastructure strain and lack of oversight.",
+          "source": "https://www.westcentralsbest.com/news/state/nearly-100-attend-town-hall-opposing-amazon-data-center/article_12f00ba2-a3be-524e-a1cc-d3dff665ab0f.html"
+        },
+        {
+          "date": "2026-03-18",
+          "kind": "hearing",
+          "summary": "Bossier Parish Police Jury held a two-hour-plus public hearing on the final property allocation for the $6 billion Bossier campus; residents pressed officials on water usage, contamination risk, noise, and NDA use during site-selection.",
+          "source": "https://www.shreveportbossieradvocate.com/news/questions-fly-details-illuminated-about-amazon-data-center-in-bossier-at-public-hearing/article_8d39be3d-cdb5-4fba-8280-374e77a50dba.html"
+        },
+        {
+          "date": "2026-03-19",
+          "kind": "vote",
+          "summary": "Bossier Parish Police Jury formally backed the Amazon data center project, approving the property allocation.",
+          "source": "https://www.ktbs.com/community/bossier-parish-police-jury-backs-amazon-data-center/article_e75c30f2-c9c7-44f3-a57c-743ced91d79e.html"
+        },
+        {
+          "date": "2026-04-20",
+          "kind": "ruling",
+          "summary": "Judge Ramon Lafitte dismissed the lawsuit challenging the City Council approval of the special use permit for the Resilient Technology Park campus, clearing the way for construction.",
+          "source": "https://www.thecentersquare.com/louisiana/article_e6380178-359c-493e-93ee-b3dac084d94b.html"
+        },
+        {
+          "date": "2026-07-13",
+          "kind": "report",
+          "summary": "Reporting highlighted that Caddo Parish has no comprehensive land-use/zoning blueprint for unincorporated areas, meaning the parish cannot enforce typical land-use regulations on data center development.",
+          "source": "https://www.settletalk.com/settle-talk-blog/2026/7/13/data-center-highlights-caddo-parish-zoning-limits"
+        },
+        {
+          "date": "2026-07-30",
+          "kind": "public-comment",
+          "summary": "Amazon and STACK held informational briefings for Bossier and Shreveport officials including public safety representatives.",
+          "source": "https://www.settletalk.com/settle-talk-blog/2026/7/30/amazonstack-hold-briefings-in-bossier-and-shreveport-this-week"
+        },
+        {
+          "date": "2026-08-12",
+          "kind": "coverage",
+          "summary": "Reporting detailed a proposal to freeze new data center tax breaks in Caddo Parish while officials study long-term fiscal and infrastructure effects.",
+          "source": "https://www.settletalk.com/settle-talk-blog/2026/8/12/caddo-parish-to-consider-temporary-freeze-on-tax-breaks-for-data-centers"
+        },
+        {
+          "date": "2026-08-17",
+          "kind": "moratorium",
+          "summary": "Commissioner John-Paul Young introduced Resolution 53 proposing a two-year moratorium on new data center developments, expansions, and tax incentive agreements in unincorporated Caddo Parish; would not affect the AWS campus already under construction.",
+          "source": "https://www.ksla.com/2026/08/18/caddo-parish-commissioner-seeks-moratorium-data-center-tax-incentives/"
+        },
+        {
+          "date": "2026-08-18",
+          "kind": "hearing",
+          "summary": "At a Caddo Parish Commission work session, commissioners clashed over data center oversight resolutions; an attempt to fast-track failed 8-3 and commissioners voted 11-0 to refer both measures to committee. Parish attorney warned the proposed moratorium cannot legally be enacted by resolution.",
+          "source": "https://www.ksla.com/2026/08/18/caddo-parish-commissioner-seeks-moratorium-data-center-tax-incentives/"
+        },
+        {
+          "date": "2026-08-18",
+          "kind": "announcement",
+          "summary": "AWS announced a third data center campus for Shreveport/Resilient Technology Park, a $6 billion addition bringing total NW Louisiana investment to $18 billion; adds 210 direct jobs (up to 750 across all campuses) plus up to $400M in public water infrastructure.",
+          "source": "https://www.aboutamazon.com/news/company-news/amazon-data-center-louisiana-new-jobs"
+        },
+        {
+          "date": "2026-08-18",
+          "kind": "coverage",
+          "summary": "Shreveport civic and business leaders characterized the additional $6 billion Amazon investment as a milestone for the region.",
+          "source": "https://www.ksla.com/2026/08/18/shreveport-leaders-call-6-billion-amazon-investment-milestone/"
+        }
+      ]
     },
     {
       "id": "aligned-hale-county-tx",
@@ -15285,7 +15521,86 @@
       "source": "https://www.electricchoice.com/datacenters/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-10-01",
+          "kind": "announcement",
+          "summary": "Person County announced Microsoft had purchased roughly 1,350 acres in Woodsdale Township for approximately $26.85 million, forming the Person County Mega Park site; the buyer identity and intended use were not disclosed at the time.",
+          "source": "https://www.theassemblync.com/news/business/person-county-microsoft-data-center-nondisclosure-agreements/"
+        },
+        {
+          "date": "2025-11-19",
+          "kind": "public-comment",
+          "summary": "Clean Water for NC, Appalachian Voices, and Sierra Club organized a community meeting in Roxboro where residents voiced frustration over the county lack of transparency about the Microsoft project.",
+          "source": "https://cwfnc.org/person/"
+        },
+        {
+          "date": "2025-12-10",
+          "kind": "coverage",
+          "summary": "The Carolinian reported the deal had been roughly 18 months in the making; Person County economic development director cited expected benefits of job creation and tax-base growth.",
+          "source": "https://caro.news/data-center-in-person-county-microsofts-make-major-move/"
+        },
+        {
+          "date": "2026-02-10",
+          "kind": "utility",
+          "summary": "Duke Energy signed an agreement to supply power to Microsoft and Compass North Carolina data center campuses, pushing Duke total contracted data-center load from 3 GW to 4.5 GW.",
+          "source": "https://www.bloomberg.com/news/articles/2026-02-10/microsoft-s-data-center-in-north-carolina-to-be-powered-by-duke"
+        },
+        {
+          "date": "2026-02-24",
+          "kind": "announcement",
+          "summary": "WRAL reported Microsoft moving forward with Person County data center and planning to begin formal permitting later in 2026; Microsoft pledged to pay its own way on electricity and minimize/replenish water use.",
+          "source": "https://www.wral.com/news/local/microsoft-person-county-woodsdale-data-center-permit-february-2026/"
+        },
+        {
+          "date": "2026-03-12",
+          "kind": "coverage",
+          "summary": "Spectrum News covered ongoing resident concerns about why county officials remained bound by an NDA even after the land purchase became public; Appalachian Voices highlighted water usage and transparency as top concerns.",
+          "source": "https://spectrumlocalnews.com/nc/charlotte/news/2026/03/12/person-county-data-center-resident-concern"
+        },
+        {
+          "date": "2026-04-01",
+          "kind": "coverage",
+          "summary": "WRAL surveyed how central NC counties were handling data center development pressure, situating Person County within a regional wave of local pauses and scrutiny.",
+          "source": "https://www.wral.com/news/local/central-north-carolina-data-center-plans-april-2026/"
+        },
+        {
+          "date": "2026-04-13",
+          "kind": "hearing",
+          "summary": "A public hearing on a proposed Duke Energy base-rate hike (16-18%) was held at the Person County Courthouse; residents connected the increase to Duke gas-plant buildout for data centers and said they should not subsidize Microsoft electricity costs.",
+          "source": "https://nationaltoday.com/us/nc/roxboro/news/2026/04/14/person-county-residents-protest-duke-energy-rate-hike-worry-about-microsoft-data-center-costs/"
+        },
+        {
+          "date": "2026-06-01",
+          "kind": "report",
+          "summary": "The Assembly NC published an investigative piece revealing county officials signed NDAs and were preparing for the Microsoft project well before residents were informed.",
+          "source": "https://www.theassemblync.com/news/business/person-county-microsoft-data-center-nondisclosure-agreements/"
+        },
+        {
+          "date": "2026-06-17",
+          "kind": "filing",
+          "summary": "Economic development director completed the rezoning application covering the Microsoft parcels; the abstract named the parcels but did not name the client or intended use.",
+          "source": "https://www.theassemblync.com/news/business/person-county-microsoft-data-center-nondisclosure-agreements/"
+        },
+        {
+          "date": "2026-06-30",
+          "kind": "public-comment",
+          "summary": "Microsoft hosted a community meeting in Woodsdale amid statewide AI tensions (Elon University poll found only 24% of NC residents support data centers in their community); Roxboro City Councilor Coggins said the company gave a lot of canned responses on water extraction.",
+          "source": "https://www.wral.com/news/local/person-county-microsoft-data-center-discussion-june-2026/"
+        },
+        {
+          "date": "2026-07-11",
+          "kind": "hearing",
+          "summary": "Person County planning board held its public hearing on the Microsoft-related rezoning application.",
+          "source": "https://www.theassemblync.com/news/business/person-county-microsoft-data-center-nondisclosure-agreements/"
+        },
+        {
+          "date": "2026-08-05",
+          "kind": "rezoning",
+          "summary": "Person County commissioners voted to approve the rezoning for the Microsoft data center parcels, passing with little friction under generic bureaucratic language.",
+          "source": "https://www.theassemblync.com/news/business/person-county-microsoft-data-center-nondisclosure-agreements/"
+        }
+      ]
     },
     {
       "id": "qts-lancium-turkey-tx",
@@ -15710,7 +16025,116 @@
       "source": "https://www.electricchoice.com/datacenters/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2023-10-09",
+          "kind": "announcement",
+          "summary": "West Feliciana Parish President Kenny Havard teased a major economic development announcement at a parish council meeting, later revealed to be tied to the data center project land assembly.",
+          "source": "https://www.theadvocate.com/baton_rouge/news/communities/west_feliciana/west-feliciana-parish-data-center/article_3fc5d1e6-a1f0-11ef-a8e3-c732ea418884.html"
+        },
+        {
+          "date": "2023-10-23",
+          "kind": "coverage",
+          "summary": "West Feliciana Parish sold 107 acres of surplus land near the old paper mill to M/V Industrial LLC for $500,000 ($4,672/acre) — later at the center of a land-deal controversy tied to the data center site assembly.",
+          "source": "https://www.wbrz.com/news/investigative-unit-west-feliciana-port-commission-members-allege-wrongdoing-in-data-center-land-deal/"
+        },
+        {
+          "date": "2023-11-01",
+          "kind": "announcement",
+          "summary": "Havard announced the parish had sold the 107-acre industrial park site for $500,000 for what he described as a project that would be a major economic boost.",
+          "source": "https://www.theadvocate.com/baton_rouge/news/the-sale-of-public-land-related-to-a-2-5-billion-south-louisiana-data-center/article_349edb83-e9d0-4653-821f-e03888b4f219.html"
+        },
+        {
+          "date": "2025-01-06",
+          "kind": "rezoning",
+          "summary": "West Feliciana Parish officials unanimously approved rezoning/development of the AI data center; Phase 1 includes two 450,000-sq-ft buildings. Officials flagged traffic-safety concerns and Hut 8 said closed-loop cooling would avoid heavy water consumption.",
+          "source": "https://www.wbrz.com/news/west-feliciana-officials-approve-development-of-multi-billion-dollar-data-center"
+        },
+        {
+          "date": "2025-01-13",
+          "kind": "vote",
+          "summary": "Parish council approved the $2.5 billion Hut 8 data center project with an aggressive timeline to build.",
+          "source": "https://www.theadvocate.com/baton_rouge/news/business/25-billion-west-feliciana-data-center-approved/article_d6dce702-cc45-11ef-8ff0-1fd2550a45e5.html"
+        },
+        {
+          "date": "2025-02-27",
+          "kind": "coverage",
+          "summary": "M/V Industrial LLC finalized purchase of additional nearby parcels for millions of dollars, then the same day resold those properties to Hut 8 for the data center site — a transaction central to later corruption allegations.",
+          "source": "https://www.wbrz.com/news/investigative-unit-west-feliciana-port-commission-members-allege-wrongdoing-in-data-center-land-deal/"
+        },
+        {
+          "date": "2025-03-27",
+          "kind": "coverage",
+          "summary": "WBRZ investigative report: Port Commission members alleged Parish President Havard and Port Commission President Grezaffi improperly profited from the 2023 land sale (M/V Industrial LLC tied to Grezaffi Cedar Management Company), claiming the parish was defrauded of roughly $11.5 million. Ethics complaint filed the next day.",
+          "source": "https://www.wbrz.com/news/investigative-unit-west-feliciana-port-commission-members-allege-wrongdoing-in-data-center-land-deal/"
+        },
+        {
+          "date": "2025-04-14",
+          "kind": "vote",
+          "summary": "West Feliciana Parish Council voted 3-2 to pass a resolution supporting a state bill to dissolve the West Feliciana Port Commission, amid the land-deal dispute.",
+          "source": "https://www.wbrz.com/news/west-feliciana-parish-council-supports-bill-to-dissolve-parish-port-commission/"
+        },
+        {
+          "date": "2025-08-18",
+          "kind": "construction",
+          "summary": "Hut 8 broke ground on the $2.5 billion (Phase I) River Bend data center on a 611-acre parcel off LA 964; first building targeted for completion by end of 2025, second before end of 2026.",
+          "source": "https://www.theadvocate.com/baton_rouge/news/business/hut8-breaks-ground-on-data-center/article_72bf8eec-78e9-4c42-9476-27d40433743f.html"
+        },
+        {
+          "date": "2025-12-17",
+          "kind": "financing",
+          "summary": "Hut 8 signed a 15-year, $7.0 billion lease (up to $17.7B with renewals) with Fluidstack for 245 MW at River Bend, with Google (Alphabet) providing two financial backstops. Anthropic is the ultimate compute user via Fluidstack.",
+          "source": "https://www.prnewswire.com/news-releases/hut-8-signs-15-year-245-mw-ai-data-center-lease-at-river-bend-campus-with-total-contract-value-of-7-0-billion-302644600.html"
+        },
+        {
+          "date": "2025-12-17",
+          "kind": "announcement",
+          "summary": "Hut 8, Anthropic, and Fluidstack jointly announced a multi-gigawatt AI infrastructure partnership (245 MW up to 2,295 MW); Louisiana Economic Development announced Hut 8 selection of the site for a $10 billion Phase I investment scalable to 1,000+ MW, backed by Entergy Louisiana (330 MW initial).",
+          "source": "https://www.opportunitylouisiana.gov/news/hut-8-selects-southeast-louisiana-as-site-of-10-billion-artificial-intelligence-data-center"
+        },
+        {
+          "date": "2025-12-18",
+          "kind": "incentive",
+          "summary": "Hut 8 River Bend projected to generate $90 million annually for West Feliciana Parish (versus $41M current tax revenue) under a 30-year PILOT agreement with the parish Industrial Development Board.",
+          "source": "https://www.wafb.com/2025/12/18/hut-8-facility-expected-generate-90-million-annually-local-government/"
+        },
+        {
+          "date": "2026-04-16",
+          "kind": "filing",
+          "summary": "State legislation (HB466) introduced that would let West Feliciana Industrial Development Board rebate property taxes to residents/businesses from the anticipated data center revenue windfall.",
+          "source": "https://www.wafb.com/2026/04/16/legislation-would-allow-west-feliciana-rebate-property-taxes-data-center-windfall/"
+        },
+        {
+          "date": "2026-05-07",
+          "kind": "coverage",
+          "summary": "Parish officials outlined plans to replace West Feliciana 1948 jail (39-bed expanding to ~150) using data-center PILOT revenue; first prepayment anticipated around July 2026, full annual payments (~$90M/yr for 15 years) expected once project completes late 2027.",
+          "source": "https://www.wafb.com/2026/05/07/west-felicianas-1948-jail-expected-be-replaced-with-funding-data-center-deal/"
+        },
+        {
+          "date": "2026-05-19",
+          "kind": "utility",
+          "summary": "Hut 8 committed $16 million to expand West Feliciana water infrastructure (new well, ~8 miles of water main) to be transferred to the parish at no taxpayer cost, serving 4,000+ households.",
+          "source": "https://www.prnewswire.com/news-releases/hut-8-commits-16-million-to-expand-water-infrastructure-in-west-feliciana-parish-302775525.html"
+        },
+        {
+          "date": "2026-06-01",
+          "kind": "construction",
+          "summary": "Jacobs began formal EPCM work on the $10 billion River Bend campus, partnering with Vertiv on critical infrastructure; financed up to 85% via project-level debt from J.P. Morgan and Goldman Sachs.",
+          "source": "https://www.constructiondive.com/news/jacobs-louisiana-data-center-hut8/808553/"
+        },
+        {
+          "date": "2026-06-01",
+          "kind": "financing",
+          "summary": "West Feliciana Parish Council and Industrial Development Board approved a cooperative endeavor agreement accepting a $10 million advance on Hut 8 future PILOT payments, split $5.3M to school board, $3.9M to parish government, and $800,000 to sheriff office.",
+          "source": "https://www.wbrz.com/news/west-feliciana-parish-council-and-industrial-development-board-accept-agreement-for-prepayment-from-data-center"
+        },
+        {
+          "date": "2026-07-14",
+          "kind": "coverage",
+          "summary": "Hut 8 held a hiring event and community open house at West Feliciana Parish High School for River Bend jobs.",
+          "source": "https://www.wafb.com/2026/07/13/hiring-event-related-new-data-center-set-tuesday-west-feliciana-parish/"
+        }
+      ]
     },
     {
       "id": "compass-meridian-ms",
@@ -15736,7 +16160,80 @@
       "source": "https://www.electricchoice.com/datacenters/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-01-01",
+          "kind": "coverage",
+          "summary": "Mississippi State University and state leaders publicly welcomed Compass Datacenters arrival in Meridian.",
+          "source": "https://www.msstate.edu/newsroom/article/2025/01/msu-other-state-leaders-welcome-high-tech-powerhouse-compass-datacenters"
+        },
+        {
+          "date": "2025-01-09",
+          "kind": "announcement",
+          "summary": "Compass Datacenters announced plans to build an eight-building, 500MW hyperscale campus in the I-20/59 industrial park in Lauderdale County (Meridian), representing a $10 billion investment. Gov. Reeves called it a monumental economic development win.",
+          "source": "https://mississippi.org/news/compass-datacenters-project-generates-10-billion-investment-in-lauderdale-county/"
+        },
+        {
+          "date": "2025-01-17",
+          "kind": "coverage",
+          "summary": "Meridian Star editorial credits months of closed-door discussions between EMBDC, Lauderdale County Supervisors, City of Meridian, and Mississippi Power for landing the Compass project.",
+          "source": "https://meridianstar.com/2025/01/17/our-view-data-center-project-product-of-local-effort/"
+        },
+        {
+          "date": "2025-01-28",
+          "kind": "construction",
+          "summary": "Compass Datacenters held its official groundbreaking ceremony near the I-20/I-59 corridor in Lauderdale County, attended by Gov. Reeves, PSC Commissioner Stamps, and Compass VP Katie Hancock.",
+          "source": "https://www.wtok.com/2025/01/29/compass-data-centers-hosts-official-groundbreaking-ceremony-lauderdale-county/"
+        },
+        {
+          "date": "2025-02-01",
+          "kind": "incentive",
+          "summary": "Mississippi Development Authority certified Compass as a data center operator, granting 10-year state income/franchise tax exemptions plus sales/use tax exemption on construction materials, equipment, and software/hardware replacements.",
+          "source": "https://mississippi.org/news/compass-datacenters-project-generates-10-billion-investment-in-lauderdale-county/"
+        },
+        {
+          "date": "2025-02-07",
+          "kind": "utility",
+          "summary": "Mississippi Public Service Commission approved the special electric service contract between Mississippi Power and Compass Datacenters Jan I, LLC, clearing the way for ~500MW of supply to the campus.",
+          "source": "https://meridianstar.com/2025/02/07/psc-approves-contract-between-mississippi-power-compass-datacenters/"
+        },
+        {
+          "date": "2025-02-25",
+          "kind": "filing",
+          "summary": "Mississippi Senate unanimously passed SB 3168, updating the state Data Center Enterprise incentive program (raising investment thresholds, adding an electricity tax exemption, allowing automatic 10-year extensions).",
+          "source": "https://magnoliatribune.com/2025/02/25/senate-bill-aims-to-attract-more-data-centers-to-mississippi/"
+        },
+        {
+          "date": "2025-12-29",
+          "kind": "coverage",
+          "summary": "Center for Economic Accountability named Mississippi Compass Datacenters/Lauderdale County tax-break package the nation Worst Economic Development Deal of the Year for 2025, citing the length and breadth of tax exemptions versus minimal disclosed local benefit.",
+          "source": "https://www.gwcommonwealth.com/cea-mississippi-data-center-project-named-2025s-worst-economic-development-deal-year-center-6952d644829d7"
+        },
+        {
+          "date": "2026-05-08",
+          "kind": "public-comment",
+          "summary": "Compass held a lunch and learn informational session at the MSU Riley Center; residents raised concerns about rising electricity and water bills, and Compass VP Sarah Ridgely responded the campus uses closed-loop water cooling.",
+          "source": "https://meridianstar.com/2026/05/08/compass-addresses-concerns-over-data-center-electric-water-usage/"
+        },
+        {
+          "date": "2026-07-15",
+          "kind": "coverage",
+          "summary": "Lauderdale County officials issued a statement strongly supporting the Compass project as transformational, citing 1,000+ construction jobs and hundreds of permanent jobs.",
+          "source": "https://www.wtok.com/2026/07/15/lauderdale-county-gives-statement-compass-data-center/"
+        },
+        {
+          "date": "2026-07-16",
+          "kind": "hearing",
+          "summary": "Mississippi Legislature AI Task Force held a two-day hearing on data center impacts; Compass SVP Brent Collard testified the company invested $300 million in Meridian grid infrastructure and created 6,400 long-term jobs, while other testimony raised statewide concerns about noise, air pollution, and water draw.",
+          "source": "https://magnoliatribune.com/2026/07/16/legislative-ai-task-force-hears-complaints-positive-impacts-of-data-centers/"
+        },
+        {
+          "date": "2026-07-31",
+          "kind": "coverage",
+          "summary": "Compass and Meridian Community College launched Mississippi first data center workforce training program (14-week MEI Data Center Pathway) with Compass funding full-tuition scholarships for an inaugural cohort of 12 students.",
+          "source": "https://www.wtok.com/2026/07/31/meridian-community-college-launches-mississippis-first-data-center-workforce-training-program/"
+        }
+      ]
     },
     {
       "id": "google-berkeley-county-sc",
