@@ -3912,6 +3912,12 @@
           "source": "https://communityimpact.com/bastrop-cedar-creek/government/bastrop-county-residents-organize-for-data-center-transparency-local-guardrails/"
         },
         {
+          "date": "2026-07-23",
+          "kind": "permit",
+          "summary": "Bastrop County issued a site-preparation permit to Pacifico Energy for the gas-fired power facility component of the Cedar Creek campus.",
+          "source": "https://www.texastribune.org/2026/08/03/texas-data-center-project-audit-greg-abbott/"
+        },
+        {
           "date": "2026-07-27",
           "kind": "hearing",
           "summary": "A Bastrop County Commissioners Court public hearing was scheduled on proposed tax-abatement guidelines that would require companies to disclose environmental impacts and create at least 25 local jobs.",
@@ -3928,6 +3934,12 @@
           "kind": "coverage",
           "summary": "The Elgin Courier reported on the community-led town hall calling for greater data center oversight in Bastrop County, noting that the Pacifico Energy data center proposal remained under county review alongside the EdgeConneX campuses.",
           "source": "https://www.elgincourier.com/article/4795,community-led-town-hall-calls-for-data-center-oversight"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "moratorium",
+          "summary": "Gov. Abbott directed PUC of Texas and ERCOT to audit roughly 250-300 data-center projects seeking grid interconnection statewide, pausing new approvals; Texas Tribune coverage specifically cites the Pacifico Energy/BlackChamber Cedar Creek project among those under scrutiny, though its on-site gas generation may make it behind-the-meter and exempt from the ERCOT interconnection audit.",
+          "source": "https://www.texastribune.org/2026/08/03/texas-data-center-project-audit-greg-abbott/"
         },
         {
           "date": "2026-08-10",
