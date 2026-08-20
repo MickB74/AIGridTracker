@@ -11710,7 +11710,110 @@
       "source": "https://communityimpact.com/san-marcos-buda-kyle/development/new-data-center-planned-near-new-braunfels-and-san-marcos-sparks-debate/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-02-07",
+          "kind": "utility",
+          "summary": "Energy Transfer and CloudBurst Data Centers announced a natural gas supply agreement via the Oasis Pipeline to provide behind-the-meter power to CloudBurst's planned Central Texas data center campus.",
+          "source": "https://ir.energytransfer.com/news-releases/news-release-details/energy-transfer-and-cloudburst-sign-agreement-natural-gas-supply"
+        },
+        {
+          "date": "2025-02-13",
+          "kind": "coverage",
+          "summary": "First major television news coverage announced CloudBurst's proposed 1.2 GW data center campus at Francis Harris Lane straddling Hays and Guadalupe Counties near San Marcos.",
+          "source": "https://centexdatacenters.org/projects/cloudburst-data-center"
+        },
+        {
+          "date": "2025-03-18",
+          "kind": "permit",
+          "summary": "CloudBurst filed a Flood Hazard Development Permit with Hays County, the only county-level permit instrument applicable to the site given it sits outside city ETJ.",
+          "source": "https://centexdatacenters.org/projects/cloudburst-data-center"
+        },
+        {
+          "date": "2025-03-30",
+          "kind": "protest",
+          "summary": "The Central Texas Data Center Tracker organized its first public protest against the CloudBurst project at the Francis Harris Lane site.",
+          "source": "https://centexdatacenters.org/projects/cloudburst-data-center"
+        },
+        {
+          "date": "2025-04-01",
+          "kind": "coverage",
+          "summary": "Hays County Judge Ruben Becerra publicly stated the CloudBurst project would be approved regardless of local objections, saying 'there's nothing we can do about it' because the site lies outside county land-use authority.",
+          "source": "https://centexdatacenters.org/projects/cloudburst-data-center"
+        },
+        {
+          "date": "2025-05-20",
+          "kind": "hearing",
+          "summary": "Hays County Commissioners Court held a public workshop for residents to hear directly from CloudBurst representatives about the proposed facility south of San Marcos.",
+          "source": "https://www.kut.org/energy-environment/2025-06-04/hays-county-texas-data-center-ai"
+        },
+        {
+          "date": "2025-05-21",
+          "kind": "coverage",
+          "summary": "Community Impact reported that more than 50 residents had opposed the CloudBurst project at San Marcos City Council meetings, citing water scarcity, emissions and transparency concerns, even though the site is outside city jurisdiction.",
+          "source": "https://communityimpact.com/austin/san-marcos-buda-kyle/development/2025/05/21/new-data-center-planned-near-new-braunfels-and-san-marcos-sparks-debate/"
+        },
+        {
+          "date": "2025-06-04",
+          "kind": "coverage",
+          "summary": "Media outlets reported CloudBurst had reversed an earlier renewable-energy pledge in favor of on-site natural gas generation, citing unreliable ERCOT grid supply.",
+          "source": "https://www.kut.org/energy-environment/2025-06-04/hays-county-texas-data-center-ai"
+        },
+        {
+          "date": "2025-11-05",
+          "kind": "construction",
+          "summary": "CloudBurst and Evolve Holdings held a groundbreaking ceremony for the 1.2 GW San Marcos Data Center I campus; the Data Center Action Coalition organized a protest with signs and noisemakers outside the event.",
+          "source": "https://www.datacenterdynamics.com/en/news/cloudburst-breaks-ground-on-gigawatt-scale-data-center-campus-in-texas/"
+        },
+        {
+          "date": "2026-01-20",
+          "kind": "environmental",
+          "summary": "Hays County Commissioners Court authorized an 11-month, $542,360 regional water and wastewater study by HDR Engineers, prompted in part by data center water demand including CloudBurst's.",
+          "source": "https://www.sanmarcosrecord.com/article_0f9d2549-163a-491f-8043-a072b5a40e40.html"
+        },
+        {
+          "date": "2026-02-18",
+          "kind": "denial",
+          "summary": "San Marcos City Council voted 5-2 to deny a land-use change that would have cleared the way for a separate data center southwest of downtown, reflecting the same organized opposition driving pushback on CloudBurst.",
+          "source": "https://www.kut.org/energy-environment/2026-02-18/san-marcos-city-council-blocks-proposed-data-center"
+        },
+        {
+          "date": "2026-02-24",
+          "kind": "vote",
+          "summary": "Guadalupe County Commissioners Court voted 3-2 against a $500 million, 10-year property tax abatement for the CloudBurst data center campus.",
+          "source": "https://seguintoday.com/2026/02/25/guadalupe-county-commissioners-decline-tax-abatement-for-10b-data-center-project/"
+        },
+        {
+          "date": "2026-02-26",
+          "kind": "coverage",
+          "summary": "Water advocates said they would oppose all five data centers proposed in the Hays/Caldwell County area, including CloudBurst, as the region's water resource fight was described as 'just beginning.'",
+          "source": "https://www.kut.org/energy-environment/2026-02-26/hays-county-tx-data-centers-water-resources"
+        },
+        {
+          "date": "2026-03-23",
+          "kind": "coverage",
+          "summary": "State Rep. Erin Zwiener formed the bipartisan Hays County Data Center Working Group, including county commissioners, San Marcos officials, and regional water advocacy groups, to address data center water use and local regulatory authority.",
+          "source": "https://communityimpact.com/austin/san-marcos-buda-kyle/government/2026/03/23/rep-zwiener-establishes-hays-county-group-to-address-data-center-concerns/"
+        },
+        {
+          "date": "2026-04-09",
+          "kind": "hearing",
+          "summary": "The Texas House Environmental Regulation Committee held a hearing on proposed state legislation requiring data center water-use disclosure, discussion informed in part by the CloudBurst case.",
+          "source": "https://centexdatacenters.org/projects/cloudburst-data-center"
+        },
+        {
+          "date": "2026-04-21",
+          "kind": "vote",
+          "summary": "Guadalupe County Commissioners Court reversed its February decision and approved a development agreement and tax abatement package for CloudBurst in a 3-2 vote after a nearly four-hour hearing; more than 35 residents protested at the courthouse.",
+          "source": "https://communityimpact.com/san-antonio/northeast-san-antonio-metrocom/government/2026/03/26/guadalupe-county-commissioners-vote-down-500m-tax-cut-for-proposed-data-center-in-new-braunfels/"
+        },
+        {
+          "date": "2026-06-16",
+          "kind": "moratorium",
+          "summary": "San Marcos City Council voted 4-3 to redefine its zoning code and prohibit data centers in all zoning districts citywide, becoming the first Texas city to ban the industry outright, a policy response shaped by the CloudBurst controversy.",
+          "source": "https://www.texastribune.org/2026/06/30/texas-san-marcos-data-center-ban-zoning-laws/"
+        }
+      ]
     },
     {
       "id": "sabey-decatur-township-in",
@@ -11972,7 +12075,104 @@
       "source": "https://coloradosun.com/2026/02/24/denver-data-center-moratorium-state-legislature-opposition/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2022-11-10",
+          "kind": "financing",
+          "summary": "CoreSite purchased the Elyria-Swansea site (former concrete plant, heavy-industrial zoned) at Race Street and E. 49th Avenue for $33.5 million.",
+          "source": "https://www.kunc.org/regional-news/2025-10-17/does-the-ai-boom-threaten-local-air-quality-a-north-denver-neighborhood-is-about-to-find-out"
+        },
+        {
+          "date": "2024-08-01",
+          "kind": "filing",
+          "summary": "Mayor Johnston's Denver Economic Development office brought CoreSite's $9M tax incentive request to City Council, which would have returned half of sales/use taxes on the project.",
+          "source": "https://www.9news.com/article/news/local/denver-city-council-apologizes-data-center-moratorium/73-9f34e8b7-75e3-491b-90ac-17dee009a520"
+        },
+        {
+          "date": "2024-10-01",
+          "kind": "withdrawal",
+          "summary": "CoreSite dropped its pursuit of the $9M city tax break after council members raised concerns about water and energy usage; the company proceeded to build DE3 using by-right industrial zoning without further council review.",
+          "source": "https://www.govtech.com/analytics/denver-data-center-wont-pursue-tax-breaks-amid-concern"
+        },
+        {
+          "date": "2025-02-01",
+          "kind": "report",
+          "summary": "A state-funded community health study found Globeville-Elyria-Swansea residents have significantly higher asthma hospitalization rates than the Denver average, underscoring the neighborhood's existing pollution burden.",
+          "source": "https://www.kunc.org/regional-news/2025-10-17/does-the-ai-boom-threaten-local-air-quality-a-north-denver-neighborhood-is-about-to-find-out"
+        },
+        {
+          "date": "2025-07-01",
+          "kind": "permit",
+          "summary": "Colorado DPHE issued an air quality permit allowing CoreSite to install 14 Kohler diesel backup generators (5,040 hp each) at DE3, capped at 25 hours/year of emergency or testing use.",
+          "source": "https://www.cpr.org/2026/04/22/coresite-data-center-north-denver-public-meetings/"
+        },
+        {
+          "date": "2025-09-01",
+          "kind": "construction",
+          "summary": "Construction on CoreSite's DE3 data center building was actively underway in Elyria-Swansea, part of a planned 600,000 sq ft, three-building, 60MW campus at 5050 N. Race St.",
+          "source": "https://www.kunc.org/regional-news/2025-10-17/does-the-ai-boom-threaten-local-air-quality-a-north-denver-neighborhood-is-about-to-find-out"
+        },
+        {
+          "date": "2025-10-06",
+          "kind": "construction",
+          "summary": "CoreSite marked a 'topping out' milestone for the 180,000 sq ft DE3 building, the first purpose-built colocation data center in Denver in two decades.",
+          "source": "https://www.businesswire.com/news/home/20251006047627/en/CoreSite-Achieves-Key-Construction-Milestone-for-New-DE3-Data-Center-in-Denver"
+        },
+        {
+          "date": "2025-10-14",
+          "kind": "coverage",
+          "summary": "Colorado Public Radio reported on whether the AI boom threatens local air quality in north Denver, detailing the CoreSite DE3 project, its generators, and neighborhood pollution concerns.",
+          "source": "https://www.cpr.org/2025/10/14/ai-air-quality-impact/"
+        },
+        {
+          "date": "2026-02-24",
+          "kind": "protest",
+          "summary": "Hundreds of GES residents attended a town hall on the CoreSite data center; CoreSite itself skipped the meeting citing 'safety concerns,' leaving Councilmember Watson, Xcel Energy, Denver Water and state health officials to face residents' questions.",
+          "source": "https://www.denver7.com/follow-up/data-center-developer-skips-out-on-town-hall-amid-globeville-community-concerns"
+        },
+        {
+          "date": "2026-03-12",
+          "kind": "utility",
+          "summary": "Colorado Sun reported that Xcel Energy's data-center-driven building boom threatens to shock consumers with higher electric bills, adding pressure for state action.",
+          "source": "https://coloradosun.com/2026/03/12/xcel-building-boom-data-centers-electric-bills/"
+        },
+        {
+          "date": "2026-04-07",
+          "kind": "utility",
+          "summary": "Xcel Energy released a proposed large-load tariff to charge data centers the full cost of powering their operations (including 15-year contracts) to reduce bill impacts on residential Colorado customers.",
+          "source": "https://www.cpr.org/2026/04/07/xcel-colorado-data-center-power-prices/"
+        },
+        {
+          "date": "2026-04-22",
+          "kind": "public-comment",
+          "summary": "State air quality regulators pushed for public meetings over CoreSite's diesel generator permit amid community pressure.",
+          "source": "https://www.cpr.org/2026/04/22/coresite-data-center-north-denver-public-meetings/"
+        },
+        {
+          "date": "2026-05-12",
+          "kind": "filing",
+          "summary": "Colorado lawmakers killed both major data center bills for the session, leaving regulation to the Colorado PUC and increasing pressure on Denver's local moratorium effort.",
+          "source": "https://gazette.com/2026/05/12/colorado-lawmakers-kill-both-major-data-center-bills/"
+        },
+        {
+          "date": "2026-05-18",
+          "kind": "moratorium",
+          "summary": "Denver City Council unanimously passed a one-year moratorium halting new data center zoning permits, after hours of community testimony; several members publicly apologized for not stopping the CoreSite project when they had the chance in October 2024.",
+          "source": "https://www.9news.com/article/news/local/denver-city-council-apologizes-data-center-moratorium/73-9f34e8b7-75e3-491b-90ac-17dee009a520"
+        },
+        {
+          "date": "2026-05-21",
+          "kind": "moratorium",
+          "summary": "Denver's one-year data center moratorium took effect, with the city convening a 20+ member working group of officials, utilities, unions, industry, and community advocates to recommend future regulation.",
+          "source": "https://krystal93.com/denver-city-leaders-launch-data-center-working-group-as-they-weigh-future-regulations/"
+        },
+        {
+          "date": "2026-07-21",
+          "kind": "environmental",
+          "summary": "CoreSite's data center generators/construction were drawing noise complaints from Elyria-Swansea residents as the facility neared completion.",
+          "source": "https://denverite.com/2026/07/21/denver-data-center-noise-coresite/"
+        }
+      ]
     },
     {
       "id": "msb-sulphur-springs-tx",
@@ -12642,7 +12842,56 @@
       "source": "https://southdakotasearchlight.com/2026/04/02/one-data-center-project-unchanged-while-another-doesnt-make-sense-after-rejected-incentives/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-04-15",
+          "kind": "announcement",
+          "summary": "Applied Digital proposed a ~$5B, 430MW AI data center campus (two ~907,500 sq ft buildings) on a 150-200 acre site east of Toronto in Deuel County, South Dakota, with total project impact estimated at $10-16 billion.",
+          "source": "https://www.mykxlg.com/news/local/potential-14-billion-data-center-could-transform-deuel-countys-economy/article_2a031739-b2ae-4932-95f5-57e4f280b7c7.html"
+        },
+        {
+          "date": "2026-01-30",
+          "kind": "coverage",
+          "summary": "South Dakota Searchlight reported the clock was ticking on a data center tax incentive proposal as the legislative session and elections loomed, with Applied Digital's Deuel County project tied to the outcome.",
+          "source": "https://southdakotasearchlight.com/2026/01/30/clock-is-ticking-on-data-center-incentive-proposal-as-elections-loom/"
+        },
+        {
+          "date": "2026-02-05",
+          "kind": "vote",
+          "summary": "The South Dakota House State Affairs Committee voted 9-3 to kill House Bill 1005, which would have granted a 50-year sales tax exemption on data center equipment and software purchases.",
+          "source": "https://southdakotasearchlight.com/2026/02/04/data-center-tax-break-proposal-fails-in-south-dakota-legislative-committee/"
+        },
+        {
+          "date": "2026-02-18",
+          "kind": "vote",
+          "summary": "Senate committees advanced competing data center bills: SB 135 (requiring data centers to pay their own costs, 5-4) and SB 239 (a narrower 30-year tax exemption, 6-3); Applied Digital VP said losing the exemption would cost roughly $2B more to build in South Dakota.",
+          "source": "https://www.sdpb.org/politics/2026-02-18/senate-committee-approves-bill-keeping-door-open-on-data-centers"
+        },
+        {
+          "date": "2026-03-05",
+          "kind": "vote",
+          "summary": "A data center regulation bill passed the South Dakota House as the legislature moved toward restrictions rather than incentives.",
+          "source": "https://southdakotasearchlight.com/2026/03/05/data-center-regulation-bill-passes-south-dakota-house/"
+        },
+        {
+          "date": "2026-03-25",
+          "kind": "ruling",
+          "summary": "Governor Larry Rhoden signed SB 135 and related bills into law, requiring data centers to cover their own electricity rate impacts and water-use costs and protecting local ordinances.",
+          "source": "https://www.kotatv.com/2026/03/25/data-center-restrictions-signed-into-south-dakota-law-after-push-incentives-failed/"
+        },
+        {
+          "date": "2026-04-02",
+          "kind": "withdrawal",
+          "summary": "Applied Digital VP Nick Phillips said the $5B Deuel County project 'doesn't make sense at this time' after the legislature's rejection of tax incentives, confirming the company would let its land agreement near Toronto lapse.",
+          "source": "https://southdakotasearchlight.com/2026/04/02/one-data-center-project-unchanged-while-another-doesnt-make-sense-after-rejected-incentives/"
+        },
+        {
+          "date": "2026-07-01",
+          "kind": "report",
+          "summary": "New state laws took effect including data center regulatory measures (electricity cost pass-through bans, water-use disclosure, local ordinance protection) enacted after the incentive bills failed.",
+          "source": "https://www.sdpb.org/politics/2026-07-01/property-tax-relief-data-center-bills-among-new-south-dakota-laws-taking-effect"
+        }
+      ]
     },
     {
       "id": "gemini-sioux-falls-sd",
