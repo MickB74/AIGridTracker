@@ -12049,7 +12049,86 @@
       "source": "https://www.lpm.org/news/2026-08-12/a-kentucky-county-passes-a-data-center-moratorium-with-a-city-sized-hole",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-03-27",
+          "kind": "incentive",
+          "summary": "Kentucky enacted HB 775, expanding sales-and-use tax exemptions for qualified data centers statewide (effective July 1, 2025).",
+          "source": "https://www.stites.com/resources/client-alerts/kentucky-vastly-expands-data-center-tax-incentives/"
+        },
+        {
+          "date": "2026-02-18",
+          "kind": "public-comment",
+          "summary": "Over 200 residents attended a Mercer County Joint Planning and Zoning Commission meeting, an early public airing of concerns about Project Bluegrass impact on farmland, wellbeing, and resource consumption.",
+          "source": "https://thewatchdognews.com/mercer-county-community-speaks-out-against-proposed-data-center-during-commission-meeting/"
+        },
+        {
+          "date": "2026-07-09",
+          "kind": "vote",
+          "summary": "Burgin City Council voted 3-2 to advance a first reading of an ordinance to annex more than 1,000 acres of farmland, roughly doubling the city size, to enable Panattoni proposed hyperscale data center to bypass Mercer County zoning.",
+          "source": "https://www.thecooldown.com/green-business/burgin-kentucky-annex-data-center-project/"
+        },
+        {
+          "date": "2026-07-16",
+          "kind": "vote",
+          "summary": "Mercer County Fiscal Court voted to begin drafting an ordinance establishing a moratorium on new data center construction in the county.",
+          "source": "https://www.harrodsburgherald.com/2026/07/16/fiscal-court-votes-to-draft-data-center-moratorium/"
+        },
+        {
+          "date": "2026-07-20",
+          "kind": "withdrawal",
+          "summary": "Burgin canceled a scheduled special city council meeting on the annexation ordinance amid mounting public opposition and objections from neighboring Harrodsburg over water-supply capacity.",
+          "source": "https://www.thecooldown.com/green-business/burgin-kentucky-annex-data-center-project/"
+        },
+        {
+          "date": "2026-07-24",
+          "kind": "public-comment",
+          "summary": "Mercer County Joint Planning and Zoning Commission held a roughly two-hour public comment session on a proposed 17-page county data-center ordinance that would cap data-center zoning at 1,500 acres countywide.",
+          "source": "https://spectrumnews1.com/ky/louisville/news/2026/07/24/mercer-county-residents-voice-opposition-to-data-centers"
+        },
+        {
+          "date": "2026-07-30",
+          "kind": "hearing",
+          "summary": "Mercer County Fiscal Court gave first reading to the data-center moratorium ordinance; a related follow-up public meeting was held at Campbellsville University Harrodsburg Athletic Center.",
+          "source": "https://www.harrodsburgherald.com/2026/07/30/fiscal-court-gives-first-reading-to-data-center-moratorium/"
+        },
+        {
+          "date": "2026-08-06",
+          "kind": "ruling",
+          "summary": "Governor Andy Beshear signed Executive Order 2026-494, requiring data-center developers statewide to submit energy plans protecting ratepayers, pay their full share of taxes, and directing state agencies to deny permits causing negative environmental impacts.",
+          "source": "https://www.wkyt.com/2026/08/06/gov-beshear-signs-executive-order-increasing-requirements-data-center-developers-kentucky/"
+        },
+        {
+          "date": "2026-08-12",
+          "kind": "moratorium",
+          "summary": "Mercer County Fiscal Court unanimously passed a one-year moratorium on new data-center applications in unincorporated parts of the county — a moratorium that would not apply if the project site is annexed into Burgin.",
+          "source": "https://www.lpm.org/news/2026-08-12/a-kentucky-county-passes-a-data-center-moratorium-with-a-city-sized-hole"
+        },
+        {
+          "date": "2026-08-13",
+          "kind": "public-comment",
+          "summary": "Burgin City Council held its first public-comment session on the data center; 14 residents spoke against the project (an overflow room was needed) and the council deferred the annexation vote.",
+          "source": "https://spectrumnews1.com/ky/louisville/news/2026/08/12/burgin-data-center-debate"
+        },
+        {
+          "date": "2026-08-13",
+          "kind": "report",
+          "summary": "Reporting described Project Bluegrass as a proposed four-building, 900-acre data center campus up to 1,300 MW, with the developer claiming 1,500+ construction jobs, 100 permanent jobs, and $25-30 million in projected annual tax revenue for local schools.",
+          "source": "https://kentuckylantern.com/2026/08/13/a-countys-data-center-moratorium-doesnt-include-a-small-city-considering-huge-project/"
+        },
+        {
+          "date": "2026-08-17",
+          "kind": "coverage",
+          "summary": "Statewide public-radio reporting placed the Burgin/Mercer County fight in the context of more than a dozen Kentucky data-center proposals since the 2025 tax-incentive law, alongside moratoriums in Oldham County and Louisville Metro.",
+          "source": "https://www.lpm.org/news/2026-08-17/hyperscale-data-centers-provoke-bipartisan-outrage-across-kentucky"
+        },
+        {
+          "date": "2026-08-18",
+          "kind": "coverage",
+          "summary": "Kentucky Lantern analyzed whether Beshear data-center executive order has legal teeth absent enabling state legislation, in the context of the Burgin/Mercer County fight.",
+          "source": "https://kentuckylantern.com/2026/08/18/does-beshears-data-center-executive-order-have-teeth-without-state-law-to-back-it-up/"
+        }
+      ]
     },
     {
       "id": "coresite-de3-denver-co",
@@ -13216,7 +13295,146 @@
       "source": "https://news.microsoft.com/source/2026/04/14/microsoft-announces-intent-to-expand-datacenter-operations-in-cheyenne-accelerating-innovation-and-economic-growth/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2010-03-05",
+          "kind": "incentive",
+          "summary": "Wyoming Gov. Dave Freudenthal signed HB 67, exempting data centers that buy or rent more than $2 million in computing equipment annually from state sales tax.",
+          "source": "https://cowboystatedaily.com/2026/06/12/heres-why-wyoming-doesnt-tax-big-data-center-purchases/"
+        },
+        {
+          "date": "2012-01-01",
+          "kind": "operational",
+          "summary": "Microsoft established its first data center presence in Cheyenne, Wyoming.",
+          "source": "https://www.datacenters.com/news/microsoft-expands-data-center-operations-in-cheyenne-wyoming"
+        },
+        {
+          "date": "2014-01-01",
+          "kind": "construction",
+          "summary": "Microsoft expanded its original Cheyenne data center footprint, adding capacity to its existing campus.",
+          "source": "https://www.datacenters.com/news/microsoft-expands-data-center-operations-in-cheyenne-wyoming"
+        },
+        {
+          "date": "2021-01-01",
+          "kind": "operational",
+          "summary": "Microsoft opened two additional data centers in Cheyenne, further building out its Wyoming campus.",
+          "source": "https://www.datacenters.com/news/microsoft-expands-data-center-operations-in-cheyenne-wyoming"
+        },
+        {
+          "date": "2025-01-01",
+          "kind": "incentive",
+          "summary": "The Wyoming Legislature extended the state data-center sales-and-use tax exemption through 2042.",
+          "source": "https://cowboystatedaily.com/2026/06/12/heres-why-wyoming-doesnt-tax-big-data-center-purchases/"
+        },
+        {
+          "date": "2025-07-01",
+          "kind": "construction",
+          "summary": "Microsoft, with JE Dunn as general contractor, began heavy earthwork on a new data center campus on HR Ranch Road east of Cheyenne, with completion targeted for early 2026.",
+          "source": "https://www.datacenterdynamics.com/en/news/microsoft-breaks-ground-on-data-center-campus-in-cheyenne-wyoming/"
+        },
+        {
+          "date": "2026-04-14",
+          "kind": "announcement",
+          "summary": "Microsoft announced intent to purchase roughly 3,200 acres in Cheyenne to roughly triple its data center footprint, pledging over $68 million in off-site infrastructure improvements and no reliance on local property tax incentives.",
+          "source": "https://news.microsoft.com/source/2026/04/14/microsoft-announces-intent-to-expand-datacenter-operations-in-cheyenne-accelerating-innovation-and-economic-growth/"
+        },
+        {
+          "date": "2026-04-14",
+          "kind": "utility",
+          "summary": "Microsoft detailed a utility partnership with Black Hills Energy under the Large Power Contract Service (LPCS) tariff, under which Microsoft funds the full cost of electricity infrastructure so other ratepayers are not burdened.",
+          "source": "https://www.datacenterdynamics.com/en/news/microsoft-plans-to-buy-3200-acres-of-land-for-data-center-project-in-cheyenne-wyoming/"
+        },
+        {
+          "date": "2026-04-14",
+          "kind": "environmental",
+          "summary": "Microsoft said it would minimize water use and fund replenishment projects in Cheyenne, with partners including Trout Unlimited, expected to restore an estimated 566 million gallons of water.",
+          "source": "https://www.datacenterdynamics.com/en/news/microsoft-plans-to-buy-3200-acres-of-land-for-data-center-project-in-cheyenne-wyoming/"
+        },
+        {
+          "date": "2026-04-27",
+          "kind": "protest",
+          "summary": "Opposition to Cheyenne data center growth intensified as the city moved to accommodate further development, with residents raising sustained objections.",
+          "source": "https://cowboystatedaily.com/2026/04/27/opposition-to-cheyenne-data-centers-grows-as-city-moves-to-add-them/"
+        },
+        {
+          "date": "2026-04-28",
+          "kind": "hearing",
+          "summary": "Angry Cheyenne residents spoke out at a public meeting against the proposed annexation and Microsoft data center project.",
+          "source": "https://cowboystatedaily.com/2026/04/28/angry-cheyenne-residents-speak-out-against-annexation-and-proposed-data-center/"
+        },
+        {
+          "date": "2026-04-29",
+          "kind": "report",
+          "summary": "A Wyoming state legislator said the state needs to determine how revenue from the data center boom should be distributed among local governments and residents.",
+          "source": "https://cowboystatedaily.com/2026/04/29/legislator-says-state-needs-to-figure-out-who-gets-money-from-data-center-boom/"
+        },
+        {
+          "date": "2026-05-08",
+          "kind": "environmental",
+          "summary": "Wyoming residents pressed for clarity on where water for the expanding data center boom would come from in the semi-arid region.",
+          "source": "https://cowboystatedaily.com/2026/05/08/as-data-centers-boom-wyomingites-want-to-know-where-the-waters-coming-from/"
+        },
+        {
+          "date": "2026-05-27",
+          "kind": "vote",
+          "summary": "The Cheyenne City Council rejected a proposed 12-month moratorium on new data center development by an 8-1 vote after hours of debate over water, noise, and long-term community impacts.",
+          "source": "https://cowboystatedaily.com/2026/05/27/full-speed-ahead-for-cheyenne-data-centers-as-council-rejects-moratorium/"
+        },
+        {
+          "date": "2026-05-28",
+          "kind": "coverage",
+          "summary": "Wyoming Public Media reported on the city council rejection of a data center moratorium, noting no pause on development despite resident concerns.",
+          "source": "https://www.wyomingpublicmedia.org/wyoming-economy/2026-05-28/no-pause-on-data-centers-for-cheyenne"
+        },
+        {
+          "date": "2026-06-02",
+          "kind": "hearing",
+          "summary": "The Cheyenne Planning Commission held a five-hour hearing on Microsoft 3,200-acre southside expansion, recommending denial for most components.",
+          "source": "https://cowboystatedaily.com/2026/06/02/cheyenne-planners-recommend-denial-for-most-of-microsofts-data-center-expansion/"
+        },
+        {
+          "date": "2026-06-05",
+          "kind": "vote",
+          "summary": "Microsoft data center annexation/zoning plans failed to secure the Cheyenne Planning Commission endorsement, with two parcels near Laramie County Community College falling short of the required votes.",
+          "source": "https://capcity.news/community/city/2026/06/05/microsofts-data-center-plans-fail-to-get-planning-commission-endorsement-monday/"
+        },
+        {
+          "date": "2026-06-12",
+          "kind": "report",
+          "summary": "Coverage explained Wyoming data center sales tax exemption, worth up to $22.6 million annually, and its extension through 2042.",
+          "source": "https://cowboystatedaily.com/2026/06/12/heres-why-wyoming-doesnt-tax-big-data-center-purchases/"
+        },
+        {
+          "date": "2026-07-06",
+          "kind": "vote",
+          "summary": "The Cheyenne City Council rejected a proposal to slow down the Microsoft land annexation process, clearing the way for a final vote.",
+          "source": "https://capcity.news/community/city/2026/07/06/cheyenne-rejects-new-proposal-to-slow-microsoft-land-annexation-clears-way-for-final-vote/"
+        },
+        {
+          "date": "2026-07-13",
+          "kind": "vote",
+          "summary": "After a seven-hour public hearing with overwhelming resident opposition, the Cheyenne City Council passed Ordinance 4687 by a 6-3 vote, annexing roughly 3,460 acres into the city for Microsoft planned data center campus.",
+          "source": "https://county17.com/2026/07/14/cheyenne-passes-microsoft-data-center-land-annexation-after-more-than-5-hours-of-discussion/"
+        },
+        {
+          "date": "2026-07-14",
+          "kind": "coverage",
+          "summary": "Reporting confirmed Cheyenne grew by 3,500 acres after the controversial Microsoft-related annexation vote following more than five hours of council discussion.",
+          "source": "https://oilcity.news/community/wyoming-community-2/2026/07/14/cheyenne-passes-microsoft-data-center-land-annexation-after-more-than-5-hours-of-discussion/"
+        },
+        {
+          "date": "2026-07-20",
+          "kind": "protest",
+          "summary": "Opponents launched a referendum petition drive seeking to reverse the Cheyenne City Council 3,460-acre annexation vote, needing roughly 2,700 signatures within 20 days.",
+          "source": "https://capcity.news/community/2026/07/20/locals-launch-referendum-petition-after-cheyenne-passes-3500-acre-microsoft-annexation/"
+        },
+        {
+          "date": "2026-08-07",
+          "kind": "protest",
+          "summary": "Referendum organizers submitted 3,275-plus signatures seeking a public vote to reverse the Microsoft annexation, exceeding the roughly 2,739 registered-voter threshold required to force a November ballot measure.",
+          "source": "https://www.thecooldown.com/green-tech/cheyenne-wyoming-data-center-referendum-vote/"
+        }
+      ]
     },
     {
       "id": "stak-energy-north-slope-ak",
@@ -14755,7 +14973,104 @@
       "source": "https://www.electricchoice.com/datacenters/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-07-09",
+          "kind": "announcement",
+          "summary": "QTS Data Centers began exploring a multi-building data center campus on a 615-acre property in the Town of Vienna, Dane County, holding a public drop-in meeting to introduce the concept.",
+          "source": "https://urbanmilwaukee.com/2025/07/09/developer-wants-to-build-data-center-campus-in-dane-county/"
+        },
+        {
+          "date": "2025-07-31",
+          "kind": "public-comment",
+          "summary": "Local residents and officials raised early questions about the scale, water use, and energy demand of the proposed QTS data center campus in rural Dane County.",
+          "source": "https://www.wmtv15news.com/2025/07/31/large-data-center-proposal-raises-questions-rural-dane-county/"
+        },
+        {
+          "date": "2025-10-20",
+          "kind": "environmental",
+          "summary": "Dane County energy office director told Madison sustainability committee the proposed Vienna data center could use about 2.5 times the electricity that all of Dane County currently consumes.",
+          "source": "https://isthmus.com/news/vienna-data-center-could-use-more-than-twice-the-energy-consumption-of-dane-county/"
+        },
+        {
+          "date": "2025-11-01",
+          "kind": "filing",
+          "summary": "QTS planned to submit a formal zoning/annexation application to the DeForest Village Board, triggering village staff due diligence with outside legal and development experts.",
+          "source": "https://www.engagedeforest.com/QTS"
+        },
+        {
+          "date": "2025-11-14",
+          "kind": "announcement",
+          "summary": "QTS and UW-Madison announced a $1.5 million Advancing Data Center Sustainability research partnership with the Nelson Institute for Environmental Studies, funding 14 faculty research projects.",
+          "source": "https://www.wmtv15news.com/2025/11/14/uw-madison-qts-partner-15-million-data-center-development-initiative/"
+        },
+        {
+          "date": "2025-11-18",
+          "kind": "announcement",
+          "summary": "QTS announced a $12 billion, up-to-1,600-acre data center campus in Dane County (Town of Vienna/DeForest), partnering with the Building Trades Council for up to 5,000 union construction jobs and pledging a $50 million community commitment.",
+          "source": "https://dailyreporter.com/2025/11/18/qts-12b-union-data-center-dane-county/"
+        },
+        {
+          "date": "2026-01-07",
+          "kind": "protest",
+          "summary": "More than four hours of public comment at a packed DeForest Village Hall meeting drew opposition to the QTS annexation; a citizen petition sought to require large annexations to go to referendum.",
+          "source": "https://spectrumnews1.com/wi/milwaukee/news/2026/01/07/residents-pack-deforest-village-hall-for-data-center-meeting"
+        },
+        {
+          "date": "2026-01-13",
+          "kind": "moratorium",
+          "summary": "Madison Common Council approved a temporary one-year moratorium on zoning approvals for new data centers larger than 10,000 square feet.",
+          "source": "https://isthmus.com/news/news/madison-moves-to-enact-one-year-moratorium-on-data-center-construction/"
+        },
+        {
+          "date": "2026-01-27",
+          "kind": "report",
+          "summary": "DeForest village staff recommended the Village Board reject QTS annexation petition, concluding the data center proposal was not feasible in DeForest after QTS declined pre-annexation requirements including a 70%-renewable energy commitment.",
+          "source": "https://www.hngnews.com/the_star/local_news/deforest-village-staff-recommend-board-vote-no-on-qts-annexation/article_06e08c70-3221-41c4-8551-05bb29bc872e.html"
+        },
+        {
+          "date": "2026-01-28",
+          "kind": "withdrawal",
+          "summary": "QTS withdrew its data center project from consideration in the Village of DeForest following staff recommendation against annexation and sustained community opposition.",
+          "source": "https://wtmj.com/news/2026/01/28/update-qts-withdraws-data-center-project-in-village-of-deforest/"
+        },
+        {
+          "date": "2026-01-28",
+          "kind": "utility",
+          "summary": "Alliant Energy adjusted plans tied to the QTS Greater Madison project as the DeForest annexation collapsed, having previously committed to developing 750 MW of renewable generation.",
+          "source": "https://nationaltoday.com/us/wi/madison/news/2026/01/28/alliant-energy-pivots-on-qts-greater-madison-wi-data-center-project/"
+        },
+        {
+          "date": "2026-02-03",
+          "kind": "vote",
+          "summary": "The DeForest Village Board voted unanimously 7-0 to reject QTS petition to annex nearly 1,600 acres of Town of Vienna farmland, formally ending the DeForest route for the project.",
+          "source": "https://www.wkow.com/news/top-stories/village-of-deforest-board-unanimously-rejects-annexation-tied-to-qts-data-center/article_99466eb5-860f-4072-af23-4bd063bce2e9.html"
+        },
+        {
+          "date": "2026-02-12",
+          "kind": "coverage",
+          "summary": "Democratic state lawmakers proposed a statewide data center moratorium bill and held a day of action, citing the DeForest/QTS fight as a driver of the broader Wisconsin data center policy debate.",
+          "source": "https://wisconsinexaminer.com/2026/02/12/democratic-lawmakers-propose-data-center-moratorium/"
+        },
+        {
+          "date": "2026-04-06",
+          "kind": "moratorium",
+          "summary": "The Town of Westport (Dane County) enacted a one-year moratorium restricting new data centers to no more than 10,000 square feet, part of a wave of local moratoriums following the QTS controversy.",
+          "source": "https://www.hngnews.com/tribune_enterprise/news/local/westport-enacts-data-center-moratorium/article_41bd7395-3dc5-4617-8fbd-72dcc27142f3.html"
+        },
+        {
+          "date": "2026-05-15",
+          "kind": "filing",
+          "summary": "A resolution was introduced on the Dane County Board establishing an 18-month moratorium on receiving or issuing zoning permits for hyperscale data centers in unincorporated areas.",
+          "source": "https://www.danecounty.gov/PressDetail/11883"
+        },
+        {
+          "date": "2026-06-04",
+          "kind": "moratorium",
+          "summary": "The Dane County Board of Supervisors unanimously approved an 18-month moratorium on zoning permits for hyperscale data centers in unincorporated county areas, running until December 2027.",
+          "source": "https://isthmus.com/news/news/dane-county-board-approves-data-center-moratorium/"
+        }
+      ]
     },
     {
       "id": "meta-beaver-dam-wi",
