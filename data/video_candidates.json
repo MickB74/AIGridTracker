@@ -2,6 +2,21 @@
   "updated": "2026-08-19",
   "videos": [
     {
+      "title": "Indiana is home to 147 data centers. But this town has no power.",
+      "source": "More Perfect Union",
+      "link": "https://www.youtube.com/watch?v=i3TMMZTtNbM",
+      "video_id": "i3TMMZTtNbM",
+      "published_iso": "2026-08-19T18:42:54+00:00",
+      "category": "independent",
+      "states": [
+        "Indiana"
+      ],
+      "locality": null,
+      "state": "IN",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19"
+    },
+    {
       "title": "Patterson extends data center moratorium through July 2027",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBMckx6UnZlTnJZVDdiMVk5X2x0VU1TZGhfdk5CRUQyS2JvemZ0US1VUkdFN2gyMDZaRlo3bjlqZWEzRkozRTVfT3lJYTdPVW5RbHV0d0ZB?oc=5",
@@ -668,7 +683,7 @@
       "locality": null,
       "state": "WA",
       "first_seen": "2026-07-25",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-19"
     },
     {
       "title": "Neighbors say noise from Michigan data center is 24/7 and upending their lives",
@@ -862,6 +877,20 @@
       "last_seen": "2026-08-15"
     },
     {
+      "title": "Massive data center projects spark backlash and protest from Pittsburg and Gilroy communities",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1SVjVjdEVrOWprZ0x5VTA2QWEyMzVrUE5wdm5LRTdRRUMzb1hBaFVwQ0Jzel9vV1hfUWhFYUYyX0tsV1pXX09JbzVySkRHWGotZnhaVjBR?oc=5",
+      "video_id": "",
+      "published_iso": "2026-06-17T15:50:36+00:00",
+      "states": [
+        "California"
+      ],
+      "locality": "Pittsburg",
+      "state": "CA",
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-08-19"
+    },
+    {
       "title": "When the Power Company Takes Your Land for a Data Center",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBnUnNpWFhYdnRrU0hkdXk5V2ltRTR0YXNkX0hQRkFLMTJDWlRUSG5SMWdid1N2X3NJWWREcHFYQTJ3ckQwenR5Z01zRXhkSVY5Ym1zY19B?oc=5",
@@ -1010,7 +1039,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-04-30",
-      "last_seen": "2026-08-14"
+      "last_seen": "2026-08-19"
     },
     {
       "title": "Bans, Moratoriums, Zoning: How to Stop or Limit Data Center Development",
@@ -1085,6 +1114,20 @@
       "state": "WI",
       "first_seen": "2026-04-10",
       "last_seen": "2026-08-12"
+    },
+    {
+      "title": "Growing concerns over data center noise in northern Virginia",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5HSncyR2dvWjVZbzNoMmtsWEVjVllOaXpqR3Z1Zmdkak55R3ExRjNWOTlkY1ZoZWx6dVI5dFFkeEt2dGhfX0IyWkxaSTZnVDAtdHRiTkhR?oc=5",
+      "video_id": "",
+      "published_iso": "2026-04-07T22:01:27+00:00",
+      "states": [
+        "Virginia"
+      ],
+      "locality": "Northern Virginia",
+      "state": "VA",
+      "first_seen": "2026-04-07",
+      "last_seen": "2026-08-19"
     },
     {
       "title": "Debilitating white noise: Data center neighbors complain about high-pitched sounds 'all the time'",
