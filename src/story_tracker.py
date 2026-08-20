@@ -7,13 +7,40 @@ coverage to be a pattern rather than a one-off.
 Pure functions, no Streamlit and no network I/O — importable by build_site.py
 (which must stay stdlib-only beyond pandas) and by the app.
 """
+import json
 import re
+from pathlib import Path
 
 from src.constants import (
     DC_SITES_DF, LOCAL_BODIES_DF, MORATORIUMS_DF, STATE_PUCS_DF, STORY_ANGLES,
 )
 
 _PAREN_RE = re.compile(r"\s*\(.*?\)\s*")
+
+# Locality names imported from Moratorium Nation (CC-BY-4.0) by
+# scripts/import_moratorium_nation.py. Names only — this file records that a
+# place exists and is in scope, never what it did, so it carries none of the
+# source/as_of burden a registry row does and can feed the matcher directly.
+# Without it ~70% of the story archive stays "not yet localized" for want of a
+# town name we simply never had.
+_EXTERNAL_GAZETTEER = Path(__file__).resolve().parent.parent / "data" / "external_gazetteer.json"
+
+
+def _external_entries():
+    """[(name, state_abbrev), ...] from the imported gazetteer; empty when the
+    file is absent or unreadable. Never fatal — a missing import degrades
+    matching, it doesn't break the build."""
+    try:
+        payload = json.loads(_EXTERNAL_GAZETTEER.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return []
+    out = []
+    for entry in payload.get("entries", []):
+        name = str(entry.get("name") or "").strip()
+        state = str(entry.get("state") or "").strip()
+        if name and state:
+            out.append((name, state))
+    return out
 
 # Full state names, lowercased. A registry row like "Ohio (ballot measure)"
 # strips down to bare "Ohio" once the parenthetical is dropped — without this
@@ -32,16 +59,20 @@ def build_gazetteer():
     coincidentally-overlapping name would be.
     """
     seen = {}
+    pairs = []
     for df, col in ((DC_SITES_DF, "location"), (LOCAL_BODIES_DF, "locality"),
                     (MORATORIUMS_DF, "locality")):
         for _, row in df.iterrows():
-            name = clean_locality(row[col])
-            state = str(row["state"]).strip()
-            if not name or not state or state == "nan":
-                continue
-            if name.lower() in _STATE_NAMES_LOWER:
-                continue
-            seen.setdefault((name.lower(), state), (name, state))
+            pairs.append((clean_locality(row[col]), str(row["state"]).strip()))
+    # Curated rows first so their display spelling wins the setdefault over an
+    # imported variant of the same place.
+    pairs.extend(_external_entries())
+    for name, state in pairs:
+        if not name or not state or state == "nan":
+            continue
+        if name.lower() in _STATE_NAMES_LOWER:
+            continue
+        seen.setdefault((name.lower(), state), (name, state))
     entries = sorted(seen.values(), key=lambda e: len(e[0]), reverse=True)
     return [(name, state, re.compile(rf"\b{re.escape(name)}\b", re.IGNORECASE))
             for name, state in entries]

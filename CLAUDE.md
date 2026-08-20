@@ -113,9 +113,22 @@ this page" expander for navigation.
     `effective_status`, never `status`** — a lapsed moratorium cited as
     current is the fastest way for a resident to lose a hearing. `Expired` is
     derived and never stored; `Rescinded` is a real stored status.
+    An optional per-row `term` declares how an *undated* term is bounded —
+    `standing` (permanent ban or standing statute), `until_event` (ends on a
+    condition), `fixed_undated` (a stated duration whose start/end nobody has
+    recorded). `moratorium_term()` derives `term_kind` / `term_label` at
+    import, and `until_date` (any row with an `expires`) always wins over the
+    stored value. **Never infer `term` from the `note` text** — a regex over
+    the notes read Coachella's 45-day pause as a permanent ban and Peculiar's
+    zoning strike as a fixed term. An undeclared row is `unknown`, which is a
+    worklist item, not a guess. The point is that a null `expires` used to
+    mean three incompatible things at once, so the strongest rows on the page
+    (permanent bans) rendered identically to the weakest (unresearched).
     Maintained by `scripts/verify_moratoriums.py` (audits what is published)
     and `scripts/scan_moratorium_candidates.py` (finds what is missing) — see
-    Data maintenance scripts below.
+    Data maintenance scripts below. **Known defect: 9 duplicate
+    `(locality, state)` pairs** from overlapping research batches, so counts
+    read 9 high and those rows render twice.
   - `MORATORIUM_OUTCOMES` — six case studies, each with `sources` (a list of
     URLs) and `as_of`. The Start here wizard labels these "precedents worth
     citing" and a resident reads them aloud at a hearing, so the bar is higher

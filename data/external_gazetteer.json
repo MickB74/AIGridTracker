@@ -1,0 +1,2483 @@
+{
+  "updated": "2026-08-20",
+  "_readme": "Locality names only, imported from Moratorium Nation (CC-BY-4.0) by scripts/import_moratorium_nation.py. Consumed by src/story_tracker.build_gazetteer() to recognise place names in headlines. A name here asserts nothing about what the locality did \u2014 it is not a moratorium record and must never be rendered as one. Regenerate, don't hand-edit.",
+  "attribution": {
+    "dataset": "Moratorium Nation: A Survey of Data Center, Renewable Energy, and Battery Storage Moratoria in the United States",
+    "author": "Michael J. Bommarito II",
+    "url": "https://mjbommar.github.io/moratorium-data-2026/",
+    "repo": "https://github.com/mjbommar/moratorium-data-2026",
+    "license": "CC-BY-4.0"
+  },
+  "entries": [
+    {
+      "name": "Birmingham",
+      "state": "AL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Cullman",
+      "state": "AL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Fairfield",
+      "state": "AL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Fort Payne",
+      "state": "AL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Homewood",
+      "state": "AL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Hueytown",
+      "state": "AL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Leeds",
+      "state": "AL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Prichard",
+      "state": "AL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Carroll County",
+      "state": "AR",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Harrison",
+      "state": "AR",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Russellville",
+      "state": "AR",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Union County",
+      "state": "AR",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Calipatria",
+      "state": "CA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Coachella",
+      "state": "CA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Desert Hot Springs",
+      "state": "CA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "El Monte",
+      "state": "CA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Imperial",
+      "state": "CA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Imperial County",
+      "state": "CA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Indio",
+      "state": "CA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Irwindale",
+      "state": "CA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Montebello",
+      "state": "CA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Monterey Park",
+      "state": "CA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Oakley",
+      "state": "CA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Archuleta County",
+      "state": "CO",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Boulder County",
+      "state": "CO",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Broomfield",
+      "state": "CO",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Buena Vista",
+      "state": "CO",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Delta County",
+      "state": "CO",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Denver",
+      "state": "CO",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Hudson",
+      "state": "CO",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Jefferson County",
+      "state": "CO",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Larimer County",
+      "state": "CO",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Logan County",
+      "state": "CO",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Monument",
+      "state": "CO",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "South Fork",
+      "state": "CO",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Woodland Park",
+      "state": "CO",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Groton",
+      "state": "CT",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Morris",
+      "state": "CT",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "New Haven",
+      "state": "CT",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "West Haven",
+      "state": "CT",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Citrus County",
+      "state": "FL",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Clay County",
+      "state": "FL",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Hernando County",
+      "state": "FL",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Lakeland",
+      "state": "FL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Lynn Haven",
+      "state": "FL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Madison County",
+      "state": "FL",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Nassau County",
+      "state": "FL",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Palm Beach County",
+      "state": "FL",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Pasco County",
+      "state": "FL",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Pensacola",
+      "state": "FL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Pinellas Park",
+      "state": "FL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Santa Rosa County",
+      "state": "FL",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Sarasota County",
+      "state": "FL",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Zephyrhills",
+      "state": "FL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Albany",
+      "state": "GA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Athens-Clarke County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Augusta-Richmond County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Brooks County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Bulloch County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Calhoun",
+      "state": "GA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Camden County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Carroll County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Cedartown",
+      "state": "GA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Cherokee County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Clayton County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Cobb County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Covington",
+      "state": "GA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Coweta County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "DeKalb County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Decatur County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Dougherty County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Douglas County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "East Point",
+      "state": "GA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Fayetteville",
+      "state": "GA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Floyd County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Garden City",
+      "state": "GA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Gordon County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Griffin",
+      "state": "GA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Hall County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Hart County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Jones County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Kingsland",
+      "state": "GA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "LaGrange",
+      "state": "GA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Lamar County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Lee County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Marietta",
+      "state": "GA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Milton",
+      "state": "GA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Monroe County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Newton County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Paulding County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Pike County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Polk County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Rockdale County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Roswell",
+      "state": "GA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Social Circle",
+      "state": "GA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "South Fulton",
+      "state": "GA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Stephens County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Thomas County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Troup County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Walker County",
+      "state": "GA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Adair County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Audubon County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Cedar County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Clarke County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Clayton County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Des Moines County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Dickinson County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Dubuque County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Franklin County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Ida County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Johnson County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Jones County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Lee County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Linn County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Madison County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Mitchell County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Palo Alto County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Peosta",
+      "state": "IA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Plymouth County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Shelby County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Sioux County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Story County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Tama County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Taylor County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Union County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Woodbury County",
+      "state": "IA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Kootenai County",
+      "state": "ID",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Aurora",
+      "state": "IL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Bloomington",
+      "state": "IL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Carbondale",
+      "state": "IL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Champaign County",
+      "state": "IL",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Collinsville",
+      "state": "IL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Effingham",
+      "state": "IL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Godfrey",
+      "state": "IL",
+      "jurisdiction_type": "Village"
+    },
+    {
+      "name": "La Salle County",
+      "state": "IL",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Morgan County",
+      "state": "IL",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Normal",
+      "state": "IL",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "West Chicago",
+      "state": "IL",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Boone County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "DeKalb County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Dearborn County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Fayette County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Franklin County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Fulton County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Huntington County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Indianapolis",
+      "state": "IN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Madison County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Marshall County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Merrillville",
+      "state": "IN",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Miami County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "New Albany",
+      "state": "IN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Pulaski County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Putnam County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Shelby County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Starke County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Valparaiso",
+      "state": "IN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Warrick County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "White County",
+      "state": "IN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Brown County",
+      "state": "KS",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Geary County",
+      "state": "KS",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Harvey County",
+      "state": "KS",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Kingman County",
+      "state": "KS",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Lyon County",
+      "state": "KS",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Marion County",
+      "state": "KS",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "McPherson County",
+      "state": "KS",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Riley County",
+      "state": "KS",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Saline County",
+      "state": "KS",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Sedgwick County",
+      "state": "KS",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Ashland",
+      "state": "KY",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Bell County",
+      "state": "KY",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Boyle County",
+      "state": "KY",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Breckinridge County",
+      "state": "KY",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Bullitt County",
+      "state": "KY",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Cave City",
+      "state": "KY",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Daviess County",
+      "state": "KY",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Edmonson County",
+      "state": "KY",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "La Grange",
+      "state": "KY",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Lexington-Fayette",
+      "state": "KY",
+      "jurisdiction_type": "Other"
+    },
+    {
+      "name": "Meade County Fiscal Court",
+      "state": "KY",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Mercer County Fiscal Court",
+      "state": "KY",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Nelson County",
+      "state": "KY",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Oldham County Fiscal Court",
+      "state": "KY",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Versailles",
+      "state": "KY",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "New Orleans",
+      "state": "LA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "St. Charles Parish",
+      "state": "LA",
+      "jurisdiction_type": "Parish"
+    },
+    {
+      "name": "Everett",
+      "state": "MA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Heath",
+      "state": "MA",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Lowell",
+      "state": "MA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Malden",
+      "state": "MA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Shutesbury",
+      "state": "MA",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Westfield",
+      "state": "MA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Baltimore City",
+      "state": "MD",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Baltimore County",
+      "state": "MD",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Frederick County",
+      "state": "MD",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Howard County",
+      "state": "MD",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Montgomery County",
+      "state": "MD",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Prince George's County",
+      "state": "MD",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Washington County",
+      "state": "MD",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Worcester County",
+      "state": "MD",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Bangor",
+      "state": "ME",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Brunswick",
+      "state": "ME",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Gorham",
+      "state": "ME",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Sanford",
+      "state": "ME",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Scarborough",
+      "state": "ME",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Westbrook",
+      "state": "ME",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Allendale Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Armada Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Big Rapids Charter Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Bruce Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Caledonia Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Chesaning Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Clark Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Delta County",
+      "state": "MI",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Detroit",
+      "state": "MI",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Dundee Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Fenton Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Filer Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Flint",
+      "state": "MI",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Forsyth Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Grand Blanc Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Green Charter Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Hagar Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Haring Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Houghton",
+      "state": "MI",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Howell Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Huron County",
+      "state": "MI",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Lake Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Lansing",
+      "state": "MI",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Lincoln Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Lodi Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Lowell Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Lyndon Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Lyon Charter Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Lyon Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Manchester Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Mason",
+      "state": "MI",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Mason Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Meridian Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Orion Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Park Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Parma Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Pine Grove Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Pittsfield Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Pontiac",
+      "state": "MI",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Porter Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Romeo",
+      "state": "MI",
+      "jurisdiction_type": "Village"
+    },
+    {
+      "name": "Saginaw",
+      "state": "MI",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Saline City",
+      "state": "MI",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Saugatuck Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Sault Ste. Marie Tribe of Chippewa Indians",
+      "state": "MI",
+      "jurisdiction_type": "Tribal"
+    },
+    {
+      "name": "Sherman Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "South Lyon",
+      "state": "MI",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Springfield Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Sterling Heights",
+      "state": "MI",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Taylor",
+      "state": "MI",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Texas Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Tyrone Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Washington Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Waterford Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Watertown Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "York Township",
+      "state": "MI",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Ypsilanti Community Utilities Authority",
+      "state": "MI",
+      "jurisdiction_type": "Utility-authority"
+    },
+    {
+      "name": "Apple Valley",
+      "state": "MN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Carver",
+      "state": "MN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Eagan",
+      "state": "MN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Elko New Market",
+      "state": "MN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Inver Grove Heights",
+      "state": "MN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Le Sueur County",
+      "state": "MN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Mankato",
+      "state": "MN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Minneapolis",
+      "state": "MN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Otsego",
+      "state": "MN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Rosemount",
+      "state": "MN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Waite Park",
+      "state": "MN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Wright County",
+      "state": "MN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Camdenton",
+      "state": "MO",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Columbia",
+      "state": "MO",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Independence",
+      "state": "MO",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Jackson County",
+      "state": "MO",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Marion County",
+      "state": "MO",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Neosho",
+      "state": "MO",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Nodaway County",
+      "state": "MO",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Peculiar",
+      "state": "MO",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Springfield",
+      "state": "MO",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "St. Charles",
+      "state": "MO",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "St. Charles County",
+      "state": "MO",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "St. Joseph",
+      "state": "MO",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "St. Peters",
+      "state": "MO",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Webster County",
+      "state": "MO",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Jackson",
+      "state": "MS",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Missoula County",
+      "state": "MT",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Asheville",
+      "state": "NC",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Bailey",
+      "state": "NC",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Boiling Spring Lakes",
+      "state": "NC",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Boone",
+      "state": "NC",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Brevard",
+      "state": "NC",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Canton",
+      "state": "NC",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Charlotte",
+      "state": "NC",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Chatham County",
+      "state": "NC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Clay County",
+      "state": "NC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Clyde",
+      "state": "NC",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Cumberland County",
+      "state": "NC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Davie County",
+      "state": "NC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Durham",
+      "state": "NC",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Durham County",
+      "state": "NC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Eastern Band of Cherokee Indians",
+      "state": "NC",
+      "jurisdiction_type": "Tribal"
+    },
+    {
+      "name": "Franklin",
+      "state": "NC",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Gates County",
+      "state": "NC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Harnett County",
+      "state": "NC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Hendersonville",
+      "state": "NC",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Hillsborough",
+      "state": "NC",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Holly Springs",
+      "state": "NC",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Kings Mountain",
+      "state": "NC",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Madison County",
+      "state": "NC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Mount Airy",
+      "state": "NC",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Northampton County",
+      "state": "NC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Orange County",
+      "state": "NC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Pasquotank County",
+      "state": "NC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Rowan County",
+      "state": "NC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Spring Hope",
+      "state": "NC",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Surry County",
+      "state": "NC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Swain County",
+      "state": "NC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Watauga County",
+      "state": "NC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Wendell",
+      "state": "NC",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Wilson",
+      "state": "NC",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Woodfin",
+      "state": "NC",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Barnes County",
+      "state": "ND",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Dunn County",
+      "state": "ND",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Mercer County",
+      "state": "ND",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Morton County",
+      "state": "ND",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Oliver County",
+      "state": "ND",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Williams County",
+      "state": "ND",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Cherry County",
+      "state": "NE",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Hitchcock County",
+      "state": "NE",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Logan County",
+      "state": "NE",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Otoe County",
+      "state": "NE",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Seward County",
+      "state": "NE",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Nottingham",
+      "state": "NH",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Galloway Township",
+      "state": "NJ",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Sayreville",
+      "state": "NJ",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Santa Fe County",
+      "state": "NM",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Sierra County",
+      "state": "NM",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Socorro County",
+      "state": "NM",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Humboldt County",
+      "state": "NV",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Nye County",
+      "state": "NV",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Brookhaven",
+      "state": "NY",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Clifton Park",
+      "state": "NY",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Dryden",
+      "state": "NY",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "East Fishkill",
+      "state": "NY",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Highland",
+      "state": "NY",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Lansing - proposed, not enacted",
+      "state": "NY",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Lewiston - proposed, public hearing held",
+      "state": "NY",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Lysander - drafting authorized",
+      "state": "NY",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Manlius",
+      "state": "NY",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Oneonta - proposed, pending",
+      "state": "NY",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Salina",
+      "state": "NY",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Southeast",
+      "state": "NY",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Thurston",
+      "state": "NY",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Van Buren",
+      "state": "NY",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Alliance",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Archbold",
+      "state": "OH",
+      "jurisdiction_type": "Village"
+    },
+    {
+      "name": "Ashville",
+      "state": "OH",
+      "jurisdiction_type": "Village"
+    },
+    {
+      "name": "Berea",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Blanchester",
+      "state": "OH",
+      "jurisdiction_type": "Village"
+    },
+    {
+      "name": "Braceville Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Butler County",
+      "state": "OH",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Canton Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Cincinnati",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Cleveland",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Cortland",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Defiance",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Findlay",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Girard",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Grafton",
+      "state": "OH",
+      "jurisdiction_type": "Village"
+    },
+    {
+      "name": "Grove City",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Howland Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Hubbard",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Jackson Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Jerome Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Lake Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Lordstown",
+      "state": "OH",
+      "jurisdiction_type": "Village"
+    },
+    {
+      "name": "Massillon",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Maumee",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Monclova Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Montgomery Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Mount Orab",
+      "state": "OH",
+      "jurisdiction_type": "Village"
+    },
+    {
+      "name": "New Carlisle",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Norton",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Pierce Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Plain City",
+      "state": "OH",
+      "jurisdiction_type": "Village"
+    },
+    {
+      "name": "Plain Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Providence Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Ravenna",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Richfield Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Scioto Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Shawnee Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "South Bloomfield",
+      "state": "OH",
+      "jurisdiction_type": "Village"
+    },
+    {
+      "name": "Spencer Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Sprigg Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Springfield",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "St. Marys",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Tallmadge",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Tiffin",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Vermilion",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Washington Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Waterville",
+      "state": "OH",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Waterville Township",
+      "state": "OH",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Williamsburg",
+      "state": "OH",
+      "jurisdiction_type": "Village"
+    },
+    {
+      "name": "Yellow Springs",
+      "state": "OH",
+      "jurisdiction_type": "Village"
+    },
+    {
+      "name": "Broken Arrow",
+      "state": "OK",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Edmond",
+      "state": "OK",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Luther",
+      "state": "OK",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Norman",
+      "state": "OK",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Oklahoma City",
+      "state": "OK",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Pawhuska",
+      "state": "OK",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Seminole Nation of Oklahoma",
+      "state": "OK",
+      "jurisdiction_type": "Tribal"
+    },
+    {
+      "name": "Tulsa",
+      "state": "OK",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Hillsboro",
+      "state": "OR",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Bensalem Township",
+      "state": "PA",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Brookville Borough",
+      "state": "PA",
+      "jurisdiction_type": "Other"
+    },
+    {
+      "name": "Butler Township",
+      "state": "PA",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Center Township",
+      "state": "PA",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Hazle Township",
+      "state": "PA",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Lycoming County",
+      "state": "PA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Montour County",
+      "state": "PA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Muncy Township",
+      "state": "PA",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Warrington Township",
+      "state": "PA",
+      "jurisdiction_type": "Township"
+    },
+    {
+      "name": "Chester County",
+      "state": "SC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Chesterfield County",
+      "state": "SC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Colleton County",
+      "state": "SC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Greenwood County",
+      "state": "SC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Newberry County",
+      "state": "SC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "York County",
+      "state": "SC",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Yankton County",
+      "state": "SD",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Anderson County",
+      "state": "TN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Bristol",
+      "state": "TN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Cedar Hill",
+      "state": "TN",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Clinton",
+      "state": "TN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Coffee County",
+      "state": "TN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Crossville",
+      "state": "TN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Cumberland County",
+      "state": "TN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Grundy County",
+      "state": "TN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Hawkins County",
+      "state": "TN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Johnson City",
+      "state": "TN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Jonesborough",
+      "state": "TN",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Knox County",
+      "state": "TN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Knoxville",
+      "state": "TN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Loudon County",
+      "state": "TN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "McMinnville",
+      "state": "TN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Morgan County",
+      "state": "TN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Nashville-Davidson County",
+      "state": "TN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Shelbyville",
+      "state": "TN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Smithville",
+      "state": "TN",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Sullivan County",
+      "state": "TN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Unincorporated Hamilton County",
+      "state": "TN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Warren County",
+      "state": "TN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Washington County",
+      "state": "TN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "White County",
+      "state": "TN",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Austin County",
+      "state": "TX",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Harlingen",
+      "state": "TX",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Hill County",
+      "state": "TX",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Box Elder County",
+      "state": "UT",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Cache County",
+      "state": "UT",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Grand County",
+      "state": "UT",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Iron County",
+      "state": "UT",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Logan",
+      "state": "UT",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Wayne County",
+      "state": "UT",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Chesapeake",
+      "state": "VA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Fluvanna County",
+      "state": "VA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Burien",
+      "state": "WA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "East Wenatchee",
+      "state": "WA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Federal Way",
+      "state": "WA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Marysville",
+      "state": "WA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Pasco",
+      "state": "WA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Seattle",
+      "state": "WA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Skagit County",
+      "state": "WA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Snohomish County",
+      "state": "WA",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Spokane",
+      "state": "WA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Wenatchee",
+      "state": "WA",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Ashwaubenon",
+      "state": "WI",
+      "jurisdiction_type": "Village"
+    },
+    {
+      "name": "Cottage Grove",
+      "state": "WI",
+      "jurisdiction_type": "Village"
+    },
+    {
+      "name": "Dane County",
+      "state": "WI",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Door County",
+      "state": "WI",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Grant County",
+      "state": "WI",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Green County",
+      "state": "WI",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Hobart",
+      "state": "WI",
+      "jurisdiction_type": "Village"
+    },
+    {
+      "name": "La Crosse County",
+      "state": "WI",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Madison",
+      "state": "WI",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Manitowoc County",
+      "state": "WI",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Monroe County",
+      "state": "WI",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "New Denmark",
+      "state": "WI",
+      "jurisdiction_type": "Town"
+    },
+    {
+      "name": "Shawano County",
+      "state": "WI",
+      "jurisdiction_type": "County"
+    },
+    {
+      "name": "Sheboygan",
+      "state": "WI",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Superior",
+      "state": "WI",
+      "jurisdiction_type": "City"
+    },
+    {
+      "name": "Wrightstown",
+      "state": "WI",
+      "jurisdiction_type": "Village"
+    }
+  ]
+}

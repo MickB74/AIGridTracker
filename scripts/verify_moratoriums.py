@@ -53,7 +53,7 @@ TERM_WORDS = ("-month", "-year", "year-long", "yearlong", "temporary",
               "interim", "pause until", "6 month", "12 month", "18 month")
 
 SEVERITY = ["expired", "dead-link", "missing-source", "undated-term",
-            "stale-as-of", "expiring", "blocked"]
+            "unclassified-term", "stale-as-of", "expiring", "blocked"]
 
 
 def _days_since(iso):
@@ -129,14 +129,27 @@ def audit(check_links=True):
                 add(r, "stale-as-of",
                     f"last read {age}d ago (limit {STALE_AFTER_DAYS})")
 
-    # An enacted, time-limited row with no end date: the page shows it in
-    # force indefinitely and has no way to know better.
+    # An enacted row with no end date used to be one undifferentiated chore.
+    # It is really three, and only two are work:
+    #   fixed_undated — a stated duration with no recorded start/end. Real
+    #                   work, and the easiest kind: find the adoption date.
+    #   unknown       — nobody has established how the term is bounded.
+    #   standing / until_event — not a defect at all. A permanent ban has no
+    #                   end date because it has no end, and saying "find the
+    #                   adoption date" about one trains the worklist away.
     for r in rows:
-        if (r.effective_status == "Enacted" and not has_value(r.expires)
-                and _looks_time_limited(r.note)):
+        if r.effective_status != "Enacted" or has_value(r.expires):
+            continue
+        kind = getattr(r, "term_kind", "unknown")
+        if kind == "fixed_undated":
             add(r, "undated-term",
                 "note describes a fixed term but no end date is recorded — "
                 "the page cannot expire it. Find the adoption date")
+        elif kind == "unknown":
+            add(r, "unclassified-term",
+                "no end date and no `term` declared — the row could be a "
+                "permanent ban or an unresearched pause and the page cannot "
+                "tell the reader which. Read the source and set `term`")
 
     # Everything that carries `sources` + `as_of` gets the same audit. These
     # three registries are what a resident quotes out loud — case studies as

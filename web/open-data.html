@@ -465,10 +465,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <section class="glass-card">
   <h2>Moratorium &amp; community action tracker</h2>
   <p>318 data center moratoriums, bans, and community actions across 38 states. Each row carries a primary source, verification date, and derived expiry status — so a lapsed moratorium is never cited as current.</p>
-  <p><strong>Download:</strong> <a href="data/moratoriums.json">JSON</a> · <a href="data/moratoriums.csv">CSV</a> · JSON 199 KB · CSV 106 KB</p>
+  <p><strong>Download:</strong> <a href="data/moratoriums.json">JSON</a> · <a href="data/moratoriums.csv">CSV</a> · JSON 226 KB · CSV 119 KB</p>
   <p class="muted">318 records · CC BY 4.0 ·
   <a href="moratoriums.html">source page</a></p>
-  <details><summary>Schema — 15 fields</summary><div class="table-scroll"><table><tr><th>Column</th><th>Description</th></tr><tr><td><code>locality</code></td><td>Town, city or county taking the action; &#x27;X (statewide)&#x27; for state-level</td></tr>
+  <details><summary>Schema — 17 fields</summary><div class="table-scroll"><table><tr><th>Column</th><th>Description</th></tr><tr><td><code>locality</code></td><td>Town, city or county taking the action; &#x27;X (statewide)&#x27; for state-level</td></tr>
 <tr><td><code>state</code></td><td>USPS two-letter code</td></tr>
 <tr><td><code>level</code></td><td>Local or State</td></tr>
 <tr><td><code>status</code></td><td>As recorded: Enacted, Proposed, Rejected, Vetoed or Rescinded</td></tr>
@@ -477,6 +477,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <tr><td><code>days_left</code></td><td>Days until `expires`; negative once past, null when no end date is recorded</td></tr>
 <tr><td><code>when</code></td><td>Human-readable date of the action, as reported</td></tr>
 <tr><td><code>expires</code></td><td>ISO date the term lapses, or null when permanent, condition-based, or not documented</td></tr>
+<tr><td><code>term_kind</code></td><td>How the term is bounded: until_date (has an `expires`), standing (permanent ban or standing statute), until_event (ends on a condition), fixed_undated (a stated duration whose end date isn&#x27;t recorded), unknown (not documented). Derived; `until_date` always wins over the stored `term`</td></tr>
+<tr><td><code>term_label</code></td><td>Plain-language rendering of `term_kind`</td></tr>
 <tr><td><code>note</code></td><td>Scope, threshold, vote count and other detail</td></tr>
 <tr><td><code>source</code></td><td>URL this row was read from, or null if unverified</td></tr>
 <tr><td><code>as_of</code></td><td>Date the source was read, or null</td></tr>
@@ -490,7 +492,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <section class="glass-card">
   <h2>Project intelligence tracker</h2>
   <p>203 identified data center proposals tracked from rumor to hearing to decision. Each project carries a dated intelligence log so you can see what changed and when.</p>
-  <p><strong>Download:</strong> <a href="data/projects.json">JSON</a> · <a href="data/projects.csv">CSV</a> · JSON 893 KB · CSV 92 KB</p>
+  <p><strong>Download:</strong> <a href="data/projects.json">JSON</a> · <a href="data/projects.csv">CSV</a> · JSON 945 KB · CSV 92 KB</p>
   <p class="muted">203 records · CC BY 4.0 ·
   <a href="projects.html">source page</a></p>
   <details><summary>Schema — 23 fields</summary><div class="table-scroll"><table><tr><th>Column</th><th>Description</th></tr><tr><td><code>id</code></td><td>Stable slug, unique per project.</td></tr>

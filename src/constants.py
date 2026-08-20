@@ -822,7 +822,8 @@ MORATORIUMS = [
      "status": "Enacted", "when": "Jun 4, 2026",
      "note": "Adopted 4-1 May 5, effective Jun 4; data centers not permitted in any zoning district",
      "lat": 41.92, "lon": -71.55, "expires": None, "as_of": "2026-08-04",
-     "source": "https://www.wpri.com/news/local-news/northwest/smithfield-town-council-approves-ordinance-to-prevent-construction-of-data-centers/"},
+     "source": "https://www.wpri.com/news/local-news/northwest/smithfield-town-council-approves-ordinance-to-prevent-construction-of-data-centers/",
+     "term": "standing"},
     {"locality": "Meridian Township", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "May 19, 2026",
      "note": "6-month pause on data centers and battery storage facilities; "
@@ -885,7 +886,8 @@ MORATORIUMS = [
              "blocking Diode Ventures' $1.5B Harper Road Technology Park. "
              "A 100-day moratorium (Aug 2024) preceded the permanent change",
      "lat": 38.72, "lon": -94.46, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.kshb.com/news/local-news/peculiar-reverses-zoning-for-data-center-after-cries-from-neighbors"},
+     "source": "https://www.kshb.com/news/local-news/peculiar-reverses-zoning-for-data-center-after-cries-from-neighbors",
+     "term": "standing"},
     {"locality": "Bangor", "state": "ME", "level": "Local",
      "status": "Enacted", "when": "Apr 13, 2026",
      "note": "180-day pause, 9-0. City cited lack of information about "
@@ -913,7 +915,8 @@ MORATORIUMS = [
              "establishment, construction, expansion, or operation of "
              "commercial data centers in all zoning districts",
      "lat": 35.06, "lon": -83.75, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.clayconc.com/ordinances"},
+     "source": "https://www.clayconc.com/ordinances",
+     "term": "standing"},
     {"locality": "Canton", "state": "NC", "level": "Local",
      "status": "Enacted", "when": "Feb 11, 2026",
      "note": "12-month pause, unanimous; covers data centers, crypto mining, "
@@ -993,7 +996,8 @@ MORATORIUMS = [
              "the zoning ordinance to prohibit data centers in all zoning "
              "districts. Proactive; no specific proposal was pending",
      "lat": 35.53, "lon": -82.91, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.themountaineer.com/"},
+     "source": "https://www.themountaineer.com/",
+     "term": "standing"},
     # ── Promoted from the news-scan queue, 2026-08-04 ──────────────────────
     {"locality": "Rockford", "state": "IL", "level": "Local",
      "status": "Enacted", "when": "Aug 3, 2026",
@@ -1048,7 +1052,8 @@ MORATORIUMS = [
              "Texas city to do it, and a live test of the 2023 'Death Star' "
              "preemption law",
      "lat": 29.88, "lon": -97.94, "expires": None, "as_of": "2026-08-04",
-     "source": "https://www.texastribune.org/2026/06/30/texas-san-marcos-data-center-ban-zoning-laws/"},
+     "source": "https://www.texastribune.org/2026/06/30/texas-san-marcos-data-center-ban-zoning-laws/",
+     "term": "standing"},
     {"locality": "Hays County", "state": "TX", "level": "Local",
      "status": "Enacted", "when": "2026",
      "note": "Resolution pausing review of high-water-use and large industrial "
@@ -1160,19 +1165,22 @@ MORATORIUMS = [
              "suing for more than $300M in federal court — the test case for "
              "whether a small municipality can absorb the litigation risk of a ban",
      "lat": 39.68, "lon": -75.06, "expires": None, "as_of": "2026-08-04",
-     "source": "https://www.cbsnews.com/philadelphia/news/monroe-gloucester-new-jersey-data-center-ban-law/"},
+     "source": "https://www.cbsnews.com/philadelphia/news/monroe-gloucester-new-jersey-data-center-ban-law/",
+     "term": "standing"},
     {"locality": "Phillipsburg", "state": "NJ", "level": "Local",
      "status": "Enacted", "when": "Apr 2026",
      "note": "Ordinance 2026-08 prohibits data centers throughout the town; council "
              "is folding the ban into the master plan to harden it against "
              "challenge",
      "lat": 40.69, "lon": -75.19, "expires": None, "as_of": "2026-08-04",
-     "source": "https://www.tapinto.net/towns/phillipsburg/sections/government/articles/town-council-moves-to-solidify-phillipsburg-s-data-center-ban-via-master-plan-update"},
+     "source": "https://www.tapinto.net/towns/phillipsburg/sections/government/articles/town-council-moves-to-solidify-phillipsburg-s-data-center-ban-via-master-plan-update",
+     "term": "standing"},
     {"locality": "Warren", "state": "NJ", "level": "Local",
      "status": "Enacted", "when": "Jun 23, 2026",
      "note": "Township ban on data centers",
      "lat": 40.63, "lon": -74.51, "expires": None, "as_of": "2026-08-04",
-     "source": "https://www.roi-nj.com/2026/06/23/industry/energy-utilities/warren-becomes-latest-town-in-n-j-to-ban-data-centers/"},
+     "source": "https://www.roi-nj.com/2026/06/23/industry/energy-utilities/warren-becomes-latest-town-in-n-j-to-ban-data-centers/",
+     "term": "standing"},
     {"locality": "Holly Springs", "state": "NC", "level": "Local",
      "status": "Enacted", "when": "Jun 16, 2026",
      "note": "1-year pause on data center construction",
@@ -1191,7 +1199,8 @@ MORATORIUMS = [
              "end date is not documented in the coverage read — confirm before "
              "citing it as active",
      "lat": 33.58, "lon": -85.08, "expires": None, "as_of": "2026-08-04",
-     "source": "https://gradickcommunications.com/carroll-county-board-of-commissioners-approve-100-day-moratorium-on-data-centers-battery-energy-storage-systems/"},
+     "source": "https://gradickcommunications.com/carroll-county-board-of-commissioners-approve-100-day-moratorium-on-data-centers-battery-energy-storage-systems/",
+     "term": "fixed_undated"},
     {"locality": "Montgomery County", "state": "MD", "level": "Local",
      "status": "Enacted", "when": "Jul 28, 2026",
      "note": "18-month moratorium approved unanimously, alongside limits on data "
@@ -1351,7 +1360,8 @@ MORATORIUMS = [
      "note": "6-month moratorium in unincorporated areas, unanimous. Studying "
              "economic, health, agricultural, and water impacts",
      "lat": 46.60, "lon": -120.51, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.yakimaherald.com/news/local/government/yakima-county-commissioners-pass-six-month-data-center-moratorium/article_997dbbc7-7fe0-476a-9d92-73179f958bf7.html"},
+     "source": "https://www.yakimaherald.com/news/local/government/yakima-county-commissioners-pass-six-month-data-center-moratorium/article_997dbbc7-7fe0-476a-9d92-73179f958bf7.html",
+     "term": "fixed_undated"},
     {"locality": "Greensboro", "state": "NC", "level": "Local",
      "status": "Proposed", "when": "Public hearing Aug 17, 2026",
      "note": "Council voted 5-4 on Jul 21 against even starting the moratorium "
@@ -1385,7 +1395,8 @@ MORATORIUMS = [
              "50+ MW facilities until DPS finishes a generic environmental impact "
              "statement — roughly a year, but tied to that study, not a fixed date",
      "lat": 42.65, "lon": -73.76, "expires": None, "as_of": "2026-08-04",
-     "source": "https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops"},
+     "source": "https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops",
+     "term": "until_event"},
     {"locality": "New York (S10642/A11560)", "state": "NY", "level": "State",
      "status": "Proposed", "when": "Passed both houses Jun 4, 2026",
      "note": "Responsible Data Center Development Act: 1-year moratorium on state "
@@ -1408,7 +1419,8 @@ MORATORIUMS = [
              "outside ERCOT. PUCT open meeting Aug 20. No end date — treat "
              "as a hold on the queue, not a construction ban",
      "lat": 30.27, "lon": -97.74, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.texastribune.org/2026/08/03/texas-data-center-project-audit-greg-abbott/"},
+     "source": "https://www.texastribune.org/2026/08/03/texas-data-center-project-audit-greg-abbott/",
+     "term": "until_event"},
     {"locality": "Oregon (statewide)", "state": "OR", "level": "State",
      "status": "Proposed", "when": "Aug 4, 2026",
      "note": "Democratic lawmakers proposed a three-year moratorium on new large "
@@ -1539,7 +1551,8 @@ MORATORIUMS = [
              "concerns; stays in place until a regulatory ordinance is "
              "adopted rather than a fixed date.",
      "lat": 36.21, "lon": -115.98, "expires": None, "as_of": "2026-08-12",
-     "source": "https://pvtimes.com/news/nye-county-approves-data-center-moratorium-186722/"},
+     "source": "https://pvtimes.com/news/nye-county-approves-data-center-moratorium-186722/",
+     "term": "until_event"},
     {"locality": "Farmville", "state": "NC", "level": "Local",
      "status": "Enacted", "when": "Aug 3, 2026",
      "note": "12-month moratorium on data-center development, approved "
@@ -1558,7 +1571,8 @@ MORATORIUMS = [
              "off the former Bristol Myers Squibb campus. Some residents say "
              "the ordinance's enforcement mechanism falls short.",
      "lat": 40.72, "lon": -74.36, "expires": None, "as_of": "2026-08-12",
-     "source": "https://www.tapinto.net/towns/summit/sections/government/articles/summit-council-takes-up-controversial-ai-data-center-and-detention-ban"},
+     "source": "https://www.tapinto.net/towns/summit/sections/government/articles/summit-council-takes-up-controversial-ai-data-center-and-detention-ban",
+     "term": "standing"},
     {"locality": "Newberry County", "state": "SC", "level": "Local",
      "status": "Enacted", "when": "Jul 16, 2026",
      "note": "12-month moratorium on accepting new data-center permits, "
@@ -1624,7 +1638,8 @@ MORATORIUMS = [
              "Resolution passed 5-0 on Jul 23, ordinance approved 4-1 in Aug. "
              "Small server rooms (accessory use) still permitted",
      "lat": 30.67, "lon": -87.38, "expires": None, "as_of": "2026-08-13",
-     "source": "https://weartv.com/news/local/escambia-county-commissioners-vote-to-block-large-scale-data-centers-in-unincorporated-areas"},
+     "source": "https://weartv.com/news/local/escambia-county-commissioners-vote-to-block-large-scale-data-centers-in-unincorporated-areas",
+     "term": "standing"},
     {"locality": "Santa Rosa County", "state": "FL", "level": "Local",
      "status": "Enacted", "when": "Jul 23, 2026",
      "note": "12-month moratorium in unincorporated areas; residents at the "
@@ -1708,38 +1723,44 @@ MORATORIUMS = [
              "Originally a 45-day moratorium (Jan 21), extended 1 year, then "
              "put on the ballot",
      "lat": 34.06, "lon": -118.12, "expires": None, "as_of": "2026-08-13",
-     "source": "https://lapublicpress.org/2026/06/monterey-park-data-center-ban-elections-2026/"},
+     "source": "https://lapublicpress.org/2026/06/monterey-park-data-center-ban-elections-2026/",
+     "term": "standing"},
     {"locality": "Cherry Hill", "state": "NJ", "level": "Local",
      "status": "Enacted", "when": "Jul 28, 2026",
      "note": "Ordinance prohibiting data centers as a non-permitted use, "
              "unanimous; small server rooms for standalone businesses still "
              "allowed. Most populous municipality in Camden County",
      "lat": 39.93, "lon": -75.00, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.inquirer.com/south-jersey/cherry-hill-nj-data-center-ban-20260728.html"},
+     "source": "https://www.inquirer.com/south-jersey/cherry-hill-nj-data-center-ban-20260728.html",
+     "term": "standing"},
     {"locality": "Medford", "state": "NJ", "level": "Local",
      "status": "Enacted", "when": "Jun 25, 2026",
      "note": "Ordinance prohibiting data centers within town limits, unanimous. "
              "Preemptive — no proposals pending",
      "lat": 39.87, "lon": -74.82, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.inquirer.com/south-jersey/medford-data-center-ban-artificial-intelligence-20260625.html"},
+     "source": "https://www.inquirer.com/south-jersey/medford-data-center-ban-artificial-intelligence-20260625.html",
+     "term": "standing"},
     {"locality": "Mansfield Township (Burlington Co.)", "state": "NJ", "level": "Local",
      "status": "Enacted", "when": "Jul 15, 2026",
      "note": "Ordinance banning data centers as a named use category, unanimous. "
              "27th NJ municipality to pass a local ban",
      "lat": 40.07, "lon": -74.72, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.yahoo.com/news/us/articles/mansfield-revises-zoning-strengthen-data-123013988.html"},
+     "source": "https://www.yahoo.com/news/us/articles/mansfield-revises-zoning-strengthen-data-123013988.html",
+     "term": "standing"},
     {"locality": "Chesterfield", "state": "NJ", "level": "Local",
      "status": "Enacted", "when": "Jul 2026",
      "note": "Ban on data centers in all zones, adopted alongside Mansfield "
              "Township",
      "lat": 40.12, "lon": -74.66, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.inquirer.com/south-jersey/cherry-hill-nj-data-center-ban-20260728.html"},
+     "source": "https://www.inquirer.com/south-jersey/cherry-hill-nj-data-center-ban-20260728.html",
+     "term": "standing"},
     {"locality": "Berkeley Heights", "state": "NJ", "level": "Local",
      "status": "Enacted", "when": "Jul 2026",
      "note": "Permanent ban on data centers in all zones, unanimous; followed "
              "debate over potential Nokia site conversion",
      "lat": 40.68, "lon": -74.44, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.tapinto.net/towns/berkeley-heights/sections/business-and-finance/articles/berkeley-heights-bans-data-centers-townwide-capping-weeks-of-debate-over-nokia-site"},
+     "source": "https://www.tapinto.net/towns/berkeley-heights/sections/business-and-finance/articles/berkeley-heights-bans-data-centers-townwide-capping-weeks-of-debate-over-nokia-site",
+     "term": "standing"},
     # Proposed / under consideration — 2026-08-13 additions
     {"locality": "Louisville", "state": "KY", "level": "Local",
      "status": "Enacted", "when": "Aug 13, 2026",
@@ -1871,13 +1892,15 @@ MORATORIUMS = [
              "in the county zoning ordinance. One of two IN counties (with Cass) "
              "to outright ban data centers",
      "lat": 41.35, "lon": -86.31, "expires": None, "as_of": "2026-08-13",
-     "source": "https://wsbt.com/news/local/marshall-county-approves-permanent-ban-on-data-centers-effective-immediately-data-centers-solar-farms-industrial-size-projects-development-county-council-regulations-counties-experts-industries-marshall-county-indiana"},
+     "source": "https://wsbt.com/news/local/marshall-county-approves-permanent-ban-on-data-centers-effective-immediately-data-centers-solar-farms-industrial-size-projects-development-county-council-regulations-counties-experts-industries-marshall-county-indiana",
+     "term": "standing"},
     {"locality": "Cass County", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "2026",
      "note": "Permanent ban on new data centers — one of two IN counties (with "
              "Marshall) to outright ban rather than pause",
      "lat": 40.76, "lon": -86.35, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.wfyi.org/statewide/2026-07-06/indiana-counties-data-center-moratoriums-bans-2026"},
+     "source": "https://www.wfyi.org/statewide/2026-07-06/indiana-counties-data-center-moratoriums-bans-2026",
+     "term": "standing"},
     {"locality": "Johnson City", "state": "TN", "level": "Local",
      "status": "Enacted", "when": "Extended May 22, 2026",
      "note": "Moratorium extended unanimously to Dec 3, 2026 while a special "
@@ -1899,13 +1922,15 @@ MORATORIUMS = [
              "an ordinance is drafted. Waiting on state-level legislation before "
              "finalising local rules",
      "lat": 33.96, "lon": -83.38, "expires": None, "as_of": "2026-08-13",
-     "source": "https://flagpole.com/news/city-dope/2026/03/11/athens-clarke-county-commission-extends-moratorium-on-data-centers/"},
+     "source": "https://flagpole.com/news/city-dope/2026/03/11/athens-clarke-county-commission-extends-moratorium-on-data-centers/",
+     "term": "until_event"},
     {"locality": "Palmetto", "state": "GA", "level": "Local",
      "status": "Enacted", "when": "Mar 2026",
      "note": "Permanent ban — city council unanimously rewrote the industrial "
              "zoning code to exclude data centers entirely",
      "lat": 33.51, "lon": -84.67, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.wabe.org/palmetto-city-council-approves-rewritten-industrial-zoning-code-to-ban-exclude-data-centers/"},
+     "source": "https://www.wabe.org/palmetto-city-council-approves-rewritten-industrial-zoning-code-to-ban-exclude-data-centers/",
+     "term": "standing"},
     {"locality": "Hall County", "state": "GA", "level": "Local",
      "status": "Enacted", "when": "Feb 26, 2026",
      "note": "180-day moratorium on data centers, high-density residential, and "
@@ -1970,7 +1995,8 @@ MORATORIUMS = [
      "note": "Ban on data centers in all zoning districts; cited heightened "
              "concerns as a Pinelands Community",
      "lat": 39.74, "lon": -74.83, "expires": None, "as_of": "2026-08-13",
-     "source": "https://nj1015.com/new-jersey-ai-data-center-bans/"},
+     "source": "https://nj1015.com/new-jersey-ai-data-center-bans/",
+     "term": "standing"},
     # Proposed — batch 2
     {"locality": "Plainfield", "state": "NJ", "level": "Local",
      "status": "Proposed", "when": "First reading Jul 2026",
@@ -2020,7 +2046,8 @@ MORATORIUMS = [
      "note": "1-year moratorium targeting hyper/mega data centers, especially "
              "AI facilities. Preemptive — no proposals pending",
      "lat": 33.69, "lon": -86.68, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.trussvilletribune.com/2026/08/07/pinson-council-passes-one-year-moratorium-on-data-centers/"},
+     "source": "https://www.trussvilletribune.com/2026/08/07/pinson-council-passes-one-year-moratorium-on-data-centers/",
+     "term": "fixed_undated"},
     {"locality": "Fairfield", "state": "AL", "level": "Local",
      "status": "Enacted", "when": "Jul 2026",
      "note": "Temporary moratorium after resident pressure over Patmos "
@@ -2035,7 +2062,8 @@ MORATORIUMS = [
              "zoning districts, 7-1 (Bill 14085). Triggered by 'Project Cumulus' "
              "proposal near city water wells. Initial 1-year moratorium Aug 2025",
      "lat": 38.78, "lon": -90.52, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.ksdk.com/article/news/politics/st-charles-city-council-votes-7-1-to-effectively-ban-data-centers/63-7c9264ad-1dc5-4c38-853a-1f7cddf9c2ac"},
+     "source": "https://www.ksdk.com/article/news/politics/st-charles-city-council-votes-7-1-to-effectively-ban-data-centers/63-7c9264ad-1dc5-4c38-853a-1f7cddf9c2ac",
+     "term": "standing"},
     {"locality": "St. Charles County", "state": "MO", "level": "Local",
      "status": "Enacted", "when": "Jul 13, 2026",
      "note": "6-month moratorium on projects >100,000 sq ft or >5 MW, "
@@ -2049,7 +2077,8 @@ MORATORIUMS = [
              "applications, 6-0. Council approved data center definition and "
              "zoning criteria simultaneously",
      "lat": 38.95, "lon": -92.33, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.columbiamissourian.com/news/local/city-council-approves-data-center-definition-requests-moratorium/article_064eadce-c84e-4bfc-8f9c-b930741b94af.html"},
+     "source": "https://www.columbiamissourian.com/news/local/city-council-approves-data-center-definition-requests-moratorium/article_064eadce-c84e-4bfc-8f9c-b930741b94af.html",
+     "term": "fixed_undated"},
     # ── Batch 3 — Minnesota ───────────────────────────────────────────────
     {"locality": "Minneapolis", "state": "MN", "level": "Local",
      "status": "Enacted", "when": "May 22, 2026",
@@ -2086,7 +2115,8 @@ MORATORIUMS = [
              "unincorporated areas, 4-1. Extended from originally proposed "
              "6-month pause",
      "lat": 45.04, "lon": -92.89, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.startribune.com/minnesota-counties-data-centers/601857833"},
+     "source": "https://www.startribune.com/minnesota-counties-data-centers/601857833",
+     "term": "fixed_undated"},
     # ── Batch 3 — Michigan ────────────────────────────────────────────────
     {"locality": "Wixom", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Mar 24, 2026",
@@ -2160,7 +2190,8 @@ MORATORIUMS = [
      "status": "Enacted", "when": "Jan 2026",
      "note": "1-year moratorium on data center development",
      "lat": 42.24, "lon": -83.27, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
+     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact",
+     "term": "fixed_undated"},
     {"locality": "Tyrone Township", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Dec 2, 2025",
      "note": "6-month moratorium on data center development",
@@ -2170,7 +2201,8 @@ MORATORIUMS = [
      "status": "Enacted", "when": "Oct 2025",
      "note": "90-day moratorium with extension on data center development",
      "lat": 41.96, "lon": -83.66, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
+     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact",
+     "term": "fixed_undated"},
     {"locality": "Sylvan Township", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Jan 22, 2026",
      "note": "6-month moratorium on data center development",
@@ -2195,7 +2227,8 @@ MORATORIUMS = [
      "status": "Enacted", "when": "Dec 2025",
      "note": "180-day moratorium on data center development",
      "lat": 42.76, "lon": -83.48, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
+     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact",
+     "term": "fixed_undated"},
     {"locality": "Village of Romeo", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Jan 26, 2026",
      "note": "Moratorium on data center development",
@@ -2205,7 +2238,8 @@ MORATORIUMS = [
      "status": "Enacted", "when": "Feb 2026",
      "note": "6-month moratorium on data center development",
      "lat": 43.61, "lon": -85.58, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
+     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact",
+     "term": "fixed_undated"},
     {"locality": "Big Rapids Township", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Feb 23, 2026",
      "note": "1-year moratorium on data center development",
@@ -2215,7 +2249,8 @@ MORATORIUMS = [
      "status": "Enacted", "when": "Feb 2, 2026",
      "note": "4-month moratorium with extension option",
      "lat": 42.74, "lon": -82.94, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.lenox-mi.gov/m/newsflash/home/detail/240"},
+     "source": "https://www.lenox-mi.gov/m/newsflash/home/detail/240",
+     "term": "fixed_undated"},
     # ── Batch 3 — Kentucky ────────────────────────────────────────────────
     {"locality": "Bell County", "state": "KY", "level": "Local",
      "status": "Enacted", "when": "Jul 2, 2026",
@@ -2258,7 +2293,8 @@ MORATORIUMS = [
              "accommodate a proposed hyperscale data center. Grassroots "
              "group 'We Are Mercer County' active",
      "lat": 37.81, "lon": -84.88, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.wkms.org/2026-08-12/a-kentucky-county-passes-a-data-center-moratorium-with-a-city-sized-hole"},
+     "source": "https://www.wkms.org/2026-08-12/a-kentucky-county-passes-a-data-center-moratorium-with-a-city-sized-hole",
+     "term": "fixed_undated"},
     {"locality": "Jessamine County", "state": "KY", "level": "Local",
      "status": "Enacted", "when": "Aug 4, 2026",
      "note": "12-month moratorium. Proactive — no data center development "
@@ -2311,7 +2347,8 @@ MORATORIUMS = [
      "note": "Indefinite moratorium, unanimous. Supervisors want more "
              "information before allowing development",
      "lat": 42.39, "lon": -95.52, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.radioiowa.com/2026/07/13/ida-county-joins-list-of-iowa-counties-with-data-center-moratoriums/"},
+     "source": "https://www.radioiowa.com/2026/07/13/ida-county-joins-list-of-iowa-counties-with-data-center-moratoriums/",
+     "term": "until_event"},
     {"locality": "Madison County", "state": "IA", "level": "Local",
      "status": "Enacted", "when": "Jul 22, 2026",
      "note": "1-year moratorium, unanimous",
@@ -2326,7 +2363,8 @@ MORATORIUMS = [
      "status": "Enacted", "when": "2026",
      "note": "Temporary moratorium while permanent rules are developed",
      "lat": 41.03, "lon": -93.78, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.radioiowa.com/2026/07/08/eight-iowa-counties-have-moratoriums-on-data-center-development/"},
+     "source": "https://www.radioiowa.com/2026/07/08/eight-iowa-counties-have-moratoriums-on-data-center-development/",
+     "term": "until_event"},
     # ── Batch 3 — Pennsylvania ────────────────────────────────────────────
     {"locality": "Olyphant", "state": "PA", "level": "Local",
      "status": "Enacted", "when": "2025",
@@ -2334,7 +2372,8 @@ MORATORIUMS = [
              "a wave of similar actions across Lackawanna, Luzerne, and Chester "
              "counties",
      "lat": 41.47, "lon": -75.60, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.thecentersquare.com/pennsylvania/article_06f92bfc-34c1-430c-9487-375bde5c9415.html"},
+     "source": "https://www.thecentersquare.com/pennsylvania/article_06f92bfc-34c1-430c-9487-375bde5c9415.html",
+     "term": "fixed_undated"},
     {"locality": "East Whiteland Township", "state": "PA", "level": "Local",
      "status": "Enacted", "when": "Mar 2026",
      "note": "180-day moratorium — board declared parts of data center zoning "
@@ -2342,7 +2381,8 @@ MORATORIUMS = [
              "Green Fig withdrew 1.7M sq ft application in May after sustained "
              "public opposition",
      "lat": 40.04, "lon": -75.55, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.foodandwaterwatch.org/2026/05/05/east-whiteland-pa-data-center-developer-withdraws-application-after-fierce-public-opposition/"},
+     "source": "https://www.foodandwaterwatch.org/2026/05/05/east-whiteland-pa-data-center-developer-withdraws-application-after-fierce-public-opposition/",
+     "term": "fixed_undated"},
     {"locality": "Pennsylvania", "state": "PA", "level": "State",
      "status": "Proposed", "when": "Jul 12, 2026",
      "note": "SB 1345 — would allow municipalities to impose 18-month "
@@ -2358,7 +2398,8 @@ MORATORIUMS = [
              "Developer Bristolville 25 LLC sued over \\$3.6B, 1.65M sq ft "
              "project on former GM Lordstown Assembly site near OpenAI Stargate",
      "lat": 41.17, "lon": -80.87, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.vindy.com/news/local-news/2026/05/lordstown-officials-plan-to-re-up-180-day-moratorium-on-data-centers/"},
+     "source": "https://www.vindy.com/news/local-news/2026/05/lordstown-officials-plan-to-re-up-180-day-moratorium-on-data-centers/",
+     "term": "fixed_undated"},
     {"locality": "Ravenna", "state": "OH", "level": "Local",
      "status": "Enacted", "when": "Apr 20, 2026",
      "note": "1-year moratorium, unanimous. Nearly 100 residents packed the "
@@ -2377,7 +2418,8 @@ MORATORIUMS = [
      "status": "Enacted", "when": "May 2026",
      "note": "12-month moratorium on new data center permits, unanimous",
      "lat": 41.72, "lon": -81.25, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.thecooldown.com/green-business/painesville-township-ohio-data-center/"},
+     "source": "https://www.thecooldown.com/green-business/painesville-township-ohio-data-center/",
+     "term": "fixed_undated"},
     {"locality": "Vienna Township", "state": "OH", "level": "Local",
      "status": "Enacted", "when": "Extended Aug 2026",
      "note": "Rolling moratorium — originally enacted 2025, extended 60 days "
@@ -2390,25 +2432,29 @@ MORATORIUMS = [
      "note": "6-month moratorium. Bitdeer plans a data center on Belmont Ave "
              "on land where an Ohio Edison power plant once operated",
      "lat": 41.13, "lon": -80.76, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.wkbn.com/news/local-news/weathersfield-news/weathersfield-township-trustees-place-moratorium-on-approving-data-center/"},
+     "source": "https://www.wkbn.com/news/local-news/weathersfield-news/weathersfield-township-trustees-place-moratorium-on-approving-data-center/",
+     "term": "fixed_undated"},
     {"locality": "Twinsburg", "state": "OH", "level": "Local",
      "status": "Enacted", "when": "2026",
      "note": "12-month moratorium on data center permits",
      "lat": 41.31, "lon": -81.44, "expires": None, "as_of": "2026-08-13",
-     "source": "https://mytwinsburg.com/DocumentCenter/View/11167/2026-065-Establishing-Moratorium-for-Data-Centers"},
+     "source": "https://mytwinsburg.com/DocumentCenter/View/11167/2026-065-Establishing-Moratorium-for-Data-Centers",
+     "term": "fixed_undated"},
     {"locality": "South Bloomfield", "state": "OH", "level": "Local",
      "status": "Enacted", "when": "2026",
      "note": "Preventive ban — eliminated all industrial zoning preemptively "
              "to block data center applications. No developer had approached",
      "lat": 39.72, "lon": -82.87, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.statenews.org/section/the-ohio-newsroom/2026-02-26/ohio-towns-are-pushing-back-against-data-centers-to-varying-degrees-of-success"},
+     "source": "https://www.statenews.org/section/the-ohio-newsroom/2026-02-26/ohio-towns-are-pushing-back-against-data-centers-to-varying-degrees-of-success",
+     "term": "standing"},
     {"locality": "Ohio (tax exemptions)", "state": "OH", "level": "State",
      "status": "Enacted", "when": "2025",
      "note": "Governor's moratorium on data center tax exemptions while Joint "
              "Data Center Committee holds hearings. Two last data centers "
              "received \\$42M in exemptions before the pause took effect",
      "lat": 40.42, "lon": -82.91, "expires": None, "as_of": "2026-08-13",
-     "source": "https://signalcleveland.org/ohio-approves-last-data-center-exemption-before-moratorium/"},
+     "source": "https://signalcleveland.org/ohio-approves-last-data-center-exemption-before-moratorium/",
+     "term": "until_event"},
     {"locality": "Ohio (ballot measure)", "state": "OH", "level": "State",
      "status": "Rejected", "when": "2026",
      "note": "Proposed constitutional amendment to ban data centers >25 MW "
@@ -2429,14 +2475,16 @@ MORATORIUMS = [
      "note": "2-year moratorium, unanimous. 36 sq mi in Grant County. "
              "Residents mobilized against a \\$1B proposed project",
      "lat": 42.72, "lon": -90.98, "expires": None, "as_of": "2026-08-13",
-     "source": "https://dailyreporter.com/2026/06/05/wisconsin-counties-impose-moratoriums-on-hyperscale-data-centers/"},
+     "source": "https://dailyreporter.com/2026/06/05/wisconsin-counties-impose-moratoriums-on-hyperscale-data-centers/",
+     "term": "fixed_undated"},
     {"locality": "Manitowoc County", "state": "WI", "level": "Local",
      "status": "Enacted", "when": "Apr 2026",
      "note": "18-month moratorium, unanimous. Towns of Two Creeks, Two Rivers, "
              "and Mishicot requested the pause after a developer approached "
              "property owners. Farmland-loss concerns",
      "lat": 44.10, "lon": -87.66, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.wpr.org/news/manitowoc-county-board-approves-18-month-data-center-moratorium"},
+     "source": "https://www.wpr.org/news/manitowoc-county-board-approves-18-month-data-center-moratorium",
+     "term": "fixed_undated"},
     {"locality": "Dane County", "state": "WI", "level": "Local",
      "status": "Enacted", "when": "Jun 4, 2026",
      "note": "18-month moratorium on hyperscale data centers in county zoning "
@@ -2574,7 +2622,8 @@ MORATORIUMS = [
              "data management/transmission, unanimous. Mayor urged surrounding "
              "counties to follow suit",
      "lat": 48.05, "lon": -122.18, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.heraldnet.com/2026/07/15/marysville-initiates-6-month-moratorium-on-data-centers/"},
+     "source": "https://www.heraldnet.com/2026/07/15/marysville-initiates-6-month-moratorium-on-data-centers/",
+     "term": "fixed_undated"},
     {"locality": "Skagit County", "state": "WA", "level": "Local",
      "status": "Enacted", "when": "Jun 1, 2026",
      "note": "6-month moratorium in rural/unincorporated areas on data centers "
@@ -2588,7 +2637,8 @@ MORATORIUMS = [
              "satisfactory answers. Developing data-center-specific land-use "
              "regulations",
      "lat": 46.24, "lon": -119.10, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.datacenterdynamics.com/en/news/council-in-pasco-washington-unanimously-approves-six-month-data-center-moratorium/"},
+     "source": "https://www.datacenterdynamics.com/en/news/council-in-pasco-washington-unanimously-approves-six-month-data-center-moratorium/",
+     "term": "fixed_undated"},
     {"locality": "Cle Elum", "state": "WA", "level": "Local",
      "status": "Enacted", "when": "Jul 31, 2026",
      "note": "6-month moratorium, unanimous. Prompted by Blue Fern Development's "
@@ -2632,7 +2682,8 @@ MORATORIUMS = [
              "Separate from the proposed 3-year construction moratorium. Oregon "
              "DC tax breaks cost ~\\$450M/year",
      "lat": 43.80, "lon": -120.55, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.dwt.com/blogs/energy--environmental-law-blog/2026/06/oregon-data-center-tax-break-moratorium"},
+     "source": "https://www.dwt.com/blogs/energy--environmental-law-blog/2026/06/oregon-data-center-tax-break-moratorium",
+     "term": "until_event"},
     # ── Batch 4 — Virginia ────────────────────────────────────────────────
     {"locality": "Chesapeake", "state": "VA", "level": "Local",
      "status": "Enacted", "when": "Jul 2026",
@@ -2640,7 +2691,8 @@ MORATORIUMS = [
              "rejected a 350,000 sq ft project in Jun 2025. Planning commission "
              "drafting zoning amendments for case-by-case review",
      "lat": 36.77, "lon": -76.24, "expires": None, "as_of": "2026-08-13",
-     "source": "https://virginiabusiness.com/chesapeake-approves-8-month-pause-on-data-center-applications/"},
+     "source": "https://virginiabusiness.com/chesapeake-approves-8-month-pause-on-data-center-applications/",
+     "term": "fixed_undated"},
     {"locality": "Front Royal", "state": "VA", "level": "Local",
      "status": "Enacted", "when": "Jul 6, 2026",
      "note": "90-day moratorium on land-use applications for data centers, 6-0. "
@@ -2662,7 +2714,8 @@ MORATORIUMS = [
              "unanimous. A single hyperscale facility could double the county's "
              "residential electricity demand. Legal challenges anticipated",
      "lat": 39.54, "lon": -76.30, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.baltimoresun.com/2026/06/10/harford-council-passes-ban-on-data-centers/"},
+     "source": "https://www.baltimoresun.com/2026/06/10/harford-council-passes-ban-on-data-centers/",
+     "term": "standing"},
     {"locality": "Howard County", "state": "MD", "level": "Local",
      "status": "Enacted", "when": "Jun 1, 2026",
      "note": "17-month moratorium (S.M.A.R.T. Act), unanimous. Expires Nov 2 "
@@ -2687,12 +2740,14 @@ MORATORIUMS = [
      "note": "1-year moratorium in unincorporated areas. Part of the Eastern "
              "Shore moratorium wave",
      "lat": 38.87, "lon": -75.83, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.wboc.com/news/caroline-county-commissioners-approve-a-one-year-moratorium-on-new-data-centers/article_e2b4c188-c810-4704-a33a-d95e0e029f28.html"},
+     "source": "https://www.wboc.com/news/caroline-county-commissioners-approve-a-one-year-moratorium-on-new-data-centers/article_e2b4c188-c810-4704-a33a-d95e0e029f28.html",
+     "term": "fixed_undated"},
     {"locality": "Dorchester County", "state": "MD", "level": "Local",
      "status": "Enacted", "when": "Jun 2026",
      "note": "1-year moratorium. Part of the Eastern Shore moratorium cluster",
      "lat": 38.50, "lon": -76.05, "expires": None, "as_of": "2026-08-13",
-     "source": "http://www.stardem.com/news/data_centers/dorchester-county-council-hopes-to-get-ahead-on-regulating-data-center-proposals/article_af7ff49c-f072-4e08-85e9-1cd10bf1ca33.html"},
+     "source": "http://www.stardem.com/news/data_centers/dorchester-county-council-hopes-to-get-ahead-on-regulating-data-center-proposals/article_af7ff49c-f072-4e08-85e9-1cd10bf1ca33.html",
+     "term": "fixed_undated"},
     {"locality": "Talbot County", "state": "MD", "level": "Local",
      "status": "Proposed", "when": "Sep 8, 2026",
      "note": "1-year moratorium resolution introduced; public comment hearing "
@@ -2823,7 +2878,8 @@ MORATORIUMS = [
      "note": "45-day moratorium (extendable to 10 mo 15 days) on new data "
              "center applications in unincorporated areas",
      "lat": 36.23, "lon": -119.32, "expires": None, "as_of": "2026-08-19",
-     "source": "https://www.yourcentralvalley.com/news/local-news/tulare-county-ai-data-center-moratorium/"},
+     "source": "https://www.yourcentralvalley.com/news/local-news/tulare-county-ai-data-center-moratorium/",
+     "term": "fixed_undated"},
     {"locality": "Larimer County", "state": "CO", "level": "Local",
      "status": "Enacted", "when": "Jan 27, 2026",
      "note": "Initial 30-day moratorium extended 6 months after Feb 9 public "
@@ -2865,7 +2921,8 @@ MORATORIUMS = [
      "note": "Requires data centers to make 10-year commitments covering "
              "their fair share of grid infrastructure and community impacts",
      "lat": 40.22, "lon": -74.76, "expires": None, "as_of": "2026-08-19",
-     "source": None},
+     "source": None,
+     "term": "standing"},
     {"locality": "Virginia (tax/zoning)", "state": "VA", "level": "State",
      "status": "Enacted", "when": "Jun 30, 2026",
      "note": "State-level restrictions on data center tax incentives and "
@@ -2889,6 +2946,40 @@ MORATORIUMS = [
 # Statuses that are already final — an expiry date cannot change them.
 _MORATORIUM_FINAL = ("Proposed", "Rejected", "Vetoed", "Rescinded")
 EXPIRING_SOON_DAYS = 60
+
+
+# How a moratorium's term is bounded. `expires` alone can't carry this: a null
+# there currently means three very different things at once — a permanent ban
+# (the strongest precedent a resident can cite), a pause that ends when some
+# condition is met, and "nobody has researched this yet" — and collapsing them
+# makes the best rows look like the worst. Adapted from the duration taxonomy
+# in Moratorium Nation (Bommarito 2026, CC-BY-4.0), which splits the same
+# problem into fixed_days / until_date / until_event / indefinite.
+#
+# `until_date` is derived, never stored — a row with an `expires` has one by
+# definition. The rest are declared per-row via the optional `term` key, and
+# an undeclared row is `unknown`, never guessed: the note text is suggestive
+# ("6-month moratorium") but a regex over it mislabels a 45-day pause as a
+# permanent ban, so classification is a human read, same as `source`/`as_of`.
+TERM_KINDS = {
+    "until_date": "Runs to a documented date",
+    "standing": "No end date by design — a permanent ban or standing statute",
+    "until_event": "Runs until a condition is met, not to a date",
+    "fixed_undated": "A stated duration, but the end date isn't recorded here",
+    "unknown": "Term not documented",
+}
+
+
+def moratorium_term(expires, term):
+    """(kind, label) for how a row's term is bounded. `until_date` wins over
+    any declared `term` — a documented end date is the strongest statement
+    available and moratorium_status() is already deriving from it."""
+    if has_value(expires):
+        return "until_date", TERM_KINDS["until_date"]
+    kind = str(term).strip() if has_value(term) else ""
+    if kind not in TERM_KINDS or kind == "until_date":
+        kind = "unknown"
+    return kind, TERM_KINDS[kind]
 
 
 def moratorium_status(status, expires, today=None):
@@ -2929,7 +3020,7 @@ def moratorium_status(status, expires, today=None):
 MORATORIUMS_DF = pd.DataFrame(
     MORATORIUMS,
     columns=["locality", "state", "level", "status", "when", "note",
-             "lat", "lon", "expires", "as_of", "source"])
+             "lat", "lon", "expires", "as_of", "source", "term"])
 # Derived at import so every consumer sees the same effective status. The
 # static site is rebuilt daily by CI, so these stay current without an edit.
 _mora_status = MORATORIUMS_DF.apply(
@@ -2939,6 +3030,10 @@ MORATORIUMS_DF["expired"] = [s["expired"] for s in _mora_status]
 MORATORIUMS_DF["days_left"] = [s["days_left"] for s in _mora_status]
 MORATORIUMS_DF["expiring_soon"] = [s["expiring_soon"] for s in _mora_status]
 MORATORIUMS_DF["verified"] = MORATORIUMS_DF["source"].map(has_value)
+_mora_term = [moratorium_term(e, t)
+              for e, t in zip(MORATORIUMS_DF["expires"], MORATORIUMS_DF["term"])]
+MORATORIUMS_DF["term_kind"] = [k for k, _ in _mora_term]
+MORATORIUMS_DF["term_label"] = [lbl for _, lbl in _mora_term]
 
 # Case study outcomes — what actually happened after a moratorium or major fight.
 #

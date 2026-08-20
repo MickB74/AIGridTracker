@@ -1084,6 +1084,18 @@ def _mora_status_cell(m):
     elif has_value(m.expires):
         word = "expires" if not m.expiring_soon else "expires soon —"
         html += f'<span class="badge-note">{word} {esc(str(m.expires))}</span>'
+    else:
+        # No end date is not one fact. A permanent ban is the strongest thing
+        # on this page and an unresearched row is the weakest; both used to
+        # render as a bare status badge and read identically.
+        note = {
+            "standing": "no end date — permanent",
+            "until_event": "no fixed end — runs until a condition is met",
+            "fixed_undated": "fixed term, end date not recorded",
+            "unknown": "term not documented",
+        }.get(getattr(m, "term_kind", "unknown"))
+        if note:
+            html += f'<span class="badge-note">{note}</span>'
     return html
 
 
@@ -2695,6 +2707,13 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
   written or reviewed by a person. Treat this page as a lead to check, not a
   source to cite at a hearing — for sourced, verified legal actions see the
   <a href="moratoriums.html">moratorium tracker</a>.</p>
+  <p class="muted">The list of place names used for locality tagging is
+  extended with jurisdictions from
+  <a href="https://mjbommar.github.io/moratorium-data-2026/" rel="noopener">Moratorium
+  Nation</a> (Bommarito 2026), used under
+  <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC&nbsp;BY&nbsp;4.0</a>.
+  Only place names are used — no moratorium record on this site is sourced
+  from that dataset.</p>
 </section>
 <style>
 .story-grid {{ display:grid; gap:14px;
@@ -11476,6 +11495,8 @@ MORATORIUM_SCHEMA = [
     ("days_left", "Days until `expires`; negative once past, null when no end date is recorded"),
     ("when", "Human-readable date of the action, as reported"),
     ("expires", "ISO date the term lapses, or null when permanent, condition-based, or not documented"),
+    ("term_kind", "How the term is bounded: until_date (has an `expires`), standing (permanent ban or standing statute), until_event (ends on a condition), fixed_undated (a stated duration whose end date isn't recorded), unknown (not documented). Derived; `until_date` always wins over the stored `term`"),
+    ("term_label", "Plain-language rendering of `term_kind`"),
     ("note", "Scope, threshold, vote count and other detail"),
     ("source", "URL this row was read from, or null if unverified"),
     ("as_of", "Date the source was read, or null"),
