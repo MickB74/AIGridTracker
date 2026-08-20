@@ -4978,6 +4978,115 @@ def build_bills():
 </section>
 
 <section>
+  <h2>Your property &amp; home value</h2>
+  <p>Data centers don't just affect your utility bill — they can affect the
+  value of your home. A growing body of academic research and court filings
+  documents measurable property-value declines near large facilities, driven
+  primarily by noise, visual impact, and industrial re-zoning of formerly
+  residential or agricultural land.</p>
+
+  <div class="stats">
+    <div class="stat"><span class="big">&minus;6.8%</span>
+      Avg. decline within 1&ndash;2&nbsp;km (Priest&nbsp;2024 SSRN)</div>
+    <div class="stat"><span class="big">~14&nbsp;km</span>
+      Radius of measurable impact (George Mason study)</div>
+    <div class="stat"><span class="big">1,000+</span>
+      Households in noise/nuisance lawsuits</div>
+  </div>
+
+  <h3>What the research says</h3>
+  <table><thead><tr>
+    <th>Study</th><th>Method</th><th>Key finding</th>
+  </tr></thead><tbody>
+  <tr>
+    <td>Priest (2024), SSRN</td>
+    <td>Hedonic regression, 120k+ sales</td>
+    <td>&minus;6.8% avg. decline within 1&ndash;2&nbsp;km; strongest effect near residential-zoned sites</td>
+  </tr>
+  <tr>
+    <td>George Mason Univ.</td>
+    <td>Difference-in-differences</td>
+    <td>Statistically significant decline detectable up to ~14&nbsp;km; partially offset by property-tax revenue in some jurisdictions</td>
+  </tr>
+  <tr>
+    <td>Rochester Inst. of Tech.</td>
+    <td>Case-study analysis</td>
+    <td>Noise complaints and visual blight the primary drivers of value loss; effects vary by cooling type and screening</td>
+  </tr>
+  </tbody></table>
+
+  <div class="note warn"><p><strong>Methodology note:</strong>
+  These studies vary in scope and geography, and the industry disputes some
+  findings. The George Mason study acknowledges that property-tax revenue from
+  data centers partially offsets value declines in some jurisdictions. Effects
+  depend heavily on facility size, cooling technology, setback distance, and
+  local screening/landscaping requirements.</p></div>
+
+  <h3>Noise &amp; nuisance lawsuits</h3>
+  <p>Noise is the most common trigger for legal action. Data center cooling
+  systems — rows of industrial fans running 24/7 — generate low-frequency hum
+  that can exceed residential noise ordinances, especially at night.</p>
+  <table><thead><tr>
+    <th>Location</th><th>Operator</th><th>Issue</th><th>Outcome</th>
+  </tr></thead><tbody>
+  <tr>
+    <td>Dowagiac, MI</td>
+    <td>Edgecore</td>
+    <td>Persistent low-frequency noise; 60+ dBA at property lines</td>
+    <td>Class-action filed; noise remediation ordered</td>
+  </tr>
+  <tr>
+    <td>Sturtevant, WI</td>
+    <td>Foxconn/Microsoft</td>
+    <td>Cooling-fan noise exceeding local ordinance</td>
+    <td>Settlement with noise mitigation, ongoing monitoring</td>
+  </tr>
+  <tr>
+    <td>Prince William County, VA</td>
+    <td>Multiple operators</td>
+    <td>Cumulative noise from data center corridor</td>
+    <td>County adopted new noise standards; lawsuits pending</td>
+  </tr>
+  </tbody></table>
+
+  <h3>The property-tax trade-off</h3>
+  <p>Proponents argue data centers generate substantial property-tax revenue
+  that benefits the whole community. The evidence is mixed:</p>
+  <table><thead><tr>
+    <th>Claim</th><th>Source</th><th>Counterpoint</th>
+  </tr></thead><tbody>
+  <tr>
+    <td>Loudoun County, VA: data centers contributed $640M+ in local tax revenue (FY2023)</td>
+    <td>Loudoun County PPI</td>
+    <td>Good Jobs First: most of this revenue is offset by tax abatements, TIF districts, and infrastructure costs; per-job subsidy often exceeds $1M</td>
+  </tr>
+  <tr>
+    <td>Data centers require minimal public services (schools, roads) per dollar of assessed value</td>
+    <td>Industry white papers</td>
+    <td>Low service demand also means low community integration — few employees, no foot traffic, no retail multiplier</td>
+  </tr>
+  </tbody></table>
+
+  <details class="more"><summary>Protecting your property value: practical steps</summary>
+  <div class="note info"><p><strong>At the planning stage:</strong>
+  Push for setback minimums (1,000&nbsp;ft+), noise limits at the property line
+  (45&nbsp;dBA nighttime is the EPA guideline for residential areas), visual
+  screening requirements, and a property-value guarantee fund as part of any
+  CBA.</p></div>
+  <div class="note info"><p><strong>If a facility is already built:</strong>
+  Document noise levels with a calibrated meter (smartphone apps are
+  inadmissible in most jurisdictions). File complaints with code enforcement.
+  Request a property-tax reassessment if your appraisal reflects pre-facility
+  comparables. Consult a real-estate attorney about inverse condemnation or
+  nuisance claims.</p></div>
+  <div class="note info"><p><strong>For appraisers and lenders:</strong>
+  The EPA recommends adjusting comparable-sales analysis when an industrial
+  facility is within 1&nbsp;mile. Ask your appraiser whether the data center
+  was factored into the valuation.</p></div>
+  </details>
+</section>
+
+<section>
   <h2>Key research: Duke University on load flexibility</h2>
   <p>In February 2025 the Nicholas Institute for Energy, Environment &amp;
   Sustainability at Duke University published a landmark study led by Tyler
