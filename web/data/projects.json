@@ -12809,7 +12809,44 @@
       "source": "https://www.prnewswire.com/news-releases/flexential-to-build-new-dallas-area-data-center-campus-on-110-acres-in-kaufman-county-302836104.html",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2026-01-01",
+          "kind": "filing",
+          "summary": "The Flexential project site near Talty was released from the City of Talty extraterritorial jurisdiction (ETJ) under Texas state law after a petition was filed with Kaufman County, leaving Talty with no regulatory authority over the site.",
+          "source": "https://www.nbcdfw.com/news/local/data-center-spanning-hundreds-of-acres-planned-in-kaufman-county/4055993/"
+        },
+        {
+          "date": "2026-07-01",
+          "kind": "coverage",
+          "summary": "Data Center Dynamics reported Flexential acquisition of 110 acres outside Dallas for a planned 108 MW campus, noting the design targets closed-loop cooling with zero water usage.",
+          "source": "https://www.datacenterdynamics.com/en/news/flexential-acquires-110-acres-outside-dallas-texas-for-108mw-data-center-campus/"
+        },
+        {
+          "date": "2026-07-28",
+          "kind": "announcement",
+          "summary": "Flexential announced it purchased 110 acres in Kaufman County near Talty to build its fourth and largest Dallas-area data center campus, with Phase 1 comprising a 375,000 sq ft, 36 MW building and full build-out potential of 108 MW across three buildings.",
+          "source": "https://www.flexential.com/resources/press-release/flexential-build-new-dallas-area-data-center-campus-110-acres"
+        },
+        {
+          "date": "2026-07-29",
+          "kind": "coverage",
+          "summary": "Connect CRE reported Flexential land acquisition for a 375,000 sq ft, 36 MW first-phase data center about 20 minutes east of Dallas in Talty, citing Cushman and Wakefield ranking of Dallas as the world top data center market.",
+          "source": "https://www.connectcre.com/stories/flexential-secures-land-outside-dallas-for-375k-sf-data-center/"
+        },
+        {
+          "date": "2026-08-01",
+          "kind": "coverage",
+          "summary": "Unite.AI reported Flexential had secured 36 MW of power for the first building — exceeding the combined electrical capacity of its three existing Dallas-area facilities (28.4 MW).",
+          "source": "https://www.unite.ai/flexential-secures-power-for-its-largest-dallas-data-center/"
+        },
+        {
+          "date": "2026-08-06",
+          "kind": "coverage",
+          "summary": "Local press reported Talty officials say the city has no regulatory authority over the Flexential site because the property was released from the city ETJ earlier in 2026 after a Kaufman County petition.",
+          "source": "https://www.terrelltribune.com/news/data-center-has-sights-set-talty"
+        }
+      ]
     },
     {
       "id": "iron-mountain-hutto-tx",
@@ -13069,7 +13106,68 @@
       "source": "https://vantage-dc.com/news/vantage-data-centers-invests-3-billion-to-deliver-ai-campus-in-growing-nevada-market/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2023-01-01",
+          "kind": "filing",
+          "summary": "Vantage Data Centers purchased approximately 137 acres near Electric Avenue and USA Parkway at the Tahoe-Reno Industrial Center in Storey County — the site that became the NV1 campus.",
+          "source": "https://www.nnbw.com/news/2025/aug/06/vantage-data-centers-pushing-forward-on-3-billion-project-at-tri-center/"
+        },
+        {
+          "date": "2024-02-07",
+          "kind": "filing",
+          "summary": "Vantage Data Centers NV11 LLC submitted a formal application to the Nevada Governor Office of Economic Development requesting sales/use and personal property tax abatements for the proposed Storey County data center.",
+          "source": "https://goed.nv.gov/wp-content/uploads/2024/03/8-B.-Vantage-Data-Centers-NV11-LLC-Board-Packet.pdf"
+        },
+        {
+          "date": "2024-05-01",
+          "kind": "construction",
+          "summary": "Vantage broke ground on the NV1 campus at Tahoe-Reno Industrial Center, beginning construction of the NV11 and NV12 buildings.",
+          "source": "https://www.mccarthy.com/insights/mccarthy-building-companies-celebrates-topping-out-of-nv12-project-at-vantage-data-centers"
+        },
+        {
+          "date": "2024-11-14",
+          "kind": "incentive",
+          "summary": "Nevada Governor Office of Economic Development approved $19.2 million in tax abatements for Vantage, tied to a $254 million capital investment projected to generate $76 million in new tax revenue over 10 years while creating about 10 jobs.",
+          "source": "https://goed.nv.gov/newsroom/data-center-plans-to-invest-254-million-and-generate-76-million-in-tax-revenue/"
+        },
+        {
+          "date": "2025-07-15",
+          "kind": "announcement",
+          "summary": "Vantage publicly unveiled the NV1 campus: a nearly $3 billion, 224 MW, four-building, 1.1 million sq ft development on 137 acres in Storey County, with the first two buildings fully leased and the first building slated for Q2 2026.",
+          "source": "https://vantage-dc.com/news/vantage-data-centers-invests-3-billion-to-deliver-ai-campus-in-growing-nevada-market/"
+        },
+        {
+          "date": "2025-08-06",
+          "kind": "coverage",
+          "summary": "Local press reported the $3 billion NV1 project pushing forward at TRIC, including comments from Storey County Manager Austin Osborne about managing hypergrowth from data center development.",
+          "source": "https://www.nnbw.com/news/2025/aug/06/vantage-data-centers-pushing-forward-on-3-billion-project-at-tri-center/"
+        },
+        {
+          "date": "2025-10-27",
+          "kind": "report",
+          "summary": "Data Center Frontier profiled NV1 progress: over 805,000 labor hours logged, more than 700 workers on site daily, and a 0.25 Total Project Incident Rate on a 30-acre building pad.",
+          "source": "https://www.datacenterfrontier.com/site-selection/article/55305086/nv1-and-the-nevada-hyperscale-boom-vantage-data-centers-bets-3b-on-the-ai-future"
+        },
+        {
+          "date": "2026-01-22",
+          "kind": "construction",
+          "summary": "McCarthy Building Companies held a topping-out ceremony for NV12, a 64 MW, 260,000 sq ft liquid-cooled building; the campus had surpassed 1.1 million labor hours with zero lost-time incidents, with NV12 phased turnover starting December 2027.",
+          "source": "https://www.mccarthy.com/insights/mccarthy-building-companies-celebrates-topping-out-of-nv12-project-at-vantage-data-centers"
+        },
+        {
+          "date": "2026-02-09",
+          "kind": "environmental",
+          "summary": "Nevada Current reported data centers water and power needs are straining Storey County, noting that Tahoe-Reno Industrial Center relies on groundwater basins with uncertain consumptive-use projections.",
+          "source": "https://nevadacurrent.com/2026/02/09/data-center-water-power-needs-regulatory-challenges-strain-rural-communities/"
+        },
+        {
+          "date": "2026-08-12",
+          "kind": "lawsuit",
+          "summary": "Carson Now reported an escalating legal battle over water availability at TRIC — where NV1 is sited — between TRIC developer and the quasi-governmental water/sewer provider, with trial set for spring 2027.",
+          "source": "https://www.carsonnow.org/08/12/2026/could-northern-nevadas-tech-epicenter-run-out-of-water-thats-the-big-question-in-an-ongoing-suit"
+        }
+      ]
     },
     {
       "id": "vantage-va4-fredericksburg-va",
@@ -15676,7 +15774,68 @@
       "source": "https://www.electricchoice.com/datacenters/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2026-02-27",
+          "kind": "public-comment",
+          "summary": "Aligned Data Centers held a community meeting at Interstate 27 and FM 54 north of Abernathy where executives addressed resident concerns about infrastructure, jobs, electricity and water use; Abernathy Mayor Harold Bufe said the city would not risk its drinking water and floated possible city annexation of the site.",
+          "source": "https://www.kcbd.com/2026/02/27/developer-addressing-citizen-concerns-about-abernathy-data-center/"
+        },
+        {
+          "date": "2026-04-09",
+          "kind": "announcement",
+          "summary": "Aligned Data Centers publicly announced Project Caprock, a 540 MW, 313-acre, six-facility data center campus in Hale County just outside Abernathy, projected to bring $5 billion into the regional economy.",
+          "source": "https://www.globenewswire.com/news-release/2026/04/09/3271435/0/en/Aligned-Data-Centers-Breaks-Ground-on-Project-Caprock-a-Sustainable-540-MW-Next-Generation-Data-Center-Campus-in-Northwest-Texas.html"
+        },
+        {
+          "date": "2026-04-09",
+          "kind": "construction",
+          "summary": "Aligned Data Centers broke ground on Project Caprock in Hale County, with Ryan Companies as general contractor and the first building targeted for Q1 2027.",
+          "source": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/"
+        },
+        {
+          "date": "2026-04-09",
+          "kind": "utility",
+          "summary": "Aligned announced a partnership with Xcel Energy for Project Caprock electrical infrastructure, with Aligned building and funding the dedicated power infrastructure itself to shield local ratepayers from added costs.",
+          "source": "https://www.datacenterdynamics.com/en/news/aligned-breaks-ground-on-540mw-data-center-campus-in-texas/"
+        },
+        {
+          "date": "2026-04-09",
+          "kind": "environmental",
+          "summary": "Aligned said Project Caprock will use its closed-loop DeltaFlow liquid cooling system paired with air-cooled heat rejection that recirculates water, produces no wastewater, and is designed to protect the Ogallala Aquifer.",
+          "source": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/"
+        },
+        {
+          "date": "2026-07-18",
+          "kind": "coverage",
+          "summary": "National coverage of AI data center backlash in rural Texas featured the future data center site near Abernathy as part of reporting on divisions among rural Republicans over water and power impacts.",
+          "source": "https://www.adn.com/nation-world/2026/07/23/democrats-seize-on-ai-data-center-backlash-thats-dividing-rural-republicans-in-places-like-texas/"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "moratorium",
+          "summary": "Texas Gov. Greg Abbott directed the PUCT and ERCOT to pause new data center grid interconnections statewide pending an audit — a statewide freeze affecting new-project connections including the Texas Panhandle/South Plains region where Project Caprock sits.",
+          "source": "https://www.houstonpublicmedia.org/articles/news/energy-environment/2026/08/03/558529/gov-greg-abbott-pauses-new-data-centers-until-ercot-puct-audit-energy-water-usage/"
+        },
+        {
+          "date": "2026-08-05",
+          "kind": "report",
+          "summary": "Reporting noted regulators and lawmakers still lack clear data on how much water and power data centers statewide consume.",
+          "source": "https://www.kut.org/energy-environment/2026-08-05/texas-data-centers-water-power-energy-use-environment"
+        },
+        {
+          "date": "2026-08-10",
+          "kind": "coverage",
+          "summary": "President Trump publicly criticized Gov. Abbott data center moratorium as a mistake; Abbott responded by touting cooperation with tech companies including Meta and OpenAI.",
+          "source": "https://cbsaustin.com/news/local/trump-criticizes-abbott-moratorium-on-texas-data-centers-connecting-to-power-grid"
+        },
+        {
+          "date": "2026-08-14",
+          "kind": "report",
+          "summary": "Follow-up reporting found Texas data center audit still lacked specifics on scope and methodology; ERCOT indicated the audit would begin shortly after August 20 and last several months.",
+          "source": "https://www.texastribune.org/2026/08/14/data-center-texas-audit-moratorium/"
+        }
+      ]
     },
     {
       "id": "microsoft-central-ohio",
@@ -15702,7 +15861,116 @@
       "source": "https://www.electricchoice.com/datacenters/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2023-10-31",
+          "kind": "filing",
+          "summary": "Microsoft-linked entities purchase three parcels totaling 291 acres along Refugee Road SW and Etna Parkway in Pataskala, Licking County, for $30.65 million.",
+          "source": "https://www.colliers.com/en/news/columbus/microsoft-pays-30-million-for-nearly-300-acres-in-licking-county"
+        },
+        {
+          "date": "2024-01-01",
+          "kind": "coverage",
+          "summary": "Microsoft Licking County land purchases (eventually topping 700 acres across New Albany, Heath, Hebron, and Pataskala/Johnstown) first reported publicly, ahead of any formal project announcement.",
+          "source": "https://www.nbc4i.com/news/local-news/licking-county/microsoft-confirms-building-data-centers-in-licking-county-topping-700-acres/"
+        },
+        {
+          "date": "2024-05-14",
+          "kind": "filing",
+          "summary": "AEP Ohio files an application with PUCO proposing a new large-load/data-center rate tariff, a case in which Microsoft later becomes a formal party.",
+          "source": "https://kjk.com/2025/11/14/regulating-surge-legal-analysis-aep-ohios-data-center-tariff-and-pucos-approval/"
+        },
+        {
+          "date": "2024-09-01",
+          "kind": "announcement",
+          "summary": "The Columbus Dispatch confirms Microsoft plans to construct a $420 million, 245,000 sq ft data center on a 200-acre Beech Road site in New Albany.",
+          "source": "https://www.datacenterdynamics.com/en/news/microsoft-to-build-420m-data-center-in-new-albany-ohio/"
+        },
+        {
+          "date": "2024-10-02",
+          "kind": "vote",
+          "summary": "New Albany City Council unanimously approves a 15-year, 100% property tax abatement for Microsoft $420 million Beech Road data center.",
+          "source": "https://www.wosu.org/2024-10-02/new-albany-city-council-approves-15-year-tax-break-for-420-million-microsoft-data-center"
+        },
+        {
+          "date": "2024-10-28",
+          "kind": "announcement",
+          "summary": "Microsoft formally announces a $1 billion first-phase investment in three Central Ohio data center campuses in New Albany, Heath, and Hebron (Licking County).",
+          "source": "https://www.jobsohio.com/newsroom/news-press/microsoft-announces-first-phase-for-new-data-centers-in-the-columbus-region"
+        },
+        {
+          "date": "2024-10-28",
+          "kind": "incentive",
+          "summary": "Ohio Tax Credit Authority approves a 15-year, 100% sales-tax exemption for Microsoft three Licking County campuses, estimated at $72.5 million in forgone state revenue.",
+          "source": "https://stopohiodatacenters.org/licking-county"
+        },
+        {
+          "date": "2024-11-01",
+          "kind": "construction",
+          "summary": "Site clearing begins at the New Albany Beech Road campus with silt-fence installation and a construction access road built, briefly narrowing Beech Road to one lane.",
+          "source": "https://local.microsoft.com/blog/newalbany-datacenter-construction-update/"
+        },
+        {
+          "date": "2025-04-09",
+          "kind": "withdrawal",
+          "summary": "Microsoft tells the Columbus Dispatch and local mayors it is pausing its $1 billion Licking County plans at New Albany, Heath, and Hebron, citing investment-strategy evaluation; says it will retain the land.",
+          "source": "https://www.datacenterdynamics.com/en/news/microsoft-backs-away-from-1bn-data-center-plans-in-licking-county-ohio/"
+        },
+        {
+          "date": "2025-07-09",
+          "kind": "ruling",
+          "summary": "PUCO adopts AEP Ohio data-center tariff requiring large data centers (including Microsoft facilities) to pay for at least 85% of contracted electric capacity for up to 12 years, with a four-year ramp-up.",
+          "source": "https://www.datacenterfrontier.com/energy/article/55304787/ohio-sets-new-precedent-aeps-power-rules-shift-data-center-cost-burden"
+        },
+        {
+          "date": "2025-07-23",
+          "kind": "utility",
+          "summary": "AEP Ohio new data-center tariff takes effect, requiring qualifying large-load facilities above 25 MW to pay 85% of subscribed monthly capacity.",
+          "source": "https://stopohiodatacenters.org/licking-county"
+        },
+        {
+          "date": "2026-02-19",
+          "kind": "construction",
+          "summary": "Microsoft signs a construction contract with Ames Construction for the Hebron data center, setting a bulk-construction window of March-August 2026 targeting completion by November 2026.",
+          "source": "https://stopohiodatacenters.org/licking-county"
+        },
+        {
+          "date": "2026-02-24",
+          "kind": "construction",
+          "summary": "Microsoft holds groundbreaking ceremonies and resumes construction at Heath and Hebron campuses after a roughly one-year pause; declines real-estate tax abatements at both, benefiting Lakewood Local School District.",
+          "source": "https://www.nbc4i.com/news/local-news/licking-county/microsoft-breaks-ground-on-two-licking-county-data-centers/"
+        },
+        {
+          "date": "2026-03-31",
+          "kind": "filing",
+          "summary": "Microsoft purchases an additional 43 acres at Etna Parkway and Refugee Road in Pataskala for $11.44 million, adjacent to its earlier 291-acre acquisition.",
+          "source": "https://www.datacenterdynamics.com/en/news/microsoft-buys-another-43-acres-in-pataskala-ohio-for-114m/"
+        },
+        {
+          "date": "2026-05-29",
+          "kind": "hearing",
+          "summary": "Ohio Select Committee on Data Centers begins formal legislative hearings on data center growth, water/electricity demand, tax incentives, and NDAs.",
+          "source": "https://ohiocapitaljournal.com/2026/05/29/ohio-lawmakers-begin-hearings-on-data-centers/"
+        },
+        {
+          "date": "2026-06-01",
+          "kind": "hearing",
+          "summary": "Ohio Joint Data Center Committee hears over four hours of public testimony from researchers, activists, and residents on data centers electric/water demand, environmental impact, tax incentives, and NDAs; over 50 Ohio local governments reported to have data-center moratoriums.",
+          "source": "https://www.statenews.org/government-politics/2026-06-01/water-woes-ndas-highlights-of-latest-ohio-data-center-hearing"
+        },
+        {
+          "date": "2026-06-04",
+          "kind": "hearing",
+          "summary": "Microsoft senior director Daniel Brown testifies before Ohio Select Committee, announcing Microsoft will stop using NDAs with local governments and will not seek local property tax abatements at its four Licking County sites; Amazon, Google, and Meta decline similar pledges.",
+          "source": "https://www.aol.com/articles/microsoft-rejects-ndas-tax-abatements-185607000.html"
+        },
+        {
+          "date": "2026-06-10",
+          "kind": "filing",
+          "summary": "Ohio state Sen. Brian Chavez introduces sweeping data-center legislation on tax breaks, NDAs, water use/testing, and utility billing, drawing on Select Committee testimony.",
+          "source": "https://ohiocapitaljournal.com/2026/06/10/ohio-lawmakers-introduce-sweeping-new-data-center-legislation/"
+        }
+      ]
     },
     {
       "id": "microsoft-person-county-nc",
@@ -17201,7 +17469,74 @@
       "source": "https://www.electricchoice.com/datacenters/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2022-11-09",
+          "kind": "announcement",
+          "summary": "Catawba County, the Cities of Conover and Hickory, the Town of Maiden, and the Catawba County EDC jointly announced Microsoft plan to invest a minimum of $1 billion in four data centers over 10 years, creating at least 50 jobs.",
+          "source": "https://www.catawbacountync.gov/news/microsoft-to-invest-1b-in-technology-facilities-in-catawba-county/"
+        },
+        {
+          "date": "2022-11-10",
+          "kind": "incentive",
+          "summary": "Coverage detailed the incentive package: performance-based tax breaks of 50% real property tax and 85% personal property tax over 10 years, across roughly 670 acres in Conover, Hickory, and Maiden.",
+          "source": "https://www.datacenterfrontier.com/cloud/article/21437740/microsoft-plans-1-billion-campus-in-north-carolina-cloud-cluster"
+        },
+        {
+          "date": "2024-03-01",
+          "kind": "construction",
+          "summary": "Microsoft broke ground on the Lyle Creek campus (Project Agate) in Conover on NC Highway 16, planned for up to five data center buildings.",
+          "source": "https://www.datacenterdynamics.com/en/news/microsoft-breaks-ground-on-second-data-center-campus-in-north-carolina/"
+        },
+        {
+          "date": "2024-04-01",
+          "kind": "construction",
+          "summary": "Site construction began on the Maiden-area data center (Boyd Farms site, Project Yoga), with Morgan Construction Company starting clearing and grading work.",
+          "source": "https://www.datacenterdynamics.com/en/news/microsoft-to-start-permitting-for-1385-acre-data-center-campus-in-north-carolina/"
+        },
+        {
+          "date": "2024-04-15",
+          "kind": "construction",
+          "summary": "Microsoft paused construction across its Catawba County data center campuses; the halt lasted roughly 10 months, with the company not publicly detailing the reason.",
+          "source": "https://www.gofoothills.com/2026/03/02/microsoft-restarts-1b-data-center-in-catawba-county/"
+        },
+        {
+          "date": "2026-01-01",
+          "kind": "construction",
+          "summary": "Satellite monitoring detected re-mobilization activity at Microsoft Lyle Creek, Boyd Farm, and Stover North campuses in Catawba County in January-February 2026.",
+          "source": "https://www.blackridgeresearch.com/blog/latest-list-of-biggest-largest-upcoming-data-centers-north-carolina-united-states-us"
+        },
+        {
+          "date": "2026-03-01",
+          "kind": "incentive",
+          "summary": "Microsoft sent a letter to the City of Hickory stating it intends to forgo the tax rebates promised in the 2022 incentive agreement, opting to pay full property taxes under its Community-First Infrastructure initiative.",
+          "source": "https://hickoryrecord.com/news/local/business/article_1b9d046d-deab-4c6d-805c-2ebc2d14a087.html"
+        },
+        {
+          "date": "2026-03-02",
+          "kind": "construction",
+          "summary": "Microsoft resumed construction on its $1B Catawba County project after a roughly 10-month pause; building permits secured for sites in Conover, Hickory, Maiden, and Newton valued at $909 million, with completion obligations extending to 2032.",
+          "source": "https://www.gofoothills.com/2026/03/02/microsoft-restarts-1b-data-center-in-catawba-county/"
+        },
+        {
+          "date": "2026-06-23",
+          "kind": "coverage",
+          "summary": "Catawba County, the Cities of Conover and Hickory, the Town of Maiden, and the EDC issued a joint statement defending the Microsoft project amid rising community questions, citing Microsoft tax commitment and projected water use of about 1% of Hickory daily capacity.",
+          "source": "https://www.catawbacountync.gov/news/joint-statement-on-microsoft-data-center-development-in-catawba-county/"
+        },
+        {
+          "date": "2026-06-24",
+          "kind": "protest",
+          "summary": "Residents near the Conover construction site reported ongoing noise and dust; neighboring landowners voiced opposition to the loss of rural land even as county officials touted job creation and minimal water impact.",
+          "source": "https://www.wsoctv.com/news/local/microsofts-1-billion-data-center-project-frustrates-residents/OEWBNQNN2ZDQVO7ATZZ6NKJBMM/"
+        },
+        {
+          "date": "2026-07-07",
+          "kind": "environmental",
+          "summary": "Microsoft reported its Catawba County data centers will use far less water than originally estimated, citing a 75-80% cut in projected peak water demand and 85-90% cut in wastewater demand since 2022, attributing this to closed-loop liquid cooling.",
+          "source": "https://whky.com/microsoft-says-new-cooling-technology-will-dramatically-cut-water-use-at-catawba-county-data-centers/"
+        }
+      ]
     },
     {
       "id": "microsoft-la-porte-in",
