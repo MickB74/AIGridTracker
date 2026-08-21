@@ -69,7 +69,7 @@ from src.constants import (
 )
 from src.pdf_pack import build_health_pdf
 from src.us_map_data import US_MAP_PATHS, US_MAP_LABELS, US_MAP_VIEWBOX
-from src import story_tracker
+from src import company_complaints, story_tracker
 
 # The live domain. Canonical tags and the sitemap are built from this, so it
 # must be the domain users actually reach — pointing them at the *.vercel.app
@@ -618,6 +618,7 @@ NAV_GROUPS = [
     ("Industry", [
         ("Data centers", "data-centers.html"),
         ("Companies", "companies/index.html"),
+        ("Complaints by company", "complaints.html"),
         ("Electricity outlook", "outlook.html"),
         ("Open data", "open-data.html"),
     ]),
@@ -2650,6 +2651,8 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
   This page keeps every community-impact headline GridWatch has archived,
   grouped by the town or county it's about, so a pattern spread across many
   separate stories doesn't disappear once the feed scrolls past it.</p>
+  <p class="sub">Want the same archive cut by operator instead?
+  <a href="complaints.html">Complaints by company &rarr;</a></p>
 </header>
 <div class="stats">
   <div class="stat"><b>{len(stories)}</b><span>headlines archived</span></div>
@@ -2945,6 +2948,283 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
                 keywords=["data center", "community impact", "local news",
                           "story tracker", "moratorium"]),
         ])
+
+
+def build_complaints(stories):
+    """Who is being complained about, and for what — the archive cut by
+    company instead of by locality.
+
+    A story counts against a company only when the headline names it. We
+    deliberately do not infer the company from the town, so these counts
+    under-report every operator: most local coverage says "the data center",
+    not who owns it. The page says that in the caveat rather than presenting
+    the tallies as a complete record.
+    """
+    groups = company_complaints.group_by_company(stories, min_stories=2)
+    totals = company_complaints.theme_totals(groups)
+    named = sum(g["count"] for g in groups)
+
+    def _fmt_date(iso, fmt="%b %-d, %Y"):
+        import datetime as _dt
+        d = story_tracker.date_from_iso(iso)
+        if not d:
+            return ""
+        try:
+            return _dt.date.fromisoformat(d).strftime(fmt)
+        except ValueError:
+            return d
+
+    if not groups:
+        body = """
+<header>
+  <div class="kicker">Industry</div>
+  <h1>Complaints by company</h1>
+</header>
+<section><p class="muted">No archived headline names a tracked company yet.
+Browse the <a href="story-tracker.html">story tracker</a> instead.</p></section>
+"""
+        return page("Complaints by company — AI GridWatch",
+                    "Data center complaints grouped by the company named in "
+                    "the headline.", body, f"{SITE_URL}/complaints", depth=0)
+
+    # ---- matrix: companies down, complaint themes across ----
+    head_cells = "".join(
+        f'<th scope="col" title="{esc(label)}"><span class="mx-emoji">{emoji}</span>'
+        f'<span class="mx-label">{esc(label)}</span></th>'
+        for _, emoji, label, _ in totals)
+    peak = max((n for g in groups for n in g["themes"].values()), default=1)
+    rows = []
+    for g in groups:
+        cells = []
+        for key, emoji, label, _ in totals:
+            n = g["themes"].get(key, 0)
+            if not n:
+                cells.append('<td class="mx-cell mx-zero" aria-label="none">·</td>')
+                continue
+            # Opacity encodes volume against the busiest single cell, so a
+            # column with one loud company doesn't read the same as a
+            # grievance every operator is drawing.
+            alpha = 0.18 + 0.62 * (n / peak)
+            cells.append(
+                f'<td class="mx-cell" style="background:rgba(45,212,191,{alpha:.2f})" '
+                f'title="{esc(g["company"])} — {esc(label)}: {n} headline'
+                f'{"s" if n != 1 else ""}">{n}</td>')
+        rows.append(
+            f'<tr><th scope="row"><span class="mx-dot" style="background:'
+            f'{esc(g["color"])}"></span><a href="#{_story_group_slug(g["company"])}">'
+            f'{esc(g["company"])}</a></th>{"".join(cells)}'
+            f'<td class="mx-total">{g["count"]}</td></tr>')
+    matrix_html = (
+        '<div class="mx-wrap"><table class="mx">'
+        f'<thead><tr><th scope="col">Company</th>{head_cells}'
+        '<th scope="col" class="mx-total">Headlines</th></tr></thead>'
+        f'<tbody>{"".join(rows)}</tbody></table></div>')
+
+    # ---- one card per company ----
+    def _story_li(s):
+        themes = company_complaints.themes_in(s.get("title", ""))
+        chips = "".join(f'<span class="tag" title="{esc(label)}">{emoji}</span>'
+                        for _, emoji, label in themes[:3])
+        return (
+            f'<li><a href="{esc(s.get("link", ""))}" rel="nofollow noopener" '
+            f'target="_blank">{esc(s.get("title", ""))}</a>'
+            f'<span class="meta">{chips} {esc(s.get("outlet", ""))}'
+            f'{" · " + _fmt_date(s.get("first_seen")) if s.get("first_seen") else ""}'
+            '</span></li>')
+
+    cards = []
+    for g in groups:
+        theme_rows = []
+        for key, n in g["top_themes"]:
+            emoji, label = company_complaints.THEME_LABELS[key]
+            pct = round(100 * n / g["count"])
+            theme_rows.append(
+                f'<li class="cc-theme"><span class="cc-theme-label">{emoji} '
+                f'{esc(label)}</span><span class="cc-bar" aria-hidden="true">'
+                f'<i style="width:{min(pct, 100)}%"></i></span>'
+                f'<span class="cc-n">{n}</span></li>')
+        if not theme_rows:
+            theme_rows.append('<li class="cc-theme muted">No grievance keyword '
+                              'in these headlines — coverage, not complaints.</li>')
+        untagged_note = (
+            f'<p class="muted cc-untagged">{g["untagged"]} of {g["count"]} '
+            f'headlines raise no grievance keyword (deals, earnings, '
+            f'announcements).</p>' if g["untagged"] else "")
+        recent = g["stories"][:5]
+        rest = g["stories"][5:]
+        rest_html = ""
+        if rest:
+            rest_html = (
+                f'<details><summary>All {g["count"]} headlines</summary>'
+                f'<ul class="story-list">{"".join(_story_li(s) for s in rest)}</ul>'
+                '</details>')
+        states = ", ".join(g["states"][:6]) + ("…" if len(g["states"]) > 6 else "")
+        search_blob = esc(" ".join([g["company"]]
+                                   + [s.get("title", "") for s in g["stories"]]))
+        cards.append(f"""
+<article class="cc-card" id="{_story_group_slug(g["company"])}"
+         data-themes="{esc(" ".join(k for k, _ in g["top_themes"]))}"
+         data-search="{search_blob}" style="--brand:{esc(g["color"])}">
+  <div class="cc-head">
+    <h3>{esc(g["company"])}</h3>
+    <span class="cc-count">{g["count"]}</span>
+  </div>
+  <p class="cc-meta">{"headlines naming this company" if g["count"] != 1 else "headline naming this company"}
+  {" · " + esc(states) if states else ""}
+  {" · since " + _fmt_date(g["first_seen"], "%b %Y") if g["first_seen"] else ""}</p>
+  <ul class="cc-themes">{"".join(theme_rows)}</ul>
+  {untagged_note}
+  <h4 class="cc-sub">Recent stories</h4>
+  <ul class="story-list">{"".join(_story_li(s) for s in recent)}</ul>
+  {rest_html}
+</article>""")
+
+    theme_filter = "".join(
+        f'<button class="tag tag-btn" data-theme="{key}">{emoji} {esc(label)} '
+        f'<span class="count">{n}</span></button>'
+        for key, emoji, label, n in totals)
+
+    body = f"""
+<header>
+  <div class="kicker">Industry</div>
+  <h1>Complaints by company</h1>
+  <p class="sub">{len(groups)} companies named across {named} archived
+  headlines — and what each one is being complained about. Every headline
+  links to the outlet that published it.</p>
+</header>
+
+<section>
+  <p>The <a href="story-tracker.html">story tracker</a> groups data center
+  coverage by town. This page cuts the same archive the other way: by the
+  company the headline names, and by the grievance the headline raises —
+  noise, water, electric bills, lawsuits, secrecy, zoning.</p>
+  <p class="muted"><strong>Read these as under-counts.</strong> A story counts
+  for a company only when the headline says its name. Most local coverage
+  says "the data center" without naming an operator, and companies build
+  behind shell LLCs precisely so their name doesn't appear — so a low number
+  here means low <em>named</em> coverage, not a quiet neighbour. Company and
+  grievance tags are keyword matches on headline text, generated
+  automatically and not reviewed by a person. Follow the link before citing
+  anything.</p>
+</section>
+
+<section id="matrix">
+  <h2>The grid</h2>
+  <p class="muted">Headlines naming each company, by grievance. A headline
+  raising two grievances is counted under both, so rows add up to more than
+  the headline total. Darker means more.</p>
+  {matrix_html}
+</section>
+
+<section id="companies">
+  <h2>Company by company</h2>
+  <div class="cc-filters">
+    <input type="search" id="ccSearch" class="input" placeholder="Search company or headline…"
+           aria-label="Search complaints">
+    <div class="cc-chips">{theme_filter}
+      <button class="tag tag-btn cc-clear" data-theme="">Clear</button></div>
+  </div>
+  <div class="cc-grid">{"".join(cards)}</div>
+  <p class="muted" id="ccEmpty" hidden>No company matches that filter.</p>
+</section>
+
+<section>
+  <p class="muted">See also: <a href="companies/index.html">company
+  scorecards</a> for what each operator reports about its own water, energy
+  and emissions · <a href="story-tracker.html">story tracker</a> for the same
+  archive grouped by town · <a href="moratoriums.html">moratorium tracker</a>
+  for sourced, verified local actions.</p>
+</section>
+
+<style>
+.cc-grid {{ display:grid; gap:14px;
+  grid-template-columns:repeat(auto-fill, minmax(340px, 1fr)); }}
+.cc-card {{ background:var(--card); border:1px solid var(--rule);
+  border-left:3px solid var(--brand); border-radius:12px; padding:16px 18px; }}
+.cc-head {{ display:flex; align-items:baseline; gap:10px; }}
+.cc-head h3 {{ margin:0; font-size:17px; flex:1; min-width:0; }}
+.cc-count {{ flex-shrink:0; font-size:13px; font-weight:700;
+  background:rgba(45,212,191,.12); color:var(--teal); border-radius:999px;
+  min-width:30px; height:30px; padding:0 9px; display:flex;
+  align-items:center; justify-content:center; }}
+.cc-meta {{ font-size:12.5px; color:var(--muted); margin:4px 0 12px; }}
+.cc-themes {{ list-style:none; padding:0; margin:0 0 10px; display:grid; gap:6px; }}
+.cc-theme {{ display:grid; grid-template-columns:1fr 70px 22px; gap:8px;
+  align-items:center; font-size:13px; }}
+.cc-theme.muted {{ display:block; font-size:12.5px; }}
+.cc-theme-label {{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }}
+.cc-bar {{ display:block; height:6px; border-radius:999px;
+  background:rgba(255,255,255,.07); overflow:hidden; }}
+.cc-bar i {{ display:block; height:100%; background:var(--brand);
+  border-radius:999px; }}
+.cc-n {{ text-align:right; font-size:12.5px; color:var(--muted); }}
+.cc-untagged {{ font-size:12px; margin:0 0 10px; }}
+.cc-sub {{ font-size:12px; text-transform:uppercase; letter-spacing:.04em;
+  color:var(--muted); margin:12px 0 0; }}
+.cc-card details summary {{ cursor:pointer; font-size:13px; color:var(--muted);
+  margin-top:10px; }}
+.cc-filters {{ display:flex; flex-direction:column; gap:10px; margin:14px 0 16px; }}
+.cc-chips {{ display:flex; flex-wrap:wrap; gap:6px; }}
+.cc-chips .tag-btn[aria-pressed="true"] {{ background:rgba(45,212,191,.18);
+  color:var(--teal); border-color:rgba(45,212,191,.35); }}
+.cc-chips .count {{ color:var(--muted); }}
+.mx-wrap {{ overflow-x:auto; }}
+.mx {{ border-collapse:collapse; font-size:13px; min-width:620px; }}
+.mx th, .mx td {{ border:1px solid var(--rule); padding:6px 8px; }}
+.mx thead th {{ font-size:11.5px; color:var(--muted); text-align:center;
+  vertical-align:bottom; max-width:78px; font-weight:600; }}
+.mx-emoji {{ display:block; font-size:15px; }}
+.mx-label {{ display:block; line-height:1.25; }}
+.mx tbody th {{ text-align:left; white-space:nowrap; font-weight:600; }}
+.mx tbody th a {{ text-decoration:none; }}
+.mx-dot {{ display:inline-block; width:9px; height:9px; border-radius:50%;
+  margin-right:7px; }}
+.mx-cell {{ text-align:center; font-variant-numeric:tabular-nums; }}
+.mx-zero {{ color:var(--muted); opacity:.5; }}
+.mx-total {{ text-align:center; font-weight:700; }}
+@media (max-width:640px) {{ .cc-theme {{ grid-template-columns:1fr 48px 22px; }} }}
+</style>
+<script>
+(function() {{
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.cc-card'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.cc-chips .tag-btn'));
+  var search = document.getElementById('ccSearch');
+  var empty = document.getElementById('ccEmpty');
+  var theme = '';
+  function apply() {{
+    var q = (search.value || '').trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function(c) {{
+      var okTheme = !theme || (' ' + c.dataset.themes + ' ').indexOf(' ' + theme + ' ') > -1;
+      var okQ = !q || (c.dataset.search || '').toLowerCase().indexOf(q) > -1;
+      var vis = okTheme && okQ;
+      c.hidden = !vis;
+      if (vis) shown++;
+    }});
+    empty.hidden = shown > 0;
+  }}
+  chips.forEach(function(b) {{
+    b.addEventListener('click', function() {{
+      theme = (b.dataset.theme && b.dataset.theme !== theme) ? b.dataset.theme : '';
+      chips.forEach(function(o) {{
+        o.setAttribute('aria-pressed', String(!!theme && o.dataset.theme === theme));
+      }});
+      apply();
+    }});
+  }});
+  search.addEventListener('input', apply);
+}})();
+</script>
+"""
+    return page(
+        "Complaints by company — data center grievances by operator — AI GridWatch",
+        f"What residents are complaining about, by company: {named} archived "
+        f"headlines naming {len(groups)} data center operators, tagged by "
+        f"grievance and linked to the original story.",
+        body, f"{SITE_URL}/complaints", depth=0,
+        jsonld=[_breadcrumb(("Home", SITE_URL),
+                            ("Complaints by company", f"{SITE_URL}/complaints"))])
+
 
 
 def build_news_page(items, fetched_at, videos=None, themes=None,
@@ -12212,6 +12492,8 @@ def main():
         build_story_tracker(_STORY_ARCHIVE, _VIDEO_ITEMS, groups=_story_groups,
                            locality_slugs=_locality_slugs), encoding="utf-8")
     print(f"  [data] {_n_story} archived headlines -> story-tracker.html + story_tracker.json")
+    (WEB / "complaints.html").write_text(
+        build_complaints(_STORY_ARCHIVE), encoding="utf-8")
     _n_alerts = build_alerts_outputs()
     print(f"  [data] {_n_alerts} deadline alerts -> alerts.json + alerts.xml")
     (WEB / "embed").mkdir(parents=True, exist_ok=True)
@@ -12314,7 +12596,7 @@ def main():
     paths = ["", "start-here", "health-risks", "moratoriums", "story-tracker",
              "projects", "impact", "bills", "outlook",
              "learn", "puc", "executives", "about", "search", "dividend",
-             "data-centers", "environment", "studies",
+             "data-centers", "environment", "studies", "complaints",
              "cba-clauses", "officials", "consulting", "case-studies",
              "community-value", "open-data",
              "hearing-questions", "opposition", "glossary", "tax-breaks", "siting",
