@@ -11946,7 +11946,92 @@
       "note": "10-building data center campus proposed on ~600 acres of light-industrial land southwest of Topeka; conditional use permit filed July 24, 2026, county flagged application 'incomplete' Aug 4.",
       "outcome": null,
       "source": "https://www.ksnt.com/news/local-news/company-submits-data-center-proposal-in-shawnee-county/",
-      "events": []
+      "events": [
+        {
+          "date": "2026-05-12",
+          "kind": "rezoning",
+          "summary": "Shawnee County Planning Commission recommended zoning changes requiring conditional use permits for data centers, energy storage systems, and utility structures (previously only a building permit was required).",
+          "source": "https://www.wibw.com/2026/05/12/shawnee-county-planning-commission-recommends-zoning-changes-data-centers/"
+        },
+        {
+          "date": "2026-06-10",
+          "kind": "rezoning",
+          "summary": "Shawnee County Commission approved zoning changes (HR2026003) formally defining data centers as requiring a conditional use permit; more than two dozen residents attended a standing-room-only meeting to oppose development and call for a moratorium.",
+          "source": "https://www.wibw.com/2026/06/12/zoning-policy-changes-draw-crowd-data-center-opponents-shawnee-co/"
+        },
+        {
+          "date": "2026-06-11",
+          "kind": "protest",
+          "summary": "Residents packed a Shawnee County Commission meeting holding No data centers signs, citing water/electricity use, pollution, and health-risk concerns.",
+          "source": "https://www.ksnt.com/news/local-news/no-data-centers-locals-turn-up-in-force-to-oppose-data-centers-in-shawnee-county-commission-meeting/"
+        },
+        {
+          "date": "2026-07-02",
+          "kind": "filing",
+          "summary": "Shawnee County Commission approved a resolution raising conditional use permit fees for data centers from $700 to $15,000, shifting the cost of expert technical review to applicants.",
+          "source": "https://www.wibw.com/2026/07/02/approved-shawnee-county-resolution-includes-frameworks-potential-data-center-proposals/"
+        },
+        {
+          "date": "2026-07-07",
+          "kind": "public-comment",
+          "summary": "Topeka City Council held a study session drawing roughly 100 residents; city staff acknowledged Topeka had no zoning framework for data centers, and a council member said she learned of preliminary talks with a developer only after directly asking staff.",
+          "source": "https://dystopeka.com/shawnee-county-data-center-timeline/"
+        },
+        {
+          "date": "2026-07-14",
+          "kind": "moratorium",
+          "summary": "Topeka City Council unanimously approved a 12-month moratorium on new data center and battery-storage facility applications within city limits to allow time to study impacts.",
+          "source": "https://www.wibw.com/2026/07/15/city-topeka-pauses-data-center-considerations-12-months/"
+        },
+        {
+          "date": "2026-07-24",
+          "kind": "filing",
+          "summary": "Compass Datacenters submitted a CUP application to Shawnee County for a data center campus on roughly 600+ acres near SW 85th/77th and Burlingame Road in the Wakarusa area, consisting of 10 single-story buildings built in phases.",
+          "source": "https://www.aol.com/articles/company-submits-data-center-proposal-215034000.html"
+        },
+        {
+          "date": "2026-07-28",
+          "kind": "public-comment",
+          "summary": "Compass held a public open house at Washburn Rural High School; attendees reported overcrowding, scripted answers, and frustration over transparency, with a City Councilwoman calling the event really disappointing.",
+          "source": "https://www.wibw.com/2026/07/29/it-is-really-disappointing-compass-data-center-open-house-leaves-community-frustrated/"
+        },
+        {
+          "date": "2026-08-04",
+          "kind": "filing",
+          "summary": "Shawnee County Land Use division determined Compass CUP application was incomplete; Compass given until August 28 to resubmit.",
+          "source": "https://www.wibw.com/2026/08/06/compass-datacenters-permit-request-turned-back-incomplete/"
+        },
+        {
+          "date": "2026-08-04",
+          "kind": "filing",
+          "summary": "Shawnee County commissioners issued an RFQ to hire an independent engineering/technical consulting firm to review data center applications.",
+          "source": "https://www.ksnt.com/news/local-news/shawnee-county-officials-look-to-hire-engineering-firm-to-guide-data-center-decisions/"
+        },
+        {
+          "date": "2026-08-11",
+          "kind": "vote",
+          "summary": "Topeka City Council amended its moratorium language, adding provisions on utility allowances for projects outside city limits, specifically addressing the Compass site near city limits.",
+          "source": "https://www.wibw.com/2026/08/12/topeka-city-council-updates-data-center-moratorium-hears-recommendation-tps-officers/"
+        },
+        {
+          "date": "2026-08-13",
+          "kind": "moratorium",
+          "summary": "Shawnee County Commission voted 2-1 to approve a six-month moratorium on new data center applications through February 17, 2027; does not block Compass pending application from continuing review but no final approval can occur until it expires.",
+          "source": "https://www.wibw.com/2026/08/13/shawnee-co-commissioners-approve-moratorium-new-data-centers/"
+        },
+        {
+          "date": "2026-08-19",
+          "kind": "hearing",
+          "summary": "Topeka City Council held a special meeting where Compass and Evergy presented and fielded 90 minutes of questions on the proposed 400-MW-class project; Mayor confirmed the city moratorium remains in effect.",
+          "source": "https://www.wibw.com/2026/08/20/topeka-city-council-presses-compass-data-centers-evergy-during-special-meeting/"
+        },
+        {
+          "date": "2026-08-20",
+          "kind": "rezoning",
+          "summary": "Topeka Planning Commission discussed a proposed text amendment creating specific zoning standards for data centers (including hyperscale facilities), prompted by the Compass proposal.",
+          "source": "https://ransonfinancial.com/2026/08/20/topeka-planning-commission-discuss-zoning-changes-for-data-center-development/"
+        }
+      ]
     },
     {
       "id": "databank-cartersville-ga",
@@ -12208,7 +12293,38 @@
       "note": "Seven-building data center campus proposed outside Austin near the Samsung Taylor plant, with on-site substation; exploring behind-the-meter natural gas to speed up power availability.",
       "outcome": null,
       "source": "https://www.datacenterdynamics.com/en/news/iron-mountain-eyes-seven-building-data-center-campus-outside-austin-texas/",
-      "events": []
+      "events": [
+        {
+          "date": "2026-03-12",
+          "kind": "hearing",
+          "summary": "Iron Mountain presented the proposed seven-building Taylor Meadows data center campus (~500 acres off FM 3349) to Hutto City Council, requesting wastewater service (~30,200 gallons/day). City Manager said the city would require substantial community benefits in exchange for service.",
+          "source": "https://communityimpact.com/austin/pflugerville-hutto/government/2026/03/19/proposed-data-center-seeks-wastewater-services-from-hutto/"
+        },
+        {
+          "date": "2026-03-12",
+          "kind": "incentive",
+          "summary": "Iron Mountain offered Hutto potential financial benefits in exchange for wastewater service access, including a possible payment usable for debt service or to lower resident tax/utility rates. No dollar amount or finalized terms disclosed; City Council took no action.",
+          "source": "https://www.taylorpress.net/article/11462,data-center-offers-incentives-for-hutto-services"
+        },
+        {
+          "date": "2026-03-19",
+          "kind": "announcement",
+          "summary": "Trade press reported Iron Mountain plan for a seven-building hyperscale Taylor Meadows campus on roughly 500 acres near Hutto \u2014 the company first Texas data center. First grid-connected buildings targeted for around 2030.",
+          "source": "https://www.datacenterdynamics.com/en/news/iron-mountain-eyes-seven-building-data-center-campus-outside-austin-texas/"
+        },
+        {
+          "date": "2026-03-19",
+          "kind": "coverage",
+          "summary": "Community Impact reported the site was previously entitled for a residential subdivision of nearly 1,900 homes, and that the data center projected water use is lower than that build-out would have required.",
+          "source": "https://communityimpact.com/pflugerville-hutto/government/proposed-data-center-seeks-wastewater-services-from-hutto/"
+        },
+        {
+          "date": "2026-03-19",
+          "kind": "environmental",
+          "summary": "Reporting noted that replacing the previously-approved ~1,900-home residential development with the data center campus is projected to reduce sanitary sewer/water demand.",
+          "source": "https://austinfreepress.org/data-boom/"
+        }
+      ]
     },
     {
       "id": "t5-palmetto-ga",
@@ -14367,7 +14483,98 @@
       "note": "Multibillion-dollar Amazon DC; announced amid statewide regulatory debate (HB 3362 failed).",
       "source": "https://www.stlpr.org/government-politics-issues/2026-06-29/missouri-lawmakers-data-centers",
       "as_of": "2026-08-19",
-      "events": []
+      "events": [
+        {
+          "date": "2024-11-01",
+          "kind": "filing",
+          "summary": "Administrative review completed for the Amazon-linked Project Green data center land-use proposal in Montgomery County near New Florence.",
+          "source": "https://www.columbiamissourian.com/news/state_news/two-huge-data-center-projects-in-montgomery-county-are-dividing-the-community/article_cce0a3c1-97f9-4ccc-abb4-b7287a32ad1d.html"
+        },
+        {
+          "date": "2024-12-01",
+          "kind": "vote",
+          "summary": "Montgomery County Commission approved the still-unnamed Project Green development (later confirmed as Amazon).",
+          "source": "https://www.columbiamissourian.com/news/state_news/two-huge-data-center-projects-in-montgomery-county-are-dividing-the-community/article_cce0a3c1-97f9-4ccc-abb4-b7287a32ad1d.html"
+        },
+        {
+          "date": "2025-12-03",
+          "kind": "rezoning",
+          "summary": "Montgomery County Commission approved land for two large-scale data center projects (Project Green/Amazon ~1,000 acres and Project Spade/Google ~780 acres) at the I-70/Highway 19 interchange.",
+          "source": "https://abc17news.com/news/montgomery/2025/12/03/montgomery-county-approves-land-for-two-large-scale-projects-on-amazon-data-center-campus/"
+        },
+        {
+          "date": "2025-12-19",
+          "kind": "incentive",
+          "summary": "Montgomery County Commission voted unanimously to approve a tax abatement framework for the AWS data center (min. $8.5B capital investment, 4-17 buildings, projected $326M-$1.5B in property tax revenue, min. 150 FT jobs at ~$85,000/yr).",
+          "source": "https://www.kbia.org/missouri-news/2025-12-19/montgomery-county-commission-approves-amazon-data-center-tax-incentive-framework"
+        },
+        {
+          "date": "2026-01-01",
+          "kind": "public-comment",
+          "summary": "A town hall on the Google/Amazon data center projects drew hundreds of residents to Montgomery County High School, with attendees voicing uncertainty and fear.",
+          "source": "https://www.newstribune.com/news/2026/jun/25/amazon-residents-share-conflicting-views-on/"
+        },
+        {
+          "date": "2026-02-16",
+          "kind": "lawsuit",
+          "summary": "Preserve Montgomery County LLC sued Montgomery County and the Missouri DED alleging roughly a dozen Missouri Sunshine Law violations tied to the Amazon data center approval \u2014 closed-door sessions, NDAs with Amazon, improper meeting notice. Sought invalidation of the county agreements.",
+          "source": "https://www.ksdk.com/article/news/local/business-journal/citizens-group-sues-to-void-35b-amazon-data-center-incentive-package/63-beeb260e-33c4-4e6e-bf3d-ec3629a88446"
+        },
+        {
+          "date": "2026-02-26",
+          "kind": "filing",
+          "summary": "Missouri Reps. Wellenkamp and Costlow introduced HB 3362, the AI Infrastructure, Grid Integrity and Water Resources Protection Act, requiring large-load customers to cover grid-infrastructure costs, obtain DNR permits for large water use, and including a grid-emergency kill switch provision.",
+          "source": "https://house.mo.gov/PressRelease.aspx?prid=426"
+        },
+        {
+          "date": "2026-03-01",
+          "kind": "hearing",
+          "summary": "Missouri House committee held a hearing on HB 3362 with almost exclusively supportive testimony; Montgomery County resident Sylvia Kueny testified about community concerns. The bill never advanced to a floor vote.",
+          "source": "https://www.stlpr.org/government-politics-issues/2026-06-29/missouri-lawmakers-data-centers"
+        },
+        {
+          "date": "2026-04-09",
+          "kind": "lawsuit",
+          "summary": "A separate citizens group Wake Up JeffCo filed its own lawsuit challenging data-center development processes in the region.",
+          "source": "https://www.newstribune.com/news/2026/jun/25/amazon-residents-share-conflicting-views-on/"
+        },
+        {
+          "date": "2026-06-15",
+          "kind": "announcement",
+          "summary": "Amazon and Gov. Kehoe announced a $10 billion AWS data center campus (~1,000 acres) in Montgomery County: 400+ direct jobs, Amazon covering 100% of grid connection costs, and over $7 million in community contributions. Announcement came while Sunshine Law litigation was still pending.",
+          "source": "https://governor.mo.gov/press-releases/archive/amazon-investing-10-billion-montgomery-county"
+        },
+        {
+          "date": "2026-06-16",
+          "kind": "construction",
+          "summary": "Gov. Kehoe attended a groundbreaking event for the Amazon data center project in Montgomery City.",
+          "source": "https://www.areadevelopment.com/newsItems/6-18-2026/amazon-montgomery-county-missouri.shtml"
+        },
+        {
+          "date": "2026-06-18",
+          "kind": "protest",
+          "summary": "About 100 protesters rallied in Jefferson City ahead of a data-center policy summit, citing the Amazon Montgomery County announcement and warning officials they would be voted out over inadequate corporate tax contributions.",
+          "source": "https://www.kcur.org/housing-development-section/2026-06-18/missouri-data-center-rally"
+        },
+        {
+          "date": "2026-06-23",
+          "kind": "public-comment",
+          "summary": "Amazon hosted a public information open house at Montgomery County Middle School while the Missouri Rural Crisis Center held a concurrent press conference outside voicing opposition.",
+          "source": "https://krcgtv.com/news/local/amazon-hosts-data-center-information-event-despite-community-pushback"
+        },
+        {
+          "date": "2026-06-29",
+          "kind": "report",
+          "summary": "St. Louis Public Radio reported the Missouri legislature passed no data-center regulation this session despite HB 3362/HB 3390, and that a House Special Committee hearing is set for September 2026.",
+          "source": "https://www.stlpr.org/government-politics-issues/2026-06-29/missouri-lawmakers-data-centers"
+        },
+        {
+          "date": "2026-07-02",
+          "kind": "coverage",
+          "summary": "Missouri Independent reported that data-center backlash spilled into Missouri primary races, with GOP candidates demanding stronger regulation and fair tax contribution from developers.",
+          "source": "https://missouriindependent.com/2026/07/02/data-center-backlash-spills-into-missouri-primaries-as-gop-candidates-demand-action/"
+        }
+      ]
     },
     {
       "id": "microsoft-three-mile-island-pa",
@@ -15367,7 +15574,116 @@
       "note": "$9B multi-site data center investment in Berkeley County, South Carolina. Under construction.",
       "outcome": null,
       "source": "https://www.electricchoice.com/datacenters/",
-      "events": []
+      "events": [
+        {
+          "date": "2007-01-01",
+          "kind": "announcement",
+          "summary": "Google announces plans to construct a data center complex in Berkeley County, SC (Mount Holly Commerce Park, Moncks Corner) \u2014 its first South Carolina site, initial investment around $600 million.",
+          "source": "https://www.sccommerce.com/news/google-brings-additional-investment-berkeley-county-data-center"
+        },
+        {
+          "date": "2010-11-01",
+          "kind": "announcement",
+          "summary": "Google announces plans to build a second building at the Berkeley County site.",
+          "source": "https://www.sccommerce.com/news/google-brings-additional-investment-berkeley-county-data-center"
+        },
+        {
+          "date": "2010-12-01",
+          "kind": "incentive",
+          "summary": "Fee-in-Lieu of Tax (FILOT) agreement formalized, cutting Google property-tax assessment rate from 10.5% to 4% and locking it in for up to 50 years with an 80% rebate on the fee.",
+          "source": "https://scdailygazette.com/2026/04/24/sc-data-centers-received-828m-in-tax-breaks-on-electricity-and-computer-purchases-last-year/"
+        },
+        {
+          "date": "2013-01-01",
+          "kind": "announcement",
+          "summary": "Google announces a further $600 million expansion, bringing cumulative Berkeley County investment to about $1.2 billion.",
+          "source": "https://businessfacilities.com/google-investing-3-3b-in-its-south-carolina-data-centers/"
+        },
+        {
+          "date": "2015-11-01",
+          "kind": "permit",
+          "summary": "Google receives a state permit to withdraw up to 183 million gallons per year of groundwater from the Charleston/Middendorf aquifer.",
+          "source": "https://coastalconservationleague.org/projects/google-groundwater-permit/"
+        },
+        {
+          "date": "2016-06-01",
+          "kind": "filing",
+          "summary": "Google reapplies to DHEC seeking to roughly triple its groundwater withdrawal permit to about 549 million gallons per year.",
+          "source": "https://coastalconservationleague.org/projects/google-groundwater-permit/"
+        },
+        {
+          "date": "2018-08-28",
+          "kind": "incentive",
+          "summary": "Berkeley County approves a tax-incentive package for a $600 million expansion (entity Maguro Enterprises), maintaining the 4% assessment/80% rebate FILOT structure; investment total reaches $2.4 billion.",
+          "source": "https://www.postandcourier.com/business/google-gets-approval-for-charleston-area-data-center-expansion/article_0662d648-aaed-11e8-a8b9-cb73c947bb09.html"
+        },
+        {
+          "date": "2019-02-01",
+          "kind": "filing",
+          "summary": "Google reapplies to DHEC for the 549-million-gallon-per-year groundwater withdrawal permit from the Middendorf aquifer.",
+          "source": "https://www.google.com/about/datacenters/files/s-c-groundwater-fact-sheet-jun-2019.pdf"
+        },
+        {
+          "date": "2019-08-22",
+          "kind": "permit",
+          "summary": "DHEC issues a draft permit allowing withdrawal of 549 million gallons of groundwater per year, drawing formal objections from the Coastal Conservation League and local water utilities.",
+          "source": "https://coastalconservationleague.org/groundwater-withdrawal/"
+        },
+        {
+          "date": "2019-12-12",
+          "kind": "ruling",
+          "summary": "Google, DHEC, the Coastal Conservation League and SELC reach a final agreement imposing tougher conditions: Google must treat groundwater as a last resort, develop alternative sources, and report usage quarterly.",
+          "source": "https://www.live5news.com/2019/12/12/google-agrees-tougher-conditions-berkeley-co-groundwater-withdrawal-permit/"
+        },
+        {
+          "date": "2023-01-01",
+          "kind": "coverage",
+          "summary": "A Google affiliate (Arum Composites LLC) purchases roughly 143 acres across five parcels in Berkeley County for about $28.5 million.",
+          "source": "https://baxtel.com/data-center/google-berkeley-county-south-carolina"
+        },
+        {
+          "date": "2024-03-01",
+          "kind": "permit",
+          "summary": "Google seeks a land-disturbance permit for its second data center site in rural Dorchester County (Pine Hill Business Campus).",
+          "source": "https://www.postandcourier.com/business/google-data-center-dorchester-south-carolina/article_61611c3a-ed36-11ee-9528-275f6bacf44f.html"
+        },
+        {
+          "date": "2024-09-26",
+          "kind": "announcement",
+          "summary": "Google announces a combined $3.3 billion investment in SC: $2 billion for two new Dorchester County campuses and $1.3 billion to expand Berkeley County; includes $2.2 million for environmental initiatives.",
+          "source": "https://governor.sc.gov/news/2024-09/google-grows-south-carolina-footprint-new-dorchester-county-operations-expansion"
+        },
+        {
+          "date": "2024-09-26",
+          "kind": "construction",
+          "summary": "Groundbreaking ceremony held in Dorchester County with Governor McMaster; each new site expected to employ about 100 workers, existing Berkeley County site employs roughly 900.",
+          "source": "https://www.dorchesterforbusiness.com/news/google_breaks_ground/"
+        },
+        {
+          "date": "2024-10-15",
+          "kind": "public-comment",
+          "summary": "Public input meeting on emergency generators for the Pine Hill campus; about eight residents raised concerns over air quality, traffic, wetland impacts, and transparency.",
+          "source": "https://www.live5news.com/2024/10/15/dorchester-co-community-weigh-google-data-center-expansion-permits/"
+        },
+        {
+          "date": "2025-10-13",
+          "kind": "announcement",
+          "summary": "Google announces a new $9 billion investment through 2027 to expand Berkeley County and continue Dorchester County construction \u2014 the largest single investment in South Carolina history.",
+          "source": "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-south-carolina/"
+        },
+        {
+          "date": "2025-12-01",
+          "kind": "coverage",
+          "summary": "Analysis examines whether Google $9 billion SC buildout is a net boon or burden for host communities, covering tax-incentive costs versus benefits.",
+          "source": "https://palmettostatewatchfoundation.com/2025/12/01/boon-or-burden-google-invests-9-billion-into-south-carolina/"
+        },
+        {
+          "date": "2026-04-24",
+          "kind": "report",
+          "summary": "SC Daily Gazette reports South Carolina data centers received a combined $828 million in state tax breaks on electricity and computer-equipment purchases in the prior year.",
+          "source": "https://scdailygazette.com/2026/04/24/sc-data-centers-received-828m-in-tax-breaks-on-electricity-and-computer-purchases-last-year/"
+        }
+      ]
     },
     {
       "id": "google-west-memphis-ar",
@@ -15484,7 +15800,122 @@
       "note": "$3B, 280MW data center in Harwood, North Dakota. Under construction.",
       "outcome": null,
       "source": "https://www.electricchoice.com/datacenters/",
-      "events": []
+      "events": [
+        {
+          "date": "2025-08-18",
+          "kind": "announcement",
+          "summary": "Applied Digital announced Polaris Forge 2, a $3 billion, 280MW AI data center campus on 900+ contracted acres southeast of Harwood, ND, with plans to break ground in September 2025.",
+          "source": "https://northdakotamonitor.com/2025/08/18/company-announces-plan-for-data-center-north-of-fargo/"
+        },
+        {
+          "date": "2025-08-25",
+          "kind": "public-comment",
+          "summary": "About 300 residents attended a town hall at the Harwood Community Center; some shouted when is the vote? and accused the town of having sold out.",
+          "source": "https://www.inforum.com/news/fargo/controversial-giant-ai-data-center-holds-headed-meeting-in-small-town-harwood"
+        },
+        {
+          "date": "2025-08-25",
+          "kind": "protest",
+          "summary": "Community members voiced anger and pressed for more disclosure, citing concerns about transparency in the approval process.",
+          "source": "https://northdakotamonitor.com/2025/08/25/data-center-proposed-for-harwood-prompts-anger-questions-from-community-members/"
+        },
+        {
+          "date": "2025-08-28",
+          "kind": "filing",
+          "summary": "City of Fargo moved to annex roughly 800 acres near Harwood including the proposed data center site; Applied Digital said it would formally protest the annexation.",
+          "source": "https://kfgo.com/2025/08/28/1193385/"
+        },
+        {
+          "date": "2025-09-02",
+          "kind": "rezoning",
+          "summary": "Harwood City Council voted unanimously on first reading to rezone roughly 320 acres from agricultural to light industrial, after a contentious session with public shouting.",
+          "source": "https://bismarcktribune.com/news/state-regional/article_3b120a07-bbc2-4144-b5d7-4c2ff68854cb.html"
+        },
+        {
+          "date": "2025-09-10",
+          "kind": "vote",
+          "summary": "Harwood City Council gave final approval to rezone the 320-acre site in about 25 minutes at a special meeting, even as Fargo continued to pursue annexation.",
+          "source": "https://www.valleynewslive.com/2025/09/11/harwood-approves-2nd-reading-rezoning-3b-ai-data-center/"
+        },
+        {
+          "date": "2025-09-15",
+          "kind": "construction",
+          "summary": "Construction crews observed breaking ground on the Polaris Forge 2 site near Harwood.",
+          "source": "https://www.inforum.com/news/fargo/construction-begins-on-3-billion-ai-data-center-near-fargo"
+        },
+        {
+          "date": "2025-10-22",
+          "kind": "financing",
+          "summary": "Applied Digital announced a roughly $5 billion, 15-year, 200MW AI factory lease with an unnamed US-based investment-grade hyperscaler (later reported as Oracle) at Polaris Forge 2, with right of first refusal on an additional 800MW.",
+          "source": "https://www.globenewswire.com/news-release/2025/10/22/3171024/0/en/Applied-Digital-Announces-5-Billion-AI-Factory-Lease-with-U-S-Based-Investment-Grade-Hyperscaler-at-Polaris-Forge-2-ND-Campus.html"
+        },
+        {
+          "date": "2025-10-29",
+          "kind": "coverage",
+          "summary": "Reporting revealed Harwood and Fargo mayors had signed NDAs with Applied Digital covering project details, raising open-records concerns and prompting draft state legislation to ban such NDAs by public officials.",
+          "source": "https://www.inforum.com/news/north-dakota/harwood-fargo-mayors-signed-confidentiality-agreements-with-company-behind-controversial-ai-data-center"
+        },
+        {
+          "date": "2025-11-24",
+          "kind": "vote",
+          "summary": "Harwood City Council voted unanimously to reject a draft agreement proposed by Fargo that would have set conditions in exchange for dropping its annexation attempt.",
+          "source": "https://www.inforum.com/news/fargo/harwood-rejects-deal-with-fargo-to-withdraw-attempts-to-annex-ai-data-center"
+        },
+        {
+          "date": "2025-12-08",
+          "kind": "vote",
+          "summary": "Fargo City Commission voted unanimously to cancel its annexation of roughly 300 acres including the data center site and voted 4-1 to send a separate disputed annexation into mediation with Harwood.",
+          "source": "https://www.valleynewslive.com/2025/12/09/fargo-commissioners-vote-drop-disputed-annexation-near-harwood/"
+        },
+        {
+          "date": "2026-02-01",
+          "kind": "public-comment",
+          "summary": "Dakota Resource Council held a public meeting on the Harwood data center drawing about 100 attendees; the group said it wants projects to be transparent and beneficial to host communities.",
+          "source": "https://www.newsfromthestates.com/article/data-center-developer-looks-west-backs-power-upgrades-near-fargo"
+        },
+        {
+          "date": "2026-03-10",
+          "kind": "financing",
+          "summary": "Applied Digital closed a $2.15 billion private offering of 6.750% senior secured notes (maturing 2031) to fund construction of roughly 200MW at the Harwood campus.",
+          "source": "https://www.valleynewslive.com/2026/03/10/applied-digital-closes-215b-deal-build-out-harwood-ai-campus/"
+        },
+        {
+          "date": "2026-03-23",
+          "kind": "utility",
+          "summary": "Reporting detailed Applied Digital backing of the Agassiz Transmission Line and Substation project with Minnkota Power Cooperative to deliver the 280MW needed for the Harwood campus.",
+          "source": "https://northdakotamonitor.com/2026/03/23/data-center-developer-looks-west-backs-power-upgrades-near-fargo/"
+        },
+        {
+          "date": "2026-04-02",
+          "kind": "utility",
+          "summary": "Minnkota disclosed the cost of the Agassiz transmission line rose from about $75 million to $110 million due to tight timelines and tariffs; Applied Digital will cover the full cost with no charge to other customers.",
+          "source": "https://nationaltoday.com/us/nd/fargo/news/2026/04/02/minnkota-raises-cost-of-data-center-power-project-but-customers-wont-be-affected/"
+        },
+        {
+          "date": "2026-04-29",
+          "kind": "ruling",
+          "summary": "North Dakota Public Service Commission approved the $110 million Agassiz Transmission Line and Substation, targeting operational by fall 2026.",
+          "source": "https://northdakotamonitor.com/2026/04/29/power-project-for-ai-data-center-gets-north-dakota-agency-approval/"
+        },
+        {
+          "date": "2026-05-11",
+          "kind": "coverage",
+          "summary": "Statewide reporting examined the lack of ND state-level siting authority for data centers, noting the PSC has virtually no say over location, and a failed 2025 bill (HB 1427) that would have granted it.",
+          "source": "https://northdakotamonitor.com/2026/05/11/data-center-dilemma-who-should-decide-where-they-go-in-north-dakota/"
+        },
+        {
+          "date": "2026-07-13",
+          "kind": "announcement",
+          "summary": "Applied Digital confirmed it was expanding its ND footprint and eyeing Oliver County for a third data center campus.",
+          "source": "https://www.valleynewslive.com/2026/07/13/applied-digital-expands-north-dakota-eyes-oliver-county-third-data-center/"
+        },
+        {
+          "date": "2026-08-01",
+          "kind": "coverage",
+          "summary": "Harwood residents still felt left in the dark about the data center months after approval, citing the town NDA-driven negotiation process as an example of insufficient transparency.",
+          "source": "https://www.inforum.com/news/north-dakota/harwood-residents-voice-transparency-concerns-over-ai-data-center"
+        }
+      ]
     },
     {
       "id": "cyrusone-fairfield-tx",
