@@ -209,8 +209,10 @@ without an outright moratorium. For context:
 
 - **New York** imposed a [1-year moratorium](/blog/ny-moratorium-eo62-2026.html)
   on 50+ MW facilities and proposed a \\$1M/MW community benefit benchmark
-- **Georgia** banned local governments from approving new data centers until
-  December 2028
+- **Georgia** introduced [HB 1059](https://legiscan.com/GA/text/HB1059/id/3339585)
+  to ban local data center permits through December 2028, but the bill stalled —
+  and Governor Kemp [vetoed](https://www.datacenterdynamics.com/en/news/georgia-governor-vetoes-bill-to-pause-data-center-tax-breaks/)
+  a separate tax-exemption pause
 - **Texas** [froze its entire interconnection queue](/blog/texas-ercot-queue-freeze-2026.html)
   of 474 GW
 
