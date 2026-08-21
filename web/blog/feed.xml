@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Pennsylvania Just Told Data Centers: Build Your Own Power, or Don&#x27;t Build Here</title>
+      <link>https://aigridwatch.com/blog/pennsylvania-grid-executive-order-2026</link>
+      <guid>https://aigridwatch.com/blog/pennsylvania-grid-executive-order-2026</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Governor Shapiro signed Executive Order 2026-05 on August 18, establishing the nation&#x27;s strictest permitting standards for data centers. The GRID framework requires developers to fund their own power infrastructure, obtain local approval before any state permit, and sign enforceable community benefit agreements — or face the slowest permitting lane in the state.</description>
+    </item>
+    <item>
       <title>Data Center Opposition Just Became a National Political Force</title>
       <link>https://aigridwatch.com/blog/data-center-midterms-politics-2026</link>
       <guid>https://aigridwatch.com/blog/data-center-midterms-politics-2026</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/amazon-oyer-site-selection-2026</guid>
       <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
       <description>In a Latitude Media interview, Amazon&#x27;s energy chief laid out a sophisticated site-selection strategy — picking locations where new load &#x27;benefits the grid,&#x27; pledging full cost coverage, and touting a 52% water-efficiency gain. The claims are worth understanding, because the playbook is coming to a town near you.</description>
-    </item>
-    <item>
-      <title>A $15B Data Center Made Wisconsin Farmers Millionaires — and the Same Playbook Is Headed for 10 More Markets</title>
-      <link>https://aigridwatch.com/blog/port-washington-stargate-land-rush-2026</link>
-      <guid>https://aigridwatch.com/blog/port-washington-stargate-land-rush-2026</guid>
-      <pubDate>Sat, 18 Jul 2026 00:00:00 GMT</pubDate>
-      <description>In Port Washington, Vantage&#x27;s $15B OpenAI–Oracle Stargate campus turned farmland into a lottery ticket — some sellers cleared millions, some wish they&#x27;d held out, and the neighbors who didn&#x27;t sell face eminent domain. It&#x27;s also a preview: the same power-first, low-opposition playbook is now spreading to 10 emerging markets, from Reno to Tulsa to New Mexico&#x27;s $165B Stargate site.</description>
     </item>
 </channel>
 </rss>

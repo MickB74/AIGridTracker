@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/pennsylvania-grid-executive-order-2026",
+      "destination": "/blog/pennsylvania-grid-executive-order-2026",
+      "permanent": true
+    },
+    {
       "source": "/data-center-midterms-politics-2026",
       "destination": "/blog/data-center-midterms-politics-2026",
       "permanent": true

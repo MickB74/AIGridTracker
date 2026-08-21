@@ -56,6 +56,192 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── Pennsylvania Governor Shapiro signs GRID executive order ──
+    {
+        "id": "pennsylvania-grid-executive-order-2026",
+        "art": "oversight",
+        "section": "stories",
+        "title": "Pennsylvania Just Told Data Centers: Build Your Own Power, or Don't Build Here",
+        "date": _dt.date(2026, 8, 21),
+        "author": "GridWatch AI",
+        "tags": ["Pennsylvania", "policy", "executive order", "GRID",
+                 "ratepayer protection", "permitting", "community benefits",
+                 "Amazon", "analysis"],
+        "summary": (
+            "Governor Shapiro signed Executive Order 2026-05 on August 18, "
+            "establishing the nation's strictest permitting standards for data "
+            "centers. The GRID framework requires developers to fund their own "
+            "power infrastructure, obtain local approval before any state permit, "
+            "and sign enforceable community benefit agreements — or face the "
+            "slowest permitting lane in the state."
+        ),
+        "body": """\
+On August 18, 2026, Governor Josh Shapiro signed [Executive Order 2026-05](https://www.pa.gov/content/dam/copapwp-pagov/en/governor/documents/eo2026_05_protecting%20pennsylvania%20consumers%20from%20data%20center%20impacts_final_executed.pdf),
+creating what Pennsylvania is calling the strictest data center development
+standards in the nation. The order establishes the **GRID** (Governor's
+Responsible Infrastructure Development) framework — a set of enforceable
+requirements that any large data center must meet to receive state permits
+and tax benefits.
+
+Shapiro's message was blunt: *"If you can't agree to our strict requirements
+and get the community where you want to build to say 'yes,' you're not going
+to have the Commonwealth's support either."*
+
+### What GRID actually requires
+
+**Pay for your own power.** Developers must fund the generation, transmission,
+and distribution infrastructure their projects require. PUC Chair Steve DeFrank
+put it simply: *"Growth should pay for growth."* No more shifting grid upgrade
+costs to residential ratepayers.
+
+**Bring your own generation.** Projects over 25 MW are incentivized to source
+new power rather than drawing from existing plants. The order imposes an
+escalating clean-energy sourcing requirement: 10% at opening, 14.5% within
+three years, and 32% by 2035.
+
+**Local approval before state permits.** This is the structural shift. The
+Department of Environmental Protection will not issue permits unless the project
+has already secured all required local government approvals. Municipalities
+effectively have veto power.
+
+**Enforceable community benefit agreements.** Developers must sign legally
+binding commitments covering local hiring, workforce training, and investment
+in schools, infrastructure, and economic development.
+
+**No more NDAs.** The order bans non-disclosure agreements on data center
+matters — a direct response to the secrecy that has defined developer
+negotiations with local governments nationwide.
+
+**Transparency mandate.** DEP must publish a public permitting-status map,
+and developers must provide early public notification and hold community
+meetings before major design decisions.
+
+**Environmental standards.** Water conservation requirements, pollution-limiting
+DEP regulations, and annual energy and water consumption reporting.
+
+**Fast Track is dead.** All AI data center projects — including Amazon's
+\\$20 billion Luzerne County and Bucks County campuses — have been immediately
+pulled from the PA Permit Fast Track Program. Future data center projects are
+permanently ineligible.
+
+**Tax breaks are conditional.** Pennsylvania's existing Computer Data Center
+Equipment sales-tax exemption now requires GRID compliance. The Department of
+Revenue is updating exemption guidelines accordingly.
+
+### How it works: the consent order model
+
+Rather than an outright ban or moratorium, GRID uses a carrot-and-stick
+permitting model. Developers who meet the requirements execute a **Consent
+Order and Agreement (COA)** with DEP after pre-application meetings, gaining
+access to a streamlined permitting lane. Non-compliant projects aren't banned
+— they're shunted into conventional permitting, which is dramatically slower.
+
+This is a deliberate design choice. Shapiro's team built the order with a
+severability clause, anticipating legal challenge from the data center industry.
+A consent-order framework is harder to strike down than a blanket moratorium
+because it technically doesn't prohibit anything — it just makes noncompliance
+very expensive in time and bureaucratic friction.
+
+### Why it happened now
+
+The numbers forced the issue. Pennsylvania is tracking over **100 proposed data
+center projects** statewide. Of those, 58 have engaged DEP informally, 15 have
+filed for at least one permit, and only 5 have all the permits needed for a
+first phase. The pipeline is enormous and accelerating.
+
+The political math mattered too. A Quinnipiac poll found **76% of Pennsylvania
+voters oppose data centers near their communities**. And the legislative route
+had stalled: the House passed [HB 2650](https://www.legis.state.pa.us/cfdocs/billInfo/BillInfo.cfm?syear=2025&sind=0&body=H&type=B&bn=2650)
+codifying GRID on June 24, 134-68, with bipartisan support — but the
+GOP-controlled Senate refused to take it up. Senate Democrats pushed for a
+special session; Senate Majority Leader Joe Pittman declined. Facing Senate
+inaction, Shapiro went executive.
+
+### The reaction
+
+The order drew praise from an unusually broad coalition: building trades unions
+(PA Building & Construction Trades Council), environmental groups (Conservation
+Voters of PA, NRDC, Environmental Defense Fund), municipal organizations (PA
+State Association of Township Supervisors), and clean-energy advocates (Clean
+Power PA).
+
+Criticism came from both directions:
+
+**Too weak.** Food & Water Watch wants a mandatory moratorium, not a
+voluntary-compliance model. GOP Treasurer Stacey Garrity — Shapiro's likely
+2026 gubernatorial rival — called the order "gaslighting," arguing that
+consent-based permitting gives developers too many paths around the rules.
+
+**Too restrictive.** The Data Center Coalition (representing Amazon, Microsoft,
+and others) objected to *"rules changed midstream impacting ongoing investment
+in verified and responsible projects."* Senate Majority Leader Pittman
+complained that his chamber's own tax-exemption repeal bill was derailed by
+House amendments.
+
+### What this means for your community
+
+Even outside Pennsylvania, the GRID framework changes the landscape:
+
+**1. "Growth pays for growth" is now precedent.** Before this, communities
+had to argue from scratch that data centers should fund their own grid
+upgrades. Pennsylvania just made it the default. Cite it.
+
+**2. The local-veto model is replicable.** Requiring local approval before
+state permits is something any governor can do by executive order. It doesn't
+require new legislation.
+
+**3. The NDA ban sets a standard.** If Pennsylvania's governor says
+non-disclosure agreements on public infrastructure decisions are unacceptable,
+your planning board can say the same thing.
+
+**4. Fast Track removal is the real leverage.** The single most concrete action
+was pulling Amazon's \\$20 billion projects from expedited permitting. It signals
+that even the largest developers can't buy their way past community opposition.
+
+**5. Watch the legal challenge.** The consent-order model is legally novel for
+data centers. If it survives court challenge, it becomes a template. If it
+doesn't, the fallback is legislation — and HB 2650 already passed the House.
+
+### How Pennsylvania compares
+
+Shapiro claims the strictest guardrails in the nation. That's true among states
+without an outright moratorium. For context:
+
+- **New York** imposed a [1-year moratorium](/blog/ny-moratorium-eo62-2026.html)
+  on 50+ MW facilities and proposed a \\$1M/MW community benefit benchmark
+- **Georgia** banned local governments from approving new data centers until
+  December 2028
+- **Texas** [froze its entire interconnection queue](/blog/texas-ercot-queue-freeze-2026.html)
+  of 474 GW
+
+Pennsylvania's approach is different: it doesn't stop projects, it conditions
+them. Whether that's stronger or weaker depends on enforcement — and whether
+the consent-order model holds up in court.
+
+### What to do now
+
+- **Read the [full executive order](https://www.pa.gov/content/dam/copapwp-pagov/en/governor/documents/eo2026_05_protecting%20pennsylvania%20consumers%20from%20data%20center%20impacts_final_executed.pdf)**
+  — print the GRID requirements list for your next planning meeting
+- **If you're in Pennsylvania**, your municipality now has veto power. Use our
+  [Start Here wizard](/app) to build a meeting brief with the GRID framework
+  as leverage
+- **If you're anywhere else**, bring the "growth pays for growth" principle
+  and the NDA ban to your council. Pennsylvania just proved a governor can do
+  this without the legislature
+- **Contact your governor's office** using our [state directory](/states/) —
+  executive orders don't require legislative majorities
+
+---
+
+*Sources: [PA.gov press release](https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-signs-executive-order-on-data-center-developmen),
+[EO 2026-05 full text (PDF)](https://www.pa.gov/content/dam/copapwp-pagov/en/governor/documents/eo2026_05_protecting%20pennsylvania%20consumers%20from%20data%20center%20impacts_final_executed.pdf),
+[WHYY](https://whyy.org/articles/shapiro-data-centers-executive-order-pennsylvania/),
+[Philadelphia Inquirer](https://www.inquirer.com/politics/pennsylvania/josh-shapiro-data-center-order-20260818.html),
+[Pennsylvania Capital-Star](https://penncapital-star.com/technology-information/gov-shapiro-signs-data-center-executive-order-critics-say-it-falls-short/),
+[Utility Dive](https://www.utilitydive.com/news/pennsylvania-executive-order-data-centers/828261/),
+[PA.gov reaction roundup](https://www.pa.gov/governor/newsroom/2026-press-releases/what-people-are-saying-about-governor-shapiro-s-executive-order-)*
+""",
+    },
     # ── Texas freezes 474 GW ERCOT data center queue ──
     {
         "id": "texas-ercot-queue-freeze-2026",
