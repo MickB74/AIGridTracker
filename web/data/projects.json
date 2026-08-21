@@ -12586,7 +12586,32 @@
       "source": "https://mlq.ai/news/databank-files-for-200mw-data-center-campus-outside-atlanta-georgia/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2026-06-22",
+          "kind": "filing",
+          "summary": "DataBank Holdings filed a Development of Regional Impact (DRI) application with the Georgia Department of Community Affairs for 'Project Indo,' a proposed 200 MW data center campus on 69 acres at 218 Industrial Park Road, Cartersville, seeking a 288 MW utility grid connection; full build-out is estimated at $2.4 billion with first phase targeted for 2032.",
+          "source": "https://inforcapital.com/news/databank-files-for-200mw-data-center-campus-outside-atlanta-georgia/"
+        },
+        {
+          "date": "2026-06-25",
+          "kind": "rezoning",
+          "summary": "DataBank filed a rezoning request with the City of Cartersville to change the 218 Industrial Park Road site from HI (heavy industrial) to T (technology district) to permit the ~1 million-sq-ft data center and on-site power substation; city planner David Hardegree said the request would go before the Planning Commission on August 11, with projected annual tax revenue of $23 million and 60 full-time jobs.",
+          "source": "https://www.daily-tribune.com/news/data-center-eyes-cartersville-industrial-site/article_effaa5c3-3a8b-56dd-bbb3-53d11fb7a072.html"
+        },
+        {
+          "date": "2026-07-07",
+          "kind": "coverage",
+          "summary": "Northwest Georgia News reported further details on Project Indo, including a DRI-estimated water use of roughly 5,082 gallons per day; Bartow County Administrator Peter Olson and Commissioner Steve Taylor downplayed traffic and water impacts and framed the project as a tax-revenue benefit for the county.",
+          "source": "https://www.northwestgeorgianews.com/rome/news/local/project-indo-data-center-proposed-for-bartow-off-u-s-411/article_644cf7ac-734f-44f0-986a-5aa0c0379d20.html"
+        },
+        {
+          "date": "2026-08-11",
+          "kind": "hearing",
+          "summary": "Cartersville Planning Commission scheduled hearing on DataBank's rezoning request (HI to Technology district) for the Project Indo data center campus at 218 Industrial Park Road.",
+          "source": "https://www.daily-tribune.com/news/data-center-eyes-cartersville-industrial-site/article_effaa5c3-3a8b-56dd-bbb3-53d11fb7a072.html"
+        }
+      ]
     },
     {
       "id": "aligned-shippingport-pa",
@@ -12966,7 +12991,50 @@
       "source": "https://www.prnewswire.com/news-releases/t5-finalizes-land-acquisition-in-atlanta-to-support-a-300-mw-data-center-campus-302232913.html",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-06-12",
+          "kind": "filing",
+          "summary": "T5 Data Centers filed a preliminary Development of Regional Impact (DRI) application with the Atlanta Regional Commission for a two-building, 495,000-sq-ft data center campus off I-85 and Gullatt Road near Fairburn, its third south-Atlanta-area campus at the time.",
+          "source": "https://www.bisnow.com/atlanta/news/data-center/t5-plotting-data-center-campus-in-fairburn-124663"
+        },
+        {
+          "date": "2024-07-16",
+          "kind": "withdrawal",
+          "summary": "T5 withdrew its original DRI application, which by that point had grown to a proposed 2.95 million-sq-ft, 300MW campus across seven buildings.",
+          "source": "https://www.bldup.com/posts/t5-refiles-modified-plans-for-atl-iv-data-center-campus-in-south-fulton-county"
+        },
+        {
+          "date": "2024-08-28",
+          "kind": "announcement",
+          "summary": "T5 finalized acquisition of the 91-acre Palmetto/South Fulton County site and publicly announced the ATL IV campus, describing it as scalable up to 300MW with an on-site substation targeted for 2026 operation and liquid cooling to support AI workloads.",
+          "source": "https://www.prnewswire.com/news-releases/t5-finalizes-land-acquisition-in-atlanta-to-support-a-300-mw-data-center-campus-302232913.html"
+        },
+        {
+          "date": "2025-05-05",
+          "kind": "filing",
+          "summary": "T5 submitted a revised, scaled-down DRI application for ATL IV consisting of three data center buildings totaling up to 1,320,000 sq ft along Gullatt Road, with supporting access roads, parking, utilities, and stormwater infrastructure.",
+          "source": "https://www.bldup.com/posts/t5-refiles-modified-plans-for-atl-iv-data-center-campus-in-south-fulton-county"
+        },
+        {
+          "date": "2025-11-01",
+          "kind": "report",
+          "summary": "The Atlanta Regional Commission completed its Development of Regional Impact review of the revised ATL IV application, a milestone reported as clearing the way toward construction; the Fairburn portion of the site already held full zoning/permits under existing industrial designation.",
+          "source": "https://www.bldup.com/posts/fairburn-data-center-project-gains-fresh-traction-with-regulatory-wins-and-community-dialogue"
+        },
+        {
+          "date": "2026-01-07",
+          "kind": "hearing",
+          "summary": "The City of Palmetto held a special city council session that advanced discussion of a potential economic development agreement tied to the T5 project.",
+          "source": "https://www.bldup.com/posts/fairburn-data-center-project-gains-fresh-traction-with-regulatory-wins-and-community-dialogue"
+        },
+        {
+          "date": "2026-03-01",
+          "kind": "moratorium",
+          "summary": "The Palmetto City Council unanimously approved a rewritten industrial zoning code that permanently excludes data centers from the city, following community concern that had built up around the T5 project and area data-center growth; Mayor Teresa Thomas-Smith cited an \"overall disinterest\" in the warehouse-like structures.",
+          "source": "https://www.wabe.org/palmetto-city-council-approves-rewritten-industrial-zoning-code-to-ban-exclude-data-centers/"
+        }
+      ]
     },
     {
       "id": "ntt-gainesville-va",
@@ -13079,7 +13147,74 @@
       "source": "https://www.prnewswire.com/news-releases/databank-secures-2-0b-of-construction-financing-for-first-three-data-centers-on-new-south-dallas-campus-302747309.html",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-06-13",
+          "kind": "filing",
+          "summary": "DataBank registered its first Red Oak building, DFW9 (425,170 sq ft, two-story data center with office space, $256M estimated cost), with the Texas Department of Licensing and Regulation (TABS project TABS2024020821).",
+          "source": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2024020821"
+        },
+        {
+          "date": "2024-09-10",
+          "kind": "announcement",
+          "summary": "DataBank announced development of a 480MW, 292-acre, eight-building data center campus in Red Oak, Ellis County, Texas (its third new-campus announcement in 12 months), with Phase 1 covering four buildings and a 400MW Oncor substation delivering 240MW of critical IT power; initial ready-for-service targeted for Q2 2026.",
+          "source": "https://www.prnewswire.com/news-releases/databank-announces-development-of-480mw-data-center-campus-in-south-dallas-302240719.html"
+        },
+        {
+          "date": "2024-11-05",
+          "kind": "filing",
+          "summary": "DataBank filed plans for a second Red Oak building, DFW10 ($256M, 425,000+ sq ft), with construction slated to begin February 2025 and complete by mid-2028; report described it as a $256M addition to the growing Red Oak campus.",
+          "source": "https://www.dallasnews.com/business/real-estate/2024/11/04/dallas-firm-to-make-256m-addition-to-red-oak-data-center-campus/"
+        },
+        {
+          "date": "2024-11-05",
+          "kind": "filing",
+          "summary": "Dallas Express reported DataBank's $265M expansion of the Red Oak campus (second facility), a 425,000 sq ft two-story building designed by JHET Architects, with construction beginning February 2025 and completion expected July 2028; full build-out envisions eight buildings totaling 3.4M+ sq ft.",
+          "source": "https://dallasexpress.com/realestate/databank-to-expand-data-center-campus-in-red-oak/"
+        },
+        {
+          "date": "2025-12-01",
+          "kind": "construction",
+          "summary": "Construction work on DFW11 at the Red Oak campus began (per reported December 2025–January 2028 build schedule), part of the campus's staggered build-out following DFW9 and DFW10.",
+          "source": "https://www.datacenterdynamics.com/en/news/databank-files-to-develop-two-more-data-centers-at-upcoming-red-oak-texas-campus/"
+        },
+        {
+          "date": "2026-04-21",
+          "kind": "financing",
+          "summary": "DataBank closed a $2.0 billion construction loan — its largest financing to date, led by MUFG Bank under DataBank's Green Financing Framework — to fund the first three Red Oak buildings (DFW9, DFW10, DFW11: 600,000 sq ft, 180MW), all fully leased to an AI/cloud tenant (reported to be Oracle); the financing was said to accelerate delivery by about 18 months.",
+          "source": "https://www.databank.com/resources/press-releases/databank-secures-2-0b-of-construction-financing-for-first-three-data-centers-on-new-south-dallas-campus/"
+        },
+        {
+          "date": "2026-05-11",
+          "kind": "hearing",
+          "summary": "Red Oak Planning & Zoning Commission and City Council held a separate, contentious public hearing on an unrelated 830-acre Compass Datacenters project elsewhere in Red Oak; over 150 residents attended amid a 1,600-signature opposition petition citing noise, water, traffic and power-grid concerns (noted here for context but distinct from DataBank's Stainback Road campus).",
+          "source": "https://www.keranews.org/energy-environment/2026-05-12/oppose-expand-votes-in-2-north-texas-communities-highlight-a-divide-over-data-center-growth"
+        },
+        {
+          "date": "2026-06-01",
+          "kind": "construction",
+          "summary": "Reporting described DataBank's Red Oak campus in active construction, with initial concrete pours underway and electrical systems installation beginning; residents voiced mixed reactions including concerns about noise and water use, while DataBank held public meetings and appointed a community liaison.",
+          "source": "https://egoease.com/an-inside-look-at-construction-in-databanks-red-oak-ai-data-center-campus/"
+        },
+        {
+          "date": "2026-06-16",
+          "kind": "financing",
+          "summary": "DataBank closed $1.45 billion in new financing across two transactions: an $800M corporate revolving credit facility and a $650M upsize (including DataBank's first private-placement notes) of the Red Oak construction loan to fund a fourth building (60MW additional IT capacity), bringing total Red Oak campus financing to $2.65 billion.",
+          "source": "https://www.databank.com/resources/press-releases/databank-closes-1-45-billion-in-new-financing-across-two-transactions/"
+        },
+        {
+          "date": "2026-08-01",
+          "kind": "construction",
+          "summary": "Dallas Morning News reported DFW9 was expected to come online in August 2026, with DFW10 (interior work, ~$301M, completion January 2027) and DFW11 (~$315M, completion March 2027) following on a staggered schedule; residents cited concerns about scale, infrastructure strain, a 10-year tax-abatement delay on community benefits, and limited local job creation relative to project size.",
+          "source": "https://www.elliscountypress.com/news/red-oak-citizens-upset-over-upcoming-data-centers"
+        },
+        {
+          "date": "2026-08-11",
+          "kind": "moratorium",
+          "summary": "Texas Governor Greg Abbott ordered a statewide audit of all data centers connecting to the ERCOT grid, effectively pausing new interconnections pending review — a state-level action affecting all Texas data center projects, including those on DataBank's Red Oak campus.",
+          "source": "https://www.mofo.com/resources/insights/260811-texas-governor-orders-data-center-moratorium-disrupting"
+        }
+      ]
     },
     {
       "id": "cloudhq-mount-prospect-il",
@@ -13291,7 +13426,68 @@
       "source": "https://blackridgeresearch.com/news-releases/vantage-data-center-announces-investment-for-new-192-mw-campus-fredericksburg-us",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-10-21",
+          "kind": "rezoning",
+          "summary": "After a marathon public hearing, the Stafford Board of Supervisors voted 4-2-1 to adopt a Comprehensive Plan update (R25-208) and zoning amendment (O25-29) imposing a 750-foot data-center setback from homes, schools and rivers (up from 100 feet); this date became the cutoff later used to grandfather VA4/Melrod under prior rules.",
+          "source": "https://www.fredericksburgfreepress.com/2025/10/22/a-home-run-for-data-center-critics-stafford-supervisors-adopt-750-foot-setback/"
+        },
+        {
+          "date": "2025-10-21",
+          "kind": "protest",
+          "summary": "At the same hearing, residents including Falmouth's Alane Callander and groups like Friends of the Rappahannock pushed for setbacks as large as 1,500 feet and raised water, noise and viewshed concerns about the wave of Stafford data-center rezonings that includes Vantage's VA4/Melrod project.",
+          "source": "https://citizenportal.ai/articles/7439006/virginia/stafford-county/stafford-adopts-stricter-datacenter-rules-after-marathon-public-hearing-developers-residents-split"
+        },
+        {
+          "date": "2025-11-06",
+          "kind": "announcement",
+          "summary": "Vantage Data Centers announced a $2 billion investment to build VA4, a 192MW, three-building, 929,000-sq-ft campus on 82 acres in Stafford County near Fredericksburg — its fourth Virginia campus, bringing statewide capacity to 782MW.",
+          "source": "https://www.businesswire.com/news/home/20251106187378/en/Vantage-Data-Centers-Invests-$2B-in-Fredericksburg-Virginia-Region-to-Deliver-Fourth-Campus-in-the-Commonwealth"
+        },
+        {
+          "date": "2025-11-06",
+          "kind": "construction",
+          "summary": "Vantage and general contractor DPR Construction held a groundbreaking ceremony for VA4, attended by Virginia Deputy Secretary of Commerce Luis Lopez Stipes, Stafford Supervisors Meg Bohmke and Darrell English, and IBEW Local 26; first building targeted for late 2027.",
+          "source": "https://vantage-dc.com/news/vantage-data-centers-invests-2b-in-fredericksburg-virginia-region-to-deliver-fourth-campus-in-the-commonwealth/"
+        },
+        {
+          "date": "2025-12-02",
+          "kind": "rezoning",
+          "summary": "Stafford Board of Supervisors approved Ordinance O25-29(R), grandfathering five previously-approved data center projects — including Vantage VA-4 (Melrod) — allowing them to proceed under the pre-Oct. 21, 2025 zoning rules rather than the new setback/noise standards.",
+          "source": "https://www.fredericksburgfreepress.com/2025/12/04/stafford-supervisors-after-approving-new-rules-grandfather-five-data-center-projects/"
+        },
+        {
+          "date": "2025-12-02",
+          "kind": "protest",
+          "summary": "Environmental advocates and residents who fought for the October setback reforms objected to the grandfathering vote, arguing it undermined protections they had just won for projects like VA4/Melrod.",
+          "source": "https://www.potomaclocal.com/2025/12/01/stafford-revisits-data-center-rules-proposes-grandfathering-five-major-projects/"
+        },
+        {
+          "date": "2026-03-01",
+          "kind": "coverage",
+          "summary": "Virginia Business reported VA4 is expected to generate $115.4–$116.7 million in annual property tax revenue for Stafford County, while Protect Stafford president Erin Sanzero warned county officials were unprepared for the volume of data-center rezoning applications and that Stafford risked becoming 'the next Data Center Alley.'",
+          "source": "https://virginiabusiness.com/stafford-data-center-growth-i95-2025/"
+        },
+        {
+          "date": "2026-03-25",
+          "kind": "permit",
+          "summary": "Stafford Planning Commission voted 7-0 to recommend Board approval of a conditional use permit for a Vantage Data Centers VA41 LLC electric substation on 15.62 acres on Centerport Parkway (Hartwood District), to serve the VA4 campus's on-site power needs.",
+          "source": "https://staffordcountyva.gov/government/departments_p-z/planning_and_zoning/long_range/rezonings,_cups,_comp_plan_amendments/development_review_meetings_new_applications.php"
+        },
+        {
+          "date": "2026-05-19",
+          "kind": "permit",
+          "summary": "Stafford Board of Supervisors approved the conditional use permit for Vantage's on-site electric substation supporting the VA4 data center campus.",
+          "source": "https://staffordcountyva.gov/government/elected_and_appointed_officials/board_of_supervisors/agenda_and_minutes.php"
+        },
+        {
+          "date": "2026-07-02",
+          "kind": "incentive",
+          "summary": "Potomac Local reported Stafford had five approved data-center projects (three, including VA4, under construction) and 11 pending applications amid a state budget fight; Virginia's compromise preserved data-center sales-tax equipment exemptions (~$2B/year statewide) while adding a new $0.011/kWh electricity consumption tax capped near $600M/year.",
+          "source": "https://www.potomaclocal.com/2026/07/02/stafford-county-processes-11-data-center-applications-as-state-budget-fight-looms-over-industry-incentives/"
+        }
+      ]
     },
     {
       "id": "fort-meade-data-center-fl",
@@ -17250,7 +17446,62 @@
       "source": "https://www.electricchoice.com/datacenters/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2025-12-03",
+          "kind": "incentive",
+          "summary": "Freestone County Commissioners held a public hearing and unanimously approved Reinvestment Zone Number 12 (C1 Freestone, LLC Data Center, a CyrusOne affiliate) on 507 acres near the Calpine plant, with a minimum $600 million initial improvement and a 10-year, $850,000/year payment-in-lieu-of-taxes agreement.",
+          "source": "https://freestonecountytimesonline.com/county-commissioners-approve-reinvestment-zone/"
+        },
+        {
+          "date": "2026-02-09",
+          "kind": "announcement",
+          "summary": "Constellation's Calpine unit and CyrusOne announced a Powered Land Capabilities agreement supplying 380MW for Phase 1 of a new data center adjacent to the Freestone Energy Center, with an exclusive option for an additional 380MW in Phase 2 (760MW total).",
+          "source": "https://www.constellationenergy.com/news/2026/02/constellation-and-cyrusone-announce-agreement-to-support-new-data-center-facility-at-freestone-energy-center-in-texas.html"
+        },
+        {
+          "date": "2026-05-13",
+          "kind": "public-comment",
+          "summary": "A public notice regarding the data center project and upcoming county hearing was published in the Freestone County Times.",
+          "source": "https://freestonecountytimesonline.com/cyrusone-data-center-economic-boost-rural-burden/"
+        },
+        {
+          "date": "2026-05-25",
+          "kind": "protest",
+          "summary": "A Change.org petition titled \"Ban Data Centers in Freestone County\" was started, citing water, noise and light pollution, rising power costs, and health/traffic impacts; it drew hundreds of signatures ahead of the county's June hearings.",
+          "source": "https://www.change.org/p/ban-data-centers-in-freestone-county"
+        },
+        {
+          "date": "2026-06-03",
+          "kind": "public-comment",
+          "summary": "A Freestone County Commissioners Court meeting drew an overflow crowd (relocated to the District Courtroom) with 15+ residents raising concerns about permanent water loss, noise, health effects, and lack of transparency; resident Toni Abram asked for a 1-2 year pause, and the court scheduled a special meeting for June 10 and a public hearing for June 17.",
+          "source": "https://freestonecountytimesonline.com/citizens-voice-concerns-to-freeco-commissioners/"
+        },
+        {
+          "date": "2026-06-04",
+          "kind": "construction",
+          "summary": "CyrusOne held a groundbreaking ceremony for its Freestone County data center campus with County Judge Lloyd Lane, Fairfield Mayor Bobby Nichols, Calpine, and contractor Rogers-O'Brien Construction.",
+          "source": "https://www.fcrecorderchronicle.com/article/4386,cyrusone-breaks-ground-in-freestone-county"
+        },
+        {
+          "date": "2026-06-10",
+          "kind": "hearing",
+          "summary": "A special Freestone County Commissioners Court meeting was held at which CyrusOne presented information addressing resident concerns, citing a closed-loop water system (~1,000 gallons/day per building), 45-55 decibel noise levels, about 40 jobs per building, and a 2030 carbon-neutral goal.",
+          "source": "https://freestonecountytimesonline.com/cyrusone-data-center-economic-boost-rural-burden/"
+        },
+        {
+          "date": "2026-06-17",
+          "kind": "withdrawal",
+          "summary": "At a public hearing on a proposed Phase 2 tax abatement, roughly 30 residents voiced opposition over noise, water pollution, utility bills, and transparency; CyrusOne subsequently rescinded its tax abatement request for Phase 2, and County Judge Lloyd Lane said the abatement agreement had been the county's only leverage over the project.",
+          "source": "https://freestonecountytimesonline.com/cyrusone-rescinds-tax-abatement-request-commissioners-hear-concerns/"
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "filing",
+          "summary": "CyrusOne filed permits with the Texas Department of Licensing and Regulation for a three-building, $1.5 billion, 760MW data center campus (buildings DFW20A, DFW20B, DFW20C) on FM 488 in Fairfield, targeting completion by the end of August 2027.",
+          "source": "https://usdatacenterprojects.com/texas/cyrusone-files-permits-for-three-building-usd-1-5-billion-data-center-campus-in-texas"
+        }
+      ]
     },
     {
       "id": "cyrusone-bosque-county-tx",
@@ -17276,7 +17527,74 @@
       "source": "https://www.electricchoice.com/datacenters/",
       "as_of": "",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2024-10-21",
+          "kind": "incentive",
+          "summary": "Bosque County commissioners approved a tax abatement for CyrusOne's data center project and for Calpine Corporation's related energy expansion, backing the $1.2 billion initiative (financed in part by BlackRock and KKR).",
+          "source": "https://texasscorecard.com/state/texas-data-center-boom-and-the-local-backlash/"
+        },
+        {
+          "date": "2024-11-11",
+          "kind": "filing",
+          "summary": "CyrusOne registered its DFW10 project with the Texas Department of Licensing and Regulation: a $750 million, 250,000-square-foot single-story data center with a two-story office component at 557 CR 3610, Whitney.",
+          "source": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025005284"
+        },
+        {
+          "date": "2025-07-30",
+          "kind": "announcement",
+          "summary": "Calpine and CyrusOne announced a new 190-megawatt powered-land agreement to serve a new CyrusOne data center adjacent to Calpine's Thad Hill Energy Center in Bosque County, with the facility under construction and targeted for Q4 2026 operation.",
+          "source": "https://www.prnewswire.com/news-releases/calpine-and-cyrusone-announce-thad-hill-energy-center-powered-land-to-support-hyperscale-data-center-development-in-texas-302517470.html"
+        },
+        {
+          "date": "2025-11-03",
+          "kind": "announcement",
+          "summary": "Calpine and CyrusOne announced Phase 2 of their powered-land agreement, adding 210MW to the original 190MW commitment for a combined 400-megawatt deal at the Bosque County campus.",
+          "source": "https://www.prnewswire.com/news-releases/calpine-and-cyrusone-announce-phase-2-of-powered-land-agreement-to-support-hyperscale-data-center-at-thad-hill-energy-center-in-texas-302602881.html"
+        },
+        {
+          "date": "2025-12-05",
+          "kind": "filing",
+          "summary": "CyrusOne filed Texas Department of Licensing and Regulation applications for two additional facilities at the Whitney site, DFW17B ($500M, 249,090 sq ft) and DFW17C ($430M, 93,319 sq ft with an office component), expanding the Bosque County campus.",
+          "source": "https://www.datacenterdynamics.com/en/news/cyrusone-files-to-expand-data-center-campus-outside-waco-texas/"
+        },
+        {
+          "date": "2025-12-07",
+          "kind": "coverage",
+          "summary": "Houston Chronicle reported on CyrusOne's newly filed $430 million, 93,319-square-foot data center building at FM56 and CR3610A in Whitney, part of the expanding Bosque County campus.",
+          "source": "https://www.chron.com/business/technology/article/cyrusone-data-center-texas-waco-21228828.php"
+        },
+        {
+          "date": "2025-12-14",
+          "kind": "coverage",
+          "summary": "The Waco Bridge published an analysis of water, power, and political challenges facing the CyrusOne/Calpine data center project region, including the Bosque County campus.",
+          "source": "https://wacobridge.org/2025/12/14/water-power-politics-three-challenges-for-the-10b-data-center-project/"
+        },
+        {
+          "date": "2026-01-12",
+          "kind": "public-comment",
+          "summary": "Bosque County commissioners hosted a town hall/special commissioners-court session at the Clifton ISD Performing Arts Center where CyrusOne president John Hatem told roughly 60 residents the 400MW data center uses closed-loop cooling and would not draw down Lake Whitney; residents raised concerns about Middle Trinity aquifer depletion, with one warning the county could be \"out of groundwater in 30 to 35 years.\"",
+          "source": "https://www.kwbu.org/news-from-across-texas/2026-01-14/lake-whitney-data-center-draws-scrutiny-over-water-use-taxes"
+        },
+        {
+          "date": "2026-01-14",
+          "kind": "coverage",
+          "summary": "The Waco Bridge reported on the Lake Whitney data center town hall, noting officials' projection of a 120% county tax-base increase (about $70 million over 30 years) and continuing resident skepticism over water use.",
+          "source": "https://wacobridge.org/2026/01/14/town-hall-questions-on-lake-whitney-data-center-echo-mclennan-county-debate/"
+        },
+        {
+          "date": "2026-03-26",
+          "kind": "construction",
+          "summary": "CyrusOne topped out the first building (DFW10) at its Bosque County campus, with initial fit-out of DFW10 and DFW11 targeted for October 2026 and August 2027 respectively.",
+          "source": "https://www.datacenterdynamics.com/en/news/cyrusone-tops-out-latest-texas-data-center/"
+        },
+        {
+          "date": "2026-05-26",
+          "kind": "hearing",
+          "summary": "A standing-room-only Bosque County Commissioners Court meeting on proposed data-center tax abatements drew strong resident opposition over rural infrastructure, water use, noise, energy demand, and fire-safety preparedness; commissioners took no action and set a June 17 deadline for revisions.",
+          "source": "https://www.kxxv.com/news/local-news/in-your-neighborhood/bosque-county-commissioners-discuss-data-center-tax-abatements-take-no-action"
+        }
+      ]
     },
     {
       "id": "cyrusone-aurora-il",
