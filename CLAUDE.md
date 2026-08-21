@@ -142,6 +142,17 @@ this page" expander for navigation.
     is now categorised *Mixed outcome* precisely because a community planning
     around a cap that was never won is worse off than one that knows it still
     has to win it.
+  - `STATE_PERMIT_PORTALS` / `NATIONAL_PERMIT_TOOLS` / `RTO_QUEUES` +
+    `STATE_RTO` / `PERMIT_KINDS` — the permit paper trail: where a project's
+    public record lives. **Navigational links, not claims** — nothing here
+    says a permit exists, which is why they carry a link-check date rather
+    than a research `as_of`. Only 16 of the 51 states publish a searchable
+    permit register; `register: None` is a real answer meaning a records
+    request is the only route, so never paper over it with a search link
+    dressed as a database. `STATE_RTO` is a routing hint (several states are
+    split between markets, several sit outside every market) — the serving
+    utility is the only authority on which queue a site is in. Maintained by
+    `scripts/verify_permit_portals.py`.
   - `COMPANY_CONCESSIONS` — per-operator negotiation intel: documented concessions won elsewhere + a strategy read; feeds the meeting brief / action pack
   - `CBA_BENCHMARKS` — what similar communities won (Start here impact step)
   - `OUTREACH_TIPS` — platform-by-platform digital organizing playbook (Nextdoor/Ring/Facebook/WhatsApp/forums)
@@ -168,6 +179,19 @@ this page" expander for navigation.
   Tier 2 (state legislators) lives in `services/openstates.py`. The tiers are
   not interchangeable — OpenStates excludes mayors, so it can never substitute
   for tier 1.
+
+- **src/permit_lookup.py** — `sections(project)`: where to read one
+  project's public record, grouped into state environmental permits, county
+  and town filings, utility/grid records (RTO queue, PUC docket, FERC), and
+  federal databases. Each link carries a `kind`: `register` (a public
+  database), `search` (a pre-built query — **render the distinction**, since
+  citing a search result at a hearing is how a resident loses one), or
+  `note`. `known_permits(project)` is the separate, stronger claim: dated
+  `permit` events already sourced on the row (PA DEP rows arrive with permit
+  numbers). `document_checklist()` returns `PERMIT_KINDS`. Pure functions, no
+  Streamlit, no network. Rendered by `build_site.py::_project_paper_trail`
+  (every dossier on `web/projects.html`, plus the `#records` section) and by
+  Step 2 of the Start here wizard.
 
 - **src/briefs.py** — `build_meeting_brief_data(state, operator, meeting_type, mw)`: structured meeting-brief assembly (sections of kv/bullets/numbered/advice) plus the `MEETING_ADVICE` strategy dict. `build_meeting_brief(...)` renders it as plain text (toolkit's meeting prep generator, Start here text download). Output is plain text — don't escape `$` here.
 
@@ -232,6 +256,8 @@ Stdlib-only on purpose — they run in CI off `requirements-build.txt`, which ex
 | `verify_moratoriums.py` | Audits `MORATORIUMS_DF` **and `MORATORIUM_OUTCOMES`**: lapsed terms, dead source links (403/405/429 reported as *blocked*, not dead), rows with no source, `as_of` older than 180 days, and time-limited rows with no recorded end date. `--offline` skips link checks, `--out`/`--json` write the worklist, `--strict` exits non-zero. |
 | `scan_moratorium_candidates.py` | Mines the Google News RSS feed for moratoriums not yet tracked and appends them to `data/moratorium_candidates.json`. Entries keep `first_seen`; anything a human marks `"status": "dismissed"` is never re-raised. |
 | `scan_locality_candidates.py` | Mines `data/story_candidates.json` (the story tracker archive) for towns/counties that keep recurring in unlocalized headlines but aren't in the locality gazetteer yet, and appends them to `data/locality_candidates.json`, capped at `--max-new` (default 39) newly-surfaced names per run. Same never-writes-a-registry discipline as the moratorium scanner — promoting a candidate means researching its governing body (and, if it's had a real vote, the outcome) from primary sources and adding a `LOCAL_BODIES_DF`/`MORATORIUMS_DF` row by hand, then running `backfill_story_candidates.py --relabel` so its already-archived stories regroup. Runs daily as a step in `build-site.yml` (after the story archive itself refreshes), not the weekly moratorium job — it needs a fresh archive, not a fresh RSS fetch of its own. |
+| `fetch_nj_permits.py` | Mines NJDEP's air-permit register for facilities that look like data centers, into `data/nj_permit_candidates.json`. **A review queue, never a registry** — the opposite call from `fetch_pa_dep_projects.py`, because PA publishes a list of data-center *projects* while NJ publishes 17k permitted facilities that a filter has to guess at (NJDEP codes Memorial Sloan Kettering as NAICS 518210). Each row reports `confidence`: `naics` (NJDEP's own 5182x code) > `operator` (name matches `OPERATORS_DF`) > `name`. Reads NJDEP's ArcGIS NJEMS layer at `mapsdep.nj.gov`, **not** DataMiner — `dep.nj.gov` is behind an Imperva WAF that blocks scripted requests and answers with HTTP 200. Issued permits only: no permit numbers, no application dates, no pending applications, so it is a census of what is already permitted, not an early-warning feed. `--dry-run`, `--offline`, `--report`. Not yet wired into CI. |
+| `verify_permit_portals.py` | Link-checks every URL in `STATE_PERMIT_PORTALS`, `RTO_QUEUES`, `NATIONAL_PERMIT_TOOLS` and `FERC_ELIBRARY` — the links a resident clicks to pull a permit file, where a 404 sends them back to the search engine the registry exists to replace. Same classification as `verify_sources.py`: 401/403/405/429 are *blocked* (bot refusal), 5xx *flaky*, 404/DNS *dead*. `--out` writes a worklist, `--strict` exits non-zero on dead links. State agencies reorganise often — expect this to find something. |
 | `fetch_pa_dep_projects.py` | Syncs PA DEP's [Data Center Permit Tracker](https://gis.dep.pa.gov/DataCenterPermitTracker/) — two public CSVs behind the ArcGIS front end — into `data/projects.json`. **The only scanner that writes a registry.** Rows land tagged `origin: "pa-dep"`; hand-researched rows are never rewritten (collisions are reported and skipped, since merging two research trails is a human call). Each environmental permit becomes a dated `permit` event carrying its permit number and eFACTS auth ID. Deliberately conservative about what DEP does *not* say: `outcome` stays null ("DEP Review Complete" is a permit milestone, not a township approval), `announced` stays null, and `rezoning_filed` is the earliest permit application date. `--dry-run` reports without writing, `--offline` reuses the cached snapshot in `data/external/`. Runs daily in `build-site.yml` before the build. |
 
 `.github/workflows/verify-moratoriums.yml` runs the moratorium/project scanners weekly and commits the queue. It deliberately does **not** fail the build — a stale row is a chore, not a broken deploy, and a weekly red X gets trained away. The signal is the committed diff in `data/` plus the job summary. `scan_locality_candidates.py` runs daily instead, inside `build-site.yml`, for the same non-blocking reason.

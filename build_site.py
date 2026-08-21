@@ -38,6 +38,10 @@ from src.blog_art import art_svg, ART_THEMES, theme_for
 from src.blog_content import BLOG_STORIES, ABOUT_SECTION
 from src.alerts import build_alerts, LOOKAHEAD_DAYS as ALERT_LOOKAHEAD
 from src.briefs import MEETING_ADVICE
+from src.permit_lookup import (
+    document_checklist, known_permits, provenance_note,
+    sections as permit_sections,
+)
 from src.constants import (
     AI_COMPETITORS_DF,
     STATE_GRID_PROFILES, STATE_DC_DF, STATE_DC_NATIONAL,
@@ -462,6 +466,17 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .proj h3 { margin:0 0 4px; }
 .proj .meta { font-size:13px; color:var(--muted); margin:2px 0 8px; }
 .proj .next { font-size:14px; margin:8px 0 0; }
+.trail { margin:10px 0 0; }
+.trail h4 { margin:12px 0 2px; font-size:14px; }
+.trail p.why { font-size:13px; color:var(--muted); margin:0 0 6px; }
+.trail ul { list-style:none; padding:0; margin:0; }
+.trail li { padding:6px 0; border-top:1px solid var(--rule); font-size:14px; }
+.trail li .why { display:block; font-size:12.5px; color:var(--muted);
+   margin-top:2px; }
+.trail .k { font-size:10px; text-transform:uppercase; letter-spacing:.06em;
+   padding:1px 6px; border-radius:6px; margin-left:6px; vertical-align:1px; }
+.trail .k-search { background:#3f2d10; color:#fbbf24; }
+.trail .k-note { background:#334155; color:#cbd5e1; }
 /* Download cards — a consistent, scannable presentation for every file the
    site hands out (PDF briefings, JSON/CSV datasets). */
 .dl-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -7426,6 +7441,50 @@ def _project_timeline(events):
     return f'<ul class="timeline">{"".join(items)}</ul>'
 
 
+def _project_paper_trail(p):
+    """Where to read this project's public record — the evidence layer.
+
+    Two claims with different weight, kept visually apart on purpose: filings
+    we have already seen and sourced (tier 1), and registers where a filing
+    would live if one exists (tiers 2-4). A search link is labelled a search,
+    because citing a search result at a hearing is how a resident loses one.
+    """
+    filed = known_permits(p)
+    filed_html = ""
+    if filed:
+        items = "".join(
+            f'<li><span class="tl-date">{esc(str(f["date"] or "undated"))}</span>'
+            f'<br>{esc(str(f["summary"]))}'
+            + (f' · <a href="{esc(str(f["source"]))}" rel="nofollow noopener" '
+               f'target="_blank">source</a>' if has_value(f.get("source")) else "")
+            + "</li>"
+            for f in filed)
+        filed_html = (
+            f'<h4>Permits already on file ({len(filed)})</h4>'
+            f'<p class="why">Filings we have a source for — the record, not a '
+            f'place to look for one.</p><ul class="timeline">{items}</ul>')
+
+    blocks = []
+    for sec in permit_sections(p):
+        links = "".join(
+            f'<li><a href="{esc(l["url"])}" rel="nofollow noopener" '
+            f'target="_blank">{esc(l["label"])}</a>'
+            + ("" if l["kind"] == "register"
+               else f'<span class="k k-{esc(l["kind"])}">{esc(l["kind"])}</span>')
+            + f'<span class="why">{esc(l["why"])}</span></li>'
+            for l in sec["links"])
+        blocks.append(f'<h4>{esc(sec["tier"])}</h4>'
+                      f'<p class="why">{esc(sec["why"])}</p>'
+                      f'<ul>{links}</ul>')
+
+    n = sum(len(sec["links"]) for sec in permit_sections(p))
+    return (f'<details class="more"><summary>Find the paper trail '
+            f'({len(filed)} filed · {n} places to look)</summary>'
+            f'<div class="trail">{filed_html}{"".join(blocks)}'
+            f'<p class="why" style="margin-top:12px">{esc(provenance_note())} '
+            f'<a href="#records">What to ask for</a>.</p></div></details>')
+
+
 def _project_dossier(p):
     """One project card: identity, ownership, next action, event timeline."""
     status = project_status(p)
@@ -7452,6 +7511,7 @@ def _project_dossier(p):
   <p class="next"><strong>Next step:</strong> {esc(status['next_action'])}</p>
   <p>{_project_source_cell(p)}</p>
   {tl_block}
+  {_project_paper_trail(p)}
 </div>"""
 
 
@@ -7635,6 +7695,14 @@ def build_projects():
                          for x in sorted(state_names))
 
     dossiers = "\n".join(_project_dossier(p) for p in ordered)
+    records_rows = "\n".join(
+        f'<details class="more"><summary>{esc(k["name"])}</summary>'
+        f'<p class="why"><strong>Who holds it:</strong> {esc(k["holder"])}</p>'
+        f'<p>{esc(k["what"])}</p>'
+        f'<p><strong>Why it is worth having:</strong> {esc(k["leverage"])}</p>'
+        f'</details>'
+        for k in document_checklist())
+    permit_note = provenance_note()
     schema_rows = "\n".join(
         f"<tr><td><code>{esc(c)}</code></td><td>{esc(d)}</td></tr>"
         for c, d in PROJECT_SCHEMA)
@@ -7708,6 +7776,17 @@ def build_projects():
   with ownership, the next thing to do, and the sourced timeline of what has
   happened so far.</p>
   {dossiers}
+</section>
+<section id="records">
+  <h2>The seven documents worth asking for</h2>
+  <p class="muted" style="margin-bottom:12px">Every dossier above ends with
+  <strong>Find the paper trail</strong> — the registers, dockets and queues
+  that hold that project's record. This is what to look for once you are
+  there, roughly in the order the documents tend to exist. A records request
+  that arrives after the vote is worth nothing, so ask early and ask by
+  name.</p>
+  {records_rows}
+  <p class="muted">{permit_note}</p>
 </section>
 <section id="data">
   <h2>Use this data</h2>

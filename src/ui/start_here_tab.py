@@ -15,6 +15,9 @@ from src.constants import (
     OUTREACH_TIPS, ENTITY_TELLS, lookup_filing_entity,
 )
 from src.alerts import alerts_for_state
+from src.permit_lookup import (
+    document_checklist, provenance_note, sections as permit_sections,
+)
 from src.impact_model import estimate_facility_impact, INVESTMENT_USD_PER_MW
 from src.briefs import build_meeting_brief, build_meeting_brief_data
 from src.pdf_pack import build_action_pack_pdf, build_flyer_pdf
@@ -182,6 +185,7 @@ def render_start_here_tab():
                 f"owner: {_op.get('owner', 'N/A')} · "
                 f"model: {_op.get('model', 'N/A')}"
             )
+    _render_paper_trail(state, operator_for_brief)
     st.markdown('</div>', unsafe_allow_html=True)
 
     # ── Step 3 — what it will cost you ─────────────────────────────────── #
@@ -509,3 +513,52 @@ def render_start_here_tab():
         "officials**."
     )
     st.markdown('</div>', unsafe_allow_html=True)
+
+
+def _state_abbrev(state_name):
+    """Full state name -> 2-letter abbrev, via the PUC directory."""
+    row = STATE_PUCS_DF[STATE_PUCS_DF["state"] == state_name]
+    return "" if row.empty else str(row.iloc[0]["abbrev"])
+
+
+def _render_paper_trail(state_name, operator):
+    """Step 2's evidence half: where this project's public record lives.
+
+    The registers are deterministic (state agency, PUC, RTO queue, EPA), so
+    this needs no match in any registry to be useful — which is the point,
+    since the projects nobody has heard of are exactly the ones with no row.
+    Search links are labelled as searches; a search result is not a record.
+    """
+    st.markdown("#### 📄 Pull the paper trail")
+    abbrev = _state_abbrev(state_name)
+    if not abbrev:
+        return
+    locality = st.text_input(
+        "Town or county (optional)", key="sh_locality",
+        placeholder="e.g. Hazle Township, or Loudoun County",
+        help="Used to build the local planning and property-record lookups. "
+             "The state, utility and federal links work without it.")
+    # "Unknown / not listed" is a UI placeholder, not a company — feeding it
+    # into a search query is worse than searching without a name at all.
+    named = operator if operator not in (_UNKNOWN_LLC, "Unknown / not listed") else ""
+    proj = {"state": abbrev, "locality": locality.strip(), "name": named}
+    st.caption(
+        "The permit file is the evidence behind everything else in this "
+        "wizard. Ask early: a records request that arrives after the vote is "
+        "worth nothing.")
+    for sec in permit_sections(proj):
+        with st.expander(sec["tier"], expanded=(sec["tier"].startswith("State"))):
+            st.caption(sec["why"])
+            for l in sec["links"]:
+                tag = "" if l["kind"] == "register" else f" *({l['kind']})*"
+                st.markdown(f"- **[{l['label']}]({l['url']})**{tag}  \n"
+                            f"  {l['why']}")
+    with st.expander("What to ask for — the 7 documents worth having"):
+        for k in document_checklist():
+            st.markdown(
+                f"**{k['name']}**  \n"
+                f"*Who holds it:* {k['holder']}  \n"
+                f"{k['what']}  \n"
+                f"**Why it is worth having:** {k['leverage']}")
+            st.markdown("---")
+    st.caption(provenance_note())

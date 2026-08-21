@@ -6226,6 +6226,18 @@ REGISTRY_PROVENANCE = {
             "review aids — promoting or refreshing a study is a human step, "
             "read from the source, which is where the `as_of` comes from."),
     },
+    "STATE_PERMIT_PORTALS": {
+        "label": "State permit registers & the permit paper trail",
+        "as_of": "2026-08-21",
+        "source": None,
+        "churn": "medium",
+        "caveat": (
+            "Navigational links, not claims: every URL was link-checked on "
+            "the date above, but nothing here asserts that a given project "
+            "has filed anything. State agencies reorganise their sites "
+            "often — 16 of the 51 publish a searchable register at all, and "
+            "where the register is None a records request is the only route."),
+    },
     "STATE_PUCS_DF": {
         "label": "Public utility commission directory",
         "as_of": None,
@@ -8844,3 +8856,309 @@ LOCAL_OFFICIALS = [
      "source": "https://www.cityofpataskalaohio.gov/citycouncil"},
 ]
 LOCAL_OFFICIALS_DF = pd.DataFrame(LOCAL_OFFICIALS)
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PERMIT PAPER TRAIL — where the public record of a project actually lives
+# ═══════════════════════════════════════════════════════════════════════════
+# A tracked project in data/projects.json is a claim about the world; the
+# permit file is the evidence. These registries answer "where do I go to read
+# it myself" for any of the 51 jurisdictions, the way local_officials.py's
+# tier 3 answers it for officials: navigational links, not assertions of
+# fact, which is why they carry a link-check date rather than a research
+# `as_of`. Nothing here says a permit exists — only where one would be filed.
+#
+# `agency_url` is the program page (what permits exist, who to call).
+# `register` is a *searchable* public database of filings, or None when the
+# state publishes no such thing — which is itself worth telling a resident,
+# because it means the records request is the only route.
+
+STATE_PERMIT_PORTALS = {
+    "AL": {"agency": "Alabama Dept. of Environmental Management (ADEM)",
+           "agency_url": "https://adem.alabama.gov/",
+           "register": "https://app.adem.alabama.gov/eFile/",
+           "register_label": "ADEM eFile document search"},
+    "AK": {"agency": "Alaska DEC — Division of Air Quality",
+           "agency_url": "https://dec.alaska.gov/air/air-permit/",
+           "register": None, "register_label": None},
+    "AZ": {"agency": "Arizona DEQ — Air Quality Division",
+           "agency_url": "https://azdeq.gov/air-permits",
+           # ADEQ's eDocs search moved and the host WAF answers bots
+           # inconsistently (403 on one path, 404 on the next), so we can't
+           # verify any URL for it. None routes to the records-request path,
+           # which is the honest answer until someone confirms one by hand.
+           "register": None, "register_label": None},
+    "AR": {"agency": "Arkansas DEQ — Office of Air Quality",
+           "agency_url": "https://www.adeq.state.ar.us/air/permits/",
+           "register": "https://www.adeq.state.ar.us/home/pdssql/pds.aspx",
+           "register_label": "ADEQ Permit Data System"},
+    "CA": {"agency": "California — permits issued by 35 local air districts",
+           "agency_url": "https://ww2.arb.ca.gov/california-air-districts",
+           "register": "https://ceqanet.opr.ca.gov/search",
+           "register_label": "CEQAnet (CEQA filings by lead agency)"},
+    "CO": {"agency": "Colorado CDPHE — Air Pollution Control Division",
+           "agency_url": "https://cdphe.colorado.gov/apcd",
+           "register": None, "register_label": None},
+    "CT": {"agency": "Connecticut DEEP",
+           "agency_url": "https://portal.ct.gov/deep/permits-and-licenses/permitting-overview",
+           "register": None, "register_label": None},
+    "DE": {"agency": "Delaware DNREC — Division of Air Quality",
+           "agency_url": "https://dnrec.delaware.gov/air/permitting/",
+           "register": None, "register_label": None},
+    "DC": {"agency": "D.C. Dept. of Energy & Environment",
+           "agency_url": "https://doee.dc.gov/air",
+           "register": None, "register_label": None},
+    "FL": {"agency": "Florida DEP — Division of Air Resource Management",
+           "agency_url": "https://floridadep.gov/air",
+           "register": "https://prodenv.dep.state.fl.us/DepNexus/public/electronic-documents",
+           "register_label": "DEP Nexus electronic documents"},
+    "GA": {"agency": "Georgia EPD — Air Protection Branch",
+           "agency_url": "https://epd.georgia.gov/air-protection-branch",
+           "register": None, "register_label": None},
+    "HI": {"agency": "Hawaii DOH — Clean Air Branch",
+           "agency_url": "https://health.hawaii.gov/cab/",
+           "register": None, "register_label": None},
+    "ID": {"agency": "Idaho DEQ — Air Quality",
+           "agency_url": "https://www.deq.idaho.gov/air-quality/",
+           "register": None, "register_label": None},
+    "IL": {"agency": "Illinois EPA — Bureau of Air",
+           "agency_url": "https://epa.illinois.gov/",
+           "register": None, "register_label": None},
+    "IN": {"agency": "Indiana IDEM — Office of Air Quality",
+           "agency_url": "https://www.in.gov/idem/airquality/",
+           "register": "https://vfc.idem.in.gov/",
+           "register_label": "IDEM Virtual File Cabinet"},
+    "IA": {"agency": "Iowa DNR — Air Quality Bureau",
+           "agency_url": "https://www.iowadnr.gov/environmental-protection/air-quality",
+           "register": "https://programs.iowadnr.gov/documentsearch/",
+           "register_label": "Iowa DNR document search"},
+    "KS": {"agency": "Kansas KDHE — Bureau of Air",
+           "agency_url": "https://www.kdhe.ks.gov/188/Bureau-of-Air",
+           "register": None, "register_label": None},
+    "KY": {"agency": "Kentucky Division for Air Quality",
+           "agency_url": "https://eec.ky.gov/environmental-protection/air",
+           "register": None, "register_label": None},
+    "LA": {"agency": "Louisiana DEQ",
+           "agency_url": "https://deq.louisiana.gov/",
+           "register": "https://edms.deq.louisiana.gov/",
+           "register_label": "LDEQ Electronic Document Management System"},
+    "ME": {"agency": "Maine DEP — Bureau of Air Quality",
+           "agency_url": "https://www.maine.gov/dep/air/permits/",
+           "register": None, "register_label": None},
+    "MD": {"agency": "Maryland Dept. of the Environment",
+           "agency_url": "https://mde.maryland.gov/programs/permits/Pages/index.aspx",
+           "register": None, "register_label": None},
+    "MA": {"agency": "MassDEP — Air permitting",
+           "agency_url": "https://www.mass.gov/air-permits",
+           "register": None, "register_label": None},
+    "MI": {"agency": "Michigan EGLE — Air Quality Division",
+           "agency_url": "https://www.michigan.gov/egle/about/organization/air-quality/permits",
+           "register": "https://mienviro.michigan.gov/ncore/external/home",
+           "register_label": "MiEnviro Portal"},
+    "MN": {"agency": "Minnesota Pollution Control Agency",
+           "agency_url": "https://www.pca.state.mn.us/air/air-permits",
+           "register": "https://www.pca.state.mn.us/data/whats-in-my-neighborhood",
+           "register_label": "What's in My Neighborhood (permits by address)"},
+    "MS": {"agency": "Mississippi DEQ — Air Division",
+           "agency_url": "https://www.mdeq.ms.gov/air/",
+           "register": None, "register_label": None},
+    "MO": {"agency": "Missouri DNR — Air Pollution Control Program",
+           "agency_url": "https://dnr.mo.gov/air/business-industry/permits",
+           "register": None, "register_label": None},
+    "MT": {"agency": "Montana DEQ — Air Quality Bureau",
+           "agency_url": "https://deq.mt.gov/air",
+           "register": None, "register_label": None},
+    "NE": {"agency": "Nebraska Dept. of Environment & Energy",
+           "agency_url": "https://dee.nebraska.gov/air",
+           "register": None, "register_label": None},
+    "NV": {"agency": "Nevada DEP — Bureau of Air Pollution Control",
+           "agency_url": "https://ndep.nv.gov/air/permitting",
+           "register": None, "register_label": None},
+    "NH": {"agency": "New Hampshire DES — Air Resources Division",
+           "agency_url": "https://www.des.nh.gov/air/permitting",
+           "register": None, "register_label": None},
+    "NJ": {"agency": "New Jersey DEP",
+           "agency_url": "https://dep.nj.gov/online/",
+           "register": "https://dep.nj.gov/dataminer/",
+           "register_label": "NJDEP DataMiner"},
+    "NM": {"agency": "New Mexico Environment Dept. — Air Quality Bureau",
+           "agency_url": "https://www.env.nm.gov/air-quality/permitting/",
+           "register": None, "register_label": None},
+    "NY": {"agency": "New York State DEC — Division of Air Resources",
+           "agency_url": "https://dec.ny.gov/environmental-protection/air-quality",
+           "register": "https://dec.ny.gov/news/environmental-notice-bulletin",
+           "register_label": "Environmental Notice Bulletin (weekly filings)"},
+    "NC": {"agency": "North Carolina DEQ — Division of Air Quality",
+           "agency_url": "https://www.deq.nc.gov/about/divisions/air-quality/air-quality-permitting",
+           "register": None, "register_label": None},
+    "ND": {"agency": "North Dakota DEQ — Division of Air Quality",
+           "agency_url": "https://deq.nd.gov/AQ/Permitting/",
+           "register": None, "register_label": None},
+    "OH": {"agency": "Ohio EPA — Division of Air Pollution Control",
+           "agency_url": "https://epa.ohio.gov/divisions-and-offices/air-pollution-control/permitting",
+           "register": "https://ebiz.epa.ohio.gov/",
+           "register_label": "Ohio EPA eBusiness Center (Air Services)"},
+    "OK": {"agency": "Oklahoma DEQ — Air Quality Division",
+           "agency_url": "https://www.deq.ok.gov/air-quality-division/permitting/",
+           "register": None, "register_label": None},
+    "OR": {"agency": "Oregon DEQ — Air Quality",
+           "agency_url": "https://www.oregon.gov/deq/aq/aqPermits/Pages/default.aspx",
+           "register": None, "register_label": None},
+    "PA": {"agency": "Pennsylvania DEP",
+           "agency_url": "https://www.dep.pa.gov/",
+           "register": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
+           "register_label": "DEP Data Center Permit Tracker (the only "
+                             "state register built for data centers — it "
+                             "already feeds this tracker)"},
+    "RI": {"agency": "Rhode Island DEM — Office of Air Resources",
+           "agency_url": "https://dem.ri.gov/environmental-protection-bureau/air-resources",
+           "register": None, "register_label": None},
+    "SC": {"agency": "South Carolina DES — Bureau of Air Quality",
+           "agency_url": "https://des.sc.gov/programs/bureau-air-quality",
+           "register": None, "register_label": None},
+    "SD": {"agency": "South Dakota DANR — Air Quality Program",
+           "agency_url": "https://danr.sd.gov/Environment/AirQuality/default.aspx",
+           "register": None, "register_label": None},
+    "TN": {"agency": "Tennessee TDEC",
+           "agency_url": "https://www.tn.gov/environment/permit-permits.html",
+           "register": "https://dataviewers.tdec.tn.gov/",
+           "register_label": "TDEC Dataviewers"},
+    "TX": {"agency": "Texas TCEQ — Air Permits Division",
+           "agency_url": "https://www.tceq.texas.gov/permitting/air",
+           "register": "https://www15.tceq.texas.gov/crpub/",
+           "register_label": "TCEQ Central Registry"},
+    "UT": {"agency": "Utah DEQ — Division of Air Quality",
+           "agency_url": "https://deq.utah.gov/division-air-quality",
+           "register": None, "register_label": None},
+    "VT": {"agency": "Vermont DEC — Air Quality & Climate Division",
+           "agency_url": "https://dec.vermont.gov/air-quality/permits",
+           "register": None, "register_label": None},
+    "VA": {"agency": "Virginia DEQ",
+           "agency_url": "https://www.deq.virginia.gov/permits-regulations/permits/air",
+           "register": None, "register_label": None},
+    "WA": {"agency": "Washington Dept. of Ecology (with local clean air agencies)",
+           "agency_url": "https://ecology.wa.gov/regulations-permits/permits-certifications/air-quality-permits",
+           "register": None, "register_label": None},
+    "WV": {"agency": "West Virginia DEP — Division of Air Quality",
+           "agency_url": "https://dep.wv.gov/daq/permitting/Pages/default.aspx",
+           "register": None, "register_label": None},
+    "WI": {"agency": "Wisconsin DNR — Air Management",
+           "agency_url": "https://dnr.wisconsin.gov/topic/AirPermits",
+           "register": None, "register_label": None},
+    "WY": {"agency": "Wyoming DEQ — Air Quality Division",
+           "agency_url": "https://deq.wyoming.gov/air-quality/",
+           "register": None, "register_label": None},
+}
+
+# National databases that work anywhere, keyed off the site rather than the
+# state. These are the backstop when a state publishes no searchable register.
+NATIONAL_PERMIT_TOOLS = [
+    {"label": "EPA ECHO facility search",
+     "url": "https://echo.epa.gov/facilities/facility-search",
+     "why": "Every federally-reported air, water and waste permit at a "
+            "facility, plus its inspection and violation history. Search by "
+            "address or draw a radius around the site."},
+    {"label": "EPA Envirofacts",
+     "url": "https://enviro.epa.gov/",
+     "why": "The same underlying records, queryable by county — useful for "
+            "'what else is permitted near this site' rather than one facility."},
+    {"label": "EPA Facility Registry Service",
+     "url": "https://www.epa.gov/frs",
+     "why": "Resolves the shell LLC on a permit to the facility it belongs "
+            "to. Worth a look when the filing name means nothing locally."},
+]
+
+# ── The utility / grid half of the record ───────────────────────────────────
+# A data center's electricity request is filed with the grid operator and the
+# utility long before, and in far more detail than, anything filed at the
+# town. `STATE_RTO` is a routing hint, not a fact about the project: several
+# states are split between markets, and a specific site's utility is the only
+# authority on which queue it sits in.
+RTO_QUEUES = {
+    "PJM": ("PJM Interconnection (Mid-Atlantic, Ohio Valley)",
+            "https://www.pjm.com/planning/service-requests"),
+    "MISO": ("MISO (Midwest & Gulf)",
+             "https://www.misoenergy.org/planning/resource-utilization/GIQ/"),
+    "ERCOT": ("ERCOT (Texas)", "https://www.ercot.com/gridinfo/resource"),
+    "SPP": ("Southwest Power Pool (Plains)",
+            "https://www.spp.org/engineering/generator-interconnection/"),
+    "ISONE": ("ISO New England",
+              "https://www.iso-ne.com/system-planning/transmission-planning/"
+              "interconnection-request-queue/"),
+    "NYISO": ("NYISO (New York)", "https://www.nyiso.com/interconnections"),
+    "CAISO": ("CAISO (California)",
+              "https://www.caiso.com/generation-transmission"),
+}
+
+STATE_RTO = {
+    "AL": [], "AK": [], "AZ": [], "AR": ["MISO", "SPP"], "CA": ["CAISO"],
+    "CO": [], "CT": ["ISONE"], "DE": ["PJM"], "DC": ["PJM"], "FL": [],
+    "GA": [], "HI": [], "ID": [], "IL": ["PJM", "MISO"], "IN": ["MISO", "PJM"],
+    "IA": ["MISO", "SPP"], "KS": ["SPP"], "KY": ["MISO", "PJM"], "LA": ["MISO"],
+    "ME": ["ISONE"], "MD": ["PJM"], "MA": ["ISONE"], "MI": ["MISO", "PJM"],
+    "MN": ["MISO"], "MS": ["MISO"], "MO": ["MISO", "SPP"], "MT": ["SPP"],
+    "NE": ["SPP"], "NV": [], "NH": ["ISONE"], "NJ": ["PJM"], "NM": ["SPP"],
+    "NY": ["NYISO"], "NC": ["PJM"], "ND": ["MISO", "SPP"], "OH": ["PJM"],
+    "OK": ["SPP"], "OR": [], "PA": ["PJM"], "RI": ["ISONE"], "SC": [],
+    "SD": ["MISO", "SPP"], "TN": [], "TX": ["ERCOT"], "UT": [], "VT": ["ISONE"],
+    "VA": ["PJM"], "WA": [], "WV": ["PJM"], "WI": ["MISO"], "WY": ["SPP"],
+}
+
+FERC_ELIBRARY = "https://elibrary.ferc.gov/eLibrary/search"
+
+# ── What to actually ask for ────────────────────────────────────────────────
+# The point of the links above is these documents. `holder` is who to ask,
+# `leverage` is what the document lets a resident argue — because a records
+# request that arrives after the vote is worth nothing.
+PERMIT_KINDS = [
+    {"name": "Air permit for the backup generators",
+     "holder": "State environmental agency (air quality division)",
+     "what": "Plan approval / construction permit for the diesel or gas "
+             "gensets, with the emissions inventory and run-hour limits.",
+     "leverage": "The genset count and permitted run hours are the most "
+                 "reliable public proxy for the campus's real size — often "
+                 "filed before any MW figure is public, and usually larger "
+                 "than what the developer told the town."},
+    {"name": "Water withdrawal / supply agreement",
+     "holder": "State water authority, river basin commission, or the "
+               "municipal water utility",
+     "what": "Permitted withdrawal volume, the source, and any will-serve "
+             "letter from the water utility.",
+     "leverage": "Turns 'we use very little water' into a number on "
+                 "letterhead, and shows whether existing customers were "
+                 "modelled during a drought year."},
+    {"name": "NPDES / stormwater and discharge permits",
+     "holder": "State environmental agency (water division) or EPA region",
+     "what": "Construction stormwater permit, erosion plan, and any "
+             "cooling-blowdown discharge authorisation.",
+     "leverage": "Earliest filing on most sites — often the first hard proof "
+                 "of acreage and grading before a rezoning is even docketed."},
+    {"name": "Rezoning / special-use application file",
+     "holder": "County or town planning department",
+     "what": "The full application: site plan, traffic study, noise study, "
+             "proffers, staff report, and every submitted revision.",
+     "leverage": "The staff report names the conditions staff thought were "
+                 "necessary. Conditions dropped between versions are the "
+                 "single most productive thing to read aloud at a hearing."},
+    {"name": "Interconnection / large-load service request",
+     "holder": "Grid operator (RTO/ISO) and the serving utility",
+     "what": "Queue position, requested MW, in-service date, and any "
+             "network upgrades the project triggers.",
+     "leverage": "Shows the real megawatts and who pays for the wires. "
+                 "A queue request far larger than the public figure is a "
+                 "phased build the community has not been told about."},
+    {"name": "Special contract / rate filing at the PUC",
+     "holder": "State public utility commission docket",
+     "what": "Any special tariff, large-load class, or contract the utility "
+             "filed to serve this customer, plus its cost allocation.",
+     "leverage": "This is where it becomes visible whether other ratepayers "
+                 "subsidise the connection. Testimony and exhibits are "
+                 "public and usually more candid than the press release."},
+    {"name": "Tax abatement / incentive agreement",
+     "holder": "County, school district, IDA or state development authority",
+     "what": "The PILOT or abatement resolution, the jobs and investment "
+             "commitments, and any clawback terms.",
+     "leverage": "Converts 'economic development' into the actual net "
+                 "revenue per year, and shows what happens if the promised "
+                 "jobs never appear."},
+]
