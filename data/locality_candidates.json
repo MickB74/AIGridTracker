@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20",
+  "updated": "2026-08-21",
   "candidates": [
     {
       "name": "Calvert",
@@ -23,7 +23,32 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
+      "status": "new"
+    },
+    {
+      "name": "Trumbull",
+      "count": 4,
+      "examples": [
+        {
+          "title": "Trumbull residents seek data center moratorium amid $100 million upgrade",
+          "outlet": "CT Insider",
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSzh4VFlpZ1JzS2pFdS1xbHBYbDdsdi1lRXdRTktpQ3ZvVEZRcmgweGVxeHhIbXU0Ni04Ml9FLWpleDV0SVBFWHg1MlA2a1htT0l2ZXB6YXRfbUt0UjBaSTJlSUkyUmUtV2ZXVG56MHk4N3o2RkIwbXMySGJ6UEhKQm9nNk5zNnFFZDRUc05Ld01mZHBEeko5VUh2YVVIbm9jYTE5QUFUbmtBSndRVnk1Rg?oc=5"
+        },
+        {
+          "title": "Trumbull residents seek data center moratorium amid $100 million upgrade",
+          "outlet": "New Haven Register",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdnhEaTRYcHpteXhWa2RvZlRMQVVOcmpPa2Y2Q2pLTENwcW9rcXdUSHBIazQtMG9DMDQ5bC1LZ284T2x5MUVkRUYzd3YyMU41OXcyV1hjX2RSN0lIcDl0UkVVazRaVHlZRUs2SW1IeldzQ0w3X3F2ZGhBemh1Yks4eGIxdlM3TDA0aHJZdFpjZ0NvUTdVN0dmQjEtejVSYnRHWHVNY3NBVkp3SUFxRXZ6MVZB?oc=5"
+        },
+        {
+          "title": "Trumbull residents seek data center moratorium as $100 million upgrade moves forward",
+          "outlet": "Yahoo",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOamNOR2ZUVnExaUx6QkRzR2pkQVJHMjVQLWo3NGJsdFBEMUFHdTNFMi0tZkZsNlFPU1dtSnBBWjFsMVBaYzhtUnV4SlQyNWhsOWZoSzUtVUF1eHExZ1VjOFZZSlZkOHVmM0VwQWpBdjFXckJzMXNETjZOQjBlUWdTLVEtdzAzVTJ6Mi1YYzg5OA?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -48,7 +73,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -73,7 +98,32 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
+      "status": "new"
+    },
+    {
+      "name": "San Jose",
+      "count": 3,
+      "examples": [
+        {
+          "title": "San Jose residents push for data center moratorium",
+          "outlet": "San José Spotlight",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNV19OdGMyU0dldjl5ZDEzTnFqMVNneFRlLTFjRHNuR3lCbFpOYmhqRlcxWC1XLWVKVk9qbDFXMURJWmpNeDJRY2d1MW5yVVlZSDVlaThjWnJ1WEVEQ0hXNnl2SkxVaDlVYzBaRGpELTdEMWFkdDlwc0xmemg5bVNnN0YxTTJFNHM?oc=5"
+        },
+        {
+          "title": "San Jose residents push back on new AI data centers during city listening session",
+          "outlet": "KTVU",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxON0M3OXFabUZMTjZYcDBqMkxXMHBwQXNhb0J0ZXgxYXBub3ZsQXV2MFJDRUhxbDFwVjNJWHNCMnY1Rk02Ry1VaU9vN2tSc2pSSXEzZV9wRU5zNjUtSndFbzdoeUlyOGc0QkItMWlISlBfODBOV1kwVlQxeGgwcTlSbGl2THlVQnhTMlg0clk2c1VLRUpHZ3JQM1VsYWduclJVMEpZR1Zuc9IBrAFBVV95cUxPcnNtb3p2V1YyT0hXSjA4dXZMOG11M0xIZjR1S3pNeDRDa2pacDAwbXhKNXdZZkNpdUEzVmV0c3hhalRFM1VmLWlqZncyTzRJMklGQ2NqbHBEcTdkRFJSQ0lrajdHS1BUelZzZ0R6MFpXUlgxUGNXXzlKc3B1UGVJY1N4cFVyUlZSMHNLbjd0aWEzZVdRUHVRcTh2bWZIendqeC15ZGRDa0g3dmxU?oc=5"
+        },
+        {
+          "title": "San Jose residents push back on new AI data centers during city 'listening session'",
+          "outlet": "Yahoo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNMWJYV0VIdWl2dDBjY3lhVnpMM1B3TjdCNERaRVBKTEN4TEp1a09MTlo4QnQyN0FKb3YxeW45RXRIaDhJRTVIcUl0TVkxUmR2TUpibTg2cm4xUGxlYzNtdWtvUFFfTnU5VmFaYTQxamtoVnJvazl5bjQ4cmJSOTVkNXAzSUs2UQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -133,7 +183,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -153,7 +203,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -173,7 +223,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -193,7 +243,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -213,7 +263,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -233,7 +283,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -253,27 +303,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20",
-      "status": "new"
-    },
-    {
-      "name": "Oldham",
-      "count": 2,
-      "examples": [
-        {
-          "title": "Oldham County Fiscal Court to hold public hearing on proposed data center regulations",
-          "outlet": "WAVE News",
-          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNVWJLNjRNTGZkdnZiTTdVeTJYaHpXZ0Fta1RUWmw0dEhJT09KbHB2cDhpZlZ6eFM0NjIzb0dJbk85ck1Uc2NuczlXZ2xyXzhCQWNMN19iVk1WZmdKSFVhOW9aT0RCai1pVFB0VUtZMExCQlZlaXJVaTdYYVFQQjdXMmtlaFlRNk42QjhWdnkyN3NBVlM2RF9PTTktN25NWXNXSjE4enBLUEUzMFFONHBQNk1kSQ?oc=5"
-        },
-        {
-          "title": "Oldham County Data Center moratorium remains in place",
-          "outlet": "WAVE News",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZWZUeDlYTG00YXJYSEVCQkk1TFF0eHM1dEFvdUROb3Y3blZWT1hwc1QxMGpVbWhUQVpnaEhJandQVlc1T0RVUWZqODdJQnMyd2U0UUVFb1V0NGFualJfR2RmTGlZdVlsYkRPRlJHU25KNHg3U29RRkE1QmNNclA5OWd4dFh6WEhmWXdEUQ?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -293,7 +323,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -313,27 +343,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
-      "status": "new"
-    },
-    {
-      "name": "San Jose",
-      "count": 2,
-      "examples": [
-        {
-          "title": "San Jose residents push for data center moratorium",
-          "outlet": "San José Spotlight",
-          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNV19OdGMyU0dldjl5ZDEzTnFqMVNneFRlLTFjRHNuR3lCbFpOYmhqRlcxWC1XLWVKVk9qbDFXMURJWmpNeDJRY2d1MW5yVVlZSDVlaThjWnJ1WEVEQ0hXNnl2SkxVaDlVYzBaRGpELTdEMWFkdDlwc0xmemg5bVNnN0YxTTJFNHM?oc=5"
-        },
-        {
-          "title": "San Jose residents push back on new AI data centers during city listening session",
-          "outlet": "KTVU",
-          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxON0M3OXFabUZMTjZYcDBqMkxXMHBwQXNhb0J0ZXgxYXBub3ZsQXV2MFJDRUhxbDFwVjNJWHNCMnY1Rk02Ry1VaU9vN2tSc2pSSXEzZV9wRU5zNjUtSndFbzdoeUlyOGc0QkItMWlISlBfODBOV1kwVlQxeGgwcTlSbGl2THlVQnhTMlg0clk2c1VLRUpHZ3JQM1VsYWduclJVMEpZR1Zuc9IBrAFBVV95cUxPcnNtb3p2V1YyT0hXSjA4dXZMOG11M0xIZjR1S3pNeDRDa2pacDAwbXhKNXdZZkNpdUEzVmV0c3hhalRFM1VmLWlqZncyTzRJMklGQ2NqbHBEcTdkRFJSQ0lrajdHS1BUelZzZ0R6MFpXUlgxUGNXXzlKc3B1UGVJY1N4cFVyUlZSMHNLbjd0aWEzZVdRUHVRcTh2bWZIendqeC15ZGRDa0g3dmxU?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -354,6 +364,41 @@
       "guess_state": null,
       "first_seen": "2026-08-19",
       "last_seen": "2026-08-20",
+      "status": "new"
+    },
+    {
+      "name": "North Loop",
+      "count": 2,
+      "examples": [
+        {
+          "title": "North Loop residents question developers over proposed data center at former Star Tribune site",
+          "outlet": "CBS News",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNSDEtcXhoRFBxTzBTaUNZbkhnZktoTGRza3ctRWF5WmhCc014cnppbDlidVNJOERiZklVRUZvaUtmSFlrNnhDSnpBVmNSX1Z3cFNzd183a0RrM01GX09JaFpraU9yVHRkcWtIdWQ4MGJ4YUhHbG92NGZZSVB6OVdYaGJuUC1sQzJ2aGV5eFlMRDVOY192M3N6R1RyajZtUQ?oc=5"
+        },
+        {
+          "title": "North Loop residents blast developer’s data center plans for former Star Tribune printing plant",
+          "outlet": "Star Tribune",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPcmZlOHdDNzJaR25Td0NmVGpzOW1KSExGc3FrOFZJV0hoZzQ1clFlS3R1ZU5DUXhTTTBUUU9vR0M5c25vM2dWZFNSUW1YNFNldDYzUkxxaDN3U3Q2Si02YWpvV1pXc3BELVl1X0NDVVNCYlBCNTA4RUFod2U1NVZCNF9Sd0JpTlRmM19zWEQza1ptLTNPVXMxSU1oWlplUjAtNmVnaGxPRjU3aXNKVjNKQ1JRak1zZDBtRHp4bDBwc1oxVFI0Nmh4RVpkZEs?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
+      "status": "new"
+    },
+    {
+      "name": "Oldham",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Oldham County Data Center moratorium remains in place",
+          "outlet": "WAVE News",
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZWZUeDlYTG00YXJYSEVCQkk1TFF0eHM1dEFvdUROb3Y3blZWT1hwc1QxMGpVbWhUQVpnaEhJandQVlc1T0RVUWZqODdJQnMyd2U0UUVFb1V0NGFualJfR2RmTGlZdVlsYkRPRlJHU25KNHg3U29RRkE1QmNNclA5OWd4dFh6WEhmWXdEUQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -383,7 +428,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -398,7 +443,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -413,7 +458,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -443,7 +488,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -458,7 +503,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -473,7 +518,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -503,7 +548,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -548,7 +593,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -578,7 +623,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -608,7 +653,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -623,7 +668,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -653,7 +698,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -668,7 +713,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -683,7 +728,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -698,7 +743,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -713,7 +758,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -743,7 +788,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -758,7 +803,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -773,7 +818,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -788,7 +833,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -803,7 +848,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -833,7 +878,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -848,7 +893,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -863,7 +908,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -908,7 +953,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -923,7 +968,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -938,7 +983,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -983,7 +1028,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -998,7 +1043,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1028,7 +1073,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1043,7 +1088,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1058,7 +1103,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1073,7 +1118,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1088,7 +1133,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1103,7 +1148,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1133,7 +1178,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1148,7 +1193,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1163,7 +1208,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1178,7 +1223,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1193,7 +1238,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1208,7 +1253,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1223,7 +1268,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1253,7 +1298,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1268,22 +1313,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20",
-      "status": "new"
-    },
-    {
-      "name": "Trumbull",
-      "count": 1,
-      "examples": [
-        {
-          "title": "Trumbull residents seek data center moratorium amid $100 million upgrade",
-          "outlet": "CT Insider",
-          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSzh4VFlpZ1JzS2pFdS1xbHBYbDdsdi1lRXdRTktpQ3ZvVEZRcmgweGVxeHhIbXU0Ni04Ml9FLWpleDV0SVBFWHg1MlA2a1htT0l2ZXB6YXRfbUt0UjBaSTJlSUkyUmUtV2ZXVG56MHk4N3o2RkIwbXMySGJ6UEhKQm9nNk5zNnFFZDRUc05Ld01mZHBEeko5VUh2YVVIbm9jYTE5QUFUbmtBSndRVnk1Rg?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1298,7 +1328,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1313,7 +1343,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1328,7 +1358,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1343,7 +1373,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1358,7 +1388,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1373,7 +1403,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1388,7 +1418,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1403,7 +1433,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1433,7 +1463,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1448,7 +1478,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1463,7 +1493,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1478,7 +1508,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1493,7 +1523,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1523,7 +1553,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1538,7 +1568,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1568,22 +1598,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
-      "status": "new"
-    },
-    {
-      "name": "North Loop",
-      "count": 1,
-      "examples": [
-        {
-          "title": "North Loop residents question developers over proposed data center at former Star Tribune site",
-          "outlet": "CBS News",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNSDEtcXhoRFBxTzBTaUNZbkhnZktoTGRza3ctRWF5WmhCc014cnppbDlidVNJOERiZklVRUZvaUtmSFlrNnhDSnpBVmNSX1Z3cFNzd183a0RrM01GX09JaFpraU9yVHRkcWtIdWQ4MGJ4YUhHbG92NGZZSVB6OVdYaGJuUC1sQzJ2aGV5eFlMRDVOY192M3N6R1RyajZtUQ?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -1598,7 +1613,52 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
+      "status": "new"
+    },
+    {
+      "name": "Clackamas",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Clackamas County makes step toward data center moratorium. Here’s what to know",
+          "outlet": "KOIN.com",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNTTM4X3hoNjJaMndQS0tWeG9icWk2RGFWNkdWNUlyMUV0V25URlQxUXdjRDAzS1JUWFRIUGQyQm81R3NZaXZ3aUZxU1ctVlJXd1pCclZmeVU5WkVzbzZzZzI1a1puVkQ1ZHVza0FCQ1N2YVlaTHhoenNRMG9uZjU3QklUR1FqNVNETS13Um5WTmhMU1dKYXhmUzV6dUFyaXk4RmxIS00wYmJ1aHF3aWxHaDl6Tlk3b21qMjhqbHhR0gHDAUFVX3lxTE9mSHJUYW53eG5yMWZEeG5RV2FzdUFQODB3SF9oVDc1V01aUlNTWkp3UHYxX2t5VG1fdlZWLTlOOEJVakprbV91ZFBTR2ZXcXZfWmVyZ1BrUkJMM1hGQUhPRHpMSy02cWliWDFEWEVDRDBFQ3dwRV9zS2x2UzlHck92ZFNJb1lsekg1ZUk1cGZ5MklaY3p0TXRqRjdCQk92SlVtZlZfU2s1RkNXNWRYanRVMDNjcEpNUGctaENMLXBSRXM1NA?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-21",
+      "status": "new"
+    },
+    {
+      "name": "Clarendon",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Clarendon County details possible $130M data center as residents press for answers",
+          "outlet": "WLTX",
+          "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNNG5La2FtX1V1N0lMeUlKSUdNUmRHd2NJaDQyU2NpNjRSN0pKZm5yeDFHa2J3YTBwQUoydEpvSkJnNENpUmxVS0k5cjBWUnVxc0lKbUR0SzcwdmtqaDZHSERDTjVmUHBQQXdtY0hKS1FWLWxBTGN1anBkNk9RSmhkZTNUcWFGN21VQ2tRdXhzUGdmVXotMWdUZVpfSExUSVpQb0xnZXhhWlZfSWxfRnpCYjRLNFoycmxhQjVxWVZKaDdRQ0FEajAwZVJjNFNyb2s?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-21",
+      "status": "new"
+    },
+    {
+      "name": "Bloomingdale City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Bloomingdale City Council approves data center moratorium",
+          "outlet": "WSAV-TV",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRVBwUGVZWHpTNkI4NDQ5RTVPOGthSW9NX3JJNE92ODNlQjhBbG9velBlUlBnTklzTkd6UmNPWDRXeUVqZG1TOUxraGY5dUhSdTgyUVdpVDViM003STlNdWFmNHVUTVVzRkxHZzRjbElxR1VULTNUSDVZLS1Od3NMdERCZkl6ZkNNUGR5TmctdjJ6ZnVtWkNrTnF2SdIBoAFBVV95cUxOV0xXSUxuTnU5czZncWdCS3NpSFppSXNPd3BPNndfOW1VNmYyeFpoWVdhVmk0NnQ2M3RJQWdCNXBkR0FtcFREdzIzMkFQTTZCQW1ubG1xd2t1Mk9GNXFzUjR2Y04xY0VYVmoyV2xocENYMzllU1R6MmRNUkdSSGNacnFWakVONmlkTXpQMW1BUEpkS2JNMTEwOEtXMlFULWFP?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-21",
       "status": "new"
     },
     {
@@ -2017,7 +2077,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-21",
       "status": "dismissed",
       "dismiss_reason": "Already tracked in LOCAL_BODIES_DF as Allegheny County, PA"
     },
