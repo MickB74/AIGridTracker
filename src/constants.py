@@ -3200,6 +3200,12 @@ MORATORIUM_OUTCOMES = [
 # promoted here BY HAND, because that human read is where source + as_of come
 # from.
 #
+# The one automated writer is scripts/fetch_pa_dep_projects.py, which syncs
+# Pennsylvania DEP's own data-center permit tracker. A state agency register
+# supplies `source` and `as_of` without a judgement call, so the human read
+# adds nothing; those rows carry `origin: "pa-dep"` so the distinction stays
+# visible, and the sync never rewrites a hand-researched row.
+#
 # Status is DERIVED (project_status), never stored: the stage a resident acts
 # on — "Hearing scheduled", "Awaiting decision", "Approved", "Withdrawn" — is
 # a function of today's date, so the daily CI rebuild keeps it honest without
@@ -6154,7 +6160,10 @@ REGISTRY_PROVENANCE = {
         "churn": "high",
         "caveat": (
             "A working set of identified proposals a community can track, not "
-            "a census — most of the country's activity is not in here yet.\n\n"
+            "a census — most of the country's activity is not in here yet. "
+            "Pennsylvania is the exception: its rows are synced from PA DEP's "
+            "own data-center permit tracker, so the state's coverage is close "
+            "to complete and carries the permit trail with it.\n\n"
             "**Each row carries its own provenance.** Rows showing a "
             "verification date link to reporting or the governing body's own "
             "record and were read on that date; rows marked *unverified* have "

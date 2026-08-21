@@ -28,3 +28,27 @@ with deliberately different bars:
    never facts: `verify_count` is not a source URL and is not an `as_of`.
    Promoting one into `MORATORIUMS_DF` still means reading the ordinance and
    recording where it was read, per CLAUDE.md's Data sourcing rules.
+
+## PA DEP Data Center Permit Tracker (`pa_dep_*`)
+
+Pennsylvania Department of Environmental Protection, *Data Center Permit
+Tracker*.
+
+- Site: https://gis.dep.pa.gov/DataCenterPermitTracker/
+- Underlying data: two CSVs served from `static/` behind the ArcGIS front end
+  — `DataCenterProjectTrackingAllProjects.csv` (one row per project) and
+  `DataCenterPermitTracking.csv` (one row per environmental permit). No key,
+  no rate limit, no terms beyond ordinary Commonwealth public-records status.
+- Snapshot cached here on every sync so an upstream change reads as a
+  reviewable diff. Refresh (and merge) with:
+
+      python3 scripts/fetch_pa_dep_projects.py
+
+Unlike Moratorium Nation, this one feeds a registry directly rather than a
+review queue. The difference is not trust in the automation but what the
+source *is*: a state agency's own register of the projects its regional
+offices are permitting supplies `source` and `as_of` with no judgement call,
+which is the whole reason promotion is otherwise a human step. Synced rows
+carry `origin: "pa-dep"` in `data/projects.json`, hand-researched rows are
+never overwritten, and DEP's "DEP Review Complete" is recorded as a permit
+milestone — never as a local land-use approval.
