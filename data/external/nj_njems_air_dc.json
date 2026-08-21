@@ -1,0 +1,837 @@
+{
+ "displayFieldName": "FACILITY_NAME",
+ "fieldAliases": {
+  "PREF_ID_NUM": "PREF_ID_NUM",
+  "SITE_ID": "SITE_ID",
+  "FACILITY_NAME": "FACILITY_NAME",
+  "ADDRESS": "ADDRESS",
+  "CITY": "CITY",
+  "ZIP": "ZIP",
+  "FACILITY_TYPE": "FACILITY_TYPE",
+  "FACILITY_DESC": "FACILITY_DESC",
+  "NAICS_CODE": "NAICS_CODE",
+  "NAICS_DESC": "NAICS_DESC",
+  "SIC_CODE": "SIC_CODE",
+  "SIC_DESC": "SIC_DESC"
+ },
+ "geometryType": "esriGeometryPoint",
+ "spatialReference": {
+  "wkid": 4326,
+  "latestWkid": 4326
+ },
+ "fields": [
+  {
+   "name": "PREF_ID_NUM",
+   "type": "esriFieldTypeString",
+   "alias": "PREF_ID_NUM",
+   "length": 40
+  },
+  {
+   "name": "SITE_ID",
+   "type": "esriFieldTypeInteger",
+   "alias": "SITE_ID"
+  },
+  {
+   "name": "FACILITY_NAME",
+   "type": "esriFieldTypeString",
+   "alias": "FACILITY_NAME",
+   "length": 45
+  },
+  {
+   "name": "ADDRESS",
+   "type": "esriFieldTypeString",
+   "alias": "ADDRESS",
+   "length": 40
+  },
+  {
+   "name": "CITY",
+   "type": "esriFieldTypeString",
+   "alias": "CITY",
+   "length": 40
+  },
+  {
+   "name": "ZIP",
+   "type": "esriFieldTypeString",
+   "alias": "ZIP",
+   "length": 9
+  },
+  {
+   "name": "FACILITY_TYPE",
+   "type": "esriFieldTypeString",
+   "alias": "FACILITY_TYPE",
+   "length": 5
+  },
+  {
+   "name": "FACILITY_DESC",
+   "type": "esriFieldTypeString",
+   "alias": "FACILITY_DESC",
+   "length": 120
+  },
+  {
+   "name": "NAICS_CODE",
+   "type": "esriFieldTypeString",
+   "alias": "NAICS_CODE",
+   "length": 10
+  },
+  {
+   "name": "NAICS_DESC",
+   "type": "esriFieldTypeString",
+   "alias": "NAICS_DESC",
+   "length": 120
+  },
+  {
+   "name": "SIC_CODE",
+   "type": "esriFieldTypeString",
+   "alias": "SIC_CODE",
+   "length": 8
+  },
+  {
+   "name": "SIC_DESC",
+   "type": "esriFieldTypeString",
+   "alias": "SIC_DESC",
+   "length": 110
+  }
+ ],
+ "features": [
+  {
+   "attributes": {
+    "PREF_ID_NUM": "71010",
+    "SITE_ID": 63920,
+    "FACILITY_NAME": "CONTINENT 8",
+    "ADDRESS": "1 CONVENTION BLVD",
+    "CITY": "Atlantic City",
+    "ZIP": "08401    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.44073023453372,
+    "y": 39.36389097792422
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "46666",
+    "SITE_ID": 653214,
+    "FACILITY_NAME": "6000, 11000, 12000 & 17000 BLDGS",
+    "ADDRESS": "6000 11000 ATRIUM WAY",
+    "CITY": "Mount Laurel Twp",
+    "ZIP": "08054    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.95342744710474,
+    "y": 39.918258360786005
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "18574",
+    "SITE_ID": 219723,
+    "FACILITY_NAME": "BLOOMBERG DATA CENTER",
+    "ADDRESS": "431 RIDGE RD ",
+    "CITY": "South Brunswick Twp",
+    "ZIP": "08810    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": null,
+    "NAICS_CODE": null,
+    "NAICS_DESC": null,
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.51831507586641,
+    "y": 40.37598604378283
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "21831",
+    "SITE_ID": 566795,
+    "FACILITY_NAME": "NJFX DATA CENTER ",
+    "ADDRESS": "1410 WALL CHURCH RD",
+    "CITY": "Wall Twp",
+    "ZIP": "07719    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.05325132206937,
+    "y": 40.161628183743474
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "19525",
+    "SITE_ID": 741216,
+    "FACILITY_NAME": "PN-DC 1",
+    "ADDRESS": "4405 RT 1",
+    "CITY": "South Brunswick Twp",
+    "ZIP": "08540    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.60216568319078,
+    "y": 40.364433614580975
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "61120",
+    "SITE_ID": 94217,
+    "FACILITY_NAME": "MOLINA INFORMATION SYSTEM LLC HIM TRENTON",
+    "ADDRESS": "3705 QUAKERBRIDGE RD",
+    "CITY": "Hamilton Twp",
+    "ZIP": "08619    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing Services",
+    "NAICS_CODE": "51421",
+    "NAICS_DESC": "Data Processing Services",
+    "SIC_CODE": "7374    ",
+    "SIC_DESC": "Computer Processing and Data Preparation and Processing Services"
+   },
+   "geometry": {
+    "x": -74.6767335646201,
+    "y": 40.26073454042076
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "36207",
+    "SITE_ID": 410613,
+    "FACILITY_NAME": "MORGAN STANLEY DATA CENTER ",
+    "ADDRESS": "665 HOWARD AVE",
+    "CITY": "Franklin Twp",
+    "ZIP": "08873    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": null,
+    "NAICS_CODE": null,
+    "NAICS_DESC": null,
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.54215470280782,
+    "y": 40.540084996705616
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "35526",
+    "SITE_ID": 1654,
+    "FACILITY_NAME": "RACKSPACE NYC2",
+    "ADDRESS": "125 BELMONT DR",
+    "CITY": "Franklin Twp",
+    "ZIP": "08873    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Computer Facilities Management Services",
+    "NAICS_CODE": "541513",
+    "NAICS_DESC": "Computer Facilities Management Services",
+    "SIC_CODE": "7374    ",
+    "SIC_DESC": "Computer Processing and Data Preparation and Processing Services"
+   },
+   "geometry": {
+    "x": -74.53756412141867,
+    "y": 40.541415214957134
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "36204",
+    "SITE_ID": 410223,
+    "FACILITY_NAME": "DATAPIPE",
+    "ADDRESS": "200 CAMPUS DR",
+    "CITY": "Franklin Twp",
+    "ZIP": "08873    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.5379472784615,
+    "y": 40.54449510503913
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "18790",
+    "SITE_ID": 5371,
+    "FACILITY_NAME": "BARCLAYS CAPITAL DATA CTR",
+    "ADDRESS": "40 CORPORATE PLACE S ",
+    "CITY": "Piscataway Twp",
+    "ZIP": "08854    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": null,
+    "NAICS_CODE": null,
+    "NAICS_DESC": null,
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.45871465352045,
+    "y": 40.54758495627371
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "16703",
+    "SITE_ID": 5474,
+    "FACILITY_NAME": "HORIBA INSTRUMENTS INC",
+    "ADDRESS": "20 KNIGHTSBRIDGE RD",
+    "CITY": "Piscataway Twp",
+    "ZIP": "08854    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Computer Processing and Data Preparation and Processing Services",
+    "NAICS_CODE": null,
+    "NAICS_DESC": null,
+    "SIC_CODE": "7374    ",
+    "SIC_DESC": "Computer Processing and Data Preparation and Processing Services"
+   },
+   "geometry": {
+    "x": -74.48345138929785,
+    "y": 40.54824997256644
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "19375",
+    "SITE_ID": 669679,
+    "FACILITY_NAME": "BLOOMBERG PISCATAWAY DATA CTR",
+    "ADDRESS": "1115 CENTENNIAL AVE",
+    "CITY": "Piscataway Twp",
+    "ZIP": "088544121",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.46425500867615,
+    "y": 40.55043622552423
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "36217",
+    "SITE_ID": 422905,
+    "FACILITY_NAME": "365 DATA CENTERS",
+    "ADDRESS": "999 FRONTIER RD",
+    "CITY": "Bridgewater Twp",
+    "ZIP": "08807    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "All Other Professional, Scientific, and Technical Services",
+    "NAICS_CODE": "541990",
+    "NAICS_DESC": "All Other Professional, Scientific, and Technical Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.56605016426603,
+    "y": 40.57640800506958
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "42364",
+    "SITE_ID": 395171,
+    "FACILITY_NAME": "BARCLAYS CAPITAL DATA CENTER",
+    "ADDRESS": "27 COMMERCE DR",
+    "CITY": "Cranford Twp",
+    "ZIP": "07016    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Open-End Investment Funds",
+    "NAICS_CODE": "525910",
+    "NAICS_DESC": "Open-End Investment Funds",
+    "SIC_CODE": "6722    ",
+    "SIC_DESC": "Management Investment Offices, Open-End"
+   },
+   "geometry": {
+    "x": -74.28536021279666,
+    "y": 40.64389637765156
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "12394",
+    "SITE_ID": 7451,
+    "FACILITY_NAME": "PHOENIX DATA CENTER LEASEHOLD LLC",
+    "ADDRESS": "210 HUDSON ST - STE 802",
+    "CITY": "Jersey City",
+    "ZIP": "073113988",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Other Computer Related Services",
+    "NAICS_CODE": "541519",
+    "NAICS_DESC": "Other Computer Related Services",
+    "SIC_CODE": "7379    ",
+    "SIC_DESC": "Computer Related Services, NEC"
+   },
+   "geometry": {
+    "x": -74.03328609127368,
+    "y": 40.71897875542542
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "40887",
+    "SITE_ID": 975,
+    "FACILITY_NAME": "VERIZON NJ INC LINDEN DO 26540",
+    "ADDRESS": "315 PARK AVE",
+    "CITY": "Linden City",
+    "ZIP": "07036    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": "4813    ",
+    "SIC_DESC": "Telephone Communications, Except Radiotelephone"
+   },
+   "geometry": {
+    "x": -74.22874662747257,
+    "y": 40.64701095407543
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "42759",
+    "SITE_ID": 14432,
+    "FACILITY_NAME": "COREWEAVE",
+    "ADDRESS": "2000 GALLOPING HILL RD",
+    "CITY": "Kenilworth Boro",
+    "ZIP": "07033    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.27739710018014,
+    "y": 40.67811322893452
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "42336",
+    "SITE_ID": 51493,
+    "FACILITY_NAME": "DATA PROPERTIES LLC",
+    "ADDRESS": "775 N BROAD ST",
+    "CITY": "Elizabeth City",
+    "ZIP": "07208    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": "6513    ",
+    "SIC_DESC": "Operators of Apartment Buildings"
+   },
+   "geometry": {
+    "x": -74.21411455589336,
+    "y": 40.681637385335925
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "11041",
+    "SITE_ID": 7019,
+    "FACILITY_NAME": "CORESITE NY2/NY3",
+    "ADDRESS": "2 EMERSON LN",
+    "CITY": "Secaucus Town",
+    "ZIP": "07094    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": "7370    ",
+    "SIC_DESC": "Computer and Data Processing Services"
+   },
+   "geometry": {
+    "x": -74.06530128207795,
+    "y": 40.78440415507676
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "06779",
+    "SITE_ID": 8888,
+    "FACILITY_NAME": "EAST GREEN-AIG DATA CENTER",
+    "ADDRESS": "2 PEACHTREE HILL",
+    "CITY": "Livingston Twp",
+    "ZIP": "07039    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "5182",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.36337558102456,
+    "y": 40.77417891833281
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "07820",
+    "SITE_ID": 39434,
+    "FACILITY_NAME": "MARKET HALSEY STREET TELECOM AND DATA CENTER ",
+    "ADDRESS": "165 HALSEY ST",
+    "CITY": "Newark City",
+    "ZIP": "07102    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Wireless Telecommunications Carriers (except Satellite)",
+    "NAICS_CODE": "517312",
+    "NAICS_DESC": "Wireless Telecommunications Carriers (except Satellite)",
+    "SIC_CODE": "4813    ",
+    "SIC_DESC": "Telephone Communications, Except Radiotelephone"
+   },
+   "geometry": {
+    "x": -74.17323665477569,
+    "y": 40.736747867342515
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "12708",
+    "SITE_ID": 75895,
+    "FACILITY_NAME": "EQUINIX ",
+    "ADDRESS": "755 SECAUCUS RD",
+    "CITY": "Secaucus Town",
+    "ZIP": "07094    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": "7374    ",
+    "SIC_DESC": "Computer Processing and Data Preparation and Processing Services"
+   },
+   "geometry": {
+    "x": -74.06954649612449,
+    "y": 40.77674700767661
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "11401",
+    "SITE_ID": 7002,
+    "FACILITY_NAME": "MEADOWLAND PARKWAY ASSOC",
+    "ADDRESS": "425 MEADOWLANDS PKWY",
+    "CITY": "Secaucus Town",
+    "ZIP": "07094    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Other Computer Related Services",
+    "NAICS_CODE": "541519",
+    "NAICS_DESC": "Other Computer Related Services",
+    "SIC_CODE": "7374    ",
+    "SIC_DESC": "Computer Processing and Data Preparation and Processing Services"
+   },
+   "geometry": {
+    "x": -74.08442339713807,
+    "y": 40.777516472986875
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "12700",
+    "SITE_ID": 354381,
+    "FACILITY_NAME": "ERNST & YOUNG DATA CENTER ",
+    "ADDRESS": "700 PLAZA DR ",
+    "CITY": "Secaucus Town",
+    "ZIP": "07094    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Custom Computer Programming Services",
+    "NAICS_CODE": "541511",
+    "NAICS_DESC": "Custom Computer Programming Services",
+    "SIC_CODE": "7371    ",
+    "SIC_DESC": "Computer Programming Services"
+   },
+   "geometry": {
+    "x": -74.04394475879154,
+    "y": 40.78800865161658
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "13123",
+    "SITE_ID": 13859,
+    "FACILITY_NAME": "EQUINIX LLC",
+    "ADDRESS": "800 SECAUCUS RD",
+    "CITY": "Secaucus Town",
+    "ZIP": "07094    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.07086557905372,
+    "y": 40.77897934053718
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "04050",
+    "SITE_ID": 30366,
+    "FACILITY_NAME": "MEMORIAL SLOAN KETTERING CANCER CENTER",
+    "ADDRESS": "1050 WALL ST",
+    "CITY": "Lyndhurst Twp",
+    "ZIP": "07021    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.10428955865456,
+    "y": 40.80635647276771
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "32317",
+    "SITE_ID": 434041,
+    "FACILITY_NAME": "201 MAIN AVE DATA CENTER",
+    "ADDRESS": "201 MAIN AVE",
+    "CITY": "Clifton City",
+    "ZIP": "07014    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "UNKNOWN",
+    "NAICS_CODE": null,
+    "NAICS_DESC": null,
+    "SIC_CODE": "9994    ",
+    "SIC_DESC": "UNKNOWN"
+   },
+   "geometry": {
+    "x": -74.13952590266499,
+    "y": 40.83313658939653
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "25769",
+    "SITE_ID": 3484,
+    "FACILITY_NAME": "AUTOMATIC DATA PROCESSING",
+    "ADDRESS": "99 JEFFERSON RD",
+    "CITY": "Parsippany-Troy Hills",
+    "ZIP": "07054    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": "7374    ",
+    "SIC_DESC": "Computer Processing and Data Preparation and Processing Services"
+   },
+   "geometry": {
+    "x": -74.41495220686727,
+    "y": 40.859254226532826
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "30867",
+    "SITE_ID": 15111,
+    "FACILITY_NAME": "BLOOMBERG TOTOWA DATA CENTER",
+    "ADDRESS": "701 UNION BLVD",
+    "CITY": "Totowa Boro",
+    "ZIP": "07512    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.22797800992151,
+    "y": 40.890737629972726
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "26665",
+    "SITE_ID": 394536,
+    "FACILITY_NAME": "COLOGIX NNJ1",
+    "ADDRESS": "1719 RT 10 E",
+    "CITY": "Parsippany-Troy Hills",
+    "ZIP": "07054    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": "7374    ",
+    "SIC_DESC": "Computer Processing and Data Preparation and Processing Services"
+   },
+   "geometry": {
+    "x": -74.45967588413963,
+    "y": 40.84005828257285
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "26847",
+    "SITE_ID": 445701,
+    "FACILITY_NAME": "ADVANCED DIGITAL DATA",
+    "ADDRESS": "6 LAUREL DR",
+    "CITY": "Mount Olive Twp",
+    "ZIP": "07836    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": "9994    ",
+    "SIC_DESC": "UNKNOWN"
+   },
+   "geometry": {
+    "x": -74.69990360360231,
+    "y": 40.84402330374589
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "08799",
+    "SITE_ID": 438795,
+    "FACILITY_NAME": "CK5 ROSELAND PARTNERS LLC",
+    "ADDRESS": "5 ADP BLVD",
+    "CITY": "Roseland Boro",
+    "ZIP": "07068    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.3031127989911,
+    "y": 40.8176191255548
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "03097",
+    "SITE_ID": 341248,
+    "FACILITY_NAME": "SUNGARD AVAILABILITY  SERVICES LP",
+    "ADDRESS": "777 CENTRAL BLVD",
+    "CITY": "Carlstadt Boro",
+    "ZIP": "07072    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Custom Computer Programming Services",
+    "NAICS_CODE": "541511",
+    "NAICS_DESC": "Custom Computer Programming Services",
+    "SIC_CODE": "7374    ",
+    "SIC_DESC": "Computer Processing and Data Preparation and Processing Services"
+   },
+   "geometry": {
+    "x": -74.04502762551242,
+    "y": 40.82829539562789
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "03164",
+    "SITE_ID": 368298,
+    "FACILITY_NAME": "365 DATA CENTERS",
+    "ADDRESS": "410 COMMERCE BLVD",
+    "CITY": "Carlstadt Boro",
+    "ZIP": "07072    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": "7374    ",
+    "SIC_DESC": "Computer Processing and Data Preparation and Processing Services"
+   },
+   "geometry": {
+    "x": -74.05356160323444,
+    "y": 40.82854284110673
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "32437",
+    "SITE_ID": 492633,
+    "FACILITY_NAME": "CYRUSONE INC",
+    "ADDRESS": "29 COMMERCE WAY",
+    "CITY": "Paterson City",
+    "ZIP": "07512    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.23511044073115,
+    "y": 40.909016298190224
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "03918",
+    "SITE_ID": 659220,
+    "FACILITY_NAME": "TD BANK MAHWAH",
+    "ADDRESS": "1037 MACARTHUR BLVD",
+    "CITY": "Mahwah Twp",
+    "ZIP": "07430    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.16642386319623,
+    "y": 41.07790409479643
+   }
+  },
+  {
+   "attributes": {
+    "PREF_ID_NUM": "32741",
+    "SITE_ID": 750132,
+    "FACILITY_NAME": "205 MINNISINK ROAD DATA CENTER",
+    "ADDRESS": "205 MINNISINK RD",
+    "CITY": "Totowa Boro",
+    "ZIP": "07512    ",
+    "FACILITY_TYPE": "Minor",
+    "FACILITY_DESC": "Data Processing, Hosting, and Related Services",
+    "NAICS_CODE": "518210",
+    "NAICS_DESC": "Data Processing, Hosting, and Related Services",
+    "SIC_CODE": null,
+    "SIC_DESC": null
+   },
+   "geometry": {
+    "x": -74.22836270515651,
+    "y": 40.901037547052766
+   }
+  }
+ ]
+}
