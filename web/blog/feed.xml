@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Week in Review: Pennsylvania&#x27;s Crackdown, New Jersey&#x27;s Ban Wave, and Nevada Says No to a Dry Basin</title>
+      <link>https://aigridwatch.com/blog/week-in-review-2026-08-23</link>
+      <guid>https://aigridwatch.com/blog/week-in-review-2026-08-23</guid>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+      <description>This week Pennsylvania&#x27;s governor signed what Bloomberg Law called the strictest data center executive order in the country, New Jersey towns kept banning data centers faster than developers could sue over it, and Nevada regulators banned new data centers outright in an over-appropriated water basin. Plus: Kansas cities suing their own residents over ballot petitions, a DeKalb County win, and Michigan&#x27;s moratorium fight goes to court.</description>
+    </item>
+    <item>
       <title>Pennsylvania Just Told Data Centers: Build Your Own Power, or Don&#x27;t Build Here</title>
       <link>https://aigridwatch.com/blog/pennsylvania-grid-executive-order-2026</link>
       <guid>https://aigridwatch.com/blog/pennsylvania-grid-executive-order-2026</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/bnef-194gw-forecast-2026</guid>
       <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
       <description>BloombergNEF just raised its U.S. data-center power forecast by 83% — to 194 GW by 2035 — meaning one out of every five units of electricity generated in the country would flow to a data center. With hyperscalers on track to spend $700 billion this year and 124 GW of on-site gas plants in the pipeline, the energy system your community depends on is being reshaped in real time.</description>
-    </item>
-    <item>
-      <title>Amazon Says It Picks Sites Where the Grid Needs Help. Here&#x27;s What Communities Should Hear.</title>
-      <link>https://aigridwatch.com/blog/amazon-oyer-site-selection-2026</link>
-      <guid>https://aigridwatch.com/blog/amazon-oyer-site-selection-2026</guid>
-      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
-      <description>In a Latitude Media interview, Amazon&#x27;s energy chief laid out a sophisticated site-selection strategy — picking locations where new load &#x27;benefits the grid,&#x27; pledging full cost coverage, and touting a 52% water-efficiency gain. The claims are worth understanding, because the playbook is coming to a town near you.</description>
     </item>
 </channel>
 </rss>

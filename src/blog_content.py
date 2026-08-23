@@ -4932,4 +4932,285 @@ getting started, this is wind at your back. Use it.
 Aug 20, 2026](https://www.axios.com/2026/08/20/data-center-uproar-2026-midterms)*
 """,
     },
+    # ── Week in Review: 2026-08-23 ──
+    {
+        "id": "week-in-review-2026-08-23",
+        "art": "review",
+        "section": "stories",
+        "title": "Week in Review: Pennsylvania's Crackdown, New Jersey's Ban Wave, and Nevada Says No to a Dry Basin",
+        "date": _dt.date(2026, 8, 23),
+        "author": "GridWatch AI",
+        "tags": ["week in review", "moratorium", "Pennsylvania", "New Jersey",
+                 "Nevada", "Virginia", "Kansas", "Georgia", "Michigan", "water",
+                 "policy", "community"],
+        "summary": (
+            "This week Pennsylvania's governor signed what Bloomberg Law called "
+            "the strictest data center executive order in the country, New Jersey "
+            "towns kept banning data centers faster than developers could sue over "
+            "it, and Nevada regulators banned new data centers outright in an "
+            "over-appropriated water basin. Plus: Kansas cities suing their own "
+            "residents over ballot petitions, a DeKalb County win, and Michigan's "
+            "moratorium fight goes to court."
+        ),
+        "body": """\
+Welcome back to the GridWatch AI Week in Review — our Sunday roundup of the
+most important data center stories from the past seven days, what they mean
+for communities, and what you can learn from each one.
+
+---
+
+### 1. Pennsylvania's governor signs the "strictest" data center order in the US
+
+**What happened:** Governor Josh Shapiro signed Executive Order 2026-05 on
+August 18, creating the **GRID** framework — requiring developers to fund
+their own power infrastructure, secure local government approval *before*
+any state permit, sign enforceable community benefit agreements, and drop
+out of the state's Permit Fast Track program entirely. [NBC News](https://www.nbcnews.com/)
+described Shapiro taking a hard line against "predatory" developer
+practices; [Bloomberg Law](https://news.bloomberglaw.com/) called it the
+strictest data center order in the country.
+
+**Why it matters:** Pennsylvania has been one of the most aggressively
+courted states for new data center campuses, thanks to cheap natural gas and
+a governor who has otherwise embraced the industry. A governor who campaigned
+on data centers as an economic win turning around and requiring local
+approval before state permitting is a signal of how far the politics have
+shifted in a single year — and it flips the leverage: a town's planning
+commission now effectively holds a veto that used to belong entirely to the
+state.
+
+**What to learn — what an executive order can and can't do:** An executive
+order directs state agencies to change how they operate — it can tighten
+permit review, require disclosure of previously confidential contract
+terms, and condition tax breaks on compliance, the way GRID does. It
+generally can't create binding rate caps through legislation, and it can't
+bind a future governor, who can rescind it. GRID's designers built around
+that weakness with a consent-order model rather than an outright ban —
+details worth reading in full in
+[Pennsylvania Just Told Data Centers: Build Your Own Power, or Don't Build Here](/blog/pennsylvania-grid-executive-order-2026).
+The follow-up ask for residents is to push legislators to codify the same
+protections into statute before the next election changes who's signing
+orders. See our analysis of the broader political shift in
+[Data Center Opposition Just Became a National Political Force](/blog/data-center-midterms-politics-2026).
+
+*Sources: [WHYY, Aug 18](https://whyy.org/); [NBC News, Aug 18](https://www.nbcnews.com/);
+[Bloomberg Law, Aug 18](https://news.bloomberglaw.com/)*
+
+---
+
+### 2. New Jersey's ban wave keeps growing — and a developer wants \\$300 million for it
+
+**What happened:** Jersey City's council voted unanimously to ban new
+standalone data centers in the city's industrial zones, joining a growing
+list of New Jersey municipalities — including Bayonne and Howell — that
+have passed outright bans rather than temporary moratoriums this year. Days
+later, [inc.com](https://www.inc.com/) reported that a developer is seeking
+\\$300 million in damages from a New Jersey town over its ban.
+
+**Why it matters:** Most of the country is still debating temporary
+*moratoriums* — pauses of 6 to 18 months while a town writes new zoning
+rules. New Jersey's wave is different: these are permanent zoning bans, not
+pauses. That's a stronger tool, but it also invites a stronger legal
+response — developers arguing the ban destroys the value of land they
+already control or have under contract.
+
+**What to learn — moratorium vs. outright ban, and why developers sue over both:**
+
+| | Moratorium | Zoning ban |
+|--|-----------|-----------|
+| **Duration** | Temporary (6–18 months) | Permanent, until repealed |
+| **Legal basis** | Police power to pause while writing rules | Police power to zone land use |
+| **Developer's likely claim** | "You paused my *pending* application" | "You destroyed the value of land I already hold" |
+| **Strongest defense for the town** | Tie it to a stated planning purpose | Show the ban applies to a use category, not one project |
+
+A "regulatory takings" lawsuit — the theory behind the \\$300 million claim —
+argues a zoning change went so far it amounts to the government seizing the
+property without paying for it. Courts set a high bar for these claims, but
+towns should expect them any time a ban follows a specific project's
+announcement rather than a general policy review. Track the state's growing
+list on the [moratorium tracker](/moratoriums.html), and see how other
+operators have responded to bans in
+[How to Negotiate with Every Major Data Center Developer](/blog/negotiation-patterns-all-operators-2026).
+
+*Sources: [Hudson County View, Aug 20](https://hudsoncountyview.com/);
+[inc.com, Aug 21](https://www.inc.com/)*
+
+---
+
+### 3. Nevada bans new data centers in an over-appropriated water basin
+
+**What happened:** Nye County commissioners voted to ban new data centers in
+the Pahrump Water Basin, which state regulators have already designated as
+over-appropriated — meaning more water rights are on paper than the basin
+can actually sustain.
+
+**Why it matters:** This is one of the clearest wins so far for a
+resource-based argument, rather than a noise or traffic argument. Nevada's
+water law follows prior appropriation ("first in time, first in right"),
+and an over-appropriated basin means existing water-rights holders —
+farms, wells, small water utilities — are already competing for a shrinking
+supply. Adding a data center's cooling demand into that basin isn't a
+theoretical risk; it's math the state had already done.
+
+**What to learn — how to find out if your basin is already stressed:**
+
+1. Ask your state's water authority (in Nevada, the Division of Water
+   Resources) whether your basin has a designated status — over-appropriated,
+   critical management area, or similar.
+2. If it does, that status is a stronger legal hook than a general "we're
+   worried about water" comment at a hearing — it's the state's own finding.
+3. Ask what cooling technology is proposed. Evaporative cooling draws far
+   more water than air-cooled or closed-loop systems — see our breakdown in
+   last week's issue and in
+   [They Figured This Out Fifty Years Ago](/blog/resource-extraction-precedent-2026).
+
+*Sources: [Nevada Current, Aug 20](https://nevadacurrent.com/);
+[KSNV, Aug 19](https://news3lv.com/)*
+
+---
+
+### 4. Virginia Beach pauses hyperscale data centers for a year
+
+**What happened:** Virginia Beach's city council approved a 12-month
+moratorium on new large-scale data center applications, giving the city time
+to write zoning standards. Neighboring Chesapeake moved the same week to
+restrict data center development further.
+
+**Why it matters:** Virginia is the most data-center-dense state in the
+country, and Hampton Roads has largely been spared the buildout concentrated
+in Loudoun and Prince William counties — until now. Two Hampton Roads
+cities moving in the same week signals the pattern spreading to a new part
+of the state before the facilities are even built, not after residents are
+already living with them.
+
+**What to learn — what a moratorium does and doesn't freeze:** A pause
+typically applies only to *new* applications filed after the ordinance takes
+effect. Projects that already have a complete application on file are often
+"grandfathered" and continue under the old rules unless the ordinance
+explicitly says otherwise. If your city is about to vote on a pause, ask
+your council member directly: does this apply to applications already in
+the pipeline, or only future ones? That one sentence in the ordinance
+determines whether the pause protects your neighborhood or just the next one.
+
+*Sources: [WTKR, Aug 19](https://www.wtkr.com/);
+[The Virginian-Pilot, Aug 19](https://www.pilotonline.com/);
+[WHRO, Aug 19](https://whro.org/)*
+
+---
+
+### 5. Kansas cities are suing their own residents over data center ballot petitions
+
+**What happened:** The city of Edgerton, Kansas, sued residents who filed a
+petition seeking a public vote on a proposed data center ban, and a similar
+fight played out in El Dorado, where a judge ruled the city must either
+adopt a data-center ban itself or put the question to voters.
+
+**Why it matters:** Most states give residents the right to force a
+ballot referendum on a local ordinance if they collect enough signatures.
+A city suing the *petitioners* — rather than simply certifying or rejecting
+the petition — is an aggressive move, and it puts the city in the position
+of fighting its own residents' right to vote on the issue rather than
+fighting the data center developer.
+
+**What to learn — protecting your right to petition:**
+
+- Most states set specific rules for what a petition must contain and how
+  many signatures are needed (often a percentage of votes cast in the last
+  municipal election). Get those rules from your city clerk *before* you
+  circulate anything, in writing.
+- If a city challenges your petition's validity, that's a normal legal step.
+  A lawsuit specifically aimed at the *organizers*, asking a court to block
+  the vote entirely, is a different and more aggressive posture — document
+  it and get it in front of local media.
+- El Dorado's outcome — a judge ordering the city to either act or let
+  voters decide — is the precedent to cite if your city tries to simply
+  ignore a valid petition.
+
+*Sources: [Johnson County Post, Aug 18](https://johnsoncountypost.com/);
+[KMBC, Aug 21](https://www.kmbc.com/);
+[KSN.com, Aug 22](https://www.ksn.com/)*
+
+---
+
+### 6. A Black DeKalb County community wins its year-long fight against a data center
+
+**What happened:** [Capital B News Atlanta](https://atlanta.capitalbnews.org/)
+reported that a Black community in DeKalb County, Georgia, successfully
+blocked a massive data center project after nearly a year of organizing.
+In the same week, Atlanta's city council utilities committee approved
+forming a Data Center Task Force to study the industry's local impact.
+
+**Why it matters:** Data center siting in the Southeast has followed a
+pattern documented in multiple environmental-justice studies: developers
+disproportionately target land near lower-income and majority-Black
+communities, where zoning is often lighter and organized political
+opposition is assumed to be weaker. DeKalb's win is a direct rebuttal to
+that assumption — and a reminder that a sustained, year-long campaign,
+not just a single hearing, is often what it takes.
+
+**What to learn — task forces are slower, but they can outlast a single
+project fight:** A task force doesn't stop any specific proposal the way a
+moratorium does. What it can do is build the data and political cover for
+stronger permanent rules — recommending noise limits, water reporting, or
+a siting map that keeps future projects away from residential areas. If
+your city forms one, push to get a resident or community advocate seated on
+it, not just industry and staff representatives. More on organizing for the
+long fight in
+[How the Industry Files Your Protest](/blog/social-license-risk-2026).
+
+*Sources: [Capital B News Atlanta, Aug 18](https://atlanta.capitalbnews.org/);
+[FOX 5 Atlanta, Aug 17](https://www.fox5atlanta.com/)*
+
+---
+
+### 7. Michigan's moratorium fight moves to the courtroom
+
+**What happened:** A data center developer sued the city of Gibraltar,
+Michigan, claiming its one-year moratorium unlawfully halted an
+already-in-progress project. In the same week, Republican U.S. Senate
+candidate Mike Rogers came out in favor of a statewide, one-year data
+center moratorium after new data center investments in the state were
+revealed.
+
+**Why it matters:** Gibraltar's lawsuit is the sharpest test yet of whether
+a moratorium can be applied to a project that was already under review when
+the ordinance passed — the same "was this application already in the
+pipeline" question raised in the Virginia Beach story above. Meanwhile,
+Rogers backing a moratorium shows data center opposition breaking out of
+its usual local-politics lane and into a statewide, partisan campaign
+message.
+
+**What to learn — a moratorium is more legally durable when it treats every
+pending application the same way.** The strongest legal defense for a town
+being sued over a moratorium is consistency: applying the pause to every
+project in a category, not carving out exceptions, and documenting the
+planning purpose (drafting zoning standards) in the ordinance itself.
+Singling out one already-filed project for a "pause" is what invites — and
+sometimes wins — a lawsuit like Gibraltar's.
+
+*Sources: [WXYZ Channel 7, Aug 20](https://www.wxyz.com/);
+[Michigan Advance, Aug 20](https://michiganadvance.com/)*
+
+---
+
+### What to watch next week
+
+- **Gibraltar, Michigan** — how the court rules on whether the moratorium
+  can apply to an already-filed application
+- **El Dorado, Kansas** — whether the city adopts a ban itself or the
+  question goes to voters
+- **Pennsylvania's legislature** — whether lawmakers move to codify
+  Shapiro's executive order into statute before it can be reversed by a
+  future governor
+- **More New Jersey towns** — additional council votes are queued up
+  following Jersey City's ban
+
+---
+
+*Every Sunday we cover the week's most important data center stories,
+explain the underlying concepts, and point you to the tools you need. Know
+a story we should cover? Reach out through the [consulting tab](/app) or
+the newsletter signup.*
+""",
+    },
 ]
