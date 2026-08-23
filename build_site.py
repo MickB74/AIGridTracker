@@ -1911,6 +1911,20 @@ def _videos_for_state(state_name, limit=4):
 NEWS_CACHE_PATH = pathlib.Path(__file__).parent / "data" / "news_cache.json"
 NEWS_CACHE_TTL_HOURS = 6
 
+
+def _news_frozen():
+    """True when the build must not touch the network for news/video.
+
+    The drift check (scripts/check_site_fresh.py) rebuilds and treats any
+    change to web/ as a registry/output mismatch. That only works if the
+    build is deterministic — and it isn't, because news and YouTube are
+    fetched at build time, so a rebuild after the 6h TTL lapses rewrites
+    ~35 files no matter what the data says. NEWS_FREEZE=1 pins both to the
+    committed cache regardless of age, leaving registry changes as the only
+    thing that can move the output.
+    """
+    return os.environ.get("NEWS_FREEZE") == "1"
+
 # Durable archive of the same feed, grouped by locality — see
 # _persist_story_candidates / build_story_tracker below. Unlike
 # NEWS_CACHE_PATH (overwritten each fetch), entries here accumulate: a story
@@ -2280,6 +2294,8 @@ def _load_youtube():
         except Exception:                                         # noqa: BLE001
             cache = None
     force = os.environ.get("NEWS_REFRESH") == "1"
+    if cache and _news_frozen():
+        return cache["items"], cache["fetched_at"]
     fresh = False
     if cache and not force:
         try:
@@ -2397,6 +2413,9 @@ def _load_news():
         except Exception:                                         # noqa: BLE001
             cache = None
     force = os.environ.get("NEWS_REFRESH") == "1"
+    if cache and _news_frozen() and "themes" in cache and "top_stories" in cache:
+        return (cache["items"], cache["themes"], cache["top_stories"],
+                cache["fetched_at"])
     fresh_enough = False
     if cache and not force:
         try:
