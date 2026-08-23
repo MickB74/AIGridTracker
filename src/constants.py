@@ -3118,6 +3118,41 @@ MORATORIUMS = [
      "lat": 37.05, "lon": -88.08, "expires": None, "as_of": "2026-08-23",
      "source": "https://www.wpsdlocal6.com/news/data-center-moratorium-ordinance-passes-unanimously-in-lyon-county/article_3e62c03d-096f-42d0-b78d-d1f7e51be074.html",
      "term": "fixed_undated"},
+    {"locality": "Seward County", "state": "NE", "level": "Local",
+     "status": "Enacted", "when": "Jun 30, 2026",
+     "note": "12-month pause on all data center construction, permits and "
+             "special-use conditions, unanimous with two commissioners absent. "
+             "Ends early if the planning board and commissioners adopt "
+             "regulations first. Board chair Misty Ahmic cited water and "
+             "electrical infrastructure, noise, roads and decommissioning. One "
+             "of at least ten Nebraska counties with a pause in place",
+     "lat": 40.91, "lon": -97.10, "expires": "2027-06-30", "as_of": "2026-08-23",
+     "source": "https://www.ksnblocal4.com/2026/06/30/seward-county-approves-one-year-pause-data-center-permits-construction/"},
+    {"locality": "Luther", "state": "OK", "level": "Local",
+     "status": "Enacted", "when": "Jun 17, 2026",
+     "note": "Town board ordinance pausing new rezoning applications and "
+             "specific-use permit requests for data centers through Dec 31, "
+             "2026, and restricting approvals of applications already filed, "
+             "while the town revises zoning for data centers and battery "
+             "storage. Aimed at Beltline Energy's proposed development, which "
+             "the board discussed the same night without acting on it. The "
+             "meeting drew a crowd large enough to be moved outdoors",
+     "lat": 35.66, "lon": -97.19, "expires": "2026-12-31", "as_of": "2026-08-23",
+     "source": "https://www.news9.com/data-centers-in-oklahoma/luther-oklahoma-board-approves-data-center-moratorium"},
+    {"locality": "Stokes County", "state": "NC", "level": "Local",
+     "status": "Rejected", "when": "Jul 2026",
+     "note": "Commissioners rejected the six-month moratorium their own "
+             "planning board had recommended, after months of organised "
+             "opposition; Commissioner Sonya Cox said a formal pause was not "
+             "necessary. The county instead added data centers as an allowed "
+             "use in M-2 Heavy Manufacturing conditional zoning. A separate "
+             "Aug 13 planning board vote denied a data center rezoning in "
+             "Walnut Cove 5-2. Sources disagree on the vote date (reported as "
+             "both Mon Jul 14 — a Tuesday — and Jul 15), so only the month is "
+             "recorded. Listed because neighbouring counties' coverage has "
+             "repeatedly described Stokes as having passed a pause; it did not",
+     "lat": 36.41, "lon": -80.21, "expires": None, "as_of": "2026-08-23",
+     "source": "https://www.wfdd.org/politics-government/2026-07-14/stokes-commission-rejects-six-month-data-center-moratorium"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.

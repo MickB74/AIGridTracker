@@ -90,15 +90,38 @@ LIVE_STATUS = {"active", "extended"}
 
 def published_localities():
     """(locality, state) pairs already in the registry, lowercased."""
-    return {
-        (str(r["locality"]).strip().lower(), str(r["state"]).strip().upper())
-        for r in MORATORIUMS
-    }
+    pairs = set()
+    for r in MORATORIUMS:
+        st = str(r["state"]).strip().upper()
+        pairs |= {(f, st) for f in _name_forms(r["locality"])}
+    return pairs
+
+
+# Suffixes the sweep's headline parser routinely drops: it reads "Carter
+# County passes moratorium" and stores the locality as "Carter". Matching the
+# stem as well as the full name keeps an already-tracked row from coming back
+# round as a fresh lead.
+_LOC_SUFFIXES = (" county", " township", " twp", " borough", " parish",
+                 " city", " town", " village")
+
+
+def _name_forms(locality):
+    """The label plus the forms a headline parser is likely to have kept."""
+    base = str(locality).strip().lower()
+    forms = {base, re.sub(r"\s*\(.*?\)\s*", " ", base).strip()}
+    for form in list(forms):
+        for suffix in _LOC_SUFFIXES:
+            if form.endswith(suffix):
+                forms.add(form[: -len(suffix)].strip())
+    return {f for f in forms if f}
 
 
 def published_names():
     """Locality names alone — a candidate may not carry a state."""
-    return {str(r["locality"]).strip().lower() for r in MORATORIUMS}
+    names = set()
+    for r in MORATORIUMS:
+        names |= _name_forms(r["locality"])
+    return names
 
 
 def locality_of(row):
@@ -136,14 +159,15 @@ def already_tracked(row, pairs, names):
     loc, st = locality_of(row), state_of(row)
     if not loc:
         return False
-    loc = str(loc).strip().lower()
+    forms = _name_forms(loc)
     if st:
-        return (loc, str(st).strip().upper()) in pairs
+        st = str(st).strip().upper()
+        return any((f, st) in pairs for f in forms)
     # No trustworthy state: fall back to the name, which over-matches on
     # purpose. A duplicate suppressed here costs one missed row; a duplicate
     # promoted costs a double-counted moratorium on a public page — the defect
     # this whole pass exists to clear.
-    return loc in names
+    return bool(forms & names)
 
 
 def classify(row):
