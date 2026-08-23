@@ -124,11 +124,17 @@ this page" expander for navigation.
     worklist item, not a guess. The point is that a null `expires` used to
     mean three incompatible things at once, so the strongest rows on the page
     (permanent bans) rendered identically to the weakest (unresearched).
-    Maintained by `scripts/verify_moratoriums.py` (audits what is published)
-    and `scripts/scan_moratorium_candidates.py` (finds what is missing) — see
-    Data maintenance scripts below. **Known defect: 9 duplicate
-    `(locality, state)` pairs** from overlapping research batches, so counts
-    read 9 high and those rows render twice.
+    Maintained by `scripts/verify_moratoriums.py` (audits what is published),
+    `scripts/scan_moratorium_candidates.py` (finds what is missing) and
+    `scripts/triage_moratorium_candidates.py` (ranks the queue) — see Data
+    maintenance scripts below. **312 rows, no duplicate `(locality, state)`
+    pairs.** Ten duplicated events from overlapping research batches were
+    merged on 2026-08-23; when merging, keep the row whose source actually
+    supports the stored `status` (two of the ten cited an article predating
+    the vote it claimed to document) and keep `source` paired with its own
+    `as_of`. Seven source URLs are still shared by several rows — those are
+    multi-locality roundup articles, not duplicates, so dedupe on
+    `(locality, state)` rather than on the URL.
   - `MORATORIUM_OUTCOMES` — six case studies, each with `sources` (a list of
     URLs) and `as_of`. The Start here wizard labels these "precedents worth
     citing" and a resident reads them aloud at a hearing, so the bar is higher
@@ -257,6 +263,7 @@ Stdlib-only on purpose — they run in CI off `requirements-build.txt`, which ex
 |---|---|
 | `verify_moratoriums.py` | Audits `MORATORIUMS_DF` **and `MORATORIUM_OUTCOMES`**: lapsed terms, dead source links (403/405/429 reported as *blocked*, not dead), rows with no source, `as_of` older than 180 days, and time-limited rows with no recorded end date. `--offline` skips link checks, `--out`/`--json` write the worklist, `--strict` exits non-zero. |
 | `scan_moratorium_candidates.py` | Mines the Google News RSS feed for moratoriums not yet tracked and appends them to `data/moratorium_candidates.json`. Entries keep `first_seen`; anything a human marks `"status": "dismissed"` is never re-raised. |
+| `triage_moratorium_candidates.py` | Ranks the review queue by how much work stands between a candidate and the two fields the registry requires, `source` and `as_of`. Read-only over `data/moratorium_candidates.json` — writes neither registry nor queue. Four tiers: **A** cited (a publisher link or a named document plus a locality), **B** structured (Moratorium Nation rows that are dated, active and upstream-verified — but that feed ships *no* source URLs, so the ordinance still has to be found), **C** thin (undated, pending, or verify_count 0), **D** unlocated (a headline with no resolvable locality). Drops already-published localities and collapses repeat coverage of one action, using the outlet count as a corroboration signal. Never prints the sweep's `guess_state` as fact — it files Bernards Township and Carter County both under Indiana — so guessed states get a trailing `?` and are ignored when matching against the registry. `--tier`, `--limit`, `--out`, `--json`. |
 | `scan_locality_candidates.py` | Mines `data/story_candidates.json` (the story tracker archive) for towns/counties that keep recurring in unlocalized headlines but aren't in the locality gazetteer yet, and appends them to `data/locality_candidates.json`, capped at `--max-new` (default 39) newly-surfaced names per run. Same never-writes-a-registry discipline as the moratorium scanner — promoting a candidate means researching its governing body (and, if it's had a real vote, the outcome) from primary sources and adding a `LOCAL_BODIES_DF`/`MORATORIUMS_DF` row by hand, then running `backfill_story_candidates.py --relabel` so its already-archived stories regroup. Runs daily as a step in `build-site.yml` (after the story archive itself refreshes), not the weekly moratorium job — it needs a fresh archive, not a fresh RSS fetch of its own. |
 | `fetch_nj_permits.py` | Mines NJDEP's air-permit register for facilities that look like data centers, into `data/nj_permit_candidates.json`. **A review queue, never a registry** — the opposite call from `fetch_pa_dep_projects.py`, because PA publishes a list of data-center *projects* while NJ publishes 17k permitted facilities that a filter has to guess at (NJDEP codes Memorial Sloan Kettering as NAICS 518210). Each row reports `confidence`: `naics` (NJDEP's own 5182x code) > `operator` (name matches `OPERATORS_DF`) > `name`. Reads NJDEP's ArcGIS NJEMS layer at `mapsdep.nj.gov`, **not** DataMiner — `dep.nj.gov` is behind an Imperva WAF that blocks scripted requests and answers with HTTP 200. Issued permits only: no permit numbers, no application dates, no pending applications, so it is a census of what is already permitted, not an early-warning feed. `--dry-run`, `--offline`, `--report`. Not yet wired into CI. |
 | `verify_permit_portals.py` | Link-checks every URL in `STATE_PERMIT_PORTALS`, `RTO_QUEUES`, `NATIONAL_PERMIT_TOOLS` and `FERC_ELIBRARY` — the links a resident clicks to pull a permit file, where a 404 sends them back to the search engine the registry exists to replace. Same classification as `verify_sources.py`: 401/403/405/429 are *blocked* (bot refusal), 5xx *flaky*, 404/DNS *dead*. `--out` writes a worklist, `--strict` exits non-zero on dead links. State agencies reorganise often — expect this to find something. |

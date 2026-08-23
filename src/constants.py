@@ -766,11 +766,6 @@ VIDEO_TOPICS = {
 # level: Local/State. status: Enacted/Proposed/Rejected/Vetoed/Rescinded.
 # "Expired" is never stored — it is derived. See moratorium_status().
 MORATORIUMS = [
-    {"locality": "Minneapolis", "state": "MN", "level": "Local",
-     "status": "Enacted", "when": "May 22, 2026",
-     "note": "6-month interim ordinance; facilities over 350,000 sq ft, downtown exempt",
-     "lat": 44.98, "lon": -93.27, "expires": "2026-11-21", "as_of": "2026-08-04",
-     "source": "https://www.mprnews.org/story/2026/05/22/minneapolis-city-council-imposes-six-month-halt-on-data-centers"},
     {"locality": "Denver", "state": "CO", "level": "Local",
      "status": "Enacted", "when": "May 21, 2026",
      "note": "1 year or until updated data center regulations are adopted",
@@ -789,8 +784,10 @@ MORATORIUMS = [
     {"locality": "Dubuque County", "state": "IA", "level": "Local",
      "status": "Enacted", "when": "May 26, 2026",
      "note": "12-month pause on permits and zoning requests for data center "
-             "construction or expansion, amended up from 120 days; county will "
-             "host weekly work sessions and at least four public town halls",
+             "construction or expansion, passed 2-1 and amended up from 120 "
+             "days after a unanimous Planning and Zoning Commission "
+             "recommendation; county will host weekly work sessions and at "
+             "least four public town halls",
      "lat": 42.47, "lon": -90.88, "expires": "2027-05-26", "as_of": "2026-08-13",
      "source": "https://www.kcrg.com/2026/05/26/dubuque-county-passes-12-month-moratorium-data-centers/"},
     {"locality": "Bloomington", "state": "IL", "level": "Local",
@@ -799,12 +796,6 @@ MORATORIUMS = [
              "public hearings required during the moratorium period",
      "lat": 40.48, "lon": -88.99, "expires": "2026-11-26", "as_of": "2026-08-13",
      "source": "https://www.wglt.org/local-news/2026-05-26/bloomington-approves-6-month-moratorium-on-data-centers"},
-    {"locality": "Normal", "state": "IL", "level": "Local",
-     "status": "Enacted", "when": "May 18, 2026",
-     "note": "Unanimous; runs through Nov 30, 2026. Preemptive — no active "
-             "data center inquiries at the time",
-     "lat": 40.51, "lon": -88.99, "expires": "2026-11-30", "as_of": "2026-08-13",
-     "source": "https://www.wglt.org/local-news/2026-05-15/normal-to-vote-on-6-month-data-center-moratorium"},
     {"locality": "Iron County", "state": "UT", "level": "Local",
      "status": "Enacted", "when": "May 26, 2026",
      "note": "Ordinance 2026-13: 180-day halt on data centers, data center "
@@ -1223,9 +1214,11 @@ MORATORIUMS = [
      "source": "https://nwitimes.com/news/local/lake/merrillville/article_f506303d-f5ce-4bcc-bb4c-a6abf68fb24d.html"},
     {"locality": "Vienna Township (Trumbull Co.)", "state": "OH", "level": "Local",
      "status": "Enacted", "when": "Extended Aug 2026",
-     "note": "Extended 60 days, Aug 16 to Oct 16, 2026, while the county planning "
-             "commission reviews the township's draft data center zoning",
-     "lat": 41.24, "lon": -80.66, "expires": "2026-10-16", "as_of": "2026-08-04",
+     "note": "Rolling moratorium originally enacted 2025, extended 60 days from "
+             "Aug 16 to Oct 16, 2026 while the county planning commission "
+             "reviews the township's draft data center zoning, including noise "
+             "and power limits. Bitdeer (Singapore-based) has plans in the area",
+     "lat": 41.24, "lon": -80.66, "expires": "2026-10-16", "as_of": "2026-08-13",
      "source": "https://www.tribtoday.com/news/local-news/2026/08/vienna-extends-data-center-moratorium/"},
     {"locality": "Boardman", "state": "OH", "level": "Local",
      "status": "Enacted", "when": "Apr 28, 2026",
@@ -2252,26 +2245,12 @@ MORATORIUMS = [
      "source": "https://www.lenox-mi.gov/m/newsflash/home/detail/240",
      "term": "fixed_undated"},
     # ── Batch 3 — Kentucky ────────────────────────────────────────────────
-    {"locality": "Bell County", "state": "KY", "level": "Local",
-     "status": "Enacted", "when": "Jul 2, 2026",
-     "note": "2-year moratorium, unanimous. Halts Murray Industries' hyperscale "
-             "project on former coal mining land along Bell-Knox county line. "
-             "Murray had already begun clearing land before the vote",
-     "lat": 36.72, "lon": -83.67, "expires": "2028-07-02", "as_of": "2026-08-13",
-     "source": "https://kentuckylantern.com/2026/08/04/bell-county-passed-a-data-center-moratorium-resident-worry-that-work-continues/"},
     {"locality": "Daviess County", "state": "KY", "level": "Local",
      "status": "Enacted", "when": "May 28, 2026",
      "note": "12-month moratorium, unanimous. Triggered by hyperscale data "
              "center planned at idled aluminum mill in neighboring Hancock County",
      "lat": 37.77, "lon": -87.11, "expires": "2027-05-28", "as_of": "2026-08-13",
      "source": "https://www.14news.com/2026/05/29/daviess-co-fiscal-court-approves-moratorium-data-center-applications/"},
-    {"locality": "Cave City", "state": "KY", "level": "Local",
-     "status": "Enacted", "when": "May 20, 2026",
-     "note": "12-month moratorium, 4-1. Under legal challenge — Kentucky "
-             "Industrial Alliance (proposed 1.2 GW 'Cave Point Commerce Center' "
-             "on ~600 acres) filed suit Jun 8",
-     "lat": 37.14, "lon": -85.96, "expires": "2027-05-20", "as_of": "2026-08-13",
-     "source": "https://bgdailynews.com/2026/05/24/cave-city-looks-ahead-after-data-center-moratorium/"},
     {"locality": "Lexington (Fayette County)", "state": "KY", "level": "Local",
      "status": "Enacted", "when": "Jun 9, 2026",
      "note": "Moratorium on permits, development plans, and zone changes, "
@@ -2309,19 +2288,6 @@ MORATORIUMS = [
              "concerns",
      "lat": 41.67, "lon": -91.59, "expires": "2026-11-08", "as_of": "2026-08-13",
      "source": "https://cbs2iowa.com/news/local/johnson-county-imposes-moratorium-on-data-centers-to-protect-resources-and-assess-impacts"},
-    {"locality": "Linn County", "state": "IA", "level": "Local",
-     "status": "Enacted", "when": "Jul 1, 2026",
-     "note": "18-month moratorium on EU-3 Large-Scale Data Center rezoning in "
-             "unincorporated areas, 2-1. Can end early or extend",
-     "lat": 42.08, "lon": -91.59, "expires": "2028-01-01", "as_of": "2026-08-13",
-     "source": "https://corridorbusiness.com/linn-county-data-center-moratorium-approved-how-the-board-got-to-2-1-and-what-happens-next/"},
-    {"locality": "Dubuque County", "state": "IA", "level": "Local",
-     "status": "Enacted", "when": "May 26, 2026",
-     "note": "12-month moratorium, 2-1. Originally proposed as 120 days, "
-             "extended during meeting. Planning and Zoning Commission had "
-             "unanimously recommended the pause",
-     "lat": 42.48, "lon": -90.71, "expires": "2027-05-26", "as_of": "2026-08-13",
-     "source": "https://www.kcrg.com/2026/05/26/dubuque-county-passes-12-month-moratorium-data-centers/"},
     {"locality": "Woodbury County", "state": "IA", "level": "Local",
      "status": "Enacted", "when": "Jun 23, 2026",
      "note": "12-month moratorium in unincorporated areas, 5-0. Does NOT affect "
@@ -2420,13 +2386,6 @@ MORATORIUMS = [
      "lat": 41.72, "lon": -81.25, "expires": None, "as_of": "2026-08-13",
      "source": "https://www.thecooldown.com/green-business/painesville-township-ohio-data-center/",
      "term": "fixed_undated"},
-    {"locality": "Vienna Township", "state": "OH", "level": "Local",
-     "status": "Enacted", "when": "Extended Aug 2026",
-     "note": "Rolling moratorium — originally enacted 2025, extended 60 days "
-             "through Oct 16 while zoning solutions including noise and power "
-             "limits are developed. Bitdeer (Singapore-based) has plans in area",
-     "lat": 41.23, "lon": -80.66, "expires": "2026-10-16", "as_of": "2026-08-13",
-     "source": "https://www.tribtoday.com/news/local-news/2026/08/vienna-extends-data-center-moratorium/"},
     {"locality": "Weathersfield Township", "state": "OH", "level": "Local",
      "status": "Enacted", "when": "2026",
      "note": "6-month moratorium. Bitdeer plans a data center on Belmont Ave "
@@ -2455,13 +2414,6 @@ MORATORIUMS = [
      "lat": 40.42, "lon": -82.91, "expires": None, "as_of": "2026-08-13",
      "source": "https://signalcleveland.org/ohio-approves-last-data-center-exemption-before-moratorium/",
      "term": "until_event"},
-    {"locality": "Ohio (ballot measure)", "state": "OH", "level": "State",
-     "status": "Rejected", "when": "2026",
-     "note": "Proposed constitutional amendment to ban data centers >25 MW "
-             "failed to qualify — collected ~70,000 of 413,488 required "
-             "signatures. Backers plan to try again for 2027 ballot",
-     "lat": 40.42, "lon": -82.91, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.statenews.org/government-politics/2026-03-26/proposed-amendment-to-ban-huge-data-centers-in-ohio-can-move-to-next-step"},
     # ── Batch 3 — Wisconsin ───────────────────────────────────────────────
     {"locality": "Madison", "state": "WI", "level": "Local",
      "status": "Enacted", "when": "Jan 13, 2026",
@@ -2476,14 +2428,6 @@ MORATORIUMS = [
              "Residents mobilized against a \\$1B proposed project",
      "lat": 42.72, "lon": -90.98, "expires": None, "as_of": "2026-08-13",
      "source": "https://dailyreporter.com/2026/06/05/wisconsin-counties-impose-moratoriums-on-hyperscale-data-centers/",
-     "term": "fixed_undated"},
-    {"locality": "Manitowoc County", "state": "WI", "level": "Local",
-     "status": "Enacted", "when": "Apr 2026",
-     "note": "18-month moratorium, unanimous. Towns of Two Creeks, Two Rivers, "
-             "and Mishicot requested the pause after a developer approached "
-             "property owners. Farmland-loss concerns",
-     "lat": 44.10, "lon": -87.66, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.wpr.org/news/manitowoc-county-board-approves-18-month-data-center-moratorium",
      "term": "fixed_undated"},
     {"locality": "Dane County", "state": "WI", "level": "Local",
      "status": "Enacted", "when": "Jun 4, 2026",
@@ -2535,11 +2479,6 @@ MORATORIUMS = [
              "develop regulations",
      "lat": 40.51, "lon": -88.99, "expires": "2026-11-30", "as_of": "2026-08-13",
      "source": "https://www.25newsnow.com/2026/05/19/data-center-pauses-considered-normal-bloomington/"},
-    {"locality": "Bloomington", "state": "IL", "level": "Local",
-     "status": "Enacted", "when": "May 26, 2026",
-     "note": "6-month moratorium on facilities >5 MW, unanimous",
-     "lat": 40.48, "lon": -88.99, "expires": "2026-11-26", "as_of": "2026-08-13",
-     "source": "https://www.wglt.org/local-news/2026-05-26/bloomington-approves-6-month-moratorium-on-data-centers"},
     {"locality": "Lake County", "state": "IL", "level": "Local",
      "status": "Proposed", "when": "Jun 9, 2026",
      "note": "8-month moratorium proposed; immediate 120-day administrative "
