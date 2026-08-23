@@ -6561,6 +6561,7 @@ def build_moratoriums():
     mora_status_options = '<option value="">All statuses</option>' + "".join(
         f'<option value="{esc(str(s))}">{esc(str(s))}</option>' for s in _statuses)
 
+    MORA_PAGE = 25
     outcomes = "\n".join(_outcome_card(o) for o in MORATORIUM_OUTCOMES)
     schema_rows = "\n".join(
         f"<tr><td><code>{esc(c)}</code></td><td>{esc(d)}</td></tr>"
@@ -6572,10 +6573,22 @@ def build_moratoriums():
     _alerts = build_alerts()
     alerts_html = ""
     if _alerts:
-        items = "\n".join(
-            f'<li><strong>{esc(a["title"])}</strong><br>'
-            f'<span class="muted">{esc(a["body"])}</span></li>'
-            for a in _alerts)
+        def _alert_li(a):
+            return (f'<li><strong>{esc(a["title"])}</strong><br>'
+                    f'<span class="muted">{esc(a["body"])}</span></li>')
+
+        # Only the first few are urgent enough to be worth unconditional
+        # screen space; the rest are a list to scan on purpose, not to scroll
+        # past on the way to the table.
+        _lead, _rest = _alerts[:6], _alerts[6:]
+        items = "\n".join(_alert_li(a) for a in _lead)
+        rest_html = ""
+        if _rest:
+            rest_html = (
+                f'<details class="more"><summary>{len(_rest)} more '
+                f'{"deadline" if len(_rest) == 1 else "deadlines"} in this '
+                f'window</summary><ul>'
+                + "\n".join(_alert_li(a) for a in _rest) + '</ul></details>')
         alerts_html = f"""
 <section>
   <h2>Deadlines in the next {ALERT_LOOKAHEAD} days</h2>
@@ -6585,6 +6598,7 @@ def build_moratoriums():
   <a href="alerts.xml">Subscribe by RSS</a> ·
   <a href="data/alerts.json">JSON</a></p>
   <ul>{items}</ul>
+  {rest_html}
 </section>"""
 
     body = f"""
@@ -6611,7 +6625,9 @@ def build_moratoriums():
   passes. Rows marked <span class="unverified">Unverified</span> have not been
   read against a primary source — treat them as a lead to check, not a fact to
   cite. Extensions are common, so an expiry date is the earliest a pause could
-  have ended, not proof that it did.</p>
+  have ended, not proof that it did. The table pages in {MORA_PAGE} rows at a
+  time — filter or search to narrow it, or <em>Show all</em> before printing or
+  using Ctrl-F, since hidden rows are invisible to both.</p>
   <div class="mora-controls">
     <label>State
       <select id="moraStateFilter">{mora_state_options}</select>
@@ -6631,6 +6647,10 @@ def build_moratoriums():
   <th>Status</th><th>When</th><th>Note</th><th>Source</th></tr>
   {rows}</table>
   </div>
+  <p id="moraMore" style="margin:12px 0 0;display:none">
+    <button id="moraMoreBtn" class="btn ghost" type="button"></button>
+    <button id="moraAllBtn" class="btn ghost" type="button">Show all</button>
+  </p>
   <p id="moraNoResults" class="muted" style="display:none">No moratoriums match
   those filters. Try a broader status or clear the search.</p>
   <style>
@@ -6653,33 +6673,50 @@ def build_moratoriums():
     var reset = document.getElementById('moraReset');
     var count = document.getElementById('moraCount');
     var none = document.getElementById('moraNoResults');
+    var more = document.getElementById('moraMore');
+    var moreBtn = document.getElementById('moraMoreBtn');
+    var allBtn = document.getElementById('moraAllBtn');
     var rows = Array.prototype.slice.call(
       document.querySelectorAll('#moraTable tr[data-state]'));
+
+    // The full table is ~300 rows of reference material. Showing it all by
+    // default buries every section below it, so it pages in — the filters
+    // above are the real way in, and paging keeps them on screen.
+    var PAGE = {MORA_PAGE};
+    var limit = PAGE;
 
     function apply() {{
       var state = stateSel.value;
       var status = statusSel.value;
       var kwVal = (kw.value || '').trim().toLowerCase();
-      var shown = 0;
+      var matched = 0, shown = 0;
       rows.forEach(function(tr) {{
         var statuses = (tr.getAttribute('data-status') || '').split('|').filter(Boolean);
         var text = tr.textContent.toLowerCase();
         var match = (!state || tr.getAttribute('data-state') === state)
                   && (!status || statuses.indexOf(status) !== -1)
                   && (!kwVal || text.indexOf(kwVal) !== -1);
-        tr.style.display = match ? '' : 'none';
-        if (match) shown++;
+        if (match) matched++;
+        var visible = match && matched <= limit;
+        tr.style.display = visible ? '' : 'none';
+        if (visible) shown++;
       }});
+      var hidden = matched - shown;
       if (state || status || kwVal) {{
-        var parts = [shown + (shown === 1 ? ' moratorium' : ' moratoriums')];
+        var parts = [(hidden ? shown + ' of ' + matched : String(matched))
+                     + (matched === 1 ? ' moratorium' : ' moratoriums')];
         if (state) parts.push(stateSel.options[stateSel.selectedIndex].text);
         if (status) parts.push(status);
         if (kwVal) parts.push('"' + kwVal + '"');
         count.textContent = parts.join(' · ');
       }} else {{
-        count.textContent = rows.length + ' tracked actions';
+        count.textContent = (hidden ? shown + ' of ' + rows.length + ' shown · '
+                                    : '') + rows.length + ' tracked actions';
       }}
-      none.style.display = ((state || status || kwVal) && shown === 0) ? '' : 'none';
+      more.style.display = hidden ? '' : 'none';
+      moreBtn.textContent = 'Show ' + Math.min(PAGE, hidden) + ' more';
+      allBtn.style.display = (hidden > PAGE) ? '' : 'none';
+      none.style.display = ((state || status || kwVal) && matched === 0) ? '' : 'none';
       var qs = new URLSearchParams();
       if (state) qs.set('state', state);
       if (status) qs.set('status', status);
@@ -6688,12 +6725,15 @@ def build_moratoriums():
       history.replaceState(null, '', qStr ? ('?' + qStr) : location.pathname);
     }}
 
-    stateSel.addEventListener('change', apply);
-    statusSel.addEventListener('change', apply);
-    kw.addEventListener('input', apply);
+    function refilter() {{ limit = PAGE; apply(); }}
+    stateSel.addEventListener('change', refilter);
+    statusSel.addEventListener('change', refilter);
+    kw.addEventListener('input', refilter);
     reset.addEventListener('click', function() {{
-      stateSel.value = ''; statusSel.value = ''; kw.value = ''; apply();
+      stateSel.value = ''; statusSel.value = ''; kw.value = ''; refilter();
     }});
+    moreBtn.addEventListener('click', function() {{ limit += PAGE; apply(); }});
+    allBtn.addEventListener('click', function() {{ limit = rows.length; apply(); }});
 
     var q = new URLSearchParams(location.search);
     if (q.get('state')) stateSel.value = q.get('state');
