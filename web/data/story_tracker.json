@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 2834,
+  "count": 2835,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -28793,7 +28793,7 @@
       "locality": null,
       "state": "WI",
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-21"
+      "last_seen": "2026-08-23"
     },
     {
       "title": "Resident Backlash Over Data Centers Shakes U.S. Midterm Elections",
@@ -30889,10 +30889,142 @@
       "title": "‘We want to stop it’: Jasper County residents raise money for legal help against data center",
       "outlet": "Chicago Tribune",
       "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNYmFSX2FCQnNxeVFNdXlBUkg3VDdiWWN3bjNqYkJDMEE4S1otMzlqU0c2N2lEYVp0NXNZSVRUa25YMU1sMzlzS1p4WUVwQzF4aGE0VGoySEVydjNMdVJiMC1YbHY1ZnNCSW1YZnpqSC1NOGRhdEwwMTBwOVRnbDBqR2NtOWRHREd5V1h5cGlQZzBJazFoM043WEVPRXpPSVlWV1lsUjlReHVhcWQ4M1FsOVd1VDBSUVk5OEdQNC1VSWM0RFhQaUlibUc0Qkg?oc=5",
-      "published": "Sun, 23 Aug 2026 17:00:29 GMT",
-      "published_iso": "2026-08-23T17:00:29+00:00",
+      "published": "Sun, 23 Aug 2026 16:07:55 GMT",
+      "published_iso": "2026-08-23T16:07:55+00:00",
       "locality": null,
       "state": null,
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Indianapolis data center moratorium takes effect after passage by Metropolitan Development Commission",
+      "outlet": "WTHR",
+      "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPUTlHOUpQVGVHNlNxTUZKcWZNSGh1M1p5cjE2RHZkb21TSG1Lcnpla3RJYmJTSldGdmNDc3BseWdubmxXYWZFaXZWeXZ4aDN0dUl5Y0VBR2Q5c0lKMElab282Q1BTQWhRNzVTVnVtWlh4Nnc3S1BDYWFsYzNXTlUxcVI3TUZWRGhOaTVVTFA5djdsUDZnczhTbmUyNGNmNXBHRDg4UFNMMW1ZeDNfTFc5VGJUZUxzcnA2clZYZy1VRWoyOHhHYlotdFRZaGhkZV9VeFpaaHJ3bUlMZmVyNXQ0TGxIRmpoSS16R1h2bnp5SEZVU19leV9UTVk4VFVQYjdCYmpv?oc=5",
+      "published": "Wed, 19 Aug 2026 19:52:00 GMT",
+      "published_iso": "2026-08-19T19:52:00+00:00",
+      "locality": "Indianapolis",
+      "state": "IN",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Dodge County Board of Supervisors votes to approve data center moratorium",
+      "outlet": "Daily Dodge",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQbDRicDhKR3gwNmNNVzBxYkJkS0FMNm5KbWNnVi11VjlUUHQxQXFmSEM0QlBZM2ROemljWkJlQ0U3YmdOWkh1RmlKZENXMlQwMjNlc3M2akxycXZPQ2d4SElJRVJ1NW5NN1ZUWE1XblZHVktRX1VuVmpHeHg4cmZBZVJHSFZfTFhpRzlfc3lvOHk0R01IS2h2aEdjQlpJZw?oc=5",
+      "published": "Wed, 19 Aug 2026 19:20:02 GMT",
+      "published_iso": "2026-08-19T19:20:02+00:00",
+      "locality": "Dodge County",
+      "state": "WI",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "'This seems like a no-brainer': Jake pitches data centers as a path to eliminating WA's sales tax",
+      "outlet": "MyNorthwest.com",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0yNWxkLVJ4bXpndHJzRjZtVmx6NlNmaHVWZVRrZEVTVGdiODhoeExxYWdrYUFZb0N6QkZnYnVld2lrYVVXYTRvbVZrazNnYURJa2tmeS0wLXhLVjBTTDVsMHpya28xQXhBZDhqaEI4bkdBNUNGT3N1cg?oc=5",
+      "published": "Sun, 23 Aug 2026 13:57:01 GMT",
+      "published_iso": "2026-08-23T13:57:01+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Virginia students challenge data center infrastructure plans",
+      "outlet": "AOL.com",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOQ2tCakVjQmRqVDJVbFJhandobnNCdFZhOVVtNFZWRno4SWZCcFhnbGVFQ0E3QURVRzlYQnBQdTRHX0ZRS0xhUVNzZzJmQkpBWUk5elltemhUM1ZqYUFiMnBZdkM1RXhSWkRfcmZ0NENLTWFqbnhnbllQNjBmcHhfd1FWX0tPajQ?oc=5",
+      "published": "Sat, 22 Aug 2026 18:59:15 GMT",
+      "published_iso": "2026-08-22T18:59:15+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Data center announcements in West Virginia spark concerns over water usage, transparency",
+      "outlet": "National News Desk",
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNMXhnenB3TzZuTTA1R0E2d01WT3BIaE1ZcmJ5RHhLczljWlhLeHN0Sk5JRE9rOFRlbTdUUkNNUk1GN1o0aXpRR1I4RDdPT2R3YklHd09QWl9JeGNmZDRFaE4ta3dCOTNuQ2J5SklGaFF6eHpla1VhME4tQWxNSkZLa3A0OG1SZ0lZcnljSGpicEp3VGN4WEtoZ2h4VDljUU1qTHYxZlFUN2ppcFBUcGpJZFlYcGdRLWlKeHlQeTNFcDkxTkNwbGNreU1XcWNBZWNtUV8ybGhWZktOLTFXZFFJ?oc=5",
+      "published": "Fri, 21 Aug 2026 02:53:22 GMT",
+      "published_iso": "2026-08-21T02:53:22+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Georgia Power touts data centers, urges leaders to educate the public",
+      "outlet": "The Rome News-Tribune",
+      "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNY1RKMWRYTVpMcjVXUFdLR1FHMzMtdUdSVnFjTnBGLWhUQ3hOckFlWmFUemFPbGpvLWs2ZXkxZzdLejlvMS1EakFGUDBCTGxPOUY4em1rMVBaejFLVnJubHFlNXNGc1FCanhKN3VZTUxhYzE1YS1wOUsyenVxdkptTENnWHExeERFVlZlZlZneFpRZVhwNUl4aFdjTjh1aHU1MFlLNHFlQmV4bHN2OEdZUHF3RDdneFpPVXUwbmRyYzkxUTVWU1c0YXNONTJ4ZHh0blNFOVlIWmdZS2dGV0k4UkxXZ0Q1QllqRnNzMksyakFkZXpLOGljczU4R0xWLVBiVmxrMDFKWk9iNm1R?oc=5",
+      "published": "Sun, 23 Aug 2026 13:30:00 GMT",
+      "published_iso": "2026-08-23T13:30:00+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Rich McCormick warns against slowing US AI data center expansion",
+      "outlet": "Crypto Briefing",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWWYwUUpCdk1jSGFLZmptbmlrR0dFYUJNV2thSkdSQmdkSlNZZFFhQXV0dmpIeEZiSGZGZXliUE9qRW43b2VDVDNuRlc5OHM5TG04X0tRbjZNbTNac05LQ253VU8yNXJ0UV9zS0ZyNTMwSXJlREZxYXlxWVlCaEhWMjJ3?oc=5",
+      "published": "Sun, 23 Aug 2026 14:39:53 GMT",
+      "published_iso": "2026-08-23T14:39:53+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Texas welcomed the AI boom. Now Abbott says data centers \"dug their own grave\"",
+      "outlet": "Axios",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOUE9vdzZ2NDZsSkVQV3RXOF9PQzhQV1g2WHo1ZkVmOHhZa3pMcVFEZWFiTlA1blVSZ2tMQWNTUWtnTDNmT2JfV2s2OXdpS2lJM3ZUMmlLOWdNWnJxSWowOUd3Ym13Qmt6dnJGLXBnYlRSZmhHUUxSc0ZhaFI3a1Z4RQ?oc=5",
+      "published": "Sun, 23 Aug 2026 16:27:17 GMT",
+      "published_iso": "2026-08-23T16:27:17+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Bastrop County data center developer drops tax break requests, says it will pay full property taxes",
+      "outlet": "KVUE",
+      "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNYmxaY2Rudl9SbzgzODRjQnhGb0E1VktyY3llTnAzRmI5VGx5d24wMjh4V3drR21EV1JNeFVYdUNzcEhrbmFJSmdPN2lDakdXMG56WXlBYzZQVDhEd0RUeVo0MmpMVlQwaVZIZ2oyb0ZzcTJHZlZZM29fcWZQaExmMlZoR3JJVFlsUmlLODdaR1J2NVlhY3ZCR2J0aW1ReVFfSm5LQXZjMXVYSG1ZNU54cENkejYxYUxmUjNkU3ZDaXNwU3lpYm1sczZZNTBDRHB1VlE5YkQ1R2hmUHNIMTdERnRrTE9WQk80cjRTLTdoWGo4akVIUWZ0Sw?oc=5",
+      "published": "Fri, 21 Aug 2026 01:57:00 GMT",
+      "published_iso": "2026-08-21T01:57:00+00:00",
+      "locality": "Bastrop County",
+      "state": "TX",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Abbott explains data center pivot",
+      "outlet": "Politico",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPeGI1clFWUkVSLW9wdDQwSEZNajFwT2l1aW1FRzdyYkt0Q0dsSDYxN0tyYjBNOEpMZDFBcXhRa21JZmpDeTl6bVM5WVgtcnJjbTdLLTFwQXpxckVIU19fWHV3OFN3bmxYOW5OaHR4VVdKQjA3V2w0d2lJNWdWTUYxWXZoLWYwZzA?oc=5",
+      "published": "Sun, 23 Aug 2026 16:07:00 GMT",
+      "published_iso": "2026-08-23T16:07:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Texas Governor Abbott Says Data Centers ‘Dug Their Own Grave’",
+      "outlet": "Newsweek",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOa1lpUHFpX3RjNzJKSWtGMklTN01aSFZxYVpyMDlPemRPOEt6MDB6SFNISkxVR0I5bkdobmRYeEVVaGc3UG5YNEhid21XSzBfaklBUmRnckFIeUg3cVhOZGZkSFRKUklKb2lNNjJCdVJ0eUJnaHRPUTdoZnZabDJEVXFsVndvSzltaTc2TzdxWXp5TzkzOTFieg?oc=5",
+      "published": "Sun, 23 Aug 2026 16:07:00 GMT",
+      "published_iso": "2026-08-23T16:07:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "'This Week' Transcript 8-23-26: Texas Gov. Greg Abbott",
+      "outlet": "ABC News - Breaking News, Latest News and Videos",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxONnpPZnA3bWlRT3RuelJOUFU3eEVMcEhVSXlOUDNSZjU4SVhVZmJ0ZDBxdzJRTTBEYlI3RGxmLWZMaV8wV01pZUsyaS1HUld5LW9JaGd0ZkN3TG5qR3dnZ204ci1uQXdTN3FaYXg0NS01U1dYRTljQng2NWhsWDZBdEZZN3VTNTBkVkpVaXZWUdIBlAFBVV95cUxNMzJma3U4RExSSDVwLUozb1ZlN1ZJRmF2U290TDRfQ1NjXzNHZS1rYUFXbUJNS2VoU0JpUWxDb0JSVXgyNWVmOTdzbTBRUWhqM3VSUDExWWlxVDJQbFk0dWlkT3JFdGNiS3ZldEU1MTdSQkp3dEJMRzNFMVhYcldxa1F5SmppMDlpQnBfZWVTclJjVHpM?oc=5",
+      "published": "Sun, 23 Aug 2026 13:29:47 GMT",
+      "published_iso": "2026-08-23T13:29:47+00:00",
+      "locality": null,
+      "state": "TX",
       "first_seen": "2026-08-23",
       "last_seen": "2026-08-23"
     },
@@ -30949,28 +31081,6 @@
       "locality": "Bristol",
       "state": "IN",
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-23"
-    },
-    {
-      "title": "Indianapolis data center moratorium takes effect after passage by Metropolitan Development Commission",
-      "outlet": "WTHR",
-      "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPUTlHOUpQVGVHNlNxTUZKcWZNSGh1M1p5cjE2RHZkb21TSG1Lcnpla3RJYmJTSldGdmNDc3BseWdubmxXYWZFaXZWeXZ4aDN0dUl5Y0VBR2Q5c0lKMElab282Q1BTQWhRNzVTVnVtWlh4Nnc3S1BDYWFsYzNXTlUxcVI3TUZWRGhOaTVVTFA5djdsUDZnczhTbmUyNGNmNXBHRDg4UFNMMW1ZeDNfTFc5VGJUZUxzcnA2clZYZy1VRWoyOHhHYlotdFRZaGhkZV9VeFpaaHJ3bUlMZmVyNXQ0TGxIRmpoSS16R1h2bnp5SEZVU19leV9UTVk4VFVQYjdCYmpv?oc=5",
-      "published": "Wed, 19 Aug 2026 19:52:00 GMT",
-      "published_iso": "2026-08-19T19:52:00+00:00",
-      "locality": "Indianapolis",
-      "state": "IN",
-      "first_seen": "2026-08-19",
-      "last_seen": "2026-08-23"
-    },
-    {
-      "title": "Dodge County Board of Supervisors votes to approve data center moratorium",
-      "outlet": "Daily Dodge",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQbDRicDhKR3gwNmNNVzBxYkJkS0FMNm5KbWNnVi11VjlUUHQxQXFmSEM0QlBZM2ROemljWkJlQ0U3YmdOWkh1RmlKZENXMlQwMjNlc3M2akxycXZPQ2d4SElJRVJ1NW5NN1ZUWE1XblZHVktRX1VuVmpHeHg4cmZBZVJHSFZfTFhpRzlfc3lvOHk0R01IS2h2aEdjQlpJZw?oc=5",
-      "published": "Wed, 19 Aug 2026 19:20:02 GMT",
-      "published_iso": "2026-08-19T19:20:02+00:00",
-      "locality": "Dodge County",
-      "state": "WI",
-      "first_seen": "2026-08-19",
       "last_seen": "2026-08-23"
     },
     {
@@ -31040,110 +31150,11 @@
       "last_seen": "2026-08-23"
     },
     {
-      "title": "'This seems like a no-brainer': Jake pitches data centers as a path to eliminating WA's sales tax",
-      "outlet": "MyNorthwest.com",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0yNWxkLVJ4bXpndHJzRjZtVmx6NlNmaHVWZVRrZEVTVGdiODhoeExxYWdrYUFZb0N6QkZnYnVld2lrYVVXYTRvbVZrazNnYURJa2tmeS0wLXhLVjBTTDVsMHpya28xQXhBZDhqaEI4bkdBNUNGT3N1cg?oc=5",
-      "published": "Sun, 23 Aug 2026 13:57:01 GMT",
-      "published_iso": "2026-08-23T13:57:01+00:00",
-      "locality": null,
-      "state": "VA",
-      "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23"
-    },
-    {
-      "title": "Virginia students challenge data center infrastructure plans",
-      "outlet": "AOL.com",
-      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOQ2tCakVjQmRqVDJVbFJhandobnNCdFZhOVVtNFZWRno4SWZCcFhnbGVFQ0E3QURVRzlYQnBQdTRHX0ZRS0xhUVNzZzJmQkpBWUk5elltemhUM1ZqYUFiMnBZdkM1RXhSWkRfcmZ0NENLTWFqbnhnbllQNjBmcHhfd1FWX0tPajQ?oc=5",
-      "published": "Sat, 22 Aug 2026 18:59:15 GMT",
-      "published_iso": "2026-08-22T18:59:15+00:00",
-      "locality": null,
-      "state": "VA",
-      "first_seen": "2026-08-22",
-      "last_seen": "2026-08-23"
-    },
-    {
-      "title": "Data center announcements in West Virginia spark concerns over water usage, transparency",
-      "outlet": "National News Desk",
-      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNMXhnenB3TzZuTTA1R0E2d01WT3BIaE1ZcmJ5RHhLczljWlhLeHN0Sk5JRE9rOFRlbTdUUkNNUk1GN1o0aXpRR1I4RDdPT2R3YklHd09QWl9JeGNmZDRFaE4ta3dCOTNuQ2J5SklGaFF6eHpla1VhME4tQWxNSkZLa3A0OG1SZ0lZcnljSGpicEp3VGN4WEtoZ2h4VDljUU1qTHYxZlFUN2ppcFBUcGpJZFlYcGdRLWlKeHlQeTNFcDkxTkNwbGNreU1XcWNBZWNtUV8ybGhWZktOLTFXZFFJ?oc=5",
-      "published": "Fri, 21 Aug 2026 02:53:22 GMT",
-      "published_iso": "2026-08-21T02:53:22+00:00",
-      "locality": null,
-      "state": "VA",
-      "first_seen": "2026-08-21",
-      "last_seen": "2026-08-23"
-    },
-    {
-      "title": "Georgia Power touts data centers, urges leaders to educate the public",
-      "outlet": "The Rome News-Tribune",
-      "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNY1RKMWRYTVpMcjVXUFdLR1FHMzMtdUdSVnFjTnBGLWhUQ3hOckFlWmFUemFPbGpvLWs2ZXkxZzdLejlvMS1EakFGUDBCTGxPOUY4em1rMVBaejFLVnJubHFlNXNGc1FCanhKN3VZTUxhYzE1YS1wOUsyenVxdkptTENnWHExeERFVlZlZlZneFpRZVhwNUl4aFdjTjh1aHU1MFlLNHFlQmV4bHN2OEdZUHF3RDdneFpPVXUwbmRyYzkxUTVWU1c0YXNONTJ4ZHh0blNFOVlIWmdZS2dGV0k4UkxXZ0Q1QllqRnNzMksyakFkZXpLOGljczU4R0xWLVBiVmxrMDFKWk9iNm1R?oc=5",
-      "published": "Sun, 23 Aug 2026 13:30:00 GMT",
-      "published_iso": "2026-08-23T13:30:00+00:00",
-      "locality": null,
-      "state": "GA",
-      "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23"
-    },
-    {
-      "title": "Rich McCormick warns against slowing US AI data center expansion",
-      "outlet": "Crypto Briefing",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWWYwUUpCdk1jSGFLZmptbmlrR0dFYUJNV2thSkdSQmdkSlNZZFFhQXV0dmpIeEZiSGZGZXliUE9qRW43b2VDVDNuRlc5OHM5TG04X0tRbjZNbTNac05LQ253VU8yNXJ0UV9zS0ZyNTMwSXJlREZxYXlxWVlCaEhWMjJ3?oc=5",
-      "published": "Sun, 23 Aug 2026 14:39:53 GMT",
-      "published_iso": "2026-08-23T14:39:53+00:00",
-      "locality": null,
-      "state": "GA",
-      "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23"
-    },
-    {
-      "title": "Texas welcomed the AI boom. Now Abbott says data centers \"dug their own grave\"",
-      "outlet": "Axios",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOUE9vdzZ2NDZsSkVQV3RXOF9PQzhQV1g2WHo1ZkVmOHhZa3pMcVFEZWFiTlA1blVSZ2tMQWNTUWtnTDNmT2JfV2s2OXdpS2lJM3ZUMmlLOWdNWnJxSWowOUd3Ym13Qmt6dnJGLXBnYlRSZmhHUUxSc0ZhaFI3a1Z4RQ?oc=5",
-      "published": "Sun, 23 Aug 2026 16:28:22 GMT",
-      "published_iso": "2026-08-23T16:28:22+00:00",
-      "locality": null,
-      "state": "TX",
-      "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23"
-    },
-    {
-      "title": "Abbott explains data center pivot",
-      "outlet": "Politico",
-      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPeGI1clFWUkVSLW9wdDQwSEZNajFwT2l1aW1FRzdyYkt0Q0dsSDYxN0tyYjBNOEpMZDFBcXhRa21JZmpDeTl6bVM5WVgtcnJjbTdLLTFwQXpxckVIU19fWHV3OFN3bmxYOW5OaHR4VVdKQjA3V2w0d2lJNWdWTUYxWXZoLWYwZzA?oc=5",
-      "published": "Sun, 23 Aug 2026 16:07:00 GMT",
-      "published_iso": "2026-08-23T16:07:00+00:00",
-      "locality": null,
-      "state": "TX",
-      "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23"
-    },
-    {
-      "title": "Bastrop County data center developer drops tax break requests, says it will pay full property taxes",
-      "outlet": "KVUE",
-      "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNYmxaY2Rudl9SbzgzODRjQnhGb0E1VktyY3llTnAzRmI5VGx5d24wMjh4V3drR21EV1JNeFVYdUNzcEhrbmFJSmdPN2lDakdXMG56WXlBYzZQVDhEd0RUeVo0MmpMVlQwaVZIZ2oyb0ZzcTJHZlZZM29fcWZQaExmMlZoR3JJVFlsUmlLODdaR1J2NVlhY3ZCR2J0aW1ReVFfSm5LQXZjMXVYSG1ZNU54cENkejYxYUxmUjNkU3ZDaXNwU3lpYm1sczZZNTBDRHB1VlE5YkQ1R2hmUHNIMTdERnRrTE9WQk80cjRTLTdoWGo4akVIUWZ0Sw?oc=5",
-      "published": "Fri, 21 Aug 2026 01:57:00 GMT",
-      "published_iso": "2026-08-21T01:57:00+00:00",
-      "locality": "Bastrop County",
-      "state": "TX",
-      "first_seen": "2026-08-21",
-      "last_seen": "2026-08-23"
-    },
-    {
       "title": "Texas Gov. Greg Abbott says data centers deserve the backlash they're getting: 'They basically dug their own grave'",
       "outlet": "Business Insider",
       "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVU1zU0VlcWVIUURrQmk1U3gya0tONS16SWVIbkNXWnJLWW5HZXZYNTV1OG5ZakZiTlpmQXQwRlZMaXBSNFNYbkY2N2JfZXVKdHpDTzJBd19pMUwtZm9DSzJ0S3BPeTlncmQ1UEN6VVAyR0QzUlNIMzVGZGhnR0NDbkJoNHA?oc=5",
       "published": "Sun, 23 Aug 2026 16:42:53 GMT",
       "published_iso": "2026-08-23T16:42:53+00:00",
-      "locality": null,
-      "state": "TX",
-      "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23"
-    },
-    {
-      "title": "Texas Governor Abbott Says Data Centers ‘Dug Their Own Grave’",
-      "outlet": "Newsweek",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOa1lpUHFpX3RjNzJKSWtGMklTN01aSFZxYVpyMDlPemRPOEt6MDB6SFNISkxVR0I5bkdobmRYeEVVaGc3UG5YNEhid21XSzBfaklBUmRnckFIeUg3cVhOZGZkSFRKUklKb2lNNjJCdVJ0eUJnaHRPUTdoZnZabDJEVXFsVndvSzltaTc2TzdxWXp5TzkzOTFieg?oc=5",
-      "published": "Sun, 23 Aug 2026 16:07:00 GMT",
-      "published_iso": "2026-08-23T16:07:00+00:00",
       "locality": null,
       "state": "TX",
       "first_seen": "2026-08-23",
