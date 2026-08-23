@@ -34,13 +34,17 @@ human reading a primary source, same as it has always been.
 Already-published localities are dropped, so the list is only work that would
 actually add a row.
 
-Two things this script deliberately does not trust. The sweep's `guess_state`
-is wrong often enough to mislead — it files Bernards Township under Indiana
-and Carter County under Indiana too — so a guessed state is always rendered
-with a trailing `?` and never used to decide whether a locality is already
-tracked. And scanner rows repeat: the same council vote arrives from three
-outlets. Those collapse into one entry whose `coverage` count is itself a
-signal, since three outlets covering one action is a stronger lead than one.
+Two things this script deliberately does not trust. A guessed state is still
+a guess: `guess_state` used to be actively wrong (it filed Bernards Township
+and Carter County both under Indiana, a case-sensitivity bug now fixed and
+pinned by scripts/verify_state_guess.py), and it is now conservative rather
+than infallible — it returns nothing for most headlines and can still be
+fooled by a locality whose name it has never seen. So a guessed state is
+rendered with a trailing `?` and never used to decide whether a locality is
+already tracked, where a wrong state would let a duplicate through. And
+scanner rows repeat: the same council vote arrives from three outlets. Those
+collapse into one entry whose `coverage` count is itself a signal, since three
+outlets covering one action is a stronger lead than one.
 
 Usage:
     python3 scripts/triage_moratorium_candidates.py
@@ -263,8 +267,8 @@ def render(rows, skipped, tier_filter=None, limit=None):
     lines.append(f"{len(rows)} distinct candidates not already tracked "
                  f"({skipped} dropped as already published; repeat coverage collapsed).")
     lines.append("")
-    lines.append("A trailing `?` on a state is the sweep's guess, not a fact — "
-                 "it is wrong often enough to check before you search.")
+    lines.append("A trailing `?` on a state is inferred from the headline, not "
+                 "confirmed — worth a glance before you search.")
     lines.append("")
     lines.append("| Tier | Meaning | Count |")
     lines.append("|---|---|---|")

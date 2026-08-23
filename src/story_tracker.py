@@ -90,16 +90,43 @@ def guess_locality(title, gazetteer):
 
 _NON_STATE_PHRASES = ("Washington Post", "Washington, D.C.", "Washington DC",
                      "Washington, DC", "New Yorker", "New York Times",
-                     "Georgia Tech")
-# Two-letter abbrevs only match in tight postal-style contexts (a comma
-# before them, "state of X", or right before a bill/regulator token) — same
-# guard build_site.py's _post_states/_news_states_for use, to avoid the
-# classic "OR/IN/OK" false positives inside ordinary prose.
-_ABBREV_TOKEN = {
-    abbrev: re.compile(rf"(?:,\s*|\bstate\s+of\s+){re.escape(abbrev)}\b"
-                       rf"|\b{re.escape(abbrev)}(?=\s+(?:H\.?B\.?|S\.?B\.?|PUC|PSC))")
-    for _, abbrev in zip(STATE_PUCS_DF["state"], STATE_PUCS_DF["abbrev"])
-}
+                     "Georgia Tech",
+                     # Cities carrying a state's name but sitting in another
+                     # state, or straddling the line. Bare, they are a
+                     # locality, not a state: "Kansas City officials denied a
+                     # data center" is the Missouri side as often as not, and
+                     # guessing KS is worse than guessing nothing. The city is
+                     # stripped, so an explicit ", MO"/", KS" still resolves.
+                     "Kansas City", "Oklahoma City", "New York City",
+                     "Iowa City", "Idaho Falls")
+# Abbreviations that must NOT be matched as a bare uppercase token.
+#
+# Two classes, both measured against the 2,807-headline story archive rather
+# than guessed at. Demonstrated collisions: DC ("DC Blox", an operator), OK
+# ("OK'ing"), ID ("Google ID'd"), IN (inside an ALL-CAPS headline, where the
+# usual lowercase-prose guard stops applying). And the rest are ordinary
+# English words that would collide the moment a headline is set in caps —
+# zero hits across the archive today, so denying them costs nothing now and
+# protects against the all-caps case. Uppercase matching is what makes this
+# tractable: "in"/"or" in normal prose are lowercase and never match.
+_BARE_ABBREV_DENY = frozenset({
+    "DC", "OK", "ID", "IN",                     # demonstrated collisions
+    "OR", "ME", "HI", "LA", "MA", "DE", "CO", "AL",   # English words / Co. / Los Angeles
+})
+
+# Everything else matches either in a tight postal-style context (a comma
+# before it, "state of X", or right before a bill/regulator token) — the same
+# guard build_site.py's _post_states/_news_states_for use — or as a bare
+# uppercase token, which recovers the very common "More NJ towns ban…" and
+# "WV leaders pledge…" forms that the postal-only guard threw away.
+_ABBREV_TOKEN = {}
+for _, abbrev in zip(STATE_PUCS_DF["state"], STATE_PUCS_DF["abbrev"]):
+    _postal = (rf"(?:,\s*|\bstate\s+of\s+){re.escape(abbrev)}\b"
+               rf"|\b{re.escape(abbrev)}(?=\s+(?:H\.?B\.?|S\.?B\.?|PUC|PSC))")
+    if abbrev not in _BARE_ABBREV_DENY:
+        # Not before an apostrophe: "OK'ing"/"ID'd" are how this class fails.
+        _postal += rf"|\b{re.escape(abbrev)}\b(?!')"
+    _ABBREV_TOKEN[abbrev] = re.compile(_postal)
 _STATE_NAME_TO_ABBREV = dict(zip(STATE_PUCS_DF["state"], STATE_PUCS_DF["abbrev"]))
 
 
@@ -111,12 +138,19 @@ def guess_state(text):
     cleaned = haystack
     for bad in _NON_STATE_PHRASES:
         cleaned = cleaned.replace(bad, " ")
+    # Earliest match in the text wins, not the first in registry order. A
+    # headline naming two states ("Ohio utility sues Indiana regulator") is
+    # almost always about the one it leads with; registry order would hand
+    # back whichever happens to sort first in STATE_PUCS_DF.
+    best, best_at = None, len(haystack) + 1
     for name, abbrev in _STATE_NAME_TO_ABBREV.items():
-        if re.search(rf"\b{re.escape(name)}\b", cleaned, re.IGNORECASE):
-            return abbrev
-        if _ABBREV_TOKEN[abbrev].search(haystack):
-            return abbrev
-    return None
+        m = re.search(rf"\b{re.escape(name)}\b", cleaned, re.IGNORECASE)
+        if m and m.start() < best_at:
+            best, best_at = abbrev, m.start()
+        m = _ABBREV_TOKEN[abbrev].search(haystack)
+        if m and m.start() < best_at:
+            best, best_at = abbrev, m.start()
+    return best
 
 
 def date_from_iso(iso, default=None):
