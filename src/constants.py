@@ -3153,6 +3153,96 @@ MORATORIUMS = [
              "repeatedly described Stokes as having passed a pause; it did not",
      "lat": 36.41, "lon": -80.21, "expires": None, "as_of": "2026-08-23",
      "source": "https://www.wfdd.org/politics-government/2026-07-14/stokes-commission-rejects-six-month-data-center-moratorium"},
+
+    # ── Tier-B queue promotions, verified 2026-08-23 ──────────────────────
+    # The upstream feed these came from supplies locality, date and legal
+    # instrument but never a source URL, so every citation here was found by
+    # hand. Where the upstream date and the reporting's weekday agree, the
+    # note says so — two independent records of the same vote is a stronger
+    # date than either alone.
+    {"locality": "Avon Lake", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Jun 22, 2026",
+     "note": "Ordinance 26-60, an emergency measure effective on the mayor's "
+             "approval Jun 23 and running through Jun 22, 2027, extendable "
+             "once by up to six months. Bars consideration, approval or "
+             "authorization of any data center as a permitted, conditional or "
+             "accessory use, including zoning permits, building permits and "
+             "certificates of occupancy, and tolls the clock on pending "
+             "applications so nothing is approved by default. Excludes a data "
+             "center incidental to a permitted principal use. Section 4 bars "
+             "any data-center zoning framework reaching council until the city "
+             "completes fiscal, infrastructure and community-impact analyses "
+             "and at least two publicly noticed hearings",
+     "lat": 41.51, "lon": -82.03, "expires": "2027-06-22", "as_of": "2026-08-23",
+     "source": "https://www.avonlake.org/files/documents/2026/06/26-60_Data_Center_Moratorium.pdf"},
+    {"locality": "Grafton", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "May 19, 2026",
+     "note": "Five-year halt on data center development — the longest local "
+             "term in this tracker — adopted at a regular council meeting "
+             "after community polling and on the mayor's recommendation, "
+             "following discussion of how long the restriction should run",
+     "lat": 41.27, "lon": -82.05, "expires": "2031-05-19", "as_of": "2026-08-23",
+     "source": "https://chroniclet.com/news/466971/grafton-village-approves-five-year-moratorium-on-data-centers/"},
+    {"locality": "Hubbard", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Jun 1, 2026",
+     "note": "12-month moratorium on the construction, placement or operation "
+             "of a data center in the city, requested by Councilwoman Robin "
+             "Zambrini after residents raised concerns about a potential "
+             "project. Hubbard CITY — Hubbard Township acted separately. "
+             "Reported as a Monday regular meeting, matching Jun 1",
+     "lat": 41.16, "lon": -80.57, "expires": "2027-06-01", "as_of": "2026-08-23",
+     "source": "https://www.vindy.com/news/local-news/2026/06/hubbard-passes-data-center-moratorium/"},
+    {"locality": "Howland Township", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Jun 10, 2026",
+     "note": "Six-month moratorium, renewable for a further six months and "
+             "extendable beyond that, on all applications for zoning "
+             "certificates, conditional use permits, variances or rezonings "
+             "for a data center, across every zoning district. Applies to "
+             "applications filed after the effective date. Reported as a "
+             "Wednesday meeting, matching Jun 10",
+     "lat": 41.25, "lon": -80.75, "expires": "2026-12-10", "as_of": "2026-08-23",
+     "source": "https://www.tribtoday.com/news/local-news/2026/06/howland-oks-data-center-moratorium/"},
+    {"locality": "Braceville Township", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Jun 2, 2026",
+     "note": "Six-month moratorium on issuing any data center permits or "
+             "applications, unanimous and effective immediately. Trustee "
+             "chairman Todd Garland cited noise, electricity and water use, "
+             "and said the consensus among Trumbull County townships was to "
+             "halt development while they study it. Reported as a Tuesday "
+             "meeting, matching Jun 2",
+     "lat": 41.24, "lon": -80.98, "expires": "2026-12-02", "as_of": "2026-08-23",
+     "source": "https://www.tribtoday.com/news/local-news/2026/06/braceville-enacts-6-month-moratorium-on-data-centers/"},
+    {"locality": "Indio", "state": "CA", "level": "Local",
+     "status": "Enacted", "when": "Jun 3, 2026",
+     "note": "Urgency Ordinance 1838 under Cal. Gov. Code 65858, originally 45 "
+             "days, extended unanimously on Jul 15 by 90 days and now running "
+             "through Oct 16, 2026. Council has directed staff to draft a "
+             "PERMANENT ban in all zones, which the planning commission has "
+             "already recommended, so the likely end state is a ban rather "
+             "than a lapse. The city's sustainability commission told council "
+             "that large data centers are unsustainable for a desert city "
+             "already stretched on water and power",
+     "lat": 33.72, "lon": -116.22, "expires": "2026-10-16", "as_of": "2026-08-23",
+     "source": "https://www.nbcpalmsprings.com/2026/07/16/indio-city-council-extends-data-center-moratorium-with-planning-commission-already-recommending-a-full-ban"},
+    {"locality": "Neosho", "state": "MO", "level": "Local",
+     "status": "Enacted", "when": "Jul 7, 2026",
+     "note": "One-year moratorium inside the city, unanimous, while the city "
+             "writes standards for construction and operation; at least one "
+             "company had approached property owners about buying land in the "
+             "city limits. Coverage dated the vote to a Tuesday, matching the "
+             "Jul 7 recorded upstream rather than the Jul 8 in the copy",
+     "lat": 36.87, "lon": -94.37, "expires": "2027-07-07", "as_of": "2026-08-23",
+     "source": "https://www.joplinglobe.com/news/neosho-city-council-approves-1-year-data-center-moratorium/article_4ab12016-38a2-4d5f-afe1-2121918ddcf9.html"},
+    {"locality": "Camdenton", "state": "MO", "level": "Local",
+     "status": "Enacted", "when": "May 5, 2026",
+     "note": "One-year moratorium on data center approvals, unanimous, adopted "
+             "the same night the board rescinded its support for a proposed "
+             "opportunity zone. The city found its code does not adequately "
+             "address the land use, infrastructure and utility demands of data "
+             "centers. Mayor John McNabb said the city may not need the full "
+             "twelve months before adopting an ordinance",
+     "lat": 38.01, "lon": -92.74, "expires": "2027-05-05", "as_of": "2026-08-23",
+     "source": "https://www.lakenewsonline.com/stories/camdenton-aldermen-rescind-support-for-opportunity-zone-approve-moratorium-on-data-centers,199992"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.

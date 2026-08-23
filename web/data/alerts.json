@@ -4,7 +4,7 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
-  "count": 27,
+  "count": 28,
   "alerts": [
     {
       "id": "mora-MI-armada-township-2026-07-13",
@@ -251,6 +251,19 @@
       "title": "Vienna Township (Trumbull Co.), OH: data center moratorium expires in 54 days",
       "body": "The documented term ends 2026-10-16. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.tribtoday.com/news/local-news/2026/08/vienna-extends-data-center-moratorium/",
+      "verified": true
+    },
+    {
+      "id": "mora-CA-indio-2026-10-16",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Indio",
+      "state": "CA",
+      "expires": "2026-10-16",
+      "days_left": 54,
+      "title": "Indio, CA: data center moratorium expires in 54 days",
+      "body": "The documented term ends 2026-10-16. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.nbcpalmsprings.com/2026/07/16/indio-city-council-extends-data-center-moratorium-with-planning-commission-already-recommending-a-full-ban",
       "verified": true
     },
     {
