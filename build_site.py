@@ -6847,6 +6847,18 @@ def build_moratoriums():
         ])
 
 
+# Locality labels that have been renamed since the pages were first indexed.
+# Renaming a row in MORATORIUMS_DF silently changes its community-page URL, so
+# the old path starts 404-ing for anyone holding a link — and these pages are
+# handed out at hearings. Map old slug -> current (locality, state) and the
+# build emits a permanent redirect. Add an entry whenever you relabel a row.
+_COMMUNITY_SLUG_ALIASES = {
+    # Unigov makes Indianapolis and Marion County one jurisdiction, and the
+    # queue carried the same moratorium under both names; relabelled 2026-08-23.
+    "indianapolis-in": ("Indianapolis (Marion County)", "IN"),
+}
+
+
 def _loc_slug(locality, state):
     """URL slug for a locality page — unique because (locality, state) is.
 
@@ -12892,6 +12904,12 @@ def main():
          "permanent": False}
         for h in _HYPERSCALERS + _OPERATORS + _LIMITED_DISCLOSURE
     ]
+    _community_redirects = [
+        {"source": f"/communities/{old}",
+         "destination": f"/communities/{_loc_slug(loc, st)}",
+         "permanent": True}
+        for old, (loc, st) in _COMMUNITY_SLUG_ALIASES.items()
+    ]
     (WEB / "vercel.json").write_text(
         '{ "cleanUrls": true, "trailingSlash": false }\n', encoding="utf-8")
     # The load-bearing config Vercel actually reads lives at the repo root.
@@ -12901,7 +12919,8 @@ def main():
             "outputDirectory": "web",
             "cleanUrls": True,
             "trailingSlash": False,
-            "redirects": _blog_redirects + _state_redirects + _company_redirects,
+            "redirects": (_blog_redirects + _state_redirects
+                          + _company_redirects + _community_redirects),
         }, indent=2) + "\n",
         encoding="utf-8")
 

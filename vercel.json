@@ -472,6 +472,11 @@
       "source": "/compass",
       "destination": "/companies/compass",
       "permanent": false
+    },
+    {
+      "source": "/communities/indianapolis-in",
+      "destination": "/communities/indianapolis-marion-county-in",
+      "permanent": true
     }
   ]
 }
