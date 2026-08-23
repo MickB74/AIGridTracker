@@ -1283,14 +1283,21 @@ MORATORIUMS = [
              "extendable about six months",
      "lat": 47.61, "lon": -122.33, "expires": "2027-06-09", "as_of": "2026-08-04",
      "source": "https://council.seattle.gov/2026/06/09/city-council-passes-emergency-data-center-moratorium-and-policy-framework/"},
-    {"locality": "Indianapolis", "state": "IN", "level": "Local",
-     "status": "Proposed", "when": "Aug 10, 2026",
-     "note": "City-County Council voted 23-1 to advance a moratorium through "
-             "end of 2027 to the Metropolitan Development Commission for final "
-             "approval (vote scheduled Aug 19). Exempts three already-approved "
-             "projects",
-     "lat": 39.77, "lon": -86.16, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.wfyi.org/wfyi-news/2026-08-10/indy-council-advances-pause-on-data-centers-sends-to-commission-for-final-approval"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "level": "Local",
+     "status": "Enacted", "when": "Aug 19, 2026",
+     "note": "Enacted. New data centers cannot be approved anywhere in Marion "
+             "County until Dec 31, 2027. The City-County Council advanced it "
+             "23-1 on Aug 10 and the Metropolitan Development Commission gave "
+             "final approval 6-0 on Aug 19. Defines a data center as a "
+             "facility used primarily for storage, management, processing and "
+             "transmission of digital data. State law protects three "
+             "already-approved projects, which are NOT paused — DC Blox "
+             "(Warren Twp), Metrobloks (Martindale-Brightwood) and Sabey "
+             "(Decatur Twp). A committee will study campus size, building "
+             "height, environmental impact and sound levels. Marion County and "
+             "Indianapolis are one jurisdiction under Unigov",
+     "lat": 39.77, "lon": -86.16, "expires": "2027-12-31", "as_of": "2026-08-23",
+     "source": "https://www.wfyi.org/wfyi-news/2026-08-19/new-data-centers-temporarily-banned-in-marion-county"},
     {"locality": "Pulaski County", "state": "AR", "level": "Local",
      "status": "Rejected", "when": "Jul 28, 2026",
      "note": "Multiple attempts failed: a May 26 vote appeared to pass but a "
@@ -2998,6 +3005,119 @@ MORATORIUMS = [
              "action Aug 3 and held the public hearing and second reading Aug 17",
      "lat": 44.74, "lon": -92.85, "expires": "2027-08-17", "as_of": "2026-08-23",
      "source": "https://kdwa.com/hastings-city-council-addresses-fentanyl-awareness-data-center-moratorium-and-environmental-litigation/"},
+
+    # ── Tier-A queue promotions, verified 2026-08-23 ──────────────────────
+    # Where a source dated a vote only by weekday, `when` is the single
+    # weekday consistent with the publication date and the note says so.
+    {"locality": "Carter County", "state": "TN", "level": "Local",
+     "status": "Enacted", "when": "Aug 17, 2026",
+     "note": "1-year moratorium on all AI data centers and cryptocurrency "
+             "mining centers, passed 20-1 after public comment ran heavily in "
+             "favour, to let the county study environmental and community "
+             "impact. The report dates the vote to 'Monday evening' of the "
+             "week it published; Aug 17 is that Monday",
+     "lat": 36.35, "lon": -82.21, "expires": "2027-08-17", "as_of": "2026-08-23",
+     "source": "https://elizabethton.com/2026/08/18/one-year-moratorium-passes-for-ai-data-centers-in-carter-county/"},
+    {"locality": "Yadkin County", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Aug 17, 2026",
+     "note": "2-year moratorium, 5-0 after a public hearing — commissioners "
+             "doubled the 12 months on the agenda following an hour of "
+             "opposition testimony. Covers unincorporated areas ONLY: the "
+             "county manager confirmed at the hearing it does not reach "
+             "incorporated towns, so WhiteFiber's Yadkinville campus on the "
+             "former Unifi properties is outside it. The report dates the vote "
+             "to 'Monday' of the week it published; Aug 17 is that Monday",
+     "lat": 36.14, "lon": -80.66, "expires": "2028-08-17", "as_of": "2026-08-23",
+     "source": "https://www.yadkinripple.com/news/moratorium-approved-for-yadkin-county-as-potential-yadkinville-data-center-project-announced/article_485d48fb-c61b-4167-b885-3d469e9a6bbe.html"},
+    {"locality": "East Lansing", "state": "MI", "level": "Local",
+     "status": "Enacted", "when": "Aug 11, 2026",
+     "note": "6-month extension, unanimous, running to Mar 17, 2027. Extends "
+             "the moratorium adopted Mar 2026, which would have lapsed Sep "
+             "2026. Preemptive — no data center has been proposed in the city; "
+             "the city's zoning ordinance does not address data centers at all "
+             "and staff expect to bring draft language in Sep/Oct 2026",
+     "lat": 42.74, "lon": -84.48, "expires": "2027-03-17", "as_of": "2026-08-23",
+     "source": "https://www.wilx.com/2026/08/12/east-lansing-city-council-votes-extend-data-center-moratorium/"},
+    {"locality": "Woodford County", "state": "IL", "level": "Local",
+     "status": "Enacted", "when": "Aug 2026",
+     "note": "6-month moratorium on data center applications, extendable once "
+             "by another 6 months, while the county holds public hearings and "
+             "drafts an ordinance. Reported as running through Feb 2027; no "
+             "outlet gave the board's vote date, tally, or the exact end day, "
+             "so no end date is recorded here",
+     "lat": 40.72, "lon": -89.27, "expires": None, "as_of": "2026-08-23",
+     "source": "https://wmbdradio.com/2026/08/21/tazewell-county-revisits-data-center-ordinance-woodford-county-passes-moratorium/",
+     "term": "fixed_undated"},
+    {"locality": "Memphis", "state": "TN", "level": "Local",
+     "status": "Proposed", "when": "Aug 18, 2026",
+     "note": "12-month pause on data center rezonings, site plan approvals and "
+             "building permits, advanced out of committee and passed first "
+             "reading on a voice vote; further readings are required before it "
+             "takes effect. Sponsored by council chair Jana Swearengen-"
+             "Washington with J.B. Smiley Jr. and Yolanda Cooper-Sutton. Would "
+             "NOT reach xAI's existing Colossus facilities — only new "
+             "approvals. Some residents are pressing for 18-24 months",
+     "lat": 35.15, "lon": -90.05, "expires": None, "as_of": "2026-08-23",
+     "source": "https://www.actionnews5.com/2026/08/18/memphis-city-council-committee-advances-data-center-moratorium-proposal/"},
+    {"locality": "Lubbock", "state": "TX", "level": "Local",
+     "status": "Proposed", "when": "Aug 3, 2026",
+     "note": "Citizen petition for an 18-month moratorium on hyperscale data "
+             "centers inside city limits, filed by Citizens of Lubbock Against "
+             "Data Centers ('Save Lubbock') with about 3,000 signatures "
+             "against a 2,410 threshold; the city verified them. Council takes "
+             "it up Aug 25, 2026 — and if the council votes it down the "
+             "measure can go to voters at the November election",
+     "lat": 33.58, "lon": -101.86, "expires": None, "as_of": "2026-08-23",
+     "source": "https://www.fox34.com/2026/08/18/data-center-moratorium-petition-heads-lubbock-city-council/"},
+    {"locality": "Virginia Beach", "state": "VA", "level": "Local",
+     "status": "Enacted", "when": "Aug 18, 2026",
+     "note": "12-month pause on new data center applications, 10-0, ending "
+             "early if the council adopts a data center ordinance first. Aimed "
+             "at larger-scale and hyperscale proposals; does not affect the "
+             "existing Globalinx facility. Staff told the council the city has "
+             "no established definitions, setbacks or noise thresholds yet. "
+             "Reported as a Tuesday vote in coverage published before Aug 20; "
+             "Aug 18 is that Tuesday",
+     "lat": 36.85, "lon": -75.98, "expires": "2027-08-18", "as_of": "2026-08-23",
+     "source": "https://www.wtkr.com/news/in-the-community/virginia-beach/virginia-beach-city-council-approves-12-month-moratorium-on-new-data-center-applications"},
+    {"locality": "Lyon County", "state": "KS", "level": "Local",
+     "status": "Enacted", "when": "Jul 23, 2026",
+     "note": "Resolution 12-26: 6-month pause on new data center and battery "
+             "energy storage projects, unanimous, running through Jan 22, "
+             "2027, to let the county strengthen zoning rules. A companion "
+             "Resolution 13-26 pauses utility-scale solar through Dec 1, 2026. "
+             "Unincorporated areas only — it does not reach Emporia's Flint "
+             "Hills Digital Campus. Outlets split on the vote date between "
+             "Thu Jul 23 and Fri Jul 24; Jul 23 is the Thursday",
+     "lat": 38.40, "lon": -96.18, "expires": "2027-01-22", "as_of": "2026-08-23",
+     "source": "https://www.emporiagazette.com/free/article_6a9583e6-0fba-4bb8-a30e-e0bbb928a316.html"},
+    {"locality": "Emporia", "state": "KS", "level": "Local",
+     "status": "Proposed", "when": "Aug 20, 2026",
+     "note": "Citizen initiative to ban high-impact data centers, ordered onto "
+             "the Nov 2026 ballot by the Lyon County District Court after the "
+             "city commission asked the court to review it. The petition "
+             "followed zoning changes the commission approved earlier in 2026 "
+             "that would allow data centers in the city. NOT settled: the "
+             "declaratory judgment action on whether the measure is a proper "
+             "subject for citizen initiative under Kansas law is still "
+             "pending, and a yes vote may not take effect until it is decided. "
+             "A parallel petition on battery energy storage is also before the "
+             "court. Distinct from the Lyon County resolution, which covers "
+             "unincorporated land only",
+     "lat": 38.40, "lon": -96.18, "expires": None, "as_of": "2026-08-23",
+     "source": "https://www.wibw.com/2026/08/20/emporia-data-center-petition-question-be-placed-november-ballot-pending-court-ruling/"},
+    {"locality": "Lyon County", "state": "KY", "level": "Local",
+     "status": "Enacted", "when": "Aug 2026",
+     "note": "Data center moratorium ordinance passed unanimously by the "
+             "fiscal court, which will form a committee on environmental "
+             "impact and utility use; reported as delaying inquiries for up to "
+             "two years, modelled on Allen County's 2-year ordinance. "
+             "Magistrates and Judge-Executive Jaime Green-Smith said the Lake "
+             "Barkley area may be unsuitable for a data center. No outlet gave "
+             "the vote date or an end date, so none is recorded here",
+     "lat": 37.05, "lon": -88.08, "expires": None, "as_of": "2026-08-23",
+     "source": "https://www.wpsdlocal6.com/news/data-center-moratorium-ordinance-passes-unanimously-in-lyon-county/article_3e62c03d-096f-42d0-b78d-d1f7e51be074.html",
+     "term": "fixed_undated"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.
