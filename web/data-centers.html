@@ -22,7 +22,7 @@
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Data centers", "item": "https://aigridwatch.com/data-centers"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "U.S. data center facility registry", "description": "84 tracked data center campuses with operator, owner, tenant, and filing LLC.", "url": "https://aigridwatch.com/data-centers", "license": "https://creativecommons.org/licenses/by/4.0/", "creator": {"@type": "Organization", "name": "AI GridWatch", "url": "https://aigridwatch.com", "description": "Free community tools for negotiating with data center developers: impact calculators, CBA templates, health evidence, and sourced data.", "logo": "https://aigridwatch.com/assets/logo.svg", "@context": "https://schema.org"}, "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://aigridwatch.com/data/facilities.json"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://aigridwatch.com/data/facilities.csv"}], "keywords": ["data center", "data center campus", "operator", "LLC", "AI data center"]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "U.S. data center state profiles", "description": "All 51 states and D.C. — facility count, power draw, residential rate, grid carbon, and water stress.", "url": "https://aigridwatch.com/data-centers", "license": "https://creativecommons.org/licenses/by/4.0/", "creator": {"@type": "Organization", "name": "AI GridWatch", "url": "https://aigridwatch.com", "description": "Free community tools for negotiating with data center developers: impact calculators, CBA templates, health evidence, and sourced data.", "logo": "https://aigridwatch.com/assets/logo.svg", "@context": "https://schema.org"}, "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://aigridwatch.com/data/states.json"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://aigridwatch.com/data/states.csv"}], "keywords": ["data center", "electricity", "grid carbon", "water stress", "state profile"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "U.S. data center state profiles", "description": "All 51 jurisdictions (50 states and D.C.) — facility count, power draw, residential rate, grid carbon, and water stress.", "url": "https://aigridwatch.com/data-centers", "license": "https://creativecommons.org/licenses/by/4.0/", "creator": {"@type": "Organization", "name": "AI GridWatch", "url": "https://aigridwatch.com", "description": "Free community tools for negotiating with data center developers: impact calculators, CBA templates, health evidence, and sourced data.", "logo": "https://aigridwatch.com/assets/logo.svg", "@context": "https://schema.org"}, "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://aigridwatch.com/data/states.json"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://aigridwatch.com/data/states.csv"}], "keywords": ["data center", "electricity", "grid carbon", "water stress", "state profile"]}</script>
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="preload" href="assets/logo.svg" as="image" type="image/svg+xml">
 <link rel="dns-prefetch" href="//gc.zgo.at">
@@ -552,8 +552,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <tr><td>South Dakota</td><td>SD</td><td>10</td><td>0.1</td><td>Sioux Falls</td><td style="text-align:center">&mdash;</td></tr>
   </table>
   </div>
-  <p class="muted" id="dc-count">Top 15 of 51 by annual power draw</p>
-  <button id="dc-more" class="btn ghost show-more" type="button">Show all 51 states and D.C.</button>
+  <p class="muted" id="dc-count">Top 15 by annual power draw &mdash; 50 states and D.C. tracked</p>
+  <button id="dc-more" class="btn ghost show-more" type="button">Show all 50 states and D.C.</button>
 
   <div class="freshness"><p><strong>As of July 2026 · changes over months</strong> · Source: <a href="https://www.electricchoice.com/datacenters/" rel="nofollow">U.S. Data Center Power Map by State — ElectricChoice.com compilation (updated July 2026; CC-BY 4.0). Underlying load research: LBNL 2024 US Data Center Energy Usage Report; rates: EIA</a></p><p class="muted" style="margin:6px 0 0">Facility counts vary by directory because each one draws the boundary differently — DataCenterMap lists 44 in Alabama where this table says 35, since it counts small network rooms alongside hyperscale campuses. Cite the TWh figure rather than the facility count when you can; it is the number that speaks to grid impact. Underlying load research is LBNL-2001637 (Dec 2024).</p></div>
   <p class="src">Sources: <a href="https://eta.lbl.gov/publications/2024-united-states-data-center-energy" rel="nofollow">Lawrence Berkeley National Lab, 2024 US Data Center Energy Usage Report — 325–580 TWh (6.7–12% of US electricity) by 2028, up from 176 TWh (4.4%) in 2023</a> &middot; <a href="https://www.eia.gov/electricity/state/" rel="nofollow">EIA — State Electricity Profiles (generation, prices, consumption, emissions per state; U.S. Energy Information Administration)</a> &middot; <a href="https://www.electricchoice.com/datacenters/" rel="nofollow">U.S. Data Center Power Map by State — ElectricChoice.com compilation (updated July 2026; CC-BY 4.0). Underlying load research: LBNL 2024 US Data Center Energy Usage Report; rates: EIA</a></p>
@@ -741,10 +741,12 @@ currently self-reports nothing.
       if (hit) n++;
       r.style.display = (hit && (s || showAll || n <= PAGE_SIZE)) ? '' : 'none';
     });
+    // rows.length is 51: 50 states plus D.C. Never label that count "states".
     ct.textContent = s
       ? (n + ' match' + (n === 1 ? '' : 'es'))
-      : (showAll ? '51 states and D.C.'
-                 : 'Top ' + PAGE_SIZE + ' of ' + rows.length + ' by annual power draw');
+      : (showAll ? '50 states and D.C.'
+                 : 'Top ' + PAGE_SIZE + ' by annual power draw'
+                   + ' — 50 states and D.C. tracked');
     more.style.display = (s || showAll) ? 'none' : '';
   }
   q.addEventListener('input', render);

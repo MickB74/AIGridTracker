@@ -1338,7 +1338,7 @@ def build_state(state):
 
     # State news headlines. Blog posts were deliberately removed from this
     # slot: a resident scanning their state page wants local reporting, not
-    # our essays (those live at /blog). Only ~8 of 51 states match a cached
+    # our essays (those live at /blog). Only ~8 of 51 jurisdictions match a cached
     # headline in any given week, so the section always renders with a live
     # Google News search link — every state gets a working path to current
     # local coverage even when the cache has nothing.
@@ -8908,8 +8908,8 @@ def build_data_centers():
     {state_rows}
   </table>
   </div>
-  <p class="muted" id="dc-count">Top 15 of 51 by annual power draw</p>
-  <button id="dc-more" class="btn ghost show-more" type="button">Show all 51 states and D.C.</button>
+  <p class="muted" id="dc-count">Top 15 by annual power draw &mdash; 50 states and D.C. tracked</p>
+  <button id="dc-more" class="btn ghost show-more" type="button">Show all 50 states and D.C.</button>
 
   {provenance_html("STATE_DC_DF")}
   <p class="src">Sources: {_srcref('lbnl')} &middot; {_srcref('eia_state')} &middot; {_srcref('electricchoice')}</p>
@@ -9086,10 +9086,12 @@ currently self-reports nothing.
       if (hit) n++;
       r.style.display = (hit && (s || showAll || n <= PAGE_SIZE)) ? '' : 'none';
     }});
+    // rows.length is 51: 50 states plus D.C. Never label that count "states".
     ct.textContent = s
       ? (n + ' match' + (n === 1 ? '' : 'es'))
-      : (showAll ? '51 states and D.C.'
-                 : 'Top ' + PAGE_SIZE + ' of ' + rows.length + ' by annual power draw');
+      : (showAll ? '50 states and D.C.'
+                 : 'Top ' + PAGE_SIZE + ' by annual power draw'
+                   + ' \u2014 50 states and D.C. tracked');
     more.style.display = (s || showAll) ? 'none' : '';
   }}
   q.addEventListener('input', render);
@@ -9122,7 +9124,8 @@ currently self-reports nothing.
                           "operator", "LLC", "AI data center"]),
             _dataset_schema(
                 "U.S. data center state profiles",
-                f"All {n_st} states and D.C. — facility count, power draw, "
+                f"All {n_st} jurisdictions (50 states and D.C.) — "
+                f"facility count, power draw, "
                 f"residential rate, grid carbon, and water stress.",
                 f"{SITE_URL}/data-centers",
                 [("application/json", f"{SITE_URL}/data/states.json"),

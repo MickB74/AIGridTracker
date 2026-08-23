@@ -152,7 +152,7 @@ this page" expander for navigation.
     `STATE_RTO` / `PERMIT_KINDS` — the permit paper trail: where a project's
     public record lives. **Navigational links, not claims** — nothing here
     says a permit exists, which is why they carry a link-check date rather
-    than a research `as_of`. Only 16 of the 51 states publish a searchable
+    than a research `as_of`. Only 16 of the 51 jurisdictions (50 states and D.C.) publish a searchable
     permit register; `register: None` is a real answer meaning a records
     request is the only route, so never paper over it with a search link
     dressed as a database. `STATE_RTO` is a routing hint (several states are
