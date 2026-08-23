@@ -12105,7 +12105,14 @@ def build_state_feeds(story_archive):
             outlet = s.get("outlet", "")
             title = s["title"]
             desc = f"Via {outlet}" if outlet else ""
-            guid = f"story-{hash(s.get('link', title)) & 0xffffffff:08x}"
+            # sha1, not the builtin hash(): str hashing is salted per
+            # process, so the same story got a fresh guid on every build and
+            # every daily rebuild re-notified subscribers of the entire
+            # archive. The guid must be a pure function of the story's own
+            # identity — the link, which is what the archive dedupes on.
+            _guid_key = s.get("link") or title
+            guid = ("story-"
+                    + hashlib.sha1(_guid_key.encode("utf-8")).hexdigest()[:8])
             items.append((pub_dt, title, desc, guid, link))
 
         items.sort(key=lambda x: x[0], reverse=True)
