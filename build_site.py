@@ -319,6 +319,29 @@ details.more { border:1px solid var(--rule); border-radius:10px;
 details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
   color:var(--teal); font-size:14.5px; }
 details.more[open] { padding-bottom:10px; }
+nav.pagenav { display:block; padding:14px 18px; border:1px solid var(--rule); border-radius:12px;
+  margin:22px 0 18px; background:rgba(45,212,191,.05); }
+.pagenav-hd { display:flex; align-items:center; justify-content:space-between;
+  gap:12px; font-weight:700; font-size:13px; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--muted); }
+.pagenav ol { margin:10px 0 0; padding-left:20px; font-size:15px; line-height:1.9; }
+.pagenav a { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--rule); }
+.pagenav a:hover { color:var(--teal); border-bottom-color:var(--teal); }
+.expandall { background:none; border:1px solid var(--rule); color:var(--teal);
+  border-radius:999px; padding:5px 12px; font:inherit; font-size:12px;
+  cursor:pointer; text-transform:none; letter-spacing:0; }
+.expandall:hover { border-color:var(--teal); }
+details.sect > summary { font-size:17px; color:var(--ink); padding:16px 0;
+  display:flex; align-items:center; gap:10px; }
+details.sect > summary:hover { color:var(--teal); }
+details.sect .secno { display:inline-flex; align-items:center;
+  justify-content:center; width:24px; height:24px; flex:0 0 24px;
+  border-radius:50%; background:rgba(45,212,191,.15); color:var(--teal);
+  font-size:12.5px; font-weight:700; }
+details.sect[open] { padding-bottom:18px; }
+details.sect > p, details.sect > ul, details.sect > ol { max-width:74ch; }
+details.sect h4 { margin:26px 0 6px; font-size:16px; color:var(--ink); }
+details.sect > p:first-of-type { margin-top:4px; }
 .billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
   margin:20px 0 12px; }
 .billbar > div { display:flex; align-items:center; justify-content:center;
@@ -1745,6 +1768,74 @@ def _md_to_html(text):
     text = text.replace("\\$", "$")
     md = markdown.Markdown(extensions=["tables"])
     return md.convert(text)
+
+
+def _md_sections(text, open_first=True):
+    """Render long-form markdown as jump-nav + per-H2 collapsible sections.
+
+    A 45 KB single-column playbook is unreadable on a phone: the reader has no
+    map and no way to skip. Splitting at the H2s gives both. Closed <details>
+    are invisible to Ctrl-F, so the nav carries an explicit "expand all".
+    """
+    doc = _md_to_html(text)
+    parts = re.split(r'<h2[^>]*>(.*?)</h2>', doc, flags=re.S)
+    if len(parts) < 3:
+        return doc
+    pairs = [(parts[i], parts[i + 1]) for i in range(1, len(parts) - 1, 2)]
+    return parts[0] + _sections_shell(pairs, open_first=open_first)
+
+
+def _html_sections(markup, open_first=True):
+    """Same treatment for pages already written as flat <section><h2>… blocks.
+
+    Only handles non-nested <section> elements — every page using this writes
+    them flat. A block with no <h2> is passed through untouched.
+    """
+    blocks = re.findall(r'<section[^>]*>(.*?)</section>', markup, flags=re.S)
+    pairs, loose = [], []
+    for blk in blocks:
+        m = re.search(r'<h2[^>]*>(.*?)</h2>', blk, flags=re.S)
+        if m:
+            pairs.append((m.group(1), blk[:m.start()] + blk[m.end():]))
+        else:
+            loose.append(f"<section>{blk}</section>")
+    if not pairs:
+        return markup
+    return "".join(loose) + _sections_shell(pairs, open_first=open_first)
+
+
+def _sections_shell(pairs, open_first=True):
+    """Render (heading, body) pairs as jump-nav + numbered collapsible sections."""
+    secs, nav = [], []
+    for n, (raw_title, body) in enumerate(pairs, 1):
+        title = re.sub(r'<[^>]+>', '', raw_title).strip()
+        # Drop any hand-written "3. " prefix — the badge supplies the number.
+        title = re.sub(r'^\d+[.)]\s+', '', title)
+        # Slug from the *unescaped* text — otherwise "&amp;" lands in the id.
+        sid = "s-" + re.sub(r'[^a-z0-9]+', '-',
+                            html.unescape(title).lower()).strip('-')
+        is_open = " open" if (open_first and n == 1) else ""
+        secs.append(
+            f'<details class="more sect" id="{sid}"{is_open}>'
+            f'<summary><span class="secno">{n}</span>{title}</summary>'
+            f'{body}</details>')
+        nav.append(f'<li><a href="#{sid}">{title}</a></li>')
+    toc = ('<nav class="pagenav" aria-label="On this page">'
+           '<div class="pagenav-hd">On this page'
+           '<button type="button" class="expandall" '
+           'onclick="gwExpandAll(this)">Expand all</button></div>'
+           '<ol>' + "".join(nav) + '</ol></nav>')
+    # Closed <details> are invisible to Ctrl-F and to print, hence "expand all".
+    # gwOpenHash also runs on load so an inbound #s-… deep link still lands.
+    script = ("<script>function gwExpandAll(b){var d=document"
+              ".querySelectorAll('details.sect'),o=b.dataset.open!=='1';"
+              "d.forEach(function(x){x.open=o});b.dataset.open=o?'1':'0';"
+              "b.textContent=o?'Collapse all':'Expand all';}"
+              "function gwOpenHash(){var h=location.hash&&document"
+              ".querySelector(location.hash);if(h&&h.tagName==='DETAILS')"
+              "{h.open=true;h.scrollIntoView();}}"
+              "addEventListener('hashchange',gwOpenHash);gwOpenHash();</script>")
+    return toc + "".join(secs) + script
 
 
 def _sorted_posts():
@@ -5826,7 +5917,7 @@ def build_learn():
         f"<tr><td><strong>{esc(term)}</strong></td><td>{esc(defn)}</td></tr>"
         for term, defn in glossary_rows)
 
-    body = f"""
+    head = """
 <header>
   <div class="kicker">Learn</div>
   <h1>What is a data center &mdash; and why does it matter?</h1>
@@ -5834,20 +5925,11 @@ def build_learn():
   in, what comes out, how AI facilities differ from traditional ones, and what
   companies look for when choosing where to build.</p>
 </header>
+"""
 
-<details class="more"><summary>On this page</summary>
-  <ol style="font-size:14px">
-    <li>What is a data center?</li>
-    <li>How are AI data centers different?</li>
-    <li>What happens inside an AI data center</li>
-    <li>Using the right model for the task</li>
-    <li>Inputs &amp; outputs</li>
-    <li>Efficiency (PUE, WUE, CUE)</li>
-    <li>Site selection</li>
-    <li>Key terms glossary</li>
-  </ol>
-</details>
-
+    # Eight explainer sections, collapsed behind a jump nav; the closing
+    # call-to-action stays open at the end.
+    sections = f"""
 <section>
   <h2>1. What is a data center?</h2>
   <p>A <strong>warehouse for computing</strong> &mdash; thousands of servers
@@ -6123,7 +6205,9 @@ def build_learn():
   </table>
   </div>
 </section>
+"""
 
+    tail = """
 <section>
   <h2>What to do with this</h2>
   <p>Now you know how these facilities work and what makes your community a
@@ -6138,6 +6222,8 @@ def build_learn():
   Environmental Report (2024), US DOE Data Center Primer.</p>
 </section>
 """
+
+    body = head + _html_sections(sections) + tail
     learn_ld = [
         _breadcrumb(("Home", SITE_URL), ("Learn", f"{SITE_URL}/learn")),
         _faq_schema(glossary_rows),
@@ -10012,7 +10098,7 @@ def build_community_value():
   and quality of life. Educational reference — not legal or financial advice.
   Texas/ERCOT-oriented, but the leverage and protections apply anywhere.</p>
 </header>
-<section>{_md_to_html(_COMMUNITY_VALUE_MD)}</section>
+<section>{_md_sections(_COMMUNITY_VALUE_MD)}</section>
 <section>
   <p class="muted">General educational reference. Specific abatement law, water
   rights, and permitting vary by jurisdiction — engage independent legal,

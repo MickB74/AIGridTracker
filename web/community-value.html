@@ -149,6 +149,29 @@ details.more { border:1px solid var(--rule); border-radius:10px;
 details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
   color:var(--teal); font-size:14.5px; }
 details.more[open] { padding-bottom:10px; }
+nav.pagenav { display:block; padding:14px 18px; border:1px solid var(--rule); border-radius:12px;
+  margin:22px 0 18px; background:rgba(45,212,191,.05); }
+.pagenav-hd { display:flex; align-items:center; justify-content:space-between;
+  gap:12px; font-weight:700; font-size:13px; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--muted); }
+.pagenav ol { margin:10px 0 0; padding-left:20px; font-size:15px; line-height:1.9; }
+.pagenav a { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--rule); }
+.pagenav a:hover { color:var(--teal); border-bottom-color:var(--teal); }
+.expandall { background:none; border:1px solid var(--rule); color:var(--teal);
+  border-radius:999px; padding:5px 12px; font:inherit; font-size:12px;
+  cursor:pointer; text-transform:none; letter-spacing:0; }
+.expandall:hover { border-color:var(--teal); }
+details.sect > summary { font-size:17px; color:var(--ink); padding:16px 0;
+  display:flex; align-items:center; gap:10px; }
+details.sect > summary:hover { color:var(--teal); }
+details.sect .secno { display:inline-flex; align-items:center;
+  justify-content:center; width:24px; height:24px; flex:0 0 24px;
+  border-radius:50%; background:rgba(45,212,191,.15); color:var(--teal);
+  font-size:12.5px; font-weight:700; }
+details.sect[open] { padding-bottom:18px; }
+details.sect > p, details.sect > ul, details.sect > ol { max-width:74ch; }
+details.sect h4 { margin:26px 0 6px; font-size:16px; color:var(--ink); }
+details.sect > p:first-of-type { margin-top:4px; }
 .billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
   margin:20px 0 12px; }
 .billbar > div { display:flex; align-items:center; justify-content:center;
@@ -462,7 +485,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 benefits are almost never automatic. What you don't negotiate up front, you
 generally don't get. Everything below is about turning a big private facility
 into a good deal for the people who live next to it.</p>
-<h2>What a community can capture</h2>
+<nav class="pagenav" aria-label="On this page"><div class="pagenav-hd">On this page<button type="button" class="expandall" onclick="gwExpandAll(this)">Expand all</button></div><ol><li><a href="#s-what-a-community-can-capture">What a community can capture</a></li><li><a href="#s-how-a-community-protects-itself">How a community protects itself</a></li><li><a href="#s-protecting-residents-health-environment">Protecting residents' health &amp; environment</a></li><li><a href="#s-putting-it-in-a-binding-community-benefits-agreement">Putting it in a binding Community Benefits Agreement</a></li><li><a href="#s-questions-to-ask-before-you-vote">Questions to ask before you vote</a></li></ol></nav><details class="more sect" id="s-what-a-community-can-capture" open><summary><span class="secno">1</span>What a community can capture</summary>
 <p>Data centers are capital-heavy and staff-light. A single campus can be a
 $1–10B+ investment yet employ only 30–100 permanent people once built. That
 shapes where the real value is: <strong>not payroll, but tax base, infrastructure,
@@ -499,7 +522,7 @@ number that matters to residents is the <strong>net annual value after abatement
 new tax revenue + negotiated payments + infrastructure value, minus the cost of
 added services, water, and grid strain. Insist on seeing that net figure before
 any vote.</p>
-<h2>How a community protects itself</h2>
+</details><details class="more sect" id="s-how-a-community-protects-itself"><summary><span class="secno">2</span>How a community protects itself</summary>
 <p>Protection comes from <strong>leverage used before the permit is granted</strong> and
 <strong>enforceable terms written into a binding agreement.</strong> After approval, leverage
 is mostly gone. Sequence matters more than goodwill.</p>
@@ -528,7 +551,7 @@ is mostly gone. Sequence matters more than goodwill.</p>
 county; costs (noise, water, traffic, a substation) land on the handful of
 families next to the site. A fair deal compensates the people who bear the local
 burden — not just the general fund.</p>
-<h2>Protecting residents' health &amp; environment</h2>
+</details><details class="more sect" id="s-protecting-residents-health-environment"><summary><span class="secno">3</span>Protecting residents' health &amp; environment</summary>
 <p>Data centers don't have smokestacks, but three real nuisances drive most
 community complaints: <strong>noise, water, and backup-generator emissions.</strong> Each is
 manageable — but only with limits written into the permit.</p>
@@ -564,7 +587,7 @@ manageable — but only with limits written into the permit.</p>
 clean backup power is a genuinely good neighbor. A poorly-conditioned one becomes
 a decade of noise, water, and air complaints. The difference is entirely in the
 conditions attached <strong>before</strong> the permit.</p>
-<h2>Putting it in a binding Community Benefits Agreement</h2>
+</details><details class="more sect" id="s-putting-it-in-a-binding-community-benefits-agreement"><summary><span class="secno">4</span>Putting it in a binding Community Benefits Agreement</summary>
 <p>Goodwill is not enforceable. The tool that is: a <strong>Community Benefits Agreement
 (CBA)</strong> or <strong>development agreement</strong> — a signed contract, tied to the incentive
 and the permit, that spells out every commitment and the penalty for breaking it.</p>
@@ -613,7 +636,7 @@ and the permit, that spells out every commitment and the penalty for breaking it
 <p><strong>The one-sentence test for any clause:</strong> <em>If the operator simply ignores this,
 what specifically happens?</em> If the answer is 'nothing' or 'we'd ask them nicely,'
 it isn't a protection yet — it needs a number, a deadline, and a penalty.</p>
-<h2>Questions to ask before you vote</h2>
+</details><details class="more sect" id="s-questions-to-ask-before-you-vote"><summary><span class="secno">5</span>Questions to ask before you vote</summary>
 <p>A checklist for officials and residents at the public hearing.</p>
 <p><strong>Money</strong>
 1. What is the <strong>net</strong> new annual tax revenue <em>after</em> every abatement and exemption?
@@ -638,7 +661,7 @@ it isn't a protection yet — it needs a number, a deadline, and a penalty.</p>
 15. Who pays to remove the facility if it's abandoned?</p>
 <p><strong>If you remember one thing:</strong> the community's leverage peaks the moment <em>before</em>
 approval and never returns. Every protection you want for the next 30 years has
-to be written down, priced, and signed <strong>now.</strong></p></section>
+to be written down, priced, and signed <strong>now.</strong></p></details><script>function gwExpandAll(b){var d=document.querySelectorAll('details.sect'),o=b.dataset.open!=='1';d.forEach(function(x){x.open=o});b.dataset.open=o?'1':'0';b.textContent=o?'Collapse all':'Expand all';}function gwOpenHash(){var h=location.hash&&document.querySelector(location.hash);if(h&&h.tagName==='DETAILS'){h.open=true;h.scrollIntoView();}}addEventListener('hashchange',gwOpenHash);gwOpenHash();</script></section>
 <section>
   <p class="muted">General educational reference. Specific abatement law, water
   rights, and permitting vary by jurisdiction — engage independent legal,

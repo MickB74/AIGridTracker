@@ -150,6 +150,29 @@ details.more { border:1px solid var(--rule); border-radius:10px;
 details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
   color:var(--teal); font-size:14.5px; }
 details.more[open] { padding-bottom:10px; }
+nav.pagenav { display:block; padding:14px 18px; border:1px solid var(--rule); border-radius:12px;
+  margin:22px 0 18px; background:rgba(45,212,191,.05); }
+.pagenav-hd { display:flex; align-items:center; justify-content:space-between;
+  gap:12px; font-weight:700; font-size:13px; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--muted); }
+.pagenav ol { margin:10px 0 0; padding-left:20px; font-size:15px; line-height:1.9; }
+.pagenav a { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--rule); }
+.pagenav a:hover { color:var(--teal); border-bottom-color:var(--teal); }
+.expandall { background:none; border:1px solid var(--rule); color:var(--teal);
+  border-radius:999px; padding:5px 12px; font:inherit; font-size:12px;
+  cursor:pointer; text-transform:none; letter-spacing:0; }
+.expandall:hover { border-color:var(--teal); }
+details.sect > summary { font-size:17px; color:var(--ink); padding:16px 0;
+  display:flex; align-items:center; gap:10px; }
+details.sect > summary:hover { color:var(--teal); }
+details.sect .secno { display:inline-flex; align-items:center;
+  justify-content:center; width:24px; height:24px; flex:0 0 24px;
+  border-radius:50%; background:rgba(45,212,191,.15); color:var(--teal);
+  font-size:12.5px; font-weight:700; }
+details.sect[open] { padding-bottom:18px; }
+details.sect > p, details.sect > ul, details.sect > ol { max-width:74ch; }
+details.sect h4 { margin:26px 0 6px; font-size:16px; color:var(--ink); }
+details.sect > p:first-of-type { margin-top:4px; }
 .billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
   margin:20px 0 12px; }
 .billbar > div { display:flex; align-items:center; justify-content:center;
@@ -457,22 +480,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   in, what comes out, how AI facilities differ from traditional ones, and what
   companies look for when choosing where to build.</p>
 </header>
-
-<details class="more"><summary>On this page</summary>
-  <ol style="font-size:14px">
-    <li>What is a data center?</li>
-    <li>How are AI data centers different?</li>
-    <li>What happens inside an AI data center</li>
-    <li>Using the right model for the task</li>
-    <li>Inputs &amp; outputs</li>
-    <li>Efficiency (PUE, WUE, CUE)</li>
-    <li>Site selection</li>
-    <li>Key terms glossary</li>
-  </ol>
-</details>
-
-<section>
-  <h2>1. What is a data center?</h2>
+<nav class="pagenav" aria-label="On this page"><div class="pagenav-hd">On this page<button type="button" class="expandall" onclick="gwExpandAll(this)">Expand all</button></div><ol><li><a href="#s-what-is-a-data-center">What is a data center?</a></li><li><a href="#s-how-are-ai-data-centers-different">How are AI data centers different?</a></li><li><a href="#s-what-actually-happens-inside-an-ai-data-center">What actually happens inside an AI data center?</a></li><li><a href="#s-using-the-right-model-for-the-task">Using the right model for the task</a></li><li><a href="#s-inputs-and-outputs-what-goes-in-what-comes-out">Inputs and outputs &mdash; what goes in, what comes out</a></li><li><a href="#s-how-can-data-centers-be-more-efficient">How can data centers be more efficient?</a></li><li><a href="#s-where-do-companies-build-and-what-do-they-look-for">Where do companies build &mdash; and what do they look for?</a></li><li><a href="#s-key-terms-glossary">Key terms glossary</a></li></ol></nav><details class="more sect" id="s-what-is-a-data-center" open><summary><span class="secno">1</span>What is a data center?</summary>
+  
   <p>A <strong>warehouse for computing</strong> &mdash; thousands of servers
   running 24/7 behind every video stream, banking app, and AI chatbot, kept
   alive by dedicated power, cooling, and fiber.</p>
@@ -534,10 +543,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
     <text x="60" y="120" text-anchor="middle" class="small">50&#8211;300+ MW continuous</text>
   </g>
 </svg>
-</section>
-
-<section>
-  <h2>2. How are AI data centers different?</h2>
+</details><details class="more sect" id="s-how-are-ai-data-centers-different"><summary><span class="secno">2</span>How are AI data centers different?</summary>
+  
   <div class="grid3">
     <div class="card">
       <h3>Power density</h3>
@@ -581,10 +588,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
       transmission infrastructure.</li>
     </ul>
   </details>
-</section>
-
-<section>
-  <h2>3. What actually happens inside an AI data center?</h2>
+</details><details class="more sect" id="s-what-actually-happens-inside-an-ai-data-center"><summary><span class="secno">3</span>What actually happens inside an AI data center?</summary>
+  
   <p>Two kinds of work with very different power profiles:
   <strong>training</strong> (building the model &mdash; one massive,
   months-long burn) and <strong>inference</strong> (using it &mdash; a smaller
@@ -653,10 +658,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <strong>training campuses</strong> built for massive, constant power, and
   <strong>inference campuses</strong> placed close to users for low latency.
   Some sites do both.</p>
-</section>
-
-<section>
-  <h2>4. Using the right model for the task</h2>
+</details><details class="more sect" id="s-using-the-right-model-for-the-task"><summary><span class="secno">4</span>Using the right model for the task</summary>
+  
   <p>A frontier model can use <strong>10&ndash;100&times; more energy per
   response</strong> than a small one &mdash; and for most everyday tasks, the
   small model answers just as well. Sending every request to the largest model
@@ -685,10 +688,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
     at a fraction of the energy. Large frontier models shine at hard reasoning
     and complex code, but are overkill for routine requests.</p>
   </details>
-</section>
-
-<section>
-  <h2>5. Inputs and outputs &mdash; what goes in, what comes out</h2>
+</details><details class="more sect" id="s-inputs-and-outputs-what-goes-in-what-comes-out"><summary><span class="secno">5</span>Inputs and outputs &mdash; what goes in, what comes out</summary>
+  
   <div class="grid2">
     <div>
       <h3>What goes IN</h3>
@@ -708,10 +709,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
       <div class="card" style="margin:8px 0"><p><strong>Tax revenue</strong> &mdash; Often reduced by abatements</p></div>
     </div>
   </div>
-</section>
-
-<section>
-  <h2>6. How can data centers be more efficient?</h2>
+</details><details class="more sect" id="s-how-can-data-centers-be-more-efficient"><summary><span class="secno">6</span>How can data centers be more efficient?</summary>
+  
   <p>The industry uses several strategies to reduce energy, water, and carbon
   footprint. Not all operators adopt all of these &mdash; and the gap between
   the best and worst performers is wide.</p>
@@ -761,10 +760,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
       </div>
     </div>
   </details>
-</section>
-
-<section>
-  <h2>7. Where do companies build &mdash; and what do they look for?</h2>
+</details><details class="more sect" id="s-where-do-companies-build-and-what-do-they-look-for"><summary><span class="secno">7</span>Where do companies build &mdash; and what do they look for?</summary>
+  
   <p>Site selection is driven by a specific checklist of requirements.
   Understanding what companies prioritize explains why data centers cluster in
   certain regions &mdash; and why some communities are targeted more than
@@ -782,10 +779,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <strong>Community Siting Evaluator</strong> &mdash; enter your town or
   address to see how it scores on these 8 factors, with auto-populated data
   from public sources.</p></div>
-</section>
-
-<section>
-  <h2>8. Key terms glossary</h2>
+</details><details class="more sect" id="s-key-terms-glossary"><summary><span class="secno">8</span>Key terms glossary</summary>
+  
   <div style="overflow-x:auto">
   <table>
     <tr><th>Term</th><th>Definition</th></tr>
@@ -806,8 +801,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <tr><td><strong>Marginal emissions</strong></td><td>The CO₂ rate of the next power plant that would turn on to serve new load. The right signal for load-shifting.</td></tr>
   </table>
   </div>
-</section>
-
+</details><script>function gwExpandAll(b){var d=document.querySelectorAll('details.sect'),o=b.dataset.open!=='1';d.forEach(function(x){x.open=o});b.dataset.open=o?'1':'0';b.textContent=o?'Collapse all':'Expand all';}function gwOpenHash(){var h=location.hash&&document.querySelector(location.hash);if(h&&h.tagName==='DETAILS'){h.open=true;h.scrollIntoView();}}addEventListener('hashchange',gwOpenHash);gwOpenHash();</script>
 <section>
   <h2>What to do with this</h2>
   <p>Now you know how these facilities work and what makes your community a
