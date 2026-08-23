@@ -149,6 +149,29 @@ details.more { border:1px solid var(--rule); border-radius:10px;
 details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
   color:var(--teal); font-size:14.5px; }
 details.more[open] { padding-bottom:10px; }
+nav.pagenav { display:block; padding:14px 18px; border:1px solid var(--rule); border-radius:12px;
+  margin:22px 0 18px; background:rgba(45,212,191,.05); }
+.pagenav-hd { display:flex; align-items:center; justify-content:space-between;
+  gap:12px; font-weight:700; font-size:13px; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--muted); }
+.pagenav ol { margin:10px 0 0; padding-left:20px; font-size:15px; line-height:1.9; }
+.pagenav a { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--rule); }
+.pagenav a:hover { color:var(--teal); border-bottom-color:var(--teal); }
+.expandall { background:none; border:1px solid var(--rule); color:var(--teal);
+  border-radius:999px; padding:5px 12px; font:inherit; font-size:12px;
+  cursor:pointer; text-transform:none; letter-spacing:0; }
+.expandall:hover { border-color:var(--teal); }
+details.sect > summary { font-size:17px; color:var(--ink); padding:16px 0;
+  display:flex; align-items:center; gap:10px; }
+details.sect > summary:hover { color:var(--teal); }
+details.sect .secno { display:inline-flex; align-items:center;
+  justify-content:center; width:24px; height:24px; flex:0 0 24px;
+  border-radius:50%; background:rgba(45,212,191,.15); color:var(--teal);
+  font-size:12.5px; font-weight:700; }
+details.sect[open] { padding-bottom:18px; }
+details.sect > p, details.sect > ul, details.sect > ol { max-width:74ch; }
+details.sect h4 { margin:26px 0 6px; font-size:16px; color:var(--ink); }
+details.sect > p:first-of-type { margin-top:4px; }
 .billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
   margin:20px 0 12px; }
 .billbar > div { display:flex; align-items:center; justify-content:center;
@@ -456,7 +479,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   of the week ranked by impact, plus a browsable feed by theme, state, and
   keyword. Headlines come from Google News — follow each link to the original
   outlet.</p>
-  <p class="muted">Last updated Aug 23, 2026 12:57 UTC ·
+  <p class="muted">Last updated Aug 23, 2026 12:59 UTC ·
   <a href="feed.xml">RSS feed</a> · <a href="../blog/feed.xml">Blog RSS</a></p>
 </header>
 
@@ -500,7 +523,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
         <select id="themeFilter"><option value="">All themes</option><option value="Community opposition &amp; moratoria">Community opposition &amp; moratoria</option><option value="Electricity bills &amp; grid strain">Electricity bills &amp; grid strain</option><option value="Water use">Water use</option><option value="Zoning &amp; land-use fights">Zoning &amp; land-use fights</option><option value="Noise complaints">Noise complaints</option><option value="Tax breaks vs. local benefit">Tax breaks vs. local benefit</option></select>
       </label>
       <label>State
-        <select id="stateFilter"><option value="">All states</option><option value="Alabama">Alabama</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Maine">Maine</option><option value="Maryland">Maryland</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Ohio">Ohio</option><option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option><option value="Texas">Texas</option><option value="Virginia">Virginia</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option></select>
+        <select id="stateFilter"><option value="">All states</option><option value="Alabama">Alabama</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Maine">Maine</option><option value="Maryland">Maryland</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Ohio">Ohio</option><option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option><option value="Texas">Texas</option><option value="Virginia">Virginia</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option></select>
       </label>
       <label style="flex:1">Keyword
         <input id="keywordFilter" type="search" placeholder="e.g. Loudoun, moratorium, water">

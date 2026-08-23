@@ -149,6 +149,29 @@ details.more { border:1px solid var(--rule); border-radius:10px;
 details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
   color:var(--teal); font-size:14.5px; }
 details.more[open] { padding-bottom:10px; }
+nav.pagenav { display:block; padding:14px 18px; border:1px solid var(--rule); border-radius:12px;
+  margin:22px 0 18px; background:rgba(45,212,191,.05); }
+.pagenav-hd { display:flex; align-items:center; justify-content:space-between;
+  gap:12px; font-weight:700; font-size:13px; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--muted); }
+.pagenav ol { margin:10px 0 0; padding-left:20px; font-size:15px; line-height:1.9; }
+.pagenav a { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--rule); }
+.pagenav a:hover { color:var(--teal); border-bottom-color:var(--teal); }
+.expandall { background:none; border:1px solid var(--rule); color:var(--teal);
+  border-radius:999px; padding:5px 12px; font:inherit; font-size:12px;
+  cursor:pointer; text-transform:none; letter-spacing:0; }
+.expandall:hover { border-color:var(--teal); }
+details.sect > summary { font-size:17px; color:var(--ink); padding:16px 0;
+  display:flex; align-items:center; gap:10px; }
+details.sect > summary:hover { color:var(--teal); }
+details.sect .secno { display:inline-flex; align-items:center;
+  justify-content:center; width:24px; height:24px; flex:0 0 24px;
+  border-radius:50%; background:rgba(45,212,191,.15); color:var(--teal);
+  font-size:12.5px; font-weight:700; }
+details.sect[open] { padding-bottom:18px; }
+details.sect > p, details.sect > ul, details.sect > ol { max-width:74ch; }
+details.sect h4 { margin:26px 0 6px; font-size:16px; color:var(--ink); }
+details.sect > p:first-of-type { margin-top:4px; }
 .billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
   margin:20px 0 12px; }
 .billbar > div { display:flex; align-items:center; justify-content:center;
@@ -454,7 +477,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <h1>Industry lobby &amp; tactics playbook</h1>
   <p class="sub">9 lobby organizations, 20 documented tactics
   (10 industry, 10 community),
-  and 88+ matching headlines auto-mined from our archive of 2,832
+  and 88+ matching headlines auto-mined from our archive of 2,807
   community-impact stories. Know their moves before you walk into the room.</p>
 </header>
 <input type="text" id="opp-search" placeholder="Search organizations, tactics, claims..."
@@ -1012,7 +1035,7 @@ Comprehensive overview of data center policy landscape across all 50 states.</li
   <a href="cba-clauses.html">Model CBA clauses</a> &middot;
   <a href="tax-breaks.html">The real cost of tax breaks</a></p>
   <p class="muted" style="font-size:12px">Last updated: 2026-08-16.
-  Tactics are matched to headlines automatically from our 2,832-story archive &mdash;
+  Tactics are matched to headlines automatically from our 2,807-story archive &mdash;
   this page refreshes with every site rebuild.
   Industry claims and counter-arguments are sourced; see individual links.
   This page is educational reference, not legal advice.</p>

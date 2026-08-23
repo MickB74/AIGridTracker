@@ -2941,6 +2941,57 @@ MORATORIUMS = [
              "until Nov 2029; in committee",
      "lat": 35.47, "lon": -97.52, "expires": None, "as_of": "2026-08-19",
      "source": None},
+    # --- Aug 2026 news sweep -------------------------------------------------
+    {"locality": "Washington County", "state": "MD", "level": "Local",
+     "status": "Enacted", "when": "Jun 30, 2026",
+     "note": "12-month pause on new data center applications, 4-1 (Parrott "
+             "opposed). Staff to study infrastructure, water and utility "
+             "impacts and modernize the zoning ordinance, which does not yet "
+             "define data centers or say which districts may host them",
+     "lat": 39.60, "lon": -77.81, "expires": "2027-06-30", "as_of": "2026-08-23",
+     "source": "https://thedailyrecord.com/2026/07/01/washington-county-approves-yearlong-data-center-moratorium/"},
+    {"locality": "Washington County", "state": "FL", "level": "Local",
+     "status": "Enacted", "when": "Aug 20, 2026",
+     "note": "1-year unanimous pause on accepting, processing or approving "
+             "data center applications in unincorporated areas only — Chipley, "
+             "Wausau and Caryville keep their own authority. Facilities are "
+             "exempt where computing is incidental, occupies under 5% of floor "
+             "area and draws 250 kW or less",
+     "lat": 30.61, "lon": -85.66, "expires": "2027-08-20", "as_of": "2026-08-23",
+     "source": "https://washingtoncounty.news/2026/08/21/county-approves-one-year-moratorium-on-data-center-applications/"},
+    {"locality": "Alamance County", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Aug 17, 2026",
+     "note": "1-year moratorium, 5-0, on large-scale data centers — defined as "
+             "developments needing 10 MW or more — after a two-hour public "
+             "hearing at which more than 23 residents spoke for the pause",
+     "lat": 36.04, "lon": -79.40, "expires": "2027-08-17", "as_of": "2026-08-23",
+     "source": "https://myfox8.com/news/north-carolina/alamance/alamance-county-commissioners-approve-1-year-data-center-moratorium/"},
+    {"locality": "Anderson County", "state": "SC", "level": "Local",
+     "status": "Enacted", "when": "Aug 20, 2026",
+     "note": "6-month pause passed on third and final reading; ordinance cites "
+             "the county's lack of a zoning framework to manage the industry's "
+             "scale and funds an independent study. Reporting did not state the "
+             "ordinance's effective date, so the end date here is six months "
+             "from the final reading",
+     "lat": 34.52, "lon": -82.65, "expires": "2027-02-20", "as_of": "2026-08-23",
+     "source": "https://www.foxcarolina.com/2026/08/20/anderson-county-council-approves-final-reading-six-month-data-center-moratorium/"},
+    {"locality": "Howard County", "state": "IN", "level": "Local",
+     "status": "Enacted", "when": "Aug 18, 2026",
+     "note": "1-year unanimous permit moratorium in unincorporated Howard "
+             "County, with a study committee to draft regulations; may be "
+             "lifted early if rules land sooner. No company had applied to "
+             "build in the county at adoption",
+     "lat": 40.49, "lon": -86.13, "expires": "2027-08-18", "as_of": "2026-08-23",
+     "source": "https://kokomolantern.substack.com/p/county-adopts-data-center-moratorium"},
+    {"locality": "Hastings", "state": "MN", "level": "Local",
+     "status": "Enacted", "when": "Aug 17, 2026",
+     "note": "1-year interim ordinance: no data center may be established, "
+             "expanded or re-established anywhere in Hastings until Aug 17, "
+             "2027 unless the council rescinds it earlier. City code does not "
+             "currently define or regulate data centers. Council took first "
+             "action Aug 3 and held the public hearing and second reading Aug 17",
+     "lat": 44.74, "lon": -92.85, "expires": "2027-08-17", "as_of": "2026-08-23",
+     "source": "https://kdwa.com/hastings-city-council-addresses-fentanyl-awareness-data-center-moratorium-and-environmental-litigation/"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.

@@ -150,6 +150,29 @@ details.more { border:1px solid var(--rule); border-radius:10px;
 details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
   color:var(--teal); font-size:14.5px; }
 details.more[open] { padding-bottom:10px; }
+nav.pagenav { display:block; padding:14px 18px; border:1px solid var(--rule); border-radius:12px;
+  margin:22px 0 18px; background:rgba(45,212,191,.05); }
+.pagenav-hd { display:flex; align-items:center; justify-content:space-between;
+  gap:12px; font-weight:700; font-size:13px; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--muted); }
+.pagenav ol { margin:10px 0 0; padding-left:20px; font-size:15px; line-height:1.9; }
+.pagenav a { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--rule); }
+.pagenav a:hover { color:var(--teal); border-bottom-color:var(--teal); }
+.expandall { background:none; border:1px solid var(--rule); color:var(--teal);
+  border-radius:999px; padding:5px 12px; font:inherit; font-size:12px;
+  cursor:pointer; text-transform:none; letter-spacing:0; }
+.expandall:hover { border-color:var(--teal); }
+details.sect > summary { font-size:17px; color:var(--ink); padding:16px 0;
+  display:flex; align-items:center; gap:10px; }
+details.sect > summary:hover { color:var(--teal); }
+details.sect .secno { display:inline-flex; align-items:center;
+  justify-content:center; width:24px; height:24px; flex:0 0 24px;
+  border-radius:50%; background:rgba(45,212,191,.15); color:var(--teal);
+  font-size:12.5px; font-weight:700; }
+details.sect[open] { padding-bottom:18px; }
+details.sect > p, details.sect > ul, details.sect > ol { max-width:74ch; }
+details.sect h4 { margin:26px 0 6px; font-size:16px; color:var(--ink); }
+details.sect > p:first-of-type { margin-top:4px; }
 .billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
   margin:20px 0 12px; }
 .billbar > div { display:flex; align-items:center; justify-content:center;
@@ -473,7 +496,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <section><h2>Every data center already built in New Hampshire</h2><p>GridWatch does not yet track a named hyperscale campus in New Hampshire, but that does not mean the state has none. DataCenterMap keeps a public directory of existing facilities — street addresses included — for New Hampshire.</p><p><a class="btn ghost" href="https://www.datacentermap.com/usa/new-hampshire/" rel="nofollow noopener">Browse the New Hampshire directory &rarr;</a></p><p class="muted">Two caveats before you cite it at a hearing: it lists facilities that already exist, so a newly proposed campus will not appear; and it counts a small network room the same as a hyperscale campus, so the facility count is not a measure of power draw or community impact.</p></section>
 
 
-<section><h2>Latest New Hampshire data center news</h2><p class="muted">No New Hampshire data-center headlines in this week&#39;s national scan — local coverage often runs ahead of it.</p><p><a class="btn ghost" href="https://news.google.com/search?q=%22New%20Hampshire%22%20data%20center" rel="nofollow noopener" target="_blank">Search live New Hampshire data center news &rarr;</a> <a class="btn ghost" href="../news/?state=New Hampshire">GridWatch news feed &rarr;</a></p></section>
+<section><h2>Latest New Hampshire data center news</h2><ul class="blog-list"><li><div class="post-meta">New Hampshire Public Radio · Aug 20, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxNYVJ5SWNIQVdoelpyQm1nQ0tubTZ5NnUxQ2M2eUFnangxb2g0UkRsZndPVWN5WFMxXzJ2d2c4Xy1zMGhzQUxSR0tIUE9KMUp5dDlGRnFaVzBJa09KOVJ4UGdya3ZpeVZOLU1QdlFZQzgwTFF2MnlGRHMxeGE3VmJtWDBvMHdZMFZhMjFfbk52TVgxdlVKZ0ZR?oc=5" rel="nofollow noopener" target="_blank">Rochester residents voice opposition to data centers</a></h3></li></ul><p><a class="btn ghost" href="../news/?state=New Hampshire">All New Hampshire news &rarr;</a> <a class="btn ghost" href="https://news.google.com/search?q=%22New%20Hampshire%22%20data%20center" rel="nofollow noopener" target="_blank">Live news search &rarr;</a></p></section>
 
 <p class="muted" style="margin-top:16px">State municipal league: <a href="https://www.nhmunicipal.org/">New Hampshire Municipal Association</a></p>
 <section>

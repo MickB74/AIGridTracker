@@ -5,8 +5,8 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/projects",
-  "count": 254,
-  "verified_count": 253,
+  "count": 260,
+  "verified_count": 259,
   "caveat": "A working set of identified proposals a community can track, not a census — most of the country's activity is not in here yet. Pennsylvania is the exception: its rows are synced from PA DEP's own data-center permit tracker, so the state's coverage is close to complete and carries the permit trail with it.\n\n**Each row carries its own provenance.** Rows showing a verification date link to reporting or the governing body's own record and were read on that date; rows marked *unverified* have no source on record — a lead to check, not a fact to cite.\n\n**Stage is derived, not asserted.** *Hearing scheduled*, *Awaiting decision*, *Approved* and *Withdrawn* are computed from each row's milestone dates on every rebuild, so a hearing date that has passed stops reading 'scheduled'. Hearings get moved and projects re-file under new names — treat a scheduled date as the earliest to act by, and confirm with the clerk before relying on it. Leads are mined into data/project_candidates.json and promoted here only after a human reads a primary source.",
   "schema": {
     "id": "Stable slug, unique per project.",
@@ -19814,6 +19814,306 @@
       "as_of": "2026-08-21",
       "verified": true,
       "events": []
+    },
+    {
+      "id": "openai-project-camellia-effingham-ga",
+      "name": "Project Camellia (OpenAI Effingham County)",
+      "operator": "OpenAI",
+      "owner": "OpenAI",
+      "tenant": "OpenAI",
+      "filing_llc": "Octans GA, LLC",
+      "locality": "Rincon (Effingham County)",
+      "state": "GA",
+      "lat": 32.29,
+      "lon": -81.24,
+      "size_mw": 3200,
+      "acres": 1400,
+      "announced": "2026-07-22",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "Proposed",
+      "days_to_hearing": null,
+      "note": "$20B OpenAI campus on 1,400 acres of the Savannah Gateway Industrial Hub, with 3.2 GW contracted from Georgia Power. The incentive deal was signed the day before the public learned of it.",
+      "source": "https://thecurrentga.org/2026/07/22/20-billion-openai-data-center-to-open-in-effingham-county/",
+      "as_of": "2026-08-23",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-02-02",
+          "kind": "filing",
+          "summary": "An OpenAI infrastructure official circulated a mutual non-disclosure agreement to Effingham County officials, asking them to sign before receiving confidential briefings on the project — the start of negotiations conducted outside public view.",
+          "source": "https://www.wtoc.com/2026/07/30/records-show-effingham-county-leaders-finalized-massive-tax-break-20b-openai-data-center-day-before-public-announcement/"
+        },
+        {
+          "date": "2026-07-21",
+          "kind": "incentive",
+          "summary": "The Effingham County Industrial Development Authority signed a memorandum of understanding with Octans GA, LLC, an OpenAI affiliate, granting a 50% property tax abatement for 15 years locked to the 2026 millage rate.",
+          "source": "https://www.wtoc.com/2026/07/30/records-show-effingham-county-leaders-finalized-massive-tax-break-20b-openai-data-center-day-before-public-announcement/"
+        },
+        {
+          "date": "2026-07-22",
+          "kind": "announcement",
+          "summary": "County leaders publicly announced the $20 billion, 1,400-acre campus one day after the tax agreement was signed, projecting up to 1,000 permanent jobs, an $80 million community investment fund, and revenue that could underwrite the county's plan to eliminate homestead property taxes.",
+          "source": "https://thecurrentga.org/2026/07/22/20-billion-openai-data-center-to-open-in-effingham-county/"
+        },
+        {
+          "date": "2026-07-24",
+          "kind": "utility",
+          "summary": "Reporting confirmed OpenAI had contracted 3.2 gigawatts from Georgia Power for the site, delivered over roughly four years, despite public backlash over the secrecy of the deal.",
+          "source": "https://www.techtimes.com/articles/321460/20260724/openai-locks-32-gigawatts-georgia-data-center-despite-public-backlash.htm"
+        },
+        {
+          "date": "2026-08-08",
+          "kind": "coverage",
+          "summary": "An open-records investigation reconstructed how the deal moved from NDA to signed abatement without a public hearing, with residents learning the buyer's identity only after the incentives were locked in.",
+          "source": "https://thecurrentga.org/2026/08/08/anatomy-of-a-secret-coastal-georgia-data-center-deal/"
+        }
+      ]
+    },
+    {
+      "id": "terawulf-justified-hawesville-ky",
+      "name": "Justified Data Campus",
+      "operator": "TeraWulf",
+      "owner": "Raylan Data Holdings LLC",
+      "tenant": "Anthropic",
+      "filing_llc": "Raylan Data Holdings LLC",
+      "locality": "Hawesville (Hancock County)",
+      "state": "KY",
+      "lat": 37.9,
+      "lon": -86.75,
+      "size_mw": 401,
+      "acres": 750,
+      "announced": "2026-07-06",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "Proposed",
+      "days_to_hearing": null,
+      "note": "TeraWulf is redeveloping Century Aluminum's idled Hawesville smelter into a data campus leased to Anthropic for 20 years, reusing the smelter's existing 482 MW grid connection for 401 MW of critical IT load.",
+      "source": "https://www.lpm.org/news/2026-08-18/developer-says-ky-data-center-with-anthropic-ties-meets-new-limits-on-environmental-energy-impact",
+      "as_of": "2026-08-23",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-02-01",
+          "kind": "financing",
+          "summary": "TeraWulf closed on the 750-acre former Century Aluminum smelter site for $200 million; the smelter had been idled since 2022 and Century retained a 6.8% non-dilutive stake in the redevelopment entity, Raylan Data Holdings LLC (February 2026).",
+          "source": "https://www.landgate.com/news/inside-the-hawesville-site-of-the-19-billion-anthropic-terawulf-lease"
+        },
+        {
+          "date": "2026-07-06",
+          "kind": "announcement",
+          "summary": "TeraWulf signed a 20-year lease with Anthropic for the Justified campus, expected to generate roughly $19 billion of contracted revenue over the initial term; TeraWulf shares rose sharply on the news.",
+          "source": "https://www.cnbc.com/2026/07/06/anthropic-terawulf-data-center-ai.html"
+        },
+        {
+          "date": "2026-08-18",
+          "kind": "utility",
+          "summary": "TeraWulf filed an energy plan with the Kentucky Public Service Commission and the Energy and Environment Cabinet, saying the project meets the governor's new limits on environmental and energy impact and will not shift costs onto other electricity customers.",
+          "source": "https://www.lpm.org/news/2026-08-18/developer-says-ky-data-center-with-anthropic-ties-meets-new-limits-on-environmental-energy-impact"
+        },
+        {
+          "date": "2026-08-21",
+          "kind": "public-comment",
+          "summary": "The developer said it is committing to the state's data center requirements, submitted a support letter from Hancock County Judge-Executive Johnny Roberts, and scheduled another public meeting at Hancock County Elementary School; it projects about 1,000 construction jobs and 100 permanent positions.",
+          "source": "https://kentuckylantern.com/2026/08/21/a-data-center-developer-says-it-is-committing-to-beshearsthe-governors-data-center-requirements/"
+        }
+      ]
+    },
+    {
+      "id": "nebius-independence-mo",
+      "name": "Nebius Independence campus",
+      "operator": "Nebius",
+      "owner": "Nebius",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Independence",
+      "state": "MO",
+      "lat": 39.09,
+      "lon": -94.42,
+      "size_mw": 800,
+      "acres": 398,
+      "announced": "2025-12-16",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "2026-03-02",
+      "outcome": "approved",
+      "stage": "Approved",
+      "days_to_hearing": null,
+      "note": "Nebius' first gigawatt-scale US campus: ~2.5M sq ft on 398 acres near Route 78 and Little Blue Parkway, powered by a privately financed plant at the retired Blue Valley Power Plant site. Council approved Chapter 100 abatement 5-2 and the company has broken ground.",
+      "source": "https://www.independencemo.gov/data-center-faqs",
+      "as_of": "2026-08-23",
+      "verified": true,
+      "events": [
+        {
+          "date": "2025-12-16",
+          "kind": "announcement",
+          "summary": "Nebius, a Dutch AI infrastructure company, was revealed as the buyer of 398 acres near NorthPoint's EastGate Commerce Center, proposing an 8-to-10-building campus that would roughly triple Independence's power capacity.",
+          "source": "https://thelaborbeacon.com/2025/12/16/dutch-ai-company-to-triple-independence-power-capacity-with-10-building-data-center/"
+        },
+        {
+          "date": "2026-02-27",
+          "kind": "hearing",
+          "summary": "Independence weighed a Chapter 100 tax abatement for the hyperscale campus, with residents raising concerns about electricity costs and the scale of the commitment ahead of the council vote.",
+          "source": "https://thebeaconnews.org/stories/2026/02/27/independence-tax-abatement-ai-data-center/"
+        },
+        {
+          "date": "2026-03-02",
+          "kind": "vote",
+          "summary": "Independence City Council approved the Chapter 100 tax abatement 5-2, alongside two series of taxable industrial development revenue bonds for the project.",
+          "source": "https://www.independencemo.gov/data-center-faqs"
+        },
+        {
+          "date": "2026-03-02",
+          "kind": "utility",
+          "summary": "The city set out a power structure under which Independence Power Partners builds a privately financed generating facility at the retired Blue Valley Power Plant, delivering an initial 200 MW and 600 MW more at full operation plus 300 MW reserve, with the city taking on no debt.",
+          "source": "https://www.independencemo.gov/data-center-faqs"
+        }
+      ]
+    },
+    {
+      "id": "wildwood-ranch-joplin-mo",
+      "name": "Wildwood Ranch data center",
+      "operator": "ReLoad (Scale Microgrids)",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "Wildwood Ranch, LLC",
+      "locality": "Joplin (Jasper County)",
+      "state": "MO",
+      "lat": 37.08,
+      "lon": -94.51,
+      "size_mw": 600,
+      "acres": 600,
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "2026-02-17",
+      "outcome": "approved",
+      "stage": "Approved",
+      "days_to_hearing": null,
+      "note": "Joplin annexed 540 acres and rezoned roughly 600 acres to heavy industrial for a gigawatt-scale campus with a co-located gas plant. A Wildwood Ranch homeowner is suing to void the rezoning, and an opposition group is pushing a 12-month moratorium.",
+      "source": "https://www.koamnewsnow.com/news/joplin-news-first/proposed-joplin-data-center-the-votes-are-in-joplin-city-council-meeting-feb-17-2026/article_8fa0ac8a-2a8b-4a42-a00a-89d5449db1be.html",
+      "as_of": "2026-08-23",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-02-17",
+          "kind": "vote",
+          "summary": "Joplin City Council, meeting at the MSSU Corley Auditorium after a session that ran roughly seven hours, passed Council Bill 2026-256 annexing the land 6-3 and Council Bill 2026-257 rezoning it from single-family residential to heavy industrial 7-2.",
+          "source": "https://www.koamnewsnow.com/news/joplin-news-first/proposed-joplin-data-center-the-votes-are-in-joplin-city-council-meeting-feb-17-2026/article_8fa0ac8a-2a8b-4a42-a00a-89d5449db1be.html"
+        },
+        {
+          "date": "2026-02-17",
+          "kind": "hearing",
+          "summary": "Residents testified for hours about water resources, ecological impact and utility costs; Mayor Keenan Cortez acknowledged the council was improvising a process for a decision of this scale.",
+          "source": "https://www.ksmu.org/news/2026-01-21/joplin-approves-annexation-and-rezoning-for-potential-data-center"
+        },
+        {
+          "date": "2026-03-18",
+          "kind": "lawsuit",
+          "summary": "Joplin attorney Derek Snyder, who lives in Wildwood Ranch, and his wife asked a Jasper County judge to review and void the rezoning, arguing it was unreasonable and violated a development agreement requiring owners to preserve the land's natural state (reported March 18, 2026; the filing date was not stated).",
+          "source": "https://www.fourstateshomepage.com/news/local/jasper-county-news/joplin-lawyer-challenges-citys-data-center-rezoning-decision/"
+        }
+      ]
+    },
+    {
+      "id": "clarksdale-data-center-ms",
+      "name": "Clarksdale hyperscale data center site",
+      "operator": "",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Clarksdale (Coahoma County)",
+      "state": "MS",
+      "lat": 34.2,
+      "lon": -90.57,
+      "size_mw": "",
+      "acres": 648,
+      "announced": "2026-03-10",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "Proposed",
+      "days_to_hearing": null,
+      "note": "Clarksdale rezoned a 648-acre site between the Sunflower River and Tallahatchie Street for a possible hyperscale campus, attaching conditions but naming no developer. No agreement has been signed and the end user is unknown.",
+      "source": "https://mississippitoday.org/2026/03/24/clarksdale-data-center-rezoning/",
+      "as_of": "2026-08-23",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-03-10",
+          "kind": "announcement",
+          "summary": "Clarksdale officials confirmed they were considering a hyperscale data center proposal on agricultural land inside the city, with the Crossroads Economic Partnership saying only that the counterparty is a global company.",
+          "source": "https://mississippitoday.org/2026/03/10/clarksdale-data-center-proposal/"
+        },
+        {
+          "date": "2026-03-18",
+          "kind": "public-comment",
+          "summary": "Residents of the Delta town, one of the poorest in Mississippi, described the prospect as a potential lifeline, while others pressed for guarantees on utility costs and jobs.",
+          "source": "https://mississippitoday.org/2026/03/18/clarksdale-data-center-mississippi/"
+        },
+        {
+          "date": "2026-03-23",
+          "kind": "rezoning",
+          "summary": "The Clarksdale Board of Commissioners voted to rezone the 648-acre site with conditions: a $5 million impact fee paid before construction, developer-funded utility upgrades, emissions permits, and a 1,000-foot buffer from residential districts. Only the mayor and two commissioners were present. Mayor Orlando Paden stressed the vote does not approve a data center.",
+          "source": "https://mississippitoday.org/2026/03/24/clarksdale-data-center-rezoning/"
+        }
+      ]
+    },
+    {
+      "id": "project-nova-caledonia-wi",
+      "name": "Project Nova (Microsoft Caledonia)",
+      "operator": "Microsoft",
+      "owner": "Microsoft",
+      "tenant": "Microsoft",
+      "filing_llc": "",
+      "locality": "Caledonia (Racine County)",
+      "state": "WI",
+      "lat": 42.8,
+      "lon": -87.88,
+      "size_mw": "",
+      "acres": 244,
+      "announced": "2025-09-01",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "2025-10-08",
+      "outcome": "withdrawn",
+      "stage": "Withdrawn",
+      "days_to_hearing": null,
+      "note": "Microsoft withdrew its rezoning application for a 244-acre campus west of the Oak Creek power plant after sustained opposition, even though the village had already voted to approve the rezoning. Microsoft says it is still looking for a site elsewhere in Racine County.",
+      "source": "https://www.wpr.org/news/microsoft-caledonia-data-center-site-ozaukee-county",
+      "as_of": "2026-08-23",
+      "verified": true,
+      "events": [
+        {
+          "date": "2025-09-01",
+          "kind": "rezoning",
+          "summary": "Village documents sought to rezone 244 acres along Douglas Avenue and Botting Road from agriculture to light manufacturing for three data center buildings and a 15-acre substation, identified only as 'Project Nova'; residents learned Microsoft was behind it about a week before the planning commission met (September 2025).",
+          "source": "https://www.datacenterdynamics.com/en/news/244-acre-data-center-campus-proposed-outside-milwaukee-wisconsin/"
+        },
+        {
+          "date": "2025-09-01",
+          "kind": "public-comment",
+          "summary": "Forty of the 49 people who spoke to the Caledonia planning commission opposed the rezoning (September 2025).",
+          "source": "https://www.cnbc.com/2025/11/25/microsoft-ai-data-center-rejection-vs-support.html"
+        },
+        {
+          "date": "2025-10-08",
+          "kind": "withdrawal",
+          "summary": "Microsoft withdrew its rezoning application, saying that based on the community feedback it heard it had chosen not to move forward with this site; a village board vote set for October 14 became moot.",
+          "source": "https://dailyreporter.com/2025/10/08/microsoft-caledonia-data-center-halted-racine-county/"
+        },
+        {
+          "date": "2025-10-08",
+          "kind": "announcement",
+          "summary": "Microsoft said it remains committed to building in southeastern Wisconsin and is working with the village and county to find an alternate site in Caledonia or elsewhere in Racine County.",
+          "source": "https://www.wpr.org/news/microsoft-caledonia-data-center-site-ozaukee-county"
+        }
+      ]
     }
   ]
 }
