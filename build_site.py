@@ -2711,8 +2711,12 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
         search_blob = esc(" ".join([g["label"]] + [s.get("title", "") for s in g["stories"]]))
         slug = _story_group_slug(g["label"])
         page_link = ""
-        if g["locality"]:
-            _page_slug = locality_slugs.get((g["locality"], g["state"]), slug)
+        # Only link a page that is actually written. A locality can carry a
+        # label with no page behind it — fewer than 4 archived stories and no
+        # moratorium row — and it happens retroactively too, when a row is
+        # removed from MORATORIUMS_DF but its already-tagged stories stay.
+        _page_slug = locality_slugs.get((g["locality"], g["state"])) if g["locality"] else None
+        if _page_slug:
             page_link = f' · <a href="communities/{_page_slug}.html">Full page &rarr;</a>'
         # Surface the latest headline on the card face
         latest_story = g["stories"][0] if g["stories"] else None
