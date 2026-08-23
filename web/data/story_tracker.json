@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 2819,
+  "count": 2827,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -20411,7 +20411,7 @@
       "locality": null,
       "state": "FL",
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-22"
+      "last_seen": "2026-08-23"
     },
     {
       "title": "Michigan Data Centers: The Weekly Download",
@@ -30234,7 +30234,7 @@
       "locality": "Marion County",
       "state": "KS",
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-22"
+      "last_seen": "2026-08-23"
     },
     {
       "title": "Gov. Ayotte says she now supports moratorium on data centers in NH: Exclusive",
@@ -31015,6 +31015,94 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-08-22",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Do the math before saying no to data centers in Escambia County | Opinion",
+      "outlet": "Pensacola News Journal",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPNEUtS2g1UTUxUkFyLTBWMXlJOU11Y2lYR1MtRWdTaVVaa0hTcXM1OWtoV0ZBVHVxMzF6V0U4NEVGR2gtYmkyRDdabVVFSmVSZ1NpeVBQWE9JN0Y0TFZlbVQ1cHo1NE5KemxPdXQxUEdrakhnSWxHOHVLME1MaFEzMzYzVXBKN1M5MzJvWDZQY3RnaWk0cXVtcjNUaDRqM1N4S0ZOUUJLeE5TUXkwNHBDaV8waHRhU2Qxa2h5a3p5TVJlbXBXOFg3NUJ3?oc=5",
+      "published": "Sun, 23 Aug 2026 09:05:00 GMT",
+      "published_iso": "2026-08-23T09:05:00+00:00",
+      "locality": "Escambia County",
+      "state": "FL",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Pima County considers temporary ban on data centers",
+      "outlet": "The Center Square",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOcEJNZGc5OHBXUWtYS05ETnVKYzROdEFNSW5LMzk1Q2VlMnEyTjlfLWhCcnphNjM2QXhwZ0RSMG5nM2FMOXdFUnVCUTB2LTNnM2w5NjA0ZENFd04tZ3VVSWpsLWtyUEpOa3dhY2Z4VHh6WUJ6QjJNcXJSNWs4eExGYVdFbkk3UnFpNGsxeUJrQUlEUFXSAZgBQVVfeXFMTW1FMV9uZXNiQnZIM2d4YzRjSUlwb3NWUlZsMXVQVVpOSEJkS0YteGdaWGRlM1ZRLWYxYkRpSlZSQzhZUVlnOVFIUFctYkZ0M2gzb3FWdTJoRnJLckxFTHl4dXVlRko1ZkdPdkVIZkY0aE5VQkZlQ1U1Uk5LbjBSMFVtRFI0b0lOTkYtTVZTeFlJaVZFaHdrRUI?oc=5",
+      "published": "Thu, 20 Aug 2026 15:45:00 GMT",
+      "published_iso": "2026-08-20T15:45:00+00:00",
+      "locality": "Pima County",
+      "state": "AZ",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Water fight erupts over Amazon data center proposal in King George",
+      "outlet": "Roanoke Times",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNdko4SUVwb21RMTN5NENoMzdLSjhYTTJEN0Jfems2ZTFfVXR2TG83Y3R6TUIzeXZnblBTV2xyWkloUF9tZkxrY0MtaHhJR1NEZVowOVN3TEliZ0ItNm9HdHZpQVl3SVJUa2xRcVQ2TnRHd0pwVTB1YmVITE1MT0Z0Mi1wY1g4TVdsU01nQ01YQ0FGeFBpeEEwdl9XUWZtZ0E?oc=5",
+      "published": "Sat, 22 Aug 2026 09:00:00 GMT",
+      "published_iso": "2026-08-22T09:00:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Where are data centers in Chattanooga region? Facilities vary widely.",
+      "outlet": "Chattanooga Times Free Press",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcms2ak5FM3BxNHFlcy1uNGEwYUpFd3ZXMUZjUVNDNklxLTNnWkt2dXBGbG9YYlJBdy1tOVprSzZYOG5LVXFSa1NSYVotTmV0eUNsdHdJUXZ1RlVUX01GbFFQNXZaT2xxekJPaGh0T1FuaUNUd0lNaHAwbUZEYTRIY3hTWjBERTNXcWhiUlVoejZHeXZuOHJ2VA?oc=5",
+      "published": "Sun, 23 Aug 2026 10:00:00 GMT",
+      "published_iso": "2026-08-23T10:00:00+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Unattended death under investigation in Georgia, deputies say",
+      "outlet": "WFSB",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQSHBlVkRVMzhjcXRINWNTSS01V3RreTlod0VCTzAyUGZPeFJud2lOTzREaE5mTDNRRzJtdHp1Zkk1ODlhMTgzYVlaZ1F2aFR0YUpwMlFWVFhwRXI1WS1rZmpDbWhiRGduR082TklHdVVEVW9mOVZQNTBGcXhnTHRrMmxiV2kxNkczblM1U2dKTGpFLUZlblNQdzNfYVI3SzJJZ0U1MUFZQ29nbEg1Wnk1cw?oc=5",
+      "published": "Fri, 21 Aug 2026 03:14:00 GMT",
+      "published_iso": "2026-08-21T03:14:00+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Abbott says his data center pause in Texas is working, as Democrats urge him to call a special session on the issue",
+      "outlet": "CBS News",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOVHdHZnktanhtblI0dnpuaEJoaG40eDllMjJJU1U2YUN4SkN1VHROS0RDeW0xcWVUTWFvbTRKRm1CeG95aWRaVzQ0TlI0azZ5ZlN4S0FyYW83T2ExS3BUcTl5MzNfdExPR2JJR21VS3d6bUVTNTZJa1lYY3EzdURuejFjR05Ha2tOMEp0OHNWMThZUHY3U011ckgyMUgyZFI4S0trSU10elZubzlVMjNuUFRYaWthbGJ5MlRPRFk3WlRHUUE?oc=5",
+      "published": "Sun, 23 Aug 2026 10:00:12 GMT",
+      "published_iso": "2026-08-23T10:00:12+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Letters — Will data centers hurt or help Texans?",
+      "outlet": "Dallas News",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOa3Q2YUROVHduaTdoSFdkYmJwc2l6bV9iekFqMFpzVWFiZjVrdXZSWGRpRFpJVDRLdzh5MmN1LXpGLWx3S2xDNm9yMUFxWUhJbmd1dHBQTFpwRHhSN3dCbzduZGJvZklSd2hsVXhUcEZmWHV0M09sVVZKZ2REcm9TZ2VVeXFaYmtBemQxQVgwcGhDaURkdmxWc3I0Qmg3dDQ1cVA2VzNNTVUwMldVTGdYYndVR3Z2SHc?oc=5",
+      "published": "Sun, 23 Aug 2026 09:36:00 GMT",
+      "published_iso": "2026-08-23T09:36:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "title": "Texas State Rep. James Talarico talks data centers, immigration with ABC-7’s Marcel Clarke",
+      "outlet": "KVIA",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNZEFLWEExSnI0UTdVc0xtcTFidF90YkpGQjAxc3gzSzdqWU02ckl0ZmR2Y2luWm5vN3ltOXd0YjJGVFlzdU1feFFlYm5rZFJLVmdnSGZLdkVuSXdBRW9KLTIzbVNOLXNvc1lKb3o3d1B5QVloSmRjdE0xR3c5dHNhQ0xsekN1UEJZVWkzcUticVpReE5mdjhxdWRCdXR3RkFsY2d0eDZVVmRrVW5TQUd2OGFJZ1hZLWwxVklWNlBUX1N6NHJQMWN2MjRWYUxralpzNThZ?oc=5",
+      "published": "Thu, 20 Aug 2026 22:20:10 GMT",
+      "published_iso": "2026-08-20T22:20:10+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-20",
       "last_seen": "2026-08-23"
     }
   ]
