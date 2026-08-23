@@ -8789,12 +8789,6 @@ def build_data_centers():
     n_states = len(STATE_DC_DF)
 
     # -- Section 1: state facility table & top-15 bar chart ----------------
-    top15 = STATE_DC_DF.nlargest(15, "twh_year")
-    state_bars = hbars(
-        [(r["state"], r["twh_year"], f'{r["dc_count"]} facilities')
-         for _, r in top15.iterrows()],
-        unit=" TWh")
-
     def _upcoming_mark(v):
         return "&#10003;" if v else "&mdash;"
 
@@ -8803,7 +8797,7 @@ def build_data_centers():
         f"<td>{r['dc_count']}</td><td>{r['twh_year']}</td>"
         f"<td>{esc(r['major_hubs'])}</td>"
         f"<td style=\"text-align:center\">{_upcoming_mark(r['upcoming'])}</td></tr>"
-        for _, r in STATE_DC_DF.iterrows())
+        for _, r in STATE_DC_DF.sort_values("twh_year", ascending=False).iterrows())
 
     # -- Section 2: operators table ----------------------------------------
     tier_labels = {"hyperscaler": "Hyperscaler (owns &amp; consumes)",
@@ -8848,7 +8842,7 @@ def build_data_centers():
         f"<td>{esc(r['rivals'])}</td></tr>"
         for _, r in AI_COMPETITORS_DF.iterrows())
 
-    body = f"""
+    head = f"""
 <header>
   <div class="kicker">Market data</div>
   <h1>U.S. data center market: state profiles, operators &amp; grid queue</h1>
@@ -8856,18 +8850,12 @@ def build_data_centers():
   operator ownership, the ERCOT large-load funnel, SEC filings, and how the
   grid is responding to the demand wave.</p>
 </header>
+"""
 
-<details class="more"><summary>On this page</summary>
-  <ol style="font-size:14px">
-    <li>All 50 states: facility count &amp; power draw</li>
-    <li>Owners, operators &amp; shell LLCs</li>
-    <li>ERCOT large-load interconnection queue</li>
-    <li>SEC 10-K competitor analysis</li>
-    <li>The demand wave &mdash; ERCOT &amp; PJM</li>
-    <li>How the grid operators &amp; FERC are responding</li>
-  </ol>
-</details>
-
+    # Six long reference sections on one page ran to ~9,000px of scroll.
+    # _html_sections() supplies the jump nav (so the hand-written "On this
+    # page" list is gone) and collapses all but the first.
+    sections = f"""
 <section>
   <h2>All 50 states and D.C.: data center facility count &amp; power draw</h2>
   <div class="stats">
@@ -8889,10 +8877,8 @@ def build_data_centers():
     {state_rows}
   </table>
   </div>
-  <p class="muted" id="dc-count">50 states and D.C.</p>
-
-  <h3 style="margin-top:24px">Top 15 states by annual power draw</h3>
-  {state_bars}
+  <p class="muted" id="dc-count">Top 15 of 51 by annual power draw</p>
+  <button id="dc-more" class="btn ghost show-more" type="button">Show all 51 states and D.C.</button>
 
   {provenance_html("STATE_DC_DF")}
   <p class="src">Sources: {_srcref('lbnl')} &middot; {_srcref('eia_state')} &middot; {_srcref('electricchoice')}</p>
@@ -8963,14 +8949,13 @@ def build_data_centers():
   <p class="src">Sources: {_srcref('goog_10k')} &middot; {_srcref('meta_10k')}
   &middot; {_srcref('msft_10k')} &middot; {_srcref('amzn_10k')} &middot;
   {_srcref('orcl_10k')} &middot; {_srcref('crwv_10k')}</p>
-</section>
 
-<div class="note info"><p><strong>EIA pilot survey:</strong> In March 2026 the
+  <div class="note info"><p><strong>EIA pilot survey:</strong> In March 2026 the
 EIA launched its first-ever pilot survey of energy use at data centers &mdash;
 the federal government&rsquo;s first attempt to measure an industry that
 currently self-reports nothing.
 {_srcref('eia_pilot')} &middot; {_srcref('eia930')}</p></div>
-
+</section>
 <section>
   <h2>The demand wave &mdash; ERCOT &amp; PJM</h2>
   <p>The two ISOs with the most data-center load growth tell opposite stories
@@ -9036,7 +9021,9 @@ currently self-reports nothing.
   {_srcref('spp_hill')}</p>
   </details>
 </section>
+"""
 
+    tail = f"""
 <section>
   <h2>What to do with this</h2>
   <p>Use the state data to benchmark your community, the operator table to
@@ -9054,20 +9041,34 @@ currently self-reports nothing.
   var q = document.getElementById('dc-search');
   var table = document.getElementById('dc-table');
   var ct = document.getElementById('dc-count');
+  var more = document.getElementById('dc-more');
   var rows = Array.from(table.querySelectorAll('tr')).slice(1);
-  q.addEventListener('input', function() {{
+  // The table is sorted by TWh, so the first PAGE_SIZE rows are the ones
+  // worth showing by default. Searching always looks at all 51.
+  var PAGE_SIZE = 15;
+  var showAll = false;
+  function render() {{
     var s = q.value.toLowerCase();
     var n = 0;
     rows.forEach(function(r) {{
-      var show = !s || r.textContent.toLowerCase().indexOf(s) >= 0;
-      r.style.display = show ? '' : 'none';
-      if (show) n++;
+      var hit = !s || r.textContent.toLowerCase().indexOf(s) >= 0;
+      if (hit) n++;
+      r.style.display = (hit && (s || showAll || n <= PAGE_SIZE)) ? '' : 'none';
     }});
-    ct.textContent = s ? (n + ' match' + (n === 1 ? '' : 'es')) : '50 states and D.C.';
-  }});
+    ct.textContent = s
+      ? (n + ' match' + (n === 1 ? '' : 'es'))
+      : (showAll ? '51 states and D.C.'
+                 : 'Top ' + PAGE_SIZE + ' of ' + rows.length + ' by annual power draw');
+    more.style.display = (s || showAll) ? 'none' : '';
+  }}
+  q.addEventListener('input', render);
+  more.addEventListener('click', function() {{ showAll = true; render(); }});
+  render();
 }})();
 </script>
 """
+
+    body = head + _html_sections(sections) + tail
     n_fac = len(DC_SITES_DF)
     n_st = len(STATE_DC_DF)
     return page(

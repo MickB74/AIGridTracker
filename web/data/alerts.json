@@ -4,7 +4,7 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
-  "count": 29,
+  "count": 27,
   "alerts": [
     {
       "id": "mora-MI-armada-township-2026-07-13",
@@ -254,19 +254,6 @@
       "verified": true
     },
     {
-      "id": "mora-OH-vienna-township-2026-10-16",
-      "kind": "moratorium-expiry",
-      "severity": "upcoming",
-      "locality": "Vienna Township",
-      "state": "OH",
-      "expires": "2026-10-16",
-      "days_left": 54,
-      "title": "Vienna Township, OH: data center moratorium expires in 54 days",
-      "body": "The documented term ends 2026-10-16. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
-      "source": "https://www.tribtoday.com/news/local-news/2026/08/vienna-extends-data-center-moratorium/",
-      "verified": true
-    },
-    {
       "id": "mora-KY-lexington-(fayette-county)-2026-10-31",
       "kind": "moratorium-expiry",
       "severity": "upcoming",
@@ -355,19 +342,6 @@
       "title": "Meridian Township, MI: data center moratorium expires in 88 days",
       "body": "The documented term ends 2026-11-19. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.wkar.org/wkar-news/2026-05-28/meridian-township-is-officially-putting-a-pause-on-any-data-centers-that-might-come-to-town",
-      "verified": true
-    },
-    {
-      "id": "mora-MN-minneapolis-2026-11-21",
-      "kind": "moratorium-expiry",
-      "severity": "upcoming",
-      "locality": "Minneapolis",
-      "state": "MN",
-      "expires": "2026-11-21",
-      "days_left": 90,
-      "title": "Minneapolis, MN: data center moratorium expires in 90 days",
-      "body": "The documented term ends 2026-11-21. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
-      "source": "https://www.mprnews.org/story/2026/05/22/minneapolis-city-council-imposes-six-month-halt-on-data-centers",
       "verified": true
     },
     {
