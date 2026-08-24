@@ -166,7 +166,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "status": "new",
       "origin": "news-scan"
     },
@@ -179,7 +179,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "status": "new",
       "origin": "news-scan"
     },
@@ -742,7 +742,7 @@
       "guess_state": null,
       "query": "data center moratorium extended",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "status": "new",
       "origin": "news-scan"
     },
@@ -950,7 +950,7 @@
       "guess_state": null,
       "query": "data center moratorium city council",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-17",
+      "last_seen": "2026-08-24",
       "status": "new",
       "origin": "news-scan"
     },
@@ -1171,7 +1171,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "status": "new",
       "origin": "news-scan"
     },
@@ -16641,7 +16641,7 @@
       "guess_state": null,
       "query": "data center moratorium city council",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "status": "new",
       "origin": "news-scan"
     },
@@ -16771,7 +16771,7 @@
       "guess_state": null,
       "query": "data center moratorium extended",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "status": "new",
       "origin": "news-scan"
     },
@@ -16784,7 +16784,7 @@
       "guess_state": null,
       "query": "data center moratorium extended",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "status": "new",
       "origin": "news-scan"
     },
@@ -16797,7 +16797,7 @@
       "guess_state": null,
       "query": "data center moratorium extended",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "status": "new",
       "origin": "news-scan"
     },
@@ -16823,7 +16823,7 @@
       "guess_state": null,
       "query": "data center moratorium extended",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "status": "new",
       "origin": "news-scan"
     },
@@ -16997,6 +16997,45 @@
       "last_seen": "2026-08-24",
       "status": "new",
       "origin": "archive-sweep"
+    },
+    {
+      "title": "Tulsa’s data center moratorium expires this year. Here’s what might be next.",
+      "outlet": "Tulsa Flyer",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPY2VuRjBDUlpTWm9acnRuR19RWElfSVBvSXJUS3JGY3pLanRfaVV0dDZwZ3AtdU4xZVhac09GS1ZpS2ZLVUF4Q05OSnRJbGJRQklDOFlKN2pOVjg1clNHVlE0eWFITE1MMHJFbzBCTEhqUG5jbTBVdHRrTFZmUjE0ZWJKSXI1ejFScDloT2FHRHhTQ2J0SVVOdg?oc=5",
+      "published": "Mon, 24 Aug 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium city council",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Bloomingdale City Council approves data center moratorium",
+      "outlet": "AOL.com",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQV3NYQXhvUHdleWc0LWUwd01BSGdKaG84OTJoXzJpV1hHQzZ2VENBUjRZc2l2Q085LURPLXpUSnZITVlMZE5iY0tsRWlIcmtWRnVVRFMtNTlhVWZxcnUtcVNGaVBHdk9KU1p6RFU3MDZyWHFMYVJKeFlqamRDOU5lcWVtSDJjejVMVzJ3?oc=5",
+      "published": "Mon, 24 Aug 2026",
+      "guess_locality": "Bloomingdale",
+      "guess_state": null,
+      "query": "data center moratorium county commission approved",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Genoa Township Board Extends Data Center Moratorium",
+      "outlet": "WHMI",
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1jNHFGN3JnUGxDU3Z5UnBjX2oyV3NnMHA2OWFKakc4eERpQVJBUmM0YTBkaUJqYmxOWDJCdFlvMVZNVGJzRDY1XzlSM1EzZW13?oc=5",
+      "published": "Tue, 18 Aug 2026",
+      "guess_locality": "Genoa",
+      "guess_state": null,
+      "query": "data center moratorium extended",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "status": "new",
+      "origin": "news-scan"
     },
     {
       "title": "Salem City Council votes in favor on moratorium on AI data centers",
