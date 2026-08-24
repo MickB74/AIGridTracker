@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-24T08:59:11.090129+00:00",
+  "fetched_at": "2026-08-24T10:54:51.568420+00:00",
   "items": [
     {
       "title": "Suing for silence: Nationwide lawsuits target data center noise",
@@ -17,6 +17,15 @@
       "published": "Thu, 20 Aug 2026 04:08:44 GMT",
       "published_iso": "2026-08-20T04:08:44+00:00",
       "age_days": 4,
+      "states": []
+    },
+    {
+      "title": "A County Got Rich From Data Centers. Some Question \u2018At What Cost?\u2019",
+      "source": "The New York Times",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQcV9iU2cyOWd2eEx0X1N5RWhONl8wLXZvTWtOV19rNmo4ZXd6R0ZPSTVwYUdyLUw3UElPcXROZ2cyeFVhUWx2MnZsVERBMjRXRW1TeC15Sk5YM2ZKemRfUUZpS053OTlFVXVNdWJ2cDNQOUt0eGp6Q0RHQmJGM0FRcUVOTy10dDQxTFFpa1IwRlRkOGM?oc=5",
+      "published": "Fri, 21 Aug 2026 07:00:00 GMT",
+      "published_iso": "2026-08-21T07:00:00+00:00",
+      "age_days": 3,
       "states": []
     },
     {
@@ -118,7 +127,7 @@
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOR1FVc3V2SmZRMnFHTlNYSUFBTU1HR3FwTWlFYlkwa2h6dTNnS3RJd1Bwb0FLMHR1c1dzSktlcmdQd3hjY1JIcW94YlpOc1FrelJoRnRrejNrSFRvZ2taMk9CUXVVTUhqOVczT3JEWjdrTzR3OExHUjNrbUdVTkIzQTUzY25xR3lSZnQ5YTNvZzlBWG9FSWdWNjB3?oc=5",
       "published": "Wed, 19 Aug 2026 09:00:00 GMT",
       "published_iso": "2026-08-19T09:00:00+00:00",
-      "age_days": 4,
+      "age_days": 5,
       "states": [
         "Alabama"
       ]
@@ -171,15 +180,6 @@
       ]
     },
     {
-      "title": "Westover City Council unanimously approves 6-month moratorium on data centers",
-      "source": "WBMA",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZ285RHZJclJERFk4ckhKdlhZbVhQY3BvenFmaTdZcEdpSExsTVZXVDNDUkZtbDdHV29tdUJEQXZNWUNGUW01WVpUV0NXVktEZUt5SUlXNWtrTEw1ci03SnNZWWhzTkxpS2VpaHBMSVloaWNaTUNpamhNSEllMFhucndzTTJtM1Bfb3dIc1Z5NHc4Qml4SmJiR1V4dlhiR2wtWG5xVGQ2T285UzRa?oc=5",
-      "published": "Wed, 19 Aug 2026 01:36:30 GMT",
-      "published_iso": "2026-08-19T01:36:30+00:00",
-      "age_days": 5,
-      "states": []
-    },
-    {
       "title": "Vineland planning board approves 2nd phase of 300-megawatt data center plan",
       "source": "WHYY",
       "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQV3QtLTlyU29oNEpqcWJESk5VZ21CNlkzWnhGM1o4MFRfWmNwNjlGWDBFMWZzNzJOOG9hYnRsck1ubVRrLVFNNnFQMl9DMUU4UGY5dzBGMGs5ZVdJNTJPWHVPTi1kSGtUYkd2d0NaUnplU3JfVm5XeVhYaVBBUkxoZVd3?oc=5",
@@ -189,12 +189,12 @@
       "states": []
     },
     {
-      "title": "A County Got Rich From Data Centers. Some Question \u2018At What Cost?\u2019",
-      "source": "The New York Times",
-      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQcV9iU2cyOWd2eEx0X1N5RWhONl8wLXZvTWtOV19rNmo4ZXd6R0ZPSTVwYUdyLUw3UElPcXROZ2cyeFVhUWx2MnZsVERBMjRXRW1TeC15Sk5YM2ZKemRfUUZpS053OTlFVXVNdWJ2cDNQOUt0eGp6Q0RHQmJGM0FRcUVOTy10dDQxTFFpa1IwRlRkOGM?oc=5",
-      "published": "Fri, 21 Aug 2026 07:00:00 GMT",
-      "published_iso": "2026-08-21T07:00:00+00:00",
-      "age_days": 3,
+      "title": "Westover City Council unanimously approves 6-month moratorium on data centers",
+      "source": "WBMA",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZ285RHZJclJERFk4ckhKdlhZbVhQY3BvenFmaTdZcEdpSExsTVZXVDNDUkZtbDdHV29tdUJEQXZNWUNGUW01WVpUV0NXVktEZUt5SUlXNWtrTEw1ci03SnNZWWhzTkxpS2VpaHBMSVloaWNaTUNpamhNSEllMFhucndzTTJtM1Bfb3dIc1Z5NHc4Qml4SmJiR1V4dlhiR2wtWG5xVGQ2T285UzRa?oc=5",
+      "published": "Wed, 19 Aug 2026 01:36:30 GMT",
+      "published_iso": "2026-08-19T01:36:30+00:00",
+      "age_days": 5,
       "states": []
     },
     {
@@ -212,16 +212,7 @@
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNYkhkamUwSXhyeG1VdHV2YnFQZWZRREk2ZUJHc0VweHZxSUd4Um44UVZ6ZTJySGhOcU5fbUt4aG1KNW94YjFfOUkxOXBPa2p6Y3MxdHVJSDdhSmZORkpwR0I1RTZJS3prNF9POGt6OFhfNlZGZWdhNnF5MWV6alhKbi0zcFB0ZU9HbHVWa0xaUHdzU0dkbVlfb1phNEhZbG5mWjI5bQ?oc=5",
       "published": "Wed, 19 Aug 2026 10:01:00 GMT",
       "published_iso": "2026-08-19T10:01:00+00:00",
-      "age_days": 4,
-      "states": []
-    },
-    {
-      "title": "City Council Approves Data Center Moratorium, Residents Push for Longer",
-      "source": "The Greensboro Thread",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQTkJRajZhUjdFdkNkbnVzdjUxY19YazN3TGtHcDRJM25hM1l0cnI1SjQxVjR5RzBDYUdQckZPUEhTT1FPZlRmRFlFazlNZ3BlSGhjUXRfc3lZeFBTcnBlcE00VDl0MFgwQkJJUG9XRmhJd2FIVW9hUUxiQ0NWa0tzMEE1b245N1lqekV3WDFKZUxneVNnZGsw?oc=5",
-      "published": "Wed, 19 Aug 2026 12:00:00 GMT",
-      "published_iso": "2026-08-19T12:00:00+00:00",
-      "age_days": 4,
+      "age_days": 5,
       "states": []
     },
     {
@@ -234,6 +225,15 @@
       "states": []
     },
     {
+      "title": "City Council Approves Data Center Moratorium, Residents Push for Longer",
+      "source": "The Greensboro Thread",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQTkJRajZhUjdFdkNkbnVzdjUxY19YazN3TGtHcDRJM25hM1l0cnI1SjQxVjR5RzBDYUdQckZPUEhTT1FPZlRmRFlFazlNZ3BlSGhjUXRfc3lZeFBTcnBlcE00VDl0MFgwQkJJUG9XRmhJd2FIVW9hUUxiQ0NWa0tzMEE1b245N1lqekV3WDFKZUxneVNnZGsw?oc=5",
+      "published": "Wed, 19 Aug 2026 12:00:00 GMT",
+      "published_iso": "2026-08-19T12:00:00+00:00",
+      "age_days": 4,
+      "states": []
+    },
+    {
       "title": "New data centers temporarily banned in Marion County",
       "source": "WFYI",
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWGRUTDV6ZXY4SVBUdnk5dUtrQnRGSGVlLVV1UENLeEN0RExfc20zUm1vQUxzakVDZHRienlXRFNaVXF4X2V3Y1ExbWVGdVhUOVFkYkpZc3YxSXNVbEdGV3FXakJCZDJETUFYYmVyRjV0UmYwSHdib2RyRGpuLURoaVFSVUktckxNeFhTc0xPUXJZQWdGT19lM0dR?oc=5",
@@ -243,19 +243,8 @@
       "states": []
     },
     {
-      "title": "Hyperscale data centers provoke bipartisan outrage across Kentucky",
-      "source": "Louisville Public Media",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQd21NcVk0MWpxdXZGLVNHckVWc3J2cktWTEVBbW9neG1icmlEZmJ1dVVqWmFDN2pKY3hVajV6WklVdzJsY01OdWVVUjFoMm9tRHBhdkstbDBvU0xqTFZPM1hJVDluakpWcG5iV2JCVVBvWlltRjZjdUpLbkI3SHJBZHhlalZuSy00MDU3a3VVX0x5NlhaOWtfaHJRQUJGZ1BDTXRTbg?oc=5",
-      "published": "Mon, 17 Aug 2026 09:00:00 GMT",
-      "published_iso": "2026-08-17T09:00:00+00:00",
-      "age_days": 6,
-      "states": [
-        "Kentucky"
-      ]
-    },
-    {
       "title": "Residents voice concerns over self-powered data center proposal in Spanish Fork",
-      "source": "KSL",
+      "source": "KSL.com",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPemJoZFpaTFBLbmR3cUtHSkVPRl9FSUZKcFE5NUZVN29hSTN1TjBKQkRXaHEyWmQ1X0xETEhNbnp6RW1DVHZSLVpValg1d0xWTDBheUJiVDNjU2JVSjNIeWd0ZDBZNFktUlhiTFAxWmdvalhJQktfV1VBdzdWYVZCVmpmNUtfLUg2WEx0SVp4Wnltazd1Vll5VS1CdmZ3SXdGWThrNmR4cVI5Qm5pbVJBai1RQmxlZw?oc=5",
       "published": "Wed, 19 Aug 2026 19:59:17 GMT",
       "published_iso": "2026-08-19T19:59:17+00:00",
@@ -277,7 +266,7 @@
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSzh4VFlpZ1JzS2pFdS1xbHBYbDdsdi1lRXdRTktpQ3ZvVEZRcmgweGVxeHhIbXU0Ni04Ml9FLWpleDV0SVBFWHg1MlA2a1htT0l2ZXB6YXRfbUt0UjBaSTJlSUkyUmUtV2ZXVG56MHk4N3o2RkIwbXMySGJ6UEhKQm9nNk5zNnFFZDRUc05Ld01mZHBEeko5VUh2YVVIbm9jYTE5QUFUbmtBSndRVnk1Rg?oc=5",
       "published": "Wed, 19 Aug 2026 09:14:25 GMT",
       "published_iso": "2026-08-19T09:14:25+00:00",
-      "age_days": 4,
+      "age_days": 5,
       "states": []
     },
     {
@@ -299,6 +288,17 @@
       "states": []
     },
     {
+      "title": "As data centers expand across Texas, Cherokee County residents discuss the impact",
+      "source": "KLTV.com",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPcmhTaEZOSkc3bkV3blZ1c0JtS1dvS3lHZmh4OFRpMm9uY25idmlCX1N3UmhvSTg2ZFkyNkRuSVVTOGEwd3RFSnFSNXRtMlJpRWlzaW9ZLWNScTdZUWluMzlIVlBVSlk0UlhEdHFyVnV5M2J6MkVwOUhLUE03VHlmSFZOcGgtaGt1aDlnVUhsdDZ5bFlRd01SU1RqSGZ1a3p2SE1oQmIyRzV6d9IBvgFBVV95cUxNRzR2bzRHd1JyNzlrWTlTU0tPUUx3S1MzU0Vfak14LWtyc0VROGtFay1EWXl6RWU0SFE3TDlvNVR0Z2FXMEE2d1Fab3dHdGRYQjhxQ2JCREFyN25GQnVmTDBweTUtVTdKTWliRlhzZmxOUWE3NUZQSmxKb1BWLS05b0ZzYmFQckJfYld0OXhjbUYzWWN0d2FPZ3ZEVzZLZG1Mc3c5cDIwTjRSd0Y0Vmk5RW1HSVREUXV4eDZiQUpR?oc=5",
+      "published": "Fri, 21 Aug 2026 10:40:00 GMT",
+      "published_iso": "2026-08-21T10:40:00+00:00",
+      "age_days": 3,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
       "title": "Pennsylvania will sharply limit data center development, expand review process",
       "source": "The Washington Post",
       "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPQks1a09qRjc4V01SZjh0UHJnWTdzQ0tONWNPVEIyeDhXcFBTN1N3cDJvcHQyWnE2R2hCQnhlWHFRb0Foa0JQeHVvTl96VUZtRXlfVDZsMzFlLUp0eXZvbk5WOV9HZkJQdXVRbTBoSDY5RGxWcXBrd2RsX0FSYWtzVjEzZzdyODJwN1FMOEJSYmR4Tm5HNmRpNDFsUjdWbUpZYURRc25wTUtLdjVXYmJJN2hjUjNVUGNHQWtUNi1XUmFNdw?oc=5",
@@ -307,17 +307,6 @@
       "age_days": 5,
       "states": [
         "Pennsylvania"
-      ]
-    },
-    {
-      "title": "As data centers expand across Texas, Cherokee County residents discuss the impact",
-      "source": "KLTV.com",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPcmhTaEZOSkc3bkV3blZ1c0JtS1dvS3lHZmh4OFRpMm9uY25idmlCX1N3UmhvSTg2ZFkyNkRuSVVTOGEwd3RFSnFSNXRtMlJpRWlzaW9ZLWNScTdZUWluMzlIVlBVSlk0UlhEdHFyVnV5M2J6MkVwOUhLUE03VHlmSFZOcGgtaGt1aDlnVUhsdDZ5bFlRd01SU1RqSGZ1a3p2SE1oQmIyRzV6d9IBvgFBVV95cUxNRzR2bzRHd1JyNzlrWTlTU0tPUUx3S1MzU0Vfak14LWtyc0VROGtFay1EWXl6RWU0SFE3TDlvNVR0Z2FXMEE2d1Fab3dHdGRYQjhxQ2JCREFyN25GQnVmTDBweTUtVTdKTWliRlhzZmxOUWE3NUZQSmxKb1BWLS05b0ZzYmFQckJfYld0OXhjbUYzWWN0d2FPZ3ZEVzZLZG1Mc3c5cDIwTjRSd0Y0Vmk5RW1HSVREUXV4eDZiQUpR?oc=5",
-      "published": "Fri, 21 Aug 2026 10:40:00 GMT",
-      "published_iso": "2026-08-21T10:40:00+00:00",
-      "age_days": 2,
-      "states": [
-        "Texas"
       ]
     },
     {
@@ -341,21 +330,21 @@
       "states": []
     },
     {
-      "title": "Lackawanna County judge voids Clifton Twp.'s data center zoning, as residents provide feedback for updated legislation",
-      "source": "WVIA Public Media",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNaDg3WjNUVE4tb2xIMWJZTDI3djFFOXE0djM4clJZX3pCUkxOb3VQRDNwam5ic04xeGNCUm9IQTAtajRDeWc3eW5HZE1RajZBbWd6ZWFaUUE1V0VHWkRERFdrdnlfVHRLUkhLbTRnbnpOaWkwZno3bHY3bnkwbU9HYVdSOEZBcVBrX1B1ckVZczVQNmNYR3ZxUEtObEJqeGl5dDgtLVJTdl9id0dfeHg5dmw5TEhzZndiRGZOMFpJQWpDQmUycGxXSnNhSWUtNk9LMFF6b2FUVllzSllabHBfQWFsZGxZYzFTeDYyRVdVVWU?oc=5",
-      "published": "Fri, 21 Aug 2026 20:11:00 GMT",
-      "published_iso": "2026-08-21T20:11:00+00:00",
-      "age_days": 2,
-      "states": []
-    },
-    {
       "title": "During 3 hour public hearing: More than three dozen residents speak out against data centers, for moratorium",
       "source": "alamancenews.com",
       "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNU2tWM2ZEY0JuaXdpNHhsZUJvVFc4ck40MTdDM3otenM5cTBqLWVMY0dRTE1VM1djYVpxS3F1Wk5ZZzFQUnpFVDBRa0JVY213eW56N0JfemVWS1ZvVVNXYnRBQVE0LVcyZnhzSWs5NjlUd1lUNS0ydW85Nm9ZTDBzTWRaOVFuVVJtamdIMFVaeV82Yl93RGZ6ZVdZTTh2RUg1d0k3RmU0VnhFS0tsdHJwSHNPdkZUemcxajFCNzJxalpiRU9BVjBVRUwyNDc?oc=5",
       "published": "Sun, 23 Aug 2026 05:04:30 GMT",
       "published_iso": "2026-08-23T05:04:30+00:00",
       "age_days": 1,
+      "states": []
+    },
+    {
+      "title": "Lackawanna County judge voids Clifton Twp.'s data center zoning, as residents provide feedback for updated legislation",
+      "source": "WVIA Public Media",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNaDg3WjNUVE4tb2xIMWJZTDI3djFFOXE0djM4clJZX3pCUkxOb3VQRDNwam5ic04xeGNCUm9IQTAtajRDeWc3eW5HZE1RajZBbWd6ZWFaUUE1V0VHWkRERFdrdnlfVHRLUkhLbTRnbnpOaWkwZno3bHY3bnkwbU9HYVdSOEZBcVBrX1B1ckVZczVQNmNYR3ZxUEtObEJqeGl5dDgtLVJTdl9id0dfeHg5dmw5TEhzZndiRGZOMFpJQWpDQmUycGxXSnNhSWUtNk9LMFF6b2FUVllzSllabHBfQWFsZGxZYzFTeDYyRVdVVWU?oc=5",
+      "published": "Fri, 21 Aug 2026 20:11:00 GMT",
+      "published_iso": "2026-08-21T20:11:00+00:00",
+      "age_days": 2,
       "states": []
     },
     {
@@ -442,6 +431,15 @@
       "states": []
     },
     {
+      "title": "China\u2019s data centers face little pushback amid AI boom: \u2018That\u2019s a matter for the state\u2019",
+      "source": "NBC News",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNY21fWG9tWFUwVmUzUVdaUzFWSUFSRVpaajVxSUFZTlN1NjVOVmpxbjdFOGRsLWFUU3RKdG1ESDg4VU1kUzg4Vi1qeUhSVWF1UVBTYmhGa3RrRGVOOE9DQU9XZUlGaWt2eEJidW5NSU53dTdZODJoSGwxOXBadHVkNUI2MEVLWWhqZTgteVI1dFN1S0tOUmZ0V2JMTXdZQ2xLX3FaTDh6dTJfNlVT?oc=5",
+      "published": "Tue, 18 Aug 2026 21:08:00 GMT",
+      "published_iso": "2026-08-18T21:08:00+00:00",
+      "age_days": 5,
+      "states": []
+    },
+    {
       "title": "What is Project Shelby? A look at Canton's newest data center plans",
       "source": "Canton Repository",
       "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQN2lWaW9ZdFVxSkRGVzBiZEFvdlpZZlRhbnRPWGVHYVZzZUtReG10ZUQwRUFfcFJWal9sc3lLUFhQM3MtRVNrRzRlUjd3eFlDT2xKMnNkWWtORm9taTV2WEplWTZLaUhMN29xYXFaZHM1RGlmeWM3cGR0NkZfMko1NkpLRl9aNXpWQ1FGSXotVXBkWGdZcnVQQmFDOUo4akdMX2ZsZjVlamRaV3lBSmVZbnB3ZnVnYUJIODF4RjdoRS1qekZWYU1KcXBpTWpISzZPeWdzUzNDc2o?oc=5",
@@ -509,15 +507,6 @@
       "states": []
     },
     {
-      "title": "Brownsville residents keep up pressure opposing data centers",
-      "source": "ValleyCentral.com",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNX3hya1k4VHdnd1NCMFlVa1ZFdWlPelhxb055QXZVN2xVN3RYOFRRZzM2SXZBek9kM1Nub3JEV0p4bWRTS0hpZkduQy14Q3hQWHZEZktqVkdLR2ZxOGY0eWNrSnVDbjRhbU40VWN3MHY4VFpybnlTQlFNZjBjUlVkeXN4ejMxcGhlQ2dpbUtSdXBaNUk4X3daRVhycDFVek1vSVhMY1Q4Qi13UDTSAbABQVVfeXFMTnJISmg4YWs3RmhjMGplWmtwcnZqMlpkRUdPdTU0UlNlcGdyVFM5NGh4UWdnZ01idU51RnZFVGYwbDl4T19qY0F3cG9GcnlTUHB1dHdCMklRR015MUs1LUJaN20tZzhTX2NGeUR2clQzSnRCZWhMSF95U0g1SnNXblZBSXZEbDZWUkxuYjF5ODBoZDZVLUFGVEl6VjJVTjlja09CQV9hN2s5d0t4SW05QVk?oc=5",
-      "published": "Wed, 19 Aug 2026 16:49:22 GMT",
-      "published_iso": "2026-08-19T16:49:22+00:00",
-      "age_days": 4,
-      "states": []
-    },
-    {
       "title": "Could the GOP Lose Florida Over Data Centers?",
       "source": "Mother Jones",
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPT1lHQUgwOE01Zml2dEgzZ2t3dGhZNjU4bXBrUFVrM1YzeDNDeks3bTVNTzhPVmFqbEFkUklidEw1OFdybHdPa1dNRmVObDFXQUZ5U1Vjb2xZY1ZOa0VIbm1ILU82RWVvQVV2LUpYdDRxZk9XRl9RSnNYMjJuTjdmX1FOdFhmenhGR1RwMzBDWGpIY3Y3?oc=5",
@@ -527,6 +516,24 @@
       "states": [
         "Florida"
       ]
+    },
+    {
+      "title": "Brownsville residents keep up pressure opposing data centers",
+      "source": "ValleyCentral.com",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNX3hya1k4VHdnd1NCMFlVa1ZFdWlPelhxb055QXZVN2xVN3RYOFRRZzM2SXZBek9kM1Nub3JEV0p4bWRTS0hpZkduQy14Q3hQWHZEZktqVkdLR2ZxOGY0eWNrSnVDbjRhbU40VWN3MHY4VFpybnlTQlFNZjBjUlVkeXN4ejMxcGhlQ2dpbUtSdXBaNUk4X3daRVhycDFVek1vSVhMY1Q4Qi13UDTSAbABQVVfeXFMTnJISmg4YWs3RmhjMGplWmtwcnZqMlpkRUdPdTU0UlNlcGdyVFM5NGh4UWdnZ01idU51RnZFVGYwbDl4T19qY0F3cG9GcnlTUHB1dHdCMklRR015MUs1LUJaN20tZzhTX2NGeUR2clQzSnRCZWhMSF95U0g1SnNXblZBSXZEbDZWUkxuYjF5ODBoZDZVLUFGVEl6VjJVTjlja09CQV9hN2s5d0t4SW05QVk?oc=5",
+      "published": "Wed, 19 Aug 2026 16:49:22 GMT",
+      "published_iso": "2026-08-19T16:49:22+00:00",
+      "age_days": 4,
+      "states": []
+    },
+    {
+      "title": "Trump keeps embracing data centers, an unpopular topic in midterm races",
+      "source": "PBS",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPZlI0NmdyRU40bHljYzlyRTdMNjhfbzJzOTY0SXp5dWY5UGx3SFFQOEx3M0lZOW5zWUt1bVFrZkVhRE9ZSmdzUTJMVFl6ZFBVdmRhbFlGV3BZRnRjcHNQX0ZpR3YtMWFhdE1fMmFqMEI5Q3J0elJnbFdDcWl3TkI1OUNIZTZiYnZHSnFoQWctN2F3ZHNoRWNqdlJqZlhtZ0t4bVdVRnRnSWdNMXAt0gGyAUFVX3lxTE1WZnZtWnprclJvZkNXdE05ZmtGaEgxY3BjTE92dnJKNWFrTVVNMS1PdlMzdDU1d2ZlRWoyWXFQNXhOSEI5cC15eUFsSkRGLVlsam8zdW5JTXJOb2ZhZnNQbkVBWE9vTG5BOUt0SnVlcWowMzlCY1Z4TjNuWm1ORTNBZkZ1UWExRmFKYnU2Z3YtZG5FdEZSQ1VTekNmRTlzUFFZa0w0UG1xYmJHWFRFWDFOcHc?oc=5",
+      "published": "Thu, 20 Aug 2026 19:21:18 GMT",
+      "published_iso": "2026-08-20T19:21:18+00:00",
+      "age_days": 3,
+      "states": []
     },
     {
       "title": "Residents pack Rochester meeting to oppose potential data centers",
@@ -544,15 +551,6 @@
       "published": "Thu, 20 Aug 2026 03:38:25 GMT",
       "published_iso": "2026-08-20T03:38:25+00:00",
       "age_days": 4,
-      "states": []
-    },
-    {
-      "title": "Trump keeps embracing data centers, an unpopular topic in midterm races",
-      "source": "PBS",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPZlI0NmdyRU40bHljYzlyRTdMNjhfbzJzOTY0SXp5dWY5UGx3SFFQOEx3M0lZOW5zWUt1bVFrZkVhRE9ZSmdzUTJMVFl6ZFBVdmRhbFlGV3BZRnRjcHNQX0ZpR3YtMWFhdE1fMmFqMEI5Q3J0elJnbFdDcWl3TkI1OUNIZTZiYnZHSnFoQWctN2F3ZHNoRWNqdlJqZlhtZ0t4bVdVRnRnSWdNMXAt0gGyAUFVX3lxTE1WZnZtWnprclJvZkNXdE05ZmtGaEgxY3BjTE92dnJKNWFrTVVNMS1PdlMzdDU1d2ZlRWoyWXFQNXhOSEI5cC15eUFsSkRGLVlsam8zdW5JTXJOb2ZhZnNQbkVBWE9vTG5BOUt0SnVlcWowMzlCY1Z4TjNuWm1ORTNBZkZ1UWExRmFKYnU2Z3YtZG5FdEZSQ1VTekNmRTlzUFFZa0w0UG1xYmJHWFRFWDFOcHc?oc=5",
-      "published": "Thu, 20 Aug 2026 19:21:18 GMT",
-      "published_iso": "2026-08-20T19:21:18+00:00",
-      "age_days": 3,
       "states": []
     },
     {
@@ -584,11 +582,29 @@
     },
     {
       "title": "Residents request a moratorium at Pott County public hearing on data centers",
+      "source": "News Radio KMAN",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYzZVME9JN2lXZUdnU2dSazdRa01FWE5TREh3cHlPQ3psOEQzSkp1bHlPczNvTGNiZTBPdXE1QjdCY0Z3SWk1eWdmNEZJRkxpS3lteFF3NGdUUE5YVkE1UnRrNV95VGg4ZFczdTZYeDBsNzVhcWRwNGtPUzNhMUl3N1NoSzZ3TFJndERMNkhCNURwNURQMW1CTVBxaVRZbU53bHRDOVdMZ1lWUQ?oc=5",
+      "published": "Fri, 21 Aug 2026 15:17:27 GMT",
+      "published_iso": "2026-08-21T15:17:27+00:00",
+      "age_days": 2,
+      "states": []
+    },
+    {
+      "title": "Residents request a moratorium at Pott County public hearing on data centers",
       "source": "themercury.com",
       "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQX1U2czd0enp3VXpnTzVTNmhSY3pyMEwzZkNRUEVCcmdpZTQ5Vm95MHVEWlRRYlhPa3g4OGZfX0Fjdl9CaDRLYnN2TS1fbFUwVUlmX1pqNnBXVUE0ekZTOElhRDRsYjZpT0o3ZGFuTUxYa1ZrLVJ1U1VQUzRWblBXR0RLeE1lUWJSamg5bXh5R3FEMzh4NnBCUTZPcDdoNEEteVZzRG5lSXBWVG01SWptLUVOUzJsR2h1bmJkc2VmX0lQZm51ZzladnV1bUF5NDc5bXhoQTFmWXVUWDk5clV3LVdVY0g1QWd2SEE?oc=5",
       "published": "Fri, 21 Aug 2026 08:48:00 GMT",
       "published_iso": "2026-08-21T08:48:00+00:00",
       "age_days": 3,
+      "states": []
+    },
+    {
+      "title": "Bay City residents voice opposition to data centers at planning commission meeting",
+      "source": "MLive.com",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPZUhPMjBCZkcybzR2VDBYS3dDM2d6ejg0NVE4aXNNUmxXY2FSVTNyQUIyLW9GRHoxMWpTV1NBQ1JTV2tiOUhMQUFnQmlzMldQeERrd1czbHN0VGM0LXJ2YXBXTGJjUXB3SlIyU1ZoX0tBcGRaVS1yQ2VEekl1dDg0Uzk0akgwUXdPaHU1OHBIcGZjcmE2cnF3WDh4dmdVZ0ZTTS0wZW1DZVc4NXZSYVhBOHhjUG1YXzBVMV83TllzVVpFUXc1R3ZxUnZkbmVjb1dRNnRqYkVR0gHqAUFVX3lxTE1MbUthb3hteVY0MmtXeDlFbF9XQnZuN19SbnF1SjFTX0xxZHk0MkNnMXNwckd1U2FqQXFhQkhBSFhaZVlhbmtsTjl1M1dnc0d0YXlIcGhTdXdsT2xDMkl2Z2lUVjNfY2JIS1Q1anQ0NEdrdldxWDJ4OGF2bjItVERtQ0dSa3RWQUlrTFBEN1lDQzdIMzdmcExuZTNQYWRWVm1iTXBHbmwyX1gxbXBZVVVNUkRLOWFzd3V5N1pmLThGb29DeEVRakJ1WjNkUlJrUHVpM2ZqVzJobGZSckx4WmVURlBIQkNnRHFSZw?oc=5",
+      "published": "Thu, 20 Aug 2026 02:32:00 GMT",
+      "published_iso": "2026-08-20T02:32:00+00:00",
+      "age_days": 4,
       "states": []
     },
     {
@@ -603,30 +619,12 @@
       ]
     },
     {
-      "title": "Laredo town hall on water quality shifts to data center concerns",
-      "source": "Laredo Morning Times",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdG5nTGVTaVZkNm5JOGVlZGRIQm91OE1GMnZYQ3VUMnBQLWpZaE5kZkwya2FsYUN3aUNmZkM1cEtRbHFfd2prbmxZVFQ1WHJURGEyeDlZSWFZTG9YZTkwbjVzaTItR3I3X3l0ZXhvNmdYMXloRmctRmpjdjRaODVLRElvRXZVOG13dkUwV3loRUdyWC1acXY5dXZGR1N5NTk5SUJUeQ?oc=5",
-      "published": "Thu, 20 Aug 2026 18:38:46 GMT",
-      "published_iso": "2026-08-20T18:38:46+00:00",
-      "age_days": 3,
-      "states": []
-    },
-    {
       "title": "Harlingen extending data center moratorium",
       "source": "MyRGV.com",
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTzdMdWpibDZTUWJMQVA5c1pyUFA2ZmQyXzFObkJGSUh2V0c5bGZ6OXdoLWpCMEVnV2RjTVdKSFRVZ211YVZ5QUFVUE5RTXZLUkUzeUttN2NyUDBFaDB0bWdQeDhWOGdNX2lPdkNCUThEV2NOaVM1dnNvejFYb0FnNU50MGpIdlc2S2VR?oc=5",
       "published": "Thu, 20 Aug 2026 22:12:00 GMT",
       "published_iso": "2026-08-20T22:12:00+00:00",
       "age_days": 3,
-      "states": []
-    },
-    {
-      "title": "Residents request a moratorium at Pott County public hearing on data centers",
-      "source": "News Radio KMAN",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYzZVME9JN2lXZUdnU2dSazdRa01FWE5TREh3cHlPQ3psOEQzSkp1bHlPczNvTGNiZTBPdXE1QjdCY0Z3SWk1eWdmNEZJRkxpS3lteFF3NGdUUE5YVkE1UnRrNV95VGg4ZFczdTZYeDBsNzVhcWRwNGtPUzNhMUl3N1NoSzZ3TFJndERMNkhCNURwNURQMW1CTVBxaVRZbU53bHRDOVdMZ1lWUQ?oc=5",
-      "published": "Fri, 21 Aug 2026 15:17:27 GMT",
-      "published_iso": "2026-08-21T15:17:27+00:00",
-      "age_days": 2,
       "states": []
     },
     {
@@ -709,6 +707,15 @@
       "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPNEUtS2g1UTUxUkFyLTBWMXlJOU11Y2lYR1MtRWdTaVVaa0hTcXM1OWtoV0ZBVHVxMzF6V0U4NEVGR2gtYmkyRDdabVVFSmVSZ1NpeVBQWE9JN0Y0TFZlbVQ1cHo1NE5KemxPdXQxUEdrakhnSWxHOHVLME1MaFEzMzYzVXBKN1M5MzJvWDZQY3RnaWk0cXVtcjNUaDRqM1N4S0ZOUUJLeE5TUXkwNHBDaV8waHRhU2Qxa2h5a3p5TVJlbXBXOFg3NUJ3?oc=5",
       "published": "Sun, 23 Aug 2026 09:05:00 GMT",
       "published_iso": "2026-08-23T09:05:00+00:00",
+      "age_days": 1,
+      "states": []
+    },
+    {
+      "title": "Utilities Committee criticized for one-sided data center presentation",
+      "source": "South Bend Tribune",
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxObVkzTEFneWhPWFRKZHMzS0VvLWRWNHNjMmJJV2RNNXFqd2YwWDJTSnZLTERkODhHLVI1S0NWLTR5bm9DT2QtM2FGeWNvMXZjSTdrOVdDeUNkZ0M5eFY1b0dXRG9FaHFFWW9NY0t1QkE0NmhxNkx5UG1sdWlibmhRWXNsd25hek9GUExVUXQtNG5BWTF6NDRoVHNQM3ZmWHZhNXBLSFlCM3VGa1h3MXZ4N3h6bUhwNzQ3U1I2cVRUVWhtckZocldoMlZqaVNvN21vM0QxS0lBZFppS0U?oc=5",
+      "published": "Mon, 24 Aug 2026 09:07:00 GMT",
+      "published_iso": "2026-08-24T09:07:00+00:00",
       "age_days": 0,
       "states": []
     },
@@ -751,32 +758,12 @@
       "states": []
     },
     {
-      "title": "Data center backlash poised to play critical role in midterms: \u2018We don\u2019t even need data centers\u2019",
-      "source": "New York Post",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOeUs4clVBNmhHdmtCWDk5dmlrOEFIR0JxRFhBa09ERG5tcTlRWVNZYVE1UGdKS2lHallNM2hyVThZb1JVajdRcEs4MEpneWJGM05RWk40dURBQlU2RnEzT3dmLUFpaGtjMk03dzhKOGRSdV9Tb3VHajBva1gtbVlOcE9CbWNMWkJmNWxjWGpQQ0J2THdwTjZqV3JNYmpKd0xmUTE4?oc=5",
-      "published": "Wed, 19 Aug 2026 18:33:00 GMT",
-      "published_iso": "2026-08-19T18:33:00+00:00",
-      "age_days": 4,
-      "states": [
-        "New York"
-      ]
-    },
-    {
       "title": "Camden adopts local moratorium on data centers",
       "source": "Rome Sentinel",
       "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZGprMXkyNjFhRU9NdjUwSFQyRDQ5SnRNeW40XzlxbXlXeGhvM25iaDVibG9qSlFRbG53RDRfRGtoSllhdHA4aHRnRmpHbS10RjFqbG1xRXhsenBtU21Dc01oOVBKS25fQUpsOVRLU3QzUF9uTnpwM1BxcU4zdXNLT0Z3ZmtDTlhEVEdiVlJ0ODNXQ3htcGlqT1hTc2xpNmI1TW5OZWp4U3BOREJTdXFzQkNnTHV1YWlpOWEwVUFLazdCUQ?oc=5",
       "published": "Fri, 21 Aug 2026 12:00:00 GMT",
       "published_iso": "2026-08-21T12:00:00+00:00",
       "age_days": 2,
-      "states": []
-    },
-    {
-      "title": "Bay City residents voice opposition to data centers at planning commission meeting",
-      "source": "MLive.com",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPZUhPMjBCZkcybzR2VDBYS3dDM2d6ejg0NVE4aXNNUmxXY2FSVTNyQUIyLW9GRHoxMWpTV1NBQ1JTV2tiOUhMQUFnQmlzMldQeERrd1czbHN0VGM0LXJ2YXBXTGJjUXB3SlIyU1ZoX0tBcGRaVS1yQ2VEekl1dDg0Uzk0akgwUXdPaHU1OHBIcGZjcmE2cnF3WDh4dmdVZ0ZTTS0wZW1DZVc4NXZSYVhBOHhjUG1YXzBVMV83TllzVVpFUXc1R3ZxUnZkbmVjb1dRNnRqYkVR0gHqAUFVX3lxTE1MbUthb3hteVY0MmtXeDlFbF9XQnZuN19SbnF1SjFTX0xxZHk0MkNnMXNwckd1U2FqQXFhQkhBSFhaZVlhbmtsTjl1M1dnc0d0YXlIcGhTdXdsT2xDMkl2Z2lUVjNfY2JIS1Q1anQ0NEdrdldxWDJ4OGF2bjItVERtQ0dSa3RWQUlrTFBEN1lDQzdIMzdmcExuZTNQYWRWVm1iTXBHbmwyX1gxbXBZVVVNUkRLOWFzd3V5N1pmLThGb29DeEVRakJ1WjNkUlJrUHVpM2ZqVzJobGZSckx4WmVURlBIQkNnRHFSZw?oc=5",
-      "published": "Thu, 20 Aug 2026 02:32:00 GMT",
-      "published_iso": "2026-08-20T02:32:00+00:00",
-      "age_days": 4,
       "states": []
     },
     {
@@ -803,7 +790,7 @@
       "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPS0NUSnJheHBCa1dnTUpSSmFnb3F2QVNraDYzX3BPTjFqTElIM0RjdG1Kd2pmb194aXNiV1ByLWF1d21OdldocHV1ckt3SS1MMTRDS3g1aWVkM28wMThoNFV2NHZTZF8xTjJMQXF6Q0ZpQlBlemctN0VKSEFPbHFvNlA4MUw0T2lmQnFQMGtBeHVHTVRYeklIQUZQcG5yTzM2dEVjNEFRdDZNSjNmaVV0dEZYV3ZpXzIwLUpKSVM3SE5EZFdtV2dlTzNIS2swN2t1aTZ3cERxQlhSVEx3XzZZ?oc=5",
       "published": "Wed, 19 Aug 2026 09:15:00 GMT",
       "published_iso": "2026-08-19T09:15:00+00:00",
-      "age_days": 4,
+      "age_days": 5,
       "states": [
         "Ohio"
       ]
@@ -816,6 +803,17 @@
       "published_iso": "2026-08-23T17:00:29+00:00",
       "age_days": 0,
       "states": []
+    },
+    {
+      "title": "Data center backlash poised to play critical role in midterms: \u2018We don\u2019t even need data centers\u2019",
+      "source": "New York Post",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOeUs4clVBNmhHdmtCWDk5dmlrOEFIR0JxRFhBa09ERG5tcTlRWVNZYVE1UGdKS2lHallNM2hyVThZb1JVajdRcEs4MEpneWJGM05RWk40dURBQlU2RnEzT3dmLUFpaGtjMk03dzhKOGRSdV9Tb3VHajBva1gtbVlOcE9CbWNMWkJmNWxjWGpQQ0J2THdwTjZqV3JNYmpKd0xmUTE4?oc=5",
+      "published": "Wed, 19 Aug 2026 18:33:00 GMT",
+      "published_iso": "2026-08-19T18:33:00+00:00",
+      "age_days": 4,
+      "states": [
+        "New York"
+      ]
     },
     {
       "title": "Calvert County commissioners pass 6-month data center moratorium",
@@ -877,15 +875,6 @@
       "states": []
     },
     {
-      "title": "NORTH PORT: Data center meetings set by city, residents",
-      "source": "yoursun.com",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNUmx4NUxMTDRSV2ZTYy1Pdi1jTFdVWm9aUThtM0hES2NVX2wyRzFQeThlamdxSFdBVklMUmtTalJucXRzVDdOOXRIVnFIb0w2VWYxX1ktYjU3QnlNWEN4bVBaUXp4QzZKUzVWYUN6Tm9RTjNkQThVV3htX19SRC1SdDlMN0tlUEVYTlM2aDFLTThubmpkUi1xZHpoZ2hLVUFqZGZoM3M0M1dmekJ4bGhSbnBQak5YajhvMlh6VXVLUWpRdGxLSzZiMkdjZjE5Rkpad25aUEp3?oc=5",
-      "published": "Fri, 21 Aug 2026 11:20:00 GMT",
-      "published_iso": "2026-08-21T11:20:00+00:00",
-      "age_days": 2,
-      "states": []
-    },
-    {
       "title": "Iconic N.J. site could get a huge data center \u2014 even though the town just banned them",
       "source": "NJ.com",
       "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWmt3R2tpa2U1ampxcXdTOEQ3ek1NaFg1bkJvM0R6T2xTb1h1NlBjZThuZTB5c1JteUhka3E2cmljck83Y0ZvN1V5NVpFNDhONnZmbmFlSmtJYkJCalg2cERnMkdoRklMNWtEbVEtVlJoeFBnTzhOM0lNbkwtOTFseWJ6Qi1uMTc3RDhIRmJsVEhocF9KenVyXzNZNDFzajd3V3dxWWJLaVVGUzE2Yk5KMWVKN1lmamNGVGfSAc4BQVVfeXFMTklTSm9lS0pPbW1YQjhaRHFRRk5IWTVBdzljdzB1dkhFQWhVZGwydTFQZU12VkRHZlRTUHNyWUEwMzZLdlF5MnNrWFdxdUItSmFSNmY1eE92R1JIa0s2YnltclVobFdsLVFnaC05TUdFME9DWE51LWpYZUowZjhORldleFFJX1luTnNDVm93VXY3Z1lKZzJ2VnFGaHhjeUxHaXluRzBmOUZRNmNSRlpJRWJDal9GOERVek1GVFJ5N3F2TXAxd0hoTDF0RUtQemc?oc=5",
@@ -918,7 +907,7 @@
       "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPdUVRbGk2SEROMTU0ekNnZmgwY1VnTVh3LTFwZDBjTTFnNFBtWFdxbG5Xbmp6NGtvOGxnMzFPYTd3NUlZVkpVOFNnYmgtN3V5dThrUmwtVFJJYU9BekJVS3B0TGZnVUhSMEkyR0xlZjFXV0FFYWZSZ3JfLXlYeFhhNEVGdHctcXA3TmJkNWwwbzlnNEl0clZkZU1oN2tFUl95cHNrSUEyS3daT21DczdOcjJpdU1MVC15ZVRR?oc=5",
       "published": "Wed, 19 Aug 2026 09:31:00 GMT",
       "published_iso": "2026-08-19T09:31:00+00:00",
-      "age_days": 4,
+      "age_days": 5,
       "states": []
     },
     {
@@ -933,21 +922,32 @@
       ]
     },
     {
-      "title": "Binghamton residents say data center moratorium doesn\u2019t go far enough",
-      "source": "WBNG",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOSEYyS1lITnBUZDRuX3hhRFA4MjhXSklKaFBCX1ZqdUMya3ZRRjZBOXZDQnVSandnNGhDYWtJQ2dMbUtKRDMwUFZaSm9IRFhjZ1l1S1JpTklQSXVkYU9scjg0ZzVjTE5SSEk5XzhPUnluZE1qR05mcFVVX2NmZk5Oam42N1ZIVkZZM0xNS1drNmR5NjEyUGJSemJPVkJ4ZVU5X3R3MFk4RGZHdUE?oc=5",
-      "published": "Fri, 21 Aug 2026 22:33:00 GMT",
-      "published_iso": "2026-08-21T22:33:00+00:00",
-      "age_days": 2,
-      "states": []
-    },
-    {
       "title": "Data centers activate residents; what can be done to mitigate concerns?",
       "source": "Shaw Local",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQbW5hNzkwTEZEY0p0NHdhelNEVzdQQk9wMFI5U3V1YlZJMm1Ha2tYYk1SbUFaSHlZaHotRnJXcGEzMHFBNDVQVUM3LXhRTkxLOW5GOGlZaFhydXZMMl9VdkY3b0hTNnpGdWRwZ1E2VzNVTnhUXzIxa0JaZXFfaUlDQUQtRXd3Qm9vYldMZHQ4c2o3WDhwdG11X0xmcndXcEdHQjQ5X2dTTWhENk9IX0tPRkd3?oc=5",
       "published": "Wed, 19 Aug 2026 11:00:01 GMT",
       "published_iso": "2026-08-19T11:00:01+00:00",
       "age_days": 4,
+      "states": []
+    },
+    {
+      "title": "Data center concerns unseat council members in local Florida election",
+      "source": "Treasure Coast News",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNNEd3OGc1TmhUdXBHVGxabFA0dlR3NGhBUndaZnlVVjBxYzRkSE5NQ2g2c252LVBadWQ4N3R3a1gxTnFJYjE3djM3aWhPS2ItSnpqZmdBR2llc05Ja1U3OEE3em9LTmxpdENGbXp6WVd5YXlneGk4ZXBmTk82NXBEZXFGbnhrUUZ5OU9TM214RUpXU2RwSTN0eHVhMUxTNGxvdnY4S2x1Rk1jb25SNXNDZXAtd012aWRiME1qeVJ4T1VNRnV4YUJlNDRjdHNMU1I1Tnc?oc=5",
+      "published": "Fri, 21 Aug 2026 09:04:00 GMT",
+      "published_iso": "2026-08-21T09:04:00+00:00",
+      "age_days": 3,
+      "states": [
+        "Florida"
+      ]
+    },
+    {
+      "title": "Patterson extends data center moratorium through July 2027",
+      "source": "CBS News",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdk1oOUtmNlMxemxLZTFmd3I5eHE4UW43S3dHZ29kZWJfa1g5OU1IR01aYVFmQTBYWlJ1cVRpQXk4d2J6TnYxZmlzTVp4dkJxRzJxb3gyY0JsQngtUGVoN0lZVDB2MVNabUxEdW5qM2VHcDN3bHFfVTFhWGNaV2lhSWN1TGgzTFkz?oc=5",
+      "published": "Wed, 19 Aug 2026 03:53:28 GMT",
+      "published_iso": "2026-08-19T03:53:28+00:00",
+      "age_days": 5,
       "states": []
     },
     {
@@ -967,7 +967,7 @@
       "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPRU4wZ2ktUGRFZmQ4RU5BV21vVFRqU3BidmdNUUFNUWtXUER2STVydWFUNVN0Ml9ZNzZSLUJUN0JxUGwtc0NxUklhNG1tZGpNMXJPU0VVLTlNejBXM3pqTm9KSkhLX2txNFlwUGNqNWNwaFFYbUFuLU1YUDNOOGFRRkh4dzFmZXQ1YkV3dXpJQkhndGs?oc=5",
       "published": "Tue, 18 Aug 2026 09:03:03 GMT",
       "published_iso": "2026-08-18T09:03:03+00:00",
-      "age_days": 5,
+      "age_days": 6,
       "states": [
         "New York"
       ]
@@ -1015,17 +1015,6 @@
       ]
     },
     {
-      "title": "Oracle drops lawsuit against Wisconsin regulators over data center rules",
-      "source": "Milwaukee Journal Sentinel",
-      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQQXZHVWo4TDAwRVVwdGo2VnVrVW93bGpfd1pqeldDR05pZzhKOE1SZXRJZ24wdFU4eVJVMFFkTlhkaEdoVDZVUmhlbkZIckt1WWJPaUFRTEZCY080cnF6OUhnTkF0NjViQTc2amswcmJRZHFTWFFNdTVhX3NhUkZ5RFVvNVpiSmk0VkhmVFlmc0NyeWU1UXFSYU1CS3dBazFDeUxiMDhGN0dtaUdFTW5oVC02RlY4VWJ2U0ZaMkFPQjFZVmd6UF9wMzRYczh1R3FkamZXV3d6ZmRWcXh2SjJVSUZmUnpqc2ROZ2RlTmJxbWJQcDdyM190cXBDMzlxdkF5OWc?oc=5",
-      "published": "Mon, 17 Aug 2026 15:58:00 GMT",
-      "published_iso": "2026-08-17T15:58:00+00:00",
-      "age_days": 6,
-      "states": [
-        "Wisconsin"
-      ]
-    },
-    {
       "title": "Salix City Council votes no for data center moratorium",
       "source": "KTIV",
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQVXhGamJuWkF5V21Bek1nWWV2ZUl1Q1I0S1ZfNkNQOW1RbE9fNmdROUxoVXhnWVJJR0Jyd1k1NUFDTlpmM204XzEtcmp3a1N0Y1V1NGZ2ME0xQ2wxSVhmS1lTU3RjLVZ6dXo0YjQ4TkNoVC1wZHRlWi1BeHFUdWJwQXRMYmE5ZXpFSVMw0gGfAUFVX3lxTE5YUERLVm5XMGZzdGFxT3JmejVBMHJSMXVncW9hWEdSakJ3OTdxb0dlQlNqX2lUNWo5TmhyTUhRaFlHdGJBWHF3aE13Z2F4UE0tY3BGa3RFc21ncHBtbDZsZU1WSTgxRUFVSkI3OTVMYi1vdUtmNTcxMF9FOHJKXzc0WFZfemdISkVqc2ppdlJBZlZEYTFoWnFnSkRuQXkxMA?oc=5",
@@ -1043,6 +1032,17 @@
       "age_days": 6,
       "states": [
         "North Dakota"
+      ]
+    },
+    {
+      "title": "Oracle drops lawsuit against Wisconsin regulators over data center rules",
+      "source": "Milwaukee Journal Sentinel",
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQQXZHVWo4TDAwRVVwdGo2VnVrVW93bGpfd1pqeldDR05pZzhKOE1SZXRJZ24wdFU4eVJVMFFkTlhkaEdoVDZVUmhlbkZIckt1WWJPaUFRTEZCY080cnF6OUhnTkF0NjViQTc2amswcmJRZHFTWFFNdTVhX3NhUkZ5RFVvNVpiSmk0VkhmVFlmc0NyeWU1UXFSYU1CS3dBazFDeUxiMDhGN0dtaUdFTW5oVC02RlY4VWJ2U0ZaMkFPQjFZVmd6UF9wMzRYczh1R3FkamZXV3d6ZmRWcXh2SjJVSUZmUnpqc2ROZ2RlTmJxbWJQcDdyM190cXBDMzlxdkF5OWc?oc=5",
+      "published": "Mon, 17 Aug 2026 15:58:00 GMT",
+      "published_iso": "2026-08-17T15:58:00+00:00",
+      "age_days": 6,
+      "states": [
+        "Wisconsin"
       ]
     },
     {
@@ -1153,6 +1153,15 @@
       "states": []
     },
     {
+      "title": "Anderson County council approves final reading of six-month data center moratorium",
+      "source": "FOX Carolina News",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMGRUVndKNW9IVVREbFJ3VVdrX0txSjZ6Q0N4U25oT0RpQ2p5N3VPWWlkbWRiV0VYNl9WdHhQamxjSG8zV2VKOU1FMGJsb2JCSE5uQUFoM0haTW9WbjJQXzhwTF91MS1rN3ZYNFVLSFdZWFc0OHBUQmo1Um5ILXh3c1hGeVFmaDIwZ21uUEd2eExwbTNSS0tudGFJaGxrN1FQNmVMQldWU2RrcVBBblotV2NVWmNsX00wR3JZ0gHPAUFVX3lxTFBGRFhNSXNnZE9NVzhQS2t6cjE1ajJZZTZQSUxxNUNaWHVRdmxhUlI0cVJIQTBCNFRfSlR1WUZsamN2U0NPMVVnbjAxR1g0WnZaMDRWeTJ1YnIxV2laeE5TbFJQbGJraTQyNVBGV0hOc2dWR0hxaWl6Z01Yc0l0N2dmajV5TG1NQVk1eGxmYjdUX01IWnVHTUVVUGNZcGZ5ek1wTFNNOXE4QnZ2VEZYVld0ZzdIc0xjOEU1dnRUSzhqOEhvcDRwekxkcjl0RDFtYw?oc=5",
+      "published": "Thu, 20 Aug 2026 20:43:00 GMT",
+      "published_iso": "2026-08-20T20:43:00+00:00",
+      "age_days": 3,
+      "states": []
+    },
+    {
       "title": "Data center developer sues Michigan city, challenging one-year pause on projects",
       "source": "MLive.com",
       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVVpXS3JGY2ljRWl1SGNlQ2pDdDFuVU1XZkREcTE2YzM4SE0xZGlvckxDZEJPV0tVTWJoanh4dW9qTlRkYWZ4eUhFMHFMSUZWZTJhM3RNWEdxSkp2UUZRX2FsYXBVWURDQXNRem5lM2tmNjRCaFpVcklPVlhNQ3Z6b1B0M2Z3dEQ4bnI2U19leG83QnNnT1pMRk10M2tMZG55VEVHSUNFN09FWVA3RHBVRVNUVGd1U1l6U0lsWVdIRElCQTQ3R2fSAdoBQVVfeXFMUFg5WFZzUFlTQkJyUkZMZGFLcmlpUVRFZjgyNDJ2RTVJdEhHSkthRE13VkhRQlhVYnpVSFpJS05UVDV4cThzRTNxeE5GeXQ1dE5OY2Y3Y1hValJrSTZhOWZ3a1B2UTVaLUxoSFNPX1BNRGpBUnhkb3NMSlhIeEZQN2xrVVJOeTVJVzM3dWh1VzM4a0JpZ1cxOTY1VVJkSkNNM0lMQWQ1QS1ENVJ3QVBfWlFqcmRoaTFHX3hmZ19fd1N1ZXM4R21oQjRyTU5rWjFzUmNYeTlhQmFRWWc?oc=5",
@@ -1175,15 +1184,6 @@
       ]
     },
     {
-      "title": "The Data Center Backlash Bursts Into the Midterms",
-      "source": "The New York Times",
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNelpMLW5zcG5WXzhQT1FZdzBWSEdHUGhxeDdrVjh5dGtYWWZ2SUJ2Yi10R24tRnY1bW93WHFZdkd4R3lQNDdGZW1DeDBFa3N0TGdoazFFZ2xnUm5aNW9nY0x0Z1pBdjQyZ2tQTFFRS09rdG1ibHdPM0ZPSGVIQXpPRFRYNjJ2d2dfV3c?oc=5",
-      "published": "Sun, 23 Aug 2026 09:01:58 GMT",
-      "published_iso": "2026-08-23T09:01:58+00:00",
-      "age_days": 0,
-      "states": []
-    },
-    {
       "title": "Thurston County looks to ban AI data centers for a year. Are any planned here?",
       "source": "The Olympian",
       "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1uQmxMeDR6cjRXZVdMRXZPekkxb09hMHNpMUplVk5NUUdiTnFLZGlNdDR3bUxtRk5ySXgzRF93by1mWk5UR2pEQjRiSkNGQW1JNEhzYkxfWWdKUnJvYWJ4UW82LXpwUWpidGZuTNIBbEFVX3lxTE9pM0xCQTJhWld5b1E1d3dRT3dVMjJ0LTZJRVl4UHRoNUs0eWhxbWpLVHF0MWpWWVdmTVJRT2tjQm5qZ0RlR1hQQlh4ejhvYjRaSG5WRndGTXdFU2ZuM1RKX19CRV9xaHFBYm11Zg?oc=5",
@@ -1193,12 +1193,12 @@
       "states": []
     },
     {
-      "title": "Anderson County council approves final reading of six-month data center moratorium",
-      "source": "FOX Carolina News",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMGRUVndKNW9IVVREbFJ3VVdrX0txSjZ6Q0N4U25oT0RpQ2p5N3VPWWlkbWRiV0VYNl9WdHhQamxjSG8zV2VKOU1FMGJsb2JCSE5uQUFoM0haTW9WbjJQXzhwTF91MS1rN3ZYNFVLSFdZWFc0OHBUQmo1Um5ILXh3c1hGeVFmaDIwZ21uUEd2eExwbTNSS0tudGFJaGxrN1FQNmVMQldWU2RrcVBBblotV2NVWmNsX00wR3JZ0gHPAUFVX3lxTFBGRFhNSXNnZE9NVzhQS2t6cjE1ajJZZTZQSUxxNUNaWHVRdmxhUlI0cVJIQTBCNFRfSlR1WUZsamN2U0NPMVVnbjAxR1g0WnZaMDRWeTJ1YnIxV2laeE5TbFJQbGJraTQyNVBGV0hOc2dWR0hxaWl6Z01Yc0l0N2dmajV5TG1NQVk1eGxmYjdUX01IWnVHTUVVUGNZcGZ5ek1wTFNNOXE4QnZ2VEZYVld0ZzdIc0xjOEU1dnRUSzhqOEhvcDRwekxkcjl0RDFtYw?oc=5",
-      "published": "Thu, 20 Aug 2026 20:43:00 GMT",
-      "published_iso": "2026-08-20T20:43:00+00:00",
-      "age_days": 3,
+      "title": "The Data Center Backlash Bursts Into the Midterms",
+      "source": "The New York Times",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNelpMLW5zcG5WXzhQT1FZdzBWSEdHUGhxeDdrVjh5dGtYWWZ2SUJ2Yi10R24tRnY1bW93WHFZdkd4R3lQNDdGZW1DeDBFa3N0TGdoazFFZ2xnUm5aNW9nY0x0Z1pBdjQyZ2tQTFFRS09rdG1ibHdPM0ZPSGVIQXpPRFRYNjJ2d2dfV3c?oc=5",
+      "published": "Sun, 23 Aug 2026 09:01:58 GMT",
+      "published_iso": "2026-08-23T09:01:58+00:00",
+      "age_days": 1,
       "states": []
     },
     {
@@ -1209,6 +1209,28 @@
       "published_iso": "2026-08-21T12:14:00+00:00",
       "age_days": 2,
       "states": []
+    },
+    {
+      "title": "Nye County totally bans data centers in over-appropriated water basin",
+      "source": "Nevada Current",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNS3VKdmFad3pVdWV5ZnV0dFhGTG1LWmQwdWRsYWczUkVUcV9ZSUZsVldIUmJ5cDBRR2lvd1hTWnR6MWQ5NVd0ZVdqYzRZWHNTNUw3X0s1RmNQUmVQY1NWMkNLaDdHbVM0U0lSY3pqMEwzd21HSjFwb000Y1M4b0pGdTdGNWUxUFJYQjBLUEh1Rks5YnhLRGNXUzVwcm5QcjlyZEJZVkw2SEN0Vzg?oc=5",
+      "published": "Thu, 20 Aug 2026 12:37:25 GMT",
+      "published_iso": "2026-08-20T12:37:25+00:00",
+      "age_days": 3,
+      "states": [
+        "Nevada"
+      ]
+    },
+    {
+      "title": "Data centers become a focus as governor\u2019s race takes off",
+      "source": "Wisconsin Examiner",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNeXotS09jdkFrR2lmSWNPaWtPZmdFZDFZcWpvdUlUeUVYOTV0VE5WRnBuSVhqRG02aGVkWG56RlZNbW1jLTFIa2s2Q3FGUExNOFlLSVp0VlNONnZoTi1aNkRpTlJ0bE15ZTZOdHNKaFpCY1RlNF9aRmt6VnNSMldlN3RwT05HUUZCYkU0ZjBwVUxyV1ZEVjg5S0xNNWtLdw?oc=5",
+      "published": "Tue, 18 Aug 2026 08:24:05 GMT",
+      "published_iso": "2026-08-18T08:24:05+00:00",
+      "age_days": 6,
+      "states": [
+        "Wisconsin"
+      ]
     },
     {
       "title": "Mike Rogers calls for 1-year data center moratorium",
@@ -1248,17 +1270,6 @@
       "age_days": 3,
       "states": [
         "Ohio"
-      ]
-    },
-    {
-      "title": "Nye County totally bans data centers in over-appropriated water basin",
-      "source": "Nevada Current",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNS3VKdmFad3pVdWV5ZnV0dFhGTG1LWmQwdWRsYWczUkVUcV9ZSUZsVldIUmJ5cDBRR2lvd1hTWnR6MWQ5NVd0ZVdqYzRZWHNTNUw3X0s1RmNQUmVQY1NWMkNLaDdHbVM0U0lSY3pqMEwzd21HSjFwb000Y1M4b0pGdTdGNWUxUFJYQjBLUEh1Rks5YnhLRGNXUzVwcm5QcjlyZEJZVkw2SEN0Vzg?oc=5",
-      "published": "Thu, 20 Aug 2026 12:37:25 GMT",
-      "published_iso": "2026-08-20T12:37:25+00:00",
-      "age_days": 3,
-      "states": [
-        "Nevada"
       ]
     },
     {
@@ -1306,15 +1317,6 @@
       "published": "Tue, 18 Aug 2026 01:11:00 GMT",
       "published_iso": "2026-08-18T01:11:00+00:00",
       "age_days": 6,
-      "states": []
-    },
-    {
-      "title": "Greensboro data center moratorium raises questions about Dream Center project",
-      "source": "WUNC News",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQS3AtNG9FSjdVVU1qajlIT2toak9PcWdVYVRwZVZTTE5kM0FydnJQeEdCRWFGdFEtSnZLZnFqTUZURU54a2VCb2hTV1FjV0poVTFrWTRFVEpjWG9TdGxITEw3cVpfZ3FvUldEVC1hVnRmNmdGM05heXU4XzAyOTR2TFZqS3BpVnJpbVk4QnlnczVpaEZ3Qjhrdm9haS00Tlo2LWY3VkxWZDZfRGtkS0E?oc=5",
-      "published": "Wed, 19 Aug 2026 21:02:00 GMT",
-      "published_iso": "2026-08-19T21:02:00+00:00",
-      "age_days": 4,
       "states": []
     },
     {
@@ -1392,6 +1394,15 @@
       "states": []
     },
     {
+      "title": "What\u2019s inside proposed data center ordinance for Bay City",
+      "source": "MLive.com",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWmk1SnFUd0pZcXdhVkFoOTVwWjNmU2M1LWNjWkw0U2VkWkZTZ0N6aThFdWt1TWtoV0x2VU10MDNFcVZfTmMtZmpOMXd0RnJKUl9OQUkzMHdXZEY1YWtndXRqZUMxcEZBdzJhZ3Q2dGd4SEhQa1VTcjNQOEpmZV91ZUxRejlNc0tFUlVwaXBzazdKVDRjWTN0ODBzNk53eldqVWl5d0NpWE4zZXZOQktrd1EzNNIBxwFBVV95cUxQeFF0UElOOElzSm9Tak8xT3RhZFotN3duaU9RQ2toc3d0THB1U0lEY3FzclRRUzVCTWdPTDctWTVnaGpOeVhhOHhaSHQtRmhHZnVxQkZDYUZneXpkSjNyY2tIb25rRnJXUmFta3JTQ1VXa3RldlU4a21FV0d4a19jaWxzRHlzNHVCRkpVb3NINS1BS3Bsb29tbUpoTDRoU2txOFZEajBKaUwxbzRrUTN5bE1nM0IxcFZpR29wUXZqeU1TRWFnZ3M4?oc=5",
+      "published": "Tue, 18 Aug 2026 15:07:00 GMT",
+      "published_iso": "2026-08-18T15:07:00+00:00",
+      "age_days": 5,
+      "states": []
+    },
+    {
       "title": "Federal regulators accept preliminary permit for underwater data center off Eastport",
       "source": "The Maine Monitor",
       "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSXQwUFpCbUlVZnVqT0lMUm5yQ29IRzFZZHBkRVZqX3RBSnJhY0RFa1l5M3ZYXzhrMmFjX0FWRXpweVgzUGRlRFM3MktqYjlaenVQRElEb2REUlJ1NERJUk9WRFkwX2RYdjV5SmQ3cjRYam5YbzFYRGU2dFk1cFc2cWl1cjJwRC1sdldWM3Z3?oc=5",
@@ -1403,14 +1414,14 @@
       ]
     },
     {
-      "title": "Data centers become a focus as governor\u2019s race takes off",
-      "source": "Wisconsin Examiner",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNeXotS09jdkFrR2lmSWNPaWtPZmdFZDFZcWpvdUlUeUVYOTV0VE5WRnBuSVhqRG02aGVkWG56RlZNbW1jLTFIa2s2Q3FGUExNOFlLSVp0VlNONnZoTi1aNkRpTlJ0bE15ZTZOdHNKaFpCY1RlNF9aRmt6VnNSMldlN3RwT05HUUZCYkU0ZjBwVUxyV1ZEVjg5S0xNNWtLdw?oc=5",
-      "published": "Tue, 18 Aug 2026 08:24:05 GMT",
-      "published_iso": "2026-08-18T08:24:05+00:00",
-      "age_days": 6,
+      "title": "MAP: More Arkansas communities putting data centers on hold",
+      "source": "Arkansas Advocate",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQaGRSUGRPOG83WlRMSTR0bWNvTlJPNFU4X2hxeGVuNG9XbjE3QmJhM1ZhWUxXeUlnS1FnVGdsYmV5OEEtX1dwMDVpZDJERVlrNThHZFZ6bmZzWkxKN2YzbU9GWTloTzB1V0F0LWVtdHowdWdUYmJpcXh2dVIxcjhsWGk1dUxOT2J6MVBXUm8zWTJyMlVPNlhhMFBnSF9Eektk?oc=5",
+      "published": "Mon, 24 Aug 2026 10:19:29 GMT",
+      "published_iso": "2026-08-24T10:19:29+00:00",
+      "age_days": 0,
       "states": [
-        "Wisconsin"
+        "Arkansas"
       ]
     },
     {
@@ -1461,12 +1472,30 @@
       "states": []
     },
     {
+      "title": "Pataskala City Council hearing Tuesday on data center proposal comes after residents petitioned for a vote to ban such centers",
+      "source": "The Reporting Project",
+      "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPM2k3NEZMU2RQbVh3VmFJY2pfc19ER19jYzJhMHFVOFFpMGF0UVBKaXQzMUVOX01OcjZfVmFmSFpJQjRDYUZkeWY5RjRvQkJiNnhCWkdzQ05VN2wzNF9IMDBzNXNEQ2p4ZlB0Wml3cUR6bUNGZkFqT2sxNFZrZG1hVHNCTXVYRnFzQTFZeDBmTV93N3BPbXhfalIwYlBxTElfQkVkU3B1SGpjTzlHaEhRRTFpdmk1VHVZc28tTjl3MWlZMGxJLURXbnJmZDBEVlptOVYyRkdUN2d1Z0U0V3dsTmMtdm4yUWlvM2hzNXhmMVQzTVFoRHc?oc=5",
+      "published": "Sun, 23 Aug 2026 23:43:07 GMT",
+      "published_iso": "2026-08-23T23:43:07+00:00",
+      "age_days": 0,
+      "states": []
+    },
+    {
       "title": "Bristol Refers Data Center Zoning to Planning Board",
       "source": "Uprise RI",
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOVVBFOEhKYWZ0TUVjYVd0SGVvcElLVWZBaTY4MnJWOVJ1SjVQWU5FQ25KZnJub2pOZlRNNkJ0bDlnOGV4SmRHejhqbktjNmVpenNvYklQZ3pKemVFNjV5amdnU2tCbG50cmNCSXNCZV94OVo5X1lBejVhWTFGLVFSeDl6YXNOWjdHTGl2M1hzQVlSY3VvVXp3RzNXNTZNUQ?oc=5",
       "published": "Sat, 22 Aug 2026 07:51:46 GMT",
       "published_iso": "2026-08-22T07:51:46+00:00",
       "age_days": 2,
+      "states": []
+    },
+    {
+      "title": "Exclusive: 75% of Americans Now Oppose Local Data Center Development",
+      "source": "Heatmap News",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBabTdLVmdvVkVoRjZYV3pLSnEzQzlwQnVNNGdaNzN4WTJvbzRxanJlY0JjMjFZVEpiU0tna2dKMFROUEFMN0NLaU8wT3VORlNvbUNVVFhUZnpjWW5jejJMcURmelRDT04xZTZwcVJucTA?oc=5",
+      "published": "Wed, 19 Aug 2026 22:02:00 GMT",
+      "published_iso": "2026-08-19T22:02:00+00:00",
+      "age_days": 4,
       "states": []
     },
     {
@@ -1517,15 +1546,6 @@
       "states": []
     },
     {
-      "title": "Pataskala City Council hearing Tuesday on data center proposal comes after residents petitioned for a vote to ban such centers",
-      "source": "The Reporting Project",
-      "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPM2k3NEZMU2RQbVh3VmFJY2pfc19ER19jYzJhMHFVOFFpMGF0UVBKaXQzMUVOX01OcjZfVmFmSFpJQjRDYUZkeWY5RjRvQkJiNnhCWkdzQ05VN2wzNF9IMDBzNXNEQ2p4ZlB0Wml3cUR6bUNGZkFqT2sxNFZrZG1hVHNCTXVYRnFzQTFZeDBmTV93N3BPbXhfalIwYlBxTElfQkVkU3B1SGpjTzlHaEhRRTFpdmk1VHVZc28tTjl3MWlZMGxJLURXbnJmZDBEVlptOVYyRkdUN2d1Z0U0V3dsTmMtdm4yUWlvM2hzNXhmMVQzTVFoRHc?oc=5",
-      "published": "Sun, 23 Aug 2026 23:43:07 GMT",
-      "published_iso": "2026-08-23T23:43:07+00:00",
-      "age_days": 0,
-      "states": []
-    },
-    {
       "title": "ERCOT aims to complete Texas governor\u2019s data center audit by December",
       "source": "Utility Dive",
       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1OTTVLa3d4cnNCQ0RpOVpWeUxZYXVYUUhkZ3UwcHl4RzFxZlVUS2p6Q05heFcxTmE1Q182TGpmQl9sUzdlUm1iOWhrTzhmS3Z3R0lnNFRsWFpQQm5wa1VMQW52VU5EeFdTQXJCWFRjN3VqQTVBU0F2TUJ3ek90OW8?oc=5",
@@ -1543,15 +1563,6 @@
       "published": "Sat, 22 Aug 2026 04:17:44 GMT",
       "published_iso": "2026-08-22T04:17:44+00:00",
       "age_days": 2,
-      "states": []
-    },
-    {
-      "title": "Exclusive: 75% of Americans Now Oppose Local Data Center Development",
-      "source": "Heatmap News",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBabTdLVmdvVkVoRjZYV3pLSnEzQzlwQnVNNGdaNzN4WTJvbzRxanJlY0JjMjFZVEpiU0tna2dKMFROUEFMN0NLaU8wT3VORlNvbUNVVFhUZnpjWW5jejJMcURmelRDT04xZTZwcVJucTA?oc=5",
-      "published": "Wed, 19 Aug 2026 22:02:00 GMT",
-      "published_iso": "2026-08-19T22:02:00+00:00",
-      "age_days": 4,
       "states": []
     },
     {
@@ -1603,15 +1614,6 @@
       "states": []
     },
     {
-      "title": "Rising data center backlash shakes up midterm races",
-      "source": "The Hill",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNS3BCYW5UWWdsTk16amo0TTg4OE5UcTQ3VVFjRmxQZlpoR3hfOHNabFpfTlhTTC1uR201eHdxaW4tUnFzNUN0WlhseGp6NlFLRkI2bmlyVUIwdTFhRDRrNU5nMzZZWEo1Sm4ycEEyU1RlcC10UG9FanZnTzhKTFJWVWRHcXlUNS1JMnJZc3llb1hzVVF3aFBiTmd2UFNjZ9IBowFBVV95cUxQdloxeUgwQjA0QTZCVnNmNHdZR3V3VGNORmVLcTQ1al9GUVBHRzltWjR0VzhkdmNSUGxSUXdMM2VTQnlZcVFXQ1J1bDBrTUhKNTU0aXlSTHJBUldLLXBpNWk3X0RXT1dlZFNLcXFNSEVNb3ZyV0dnYWliOWRnT0xRQ0dVN2ZEYlF5MEMxNENRZVRQbHk1R0lNNllucC03Zl9WcFdB?oc=5",
-      "published": "Fri, 21 Aug 2026 15:27:00 GMT",
-      "published_iso": "2026-08-21T15:27:00+00:00",
-      "age_days": 2,
-      "states": []
-    },
-    {
       "title": "Push for a data center moratorium in St. Joseph County",
       "source": "WSBT",
       "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMTZxZjhOdXVzaGlpRURIamxVWW9tVXl2bXVNWlpsbXpoVHFSQjRab2lxd2c1enhZZnpaMnM4NWlrbFJ1eUE4MVNiTnVEWEV3X1F2MzhvcXlHaG8wa1Y1MDFVRXJXMDNHYThSUlYyekZ0X1RjZkhKRDc0WEJiTktqR283M2MwWWxD?oc=5",
@@ -1621,32 +1623,21 @@
       "states": []
     },
     {
+      "title": "Rising data center backlash shakes up midterm races",
+      "source": "The Hill",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNS3BCYW5UWWdsTk16amo0TTg4OE5UcTQ3VVFjRmxQZlpoR3hfOHNabFpfTlhTTC1uR201eHdxaW4tUnFzNUN0WlhseGp6NlFLRkI2bmlyVUIwdTFhRDRrNU5nMzZZWEo1Sm4ycEEyU1RlcC10UG9FanZnTzhKTFJWVWRHcXlUNS1JMnJZc3llb1hzVVF3aFBiTmd2UFNjZ9IBowFBVV95cUxQdloxeUgwQjA0QTZCVnNmNHdZR3V3VGNORmVLcTQ1al9GUVBHRzltWjR0VzhkdmNSUGxSUXdMM2VTQnlZcVFXQ1J1bDBrTUhKNTU0aXlSTHJBUldLLXBpNWk3X0RXT1dlZFNLcXFNSEVNb3ZyV0dnYWliOWRnT0xRQ0dVN2ZEYlF5MEMxNENRZVRQbHk1R0lNNllucC03Zl9WcFdB?oc=5",
+      "published": "Fri, 21 Aug 2026 15:27:00 GMT",
+      "published_iso": "2026-08-21T15:27:00+00:00",
+      "age_days": 2,
+      "states": []
+    },
+    {
       "title": "Recap: Bristol Council Sends Data Center Zoning to Planning Board",
       "source": "Uprise RI",
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNMFo1LXJtSEpnUmFfcm80OHZQWjJPeGxja3psazJicVRPb183UlNrTzB3RXdCalBaaTBieWFQaS05VjB3TzF5MV9VQ3NreEdSNFI1YURmTjNIVUNPcm1mMjVpVVlFTlA2S2dHYkVOa0Q3aVBabEM5RHFqd2N1ZGdMc1M2ZzNLWEZ2N0IydXpaSTBJNkFWV2R5ejRB?oc=5",
       "published": "Fri, 21 Aug 2026 05:46:58 GMT",
       "published_iso": "2026-08-21T05:46:58+00:00",
       "age_days": 3,
-      "states": []
-    },
-    {
-      "title": "Michigan Republican Rogers backs temporary ban on data center construction",
-      "source": "KEYE",
-      "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQWElMcmJlaXVTLW56NjZYOW0wLTVFa1p5N1B4SjNBcGF1Z09Dbnp6TERIZjRhX0RSSDZVeE1QeENfT3lnNWhkVThiNEIzdjVNX1VUQWxmZGNDM1JGVTV6TEJYSlRaSm93LUlldjRtMmdlRDNubDhEZ2d1NHBlSzdFN0F4Nnl5RnMyNjc0b2RqRXJNZ01UUGZWMFBCQWoyd1gtZmR3bktUb29lX3NCeUR1WElJbVA1U09aWlVtM2l3M1N4SkJoelZBTl9ZOUo4ZDlWNXZUQm9STWRUS2lVWjhJN0lZMzdEb2NZckR2dkRMaWNvYWFHWTV3WXd4MUdrR2xlS2VRdzZESEFlUQ?oc=5",
-      "published": "Fri, 21 Aug 2026 20:51:58 GMT",
-      "published_iso": "2026-08-21T20:51:58+00:00",
-      "age_days": 2,
-      "states": [
-        "Michigan"
-      ]
-    },
-    {
-      "title": "Federal regulators accept preliminary permit for underwater data center off Eastport",
-      "source": "newscentermaine.com",
-      "link": "https://news.google.com/rss/articles/CBMivAJBVV95cUxQZGRZUV85THZTWVVOeWRGZ1FoUmlaTk1mdmtDZnVjX1ZQd0RIMGJtVDAxTlN6bXlSbnVHdmVCb3dwN2VRWE5sbzI2SEJubE8zT0FkT3lxV1FhRVFSUGRPTkg4Q3RMVkxXeTZ5YVBjaE56STVFaGlMY1oxbXhQOW9qMUpwUGxfLTItcmxlamZOSWNBZGt6dnpYdXNZaU5nTDd5MzdrT2Fhc09xMGNfSlBzUkZzT1pvM25oc0IzYUJpY01ra3RkczFFdkdHT1dPOG9Xc2xlaDg1NXBFU3NUa0lDWnNCX2prbXJHNXRMQW9Wa2stR29aR0VoWTBHSVNFREw4VTZfVGRZV3hmcG5BbWQ2N2Nic0tKVUlTWk41Z2NCYUFPWEdBUEVja2tyZ0JaRWxsbDRETTNhZFk5MXFx?oc=5",
-      "published": "Sat, 22 Aug 2026 02:13:00 GMT",
-      "published_iso": "2026-08-22T02:13:00+00:00",
-      "age_days": 2,
       "states": []
     },
     {
@@ -1679,24 +1670,13 @@
       ]
     },
     {
-      "title": "Dodge County Board of Supervisors votes to approve data center moratorium",
-      "source": "Daily Dodge",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQbDRicDhKR3gwNmNNVzBxYkJkS0FMNm5KbWNnVi11VjlUUHQxQXFmSEM0QlBZM2ROemljWkJlQ0U3YmdOWkh1RmlKZENXMlQwMjNlc3M2akxycXZPQ2d4SElJRVJ1NW5NN1ZUWE1XblZHVktRX1VuVmpHeHg4cmZBZVJHSFZfTFhpRzlfc3lvOHk0R01IS2h2aEdjQlpJZw?oc=5",
-      "published": "Wed, 19 Aug 2026 19:20:02 GMT",
-      "published_iso": "2026-08-19T19:20:02+00:00",
-      "age_days": 4,
+      "title": "Federal regulators accept preliminary permit for underwater data center off Eastport",
+      "source": "newscentermaine.com",
+      "link": "https://news.google.com/rss/articles/CBMivAJBVV95cUxQZGRZUV85THZTWVVOeWRGZ1FoUmlaTk1mdmtDZnVjX1ZQd0RIMGJtVDAxTlN6bXlSbnVHdmVCb3dwN2VRWE5sbzI2SEJubE8zT0FkT3lxV1FhRVFSUGRPTkg4Q3RMVkxXeTZ5YVBjaE56STVFaGlMY1oxbXhQOW9qMUpwUGxfLTItcmxlamZOSWNBZGt6dnpYdXNZaU5nTDd5MzdrT2Fhc09xMGNfSlBzUkZzT1pvM25oc0IzYUJpY01ra3RkczFFdkdHT1dPOG9Xc2xlaDg1NXBFU3NUa0lDWnNCX2prbXJHNXRMQW9Wa2stR29aR0VoWTBHSVNFREw4VTZfVGRZV3hmcG5BbWQ2N2Nic0tKVUlTWk41Z2NCYUFPWEdBUEVja2tyZ0JaRWxsbDRETTNhZFk5MXFx?oc=5",
+      "published": "Sat, 22 Aug 2026 02:13:00 GMT",
+      "published_iso": "2026-08-22T02:13:00+00:00",
+      "age_days": 2,
       "states": []
-    },
-    {
-      "title": "Kentucky leaders debate role in AI data center boom",
-      "source": "WKYT",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOa3VJdWR1bVJhWVdlU1hQUHh1a1pNVlVqN3VXTV9scFJ3VU5lZU5aQ3c2UFRWRHdSXzY3ejhlRGd1VEtJYUxwd25lb0RmM2llcGx2eXZvdWpWUDNPZTBUWjVFNWJEV3ItZmVUUVFxQVZwZ2ZuMGVXb2ttYnV0dmVsaHRxajZZRW1k0gGcAUFVX3lxTE9DUDZJN0tDdHdhOGlqbGNib3VQNnJPT2NzaThzejJEOUNzaVdycDNrRXZ2SWlleUJqWlJwcUlPaDJXTTZsZTIzNDd3bzhFLTNnVkVGSzd1cHA1OGJiUmxwWjFkUkUzZktwRFh6bXJkR2hxSWpOckhxMWV1V1hHRXpSTWJSM2hCVzdZb292aGhZa0hJMW5tQ2wxSEFpNA?oc=5",
-      "published": "Fri, 21 Aug 2026 02:19:00 GMT",
-      "published_iso": "2026-08-21T02:19:00+00:00",
-      "age_days": 3,
-      "states": [
-        "Kentucky"
-      ]
     },
     {
       "title": "Salix City Council votes against data center moratorium",
@@ -1732,6 +1712,26 @@
       "published": "Fri, 21 Aug 2026 21:40:56 GMT",
       "published_iso": "2026-08-21T21:40:56+00:00",
       "age_days": 2,
+      "states": []
+    },
+    {
+      "title": "Michigan Data Centers: The Weekly Download",
+      "source": "Michigan Advance",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOOVFpN0ZZdHhOT2ltbFJZMk9JWFk3WUtVNHZrV0NVZnpuSGd1eXBGblhIck1VSnN3aU5CeDdYNktsUFVUbFNuclR4UDRIR2ZHS2VBMXExVGJHdlptZHMxcGx6aGtTREE5NmdySjVlaGh3Y1FLdFdoQ2hGRk9kUEN4c1hfR3dLS1IxQkRj?oc=5",
+      "published": "Mon, 24 Aug 2026 10:04:58 GMT",
+      "published_iso": "2026-08-24T10:04:58+00:00",
+      "age_days": 0,
+      "states": [
+        "Michigan"
+      ]
+    },
+    {
+      "title": "Marathon County Board faces undecided choice on Hub City Wind, weighs data center moratorium",
+      "source": "Wausau Pilot & Review",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQRkFCWEFOLUFaSGx5Z1V4a0RwWFRISHdNdlNwTmNfUEZyb0dwX25lUkxlekpWYXRtXy05Mk92NmJFWTlsTFlyVE1Lb2JDQUZGd3NZOG5EYm5Md2FNZkdhMmRYSDZ0eENmellsaERMSkJjZWdCTm5Pc3VOSDZuQVpWZ294SllXdjFkamQwZWw2Z2J4Tm9OS284TlF2dnhUcGV0YTQ4ZjR6bWllOUhGREttZ2ZPYTF6aDNvYkduZHdLdmcxX0FUZUZJMHBfOTdRYm9nT0E?oc=5",
+      "published": "Sun, 23 Aug 2026 21:30:00 GMT",
+      "published_iso": "2026-08-23T21:30:00+00:00",
+      "age_days": 0,
       "states": []
     },
     {
@@ -1795,7 +1795,7 @@
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVktLREpSendrQmhRanp2NDRFLW9tdmRUaGU4LWJudVVickRYd0NkM2d6X3lwZXJjempzRHNBOE5BYS0xdXN3UmJRaXZXQUpiVWRBOC1TTzR6cUFoRnROVzRMQ2lsOTNWaWstc28wekxPcDFiZmpZUjNTWDBsdDFONzdBcEVEaEtYbUJzRENnUFQ2NW1leTN0dQ?oc=5",
       "published": "Sat, 22 Aug 2026 10:36:50 GMT",
       "published_iso": "2026-08-22T10:36:50+00:00",
-      "age_days": 1,
+      "age_days": 2,
       "states": [
         "New Jersey"
       ]
@@ -1812,12 +1812,12 @@
       ]
     },
     {
-      "title": "Bayonne becomes latest municipality to ban data centers",
-      "source": "ROI-NJ",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUEtiWW1JRUJpZS1RVExEOTJjYmNRa0otbXdpRVo4WDUwcjNBVF9NaEtIWlZPN1FjMGxhZklEMjUzRXpjRVJodGdZa1RhVG9fbGdQSHpVYzZQMHp5a0lmUUhFMnRoRTUxWGMwV3cwS0NVMlJxbkdJUENlRzF6bmNlaGV2QldJdmxiWGZWd2xHb194X0RCbWllX2ZGazc0Z2ZlMU5RMkg4ZEpIY2RWaVZNRkE3Q0FGVm8?oc=5",
-      "published": "Mon, 17 Aug 2026 09:00:00 GMT",
-      "published_iso": "2026-08-17T09:00:00+00:00",
-      "age_days": 6,
+      "title": "After months of organizing, a New Jersey city voted 5-0 to ban data centers",
+      "source": "The Cool Down",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOaFpuTDRGSDVKU1JkamZ0cFFUekVhS2NOUDhURElEek92TjlHalZPMDZuaUllT21uSlFnWWNxU1lzSlNxMGwyY3FyaEQ1ZUN5S2VXc1VfZXp6S0lVZlF0WWlhM0o1aVJxQ2FGQnl1dXN6b2NDWWRxRl9MOWdEbTFwZVUza1NueWs?oc=5",
+      "published": "Thu, 20 Aug 2026 21:36:00 GMT",
+      "published_iso": "2026-08-20T21:36:00+00:00",
+      "age_days": 3,
       "states": [
         "New Jersey"
       ]
@@ -1872,18 +1872,7 @@
       "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQLWNkbU05emVtUHVWSHA2c00xU2pvVVdmMnhKVG9xbVU0eUE2NFNuVEFYd0FDN00tMFZTcXpsU040LTllNE40RU51b3pMT1RzdVdrLV9Wb0ozOHNmRUdRbk9XMkVGakxkR09TalBQR18zQ0c1Z2o2TGY2Y1lSanktbDBzcklSQUZDSm5HMk9fV3FGS011eWRmczgzYlJaZGNkTlQ2UHNveS1RTC1GYXJQdm5CT0xLNmxRTG9tOA?oc=5",
       "published": "Sat, 22 Aug 2026 10:31:00 GMT",
       "published_iso": "2026-08-22T10:31:00+00:00",
-      "age_days": 1,
-      "states": [
-        "New Jersey"
-      ]
-    },
-    {
-      "title": "After months of organizing, a New Jersey city voted 5-0 to ban data centers",
-      "source": "The Cool Down",
-      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOaFpuTDRGSDVKU1JkamZ0cFFUekVhS2NOUDhURElEek92TjlHalZPMDZuaUllT21uSlFnWWNxU1lzSlNxMGwyY3FyaEQ1ZUN5S2VXc1VfZXp6S0lVZlF0WWlhM0o1aVJxQ2FGQnl1dXN6b2NDWWRxRl9MOWdEbTFwZVUza1NueWs?oc=5",
-      "published": "Thu, 20 Aug 2026 21:36:00 GMT",
-      "published_iso": "2026-08-20T21:36:00+00:00",
-      "age_days": 3,
+      "age_days": 2,
       "states": [
         "New Jersey"
       ]
@@ -1900,23 +1889,23 @@
       ]
     },
     {
-      "title": "Vineland, New Jersey city council approves DataOne expansion for Nebius AI data center",
-      "source": "Blockspace Media",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOcVE1QXhCWFdDWlhrUDhXM3BpQ281aXo1a2o3RkZIQTB6clpUMTVIdEhaQnFrazd4R1ZDeTJPeUI4VVc1b184N3UwaW80NVpGNmdJMi1aNmxPRVFLd281RUFOSlFRSWRiZkdmVjlZM3J4dzFtb3M2cmZsX0FueGxydzl4a3M5YlN2WWNveA?oc=5",
-      "published": "Tue, 18 Aug 2026 14:35:43 GMT",
-      "published_iso": "2026-08-18T14:35:43+00:00",
-      "age_days": 5,
-      "states": [
-        "New Jersey"
-      ]
-    },
-    {
       "title": "Holmdel bans data centers but will that stop proposal at Bell Works?",
       "source": "New Jersey 101.5",
       "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE53WnpjWFpBZmREMFZWUFBEeE80MDFfZ3JFajRNckNYU1R5bzNYS0tKaHBTYmpQWHdycEtMa0FBblN2RG5nWXRNdXNHUkR0MHhZaTVlOTB5YVdfU1N6SlJj?oc=5",
       "published": "Fri, 21 Aug 2026 19:52:13 GMT",
       "published_iso": "2026-08-21T19:52:13+00:00",
       "age_days": 2,
+      "states": [
+        "New Jersey"
+      ]
+    },
+    {
+      "title": "Vineland, New Jersey city council approves DataOne expansion for Nebius AI data center",
+      "source": "Blockspace Media",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOcVE1QXhCWFdDWlhrUDhXM3BpQ281aXo1a2o3RkZIQTB6clpUMTVIdEhaQnFrazd4R1ZDeTJPeUI4VVc1b184N3UwaW80NVpGNmdJMi1aNmxPRVFLd281RUFOSlFRSWRiZkdmVjlZM3J4dzFtb3M2cmZsX0FueGxydzl4a3M5YlN2WWNveA?oc=5",
+      "published": "Tue, 18 Aug 2026 14:35:43 GMT",
+      "published_iso": "2026-08-18T14:35:43+00:00",
+      "age_days": 5,
       "states": [
         "New Jersey"
       ]
@@ -1960,7 +1949,7 @@
       "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOMERoZkxFYzN4Q3ZKN04ySHBsVUhDSlMxUlJFajdRb0ZCa1dfUlZVY0RQM0pSS1N4ZUVqQVJaWW9OYUxPQUxCVW5MMDI2UWhORHJtQUhveldzeWpzQnRvUFlCVUt5dkJZQkR6TEpPRzJScWpQYmFlbFBCRTJJWFRKMTJ3QktqWFc2SDFXLWVIVHNkaGhjdEdVTFRQLUFIWktlVVBSbl96dlpJaEJfTll0ZExRcWtxR2IxdlprRl9Vd2lDdkJjdmhrRWxGcFNweXNuYUJlX0ZMZDJEZFlucjdwMENkZy1fQ2J5bW9BRUNhb0hQaDRo?oc=5",
       "published": "Wed, 19 Aug 2026 09:27:00 GMT",
       "published_iso": "2026-08-19T09:27:00+00:00",
-      "age_days": 4,
+      "age_days": 5,
       "states": [
         "New Jersey"
       ]
@@ -2016,6 +2005,17 @@
       "published": "Wed, 19 Aug 2026 01:04:00 GMT",
       "published_iso": "2026-08-19T01:04:00+00:00",
       "age_days": 5,
+      "states": [
+        "New Jersey"
+      ]
+    },
+    {
+      "title": "Howell latest NJ town to ban data centers as AI pushes market growth",
+      "source": "Asbury Park Press",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQc1dNT2lObkZOcWM5Sko4bFZBV1dHaXpmcnNJZUR0cU1fMklieHpFQmI3OWh3VmVfc2VCdjh0NmVGUkhtbFNUNk5OQzFMdWJlTW9acWpHd1hLNjg0SkRQX3RBZmxWY2ZJSm1YVVMtdDBsdldscWNncFotWFFoVUJkYTVMUjFaNnJxN0c5S1ZtcW1MZXAyb281QmVVWENpOGdfeThBVFU5S0p4S1gzS1VrYWpDUll5TGRkdVRJ?oc=5",
+      "published": "Mon, 24 Aug 2026 10:08:00 GMT",
+      "published_iso": "2026-08-24T10:08:00+00:00",
+      "age_days": 0,
       "states": [
         "New Jersey"
       ]
@@ -2092,7 +2092,7 @@
       "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPQ3lUNUFuWlhEalZfV2YtbmxsVENxQ09odmhMR3RuMTlBMjBYUnJhX3AzSGdWOFg4S09SOGpVVU9XRmJEWVlFMDVzdHhIekRtdmJMVEtrNlJGWkRaTUxfTlI1M1FaQ0dTWWh2bC1nTElVcm84dTFSN3RDTzI3dnNvNTE4dWlkWS01RDNZV21EMUhic0Nyd0RTMVVvYkJvMzRMLVdfeG1CNzAyaVFFbkk1SjVLcURwR1N0SEZsTlBQMVpYTlRVaVRsOXhqQTJqcjBQYW05UWd4aW1xcHk1Q2VzWjhtM2xjTUJCbDJDdzFINkM0eEE0Ykt5OS15ZENVQQ?oc=5",
       "published": "Tue, 18 Aug 2026 09:11:17 GMT",
       "published_iso": "2026-08-18T09:11:17+00:00",
-      "age_days": 5,
+      "age_days": 6,
       "states": [
         "New Jersey"
       ]
@@ -2109,6 +2109,17 @@
       ]
     },
     {
+      "title": "Community Rallies Against Giant Data Center Being Built In Kenilworth, New Jersey Nello Trocchia (2BAM1QqThw)",
+      "source": "Mshale",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAyN00wNmR3QXB4UEJjbHlmR3pNRXVxdW52ZnBrZktwdFB0UUZ0czEwRHp4d1hmci1sZnUwWHlQS05lZ3ZNY2ZHNEkzSE9mWVU3eHcyemRYVmdCNTg?oc=5",
+      "published": "Thu, 20 Aug 2026 23:35:47 GMT",
+      "published_iso": "2026-08-20T23:35:47+00:00",
+      "age_days": 3,
+      "states": [
+        "New Jersey"
+      ]
+    },
+    {
       "title": "Pennsylvania Governor Imposes Nation\u2019s Toughest Data Center Restrictions",
       "source": "thesunpapers.com",
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQcGlFZVQtSnMwbUo0NGVjZFFNWGF4MklDS3B5T0dpSFpPZmplQ0g4c2M0VC1Fa0JrREI0eHpVTEtXQ2pOazc0V0hqcUpNbEpJcTBSVXp5MWowRW5sQnBOd1lCY2tTRFFmbi14OTAza25jTlRSWndJb1NsYWY0OUhvdkRCR0M3SExpNGwzaktXdGQtWUNFN2Q4dUVPNDQ?oc=5",
@@ -2118,17 +2129,6 @@
       "states": [
         "New Jersey",
         "Pennsylvania"
-      ]
-    },
-    {
-      "title": "Community Rallies Against Giant Data Center Being Built In Kenilworth, New Jersey Nello Trocchia (2BAM1QqThw)",
-      "source": "Mshale",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAyN00wNmR3QXB4UEJjbHlmR3pNRXVxdW52ZnBrZktwdFB0UUZ0czEwRHp4d1hmci1sZnUwWHlQS05lZ3ZNY2ZHNEkzSE9mWVU3eHcyemRYVmdCNTg?oc=5",
-      "published": "Thu, 20 Aug 2026 23:35:47 GMT",
-      "published_iso": "2026-08-20T23:35:47+00:00",
-      "age_days": 3,
-      "states": [
-        "New Jersey"
       ]
     },
     {
@@ -2220,17 +2220,6 @@
       ]
     },
     {
-      "title": "Fair Lawn's Old Nabisco Site Marketed as Data Center, Mayor Says Not So Fast",
-      "source": "Hoodline",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeGJxdEJYbHMtN000akZlM1l2MzV3NjhZUDlldWlsTGxKRmxaWFloOGtfY2w0ckppdVlpT0ZKM1lyU19kVVp6ek5lYWRoOXktS1ZzYzB5cF9xYnZoVVRMZUhrZWd4UW0zc1c5Ykp0VzZKYkl2eHRWRTlHaUJCa3M1S3I5RWQ5cHEzWlhHR3JqelpBR1pDSUpwdVBSbm9iRnVJSUliTEVxbWs?oc=5",
-      "published": "Tue, 18 Aug 2026 22:56:48 GMT",
-      "published_iso": "2026-08-18T22:56:48+00:00",
-      "age_days": 5,
-      "states": [
-        "New Jersey"
-      ]
-    },
-    {
       "title": "Tech Giants Scramble to Calm Public Anger over AI Data Centers",
       "source": "breitbart.com",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVWktVEh6ZXFLVk5aejQ5cWltLWRGZi02QXZCUGpEWjRDSzVmV0UtYlQ4NGloZmdGZTk0TC1qM21UVlZpeVhqSUJwVnFKaGhIcHF6X3ctdy1WcEZrZXRHZGVGWGVIY3FaYTIteE5vRzc5Xy1RazlfUVQxSFhBUmQ5TEUwdVpxbkZ4eVVpY2dtdnVEV2xvYzlLbnIzVDBId1dHZW1rVjZUYk5JSnY4QkHSAa4BQVVfeXFMUFVpLVRIemVxS1ZOWno0OXFpbS1kRmYtNkF2QlBqRFo0Q0s1ZldFLWJUODRpaGZnRmU5NEwtajNtVFZWaXlYaklCcFZxSmhoSHBxel93LXctVnBGa2V0R2RlRlhlSGNxWmEyLXhOb0c3OV8tUWs5X1FUMUhYQVJkOUxFMHVacW5GeHlVaWNnbXZ1RFdsb2M5S25yM1QwSHdXR2Vta1Y2VGJOSUp2OEJB?oc=5",
@@ -2239,17 +2228,6 @@
       "age_days": 2,
       "states": [
         "New Jersey"
-      ]
-    },
-    {
-      "title": "As Va. officials weigh data center pushback, report details industry\u2019s public service funding",
-      "source": "Virginia Mercury",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNempoMFBrX2Y3YjZhOE5ZN1pZRlVGYm9EQ09JTUNvM1QyTGtrRVFETUJyVTB4VURDTkwzMWtZcVNoWWI1SHN2NFljdFAzdUdaWlFWejdVSVNiN1l0UU1ocXlvQjlkdGdWRVFfd2dtQmoxeFRJNFFmcGI4bVFLR3NJV1FmU2J2UDB4TjBncHlaWHViT25lSzFuakR3UnNVRnZkc2xoeF9LSUhvWV9DMVRZTklsMWV6cGttZU1INDFkUElXVktEYzZFdExR?oc=5",
-      "published": "Mon, 17 Aug 2026 09:38:19 GMT",
-      "published_iso": "2026-08-17T09:38:19+00:00",
-      "age_days": 6,
-      "states": [
-        "Virginia"
       ]
     },
     {
@@ -2353,6 +2331,17 @@
       ]
     },
     {
+      "title": "Virginia Beach pauses new hyperscale data centers for one year, more headlines",
+      "source": "Virginia Mercury",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPSUJGbkNUNlp5RGk2cWJkZjVMN3U2VGhoSzhRQVVqTkthRTdQY0tlNFJobHcySmVFLXV4WXdNeTdDQ2RjVHJFVTZURG5ta09ZUUdsSWZlMTBoMHc0czA5UHV1eERMS0VfQk9vajBDZDFxbmNhMTlxdEw4dW5zMzVJMEJIcmV1YUpFYnVjOWV5R1VkTEJqSU9xdHZBLTBhOHlRYzJJckJjOEtJeUVQN2FmZjNNSQ?oc=5",
+      "published": "Thu, 20 Aug 2026 09:21:17 GMT",
+      "published_iso": "2026-08-20T09:21:17+00:00",
+      "age_days": 4,
+      "states": [
+        "Virginia"
+      ]
+    },
+    {
       "title": "Virginia developer proposes data center at former Star Tribune site in Minneapolis",
       "source": "5 EYEWITNESS NEWS",
       "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPY0tRVzVmZjluTGpGTVlqbU91Ry10RzdSdmJoQVJoMXVoVjJTMDBjb1EwbUxLeFFrX2NzcFlNWTFZVDkzSEt5am9oSURNcjZod2E2dGg3MFVNWVUtZnVybVRLTzhhNFc2YXJQQ0t3YXlaS2YtRFZVdzJESjJiS1JsUDBvVjNvWm9LRDd4T25HeXp2V2FhWnNTdlFTV19mUVVaNjdKd1luVzk2MFhYdERhTERtWDBDXzNuMHp4Z2F3?oc=5",
@@ -2375,34 +2364,23 @@
       ]
     },
     {
+      "title": "Data centers are drinking more water, but overall water use in Virginia has gone down anyway. Here are the numbers.",
+      "source": "Cardinal News",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNOVA4OWJyVEFpOEpLbnVFMTlJSDNHb3JyQ1hFRkV2U1hxMnVXZ2V2ZThWLUQxMF9XaEhNeTc3QWhqczFVUjBLX1g1RXVvRmZCTTM1WHJwWjVwX1RjYm4zWUNJaUJLOTk0b3BXVXdSZ3R6OXlJUUh3NFdjUEZJOGU5SEJmTVgwTTNKc2VlM0ZWUnoycXhXTFV6VHFwTjZ1R2Z2YVZwLTA5Ukw0R2xKeHlQazdVdHR2aWxGcTRfcXQzTkVPS3c3WWFJQ2hfRXQ0enZFVFpoSkFVRzNNTk8zSmJEWG1zTQ?oc=5",
+      "published": "Mon, 24 Aug 2026 08:15:00 GMT",
+      "published_iso": "2026-08-24T08:15:00+00:00",
+      "age_days": 0,
+      "states": [
+        "Virginia"
+      ]
+    },
+    {
       "title": "People pack a North Loop Neighborhood Association meeting over proposed data center",
       "source": "kare11.com",
       "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNb092NFAxUVljOHJKd3VfRlFCOS1ieTJqcFFaVVZmN0IzNWNaSm5hRlRXb25sNDE4VHhYSnhJRmVzX2lzWWNKNnhIdTFyV0xxWjVJQjhnVnVPa2pMcVZiRU1TaHJuTkhzMnpyeHpBbTJSdGZzYVdxSi0wYUFVbjhhOHdzVDc0RjJHaGxpYlNZbno4aGJWamYyd2FTeTdJV0dwOGRQb2ZMWjlFWjM2QmpXRk1nb3NIVVAtNjZvNnpUaDZKRWw5RnU0R2pmNDhpOFlYQU9SSw?oc=5",
       "published": "Thu, 20 Aug 2026 02:58:00 GMT",
       "published_iso": "2026-08-20T02:58:00+00:00",
       "age_days": 4,
-      "states": [
-        "Virginia"
-      ]
-    },
-    {
-      "title": "Virginia Beach pauses new large-scale data centers for one year",
-      "source": "13newsnow.com",
-      "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQZjZCMWEwRzRzNThyc1hNNU1xZW9pLTdtMXpKZ0ZKQTFyTzdZQlMtS1hLZi16bmVVU0tmNnhoRTRuTnBIdFRHNHN1VDFac0k0ZUxrSFhkeDF4bmxRVTRoZ3FpRUs4UHhDUjZ3eU5HLVpfc2Vsd2lNRFNrUjVhVU5ydHZtUS05amwtYmVrd1F3VFFLYlFPaEtkdjg0UzBBVGdoeUQxX3NvbDIxbkpmMDdpRUdCbTF0MmpSN3JqX2ZDSUtMaDFPTW9YWjZ3VzRyVUlvd0Rhbks0SUtUMC05WURHX0paRWNsLXR3Z3NQOUxHTDZ0YTVJS3dV?oc=5",
-      "published": "Wed, 19 Aug 2026 03:06:00 GMT",
-      "published_iso": "2026-08-19T03:06:00+00:00",
-      "age_days": 5,
-      "states": [
-        "Virginia"
-      ]
-    },
-    {
-      "title": "Virginia Beach pauses new hyperscale data centers for one year, more headlines",
-      "source": "Virginia Mercury",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPSUJGbkNUNlp5RGk2cWJkZjVMN3U2VGhoSzhRQVVqTkthRTdQY0tlNFJobHcySmVFLXV4WXdNeTdDQ2RjVHJFVTZURG5ta09ZUUdsSWZlMTBoMHc0czA5UHV1eERMS0VfQk9vajBDZDFxbmNhMTlxdEw4dW5zMzVJMEJIcmV1YUpFYnVjOWV5R1VkTEJqSU9xdHZBLTBhOHlRYzJJckJjOEtJeUVQN2FmZjNNSQ?oc=5",
-      "published": "Thu, 20 Aug 2026 09:21:17 GMT",
-      "published_iso": "2026-08-20T09:21:17+00:00",
-      "age_days": 3,
       "states": [
         "Virginia"
       ]
@@ -2419,34 +2397,34 @@
       ]
     },
     {
+      "title": "Opinion | Electricians Love Data Centers. You Should, Too.",
+      "source": "The New York Times",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOcWVqT1dkaXljNWxGTnpDdkFmaV9wY05hVWEtSERFeXhrWU5JN1N0XzRLUkRmeFFVT1RVSGh5cUNyclpyakI4N0o4Qld5TUIzQnczVWdULTBTbDB3amlkZlk5Z2tpaFpxc0N4US1EN09GX0x6R2RDY282MlJJQmxrQzZPOGtlQllCRDlnZFJR?oc=5",
+      "published": "Fri, 21 Aug 2026 09:02:25 GMT",
+      "published_iso": "2026-08-21T09:02:25+00:00",
+      "age_days": 3,
+      "states": [
+        "Virginia"
+      ]
+    },
+    {
       "title": "Virginia Beach pauses new large-scale data centers for one year",
       "source": "13newsnow.com",
-      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOU1ctWW9VcExmTGpIeThaVUx5RU84VFU0QzVLQ0kzUVFvOVlETmJoOFEzdU1GcFU2a3p0d01JYkVOd2JWMFAxYWcya0NzbkQ3R25VMlhGX01DSk5nTXZGb1VIdmhDcy1xeGViMEd5UFFLWjhQYzlIb21ScXFWS09KZXNRMDRtOEQxNXg2NmJleVQyV2dfZWtTRERSaTFqbUZUZWJfM1lGY29hM19TNHJIQU5veEJma3RGOUZRVlljN0szZld2S082LXVCd2RNZ2xWQlhPaHRpdHpzYWt0ZzVHM0VQaDV3UDE0UlRWRGlxNlFRZXFLZFhTdmRWNVh2Qzc1?oc=5",
-      "published": "Wed, 19 Aug 2026 02:53:00 GMT",
-      "published_iso": "2026-08-19T02:53:00+00:00",
+      "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQZjZCMWEwRzRzNThyc1hNNU1xZW9pLTdtMXpKZ0ZKQTFyTzdZQlMtS1hLZi16bmVVU0tmNnhoRTRuTnBIdFRHNHN1VDFac0k0ZUxrSFhkeDF4bmxRVTRoZ3FpRUs4UHhDUjZ3eU5HLVpfc2Vsd2lNRFNrUjVhVU5ydHZtUS05amwtYmVrd1F3VFFLYlFPaEtkdjg0UzBBVGdoeUQxX3NvbDIxbkpmMDdpRUdCbTF0MmpSN3JqX2ZDSUtMaDFPTW9YWjZ3VzRyVUlvd0Rhbks0SUtUMC05WURHX0paRWNsLXR3Z3NQOUxHTDZ0YTVJS3dV?oc=5",
+      "published": "Wed, 19 Aug 2026 03:06:00 GMT",
+      "published_iso": "2026-08-19T03:06:00+00:00",
       "age_days": 5,
       "states": [
         "Virginia"
       ]
     },
     {
-      "title": "A look at data centers planned in the Charlottesville area",
-      "source": "C-VILLE Weekly",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQYjczLXdyMHNVRHo2bDBkZllqLWxhVWx6emhDeXg1MTc5MHRXMGotRHVxalR6WUpSUnlPQTNQeU9BVXp4RENseUs5QXJsNW9jbWM1RWxNS3pYT0RoYW5HeTI4MWs3aDQxelBFU1FfZkt4Z2dwTE0xbVprZTlMaUktZkpUWVpsdw?oc=5",
-      "published": "Wed, 19 Aug 2026 11:47:02 GMT",
-      "published_iso": "2026-08-19T11:47:02+00:00",
-      "age_days": 4,
-      "states": [
-        "Virginia"
-      ]
-    },
-    {
-      "title": "Virginia students challenge data center infrastructure plans",
-      "source": "NewsNation",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZGRTc1pLNlZYVUxLVV9RUkZURUhjbXEzc0V0bHpLNE01bUxJcUgwLUxrejEtSUNGX2pMbngwRjNiNkh5RG13VkxJVTB4UTlMdS1mQjg1NGxrVUFGcF9INkpJS2g1d0xMQTBSb3RiUmdPazV5TFRrUlBfNEtIeUI4bWQyS1ZkYS1Ic180a1NrQ3BPckFRdFlaM05mVUVIX1pSN1RsWUpQZFpxQdIBrwFBVV95cUxNZ2U1ekxuV1RiQ3RrX1k1OUJHWHNxaHJfU1c4bFJpUGVPU1pfcDJPMGJ2S1R6VEhXRnBrcElsMUozaHFGSEJieEFLdWtHY2JpLVhWRllVaDQxNUczMjhxTnVwQ3liRkdRaG04QmlxQVB1bG1ySDVOV2FxRV9ubm83ckZ0eWc1SDBGNXNMYXEwUGtnNE5ZenlydW1HR0NfVzNYVXBoM0RPMV94UnpGclFj?oc=5",
-      "published": "Sat, 22 Aug 2026 18:59:15 GMT",
-      "published_iso": "2026-08-22T18:59:15+00:00",
-      "age_days": 1,
+      "title": "Virginia Beach pauses new large-scale data centers for one year",
+      "source": "13newsnow.com",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOU1ctWW9VcExmTGpIeThaVUx5RU84VFU0QzVLQ0kzUVFvOVlETmJoOFEzdU1GcFU2a3p0d01JYkVOd2JWMFAxYWcya0NzbkQ3R25VMlhGX01DSk5nTXZGb1VIdmhDcy1xeGViMEd5UFFLWjhQYzlIb21ScXFWS09KZXNRMDRtOEQxNXg2NmJleVQyV2dfZWtTRERSaTFqbUZUZWJfM1lGY29hM19TNHJIQU5veEJma3RGOUZRVlljN0szZld2S082LXVCd2RNZ2xWQlhPaHRpdHpzYWt0ZzVHM0VQaDV3UDE0UlRWRGlxNlFRZXFLZFhTdmRWNVh2Qzc1?oc=5",
+      "published": "Wed, 19 Aug 2026 02:53:00 GMT",
+      "published_iso": "2026-08-19T02:53:00+00:00",
+      "age_days": 5,
       "states": [
         "Virginia"
       ]
@@ -2463,6 +2441,17 @@
       ]
     },
     {
+      "title": "A look at data centers planned in the Charlottesville area",
+      "source": "C-VILLE Weekly",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQYjczLXdyMHNVRHo2bDBkZllqLWxhVWx6emhDeXg1MTc5MHRXMGotRHVxalR6WUpSUnlPQTNQeU9BVXp4RENseUs5QXJsNW9jbWM1RWxNS3pYT0RoYW5HeTI4MWs3aDQxelBFU1FfZkt4Z2dwTE0xbVprZTlMaUktZkpUWVpsdw?oc=5",
+      "published": "Wed, 19 Aug 2026 11:47:02 GMT",
+      "published_iso": "2026-08-19T11:47:02+00:00",
+      "age_days": 4,
+      "states": [
+        "Virginia"
+      ]
+    },
+    {
       "title": "The Mid-Atlantic's electric grid operator is taking steps to rein in data center demand",
       "source": "WHRO",
       "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOd1BvQlVGQWw4cHR4RFF3UUpoU0ZTNnloVDY0bGxSQ1Vfa3dOSDhTOEF5alB4NzJtam5qVGZ3T2h5VDFDYWNhVmhWTVUtWGs1RjNZOEQ2Tl9UZHpjaFVSQUFSakNxa3I3LXREdHpfcEZpRzZSdF9BbklpX0xzZDgyejVnd3dLd0ZwYXdCd2Vsbl9neEp1T1VwcGdZdEpQaEhsV0RpYmhXdDU0X3JreUN3eWNpbTVrWkRXTmItdVgwZk1JZDk5NEhGWkJ3?oc=5",
@@ -2474,12 +2463,12 @@
       ]
     },
     {
-      "title": "Data centers are drinking more water, but overall water use in Virginia has gone down anyway. Here are the numbers.",
-      "source": "Cardinal News",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNOVA4OWJyVEFpOEpLbnVFMTlJSDNHb3JyQ1hFRkV2U1hxMnVXZ2V2ZThWLUQxMF9XaEhNeTc3QWhqczFVUjBLX1g1RXVvRmZCTTM1WHJwWjVwX1RjYm4zWUNJaUJLOTk0b3BXVXdSZ3R6OXlJUUh3NFdjUEZJOGU5SEJmTVgwTTNKc2VlM0ZWUnoycXhXTFV6VHFwTjZ1R2Z2YVZwLTA5Ukw0R2xKeHlQazdVdHR2aWxGcTRfcXQzTkVPS3c3WWFJQ2hfRXQ0enZFVFpoSkFVRzNNTk8zSmJEWG1zTQ?oc=5",
-      "published": "Mon, 24 Aug 2026 08:15:00 GMT",
-      "published_iso": "2026-08-24T08:15:00+00:00",
-      "age_days": 0,
+      "title": "Virginia students challenge data center infrastructure plans",
+      "source": "NewsNation",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZGRTc1pLNlZYVUxLVV9RUkZURUhjbXEzc0V0bHpLNE01bUxJcUgwLUxrejEtSUNGX2pMbngwRjNiNkh5RG13VkxJVTB4UTlMdS1mQjg1NGxrVUFGcF9INkpJS2g1d0xMQTBSb3RiUmdPazV5TFRrUlBfNEtIeUI4bWQyS1ZkYS1Ic180a1NrQ3BPckFRdFlaM05mVUVIX1pSN1RsWUpQZFpxQdIBrwFBVV95cUxNZ2U1ekxuV1RiQ3RrX1k1OUJHWHNxaHJfU1c4bFJpUGVPU1pfcDJPMGJ2S1R6VEhXRnBrcElsMUozaHFGSEJieEFLdWtHY2JpLVhWRllVaDQxNUczMjhxTnVwQ3liRkdRaG04QmlxQVB1bG1ySDVOV2FxRV9ubm83ckZ0eWc1SDBGNXNMYXEwUGtnNE5ZenlydW1HR0NfVzNYVXBoM0RPMV94UnpGclFj?oc=5",
+      "published": "Sat, 22 Aug 2026 18:59:15 GMT",
+      "published_iso": "2026-08-22T18:59:15+00:00",
+      "age_days": 1,
       "states": [
         "Virginia"
       ]
@@ -2519,14 +2508,15 @@
       ]
     },
     {
-      "title": "Almost Overnight, the Data Centers Were Everywhere in My Community\u2014Don't Let This Happen to You",
-      "source": "Common Dreams",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAwWmp3UEo2d0VXbVpyelJ6WEZFYW1tTUxDX05ZNHNQMWNaQm9xTW9HdnNzOW1aS2l4bmU4S3JRSGZVYlQ5WG0wblhIOExUcElvZWhvUmRqN2hfTWdoWDZ4cVB6dXY5NENmS3NHU2g2SXFDYS1jcVE?oc=5",
-      "published": "Fri, 21 Aug 2026 13:58:29 GMT",
-      "published_iso": "2026-08-21T13:58:29+00:00",
-      "age_days": 2,
+      "title": "Contested 5-GW Ridgeline Gas, Solar, and Data-Center Complex in West Virginia Clears Site-Control Question",
+      "source": "POWER Magazine",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQN1ZXYXYzS19oUWZiWjF5RndPbWR1REczZzRreUJORFJqRnAwOVFaZ0tXTm5Rd0FRTTR6a2p5T2NyaF9VelFBVEw5SXhJRW40SmtjMUdXWnpienZnMjlYZWtQQzliNlhxVFRzRnhMN1FmZkE1WVhmNFphbU9JcHRzZldwN3N4MWtST0ZBZ3NSZEdueUF2dWhSMVJGb1NpNkpBTFFGc1hOaTBKNTByeXB4LVdab0cyc21YbHBrc3BHYkk3cnc5VFlSM2dB?oc=5",
+      "published": "Tue, 18 Aug 2026 16:45:33 GMT",
+      "published_iso": "2026-08-18T16:45:33+00:00",
+      "age_days": 5,
       "states": [
-        "Virginia"
+        "Virginia",
+        "West Virginia"
       ]
     },
     {
@@ -2541,23 +2531,11 @@
       ]
     },
     {
-      "title": "Contested 5-GW Ridgeline Gas, Solar, and Data-Center Complex in West Virginia Clears Site-Control Question",
-      "source": "POWER Magazine",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQN1ZXYXYzS19oUWZiWjF5RndPbWR1REczZzRreUJORFJqRnAwOVFaZ0tXTm5Rd0FRTTR6a2p5T2NyaF9VelFBVEw5SXhJRW40SmtjMUdXWnpienZnMjlYZWtQQzliNlhxVFRzRnhMN1FmZkE1WVhmNFphbU9JcHRzZldwN3N4MWtST0ZBZ3NSZEdueUF2dWhSMVJGb1NpNkpBTFFGc1hOaTBKNTByeXB4LVdab0cyc21YbHBrc3BHYkk3cnc5VFlSM2dB?oc=5",
-      "published": "Tue, 18 Aug 2026 16:45:33 GMT",
-      "published_iso": "2026-08-18T16:45:33+00:00",
-      "age_days": 5,
-      "states": [
-        "Virginia",
-        "West Virginia"
-      ]
-    },
-    {
-      "title": "Opinion | Electricians Love Data Centers. You Should, Too.",
-      "source": "The New York Times",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOcWVqT1dkaXljNWxGTnpDdkFmaV9wY05hVWEtSERFeXhrWU5JN1N0XzRLUkRmeFFVT1RVSGh5cUNyclpyakI4N0o4Qld5TUIzQnczVWdULTBTbDB3amlkZlk5Z2tpaFpxc0N4US1EN09GX0x6R2RDY282MlJJQmxrQzZPOGtlQllCRDlnZFJR?oc=5",
-      "published": "Fri, 21 Aug 2026 09:02:25 GMT",
-      "published_iso": "2026-08-21T09:02:25+00:00",
+      "title": "Almost Overnight, the Data Centers Were Everywhere in My Community\u2014Don't Let This Happen to You",
+      "source": "Common Dreams",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAwWmp3UEo2d0VXbVpyelJ6WEZFYW1tTUxDX05ZNHNQMWNaQm9xTW9HdnNzOW1aS2l4bmU4S3JRSGZVYlQ5WG0wblhIOExUcElvZWhvUmRqN2hfTWdoWDZ4cVB6dXY5NENmS3NHU2g2SXFDYS1jcVE?oc=5",
+      "published": "Fri, 21 Aug 2026 13:58:29 GMT",
+      "published_iso": "2026-08-21T13:58:29+00:00",
       "age_days": 2,
       "states": [
         "Virginia"
@@ -2614,7 +2592,7 @@
       "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNQXlzOHRzQUI1Nks1cktycDdNZW5VMlZPejZzdFZJRV95cVUzLWl1NVhtczM4TTU1OFFyeHBuTkdxbm1qcUg5aEpmMERRT0tSMmNfQ0xpcTFaU0FaUExoLVEwaHdfbXlieWE2REJCSUNORTFUcVduX0dCR3FnMThjNzNob0pSSkRJMGUtVEF3?oc=5",
       "published": "Tue, 18 Aug 2026 09:00:00 GMT",
       "published_iso": "2026-08-18T09:00:00+00:00",
-      "age_days": 5,
+      "age_days": 6,
       "states": [
         "Virginia"
       ]
@@ -2677,23 +2655,23 @@
       ]
     },
     {
-      "title": "Talking Business with Becky Bradley: Facts, fears and what you need to know about the data center debate",
-      "source": "The Morning Call",
-      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNZ29sVWdqT2J6YnB0S0czMGxQbDhEQVZETmJHcC03eGtwUzJFVVdFMGM4bVVQUGtfbm1Dc1haSWNjMGNRbVFRYVNfdnBSYmR4Z0l5YVJaaUpwQkVTVmVOTzhYbXdHclBJTXFtTnZIVUgwTXpjazNYdEQzdlVXTXBTcHZ2WnBJVUVpRTRRRFJnRW1sczRJZy1ZNC1kQ0hPRkFVNkM1WkxONlRrRm9SZHZWN2ZCamFyRG9Mc0QwWEJfUFZqZXo0dGZEYkFXOTV0S3F2ZGc?oc=5",
-      "published": "Fri, 21 Aug 2026 12:01:38 GMT",
-      "published_iso": "2026-08-21T12:01:38+00:00",
-      "age_days": 2,
-      "states": [
-        "Virginia"
-      ]
-    },
-    {
       "title": "General Assembly launches effort to study tax exemptions, consumption tax for data centers",
       "source": "Cardinal News",
       "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNalJZYmhyY2tha3lDdWYzTk53cXVMTTdLLTJ6cW5XZUtLRS1lM0lCSUdXSEJxbmlEeXBnaXNuM1gyeFRyOTJWaWNvT3RMOTJybi1HdnJjcmxyVl9OejNhX0pKWkM5ODM4VUllT2s0SnZVU2p6a3E5YWZlWS1ySkNNSjZFRkM5c2dXamZDWlhhR0stZFNhYmJBZUN3emw1SkdHZEdtZWY0X2g5UTh0OHdpWFRwMGhubEQxd0FoX005OWJ1TVhp?oc=5",
       "published": "Thu, 20 Aug 2026 08:10:00 GMT",
       "published_iso": "2026-08-20T08:10:00+00:00",
       "age_days": 4,
+      "states": [
+        "Virginia"
+      ]
+    },
+    {
+      "title": "Talking Business with Becky Bradley: Facts, fears and what you need to know about the data center debate",
+      "source": "The Morning Call",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNZ29sVWdqT2J6YnB0S0czMGxQbDhEQVZETmJHcC03eGtwUzJFVVdFMGM4bVVQUGtfbm1Dc1haSWNjMGNRbVFRYVNfdnBSYmR4Z0l5YVJaaUpwQkVTVmVOTzhYbXdHclBJTXFtTnZIVUgwTXpjazNYdEQzdlVXTXBTcHZ2WnBJVUVpRTRRRFJnRW1sczRJZy1ZNC1kQ0hPRkFVNkM1WkxONlRrRm9SZHZWN2ZCamFyRG9Mc0QwWEJfUFZqZXo0dGZEYkFXOTV0S3F2ZGc?oc=5",
+      "published": "Fri, 21 Aug 2026 12:01:38 GMT",
+      "published_iso": "2026-08-21T12:01:38+00:00",
+      "age_days": 2,
       "states": [
         "Virginia"
       ]
@@ -2722,6 +2700,17 @@
       ]
     },
     {
+      "title": "As Va. officials weigh data center pushback, report details industry\u2019s public service funding",
+      "source": "Henrico Citizen",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPanNjRGFxeGRXdXpGS05mQ2duUW41aTJ5RWQtZU14eHdyanJFYWJzeUJjUXJxcmRqOXZYOWNmZHZtdkI4RFA3cl9PS2JhcDBGcDU3MXphQzVlLWhyTmpVejhDU185emY1VkJwcHEza29TcjFscmJqMHhQRzFQTHpvT0p4VHdzS2NQZGNsOE5oSHpJR2lndUxfRGE3cXpvampTOU1xa216ZjkwdUs1RE9UWG0zZXZvVUp3NllydjRSNA?oc=5",
+      "published": "Mon, 17 Aug 2026 18:19:33 GMT",
+      "published_iso": "2026-08-17T18:19:33+00:00",
+      "age_days": 6,
+      "states": [
+        "Virginia"
+      ]
+    },
+    {
       "title": "Taxing the data centers",
       "source": "Bond Buyer",
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1ScDlFdlpDSGNOelk2R0kyMTlqTU02aFNud1dZMzdBRTlsRDdybXREWXVyY3BsRzVRNmZuOGZuTkV5cEdfX0FwRVkzbkRmZHF2clVMRjMzNDBDVklFNkxiMmdyVG4?oc=5",
@@ -2744,18 +2733,6 @@
       ]
     },
     {
-      "title": "Data center announcements in West Virginia spark concerns over water usage, transparency",
-      "source": "National News Desk",
-      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQS2JVYmFlSTgzM1NtODhXTlRzX1hOREtpRVN0dWstUWZsMGdLaWVZNmtKMV9kVlV5Q29td0ZjU3E0N0JJS2lEM3BmOERsdmw0Qm85REZDdm5xNGRNQ19tZWNqYm52LUdpZDNISFNLU3hzcWdtU0tEa1NwT0tJNDQ4NWUyRjlQUWw5MVhBNFc1eS13UExZVGZMT2hERWppSE9OdzhTdXF3bjdxZm9jNEZPMHBHU1BKT2RoenBGeVlsNjVVeGlzYmNvWFlnenE2S185Mm5VaFRIT0xjeHg3a1dB?oc=5",
-      "published": "Tue, 18 Aug 2026 00:38:52 GMT",
-      "published_iso": "2026-08-18T00:38:52+00:00",
-      "age_days": 6,
-      "states": [
-        "Virginia",
-        "West Virginia"
-      ]
-    },
-    {
       "title": "Virginia county's AI data center addiction",
       "source": "moneywise.com",
       "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQNHNKM0VoaHZhYjZQaWFaV3BhM1E1QndYWU5IbFhNZUVOcHNRSXJmaWplZ3pyTHVXWERSUkh2NUJCOU5YQ2lBUXBSaUF3bHNDQ1FCZnc0TlJGVWQyQU02Y0lTNmN4LVZPMWxCdzJTMHBMalViQjFrcFpOTmZReTZ3RG5zRzhQTzFsR2tMUHN3Z1RaV0U?oc=5",
@@ -2775,6 +2752,17 @@
       "age_days": 6,
       "states": [
         "Texas",
+        "Virginia"
+      ]
+    },
+    {
+      "title": "Virginia data center boom drives utility costs up 88%, adding pressure to power bills",
+      "source": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNa2FaR3Q3a1RMNEp5NlQ2SHNvVS1BdjNaY1Z1eFRoTTgwTGtyZ0dPLUlkaVM5MXRkdjFnZDNNSHZyTk1LUUtjSF9XRkxyYnk4bzRHNWFiVHFhbkE1QUJjcDd2SkZvcE1kcXdYd0E2eTdoRnc0ZG5zNzdZNF80UUdWYjFwU2YtSXFKVjV3M3FMVGhSWGc?oc=5",
+      "published": "Wed, 19 Aug 2026 05:48:00 GMT",
+      "published_iso": "2026-08-19T05:48:00+00:00",
+      "age_days": 5,
+      "states": [
         "Virginia"
       ]
     },
@@ -2812,28 +2800,6 @@
       ]
     },
     {
-      "title": "Virginia data center boom drives utility costs up 88%, adding pressure to power bills",
-      "source": "Yahoo Finance",
-      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNa2FaR3Q3a1RMNEp5NlQ2SHNvVS1BdjNaY1Z1eFRoTTgwTGtyZ0dPLUlkaVM5MXRkdjFnZDNNSHZyTk1LUUtjSF9XRkxyYnk4bzRHNWFiVHFhbkE1QUJjcDd2SkZvcE1kcXdYd0E2eTdoRnc0ZG5zNzdZNF80UUdWYjFwU2YtSXFKVjV3M3FMVGhSWGc?oc=5",
-      "published": "Wed, 19 Aug 2026 05:48:00 GMT",
-      "published_iso": "2026-08-19T05:48:00+00:00",
-      "age_days": 5,
-      "states": [
-        "Virginia"
-      ]
-    },
-    {
-      "title": "\u2018A little bit closer to the goal line.\u2019 Pittsylvania County OKs data center tax rate",
-      "source": "Roanoke Times",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTl8xRDJxQUdQZ2t1cXJhU08tTFhGVkxBVkc5c0RrTS1RNFlUcjZNaGd3dVA4NVZleVlFMWVTRWZBQjl5VHlRanlPcXFSS2NSNVF3UUItWDlQREhOZE1nYk1SazlpUkJIMXhSSmIzdW5RMnhCenV3V1B0MU1wRW9nWDlKUGVYVWJzUHBxY3lTR0xsMHAtSEkyNWhValpDMmM?oc=5",
-      "published": "Fri, 21 Aug 2026 08:45:00 GMT",
-      "published_iso": "2026-08-21T08:45:00+00:00",
-      "age_days": 3,
-      "states": [
-        "Virginia"
-      ]
-    },
-    {
       "title": "Orbital data centers could outshine the Milky Way",
       "source": "Scientific American",
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNSDZLdUV4UVNVakNZN0hTZEoycjM3VlV4YlhwbXVVUVZsMzQ0NU45eGtwNWZVZWhjQUd3VVBTcTE5SDZELW00dTRsVml4UTVjV2VIVUVRLW9nY1M3NnJIRjBjM3lDZEZpcldqMl9keFlWWlllVDFEWFktckVHZWtmdXhEY1dWMkFPSGROa25HRlZwSkI0S0NrdHB4Q0ZPTWxsM1N0Ng?oc=5",
@@ -2856,23 +2822,23 @@
       ]
     },
     {
+      "title": "Virginia teens organize against data centers | On Balance",
+      "source": "NewsNation",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOb0pYUEw4SWRhVnFyVjNDTFFCRW0xRXlRNmwyYjJFbkk0aWhWOUhadkhMd2xSSWFXaEROeXNOc0J5X1JRWFk1aHh6UDNpekNMWHFfZWY1Z0JBSTJGN0p1dDlSZF96UW9kam9CaEFjbmtHMGIwcURlNkQ2QWRPbXRDSDctRTZHaVdoZXRLOEZUbU5qQ0h6ZnFKOU1MWk1vM2c4Wjhv?oc=5",
+      "published": "Sat, 22 Aug 2026 01:53:00 GMT",
+      "published_iso": "2026-08-22T01:53:00+00:00",
+      "age_days": 2,
+      "states": [
+        "Virginia"
+      ]
+    },
+    {
       "title": "Residents Urged to Demand Disclosure Before Data Center Deals Are Signed",
       "source": "theroanokestar.com",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPYnZUY3lNV0QtOGNHTnpQbzdMa2RBaVgyanJsVkN3OVoweWc0eVlBWVBrUDFRV3FhTGVBUmNTRGVLeGVfMVFLalloa1FubnlFUUlDdVVXUFo4bm5UTm44eUZYNmtqNHpOR0xWZjJ1Ujl3TjRkU0p1enVqYS13dnlCbjFVNG12VjMxVW1jdE9IXzNDeEZHN0pz?oc=5",
       "published": "Thu, 20 Aug 2026 21:34:14 GMT",
       "published_iso": "2026-08-20T21:34:14+00:00",
       "age_days": 3,
-      "states": [
-        "Virginia"
-      ]
-    },
-    {
-      "title": "OVHcloud\u2019s data center strategy: Reuse, retrofit and reduce backlash",
-      "source": "Fierce Network",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPVjg4aDFhSzhjeUExVjRHYkVwQmZxU0RPNkJGRlU5X1paTkJ4UlpueTlFOWVkc3lLRmZETWFwVEV0MGNjSV9ONW55aURuRWxLRGdmYW4wRnR3VUxsUGdCbHFydjg1MmxYczFOUFJaNUZ0OFZzdnpQaC0xMWkxMUNtZ3RWalJ5VzI0LWF3NVkxQWs0MUxHWkViNG43eDBoQ0FXZ0FvUQ?oc=5",
-      "published": "Wed, 19 Aug 2026 17:56:15 GMT",
-      "published_iso": "2026-08-19T17:56:15+00:00",
-      "age_days": 4,
       "states": [
         "Virginia"
       ]
@@ -2889,12 +2855,12 @@
       ]
     },
     {
-      "title": "WATCH: Top Virginia State Senator Who Authored $15 Minimum Wage Bill Slams Data Centers for Paying Construction Workers Too Much",
-      "source": "freebeacon.com",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQd2xlclB0bE5fbV9BUUVHMXlzTTVXQUpiSF9XQlE5c0RVbHMzWjhsZ0x2OUtrTGhlVWtoMlRaQWR3UUJnanBVSm0tUV9Hbzd2a2lUQ2lvdEVDTm0zLVZxVzRtaDhEXzVhcFZUN1BpZWh2WjQwdXJMYUkwVEdBMGNNUGszblFEQjY0NFBkN0Z1NUZXbzBUT0xaVEtfbE1IM0FJbW1ROE50cVZ4N3dkbUNBa1ZYVnd0QW56NDZiSk5hM29mTkhLamx0YjVoeFFCTC0xYzI4TnhtSldnNUJxakJmRk9VMlUyMF84NFkyZUlsU1JCZw?oc=5",
-      "published": "Thu, 20 Aug 2026 20:04:38 GMT",
-      "published_iso": "2026-08-20T20:04:38+00:00",
-      "age_days": 3,
+      "title": "OVHcloud\u2019s data center strategy: Reuse, retrofit and reduce backlash",
+      "source": "Fierce Network",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPVjg4aDFhSzhjeUExVjRHYkVwQmZxU0RPNkJGRlU5X1paTkJ4UlpueTlFOWVkc3lLRmZETWFwVEV0MGNjSV9ONW55aURuRWxLRGdmYW4wRnR3VUxsUGdCbHFydjg1MmxYczFOUFJaNUZ0OFZzdnpQaC0xMWkxMUNtZ3RWalJ5VzI0LWF3NVkxQWs0MUxHWkViNG43eDBoQ0FXZ0FvUQ?oc=5",
+      "published": "Wed, 19 Aug 2026 17:56:15 GMT",
+      "published_iso": "2026-08-19T17:56:15+00:00",
+      "age_days": 4,
       "states": [
         "Virginia"
       ]
@@ -2922,6 +2888,17 @@
       ]
     },
     {
+      "title": "Goochland to weigh 900-megawatt data center campus under new tech zone",
+      "source": "Richmond Times-Dispatch",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWjdBLV92YWVxM0RIUGNETmtuV1c2VzVETjBBMlloMHoxeXZwdkhlU1NaSmNkellUM2pfb18xTlM3RnBxSTRtUTBTNDZZbmdiWUZDSVdWam5yeklmOEFwMTU4LVNxYldzWXJJMU83clI2TEhxTUJUaEhwcnlodnY1Y1p4QlFHeXRjUWJLdHU3aTdyUmlTRkM0MGRiZ2VQV0pNYWJtUA?oc=5",
+      "published": "Tue, 18 Aug 2026 07:00:00 GMT",
+      "published_iso": "2026-08-18T07:00:00+00:00",
+      "age_days": 6,
+      "states": [
+        "Virginia"
+      ]
+    },
+    {
       "title": "Northern Virginia still leads global data center capacity",
       "source": "Yahoo Finance",
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPbHVXcmg0RjVRVzJ3LTVwZGFtRmwtc2g2TWdUdlR2QW9GeGs0dTdtbGtIdENwcW9TdGVvQ05iOVN6M3JIMjZ1dFgyU3BVamlWeGdBdTh5cDhSRGpQUkNGMFFoWGM3Zm9sWGZ5U0djODRrLVhmYXczTWw1SEZxZ0JGUE1zNEdzNFNLa2RDNUhmRkhVN1QyZzdYNHMyaUpOZw?oc=5",
@@ -2944,12 +2921,12 @@
       ]
     },
     {
-      "title": "Virginia teens organize against data centers | On Balance",
-      "source": "NewsNation",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOb0pYUEw4SWRhVnFyVjNDTFFCRW0xRXlRNmwyYjJFbkk0aWhWOUhadkhMd2xSSWFXaEROeXNOc0J5X1JRWFk1aHh6UDNpekNMWHFfZWY1Z0JBSTJGN0p1dDlSZF96UW9kam9CaEFjbmtHMGIwcURlNkQ2QWRPbXRDSDctRTZHaVdoZXRLOEZUbU5qQ0h6ZnFKOU1MWk1vM2c4Wjhv?oc=5",
-      "published": "Sat, 22 Aug 2026 01:53:00 GMT",
-      "published_iso": "2026-08-22T01:53:00+00:00",
-      "age_days": 2,
+      "title": "WATCH: Top Virginia State Senator Who Authored $15 Minimum Wage Bill Slams Data Centers for Paying Construction Workers Too Much",
+      "source": "freebeacon.com",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQd2xlclB0bE5fbV9BUUVHMXlzTTVXQUpiSF9XQlE5c0RVbHMzWjhsZ0x2OUtrTGhlVWtoMlRaQWR3UUJnanBVSm0tUV9Hbzd2a2lUQ2lvdEVDTm0zLVZxVzRtaDhEXzVhcFZUN1BpZWh2WjQwdXJMYUkwVEdBMGNNUGszblFEQjY0NFBkN0Z1NUZXbzBUT0xaVEtfbE1IM0FJbW1ROE50cVZ4N3dkbUNBa1ZYVnd0QW56NDZiSk5hM29mTkhLamx0YjVoeFFCTC0xYzI4TnhtSldnNUJxakJmRk9VMlUyMF84NFkyZUlsU1JCZw?oc=5",
+      "published": "Thu, 20 Aug 2026 20:04:38 GMT",
+      "published_iso": "2026-08-20T20:04:38+00:00",
+      "age_days": 3,
       "states": [
         "Virginia"
       ]
@@ -2966,23 +2943,23 @@
       ]
     },
     {
-      "title": "Trump Says Data Centers Maybe 'Could Use a Little Public Relations Help'",
-      "source": "Business Insider",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9SWjdkWmd0X0ItOHl4Q3FtWFhTdTNxUWtkTmp5c2FEdUlwTEVXS0J6dFRuU19NYjBUUlFWZ1hVenVOZE9GVVhZMkNGSnV5YmZQanJjWDdEdllXb0t3Wk1remhTVkRpYV9wWThTQ0ZnLWN1YWNKcU5TOQ?oc=5",
-      "published": "Wed, 19 Aug 2026 21:15:00 GMT",
-      "published_iso": "2026-08-19T21:15:00+00:00",
-      "age_days": 4,
-      "states": [
-        "Virginia"
-      ]
-    },
-    {
       "title": "America's largest grid wants to cut power to new data centers first during shortages \u2014 50MW-plus data centers must bring their own electricity generation to avoid shutoffs",
       "source": "Tom's Hardware",
       "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOTFB5dGU2MWk4c1UwWTZkLUFBRHp4SjFuVkhqcS1xMkRzY1FqaTRNcHdOV3l3V213UG5MMDNOd1c1YzJNamRfUGFfRHAyMDd4RjJMRHNHbGNDOGQydURoX01hT3BDRnB2QzNrZzlrMFFmR2s1RmdwQnk2X0oyVXRtOVpFZE5OVTZ0WXdDV3ZIcFJQM3VCUzBuX0h5S0hWLUJ5SDBfT2w2cDAzUmVCcmZ4aV9OMDNuSlpuc1REc1dUbDhHb0Ywc045WHdYemtxckpzZFRfTjBVWG0xY21lZHUwNF9uM2JCVVUwdzJCUkdYRUh4UQ?oc=5",
       "published": "Mon, 17 Aug 2026 13:11:38 GMT",
       "published_iso": "2026-08-17T13:11:38+00:00",
       "age_days": 6,
+      "states": [
+        "Virginia"
+      ]
+    },
+    {
+      "title": "Trump Says Data Centers Maybe 'Could Use a Little Public Relations Help'",
+      "source": "Business Insider",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9SWjdkWmd0X0ItOHl4Q3FtWFhTdTNxUWtkTmp5c2FEdUlwTEVXS0J6dFRuU19NYjBUUlFWZ1hVenVOZE9GVVhZMkNGSnV5YmZQanJjWDdEdllXb0t3Wk1remhTVkRpYV9wWThTQ0ZnLWN1YWNKcU5TOQ?oc=5",
+      "published": "Wed, 19 Aug 2026 21:15:00 GMT",
+      "published_iso": "2026-08-19T21:15:00+00:00",
+      "age_days": 4,
       "states": [
         "Virginia"
       ]
@@ -3005,6 +2982,17 @@
       "published": "Wed, 19 Aug 2026 20:50:18 GMT",
       "published_iso": "2026-08-19T20:50:18+00:00",
       "age_days": 4,
+      "states": [
+        "Virginia"
+      ]
+    },
+    {
+      "title": "Google seeks to protect water while building data centers",
+      "source": "WAVY.com",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQR2NDT2V1RTdaSWlCMklLSGtaek9lZkhiNGRMdHFoZnFhZkV3ZjU4RTM2VF8yTW82QnNab3VGYWxldVl1VEthOVFZVS1za1hzUGM5emlRYUVJWDRvaFFKOHM0cEFZYVdlbkc5QTZGMjdNVU9TM2RWOVRlanpidUZwTWdjdHRjcTd6dHlPVVZxbWdtLTFoRVlhRy11dVB5UdIBngFBVV95cUxQR2NDT2V1RTdaSWlCMklLSGtaek9lZkhiNGRMdHFoZnFhZkV3ZjU4RTM2VF8yTW82QnNab3VGYWxldVl1VEthOVFZVS1za1hzUGM5emlRYUVJWDRvaFFKOHM0cEFZYVdlbkc5QTZGMjdNVU9TM2RWOVRlanpidUZwTWdjdHRjcTd6dHlPVVZxbWdtLTFoRVlhRy11dVB5UQ?oc=5",
+      "published": "Mon, 24 Aug 2026 04:00:43 GMT",
+      "published_iso": "2026-08-24T04:00:43+00:00",
+      "age_days": 0,
       "states": [
         "Virginia"
       ]
@@ -3054,17 +3042,6 @@
       ]
     },
     {
-      "title": "Economic study finds KY data center could generate up to $435M in revenue",
-      "source": "Lexington Herald Leader",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5aTjltX1psNmxyaUdza2FfS1JQbVNjZmstWmltcGVHN2JKemRUdEVkUV9TSU5scDI2eVM1Q3UyYUxMbHB1YWpHR1Y5UFNhMVhjYU1ZTXl1X3h5TC1xaXBzNkFtTGxoMjBld09UV9IBbEFVX3lxTFBGNEY1cFZPcFlnd0ZpYU9zbjlqRmd0YlRFWEpYcFloNGxhRWMzb0g1dWFGNzl5c1NiTmt1V1ltZFpNWndLOHpMV3poVGx6V3I5emJLMmNobXFBd2VaeERTWXkyUHp2SmRWVUZMYg?oc=5",
-      "published": "Thu, 20 Aug 2026 19:22:39 GMT",
-      "published_iso": "2026-08-20T19:22:39+00:00",
-      "age_days": 3,
-      "states": [
-        "Virginia"
-      ]
-    },
-    {
       "title": "Virginia orders data centers to pay for new transmission infrastructure",
       "source": "AOL.com",
       "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOMXRmQWh5T052NThtdVFma2h0S0NjNHJ6UFdDZ2NTSEN0c0dyQ1hmMHBzeExQcW1CXzhDTmdieDVYbGtydGxUMTB4bGZsdW1PaXRyMkphTjZWV0ttOFpzVTJYek9CMkRiM2JLZXpwVzZEOTdzNmJUVXBVOU1kdkVBbkdn?oc=5",
@@ -3082,6 +3059,17 @@
       "published": "Sat, 22 Aug 2026 02:41:40 GMT",
       "published_iso": "2026-08-22T02:41:40+00:00",
       "age_days": 2,
+      "states": [
+        "Virginia"
+      ]
+    },
+    {
+      "title": "Economic study finds KY data center could generate up to $435M in revenue",
+      "source": "Lexington Herald Leader",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5aTjltX1psNmxyaUdza2FfS1JQbVNjZmstWmltcGVHN2JKemRUdEVkUV9TSU5scDI2eVM1Q3UyYUxMbHB1YWpHR1Y5UFNhMVhjYU1ZTXl1X3h5TC1xaXBzNkFtTGxoMjBld09UV9IBbEFVX3lxTFBGNEY1cFZPcFlnd0ZpYU9zbjlqRmd0YlRFWEpYcFloNGxhRWMzb0g1dWFGNzl5c1NiTmt1V1ltZFpNWndLOHpMV3poVGx6V3I5emJLMmNobXFBd2VaeERTWXkyUHp2SmRWVUZMYg?oc=5",
+      "published": "Thu, 20 Aug 2026 19:22:39 GMT",
+      "published_iso": "2026-08-20T19:22:39+00:00",
+      "age_days": 3,
       "states": [
         "Virginia"
       ]
@@ -3121,25 +3109,24 @@
       ]
     },
     {
-      "title": "Twenty markets account 60 percent of hyperscale data center capacity - Synergy",
-      "source": "Data Center Dynamics",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNLXRwaXJmeEdjWGZoREZMeWxVOGpKMzNpVWNsWW9NbVJodm8wdnpSMnY3RUY2b3BVT2FPbHQ0U0pYNkgwSjhERnJUbEJNYmp2UkZ2ZE8yOEdqeGJEMGltck03NHpWdU5jWUxqZ19vSFBVbmxqWW1jRnZTdWJSejdmSnlqOXFaNkhKLW8zWmtBRDBPUlVUMmxETFpyYWxaNEhEM2xDQmpsTlVYMGtaR0JIa0lhRFNEVDZrS0EwQQ?oc=5",
-      "published": "Thu, 20 Aug 2026 09:58:56 GMT",
-      "published_iso": "2026-08-20T09:58:56+00:00",
+      "title": "Proposed 400-mile power line in Virginia teeters on who should foot the bill: data centers or ratepayers",
+      "source": "The Cool Down",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQRWo3aXRaR1VEdGl0UlV5c3ZZRW4zSVJYbUdWUF9CRkdWWlh5WEtaRFhoaFpQMFFGMkZwMkVVZnNocnI3Q1NCdWM1UG1XMG9xRGFUOVZqX2tOU0g1S3V3eEdoWW10SlppQS1vR2UwS0locENwMnQtaW5sZGN0SzZnX0pheEprTFRjNmRDOTBMbzE4YTRNWHc?oc=5",
+      "published": "Thu, 20 Aug 2026 21:14:00 GMT",
+      "published_iso": "2026-08-20T21:14:00+00:00",
       "age_days": 3,
       "states": [
         "Virginia"
       ]
     },
     {
-      "title": "Kentucky Family Turns Down $26 Million To Build Data Center On Their Farm As 7 In 10 Americans Don't Want A Data Center Near Them",
-      "source": "24/7 Wall St.",
-      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNQWt4dmE0UzV0SGdNekpTd0FnYjR5bUlIMDJaZExTWmNtUWpJTE1JY0pOQWxrbVJCWkpqUW5LLTFWZ0cyUmZhbE5zLWZIRGoxNlgxVDFaQ0RLVUgzd1k5ZnVFVGNqeDU1UE1pemFLdmpkdnVROExsTHd6N2RULUthODBnbmlfTkxkNHVXYzBHeUgtTTF3WnJQMDFLOU5MaWQ1bTVuaGRnNE9CZmZzbEFob21uTHQ3am9MY0EzYkNKdWhOeklNQlhORF9tUkhQWUtFZ0kwRThJRkxiU1VSNk9pTXRfaV9aNEhmcVJpWU9RLV9mdzI5eENRZ3ZNSFRBNk9S?oc=5",
-      "published": "Thu, 20 Aug 2026 10:18:39 GMT",
-      "published_iso": "2026-08-20T10:18:39+00:00",
-      "age_days": 3,
+      "title": "Twenty markets account 60 percent of hyperscale data center capacity - Synergy",
+      "source": "Data Center Dynamics",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNLXRwaXJmeEdjWGZoREZMeWxVOGpKMzNpVWNsWW9NbVJodm8wdnpSMnY3RUY2b3BVT2FPbHQ0U0pYNkgwSjhERnJUbEJNYmp2UkZ2ZE8yOEdqeGJEMGltck03NHpWdU5jWUxqZ19vSFBVbmxqWW1jRnZTdWJSejdmSnlqOXFaNkhKLW8zWmtBRDBPUlVUMmxETFpyYWxaNEhEM2xDQmpsTlVYMGtaR0JIa0lhRFNEVDZrS0EwQQ?oc=5",
+      "published": "Thu, 20 Aug 2026 09:58:56 GMT",
+      "published_iso": "2026-08-20T09:58:56+00:00",
+      "age_days": 4,
       "states": [
-        "Kentucky",
         "Virginia"
       ]
     },
@@ -3155,13 +3142,14 @@
       ]
     },
     {
-      "title": "Proposed 400-mile power line in Virginia teeters on who should foot the bill: data centers or ratepayers",
-      "source": "The Cool Down",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQRWo3aXRaR1VEdGl0UlV5c3ZZRW4zSVJYbUdWUF9CRkdWWlh5WEtaRFhoaFpQMFFGMkZwMkVVZnNocnI3Q1NCdWM1UG1XMG9xRGFUOVZqX2tOU0g1S3V3eEdoWW10SlppQS1vR2UwS0locENwMnQtaW5sZGN0SzZnX0pheEprTFRjNmRDOTBMbzE4YTRNWHc?oc=5",
-      "published": "Thu, 20 Aug 2026 21:14:00 GMT",
-      "published_iso": "2026-08-20T21:14:00+00:00",
-      "age_days": 3,
+      "title": "Kentucky Family Turns Down $26 Million To Build Data Center On Their Farm As 7 In 10 Americans Don't Want A Data Center Near Them",
+      "source": "24/7 Wall St.",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNQWt4dmE0UzV0SGdNekpTd0FnYjR5bUlIMDJaZExTWmNtUWpJTE1JY0pOQWxrbVJCWkpqUW5LLTFWZ0cyUmZhbE5zLWZIRGoxNlgxVDFaQ0RLVUgzd1k5ZnVFVGNqeDU1UE1pemFLdmpkdnVROExsTHd6N2RULUthODBnbmlfTkxkNHVXYzBHeUgtTTF3WnJQMDFLOU5MaWQ1bTVuaGRnNE9CZmZzbEFob21uTHQ3am9MY0EzYkNKdWhOeklNQlhORF9tUkhQWUtFZ0kwRThJRkxiU1VSNk9pTXRfaV9aNEhmcVJpWU9RLV9mdzI5eENRZ3ZNSFRBNk9S?oc=5",
+      "published": "Thu, 20 Aug 2026 10:18:39 GMT",
+      "published_iso": "2026-08-20T10:18:39+00:00",
+      "age_days": 4,
       "states": [
+        "Kentucky",
         "Virginia"
       ]
     },
@@ -3184,6 +3172,17 @@
       "published": "Wed, 19 Aug 2026 18:00:29 GMT",
       "published_iso": "2026-08-19T18:00:29+00:00",
       "age_days": 4,
+      "states": [
+        "Virginia"
+      ]
+    },
+    {
+      "title": "Proposed Warwood data center faces Wheeling review, not state law",
+      "source": "WTOV",
+      "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxNQl84Q01fN2tNR2RIUWw2WGxna0RlcnFQU0gxaml4VzFOYnRBREMtTG5IQU5lVTZIblhGN25maFRqN2o5cXFYY2ZwUkQ0Vm9GZ1FENmJLenJHWTA2M0ZmQzVkbzZta3JWb0dWU2xpNHVoYzhndWRITlpLb3RsRU9GZUN1aTRpb1VoZUxOTW9pMTZaX3Y5TXl6NThIYklrLUJCM3hQQ25ScDc3Z01GaGNoLXo3OVBsWUhMbDFienhwVGVjenBTY1AwVGFPX1U2LTVQWVNsTVZvM3dKOVNWdWFIdWZBTFAzekNjVmVzeG8zOTRQOVNSd1BxbXpxbDUwalZNbUU5V20yQjJIVkJwTDBZR0VBUk9qd3lzTGx4YlRuYw?oc=5",
+      "published": "Mon, 17 Aug 2026 18:40:03 GMT",
+      "published_iso": "2026-08-17T18:40:03+00:00",
+      "age_days": 6,
       "states": [
         "Virginia"
       ]
@@ -3212,17 +3211,6 @@
       ]
     },
     {
-      "title": "Proposed Warwood data center faces Wheeling review, not state law",
-      "source": "WTOV",
-      "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxNQl84Q01fN2tNR2RIUWw2WGxna0RlcnFQU0gxaml4VzFOYnRBREMtTG5IQU5lVTZIblhGN25maFRqN2o5cXFYY2ZwUkQ0Vm9GZ1FENmJLenJHWTA2M0ZmQzVkbzZta3JWb0dWU2xpNHVoYzhndWRITlpLb3RsRU9GZUN1aTRpb1VoZUxOTW9pMTZaX3Y5TXl6NThIYklrLUJCM3hQQ25ScDc3Z01GaGNoLXo3OVBsWUhMbDFienhwVGVjenBTY1AwVGFPX1U2LTVQWVNsTVZvM3dKOVNWdWFIdWZBTFAzekNjVmVzeG8zOTRQOVNSd1BxbXpxbDUwalZNbUU5V20yQjJIVkJwTDBZR0VBUk9qd3lzTGx4YlRuYw?oc=5",
-      "published": "Mon, 17 Aug 2026 18:40:03 GMT",
-      "published_iso": "2026-08-17T18:40:03+00:00",
-      "age_days": 6,
-      "states": [
-        "Virginia"
-      ]
-    },
-    {
       "title": "Franklin County data center project is no longer moving forward",
       "source": "WSET",
       "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOQ0M0eXgwWnZJQlpqNDljRnpBVkdpLU91NkxzbksyZ3RsUTAxTTJHSnMzczh5R0hBdXViNkhwNTV0R3IxdzJxU20tbFBTWk1wbC1uSFpXelk0S2hPZGtPX2NDemJhdW5GRnJ2VHRaeURLVVdtQnYzcXdNYjhFamhEbzN5WnhxZ1NxMmNYXzV3c1hlazBoVzVoWlBYZWNjdTB2cldjbUZ2Y0pzSFhXSUx2bFpEbjFYam5wMXRwelNVRzBUdHdNRW9WSE5rWEdZVU9qWFJuNQ?oc=5",
@@ -3234,23 +3222,23 @@
       ]
     },
     {
-      "title": "Democrats can take the lead on one of the nation\u2019s top issues \u2013 data centers",
-      "source": "Fox News",
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNbUhOdjBVVFpMVDZ0emYxSUVVaGFlNU53YlMtOE1lWE14Y3J6WmFjczBpRTdJajQwUVBLUF84NGdycFV6SE1maUVLNWdZVDd0RjA1b09xaElRVllaZjdGSjFwSXIyaXlKYnhuODlrRDhqdzhHQ0NtZ2FHUjFmQTgyOTdDQnZYWDBEalVrNE9BSXfSAZABQVVfeXFMTW1ITnYwVVRaTFQ2dHpmMUlFVWhhZTVOd2JTLThNZVhNeGNyelphY3MwaUU3SWo0MFFQS1BfODRncnBVekhNZmlFSzVnWVQ3dEYwNW9PcWhJUVZZWmY3RkoxcElyMml5SmJ4bjg5a0Q4anc4R0NDbWdhR1IxZkE4Mjk3Q0J2WFgwRGpVazRPQUl3?oc=5",
-      "published": "Fri, 21 Aug 2026 09:00:43 GMT",
-      "published_iso": "2026-08-21T09:00:43+00:00",
-      "age_days": 2,
-      "states": [
-        "Virginia"
-      ]
-    },
-    {
       "title": "Virginia\u2019s data center debate",
       "source": "Yahoo",
       "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQb0p6dmVpZ3NNejlhVVRLcDQ2RnJFU1Z0Z1B4Y0dtYVVuQWxFVHFtWUR1QkFXUlNJVUtKS0dRNkpBdkN4ZXV6QTRrdVNOWmwwWi1yMjJtX1lFYVRPbVpjQUZ4NElORnk3ZHo5dURxMVVGd01jSTZHT1F1a0NFbkY3U1ln?oc=5",
       "published": "Fri, 21 Aug 2026 15:32:13 GMT",
       "published_iso": "2026-08-21T15:32:13+00:00",
       "age_days": 2,
+      "states": [
+        "Virginia"
+      ]
+    },
+    {
+      "title": "Democrats can take the lead on one of the nation\u2019s top issues \u2013 data centers",
+      "source": "Fox News",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNbUhOdjBVVFpMVDZ0emYxSUVVaGFlNU53YlMtOE1lWE14Y3J6WmFjczBpRTdJajQwUVBLUF84NGdycFV6SE1maUVLNWdZVDd0RjA1b09xaElRVllaZjdGSjFwSXIyaXlKYnhuODlrRDhqdzhHQ0NtZ2FHUjFmQTgyOTdDQnZYWDBEalVrNE9BSXfSAZABQVVfeXFMTW1ITnYwVVRaTFQ2dHpmMUlFVWhhZTVOd2JTLThNZVhNeGNyelphY3MwaUU3SWo0MFFQS1BfODRncnBVekhNZmlFSzVnWVQ3dEYwNW9PcWhJUVZZWmY3RkoxcElyMml5SmJ4bjg5a0Q4anc4R0NDbWdhR1IxZkE4Mjk3Q0J2WFgwRGpVazRPQUl3?oc=5",
+      "published": "Fri, 21 Aug 2026 09:00:43 GMT",
+      "published_iso": "2026-08-21T09:00:43+00:00",
+      "age_days": 3,
       "states": [
         "Virginia"
       ]
@@ -3344,23 +3332,12 @@
       ]
     },
     {
-      "title": "Atlanta will consider data center task force",
-      "source": "The Georgia Virtue",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPcEdKb0VTTUFlN3RtU05mVkYwTmtGenNWNmxvYzlsSmt0ejhoQUltY3VyWS1mMnlPbFF2ZjYzTXdPQnZqb0MwOXJnamh5WXZqMzB2N0VqWEQta1JST1RsUExONXI4VFVMcE1Pa3VvTWUtMUpyWllsM0tYdG45VTNHSUhwNGVkWGZHZG5URDh3VkhXbW8zSVVOcHJYNWpWZGdfOE5zTHBB?oc=5",
-      "published": "Mon, 17 Aug 2026 10:35:45 GMT",
-      "published_iso": "2026-08-17T10:35:45+00:00",
-      "age_days": 6,
-      "states": [
-        "Georgia"
-      ]
-    },
-    {
       "title": "Where are data centers in Chattanooga region? Facilities vary widely.",
       "source": "Chattanooga Times Free Press",
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcms2ak5FM3BxNHFlcy1uNGEwYUpFd3ZXMUZjUVNDNklxLTNnWkt2dXBGbG9YYlJBdy1tOVprSzZYOG5LVXFSa1NSYVotTmV0eUNsdHdJUXZ1RlVUX01GbFFQNXZaT2xxekJPaGh0T1FuaUNUd0lNaHAwbUZEYTRIY3hTWjBERTNXcWhiUlVoejZHeXZuOHJ2VA?oc=5",
       "published": "Sun, 23 Aug 2026 10:00:00 GMT",
       "published_iso": "2026-08-23T10:00:00+00:00",
-      "age_days": 0,
+      "age_days": 1,
       "states": [
         "Georgia"
       ]
@@ -3377,23 +3354,23 @@
       ]
     },
     {
-      "title": "Georgia\u2019s data center boom raises questions about power, costs",
-      "source": "WRBL",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOTHFOMmF0ZklMWnBGUmFzV1hkXzBraG1fOUhPQkpsdFRiSlo3WE5NVFhpd3Zta0FBSWRxVmlKQzROUThaNThDdjdweFVweklQdzRUWlBqSVlqbll5eHgxaWlhV19DUmNiZi1Wc1VfTTc3ZzFHSERHUTdzV1gxak4tdzJZRTRnOF9wTUJpNWtXTF80bTUyaGR0eVlsSF8yVUdUV0tON1ozY2tLdw?oc=5",
-      "published": "Mon, 17 Aug 2026 21:14:40 GMT",
-      "published_iso": "2026-08-17T21:14:40+00:00",
-      "age_days": 6,
-      "states": [
-        "Georgia"
-      ]
-    },
-    {
       "title": "Mayor breaks tie as Statesboro council approves Burkhalter Road rezoning",
       "source": "Grice Connect",
       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPeEQzNldGdGQ3UlJxRmQzN1dBdllsWG96RElySjRtYUN4R0ZBYWM5VnBkN2oyWDBMRWJGQkYyclAyU0Y5a2pYUVRnTGJWMzI1bW9Hckc1bW1JeXEyejNORkFER09NRFN5ZlQyOU5hVFJYcW9YaE1ObnVyZm9ucG5kMVYxV0FrOFZiM2tpb3JDZUJ2VFJpSndFMTN5TDVid3hISnRmbjdPOFQ4UXM2U1ZCTmR1TUptUkx6cy05cjNHbmJSZXFMMkE?oc=5",
       "published": "Tue, 18 Aug 2026 23:27:00 GMT",
       "published_iso": "2026-08-18T23:27:00+00:00",
       "age_days": 5,
+      "states": [
+        "Georgia"
+      ]
+    },
+    {
+      "title": "Georgia\u2019s data center boom raises questions about power, costs",
+      "source": "WRBL",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOTHFOMmF0ZklMWnBGUmFzV1hkXzBraG1fOUhPQkpsdFRiSlo3WE5NVFhpd3Zta0FBSWRxVmlKQzROUThaNThDdjdweFVweklQdzRUWlBqSVlqbll5eHgxaWlhV19DUmNiZi1Wc1VfTTc3ZzFHSERHUTdzV1gxak4tdzJZRTRnOF9wTUJpNWtXTF80bTUyaGR0eVlsSF8yVUdUV0tON1ozY2tLdw?oc=5",
+      "published": "Mon, 17 Aug 2026 21:14:40 GMT",
+      "published_iso": "2026-08-17T21:14:40+00:00",
+      "age_days": 6,
       "states": [
         "Georgia"
       ]
@@ -3454,6 +3431,17 @@
       ]
     },
     {
+      "title": "Georgia data center debate heats up across state",
+      "source": "11Alive.com",
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPMUV1Q2NrUUdEbFVyYTRqNU5ibWl4WGcwNTdPSWktQXR4bF84enJhRFZ3Z0I0OV9MRklmQnJteHZxSFZCSnc1X0VxUXpxU25xaVJERGRvQUU2Yml0WFViV1BnbGxUTF9hM2lmVkZSb201YXRMWTJQdGdwS0Jzd2VnOHQ0akhxYmdORnBFel8xdVdkbmtkQTE1TmxBVDRvQnBnU0NySnRrd2pRbTJZeFVqQUFZMEV5QWYtYjBCcHVnQ1ZYeGQzWkJsY2wtR2Uyc3RraUtjdExwVjFIajdrRUJJ?oc=5",
+      "published": "Thu, 20 Aug 2026 21:16:00 GMT",
+      "published_iso": "2026-08-20T21:16:00+00:00",
+      "age_days": 3,
+      "states": [
+        "Georgia"
+      ]
+    },
+    {
       "title": "4 Reasons the Southeast Should Pause the Data Center Gold Rush",
       "source": "Southern Alliance for Clean Energy",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOVEJhMTRoU2Y1S1lwZW1zTUxrVHNLLXRUUy02ZHBvMTNXNTR1Mml4a2VwWm1kSVBFRzhuV2ZxVUVZaWVPaUk5QlIweDBtaGxqbnFsR2p3TUNydzhKbEdwNUx3SG1yNzIwN1dZUEJQYXE5TXFOQ21hV1NJeHQxY1dRS2hvY041SWwwZnd2R0docF9KT2Nid3Fj?oc=5",
@@ -3471,17 +3459,6 @@
       "published": "Tue, 18 Aug 2026 23:52:13 GMT",
       "published_iso": "2026-08-18T23:52:13+00:00",
       "age_days": 5,
-      "states": [
-        "Georgia"
-      ]
-    },
-    {
-      "title": "Georgia data center debate heats up across state",
-      "source": "11Alive.com",
-      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPMUV1Q2NrUUdEbFVyYTRqNU5ibWl4WGcwNTdPSWktQXR4bF84enJhRFZ3Z0I0OV9MRklmQnJteHZxSFZCSnc1X0VxUXpxU25xaVJERGRvQUU2Yml0WFViV1BnbGxUTF9hM2lmVkZSb201YXRMWTJQdGdwS0Jzd2VnOHQ0akhxYmdORnBFel8xdVdkbmtkQTE1TmxBVDRvQnBnU0NySnRrd2pRbTJZeFVqQUFZMEV5QWYtYjBCcHVnQ1ZYeGQzWkJsY2wtR2Uyc3RraUtjdExwVjFIajdrRUJJ?oc=5",
-      "published": "Thu, 20 Aug 2026 21:16:00 GMT",
-      "published_iso": "2026-08-20T21:16:00+00:00",
-      "age_days": 3,
       "states": [
         "Georgia"
       ]
@@ -3514,7 +3491,7 @@
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQTHBPZWkyUGNxdWM3dnRyYkRSaXdPWWR1X1ZSUHBaV2pGXzFZM1lYMzk3SGF6bmc1N29lU092ZTR6YTgwYWdaOTdqbVUyWVpYdmdnaDRrcEhQa2tyTXZjWjZZVVYwc1p6NUhPclFEajlQRGZVSnREdW9NV0lEeUZXaEVXUGtBaG9HOGo4TDNqeEZLSkVyS0NVbld2WGEwOUw3bVF6VFZJQWlsbUtsNWh1aFBrdXhpODFWcno3MlRUOXQtOUk?oc=5",
       "published": "Tue, 18 Aug 2026 09:22:00 GMT",
       "published_iso": "2026-08-18T09:22:00+00:00",
-      "age_days": 5,
+      "age_days": 6,
       "states": [
         "Georgia"
       ]
@@ -3597,22 +3574,22 @@
       ]
     },
     {
-      "title": "UPDATE: Emails show Rossville leaders included in Bulldog Drive discussions before sale",
-      "source": "Local 3 News",
-      "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNVDRHY1Z3WjRUNDlHcjUzR3ZOZHVEa2ZBQi1fWkh3M3ZPWGFvUTVMQlN4NDhYT3B2RmVtcER3akRxdTFYbzJhS1F1NUp0ZUxoQnBROUFJQklLTDZRWFdvSnZHU1FYSEZlMExkRXNLNjhicUsxand4YzllUkVOdDVuZWNPbzc1ZjRFZlhGRnZjSkxBSF9KbWQtLTF6YmVfcHMwWlZUbHZGZVp3ZlFCQWhuSUM5Qk1aZ1FfcEwyYy1xQTUtRXpKWUdlREZSRVBGNXpRUEthMklEU196WTY5cy1OX1ZPVHhhcHBsRGlHWHBFbTRJZlJma2ZRT3R0YzhXZGNaemxpMA?oc=5",
-      "published": "Thu, 20 Aug 2026 15:11:29 GMT",
-      "published_iso": "2026-08-20T15:11:29+00:00",
+      "title": "Project Camellia: Two public meetings set for Aug. 26 and 29 in Effingham",
+      "source": "Bryan County News",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVGZqN3RSUGtBd1UweHBEaHZKaHVvN1lrMUt3QTZlYVRzejV3X2FUcVlObTZudVlRRG5DcTJRa2paaFk3Y2ZzYXlnQjZUVkRPclBLQTNLRFo5bjIwdEtsY1d5V0RDd2t0NDNMck1IeHU3TFlwUzdKeFlHbWptZDFVeUhWZFkzdy1lb2NMNmpRWm9UUkhJSFdhMmx4M2o0cFVvUy1GR0xFZGhWbVl4cXc?oc=5",
+      "published": "Thu, 20 Aug 2026 13:07:44 GMT",
+      "published_iso": "2026-08-20T13:07:44+00:00",
       "age_days": 3,
       "states": [
         "Georgia"
       ]
     },
     {
-      "title": "Project Camellia: Two public meetings set for Aug. 26 and 29 in Effingham",
-      "source": "Bryan County News",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVGZqN3RSUGtBd1UweHBEaHZKaHVvN1lrMUt3QTZlYVRzejV3X2FUcVlObTZudVlRRG5DcTJRa2paaFk3Y2ZzYXlnQjZUVkRPclBLQTNLRFo5bjIwdEtsY1d5V0RDd2t0NDNMck1IeHU3TFlwUzdKeFlHbWptZDFVeUhWZFkzdy1lb2NMNmpRWm9UUkhJSFdhMmx4M2o0cFVvUy1GR0xFZGhWbVl4cXc?oc=5",
-      "published": "Thu, 20 Aug 2026 13:07:44 GMT",
-      "published_iso": "2026-08-20T13:07:44+00:00",
+      "title": "UPDATE: Emails show Rossville leaders included in Bulldog Drive discussions before sale",
+      "source": "Local 3 News",
+      "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNVDRHY1Z3WjRUNDlHcjUzR3ZOZHVEa2ZBQi1fWkh3M3ZPWGFvUTVMQlN4NDhYT3B2RmVtcER3akRxdTFYbzJhS1F1NUp0ZUxoQnBROUFJQklLTDZRWFdvSnZHU1FYSEZlMExkRXNLNjhicUsxand4YzllUkVOdDVuZWNPbzc1ZjRFZlhGRnZjSkxBSF9KbWQtLTF6YmVfcHMwWlZUbHZGZVp3ZlFCQWhuSUM5Qk1aZ1FfcEwyYy1xQTUtRXpKWUdlREZSRVBGNXpRUEthMklEU196WTY5cy1OX1ZPVHhhcHBsRGlHWHBFbTRJZlJma2ZRT3R0YzhXZGNaemxpMA?oc=5",
+      "published": "Thu, 20 Aug 2026 15:11:29 GMT",
+      "published_iso": "2026-08-20T15:11:29+00:00",
       "age_days": 3,
       "states": [
         "Georgia"
@@ -3708,6 +3685,17 @@
       ]
     },
     {
+      "title": "Longtime GOP utility regulator to leave post early",
+      "source": "AJC.com",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNM3JISFA2SjQ0OUVGME5zaUlMWU9TZ0wxR0w1SmE5eEpMNURvbnp6MHV5cnhrM1RuZUtFUUNEejZYVmgwR0IxV2FVOWNpLU05SFU3SlJZZTRkUzlMT1JDTVlxbzVYNHNSMDNmeE02UnZGam5xYTZTdmhJM3VsSnZDSU5wa2JCLXhVN3VUSWxDbVdmRFF0SUV4WVEwenNLejN1a244bUZQLXV6NHJkVjlj?oc=5",
+      "published": "Fri, 21 Aug 2026 00:59:34 GMT",
+      "published_iso": "2026-08-21T00:59:34+00:00",
+      "age_days": 3,
+      "states": [
+        "Georgia"
+      ]
+    },
+    {
       "title": "Axe Compute and Duos Technologies sign 55MW capacity agreement",
       "source": "Data Center Dynamics",
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcGhVanpab1NkNVM0MU9rbXVUNk9leWhocHlCT0tPWVNzbEF0ZTBjdC1ETGtSZ1pUVV9HTDVUajNpcGt3MVdGeGFBY0dDZlhnTVBpRjhPd3kzVnVObGNIbWRRM3VPYUNWNGlKWVhWQXcxcmk3TXRqREJBMkJmdEJGUVZqNTFlb0R2Y0JEXzlibFF0anJaTkJabDM4UGItU2s4WHhyd2I0Yzl4QQ?oc=5",
@@ -3752,6 +3740,17 @@
       ]
     },
     {
+      "title": "More information on decision to abandon date center project at Battey Business Complex",
+      "source": "wrganews.com",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPcThvblZWN2RNNWlPcEdZVGJIbGxWT2VZellLWWY5RzE4N3RCM0tXbTJ0THlYaGU5N1o2SHJBS0JXTDJqZUVYZkJaUWhUaFFVYlJjMU44REo3WHJOVE4tRWNKcXNFYTU3blI4eVA5Rm5pNEQwc2dQMl8xVDRfbHlEMnlDLWNoTVhzTGMzSlhQYmVLaGZDcDMwYlpTTklSVFkxdEVBcFNjWkkxNU5MM18zemZNNXVHa3hJZThZMEQ0Um0?oc=5",
+      "published": "Tue, 18 Aug 2026 15:27:38 GMT",
+      "published_iso": "2026-08-18T15:27:38+00:00",
+      "age_days": 5,
+      "states": [
+        "Georgia"
+      ]
+    },
+    {
       "title": "AI Data Center Financing Costs Surge as Blackstone's QTS Bond Prices at 7.2% Yield",
       "source": "finance.biggo.com",
       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9TaUhoM01GSG5QU2ZVYlNfMXQza1R0MkVIa0RhZ01DYmZWdk9lTVZsbVNQYU13Wlk2aE5raDFfYTlGV1lXam5MaDlBRXRfOU12SWZFSGRWM0wwYnRZS3hpbjItSTBlTlRRelV1RTkwOU92S1dfMVE?oc=5",
@@ -3768,7 +3767,7 @@
       "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUXlrQ2phZVB5ZFpncHJmZW40NUNzX09QcldsVjY0UDJuVGJ5VjFsQlJ0VG1DX3M4emx3b3RyUl85czFLSGRHZUlULXpQeDZzOFpjZkZDUGpzTDl1VXhZY25icjdsemFLM3V4TmNnWFIzYWtpelEzQjFCSVgxM2ZkS1FoX2k0Y2JGU3IzWHR2MDdKRnZVTXhrdUdpOUZrZVF5d0ZyVWJJdll4cjdNR29TSUU0MA?oc=5",
       "published": "Sun, 23 Aug 2026 09:49:29 GMT",
       "published_iso": "2026-08-23T09:49:29+00:00",
-      "age_days": 0,
+      "age_days": 1,
       "states": [
         "Georgia"
       ]
@@ -3844,8 +3843,8 @@
       "title": "Texas welcomed the AI boom. Now Abbott says data centers \"dug their own grave\"",
       "source": "Axios",
       "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOUE9vdzZ2NDZsSkVQV3RXOF9PQzhQV1g2WHo1ZkVmOHhZa3pMcVFEZWFiTlA1blVSZ2tMQWNTUWtnTDNmT2JfV2s2OXdpS2lJM3ZUMmlLOWdNWnJxSWowOUd3Ym13Qmt6dnJGLXBnYlRSZmhHUUxSc0ZhaFI3a1Z4RQ?oc=5",
-      "published": "Mon, 24 Aug 2026 00:49:07 GMT",
-      "published_iso": "2026-08-24T00:49:07+00:00",
+      "published": "Sun, 23 Aug 2026 17:45:36 GMT",
+      "published_iso": "2026-08-23T17:45:36+00:00",
       "age_days": 0,
       "states": [
         "Texas"
@@ -3857,7 +3856,7 @@
       "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNYjl5TXpWWkZGTXo5ZWdlTEhMMGNmR08zeGR0RHBzQlI2LXMxMVBpYmpJZG5EemJUanVtU0k5Rk16MGEyX0FZMkdmdE1QT2h0QVI4UHNab0Z4WG9NVDRLQ3BxQVN0bGFnaWMxcTdLRlhkZ09hSHdJamlNWkxVbVhFWklFSU1KYVRPc1ZRcnI5cGRhVm9EelJ3S0VWenhkeWdTQWMxTDhBdjE2QzlzaUhMckplQV8wZXZXOXRJ?oc=5",
       "published": "Wed, 19 Aug 2026 09:00:00 GMT",
       "published_iso": "2026-08-19T09:00:00+00:00",
-      "age_days": 4,
+      "age_days": 5,
       "states": [
         "Texas"
       ]
@@ -3913,7 +3912,7 @@
       "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE4zZ1FDdG5jZDVHbUNVOGJBUGh0bkZNRHVWaklDaVJSNG1jNGNXZkcwSnBPUXdlNFlRS2o1aEFNZVplN0V3dmJMS2ljNGZoQUlhZFdKMlpKUGNha0NXTE5sWlJuYWhONFowM1BZakFPTUxtWWJadUJBTXlB?oc=5",
       "published": "Wed, 19 Aug 2026 09:00:00 GMT",
       "published_iso": "2026-08-19T09:00:00+00:00",
-      "age_days": 4,
+      "age_days": 5,
       "states": [
         "Texas"
       ]
@@ -3941,17 +3940,6 @@
       ]
     },
     {
-      "title": "\u2018You still want to be here?\u2019: State lawmakers press data center developers on water, power use",
-      "source": "Austin American-Statesman",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVzU0RWtNc29MeVQtS1Zwbmg1T2wwX2xRclpiR3pOd1RnVTlFQkxLN0NqS09fT1RqOVA5ckhybmh0QTczNXZJVWFSbmNQYWdjcUNZVmdjc19vOEtwWXlLQXN1Zy1zX3pLdTVybmY2b0IyVVp2NXhqeFRjelpmYjZadEw4MXNwUG96ZGhaenNtRDlxWl8wcVRqTU9jcDBqYU5TWVMwWXRLcnBod2Za?oc=5",
-      "published": "Thu, 20 Aug 2026 09:11:16 GMT",
-      "published_iso": "2026-08-20T09:11:16+00:00",
-      "age_days": 3,
-      "states": [
-        "Texas"
-      ]
-    },
-    {
       "title": "Abbott explains data center pivot",
       "source": "Politico",
       "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPeGI1clFWUkVSLW9wdDQwSEZNajFwT2l1aW1FRzdyYkt0Q0dsSDYxN0tyYjBNOEpMZDFBcXhRa21JZmpDeTl6bVM5WVgtcnJjbTdLLTFwQXpxckVIU19fWHV3OFN3bmxYOW5OaHR4VVdKQjA3V2w0d2lJNWdWTUYxWXZoLWYwZzA?oc=5",
@@ -3968,7 +3956,29 @@
       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1LeFVXOUEzSEpZcjE0TzdONTBxaDlSRTc1RE9rb3NEQktkRmtBT3ZQdnB3QWZYX2ExenJKWjJuN0czMXpFajh5VXVQNG0yN3N2TVRwTkowYUlmYkxxeXpRUEZaakVsN0Y2dlBXMGh6dWRELWs?oc=5",
       "published": "Thu, 20 Aug 2026 09:04:53 GMT",
       "published_iso": "2026-08-20T09:04:53+00:00",
-      "age_days": 3,
+      "age_days": 4,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
+      "title": "Texas\u2019 data center, transmission line pauses could be risky",
+      "source": "The Texas Tribune",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOd0t3LTBQWnc5QXZOVFZ2M1VpNXlnaE9SYk9VSG9kV0thMkMweVBqb290Zm0zbEs5WmxyTmVJUW52TzZ5enZDN3B4V2RrRDBIbEY1eEhpNlRVWjJMVHk0bkc4VW1vV0tUb19YQnhpV29icDU3S21zbEVLaGtCZWhkUElFRm9QOUtGblFuZXZwVkVaeW9zOEUwcVFJWndtdw?oc=5",
+      "published": "Mon, 24 Aug 2026 10:10:11 GMT",
+      "published_iso": "2026-08-24T10:10:11+00:00",
+      "age_days": 0,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
+      "title": "\u2018You still want to be here?\u2019: State lawmakers press data center developers on water, power use",
+      "source": "Austin American-Statesman",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVzU0RWtNc29MeVQtS1Zwbmg1T2wwX2xRclpiR3pOd1RnVTlFQkxLN0NqS09fT1RqOVA5ckhybmh0QTczNXZJVWFSbmNQYWdjcUNZVmdjc19vOEtwWXlLQXN1Zy1zX3pLdTVybmY2b0IyVVp2NXhqeFRjelpmYjZadEw4MXNwUG96ZGhaenNtRDlxWl8wcVRqTU9jcDBqYU5TWVMwWXRLcnBod2Za?oc=5",
+      "published": "Thu, 20 Aug 2026 09:11:16 GMT",
+      "published_iso": "2026-08-20T09:11:16+00:00",
+      "age_days": 4,
       "states": [
         "Texas"
       ]
@@ -4001,7 +4011,7 @@
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPd3cxNzZNc1pjREN5eGt3QlVDVEJaOUJMbXc4VTBCRE15Vnd0Mlo1T1BOWUxKVkZiYTZtQ1pwbjlFcld6Yi1LWXFGLTI4S1JLYnZUa3d5NFRsYlJWQ2J2dEZPUXQ1dkNfVDdOcWNhZU9KM25jZENaeHB1VkQ4Zk9paDVRcGhaUWlxV2poMTZ3bWlXYmlhUHBHeTdLT2UyZmVWenpkRWlMbE1iZHFid2c?oc=5",
       "published": "Wed, 19 Aug 2026 10:35:26 GMT",
       "published_iso": "2026-08-19T10:35:26+00:00",
-      "age_days": 4,
+      "age_days": 5,
       "states": [
         "Texas"
       ]
@@ -4051,23 +4061,23 @@
       ]
     },
     {
-      "title": "Abbott says his data center pause in Texas is working, as Democrats urge him to call a special session on the issue",
-      "source": "CBS News",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOVHdHZnktanhtblI0dnpuaEJoaG40eDllMjJJU1U2YUN4SkN1VHROS0RDeW0xcWVUTWFvbTRKRm1CeG95aWRaVzQ0TlI0azZ5ZlN4S0FyYW83T2ExS3BUcTl5MzNfdExPR2JJR21VS3d6bUVTNTZJa1lYY3EzdURuejFjR05Ha2tOMEp0OHNWMThZUHY3U011ckgyMUgyZFI4S0trSU10elZubzlVMjNuUFRYaWthbGJ5MlRPRFk3WlRHUUE?oc=5",
-      "published": "Sun, 23 Aug 2026 10:00:00 GMT",
-      "published_iso": "2026-08-23T10:00:00+00:00",
+      "title": "Texas Gov. Greg Abbott says data centers deserve the backlash they're getting: 'They basically dug their own grave'",
+      "source": "Business Insider",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVU1zU0VlcWVIUURrQmk1U3gya0tONS16SWVIbkNXWnJLWW5HZXZYNTV1OG5ZakZiTlpmQXQwRlZMaXBSNFNYbkY2N2JfZXVKdHpDTzJBd19pMUwtZm9DSzJ0S3BPeTlncmQ1UEN6VVAyR0QzUlNIMzVGZGhnR0NDbkJoNHA?oc=5",
+      "published": "Sun, 23 Aug 2026 16:42:00 GMT",
+      "published_iso": "2026-08-23T16:42:00+00:00",
       "age_days": 0,
       "states": [
         "Texas"
       ]
     },
     {
-      "title": "Texas lawmakers hear debate on data centers, transmission lines",
-      "source": "KVII",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPelpzTXNvQUVrWlpOSXc5dGY3aFBrZkdLZWdLaXJmNnNBXzdZUTk0Qmx0UnVMdUI5TWRFVE9NNjkzQ1ZIWExwMkxJakc4cmxzS3RPZUZ0QTdUdlhxR0lkRFlNY3hKNjhHVWxsZ1N5OFZXRGNnUFBfYVF1UVMzUU1VZTlkWmVwTV9wMG14Y09qNHhrMEFYUmw5SGxDVGk5MWc?oc=5",
-      "published": "Thu, 20 Aug 2026 02:00:37 GMT",
-      "published_iso": "2026-08-20T02:00:37+00:00",
-      "age_days": 4,
+      "title": "Abbott says his data center pause in Texas is working, as Democrats urge him to call a special session on the issue",
+      "source": "CBS News",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOVHdHZnktanhtblI0dnpuaEJoaG40eDllMjJJU1U2YUN4SkN1VHROS0RDeW0xcWVUTWFvbTRKRm1CeG95aWRaVzQ0TlI0azZ5ZlN4S0FyYW83T2ExS3BUcTl5MzNfdExPR2JJR21VS3d6bUVTNTZJa1lYY3EzdURuejFjR05Ha2tOMEp0OHNWMThZUHY3U011ckgyMUgyZFI4S0trSU10elZubzlVMjNuUFRYaWthbGJ5MlRPRFk3WlRHUUE?oc=5",
+      "published": "Sun, 23 Aug 2026 10:00:00 GMT",
+      "published_iso": "2026-08-23T10:00:00+00:00",
+      "age_days": 1,
       "states": [
         "Texas"
       ]
@@ -4095,17 +4105,6 @@
       ]
     },
     {
-      "title": "Texas Gov. Greg Abbott says data centers deserve the backlash they're getting: 'They basically dug their own grave'",
-      "source": "Business Insider",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVU1zU0VlcWVIUURrQmk1U3gya0tONS16SWVIbkNXWnJLWW5HZXZYNTV1OG5ZakZiTlpmQXQwRlZMaXBSNFNYbkY2N2JfZXVKdHpDTzJBd19pMUwtZm9DSzJ0S3BPeTlncmQ1UEN6VVAyR0QzUlNIMzVGZGhnR0NDbkJoNHA?oc=5",
-      "published": "Sun, 23 Aug 2026 16:42:00 GMT",
-      "published_iso": "2026-08-23T16:42:00+00:00",
-      "age_days": 0,
-      "states": [
-        "Texas"
-      ]
-    },
-    {
       "title": "What to know about Amazon's data center campus outside of Houston",
       "source": "Houston Chronicle",
       "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPbV9lb0tGMWxtUnMyd2xUbWRfTjdCd3VibXh4UE1IOUlZdW9IdUI0MmNzTldEUEQwUlJiQ01BQUttcnhSMkpPS2ZhZWpkTFFaZnpOY0Q0eThjX1A5cUpISkJZZkNKZUpKUG9adzdFeVJSMFJHUTE2YUxSdzFGZXV4LTlzVTlfUjFMMVZKbVZTRnhCYVppNDB4LVJPelJJM1QxNnNQOGpkdEdRVEx6?oc=5",
@@ -4117,12 +4116,12 @@
       ]
     },
     {
-      "title": "Data center boom targets Texas\u2019 most productive farmland, fueling power clashes",
-      "source": "KABB",
-      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQU3FuaXYyWW9QcnVyUXNyUEZHNmJ0STlCcFdKMi0tTEM2TE91cFM4ZEZuT1I5bUx3clR4akZEQU5fY2ZvUTFWZ1VNZXNPeldCUm5tTkFsQzFiVFVPVms2OWROc0w4bHdxYXJlVWJqXzZoTzFuYi1tWWVHalpCOGpFaUhFRlNwSVJfc2VobU5jOG9BRWFGTWRxYXFwUjNXNEQxeWxXUjdVMjI1RFFaLW1rSElIamY3b0hIWmlwRVNpUEFkajQ2RV9TYjMydDgySnpfdm14NjhXM0lITEYxR2VuQWNoWGktM0lIMFFzUg?oc=5",
-      "published": "Thu, 20 Aug 2026 00:51:04 GMT",
-      "published_iso": "2026-08-20T00:51:04+00:00",
-      "age_days": 4,
+      "title": "Abbott says data centers \"dug their own grave\" in Texas",
+      "source": "Newsweek",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOa1lpUHFpX3RjNzJKSWtGMklTN01aSFZxYVpyMDlPemRPOEt6MDB6SFNISkxVR0I5bkdobmRYeEVVaGc3UG5YNEhid21XSzBfaklBUmRnckFIeUg3cVhOZGZkSFRKUklKb2lNNjJCdVJ0eUJnaHRPUTdoZnZabDJEVXFsVndvSzltaTc2TzdxWXp5TzkzOTFieg?oc=5",
+      "published": "Sun, 23 Aug 2026 16:07:00 GMT",
+      "published_iso": "2026-08-23T16:07:00+00:00",
+      "age_days": 0,
       "states": [
         "Texas"
       ]
@@ -4139,23 +4138,23 @@
       ]
     },
     {
+      "title": "Texas lawmakers hear debate on data centers, transmission lines",
+      "source": "KEYE",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPY3g3RDYxdUhjaUo0TERuYmFLYzB4dXZiSE9FQlc1YzNLLXpSQWZ5di1qejJGSE9mallDb1BISUt3VlNwQWozQjE4UnJjTzNIVmtLOXZMdlduM0tlUVJQX25hR0tPMGtEQW44N1pBQno1bGVZX0dTRHFRSUd0TWF1VGFZWXJMT3JydXQwR01KZVJ1dzNxYk5qX1BmWQ?oc=5",
+      "published": "Thu, 20 Aug 2026 02:01:08 GMT",
+      "published_iso": "2026-08-20T02:01:08+00:00",
+      "age_days": 4,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
       "title": "Texas Governor Reiterates Guidelines for Data Center Builds",
       "source": "the Electrical Distributor magazine",
       "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPUkpHZGJtS2pLUXVSS3lFMWtLRF84SDZJTTJlb1owX2xyV0xlZUN4X0JMMFA3MmNlcEZvVGp3WGNIWUYtNlRWd2dZcFNJcmVuQUJ1YUZGRlVEb2tBMGd3dWNkSzBGZHpnT2VXOXJKODl2TzI2OEVTQVQ0Y3F3eHJTa05GTzM3UQ?oc=5",
       "published": "Fri, 21 Aug 2026 15:52:35 GMT",
       "published_iso": "2026-08-21T15:52:35+00:00",
       "age_days": 2,
-      "states": [
-        "Texas"
-      ]
-    },
-    {
-      "title": "Abbott says data centers \"dug their own grave\" in Texas",
-      "source": "Newsweek",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOa1lpUHFpX3RjNzJKSWtGMklTN01aSFZxYVpyMDlPemRPOEt6MDB6SFNISkxVR0I5bkdobmRYeEVVaGc3UG5YNEhid21XSzBfaklBUmRnckFIeUg3cVhOZGZkSFRKUklKb2lNNjJCdVJ0eUJnaHRPUTdoZnZabDJEVXFsVndvSzltaTc2TzdxWXp5TzkzOTFieg?oc=5",
-      "published": "Sun, 23 Aug 2026 16:07:00 GMT",
-      "published_iso": "2026-08-23T16:07:00+00:00",
-      "age_days": 0,
       "states": [
         "Texas"
       ]
@@ -4177,18 +4176,7 @@
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPbkFObkNPaFp3TUxhWFljMkVockpXREEwRE1lN0tYMmk3RWNXNVpvcHViWUFhLXdxSFNIYjFKUy1qcUMydVR6YkliU1o1b0ZqTkUtZ3RvRGl1b1pFZEVsd3hWdUhjalhBNm5DLWI4dGMtSDFpc3dDeEViaWdXTC1iSHpkZjZQRU9xaXhlSjVmM05DU281Y1FQOUJ5eld5QVRIaE45SGVyVHk?oc=5",
       "published": "Fri, 21 Aug 2026 10:00:00 GMT",
       "published_iso": "2026-08-21T10:00:00+00:00",
-      "age_days": 2,
-      "states": [
-        "Texas"
-      ]
-    },
-    {
-      "title": "Texas House holds wide-ranging hearing on booming data center industry",
-      "source": "Community Impact",
-      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPUmFfMl9yelZ1clBpRlZ1MXpnYnJMaGtOQjZmVEhvUU1DQl9JNXczZWZROGNXUnNfUVEtMk9uSGpWMzU1anBwdFpfcGV1ZW1nOTl2RTlWank4REV5VGk3cVVOd0V0dnlCMXRRYlNaZ2c1Vko5cXpWQTR2YkNWZ1pXTlRhaDJtM044YkxsNTdWOV9yS2FKX1RHcW1jSmtPc3g3SjRyeFh3SUVVSXNTdWhoMTJRWFROc1J6VkYtNWc4d1FEWmlFb2R0dnNWZGFGSUNYSEJYVFdiM1BGZ0xicWxr?oc=5",
-      "published": "Wed, 19 Aug 2026 17:00:00 GMT",
-      "published_iso": "2026-08-19T17:00:00+00:00",
-      "age_days": 4,
+      "age_days": 3,
       "states": [
         "Texas"
       ]
@@ -4200,17 +4188,6 @@
       "published": "Fri, 21 Aug 2026 20:15:00 GMT",
       "published_iso": "2026-08-21T20:15:00+00:00",
       "age_days": 2,
-      "states": [
-        "Texas"
-      ]
-    },
-    {
-      "title": "Meta and BlackRock\u2019s $14bn data centre exposes lenders to insurance gap",
-      "source": "Financial Times",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxORGJoajVUdU1rWTVTVmh4YlVTczVIbG0xX3NjbjhXUmI1WDhnWlVVMEhwN3REOE9KQ0h1N0J4SXRVZ01IcFFZOXpqT3hRM09oSzF4dnk5eU1MelJqTURkWG0tMlNIVjBzRnlQMVItOVV2eUhYTXh1ajFUZW01Y0VPajZSdTA?oc=5",
-      "published": "Mon, 17 Aug 2026 10:00:10 GMT",
-      "published_iso": "2026-08-17T10:00:10+00:00",
-      "age_days": 6,
       "states": [
         "Texas"
       ]
@@ -4249,17 +4226,6 @@
       ]
     },
     {
-      "title": "Google, OpenAI among companies to comply with Texas AI data center rules",
-      "source": "Yahoo",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUXoxM3ZUQnBxMmE5Q29LbEZXckVyWVVWakFYaE4ydlNfTnhFVWYyV2h2VE1POEoyZnVndDZPU3RrM2ZtN1FOOFZXNWtLaFVBWkVjRXhKa1NBRDQtT1ZGZVVMdllEejJEMmpBdkVMYXpVMy00cFlFZ0ZHcHpBRjdsMXhKQjRMWXBvMkctRUg4QjlWd1NtRDF6YUZ0U0Y?oc=5",
-      "published": "Fri, 21 Aug 2026 14:01:50 GMT",
-      "published_iso": "2026-08-21T14:01:50+00:00",
-      "age_days": 2,
-      "states": [
-        "Texas"
-      ]
-    },
-    {
       "title": "ERCOT to audit nearly 300 proposed data centers by the end of 2026, officials say",
       "source": "Community Impact",
       "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOWkZnYVZpTmxfVmgzdU5xOWdmektPdFRBLVhFZ1hKRTZNbGktR2J2Skh2MjJxN0FFOS05MGJrT1M3N2VMMy1rWkFQQ05nWnpSNDludkQtQ0pfdjZGc2FkdmNYTkk5M052clRERzlqbmlQcUVFWFZ6eXYwR25aQzZ5ajk2N0NoSllGdG9ldkVZTV95cjQtRVQ1M1ZoNUJBc0xRMjV1TnhyV2dKYWU0US1fNkRiWFhZYTBiUE9wN2lXeG5vbE1fLVhYMFV5aW0wMzJQ?oc=5",
@@ -4293,6 +4259,17 @@
       ]
     },
     {
+      "title": "Texas lawmakers hear debate on data centers, transmission lines",
+      "source": "KVII",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNOUJDY0lzTDBxMG11N0dodzZiU0ZKRHhSeUJwWVYwck5yMHJDYlVyTGlmOEFtS24yY1hic29nb3NybU56WGt3Ny1laFVqYmtlWlFnUGtIOWppMm1SUjFGWmFIS25mczh5S2NBNTlLd2szbmRuUExScEV2OW9ZMHR4RTNQbnJFajFlYWFDZWdFZ2JWMVJneXB6T0dNWE93SlB1Z1h4dW54aw?oc=5",
+      "published": "Thu, 20 Aug 2026 08:37:24 GMT",
+      "published_iso": "2026-08-20T08:37:24+00:00",
+      "age_days": 4,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
       "title": "New Era secures key permits for Texas Critical Data Centers, sees capacity rising",
       "source": "Yahoo Finance",
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOcVJUVWg3alVoUjV6a3hXTG9COVJYSjlYckVCWU0tOEMzTFJ0WVF3Z3Y5NkVGVEo1a2VUdFRfSlNoN0QyZGRrYXgzNTZ2VkVkVzFObDR5UXJsNFRSNmZPbFpKa1JBbHBTcjNDRWxKdXRtQzBtRXZuckIzZW8wLXM0NXZycTNVS0w3amh0YVQ1cw?oc=5",
@@ -4315,33 +4292,22 @@
       ]
     },
     {
-      "title": "Austin-area residents are pushing for data center bans. State leaders are divided on what to do next",
-      "source": "Austin Free Press",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5rSFYtOGc4SG5UbU8wb2JJOWR1aUJUOFZNV1p0c2hJbm5LYmRCRzFwRHFUTllJNjhrbkxFeXNaRksyVUdSZ2dTSFpibXh2SGstTVE?oc=5",
-      "published": "Wed, 19 Aug 2026 10:01:00 GMT",
-      "published_iso": "2026-08-19T10:01:00+00:00",
-      "age_days": 4,
-      "states": [
-        "Texas"
-      ]
-    },
-    {
-      "title": "Dr. Brent Bennett\u2019s Testimony Before the House State Affairs Committee: Data Centers & 765-kV Transmission Lines",
-      "source": "Texas Public Policy Foundation",
-      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPVy00UFhnQ3hRUUk3UktNS2dwdUl0YUdsN2VVaWNnc25YMUxmV19TUGJHZ0NqeGx0LU1sdl9qTktOcUQ5emlZUG8wVVFXaWJZRUc4QnV1ZjNwMURZaHR1dEUxMTZWblVKMGxTWVd6all2bEZacFRINDlkTDdIZ3BYejRWaXFYUU1WWXphSjBXdmFrZlZKSFNmME0zTHZONWRTNXFvZEJWVm5hSFpicXFtS2VIMF81Tlg3eUxlV2haMjB5TjJXSWF1WXluN285Z1NIS0E?oc=5",
-      "published": "Thu, 20 Aug 2026 02:23:17 GMT",
-      "published_iso": "2026-08-20T02:23:17+00:00",
-      "age_days": 4,
-      "states": [
-        "Texas"
-      ]
-    },
-    {
       "title": "Data Center Gas Plants to Boost US Power Emissions by 20%",
       "source": "Bloomberg.com",
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPeTBmZE9uZjY0TGpRRi0tS0hjYkxMYmhXMndETkp1anZrTGFXSUNzUTFVcmRSOU00dzVNajRSbXkwQ1B3MS0wTUtFQXJBRG55aGFXNFRFajhiRXBaelBhRUpOVXA1T3BiRGRrWTQtVG1YcDVFS3pPdTRYQWkzNkRGV2RmWHhXV3VRSmtyU0NuUTVZdzRGeDYxNkxsSDFWODl5ZWFmQVl5dHZVMDg?oc=5",
       "published": "Tue, 18 Aug 2026 11:00:02 GMT",
       "published_iso": "2026-08-18T11:00:02+00:00",
+      "age_days": 5,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
+      "title": "Austin-area residents are pushing for data center bans. State leaders are divided on what to do next",
+      "source": "Austin Free Press",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5rSFYtOGc4SG5UbU8wb2JJOWR1aUJUOFZNV1p0c2hJbm5LYmRCRzFwRHFUTllJNjhrbkxFeXNaRksyVUdSZ2dTSFpibXh2SGstTVE?oc=5",
+      "published": "Wed, 19 Aug 2026 10:01:00 GMT",
+      "published_iso": "2026-08-19T10:01:00+00:00",
       "age_days": 5,
       "states": [
         "Texas"
@@ -4371,23 +4337,23 @@
       ]
     },
     {
-      "title": "\u201cGarland\u2019s data center reality They\u2019re already here \u2013 now what?\u201d",
-      "source": "Texas Metro News",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQYjh5N1A5enFfbEtvWmQ1VjZsdUYwczFUdDhJaWVMZEVFcHJiWXFoNWpFbW5WUDRObTZkWjRYWXJKZzl0U3RYVUM0SjJITEdqRkRkZ1RZTFlYUFlMM2lCcHNXa0JOc051ZFFrc3AtUGNXU21Xa1NGNDluT3htXzZwVVA2dWkzU1Etdm5LVElmejRGY08zaDNZ?oc=5",
-      "published": "Sat, 22 Aug 2026 12:50:18 GMT",
-      "published_iso": "2026-08-22T12:50:18+00:00",
-      "age_days": 1,
-      "states": [
-        "Texas"
-      ]
-    },
-    {
       "title": "G\u00e1mez backs 90-day Brownsville data center pause as statewide scrutiny mounts",
       "source": "Rio Grande Guardian",
       "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMTY4SEY1M2RmZ1ZuazFRSEl2X1QzcUoyOWJrYzlUdHlBeHBTWjd2V3BFYXgxT1FwbDNoZlNYRGRBNDVZc3RaUjczbVh1ZGJpb3pQVWNrbHhwNGd4QUprRUU3T1VMX19fOW9jR2k1MVZBM0s5SGQtLWNCbTlhbVpYanZRM2JvMkNHaFNhaGZiUGVQR24zZjRmNGlhdjdUbjBKLTV4ZEZNRlBIZDRUdHYxdXFPNzV1VWNKYk03WQ?oc=5",
       "published": "Thu, 20 Aug 2026 11:15:00 GMT",
       "published_iso": "2026-08-20T11:15:00+00:00",
       "age_days": 3,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
+      "title": "\u201cGarland\u2019s data center reality They\u2019re already here \u2013 now what?\u201d",
+      "source": "Texas Metro News",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQYjh5N1A5enFfbEtvWmQ1VjZsdUYwczFUdDhJaWVMZEVFcHJiWXFoNWpFbW5WUDRObTZkWjRYWXJKZzl0U3RYVUM0SjJITEdqRkRkZ1RZTFlYUFlMM2lCcHNXa0JOc051ZFFrc3AtUGNXU21Xa1NGNDluT3htXzZwVVA2dWkzU1Etdm5LVElmejRGY08zaDNZ?oc=5",
+      "published": "Sat, 22 Aug 2026 12:50:18 GMT",
+      "published_iso": "2026-08-22T12:50:18+00:00",
+      "age_days": 1,
       "states": [
         "Texas"
       ]
@@ -4404,12 +4370,34 @@
       ]
     },
     {
+      "title": "Data centers\u2019 \u2018oh s--t\u2019 moment",
+      "source": "Politico",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOclF4bTlPQkZtM0wyZmJKbmxZWkJicXZRM05ya1o2ZTZqWl9SVUxSWG5kSWtacUNwQm05bkNtZk5TMl9CUHQzd2JHclVkOTg4X3lBUGNYZE1PUU95ZTJ2Z3ZTeS1ZZDFIU0VyY1lSUDFLNDdjcGlCMmhqNkRzQkZxMFF3?oc=5",
+      "published": "Mon, 24 Aug 2026 09:00:00 GMT",
+      "published_iso": "2026-08-24T09:00:00+00:00",
+      "age_days": 0,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
+      "title": "'Capital alone no longer clears a site': Morgan Stanley says data centers' big money era is over",
+      "source": "Fortune",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBpaXZ4SThHTnpnYzA4VjRndWVVbEw2ZFRoWXBFMkd0Q2hxa0c5NWVNTk1MbUloWUZ3WU4ydUtJSzVkOThCTlhsTXA0ZEZGNmxGdnFvVmpQMFVqUktOYXpieFI4WklBNGJKaWg4S3ZXWFB4OGt2bVA2VQ?oc=5",
+      "published": "Thu, 20 Aug 2026 12:12:00 GMT",
+      "published_iso": "2026-08-20T12:12:00+00:00",
+      "age_days": 3,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
       "title": "Letters \u2014 Will data centers hurt or help Texans?",
       "source": "Dallas News",
       "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOa3Q2YUROVHduaTdoSFdkYmJwc2l6bV9iekFqMFpzVWFiZjVrdXZSWGRpRFpJVDRLdzh5MmN1LXpGLWx3S2xDNm9yMUFxWUhJbmd1dHBQTFpwRHhSN3dCbzduZGJvZklSd2hsVXhUcEZmWHV0M09sVVZKZ2REcm9TZ2VVeXFaYmtBemQxQVgwcGhDaURkdmxWc3I0Qmg3dDQ1cVA2VzNNTVUwMldVTGdYYndVR3Z2SHc?oc=5",
       "published": "Sun, 23 Aug 2026 09:36:00 GMT",
       "published_iso": "2026-08-23T09:36:00+00:00",
-      "age_days": 0,
+      "age_days": 1,
       "states": [
         "Texas"
       ]
@@ -4437,17 +4425,6 @@
       ]
     },
     {
-      "title": "State of Texas: Data center boom faces growing scrutiny",
-      "source": "KXAN Austin",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOaFlLalJuUEluMlJLMVByTXpKR2lzTFRzSEppZkZSeU9URWxzMjhqRjU0RE1wOXFWOVBTdld1T09qdXFvY3pBTHMxLTlmN1Q4dXdSOHY4eGtvVUZfc2dIR3N3XzdsR0pUNjVvaDBVejBkZW9hWVVwU2dFb2E5WHFFWENvbExwZ1NuYXVHczlsM2o4OGtpM3c?oc=5",
-      "published": "Sat, 22 Aug 2026 19:45:00 GMT",
-      "published_iso": "2026-08-22T19:45:00+00:00",
-      "age_days": 1,
-      "states": [
-        "Texas"
-      ]
-    },
-    {
       "title": "Abbott Says Texas Data Centers 'Dug Their Own Grave' as AI Backlash Intensifies",
       "source": "finance.biggo.com",
       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBYelNQcmFfbE1VYndCTmJEZXR2UklFam9SeEZ2cHpKNDI4T3VSa3Z4bkRYUXFCVF9tQVY0Vkx4cGxDYjJuVkhfcnc4d19LTTBzbHo4Mms3NU83M0VlN3ZoU3VvVGdmcE00bkpWc2FhS2JjYnYzT3c?oc=5",
@@ -4459,12 +4436,12 @@
       ]
     },
     {
-      "title": "'Capital alone no longer clears a site': Morgan Stanley says data centers' big money era is over",
-      "source": "Fortune",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBpaXZ4SThHTnpnYzA4VjRndWVVbEw2ZFRoWXBFMkd0Q2hxa0c5NWVNTk1MbUloWUZ3WU4ydUtJSzVkOThCTlhsTXA0ZEZGNmxGdnFvVmpQMFVqUktOYXpieFI4WklBNGJKaWg4S3ZXWFB4OGt2bVA2VQ?oc=5",
-      "published": "Thu, 20 Aug 2026 12:12:00 GMT",
-      "published_iso": "2026-08-20T12:12:00+00:00",
-      "age_days": 3,
+      "title": "State of Texas: Data center boom faces growing scrutiny",
+      "source": "KXAN Austin",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOaFlLalJuUEluMlJLMVByTXpKR2lzTFRzSEppZkZSeU9URWxzMjhqRjU0RE1wOXFWOVBTdld1T09qdXFvY3pBTHMxLTlmN1Q4dXdSOHY4eGtvVUZfc2dIR3N3XzdsR0pUNjVvaDBVejBkZW9hWVVwU2dFb2E5WHFFWENvbExwZ1NuYXVHczlsM2o4OGtpM3c?oc=5",
+      "published": "Sat, 22 Aug 2026 19:45:00 GMT",
+      "published_iso": "2026-08-22T19:45:00+00:00",
+      "age_days": 1,
       "states": [
         "Texas"
       ]
@@ -4475,7 +4452,7 @@
       "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOc0V5cUR2YUNJWFI2MmNBSDNMRGx0M0pYZmFTZkxzM3duek1iX0JUU0VENmZJRXRkc3h0NnRfTUpjOVVZbnIzaXpiYWxEWWlZcUJTTmRtdGJTQWRTZ3BiMVk3dUNaUVRKeHpxd054NHRzblhWYlE2MlIyOHdYMEdvbXBXbGh6NVY2SW82ZU0tZ0tlVk5McjdpT0FMN2ZlbUl4U1VWaDlrNWlFcmxVRnNZRFQwYlVvdHo4RGNUdWhRR2l3ZWQzN0VIWXFSR0NZQ3RWU2JTZU9lUjVJQzhiREpKRmpCVUlwZnB3OEE?oc=5",
       "published": "Fri, 21 Aug 2026 10:35:12 GMT",
       "published_iso": "2026-08-21T10:35:12+00:00",
-      "age_days": 2,
+      "age_days": 3,
       "states": [
         "Texas"
       ]
@@ -4492,23 +4469,23 @@
       ]
     },
     {
+      "title": "Data center boom is changing North Texas landscape | Exclusive",
+      "source": "Times Record News",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWG5nbksxdDFlSVowbzZpOHNSR3FyVWJQWXpYYmhRaVg4YkVfOG9icmpzQ0xlNTFkUkxsRkdyZ1V4V25CaFNWX2VhN1NHRTJVZnl1ZDRuTHhhNGFLRFdqV0xYLTRQemJCN2xiRWh5NXVFeDE3NXdtRGtORGVDSXRYQzRsVWVLWXNETjlFaFdaUlFhZnhSM3dNWV82V0xKLWtrTlZMT182Ym1EWUE2?oc=5",
+      "published": "Sun, 23 Aug 2026 09:45:00 GMT",
+      "published_iso": "2026-08-23T09:45:00+00:00",
+      "age_days": 1,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
       "title": "Talarico criticizes Paxton over data center policy, donations; Paxton calls rival a hypocrite",
       "source": "KXAN Austin",
       "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQUGNlQkt2Zmp6N04wa2JyOWVqZ0UzNUtWVlFIelo0VURkMUJnU0NjbzVBbFVnam43N01lR2pJOVFubTZkSVlYZGY1aUYwdkJFNTdteXdNRDh6a19uNUt3NGxpaEl1Q0tNN2NLa0lwSDdXYmVYNnBqcTU1aTZ4b1pZU090TDdNUlk5WEhYQzNrSmxEVThQTkpjbHQydFJEaEVXNXdOZEdheXVTM2RVbEpsbW5iemlCR1d5RmfSAb8BQVVfeXFMTlc2WWJiV0RpUndiTllxTFFpSGFNc0lvbzBBRlpRV0VfdW5VaktEQUpfSEZ1YmRCbWQ3S1I4cWpWN2htUHBpeEtzOEFNeFcyNzNOelo0dU1nN05QQmRmLVdPVTRyMXNQUk9HdEFobFBRM2xSa3dZdXZlejMtUG5oSDIxbFZVendRRDE2OEdvT25QbXBYZ21PT0dHRFJCTmFLOHJ6a19kOVZnLUNKN1dlRjA3N1pPUmRLaWlxQlctVnc?oc=5",
       "published": "Wed, 19 Aug 2026 00:30:23 GMT",
       "published_iso": "2026-08-19T00:30:23+00:00",
       "age_days": 5,
-      "states": [
-        "Texas"
-      ]
-    },
-    {
-      "title": "Data center boom is changing North Texas landscape | Exclusive",
-      "source": "Times Record News",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWG5nbksxdDFlSVowbzZpOHNSR3FyVWJQWXpYYmhRaVg4YkVfOG9icmpzQ0xlNTFkUkxsRkdyZ1V4V25CaFNWX2VhN1NHRTJVZnl1ZDRuTHhhNGFLRFdqV0xYLTRQemJCN2xiRWh5NXVFeDE3NXdtRGtORGVDSXRYQzRsVWVLWXNETjlFaFdaUlFhZnhSM3dNWV82V0xKLWtrTlZMT182Ym1EWUE2?oc=5",
-      "published": "Sun, 23 Aug 2026 09:45:00 GMT",
-      "published_iso": "2026-08-23T09:45:00+00:00",
-      "age_days": 0,
       "states": [
         "Texas"
       ]
@@ -4525,23 +4502,34 @@
       ]
     },
     {
-      "title": "Trump wants communities to embrace data centers, but opposition is growing",
-      "source": "Scripps News",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQb3NqaDRSeXRKZ0hKYl9PX29XZXRwdW16aTA1d2p2bHNta3psUUNwNW9HaFRaWk83VlA3cG5PbXFpTzJ2d3lReTBUa1d0amtXaUljZldveV8ydXVSbFF4SEl1NTloVjFqb0dIV0VZV3A3aFNTSG9obHVIVVNmbXZ1ZkZTN1N6ZFVZT2hGS2pUOE5NNTlIOFN2MDdwb2J3bFFOdjY5aDRBLUcyUU1MV1BB?oc=5",
-      "published": "Thu, 20 Aug 2026 16:47:39 GMT",
-      "published_iso": "2026-08-20T16:47:39+00:00",
-      "age_days": 3,
-      "states": [
-        "Texas"
-      ]
-    },
-    {
       "title": "ERCOT to complete Texas data center audit by end of year",
       "source": "KHOU",
       "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQb01yR0NaQUJJWVNteUc2c2JCckF6RzlMQm5WMThrZ0ZJelN2QVVSRm1YZnpUb0ZKN29OdDl1cF84cENuNEtuU1ByWG10NllUTkVEd19DN2pjcWlGRy1qNlBjdm5aRk5xSmExc3NES3M5VHZHSUJOWmJNaVJ3UmdfMnRpaHJVTDFsVTNZY0Z1YS1BOEJrWE9NVC1mYzhSNkU0QlJkb0hXZFF2a3ZVeEl0Y2t5T2VTZzFIY3BPclA0ZHlNeVlCQnVrLUVlU2hCcU5U?oc=5",
       "published": "Fri, 21 Aug 2026 21:41:00 GMT",
       "published_iso": "2026-08-21T21:41:00+00:00",
       "age_days": 2,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
+      "title": "Texas State Rep. James Talarico talks data centers, immigration with ABC-7\u2019s Marcel Clarke",
+      "source": "KVIA",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNZEFLWEExSnI0UTdVc0xtcTFidF90YkpGQjAxc3gzSzdqWU02ckl0ZmR2Y2luWm5vN3ltOXd0YjJGVFlzdU1feFFlYm5rZFJLVmdnSGZLdkVuSXdBRW9KLTIzbVNOLXNvc1lKb3o3d1B5QVloSmRjdE0xR3c5dHNhQ0xsekN1UEJZVWkzcUticVpReE5mdjhxdWRCdXR3RkFsY2d0eDZVVmRrVW5TQUd2OGFJZ1hZLWwxVklWNlBUX1N6NHJQMWN2MjRWYUxralpzNThZ?oc=5",
+      "published": "Thu, 20 Aug 2026 22:20:10 GMT",
+      "published_iso": "2026-08-20T22:20:10+00:00",
+      "age_days": 3,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
+      "title": "Trump wants communities to embrace data centers, but opposition is growing",
+      "source": "Scripps News",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQb3NqaDRSeXRKZ0hKYl9PX29XZXRwdW16aTA1d2p2bHNta3psUUNwNW9HaFRaWk83VlA3cG5PbXFpTzJ2d3lReTBUa1d0amtXaUljZldveV8ydXVSbFF4SEl1NTloVjFqb0dIV0VZV3A3aFNTSG9obHVIVVNmbXZ1ZkZTN1N6ZFVZT2hGS2pUOE5NNTlIOFN2MDdwb2J3bFFOdjY5aDRBLUcyUU1MV1BB?oc=5",
+      "published": "Thu, 20 Aug 2026 16:47:39 GMT",
+      "published_iso": "2026-08-20T16:47:39+00:00",
+      "age_days": 3,
       "states": [
         "Texas"
       ]
@@ -4613,23 +4601,23 @@
       ]
     },
     {
-      "title": "Q&A: During East Texas stop, Texas land commissioner discusses data centers, water resources and the Alamo",
-      "source": "Tyler Morning Telegraph",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNcGs5UlNtLWgtZm5wSXJ2c2FIMTZLUEZfSHdMN1owV1JKVTFTRm9uaElsT3BCT3owRGV3V1lzN2pzV2p1b0ZkWFlrR3A3R0Z6V0JnT3VpRWk3NWo2ekxuMl9CTl9UYXB4anotMXh2UEpaYjlGNk9WS09QenVkcG1rRWh5MXYzN2ZjbGFHbzNMdmFjcXZZaUN2RWdXUGZLWU1Iem54VllJb3NaRGlOcFJybjgyZnBSQ0ctWElTeGxBTzlrSG9uSFZWOTdiNlZWQ3NtWEM0?oc=5",
-      "published": "Fri, 21 Aug 2026 10:37:15 GMT",
-      "published_iso": "2026-08-21T10:37:15+00:00",
-      "age_days": 2,
-      "states": [
-        "Texas"
-      ]
-    },
-    {
       "title": "A year in, the data center/AI battle starts to clarify",
       "source": "The Crucial Years | Bill McKibben",
       "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5CamQzYTRFeWhqWHQxa3VXMmNKR0ozb3RRM2lUU2t4UzZ4MkZMaXFTTldPLTEtMUpycERuZi00MHhfMXBMZFU0UW1wT2l3Tjhka0J3VHpjUzRTdTFZcUREQ3ROYmQ4TnpVTld6U2lqMGJLSVB0bDgxdVFB?oc=5",
       "published": "Fri, 21 Aug 2026 13:26:15 GMT",
       "published_iso": "2026-08-21T13:26:15+00:00",
       "age_days": 2,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
+      "title": "Q&A: During East Texas stop, Texas land commissioner discusses data centers, water resources and the Alamo",
+      "source": "Tyler Morning Telegraph",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNcGs5UlNtLWgtZm5wSXJ2c2FIMTZLUEZfSHdMN1owV1JKVTFTRm9uaElsT3BCT3owRGV3V1lzN2pzV2p1b0ZkWFlrR3A3R0Z6V0JnT3VpRWk3NWo2ekxuMl9CTl9UYXB4anotMXh2UEpaYjlGNk9WS09QenVkcG1rRWh5MXYzN2ZjbGFHbzNMdmFjcXZZaUN2RWdXUGZLWU1Iem54VllJb3NaRGlOcFJybjgyZnBSQ0ctWElTeGxBTzlrSG9uSFZWOTdiNlZWQ3NtWEM0?oc=5",
+      "published": "Fri, 21 Aug 2026 10:37:15 GMT",
+      "published_iso": "2026-08-21T10:37:15+00:00",
+      "age_days": 3,
       "states": [
         "Texas"
       ]
@@ -4647,11 +4635,22 @@
       ]
     },
     {
-      "title": "Bipartisan Energy Politics | Reading and Podcast Picks - August 23, 2026",
-      "source": "The Texas Energy and Power Newsletter",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5CUmo5WWRDdUhLRTJPMDBaQTFRa0d2cUJrQXo3OC1tY2ZZaHJoa2J5UDYzU3FBRk1fT1ZTMlZjdXZoRTFlLTNaYmplamlCOWszRS1HYTdjcmQ5Um0xODJJNjVjdXVncl9WdHNka3hwTTB5YkxoWGR6VkRfNV8?oc=5",
-      "published": "Sun, 23 Aug 2026 13:03:35 GMT",
-      "published_iso": "2026-08-23T13:03:35+00:00",
+      "title": "The Self-Destructive Opposition to Data Centers",
+      "source": "National Review",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOMXdLaVJxNm9iTENrTXZRVHZpVWVfT0tFRDRDY3BBOGNWUXpZZjlDVDM4akdvWFU0amlJSm50RDFYQmdlcDgwNEpBMkpjUDR4aVJHTThzTXJXWTljci16cDlWbEN6Z2JCN25KRUpwNFBwNTcwdFl4djRNVnFwZ21TSDN5R3NvUjh2RWlzeGF0TXXSAZYBQVVfeXFMT193YWZXdGNleXN0RmVYb2JJSXZTZ2txQklUUHFYZ3ZiUHdscjlGZmREbFFKdG91Y3k2Wkx2REFNRUV6RXV2bEtnX0d1QTJDbjJURUhTVW5OdEIwSFQ2ZE0zc0xjQi1DZVJvTEE2VnhjYkxtTmtHVTZZMlQzb2V6VTVlSUg3aEVQOFFfa3FWZi0wZEZGSkJB?oc=5",
+      "published": "Mon, 24 Aug 2026 10:30:54 GMT",
+      "published_iso": "2026-08-24T10:30:54+00:00",
+      "age_days": 0,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
+      "title": "AI's massive appetite for power, water ignites fight in high-stakes Texas Senate race",
+      "source": "Fox News",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQcDRCWVJTdUlCeGh0S1FpLVlRcVU5QzhoeEkyQ2ZFRzdsWUVscDRrcXY0cTFtY0FzY04tQjJ4dHpnNkpXYXF0QXF6T0txNTFvSE5uMTRwdHBKZm9jcEpxRm5NV3FSX1drczRJSDNjZXg2em15LUd2S0pFRERMTzhfN0dJV0d3cm9qMHZnUFdjMXRma3JRRFcwWk84Ym1SenFYbXktZklEb0FRdHE3UkHSAbMBQVVfeXFMT3MzTjVLRkM1dS1nZFI0LU5ua1ZGaWxCdDlHbDhhN2Y3amViU2Zubi1rclc0aDBvYnptT0FmcjBRSEV4UU9ZTWlCa3ZWWGhaUUtIaGM4STFURmQ4d3lQRjZjYTloeHVZY2VHWmNGdEtZbkMxdE8zcVhsLUdSUjBmYzc1MHhiMXRtckRZS1o1S3dEM3BuUE5JdXZIUVkzeFB4ZXVmcFZpbzhUVlZqN1dCdTh0Mmc?oc=5",
+      "published": "Mon, 24 Aug 2026 10:00:05 GMT",
+      "published_iso": "2026-08-24T10:00:05+00:00",
       "age_days": 0,
       "states": [
         "Texas"
@@ -4669,11 +4668,33 @@
       ]
     },
     {
-      "title": "Texas State Rep. James Talarico talks data centers, immigration with ABC-7\u2019s Marcel Clarke",
-      "source": "KVIA",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNZEFLWEExSnI0UTdVc0xtcTFidF90YkpGQjAxc3gzSzdqWU02ckl0ZmR2Y2luWm5vN3ltOXd0YjJGVFlzdU1feFFlYm5rZFJLVmdnSGZLdkVuSXdBRW9KLTIzbVNOLXNvc1lKb3o3d1B5QVloSmRjdE0xR3c5dHNhQ0xsekN1UEJZVWkzcUticVpReE5mdjhxdWRCdXR3RkFsY2d0eDZVVmRrVW5TQUd2OGFJZ1hZLWwxVklWNlBUX1N6NHJQMWN2MjRWYUxralpzNThZ?oc=5",
-      "published": "Thu, 20 Aug 2026 22:20:10 GMT",
-      "published_iso": "2026-08-20T22:20:10+00:00",
+      "title": "Bipartisan Energy Politics | Reading and Podcast Picks - August 23, 2026",
+      "source": "The Texas Energy and Power Newsletter",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5CUmo5WWRDdUhLRTJPMDBaQTFRa0d2cUJrQXo3OC1tY2ZZaHJoa2J5UDYzU3FBRk1fT1ZTMlZjdXZoRTFlLTNaYmplamlCOWszRS1HYTdjcmQ5Um0xODJJNjVjdXVncl9WdHNka3hwTTB5YkxoWGR6VkRfNV8?oc=5",
+      "published": "Sun, 23 Aug 2026 13:03:35 GMT",
+      "published_iso": "2026-08-23T13:03:35+00:00",
+      "age_days": 0,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
+      "title": "Hut 8 (HUT) Stock Looks Fully Valued Despite Texas Data Center Audit",
+      "source": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRElocjFNNGtkd0lheVVZSzE5dXpKZzEtUU0xV0paMzZWeWZMa3ZaaHNVNjAyTzRiemJRYVI5SVVrLURGVkNibHd4TGwzM3ZFUEhaWWoyc09LclJ3ZXJvbTNKS0lKSzNlMnpXdnhYdkttN2tjTTlnMFZUV3RSX0dONnE4ajRGVHVId0dBR1p1UQ?oc=5",
+      "published": "Tue, 18 Aug 2026 09:11:38 GMT",
+      "published_iso": "2026-08-18T09:11:38+00:00",
+      "age_days": 6,
+      "states": [
+        "Texas"
+      ]
+    },
+    {
+      "title": "Data Center Growth Brings Wave of Patent, Trade Secret Disputes",
+      "source": "Bloomberg Law News",
+      "link": "https://news.google.com/rss/articles/CBMiogJBVV95cUxPUU9jenI0Rm94UEI3SnNZLXBGb2Y0T2N4QW1xbGpZb0RuYVRmYUYzQkE2TG5TcDlqZVg5MmxsYV9UV1NoZUdnLVQwcnI4MS1yOUZTT2lOTVQ0b2pDN3ViZHdmLUxNdFN0Nnp4NGNYbjVxZWllNExrWTdfWVNKN2UtOWFFblVsUlhNQnN1cG05Z3JCYllKMEFyWEVCWTVSODlzZ1FMN3F3X3pjb1dmNTJIWWNaX1pGQVpITG1QdWJESm5Ud0g0bENHZEl4d0JvcGRtUVV6YVFrYnhzWkFpLWtfM09TRTR0OWZyeDB1OFFVSmJYd3puWFMtMW5CWHZ4aUVNVHBtZUFLdVFnYnI1VlN1bmoyZnBsRjVBenBYOEdCdzh1dw?oc=5",
+      "published": "Thu, 20 Aug 2026 12:58:09 GMT",
+      "published_iso": "2026-08-20T12:58:09+00:00",
       "age_days": 3,
       "states": [
         "Texas"
@@ -4691,22 +4712,22 @@
       ]
     },
     {
-      "title": "Hut 8 (HUT) Stock Looks Fully Valued Despite Texas Data Center Audit",
-      "source": "Yahoo Finance",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRElocjFNNGtkd0lheVVZSzE5dXpKZzEtUU0xV0paMzZWeWZMa3ZaaHNVNjAyTzRiemJRYVI5SVVrLURGVkNibHd4TGwzM3ZFUEhaWWoyc09LclJ3ZXJvbTNKS0lKSzNlMnpXdnhYdkttN2tjTTlnMFZUV3RSX0dONnE4ajRGVHVId0dBR1p1UQ?oc=5",
-      "published": "Tue, 18 Aug 2026 09:11:38 GMT",
-      "published_iso": "2026-08-18T09:11:38+00:00",
-      "age_days": 5,
+      "title": "Texas lawmakers meet to address Gov. Abbott\u2019s data center audit",
+      "source": "AOL.com",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQYjF0SUtHVlpJNU1RQnIweWxIU2JOOUdqRUxZd21QUXVQOUZLTFc3bGpuSWhVNS1ad0RIRmktZTVJQVlfbzNWWXluU2tZVm91Z0J1QkNHMF8yakI5eHQ4Yi1xalgya2ZfU0tRN3Q4bnc4Y0djWFlTQ2F2TUZMRFhNRUxn?oc=5",
+      "published": "Mon, 24 Aug 2026 03:54:46 GMT",
+      "published_iso": "2026-08-24T03:54:46+00:00",
+      "age_days": 0,
       "states": [
         "Texas"
       ]
     },
     {
-      "title": "Data Center Growth Brings Wave of Patent, Trade Secret Disputes",
-      "source": "Bloomberg Law News",
-      "link": "https://news.google.com/rss/articles/CBMiogJBVV95cUxPUU9jenI0Rm94UEI3SnNZLXBGb2Y0T2N4QW1xbGpZb0RuYVRmYUYzQkE2TG5TcDlqZVg5MmxsYV9UV1NoZUdnLVQwcnI4MS1yOUZTT2lOTVQ0b2pDN3ViZHdmLUxNdFN0Nnp4NGNYbjVxZWllNExrWTdfWVNKN2UtOWFFblVsUlhNQnN1cG05Z3JCYllKMEFyWEVCWTVSODlzZ1FMN3F3X3pjb1dmNTJIWWNaX1pGQVpITG1QdWJESm5Ud0g0bENHZEl4d0JvcGRtUVV6YVFrYnhzWkFpLWtfM09TRTR0OWZyeDB1OFFVSmJYd3puWFMtMW5CWHZ4aUVNVHBtZUFLdVFnYnI1VlN1bmoyZnBsRjVBenBYOEdCdzh1dw?oc=5",
-      "published": "Thu, 20 Aug 2026 12:58:09 GMT",
-      "published_iso": "2026-08-20T12:58:09+00:00",
+      "title": "Texas leaders warn of 'catastrophic' effects from pausing plan for massive power lines",
+      "source": "San Antonio Express-News",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPT3FuQkJQV1loNGd0YkdaQlRESTB0d3NYem1Yak5zQjgzUm9FeHR2ZWtzUjF2VDVUbERXWnF4Wm9KbzFCeWVMSnNNQVBGbkxKbHBxMnFQT3FuQlNPLWxYMjBJQWl4My03eUhGQTNPdTIxV0xQLTFWajIxcUZiXzhYSjhNbkRCMWYzN1VrdkxMNHZYZ2NuX3FWdEtWdXBGaE0waDRYbQ?oc=5",
+      "published": "Thu, 20 Aug 2026 19:15:50 GMT",
+      "published_iso": "2026-08-20T19:15:50+00:00",
       "age_days": 3,
       "states": [
         "Texas"
@@ -4724,34 +4745,12 @@
       ]
     },
     {
-      "title": "Texas lawmakers meet to address Gov. Abbott\u2019s data center audit",
-      "source": "AOL.com",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQYjF0SUtHVlpJNU1RQnIweWxIU2JOOUdqRUxZd21QUXVQOUZLTFc3bGpuSWhVNS1ad0RIRmktZTVJQVlfbzNWWXluU2tZVm91Z0J1QkNHMF8yakI5eHQ4Yi1xalgya2ZfU0tRN3Q4bnc4Y0djWFlTQ2F2TUZMRFhNRUxn?oc=5",
-      "published": "Mon, 24 Aug 2026 03:54:46 GMT",
-      "published_iso": "2026-08-24T03:54:46+00:00",
-      "age_days": 0,
-      "states": [
-        "Texas"
-      ]
-    },
-    {
-      "title": "Texans Raise Alarm Over Data Center Expansion Concerns",
-      "source": "Daily Signal",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5MU2tIWVlFc2hTdWxCSVFYVjR4TEFRN3ZOVzRoa2xKdjlnZ1JHaXpEY0xmMUtFNHFBUWFTa3JNT2cxMmFqaE1pQm9XVlZncy1ycUVMY2RJOXN6UjNmVm9CT19aNDFDTEdITm16amhWdU1WeXc?oc=5",
-      "published": "Fri, 21 Aug 2026 17:05:00 GMT",
-      "published_iso": "2026-08-21T17:05:00+00:00",
+      "title": "More than 4M square feet of data centers coming to Lancaster",
+      "source": "The Business Journals",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRVNxcmhTT214TjRRZGtlMlBSR0dzNGYtTkdmN3RLM1lPR015MG1MeEN0YTNwMS1lSmxQbEtlbDNWUkdqQjZLcUZPZ3dqUHdkZzMzUHVzeFFoQ01pQ2dsRVFOY1NPTXBxcm43RWdRZ21HNmZ0UEpJRFlOdVdrT0syLWFyMXg2aTVJRDRaa0JXZnhBWE5OS2JRcC14ckZvMzNqQ3c?oc=5",
+      "published": "Fri, 21 Aug 2026 19:55:00 GMT",
+      "published_iso": "2026-08-21T19:55:00+00:00",
       "age_days": 2,
-      "states": [
-        "Texas"
-      ]
-    },
-    {
-      "title": "Data centers want to be sustainable, panelists say. Transparency also in demand",
-      "source": "The Gilmer Mirror",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOYXJHR01oSHhWdzFULWYxaEtNcC1ibnlXVzRHNUVDT3FMNmtoS24zZmFkN19TTjZNRGMta0NTSW4tWnJsZzNGS0F0bkF5QlJ3TVlCV0xCWDNtQ1RBRi1HR3lNQTNsbDlidDVUZFl1akhNS3Z1cVdXS2NZTmtjWG0wN3JDUWY1ZnBpOExVeV93eURRQ0M0SV8xT1RCbzg0MGI0eDVDX2U1RkRhSmE0V29wMXdUc3NBSm10YXc?oc=5",
-      "published": "Sat, 22 Aug 2026 14:59:12 GMT",
-      "published_iso": "2026-08-22T14:59:12+00:00",
-      "age_days": 1,
       "states": [
         "Texas"
       ]
@@ -4882,6 +4881,16 @@
         "theme": "Community opposition & moratoria"
       },
       {
+        "title": "Third Central Mass. community considers data center moratorium",
+        "source": "MassLive.com",
+        "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNaWFCTF9JMWY4RHJ4VmZxbjExWjFBbHNtUFg0QzMtN2otSVEtQVlXRkJzcmtfNnE3b1JmZU1IWlpNVVRpS0lYTEpPTERwTXRRdm9FWlhjX3pqLXVvQTZidFFkYnJhY2JYRXM2UGNFUWdLSXN2emFud3plclFDbWVsT0U2TWJoakZ3NmxkVnRTaTVMY2hhVDRxR1prRF9vMmhuSTZkbDhkbXhMaHNZT0h6QQ?oc=5",
+        "published": "Thu, 30 Jul 2026 07:00:00 GMT",
+        "published_iso": "2026-07-30T07:00:00+00:00",
+        "age_days": 25,
+        "states": [],
+        "theme": "Community opposition & moratoria"
+      },
+      {
         "title": "Indy council advances pause on data centers, sends to commission for final approval",
         "source": "WFYI",
         "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZC1DTkZQTjdQVFhTRWJVV2ZxNVZILTduV1QzY3FVMWxlOG5menpVbmpqME05YTV3S1g5VGRvYUJPOGRUV2RvZHVvOHB3Z040dk8tSjZ3Y1JMM1NTSkJ4VVYwTG4yMFlGZzAwemNETTBZMDFWR2xSS2lVUkhzV2RsbENUWHJMaXNjaVZmLWZnMGVNSWNpQ0lVQ1owX210dkFrejQzQzFFS0I5TFR0QjBpLUd4YnB4ZEotQ1d1NjA3SHdvdw?oc=5",
@@ -4954,16 +4963,6 @@
         "age_days": 38,
         "states": [],
         "theme": "Community opposition & moratoria"
-      },
-      {
-        "title": "Augusta extends data center moratorium after public opposition",
-        "source": "The Augusta Chronicle",
-        "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOUGczSXZMby12UFpRUXNuZWxVRmJqeWNZRmRRQkJfb1hkZnA3V0ZLVVJRZFJ4U0lkbFpUbFBXYWdKLUpMNGhZUlJLaERlZmpPaGstNjVnVTNPWEJXWGloWm80aWlVcmZVdlVObFJGV2tnRGhzZGNITkNWNVBpaUtTVlFXUWtKel8zZVE5XzNYa1dULXU2VHhEcFBhOGZNWmt1R0RrcThSTk9aLXd3RzZlcHBsbTNNRVFuY09rbVgxdlNBbHhlQU5oMUxDWnVuTHY2UnZZYUJ2c1g1Z1Q0TlE?oc=5",
-        "published": "Wed, 22 Jul 2026 07:00:00 GMT",
-        "published_iso": "2026-07-22T07:00:00+00:00",
-        "age_days": 33,
-        "states": [],
-        "theme": "Community opposition & moratoria"
       }
     ],
     "Electricity bills & grid strain": [
@@ -4990,6 +4989,16 @@
         "theme": "Electricity bills & grid strain"
       },
       {
+        "title": "City asks state to extend data center electricity cost protections to Borderland ratepayer",
+        "source": "KFOX",
+        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQT2JZbUl1UzViaVJFckI1eEtYZ0VrRWw5ZmFoT1c5eVVxTW9QMVhHU1p1Q2g0a3RPTk5zVVFkbE9jVHk4MlE4bXhnSlBzbzBKSWY4UDBFbzFKV0lGWWhDVHBTUE50cTlfVDZTYm4tRUNPdl9QUWJsTmV0YlFFWTNQSzdlcUZFRVVpMXUzaDBoVVEySW1IMGlxMU5uWURudkNJajJZUTNyTkQyUmt4Q2Q3T05fRWdwbVUwWkFlYg?oc=5",
+        "published": "Wed, 29 Jul 2026 07:00:00 GMT",
+        "published_iso": "2026-07-29T07:00:00+00:00",
+        "age_days": 26,
+        "states": [],
+        "theme": "Electricity bills & grid strain"
+      },
+      {
         "title": "Arizona regulators approve safeguard to keep co-op customers from footing data center grid costs",
         "source": "The Cool Down",
         "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQnF4MWRpMXFOdXYzZkVRaktXMF9SOUVRcUFlcHNMUUJYb29wODRnX1lUR0RkLXZYX3F4MWtKNmZWZkpwdkdPMWU5VExHbjVsaXQ1azVzUlBkTjlGMFZXMTZ4ZXU2MXZXZnJSMU81QktIVWVCcWdKaXpyZlh2aTJQVDJCcjg1SXEzaEhTNmFod25aaDlvTUpF?oc=5",
@@ -4999,16 +5008,6 @@
         "states": [
           "Arizona"
         ],
-        "theme": "Electricity bills & grid strain"
-      },
-      {
-        "title": "City asks state to extend data center electricity cost protections to Borderland ratepayer",
-        "source": "KFOX",
-        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQT2JZbUl1UzViaVJFckI1eEtYZ0VrRWw5ZmFoT1c5eVVxTW9QMVhHU1p1Q2g0a3RPTk5zVVFkbE9jVHk4MlE4bXhnSlBzbzBKSWY4UDBFbzFKV0lGWWhDVHBTUE50cTlfVDZTYm4tRUNPdl9QUWJsTmV0YlFFWTNQSzdlcUZFRVVpMXUzaDBoVVEySW1IMGlxMU5uWURudkNJajJZUTNyTkQyUmt4Q2Q3T05fRWdwbVUwWkFlYg?oc=5",
-        "published": "Wed, 29 Jul 2026 07:00:00 GMT",
-        "published_iso": "2026-07-29T07:00:00+00:00",
-        "age_days": 26,
-        "states": [],
         "theme": "Electricity bills & grid strain"
       },
       {
@@ -5128,16 +5127,6 @@
         "theme": "Electricity bills & grid strain"
       },
       {
-        "title": "Duke Rate Case Underscores Complexities of Data Center Grid Impacts",
-        "source": "RTO Insider",
-        "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNazNyMzFiZUwycWRpWkE3Ylp5QTF4Y08yUlcyVWQtNVpyNGFDdzJFdGN5SUhGamFObUJnVzhXNmx3d2xHMFlZdlBlUmQ2NnNGS1NBZHF0RkNYSWR3Q3hOOXg2OER2R2w1MjI5SFJJZXd5U2haZzF2UUF5MFpNZ3dHSUI0T0xLbWtkQzREVGFJV0M?oc=5",
-        "published": "Sun, 26 Jul 2026 07:00:00 GMT",
-        "published_iso": "2026-07-26T07:00:00+00:00",
-        "age_days": 29,
-        "states": [],
-        "theme": "Electricity bills & grid strain"
-      },
-      {
         "title": "U.S. Rep. Kathy Castor Introduces Bipartisan Bill Protecting Americans from Paying for Data Center Development",
         "source": "U.S. Representative Kathy Castor (.gov)",
         "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAxT2dlOF9LMWc3VlZzbllNZjhFd2FNUjNhSmhlSHNXNHo1UWRuTmdsQjA5ZjJXN09oOENoZng1N04yT2hnd1VOR3Qxa2hoX3ZEOVNXVFBOM2JiVFZqbnQ3NS1UN1FnZkV1bVFKSWdfSE94QUpZY0E?oc=5",
@@ -5154,6 +5143,16 @@
         "published": "Thu, 23 Jul 2026 07:00:00 GMT",
         "published_iso": "2026-07-23T07:00:00+00:00",
         "age_days": 32,
+        "states": [],
+        "theme": "Electricity bills & grid strain"
+      },
+      {
+        "title": "Sherrill signs energy package targeting utilities and data centers, announces electric bill credits",
+        "source": "The Jersey Vindicator",
+        "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQYk1DY0VlbUhDdURIaHI4X3g0MGluOEFnTlJ4TkttejBsMU5NQ2pxNzFDeTQxWTJqQnVjaU03X0ZsQmJjb3NPWEdESjR6Ul96c01yemgxZlA4bXFJOWp0WGU3aEF2RktpWWhoYUd4bElBMHRhWUpGOUVlQjN1bnZ3RmtBTXU1a3pJd21SR3VHM0M2dGJUNV82bDNQaXFzOGt4TmZFcUluNGxmcW0xem5CUTVnaFMwWUFlcTRZMTgtUVctTHFOeEhTckhENFduZE1EX0ZXWHVB?oc=5",
+        "published": "Tue, 07 Jul 2026 07:00:00 GMT",
+        "published_iso": "2026-07-07T07:00:00+00:00",
+        "age_days": 48,
         "states": [],
         "theme": "Electricity bills & grid strain"
       },
@@ -5342,16 +5341,6 @@
         "theme": "Water use"
       },
       {
-        "title": "Water joins energy as top AI flashpoint",
-        "source": "Axios",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE83eUd6ZlFRZUJTSjNfblZvV0N4Y0ZvcnhnelpFbkZ0dTlrcVNpNjcwNHhOeW1jOWRheHFMQTNiSkJodjNwcDNfQnlEbVhuX3RNQzl6cEFXTVVGZ0FIRUF0bXFmcjd5MW5lV0lV?oc=5",
-        "published": "Thu, 25 Jun 2026 07:00:00 GMT",
-        "published_iso": "2026-06-25T07:00:00+00:00",
-        "age_days": 60,
-        "states": [],
-        "theme": "Water use"
-      },
-      {
         "title": "Drought-Ravaged Georgia Asks Data Centers to Cut Water Use",
         "source": "Bloomberg Law News",
         "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOelJwODg0V0dxZ25LWG9wOThpU1MwWE51VUhJRnY5Z1RSaHJiaU84aTMydUVaREJ3S0pfSWgtVVlldXd1bGpiZ1hNUkdVSUNTU2tIb2dTd1luWEFkMWVHMjRzajJkWVZPbVNOWEthTTRIcWsyWGxyNWhaYTBXYjV0SkNhSm04VTdRZUtUZ3hwelo5NXh3bVp4UTNBdFB6eVQ3bWd5Nkl1Yk80RGticlRONw?oc=5",
@@ -5361,6 +5350,16 @@
         "states": [
           "Georgia"
         ],
+        "theme": "Water use"
+      },
+      {
+        "title": "Water joins energy as top AI flashpoint",
+        "source": "Axios",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE83eUd6ZlFRZUJTSjNfblZvV0N4Y0ZvcnhnelpFbkZ0dTlrcVNpNjcwNHhOeW1jOWRheHFMQTNiSkJodjNwcDNfQnlEbVhuX3RNQzl6cEFXTVVGZ0FIRUF0bXFmcjd5MW5lV0lV?oc=5",
+        "published": "Thu, 25 Jun 2026 07:00:00 GMT",
+        "published_iso": "2026-06-25T07:00:00+00:00",
+        "age_days": 60,
+        "states": [],
         "theme": "Water use"
       },
       {
@@ -5580,15 +5579,13 @@
         "theme": "Zoning & land-use fights"
       },
       {
-        "title": "Wisconsin village\u2019s plan commission approves rezoning for Microsoft data center",
-        "source": "WPR",
-        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNcnJtVzBlbTlmMDEzN2g2RFQwaVJVc3FRT3pONlBBclNZSWRzeXRtUHlQYnU1SklWNzdRM2hSa2poc0ppakE3dUQwRTdfQ2cyaWJYYkdPYjU1T0IyeXByR2trSjBYdzJxREJwaEhIalVyU2VsZkc5Q0RXa1Y4Y3NkMQ?oc=5",
-        "published": "Tue, 30 Sep 2025 07:00:00 GMT",
-        "published_iso": "2025-09-30T07:00:00+00:00",
-        "age_days": 328,
-        "states": [
-          "Wisconsin"
-        ],
+        "title": "$120M Lansing data center gets mixed review from planning commission",
+        "source": "Lansing State Journal",
+        "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNdlRpMEhFeXB5SW9ZaFQtNUJIRW53WUc2TFlnYnlIdC1iWTRjSUNNT3ZCOXVoTFctQ09PalRWUVN0X2U0OFVmUTJKQV82YS1TQ0JGVWlXb1BpcFRuclhQcjg2VzNYLUpLODZtOGoyQlZyekFHZDluT0ZtRkRCRGxGNXZsMm9LanJ0Wm5JeXdDOWhUU0xhV1RYT2dUdjcwM0ZnZjczWF85N1RrNnUyUGR4Zw?oc=5",
+        "published": "Tue, 02 Dec 2025 08:00:00 GMT",
+        "published_iso": "2025-12-02T08:00:00+00:00",
+        "age_days": 265,
+        "states": [],
         "theme": "Zoning & land-use fights"
       },
       {
