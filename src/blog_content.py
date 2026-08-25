@@ -1291,10 +1291,11 @@ Three places to start:
   — the questions to put on the record while attention is high.
 - **[The moratorium tracker](/moratoriums)** — what 47 other
   jurisdictions did, and what happened next.
-- **The negotiation toolkit in the
-  [GridWatch app](https://aigridtracker.streamlit.app)** — CBA templates,
-  the data-dividend calculator, and a meeting-prep brief generator for
-  your specific hearing.
+- **[Model CBA clauses](/cba-clauses)** and the
+  **[data-dividend calculator](/dividend)** — the language communities have
+  actually won, and what the revenue is worth to yours.
+- **[Start here](/start-here)** — a meeting-prep brief generated for your
+  specific hearing.
 
 The episode's title is a diagnosis. Whether the revolt produces
 enforceable community wins or just louder hearings is decided county by

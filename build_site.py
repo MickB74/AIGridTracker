@@ -1,7 +1,7 @@
 """
 Static-site generator for the public front door (Vercel).
 
-Renders web/ from the same registries the Streamlit app uses:
+Renders web/ from the registries in src/constants.py:
   - index.html            landing page
   - states/<slug>.html    51 enriched state one-pagers (PUC, moratoriums,
                           DC sites, officials, CBA wins, case studies, muni league)
@@ -15,7 +15,7 @@ Renders web/ from the same registries the Streamlit app uses:
 
 Usage:
     python3 build_site.py
-    # optionally: SITE_URL=https://gridwatch.example APP_URL=https://xxx.streamlit.app python3 build_site.py
+    # optionally: SITE_URL=https://gridwatch.example python3 build_site.py
 
 Commit the regenerated web/ whenever constants change. On Vercel: import
 the repo, set Root Directory to `web`, framework "Other", no build step.
@@ -43,7 +43,7 @@ from src.permit_lookup import (
     sections as permit_sections,
 )
 from src.constants import (
-    AI_COMPETITORS_DF,
+    AI_COMPETITORS_DF, STATE_STUDIES, MODEL_CLAUSES,
     STATE_GRID_PROFILES, STATE_DC_DF, STATE_DC_NATIONAL,
     STATE_PUCS_DF, MORATORIUMS_DF,
     PROJECTS, PROJECTS_DF, PROJECT_EVENTS, project_status,
@@ -79,7 +79,6 @@ from src import company_complaints, story_tracker
 # must be the domain users actually reach — pointing them at the *.vercel.app
 # deployment URL tells search engines that subdomain is the real site.
 SITE_URL = os.environ.get("SITE_URL", "https://aigridwatch.com")
-APP_URL = os.environ.get("APP_URL", "https://aigridtracker.streamlit.app")
 
 # Formspree form ID for the static-site newsletter capture (the ID is public
 # by design — it ships in the HTML — so committing it here is fine, and means
@@ -107,7 +106,9 @@ DCMAP_BASE = "https://www.datacentermap.com/usa"
 # wiring. Names are few and low-cardinality on purpose — the funnel
 # questions are "which pages send people to the toolkit" and "which
 # artifacts get taken to meetings", not per-visitor telemetry:
-#   toolkit-click/<page>  — any link out to the Streamlit app (the #1 conversion)
+#   toolkit-click/<page>  — any link into the Start here wizard (the #1
+#                           conversion). Kept under the old event name so the
+#                           GoatCounter history stays one series.
 #   pdf-download/<file>   — our printable artifacts (same-origin only, not
 #                           the long tail of external ordinance PDFs)
 #   data-download/<file>  — moratoriums.json / .csv / the embed preview
@@ -129,7 +130,7 @@ document.addEventListener('click', function (e) {
   if (!a) return;
   var href = a.getAttribute('href') || '';
   var file = href.split('/').pop().split('?')[0];
-  if (a.href.indexOf('__APP_URL__') === 0 || /start-here\\.html$/.test(href)) {
+  if (/start-here\\.html$/.test(href)) {
     gwevent('toolkit-click' + location.pathname.replace(/\\.html$/, ''));
   } else if (/\\.pdf($|\\?)/.test(href) && a.host === location.host) {
     gwevent('pdf-download/' + file);
@@ -159,7 +160,7 @@ document.addEventListener('keydown', function (e) {
     document.querySelectorAll('.navgroup[open]').forEach(function (g) { g.open = false; });
 });
 </script>
-""".replace("__APP_URL__", APP_URL).replace("__GC_URL__", GC_URL)
+""".replace("__GC_URL__", GC_URL)
 
 
 def provenance_html(registry_key, depth=0):
@@ -744,15 +745,17 @@ def _newsletter_html():
     """Footer email capture on every static page.
 
     With FORMSPREE_ID set this is a plain HTML POST to Formspree — no JS, no
-    backend, no PII in the repo. Unconfigured, it links the app's signup so
-    the site never ships a dead form. The hidden `source` field mirrors the
-    app-side tracking convention so both lists attribute the same way.
+    backend, no PII in the repo. Unconfigured, it falls back to a mailto so
+    the site never ships a dead form. The hidden `source` field records which
+    surface the signup came from.
     """
     pitch = ("<strong>📬 The GridWatch Dispatch</strong> — one email a week: "
              "new moratoriums, rate cases, and negotiation wins. No spam.")
     if not FORMSPREE_ID:
         return (f'<div class="nl-box"><p>{pitch} '
-                f'<a href="{APP_URL}">Subscribe in the toolkit &rarr;</a>'
+                f'<a href="mailto:hello@aigridwatch.com'
+                f'?subject=Subscribe%20to%20the%20GridWatch%20Dispatch">'
+                f'Email us to subscribe &rarr;</a>'
                 f'</p></div>')
     return f"""<div class="nl-box">
   <p>{pitch}</p>
@@ -4861,12 +4864,12 @@ render();
 
 
 def build_start_here():
-    """Client-side port of the Streamlit 'Start here' wizard (start_here_tab.py).
+    """The 'Start here' crisis-journey wizard — the site's front door.
 
     A resident who just learned a data center is proposed nearby completes five
     steps and leaves with pre-filled comment scripts, letters, social posts, a
     meeting brief, a printable/downloadable action pack, and a hostable
-    campaign micro-site — with no Streamlit dependency. Every generator is
+    campaign micro-site — entirely client-side. Every generator is
     reimplemented in JS from the same registries the app uses. Keep them in
     sync with src/impact_model.py, src/scripts_letters.py, src/briefs.py and
     src/site_builder.py.
@@ -4931,7 +4934,7 @@ def build_start_here():
              "body": a["body"]})
 
     data = {
-        "appUrl": APP_URL, "siteUrl": SITE_URL,
+        "siteUrl": SITE_URL,
         "profiles": {s: STATE_GRID_PROFILES[s]
                      for s in sorted(STATE_GRID_PROFILES)},
         "waterMult": WATER_STRESS_CLIMATE_MULTIPLIER,
@@ -5189,7 +5192,7 @@ _BILL_PARTS = [
 
 
 def build_bills():
-    """Utility-bill explainer — ported from src/ui/bills_tab.py.
+    """Utility-bill explainer — why data centers show up on a household bill.
 
     All prose and tables move across unchanged; the one Altair chart becomes a
     CSS bar. Streamlit's `\\$` escapes are dropped — this is HTML, not Streamlit
@@ -5734,7 +5737,7 @@ def build_bills():
 def hbars(rows, unit="", color="var(--teal)"):
     """Horizontal bar chart as plain CSS. rows = [(label, value, note), ...].
 
-    Replaces the Altair charts the Streamlit tabs use. Bars are scaled to the
+    Replaces the Altair charts the retired app used. Bars are scaled to the
     largest value in the set, so the eye compares within a chart, never
     across two.
     """
@@ -5886,11 +5889,11 @@ def build_outlook():
 
 
 def build_learn():
-    """Data-center explainer — ported from src/ui/learn_tab.py.
+    """Data-center explainer and glossary.
 
     All prose, metrics, tables, and charts move across; the two Altair bar
-    charts become hbars(). The interactive Community Siting Evaluator stays
-    in the Streamlit app (needs live geocoding).
+    charts become hbars(). The interactive Community Siting Evaluator is not
+    ported — it needs live geocoding, so it has no static equivalent.
     """
     lifecycle_rows = [
         ("1. Data prep", 2, "Moderate"),
@@ -7086,7 +7089,7 @@ def build_community(m, news_group=None):
     <li><a href="../states/{state_slug}.html">{esc(state_name)} briefing</a> —
     rates, grid carbon, PUC contacts, and every fight in the state.</li>
   </ul>
-  <p><a class="btn" href="{APP_URL}">Generate a full action pack &rarr;</a></p>
+  <p><a class="btn" href="../start-here.html">Build a full action pack &rarr;</a></p>
 </section>
 {sibs_html}
 <section>
@@ -7154,7 +7157,7 @@ def build_locality_news_page(locality, state, group):
     <li><a href="../states/{state_slug}.html">{esc(state_name)} briefing</a> —
     rates, grid carbon, PUC contacts, and every fight in the state.</li>
   </ul>
-  <p><a class="btn" href="{APP_URL}">Generate a full action pack &rarr;</a></p>
+  <p><a class="btn" href="../start-here.html">Build a full action pack &rarr;</a></p>
 </section>
 <section>
   <p class="muted">Part of the <a href="../story-tracker.html">story
@@ -9137,7 +9140,7 @@ currently self-reports nothing.
 
 def build_environment():
     """Hyperscaler environmental data page — comparison, spend estimator,
-    and per-company deep-dives ported from src/ui/corporate_tab.py.
+    and per-company deep-dives.
 
     All Altair charts become CSS hbars() and HTML tables; sliders become
     static calculations with default assumptions.
@@ -9732,22 +9735,8 @@ def build_environment():
             ("Environment", f"{SITE_URL}/environment")))
 
 
-def _load_ast_literal(path, var_name):
-    """Read a top-level assignment target from a .py source file as a Python
-    literal. Lets us reuse dict-literal data from Streamlit tab modules
-    without importing streamlit here."""
-    import ast
-    tree = ast.parse(pathlib.Path(path).read_text(encoding="utf-8"))
-    for node in ast.walk(tree):
-        if isinstance(node, ast.Assign):
-            for target in node.targets:
-                if getattr(target, "id", None) == var_name:
-                    return ast.literal_eval(node.value)
-    raise KeyError(f"{var_name} not found in {path}")
-
-
 def build_methodology():
-    """Static twin of src/ui/method_tab.py — token-calculator methodology."""
+    """Token-calculator methodology — the coefficients and their sources."""
     src_keys = [
         "google_2025", "openai_2025", "epoch_2025", "hungry_2025",
         "mlenergy", "iea_2025", "gpt5_report", "eia930", "pjm_dm2",
@@ -9870,8 +9859,8 @@ def build_methodology():
 
 
 def build_studies():
-    """Static twin of src/ui/studies_tab.py — state study library."""
-    studies = _load_ast_literal("src/ui/state_detail.py", "STATE_STUDIES")
+    """State study library — one card per state-commissioned report."""
+    studies = STATE_STUDIES
     cards = []
     for state, s in studies.items():
         findings = "\n".join(f"<li>{_md_to_html(f).replace('<p>', '').replace('</p>', '')}</li>"
@@ -9926,8 +9915,8 @@ def build_studies():
 
 
 def build_cba_clauses():
-    """Model CBA clause library ported from src/ui/toolkit_tab.py."""
-    clauses = _load_ast_literal("src/ui/toolkit_tab.py", "_MODEL_CLAUSES")
+    """Model CBA clause library — copy-paste language communities have won."""
+    clauses = MODEL_CLAUSES
     cards = []
     for name, c in clauses.items():
         rng = ""
@@ -10203,7 +10192,7 @@ _GRADE_COLORS = {"A": "#16a34a", "B": "#65a30d", "C": "#d97706",
 
 def build_official_scorecard():
     """Full federal + gubernatorial roster with A–F ratepayer/community-protection
-    grades and sourced stances — the static port of the Streamlit Officials tab."""
+    grades and sourced stances."""
     from src.services.officials import load_officials
     from src.official_grades import attach_grades, RUBRIC
 
@@ -12974,7 +12963,7 @@ def main():
 
     n = len(list(WEB.rglob("*.html")))
     print(f"built web/ — {n} pages, sitemap, robots.txt, vercel.json")
-    print(f"SITE_URL={SITE_URL}\nAPP_URL={APP_URL}")
+    print(f"SITE_URL={SITE_URL}")
 
 
 if __name__ == "__main__":

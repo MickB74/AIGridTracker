@@ -596,10 +596,11 @@ Three places to start:</p>
   — the questions to put on the record while attention is high.</li>
 <li><strong><a href="/moratoriums">The moratorium tracker</a></strong> — what 47 other
   jurisdictions did, and what happened next.</li>
-<li><strong>The negotiation toolkit in the
-  <a href="https://aigridtracker.streamlit.app">GridWatch app</a></strong> — CBA templates,
-  the data-dividend calculator, and a meeting-prep brief generator for
-  your specific hearing.</li>
+<li><strong><a href="/cba-clauses">Model CBA clauses</a></strong> and the
+  <strong><a href="/dividend">data-dividend calculator</a></strong> — the language communities have
+  actually won, and what the revenue is worth to yours.</li>
+<li><strong><a href="/start-here">Start here</a></strong> — a meeting-prep brief generated for your
+  specific hearing.</li>
 </ul>
 <p>The episode's title is a diagnosis. Whether the revolt produces
 enforceable community wins or just louder hearings is decided county by
@@ -649,7 +650,7 @@ document.addEventListener('click', function (e) {
   if (!a) return;
   var href = a.getAttribute('href') || '';
   var file = href.split('/').pop().split('?')[0];
-  if (a.href.indexOf('https://aigridtracker.streamlit.app') === 0 || /start-here\.html$/.test(href)) {
+  if (/start-here\.html$/.test(href)) {
     gwevent('toolkit-click' + location.pathname.replace(/\.html$/, ''));
   } else if (/\.pdf($|\?)/.test(href) && a.host === location.host) {
     gwevent('pdf-download/' + file);

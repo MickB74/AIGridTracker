@@ -43,12 +43,11 @@ CC BY 4.0. That earns a listing on data lists that reject marketing pages.
   CC BY 4.0.
 ```
 
-### Streamlit ecosystem (the app is genuinely gallery-worthy)
-- [ ] **jrieke/best-of-streamlit** — ranked community gallery, real inbound.
-  Submit via issue/PR. https://github.com/jrieke/best-of-streamlit
-- [ ] **Streamlit "Show the Community!"** forum post — this is how apps get pulled
-  into the official gallery. https://discuss.streamlit.io/c/streamlit-examples/9
-- [ ] **streamlit.io/gallery** — follow the forum submission path above.
+### ~~Streamlit ecosystem~~ — DEAD, do not pursue
+The Streamlit app was retired in August 2026 and the product is now a static
+site, so every gallery target here (best-of-streamlit, the "Show the
+Community!" forum, streamlit.io/gallery) requires a hosted Streamlit app we no
+longer have. Struck rather than deleted so nobody re-adds them.
 
 ### Dev / civic-tech communities (traffic + secondary pickups)
 - [ ] **Hacker News — Show HN**, framed around the *open data*, not the politics:
@@ -157,7 +156,7 @@ never as promotion.
 | Target | Tier | Status | Link live? | Date |
 |---|---|---|---|---|
 | awesome-public-datasets | 1 | | | |
-| best-of-streamlit | 1 | | | |
+| ~~best-of-streamlit~~ | — | n/a — app retired | | |
 | Show HN | 1 | | | |
 | [muni league] | 2A | | | |
 | Good Jobs First | 2B | | | |

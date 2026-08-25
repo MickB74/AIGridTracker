@@ -9587,3 +9587,421 @@ PERMIT_KINDS = [
                  "revenue per year, and shows what happens if the promised "
                  "jobs never appear."},
 ]
+
+
+# ── State-commissioned data-center studies ────────────────── #
+# Moved here from src/ui/state_detail.py when the Streamlit app was retired.
+# Rendered by build_site.py::build_studies() -> web/studies.html.
+STATE_STUDIES = {
+    "Michigan": {
+        "title": "Data Centers in Michigan: Evaluation of Policy Controversies Regarding Hyperscale Data Center Development (June 2026)",
+        "author": "Citizens Research Council of Michigan (Report 426)",
+        "src_key": "crc_mich_2026",
+        "pdf_url": "https://crcmich.org/PUBLICAT/2020s/2026/rpt426-data_centers_in_Michigan.pdf",
+        "as_of": "2026-08-13",
+        "summary": "Evaluation of tax policies, local grid capacity, water usage, and localized noise impacts.",
+        "findings": [
+            "**Modest Economic Multiplier**: High temporary construction impact (1,000+ workers), but low permanent operational jobs (a few dozen per campus). Host communities benefit most from local property taxes and Community Benefit Agreements.",
+            "**Grid Capacity & Rates**: Michigan's grid can accommodate load under current policies, but rapid load growth risks shifting infrastructure costs onto residential ratepayers. The Michigan Public Service Commission (MPSC) now requires utilities to prove large load additions will not raise rates for other customers.",
+            "**Clean Energy Goals**: The 2023 Clean Energy Law requires 100% clean targets. Heavy data center draw risks forcing fossil-fuel runtimes if generation buildout lag behind. Most developers in MI are now investing directly in storage/renewables to mitigate this.",
+            "**Water Resources**: Unlikely to threaten overall water resources due to closed-loop or evaporative cooling designs, but localized groundwater draw should be monitored.",
+            "**Noise Pollution**: Identified as the most concerning localized community impact; requires strict zoning and noise mitigation from local permitting agencies."
+        ],
+        "metrics": {
+            "Peak Construction Jobs": "1,000+ workers",
+            "Permanent Jobs": "20–50 per hyperscale site",
+            "Water Threat Level": "Low (closed-loop standard)",
+            "Primary Local Benefit": "Property Taxes / CBA"
+        }
+    },
+    "Virginia": {
+        "title": "Joint Legislative Audit and Review Commission (JLARC) Data Center Study (December 2024)",
+        "author": "Commonwealth of Virginia (Report 591)",
+        "src_key": "jlarc_va_2024",
+        "pdf_url": "https://jlarc.virginia.gov/pdfs/reports/Rpt591.pdf",
+        "as_of": "2026-08-13",
+        "summary": "Comprehensive analysis of Loudoun County ('Data Center Alley') density, PJM transmission bottlenecks, and tax revenues.",
+        "findings": [
+            "**Tax Revenue Windfall**: Data centers generated over \\$1B in annual local tax revenue in Northern Virginia, significantly subsidizing residential public school systems and services.",
+            "**Transmission Constraints**: Unprecedented cluster density in Loudoun & Prince William counties has triggered PJM transmission constraints, requiring billions in grid upgrades (e.g. 500kV lines) funded by all grid ratepayers.",
+            "**Clean Energy Backlash**: Meeting hyperscaler green commitments (100% renewable matching) has led to massive solar land-use debates across rural Virginia counties.",
+            "**Water Stewardship**: Transitioning away from open-loop evaporative cooling towards air-cooling has reduced water intensity, but older facilities still consume millions of gallons daily."
+        ],
+        "metrics": {
+            "State DC Power Draw": "3,000+ MW (largest globally)",
+            "Annual Local Tax Revenue": "\\$1.2+ Billion",
+            "Grid Bottleneck Level": "High (PJM queues restricted)",
+            "Zoning Controversy": "Agricultural land-use conversion"
+        }
+    },
+    "Georgia": {
+        "title": "Joint Committee on Data Center Tax Incentives & Grid Reliability (2024–2025)",
+        "author": "Georgia General Assembly Special Study Committee",
+        "src_key": "ga_house_2024",
+        "pdf_url": "https://www.house.ga.gov/",
+        "as_of": "2026-08-13",
+        "summary": "Legislative review of state sales-tax breaks for data centers and rising grid capacity warnings.",
+        "findings": [
+            "**Incentive Suspensions**: Recommended temporary suspension or capping of sales-tax exemptions on data center equipment, arguing that the low operational employment does not justify the foregone state revenue.",
+            "**Grid Capacity Crisis**: Georgia Power warned regulators that data centers are the primary driver of a massive upward revision in its peak load projections, prompting proposals to construct new fossil-fueled generation.",
+            "**Local Benefits vs. State Cost**: While local counties gain substantial property taxes, the state loses sales tax revenue on server upgrades (which occur every 3-4 years)."
+        ],
+        "metrics": {
+            "State Incentive Status": "Suspended / Capped (2025)",
+            "Georgia Power Peak Revision": "+3,400 MW load forecast",
+            "Fossil-Fuel Runtimes": "Increased (new gas units approved)",
+            "Employment Multiplier": "Low (capital intensive)"
+        }
+    },
+    "Oregon": {
+        "title": "Data Centers and Energy Use in Oregon (2024)",
+        "author": "Oregon Department of Energy (ODOE) Sector Report",
+        "src_key": "oregon_doe_2024",
+        "pdf_url": "https://www.oregon.gov/energy/data-and-reports/pages/biennial-energy-report.aspx",
+        "as_of": "2026-08-15",
+        "summary": "Statewide review of energy draw, water rights in The Dalles (Columbia River), and utility disclosure laws.",
+        "findings": [
+            "**Columbia River Water Draw**: Spotlights Google's major campus at The Dalles. Evaporative cooling draws significant water from the municipal aquifer, causing municipal water rights disputes during dry seasons.",
+            "**Hydroelectric Load**: Historically attracted by cheap Bonneville Power Administration (BPA) hydropower. However, hydro capacity is fully allocated, forcing new expansion to draw from mixed Pacific Northwest grids with higher carbon intensities.",
+            "**Transparency Laws**: Led to new state laws regarding municipal utility disclosure. Utilities are now permitted to release actual water consumption figures, which were previously protected as proprietary trade secrets."
+        ],
+        "metrics": {
+            "Water Source": "Columbia River / Aquifer",
+            "Energy Source": "BPA Hydropower + Mixed Grid",
+            "Transparency Level": "Improved (New state disclosure laws)",
+            "Primary Issue": "Water rights vs. Agricultural demand"
+        }
+    },
+    "Maryland": {
+        "title": "Critical Infrastructure Streamlining Act of 2024 & State Data Center Impact Mandate (2024)",
+        "author": "Maryland General Assembly (CISA / SB 116)",
+        "src_key": "md_assembly_2024",
+        "pdf_url": "https://mgaleg.maryland.gov/",
+        "as_of": "2026-08-13",
+        "summary": "Legislative response to utility generator permit denials and creation of state-wide environmental impact study.",
+        "findings": [
+            "**Backup Generator Controversy**: Aligned Data Centers canceled a massive \\$30B project in late 2023 after the Maryland PSC denied a permit for 168 diesel backup generators due to air quality emissions thresholds.",
+            "**Regulatory Streamlining (CISA)**: In May 2024, Maryland enacted the Critical Infrastructure Streamlining Act to exempt data center backup power from Certificate of Public Convenience and Necessity (CPCN) reviews to attract investment.",
+            "**Environmental Safeguards**: Environmental groups expressed concern over local particulate and carbon emissions from diesel backup arrays, prompting the state to commission a comprehensive data center impact study due September 1, 2026."
+        ],
+        "metrics": {
+            "Streamlining Bill (CISA)": "Passed (May 2024)",
+            "Canceled Project Investment": "\\$30 Billion",
+            "Controversial Hardware": "168 Diesel Generators",
+            "Comprehensive Study Due": "Sept 1, 2026"
+        }
+    },
+    "Indiana": {
+        "title": "Indiana Utility Regulatory Commission Grid & Water Studies (2026)",
+        "author": "Indiana General Assembly / IURC (HB 1245)",
+        "src_key": "iurc_indiana_2026",
+        "pdf_url": "https://iga.in.gov/",
+        "as_of": "2026-08-13",
+        "summary": "Administrative mandates on ratepayer protection, utility load forecasts, and local water inventory reviews.",
+        "findings": [
+            "**Ratepayer Cost-Shifting**: House Bill 1245 was introduced in the 2026 session to mandate that the IURC study how data center demand affects retail electric rates, ensuring residential users do not subsidize transmission expansions.",
+            "**Statewide Water Inventory**: Due to significant Meta (\\$10B in La Porte) and Amazon (\\$15B in Lebanon) campuses, the state is currently building a statewide water inventory by end of 2026 to monitor large industrial draws.",
+            "**County-Level Moratoriums**: Due to perceived gaps in state environmental oversight, multiple Indiana counties and cities (including Indianapolis) have enacted temporary data center construction moratoriums to protect local resources."
+        ],
+        "metrics": {
+            "IURC Study Mandate": "Active (HB 1245, 2026)",
+            "Featured Projects": "Amazon (\\$15B), Meta (\\$10B)",
+            "Local Moratoriums": "Enacted (multiple counties)",
+            "State Water Inventory": "Due Late 2026"
+        }
+    },
+    "New Jersey": {
+        "title": "New Jersey Hyperscale Grid Studies & Market Inventory (2025–2026)",
+        "author": "NJBPU / New Jersey Policy Perspective (NJPP) Research",
+        "src_key": "nj_bpu_2026",
+        "pdf_url": "https://www.nj.gov/bpu/",
+        "as_of": "2026-08-13",
+        "summary": "Administrative investigations on grid costs alongside independent market assessments of wholesale compute capacity.",
+        "findings": [
+            "**Market Capacity Inventory**: NJ holds approximately **1.04 GW** of total data center power capacity in 2026, projected to reach **1.23 GW by 2031**. This makes the state a top-5 U.S. data center market.",
+            "**Operational vs. Planned**: NJ hosts **12 active wholesale/colocation campuses** representing roughly **325 MW** of operational draw. There are **7 major planned expansion projects** in the pipeline representing an additional **640 MW** of capacity.",
+            "**Severe Supply Constraints**: Driven by NYC-proximity financial trading links and AI cloud deployments, NJ's vacancy rate is under **4%** (occupancy at 96%). Major hubs are concentrated in Secaucus, Piscataway, and Carteret (Equinix, Digital Realty, DataBank).",
+            "**Grid Cost Shifting (P.L. 2025 c. 98 / A-796)**: The NJBPU and independent watchdogs (NJPP) warn that data centers trigger massive utility transmission cost-sharing. In July 2026, Governor Sherrill signed A-796 requiring specific large load tariffs (>= 50 MW) to make operators pay for their own grid upgrades."
+        ],
+        "metrics": {
+            "Total Power Capacity": "1.04 GW (2026)",
+            "Operational / Planned": "325 MW / 640 MW",
+            "Market Vacancy Rate": "Under 4% (Highly constrained)",
+            "Featured Hubs": "Secaucus, Piscataway, Carteret"
+        }
+    },
+    "Texas": {
+        "title": "Senate Bill 6 (89th Legislature): Large-Load Interconnection Standards & the 2026 ERCOT Queue Audit",
+        "author": "Texas Legislature (Senate Research Center); 2026 audit directive by the Office of the Governor",
+        "src_key": "tx_sb6_2025",
+        "pdf_url": "https://capitol.texas.gov/tlodocs/89R/analysis/pdf/SB00006F.pdf",
+        "as_of": "2026-08-15",
+        "summary": "State rules for connecting data centers and other large loads to the ERCOT grid — cost allocation, mandatory curtailment during grid emergencies, and a separate 2026 gubernatorial audit of the interconnection queue.",
+        "findings": [
+            "**Large-load interconnection standards (SB 6)**: Signed June 20, 2025, SB 6 directs the Public Utility Commission of Texas (PUCT) to set statewide standards for connecting large loads to ERCOT, applying to new or expanded sites above a 75 MW demand threshold (the PUCT may set it lower).",
+            "**Residents share of load shed**: The statute's stated goals include protecting residential customers during shortages by requiring large loads to share the load-shed obligation, and it directs the PUCT to reevaluate the Four Coincident Peak (4CP) transmission cost-allocation method by December 31, 2026.",
+            "**Mandatory curtailment**: Transmission-voltage large loads connected after December 31, 2025 must install equipment allowing them to be curtailed during firm load shed; a new demand-management service can direct loads of at least 75 MW to curtail for the duration of an Energy Emergency Alert with 24-hour notice.",
+            "**Cost and disclosure conditions**: Large loads face a minimum \\$100,000 interconnection study fee, per-MW financial security, proof of site control, and disclosure of duplicative 'substantially similar' requests at other sites, and must contribute to the utility's cost to connect them.",
+            "**2026 queue audit (separate, gubernatorial)**: On August 3, 2026 the Governor directed the PUCT and ERCOT to audit data centers in the interconnection queue before projects proceed. BloombergNEF — an analyst firm, not a state body — projects the review could delay roughly 49.8 GW of load and cost projects up to \\$15 billion; treat those figures as a projection, not a state finding."
+        ],
+        "metrics": {
+            "Instrument": "SB 6, 89th Legislature (June 2025)",
+            "Large-load threshold": "75 MW (PUCT may lower)",
+            "Emergency curtailment": "Large loads shed during grid emergencies",
+            "Queue under audit": "~474 GW of requests, ~90% data centers (Gov., 2026)"
+        }
+    },
+    "Arizona": {
+        "title": "Arizona Energy Promise Taskforce Report (2026)",
+        "author": "Arizona Energy Promise Taskforce (Gov. Katie Hobbs, Executive Order 2025-13)",
+        "src_key": "az_energy_promise_2026",
+        "pdf_url": "https://resilient.az.gov/sites/default/files/2026-04/arizona-energy-promise-taskforce-report.pdf",
+        "as_of": "2026-08-15",
+        "summary": "A 36-member governor's taskforce delivered 31 consensus recommendations on meeting Arizona's fast-growing electricity demand, several aimed squarely at large-load data-center customers.",
+        "findings": [
+            "**Cost-shift protection via the ACC**: The taskforce backs the Arizona Corporation Commission's existing large-load process (Docket E-00000A-25-0069) 'to prevent cost shifts, mitigate stranded asset risks, and increase development transparency.'",
+            "**Bring-your-own-capacity**: It recommends exploring BYOC initiatives so large loads work with utilities to help deliver their own power.",
+            "**Tax and financial incentives**: It recommends the state 'update tax and financial incentives for large load customers' — news coverage framed this as revisiting the data-center sales-tax exemption, and three members (the Data Center Coalition, Microsoft, and Google) dissented. Cite the taskforce's own softer wording.",
+            "**Community engagement**: It recommends requiring or incentivizing large-load customers to engage communities and invest in community-identified priorities, and to help local governments navigate large-load development.",
+            "**Water**: Among overarching recommendations it calls to 'encourage transparent and responsible water use in project development' — notably not framed as a data-center-specific mandate, despite Arizona's water stress."
+        ],
+        "metrics": {
+            "Instrument": "Executive Order 2025-13",
+            "Recommendations": "31 (36-member taskforce)",
+            "Projected peak demand": "Up to +40% over 15 years",
+            "Report released": "April 2026"
+        }
+    },
+    "North Carolina": {
+        "title": "North Carolina Energy Policy Task Force — Interim Report (February 2026)",
+        "author": "NC Energy Policy Task Force (Gov. Josh Stein, Executive Order No. 23)",
+        "src_key": "nc_eptf_2026",
+        "pdf_url": "https://governor.nc.gov/nceptf2026interimreport/open",
+        "as_of": "2026-08-15",
+        "summary": "The governor's task force found data centers driving much of North Carolina's projected load growth, warned of cost-shifting to other ratepayers, and made nine preliminary recommendations.",
+        "findings": [
+            "**Load growth**: Total net load on Duke's two NC systems is projected to rise 16%–60% over 15 years, versus just 7% statewide over the prior two decades — a large share driven by data centers and other large loads.",
+            "**Cost-shifting warning**: Meeting large-load growth needs new generation and transmission that 'could increase rates on all customers unless the primary users of new infrastructure bear the cost burden.'",
+            "**No reliable data-center data**: The report finds 'there is not reliable public data for the total number and size of existing and proposed data centers in North Carolina,' leaving a historically wide range in load forecasts.",
+            "**Concentrated demand**: Data centers are about 30% of Duke's economic-development pipeline but roughly 80% of its projected demand (a Duke figure reproduced in the report), while residential bills rose ~30% from 2017–2024 — nearly two-thirds of that from fuel costs.",
+            "**Carbon target**: North Carolina's statutory target (HB 951, 2021) requires Duke generation to be carbon-neutral by 2050; the report finds load growth may challenge that target but, with the right policies, could be an opportunity to build more carbon-free power.",
+            "**Two data-center-specific asks**: Of nine preliminary recommendations, two target data centers directly — reviewing the value of their sales-and-use tax exemptions, and requiring energy and water usage reporting."
+        ],
+        "metrics": {
+            "Instrument": "Executive Order No. 23 (Aug 2025)",
+            "Projected load growth": "16%–60% over 15 years (Duke NC)",
+            "Data-center demand share": "~80% of Duke pipeline demand",
+            "Recommendations": "9 preliminary (2 data-center-specific)"
+        }
+    }
+}
+
+
+# ── Model CBA clauses ────────────────────────────── #
+# Moved here from src/ui/toolkit_tab.py when the Streamlit app was retired.
+# Rendered by build_site.py::build_cba_clauses() -> web/cba-clauses.html.
+MODEL_CLAUSES = {
+    "Landowner bloc: no-individual-deals pact": {
+        "icon": "🤝",
+        "clause": (
+            "The undersigned landowners agree to negotiate the sale or lease of their "
+            "parcels to [Developer / any data-center developer] solely as a group, "
+            "through [designated representative or attorney]. No signatory shall enter "
+            "into any individual sale, option, or letter of intent on terms below those "
+            "secured for the group. Net proceeds shall be shared pro rata by contributed "
+            "acreage. If any signatory is offered superior terms, those terms shall be "
+            "extended to all signatories (most-favored-nation). A signatory who sells "
+            "individually in breach shall [forfeit $[X] / grant the group a right of "
+            "first refusal]. This agreement expires on [date] if no group transaction "
+            "has closed."
+        ),
+        "why": (
+            "Unlike the other entries here, this is a landowner-to-landowner agreement — "
+            "the foundation of bloc negotiation (see 'Negotiate as a bloc' above), not a "
+            "term you hand the developer. It denies the developer its favorite tactic: "
+            "buying owners one at a time and sweetening a single holdout to break ranks. "
+            "Salem Township, PA landowners used exactly this alignment to pool ~1,700 "
+            "acres and sell together for ~\\$586M. Have a licensed real-estate attorney "
+            "draft the binding version for your state."
+        ),
+        "range_low": None,
+        "range_high": None,
+        "unit": None,
+    },
+    "Direct financial payments": {
+        "icon": "💰",
+        "clause": (
+            "Developer shall pay an annual Community Benefit Payment of $[X] per MW "
+            "of contracted power capacity into a Community Benefit Fund administered "
+            "by [County/Town]. Payments commence upon certificate of occupancy and "
+            "adjust annually by CPI."
+        ),
+        "why": (
+            "A per-MW annual payment creates a predictable, inflation-protected "
+            "revenue stream tied to the facility's actual size. \\$500–\\$2,000/MW/year "
+            "is the emerging range in negotiated deals."
+        ),
+        "range_low": 500,
+        "range_high": 2000,
+        "unit": "per MW per year",
+    },
+    "Water consumption cap": {
+        "icon": "💧",
+        "clause": (
+            "Total facility water withdrawal shall not exceed [X] gallons per day. "
+            "Developer shall install metering equipment accessible to [Municipal Water "
+            "Authority] and pay a surcharge of $[Y] per 1,000 gallons exceeding the cap. "
+            "Annual water usage reports shall be public record."
+        ),
+        "why": (
+            "Without a hard cap, evaporative cooling can consume millions of gallons "
+            "daily. The penalty surcharge creates a financial incentive to stay under "
+            "the cap and funds water infrastructure if they exceed it."
+        ),
+        "range_low": None,
+        "range_high": None,
+        "unit": None,
+    },
+    "Grid upgrade cost allocation": {
+        "icon": "⚡",
+        "clause": (
+            "Developer shall bear 100% of the cost of all transmission and distribution "
+            "upgrades, including substation construction, required to serve the facility. "
+            "No portion of these costs shall be allocated to existing ratepayers through "
+            "base rate adjustments or capacity charges."
+        ),
+        "why": (
+            "Without this clause, utilities socialize grid upgrade costs across all "
+            "ratepayers — meaning households subsidize industrial infrastructure. "
+            "New Jersey's Large Load Tariff (2025) codifies this at the state level."
+        ),
+        "range_low": None,
+        "range_high": None,
+        "unit": None,
+    },
+    "Grid resilience & emergency curtailment": {
+        "icon": "🔋",
+        "clause": (
+            "(a) Curtailment priority. During any grid emergency declared by [RTO/ISO "
+            "or serving utility], Developer shall reduce facility load by not less "
+            "than [X]% within [Y] minutes of notice, before any involuntary "
+            "curtailment of residential customers in [County]. "
+            "(b) Grid services enrollment. Developer shall enroll all on-site battery "
+            "and backup generation capacity that is legally and technically capable "
+            "of grid export in [utility/RTO] demand-response or ancillary-services "
+            "programs within [N] months of commercial operation, and shall report "
+            "enrolled capacity to [County] annually. "
+            "(c) Community resilience hub. Developer shall fund, install, and "
+            "maintain backup power (battery storage and/or generation of not less "
+            "than [Z] kW) at [designated critical facility — emergency shelter, "
+            "water treatment plant, or school], capable of islanded operation for "
+            "not less than [H] hours, with maintenance funded for the life of the "
+            "facility. "
+            "(d) Backup generation technology. On-site backup generation shall be "
+            "[natural gas / fuel cell / battery]-based; diesel units shall be "
+            "limited to emergency operation within air-permit hour limits."
+        ),
+        "why": (
+            "A 100 MW campus carries backup generation larger than many towns' peak "
+            "load, but it cannot legally power the community as built: emergency-only "
+            "air permits, behind-the-meter wiring, and utility franchise law all "
+            "stand in the way — so a vague 'backup power for the town' promise is "
+            "unenforceable. These are the enforceable versions: curtail before "
+            "residents face outages, enroll batteries in grid services (grid-"
+            "interactive UPS is already deployed at hyperscale sites in Europe), and "
+            "fund an islandable resilience hub at one named critical site instead of "
+            "promising the whole town."
+        ),
+        "range_low": None,
+        "range_high": None,
+        "unit": None,
+    },
+    "Residential tax offset": {
+        "icon": "🏠",
+        "clause": (
+            "Revenue from data center property taxes, equipment taxes, and any "
+            "negotiated fees shall be applied to reduce the residential property tax "
+            "rate before being allocated to general fund expenditures. Annual reporting "
+            "shall demonstrate the residential rate reduction attributable to data "
+            "center revenue."
+        ),
+        "why": (
+            "Loudoun County, VA demonstrates the model: data center taxes fund ~32% "
+            "of the county budget, keeping residential rates among the lowest in "
+            "the state. Without explicit allocation, the revenue can be absorbed "
+            "into general spending without visible resident benefit."
+        ),
+        "range_low": None,
+        "range_high": None,
+        "unit": None,
+    },
+    "Noise standards": {
+        "icon": "🔊",
+        "clause": (
+            "Facility operations shall not exceed [X] dBA at any residential property "
+            "line, measured as a 1-hour Leq. Developer shall conduct third-party noise "
+            "monitoring quarterly for the first 3 years and annually thereafter. Results "
+            "shall be filed with [County] and made available to the public."
+        ),
+        "why": (
+            "Cooling systems run 24/7 and produce a constant low-frequency hum. "
+            "Loudoun County's 38 dBA standard at the property line is the benchmark. "
+            "Without a negotiated standard, state noise laws may allow 55–65 dBA."
+        ),
+        "range_low": None,
+        "range_high": None,
+        "unit": None,
+    },
+    "Local hiring & workforce": {
+        "icon": "👷",
+        "clause": (
+            "Developer shall use best efforts to ensure that [X]% of construction labor "
+            "and [Y]% of permanent operations staff are sourced from [County/Region]. "
+            "Developer shall fund a workforce training program at [local community "
+            "college] of not less than $[Z] per year for [N] years, focused on "
+            "electrical, HVAC, and network operations certifications."
+        ),
+        "why": (
+            "Data centers create 50–150 permanent jobs per facility — far fewer than "
+            "the thousands promised during construction. Workforce training commitments "
+            "create lasting value beyond the build phase."
+        ),
+        "range_low": None,
+        "range_high": None,
+        "unit": None,
+    },
+    "Waste heat recovery": {
+        "icon": "🌡️",
+        "clause": (
+            "Developer shall conduct a waste heat feasibility study within 12 months "
+            "of certificate of occupancy and, where technically viable, make waste heat "
+            "available at no cost to [municipal district heating / school district / "
+            "community greenhouse] within [X] miles of the facility."
+        ),
+        "why": (
+            "Data centers reject enormous amounts of heat — typically at 30–45°C, "
+            "usable for space heating, greenhouses, and aquaculture. European "
+            "facilities already pipe heat to district networks. US communities should "
+            "demand this as standard."
+        ),
+        "range_low": None,
+        "range_high": None,
+        "unit": None,
+    },
+    "Decommissioning bond": {
+        "icon": "🏗️",
+        "clause": (
+            "Developer shall post a decommissioning bond or letter of credit equal to "
+            "$[X] per MW within 90 days of certificate of occupancy, to fund site "
+            "remediation and restoration if the facility ceases operations."
+        ),
+        "why": (
+            "Without a bond, a bankrupt or departing operator can leave the community "
+            "with a derelict industrial site and no funds for cleanup. Typical bonds "
+            "range from \\$5,000–\\$15,000 per MW."
+        ),
+        "range_low": 5000,
+        "range_high": 15000,
+        "unit": "per MW (one-time bond)",
+    },
+}

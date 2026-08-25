@@ -2,16 +2,15 @@
 
 **The energy, water, and carbon behind LLM token usage — from a single prompt to the global data-center grid.**
 
-GridWatch AI is an open-source Streamlit application that gives communities, researchers, and policymakers the data they need to understand and negotiate the impact of AI data centers. It combines per-token energy modeling, live grid data, corporate environmental disclosures, and actionable negotiation tools into a single platform.
+GridWatch AI is an open-source static site that gives communities, researchers, and policymakers the data they need to understand and negotiate the impact of AI data centers. It combines per-token energy modeling, a sourced moratorium and project tracker, corporate environmental disclosures, and actionable negotiation tools into a single platform.
 
 ![Python](https://img.shields.io/badge/python-3.10+-blue)
-![Streamlit](https://img.shields.io/badge/streamlit-1.36+-red)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-### 🌐 [aigridwatch.com](https://aigridwatch.com) — live site · [Open the free toolkit](https://aigridtracker.streamlit.app)
+### 🌐 [aigridwatch.com](https://aigridwatch.com) — live site · [Start here](https://aigridwatch.com/start-here)
 
 - 🧮 [Data center impact calculator](https://aigridwatch.com/impact) — electricity, water, carbon, and rate impact for any facility size, in your state
-- 📋 [Moratorium tracker](https://aigridwatch.com/moratoriums) — 99 U.S. data center moratoriums and community actions, each sourced and dated — **open data ([JSON](https://aigridwatch.com/data/moratoriums.json) · [CSV](https://aigridwatch.com/data/moratoriums.csv)), CC BY 4.0**
+- 📋 [Moratorium tracker](https://aigridwatch.com/moratoriums) — 333 U.S. data center moratoriums and community actions across 39 states, each sourced and dated — **open data ([JSON](https://aigridwatch.com/data/moratoriums.json) · [CSV](https://aigridwatch.com/data/moratoriums.csv)), CC BY 4.0**
 - 🏛️ [Model CBA clause library](https://aigridwatch.com/cba-clauses) · [Questions to ask at your hearing](https://aigridwatch.com/hearing-questions)
 - ⚕️ [The health risks of data centers](https://aigridwatch.com/health-risks), sourced · [Why your electric bill is going up](https://aigridwatch.com/bills)
 - 📍 [State briefings — all 50 states + D.C.](https://aigridwatch.com/states/) · [Methodology](https://aigridwatch.com/methodology) — every coefficient, its source, and its caveats
@@ -73,11 +72,15 @@ A hyperscaler shows up with a $2B data center proposal. Your planning commission
 ```bash
 git clone https://github.com/MickB74/AIGridTracker.git
 cd AIGridTracker
-pip install -r requirements.txt
-streamlit run app.py
+pip install -r requirements-build.txt
+python3 build_site.py
 ```
 
-The app opens at `http://localhost:8501`.
+That writes `web/` — ~495 static pages. Serve it with any static server
+(`python3 -m http.server -d web 8777`) and open `http://localhost:8777`.
+
+Set `NEWS_FREEZE=1` to skip the live news fetch and build from the committed
+cache.
 
 ### Optional API keys
 
@@ -101,16 +104,12 @@ PJM_API_KEY=your_key_here
 
 ```
 AIGridTracker/
-├── app.py                      # Entrypoint — hero banner, tab layout, routing
-├── requirements.txt            # Python dependencies
-├── officials.json              # Cached elected official data
+├── build_site.py               # The static-site generator — the whole product
+├── web/                        # Generated output, committed and served by Vercel
+├── requirements-build.txt      # Build dependencies (stdlib + pandas + markdown)
 │
 ├── assets/
-│   ├── hero.png                # Hero banner background image
-│   └── style.css               # AIGridStatus design system stylesheet
-│
-├── pages/
-│   └── consulting.py           # Standalone consulting landing page (/consulting)
+│   └── hero.png                # Hero image and OG-card fallback
 │
 ├── src/
 │   ├── constants.py            # All coefficients, emission factors, sources registry
@@ -126,7 +125,7 @@ AIGridTracker/
 │   │   ├── reddit.py           # Reddit discussion tracker (JSON API)
 │   │   ├── officials.py        # Elected official lookup
 │   │   ├── sec_xbrl.py         # SEC EDGAR XBRL company facts (financials)
-│   │   └── secrets.py          # API key loading from .env / Streamlit secrets
+│   │   └── secrets.py          # API key loading from .env (legacy)
 │   │
 │   ├── research/               # Data collection and parsing tools
 │   │   ├── dc_finder.py        # Data center facility discovery
@@ -172,7 +171,7 @@ AIGridTracker/
 | Reddit discussions | Reddit JSON API | On page load | No |
 | SEC EDGAR company facts | SEC XBRL API | On demand, cached | No |
 
-All network calls use `@st.cache_data` with appropriate TTLs and fall back to cached/default data when offline.
+News and video feeds are fetched at build time and cached in `data/*_cache.json` (6h TTL); a failed fetch falls back to the committed cache. The published pages make no runtime requests.
 
 ---
 
@@ -248,28 +247,26 @@ The intake form is available in-app (Negotiation Toolkit tab) and as a standalon
 ### Verify before committing
 
 ```bash
-# Syntax check
-python3 -m py_compile app.py
+# Syntax check + full rebuild
+python3 -m py_compile build_site.py src/constants.py && NEWS_FREEZE=1 python3 build_site.py
 
-# Smoke test (runs the full app, checks for exceptions)
-python3 -c "from streamlit.testing.v1 import AppTest; \
-  at=AppTest.from_file('app.py',default_timeout=90).run(); \
-  assert not at.exception, at.exception; print('smoke OK')"
+# Prove committed web/ still matches committed data
+python3 scripts/check_site_fresh.py --strict
 ```
 
 ### Conventions
 
 - **Coefficients belong with their sources.** Every numeric value gets a source key in the `SOURCES` dict (`constants.py`) and a citation link via `src_link()`.
 - **Marginal vs. average.** Always distinguish load-shifting (marginal) from fuel-mix (average) carbon intensity in UI labels and documentation.
-- **Graceful degradation.** All network calls are cached with `@st.cache_data` and must fall back when offline or unauthenticated. No tab should crash.
-- **No secrets in code.** API keys go in `.env` or Streamlit secrets, never committed.
+- **Graceful degradation.** Build-time fetches must fall back to the committed cache; a news outage never fails a build.
+- **No secrets in code.** `FORMSPREE_ID` and the analytics URL are public by design; anything else comes from the environment.
+- **`web/` is committed output.** Rebuild it in the same commit as any data change.
 
-### Adding a new tab
+### Adding a new page
 
-1. Create `src/ui/your_tab.py` with a `render_your_tab()` function.
-2. Import it in `app.py`.
-3. Add a slot to the `st.tabs()` call and render with `with tab_name: render_your_tab()`.
-4. Run the smoke test to verify nothing breaks.
+1. Write a `build_<name>()` in `build_site.py` that returns `page(...)` output.
+2. Call it from `main()`, add it to the nav group it belongs to and to the sitemap.
+3. Rebuild and commit `web/` alongside the change.
 
 ### Adding a new data source
 

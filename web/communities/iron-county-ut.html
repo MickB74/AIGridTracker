@@ -517,7 +517,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
     <li><a href="../states/utah.html">Utah briefing</a> —
     rates, grid carbon, PUC contacts, and every fight in the state.</li>
   </ul>
-  <p><a class="btn" href="https://aigridtracker.streamlit.app">Generate a full action pack &rarr;</a></p>
+  <p><a class="btn" href="../start-here.html">Build a full action pack &rarr;</a></p>
 </section>
 
 <section>
@@ -571,7 +571,7 @@ document.addEventListener('click', function (e) {
   if (!a) return;
   var href = a.getAttribute('href') || '';
   var file = href.split('/').pop().split('?')[0];
-  if (a.href.indexOf('https://aigridtracker.streamlit.app') === 0 || /start-here\.html$/.test(href)) {
+  if (/start-here\.html$/.test(href)) {
     gwevent('toolkit-click' + location.pathname.replace(/\.html$/, ''));
   } else if (/\.pdf($|\?)/.test(href) && a.host === location.host) {
     gwevent('pdf-download/' + file);
