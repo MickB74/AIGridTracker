@@ -45,6 +45,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.constants import GOOGLE_NEWS_RSS, STATE_PUCS_DF       # noqa: E402
+from src import story_tracker                                  # noqa: E402
+
+_ABBREV_TO_NAME = dict(zip(STATE_PUCS_DF["abbrev"], STATE_PUCS_DF["state"]))
 
 ROOT = Path(__file__).resolve().parent.parent
 QUEUE_PATH = ROOT / "data" / "study_candidates.json"
@@ -131,14 +134,15 @@ def _relevant(title):
 
 
 def _guess_state(title):
-    """(full name, abbrev) if the headline names a state, else (None, None)."""
-    for _, r in STATE_PUCS_DF.iterrows():
-        name, abbrev = str(r["state"]), str(r["abbrev"])
-        if re.search(rf"\b{re.escape(name)}\b", title):
-            return name, abbrev
-        if re.search(rf"\b{re.escape(abbrev)}\b", title):
-            return name, abbrev
-    return None, None
+    """(full name, abbrev) if the headline names a state, else (None, None).
+
+    Wraps story_tracker.guess_state — see the note in the sibling scanners on
+    why four hand-rolled copies of this became one.
+    """
+    abbrev = story_tracker.guess_state(title)
+    if not abbrev:
+        return None, None
+    return _ABBREV_TO_NAME.get(abbrev), abbrev
 
 
 def scan(tracked_states):

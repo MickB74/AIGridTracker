@@ -52,6 +52,25 @@ jobs:
       - name: Record build environment
         run: python -c "import sys,pandas,fpdf,markdown; print('python', sys.version.split()[0]); print('pandas', pandas.__version__); print('fpdf2', fpdf.__version__); print('markdown', markdown.__version__)"
 
+      # Runs BEFORE the real build, so it compares the committed site against
+      # the committed data — i.e. it reports whether the last person to touch
+      # a registry remembered to rebuild. Without this the daily build just
+      # silently absorbs their omission into "chore: rebuild static site", and
+      # nobody learns the live site was wrong for up to 24h. Deliberately not
+      # --strict: the drift is already being fixed two steps below, and a red
+      # X on a self-healing chore is how a job gets ignored. NEWS_FREEZE (set
+      # by the script) keeps news churn out of the comparison, and the script
+      # restores web/ so the real build below starts from a clean tree.
+      - name: Report site/data drift at HEAD
+        continue-on-error: true
+        run: |
+          {
+            echo '### Committed site vs committed data'
+            echo '```'
+            python scripts/check_site_fresh.py
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
       # PA DEP publishes the Commonwealth's own list of every data-center
       # project its regional offices know about, plus the environmental permit
       # trail for each. Unlike the candidate scanners below, this one writes

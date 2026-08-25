@@ -34,13 +34,17 @@ human reading a primary source, same as it has always been.
 Already-published localities are dropped, so the list is only work that would
 actually add a row.
 
-Two things this script deliberately does not trust. The sweep's `guess_state`
-is wrong often enough to mislead — it files Bernards Township under Indiana
-and Carter County under Indiana too — so a guessed state is always rendered
-with a trailing `?` and never used to decide whether a locality is already
-tracked. And scanner rows repeat: the same council vote arrives from three
-outlets. Those collapse into one entry whose `coverage` count is itself a
-signal, since three outlets covering one action is a stronger lead than one.
+Two things this script deliberately does not trust. A guessed state is still
+a guess: `guess_state` used to be actively wrong (it filed Bernards Township
+and Carter County both under Indiana, a case-sensitivity bug now fixed and
+pinned by scripts/verify_state_guess.py), and it is now conservative rather
+than infallible — it returns nothing for most headlines and can still be
+fooled by a locality whose name it has never seen. So a guessed state is
+rendered with a trailing `?` and never used to decide whether a locality is
+already tracked, where a wrong state would let a duplicate through. And
+scanner rows repeat: the same council vote arrives from three outlets. Those
+collapse into one entry whose `coverage` count is itself a signal, since three
+outlets covering one action is a stronger lead than one.
 
 Usage:
     python3 scripts/triage_moratorium_candidates.py
@@ -86,15 +90,38 @@ LIVE_STATUS = {"active", "extended"}
 
 def published_localities():
     """(locality, state) pairs already in the registry, lowercased."""
-    return {
-        (str(r["locality"]).strip().lower(), str(r["state"]).strip().upper())
-        for r in MORATORIUMS
-    }
+    pairs = set()
+    for r in MORATORIUMS:
+        st = str(r["state"]).strip().upper()
+        pairs |= {(f, st) for f in _name_forms(r["locality"])}
+    return pairs
+
+
+# Suffixes the sweep's headline parser routinely drops: it reads "Carter
+# County passes moratorium" and stores the locality as "Carter". Matching the
+# stem as well as the full name keeps an already-tracked row from coming back
+# round as a fresh lead.
+_LOC_SUFFIXES = (" county", " township", " twp", " borough", " parish",
+                 " city", " town", " village")
+
+
+def _name_forms(locality):
+    """The label plus the forms a headline parser is likely to have kept."""
+    base = str(locality).strip().lower()
+    forms = {base, re.sub(r"\s*\(.*?\)\s*", " ", base).strip()}
+    for form in list(forms):
+        for suffix in _LOC_SUFFIXES:
+            if form.endswith(suffix):
+                forms.add(form[: -len(suffix)].strip())
+    return {f for f in forms if f}
 
 
 def published_names():
     """Locality names alone — a candidate may not carry a state."""
-    return {str(r["locality"]).strip().lower() for r in MORATORIUMS}
+    names = set()
+    for r in MORATORIUMS:
+        names |= _name_forms(r["locality"])
+    return names
 
 
 def locality_of(row):
@@ -132,14 +159,15 @@ def already_tracked(row, pairs, names):
     loc, st = locality_of(row), state_of(row)
     if not loc:
         return False
-    loc = str(loc).strip().lower()
+    forms = _name_forms(loc)
     if st:
-        return (loc, str(st).strip().upper()) in pairs
+        st = str(st).strip().upper()
+        return any((f, st) in pairs for f in forms)
     # No trustworthy state: fall back to the name, which over-matches on
     # purpose. A duplicate suppressed here costs one missed row; a duplicate
     # promoted costs a double-counted moratorium on a public page — the defect
     # this whole pass exists to clear.
-    return loc in names
+    return bool(forms & names)
 
 
 def classify(row):
@@ -263,8 +291,8 @@ def render(rows, skipped, tier_filter=None, limit=None):
     lines.append(f"{len(rows)} distinct candidates not already tracked "
                  f"({skipped} dropped as already published; repeat coverage collapsed).")
     lines.append("")
-    lines.append("A trailing `?` on a state is the sweep's guess, not a fact — "
-                 "it is wrong often enough to check before you search.")
+    lines.append("A trailing `?` on a state is inferred from the headline, not "
+                 "confirmed — worth a glance before you search.")
     lines.append("")
     lines.append("| Tier | Meaning | Count |")
     lines.append("|---|---|---|")

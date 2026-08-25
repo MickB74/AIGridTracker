@@ -214,15 +214,24 @@ def render(findings, checked_links):
     verified = int(MORATORIUMS_DF["verified"].sum())
     items = list(_sourced_items())
     cases = len(items)
-    cases_ok = sum(1 for i, *_ in items if i.get("sources"))
+    # "cited" is deliberately not called "verified": it counts rows that name
+    # a source and a date somebody recorded, which is the most this script can
+    # see. Whether the page says the thing is a human read. COMPANY_CONCESSIONS
+    # spent two weeks at 100% "verified" on 17 URLs that 404'd and several that
+    # had never existed (see the note above the registry in constants.py).
+    cases_ok = sum(1 for i, *_ in items
+                   if i.get("sources") and _days_since(i.get("as_of")) is not None)
     counts = {k: sum(1 for f in findings if f["kind"] == k) for k in SEVERITY}
 
     out = ["# Moratorium tracker review queue",
            f"_Generated {dt.date.today().isoformat()} · {verified}/{total} "
-           f"tracker rows and {cases_ok}/{cases} quotable claims "
-           f"(case studies, benchmarks, concessions) source-verified_", ""]
+           f"tracker rows sourced; {cases_ok}/{cases} quotable claims "
+           f"(case studies, benchmarks, concessions) carry a citation and a "
+           f"read date_", ""]
     if not checked_links:
-        out.append("_Link checking skipped (--offline)._\n")
+        out.append("_Link checking skipped (--offline) — nothing below has "
+                   "been confirmed to resolve, let alone to say what the row "
+                   "claims._\n")
     if not findings:
         out.append("Nothing to review — every row is sourced and current.")
         return "\n".join(out)

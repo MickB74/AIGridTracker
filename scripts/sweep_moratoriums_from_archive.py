@@ -33,7 +33,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from src.constants import MORATORIUMS_DF, STATE_PUCS_DF  # noqa: E402
+from src.constants import MORATORIUMS_DF                 # noqa: E402
+from src import story_tracker                            # noqa: E402
 
 ARCHIVE_PATH = (Path(__file__).resolve().parent.parent
                 / "data" / "story_candidates.json")
@@ -79,12 +80,6 @@ LOCALITY_RE = re.compile(
     r"\b([A-Z][A-Za-z.'-]+(?:\s+[A-Z][A-Za-z.'-]+){0,2})\s+(?:"
     + BODY_WORDS + r")\b")
 
-# State lookup from STATE_PUCS_DF
-_STATE_MAP = {}
-for _, _r in STATE_PUCS_DF.iterrows():
-    _STATE_MAP[str(_r["state"]).lower()] = str(_r["abbrev"])
-    _STATE_MAP[str(_r["abbrev"]).lower()] = str(_r["abbrev"])
-
 
 def _tracked_names():
     names = set()
@@ -96,14 +91,18 @@ def _tracked_names():
 
 
 def _guess_state(title):
-    for name, abbrev in _STATE_MAP.items():
-        if len(name) > 2 and re.search(rf"\b{re.escape(name)}\b",
-                                        title, re.IGNORECASE):
-            return abbrev
-    for name, abbrev in _STATE_MAP.items():
-        if len(name) == 2 and re.search(rf"\b{re.escape(name)}\b", title):
-            return abbrev
-    return None
+    """State abbrev if the text names a state, else None.
+
+    Delegates to story_tracker.guess_state, which is the one implementation
+    that gets the abbreviation case right. Four copies of this logic had
+    drifted apart: this one keyed its lookup on LOWERCASED abbreviations and
+    matched case-sensitively, so the English words "in", "or", "ok", "me",
+    "hi", "id", "la", "ma", "pa", "de", "co" and "al" each resolved to a
+    state — "Data center ban proposed in Bernards Township" came back as
+    Indiana. It was wrong in the other direction too, missing the postal form
+    it was meant to catch ("Loudoun County, VA" resolved to nothing).
+    """
+    return story_tracker.guess_state(title)
 
 
 def _guess_locality(title):
