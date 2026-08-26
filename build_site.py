@@ -645,6 +645,7 @@ NAV_GROUPS = [
         ("Moratoriums", "moratoriums.html"),
         ("PUCs", "puc.html"),
         ("Officials scorecard", "scorecard.html"),
+        ("Senate races 2026", "senate-races.html"),
         ("Community playbook", "community-value.html"),
     ]),
     ("The facts", [
@@ -10190,6 +10191,274 @@ _GRADE_COLORS = {"A": "#16a34a", "B": "#65a30d", "C": "#d97706",
                  "D": "#ea580c", "F": "#dc2626"}
 
 
+
+def _load_senate_money():
+    """Tech/utility PAC totals per candidate, from scripts/fetch_senate_money.py.
+
+    Absent by default: the FEC pull needs an API key, so the file only exists
+    once someone has run it. Missing file -> no money lines anywhere, which is
+    the honest render (see _sr_money).
+    """
+    f = ROOT / "data" / "senate_money.json"
+    if not f.exists():
+        return {}
+    try:
+        return json.loads(f.read_text()).get("candidates", {})
+    except (ValueError, OSError):
+        return {}
+
+
+_SENATE_MONEY = _load_senate_money()
+
+
+def _sr_lean_badge(c):
+    return (f'<span class="gradebadge" style="background:{c["lean_color"]};'
+            f'font-size:12px;padding:3px 9px">{esc(c["lean_label"])}</span>')
+
+
+def _sr_candidate(c, abbrev=""):
+    """One candidate block: lean badge, summary, and every cited item.
+
+    A candidate with no located record renders the gap explicitly. It must not
+    read as "neutral" — a resident deciding how to vote needs to know the
+    difference between a candidate who said nothing and one who said something
+    balanced.
+    """
+    inc = ' <span class="muted">· incumbent</span>' if c["incumbent"] else ""
+    head = (f'<p style="margin:0 0 6px"><strong>{esc(c["name"])}</strong> '
+            f'<span class="muted">({esc(c["party"])})</span>{inc} '
+            f'{_sr_lean_badge(c)}</p>')
+    if c["lean"] == "unrecorded":
+        return (f'<div class="sr-cand" data-lean="unrecorded">{head}'
+                f'<p class="muted" style="margin:0">No documented statement or '
+                f'action on data centers located. Not scored — see '
+                f'<a href="#method">how this page treats silence</a>.</p>'
+                f'{_sr_money(abbrev, c["name"])}</div>')
+    items = "".join(
+        f'<li>{esc(i["what"])} '
+        f'<span class="muted">({esc(i["date"]) if i["date"] else "date not recorded"} '
+        f'— <a href="{esc(i["source"])}" rel="nofollow">source</a>)</span></li>'
+        for i in c["items"])
+    asof = (f'<p class="muted" style="margin:6px 0 0;font-size:13px">Record read '
+            f'{esc(c["as_of"])}.</p>' if c.get("as_of") else
+            '<p class="muted" style="margin:6px 0 0;font-size:13px">No '
+            'verification date recorded.</p>')
+    return (f'<div class="sr-cand" data-lean="{esc(c["lean"])}">{head}'
+            f'<p style="margin:0 0 6px">{esc(c["summary"])}</p>'
+            f'<ul style="margin:0">{items}</ul>'
+            f'{_sr_money(abbrev, c["name"])}{asof}</div>')
+
+
+def _sr_stakes(abbrev):
+    """What is actually at stake in this state, from the registries.
+
+    A race page that only quotes candidates is a clippings file. The number of
+    data centers already in the state, and the number of localities that have
+    already voted a moratorium, is the reason the quotes matter — so it goes on
+    the same card, not one click away.
+    """
+    row = STATE_DC_DF[STATE_DC_DF["abbrev"] == abbrev]
+    bits = []
+    if not row.empty:
+        rec = row.iloc[0]
+        # Read effective_status, never status — a lapsed moratorium counted as
+        # current is exactly the error this site exists to stop.
+        mora = MORATORIUMS_DF[
+            (MORATORIUMS_DF["state"] == abbrev)
+            & (MORATORIUMS_DF["effective_status"] != "Expired")]
+        bits.append(f'{int(rec["dc_count"])} data centers')
+        bits.append(f'{rec["twh_year"]:g} TWh/year')
+        if len(mora):
+            bits.append(f'{len(mora)} local moratorium'
+                        f'{"s" if len(mora) != 1 else ""} in force')
+    if not bits:
+        return ""
+    return (f'<p class="muted" style="margin:0 0 10px;font-size:13px">'
+            f'<strong>At stake in this state:</strong> ' + " · ".join(bits)
+            + '</p>')
+
+
+def _sr_money(abbrev, name):
+    """Tech / utility campaign money for one candidate, if the FEC pull has run.
+
+    Renders nothing at all when data/senate_money.json is absent. An empty
+    money line would read as "took nothing", which is a claim we have not
+    checked — so an unrun pipeline shows no line rather than a zero.
+    """
+    rec = _SENATE_MONEY.get(f"{abbrev}|{name}")
+    if not rec:
+        return ""
+    return (f'<p class="muted" style="margin:6px 0 0;font-size:13px">'
+            f'<strong>Tech &amp; utility PAC money:</strong> '
+            f'${rec["total"]:,.0f} from {rec["donors"]} committees '
+            f'(FEC, cycle {esc(str(rec["cycle"]))}, pulled '
+            f'{esc(str(rec["pulled"]))}) — '
+            f'<a href="{esc(rec["source"])}" rel="nofollow">FEC record</a></p>')
+
+
+def _sr_race_card(r):
+    from src.senate_races import ROSTER_AS_OF
+    note = (f'<p class="note" style="margin:0 0 10px">{esc(r["note"])}</p>'
+            if r.get("note") else "")
+    src = (f'<a href="{esc(r["roster_source"])}" rel="nofollow">state candidate '
+           f'list</a>' if r["roster_source"] else
+           '<span class="muted">no roster source recorded</span>')
+    special = ' <span class="muted">(special election)</span>' if r["special"] else ""
+    state_pg = f'states/{slugify(r["state"])}.html'
+    return f"""
+<section class="card" id="race-{esc(r['abbrev'].lower())}"
+         data-state="{esc(r['state'].lower())}"
+         data-names="{esc(' '.join(c['name'] for c in r['candidates']).lower())}"
+         data-documented="{'1' if r['contested'] else '0'}">
+  <h3 style="margin:0 0 4px">{esc(r['state'])}{special}</h3>
+  <p class="muted" style="margin:0 0 10px">PVI {esc(r['pvi'])} ·
+     Seat held by {esc(r['incumbent'])} ({esc(r['incumbent_party'])}) ·
+     {esc(r['status'])}</p>
+  {note}
+  {_sr_stakes(r['abbrev'])}
+  {''.join(_sr_candidate(c, r['abbrev']) for c in r['candidates'])}
+  <p class="src" style="margin:10px 0 0">Ballot roster: {src} (read
+     {esc(ROSTER_AS_OF)}) · <a href="{esc(state_pg)}">{esc(r['state'])}
+     data-center page</a></p>
+</section>"""
+
+
+def build_senate_races():
+    """Where every 2026 U.S. Senate candidate stands on AI data centers."""
+    import src.senate_races as sr
+
+    races = sr.races()
+    cov = sr.coverage()
+    documented = [r for r in races if r["contested"]]
+    quiet = [r for r in races if not r["contested"]]
+
+    legend = "".join(
+        f'<li><span class="gradebadge" style="background:{color};font-size:12px;'
+        f'padding:3px 9px">{esc(label)}</span> — {esc(desc)}</li>'
+        for label, desc, color in sr.LEANS.values())
+
+    chips = (
+        f'<span class="stat"><b>{cov["races"]}</b><span>races on the ballot</span></span>'
+        f'<span class="stat"><b>{cov["candidates"]}</b><span>candidates filed</span></span>'
+        f'<span class="stat"><b>{cov["documented"]}</b><span>with a documented record</span></span>'
+        f'<span class="stat"><b>{cov["races_documented"]}</b><span>races where it is already a fight</span></span>')
+
+    jump = '<div class="statelist">' + "".join(
+        f'<a href="#race-{esc(r["abbrev"].lower())}">{esc(r["state"])}</a>'
+        for r in races) + "</div>"
+
+    filt = """
+<div class="panel" style="margin:18px 0">
+  <label for="srq"><strong>Find your race</strong></label>
+  <input id="srq" type="search" placeholder="Type a state or a candidate name…"
+         style="width:100%;max-width:420px;padding:9px;margin-top:6px;
+                border-radius:8px;border:1px solid #2a3a55;background:#0b1220;
+                color:#eaf0f7" oninput="srFilter()">
+  <p class="muted" id="srcount" style="margin:8px 0 0"></p>
+</div>"""
+
+    body = f"""
+<header>
+  <div class="kicker">2026 U.S. Senate</div>
+  <h1>Where your Senate candidates stand on AI data centers</h1>
+  <p class="sub">Data centers became a Senate campaign issue in 2026. This page
+  collects what every candidate on every 2026 Senate ballot has actually said or
+  done about them — each claim with the link behind it — so you can check the
+  people asking for your vote against the fight happening in your own county.</p>
+  <div class="stats">{chips}</div>
+</header>
+
+<div class="freshness"><p><strong>Most candidates have no record here, and that
+is the finding.</strong> {cov["documented"]} of {cov["candidates"]} filed
+candidates have a documented position on data centers; the other
+{cov["candidates"] - cov["documented"]} are shown as <em>no record found</em>
+rather than as neutral. If you have a source for one of them,
+<a href="#method">send it to us</a> — that is how this page grows.</p></div>
+
+{filt}
+{jump}
+
+<h2 id="fights">Races where data centers are already an issue</h2>
+<p class="muted">{len(documented)} of {cov["races"]} races. Ordered by state.</p>
+{''.join(_sr_race_card(r) for r in documented)}
+
+<h2 id="quiet">Races with no documented record yet</h2>
+<p class="muted">{len(quiet)} races. The candidates below have filed, but no
+statement or action of theirs on data centers has been located and sourced.
+That is a gap in the public record — or in our research — not a position.</p>
+{''.join(_sr_race_card(r) for r in quiet)}
+
+<section id="method">
+  <h2>How this page is built</h2>
+  <p><strong>The ballot roster is primary-sourced.</strong> Every race links to
+  the state election authority's own certified candidate list. Who is on the
+  ballot is a fact the state publishes, so that is where it is read from —
+  not from a wire round-up.</p>
+  <p><strong>Every claim carries its own link and date.</strong> A candidate's
+  position is a claim someone may repeat at a hearing or in a letter, so it
+  ships with the source that backs it and the date we read it.</p>
+  <p><strong>Silence is disclosed, never scored.</strong> {esc(sr.LEAN_NOTE)}</p>
+  <p><strong>This is not the officials scorecard.</strong> The
+  <a href="scorecard.html">A–F scorecard</a> grades sitting officials on
+  roll-call votes and signed laws. Most people here are challengers whose whole
+  record is a campaign statement — much weaker evidence. A press release is a
+  promise, not an action, and this page will not launder one into the other,
+  which is why nobody here gets a letter grade.</p>
+  <h3>Tech &amp; utility campaign money</h3>
+  <p>Where a money line appears under a candidate, it counts committee (PAC)
+  receipts reported to the FEC whose contributing-committee name matches a
+  published term list — the list ships in
+  <code>scripts/fetch_senate_money.py</code>, and every matched committee is
+  written into the data file, so any figure here can be audited back to the
+  committees behind it. It <strong>undercounts by design</strong>: individual
+  contributions from company employees are not included, because the FEC
+  publishes no reliable employer-to-industry rollup. Read any total as a
+  floor. Figures quoted inside a candidate's record items above come from the
+  linked reporting instead, and are attributed there.</p>
+  {provenance_html("SENATE_RACES_2026")}
+  <h3>Lean labels</h3>
+  <ul>{legend}</ul>
+  <h3>Found something we missed?</h3>
+  <p>A candidate statement, a bill, a vote, a local news story — send the link
+  and we will read it. <a href="about.html">Contact</a>.</p>
+  <p class="muted">Election day: {esc(sr.ELECTION_DATE)}. Rosters read
+  {esc(sr.ROSTER_AS_OF)}. Primaries still pending are flagged on the race.</p>
+</section>
+
+<section>
+  <h2>See also</h2>
+  <ul>
+    <li><a href="scorecard.html">Officials scorecard</a> — A–F grades for
+      sitting members of Congress and governors, on their actual votes.</li>
+    <li><a href="moratoriums.html">Moratorium tracker</a> — what communities in
+      these states have already passed.</li>
+    <li><a href="states/index.html">Your state page</a> — the data centers,
+      megawatts and rate pressure behind the race.</li>
+    <li><a href="bills.html">Your electric bill</a> — the mechanism most of
+      these candidates are arguing about.</li>
+  </ul>
+</section>
+
+<script>
+function srFilter(){{
+  var q=(document.getElementById('srq').value||'').toLowerCase().trim();
+  var cards=document.querySelectorAll('section.card[data-state]'),n=0;
+  cards.forEach(function(c){{
+    var hit=!q||c.dataset.state.indexOf(q)>-1||c.dataset.names.indexOf(q)>-1;
+    c.style.display=hit?'':'none'; if(hit)n++;
+  }});
+  document.getElementById('srcount').textContent=
+    q?(n+' race'+(n===1?'':'s')+' match “'+q+'”'):'';
+}}
+</script>"""
+
+    return page(
+        "Where 2026 Senate candidates stand on AI data centers — AI GridWatch",
+        "Every 2026 U.S. Senate candidate's documented position on AI data "
+        "centers, sourced claim by claim, with the ballot roster read from each "
+        "state's own certified candidate list.",
+        body, f"{SITE_URL}/senate-races")
+
 def build_official_scorecard():
     """Full federal + gubernatorial roster with A–F ratepayer/community-protection
     grades and sourced stances."""
@@ -12766,6 +13035,7 @@ def main():
     (WEB / "cba-clauses.html").write_text(build_cba_clauses(), encoding="utf-8")
     (WEB / "officials.html").write_text(build_officials(), encoding="utf-8")
     (WEB / "scorecard.html").write_text(build_official_scorecard(), encoding="utf-8")
+    (WEB / "senate-races.html").write_text(build_senate_races(), encoding="utf-8")
     (WEB / "community-value.html").write_text(build_community_value(), encoding="utf-8")
     (WEB / "consulting.html").write_text(build_consulting(), encoding="utf-8")
     (WEB / "case-studies.html").write_text(build_case_studies(), encoding="utf-8")
@@ -12838,7 +13108,7 @@ def main():
              "learn", "puc", "executives", "about", "search", "dividend",
              "data-centers", "environment", "studies", "complaints",
              "cba-clauses", "officials", "consulting", "case-studies",
-             "community-value", "open-data",
+             "community-value", "open-data", "senate-races",
              "hearing-questions", "opposition", "glossary", "tax-breaks", "siting",
              "companies/", "states/", "blog/", "news/", "videos", "map",
              "communities/"]

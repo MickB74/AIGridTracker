@@ -6614,6 +6614,20 @@ REGISTRY_PROVENANCE = {
             "marked 'low' can still contain a stressed watershed, which is "
             "the scale that actually decides a cooling permit."),
     },
+    "SENATE_RACES_2026": {
+        "label": "2026 U.S. Senate candidates on AI data centers",
+        "as_of": "August 2026",
+        "source": None,
+        "churn": "high",
+        "caveat": (
+            "The ballot roster is read from each state's own certified "
+            "candidate list and is solid; the AI/data-center records are not "
+            "evenly covered. Most filed candidates have no located record and "
+            "are shown as such rather than as neutral. Rosters also still "
+            "move — a pending primary, a withdrawal, or a court ruling can "
+            "change the field, so check the race's linked state candidate "
+            "list before quoting a name."),
+    },
     "MORATORIUMS_DF": {
         "label": "Moratorium & ban tracker",
         "as_of": "August 2026",
