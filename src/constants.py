@@ -5322,6 +5322,75 @@ AWS_ENV_HEADLINE = {
 }
 
 # ---------------------------------------------------------------------------
+# Tracked report editions — what the headline dicts above are built from
+# ---------------------------------------------------------------------------
+# "have" is the edition year in the report's own title, not the fiscal year.
+# When a newer edition lands, update the headline dict, its SOURCES entry, and
+# the "have"/"label" here in the same commit — this is the record of which
+# edition every number on the site was read out of.
+
+REPORT_REGISTRY = {
+    "Google": {
+        "have": 2026,
+        "label": "2026 Environmental Report (FY2025 data)",
+        "url": "https://sustainability.google/reports/",
+    },
+    "Meta": {
+        "have": 2025,
+        "label": "2025 Sustainability Report (FY2024 data)",
+        "url": "https://sustainability.atmeta.com/",
+    },
+    "Microsoft": {
+        # The FY2025 report was published in 2026 and the page references it by
+        # publication year, so 2026 is the max year the current edition shows.
+        "have": 2026,
+        "label": "2025 Environmental Sustainability Report (FY2025 data)",
+        "url": "https://www.microsoft.com/en-us/corporate-responsibility/sustainability/report",
+    },
+    "Amazon / AWS": {
+        "have": 2025,
+        "label": "2025 Sustainability Report (CY2025 data)",
+        "url": "https://sustainability.aboutamazon.com/reports",
+    },
+}
+
+# "have" is the data year of the edition currently in MARKET_MONITORS below.
+# IMM reports cover the prior calendar year and usually publish in
+# spring/summer, so a 2025 edition covers CY2024.
+
+MONITOR_REGISTRY = {
+    "PJM": {
+        "have": 2025,
+        "url": "https://www.monitoringanalytics.com/reports/PJM_State_of_the_Market/2025.shtml",
+    },
+    "ERCOT": {
+        "have": 2025,
+        "url": "https://www.potomaceconomics.com/markets-monitored/ercot/",
+    },
+    "MISO": {
+        "have": 2024,
+        "url": "https://www.potomaceconomics.com/markets-monitored/miso/",
+    },
+    "ISO-NE": {
+        "have": 2024,
+        "url": "https://www.potomaceconomics.com/markets-monitored/iso-new-england/",
+    },
+    "NYISO": {
+        "have": 2024,
+        "url": "https://www.potomaceconomics.com/markets-monitored/new-york-iso/",
+    },
+    "CAISO": {
+        "have": 2024,
+        "url": "https://www.caiso.com/market-operations/market-monitoring/reports-and-presentations",
+    },
+    "SPP": {
+        "have": 2025,
+        "url": "https://www.spp.org/markets-operations/market-monitoring/",
+    },
+}
+
+
+# ---------------------------------------------------------------------------
 # Data-center operators — environmental headline dicts
 # ---------------------------------------------------------------------------
 

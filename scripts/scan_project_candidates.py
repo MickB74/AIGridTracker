@@ -16,14 +16,10 @@ This script only decides what is worth a human's next twenty minutes.
 Signals:
   * news    — Google News RSS, proposal/rezoning/hearing queries (default)
   * mega    — MEGA_PROJECTS_DF megaprojects not yet in the tracker (default)
-  * ercot   — live ERCOT large-load interconnection scrape (--online only;
-              needs the `requests`/service stack, so it is opt-in and never
-              runs in the stdlib-only CI job)
 
 SEC filings are deliberately NOT a lead source here: a 10-K gives company
 capex, not a locality or a hearing date, so it enriches a project already in
-the tracker rather than discovering one. Use src/services/sec_xbrl.py for that
-in the app context.
+the tracker rather than discovering one.
 
 The queue is stable across runs: entries keep their `first_seen` date, and
 anything a human marks `"status": "dismissed"` is never resurrected.
@@ -31,11 +27,10 @@ anything a human marks `"status": "dismissed"` is never resurrected.
 Usage:
     python3 scripts/scan_project_candidates.py
     python3 scripts/scan_project_candidates.py --dry-run
-    python3 scripts/scan_project_candidates.py --online     # also scrape ERCOT
     python3 scripts/scan_project_candidates.py --queue data/other.json
 
-The default run is stdlib-only (urllib + ElementTree), so the weekly job
-installs nothing beyond requirements-build.txt.
+The run is stdlib-only (urllib + ElementTree), so the weekly job installs
+nothing beyond requirements-build.txt.
 """
 
 import argparse
@@ -220,38 +215,6 @@ def scan_megaprojects():
     return out
 
 
-def scan_ercot():
-    """Live ERCOT large-load interconnection leads. Best-effort, opt-in.
-
-    Imported lazily so the default stdlib-only run (and the CI job) never
-    touches the requests/streamlit service stack. Returns [] on any failure.
-    """
-    try:
-        from src.services.ercot import fetch_large_loads          # noqa: E402
-        rows = fetch_large_loads()
-    except Exception as e:                                        # noqa: BLE001
-        print(f"  ! ercot: {type(e).__name__}: {e} (skipped)", file=sys.stderr)
-        return []
-    tracked = _tracked_terms()
-    out = []
-    for row in (rows or []):
-        title = str(row.get("title") or row.get("name") or "").strip()
-        link = str(row.get("link") or row.get("url") or "").strip()
-        if not title or any(t in title.lower() for t in tracked):
-            continue
-        out.append({
-            "title": f"ERCOT large load: {title}",
-            "outlet": "ERCOT",
-            "link": link or f"https://aigridwatch.com/data-centers#ercot-{_slug(title)}",
-            "published": str(row.get("date") or ""),
-            "guess_locality": None,
-            "guess_state": "TX",
-            "query": "ercot-large-load",
-            "origin": "ercot",
-        })
-    return out
-
-
 def _slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")[:60]
 
@@ -297,8 +260,6 @@ def main():
                     help="path to the review-queue JSON")
     ap.add_argument("--dry-run", action="store_true",
                     help="print what would be added, write nothing")
-    ap.add_argument("--online", action="store_true",
-                    help="also scrape live ERCOT large loads (needs requests)")
     args = ap.parse_args()
 
     path = Path(args.queue)
@@ -315,8 +276,6 @@ def main():
     existing = payload.get("candidates", [])
 
     found = scan_news() + scan_megaprojects()
-    if args.online:
-        found += scan_ercot()
     added = merge(existing, found, today)
 
     new_rows = [e for e in existing if e.get("status") == "new"]

@@ -1,13 +1,19 @@
-streamlit>=1.36
+# Local research tooling only — NOT the site build.
+#
+# `python3 build_site.py` and every script in scripts/ run off
+# requirements-build.txt, which is what CI installs. Nothing here is needed to
+# build or deploy the site.
+#
+# This file covers the two standalone CLIs that live outside the build path:
+#   * src/research/dc_finder.py — discover a company's data-center locations
+#     from SEC filings and first-party pages (writes research_output/)
+#   * scripts/make_og_images.py — redraw the committed OG cards
+#
+# The Streamlit app was retired in August 2026; streamlit, altair, plotly,
+# pydeck and pyarrow were removed with it. Do not add streamlit back — see
+# CLAUDE.md.
 pandas>=2.0
-altair>=5.0
-plotly>=5.20
-pydeck>=0.9
 requests>=2.28
-pyarrow>=14.0
 beautifulsoup4>=4.12   # src/research: parse SEC filing / first-party page HTML
 lxml>=5.0              # src/research: pandas.read_html table extraction
-fpdf2==2.8.5           # src/pdf_pack — EXACT pin: PDF bytes are committed to web/,
-                       # and versions differ byte-wise. Keep in sync with
-                       # requirements-build.txt.
-markdown>=3.4           # build_site: blog post rendering
+Pillow>=10.0           # scripts/make_og_images.py (local-only, absent from CI)

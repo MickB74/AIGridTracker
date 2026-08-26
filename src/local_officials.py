@@ -1,20 +1,22 @@
 """
 Local-officials resolution — the town/county layer of the officials directory.
 
-Three tiers, tried in order, so the UI always has something to show:
+Two tiers, tried in order, so a page always has something to show:
 
   1. `curated(locality, state)` — hand-verified names/emails/phones plus the
      governing body's meeting and public-comment mechanics. Sourced from the
      locality's own .gov page; every row carries `source` and `as_of`.
-  2. `src.services.openstates.fetch_state_legislators(lat, lng)` — free API,
-     but state legislators and Congress ONLY. OpenStates' own spec says
-     "Governors & mayors are not included," so this can never stand in for
-     tier 1.
-  3. `build_lookup_links(state, locality)` — deterministic directory links.
+  2. `build_lookup_links(state, locality)` — deterministic directory links.
      No names, but full 51-state coverage and nothing to go stale.
 
-Pure functions, no Streamlit — callable from tabs, the meeting-prep brief, and
-the action pack alike.
+There is deliberately no OpenStates tier. Its API covers state legislators and
+Congress ONLY — the spec states "Governors & mayors are not included" — so it
+can never stand in for tier 1, which is exactly the layer this module exists to
+resolve. The retired app's `src/services/openstates.py` wrapper was deleted
+with the rest of the Streamlit tree in August 2026.
+
+Pure functions, no network — callable from build_site.py, the meeting-prep
+brief, and the action pack alike.
 """
 
 from urllib.parse import quote_plus
