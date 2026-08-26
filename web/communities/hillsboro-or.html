@@ -292,6 +292,24 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
         letter-spacing:.04em; }
 .pill.bad  { background:rgba(239,68,68,.12); color:#ef4444; }
 .pill.good { background:rgba(52,211,153,.12); color:#34d399; }
+/* Source-tier badges on headline lists. Deliberately quiet — they mark a
+   citable outlet, they don't shout over the headline itself. */
+.src-badge { display:inline-block; font-size:10.5px; font-weight:700;
+  letter-spacing:.03em; text-transform:uppercase; padding:1px 6px;
+  border-radius:5px; margin-left:6px; vertical-align:middle;
+  border:1px solid transparent; white-space:nowrap; }
+.src-wire, .src-national { background:rgba(45,212,191,.14); color:#2dd4bf;
+  border-color:rgba(45,212,191,.32); }
+.src-nonprofit { background:rgba(167,139,250,.14); color:#a78bfa;
+  border-color:rgba(167,139,250,.30); }
+.src-trade { background:rgba(96,165,250,.13); color:#60a5fa;
+  border-color:rgba(96,165,250,.28); }
+.src-local, .src-international { background:rgba(148,163,184,.14);
+  color:#cbd5e1; border-color:rgba(148,163,184,.28); }
+.src-official { background:rgba(251,191,36,.13); color:#fbbf24;
+  border-color:rgba(251,191,36,.28); }
+.src-aggregator, .src-advocacy { background:rgba(239,68,68,.10);
+  color:#fca5a5; border-color:rgba(239,68,68,.26); }
 .badge-enacted { background:#065f46; color:#6ee7b7; }
 .badge-proposed { background:#713f12; color:#fde68a; }
 .badge-rejected { background:#7f1d1d; color:#fca5a5; }
@@ -437,6 +455,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   .kicker, h2, .stat b, .prose h3 { color:#0a7d70 !important; }
   .badge { border:1px solid #333; color:#111 !important;
            background:#fff !important; }
+  .src-badge { border:1px solid #666; color:#111 !important;
+               background:#fff !important; }
   /* Expand collapsed disclosures so nothing prints hidden. */
   details[open] > summary { color:#111; }
   details:not([open]) > *:not(summary) { display:block !important; }
@@ -463,7 +483,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <div class="nav-links">
     <a href="../index.html">Home</a>
     <details class="navgroup"><summary>Act</summary><div class="navmenu"><a href="../start-here.html">Start here</a><a href="../siting.html">Siting score</a><a href="../hearing-questions.html">Hearing prep</a><a href="../opposition.html">Know the opposition</a><a href="../cba-clauses.html">Model clauses</a><a href="../case-studies.html">Case studies</a><a href="../impact.html">Impact calculator</a></div></details>
-    <details class="navgroup"><summary>Your area</summary><div class="navmenu"><a href="../states/index.html">Your state</a><a href="../map.html">Map & projects</a><a href="../moratoriums.html">Moratoriums</a><a href="../puc.html">PUCs</a><a href="../scorecard.html">Officials scorecard</a><a href="../senate-races.html">Senate races 2026</a><a href="../community-value.html">Community playbook</a></div></details>
+    <details class="navgroup"><summary>Your area</summary><div class="navmenu"><a href="../states/index.html">Your state</a><a href="../map.html">Map & projects</a><a href="../moratoriums.html">Moratoriums</a><a href="../puc.html">PUCs</a><a href="../scorecard.html">Officials scorecard</a><a href="../senate-races.html">Senate races 2026</a><a href="../house-races.html">House races 2026</a><a href="../community-value.html">Community playbook</a></div></details>
     <details class="navgroup"><summary>The facts</summary><div class="navmenu"><a href="../health-risks.html">Health risks</a><a href="../bills.html">Your electric bill</a><a href="../tax-breaks.html">Tax breaks</a><a href="../environment.html">Environment</a><a href="../learn.html">Learn the basics</a></div></details>
     <details class="navgroup"><summary>Industry</summary><div class="navmenu"><a href="../data-centers.html">Data centers</a><a href="../companies/index.html">Companies</a><a href="../complaints.html">Complaints by company</a><a href="../outlook.html">Electricity outlook</a><a href="../open-data.html">Open data</a></div></details>
     <details class="navgroup"><summary>Updates</summary><div class="navmenu"><a href="../blog/index.html">Blog</a><a href="../news/index.html">News</a><a href="../story-tracker.html">Story tracker</a><a href="../projects.html">Projects tracker</a><a href="../videos.html">Videos</a></div></details>
@@ -496,7 +516,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <section>
   <h2>Recent news</h2>
   <p>4 stories tracked since 2026-06-23 across 3 outlets. 2× Local officials are moving to pause or block the project. 1× A community is pushing back on a nearby data center. Most recent: “New data center in Hillsboro could be 200 feet away from high school” (KATU, 2026-08-24).</p>
-  <ul class="story-list"><li><a href="https://news.google.com/rss/articles/CBMi-gFBVV95cUxNUllVQVlXRGpQMDNob3lobWRVNjdmZ0lQOTIwOXNaU0NJeDZZY21mTndPY296ZFMtOHVqd2pXVDdCZW9jczRERVVRWDdobmp3MElNTzQ1U09JVTB6eDA3SEhSSGhWTEM1NkswSjVRUDR0SmVaMFJXUWNkYnlyWTFnWGhUYy1MNk95a2hZaTROSVhLZ3UzaVJaSmJCSVcxQm5saEduTHJYTVFjRElNU08zNVY1YmhOUkQwOWhpajNveGpHYmxCLW5UZGUyaEkxUmlfWUtqYmdoT3lrcFRsYWNfakR6Z1ZxUnlPZWhoOGlWNktVNm5iNF9rcTFB?oc=5" rel="nofollow noopener" target="_blank">New data center in Hillsboro could be 200 feet away from high school</a><span class="meta"><span title="A community is pushing back on a nearby data center.">⚠️</span> KATU · 2026-08-24</span></li><li><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPRVNaRDN5RTJ4WXRyblRqVUNtWHAzUE5uMzVpcWN2eDFrZGRlMXBBdTlCUDAxb0JIdjc4MVNabl90X2ZBMjhLM2JEZVpBWVhueHMzQm56SXhWd1h3VTRSWkZfbTB6R2NabUN1bDBUY2ZJMGNhODdCOWREdGsxb2xJSjdIR0JnNnd0Q3Y2U3AxdXI5X1A3YWN6LXIxZU9QUlQ3N1AydWJxNjU1eTRyTHA0WnVLYll6UWZmZmZXN0kyMHg?oc=5" rel="nofollow noopener" target="_blank">Two data centers beat Hillsboro to the finish line on permitting ban</a><span class="meta"><span title="Local officials are moving to pause or block the project.">🛑</span> OregonLive.com · 2026-08-05</span></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQendkQVlUVUE2UXlkUWRSS3NFd3dkUEFLa1Facl9ablkyd09MUGxNZ1hDTkx0NGVzOXJpWFF5VjZUOVF1QUhHUnU5LU5PZEV2eWRSNFNuNHNjcmU0RUY3UnY2WWhUQWxvRW1VNHVhWmg0VGZTb1FsbVVKN1N2YkQtc1FRN0N1S09f?oc=5" rel="nofollow noopener" target="_blank">Hillsboro approves data center moratorium</a><span class="meta"><span title="Local officials are moving to pause or block the project.">🛑</span> Oregon Public Broadcasting - OPB · 2026-07-27</span></li><li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOekhoWUlieV9WWXdDU3p4clp1MTFHdEZ3aVdrSnUwU1E5M1hRNU1mOEdZT1hadXoyalRDeFNXaVdIb2VJc0l4bUlWQ3pfQVptZzZpYUp1ejdITTBzZlFudzhFQTZzTUxyV3BDQmR2dDRNYWdKTmQ0NVlHTlNrdXZsVzAwYVNhUlpqbUE?oc=5" rel="nofollow noopener" target="_blank">Hillsboro data center fight heads to court</a><span class="meta"><span title="The dispute has escalated into litigation.">⚖️</span> Oregon Public Broadcasting - OPB · 2026-06-23</span></li></ul>
+  <ul class="story-list"><li><a href="https://news.google.com/rss/articles/CBMi-gFBVV95cUxNUllVQVlXRGpQMDNob3lobWRVNjdmZ0lQOTIwOXNaU0NJeDZZY21mTndPY296ZFMtOHVqd2pXVDdCZW9jczRERVVRWDdobmp3MElNTzQ1U09JVTB6eDA3SEhSSGhWTEM1NkswSjVRUDR0SmVaMFJXUWNkYnlyWTFnWGhUYy1MNk95a2hZaTROSVhLZ3UzaVJaSmJCSVcxQm5saEduTHJYTVFjRElNU08zNVY1YmhOUkQwOWhpajNveGpHYmxCLW5UZGUyaEkxUmlfWUtqYmdoT3lrcFRsYWNfakR6Z1ZxUnlPZWhoOGlWNktVNm5iNF9rcTFB?oc=5" rel="nofollow noopener" target="_blank">New data center in Hillsboro could be 200 feet away from high school</a><span class="meta"><span title="A community is pushing back on a nearby data center.">⚠️</span> KATU · 2026-08-24<span class="src-badge src-local" title="Local press — weighted up in the ranked block">Local press</span></span></li><li><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPRVNaRDN5RTJ4WXRyblRqVUNtWHAzUE5uMzVpcWN2eDFrZGRlMXBBdTlCUDAxb0JIdjc4MVNabl90X2ZBMjhLM2JEZVpBWVhueHMzQm56SXhWd1h3VTRSWkZfbTB6R2NabUN1bDBUY2ZJMGNhODdCOWREdGsxb2xJSjdIR0JnNnd0Q3Y2U3AxdXI5X1A3YWN6LXIxZU9QUlQ3N1AydWJxNjU1eTRyTHA0WnVLYll6UWZmZmZXN0kyMHg?oc=5" rel="nofollow noopener" target="_blank">Two data centers beat Hillsboro to the finish line on permitting ban</a><span class="meta"><span title="Local officials are moving to pause or block the project.">🛑</span> OregonLive.com · 2026-08-05<span class="src-badge src-local" title="Local press — weighted up in the ranked block">Local press</span></span></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQendkQVlUVUE2UXlkUWRSS3NFd3dkUEFLa1Facl9ablkyd09MUGxNZ1hDTkx0NGVzOXJpWFF5VjZUOVF1QUhHUnU5LU5PZEV2eWRSNFNuNHNjcmU0RUY3UnY2WWhUQWxvRW1VNHVhWmg0VGZTb1FsbVVKN1N2YkQtc1FRN0N1S09f?oc=5" rel="nofollow noopener" target="_blank">Hillsboro approves data center moratorium</a><span class="meta"><span title="Local officials are moving to pause or block the project.">🛑</span> Oregon Public Broadcasting - OPB · 2026-07-27<span class="src-badge src-local" title="Local press — weighted up in the ranked block">Local press</span></span></li><li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOekhoWUlieV9WWXdDU3p4clp1MTFHdEZ3aVdrSnUwU1E5M1hRNU1mOEdZT1hadXoyalRDeFNXaVdIb2VJc0l4bUlWQ3pfQVptZzZpYUp1ejdITTBzZlFudzhFQTZzTUxyV3BDQmR2dDRNYWdKTmQ0NVlHTlNrdXZsVzAwYVNhUlpqbUE?oc=5" rel="nofollow noopener" target="_blank">Hillsboro data center fight heads to court</a><span class="meta"><span title="The dispute has escalated into litigation.">⚖️</span> Oregon Public Broadcasting - OPB · 2026-06-23<span class="src-badge src-local" title="Local press — weighted up in the ranked block">Local press</span></span></li></ul>
   
   <p class="muted">Automated news aggregation, not human-verified — follow
   each link to the original outlet. Part of the

@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/trump-data-center-support-2026",
+      "destination": "/blog/trump-data-center-support-2026",
+      "permanent": true
+    },
+    {
       "source": "/week-in-review-2026-08-23",
       "destination": "/blog/week-in-review-2026-08-23",
       "permanent": true

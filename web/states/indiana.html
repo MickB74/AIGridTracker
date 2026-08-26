@@ -293,6 +293,24 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
         letter-spacing:.04em; }
 .pill.bad  { background:rgba(239,68,68,.12); color:#ef4444; }
 .pill.good { background:rgba(52,211,153,.12); color:#34d399; }
+/* Source-tier badges on headline lists. Deliberately quiet — they mark a
+   citable outlet, they don't shout over the headline itself. */
+.src-badge { display:inline-block; font-size:10.5px; font-weight:700;
+  letter-spacing:.03em; text-transform:uppercase; padding:1px 6px;
+  border-radius:5px; margin-left:6px; vertical-align:middle;
+  border:1px solid transparent; white-space:nowrap; }
+.src-wire, .src-national { background:rgba(45,212,191,.14); color:#2dd4bf;
+  border-color:rgba(45,212,191,.32); }
+.src-nonprofit { background:rgba(167,139,250,.14); color:#a78bfa;
+  border-color:rgba(167,139,250,.30); }
+.src-trade { background:rgba(96,165,250,.13); color:#60a5fa;
+  border-color:rgba(96,165,250,.28); }
+.src-local, .src-international { background:rgba(148,163,184,.14);
+  color:#cbd5e1; border-color:rgba(148,163,184,.28); }
+.src-official { background:rgba(251,191,36,.13); color:#fbbf24;
+  border-color:rgba(251,191,36,.28); }
+.src-aggregator, .src-advocacy { background:rgba(239,68,68,.10);
+  color:#fca5a5; border-color:rgba(239,68,68,.26); }
 .badge-enacted { background:#065f46; color:#6ee7b7; }
 .badge-proposed { background:#713f12; color:#fde68a; }
 .badge-rejected { background:#7f1d1d; color:#fca5a5; }
@@ -438,6 +456,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   .kicker, h2, .stat b, .prose h3 { color:#0a7d70 !important; }
   .badge { border:1px solid #333; color:#111 !important;
            background:#fff !important; }
+  .src-badge { border:1px solid #666; color:#111 !important;
+               background:#fff !important; }
   /* Expand collapsed disclosures so nothing prints hidden. */
   details[open] > summary { color:#111; }
   details:not([open]) > *:not(summary) { display:block !important; }
@@ -464,7 +484,7 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   <div class="nav-links">
     <a href="../index.html">Home</a>
     <details class="navgroup"><summary>Act</summary><div class="navmenu"><a href="../start-here.html">Start here</a><a href="../siting.html">Siting score</a><a href="../hearing-questions.html">Hearing prep</a><a href="../opposition.html">Know the opposition</a><a href="../cba-clauses.html">Model clauses</a><a href="../case-studies.html">Case studies</a><a href="../impact.html">Impact calculator</a></div></details>
-    <details class="navgroup"><summary class="active">Your area</summary><div class="navmenu"><a href="../states/index.html" aria-current="page">Your state</a><a href="../map.html">Map & projects</a><a href="../moratoriums.html">Moratoriums</a><a href="../puc.html">PUCs</a><a href="../scorecard.html">Officials scorecard</a><a href="../senate-races.html">Senate races 2026</a><a href="../community-value.html">Community playbook</a></div></details>
+    <details class="navgroup"><summary class="active">Your area</summary><div class="navmenu"><a href="../states/index.html" aria-current="page">Your state</a><a href="../map.html">Map & projects</a><a href="../moratoriums.html">Moratoriums</a><a href="../puc.html">PUCs</a><a href="../scorecard.html">Officials scorecard</a><a href="../senate-races.html">Senate races 2026</a><a href="../house-races.html">House races 2026</a><a href="../community-value.html">Community playbook</a></div></details>
     <details class="navgroup"><summary>The facts</summary><div class="navmenu"><a href="../health-risks.html">Health risks</a><a href="../bills.html">Your electric bill</a><a href="../tax-breaks.html">Tax breaks</a><a href="../environment.html">Environment</a><a href="../learn.html">Learn the basics</a></div></details>
     <details class="navgroup"><summary>Industry</summary><div class="navmenu"><a href="../data-centers.html">Data centers</a><a href="../companies/index.html">Companies</a><a href="../complaints.html">Complaints by company</a><a href="../outlook.html">Electricity outlook</a><a href="../open-data.html">Open data</a></div></details>
     <details class="navgroup"><summary>Updates</summary><div class="navmenu"><a href="../blog/index.html">Blog</a><a href="../news/index.html">News</a><a href="../story-tracker.html">Story tracker</a><a href="../projects.html">Projects tracker</a><a href="../videos.html">Videos</a></div></details>
@@ -521,10 +541,10 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <section><h2>Every data center already built in Indiana</h2><p>The campuses above are the ones GridWatch tracks by operator and filing LLC. For the full inventory — street addresses of every existing facility, including the smaller colocation and network sites — DataCenterMap keeps a public directory for Indiana.</p><p><a class="btn ghost" href="https://www.datacentermap.com/usa/indiana/" rel="nofollow noopener">Browse the Indiana directory &rarr;</a></p><p class="muted">Two caveats before you cite it at a hearing: it lists facilities that already exist, so a newly proposed campus will not appear; and it counts a small network room the same as a hyperscale campus, so the facility count is not a measure of power draw or community impact.</p></section>
 
 
-<section><h2>Latest Indiana data center news</h2><ul class="blog-list"><li><div class="post-meta">Indiana Public Radio · Aug 20, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPUU1UbGJPbkRvTVBJZndwUmJfeWtXWEVJeERYRmk0ZWdiNjFoOXdqZU9UU2l5c09IekhhZTVqdEp2N1R2OFF1Y3Q5WFdEZ2FqdzBJT3pyY284ekVXdV9sczBRZnJWMDdaYlpxdXVEd3RJS3NlZnBvM0xCTDFBNVRqYm9YOTA4NmRnMjBkLXZ1TnNYSEV4Q0VOQTIzVGJ6Zw?oc=5" rel="nofollow noopener" target="_blank">New data centers temporarily banned in Marion County</a></h3></li>
-<li><div class="post-meta">The Daily Reporter - Greenfield Indiana · Aug 22, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOUVhuckkzNms1WDFELWViNWNqQTc0a1Y2NFhVSXFXNnN6bGVITzdmQ3NvWldWR1I3cXVrVklCVmczYVBNOUQwcWtvcVJISlNGMlFpT2NxQXZ6d09MZVRhbE45RmNnTVMwTUJxeTJwYWZQalQ2ZkNLb3EyMzJxWjlXVXZLUklZNDdFLVR6MEhqTDNqZ3Z6WllTZVd5bw?oc=5" rel="nofollow noopener" target="_blank">Residents speak out at data center input session</a></h3></li>
-<li><div class="post-meta">Indiana Capital Chronicle · Aug 25, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxNeTZ0Qmo5MVZ1czNVYWV2YTNxN0I1bkc2MlhJYnc0YUhDNDJpZS1IbVp5SERKZXkteGJfUmNaZHpwMDZMcC1Mdl8wQXZ5UG40cWV6bG9XMURtcEV2VWc0aTFvMEJ2RG5mcTlGODh0dlFZUER6VWxWNGgyaHcwWVUyUEtBVFA2TWM4czkyYVZJM095Ymx1Y3Rz?oc=5" rel="nofollow noopener" target="_blank">Data centers unifying Hoosiers in opposition</a></h3></li>
-<li><div class="post-meta">WPTA | 21Alive | Fort Wayne, IN · Aug 25, 2026</div><h3><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxQUGcwZmRMYnlLOXdIaFkzaG9XRW1LTXdrX3Bua3FNVktDMW9GMkRNWVZDTVI4bTFIa0FhM3FSb2JUa1NoeXVmVm9PMEJ1VVpsYlZGTWhBYlE4V0l0RGljS094aTF6Vzl0NFhraEtzTTdjckxfblBVOW5XdTZlSktLRWp6ak1fVjZVX3ZCNFUwTWFLcjgzNklCUUhZeno1b3FXSWZsLWJYWjhZUTNiMUpRdXhQVENhY0JydnJsRTktQ013Zw?oc=5" rel="nofollow noopener" target="_blank">Virtual public hearing on Google data center’s latest wetlands request set for Tuesday night</a></h3></li></ul><p><a class="btn ghost" href="../news/?state=Indiana">All Indiana news &rarr;</a> <a class="btn ghost" href="https://news.google.com/search?q=%22Indiana%22%20data%20center" rel="nofollow noopener" target="_blank">Live news search &rarr;</a></p></section>
+<section><h2>Latest Indiana data center news</h2><ul class="blog-list"><li><div class="post-meta">WPTA | 21Alive | Fort Wayne, IN · Aug 25, 2026<span class="src-badge src-local" title="Local press — weighted up in the ranked block">Local press</span></div><h3><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxQUGcwZmRMYnlLOXdIaFkzaG9XRW1LTXdrX3Bua3FNVktDMW9GMkRNWVZDTVI4bTFIa0FhM3FSb2JUa1NoeXVmVm9PMEJ1VVpsYlZGTWhBYlE4V0l0RGljS094aTF6Vzl0NFhraEtzTTdjckxfblBVOW5XdTZlSktLRWp6ak1fVjZVX3ZCNFUwTWFLcjgzNklCUUhZeno1b3FXSWZsLWJYWjhZUTNiMUpRdXhQVENhY0JydnJsRTktQ013Zw?oc=5" rel="nofollow noopener" target="_blank">Virtual public hearing on Google data center’s latest wetlands request set for Tuesday night</a></h3></li>
+<li><div class="post-meta">Indiana Capital Chronicle · Aug 25, 2026<span class="src-badge src-local" title="Local press — weighted up in the ranked block">Local press</span></div><h3><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxNeTZ0Qmo5MVZ1czNVYWV2YTNxN0I1bkc2MlhJYnc0YUhDNDJpZS1IbVp5SERKZXkteGJfUmNaZHpwMDZMcC1Mdl8wQXZ5UG40cWV6bG9XMURtcEV2VWc0aTFvMEJ2RG5mcTlGODh0dlFZUER6VWxWNGgyaHcwWVUyUEtBVFA2TWM4czkyYVZJM095Ymx1Y3Rz?oc=5" rel="nofollow noopener" target="_blank">Data centers unifying Hoosiers in opposition</a></h3></li>
+<li><div class="post-meta">The Daily Reporter - Greenfield Indiana · Aug 22, 2026<span class="src-badge src-local" title="Local press — weighted up in the ranked block">Local press</span></div><h3><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOUVhuckkzNms1WDFELWViNWNqQTc0a1Y2NFhVSXFXNnN6bGVITzdmQ3NvWldWR1I3cXVrVklCVmczYVBNOUQwcWtvcVJISlNGMlFpT2NxQXZ6d09MZVRhbE45RmNnTVMwTUJxeTJwYWZQalQ2ZkNLb3EyMzJxWjlXVXZLUklZNDdFLVR6MEhqTDNqZ3Z6WllTZVd5bw?oc=5" rel="nofollow noopener" target="_blank">Residents speak out at data center input session</a></h3></li>
+<li><div class="post-meta">Indiana Public Radio · Aug 20, 2026<span class="src-badge src-local" title="Local press — weighted up in the ranked block">Local press</span></div><h3><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPUU1UbGJPbkRvTVBJZndwUmJfeWtXWEVJeERYRmk0ZWdiNjFoOXdqZU9UU2l5c09IekhhZTVqdEp2N1R2OFF1Y3Q5WFdEZ2FqdzBJT3pyY284ekVXdV9sczBRZnJWMDdaYlpxdXVEd3RJS3NlZnBvM0xCTDFBNVRqYm9YOTA4NmRnMjBkLXZ1TnNYSEV4Q0VOQTIzVGJ6Zw?oc=5" rel="nofollow noopener" target="_blank">New data centers temporarily banned in Marion County</a></h3></li></ul><p><a class="btn ghost" href="../news/?state=Indiana">All Indiana news &rarr;</a> <a class="btn ghost" href="https://news.google.com/search?q=%22Indiana%22%20data%20center" rel="nofollow noopener" target="_blank">Live news search &rarr;</a></p></section>
 <section><h2>Video coverage mentioning Indiana</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px"><a href="https://www.youtube.com/watch?v=i3TMMZTtNbM" rel="nofollow noopener" target="_blank" style="display:block;border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit"><img src='https://i.ytimg.com/vi/i3TMMZTtNbM/hqdefault.jpg' alt="Indiana is home to 147 data centers. But this town has no power." loading="lazy" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover"><div style="padding:10px 12px"><div class="post-meta" style="font-size:12px;opacity:0.75">More Perfect Union</div><div style="font-weight:600;margin-top:4px;line-height:1.3">Indiana is home to 147 data centers. But this town has no power.</div></div></a></div><p class="muted" style="margin-top:12px"><a href="../videos?state=Indiana">All video coverage for Indiana &rarr;</a></p></section>
 <p class="muted" style="margin-top:16px">State municipal league: <a href="https://aimindiana.org/">Accelerate Indiana Municipalities</a></p>
 <section>
