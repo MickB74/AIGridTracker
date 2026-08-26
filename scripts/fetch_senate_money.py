@@ -208,6 +208,22 @@ def resolve_pacs(key, offline, budget):
     return pacs
 
 
+# Only committees the candidate actually controls count as money to them.
+#   P = principal campaign committee, A = authorized by the candidate.
+# Everything else is somebody else's money:
+#   U = unauthorized — this is how the NRSC (C00027466) appears in Dan
+#       Sullivan's committee list. Counting it credited every tech and utility
+#       PAC donation to the national party as a personal contribution to him:
+#       $821,000, including $95,000 "from Dell", against a $10,000 per-cycle
+#       legal maximum.
+#   J = joint fundraising committee — CASSIDY PERDUE SULLIVAN TILLIS VICTORY
+#       FUND is shared by four candidates, so attributing it wholly to one is
+#       wrong no matter which one you pick.
+#   D = leadership PAC — the member's own vehicle for giving to others, not
+#       money spent on their campaign.
+KEEP_DESIGNATIONS = {"P", "A"}
+
+
 def senate_committees(key, offline, budget):
     """Recipient committee id -> (state, candidate name, fec candidate id)."""
     out = {}
@@ -220,13 +236,32 @@ def senate_committees(key, offline, budget):
             d = _get(f"/candidate/{cid}/committees/", {"per_page": 50},
                      key, offline, budget)
             for com in (d or {}).get("results", []):
+                desig = str(com.get("designation") or "").upper()
+                if not desig:
+                    full = str(com.get("designation_full") or "").lower()
+                    if "principal" in full:
+                        desig = "P"
+                    elif "authorized by a candidate" in full:
+                        desig = "A"
+                if desig not in KEEP_DESIGNATIONS:
+                    continue
                 out[com["committee_id"]] = (st, c["name"], cid)
     return out
 
 
 def pac_contributions(pac_id, key, offline, budget, max_pages=8):
-    """Contributions made BY one PAC during the cycle."""
-    rows, page = [], 1
+    """Contributions made BY one PAC during the cycle, deduplicated.
+
+    Rows are keyed by `sub_id`, the FEC's unique row identifier, because deep
+    paging with `page=N` REPEATS rows: the documented mechanism for walking
+    past the first page is keyset pagination via the `last_indexes` block the
+    API returns, and `sort` is not a unique ordering. Without the dedupe every
+    total came out as a clean multiple of itself — Amazon's PAC showed
+    $320,000 to one candidate against a $10,000 per-cycle legal maximum, and
+    Duke Energy showed $60,000 and $64,000 to others. Numbers that are all
+    suspiciously round multiples of the statutory cap are the tell.
+    """
+    rows, seen, page = [], set(), 1
     while page <= max_pages:
         d = _get("/schedules/schedule_a/", {
             "contributor_id": pac_id, "two_year_transaction_period": CYCLE,
@@ -234,8 +269,19 @@ def pac_contributions(pac_id, key, offline, budget, max_pages=8):
             "sort": "-contribution_receipt_amount"}, key, offline, budget)
         if not d or not d.get("results"):
             break
-        rows.extend(d["results"])
-        if len(d["results"]) < 100:
+        fresh = 0
+        for row in d["results"]:
+            sid = row.get("sub_id")
+            key_ = sid or (row.get("transaction_id"), row.get("committee_id"),
+                           row.get("contribution_receipt_date"),
+                           row.get("contribution_receipt_amount"))
+            if key_ in seen:
+                continue
+            seen.add(key_)
+            rows.append(row)
+            fresh += 1
+        # A page that adds nothing new means paging has started repeating.
+        if fresh == 0 or len(d["results"]) < 100:
             break
         page += 1
     return rows
@@ -325,10 +371,13 @@ def main():
         "complete": stopped is None,
         "stopped_reason": stopped,
         "method": ("Contributions made by PAC committees whose FEC-registered "
-                   "name matches a published term list, to the campaign "
-                   "committees of 2026 Senate candidates. Excludes individual "
-                   "contributions from company employees, so every total is a "
-                   "floor, not a full industry figure."),
+                   "name matches a published term list, to the principal and "
+                   "candidate-authorized committees of 2026 Senate candidates. "
+                   "Excludes party committees, joint fundraising committees and "
+                   "leadership PACs — that is somebody else's money, not the "
+                   "candidate's. Excludes individual contributions from company "
+                   "employees, so every total is a floor, not a full industry "
+                   "figure. Rows are deduplicated on the FEC's sub_id."),
         "match_terms": MATCH_TERMS,
         "matched_committees": sorted(p["name"] for p in pacs.values()),
         "candidates": out,

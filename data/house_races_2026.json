@@ -349,7 +349,7 @@
    ]
   },
   {
-   "state": "Wyoming",
+   "state": "American Samoa",
    "abbrev": "AS",
    "district": "AL",
    "pvi": "EVEN",
@@ -363,7 +363,7 @@
    "statuses": [
     "Incumbent running"
    ],
-   "roster_source": "https://sos.wyo.gov/elections/",
+   "roster_source": null,
    "candidates": [
     {
      "name": "Amata Coleman Radewagen",
@@ -2388,7 +2388,7 @@
    ]
   },
   {
-   "state": "Wyoming",
+   "state": "District of Columbia",
    "abbrev": "DC",
    "district": "AL",
    "pvi": "EVEN",
@@ -2402,7 +2402,7 @@
    "statuses": [
     "Incumbent retiring"
    ],
-   "roster_source": "https://sos.wyo.gov/elections/",
+   "roster_source": null,
    "candidates": [
     {
      "name": "Kymone Freeman",
@@ -3666,7 +3666,7 @@
    ]
   },
   {
-   "state": "Wyoming",
+   "state": "Guam",
    "abbrev": "GU",
    "district": "AL",
    "pvi": "EVEN",
@@ -3680,7 +3680,7 @@
    "statuses": [
     "Incumbent renominated"
    ],
-   "roster_source": "https://sos.wyo.gov/elections/",
+   "roster_source": null,
    "candidates": [
     {
      "name": "Alicia Limtiaco",
@@ -6759,7 +6759,7 @@
    ]
   },
   {
-   "state": "Wyoming",
+   "state": "Northern Mariana Islands",
    "abbrev": "MP",
    "district": "AL",
    "pvi": "EVEN",
@@ -6773,7 +6773,7 @@
    "statuses": [
     "Incumbent running"
    ],
-   "roster_source": "https://sos.wyo.gov/elections/",
+   "roster_source": null,
    "candidates": [
     {
      "name": "Galvin Deleon Guerrero",
@@ -12328,7 +12328,7 @@
    ]
   },
   {
-   "state": "Wyoming",
+   "state": "U.S. Virgin Islands",
    "abbrev": "VI",
    "district": "AL",
    "pvi": "EVEN",
@@ -12342,7 +12342,7 @@
    "statuses": [
     "Incumbent retiring to run for governor"
    ],
-   "roster_source": "https://sos.wyo.gov/elections/",
+   "roster_source": null,
    "candidates": [
     {
      "name": "Shelley Moorhead",
