@@ -1,7 +1,9 @@
 import datetime as _dt
 import json
+import re as _re
 import pathlib
 import pandas as pd
+from functools import lru_cache as _lru_cache
 
 
 def has_value(v):
@@ -6614,6 +6616,22 @@ REGISTRY_PROVENANCE = {
             "marked 'low' can still contain a stressed watershed, which is "
             "the scale that actually decides a cooling permit."),
     },
+    "HOUSE_RACES_2026": {
+        "label": "2026 U.S. House candidates on AI data centers",
+        "as_of": "August 2026",
+        "source": None,
+        "churn": "high",
+        "caveat": (
+            "The ballot is complete and primary-sourced — 435 voting districts "
+            "plus 5 delegates, each read from the state election authority's "
+            "certified candidate list. The AI/data-center records are the "
+            "opposite: almost every candidate has none located, and renders as "
+            "no record found rather than as neutral. Treat a blank as "
+            "'nobody has checked', not as 'nothing to find'. Rosters also move "
+            "— pending primaries, withdrawals and redistricting litigation all "
+            "change the field, so check the linked state list before quoting a "
+            "name."),
+    },
     "SENATE_RACES_2026": {
         "label": "2026 U.S. Senate candidates on AI data centers",
         "as_of": "August 2026",
@@ -7024,6 +7042,242 @@ STORY_IMPACT_WEIGHTS = {
     "property value": 1.8, "subsidy": 1.5, "tax break": 1.5,
     "billion": 1.5, "gigawatt": 1.2, "hyperscale": 1.0,
 }
+
+# ── Source quality tiers ──────────────────────────────────────────────────
+# Google News returns whatever matches the query, so a Reuters wire story lands
+# in the same feed as a stock-tip aggregator republishing a press release. A
+# resident reads these headlines aloud at a hearing, so the feed labels the
+# outlet's tier and the ranker weights it: mainstream and wire reporting floats,
+# press-release wires and syndication hosts sink out of the ranked block.
+#
+# Order matters — the first tier whose substring matches wins, which is why the
+# `aggregator` tier is checked first: "Yahoo Finance" republishing Reuters is a
+# syndication host, not the outlet a resident should cite. Matching is
+# case-insensitive substring against the outlet name Google reports, so keep
+# entries long enough to be unambiguous ("associated press", never "ap").
+NEWS_SOURCE_TIERS = [
+    ("aggregator", "Press release / aggregator", -3.0, {
+        "pr newswire", "prnewswire", "globenewswire", "business wire",
+        "businesswire", "accesswire", "ein presswire", "einpresswire",
+        "newswire.com", "issuewire", "openpr", "24-7pressrelease",
+        "msn", "yahoo", "aol.com", "inkl", "newser", "smartnews",
+        "seeking alpha", "zacks", "simply wall st", "benzinga", "tipranks",
+        "investorplace", "motley fool", "stocktitan", "investing.com",
+        "barchart", "nasdaq", "markets insider", "insider monkey",
+        "gurufocus", "stocktwits", "tradingview", "finbold", "scanx",
+        "biggo", "moneywise", "24/7 wall st", "crypto briefing",
+        "coindesk", "cointelegraph", "medium", "substack", "linkedin",
+        "facebook.com", "reddit.com", "newsbreak", "prlog", "digital journal",
+        "streetinsider", "pymnts", "pulse 2.0", "ai insider",
+    }),
+    ("advocacy", "Advocacy / not a newsroom", -1.0, {
+        "good jobs first", "brookings", "netchoice", "cato ", "heritage",
+        "american progress", "innovation foundation", "institute for",
+        "energy research", "policy institute", "economic policy",
+        "chamber of commerce", "coalition for", "americans for",
+        "taxpayers for", "center for", "council on", "study institute",
+        "jd supra", "llp", "law firm", "attorneys at law",
+        "government strategies", "grant thornton", "deloitte", "mckinsey",
+        "research group", "for congress", "for senate", "for governor",
+        "for texas", "campaign", "press release",
+    }),
+    ("official", "Official / .gov", 1.0, {
+        "(.gov)", ".gov)", "gov.uk", "city of ", "county of ",
+        "department of energy", "energy.gov",
+    }),
+    ("wire", "Wire service", 2.0, {
+        "associated press", "apnews.com", "reuters", "agence france-presse",
+        "bloomberg", "united press international", "upi.com",
+    }),
+    ("national", "National press", 1.8, {
+        "new york times", "washington post", "wall street journal", "wsj",
+        "npr", "pbs", "bbc", "the guardian", "financial times", "cnbc",
+        "cnn", "abc news", "cbs news", "nbc news", "usa today", "politico",
+        "axios", "semafor", "notus", "the atlantic", "time.com",
+        "time magazine", "the economist", "newsweek", "los angeles times",
+        "the hill", "forbes", "barron's", "business insider",
+        "fast company", "marketplace.org", "quartz", "qz.com",
+        "scientific american", "the verge", "wired", "ars technica",
+        "gizmodo", "tom's hardware", "techradar", "engadget",
+        "fox news", "fox business", "newsnation", "60 minutes", "frontline",
+        "vice news", "vox", "pbs newshour", "cbs mornings",
+        "cbs saturday morning", "cbs sunday morning",
+        "cbsnews.com", "nbcnews.com", "abcnews.go", "foxnews.com",
+        "nytimes.com", "washingtonpost.com", "npr.org", "latimes.com",
+        "usatoday.com", "politico.com", "axios.com", "cnbc.com",
+        "cnn.com", "guardian.co", "theguardian.com", "ft.com",
+        "boston globe", "chicago tribune", "the philadelphia inquirer",
+        "the detroit news", "governing",
+    }),
+    # Foreign dailies that cover US data centers secondhand. Real press, and
+    # badged as such — but weighted below US local reporting, because a Seoul
+    # rewrite of a San Jose council meeting is not what a San Jose resident
+    # should be handed first.
+    ("international", "International press", 0.6, {
+        "the korea herald", "조선일보", "chosun", "the economic times",
+        "times of india", "south china morning post", "nikkei",
+        "der spiegel", "le monde", "el país", "the straits times",
+    }),
+    ("nonprofit", "Nonprofit newsroom", 1.6, {
+        "propublica", "inside climate news", "grist", "the markup",
+        "stateline", "floodlight", "capital & main", "the conversation",
+        "mother jones", "high country news", "searchlight", "the marshall",
+        "votebeat", "chalkbeat", "civil eats", "prism", "truthout",
+        "common dreams", "word in black", "the center square",
+        "new york focus", "planet detroit", "the reporting project",
+        "neighborhood news", "capital-star", "capital star",
+        "states newsroom", "public news service", "newsline", "lantern",
+        "spotlight pa", "nj spotlight", "texas tribune", "gothamist",
+        "fort worth report", "the maine monitor", "bridge michigan",
+        "mississippi today", "the beacon",
+        "source new mexico", "source nm", "the georgia virtue",
+    }),
+    ("trade", "Trade press", 1.2, {
+        "utility dive", "canary media", "e&e news", "energywire",
+        "latitude media", "heatmap", "rto insider", "s&p global",
+        "data center dynamics", "datacenterdynamics", "data center frontier",
+        "data center knowledge", "the register", "ieee spectrum",
+        "power magazine", "utility week", "smart energy", "electrek",
+        "greentech", "law360", "bisnow", "commercial observer",
+        "siliconangle", "fierce network", "capacity", "govtech",
+        "constructconnect", "virginia business", "roi-nj", "tech policy press",
+        "grid brief",
+        "the american bazaar", "construction owners",
+    }),
+]
+
+# Local reporting can't be enumerated — there are thousands of papers and
+# stations, and the long tail is exactly where data-center coverage lives.
+# Recognise it structurally instead: broadcast call letters in any case
+# ("WSLS 10", "kens5.com", "wandtv.com"), network-affiliate numbering
+# ("NBC4 Washington", "11Alive", "FOX 5 Atlanta"), regional public radio, and
+# the vocabulary local mastheads actually use. Advance Local's city domains
+# (nj.com, mlive.com) carry no such word, so they're listed outright.
+# Affiliate numbering is checked BEFORE the tier lists, because a numbered
+# affiliate carries its network's name: "41NBC News" (Macon) and "NBC 5
+# Dallas-Fort Worth" both contain a national-network substring but are local
+# stations. The number is what separates them from the network itself.
+NEWS_LOCAL_AFFILIATE_RE = _re.compile(
+    r"(?:\b(?:NBC|ABC|CBS|FOX|CW)\s?\d{1,2}"        # NBC4, FOX 5, abc7news
+    r"|\b\d{1,2}\s?(?:NBC|ABC|CBS|FOX|CW)\b"        # 41NBC News, 13 ABC
+    r"|\b\d{1,2}[KW][A-Z]{2,3}\b"                   # 13WMAZ
+    r"|^[kw][a-z]{2,4}\d{0,2}(?:-?tv)?\.(?:com|tv|net|org)"   # kens5.com
+    r"|\b\d{1,2}(?:news|alive|onyourside)"          # 13newsnow, 11Alive
+    r"|\b\d{1,2}\s?(?:news|eyewitness)\b"           # 5 EYEWITNESS NEWS
+    r"|\b[A-Za-z]{4,12}\s?\d{1,2}$)",               # Denver7, Spectrum News 13
+    _re.IGNORECASE)
+# Bare call letters are checked after the tier lists instead — "WSJ" and "KQED"
+# are the same shape, and the tier list is what tells them apart.
+NEWS_LOCAL_CALLSIGN_RE = _re.compile(r"(?<![A-Za-z])[KW][A-Z]{2,3}(?![A-Za-z])")
+NEWS_LOCAL_MASTHEAD_WORDS = (
+    "patch", "gazette", "herald", "tribune", "journal", "times", "post",
+    "daily", "sentinel", "dispatch", "register", "observer", "ledger",
+    "chronicle", "advocate", "courier", "bulletin", "star", "mercury",
+    "news-", "-news", "news &", "news now", "newspaper", "enterprise",
+    "record", "banner", "beacon", "mirror", "reflector", "monitor",
+    "examiner", "lookout", "advance", "picayune", "eagle", "democrat",
+    "republic", "independent", "telegram", "review", "reporter", "signal",
+    "weekly", "current", "local news", "public radio", "public media",
+    "spectrum news", "news12", "news 12", "tapinto", "community impact",
+    "insider nj", "borderreport", "denverite", "shaw local", "county news",
+    "citizen", "voice", "statesman", "bee", "pilot", "call", "scorecard",
+    "standard", "wtop", "cardinal news", "nj.com", "mlive", "al.com",
+    "cleveland.com", "masslive", "pennlive", "silive", "syracuse.com",
+    "oregonlive", "lehighvalleylive", "ajc.com", "inquirer.com",
+    "dallas news", "seacoastonline", "montco", "mymotherlode",
+    "mynorthwest", "mshale", "hudson county view", "jersey shore online",
+    "the baynet", "rva mag", "6sqft", "now georgia", "texas standard",
+    "radio iowa", "public broadcasting", "park press", "free press",
+    "vindicator", "globe", "express", "sun", "hills media", "news group",
+    "report", "101.5", "wv news", "snj today", "mpr news", "gazetteer",
+    "desert", "rio grande guardian", "new jersey globe", "dallas express",
+    "news first", "news channel", "newschannel", "news center", "newsradio",
+    "fox carolina", "news source", "abc affiliate",
+)
+# Extra signals used only for bare-domain names, where the masthead vocabulary
+# above is written with spaces that a domain never has.
+NEWS_LOCAL_DOMAIN_WORDS = ("news", "publicmedia", "publicradio",
+                           "publicbroadcasting", "localnews", "abc", "cbs",
+                           "nbc", "fox")
+
+# Exact-name overrides, checked before any substring matching. This exists for
+# mastheads that contain another tier's needle: "MSNBC" contains "msn", and a
+# cable news network is not the syndication portal it happens to spell.
+NEWS_SOURCE_EXACT = {
+    "msnbc": "national",
+    "msnbc.com": "national",
+    "the associated press": "wire",
+    "ap": "wire",
+    # "ap news" and "fortune" are substrings of real mastheads that are not
+    # them — "Heatmap News", "Startup Fortune" — so they only match whole.
+    "ap news": "wire",
+    "fortune": "national",
+    "fortune.com": "national",
+}
+
+# Masthead words are matched on word boundaries, not as bare substrings:
+# "star" inside "Startup Fortune" and "call" inside "Callaway" are exactly the
+# false positives a substring test produces. Entries carrying punctuation or a
+# domain suffix are matched literally, since a boundary there means nothing.
+NEWS_LOCAL_WORD_RE = _re.compile(
+    "|".join(
+        (r"\b" + _re.escape(w) + r"\b") if w.replace(" ", "").isalpha()
+        else _re.escape(w)
+        for w in NEWS_LOCAL_MASTHEAD_WORDS),
+    _re.IGNORECASE)
+
+NEWS_TIER_LABELS = {t[0]: t[1] for t in NEWS_SOURCE_TIERS}
+NEWS_TIER_LABELS["local"] = "Local press"
+NEWS_TIER_LABELS["unrated"] = "Unrated source"
+NEWS_TIER_WEIGHTS = {t[0]: t[2] for t in NEWS_SOURCE_TIERS}
+NEWS_TIER_WEIGHTS["local"] = 0.9
+NEWS_TIER_WEIGHTS["unrated"] = 0.0
+# Tiers kept out of the ranked block and off state pages: a republished press
+# release and a campaign site are both somebody's own words, and neither is
+# what a resident should meet first. They still appear in the browse feed,
+# labelled — hiding them outright would misrepresent what the search returns.
+NEWS_DEMOTED_TIERS = ("aggregator", "advocacy")
+# Tiers a resident can safely cite at a hearing — what the "reputable sources"
+# filter on the news page keeps, and what earns a badge anywhere headlines are
+# listed. `local` is in: a county paper's council coverage is often the only
+# reporting that exists, and it is exactly what a hearing wants to hear.
+NEWS_REPUTABLE_TIERS = ("wire", "national", "nonprofit", "trade", "local",
+                        "official", "international")
+
+
+@_lru_cache(maxsize=4096)
+def news_source_tier(outlet):
+    """Classify an outlet name into one of NEWS_TIER_LABELS' keys.
+
+    Pure, no network. `unrated` is an honest "we don't know this masthead",
+    never a judgement that the source is bad — most of the feed lands there,
+    and it still renders, it just doesn't get a badge or a ranking bonus.
+    """
+    name = (outlet or "").strip()
+    if not name:
+        return "unrated"
+    low = name.lower()
+    if low in NEWS_SOURCE_EXACT:
+        return NEWS_SOURCE_EXACT[low]
+    if NEWS_LOCAL_AFFILIATE_RE.search(name):
+        return "local"
+    for key, _label, _weight, needles in NEWS_SOURCE_TIERS:
+        if any(n in low for n in needles):
+            return key
+    if NEWS_LOCAL_CALLSIGN_RE.search(name):
+        return "local"
+    if NEWS_LOCAL_WORD_RE.search(low):
+        return "local"
+    # Google reports plenty of outlets as a bare domain ("texastribune.org",
+    # "thegazette.com"). Word boundaries mean nothing inside a domain, so the
+    # same vocabulary is applied as a plain substring for those names only.
+    if " " not in low and "." in low:
+        stem = low.rsplit(".", 1)[0]
+        if (any(w in stem for w in NEWS_LOCAL_MASTHEAD_WORDS if w.isalpha())
+                or any(w in stem for w in NEWS_LOCAL_DOMAIN_WORDS)):
+            return "local"
+    return "unrated"
+
 
 # Reddit search configurations
 REDDIT_HOSTS = ("https://old.reddit.com/search.rss",

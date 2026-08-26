@@ -70,6 +70,8 @@ from src.constants import (
     IEA_OUTLOOK, DC_FORECASTS, DC_FORECASTS_US,
     PEW_RURAL_2026, PEW_STATE_COUNTS,
     NEWS_THEMES, STORY_ANGLES, STORY_IMPACT_WEIGHTS,
+    news_source_tier, NEWS_TIER_LABELS, NEWS_TIER_WEIGHTS,
+    NEWS_REPUTABLE_TIERS, NEWS_DEMOTED_TIERS,
 )
 from src.pdf_pack import build_health_pdf
 from src.us_map_data import US_MAP_PATHS, US_MAP_LABELS, US_MAP_VIEWBOX
@@ -463,6 +465,24 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
         letter-spacing:.04em; }
 .pill.bad  { background:rgba(239,68,68,.12); color:#ef4444; }
 .pill.good { background:rgba(52,211,153,.12); color:#34d399; }
+/* Source-tier badges on headline lists. Deliberately quiet — they mark a
+   citable outlet, they don't shout over the headline itself. */
+.src-badge { display:inline-block; font-size:10.5px; font-weight:700;
+  letter-spacing:.03em; text-transform:uppercase; padding:1px 6px;
+  border-radius:5px; margin-left:6px; vertical-align:middle;
+  border:1px solid transparent; white-space:nowrap; }
+.src-wire, .src-national { background:rgba(45,212,191,.14); color:#2dd4bf;
+  border-color:rgba(45,212,191,.32); }
+.src-nonprofit { background:rgba(167,139,250,.14); color:#a78bfa;
+  border-color:rgba(167,139,250,.30); }
+.src-trade { background:rgba(96,165,250,.13); color:#60a5fa;
+  border-color:rgba(96,165,250,.28); }
+.src-local, .src-international { background:rgba(148,163,184,.14);
+  color:#cbd5e1; border-color:rgba(148,163,184,.28); }
+.src-official { background:rgba(251,191,36,.13); color:#fbbf24;
+  border-color:rgba(251,191,36,.28); }
+.src-aggregator, .src-advocacy { background:rgba(239,68,68,.10);
+  color:#fca5a5; border-color:rgba(239,68,68,.26); }
 .badge-enacted { background:#065f46; color:#6ee7b7; }
 .badge-proposed { background:#713f12; color:#fde68a; }
 .badge-rejected { background:#7f1d1d; color:#fca5a5; }
@@ -608,6 +628,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
   .kicker, h2, .stat b, .prose h3 { color:#0a7d70 !important; }
   .badge { border:1px solid #333; color:#111 !important;
            background:#fff !important; }
+  .src-badge { border:1px solid #666; color:#111 !important;
+               background:#fff !important; }
   /* Expand collapsed disclosures so nothing prints hidden. */
   details[open] > summary { color:#111; }
   details:not([open]) > *:not(summary) { display:block !important; }
@@ -646,6 +668,7 @@ NAV_GROUPS = [
         ("PUCs", "puc.html"),
         ("Officials scorecard", "scorecard.html"),
         ("Senate races 2026", "senate-races.html"),
+        ("House races 2026", "house-races.html"),
         ("Community playbook", "community-value.html"),
     ]),
     ("The facts", [
@@ -1360,7 +1383,8 @@ def build_state(state):
                 return ""
         items = "\n".join(
             f'<li>'
-            f'<div class="post-meta">{esc(" · ".join(x for x in (n.get("source",""), _fmt(n.get("published_iso",""))) if x))}</div>'
+            f'<div class="post-meta">{esc(" · ".join(x for x in (n.get("source",""), _fmt(n.get("published_iso",""))) if x))}'
+            f'{_source_badge_html(n.get("source", ""))}</div>'
             f'<h3><a href="{esc(n["link"])}" rel="nofollow noopener" target="_blank">'
             f'{esc(n["title"])}</a></h3></li>'
             for n in state_news)
@@ -1899,8 +1923,19 @@ _NEWS_ITEMS = []
 _VIDEO_ITEMS = []
 
 def _news_for_state(state_name, limit=6):
-    return [it for it in _NEWS_ITEMS
-            if state_name in it.get("states", [])][:limit]
+    """A state page has room for ~6 headlines. Newest first, with the source
+    tier only as a tiebreak: this slot answers "what happened in my state this
+    week", and sorting by tier instead would fill it with national coverage
+    that merely mentions the state, crowding out the county-paper reporting
+    that is the whole point of the slot. Press-release republishes and
+    advocacy posts are dropped outright — a state page carrying a press
+    release under a finance-portal byline is worse than one headline short."""
+    hits = [it for it in _NEWS_ITEMS
+            if state_name in it.get("states", [])
+            and _source_tier(it) not in NEWS_DEMOTED_TIERS]
+    hits.sort(key=lambda it: (it.get("published_iso") or "",
+                              NEWS_TIER_WEIGHTS[_source_tier(it)]), reverse=True)
+    return hits[:limit]
 
 def _videos_for_state(state_name, limit=4):
     return [it for it in _VIDEO_ITEMS
@@ -2049,19 +2084,54 @@ def _story_angle_build(title):
     return "⚠️", "A community is pushing back on a nearby data center."
 
 
+def _source_tier(item):
+    """Tier key for a feed item, from whichever field carries the outlet name
+    (`source` in the news feed, `outlet` in the story archive)."""
+    return news_source_tier(item.get("source") or item.get("outlet") or "")
+
+
+def _source_badge_html(outlet):
+    """Badge naming the outlet's tier. Two things get a label: press we can
+    place (wire/national/nonprofit/trade/local/official), and the two tiers
+    that aren't reporting at all — a press-release wire and an advocacy or
+    campaign site. An unrated masthead gets nothing rather than a scarlet
+    letter: most of the feed is unrated, and that means "we couldn't place
+    it", not "don't trust it"."""
+    tier = news_source_tier(outlet)
+    if tier not in NEWS_REPUTABLE_TIERS and tier not in NEWS_DEMOTED_TIERS:
+        return ""
+    label = NEWS_TIER_LABELS[tier]
+    hint = ("not a newsroom — kept out of the ranked block"
+            if tier in NEWS_DEMOTED_TIERS
+            else "weighted up in the ranked block")
+    return (f'<span class="src-badge src-{tier}" title="{esc(label)} — '
+            f'{hint}">{esc(label)}</span>')
+
+
 def _rank_stories_build(items, top_n=5):
     """Build-time port of src.services.news.rank_stories. Score = recency +
-    summed weights of high-stakes keywords in the title. Returns new dicts
-    annotated with score/angle_emoji/angle_blurb, most-important first."""
+    summed weights of high-stakes keywords in the title + a source-tier
+    weight, so a wire or mainstream report outranks an equally-worded item
+    from an unrated masthead. Press-release wires and syndication hosts
+    (`aggregator`) are dropped outright — the ranked block is what a resident
+    reads first, and a republished press release is the operator's own words
+    wearing a newsroom's name. Returns new dicts annotated with
+    score/tier/angle_emoji/angle_blurb, most-important first."""
     scored = []
     for it in items or []:
+        tier = _source_tier(it)
+        if tier in NEWS_DEMOTED_TIERS:
+            continue
         title = it.get("title") or ""
         t = title.lower()
         weight = sum(w for kw, w in STORY_IMPACT_WEIGHTS.items() if kw in t)
         age = it.get("age_days")
         recency = 3.0 if age is None else max(0.0, 3.0 - 0.4 * age)
         emoji, blurb = _story_angle_build(title)
-        scored.append({**it, "score": round(weight + recency, 2),
+        scored.append({**it,
+                       "score": round(weight + recency
+                                      + NEWS_TIER_WEIGHTS[tier], 2),
+                       "tier": tier, "tier_label": NEWS_TIER_LABELS[tier],
                        "angle_emoji": emoji, "angle_blurb": blurb})
     scored.sort(key=lambda s: s["score"], reverse=True)
     return scored[:top_n]
@@ -2416,9 +2486,20 @@ def _load_news():
             cache = json.loads(NEWS_CACHE_PATH.read_text(encoding="utf-8"))
         except Exception:                                         # noqa: BLE001
             cache = None
+    def _top(payload):
+        """Rank the top block from whatever themes we have, cache or fresh.
+        Derived every build rather than read back from the cache: ranking
+        weights (source tier, urgency keywords) change with the code, and a
+        frozen build must not keep publishing a ranking the current rules
+        would reject. Falls back to the stored list only when there are no
+        theme buckets to rank."""
+        themes = payload.get("themes") or {}
+        return (_rank_top_stories_from_themes(themes) if themes
+                else payload.get("top_stories", []))
+
     force = os.environ.get("NEWS_REFRESH") == "1"
     if cache and _news_frozen() and "themes" in cache and "top_stories" in cache:
-        return (cache["items"], cache["themes"], cache["top_stories"],
+        return (cache["items"], cache["themes"], _top(cache),
                 cache["fetched_at"])
     fresh_enough = False
     if cache and not force:
@@ -2433,7 +2514,7 @@ def _load_news():
     if fresh_enough and ("themes" not in cache or "top_stories" not in cache):
         fresh_enough = False
     if fresh_enough:
-        return (cache["items"], cache["themes"], cache["top_stories"],
+        return (cache["items"], cache["themes"], _top(cache),
                 cache["fetched_at"])
 
     items = _fetch_news_live()
@@ -2444,7 +2525,7 @@ def _load_news():
             print(f"  [news] using stale cache ({len(cache.get('items', []))} items)")
             return (cache.get("items", []),
                     cache.get("themes", {}),
-                    cache.get("top_stories", []),
+                    _top(cache),
                     cache["fetched_at"])
         return [], {}, [], _dt.datetime.now(_dt.timezone.utc).isoformat()
 
@@ -2691,7 +2772,7 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
             f'<span class="meta"><span class="tag" title="{esc(blurb)}">'
             f'{emoji}</span> {esc(s.get("outlet", ""))}'
             f'{" · " + _fmt_date(s.get("first_seen")) if s.get("first_seen") else ""}'
-            '</span></li>')
+            f'{_source_badge_html(s.get("outlet", ""))}</span></li>')
 
     _topic_order = [label for _, label, _ in story_tracker.STORY_TOPICS]
     _topic_order.append("Other coverage")
@@ -2751,7 +2832,7 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
                 f'{esc(latest_story.get("title", ""))}</a>'
                 f'<span class="meta">{esc(latest_story.get("outlet", ""))}'
                 f'{" · " + _fmt_date(latest_story.get("first_seen")) if latest_story.get("first_seen") else ""}'
-                f'</span></div>')
+                f'{_source_badge_html(latest_story.get("outlet", ""))}</span></div>')
         state_chip = ""
         if g["state"]:
             state_chip = (f'<button type="button" class="tag tag-btn sg-state-chip" '
@@ -3054,6 +3135,7 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
 
   var q = new URLSearchParams(location.search);
   if (q.get('state')) stateSel.value = q.get('state');
+  if (q.get('sources') === 'reputable') repOnly.checked = true;
   if (q.get('q')) kw.value = q.get('q');
   if (q.get('patterns')) patternsOnly.checked = true;
   if (q.get('sort')) {{ sortSel.value = q.get('sort'); sortCards(); }}
@@ -3163,7 +3245,7 @@ Browse the <a href="story-tracker.html">story tracker</a> instead.</p></section>
             f'target="_blank">{esc(s.get("title", ""))}</a>'
             f'<span class="meta">{chips} {esc(s.get("outlet", ""))}'
             f'{" · " + _fmt_date(s.get("first_seen")) if s.get("first_seen") else ""}'
-            '</span></li>')
+            f'{_source_badge_html(s.get("outlet", ""))}</span></li>')
 
     cards = []
     for g in groups:
@@ -3424,6 +3506,7 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
         for i, s in enumerate(top_stories, 1):
             meta_bits = [s.get("source", ""), _age_label(s.get("age_days"))]
             meta = " · ".join(x for x in meta_bits if x)
+            badge = _source_badge_html(s.get("source", ""))
             cards.append(
                 '<li class="top-story">'
                 f'<div class="rank">{i}</div>'
@@ -3432,13 +3515,16 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
                 f'<h3><a href="{esc(s.get("link", ""))}" rel="nofollow noopener" '
                 f'target="_blank">{esc(s.get("title", ""))}</a></h3>'
                 f'<p class="blurb">{esc(s.get("angle_blurb", ""))}</p>'
-                f'<p class="meta">{esc(meta)}</p>'
+                f'<p class="meta">{esc(meta)}{badge}</p>'
                 '</div></li>')
         top_html = (
             '<section id="topStories"><h2>Top stories this week</h2>'
             '<p class="muted">Ranked automatically from the last 7 days by '
-            'freshness plus urgency keywords — lawsuits, moratoriums, and rate '
-            'hikes float highest. Heuristic, not editorial.</p>'
+            'freshness, urgency keywords — lawsuits, moratoriums, rate hikes '
+            '— and the outlet: wire and mainstream reporting is weighted up, '
+            'and press-release wires, syndication hosts (PR Newswire, MSN, '
+            'Yahoo) and advocacy or campaign posts are excluded from this '
+            'block entirely. Heuristic, not editorial.</p>'
             f'<ol class="top-stories-list">{"".join(cards)}</ol></section>')
 
     # ── Browse feed: dedupe by link, union theme tags per item ───────────── #
@@ -3474,13 +3560,21 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
         meta_bits = [it.get("source", ""),
                      _fmt_date(it.get("published_iso", ""))]
         meta = " · ".join(x for x in meta_bits if x)
+        tier = _source_tier(it)
         li_html += (
-            f'<li data-states="{data_states}" data-themes="{data_themes}">'
-            f'<div class="post-meta">{esc(meta)}</div>'
+            f'<li data-states="{data_states}" data-themes="{data_themes}" '
+            f'data-tier="{esc(tier)}">'
+            f'<div class="post-meta">{esc(meta)}'
+            f'{_source_badge_html(it.get("source", ""))}</div>'
             f'<h3><a href="{esc(it["link"])}" rel="nofollow noopener" '
             f'target="_blank">{esc(it["title"])}</a></h3>'
             f'{"<div class=\"tags\" style=\"margin-top:6px\">" + chips + "</div>" if chips else ""}'
             f'</li>\n')
+
+    total_count = len(feed_rows)
+    rep_count = sum(1 for r in feed_rows
+                    if _source_tier(r) in NEWS_REPUTABLE_TIERS)
+    reputable_js = json.dumps(list(NEWS_REPUTABLE_TIERS))
 
     import datetime as _dt
     try:
@@ -3540,6 +3634,8 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
 .feed-controls input[type=search] {{ flex:1; min-width:200px; }}
 .tag-theme {{ background:rgba(45,212,191,.14); color:var(--teal);
   border:1px solid rgba(45,212,191,.28); }}
+.src-toggle {{ cursor:pointer; }}
+.src-toggle input {{ accent-color:var(--teal); }}
 </style>
 
 {top_html}
@@ -3558,6 +3654,13 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
         <input id="keywordFilter" type="search" placeholder="e.g. Loudoun, moratorium, water">
       </label>
     </div>
+    <div class="row">
+      <label class="src-toggle" title="Wire services, national and nonprofit newsrooms, trade press, and local papers and TV stations — and never a press-release wire.">
+        <input type="checkbox" id="reputableOnly"> Reputable sources only
+      </label>
+      <span class="muted" style="font-size:12.5px">{rep_count} of {total_count} headlines
+      come from an outlet we can place.</span>
+    </div>
     <div class="row" style="justify-content:space-between">
       <span id="filterCount" class="muted"></span>
       <button id="resetFilters" class="btn ghost" style="padding:6px 12px;font-size:13px" type="button">Reset</button>
@@ -3572,9 +3675,22 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
 
 <section>
   <p class="muted" style="margin-top:24px">Headlines are an automated news
-  search, unfiltered and not endorsements — follow each link to the original
-  outlet. State tags are auto-detected from the headline; a story may mention
-  a state without being about that state.</p>
+  search, not endorsements — follow each link to the original outlet. State
+  tags are auto-detected from the headline; a story may mention a state
+  without being about that state.</p>
+  <p class="muted"><strong>About the source labels.</strong> Outlets are
+  matched against a published list of wire services, national and nonprofit
+  newsrooms, and energy trade press; local papers and TV stations are
+  recognised by broadcast call letters and masthead words. It is a label on
+  the <em>publisher</em>, not a fact-check of the story. Most of the feed is
+  unlabelled — that means we couldn't place the masthead, not that the
+  reporting is bad. Press-release wires and syndication hosts (PR Newswire,
+  GlobeNewswire, MSN, Yahoo Finance) and advocacy, think-tank, law-firm and
+  campaign posts are the one call we do make: they are labelled, kept out of
+  the ranked block and kept off state pages, because a press release or a
+  position paper is somebody's own words wearing a newsroom's name. They
+  still appear in the feed below — hiding them would misrepresent what the
+  search actually returns.</p>
 </section>
 
 <script>
@@ -3588,10 +3704,14 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
   var reset = document.getElementById('resetFilters');
   var items = Array.prototype.slice.call(list.querySelectorAll('li'));
 
+  var repOnly = document.getElementById('reputableOnly');
+  var REPUTABLE = {reputable_js};
+
   function apply() {{
     var theme = themeSel.value;
     var state = stateSel.value;
     var kwVal = (kw.value || '').trim().toLowerCase();
+    var repVal = repOnly.checked;
     var shown = 0;
     items.forEach(function(li) {{
       var states = (li.getAttribute('data-states') || '').split('|').filter(Boolean);
@@ -3599,25 +3719,28 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
       var text = li.textContent.toLowerCase();
       var match = (!theme || themes.indexOf(theme) !== -1)
                 && (!state || states.indexOf(state) !== -1)
+                && (!repVal || REPUTABLE.indexOf(li.getAttribute('data-tier')) !== -1)
                 && (!kwVal || text.indexOf(kwVal) !== -1);
       li.style.display = match ? '' : 'none';
       if (match) shown++;
     }});
     var parts = [];
-    if (theme || state || kwVal) {{
+    if (theme || state || kwVal || repVal) {{
       parts.push(shown + ' stor' + (shown === 1 ? 'y' : 'ies'));
       if (theme) parts.push('theme: ' + theme);
       if (state) parts.push('state: ' + state);
+      if (repVal) parts.push('reputable sources');
       if (kwVal) parts.push('"' + kwVal + '"');
       count.textContent = parts.join(' · ');
     }} else {{
       count.textContent = items.length + ' items · newest first';
     }}
-    none.style.display = ((theme || state || kwVal) && shown === 0) ? '' : 'none';
-    // Persist theme/state/keyword to URL for shareable links.
+    none.style.display = ((theme || state || kwVal || repVal) && shown === 0) ? '' : 'none';
+    // Persist theme/state/keyword/source filter to URL for shareable links.
     var qs = new URLSearchParams();
     if (theme) qs.set('theme', theme);
     if (state) qs.set('state', state);
+    if (repVal) qs.set('sources', 'reputable');
     if (kwVal) qs.set('q', kwVal);
     var qStr = qs.toString();
     history.replaceState(null, '', qStr ? ('?' + qStr) : location.pathname);
@@ -3625,6 +3748,7 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
 
   themeSel.addEventListener('change', apply);
   stateSel.addEventListener('change', apply);
+  repOnly.addEventListener('change', apply);
   kw.addEventListener('input', apply);
 
   // Click a chip to filter by that theme/state. Only sets the filter if the
@@ -3653,6 +3777,7 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
   reset.addEventListener('click', function() {{
     themeSel.value = '';
     stateSel.value = '';
+    repOnly.checked = false;
     kw.value = '';
     apply();
   }});
@@ -6976,7 +7101,7 @@ def _story_news_section_html(group, heading="Recent news"):
             f'target="_blank">{esc(s.get("title", ""))}</a>'
             f'<span class="meta"><span title="{esc(blurb)}">{emoji}</span> '
             f'{esc(s.get("outlet", ""))}{" · " + esc(date) if date else ""}'
-            f'</span></li>')
+            f'{_source_badge_html(s.get("outlet", ""))}</span></li>')
     more = ""
     if group["count"] > 12:
         more = (f'<p class="muted">+{group["count"] - 12} more on the '
@@ -10216,6 +10341,32 @@ def _sr_lean_badge(c):
             f'font-size:12px;padding:3px 9px">{esc(c["lean_label"])}</span>')
 
 
+def _sr_mentions(c):
+    """Unreviewed headlines naming this candidate alongside data centers/AI.
+
+    Automated and NOT verified — the same bargain story-tracker.html already
+    makes with its live feed. Rendered visually apart from the sourced record
+    and labelled on every block, because the whole value of the record above is
+    that a human checked it.
+    """
+    if not c.get("mentions"):
+        return ""
+    lis = "".join(
+        f'<li><a href="{esc(str(m["link"]))}" rel="nofollow">{esc(str(m["title"]))}</a>'
+        f'{f" <span class=\'muted\'>({esc(str(m["seen"])[:10])})</span>" if m.get("seen") else ""}</li>'
+        for m in c["mentions"] if m.get("link"))
+    if not lis:
+        return ""
+    return (f'<details class="more" style="margin:6px 0 0">'
+            f'<summary style="font-size:13px">Recent mentions '
+            f'({len(c["mentions"])}) — automated, not verified</summary>'
+            f'<p class="muted" style="margin:6px 0;font-size:13px">Headlines that '
+            f'name this candidate and mention data centers or AI. Matched by a '
+            f'script, read by nobody. A mention is a lead, not a record — do not '
+            f'cite one as a position.</p>'
+            f'<ul style="font-size:13px;margin:0">{lis}</ul></details>')
+
+
 def _sr_candidate(c, abbrev=""):
     """One candidate block: lean badge, summary, and every cited item.
 
@@ -10233,20 +10384,25 @@ def _sr_candidate(c, abbrev=""):
                 f'<p class="muted" style="margin:0">No documented statement or '
                 f'action on data centers located. Not scored — see '
                 f'<a href="#method">how this page treats silence</a>.</p>'
-                f'{_sr_money(abbrev, c["name"])}</div>')
+                f'{_sr_money(abbrev, c["name"])}{_sr_mentions(c)}</div>')
     items = "".join(
         f'<li>{esc(i["what"])} '
         f'<span class="muted">({esc(i["date"]) if i["date"] else "date not recorded"} '
         f'— <a href="{esc(i["source"])}" rel="nofollow">source</a>)</span></li>'
         for i in c["items"])
-    asof = (f'<p class="muted" style="margin:6px 0 0;font-size:13px">Record read '
-            f'{esc(c["as_of"])}.</p>' if c.get("as_of") else
-            '<p class="muted" style="margin:6px 0 0;font-size:13px">No '
-            'verification date recorded.</p>')
+    if c.get("as_of"):
+        # A campaign position months old is not evidence of where someone
+        # stands today, so say so rather than showing a bare date.
+        warn = (' <strong>&#9203; needs a re-read</strong>' if c.get("stale") else "")
+        asof = (f'<p class="muted" style="margin:6px 0 0;font-size:13px">Record read '
+                f'{esc(c["as_of"])}.{warn}</p>')
+    else:
+        asof = ('<p class="muted" style="margin:6px 0 0;font-size:13px">No '
+                'verification date recorded.</p>')
     return (f'<div class="sr-cand" data-lean="{esc(c["lean"])}">{head}'
             f'<p style="margin:0 0 6px">{esc(c["summary"])}</p>'
             f'<ul style="margin:0">{items}</ul>'
-            f'{_sr_money(abbrev, c["name"])}{asof}</div>')
+            f'{_sr_money(abbrev, c["name"])}{asof}{_sr_mentions(c)}</div>')
 
 
 def _sr_stakes(abbrev):
@@ -10366,6 +10522,7 @@ def build_senate_races():
   done about them — each claim with the link behind it — so you can check the
   people asking for your vote against the fight happening in your own county.</p>
   <div class="stats">{chips}</div>
+  {_race_phase_banner(cov, "senator")}
 </header>
 
 <div class="freshness"><p><strong>Most candidates have no record here, and that
@@ -10428,6 +10585,8 @@ That is a gap in the public record — or in our research — not a position.</p
 <section>
   <h2>See also</h2>
   <ul>
+    <li><a href="house-races.html">2026 House races</a> — all 435 districts,
+      the other half of the federal ballot.</li>
     <li><a href="scorecard.html">Officials scorecard</a> — A–F grades for
       sitting members of Congress and governors, on their actual votes.</li>
     <li><a href="moratoriums.html">Moratorium tracker</a> — what communities in
@@ -10458,6 +10617,213 @@ function srFilter(){{
         "centers, sourced claim by claim, with the ballot roster read from each "
         "state's own certified candidate list.",
         body, f"{SITE_URL}/senate-races")
+
+
+def _race_phase_banner(cov, what):
+    """Campaign-time vs archive-time framing, derived from the date.
+
+    Before the election this is a voter guide. After it, the same records
+    become the more useful artifact: what each winner promised, to hold them
+    to. Derived from ELECTION_DATE so the daily rebuild flips it with no edit.
+    """
+    if cov["phase"] == "campaign":
+        return (f'<p class="note"><strong>{cov["days_to_election"]} days to the '
+                f'election.</strong> Records are still moving — candidates are '
+                f'publishing platforms weekly. Check the read date on any entry '
+                f'before you quote it.</p>')
+    if cov["phase"] == "election_day":
+        return ('<p class="note"><strong>Election day.</strong> This page '
+                'freezes as a record of what each candidate said before the '
+                'vote.</p>')
+    return (f'<p class="note"><strong>The election was '
+            f'{cov["days_since_election"]} days ago.</strong> This page is now '
+            f'an archive: what each {what} promised about data centers while '
+            f'asking for the job. Hold the winners to it — and see the '
+            f'<a href="scorecard.html">officials scorecard</a> for what they '
+            f'have actually done since.</p>')
+
+
+def _hr_race_card(r):
+    from src.house_races import ROSTER_AS_OF
+    src = (f'<a href="{esc(r["roster_source"])}" rel="nofollow">state candidate '
+           f'list</a>' if r["roster_source"] else
+           '<span class="muted">no roster source recorded</span>')
+    inc = (" · ".join(f"{esc(n)} ({esc(p)})" for n, p in
+                      zip(r["incumbents"], r["incumbent_parties"]))
+           or '<span class="muted">open seat</span>')
+    dele = (' <span class="muted">(non-voting delegate)</span>'
+            if r.get("delegate") else "")
+    state_pg = f'states/{slugify(r["state"])}.html'
+    return f"""
+<section class="card" id="race-{esc(r['abbrev'].lower())}-{esc(r['district'].lower())}"
+         data-state="{esc(r['state'].lower())}"
+         data-names="{esc(' '.join(c['name'] for c in r['candidates']).lower())}"
+         data-dist="{esc((r['abbrev'] + '-' + r['district']).lower())}">
+  <h3 style="margin:0 0 4px">{esc(r['abbrev'])}-{esc(r['district'])}{dele}</h3>
+  <p class="muted" style="margin:0 0 10px">{esc(r['state'])} · PVI
+     {esc(r['pvi'])} · {inc} · {esc('; '.join(r['statuses']) or 'status not recorded')}</p>
+  {_sr_stakes(r['abbrev'])}
+  {''.join(_sr_candidate(c, r['abbrev']) for c in r['candidates'])}
+  <p class="src" style="margin:10px 0 0">Ballot roster: {src} (read
+     {esc(ROSTER_AS_OF)}) · <a href="{esc(state_pg)}">{esc(r['state'])}
+     data-center page</a></p>
+</section>"""
+
+
+def _hr_compact_row(r):
+    """One district as a table row — how 440 races fit on one page."""
+    chips = " ".join(
+        f'<span class="gradebadge" style="background:{c["lean_color"]};'
+        f'font-size:11px;padding:2px 7px">{esc(c["name"])}'
+        f'{" ★" if c["incumbent"] else ""}</span>'
+        for c in r["candidates"]) or '<span class="muted">no candidates listed</span>'
+    inc = " · ".join(esc(n) for n in r["incumbents"]) or "open seat"
+    anchor = f"race-{r['abbrev'].lower()}-{r['district'].lower()}"
+    label = f"{r['abbrev']}-{r['district']}"
+    cell_ = (f'<a href="#{anchor}">{esc(label)}</a>' if r["contested"]
+             else esc(label))
+    return (f'<tr><td><strong>{cell_}</strong></td>'
+            f'<td>{esc(r["pvi"])}</td><td>{esc(inc)}</td><td>{chips}</td></tr>')
+
+
+def build_house_races():
+    """Where every 2026 U.S. House candidate stands on AI data centers."""
+    import src.house_races as hr
+
+    races = hr.races()
+    cov = hr.coverage()
+    documented = [r for r in races if r["contested"]]
+    grouped = hr.by_state()
+
+    legend = "".join(
+        f'<li><span class="gradebadge" style="background:{color};font-size:12px;'
+        f'padding:3px 9px">{esc(label)}</span> — {esc(desc)}</li>'
+        for label, desc, color in hr.LEANS.values())
+
+    chips = (
+        f'<span class="stat"><b>{cov["races"]}</b><span>districts on the ballot</span></span>'
+        f'<span class="stat"><b>{cov["candidates"]}</b><span>candidates filed</span></span>'
+        f'<span class="stat"><b>{cov["documented"]}</b><span>with a documented record</span></span>'
+        f'<span class="stat"><b>{cov["mentions"]}</b><span>unverified mentions queued</span></span>')
+
+    state_sections = []
+    for state, rows in grouped.items():
+        body = ('<table><thead><tr><th>District</th><th>PVI</th>'
+                '<th>Incumbent</th><th>Candidates (★ = incumbent)</th></tr>'
+                '</thead><tbody>'
+                + "".join(_hr_compact_row(r) for r in rows)
+                + '</tbody></table>')
+        state_sections.append((esc(state), body))
+
+    body = f"""
+<header>
+  <div class="kicker">2026 U.S. House</div>
+  <h1>Where your House candidates stand on AI data centers</h1>
+  <p class="sub">Every district on the 2026 ballot — {cov["races"]} of them,
+  {cov["candidates"]} candidates — and what each one has actually said or done
+  about data centers, with the link behind it. Your representative votes on the
+  federal rules; your county votes on the project. This is the federal half.</p>
+  <div class="stats">{chips}</div>
+  {_race_phase_banner(cov, "representative")}
+</header>
+
+<div class="freshness"><p><strong>Coverage here is very low, and saying so is
+the point.</strong> {cov["documented"]} of {cov["candidates"]} candidates have a
+documented data-center record. The rest show <em>no record found</em> — never
+"neutral". At 440 districts this page starts as a complete
+<em>ballot</em> and an almost-empty <em>record</em>; it fills in as
+<code>scan_candidate_records.py</code> surfaces leads and a human verifies them.
+<a href="#method">How that works</a>.</p></div>
+
+<div class="panel" style="margin:18px 0">
+  <label for="srq"><strong>Find your district</strong></label>
+  <input id="srq" type="search" placeholder="State, candidate name, or DIST like TX-33…"
+         style="width:100%;max-width:420px;padding:9px;margin-top:6px;
+                border-radius:8px;border:1px solid #2a3a55;background:#0b1220;
+                color:#eaf0f7" oninput="srFilter()">
+  <p class="muted" id="srcount" style="margin:8px 0 0"></p>
+</div>
+
+<h2 id="documented">Districts with a documented record</h2>
+<p class="muted">{len(documented)} of {cov["races"]}. Everything else is in the
+state tables below.</p>
+{''.join(_hr_race_card(r) for r in documented)}
+
+<h2 id="all">Every district, by state</h2>
+<p class="muted">The full ballot. A name in colour has a record; grey means
+none has been located. Click a linked district to jump to its card.</p>
+{_sections_shell(state_sections, open_first=False)}
+
+<section id="method">
+  <h2>How this page is built, and how it stays current</h2>
+  <p><strong>The ballot is primary-sourced.</strong> Every district links the
+  state election authority's own certified candidate list. 435 voting districts
+  plus 5 non-voting delegates, and where mid-decade redistricting put two
+  sitting members in one seat, both are shown.</p>
+  <p><strong>Every claim carries its own link and date</strong>, and a record
+  older than {esc(str(__import__('src.race_common', fromlist=['x']).STALE_AFTER_DAYS))}
+  days is flagged as needing a re-read rather than shown as current.</p>
+  <p><strong>Silence is disclosed, never scored.</strong> {esc(hr.LEAN_NOTE)}</p>
+  <p><strong>Records are promoted by a human, never by a script.</strong>
+  <code>scripts/scan_candidate_records.py</code> mines the news archive for a
+  candidate's name alongside data-center terms and files what it finds into
+  <code>data/candidate_record_candidates.json</code>. It never writes this
+  registry — promotion is where <code>source</code> and <code>as_of</code> come
+  from, and those are the two fields that make a claim quotable at a hearing.
+  <code>scripts/verify_candidate_records.py</code> then re-checks every
+  published link and flags what has gone stale or dead.</p>
+  <p><strong>“Recent mentions” are not records.</strong> Where a card
+  shows them, they are unreviewed headlines matched by script — the same
+  bargain <a href="story-tracker.html">the story tracker</a> already makes.
+  They are leads for the queue, and the page says so on every block.</p>
+  <h3>Lean labels</h3>
+  <ul>{legend}</ul>
+  <h3>Found something we missed?</h3>
+  <p>A statement, a bill, a vote, a local story — send the link and we will
+  read it. <a href="about.html">Contact</a>.</p>
+  <p class="muted">Election day: {esc(hr.ELECTION_DATE)}. Ballot read
+  {esc(hr.ROSTER_AS_OF)}.</p>
+  {provenance_html("HOUSE_RACES_2026")}
+</section>
+
+<section>
+  <h2>See also</h2>
+  <ul>
+    <li><a href="senate-races.html">2026 Senate races</a> — the other half of
+      the federal ballot.</li>
+    <li><a href="scorecard.html">Officials scorecard</a> — A–F grades for
+      sitting members on their actual votes.</li>
+    <li><a href="moratoriums.html">Moratorium tracker</a> — what communities
+      have already passed locally.</li>
+    <li><a href="states/index.html">Your state page</a> — the megawatts behind
+      the race.</li>
+  </ul>
+</section>
+
+<script>
+function srFilter(){{
+  var q=(document.getElementById('srq').value||'').toLowerCase().trim();
+  var cards=document.querySelectorAll('section.card[data-state]'),n=0;
+  cards.forEach(function(c){{
+    var hit=!q||c.dataset.state.indexOf(q)>-1||c.dataset.names.indexOf(q)>-1
+            ||(c.dataset.dist&&c.dataset.dist.indexOf(q)>-1);
+    c.style.display=hit?'':'none'; if(hit)n++;
+  }});
+  var rows=document.querySelectorAll('table tbody tr');
+  rows.forEach(function(r){{
+    r.style.display=(!q||r.textContent.toLowerCase().indexOf(q)>-1)?'':'none';
+  }});
+  document.getElementById('srcount').textContent=
+    q?(n+' card'+(n===1?'':'s')+' and matching table rows shown'):'';
+}}
+</script>"""
+
+    return page(
+        "Where 2026 House candidates stand on AI data centers — AI GridWatch",
+        "Every 2026 U.S. House candidate's documented position on AI data "
+        "centers, sourced claim by claim, with the ballot read from each "
+        "state's own certified candidate list.",
+        body, f"{SITE_URL}/house-races")
 
 def build_official_scorecard():
     """Full federal + gubernatorial roster with A–F ratepayer/community-protection
@@ -13036,6 +13402,7 @@ def main():
     (WEB / "officials.html").write_text(build_officials(), encoding="utf-8")
     (WEB / "scorecard.html").write_text(build_official_scorecard(), encoding="utf-8")
     (WEB / "senate-races.html").write_text(build_senate_races(), encoding="utf-8")
+    (WEB / "house-races.html").write_text(build_house_races(), encoding="utf-8")
     (WEB / "community-value.html").write_text(build_community_value(), encoding="utf-8")
     (WEB / "consulting.html").write_text(build_consulting(), encoding="utf-8")
     (WEB / "case-studies.html").write_text(build_case_studies(), encoding="utf-8")
@@ -13108,7 +13475,7 @@ def main():
              "learn", "puc", "executives", "about", "search", "dividend",
              "data-centers", "environment", "studies", "complaints",
              "cba-clauses", "officials", "consulting", "case-studies",
-             "community-value", "open-data", "senate-races",
+             "community-value", "open-data", "senate-races", "house-races",
              "hearing-questions", "opposition", "glossary", "tax-breaks", "siting",
              "companies/", "states/", "blog/", "news/", "videos", "map",
              "communities/"]

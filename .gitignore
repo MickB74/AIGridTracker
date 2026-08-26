@@ -38,3 +38,8 @@ research_output/
 
 # npm package pulled only to extract SVG state outlines into src/us_map_data.py
 node_modules/
+
+# FEC API response cache (scripts/fetch_senate_money.py). Hundreds of MB of
+# raw itemized-receipt pages, re-fetchable from api.open.fec.gov at any time.
+# The committed artifact is data/senate_money.json, not this.
+data/external/fec/

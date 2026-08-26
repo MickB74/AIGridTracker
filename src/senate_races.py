@@ -34,46 +34,15 @@ evidence — a press release is a promise, not an action, and the page should
 not launder one into the other.
 """
 
-import json
-import pathlib
+from src import race_common as rc
 
 ROSTER_AS_OF = "2026-08-25"
-ELECTION_DATE = "2026-11-03"
+ELECTION_DATE = rc.ELECTION_DATE
 
-# ── lean vocabulary ────────────────────────────────────────────────────────
-# Ordered strongest-protection first. `unrecorded` is not a position on this
-# axis at all — it means nobody has found a documented statement or action.
-LEANS = {
-    "guardrails": (
-        "Guardrails",
-        "Documented support for making data centers carry their own costs, "
-        "for community say over siting, or for a pause.",
-        "#22c55e"),
-    "mixed": (
-        "Mixed",
-        "Documented on both sides — courts the buildout but backs some "
-        "ratepayer or community protection.",
-        "#f59e0b"),
-    "accelerate": (
-        "Accelerate",
-        "Documented emphasis on building faster — competitiveness, "
-        "incentives, or siting help — without a matching cost or community "
-        "safeguard on the record.",
-        "#ef4444"),
-    "unrecorded": (
-        "No record found",
-        "No documented statement or action on data centers located. Not "
-        "scored — the gap is disclosed, not punished.",
-        "#64748b"),
-}
-
-LEAN_NOTE = (
-    "“Lean” summarises only the cited items below it, on one axis: "
-    "does this candidate's documented position make data centers pay their own "
-    "way and give the host community a say? It is not an overall rating, not a "
-    "grade, and not an endorsement. Candidates with no located record are left "
-    "unscored."
-)
+# Vocabulary, record model, mentions, staleness and archival phase are shared
+# with the House tracker — see src/race_common.py for the rules.
+LEANS = rc.LEANS
+LEAN_NOTE = rc.LEAN_NOTE
 
 # ── the record ─────────────────────────────────────────────────────────────
 # Key: (state postal, lowercase last-name token) -> record dict.
@@ -865,82 +834,25 @@ SENATE_RACES_2026 = [
 ]
 
 
-def _norm(name):
-    """Normalised full name. Keys are FULL names, never surnames.
-
-    Alaska 2026 is why: the ballot carries both `Dan S. Sullivan` (the
-    incumbent) and `Dan J. Sullivan`, an unrelated candidate who won a state
-    Supreme Court case to appear under that name. A surname key — the pattern
-    src/officials_stances.py uses, where one person holds one office per
-    state — gave the senator's record to both men and flagged both as the
-    incumbent. Attributing a position to the wrong candidate on a ballot is
-    the worst failure this page has, so the key is the whole name.
-    """
-    return " ".join(str(name).split()).casefold()
-
-
-_BY_NAME = {(st, _norm(n)): rec for (st, n), rec in AI_RECORDS.items()}
+def _key(r):
+    return (r["abbrev"],)
 
 
 def record_for(abbrev, name):
     """The documented AI/data-center record for one candidate, or None."""
-    return _BY_NAME.get((abbrev, _norm(name)))
+    return AI_RECORDS.get((abbrev, name)) or next(
+        (v for (st, n), v in AI_RECORDS.items()
+         if st == abbrev and rc.norm(n) == rc.norm(name)), None)
 
 
-def races(include_minor=True):
-    """Every 2026 Senate race with each candidate's record attached.
-
-    Each candidate gains `lean`, `lean_label`, `lean_color`, `summary`,
-    `items`, `as_of` and `incumbent`. Candidates with no located record get
-    lean "unrecorded" and an empty item list — deliberately, so the page can
-    show the gap rather than imply neutrality.
-    """
-    out = []
-    for r in SENATE_RACES_2026:
-        race = dict(r)
-        cands = []
-        for c in r["candidates"]:
-            rec = record_for(r["abbrev"], c["name"]) or {}
-            lean = rec.get("lean", "unrecorded")
-            label, _desc, color = LEANS[lean]
-            cands.append({
-                **c,
-                "incumbent": _norm(c["name"]) == _norm(
-                    r.get("incumbent_on_ballot") or r["incumbent"]),
-                "lean": lean,
-                "lean_label": label,
-                "lean_color": color,
-                "summary": rec.get("summary"),
-                "items": rec.get("items", []),
-                "as_of": rec.get("as_of"),
-            })
-        if not include_minor:
-            cands = [c for c in cands
-                     if c["party"] in ("Democratic", "Republican", "DFL")
-                     or c["lean"] != "unrecorded"]
-        # documented records first, then major parties, then the rest
-        order = {"Democratic": 0, "DFL": 0, "Republican": 0}
-        cands.sort(key=lambda c: (c["lean"] == "unrecorded",
-                                  order.get(c["party"], 1), c["name"]))
-        race["candidates"] = cands
-        race["documented"] = sum(1 for c in cands if c["lean"] != "unrecorded")
-        race["contested"] = race["documented"] > 0
-        out.append(race)
-    return out
+def races():
+    """Every 2026 Senate race with records and unverified mentions attached."""
+    return rc.attach_records(SENATE_RACES_2026, AI_RECORDS, _key)
 
 
 def coverage():
-    """How much of the roster actually has a documented record.
+    return rc.coverage(races(), ROSTER_AS_OF)
 
-    Published on the page. A coverage number that is low is the point: it
-    tells a reader the silence is real rather than an omission we hid.
-    """
-    rs = races()
-    cands = [c for r in rs for c in r["candidates"]]
-    return {
-        "races": len(rs),
-        "candidates": len(cands),
-        "documented": sum(1 for c in cands if c["lean"] != "unrecorded"),
-        "races_documented": sum(1 for r in rs if r["contested"]),
-        "as_of": ROSTER_AS_OF,
-    }
+
+def validate():
+    return rc.validate(races(), AI_RECORDS, _key)

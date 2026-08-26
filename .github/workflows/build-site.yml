@@ -114,6 +114,24 @@ jobs:
       - name: Scan for new state studies
         run: python scripts/scan_study_candidates.py
 
+      # Mines the same story archive for headlines naming a 2026 Senate or
+      # House candidate alongside data-center/AI terms, for candidates whose
+      # AI_RECORDS entry doesn't exist yet. Writes leads to
+      # data/candidate_record_candidates.json — never to the registries in
+      # src/senate_races.py or src/house_races.py. Promotion means a human
+      # resolving the Google News redirect to the real publisher (or the
+      # member's own release), confirming the candidate actually said it, and
+      # supplying source + as_of. See scripts/scan_candidate_records.py.
+      - name: Scan for candidate data-center records
+        run: python scripts/scan_candidate_records.py
+
+      # Re-checks every URL already cited on senate-races/house-races and every
+      # record whose as_of has gone stale. Non-blocking on purpose: a dead
+      # outlet link is a chore, and a red X on the daily job gets trained away.
+      # The signal is the committed diff in data/candidate_review.md.
+      - name: Audit published candidate records
+        run: python scripts/verify_candidate_records.py --out data/candidate_review.md || true
+
       - name: Show what changed
         run: |
           if git diff --quiet -- web/; then

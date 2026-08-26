@@ -154,6 +154,17 @@ its own constants.
     nothing located are `unrecorded` and render as *No record found*, never as
     neutral. Coverage is published on the page precisely because it is low
     (17 of 117 at launch).
+  - `HOUSE_RACES_2026` — the 2026 U.S. House ballot: 435 voting districts
+    plus 5 non-voting delegates, 1,161 filed candidates. **The roster lives in
+    `data/house_races_2026.json`, not in Python** — 440 districts is ~2,500
+    lines of pure roster, and inlining it the way `senate_races.py` does would
+    bury the curated part under data nobody hand-edits. Only `AI_RECORDS`,
+    which is hand-researched, stays in `src/house_races.py`. Where mid-decade
+    redistricting put two sitting members in one seat (CA-41, FL-25, TX-33,
+    UT-3) both appear in `incumbents`. Same rules as the Senate registry:
+    primary-sourced roster, per-item `source` + `date`, full-name keys,
+    `unrecorded` for silence. Coverage starts near zero by construction and the
+    page says so — this is a complete *ballot* with an almost-empty *record*.
   - `STATE_PERMIT_PORTALS` / `NATIONAL_PERMIT_TOOLS` / `RTO_QUEUES` +
     `STATE_RTO` / `PERMIT_KINDS` — the permit paper trail: where a project's
     public record lives. **Navigational links, not claims** — nothing here
@@ -178,6 +189,32 @@ its own constants.
     dict, its `SOURCES` entry, and the `REPORT_REGISTRY` year in
     `src/services/report_check.py`.
   - `STATE_STUDIES` / `MODEL_CLAUSES` — state-commissioned impact studies and the model CBA clause library. Moved out of `src/ui/` in August 2026 when the app was retired; they render `studies.html` and `cba-clauses.html`.
+  - `NEWS_SOURCE_TIERS` / `news_source_tier()` — outlet-quality classifier for
+    the live news feed. Google News returns AP next to stock-tip portals, so
+    every headline's outlet is placed in a tier: `wire`, `national`,
+    `nonprofit`, `trade`, `local`, `official` (a `.gov` page) — the citable
+    ones, listed in `NEWS_REPUTABLE_TIERS` — plus `aggregator` (press-release
+    wires and syndication hosts) and `advocacy` (think tanks, law firms,
+    campaign sites), which are `NEWS_DEMOTED_TIERS`: labelled in the browse
+    feed but excluded from the ranked "Top stories" block and from state
+    pages. `unrated` is the honest default and means "we couldn't place this
+    masthead", never "don't trust it" — about a fifth of the archive is
+    unrated and it still renders, just without a badge or a ranking bonus.
+    Local press can't be enumerated, so it's recognised structurally
+    (broadcast call letters, affiliate numbering like `41NBC`, masthead
+    vocabulary). **Two ordering rules are load-bearing:** the affiliate
+    regex runs *before* the tier lists (else "41NBC News" reads as NBC News,
+    and "NBC 5 Dallas-Fort Worth" as national), and bare call letters run
+    *after* them (else "WSJ" reads as a TV station). Masthead words match on
+    word boundaries — a substring test filed "Startup Fortune" under local
+    via "star" — except for bare-domain names, where boundaries mean nothing.
+    `NEWS_SOURCE_EXACT` handles mastheads that contain another tier's needle
+    ("MSNBC" contains "msn", "Heatmap News" contains "ap news").
+    Tiers feed `_rank_stories_build()` as a score term, so mainstream and
+    wire reporting floats. **Top stories are re-ranked every build** from the
+    cached theme buckets rather than read back from `news_cache.json` — the
+    weights live in code, so a `NEWS_FREEZE=1` rebuild must not keep
+    publishing a ranking the current rules would reject.
   - Grid coefficients, model parameters, ERCOT large-load data
 
 - **src/permit_lookup.py** — `sections(project)`: where to read one
@@ -192,6 +229,16 @@ its own constants.
   network. Rendered by `build_site.py::_project_paper_trail`
   (every dossier on `web/projects.html`, plus the `#records` section) and by
   Step 2 of the Start here wizard.
+
+- **src/race_common.py** — shared machinery for both race trackers: the
+  `LEANS` vocabulary, full-name record keys, staleness (`STALE_AFTER_DAYS`),
+  `election_phase()` (campaign → election day → archive, derived from
+  `ELECTION_DATE` so the daily rebuild flips the page's framing with no edit),
+  automated `mentions_for()` matching against the story archive, and
+  `validate()`. **`validate()` is the guard that matters**: it fails a record
+  keyed to a candidate who is not on that ballot, an unknown `lean`, a missing
+  `as_of`, or an item without a source URL. The failure mode on these pages is
+  not a crash — it is confidently attributing a position to the wrong person.
 
 - **src/briefs.py** — `build_meeting_brief_data(state, operator, meeting_type, mw)`: structured meeting-brief assembly (sections of kv/bullets/numbered/advice) plus the `MEETING_ADVICE` strategy dict. Only `MEETING_ADVICE` is imported by the build; the site's own meeting brief is generated client-side in `build_start_here()`. Output is plain text — don't escape `$` here.
 
@@ -269,6 +316,8 @@ Stdlib-only on purpose — they run in CI off `requirements-build.txt`, which ex
 | `scan_locality_candidates.py` | Mines `data/story_candidates.json` (the story tracker archive) for towns/counties that keep recurring in unlocalized headlines but aren't in the locality gazetteer yet, and appends them to `data/locality_candidates.json`, capped at `--max-new` (default 39) newly-surfaced names per run. Same never-writes-a-registry discipline as the moratorium scanner — promoting a candidate means researching its governing body (and, if it's had a real vote, the outcome) from primary sources and adding a `LOCAL_BODIES_DF`/`MORATORIUMS_DF` row by hand, then running `backfill_story_candidates.py --relabel` so its already-archived stories regroup. Runs daily as a step in `build-site.yml` (after the story archive itself refreshes), not the weekly moratorium job — it needs a fresh archive, not a fresh RSS fetch of its own. |
 | `fetch_nj_permits.py` | Mines NJDEP's air-permit register for facilities that look like data centers, into `data/nj_permit_candidates.json`. **A review queue, never a registry** — the opposite call from `fetch_pa_dep_projects.py`, because PA publishes a list of data-center *projects* while NJ publishes 17k permitted facilities that a filter has to guess at (NJDEP codes Memorial Sloan Kettering as NAICS 518210). Each row reports `confidence`: `naics` (NJDEP's own 5182x code) > `operator` (name matches `OPERATORS_DF`) > `name`. Reads NJDEP's ArcGIS NJEMS layer at `mapsdep.nj.gov`, **not** DataMiner — `dep.nj.gov` is behind an Imperva WAF that blocks scripted requests and answers with HTTP 200. Issued permits only: no permit numbers, no application dates, no pending applications, so it is a census of what is already permitted, not an early-warning feed. `--dry-run`, `--offline`, `--report`. Not yet wired into CI. |
 | `fetch_senate_money.py` | Pulls tech/utility PAC receipts to 2026 Senate candidates from the FEC into `data/senate_money.json`. The FEC does **not** classify donors by industry, so this matches the *contributing committee's name* against an explicit term list published in the script, and writes every matched committee into the output so any figure on the page audits back to its donors. **Undercounts by design** — individual contributions from company employees are excluded, so a total is a floor. Needs a free `FEC_API_KEY`; refuses to write an empty file, because `build_site.py` renders money lines only when the file exists and an empty one would publish "no money found" for all 117 candidates. `--dry-run`, `--offline`. Not wired into CI. |
+| `scan_candidate_records.py` | Mines `data/story_candidates.json` for headlines naming a 2026 Senate or House candidate alongside data-center/AI terms, for candidates with no `AI_RECORDS` entry yet, into `data/candidate_record_candidates.json`. **A review queue, never a registry.** Its `link` is a Google News *redirect*, which is why promotion is a human step: resolve it to the publisher (ideally the member's own release), confirm the person actually said it, then add a row with its own `source` + `as_of`. Name matching requires first name + surname adjacent — a bare surname matches several unrelated members at 1,161 candidates. `--dry-run`, `--chamber`, `--report`, `--limit`. Runs daily in `build-site.yml` after the story archive refreshes. |
+| `verify_candidate_records.py` | Audits what the trackers already publish: link-checks every cited URL and flags records whose `as_of` is older than `STALE_AFTER_DAYS`. Classification matches `verify_sources.py` — 401/403/405/429 *blocked* (congress.gov and most house.gov sites refuse scripted clients), 5xx and **timeouts** *flaky*, only 404/410/DNS *dead*. Getting that wrong made `--strict` cry wolf on a live washingtonpost.com link the first time it ran. Read-only. `--offline`, `--strict`, `--out`. Runs daily, non-blocking. |
 | `check_site_fresh.py` | Rebuilds with `NEWS_FREEZE=1` and reports whether committed `web/` still matches committed data — the guard against a registry edit shipping without `python3 build_site.py`. **The one maintenance script that is a hard gate rather than a report**, because it compares generated output against its own inputs: there is no 403-vs-404 judgement to defer to a human. `--strict` exits 1, `--fix` keeps the rebuild, and by default it restores `web/` (plus any build-written `data/` file *this run* dirtied) so it is safe on a clean tree. Refuses to run when `web/` is already dirty rather than burying your edits. Runs non-blocking in `build-site.yml` before the real build, so the daily job summary names drift instead of silently absorbing it. Install as a pre-push hook — that is the only moment it can stop a wrong number reaching Vercel, since CI does not run on push. |
 | `verify_permit_portals.py` | Link-checks every URL in `STATE_PERMIT_PORTALS`, `RTO_QUEUES`, `NATIONAL_PERMIT_TOOLS` and `FERC_ELIBRARY` — the links a resident clicks to pull a permit file, where a 404 sends them back to the search engine the registry exists to replace. Same classification as `verify_sources.py`: 401/403/405/429 are *blocked* (bot refusal), 5xx *flaky*, 404/DNS *dead*. `--out` writes a worklist, `--strict` exits non-zero on dead links. State agencies reorganise often — expect this to find something. |
 | `fetch_pa_dep_projects.py` | Syncs PA DEP's [Data Center Permit Tracker](https://gis.dep.pa.gov/DataCenterPermitTracker/) — two public CSVs behind the ArcGIS front end — into `data/projects.json`. **The only scanner that writes a registry.** Rows land tagged `origin: "pa-dep"`; hand-researched rows are never rewritten (collisions are reported and skipped, since merging two research trails is a human call). Each environmental permit becomes a dated `permit` event carrying its permit number and eFACTS auth ID. Deliberately conservative about what DEP does *not* say: `outcome` stays null ("DEP Review Complete" is a permit milestone, not a township approval), `announced` stays null, and `rezoning_filed` is the earliest permit application date. `--dry-run` reports without writing, `--offline` reuses the cached snapshot in `data/external/`. Runs daily in `build-site.yml` before the build. |
