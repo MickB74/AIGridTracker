@@ -16,11 +16,12 @@ window before a zoning vote.
 Everything ships as generated HTML. `build_site.py` renders `web/` from the
 registries in `src/constants.py`; Vercel serves `web/` as-is with no build step.
 
-**There is no Streamlit app.** It was retired in August 2026 and nothing links
-to it. `app.py`, `src/ui/`, and `src/services/` are legacy — the site build
-imports none of them (see Legacy code below). Do not add features there, do not
-point users at a hosted app, and do not reintroduce a `streamlit` import into
-anything on the build path.
+**There is no Streamlit app.** It was retired in August 2026 and its code was
+deleted in August 2026 — `app.py`, `src/ui/`, `.streamlit/`, `assets/style.css`
+and twelve `src/services/` modules are gone from the tree, not merely unused.
+No tracked file imports `streamlit`. Do not resurrect them from git history, do
+not point users at a hosted app, and do not reintroduce a `streamlit` import
+anywhere.
 
 ## Run
 
@@ -189,19 +190,35 @@ its own constants.
 
 - **src/story_tracker.py** — Pure grouping/summarization for the story tracker: `build_gazetteer()` (known localities from `DC_SITES_DF`/`LOCAL_BODIES_DF`/`MORATORIUMS_DF`, longest-name-first, excluding entries that collapse to a bare state name — see the code comment on `"Ohio (ballot measure)"`), `guess_locality(title, gazetteer)`, `group_stories(stories, min_for_summary=4)`. Each build, `build_site.py::_persist_story_candidates()` merges the same live-fetched community-impact feed used by `/news/` into `data/story_candidates.json` (dedup by link; `first_seen` is set once and kept, `last_seen` bumps on every re-fetch — this is what makes it a running archive rather than the news page's rolling 7-day window). Unlike `moratorium_candidates.json`/`project_candidates.json`, this queue is **not** a human-review gate — headlines publish straight to `story-tracker.html`, same as the live news feed already does, just with an "automated, not verified" caveat on the page. A locality with 4+ archived stories gets `summarize_group()`'s heuristic extractive summary (keyword/outlet counts, no LLM call) — that's the "AI summary" trigger.
 
-### Services (src/services/) — retired
+### Services (src/services/)
 
-Live-fetch modules for the retired app. **None are on the build path** and all
-are `@st.cache_data`-decorated, so they can't even import without Streamlit.
-Kept only as reference for the APIs they wrapped; two facts below still matter
-to live code:
+One module, and it is **on the build path**:
 
-- `report_check.py` holds `REPORT_REGISTRY` — the tracked report year per
-  hyperscaler. When a new environmental report lands, that year needs updating
-  alongside the headline dict in `constants.py`.
-- `openstates.py` documents that OpenStates **excludes governors and mayors**,
-  which is why `LOCAL_OFFICIALS_DF` has to be hand-read off each locality's
-  own .gov roster.
+- **src/services/officials.py** — `load_officials()`: reads the root
+  `officials.json` (Senate contact XML + current-governors list) into a
+  DataFrame. `functools.lru_cache`, no network, no Streamlit. Feeds
+  `build_official_scorecard()` → `web/scorecard.html`. Refreshed by
+  `scripts/refresh_officials.py`.
+
+The other twelve modules were **deleted** in August 2026 — eleven
+`@st.cache_data` live-fetch wrappers plus `secrets.py`, the app's env/config
+helper. Two facts they carried were preserved rather than lost with them:
+
+- `REPORT_REGISTRY` and `MONITOR_REGISTRY` (was `report_check.py`) now live in
+  `src/constants.py`, next to the hyperscaler headline dicts they describe.
+  When a new environmental report lands, update the headline dict, its
+  `SOURCES` entry, and the `have`/`label` in `REPORT_REGISTRY` in one commit.
+- OpenStates **excludes governors and mayors** (was `openstates.py`), which is
+  why `LOCAL_OFFICIALS_DF` has to be hand-read off each locality's own .gov
+  roster. That note now lives in `src/local_officials.py`'s docstring.
+
+`ercot.py` was deleted too, along with the `scan_ercot()` stub in
+`scripts/scan_project_candidates.py` that called it. The stub imported
+`fetch_large_loads`, a name the module never defined, so the ERCOT lead path
+raised `ImportError` into its own `except` on every `--online` run and had
+never produced a candidate. ERCOT publishes no machine-readable large-load
+queue, so reviving it means finding a real source first, not restoring the
+call.
 
 ### Other files
 
@@ -303,17 +320,33 @@ published pages are static files.
   frameworks, no external requests: a strict no-dependency page loads instantly
   for someone on a phone in a council parking lot.
 
-## Legacy code (not on the build path)
+## Deleted code, and what is NOT legacy
 
-`app.py` and everything under `src/ui/` and `src/services/` belonged to the
-retired Streamlit app. Also app-only: `src/helpers.py`, `src/impact_model.py`,
-`src/scripts_letters.py`, `src/site_builder.py`, `src/local_officials.py`,
-`assets/style.css`, `.streamlit/`, `reddit_corpus.parquet`.
+The retired Streamlit tree was **deleted** in August 2026: `app.py`,
+`src/ui/` (26 tab modules), `.streamlit/`, `assets/style.css`,
+`Restart GridWatch AI.command`, `src/helpers.py`, `src/scripts_letters.py`,
+`src/site_builder.py`, `src/deal_scorecard.py`, and twelve `src/services/`
+fetchers. `git log` has them if a rendering decision ever needs archaeology,
+but they are not reference material: each held a stale twin of logic that
+lives in `build_site.py`, and **the twin in `build_site.py` is the source of
+truth**. Do not restore one to "check" the site against it.
 
-These are kept for reference only — several hold logic that has a live twin in
-`build_site.py` (the Start here wizard, the impact model, the comment scripts).
-**The twin in `build_site.py` is the source of truth.** When they disagree,
-the site is right and the legacy copy is stale — do not "fix" the site to match
-it. `STATE_STUDIES` and `MODEL_CLAUSES` were moved out of `src/ui/` into
-`src/constants.py` in August 2026, which is what removed the last runtime
-dependency the build had on that directory.
+An earlier version of this file listed five things as legacy that are in fact
+**live build dependencies**. Verify before you delete:
+
+| Module | Why it is live |
+|---|---|
+| `src/services/officials.py` | `build_official_scorecard()` → `scorecard.html` |
+| `src/local_officials.py` | `build_officials()` → `officials.html` |
+| `src/impact_model.py` | imported by `src/briefs.py`, which is on the build path |
+| `src/research/` | standalone CLI: `python -m src.research.dc_finder` → `research_output/` |
+| `parse_reports.py` | standalone CLI: extracts metrics from report PDFs |
+
+The last two are not on the build path and never were — they are local research
+tooling, which is a different thing from dead code. They are what
+`requirements.txt` exists for; the site itself builds off
+`requirements-build.txt`.
+
+To check reachability rather than trust this list, walk the import graph from
+`build_site.py` plus every file in `scripts/` with `ast`, and diff it against
+`git ls-files '*.py'`. That is how the five above were caught.
