@@ -56,6 +56,277 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── Trump doubles down on data centers as the backlash goes bipartisan ──
+    {
+        "id": "trump-data-center-support-2026",
+        "art": "bills",
+        "section": "stories",
+        "title": "Trump Says Your Town Is \"Making a Mistake.\" Here's What the Record Actually Shows.",
+        "date": _dt.date(2026, 8, 26),
+        "author": "GridWatch AI",
+        "tags": ["federal policy", "Trump", "ratepayer protection", "FERC",
+                 "executive order", "Texas", "Abbott", "polling", "midterms",
+                 "analysis"],
+        "summary": (
+            "In an interview that aired August 23, President Trump said "
+            "communities rejecting data centers are \"making a mistake\" and "
+            "that the industry could be \"bigger than oil.\" That doubles down "
+            "on eighteen months of federal policy — permitting orders, federal "
+            "land, a FERC interconnection push, and a 300-signatory ratepayer "
+            "pledge with no enforcement mechanism. We walk through what the "
+            "administration has actually done, what reporters and analysts "
+            "across the spectrum say about it, and what none of it changes "
+            "about the vote in front of your planning board."
+        ),
+        "body": """\
+On August 23, 2026, an interview President Trump recorded with his former
+attorney Michael Cohen aired in full. Asked about the data center fights
+spreading through both red and blue states, Trump was unambiguous:
+communities that turn projects away are *"making a mistake,"* because data
+centers bring *"tremendous amounts of jobs and money."* He added that
+operators *"are making their own power plants"* and that the facilities are
+not drawing from the existing grid, and said the U.S. leads China in AI
+*"by a lot"* ([Axios, Aug 23](https://www.axios.com/2026/08/23/trump-data-centers-michael-cohen-interview);
+[The Hill, Aug 23](https://thehill.com/homenews/administration/6016051-trump-its-a-mistake-to-go-against-data-centers/);
+[Forbes, Aug 24](https://www.forbes.com/sites/siladityaray/2026/08/24/trump-defends-ai-data-centers-says-opposing-them-is-a-mistake-and-smart-ones-want-them/)).
+
+It was the second time this month. On August 7, responding to Texas Governor
+Greg Abbott's pause on new data center grid connections, Trump called the
+state's position *"a mistake"* and said the industry *"could be bigger than
+oil"* ([Texas Tribune, Aug 7](https://www.texastribune.org/2026/08/07/donald-trump-texas-data-centers-greg-abbott/)).
+
+Those remarks are not off-the-cuff. They are the rhetorical layer on top of a
+federal program that has been building since July 2025. If you are heading
+into a zoning hearing, it is worth knowing exactly what that program does —
+and, more importantly, what it does not do.
+
+---
+
+### Part 1 — What the administration has actually built
+
+**Permitting (July 2025).** Executive Order
+[*Accelerating Federal Permitting of Data Center Infrastructure*](https://www.whitehouse.gov/presidential-actions/2025/07/accelerating-federal-permitting-of-data-center-infrastructure/)
+directs agencies to streamline environmental review, offer financial support
+through Commerce, and open federal land. It covers "Qualifying Projects" —
+those adding more than 100 MW of new load, costing at least $500 million, or
+serving national security
+([White & Case](https://www.whitecase.com/insight-alert/trump-administration-issues-executive-order-streamline-data-center-development);
+[Beveridge & Diamond](https://www.bdlaw.com/publications/trump-administration-issues-executive-order-to-facilitate-data-center-development/)).
+
+**Federal land.** DOE named four sites — Idaho National Laboratory, Oak Ridge,
+the Paducah Gaseous Diffusion Plant, and Savannah River — and the Air Force
+added five bases (Arnold, Edwards, Joint Base McGuire-Dix-Lakehurst,
+Davis-Monthan, Robins). In Kentucky, DOE has since announced a Paducah
+"AI and high-performance computing innovation campus" with NextEra, Brookfield
+and three utilities, pitched at more than $100 billion in private investment,
+8,000 construction jobs and 600 permanent ones
+([DOE](https://www.energy.gov/node/4851856);
+[NOTUS](https://www.notus.org/energy/trump-administration-announces-data-center-on-federal-land)).
+
+Progress is uneven. Counsel at Davis Graham
+[note](https://davisgraham.com/news-events/the-trump-administrations-progress-to-site-data-centers-on-federal-lands-initial-steps-but-work-remains/)
+that the Interior Department — which manages over 530 million acres — has
+identified *no* sites at all, because BLM would likely need multi-year
+resource management plan amendments first, and that EPA's brownfield and
+Superfund criteria have lagged their own deadline.
+
+**Grid access (June 2026).** On June 18, FERC issued show-cause orders under
+section 206 of the Federal Power Act to all six RTOs and ISOs — PJM, MISO,
+SPP, CAISO, ISO-NE and NYISO — preliminarily finding their tariffs may be
+unjust and unreasonable because they don't adequately handle large-load and
+co-located interconnection. Grid operators got 60 days to respond, extendable
+to 150 ([FERC docket RM26-4](https://www.ferc.gov/rm26-4);
+[Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/06/ferc-advances-new-oversight-framework-for-large-loads);
+[Utility Dive](https://www.utilitydive.com/news/ferc-doe-data-center-interconnection/823360/)).
+
+**The pledge (Feb–July 2026).** Trump announced the **Ratepayer Protection
+Pledge** in the February 24 State of the Union. On March 4, seven hyperscalers
+— Amazon, Google, Meta, Microsoft, OpenAI, Oracle and xAI — signed at the
+White House. On July 23 it was expanded to add 55 utilities, 106 cooperatives,
+28 developers and 23 governors, every one of them Republican; the White House
+says signatories now cover roughly 80% of power delivered to American homes
+and businesses
+([White House](https://www.whitehouse.gov/ratepayer-protection-pledge/);
+[POWER Magazine](https://www.powermag.com/white-house-expands-data-center-ratepayer-pledge-as-congress-moves-to-codify-protections/);
+[NOTUS](https://www.notus.org/energy/trump-expands-ratepayer-pledge-republican-governors-utilities)).
+
+The five commitments are worth reading closely, because they are close to what
+communities have been asking for:
+
+1. Build, bring, or buy new power supply to cover the load
+2. Pay for the new power delivery infrastructure
+3. Pay for that power **whether or not they use it**
+4. Invest in local jobs and workforce development
+5. Contribute to grid and community resilience
+
+---
+
+### Part 2 — What critics say, and they are not all Democrats
+
+**It has no teeth.** This is the near-universal criticism, and it comes from
+across the spectrum. In a July 9 analysis for Brookings, David M. Klaus and
+Mark MacCarthy argue the pledge
+[needs enforcement](https://www.brookings.edu/articles/the-pledge-to-protect-ratepayers-from-ai-data-center-costs-needs-enforcement/)
+to mean anything: separate rate classes for large loads, standardized tariff
+models developed through NARUC, take-or-pay contracts, and independent
+oversight of interconnection agreements. Without them, they warn residential
+rates could climb 15–40% by 2030. Jeff Dennis of the Electricity Customer
+Alliance put the practical problem to NOTUS more mildly: *"We'll be
+interested to see how utilities that have signed this pledge go about
+implementing that specific piece."*
+
+**The signatories are fighting enforcement elsewhere.** A staff attorney at
+The Utility Reform Network has pointed out that the same companies signing in
+Washington have opposed state-level bills that would make the same promises
+binding, California among them. Consumer Reports found **75% of American
+adults are not confident** developers will actually cover their own costs.
+
+**The state-level free-market critique.** ALEC, no one's idea of a
+degrowth outfit, [supports the pledge](https://alec.org/article/data-centers-energy-demand-and-the-ratepayer-protection-pledge/)
+but frames the whole question as regulatory competition — states with
+"complex mandates and higher energy costs risk deterring data center
+investment." That is the honest version of the industry's argument, and it is
+the one your developer will make: *if you say no, they go somewhere else.*
+
+**FERC's own ratepayer advocates aren't satisfied.** Consumer advocates from
+four PJM states plus the Pennsylvania Office of Consumer Advocate told FERC
+its PJM order still leaves existing customers holding part of the
+data-center-driven transmission bill
+([Utility Dive](https://www.utilitydive.com/news/ferc-data-center-pjm-transmission-costs/825760/)).
+Former FERC Commissioner Allison Clements noted a structural gap: the orders
+reach only RTO regions, leaving roughly a third of Americans outside them
+entirely.
+
+**And the claim that data centers aren't taking grid power is hard to square
+with the auctions.** PJM's capacity price went from $28.92/MW-day in the
+2024/25 auction to $329.17/MW-day for 2026/27. Analysis by
+[IEEFA](https://ieefa.org/resources/projected-data-center-growth-spurs-pjm-capacity-prices-factor-10)
+and [SemiAnalysis](https://newsletter.semianalysis.com/p/are-ai-datacenters-increasing-electric)
+attributes the majority of the increase to data center load — removing
+projected data centers from the forecast cuts total capacity payments by
+roughly $9.3 billion. Some large campuses genuinely are building dedicated
+generation. Many are not, and the bill for those shows up in a capacity
+auction that every household in the footprint pays into.
+
+---
+
+### Part 3 — The politics turned before the policy did
+
+The most important number in this story isn't a megawatt figure.
+
+[Gallup](https://news.gallup.com/poll/709772/americans-oppose-data-centers-area.aspx),
+surveying 1,000 adults March 2–18, 2026 (±4 points), found **71% of Americans
+oppose construction of an AI data center in their local area**, 48% strongly.
+Only 25% were in favor and just 7% strongly so. Opposition ran higher than
+opposition to a local **nuclear plant** (53%) — and it was highest in the
+Midwest (76%) and South (75%), the regions the buildout is moving into
+fastest.
+
+And it is still moving. The Annenberg Public Policy Center's
+Institutions of Democracy survey (SSRS, n=1,320, ±3.5) found opposition to
+new local data centers rose from **49% in February–March to 61% by
+June–July 2026**, with support falling from 21% to 14% — twelve points in
+four months
+([phys.org](https://phys.org/news/2026-08-opposition-local-centers-sharply-survey.html)).
+
+That is why the reaction to Trump's remarks was not partisan. Governor Abbott
+— a Republican, in the state with the most aggressive load growth in the
+country — said AI companies *"dug their own grave"* by failing to work with
+local officials, and paused new grid connections pending a review that Axios
+reports touches as many as 1,800 projects
+([Axios, Aug 23](https://www.axios.com/2026/08/23/greg-abbott-texas-data-centers-ai-backlash)).
+Forbes reports GOP strategists worrying openly about midterm exposure,
+particularly in Ohio.
+
+In Congress the response is already bipartisan in both directions. Senators
+Josh Hawley (R-MO) and Richard Blumenthal (D-CT) introduced the
+[GRID Act](https://www.hawley.senate.gov/hawley-blumenthal-introduce-bill-to-prevent-data-centers-from-increasing-electricity-costs-for-americans)
+on February 11, 2026, which would require data centers to source power
+independently of the grid over a 10-year transition, put consumers first in
+line, and mandate public disclosure of electricity use. On July 21 the House
+Energy and Commerce Committee advanced the **Ratepayer Protection Act
+(H.R. 9340)** from Reps. Gabe Evans (R-CO) and Kathy Castor (D-FL) by
+**52–0** — a PURPA amendment that would require state regulators to consider
+making 100+ MW data centers cover the full incremental cost of grid upgrades.
+That is the pledge, with a statute behind it.
+
+---
+
+### Part 4 — What this actually means for your hearing
+
+Here is the part that matters, and it is the part the coverage tends to bury.
+
+**1. The federal orders do not preempt you.** MultiState's tracker is explicit:
+the executive orders "do not preempt state permitting requirements, zoning
+laws, or energy regulations"
+([MultiState](https://www.multistate.us/insider/2026/4/14/federal-ai-data-center-policy-meets-resistance-from-state-lawmakers)).
+A December 2025 order directed Commerce to publish a list of state AI laws
+deemed invalid; as of MultiState's April review, no such list had been
+published. Federal enthusiasm is not federal authority. Your zoning code is
+still your zoning code.
+
+**2. The 100 MW threshold leaves most projects out.** The federal fast lane
+starts at 100 MW and $500 million. States are legislating down to **10 MW**,
+and 27 of them are advancing large-load bills; California, Ohio and Utah have
+enacted them. Maine is positioned to enact the first statewide moratorium,
+through November 2027. The project in front of your board is far more likely
+to be governed by that layer than by anything in Washington.
+
+**3. The pledge is a document you can hold a developer to — locally.** This is
+the single most useful thing to take from the last six months. If your
+developer's parent company is on the White House list, they have publicly
+committed to bringing their own power, paying for delivery infrastructure, and
+paying **whether or not they use it**. The pledge has no federal enforcement.
+A community benefits agreement does. Ask, on the record, whether they will
+put commitments 1, 2 and 3 into a binding CBA and a signed tariff — and note
+the answer in the minutes either way. Our
+[model clause library](/cba-clauses.html) has the take-or-pay and
+cost-causation language.
+
+**4. "They'll just go elsewhere" is testable, not axiomatic.** Brookings cites
+Sightline Climate's estimate that as much as half of announced 2026 projects
+may never materialize, and counts at least 48 projects worth $156 billion
+blocked by local opposition in 2025. That is not proof a given developer is
+bluffing. It is proof the sector's announcement pipeline is not the same thing
+as its build pipeline — and your board is entitled to ask which one it is
+looking at.
+
+**5. Watch the interconnection venue, not the podium.** FERC's show-cause
+orders will reshape how your RTO treats large loads over the next year, and
+state PUCs will decide the rate class question. Those are the proceedings
+where the money actually moves. Our [permit and docket lookup](/projects.html)
+points at the RTO queue and PUC docket for a given project.
+
+---
+
+### The honest summary
+
+The President's position is consistent and has been for eighteen months: build
+fast, build big, treat this as an industrial race with China. His
+administration has paired that with a real attempt to answer the cost
+objection — the Ratepayer Protection Pledge asks for close to the right
+things. What it does not have is a mechanism. It is a promise made in
+Washington that has to be enforced in fifty state capitals and several
+thousand county buildings, by people with no obligation to enforce it.
+
+Which puts the burden exactly where it has been all along. The pledge only
+becomes real in the room where the vote happens. Bring a copy.
+
+---
+
+*See also: [Moratorium tracker](/moratoriums.html) —
+what other communities have enacted, with sources and expiry dates ·
+[Start here](/start-here.html) — a three-week plan for a zoning fight ·
+[2026 Senate races](/senate-races.html) — where candidates stand on making
+data centers pay their own way.*
+
+*This piece links to primary documents and to reporting from Axios, The Hill,
+Forbes, the Texas Tribune, Utility Dive, POWER Magazine, NOTUS, Brookings,
+Gallup and the Annenberg Public Policy Center. Where an outlet's framing is
+contested, we've said so. Corrections: reach out through the newsletter
+signup.*
+""",
+    },
     # ── Pennsylvania Governor Shapiro signs GRID executive order ──
     {
         "id": "pennsylvania-grid-executive-order-2026",
