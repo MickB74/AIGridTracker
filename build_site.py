@@ -2169,17 +2169,15 @@ def _rank_top_stories_from_themes(themes, max_age_days=7, top_n=5):
     return _rank_stories_build(pooled, top_n=top_n)
 
 
-# Quality-source allowlist — used to filter Google News video results to
-# outlets we trust. Match is case-insensitive substring on the source name.
-YOUTUBE_QUALITY_SOURCES = {
-    "pbs", "wsj", "wall street journal", "bloomberg", "cnbc", "reuters",
-    "financial times", "the verge", "vox", "npr", "cbs news", "abc news",
-    "nbc news", "cnn", "bbc", "utility dive", "canary media", "grid brief",
-    "e&e news", "inside climate news", "propublica", "the guardian",
-    "washington post", "new york times", "politico", "axios", "60 minutes",
-    "frontline", "vice news", "yahoo finance", "fox business", "bloomberg tv",
-    "cbs mornings", "cbs saturday morning",
-}
+# Video sources are classified by `news_source_tier()` like every other
+# headline — there is no separate video allowlist. There used to be one
+# (`YOUTUBE_QUALITY_SOURCES`), and it was dead code that never ran: Google News
+# reports the source of every `site:youtube.com` result as the literal string
+# "YouTube", never the channel, so an outlet allowlist over that field would
+# have matched nothing and dropped the whole feed. The tier check in
+# _fetch_youtube_live is kept as a guard in case Google ever reports a real
+# publisher; the curated channel feeds below are how a named publisher
+# actually reaches this page.
 
 # Google News search query dedicated to YouTube-hosted videos.
 YOUTUBE_QUERY = ('("data center" OR "data centers" OR datacenter) '
@@ -2252,7 +2250,9 @@ def _video_category(v):
     one) wins; everything else came through the Google News video search —
     mostly TV-station and outlet uploads — and Google reports its source as
     just "YouTube", so the pipeline itself is the only reliable classifier:
-    no stored category means the news search found it."""
+    no stored category means the news search found it. This is also why the
+    video sections can't be split by `news_source_tier()` the way headlines
+    are: on this feed there is no publisher name to classify."""
     return v.get("category") or "news"
 
 
@@ -2320,6 +2320,12 @@ def _fetch_youtube_live(limit=40):
         source = src_el.text.strip() if src_el is not None and src_el.text else "YouTube"
         if source and title.endswith(f" - {source}"):
             title = title[: -(len(source) + 3)]
+        # Guard, not a filter: today `source` is always "YouTube" (unrated),
+        # so nothing is dropped here. If Google ever names the publisher, a
+        # press-release wire or a campaign channel is excluded on sight, the
+        # same way it is in the headline feed.
+        if news_source_tier(source) in NEWS_DEMOTED_TIERS:
+            continue
         tl = title.lower()
         if any(j in tl for j in JUNK):
             continue
@@ -3589,9 +3595,9 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
     if videos:
         videos_link = (
             '<section id="videos"><div class="note info"><p>'
-            '<strong>Prefer to watch?</strong> Explainers and reporting from '
-            'vetted channels — PBS NewsHour, WSJ, Bloomberg, CNBC, Reuters, FT '
-            '— now live on their own page. '
+            '<strong>Prefer to watch?</strong> TV segments and local-station '
+            'uploads from the news search, plus the creator and advocacy '
+            'channels we follow directly, now live on their own page. '
             '<a href="../videos">Video coverage &rarr;</a></p></div></section>')
 
     body = f"""
@@ -3841,7 +3847,8 @@ def _video_card_html(v):
         f'border-radius:12px;overflow:hidden;text-decoration:none;color:inherit">'
         f'{img}'
         f'<div style="padding:12px 14px">'
-        f'<div class="post-meta" style="font-size:12px;opacity:0.75">{esc(meta)}</div>'
+        f'<div class="post-meta" style="font-size:12px;opacity:0.75">{esc(meta)}'
+        f'{_source_badge_html(v.get("source", ""))}</div>'
         f'<div style="font-weight:600;margin:4px 0 6px;line-height:1.3">'
         f'{esc(v["title"])}</div>'
         f'{"<div class=\"tags\">" + chips + "</div>" if chips else ""}'
@@ -3850,9 +3857,9 @@ def _video_card_html(v):
 
 def build_videos_page(videos, fetched_at):
     """Standalone video coverage, split out from the news feed so headlines
-    and watchable segments each get their own page. Two sections: newsroom
-    segments (Google News search, allowlist-classified) and everything else
-    (curated channel feeds + unmatched uploads). Filterable by state;
+    and watchable segments each get their own page. Two sections: segments
+    the Google News video search found (publisher unknown — see
+    _video_category) and the curated channel feeds. Filterable by state;
     deep-linkable with ?state=."""
     videos = videos or []
     back = ('<p class="muted"><a href="news/">&larr; Back to news headlines</a></p>')
@@ -3869,8 +3876,8 @@ def build_videos_page(videos, fetched_at):
 build. Try again shortly, or read the <a href="news/">news headlines</a>.</p></section>
 """
         return page("Videos — data center coverage — AI GridWatch",
-                    "Vetted-channel video coverage of data center and grid "
-                    "issues, filterable by state.",
+                    "Video coverage of data center and grid issues — TV "
+                    "segments plus curated channels, filterable by state.",
                     body, f"{SITE_URL}/videos", depth=0)
 
     covered = sorted({st for v in videos for st in v.get("states", [])})
@@ -3892,10 +3899,15 @@ build. Try again shortly, or read the <a href="news/">news headlines</a>.</p></s
 <header>
   <div class="kicker">Videos</div>
   <h1>Watch: data center video coverage</h1>
-  <p class="sub">Explainers and reporting on data centers, the grid, water, and
-  local fights — newsroom segments (PBS NewsHour, WSJ, Bloomberg, CNBC, Reuters
-  and peers) plus independent creators, advocacy groups, and community uploads.
-  Filtered to data-center / grid topics.</p>
+  <p class="sub">Explainers and reporting on data centers, the grid, water,
+  and local fights — TV and outlet segments surfaced by the automated news
+  search, plus independent creators, advocacy groups, and community uploads
+  from channels we follow directly. Filtered to data-center / grid topics by
+  title.</p>
+  <p class="muted">Unlike the <a href="news/">headline feed</a>, these carry no
+  source labels: Google reports the publisher of every YouTube result as just
+  "YouTube", so there is no masthead to place. The curated channel list below
+  is the only publisher claim on this page.</p>
   <p class="muted">Last updated {esc(fetched_display)} · <a href="news/">News headlines &rarr;</a></p>
 </header>
 

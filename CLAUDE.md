@@ -211,7 +211,13 @@ its own constants.
     `NEWS_SOURCE_EXACT` handles mastheads that contain another tier's needle
     ("MSNBC" contains "msn", "Heatmap News" contains "ap news").
     Tiers feed `_rank_stories_build()` as a score term, so mainstream and
-    wire reporting floats. **Top stories are re-ranked every build** from the
+    wire reporting floats. **Videos share this registry — there is no separate
+    video allowlist.** The old `YOUTUBE_QUALITY_SOURCES` set was deleted in
+    August 2026 because it was dead code that could never have worked: Google
+    News reports the source of every `site:youtube.com` result as the literal
+    string "YouTube", so an outlet allowlist over that field matches nothing.
+    The videos page therefore carries no source labels and says so; its
+    curated `VIDEO_CHANNELS` list is the only publisher claim on it. **Top stories are re-ranked every build** from the
     cached theme buckets rather than read back from `news_cache.json` — the
     weights live in code, so a `NEWS_FREEZE=1` rebuild must not keep
     publishing a ranking the current rules would reject.
