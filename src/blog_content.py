@@ -56,6 +56,250 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── The gas buildout, the water behind it, and the notice being deleted ──
+    {
+        "id": "gas-buildout-water-notice-2026",
+        "art": "oversight",
+        "section": "stories",
+        "title": "The Power Plant Is Now Part of the Data Center \u2014 and the Public Notice for It Is Being Deleted",
+        "date": _dt.date(2026, 8, 26),
+        "author": "GridWatch AI",
+        "tags": ["natural gas", "Global Energy Monitor", "air permits",
+                 "New Source Review", "EPA", "water", "Ceres", "Ohio",
+                 "Pike County", "OpenAI", "SB Energy", "Texas", "analysis"],
+        "summary": (
+            "Three things landed in the same week. Global Energy Monitor "
+            "counted 189 GW of U.S. gas capacity in development tied to data "
+            "centers \u2014 nearly double the figure six months earlier. Ceres "
+            "put a number on the water those power plants use, which is the "
+            "part of a data center's water footprint nobody meters. And EPA "
+            "moved to delete the federal requirement that states give public "
+            "notice on the air permits those plants need. Read together, they "
+            "describe one shift: the generator is now part of the project, "
+            "and the process for the generator is the process being narrowed."
+        ),
+        "body": """\
+Three separate items landed in the last week of August 2026. Individually
+each is a news story. Together they describe a single structural change in
+how these projects get built \u2014 and where a community still has a say.
+
+**One.** Global Energy Monitor counted **189 GW of U.S. gas-fired capacity in
+development tied specifically to data centers**, up from 97 GW at the end of
+2025 \u2014 nearly a doubling in six months
+([GEM, Aug 25](https://globalenergymonitor.org/research/us-gas-power-proposals-tied-data-centers-nearly-double-six-months)).
+
+**Two.** Ceres modeled the water consumed by the power plants that serve data
+centers in the seven states holding about half the country's fleet, and put
+it at roughly **3.4 trillion gallons of freshwater a year** \u2014 a figure that
+dwarfs on-site cooling, which is the only number most hearings ever discuss
+([Ceres, Aug 25](https://www.ceres.org/resources/reports/water-behind-the-watts-the-hidden-risk-of-powering-data-centers)).
+
+**Three.** EPA moved to eliminate the federal requirement that states
+publicize and take comment on minor-source air permits \u2014 the permit class
+that covers many data centers and the generation built alongside them
+([New York Times, Aug 25](https://www.nytimes.com/2026/08/25/climate/epa-data-centers-public-comment.html)).
+
+The through-line: for a growing share of projects, the power plant is no
+longer something the utility builds somewhere else. It is on the parcel, in
+the same application, owned by the same parties. That moves the decision out
+of the rate case and into the air permit \u2014 which is the exact process now
+losing its public-notice floor.
+
+---
+
+### Part 1 \u2014 The gas number, and its honest caveats
+
+GEM's Global Oil and Gas Plant Tracker now counts 378 GW of U.S. gas capacity
+across the announced, pre-construction, and construction phases, up from
+252 GW at the end of 2025 \u2014 a 50% increase in six months. Of that, **189 GW
+is tied to data centers.** U.S. gas capacity actually *under construction*
+reached 52 GW, against China's 24 GW; on the full development pipeline, the
+U.S. now leads roughly three to one.
+
+Texas alone accounts for 122 GW in development \u2014 31% of the national total,
+up 51% in six months \u2014 with 77 GW of that designated for data centers.
+
+Now the caveats, which matter more than the headline if you are the one
+standing up at a hearing:
+
+- **About 86% of the U.S. pipeline is announced or pre-construction**, not
+  under construction. An announcement is a press release, not a turbine.
+- **Nearly a quarter of the data-center-linked gas projects have no named
+  start year at all.**
+- **Two-thirds of global gas capacity in development has no identified
+  turbine manufacturer**, and turbine lead times now run years. GEM logged
+  45 GW of announced and pre-construction capacity slipping in the first half
+  of 2026 alone.
+
+GEM's own project manager, Jenny Martos, framed the tracker's limits plainly:
+this wave of proposals is "running headlong into the hurdles of an already
+tight gas market."
+
+Use the caveats in both directions. When a developer presents new on-site
+generation as settled, ask which phase it is in, who is supplying the
+turbines, and what the contracted delivery date is. When an opponent cites
+189 GW as though it were poured concrete, the same question applies. **The
+number that belongs in a hearing record is the phase, not the total.**
+
+### Part 2 \u2014 Pike County is the template, not the exception
+
+The clearest example of the new structure is the PORTS-Pike Technology
+Campus in Piketon, Ohio \u2014 already tracked in our
+[project dossiers](/projects.html).
+
+The shape of the deal:
+
+- **8 GW-IT of capacity leased by OpenAI** from SB Energy, a SoftBank Group
+  company, under a 20-year lease
+  ([OpenAI, Aug 18](https://openai.com/index/openai-joins-ports-pike-project/)).
+- **9.2 GW of new on-site natural gas generation**, funded in part through
+  $33.3 billion tied to the U.S.\u2013Japan Strategic Trade and Investment
+  Agreement. **The generating assets are to be owned by the U.S.
+  government**, with SB Energy operating them.
+- **The land is federal** \u2014 DOE's former Portsmouth Gaseous Diffusion
+  Plant, a uranium enrichment site with its own long contamination record.
+- **The financing is circular.** OpenAI invested $500 million in SB Energy in
+  January 2026; Nvidia announced a $1.5 billion investment this month and is
+  the campus's compute provider. The tenant and the chip supplier are both
+  investors in the landlord.
+
+If that were a utility-built plant, there would be a rate case, a docket
+number, and a ratepayer-impact figure a commissioner has to look at. Here,
+much of that is displaced. We made the same point about Amazon's
+[7.65 GW gas plant in Pecos County](/blog/amazon-pecos-county-gas-plant-2026.html):
+when the generation is behind the meter, the ratepayer argument thins out
+and the leverage moves to the air permit and the local land-use process.
+
+Two doors are still wide open at Piketon, and they are worth naming because
+they generalize:
+
+- **The transmission still gets sited publicly.** AEP Ohio's roughly 50-mile,
+  765 kV Piketon Area Improvements Project runs through Pike, Jackson, and
+  Gallia counties and goes to the **Ohio Power Siting Board** \u2014 a
+  contested proceeding with intervenor rights, regardless of who owns the
+  gas plant.
+- **The air permit still exists.** Behind-the-meter generation is still a
+  stationary source. Which brings us to the third item.
+
+### Part 3 \u2014 The water nobody meters
+
+Ceres' *Water Behind the Watts* looked at Virginia, Texas, California,
+Illinois, Georgia, Ohio, and Arizona \u2014 about half the U.S. data center
+fleet \u2014 and found:
+
+- Roughly **3.4 trillion gallons of freshwater a year** associated with the
+  electricity those data centers use, which Ceres compares to about **12
+  times** the combined annual use of Los Angeles, Phoenix, and Washington,
+  D.C.
+- **78%** of electricity in those states comes from plants that need water to
+  operate.
+- **66%** of those water-using plants sit in areas rated medium-high to
+  extremely high water stress.
+- By 2030, the associated annual withdrawals could reach **4.1 to 7.6
+  trillion gallons.**
+
+One precision note, because it will be the first thing a developer's
+consultant says: **withdrawal and consumption are not the same number.**
+A once-through cooled plant withdraws enormous volumes and returns most of
+it (warmer); a cooling-tower plant withdraws less and evaporates most of what
+it takes. Coverage of this report uses both words. When you cite it, cite the
+metric \u2014 and when a company gives you a water figure, ask which one it is,
+and whether it covers generation or only the building.
+
+On disclosure, the gap is stark. **Meta is the only hyperscaler that reports
+indirect water embedded in purchased electricity, and its 2024 figure was
+more than 20 times its direct data-center water consumption** \u2014 rising every
+year since 2021. Amazon told Latitude Media it tracks the number but has not
+published it, citing the absence of a reporting standard. Neither Google nor
+Microsoft said whether they track it at all
+([Latitude Media, Aug 26](https://www.latitudemedia.com/news/data-centers-hidden-water-footprint-is-linked-to-the-grid/)).
+
+So when a project promises a closed-loop cooling system and a modest gallons-
+per-day figure, that promise is real \u2014 and it is describing the small half
+of the footprint. **The question that gets you the other half is: where does
+this facility's power come from, and how much water does *that* plant use?**
+
+### Part 4 \u2014 The door that is closing
+
+On July 1, 2026, EPA proposed removing the **minimum federal public
+participation requirements for minor New Source Review permitting** in state
+implementation plans; it published in the Federal Register on July 7, and the
+comment period closed **August 21, 2026**
+([EPA news release](https://www.epa.gov/newsreleases/epa-proposes-streamline-state-and-local-permitting-process-minor-sources);
+[Federal Register, Jul 7](https://www.federalregister.gov/documents/2026/07/07/2026-13667/minor-new-source-review-program-air-permitting-public-participation-requirements-for-state)).
+
+Minor NSR is the permit class that covers new minor stationary sources and
+minor modifications to existing ones \u2014 in practice, many data centers, their
+backup generator fleets, and emissions-increasing additions at existing
+power plants. It is the process where a resident first learns a facility is
+coming.
+
+EPA's framing is that it is returning a procedural choice to the states.
+Administrator Lee Zeldin: state and local authorities "closest to issues
+should make permitting decisions, not Washington." The agency says emission
+standards themselves are unchanged.
+
+That framing is worth taking literally, because it defines where the fight
+now is. **The proposal does not forbid public notice. It removes the federal
+floor requiring it.** Every state keeps the authority to require notice and
+comment in its own minor NSR program \u2014 and after this rule, that becomes a
+state-by-state decision made by your state air agency, not a national
+guarantee.
+
+Roughly 200 environmental, health, and community organizations, plus more
+than a dozen states, filed in opposition during the comment window
+([NYT, Aug 25](https://www.nytimes.com/2026/08/25/climate/epa-data-centers-public-comment.html)).
+That window is now shut. What is not shut is the state one.
+
+Meanwhile the generation rules are moving the same direction: CEOs of
+generation-and-transmission cooperatives, including NRECA's Jim Matheson,
+publicly pressed EPA this month to fully repeal the 2024 greenhouse-gas
+standards for gas plants, arguing the 40% capacity-factor threshold and
+carbon-capture requirement are "untenable" given data-center load growth
+([Utility Dive, Aug 2026](https://www.utilitydive.com/news/electric-co-ops-repeal-epa-gas-power-plant-emissions-rules/828377/)).
+
+### What this changes about your hearing
+
+1. **Ask first whether the generation is grid-connected or behind the
+   meter.** The answer determines whether there is a rate case to intervene
+   in at all. If there isn't, the air permit and local land use are the whole
+   board \u2014 start there on day one, not after the first hearing.
+2. **Ask your state air agency, in writing, whether it will keep public
+   notice and comment in its minor NSR program** regardless of what the
+   federal floor says. Get the answer on the record before a permit is
+   pending, not after. This is the single highest-leverage thing to do in
+   response to the EPA proposal, and it is a state-level ask.
+3. **Ask for the water number that covers generation**, not just the
+   building \u2014 and pin down withdrawal versus consumption. Our
+   [impact calculator](/impact.html) gives you a defensible per-facility
+   estimate to bring as a baseline.
+4. **Follow the transmission.** Even where the plant is private, the lines
+   usually are not. Your [state PUC or siting board](/puc.html) is a public
+   docket with intervenor rights.
+5. **Check the paper trail before you argue.** Every dossier on the
+   [project tracker](/projects.html) lists where that project's permits and
+   filings actually live, and distinguishes a public register from a
+   pre-built search \u2014 because citing a search result at a hearing is how a
+   resident loses one.
+
+> The old script assumed the utility built the power plant and the community
+> argued about the data center. Increasingly it is one application, one set
+> of owners, and one permit \u2014 the air permit. Find out today whether your
+> state intends to keep telling you when one is filed.
+
+### Sources
+
+- [Global Energy Monitor \u2014 "U.S. gas power proposals tied to data centers nearly double in six months" (Aug. 25, 2026)](https://globalenergymonitor.org/research/us-gas-power-proposals-tied-data-centers-nearly-double-six-months)
+- [Ceres \u2014 "Water Behind the Watts: The Hidden Risk of Powering Data Centers" (Aug. 25, 2026)](https://www.ceres.org/resources/reports/water-behind-the-watts-the-hidden-risk-of-powering-data-centers)
+- [The New York Times \u2014 "E.P.A. Moves to Curb Public Input on Air Pollution Permits for Data Centers" (Aug. 25, 2026)](https://www.nytimes.com/2026/08/25/climate/epa-data-centers-public-comment.html)
+- [EPA \u2014 "EPA Proposes to Streamline State and Local Permitting Process for Minor Sources" (Jul. 1, 2026)](https://www.epa.gov/newsreleases/epa-proposes-streamline-state-and-local-permitting-process-minor-sources)
+- [Federal Register \u2014 Minor New Source Review Program Air Permitting Public Participation Requirements for State Implementation Plans (Jul. 7, 2026)](https://www.federalregister.gov/documents/2026/07/07/2026-13667/minor-new-source-review-program-air-permitting-public-participation-requirements-for-state)
+- [Latitude Media \u2014 "Data centers' hidden water footprint is linked to the grid" (Aug. 26, 2026)](https://www.latitudemedia.com/news/data-centers-hidden-water-footprint-is-linked-to-the-grid/)
+- [OpenAI \u2014 "OpenAI joins PORTS-Pike project" (Aug. 18, 2026)](https://openai.com/index/openai-joins-ports-pike-project/)
+- [WOSU \u2014 "OpenAI joins data center venture at former nuclear enrichment site in Pike County" (Aug. 17, 2026)](https://www.wosu.org/2026-08-17/openai-joins-data-center-venture-at-former-nuclear-enrichment-site-in-pike-county)
+- [Utility Dive \u2014 "Electric co-ops press for repeal of gas power plant emissions rules"](https://www.utilitydive.com/news/electric-co-ops-repeal-epa-gas-power-plant-emissions-rules/828377/)
+""",
+    },
     # ── Trump doubles down on data centers as the backlash goes bipartisan ──
     {
         "id": "trump-data-center-support-2026",

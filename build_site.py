@@ -39,8 +39,8 @@ from src.blog_content import BLOG_STORIES, ABOUT_SECTION
 from src.alerts import build_alerts, LOOKAHEAD_DAYS as ALERT_LOOKAHEAD
 from src.briefs import MEETING_ADVICE
 from src.permit_lookup import (
-    document_checklist, known_permits, provenance_note,
-    sections as permit_sections,
+    document_checklist, grid_operators, known_permits, provenance_note,
+    sections as permit_sections, state_portal,
 )
 from src.constants import (
     AI_COMPETITORS_DF, STATE_STUDIES, MODEL_CLAUSES,
@@ -334,6 +334,12 @@ nav.pagenav { display:block; padding:14px 18px; border:1px solid var(--rule); bo
   border-radius:999px; padding:5px 12px; font:inherit; font-size:12px;
   cursor:pointer; text-transform:none; letter-spacing:0; }
 .expandall:hover { border-color:var(--teal); }
+.pagenav .pnav-grp { margin:12px 0 0; font-weight:700; font-size:11.5px;
+  letter-spacing:.06em; text-transform:uppercase; color:var(--teal); }
+.pagenav .pnav-grp:first-of-type { margin-top:8px; }
+.secgrp { margin:36px 0 0; padding-top:20px; border-top:1px solid var(--rule);
+  font-weight:700; font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--teal); }
 details.sect > summary { font-size:17px; color:var(--ink); padding:16px 0;
   display:flex; align-items:center; gap:10px; }
 details.sect > summary:hover { color:var(--teal); }
@@ -1220,7 +1226,327 @@ def _mora_source_cell(m):
             f'target="_blank">Source</a><br>{on}')
 
 
-def build_state(state):
+# ---------------------------------------------------------------------------
+# State-page sections assembled from the other registries.
+#
+# A resident who lands on /states/new-jersey.html should not have to know that
+# the projects, the ballot, the permit register and the delegation each live on
+# a different page. Everything the site holds *about that state* renders here,
+# with links back to the full page for the national view. All links are
+# depth-1 (../) because state pages live under web/states/.
+# ---------------------------------------------------------------------------
+
+# race lookups are memoised: attach_records() re-reads the story archive on
+# every call, and these run once per state across 51 builds.
+_SR_BY_ABBREV = None
+_HR_BY_STATE = None
+
+
+def _sr_races_by_abbrev():
+    global _SR_BY_ABBREV
+    if _SR_BY_ABBREV is None:
+        import src.senate_races as sr
+        _SR_BY_ABBREV = {r["abbrev"]: r for r in sr.races()}
+    return _SR_BY_ABBREV
+
+
+def _hr_races_by_state():
+    global _HR_BY_STATE
+    if _HR_BY_STATE is None:
+        import src.house_races as hr
+        _HR_BY_STATE = hr.by_state()
+    return _HR_BY_STATE
+
+
+def _state_projects_html(state, abbrev):
+    """Live projects tracked in this state, soonest hearing first."""
+    rows = [p for p in PROJECTS if str(p.get("state")) == abbrev]
+    if not rows:
+        return (
+            f'<section><h2>Proposed data centers in {esc(state)}</h2>'
+            f'<p class="muted">GridWatch is not yet tracking a named project '
+            f'in {esc(state)}. That is a gap in our coverage, not evidence '
+            f'that nothing is proposed — most projects surface first in a '
+            f'zoning agenda, weeks before any reporting.</p>'
+            f'<p><a class="btn ghost" href="../projects.html#submit">'
+            f'Tell us about a project &rarr;</a></p></section>')
+    rows.sort(key=_project_sort_key)
+    live = [p for p in rows if not project_status(p)["terminal"]]
+    soon = [p for p in rows if project_status(p)["hearing_soon"]]
+    trs = ""
+    for p in rows:
+        s = project_status(p)
+        trs += (
+            f'<tr><td><a href="../projects.html#p-{esc(str(p.get("id","")))}">'
+            f'{esc(str(p.get("name","")))}</a></td>'
+            f'<td>{esc(str(p.get("locality","") or "—"))}</td>'
+            f'<td>{_project_size(p)}</td>'
+            f'<td>{_project_builder(p)}</td>'
+            f'<td>{_project_stage_cell(s)}</td>'
+            f'<td>{_project_source_cell(p)}</td></tr>')
+    alert = ""
+    if soon:
+        items = "".join(
+            f'<li><strong>{esc(str(p.get("name","")))}</strong> — '
+            f'{esc(project_status(p)["next_action"])}</li>' for p in soon)
+        alert = (f'<div class="note"><p><strong>A hearing is close.</strong></p>'
+                 f'<ul style="margin:6px 0 0">{items}</ul></div>')
+    return (
+        f'<section><h2>Proposed data centers in {esc(state)} '
+        f'({len(rows)})</h2>'
+        f'<p class="muted">{len(live)} still live · '
+        f'{len(rows) - len(live)} decided or withdrawn. Each name links to '
+        f'the full dossier — ownership, intelligence log, and where to read '
+        f'the paper trail.</p>'
+        f'{alert}'
+        f'<table><tr><th>Project</th><th>Where</th><th>Size</th>'
+        f'<th>Behind it</th><th>Stage</th><th>Source</th></tr>{trs}</table>'
+        f'<p><a class="btn ghost" href="../projects.html">'
+        f'Full project tracker &rarr;</a></p></section>')
+
+
+def _state_paper_trail_html(state, abbrev):
+    """Where this state's public record lives: permit register + grid queue.
+
+    Register and search are different claims and stay visually apart — a state
+    with no searchable register gets told so, because a records request is
+    then the only route and pretending otherwise wastes a resident's week.
+    """
+    portal = state_portal(abbrev)
+    rtos = grid_operators(abbrev)
+    if not portal and not rtos:
+        return ""
+    bits = ""
+    if portal:
+        if portal.get("register"):
+            reg = (f'<p><strong>Searchable register:</strong> '
+                   f'<a href="{esc(portal["register"])}" rel="nofollow noopener">'
+                   f'{esc(portal.get("register_label") or "permit register")}'
+                   f'</a> — a public database you can search by facility or '
+                   f'permit number.</p>')
+        else:
+            reg = ('<p class="muted"><strong>No searchable register.</strong> '
+                   f'{esc(state)} does not publish a permit database you can '
+                   'query. A public-records request to the agency is the only '
+                   'route to the file.</p>')
+        bits += (
+            f'<p><strong>Air &amp; environmental permits:</strong> '
+            f'<a href="{esc(portal["agency_url"])}" rel="nofollow noopener">'
+            f'{esc(portal["agency"])}</a></p>{reg}')
+    if rtos:
+        links = " · ".join(
+            f'<a href="{esc(u)}" rel="nofollow noopener">{esc(lbl)}</a>'
+            for lbl, u in rtos)
+        bits += (
+            f'<p><strong>Grid interconnection queue:</strong> {links}</p>'
+            f'<p class="muted">A routing hint only — several states are split '
+            f'between markets, and the serving utility is the only authority '
+            f'on which queue a given site is in.</p>')
+    else:
+        bits += ('<p class="muted"><strong>No organised market.</strong> There '
+                 'is no interconnection queue to read here; the utility\'s own '
+                 'resource plan and the PUC docket are the record.</p>')
+    return (
+        f'<section><h2>Where the {esc(state)} paper trail lives</h2>{bits}'
+        f'<p class="src">{esc(provenance_note())}</p>'
+        f'<p><a class="btn ghost" href="../projects.html#records">'
+        f'What to request, and in what order &rarr;</a></p></section>')
+
+
+def _state_delegation_html(state, abbrev):
+    """Senators, governor and House members for this state, with grades."""
+    try:
+        from src.services.officials import load_officials
+        from src.official_grades import attach_grades
+        odf, ogen = load_officials()
+    except Exception:                                             # noqa: BLE001
+        return ""
+    if odf.empty:
+        return ""
+    odf = odf.copy()
+    odf["party"] = odf["party"].replace({"Democrat": "Democratic"})
+    odf = attach_grades(odf)
+    mine = odf[odf["state_full"] == state]
+    if mine.empty:
+        return ""
+    order = {"Governor": 0, "Senator": 1, "Representative": 2, "Delegate": 3}
+    mine = mine.assign(_o=mine["office"].map(lambda x: order.get(x, 9)))
+    mine = mine.sort_values(["_o", "district", "name"])
+    trs = ""
+    for o in mine.itertuples():
+        grade = (f'<span class="gradebadge" '
+                 f'style="background:{_GRADE_COLORS.get(o.grade, "#888")}">'
+                 f'{esc(o.grade)}</span>' if o.grade else
+                 '<span class="muted">—</span>')
+        dist = f' {cell(o.district, dash="")}' if has_value(o.district) else ""
+        srcref = _srcref(o.stance_src)
+        stance = (f'{cell(o.stance, dash="")}'
+                  + (f' <span class="muted">— {srcref}</span>' if srcref else "")
+                  ) if has_value(o.stance) else (
+            '<span class="muted">No documented action on data centers '
+            'located</span>')
+        links = " · ".join(x for x in (
+            f'<a href="{esc(o.website)}" rel="nofollow">site</a>'
+            if has_value(o.website) else "",
+            f'<a href="{esc(o.contact)}" rel="nofollow">contact</a>'
+            if has_value(o.contact) else "") if x)
+        trs += (
+            f'<tr><td>{grade}</td>'
+            f'<td><strong>{esc(str(o.name))}</strong><br>'
+            f'<span class="muted">{cell(o.party, dash="")} · '
+            f'{esc(str(o.office))}{dist}</span></td>'
+            f'<td>{stance}</td><td>{links}</td></tr>')
+    return (
+        f'<section><h2>Your federal delegation and governor</h2>'
+        f'<p class="muted">Grades cross party — this is an issue axis, not a '
+        f'partisan one. A blank grade means no documented action was located, '
+        f'never that the official is neutral.</p>'
+        f'<table><tr><th>Grade</th><th>Official</th>'
+        f'<th>Documented action (sourced)</th><th>Reach them</th></tr>'
+        f'{trs}</table>'
+        f'<p class="src">Roster: {esc(ogen)}.</p>'
+        f'<p><a class="btn ghost" href="../scorecard.html">'
+        f'Full officials scorecard &rarr;</a> '
+        f'<a class="btn ghost" href="../officials.html">'
+        f'Find your state legislators &rarr;</a></p></section>')
+
+
+def _state_senate_race_html(state, abbrev):
+    """The 2026 Senate race, if this state has one on the ballot."""
+    r = _sr_races_by_abbrev().get(abbrev)
+    if not r:
+        return (
+            f'<section><h2>2026 U.S. Senate</h2>'
+            f'<p class="muted">Neither {esc(state)} Senate seat is on the '
+            f'2026 ballot. Your senators are still the people who vote on '
+            f'federal siting and tax policy — their records are in the '
+            f'delegation table above.</p></section>')
+    from src.senate_races import ROSTER_AS_OF
+    src = (f'<a href="{esc(r["roster_source"])}" rel="nofollow">state candidate '
+           f'list</a>' if r["roster_source"] else
+           '<span class="muted">no roster source recorded</span>')
+    special = ' <span class="muted">(special election)</span>' if r["special"] else ""
+    note = (f'<p class="note">{esc(r["note"])}</p>' if r.get("note") else "")
+    method = "../senate-races.html#method"
+    return (
+        f'<section><h2>2026 U.S. Senate race{special}</h2>'
+        f'<p class="muted">PVI {esc(r["pvi"])} · Seat held by '
+        f'{esc(r["incumbent"])} ({esc(r["incumbent_party"])}) · '
+        f'{esc(r["status"])}</p>'
+        f'{note}'
+        + "".join(_sr_candidate(c, r["abbrev"], method_href=method)
+                  for c in r["candidates"])
+        + f'<p class="src">Ballot roster: {src} (read {esc(ROSTER_AS_OF)}).</p>'
+        f'<p><a class="btn ghost" href="../senate-races.html'
+        f'#race-{esc(abbrev.lower())}">All 35 Senate races &rarr;</a></p>'
+        f'</section>')
+
+
+def _state_house_races_html(state, abbrev):
+    """Every U.S. House district in this state, records first."""
+    races = _hr_races_by_state().get(state) or []
+    if not races:
+        return ""
+    documented = [r for r in races if r["contested"]]
+    trs = ""
+    for r in races:
+        chips = " ".join(
+            f'<span class="gradebadge" style="background:{c["lean_color"]};'
+            f'font-size:11px;padding:2px 7px">{esc(c["name"])}'
+            f'{" &#9733;" if c["incumbent"] else ""}</span>'
+            for c in r["candidates"]) or '<span class="muted">no candidates listed</span>'
+        inc = " · ".join(esc(n) for n in r["incumbents"]) or "open seat"
+        dele = ' <span class="muted">(delegate)</span>' if r.get("delegate") else ""
+        label = f'{r["abbrev"]}-{r["district"]}'
+        # Only documented districts get a card (and therefore an id) on
+        # house-races.html; linking the rest would dump the reader at the top
+        # of a 440-district page with no way to tell it had failed.
+        anchor = f'race-{r["abbrev"].lower()}-{r["district"].lower()}'
+        cell_ = (f'<a href="../house-races.html#{esc(anchor)}">{esc(label)}</a>'
+                 if r["contested"] else esc(label))
+        trs += (
+            f'<tr><td><strong>{cell_}</strong>{dele}</td>'
+            f'<td>{esc(r["pvi"])}</td><td>{inc}</td><td>{chips}</td></tr>')
+    detail = ""
+    if documented:
+        method = "../house-races.html#method"
+        blocks = "".join(
+            f'<h3 style="margin:14px 0 4px">{esc(r["abbrev"])}-'
+            f'{esc(r["district"])}</h3>'
+            + "".join(_sr_candidate(c, r["abbrev"], method_href=method)
+                      for c in r["candidates"] if c["lean"] != "unrecorded")
+            for r in documented)
+        detail = (
+            f'<details class="more"><summary>The documented records '
+            f'({len(documented)} district'
+            f'{"s" if len(documented) != 1 else ""})</summary>{blocks}</details>')
+    return (
+        f'<section><h2>2026 U.S. House races in {esc(state)} '
+        f'({len(races)})</h2>'
+        f'<p class="muted">A documented data-center record exists in '
+        f'{len(documented)} of {len(races)} districts. '
+        f'A candidate with no badge colour has '
+        f'said nothing we could locate — that is a gap in the record, not a '
+        f'neutral position. &#9733; marks an incumbent.</p>'
+        f'<table><tr><th>District</th><th>PVI</th><th>Incumbent</th>'
+        f'<th>Candidates</th></tr>{trs}</table>'
+        f'{detail}'
+        f'<p><a class="btn ghost" href="../house-races.html">'
+        f'All 440 House races &rarr;</a></p></section>')
+
+
+def _state_study_html(state):
+    """The state's own commissioned impact study, if one exists."""
+    s = STATE_STUDIES.get(state)
+    if not s:
+        return ""
+    findings = "".join(
+        f'<li>{_md_to_html(f).replace("<p>", "").replace("</p>", "")}</li>'
+        for f in s.get("findings", []))
+    metrics = "".join(
+        f'<div class="stat"><b>{esc(str(v))}</b><span>{esc(str(k))}</span></div>'
+        for k, v in (s.get("metrics") or {}).items())
+    link = (f'<a href="{esc(s["pdf_url"])}" rel="nofollow noopener">'
+            f'Read the report</a>' if s.get("pdf_url") else "")
+    return (
+        f'<section><h2>What {esc(state)}&#39;s own study found</h2>'
+        f'<p><strong>{esc(s["title"])}</strong><br>'
+        f'<span class="muted">{esc(s["author"])}</span></p>'
+        f'<p>{esc(s.get("summary", ""))}</p>'
+        + (f'<div class="stats">{metrics}</div>' if metrics else "")
+        + (f'<ul>{findings}</ul>' if findings else "")
+        + f'<p class="src">{link} · read {esc(str(s.get("as_of") or "—"))}</p>'
+        f'<p><a class="btn ghost" href="../studies.html">'
+        f'Every state study &rarr;</a></p></section>')
+
+
+def _state_briefings_html(state, abbrev, news_only):
+    """Per-locality briefing pages for this state.
+
+    Moratorium towns are already linked from the tracker table above, so this
+    section exists for the other kind: places the story tracker has archived
+    coverage for but that have no moratorium row — the fights with no vote yet.
+    """
+    mine = [(loc, g) for loc, st, g in (news_only or []) if st == abbrev]
+    if not mine:
+        return ""
+    mine.sort(key=lambda r: -r[1]["count"])
+    items = "".join(
+        f'<li><a href="../communities/{_loc_slug(loc, abbrev)}.html">'
+        f'{esc(loc)}</a> — {g["count"]} archived headline'
+        f'{"s" if g["count"] != 1 else ""}</li>' for loc, g in mine)
+    return (
+        f'<section><h2>Other {esc(state)} communities in the news '
+        f'({len(mine)})</h2>'
+        f'<p class="muted">Places with archived data-center coverage but no '
+        f'moratorium on file. Grouped automatically from headlines and not '
+        f'verified — a lead worth reading, not a claim to cite.</p>'
+        f'<ul>{items}</ul>'
+        f'<p><a class="btn ghost" href="../story-tracker.html">'
+        f'Story tracker &rarr;</a></p></section>')
+
+
+def build_state(state, news_only=None):
     prof = STATE_GRID_PROFILES[state]
     row = STATE_DC_DF[STATE_DC_DF["state"] == state]
     dc_count = int(row.iloc[0]["dc_count"]) if not row.empty else 0
@@ -1446,12 +1772,53 @@ def build_state(state):
             f'State municipal league: '
             f'<a href="{esc(muni[1])}">{esc(muni[0])}</a></p>')
 
+    # Everything else the site holds about this state, assembled from the
+    # other registries so a resident never has to know which page a fact
+    # lives on. The whole stack goes through _html_sections() — past ~15
+    # sections this page is well beyond the scroll budget for a phone in a
+    # council parking lot, and Expand all keeps it printable and Ctrl-F-able.
+    projects_html = _state_projects_html(state, abbrev)
+    trail_html = _state_paper_trail_html(state, abbrev)
+    delegation_html = _state_delegation_html(state, abbrev)
+    senate_html = _state_senate_race_html(state, abbrev)
+    house_html = _state_house_races_html(state, abbrev)
+    study_html = _state_study_html(state)
+    briefings_html = _state_briefings_html(state, abbrev, news_only)
+
+    cta_html = """
+<section>
+  <h2>A data center was proposed near you?</h2>
+  <p>The free toolkit walks you through it in five steps: who's really
+  behind the LLC, what it costs your community, what to do this week, and
+  a downloadable action pack — speech, letters, flyer, and CBA targets
+  included.</p>
+  <p><a class="btn" href="../start-here.html">Start here &rarr;</a>
+  <a class="btn ghost" href="../health-risks.html">The health risks, sourced</a></p>
+</section>"""
+
+    # Grouped so the jump nav reads as a map, not a 16-item list. The order
+    # is the resident's order: the live fights first, then what already
+    # exists, then the material that wins a negotiation, then the people who
+    # decide, then the feeds that keep the page current.
+    grouped = [
+        ("Happening now",
+         projects_html + mora_html + briefings_html),
+        ("Already built",
+         sites_html + dcmap_html),
+        ("Your leverage",
+         cba_html + outcome_html + study_html + puc_html + trail_html),
+        ("Who represents you",
+         officials_html + delegation_html + senate_html + house_html),
+        ("Stay informed",
+         news_html + videos_html),
+    ]
+
     body = f"""
 <header>
   <div class="kicker">State briefing</div>
   <h1>{esc(state)}: data centers &amp; your electric bill</h1>
-  <p class="sub">The numbers residents cite at hearings — grid, water, and
-  regulator contacts for {esc(state)}, from the free GridWatch toolkit.</p>
+  <p class="sub">Everything GridWatch tracks in {esc(state)} on one page —
+  proposed projects, moratoriums, permits, officials, and the 2026 ballot.</p>
   <p class="muted" style="margin-top:4px">
   <a href="../feeds/{slugify(state)}.xml">Subscribe by RSS</a> —
   moratorium changes and community headlines for {esc(state)}.</p>
@@ -1463,25 +1830,9 @@ def build_state(state):
   <div class="stat"><b>{prof['gco2']}</b><span>grid gCO&#8322;/kWh · water stress: {esc(prof['water_stress'])}</span></div>
 </div>
 {provenance_html("STATE_DC_DF")}
-{puc_html}
-{mora_html}
-{outcome_html}
-{sites_html}
-{dcmap_html}
-{cba_html}
-{officials_html}
-{news_html}
-{videos_html}
+{_html_sections_grouped(grouped)}
+{cta_html}
 {muni_html}
-<section>
-  <h2>A data center was proposed near you?</h2>
-  <p>The free toolkit walks you through it in five steps: who's really
-  behind the LLC, what it costs your community, what to do this week, and
-  a downloadable action pack — speech, letters, flyer, and CBA targets
-  included.</p>
-  <p><a class="btn" href="../start-here.html">Start here &rarr;</a>
-  <a class="btn ghost" href="../health-risks.html">The health risks, sourced</a></p>
-</section>
 """
     mora_count = len(moras)
     rate_c = prof.get("rate")
@@ -1521,8 +1872,9 @@ def build_state(state):
 
     return page(
         f"{state} data centers: electricity, water & who to call",
-        f"Data center facilities, grid impact, and regulator contacts for "
-        f"{state} — free community negotiation tools from AI GridWatch.",
+        f"Proposed projects, moratoriums, permits, officials, and 2026 "
+        f"candidates for {state} — free community negotiation tools from "
+        f"AI GridWatch.",
         body, f"{SITE_URL}/states/{slugify(state)}", depth=1,
         og_image=_og_image(f"state-{slugify(state)}"),
         og_extra=_state_feed_link,
@@ -1832,27 +2184,85 @@ def _html_sections(markup, open_first=True):
     return "".join(loose) + _sections_shell(pairs, open_first=open_first)
 
 
+def _html_sections_grouped(groups, open_first=True):
+    """(group label, flat <section> markup) pairs -> grouped collapsible stack.
+
+    Same parsing contract as _html_sections — non-nested <section> blocks,
+    an <h2> per block — but each block remembers which group it came from.
+    A group whose markup is empty simply contributes nothing, so callers can
+    pass every group unconditionally.
+    """
+    pairs, loose = [], []
+    for label, markup in groups:
+        for blk in re.findall(r'<section[^>]*>(.*?)</section>',
+                              markup or "", flags=re.S):
+            m = re.search(r'<h2[^>]*>(.*?)</h2>', blk, flags=re.S)
+            if m:
+                pairs.append((m.group(1), blk[:m.start()] + blk[m.end():],
+                              label))
+            else:
+                loose.append(f"<section>{blk}</section>")
+    if not pairs:
+        return "".join(loose)
+    return "".join(loose) + _sections_shell(pairs, open_first=open_first)
+
+
 def _sections_shell(pairs, open_first=True):
-    """Render (heading, body) pairs as jump-nav + numbered collapsible sections."""
-    secs, nav = [], []
-    for n, (raw_title, body) in enumerate(pairs, 1):
+    """Render (heading, body[, group]) tuples as jump-nav + numbered
+    collapsible sections.
+
+    When any tuple carries a group label, the jump nav is split under
+    uppercase group headers and a matching divider precedes each group's
+    first section in the page body. Numbering stays continuous across groups
+    (the nav uses <ol start=…> so the visible numbers keep matching the
+    badges) — a reader saying "section 9" on the phone to a neighbour must
+    land in the same place regardless of which group it sits in.
+    """
+    norm = [(p[0], p[1], p[2] if len(p) > 2 else None) for p in pairs]
+    grouped = any(g for _, _, g in norm)
+    secs, seen = [], {}
+    nav_parts, ol_items, ol_start = [], [], 1
+    prev_grp = object()   # sentinel: a leading None group still "changes"
+
+    def _flush_ol():
+        if ol_items:
+            start = f' start="{ol_start}"' if ol_start != 1 else ""
+            nav_parts.append(f'<ol{start}>' + "".join(ol_items) + '</ol>')
+            ol_items.clear()
+
+    for n, (raw_title, body, grp) in enumerate(norm, 1):
         title = re.sub(r'<[^>]+>', '', raw_title).strip()
         # Drop any hand-written "3. " prefix — the badge supplies the number.
         title = re.sub(r'^\d+[.)]\s+', '', title)
         # Slug from the *unescaped* text — otherwise "&amp;" lands in the id.
         sid = "s-" + re.sub(r'[^a-z0-9]+', '-',
                             html.unescape(title).lower()).strip('-')
+        # Two sections can legitimately share a heading (a state page carries
+        # one per governing body, and a county can appear twice). A repeated
+        # id would send every deep link to the first one, so suffix it.
+        seen[sid] = seen.get(sid, 0) + 1
+        if seen[sid] > 1:
+            sid = f"{sid}-{seen[sid]}"
+        if grouped and grp != prev_grp:
+            _flush_ol()
+            ol_start = n
+            if grp:
+                label = esc(str(grp))
+                nav_parts.append(f'<div class="pnav-grp">{label}</div>')
+                secs.append(f'<div class="secgrp">{label}</div>')
+            prev_grp = grp
         is_open = " open" if (open_first and n == 1) else ""
         secs.append(
             f'<details class="more sect" id="{sid}"{is_open}>'
             f'<summary><span class="secno">{n}</span>{title}</summary>'
             f'{body}</details>')
-        nav.append(f'<li><a href="#{sid}">{title}</a></li>')
+        ol_items.append(f'<li><a href="#{sid}">{title}</a></li>')
+    _flush_ol()
     toc = ('<nav class="pagenav" aria-label="On this page">'
            '<div class="pagenav-hd">On this page'
            '<button type="button" class="expandall" '
            'onclick="gwExpandAll(this)">Expand all</button></div>'
-           '<ol>' + "".join(nav) + '</ol></nav>')
+           + "".join(nav_parts) + '</nav>')
     # Closed <details> are invisible to Ctrl-F and to print, hence "expand all".
     # gwOpenHash also runs on load so an inbound #s-… deep link still lands.
     script = ("<script>function gwExpandAll(b){var d=document"
@@ -10379,13 +10789,17 @@ def _sr_mentions(c):
             f'<ul style="font-size:13px;margin:0">{lis}</ul></details>')
 
 
-def _sr_candidate(c, abbrev=""):
+def _sr_candidate(c, abbrev="", method_href="#method"):
     """One candidate block: lean badge, summary, and every cited item.
 
     A candidate with no located record renders the gap explicitly. It must not
     read as "neutral" — a resident deciding how to vote needs to know the
     difference between a candidate who said nothing and one who said something
     balanced.
+
+    `method_href` points at the "how this page treats silence" note, which
+    lives on the race pages — a state page embedding this block has to reach
+    it across a directory, so the anchor is a parameter rather than a literal.
     """
     inc = ' <span class="muted">· incumbent</span>' if c["incumbent"] else ""
     head = (f'<p style="margin:0 0 6px"><strong>{esc(c["name"])}</strong> '
@@ -10395,7 +10809,7 @@ def _sr_candidate(c, abbrev=""):
         return (f'<div class="sr-cand" data-lean="unrecorded">{head}'
                 f'<p class="muted" style="margin:0">No documented statement or '
                 f'action on data centers located. Not scored — see '
-                f'<a href="#method">how this page treats silence</a>.</p>'
+                f'<a href="{esc(method_href)}">how this page treats silence</a>.</p>'
                 f'{_sr_money(abbrev, c["name"])}{_sr_mentions(c)}</div>')
     items = "".join(
         f'<li>{esc(i["what"])} '
@@ -13499,7 +13913,7 @@ def main():
     for state in sorted(STATE_GRID_PROFILES):
         slug = slugify(state)
         (WEB / "states" / f"{slug}.html").write_text(
-            build_state(state), encoding="utf-8")
+            build_state(state, news_only=_news_only), encoding="utf-8")
         paths.append(f"states/{slug}")
 
     # lastmod: content-hash tracking so lastmod only updates when a page

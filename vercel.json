@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/gas-buildout-water-notice-2026",
+      "destination": "/blog/gas-buildout-water-notice-2026",
+      "permanent": true
+    },
+    {
       "source": "/trump-data-center-support-2026",
       "destination": "/blog/trump-data-center-support-2026",
       "permanent": true
@@ -480,12 +485,6 @@
     },
     {
       "source": "/communities/indianapolis-in",
-      "destination": "/communities/indianapolis-marion-county-in",
-      "permanent": true
-    }
-  ]
-}
-    "source": "/communities/indianapolis-in",
       "destination": "/communities/indianapolis-marion-county-in",
       "permanent": true
     }
