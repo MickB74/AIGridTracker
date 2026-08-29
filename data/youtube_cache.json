@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-29T06:58:04.745275+00:00",
+  "fetched_at": "2026-08-29T13:48:37.143167+00:00",
   "items": [
     {
       "title": "Foley considers 6-month moratorium on data centers - NBC 15",
@@ -16,6 +16,17 @@
       "video_id": "",
       "published_iso": "2026-08-26T14:26:18+00:00",
       "states": []
+    },
+    {
+      "title": "Indiana is home to 147 data centers. But this town has no power.",
+      "source": "More Perfect Union",
+      "link": "https://www.youtube.com/watch?v=i3TMMZTtNbM",
+      "video_id": "i3TMMZTtNbM",
+      "published_iso": "2026-08-19T18:42:54+00:00",
+      "category": "independent",
+      "states": [
+        "Indiana"
+      ]
     },
     {
       "title": "Data center noise, fumes create flood of complaints in Loudoun County",
@@ -52,6 +63,15 @@
       "states": []
     },
     {
+      "title": "\ud83c\udf1f The BEST data center speech ever \ud83c\udf1f",
+      "source": "Food & Water Watch",
+      "link": "https://www.youtube.com/watch?v=VXGbmQwSdC8",
+      "video_id": "VXGbmQwSdC8",
+      "published_iso": "2026-06-25T20:00:13+00:00",
+      "category": "independent",
+      "states": []
+    },
+    {
       "title": "Why Do AI Data Centres Use So Much Water? | Explained",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA3d2lpRTJtcnM0by1RenZhQ2JDZE8tZ29laHNCLXZmSVFkYVlpZlhOUnhwX3NRU3JPRFYyY3Y1cUJMX0JSUWpHcEpacktEWDc2MlNvZzhB?oc=5",
@@ -68,6 +88,15 @@
       "states": [
         "Virginia"
       ]
+    },
+    {
+      "title": "Stop Data Centers Coalition Launch",
+      "source": "Food & Water Watch",
+      "link": "https://www.youtube.com/watch?v=N36bihRA21M",
+      "video_id": "N36bihRA21M",
+      "published_iso": "2026-06-12T02:01:08+00:00",
+      "category": "independent",
+      "states": []
     },
     {
       "title": "Liquid Cooling in AI Data Center",
@@ -102,14 +131,6 @@
       "states": [
         "Georgia"
       ]
-    },
-    {
-      "title": "Data Center Chilled Water Systems Explained",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5FR2ptTldoLWgtaWs5UnpKSjRZcGRfbUlFZ19kV1I5bTJ4LS1pckVNZkpwYW52dld1blNrbEJRWFdCTHhYNG9wX2JrNkYzTlBtZlowc0lR?oc=5",
-      "video_id": "",
-      "published_iso": "2026-04-30T18:55:15+00:00",
-      "states": []
     },
     {
       "title": "Scott Twp. officials vote on preemptive data center zoning ordinances",
@@ -154,14 +175,6 @@
       ]
     },
     {
-      "title": "How Data Center Electrical Systems Work Power, UPS, and Backup Generators Explained",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1yb3FtQ2tRTnhmcnF6TzJHaVZGbVhlRkVyQnJtc3o2cEZuZFc3bVRMa1kyTnV3b3NmQ2duTGtFaUx4c0RxcVByTmFWbzEweEtITjFIc3VB?oc=5",
-      "video_id": "",
-      "published_iso": "2026-03-20T14:11:52+00:00",
-      "states": []
-    },
-    {
       "title": "WHAT'S THAT NOISE? Residents raise concerns about humming sound near data center",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAxNE5NVlFQdndGWlJVMWQ4Wmp2dUVUa1gyaWJhdjJaYXlPc1BsdktMNUVMaXZqVGIxeHpkV0xTZDlfVmJMY0lfUVdrVlJDTy1CbFhOalNn?oc=5",
@@ -186,6 +199,14 @@
       "states": []
     },
     {
+      "title": "How Data Centers Are Powered (And Why They\u2019re Straining the Grid)",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9wbGgzNldTblNhTUcyVGtMNzRnYjlsU3E1SGVjOENVb2lTa0JfSnBpNW1VZzNvbFRLdTdlR2ZUYk43Q0tqUFdsd2stWV8ydnNObnhaNjlR?oc=5",
+      "video_id": "",
+      "published_iso": "2026-02-28T03:51:09+00:00",
+      "states": []
+    },
+    {
       "title": "Data Center Power Flow: From Utility Grid to Server Rack",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8ydEprNXlOeGdDeDlKd0ZTYXBhVFRoOWRPRGV0dUY4NkpoaFlVMjJZVjFWUksycXI1aF9MbWItRDdGX1pRdE9oT3BwOWZpZGNNa0ZLN3Jn?oc=5",
@@ -207,6 +228,14 @@
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Dc0Y3ZXJ3RWhRc3JadlYycUhzS0loSlYtc3Yxb3lUNTkyeGNoc2JBbnU1THZjRVhpUzhIS2Rqc0tYMkZvbl9SNE55UDhQY056eTBDZVFB?oc=5",
       "video_id": "",
       "published_iso": "2026-02-20T17:15:08+00:00",
+      "states": []
+    },
+    {
+      "title": "The Engineering Behind Off Grid AI Data Centers",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1FTHZtUUVGN3A4UWx2b1prc1VlMVdZbGZJbkpyZHpVQVFCdXJTY3l4UW9JUHU0QWJoTlRzbnNIX2ptZWdTZWdaR2xwcHNoOG9memNhUklB?oc=5",
+      "video_id": "",
+      "published_iso": "2026-02-18T05:02:10+00:00",
       "states": []
     },
     {
@@ -244,11 +273,11 @@
       "states": []
     },
     {
-      "title": "Data Center Download: How Data Centers Impact Our Grid, Water, and Communities",
+      "title": "Data Centers: Water Webinar",
       "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE12el8zM2VKM01Sd1RWYi1WLXZzeTB2YkRMazM4R3FPVm8xakhPUGpOM3RiM2E3T09VZVFra0ZGeEs1c0tnLUpaWVZvMUJQNmVNWW0zYndn?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1mT1Vrd3U0bko4cGphZXFnd0pFOXJwYS13M1lWM0RVeDVjSmRERFZ6TkN4MEZqOHlNZ3FMREZpcWFkaVNVXzYwRWs4Wl9fRlVlVUlycDZR?oc=5",
       "video_id": "",
-      "published_iso": "2026-01-22T21:22:06+00:00",
+      "published_iso": "2026-01-23T17:42:28+00:00",
       "states": []
     },
     {
@@ -286,6 +315,14 @@
       "states": []
     },
     {
+      "title": "The impact of data centers on rising electricity costs",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBhNXJFNlRUUjlQNmx2ZTlvMUhxY253dGZMWFFSdVVqTTZ6MVIyYzBRWk1iclh3YnFKbllMMExBWWdGMW5DTnJCVldGbDFyX0JjQ0F2U1Fn?oc=5",
+      "video_id": "",
+      "published_iso": "2025-08-11T23:53:17+00:00",
+      "states": []
+    },
+    {
       "title": "Datacenter Impacts on Municipal Energy, Water, and Air Systems",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBtYnFkMWN0ODJLa09oTzB6dURBeEpTbk1hWVV4RHBZYXptUDMwNWdkOUtpZ3FhckRRbVhKRzVzUkd4eXRSR2ZQS1RENnRBeHNnQjZzNWV3?oc=5",
@@ -309,14 +346,6 @@
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1hejg0elFBbUdWVlh6WTdfTlF0NkRaQ0k3WWVyVzZZY2ZISDBTLW1LV3JjTXBKR3VWSjhMYkcwOW9uSks5V3NlM0dHVVpnazJ2VkEydjBR?oc=5",
       "video_id": "",
       "published_iso": "2025-02-26T19:00:41+00:00",
-      "states": []
-    },
-    {
-      "title": "Liquid Cooling Technology in Data Centers: How It Supports AI Workloads",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE52aVF1YW04QlhhSFdkUFBVMTdJX2hodUpPMGdWbmZpLVU0VlNTS0RIX25aaldTRllXQmJsYV9lRjNxUFF4WlVXTDA5SHZLemJCWjEyMUt3?oc=5",
-      "video_id": "",
-      "published_iso": "2025-02-12T19:00:33+00:00",
       "states": []
     },
     {
