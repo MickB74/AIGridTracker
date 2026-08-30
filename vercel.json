@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/week-in-review-2026-08-30",
+      "destination": "/blog/week-in-review-2026-08-30",
+      "permanent": true
+    },
+    {
       "source": "/gas-buildout-water-notice-2026",
       "destination": "/blog/gas-buildout-water-notice-2026",
       "permanent": true
