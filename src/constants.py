@@ -3253,6 +3253,56 @@ MORATORIUMS = [
              "twelve months before adopting an ordinance",
      "lat": 38.01, "lon": -92.74, "expires": "2027-05-05", "as_of": "2026-08-23",
      "source": "https://www.lakenewsonline.com/stories/camdenton-aldermen-rescind-support-for-opportunity-zone-approve-moratorium-on-data-centers,199992"},
+    # -- Promoted from the news-scan queue, 2026-08-30 ---------------------
+    {"locality": "Calvert County", "state": "MD", "level": "Local",
+     "status": "Enacted", "when": "Aug 18, 2026",
+     "note": "Six-month pause on data center site plan applications, "
+             "unanimous; effective Aug 28, 2026. No site plan applications "
+             "are accepted during the pause while the commissioners consider "
+             "whether to change the zoning ordinance's treatment of data "
+             "centers as a permitted use. Follows Amazon's withdrawal from a "
+             "build at the Calvert Cliffs nuclear plant",
+     "lat": 38.54, "lon": -76.58, "expires": "2027-02-28", "as_of": "2026-08-30",
+     "source": "https://www.calvertcountymd.gov/m/newsflash/home/detail/3201"},
+    {"locality": "Carlton County", "state": "MN", "level": "Local",
+     "status": "Enacted", "when": "Aug 24, 2026",
+     "note": "One-year interim ordinance, unanimous, effective immediately; "
+             "bars approval of new data center development in every county "
+             "township, including crypto mining and AI compute. Directs the "
+             "planning commission to study whether county regulation is "
+             "needed, with a progress report due back to the board by "
+             "February 2027",
+     "lat": 46.66, "lon": -92.42, "expires": "2027-08-24", "as_of": "2026-08-30",
+     "source": "https://www.kaxe.org/local-news/2026-08-26/carlton-county-approves-1-year-data-center-moratorium"},
+    {"locality": "Emmet County", "state": "IA", "level": "Local",
+     "status": "Enacted", "when": "Aug 25, 2026",
+     "note": "One-year moratorium, unanimous, adopted before any data center "
+             "had been proposed in the county. Board chair Lisa Hansen cited "
+             "water usage and possible contaminants in returned process "
+             "water; the year gives planning and zoning time to draft a data "
+             "center ordinance",
+     "lat": 43.40, "lon": -94.83, "expires": "2027-08-25", "as_of": "2026-08-30",
+     "source": "https://www.ktiv.com/2026/08/25/emmet-county-ia-approves-one-year-data-center-moratorium/"},
+    {"locality": "Palm Springs", "state": "CA", "level": "Local",
+     "status": "Enacted", "when": "Aug 26, 2026",
+     "note": "45-day pause on large-scale data center projects, unanimous, "
+             "sponsored by Councilmember Grace Garner, while the city studies "
+             "whether additional regulation is needed. Part of the "
+             "Coachella Valley wave alongside Desert Hot Springs, Indio and "
+             "Coachella",
+     "lat": 33.83, "lon": -116.55, "expires": "2026-10-10", "as_of": "2026-08-30",
+     "source": "https://kesq.com/news/2026/08/26/palm-springs-city-council-approves-temporary-data-center-moratorium/"},
+    {"locality": "Bloomingdale", "state": "GA", "level": "Local",
+     "status": "Enacted", "when": "Reported Aug 2026",
+     "note": "180-day pause on data center applications, permits, licenses, "
+             "construction and operation, reported to run until February "
+             "2027. Mayor Dennis Baxter said the city has no ordinance "
+             "addressing data centers and may lack the infrastructure for "
+             "one. The adoption date is not stated in the coverage read, so "
+             "no end date is recorded -- confirm before citing it as active",
+     "lat": 32.13, "lon": -81.30, "expires": None, "as_of": "2026-08-30",
+     "source": "https://www.wsav.com/news/local-news/bloomingdale-city-council-approves-data-center-moratorium/",
+     "term": "fixed_undated"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.
