@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 3880,
+  "count": 3891,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -35041,7 +35041,7 @@
       "locality": "Chesapeake",
       "state": "VA",
       "first_seen": "2026-08-25",
-      "last_seen": "2026-08-29"
+      "last_seen": "2026-08-30"
     },
     {
       "title": "City Council Discusses Moratorium on Data Center Construction",
@@ -38363,7 +38363,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-08-26",
-      "last_seen": "2026-08-28"
+      "last_seen": "2026-08-30"
     },
     {
       "title": "Kansas communities can learn from ‘painful’ data center lessons in other states, experts say",
@@ -42686,6 +42686,127 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30"
+    },
+    {
+      "title": "Unlikely Winners of the Data Center Boom: Sound Consultants",
+      "outlet": "Bloomberg.com",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTjlVTzMzX3RDSTJFd3h3a0J2R0QwNGxfOGs2Wnl2WFBZazVUcy1mSEtQVUNEODRrS2l0ZXNvZ0Z0VjJVek0ya1ZNUXNBMjY0OWY1Sl9oWG5qWEpPWmlWYjNZSlhPUGE5aW9lcU9rVGFFMWtzUnNDQThzRlJuaHNqQ1k2TXlVOXJDalk1dEdrakdEYWt1TzJGWUpoelpxSHo5eTB3QUhDSnpYZkZZRElRdGgybEpvbVRCVWdId0ptMA?oc=5",
+      "published": "Wed, 26 Aug 2026 10:00:05 GMT",
+      "published_iso": "2026-08-26T10:00:05+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-30"
+    },
+    {
+      "title": "Lawmaker says Grayslake mega data center 'should not proceed' without answers on power, water and noise",
+      "outlet": "Lake and McHenry County Scanner",
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPRUw0d2NnejhGYXE2VjVNVktiODMzTzNORFNfSGFOYzZwbnNHQW82cWUtMVFwd25GWURUUFFwMkhvQ2pJQ09GdkZvNlZYTUVEVDJjSkNSYnRHSjlpOWpMU3VmaEJuanFuNlUxM1Y2WmM0b2ZzUTRFU0MzSkVyZnRUTUk1VjZRX1FoVm8zMnIxMHh3VmpCcjhRUndsd1lvQXZIV2s5V3ZXbmJESzRHWGxtbkF2aEhoRVBrcjhMc01VcENmQVFIQmVWUGxjb2FBNy1fVk5KTVBNUFh3QzJnRnQ5VA?oc=5",
+      "published": "Sun, 30 Aug 2026 20:53:21 GMT",
+      "published_iso": "2026-08-30T20:53:21+00:00",
+      "locality": "Grayslake",
+      "state": "IL",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30"
+    },
+    {
+      "title": "California lawmakers reach deal in high-stakes fight over regulating data centers",
+      "outlet": "Los Angeles Times",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOU19ndzhGQVBuNm9NdEN0VVUtcmFKcnF3dmNSZ0FyZGZuUXZEYjRWbGJUN3NoTWt6T1I5TTF6UzVzSU1VUkVseGNWR0lCUGVTUkJHSDBVbVNJSGU3Y2l0SWo1VXNVaDQ1d3UtcHFtSGQyR3lhQ1VwWWM1LXV4cVhIZVZKM29Sc3VOU3p5dHprV2tnbWtPUmZtMGhUUy05ZnhwYUFxMnRQbnNVSjNUenlrN0pXVXRPeWZLNkJuMFc4TVF3N1ZodEwya2toNmhBQQ?oc=5",
+      "published": "Sat, 29 Aug 2026 21:25:27 GMT",
+      "published_iso": "2026-08-29T21:25:27+00:00",
+      "locality": null,
+      "state": "CA",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-30"
+    },
+    {
+      "title": "Clinton Committee of the Whole will consider data-center ordinance",
+      "outlet": "OurQuadCities",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQY3YxT2FhWGRiUjZNOUpyMktISlAzLWU1eUxSSHdyWUhfa043dmdVZFNjWTRqdkJlUVFBSHRoQjRzOWFuVHphWTBkZ002VWZMNWR2YU84dE42MFlPUG1obmJMVXFzTzNmaXNoSmx4Uk4xSFRBbG5FOENGMXh0dlRCSTZ6TnJlaGJQdlBvc1YzRkdsM3g3NW9PeHBPcmNtWW5KQnd4bXhjVlVQZTY0OFVTeVFUUdIBuAFBVV95cUxQaU5kTTdKY2hyemZERXFram5tcmdyb3U4Z0VZMmlHMGc1NkhUR01VaHBhSzNMOExPVFZNVExhYmdNaGtLZTI5ckV5Wko3YVhBbjl0R2xEa1JZVkRMZmVGT25qREoyYXNuYUxuMDRCUmh3bmtOMW55TTFVNVg1QUdUYms1cmtGeEx5b2w4djZNeEpLS09vbHJMQnA4V2NzRVpMUXA3ZWY4RWpHRGJqeTJ2VTgzQURnXzNp?oc=5",
+      "published": "Sat, 29 Aug 2026 00:55:04 GMT",
+      "published_iso": "2026-08-29T00:55:04+00:00",
+      "locality": "Clinton",
+      "state": "IA",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-30"
+    },
+    {
+      "title": "Sen. Blumenthal backs bipartisan effort to prevent data centers from driving up electricity prices",
+      "outlet": "News12 | New Jersey",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxObER3MUJyelVoOExNdkhLM1Q5aEVsZXJlV2dTQ0ZMSElEczY0ZVA5cm9QaWUxeUNCbk93YUxHZFNlbW1UWlRPa2lPTkJ4UXlteFpoQ05RaGlidXRlYWN1QTdMNXktMnNhdHBQUWFQLV8zbmhxWDd0YUxvM0xqbzAwWjVNaEhkLUEzeVRRYXNRdVp1bUtMdlhLaE5qZFlwSXp5QmUxd3diRVlCWjk1MlVhRVFHcFh6OUplZUNoNEFGbmIxcFpCWlpndE1GZ21sdnVRTEhkdjN5WDl0ZmFNeldSaVZwaXpyeUV4b3VoZGZXRnJxUQ?oc=5",
+      "published": "Sun, 30 Aug 2026 13:21:31 GMT",
+      "published_iso": "2026-08-30T13:21:31+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30"
+    },
+    {
+      "title": "West Virginia looks to AI data center boom to help eliminate state income tax",
+      "outlet": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVjBXX04xbUdzYVlqdWRsd0JwdGF6Q3NOR3d4VjdLb2g0ZGo2U29BeDYwQ3kycno5UmxIa3Z3elBZbVB2NzNRSWNwS2c2d0lhWTRKUW9mUFF6NUdvaFVQT2s0R0pBcHU0T2J2a0pfY0ZsdVdiMXIwMzJfdmk4bDZ5UWRyZFNlbnZyNjd0SWF0Qnd6Q1JENWc?oc=5",
+      "published": "Sun, 30 Aug 2026 12:00:14 GMT",
+      "published_iso": "2026-08-30T12:00:14+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30"
+    },
+    {
+      "title": "El gobernador de West Virginia , Morrisey, planea acabar con el impuesto sobre la renta gracias a los centros de datos",
+      "outlet": "Fox News",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNRXRSeVNaX3FzcmVyMVRrOEtYcnZibFlxQlctejVfM09uQUtrSlh0SjJYVkN5QnE3N09ZdGhGQmRYZ09VckRGcDJnMXU5dFg5R3FNc1pTa3o2cHBxRlVLeE9xcHhoV1RKajBoVGtVOHBqUHZWVnZnMm1YMmtVdFVMWThzdFNlME12UGF5UWdPU2xCMlBteUxQcE15SlBoLTYtMEltdDRtcVlhMHVHRWc?oc=5",
+      "published": "Sun, 30 Aug 2026 12:00:14 GMT",
+      "published_iso": "2026-08-30T12:00:14+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30"
+    },
+    {
+      "title": "Virginia county clears Google for data center grading",
+      "outlet": "FOX8 WGHP",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQV2REeGlDTFpsV2dZaGJKNGhHYUg1OFhmcWxKSUhqRHZrX1ZMRDJaNTVrZ0tuMkR2VjFpMXgtbnBJNmdCUnE3aWZBSTNYeVZVNXdrejVDVlVZRlQ5YmgyWXpOdmU0NGM5SmlFYnJVbE9vN055eGJNYTJlZXVjc1h3MFQxMmYwcTZLQ2RhVl9IdmxlOGNNM1HSAZYBQVVfeXFMUFdkRHhpQ0xabFdnWWhiSjRoR2FINThYZnFsSklIakR2a19WTEQyWjU1a2dLbjJEdlYxaTF4LW5wSTZnQlJxN2lmQUkzWHlWVTV3a3o1Q1ZVWUZUOWJoMll6TnZlNDRjOUppRWJyVWxPbzdOeXhiTWEyZWV1Y3NYdzBUMTJmMHE2S0NkYVZfSHZsZThjTTNR?oc=5",
+      "published": "Sun, 30 Aug 2026 10:06:15 GMT",
+      "published_iso": "2026-08-30T10:06:15+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30"
+    },
+    {
+      "title": "LG Electronics to Build Chiller Plant in Virginia for AI Data Centers",
+      "outlet": "Seoul Economic Daily",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOYnpJZVpucTktLVhtZHhNd2Z3U3daWW5uVFhEN3QxYW5wUDY1dFliSWJBUldXX04tMWY5eFk4dnZkeEZpVGFEYXNjZzJQLXpLbDRpWnU4OVlMbTBIaHRzTWVvSUpqTkRTYUY1S0UxdUh0TG8tcXVzYXdFWnNudURVajNxNFU1VDA0aE13R0FSQlgzaEUzMS1yRUlQVUN1NkU?oc=5",
+      "published": "Sun, 30 Aug 2026 08:43:19 GMT",
+      "published_iso": "2026-08-30T08:43:19+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30"
+    },
+    {
+      "title": "AI data center backlash scrambles 2026 midterms as Texas halts 1,800 projects",
+      "outlet": "Yahoo",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSWI5VkVnZjJkVW1LRHN2XzN2TkItV1R0Y29OYnZ4dFJDOEk4cFlLd2syeU9heXRzSUVEdWcwdXprbHo1dHJPZllDMm9hTGdXVFZ6MFBjai1XcnRyc0dJREVOb0k2eWF4OHZQcE96Z2Z2WURrM3lZaVlNT0lNa19MWDNZWDUxQXRVbHN5TkFQeVJhNHEweEFpMQ?oc=5",
+      "published": "Sun, 30 Aug 2026 18:59:00 GMT",
+      "published_iso": "2026-08-30T18:59:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30"
+    },
+    {
+      "title": "Exclusive: SpaceX Lays Groundwork For Turbine-Blade Factory to Solve Data Center Power Crunch",
+      "outlet": "The Information",
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNbjZJbXowc1htYzgyMFppeVBpc0h5NjFvbmtTbU1wbUlGbU5vYVJaN2JGaE4tY3l4QTBqY1NDenhJZ3NLQzFCbTZUV003Zk5vWkFwdkRrTDNSMnFIeUY1Y1N1aGFuekhRMTFSNFBWbUxkUGhDSXhWNERjUzJHcnNBTDVudC1kN1VoV0VpWk1RX3YtSmRMTF93LS16T1RyRnNrcXV3YnhHcUhNUU9xQ1RobGRfamIyRHNHUjBMMFI4N2VyTGdKR092VkJTenN4dU02clZNMjUxV2ZCRVpiaFk0?oc=5",
+      "published": "Sat, 29 Aug 2026 18:21:00 GMT",
+      "published_iso": "2026-08-29T18:21:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-29",
       "last_seen": "2026-08-30"
     }
   ]
