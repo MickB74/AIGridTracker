@@ -1474,15 +1474,23 @@ MORATORIUMS = [
      "lat": 34.75, "lon": -92.29, "expires": None, "as_of": "2026-08-12",
      "source": "https://www.nwaonline.com/news/2026/aug/04/little-rock-data-center-moratorium-falls-short-in/"},
     {"locality": "Coachella", "state": "CA", "level": "Local",
-     "status": "Enacted", "when": "Jun 4, 2026",
-     "note": "45-day moratorium on new data-center applications, adopted "
-             "unanimously alongside terminating the city's agreement with "
-             "Stronghold Power over a 400+-acre, six-data-center campus; "
-             "extended Jul 9, 2026 as the council moves toward a permanent "
-             "ban. Treat any specific expiry as unconfirmed — the council "
-             "was actively extending it as of this writing.",
-     "lat": 33.68, "lon": -116.17, "expires": None, "as_of": "2026-08-12",
-     "source": "https://www.nbcpalmsprings.com/2026/06/04/coachella-approves-data-center-moratorium-ends-stronghold-power-agreement"},
+     "status": "Enacted", "when": "Aug 26, 2026",
+     "note": "Permanent ban: Ordinance No. 1231, adopted unanimously "
+             "Aug 26, 2026 (first reading Aug 12, also unanimous), prohibits "
+             "large-scale data centers in all zoning districts, effective "
+             "30 days after adoption; accessory server rooms and IT "
+             "facilities incidental to a permitted use are exempt. Replaces "
+             "the 45-day moratorium adopted Jun 4 alongside terminating the "
+             "city's agreement with Stronghold Power over a 400+-acre, "
+             "six-data-center campus, later extended through Jun 3, 2027. "
+             "Second California city to ban data centers, after Monterey "
+             "Park; first in the Coachella Valley. Mayor Figueroa asked "
+             "staff to explore a ballot measure to entrench the ban. "
+             "Corroborated by KESQ, NBC Palm Springs, The Riverside Record, "
+             "MyNewsLA and KVCR.",
+     "lat": 33.68, "lon": -116.17, "expires": None, "as_of": "2026-08-29",
+     "source": "https://www.kvcrnews.org/local-news/2026-08-28/coachella-becomes-second-california-city-to-ban-data-centers-as-opposition-swells-in-golden-state",
+     "term": "standing"},
     {"locality": "Aurora", "state": "CO", "level": "Local",
      "status": "Rejected", "when": "Aug 10, 2026",
      "note": "Emergency resolution for a 6-month moratorium on data-center "
