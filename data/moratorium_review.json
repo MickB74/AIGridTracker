@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-24",
+  "generated": "2026-08-31",
   "findings": [
     {
       "kind": "expired",
@@ -16,6 +16,14 @@
       "status": "Enacted",
       "detail": "term ran to 2026-06-23; confirm whether it lapsed, was extended, or became permanent zoning",
       "source": "https://www.transylvaniatimes.com/news/transylvania-county-not-pursuing-data-centers/article_51ca8d5c-a379-4b4b-8676-480c6bda88dd.html"
+    },
+    {
+      "kind": "expired",
+      "locality": "Kings Mountain",
+      "state": "NC",
+      "status": "Enacted",
+      "detail": "term ran to 2026-08-25; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://www.cityofkm.com/AgendaCenter/ViewFile/Minutes/_02242026-934"
     },
     {
       "kind": "expired",
@@ -40,6 +48,14 @@
       "status": "Enacted",
       "detail": "term ran to 2026-08-14; confirm whether it lapsed, was extended, or became permanent zoning",
       "source": "https://www.news5cleveland.com/news/local-news/we-follow-through/massillon-puts-limits-on-future-data-centers-with-new-zoning-rules"
+    },
+    {
+      "kind": "expired",
+      "locality": "Hall County",
+      "state": "GA",
+      "status": "Enacted",
+      "detail": "term ran to 2026-08-25; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://accessnorthga.com/news/hall-co-approves-180-day-moratorium-includes-detention-centers"
     },
     {
       "kind": "expired",
@@ -130,6 +146,14 @@
       "source": "https://abc7chicago.com/post/aurora-city-council-consider-temporary-moratorium-put-pause-development-new-data-centers/17882682/"
     },
     {
+      "kind": "expired",
+      "locality": "Larimer County",
+      "state": "CO",
+      "status": "Enacted",
+      "detail": "term ran to 2026-08-25; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://www.larimer.gov/planning/temp-moratorium-data-centers"
+    },
+    {
       "kind": "dead-link",
       "locality": "Charlotte",
       "state": "NC",
@@ -160,270 +184,6 @@
       "status": "Proposed",
       "detail": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)> \u2014 https://legislature.vermont.gov/bill/status/2026/S.205",
       "source": "https://legislature.vermont.gov/bill/status/2026/S.205"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Digital Realty: Atlanta (West End), GA",
-      "state": "",
-      "status": "concession",
-      "detail": "HTTP 404 \u2014 https://saportareport.com/digital-realty-data-center-west-end-atlanta/sections/reports/johnruch/",
-      "source": "https://saportareport.com/digital-realty-data-center-west-end-atlanta/sections/reports/johnruch/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Digital Realty: Chicago, IL",
-      "state": "",
-      "status": "concession",
-      "detail": "HTTP 404 \u2014 https://blockclubchicago.org/2019/11/21/data-center-in-franklin-park-hit-with-fine-over-noise-complaints/",
-      "source": "https://blockclubchicago.org/2019/11/21/data-center-in-franklin-park-hit-with-fine-over-noise-complaints/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "CyrusOne: Yorkville, IL",
-      "state": "",
-      "status": "concession",
-      "detail": "HTTP 404 \u2014 https://www.chicagotribune.com/suburbs/aurora-beacon-news/ct-abn-cyrusone-yorkville-data-center-st-0927-20230926-story.html",
-      "source": "https://www.chicagotribune.com/suburbs/aurora-beacon-news/ct-abn-cyrusone-yorkville-data-center-st-0927-20230926-story.html"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "CyrusOne: Aurora, IL",
-      "state": "",
-      "status": "concession",
-      "detail": "HTTP 404 \u2014 https://www.dailyherald.com/news/20230815/cyrusone-aurora-data-center-noise-agreement/",
-      "source": "https://www.dailyherald.com/news/20230815/cyrusone-aurora-data-center-noise-agreement/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Switch: Grand Rapids, MI",
-      "state": "",
-      "status": "concession",
-      "detail": "HTTP 404 \u2014 https://www.bridgemi.com/business-watch/switch-data-center-michigan-tax-break-jobs",
-      "source": "https://www.bridgemi.com/business-watch/switch-data-center-michigan-tax-break-jobs"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Stack Infrastructure: Prince William County, VA",
-      "state": "",
-      "status": "concession",
-      "detail": "TimeoutError: The read operation timed out \u2014 https://www.washingtonpost.com/dc-md-va/2024/10/01/prince-william-data-center-digital-gateway-denied/",
-      "source": "https://www.washingtonpost.com/dc-md-va/2024/10/01/prince-william-data-center-digital-gateway-denied/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Stack Infrastructure: Hayward, CA",
-      "state": "",
-      "status": "concession",
-      "detail": "HTTP 404 \u2014 https://www.mercurynews.com/2025/stack-infrastructure-hayward-data-center-union-labor/",
-      "source": "https://www.mercurynews.com/2025/stack-infrastructure-hayward-data-center-union-labor/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "EdgeConneX: Douglas County, GA",
-      "state": "",
-      "status": "concession",
-      "detail": "HTTP 404 \u2014 https://www.ajc.com/news/douglas-county-data-center-denied/",
-      "source": "https://www.ajc.com/news/douglas-county-data-center-denied/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Core Scientific: Dalton, GA",
-      "state": "",
-      "status": "concession",
-      "detail": "HTTP 404 \u2014 https://www.dailycitizen.news/news/local_news/dalton-data-center-rezoning-approved/",
-      "source": "https://www.dailycitizen.news/news/local_news/dalton-data-center-rezoning-approved/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "CoreWeave: Lancaster, PA",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://lancasteronline.com/news/local/lancaster-data-center-agreement-s-benefit-to-community-questioned/article_b2654db6-c6e3-4719-8a0e-1f839c1e325e.html"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "CoreWeave: Kenilworth, NJ",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://abc7ny.com/post/community-rallies-giant-data-center-being-built-kenilworth-new-jersey/19053270/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "xAI (Colossus): Memphis, TN",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://dailymemphian.com/article/45382/memphis-city-council-approves-xai-community-benefits"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "OpenAI \u00b7 Oracle (Stargate): Abilene, TX",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.reporternews.com/story/news/local/2025/03/27/abilene-city-council-approves-incentive-agreement-for-stargate-data-center/82671532007/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "OpenAI \u00b7 Oracle (Stargate): Childress, TX",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.crusoecloud.com/news/crusoe-lancium-childress-texas-data-center"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Digital Realty: Atlanta (West End), GA",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://saportareport.com/digital-realty-data-center-west-end-atlanta/sections/reports/johnruch/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Digital Realty: Chicago, IL",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://blockclubchicago.org/2019/11/21/data-center-in-franklin-park-hit-with-fine-over-noise-complaints/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Equinix: Hampton, GA",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.henryherald.com/news/equinix-hampton-data-center-grid-upgrades/article_e2c5f5e0-1234-5678-9abc-def012345678.html"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Equinix: Dallas, TX",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.dallasnews.com/business/technology/2024/equinix-data-center-tax-abatement/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Vantage: Pittsboro, NC",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://chathamjournal.com/2025/vantage-data-center-pittsboro-rezoning/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Vantage: Sterling, VA (Loudoun County)",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.loudountimes.com/news/data-center-noise-complaints-ashburn/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "CyrusOne: Yorkville, IL",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.chicagotribune.com/suburbs/aurora-beacon-news/ct-abn-cyrusone-yorkville-data-center-st-0927-20230926-story.html"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "CyrusOne: Aurora, IL",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.dailyherald.com/news/20230815/cyrusone-aurora-data-center-noise-agreement/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "CyrusOne: Chandler, AZ",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.eastvalleytribune.com/news/chandler/cyrusone-noise-complaints-chandler/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Aligned: Pataskala, OH",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.newarkadvocate.com/story/news/local/pataskala/2024/aligned-data-center-pataskala-denied/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Switch: Clark County, NV (LAS 19)",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.switch.com/las-vegas/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Switch: Grand Rapids, MI",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.bridgemi.com/business-watch/switch-data-center-michigan-tax-break-jobs"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Stack Infrastructure: Prince William County, VA",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.washingtonpost.com/dc-md-va/2024/10/01/prince-william-data-center-digital-gateway-denied/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Stack Infrastructure: Hayward, CA",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.mercurynews.com/2025/stack-infrastructure-hayward-data-center-union-labor/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "EdgeConneX: Ashville, OH",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.dispatch.com/story/news/courts/2024/edgeconnex-ohio-supreme-court-tax-abatement/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "EdgeConneX: Douglas County, GA",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.ajc.com/news/douglas-county-data-center-denied/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "EdgeConneX: Bastrop County, TX",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.statesman.com/story/news/local/bastrop/2024/edgeconnex-data-center-tax-abatement/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Core Scientific: Marble, NC",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://mountainx.com/news/core-scientific-marble-nc-noise-complaints/"
-    },
-    {
-      "kind": "missing-source",
-      "locality": "Core Scientific: Dalton, GA",
-      "state": "",
-      "status": "concession",
-      "detail": "unusable as_of: None",
-      "source": "https://www.dailycitizen.news/news/local_news/dalton-data-center-rezoning-approved/"
     },
     {
       "kind": "undated-term",
@@ -667,14 +427,6 @@
     },
     {
       "kind": "unclassified-term",
-      "locality": "Coachella",
-      "state": "CA",
-      "status": "Enacted",
-      "detail": "no end date and no `term` declared \u2014 the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term`",
-      "source": "https://www.nbcpalmsprings.com/2026/06/04/coachella-approves-data-center-moratorium-ends-stronghold-power-agreement"
-    },
-    {
-      "kind": "unclassified-term",
       "locality": "Fairfield",
       "state": "AL",
       "status": "Enacted",
@@ -710,23 +462,15 @@
       "locality": "Bangor",
       "state": "ME",
       "status": "Enacted",
-      "detail": "ends 2026-10-10 (47.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-10 (40.0d) \u2014 watch for an extension",
       "source": "https://www.wabi.tv/2026/04/14/bangor-passes-180-day-moratorium-data-center-development/"
-    },
-    {
-      "kind": "expiring",
-      "locality": "Kings Mountain",
-      "state": "NC",
-      "status": "Enacted",
-      "detail": "ends 2026-08-25 (1.0d) \u2014 watch for an extension",
-      "source": "https://www.cityofkm.com/AgendaCenter/ViewFile/Minutes/_02242026-934"
     },
     {
       "kind": "expiring",
       "locality": "Augusta",
       "state": "GA",
       "status": "Enacted",
-      "detail": "ends 2026-09-19 (26.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-09-19 (19.0d) \u2014 watch for an extension",
       "source": "https://www.wjbf.com/news/augusta-commissioners-delaying-approval-of-data-center-ordinance-and-extending-moratorium-by-60-days/"
     },
     {
@@ -734,7 +478,7 @@
       "locality": "Vienna Township (Trumbull Co.)",
       "state": "OH",
       "status": "Enacted",
-      "detail": "ends 2026-10-16 (53.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-16 (46.0d) \u2014 watch for an extension",
       "source": "https://www.tribtoday.com/news/local-news/2026/08/vienna-extends-data-center-moratorium/"
     },
     {
@@ -742,23 +486,15 @@
       "locality": "Hogansville",
       "state": "GA",
       "status": "Enacted",
-      "detail": "ends 2026-09-01 (8.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-09-01 (1.0d) \u2014 watch for an extension",
       "source": "https://www.lagrangenews.com/news/hogansville-approves-90-day-moratorium-for-data-centers-9d59b175"
-    },
-    {
-      "kind": "expiring",
-      "locality": "Hall County",
-      "state": "GA",
-      "status": "Enacted",
-      "detail": "ends 2026-08-25 (1.0d) \u2014 watch for an extension",
-      "source": "https://accessnorthga.com/news/hall-co-approves-180-day-moratorium-includes-detention-centers"
     },
     {
       "kind": "expiring",
       "locality": "Birmingham",
       "state": "AL",
       "status": "Enacted",
-      "detail": "ends 2026-09-03 (10.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-09-03 (3.0d) \u2014 watch for an extension",
       "source": "https://www.wbrc.com/2026/03/04/birmingham-city-council-votes-pause-new-data-center-applications-six-months/"
     },
     {
@@ -766,7 +502,7 @@
       "locality": "Wixom",
       "state": "MI",
       "status": "Enacted",
-      "detail": "ends 2026-09-24 (31.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-09-24 (24.0d) \u2014 watch for an extension",
       "source": "https://www.wixomgov.org/departments/construction-development-services-building/data-center-moratorium-ordinance"
     },
     {
@@ -774,23 +510,15 @@
       "locality": "Front Royal",
       "state": "VA",
       "status": "Enacted",
-      "detail": "ends 2026-10-04 (41.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-04 (34.0d) \u2014 watch for an extension",
       "source": "https://www.nvdaily.com/nvdaily/council-oks-moratorium-on-data-center-applications/article_8bbfc9ce-d84e-5dd8-a4be-e8f9ee95cc94.html"
-    },
-    {
-      "kind": "expiring",
-      "locality": "Larimer County",
-      "state": "CO",
-      "status": "Enacted",
-      "detail": "ends 2026-08-25 (1.0d) \u2014 watch for an extension",
-      "source": "https://www.larimer.gov/planning/temp-moratorium-data-centers"
     },
     {
       "kind": "expiring",
       "locality": "Indio",
       "state": "CA",
       "status": "Enacted",
-      "detail": "ends 2026-10-16 (53.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-16 (46.0d) \u2014 watch for an extension",
       "source": "https://www.nbcpalmsprings.com/2026/07/16/indio-city-council-extends-data-center-moratorium-with-planning-commission-already-recommending-a-full-ban"
     },
     {
@@ -827,19 +555,11 @@
     },
     {
       "kind": "blocked",
-      "locality": "Perth (Fulton Co.)",
+      "locality": "Newfield (Tompkins Co.)",
       "state": "NY",
       "status": "Enacted",
-      "detail": "HTTP 429 (bot-blocked, check by hand)",
-      "source": "https://www.dailygazette.com/the_recorder/leader_herald/data-center-moratorium/article_28560f58-b336-4cae-8773-f0a04cd3001b.html"
-    },
-    {
-      "kind": "blocked",
-      "locality": "Tonawanda (Erie Co.)",
-      "state": "NY",
-      "status": "Enacted",
-      "detail": "HTTP 429 (bot-blocked, check by hand)",
-      "source": "https://www.beenews.com/ken_ton_bee/ken_ton_bee/news/town-adopts-one-year-moratorium-on-data-centers/article_b2afd139-7437-48f8-af10-1787cf849858.html"
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.tompkinsweekly.com/events/newfield-approves-one-year-moratorium-on-data-centers-fdcffc41"
     },
     {
       "kind": "blocked",
@@ -848,6 +568,22 @@
       "status": "Enacted",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
       "source": "https://www.chathamcountync.gov/Home/Components/News/News/17295/19"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Watauga County",
+      "state": "NC",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.wataugademocrat.com/news/county-commissioners-pass-a-one-year-data-center-moratorium-for-watauga-county/article_012ca886-b088-4aee-8321-6b0f851fcdca.html"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Clyde",
+      "state": "NC",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.themountaineer.com/"
     },
     {
       "kind": "blocked",
@@ -867,11 +603,27 @@
     },
     {
       "kind": "blocked",
+      "locality": "Merrillville",
+      "state": "IN",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://nwitimes.com/news/local/lake/merrillville/article_f506303d-f5ce-4bcc-bb4c-a6abf68fb24d.html"
+    },
+    {
+      "kind": "blocked",
       "locality": "Boardman",
       "state": "OH",
       "status": "Enacted",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
       "source": "https://www.wkbn.com/news/local-news/boardman-news/boardman-places-moratorium-on-data-centers/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "La Crosse County",
+      "state": "WI",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.wxow.com/news/la-crosse-county-board-approves-data-center-moratorium/article_89162c21-3240-4d86-9e2d-8a6c3489ddc8.html"
     },
     {
       "kind": "blocked",
@@ -891,6 +643,14 @@
     },
     {
       "kind": "blocked",
+      "locality": "Hogansville",
+      "state": "GA",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.lagrangenews.com/news/hogansville-approves-90-day-moratorium-for-data-centers-9d59b175"
+    },
+    {
+      "kind": "blocked",
       "locality": "Rochester Hills",
       "state": "MI",
       "status": "Enacted",
@@ -907,27 +667,27 @@
     },
     {
       "kind": "blocked",
-      "locality": "Hall County",
+      "locality": "Columbia County",
+      "state": "GA",
+      "status": "Proposed",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.wfxg.com/news/columbia-county-commission-chair-hopeful-proposes-new-data-center-legislation/article_42377dc5-1418-4aa6-8860-70c604fb4323.html"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Grant County",
+      "state": "IN",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.chronicle-tribune.com/news/commissioners-pass-data-center-moratorium/article_a55a569b-62b5-578c-912e-f183d461f1b9.html"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Coweta County",
       "state": "GA",
       "status": "Enacted",
-      "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://accessnorthga.com/news/hall-co-approves-180-day-moratorium-includes-detention-centers"
-    },
-    {
-      "kind": "blocked",
-      "locality": "Flint",
-      "state": "MI",
-      "status": "Enacted",
       "detail": "HTTP 429 (bot-blocked, check by hand)",
-      "source": "https://www.abc12.com/news/business/flint-city-council-approves-one-year-data-center-moratorium/article_8f64b736-0ba6-41bc-a6ce-032bbf62665c.html"
-    },
-    {
-      "kind": "blocked",
-      "locality": "Columbia",
-      "state": "MO",
-      "status": "Enacted",
-      "detail": "HTTP 429 (bot-blocked, check by hand)",
-      "source": "https://www.columbiamissourian.com/news/local/city-council-approves-data-center-definition-requests-moratorium/article_064eadce-c84e-4bfc-8f9c-b930741b94af.html"
+      "source": "https://www.times-herald.com/news/commissioners-approve-180-day-data-center-moratorium/article_29dd50b8-88fb-4424-98d9-9d87abfb4588.html"
     },
     {
       "kind": "blocked",
@@ -987,14 +747,6 @@
     },
     {
       "kind": "blocked",
-      "locality": "Cle Elum",
-      "state": "WA",
-      "status": "Enacted",
-      "detail": "HTTP 429 (bot-blocked, check by hand)",
-      "source": "https://www.dailyrecordnews.com/news/cle-elum-calls-timeout-on-development-applications-for-data-centers/article_43b63382-e7de-48da-9816-e760c936c24a.html"
-    },
-    {
-      "kind": "blocked",
       "locality": "Kittitas County",
       "state": "WA",
       "status": "Proposed",
@@ -1019,11 +771,11 @@
     },
     {
       "kind": "blocked",
-      "locality": "Dorchester County",
-      "state": "MD",
+      "locality": "Front Royal",
+      "state": "VA",
       "status": "Enacted",
       "detail": "HTTP 429 (bot-blocked, check by hand)",
-      "source": "http://www.stardem.com/news/data_centers/dorchester-county-council-hopes-to-get-ahead-on-regulating-data-center-proposals/article_af7ff49c-f072-4e08-85e9-1cd10bf1ca33.html"
+      "source": "https://www.nvdaily.com/nvdaily/council-oks-moratorium-on-data-center-applications/article_8bbfc9ce-d84e-5dd8-a4be-e8f9ee95cc94.html"
     },
     {
       "kind": "blocked",
@@ -1091,43 +843,27 @@
     },
     {
       "kind": "blocked",
-      "locality": "Hastings",
-      "state": "MN",
+      "locality": "Lyon County",
+      "state": "KS",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.emporiagazette.com/free/article_6a9583e6-0fba-4bb8-a30e-e0bbb928a316.html"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Camdenton",
+      "state": "MO",
       "status": "Enacted",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://kdwa.com/hastings-city-council-addresses-fentanyl-awareness-data-center-moratorium-and-environmental-litigation/"
+      "source": "https://www.lakenewsonline.com/stories/camdenton-aldermen-rescind-support-for-opportunity-zone-approve-moratorium-on-data-centers,199992"
     },
     {
       "kind": "blocked",
-      "locality": "CoreWeave: Kenilworth, NJ",
-      "state": "",
-      "status": "concession",
-      "detail": "HTTP 405 (bot-blocked, check by hand)",
-      "source": "https://citizenportal.ai/articles/8363361/new-jersey/union-county/kenilworth/residents-press-council-to-halt-coreweave-data-center-challenge-notice-and-confidentiality-orders"
-    },
-    {
-      "kind": "blocked",
-      "locality": "OpenAI \u00b7 Oracle (Stargate): Abilene, TX",
-      "state": "",
-      "status": "concession",
-      "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://www.reporternews.com/story/news/local/2025/03/27/abilene-city-council-approves-incentive-agreement-for-stargate-data-center/82671532007/"
-    },
-    {
-      "kind": "blocked",
-      "locality": "Equinix: Hampton, GA",
-      "state": "",
-      "status": "concession",
+      "locality": "Mesa case study",
+      "state": "AZ",
+      "status": "Permanent limits adopted",
       "detail": "HTTP 429 (bot-blocked, check by hand)",
-      "source": "https://www.henryherald.com/news/equinix-hampton-data-center-grid-upgrades/article_e2c5f5e0-1234-5678-9abc-def012345678.html"
-    },
-    {
-      "kind": "blocked",
-      "locality": "Vantage: Pittsboro, NC",
-      "state": "",
-      "status": "concession",
-      "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://chathamjournal.com/2025/vantage-data-center-pittsboro-rezoning/"
+      "source": "https://www.themesatribune.com/news/mesa-council-to-vote-on-data-center-controls/article_95cfba83-0015-4c0e-aa8e-116cef4c8c6e.html"
     },
     {
       "kind": "blocked",
@@ -1135,7 +871,7 @@
       "state": "",
       "status": "concession",
       "detail": "HTTP 429 (bot-blocked, check by hand)",
-      "source": "https://www.loudountimes.com/news/data-center-noise-complaints-ashburn/"
+      "source": "https://www.loudounnow.com/news/sterling-residents-raise-alarms-over-off-grid-data-center/article_3481d7fd-11ef-4948-a951-8c4ee6e69f2f.html"
     },
     {
       "kind": "blocked",
@@ -1143,31 +879,15 @@
       "state": "",
       "status": "concession",
       "detail": "HTTP 429 (bot-blocked, check by hand)",
-      "source": "https://www.eastvalleytribune.com/news/chandler/cyrusone-noise-complaints-chandler/"
+      "source": "https://www.eastvalleytribune.com/residents-skeptical-about-noise-declines-at-data-center/article_9edb4c85-ceb9-54e9-9b0e-ab4b6390d04e.html"
     },
     {
       "kind": "blocked",
-      "locality": "Aligned: Pataskala, OH",
+      "locality": "EdgeConneX: Douglas County, GA",
       "state": "",
       "status": "concession",
-      "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://www.newarkadvocate.com/story/news/local/pataskala/2024/aligned-data-center-pataskala-denied/"
-    },
-    {
-      "kind": "blocked",
-      "locality": "EdgeConneX: Ashville, OH",
-      "state": "",
-      "status": "concession",
-      "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://www.dispatch.com/story/news/courts/2024/edgeconnex-ohio-supreme-court-tax-abatement/"
-    },
-    {
-      "kind": "blocked",
-      "locality": "Core Scientific: Marble, NC",
-      "state": "",
-      "status": "concession",
-      "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://mountainx.com/news/core-scientific-marble-nc-noise-complaints/"
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.douglascountysentinel.com/douglasville_sentinel/county-rejects-plans-for-700-acre-data-center-campus/article_a5761e68-bcdb-5537-a954-b2a948460ea3.html"
     }
   ]
 }

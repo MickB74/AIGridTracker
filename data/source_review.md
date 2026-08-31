@@ -1,8 +1,21 @@
 # SOURCES review queue
-_Generated 2026-08-24 · 149 keys_
+_Generated 2026-08-31 · 149 keys_
 
 ## dead (1)
-- **`jlarc_va_2024`** — URLError: <urlopen error timed out> · <https://jlarc.virginia.gov/pdfs/reports/Rpt591.pdf>
+- **`usgs_water`** — URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)> · <https://www.usgs.gov/mission-areas/water-resources/science/thermoelectric-power-water-use>
+
+## orphan (11)
+- **`ashburn_buyout`** — defined but never referenced — delete it or wire it up · <https://www.nbcwashington.com/news/local/northern-virginia/data-center-expansion-loudoun-county-homeowners-buyout-offers/>
+- **`ga_eminent`** — defined but never referenced — delete it or wire it up · <https://fortune.com/2026/07/26/georgia-power-utility-company-eminent-domain-grid-expansion-data-center/>
+- **`gjf_subsidy`** — defined but never referenced — delete it or wire it up · <https://subsidytracker.goodjobsfirst.org/>
+- **`marcellus_lease`** — defined but never referenced — delete it or wire it up · <https://extension.psu.edu/energy/marcellus-shale-and-natural-gas/landowner-leasing-and-royalties>
+- **`mason_buyout`** — defined but never referenced — delete it or wire it up · <https://wchstv.com/news/local/voluntary-buyout-offers-rolled-out-for-meadowlands-estates-homes-near-data-center>
+- **`nuisance_law`** — defined but never referenced — delete it or wire it up · <https://windhamlaw.com/what-damages-can-you-recover-in-a-data-center-nuisance-lawsuit/>
+- **`salem_bloc`** — defined but never referenced — delete it or wire it up · <https://www.timesleader.com/news/1735892/96-salem-twp-landowners-complete-historic-1700-acre-sale-for-major-data-center-campus>
+- **`salem_bloc2`** — defined but never referenced — delete it or wire it up · <https://www.timesleader.com/news/1745226/1-2-billion-land-deal-for-second-data-center-project-in-salem-township-announced-by-4-3-group>
+- **`usda_land`** — defined but never referenced — delete it or wire it up · <https://www.nass.usda.gov/Publications/Todays_Reports/reports/land0824.pdf>
+- **`usda_quickstats`** — defined but never referenced — delete it or wire it up · <https://quickstats.nass.usda.gov/>
+- **`yahoo_finance`** — defined but never referenced — delete it or wire it up · <https://finance.yahoo.com/>
 
 ## flaky (4)
 - **`eia930`** — HTTP 503 — transient, recheck before touching it · <https://www.eia.gov/opendata/browser/electricity/rto/fuel-type-data>
