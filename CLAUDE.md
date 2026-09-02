@@ -29,7 +29,7 @@ anywhere.
 python3 build_site.py
 ```
 
-Writes `web/` (~515 pages) plus `sitemap.xml`, `robots.txt`, and both
+Writes `web/` (~565 pages) plus `sitemap.xml`, `robots.txt`, and both
 `vercel.json` files. Env overrides: `SITE_URL`, `GC_URL`, `FORMSPREE_ID`.
 `NEWS_FREEZE=1` pins the news/YouTube fetches to the committed cache — use it
 for any rebuild that isn't specifically refreshing news, so the diff shows only
