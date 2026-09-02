@@ -4967,8 +4967,16 @@ def build_blog_post(story, prev_post, next_post):
         f'<meta property="article:published_time" '
         f'content="{story["date"].isoformat()}">\n'
         f'<meta property="article:author" content="{esc(story["author"])}">')
+    # Headlines here run 70-130 chars, so the SERP <title> takes the
+    # hand-written `seo_title` (<= 60 chars, keyword first) when a story has
+    # one, and drops the site suffix rather than let _seo_clip() cut the
+    # headline mid-sentence. The full headline still goes to og:title and h1.
+    seo_title = story.get("seo_title", title_clean).replace("\\$", "$")
+    page_title = f"{seo_title} — AI GridWatch"
+    if len(page_title) > 60:
+        page_title = seo_title
     return page(
-        f"{title_clean} — AI GridWatch",
+        page_title,
         summary_clean,
         body, f"{SITE_URL}/blog/{story['id']}", depth=1,
         og_type="article", og_extra=og_extra,
@@ -8067,6 +8075,32 @@ def _story_news_section_html(group, heading="Recent news"):
 </section>"""
 
 
+def _mora_title_outcome(m):
+    """(long, short) outcome phrases for a community page's SERP title.
+
+    Derived from `effective_status`, never `status`, so a lapsed pause
+    titles itself "expired", not "enacted". The long form adds the one fact
+    a searcher acts on — the end date or that the ban is permanent.
+    """
+    import datetime as _dt
+    st = str(m.effective_status)
+    short = st.lower()
+    end = None
+    if has_value(m.expires):
+        try:
+            end = _dt.date.fromisoformat(str(m.expires)[:10]).strftime("%b %Y")
+        except ValueError:
+            end = None
+    if st == "Enacted":
+        if getattr(m, "term_kind", None) == "standing":
+            return "permanent ban", short
+        if end:
+            return f"enacted to {end}", short
+    if st == "Expired" and end:
+        return f"expired {end}", short
+    return short, short
+
+
 def build_community(m, news_group=None):
     """One page per tracked moratorium row — the "[town] data center" query.
 
@@ -8175,14 +8209,18 @@ def build_community(m, news_group=None):
 """
     slug = _loc_slug(loc, m.state)
     title_loc = loc if is_state_level else f"{loc}, {m.state}"
-    # Long locality names ("Prince George's County, MD") would push the
-    # SERP title past 60 chars and get clipped mid-phrase; drop the suffix
-    # rather than let the ellipsis eat the keyword.
-    title_full = f"{title_loc} data center moratorium: status & sources"
-    if len(title_full) > 60:
-        title_full = f"{title_loc} data center moratorium"
-    if len(title_full) > 60:
-        title_full = f"{title_loc} moratorium"
+    # The SERP title leads with the locality and the outcome — "status &
+    # sources" was filler that Search Console showed clipped. Try the most
+    # specific form first and fall back rather than let _seo_clip() eat the
+    # keyword on long names ("Prince George's County, MD").
+    outcome_long, outcome_short = _mora_title_outcome(m)
+    title_full = f"{title_loc} data center moratorium: {outcome_long}"
+    for alt in (f"{title_loc} data center moratorium: {outcome_short}",
+                f"{title_loc} data center moratorium",
+                f"{title_loc} moratorium"):
+        if len(title_full) <= 60:
+            break
+        title_full = alt
     return page(
         title_full,
         f"Current status of the data center action in {loc}"
