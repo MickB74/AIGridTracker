@@ -7506,19 +7506,38 @@ def build_moratoriums():
             vals.append("Unverified")
         return "|".join(v for v in vals if v)
 
+    MORA_PAGE = 25
+    # The table is the heaviest thing on the site's heaviest page: ~390 rows
+    # of notes and provenance was 300 KB of the 450 KB moratoriums.html. Only
+    # the first page ships in the HTML; the rest is the same server-rendered
+    # cells, written once to data/moratoriums-table.json and fetched the
+    # first time a reader filters, searches, pages, or arrives on a #row
+    # deep link. Rendering stays in Python so the JSON rows are byte-for-byte
+    # what the static rows would have been. Every locality still has its own
+    # crawlable page under /communities/, linked from the index and the
+    # state pages, so nothing leaves the index by moving off this page.
+    _table_rows = [
+        {"id": str(m.id), "state": str(m.state), "status": _row_status(m),
+         "html": (
+            f"<td><a href=\"communities/{_loc_slug(m.locality, m.state)}.html\">"
+            f"{esc(str(m.locality))}</a></td>"
+            f"<td><a href=\"states/{slugify(STATE_PUCS_DF[STATE_PUCS_DF['abbrev'] == m.state].iloc[0]['state'])}.html\">"
+            f"{esc(str(m.state))}</a></td>"
+            f"<td>{esc(str(m.level))}</td>"
+            f"<td>{_mora_status_cell(m)}</td>"
+            f"<td>{esc(str(m.when))}</td>"
+            f"<td>{cell(m.note, dash='')}</td>"
+            f"<td>{_mora_source_cell(m)}</td>")}
+        for m in MORATORIUMS_DF.itertuples()]
+    (WEB / "data").mkdir(parents=True, exist_ok=True)
+    (WEB / "data" / "moratoriums-table.json").write_text(
+        json.dumps({"count": len(_table_rows), "rows": _table_rows},
+                   ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8")
     rows = "\n".join(
-        f"<tr id=\"{esc(str(m.id))}\" data-state=\"{esc(str(m.state))}\" "
-        f"data-status=\"{esc(_row_status(m))}\">"
-        f"<td><a href=\"communities/{_loc_slug(m.locality, m.state)}.html\">"
-        f"{esc(str(m.locality))}</a></td>"
-        f"<td><a href=\"states/{slugify(STATE_PUCS_DF[STATE_PUCS_DF['abbrev'] == m.state].iloc[0]['state'])}.html\">"
-        f"{esc(str(m.state))}</a></td>"
-        f"<td>{esc(str(m.level))}</td>"
-        f"<td>{_mora_status_cell(m)}</td>"
-        f"<td>{esc(str(m.when))}</td>"
-        f"<td>{cell(m.note, dash='')}</td>"
-        f"<td>{_mora_source_cell(m)}</td></tr>"
-        for m in MORATORIUMS_DF.itertuples())
+        f"<tr id=\"{esc(r['id'])}\" data-state=\"{esc(r['state'])}\" "
+        f"data-status=\"{esc(r['status'])}\">{r['html']}</tr>"
+        for r in _table_rows[:MORA_PAGE])
 
     # Filter options. State dropdown labels use full state names (looked up
     # from the PUC table) but filter on the abbreviation the column carries.
@@ -7534,7 +7553,6 @@ def build_moratoriums():
     mora_status_options = '<option value="">All statuses</option>' + "".join(
         f'<option value="{esc(str(s))}">{esc(str(s))}</option>' for s in _statuses)
 
-    MORA_PAGE = 25
     outcomes = "\n".join(_outcome_card(o) for o in MORATORIUM_OUTCOMES)
     schema_rows = "\n".join(
         f"<tr><td><code>{esc(c)}</code></td><td>{esc(d)}</td></tr>"
@@ -7685,6 +7703,10 @@ def build_moratoriums():
   <th>Status</th><th>When</th><th>Note</th><th>Source</th></tr>
   {rows}</table>
   </div>
+  <noscript><p class="muted">Showing the first {MORA_PAGE} of {total}. The
+  full list is on the <a href="communities/index.html">community pages
+  index</a> and in the <a href="data/moratoriums.csv">CSV download</a>.</p>
+  </noscript>
   <p id="moraMore" style="margin:12px 0 0;display:none">
     <button id="moraMoreBtn" class="btn ghost" type="button"></button>
     <button id="moraAllBtn" class="btn ghost" type="button">Show all</button>
@@ -7714,14 +7736,43 @@ def build_moratoriums():
     var more = document.getElementById('moraMore');
     var moreBtn = document.getElementById('moraMoreBtn');
     var allBtn = document.getElementById('moraAllBtn');
+    var table = document.getElementById('moraTable');
     var rows = Array.prototype.slice.call(
       document.querySelectorAll('#moraTable tr[data-state]'));
 
-    // The full table is ~300 rows of reference material. Showing it all by
-    // default buries every section below it, so it pages in — the filters
-    // above are the real way in, and paging keeps them on screen.
+    // Only the first page is in the HTML. The rest arrives from JSON the
+    // first time anything needs it (a filter, a search, paging, a #row
+    // link) and replaces the static rows in place.
     var PAGE = {MORA_PAGE};
+    var TOTAL = {total};
     var limit = PAGE;
+    var loaded = false, loading = null;
+
+    function ensureAll(cb) {{
+      if (loaded) {{ cb(); return; }}
+      if (!loading) {{
+        count.textContent = 'Loading all ' + TOTAL + ' rows…';
+        loading = fetch('data/moratoriums-table.json')
+          .then(function(r) {{ return r.json(); }})
+          .then(function(d) {{
+            var esc = function(v) {{ return String(v).replace(/"/g, '&quot;'); }};
+            var html = d.rows.map(function(r) {{
+              return '<tr id="' + esc(r.id) + '" data-state="' + esc(r.state)
+                   + '" data-status="' + esc(r.status) + '">' + r.html + '</tr>';
+            }}).join('');
+            rows.forEach(function(tr) {{ tr.parentNode.removeChild(tr); }});
+            table.tBodies[0].insertAdjacentHTML('beforeend', html);
+            rows = Array.prototype.slice.call(
+              document.querySelectorAll('#moraTable tr[data-state]'));
+            loaded = true;
+          }})
+          .catch(function() {{
+            count.textContent = 'Could not load the full table — try the '
+                              + 'CSV download below.';
+          }});
+      }}
+      loading.then(cb);
+    }}
 
     function apply() {{
       var state = stateSel.value;
@@ -7739,6 +7790,7 @@ def build_moratoriums():
         tr.style.display = visible ? '' : 'none';
         if (visible) shown++;
       }});
+      if (!loaded) matched = TOTAL;
       var hidden = matched - shown;
       if (state || status || kwVal) {{
         var parts = [(hidden ? shown + ' of ' + matched : String(matched))
@@ -7748,8 +7800,8 @@ def build_moratoriums():
         if (kwVal) parts.push('"' + kwVal + '"');
         count.textContent = parts.join(' · ');
       }} else {{
-        count.textContent = (hidden ? shown + ' of ' + rows.length + ' shown · '
-                                    : '') + rows.length + ' tracked actions';
+        count.textContent = (hidden ? shown + ' of ' + TOTAL + ' shown · '
+                                    : '') + TOTAL + ' tracked actions';
       }}
       more.style.display = hidden ? '' : 'none';
       moreBtn.textContent = 'Show ' + Math.min(PAGE, hidden) + ' more';
@@ -7760,24 +7812,53 @@ def build_moratoriums():
       if (status) qs.set('status', status);
       if (kwVal) qs.set('q', kwVal);
       var qStr = qs.toString();
-      history.replaceState(null, '', qStr ? ('?' + qStr) : location.pathname);
+      history.replaceState(null, '', (qStr ? ('?' + qStr) : location.pathname)
+                                     + location.hash);
     }}
 
-    function refilter() {{ limit = PAGE; apply(); }}
+    function refilter() {{ limit = PAGE; ensureAll(apply); }}
     stateSel.addEventListener('change', refilter);
     statusSel.addEventListener('change', refilter);
     kw.addEventListener('input', refilter);
     reset.addEventListener('click', function() {{
       stateSel.value = ''; statusSel.value = ''; kw.value = ''; refilter();
     }});
-    moreBtn.addEventListener('click', function() {{ limit += PAGE; apply(); }});
-    allBtn.addEventListener('click', function() {{ limit = rows.length; apply(); }});
+    moreBtn.addEventListener('click', function() {{
+      limit += PAGE; ensureAll(apply); }});
+    allBtn.addEventListener('click', function() {{
+      ensureAll(function() {{ limit = rows.length; apply(); }}); }});
 
     var q = new URLSearchParams(location.search);
     if (q.get('state')) stateSel.value = q.get('state');
     if (q.get('status')) statusSel.value = q.get('status');
     if (q.get('q')) kw.value = q.get('q');
-    apply();
+    var hashId = (location.hash || '').slice(1);
+    if (hashId && !document.getElementById(hashId)) {{
+      // A #row link from the change feed or an alert: load everything,
+      // show all, then jump to the row.
+      ensureAll(function() {{
+        limit = rows.length; apply();
+        var el = document.getElementById(hashId);
+        // The browser's own fragment scroll fires on `load`, which can be
+        // well after this callback, and lands where the row sat before the
+        // full table rendered. Keep nudging until the row is actually on
+        // screen or three seconds pass.
+        if (el) {{
+          var tries = 0;
+          (function nudge() {{
+            var r = el.getBoundingClientRect();
+            if (window.innerHeight &&
+                (r.top < 0 || r.bottom > window.innerHeight))
+              el.scrollIntoView({{block: 'center'}});
+            if (++tries < 12) setTimeout(nudge, 250);
+          }})();
+        }}
+      }});
+    }} else if (stateSel.value || statusSel.value || kw.value) {{
+      ensureAll(apply);
+    }} else {{
+      apply();
+    }}
   }})();
   </script>
   {provenance_html("MORATORIUMS_DF")}

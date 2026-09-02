@@ -413,6 +413,14 @@ published pages are static files.
   un-retired, and a destination that is not a live page fails the build.
   Renamed localities should still get a `_COMMUNITY_SLUG_ALIASES` entry so
   they redirect to the right locality rather than to the state.
+- **The moratoriums table ships one page of rows; the rest is JSON.**
+  `build_moratoriums()` renders every row's cells in Python, writes them all
+  to `web/data/moratoriums-table.json`, and puts only the first 25 in the
+  HTML. The page script fetches the JSON the first time a reader filters,
+  searches, pages, or arrives on a `#row` deep link, and swaps the rows in.
+  That took `moratoriums.html` from 453 KB to 179 KB. Keep cell rendering
+  in Python: the JSON rows must be byte-identical to what the static rows
+  would be, and each locality still has its own crawlable community page.
 - **`web/404.html` is a real page.** Vercel serves it for any miss; it
   carries `<base href="/">` because it renders at arbitrary depths, and
   `noindex` so it never ranks.
