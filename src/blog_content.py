@@ -71,6 +71,188 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    # ── New Jersey's ban wave, and the trouble with counting it ──
+    {
+        "id": "new-jersey-ban-count-2026",
+        "art": "moratorium",
+        "section": "stories",
+        "title": "Four Groups Counted New Jersey's Data Center Bans. They Got 37, 38, 50 and 69.",
+        "date": _dt.date(2026, 9, 2),
+        "author": "GridWatch AI",
+        "tags": ["New Jersey", "moratoriums", "bans", "ordinances",
+                 "Millville", "Vineland", "Monroe Township", "Andover",
+                 "Stafford Township", "East Brunswick", "litigation",
+                 "Data Center Fair Share Act", "analysis"],
+        "summary": (
+            "Three New Jersey towns banned data centers on the same night in "
+            "late August. Four organizations published a statewide count in "
+            "the same two weeks and got four different numbers, because they "
+            "are counting different things. Here is why the discrepancy "
+            "matters more than any of the four totals \u2014 and what to ask "
+            "your clerk before you cite one at a hearing."
+        ),
+        "body": """
+Three New Jersey towns banned data centers on the same night in late August.
+That is now an ordinary week here. It raises a question a resident three weeks
+from a zoning vote actually needs answered: how many towns have done this, and
+is mine one of them?
+
+Four organizations published a count in the last two weeks of August. They got
+37, 38, "more than 50," and 69.
+
+None of them is wrong, exactly. They are counting different things. Working out
+why is more useful than any of the four numbers, because the same ambiguity is
+sitting inside your own town's ordinance, and it is the first thing a
+developer's attorney will go looking for.
+
+## The four counts
+
+- **38.** The Climate Revolution Action Network's tally, reported by
+  [94.3 The Point on August 27](https://943thepoint.com/ixp/385/p/data-center-bans-sweep-new-jersey/),
+  which made Jackson "the 38th New Jersey community" to act.
+- **~38.** [datacenterbans.com](https://www.datacenterbans.com/), a national
+  tracker built by Will Manidis and last updated August 28, counts "roughly 38
+  municipalities that have blocked data centers by local ordinance, the most of
+  any state."
+- **More than 50.** Charlie Kratovil of Food and Water Watch, quoted by
+  [Patch](https://patch.com/new-jersey/eastbrunswick/data-centers-banned-east-brunswick-environmental-group-applauds-move)
+  the night East Brunswick acted: "East Brunswick now joins more than 50 other
+  New Jersey communities in taking this action."
+- **69.** The Pinelands Preservation Alliance's
+  [tracker](https://pinelandsalliance.org/datacenters/): "As of August 27,
+  2026, the following 69 New Jersey municipalities have banned data centers."
+
+Our own [moratorium tracker](/moratoriums.html) carries 67 New Jersey
+localities — 62 recorded as enacted, five as proposed. That is the most of any
+state; nationally we have 317 enacted rows across 39 states.
+
+We should be equally honest about the soft part of our own number. Forty of
+those 67 New Jersey rows are sourced to the Pinelands list itself, with no
+ordinance number and no adoption date we have read. They carry the date we read
+the list, not the date the town acted. That is a weaker claim than our rows for
+Stafford or East Brunswick, and the tracker marks them as such.
+
+## Why the counts diverge
+
+Three reasons, all of which matter for your town.
+
+**A ban, a moratorium and a zoning amendment are not the same instrument.**
+Stafford Township's Ordinance 2026-22, [reported by
+Patch](https://patch.com/new-jersey/barnegat-manahawkin/data-center-ban-approved-stafford-township),
+says it plainly: "All data centers are hereby prohibited from operating
+anywhere in the Township of Stafford." East Brunswick's Ordinance 26-21 does
+something narrower — Patch reported it defines data centers and makes them a
+prohibited use in all commercial, business and industrial zoning districts.
+Both get counted as bans. Only one is a blanket prohibition on its face, and
+the difference is exactly where an application in a district nobody listed
+would go.
+
+**Introduced is not adopted.** Jersey City introduced a ban in July; our
+tracker still carries it as proposed, along with Howell, Andover, North
+Plainfield and Plainfield. A count that includes introductions runs ahead of a
+count that waits for second reading. The Inquirer
+[reported in early August](https://www.inquirer.com/south-jersey/monroe-township-data-center-lawsuit-ban-collingswood-20260805.html)
+that Collingswood had a data center ban headed for final passage in early
+September. We have not confirmed the outcome, so we are not counting it, and
+neither should you until you see the adopted text.
+
+**Documentation costs time.** The largest count is also the one with the least
+per-town paperwork: most entries on the Pinelands list carry no ordinance
+number. That is not a knock on a tracker doing more than anyone else in the
+state. It is a warning about what happens to an undocumented number once it is
+repeated in a council chamber.
+
+## The number is not your argument. The ordinance is.
+
+If you stand up and say sixty-nine New Jersey towns have banned these, expect
+to be asked which ones — and expect the applicant's attorney to have read three
+of them and found one that only regulates building height.
+
+The stronger move is to bring a single ordinance, ideally from a town that
+resembles yours, and read the operative sentence out loud. Ask your clerk for
+five things: the ordinance number, the **adopted** text rather than the
+introduced draft, the zoning districts it covers, the effective date, and
+whether any pending application was grandfathered. That last one decides
+everything.
+
+## What a ban actually stops
+
+Three New Jersey cases, in increasing order of how much the ban accomplished.
+
+**Vineland: the wave arrived after the vote.** On August 18 the Vineland
+planning board approved the site plan for the second phase of a 300 MW campus
+being built by DataOne for Nebius, whose capacity there is tied to a Microsoft
+deal [WHYY](https://whyy.org/articles/vineland-planning-board-approves-data-center-plan/)
+described as worth 17 billion dollars. WHYY reported a six-hour hearing
+attended by a couple hundred people, that nobody spoke in favor during public
+comment, and that the 8–1 approval drew boos from the room. Phase one was
+already under construction. A citywide ban passed this month would not touch
+any of it. See our [Vineland briefing](/communities/vineland-nj.html).
+
+**Millville: a ban against a proposal never formally filed.** The Board of
+Commissioners banned data centers citywide on May 19, which
+[News 12](https://newjersey.news12.com/2026/05/20/millville-bans-data-centers-killing-largest-proposed-facility-in-new-jersey-history/77eDMHsKNvb6HkPeGLzLLN)
+reported killed the A1 Data Center, describing it as a 2.6 million square foot
+facility that would have drawn 1.4 GW at full capacity. The developer's own
+[master plan page](https://www.a1datacenter.net/master-plan-development)
+advertises the site at 1300 Wheaton Avenue as a "66-acre master-planned
+development" with "2.9M SQ FT of optimized technical space," a "1.4 GW" scale
+horizon, "49 MW Live redundant substation energy" today, and a five-acre
+freshwater cooling pond. Note that the two square-footage figures do not match:
+2.6 million from the newsroom, 2.9 million from the developer. Cite whichever
+you want, but say whose number it is. Our project dossier records that no site
+plan was ever formally submitted to the city — which is worth knowing before
+you describe the ban as having stopped a project that was, on the public
+record, still a marketing page. See our
+[Millville briefing](/communities/millville-nj.html).
+
+**Monroe Township and Andover: banned, then sued.** Monroe adopted a
+township-wide ban on April 22 that reached previously approved projects. On
+June 5, Hexa Builders filed a 104-page, 20-count complaint in Gloucester County
+Superior Court seeking 300 million dollars, later removed to federal court in
+Camden. Among the counts is a First Amendment theory: per the
+[Jersey Vindicator's](https://jerseyvindicator.org/2026/08/01/developer-challenges-gloucester-county-data-center-ban-on-free-speech-grounds)
+reading of the filing, Hexa argues data centers are used "in sending email and
+text messages, using social media, storing data to be retrieved from
+internet-based searches," so restricting them burdens speech. Monroe's
+attorney, Todd Gelfand, moved to dismiss on July 28, arguing the ban is
+ordinary land-use regulation and that a township has a right to amend zoning in
+response to public objection; the Inquirer reported that U.S. District Judge
+Edward Kiel had not ruled as of early August. Andover Township drew a separate
+suit on July 10, when National Land Developers — which holds 248 Stickles Pond
+Road — asked the Sussex County court to void Ordinance 2026-13, alleging
+defective notice and an arbitrary Land Use Board review.
+[WRNJ](https://wrnjradio.com/developer-files-lawsuit-challenging-andover-township-data-center-ordinance/)
+reported township officials said they intend to defend and have no interest in
+settling.
+
+Neither suit has produced a ruling. That is the point. For a town with a live
+application, a ban is the start of the fight, not the end of it — and a town
+that acts before an application lands is in a materially stronger position than
+one that acts after.
+
+## The state layer
+
+Municipal bans are not New Jersey's only lever. On July 7, Gov. Sherrill signed
+the Data Center Fair Share Act (S731/A796), which
+[the governor's office](https://www.nj.gov/governor/news/2026/20260707a.shtml)
+describes as creating "a new ratepayer class and rate structure for data
+centers, ensuring they pay for their own energy use and associated grid
+infrastructure," and requiring large loads to "cut back before residential
+ratepayers are impacted" when the grid is strained. A town that cannot get a
+ban through can still make the cost-shifting argument the state has now written
+into law.
+
+## See also
+
+- [New Jersey state page](/states/new-jersey.html) — every tracked locality,
+  project and ban in the state
+- [Moratorium tracker](/moratoriums.html) — 317 enacted rows across 39 states,
+  each with its own source and read date
+- [Project tracker](/projects.html) — the Vineland, Millville, Monroe and
+  Andover dossiers, with the permit paper trail for each
+""",
+    },
     # ── The gas buildout, the water behind it, and the notice being deleted ──
     {
         "id": "gas-buildout-water-notice-2026",
