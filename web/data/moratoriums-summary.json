@@ -1,0 +1,251 @@
+{
+  "name": "AI GridWatch moratorium tracker \u2014 summary",
+  "generated": "2026-09-02",
+  "license": "CC BY 4.0",
+  "source_page": "https://aigridwatch.com/moratoriums",
+  "count": 386,
+  "states": 39,
+  "enacted": 317,
+  "proposed": 36,
+  "official_sourced": 27,
+  "by_state": {
+    "CO": {
+      "total": 6,
+      "enacted": 4,
+      "proposed": 0
+    },
+    "MD": {
+      "total": 14,
+      "enacted": 13,
+      "proposed": 1
+    },
+    "NV": {
+      "total": 3,
+      "enacted": 2,
+      "proposed": 0
+    },
+    "IA": {
+      "total": 15,
+      "enacted": 12,
+      "proposed": 2
+    },
+    "IL": {
+      "total": 8,
+      "enacted": 6,
+      "proposed": 1
+    },
+    "UT": {
+      "total": 1,
+      "enacted": 1,
+      "proposed": 0
+    },
+    "WI": {
+      "total": 12,
+      "enacted": 11,
+      "proposed": 1
+    },
+    "RI": {
+      "total": 1,
+      "enacted": 1,
+      "proposed": 0
+    },
+    "MI": {
+      "total": 31,
+      "enacted": 21,
+      "proposed": 0
+    },
+    "TX": {
+      "total": 9,
+      "enacted": 4,
+      "proposed": 4
+    },
+    "GA": {
+      "total": 18,
+      "enacted": 13,
+      "proposed": 2
+    },
+    "NY": {
+      "total": 11,
+      "enacted": 8,
+      "proposed": 3
+    },
+    "CT": {
+      "total": 3,
+      "enacted": 1,
+      "proposed": 1
+    },
+    "MO": {
+      "total": 8,
+      "enacted": 8,
+      "proposed": 0
+    },
+    "ME": {
+      "total": 4,
+      "enacted": 3,
+      "proposed": 0
+    },
+    "NC": {
+      "total": 30,
+      "enacted": 22,
+      "proposed": 3
+    },
+    "FL": {
+      "total": 13,
+      "enacted": 11,
+      "proposed": 1
+    },
+    "OH": {
+      "total": 19,
+      "enacted": 16,
+      "proposed": 1
+    },
+    "TN": {
+      "total": 8,
+      "enacted": 7,
+      "proposed": 1
+    },
+    "CA": {
+      "total": 7,
+      "enacted": 7,
+      "proposed": 0
+    },
+    "WA": {
+      "total": 13,
+      "enacted": 11,
+      "proposed": 2
+    },
+    "NM": {
+      "total": 3,
+      "enacted": 3,
+      "proposed": 0
+    },
+    "KY": {
+      "total": 12,
+      "enacted": 12,
+      "proposed": 0
+    },
+    "NJ": {
+      "total": 67,
+      "enacted": 62,
+      "proposed": 5
+    },
+    "IN": {
+      "total": 18,
+      "enacted": 18,
+      "proposed": 0
+    },
+    "AR": {
+      "total": 6,
+      "enacted": 4,
+      "proposed": 0
+    },
+    "OR": {
+      "total": 4,
+      "enacted": 2,
+      "proposed": 2
+    },
+    "WY": {
+      "total": 1,
+      "enacted": 0,
+      "proposed": 0
+    },
+    "SC": {
+      "total": 5,
+      "enacted": 5,
+      "proposed": 0
+    },
+    "VA": {
+      "total": 6,
+      "enacted": 4,
+      "proposed": 2
+    },
+    "OK": {
+      "total": 3,
+      "enacted": 2,
+      "proposed": 0
+    },
+    "MN": {
+      "total": 8,
+      "enacted": 8,
+      "proposed": 0
+    },
+    "AL": {
+      "total": 8,
+      "enacted": 8,
+      "proposed": 0
+    },
+    "PA": {
+      "total": 3,
+      "enacted": 2,
+      "proposed": 1
+    },
+    "AZ": {
+      "total": 2,
+      "enacted": 1,
+      "proposed": 1
+    },
+    "KS": {
+      "total": 3,
+      "enacted": 2,
+      "proposed": 1
+    },
+    "MS": {
+      "total": 1,
+      "enacted": 1,
+      "proposed": 0
+    },
+    "VT": {
+      "total": 1,
+      "enacted": 0,
+      "proposed": 1
+    },
+    "NE": {
+      "total": 1,
+      "enacted": 1,
+      "proposed": 0
+    }
+  },
+  "expiring_within_days": {
+    "30": [
+      "augusta-ga",
+      "birmingham-al",
+      "wixom-mi"
+    ],
+    "60": [
+      "bangor-me",
+      "augusta-ga",
+      "vienna-township-trumbull-co-oh",
+      "birmingham-al",
+      "wixom-mi",
+      "lexington-fayette-county-ky",
+      "front-royal-va",
+      "indio-ca",
+      "palm-springs-ca"
+    ],
+    "90": [
+      "bloomington-il",
+      "iron-county-ut",
+      "meridian-township-mi",
+      "washington-township-macomb-co-mi",
+      "lysander-onondaga-co-ny",
+      "bangor-me",
+      "nashville-tn",
+      "augusta-ga",
+      "vienna-township-trumbull-co-oh",
+      "lavon-tx",
+      "springfield-mo",
+      "birmingham-al",
+      "minneapolis-mn",
+      "wixom-mi",
+      "lexington-fayette-county-ky",
+      "johnson-county-ia",
+      "normal-il",
+      "putnam-county-in",
+      "skagit-county-wa",
+      "front-royal-va",
+      "hillsboro-or",
+      "indio-ca",
+      "palm-springs-ca"
+    ]
+  }
+}

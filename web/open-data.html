@@ -384,6 +384,12 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
               display:block; margin-top:3px; }
 .unverified { font-size:12px; color:#fca5a5; font-weight:600; }
 .verified-on { font-size:12px; color:var(--muted); white-space:nowrap; }
+.kind-badge { font-size:10px; font-weight:800; letter-spacing:.04em;
+  text-transform:uppercase; padding:1px 6px; border-radius:5px;
+  display:inline-block; margin-left:5px; vertical-align:1px; }
+.kind-official { background:rgba(52,211,153,.15); color:#34d399; }
+.kind-roundup { background:rgba(251,191,36,.15); color:#fbbf24; }
+.kind-news { background:rgba(148,163,184,.15); color:#94a3b8; }
 .outcome { border-left:3px solid var(--teal); padding:10px 14px;
            margin:10px 0; }
 .outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
@@ -525,10 +531,11 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <section class="glass-card">
   <h2>Moratorium &amp; community action tracker</h2>
   <p>386 data center moratoriums, bans, and community actions across 39 states. Each row carries a primary source, verification date, and derived expiry status — so a lapsed moratorium is never cited as current.</p>
-  <p><strong>Download:</strong> <a href="data/moratoriums.json">JSON</a> · <a href="data/moratoriums.csv">CSV</a> · JSON 292 KB · CSV 162 KB</p>
+  <p><strong>Download:</strong> <a href="data/moratoriums.json">JSON</a> · <a href="data/moratoriums.csv">CSV</a> · JSON 476 KB · CSV 252 KB</p>
   <p class="muted">386 records · CC BY 4.0 ·
   <a href="moratoriums.html">source page</a></p>
-  <details><summary>Schema — 17 fields</summary><div class="table-scroll"><table><tr><th>Column</th><th>Description</th></tr><tr><td><code>locality</code></td><td>Town, city or county taking the action; &#x27;X (statewide)&#x27; for state-level</td></tr>
+  <details><summary>Schema — 26 fields</summary><div class="table-scroll"><table><tr><th>Column</th><th>Description</th></tr><tr><td><code>id</code></td><td>Stable row id, derived from locality + state — matches the community-page slug</td></tr>
+<tr><td><code>locality</code></td><td>Town, city or county taking the action; &#x27;X (statewide)&#x27; for state-level</td></tr>
 <tr><td><code>state</code></td><td>USPS two-letter code</td></tr>
 <tr><td><code>level</code></td><td>Local or State</td></tr>
 <tr><td><code>status</code></td><td>As recorded: Enacted, Proposed, Rejected, Vetoed or Rescinded</td></tr>
@@ -536,13 +543,21 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 <tr><td><code>expired</code></td><td>true when a documented term has run out</td></tr>
 <tr><td><code>days_left</code></td><td>Days until `expires`; negative once past, null when no end date is recorded</td></tr>
 <tr><td><code>when</code></td><td>Human-readable date of the action, as reported</td></tr>
+<tr><td><code>date</code></td><td>ISO date parsed from `when`; a month- or year-only report keeps that precision rather than guessing a day</td></tr>
+<tr><td><code>date_precision</code></td><td>day, month, or year — how exact `date` is</td></tr>
 <tr><td><code>expires</code></td><td>ISO date the term lapses, or null when permanent, condition-based, or not documented</td></tr>
 <tr><td><code>term_kind</code></td><td>How the term is bounded: until_date (has an `expires`), standing (permanent ban or standing statute), until_event (ends on a condition), fixed_undated (a stated duration whose end date isn&#x27;t recorded), unknown (not documented). Derived; `until_date` always wins over the stored `term`</td></tr>
 <tr><td><code>term_label</code></td><td>Plain-language rendering of `term_kind`</td></tr>
 <tr><td><code>note</code></td><td>Scope, threshold, vote count and other detail</td></tr>
 <tr><td><code>source</code></td><td>URL this row was read from, or null if unverified</td></tr>
+<tr><td><code>source_kind</code></td><td>official (the enacting body&#x27;s own record: a .gov page, an ordinance host, an agenda/minutes system), roundup (one article covering several localities — the ordinance itself is still unfound), or news. Null when unsourced</td></tr>
+<tr><td><code>ordinance_url</code></td><td>Direct link to the ordinance or resolution text, when found separately from `source`. Null for most rows today — this is a known gap, not a claim nothing exists</td></tr>
 <tr><td><code>as_of</code></td><td>Date the source was read, or null</td></tr>
 <tr><td><code>verified</code></td><td>true when a source is recorded. false means nobody has checked this row — treat it as a lead</td></tr>
+<tr><td><code>threshold</code></td><td>Size that triggers the pause (MW, acres, or square footage), parsed from `note`. Null when `note` doesn&#x27;t state one</td></tr>
+<tr><td><code>covers</code></td><td>What the row applies to, when the note says so unambiguously: new_applications, rezoning, permits, or all_uses. Null otherwise — not guessed</td></tr>
+<tr><td><code>events</code></td><td>Status history as a list of {date, kind, label, source}. Every row gets at least its own current action; a later extension, rescission, or replacement is a second entry, appended by hand as it&#x27;s researched — not every row has more than one yet</td></tr>
+<tr><td><code>replaced_by</code></td><td>Locality of the ordinance that superseded this one, when this moratorium ended by being replaced rather than lapsing or being rescinded outright. Null for almost every row today — a known gap, tracked as it&#x27;s researched</td></tr>
 <tr><td><code>lat</code></td><td>Latitude, null for state-level rows</td></tr>
 <tr><td><code>lon</code></td><td>Longitude, null for state-level rows</td></tr></table></div></details>
   <details><summary>Cite this dataset</summary>

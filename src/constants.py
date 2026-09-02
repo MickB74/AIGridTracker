@@ -3371,14 +3371,12 @@ MORATORIUMS = [
      "lat": 39.79, "lon": -75.26, "expires": None, "as_of": "2026-08-30",
      "source": "https://pinelandsalliance.org/datacenters/"},
     {"locality": 'Mantua Township', "state": "NJ", "level": "Local",
-     "status": "Enacted", "when": '2026',
-     "note": "Listed among the 69 New Jersey municipalities with an enacted data "
-             "center ban on the Pinelands Preservation Alliance's tracker, last "
-             "updated Aug 27, 2026. The adoption date and ordinance number are not "
-             "given in that source -- confirm with the municipal clerk before "
-             "citing this row at a hearing.",
+     "status": "Enacted", "when": 'May 11, 2026', "term": "standing",
+     "note": "Township's own public-records page confirms adoption of an "
+             "ordinance banning data centers; no duration or sunset clause "
+             "stated.",
      "lat": 39.79, "lon": -75.18, "expires": None, "as_of": "2026-08-30",
-     "source": "https://pinelandsalliance.org/datacenters/"},
+     "source": "https://mantuatownship.com/public-records/mantua-township-adopts-ordinance-banning-data-centers-published-may-11-2026/"},
     {"locality": 'Alpha', "state": "NJ", "level": "Local",
      "status": "Enacted", "when": 'Listed Aug 2026',
      "note": "Listed among the 69 New Jersey municipalities with an enacted data "
@@ -3407,14 +3405,10 @@ MORATORIUMS = [
      "lat": 39.9, "lon": -74.2, "expires": None, "as_of": "2026-08-30",
      "source": "https://pinelandsalliance.org/datacenters/"},
     {"locality": 'Bernards Township', "state": "NJ", "level": "Local",
-     "status": "Enacted", "when": 'Listed Aug 2026',
-     "note": "Listed among the 69 New Jersey municipalities with an enacted data "
-             "center ban on the Pinelands Preservation Alliance's tracker, last "
-             "updated Aug 27, 2026. The adoption date and ordinance number are not "
-             "given in that source -- confirm with the municipal clerk before "
-             "citing this row at a hearing.",
+     "status": "Enacted", "when": 'Jun 24, 2026', "term": "standing",
+     "note": "Ordinance 2599, introduced May 26 and adopted unanimously June 24, 2026; township-wide ban exempting hospitals, public safety, and utility infrastructure.",
      "lat": 40.68, "lon": -74.57, "expires": None, "as_of": "2026-08-30",
-     "source": "https://pinelandsalliance.org/datacenters/"},
+     "source": "https://patch.com/new-jersey/baskingridge/data-centers-banned-bernards-township-after-committee-vote"},
     {"locality": 'Carneys Point', "state": "NJ", "level": "Local",
      "status": "Enacted", "when": 'Listed Aug 2026',
      "note": "Listed among the 69 New Jersey municipalities with an enacted data "
@@ -3509,9 +3503,10 @@ MORATORIUMS = [
      "status": "Enacted", "when": 'Listed Aug 2026',
      "note": "Listed among the 69 New Jersey municipalities with an enacted data "
              "center ban on the Pinelands Preservation Alliance's tracker, last "
-             "updated Aug 27, 2026. The adoption date and ordinance number are not "
-             "given in that source -- confirm with the municipal clerk before "
-             "citing this row at a hearing.",
+             "updated Aug 27, 2026. DISPUTED: a Mar 2026 local report describes "
+             "the township only beginning a zoning/moratorium process, not "
+             "adopting a ban -- this row needs a primary-source recheck before "
+             "being cited as an enacted ban.",
      "lat": 40.94, "lon": -74.79, "expires": None, "as_of": "2026-08-30",
      "source": "https://pinelandsalliance.org/datacenters/"},
     {"locality": 'Hainesport', "state": "NJ", "level": "Local",
@@ -3524,23 +3519,15 @@ MORATORIUMS = [
      "lat": 39.98, "lon": -74.83, "expires": None, "as_of": "2026-08-30",
      "source": "https://pinelandsalliance.org/datacenters/"},
     {"locality": 'Holmdel', "state": "NJ", "level": "Local",
-     "status": "Enacted", "when": 'Listed Aug 2026',
-     "note": "Listed among the 69 New Jersey municipalities with an enacted data "
-             "center ban on the Pinelands Preservation Alliance's tracker, last "
-             "updated Aug 27, 2026. The adoption date and ordinance number are not "
-             "given in that source -- confirm with the municipal clerk before "
-             "citing this row at a hearing.",
+     "status": "Enacted", "when": 'Aug 11, 2026', "term": "standing",
+     "note": "Ordinance 2026-16, introduced July 21 and adopted August 11, 2026; data centers are a prohibited use, no sunset stated.",
      "lat": 40.37, "lon": -74.17, "expires": None, "as_of": "2026-08-30",
-     "source": "https://pinelandsalliance.org/datacenters/"},
+     "source": "https://www.thecooldown.com/green-tech/holmdel-township-bans-data-centers/"},
     {"locality": 'Jackson Township', "state": "NJ", "level": "Local",
-     "status": "Enacted", "when": 'Listed Aug 2026',
-     "note": "Listed among the 69 New Jersey municipalities with an enacted data "
-             "center ban on the Pinelands Preservation Alliance's tracker, last "
-             "updated Aug 27, 2026. The adoption date and ordinance number are not "
-             "given in that source -- confirm with the municipal clerk before "
-             "citing this row at a hearing.",
+     "status": "Enacted", "when": 'Aug 27, 2026', "term": "standing",
+     "note": "Ordinance 2026-25, adopted 4-1 on August 27, 2026 after a 3-2 introduction vote; data centers are not a permitted or conditional use in any zoning district.",
      "lat": 40.1, "lon": -74.35, "expires": None, "as_of": "2026-08-30",
-     "source": "https://pinelandsalliance.org/datacenters/"},
+     "source": "https://www.jerseyshoreonline.com/jackson/jackson-votes-to-ban-data-centers/"},
     {"locality": 'Kingwood Township', "state": "NJ", "level": "Local",
      "status": "Enacted", "when": 'Listed Aug 2026',
      "note": "Listed among the 69 New Jersey municipalities with an enacted data "
@@ -3578,14 +3565,10 @@ MORATORIUMS = [
      "lat": 40.85, "lon": -74.98, "expires": None, "as_of": "2026-08-30",
      "source": "https://pinelandsalliance.org/datacenters/"},
     {"locality": 'Madison', "state": "NJ", "level": "Local",
-     "status": "Enacted", "when": 'Listed Aug 2026',
-     "note": "Listed among the 69 New Jersey municipalities with an enacted data "
-             "center ban on the Pinelands Preservation Alliance's tracker, last "
-             "updated Aug 27, 2026. The adoption date and ordinance number are not "
-             "given in that source -- confirm with the municipal clerk before "
-             "citing this row at a hearing.",
+     "status": "Enacted", "when": 'Jun 9, 2026', "term": "standing",
+     "note": "Ordinance 27-2026, unanimous council vote; amends Chapter 195 to prohibit data centers as a use. Planning board found it consistent with the master plan.",
      "lat": 40.76, "lon": -74.42, "expires": None, "as_of": "2026-08-30",
-     "source": "https://pinelandsalliance.org/datacenters/"},
+     "source": "https://patch.com/new-jersey/madison/data-centers-now-prohibited-madison-after-unanimous-council-vote"},
     {"locality": 'Mannington Township', "state": "NJ", "level": "Local",
      "status": "Enacted", "when": 'Listed Aug 2026',
      "note": "Listed among the 69 New Jersey municipalities with an enacted data "
@@ -3596,23 +3579,15 @@ MORATORIUMS = [
      "lat": 39.62, "lon": -75.4, "expires": None, "as_of": "2026-08-30",
      "source": "https://pinelandsalliance.org/datacenters/"},
     {"locality": 'Montgomery Township', "state": "NJ", "level": "Local",
-     "status": "Enacted", "when": 'Listed Aug 2026',
-     "note": "Listed among the 69 New Jersey municipalities with an enacted data "
-             "center ban on the Pinelands Preservation Alliance's tracker, last "
-             "updated Aug 27, 2026. The adoption date and ordinance number are not "
-             "given in that source -- confirm with the municipal clerk before "
-             "citing this row at a hearing.",
+     "status": "Enacted", "when": 'Jun 18, 2026', "term": "standing",
+     "note": "Ordinance 26-1779, adopted unanimously June 18, 2026; amends Chapter 16 to add data centers (and detention centers) to prohibited uses townwide. Now the subject of a $300M suit by E. Khan Development.",
      "lat": 40.44, "lon": -74.68, "expires": None, "as_of": "2026-08-30",
-     "source": "https://pinelandsalliance.org/datacenters/"},
+     "source": "https://www.montgomerynj.gov/ArchiveCenter/ViewFile/Item/141"},
     {"locality": 'Neptune Township', "state": "NJ", "level": "Local",
-     "status": "Enacted", "when": 'Listed Aug 2026',
-     "note": "Listed among the 69 New Jersey municipalities with an enacted data "
-             "center ban on the Pinelands Preservation Alliance's tracker, last "
-             "updated Aug 27, 2026. The adoption date and ordinance number are not "
-             "given in that source -- confirm with the municipal clerk before "
-             "citing this row at a hearing.",
+     "status": "Enacted", "when": 'Jul 13, 2026', "term": "standing",
+     "note": "Adopted 3-1 on July 13, 2026 per ROI-NJ; amends the land-development ordinance to prohibit data centers and DHS detention facilities. Reported there as Ordinance 26-26 -- confirm the number against a township document before citing it.",
      "lat": 40.21, "lon": -74.05, "expires": None, "as_of": "2026-08-30",
-     "source": "https://pinelandsalliance.org/datacenters/"},
+     "source": "https://www.roi-nj.com/2026/07/14/industry/energy-utilities/neptune-township-becomes-25th-n-j-municipality-to-ban-data-centers/"},
     {"locality": 'North Hanover Township', "state": "NJ", "level": "Local",
      "status": "Enacted", "when": 'Listed Aug 2026',
      "note": "Listed among the 69 New Jersey municipalities with an enacted data "
@@ -3641,14 +3616,10 @@ MORATORIUMS = [
      "lat": 39.74, "lon": -75.42, "expires": None, "as_of": "2026-08-30",
      "source": "https://pinelandsalliance.org/datacenters/"},
     {"locality": 'Pennsville', "state": "NJ", "level": "Local",
-     "status": "Enacted", "when": 'Listed Aug 2026',
-     "note": "Listed among the 69 New Jersey municipalities with an enacted data "
-             "center ban on the Pinelands Preservation Alliance's tracker, last "
-             "updated Aug 27, 2026. The adoption date and ordinance number are not "
-             "given in that source -- confirm with the municipal clerk before "
-             "citing this row at a hearing.",
+     "status": "Enacted", "when": 'Jul 2, 2026', "term": "standing",
+     "note": "Ordinance A-13-2026, introduced May 21 with final passage scheduled July 2, 2026, per the township's own ordinances page.",
      "lat": 39.65, "lon": -75.51, "expires": None, "as_of": "2026-08-30",
-     "source": "https://pinelandsalliance.org/datacenters/"},
+     "source": "https://www.pennsville.org/171/Township-Ordinances"},
     {"locality": 'Pilesgrove Township', "state": "NJ", "level": "Local",
      "status": "Enacted", "when": 'Listed Aug 2026',
      "note": "Listed among the 69 New Jersey municipalities with an enacted data "
@@ -3659,14 +3630,12 @@ MORATORIUMS = [
      "lat": 39.65, "lon": -75.3, "expires": None, "as_of": "2026-08-30",
      "source": "https://pinelandsalliance.org/datacenters/"},
     {"locality": 'Pittsgrove Township', "state": "NJ", "level": "Local",
-     "status": "Enacted", "when": 'Listed Aug 2026',
-     "note": "Listed among the 69 New Jersey municipalities with an enacted data "
-             "center ban on the Pinelands Preservation Alliance's tracker, last "
-             "updated Aug 27, 2026. The adoption date and ordinance number are not "
-             "given in that source -- confirm with the municipal clerk before "
-             "citing this row at a hearing.",
+     "status": "Enacted", "when": '2026', "term": "standing",
+     "note": "Ordinance 2026-06, \"Prohibiting Data Centers,\" listed on the "
+             "township's own ordinances page; exact adoption date not given "
+             "there.",
      "lat": 39.55, "lon": -75.13, "expires": None, "as_of": "2026-08-30",
-     "source": "https://pinelandsalliance.org/datacenters/"},
+     "source": "https://www.pittsgrovetownship.com/ordinances/"},
     {"locality": 'Plumsted Township', "state": "NJ", "level": "Local",
      "status": "Enacted", "when": 'Listed Aug 2026',
      "note": "Listed among the 69 New Jersey municipalities with an enacted data "
@@ -3677,14 +3646,17 @@ MORATORIUMS = [
      "lat": 40.06, "lon": -74.48, "expires": None, "as_of": "2026-08-30",
      "source": "https://pinelandsalliance.org/datacenters/"},
     {"locality": 'Quinton Township', "state": "NJ", "level": "Local",
-     "status": "Enacted", "when": 'Listed Aug 2026',
-     "note": "Listed among the 69 New Jersey municipalities with an enacted data "
-             "center ban on the Pinelands Preservation Alliance's tracker, last "
-             "updated Aug 27, 2026. The adoption date and ordinance number are not "
-             "given in that source -- confirm with the municipal clerk before "
-             "citing this row at a hearing.",
+     "status": "Enacted", "when": 'May 2026', "term": "standing",
+     "note": "Township committee voted 4-1 in May 2026 to introduce a "
+             "narrower \"standards\" ordinance, then reversed five days "
+             "later after a heavily attended public meeting and "
+             "unanimously introduced a townshipwide ban, repealing a 2025 "
+             "ordinance that had allowed data centers -- per New Jersey "
+             "Monitor reporting. A follow-up fetch of the article failed "
+             "(403); re-read the live page before citing this at a "
+             "hearing.",
      "lat": 39.54, "lon": -75.42, "expires": None, "as_of": "2026-08-30",
-     "source": "https://pinelandsalliance.org/datacenters/"},
+     "source": "https://newjerseymonitor.com/2026/08/20/nj-data-center-bans-courts/"},
     {"locality": 'Upper Pittsgrove Township', "state": "NJ", "level": "Local",
      "status": "Enacted", "when": 'Listed Aug 2026',
      "note": "Listed among the 69 New Jersey municipalities with an enacted data "
@@ -3713,14 +3685,10 @@ MORATORIUMS = [
      "lat": 40.76, "lon": -74.98, "expires": None, "as_of": "2026-08-30",
      "source": "https://pinelandsalliance.org/datacenters/"},
     {"locality": 'Winslow Township', "state": "NJ", "level": "Local",
-     "status": "Enacted", "when": 'Listed Aug 2026',
-     "note": "Listed among the 69 New Jersey municipalities with an enacted data "
-             "center ban on the Pinelands Preservation Alliance's tracker, last "
-             "updated Aug 27, 2026. The adoption date and ordinance number are not "
-             "given in that source -- confirm with the municipal clerk before "
-             "citing this row at a hearing.",
+     "status": "Enacted", "when": 'May 26, 2026', "term": "standing",
+     "note": "First reading passed April 14 and second reading/public hearing was held May 26, 2026, per South Jersey Media reporting; data centers are a prohibited use.",
      "lat": 39.65, "lon": -74.9, "expires": None, "as_of": "2026-08-30",
-     "source": "https://pinelandsalliance.org/datacenters/"},
+     "source": "https://southjersey.media/featured/township-moves-to-prohibit-data-centers/"},
     {"locality": 'Woodstown', "state": "NJ", "level": "Local",
      "status": "Enacted", "when": 'Listed Aug 2026',
      "note": "Listed among the 69 New Jersey municipalities with an enacted data "
@@ -3771,6 +3739,171 @@ def moratorium_term(expires, term):
     return kind, TERM_KINDS[kind]
 
 
+_MONTH_RE = (r"Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|"
+             r"Jul(?:y)?|Aug(?:ust)?|Sep(?:t|tember)?|Oct(?:ober)?|"
+             r"Nov(?:ember)?|Dec(?:ember)?")
+_WHEN_DAY_RE = _re.compile(
+    rf"\b({_MONTH_RE})\.?\s+(\d{{1,2}}),?\s+(\d{{4}})\b", _re.IGNORECASE)
+_WHEN_MONTH_RE = _re.compile(
+    rf"\b({_MONTH_RE})\.?\s+(\d{{4}})\b", _re.IGNORECASE)
+_WHEN_YEAR_RE = _re.compile(r"\b(\d{4})\b")
+
+
+def parse_when_date(when):
+    """(iso_date, precision) parsed from the free-text `when` column, or
+    (None, None) if nothing recognizable is in it.
+
+    This is a parse of text the row already publishes, not a new claim, so
+    it runs as a derived column rather than a stored one — same reasoning as
+    `effective_status`. Precision is 'day', 'month', or 'year': "May 2026"
+    is real information (the vote happened sometime that month) and showing
+    it as a fabricated "May 1" would be worse than showing the month alone.
+    """
+    if not has_value(when):
+        return None, None
+    text = str(when)
+    m = _WHEN_DAY_RE.search(text)
+    if m:
+        try:
+            d = _dt.datetime.strptime(f"{m.group(1)} {m.group(2)} {m.group(3)}",
+                                       "%b %d %Y" if len(m.group(1)) <= 4
+                                       else "%B %d %Y")
+            return d.date().isoformat(), "day"
+        except ValueError:
+            pass
+    m = _WHEN_MONTH_RE.search(text)
+    if m:
+        try:
+            d = _dt.datetime.strptime(f"{m.group(1)} 1 {m.group(2)}",
+                                       "%b %d %Y" if len(m.group(1)) <= 4
+                                       else "%B %d %Y")
+            return d.date().isoformat(), "month"
+        except ValueError:
+            pass
+    m = _WHEN_YEAR_RE.search(text)
+    if m:
+        return f"{m.group(1)}-01-01", "year"
+    return None, None
+
+
+# Domain fragments that identify a source as the enacting body's own record
+# (an ordinance host, a council's agenda/minutes system, or a .gov page)
+# rather than news coverage of it. A row citing one of these is the strongest
+# claim the tracker makes; everything else is 'news' unless the same URL is
+# reused across several localities, which makes it a roundup article
+# describing many actions rather than a primary record of one.
+OFFICIAL_SOURCE_MARKERS = (
+    ".gov", "municode.com", "legistar", "granicus.com", "iqm2.com",
+    "ecode360.com", "civicplus.com", "novusagenda.com", "destinyhosted.com",
+    "primegov.com", "boarddocs.com",
+)
+
+
+def classify_source_kind(source, share_count):
+    """'official' / 'roundup' / 'news' / None for a row's source URL.
+
+    `share_count` is how many distinct (locality, state) rows cite this
+    exact URL — 1 means it documents just this action, 2+ means it's a
+    multi-locality article and the ordinance itself still has to be found.
+    """
+    if not has_value(source):
+        return None
+    domain = str(source).lower()
+    if any(marker in domain for marker in OFFICIAL_SOURCE_MARKERS):
+        return "official"
+    if share_count and share_count > 1:
+        return "roundup"
+    return "news"
+
+
+EVENT_KINDS = {
+    "enacted": "Enacted", "proposed": "Proposed", "extended": "Extended",
+    "rescinded": "Rescinded", "rejected": "Rejected", "vetoed": "Vetoed",
+    "expired": "Expired", "replaced": "Replaced by a new ordinance",
+}
+
+
+def mora_event(when, status, date, source):
+    """The row's own current action as a one-entry history list.
+
+    Nobody else records status history for a moratorium row; this is the
+    scaffold for it. The kind is read off words the row's own `when` already
+    carries ("Extended…", "Rescinded…") or off `status` — never guessed —
+    so a promoted row gets a real first entry for free, and a later
+    extension or repeal is a second entry appended by hand, not a rewrite.
+    """
+    text = str(when).strip().lower() if has_value(when) else ""
+    if text.startswith("extended"):
+        kind = "extended"
+    elif text.startswith("rescinded"):
+        kind = "rescinded"
+    elif status == "Proposed":
+        kind = "proposed"
+    elif status == "Rejected":
+        kind = "rejected"
+    elif status == "Vetoed":
+        kind = "vetoed"
+    elif status == "Rescinded":
+        kind = "rescinded"
+    else:
+        kind = "enacted"
+    return [{"date": date, "kind": kind, "label": EVENT_KINDS[kind],
+             "source": source if has_value(source) else None}]
+
+
+# Scope: what the moratorium actually pauses. `threshold` is parsed straight
+# out of `note`, which already carries whatever the source documented (a MW,
+# acreage, or square-footage cutoff) — a mechanical extraction of a fact
+# already on the row, not a new judgment call. `covers` is the opposite: it's
+# only set when the note uses one of these unambiguous phrases verbatim,
+# because guessing scope from vaguer language is exactly the kind of
+# note-text inference the term-kind rule exists to prevent. Most rows will
+# stay `None` here rather than get a wrong answer.
+_THRESHOLD_RE = _re.compile(
+    r"\b(\d[\d,]*(?:\.\d+)?)\s*"
+    r"(MW|megawatts?|acres?|sq\.?\s?ft\.?|square\s+feet|kW)\b", _re.IGNORECASE)
+_COVERS_PHRASES = [
+    ("new applications", "new_applications"),
+    ("new permit", "new_applications"),
+    ("rezoning", "rezoning"),
+    ("rezone", "rezoning"),
+    ("permit applications", "permits"),
+    ("building permits", "permits"),
+    ("all uses", "all_uses"),
+    ("all data center", "all_uses"),
+]
+COVERS_LABELS = {
+    "new_applications": "New applications only",
+    "rezoning": "Rezoning requests",
+    "permits": "Permit applications",
+    "all_uses": "All data center activity",
+}
+
+
+def mora_threshold(note):
+    if not has_value(note):
+        return None
+    m = _THRESHOLD_RE.search(str(note))
+    return m.group(0) if m else None
+
+
+def mora_covers(note):
+    if not has_value(note):
+        return None
+    text = str(note).lower()
+    for phrase, kind in _COVERS_PHRASES:
+        if phrase in text:
+            return kind
+    return None
+
+
+def mora_slug(locality, state):
+    """Stable row id — matches the community-page slug scheme so a
+    moratorium row and its town's page use the same identifier."""
+    s = _re.sub(r"[^a-z0-9]+", "-", str(locality).lower()).strip("-")
+    return f"{s}-{str(state).lower()}"
+
+
 def moratorium_status(status, expires, today=None):
     """Effective status of a moratorium row, given its documented expiry.
 
@@ -3809,7 +3942,8 @@ def moratorium_status(status, expires, today=None):
 MORATORIUMS_DF = pd.DataFrame(
     MORATORIUMS,
     columns=["locality", "state", "level", "status", "when", "note",
-             "lat", "lon", "expires", "as_of", "source", "term"])
+             "lat", "lon", "expires", "as_of", "source", "term",
+             "ordinance_url", "replaced_by", "events"])
 # Derived at import so every consumer sees the same effective status. The
 # static site is rebuilt daily by CI, so these stay current without an edit.
 _mora_status = MORATORIUMS_DF.apply(
@@ -3823,6 +3957,46 @@ _mora_term = [moratorium_term(e, t)
               for e, t in zip(MORATORIUMS_DF["expires"], MORATORIUMS_DF["term"])]
 MORATORIUMS_DF["term_kind"] = [k for k, _ in _mora_term]
 MORATORIUMS_DF["term_label"] = [lbl for _, lbl in _mora_term]
+
+# Row id: stable across rebuilds because it's derived from (locality, state),
+# which the dedupe rule already keeps unique.
+MORATORIUMS_DF["id"] = [mora_slug(l, s) for l, s in
+                         zip(MORATORIUMS_DF["locality"], MORATORIUMS_DF["state"])]
+
+# date/date_precision: parsed from `when`, not a new fact — see parse_when_date.
+_mora_date = [parse_when_date(w) for w in MORATORIUMS_DF["when"]]
+MORATORIUMS_DF["date"] = [d for d, _ in _mora_date]
+MORATORIUMS_DF["date_precision"] = [p for _, p in _mora_date]
+
+# source_kind: official (the enacting body's own record) beats roundup (one
+# URL covering several localities) beats plain news coverage. share_count is
+# computed first so classify_source_kind can tell a primary record from an
+# article that happens to be the only source for many rows.
+_mora_source_counts = (
+    MORATORIUMS_DF.dropna(subset=["source"])
+    .groupby("source")[["locality", "state"]]
+    .apply(lambda g: len(set(zip(g["locality"], g["state"]))))
+    .to_dict())
+MORATORIUMS_DF["source_kind"] = [
+    classify_source_kind(s, _mora_source_counts.get(s, 1))
+    for s in MORATORIUMS_DF["source"]]
+
+# Status history: a one-entry timeline seeded from the row's own current
+# action. A researched extension/rescission/replacement gets appended to
+# MORATORIUMS[i]["events"] by hand as it's found; rows with no manual
+# `events` fall back to this single derived entry.
+MORATORIUMS_DF["events"] = [
+    ev if (isinstance(ev, list) and ev) else
+    mora_event(w, st, d, s)
+    for ev, w, st, d, s in zip(
+        MORATORIUMS_DF["events"],
+        MORATORIUMS_DF["when"], MORATORIUMS_DF["status"],
+        MORATORIUMS_DF["date"], MORATORIUMS_DF["source"])]
+
+# Scope: threshold is a mechanical parse of `note`; covers only fires on an
+# unambiguous phrase — see the comments on mora_threshold/mora_covers.
+MORATORIUMS_DF["threshold"] = MORATORIUMS_DF["note"].map(mora_threshold)
+MORATORIUMS_DF["covers"] = MORATORIUMS_DF["note"].map(mora_covers)
 
 # Case study outcomes — what actually happened after a moratorium or major fight.
 #

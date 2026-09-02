@@ -551,6 +551,12 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
               display:block; margin-top:3px; }
 .unverified { font-size:12px; color:#fca5a5; font-weight:600; }
 .verified-on { font-size:12px; color:var(--muted); white-space:nowrap; }
+.kind-badge { font-size:10px; font-weight:800; letter-spacing:.04em;
+  text-transform:uppercase; padding:1px 6px; border-radius:5px;
+  display:inline-block; margin-left:5px; vertical-align:1px; }
+.kind-official { background:rgba(52,211,153,.15); color:#34d399; }
+.kind-roundup { background:rgba(251,191,36,.15); color:#fbbf24; }
+.kind-news { background:rgba(148,163,184,.15); color:#94a3b8; }
 .outcome { border-left:3px solid var(--teal); padding:10px 14px;
            margin:10px 0; }
 .outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
@@ -1211,19 +1217,30 @@ def _outcome_card(o):
             f'<p class="muted">{esc(o["outcome"])}</p>{prov}</div>')
 
 
+_MORA_KIND_LABEL = {"official": "Official", "roundup": "Roundup", "news": "News"}
+
+
 def _mora_source_cell(m):
-    """Per-row provenance: the source link and the date it was read.
+    """Per-row provenance: the source link, its kind, and the date read.
 
     An unverified row says so in as many words. The alternative — a blank
     cell — reads as "nothing to add" when it actually means "nobody has
-    checked this."
+    checked this." The kind badge makes the same distinction one level up:
+    a link is not proof it's the ordinance itself.
     """
     if not has_value(m.source):
         return '<span class="unverified">Unverified</span>'
+    kind = getattr(m, "source_kind", None)
+    badge = (f'<span class="kind-badge kind-{esc(str(kind))}">'
+              f'{esc(_MORA_KIND_LABEL.get(kind, kind))}</span>'
+              if has_value(kind) else "")
     on = (f'<span class="verified-on">read {esc(str(m.as_of))}</span>'
           if has_value(m.as_of) else "")
+    ordinance = (f' · <a href="{esc(str(m.ordinance_url))}" rel="nofollow '
+                 f'noopener" target="_blank">Ordinance</a>'
+                 if has_value(getattr(m, "ordinance_url", None)) else "")
     return (f'<a href="{esc(str(m.source))}" rel="nofollow noopener" '
-            f'target="_blank">Source</a><br>{on}')
+            f'target="_blank">Source</a>{badge}{ordinance}<br>{on}')
 
 
 # ---------------------------------------------------------------------------
@@ -7097,6 +7114,7 @@ def build_moratoriums():
     enacted = len(MORATORIUMS_DF[MORATORIUMS_DF["effective_status"] == "Enacted"])
     proposed = len(MORATORIUMS_DF[MORATORIUMS_DF["effective_status"] == "Proposed"])
     verified = int(MORATORIUMS_DF["verified"].sum())
+    official_sourced = int((MORATORIUMS_DF["source_kind"] == "official").sum())
 
     # A row's filterable status is its effective status, plus a "Unverified"
     # pseudo-status so the filter can isolate rows with no source on record —
@@ -7189,6 +7207,7 @@ def build_moratoriums():
   <div class="stat"><b>{enacted}</b><span>in force today</span></div>
   <div class="stat"><b>{proposed}</b><span>proposed or pending</span></div>
   <div class="stat"><b>{verified}/{total}</b><span>source-verified</span></div>
+  <div class="stat"><b>{official_sourced}</b><span>cite the enacting body's own record</span></div>
 </div>
 {alerts_html}
 <section>
@@ -7332,7 +7351,10 @@ def build_moratoriums():
                      size_from="data/moratoriums.json"),
       _download_card("data/moratoriums.csv", "moratoriums.csv", "csv",
                      "Spreadsheet-ready · one row per action",
-                     size_from="data/moratoriums.csv"))}
+                     size_from="data/moratoriums.csv"),
+      _download_card("data/moratoriums-summary.json", "moratoriums-summary.json",
+                     "json", "Counts by state and status, plus what expires soon — for embeds",
+                     size_from="data/moratoriums-summary.json"))}
   <details class="more">
     <summary>Schema — {len(MORATORIUM_SCHEMA)} fields</summary>
     <div style="overflow-x:auto">
@@ -13126,6 +13148,7 @@ DATA_LICENSE_URL = "https://creativecommons.org/licenses/by/4.0/"
 # stated schema is what every other data-center moratorium list already is:
 # a table you cannot reuse without emailing whoever made it.
 MORATORIUM_SCHEMA = [
+    ("id", "Stable row id, derived from locality + state — matches the community-page slug"),
     ("locality", "Town, city or county taking the action; 'X (statewide)' for state-level"),
     ("state", "USPS two-letter code"),
     ("level", "Local or State"),
@@ -13134,13 +13157,21 @@ MORATORIUM_SCHEMA = [
     ("expired", "true when a documented term has run out"),
     ("days_left", "Days until `expires`; negative once past, null when no end date is recorded"),
     ("when", "Human-readable date of the action, as reported"),
+    ("date", "ISO date parsed from `when`; a month- or year-only report keeps that precision rather than guessing a day"),
+    ("date_precision", "day, month, or year — how exact `date` is"),
     ("expires", "ISO date the term lapses, or null when permanent, condition-based, or not documented"),
     ("term_kind", "How the term is bounded: until_date (has an `expires`), standing (permanent ban or standing statute), until_event (ends on a condition), fixed_undated (a stated duration whose end date isn't recorded), unknown (not documented). Derived; `until_date` always wins over the stored `term`"),
     ("term_label", "Plain-language rendering of `term_kind`"),
     ("note", "Scope, threshold, vote count and other detail"),
     ("source", "URL this row was read from, or null if unverified"),
+    ("source_kind", "official (the enacting body's own record: a .gov page, an ordinance host, an agenda/minutes system), roundup (one article covering several localities — the ordinance itself is still unfound), or news. Null when unsourced"),
+    ("ordinance_url", "Direct link to the ordinance or resolution text, when found separately from `source`. Null for most rows today — this is a known gap, not a claim nothing exists"),
     ("as_of", "Date the source was read, or null"),
     ("verified", "true when a source is recorded. false means nobody has checked this row — treat it as a lead"),
+    ("threshold", "Size that triggers the pause (MW, acres, or square footage), parsed from `note`. Null when `note` doesn't state one"),
+    ("covers", "What the row applies to, when the note says so unambiguously: new_applications, rezoning, permits, or all_uses. Null otherwise — not guessed"),
+    ("events", "Status history as a list of {date, kind, label, source}. Every row gets at least its own current action; a later extension, rescission, or replacement is a second entry, appended by hand as it's researched — not every row has more than one yet"),
+    ("replaced_by", "Locality of the ordinance that superseded this one, when this moratorium ended by being replaced rather than lapsing or being rescinded outright. Null for almost every row today — a known gap, tracked as it's researched"),
     ("lat", "Latitude, null for state-level rows"),
     ("lon", "Longitude, null for state-level rows"),
 ]
@@ -13179,7 +13210,9 @@ def _mora_records():
         rec = {}
         for c in cols:
             v = r.get(c)
-            if isinstance(v, (bool, int, float)) and not isinstance(v, bool):
+            if isinstance(v, list):
+                rec[c] = v
+            elif isinstance(v, (bool, int, float)) and not isinstance(v, bool):
                 rec[c] = None if pd.isna(v) else v
             elif isinstance(v, bool):
                 rec[c] = v
@@ -13220,11 +13253,48 @@ def build_moratorium_data():
     (WEB / "data" / "moratoriums.json").write_text(
         json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
+    # A small rollup for embeds and anyone who wants the number without the
+    # 386-row table — counts by state and status, plus what's expiring soon.
+    _by_state = {}
+    for r in records:
+        st = r["state"]
+        b = _by_state.setdefault(st, {"total": 0, "enacted": 0, "proposed": 0})
+        b["total"] += 1
+        if r["effective_status"] == "Enacted":
+            b["enacted"] += 1
+        elif r["effective_status"] == "Proposed":
+            b["proposed"] += 1
+    _windows = {30: [], 60: [], 90: []}
+    for r in records:
+        dl = r.get("days_left")
+        if dl is None or dl < 0:
+            continue
+        for w in _windows:
+            if dl <= w:
+                _windows[w].append(r["id"])
+    summary = {
+        "name": "AI GridWatch moratorium tracker — summary",
+        "generated": _dt.date.today().isoformat(),
+        "license": DATA_LICENSE,
+        "source_page": f"{SITE_URL}/moratoriums",
+        "count": len(records),
+        "states": len(_by_state),
+        "enacted": sum(b["enacted"] for b in _by_state.values()),
+        "proposed": sum(b["proposed"] for b in _by_state.values()),
+        "official_sourced": sum(1 for r in records if r["source_kind"] == "official"),
+        "by_state": _by_state,
+        "expiring_within_days": {str(w): ids for w, ids in _windows.items()},
+    }
+    (WEB / "data" / "moratoriums-summary.json").write_text(
+        json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+
     buf = io.StringIO()
     w = csv.DictWriter(buf, fieldnames=[c for c, _ in MORATORIUM_SCHEMA],
                        lineterminator="\n")
     w.writeheader()
-    w.writerows(records)
+    # CSV has no nested type, so `events` goes in as a JSON string — the
+    # JSON export above is where its structure survives.
+    w.writerows({**rec, "events": json.dumps(rec["events"])} for rec in records)
     (WEB / "data" / "moratoriums.csv").write_text(buf.getvalue(),
                                                   encoding="utf-8")
     return len(records)
