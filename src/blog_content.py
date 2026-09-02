@@ -124,7 +124,7 @@ developer's attorney will go looking for.
 
 Our own [moratorium tracker](/moratoriums.html) carries 67 New Jersey
 localities — 62 recorded as enacted, five as proposed. That is the most of any
-state; nationally we have 317 enacted rows across 39 states.
+state; nationally we have 317 enacted rows across 37 states.
 
 We should be equally honest about the soft part of our own number. Forty of
 those 67 New Jersey rows are sourced to the Pinelands list itself, with no
@@ -247,7 +247,7 @@ into law.
 
 - [New Jersey state page](/states/new-jersey.html) — every tracked locality,
   project and ban in the state
-- [Moratorium tracker](/moratoriums.html) — 317 enacted rows across 39 states,
+- [Moratorium tracker](/moratoriums.html) — 317 enacted rows across 37 states,
   each with its own source and read date
 - [Project tracker](/projects.html) — the Vineland, Millville, Monroe and
   Andover dossiers, with the permit paper trail for each
@@ -5924,6 +5924,334 @@ sometimes wins — a lawsuit like Gibraltar's.
 explain the underlying concepts, and point you to the tools you need. Know
 a story we should cover? Reach out through the [consulting tab](/app) or
 the newsletter signup.*
+""",
+    },
+    {
+        "id": "week-in-review-2026-08-30",
+        "art": "review",
+        "section": "stories",
+        "title": "Week in Review: Georgia's Secret OpenAI Contract, New Jersey's New Transparency Law, and a Second California City Bans Data Centers",
+        "date": _dt.date(2026, 8, 30),
+        "author": "GridWatch AI",
+        "tags": ["week in review", "moratorium", "Georgia", "New Jersey",
+                 "California", "Texas", "PJM", "water", "policy",
+                 "transparency", "community"],
+        "summary": (
+            "This week Georgia regulators approved a confidential 3.2-gigawatt "
+            "contract to power OpenAI's \\$20 billion Effingham County data "
+            "center and Sen. Warnock answered with a call for a statewide "
+            "moratorium, New Jersey's governor signed a law forcing data "
+            "centers to report their water and energy use, and Coachella "
+            "became the second California city to ban data centers outright. "
+            "Plus: a Microsoft-tied New Jersey site accused of running dozens "
+            "of unpermitted gas turbines, PJM's plan to make data centers "
+            "bring their own power, and ten more communities that paused or "
+            "banned data centers in a single week."
+        ),
+        "body": """\
+Welcome back to the GridWatch AI Week in Review — our Sunday roundup of the
+most important data center stories from the past seven days, what they mean
+for communities, and what you can learn from each one.
+
+---
+
+### 1. Georgia regulators approve OpenAI's \\$20B power contract — and Warnock answers with a call for a statewide moratorium
+
+**What happened:** Georgia's Public Service Commission approved Georgia
+Power's 3.2-gigawatt contract to supply [OpenAI's](https://openai.com/)
+roughly \\$20 billion data center in Effingham County on August 27, after
+commissioners extended their review timeline once already under public
+pressure and added ratepayer-protection provisions before signing off
+([thecurrentga.org](https://thecurrentga.org/) called it "PSC boosts
+safeguards"). Georgia Power says the contract is part of a larger portfolio
+of large-load deals that will save residential customers about \\$950
+million a year starting in 2029 — a claim [CleanTechnica](https://cleantechnica.com/)
+covered skeptically as "Georgia PSC Approves Secret OpenAI Contract,"
+because the underlying contract terms were filed with regulators
+confidentially. The next day, Sen. Raphael Warnock visited the future
+Effingham County site and called for a statewide data center moratorium,
+accusing OpenAI and Georgia Power of striking the deal "in the dark."
+
+**Why it matters:** This is the same pattern GridWatch AI has flagged in
+Louisiana, Ohio, and elsewhere: a utility asks its state regulator to
+approve a multibillion-dollar contract to serve one customer, the regulator
+signs off with the *company's own* savings estimate as the headline number,
+and the terms that would let anyone check that estimate stay under seal.
+Georgia's PSC did add safeguards this time — but "safeguards were added"
+and "the public can verify the number" are two different things, and only
+one of them happened here.
+
+**What to learn — how to ask for the number behind the number:** A PSC or
+PUC docket is a public record, even when specific contract exhibits are
+filed confidentially. You can:
+
+1. Look up your state's docket for the case (Georgia's is searchable
+   through the PSC's own site) and read the *order* — commissioners
+   usually have to explain, in writing, why they found a proposed rate or
+   contract "just and reasonable," even when the underlying numbers are
+   redacted.
+2. Ask whether an independent consumer advocate's office (most states have
+   one) intervened in the case — their filings are often less redacted
+   than the utility's.
+3. Compare the claimed savings to your own bill category. A statewide
+   "$950 million" figure sounds large; divided across millions of
+   ratepayers it may be a few dollars a month — see our breakdown of how
+   utility bills actually work in
+   [Why Your Electric Bill Is Going Up — and What Data Centers Have to Do
+   With It](/blog/utility-bill-explainer-2026). Georgia's own PUC contact
+   and docket links are on our [PUC directory](/puc.html).
+
+*Sources: [AJC, Aug 27](https://www.ajc.com/); [CleanTechnica, Aug 28](https://cleantechnica.com/);
+[thecurrentga.org, Aug 27](https://thecurrentga.org/); [CBS News, Aug 28](https://www.cbsnews.com/)*
+
+---
+
+### 2. New Jersey makes data centers report their water and energy use — and ends a \\$250 million tax break
+
+**What happened:** Gov. Mikie Sherrill signed a package of bills into law,
+including one requiring data centers to report their energy and water
+usage to the state Board of Public Utilities, and a bipartisan bill from
+Assemblyman Macurdy ending roughly \\$250 million in state tax credits for
+AI data centers. In the same week, East Brunswick formally banned data
+centers across its commercial, business, and industrial zones, and Jackson
+Township voted to ban them as well — both joining a growing list of New
+Jersey towns that have moved from moratoriums to permanent bans this year.
+
+**Why it matters:** New Jersey is now running two tracks at once: towns are
+banning specific projects locally, while the state is building the
+disclosure and tax infrastructure to hold *every* data center in the state
+accountable, not just the ones a town happens to catch. A reporting mandate
+doesn't stop a project the way a ban does — but it creates a public record
+of exactly how much water and power a facility uses, which is the evidence
+residents need for the *next* fight.
+
+**What to learn — disclosure laws are a different tool than bans, and they
+compound over time:** A mandatory reporting law only works if someone
+actually pulls the reports once they're filed. Once New Jersey's BPU starts
+collecting this data, expect it to become public record — mark your
+calendar to request it, the way advocates already do with New Jersey's
+[hidden water costs](/blog/hidden-water-cost). Pair a reporting requirement
+with a request in your own town's community benefit agreement for the same
+disclosure at the local level — see the model clauses on
+[cba-clauses.html](/cba-clauses.html), and how tax breaks like the one New
+Jersey just ended got scrutinized nationally in
+[The \\$327 Million Guess That Became \\$2.5 Billion](/blog/data-center-tax-break-blowouts-2026).
+
+*Sources: [NJ.com, Aug 27](https://www.nj.com/); [NJBIZ, Aug 28](https://njbiz.com/);
+[TAPinto, Aug 28](https://www.tapinto.net/); [Bloomberg Law, Aug 27](https://news.bloomberglaw.com/)*
+
+---
+
+### 3. A Microsoft-tied New Jersey data center is accused of running dozens of unpermitted gas turbines
+
+**What happened:** A large AI data center under construction in Vineland,
+New Jersey — built by Nebius, with Microsoft as a tenant, and already hit
+with a stop-construction order earlier this month over unpermitted fuel
+cells — is now accused of operating dozens of natural gas turbines
+([Tom's Hardware](https://www.tomshardware.com/) reported 62) and a
+1.5-million-gallon liquefied natural gas storage tank without the required
+permits. [The Guardian](https://www.theguardian.com/) and
+[WHYY](https://whyy.org/) reported that community and environmental groups
+are demanding Microsoft halt operations at the roughly \\$19.4 billion
+facility, which sits near the Philadelphia metro area, and
+[Common Dreams](https://www.commondreams.org/) published an investigation
+describing an "army" of unpermitted generators on site.
+
+**Why it matters:** Backup and bridge power at data centers — the gas
+turbines and generators that keep a facility running before it has a full
+grid interconnection — almost always require their own air permits,
+separate from the construction permit for the building itself. When a
+developer runs that equipment before the permits are issued, it's usually
+because waiting for the permit would have delayed opening the facility, not
+because the equipment is exempt from needing one.
+
+**What to learn — how to check whether a facility near you actually has
+its permits:** Don't take a company's word that a project is "fully
+permitted." Your state environmental agency's air-permit database (or, if
+none exists, a public records request) will show what's actually been
+issued and for what equipment. GridWatch AI's own
+[project paper-trail tool](/projects.html#records) walks through where to
+look state by state. And this is exactly the kind of gap a developer can
+exploit when a project touches multiple agencies — see
+[One Project, Two Stories: How Data Center Developers Shop the Gaps Between
+Agencies](/blog/oversight-gaps-agency-shopping-2026).
+
+*Sources: [The Guardian, Aug 27](https://www.theguardian.com/);
+[WHYY, Aug 28](https://whyy.org/); [Tom's Hardware, Aug 29](https://www.tomshardware.com/);
+[Common Dreams, Aug 27](https://www.commondreams.org/)*
+
+---
+
+### 4. Coachella becomes the second California city to ban data centers outright
+
+**What happened:** Coachella's city council voted unanimously on August 26
+to adopt Ordinance No. 1231, a permanent ban on large-scale data centers in
+all zoning districts, replacing a 45-day moratorium the city had adopted in
+June alongside terminating its agreement with a developer over a
+400-plus-acre, six-data-center campus. Coachella is the second California
+city to ban data centers outright, after Monterey Park, and the first in
+the Coachella Valley; the mayor has asked staff to explore a ballot measure
+to entrench the ban further. The same week, Escondido's city council
+approved its own moratorium, and a Fresno councilmember introduced a
+proposal for a citywide prohibition.
+
+**Why it matters:** California's fights are increasingly about
+*permanence*. A moratorium buys a town time to write rules; an outright
+zoning ban, like Coachella's, is meant to be the rule. Exploring a ballot
+measure on top of that is a step further still — it's a town trying to
+make its own ban harder for a *future* council to undo.
+
+**What to learn — why some towns take a ban to the ballot box:** A city
+council that passes an ordinance by a simple majority vote can just as
+easily repeal it by a simple majority vote of a differently composed
+council two years later. A ballot measure approved directly by voters
+typically requires another vote of the people (and sometimes a
+supermajority) to undo — making it a stronger, harder-to-reverse form of
+the same ban. It's slower and costs more to run, which is why most towns
+start with a council ordinance and only take the ballot-measure route once
+they're confident the ban has lasting public support. Track every locality
+on the [moratorium tracker](/moratoriums.html).
+
+*Sources: [kvcrnews.org, Aug 28](https://www.kvcrnews.org/);
+[10News, Aug 24](https://www.10news.com/); [Fresnoland, Aug 29](https://fresnoland.org/)*
+
+---
+
+### 5. Texas's data center "pause" faces its first real scrutiny — and a bot study undercuts one excuse
+
+**What happened:** Gov. Greg Abbott told [Business Insider](https://www.businessinsider.com/)
+this week that Chinese bots are not behind the backlash against Texas data
+centers, after a researcher found that many of the accounts flagged as
+part of a Chinese influence campaign had no followers or engagement at
+all. Meanwhile [Texas Public Radio](https://www.tpr.org/) and
+[Houston Public Media](https://www.houstonpublicmedia.org/) both published
+pieces this week asking, plainly, whether Abbott's audit-and-pause of up to
+1,800 data center interconnection requests will actually change anything —
+noting it still has no firm completion date and no enforcement mechanism
+beyond delaying ERCOT interconnection review. The Washington Post reported
+a prominent Texas Republican now predicts the party will lose seats over
+the issue.
+
+**Why it matters:** Last week we covered Pennsylvania's executive order
+requiring developers to fund their own power infrastructure before getting
+a state permit. Texas's "pause" looks similar on the surface but is
+weaker: it's a directive to two agencies (ERCOT and the PUCT) to slow-walk
+interconnection reviews while they audit, not a new permitting requirement
+written into law. Nothing in it stops a future governor — or this one,
+after the audit ends — from waving projects through unchanged.
+
+**What to learn — separating a real pause from a stalling tactic:** Ask
+three questions about any government "pause" on data center approvals:
+(1) Is there a **statutory or regulatory basis** for it, or is it purely a
+directive that could be reversed by the next phone call? (2) Is there a
+**published end date or trigger** for when the pause lifts? (3) What
+happens to projects **already in the queue** when it does? Texas's answer
+to all three is currently "unclear," which is different from Nevada's
+water-basin ban or Coachella's ordinance above, both of which rest on a
+specific legal finding. For background on what's actually backed up in the
+queue Abbott paused, see
+[233 GW of Demand Is Waiting in Line: Inside ERCOT's Data Center Queue](/blog/ercot-queue-explainer)
+and [Texas Just Froze 474 GW of Data Center Interconnections. Here's What
+It Means.](/blog/texas-ercot-queue-freeze-2026)
+
+*Sources: [Business Insider, Aug 29](https://www.businessinsider.com/);
+[Texas Public Radio, Aug 28](https://www.tpr.org/);
+[Houston Public Media, Aug 27](https://www.houstonpublicmedia.org/);
+[The Washington Post, Aug 29](https://www.washingtonpost.com/)*
+
+---
+
+### 6. PJM wants new data centers to bring their own power — or get curtailed first
+
+**What happened:** Grid operator PJM, which serves 13 states plus D.C.,
+proposed new rules that would require large new data centers to either
+bring their own dedicated generation or agree to be curtailed first when
+the shared grid is under stress, rather than drawing on the grid at full
+capacity by default the way existing customers do. The proposal follows a
+report from PJM's own independent market monitor that data center load
+made up roughly 9% of PJM's wholesale electricity costs so far in 2026.
+
+**Why it matters:** This is the same idea behind Pennsylvania's executive
+order and Georgia Power's large-load tariffs — new data center demand
+shouldn't get to draw on infrastructure that existing residential
+ratepayers already paid to build — but PJM is proposing to apply it at the
+grid-operator level, across its entire multi-state footprint, rather than
+state by state.
+
+**What to learn — what "bring your own power" actually means:** Instead of
+getting the same priority grid access as an existing factory or
+neighborhood, a large new load under this kind of rule either (a) builds
+or contracts for generation that matches its own draw, so it isn't relying
+on the shared grid at peak, or (b) accepts that it will be the first thing
+curtailed — cut off, temporarily — when supply gets tight, before any
+residential circuit is touched. It doesn't ban data centers or cap their
+growth; it changes who bears the risk when the grid is stressed. For more
+on how data center load has already pushed up PJM capacity prices, see
+[Five Auctions, \\$29 Billion: How Data Centers Took Over the PJM Capacity
+Market](/blog/pjm-capacity-auction-ratepayer-shock-2026).
+
+*Sources: [Utility Dive, Aug 27](https://www.utilitydive.com/);
+[Virginia Mercury, Aug 27](https://virginiamercury.com/);
+[WWBT/NBC12, Aug 27](https://www.nbc12.com/)*
+
+---
+
+### 7. Ten more communities paused or banned data centers this week
+
+Beyond the stories above, at least ten more local governments moved on
+data centers in the past seven days:
+
+| Locality | State | Action | Duration / scope |
+|--|--|--|--|
+| Carlton County | MN | Moratorium, unanimous | 1 year |
+| Elkhart | IN | Moratorium (data centers + battery storage), unanimous | Until new ordinance |
+| Cary | NC | Moratorium, unanimous | 18 months |
+| Savannah | GA | Moratorium | 155 days |
+| Palm Beach County | FL | Moratorium, initial approval | 1 year |
+| Nehawka | NE | Ban (village-level) | Standing |
+| Harford County | MD | Ban — first county in Maryland to ban data centers | Standing |
+| Pierce County | WA | Ban, unincorporated areas only | 1 year |
+| Isanti | MN | Moratorium extended | 1 year |
+| Lancaster County | NE | Moratorium introduced | Not yet voted |
+
+**What to learn — check whether a ban covers your address, not just your
+county:** Pierce County's ban, like several others this year, applies only
+to *unincorporated* areas — land outside any city or town's own boundary.
+If you live inside an incorporated city within a county that just passed a
+ban, that county's ordinance may not cover your street at all; you'd need
+your city council to pass its own. Always ask your local clerk which map
+the ordinance actually applies to before you tell your neighbors it
+protects them.
+
+*Sources: [fox21online.com, Aug 25](https://www.fox21online.com/) (Carlton County);
+[WSBT, Aug 28](https://www.wsbt.com/) (Elkhart); [WRAL, Aug 28](https://www.wral.com/) (Cary);
+[WTOC, Aug 28](https://www.wtoc.com/) (Savannah); [WPTV, Aug 28](https://www.wptv.com/) (Palm Beach County);
+[KETV, Aug 28](https://www.ketv.com/) (Nehawka); [Inside Towers, Aug 28](https://www.insidetowers.com/) (Harford County);
+[The News Tribune, Aug 27](https://www.thenewstribune.com/) (Pierce County);
+[isanti-chisagocountystar.com, Aug 27](https://www.isanti-chisagocountystar.com/) (Isanti);
+[Nebraska Public Media, Aug 27](https://nebraskapublicmedia.org/) (Lancaster County)*
+
+---
+
+### What to watch next week
+
+- **Palm Beach County, FL** — whether commissioners give final approval to
+  the one-year moratorium after this week's initial vote
+- **Fresno, CA** — whether the full council takes up the citywide ban
+  proposal
+- **Coachella, CA** — whether the mayor's proposed ballot measure to
+  entrench the data center ban moves forward
+- **Texas** — whether Abbott's audit gets a firm completion date, or
+  legislators call the special session Democrats have requested
+- **Vineland, NJ** — how state and local regulators respond to the
+  unpermitted-turbine allegations at the Nebius/Microsoft site
+
+---
+
+*Every Sunday we cover the week's most important data center stories,
+explain the underlying concepts, and point you to the tools you need. Know
+a story we should cover? Reach out at hello@aigridwatch.com or sign up for
+the newsletter below.*
 """,
     },
 ]

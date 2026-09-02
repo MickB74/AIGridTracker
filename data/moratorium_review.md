@@ -1,14 +1,14 @@
 # Moratorium tracker review queue
-_Generated 2026-08-30 · 338/338 tracker rows sourced; 44/44 quotable claims (case studies, benchmarks, concessions) carry a citation and a read date_
-
-_Link checking skipped (--offline) — nothing below has been confirmed to resolve, let alone to say what the row claims._
+_Generated 2026-08-31 · 333/333 tracker rows sourced; 44/44 quotable claims (case studies, benchmarks, concessions) carry a citation and a read date_
 
 | Check | Count |
 |---|---|
 | expired | 19 |
-| undated-term | 30 |
+| dead-link | 4 |
+| undated-term | 29 |
 | unclassified-term | 5 |
-| expiring | 9 |
+| expiring | 8 |
+| blocked | 46 |
 
 ## expired (19)
 - **Groton, CT** (Enacted) — term ran to 2023-06-21; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://theday.com/local-news/20220621/groton-approves-one-year-moratorium-on-large-scale-data-centers)
@@ -31,7 +31,13 @@ _Link checking skipped (--offline) — nothing below has been confirmed to resol
 - **Aurora, IL** (Enacted) — term ran to 2026-03-24; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://abc7chicago.com/post/aurora-city-council-consider-temporary-moratorium-put-pause-development-new-data-centers/17882682/)
 - **Larimer County, CO** (Enacted) — term ran to 2026-08-25; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://www.larimer.gov/planning/temp-moratorium-data-centers)
 
-## undated-term (30)
+## dead-link (4)
+- **Charlotte, NC** (Proposed) — TimeoutError: The read operation timed out — https://www.charlotteobserver.com/ · [source](https://www.charlotteobserver.com/)
+- **Lenox Township, MI** (Enacted) — HTTP 404 — https://www.lenox-mi.gov/m/newsflash/home/detail/240 · [source](https://www.lenox-mi.gov/m/newsflash/home/detail/240)
+- **Twinsburg, OH** (Enacted) — HTTP 404 — https://mytwinsburg.com/DocumentCenter/View/11167/2026-065-Establishing-Moratorium-for-Data-Centers · [source](https://mytwinsburg.com/DocumentCenter/View/11167/2026-065-Establishing-Moratorium-for-Data-Centers)
+- **Vermont (S.205), VT** (Proposed) — URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)> — https://legislature.vermont.gov/bill/status/2026/S.205 · [source](https://legislature.vermont.gov/bill/status/2026/S.205)
+
+## undated-term (29)
 - **Carroll County, GA** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://gradickcommunications.com/carroll-county-board-of-commissioners-approve-100-day-moratorium-on-data-centers-battery-energy-storage-systems/)
 - **Yakima County, WA** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.yakimaherald.com/news/local/government/yakima-county-commissioners-pass-six-month-data-center-moratorium/article_997dbbc7-7fe0-476a-9d92-73179f958bf7.html)
 - **Pinson, AL** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.trussvilletribune.com/2026/08/07/pinson-council-passes-one-year-moratorium-on-data-centers/)
@@ -61,7 +67,6 @@ _Link checking skipped (--offline) — nothing below has been confirmed to resol
 - **Tulare County, CA** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.yourcentralvalley.com/news/local-news/tulare-county-ai-data-center-moratorium/)
 - **Woodford County, IL** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://wmbdradio.com/2026/08/21/tazewell-county-revisits-data-center-ordinance-woodford-county-passes-moratorium/)
 - **Lyon County, KY** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.wpsdlocal6.com/news/data-center-moratorium-ordinance-passes-unanimously-in-lyon-county/article_3e62c03d-096f-42d0-b78d-d1f7e51be074.html)
-- **Bloomingdale, GA** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.wsav.com/news/local-news/bloomingdale-city-council-approves-data-center-moratorium/)
 
 ## unclassified-term (5)
 - **Manatee County, FL** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.wusf.org/politics-issues/2026-08-04/manatee-county-pumps-brakes-data-centers-joining-hernando-pasco)
@@ -70,14 +75,61 @@ _Link checking skipped (--offline) — nothing below has been confirmed to resol
 - **White County, IN** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://dailyjournal.net/2025/11/24/3-counties-put-moratoriums-on-data-center-projects/)
 - **Miami County, IN** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.miamicountyin.gov/910/Proposed-Data-Center-Ordinance-Moratoriu)
 
-## expiring (9)
-- **Bangor, ME** (Enacted) — ends 2026-10-10 (41.0d) — watch for an extension · [source](https://www.wabi.tv/2026/04/14/bangor-passes-180-day-moratorium-data-center-development/)
-- **Augusta, GA** (Enacted) — ends 2026-09-19 (20.0d) — watch for an extension · [source](https://www.wjbf.com/news/augusta-commissioners-delaying-approval-of-data-center-ordinance-and-extending-moratorium-by-60-days/)
-- **Vienna Township (Trumbull Co.), OH** (Enacted) — ends 2026-10-16 (47.0d) — watch for an extension · [source](https://www.tribtoday.com/news/local-news/2026/08/vienna-extends-data-center-moratorium/)
-- **Hogansville, GA** (Enacted) — ends 2026-09-01 (2.0d) — watch for an extension · [source](https://www.lagrangenews.com/news/hogansville-approves-90-day-moratorium-for-data-centers-9d59b175)
-- **Birmingham, AL** (Enacted) — ends 2026-09-03 (4.0d) — watch for an extension · [source](https://www.wbrc.com/2026/03/04/birmingham-city-council-votes-pause-new-data-center-applications-six-months/)
-- **Wixom, MI** (Enacted) — ends 2026-09-24 (25.0d) — watch for an extension · [source](https://www.wixomgov.org/departments/construction-development-services-building/data-center-moratorium-ordinance)
-- **Front Royal, VA** (Enacted) — ends 2026-10-04 (35.0d) — watch for an extension · [source](https://www.nvdaily.com/nvdaily/council-oks-moratorium-on-data-center-applications/article_8bbfc9ce-d84e-5dd8-a4be-e8f9ee95cc94.html)
-- **Indio, CA** (Enacted) — ends 2026-10-16 (47.0d) — watch for an extension · [source](https://www.nbcpalmsprings.com/2026/07/16/indio-city-council-extends-data-center-moratorium-with-planning-commission-already-recommending-a-full-ban)
-- **Palm Springs, CA** (Enacted) — ends 2026-10-10 (41.0d) — watch for an extension · [source](https://kesq.com/news/2026/08/26/palm-springs-city-council-approves-temporary-data-center-moratorium/)
+## expiring (8)
+- **Bangor, ME** (Enacted) — ends 2026-10-10 (40.0d) — watch for an extension · [source](https://www.wabi.tv/2026/04/14/bangor-passes-180-day-moratorium-data-center-development/)
+- **Augusta, GA** (Enacted) — ends 2026-09-19 (19.0d) — watch for an extension · [source](https://www.wjbf.com/news/augusta-commissioners-delaying-approval-of-data-center-ordinance-and-extending-moratorium-by-60-days/)
+- **Vienna Township (Trumbull Co.), OH** (Enacted) — ends 2026-10-16 (46.0d) — watch for an extension · [source](https://www.tribtoday.com/news/local-news/2026/08/vienna-extends-data-center-moratorium/)
+- **Hogansville, GA** (Enacted) — ends 2026-09-01 (1.0d) — watch for an extension · [source](https://www.lagrangenews.com/news/hogansville-approves-90-day-moratorium-for-data-centers-9d59b175)
+- **Birmingham, AL** (Enacted) — ends 2026-09-03 (3.0d) — watch for an extension · [source](https://www.wbrc.com/2026/03/04/birmingham-city-council-votes-pause-new-data-center-applications-six-months/)
+- **Wixom, MI** (Enacted) — ends 2026-09-24 (24.0d) — watch for an extension · [source](https://www.wixomgov.org/departments/construction-development-services-building/data-center-moratorium-ordinance)
+- **Front Royal, VA** (Enacted) — ends 2026-10-04 (34.0d) — watch for an extension · [source](https://www.nvdaily.com/nvdaily/council-oks-moratorium-on-data-center-applications/article_8bbfc9ce-d84e-5dd8-a4be-e8f9ee95cc94.html)
+- **Indio, CA** (Enacted) — ends 2026-10-16 (46.0d) — watch for an extension · [source](https://www.nbcpalmsprings.com/2026/07/16/indio-city-council-extends-data-center-moratorium-with-planning-commission-already-recommending-a-full-ban)
+
+## blocked (46)
+- **Reno, NV** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://thisisreno.com/2026/06/reno-city-council-data-center-moratorium-3/)
+- **Smithfield, RI** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.wpri.com/news/local-news/northwest/smithfield-town-council-approves-ordinance-to-prevent-construction-of-data-centers/)
+- **Washington Township (Macomb Co.), MI** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.detroitnews.com/story/news/local/macomb-county/2026/05/23/washington-township-passes-six-month-moratorium-on-data-centers/90213646007/)
+- **Lysander (Onondaga Co.), NY** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.informnny.com/news/local-news/lysander-board-approves-six-month-data-center-moratorium-residents-speak-out-against-project-proposal/)
+- **Newfield (Tompkins Co.), NY** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.tompkinsweekly.com/events/newfield-approves-one-year-moratorium-on-data-centers-fdcffc41)
+- **Chatham County, NC** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.chathamcountync.gov/Home/Components/News/News/17295/19)
+- **Watauga County, NC** (Enacted) — HTTP 429 (bot-blocked, check by hand) · [source](https://www.wataugademocrat.com/news/county-commissioners-pass-a-one-year-data-center-moratorium-for-watauga-county/article_012ca886-b088-4aee-8321-6b0f851fcdca.html)
+- **Clyde, NC** (Enacted) — HTTP 429 (bot-blocked, check by hand) · [source](https://www.themountaineer.com/)
+- **Hays County, TX** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.kxan.com/news/local/hays/hays-county-approves-resolution-to-pause-review-of-data-centers/)
+- **Augusta, GA** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.wjbf.com/news/augusta-commissioners-delaying-approval-of-data-center-ordinance-and-extending-moratorium-by-60-days/)
+- **Merrillville, IN** (Enacted) — HTTP 429 (bot-blocked, check by hand) · [source](https://nwitimes.com/news/local/lake/merrillville/article_f506303d-f5ce-4bcc-bb4c-a6abf68fb24d.html)
+- **Boardman, OH** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.wkbn.com/news/local-news/boardman-news/boardman-places-moratorium-on-data-centers/)
+- **La Crosse County, WI** (Enacted) — HTTP 429 (bot-blocked, check by hand) · [source](https://www.wxow.com/news/la-crosse-county-board-approves-data-center-moratorium/article_89162c21-3240-4d86-9e2d-8a6c3489ddc8.html)
+- **New York (S10642/A11560), NY** (Proposed) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.nysenate.gov/legislation/bills/2025/S10642)
+- **Clinton, IA** (Rejected) — HTTP 429 (bot-blocked, check by hand) · [source](https://qctimes.com/news/local/government-politics/article_5827c520-3b42-407e-9610-c8a6421385e5.html)
+- **Hogansville, GA** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.lagrangenews.com/news/hogansville-approves-90-day-moratorium-for-data-centers-9d59b175)
+- **Rochester Hills, MI** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.detroitnews.com/story/news/local/oakland-county/2026/08/11/rochester-hills-extends-data-center-moratorium/91256551007/)
+- **Ridgely, MD** (Enacted) — HTTP 429 (bot-blocked, check by hand) · [source](http://www.stardem.com/news/caroline/ridgely-passes-one-year-moratorium-on-data-centers/article_97ec1ae7-4a05-4e9e-9551-4bc8b650043a.html)
+- **Columbia County, GA** (Proposed) — HTTP 429 (bot-blocked, check by hand) · [source](https://www.wfxg.com/news/columbia-county-commission-chair-hopeful-proposes-new-data-center-legislation/article_42377dc5-1418-4aa6-8860-70c604fb4323.html)
+- **Grant County, IN** (Enacted) — HTTP 429 (bot-blocked, check by hand) · [source](https://www.chronicle-tribune.com/news/commissioners-pass-data-center-moratorium/article_a55a569b-62b5-578c-912e-f183d461f1b9.html)
+- **Coweta County, GA** (Enacted) — HTTP 429 (bot-blocked, check by hand) · [source](https://www.times-herald.com/news/commissioners-approve-180-day-data-center-moratorium/article_29dd50b8-88fb-4424-98d9-9d87abfb4588.html)
+- **Minneapolis, MN** (Enacted) — HTTP 429 (bot-blocked, check by hand) · [source](https://www.startribune.com/minneapolis-data-centers-moratorium/601846955)
+- **Washington County, MN** (Enacted) — HTTP 429 (bot-blocked, check by hand) · [source](https://www.startribune.com/minnesota-counties-data-centers/601857833)
+- **Wixom, MI** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.wixomgov.org/departments/construction-development-services-building/data-center-moratorium-ordinance)
+- **Jessamine County, KY** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://fox56news.com/news/local/jessamine-county-approves-12-month-data-center-moratorium/)
+- **Weathersfield Township, OH** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.wkbn.com/news/local-news/weathersfield-news/weathersfield-township-trustees-place-moratorium-on-approving-data-center/)
+- **Village of Wrightstown, WI** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.wearegreenbay.com/news/local-news/wrightstown-places-moratorium-on-data-centers/)
+- **White County, IN** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://dailyjournal.net/2025/11/24/3-counties-put-moratoriums-on-data-center-projects/)
+- **Kittitas County, WA** (Proposed) — HTTP 429 (bot-blocked, check by hand) · [source](https://www.dailyrecordnews.com/news/kittitas-county-commissioners-to-look-at-data-center-ban/article_e455846e-e6d5-462e-91bb-03856c76cec9.html)
+- **Arizona (tax incentives), AZ** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://news.bloombergtax.com/daily-tax-report-state/arizona-data-center-tax-incentive-pause-signed-by-governor-hobbs)
+- **Pima County, AZ** (Proposed) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.tucsonsentinel.com/local/report/081126_pima_data_moratorium/pima-county-moves-forward-possible-data-center-moratorium)
+- **Front Royal, VA** (Enacted) — HTTP 429 (bot-blocked, check by hand) · [source](https://www.nvdaily.com/nvdaily/council-oks-moratorium-on-data-center-applications/article_8bbfc9ce-d84e-5dd8-a4be-e8f9ee95cc94.html)
+- **Asheville, NC** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://mountainx.com/news/local-government/council-approves-one-year-moratorium-on-data-centers/)
+- **Red Bank, NJ** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.redbankgreen.com/2026/06/ank-council-oks-adus-small-hotels-bans-data-centers06132026/)
+- **Jackson, MS** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://mississippitoday.org/2026/07/14/jackson-data-center-moratorium/)
+- **Tulare County, CA** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.yourcentralvalley.com/news/local-news/tulare-county-ai-data-center-moratorium/)
+- **Larimer County, CO** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.larimer.gov/planning/temp-moratorium-data-centers)
+- **Oklahoma (SB 1488), OK** (Rejected) — HTTP 403 (bot-blocked, check by hand) · [source](https://legiscan.com/OK/bill/SB1488/2026)
+- **Alamance County, NC** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://myfox8.com/news/north-carolina/alamance/alamance-county-commissioners-approve-1-year-data-center-moratorium/)
+- **Howard County, IN** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://kokomolantern.substack.com/p/county-adopts-data-center-moratorium)
+- **Lyon County, KS** (Enacted) — HTTP 429 (bot-blocked, check by hand) · [source](https://www.emporiagazette.com/free/article_6a9583e6-0fba-4bb8-a30e-e0bbb928a316.html)
+- **Camdenton, MO** (Enacted) — HTTP 403 (bot-blocked, check by hand) · [source](https://www.lakenewsonline.com/stories/camdenton-aldermen-rescind-support-for-opportunity-zone-approve-moratorium-on-data-centers,199992)
+- **Mesa case study, AZ** (Permanent limits adopted) — HTTP 429 (bot-blocked, check by hand) · [source](https://www.themesatribune.com/news/mesa-council-to-vote-on-data-center-controls/article_95cfba83-0015-4c0e-aa8e-116cef4c8c6e.html)
+- **Vantage: Sterling, VA (Loudoun County), ** (concession) — HTTP 429 (bot-blocked, check by hand) · [source](https://www.loudounnow.com/news/sterling-residents-raise-alarms-over-off-grid-data-center/article_3481d7fd-11ef-4948-a951-8c4ee6e69f2f.html)
+- **CyrusOne: Chandler, AZ, ** (concession) — HTTP 429 (bot-blocked, check by hand) · [source](https://www.eastvalleytribune.com/residents-skeptical-about-noise-declines-at-data-center/article_9edb4c85-ceb9-54e9-9b0e-ab4b6390d04e.html)
+- **EdgeConneX: Douglas County, GA, ** (concession) — HTTP 429 (bot-blocked, check by hand) · [source](https://www.douglascountysentinel.com/douglasville_sentinel/county-rejects-plans-for-700-acre-data-center-campus/article_a5761e68-bcdb-5537-a954-b2a948460ea3.html)
 
