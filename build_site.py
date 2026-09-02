@@ -2718,28 +2718,44 @@ def _fetch_news_live(limit=100):
     `states`) or None on total failure."""
     from src.constants import (
         STORY_QUERY, STORY_QUERY_ACTIONS, STORY_STATE_QUERIES,
+        STORY_LOCALITY_QUERIES,
     )
     seen, out = set(), []
+    abbr2name = _abbr_to_state()
 
-    def _add(query, label, force_state=None):
+    def _add(query, label, force_state=None, gate=None, force_locality=None):
         items = _fetch_google_news_rss(query, limit=limit)
-        fresh = 0
+        fresh = dropped = 0
         for it in items:
             link = it.get("link")
             if not link or link in seen:
+                continue
+            if gate and not gate.search(it.get("title", "")):
+                # Hometown paper, wire story — not this town's news. Left
+                # out of `seen` so a broad query can still tag it normally.
+                dropped += 1
                 continue
             seen.add(link)
             it["states"] = _news_states_for(it)
             if force_state and force_state not in it["states"]:
                 it["states"] = sorted(it["states"] + [force_state])
+            if force_locality:
+                # Read by _persist_story_candidates ahead of the gazetteer.
+                it["locality_hint"] = list(force_locality)
             out.append(it)
             fresh += 1
-        print(f"  [news] {label}: {len(items)} items, {fresh} new")
+        gated = f", {dropped} failed gate" if gate else ""
+        print(f"  [news] {label}: {len(items)} items, {fresh} new{gated}")
 
     _add(STORY_QUERY, "impact query")
     _add(STORY_QUERY_ACTIONS, "actions query")
     for state, query in STORY_STATE_QUERIES.items():
         _add(query, f"state query {state!r}", force_state=state)
+    for (loc, abbr), spec in STORY_LOCALITY_QUERIES.items():
+        _add(spec["query"], f"locality query {loc}, {abbr}",
+             force_state=abbr2name.get(abbr),
+             gate=_re.compile(spec["gate"], _re.IGNORECASE),
+             force_locality=(loc, abbr))
     return out or None
 
 
@@ -3250,6 +3266,12 @@ def _persist_story_candidates(items):
         if not link:
             continue
         locality, state = story_tracker.guess_locality(it.get("title", ""), gazetteer)
+        if it.get("locality_hint"):
+            # A per-locality feed (STORY_LOCALITY_QUERIES) already passed
+            # its headline gate; it knows the town better than a regex over
+            # the title does ("Mayor walks away from proposed data center
+            # project" names nobody).
+            locality, state = it["locality_hint"]
         if not state:
             # Fall back to the state _news_states_for already tagged, mapped
             # to its abbreviation so it matches the gazetteer's convention
@@ -8004,9 +8026,20 @@ def _local_projects_section_html(locality, state):
     the body/officials sections are: a resident who lands on their own town's
     page from a search should see the project, not just the headlines."""
     base = str(locality).split(" (")[0].strip().lower()
-    rows = [r for r in PROJECTS_DF.to_dict("records")
-            if str(r.get("state")) == str(state)
-            and str(r.get("locality", "")).split(" (")[0].strip().lower() == base]
+
+    def _matches(r):
+        if str(r.get("state")) != str(state):
+            return False
+        raw = str(r.get("locality", ""))
+        if raw.split(" (")[0].strip().lower() == base:
+            return True
+        # A project inside a town the county's moratorium does not reach
+        # ("Marion (Grant County)") still belongs on the county's page —
+        # the parenthetical is where the row says which county that is.
+        paren = re.search(r"\(([^)]*)\)", raw)
+        return bool(paren and paren.group(1).strip().lower() == base)
+
+    rows = [r for r in PROJECTS_DF.to_dict("records") if _matches(r)]
     if not rows:
         return ""
     blocks = []

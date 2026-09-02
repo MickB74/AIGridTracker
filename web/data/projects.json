@@ -5,8 +5,8 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/projects",
-  "count": 261,
-  "verified_count": 260,
+  "count": 263,
+  "verified_count": 262,
   "caveat": "A working set of identified proposals a community can track, not a census — most of the country's activity is not in here yet. Pennsylvania is the exception: its rows are synced from PA DEP's own data-center permit tracker, so the state's coverage is close to complete and carries the permit trail with it.\n\n**Each row carries its own provenance.** Rows showing a verification date link to reporting or the governing body's own record and were read on that date; rows marked *unverified* have no source on record — a lead to check, not a fact to cite.\n\n**Stage is derived, not asserted.** *Hearing scheduled*, *Awaiting decision*, *Approved* and *Withdrawn* are computed from each row's milestone dates on every rebuild, so a hearing date that has passed stops reading 'scheduled'. Hearings get moved and projects re-file under new names — treat a scheduled date as the earliest to act by, and confirm with the clerk before relying on it. Leads are mined into data/project_candidates.json and promoted here only after a human reads a primary source.",
   "schema": {
     "id": "Stable slug, unique per project.",
@@ -20199,6 +20199,114 @@
           "kind": "coverage",
           "summary": "ROI-NJ reported the ban as Millville rejecting the largest proposed data center facility in the state.",
           "source": "https://www.roi-nj.com/2026/05/20/tech/millville-bans-data-centers-rejecting-largest-proposed-facility-in-n-j/"
+        }
+      ]
+    },
+    {
+      "id": "project-riverjump-marion-in",
+      "name": "Project Riverjump (Marion)",
+      "operator": "",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Marion (Grant County)",
+      "state": "IN",
+      "lat": 40.556,
+      "lon": -85.7,
+      "size_mw": "",
+      "acres": "",
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "2026-08-27",
+      "outcome": "withdrawn",
+      "stage": "Withdrawn",
+      "days_to_hearing": null,
+      "note": "Code-named hyperscale data center proposed for the west side of the City of Marion, the county seat. Because Marion is incorporated, the county's 24-month moratorium (Ordinance 4-2026) never applied to it. Rumors of a data center west of Marion near Central Indiana Ethanol circulated from January 2026; Mayor Ronald Morrell Jr. said then that no ordinance or vote was scheduled. In late August 2026, citing public feedback in person and online, Morrell said he would not pursue or support data center development in Marion under his administration. The developer and end user were never publicly identified; no application appears in the public record.",
+      "source": "https://www.chronicle-tribune.com/news/mayor-walks-away-from-proposed-data-center-project/article_a3f15237-10b5-5a1c-a5b4-84234624e357.html",
+      "as_of": "2026-09-02",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-01-20",
+          "kind": "coverage",
+          "source": "https://www.chronicle-tribune.com/news/no-vote-planned-as-data-center-rumors-circulate/article_2d518d7d-a531-5eaf-9091-5cd05b56a9fb.html",
+          "summary": "Chronicle-Tribune reported rumors of data center construction west of Marion near Central Indiana Ethanol, traced to a satirical Facebook post; Mayor Ronald Morrell said there was 'currently no ordinance or vote scheduled related to a data center' and Councilman Mike Cline declined to comment on rumors."
+        },
+        {
+          "date": "2026-02-23",
+          "kind": "protest",
+          "source": "https://www.change.org/p/ban-new-data-centers-on-farmland-and-in-towns",
+          "summary": "Marion resident Molly Earley launched a change.org petition, 'Ban new data centers on farmland and in towns', addressed to the Grant County commissioners and the Area Plan Commission; it passed 2,000 signatures by September 2026."
+        },
+        {
+          "date": "2026-08-27",
+          "kind": "withdrawal",
+          "source": "https://www.chronicle-tribune.com/news/mayor-walks-away-from-proposed-data-center-project/article_a3f15237-10b5-5a1c-a5b4-84234624e357.html",
+          "summary": "Chronicle-Tribune reported the City of Marion is no longer moving forward with Project Riverjump, a hyperscale data center planned for the city's west side; Mayor Ronald Morrell Jr. said that based on citizen feedback he 'will not be pursuing or supporting data center development in the City of Marion under my administration.'"
+        },
+        {
+          "date": "2026-09-02",
+          "kind": "coverage",
+          "source": "https://www.chronicle-tribune.com/opinion/mack-up-your-mind-we-should-care-about-more-than-just-data-centers/article_e9bf2826-5f8f-5daf-8590-13f3c4712310.html",
+          "summary": "Chronicle-Tribune columnist Laura Mack credited public outcry for the project's end and quoted the mayor's statement that 'the message I have received from our citizens regarding data center development has been clear.'"
+        }
+      ]
+    },
+    {
+      "id": "recore-digital-grant-county-in",
+      "name": "Recore Digital AI data center inquiry",
+      "operator": "Recore Digital",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Grant County",
+      "state": "IN",
+      "lat": 40.51,
+      "lon": -85.66,
+      "size_mw": "",
+      "acres": "",
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "Rumored",
+      "days_to_hearing": null,
+      "note": "An inquiry, not an application. Recore Digital approached the Grant County Area Plan Commission in July 2026 about converting an existing cryptocurrency mining operation in the county into what it describes as a 'quiet, permanent AI Data Center'. The county's 24-month moratorium (Ordinance 4-2026) bars improvement-location permits for data centers in unincorporated areas until March 2028 or until the APC's data center ordinance is adopted, so the live question is what that ordinance will require; a seven-member subcommittee (four APC members, three residents) finished its first review of the draft in August 2026. Site, size, power and water figures have not been published. Coordinates are the county centroid.",
+      "source": "https://www.chronicle-tribune.com/news/area-plan-receives-data-center-development-inquiry/article_1a7345a5-c383-523a-b3f6-09d156844a72.html",
+      "as_of": "2026-09-02",
+      "verified": true,
+      "events": [
+        {
+          "date": "2025-12-01",
+          "kind": "meeting",
+          "source": "http://areaplan.grant.in.datapitstop.us/cgi.exe?PAGEID=0016&CALL_PROGRAM=MINUTES&find_group=Area%20Plan%20Commission",
+          "summary": "Grant County Area Plan Commission began outlining a data center ordinance — annual energy and water reporting, client-category disclosure, infrastructure offsets, and rules for standby diesel generators and cooling noise were among the items discussed (minutes on the county's APC minutes server; secondary account at citizenportal.ai)."
+        },
+        {
+          "date": "2026-03-16",
+          "kind": "moratorium",
+          "source": "http://commissioners.grant.in.datapitstop.us/DATA/MINUTES/FLD00005/00011112.PDF",
+          "summary": "Board of Commissioners adopted Ordinance 4-2026, a 24-month moratorium on data center improvement-location permits in unincorporated Grant County, 3-0, after county attorney Martin Harker read it aloud."
+        },
+        {
+          "date": "2026-07-11",
+          "kind": "proposal",
+          "source": "https://www.chronicle-tribune.com/news/area-plan-receives-data-center-development-inquiry/article_1a7345a5-c383-523a-b3f6-09d156844a72.html",
+          "summary": "Chronicle-Tribune reported that Recore Digital wants to bring a 'quiet, permanent AI Data Center' to Grant County and had approached the Area Plan Commission; the APC's data center subcommittee is seven volunteers — four commission members and three from the public."
+        },
+        {
+          "date": "2026-07-25",
+          "kind": "coverage",
+          "source": "https://www.chronicle-tribune.com/opinion/data-centers-the-first-applicant-should-not-write-the-rulebook/article_cd6fe5b5-7f06-59b0-9376-667adc9d971e.html",
+          "summary": "Chronicle-Tribune opinion column (Tom Marine) described the inquiry as a proposal to convert an existing cryptocurrency mining operation and argued the first applicant should not write the county's rulebook."
+        },
+        {
+          "date": "2026-08-08",
+          "kind": "meeting",
+          "source": "https://www.chronicle-tribune.com/news/data-center-subcommittee-wraps-up-initial-draft-review/article_ca5c0ad2-73e6-5484-8e96-763c8e3db140.html",
+          "summary": "The APC's data center subcommittee met to complete its initial review of the draft data center ordinance; the Chronicle-Tribune described the county as 'one step closer to finalizing a data center ordinance'."
         }
       ]
     }

@@ -1881,12 +1881,25 @@ MORATORIUMS = [
              "incorporated Advance)",
      "lat": 40.05, "lon": -86.47, "expires": "2027-06-15", "as_of": "2026-08-13",
      "source": "https://boonecounty.in.gov/2026/06/15/19190/"},
+    # Source is the Board of Commissioners' own March 16, 2026 minutes (item
+    # H: attorney Martin Harker read Ordinance 4-2026 aloud; Stewart moved,
+    # Poling seconded, carried 3-0). The March 2 minutes record the original
+    # motion "pending legal review" and Stewart's stated trigger — "the Data
+    # Centers on 69 and 26", i.e. the I-69 / SR 26 corridor at Gas City.
+    # Covers unincorporated Grant County only: Marion, Gas City and the other
+    # incorporated towns have their own zoning, which is why Project
+    # Riverjump (a City of Marion matter) was never subject to it.
     {"locality": "Grant County", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "Mar 16, 2026",
-     "note": "24-month moratorium; gives officials time to study zoning, land use, "
-             "infrastructure, and gather public input",
-     "lat": 40.51, "lon": -85.66, "expires": "2028-03-16", "as_of": "2026-08-13",
-     "source": "https://www.chronicle-tribune.com/news/commissioners-pass-data-center-moratorium/article_a55a569b-62b5-578c-912e-f183d461f1b9.html"},
+     "note": "Ordinance 4-2026: 24-month moratorium on improvement-location "
+             "permits for data centers in unincorporated Grant County, "
+             "unanimous (3-0), or until the Area Plan Commission's data "
+             "center zoning amendments are adopted, whichever comes first. "
+             "Does not bind Marion, Gas City or other incorporated towns. "
+             "An APC subcommittee finished its first review of a draft "
+             "ordinance in Aug 2026",
+     "lat": 40.51, "lon": -85.66, "expires": "2028-03-16", "as_of": "2026-09-02",
+     "source": "http://commissioners.grant.in.datapitstop.us/DATA/MINUTES/FLD00005/00011112.PDF"},
     {"locality": "Fayette County", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "May 18, 2026",
      "note": "1-year pause; no local policy governing data centers existed. "
@@ -3836,6 +3849,10 @@ OFFICIAL_SOURCE_MARKERS = (
     ".gov", "municode.com", "legistar", "granicus.com", "iqm2.com",
     "ecode360.com", "civicplus.com", "novusagenda.com", "destinyhosted.com",
     "primegov.com", "boarddocs.com",
+    # Grant County IN and other Indiana counties host commissioners' and plan
+    # commission minutes on datapitstop.us (e.g. commissioners.grant.in.
+    # datapitstop.us/DATA/MINUTES/...) — the enacting body's own record.
+    "datapitstop.us",
 )
 
 
@@ -7712,6 +7729,32 @@ STORY_STATE_QUERIES = {
     "Texas": '"Texas" data center when:7d',
 }
 
+# Per-locality feeds for towns that get real traffic and whose fight is
+# covered by one hometown paper the broad queries never surface. Keyed by
+# (locality, state abbrev) exactly as the row appears in MORATORIUMS_DF /
+# LOCAL_BODIES_DF, so the story tracker groups these onto the same community
+# page. Each entry is a Google News query plus a `gate` regex the *headline*
+# must match, because a hometown masthead is not a locality: Marion's
+# Chronicle-Tribune runs AP wire under its own name ("Data center debate
+# rocks Decatur", "Fetterman joins Trump's embrace of data centers"), and
+# a bare '"Grant County" Indiana' query returned Grant County WA, WI and AR
+# and Marion County FL — measured 2026-09-02 before this was added. A
+# headline that passes the gate is force-tagged with this locality; one
+# that fails is dropped from this feed (it may still arrive via the broad
+# queries and be tagged the ordinary way). False negatives are the accepted
+# cost: a local story the gate misses can be seeded by hand, while a wire
+# story published as Grant County's own news would be read out at a
+# hearing. Used at site-build time only (build_site.py).
+STORY_LOCALITY_QUERIES = {
+    ("Grant County", "IN"): {
+        "query": 'site:chronicle-tribune.com "data center" when:30d',
+        "gate": r"\b(Grant County|Grant Co\.?|Marion(?! County)|Gas City|Jonesboro|"
+                r"Upland|Fairmount|Sweetser|Swayzee|Van Buren|Converse|"
+                r"Matthews|Area Plan|APC|commissioners?|county council|"
+                r"subcommittee|Riverjump|Recore)\b",
+    },
+}
+
 STORY_ANGLES = [
     (("noise", "hum", "sound", "decibel"), "🔊",
      "Noise from the facility is drawing resident complaints."),
@@ -9729,6 +9772,39 @@ LOCAL_BODIES = [
      "website": "https://www.cityofpataskalaohio.gov/citycouncil",
      "as_of": "2026-08-18",
      "source": "https://www.cityofpataskalaohio.gov/citycouncil"},
+    # Grant County, IN — https://www.in.gov/counties/grant/county-offices/commissioners/
+    # The commissioners enacted the moratorium (Ordinance 4-2026) and will
+    # adopt or reject whatever data center zoning the Area Plan Commission
+    # recommends; the APC (1st Monday 7 p.m., same chambers) is where the
+    # draft ordinance is being written and where the public hearing on it
+    # will be advertised. Incorporated towns (Marion, Gas City, ...) zone
+    # themselves — the county ordinance does not reach inside their limits.
+    {"locality": "Grant County", "state": "IN",
+     "body": "Grant County Board of Commissioners",
+     "decides": "County ordinances for unincorporated Grant County, including "
+                "the 24-month data center moratorium (Ordinance 4-2026) and the "
+                "zoning amendments the Area Plan Commission recommends to end it. "
+                "The Area Plan Commission (first Monday, 7 p.m., same chambers; "
+                "(765) 668-4765, areaplan@grantcounty.in.gov) drafts the data "
+                "center ordinance and holds the advertised public hearing on it. "
+                "The seven-member County Council (countycouncil@grantcounty.in.gov, "
+                "(765) 668-8871) controls the budget and any tax abatement.",
+     "meets": "1st and 3rd Monday, 10:00 a.m. (following Tuesday when Monday "
+              "is a holiday)",
+     "where": "Council Chambers, Grant County Complex, 401 S. Adams Street, "
+              "Marion, IN 46953",
+     "agenda_url": "http://commissioners.grant.in.datapitstop.us/cgi.exe?PAGEID=0013&CALL_PROGRAM=MINUTES",
+     "comment_process": "Every regular session ends with a public-comments "
+                        "item and the minutes record speakers by name and "
+                        "town. Meetings stream on Webex (see the county page "
+                        "for the access code) and past sessions are on the "
+                        "Grant County Government YouTube channel. Special "
+                        "meetings are posted on the county building doors 48 "
+                        "hours ahead.",
+     "phone": "(765) 668-4776", "email": "commissioners@grantcounty.net",
+     "website": "https://www.in.gov/counties/grant/county-offices/commissioners/",
+     "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/grant/county-offices/commissioners/"},
 ]
 LOCAL_BODIES_DF = pd.DataFrame(LOCAL_BODIES)
 
@@ -10370,6 +10446,69 @@ LOCAL_OFFICIALS = [
      "name": "Brandon Galik", "role": "Council Member", "district": "Ward 4",
      "email": "", "phone": "", "stance": "", "as_of": "2026-08-18",
      "source": "https://www.cityofpataskalaohio.gov/citycouncil"},
+    # Grant County, IN — commissioners from
+    # https://www.in.gov/counties/grant/county-offices/commissioners/staff-directory/
+    # (no phones published there; the office line is (765) 668-4776).
+    # Stances are from the commissioners' own minutes: March 2, 2026 (Stewart
+    # moved the 24-month moratorium, Middlesworth seconded, 3-0) and March
+    # 16, 2026 (Stewart moved Ordinance 4-2026, Poling seconded, 3-0).
+    # Oliver was appointed to District 1 by GOP caucus on Aug 20, 2026 after
+    # Shane Middlesworth resigned, so he has no vote on the record.
+    {"locality": "Grant County", "state": "IN", "body": "Board of Commissioners",
+     "name": "Chris Oliver", "role": "County Commissioner, District 1",
+     "district": "1", "email": "coliver@grantcounty.in.gov", "phone": "(765) 668-4776",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/grant/county-offices/commissioners/staff-directory/"},
+    {"locality": "Grant County", "state": "IN", "body": "Board of Commissioners",
+     "name": "Chuck Poling", "role": "County Commissioner, District 2",
+     "district": "2", "email": "cpoling@grantcounty.in.gov", "phone": "(765) 668-4776",
+     "stance": "Voted for the 24-month moratorium (Mar 2 and Mar 16, 2026 minutes)",
+     "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/grant/county-offices/commissioners/staff-directory/"},
+    {"locality": "Grant County", "state": "IN", "body": "Board of Commissioners",
+     "name": "Ron Stewart", "role": "County Commissioner, District 3",
+     "district": "3", "email": "rstewart@grantcounty.in.gov", "phone": "(765) 668-4776",
+     "stance": "Moved the 24-month moratorium and Ordinance 4-2026 (Mar 2 and Mar 16, 2026 minutes)",
+     "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/grant/county-offices/commissioners/staff-directory/"},
+    # County Council from
+    # https://www.in.gov/counties/grant/county-offices/council/staff-directory/
+    # — the fiscal body (budget, tax abatements), not the zoning body.
+    {"locality": "Grant County", "state": "IN", "body": "County Council",
+     "name": "Mike Scott", "role": "County Council, District 1", "district": "1",
+     "email": "mscott@grantcounty.in.gov", "phone": "(765) 668-8871",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/grant/county-offices/council/staff-directory/"},
+    {"locality": "Grant County", "state": "IN", "body": "County Council",
+     "name": "Frank Hix", "role": "County Council, District 2", "district": "2",
+     "email": "fhix@live.com", "phone": "(765) 668-8871",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/grant/county-offices/council/staff-directory/"},
+    {"locality": "Grant County", "state": "IN", "body": "County Council",
+     "name": "Mark Leming", "role": "County Council, District 3", "district": "3",
+     "email": "mleming@grantcounty.in.gov", "phone": "(765) 668-8871",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/grant/county-offices/council/staff-directory/"},
+    {"locality": "Grant County", "state": "IN", "body": "County Council",
+     "name": "Jim McWhirt", "role": "County Council, At Large", "district": "",
+     "email": "jmcwhirt@grantcounty.in.gov", "phone": "(765) 668-8871",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/grant/county-offices/council/staff-directory/"},
+    {"locality": "Grant County", "state": "IN", "body": "County Council",
+     "name": "Greg Kitts", "role": "County Council, At Large", "district": "",
+     "email": "gkitts@grantcounty.in.gov", "phone": "(765) 668-8871",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/grant/county-offices/council/staff-directory/"},
+    {"locality": "Grant County", "state": "IN", "body": "County Council",
+     "name": "Aaron Caudell", "role": "County Council, At Large", "district": "",
+     "email": "acaudell@grantcounty.in.gov", "phone": "(765) 668-8871",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/grant/county-offices/council/staff-directory/"},
+    {"locality": "Grant County", "state": "IN", "body": "County Council",
+     "name": "Greg Brankle", "role": "County Council, At Large", "district": "",
+     "email": "gbrankle@grantcounty.in.gov", "phone": "(765) 668-8871",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/grant/county-offices/council/staff-directory/"},
 ]
 LOCAL_OFFICIALS_DF = pd.DataFrame(LOCAL_OFFICIALS)
 

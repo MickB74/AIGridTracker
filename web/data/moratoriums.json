@@ -5407,11 +5407,11 @@
       "expires": "2028-03-16",
       "term_kind": "until_date",
       "term_label": "Runs to a documented date",
-      "note": "24-month moratorium; gives officials time to study zoning, land use, infrastructure, and gather public input",
-      "source": "https://www.chronicle-tribune.com/news/commissioners-pass-data-center-moratorium/article_a55a569b-62b5-578c-912e-f183d461f1b9.html",
-      "source_kind": "news",
+      "note": "Ordinance 4-2026: 24-month moratorium on improvement-location permits for data centers in unincorporated Grant County, unanimous (3-0), or until the Area Plan Commission's data center zoning amendments are adopted, whichever comes first. Does not bind Marion, Gas City or other incorporated towns. An APC subcommittee finished its first review of a draft ordinance in Aug 2026",
+      "source": "http://commissioners.grant.in.datapitstop.us/DATA/MINUTES/FLD00005/00011112.PDF",
+      "source_kind": "official",
       "ordinance_url": null,
-      "as_of": "2026-08-13",
+      "as_of": "2026-09-02",
       "verified": true,
       "threshold": null,
       "covers": null,
@@ -5420,7 +5420,7 @@
           "date": "2026-03-16",
           "kind": "enacted",
           "label": "Enacted",
-          "source": "https://www.chronicle-tribune.com/news/commissioners-pass-data-center-moratorium/article_a55a569b-62b5-578c-912e-f183d461f1b9.html"
+          "source": "http://commissioners.grant.in.datapitstop.us/DATA/MINUTES/FLD00005/00011112.PDF"
         }
       ],
       "replaced_by": null,
