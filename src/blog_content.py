@@ -29,19 +29,34 @@ Will my electric bill go up? What happens to property values?*
 
 We built this tracker to close that information gap:
 
-- **Open coefficients, cited sources.** Every number on the Calculator and Methodology
-  tabs links to the primary disclosure or peer-reviewed study it came from — IEA, Google,
-  Epoch AI, ML.ENERGY, EPRI, EIA, PJM. Nothing is inferred or editorialized.
-- **Live grid data, not marketing.** The Grid Timing and Data Centers tabs pull real-time
-  generation mix and marginal emissions from the EIA-930 and PJM APIs so you can see the
-  actual carbon intensity of the grid that powers a facility — not the clean-energy credits
-  a company purchased months later.
-- **Community voice, front and center.** The Community & Backlash tab aggregates local news
-  and Reddit sentiment so the concerns of residents — noise, water draw, rate hikes,
-  zoning fights — are as visible as a company's sustainability report.
-- **Direct civic action.** The Officials tab puts every senator, representative, and
-  governor one click away, with documented data-center stances where they exist. Select
-  your state and the app surfaces the local controversies you can reference in your message.
+- **Open coefficients, cited sources.** Every number on the
+  [impact calculator](/impact.html) links to the primary disclosure or peer-reviewed
+  study it came from — IEA, Google, Epoch AI, ML.ENERGY, EPRI, EIA, PJM. Nothing is
+  inferred or editorialized, and where a figure is an estimate we say so.
+- **Every claim carries its date and its document.** The
+  [moratorium tracker](/moratoriums.html) records where communities have paused or
+  banned data centers, and each row carries the ordinance or council record behind it
+  plus the date we last read it. A row we could not source is labelled unverified
+  rather than quietly presented as fact, and a moratorium that has lapsed says so —
+  because a resident who cites an expired pause at a hearing loses the room.
+- **The paper trail, not the press release.** The
+  [project tracker](/projects.html) points at where a campus's public record actually
+  lives — state environmental permits, county filings, the interconnection queue, the
+  PUC docket — and distinguishes a public register from a search query, because those
+  are different claims.
+- **Community voice, front and center.** The [story tracker](/story-tracker.html)
+  archives local reporting by locality so the concerns of residents — noise, water
+  draw, rate hikes, zoning fights — are as visible as a company's sustainability
+  report. Headlines are grouped automatically and labelled as such.
+- **Direct civic action.** [Officials](/officials.html) and the
+  [scorecard](/scorecard.html) put every senator, representative, and governor one
+  click away, with documented data-center positions where they exist and *no record
+  found* where they do not. [Start here](/start-here.html) walks you through the
+  three weeks before a zoning vote.
+
+Everything here is a static page built from committed data. There are no accounts,
+no trackers beyond a privacy-preserving page counter, and nothing to install — the
+site loads on a phone in a council parking lot, which is where a lot of it gets read.
 
 This project is independent, unfunded, and open-source. It is not affiliated with any
 cloud provider, data-center developer, or advocacy group. Our only agenda is that public

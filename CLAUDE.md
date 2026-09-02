@@ -29,7 +29,7 @@ anywhere.
 python3 build_site.py
 ```
 
-Writes `web/` (~495 pages) plus `sitemap.xml`, `robots.txt`, and both
+Writes `web/` (~515 pages) plus `sitemap.xml`, `robots.txt`, and both
 `vercel.json` files. Env overrides: `SITE_URL`, `GC_URL`, `FORMSPREE_ID`.
 `NEWS_FREEZE=1` pins the news/YouTube fetches to the committed cache — use it
 for any rebuild that isn't specifically refreshing news, so the diff shows only
@@ -37,6 +37,16 @@ what the data moved. `NEWS_REFRESH=1` forces a live fetch.
 
 Preview locally with the `static-site` entry in `.claude/launch.json`
 (port 8777).
+
+**The repo lives at `~/GitHub/AIGridTracker`.** It was moved out of
+`~/Documents/GitHub/` on 2026-08-30 because that path is inside the
+iCloud-synced Desktop & Documents container, which had evicted 15,565 of the
+tree's 15,591 files to APFS `dataless` stubs — real metadata, zero bytes. That
+is the cause of the historical half-empty `web/` builds and of the `name 2`
+duplicates the build guard trips on (21 of them, including a bogus
+`.git/refs/heads/master 2`). If a build ever produces suspiciously few pages,
+check `du -sh web/` against `ls -lO` for `dataless` before debugging anything
+else, and do not move this repo back under `~/Documents`.
 
 **`build_site.py` deletes `web/` and regenerates it.** An interrupted build
 leaves the tree half-empty; recover with `git checkout-index` over the deleted
@@ -61,18 +71,28 @@ its own constants.
 
 ### Entrypoint
 
-- **build_site.py** (~13,000 lines) — the whole product. One module, one
-  `main()`, one function per page. It imports from `src/` only:
-  `constants`, `blog_content`, `blog_art`, `alerts`, `briefs`,
-  `permit_lookup`, `pdf_pack`, `us_map_data`, `company_complaints`,
-  `story_tracker`. That import list is the build path — keep it short, and
-  keep every module on it free of `streamlit`, network calls, and Streamlit
-  `\$` escaping.
+- **build_site.py** (~14,000 lines) — the whole product. One module, one
+  `main()`, one function per page. It imports from `src/` only — but in two
+  places, and both count as the build path:
+
+  - **Top of file:** `constants`, `blog_content`, `blog_art`, `alerts`,
+    `briefs`, `permit_lookup`, `pdf_pack`, `us_map_data`,
+    `company_complaints`, `story_tracker`.
+  - **Inside functions** (deferred to keep the roster modules off the import
+    cost of every build step): `senate_races`, `house_races`, `race_common`,
+    `official_grades`, `local_officials`, `services.officials`.
+
+  Sixteen modules, not ten. An earlier version of this file listed only the
+  first group and called it "the whole build path", which contradicted the
+  NOT-legacy table below — verify with the `ast` walk described at the end of
+  this file rather than trusting either list. Keep it short, and keep every
+  module on it free of `streamlit`, network calls, and Streamlit `\$`
+  escaping.
 
 
 ### Data layer
 
-- **src/constants.py** (~1,700 lines) — All static data, coefficients, and registries. Major datasets:
+- **src/constants.py** (~10,400 lines) — All static data, coefficients, and registries. Major datasets:
   - `SOURCES` — dict mapping source keys to `(name, url)` pairs; used by `src_link()` everywhere
   - `DATACENTERS_DF` — market-level power by phase (operational/UC/planned)
   - `DC_SITES_DF` — per-campus site table with operator/owner/tenant/LLC/attribution
@@ -116,7 +136,7 @@ its own constants.
     Maintained by `scripts/verify_moratoriums.py` (audits what is published),
     `scripts/scan_moratorium_candidates.py` (finds what is missing) and
     `scripts/triage_moratorium_candidates.py` (ranks the queue) — see Data
-    maintenance scripts below. **312 rows, no duplicate `(locality, state)`
+    maintenance scripts below. **386 rows, no duplicate `(locality, state)`
     pairs.** Ten duplicated events from overlapping research batches were
     merged on 2026-08-23; when merging, keep the row whose source actually
     supports the stored `status` (two of the ten cited an article predating
@@ -252,7 +272,7 @@ its own constants.
 
 ### Static site (web/ — Vercel front door)
 
-- **Pages built** — landing page, Start here wizard (`start-here.html`), 51 state one-pagers (`states/<slug>.html`), moratorium tracker (`moratoriums.html`), 2026 Senate race tracker (`senate-races.html`), project tracker (`projects.html`), 362 community briefings (`communities/<loc>-<st>.html`), story tracker (`story-tracker.html`), client-side impact calculator (`impact.html`), bills / outlook / learn / puc / executives / data-centers / environment / studies / cba-clauses, company scorecards, blog posts, the health infographic PDF, per-state RSS feeds, JSON+CSV open-data downloads, and sitemap/robots/vercel.json. Blog posts are markdown converted via the `markdown` library.
+- **Pages built** — landing page, Start here wizard (`start-here.html`), 51 state one-pagers (`states/<slug>.html`), moratorium tracker (`moratoriums.html`), 2026 Senate race tracker (`senate-races.html`), project tracker (`projects.html`), 379 community briefings (`communities/<loc>-<st>.html`), story tracker (`story-tracker.html`), client-side impact calculator (`impact.html`), bills / outlook / learn / puc / executives / data-centers / environment / studies / cba-clauses, company scorecards, blog posts, the health infographic PDF, per-state RSS feeds, JSON+CSV open-data downloads, and sitemap/robots/vercel.json. Blog posts are markdown converted via the `markdown` library.
 
 - **Deployment** — Vercel serves `web/` as-is (Root Directory = `web`, framework "Other", no build step). `web/` is committed output: rebuild it in the same commit as any data change. The **root** `vercel.json` is the load-bearing one.
 
@@ -403,6 +423,14 @@ fetchers. `git log` has them if a rendering decision ever needs archaeology,
 but they are not reference material: each held a stale twin of logic that
 lives in `build_site.py`, and **the twin in `build_site.py` is the source of
 truth**. Do not restore one to "check" the site against it.
+
+All of them, plus `requirements-site.txt` (superseded by
+`requirements-build.txt`), **reappeared on disk as untracked files** while the
+repo sat in iCloud — the sync replaying deletions it had never fully applied.
+They were removed again on 2026-08-30 along with the move out of the container.
+If you ever see `src/ui/` or a `src/services/` fetcher on disk again, it is
+sync residue, not a revival: delete it. `git ls-files` is the authority on what
+this repo contains, not `ls`.
 
 An earlier version of this file listed five things as legacy that are in fact
 **live build dependencies**. Verify before you delete:
