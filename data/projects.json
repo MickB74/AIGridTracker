@@ -9508,25 +9508,25 @@
     },
     {
       "id": "microsoft-nebius-new-jersey",
-      "name": "Microsoft-Nebius New Jersey",
+      "name": "DataOne USA / Nebius Vineland (Microsoft)",
       "operator": "Nebius",
       "owner": "Nebius",
       "tenant": "Microsoft",
-      "filing_llc": null,
+      "filing_llc": "NEP Real Estate of Vineland NJ Urban Renewal LLC; applicant changed to DataOne USA LLC in July 2025",
       "locality": "Vineland",
       "state": "NJ",
       "lat": 39.49,
       "lon": -75.03,
-      "size_mw": 50,
+      "size_mw": 300,
       "acres": null,
       "announced": null,
       "rezoning_filed": null,
-      "hearing_date": null,
-      "decided_date": null,
-      "outcome": null,
-      "note": "Chip types: B300. Epoch AI estimates ~50 MW.",
-      "source": "https://nebius.com/newsroom/nebius-accelerates-us-expansion-adding-up-to-300-mw-capacity-at-new-data-center-in-new-jersey",
-      "as_of": "2026-08-14",
+      "hearing_date": "2026-08-17",
+      "decided_date": "2026-08-17",
+      "outcome": "approved",
+      "note": "South Jersey's largest data center: 2,647,628 sq ft approved in four phases over twelve years off South Lincoln and Sheridan avenues, built by DataOne USA for Nebius, whose GPU capacity here is contracted to Microsoft under a $17.4B five-year deal. Phase one was already operating before an environmental impact statement was published (Feb 2026). Three live disputes: NOISE - a county noise violation in March 2026 and a federal nuisance class action that was voluntarily dismissed on jurisdictional grounds in June 2026, not on the merits; POWER - the board approved 300 MW of behind-the-meter Bloom Energy fuel cells plus a 1.5-million-gallon LNG tank on Aug 17, 2026, after two city stop-work orders for building that equipment without permits; AIR - NJDEP says it has issued no permits and has no applications under review for power generators at the site, while thermal drone imagery published Aug 27, 2026 showed at least 45 of 62 gas generators running. Water figures conflict: the applicant's Aug 2026 case put annual use near 8 million gallons; a 2024 Vineland water department estimate cited by opponents put it above 1.1 billion gallons a year. Vineland has no data center moratorium; neighbouring Millville banned them outright in May 2026.",
+      "source": "https://whyy.org/articles/vineland-planning-board-approves-data-center-plan/",
+      "as_of": "2026-08-30",
       "events": [
         {
           "date": "2024-08-08",
@@ -9607,10 +9607,22 @@
           "source": "https://www.vinelandcity.org/wp-content/uploads/2026/03/POSTPONEMENT-of-Planning-Board-Special-Meeting-on-3-26-2026-Post-3.23.pdf"
         },
         {
+          "date": "2026-05-01",
+          "kind": "permit",
+          "summary": "DataOne withdrew its NJDEP air permit application for more than 30 Bergen gas-burning engines in May 2026 after the department found multiple deficiencies in it, and pivoted to Bloom Energy fuel cells.",
+          "source": "https://whyy.org/articles/vineland-new-jersey-data-center-gas-generators-permit/"
+        },
+        {
           "date": "2026-05-16",
           "kind": "public-comment",
           "summary": "More than 60 environmental, labor, and community organizations signed a letter to Governor Sherrill calling for a moratorium on new data centers consuming at least 20 MW of electricity, citing Vineland among their concerns.",
           "source": "https://www.govtech.com/artificial-intelligence/new-jersey-groups-seek-moratorium-on-new-data-centers"
+        },
+        {
+          "date": "2026-05-21",
+          "kind": "financing",
+          "summary": "Nebius announced a ten-year master agreement with Bloom Energy worth up to $2.6 billion covering an initial 328 MW of solid-oxide fuel cells; Bloom shares rose about 12% on the news.",
+          "source": "https://www.cnbc.com/2026/05/21/bloom-energy-nebius-ai-infrastructure-firm-partnership.html"
         },
         {
           "date": "2026-05-26",
@@ -9629,6 +9641,12 @@
           "kind": "ruling",
           "summary": "The Montgomery v. DataOne USA class-action lawsuit was voluntarily dismissed without prejudice after the court issued an order to show cause questioning subject-matter jurisdiction on June 12.",
           "source": "https://www.wilmerhale.com/en/insights/client-alerts/20260713-data-centers-in-court-the-emerging-wave-of-nuisance-environmental-and-land-use-litigation"
+        },
+        {
+          "date": "2026-07-29",
+          "kind": "environmental",
+          "summary": "NJDEP inspectors observed natural gas power-generating equipment operating at the DataOne site. The department later confirmed it has issued no permits, and has no applications under review, for power generators at the facility.",
+          "source": "https://whyy.org/articles/vineland-new-jersey-data-center-gas-generators-permit/"
         },
         {
           "date": "2026-08-05",
@@ -9665,6 +9683,36 @@
           "kind": "coverage",
           "summary": "DA Davidson analyst Gil Luria cut the Nebius (NBIS) price target from $250 to $175, citing construction delays at the Vineland facility that he said may remove potential upside from 2026 guidance.",
           "source": "https://www.tipranks.com/news/d-a-davidson-cuts-nebius-stock-nbis-price-target-ahead-of-q2-earnings-says-vineland-delays-challenge-narrative"
+        },
+        {
+          "date": "2026-08-13",
+          "kind": "coverage",
+          "summary": "On Nebius's Q2 2026 earnings call, management said switching Vineland to Bloom fuel cells significantly enhances the 300 MW project and would have no significant impact on the timeline.",
+          "source": "https://fuelcellsworks.com/2026/08/12/fuel-cells/nebius-says-switch-to-bloom-fuel-cells-strengthens-300mw-new-jersey-ai-data-centre-plan"
+        },
+        {
+          "date": "2026-08-17",
+          "kind": "vote",
+          "summary": "After a second hearing at the Landis Theatre, the Vineland Planning Board approved the amended site plan 8-1, to boos from the audience: 300 MW of on-site Bloom Energy fuel cells (Bloom's largest single-site deployment), a 1.5-million-gallon LNG storage tank, 400-plus cooling fans and a misting system. Dozens of residents spoke against it and none spoke for it; board member John Casadia cast the lone no vote, saying the plan needed a thorough investigation. State permits from NJDEP are still required.",
+          "source": "https://whyy.org/articles/vineland-planning-board-approves-data-center-plan/"
+        },
+        {
+          "date": "2026-08-18",
+          "kind": "environmental",
+          "summary": "Floodlight flew a thermal drone over the DataOne campus and counted at least 45 of the site's 62 tractor-trailer-sized gas generators running simultaneously; earlier footage from late June showed 25 running.",
+          "source": "https://floodlightnews.org/new-jersey-data-center-federal-violation/"
+        },
+        {
+          "date": "2026-08-27",
+          "kind": "coverage",
+          "summary": "Floodlight, in partnership with The Guardian, published the drone investigation. Bruce Buckheit, former head of EPA air enforcement, said the unpermitted generators violate federal law and that the company should stop operating them and pay a fine; he expected administrative enforcement action. DataOne said it is committed to meeting all applicable environmental and permitting requirements; Nebius and Microsoft did not comment.",
+          "source": "https://floodlightnews.org/new-jersey-data-center-federal-violation/"
+        },
+        {
+          "date": "2026-08-28",
+          "kind": "public-comment",
+          "summary": "Stand.earth and allied community groups called on Microsoft to halt operations at the Vineland facility over the unpermitted generators.",
+          "source": "https://www.latitudemedia.com/news/one-of-the-east-coasts-largest-data-centers-has-been-accused-of-violating-federal-law/"
         }
       ]
     },
@@ -19164,6 +19212,42 @@
           "kind": "announcement",
           "summary": "Microsoft said it remains committed to building in southeastern Wisconsin and is working with the village and county to find an alternate site in Caledonia or elsewhere in Racine County.",
           "source": "https://www.wpr.org/news/microsoft-caledonia-data-center-site-ozaukee-county"
+        }
+      ]
+    },
+    {
+      "id": "a1-data-center-millville-nj",
+      "name": "A1 Data Center (Millville)",
+      "operator": null,
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Millville",
+      "state": "NJ",
+      "lat": 39.39,
+      "lon": -75.04,
+      "size_mw": 1400,
+      "acres": 66,
+      "announced": null,
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": "2026-05-19",
+      "outcome": "moratorium",
+      "note": "A 2.9 million sq ft campus on 66 acres, with building heights to 150 feet, that would have drawn roughly 1.4 GW from the grid - the largest data center proposal ever blocked in New Jersey. No site plan was ever formally submitted to the city; the Board of Commissioners banned data centers citywide first, on May 19, 2026, calling them incompatible with Millville's land use objectives, infrastructure capacity and community character. Millville borders Vineland, where the 300 MW DataOne/Nebius campus was already under construction. Opposition was organised by the Climate Revolution Action Network; Mayor Dan Dixon described the ordinance as proactive rather than a response to a specific application.",
+      "source": "https://newjersey.news12.com/2026/05/20/millville-bans-data-centers-killing-largest-proposed-facility-in-new-jersey-history/77eDMHsKNvb6HkPeGLzLLN",
+      "as_of": "2026-08-30",
+      "events": [
+        {
+          "date": "2026-05-19",
+          "kind": "moratorium",
+          "summary": "Millville's Board of Commissioners voted to ban data centers citywide, blocking the proposed 2.9 million sq ft, ~1.4 GW A1 Data Center before any site plan was filed.",
+          "source": "https://newjersey.news12.com/2026/05/20/millville-bans-data-centers-killing-largest-proposed-facility-in-new-jersey-history/77eDMHsKNvb6HkPeGLzLLN"
+        },
+        {
+          "date": "2026-05-20",
+          "kind": "coverage",
+          "summary": "ROI-NJ reported the ban as Millville rejecting the largest proposed data center facility in the state.",
+          "source": "https://www.roi-nj.com/2026/05/20/tech/millville-bans-data-centers-rejecting-largest-proposed-facility-in-n-j/"
         }
       ]
     }

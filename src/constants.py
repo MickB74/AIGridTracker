@@ -1849,11 +1849,13 @@ MORATORIUMS = [
      "lat": 42.05, "lon": -92.91, "expires": None, "as_of": "2026-08-13",
      "source": "https://www.timesrepublican.com/news/todays-news/2026/08/marshalltown-city-council-passes-first-reading-of-data-center-moratorium/"},
     {"locality": "East Brunswick", "state": "NJ", "level": "Local",
-     "status": "Proposed", "when": "Aug 2026",
-     "note": "Zoning ban on data centers in commercial, business and industrial "
-             "districts advanced by council; hearing set for Aug 10",
-     "lat": 40.43, "lon": -74.42, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.tapinto.net/towns/east-brunswick/sections/government/articles/east-brunswick-council-advances-broad-zoning-ban-on-data-centers"},
+     "status": "Enacted", "when": "Aug 25, 2026",
+     "note": "Broad zoning ban on data centers, adopted the same night as "
+             "North Brunswick and Stafford Township after advancing through "
+             "council earlier in the summer",
+     "lat": 40.43, "lon": -74.42, "expires": None, "as_of": "2026-08-30",
+     "source": "https://www.roi-nj.com/2026/08/25/industry/energy-utilities/north-brunswick-east-brunswick-and-stafford-township-ban-data-centers/",
+     "term": "standing"},
     {"locality": "Loudoun County", "state": "VA", "level": "Local",
      "status": "Proposed", "when": "Jul 2026",
      "note": "Board of Supervisors voted 6-1 to direct staff to prepare "
@@ -3303,6 +3305,431 @@ MORATORIUMS = [
      "lat": 32.13, "lon": -81.30, "expires": None, "as_of": "2026-08-30",
      "source": "https://www.wsav.com/news/local-news/bloomingdale-city-council-approves-data-center-moratorium/",
      "term": "fixed_undated"},
+    {"locality": 'Millville', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'May 19, 2026',
+     "note": "Board of Commissioners banned data centers citywide, calling them"
+             "\"incompatible with the City's land use planning objectives,"
+             "infrastructure capacity, and community character.\" The vote killed"
+             "the A1 Data Center, a 2.9 million sq ft / 66-acre proposal that"
+             "would have drawn roughly 1.4 GW -- the largest data center ever"
+             "blocked in New Jersey. Millville borders Vineland, where the"
+             "DataOne/Nebius campus was already under construction",
+     "lat": 39.39, "lon": -75.04, "expires": None, "as_of": "2026-08-30",
+     "source": "https://newjersey.news12.com/2026/05/20/millville-bans-data-centers-killing-largest-proposed-facility-in-new-jersey-history/77eDMHsKNvb6HkPeGLzLLN",
+     "term": "standing"},
+    {"locality": 'Bayonne', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Aug 12, 2026',
+     "note": "City Council voted 5-0 to add data centers to the list of non-"
+             "permitted uses citywide, after months of resident organizing."
+             "Introduced at the July 2026 council meeting",
+     "lat": 40.67, "lon": -74.11, "expires": None, "as_of": "2026-08-30",
+     "source": "https://jerseyvindicator.org/2026/08/14/bayonne-says-no-to-new-data-centers/",
+     "term": "standing"},
+    {"locality": 'North Brunswick', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Aug 25, 2026',
+     "note": "Banned data centers the same night as East Brunswick and Stafford"
+             "Township",
+     "lat": 40.45, "lon": -74.48, "expires": None, "as_of": "2026-08-30",
+     "source": "https://www.roi-nj.com/2026/08/25/industry/energy-utilities/north-brunswick-east-brunswick-and-stafford-township-ban-data-centers/",
+     "term": "standing"},
+    {"locality": 'Stafford Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Aug 25, 2026',
+     "note": "Banned data centers the same night as North Brunswick and East"
+             "Brunswick",
+     "lat": 39.69, "lon": -74.28, "expires": None, "as_of": "2026-08-30",
+     "source": "https://www.roi-nj.com/2026/08/25/industry/energy-utilities/north-brunswick-east-brunswick-and-stafford-township-ban-data-centers/",
+     "term": "standing"},
+    {"locality": 'Pemberton Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Feb 2026',
+     "note": "Ordinance 10-2026 prohibits the construction and operation of data"
+             "centers township-wide. One of the earliest municipal bans in the"
+             "state",
+     "lat": 39.93, "lon": -74.61, "expires": None, "as_of": "2026-08-30",
+     "source": "https://nj1015.com/new-jersey-ai-data-center-bans/",
+     "term": "standing"},
+    {"locality": 'Harrison Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'By May 2026',
+     "note": "Gloucester County township banned data centers; the exact adoption"
+             "date is not given in the coverage read",
+     "lat": 39.72, "lon": -75.25, "expires": None, "as_of": "2026-08-30",
+     "source": "https://nj1015.com/new-jersey-ai-data-center-bans/",
+     "term": "standing"},
+    {"locality": 'Logan Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'By May 2026',
+     "note": "Gloucester County township banned data centers after the mayor"
+             "knocked down rumors of a large facility ('Earth Station-76') the"
+             "township says was never formally proposed",
+     "lat": 39.77, "lon": -75.36, "expires": None, "as_of": "2026-08-30",
+     "source": "https://nj1015.com/new-jersey-ai-data-center-bans/",
+     "term": "standing"},
+    {"locality": 'East Greenwich Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": '2026',
+     "note": "Adopted an ordinance prohibiting future data center development"
+             "after resident opposition to the Mt. Royal Data Storage Facility, a"
+             "16,000 sq ft proposal American Tower withdrew. The adoption date is"
+             "not given in the coverage read",
+     "lat": 39.79, "lon": -75.26, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Mantua Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": '2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.79, "lon": -75.18, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Alpha', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.66, "lon": -75.16, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Bass River Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.62, "lon": -74.44, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Berkeley Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.9, "lon": -74.2, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Bernards Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.68, "lon": -74.57, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Carneys Point', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.71, "lon": -75.47, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Cinnaminson', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.0, "lon": -74.99, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Deerfield Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.51, "lon": -75.22, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Delanco', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.05, "lon": -74.95, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Delaware Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.44, "lon": -74.97, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Downe Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.28, "lon": -75.13, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'East Rutherford', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.83, "lon": -74.09, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Edgewater Park', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.05, "lon": -74.91, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Elsinboro', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.56, "lon": -75.51, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Frelinghuysen Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.94, "lon": -74.93, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Green Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.94, "lon": -74.79, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Hainesport', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.98, "lon": -74.83, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Holmdel', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.37, "lon": -74.17, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Jackson Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.1, "lon": -74.35, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Kingwood Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.51, "lon": -75.02, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Knowlton Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.92, "lon": -75.05, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Lebanon Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.75, "lon": -74.83, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Liberty Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.85, "lon": -74.98, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Madison', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.76, "lon": -74.42, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Mannington Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.62, "lon": -75.4, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Montgomery Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.44, "lon": -74.68, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Neptune Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.21, "lon": -74.05, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'North Hanover Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.07, "lon": -74.63, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Old Bridge', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": '2026',
+     "note": "Township Council directed the drafting of an ordinance prohibiting"
+             "data centers in every zoning district at its June 9, 2026 meeting;"
+             "the Pinelands Preservation Alliance lists Old Bridge among"
+             "municipalities with an enacted ban as of Aug 27, 2026. Confirm the"
+             "adoption date with the township clerk",
+     "lat": 40.42, "lon": -74.32, "expires": None, "as_of": "2026-08-30",
+     "source": "https://www.oldbridge.com/article/3010313"},
+    {"locality": 'Oldmans Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.74, "lon": -75.42, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Pennsville', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.65, "lon": -75.51, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Pilesgrove Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.65, "lon": -75.3, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Pittsgrove Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.55, "lon": -75.13, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Plumsted Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.06, "lon": -74.48, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Quinton Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.54, "lon": -75.42, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Upper Pittsgrove Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.62, "lon": -75.19, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Vernon Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 41.19, "lon": -74.5, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Washington', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 40.76, "lon": -74.98, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Winslow Township', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.65, "lon": -74.9, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
+    {"locality": 'Woodstown', "state": "NJ", "level": "Local",
+     "status": "Enacted", "when": 'Listed Aug 2026',
+     "note": "Listed among the 69 New Jersey municipalities with an enacted data"
+             "center ban on the Pinelands Preservation Alliance's tracker, last"
+             "updated Aug 27, 2026. The adoption date and ordinance number are not"
+             "given in that source -- confirm with the municipal clerk before"
+             "citing this row at a hearing.",
+     "lat": 39.65, "lon": -75.33, "expires": None, "as_of": "2026-08-30",
+     "source": "https://pinelandsalliance.org/datacenters/"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.
@@ -3578,7 +4005,7 @@ MORATORIUM_OUTCOMES = [
 
 PROJECTS_PATH = pathlib.Path(__file__).resolve().parent.parent / "data" / "projects.json"
 
-_PROJECT_TERMINAL = ("approved", "denied", "withdrawn")
+_PROJECT_TERMINAL = ("approved", "denied", "withdrawn", "moratorium")
 PROJECT_HEARING_SOON_DAYS = 45
 
 
@@ -3606,7 +4033,8 @@ def project_status(row, today=None):
     outcome = str(row.get("outcome")).strip().lower() if has_value(row.get("outcome")) else ""
     if outcome in _PROJECT_TERMINAL:
         stage = {"approved": "Approved", "denied": "Denied",
-                 "withdrawn": "Withdrawn"}[outcome]
+                 "withdrawn": "Withdrawn",
+                 "moratorium": "Blocked by ban"}[outcome]
         action = {
             "approved": "Approved — pivot from stopping it to a binding CBA: "
                         "enforceable caps on noise, water and cost, plus a "
@@ -3617,6 +4045,10 @@ def project_status(row, today=None):
             "withdrawn": "Withdrawn — confirm it is dead in the record and "
                          "watch for the same site resurfacing under a new name "
                          "or LLC.",
+            "moratorium": "Blocked by a local ban or moratorium - the project "
+                          "stopped at the ordinance, not at an application. "
+                          "Watch for the ordinance being challenged in court "
+                          "or allowed to lapse.",
         }[outcome]
         out.update(stage=stage, phase=outcome, terminal=True, next_action=action)
         return out
@@ -7641,6 +8073,30 @@ LOCAL_BODIES = [
      "as_of": "2026-08-05", "source": "https://www.mymanatee.org/government/government-information/board-of-county-commissioners"},
 
     {"locality": "Vineland", "state": "NJ",
+     "body": "City Council",
+     "decides": "Zoning ordinances, redevelopment plans, city budgets and "
+                "municipal loans -- including the $6.2 million Urban Enterprise "
+                "Zone revolving-fund loan approved for the DataOne data center "
+                "in December 2025. Council, not the Planning Board, is where a "
+                "data center moratorium or zoning ban would have to pass; "
+                "Vineland has not adopted one.",
+     "meets": "Regular meetings the 2nd and 4th Tuesday at 5:30 p.m.; work "
+              "sessions the 1st and 3rd Tuesday at 5:00 p.m.",
+     "where": "City Council Chambers, 2nd floor of City Hall, 640 E. Wood Street, "
+              "Vineland, NJ 08360",
+     "agenda_url": "https://vinelandnj.portal.civicclerk.com/",
+     "comment_process": "Public comment is taken at the start of every regular "
+                        "meeting and work session. Three minutes per speaker, "
+                        "no transferring time, one approach to the podium per "
+                        "person per topic. The limit was cut from five minutes "
+                        "to three in March 2026 after months of data center "
+                        "opposition lengthened meetings.",
+     "phone": "856-794-4000",
+     "email": "",
+     "website": "https://www.vinelandcity.org/city-council/",
+     "as_of": "2026-08-30", "source": "https://www.vinelandcity.org/city-council/"},
+
+    {"locality": "Vineland", "state": "NJ",
      "body": "Planning Board",
      "decides": "Site plan and subdivision applications, including the DataOne "
                 "USA data center on South Lincoln Avenue that residents have "
@@ -9067,6 +9523,32 @@ LOCAL_BODIES_DF = pd.DataFrame(LOCAL_BODIES)
 # convention used for the Congress/governor directory. Blank means "not
 # recorded", never "neutral".
 LOCAL_OFFICIALS = [
+    # Vineland, NJ — https://www.vinelandcity.org/council-members/
+    {"locality": "Vineland", "state": "NJ", "body": "City Council",
+     "name": "Paul Spinelli", "role": "Council President", "district": "",
+     "email": "pspinelli@vinelandcity.org", "phone": "856-364-0085",
+     "stance": "", "as_of": "2026-08-30",
+     "source": "https://www.vinelandcity.org/council-members/"},
+    {"locality": "Vineland", "state": "NJ", "body": "City Council",
+     "name": "Cruz Gomez Jr.", "role": "Council Vice President", "district": "",
+     "email": "cgomez@vinelandcity.org", "phone": "856-364-0191",
+     "stance": "", "as_of": "2026-08-30",
+     "source": "https://www.vinelandcity.org/council-members/"},
+    {"locality": "Vineland", "state": "NJ", "body": "City Council",
+     "name": "Dr. Elizabeth Arthur", "role": "Councilwoman", "district": "",
+     "email": "earthur@vinelandcity.org", "phone": "856-364-0955",
+     "stance": "", "as_of": "2026-08-30",
+     "source": "https://www.vinelandcity.org/council-members/"},
+    {"locality": "Vineland", "state": "NJ", "body": "City Council",
+     "name": "Scott English", "role": "Councilman", "district": "",
+     "email": "senglish@vinelandcity.org", "phone": "856-364-1161",
+     "stance": "", "as_of": "2026-08-30",
+     "source": "https://www.vinelandcity.org/council-members/"},
+    {"locality": "Vineland", "state": "NJ", "body": "City Council",
+     "name": "Albert Vargas", "role": "Councilman", "district": "",
+     "email": "avargas@vinelandcity.org", "phone": "856-364-1113",
+     "stance": "", "as_of": "2026-08-30",
+     "source": "https://www.vinelandcity.org/council-members/"},
     # Tucker County, WV — https://tuckercountycommission.com/county-commission
     {"locality": "Tucker County", "state": "WV", "body": "Tucker County Commission",
      "name": "Michael Rosenau", "role": "Commission President", "district": "",

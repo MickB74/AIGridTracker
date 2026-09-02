@@ -7444,6 +7444,68 @@ def _abbr_to_state():
     return dict(zip(STATE_PUCS_DF["abbrev"], STATE_PUCS_DF["state"]))
 
 
+def _local_projects_section_html(locality, state):
+    """"The project on the table" section — the tracked PROJECTS_DF rows for
+    this (locality, state), with the derived stage, the key facts, the last
+    few dated events, and a link into the full dossier on projects.html.
+    Shared by build_community() and build_locality_news_page() the same way
+    the body/officials sections are: a resident who lands on their own town's
+    page from a search should see the project, not just the headlines."""
+    base = str(locality).split(" (")[0].strip().lower()
+    rows = [r for r in PROJECTS_DF.to_dict("records")
+            if str(r.get("state")) == str(state)
+            and str(r.get("locality", "")).split(" (")[0].strip().lower() == base]
+    if not rows:
+        return ""
+    blocks = []
+    for r in rows:
+        facts = []
+        for label, key in (("Operator", "operator"), ("Owner", "owner"),
+                           ("Tenant", "tenant"), ("Filing LLC", "filing_llc")):
+            if has_value(r.get(key)):
+                facts.append(f"<strong>{label}:</strong> {esc(str(r[key]))}")
+        if has_value(r.get("size_mw")):
+            facts.append(f'<strong>Size:</strong> {int(r["size_mw"]):,} MW')
+        if has_value(r.get("acres")):
+            facts.append(f'<strong>Acres:</strong> {int(r["acres"]):,}')
+        facts_html = f'<p>{" · ".join(facts)}</p>' if facts else ""
+        note_html = f'<p>{esc(str(r["note"]))}</p>' if has_value(r.get("note")) else ""
+        action = (f'<p class="note"><strong>Next:</strong> '
+                  f'{esc(str(r["next_action"]))}</p>'
+                  if has_value(r.get("next_action")) else "")
+        events = sorted(PROJECT_EVENTS.get(r.get("id")) or [],
+                        key=lambda e: str(e.get("date") or ""), reverse=True)[:6]
+        ev_html = ""
+        if events:
+            items = "\n".join(
+                f'<li><strong>{esc(str(e.get("date", "")))}</strong> — '
+                f'{esc(str(e.get("summary", "")))}'
+                + (f' · <a href="{esc(str(e["source"]))}" rel="nofollow noopener" '
+                   f'target="_blank">source</a>' if has_value(e.get("source")) else "")
+                + '</li>'
+                for e in events)
+            ev_html = (f"<h3>Latest in the record</h3><ul>{items}</ul>"
+                       f'<p class="muted">Full dated timeline on the '
+                       f'<a href="../projects.html#p-{esc(str(r.get("id", "")))}">'
+                       f'project tracker</a>.</p>')
+        src = ""
+        if has_value(r.get("source")):
+            on = (f' Read {esc(str(r["as_of"]))}.'
+                  if has_value(r.get("as_of")) else "")
+            src = (f'<p class="muted"><a href="{esc(str(r["source"]))}" '
+                   f'rel="nofollow noopener" target="_blank">Source</a>.{on}</p>')
+        blocks.append(
+            f'<h3>{esc(str(r.get("name", "")))} — '
+            f'{_status_badge(str(r.get("stage", "")))}</h3>'
+            f"{facts_html}{note_html}{action}{ev_html}{src}")
+    plural = "s" if len(rows) > 1 else ""
+    return f"""
+<section>
+  <h2>The project{plural} on the table</h2>
+  {"".join(blocks)}
+</section>"""
+
+
 def _local_body_section_html(locality, state):
     """"Where the decision gets made" section — only when a curated
     LOCAL_BODIES_DF row exists for this (locality, state). Shared by
@@ -7583,6 +7645,7 @@ def build_community(m, news_group=None):
 
     body_html = _local_body_section_html(loc, m.state)
     officials_html = _local_officials_section_html(loc, m.state)
+    projects_html = _local_projects_section_html(loc, m.state)
     news_html = _story_news_section_html(news_group)
 
     # The rest of the state's fights — internal links between locality pages.
@@ -7622,6 +7685,7 @@ def build_community(m, news_group=None):
   <p class="muted">An expiry date is the earliest a pause could have ended —
   extensions are common, so confirm with the clerk before citing it.</p>
 </section>
+{projects_html}
 {news_html}
 {body_html}
 {officials_html}
@@ -7677,6 +7741,7 @@ def build_locality_news_page(locality, state, group):
 
     body_html = _local_body_section_html(locality, state)
     officials_html = _local_officials_section_html(locality, state)
+    projects_html = _local_projects_section_html(locality, state)
     news_html = _story_news_section_html(group, heading="What's been reported")
 
     body = f"""
@@ -7690,6 +7755,7 @@ def build_locality_news_page(locality, state, group):
   <a href="../story-tracker.html">story tracker</a> to browse every place
   we're following.</p>
 </header>
+{projects_html}
 {news_html}
 {body_html}
 {officials_html}
