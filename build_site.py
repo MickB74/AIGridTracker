@@ -763,6 +763,58 @@ def _wrap_tables(body):
     return _TABLE_RE.sub(repl, body)
 
 
+_HREF_RE = re.compile(r'href="([^"]*)"')
+
+
+def _clean_href(v):
+    """Rewrite one relative internal href to the clean URL Vercel serves.
+
+    web/ is deployed with cleanUrls + trailingSlash:false, so a link to
+    `foo.html` or `blog/` 308-redirects to `foo` / `blog`. Every internal
+    link used to take that hop, which costs crawl budget on 570 pages and
+    shows up as a redirect chain in Search Console. `index.html` collapses to
+    the directory (`./`, `../`, `blog`). External, anchor, mailto and
+    protocol-relative links are left alone.
+    """
+    if not v or v.startswith(("http:", "https:", "//", "#", "mailto:",
+                              "tel:", "data:", "javascript:")):
+        return v
+    m = re.match(r"([^#?]*)(.*)", v)
+    path, tail = m.group(1), m.group(2)
+    if not (path.endswith(".html") or path.endswith("/")):
+        return v
+    if path.endswith(".html"):
+        path = path[:-5]
+    if path == "index":
+        path = "./"
+    elif path.endswith("/index"):
+        path = path[:-5]          # "blog/index" -> "blog/", "../index" -> "../"
+    if path.endswith("/") and path not in ("./", "../") \
+            and not path.endswith("/../"):
+        path = path.rstrip("/")   # "blog/" -> "blog"
+    return path + tail
+
+
+def _clean_links(html_text):
+    return _HREF_RE.sub(lambda m: f'href="{_clean_href(m.group(1))}"',
+                        html_text)
+
+
+def _canon(url):
+    """Canonical/sitemap form of an absolute site URL: no trailing slash
+    (except the root), no .html — the exact string Vercel answers 200 for."""
+    if not url.startswith(SITE_URL):
+        return url
+    rel = url[len(SITE_URL):]
+    if rel in ("", "/"):
+        return SITE_URL + "/"
+    if rel.endswith("/index.html"):
+        rel = rel[:-len("index.html")]
+    elif rel.endswith(".html"):
+        rel = rel[:-5]
+    return SITE_URL + rel.rstrip("/")
+
+
 def _seo_clip(text, limit):
     """Trim to `limit` chars at a word boundary, adding an ellipsis.
 
@@ -823,6 +875,7 @@ def page(title, description, body, canonical, depth=0,
          og_type="website", og_extra="", jsonld=None, og_image=None):
     p = "../" * depth
     body = _wrap_tables(body)
+    canonical = _canon(canonical)
     title_serp = _seo_clip(title, 60)      # ~600px SERP cap
     desc_serp = _seo_clip(description, 155)  # Google shows ~155-160 chars
     if og_image:
@@ -835,7 +888,7 @@ def page(title, description, body, canonical, depth=0,
         ld_block = "\n".join(
             f'<script type="application/ld+json">{json.dumps(s, ensure_ascii=False)}</script>'
             for s in items)
-    return f"""<!DOCTYPE html>
+    return _clean_links(f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -852,6 +905,7 @@ def page(title, description, body, canonical, depth=0,
 <meta property="og:type" content="{og_type}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:site_name" content="AI GridWatch">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="{og_img_url}">
 <meta property="og:image:width" content="{og_img_w}">
 <meta property="og:image:height" content="{og_img_h}">
@@ -885,6 +939,7 @@ def page(title, description, body, canonical, depth=0,
 <footer>
 {_newsletter_html()}
   <p style="margin-bottom:8px"><strong>Reference</strong> ·
+    <a href="{p}communities/index.html">Community pages</a> ·
     <a href="{p}studies.html">State studies</a> ·
     <a href="{p}officials.html">Officials directory</a> ·
     <a href="{p}glossary.html">Glossary</a> ·
@@ -903,7 +958,7 @@ def page(title, description, body, canonical, depth=0,
 {_ANALYTICS}
 </body>
 </html>
-"""
+""")
 
 
 _ORG = {
@@ -924,7 +979,7 @@ def _breadcrumb(*items):
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": i + 1,
-             "name": name, "item": url}
+             "name": name, "item": _canon(url)}
             for i, (name, url) in enumerate(items)
         ],
     }
@@ -2072,7 +2127,9 @@ def build_state(state, news_only=None):
         f'href="{SITE_URL}/feeds/{slugify(state)}.xml">')
 
     return page(
-        f"{state} data centers: electricity, water & who to call",
+        (f"{state} data centers: electricity, water & who to call"
+         if len(state) <= 13 else
+         f"{state} data centers: power, water & officials"),
         f"Proposed projects, moratoriums, permits, officials, and 2026 "
         f"candidates for {state} — free community negotiation tools from "
         f"AI GridWatch.",
@@ -2312,7 +2369,7 @@ def build_health():
 {groups}
 """
     return page(
-        "Health & community impacts of data centers — sourced briefing",
+        "Data center health risks: air, noise, water & bills",
         "Air, noise, light, water, bills, and climate: the documented health "
         "and community impacts of data centers, with sources and the permit "
         "conditions that address them.",
@@ -3763,7 +3820,7 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
 </script>
 """
     return page(
-        "Story tracker — data center headlines by community — AI GridWatch",
+        "Data center story tracker: headlines by community",
         f"{len(stories)} data center community-impact headlines archived and "
         f"grouped by town or county, with recurring-pattern summaries.",
         body, f"{SITE_URL}/story-tracker", depth=0,
@@ -4049,7 +4106,7 @@ Browse the <a href="story-tracker.html">story tracker</a> instead.</p></section>
 </script>
 """
     return page(
-        "Complaints by company — data center grievances by operator — AI GridWatch",
+        "Data center complaints by company & operator — AI GridWatch",
         f"What residents are complaining about, by company: {named} archived "
         f"headlines naming {len(groups)} data center operators, tagged by "
         f"grievance and linked to the original story.",
@@ -4803,9 +4860,9 @@ def build_blog_index():
 </script>
 """
     return page(
-        "Blog — AI GridWatch",
+        "Data center blog: analysis & explainers — AI GridWatch",
         "Analysis and explainers on data center development, grid impact, "
-        "and community advocacy from AI GridWatch.",
+        "electric bills, water use and community advocacy from AI GridWatch.",
         body, f"{SITE_URL}/blog/", depth=1,
         jsonld=_breadcrumb(("Home", SITE_URL), ("Blog", f"{SITE_URL}/blog/")))
 
@@ -6448,7 +6505,7 @@ def build_bills():
 </section>
 """
     return page(
-        "Why your electric bill is going up: data centers, capacity markets & peak load",
+        "Why your electric bill is going up: data centers & capacity",
         "How electricity bills work, why peak demand sets your annual cost, and "
         "what the research says about data centers shifting costs onto "
         "residential ratepayers.",
@@ -6629,7 +6686,7 @@ def build_outlook():
 </section>
 """
     return page(
-        "Data center electricity forecasts: global and US outlook to 2035",
+        "Data center electricity forecasts: US & global to 2035",
         "IEA, BloombergNEF, LBNL and EPRI projections for data-center "
         "electricity — why they disagree by 3×, and where new US facilities "
         "are actually being built.",
@@ -8118,8 +8175,16 @@ def build_community(m, news_group=None):
 """
     slug = _loc_slug(loc, m.state)
     title_loc = loc if is_state_level else f"{loc}, {m.state}"
+    # Long locality names ("Prince George's County, MD") would push the
+    # SERP title past 60 chars and get clipped mid-phrase; drop the suffix
+    # rather than let the ellipsis eat the keyword.
+    title_full = f"{title_loc} data center moratorium: status & sources"
+    if len(title_full) > 60:
+        title_full = f"{title_loc} data center moratorium"
+    if len(title_full) > 60:
+        title_full = f"{title_loc} moratorium"
     return page(
-        f"{title_loc} data center moratorium — status, sources & what to do",
+        title_full,
         f"Current status of the data center action in {loc}"
         f"{'' if is_state_level else f', {state_name}'}: "
         f"{str(m.effective_status).lower()}"
@@ -8185,7 +8250,9 @@ def build_locality_news_page(locality, state, group):
 </section>
 """
     return page(
-        f"{locality}, {state_name} data center news — AI GridWatch",
+        (f"{locality}, {state_name} data center news — AI GridWatch"
+         if len(f"{locality}, {state_name}") <= 26 else
+         f"{locality}, {state_name} data center news"),
         f"{group['count']} archived headlines about data center development "
         f"in {locality}, {state_name}, updated as new coverage appears. No "
         f"documented moratorium on file for this locality.",
@@ -9103,7 +9170,7 @@ def build_projects():
 </script>
 """
     return page(
-        "Data center projects tracker — proposals, hearings & outcomes",
+        "Data center projects tracker: proposals & outcomes",
         f"{total} identified data center projects tracked from proposal to "
         f"decision across {n_states} states — each with sources, a derived "
         f"stage, and a dated intelligence log.",
@@ -11510,11 +11577,13 @@ function srFilter(){{
 </script>"""
 
     return page(
-        "Where 2026 Senate candidates stand on AI data centers — AI GridWatch",
+        "2026 Senate candidates on AI data centers — AI GridWatch",
         "Every 2026 U.S. Senate candidate's documented position on AI data "
         "centers, sourced claim by claim, with the ballot roster read from each "
         "state's own certified candidate list.",
-        body, f"{SITE_URL}/senate-races")
+        body, f"{SITE_URL}/senate-races",
+        jsonld=_breadcrumb(("Home", SITE_URL),
+                           ("Senate races 2026", f"{SITE_URL}/senate-races")))
 
 
 def _race_phase_banner(cov, what):
@@ -11717,11 +11786,13 @@ function srFilter(){{
 </script>"""
 
     return page(
-        "Where 2026 House candidates stand on AI data centers — AI GridWatch",
+        "2026 House candidates on AI data centers — AI GridWatch",
         "Every 2026 U.S. House candidate's documented position on AI data "
         "centers, sourced claim by claim, with the ballot read from each "
         "state's own certified candidate list.",
-        body, f"{SITE_URL}/house-races")
+        body, f"{SITE_URL}/house-races",
+        jsonld=_breadcrumb(("Home", SITE_URL),
+                           ("House races 2026", f"{SITE_URL}/house-races")))
 
 def build_official_scorecard():
     """Full federal + gubernatorial roster with A–F ratepayer/community-protection
@@ -13225,40 +13296,40 @@ def build_search():
         _mark = "" if m.verified else " · unverified"
         index.append({"t": str(m.locality), "k": "moratorium",
                        "d": f"{m.state} · {m.effective_status}{_mark}",
-                       "u": f"moratoriums.html"})
+                       "u": "moratoriums"})
     for _, r in OPERATORS_DF.iterrows():
         index.append({"t": r["operator"], "k": "operator",
                        "d": f"{r['tier']} · {r['model']}",
-                       "u": "executives.html"})
+                       "u": "executives"})
     for _, r in EXECUTIVES_DF.iterrows():
         suffix = "" if has_value(r["verified"]) else " · unverified"
         index.append({"t": r["name"], "k": "executive",
                        "d": f"{r['company']} · {r['title']}{suffix}",
-                       "u": "executives.html"})
+                       "u": "executives"})
     for _, r in DC_SITES_DF.iterrows():
         loc = str(r.get("location", ""))
         st = str(r.get("state", ""))
         index.append({"t": f"{r['operator']} — {loc}",
                        "k": "site",
                        "d": f"{st} · {cell(r.get('tenant'))}",
-                       "u": f"states/{slugify(STATE_PUCS_DF[STATE_PUCS_DF['abbrev'] == st].iloc[0]['state'])}.html" if not STATE_PUCS_DF[STATE_PUCS_DF['abbrev'] == st].empty else "states/index.html"})
+                       "u": f"states/{slugify(STATE_PUCS_DF[STATE_PUCS_DF['abbrev'] == st].iloc[0]['state'])}" if not STATE_PUCS_DF[STATE_PUCS_DF['abbrev'] == st].empty else "states"})
     for s in sorted(STATE_GRID_PROFILES):
         index.append({"t": s, "k": "state",
                        "d": f"State briefing",
-                       "u": f"states/{slugify(s)}.html"})
+                       "u": f"states/{slugify(s)}"})
     for s in _sorted_posts():
         title_clean = s["title"].replace("\\$", "$")
         index.append({"t": title_clean, "k": "blog",
                        "d": s["date"].strftime("%b %Y"),
-                       "u": f"blog/{s['id']}.html"})
+                       "u": f"blog/{s['id']}"})
     for h in _HYPERSCALERS + _OPERATORS:
         index.append({"t": h["name"], "k": "company",
                        "d": f'{h["report"]} · PUE {h.get("pue", "—")}',
-                       "u": f"companies/{h['slug']}.html"})
+                       "u": f"companies/{h['slug']}"})
     for ld in _LIMITED_DISCLOSURE:
         index.append({"t": ld["name"], "k": "company",
                        "d": f'disclosure: {ld["disclosure"]}',
-                       "u": f"companies/{ld['slug']}.html"})
+                       "u": f"companies/{ld['slug']}"})
     index_json = json.dumps(index)
 
     body = f"""
@@ -13442,6 +13513,37 @@ def build_data_dividend():
         jsonld=_breadcrumb(("Home", SITE_URL), ("Dividend calculator", f"{SITE_URL}/dividend")))
 
 
+def build_404():
+    """Custom not-found page. Vercel serves web/404.html for any miss; the
+    default is a bare 'NOT_FOUND' that strands a resident who followed a
+    stale link from a council agenda. noindex so the page never ranks."""
+    body = """<section>
+  <h1>Page not found</h1>
+  <p>That page has moved or never existed. Locality pages are renamed when a
+  town's own records use a different name, and old blog links now live under
+  <code>/blog/</code>.</p>
+  <p><a class="btn" href="start-here.html">Start here &rarr;</a>
+  <a class="btn ghost" href="search.html">Search the site</a></p>
+  <ul>
+    <li><a href="moratoriums.html">Moratorium tracker</a> — every documented
+      data center moratorium, with sources</li>
+    <li><a href="states/index.html">Your state</a> — one page per state:
+      projects, rates, officials, permits</li>
+    <li><a href="communities/index.html">Community pages</a></li>
+    <li><a href="projects.html">Projects tracker</a></li>
+    <li><a href="blog/index.html">Blog</a></li>
+  </ul>
+</section>"""
+    return page("Page not found — AI GridWatch",
+                "The page you followed has moved. Find moratoriums, state "
+                "pages, and community tools from here.",
+                body, f"{SITE_URL}/404",
+                # Vercel serves this at whatever path missed, so relative
+                # links would resolve under /communities/… — <base> pins them.
+                og_extra='<meta name="robots" content="noindex">'
+                         '<base href="/">')
+
+
 def build_sitemap(entries):
     """entries: list of (path, lastmod) — lastmod is a W3C date (YYYY-MM-DD).
 
@@ -13452,7 +13554,8 @@ def build_sitemap(entries):
     build date because they genuinely regenerate daily.
     """
     urls = "\n".join(
-        f"  <url><loc>{SITE_URL}/{p}</loc><lastmod>{lm}</lastmod></url>"
+        f"  <url><loc>{_canon(SITE_URL + '/' + p)}</loc>"
+        f"<lastmod>{lm}</lastmod></url>"
         for p, lm in entries)
     return (f'<?xml version="1.0" encoding="UTF-8"?>\n'
             f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -14530,6 +14633,7 @@ def main():
         f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n",
         encoding="utf-8")
     (WEB / "llms.txt").write_text(build_llms_txt(), encoding="utf-8")
+    (WEB / "404.html").write_text(build_404(), encoding="utf-8")
     _blog_redirects = [
         {"source": f"/{s['id']}", "destination": f"/blog/{s['id']}",
          "permanent": True}
@@ -14565,6 +14669,19 @@ def main():
             "trailingSlash": False,
             "redirects": (_blog_redirects + _state_redirects
                           + _company_redirects + _community_redirects),
+            # Static assets and open-data files change rarely and are
+            # re-fetched on every page view without this; HTML stays
+            # must-revalidate so a daily rebuild is seen immediately.
+            "headers": [
+                {"source": "/assets/(.*)",
+                 "headers": [{"key": "Cache-Control",
+                              "value": "public, max-age=86400, "
+                                       "stale-while-revalidate=604800"}]},
+                {"source": "/data/(.*)",
+                 "headers": [{"key": "Cache-Control",
+                              "value": "public, max-age=3600, "
+                                       "stale-while-revalidate=86400"}]},
+            ],
         }, indent=2) + "\n",
         encoding="utf-8")
 

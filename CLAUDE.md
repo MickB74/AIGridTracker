@@ -36,7 +36,9 @@ for any rebuild that isn't specifically refreshing news, so the diff shows only
 what the data moved. `NEWS_REFRESH=1` forces a live fetch.
 
 Preview locally with the `static-site` entry in `.claude/launch.json`
-(port 8777).
+(port 8777). It runs `scripts/serve_web.py`, not the stock `http.server`,
+because the site's links are extensionless (see the clean-URL gotcha below)
+and the stock server 404s on them.
 
 **The repo lives at `~/GitHub/AIGridTracker`.** It was moved out of
 `~/Documents/GitHub/` on 2026-08-30 because that path is inside the
@@ -390,6 +392,19 @@ published pages are static files.
 - **fpdf2 is not byte-deterministic**: `web/assets/gridwatch_health_risks.pdf`
   changes bytes on every build even when its content doesn't. Expect it in the
   diff; it isn't a content change.
+- **Internal links are clean URLs, rewritten at render time.** Vercel serves
+  `web/` with `cleanUrls` + `trailingSlash: false`, so `/foo.html` and
+  `/blog/` both 308-redirect to `/foo` and `/blog`. Builder functions still
+  write `href="{p}foo.html"` and `href="blog/"` (that is what the local
+  filesystem understands), and `page()` runs `_clean_links()` over the
+  finished document to emit `foo` / `blog`; `_canon()` does the same for
+  the canonical tag, breadcrumb items and sitemap. Before this, every
+  internal link and five section-index canonicals pointed at a redirect.
+  Don't hand-write extensionless hrefs in builders — the rewrite is
+  idempotent, but the filesystem preview is not.
+- **`web/404.html` is a real page.** Vercel serves it for any miss; it
+  carries `<base href="/">` because it renders at arbitrary depths, and
+  `noindex` so it never ranks.
 - **The root `vercel.json` is load-bearing.** It carries `outputDirectory` and
   every redirect. Deleting it took the domain down for two days.
 - **Renaming a locality changes its community-page URL.** Add an entry to

@@ -5,11 +5,8 @@
       "name": "static-site",
       "runtimeExecutable": "python3",
       "runtimeArgs": [
-        "-m",
-        "http.server",
-        "8777",
-        "--directory",
-        "web"
+        "scripts/serve_web.py",
+        "8777"
       ],
       "port": 8777
     }
