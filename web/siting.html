@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1220">
+<meta name="google-site-verification" content="kkgrLvRLdgGg12Y1ka456PlN9iNsyWGCyJIS-8ip9I4">
+<title>Siting evaluator — AI GridWatch</title>
+<meta name="description" content="Enter a zip code or state and get a six-factor scorecard of how attractive that area is to a data-center developer, plus what it means for your leverage.">
+<link rel="canonical" href="https://aigridwatch.com/siting">
+<link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
+      href="https://aigridwatch.com/blog/feed.xml">
+<meta property="og:title" content="Siting evaluator — AI GridWatch">
+<meta property="og:description" content="Enter a zip code or state and get a six-factor scorecard of how attractive that area is to a data-center developer, plus what it means for your leverage.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aigridwatch.com/siting">
+<meta property="og:site_name" content="AI GridWatch">
+<meta property="og:image" content="https://aigridwatch.com/assets/hero.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="479">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Siting evaluator", "item": "https://aigridwatch.com/siting"}]}</script>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preload" href="assets/logo.svg" as="image" type="image/svg+xml">
+<link rel="dns-prefetch" href="//gc.zgo.at">
+<link rel="preconnect" href="//gc.zgo.at" crossorigin>
+<style>
+:root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
+        --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
+* { box-sizing:border-box; margin:0; }
+body { background:var(--bg); color:var(--ink);
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.wrap { max-width:900px; margin:0 auto; padding:20px 20px 64px; }
+nav { display:flex; align-items:center; gap:14px; padding:14px 0;
+      border-bottom:1px solid var(--rule); flex-wrap:wrap; }
+nav img { height:34px; }
+nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+nav a:hover { color:var(--teal); }
+nav a[aria-current] { color:var(--teal); font-weight:600; }
+nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
+           font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
+/* Grouped dropdowns (desktop). Menus reveal on hover, keyboard focus, or the
+   native <details> toggle; the summary marker is replaced with a caret. */
+.navgroup { position:relative; }
+.navgroup > summary { list-style:none; cursor:pointer; color:var(--muted);
+  font-size:14px; padding:2px 0; display:inline-flex; align-items:center; }
+.navgroup > summary::-webkit-details-marker { display:none; }
+.navgroup > summary::after { content:"\25BE"; font-size:10px; margin-left:5px;
+  opacity:.55; }
+.navgroup:hover > summary, .navgroup[open] > summary,
+.navgroup > summary.active { color:var(--teal); }
+.navmenu { display:none; position:absolute; top:calc(100% + 8px); left:0;
+  background:var(--card); border:1px solid var(--rule); border-radius:10px;
+  padding:6px; min-width:190px; flex-direction:column; gap:1px; z-index:60;
+  box-shadow:0 10px 28px rgba(0,0,0,.4); }
+.navgroup:hover > .navmenu, .navgroup:focus-within > .navmenu,
+.navgroup[open] > .navmenu { display:flex; }
+.navmenu a { padding:8px 12px; border-radius:6px; font-size:14px;
+  white-space:nowrap; color:var(--muted); }
+.navmenu a:hover { background:rgba(45,212,191,.1); color:var(--teal); }
+.navmenu a[aria-current] { color:var(--teal); font-weight:600; }
+/* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
+.nav-burger { display:none; }
+.nav-links { display:contents; }
+@media (max-width:820px) {
+  nav { gap:8px; }
+  nav img { height:30px; }
+  .nav-burger { display:block; order:3; font-size:20px; line-height:1;
+    color:var(--muted); cursor:pointer; padding:5px 8px; border-radius:8px;
+    border:1px solid var(--rule); user-select:none; }
+  .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
+  nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
+  .nav-links { order:4; display:none; flex-basis:100%;
+    flex-direction:column; gap:0; padding:4px 0 2px; }
+  #navToggle:checked ~ .nav-links { display:flex; }
+  .nav-links > a { padding:10px 2px; font-size:15px;
+    border-bottom:1px solid rgba(255,255,255,.05); }
+  /* Groups become inline accordions: the menu stacks under its summary and
+     is revealed by the native <details> tap, not an absolute overlay. */
+  .navgroup { position:static; border-bottom:1px solid rgba(255,255,255,.05); }
+  .navgroup > summary { padding:11px 2px; font-size:15px; justify-content:space-between; }
+  .navgroup[open] > summary::after { transform:rotate(180deg); }
+  .navmenu { position:static; display:none; box-shadow:none; border:none;
+    background:transparent; padding:0 0 6px 12px; min-width:0; gap:0; }
+  .navgroup[open] > .navmenu { display:flex; }
+  .navmenu a { padding:8px 10px; font-size:14px; }
+}
+.skip { position:absolute; left:-9999px; }
+.skip:focus { position:fixed; left:16px; top:10px; z-index:1000;
+  background:var(--teal); color:#06251f; font-weight:700;
+  padding:9px 16px; border-radius:8px; }
+header { padding:44px 0 10px; }
+.kicker { color:var(--teal); font-weight:700; letter-spacing:.12em;
+          text-transform:uppercase; font-size:13px; }
+h1 { font-size:clamp(28px,5vw,44px); line-height:1.12; margin:10px 0;
+     text-wrap:balance; }
+.sub { color:var(--muted); max-width:640px; }
+.stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+         margin:30px 0; }
+@media (min-width:640px){ .stats{ grid-template-columns:repeat(4,1fr);} }
+.stat { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:16px; }
+.stat b { display:block; font-size:24px; color:var(--teal); }
+.stat span { font-size:13px; color:var(--muted); }
+section { margin:34px 0; }
+h2 { font-size:20px; color:var(--teal); margin-bottom:12px;
+     border-bottom:1px solid var(--rule); padding-bottom:8px; }
+ul { padding-left:22px; } li { margin:9px 0; }
+a { color:var(--teal); }
+.btn { display:inline-block; background:var(--teal); color:#06251f;
+       font-weight:700; padding:12px 22px; border-radius:10px;
+       text-decoration:none; margin:8px 8px 0 0; }
+.btn.ghost { background:transparent; color:var(--teal);
+             border:1px solid var(--teal); }
+.muted { color:var(--muted); font-size:14px; }
+.grid3 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid3{ grid-template-columns:repeat(3,1fr);} }
+.card { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:18px; }
+.card h3 { margin-bottom:6px; font-size:16px; }
+.panel { border-radius:14px; padding:18px; color:#fff; }
+.panel h3 { margin-bottom:8px; }
+.panel p { font-size:14px; color:rgba(255,255,255,.85); }
+.ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
+       border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
+.src { font-size:12.5px; color:var(--muted); }
+.freshness { border-left:3px solid var(--rule); padding:10px 14px;
+  margin:14px 0; background:rgba(255,255,255,.02); border-radius:0 8px 8px 0;
+  font-size:13.5px; }
+.freshness.stale { border-left-color:var(--amber);
+  background:rgba(251,191,36,.07); }
+.freshness p { margin:0; }
+.note { border-left:3px solid var(--rule); padding:12px 16px; margin:18px 0;
+  border-radius:0 8px 8px 0; font-size:14.5px; line-height:1.55; }
+.note.info { border-left-color:var(--teal); background:rgba(45,212,191,.07); }
+.note.warn { border-left-color:var(--amber); background:rgba(251,191,36,.07); }
+.note.bad  { border-left-color:#ef4444; background:rgba(239,68,68,.08); }
+.note.good { border-left-color:#34d399; background:rgba(52,211,153,.07); }
+.note p { margin:0; }
+details.more { border:1px solid var(--rule); border-radius:10px;
+  padding:0 16px; margin:16px 0; background:rgba(255,255,255,.02); }
+details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
+  color:var(--teal); font-size:14.5px; }
+details.more[open] { padding-bottom:10px; }
+nav.pagenav { display:block; padding:14px 18px; border:1px solid var(--rule); border-radius:12px;
+  margin:22px 0 18px; background:rgba(45,212,191,.05); }
+.pagenav-hd { display:flex; align-items:center; justify-content:space-between;
+  gap:12px; font-weight:700; font-size:13px; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--muted); }
+.pagenav ol { margin:10px 0 0; padding-left:20px; font-size:15px; line-height:1.9; }
+.pagenav a { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--rule); }
+.pagenav a:hover { color:var(--teal); border-bottom-color:var(--teal); }
+.expandall { background:none; border:1px solid var(--rule); color:var(--teal);
+  border-radius:999px; padding:5px 12px; font:inherit; font-size:12px;
+  cursor:pointer; text-transform:none; letter-spacing:0; }
+.expandall:hover { border-color:var(--teal); }
+.pagenav .pnav-grp { margin:12px 0 0; font-weight:700; font-size:11.5px;
+  letter-spacing:.06em; text-transform:uppercase; color:var(--teal); }
+.pagenav .pnav-grp:first-of-type { margin-top:8px; }
+.secgrp { margin:36px 0 0; padding-top:20px; border-top:1px solid var(--rule);
+  font-weight:700; font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--teal); }
+details.sect > summary { font-size:17px; color:var(--ink); padding:16px 0;
+  display:flex; align-items:center; gap:10px; }
+details.sect > summary:hover { color:var(--teal); }
+details.sect .secno { display:inline-flex; align-items:center;
+  justify-content:center; width:24px; height:24px; flex:0 0 24px;
+  border-radius:50%; background:rgba(45,212,191,.15); color:var(--teal);
+  font-size:12.5px; font-weight:700; }
+details.sect[open] { padding-bottom:18px; }
+details.sect > p, details.sect > ul, details.sect > ol { max-width:74ch; }
+details.sect h4 { margin:26px 0 6px; font-size:16px; color:var(--ink); }
+details.sect > p:first-of-type { margin-top:4px; }
+.billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
+  margin:20px 0 12px; }
+.billbar > div { display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:14px; }
+.barkey { display:flex; flex-wrap:wrap; gap:14px; font-size:13px;
+  color:var(--muted); }
+.barkey span { display:flex; align-items:center; gap:6px; }
+.barkey i { width:12px; height:12px; border-radius:3px; }
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px; margin:18px 0; }
+.flow .step { border:1px solid var(--rule); border-radius:10px; padding:12px 14px;
+  background:rgba(255,255,255,.02); font-size:14px; }
+.flow .step b { display:block; margin-bottom:4px; }
+.flow .step.end { border-color:#ef4444; background:rgba(239,68,68,.08); }
+.hbars { margin:18px 0; display:flex; flex-direction:column; gap:8px; }
+.hbar-row { display:grid; grid-template-columns:minmax(90px,1.1fr) 2.4fr
+  minmax(90px,1.3fr); gap:10px; align-items:center; font-size:13.5px; }
+.hbar-label { color:var(--ink); }
+.hbar-track { background:rgba(255,255,255,.06); border-radius:5px; height:16px; }
+.hbar-fill { height:16px; border-radius:5px; }
+.hbar-val { color:var(--muted); font-variant-numeric:tabular-nums; }
+@media (max-width:640px) {
+  .hbar-row { grid-template-columns:1fr; gap:2px; }
+  .hbar-track { height:12px; }
+}
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+th { color:var(--muted); font-weight:600; }
+footer { margin-top:48px; border-top:1px solid var(--rule);
+         padding-top:16px; font-size:13px; color:var(--muted); }
+.nl-box { background:var(--card); border:1px solid var(--rule);
+          border-radius:12px; padding:14px 18px; margin-bottom:18px; }
+.nl-box p { color:var(--ink); font-size:14px; margin-bottom:8px; }
+.nl-form { display:flex; gap:8px; flex-wrap:wrap; }
+.nl-form input[type=email] { flex:1; min-width:220px; background:var(--bg);
+  color:var(--ink); border:1px solid var(--rule); border-radius:8px;
+  padding:9px 12px; font-size:14px; }
+.nl-form button { background:var(--teal); color:#04211c; border:0;
+  border-radius:8px; padding:9px 18px; font-weight:700; font-size:14px;
+  cursor:pointer; }
+.submit-box { background:var(--card); border:1px solid var(--rule);
+  border-radius:12px; padding:20px 22px; margin-top:16px; }
+.submit-box label { display:block; font-size:14px; color:var(--ink);
+  font-weight:600; margin-bottom:4px; margin-top:12px; }
+.submit-box label:first-child { margin-top:0; }
+.submit-box input, .submit-box select, .submit-box textarea {
+  width:100%; box-sizing:border-box; background:var(--bg); color:var(--ink);
+  border:1px solid var(--rule); border-radius:8px; padding:9px 12px;
+  font-size:14px; font-family:inherit; }
+.submit-box textarea { min-height:70px; resize:vertical; }
+.submit-box .row2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media (max-width:520px){ .submit-box .row2 { grid-template-columns:1fr; } }
+.submit-box button { background:var(--teal); color:#04211c; border:0;
+  border-radius:8px; padding:11px 22px; font-weight:700; font-size:15px;
+  cursor:pointer; margin-top:16px; }
+.submit-box .hint { font-size:12px; color:var(--muted); margin-top:3px; }
+.statelist { columns:2; font-size:14.5px; }
+@media (min-width:640px){ .statelist{ columns:4; } }
+.statelist a { display:block; padding:3px 0; text-decoration:none; }
+.us-map { max-width:100%; height:auto; margin:20px auto; display:block; }
+.us-map path { fill:var(--card); stroke:var(--rule); stroke-width:.6;
+               cursor:pointer; transition:fill .15s; }
+.us-map path:hover { fill:var(--teal); }
+.us-map text { fill:var(--muted); font-size:7px; pointer-events:none;
+               text-anchor:middle; font-weight:600;
+               font-family:system-ui,-apple-system,sans-serif; }
+.us-map path:hover + text, .us-map path:hover ~ text { fill:var(--bg); }
+.map-tooltip { position:fixed; background:var(--card); border:1px solid var(--teal);
+               border-radius:8px; padding:6px 12px; font-size:13px;
+               color:var(--ink); pointer-events:none; z-index:999;
+               display:none; white-space:nowrap; }
+.post-meta { color:var(--muted); font-size:14px; margin:8px 0 6px; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 20px; }
+.tag { background:var(--card); border:1px solid var(--rule);
+       border-radius:20px; padding:3px 11px; font-size:12px;
+       color:var(--muted); }
+.tag-btn { cursor:pointer; font:inherit; font-size:12px; line-height:1.2;
+       transition:filter .12s ease, background .12s ease; }
+.tag-btn:hover { filter:brightness(1.25); }
+.tag-btn:focus-visible { outline:2px solid var(--teal); outline-offset:2px; }
+.prose h3 { font-size:17px; color:var(--teal); margin:24px 0 8px; }
+.prose p { margin:10px 0; }
+.prose blockquote { border-left:3px solid var(--teal); margin:16px 0;
+                    padding:6px 16px; color:var(--muted); }
+.prose table { margin:16px 0; }
+.prose ul, .prose ol { margin:10px 0; }
+.prose hr { border:none; border-top:1px solid var(--rule); margin:24px 0; }
+.post-nav { display:flex; justify-content:space-between; gap:14px;
+            margin:32px 0 0; padding:18px 0 0;
+            border-top:1px solid var(--rule); font-size:14px; }
+.post-nav a { max-width:45%; }
+.post-nav .dir { color:var(--muted); font-size:12px; display:block; }
+.blog-list { list-style:none; padding:0; }
+.blog-list li { border-bottom:1px solid var(--rule); padding:18px 0;
+  content-visibility:auto; contain-intrinsic-size:auto 110px; }
+.blog-list li:last-child { border-bottom:none; }
+/* Only posts carry art — news/video lists reuse .blog-list without a thumb,
+   so the two-column grid is scoped to .has-art rather than the whole list. */
+.blog-list li.has-art { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:680px){ .blog-list li.has-art {
+  grid-template-columns:200px 1fr; gap:18px; align-items:start;
+  contain-intrinsic-size:auto 150px; } }
+.blog-list .thumb { width:100%; height:auto; display:block; border-radius:10px;
+  border:1px solid var(--rule); }
+.post-art { width:100%; height:auto; display:block; border-radius:14px;
+  border:1px solid var(--rule); margin:4px 0 24px;
+  filter:drop-shadow(0 8px 24px rgba(45,212,191,.10)); }
+.post-art .glow, .thumb .glow { animation:pulse 3.2s ease-in-out infinite; }
+@media (prefers-reduced-motion:reduce){
+  .post-art .glow, .thumb .glow { animation:none; opacity:.7 } }
+.blog-list h3 { font-size:17px; margin:0 0 4px; }
+.blog-list h3 a { text-decoration:none; }
+.blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
+.badge { display:inline-block; font-size:12px; font-weight:700;
+         padding:2px 9px; border-radius:6px; }
+.pill { display:inline-block; font-weight:600; text-transform:uppercase;
+        letter-spacing:.04em; }
+.pill.bad  { background:rgba(239,68,68,.12); color:#ef4444; }
+.pill.good { background:rgba(52,211,153,.12); color:#34d399; }
+/* Source-tier badges on headline lists. Deliberately quiet — they mark a
+   citable outlet, they don't shout over the headline itself. */
+.src-badge { display:inline-block; font-size:10.5px; font-weight:700;
+  letter-spacing:.03em; text-transform:uppercase; padding:1px 6px;
+  border-radius:5px; margin-left:6px; vertical-align:middle;
+  border:1px solid transparent; white-space:nowrap; }
+.src-wire, .src-national { background:rgba(45,212,191,.14); color:#2dd4bf;
+  border-color:rgba(45,212,191,.32); }
+.src-nonprofit { background:rgba(167,139,250,.14); color:#a78bfa;
+  border-color:rgba(167,139,250,.30); }
+.src-trade { background:rgba(96,165,250,.13); color:#60a5fa;
+  border-color:rgba(96,165,250,.28); }
+.src-local, .src-international { background:rgba(148,163,184,.14);
+  color:#cbd5e1; border-color:rgba(148,163,184,.28); }
+.src-official { background:rgba(251,191,36,.13); color:#fbbf24;
+  border-color:rgba(251,191,36,.28); }
+.src-aggregator, .src-advocacy { background:rgba(239,68,68,.10);
+  color:#fca5a5; border-color:rgba(239,68,68,.26); }
+.badge-enacted { background:#065f46; color:#6ee7b7; }
+.badge-proposed { background:#713f12; color:#fde68a; }
+.badge-rejected { background:#7f1d1d; color:#fca5a5; }
+.badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.badge-expired { background:#374151; color:#d1d5db; }
+.badge-rescinded { background:#4c1d95; color:#c4b5fd; }
+/* Project-stage badges — coloured by urgency, not by win/loss. */
+.badge-hearing-scheduled { background:#78350f; color:#fcd34d; }
+.badge-awaiting-decision { background:#1e3a5f; color:#93c5fd; }
+.badge-in-review { background:#134e4a; color:#5eead4; }
+.badge-rumored { background:#374151; color:#9ca3af; }
+.badge-approved { background:#7f1d1d; color:#fca5a5; }
+.badge-denied { background:#065f46; color:#6ee7b7; }
+.badge-withdrawn { background:#334155; color:#cbd5e1; }
+.timeline { list-style:none; padding:0; margin:10px 0 0;
+            border-left:2px solid var(--rule); }
+.timeline li { position:relative; padding:0 0 12px 18px; }
+.timeline li::before { content:""; position:absolute; left:-6px; top:5px;
+   width:10px; height:10px; border-radius:50%; background:var(--teal); }
+.timeline .tl-date { font-size:12px; font-weight:700; color:var(--teal); }
+.timeline .tl-kind { font-size:11px; text-transform:uppercase;
+   letter-spacing:.06em; color:var(--muted); margin-left:6px; }
+.proj { border:1px solid var(--rule); border-radius:12px; padding:16px 18px;
+        margin:14px 0; background:var(--card); }
+.proj h3 { margin:0 0 4px; }
+.proj .meta { font-size:13px; color:var(--muted); margin:2px 0 8px; }
+.proj .next { font-size:14px; margin:8px 0 0; }
+.trail { margin:10px 0 0; }
+.trail h4 { margin:12px 0 2px; font-size:14px; }
+.trail p.why { font-size:13px; color:var(--muted); margin:0 0 6px; }
+.trail ul { list-style:none; padding:0; margin:0; }
+.trail li { padding:6px 0; border-top:1px solid var(--rule); font-size:14px; }
+.trail li .why { display:block; font-size:12.5px; color:var(--muted);
+   margin-top:2px; }
+.trail .k { font-size:10px; text-transform:uppercase; letter-spacing:.06em;
+   padding:1px 6px; border-radius:6px; margin-left:6px; vertical-align:1px; }
+.trail .k-search { background:#3f2d10; color:#fbbf24; }
+.trail .k-note { background:#334155; color:#cbd5e1; }
+/* Download cards — a consistent, scannable presentation for every file the
+   site hands out (PDF briefings, JSON/CSV datasets). */
+.dl-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:12px; margin:16px 0; }
+.dl-card { display:flex; gap:14px; align-items:center; padding:14px 16px;
+  border:1px solid var(--rule); border-radius:12px; background:var(--card);
+  text-decoration:none; color:var(--ink);
+  transition:border-color .15s ease, transform .15s ease; }
+.dl-card:hover { border-color:var(--teal); transform:translateY(-1px); }
+.dl-ico { font-size:26px; line-height:1; flex:0 0 auto; }
+.dl-body { flex:1; min-width:0; }
+.dl-title { font-weight:700; font-size:15px; display:flex; gap:8px;
+  align-items:center; flex-wrap:wrap; }
+.dl-fmt { font-size:10px; font-weight:800; letter-spacing:.06em;
+  text-transform:uppercase; padding:2px 7px; border-radius:5px;
+  background:rgba(45,212,191,.15); color:var(--teal); }
+.dl-meta { font-size:13px; color:var(--muted); margin-top:3px; }
+.dl-arrow { color:var(--muted); font-size:20px; flex:0 0 auto; font-weight:700; }
+.dl-card:hover .dl-arrow { color:var(--teal); }
+@media print { .dl-card { border-color:#ccc; } .dl-card:hover { transform:none; } }
+.badge-note { font-size:11px; font-weight:600; color:var(--muted);
+              display:block; margin-top:3px; }
+.unverified { font-size:12px; color:#fca5a5; font-weight:600; }
+.verified-on { font-size:12px; color:var(--muted); white-space:nowrap; }
+.kind-badge { font-size:10px; font-weight:800; letter-spacing:.04em;
+  text-transform:uppercase; padding:1px 6px; border-radius:5px;
+  display:inline-block; margin-left:5px; vertical-align:1px; }
+.kind-official { background:rgba(52,211,153,.15); color:#34d399; }
+.kind-roundup { background:rgba(251,191,36,.15); color:#fbbf24; }
+.kind-news { background:rgba(148,163,184,.15); color:#94a3b8; }
+.outcome { border-left:3px solid var(--teal); padding:10px 14px;
+           margin:10px 0; }
+.outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
+                text-transform:uppercase; letter-spacing:.08em; }
+.grid2 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
+.official { font-size:14px; }
+.official .role { color:var(--muted); font-size:13px; }
+.hero-grid { display:grid; grid-template-columns:1fr; gap:24px;
+  align-items:center; padding:44px 0 10px; }
+@media (min-width:820px){ .hero-grid{ grid-template-columns:1.15fr .85fr; padding:56px 0 20px; } }
+.hero-grid header { padding:0; }
+.hero-art { width:100%; max-width:420px; margin:0 auto; display:block;
+  filter:drop-shadow(0 8px 24px rgba(45,212,191,.12)); }
+.hero-art .glow { animation:pulse 3.2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:.35} 50%{opacity:1} }
+@media (prefers-reduced-motion:reduce){ .hero-art .glow{ animation:none; opacity:.7 } }
+.iconcard { display:flex; gap:14px; align-items:flex-start; }
+.iconcard .ico { flex-shrink:0; width:40px; height:40px; border-radius:10px;
+  background:rgba(45,212,191,.12); display:flex; align-items:center;
+  justify-content:center; color:var(--teal); }
+.iconcard .ico svg { width:22px; height:22px; }
+.iconcard .body h3 { margin:0 0 4px; }
+.demand-chart { margin:14px 0 6px; }
+.demand-chart .row { display:grid; grid-template-columns:minmax(80px,90px) 1fr auto;
+  gap:12px; align-items:center; padding:6px 0; font-size:14px; }
+.demand-chart .yr { color:var(--muted); font-variant-numeric:tabular-nums; }
+.demand-chart .bar { height:22px; border-radius:6px;
+  background:linear-gradient(90deg, rgba(45,212,191,.85), rgba(45,212,191,.55));
+  position:relative; }
+.demand-chart .bar.range { background:linear-gradient(90deg,
+  rgba(251,191,36,.85) 0%, rgba(251,191,36,.85) var(--lo,50%),
+  rgba(251,191,36,.35) var(--lo,50%), rgba(251,191,36,.35) 100%); }
+.demand-chart .val { color:var(--ink); font-variant-numeric:tabular-nums;
+  font-weight:600; text-align:right; }
+.demand-chart .val .homes { display:block; color:var(--muted); font-weight:400;
+  font-size:12px; white-space:nowrap; }
+.grid-flow-svg { width:100%; height:auto; max-width:820px; margin:14px auto;
+  display:block; }
+.grid-flow-svg text { font:600 12px system-ui,-apple-system,sans-serif;
+  fill:var(--ink); }
+.grid-flow-svg text.small { font-size:10.5px; font-weight:500; fill:var(--muted); }
+.grid-flow-svg .flow-dot { fill:var(--teal); }
+.grid-flow-svg .flow-dot.a1 { animation:flowa 3s linear infinite; }
+.grid-flow-svg .flow-dot.a2 { animation:flowb 3s linear infinite; animation-delay:1s; }
+.grid-flow-svg .flow-dot.a3 { animation:flowc 3s linear infinite; animation-delay:2s; }
+@keyframes flowa { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@keyframes flowb { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@keyframes flowc { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@media (prefers-reduced-motion:reduce){ .grid-flow-svg .flow-dot{ animation:none } }
+
+/* Print: this is a handout. People print state briefings, hearing questions
+   and the health-risk page to carry into a meeting, so drop the dark theme
+   (wastes ink, reads badly on paper), strip the chrome that can't be tapped,
+   expand collapsed sections, and print source URLs after links so a citation
+   survives the photocopier. */
+@media print {
+  :root { --bg:#fff; --card:#fff; --ink:#111; --muted:#444; --rule:#bbb;
+          --teal:#0a7d70; --amber:#8a6d00; }
+  * { box-shadow:none !important; text-shadow:none !important;
+      filter:none !important; animation:none !important; }
+  body { background:#fff; color:#111; font-size:11.5pt; }
+  .wrap { max-width:none; padding:0; }
+  nav, footer, .nav-search, .cta, .nav-burger, .skip,
+  .hero-art, .us-map, .grid-flow-svg, .flow-dot, .blog-list .thumb,
+  .post-art, .demand-chart { display:none !important; }
+  a { color:#111; text-decoration:underline; }
+  /* Show the destination of real links, not internal .html jumps or buttons. */
+  main a[href^="http"]:not(.btn):not(.tag)::after {
+    content:" (" attr(href) ")"; font-size:9pt; color:#555;
+    word-break:break-all; text-decoration:none; }
+  .btn { border:1px solid #111 !important; color:#111 !important;
+         background:#fff !important; padding:4px 10px; }
+  .card, .panel, .note, .freshness, .glass-card, .outcome, details.more,
+  .stat { background:#fff !important; border:1px solid #ccc !important;
+          color:#111 !important; }
+  .panel *, .note * { color:#111 !important; }
+  .kicker, h2, .stat b, .prose h3 { color:#0a7d70 !important; }
+  .badge { border:1px solid #333; color:#111 !important;
+           background:#fff !important; }
+  .src-badge { border:1px solid #666; color:#111 !important;
+               background:#fff !important; }
+  /* Expand collapsed disclosures so nothing prints hidden. */
+  details[open] > summary { color:#111; }
+  details:not([open]) > *:not(summary) { display:block !important; }
+  details > summary::after, details > summary::-webkit-details-marker {
+    display:none !important; }
+  section, .card, tr, li, .outcome, .note { break-inside:avoid; }
+  h1, h2, h3 { break-after:avoid; }
+  table, .table-scroll { overflow:visible !important; }
+  th, td { border-bottom:1px solid #ccc; }
+  @page { margin:1.6cm; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<nav>
+  <a href="index.html"><img src="assets/logo.svg" alt="AI GridWatch"></a>
+  <input type="checkbox" id="navToggle" hidden>
+  <label for="navToggle" class="nav-burger" aria-label="Menu"
+         role="button">&#9776;</label>
+  <a class="nav-search" href="search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <details class="navgroup"><summary class="active">Act</summary><div class="navmenu"><a href="start-here.html">Start here</a><a href="siting.html" aria-current="page">Siting score</a><a href="hearing-questions.html">Hearing prep</a><a href="opposition.html">Know the opposition</a><a href="cba-clauses.html">Model clauses</a><a href="case-studies.html">Case studies</a><a href="impact.html">Impact calculator</a></div></details>
+    <details class="navgroup"><summary>Your area</summary><div class="navmenu"><a href="states/index.html">Your state</a><a href="map.html">Map & projects</a><a href="moratoriums.html">Moratoriums</a><a href="puc.html">PUCs</a><a href="scorecard.html">Officials scorecard</a><a href="senate-races.html">Senate races 2026</a><a href="house-races.html">House races 2026</a><a href="community-value.html">Community playbook</a></div></details>
+    <details class="navgroup"><summary>The facts</summary><div class="navmenu"><a href="health-risks.html">Health risks</a><a href="bills.html">Your electric bill</a><a href="tax-breaks.html">Tax breaks</a><a href="environment.html">Environment</a><a href="learn.html">Learn the basics</a></div></details>
+    <details class="navgroup"><summary>Industry</summary><div class="navmenu"><a href="data-centers.html">Data centers</a><a href="companies/index.html">Companies</a><a href="complaints.html">Complaints by company</a><a href="outlook.html">Electricity outlook</a><a href="open-data.html">Open data</a></div></details>
+    <details class="navgroup"><summary>Updates</summary><div class="navmenu"><a href="blog/index.html">Blog</a><a href="news/index.html">News</a><a href="story-tracker.html">Story tracker</a><a href="projects.html">Projects tracker</a><a href="videos.html">Videos</a></div></details>
+  </div>
+  <a class="cta" href="start-here.html">Open the toolkit &rarr;</a>
+</nav>
+<main id="main">
+
+<header>
+  <div class="kicker">Siting evaluator</div>
+  <h1>Would a data center want to build in your town?</h1>
+  <p class="sub">Enter a zip code or pick a state. You'll get a
+  six-factor siting scorecard — power, fiber, land, water, tax climate,
+  political risk — plus a plain-English read on why a hyperscaler's
+  site-selection team probably has your county on a spreadsheet
+  somewhere.</p>
+</header>
+
+<section>
+  <h2>Look up your area</h2>
+  <div class="card">
+    <label for="s-zip" style="display:block;font-weight:600;margin-bottom:6px">Zip code (5 digits) or town name</label>
+    <input id="s-zip" type="text" placeholder="e.g. 20147 or Ashburn"
+      style="width:100%;padding:10px 12px;border:1px solid var(--rule);
+      border-radius:8px;background:var(--bg);color:var(--ink);
+      font:15px system-ui;">
+    <p style="margin:12px 0 6px;color:var(--muted);font-size:13px">…or pick a state:</p>
+    <select id="s-state" style="width:100%;padding:10px 12px;
+      border:1px solid var(--rule);border-radius:8px;background:var(--bg);
+      color:var(--ink);font:15px system-ui">
+      <option value="">— pick a state —</option>
+      <option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option>
+    </select>
+    <p><button id="s-go" class="btn" style="margin-top:14px;border:none;cursor:pointer">Show me the report &rarr;</button></p>
+    <p id="s-err" class="muted" style="color:#fca5a5;display:none;margin-top:6px"></p>
+  </div>
+</section>
+
+<div id="s-report" style="display:none">
+  <section id="s-summary"></section>
+  <section id="s-cards"></section>
+  <section id="s-narrative"></section>
+  <section id="s-nextsteps">
+    <h2>What to do with this</h2>
+    <ul>
+      <li>Read the <a href="tax-breaks.html">opportunity-cost briefing</a> before your next council meeting — the higher your score, the more leverage you have.</li>
+      <li>Bring the <a href="hearing-questions.html">hearing questions</a> and the <a href="cba-clauses.html">CBA clause library</a> to any public comment period.</li>
+      <li>Use the <a href="start-here.html">Start here wizard</a> for an interactive impact estimate and a downloadable action pack tailored to your state and situation.</li>
+      <li>Check the <a href="case-studies.html">case studies</a> for what similar communities won or lost.</li>
+    </ul>
+  </section>
+  <p class="src" style="margin-top:18px">Scores are heuristic composites built
+  from state-level data on the site: retail electricity rates, grid carbon,
+  known data-center count and TWh, water-stress category, state tax posture
+  toward data centers, and moratorium tracker counts. They describe the
+  <em>state</em> a zip code sits in — actual siting decisions are made at
+  the parcel level and depend on factors this tool can't see (fiber routes,
+  substation capacity, land title). Treat as a starting frame, not a
+  verdict.</p>
+</div>
+
+<script>
+const ZIP_MAP = {"MA": [[10, 27]], "RI": [[28, 29]], "NH": [[30, 38]], "ME": [[39, 49]], "VT": [[50, 59]], "CT": [[60, 69]], "NJ": [[70, 89]], "NY": [[100, 149], [63, 63]], "PA": [[150, 196]], "DE": [[197, 199]], "DC": [[200, 200], [202, 205], [569, 569]], "MD": [[206, 219]], "VA": [[201, 201], [220, 246]], "WV": [[247, 268]], "NC": [[270, 289]], "SC": [[290, 299]], "GA": [[300, 319], [398, 399]], "FL": [[320, 349]], "AL": [[350, 369]], "TN": [[370, 385]], "MS": [[386, 397]], "KY": [[400, 427]], "OH": [[430, 459]], "IN": [[460, 479]], "MI": [[480, 499]], "IA": [[500, 528]], "WI": [[530, 549]], "MN": [[550, 567]], "SD": [[570, 577]], "ND": [[580, 588]], "MT": [[590, 599]], "IL": [[600, 629]], "MO": [[630, 658]], "KS": [[660, 679]], "NE": [[680, 693]], "LA": [[700, 714]], "AR": [[716, 729]], "OK": [[730, 749]], "TX": [[750, 799], [885, 885]], "CO": [[800, 816]], "WY": [[820, 831]], "ID": [[832, 838]], "UT": [[840, 847]], "AZ": [[850, 865]], "NM": [[870, 884]], "NV": [[889, 898]], "CA": [[900, 961]], "HI": [[967, 968]], "OR": [[970, 979]], "WA": [[980, 994]], "AK": [[995, 999]]};
+const PROFILES = {"AL": {"state": "Alabama", "abbr": "AL", "slug": "alabama", "grade": "D", "overall": 59, "power": 62, "fiber": 42, "land": 80, "water": 85, "tax": 60, "politics": 20, "rate_cents": 16.8, "gco2": 380, "water_stress": "low", "dc_count": 35, "twh": 0.6, "major_hubs": "Birmingham, Huntsville", "upcoming": false, "moratoriums": 8, "tax_class": "neutral"}, "AK": {"state": "Alaska", "abbr": "AK", "slug": "alaska", "grade": "F", "overall": 42, "power": 18, "fiber": 15, "land": 55, "water": 85, "tax": 60, "politics": 80, "rate_cents": 28.2, "gco2": 450, "water_stress": "low", "dc_count": 5, "twh": 0.1, "major_hubs": "Anchorage", "upcoming": false, "moratoriums": 0, "tax_class": "neutral"}, "AZ": {"state": "Arizona", "abbr": "AZ", "slug": "arizona", "grade": "C", "overall": 67, "power": 65, "fiber": 85, "land": 75, "water": 25, "tax": 85, "politics": 55, "rate_cents": 15.2, "gco2": 390, "water_stress": "high", "dc_count": 190, "twh": 10.5, "major_hubs": "Phoenix (Mesa, Goodyear, Chandler) \u2014 Microsoft, Apple, Vantage, QTS, Iron Mountain", "upcoming": true, "moratoriums": 2, "tax_class": "friendly"}, "AR": {"state": "Arkansas", "abbr": "AR", "slug": "arkansas", "grade": "D", "overall": 57, "power": 67, "fiber": 40, "land": 55, "water": 85, "tax": 60, "politics": 20, "rate_cents": 14.4, "gco2": 410, "water_stress": "low", "dc_count": 15, "twh": 0.3, "major_hubs": "West Memphis \u2014 Google", "upcoming": true, "moratoriums": 6, "tax_class": "neutral"}, "CA": {"state": "California", "abbr": "CA", "slug": "california", "grade": "D", "overall": 47, "power": 33, "fiber": 90, "land": 60, "water": 25, "tax": 35, "politics": 20, "rate_cents": 33.2, "gco2": 210, "water_stress": "high", "dc_count": 321, "twh": 11.0, "major_hubs": "Silicon Valley, Los Angeles \u2014 Equinix, Digital Realty, CoreSite, Vantage", "upcoming": false, "moratoriums": 7, "tax_class": "hostile"}, "CO": {"state": "Colorado", "abbr": "CO", "slug": "colorado", "grade": "C", "overall": 60, "power": 60, "fiber": 65, "land": 80, "water": 55, "tax": 60, "politics": 20, "rate_cents": 16.2, "gco2": 420, "water_stress": "medium", "dc_count": 70, "twh": 1.8, "major_hubs": "Denver, Colorado Springs \u2014 Flexential, Viawest", "upcoming": false, "moratoriums": 8, "tax_class": "neutral"}, "CT": {"state": "Connecticut", "abbr": "CT", "slug": "connecticut", "grade": "D", "overall": 53, "power": 43, "fiber": 45, "land": 80, "water": 85, "tax": 35, "politics": 35, "rate_cents": 27.4, "gco2": 200, "water_stress": "low", "dc_count": 60, "twh": 1.0, "major_hubs": "Stamford, Hartford", "upcoming": false, "moratoriums": 3, "tax_class": "hostile"}, "DE": {"state": "Delaware", "abbr": "DE", "slug": "delaware", "grade": "C", "overall": 62, "power": 54, "fiber": 40, "land": 80, "water": 85, "tax": 60, "politics": 80, "rate_cents": 19.4, "gco2": 370, "water_stress": "low", "dc_count": 22, "twh": 0.4, "major_hubs": "Wilmington", "upcoming": false, "moratoriums": 0, "tax_class": "neutral"}, "DC": {"state": "District of Columbia", "abbr": "DC", "slug": "district-of-columbia", "grade": "D", "overall": 51, "power": 37, "fiber": 55, "land": 20, "water": 85, "tax": 60, "politics": 80, "rate_cents": 25.4, "gco2": 340, "water_stress": "low", "dc_count": 0, "twh": 0.0, "major_hubs": "", "upcoming": false, "moratoriums": 0, "tax_class": "neutral"}, "FL": {"state": "Florida", "abbr": "FL", "slug": "florida", "grade": "C", "overall": 64, "power": 68, "fiber": 60, "land": 75, "water": 85, "tax": 60, "politics": 20, "rate_cents": 15.2, "gco2": 370, "water_stress": "low", "dc_count": 135, "twh": 4.2, "major_hubs": "Miami, Tampa, Jacksonville \u2014 Equinix, Digital Realty, CyrusOne", "upcoming": false, "moratoriums": 14, "tax_class": "neutral"}, "GA": {"state": "Georgia", "abbr": "GA", "slug": "georgia", "grade": "B", "overall": 72, "power": 65, "fiber": 85, "land": 75, "water": 85, "tax": 85, "politics": 20, "rate_cents": 15.8, "gco2": 370, "water_stress": "low", "dc_count": 162, "twh": 9.0, "major_hubs": "Atlanta (Douglasville, Palmetto) \u2014 Switch, Google, Microsoft, QTS", "upcoming": true, "moratoriums": 18, "tax_class": "friendly"}, "HI": {"state": "Hawaii", "abbr": "HI", "slug": "hawaii", "grade": "F", "overall": 28, "power": 4, "fiber": 20, "land": 55, "water": 25, "tax": 35, "politics": 80, "rate_cents": 52.0, "gco2": 550, "water_stress": "high", "dc_count": 8, "twh": 0.1, "major_hubs": "Honolulu", "upcoming": false, "moratoriums": 0, "tax_class": "hostile"}, "ID": {"state": "Idaho", "abbr": "ID", "slug": "idaho", "grade": "C", "overall": 64, "power": 92, "fiber": 40, "land": 55, "water": 55, "tax": 60, "politics": 80, "rate_cents": 12.3, "gco2": 120, "water_stress": "medium", "dc_count": 12, "twh": 0.2, "major_hubs": "Boise", "upcoming": false, "moratoriums": 0, "tax_class": "neutral"}, "IL": {"state": "Illinois", "abbr": "IL", "slug": "illinois", "grade": "C", "overall": 65, "power": 44, "fiber": 80, "land": 75, "water": 85, "tax": 85, "politics": 20, "rate_cents": 23.8, "gco2": 310, "water_stress": "low", "dc_count": 244, "twh": 12.0, "major_hubs": "Chicago (Elk Grove Village, Aurora) \u2014 Microsoft, Equinix, Digital Realty, Meta", "upcoming": false, "moratoriums": 8, "tax_class": "friendly"}, "IN": {"state": "Indiana", "abbr": "IN", "slug": "indiana", "grade": "C", "overall": 66, "power": 53, "fiber": 70, "land": 80, "water": 85, "tax": 85, "politics": 20, "rate_cents": 18.1, "gco2": 430, "water_stress": "low", "dc_count": 85, "twh": 2.0, "major_hubs": "Lebanon, La Porte, Indianapolis \u2014 Amazon ($15B), Meta ($10B), Microsoft ($1B)", "upcoming": true, "moratoriums": 18, "tax_class": "friendly"}, "IA": {"state": "Iowa", "abbr": "IA", "slug": "iowa", "grade": "B", "overall": 71, "power": 67, "fiber": 75, "land": 75, "water": 85, "tax": 85, "politics": 20, "rate_cents": 14.1, "gco2": 410, "water_stress": "low", "dc_count": 115, "twh": 3.8, "major_hubs": "Des Moines, Altoona \u2014 Apple, Google, Meta", "upcoming": false, "moratoriums": 15, "tax_class": "friendly"}, "KS": {"state": "Kansas", "abbr": "KS", "slug": "kansas", "grade": "C", "overall": 61, "power": 63, "fiber": 45, "land": 80, "water": 55, "tax": 85, "politics": 35, "rate_cents": 15.1, "gco2": 420, "water_stress": "medium", "dc_count": 22, "twh": 0.4, "major_hubs": "Kansas City metro, Wichita", "upcoming": false, "moratoriums": 3, "tax_class": "friendly"}, "KY": {"state": "Kentucky", "abbr": "KY", "slug": "kentucky", "grade": "C", "overall": 60, "power": 61, "fiber": 48, "land": 80, "water": 85, "tax": 60, "politics": 20, "rate_cents": 15.0, "gco2": 460, "water_stress": "low", "dc_count": 40, "twh": 0.6, "major_hubs": "Louisville, Lexington", "upcoming": false, "moratoriums": 12, "tax_class": "neutral"}, "LA": {"state": "Louisiana", "abbr": "LA", "slug": "louisiana", "grade": "C", "overall": 69, "power": 70, "fiber": 55, "land": 80, "water": 85, "tax": 60, "politics": 80, "rate_cents": 14.1, "gco2": 380, "water_stress": "low", "dc_count": 30, "twh": 0.5, "major_hubs": "Richland Parish, Caddo & Bossier Parishes \u2014 Meta ($27B), Amazon ($12B), Hut 8", "upcoming": true, "moratoriums": 0, "tax_class": "neutral"}, "ME": {"state": "Maine", "abbr": "ME", "slug": "maine", "grade": "D", "overall": 49, "power": 38, "fiber": 35, "land": 55, "water": 85, "tax": 60, "politics": 35, "rate_cents": 28.6, "gco2": 180, "water_stress": "low", "dc_count": 8, "twh": 0.1, "major_hubs": "Portland", "upcoming": false, "moratoriums": 4, "tax_class": "neutral"}, "MD": {"state": "Maryland", "abbr": "MD", "slug": "maryland", "grade": "D", "overall": 58, "power": 49, "fiber": 50, "land": 80, "water": 85, "tax": 60, "politics": 20, "rate_cents": 21.8, "gco2": 340, "water_stress": "low", "dc_count": 48, "twh": 0.9, "major_hubs": "Baltimore, Frederick", "upcoming": false, "moratoriums": 14, "tax_class": "neutral"}, "MA": {"state": "Massachusetts", "abbr": "MA", "slug": "massachusetts", "grade": "D", "overall": 54, "power": 31, "fiber": 48, "land": 80, "water": 85, "tax": 35, "politics": 80, "rate_cents": 28.8, "gco2": 280, "water_stress": "low", "dc_count": 58, "twh": 1.1, "major_hubs": "Boston, Holyoke, Cambridge", "upcoming": false, "moratoriums": 0, "tax_class": "hostile"}, "MI": {"state": "Michigan", "abbr": "MI", "slug": "michigan", "grade": "C", "overall": 60, "power": 43, "fiber": 55, "land": 80, "water": 85, "tax": 85, "politics": 20, "rate_cents": 22.0, "gco2": 390, "water_stress": "low", "dc_count": 62, "twh": 1.1, "major_hubs": "Detroit, Grand Rapids", "upcoming": false, "moratoriums": 32, "tax_class": "friendly"}, "MN": {"state": "Minnesota", "abbr": "MN", "slug": "minnesota", "grade": "C", "overall": 67, "power": 63, "fiber": 60, "land": 80, "water": 85, "tax": 85, "politics": 20, "rate_cents": 17.0, "gco2": 350, "water_stress": "low", "dc_count": 78, "twh": 1.5, "major_hubs": "Minneapolis, Shakopee", "upcoming": false, "moratoriums": 8, "tax_class": "friendly"}, "MS": {"state": "Mississippi", "abbr": "MS", "slug": "mississippi", "grade": "C", "overall": 65, "power": 62, "fiber": 40, "land": 80, "water": 85, "tax": 85, "politics": 55, "rate_cents": 16.2, "gco2": 400, "water_stress": "low", "dc_count": 20, "twh": 0.3, "major_hubs": "Madison County, Meridian \u2014 Amazon ($16B+), Compass ($10B)", "upcoming": true, "moratoriums": 1, "tax_class": "friendly"}, "MO": {"state": "Missouri", "abbr": "MO", "slug": "missouri", "grade": "C", "overall": 67, "power": 66, "fiber": 55, "land": 80, "water": 85, "tax": 85, "politics": 20, "rate_cents": 13.7, "gco2": 440, "water_stress": "low", "dc_count": 55, "twh": 1.2, "major_hubs": "Kansas City, St. Louis \u2014 Google ($2B)", "upcoming": true, "moratoriums": 8, "tax_class": "friendly"}, "MT": {"state": "Montana", "abbr": "MT", "slug": "montana", "grade": "C", "overall": 62, "power": 72, "fiber": 35, "land": 55, "water": 85, "tax": 60, "politics": 80, "rate_cents": 14.7, "gco2": 340, "water_stress": "low", "dc_count": 12, "twh": 0.2, "major_hubs": "Billings, Missoula", "upcoming": false, "moratoriums": 0, "tax_class": "neutral"}, "NE": {"state": "Nebraska", "abbr": "NE", "slug": "nebraska", "grade": "B", "overall": 74, "power": 69, "fiber": 72, "land": 80, "water": 85, "tax": 85, "politics": 55, "rate_cents": 13.6, "gco2": 420, "water_stress": "low", "dc_count": 42, "twh": 2.1, "major_hubs": "Omaha, Lincoln \u2014 Google, Meta", "upcoming": false, "moratoriums": 1, "tax_class": "friendly"}, "NV": {"state": "Nevada", "abbr": "NV", "slug": "nevada", "grade": "C", "overall": 66, "power": 76, "fiber": 74, "land": 80, "water": 25, "tax": 85, "politics": 35, "rate_cents": 13.6, "gco2": 330, "water_stress": "high", "dc_count": 72, "twh": 2.8, "major_hubs": "Las Vegas (Henderson), Reno \u2014 Switch (SUPERNAP), Google, Apple", "upcoming": false, "moratoriums": 3, "tax_class": "friendly"}, "NH": {"state": "New Hampshire", "abbr": "NH", "slug": "new-hampshire", "grade": "D", "overall": 54, "power": 43, "fiber": 35, "land": 55, "water": 85, "tax": 60, "politics": 80, "rate_cents": 27.3, "gco2": 190, "water_stress": "low", "dc_count": 14, "twh": 0.2, "major_hubs": "Manchester", "upcoming": false, "moratoriums": 0, "tax_class": "neutral"}, "NJ": {"state": "New Jersey", "abbr": "NJ", "slug": "new-jersey", "grade": "C", "overall": 61, "power": 51, "fiber": 78, "land": 80, "water": 85, "tax": 35, "politics": 20, "rate_cents": 23.3, "gco2": 250, "water_stress": "low", "dc_count": 95, "twh": 2.2, "major_hubs": "Secaucus, Piscataway (NYC Metro) \u2014 Equinix, Digital Realty", "upcoming": false, "moratoriums": 67, "tax_class": "hostile"}, "NM": {"state": "New Mexico", "abbr": "NM", "slug": "new-mexico", "grade": "D", "overall": 54, "power": 67, "fiber": 45, "land": 80, "water": 25, "tax": 60, "politics": 35, "rate_cents": 14.1, "gco2": 410, "water_stress": "high", "dc_count": 28, "twh": 1.6, "major_hubs": "Albuquerque, Los Lunas \u2014 Meta", "upcoming": false, "moratoriums": 3, "tax_class": "neutral"}, "NY": {"state": "New York", "abbr": "NY", "slug": "new-york", "grade": "D", "overall": 54, "power": 30, "fiber": 78, "land": 75, "water": 85, "tax": 35, "politics": 20, "rate_cents": 29.9, "gco2": 250, "water_stress": "low", "dc_count": 155, "twh": 4.5, "major_hubs": "NYC Metro, Buffalo \u2014 Equinix, DataBank, Digital Realty", "upcoming": false, "moratoriums": 11, "tax_class": "hostile"}, "NC": {"state": "North Carolina", "abbr": "NC", "slug": "north-carolina", "grade": "B", "overall": 70, "power": 69, "fiber": 68, "land": 75, "water": 85, "tax": 85, "politics": 20, "rate_cents": 15.1, "gco2": 350, "water_stress": "low", "dc_count": 115, "twh": 4.5, "major_hubs": "Charlotte, Research Triangle, Richmond County \u2014 Apple, Google, Amazon ($10B)", "upcoming": true, "moratoriums": 30, "tax_class": "friendly"}, "ND": {"state": "North Dakota", "abbr": "ND", "slug": "north-dakota", "grade": "D", "overall": 59, "power": 60, "fiber": 38, "land": 55, "water": 85, "tax": 60, "politics": 80, "rate_cents": 13.6, "gco2": 510, "water_stress": "low", "dc_count": 18, "twh": 0.3, "major_hubs": "Fargo", "upcoming": false, "moratoriums": 0, "tax_class": "neutral"}, "OH": {"state": "Ohio", "abbr": "OH", "slug": "ohio", "grade": "C", "overall": 68, "power": 49, "fiber": 85, "land": 75, "water": 85, "tax": 85, "politics": 20, "rate_cents": 19.5, "gco2": 420, "water_stress": "low", "dc_count": 203, "twh": 7.5, "major_hubs": "Columbus (New Albany), Hebron \u2014 Google, Meta, Amazon ($10B), Microsoft", "upcoming": true, "moratoriums": 19, "tax_class": "friendly"}, "OK": {"state": "Oklahoma", "abbr": "OK", "slug": "oklahoma", "grade": "C", "overall": 66, "power": 75, "fiber": 55, "land": 80, "water": 55, "tax": 85, "politics": 35, "rate_cents": 13.4, "gco2": 350, "water_stress": "medium", "dc_count": 38, "twh": 0.6, "major_hubs": "Oklahoma City, Tulsa", "upcoming": false, "moratoriums": 3, "tax_class": "friendly"}, "OR": {"state": "Oregon", "abbr": "OR", "slug": "oregon", "grade": "B", "overall": 72, "power": 79, "fiber": 82, "land": 75, "water": 55, "tax": 85, "politics": 35, "rate_cents": 16.3, "gco2": 140, "water_stress": "medium", "dc_count": 148, "twh": 6.5, "major_hubs": "Hillsboro, Prineville, The Dalles \u2014 Apple, Meta, Google", "upcoming": false, "moratoriums": 4, "tax_class": "friendly"}, "PA": {"state": "Pennsylvania", "abbr": "PA", "slug": "pennsylvania", "grade": "C", "overall": 67, "power": 52, "fiber": 68, "land": 80, "water": 85, "tax": 85, "politics": 35, "rate_cents": 21.6, "gco2": 310, "water_stress": "low", "dc_count": 98, "twh": 2.5, "major_hubs": "Salem Twp., Fairless Hills, Lancaster \u2014 Amazon ($20B), CoreWeave ($6B)", "upcoming": true, "moratoriums": 3, "tax_class": "friendly"}, "RI": {"state": "Rhode Island", "abbr": "RI", "slug": "rhode-island", "grade": "F", "overall": 44, "power": 29, "fiber": 35, "land": 55, "water": 85, "tax": 35, "politics": 55, "rate_cents": 29.5, "gco2": 280, "water_stress": "low", "dc_count": 8, "twh": 0.2, "major_hubs": "Providence", "upcoming": false, "moratoriums": 1, "tax_class": "hostile"}, "SC": {"state": "South Carolina", "abbr": "SC", "slug": "south-carolina", "grade": "B", "overall": 70, "power": 71, "fiber": 58, "land": 80, "water": 85, "tax": 85, "politics": 35, "rate_cents": 16.2, "gco2": 300, "water_stress": "low", "dc_count": 40, "twh": 0.6, "major_hubs": "Aiken County, Charleston \u2014 Meta ($800M)", "upcoming": true, "moratoriums": 5, "tax_class": "friendly"}, "SD": {"state": "South Dakota", "abbr": "SD", "slug": "south-dakota", "grade": "C", "overall": 63, "power": 76, "fiber": 38, "land": 55, "water": 85, "tax": 60, "politics": 80, "rate_cents": 15.7, "gco2": 250, "water_stress": "low", "dc_count": 10, "twh": 0.1, "major_hubs": "Sioux Falls", "upcoming": false, "moratoriums": 0, "tax_class": "neutral"}, "TN": {"state": "Tennessee", "abbr": "TN", "slug": "tennessee", "grade": "C", "overall": 69, "power": 71, "fiber": 58, "land": 80, "water": 85, "tax": 85, "politics": 20, "rate_cents": 14.5, "gco2": 350, "water_stress": "low", "dc_count": 68, "twh": 1.8, "major_hubs": "Nashville, Memphis \u2014 Oracle ($1.5B), xAI ($1B+)", "upcoming": false, "moratoriums": 8, "tax_class": "friendly"}, "TX": {"state": "Texas", "abbr": "TX", "slug": "texas", "grade": "C", "overall": 68, "power": 65, "fiber": 95, "land": 60, "water": 55, "tax": 85, "politics": 20, "rate_cents": 16.4, "gco2": 350, "water_stress": "medium", "dc_count": 413, "twh": 17.0, "major_hubs": "Dallas\u2013Fort Worth, Austin, San Antonio, West Texas \u2014 Google ($40B), Meta, Stargate", "upcoming": true, "moratoriums": 9, "tax_class": "friendly"}, "UT": {"state": "Utah", "abbr": "UT", "slug": "utah", "grade": "D", "overall": 59, "power": 69, "fiber": 55, "land": 80, "water": 25, "tax": 60, "politics": 55, "rate_cents": 13.0, "gco2": 440, "water_stress": "high", "dc_count": 48, "twh": 2.6, "major_hubs": "Salt Lake City, Bluffdale \u2014 Meta, Google", "upcoming": false, "moratoriums": 1, "tax_class": "neutral"}, "VT": {"state": "Vermont", "abbr": "VT", "slug": "vermont", "grade": "D", "overall": 49, "power": 51, "fiber": 30, "land": 55, "water": 85, "tax": 35, "politics": 55, "rate_cents": 24.9, "gco2": 30, "water_stress": "low", "dc_count": 5, "twh": 0.1, "major_hubs": "Burlington", "upcoming": false, "moratoriums": 1, "tax_class": "hostile"}, "VA": {"state": "Virginia", "abbr": "VA", "slug": "virginia", "grade": "B", "overall": 73, "power": 63, "fiber": 100, "land": 60, "water": 85, "tax": 85, "politics": 20, "rate_cents": 17.6, "gco2": 330, "water_stress": "low", "dc_count": 665, "twh": 24.0, "major_hubs": "Ashburn ('Data Center Alley'), Loudoun Co., Prince William \u2014 AWS, Microsoft, Google, Equinix", "upcoming": true, "moratoriums": 6, "tax_class": "friendly"}, "WA": {"state": "Washington", "abbr": "WA", "slug": "washington", "grade": "C", "overall": 69, "power": 83, "fiber": 82, "land": 75, "water": 55, "tax": 60, "politics": 20, "rate_cents": 14.9, "gco2": 80, "water_stress": "medium", "dc_count": 142, "twh": 4.2, "major_hubs": "Quincy, Seattle, Moses Lake \u2014 Microsoft, Amazon", "upcoming": false, "moratoriums": 13, "tax_class": "neutral"}, "WV": {"state": "West Virginia", "abbr": "WV", "slug": "west-virginia", "grade": "D", "overall": 55, "power": 49, "fiber": 35, "land": 55, "water": 85, "tax": 60, "politics": 80, "rate_cents": 16.8, "gco2": 520, "water_stress": "low", "dc_count": 8, "twh": 0.1, "major_hubs": "Charleston", "upcoming": false, "moratoriums": 0, "tax_class": "neutral"}, "WI": {"state": "Wisconsin", "abbr": "WI", "slug": "wisconsin", "grade": "C", "overall": 62, "power": 52, "fiber": 50, "land": 80, "water": 85, "tax": 85, "politics": 20, "rate_cents": 19.7, "gco2": 380, "water_stress": "low", "dc_count": 52, "twh": 0.9, "major_hubs": "Mount Pleasant, Milwaukee \u2014 Microsoft ($3.3B)", "upcoming": true, "moratoriums": 13, "tax_class": "friendly"}, "WY": {"state": "Wyoming", "abbr": "WY", "slug": "wyoming", "grade": "D", "overall": 57, "power": 61, "fiber": 35, "land": 55, "water": 85, "tax": 60, "politics": 55, "rate_cents": 14.8, "gco2": 460, "water_stress": "low", "dc_count": 18, "twh": 0.5, "major_hubs": "Cheyenne \u2014 Microsoft", "upcoming": false, "moratoriums": 1, "tax_class": "neutral"}};
+
+function zipToState(zip) {
+  const z = parseInt(zip.substring(0,3), 10);
+  if (isNaN(z)) return null;
+  for (const [state, ranges] of Object.entries(ZIP_MAP)) {
+    for (const [lo, hi] of ranges) {
+      if (z >= lo && z <= hi) return state;
+    }
+  }
+  return null;
+}
+
+const NARRATIVES = {
+  power: (p) => p.power >= 75
+    ? `${p.state}'s retail electricity is around ${p.rate_cents}¢/kWh — well below the coastal average — and its grid carbon runs about ${p.gco2} gCO₂/kWh. Cheap firm power is the single strongest signal for hyperscaler siting.`
+    : p.power >= 50
+    ? `${p.state} sits mid-pack on power: retail rates around ${p.rate_cents}¢/kWh and grid carbon near ${p.gco2} gCO₂/kWh. Attractive if a specific tariff or PPA is on the table; not a decisive advantage.`
+    : `${p.state}'s retail power runs high (${p.rate_cents}¢/kWh) and the grid emissions profile (${p.gco2} gCO₂/kWh) puts it below the shortlist for cost-sensitive tenants. Developers who build here usually have a specific renewables deal locked.`,
+  fiber: (p) => p.fiber >= 75
+    ? `${p.state} sits on the top tier of the US fiber map — dense backbone, low latency to the coasts, and a well-worn path for permitting. Peer developers are already there, which is both a positive (proven) and a negative (competition for the best parcels).`
+    : p.fiber >= 50
+    ? `${p.state} has adequate fiber for edge and mid-tier cloud, but is not a Tier-1 backbone hub. A developer with a specific latency requirement is more likely to look at neighboring states.`
+    : `${p.state} is fiber-thin for hyperscale. Long-haul routes exist but a new campus would likely need to co-fund fiber build-out — that shows up as an operator ask early in negotiations.`,
+  land: (p) => p.dc_count >= 100
+    ? `${p.state} already hosts ${p.dc_count} tracked facilities. Land in the established hubs is spoken for; new campuses tend to push into second-tier counties nearby. Expect displacement pressure.`
+    : p.dc_count >= 20
+    ? `${p.state}'s ${p.dc_count} tracked facilities mean the industrial land market understands data-center buyers — brokers know the drill, county assessors have templates.`
+    : `${p.state} has only ${p.dc_count} tracked facilities. Land is cheaper but the local permitting apparatus is unfamiliar; expect a longer entitlement cycle.`,
+  water: (p) => p.water_stress === "low"
+    ? `Low water stress. Municipal or well supply is unlikely to constrain a cooling design here, which is exactly why arid-state hyperscalers are increasingly hunting parcels in states like this.`
+    : p.water_stress === "high"
+    ? `High water stress. Evaporative cooling is politically radioactive; expect any credible proposal to lead with air-cooling or closed-loop designs — and expect the community to still push back on both.`
+    : `Medium water stress. Cooling design will be scrutinized; watershed authorities are the most likely veto point.`,
+  tax: (p) => p.tax_class === "friendly"
+    ? `${p.state} has an existing data-center sales-tax exemption or equivalent posture. That's the incentive most developers assume before they walk in. Don't treat it as a concession you got — you gave it.`
+    : p.tax_class === "hostile"
+    ? `${p.state} runs a heavier tax regime and lacks the standard data-center carve-outs. A hyperscaler looking here is doing so despite the tax bill, which means the other factors have to compensate.`
+    : `${p.state} sits in the middle of the tax-posture pack. Custom abatements are usually still on the table for large enough projects.`,
+  politics: (p) => p.moratoriums === 0
+    ? `No moratoriums tracked in-state. Politically, the runway is clear — that's an argument for organizing early, not for assuming the fight isn't coming.`
+    : p.moratoriums <= 2
+    ? `${p.moratoriums} tracked moratorium(s) in-state. Precedent for pushback exists; find the organizers and read what they filed.`
+    : `${p.moratoriums} tracked moratoriums in-state — a real political pattern. Any new proposal here will run into an experienced opposition network.`,
+};
+
+function factorCard(label, score, narrative, key) {
+  const color = score >= 70 ? "#34d399" : score >= 50 ? "#fbbf24" : "#f87171";
+  return `<div class="card" style="margin-bottom:14px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <h3 style="margin:0">${label}</h3>
+      <span style="font-size:22px;font-weight:700;color:${color}">${score}</span>
+    </div>
+    <div style="height:6px;border-radius:3px;background:rgba(255,255,255,.06);overflow:hidden;margin-bottom:10px">
+      <div style="height:6px;width:${score}%;background:${color};border-radius:3px"></div>
+    </div>
+    <p class="muted" style="margin:0;font-size:14px">${narrative}</p>
+  </div>`;
+}
+
+function render(state) {
+  const p = PROFILES[state];
+  if (!p) {
+    document.getElementById("s-err").style.display = "block";
+    document.getElementById("s-err").textContent = "State not recognized.";
+    return;
+  }
+  document.getElementById("s-err").style.display = "none";
+  document.getElementById("s-report").style.display = "block";
+
+  const gradeColor = ({"A":"#34d399","B":"#6ee7b7","C":"#fbbf24","D":"#f97316","F":"#ef4444"})[p.grade] || "#93a1b5";
+  document.getElementById("s-summary").innerHTML = `
+    <h2>${p.state} — siting attractiveness</h2>
+    <div class="card" style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center">
+      <div style="text-align:center">
+        <div style="font-size:64px;line-height:1;font-weight:800;color:${gradeColor}">${p.grade}</div>
+        <div class="muted" style="margin-top:4px">overall</div>
+      </div>
+      <div>
+        <p style="margin:0 0 6px"><strong>Composite score:</strong> ${p.overall} / 100</p>
+        <p class="muted" style="margin:0">${p.dc_count} tracked data centers · ${p.twh} TWh/yr · ${p.moratoriums} moratorium(s) recorded · ${p.major_hubs || "no major hubs yet"}${p.upcoming ? " · upcoming projects flagged" : ""}</p>
+      </div>
+    </div>`;
+
+  document.getElementById("s-cards").innerHTML = `
+    <h2>The six factors</h2>
+    ${factorCard("Power (price + carbon)", p.power, NARRATIVES.power(p), "power")}
+    ${factorCard("Fiber & cluster proximity", p.fiber, NARRATIVES.fiber(p), "fiber")}
+    ${factorCard("Land availability", p.land, NARRATIVES.land(p), "land")}
+    ${factorCard("Water", p.water, NARRATIVES.water(p), "water")}
+    ${factorCard("Tax climate", p.tax, NARRATIVES.tax(p), "tax")}
+    ${factorCard("Political risk", p.politics, NARRATIVES.politics(p), "politics")}`;
+
+  const leverage = p.overall >= 75
+    ? "Your area is on any serious hyperscaler shortlist. That's leverage — the developer will invest months of siting cost before ever walking into your hearing. Treat the tax package as a negotiation, not a check-the-box approval."
+    : p.overall >= 55
+    ? "Your area is competitive but not automatic. A developer here has options; so do you. Focus on what raises your score (fiber, tariff design) as a bargaining chip in either direction."
+    : "Your area is unlikely to see a hyperscale project without a specific push — a state incentive or a nearby cluster spillover. If a proposal appears anyway, ask why: something on the developer's spreadsheet is compensating for what this scorecard says is missing.";
+
+  document.getElementById("s-narrative").innerHTML = `
+    <h2>What this means for your leverage</h2>
+    <div class="note info"><p>${leverage}</p></div>
+    <p><a href="states/${p.slug}.html" class="btn ghost">Full ${p.state} state briefing &rarr;</a></p>`;
+}
+
+function lookup() {
+  const zip = document.getElementById("s-zip").value.trim();
+  const stateSel = document.getElementById("s-state").value;
+  if (zip && /^\d{3,5}$/.test(zip)) {
+    const state = zipToState(zip);
+    if (state) return render(state);
+    document.getElementById("s-err").style.display = "block";
+    document.getElementById("s-err").textContent =
+      "Zip prefix not recognized (military APO/FPO or a US territory outside the 50 states + DC). Try picking a state below.";
+    return;
+  }
+  if (stateSel) return render(stateSel);
+  // Try town lookup by matching against known localities.
+  if (zip) {
+    const needle = zip.toLowerCase();
+    for (const p of Object.values(PROFILES)) {
+      if (p.major_hubs && p.major_hubs.toLowerCase().includes(needle)) {
+        return render(p.abbr);
+      }
+    }
+  }
+  document.getElementById("s-err").style.display = "block";
+  document.getElementById("s-err").textContent =
+    "Enter a 5-digit US zip code, a recognizable town, or pick a state from the dropdown.";
+}
+
+document.getElementById("s-go").addEventListener("click", lookup);
+document.getElementById("s-zip").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") { e.preventDefault(); lookup(); }
+});
+</script>
+
+</main>
+<footer>
+<div class="nl-box">
+  <p><strong>📬 The GridWatch Dispatch</strong> — one email a week: new moratoriums, rate cases, and negotiation wins. No spam.</p>
+  <form action="https://formspree.io/f/xljroogo" method="POST"
+        class="nl-form">
+    <input type="email" name="email" required placeholder="you@example.com"
+           aria-label="Email address">
+    <input type="hidden" name="source" value="static-site-footer">
+    <input type="hidden" name="_subject" value="GridWatch Dispatch signup">
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
+  <p style="margin-bottom:8px"><strong>Reference</strong> ·
+    <a href="studies.html">State studies</a> ·
+    <a href="officials.html">Officials directory</a> ·
+    <a href="glossary.html">Glossary</a> ·
+    <a href="tax-breaks.html">Tax breaks</a> ·
+    <a href="dividend.html">Data dividend</a></p>
+  <p style="margin-bottom:8px"><strong>Site</strong> ·
+    <a href="about.html">About</a> ·
+    <a href="open-data.html">Open data</a> ·
+    <a href="consulting.html">Consulting</a> ·
+    <a href="search.html">Search</a></p>
+  <p>AI GridWatch — community energy intelligence. Planning estimates, not
+  engineering studies; every number is sourced in the
+  <a href="start-here.html">toolkit</a>. Built from public data.</p>
+</footer>
+</div>
+
+<script data-goatcounter="https://mjb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+function gwevent(path) {
+  if (window.goatcounter && window.goatcounter.count)
+    window.goatcounter.count({ path: path, event: true });
+}
+document.addEventListener('click', function (e) {
+  var a = e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  var file = href.split('/').pop().split('?')[0];
+  if (/start-here\.html$/.test(href)) {
+    gwevent('toolkit-click' + location.pathname.replace(/\.html$/, ''));
+  } else if (/\.pdf($|\?)/.test(href) && a.host === location.host) {
+    gwevent('pdf-download/' + file);
+  } else if (href.indexOf('data/moratoriums.') !== -1 || href.indexOf('embed/moratoriums') !== -1
+             || href.indexOf('data/projects.') !== -1) {
+    gwevent('data-download/' + file);
+  }
+});
+// Nav dropdowns: one open at a time, closing on click-away or Escape. CSS
+// already reveals menus on hover/focus; this tidies the click path without
+// fighting the native <details> toggle — sibling-close runs off the toggle
+// event, and the click-away handler bails on any click inside the nav.
+document.querySelectorAll('.navgroup').forEach(function (g) {
+  g.addEventListener('toggle', function () {
+    if (!g.open) return;
+    document.querySelectorAll('.navgroup[open]').forEach(function (o) {
+      if (o !== g) o.open = false;
+    });
+  });
+});
+document.addEventListener('click', function (e) {
+  if (e.target.closest && e.target.closest('.navgroup')) return;
+  document.querySelectorAll('.navgroup[open]').forEach(function (g) { g.open = false; });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape')
+    document.querySelectorAll('.navgroup[open]').forEach(function (g) { g.open = false; });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1220">
+<meta name="google-site-verification" content="kkgrLvRLdgGg12Y1ka456PlN9iNsyWGCyJIS-8ip9I4">
+<title>Know the opposition — AI GridWatch</title>
+<meta name="description" content="The data center industry&#x27;s lobby groups, their claims, and the sourced counter-arguments communities need at hearings.">
+<link rel="canonical" href="https://aigridwatch.com/opposition">
+<link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
+      href="https://aigridwatch.com/blog/feed.xml">
+<meta property="og:title" content="Know the opposition — AI GridWatch">
+<meta property="og:description" content="The data center industry&#x27;s lobby groups, their claims, and the sourced counter-arguments communities need at hearings.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aigridwatch.com/opposition">
+<meta property="og:site_name" content="AI GridWatch">
+<meta property="og:image" content="https://aigridwatch.com/assets/hero.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="479">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Know the opposition", "item": "https://aigridwatch.com/opposition"}]}</script>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preload" href="assets/logo.svg" as="image" type="image/svg+xml">
+<link rel="dns-prefetch" href="//gc.zgo.at">
+<link rel="preconnect" href="//gc.zgo.at" crossorigin>
+<style>
+:root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
+        --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
+* { box-sizing:border-box; margin:0; }
+body { background:var(--bg); color:var(--ink);
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.wrap { max-width:900px; margin:0 auto; padding:20px 20px 64px; }
+nav { display:flex; align-items:center; gap:14px; padding:14px 0;
+      border-bottom:1px solid var(--rule); flex-wrap:wrap; }
+nav img { height:34px; }
+nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+nav a:hover { color:var(--teal); }
+nav a[aria-current] { color:var(--teal); font-weight:600; }
+nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
+           font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
+/* Grouped dropdowns (desktop). Menus reveal on hover, keyboard focus, or the
+   native <details> toggle; the summary marker is replaced with a caret. */
+.navgroup { position:relative; }
+.navgroup > summary { list-style:none; cursor:pointer; color:var(--muted);
+  font-size:14px; padding:2px 0; display:inline-flex; align-items:center; }
+.navgroup > summary::-webkit-details-marker { display:none; }
+.navgroup > summary::after { content:"\25BE"; font-size:10px; margin-left:5px;
+  opacity:.55; }
+.navgroup:hover > summary, .navgroup[open] > summary,
+.navgroup > summary.active { color:var(--teal); }
+.navmenu { display:none; position:absolute; top:calc(100% + 8px); left:0;
+  background:var(--card); border:1px solid var(--rule); border-radius:10px;
+  padding:6px; min-width:190px; flex-direction:column; gap:1px; z-index:60;
+  box-shadow:0 10px 28px rgba(0,0,0,.4); }
+.navgroup:hover > .navmenu, .navgroup:focus-within > .navmenu,
+.navgroup[open] > .navmenu { display:flex; }
+.navmenu a { padding:8px 12px; border-radius:6px; font-size:14px;
+  white-space:nowrap; color:var(--muted); }
+.navmenu a:hover { background:rgba(45,212,191,.1); color:var(--teal); }
+.navmenu a[aria-current] { color:var(--teal); font-weight:600; }
+/* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
+.nav-burger { display:none; }
+.nav-links { display:contents; }
+@media (max-width:820px) {
+  nav { gap:8px; }
+  nav img { height:30px; }
+  .nav-burger { display:block; order:3; font-size:20px; line-height:1;
+    color:var(--muted); cursor:pointer; padding:5px 8px; border-radius:8px;
+    border:1px solid var(--rule); user-select:none; }
+  .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
+  nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
+  .nav-links { order:4; display:none; flex-basis:100%;
+    flex-direction:column; gap:0; padding:4px 0 2px; }
+  #navToggle:checked ~ .nav-links { display:flex; }
+  .nav-links > a { padding:10px 2px; font-size:15px;
+    border-bottom:1px solid rgba(255,255,255,.05); }
+  /* Groups become inline accordions: the menu stacks under its summary and
+     is revealed by the native <details> tap, not an absolute overlay. */
+  .navgroup { position:static; border-bottom:1px solid rgba(255,255,255,.05); }
+  .navgroup > summary { padding:11px 2px; font-size:15px; justify-content:space-between; }
+  .navgroup[open] > summary::after { transform:rotate(180deg); }
+  .navmenu { position:static; display:none; box-shadow:none; border:none;
+    background:transparent; padding:0 0 6px 12px; min-width:0; gap:0; }
+  .navgroup[open] > .navmenu { display:flex; }
+  .navmenu a { padding:8px 10px; font-size:14px; }
+}
+.skip { position:absolute; left:-9999px; }
+.skip:focus { position:fixed; left:16px; top:10px; z-index:1000;
+  background:var(--teal); color:#06251f; font-weight:700;
+  padding:9px 16px; border-radius:8px; }
+header { padding:44px 0 10px; }
+.kicker { color:var(--teal); font-weight:700; letter-spacing:.12em;
+          text-transform:uppercase; font-size:13px; }
+h1 { font-size:clamp(28px,5vw,44px); line-height:1.12; margin:10px 0;
+     text-wrap:balance; }
+.sub { color:var(--muted); max-width:640px; }
+.stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+         margin:30px 0; }
+@media (min-width:640px){ .stats{ grid-template-columns:repeat(4,1fr);} }
+.stat { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:16px; }
+.stat b { display:block; font-size:24px; color:var(--teal); }
+.stat span { font-size:13px; color:var(--muted); }
+section { margin:34px 0; }
+h2 { font-size:20px; color:var(--teal); margin-bottom:12px;
+     border-bottom:1px solid var(--rule); padding-bottom:8px; }
+ul { padding-left:22px; } li { margin:9px 0; }
+a { color:var(--teal); }
+.btn { display:inline-block; background:var(--teal); color:#06251f;
+       font-weight:700; padding:12px 22px; border-radius:10px;
+       text-decoration:none; margin:8px 8px 0 0; }
+.btn.ghost { background:transparent; color:var(--teal);
+             border:1px solid var(--teal); }
+.muted { color:var(--muted); font-size:14px; }
+.grid3 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid3{ grid-template-columns:repeat(3,1fr);} }
+.card { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:18px; }
+.card h3 { margin-bottom:6px; font-size:16px; }
+.panel { border-radius:14px; padding:18px; color:#fff; }
+.panel h3 { margin-bottom:8px; }
+.panel p { font-size:14px; color:rgba(255,255,255,.85); }
+.ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
+       border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
+.src { font-size:12.5px; color:var(--muted); }
+.freshness { border-left:3px solid var(--rule); padding:10px 14px;
+  margin:14px 0; background:rgba(255,255,255,.02); border-radius:0 8px 8px 0;
+  font-size:13.5px; }
+.freshness.stale { border-left-color:var(--amber);
+  background:rgba(251,191,36,.07); }
+.freshness p { margin:0; }
+.note { border-left:3px solid var(--rule); padding:12px 16px; margin:18px 0;
+  border-radius:0 8px 8px 0; font-size:14.5px; line-height:1.55; }
+.note.info { border-left-color:var(--teal); background:rgba(45,212,191,.07); }
+.note.warn { border-left-color:var(--amber); background:rgba(251,191,36,.07); }
+.note.bad  { border-left-color:#ef4444; background:rgba(239,68,68,.08); }
+.note.good { border-left-color:#34d399; background:rgba(52,211,153,.07); }
+.note p { margin:0; }
+details.more { border:1px solid var(--rule); border-radius:10px;
+  padding:0 16px; margin:16px 0; background:rgba(255,255,255,.02); }
+details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
+  color:var(--teal); font-size:14.5px; }
+details.more[open] { padding-bottom:10px; }
+nav.pagenav { display:block; padding:14px 18px; border:1px solid var(--rule); border-radius:12px;
+  margin:22px 0 18px; background:rgba(45,212,191,.05); }
+.pagenav-hd { display:flex; align-items:center; justify-content:space-between;
+  gap:12px; font-weight:700; font-size:13px; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--muted); }
+.pagenav ol { margin:10px 0 0; padding-left:20px; font-size:15px; line-height:1.9; }
+.pagenav a { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--rule); }
+.pagenav a:hover { color:var(--teal); border-bottom-color:var(--teal); }
+.expandall { background:none; border:1px solid var(--rule); color:var(--teal);
+  border-radius:999px; padding:5px 12px; font:inherit; font-size:12px;
+  cursor:pointer; text-transform:none; letter-spacing:0; }
+.expandall:hover { border-color:var(--teal); }
+.pagenav .pnav-grp { margin:12px 0 0; font-weight:700; font-size:11.5px;
+  letter-spacing:.06em; text-transform:uppercase; color:var(--teal); }
+.pagenav .pnav-grp:first-of-type { margin-top:8px; }
+.secgrp { margin:36px 0 0; padding-top:20px; border-top:1px solid var(--rule);
+  font-weight:700; font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--teal); }
+details.sect > summary { font-size:17px; color:var(--ink); padding:16px 0;
+  display:flex; align-items:center; gap:10px; }
+details.sect > summary:hover { color:var(--teal); }
+details.sect .secno { display:inline-flex; align-items:center;
+  justify-content:center; width:24px; height:24px; flex:0 0 24px;
+  border-radius:50%; background:rgba(45,212,191,.15); color:var(--teal);
+  font-size:12.5px; font-weight:700; }
+details.sect[open] { padding-bottom:18px; }
+details.sect > p, details.sect > ul, details.sect > ol { max-width:74ch; }
+details.sect h4 { margin:26px 0 6px; font-size:16px; color:var(--ink); }
+details.sect > p:first-of-type { margin-top:4px; }
+.billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
+  margin:20px 0 12px; }
+.billbar > div { display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:14px; }
+.barkey { display:flex; flex-wrap:wrap; gap:14px; font-size:13px;
+  color:var(--muted); }
+.barkey span { display:flex; align-items:center; gap:6px; }
+.barkey i { width:12px; height:12px; border-radius:3px; }
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px; margin:18px 0; }
+.flow .step { border:1px solid var(--rule); border-radius:10px; padding:12px 14px;
+  background:rgba(255,255,255,.02); font-size:14px; }
+.flow .step b { display:block; margin-bottom:4px; }
+.flow .step.end { border-color:#ef4444; background:rgba(239,68,68,.08); }
+.hbars { margin:18px 0; display:flex; flex-direction:column; gap:8px; }
+.hbar-row { display:grid; grid-template-columns:minmax(90px,1.1fr) 2.4fr
+  minmax(90px,1.3fr); gap:10px; align-items:center; font-size:13.5px; }
+.hbar-label { color:var(--ink); }
+.hbar-track { background:rgba(255,255,255,.06); border-radius:5px; height:16px; }
+.hbar-fill { height:16px; border-radius:5px; }
+.hbar-val { color:var(--muted); font-variant-numeric:tabular-nums; }
+@media (max-width:640px) {
+  .hbar-row { grid-template-columns:1fr; gap:2px; }
+  .hbar-track { height:12px; }
+}
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+th { color:var(--muted); font-weight:600; }
+footer { margin-top:48px; border-top:1px solid var(--rule);
+         padding-top:16px; font-size:13px; color:var(--muted); }
+.nl-box { background:var(--card); border:1px solid var(--rule);
+          border-radius:12px; padding:14px 18px; margin-bottom:18px; }
+.nl-box p { color:var(--ink); font-size:14px; margin-bottom:8px; }
+.nl-form { display:flex; gap:8px; flex-wrap:wrap; }
+.nl-form input[type=email] { flex:1; min-width:220px; background:var(--bg);
+  color:var(--ink); border:1px solid var(--rule); border-radius:8px;
+  padding:9px 12px; font-size:14px; }
+.nl-form button { background:var(--teal); color:#04211c; border:0;
+  border-radius:8px; padding:9px 18px; font-weight:700; font-size:14px;
+  cursor:pointer; }
+.submit-box { background:var(--card); border:1px solid var(--rule);
+  border-radius:12px; padding:20px 22px; margin-top:16px; }
+.submit-box label { display:block; font-size:14px; color:var(--ink);
+  font-weight:600; margin-bottom:4px; margin-top:12px; }
+.submit-box label:first-child { margin-top:0; }
+.submit-box input, .submit-box select, .submit-box textarea {
+  width:100%; box-sizing:border-box; background:var(--bg); color:var(--ink);
+  border:1px solid var(--rule); border-radius:8px; padding:9px 12px;
+  font-size:14px; font-family:inherit; }
+.submit-box textarea { min-height:70px; resize:vertical; }
+.submit-box .row2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media (max-width:520px){ .submit-box .row2 { grid-template-columns:1fr; } }
+.submit-box button { background:var(--teal); color:#04211c; border:0;
+  border-radius:8px; padding:11px 22px; font-weight:700; font-size:15px;
+  cursor:pointer; margin-top:16px; }
+.submit-box .hint { font-size:12px; color:var(--muted); margin-top:3px; }
+.statelist { columns:2; font-size:14.5px; }
+@media (min-width:640px){ .statelist{ columns:4; } }
+.statelist a { display:block; padding:3px 0; text-decoration:none; }
+.us-map { max-width:100%; height:auto; margin:20px auto; display:block; }
+.us-map path { fill:var(--card); stroke:var(--rule); stroke-width:.6;
+               cursor:pointer; transition:fill .15s; }
+.us-map path:hover { fill:var(--teal); }
+.us-map text { fill:var(--muted); font-size:7px; pointer-events:none;
+               text-anchor:middle; font-weight:600;
+               font-family:system-ui,-apple-system,sans-serif; }
+.us-map path:hover + text, .us-map path:hover ~ text { fill:var(--bg); }
+.map-tooltip { position:fixed; background:var(--card); border:1px solid var(--teal);
+               border-radius:8px; padding:6px 12px; font-size:13px;
+               color:var(--ink); pointer-events:none; z-index:999;
+               display:none; white-space:nowrap; }
+.post-meta { color:var(--muted); font-size:14px; margin:8px 0 6px; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 20px; }
+.tag { background:var(--card); border:1px solid var(--rule);
+       border-radius:20px; padding:3px 11px; font-size:12px;
+       color:var(--muted); }
+.tag-btn { cursor:pointer; font:inherit; font-size:12px; line-height:1.2;
+       transition:filter .12s ease, background .12s ease; }
+.tag-btn:hover { filter:brightness(1.25); }
+.tag-btn:focus-visible { outline:2px solid var(--teal); outline-offset:2px; }
+.prose h3 { font-size:17px; color:var(--teal); margin:24px 0 8px; }
+.prose p { margin:10px 0; }
+.prose blockquote { border-left:3px solid var(--teal); margin:16px 0;
+                    padding:6px 16px; color:var(--muted); }
+.prose table { margin:16px 0; }
+.prose ul, .prose ol { margin:10px 0; }
+.prose hr { border:none; border-top:1px solid var(--rule); margin:24px 0; }
+.post-nav { display:flex; justify-content:space-between; gap:14px;
+            margin:32px 0 0; padding:18px 0 0;
+            border-top:1px solid var(--rule); font-size:14px; }
+.post-nav a { max-width:45%; }
+.post-nav .dir { color:var(--muted); font-size:12px; display:block; }
+.blog-list { list-style:none; padding:0; }
+.blog-list li { border-bottom:1px solid var(--rule); padding:18px 0;
+  content-visibility:auto; contain-intrinsic-size:auto 110px; }
+.blog-list li:last-child { border-bottom:none; }
+/* Only posts carry art — news/video lists reuse .blog-list without a thumb,
+   so the two-column grid is scoped to .has-art rather than the whole list. */
+.blog-list li.has-art { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:680px){ .blog-list li.has-art {
+  grid-template-columns:200px 1fr; gap:18px; align-items:start;
+  contain-intrinsic-size:auto 150px; } }
+.blog-list .thumb { width:100%; height:auto; display:block; border-radius:10px;
+  border:1px solid var(--rule); }
+.post-art { width:100%; height:auto; display:block; border-radius:14px;
+  border:1px solid var(--rule); margin:4px 0 24px;
+  filter:drop-shadow(0 8px 24px rgba(45,212,191,.10)); }
+.post-art .glow, .thumb .glow { animation:pulse 3.2s ease-in-out infinite; }
+@media (prefers-reduced-motion:reduce){
+  .post-art .glow, .thumb .glow { animation:none; opacity:.7 } }
+.blog-list h3 { font-size:17px; margin:0 0 4px; }
+.blog-list h3 a { text-decoration:none; }
+.blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
+.badge { display:inline-block; font-size:12px; font-weight:700;
+         padding:2px 9px; border-radius:6px; }
+.pill { display:inline-block; font-weight:600; text-transform:uppercase;
+        letter-spacing:.04em; }
+.pill.bad  { background:rgba(239,68,68,.12); color:#ef4444; }
+.pill.good { background:rgba(52,211,153,.12); color:#34d399; }
+/* Source-tier badges on headline lists. Deliberately quiet — they mark a
+   citable outlet, they don't shout over the headline itself. */
+.src-badge { display:inline-block; font-size:10.5px; font-weight:700;
+  letter-spacing:.03em; text-transform:uppercase; padding:1px 6px;
+  border-radius:5px; margin-left:6px; vertical-align:middle;
+  border:1px solid transparent; white-space:nowrap; }
+.src-wire, .src-national { background:rgba(45,212,191,.14); color:#2dd4bf;
+  border-color:rgba(45,212,191,.32); }
+.src-nonprofit { background:rgba(167,139,250,.14); color:#a78bfa;
+  border-color:rgba(167,139,250,.30); }
+.src-trade { background:rgba(96,165,250,.13); color:#60a5fa;
+  border-color:rgba(96,165,250,.28); }
+.src-local, .src-international { background:rgba(148,163,184,.14);
+  color:#cbd5e1; border-color:rgba(148,163,184,.28); }
+.src-official { background:rgba(251,191,36,.13); color:#fbbf24;
+  border-color:rgba(251,191,36,.28); }
+.src-aggregator, .src-advocacy { background:rgba(239,68,68,.10);
+  color:#fca5a5; border-color:rgba(239,68,68,.26); }
+.badge-enacted { background:#065f46; color:#6ee7b7; }
+.badge-proposed { background:#713f12; color:#fde68a; }
+.badge-rejected { background:#7f1d1d; color:#fca5a5; }
+.badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.badge-expired { background:#374151; color:#d1d5db; }
+.badge-rescinded { background:#4c1d95; color:#c4b5fd; }
+/* Project-stage badges — coloured by urgency, not by win/loss. */
+.badge-hearing-scheduled { background:#78350f; color:#fcd34d; }
+.badge-awaiting-decision { background:#1e3a5f; color:#93c5fd; }
+.badge-in-review { background:#134e4a; color:#5eead4; }
+.badge-rumored { background:#374151; color:#9ca3af; }
+.badge-approved { background:#7f1d1d; color:#fca5a5; }
+.badge-denied { background:#065f46; color:#6ee7b7; }
+.badge-withdrawn { background:#334155; color:#cbd5e1; }
+.timeline { list-style:none; padding:0; margin:10px 0 0;
+            border-left:2px solid var(--rule); }
+.timeline li { position:relative; padding:0 0 12px 18px; }
+.timeline li::before { content:""; position:absolute; left:-6px; top:5px;
+   width:10px; height:10px; border-radius:50%; background:var(--teal); }
+.timeline .tl-date { font-size:12px; font-weight:700; color:var(--teal); }
+.timeline .tl-kind { font-size:11px; text-transform:uppercase;
+   letter-spacing:.06em; color:var(--muted); margin-left:6px; }
+.proj { border:1px solid var(--rule); border-radius:12px; padding:16px 18px;
+        margin:14px 0; background:var(--card); }
+.proj h3 { margin:0 0 4px; }
+.proj .meta { font-size:13px; color:var(--muted); margin:2px 0 8px; }
+.proj .next { font-size:14px; margin:8px 0 0; }
+.trail { margin:10px 0 0; }
+.trail h4 { margin:12px 0 2px; font-size:14px; }
+.trail p.why { font-size:13px; color:var(--muted); margin:0 0 6px; }
+.trail ul { list-style:none; padding:0; margin:0; }
+.trail li { padding:6px 0; border-top:1px solid var(--rule); font-size:14px; }
+.trail li .why { display:block; font-size:12.5px; color:var(--muted);
+   margin-top:2px; }
+.trail .k { font-size:10px; text-transform:uppercase; letter-spacing:.06em;
+   padding:1px 6px; border-radius:6px; margin-left:6px; vertical-align:1px; }
+.trail .k-search { background:#3f2d10; color:#fbbf24; }
+.trail .k-note { background:#334155; color:#cbd5e1; }
+/* Download cards — a consistent, scannable presentation for every file the
+   site hands out (PDF briefings, JSON/CSV datasets). */
+.dl-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:12px; margin:16px 0; }
+.dl-card { display:flex; gap:14px; align-items:center; padding:14px 16px;
+  border:1px solid var(--rule); border-radius:12px; background:var(--card);
+  text-decoration:none; color:var(--ink);
+  transition:border-color .15s ease, transform .15s ease; }
+.dl-card:hover { border-color:var(--teal); transform:translateY(-1px); }
+.dl-ico { font-size:26px; line-height:1; flex:0 0 auto; }
+.dl-body { flex:1; min-width:0; }
+.dl-title { font-weight:700; font-size:15px; display:flex; gap:8px;
+  align-items:center; flex-wrap:wrap; }
+.dl-fmt { font-size:10px; font-weight:800; letter-spacing:.06em;
+  text-transform:uppercase; padding:2px 7px; border-radius:5px;
+  background:rgba(45,212,191,.15); color:var(--teal); }
+.dl-meta { font-size:13px; color:var(--muted); margin-top:3px; }
+.dl-arrow { color:var(--muted); font-size:20px; flex:0 0 auto; font-weight:700; }
+.dl-card:hover .dl-arrow { color:var(--teal); }
+@media print { .dl-card { border-color:#ccc; } .dl-card:hover { transform:none; } }
+.badge-note { font-size:11px; font-weight:600; color:var(--muted);
+              display:block; margin-top:3px; }
+.unverified { font-size:12px; color:#fca5a5; font-weight:600; }
+.verified-on { font-size:12px; color:var(--muted); white-space:nowrap; }
+.kind-badge { font-size:10px; font-weight:800; letter-spacing:.04em;
+  text-transform:uppercase; padding:1px 6px; border-radius:5px;
+  display:inline-block; margin-left:5px; vertical-align:1px; }
+.kind-official { background:rgba(52,211,153,.15); color:#34d399; }
+.kind-roundup { background:rgba(251,191,36,.15); color:#fbbf24; }
+.kind-news { background:rgba(148,163,184,.15); color:#94a3b8; }
+.outcome { border-left:3px solid var(--teal); padding:10px 14px;
+           margin:10px 0; }
+.outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
+                text-transform:uppercase; letter-spacing:.08em; }
+.grid2 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
+.official { font-size:14px; }
+.official .role { color:var(--muted); font-size:13px; }
+.hero-grid { display:grid; grid-template-columns:1fr; gap:24px;
+  align-items:center; padding:44px 0 10px; }
+@media (min-width:820px){ .hero-grid{ grid-template-columns:1.15fr .85fr; padding:56px 0 20px; } }
+.hero-grid header { padding:0; }
+.hero-art { width:100%; max-width:420px; margin:0 auto; display:block;
+  filter:drop-shadow(0 8px 24px rgba(45,212,191,.12)); }
+.hero-art .glow { animation:pulse 3.2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:.35} 50%{opacity:1} }
+@media (prefers-reduced-motion:reduce){ .hero-art .glow{ animation:none; opacity:.7 } }
+.iconcard { display:flex; gap:14px; align-items:flex-start; }
+.iconcard .ico { flex-shrink:0; width:40px; height:40px; border-radius:10px;
+  background:rgba(45,212,191,.12); display:flex; align-items:center;
+  justify-content:center; color:var(--teal); }
+.iconcard .ico svg { width:22px; height:22px; }
+.iconcard .body h3 { margin:0 0 4px; }
+.demand-chart { margin:14px 0 6px; }
+.demand-chart .row { display:grid; grid-template-columns:minmax(80px,90px) 1fr auto;
+  gap:12px; align-items:center; padding:6px 0; font-size:14px; }
+.demand-chart .yr { color:var(--muted); font-variant-numeric:tabular-nums; }
+.demand-chart .bar { height:22px; border-radius:6px;
+  background:linear-gradient(90deg, rgba(45,212,191,.85), rgba(45,212,191,.55));
+  position:relative; }
+.demand-chart .bar.range { background:linear-gradient(90deg,
+  rgba(251,191,36,.85) 0%, rgba(251,191,36,.85) var(--lo,50%),
+  rgba(251,191,36,.35) var(--lo,50%), rgba(251,191,36,.35) 100%); }
+.demand-chart .val { color:var(--ink); font-variant-numeric:tabular-nums;
+  font-weight:600; text-align:right; }
+.demand-chart .val .homes { display:block; color:var(--muted); font-weight:400;
+  font-size:12px; white-space:nowrap; }
+.grid-flow-svg { width:100%; height:auto; max-width:820px; margin:14px auto;
+  display:block; }
+.grid-flow-svg text { font:600 12px system-ui,-apple-system,sans-serif;
+  fill:var(--ink); }
+.grid-flow-svg text.small { font-size:10.5px; font-weight:500; fill:var(--muted); }
+.grid-flow-svg .flow-dot { fill:var(--teal); }
+.grid-flow-svg .flow-dot.a1 { animation:flowa 3s linear infinite; }
+.grid-flow-svg .flow-dot.a2 { animation:flowb 3s linear infinite; animation-delay:1s; }
+.grid-flow-svg .flow-dot.a3 { animation:flowc 3s linear infinite; animation-delay:2s; }
+@keyframes flowa { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@keyframes flowb { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@keyframes flowc { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@media (prefers-reduced-motion:reduce){ .grid-flow-svg .flow-dot{ animation:none } }
+
+/* Print: this is a handout. People print state briefings, hearing questions
+   and the health-risk page to carry into a meeting, so drop the dark theme
+   (wastes ink, reads badly on paper), strip the chrome that can't be tapped,
+   expand collapsed sections, and print source URLs after links so a citation
+   survives the photocopier. */
+@media print {
+  :root { --bg:#fff; --card:#fff; --ink:#111; --muted:#444; --rule:#bbb;
+          --teal:#0a7d70; --amber:#8a6d00; }
+  * { box-shadow:none !important; text-shadow:none !important;
+      filter:none !important; animation:none !important; }
+  body { background:#fff; color:#111; font-size:11.5pt; }
+  .wrap { max-width:none; padding:0; }
+  nav, footer, .nav-search, .cta, .nav-burger, .skip,
+  .hero-art, .us-map, .grid-flow-svg, .flow-dot, .blog-list .thumb,
+  .post-art, .demand-chart { display:none !important; }
+  a { color:#111; text-decoration:underline; }
+  /* Show the destination of real links, not internal .html jumps or buttons. */
+  main a[href^="http"]:not(.btn):not(.tag)::after {
+    content:" (" attr(href) ")"; font-size:9pt; color:#555;
+    word-break:break-all; text-decoration:none; }
+  .btn { border:1px solid #111 !important; color:#111 !important;
+         background:#fff !important; padding:4px 10px; }
+  .card, .panel, .note, .freshness, .glass-card, .outcome, details.more,
+  .stat { background:#fff !important; border:1px solid #ccc !important;
+          color:#111 !important; }
+  .panel *, .note * { color:#111 !important; }
+  .kicker, h2, .stat b, .prose h3 { color:#0a7d70 !important; }
+  .badge { border:1px solid #333; color:#111 !important;
+           background:#fff !important; }
+  .src-badge { border:1px solid #666; color:#111 !important;
+               background:#fff !important; }
+  /* Expand collapsed disclosures so nothing prints hidden. */
+  details[open] > summary { color:#111; }
+  details:not([open]) > *:not(summary) { display:block !important; }
+  details > summary::after, details > summary::-webkit-details-marker {
+    display:none !important; }
+  section, .card, tr, li, .outcome, .note { break-inside:avoid; }
+  h1, h2, h3 { break-after:avoid; }
+  table, .table-scroll { overflow:visible !important; }
+  th, td { border-bottom:1px solid #ccc; }
+  @page { margin:1.6cm; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<nav>
+  <a href="index.html"><img src="assets/logo.svg" alt="AI GridWatch"></a>
+  <input type="checkbox" id="navToggle" hidden>
+  <label for="navToggle" class="nav-burger" aria-label="Menu"
+         role="button">&#9776;</label>
+  <a class="nav-search" href="search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <details class="navgroup"><summary class="active">Act</summary><div class="navmenu"><a href="start-here.html">Start here</a><a href="siting.html">Siting score</a><a href="hearing-questions.html">Hearing prep</a><a href="opposition.html" aria-current="page">Know the opposition</a><a href="cba-clauses.html">Model clauses</a><a href="case-studies.html">Case studies</a><a href="impact.html">Impact calculator</a></div></details>
+    <details class="navgroup"><summary>Your area</summary><div class="navmenu"><a href="states/index.html">Your state</a><a href="map.html">Map & projects</a><a href="moratoriums.html">Moratoriums</a><a href="puc.html">PUCs</a><a href="scorecard.html">Officials scorecard</a><a href="senate-races.html">Senate races 2026</a><a href="house-races.html">House races 2026</a><a href="community-value.html">Community playbook</a></div></details>
+    <details class="navgroup"><summary>The facts</summary><div class="navmenu"><a href="health-risks.html">Health risks</a><a href="bills.html">Your electric bill</a><a href="tax-breaks.html">Tax breaks</a><a href="environment.html">Environment</a><a href="learn.html">Learn the basics</a></div></details>
+    <details class="navgroup"><summary>Industry</summary><div class="navmenu"><a href="data-centers.html">Data centers</a><a href="companies/index.html">Companies</a><a href="complaints.html">Complaints by company</a><a href="outlook.html">Electricity outlook</a><a href="open-data.html">Open data</a></div></details>
+    <details class="navgroup"><summary>Updates</summary><div class="navmenu"><a href="blog/index.html">Blog</a><a href="news/index.html">News</a><a href="story-tracker.html">Story tracker</a><a href="projects.html">Projects tracker</a><a href="videos.html">Videos</a></div></details>
+  </div>
+  <a class="cta" href="start-here.html">Open the toolkit &rarr;</a>
+</nav>
+<main id="main">
+
+<header>
+  <div class="kicker">Know the opposition</div>
+  <h1>Industry lobby &amp; tactics playbook</h1>
+  <p class="sub">9 lobby organizations, 20 documented tactics
+  (10 industry, 10 community),
+  and 90+ matching headlines auto-mined from our archive of 4,570
+  community-impact stories. Know their moves before you walk into the room.</p>
+</header>
+<input type="text" id="opp-search" placeholder="Search organizations, tactics, claims..."
+       autocomplete="off"
+       style="width:100%;max-width:440px;background:var(--card);color:var(--ink);
+       border:1px solid var(--rule);border-radius:10px;padding:10px 14px;
+       font-size:15px;margin-bottom:14px">
+<p class="muted" id="opp-count"></p>
+
+<nav style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px">
+  <a href="#lobby-orgs" class="btn btn-sm">Lobby organizations</a>
+  <a href="#industry-tactics" class="btn btn-sm">Industry tactics</a>
+  <a href="#community-tactics" class="btn btn-sm">Community tactics</a>
+  <a href="#playbook-summary" class="btn btn-sm">Playbook summary</a>
+</nav>
+
+<section id="lobby-orgs">
+  <h2>Lobby organizations</h2>
+  <p class="muted">9 groups shaping the narrative around data center development.</p>
+</section>
+
+<div id="opp-sections">
+
+<section id="data-center-coalition" class="opp-org">
+  <div class="note bad" style="margin:0">
+    <p><strong style="font-size:17px">⚠️ Data Center Coalition (DCC)</strong>
+    <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-left:8px">Primary lobby</span></p>
+    <p class="muted" style="font-size:13px"><a href="https://datacentercoalition.org" target="_blank" rel="noopener">https://datacentercoalition.org</a></p>
+    <p class="muted" style="font-size:13px"><a href="https://www.datacentercoalition.org/reports-and-publications" target="_blank" rel="noopener">Reports &amp; Publications</a> &middot; <a href="https://www.centerofyourdigitalworld.org/2026-impact-study" target="_blank" rel="noopener">2026 PwC impact study</a></p>
+    <p style="font-size:13px;color:var(--muted);margin-top:8px"><em>Revenue tripled from $583K (2022) to $2.5M (2023). Operates Virginia Connects 501(c)(4) running national-security-themed video ads.</em></p>
+  </div>
+  
+<div class="opp-claim" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 8px"><strong>Industry claim:</strong> Data centers contribute $927 billion to GDP, support 5.5 million jobs, and generate $204 billion in tax revenue. <a href="https://www.centerofyourdigitalworld.org/2026-impact-study" target="_blank" rel="noopener" style="font-size:12px">[source]</a></p>
+  <p style="margin:0;color:var(--teal)"><strong>Counter:</strong> The 5.5M figure uses indirect and induced multiplier models that count any dollar touched by the supply chain. A typical 100 MW campus employs 50–75 full-time workers. The PwC study was commissioned and paid for by the DCC itself.</p>
+</div>
+<div class="opp-claim" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 8px"><strong>Industry claim:</strong> Data centers do not raise residential electricity rates. <a href="https://www.datacentercoalition.org/newsroom" target="_blank" rel="noopener" style="font-size:12px">[source]</a></p>
+  <p style="margin:0;color:var(--teal)"><strong>Counter:</strong> The E3 report (May 2026) was commissioned by the DCC. Independent analyses by the Brattle Group and state PUCs in Virginia, Georgia, and the Carolinas have found data center load growth contributes to rate pressure through transmission and generation upgrades that enter the rate base.</p>
+</div>
+</section>
+<section id="chamber-of-progress" class="opp-org">
+  <div class="note bad" style="margin:0">
+    <p><strong style="font-size:17px">⚠️ Chamber of Progress</strong>
+    <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-left:8px">Primary lobby</span></p>
+    <p class="muted" style="font-size:13px"><a href="https://progresschamber.org" target="_blank" rel="noopener">https://progresschamber.org</a></p>
+    <p class="muted" style="font-size:13px"><a href="https://progresschamber.org/insights/loudoun-data-centers-better-services-lower-taxes/" target="_blank" rel="noopener">Loudoun tax analysis</a> &middot; <a href="https://progresschamber.org/resources/letter-to-ny-governor-veto-data-center-moratorium-s-10642-a-11560/" target="_blank" rel="noopener">NY moratorium veto letter</a></p>
+    <p style="font-size:13px;color:var(--muted);margin-top:8px"><em>Funded by Google, Amazon, Meta, Apple, and other tech giants. Positions itself as center-left.</em></p>
+  </div>
+  
+<div class="opp-claim" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 8px"><strong>Industry claim:</strong> Without data centers, Loudoun County homeowners would pay ~$5,800 more per year in property taxes. <a href="https://progresschamber.org/insights/loudoun-data-centers-better-services-lower-taxes/" target="_blank" rel="noopener" style="font-size:12px">[source]</a></p>
+  <p style="margin:0;color:var(--teal)"><strong>Counter:</strong> Loudoun&#x27;s model is the exception, not the rule — most jurisdictions grant abatements that waive most of the tax revenue data centers would otherwise generate. Even in Loudoun, the county chose not to offer abatements; the Chamber&#x27;s counterfactual assumes the entire industry vanishes overnight, not that it pays less.</p>
+</div>
+</section>
+<section id="technet" class="opp-org">
+  <div class="note bad" style="margin:0">
+    <p><strong style="font-size:17px">⚠️ TechNet</strong>
+    <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-left:8px">Primary lobby</span></p>
+    <p class="muted" style="font-size:13px"><a href="https://technet.org" target="_blank" rel="noopener">https://technet.org</a></p>
+    <p class="muted" style="font-size:13px"><a href="https://www.technet.org/wp-content/uploads/2025/12/TechNet-2026-State-Policy-Principles.pdf" target="_blank" rel="noopener">2026 State Policy Principles (PDF)</a> &middot; <a href="https://www.technet.org/public-policy/state-policy-agenda/" target="_blank" rel="noopener">State policy agenda</a></p>
+    <p style="font-size:13px;color:var(--muted);margin-top:8px"><em>Lobbied on 808 bills across all 50 states in 2025, with a 87% win rate on their policy positions.</em></p>
+  </div>
+  
+<div class="opp-claim" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 8px"><strong>Industry claim:</strong> Data centers deserve sales and use tax exemptions, as is done for manufacturing. <a href="https://www.technet.org/wp-content/uploads/2025/12/TechNet-2026-State-Policy-Principles.pdf" target="_blank" rel="noopener" style="font-size:12px">[source]</a></p>
+  <p style="margin:0;color:var(--teal)"><strong>Counter:</strong> Unlike manufacturing plants, data centers employ very few people per dollar invested. A 100 MW campus may represent $1–2 billion in investment but create only 50–75 permanent jobs — orders of magnitude fewer per dollar than a factory receiving comparable incentives.</p>
+</div>
+</section>
+<section id="clean-energy-buyers-association" class="opp-org">
+  <div class="note warn" style="margin:0">
+    <p><strong style="font-size:17px">🌳 Clean Energy Buyers Association (CEBA)</strong>
+    <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-left:8px">Green cover</span></p>
+    <p class="muted" style="font-size:13px"><a href="https://ceba.org" target="_blank" rel="noopener">https://ceba.org</a></p>
+    <p class="muted" style="font-size:13px"><a href="https://ceba.org/resources/2026-state-of-the-market/" target="_blank" rel="noopener">2026 State of the Market</a> &middot; <a href="https://cebuyers.org/deal-tracker/" target="_blank" rel="noopener">Deal Tracker</a></p>
+    
+  </div>
+  
+<div class="opp-claim" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 8px"><strong>Industry claim:</strong> Corporate buyers have signed 143 GW of clean energy deals since 2014. <a href="https://ceba.org/ceba-strong-clean-energy-demand-amidst-headwinds/" target="_blank" rel="noopener" style="font-size:12px">[source]</a></p>
+  <p style="margin:0;color:var(--teal)"><strong>Counter:</strong> PPAs are contracts to purchase output, not proof of additionality. Many cover existing projects that would have been built anyway. CEBA’s own data shows the number of active buyers dropped 40% year-over-year — the market is concentrating among a handful of hyperscalers, not broadening.</p>
+</div>
+</section>
+<section id="information-technology-industry-council" class="opp-org">
+  <div class="note warn" style="margin:0">
+    <p><strong style="font-size:17px">🏛️ Information Technology Industry Council (ITI)</strong>
+    <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-left:8px">Policy &amp; technical authority</span></p>
+    <p class="muted" style="font-size:13px"><a href="https://itic.org" target="_blank" rel="noopener">https://itic.org</a></p>
+    <p class="muted" style="font-size:13px"><a href="https://www.itic.org/policy/energy" target="_blank" rel="noopener">Energy policy</a> &middot; <a href="https://datacenterworld.com/article/data-centers-and-public-policy-a-qa-with-itis-gordon-bitko/" target="_blank" rel="noopener">Data center Q&amp;A</a></p>
+    <p style="font-size:13px;color:var(--muted);margin-top:8px"><em>Affiliate &#x27;The Green Grid&#x27; promotes PUE as self-regulation.</em></p>
+  </div>
+  
+<div class="opp-claim" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 8px"><strong>Industry claim:</strong> Data centers are critical national infrastructure requiring streamlined permitting. <a href="https://www.itic.org/news-events/news-releases/iti-to-ntia-data-centers-underpin-today-s-digital-economy" target="_blank" rel="noopener" style="font-size:12px">[source]</a></p>
+  <p style="margin:0;color:var(--teal)"><strong>Counter:</strong> The “critical infrastructure” framing is used to bypass local environmental and planning review. Data centers are private commercial facilities; the data they store could be distributed across existing infrastructure. Streamlined permitting has meant communities lose their window to negotiate.</p>
+</div>
+<div class="opp-claim" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 8px"><strong>Industry claim:</strong> PUE (Power Usage Effectiveness) proves data centers are efficient. <a href="https://www.itic.org/policy/energy" target="_blank" rel="noopener" style="font-size:12px">[source]</a></p>
+  <p style="margin:0;color:var(--teal)"><strong>Counter:</strong> PUE only measures how efficiently a building uses power for computing vs. cooling. It says nothing about absolute energy consumption, water use, grid impact, or community burden. Uptime Institute found only 23% of operators report all three scopes of carbon emissions.</p>
+</div>
+</section>
+<section id="7x24-exchange" class="opp-org">
+  <div class="note info" style="margin:0">
+    <p><strong style="font-size:17px">🤝 7x24 Exchange</strong>
+    <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-left:8px">Community engagement</span></p>
+    <p class="muted" style="font-size:13px"><a href="https://7x24exchange.org" target="_blank" rel="noopener">https://7x24exchange.org</a></p>
+    <p class="muted" style="font-size:13px"><a href="https://www.7x24exchange.org/data-centers-the-art-of-being-a-good-neighbor/" target="_blank" rel="noopener">Art of Being a Good Neighbor</a> &middot; <a href="https://www.internationaldatacenterday.org/activities/" target="_blank" rel="noopener">International Data Center Day</a></p>
+    
+  </div>
+  
+<div class="opp-claim" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 8px"><strong>Industry claim:</strong> Data centers are good neighbors who engage with communities proactively. <a href="https://www.7x24exchange.org/data-centers-the-art-of-being-a-good-neighbor/" target="_blank" rel="noopener" style="font-size:12px">[source]</a></p>
+  <p style="margin:0;color:var(--teal)"><strong>Counter:</strong> The 10-step playbook focuses on PR and workforce pipeline (school hackathons, “Cloud Run” festivals) rather than binding commitments on noise, water, or tax revenue. Voluntary “good neighbor” pledges have no enforcement mechanism.</p>
+</div>
+</section>
+<section id="consumer-energy-alliance" class="opp-org">
+  <div class="note info" style="margin:0">
+    <p><strong style="font-size:17px">📍 Consumer Energy Alliance (CEA)</strong>
+    <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-left:8px">State-level / commissioned</span></p>
+    <p class="muted" style="font-size:13px"><a href="https://consumerenergyalliance.org" target="_blank" rel="noopener">https://consumerenergyalliance.org</a></p>
+    <p class="muted" style="font-size:13px"><a href="https://consumerenergyalliance.org/cms/wp-content/uploads/2025/12/Economic-Impact-of-Data-Centers.pdf" target="_blank" rel="noopener">Economic Benefits of Data Centers (PDF)</a></p>
+    <p style="font-size:13px;color:var(--muted);margin-top:8px"><em>Industry-funded; board includes fossil fuel and utility executives.</em></p>
+  </div>
+  
+<div class="opp-claim" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 8px"><strong>Industry claim:</strong> Data centers bring economic benefits to communities including jobs, investment, and infrastructure improvements. <a href="https://consumerenergyalliance.org/cms/wp-content/uploads/2025/12/Economic-Impact-of-Data-Centers.pdf" target="_blank" rel="noopener" style="font-size:12px">[source]</a></p>
+  <p style="margin:0;color:var(--teal)"><strong>Counter:</strong> CEA is an industry-funded group whose board includes fossil fuel and utility executives. Their economic impact studies do not account for opportunity costs: what else that land, water, and grid capacity could have supported.</p>
+</div>
+</section>
+<section id="uptime-institute" class="opp-org">
+  <div class="note info" style="margin:0">
+    <p><strong style="font-size:17px">📊 Uptime Institute</strong>
+    <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-left:8px">Technical authority</span></p>
+    <p class="muted" style="font-size:13px"><a href="https://uptimeinstitute.com" target="_blank" rel="noopener">https://uptimeinstitute.com</a></p>
+    <p class="muted" style="font-size:13px"><a href="https://uptimeinstitute.com/resources/research-and-reports/digital-infrastructure-sustainability-a-managers-guide" target="_blank" rel="noopener">Sustainability Manager&#x27;s Guide</a></p>
+    <p style="font-size:13px;color:var(--muted);margin-top:8px"><em>Not directly community-facing, but useful counterpoint: their own survey found only 23% of operators report all three scopes of carbon emissions, and only 41% track water usage.</em></p>
+  </div>
+  
+</section>
+<section id="northern-virginia-technology-council" class="opp-org">
+  <div class="note info" style="margin:0">
+    <p><strong style="font-size:17px">📍 Northern Virginia Technology Council (NVTC)</strong>
+    <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-left:8px">State-level / commissioned</span></p>
+    <p class="muted" style="font-size:13px"><a href="https://nvtc.org" target="_blank" rel="noopener">https://nvtc.org</a></p>
+    
+    <p style="font-size:13px;color:var(--muted);margin-top:8px"><em>Won TECNA&#x27;s Public Policy Advocacy Award for tax incentive lobbying.</em></p>
+  </div>
+  
+<div class="opp-claim" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 8px"><strong>Industry claim:</strong> Data centers are the backbone of Northern Virginia&#x27;s economy.</p>
+  <p style="margin:0;color:var(--teal)"><strong>Counter:</strong> NVTC publishes biennial economic impact studies commissioned by the industry. Won TECNA’s Public Policy Advocacy Award for lobbying on data center tax incentives.</p>
+</div>
+</section>
+</div>
+
+<section>
+  <h2>Investigative reporting on the lobby</h2>
+  <ul>
+<li><a href="https://www.techpolicy.press/amidst-boom-data-center-lobby-expands-its-influence-spending-and-tactics/" target="_blank" rel="noopener">
+<strong>Amidst Boom, Data Center Lobby Expands Its Influence, Spending, and Tactics</strong></a> (TechPolicy.Press) &mdash;
+Documents DCC revenue growth, Virginia Connects video campaigns, national security messaging, and coordinated state-level testimony.</li>
+
+<li><a href="https://www.techpolicy.press/the-state-of-data-center-policy-in-the-united-states/" target="_blank" rel="noopener">
+<strong>The State of Data Center Policy in the United States</strong></a> (TechPolicy.Press) &mdash;
+Comprehensive overview of data center policy landscape across all 50 states.</li></ul>
+</section>
+
+<section id="industry-tactics">
+  <h2>Industry tactics &mdash; what they do</h2>
+  <p class="muted">10 documented tactics used by data center developers
+  and their lobbyists. Each is paired with real headlines from our archive and
+  a concrete counter-strategy.</p>
+  <div class="tactics-grid">
+  
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🔒 NDA / gag clause</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Developers pressure officials into non-disclosure agreements before sharing project details, cutting the public out of decisions that affect them.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Prevents organized opposition from forming before permits are locked in. By the time residents learn, approvals are already granted.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Demand sunshine-law compliance. File FOIA requests for any agreement between the developer and local government. NDAs on public-interest decisions are legally vulnerable in most states.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxOU1BYcVJmTjd4REU5Tm03elRaTzNqNGJMclducHZ1bXRPRmxUcWdzZHdKSk54RmVQN2pJTDVxcG5MNUE5a0h1d3JaN3ZyVWpBczNUQTF4LUxTd1hMaXdDekJoNlZYUkdDal9fanRNb09GaENkY1VBVW1MS3o2UWdMcUNtUWN1WUhDUW5STFQzZExZVUI0Wm9PWXRmN1pWWDJfWUt2WWtJX3JFRlVNV1RBdEI2aw?oc=5" target="_blank" rel="noopener">Inside the secretive deal for a $10 billion data center in rural North Carolina</a> <span class="muted">(NC Newsline)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxOTkZJbzEyOEhwejZldXpKbDJ6X0pCTjJUOW9oXzlYY2x2LWRvbVc2TENNbmhWOE82SGlES2l1b3JGeVhHYVF5LXcwYW9LalZ3Nk5rbW0ydFNLTVhyQ1YxT3VMdURIYy1NSkZLREowWDE4bklheXoxOXB2dzVSY2ZzSGN2aUliWHpZRS1RcExaU3JCM0pUUm1BbkR2LTUzaXgwYkpCRWRfQnhPZzhVemlMQ2JnVkw0WWo5UHczMVBpLVdDLUNCcEh0NFVjbHByTS1WMEdfbWNNcw?oc=5" target="_blank" rel="noopener">Salem residents rage against proposed data center and city NDA that kept plans secret</a> <span class="muted">(OregonLive.com)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNeGZ6SWNnSkJNby1ERUNxdHZUUHhvcG9uXzdHbEc3VTBnWFpEaUQxVnpKNHNjNTVYclhmUjJwcHp6a2dmcjdjRGoxYnBLbWNTTHMwb1FjUFJleG53dHEyazBUUGpKZlktOWRhaEoya2MxazZwMDFEZnNyWkxUQlpIQVhNa2pzRi1KbC1rZlA5cWtDYzAwblRRNzR0TTRoc002b1NYdEtkaDRPY2gtM0pLRVVqTEZKVVB5UnRRb3hZclJMdw?oc=5" target="_blank" rel="noopener">An Announcement from Kenilworth Mayor Linda Karlovitch Regarding CoreWeave</a> <span class="muted">(tapinto.net)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPYV9GSG84c0REc3hoSGU3Y0NrVXV1MTJxZG9PZXdtblQtcUVqZE1EdG5ibW9nTE1HY1hveExadnc4c1JkRmplbWdIQlFBY293V2l5cUhmcW5XMXFwc1RicUNxS0VOYnlfYmpjSzM1T3doWVR3N0xBYWNSTjRrMy1EQVRza25hTnk1MVZWbGh5eEdJT1RkQkZrLXZQcGE5MVBoMGh1UmRSdzctSzc5M2dpZnhfM3pkdkU?oc=5" target="_blank" rel="noopener">Gov. Sherrill’s plan sets new standards for N.J. AI data centers | Opinion</a> <span class="muted">(NJ.com)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxOUGhuOUQySndRbERoOEk4alo5NnByVEdiOFFVNDExb051Q0RlOUhWd2l1TW9EM2Y5eHNYaE9odnk5bWtDS0FCb3pHNTQ1SF9pU1ExMmNDbmtreXNSaV9BODlFLWxzOFY4aE4zMjhEcFA4Vl9HdmNwNmZ1YWczWGZ2eEl5b0oySHBpcThTSW1SdzVrcENU?oc=5" target="_blank" rel="noopener">Inside the Secretive Deal for a $10 Billion Data Center in Rural North Carolina</a> <span class="muted">(Inside Climate News)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🪆 LLC shell game</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Projects file under anonymous LLCs so residents can&#x27;t identify the real operator or its track record until it&#x27;s too late.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Prevents residents from researching the operator&#x27;s history of noise complaints, water use, or broken promises in other communities.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Search state corporation records for the LLC&#x27;s registered agent. Cross-reference the site address with DC_SITES_DF. Ask planning boards to require beneficial-ownership disclosure as a permit condition.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 4 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxQaEdlYWFMRjNOa3NUX3NlVGtJb0xiM1J4ZE9yQ0MwSlloN0d2RzdIU2s5XzZnOE1tZUhsdW50OEtvTldvUkFZY0tOYncwTjFtTUU1N0ZfN0ViOWZqaDFKanREV0RwUnJ0YkJpVExEWjV1aWk1c0pLOHhBOTNJY3ZxYVFQNEdtVlJsck9NUzRuelc4ZURkdTUtVlktblBLMDl0b1ZsWGxzM0Y4Yk1SZ2wyZE1kMUU?oc=5" target="_blank" rel="noopener">Mystery on the Jersey Shore: nearly 30 dead sharks wash up in New Jersey</a> <span class="muted">(fox4beaumont.com)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxQcGlNY1RnYVgxd1BxNDRTd3ptME5IaENDMGpDdS1aZEJuMUlDM2hSYnFfNnp2OTRlc3I5dkNKeW1zbEIwY0J4bEx2dGFNYkxUcGJHSGZZZG1uY29FRlJrdFJJOHo4N3BHelA0dG9mQWIzeGdKeWFuekpzS3lwY3VpQjAwOUZ1Y056TzRWOFlYdkpDUUNLZlVpRGFQZVNEenFIQUQyT1dLWTlsM2tBclV4Vm5udVVOeFBVUFU4QU9CWVQ?oc=5" target="_blank" rel="noopener">Data Center Power Arrangements: Ring-Fencing, Subsidiary Structures, and Tariff Mechanisms Used by Local Energy Provider</a> <span class="muted">(Dentons)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxNNkhhaXFCRHVqZ3d1a2VreF91NWRQVFJiSjdRYkhZWVlwb2tGdXFxVml1eWRuMDBXNzkwelZnZDVRanNjdUlhU1l3X1A1Tl9VRUFsUGRfX2NqSEs2UWNJNW9jNWlMNGV2UmdjOUxVd2NIYmw3Q2hfWlZuclFrQVFKcHhKMElZTGJvVUhYMUxjWTJGaFk2VUdic3FvalpqSF9KTHZqa09XUUdrOXFrVWxhNDJvblRyakFkcGRRSnhZSGJoVjlmbnVvWFotQmVzTzg5VmVsd2pSQU5nM094OGk3VEtKOEcyM1hPNjZtU19iTkdhaHdGVFhIRw?oc=5" target="_blank" rel="noopener">RUM Group CEO Vows Quake AI Will Challenge CoreWeave, Nebius: Retail Speculates Mystery $13.7B GPU Customer</a> <span class="muted">(TradingView)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxNS29VbW8xX0JPM3BOWnpKM3pNOXhaZGp3N19vWW1hTDcxemsxWTY2bTRYM1RsSWROa1ZwdmM4bEZxOC1sUTdvYlJucGthNGkxaXlXQUJLVGhxcDVaRG44NnZvcDVPaG5aZ190eFphSVd3enNwRlM4X25BTzRaZ2lsQV9rb040QThyUkx5Unh3WDNnNHBjZ2k3b1U2eU50dy1pZmVodS00SG5xbXVpMkpwNVRWLVM1cGk0VHc?oc=5" target="_blank" rel="noopener">Rum Group signs up to $13.7bn lease agreement with unnamed US cloud customer</a> <span class="muted">(Data Center Dynamics)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>⏩ Rushed approval</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Developers push for emergency or expedited review, compressing public comment periods and bypassing standard environmental or zoning review.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Fewer review cycles means fewer chances for residents to organize, hire experts, or build coalitions.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Request the full public-comment period mandated by state law. Move for a moratorium to buy time. Document the rush and present it to council as a red flag.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxNY3l6UzQ4VmNNRmROVGxTZEZESEtQVl9kUTRuUGFubl9JWGFlMDN6ZWlZeXVJUmN5Vzd3TnVITEhGdm82QXJwV3lUUHdIU04tNDN0QXlBYWcxWGk3UGFNX0ZfV0k1N3Z5b3VsUTJOM0UzbjV2dGV6UWlwMk5adTE2dFZjSUtYOHl4NjE5enZuRHZGcTNDOG90QTVqZmEwNk05T2FfV2JudUtHTkhnaDBrbmFmblgzZW5wdkZ3Zzlrd9IB0wFBVV95cUxOei1YUUZ3Njl4TFNSem0tb2hoS0NNeFdxUU9vcUQ5RDZ1d1c4bjVPd3RWeUE3QTVEQ2RTVENiRTYzVm1oRnpaNzhaZVEtUlA2eERBcGlwU21HcWFNQXhIWHhuZzBDUHFMRkNQaXYxQVBuQVNGV3A2VFB1S2FnblhWS0Z2bTZVcW1lT0o2cTVrVHRQSG41SHlpZXJ6bldBVEYtcFkyRGNwZzhqcXVDYW95UWlJMkRYYm1fSUFOVDZmejJ1U1VMYm01amdWRmZKcHNRUzNR?oc=5" target="_blank" rel="noopener">N.J. city near major data center site rushes to stop one from coming to their town next</a> <span class="muted">(NJ.com)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxQQTE1V2JSWjcyT0RlNEFLUUxJOXBhYjNCUUhZemR0SWhKY2VERXltQVZrLWNWOEN6bVZVbVZ6V2hSaTlNRnRNaXdCWV9ndFVsY3J4b1NkU2hGNDJMUjRFTG5PZ2VKNGJWemtfUGgxTDFuWmFDalp3dy1BLXF3VDZ3N1l1b2lURkg0UVFKWVZhcm1vT09jNTBXTGYwaWo0TGtTaTlLdFBaRURRUHo4OFRrZ3UyMDBOejM0TWx4RjdMNUszczB2NzlkakNB?oc=5" target="_blank" rel="noopener">FERC Mandates Fast-Track Data Center Grid Access, Shielding Ratepayers from Costs</a> <span class="muted">(Tech Times)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMilwNBVV95cUxPMmFGMy1DRVFHdlZDMVo1TWUyckJDQzEzNHFYTU1tS2toYmtXbERoTmo4ZzZrTHA0N1N4NTZuRTAwUGVkbUNzSG1ld05xRXBSbzMxUTQtM3REV0Q2czVPaEEzOW1tY1g3ZExOTTJ4ZTIwRURRSHpDRkRwZ1czU1JscHV0TVJLcHFud2Zpc292UXFtR2dTcTVGYjhnbEFaRTRqOGZDN1JqVjFBYkJSYWNaTERING05cnptQlBOajBMRWg1bDMyOUJ1YVZRMWpJV2tRaVNrcmxZbS1BbnhsQVNoSlZUa2xwSHhVOEdpWHNLMFhkQWxudmRKRkh1U0J3X1FqWFIxNHJMb0FFQ1RMRHFsZGtCQnlMTEcxUC05emlBRmNKeElOMUluVWh3V0lsUXZxWGtHYVRhR01IUVVRRjhzVUtUZS10bUNfUzY5bHNvVjlUOXYyd1pORlZoMnBTdTRSTnVOT0o3c1hDSHJqaVFndFBOTnh0dDVWVUpfWWpiZmR1VmVoV2dEMUQtd01PMVA4ZHh4WDhPMA?oc=5" target="_blank" rel="noopener">AI data center developers target rural territory to bypass city construction bans and regulations — rural locations allo</a> <span class="muted">(Tom&#x27;s Hardware)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxQRUptd2trQlVzRjA4WUZCc2RsZFNYTDZQMFV2dEZveVR5Rm91NVZkVzRTTmhoOWN2MUs4MUNtU0lSMmxUaHpmNWtvdHJXc19HeEMydjNKNlM5NmE5dkRHZGVpSFd3RmhTOFB4Szd5M0RqVlY0WmtoVjBFZjZ1dDJjeXh3ZFp1aVhKZFVTeWRQbWJvZmZ3NjhjUGJzN2tDYV9yN09JLW05eU1IZ205OXVwQjQ1Yk84bTFT?oc=5" target="_blank" rel="noopener">Data-Center Backlash Leads to New Land Rush in Texas Oil Patch</a> <span class="muted">(WSJ)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxNcHlLQXN0WG80ckxDUy1TYWpHLWlEeEN0TERVemhwZkpEOFNqMEdlbG5UQVBOb0dURVFRNlpSTHZBdEJfYWt6UEgyZFNCaGl3czVnLVF0N1JucFJkdHVTQmN6b19KQXM2WlBSRXFSMW4yb19BNFI2YzIzTXlkYm1EZGEzeU4tVW0wZDF3?oc=5" target="_blank" rel="noopener">Advocates worry San Jose will fast track data centers</a> <span class="muted">(San José Spotlight)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>📊 Jobs promise inflation</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Headline job numbers (e.g. &#x27;5.5 million jobs&#x27;) use indirect and induced multipliers. Actual permanent on-site employment is typically 30–50 per facility.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Big numbers dominate headlines and give elected officials political cover for approvals.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Ask for permanent on-site FTEs, not construction or supply-chain estimates. Compare to the jobs displaced when residential land is rezoned industrial.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 1 headline in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxNNWcwRTNTVlh6WlRjTG1OdUpMMU11bjVORFgwWTh4d2E1MWZrRTl1a2hPWjcyaXRJUkJuVGpnWkV6Wi1jb3BFNkh6M0d0a3MxS2d3YnVGdm9UcE1oUDg1amQ1MDZqQTJNNEEyNF9CcW4xOTJCbnBKRW52N3AyVHJ4czl0WXpuc053LUZ2SnRCQ0JRU2pQRHhvQWNOa1lPSWhjR0JiMVpYbE1ISlJ2R0lrOW5GandJUjljNVN0WkpfOFlIcXRuV1hrOGswbElxMkVsS2Q5WnFHSFRmblBkY01JaGlhRlY0WlEtcDk1WWt1NGk?oc=5" target="_blank" rel="noopener">Google impresses with transparency, dedication to growing West Virginia’s workforce with planned data center in Putnam C</a> <span class="muted">(WCHS Network)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>💰 Tax incentive capture</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Developers negotiate multi-year tax abatements that waive most of the projected revenue, then cite pre-abatement figures as &#x27;economic impact.&#x27;</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Councils see gross revenue projections without subtracting the abatement. The net contribution is often negative after infrastructure costs.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Demand net-of-incentive projections. Pass clawback clauses for underperformance. Compare the per-job subsidy to other industries.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxOcXh2LVA1U2VoWGFmUVprZ2RNQVFoUkNXRldRS05kcXdfemE2bDVlWmhxQnl3NGFldU1HUEZObzBZSURuSk1GNjEyYTRGeENNQUhGUDNVVkRiSk9zYi1xUzhnMVhoendMTHJMTUpBV3pMaHFxRTJNcWF5MEM3MFhkRkpMVTVZcENRcGtSQlE0UlRld09LY0lyeDVwclgzZ190Y3lrSjNCaXo3NmdfRlR1ZnI3cjB1X3FOWkh6eHBCQkpYNEFKYVE?oc=5" target="_blank" rel="noopener">Oregonians want data center moratorium and no more tax breaks, poll finds</a> <span class="muted">(OregonLive.com)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPeW5YRGlZYnNmR0R5dTJ3ZDF6cVVtNndsYlN6VnM4d1c2a0U5RnMxX0UxTTFKNjViZ0g1dWdwaGxMSDUyWGljb29LT3loMzllZG1ybVdMcm5Ed0NsMVk2MFB3NGJkdHp1V3dPSmY3Mm43MlVxeFRxSEdlcWJFdlZ5RFI0QQ?oc=5" target="_blank" rel="noopener">Amid Affordability Crisis, New Jersey Hands $250 Million Tax Break to Data Center</a> <span class="muted">(Inside Climate News)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi4wFBVV95cUxNdjZ5c3pXby1iWVZVZUNBWW1uTGx4bGplaGtOVlB3R29VZ0trODNsY3h2YktjMUtuRmY2LVNvRmVhSUJjZDE4RDhydk1BdGRrTXVDUUJfR0Fxd2JSU1BQcVZRTy1VRi01c09ja1JoeE45Z2NyREd6QUt5a05XVFJvOWlyRGFBNWdZU3dOZ3ZrTkRhbDhZRWVqcDBEUWJ1bXQyUU1ScC1wb2N4OWRDVU02SEpRdGNQRmhZTFY1bG9RTnZlbG9oTHJxcjRwZ3NsZEczQXhyUTBBWFJ6TUtvN0JOR3ctSQ?oc=5" target="_blank" rel="noopener">Residents Protest Kenilworth Data Center As Lawmakers Look To Eliminate Ai Tax Credits</a> <span class="muted">(News12 | New Jersey)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxQaE11bW4yOW9SRUl4M2N3VGpLeThUYkxCQXkyaTJwRGRNOEUxbnk3dlVVZUxBOFItYkttZ3NGZ0JhV3U2ZFNLWGY5UmRxdGtoQ2ZPTzBPZVNxWFJQWnNlNkRMcXRQQ0R1U29MSXdNZ3FfaE5xMWlvcjI2aTdmWXBaUHBqUzlBc0haMUlOM0tiRHNUMkRHSE9kbzhPU2dCd3pYSE1neVB4VGFfd2F3ZTNV0gG3AUFVX3lxTE1JS3RKRFVZUmtKVVlUVEdPcjZRQVZabXVGajlWRlJqWjJiLVRwWGFwYkpfdENrdzFnc1M0cV9uYUVBb0VwX0cxMFpYZlpIMXhiSjRDc2JHTlVybWlZSVBTN001Q2NKVzBYd1ZsYnpuMFd2TkpaTWVKa2UyRmpEVHBMcUhIcjBaUTc3TG1QcklaZEloTU0xMEwxemRybWEzV0N1d0ozTV9sbFgzbDFfVHgzSHdKaDRkNA?oc=5" target="_blank" rel="noopener">Most states offer tax breaks for AI data centers. Polls show Americans don&#x27;t want them.</a> <span class="muted">(NBC New York)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxNYzgzZkdlQlY1X25raDBMMHMzTXY1WEtueS10RkhGR3FpOVpKelFXeTcxelpBNzRCdXlsRl9zS3llZngzT052RXg3MUk1Vm9ET3ZCVjk0blZXamtXQURXTjItVW1IV24ydGtSV3dyT1NFQjgwSjZ1TzJYSnVGTlVSWVQtajdwQnEzY011T25OUVlNWF90VTFBcERwX2dQUENO?oc=5" target="_blank" rel="noopener">Backlash grows over $1.8 billion AI data center as New Jersey moves to strip tax breaks</a> <span class="muted">(The Cool Down)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>💧 Water use obscured</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Operators avoid disclosing actual water consumption, classify it as trade secrets, or cite &#x27;efficiency improvements&#x27; without absolute numbers.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Without hard numbers, residents can&#x27;t compare facility demand to municipal supply or drought reserves.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> File public records requests for water-use permits. Cite state right-to-know laws. Push for annual disclosure as a permit condition.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPWGJGNjRxejFPdHE4X1kwX2U2WFRqVy0xeVJSYUlZaGN2ZzNKTDViaWJnS3BibWhhOHBhdU5pTW5KVWlIZUpLMHh4dUxQdTZpbEMzeEhsX3lMUWhsUE5Da2FCa1Z3OE03ekNsU3FHSkRTSUk5NTNQRkFwSHRwSnE4dENwSHVfQXFYcktIbUZoX1FScXd6MjNz?oc=5" target="_blank" rel="noopener">Water supply concerns remain top hindrance for AI data centers, says FAU expert</a> <span class="muted">(WLRN)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi2wFBVV95cUxPSkVRVzVqNUJtSG9GbXpuRFdmeExjNUdxdEJDdjdLZUE0dVpMYUNZeVVMWXdHZGdLbUFLMFNoOWQ4WUhCVVZ4dFI3cDlDaFJlaklIMkdFU1pXMHpEQU5UR2pHYm41LUtyZkR4R1FIYnE4Y1p0Z3d2THlCODMxd2RGdklmeHppWGhfT0kxaDU0QlNuMnBIUFNsblJNaEVNbDBiZWVfOVBhLVVWR1J6MkNuUDBhc2dIN2tFT0psMV9Jd1lGZXZDd044MVhPYTEzR0dZaGNQTnNKTU5NWXM?oc=5" target="_blank" rel="noopener">Texas law shields San Antonio-area data center water usage from public records requests</a> <span class="muted">(KSAT)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMihwJBVV95cUxOVFM5cjI0Q09MOURSLUFrOGZxemw1SG5UYTM4SW9mbHRGbGd0RDdITGNZckdobmlzS1JDTkotc09JcXVIU0dLbzRzVFNhSnlRRGp5Y2RERHR4QkZBZFliQ1A1Q2dGZkxSSk1XVUNyWF90YXltYmFRSE5OazR6a2tYS3dCNmNYZG5CVUJmT0JjMFBqZXN5NHdocHAzcmpiZkRpWGdKVFdIR3NLVXhOY0pZdlFicENaY0lVN0xtd21Jc2VYcDZKTEd2cno2NmVLQzV0OWxIZWx2Z056a2FLNU9rSUs0WnU1R0JwV2MtT3FvSGZBX0RkeU1keFVWUHlYYnJqQUtkSGRFQQ?oc=5" target="_blank" rel="noopener">New Jersey Lawmakers Push for Data Center Transparency Amid Concerns over Energy and Water Demand</a> <span class="muted">(tapinto.net)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxNRm1QbjRQZkpDVFotSUJmNEVzbzU5WjRBQWpOM2ItRzNueWFCckpYUTBCZjZQdnFodmFwdVA5bUlJTWNjbTBBaXpta2s1VGNsNGt3dnFOQUZITFpmSldTc2xneUpzbDN5TGdOTkllSHc0U2dDbXZfaGlUWVUwUEtWclNIZ0xHcVJiaWpR?oc=5" target="_blank" rel="noopener">A loophole leaves Oklahoma data center water consumption largely untracked</a> <span class="muted">(Investigate Midwest)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE4yYTdGVHRnUFdYUV83UDlGRVhwZjcxX0N3RndjMXdVcUREUmdqcWxFRmpyb1l3OGdWRjFKQkxzWDZzdG5ONkZELVZFZG1lQmNydnFmdVYwcVN1UndyLVJ0ajFHZzhEekxUZXFKeW93aTNmaUU?oc=5" target="_blank" rel="noopener">AI data center water use collides with drought in the West</a> <span class="muted">(qz.com)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🔊 Noise / health minimization</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Operators claim noise levels are &#x27;within code&#x27; using property-line measurements that ignore cumulative and low-frequency impacts on nearby homes.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Most local noise ordinances weren&#x27;t written for industrial cooling systems running 24/7. Code compliance ≠ livability.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Hire an independent acoustics expert. Demand interior-dB measurements, not just property line. Push for nighttime limits and low-frequency standards.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxOVkhROUNqRmx1ZXRqYXFUeU0xenRLOWtsMHAwR0EyY3VzZ2NlOFRreHduaF9MekZpZXg4cVdDUnlSdEx1SE9kS1VjUFAwNnNMampvUDJiYVBUQ2lQRHV0SnBtSEZhVzl0U1pFOGd2NlgwZ2hycTRGcE9aUERIMHpXSTFac1ljWm1TemhoMkpsQ05vSi1pc1pRTVpFNEZiTktiXzdLemRLLU5NeF9XTm9hOTlzZG9UQ1pyOHpZMmwtbHdjVzNxYWxCUFplTFPSAdQBQVVfeXFMTUVhR2NCbzd0R1oyYzFoVGRmRHVIZmZvMG5lc0dyRUJrbDNtVUlEU2F0d2hpWUFHS0hFOGc0bU9SQjVHQjBZUGdXbFB4d0pZT0doZ2hYNmVTVnlYb2xmaE5lSURoYjJTWWhlVl9BUU5ncEhBNHVWRERpcUNaaGhodll3d2ZISGcyXzhiOThUck5QWlotb2g5VklTN0tPQzRjSmpMVGsybWw4T1hCTzEtdU04ckw5UTdMV3prYms4aDJvUlZfaks4N241dFNqM2ExWmVrQjA?oc=5" target="_blank" rel="noopener">Vineland residents pack into meeting over AI data center linked to humming noise</a> <span class="muted">(NBC10 Philadelphia)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxPOFdsdDFZSGgxVjlSQkVkamJYeU5VcDdlMFZpUnJiUElGcmNINE5pUlB5UThBSlBjZEVsa2ZHMGlvZDBIME83VGtVZkFSYWctY3BHbkl1aHZmcnpkT0RUeTg5N045WkpxcEVZb2lYdWRCMjBWMHY1V1ZGdFY4aHc2YlduT0tEMXdvQ2l6aHlSZmpZWm1DcG53U1g4MWdodlNtV2poYjZHRV8tWFp4bjlGSWhmYUhSSmdmWGRmdEczOFVpdTJyRG5MSXRZdzhrYS1VVUZ6dGZjT0E?oc=5" target="_blank" rel="noopener">AI data centers spark noise, environmental concerns as South Florida communities weigh moratoriums</a> <span class="muted">(WPTV)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNdG9idVRGS1J6bjdnWXpxb2lsT1JhWFN2YjdfSWlzR1JOaVIwNllOODlTQU9MOHE0S0NQTEkwb3VvQm1KbUQwOURhbVNVeTVaUnlBV1pMdm9ndE5IQlZVbGhBVVBfb0x2YmFjd3F3OWVBQWJ1UzNwSHJFREw2cHBFeFZhOU9oaEluTTNxeGRFeVA?oc=5" target="_blank" rel="noopener">Michigan Residents Sue Over AI Data Center Noise—They’re Not Alone</a> <span class="muted">(Newsweek)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxONFpydkduWTdPbUtlZzZMbWZTbW8zYTE2Y25IQ09oeTZXLTRDOW1tOUFpQVYtUEZNM3puS21XTWVBOTlNVzdSYmp4UGdvdlduR3VtUjZUQXd1NTducWV1cm15d3hXSEdnUXZGaG1fN2d0Y3pSekZpSHBsQWZJcTBYUU5nZkIzVWVvWFRlLS13?oc=5" target="_blank" rel="noopener">Mississippi homeowners blame a noisy data center plant for sleepless nights. The mayor&#x27;s advice? &quot;Consider selling.&quot;</a> <span class="muted">(CBS News)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxPVF9FODZsY0l4RDFtTjNpdzc2UjRucnFmUW0tVUN0NHZPYk1qbTBLN0V6bTcyNjk4YTBzSVVxeW45UHpBYnZjOGpaYUdPUTV3bE9oaVdxSEF3Q2Z6NzZNWkFTTUR0cVRxZjB2RUZSNUtKOWJuMzJQakV6OFdkeHpfUm9ZRXZKT1o3Nkk0SzZZN3ZyUkRfSU53Q09tWS1IOEZwR3F3Rm04eEoxX2ZmVUhpLQ?oc=5" target="_blank" rel="noopener">Neighbors say noise from Michigan data center is 24/7 and upending their lives</a> <span class="muted">(WXYZ Channel 7)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>⚡ Grid cost shifting</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Transmission upgrades needed for data centers enter the general rate base, spreading costs across all ratepayers while the developer pays only the interconnection fee.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Rate-base mechanics are opaque to most residents. The cost shows up as a slow rise in electric bills, not a single visible charge.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Track PUC filings for transmission cost allocation. Support ratepayer protection bills. Demand cost-causer-pays interconnection terms.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPck1uakRROENyeF9hZWREdzBTeHowdWlfNUdWTXdQSDc1bnhtTk1EQjQ2RjFFX1RtMHdiUGY3X0hCSk9Td3dkM3EyYnExR2FTSngyekx6RE9uNnF5ZTJaQjhSOEMyeUdBVTJwZGhYb01xMWV4cDdLT0pvSU51R3ZDUkNyVnV2cnBIZm5UNFJtZVRKMWhfbkhMS1FYdnQ3UkZRc2JFVjJDYkpXZWJGSnczakxvcXZ2TFnSAcsBQVVfeXFMT18tcWVIUUJ5N293bktkcnhyWEZERWtsTzl3bWNIbWZxOVlsZjlOa084SzhZSjY1alJBYVhfVjVPcW01M2l5c05La2ZmTTFhVVl1b1FkT1lzdlpNekxjNEdQelFRaXF2a2R4X2JReHdtRkVQbTZJRGYyWk13c2RPekVaYkR0YjhGSE1mVWplMEl5ZUZkOEJCTVJwVkc1cWVjNVBFbkFtZ0dVbExrNDA0dGVKUEZMd2VJVVZLdFFZZ1d2VV8zdVhiNVk4RjQ?oc=5" target="_blank" rel="noopener">Ramaswamy says new Ohio data centers should pay residents’ electric bills</a> <span class="muted">(Cleveland.com)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNTnpBWk1UT2lFcGNrT282Sy02UGEzSGwzdDFVeUpaNDlsaHU0TnRBSXhoWEJianhqVmN0SW9ORUIwTzlZekszQTN4aTVaSVkyMjFtc0IwOXNya0MxTUFPcE1DakhPb2VhdXNRQkppN2phSmw4XzlDbTFCQ3VjR3lJQnc3Rjh1RDB6Smx2dENMWWc4b0hFenlSQ0VxaDBLR1RpM0JVam1aTkh5bXUwd043eWpISHFaMVNOWWMtaFRB0gHSAUFVX3lxTE1yMU8wcDZUejAyNnU3TkxsVUE0OUg0MzIxNUI3R2duSEZrdGVuRlFIbjRzbzNmSm4wNWt4WFNqM24zelkzZG81WGJlSXNDbURHcGsyZzNnT2p2ZkpxeWo2N2JicnQ1SnlsaUpsTTB6T1BaY2J6ZjBZUVR4elR1ajQzQVgyeUlOUzJuZ09FNUZCbG1KUW85dFBKSnBYM3hnSVlZQmNNWlRXS21RYW1XV3dWQ3laTGdwZm95b2ozQ0liVFE1N0dfZ3hpalIyNTQ0WlNGZw?oc=5" target="_blank" rel="noopener">N.J. tightens oversight of data centers amid electric bill and energy use concerns</a> <span class="muted">(NJ.com)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNdHFLOWVYSDVLT3NoSG5iOWpGU0E4S1pscGRrTHgwdEQ0T1RYU0RkbHRrQWNMbzhHSUVzY0xrdUZ0VFRTbUtZZzNBRGJ0eWZadVUxbW5sdkNnYkxYMjlfMUpNaGVaNl84SGgxZTkwN1hleHU5dy13dHZOS3NiTVdVNWhQSUZTeXU0R2RTZTQxZWk2UQ?oc=5" target="_blank" rel="noopener">Pennsylvania Public Utility Commission advances measure that aims to protect ratepayers from data center demand</a> <span class="muted">(WHYY)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxNSHA1X2tKQjh5OGhaaW9ONmZMbHFFQk1kNk5zd1lBRWtMZWlENFFiLU8yTGQ3UU1GbXZlUjFBdHN2b19xaWxwQzlWdEhnN1JTX2NKajdMbzVjcnAtSHJuLXVjNnp2UzlYUjZzaEF3OF81QTR5MDZ1OUJkMExYazhEQnBxVXdvU25NZ3M0c3dFblpqYW9oOVN4THV5Yk56eUhHTHZCSU1nMkNXNG1wTHNROHlSejZxX3RsZ0NYVkNLdUZuc0l2VG5fcmFB?oc=5" target="_blank" rel="noopener">Data centers blamed by think tank for rise in NJ electric bills</a> <span class="muted">(Asbury Park Press)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQWXJpLVd4aU54ZXh0ZFVRRnVwVkw5cGhwVVdVVFlYQ1VRVURxeWVVZUE1aVJEbVVBVEU2T3E0bU5yS2VtMU5FSWpQZnBvMUlUdzVoV1RUNVR5Z3duM3RtaHhkcEFaUUdQTlRUV3dneU13bW0yREVXTWFOaUF2R1dSbFJSVnk1TjRCYUtDUzVKUnhXVDU5QUd5bk9UVDNGQzc0cWJQTHJKcTNTMk9sMTNfY093?oc=5" target="_blank" rel="noopener">The pledge to protect ratepayers from AI data center costs needs enforcement</a> <span class="muted">(Brookings)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>⚖️ Lawsuit threat / SLAPP</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Developers sue communities that pass moratoriums or deny permits, claiming regulatory takings or equal-protection violations to chill opposition.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Small towns can&#x27;t afford prolonged litigation. The threat alone is often enough to reverse a moratorium vote.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Document the lawsuit pattern — it&#x27;s a lobbying tactic, not a legal inevitability. Push for anti-SLAPP protections. Connect with communities that prevailed in court.</p>
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxQSGQ5Z29ZenhfcGZibEJ4dnZmTktUNHYzNjBYdGpnRHp0TFpEQ1pVWXRjUUFGSDF0TlVqd1ZjOGV6RGdtNlU4U1p1dTdKdXhhT092ZE1adjFEdk85V0FkUmRXeF9nS3oyRHZpR2gwTDB6M2Nxb2hRLUYydi05X2VSbXNYZzVxLW5fZkYzZ0dXel9LanpUdTRHSDAwS3o4S3NXRXBJ?oc=5" target="_blank" rel="noopener">Neighbors file lawsuit against Vineland AI data center over noise</a> <span class="muted">(Press of Atlantic City)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxQdi1fZnVSYTdyYW5qU2FMUUJaN0ItVnJ1NEpxWjBXNGxxRUhxZE85czE2WTZXRnRpMHZXWFU5VVVFSm1ZY2dwQjVlc1hCRXBtZHNVLXhOY2NadGNSdnh1enk3M0FnLVZLMHEzbzRuSElweFFZOTd4OXZmdDFicHZvbG1xU1JVNDJfLU5XZXpIUXFwSU1vRGV2MUVKUzh2aURNTVp6Xy1aeTJLMVlERDIyZ3BiSThVS2xqdFgyLXFmSWIya2JadHZTdklxcw?oc=5" target="_blank" rel="noopener">Developer suing Monroe Township for $300M over ban on data centers</a> <span class="muted">(Courier-Post)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiqgJBVV95cUxNUEkxa3owMk1GQW52Mkw3RmhtYXZNTnBXOENQOGxXakE0em9fa19sU1BscGJfMmZxRkFvS0xLRFUyVHhwNmJpRVlxZy1VcG82eWdDMGd5TUZiN2FvWlFteG9fTGhqamFhdUp3enl5T3hlajhDQzVLVFVUaGlMdUQtdElUbTFkdWM1Y0tER29nSFdWMTZyX3Z3enlTNERvczlQeUdfUkdUTWp1WnhVcDFJb1VKMmg1S2FSLTRnT1AyNWNoV0tac0lVdkgtelpaTzJRaXd3bkVrX0FBZVRxN2JIOXNYZXhmVlYzX2VzTl81N1pYeFJ6d3NuNm16YjRxMWRtZlFjQ1VZRmdXa0dkcE05Qi05bVh3dGtTRGF4ajhEeUlJdmE5LVFSelBR?oc=5" target="_blank" rel="noopener">Residents suing Hyperscale data center in Dowagiac over &#x27;unreasonable, excessive noise&#x27;</a> <span class="muted">(WWMT)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOaVhwZzc0ZnA2MkdrMlBhdmRBTnZ5ZTdrbW55REZHYzk5M2tPeWI5SmF4dmtCZGl0T2lBV1RieTVlc1dYUmtoZ3RWODhnLUNBcjg5YlVXRE9FMnZDV3lkblpYd2IzNU9TN3BXQWdnOENNN0pac1RXQi1uSlhKUnllR2RxdWFrT1Q4dUxqM2VlWnV0OUs4V1ZXZGdZQl9ublBhZ2FfNnhNYU9BVGhZWm5DQzB30gHGAUFVX3lxTFBpM3FtRkFfU2FTeE9Za25vYlJQLXR6by1DakxHbkh6eldudzJCZ3dvZW1wSmxUcDFZM2R4T3pUODRBUmVST0pzX0tBbDRnalVva3BNYjItQ2VkWW5qdXItVWF5V0RGN2J4QlV3T1NQak03SnNmaU8yTmoxOGJtc1VfamU5T0FRNXBJWWNNcENiUUZJb2cwTjlzWG1IWTYtMGxhcGdGSGpRTDlpSG15UC1qWUZMSVJoS3ZBeXRzOWF4cjlPam9xUQ?oc=5" target="_blank" rel="noopener">Judge dismisses residents’ lawsuit against Bessemer over massive data center</a> <span class="muted">(AL.com)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMikwNBVV95cUxOa1JsYU5fS1lkaVlpcVlCVjg1cEo3LVhtQXppajhBVlJJVDhycnIzVEVxYm1GOTVlX1RLVFhmVmZsSHVfYVZ6WTZXUHZiUHRmV29mN3JkVmVhV240UVV1dDBWM1AwZVFlM29ZaFJrOVZ4YlpkaWhRTUFERHBicXQ5WWpXdXQ0TTJGZzJiemJvYW9tbnFkYnI1RHJucGJva0htR3ZfQzJqb3p6TlFDRzdraG92NlhCTG82S1ZSQnVzOTcxRENoZXRYbWI1UlQ1elIwdjRtRVllUHlmcjk5N2FoYWE5QlNvVXdOZFM2WHk1LWRDYmZWcThhNmdSQzA5ci1UazhkOU91UUpwcUl6YkRoTDRMOFctMEJtdXRLNXI5UTFIVXpHN294WFJ0Smp3QUNZTUpWeEJsaDVpeThKUUZnSkdYQjFEbGhGXzlkZE5MOFZJajdoQndpRVlDby1ldEl2OF9uc25iS2QzUThWTmVfbVhtN3c4VzdjMDcyeDU5RmV2bWtfT1ZZWjBXMW9LWHVTREQ0?oc=5" target="_blank" rel="noopener">Wisconsin residents file class-action lawsuit against Microsoft&#x27;s &#x27;world&#x27;s most powerful AI data center&#x27; due to data cen</a> <span class="muted">(Tom&#x27;s Hardware)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🌿 Greenwashing</strong>
+  <span class="pill bad" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">industry</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Operators announce &#x27;net zero&#x27; or &#x27;100% renewable&#x27; commitments based on unbundled RECs or PPAs that don&#x27;t deliver additionality to the local grid.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Green branding neutralizes environmental objections and gives council members a talking point.</p>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--teal)"><strong>How to counter:</strong> Ask whether the renewables are co-located or bundled. Distinguish RECs from actual electrons. Request location-based Scope 2 reporting, not market-based.</p>
+  
+</div>
+  </div>
+</section>
+
+<section id="community-tactics">
+  <h2>Community tactics &mdash; what works</h2>
+  <p class="muted">10 proven approaches communities have used to win
+  protections, delay bad projects, or stop them entirely. Headlines show
+  these tactics in action.</p>
+  <div class="tactics-grid">
+  
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>⏸️ Moratorium / temporary ban</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">A temporary freeze on new data center permits gives the community time to study impacts and draft protective zoning before projects are locked in.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Shifts the timeline advantage from developer to community. Allows proper environmental review, traffic studies, and fiscal analysis.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxPb3prTXpzZkpJRVh2cndFRUZUd1gxTzE0TGZVeTZfdGRNSVRwaXBqdWFST0ZUSVl6T09rdTNHR1BqUmdtdXVfMnpselNmUFFscnJWd3c3YjFaTXZrU2FZNTROMWxwaW11U0g5cXZTSnRqZjRrMlFhRGVZZFBZMU1wYXk3UXRhT0FrLXdpT29kbml2NVJicVg5eUF2UU5WNWpoa0N1SU5RYlJkRDRYendJUUZXU0hWQl8wSmc?oc=5" target="_blank" rel="noopener">Bell County passed a data center moratorium. Residents worry that work continues.</a> <span class="muted">(kentuckylantern.com)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOR0NXLUJxQTliSDdOTWNVcWdvN2lCUlF0UlYtVkhjOW9iVkdCX0FKRHUzeU1xYVhEazdtam4wdWVWQWtFU3N2c1NEZEtjZWtqV3hlSENZc1B4ZWNKWlcxSjFQS1hYaEpTZWpIeXVYME9ZWmVqaUJwOGFrRFJpRWY4Qy1DMXNwdWVSRmw0dGdxVkVpNVpXZ3A3aEt3d1cwbXdlQkpzMWNDcy1LTDY3VGtsc3R3NElaVDVBQmNTbXBSZ9IBxAFBVV95cUxOUXI5czVscFB4OTBRYzBsUkl0N2NzVTB1M2ZRdllDeHVTNTlmczdGNzhKUE1meFBKX19UTFUyTTZ0LVdxcmhpa0dSV0NCb1FXTnF5U0Q4RjBxQ1VYcXgtZktuZnhYNnJyd3dTSEU3d3ZQV0s3elVZWmhEUGVXZ19qRzBpZ2FyMzdSa21rUWg2VWRSNmJjRnJ3aFFkSEcxMVNVbnB5QVNlNTdEWVZhQ2d0cmpGNWNHYnNKVGxkNWpPTVg0N3BY?oc=5" target="_blank" rel="noopener">Fayetteville residents urge city council to ban data centers</a> <span class="muted">(CBS 17)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMijgJBVV95cUxQYkJPWmpFcE5UckN1T0pvV3h1cE42cW84a0tVOGVHNzYxS25FWWQxS3ItLXkzRkxHeTFkN2dyYUliVVdXWmpWNXVaYWNXcUJrbFFmdzlpWEpPZzVXMVpWcjJfaXJRTjNhSmlHbzl1S1d2TjR1X2tlRHlqN2syVkFfU0VXdEI1UWlHMjhKdEVYWmh3d2pWY2tmbzFwUVlFTDRPRHl2bm5HNTdrc29VVTdhTW9POGpHMmJIUFpMRXJuRDkxVVNmS3Y5Zk5pbkNsRUt0T3p3NmszNE1aTHJ1a0xRbmJUNkFhX1pzZ1l3M29Ydmt0bk10Wlhzc1BtdDJtOUlINUVvRFd3NVZKLXlEZEE?oc=5" target="_blank" rel="noopener">Jeffersonville passes year-long data center moratorium amid resident outcry and major utility disclosures</a> <span class="muted">(WDRB)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxPbXI1ODcybDJzdDU2MHBWRmFqRDZNRl9teDMzYnR0eEI5WlJPUG9ZOFRjMmlBREdoNjBsNlFqdEc4c2VCdmp3X0FxRVV3MnpRMkVaRER6ZXR1bnExT2o3TG9GeUxmcWNzdnZZak5tSWwxNGhXVENOZHlxWDl2SXQtSDFmeGZ2X3Q5SVl6OHJGRkZvVjF5NnNKbTJaTXJOTWx5MUtvMGNINHhienc2eHo2Ni11U3NvY3VMQllheEFB?oc=5" target="_blank" rel="noopener">Louisville mayor calls for a data center moratorium as city considers regulations</a> <span class="muted">(kentuckylantern.com)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOcjI3UnVBZkhOMzM1ZFJMajRXNERkMWkxcXBoQnlQaTJOMFZvVFg1UkNtRGFvWGtaMnlRbW43RHVLMXEwZ2t6eEg2QUl0UkNhQl9qZE9LT0d0S3ZaNzJ2RGVRWGM1NW9sRC1KOUZHM3pWM2syNV90Q0VITUNLWTRJWjBOSDBjdXNNQlRqUlJ4d0U4cmtYME1YOWhhSDZNSU1HVFdhdjdEQUlvckRZQ0xiQ01aY0FFMHlhbEx6SWRyUQ?oc=5" target="_blank" rel="noopener">Data center moratorium dominates Louisville public comment meeting</a> <span class="muted">(Spectrum News)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🏛️ Packed hearing / resident turnout</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Mass attendance at planning and council meetings demonstrates the depth of community concern and puts political pressure on elected officials.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Elected officials respond to visible constituent anger. A packed room is local news, which amplifies the message.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQZ1FzVlduX3NwbE1GR3o0cUJQT29XVmstOU5TR3VEcWR5eUVBU0JvMHV0X2M4dVlUWmdfQWhOX3JqT0Itc2lYZzZiNHlTdE9Ca1EwSGMwWmg5Wjd5MTN3UXRGSUM2VnVNZHd1c3lMb1BrSGlZWUl3amxkbUVVd2ZMR0ZZQWE5MHBqMzRUaW82bk9jZldzZGg1VTZYYkJqcFVpbTFaT3ZQRmhsb0txc2c?oc=5" target="_blank" rel="noopener">Meta data center town hall turns tense as residents press water, power officials</a> <span class="muted">(kfoxtv.com)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOcjI3UnVBZkhOMzM1ZFJMajRXNERkMWkxcXBoQnlQaTJOMFZvVFg1UkNtRGFvWGtaMnlRbW43RHVLMXEwZ2t6eEg2QUl0UkNhQl9qZE9LT0d0S3ZaNzJ2RGVRWGM1NW9sRC1KOUZHM3pWM2syNV90Q0VITUNLWTRJWjBOSDBjdXNNQlRqUlJ4d0U4cmtYME1YOWhhSDZNSU1HVFdhdjdEQUlvckRZQ0xiQ01aY0FFMHlhbEx6SWRyUQ?oc=5" target="_blank" rel="noopener">Data center moratorium dominates Louisville public comment meeting</a> <span class="muted">(Spectrum News)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxNbjFVd0NJeFdGUU5DeXcwQzROS1p4WVRDcWM2VFVKNlgwRXFPM3k0Qy03dEFlRnBJcWFGUWgwVGY3Rm56cGhiUEhUOS1FSk1EaV9NSjdFQTlmc2ZlMTcyT0UzbTR6UzZJRUU3RG4wLXJ4TTJGWFNablQ5NkxldlBQaWIwQlRXSE5NbENmRzIxRDhWTzJDYmtfVGVB0gGuAUFVX3lxTE5HeS1YX0pyYl9mQXZuNEJSRmdseEE1ZlZXdDRQQmNycTZUZm5pUHkxZTk2SEs3eWNEdEN2SXFVNmd5ZEtBb0VaZUJQa1ZXUm5MbmptWGx6cVdBZGQ0SDd3OWdDU3JHeUJ1Ymp5ZE8tQ2ZBOUZJQklOT0dIeGQ1OXJuMWY0emxpY1BxdlJUckxQRlNYenlwVXhYeEVEUzJndFNGMmtQUk1OWFZJNGRVdw?oc=5" target="_blank" rel="noopener">Shreveport residents pack town hall over data center concerns</a> <span class="muted">(KSLA)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE0tSHVaNVRwdVBuaktadU1VOTBjWnNkdmVqQ3VpMUUwNGM5eWZUNnZFRE9BSDdjNE5iZVZSd0piSFJOZWtoZVF4Tm5IcGt2S3FHYkd6LUtacUk2UXR0TFNraVUzbUhfOG15eERHNi1DcERxQQ?oc=5" target="_blank" rel="noopener">‘We are angry’: Yukon crowd pushes petition to stop data center and calls for resignations</a> <span class="muted">(KOCO)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxORk5WRU1sYXBMT0VTNWY4TDVodDJhNTNENXViTGFqSFdiN0syUFNORjFVM0FRM0s0Z0tRQ1IxZUxYQzlseGdqSm9OV1VLaHh5c0F2UHpNR3M5SFMxUnA4bEJHRTVpSDExSjltSWd2RXFiNHVKZzFocVlWczdWNnQ2Mjh5azVZcU50NUFDSFN2a0xQVC15NVVCWnp2TQ?oc=5" target="_blank" rel="noopener">Westfield Residents Voice Data Center Concerns At Town Hall</a> <span class="muted">(Patch)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🗳️ Ballot measure / referendum</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">When councils won&#x27;t act, residents can force a public vote on zoning changes or development agreements through petition and referendum.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Direct democracy bypasses captured councils. High margins (e.g. 90% no in Scio Township) send an unambiguous message.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxNSUtVdnZTSnVJMDJna2dGTXZ1eWtwTDMzRlRUM1NqUHJLT2tIblJCelg1ZU8tU2ttdVZaSm9rSENTVWZuUUtNQWVKeFJEaV96cmVRS2xMbUV5OW9ielAtZ016aGRQVHZ3NEVmUnV0Sm5BVzlhVmtEYlFqNkNjUk96SEctNTJhU05kZlJCanFjRTByckVZQmd5MHZTN1JZdV9NbmV0UzJXaTc4enBkS3g1cTBLUk5MVl9mLWc1NUpJdXZ6MzR6bzFkOC16elBSSnpFYnRCMDVNQjjSAewBQVVfeXFMTkk4c2FmMzkyVFIyOVRsVkZOaDNtcU9CZXFCMDdqZURRejBqYVdhbmlqZ21xek5wNmhxRUpXOHY3bTI1NWdnWk1ReXBTUFF3M3JDYTd2eV9kaDlkb0dtcFgtWUtYRlVYX0dXcGVUY2tMV0R2WXFSdF9rV3YtMmRONi1wS3pldFZIUEJmMzh2di04NEF4SG03QnRrdmd0cjNMUnpMa2t3RlhlWl9WcGRWRVhQUFV1X2l4V25VNUVrSDM3cjVmdjI3SFROampZcDBaMl81ekJxdmR2Sm9vUElMY3MzVVBNZ1VSR3Z0MG0?oc=5" target="_blank" rel="noopener">Rural residents challenged a data center project near Ann Arbor. Nearly 90% of voters said no.</a> <span class="muted">(MLive.com)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxNWi04MlNqRjI0Z01lYUdoS3ktMUdKZktQa29TOE5nSGttZERWUllPNlJQMW9QdldObS1XcnFzTEppNlc2VHFVVjNuRHhmSzE4OWJxNG1WSEktNThTRjZjX3dSdXIzUjFOVU9QMnM4LU1RMUhzeXZTT0d3N3M5WmExckd6YmVlOEZNWHJJV203MlpHdjJyUml6TXdBYXlzVTJFa3BCdEdfdHFqQldxZXA3dVVJTGJxa2E5OTZINUJVZkoyQlFSY0dTTzBtMUhfN2tzRlhheVhpVzVXbjRpQmNr?oc=5" target="_blank" rel="noopener">Wrightstown residents to vote on AI data center referendum on Aug. 11</a> <span class="muted">(Green Bay Press-Gazette)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE0tSHVaNVRwdVBuaktadU1VOTBjWnNkdmVqQ3VpMUUwNGM5eWZUNnZFRE9BSDdjNE5iZVZSd0piSFJOZWtoZVF4Tm5IcGt2S3FHYkd6LUtacUk2UXR0TFNraVUzbUhfOG15eERHNi1DcERxQQ?oc=5" target="_blank" rel="noopener">‘We are angry’: Yukon crowd pushes petition to stop data center and calls for resignations</a> <span class="muted">(KOCO)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxPbXRCY2RoYTctc2FRNVMyNE5LbkkyUkh1ODVYNnF4QkxBZUhPZ3h0OV9YbFFZLTVwcThxM3ZoS18zTWFYdWd4R0REd01YSWNxdm9qOGxGZUhOYnRZTkhQY2tWTl9DSGVFbzMxUWtSdEVZVHFqak1QNEl1N2hBV2xydE1NaUcxQ1dMMFVyU1NJNE1wbEJ3Mjh5QzZKWHRySGVra0VmOS16MjNrQW9PSWdPT1hkTE42eHF5VVlUYXFHU2thRlZNMUVTeQ?oc=5" target="_blank" rel="noopener">Edgewater voters could decide whether to ban certain data centers in November</a> <span class="muted">(WKMG)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxNMHAyYUFqZWhSUkk0MWJhSDJ1bHNmRzlhQzQ0U0ROclphakpGTWdtZzd2bUpNbkl5N2tRQ0lWYTJZVmNCMjMtQzhzQUlIeHNuR2FsNGlVZi1YUVVCQ1drNDc2MEF5ek1uSlhVNXE1blI1NEVUZTBZOXRjVTVhWHhCbURwUVg0NkhKRHJHc1UzNVdyd1VVbHJrWHpaX3pmX0lRS3N0eHhUNTJpUWlnSnotWkJLS1hIV3doTzZYc2pqLW0wSk1nbUIwamdITdIB3wFBVV95cUxNZ0thaEZhdjhITER2UFFFZEZvanVZLXc4aUdvanBJYW5vbzQzNTBfVjVsV1JlWkdVbXJ5OEVXNm5Id1Y0NmhzbVVpMHBTVUwwNDRaaFZIQzNsZV9hV3NCUERmMzNfNkU2QmpUamxxLTZMOGoySDNqa3RBbFF0SUF5VExYVkREYnYzc1JWeWY1RFJTSmNtLUJ0M3FzX000a01HaUZ0LVM5OXJDSDRSZWVvTW1jUUk0dFdfZ0FKMGhRb1YtVnp0V0k1ZHpMOUMyd3M4b2VnRXdNbThVWlVIZm5j?oc=5" target="_blank" rel="noopener">Most N.J. voters want AI data centers banned from their towns, striking new poll numbers show</a> <span class="muted">(NJ.com)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>📋 FOIA / transparency demand</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Public records requests expose developer-government agreements, water permits, tax abatement terms, and traffic studies that were not voluntarily disclosed.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Forces facts into the public record. Redacted or withheld documents become their own story.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxNNmtVZGJVMTgyN3BjeXY1M3R1cUtmWHd0VzRoODh4Y2RiYVljckxIOXZhY2xDcmRmNWVpTFVkOXRZdmc0Tmg1X1NJeU1TTlhfbFFBYjNjRm9qSzhNdUctdXJSeUdYbDh0TF9XWU15Q2J4TUNGZGVwQUthd0N6UndoaUxibVY1Ni1VVzRFYzl5aVROMldGSWQ0RkdPZTZBZkVNV2ZQdV9hZ2s4SWsxbjhQeXJLUzdRQW5JLWlDS3A1NUVBMENUVlpYSXVMZVhsZTR4TXYw?oc=5" target="_blank" rel="noopener">Residents demand transparency on Port Washington&#x27;s $15B AI data center&#x27;s water and environmental impact</a> <span class="muted">(TMJ4 News)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi2wFBVV95cUxPSkVRVzVqNUJtSG9GbXpuRFdmeExjNUdxdEJDdjdLZUE0dVpMYUNZeVVMWXdHZGdLbUFLMFNoOWQ4WUhCVVZ4dFI3cDlDaFJlaklIMkdFU1pXMHpEQU5UR2pHYm41LUtyZkR4R1FIYnE4Y1p0Z3d2THlCODMxd2RGdklmeHppWGhfT0kxaDU0QlNuMnBIUFNsblJNaEVNbDBiZWVfOVBhLVVWR1J6MkNuUDBhc2dIN2tFT0psMV9Jd1lGZXZDd044MVhPYTEzR0dZaGNQTnNKTU5NWXM?oc=5" target="_blank" rel="noopener">Texas law shields San Antonio-area data center water usage from public records requests</a> <span class="muted">(KSAT)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQWXo4T1BYdERDQnB4ejB5NlNBQWVRUjRiakNFeTVic25BLTd4bkRIR1dXZWxoUWg2M1BGaWQ4cWJmbks1d29hSDRTWG5fSFRjWWIxM1dndEpHLXBkalpmY0ZNRzM0OFg4YmhpcW9TOXhXWFpjNkVJdmJBZFcwcXBHaGtHdVJuLUhZSlZrMlBvNkViSGIzVHZNdFJQZnNmbDg?oc=5" target="_blank" rel="noopener">Chesterfield residents call for more transparency on Google data centers</a> <span class="muted">(VPM)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNci1HbE1NRXFIOU1hZnZNZjZvQU1TTkdJbFh1bU9nMnc3UHJtekgyNjFuXzN4NmFBVC1LcTlpQ1VOekpqdWVEVlVzcmJxX0ZzSVU4UEhMV3NYNGowbXBuRDhtQ1UzaC1mdG5TUFVHUHpIN3VHU3RBT1BLcVVzTk9Qc2NFYmEyMWU1eTZJRnJBUE5TWTBqMVRVMjIxQVFNNVhyMGkzMDhxb2E?oc=5" target="_blank" rel="noopener">Lawmakers back transparency on data center water, electricity use</a> <span class="muted">(NJ Spotlight News)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMihwJBVV95cUxOVFM5cjI0Q09MOURSLUFrOGZxemw1SG5UYTM4SW9mbHRGbGd0RDdITGNZckdobmlzS1JDTkotc09JcXVIU0dLbzRzVFNhSnlRRGp5Y2RERHR4QkZBZFliQ1A1Q2dGZkxSSk1XVUNyWF90YXltYmFRSE5OazR6a2tYS3dCNmNYZG5CVUJmT0JjMFBqZXN5NHdocHAzcmpiZkRpWGdKVFdIR3NLVXhOY0pZdlFicENaY0lVN0xtd21Jc2VYcDZKTEd2cno2NmVLQzV0OWxIZWx2Z056a2FLNU9rSUs0WnU1R0JwV2MtT3FvSGZBX0RkeU1keFVWUHlYYnJqQUtkSGRFQQ?oc=5" target="_blank" rel="noopener">New Jersey Lawmakers Push for Data Center Transparency Amid Concerns over Energy and Water Demand</a> <span class="muted">(tapinto.net)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🤝 Coalition building</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Cross-neighborhood and cross-issue coalitions (environmental, fiscal, property rights) present a broader front than a single NIMBY complaint.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Diverse coalitions are harder to dismiss as &#x27;a few loud neighbors.&#x27; They bring different expertise and media contacts.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPTDByOVFBbDN1QUhYQXpGS0Q5SzFPa1ZFVE4wVjduREJOck9OT2Ywb0Q4LS1YY2JwZVZaelZXMjBaVEl2YjN2NXdhMjQzdng4WndNQVNsNVFySWNBbF9TWmdYcUY1Tk8wNTkwazduakdfbnJJWG93ZXA4NFBMQ0licWRyaGVVbExNR2ZkU3J6RWgwdnI1LVN6Nw?oc=5" target="_blank" rel="noopener">Residents unite to oppose possible AI data center</a> <span class="muted">(southjersey.media)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxQLXpucWRfQlNmTXJMa3JkQnVFVl9DQjdCMUx6OUladkdYRVNqbFAwclVuLVZlSVdyejZDZTFyb0tjMnJvcXBHOV9FeDVMcTdEYXJsazBQWnMxWDlEaHFMMG0ySVU3cEd5UWtDMmpGS05tUnhJejVfVGZ6UWJfZzVIWUUzc0phOXlJbGF5Y0J3dkYtb0FGT2RwLXNmWG1YR0tCaWo0VkNCc0Q1UlNTeHFrTXM3djhVaWs?oc=5" target="_blank" rel="noopener">Posey County residents show united front against data centers</a> <span class="muted">(Courier &amp; Press)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQYnZuOUxtY2ZpTnFmQUoxLTF0NWwtWHpJMnNVVG9LdGJyaFpMckZYTzc5ZjFReGh5ZmNUNmlteml4b1pCMGVWc29PZEUtYklKdHVmWU1oM0YtUXZ4dnlWUks5VHd1cUVicmg5dzh0T1BJbEZsQWhUQVdGRkNSTzRMdmVDVHVxSmIxMnBqWVc0RW5GZEFSZV9KcmhoQzZicTc0TGlPOU9NNDVKYXJ5UHc?oc=5" target="_blank" rel="noopener">&#x27;We don&#x27;t need them here.&#x27; Alliance residents oppose data centers, council acts</a> <span class="muted">(Canton Repository)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMixwJBVV95cUxNeHlsY05admpMd1pvYkt2NDc4XzczNkR0a3dlYmN5UWxKOVItdGpyQlJNM3BZcDQyTE1QTWhUejVjZE42Tk5qck9WSUU4b3BKQzg2QXZpekVrWFNpb3NwakhHNnNmbGtOTUhlem4tTVlhYVk0SW1JTVdzZnlfemV3Qm1QLW5ZbWpPS3RsTUpUYk9WTHNfMTFjUXNGYndUSkdxNFF0djVMNDBMQ1ZDdmpTR0dqcDFQcVJsMzBacjU0ejVGT2wwMWkwd0RIdFdOOW5RaHB2U0EtSVdNWjZHTTE3UlpfTUt6c3pwbTFLckhNZFR1bnBsa3VkNDJvTU9xblRlelNBdFJYWFBBSHEzR1k2cENGOW9KODVVOUpTUkJnZW9LWXZRSzlHcnY4eXV6ajQtT0RpNlVGd0JDTkxDM2xSSEhObnVxZUU?oc=5" target="_blank" rel="noopener">Writing a single 100-word email with ChatGPT consumes approximately the volume of a standard bottle of water, the global</a> <span class="muted">(Space Daily)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxPRXhjdGROcV84ZUZlck1WOFpUWDE5TllMZHpfbm5DQUc3d1dLNUdiaWk3cW9kQlh3WEZRUEJBM2Vvc2pDaXBJdVpydURkV21CakxIVnA4ckJNREE5M3dpTC10c2Rzakpla25HNDNraTQ4dVpEVGtmVmRnQjJ0U1BtNER1VnrSAYQBQVVfeXFMTXZEeTBRaTY4bzZJTFNONDhaVmppSlA2YlhTSnRTcERZSjQ3ZzFybHZtaVlhXzlrcWl3N3ZnbE1rZjBqWXltN2Fydk9Ha2VpbzhaUnFuUFRjX2dEanhrLTdHT0c4QTFYM2xGQXFxOFgzOTA0OFk0RWJNQ21EMzZDWlNHamxP?oc=5" target="_blank" rel="noopener">Harris County leaders say data center moratorium unnecessary. Columbus area coalition forms</a> <span class="muted">(ledger-enquirer.com)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🛡️ Ratepayer protection legislation</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">State bills requiring data centers to pay the full cost of grid upgrades — not socialize them across all ratepayers.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Shifts the cost-allocation debate from individual PUC dockets to statewide policy, which is harder for one developer to influence.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxNYURmOHFyZkh4OU96ODNFVF8tQUFSLThTdlJZY0xHRlQwblBVRW1VWDhpMXoxV25HY1lPcTlSWU1ISk40MU5hOGVQNWREX2F5cWliRFptT1F0SlBWNXNpSGJHZFU3cElMX1hUSDRUby1Mdk0tVlpkQklJSW1QVlI4ZjdQUHVrSWtVV1I4ZXhzc1lrbndiOXpfbU1pSDBSQjFmdEtTbFNxMjFkUVdTLXdnancwajZKWm03cEpVYWlxd29yTUh5bkl5YU1Yc1AxTzFmZWVXc1VRRUw4bzV3WjlmWVpTaGdKblBPNS1vd0UwY01jSFBY?oc=5" target="_blank" rel="noopener">State Data Center Ratepayer Protection Bills: Comparing 5 Approaches</a> <span class="muted">(MultiState)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNQnFqY3o4WkhyZ0d1a0QtMl9CNGhrd3BlZ0JhZW9JZFRhQkY4Z0hrVDFhU3Q2U1pXNGhZVjZ1RnpPZUZQOERGNzdfZUhiemowZW05WVlKcUtUc01MQTNuSXhXbWtoM3lFX1JFS2IxUGVJdDZOS21ib29nMG1CenlwNXpvYjZOQm5MMEc5d3JYR2JjYk0?oc=5" target="_blank" rel="noopener">Data Center Ratepayer Protections Proposed in Congress</a> <span class="muted">(RTO Insider)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxPNEhZT3Z4MXhUajNSNk5xQXhQVFhUQzRzWWdEU3VFUmNSVkNLVHRzYWttRzFGWGRWbTZDVnZCTWFndDBCbDJacktDZkhGUm8zSlF2T3RQRi1SRVdnY1BXR2ctbDUyLTFoVW4wOWU4TmdzZTRJMTEzYXVpRHNBTVN6NzNPU2tEd3E3LXFvR0RSdXpVTnBO?oc=5" target="_blank" rel="noopener">President Expands Ratepayer Protection ‘Pledge’ For A.I. Data Centers To Pay Full Cost Of Energy, Supporting Infrastruct</a> <span class="muted">(PA Environment Digest Blog)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOak5nSmNmT2lLZkc0M1BwRU1yNU9YNE0yTl9lTzIxdUVCdVdqWU9xYXJfTXRXMVhlRlpyUGZ6b2xFWXJUcjlSVU5VcVhiQi1PZnJrRkFVM0h2VDdaVmczX0pPYS1qN0ZMT2N3RHZfM2FFdkdUOWdZNmREZ25kbHdXelg1YVMxZFRj?oc=5" target="_blank" rel="noopener">House subcommittee votes on Ratepayer Protection Act for AI data centers</a> <span class="muted">(qz.com)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPQzdmMlJlNTdsZXBmMnByWXh4eFExTmVCOHNsZTV1UEVLZUJSemo1UFVINmhEcUVYLUJ0VVFUYVhBdnNTYk1YazRMUjFHS2RnbEZzNk5tZnJBaU1zeElnTW5oLW9TM2dhbHV6VDlRVmgwTlBMa3M4VWViMWNoZUxkS3R6ZTRLRXJHemMtYlZtNEJYVGpfOFREbVNMUTlIc3NMLTdlNjQ2RHRWSHF5R0xNTXVGZFk2NzVXbVVfeVlwMzcwQQ?oc=5" target="_blank" rel="noopener">Trump touts Ratepayer Protection Pledge as tech companies agree to cover AI data center power costs</a> <span class="muted">(Florida’s Voice)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🗺️ Zoning defense</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Tightening conditional-use requirements, adding setbacks, noise limits, and water-use caps into the zoning code before a project can vest.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Protective zoning is proactive: it applies to all future projects, not just the one in front of you.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPVGpvVmU5QXR3aGljNXdrOU1ET240QnhveFZRNFZvbjREeDVPRWVib3Z2QTZXZlFVTzRucV9fWmlJUUp5VGFxZldBUUFZNHNHMmdXbFRiOXN3UlRUdk80ejhqQTlTOXRWdjdnR2xqa3pIV2JZcDJWcTFQY2JLblE4clJjdEpub0duN1cwOEJtTzhPVmpuczltbUdaRWs0NmNfSTUwQThWTQ?oc=5" target="_blank" rel="noopener">Adelanto moves toward data center zoning update following San Diego tour</a> <span class="muted">(Victorville Daily Press)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxOQ0l3MkRMTTh4S1ZtZ2xNTXJ4Z0JPTUNHSVR0OFNMaExBNU9WOTE0ZUUxbVIxZFNUVkQ4Rnl1eVp6WjRPbnhfekYxVklLUnNTN2NpbnhWYS05NTZMRGRVQkl0eFpWa05JbWFhM0tTVW1HRllrRXE4Sk1MWS0yWUw2TnU5MUQybnlZd0RmdktXUDcxZEt1WllMMXdWLXN2YzNvTWJYakRoYWhZSXhwT0VQbHpaTlNFc2xPMjZxaE9KWURnMkhG0gHYAUFVX3lxTE5jOFlUSjJJOGdwRS1razZTeFlvUGwyalNIcDMzX1o1ZEVwU3NXZGYxVnFrbDdoWmZJaFhueURHb3l6eTFYdGR2WEJWMFp4RGhhNkUtRWxWX3ZXWUJrel9sWDFHZk9TVVljSnNKM3VxbFlOVmRjNzFJUktFUUo0ZnBXUjhlS2ZKcW1PN3BoWmxPSHlmR2dyYnduS0NHVjBienRhWXNJOFdNZVhsbnRZWGhKS3NZQlRjMjAyTFg0eFhFSmVPS1FDYkNqZlJfTlJWQnI3VzRBQXVITQ?oc=5" target="_blank" rel="noopener">Capacity limits push Amherst residents outside as zoning board hears data center proposal</a> <span class="muted">(Cleveland 19 News)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFA3ZVBYY2I3ekQ3R0F5TlJvT2FpdzZCMXJZdEFxQS1ya0JsU0ZMQjh6MDhmbklvUlY3NFRKdEpKZlJPZGlmaHFFN2p4RXlOcFhDempBcm41TFl2RThvcldLLVQza1dRZnI5dHk00gFrQVVfeXFMTjR4NEhwVmc4LUJ1b29EZzUzSjdrY0pMc284YWxZUF9WcDhMV2QyQVFXcktkNkRpX0ZRN3VzNlY4WF84WmdDUVpXT005X195Mno5TjBQSmVXelRvREgxeFhsMWFWdlFGYWpaa1U?oc=5" target="_blank" rel="noopener">Should Jackson County put the brakes on data center zoning? What residents want</a> <span class="muted">(Kansas City Star)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEF2WGF6dno2LXJ4QVo1djl5bDJRbmJTamt0ZUYxRllrMzBxVFBkRW5iSV9fazFDeGpHZG9vdkRldGoxMFdBdUU5VW53TmFsRXMteDNlNWRnMUw5by04UzNzcUJ2SzJOTzdLTjNUbWlETDlRbndQcVpjSGtvYk5teXhqRWFVVmMyRXd0MHc1OXJ5VVdfWi1SSmNBYUhMaWphNTRxVmtHSGtvdi1faXlDRA?oc=5" target="_blank" rel="noopener">Developer Withdraws Rezoning Request for Controversial Data Center in Hoffman Estates</a> <span class="muted">(WTTW)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZUsyY2lHa3l5ODR0bW9OYThVR3BJaUc1dVNwZVBYOE9KVXNkVlVLVFFwNjhqSmdrV2lreDZMUXdpU1MtRndRZnM1Rzc3cV81Z2xqVkNNaENmUXV3Sno3V0M3NW9Gek0xb3lpNHRtT2IxZk16MlRvenVIZjZfUjVwczM1MWdqMG16MXY3ZkVPeWEyWUQ5WjVIRVBWV2VtRGRkd2xDZEhZa0Z3UXhVNnR3TFFCbTNvZ2NmdUxzbDV6TXY?oc=5" target="_blank" rel="noopener">Developer withdraws rezoning request for controversial data center in Hoffman Estates</a> <span class="muted">(Capitol News Illinois)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>📰 Media / investigative exposure</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Local and national media coverage of noise, water use, tax giveaways, or broken promises creates political risk for officials who approved the project.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Developers protect their brand. Negative press reaches investors, other host communities, and regulators.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMijgJBVV95cUxQYkJPWmpFcE5UckN1T0pvV3h1cE42cW84a0tVOGVHNzYxS25FWWQxS3ItLXkzRkxHeTFkN2dyYUliVVdXWmpWNXVaYWNXcUJrbFFmdzlpWEpPZzVXMVpWcjJfaXJRTjNhSmlHbzl1S1d2TjR1X2tlRHlqN2syVkFfU0VXdEI1UWlHMjhKdEVYWmh3d2pWY2tmbzFwUVlFTDRPRHl2bm5HNTdrc29VVTdhTW9POGpHMmJIUFpMRXJuRDkxVVNmS3Y5Zk5pbkNsRUt0T3p3NmszNE1aTHJ1a0xRbmJUNkFhX1pzZ1l3M29Ydmt0bk10Wlhzc1BtdDJtOUlINUVvRFd3NVZKLXlEZEE?oc=5" target="_blank" rel="noopener">Jeffersonville passes year-long data center moratorium amid resident outcry and major utility disclosures</a> <span class="muted">(WDRB)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxQa2tIeDFqUzlxYXdEcFd4YjdfOFdzUjBZYUFRQlcwenM2cVd5QmNsbmYzSEtJazVvV2pqMUhFQy1zWGxvWDNfTmxqVHZhVERjOXYtbUt6bGNkVm1SQkRYS0p2eC1FRi05SDNTcnN0eDBvSEx3V1dMSkFNZjZqbXVQMlJfWmFzUGFHc21CYWRJcjJ6QnBjRlk0bVZEVG0tR0cxY2Vsb1ZRb2NHN3ZtdjBrMm80Z25zc1HSAcsBQVVfeXFMUDdGaXdsYmVUd0VaUmNJanhSR095NHZLZDFRSVdlbC1DNjdDOTZWX1o5YU5zNTFIUl9GYTI1bkpqbzVEQ3p3a1JxNHRVYUFseWpyVFdBNEhWQVhFd2VPbWVyaU40ZGs4WEY5QzBwanBUV1N0Q3ktcTgwUXc5NDdRWU5jUEwyV2F6eUJ1SjVpTXZ1bkViZXRXbXNDOHI4R3Y5UFRXZ0ptc0Y4djU0U3lKM2gxX2FVejJSdGxVUk1rbzA4dmcyWlluSHEyQXc?oc=5" target="_blank" rel="noopener">Wytheville data center boom draws resident pushback over land, water, and electric rates</a> <span class="muted">(WDBJ7)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQam5yZ1dPNDhHZjlpSlQwUkxGamc1VzZRRUFseVg1UVBMck1HdjVtNTNONmhDSGRxMmlGQWk5dlFQMVZLWHQyRmVUQXRNUURfd3FEU2FaWUFYSHZJV0E5cmtmRmRXUG00dW5zemRtODB5NVdsTURtdEZ1MWhkTXQ5UVJrMU1VUm9fWG04MFVmLWEtMUhYZ3N2eWxMNDQzVExrUXhjM2MtT0hDN3g4b1RTejZ30gG3AUFVX3lxTE1QdThCUENQalVoR3Z3bmFWWHRFdl9aN0xNU3RpRE56bmVFaWtER2doQ3dnOUZYWU56TWNTc0lxalVGSTZzaF9MakRROFpvM1E2eWpfY01FLWtPMzFSLWhFQXN0VHBHLVduZDM1d1g1bG5renlOdHVfdDNoYlE4WktyTDFETXlWOUNLMkI0N3FURVVETzFLRW1KNFpKc2hJdHIzQXJPM0dUSHhzQmlteENBWWl1M1M2UQ?oc=5" target="_blank" rel="noopener">Pittsburg pledges greater public scrutiny of data centers after backlash</a> <span class="muted">(The Mercury News)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxOWHZUMUZBVVk4OTlEMW81eVQ3ZnBvYjZHUU95b1V3UlFkU1paQkY0NEdrQVRHQ1I4MkVXRkRqcHZsUGdGV1VtMVJ1SnRsQmNmeGxNUDdmY2I3MFRtMjE5Zkw4N2JsczZtR29EdnZLZVhPZUo0RmNuMW45WXQ3Z29zcWUycEdQU0Z0WklscWtIMW9uT3hyUkkzay1xaXoyUQ?oc=5" target="_blank" rel="noopener">A company proposing a massive West Plains data center has little history, spurring outcry from concerned residents</a> <span class="muted">(The Spokesman-Review)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxNYzgzZkdlQlY1X25raDBMMHMzTXY1WEtueS10RkhGR3FpOVpKelFXeTcxelpBNzRCdXlsRl9zS3llZngzT052RXg3MUk1Vm9ET3ZCVjk0blZXamtXQURXTjItVW1IV24ydGtSV3dyT1NFQjgwSjZ1TzJYSnVGTlVSWVQtajdwQnEzY011T25OUVlNWF90VTFBcERwX2dQUENO?oc=5" target="_blank" rel="noopener">Backlash grows over $1.8 billion AI data center as New Jersey moves to strip tax breaks</a> <span class="muted">(The Cool Down)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>⚖️ Lawsuit / legal challenge</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Residents file suit over procedural violations, environmental review failures, or zoning noncompliance to block or delay projects.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Forces developers into costly litigation and discovery. Even the threat can bring them to the negotiating table.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNbkVsRXBOel80Mk95elc2TnVBUlhDVnppVFQ5ZVZiQ0kxeFUyUk03VmJERGd3clhzVlk1azlwUVF2cnVKb0p6LXJldTRXdENyY3dmN25kUGR5R1BpRXZaeVZDZ0oxYnhLM1hpOGFkcFdEdkJ5VWhzUVpzbTJfdk9LSkszTWlKYkRlRWJ1WEl6UVc?oc=5" target="_blank" rel="noopener">Ohio residents sue to stop data center</a> <span class="muted">(Spectrum News)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxPSDRjTnM2Q09EZGRHdEkwdGZ6WDNnOER0cEQyazBhajVnS0R2NGhDQVpyNkR0a21lMzJSRmhGM2ltQ1JfT0xianhhR3Bpbk8xU2ZuUzNEdlRseU9HZVZHcjdlZjlvS0ZhX2M2MGZQMEs2TVJ1Mm1SX2FaVFgyaDJFbENjLTdzVGwwbzVsNlBTbFJLM2RYaWRBZWhEbUVLZmNWSld6M3lmdTc5WEZmY3NBQnRvTnhfMkVhckwwUFVSOF9qTTJZV0tWTWFqVEJ4YmhMTzhHZUhqVVNEUDJTQnJRc1hOQkc0T0RrX1NIa0gwUXE0bVdj?oc=5" target="_blank" rel="noopener">&#x27;Project of unprecedented scale&#x27;: Lake County residents file lawsuit to block 472-acre data center campus in Grayslake</a> <span class="muted">(Lake and McHenry County Scanner)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNdG9idVRGS1J6bjdnWXpxb2lsT1JhWFN2YjdfSWlzR1JOaVIwNllOODlTQU9MOHE0S0NQTEkwb3VvQm1KbUQwOURhbVNVeTVaUnlBV1pMdm9ndE5IQlZVbGhBVVBfb0x2YmFjd3F3OWVBQWJ1UzNwSHJFREw2cHBFeFZhOU9oaEluTTNxeGRFeVA?oc=5" target="_blank" rel="noopener">Michigan Residents Sue Over AI Data Center Noise—They’re Not Alone</a> <span class="muted">(Newsweek)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiggNBVV95cUxQVlZtTnRtclpzbDdnWjdXNFMwNTJxLUwyblVkLWp4X3JRQVVjX2NDalcxa3VfWW10cmhqc1FtNmdweFh6M0duNDBvR2lPUWltZ0YzOUxxeUxwYVQ0N0dMbUtxeEE2U01Pd0JSUjA2QXdzLVNMZ185c05SRDlCb0dNNGQxejNrclB6eExjTW9URHk4T1VhNm9ESmhXbVhzRHczLTRPd0ZBSU5WcTNBLWU1UTk3Rm85OVBOYzRKNzNyTVhUTjl2TVZHZm9EdmJwZml3MEdpR3NuYzVZZWN0eHNXaU9mMFlPSEpiVkRNeTBTQXF4UTRGYkJwWi00NlViNnFrX1FlRlNWRURLVHVfajY1WXIwd1Bjcmt3c285bWs1elpJUXNzaXZHeTFrb2JQMEE4Zy1tMVczYlUxbTFsNXRTVlVTYlh5eFYzR0M3MVdHMlhYOGlQbjZQNWFYem9zZURhdTlGaWR3RHo3dkdKdndUMTJQUkdvdnJBMVN6b1ZJOE9Idw?oc=5" target="_blank" rel="noopener">&#x27;It sounds like someone set up a vacuum, like in your living room&#x27;: Michigan residents sue AI data center emitting noise</a> <span class="muted">(Tom&#x27;s Hardware)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxPWng0d0ViU1VzbHdHZkNGbUdxQl9rQ1RNaVN3a3htUm1zeWRscURjaUVEZFhQRV9qNmdWQ1YtVndGbllpUWw1dWlpQkp1U3hHR2hacWs2TzNaVXg1QUhaR0FwVWNFTXFCNU9zalE3VWIzbC1fTHQ2M2h4Rk5zUmxOR0p2YTJyYVh2OEw5b0VsQmwxWmFwR25uU0s1bmZqQ0RJVHdtckpZN1VJMEV5SDVESFJndTlPbUNwRFRfay1INGR1VnRXMDVHcWNLMzBjb2JuVDA00gHnAUFVX3lxTFByTmNmX0UyOTc5ZjRDaEZ0TWZ2eDJQYWZueDBSMXRXQnhqM0xDdXlWNFRaSTUydXJaQURENml3QVNtZ2lSYXI2bU5nRU9ENjR1M05MRjdNTUxPRkE1ZkRVVElob3JxY3hJTXZJTlg2SUtadXBQSkdpUkJTbXJ3d1hfNTFjVWVqX2lRdzZVazZBbnpwV24xYV9FeVR4Qk9ha2dLbHFZYlV2Vkl2YWxMMklHYVFNY25KQmdUckJQMk9ZelFuUGZ4TExkNzM5Qkt4dUx5T0drbXlqS2lnMzNuUUFfRDE4Tlh4TQ?oc=5" target="_blank" rel="noopener">Ohio Supreme Court case to decide if residents get any say on data center in their back yards</a> <span class="muted">(Cleveland.com)</span></li></ul></details>
+</div>
+
+<div class="tactic-card" style="background:var(--card);border:1px solid var(--rule);
+  border-radius:10px;padding:16px;margin:10px 0">
+  <p style="margin:0 0 6px"><strong>🏆 Project withdrawal</strong>
+  <span class="pill good" style="font-size:11px;padding:2px 8px;border-radius:99px;
+    margin-left:6px">community</span></p>
+  <p style="margin:0 0 4px;font-size:14px">Sustained community pressure — moratoriums, lawsuits, media coverage, or political risk — causes the developer to withdraw the project entirely.</p>
+  <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Why it works:</strong>
+  Developers need community consent to operate long-term. Hostile environments increase costs, delay timelines, and create reputational risk.</p>
+  
+  <details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--teal)">📰 5 headlines in the archive</summary><ul style="font-size:13px;margin:6px 0 0"><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQYjlrM29mMnp4VUdtOTRHX1UtOGd5SFpnZzQ1bnF1MVM0S1BaNjhIdlU3TTFjaHNlN2NjSGduZnFudDF3UDhVVFA0Uy1XUVMxM0JsNW1JWnpUUFQxbWNiNW9SQkZWQWUwWW9PU3F4ZUpUem5jdlVyMm5iNFJnYy1yN2RaS1pYdzgtVWM1cUlOd2cwbHRycjhrNWlvY0NIdw?oc=5" target="_blank" rel="noopener">Amazon abandons plans for data center campus at Calvert Cliffs</a> <span class="muted">(Maryland Matters)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi9gFBVV95cUxQUWg1QmVtaHNKRDlkZmhPVE1LaU5FeFFmbUV4SElOUnhlbElsV3Fkcjl1YXJmZDdhX0t2TUV5Rm85Wjlpa2hPWVhVV0RMWGdTSE1MZlU2T180dXk1QnBjQmZtZC02UU51dWw2bDdUYmpqajRJU3hTSVp1bWVOSFBQbW1NdW1DR3NPczBQamlvNTJOQ3pkdENjS2lpOEpuOHk3b1dpWnpRbDBHZDdzY2R0Vkd5Q2NwbjhrWUgwQ3lfRVp3M1YtQnBWbnpZcE5ZSXg1c2w5VkZxdzM2M2JBV19qQm5iME5NNEpnRG1kMGh4akhTcmZnVWc?oc=5" target="_blank" rel="noopener">Deltona Corporation has withdrawn its applications for land tied to future data center in Citrus County: BOCC</a> <span class="muted">(tampabay28.com)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQVnRWQ0RpUW8wMjg5SjA2RFVZcW9mNXdBbVRSR0dsUjM2WTBUbW9qYjFWVGZiZTJKNmNweUp4c0JFalBjZGN6b1ZUMVYzTUVWRGRuR2szYkFJQm5CakFxZW1jNWNPdWl6Ull2MEZwOUtTSk1vdkpaQ2IwdDdZNGs1NGxRZnBqS3NqVWY1eXdySVFVTXItRldFejFtNUZNMnoxV1l6TnhqaDdSazg5NWtJRVdB?oc=5" target="_blank" rel="noopener">Gigawatt-scale data center in Atlanta, Georgia, withdrawn by developer</a> <span class="muted">(Data Center Dynamics)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxOTGZ0aHY4TGNkaGxOdEZ4RURFWUFGTWZZRklYUGl4eU1vTjNlaG15ajQ1RTltTXZReHgtbHU0RnpjX3lUbXpvRV9sdXlWQ3IxSkNnZFY3UV9CRnBEclhaTFFKWmhHSEpYcmU0YmJSWWJLVUZ5cWhKT09oTHNnY0ROamR1WmxteFBOLXJyRHQtVzJvQ3N4LU5wVm5OZFpRUC1lMFIyZUYyRmlZZEtWMGZpWg?oc=5" target="_blank" rel="noopener">400-acre data center proposal withdrawn in Lovejoy, city council to revise zoning policies</a> <span class="muted">(WABE)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxPLVNyWTVmWTJzREEzVzlyUEM1d1FWQ0RsbmFGeGlXVGkyNUNiWVgyZUpYQ2RIRTRtM2Zpdm9Ebjd0VGFFX3lzV1hvMktDcmlONWVmckFMcWd5TnJxLW9jMlIteFEwc0hqeWttWGVfSHhBallYTmhtRzZDTnNsM1VvazUtQWo5VUtDVDh3X3h2ZWJJTTMtRW5pYjUwd09FWTFNQXp2eGJlMmhuU2MxVVljejZYUDPSAcgBQVVfeXFMTW1ESlcyX2xhU0RJOFRxLU1TM213UkVueUFjOVFBNHBzYThRZnNFOXdCaFhXVTVWY2tpQ0laRW5TSFQ3bWdWSlIxVGV2OEZmdjF5dnpWd29hVkMwTXIyTWdDVzJUb2VzOWo1ZjVWbDRYUWY5c0duZWZFM2I0Q0l3NWpia0NvM0FZR0d4aldHVXEyWEctTnhBQ0RfRkQ3VEhaZWh5dElWQTZ0bkRQU1ZtNWp2UF9CM2hOQ1d6dzhtdXhBWnZOSjNNVWY?oc=5" target="_blank" rel="noopener">Another N.J. town bans AI data centers after proposal to build one is withdrawn</a> <span class="muted">(NJ.com)</span></li></ul></details>
+</div>
+  </div>
+</section>
+
+<section>
+  <h2>Specific claims in the wild</h2>
+  <p class="muted">Headlines where specific industry talking points met community pushback. Pulled automatically from our <a href="story-tracker.html">story tracker</a> archive.</p>
+<h3 style="font-size:15px;margin-top:16px">Electricity rates</h3><ul style="font-size:14px"><li><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQa2ZMUTF4SGRUUS1jVGRKUHJCS1pyUl9DX21MbmhoXzhaa0FoLWZIU3dyYzV2aXc0eTJQamxrVGlyWTZFdW1BYmVnSGlvQ09Db3FPUEg1T1BZc0d5TG9Vay1lSmo1bkZMY0FZZTNwNG9rZmEzSTlaVUtpcktPdkp4all1LWhVLWpBTklndk1IRHk0azVuRHktdFUtNlJ5N0Q3QWFJRGRIMW94TDA4?oc=5" target="_blank" rel="noopener">New Study Confirms What We’ve Been Saying: Data Centers Are Lowering Your Electric Bill</a> <span class="muted">(NetChoice)</span></li></ul><h3 style="font-size:15px;margin-top:16px">Good neighbor claims</h3><ul style="font-size:14px"><li><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNX1VJam1WUUJ0YVJ0MmdFUjVITFEyT0NjTTNGU2lZdFdrTHVUYUpaRm1EaHBVRks4eUF2NE9hX0lQRjNUWGtSZVA3ZWt3c3dveHBfd25zUlpMM0Q3MlVXSkVzQjlSaDlrbXZzQ01RR1RuajFrTW83NGNuV2xSSXVlMFpWeEQ5QXhpRlVmc1d0ZjRzUDlPVlFyNnZ0dFcwcE9yeTdTZXZ6ZVZMY29xWEFiQzVBNmdYeU9FSm9Yem5sMkxscFZFY3BPNdIB3AFBVV95cUxNOVRJSGQycEVqMWY4STRiRUhUSEdINk1SOFM3QlVTanAwLUczRk9wNjB5NE1vVDdCZmpaUVlRaE93anpMODd1NFFwbFBkQ2lTS1ZiOWJSa3k0OW1JSC1DeVROdWFfdnA4WFBrLW90Y2psVlNPWXh4ZlVFbUxZWl9uRy1vM29aWjF0bHFYWk1VZEZlTHVtMWVHV0dDYlhWUFlzdWhBTlpFakRyeHQxNGpwYVdsWTJ6Zl9fbnJRNGhkZnlER1M5NDNnTzVfTnhzbFpsR0poQjRnZHJYZ29j?oc=5" target="_blank" rel="noopener">Residents blast data center over noise, CEO says they want to be ‘a good neighbor’</a> <span class="muted">(MLive.com)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOb2FuT3NUdGItOGVxR3YwODdnSnFmRl90ZkhtbWtPanM3UEhlTkxLaEpwOFZPbXJiNjluVS1OYzlrQVVkUXpoTmVhOG43QzhkNUpScEFCRjJnNVNFb0xvTDIxUlhfZEpVUUlMdW16RVpoUzhiV3NxMjNjSkxQeWtBajRMMUg2QzZQTVJxaFpwd0lrOWRJeHBsajRpYWh2c09z?oc=5" target="_blank" rel="noopener">Dowagiac residents want Hyperscale Inc. to be a good neighbor</a> <span class="muted">(The Collegiate Live)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNY1Azbk8wVTVQUnlBQkFsNFltVnB4MEQ0RjZGWGNyNENkaUFGUVJ5dXE5VTY0cFVyV0FDWi1SeHM5WVdSbVlxRDRNdDZnNm1uejB3ZEI2S194akRVMzFJQXJ5SkNmVlFYektaVkxxRFZ4eDZ2STZGRE9TUVF6NVlXUlUweFlUZi1BNllTb2d1ZVktQnhRR09GOFFUOFVURkZqc0h4RHdQaw?oc=5" target="_blank" rel="noopener">VCU POLL: Virginians believe data center are not ‘good neighbors’</a> <span class="muted">(The Commonwealth Times)</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3c2S2IxckhWZVpDX1drSnV2S3Uyd0NlOEliWlRZeGdpbXZlQlFHdFdkcEhETVQxdmJhblM2TXNkUjU4QWRxaG5hN3g0QlI2XzVWODljaUMwcGs4ZDY4RVUzR1J3emRUWjRTZElxOGRaWWljV1lTRGl5REE0SXlYRE1JT3JEcVJyOVZoXzBaSUdhdm85cDJYV2k5LUlGdEIzaUkxVnphT1RiTDJzMmVnZ2pYeVY?oc=5" target="_blank" rel="noopener">Data Centers Going Off-Grid Doesn’t Make Them Good Neighbors</a> <span class="muted">(Bloomberg)</span></li></ul>
+</section>
+
+<section id="playbook-summary">
+  <h2>The playbook at a glance</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:16px">
+  <div class="note bad" style="margin:0">
+  <p><strong>Their playbook (what to watch for):</strong></p>
+  <ol style="font-size:14px">
+    <li><strong>Secrecy first</strong> &mdash; NDAs, LLCs, and rushed timelines
+    prevent organized opposition from forming.</li>
+    <li><strong>Inflate the benefits</strong> &mdash; Headline job and tax numbers
+    use multipliers or ignore abatements.</li>
+    <li><strong>Obscure the costs</strong> &mdash; Water use is "proprietary," grid
+    costs are socialized, noise is "within code."</li>
+    <li><strong>Divide the community</strong> &mdash; Target different messages to
+    different groups. Offer small concessions to peel off moderates.</li>
+    <li><strong>Sue if blocked</strong> &mdash; Threaten regulatory-takings suits
+    to chill moratorium votes.</li>
+    <li><strong>Greenwash</strong> &mdash; PPA announcements without additionality.
+    Net-zero pledges with decade-long timelines.</li>
+  </ol></div>
+  <div class="note good" style="margin:0">
+  <p><strong>Your playbook (what actually works):</strong></p>
+  <ol style="font-size:14px">
+    <li><strong>Buy time</strong> &mdash; Moratoriums give communities months to study
+    impacts and organize.</li>
+    <li><strong>Pack the room</strong> &mdash; Visible turnout is the single most
+    effective pressure on elected officials.</li>
+    <li><strong>Force transparency</strong> &mdash; FOIA the agreements. Demand
+    water/energy/noise disclosure as permit conditions.</li>
+    <li><strong>Build a broad coalition</strong> &mdash; Environmental + fiscal +
+    property-rights allies are harder to dismiss.</li>
+    <li><strong>Go to the ballot</strong> &mdash; Direct democracy bypasses captured
+    councils (90% no in Scio Township).</li>
+    <li><strong>Make it a pattern story</strong> &mdash; Media coverage of noise,
+    broken promises, or tax giveaways creates political risk.</li>
+  </ol></div>
+  </div>
+</section>
+
+<section>
+  <p class="muted"><strong>See also:</strong>
+  <a href="hearing-questions.html">Questions to ask at your hearing</a> &middot;
+  <a href="case-studies.html">What communities have won and lost</a> &middot;
+  <a href="cba-clauses.html">Model CBA clauses</a> &middot;
+  <a href="tax-breaks.html">The real cost of tax breaks</a></p>
+  <p class="muted" style="font-size:12px">Last updated: 2026-08-16.
+  Tactics are matched to headlines automatically from our 4,570-story archive &mdash;
+  this page refreshes with every site rebuild.
+  Industry claims and counter-arguments are sourced; see individual links.
+  This page is educational reference, not legal advice.</p>
+</section>
+
+<script>
+(function() {
+  var q = document.getElementById('opp-search');
+  var orgs = Array.from(document.querySelectorAll('.opp-org'));
+  var tactics = Array.from(document.querySelectorAll('.tactic-card'));
+  var ct = document.getElementById('opp-count');
+  q.addEventListener('input', function() {
+    var s = q.value.toLowerCase();
+    var shown = 0;
+    orgs.forEach(function(sec) {
+      var claims = Array.from(sec.querySelectorAll('.opp-claim'));
+      var anyMatch = false;
+      if (!s) {
+        sec.style.display = '';
+        claims.forEach(function(c) { c.style.opacity = '1'; });
+        shown++;
+        return;
+      }
+      var headerMatch = sec.querySelector('.note').textContent.toLowerCase().indexOf(s) >= 0;
+      claims.forEach(function(c) {
+        var match = headerMatch || c.textContent.toLowerCase().indexOf(s) >= 0;
+        c.style.opacity = match ? '1' : '0.25';
+        if (match) anyMatch = true;
+      });
+      if (claims.length === 0 && headerMatch) anyMatch = true;
+      sec.style.display = anyMatch ? '' : 'none';
+      if (anyMatch) shown++;
+    });
+    var tacticShown = 0;
+    tactics.forEach(function(card) {
+      if (!s) {
+        card.style.display = '';
+        tacticShown++;
+        return;
+      }
+      var match = card.textContent.toLowerCase().indexOf(s) >= 0;
+      card.style.display = match ? '' : 'none';
+      if (match) tacticShown++;
+    });
+    if (s) {
+      ct.textContent = shown + ' org' + (shown === 1 ? '' : 's') +
+        ', ' + tacticShown + ' tactic' + (tacticShown === 1 ? '' : 's');
+    } else {
+      ct.textContent = '';
+    }
+  });
+})();
+</script>
+
+</main>
+<footer>
+<div class="nl-box">
+  <p><strong>📬 The GridWatch Dispatch</strong> — one email a week: new moratoriums, rate cases, and negotiation wins. No spam.</p>
+  <form action="https://formspree.io/f/xljroogo" method="POST"
+        class="nl-form">
+    <input type="email" name="email" required placeholder="you@example.com"
+           aria-label="Email address">
+    <input type="hidden" name="source" value="static-site-footer">
+    <input type="hidden" name="_subject" value="GridWatch Dispatch signup">
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
+  <p style="margin-bottom:8px"><strong>Reference</strong> ·
+    <a href="studies.html">State studies</a> ·
+    <a href="officials.html">Officials directory</a> ·
+    <a href="glossary.html">Glossary</a> ·
+    <a href="tax-breaks.html">Tax breaks</a> ·
+    <a href="dividend.html">Data dividend</a></p>
+  <p style="margin-bottom:8px"><strong>Site</strong> ·
+    <a href="about.html">About</a> ·
+    <a href="open-data.html">Open data</a> ·
+    <a href="consulting.html">Consulting</a> ·
+    <a href="search.html">Search</a></p>
+  <p>AI GridWatch — community energy intelligence. Planning estimates, not
+  engineering studies; every number is sourced in the
+  <a href="start-here.html">toolkit</a>. Built from public data.</p>
+</footer>
+</div>
+
+<script data-goatcounter="https://mjb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+function gwevent(path) {
+  if (window.goatcounter && window.goatcounter.count)
+    window.goatcounter.count({ path: path, event: true });
+}
+document.addEventListener('click', function (e) {
+  var a = e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  var file = href.split('/').pop().split('?')[0];
+  if (/start-here\.html$/.test(href)) {
+    gwevent('toolkit-click' + location.pathname.replace(/\.html$/, ''));
+  } else if (/\.pdf($|\?)/.test(href) && a.host === location.host) {
+    gwevent('pdf-download/' + file);
+  } else if (href.indexOf('data/moratoriums.') !== -1 || href.indexOf('embed/moratoriums') !== -1
+             || href.indexOf('data/projects.') !== -1) {
+    gwevent('data-download/' + file);
+  }
+});
+// Nav dropdowns: one open at a time, closing on click-away or Escape. CSS
+// already reveals menus on hover/focus; this tidies the click path without
+// fighting the native <details> toggle — sibling-close runs off the toggle
+// event, and the click-away handler bails on any click inside the nav.
+document.querySelectorAll('.navgroup').forEach(function (g) {
+  g.addEventListener('toggle', function () {
+    if (!g.open) return;
+    document.querySelectorAll('.navgroup[open]').forEach(function (o) {
+      if (o !== g) o.open = false;
+    });
+  });
+});
+document.addEventListener('click', function (e) {
+  if (e.target.closest && e.target.closest('.navgroup')) return;
+  document.querySelectorAll('.navgroup[open]').forEach(function (g) { g.open = false; });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape')
+    document.querySelectorAll('.navgroup[open]').forEach(function (g) { g.open = false; });
+});
+</script>
+
+</body>
+</html>

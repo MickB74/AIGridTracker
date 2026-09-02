@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1220">
+<meta name="google-site-verification" content="kkgrLvRLdgGg12Y1ka456PlN9iNsyWGCyJIS-8ip9I4">
+<title>Case studies — AI GridWatch</title>
+<meta name="description" content="What communities have actually won and lost in data-center fights: moratorium outcomes, benchmark CBAs, per-hyperscaler negotiation patterns.">
+<link rel="canonical" href="https://aigridwatch.com/case-studies">
+<link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
+      href="https://aigridwatch.com/blog/feed.xml">
+<meta property="og:title" content="Case studies — AI GridWatch">
+<meta property="og:description" content="What communities have actually won and lost in data-center fights: moratorium outcomes, benchmark CBAs, per-hyperscaler negotiation patterns.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aigridwatch.com/case-studies">
+<meta property="og:site_name" content="AI GridWatch">
+<meta property="og:image" content="https://aigridwatch.com/assets/hero.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="479">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com"}, {"@type": "ListItem", "position": 2, "name": "Case studies", "item": "https://aigridwatch.com/case-studies"}]}</script>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preload" href="assets/logo.svg" as="image" type="image/svg+xml">
+<link rel="dns-prefetch" href="//gc.zgo.at">
+<link rel="preconnect" href="//gc.zgo.at" crossorigin>
+<style>
+:root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
+        --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
+* { box-sizing:border-box; margin:0; }
+body { background:var(--bg); color:var(--ink);
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.wrap { max-width:900px; margin:0 auto; padding:20px 20px 64px; }
+nav { display:flex; align-items:center; gap:14px; padding:14px 0;
+      border-bottom:1px solid var(--rule); flex-wrap:wrap; }
+nav img { height:34px; }
+nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+nav a:hover { color:var(--teal); }
+nav a[aria-current] { color:var(--teal); font-weight:600; }
+nav .cta { margin-left:auto; background:var(--teal); color:#06251f;
+           font-weight:700; padding:8px 16px; border-radius:8px; }
+nav .nav-search { display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; padding:6px 10px; border-radius:8px;
+  border:1px solid var(--rule); color:var(--muted); }
+nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
+/* Grouped dropdowns (desktop). Menus reveal on hover, keyboard focus, or the
+   native <details> toggle; the summary marker is replaced with a caret. */
+.navgroup { position:relative; }
+.navgroup > summary { list-style:none; cursor:pointer; color:var(--muted);
+  font-size:14px; padding:2px 0; display:inline-flex; align-items:center; }
+.navgroup > summary::-webkit-details-marker { display:none; }
+.navgroup > summary::after { content:"\25BE"; font-size:10px; margin-left:5px;
+  opacity:.55; }
+.navgroup:hover > summary, .navgroup[open] > summary,
+.navgroup > summary.active { color:var(--teal); }
+.navmenu { display:none; position:absolute; top:calc(100% + 8px); left:0;
+  background:var(--card); border:1px solid var(--rule); border-radius:10px;
+  padding:6px; min-width:190px; flex-direction:column; gap:1px; z-index:60;
+  box-shadow:0 10px 28px rgba(0,0,0,.4); }
+.navgroup:hover > .navmenu, .navgroup:focus-within > .navmenu,
+.navgroup[open] > .navmenu { display:flex; }
+.navmenu a { padding:8px 12px; border-radius:6px; font-size:14px;
+  white-space:nowrap; color:var(--muted); }
+.navmenu a:hover { background:rgba(45,212,191,.1); color:var(--teal); }
+.navmenu a[aria-current] { color:var(--teal); font-weight:600; }
+/* Desktop: the link-group wrapper dissolves so flex layout is unchanged. */
+.nav-burger { display:none; }
+.nav-links { display:contents; }
+@media (max-width:820px) {
+  nav { gap:8px; }
+  nav img { height:30px; }
+  .nav-burger { display:block; order:3; font-size:20px; line-height:1;
+    color:var(--muted); cursor:pointer; padding:5px 8px; border-radius:8px;
+    border:1px solid var(--rule); user-select:none; }
+  .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
+  nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
+  nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-search span { display:none; }
+  .nav-links { order:4; display:none; flex-basis:100%;
+    flex-direction:column; gap:0; padding:4px 0 2px; }
+  #navToggle:checked ~ .nav-links { display:flex; }
+  .nav-links > a { padding:10px 2px; font-size:15px;
+    border-bottom:1px solid rgba(255,255,255,.05); }
+  /* Groups become inline accordions: the menu stacks under its summary and
+     is revealed by the native <details> tap, not an absolute overlay. */
+  .navgroup { position:static; border-bottom:1px solid rgba(255,255,255,.05); }
+  .navgroup > summary { padding:11px 2px; font-size:15px; justify-content:space-between; }
+  .navgroup[open] > summary::after { transform:rotate(180deg); }
+  .navmenu { position:static; display:none; box-shadow:none; border:none;
+    background:transparent; padding:0 0 6px 12px; min-width:0; gap:0; }
+  .navgroup[open] > .navmenu { display:flex; }
+  .navmenu a { padding:8px 10px; font-size:14px; }
+}
+.skip { position:absolute; left:-9999px; }
+.skip:focus { position:fixed; left:16px; top:10px; z-index:1000;
+  background:var(--teal); color:#06251f; font-weight:700;
+  padding:9px 16px; border-radius:8px; }
+header { padding:44px 0 10px; }
+.kicker { color:var(--teal); font-weight:700; letter-spacing:.12em;
+          text-transform:uppercase; font-size:13px; }
+h1 { font-size:clamp(28px,5vw,44px); line-height:1.12; margin:10px 0;
+     text-wrap:balance; }
+.sub { color:var(--muted); max-width:640px; }
+.stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+         margin:30px 0; }
+@media (min-width:640px){ .stats{ grid-template-columns:repeat(4,1fr);} }
+.stat { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:16px; }
+.stat b { display:block; font-size:24px; color:var(--teal); }
+.stat span { font-size:13px; color:var(--muted); }
+section { margin:34px 0; }
+h2 { font-size:20px; color:var(--teal); margin-bottom:12px;
+     border-bottom:1px solid var(--rule); padding-bottom:8px; }
+ul { padding-left:22px; } li { margin:9px 0; }
+a { color:var(--teal); }
+.btn { display:inline-block; background:var(--teal); color:#06251f;
+       font-weight:700; padding:12px 22px; border-radius:10px;
+       text-decoration:none; margin:8px 8px 0 0; }
+.btn.ghost { background:transparent; color:var(--teal);
+             border:1px solid var(--teal); }
+.muted { color:var(--muted); font-size:14px; }
+.grid3 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid3{ grid-template-columns:repeat(3,1fr);} }
+.card { background:var(--card); border:1px solid var(--rule);
+        border-radius:14px; padding:18px; }
+.card h3 { margin-bottom:6px; font-size:16px; }
+.panel { border-radius:14px; padding:18px; color:#fff; }
+.panel h3 { margin-bottom:8px; }
+.panel p { font-size:14px; color:rgba(255,255,255,.85); }
+.ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
+       border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
+.src { font-size:12.5px; color:var(--muted); }
+.freshness { border-left:3px solid var(--rule); padding:10px 14px;
+  margin:14px 0; background:rgba(255,255,255,.02); border-radius:0 8px 8px 0;
+  font-size:13.5px; }
+.freshness.stale { border-left-color:var(--amber);
+  background:rgba(251,191,36,.07); }
+.freshness p { margin:0; }
+.note { border-left:3px solid var(--rule); padding:12px 16px; margin:18px 0;
+  border-radius:0 8px 8px 0; font-size:14.5px; line-height:1.55; }
+.note.info { border-left-color:var(--teal); background:rgba(45,212,191,.07); }
+.note.warn { border-left-color:var(--amber); background:rgba(251,191,36,.07); }
+.note.bad  { border-left-color:#ef4444; background:rgba(239,68,68,.08); }
+.note.good { border-left-color:#34d399; background:rgba(52,211,153,.07); }
+.note p { margin:0; }
+details.more { border:1px solid var(--rule); border-radius:10px;
+  padding:0 16px; margin:16px 0; background:rgba(255,255,255,.02); }
+details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
+  color:var(--teal); font-size:14.5px; }
+details.more[open] { padding-bottom:10px; }
+nav.pagenav { display:block; padding:14px 18px; border:1px solid var(--rule); border-radius:12px;
+  margin:22px 0 18px; background:rgba(45,212,191,.05); }
+.pagenav-hd { display:flex; align-items:center; justify-content:space-between;
+  gap:12px; font-weight:700; font-size:13px; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--muted); }
+.pagenav ol { margin:10px 0 0; padding-left:20px; font-size:15px; line-height:1.9; }
+.pagenav a { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--rule); }
+.pagenav a:hover { color:var(--teal); border-bottom-color:var(--teal); }
+.expandall { background:none; border:1px solid var(--rule); color:var(--teal);
+  border-radius:999px; padding:5px 12px; font:inherit; font-size:12px;
+  cursor:pointer; text-transform:none; letter-spacing:0; }
+.expandall:hover { border-color:var(--teal); }
+.pagenav .pnav-grp { margin:12px 0 0; font-weight:700; font-size:11.5px;
+  letter-spacing:.06em; text-transform:uppercase; color:var(--teal); }
+.pagenav .pnav-grp:first-of-type { margin-top:8px; }
+.secgrp { margin:36px 0 0; padding-top:20px; border-top:1px solid var(--rule);
+  font-weight:700; font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--teal); }
+details.sect > summary { font-size:17px; color:var(--ink); padding:16px 0;
+  display:flex; align-items:center; gap:10px; }
+details.sect > summary:hover { color:var(--teal); }
+details.sect .secno { display:inline-flex; align-items:center;
+  justify-content:center; width:24px; height:24px; flex:0 0 24px;
+  border-radius:50%; background:rgba(45,212,191,.15); color:var(--teal);
+  font-size:12.5px; font-weight:700; }
+details.sect[open] { padding-bottom:18px; }
+details.sect > p, details.sect > ul, details.sect > ol { max-width:74ch; }
+details.sect h4 { margin:26px 0 6px; font-size:16px; color:var(--ink); }
+details.sect > p:first-of-type { margin-top:4px; }
+.billbar { display:flex; height:60px; border-radius:8px; overflow:hidden;
+  margin:20px 0 12px; }
+.billbar > div { display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:14px; }
+.barkey { display:flex; flex-wrap:wrap; gap:14px; font-size:13px;
+  color:var(--muted); }
+.barkey span { display:flex; align-items:center; gap:6px; }
+.barkey i { width:12px; height:12px; border-radius:3px; }
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px; margin:18px 0; }
+.flow .step { border:1px solid var(--rule); border-radius:10px; padding:12px 14px;
+  background:rgba(255,255,255,.02); font-size:14px; }
+.flow .step b { display:block; margin-bottom:4px; }
+.flow .step.end { border-color:#ef4444; background:rgba(239,68,68,.08); }
+.hbars { margin:18px 0; display:flex; flex-direction:column; gap:8px; }
+.hbar-row { display:grid; grid-template-columns:minmax(90px,1.1fr) 2.4fr
+  minmax(90px,1.3fr); gap:10px; align-items:center; font-size:13.5px; }
+.hbar-label { color:var(--ink); }
+.hbar-track { background:rgba(255,255,255,.06); border-radius:5px; height:16px; }
+.hbar-fill { height:16px; border-radius:5px; }
+.hbar-val { color:var(--muted); font-variant-numeric:tabular-nums; }
+@media (max-width:640px) {
+  .hbar-row { grid-template-columns:1fr; gap:2px; }
+  .hbar-track { height:12px; }
+}
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+th { color:var(--muted); font-weight:600; }
+footer { margin-top:48px; border-top:1px solid var(--rule);
+         padding-top:16px; font-size:13px; color:var(--muted); }
+.nl-box { background:var(--card); border:1px solid var(--rule);
+          border-radius:12px; padding:14px 18px; margin-bottom:18px; }
+.nl-box p { color:var(--ink); font-size:14px; margin-bottom:8px; }
+.nl-form { display:flex; gap:8px; flex-wrap:wrap; }
+.nl-form input[type=email] { flex:1; min-width:220px; background:var(--bg);
+  color:var(--ink); border:1px solid var(--rule); border-radius:8px;
+  padding:9px 12px; font-size:14px; }
+.nl-form button { background:var(--teal); color:#04211c; border:0;
+  border-radius:8px; padding:9px 18px; font-weight:700; font-size:14px;
+  cursor:pointer; }
+.submit-box { background:var(--card); border:1px solid var(--rule);
+  border-radius:12px; padding:20px 22px; margin-top:16px; }
+.submit-box label { display:block; font-size:14px; color:var(--ink);
+  font-weight:600; margin-bottom:4px; margin-top:12px; }
+.submit-box label:first-child { margin-top:0; }
+.submit-box input, .submit-box select, .submit-box textarea {
+  width:100%; box-sizing:border-box; background:var(--bg); color:var(--ink);
+  border:1px solid var(--rule); border-radius:8px; padding:9px 12px;
+  font-size:14px; font-family:inherit; }
+.submit-box textarea { min-height:70px; resize:vertical; }
+.submit-box .row2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media (max-width:520px){ .submit-box .row2 { grid-template-columns:1fr; } }
+.submit-box button { background:var(--teal); color:#04211c; border:0;
+  border-radius:8px; padding:11px 22px; font-weight:700; font-size:15px;
+  cursor:pointer; margin-top:16px; }
+.submit-box .hint { font-size:12px; color:var(--muted); margin-top:3px; }
+.statelist { columns:2; font-size:14.5px; }
+@media (min-width:640px){ .statelist{ columns:4; } }
+.statelist a { display:block; padding:3px 0; text-decoration:none; }
+.us-map { max-width:100%; height:auto; margin:20px auto; display:block; }
+.us-map path { fill:var(--card); stroke:var(--rule); stroke-width:.6;
+               cursor:pointer; transition:fill .15s; }
+.us-map path:hover { fill:var(--teal); }
+.us-map text { fill:var(--muted); font-size:7px; pointer-events:none;
+               text-anchor:middle; font-weight:600;
+               font-family:system-ui,-apple-system,sans-serif; }
+.us-map path:hover + text, .us-map path:hover ~ text { fill:var(--bg); }
+.map-tooltip { position:fixed; background:var(--card); border:1px solid var(--teal);
+               border-radius:8px; padding:6px 12px; font-size:13px;
+               color:var(--ink); pointer-events:none; z-index:999;
+               display:none; white-space:nowrap; }
+.post-meta { color:var(--muted); font-size:14px; margin:8px 0 6px; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 20px; }
+.tag { background:var(--card); border:1px solid var(--rule);
+       border-radius:20px; padding:3px 11px; font-size:12px;
+       color:var(--muted); }
+.tag-btn { cursor:pointer; font:inherit; font-size:12px; line-height:1.2;
+       transition:filter .12s ease, background .12s ease; }
+.tag-btn:hover { filter:brightness(1.25); }
+.tag-btn:focus-visible { outline:2px solid var(--teal); outline-offset:2px; }
+.prose h3 { font-size:17px; color:var(--teal); margin:24px 0 8px; }
+.prose p { margin:10px 0; }
+.prose blockquote { border-left:3px solid var(--teal); margin:16px 0;
+                    padding:6px 16px; color:var(--muted); }
+.prose table { margin:16px 0; }
+.prose ul, .prose ol { margin:10px 0; }
+.prose hr { border:none; border-top:1px solid var(--rule); margin:24px 0; }
+.post-nav { display:flex; justify-content:space-between; gap:14px;
+            margin:32px 0 0; padding:18px 0 0;
+            border-top:1px solid var(--rule); font-size:14px; }
+.post-nav a { max-width:45%; }
+.post-nav .dir { color:var(--muted); font-size:12px; display:block; }
+.blog-list { list-style:none; padding:0; }
+.blog-list li { border-bottom:1px solid var(--rule); padding:18px 0;
+  content-visibility:auto; contain-intrinsic-size:auto 110px; }
+.blog-list li:last-child { border-bottom:none; }
+/* Only posts carry art — news/video lists reuse .blog-list without a thumb,
+   so the two-column grid is scoped to .has-art rather than the whole list. */
+.blog-list li.has-art { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:680px){ .blog-list li.has-art {
+  grid-template-columns:200px 1fr; gap:18px; align-items:start;
+  contain-intrinsic-size:auto 150px; } }
+.blog-list .thumb { width:100%; height:auto; display:block; border-radius:10px;
+  border:1px solid var(--rule); }
+.post-art { width:100%; height:auto; display:block; border-radius:14px;
+  border:1px solid var(--rule); margin:4px 0 24px;
+  filter:drop-shadow(0 8px 24px rgba(45,212,191,.10)); }
+.post-art .glow, .thumb .glow { animation:pulse 3.2s ease-in-out infinite; }
+@media (prefers-reduced-motion:reduce){
+  .post-art .glow, .thumb .glow { animation:none; opacity:.7 } }
+.blog-list h3 { font-size:17px; margin:0 0 4px; }
+.blog-list h3 a { text-decoration:none; }
+.blog-list .summary { color:var(--muted); font-size:14px; margin:4px 0 0; }
+.badge { display:inline-block; font-size:12px; font-weight:700;
+         padding:2px 9px; border-radius:6px; }
+.pill { display:inline-block; font-weight:600; text-transform:uppercase;
+        letter-spacing:.04em; }
+.pill.bad  { background:rgba(239,68,68,.12); color:#ef4444; }
+.pill.good { background:rgba(52,211,153,.12); color:#34d399; }
+/* Source-tier badges on headline lists. Deliberately quiet — they mark a
+   citable outlet, they don't shout over the headline itself. */
+.src-badge { display:inline-block; font-size:10.5px; font-weight:700;
+  letter-spacing:.03em; text-transform:uppercase; padding:1px 6px;
+  border-radius:5px; margin-left:6px; vertical-align:middle;
+  border:1px solid transparent; white-space:nowrap; }
+.src-wire, .src-national { background:rgba(45,212,191,.14); color:#2dd4bf;
+  border-color:rgba(45,212,191,.32); }
+.src-nonprofit { background:rgba(167,139,250,.14); color:#a78bfa;
+  border-color:rgba(167,139,250,.30); }
+.src-trade { background:rgba(96,165,250,.13); color:#60a5fa;
+  border-color:rgba(96,165,250,.28); }
+.src-local, .src-international { background:rgba(148,163,184,.14);
+  color:#cbd5e1; border-color:rgba(148,163,184,.28); }
+.src-official { background:rgba(251,191,36,.13); color:#fbbf24;
+  border-color:rgba(251,191,36,.28); }
+.src-aggregator, .src-advocacy { background:rgba(239,68,68,.10);
+  color:#fca5a5; border-color:rgba(239,68,68,.26); }
+.badge-enacted { background:#065f46; color:#6ee7b7; }
+.badge-proposed { background:#713f12; color:#fde68a; }
+.badge-rejected { background:#7f1d1d; color:#fca5a5; }
+.badge-vetoed { background:#4c1d95; color:#c4b5fd; }
+.badge-expired { background:#374151; color:#d1d5db; }
+.badge-rescinded { background:#4c1d95; color:#c4b5fd; }
+/* Project-stage badges — coloured by urgency, not by win/loss. */
+.badge-hearing-scheduled { background:#78350f; color:#fcd34d; }
+.badge-awaiting-decision { background:#1e3a5f; color:#93c5fd; }
+.badge-in-review { background:#134e4a; color:#5eead4; }
+.badge-rumored { background:#374151; color:#9ca3af; }
+.badge-approved { background:#7f1d1d; color:#fca5a5; }
+.badge-denied { background:#065f46; color:#6ee7b7; }
+.badge-withdrawn { background:#334155; color:#cbd5e1; }
+.timeline { list-style:none; padding:0; margin:10px 0 0;
+            border-left:2px solid var(--rule); }
+.timeline li { position:relative; padding:0 0 12px 18px; }
+.timeline li::before { content:""; position:absolute; left:-6px; top:5px;
+   width:10px; height:10px; border-radius:50%; background:var(--teal); }
+.timeline .tl-date { font-size:12px; font-weight:700; color:var(--teal); }
+.timeline .tl-kind { font-size:11px; text-transform:uppercase;
+   letter-spacing:.06em; color:var(--muted); margin-left:6px; }
+.proj { border:1px solid var(--rule); border-radius:12px; padding:16px 18px;
+        margin:14px 0; background:var(--card); }
+.proj h3 { margin:0 0 4px; }
+.proj .meta { font-size:13px; color:var(--muted); margin:2px 0 8px; }
+.proj .next { font-size:14px; margin:8px 0 0; }
+.trail { margin:10px 0 0; }
+.trail h4 { margin:12px 0 2px; font-size:14px; }
+.trail p.why { font-size:13px; color:var(--muted); margin:0 0 6px; }
+.trail ul { list-style:none; padding:0; margin:0; }
+.trail li { padding:6px 0; border-top:1px solid var(--rule); font-size:14px; }
+.trail li .why { display:block; font-size:12.5px; color:var(--muted);
+   margin-top:2px; }
+.trail .k { font-size:10px; text-transform:uppercase; letter-spacing:.06em;
+   padding:1px 6px; border-radius:6px; margin-left:6px; vertical-align:1px; }
+.trail .k-search { background:#3f2d10; color:#fbbf24; }
+.trail .k-note { background:#334155; color:#cbd5e1; }
+/* Download cards — a consistent, scannable presentation for every file the
+   site hands out (PDF briefings, JSON/CSV datasets). */
+.dl-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:12px; margin:16px 0; }
+.dl-card { display:flex; gap:14px; align-items:center; padding:14px 16px;
+  border:1px solid var(--rule); border-radius:12px; background:var(--card);
+  text-decoration:none; color:var(--ink);
+  transition:border-color .15s ease, transform .15s ease; }
+.dl-card:hover { border-color:var(--teal); transform:translateY(-1px); }
+.dl-ico { font-size:26px; line-height:1; flex:0 0 auto; }
+.dl-body { flex:1; min-width:0; }
+.dl-title { font-weight:700; font-size:15px; display:flex; gap:8px;
+  align-items:center; flex-wrap:wrap; }
+.dl-fmt { font-size:10px; font-weight:800; letter-spacing:.06em;
+  text-transform:uppercase; padding:2px 7px; border-radius:5px;
+  background:rgba(45,212,191,.15); color:var(--teal); }
+.dl-meta { font-size:13px; color:var(--muted); margin-top:3px; }
+.dl-arrow { color:var(--muted); font-size:20px; flex:0 0 auto; font-weight:700; }
+.dl-card:hover .dl-arrow { color:var(--teal); }
+@media print { .dl-card { border-color:#ccc; } .dl-card:hover { transform:none; } }
+.badge-note { font-size:11px; font-weight:600; color:var(--muted);
+              display:block; margin-top:3px; }
+.unverified { font-size:12px; color:#fca5a5; font-weight:600; }
+.verified-on { font-size:12px; color:var(--muted); white-space:nowrap; }
+.kind-badge { font-size:10px; font-weight:800; letter-spacing:.04em;
+  text-transform:uppercase; padding:1px 6px; border-radius:5px;
+  display:inline-block; margin-left:5px; vertical-align:1px; }
+.kind-official { background:rgba(52,211,153,.15); color:#34d399; }
+.kind-roundup { background:rgba(251,191,36,.15); color:#fbbf24; }
+.kind-news { background:rgba(148,163,184,.15); color:#94a3b8; }
+.outcome { border-left:3px solid var(--teal); padding:10px 14px;
+           margin:10px 0; }
+.outcome .cat { font-size:12px; font-weight:700; color:var(--teal);
+                text-transform:uppercase; letter-spacing:.08em; }
+.grid2 { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
+.official { font-size:14px; }
+.official .role { color:var(--muted); font-size:13px; }
+.hero-grid { display:grid; grid-template-columns:1fr; gap:24px;
+  align-items:center; padding:44px 0 10px; }
+@media (min-width:820px){ .hero-grid{ grid-template-columns:1.15fr .85fr; padding:56px 0 20px; } }
+.hero-grid header { padding:0; }
+.hero-art { width:100%; max-width:420px; margin:0 auto; display:block;
+  filter:drop-shadow(0 8px 24px rgba(45,212,191,.12)); }
+.hero-art .glow { animation:pulse 3.2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:.35} 50%{opacity:1} }
+@media (prefers-reduced-motion:reduce){ .hero-art .glow{ animation:none; opacity:.7 } }
+.iconcard { display:flex; gap:14px; align-items:flex-start; }
+.iconcard .ico { flex-shrink:0; width:40px; height:40px; border-radius:10px;
+  background:rgba(45,212,191,.12); display:flex; align-items:center;
+  justify-content:center; color:var(--teal); }
+.iconcard .ico svg { width:22px; height:22px; }
+.iconcard .body h3 { margin:0 0 4px; }
+.demand-chart { margin:14px 0 6px; }
+.demand-chart .row { display:grid; grid-template-columns:minmax(80px,90px) 1fr auto;
+  gap:12px; align-items:center; padding:6px 0; font-size:14px; }
+.demand-chart .yr { color:var(--muted); font-variant-numeric:tabular-nums; }
+.demand-chart .bar { height:22px; border-radius:6px;
+  background:linear-gradient(90deg, rgba(45,212,191,.85), rgba(45,212,191,.55));
+  position:relative; }
+.demand-chart .bar.range { background:linear-gradient(90deg,
+  rgba(251,191,36,.85) 0%, rgba(251,191,36,.85) var(--lo,50%),
+  rgba(251,191,36,.35) var(--lo,50%), rgba(251,191,36,.35) 100%); }
+.demand-chart .val { color:var(--ink); font-variant-numeric:tabular-nums;
+  font-weight:600; text-align:right; }
+.demand-chart .val .homes { display:block; color:var(--muted); font-weight:400;
+  font-size:12px; white-space:nowrap; }
+.grid-flow-svg { width:100%; height:auto; max-width:820px; margin:14px auto;
+  display:block; }
+.grid-flow-svg text { font:600 12px system-ui,-apple-system,sans-serif;
+  fill:var(--ink); }
+.grid-flow-svg text.small { font-size:10.5px; font-weight:500; fill:var(--muted); }
+.grid-flow-svg .flow-dot { fill:var(--teal); }
+.grid-flow-svg .flow-dot.a1 { animation:flowa 3s linear infinite; }
+.grid-flow-svg .flow-dot.a2 { animation:flowb 3s linear infinite; animation-delay:1s; }
+.grid-flow-svg .flow-dot.a3 { animation:flowc 3s linear infinite; animation-delay:2s; }
+@keyframes flowa { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@keyframes flowb { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@keyframes flowc { 0%{opacity:0; transform:translateX(0)} 20%{opacity:1}
+  80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
+@media (prefers-reduced-motion:reduce){ .grid-flow-svg .flow-dot{ animation:none } }
+
+/* Print: this is a handout. People print state briefings, hearing questions
+   and the health-risk page to carry into a meeting, so drop the dark theme
+   (wastes ink, reads badly on paper), strip the chrome that can't be tapped,
+   expand collapsed sections, and print source URLs after links so a citation
+   survives the photocopier. */
+@media print {
+  :root { --bg:#fff; --card:#fff; --ink:#111; --muted:#444; --rule:#bbb;
+          --teal:#0a7d70; --amber:#8a6d00; }
+  * { box-shadow:none !important; text-shadow:none !important;
+      filter:none !important; animation:none !important; }
+  body { background:#fff; color:#111; font-size:11.5pt; }
+  .wrap { max-width:none; padding:0; }
+  nav, footer, .nav-search, .cta, .nav-burger, .skip,
+  .hero-art, .us-map, .grid-flow-svg, .flow-dot, .blog-list .thumb,
+  .post-art, .demand-chart { display:none !important; }
+  a { color:#111; text-decoration:underline; }
+  /* Show the destination of real links, not internal .html jumps or buttons. */
+  main a[href^="http"]:not(.btn):not(.tag)::after {
+    content:" (" attr(href) ")"; font-size:9pt; color:#555;
+    word-break:break-all; text-decoration:none; }
+  .btn { border:1px solid #111 !important; color:#111 !important;
+         background:#fff !important; padding:4px 10px; }
+  .card, .panel, .note, .freshness, .glass-card, .outcome, details.more,
+  .stat { background:#fff !important; border:1px solid #ccc !important;
+          color:#111 !important; }
+  .panel *, .note * { color:#111 !important; }
+  .kicker, h2, .stat b, .prose h3 { color:#0a7d70 !important; }
+  .badge { border:1px solid #333; color:#111 !important;
+           background:#fff !important; }
+  .src-badge { border:1px solid #666; color:#111 !important;
+               background:#fff !important; }
+  /* Expand collapsed disclosures so nothing prints hidden. */
+  details[open] > summary { color:#111; }
+  details:not([open]) > *:not(summary) { display:block !important; }
+  details > summary::after, details > summary::-webkit-details-marker {
+    display:none !important; }
+  section, .card, tr, li, .outcome, .note { break-inside:avoid; }
+  h1, h2, h3 { break-after:avoid; }
+  table, .table-scroll { overflow:visible !important; }
+  th, td { border-bottom:1px solid #ccc; }
+  @page { margin:1.6cm; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<nav>
+  <a href="index.html"><img src="assets/logo.svg" alt="AI GridWatch"></a>
+  <input type="checkbox" id="navToggle" hidden>
+  <label for="navToggle" class="nav-burger" aria-label="Menu"
+         role="button">&#9776;</label>
+  <a class="nav-search" href="search.html" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <details class="navgroup"><summary class="active">Act</summary><div class="navmenu"><a href="start-here.html">Start here</a><a href="siting.html">Siting score</a><a href="hearing-questions.html">Hearing prep</a><a href="opposition.html">Know the opposition</a><a href="cba-clauses.html">Model clauses</a><a href="case-studies.html" aria-current="page">Case studies</a><a href="impact.html">Impact calculator</a></div></details>
+    <details class="navgroup"><summary>Your area</summary><div class="navmenu"><a href="states/index.html">Your state</a><a href="map.html">Map & projects</a><a href="moratoriums.html">Moratoriums</a><a href="puc.html">PUCs</a><a href="scorecard.html">Officials scorecard</a><a href="senate-races.html">Senate races 2026</a><a href="house-races.html">House races 2026</a><a href="community-value.html">Community playbook</a></div></details>
+    <details class="navgroup"><summary>The facts</summary><div class="navmenu"><a href="health-risks.html">Health risks</a><a href="bills.html">Your electric bill</a><a href="tax-breaks.html">Tax breaks</a><a href="environment.html">Environment</a><a href="learn.html">Learn the basics</a></div></details>
+    <details class="navgroup"><summary>Industry</summary><div class="navmenu"><a href="data-centers.html">Data centers</a><a href="companies/index.html">Companies</a><a href="complaints.html">Complaints by company</a><a href="outlook.html">Electricity outlook</a><a href="open-data.html">Open data</a></div></details>
+    <details class="navgroup"><summary>Updates</summary><div class="navmenu"><a href="blog/index.html">Blog</a><a href="news/index.html">News</a><a href="story-tracker.html">Story tracker</a><a href="projects.html">Projects tracker</a><a href="videos.html">Videos</a></div></details>
+  </div>
+  <a class="cta" href="start-here.html">Open the toolkit &rarr;</a>
+</nav>
+<main id="main">
+
+<header>
+  <div class="kicker">Case studies</div>
+  <h1>What communities have actually won — and lost</h1>
+  <p class="sub">Documented outcomes from six moratorium fights, four
+  benchmark CBAs, and every hyperscaler's documented pattern of concession.
+  If you want to know what's realistic to ask for, this is where to start.</p>
+</header>
+
+<section>
+  <h2>Moratorium outcomes</h2>
+  <p class="muted">Six real cases; the categories reflect what the community
+  ended up with, not what was originally proposed.</p>
+  
+<div class="note info">
+  <p><strong>Groton, CT</strong> —
+  <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
+  Permanent limits adopted</span></p>
+  <p><strong>A one-year pause turned into a permanent size cap</strong></p>
+  <p>Groton&#x27;s Planning and Zoning Commission adopted a one-year moratorium on data centers over 5,000 sq ft in June 2022 — and spent that year writing rules rather than letting it lapse. After a final public hearing in June 2023 the town adopted data center regulations, effective that July, capping data center buildings at 12,500 sq ft. Hyperscale campuses typically run 150,000–350,000 sq ft, so the cap excludes them by size instead of by argument. The moratorium was only the mechanism; the size cap is what holds.</p>
+</div>
+<div class="note info">
+  <p><strong>Peculiar, MO</strong> —
+  <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
+  Project blocked</span></p>
+  <p><strong>The town deleted &#x27;data center&#x27; from its zoning code</strong></p>
+  <p>Peculiar had already cleared the way for Diode Ventures&#x27; $1.5B Harper Road Technology Park by adding a &#x27;data center&#x27; definition to its light-industrial zoning code. After hundreds of residents from Peculiar and neighbouring Raymore turned out against it, the Board of Aldermen voted unanimously in October 2024 to strike that definition back out — blocking the project without ever passing a moratorium. Removing a permitted use is a quieter tool than a ban, and here it was a faster one.</p>
+</div>
+<div class="note bad">
+  <p><strong>Cheyenne, WY</strong> —
+  <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
+  No protections</span></p>
+  <p><strong>Council rejected a pause with a 3,200-acre expansion already moving</strong></p>
+  <p>Microsoft announced a 3,200-acre expansion of its Cheyenne campus in April 2026, and Wyoming DEQ approved permits for 30 gas-fired engines plus emergency generators. On May 27, 2026 the city council voted 8–1 against a 12-month moratorium after three and a half hours of public comment — supporters raising water and noise, opponents raising jobs and tax base. The ratepayer question is being handled through Black Hills Energy&#x27;s Large Power Contract Service tariff, under which Microsoft pays directly for the infrastructure it needs, rather than through anything the city negotiated. No community benefit agreement appears in the reporting.</p>
+</div>
+<div class="note warn">
+  <p><strong>Prince William County, VA</strong> —
+  <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
+  Political shift</span></p>
+  <p><strong>Voters removed the board chair; the courts voided the rezoning</strong></p>
+  <p>In 2022 a board majority led by Chair Ann Wheeler rezoned more than 2,000 acres of farmland for the Prince William Digital Gateway. On June 20, 2023 Wheeler lost the Democratic primary to Deshundra Jefferson, who had campaigned against large-scale data centers. The board approved the rezoning 4–3 that December regardless — and it was the courts, not the ballot box, that ended it: the rezoning was voided on appeal and a developer withdrew, effectively killing the project. Statewide, Virginia voter support for new data centers fell from 69% in 2023 to 35%. Elections changed who was in the room; litigation changed the outcome.</p>
+</div>
+<div class="note info">
+  <p><strong>The Dalles, OR</strong> —
+  <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
+  Mixed outcome</span></p>
+  <p><strong>Google funded the water system — and its share of the water kept climbing</strong></p>
+  <p>Under a 2021 agreement Google paid roughly $28.5M toward upgrades to The Dalles&#x27; water treatment and storage, including an aquifer storage and recovery system it later handed to the city, and bought and donated 3.88 million gallons/day of water rights from a closed aluminium smelter. What the deal did not include was a cap on Google&#x27;s own draw. When The Oregonian sued for the usage records, the city spent 13 months fighting disclosure before settling — and the records showed the campus using about 29% of the city&#x27;s water, rising to roughly 40% (some 550 million gallons a year) by 2025. Infrastructure money is not the same protection as a volume limit. This is the case that shows the difference, and the reason to put a cap in writing.</p>
+</div>
+<div class="note info">
+  <p><strong>Mesa, AZ</strong> —
+  <span class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.05em">
+  Permanent limits adopted</span></p>
+  <p><strong>Zoning rules instead of a moratorium: setbacks, height caps, sound study</strong></p>
+  <p>With 15 data centers built, approved or proposed on roughly 1,500 acres in six years, Mesa&#x27;s council introduced zoning controls 6–0 and adopted them in July 2025. Data centers are now allowed only where the council specifically authorises a Planned Area Development overlay on industrial land, and each must sit at least 400 feet from residential, stay under 60 feet tall, screen its mechanical equipment, and submit a sound study. Water cooling was argued in council — Councilwoman Jenn Duff pushed to restrict it during drought — but did not make it into the adopted rules. Worth reading as a list of what a council will grant without a moratorium, and what it won&#x27;t.</p>
+</div>
+</section>
+
+<section>
+  <h2>Benchmark CBAs — what similar communities won</h2>
+  <div style="overflow-x:auto"><table>
+    <tr><th>Community</th><th>Developer</th><th>What they won</th></tr>
+    <tr><td><strong>Loudoun County, VA</strong></td><td>Multiple</td><td>Declined abatements and taxed data centers instead: the FY2027 budget puts them at roughly $1.3B — about 45% of all county tax revenue — on ~4% of commercial parcels. The benchmark for what a jurisdiction with market power can simply refuse to give away <span class="verified-on"><a href="https://www.loudoun.gov/Faq.aspx?QID=1793" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></td></tr>
+<tr><td><strong>Groton, CT</strong></td><td>Multiple</td><td>A hard size cap, not a cheque: data center buildings limited to 12,500 sq ft in the zoning adopted June 2023, after a one-year moratorium. Hyperscale campuses run 150,000–350,000 sq ft, so the cap excludes them by geometry rather than by argument <span class="verified-on"><a href="https://theday.com/local-news/20220621/groton-approves-one-year-moratorium-on-large-scale-data-centers" rel="nofollow noopener" target="_blank">Source 1</a> · <a href="https://datacenters.ainowinstitute.org/local/" rel="nofollow noopener" target="_blank">Source 2</a> · verified 2026-08-05</span></td></tr>
+<tr><td><strong>Los Lunas, NM</strong></td><td>Meta</td><td>A water agreement with terms: the March 2025 village agreement with Greater Kudu LLC (Meta&#x27;s filing entity) guarantees up to 3M gallons/day but suspends supply in a declared Stage 3 water emergency. Meta also funds eight Rio Grande watershed restoration projects, ~172M gallons/year <span class="verified-on"><a href="https://datacenters.atmeta.com/2026/04/restoring-water-in-our-data-center-communities/" rel="nofollow noopener" target="_blank">Source 1</a> · <a href="https://www.news-bulletin.com/news/tax-break-water-deal-for-meta-data-center/article_d4ff8540-163d-4c73-8a17-a5ec65209c42.html" rel="nofollow noopener" target="_blank">Source 2</a> · verified 2026-08-05</span></td></tr>
+<tr><td><strong>Morrow County, OR</strong></td><td>Amazon (AWS)</td><td>Fees in lieu of taxes, negotiated in the open: ~$40M over 15 years across five new data centers in exchange for enterprise-zone abatements worth an estimated $1B (2023). Cited here as a benchmark of what a payment-in-lieu deal looks like — including how much is forgone to get it <span class="verified-on"><a href="https://www.opb.org/article/2023/05/19/amazon-data-center-oregon-morrow-county/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></td></tr>
+<tr><td><strong>The Dalles, OR</strong></td><td>Google</td><td>Infrastructure money, but no cap — the cautionary benchmark. Google paid ~$28.5M toward city water treatment and storage and donated 3.88M gallons/day of water rights, yet nothing limited its own draw, which reached ~40% of city supply by 2025. Ask for the volume limit in writing, not just the capital contribution <span class="verified-on"><a href="https://www.thedalles.org/news_detail_T4_R207.php" rel="nofollow noopener" target="_blank">Source 1</a> · <a href="https://waterwatch.org/googles-water-use-is-soaring-in-the-dalles-records-show-with-two-more-data-centers-to-come-2/" rel="nofollow noopener" target="_blank">Source 2</a> · verified 2026-08-05</span></td></tr>
+  </table></div>
+  <p class="muted">Every one of these happened <em>before</em> final approval.
+  Timing is the leverage.</p>
+</section>
+
+<section>
+  <h2>How each hyperscaler negotiates</h2>
+  <p class="muted">Documented concessions and the pattern behind them. Use
+  these to anchor your ask to what the same company has already agreed to
+  elsewhere.</p>
+  
+<section id="google">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Google</h3>
+  <p class="muted"><em>Negotiation pattern:</em> Negotiates through PR-friendly commitments — water stewardship pledges, community grants — but its documented concessions came under permit leverage and records-transparency pressure, not goodwill. Shell LLCs and confidentiality are standard practice until approvals are locked, so forcing early disclosure of water and power demands is where the leverage is. (Strategy read, not a sourced fact.)</p>
+  <ul><li><strong>The Dalles, OR</strong> (2021-24) — Paid ~$28.5M toward city water treatment and storage, including an aquifer storage and recovery system later transferred to the city, and donated 3.88M gallons/day of purchased water rights. Note what is absent: no cap on its own draw, which reached ~40% of city supply. <span class="verified-on"><a href="https://www.thedalles.org/news_detail_T4_R207.php" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></li>
+<li><strong>The Dalles, OR</strong> (2022) — Dropped its fight to keep water-use records secret after The Oregonian sued; the city had spent 13 months resisting disclosure before settling. <span class="verified-on"><a href="https://www.rcfp.org/dalles-google-oregonian-settlement/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></li></ul>
+</section>
+<section id="meta">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Meta</h3>
+  <p class="muted"><em>Negotiation pattern:</em> Runs a standardized siting playbook behind shell LLCs — in Los Lunas it arrived as &#x27;Greater Kudu LLC&#x27; — and moves fast once incentives are locked. Its public water-restoration programme is leverage: it has been converted into agreement terms elsewhere, so ask for the terms, not the pledge. (Strategy read.)</p>
+  <ul><li><strong>Los Lunas, NM</strong> (2025) — Village water/wastewater agreement with Greater Kudu LLC guarantees up to 3M gallons/day but suspends supply during a declared Stage 3 water emergency — a usable template for drought-conditioned service. <span class="verified-on"><a href="https://www.news-bulletin.com/news/tax-break-water-deal-for-meta-data-center/article_d4ff8540-163d-4c73-8a17-a5ec65209c42.html" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></li>
+<li><strong>Rio Grande watershed</strong> (ongoing) — Funds eight watershed restoration projects returning ~172M gallons/year. Restoration is not the same as reduced local draw — treat it as additional, not as an offset against your own supply. <span class="verified-on"><a href="https://datacenters.atmeta.com/2026/04/restoring-water-in-our-data-center-communities/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></li>
+<li><strong>Data center communities</strong> (ongoing) — Community Action Grants to schools and nonprofits near campuses, administered via ChangeX. Table stakes, not a substitute for a binding agreement. <span class="verified-on"><a href="https://datacenters.atmeta.com/community-action-grants/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></li></ul>
+</section>
+<section id="microsoft">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Microsoft</h3>
+  <p class="muted"><em>Negotiation pattern:</em> The most willing of the hyperscalers to accept design and transparency conditions, and the one whose own published commitments give you the most to hold it to. Use its zero-water design as the floor of the ask: it has already built it, so &#x27;evaporative draw is unavoidable&#x27; is not available to a developer proposing otherwise. (Strategy read.)</p>
+  <ul><li><strong>New builds</strong> (2024) — All datacenter designs from August 2024 use chip-level closed-loop cooling consuming zero water, avoiding &gt;125M litres/year per facility. Announced Dec 2024; sites online from late 2027. <span class="verified-on"><a href="https://www.microsoft.com/en-us/microsoft-cloud/blog/2024/12/09/sustainable-by-design-next-generation-datacenters-consume-zero-water-for-cooling/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></li>
+<li><strong>Quincy WA / San Antonio TX</strong> (ongoing) — Runs cooling largely on recycled, reused or non-potable water — 74% in Quincy, 79% in San Antonio — rather than potable municipal supply. <span class="verified-on"><a href="https://blogs.microsoft.com/blog/2026/06/24/inside-microsofts-two-decade-push-to-cut-water-intensity-while-scaling-for-growth/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></li></ul>
+</section>
+<section id="amazon-(aws)">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Amazon (AWS)</h3>
+  <p class="muted"><em>Negotiation pattern:</em> The hardest bargainer on taxes, and the one most likely to hold an abatement rather than pay. Where communities have extracted terms, it has been through payment-in-lieu deals negotiated before approval — leverage sits entirely with whoever controls the next permit. (Strategy read.)</p>
+  <ul><li><strong>Morrow County, OR</strong> (2023) — Agreed to pay ~$40M in fees over 15 years across five new data centers, in exchange for enterprise-zone abatements estimated at $1B. Read both halves of that trade before citing it as a win. <span class="verified-on"><a href="https://www.opb.org/article/2023/05/19/amazon-data-center-oregon-morrow-county/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-05</span></li></ul>
+</section>
+<section id="qts">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">QTS</h3>
+  <p class="muted"><em>Negotiation pattern:</em> Blackstone-owned and growth-driven, so entitlement delay is a real cost and timeline pressure is genuine leverage. But Prince William is the cautionary case: proffers offered late in a contested rezoning were judged too late to evaluate, and the rezoning was later voided on appeal. Get proffers recorded as binding conditions early, or they are worth nothing. (Strategy read.)</p>
+  <ul><li><strong>Prince William County, VA</strong> (2023) — Added proffers during the contested Digital Gateway rezoning — additional public space and strengthened power-line placement language — after 24 hours of public comment. Staff and some supervisors said the amendments came too late to assess; the rezoning was voided on appeal in 2026 and the project died. <span class="verified-on"><a href="https://www.datacenterdynamics.com/en/news/prince-william-county-officials-vote-in-favor-of-pw-digital-gateway-data-center-rezoning-in-manassas-virginia/" rel="nofollow noopener" target="_blank">Source 1</a> · <a href="https://virginiabusiness.com/prince-william-digital-gateway-data-center-project-officially-dies/" rel="nofollow noopener" target="_blank">Source 2</a> · verified 2026-08-05</span></li></ul>
+</section>
+<section id="coreweave">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">CoreWeave</h3>
+  <p class="muted"><em>Negotiation pattern:</em> A GPU-cloud pure-play that leases space inside partners&#x27; buildings (Core Scientific, Digital Realty, Switch, etc.) rather than owning sites outright. That means the developer on a community&#x27;s permit may be the landlord, not CoreWeave — but CoreWeave&#x27;s contracted power draw is what drives the load. Leverage sits with whoever controls the next lease or power allocation, and CoreWeave&#x27;s aggressive growth timeline (NASDAQ IPO March 2025, $12B+ contracted revenue backlog) makes delay costly. Its proposed acquisition of Core Scientific (~200 MW HPC hosting deal, Jul 2025) would consolidate landlord and tenant — watch for that closing. (Strategy read.)</p>
+  <ul><li><strong>Lancaster, PA</strong> (2025) — Community benefits agreement worth $20M in payments to the city, paid in installments at construction financing and start of operation for each building: half to nonprofits for economic development, half toward climate goals. Also a 100% renewable energy commitment backed by a $10M letter of credit, a local hiring plan targeting 2,000 construction and 350 permanent jobs, and limits on noise, light, water use and air pollution. Read the enforcement clause before copying it: only the city can sue over a violation, so residents have no direct recourse on noise, and activists said the city ignored requests to include residents in the negotiation. <span class="verified-on"><a href="https://lancasteronline.com/news/local/lancaster-data-center-agreement-s-benefit-to-community-questioned/article_b2654db6-c6e3-4719-8a0e-1f839c1e325e.html" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-23</span></li>
+<li><strong>Kenilworth, NJ</strong> (2025) — A $1.8B, 400,000 sq ft facility on the former Merck campus on Galloping Hill Road. Residents said they learned of it only once construction was already underway, and raised pollution and utility-cost concerns; no community benefits agreement was negotiated. <span class="verified-on"><a href="https://abc7ny.com/post/community-rallies-giant-data-center-being-built-kenilworth-new-jersey/19053270/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-23</span></li></ul>
+</section>
+<section id="xai-(colossus)">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">xAI (Colossus)</h3>
+  <p class="muted"><em>Negotiation pattern:</em> Moved faster than any other AI builder — the Memphis Colossus cluster went from empty warehouse to 100k GPUs in ~122 days — and has operated with minimal community engagement. Memphis residents reported noise, generator exhaust, and unpermitted gas turbines before any public meeting. Speed is xAI&#x27;s entire advantage and its vulnerability: every day of delay costs real training revenue, so permitting leverage is unusually strong if exercised early. (Strategy read.)</p>
+  <ul><li><strong>Memphis, TN</strong> (2025) — City Council passed an allocation ordinance directing 25% of the property tax revenue from qualifying AI facilities — capped at $100M — to public benefit projects within a 5-mile radius of the site, with 1% set aside for environmental improvement. The ordinance text is on the city&#x27;s own site; read it for the eligibility thresholds before citing the 25% figure. <span class="verified-on"><a href="https://memphistn.gov/wp-content/uploads/2025/07/xAI-Allocation-Ordinance47043091-1.pdf" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-23</span></li>
+<li><strong>Memphis, TN</strong> (2025) — Not a concession — the counter-example. Shelby County Health Department issued a permit on 2 July 2025 for 15 methane gas turbines, after turbines had already been running. The Southern Environmental Law Center appealed for the NAACP and Young, Gifted and Green, contesting the department&#x27;s finding that the existing turbines were exempt &#x27;nonroad engines&#x27;. Permits issued after the fact are the pattern to raise at your own hearing. <span class="verified-on"><a href="https://www.selc.org/press-release/groups-appeal-permit-for-xais-south-memphis-data-center-decisions-around-unpermitted-methane-gas-turbines/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-23</span></li></ul>
+</section>
+<section id="openai-·-oracle-(stargate)">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">OpenAI · Oracle (Stargate)</h3>
+  <p class="muted"><em>Negotiation pattern:</em> A joint venture (OpenAI, Oracle, SoftBank) building multiple GW-scale campuses, with sites developed by Oracle, Crusoe, Lancium, and Vantage. The JV structure means the entity on a local permit is often the site developer, not OpenAI — but the federal &#x27;national infrastructure&#x27; framing gives the project political cover that a solo developer wouldn&#x27;t have. Community leverage comes from state/local land-use authority, which the federal framing cannot preempt. (Strategy read.)</p>
+  <ul><li><strong>Abilene, TX</strong> (2025) — Abilene granted an 85% tax abatement on the $3.5B campus. The agreement requires Crusoe and Lancium to create 357 full-time jobs at a minimum salary of $57,600 — the enforceable number, against the 1,000 long-term jobs quoted publicly. No community benefits agreement was negotiated, and by August 2026 local reporting tied the buildout to an Abilene housing crisis. <span class="verified-on"><a href="https://www.kut.org/energy-environment/2026-08-12/abilene-tx-stargate-ai-data-center-economy-housing-crisis" rel="nofollow noopener" target="_blank">Source 1</a> · <a href="https://www.houstonpublicmedia.org/articles/news/texas/2026/08/12/559282/abilene-tx-stargate-ai-data-center-economy-housing-crisis/" rel="nofollow noopener" target="_blank">Source 2</a> · verified 2026-08-23</span></li>
+<li><strong>Childress, TX</strong> (2025) — Crusoe and Lancium announced a 1 GW campus with community investment and local hiring language. This is the developer&#x27;s own announcement and no binding terms have been published — treat it as a press release, not a commitment. <span class="verified-on"><a href="https://www.crusoecloud.com/news/crusoe-lancium-childress-texas-data-center" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-23</span></li></ul>
+</section>
+<section id="digital-realty">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Digital Realty</h3>
+  <p class="muted"><em>Negotiation pattern:</em> The largest publicly traded data center REIT, with a global portfolio. Operates under site-specific LLCs and legacy Telx entities. As a REIT it is sensitive to ESG ratings and institutional-investor pressure — sustainability commitments are leverage if you can cite them back in a permit hearing. (Strategy read.)</p>
+  <ul><li><strong>Atlanta (West End), GA</strong> (2026) — For a $500M campus at 713 Ralph David Abernathy Blvd, Digital Realty offered a $10M community investment fund and a $5M community trust, and estimated $20M to remediate the brownfield to commercial standards. It was not enough to carry the vote: NPU-V recommended against the rezoning 105-87 and the City Council&#x27;s zoning committee tabled the legislation 6-1 in July 2026. An offer tabled is not an offer won — cite it as an opening bid, not a precedent. <span class="verified-on"><a href="https://www.ajc.com/business/2026/07/atlanta-data-center-tabled-but-developer-remains-committed-to-vision/" rel="nofollow noopener" target="_blank">Source 1</a> · <a href="https://roughdraftatlanta.com/2026/08/05/atlanta-residents-protest-digital-realty/" rel="nofollow noopener" target="_blank">Source 2</a> · verified 2026-08-23</span></li>
+<li><strong>Franklin Park (Chicago), IL</strong> (2019) — Ground-floor generator noise exceeded the local ordinance and the company was fined $300. It installed a 15-foot sound barrier around the rooftop fans, though a survey suggested that would barely change levels in the apartments overlooking the building. The size of the fine is the point: post-construction enforcement is not a substitute for a pre-approval condition. <span class="verified-on"><a href="https://www.datacenterdynamics.com/en/news/chicago-residents-complain-of-noise-from-digital-realty-data-center/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-23</span></li></ul>
+</section>
+<section id="equinix">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Equinix</h3>
+  <p class="muted"><em>Negotiation pattern:</em> The world&#x27;s largest colocation provider by revenue, structured as a REIT. IBX-branded campuses in 70+ metros. Like Digital Realty, REIT structure means institutional-investor and ESG pressure is real leverage. Has published science-based targets and 96% renewable energy coverage — hold it to those numbers in permit proceedings. (Strategy read.)</p>
+  <ul><li><strong>Hampton, GA</strong> (2026) — Signed a 20-year take-or-pay contract with Central Georgia Electric Membership Corporation under which Equinix pays 100% of the co-op&#x27;s costs of serving the campus — a new high-voltage substation, two new transmission lines, early engineering — including unforeseen and shifting costs, so members don&#x27;t carry them. Announced by Equinix on 6 Aug 2026; this is a utility contract, not a land-use proffer, so the thing to ask your own utility for is the cost-allocation term. <span class="verified-on"><a href="https://newsroom.equinix.com/2026-08-06-Equinix-Partners-with-Central-Georgia-Electric-Membership-Corporation-to-Protect-Ratepayers" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-23</span></li>
+<li><strong>Dallas, TX</strong> (2019) — Dallas City Council approved (23 Jan 2019) a ten-year 50% abatement on added real property value plus a five-year 50% abatement on business personal property for the second phase at 2000 North Stemmons Freeway. The city put revenue forgone at $6,051,331 over ten years. No community benefits were attached — a plain abatement, and a useful example of what the default looks like when nobody negotiates. <span class="verified-on"><a href="https://citysecretary2.dallascityhall.com/resolutions/2019/01-23-19/19-0229.pdf" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-23</span></li></ul>
+</section>
+<section id="vantage">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Vantage</h3>
+  <p class="muted"><em>Negotiation pattern:</em> DigitalBridge/Silver Lake-backed ($9.2B equity round, Jun 2024), building hyperscale campuses in multiple US metros. Per-campus LLC structure. Growth-capital-funded, so timeline pressure is real — but less publicly visible than a public REIT, which means less ESG leverage and more reliance on land-use authority. (Strategy read.)</p>
+  <ul><li><strong>Pittsboro, IN</strong> (2025) — The Town Council voted 5-0 in March 2025 to rezone roughly 626 acres of Smith Family Farms from agricultural to warehouse industrial, with about 285 acres for the campus. Approved unanimously with no community benefits agreement — farmland conversion at this scale does not automatically produce leverage. <span class="verified-on"><a href="https://www.insideindianabusiness.com/articles/pittsboro-officials-ok-rezoning-of-626-acre-site-for-proposed-data-center-campus" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-23</span></li>
+<li><strong>Sterling, VA (Loudoun County)</strong> (2026) — After a 16 July 2026 power failure, the Ashburn II campus ran its diesel generators for nearly 24 hours. A neighbour measured 60 dB at his property line against Loudoun&#x27;s 55 dB night-time limit and left his home over the fumes. No binding remediation agreement followed; the Sterling District supervisor instead asked staff to look at regulating backup generators. Dominion has warned supervisors that generator runtime will rise as grid stress grows. <span class="verified-on"><a href="https://northernvirginiamag.com/news/2026/07/21/sterling-resident-says-data-centers-generators-produced-excessive-noise-pollution/" rel="nofollow noopener" target="_blank">Source 1</a> · <a href="https://www.loudounnow.com/news/sterling-residents-raise-alarms-over-off-grid-data-center/article_3481d7fd-11ef-4948-a951-8c4ee6e69f2f.html" rel="nofollow noopener" target="_blank">Source 2</a> · verified 2026-08-23</span></li></ul>
+</section>
+<section id="cyrusone">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">CyrusOne</h3>
+  <p class="muted"><em>Negotiation pattern:</em> KKR/GIP-owned (~$15B take-private, 2022). Private-equity ownership means the community negotiates with a financial sponsor, not an operator with a public reputation to protect. Leverage is purely through land-use and utility approvals. (Strategy read.)</p>
+  <ul><li><strong>Yorkville, IL</strong> (2026) — For the 228-acre campus, CyrusOne agreed to pay the city $15M up front on issuance of the first building permit — most of it to Yorkville School District 115 for school construction — and the city cut the project&#x27;s water allowance from 500,000 gallons/day to 40,000 gallons/day, with financial penalties if the average is exceeded or any single day exceeds 1.7x the allotment. The strongest water-cap template tracked here: note that the penalty formula, not the cap alone, is what makes it enforceable. <span class="verified-on"><a href="https://www.shawlocal.com/kendall-county-now/2026/07/14/228-acre-cyrusone-data-center-agrees-to-pay-yorkville-15-million-up-front-city-imposes-water-use-limits/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-23</span></li>
+<li><strong>Aurora, IL</strong> (2026) — After the city issued citations over chiller and generator noise, Aurora and CyrusOne signed a legal agreement setting deadlines for temporary and permanent fixes, carrying a $40,000 fine that can be reduced on compliance. A temporary rooftop sound wall went up on 14 June. Residents say the noise is still disrupting daily life after mitigation — the honest read is that enforcement bought a wall, not quiet. <span class="verified-on"><a href="https://www.yahoo.com/news/articles/aurora-reaches-agreement-cyrusone-address-231500462.html" rel="nofollow noopener" target="_blank">Source 1</a> · <a href="https://www.northernpublicradio.org/illinois/2026-08-03/how-aurora-and-dekalb-residents-are-dealing-with-data-centers" rel="nofollow noopener" target="_blank">Source 2</a> · verified 2026-09-02</span></li>
+<li><strong>Chandler, AZ</strong> (2018-2022) — After sustained resident complaints about a high-pitched hum, CyrusOne wrapped chillers in acoustic blankets and added sound attenuation panels and screen walls, and committed to factory-fitted attenuation on new AC units. Residents remained sceptical that measured declines matched what they heard. Chandler later moved to regulate data-center noise by ordinance rather than by complaint. <span class="verified-on"><a href="https://www.eastvalleytribune.com/residents-skeptical-about-noise-declines-at-data-center/article_9edb4c85-ceb9-54e9-9b0e-ab4b6390d04e.html" rel="nofollow noopener" target="_blank">Source 1</a> · <a href="https://www.datacenterdynamics.com/en/news/cyrusone-forced-to-take-action-following-noise-complaints-in-chandler-arizona/" rel="nofollow noopener" target="_blank">Source 2</a> · verified 2026-08-23</span></li></ul>
+</section>
+<section id="aligned">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Aligned</h3>
+  <p class="muted"><em>Negotiation pattern:</em> Pending ~$40B acquisition by Nvidia, Microsoft, and BlackRock/MGX (announced Oct 2025). If completed, aligns the developer with its largest tenants — reducing the tenant/ landlord split that sometimes gives communities a second negotiation point. Proprietary Delta³ cooling claims 80% less water than conventional — ask for metered proof, not claims. (Strategy read.)</p>
+  <ul><li><strong>Pataskala, OH</strong> (2026) — Aligned said it would not seek or accept local property tax abatements, committing instead to pay full property taxes it estimated at $34.4M when fully operational — the no-abatement precedent to cite. It did not carry the room: on 3 June the planning and zoning commission voted 5-2 to recommend council reject the site plan, faulting an application with no detail on AEP and Bloom Energy power supply and heat and noise studies built on modelling rather than measurements at comparable sites. The council decision was still pending. <span class="verified-on"><a href="https://www.thereportingproject.org/pataskala-planning-board-says-city-council-should-reject-aligned-data-centers-proposal/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-23</span></li></ul>
+</section>
+<section id="switch">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Switch</h3>
+  <p class="muted"><em>Negotiation pattern:</em> DigitalBridge/IFM-owned (~$11B take-private, 2022). Operates large single-campus &#x27;Primes&#x27; (Las Vegas, Reno, Atlanta, Grand Rapids). Claims 100% renewable energy via long-term PPAs — as with any such claim, verify whether the PPA delivers temporally matched clean power or just annual-average offsets. (Strategy read.)</p>
+  <ul><li><strong>Clark County, NV (LAS 19)</strong> (2024) — Switch says its Las Vegas campus uses closed-loop cooling consuming zero daily water. This is the company&#x27;s own published claim, not an audited figure — cite it as what the operator says is achievable, which is what makes it useful against a developer arguing evaporative draw is unavoidable. <span class="verified-on"><a href="https://www.switch.com/las-vegas/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-23</span></li>
+<li><strong>Grand Rapids, MI</strong> (2015-2022) — Michigan&#x27;s 2015 package exempted large data centers from sales and use taxes, with job triggers written industry-wide (400 new jobs by 2022, 1,000 by 2026) rather than per company. A 2022 state report found Switch had created 26 jobs against the 1,000 it projected; the Legislature extended the exemptions to 2050 anyway, with no state audit verifying the job growth. The lesson is the drafting: industry-wide, unaudited triggers are not a clawback. <span class="verified-on"><a href="https://www.michigancapitolconfidential.com/news/legislature-extends-tax-breaks-for-data-center-that-brought-only-2-6-of-promised-jobs" rel="nofollow noopener" target="_blank">Source 1</a> · <a href="https://bridgemi.com/michigan-environment-watch/data-centers-create-few-jobs-michigan-wants-give-them-big-tax-breaks/" rel="nofollow noopener" target="_blank">Source 2</a> · verified 2026-08-23</span></li></ul>
+</section>
+<section id="stack-infrastructure">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Stack Infrastructure</h3>
+  <p class="muted"><em>Negotiation pattern:</em> Blue Owl/IPI Partners-owned. Hyperscale-focused wholesale provider. Lower public profile than peers — less ESG/PR leverage, more reliance on local permitting authority. (Strategy read.)</p>
+  <ul><li><strong>Hayward, CA</strong> (2025) — The Planning Commission approved the SVY03A campus in May 2025 with a $2M public benefits package — raised from an initial $1.1M — traded for eight extra feet of building height above the 75-foot limit, plus a water main replacement, solar at the city&#x27;s Water Resource Recovery Facility, a bike path, and a 100% union labour commitment (about 380 construction jobs, 41 permanent). It never went to City Council: the zoning code treated data centers as an office use. Check how your own code classifies them before assuming there will be a council vote to organise around. <span class="verified-on"><a href="https://haywardherald.org/who-approved-haywards-largest-data-center/" rel="nofollow noopener" target="_blank">Source 1</a> · <a href="https://www.hayward-ca.gov/business/for-developers/data-center-development-applications" rel="nofollow noopener" target="_blank">Source 2</a> · verified 2026-08-23</span></li></ul>
+</section>
+<section id="edgeconnex">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">EdgeConneX</h3>
+  <p class="muted"><em>Negotiation pattern:</em> EQT Infrastructure/ADIA-backed. Builds edge and hyperscale campuses. Lower public profile — leverage is through permitting and utility approvals rather than reputational pressure. (Strategy read.)</p>
+  <ul><li><strong>Ashville, OH</strong> (2026) — The agreement attached to residents&#x27; litigation proposed as much as $102M in support to the village of Ashville, Harrison Township and Teays Valley Local Schools. Three residents challenged the village&#x27;s fast-tracked approval after the fiscal officer rejected their referendum petition, and on 7 Aug 2026 the Ohio Supreme Court sided with them, clearing the way for a referendum. A package this size does not settle the question if the procedure was wrong. <span class="verified-on"><a href="https://www.wosu.org/politics-government/2026-08-07/ohio-supreme-court-sides-with-ashville-residents-trying-to-overturn-data-center-agreement" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-23</span></li>
+<li><strong>Douglas County, GA</strong> (2026) — Commissioners voted 4-1 on 7 July 2026 to deny the land use amendment, rezoning and special use permits for a 700-acre, 4.4M sq ft campus near Villa Rica, following unanimous planning commission recommendations to deny. It was the second denial on the same property in seven months — sustained opposition can beat a second application, not just a first. <span class="verified-on"><a href="https://www.fox5atlanta.com/news/douglas-county-leaders-just-killed-massive-data-center-project" rel="nofollow noopener" target="_blank">Source 1</a> · <a href="https://www.douglascountysentinel.com/douglasville_sentinel/county-rejects-plans-for-700-acre-data-center-campus/article_a5761e68-bcdb-5537-a954-b2a948460ea3.html" rel="nofollow noopener" target="_blank">Source 2</a> · verified 2026-08-23</span></li>
+<li><strong>Bastrop County, TX</strong> (2024) — Bastrop County executed a tax abatement agreement with EdgeConneX for buildings 1-4, dated 9 Dec 2024 and posted in full on the county&#x27;s own site. It is a scanned document, so read the terms off the agreement itself rather than from any summary — including this one. Linked here because a signed abatement on a county website is the paper trail your own county should be asked to produce. <span class="verified-on"><a href="https://www.bastropcounty.gov/upload/page/0107/docs/Edge%20ConnecX%20inc.-%20Tax%20Abatement%20Agreement-%20Blg.%201-4%20with%20Exhibits%2012%209%2024.pdf" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-23</span></li></ul>
+</section>
+<section id="core-scientific">
+  <h3 style="color:var(--teal);font-size:16px;margin-top:24px">Core Scientific</h3>
+  <p class="muted"><em>Negotiation pattern:</em> Emerged from bankruptcy (Jan 2024) and pivoted from Bitcoin mining to HPC/AI hosting, with CoreWeave as anchor tenant (~200 MW). Proposed CoreWeave acquisition (Jul 2025) would merge landlord and tenant. If your community has a Core Scientific site, the power draw may grow substantially as crypto rigs are replaced with GPU clusters — ask about the planned load increase, not just current draw. (Strategy read.)</p>
+  <ul><li><strong>Marble, NC</strong> (2023-2026) — Cherokee County&#x27;s October 2023 moratorium on high-impact industry covered crypto mines but not AI processing. It expired, and the Marble mine was converted to generative AI and is undergoing a multimillion-dollar expansion; a January commissioners&#x27; meeting to renew the pause and extend it to AI ended with no action. The most quotable failure mode on this page: a moratorium scoped to yesterday&#x27;s technology expires into the next one. <span class="verified-on"><a href="https://www.wunc.org/2026-04-10/cherokee-county-residents-were-upset-about-crypto-mines-then-came-ai" rel="nofollow noopener" target="_blank">Source 1</a> · <a href="https://grist.org/politics/first-crypto-now-data-centers-how-tech-is-reshaping-this-north-carolina-community/" rel="nofollow noopener" target="_blank">Source 2</a> · verified 2026-08-23</span></li>
+<li><strong>Dalton, GA</strong> (2025) — Whitfield County commissioners voted 3-2 in March 2025 — the chairman breaking a tie — to rezone 173.3 acres on Old Tilton Road from agriculture and rural residential to heavy manufacturing, with a 30-foot vegetative buffer to screen and damp the site. A buffer is what a tie vote buys; it is not a noise limit. <span class="verified-on"><a href="https://daltoncitizen.com/2025/03/11/whitfield-county-commissioners-approve-rezoning-for-data-center-despite-opposition/" rel="nofollow noopener" target="_blank">Source 1</a> · verified 2026-08-23</span></li></ul>
+</section>
+</section>
+
+<section>
+  <p class="muted"><strong>See also:</strong>
+  <a href="tax-breaks.html">The opportunity cost of subsidy packages</a> ·
+  <a href="cba-clauses.html">Model CBA clauses</a> ·
+  <a href="moratoriums.html">Full moratorium tracker</a> ·
+  <a href="start-here.html">Generate a meeting brief with these precedents pre-loaded</a></p>
+</section>
+
+</main>
+<footer>
+<div class="nl-box">
+  <p><strong>📬 The GridWatch Dispatch</strong> — one email a week: new moratoriums, rate cases, and negotiation wins. No spam.</p>
+  <form action="https://formspree.io/f/xljroogo" method="POST"
+        class="nl-form">
+    <input type="email" name="email" required placeholder="you@example.com"
+           aria-label="Email address">
+    <input type="hidden" name="source" value="static-site-footer">
+    <input type="hidden" name="_subject" value="GridWatch Dispatch signup">
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
+  <p style="margin-bottom:8px"><strong>Reference</strong> ·
+    <a href="studies.html">State studies</a> ·
+    <a href="officials.html">Officials directory</a> ·
+    <a href="glossary.html">Glossary</a> ·
+    <a href="tax-breaks.html">Tax breaks</a> ·
+    <a href="dividend.html">Data dividend</a></p>
+  <p style="margin-bottom:8px"><strong>Site</strong> ·
+    <a href="about.html">About</a> ·
+    <a href="open-data.html">Open data</a> ·
+    <a href="consulting.html">Consulting</a> ·
+    <a href="search.html">Search</a></p>
+  <p>AI GridWatch — community energy intelligence. Planning estimates, not
+  engineering studies; every number is sourced in the
+  <a href="start-here.html">toolkit</a>. Built from public data.</p>
+</footer>
+</div>
+
+<script data-goatcounter="https://mjb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+function gwevent(path) {
+  if (window.goatcounter && window.goatcounter.count)
+    window.goatcounter.count({ path: path, event: true });
+}
+document.addEventListener('click', function (e) {
+  var a = e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  var file = href.split('/').pop().split('?')[0];
+  if (/start-here\.html$/.test(href)) {
+    gwevent('toolkit-click' + location.pathname.replace(/\.html$/, ''));
+  } else if (/\.pdf($|\?)/.test(href) && a.host === location.host) {
+    gwevent('pdf-download/' + file);
+  } else if (href.indexOf('data/moratoriums.') !== -1 || href.indexOf('embed/moratoriums') !== -1
+             || href.indexOf('data/projects.') !== -1) {
+    gwevent('data-download/' + file);
+  }
+});
+// Nav dropdowns: one open at a time, closing on click-away or Escape. CSS
+// already reveals menus on hover/focus; this tidies the click path without
+// fighting the native <details> toggle — sibling-close runs off the toggle
+// event, and the click-away handler bails on any click inside the nav.
+document.querySelectorAll('.navgroup').forEach(function (g) {
+  g.addEventListener('toggle', function () {
+    if (!g.open) return;
+    document.querySelectorAll('.navgroup[open]').forEach(function (o) {
+      if (o !== g) o.open = false;
+    });
+  });
+});
+document.addEventListener('click', function (e) {
+  if (e.target.closest && e.target.closest('.navgroup')) return;
+  document.querySelectorAll('.navgroup[open]').forEach(function (g) { g.open = false; });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape')
+    document.querySelectorAll('.navgroup[open]').forEach(function (g) { g.open = false; });
+});
+</script>
+
+</body>
+</html>

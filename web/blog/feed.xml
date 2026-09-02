@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>AI GridWatch Blog</title>
+  <link>https://aigridwatch.com/blog/</link>
+  <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
+  <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Four Groups Counted New Jersey&#x27;s Data Center Bans. They Got 37, 38, 50 and 69.</title>
+      <link>https://aigridwatch.com/blog/new-jersey-ban-count-2026</link>
+      <guid>https://aigridwatch.com/blog/new-jersey-ban-count-2026</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Three New Jersey towns banned data centers on the same night in late August. Four organizations published a statewide count in the same two weeks and got four different numbers, because they are counting different things. Here is why the discrepancy matters more than any of the four totals — and what to ask your clerk before you cite one at a hearing.</description>
+    </item>
+    <item>
+      <title>Week in Review: Georgia&#x27;s Secret OpenAI Contract, New Jersey&#x27;s New Transparency Law, and a Second California City Bans Data Centers</title>
+      <link>https://aigridwatch.com/blog/week-in-review-2026-08-30</link>
+      <guid>https://aigridwatch.com/blog/week-in-review-2026-08-30</guid>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 GMT</pubDate>
+      <description>This week Georgia regulators approved a confidential 3.2-gigawatt contract to power OpenAI&#x27;s $20 billion Effingham County data center and Sen. Warnock answered with a call for a statewide moratorium, New Jersey&#x27;s governor signed a law forcing data centers to report their water and energy use, and Coachella became the second California city to ban data centers outright. Plus: a Microsoft-tied New Jersey site accused of running dozens of unpermitted gas turbines, PJM&#x27;s plan to make data centers bring their own power, and ten more communities that paused or banned data centers in a single week.</description>
+    </item>
+    <item>
+      <title>The Power Plant Is Now Part of the Data Center — and the Public Notice for It Is Being Deleted</title>
+      <link>https://aigridwatch.com/blog/gas-buildout-water-notice-2026</link>
+      <guid>https://aigridwatch.com/blog/gas-buildout-water-notice-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Three things landed in the same week. Global Energy Monitor counted 189 GW of U.S. gas capacity in development tied to data centers — nearly double the figure six months earlier. Ceres put a number on the water those power plants use, which is the part of a data center&#x27;s water footprint nobody meters. And EPA moved to delete the federal requirement that states give public notice on the air permits those plants need. Read together, they describe one shift: the generator is now part of the project, and the process for the generator is the process being narrowed.</description>
+    </item>
+    <item>
+      <title>Trump Says Your Town Is &quot;Making a Mistake.&quot; Here&#x27;s What the Record Actually Shows.</title>
+      <link>https://aigridwatch.com/blog/trump-data-center-support-2026</link>
+      <guid>https://aigridwatch.com/blog/trump-data-center-support-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
+      <description>In an interview that aired August 23, President Trump said communities rejecting data centers are &quot;making a mistake&quot; and that the industry could be &quot;bigger than oil.&quot; That doubles down on eighteen months of federal policy — permitting orders, federal land, a FERC interconnection push, and a 300-signatory ratepayer pledge with no enforcement mechanism. We walk through what the administration has actually done, what reporters and analysts across the spectrum say about it, and what none of it changes about the vote in front of your planning board.</description>
+    </item>
+    <item>
+      <title>Week in Review: Pennsylvania&#x27;s Crackdown, New Jersey&#x27;s Ban Wave, and Nevada Says No to a Dry Basin</title>
+      <link>https://aigridwatch.com/blog/week-in-review-2026-08-23</link>
+      <guid>https://aigridwatch.com/blog/week-in-review-2026-08-23</guid>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+      <description>This week Pennsylvania&#x27;s governor signed what Bloomberg Law called the strictest data center executive order in the country, New Jersey towns kept banning data centers faster than developers could sue over it, and Nevada regulators banned new data centers outright in an over-appropriated water basin. Plus: Kansas cities suing their own residents over ballot petitions, a DeKalb County win, and Michigan&#x27;s moratorium fight goes to court.</description>
+    </item>
+    <item>
+      <title>Pennsylvania Just Told Data Centers: Build Your Own Power, or Don&#x27;t Build Here</title>
+      <link>https://aigridwatch.com/blog/pennsylvania-grid-executive-order-2026</link>
+      <guid>https://aigridwatch.com/blog/pennsylvania-grid-executive-order-2026</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Governor Shapiro signed Executive Order 2026-05 on August 18, establishing the nation&#x27;s strictest permitting standards for data centers. The GRID framework requires developers to fund their own power infrastructure, obtain local approval before any state permit, and sign enforceable community benefit agreements — or face the slowest permitting lane in the state.</description>
+    </item>
+    <item>
+      <title>Data Center Opposition Just Became a National Political Force</title>
+      <link>https://aigridwatch.com/blog/data-center-midterms-politics-2026</link>
+      <guid>https://aigridwatch.com/blog/data-center-midterms-politics-2026</guid>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Axios reports that data center opposition is scrambling the 2026 midterms. Candidates in both parties are racing to distance themselves from projects their own leaders spent years courting. What started as scattered local fights has become a cross-partisan national movement — and it&#x27;s changing how elections are won.</description>
+    </item>
+    <item>
+      <title>How to Negotiate with Every Major Data Center Developer: A Strategy Guide</title>
+      <link>https://aigridwatch.com/blog/negotiation-patterns-all-operators-2026</link>
+      <guid>https://aigridwatch.com/blog/negotiation-patterns-all-operators-2026</guid>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+      <description>We&#x27;ve built negotiation profiles for all 17 major data center operators — from Google and Amazon to CoreWeave and xAI. Here&#x27;s what the patterns reveal: who has actually conceded terms, who hasn&#x27;t, and where your leverage really sits.</description>
+    </item>
+    <item>
+      <title>Week in Review: Amazon Walks Away, UK Rations Water, and Texas Hits the Brakes</title>
+      <link>https://aigridwatch.com/blog/week-in-review-2026-08-16</link>
+      <guid>https://aigridwatch.com/blog/week-in-review-2026-08-16</guid>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+      <description>This week Amazon abandoned a data center campus in Maryland after community pushback, UK data centers faced water rationing during a drought, and Texas launched an audit of 300 data center projects. Plus: Michigan residents sued over noise, Chicago signed an executive order, and moratorium proposals multiplied from Indiana to San Antonio.</description>
+    </item>
+    <item>
+      <title>Texas Just Froze 474 GW of Data Center Interconnections. Here&#x27;s What It Means.</title>
+      <link>https://aigridwatch.com/blog/texas-ercot-queue-freeze-2026</link>
+      <guid>https://aigridwatch.com/blog/texas-ercot-queue-freeze-2026</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <description>On August 3, Governor Abbott directed ERCOT and the PUC of Texas to halt all data center interconnection progress pending a comprehensive audit. The queue holds roughly 474 GW of requests — five times the state&#x27;s record peak demand — and about 90% of them are data centers. It may be the single most consequential action any government has taken against the data center buildout.</description>
+    </item>
+    <item>
+      <title>Amazon&#x27;s New Texas Data Center Could Become the Single Biggest Polluter in America</title>
+      <link>https://aigridwatch.com/blog/amazon-pecos-county-gas-plant-2026</link>
+      <guid>https://aigridwatch.com/blog/amazon-pecos-county-gas-plant-2026</guid>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Amazon confirmed it&#x27;s investing in a 35-turbine, 7.65-gigawatt gas plant to power a new Texas data center — permitted to emit up to 33 million tons of CO2 a year, more than any power plant operating in the U.S. today. Because it won&#x27;t initially connect to the wider grid, it also won&#x27;t go through a utility rate case — which means the usual ratepayer-impact fight isn&#x27;t where the leverage is this time.</description>
+    </item>
+    <item>
+      <title>20 Million Chips Today, 200 Million by 2028: What the Times&#x27; AI Numbers Mean for Your County</title>
+      <link>https://aigridwatch.com/blog/ai-chip-boom-scale-2026</link>
+      <guid>https://aigridwatch.com/blog/ai-chip-boom-scale-2026</guid>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
+      <description>The Times went looking for a way to describe the scale of the AI build-out and landed on comparisons to the railroads and the Manhattan Project. The chip count — doubling roughly every nine months — is the number that explains why the pipeline of new proposals isn&#x27;t slowing down. Here&#x27;s what the rest of the numbers mean if you&#x27;re the one facing the next one.</description>
+    </item>
+    <item>
+      <title>Do Data Centers Lower Property Values? What the Studies Actually Show</title>
+      <link>https://aigridwatch.com/blog/data-centers-property-values-2026</link>
+      <guid>https://aigridwatch.com/blog/data-centers-property-values-2026</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+      <description>It&#x27;s the first question at every hearing: will a data center tank my home&#x27;s value? The honest answer isn&#x27;t the scary one or the industry one. The headline studies say &quot;no measurable drag&quot; — but most were commissioned by developers, measure average distance rather than the house across the street, and come from hot markets where everything appreciates. Here&#x27;s what the evidence really says, and the move that beats arguing about it.</description>
+    </item>
+    <item>
+      <title>How to Unmask the Shell Company Behind a Data Center</title>
+      <link>https://aigridwatch.com/blog/unmask-data-center-llc-2026</link>
+      <guid>https://aigridwatch.com/blog/unmask-data-center-llc-2026</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+      <description>A project lands in your town under a code name — &quot;Project Blue,&quot; &quot;Project Rowan&quot; — bought by an LLC no one has heard of. That anonymity is a strategy, not an accident. Here&#x27;s the five-step method to find the hyperscaler actually behind it, worked through the real chain of shell companies that hid Amazon behind Tucson&#x27;s Project Blue — and why naming them changes your leverage.</description>
+    </item>
+    <item>
+      <title>How Many Jobs Does a Data Center Actually Create?</title>
+      <link>https://aigridwatch.com/blog/data-center-jobs-2026</link>
+      <guid>https://aigridwatch.com/blog/data-center-jobs-2026</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Every data center pitch leads with jobs — usually thousands of them. The number that actually matters is far smaller and fully knowable: a typical hyperscale hall runs on about 50 full-time workers, half of them contractors. Here&#x27;s the real math from Virginia&#x27;s own legislative watchdog, the construction mirage behind the big headline, and the three questions that put it on the record.</description>
+    </item>
+    <item>
+      <title>&quot;The A.I. Revolt Is Here&quot;: When Ezra Klein Covers Your Zoning Fight, the Politics Have Changed</title>
+      <link>https://aigridwatch.com/blog/ezra-klein-ai-revolt-mainstream-2026</link>
+      <guid>https://aigridwatch.com/blog/ezra-klein-ai-revolt-mainstream-2026</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+      <description>The Ezra Klein Show&#x27;s August 4 episode is titled &quot;The A.I. Revolt Is Here,&quot; and its subject is data centers — the bipartisan opposition, Hochul&#x27;s New York moratorium, and the 100-plus moratorium proposals nationwide. When the country&#x27;s flagship policy podcast frames local zoning fights as a national political force, the leverage map has changed. Here&#x27;s what the episode covers, what our own tracker shows, and why this moment favors communities that are ready to negotiate.</description>
+    </item>
+    <item>
+      <title>The $327 Million Guess That Became $2.5 Billion: States Are Finally Learning What Data Center Tax Breaks Cost</title>
+      <link>https://aigridwatch.com/blog/data-center-tax-break-blowouts-2026</link>
+      <guid>https://aigridwatch.com/blog/data-center-tax-break-blowouts-2026</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Four states now lose more than $1 billion a year to data center sales-tax exemptions — and every one of them originally projected a fraction of that. Georgia revised its estimate up 664% in one January. Ohio&#x27;s real cost came in at 12 times its projection. Indiana admitted 83% of its subsidy went to one company: Amazon. Fourteen states still won&#x27;t publish a number at all. Here&#x27;s what the June 2026 Good Jobs First report found, and what it means for the fiscal-note fight in your county.</description>
+    </item>
+    <item>
+      <title>Before You Approve a Data Center: 26 Questions Every Community Should Ask</title>
+      <link>https://aigridwatch.com/blog/questions-to-ask-data-center-checklist-2026</link>
+      <guid>https://aigridwatch.com/blog/questions-to-ask-data-center-checklist-2026</guid>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 GMT</pubDate>
+      <description>A working synthesis of the checklists published by RFD-TV, Public Knowledge, EDF, the AI Now Institute, and the Alliance for the Great Lakes — collapsed into 26 questions, grouped by topic, with the reason each one matters and what a good answer looks like. Print it, bring it to the hearing, ask them all.</description>
+    </item>
+    <item>
+      <title>&quot;Meta pays the full cost.&quot; Louisiana ratepayers pay $8–13 a month. Both are true.</title>
+      <link>https://aigridwatch.com/blog/meta-hyperion-louisiana-ratepayer-fight-2026</link>
+      <guid>https://aigridwatch.com/blog/meta-hyperion-louisiana-ratepayer-fight-2026</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Meta&#x27;s Hyperion campus in rural Louisiana is now a 5-gigawatt, $50-billion-plus build — powered by ten new Entergy gas plants and a 60-mile transmission line whose $470M+ cost falls on ordinary customers. Meta says it pays the full cost of its electricity. State watchdogs say average Entergy Louisiana households will still pay $8–13 more per month. Both can be true. Here&#x27;s how.</description>
+    </item>
+    <item>
+      <title>Five Auctions, $29 Billion: How Data Centers Took Over the PJM Capacity Market — and Sent Your Bill to the Moon</title>
+      <link>https://aigridwatch.com/blog/pjm-capacity-auction-ratepayer-shock-2026</link>
+      <guid>https://aigridwatch.com/blog/pjm-capacity-auction-ratepayer-shock-2026</guid>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+      <description>PJM&#x27;s capacity auction price has gone from $29/MW-day to $325 in four years. Data centers drove 46% of the cost — $29.4 billion — across those auctions, and the grid&#x27;s independent watchdog says ratepayers are footing the bill for power plants that may never be needed. Here&#x27;s the full timeline, who pays, and the three reform proposals on the table right now.</description>
+    </item>
+</channel>
+</rss>
