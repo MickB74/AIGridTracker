@@ -402,6 +402,17 @@ published pages are static files.
   internal link and five section-index canonicals pointed at a redirect.
   Don't hand-write extensionless hrefs in builders — the rewrite is
   idempotent, but the filesystem preview is not.
+- **A dropped page becomes a redirect, never a 404.** `data/retired_paths.json`
+  maps every URL the site has ever published and since removed to a live
+  destination, and `main()` emits it into `vercel.json`. It was seeded from
+  git history on 2026-09-02, when Search Console listed 467 dead URLs, nearly
+  all news-only community pages that vanished when their story group
+  thinned out. The build maintains it: any path in the previous sitemap
+  that is missing from the new one is retired automatically (community
+  page -> its state page, anything else -> home), a path that comes back is
+  un-retired, and a destination that is not a live page fails the build.
+  Renamed localities should still get a `_COMMUNITY_SLUG_ALIASES` entry so
+  they redirect to the right locality rather than to the state.
 - **`web/404.html` is a real page.** Vercel serves it for any miss; it
   carries `<base href="/">` because it renders at arbitrary depths, and
   `noindex` so it never ranks.

@@ -14658,6 +14658,47 @@ def main():
          "permanent": True}
         for old, (loc, st) in _COMMUNITY_SLUG_ALIASES.items()
     ]
+    # Retired paths: every URL this site has ever published and since
+    # dropped, redirected somewhere useful instead of 404ing. Search Console
+    # showed 467 "Not found" URLs on 2026-09-02 — almost all news-only
+    # community pages that vanished when their story group thinned out, and
+    # which Google had already indexed. The file is seeded from git history
+    # (every web/**/*.html ever deleted) and then maintained here: any path
+    # in the previous build's sitemap that is missing from this one is
+    # retired automatically (community page -> its state page, anything
+    # else -> home), and a retired path that comes back is un-retired so
+    # the redirect never shadows a live page.
+    _retired_file = ROOT / "data" / "retired_paths.json"
+    try:
+        _retired = json.loads(_retired_file.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        _retired = {}
+    _live = {"/" + p.rstrip("/") if p else "/" for p in paths}
+    _abbr_state = {a.lower(): slugify(n) for a, n in
+                   zip(STATE_PUCS_DF["abbrev"], STATE_PUCS_DF["state"])}
+    for prev in _prev_hashes:
+        url = "/" + prev.rstrip("/") if prev else "/"
+        if url in _live or url in _retired:
+            continue
+        dest = "/"
+        if url.startswith("/communities/"):
+            st = url.rsplit("-", 1)[-1]
+            dest = f"/states/{_abbr_state[st]}" if st in _abbr_state else "/communities"
+        _retired[url] = dest
+        print(f"  [retired] {url} -> {dest}")
+    for url in [u for u in _retired if u in _live]:
+        print(f"  [retired] {url} is live again; redirect dropped")
+        del _retired[url]
+    for url, dest in _retired.items():
+        if dest not in _live:
+            raise SystemExit(f"retired path {url} redirects to {dest}, "
+                             f"which is not a live page")
+    _retired_file.write_text(
+        json.dumps(_retired, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    _retired_redirects = [
+        {"source": url, "destination": dest, "permanent": True}
+        for url, dest in sorted(_retired.items())
+    ]
     (WEB / "vercel.json").write_text(
         '{ "cleanUrls": true, "trailingSlash": false }\n', encoding="utf-8")
     # The load-bearing config Vercel actually reads lives at the repo root.
@@ -14668,7 +14709,8 @@ def main():
             "cleanUrls": True,
             "trailingSlash": False,
             "redirects": (_blog_redirects + _state_redirects
-                          + _company_redirects + _community_redirects),
+                          + _company_redirects + _community_redirects
+                          + _retired_redirects),
             # Static assets and open-data files change rarely and are
             # re-fetched on every page view without this; HTML stays
             # must-revalidate so a daily rebuild is seen immediately.
