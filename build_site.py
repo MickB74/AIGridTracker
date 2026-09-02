@@ -1217,6 +1217,190 @@ def _outcome_card(o):
             f'<p class="muted">{esc(o["outcome"])}</p>{prov}</div>')
 
 
+# Dot color per effective_status — matches the badge palette used everywhere
+# else on the page, so the map and the table read as one system.
+_MORA_STATUS_DOT = {
+    "Enacted": "#34d399", "Proposed": "#fbbf24", "Expired": "#9ca3af",
+    "Rejected": "#f87171", "Vetoed": "#c4b5fd", "Rescinded": "#c4b5fd",
+}
+
+
+def _mora_map_svg():
+    """Every geocoded local action, plotted at its real coordinates.
+
+    No basemap outline — this repo has no state-boundary geometry to draw
+    one honestly, and a hand-guessed coastline would be worse than none. A
+    linear lat/lon scatter over the continental US bounding box still reads
+    as the country's shape once enough points are on it, and every dot is a
+    real, cited location rather than a decorative approximation.
+    """
+    rows = [m for m in MORATORIUMS_DF.itertuples()
+            if m.level == "Local" and has_value(m.lat) and has_value(m.lon)]
+    if not rows:
+        return ""
+    lats = [float(m.lat) for m in rows]
+    lons = [float(m.lon) for m in rows]
+    lat_min, lat_max = min(lats) - 0.6, max(lats) + 0.6
+    lon_min, lon_max = min(lons) - 0.6, max(lons) + 0.6
+    W, H, PAD = 720, 380, 4
+    def _xy(lat, lon):
+        x = PAD + (lon - lon_min) / (lon_max - lon_min) * (W - 2 * PAD)
+        y = PAD + (lat_max - lat) / (lat_max - lat_min) * (H - 2 * PAD)
+        return x, y
+    dots = []
+    for m in rows:
+        x, y = _xy(float(m.lat), float(m.lon))
+        color = _MORA_STATUS_DOT.get(m.effective_status, "#9ca3af")
+        href = f"communities/{_loc_slug(m.locality, m.state)}.html"
+        title = f"{esc(str(m.locality))}, {esc(str(m.state))} — {esc(str(m.effective_status))}"
+        dots.append(
+            f'<a href="{href}"><circle cx="{x:.1f}" cy="{y:.1f}" r="3.6" '
+            f'fill="{color}" fill-opacity="0.82" stroke="var(--bg)" '
+            f'stroke-width="0.6"><title>{title}</title></circle></a>')
+    legend = "".join(
+        f'<span class="mora-map-legend-item"><i style="background:{c}"></i>{s}</span>'
+        for s, c in _MORA_STATUS_DOT.items() if s in {"Enacted", "Proposed", "Expired"})
+    return f"""
+<div class="mora-map-wrap">
+  <svg viewBox="0 0 {W} {H}" role="img" aria-label="Map of tracked local data
+    center moratoriums, colored by status" style="width:100%;height:auto">
+    {"".join(dots)}
+  </svg>
+  <div class="mora-map-legend">{legend}
+    <span class="muted" style="font-size:12.5px">{len(rows)} geocoded actions —
+    click a point for its community page</span></div>
+</div>"""
+
+
+def _mora_timeline_svg():
+    """Monthly count of enactments, by effective status at build time.
+
+    Only day/month-precision dates go in the bucket a reader can trust; a
+    handful of rows where the source only gave a year would otherwise all
+    pile into every January, which is a parsing artifact, not a trend.
+    """
+    from collections import defaultdict, OrderedDict
+    rows = [m for m in MORATORIUMS_DF.itertuples()
+            if has_value(m.date) and m.date_precision in ("day", "month")]
+    if not rows:
+        return ""
+    buckets = defaultdict(lambda: defaultdict(int))
+    for m in rows:
+        ym = str(m.date)[:7]
+        buckets[ym]["Enacted" if m.effective_status == "Enacted" else
+                     m.effective_status] += 1
+    months = sorted(buckets)
+    excluded = len(MORATORIUMS_DF) - len(rows)
+    if not months:
+        return ""
+    W, H, PAD_L, PAD_B, PAD_T = max(560, len(months) * 26), 220, 30, 26, 10
+    bar_w = (W - PAD_L - 10) / len(months)
+    peak = max(sum(b.values()) for b in buckets.values()) or 1
+    scale = (H - PAD_T - PAD_B) / peak
+    order = ["Enacted", "Proposed", "Expired", "Rejected", "Vetoed", "Rescinded"]
+    bars, labels = [], []
+    for i, ym in enumerate(months):
+        x = PAD_L + i * bar_w
+        y_cursor = H - PAD_B
+        for status in order:
+            n = buckets[ym].get(status, 0)
+            if not n:
+                continue
+            bh = n * scale
+            y_cursor -= bh
+            bars.append(
+                f'<rect x="{x+1:.1f}" y="{y_cursor:.1f}" width="{bar_w-2:.1f}" '
+                f'height="{bh:.1f}" fill="{_MORA_STATUS_DOT.get(status, "#9ca3af")}">'
+                f'<title>{esc(ym)}: {n} {esc(status.lower())}</title></rect>')
+        if i == 0 or ym.endswith("-01") or i == len(months) - 1:
+            labels.append(f'<text x="{x+bar_w/2:.1f}" y="{H-8}" '
+                           f'text-anchor="middle" class="mora-tl-label">{ym[:4]}</text>')
+    grid = "".join(
+        f'<line x1="{PAD_L}" x2="{W-6}" y1="{H-PAD_B-frac*(H-PAD_T-PAD_B):.1f}" '
+        f'y2="{H-PAD_B-frac*(H-PAD_T-PAD_B):.1f}" class="mora-tl-grid" />'
+        for frac in (0, 0.5, 1))
+    y_labels = "".join(
+        f'<text x="{PAD_L-6}" y="{H-PAD_B-frac*(H-PAD_T-PAD_B)+4:.1f}" '
+        f'text-anchor="end" class="mora-tl-label">{int(peak*frac)}</text>'
+        for frac in (0, 0.5, 1))
+    caveat = (f" · {excluded} row{'s' if excluded != 1 else ''} excluded "
+              f"(only a year is documented)" if excluded else "")
+    return f"""
+<div class="mora-tl-wrap" style="overflow-x:auto">
+  <svg viewBox="0 0 {W} {H}" style="min-width:{W}px" role="img"
+    aria-label="Monthly count of moratorium actions">
+    {grid}{y_labels}{"".join(bars)}{"".join(labels)}
+  </svg>
+</div>
+<p class="muted" style="font-size:12.5px;margin-top:4px">Stacked by status
+at build time — an old month's bar can still show a color change if a row
+from that month later expired or was rescinded{caveat}.</p>"""
+
+
+_MORATORIUM_SNAPSHOT_PATH = ROOT / "data" / "moratorium_snapshot.json"
+_MORATORIUM_CHANGES_PATH = ROOT / "data" / "moratorium_changes.json"
+_MORA_CHANGE_RETENTION_DAYS = 90
+
+
+def _mora_detect_changes(records):
+    """Diff current rows against the last build's snapshot.
+
+    First run ever: there's no prior snapshot to diff against, so every row
+    would register as "added" — that describes the whole tracker, not a
+    change, so this seeds the baseline silently instead. From the next
+    build on, a real change (a new row, a status flip, an extended or
+    shortened `expires`) gets one entry, dated the day it was *detected*
+    (deterministic per day, so same-day rebuilds don't churn the file).
+    """
+    import datetime as _dt2
+    today = _dt2.date.today().isoformat()
+    prev = {}
+    had_snapshot = _MORATORIUM_SNAPSHOT_PATH.exists()
+    if had_snapshot:
+        try:
+            prev = json.loads(_MORATORIUM_SNAPSHOT_PATH.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            prev = {}
+
+    new_changes = []
+    if had_snapshot:
+        for r in records:
+            old = prev.get(r["id"])
+            label = f"{r['locality']}, {r['state']}"
+            if old is None:
+                new_changes.append({"date": today, "id": r["id"],
+                                     "locality": label, "kind": "added",
+                                     "detail": f"Added as {r['effective_status']}"})
+            elif old.get("effective_status") != r["effective_status"]:
+                new_changes.append({
+                    "date": today, "id": r["id"], "locality": label,
+                    "kind": "status_changed",
+                    "detail": f"{old.get('effective_status')} → {r['effective_status']}"})
+            elif old.get("expires") != r["expires"] and r["expires"]:
+                longer = (not old.get("expires")) or r["expires"] > old.get("expires")
+                new_changes.append({
+                    "date": today, "id": r["id"], "locality": label,
+                    "kind": "extended" if longer else "shortened",
+                    "detail": f"Now runs to {r['expires']}"})
+
+    log = []
+    if _MORATORIUM_CHANGES_PATH.exists():
+        try:
+            log = json.loads(_MORATORIUM_CHANGES_PATH.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            log = []
+    cutoff = (_dt2.date.today() - _dt2.timedelta(days=_MORA_CHANGE_RETENTION_DAYS)).isoformat()
+    log = [c for c in log if c["date"] >= cutoff] + new_changes
+    _MORATORIUM_CHANGES_PATH.write_text(
+        json.dumps(log, indent=2) + "\n", encoding="utf-8")
+
+    snapshot = {r["id"]: {"effective_status": r["effective_status"],
+                           "expires": r["expires"]} for r in records}
+    _MORATORIUM_SNAPSHOT_PATH.write_text(
+        json.dumps(snapshot, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    return log
+
+
 _MORA_KIND_LABEL = {"official": "Official", "roundup": "Roundup", "news": "News"}
 
 
@@ -7106,6 +7290,138 @@ def build_executives():
         jsonld=_breadcrumb(("Home", SITE_URL), ("Executives", f"{SITE_URL}/executives")))
 
 
+_MORA_COMPARISON = [
+    ("AI GridWatch", 386, 39,
+     "Every row sourced, every status derived from a documented end date. "
+     "Weakest point: 82 rows still trace to a single roundup article rather "
+     "than the ordinance itself."),
+    ("Moratorium Nation (mjbommar)", 505, 42,
+     "Largest open dataset, geocoded, CC BY. No source-URL column — "
+     "ordinance numbers and dates live in prose on its state pages, not in "
+     "the machine-readable CSV."),
+    ("SAVRN", 298, 43,
+     "Every entry links to a primary source and claims weekly "
+     "re-verification. No open download and no derived expiry."),
+    ("Electric Choice", 321, 32,
+     "Calls its own count \"a floor.\" Aggregate methodology note, not "
+     "per-row sourcing."),
+    ("Interconnected Capital", 268, None,
+     "Source column in its data table; updated roughly every two weeks. "
+     "No open download."),
+    ("NLC Local Action Tracker", 76, None,
+     "Counts only confirmed adoptions or documented attempts, which is why "
+     "it's smaller — a stricter bar than most of the trackers here."),
+]
+
+
+def build_moratorium_methodology():
+    """Explain what this tracker counts and why every count differs.
+
+    Written because six trackers publish six different numbers for the same
+    country's worth of moratoriums, and every one of them is defensible
+    under its own definition. A reporter who has to pick one cites the
+    tracker that shows its work.
+    """
+    import datetime as _dt
+
+    rows = "\n".join(
+        f"<tr><td>{esc(name)}</td><td>{n if n is not None else '—'}</td>"
+        f"<td>{s if s is not None else '—'}</td><td>{esc(note)}</td></tr>"
+        for name, n, s, note in _MORA_COMPARISON)
+    caveat = (registry_provenance("MORATORIUMS_DF") or {}).get("caveat", "")
+    body = f"""
+<header>
+  <div class="kicker">Moratorium tracker</div>
+  <h1>How we count data center moratoriums</h1>
+  <p class="sub">Six trackers, six different numbers, for the same set of
+  towns. Here is our definition, our sourcing bar, and where our count is
+  still catching up.</p>
+</header>
+<section>
+  <h2>What counts as a tracked action</h2>
+  <p>A row exists when a city council, county board, planning commission, or
+  state legislature has taken a documented vote to pause, restrict, or ban
+  data center development — a moratorium, an outright zoning prohibition, a
+  restrictive rezoning specific to data centers, or a state-level freeze.
+  We do <strong>not</strong> count: a proposal that never reached a vote, a
+  developer's own project delay, informal opposition with no governmental
+  action behind it, or a permit denial for one project that doesn't change
+  the underlying zoning for the next one (that belongs on the
+  <a href="projects.html">project tracker</a> instead).</p>
+</section>
+<section>
+  <h2>How a row earns a status</h2>
+  <p><code>status</code> is what was recorded at the time: Enacted, Proposed,
+  Rejected, Vetoed, or Rescinded. <code>effective_status</code> is what's
+  true today — an Enacted row past its documented <code>expires</code> date
+  reads Expired automatically, with no edit required, because a lapsed
+  moratorium cited as current is the fastest way for a resident to lose a
+  hearing. Read <code>effective_status</code>; the page and every download
+  do.</p>
+  <p>Every row also carries a <code>source_kind</code>: <strong>official</strong>
+  means the citation is the enacting body's own record — a .gov page, an
+  ordinance host, an agenda system. <strong>Roundup</strong> means the same
+  URL is cited by several different localities — a compilation article, not
+  a primary record of any one of them. <strong>News</strong> is everything
+  else. A link is not proof it's the ordinance itself; the badge says which
+  kind of link it is.</p>
+</section>
+<section>
+  <h2>Why the count moves</h2>
+  <p>Three things change a number here, and they're tracked differently on
+  purpose: <code>effective_status</code> is derived fresh on every build, so
+  an expiring moratorium becomes "Expired" with no one touching the row.
+  New rows are added by a human reading a primary source, never in bulk from
+  another tracker. And every build diffs against the last one and logs what
+  moved — see <a href="moratoriums.html#data">Changed in the last 7 days</a>
+  on the tracker page, or <a href="changes.xml">subscribe by RSS</a>.</p>
+</section>
+<section>
+  <h2>Why every tracker's number is different</h2>
+  <p class="muted" style="margin-bottom:12px">Counts as published or reported,
+  gathered {_dt.date.today().strftime('%B %Y')}. Not all of these are
+  data-center-specific or update on the same cadence — see the note on each.</p>
+  <div style="overflow-x:auto">
+  <table><tr><th>Tracker</th><th>Rows</th><th>States</th><th>Note</th></tr>
+  {rows}</table>
+  </div>
+  <p class="muted" style="margin-top:10px">The spread comes from definition,
+  not diligence: a tracker counting every local "moratorium, ban, or
+  restriction" (Moratorium Nation, Electric Choice) will always outnumber one
+  counting only confirmed adoptions with a primary source per row (SAVRN,
+  us). Neither is wrong; they're answering different questions.</p>
+</section>
+<section>
+  <h2>Where our count is still behind</h2>
+  <p>{esc(caveat).replace(chr(10)+chr(10), '</p><p>')}</p>
+  <p>As of this build: 82 rows still carry <code>term_kind: unknown</code>
+  because the only source found so far is a multi-locality roundup article,
+  not the ordinance. That number is public precisely because it's the
+  worklist — see the <a href="moratoriums.html">full tracker</a> for the
+  current total, and the <a href="{SITE_URL}/open-data">open data page</a>
+  for the download.</p>
+</section>
+<section>
+  <h2>Cite this</h2>
+  <p>AI GridWatch, "U.S. data center moratorium &amp; community action
+  tracker," {_dt.date.today().strftime('%B %Y')},
+  <a href="{SITE_URL}/moratoriums">{SITE_URL}/moratoriums</a>. Data licensed
+  <a href="{DATA_LICENSE_URL}" rel="license noopener">{DATA_LICENSE}</a> —
+  the JSON and CSV downloads on that page carry the same per-row sourcing
+  this page describes.</p>
+  <p><a class="btn ghost" href="moratoriums.html">&larr; Back to the tracker</a></p>
+</section>
+"""
+    return page(
+        "How we count data center moratoriums — AI GridWatch",
+        "What counts as a tracked moratorium, how status is derived, and "
+        "why every public tracker reports a different number.",
+        body, f"{SITE_URL}/moratoriums-methodology",
+        jsonld=_breadcrumb(("Home", SITE_URL),
+                            ("Moratoriums", f"{SITE_URL}/moratoriums"),
+                            ("How we count", f"{SITE_URL}/moratoriums-methodology")))
+
+
 def build_moratoriums():
     total = len(MORATORIUMS_DF)
     n_states = MORATORIUMS_DF["state"].nunique()
@@ -7126,7 +7442,7 @@ def build_moratoriums():
         return "|".join(v for v in vals if v)
 
     rows = "\n".join(
-        f"<tr data-state=\"{esc(str(m.state))}\" "
+        f"<tr id=\"{esc(str(m.id))}\" data-state=\"{esc(str(m.state))}\" "
         f"data-status=\"{esc(_row_status(m))}\">"
         f"<td><a href=\"communities/{_loc_slug(m.locality, m.state)}.html\">"
         f"{esc(str(m.locality))}</a></td>"
@@ -7193,6 +7509,68 @@ def build_moratoriums():
   {rest_html}
 </section>"""
 
+    # Changed since the last build — the RSS feed's on-page counterpart.
+    # First build ever has no prior snapshot to diff against, so the log is
+    # empty on that run by design; see _mora_detect_changes.
+    import datetime as _dt3
+    _week_ago = (_dt3.date.today() - _dt3.timedelta(days=7)).isoformat()
+    _recent_changes = sorted(
+        (c for c in _MORA_CHANGES_LOG if c["date"] >= _week_ago),
+        key=lambda c: c["date"], reverse=True)
+    _CHANGE_KIND_LABEL = {"added": "New", "status_changed": "Status changed",
+                           "extended": "Extended", "shortened": "Shortened"}
+    changes_html = ""
+    if _recent_changes:
+        _items = "\n".join(
+            f'<li><a href="#{esc(c["id"])}"><strong>{esc(c["locality"])}</strong></a> '
+            f'— <span class="badge">{esc(_CHANGE_KIND_LABEL.get(c["kind"], c["kind"]))}</span> '
+            f'<span class="muted">{esc(c["detail"])}</span></li>'
+            for c in _recent_changes[:20])
+        changes_html = f"""
+<section>
+  <h2>Changed in the last 7 days</h2>
+  <p class="muted" style="margin-bottom:12px">Every row that moved since a
+  prior build: newly tracked, a status flip, or a term that got extended or
+  cut short. <a href="changes.xml">Subscribe by RSS</a></p>
+  <ul>{_items}</ul>
+</section>"""
+
+    _map_svg = _mora_map_svg()
+    _timeline_svg = _mora_timeline_svg()
+    map_timeline_html = ""
+    if _map_svg or _timeline_svg:
+        map_timeline_html = f"""
+<section>
+  <h2>Where and when</h2>
+  <div class="mora-viz-grid">
+    <div>
+      <h3 style="margin:0 0 8px;font-size:15px">Every tracked local action</h3>
+      {_map_svg}
+    </div>
+    <div>
+      <h3 style="margin:0 0 8px;font-size:15px">Actions by month</h3>
+      {_timeline_svg}
+    </div>
+  </div>
+  <style>
+  .mora-viz-grid {{ display:grid; grid-template-columns:1.3fr 1fr; gap:20px; }}
+  @media (max-width:860px) {{ .mora-viz-grid {{ grid-template-columns:1fr; }} }}
+  .mora-map-wrap {{ border:1px solid var(--rule); border-radius:12px;
+    background:var(--card); padding:10px; }}
+  .mora-map-wrap a circle {{ transition:r .1s ease; }}
+  .mora-map-wrap a:hover circle {{ r:6; }}
+  .mora-map-legend {{ display:flex; flex-wrap:wrap; gap:12px; align-items:center;
+    margin-top:8px; font-size:12.5px; color:var(--muted); }}
+  .mora-map-legend-item {{ display:inline-flex; align-items:center; gap:5px; }}
+  .mora-map-legend-item i {{ width:9px; height:9px; border-radius:50%;
+    display:inline-block; }}
+  .mora-tl-wrap {{ border:1px solid var(--rule); border-radius:12px;
+    background:var(--card); padding:10px; }}
+  .mora-tl-label {{ font-size:9px; fill:var(--muted); }}
+  .mora-tl-grid {{ stroke:var(--rule); stroke-width:1; }}
+  </style>
+</section>"""
+
     body = f"""
 <header>
   <div class="kicker">Community tracker</div>
@@ -7209,7 +7587,9 @@ def build_moratoriums():
   <div class="stat"><b>{verified}/{total}</b><span>source-verified</span></div>
   <div class="stat"><b>{official_sourced}</b><span>cite the enacting body's own record</span></div>
 </div>
+{map_timeline_html}
 {alerts_html}
+{changes_html}
 <section>
   <h2>All tracked moratoriums</h2>
   <p class="muted" style="margin-bottom:12px">Status is what applies
@@ -7337,14 +7717,18 @@ def build_moratoriums():
   </script>
   {provenance_html("MORATORIUMS_DF")}
   <p class="muted" style="margin-top:10px">See the full interactive map and
-  filters in the <a href="start-here.html">GridWatch toolkit</a>.</p>
+  filters in the <a href="start-here.html">GridWatch toolkit</a>, or read
+  <a href="moratoriums-methodology.html">how we count</a> — what qualifies as
+  a tracked action, and why our number differs from every other public
+  tracker's.</p>
 </section>
 <section id="data">
   <h2>Use this data</h2>
   <p>The whole tracker, with per-row sources, verification dates and derived
   expiry, as a documented download. Free to reuse with attribution
   (<a href="{DATA_LICENSE_URL}" rel="license noopener">{DATA_LICENSE}</a>) —
-  cite it, chart it, or load it into your own tracker.</p>
+  cite it, chart it, or load it into your own tracker.
+  <a href="changes.xml">Subscribe to changes by RSS</a>.</p>
   {_dl_grid(
       _download_card("data/moratoriums.json", "moratoriums.json", "json",
                      f"{total} tracked actions · sources + derived expiry",
@@ -13297,7 +13681,13 @@ def build_moratorium_data():
     w.writerows({**rec, "events": json.dumps(rec["events"])} for rec in records)
     (WEB / "data" / "moratoriums.csv").write_text(buf.getvalue(),
                                                   encoding="utf-8")
+
+    global _MORA_CHANGES_LOG
+    _MORA_CHANGES_LOG = _mora_detect_changes(records)
     return len(records)
+
+
+_MORA_CHANGES_LOG = []
 
 
 def build_facilities_data():
@@ -13721,6 +14111,45 @@ def build_open_data():
         ])
 
 
+def build_moratorium_changes_feed():
+    """Publish the moratorium change log as RSS.
+
+    The alerts feed covers deadlines that were already known in advance;
+    this covers the opposite case — a row that moved since the last build
+    at all (new, expired, extended, rescinded). A reporter tracking one
+    state subscribes to this instead of re-diffing the CSV by hand.
+    """
+    import datetime as _dt
+    from email.utils import format_datetime
+
+    log = sorted(_MORA_CHANGES_LOG, key=lambda c: c["date"], reverse=True)
+    _KIND_LABEL = {"added": "New", "status_changed": "Status changed",
+                   "extended": "Extended", "shortened": "Shortened"}
+    items = "\n".join(f"""  <item>
+    <title>{esc(_KIND_LABEL.get(c['kind'], c['kind']))}: {esc(c['locality'])}</title>
+    <link>{SITE_URL}/moratoriums#{esc(c['id'])}</link>
+    <guid isPermaLink="false">{esc(c['id'])}-{esc(c['date'])}-{esc(c['kind'])}</guid>
+    <pubDate>{format_datetime(_dt.datetime.combine(_dt.date.fromisoformat(c["date"]), _dt.time(0, 0), tzinfo=_dt.timezone.utc))}</pubDate>
+    <description>{esc(c['detail'])}</description>
+  </item>""" for c in log[:100])
+    now = _dt.datetime.combine(_dt.date.today(), _dt.time(0, 0),
+                               tzinfo=_dt.timezone.utc)
+    feed = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+  <title>AI GridWatch — moratorium tracker changes</title>
+  <link>{SITE_URL}/moratoriums</link>
+  <description>Every row that changed since the last build: newly tracked
+  actions, status changes, and extended or shortened terms. Re-verifications
+  with no substantive change are not logged here.</description>
+  <language>en-us</language>
+  <lastBuildDate>{format_datetime(now)}</lastBuildDate>
+{items}
+</channel></rss>
+"""
+    (WEB / "changes.xml").write_text(feed, encoding="utf-8")
+    return len(log)
+
+
 def build_alerts_outputs():
     """Publish the expiry alerts as JSON and RSS.
 
@@ -13933,6 +14362,10 @@ def main():
         build_complaints(_STORY_ARCHIVE), encoding="utf-8")
     _n_alerts = build_alerts_outputs()
     print(f"  [data] {_n_alerts} deadline alerts -> alerts.json + alerts.xml")
+    _n_changes = build_moratorium_changes_feed()
+    print(f"  [data] {_n_changes} logged moratorium changes -> changes.xml")
+    (WEB / "moratoriums-methodology.html").write_text(
+        build_moratorium_methodology(), encoding="utf-8")
     (WEB / "embed").mkdir(parents=True, exist_ok=True)
     (WEB / "embed" / "moratoriums.html").write_text(
         build_moratorium_embed(), encoding="utf-8")
@@ -14032,7 +14465,8 @@ def main():
         (WEB / "companies" / f"{ld['slug']}.html").write_text(
             build_limited_scorecard(ld), encoding="utf-8")
 
-    paths = ["", "start-here", "health-risks", "moratoriums", "story-tracker",
+    paths = ["", "start-here", "health-risks", "moratoriums",
+             "moratoriums-methodology", "story-tracker",
              "projects", "impact", "bills", "outlook",
              "learn", "puc", "executives", "about", "search", "dividend",
              "data-centers", "environment", "studies", "complaints",
