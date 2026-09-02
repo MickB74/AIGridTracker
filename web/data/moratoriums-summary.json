@@ -3,15 +3,15 @@
   "generated": "2026-09-02",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 386,
+  "count": 391,
   "states": 39,
-  "enacted": 317,
-  "proposed": 36,
+  "enacted": 323,
+  "proposed": 35,
   "official_sourced": 27,
   "by_state": {
     "CO": {
-      "total": 6,
-      "enacted": 4,
+      "total": 8,
+      "enacted": 6,
       "proposed": 0
     },
     "MD": {
@@ -40,8 +40,8 @@
       "proposed": 0
     },
     "WI": {
-      "total": 12,
-      "enacted": 11,
+      "total": 13,
+      "enacted": 12,
       "proposed": 1
     },
     "RI": {
@@ -50,8 +50,8 @@
       "proposed": 0
     },
     "MI": {
-      "total": 31,
-      "enacted": 21,
+      "total": 32,
+      "enacted": 22,
       "proposed": 0
     },
     "TX": {
@@ -86,12 +86,12 @@
     },
     "NC": {
       "total": 30,
-      "enacted": 22,
-      "proposed": 3
+      "enacted": 23,
+      "proposed": 2
     },
     "FL": {
-      "total": 13,
-      "enacted": 11,
+      "total": 14,
+      "enacted": 12,
       "proposed": 1
     },
     "OH": {
@@ -232,6 +232,7 @@
       "nashville-tn",
       "augusta-ga",
       "vienna-township-trumbull-co-oh",
+      "charlotte-nc",
       "lavon-tx",
       "springfield-mo",
       "birmingham-al",

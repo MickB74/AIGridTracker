@@ -224,8 +224,8 @@
     "expires": "2027-04-23"
   },
   "charlotte-nc": {
-    "effective_status": "Proposed",
-    "expires": null
+    "effective_status": "Enacted",
+    "expires": "2026-11-05"
   },
   "chatham-county-nc": {
     "effective_status": "Enacted",
@@ -494,6 +494,10 @@
   "fulton-county-in": {
     "effective_status": "Enacted",
     "expires": "2027-03-03"
+  },
+  "garfield-township-mi": {
+    "effective_status": "Enacted",
+    "expires": "2027-08-25"
   },
   "gates-county-nc": {
     "effective_status": "Enacted",
@@ -939,6 +943,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "monument-co": {
+    "effective_status": "Enacted",
+    "expires": "2027-01-20"
+  },
   "morris-ct": {
     "effective_status": "Enacted",
     "expires": "2028-05-20"
@@ -1323,6 +1331,10 @@
     "effective_status": "Enacted",
     "expires": "2027-01-13"
   },
+  "st-croix-county-wi": {
+    "effective_status": "Enacted",
+    "expires": "2027-09-01"
+  },
   "st-lawrence-county-ny": {
     "effective_status": "Proposed",
     "expires": null
@@ -1515,6 +1527,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "woodland-park-co": {
+    "effective_status": "Enacted",
+    "expires": "2028-01-16"
+  },
   "woodstown-nj": {
     "effective_status": "Enacted",
     "expires": null
@@ -1542,5 +1558,9 @@
   "ypsilanti-ycua-mi": {
     "effective_status": "Enacted",
     "expires": "2027-04-22"
+  },
+  "zephyrhills-fl": {
+    "effective_status": "Enacted",
+    "expires": "2027-06-22"
   }
 }

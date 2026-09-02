@@ -4,7 +4,7 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
-  "count": 36,
+  "count": 37,
   "alerts": [
     {
       "id": "mora-MI-armada-township-2026-07-13",
@@ -290,6 +290,19 @@
       "title": "Lexington (Fayette County), KY: data center moratorium expires in 59 days",
       "body": "The documented term ends 2026-10-31. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.lex18.com/news/covering-kentucky/lexington-city-council-passes-moratorium-on-data-center-development",
+      "verified": true
+    },
+    {
+      "id": "mora-NC-charlotte-2026-11-05",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Charlotte",
+      "state": "NC",
+      "expires": "2026-11-05",
+      "days_left": 64,
+      "title": "Charlotte, NC: data center moratorium expires in 64 days",
+      "body": "The documented term ends 2026-11-05. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.wfae.org/politics/2026-06-08/charlotte-city-council-approves-150-day-data-center-moratorium",
       "verified": true
     },
     {

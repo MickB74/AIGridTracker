@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "date": "2026-09-02",
+    "id": "charlotte-nc",
+    "locality": "Charlotte, NC",
+    "kind": "status_changed",
+    "detail": "Proposed \u2192 Enacted"
+  },
+  {
+    "date": "2026-09-02",
+    "id": "st-croix-county-wi",
+    "locality": "St. Croix County, WI",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-02",
+    "id": "garfield-township-mi",
+    "locality": "Garfield Township, MI",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-02",
+    "id": "woodland-park-co",
+    "locality": "Woodland Park, CO",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-02",
+    "id": "zephyrhills-fl",
+    "locality": "Zephyrhills, FL",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-02",
+    "id": "monument-co",
+    "locality": "Monument, CO",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  }
+]

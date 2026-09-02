@@ -1113,8 +1113,8 @@ MORATORIUMS = [
      "note": "18-month pause on large-scale data center rezonings in unincorporated "
              "areas, passed 2-1 and effective immediately — adopted even after the "
              "county had put an ordinance in place",
-     "lat": 42.08, "lon": -91.60, "expires": "2028-01-01", "as_of": "2026-08-04",
-     "source": "https://www.linncountyiowa.gov/CivicAlerts.aspx?AID=4487"},
+     "lat": 42.08, "lon": -91.60, "expires": "2028-01-01", "as_of": "2026-09-02",
+     "source": "https://www.linncountyiowa.gov/1862/Data-Centers-in-Unincorporated-Linn-Coun"},
     {"locality": "London", "state": "KY", "level": "Local",
      "status": "Enacted", "when": "Aug 3, 2026",
      "note": "2-year pause passed 5-1, running to Sep 30, 2028 and extendable a "
@@ -1243,12 +1243,14 @@ MORATORIUMS = [
      "source": "https://www.yahoo.com/news/us/articles/why-one-connecticut-town-approved-100000211.html"},
     # Proposed / under consideration
     {"locality": "Charlotte", "state": "NC", "level": "Local",
-     "status": "Proposed", "when": "Jun 9, 2025",
-     "note": "180-day moratorium on data centers over 100,000 sq ft; initial "
-             "vote deadlocked 5-5 with one member absent, so the motion failed. "
-             "Reintroduced in 2026 amid continued community pressure",
-     "lat": 35.23, "lon": -80.84, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.charlotteobserver.com/"},
+     "status": "Enacted", "when": "Jun 8, 2026",
+     "note": "An earlier version deadlocked 5-5 with one member absent in Jun "
+             "2025 and failed. Reintroduced amid continued community pressure "
+             "and passed 11-0 on Jun 8, 2026: 150-day moratorium on new data "
+             "center applications, running through Nov 5, 2026; already-approved "
+             "projects are unaffected",
+     "lat": 35.23, "lon": -80.84, "expires": "2026-11-05", "as_of": "2026-09-02",
+     "source": "https://www.wfae.org/politics/2026-06-08/charlotte-city-council-approves-150-day-data-center-moratorium"},
     {"locality": "Durham", "state": "NC", "level": "Local",
      "status": "Enacted", "when": "Extended Jun 15, 2026",
      "note": "60-day moratorium passed unanimously May 5, extended to 12 months "
@@ -3698,6 +3700,44 @@ MORATORIUMS = [
              "citing this row at a hearing.",
      "lat": 39.65, "lon": -75.33, "expires": None, "as_of": "2026-08-30",
      "source": "https://pinelandsalliance.org/datacenters/"},
+    # ── Promoted from the news-scan queue, 2026-09-02 ──────────────────────
+    {"locality": "St. Croix County", "state": "WI", "level": "Local",
+     "status": "Enacted", "when": "Sep 1, 2026",
+     "note": "1-year moratorium on medium- and large-scale data centers, "
+             "18-0, in unincorporated areas under county zoning -- does not "
+             "apply to the towns of Forest, Hudson, St. Joseph, or Troy, "
+             "which zone themselves",
+     "lat": 44.98, "lon": -92.55, "expires": "2027-09-01", "as_of": "2026-09-02",
+     "source": "https://www.hudsonstarobserver.com/news/st-croix-county-board-of-supervisors-approves-data-center-moratorium-unanimously/article_ffb0d3f1-77a5-43c7-8ba5-e9fd44b1aa32.html"},
+    {"locality": "Garfield Township", "state": "MI", "level": "Local",
+     "status": "Enacted", "when": "Aug 25, 2026",
+     "note": "1-year moratorium on data centers and cryptocurrency mining "
+             "facilities, unanimous, to allow a zoning-ordinance update; "
+             "township policy allows a further 6-month extension if the "
+             "update isn't finished, which is not yet in effect",
+     "lat": 44.71, "lon": -85.59, "expires": "2027-08-25", "as_of": "2026-09-02",
+     "source": "https://www.interlochenpublicradio.org/2026-08-26/garfield-township-puts-a-1-year-ban-on-data-centers-cryptocurrency-mining"},
+    {"locality": "Woodland Park", "state": "CO", "level": "Local",
+     "status": "Enacted", "when": "Jul 16, 2026",
+     "note": "18-month moratorium on submitting, accepting, processing, or "
+             "approving data center applications, adopted to study "
+             "regulations other Colorado municipalities are writing",
+     "lat": 38.99, "lon": -105.06, "expires": "2028-01-16", "as_of": "2026-09-02",
+     "source": "https://gazette.com/2026/07/17/woodland-park-passes-moratorium-on-data-centers/"},
+    {"locality": "Zephyrhills", "state": "FL", "level": "Local",
+     "status": "Enacted", "when": "Jun 22, 2026",
+     "note": "1-year moratorium on data center building permits, rezonings, "
+             "and site plans, final vote unanimous; no applications had been "
+             "filed at the time",
+     "lat": 28.23, "lon": -82.18, "expires": "2027-06-22", "as_of": "2026-09-02",
+     "source": "https://www.wusf.org/politics-issues/2026-06-24/zephyrhills-city-council-one-year-moratorium-data-centers"},
+    {"locality": "Monument", "state": "CO", "level": "Local",
+     "status": "Enacted", "when": "Jul 20, 2026",
+     "note": "Ordinance 18-2026: 6-month moratorium on accepting or "
+             "processing data center land-development applications, "
+             "unanimous -- first municipality in El Paso County to adopt one",
+     "lat": 39.09, "lon": -104.87, "expires": "2027-01-20", "as_of": "2026-09-02",
+     "source": "https://wp.ocn.me/v26n8montc-2/"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.
@@ -4668,7 +4708,7 @@ COMPANY_CONCESSIONS = {
                      "here: note that the penalty formula, not the cap alone, "
                      "is what makes it enforceable.",
              "sources": ["https://www.shawlocal.com/kendall-county-now/2026/07/14/228-acre-cyrusone-data-center-agrees-to-pay-yorkville-15-million-up-front-city-imposes-water-use-limits/"]},
-            {"as_of": "2026-08-23", "where": "Aurora, IL", "year": "2026",
+            {"as_of": "2026-09-02", "where": "Aurora, IL", "year": "2026",
              "what": "After the city issued citations over chiller and "
                      "generator noise, Aurora and CyrusOne signed a legal "
                      "agreement setting deadlines for temporary and permanent "
@@ -4677,7 +4717,7 @@ COMPANY_CONCESSIONS = {
                      "14 June. Residents say the noise is still disrupting "
                      "daily life after mitigation — the honest read is that "
                      "enforcement bought a wall, not quiet.",
-             "sources": ["https://www.wandtv.com/news/illinois/aurora-residents-say-data-center-noise-is-disrupting-daily-life-despite-mitigation-efforts/article_def1cf22-2426-4f5d-966a-fc889499449f.html",
+             "sources": ["https://www.yahoo.com/news/articles/aurora-reaches-agreement-cyrusone-address-231500462.html",
                          "https://www.northernpublicradio.org/illinois/2026-08-03/how-aurora-and-dekalb-residents-are-dealing-with-data-centers"]},
             {"as_of": "2026-08-23", "where": "Chandler, AZ", "year": "2018-2022",
              "what": "After sustained resident complaints about a high-pitched "
