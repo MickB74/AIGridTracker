@@ -3310,7 +3310,7 @@ MORATORIUMS = [
      "note": "Board of Commissioners banned data centers citywide, calling them "
              "\"incompatible with the City's land use planning objectives, "
              "infrastructure capacity, and community character.\" The vote killed "
-             "the A1 Data Center, a 2.9 million sq ft / 66-acre proposal that "
+             "the A1 Data Center campus, a 2.6 million sq ft proposal that "
              "would have drawn roughly 1.4 GW -- the largest data center ever "
              "blocked in New Jersey. Millville borders Vineland, where the "
              "DataOne/Nebius campus was already under construction",
