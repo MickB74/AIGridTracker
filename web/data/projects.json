@@ -5,8 +5,8 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/projects",
-  "count": 263,
-  "verified_count": 262,
+  "count": 271,
+  "verified_count": 270,
   "caveat": "A working set of identified proposals a community can track, not a census — most of the country's activity is not in here yet. Pennsylvania is the exception: its rows are synced from PA DEP's own data-center permit tracker, so the state's coverage is close to complete and carries the permit trail with it.\n\n**Each row carries its own provenance.** Rows showing a verification date link to reporting or the governing body's own record and were read on that date; rows marked *unverified* have no source on record — a lead to check, not a fact to cite.\n\n**Stage is derived, not asserted.** *Hearing scheduled*, *Awaiting decision*, *Approved* and *Withdrawn* are computed from each row's milestone dates on every rebuild, so a hearing date that has passed stops reading 'scheduled'. Hearings get moved and projects re-file under new names — treat a scheduled date as the earliest to act by, and confirm with the clerk before relying on it. Leads are mined into data/project_candidates.json and promoted here only after a human reads a primary source.",
   "schema": {
     "id": "Stable slug, unique per project.",
@@ -2039,7 +2039,7 @@
       "owner": "",
       "tenant": "",
       "filing_llc": "",
-      "locality": "Northern Warrick County (reclaimed mine land)",
+      "locality": "Warrick County (reclaimed mine land)",
       "state": "IN",
       "lat": 38.09,
       "lon": -87.27,
@@ -7288,6 +7288,18 @@
           "kind": "coverage",
           "summary": "The city disclosed that Meta paid $4 million upfront in wastewater capacity fees and is projected to generate $300,000-$400,000 in monthly recurring sewer utility revenue once the facility is operational.",
           "source": "https://www.wave3.com/2026/08/04/jeffersonville-passes-year-long-data-center-moratorium-amid-resident-outcry-major-utility-disclosures/"
+        },
+        {
+          "date": "2026-08-04",
+          "kind": "public-comment",
+          "summary": "At the moratorium hearing, residents including Rachel Wurfel (living ~1.3 miles from the Meta site) and James McPherson (a retired IT/data-center engineer) raised construction-related foundation damage, light pollution, and heat/HVAC-cost concerns tied to the ~400 MW Meta facility; resident William Hunt argued the project's 2022 tax abatement was 'an extremely wrong deal.'",
+          "source": "https://www.newsandtribune.com/news/jeffersonville-city-council-approves-one-year-moratorium-for-data-centers/article_c39dd353-1c15-4b9d-8d00-462c2da7506b.html"
+        },
+        {
+          "date": "2026-08-26",
+          "kind": "coverage",
+          "summary": "Louisville Public Media explained how the Meta data center was approved outside normal city zoning: Jeffersonville's 2022 development agreement with 'Blocke LLC' (a Meta shell entity) let the project proceed because the River Ridge Development Authority, not the city, controls land use at the former Indiana Army Ammunition Plant site; Jeffersonville approves development plans there but has no zoning say.",
+          "source": "https://www.lpm.org/news/2026-08-26/jeffersonville-data-center-zoning-explained-how-meta-got-approved"
         }
       ]
     },
@@ -11959,6 +11971,18 @@
           "kind": "moratorium",
           "summary": "Indianapolis City-County Council voted 23-1 to advance a moratorium pausing approval of new data centers in Marion County through 2028, partly driven by the Sabey fight; the measure exempts the three already-approved projects including Sabey's.",
           "source": "https://www.wishtv.com/news/politics/indianapolis-data-center-moratorium-put-on-hold-aug-10-2026/"
+        },
+        {
+          "date": "2026-07-10",
+          "kind": "coverage",
+          "summary": "Council President Maggie A. Lewis announced she would seek a citywide data-center moratorium, citing the Sabey fight among the drivers of the push.",
+          "source": "https://www.wfyi.org/wfyi-news/2026-07-10/indianapolis-council-president-to-ask-for-data-center-moratorium"
+        },
+        {
+          "date": "2026-08-19",
+          "kind": "moratorium",
+          "summary": "The Metropolitan Development Commission voted 6-0 to give final approval to the citywide data-center moratorium (through Dec. 31, 2027); Sabey's Decatur Township campus was one of three already-approved projects explicitly exempted under state law.",
+          "source": "https://www.wfyi.org/wfyi-news/2026-08-19/new-data-centers-temporarily-banned-in-marion-county"
         }
       ]
     },
@@ -20307,6 +20331,438 @@
           "kind": "meeting",
           "source": "https://www.chronicle-tribune.com/news/data-center-subcommittee-wraps-up-initial-draft-review/article_ca5c0ad2-73e6-5484-8e96-763c8e3db140.html",
           "summary": "The APC's data center subcommittee met to complete its initial review of the draft data center ordinance; the Chronicle-Tribune described the county as 'one step closer to finalizing a data center ordinance'."
+        }
+      ]
+    },
+    {
+      "id": "dc-blox-warren-township-in",
+      "name": "DC Blox Warren Township (Thunderbird Commerce Center)",
+      "operator": "DC Blox",
+      "owner": "DC Blox",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Warren Township (Indianapolis) / Irvington",
+      "state": "IN",
+      "lat": 39.766,
+      "lon": -85.99,
+      "size_mw": "",
+      "acres": "",
+      "announced": "2026-04-27",
+      "rezoning_filed": "",
+      "hearing_date": "2026-06-11",
+      "decided_date": "2026-07-15",
+      "outcome": "approved",
+      "stage": "Approved",
+      "days_to_hearing": null,
+      "note": "Up to $2.2B (incl. IT equipment) campus at 305 Fintail Drive in the Thunderbird Commerce Center (former Ford Visteon plant site), near S. Kitley Ave. and the Pennsy Trail. Originally 3 buildings; scaled back on July 8, 2026 to 2 buildings, 25 fewer backup diesel generators, and 28 MW less power demand after community pushback. Exempted from Indianapolis's Aug. 19, 2026 citywide data-center moratorium as a previously-approved project. DC Blox says the project creates 35 permanent high-wage jobs.",
+      "source": "https://mirrorindy.org/dc-blox-date-center-campus-east-side-indianapolis-irvington-warren-township/",
+      "as_of": "2026-09-02",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-04-27",
+          "kind": "public-comment",
+          "summary": "A community forum at Downey Avenue Christian Church drew Irvington/Warren Township residents to question the proposed $2 billion DC Blox data-center campus.",
+          "source": "https://mirrorindy.org/dc-blox-date-center-campus-east-side-indianapolis-irvington-warren-township/"
+        },
+        {
+          "date": "2026-05-22",
+          "kind": "coverage",
+          "summary": "WFYI reported residents pushing back on the DC Blox proposal, citing noise, water use and energy-demand concerns on Indy's east side.",
+          "source": "https://www.wfyi.org/wfyi-news/2026-05-22/dc-blox-data-center-indianapolis-warren-township-residents"
+        },
+        {
+          "date": "2026-06-11",
+          "kind": "hearing",
+          "summary": "The MDC hearing examiner held a hearing on the DC Blox petition; residents said they felt they lacked a voice in the decision-making process.",
+          "source": "https://mirrorindy.org/dc-blox-date-center-campus-east-side-indianapolis-irvington-warren-township/"
+        },
+        {
+          "date": "2026-07-08",
+          "kind": "coverage",
+          "summary": "DC Blox announced a scaled-back plan -- two buildings instead of three, 25 fewer backup diesel generators, and a wider buffer south of the Pennsy Trail -- citing community feedback.",
+          "source": "https://fox59.com/news/georgia-developer-finalizes-plans-to-downsize-2-billion-data-center-on-indys-east-side-cites-community-feedback/"
+        },
+        {
+          "date": "2026-07-15",
+          "kind": "vote",
+          "summary": "The Metropolitan Development Commission voted 6-1 to approve the scaled-back DC Blox data-center campus despite dozens of protesters outside the City-County Building.",
+          "source": "https://www.wthr.com/article/news/local/indianapolis-metropolitan-development-commission-votes-approve-dc-blox-data-center-irvington/531-a23c8e74-d433-43d9-8889-69bef36a18be"
+        },
+        {
+          "date": "2026-08-19",
+          "kind": "moratorium",
+          "summary": "DC Blox was one of three already-approved Indianapolis projects explicitly exempted from the citywide data-center moratorium the MDC adopted 6-0.",
+          "source": "https://www.wfyi.org/wfyi-news/2026-08-19/new-data-centers-temporarily-banned-in-marion-county"
+        }
+      ]
+    },
+    {
+      "id": "metrobloks-martindale-brightwood-in",
+      "name": "Metrobloks Martindale-Brightwood",
+      "operator": "Metrobloks",
+      "owner": "Metrobloks",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Martindale-Brightwood (Indianapolis)",
+      "state": "IN",
+      "lat": 39.79,
+      "lon": -86.13,
+      "size_mw": "",
+      "acres": 14,
+      "announced": "2025-01-01",
+      "rezoning_filed": "2025-01-01",
+      "hearing_date": "2026-02-12",
+      "decided_date": "2026-05-04",
+      "outcome": "approved",
+      "stage": "Approved",
+      "days_to_hearing": null,
+      "note": "$500M, two-building, ~168,000 sq ft data-center campus at 2505 N. Sherman Ave. on the site of a long-abandoned drive-in theater, in a neighborhood with a documented history of lead-contaminated soil. Uses a closed-loop cooling system (water added once, then recirculated) and buys power from AES Indiana rather than the residential grid. MDC approved 3 variances + a rezoning 6-2 on April 1, 2026; City-County Council gave final rezoning approval May 4, 2026. Exempted from the Aug. 19, 2026 citywide moratorium as a previously-approved project. Residents' group Protect Martindale Brightwood said it was exploring legal options to challenge the approval. District councilor Ron Gibson's home was shot 13 times on April 7, 2026, days after he publicly backed the project; a note reading 'No Data Centers' was left at the scene.",
+      "source": "https://mirrorindy.org/martindale-brightwood-metrobloks-data-center-east-indianapolis/",
+      "as_of": "2026-09-02",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-01-15",
+          "kind": "hearing",
+          "summary": "A scheduled MDC rezoning decision on the Metrobloks petition was delayed to allow for a further public hearing.",
+          "source": "https://mirrorindy.org/indianapolis-council-approves-data-center-for-martindale-brightwood/"
+        },
+        {
+          "date": "2026-02-12",
+          "kind": "hearing",
+          "summary": "The MDC hearing examiner recommended the Metrobloks data-center project for approval.",
+          "source": "https://mirrorindy.org/indianapolis-council-approves-data-center-for-martindale-brightwood/"
+        },
+        {
+          "date": "2026-03-11",
+          "kind": "coverage",
+          "summary": "The Indianapolis NAACP reversed its earlier opposition to the Metrobloks project.",
+          "source": "https://mirrorindy.org/indianapolis-council-approves-data-center-for-martindale-brightwood/"
+        },
+        {
+          "date": "2026-04-01",
+          "kind": "vote",
+          "summary": "The Metropolitan Development Commission approved three variances and a rezoning for the $500 million Metrobloks data center on a 6-2 vote, over objections from Martindale-Brightwood residents citing the area's industrial-contamination history.",
+          "source": "https://www.wfyi.org/wfyi-news/2026-04-01/controversial-data-center-is-approved-for-martindale-brightwood"
+        },
+        {
+          "date": "2026-04-07",
+          "kind": "protest",
+          "summary": "District 8 Councilor Ron Gibson's home was shot 13 times overnight; a note reading 'No Data Centers' was left at his door, days after he publicly supported the Metrobloks approval.",
+          "source": "https://fortune.com/2026/04/07/indianapolis-councilmember-ai-data-center-backlash/"
+        },
+        {
+          "date": "2026-05-04",
+          "kind": "vote",
+          "summary": "The City-County Council approved the Metrobloks rezoning request; the same day, Councilor Jesse Brown's non-binding resolution urging a temporary stay on high-impact data-center approvals also passed.",
+          "source": "https://www.wfyi.org/wfyi-news/2026-05-04/metrobloks-data-center-gets-final-approval-for-martindale-brightwood"
+        },
+        {
+          "date": "2026-08-19",
+          "kind": "moratorium",
+          "summary": "Metrobloks was one of three already-approved Indianapolis projects explicitly exempted from the citywide data-center moratorium the MDC adopted 6-0.",
+          "source": "https://www.wfyi.org/wfyi-news/2026-08-19/new-data-centers-temporarily-banned-in-marion-county"
+        }
+      ]
+    },
+    {
+      "id": "meta-leap-lebanon-in",
+      "name": "Meta Lebanon / LEAP Data Center Campus",
+      "operator": "Meta",
+      "owner": "",
+      "tenant": "Meta",
+      "filing_llc": "",
+      "locality": "Boone County",
+      "state": "IN",
+      "lat": 40.0492,
+      "lon": -86.4642,
+      "size_mw": 1000,
+      "acres": 1500,
+      "announced": "2026-02-11",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "Proposed",
+      "days_to_hearing": null,
+      "note": "1500-acre, 1GW, $10B+ Meta campus at the LEAP Lebanon Innovation District. Multiple sources (WISH-TV, WRTV, Data Center Dynamics, IndyStar) place this site on land annexed into the City of Lebanon as part of the state-sponsored LEAP district -- NOT unincorporated Boone County and NOT the Town of Advance. This conflicts with the task baseline description citing the Town of Advance; flagging for the tracker maintainer to reconcile (see research_notes). Either way, all reporting agrees this project is exempt from the county's unincorporated-land moratorium. First proposed publicly around Nov 2024 (~$800M), then expanded to the current $10B/1GW scope announced Feb 2026; groundbreaking construction reported ongoing through mid-2026 with resident complaints about light/noise pollution.",
+      "source": "https://www.wishtv.com/news/politics/boone-county-indiana-approves-moratorium-on-new-data-centers/",
+      "as_of": "2026-09-02",
+      "verified": true,
+      "events": [
+        {
+          "date": "2024-11-25",
+          "kind": "announced",
+          "summary": "Meta proposes ~$800 million data center in Lebanon, Indiana.",
+          "source": "https://www.wishtv.com/"
+        },
+        {
+          "date": "2026-02-11",
+          "kind": "announced",
+          "summary": "Meta officially announces expanded $10B, 1GW data center campus at LEAP District in Lebanon.",
+          "source": "https://www.ibj.com/"
+        },
+        {
+          "date": "2026-06-15",
+          "kind": "moratorium",
+          "summary": "Boone County passes a 1-year moratorium on new data centers in unincorporated county land; county officials and press confirm this does not affect the Meta LEAP/Lebanon project because it sits on annexed City of Lebanon land, not unincorporated county land.",
+          "source": "https://boonecounty.in.gov/2026/06/15/19190/"
+        },
+        {
+          "date": "2026-07-08",
+          "kind": "community-impact",
+          "summary": "IndyStar reports ongoing construction disruption for neighbors (light pollution, noise) during Meta campus build-out.",
+          "source": "https://www.wthr.com/article/news/local/lebanon-residents-disrupted-by-light-noise-from-meta-data-center-project/531-d9fa2c42-dbb0-4324-bb18-62a444bad31e"
+        }
+      ]
+    },
+    {
+      "id": "abei-energy-data-center-starke-in",
+      "name": "Abei Energy data center proposal (rezoning request)",
+      "operator": "Abei Energy (data center division)",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Starke County",
+      "state": "IN",
+      "lat": 41.335,
+      "lon": -86.62,
+      "size_mw": "",
+      "acres": "",
+      "announced": "2025-11-03",
+      "rezoning_filed": "2025-11-03",
+      "hearing_date": "2025-11-12",
+      "decided_date": "",
+      "outcome": "moratorium",
+      "stage": "Blocked by ban",
+      "days_to_hearing": null,
+      "note": "Chicago-based Abei Energy's data center division emailed the Starke County Plan Commission asking about rezoning two parcels from Agricultural to Industrial. County officials disclosed the inquiry to residents on 2025-11-03; Abei was placed on the Plan Commission's 2025-11-12 agenda. Exact parcels, acreage, and project size were never disclosed publicly. The county drafted a hyperscale data center moratorium ordinance in direct response and adopted it (Ordinance 2025-37) on 2025-12-15, before Abei's proposal advanced to a rezoning vote -- so this project's outcome is 'moratorium' (blocked by the county's own timeout), not a formal denial.",
+      "source": "https://wkvi.com/2025/11/starke-county-commissioners-discuss-data-centers-with-citizens/",
+      "as_of": "2026-09-02",
+      "verified": true,
+      "events": [
+        {
+          "date": "2025-11-03",
+          "kind": "disclosure",
+          "summary": "Starke County commissioners publicly discuss Abei Energy's inquiry with citizens after incomplete email screenshots circulated on social media; Commissioner VanDeMark says a moratorium ordinance was already being drafted at the Plan Commission.",
+          "source": "https://wkvi.com/2025/11/starke-county-commissioners-discuss-data-centers-with-citizens/"
+        },
+        {
+          "date": "2025-12-04",
+          "kind": "recommendation",
+          "summary": "Starke County Plan Commission unanimously recommends a 12-month moratorium on hyperscale data center applications to the Board of Commissioners.",
+          "source": "https://www.wndu.com/2025/12/05/starke-county-planning-commission-approves-one-year-data-center-moratorium/"
+        },
+        {
+          "date": "2025-12-15",
+          "kind": "ordinance-adopted",
+          "summary": "Board of Commissioners adopts Ordinance 2025-37, a 12-month moratorium on permits for hyperscale (>5,000 sq ft) data centers in unincorporated Starke County, by a 3-0 vote.",
+          "source": "https://wsbt.com/news/local/starke-county-board-of-commissioners-approve-12-month-ban-on-data-center-projects"
+        },
+        {
+          "date": "2026-07-15",
+          "kind": "recommendation",
+          "summary": "Plan Commission recommends a one-year extension of the data center moratorium; as of 2026-09 the Board of Commissioners has not been confirmed to have voted on it.",
+          "source": "https://nwitimes.com/news/local/business/article_faf40b8d-861c-46cf-98a0-386f0f5147f1.html"
+        }
+      ]
+    },
+    {
+      "id": "linea-energy-manchester-township-in",
+      "name": "Manchester Township Solar Farm (proposed)",
+      "operator": "Linea Energy",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Dearborn County",
+      "state": "IN",
+      "lat": 39.2,
+      "lon": -85.0,
+      "size_mw": "",
+      "acres": 1200,
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "moratorium",
+      "stage": "Blocked by ban",
+      "days_to_hearing": null,
+      "note": "Proposed ~1,200-acre commercial solar farm in Manchester Township. No formal rezoning application had been submitted as of the Feb 25, 2026 moratorium vote; this is the project that triggered the petition drive and moratorium, though the moratorium ordinance itself also covers data centers and battery storage. No data-center-specific project has been identified in Dearborn County as of Sept 2026 — the moratorium is preemptive for that use.",
+      "source": "https://www.wvxu.org/environment/2026-02-25/dearborn-county-moratorium-solar-farms-data-center",
+      "as_of": "2026-09-02",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-02-25",
+          "kind": "moratorium",
+          "summary": "Dearborn County Board of Commissioners approves up-to-1-year moratorium on rezoning for commercial solar, BESS, and data centers, effective Feb 26, 2026.",
+          "source": "https://www.wvxu.org/environment/2026-02-25/dearborn-county-moratorium-solar-farms-data-center"
+        },
+        {
+          "date": "2026-03-03",
+          "kind": "public-comment-open",
+          "summary": "County opens public input process on new solar/BESS/data-center zoning ordinances.",
+          "source": "https://www.dearborncounty.org/department/board.php?structureid=166"
+        },
+        {
+          "date": "2026-05-01",
+          "kind": "committee-formed",
+          "summary": "Commissioners approve a resolution creating a 7-member (1 commissioner + 6 citizen) advisory committee on the solar ordinance; 26 citizens applied.",
+          "source": "https://www.wcpo.com/news/region-indiana/dearborn-county/dearborn-county-commissioners-forming-citizen-advisory-committee-for-future-data-center-solar-farm-proposals"
+        },
+        {
+          "date": "2026-09-09",
+          "kind": "hearing",
+          "summary": "Dearborn County Plan Commission holds a special meeting to discuss the Draft Solar Ordinance; data center and BESS ordinance work remains paused until the solar ordinance amendments are finished.",
+          "source": "https://www.dearborncounty.org/department/board.php?structureid=166"
+        }
+      ]
+    },
+    {
+      "id": "energyre-cloverdale-solar-in",
+      "name": "Cloverdale Solar Farm (EnergyRe)",
+      "operator": "EnergyRe",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Putnam County",
+      "state": "IN",
+      "lat": 39.51,
+      "lon": -86.79,
+      "size_mw": 150,
+      "acres": 1000,
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "2026-01-12",
+      "decided_date": "",
+      "outcome": "withdrawn",
+      "stage": "Withdrawn",
+      "days_to_hearing": null,
+      "note": "Revised proposal for a 150 MW solar farm (cut from an original ~200 MW / ~2,000 acres) in the Cloverdale area, with increased setbacks (500 ft). A Plan Commission hearing was scheduled for Jan 12, 2026 but the county's moratorium (adopted Nov 17, 2025) paused new approvals; EnergyRe later withdrew the application per the tracker's existing record. This is a solar project, not a data center — no separate data-center proposal in Putnam County was found in this research pass.",
+      "source": "https://www.suncommercial.com/banner_graphic/article_68966ddd-bd26-589a-8ed6-68d209ba0fe5.html",
+      "as_of": "2026-09-02",
+      "verified": true,
+      "events": [
+        {
+          "date": "2025-11-17",
+          "kind": "moratorium",
+          "summary": "Putnam County Commissioners vote 2-1 (Beck, Helmer for; Woodall against) to adopt a 1-year moratorium on data centers, SMRs, solar, and wind in unincorporated Putnam County, expiring Nov 17, 2026.",
+          "source": "https://www.giant.fm/putnam-county/news/local-news/putnam-county-commissioners-vote-in-favor-of-moratorium-on-solar-farms/"
+        },
+        {
+          "date": "2026-01-12",
+          "kind": "hearing-scheduled",
+          "summary": "Plan Commission hearing on EnergyRe's revised 150 MW Cloverdale solar application scheduled.",
+          "source": "https://www.suncommercial.com/banner_graphic/article_68966ddd-bd26-589a-8ed6-68d209ba0fe5.html"
+        },
+        {
+          "date": null,
+          "kind": "withdrawn",
+          "summary": "EnergyRe later withdrew its Putnam County solar farm application (per the tracker's existing MORATORIUMS_DF entry); exact withdrawal date not independently confirmed in this research pass.",
+          "source": "https://www.giant.fm/marshall-county/news/local-news/energyre-pulls-application-for-putnam-county-solar-farm/"
+        }
+      ]
+    },
+    {
+      "id": "blue-ladder-wolcott-data-center-in",
+      "name": "Wolcott Data Center (Mid-America Commerce Park)",
+      "operator": "Blue Ladder Development",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "White County",
+      "state": "IN",
+      "lat": 40.76,
+      "lon": -87.04,
+      "size_mw": "",
+      "acres": 322,
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "2025-08-11",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "Awaiting decision",
+      "days_to_hearing": -387,
+      "note": "Proposed data center at Mid-America Commerce Park, Wolcott, at the intersection of U.S. 24 and CR 1100 West. Site plans describe up to four data halls (~327,612 sq ft each), a 50,000 sq ft office building, and a 100,000 sq ft warehouse, with full build-out projected for 2029 and ~1,000 construction jobs over the build-out period; the developer's own site describes it as a 'closed-loop, minimal-water' campus seeking no incentives. Rezoning covers ~184 acres (per an Aug 2025 lawsuit) within a larger ~322-acre parcel. The rezoning applications were filed by the White County Redevelopment Commission rather than the property owners (BOWS4CRM and Liebengood Family Partnership) -- neighboring landowners Bart and Amy Snyder sued in Aug 2025 alleging the redevelopment commission lacked a notarized letter authorizing it to act as agent and that no site plan was submitted with the rezoning application, both allegedly required under White County's zoning ordinance. As of a June 2026 community open house, the project was still moving forward despite the moratorium and the pending lawsuit; White County Economic Development Organization President Randy Strasser confirmed the open house was authentic and co-hosted with the commissioners.",
+      "source": "https://www.wolcottdatacenter.com/",
+      "as_of": "2026-09-02",
+      "verified": true,
+      "events": [
+        {
+          "date": "2025-08-11",
+          "kind": "hearing",
+          "summary": "Area Plan Commission public hearing on the ~184-acre Mid-America Commerce Park rezoning; officials admitted no site plan had been submitted.",
+          "source": "https://www.inkfreenews.com/2026/06/26/white-county-data-center-plans-move-forward-with-community-open-house/"
+        },
+        {
+          "date": "2025-08-01",
+          "kind": "lawsuit",
+          "summary": "Bart and Amy Snyder sue the White County commissioners, the White County Redevelopment Commission, and property owners BOWS4CRM and Liebengood Family Partnership to overturn the rezoning, alleging procedural defects (no notarized agency letter, no site plan).",
+          "source": "https://www.inkfreenews.com/2026/06/26/white-county-data-center-plans-move-forward-with-community-open-house/"
+        },
+        {
+          "date": "2025-10-20",
+          "kind": "moratorium",
+          "summary": "White County Commissioners vote 2-1 (Davis, Pass for; Smolek against) to adopt a 12-month moratorium on data center development, expiring Oct 20, 2026.",
+          "source": "https://www.wrul.com/local-news/twelve-month-moratorium-approved-for-white-county/"
+        },
+        {
+          "date": "2026-06-29",
+          "kind": "community-meeting",
+          "summary": "Blue Ladder Development and White County commissioners co-host a public open house on the proposed data center at the Monticello Best Western.",
+          "source": "https://www.inkfreenews.com/2026/06/26/white-county-data-center-plans-move-forward-with-community-open-house/"
+        }
+      ]
+    },
+    {
+      "id": "decennial-group-akron-fulton-in",
+      "name": "Decennial Group Akron Data Center Campus (proposed)",
+      "operator": "Decennial Group",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Fulton County (Akron)",
+      "state": "IN",
+      "lat": 41.0409,
+      "lon": -86.0164,
+      "size_mw": 500,
+      "acres": 300,
+      "announced": "2026-01-15",
+      "rezoning_filed": "",
+      "hearing_date": "2026-02-04",
+      "decided_date": "2026-03-02",
+      "outcome": "moratorium",
+      "stage": "Blocked by ban",
+      "days_to_hearing": null,
+      "note": "Decennial Group co-founder David Pavlick (also spelled 'Pavlik' in some coverage) proposed a roughly 500 MW, 300-acre hyperscale data center campus near Akron, in Fulton County, no specific parcel/site was ever named publicly, and no hyperscale tenant was named (Pavlick said an unnamed hyperscale company larger than Decennial's existing CoreWeave-tenanted Hammond, IN facility was interested). Estimated $100-150 million in associated infrastructure investment (roads, bridges, community water upgrades) plus a closed-loop water design were described at a Feb. 4, 2026 public open house at the Akron Banquet Hall attended by 40+ residents; reporting says commissioners themselves learned of the proposal only about 10 days before that open house. The Fulton County Area Plan Commission recommended a 12-month moratorium 6-1 on Feb. 10, 2026 specifically in response to this proposal, and the Board of Commissioners adopted it 2-1 on March 2, 2026, effectively pausing the project. No later announcement of the project being formally withdrawn was located; it is currently blocked by the moratorium rather than confirmed dead.",
+      "source": "https://www.abc57.com/news/developer-unveils-data-center-plan-in-akron-amid-resident-concerns",
+      "as_of": "2026-09-02",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-01-15",
+          "kind": "rumor/announcement",
+          "summary": "News of a potential ~500 MW Decennial Group data center near Akron begins circulating locally, prompting formation of the Facebook group 'No Data Centers, Fulton County' (~2,200 members by later in the year).",
+          "source": "https://www.wndu.com/2026/03/03/fulton-county-commissioners-approve-one-year-moratorium-data-center-construction/"
+        },
+        {
+          "date": "2026-02-04",
+          "kind": "public open house",
+          "summary": "Decennial Group co-founder David Pavlick presents early plans (~300 acres, $100-150M infrastructure investment, closed-loop water design, no site/tenant named yet) to 40+ residents at the Akron Banquet Hall; meeting grows contentious.",
+          "source": "https://www.abc57.com/news/developer-unveils-data-center-plan-in-akron-amid-resident-concerns"
+        },
+        {
+          "date": "2026-02-10",
+          "kind": "recommendation",
+          "summary": "Fulton County Area Plan Commission votes 6-1 at a standing-room-only hearing to recommend a 12-month data-center moratorium to the Board of Commissioners, explicitly in response to the Decennial Group proposal.",
+          "source": "https://www.wndu.com/2026/02/11/fulton-county-approves-12-month-data-center-moratorium-after-heated-public-hearing/"
+        },
+        {
+          "date": "2026-03-02",
+          "kind": "moratorium vote",
+          "summary": "Board of Commissioners votes 2-1 (Lewis, Ranstead yes; Sommers no) to adopt a one-year moratorium on data center construction, effective immediately, halting the Decennial project.",
+          "source": "https://www.wndu.com/2026/03/03/fulton-county-commissioners-approve-one-year-moratorium-data-center-construction/"
         }
       ]
     }

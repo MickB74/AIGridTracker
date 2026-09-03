@@ -40,5 +40,26 @@
     "locality": "Monument, CO",
     "kind": "added",
     "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-02",
+    "id": "starke-county-in",
+    "locality": "Starke County, IN",
+    "kind": "shortened",
+    "detail": "Now runs to 2026-12-15"
+  },
+  {
+    "date": "2026-09-02",
+    "id": "white-county-in",
+    "locality": "White County, IN",
+    "kind": "extended",
+    "detail": "Now runs to 2026-10-20"
+  },
+  {
+    "date": "2026-09-02",
+    "id": "fulton-county-in",
+    "locality": "Fulton County, IN",
+    "kind": "shortened",
+    "detail": "Now runs to 2027-03-02"
   }
 ]

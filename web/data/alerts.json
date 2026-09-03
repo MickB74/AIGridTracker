@@ -4,7 +4,7 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
-  "count": 37,
+  "count": 38,
   "alerts": [
     {
       "id": "mora-MI-armada-township-2026-07-13",
@@ -277,6 +277,19 @@
       "title": "Indio, CA: data center moratorium expires in 44 days",
       "body": "The documented term ends 2026-10-16. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.nbcpalmsprings.com/2026/07/16/indio-city-council-extends-data-center-moratorium-with-planning-commission-already-recommending-a-full-ban",
+      "verified": true
+    },
+    {
+      "id": "mora-IN-white-county-2026-10-20",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "White County",
+      "state": "IN",
+      "expires": "2026-10-20",
+      "days_left": 48,
+      "title": "White County, IN: data center moratorium expires in 48 days",
+      "body": "The documented term ends 2026-10-20. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.wrul.com/local-news/twelve-month-moratorium-approved-for-white-county/",
       "verified": true
     },
     {

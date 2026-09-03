@@ -1209,10 +1209,14 @@ MORATORIUMS = [
      "source": "https://www.businessobserverfl.com/news/2026/jul/09/sarasota-county-data-center-moratorium/"},
     {"locality": "Merrillville", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "Jun 1, 2026",
-     "note": "1-year moratorium running Jun 1, 2026 to May 31, 2027 — council "
-             "explicitly wants to watch the campus under construction in "
-             "neighbouring Hobart before writing rules",
-     "lat": 41.48, "lon": -87.33, "expires": "2027-05-31", "as_of": "2026-08-04",
+     "note": "1-year moratorium (Jun 1, 2026 to May 31, 2027) adopted at the "
+             "Town Council's May 26, 2026 meeting, citing four developers who "
+             "had already approached the town. Council President Rick Bella "
+             "said the town is watching the AWS/\"Hobart Devco\" campus under "
+             "construction in neighboring Hobart before writing its own rules. "
+             "A widely syndicated report of a further 6-month extension "
+             "(~Jul 2026) could not be traced to a verifiable source",
+     "lat": 41.48, "lon": -87.33, "expires": "2027-05-31", "as_of": "2026-09-02",
      "source": "https://nwitimes.com/news/local/lake/merrillville/article_f506303d-f5ce-4bcc-bb4c-a6abf68fb24d.html"},
     {"locality": "Vienna Township (Trumbull Co.)", "state": "OH", "level": "Local",
      "status": "Enacted", "when": "Extended Aug 2026",
@@ -1289,18 +1293,20 @@ MORATORIUMS = [
      "source": "https://council.seattle.gov/2026/06/09/city-council-passes-emergency-data-center-moratorium-and-policy-framework/"},
     {"locality": "Indianapolis (Marion County)", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "Aug 19, 2026",
-     "note": "Enacted. New data centers cannot be approved anywhere in Marion "
-             "County until Dec 31, 2027. The City-County Council advanced it "
-             "23-1 on Aug 10 and the Metropolitan Development Commission gave "
-             "final approval 6-0 on Aug 19. Defines a data center as a "
-             "facility used primarily for storage, management, processing and "
-             "transmission of digital data. State law protects three "
-             "already-approved projects, which are NOT paused — DC Blox "
-             "(Warren Twp), Metrobloks (Martindale-Brightwood) and Sabey "
-             "(Decatur Twp). A committee will study campus size, building "
-             "height, environmental impact and sound levels. Marion County and "
-             "Indianapolis are one jurisdiction under Unigov",
-     "lat": 39.77, "lon": -86.16, "expires": "2027-12-31", "as_of": "2026-08-23",
+     "note": "Council President Maggie Lewis (District 5) authored and "
+             "sponsored the moratorium, announcing it Jul 10 and introducing "
+             "it to committee Jul 13. The City-County Council advanced it "
+             "23-1 on Aug 10 (lone no: Michael-Paul Hart, District 20, whose "
+             "district includes the DC Blox site) and the Metropolitan "
+             "Development Commission gave final 6-0 approval Aug 19 as a "
+             "zoning-ordinance amendment, through Dec 31, 2027. State law "
+             "protects three already-approved projects, which are NOT paused "
+             "— DC Blox (Warren Twp), Metrobloks (Martindale-Brightwood) and "
+             "Sabey (Decatur Twp). A committee will study campus size, "
+             "building height, environmental impact and sound levels before "
+             "the pause lifts. Marion County and Indianapolis are one "
+             "jurisdiction under Unigov",
+     "lat": 39.77, "lon": -86.16, "expires": "2027-12-31", "as_of": "2026-09-02",
      "source": "https://www.wfyi.org/wfyi-news/2026-08-19/new-data-centers-temporarily-banned-in-marion-county"},
     {"locality": "Pulaski County", "state": "AR", "level": "Local",
      "status": "Rejected", "when": "Jul 28, 2026",
@@ -1632,11 +1638,22 @@ MORATORIUMS = [
     # ── Promoted from the news-scan queue, 2026-08-13 ──────────────────────
     {"locality": "Jeffersonville", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "Aug 4, 2026",
-     "note": "1-year pause, 8-0; does not affect the Meta facility at River "
-             "Ridge Commerce Center, which operates under federal/state military "
-             "land-use authority",
-     "lat": 38.28, "lon": -85.74, "expires": "2027-08-04", "as_of": "2026-08-13",
-     "source": "https://www.wave3.com/2026/08/04/jeffersonville-passes-year-long-data-center-moratorium-amid-resident-outcry-major-utility-disclosures/"},
+     "note": "City Council voted 8-0 on Aug 4, 2026; the administration's "
+             "original ordinance set a 6-month pause, and at-large member "
+             "Jacky Snelling moved to extend it to a full year before "
+             "passage. City Attorney Les Merkley told the council Indiana "
+             "law does not allow an outright ban, only regulation, so the "
+             "Plan Commission is drafting data-center standards for the "
+             "city's Unified Development Ordinance during the pause, "
+             "targeting adoption before Jan 1, 2027. District 1's Dustin "
+             "White proposed a River Ridge-coterminous data-center overlay "
+             "district as one option. Does not affect the Meta facility at "
+             "River Ridge Commerce Center, where the River Ridge Development "
+             "Authority — not the city — holds land-use authority under a "
+             "decades-old interlocal agreement rooted in the site's history "
+             "as the former Indiana Army Ammunition Plant",
+     "lat": 38.28, "lon": -85.74, "expires": "2027-08-04", "as_of": "2026-09-02",
+     "source": "https://www.newsandtribune.com/news/jeffersonville-city-council-approves-one-year-moratorium-for-data-centers/article_c39dd353-1c15-4b9d-8d00-462c2da7506b.html"},
     {"locality": "Palm Beach County", "state": "FL", "level": "Local",
      "status": "Enacted", "when": "Jul 2026",
      "note": "Zoning-in-progress freeze on AI data center applications in "
@@ -1661,10 +1678,17 @@ MORATORIUMS = [
      "source": "https://srpressgazette.com/santa-rosa-county-looks-to-approve-a-12-month-ban-on-data-center-development/"},
     {"locality": "Warrick County", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "Aug 11, 2026",
-     "note": "180-day moratorium, unanimous; Area Plan Commission had separately "
-             "tabled its data center ordinance in Jul and paused projects "
-             "through Dec 2026",
-     "lat": 38.09, "lon": -87.28, "expires": "2027-02-07", "as_of": "2026-08-13",
+     "note": "180-day moratorium, unanimous vote by the three-member Board "
+             "of Commissioners on Aug 11, 2026 at the Friedman Park Event "
+             "Center after expected turnout outgrew the usual meeting room. "
+             "Originated as a recommendation from the Area Plan Commission's "
+             "Jul 13 hearing, where the APC tabled its own draft ordinance "
+             "(which would have barred data centers over 40,000 sq ft) for "
+             "further study and instead recommended a temporary halt. No "
+             "permit application had been filed for Project Zora as of the "
+             "vote, and commissioners had declined to sign an NDA with the "
+             "developer",
+     "lat": 38.09, "lon": -87.28, "expires": "2027-02-07", "as_of": "2026-09-02",
      "source": "https://www.14news.com/2026/08/11/warrick-commissioners-vote-moratorium-pause-data-center-development/"},
     {"locality": "Islip", "state": "NY", "level": "Local",
      "status": "Enacted", "when": "Aug 12, 2026",
@@ -1874,12 +1898,22 @@ MORATORIUMS = [
              "after a later amendment, plus two pending rezonings",
      "lat": 35.47, "lon": -97.52, "expires": "2026-12-31", "as_of": "2026-08-13",
      "source": "https://www.okc.gov/News-articles/Oklahoma-City-Council-approves-moratorium-on-new-data-centers"},
+    # Area Plan Commission recommended 6-0 on 2026-05-06 and reaffirmed 6-0 on
+    # 2026-06-03; Board of Commissioners adopted it unanimously as Ordinance
+    # 2026-08 on 2026-06-15. APC executive director Nicole Schell told
+    # commissioners there was, at the time, no proposed data center on
+    # unincorporated county land -- purely preemptive, the 12th IN county to
+    # pause. Meta's $10B/1GW LEAP campus sits on land annexed into the City of
+    # Lebanon, not the unincorporated county and not the Town of Advance as
+    # earlier noted here -- WISH-TV, WRTV, Data Center Dynamics and IndyStar
+    # all place it in Lebanon; corrected 2026-09-02.
     {"locality": "Boone County", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "Jun 16, 2026",
-     "note": "1-year moratorium in unincorporated areas, unanimous; 12th Indiana "
-             "county to pause. Does not affect Meta's data centers (in "
-             "incorporated Advance)",
-     "lat": 40.05, "lon": -86.47, "expires": "2027-06-15", "as_of": "2026-08-13",
+     "note": "1-year moratorium in unincorporated areas, unanimous (Ordinance "
+             "2026-08); 12th Indiana county to pause. Does not affect Meta's "
+             "$10B LEAP campus, which sits on land annexed into the City of "
+             "Lebanon, not unincorporated county land",
+     "lat": 40.05, "lon": -86.47, "expires": "2027-06-15", "as_of": "2026-09-02",
      "source": "https://boonecounty.in.gov/2026/06/15/19190/"},
     # Source is the Board of Commissioners' own March 16, 2026 minutes (item
     # H: attorney Martin Harker read Ordinance 4-2026 aloud; Stewart moved,
@@ -1902,31 +1936,64 @@ MORATORIUMS = [
      "source": "http://commissioners.grant.in.datapitstop.us/DATA/MINUTES/FLD00005/00011112.PDF"},
     {"locality": "Fayette County", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "May 18, 2026",
-     "note": "1-year pause; no local policy governing data centers existed. "
-             "Consultant developing a framework for the Area Plan Commission",
-     "lat": 39.64, "lon": -85.18, "expires": "2027-05-18", "as_of": "2026-08-13",
-     "source": "https://www.wfyi.org/statewide/2026-07-06/indiana-counties-data-center-moratoriums-bans-2026"},
+     "note": "Commissioners approved the ordinance May 5, 2026, effective "
+             "May 18, contingent on the City of Connersville adopting the "
+             "same measure (the county and city share an Area Plan "
+             "Commission) at its own May 18 meeting. Economic-development "
+             "CEO Brad Colter told commissioners there was no data-center "
+             "deal, NDA or discussion in place for the county, and backed "
+             "the pause so the APC could commission an impact study and "
+             "draft zoning standards; Commissioner Dale Strong said it "
+             "\"will give the Planning Commission time to develop "
+             "appropriate zoning regulations.\" Preemptive — no local "
+             "data-center policy existed before this",
+     "lat": 39.64, "lon": -85.18, "expires": "2027-05-18", "as_of": "2026-09-02",
+     "source": "https://www.newsexaminer.com/news/commissioners-put-the-brakes-on-data-centers/article_9656df1d-2bd9-5df9-924d-4d6670aee9cd.html"},
     {"locality": "Starke County", "state": "IN", "level": "Local",
-     "status": "Enacted", "when": "Dec 2025",
-     "note": "1-year moratorium on hyperscale data center projects (>5,000 sq ft) "
-             "in unincorporated areas. Plan commission recommended a 1-year "
-             "extension in Jul 2026",
-     "lat": 41.28, "lon": -86.63, "expires": "2026-12-31", "as_of": "2026-08-13",
+     "status": "Enacted", "when": "Dec 15, 2025",
+     "note": "Board of Commissioners adopted Ordinance 2025-37 by a 3-0 vote "
+             "on Dec 15, 2025, on the Plan Commission's Dec 4 favorable "
+             "recommendation, barring building permits, improvement-location "
+             "permits and site-plan applications for hyperscale data centers "
+             "(>5,000 sq ft) in unincorporated Starke County for 12 months. "
+             "Prompted by a Chicago-based firm's Nov 2025 inquiry about "
+             "rezoning two parcels for a data center. The Plan Commission "
+             "recommended a 1-year extension on Jul 15, 2026, but no source "
+             "confirms the Board of Commissioners has voted on it — do not "
+             "present the extension as adopted",
+     "lat": 41.28, "lon": -86.63, "expires": "2026-12-15", "as_of": "2026-09-02",
      "source": "https://starke.in.gov/dlp_document/ordinance-2025-37-hyperscale-data-center-moratorium/"},
     {"locality": "Marshall County", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "Apr 20, 2026",
-     "note": "Permanent ban — replaced a temporary moratorium with a prohibition "
-             "in the county zoning ordinance. One of two IN counties (with Cass) "
-             "to outright ban data centers",
-     "lat": 41.35, "lon": -86.31, "expires": None, "as_of": "2026-08-13",
-     "source": "https://wsbt.com/news/local/marshall-county-approves-permanent-ban-on-data-centers-effective-immediately-data-centers-solar-farms-industrial-size-projects-development-county-council-regulations-counties-experts-industries-marshall-county-indiana",
+     "note": "Permanent ban — the Board of Commissioners replaced an earlier "
+             "temporary moratorium (adopted around Jan 2025, reportedly the "
+             "first in the state) with a prohibition on \"Data Processing\" "
+             "uses in the county zoning ordinance. Commissioner Jesse "
+             "Bohannon said no company had actually proposed a project in "
+             "Marshall County — the ban followed concern after Amazon and "
+             "Microsoft campuses were built in neighboring St. Joseph and "
+             "La Porte counties. Same day, commissioners also adopted a "
+             "battery-storage setback ordinance and advanced a solar-farm "
+             "acreage cap. No exact ordinance number could be confirmed "
+             "from a public source; do not publish one without verifying it",
+     "lat": 41.35, "lon": -86.31, "expires": None, "as_of": "2026-09-02",
+     "source": "https://www.wndu.com/2026/04/20/marshall-county-commissioners-ban-data-centers-limit-solar-projects/",
      "term": "standing"},
     {"locality": "Cass County", "state": "IN", "level": "Local",
-     "status": "Enacted", "when": "2026",
-     "note": "Permanent ban on new data centers — one of two IN counties (with "
-             "Marshall) to outright ban rather than pause",
-     "lat": 40.76, "lon": -86.35, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.wfyi.org/statewide/2026-07-06/indiana-counties-data-center-moratoriums-bans-2026",
+     "status": "Enacted", "when": "Apr 21, 2026",
+     "note": "Board of Commissioners adopted Ordinance Comm-Ord-2026-08 on "
+             "Apr 21, 2026, on the Plan Commission's favorable recommendation "
+             "from an Apr 7 hearing. The ordinance amends the zoning "
+             "ordinance's district-use table to mark \"Data Processing\" a "
+             "prohibited use in every district — Agricultural, Residential, "
+             "Business, Industrial and Commercial General — a permanent ban, "
+             "not a time-limited pause. All three commissioners (Ruth Baker, "
+             "president; Mike Deitrich; Roger Spencer) signed it, 3-0. No "
+             "named company or project triggered it. \"Cass County\" + "
+             "\"data center\" news searches are dominated by an unrelated fight "
+             "in Cass County, Michigan — do not conflate the two",
+     "lat": 40.76, "lon": -86.35, "expires": None, "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/cass/files/Comm-Ord-2026-08-Data-Processing-signed.pdf",
      "term": "standing"},
     {"locality": "Johnson City", "state": "TN", "level": "Local",
      "status": "Enacted", "when": "Extended May 22, 2026",
@@ -2530,52 +2597,109 @@ MORATORIUMS = [
     # ── Batch 4 — Indiana ─────────────────────────────────────────────────
     {"locality": "Dearborn County", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "Feb 25, 2026",
-     "note": "Up to 1-year moratorium on rezoning for data centers, commercial "
-             "solar, and battery storage. 1,700+ petition signatures. No data "
-             "center applications had been submitted at the time",
-     "lat": 39.15, "lon": -84.97, "expires": "2027-02-25", "as_of": "2026-08-13",
-     "source": "https://www.wvxu.org/environment/2026-02-25/dearborn-county-moratorium-solar-farms-data-center"},
+     "note": "Up to 1-year moratorium on processing rezoning applications "
+             "for commercial solar, battery storage (BESS), and data "
+             "centers, adopted Feb 25 and effective Feb 26, 2026. Prompted "
+             "by 1,700+ petition signatures against Linea Energy's roughly "
+             "1,200-acre solar proposal for Manchester Township; no data "
+             "center application had been filed. The county is drafting a "
+             "solar ordinance first and has paused data-center/BESS "
+             "ordinance work until that's done; a 7-member citizen advisory "
+             "committee (26 applicants for 6 seats) formed in May 2026 to "
+             "advise on the solar rules",
+     "lat": 39.15, "lon": -84.97, "expires": "2027-02-25", "as_of": "2026-09-02",
+     "source": "https://www.dearborncounty.org/department/board.php?structureid=166"},
     {"locality": "Putnam County", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "Nov 17, 2025",
      "note": "1-year moratorium on data centers, solar, wind, and SMRs in "
-             "unincorporated areas, 2-1. ~100 residents packed the meeting. "
-             "EnergyRe subsequently withdrew a 150 MW solar farm proposal",
-     "lat": 39.66, "lon": -86.86, "expires": "2026-11-17", "as_of": "2026-08-13",
+             "unincorporated areas, adopted 2-1 (Beck and Helmer for; "
+             "Woodall opposed — his stated reasoning wasn't individually "
+             "reported). ~100 residents packed the meeting after EnergyRe's "
+             "revised application for a 150 MW solar farm near Cloverdale "
+             "(cut from 200 MW / ~2,000 acres, with 500-ft setbacks added). "
+             "Commissioner Beck framed the pause as a chance to rewrite the "
+             "county's Unified Development Ordinance. Primarily a solar "
+             "fight — no distinct data-center proposal has surfaced for "
+             "Putnam County — with data centers, wind and SMRs bundled in "
+             "preemptively. EnergyRe subsequently withdrew the solar filing",
+     "lat": 39.66, "lon": -86.86, "expires": "2026-11-17", "as_of": "2026-09-02",
      "source": "https://www.giant.fm/putnam-county/news/local-news/putnam-county-commissioners-vote-in-favor-of-moratorium-on-solar-farms/"},
     {"locality": "White County", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "Oct 20, 2025",
-     "note": "Temporary moratorium on data centers. Prompted by a proposed "
-             "project near Wolcott; residents cited water availability and "
-             "transparency concerns",
-     "lat": 40.75, "lon": -86.86, "expires": None, "as_of": "2026-08-13",
-     "source": "https://dailyjournal.net/2025/11/24/3-counties-put-moratoriums-on-data-center-projects/"},
+     "note": "12-month moratorium on new data center development in "
+             "unincorporated White County, adopted 2-1 (Davis and Pass for; "
+             "Smolek dissenting, saying a development agreement wasn't "
+             "imminent and the county still owed follow-up on an earlier "
+             "wind/solar pause). Prompted by Blue Ladder Development's "
+             "proposed data center at Mid-America Commerce Park in Wolcott "
+             "(roughly 184-300 acres, up to four data halls), which had seen "
+             "repeated rezoning delays; residents cited water, land-use and "
+             "transparency concerns. A same-named \"White County\" moratorium "
+             "with different commissioner names found in search is almost "
+             "certainly a different state's White County — not this one",
+     "lat": 40.75, "lon": -86.86, "expires": "2026-10-20", "as_of": "2026-09-02",
+     "source": "https://www.wrul.com/local-news/twelve-month-moratorium-approved-for-white-county/"},
     {"locality": "Pulaski County", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "Feb 2, 2026",
-     "note": "12-month moratorium, APC recommended 5-0. Preemptive — no "
-             "proposals submitted. County developing ordinance with setback, "
-             "power, and water provisions. Extension reviewed Jul 2026",
-     "lat": 41.05, "lon": -86.70, "expires": "2027-02-02", "as_of": "2026-08-13",
-     "source": "https://www.abc57.com/news/pulaski-county-commissioners-speak-on-data-center-moratorium"},
+     "note": "12-month moratorium, unanimous, after the Advisory Plan "
+             "Commission recommended it 5-0 on Jan 26, 2026. Preemptive — "
+             "no proposal had been submitted as of the vote. Commissioner "
+             "Jennifer Knebel cited the strain of the ongoing Mammoth Solar "
+             "project as a reason for the pause; Commissioner Don Street "
+             "said he'd hear a proposal if one came and wants the eventual "
+             "ordinance to cover setbacks, power and water. A search-engine "
+             "claim of a Jul 2026 extension vote could not be traced to any "
+             "real article or county record and is not included here — "
+             "treat the moratorium as running through approximately "
+             "Feb 2, 2027 absent primary-sourced confirmation otherwise",
+     "lat": 41.05, "lon": -86.70, "expires": "2027-02-02", "as_of": "2026-09-02",
+     "source": "https://pulaskijournal.com/news/12-month-data-center-moratorium-passes-unanimously"},
     {"locality": "Fulton County", "state": "IN", "level": "Local",
-     "status": "Enacted", "when": "Mar 3, 2026",
-     "note": "1-year moratorium, 2-1. Triggered by proposed 500 MW / 300-acre "
-             "Decennial Group campus. Data center study committee to examine "
-             "economic and environmental impacts",
-     "lat": 41.07, "lon": -86.26, "expires": "2027-03-03", "as_of": "2026-08-13",
+     "status": "Enacted", "when": "Mar 2, 2026",
+     "note": "The Area Plan Commission recommended the moratorium 6-1 on "
+             "Feb 10, 2026 at a standing-room-only hearing; the Board of "
+             "Commissioners adopted a 1-year pause 2-1 on Mar 2. "
+             "Commissioner Dave Sommers cast the dissenting vote (\"I've got "
+             "to represent 20,000 people, not just 2,000\"); Bryan Lewis and "
+             "Rick Ranstead voted yes. Triggered by Decennial Group's "
+             "proposed ~500 MW / 300-acre campus near Akron, presented to "
+             "40+ residents at a contentious Feb 4 open house before any "
+             "site or tenant was named. A data-center review committee "
+             "formed during the pause to study impacts and draft zoning; no "
+             "source confirms its final recommendations or a follow-on vote",
+     "lat": 41.07, "lon": -86.26, "expires": "2027-03-02", "as_of": "2026-09-02",
      "source": "https://www.wndu.com/2026/03/03/fulton-county-commissioners-approve-one-year-moratorium-data-center-construction/"},
     {"locality": "Miami County", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "May 4, 2026",
-     "note": "Moratorium on acceptance, processing, and approval of all data "
-             "center applications and permits. Permanent zoning ordinance in "
-             "development — public hearing scheduled Jul 20",
-     "lat": 40.76, "lon": -86.05, "expires": None, "as_of": "2026-08-13",
+     "note": "Moratorium on accepting, processing and approving all data "
+             "center applications and permits, adopted May 4, 2026 on the "
+             "Plan Commission's Apr 8 favorable recommendation. No named "
+             "company drove it — an earlier, unnamed proposal \"fell "
+             "through\" per the county's own account, and residents' stated "
+             "concern was mainly proximity to Boone County's Meta campus. A "
+             "permanent zoning ordinance (draft standards: 2.5-mile setback "
+             "from residences, 5,000-ft general setback, per Plan "
+             "Administrator Corey Roser) was set for final consideration "
+             "Jul 20, 2026, but no source confirms whether commissioners "
+             "adopted, revised or tabled it — the ordinance's terms and the "
+             "moratorium's current status are unconfirmed pending that",
+     "lat": 40.76, "lon": -86.05, "expires": None, "as_of": "2026-09-02",
      "source": "https://www.miamicountyin.gov/910/Proposed-Data-Center-Ordinance-Moratoriu"},
     {"locality": "New Albany", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "Jul 16, 2026",
-     "note": "Up to 1-year moratorium on facilities/campuses >100,000 sq ft, "
-             "unanimous. Study of infrastructure, utility costs, environmental "
-             "effects, and neighborhood character impacts",
-     "lat": 38.29, "lon": -85.82, "expires": "2027-07-16", "as_of": "2026-08-13",
+     "note": "Up to 1-year moratorium on data center campuses over "
+             "100,000 sq ft, citywide and in the 2-mile fringe planning "
+             "jurisdiction. Proposed by Mayor Jeff Gahan on Jun 9, 2026, "
+             "advanced by the Plan Commission Jun 23, and adopted unanimously "
+             "by the Common Council Jul 16. Study covers infrastructure, "
+             "utility costs, environmental effects and neighborhood "
+             "character, feeding into the city's Comprehensive Plan. No "
+             "company had applied in New Albany at adoption — proactive, "
+             "driven by regional pressure from the Louisville-area boom "
+             "(Meta's ~700,000 sq ft facility at River Ridge in neighboring "
+             "Jeffersonville, and a proposed Shadow Lake Business Park "
+             "project in Charlestown)",
+     "lat": 38.29, "lon": -85.82, "expires": "2027-07-16", "as_of": "2026-09-02",
      "source": "https://www.newsandtribune.com/indiana/city-council-pauses-data-center-development-in-new-albany-for-1-year/article_dc3733a3-b9a5-4197-b780-9ffd5035aa89.html"},
     # ── Batch 4 — Washington ──────────────────────────────────────────────
     {"locality": "Federal Way", "state": "WA", "level": "Local",
@@ -3017,11 +3141,19 @@ MORATORIUMS = [
      "source": "https://www.foxcarolina.com/2026/08/20/anderson-county-council-approves-final-reading-six-month-data-center-moratorium/"},
     {"locality": "Howard County", "state": "IN", "level": "Local",
      "status": "Enacted", "when": "Aug 18, 2026",
-     "note": "1-year unanimous permit moratorium in unincorporated Howard "
-             "County, with a study committee to draft regulations; may be "
-             "lifted early if rules land sooner. No company had applied to "
-             "build in the county at adoption",
-     "lat": 40.49, "lon": -86.13, "expires": "2027-08-18", "as_of": "2026-08-23",
+     "note": "1-year permit moratorium in unincorporated Howard County, "
+             "adopted unanimously (3-0) after the Plan Commission's nearly "
+             "unanimous favorable recommendation. County Attorney Alan "
+             "Wilson introduced it, saying the zoning ordinance doesn't "
+             "cover data centers and stating plainly at adoption: \"No one "
+             "is coming. There are no applications pending.\" Commissioner "
+             "Brad Bray volunteered to chair a study committee after public "
+             "pressure; the pause may lift early once rules are drafted or "
+             "be extended if needed. Separate from the City of Kokomo's own "
+             "track, where the Common Council rejected a moratorium and is "
+             "instead advancing a zoning ordinance for a 700-acre annexed "
+             "industrial park (final vote expected Sep 14, 2026)",
+     "lat": 40.49, "lon": -86.13, "expires": "2027-08-18", "as_of": "2026-09-02",
      "source": "https://kokomolantern.substack.com/p/county-adopts-data-center-moratorium"},
     {"locality": "Hastings", "state": "MN", "level": "Local",
      "status": "Enacted", "when": "Aug 17, 2026",
@@ -7753,6 +7885,70 @@ STORY_LOCALITY_QUERIES = {
                 r"Matthews|Area Plan|APC|commissioners?|county council|"
                 r"subcommittee|Riverjump|Recore)\b",
     },
+    ("Merrillville", "IN"): {
+        "query": "\"data center\" Merrillville Indiana",
+        "gate": r"""(?i)\bMerrillville\b""",
+    },
+    ("Jeffersonville", "IN"): {
+        "query": "\"data center\" Jeffersonville Indiana",
+        "gate": r"""(?i)\b(Jeffersonville|River Ridge)\b""",
+    },
+    ("Warrick County", "IN"): {
+        "query": "\"Warrick County\" \"data center\"",
+        "gate": r"""(?i)warrick county.*data cent(er|re)|data cent(er|re).*warrick county""",
+    },
+    ("Boone County", "IN"): {
+        "query": "\"Boone County\" \"data center\" Indiana",
+        "gate": r"""(?i)\bBoone County\b.*\bIndiana\b|\bIndiana\b.*\bBoone County\b|\bLebanon\b.*\b(data center|LEAP)\b|\bAdvance,?\s+In(diana)?\b""",
+    },
+    ("Fayette County", "IN"): {
+        "query": "Connersville data center OR \"Fayette County Indiana\" data center",
+        "gate": r"""(?i)\bconnersville\b|(?=.*\bfayette\b)(?=.*\bindiana\b)""",
+    },
+    ("Starke County", "IN"): {
+        "query": "\"data center\" \"Starke County\"",
+        "gate": r"""(?i)\bStarke County\b""",
+    },
+    ("Marshall County", "IN"): {
+        "query": "\"data center\" \"Marshall County\" Indiana",
+        "gate": r"""(?i)\bMarshall County\b.*\b(Indiana|Plymouth|Bourbon|Argos|Bremen)\b|(?i)\b(Indiana|Plymouth|Bourbon|Argos|Bremen)\b.*\bMarshall County\b""",
+    },
+    ("Cass County", "IN"): {
+        "query": "\"data center\" \"Cass County\" (Indiana OR Logansport)",
+        "gate": r"""(?i)\bCass County\b(?!.{0,80}\b(Michigan|Dowagiac|Cassopolis|Vandalia|Edwardsburg|Penn Township|Nebraska|Missouri|Iowa|North Dakota|Minnesota|Texas)\b)""",
+    },
+    ("Dearborn County", "IN"): {
+        "query": "\"Dearborn County\" Indiana (\"data center\" OR solar OR moratorium OR \"battery storage\")",
+        "gate": r"""(?i)dearborn\s+county.*\b(in|indiana|lawrenceburg|aurora|manchester\s+township)\b""",
+    },
+    ("Putnam County", "IN"): {
+        "query": "\"Putnam County\" Indiana (\"data center\" OR solar OR moratorium OR EnergyRe OR Cloverdale)",
+        "gate": r"""(?i)putnam\s+county.*\b(in|indiana|greencastle|cloverdale|bainbridge)\b""",
+    },
+    ("White County", "IN"): {
+        "query": "\"White County\" Indiana (\"data center\" OR Wolcott OR moratorium OR \"Blue Ladder\")",
+        "gate": r"""(?i)white\s+county.*\b(in|indiana|monticello|wolcott)\b""",
+    },
+    ("Pulaski County", "IN"): {
+        "query": "\"Pulaski County\" Indiana \"data center\"",
+        "gate": r"""(?i)\bpulaski\s+count(?:y|ies)\b.{0,40}\bindiana\b|\bindiana\b.{0,40}\bpulaski\s+county\b|\bwinamac\b""",
+    },
+    ("Fulton County", "IN"): {
+        "query": "\"Fulton County\" Indiana \"data center\" OR Decennial OR Akron",
+        "gate": r"""(?i)\bfulton\s+count(?:y|ies)\b.{0,40}\bindiana\b|\bindiana\b.{0,40}\bfulton\s+county\b|\bakron\b.{0,20}\bindiana\b|\brochester\b.{0,20}\bindiana\b|\bdecennial\s+group\b""",
+    },
+    ("Miami County", "IN"): {
+        "query": "\"Miami County\" Indiana \"data center\" Peru",
+        "gate": r"""(?i)\bmiami\s+count(?:y|ies)\b.{0,40}\bindiana\b|\bindiana\b.{0,40}\bmiami\s+county\b|\bperu,?\s+ind(?:iana)?\b""",
+    },
+    ("New Albany", "IN"): {
+        "query": "\"New Albany\" \"data center\" (Indiana OR Floyd OR Gahan OR Jeffersonville OR \"River Ridge\") when:180d",
+        "gate": r"""(?i)\bnew albany\b.*(indiana|floyd county|gahan|jeffersonville|river ridge|clark county|southern indiana)|(?i)(indiana|floyd county|gahan|jeffersonville|river ridge|clark county|southern indiana).*\bnew albany\b""",
+    },
+    ("Howard County", "IN"): {
+        "query": "\"Howard County\" \"data center\" (Indiana OR Kokomo OR commissioners OR Wilson OR Bray OR Dodd OR Lipinski) when:180d",
+        "gate": r"""(?i)\bhoward county\b.*(indiana|kokomo|commissioner|hoosier)|(?i)(indiana|kokomo|commissioner|hoosier).*\bhoward county\b""",
+    },
 }
 
 STORY_ANGLES = [
@@ -9805,6 +10001,180 @@ LOCAL_BODIES = [
      "website": "https://www.in.gov/counties/grant/county-offices/commissioners/",
      "as_of": "2026-09-02",
      "source": "https://www.in.gov/counties/grant/county-offices/commissioners/"},
+
+    # Indiana moratorium wave -- researched 2026-09-02, sourced to each
+    # locality's own .gov site (staff directory / council or commissioners
+    # page). See constants.py's Grant County entry above for the pattern.
+    {"locality": "Merrillville", "state": "IN",
+     "body": "Merrillville Town Council",
+     "decides": "Zoning/land-use ordinances and the data-center moratorium for the Town of Merrillville (unincorporated Ross Township area within town limits, Lake County).",
+     "meets": "Bi-monthly Council Meetings on the 2nd and 4th Tuesdays of each month at 6:30 pm; a Council workshop on the 3rd Wednesday of each month at 6:30 pm. (Also in the complex: Plan Commission 3rd Tuesday 6:30 pm, Plan Commission workshop 1st Tuesday 6:30 pm, Board of Zoning Appeals 4th Wednesday 6:30 pm, Redevelopment Commission 4th Tuesday 6:00 pm.)",
+     "where": "Town of Merrillville Municipal Complex, 7820 Broadway, Merrillville, IN 46410",
+     "agenda_url": "https://www.merrillville.in.gov/residents/meeting_agendas_and_minutes.php",
+     "comment_process": "Not documented on the town's public pages found in this pass (no separate public-comment policy page located); agendas/minutes are posted at the URL above ahead of each meeting.",
+     "phone": "219-769-5711", "email": "",
+     "website": "https://www.merrillville.in.gov/residents/meeting_agendas_and_minutes.php",
+     "as_of": "2026-09-02", "source": "https://www.merrillville.in.gov/our-government/town-council/"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN",
+     "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "decides": "Zoning and rezoning ordinances, including the data-center moratorium and any future data-center-specific zoning rules, for the City of Indianapolis / all of Marion County (minus the four excluded municipalities).",
+     "meets": "Full Council typically meets monthly, generally the second Monday of the month; committees (including the Metropolitan and Economic Development Committee, which handled the moratorium) meet on their own monthly schedule -- see the live 2026 Council Meeting Calendar for exact dates. The Metropolitan Development Commission's hearing examiner holds petition hearings on the 2nd and 4th Thursday of the month at 1 p.m.; the full nine-member MDC meets separately to ratify or hear appeals of hearing-examiner decisions.",
+     "where": "City-County Building, Beurt R. SerVaas Public Assembly Room, 200 E. Washington St., Indianapolis, IN 46204",
+     "agenda_url": "https://www.indy.gov/activity/council-meeting-calendar (Council); https://indianapolis-in.municodemeetings.com/DMDmeetings (MDC/Dept. of Metropolitan Development)",
+     "comment_process": "Residents can email PlannerOnCall@Indy.gov on a rezoning/variance petition, testify at MDC hearing-examiner sessions (15-minute developer presentation, comparable time for opponents, ~5-minute rebuttals), or contact councilors individually or via city-county.council@indy.gov. A single district councilor can pull a rezoning item for individual floor discussion; blocking a proposal on the floor requires 15 of 25 councilor votes against it.",
+     "phone": "317-327-4242", "email": "city-county.council@indy.gov",
+     "website": "https://www.indy.gov/activity/council-meeting-calendar (Council); https://indianapolis-in.municodemeetings.com/DMDmeetings (MDC/Dept. of Metropolitan Development)",
+     "as_of": "2026-09-02", "source": "https://mirrorindy.org/data-center-marion-county-approval-process-metropolitan-development-commission-mdc-hearing-examinar/"},
+    {"locality": "Jeffersonville", "state": "IN",
+     "body": "Jeffersonville City Council",
+     "decides": "Zoning ordinances, the Unified Development Ordinance, and the data-center moratorium for the City of Jeffersonville (Clark County) -- excludes River Ridge Commerce Center, which the River Ridge Development Authority separately controls.",
+     "meets": "6:00 p.m. on the 1st and 3rd Mondays of each month (occasionally with a preceding special meeting, e.g. 5 p.m. before the regular 6 p.m. session).",
+     "where": "Room 101, City Hall, 500 Quartermaster Court, Jeffersonville, IN",
+     "agenda_url": "https://cityofjeff.net/events/category/city-council-meetings/",
+     "comment_process": "Public comment period at each regular meeting (residents spoke on the moratorium during the Aug. 4, 2026 meeting's comment section); meetings are livestreamed and archived on the city's Vimeo channel. General inquiries: (812) 285-6427.",
+     "phone": "(812) 285-6427", "email": "",
+     "website": "https://cityofjeff.net/events/category/city-council-meetings/",
+     "as_of": "2026-09-02", "source": "https://cityofjeff.net/city-council/"},
+    {"locality": "Warrick County", "state": "IN",
+     "body": "Warrick County Board of Commissioners",
+     "decides": "Zoning/land-use policy including data-center ordinances and moratoria; the Area Plan Commission (APC) and Board of Zoning Appeals (BZA) handle permanent zoning text and case-by-case variances/special exceptions, subject to Commissioner approval on ordinance matters.",
+     "meets": "Regular meetings on a recurring schedule; specific 2026 meeting dates are posted as a downloadable PDF on the county site rather than a fixed weekly/monthly cadence confirmable here.",
+     "where": "Historically held at the county administration building in Boonville, IN; the Aug 11 2026 special moratorium-vote meeting was held at the Friedman Park Event Center, 2700 Park Blvd, Boonville, IN, due to expected turnout.",
+     "agenda_url": "http://warrickcountymeetings.vivabove.com/commissioner.html",
+     "comment_process": "Not explicitly published on the Commissioners page as of this access; the page references an ADA Complaint Procedure document but no standing public-comment rule for regular meetings. The Area Plan Commission's rules of procedure (linked from warrickcounty.gov/area-plan) may govern comment periods for zoning hearings specifically.",
+     "phone": "812-897-6120", "email": "info@warrickcounty.gov",
+     "website": "http://warrickcountymeetings.vivabove.com/commissioner.html",
+     "as_of": "2026-09-02", "source": "https://www.warrickcounty.gov/commissioners"},
+    {"locality": "Boone County", "state": "IN",
+     "body": "Boone County Board of Commissioners",
+     "decides": "Zoning ordinance and moratorium adoption for unincorporated Boone County; the Area Plan Commission (APC) drafts and recommends land-use/zoning policy (including the data-center moratorium) which the Commissioners then vote to enact.",
+     "meets": "1st and 3rd Mondays of the month, 9:00am-12:00pm (per county website; 2026 dates include Jan 20, Feb 9, Feb 23, Mar 9, Mar 23, Apr 6, Apr 20, May 4, May 18, Jun 1, Jun 15, Jul 6, Jul 20, Aug 3, Aug 17, Sep 8, Sep 21, Oct 5, Oct 19, Nov 2, Nov 16, Nov 30, Dec 14)",
+     "where": "Connie Lamar Room, Boone County Annex, north of the courthouse; commissioners' office at 127 W. Main Street, Suite 400 (4th Floor), Lebanon, IN 46052",
+     "agenda_url": "https://boonecounty.in.gov/services/meetings-mintues/",
+     "comment_process": "No formal public-comment procedure is published on the county site. Residents can request agenda items via the \"Boone County Commissioners Agenda Request Form\" available on the commissioners' meetings page; meetings are also posted to the county's YouTube channel, and residents can subscribe to receive agendas/minutes by email.",
+     "phone": "765-483-4492", "email": "commissioners@co.boone.in.us",
+     "website": "https://boonecounty.in.gov/services/meetings-mintues/",
+     "as_of": "2026-09-02", "source": "https://boonecounty.in.gov/offices/commissioners/"},
+    {"locality": "Fayette County", "state": "IN",
+     "body": "Fayette County Board of Commissioners",
+     "decides": "The three-member elected Board of Commissioners passed the data-center moratorium ordinance (May 5, 2026) and must approve any permanent zoning policy the Area Plan Commission (APC) develops before it takes effect. The APC (which the county shares with the City of Connersville) is developing the permanent framework with a hired consultant and holds public hearings on zoning matters; a steering committee to guide data-center-specific policy had not yet been formed as of July 29, 2026.",
+     "meets": "1st and 3rd Tuesdays of each month at 2:00 p.m. (Commissioners). Area Plan Commission/BZA meets separately on its own published schedule (see agenda PDFs at co.fayette.in.us).",
+     "where": "Fayette County Courthouse, 1st Floor, 401 North Central Avenue, Connersville, IN 47331",
+     "agenda_url": "https://co.fayette.in.us/commissioners/",
+     "comment_process": "No formally documented public-comment procedure found on the county site; the Area Plan Commission held a public hearing on the moratorium on April 23, 2026, and a public forum on the decision-making framework was held at Connersville City Hall (livestreamed on CTV3) in July 2026. Area Planning Commission business (agendas at https://co.fayette.in.us/area-planning/) is where zoning-framework hearings will be posted.",
+     "phone": "(765) 222-1624", "email": "dmunson@co.fayette.in.us",
+     "website": "https://co.fayette.in.us/commissioners/",
+     "as_of": "2026-09-02", "source": "https://co.fayette.in.us/commissioners/"},
+    {"locality": "Starke County", "state": "IN",
+     "body": "Starke County Board of Commissioners",
+     "decides": "Zoning ordinance amendments and moratoria on building/site-plan permits for unincorporated Starke County, acting on recommendations from the Starke County Plan Commission",
+     "meets": "First Monday of each month at 5:00 PM CST; third Monday of each month at 9:30 AM CST",
+     "where": "53 E Mound St, Knox, IN 46534",
+     "agenda_url": "https://starke.in.gov/?page_id=4099",
+     "comment_process": "Not specified on the commissioners' page; the county's data center moratorium was preceded by a noticed public hearing (see NOTICE OF PUBLIC HEARING, https://starke.in.gov/wp-content/uploads/2025/11/NOTICE-OF-PUBLIC-HEARING-Data-Center-Moratorium.pdf)",
+     "phone": "(574) 274-4853", "email": "dbinkley@starke.in.gov",
+     "website": "https://starke.in.gov/?page_id=4099",
+     "as_of": "2026-09-02", "source": "https://starke.in.gov/government/commissioners/"},
+    {"locality": "Marshall County", "state": "IN",
+     "body": "Marshall County Board of Commissioners",
+     "decides": "Zoning ordinance amendments (the ban is written into the county zoning ordinance as a prohibited use), county buildings/lands, roads and bridges, and contract authorization; the Commissioners are the county's executive/legislative body for this purpose, acting on Plan Commission and Council input",
+     "meets": "First Monday of each month at 8:30 AM; third Monday of each month at 9:30 AM (start time can shift depending on the preceding Drainage Board meeting)",
+     "where": "Commissioners Room 203, Marshall County Building, 112 W Jefferson St, Plymouth, IN 46563",
+     "agenda_url": "https://www.co.marshall.in.us/commissioners/",
+     "comment_process": "Not specified on the commissioners' page beyond regular meeting attendance; the April 2026 ban followed public commissioner discussion referencing majority resident support, but no separate written comment procedure was found",
+     "phone": "(574) 935-8555", "email": "",
+     "website": "https://www.co.marshall.in.us/commissioners/",
+     "as_of": "2026-09-02", "source": "https://www.co.marshall.in.us/commissioners/"},
+    {"locality": "Cass County", "state": "IN",
+     "body": "Cass County Board of Commissioners",
+     "decides": "Amendments to the Cass County Zoning Ordinance (including the district-use-standards table that now bans data processing/data centers county-wide), property/road management, contracts and board appointments, acting on Cass County Plan Commission recommendations",
+     "meets": "Regular sessions per the CivicClerk portal calendar (exact recurring day/time not published on the commissioners' page itself)",
+     "where": "Cass County Government Building, Room 200, 200 Court Park, Logansport, IN 46947",
+     "agenda_url": "https://casscoin.portal.civicclerk.com/",
+     "comment_process": "Commissioners maintain a written Public Comment Policy (linked from the commissioners' office page as a PDF); the Data Processing amendment itself went through a noticed Plan Commission public hearing on 2026-04-07 before the commissioners' vote",
+     "phone": "(574) 753-7770", "email": "",
+     "website": "https://casscoin.portal.civicclerk.com/",
+     "as_of": "2026-09-02", "source": "https://secure.in.gov/counties/cass/administration/commissioners-office/"},
+    {"locality": "Dearborn County", "state": "IN",
+     "body": "Dearborn County Board of Commissioners",
+     "decides": "Zoning/rezoning ordinances (including the solar/BESS/data-center moratorium and successor ordinance), county administrative and budget matters for unincorporated Dearborn County",
+     "meets": "1st Tuesday of each month at 8:30 a.m. and 3rd Tuesday of each month at 6:00 p.m. (2026 schedule; a few dates shift to Wednesday due to elections)",
+     "where": "Commissioners Room, Dearborn County Administration Building, 165 Mary Street, Lawrenceburg, IN 47025",
+     "agenda_url": "https://www.dearborncounty.org/commissioners/",
+     "comment_process": "Public comment on the pending solar/BESS/data-center ordinance is being collected via a dedicated online comment form and by mail (Attn: Planning and Zoning Department, 165 Mary Street, Lawrenceburg, IN 47025); commenters are asked to reference the specific ordinance section. The Plan Commission (not the Board of Commissioners) is holding the ordinance workshops, most recently a special meeting Sept 9, 2026.",
+     "phone": "(812) 537-8807", "email": "planningpublic@dearborncounty.in.gov",
+     "website": "https://www.dearborncounty.org/commissioners/",
+     "as_of": "2026-09-02", "source": "https://www.dearborncounty.org/department/board.php?structureid=166"},
+    {"locality": "Putnam County", "state": "IN",
+     "body": "Putnam County Board of Commissioners",
+     "decides": "Zoning/UDO ordinances (including the SMR/data-center/solar/wind moratorium), rezoning and development applications in unincorporated Putnam County, county administrative and budget matters",
+     "meets": "Regular sessions historically held on a recurring schedule at the Putnam County Courthouse, Room 10 (1st floor); as of July 1, 2025 meetings are livestreamed. Exact recurring day/time was not confirmed on the county site as of this research pass \u2014 verify via the Commissioner Meeting Dates page below before publishing a specific day.",
+     "where": "Putnam County Courthouse, 1 Courthouse Square, Greencastle, IN 46135 (Commissioners' Room)",
+     "agenda_url": "https://co.putnam.in.us/board-of-commissioners/commissioner-agendas",
+     "comment_process": "Public comment is taken during regular Commissioners' meetings; the Nov 17, 2025 moratorium vote followed public hearing testimony, including from residents and an attorney representing opponents of the EnergyRe project.",
+     "phone": "765-653-5513", "email": "andy.beck@co.putnam.in.us",
+     "website": "https://co.putnam.in.us/board-of-commissioners/commissioner-agendas",
+     "as_of": "2026-09-02", "source": "https://co.putnam.in.us/board-of-commissioners"},
+    {"locality": "White County", "state": "IN",
+     "body": "White County Board of Commissioners",
+     "decides": "Zoning/rezoning ordinances (including the data-center moratorium), rezoning applications in unincorporated White County, county administrative and budget matters",
+     "meets": "Regular sessions at the John C. Heimlich Conference Room, 2nd Floor, County Government Center; typically 8:15-10:30 a.m. on scheduled meeting dates (exact recurring day-of-month not independently confirmed -- verify against the county's Upcoming Meetings page before publishing a specific cadence)",
+     "where": "White County Government Center, 110 North Main Street, Monticello, IN 47960",
+     "agenda_url": "https://www.in.gov/counties/white/departments/upcoming-meetings/",
+     "comment_process": "Public comment is taken during regular Commissioners' meetings and at Area Plan Commission hearings on rezoning requests (e.g., the Aug 11, 2025 public hearing on the Mid-America Commerce Park rezoning). The county also co-hosted a public open house with the developer (June 29, 2026, Monticello Best Western) on the proposed data center.",
+     "phone": "574-583-4879", "email": "david.davis@whitecounty.in.gov",
+     "website": "https://www.in.gov/counties/white/departments/upcoming-meetings/",
+     "as_of": "2026-09-02", "source": "https://www.in.gov/counties/white/departments/county-commissioners/"},
+    {"locality": "Pulaski County", "state": "IN",
+     "body": "Pulaski County Board of Commissioners",
+     "decides": "Adopted the data center moratorium ordinance on Feb. 2, 2026, on the Advisory Plan Commission's 5-0 recommendation; will adopt any resulting data-center zoning ordinance drafted during the moratorium period.",
+     "meets": "First and third Monday of each month (Tuesday if the Monday is a holiday); first meeting at 6:00 p.m. ET, third meeting at 8:30 a.m. ET. Joint sessions with County Council on the second Monday of even-numbered months at 5:00 p.m. ET.",
+     "where": "Courthouse meeting room, second floor, 112 East Main Street, Winamac, IN 46996",
+     "agenda_url": "https://pulaskionline.org/department/county-commissioners/",
+     "comment_process": "Public comment via a 'request to appear' form submitted to the Board Secretary in the Auditor's Office ahead of a meeting; a conference-request form is also available.",
+     "phone": "574-946-3653", "email": "commissioner1@pulaskicounty.in.gov; commissioner2@pulaskicounty.in.gov; commissioner3@pulaskicounty.in.gov",
+     "website": "https://pulaskionline.org/department/county-commissioners/",
+     "as_of": "2026-09-02", "source": "https://pulaskionline.org/department/county-commissioners/"},
+    {"locality": "Fulton County", "state": "IN",
+     "body": "Fulton County Board of Commissioners (moratorium vote); Fulton County Area Plan Commission (recommending body / oversees the data center review committee)",
+     "decides": "Board of Commissioners adopted the moratorium ordinance 2-1 on March 2, 2026; the Area Plan Commission recommended it 6-1 on Feb. 10, 2026 and appoints the data center review committee tasked with drafting the post-moratorium ordinance.",
+     "meets": "Board of Commissioners meets as posted; Area Plan Commission meets the 4th Monday of every month unless otherwise posted.",
+     "where": "Fulton County Office Building, Commissioner's Room, 125 E. 9th Street, Rochester, IN 46975",
+     "agenda_url": "https://www.co.fulton.in.us/320/Agendas-and-Minutes",
+     "comment_process": "Public comment taken at posted Board of Commissioners and Area Plan Commission meetings; agendas and packets posted in advance via the county's Agenda Center.",
+     "phone": "574-223-3869", "email": "",
+     "website": "https://www.co.fulton.in.us/320/Agendas-and-Minutes",
+     "as_of": "2026-09-02", "source": "https://www.co.fulton.in.us/249/County-Commissioners"},
+    {"locality": "Miami County", "state": "IN",
+     "body": "Miami County Board of Commissioners (adopts moratorium/ordinance); Miami County Plan Commission (drafts and recommends the ordinance)",
+     "decides": "Board of Commissioners adopted the May 4, 2026 moratorium and was to give final consideration to the permanent data-center zoning ordinance on July 20, 2026.",
+     "meets": "Commissioners meet Mondays, 9 a.m. to noon (per the staff directory) / \"1st and 3rd Mondays at 9:00 am\" per the Board of Commissioners page -- the county's own pages give two slightly different cadences; confirm current schedule before citing a meeting date. Plan Commission agendas/minutes at the county's Agenda Center.",
+     "where": "Miami County Courthouse, 25 N. Broadway, Peru, IN 46970 (commissioner's office, 1st floor, for regular meetings; G.A.R. Room for the July 20, 2026 ordinance hearing)",
+     "agenda_url": "https://www.miamicountyin.gov/AgendaCenter/Board-of-Commissioners-2",
+     "comment_process": "Written public input accepted at datacenterinput@miamicountyin.gov; the draft ordinance and supporting documents (Plan Commission resolution, final draft ordinance, signed moratorium ordinance, 6/8/26 public hearing minutes) were posted for public review at the Plan Commission office, Room 101, Miami County Courthouse.",
+     "phone": "765-472-3901, ext. 1291", "email": "datacenterinput@miamicountyin.gov",
+     "website": "https://www.miamicountyin.gov/AgendaCenter/Board-of-Commissioners-2",
+     "as_of": "2026-09-02", "source": "https://www.miamicountyin.gov/910/Proposed-Data-Center-Ordinance-Moratoriu"},
+    {"locality": "New Albany", "state": "IN",
+     "body": "New Albany Common Council",
+     "decides": "City ordinances, including the data-center moratorium; zoning ordinance updates following the Plan Commission's study",
+     "meets": "Regularly scheduled meetings begin at 7:00 p.m.; exact day-of-week recurrence not confirmed from the page content retrieved (see agenda archive for the current schedule)",
+     "where": "New Albany City Hall, Room 100 (Council Chambers), 142 E. Main Street, New Albany, IN 47150",
+     "agenda_url": "https://cityofnewalbany.com/common-city-council/",
+     "comment_process": "Questions about a specific meeting's public-comment process should be directed to the City Clerk in Room 114",
+     "phone": "812-948-5336", "email": "",
+     "website": "https://cityofnewalbany.com/common-city-council/",
+     "as_of": "2026-09-02", "source": "https://cityofnewalbany.com/common-city-council/"},
+    {"locality": "Howard County", "state": "IN",
+     "body": "Howard County Board of Commissioners",
+     "decides": "County zoning/permit ordinances outside city limits, including the data-center moratorium and any follow-on regulatory ordinance from the study committee",
+     "meets": "First and third Monday of each month at 4:00 p.m. (moves to the following Tuesday if the Monday is a holiday)",
+     "where": "Howard County Administration Center, 3rd Floor, Hearing Room 338, 220 N. Main St., Kokomo, IN 46901",
+     "agenda_url": "https://www.in.gov/counties/howard/home/meetings,-minutes,-and-agendas/",
+     "comment_process": "Public comment is taken at the regular commissioners' meetings; agendas and minutes are combined into a single meeting \"packet\" posted in advance, and live/archived video is available on the county's YouTube channel",
+     "phone": "", "email": "webmaster@howardcountyin.gov",
+     "website": "https://www.in.gov/counties/howard/home/meetings,-minutes,-and-agendas/",
+     "as_of": "2026-09-02", "source": "https://www.in.gov/counties/howard/home/meetings,-minutes,-and-agendas/"},
 ]
 LOCAL_BODIES_DF = pd.DataFrame(LOCAL_BODIES)
 
@@ -10509,6 +10879,573 @@ LOCAL_OFFICIALS = [
      "email": "gbrankle@grantcounty.in.gov", "phone": "(765) 668-8871",
      "stance": "", "as_of": "2026-09-02",
      "source": "https://www.in.gov/counties/grant/county-offices/council/staff-directory/"},
+
+    # Indiana moratorium wave officials -- researched 2026-09-02.
+    {"locality": "Merrillville", "state": "IN", "body": "Merrillville Town Council",
+     "name": "Rick Bella", "role": "Council President", "district": "Ward 5",
+     "email": "rbella@merrillville.in.gov", "phone": "219.736.5217",
+     "stance": "Publicly explained and defended the one-year moratorium at the May 26, 2026 meeting, saying the town would use the year to study impacts of the neighboring Hobart data-center campus before deciding what to allow in Merrillville.", "as_of": "2026-09-02",
+     "source": "https://nwindianabusiness.com/industries/professional-services/information-technology/merrillville-council-oks-1-year-data-center-moratorium/78095/"},
+    {"locality": "Merrillville", "state": "IN", "body": "Merrillville Town Council",
+     "name": "Rhonda Neal", "role": "Vice President", "district": "Ward 1",
+     "email": "rnneal@merrillville.in.gov", "phone": "",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.merrillville.in.gov/our-government/town-council/"},
+    {"locality": "Merrillville", "state": "IN", "body": "Merrillville Town Council",
+     "name": "Shauna Haynes-Edwards", "role": "Council Member", "district": "Ward 2",
+     "email": "shedwards@merrillville.in.gov", "phone": "219-232-8747",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.merrillville.in.gov/our-government/town-council/"},
+    {"locality": "Merrillville", "state": "IN", "body": "Merrillville Town Council",
+     "name": "Leona Chandler Felton", "role": "Council Member", "district": "Ward 3",
+     "email": "lchandler@merrillville.in.gov", "phone": "",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.merrillville.in.gov/our-government/town-council/"},
+    {"locality": "Merrillville", "state": "IN", "body": "Merrillville Town Council",
+     "name": "Margaret Uzelac", "role": "Council Member", "district": "Ward 4",
+     "email": "", "phone": "219.769.0819",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.merrillville.in.gov/our-government/town-council/"},
+    {"locality": "Merrillville", "state": "IN", "body": "Merrillville Town Council",
+     "name": "Shawn Pettit", "role": "Council Member", "district": "Ward 6",
+     "email": "spettit@merrillville.in.gov", "phone": "219.746.7269",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.merrillville.in.gov/our-government/town-council/"},
+    {"locality": "Merrillville", "state": "IN", "body": "Merrillville Town Council",
+     "name": "Keesha M. Hardaway", "role": "Council Member", "district": "Ward 7",
+     "email": "kmhardaway@merrillville.in.gov", "phone": "219-629-9099",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.merrillville.in.gov/our-government/town-council/"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Maggie A. Lewis", "role": "Council President", "district": "5",
+     "email": "maggie.lewis@indy.gov", "phone": "317-327-4242 (office)",
+     "stance": "Authored and sponsored the data-center moratorium; announced it July 10, 2026 and said the pause was 'about exercising responsible leadership and ensuring that decisions of this magnitude are made through a thoughtful, transparent, and data-driven process.'", "as_of": "2026-09-02",
+     "source": "https://www.wfyi.org/wfyi-news/2026-07-10/indianapolis-council-president-to-ask-for-data-center-moratorium"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "John Barth", "role": "Council Vice President", "district": "7",
+     "email": "john.barth@indy.gov", "phone": "317-902-1453 (cell)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Jared Evans", "role": "Council Majority Leader", "district": "17",
+     "email": "jared.evans@indy.gov", "phone": "317-327-4242 (office)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Brian Mowery", "role": "Council Minority Leader", "district": "25",
+     "email": "brian.mowery@indy.gov", "phone": "317-327-4242 (office)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Leroy Robinson", "role": "Councilor", "district": "1",
+     "email": "leroy.robinson@indy.gov", "phone": "317-502-0272 (cell)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Brienne Delaney", "role": "Councilor", "district": "2",
+     "email": "brienne.delaney2@indy.gov", "phone": "317-327-4242 (office)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Dan Boots", "role": "Councilor", "district": "3",
+     "email": "dan.boots@indy.gov", "phone": "317-327-4242 (office)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Nick Roberts", "role": "Councilor", "district": "4",
+     "email": "nicholas.roberts@indy.gov", "phone": "317-476-3025 (cell)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Carlos Perkins", "role": "Councilor", "district": "6",
+     "email": "carlos.perkins@indy.gov", "phone": "317-797-5170 (cell)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Ron Gibson", "role": "Councilor", "district": "8",
+     "email": "ron.gibson2@indy.gov", "phone": "317-562-1556 (office)",
+     "stance": "Publicly backed the Metrobloks data-center rezoning in his district (Martindale-Brightwood) after the MDC's April 1, 2026 6-2 approval; on April 7, 2026 his home was shot 13 times overnight with a note reading 'No Data Centers' left at the door, in an apparent act of retaliation for his support.", "as_of": "2026-09-02",
+     "source": "https://fortune.com/2026/04/07/indianapolis-councilmember-ai-data-center-backlash/"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Keith L. Graves", "role": "Councilor", "district": "9",
+     "email": "keith.graves@indy.gov", "phone": "317-560-4554 (cell)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Alison \"Ali\" Brown", "role": "Councilor", "district": "10",
+     "email": "ali.brown@indy.gov", "phone": "317-327-4242 (office)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Crista Carlino", "role": "Councilor", "district": "11",
+     "email": "crista.carlino@indy.gov", "phone": "317-374-6266 (cell)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Vop Osili", "role": "Councilor", "district": "12",
+     "email": "vop.osili@indy.gov", "phone": "317-332-0877 (cell)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Jesse Brown", "role": "Councilor", "district": "13",
+     "email": "jesse.brown2@indy.gov", "phone": "317-370-7079 (cell)",
+     "stance": "Introduced a non-binding resolution urging a temporary stay on high-impact data-center approvals, which the Council passed the same day (May 4, 2026) that it approved the Metrobloks rezoning.", "as_of": "2026-09-02",
+     "source": "https://www.wfyi.org/wfyi-news/2026-05-04/metrobloks-data-center-gets-final-approval-for-martindale-brightwood"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Andy Nielsen", "role": "Councilor", "district": "14",
+     "email": "andy.nielsen@indy.gov", "phone": "317-283-9680 (cell)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Rena Allen", "role": "Councilor", "district": "15",
+     "email": "rena.allen@indy.gov", "phone": "317-622-8877 (cell)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Jessica McCormick", "role": "Councilor", "district": "16",
+     "email": "jessica.mccormick@indy.gov", "phone": "317-449-9234 (cell)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Kristin Jones", "role": "Councilor", "district": "18",
+     "email": "kristin.jones@indy.gov", "phone": "317-680-6869 (cell)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Frank Mascari", "role": "Councilor", "district": "19",
+     "email": "frank.mascari@indy.gov", "phone": "317-788-0520 (cell)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Michael-Paul Hart", "role": "Councilor", "district": "20",
+     "email": "michael-paul.hart@indy.gov", "phone": "317-327-4242 (office)",
+     "stance": "Cast the lone no vote against the moratorium on Aug. 10, 2026. His district includes the DC Blox site; he argued the city should adopt stricter development standards rather than a blanket pause, saying 'Just by saying no to everything is not a responsible thing to do.'", "as_of": "2026-09-02",
+     "source": "https://mirrorindy.org/indianapolis-city-county-council-data-center-moratorium-approval/"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Josh Bain", "role": "Councilor", "district": "21",
+     "email": "joshua.bain@indy.gov", "phone": "317-327-4242 (office)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Paul Annee", "role": "Councilor", "district": "22",
+     "email": "paul.annee2@indy.gov", "phone": "317-327-4242 (office)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Derek Cahill", "role": "Councilor", "district": "23",
+     "email": "derek.cahill2@indy.gov", "phone": "317-296-3419 (cell)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Indianapolis (Marion County)", "state": "IN", "body": "Indianapolis-Marion County City-County Council (moratorium ordinance sponsor and final legislative vote), with the Metropolitan Development Commission (MDC) as the zoning body giving final regulatory approval; consolidated city-county government (Unigov).",
+     "name": "Michael Dilk", "role": "Councilor", "district": "24",
+     "email": "mike.dilk424@gmail.com", "phone": "317-698-3455 (cell)",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://us-east-1-indy.graphassets.com/ActDBC5rvRWeCZlNNnLrDz/cmavkzcpi2z8l06k2y110i2gb"},
+    {"locality": "Jeffersonville", "state": "IN", "body": "Jeffersonville City Council",
+     "name": "Dustin White", "role": "Councilmember", "district": "1",
+     "email": "DWhite@cityofjeff.net", "phone": "(812) 280-3258",
+     "stance": "At the Aug. 4, 2026 meeting, proposed creating a special zoning overlay district specifically for data centers -- co-terminus with River Ridge and subject to specific mandates -- as a possible permanent framework once the moratorium ends.", "as_of": "2026-09-02",
+     "source": "https://www.newsandtribune.com/news/jeffersonville-city-council-approves-one-year-moratorium-for-data-centers/article_c39dd353-1c15-4b9d-8d00-462c2da7506b.html"},
+    {"locality": "Jeffersonville", "state": "IN", "body": "Jeffersonville City Council",
+     "name": "Bill Burns", "role": "Councilmember", "district": "2",
+     "email": "BBurns@cityofjeff.net", "phone": "(502) 649-8744",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://cityofjeff.net/city-council/"},
+    {"locality": "Jeffersonville", "state": "IN", "body": "Jeffersonville City Council",
+     "name": "Amy Semones", "role": "Councilmember", "district": "3",
+     "email": "ASemones@cityofjeff.net", "phone": "(812) 288-2323",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://cityofjeff.net/city-council/"},
+    {"locality": "Jeffersonville", "state": "IN", "body": "Jeffersonville City Council",
+     "name": "Scott Anderson", "role": "Councilmember", "district": "4",
+     "email": "SAnderson@cityofjeff.net", "phone": "(812) 280-3258",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://cityofjeff.net/city-council/"},
+    {"locality": "Jeffersonville", "state": "IN", "body": "Jeffersonville City Council",
+     "name": "Donna Reed", "role": "Councilmember", "district": "5",
+     "email": "DReed@cityofjeff.net", "phone": "(731) 217-7168",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://cityofjeff.net/city-council/"},
+    {"locality": "Jeffersonville", "state": "IN", "body": "Jeffersonville City Council",
+     "name": "Steve Webb", "role": "Councilmember", "district": "6",
+     "email": "SWebb@cityofjeff.net", "phone": "(502) 773-4496",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://cityofjeff.net/city-council/"},
+    {"locality": "Jeffersonville", "state": "IN", "body": "Jeffersonville City Council",
+     "name": "Scott Hawkins", "role": "Councilmember (At-Large)", "district": "At-Large",
+     "email": "SHawkins@cityofjeff.net", "phone": "(502) 548-9129",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://cityofjeff.net/city-council/"},
+    {"locality": "Jeffersonville", "state": "IN", "body": "Jeffersonville City Council",
+     "name": "Jacky Snelling", "role": "Councilmember (At-Large)", "district": "At-Large",
+     "email": "JSnelling@cityofjeff.net", "phone": "(502) 594-9596",
+     "stance": "Moved at the Aug. 4, 2026 meeting to extend the proposed moratorium from six months to a full year, arguing for time to draft a permanent data-center overlay district mirroring River Ridge's own mandates; the amendment passed with the ordinance.", "as_of": "2026-09-02",
+     "source": "https://www.newsandtribune.com/news/jeffersonville-city-council-approves-one-year-moratorium-for-data-centers/article_c39dd353-1c15-4b9d-8d00-462c2da7506b.html"},
+    {"locality": "Jeffersonville", "state": "IN", "body": "Jeffersonville City Council",
+     "name": "Evan Stoner", "role": "Councilmember (At-Large)", "district": "At-Large",
+     "email": "EStoner@cityofjeff.net", "phone": "(502) 909-4976",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://cityofjeff.net/city-council/"},
+    {"locality": "Warrick County", "state": "IN", "body": "Warrick County Board of Commissioners",
+     "name": "Sarah Seaton", "role": "County Commissioner, District 1 (Board President as of the July 2026 APC hearing per news report)", "district": "1",
+     "email": "info@warrickcounty.gov", "phone": "812-897-6120",
+     "stance": "At the July 13 2026 Area Plan Commission hearing, warned against an extended moratorium, saying an overly long pause could cost the county future opportunity because \"two years is a lifetime\" in the technology sector.", "as_of": "2026-09-02",
+     "source": "https://news.wnin.org/2026-07-14/data-center-vote-warrick-area-plan-commission-tables-own-ordinance-halts-projects-in-2026"},
+    {"locality": "Warrick County", "state": "IN", "body": "Warrick County Board of Commissioners",
+     "name": "Terry Phillippe", "role": "County Commissioner, District 2", "district": "2",
+     "email": "terry@warrickcounty.gov", "phone": "812-897-6120",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.warrickcounty.gov/commissioners"},
+    {"locality": "Warrick County", "state": "IN", "body": "Warrick County Board of Commissioners",
+     "name": "Stacey Franz", "role": "County Commissioner, District 3", "district": "3",
+     "email": "info@warrickcounty.gov", "phone": "812-897-6120",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.warrickcounty.gov/commissioners"},
+    {"locality": "Warrick County", "state": "IN", "body": "Warrick County Board of Commissioners",
+     "name": "Chris Whetstine", "role": "County Council Member, District 1", "district": "1",
+     "email": "cwhetstine@warrickcounty.gov", "phone": "812-453-0531",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.warrickcounty.gov/county-council"},
+    {"locality": "Warrick County", "state": "IN", "body": "Warrick County Board of Commissioners",
+     "name": "Richard Reid", "role": "County Council Member, District 2", "district": "2",
+     "email": "rreid@warrickcounty.gov", "phone": "812-455-2525",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.warrickcounty.gov/county-council"},
+    {"locality": "Warrick County", "state": "IN", "body": "Warrick County Board of Commissioners",
+     "name": "Greg Richmond", "role": "County Council Member, District 3", "district": "3",
+     "email": "grichmond@warrickcounty.gov", "phone": "812-573-9085",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.warrickcounty.gov/county-council"},
+    {"locality": "Warrick County", "state": "IN", "body": "Warrick County Board of Commissioners",
+     "name": "Robert Dimmett", "role": "County Council Member, District 4", "district": "4",
+     "email": "rdimmett@warrickcounty.gov", "phone": "812-305-2749",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.warrickcounty.gov/county-council"},
+    {"locality": "Warrick County", "state": "IN", "body": "Warrick County Board of Commissioners",
+     "name": "Pat A. Brooks", "role": "County Council Member, At-Large", "district": "At-Large",
+     "email": "pbrooks@warrickcounty.gov", "phone": "812-455-6033",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.warrickcounty.gov/county-council"},
+    {"locality": "Warrick County", "state": "IN", "body": "Warrick County Board of Commissioners",
+     "name": "Brad Overton", "role": "County Council Member, At-Large", "district": "At-Large",
+     "email": "boverton@warrickcounty.gov", "phone": "812-204-5262",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.warrickcounty.gov/county-council"},
+    {"locality": "Warrick County", "state": "IN", "body": "Warrick County Board of Commissioners",
+     "name": "Ron Bacon", "role": "County Council Member, At-Large", "district": "At-Large",
+     "email": "rbacon@warrickcounty.gov", "phone": "812-618-5019",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.warrickcounty.gov/county-council"},
+    {"locality": "Boone County", "state": "IN", "body": "Boone County Board of Commissioners",
+     "name": "Tim Beyer", "role": "Boone County Commissioner (President, per 2026-06-15 press release)", "district": "District 1",
+     "email": "tbeyer@co.boone.in.us", "phone": "765-483-4492",
+     "stance": "Voted for the moratorium (unanimous) and is quoted supporting it: \"This moratorium gives the county an opportunity to carefully study data center development, gather information, and ensure our policies align with the long-term goals and priorities of our residents.\"", "as_of": "2026-09-02",
+     "source": "https://boonecounty.in.gov/2026/06/15/19190/"},
+    {"locality": "Boone County", "state": "IN", "body": "Boone County Board of Commissioners",
+     "name": "Don Lawson", "role": "Boone County Commissioner", "district": "District 2",
+     "email": "dlawson@co.boone.in.us", "phone": "765-483-4492",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://boonecounty.in.gov/offices/commissioners/commissioners-board/"},
+    {"locality": "Boone County", "state": "IN", "body": "Boone County Board of Commissioners",
+     "name": "Scott Pell", "role": "Boone County Commissioner", "district": "District 3",
+     "email": "spell@co.boone.in.us", "phone": "765-483-4492",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://boonecounty.in.gov/offices/commissioners/commissioners-board/"},
+    {"locality": "Boone County", "state": "IN", "body": "Boone County Board of Commissioners",
+     "name": "Jennifer Hostetter", "role": "Boone County Council President (2026)", "district": "",
+     "email": "", "phone": "",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.reporter.net/news/boone-county-council-2026-board-and-committee-appointments/article_4e429be7-08a9-40d1-8b86-f7292a5d9237.html"},
+    {"locality": "Boone County", "state": "IN", "body": "Boone County Board of Commissioners",
+     "name": "Shari Richey", "role": "Boone County Council Vice President (2026)", "district": "",
+     "email": "", "phone": "",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.reporter.net/news/boone-county-council-2026-board-and-committee-appointments/article_4e429be7-08a9-40d1-8b86-f7292a5d9237.html"},
+    {"locality": "Boone County", "state": "IN", "body": "Boone County Board of Commissioners",
+     "name": "Kevin Van Horn", "role": "Boone County Council Member", "district": "District 3",
+     "email": "", "phone": "",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.reporter.net/news/boone-county-council-2026-board-and-committee-appointments/article_4e429be7-08a9-40d1-8b86-f7292a5d9237.html"},
+    {"locality": "Fayette County", "state": "IN", "body": "Fayette County Board of Commissioners",
+     "name": "Dale Munson", "role": "Commissioner, President", "district": "District 2",
+     "email": "dmunson@co.fayette.in.us", "phone": "(765) 222-1624",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://co.fayette.in.us/commissioners/"},
+    {"locality": "Fayette County", "state": "IN", "body": "Fayette County Board of Commissioners",
+     "name": "Tracie Bever", "role": "Commissioner, Vice President", "district": "District 3",
+     "email": "tbever@co.fayette.in.us", "phone": "(765) 222-1624",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://co.fayette.in.us/commissioners/"},
+    {"locality": "Fayette County", "state": "IN", "body": "Fayette County Board of Commissioners",
+     "name": "Dale Strong", "role": "Commissioner", "district": "District 1",
+     "email": "dstrong@co.fayette.in.us", "phone": "(765) 222-1624",
+     "stance": "Voted for and publicly backed the May 2026 moratorium: 'Yes, we did agree to a one-year moratorium on data centers to give the area plan commission time to develop appropriate zoning regulations.' As commission president in November 2025 he also made unanimous a separate, non-binding resolution stating the county was 'not against' data centers, saying 'We are dealing with the economic currency of the future.'", "as_of": "2026-09-02",
+     "source": "https://www.newsexaminer.com/news/commissioners-put-the-brakes-on-data-centers/article_9656df1d-2bd9-5df9-924d-4d6670aee9cd.html"},
+    {"locality": "Fayette County", "state": "IN", "body": "Fayette County Board of Commissioners",
+     "name": "Bill MacDaniel", "role": "Area Planning Executive Director (staff, non-elected)", "district": "",
+     "email": "bmacdaniel@co.fayette.in.us", "phone": "765-825-9808",
+     "stance": "Leading development of the county's data-center zoning framework; said 'We just have to prepare to protect the citizens of Fayette County and Connersville.' Announced he is retiring at the end of December 2026, which is why the county hired an outside planning consultant to help finish the framework.", "as_of": "2026-09-02",
+     "source": "https://www.newsexaminer.com/news/county-to-considers-moratorium-on-data-centers/article_c39c35a7-657c-5576-8a6d-f64e051738e7.html"},
+    {"locality": "Fayette County", "state": "IN", "body": "Fayette County Board of Commissioners",
+     "name": "Deron Price", "role": "Area Plan Commission Chairman", "district": "",
+     "email": "", "phone": "",
+     "stance": "Said the county learned from past CAFO and solar-energy ordinance fights that an outright ban on a category of development 'invited lawsuits,' favoring a rules-based approach over a blanket data-center ban.", "as_of": "2026-09-02",
+     "source": "https://www.newsexaminer.com/news/data-center-bans-could-invite-lawsuits/article_dee12a28-0770-53cd-90fa-624fb1e222ed.html"},
+    {"locality": "Starke County", "state": "IN", "body": "Starke County Board of Commissioners",
+     "name": "Mike VanDeMark", "role": "President, Board of Commissioners", "district": "",
+     "email": "mike@plymouthfoundry.com", "phone": "574-274-4853",
+     "stance": "Voted for Ordinance 2025-37 (12-month hyperscale data center moratorium), adopted 3-0 on 2025-12-15", "as_of": "2026-09-02",
+     "source": "https://starke.in.gov/wp-content/uploads/2026/07/2026-Board-of-County-Commissioners-County-Council.pdf"},
+    {"locality": "Starke County", "state": "IN", "body": "Starke County Board of Commissioners",
+     "name": "Charles Chesak", "role": "Vice-President, Board of Commissioners", "district": "",
+     "email": "charlesrc2003@hotmail.com", "phone": "574-806-3746",
+     "stance": "Voted for Ordinance 2025-37 (12-month hyperscale data center moratorium), adopted 3-0 on 2025-12-15", "as_of": "2026-09-02",
+     "source": "https://starke.in.gov/wp-content/uploads/2026/07/2026-Board-of-County-Commissioners-County-Council.pdf"},
+    {"locality": "Starke County", "state": "IN", "body": "Starke County Board of Commissioners",
+     "name": "Don Binkley", "role": "Member, Board of Commissioners", "district": "",
+     "email": "dbinkley@starke.in.gov", "phone": "574-249-0895",
+     "stance": "Voted for Ordinance 2025-37 (12-month hyperscale data center moratorium), adopted 3-0 on 2025-12-15", "as_of": "2026-09-02",
+     "source": "https://starke.in.gov/wp-content/uploads/2026/07/2026-Board-of-County-Commissioners-County-Council.pdf"},
+    {"locality": "Starke County", "state": "IN", "body": "Starke County Board of Commissioners",
+     "name": "Bill R. Crase, Jr.", "role": "President, County Council", "district": "",
+     "email": "bill_crase@live.com", "phone": "574-249-8809",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://starke.in.gov/wp-content/uploads/2026/07/2026-Board-of-County-Commissioners-County-Council.pdf"},
+    {"locality": "Starke County", "state": "IN", "body": "Starke County Board of Commissioners",
+     "name": "Dave Pearman", "role": "Vice-President, County Council", "district": "District 3",
+     "email": "starkecouncild3@aol.com", "phone": "574-249-0519",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://starke.in.gov/wp-content/uploads/2026/07/2026-Board-of-County-Commissioners-County-Council.pdf"},
+    {"locality": "Starke County", "state": "IN", "body": "Starke County Board of Commissioners",
+     "name": "Todd Leinbach", "role": "Member, County Council", "district": "",
+     "email": "tleinbach@starke.in.gov", "phone": "574-249-5030",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://starke.in.gov/wp-content/uploads/2026/07/2026-Board-of-County-Commissioners-County-Council.pdf"},
+    {"locality": "Starke County", "state": "IN", "body": "Starke County Board of Commissioners",
+     "name": "Howard Bailey", "role": "Member, County Council", "district": "",
+     "email": "habjr13@gmail.com", "phone": "574-806-8050",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://starke.in.gov/wp-content/uploads/2026/07/2026-Board-of-County-Commissioners-County-Council.pdf"},
+    {"locality": "Starke County", "state": "IN", "body": "Starke County Board of Commissioners",
+     "name": "Bruce Bennett", "role": "Member, County Council", "district": "",
+     "email": "nbbennettfarm@gmail.com", "phone": "574-806-2408",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://starke.in.gov/wp-content/uploads/2026/07/2026-Board-of-County-Commissioners-County-Council.pdf"},
+    {"locality": "Starke County", "state": "IN", "body": "Starke County Board of Commissioners",
+     "name": "Kay Gudeman", "role": "Member, County Council", "district": "",
+     "email": "lexusdiana1953@gmail.com", "phone": "574-806-1078",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://starke.in.gov/wp-content/uploads/2026/07/2026-Board-of-County-Commissioners-County-Council.pdf"},
+    {"locality": "Starke County", "state": "IN", "body": "Starke County Board of Commissioners",
+     "name": "Cassandra Hine", "role": "Member, County Council", "district": "",
+     "email": "cassi46534@gmail.com", "phone": "574-249-8943",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://starke.in.gov/wp-content/uploads/2026/07/2026-Board-of-County-Commissioners-County-Council.pdf"},
+    {"locality": "Marshall County", "state": "IN", "body": "Marshall County Board of Commissioners",
+     "name": "Stan Klotz", "role": "President, Board of Commissioners", "district": "District 1",
+     "email": "", "phone": "574-286-2452",
+     "stance": "Voted for the permanent data center ban adopted 2026-04-20; quoted: \"Success is protecting the public, protecting this county, the farmland ... we want to keep Marshall County Marshall County.\"", "as_of": "2026-09-02",
+     "source": "https://www.wndu.com/2026/04/21/marshall-county-commissioners-defend-data-center-ban/"},
+    {"locality": "Marshall County", "state": "IN", "body": "Marshall County Board of Commissioners",
+     "name": "Adam Faulstich", "role": "Member, Board of Commissioners", "district": "District 2",
+     "email": "", "phone": "574-767-2458",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.co.marshall.in.us/commissioners/"},
+    {"locality": "Marshall County", "state": "IN", "body": "Marshall County Board of Commissioners",
+     "name": "Jesse Bohannon", "role": "Member, Board of Commissioners", "district": "District 3",
+     "email": "", "phone": "574-216-0115",
+     "stance": "Voted for the permanent data center ban adopted 2026-04-20; said he took office in 2025 on a mandate to keep data centers out of the county and, quoted: \"As far as I know we are probably the most protected locality in all of Indiana.\"", "as_of": "2026-09-02",
+     "source": "https://www.wndu.com/2026/04/21/marshall-county-commissioners-defend-data-center-ban/"},
+    {"locality": "Marshall County", "state": "IN", "body": "Marshall County Board of Commissioners",
+     "name": "Deborah Johnson", "role": "President, County Council and Plan/Planning Commission", "district": "",
+     "email": "", "phone": "",
+     "stance": "Quoted discussing the data center ban and related battery storage/solar restrictions on 2026-04-20", "as_of": "2026-09-02",
+     "source": "https://wsbt.com/news/local/marshall-county-approves-permanent-ban-on-data-centers-effective-immediately-data-centers-solar-farms-industrial-size-projects-development-county-council-regulations-counties-experts-industries-marshall-county-indiana"},
+    {"locality": "Cass County", "state": "IN", "body": "Cass County Board of Commissioners",
+     "name": "Ruth Baker", "role": "President, Board of Commissioners", "district": "District 1",
+     "email": "ruth.baker@casscountyin.gov", "phone": "(574) 753-7889",
+     "stance": "Signed Comm-Ord-2026-08 banning data processing/data centers county-wide, adopted 2026-04-21", "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/cass/files/Comm-Ord-2026-08-Data-Processing-signed.pdf"},
+    {"locality": "Cass County", "state": "IN", "body": "Cass County Board of Commissioners",
+     "name": "Roger Spencer", "role": "Member, Board of Commissioners", "district": "District 2",
+     "email": "roger.spencer@casscountyin.gov", "phone": "",
+     "stance": "Signed Comm-Ord-2026-08 banning data processing/data centers county-wide, adopted 2026-04-21", "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/cass/files/Comm-Ord-2026-08-Data-Processing-signed.pdf"},
+    {"locality": "Cass County", "state": "IN", "body": "Cass County Board of Commissioners",
+     "name": "Mike Deitrich", "role": "Member, Board of Commissioners", "district": "District 3",
+     "email": "mike.deitrich@casscountyin.gov", "phone": "(574) 753-7891",
+     "stance": "Signed Comm-Ord-2026-08 banning data processing/data centers county-wide, adopted 2026-04-21; quoted: \"I don't think this is going to make them go away. But we're not prepared at this point to entertain anything.\"", "as_of": "2026-09-02",
+     "source": "https://www.pharostribune.com/news/article_090f3c77-59fe-4cae-b198-963608717dbd.html"},
+    {"locality": "Dearborn County", "state": "IN", "body": "Dearborn County Board of Commissioners",
+     "name": "Jim Thatcher", "role": "Commissioner, Board President", "district": "District 1",
+     "email": "", "phone": "(812) 537-8807",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.dearborncounty.org/department/division.php?structureid=73"},
+    {"locality": "Dearborn County", "state": "IN", "body": "Dearborn County Board of Commissioners",
+     "name": "Duane Bischoff", "role": "Commissioner", "district": "District 2",
+     "email": "", "phone": "(812) 537-8807",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.dearborncounty.org/department/division.php?structureid=73"},
+    {"locality": "Dearborn County", "state": "IN", "body": "Dearborn County Board of Commissioners",
+     "name": "Kevin Turner", "role": "Commissioner", "district": "District 3",
+     "email": "", "phone": "(812) 537-8807",
+     "stance": "Voted for the Feb 25, 2026 moratorium: \"We got to make a decision, and not everybody's going to be happy with it, but we're trying to do the best we can. We got a lot of information with this. We got a lot of work to do ahead.\"", "as_of": "2026-09-02",
+     "source": "https://www.wvxu.org/environment/2026-02-25/dearborn-county-moratorium-solar-farms-data-center"},
+    {"locality": "Putnam County", "state": "IN", "body": "Putnam County Board of Commissioners",
+     "name": "Andy Beck", "role": "Commissioner, President", "district": "",
+     "email": "andy.beck@co.putnam.in.us", "phone": "765-522-3396",
+     "stance": "Voted for the Nov 17, 2025 moratorium: said the county needed 'a deeper look at the county's Unified Development Ordinance' after the EnergyRe solar debate, and that current standards were 'at minimum levels.'", "as_of": "2026-09-02",
+     "source": "https://www.giant.fm/putnam-county/news/local-news/putnam-county-commissioners-vote-in-favor-of-moratorium-on-solar-farms/"},
+    {"locality": "Putnam County", "state": "IN", "body": "Putnam County Board of Commissioners",
+     "name": "Tom Helmer", "role": "Commissioner, Vice President", "district": "",
+     "email": "tom.helmer@co.putnam.in.us", "phone": "765-720-4215",
+     "stance": "Voted for the Nov 17, 2025 moratorium.", "as_of": "2026-09-02",
+     "source": "https://www.suncommercial.com/banner_graphic/article_68966ddd-bd26-589a-8ed6-68d209ba0fe5.html"},
+    {"locality": "Putnam County", "state": "IN", "body": "Putnam County Board of Commissioners",
+     "name": "Rick Woodall", "role": "Commissioner", "district": "",
+     "email": "rick.woodall@co.putnam.in.us", "phone": "765-720-2967",
+     "stance": "Cast the lone dissenting vote against the Nov 17, 2025 moratorium; his specific stated reasons were not reported in the sources found (Banner Graphic/GIANT FM coverage), so no direct quote is recorded here.", "as_of": "2026-09-02",
+     "source": "https://www.giant.fm/putnam-county/news/local-news/putnam-county-commissioners-vote-in-favor-of-moratorium-on-solar-farms/"},
+    {"locality": "White County", "state": "IN", "body": "White County Board of Commissioners",
+     "name": "David Davis", "role": "Commissioner", "district": "District 1",
+     "email": "david.davis@whitecounty.in.gov", "phone": "574-583-4879",
+     "stance": "Voted for the Oct 20, 2025 data-center moratorium (part of the reported 2-1 majority).", "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/white/departments/county-commissioners/"},
+    {"locality": "White County", "state": "IN", "body": "White County Board of Commissioners",
+     "name": "Kaleb Pass", "role": "Commissioner", "district": "District 2",
+     "email": "kaleb.pass@whitecounty.in.gov", "phone": "574-583-4879",
+     "stance": "Voted for the Oct 20, 2025 data-center moratorium, citing the complexity of data centers and the need for county staff to have more time to research impacts and best practices.", "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/white/departments/county-commissioners/"},
+    {"locality": "White County", "state": "IN", "body": "White County Board of Commissioners",
+     "name": "Mike Smolek", "role": "Commissioner", "district": "District 3",
+     "email": "mike.smolek@whitecounty.in.gov", "phone": "574-583-4879",
+     "stance": "Cast the lone dissenting vote against the Oct 20, 2025 moratorium, saying a formal development agreement for a data center was not imminent and noting the county had passed a wind/solar moratorium in March 2025 without following up on it.", "as_of": "2026-09-02",
+     "source": "https://www.in.gov/counties/white/departments/county-commissioners/"},
+    {"locality": "Pulaski County", "state": "IN", "body": "Pulaski County Board of Commissioners",
+     "name": "Donald \"Don\" Street, Jr.", "role": "President, Board of Commissioners", "district": "District 2",
+     "email": "commissioner2@pulaskicounty.in.gov", "phone": "574-946-3653",
+     "stance": "Said he was open to hearing a data center proposal if one were submitted, and wants the county's eventual ordinance to address setbacks, power, and water concerns.", "as_of": "2026-09-02",
+     "source": "https://www.abc57.com/news/pulaski-county-commissioners-speak-on-data-center-moratorium"},
+    {"locality": "Pulaski County", "state": "IN", "body": "Pulaski County Board of Commissioners",
+     "name": "Jennifer \"Jenny\" Knebel", "role": "Commissioner", "district": "District 1",
+     "email": "commissioner1@pulaskicounty.in.gov", "phone": "574-946-3653",
+     "stance": "Said \"a data center may not be right for the county at this time,\" citing strain from the ongoing Mammoth Solar project.", "as_of": "2026-09-02",
+     "source": "https://www.abc57.com/news/pulaski-county-commissioners-speak-on-data-center-moratorium"},
+    {"locality": "Pulaski County", "state": "IN", "body": "Pulaski County Board of Commissioners",
+     "name": "John M. \"Mike\" McClure", "role": "Vice-President, Board of Commissioners; also serves as ex-officio member of the Advisory Plan Commission", "district": "District 3",
+     "email": "commissioner3@pulaskicounty.in.gov", "phone": "574-946-3653",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://pulaskionline.org/department/county-commissioners/"},
+    {"locality": "Pulaski County", "state": "IN", "body": "Pulaski County Board of Commissioners",
+     "name": "Karla Redweik", "role": "Building Inspector and Plan Administrator (staff, non-voting)", "district": "",
+     "email": "", "phone": "574.946.7858",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://pulaskijournal.com/news/12-month-data-center-moratorium-passes-unanimously"},
+    {"locality": "Pulaski County", "state": "IN", "body": "Pulaski County Board of Commissioners",
+     "name": "Abby Shidler-Dickey", "role": "President, Advisory Plan Commission (recommended the moratorium 5-0)", "district": "",
+     "email": "", "phone": "574.946.7858",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://pulaskionline.org/department/advisory-plan-commission/"},
+    {"locality": "Fulton County", "state": "IN", "body": "Fulton County Board of Commissioners (moratorium vote); Fulton County Area Plan Commission (recommending body / oversees the data center review committee)",
+     "name": "Dave Sommers", "role": "Commissioner", "district": "",
+     "email": "", "phone": "574-223-3869",
+     "stance": "Voted NO on the March 2, 2026 moratorium (the lone dissent, 2-1). Quote: \"I've got to represent 20,000 people, not just 2,000 ... this right here looked like our first and best alternative,\" referring to the county revenue the Decennial Group project would have brought.", "as_of": "2026-09-02",
+     "source": "https://wsbt.com/news/local/fulton-county-commissioners-approve-data-center-moratorium-one-year-paise-research-rumors-development-measure-benefits-financial-residents-commission-area-planning-job-work-concern-action-fulton-county-indiana"},
+    {"locality": "Fulton County", "state": "IN", "body": "Fulton County Board of Commissioners (moratorium vote); Fulton County Area Plan Commission (recommending body / oversees the data center review committee)",
+     "name": "Bryan Lewis", "role": "Commissioner", "district": "",
+     "email": "", "phone": "574-223-3869",
+     "stance": "Voted YES on the March 2, 2026 moratorium. Quote: \"Anything less than a year is silly ... I'm hoping we can move through this thing at a fairly good rate.\" Also said, \"If the people in Akron and that area don't want it, then I think we need to really look hard at that and give them what they want.\"", "as_of": "2026-09-02",
+     "source": "https://wsbt.com/news/local/fulton-county-commissioners-approve-data-center-moratorium-one-year-paise-research-rumors-development-measure-benefits-financial-residents-commission-area-planning-job-work-concern-action-fulton-county-indiana"},
+    {"locality": "Fulton County", "state": "IN", "body": "Fulton County Board of Commissioners (moratorium vote); Fulton County Area Plan Commission (recommending body / oversees the data center review committee)",
+     "name": "Rick Ranstead", "role": "Commissioner", "district": "",
+     "email": "", "phone": "574-223-3869",
+     "stance": "Voted YES on the March 2, 2026 moratorium, joining Lewis for the 2-1 majority (by elimination: Sommers dissented and Lewis is on record in favor; no article separately quotes Ranstead, so this vote attribution should be confirmed against the county's own minutes before being cited as certain).", "as_of": "2026-09-02",
+     "source": "https://www.co.fulton.in.us/249/County-Commissioners"},
+    {"locality": "Fulton County", "state": "IN", "body": "Fulton County Board of Commissioners (moratorium vote); Fulton County Area Plan Commission (recommending body / oversees the data center review committee)",
+     "name": "Barry Baldwin", "role": "Fulton County Councilman (R) -- county council, not a commissioner; does not vote on the moratorium", "district": "",
+     "email": "", "phone": "",
+     "stance": "Said, \"Ultimately, we would like to have our zoning laws for Ag changed back to the way they were.\"", "as_of": "2026-09-02",
+     "source": "https://wsbt.com/news/local/fulton-county-commissioners-approve-data-center-moratorium-one-year-paise-research-rumors-development-measure-benefits-financial-residents-commission-area-planning-job-work-concern-action-fulton-county-indiana"},
+    {"locality": "Miami County", "state": "IN", "body": "Miami County Board of Commissioners (adopts moratorium/ordinance); Miami County Plan Commission (drafts and recommends the ordinance)",
+     "name": "Fred Musselman", "role": "Chairman, Board of Commissioners", "district": "District 3",
+     "email": "fmusselman@miamicountyin.gov", "phone": "260-571-2267",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.miamicountyin.gov/Directory.aspx?did=16"},
+    {"locality": "Miami County", "state": "IN", "body": "Miami County Board of Commissioners (adopts moratorium/ordinance); Miami County Plan Commission (drafts and recommends the ordinance)",
+     "name": "Brenda Weaver", "role": "Vice Chair, Board of Commissioners", "district": "District 2",
+     "email": "bweaver@miamicountyin.gov", "phone": "765-469-9056",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.miamicountyin.gov/Directory.aspx?did=16"},
+    {"locality": "Miami County", "state": "IN", "body": "Miami County Board of Commissioners (adopts moratorium/ordinance); Miami County Plan Commission (drafts and recommends the ordinance)",
+     "name": "Mark Horner", "role": "Commissioner", "district": "District 1",
+     "email": "mhorner@miamicountyin.gov", "phone": "",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://www.miamicountyin.gov/Directory.aspx?did=16"},
+    {"locality": "Miami County", "state": "IN", "body": "Miami County Board of Commissioners (adopts moratorium/ordinance); Miami County Plan Commission (drafts and recommends the ordinance)",
+     "name": "Corey Roser", "role": "Plan Administrator (staff, non-voting)", "district": "",
+     "email": "", "phone": "",
+     "stance": "Said \"Our current zoning ordinance doesn't properly address data centers,\" explaining the impetus for drafting the stronger, dedicated ordinance.", "as_of": "2026-09-02",
+     "source": "https://www.pharostribune.com/news/article_7db7d9ac-2b34-4f9f-a8c2-beae6b3f28a4.html"},
+    {"locality": "New Albany", "state": "IN", "body": "New Albany Common Council",
+     "name": "Adam Dickey", "role": "Council President", "district": "District 2",
+     "email": "adickey@cityofnewalbany.com", "phone": "(812) 786-5895",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://cityofnewalbany.com/city-council/"},
+    {"locality": "New Albany", "state": "IN", "body": "New Albany Common Council",
+     "name": "Elaine Murphy", "role": "Council Vice President", "district": "At-Large",
+     "email": "emurphy@cityofnewalbany.com", "phone": "(812) 944-3527",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://cityofnewalbany.com/city-council/"},
+    {"locality": "New Albany", "state": "IN", "body": "New Albany Common Council",
+     "name": "Don Unruh", "role": "Council Member", "district": "At-Large",
+     "email": "dunruh@cityofnewalbany.com", "phone": "(502) 494-2194",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://cityofnewalbany.com/city-council/"},
+    {"locality": "New Albany", "state": "IN", "body": "New Albany Common Council",
+     "name": "Stefanie Griffith", "role": "Council Member", "district": "At-Large",
+     "email": "sgriffith@cityofnewalbany.com", "phone": "(502) 645-6256",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://cityofnewalbany.com/city-council/"},
+    {"locality": "New Albany", "state": "IN", "body": "New Albany Common Council",
+     "name": "Jennie Collier", "role": "Council Member", "district": "District 1",
+     "email": "jcollier@cityofnewalbany.com", "phone": "(812) 987-3324",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://cityofnewalbany.com/city-council/"},
+    {"locality": "New Albany", "state": "IN", "body": "New Albany Common Council",
+     "name": "Greg Phipps", "role": "Council Member", "district": "District 3",
+     "email": "gphipps@cityofnewalbany.com", "phone": "(812) 949-8317",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://cityofnewalbany.com/city-council/"},
+    {"locality": "New Albany", "state": "IN", "body": "New Albany Common Council",
+     "name": "Chris FitzGerald", "role": "Council Member", "district": "District 4",
+     "email": "cfitzgerald@cityofnewalbany.com", "phone": "(812) 913-5989",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://cityofnewalbany.com/city-council/"},
+    {"locality": "New Albany", "state": "IN", "body": "New Albany Common Council",
+     "name": "Louise Gohmann", "role": "Council Member", "district": "District 5",
+     "email": "lgohmann@cityofnewalbany.com", "phone": "(502) 389-6926",
+     "stance": "", "as_of": "2026-09-02",
+     "source": "https://cityofnewalbany.com/city-council/"},
+    {"locality": "New Albany", "state": "IN", "body": "New Albany Common Council",
+     "name": "Scott Blair", "role": "Council Member", "district": "District 6",
+     "email": "sblair@cityofnewalbany.com", "phone": "(812) 697-0128",
+     "stance": "Voted for the moratorium (unanimous 2026-07-16 vote) but publicly voiced concern during the meeting that prohibiting data-center development could inhibit growth for companies with an existing presence in New Albany", "as_of": "2026-09-02",
+     "source": "https://www.wdrb.com/news/new-albany-city-council-approves-1-year-pause-on-new-data-centers/article_c253ff7e-7266-43e1-a637-18574ad130b7.html"},
+    {"locality": "Howard County", "state": "IN", "body": "Howard County Board of Commissioners",
+     "name": "Brad Bray", "role": "Commissioner (Board President as of prior term)", "district": "Countywide (at-large seat)",
+     "email": "", "phone": "",
+     "stance": "Voted for the 2026-08-18 moratorium and volunteered to chair the study committee tasked with drafting data-center regulations, after public pressure from Planning Commission President Cheryl Graham and candidate Lisa Washington", "as_of": "2026-09-02",
+     "source": "https://kokomolantern.substack.com/p/county-adopts-data-center-moratorium"},
+    {"locality": "Howard County", "state": "IN", "body": "Howard County Board of Commissioners",
+     "name": "Jack Dodd", "role": "Commissioner", "district": "Countywide (at-large seat)",
+     "email": "", "phone": "",
+     "stance": "Voted for the 2026-08-18 moratorium; initially opposed forming a study committee but agreed once board support for one grew", "as_of": "2026-09-02",
+     "source": "https://kokomolantern.substack.com/p/county-adopts-data-center-moratorium"},
+    {"locality": "Howard County", "state": "IN", "body": "Howard County Board of Commissioners",
+     "name": "Jeff Lipinski", "role": "Commissioner", "district": "Countywide (at-large seat)",
+     "email": "", "phone": "",
+     "stance": "Voted for the 2026-08-18 moratorium (part of the unanimous 3-0 vote)", "as_of": "2026-09-02",
+     "source": "https://kokomolantern.substack.com/p/county-adopts-data-center-moratorium"},
 ]
 LOCAL_OFFICIALS_DF = pd.DataFrame(LOCAL_OFFICIALS)
 
