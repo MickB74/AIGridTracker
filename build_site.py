@@ -565,6 +565,36 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 @media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
 .official { font-size:14px; }
 .official .role { color:var(--muted); font-size:13px; }
+.sechead { display:flex; align-items:baseline; justify-content:space-between;
+  gap:12px; flex-wrap:wrap; }
+.sechead h2 { margin-bottom:0; }
+.sechead a { font-size:14px; white-space:nowrap; }
+.hero-grid .feeds { font-size:13px; margin-top:10px; }
+.hn-list { list-style:none; padding:0; margin:14px 0 0; display:grid; gap:10px; }
+.hn-item { display:grid; grid-template-columns:28px 1fr; gap:10px; align-items:start;
+  padding:12px 14px; background:var(--card); border:1px solid var(--rule);
+  border-radius:12px; }
+.hn-rank { font-size:18px; font-weight:800; color:var(--teal); line-height:1.35;
+  text-align:center; }
+.hn-body a { font-weight:600; font-size:15.5px; line-height:1.35; text-decoration:none; }
+.hn-body a:hover { text-decoration:underline; }
+.hn-meta { display:block; font-size:12.5px; color:var(--muted); margin-top:3px; }
+.post-card { display:block; background:var(--card); border:1px solid var(--rule);
+  border-radius:12px; padding:12px; text-decoration:none; color:inherit; }
+.post-card:hover { border-color:var(--teal); }
+.post-card .thumb { width:100%; height:auto; display:block; border-radius:10px;
+  margin-bottom:10px; }
+.post-card .post-date { font-size:12px; color:var(--muted); }
+.post-card h3 { font-size:16px; line-height:1.35; margin:4px 0 6px; }
+.post-card p { font-size:13.5px; margin:0; line-height:1.5; }
+.chg-list { list-style:none; padding:0; margin:12px 0 0; display:grid; gap:6px; }
+.chg-list li { display:grid; grid-template-columns:78px 1fr auto; gap:8px 12px;
+  align-items:baseline; font-size:14px; padding:8px 12px; background:var(--card);
+  border:1px solid var(--rule); border-radius:10px; }
+.chg-kind { font-size:11px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.04em; color:var(--teal); }
+.chg-detail { grid-column:2; font-size:13px; color:var(--muted); }
+.chg-date { font-size:12px; color:var(--muted); grid-row:1 / span 2; }
 .hero-grid { display:grid; grid-template-columns:1fr; gap:24px;
   align-items:center; padding:44px 0 10px; }
 @media (min-width:820px){ .hero-grid{ grid-template-columns:1.15fr .85fr; padding:56px 0 20px; } }
@@ -664,6 +694,13 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 # belongs to — the first path element of its canonical URL — so the parent
 # menu lights up on a child page (e.g. /states/ohio highlights "Your area").
 NAV_GROUPS = [
+    ("News & analysis", [
+        ("Top stories", "news/index.html"),
+        ("Blog", "blog/index.html"),
+        ("Story tracker", "story-tracker.html"),
+        ("Projects tracker", "projects.html"),
+        ("Videos", "videos.html"),
+    ]),
     ("Act", [
         ("Start here", "start-here.html"),
         ("Siting score", "siting.html"),
@@ -696,13 +733,6 @@ NAV_GROUPS = [
         ("Complaints by company", "complaints.html"),
         ("Electricity outlook", "outlook.html"),
         ("Open data", "open-data.html"),
-    ]),
-    ("Updates", [
-        ("Blog", "blog/index.html"),
-        ("News", "news/index.html"),
-        ("Story tracker", "story-tracker.html"),
-        ("Projects tracker", "projects.html"),
-        ("Videos", "videos.html"),
     ]),
 ]
 
@@ -948,7 +978,6 @@ def page(title, description, body, canonical, depth=0,
   <p style="margin-bottom:8px"><strong>Site</strong> ·
     <a href="{p}about.html">About</a> ·
     <a href="{p}open-data.html">Open data</a> ·
-    <a href="{p}consulting.html">Consulting</a> ·
     <a href="{p}search.html">Search</a></p>
   <p>AI GridWatch — community energy intelligence. Planning estimates, not
   engineering studies; every number is sourced in the
@@ -1040,11 +1069,88 @@ def _article_schema(title, description, url, date_str, author="AI GridWatch"):
     }
 
 
-def build_index():
+def _home_top_stories_html(top_stories):
+    """The news page's ranked block, condensed for the front door."""
+    if not top_stories:
+        return ""
+    def age(d):
+        if d is None:
+            return ""
+        d = int(d)
+        return "today" if d == 0 else ("yesterday" if d == 1 else f"{d} days ago")
+    cards = []
+    for i, st in enumerate(top_stories[:5], 1):
+        meta = " · ".join(x for x in (st.get("source", ""), age(st.get("age_days"))) if x)
+        cards.append(
+            '<li class="hn-item">'
+            f'<span class="hn-rank">{i}</span>'
+            '<span class="hn-body">'
+            f'<a href="{esc(st.get("link", ""))}" rel="nofollow noopener" target="_blank">'
+            f'{esc(st.get("title", ""))}</a>'
+            f'<span class="hn-meta">{esc(meta)}{_source_badge_html(st.get("source", ""))}</span>'
+            '</span></li>')
+    return (
+        '<section class="home-news">'
+        '<div class="sechead"><h2>Top stories</h2>'
+        '<a href="news/index.html">All news &rarr;</a></div>'
+        '<p class="muted">Ranked from the last seven days by freshness, stakes '
+        '(lawsuits, moratoriums, rate cases) and outlet quality. Refreshed with '
+        'every build. Heuristic, not editorial.</p>'
+        f'<ol class="hn-list">{"".join(cards)}</ol></section>')
+
+
+def _home_posts_html():
+    cards = []
+    for st in _sorted_posts()[:3]:
+        title = st["title"].replace("\\$", "$")
+        summary = st["summary"].replace("\\$", "$")
+        cards.append(
+            f'<a class="post-card" href="blog/{st["id"]}.html">'
+            f'{art_svg(st, cls="thumb", uid=f"h-{st["id"]}")}'
+            f'<span class="post-date">{st["date"].strftime("%B %-d, %Y")}</span>'
+            f'<h3>{esc(title)}</h3>'
+            f'<p class="muted">{esc(summary)}</p></a>')
+    return (
+        '<section class="home-posts">'
+        '<div class="sechead"><h2>Analysis</h2>'
+        '<a href="blog/index.html">All posts &rarr;</a></div>'
+        '<p class="muted">Three posts a week on what moved: votes, filings, '
+        'rate cases and the fine print behind them. Every number links to the '
+        'document it came from.</p>'
+        f'<div class="grid3">{"".join(cards)}</div></section>')
+
+
+def _home_tracker_changes_html(days=10, limit=6):
+    import datetime as _dt
+    cut = (_dt.date.today() - _dt.timedelta(days=days)).isoformat()
+    log = [c for c in _MORA_CHANGES_LOG if c.get("date", "") >= cut]
+    log.sort(key=lambda c: c["date"], reverse=True)
+    if not log:
+        return ""
+    labels = {"added": "New", "status_changed": "Status", "extended": "Extended",
+              "shortened": "Shortened"}
+    rows = "".join(
+        f'<li><span class="chg-kind">{esc(labels.get(c["kind"], c["kind"]))}</span>'
+        f'<a href="moratoriums.html#{esc(c["id"])}">{esc(c["locality"])}</a>'
+        f'<span class="chg-detail">{esc(c["detail"])}</span>'
+        f'<span class="chg-date">{esc(c["date"][5:])}</span></li>'
+        for c in log[:limit])
+    return (
+        '<section class="home-changes">'
+        '<div class="sechead"><h2>Moratorium tracker: what changed</h2>'
+        '<a href="moratoriums.html">Full tracker &rarr;</a></div>'
+        f'<p class="muted">{len(log)} row{"s" if len(log) != 1 else ""} moved in the '
+        f'last {days} days: pauses added, extended, lapsed or rescinded. '
+        'Each row carries its source and end date.</p>'
+        f'<ul class="chg-list">{rows}</ul></section>')
+
+
+def build_index(top_stories=None):
     n_states = len(STATE_DC_DF)
     n_dc = int(STATE_DC_DF["dc_count"].sum())
     twh = STATE_DC_DF["twh_year"].sum()
     n_mora = len(MORATORIUMS_DF)
+    n_enacted = int((MORATORIUMS_DF["effective_status"] == "Enacted").sum())
     states_links = "\n".join(
         f'<a href="states/{slugify(s)}.html">{esc(s)}</a>'
         for s in sorted(STATE_GRID_PROFILES))
@@ -1056,43 +1162,34 @@ def build_index():
 <div class="hero-grid">
 <header>
   <div class="kicker">AI GridWatch</div>
-  <h1>A data center is coming to town.<br>Negotiate like you know the numbers.</h1>
-  <p class="sub">Free tools for communities facing data center development:
-  impact calculators, negotiation playbooks, health evidence, and the
-  documents to bring to your next hearing — all sourced.</p>
+  <h1>The data center fight,<br>tracked daily.</h1>
+  <p class="sub">News, analysis and the numbers behind them: a moratorium
+  tracker covering {n_mora} local and state actions, project dossiers, health
+  evidence, and free tools for communities facing a data center. Every claim
+  links to its source.</p>
   <p>
-    <a class="btn" href="start-here.html">Start here — the 5-step wizard</a>
-    <a class="btn ghost" href="health-risks.html">The health risks, sourced</a>
+    <a class="btn" href="news/index.html">Today's top stories</a>
+    <a class="btn ghost" href="start-here.html">Start here — the 5-step wizard</a>
   </p>
+  <p class="muted feeds">Subscribe:
+    <a href="blog/feed.xml">Blog</a> ·
+    <a href="news/feed.xml">News</a> ·
+    <a href="changes.xml">Tracker changes</a> ·
+    <a href="alerts.xml">Expiring pauses</a> (RSS)</p>
 </header>
 {_hero_art_svg()}
 </div>
+{_home_top_stories_html(top_stories)}
+{_home_posts_html()}
+{_home_tracker_changes_html()}
 <div class="stats">
+  <div class="stat"><b>{n_enacted}</b><span>data center pauses in force, of {n_mora} tracked</span></div>
   <div class="stat"><b>{n_dc:,}</b><span>tracked U.S. data center facilities</span></div>
   <div class="stat"><b>{twh:,.0f} TWh</b><span>estimated annual electricity, all 50 states + D.C.</span></div>
-  <div class="stat"><b>{n_mora}</b><span>tracked moratorium &amp; pushback efforts</span></div>
   <div class="stat"><b>325&ndash;580 TWh</b><span>projected U.S. data center demand by 2030 (Berkeley Lab)</span></div>
 </div>
 <section>
-  <h2>The trajectory</h2>
-  <p class="muted" style="margin-bottom:6px">U.S. data-center electricity demand, actual and projected — TWh per year, with the equivalent number of average U.S. homes powered and the share of all U.S. electricity.</p>
-  <div class="demand-chart">
-    <div class="row"><span class="yr">2018</span>
-      <div class="bar" style="width:14%"></div><span class="val">76 TWh<span class="homes">&asymp; 7.2M homes</span><span class="homes">1.9% of U.S. electricity</span></span></div>
-    <div class="row"><span class="yr">2023</span>
-      <div class="bar" style="width:32%"></div><span class="val">176 TWh<span class="homes">&asymp; 16.8M homes</span><span class="homes">4.4% of U.S. electricity</span></span></div>
-    <div class="row"><span class="yr">2028</span>
-      <div class="bar range" style="width:59%; --lo:56%"></div><span class="val">325&ndash;580<span class="homes">&asymp; 31&ndash;55M homes</span><span class="homes">6.7&ndash;12% of U.S. electricity</span></span></div>
-    <div class="row"><span class="yr">2030</span>
-      <div class="bar range" style="width:100%; --lo:56%"></div><span class="val">up to 580<span class="homes">&asymp; up to 55M homes</span><span class="homes">up to &sim;12% of U.S. electricity</span></span></div>
-  </div>
-  <p class="muted" style="margin-top:8px">At the high end, that is the electricity of roughly <b>40% of all U.S. households</b> (~132 million) going to data centers by 2030.</p>
-  <p class="src">Source: Lawrence Berkeley National Laboratory,
-  <em>2024 U.S. Data Center Energy Usage Report</em> (Dec 2024). 2028&ndash;2030 range reflects low/high AI-adoption scenarios; electricity shares are the report&rsquo;s own figures.
-  Homes equivalence uses the EIA average U.S. household consumption of 10,500 kWh/year; household count per U.S. Census.</p>
-</section>
-<section>
-  <h2>What you get</h2>
+  <h2>Tools for the hearing</h2>
   <div class="grid3">
     <div class="card"><div class="iconcard">
       <div class="ico">{_ico_doc()}</div><div class="body">
@@ -1120,18 +1217,22 @@ def build_index():
   approval. Timing is the leverage.</p>
 </section>
 <section>
-  <h2>Latest from the blog</h2>
-  <div class="grid3">
-    {"".join(
-        f'<div class="card"><p class="muted" style="margin-bottom:4px">'
-        f'{s["date"].strftime("%b %-d")}</p>'
-        f'<h3><a href="blog/{s["id"]}.html">'
-        f'{esc(s["title"].replace(chr(92) + "$", "$"))}</a></h3></div>'
-        for s in _sorted_posts()[:3]
-    )}
+  <h2>The trajectory</h2>
+  <p class="muted" style="margin-bottom:6px">U.S. data-center electricity demand, actual and projected — TWh per year, with the equivalent number of average U.S. homes powered and the share of all U.S. electricity.</p>
+  <div class="demand-chart">
+    <div class="row"><span class="yr">2018</span>
+      <div class="bar" style="width:14%"></div><span class="val">76 TWh<span class="homes">&asymp; 7.2M homes</span><span class="homes">1.9% of U.S. electricity</span></span></div>
+    <div class="row"><span class="yr">2023</span>
+      <div class="bar" style="width:32%"></div><span class="val">176 TWh<span class="homes">&asymp; 16.8M homes</span><span class="homes">4.4% of U.S. electricity</span></span></div>
+    <div class="row"><span class="yr">2028</span>
+      <div class="bar range" style="width:59%; --lo:56%"></div><span class="val">325&ndash;580<span class="homes">&asymp; 31&ndash;55M homes</span><span class="homes">6.7&ndash;12% of U.S. electricity</span></span></div>
+    <div class="row"><span class="yr">2030</span>
+      <div class="bar range" style="width:100%; --lo:56%"></div><span class="val">up to 580<span class="homes">&asymp; up to 55M homes</span><span class="homes">up to &sim;12% of U.S. electricity</span></span></div>
   </div>
-  <p class="muted" style="margin-top:10px">
-    <a href="blog/index.html">All posts &rarr;</a></p>
+  <p class="muted" style="margin-top:8px">At the high end, that is the electricity of roughly <b>40% of all U.S. households</b> (~132 million) going to data centers by 2030.</p>
+  <p class="src">Source: Lawrence Berkeley National Laboratory,
+  <em>2024 U.S. Data Center Energy Usage Report</em> (Dec 2024). 2028&ndash;2030 range reflects low/high AI-adoption scenarios; electricity shares are the report&rsquo;s own figures.
+  Homes equivalence uses the EIA average U.S. household consumption of 10,500 kWh/year; household count per U.S. Census.</p>
 </section>
 <section>
   <h2>Find your state</h2>
@@ -1148,9 +1249,10 @@ def build_index():
              "query-input": "required name=search_term_string"}},
     ]
     return page(
-        "AI GridWatch — data center impact tools for communities",
-        "Free calculators, negotiation playbooks, and sourced health "
-        "evidence for communities facing data center development.",
+        "AI GridWatch — data center news, analysis and tools for communities",
+        "Daily data center news, sourced analysis, a moratorium tracker "
+        f"covering {n_mora} local actions, and free tools for communities "
+        "facing data center development.",
         body, f"{SITE_URL}/", jsonld=home_ld)
 
 
@@ -12141,135 +12243,6 @@ def build_officials():
             ("Officials", f"{SITE_URL}/officials")))
 
 
-def build_consulting():
-    body = f"""
-<header>
-  <div class="kicker">Consulting</div>
-  <h1>GridWatch Consulting</h1>
-  <p class="sub">Data-driven negotiation support for communities facing data
-  center development. We help you win better deals — and only get paid when
-  you do.</p>
-  <p><span style="display:inline-block;background:rgba(45,212,191,.14);
-  border:1px solid var(--teal);border-radius:999px;padding:6px 14px;
-  font-size:13px;color:var(--teal);font-weight:600">Success-fee model —
-  no results, no cost</span></p>
-</header>
-
-<section>
-  <h2>The problem</h2>
-  <div class="grid2">
-    <div class="card"><p>A hyperscaler shows up with a $2B proposal, a team
-    of lawyers, and promises of "500 construction jobs." Your planning
-    commission has 30 days to respond. The developer's hired consultants
-    produce a glossy economic impact study. Your community has… a Facebook
-    group and a lot of questions.</p></div>
-    <div class="note bad"><p><strong>The asymmetry is the problem.</strong>
-    The developer knows exactly what your land, water, and grid capacity are
-    worth to them. You don't. That's where we come in.</p></div>
-  </div>
-</section>
-
-<section>
-  <h2>What we deliver</h2>
-  <div class="grid3">
-    <div class="card"><h3>Impact analysis</h3>
-      <ul>
-        <li>Energy load modeling using real grid data (PJM, EIA-930)</li>
-        <li>Water consumption estimates by cooling type</li>
-        <li>Residential rate impact projections</li>
-        <li>Grid strain and reliability analysis</li>
-        <li>Counter-analysis to the developer's economic study</li>
-      </ul>
-    </div>
-    <div class="card"><h3>Deal structuring</h3>
-      <ul>
-        <li>Custom Community Benefits Agreement drafting</li>
-        <li>Data Dividend fund design (the Alaska model)</li>
-        <li>Tax-abatement analysis — what you're actually giving up</li>
-        <li>Clawback provisions and performance guarantees</li>
-        <li>Decommissioning bond sizing</li>
-      </ul>
-    </div>
-    <div class="card"><h3>Hearing support</h3>
-      <ul>
-        <li>Expert testimony at planning and zoning hearings</li>
-        <li>Data presentations for public comment periods</li>
-        <li>Talking points for elected officials</li>
-        <li>Media briefing materials</li>
-        <li>Post-approval compliance monitoring</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>How we get paid</h2>
-  <p>Communities shouldn't have to pay upfront to defend their own resources.
-  We use a <strong>success-fee model</strong> that aligns our incentives with
-  yours.</p>
-  <div class="grid3">
-    <div class="card"><h3>Free</h3><p class="muted"><strong>Initial
-    consultation</strong></p>
-      <ul>
-        <li>60-minute situation assessment</li>
-        <li>Preliminary impact estimate</li>
-        <li>Recommendation on whether a CBA is achievable</li>
-        <li>No obligation</li>
-      </ul>
-    </div>
-    <div class="card"><h3>Success fee</h3><p class="muted"><strong>Full
-    engagement</strong></p>
-      <ul>
-        <li>Small percentage of annual community benefits secured</li>
-        <li>Fee only applies to <strong>new</strong> benefits we help negotiate</li>
-        <li>Capped at a fair maximum — we're not the developer</li>
-        <li>If we don't improve the deal, you pay nothing</li>
-      </ul>
-    </div>
-    <div class="card"><h3>Flat fee</h3><p class="muted"><strong>Alternative
-    structure</strong></p>
-      <ul>
-        <li>For communities that prefer fixed pricing</li>
-        <li>Scoped to specific deliverables</li>
-        <li>Payment milestones tied to project phases</li>
-        <li>Available for grant-funded engagements</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Why communities trust us</h2>
-  <div class="stats">
-    <div class="stat"><b>345+</b><span>active opposition groups across 37 states</span></div>
-    <div class="stat"><b>$64B+</b><span>in blocked or delayed projects nationwide</span></div>
-    <div class="stat"><b>300+</b><span>bills filed in 30 states (2026)</span></div>
-    <div class="stat"><b>50+</b><span>CBA precedents tracked and analyzed</span></div>
-  </div>
-  <div class="note info"><p>We built <strong>AI GridWatch</strong> — the
-  open-source platform used by communities nationwide to understand
-  data-center impacts. The same data and models that power the free tool
-  power our consulting analysis, with deeper customization for your specific
-  situation.</p></div>
-</section>
-
-<section>
-  <h2>Request a free consultation</h2>
-  <p>Tell us about your situation. We'll respond within 48 hours with a
-  preliminary assessment and recommended next steps.</p>
-  <p><a class="btn" href="mailto:hello@aigridwatch.com?subject=Consulting%20request%20—%20AI%20GridWatch&body=Community%3A%20%0AState%3A%20%0ADeveloper%20%28if%20known%29%3A%20%0AFacility%20size%3A%20%0AStage%20of%20the%20process%3A%20%0ADescribe%20your%20situation%3A%20">Email us to start</a>
-  <a class="btn ghost" href="start-here.html">Or use the free toolkit &rarr;</a></p>
-</section>
-"""
-    return page(
-        "Consulting — AI GridWatch",
-        "Data-driven negotiation support for communities facing data-center development. Success-fee model.",
-        body, f"{SITE_URL}/consulting",
-        jsonld=_breadcrumb(
-            ("Home", SITE_URL),
-            ("Consulting", f"{SITE_URL}/consulting")))
-
-
 def build_case_studies():
     """Merge MORATORIUM_OUTCOMES + CBA_BENCHMARKS + COMPANY_CONCESSIONS."""
     cat_class = {
@@ -14598,7 +14571,6 @@ def main():
     (WEB / "assets" / "gridwatch_health_risks.pdf").write_bytes(
         build_health_pdf(HEALTH_RISKS, SOURCES))
 
-    (WEB / "index.html").write_text(build_index(), encoding="utf-8")
     (WEB / "health-risks.html").write_text(build_health(), encoding="utf-8")
     # Write the datasets BEFORE the pages that link them, so the download
     # cards can stat the files and show real sizes.
@@ -14618,6 +14590,10 @@ def main():
     _n_alerts = build_alerts_outputs()
     print(f"  [data] {_n_alerts} deadline alerts -> alerts.json + alerts.xml")
     _n_changes = build_moratorium_changes_feed()
+    # The home page's "what changed" block reads _MORA_CHANGES_LOG, which
+    # build_moratoriums() populates — so the front door renders last.
+    (WEB / "index.html").write_text(build_index(top_stories=top_stories),
+                                    encoding="utf-8")
     print(f"  [data] {_n_changes} logged moratorium changes -> changes.xml")
     (WEB / "moratoriums-methodology.html").write_text(
         build_moratorium_methodology(), encoding="utf-8")
@@ -14654,7 +14630,6 @@ def main():
     (WEB / "senate-races.html").write_text(build_senate_races(), encoding="utf-8")
     (WEB / "house-races.html").write_text(build_house_races(), encoding="utf-8")
     (WEB / "community-value.html").write_text(build_community_value(), encoding="utf-8")
-    (WEB / "consulting.html").write_text(build_consulting(), encoding="utf-8")
     (WEB / "case-studies.html").write_text(build_case_studies(), encoding="utf-8")
     (WEB / "hearing-questions.html").write_text(
         build_hearing_questions(), encoding="utf-8")
@@ -14725,7 +14700,7 @@ def main():
              "projects", "impact", "bills", "outlook",
              "learn", "puc", "executives", "about", "search", "dividend",
              "data-centers", "environment", "studies", "complaints",
-             "cba-clauses", "officials", "consulting", "case-studies",
+             "cba-clauses", "officials", "case-studies",
              "community-value", "open-data", "senate-races", "house-races",
              "hearing-questions", "opposition", "glossary", "tax-breaks", "siting",
              "companies/", "states/", "blog/", "news/", "videos", "map",

@@ -5481,7 +5481,7 @@ Virginia. Information asymmetry was the industry's advantage.
 *This is the first of our weekly roundups. Every Sunday we'll cover the
 week's most important data center stories, explain the underlying concepts,
 and point you to the tools you need. Know a story we should cover? Reach
-out through the [consulting tab](/app) or the newsletter signup.*
+out through the signup form in the site footer.*
 """,
     },
     # ── Negotiation patterns across all 17 operators ──
@@ -6110,8 +6110,8 @@ sometimes wins — a lawsuit like Gibraltar's.
 
 *Every Sunday we cover the week's most important data center stories,
 explain the underlying concepts, and point you to the tools you need. Know
-a story we should cover? Reach out through the [consulting tab](/app) or
-the newsletter signup.*
+a story we should cover? Reach out through the signup form in the site
+footer.*
 """,
     },
     {

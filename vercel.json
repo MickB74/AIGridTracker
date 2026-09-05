@@ -1184,6 +1184,11 @@
       "permanent": true
     },
     {
+      "source": "/consulting",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/la-crosse-wi",
       "destination": "/communities/la-crosse-wi",
       "permanent": true
