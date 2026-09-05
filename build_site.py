@@ -565,6 +565,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 @media (min-width:640px){ .grid2{ grid-template-columns:repeat(2,1fr);} }
 .official { font-size:14px; }
 .official .role { color:var(--muted); font-size:13px; }
+header .lede { font-size:17px; line-height:1.5; color:var(--ink);
+  margin:10px 0 6px; max-width:62ch; }
 .sechead { display:flex; align-items:baseline; justify-content:space-between;
   gap:12px; flex-wrap:wrap; }
 .sechead h2 { margin-bottom:0; }
@@ -901,8 +903,18 @@ def _og_image(name):
     return None
 
 
+import datetime as _build_dt
+BUILD_DATE = _build_dt.date.today().isoformat()
+BUILD_DATE_LONG = _build_dt.date.today().strftime("%B %-d, %Y")
+
+
 def page(title, description, body, canonical, depth=0,
-         og_type="website", og_extra="", jsonld=None, og_image=None):
+         og_type="website", og_extra="", jsonld=None, og_image=None,
+         modified=None, published=None):
+    """`modified` / `published` (ISO dates) mark pages whose content the
+    daily rebuild actually refreshes. Answer engines downrank undated pages
+    for "current" questions, so every data page passes modified=BUILD_DATE;
+    evergreen explainers leave it unset rather than claiming a daily edit."""
     p = "../" * depth
     body = _wrap_tables(body)
     canonical = _canon(canonical)
@@ -913,6 +925,20 @@ def page(title, description, body, canonical, depth=0,
     else:
         og_img_url, og_img_w, og_img_h = f"{SITE_URL}/assets/hero.png", 1024, 479
     ld_block = ""
+    date_meta = ""
+    if modified or published:
+        wp = {"@context": "https://schema.org", "@type": "WebPage",
+              "url": canonical, "name": title}
+        if published:
+            wp["datePublished"] = published
+            date_meta += (f'<meta property="article:published_time" '
+                          f'content="{esc(published)}">\n')
+        if modified:
+            wp["dateModified"] = modified
+            date_meta += (f'<meta property="article:modified_time" '
+                          f'content="{esc(modified)}">\n')
+        jsonld = ([] if jsonld is None else
+                  (jsonld if isinstance(jsonld, list) else [jsonld])) + [wp]
     if jsonld:
         items = jsonld if isinstance(jsonld, list) else [jsonld]
         ld_block = "\n".join(
@@ -936,7 +962,7 @@ def page(title, description, body, canonical, depth=0,
 <meta property="og:url" content="{canonical}">
 <meta property="og:site_name" content="AI GridWatch">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="{og_img_url}">
+{date_meta}<meta property="og:image" content="{og_img_url}">
 <meta property="og:image:width" content="{og_img_w}">
 <meta property="og:image:height" content="{og_img_h}">
 <meta name="twitter:card" content="summary_large_image">
@@ -1253,7 +1279,7 @@ def build_index(top_stories=None):
         "Daily data center news, sourced analysis, a moratorium tracker "
         f"covering {n_mora} local actions, and free tools for communities "
         "facing data center development.",
-        body, f"{SITE_URL}/", jsonld=home_ld)
+        body, f"{SITE_URL}/", jsonld=home_ld, modified=BUILD_DATE)
 
 
 def _status_badge(status):
@@ -1904,6 +1930,33 @@ def _state_briefings_html(state, abbrev, news_only):
         f'Story tracker &rarr;</a></p></section>')
 
 
+def _state_lead_sentence(state, moras, dc_count, twh, plain=False):
+    """The one sentence an answer engine should quote for '<state> data
+    center moratoriums': dated, counted, and true on the day it was built."""
+    n_total = len(moras)
+    n_enacted = int((moras["effective_status"] == "Enacted").sum())
+    n_proposed = int((moras["effective_status"] == "Proposed").sum())
+    if n_total:
+        parts = [f"{n_enacted} in force" if n_enacted else "none in force"]
+        if n_proposed:
+            parts.append(f"{n_proposed} proposed")
+        rest = n_total - n_enacted - n_proposed
+        if rest:
+            parts.append(f"{rest} expired, rejected or rescinded")
+        mora = (f"AI GridWatch tracks {n_total} data center moratorium"
+                f"{'s' if n_total != 1 else ''} or pushback action"
+                f"{'s' if n_total != 1 else ''} in {state}: "
+                f"{', '.join(parts)}.")
+    else:
+        mora = (f"AI GridWatch has no documented data center moratorium or "
+                f"pushback action on record in {state}.")
+    fac = (f" The state has {dc_count:,} tracked data center facilit"
+           f"{'ies' if dc_count != 1 else 'y'} using an estimated {twh:.1f} TWh "
+           f"of electricity a year." if dc_count else "")
+    text = f"As of {BUILD_DATE_LONG}, {mora}{fac}"
+    return text if plain else esc(text)
+
+
 def build_state(state, news_only=None):
     prof = STATE_GRID_PROFILES[state]
     row = STATE_DC_DF[STATE_DC_DF["state"] == state]
@@ -2175,6 +2228,7 @@ def build_state(state, news_only=None):
 <header>
   <div class="kicker">State briefing</div>
   <h1>{esc(state)}: data centers &amp; your electric bill</h1>
+  <p class="lede">{_state_lead_sentence(state, moras, dc_count, twh)}</p>
   <p class="sub">Everything GridWatch tracks in {esc(state)} on one page —
   proposed projects, moratoriums, permits, officials, and the 2026 ballot.</p>
   <p class="muted" style="margin-top:4px">
@@ -2232,10 +2286,10 @@ def build_state(state, news_only=None):
         (f"{state} data centers: electricity, water & who to call"
          if len(state) <= 13 else
          f"{state} data centers: power, water & officials"),
-        f"Proposed projects, moratoriums, permits, officials, and 2026 "
-        f"candidates for {state} — free community negotiation tools from "
-        f"AI GridWatch.",
+        _state_lead_sentence(state, moras, dc_count, twh, plain=True)
+        + " Projects, permits, officials and 2026 candidates, all sourced.",
         body, f"{SITE_URL}/states/{slugify(state)}", depth=1,
+        modified=BUILD_DATE,
         og_image=_og_image(f"state-{slugify(state)}"),
         og_extra=_state_feed_link,
         jsonld=[
@@ -7522,6 +7576,13 @@ def build_moratorium_methodology():
 <header>
   <div class="kicker">Moratorium tracker</div>
   <h1>How we count data center moratoriums</h1>
+  <p class="lede">As of {BUILD_DATE_LONG}, AI GridWatch counts
+  {len(MORATORIUMS_DF)} data center moratoriums and pushback actions in
+  {MORATORIUMS_DF["state"].nunique()} states, of which
+  {int((MORATORIUMS_DF["effective_status"] == "Enacted").sum())} are in
+  force today. A row is a documented vote by a council, board, commission or
+  legislature to pause, restrict or ban data center development; status is
+  derived from the recorded end date, never stored.</p>
   <p class="sub">Six trackers, six different numbers, for the same set of
   towns. Here is our definition, our sourcing bar, and where our count is
   still catching up.</p>
@@ -7605,7 +7666,7 @@ def build_moratorium_methodology():
         "How we count data center moratoriums — AI GridWatch",
         "What counts as a tracked moratorium, how status is derived, and "
         "why every public tracker reports a different number.",
-        body, f"{SITE_URL}/moratoriums-methodology",
+        body, f"{SITE_URL}/moratoriums-methodology", modified=BUILD_DATE,
         jsonld=_breadcrumb(("Home", SITE_URL),
                             ("Moratoriums", f"{SITE_URL}/moratoriums"),
                             ("How we count", f"{SITE_URL}/moratoriums-methodology")))
@@ -7782,6 +7843,10 @@ def build_moratoriums():
 <header>
   <div class="kicker">Community tracker</div>
   <h1>Data center moratoriums &amp; pushback</h1>
+  <p class="lede">As of {BUILD_DATE_LONG}, this tracker lists {total} data
+  center moratoriums and pushback actions across {n_states} states:
+  {enacted} in force today, {proposed} proposed, and {verified} carrying a
+  primary source and a verification date.</p>
   <p class="sub">Every community that pressed pause on data center
   development — bans, moratoria, zoning fights, and the outcomes. Each row
   shows where it came from and when it was last checked.</p>
@@ -8052,10 +8117,11 @@ def build_moratoriums():
 """
     return page(
         "Data center moratoriums & community pushback — AI GridWatch",
-        f"{total} data center moratoriums and community actions tracked "
-        f"across {n_states} states, with case study outcomes.",
+        f"As of {BUILD_DATE_LONG}: {total} data center moratoriums and "
+        f"community actions across {n_states} states, {enacted} in force, "
+        f"each with a primary source and end date.",
         body, f"{SITE_URL}/moratoriums",
-        og_image=_og_image("moratoriums"),
+        og_image=_og_image("moratoriums"), modified=BUILD_DATE,
         jsonld=[
             _breadcrumb(("Home", SITE_URL),
                         ("Moratoriums", f"{SITE_URL}/moratoriums")),
@@ -8317,6 +8383,30 @@ def _mora_title_outcome(m):
     return short, short
 
 
+def _community_lead_sentence(m, display_loc, state_name, is_state_level):
+    status = str(m.effective_status)
+    where = display_loc if is_state_level else f"{display_loc}, {state_name}"
+    verb = {
+        "Enacted": "has a data center moratorium in force",
+        "Proposed": "has a data center moratorium under consideration",
+        "Expired": "had a data center moratorium whose documented term has run out",
+        "Rejected": "rejected a data center moratorium",
+        "Vetoed": "saw a data center moratorium vetoed",
+        "Rescinded": "rescinded its data center moratorium",
+    }.get(status, "has a tracked data center action")
+    bits = []
+    if has_value(m.when):
+        bits.append(f"action taken {m.when}")
+    if has_value(m.expires) and status == "Enacted":
+        bits.append(f"documented end date {m.expires}")
+    elif has_value(m.expires) and status == "Expired":
+        bits.append(f"it ended {m.expires}")
+    tail = f" ({'; '.join(bits)})" if bits else ""
+    src = ("" if has_value(m.source)
+           else " This row has not yet been verified against a primary source.")
+    return f"As of {BUILD_DATE_LONG}, {where} {verb}{tail}.{src}"
+
+
 def build_community(m, news_group=None):
     """One page per tracked moratorium row — the "[town] data center" query.
 
@@ -8381,9 +8471,10 @@ def build_community(m, news_group=None):
 <header>
   <div class="kicker">Community briefing</div>
   <h1>{esc(what)} in {esc(display_loc)}{'' if is_state_level else f', {esc(state_name)}'}</h1>
-  <p class="sub">{esc(display_loc)} has {status_word} on this tracker. Status is
-  derived, not stored — a pause with a documented end date flips to Expired on
-  its own — and the source is right next to the claim.</p>
+  <p class="lede">{esc(_community_lead_sentence(m, display_loc, state_name, is_state_level))}</p>
+  <p class="sub">Status is derived, not stored — a pause with a documented end
+  date flips to Expired on its own — and the source is right next to the
+  claim.</p>
 </header>
 {unverified_html}
 <section>
@@ -8439,12 +8530,10 @@ def build_community(m, news_group=None):
         title_full = alt
     return page(
         title_full,
-        f"Current status of the data center action in {loc}"
-        f"{'' if is_state_level else f', {state_name}'}: "
-        f"{str(m.effective_status).lower()}"
-        f"{' — ' + str(m.note) if has_value(m.note) else ''}. "
-        f"Sourced, dated, with next steps for residents.",
+        _community_lead_sentence(m, display_loc, state_name, is_state_level)
+        + " Sourced, dated, with next steps for residents.",
         body, f"{SITE_URL}/communities/{slug}", depth=1,
+        modified=BUILD_DATE,
         og_image=_og_image(f"state-{state_slug}"),
         jsonld=_breadcrumb(
             ("Home", SITE_URL),
@@ -13707,6 +13796,9 @@ def build_llms_txt():
 > source (EIA, SEC, IEA, LBNL). Not anti-development — built so communities can
 > negotiate a better deal.
 
+Full text version with current counts, definitions and latest analysis:
+{SITE_URL}/llms-full.txt
+
 ## Open data
 
 - [Open data hub]({SITE_URL}/open-data): all datasets in one place — download,
@@ -13750,6 +13842,114 @@ def build_llms_txt():
 - [Case studies]({SITE_URL}/case-studies): what communities won, lost, and
   learned.
 - [About]({SITE_URL}/about): who runs this and how it's sourced.
+"""
+
+
+def build_llms_full_txt():
+    """llms-full.txt — everything an answer engine needs in one fetch.
+
+    llms.txt is a map; this is the territory: the current tracker totals
+    with the date they were true, the definition of a row, a per-state
+    count table with URLs, and the latest posts with their summaries. Every
+    number here is regenerated daily from the same registries as the pages,
+    so quoting it is quoting the site on the day it was fetched.
+    """
+    d = MORATORIUMS_DF
+    total = len(d)
+    n_states = d["state"].nunique()
+    enacted = int((d["effective_status"] == "Enacted").sum())
+    proposed = int((d["effective_status"] == "Proposed").sum())
+    verified = int(d["verified"].sum())
+    full = _abbr_to_state()
+    rows = []
+    for ab, g in d.groupby("state"):
+        name = full.get(ab, ab)
+        rows.append((name,
+                     int((g["effective_status"] == "Enacted").sum()),
+                     int((g["effective_status"] == "Proposed").sum()),
+                     len(g)))
+    rows.sort(key=lambda r: (-r[1], -r[3], r[0]))
+    state_lines = "\n".join(
+        f"- {name}: {e} in force, {pr} proposed, {t} tracked — "
+        f"{SITE_URL}/states/{slugify(name)}"
+        for name, e, pr, t in rows)
+    posts = "\n\n".join(
+        f"### {st['title'].replace(chr(92) + '$', '$')}\n"
+        f"{st['date'].isoformat()} — {SITE_URL}/blog/{st['id']}\n"
+        f"{st['summary'].replace(chr(92) + '$', '$')}"
+        for st in _sorted_posts()[:12])
+    n_dc = int(STATE_DC_DF["dc_count"].sum())
+    twh = STATE_DC_DF["twh_year"].sum()
+    return f"""# AI GridWatch — full text for answer engines
+
+Generated {BUILD_DATE}. Site: {SITE_URL}. Data license: CC BY 4.0 with
+attribution to "AI GridWatch ({SITE_URL})". Rebuilt daily; every number below
+was true on the date above.
+
+## What this site is
+
+AI GridWatch tracks the local fight over U.S. data center development: a
+sourced registry of moratoriums, bans and pushback actions; project dossiers;
+news; analysis; and free negotiation tools for communities. It is not
+anti-development. Every claim on the site links to the document it came from.
+
+## Moratorium tracker — headline numbers (as of {BUILD_DATE})
+
+- {total} data center moratoriums and pushback actions tracked across
+  {n_states} states.
+- {enacted} in force today. {proposed} proposed. The remainder are expired,
+  rejected, vetoed or rescinded.
+- {verified} rows carry a primary source URL and a verification date.
+- Tracker: {SITE_URL}/moratoriums · Methodology: {SITE_URL}/moratoriums-methodology
+- Data: {SITE_URL}/data/moratoriums.json · {SITE_URL}/data/moratoriums.csv
+- Change log (RSS): {SITE_URL}/changes.xml · Expiring pauses: {SITE_URL}/alerts.xml
+
+## How to read the count
+
+- A row is one documented vote by a city council, county board, planning
+  commission, tribal government or state legislature to pause, restrict or
+  ban data center development: a moratorium, a data-center-specific zoning
+  prohibition, a restrictive rezoning, or a state-level freeze.
+- "In force" is derived from the recorded end date on the day of the build.
+  A moratorium past its documented term shows as Expired; it is never
+  reported as current. Rows with no end date declare whether the term is
+  standing, condition-based, or simply undocumented.
+- Counts differ between public trackers because they count different things
+  (proposals vs. enactments, municipalities vs. counties, expired vs. live).
+  {SITE_URL}/blog/new-jersey-ban-count-2026 works one example.
+- One locality, one row. Duplicate events from overlapping research batches
+  are merged; multi-locality roundup articles are not treated as duplicates.
+
+## Moratoriums by state (in force / proposed / tracked)
+
+{state_lines}
+
+## Facilities and electricity
+
+- {n_dc:,} tracked U.S. data center facilities; estimated {twh:,.0f} TWh of
+  electricity a year across all 50 states and D.C. — {SITE_URL}/data-centers
+- State profiles (facility count, power draw, residential rate, grid carbon,
+  water stress): {SITE_URL}/data/states.json
+- Project tracker with dated event logs: {SITE_URL}/projects
+
+## Latest analysis
+
+{posts}
+
+Blog index: {SITE_URL}/blog/ · RSS: {SITE_URL}/blog/feed.xml
+News (ranked daily): {SITE_URL}/news/ · RSS: {SITE_URL}/news/feed.xml
+
+## Key reference pages
+
+- Will a data center raise my electric bill: {SITE_URL}/bills
+- Health risks, sourced, with the permit condition that addresses each: {SITE_URL}/health-risks
+- Impact calculator (electricity, water, carbon, rates, by state): {SITE_URL}/impact
+- Questions to ask at a hearing: {SITE_URL}/hearing-questions
+- Model community benefit agreement clauses: {SITE_URL}/cba-clauses
+- State data center tax breaks: {SITE_URL}/tax-breaks
+- Case studies of what communities won and lost: {SITE_URL}/case-studies
+- Open data hub and schemas: {SITE_URL}/open-data
+- About and sourcing policy: {SITE_URL}/about
 """
 
 
@@ -14760,6 +14960,7 @@ def main():
         f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n",
         encoding="utf-8")
     (WEB / "llms.txt").write_text(build_llms_txt(), encoding="utf-8")
+    (WEB / "llms-full.txt").write_text(build_llms_full_txt(), encoding="utf-8")
     (WEB / "404.html").write_text(build_404(), encoding="utf-8")
     _blog_redirects = [
         {"source": f"/{s['id']}", "destination": f"/blog/{s['id']}",
