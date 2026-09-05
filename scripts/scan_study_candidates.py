@@ -51,7 +51,7 @@ _ABBREV_TO_NAME = dict(zip(STATE_PUCS_DF["abbrev"], STATE_PUCS_DF["state"]))
 
 ROOT = Path(__file__).resolve().parent.parent
 QUEUE_PATH = ROOT / "data" / "study_candidates.json"
-STUDIES_SRC = ROOT / "src" / "ui" / "state_detail.py"
+STUDIES_SRC = ROOT / "src" / "constants.py"
 
 SEARCHES = [
     "data center legislative study state",
@@ -246,7 +246,7 @@ def main():
     payload["candidates"] = existing
     payload.setdefault("_readme", (
         "Review queue for the state-studies library (STATE_STUDIES in "
-        "src/ui/state_detail.py). Entries are UNVERIFIED leads from a news "
+        "src/constants.py). Entries are UNVERIFIED leads from a news "
         "scan and are never published. `state_tracked: true` means the state "
         "is already in the library, so this is probably a NEWER EDITION worth "
         "checking, not a duplicate. To promote one: read the actual report, "

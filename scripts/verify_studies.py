@@ -2,7 +2,7 @@
 """Validate the state-studies library and print a review worklist.
 
 The studies page (`web/studies.html`, built from STATE_STUDIES in
-src/ui/state_detail.py) has a quieter failure mode than the moratorium
+src/constants.py) has a quieter failure mode than the moratorium
 tracker: the *report* it summarises does not go stale — a JLARC or CRC report
 is still that report next year. Two things do go wrong on their own, and this
 script is what notices them:
@@ -45,7 +45,7 @@ from src.constants import SOURCES                              # noqa: E402
 from scripts._linkcheck import check_many, classify           # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-STUDIES_SRC = ROOT / "src" / "ui" / "state_detail.py"
+STUDIES_SRC = ROOT / "src" / "constants.py"
 
 # Medium-churn data (new editions arrive over quarters, not weeks). Past this,
 # "verified" is a claim about a report that may have been superseded.
@@ -56,11 +56,11 @@ SEVERITY = ["dead-link", "missing-source", "missing-date", "stale-as-of",
 
 
 def load_studies():
-    """STATE_STUDIES as a plain dict, without importing streamlit.
+    """STATE_STUDIES as a plain dict, read as a literal.
 
-    state_detail.py imports streamlit at module load, so it can't be imported
-    in the requirements-build.txt CI env — read the literal instead, the same
-    trick build_site.py::_load_ast_literal uses.
+    Parsing the source with ast skips importing src/constants.py (a 10k-line
+    module that builds pandas frames at import) — the same trick
+    build_site.py::_load_ast_literal uses.
     """
     tree = ast.parse(STUDIES_SRC.read_text(encoding="utf-8"))
     for node in ast.walk(tree):
@@ -68,7 +68,7 @@ def load_studies():
             for target in node.targets:
                 if getattr(target, "id", None) == "STATE_STUDIES":
                     return ast.literal_eval(node.value)
-    raise SystemExit("STATE_STUDIES not found in src/ui/state_detail.py")
+    raise SystemExit("STATE_STUDIES not found in src/constants.py")
 
 
 def _days_since(iso):
