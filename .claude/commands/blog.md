@@ -17,6 +17,50 @@ in step 3, stop and say so. A thin post on a quiet news day is worse than a
 gap — this site's whole claim is that every number links to the document it
 came from.
 
+## 0. Preflight — is there already a post today?
+
+Run this first, before any research. It is cheap, and it catches the ways this
+job burns a full research cycle or publishes the same thing twice.
+
+```bash
+git rev-parse --abbrev-ref HEAD
+git status --porcelain -- src/ web/
+git fetch -q origin && git rev-list --left-right --count origin/master...HEAD
+python3 - <<'PY'
+import datetime as dt, sys
+sys.path.insert(0, ".")
+from src.blog_content import BLOG_STORIES
+newest = max(BLOG_STORIES, key=lambda s: s["date"])
+print(f'newest post: {newest["date"]}  {newest["id"]}')
+if newest["date"] == dt.date.today():
+    print("STOP: a post is already dated today")
+    sys.exit(1)
+print("ok: nothing dated today")
+PY
+```
+
+**Stop and report — do not write a post — if any of these holds:**
+
+- **Not on `master`, or `git status` shows uncommitted changes to `src/` or
+  `web/`.** Someone is mid-edit. Step 5 runs `git add -A ... web/ data/`,
+  which would sweep their unfinished work into a commit titled `post: …`.
+- **A post is already dated today.** Two runs of this job fired together on
+  2026-09-02 and independently researched and wrote the same story. If a post
+  is already dated today, your job is to read it, verify its claims, and
+  report — not to publish a second one on the same day.
+- **A post dated today exists but is not on `origin`.** That is the
+  2026-09-02 failure exactly: the run that wrote the post committed it and
+  never pushed, so nothing was live and the day looked done from the inside.
+  Finish *that* publish — rebuild, verify, push — instead of starting a new
+  post.
+
+`git rev-list --left-right --count origin/master...HEAD` prints
+`<behind> <ahead>`. Behind > 0 only means CI has pushed since your last pull;
+step 5's `git pull --rebase` handles that and is not a reason to stop.
+
+If a post dated today exists and is already on `origin`, today is done. Say so
+and stop.
+
 ## 1. Pick a topic
 
 Look at what actually moved, in this order of preference:
