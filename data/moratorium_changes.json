@@ -61,5 +61,12 @@
     "locality": "Fulton County, IN",
     "kind": "shortened",
     "detail": "Now runs to 2027-03-02"
+  },
+  {
+    "date": "2026-09-04",
+    "id": "birmingham-al",
+    "locality": "Birmingham, AL",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
   }
 ]

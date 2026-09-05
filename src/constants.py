@@ -7911,7 +7911,7 @@ STORY_LOCALITY_QUERIES = {
     },
     ("Marshall County", "IN"): {
         "query": "\"data center\" \"Marshall County\" Indiana",
-        "gate": r"""(?i)\bMarshall County\b.*\b(Indiana|Plymouth|Bourbon|Argos|Bremen)\b|(?i)\b(Indiana|Plymouth|Bourbon|Argos|Bremen)\b.*\bMarshall County\b""",
+        "gate": r"""(?i)\bMarshall County\b.*\b(Indiana|Plymouth|Bourbon|Argos|Bremen)\b|\b(Indiana|Plymouth|Bourbon|Argos|Bremen)\b.*\bMarshall County\b""",
     },
     ("Cass County", "IN"): {
         "query": "\"data center\" \"Cass County\" (Indiana OR Logansport)",
@@ -7943,11 +7943,11 @@ STORY_LOCALITY_QUERIES = {
     },
     ("New Albany", "IN"): {
         "query": "\"New Albany\" \"data center\" (Indiana OR Floyd OR Gahan OR Jeffersonville OR \"River Ridge\") when:180d",
-        "gate": r"""(?i)\bnew albany\b.*(indiana|floyd county|gahan|jeffersonville|river ridge|clark county|southern indiana)|(?i)(indiana|floyd county|gahan|jeffersonville|river ridge|clark county|southern indiana).*\bnew albany\b""",
+        "gate": r"""(?i)\bnew albany\b.*(indiana|floyd county|gahan|jeffersonville|river ridge|clark county|southern indiana)|(indiana|floyd county|gahan|jeffersonville|river ridge|clark county|southern indiana).*\bnew albany\b""",
     },
     ("Howard County", "IN"): {
         "query": "\"Howard County\" \"data center\" (Indiana OR Kokomo OR commissioners OR Wilson OR Bray OR Dodd OR Lipinski) when:180d",
-        "gate": r"""(?i)\bhoward county\b.*(indiana|kokomo|commissioner|hoosier)|(?i)(indiana|kokomo|commissioner|hoosier).*\bhoward county\b""",
+        "gate": r"""(?i)\bhoward county\b.*(indiana|kokomo|commissioner|hoosier)|(indiana|kokomo|commissioner|hoosier).*\bhoward county\b""",
     },
 }
 

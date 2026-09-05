@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-09-02",
+  "generated": "2026-09-04",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 391,
   "states": 39,
-  "enacted": 323,
+  "enacted": 322,
   "proposed": 35,
   "official_sourced": 29,
   "by_state": {
@@ -171,7 +171,7 @@
     },
     "AL": {
       "total": 8,
-      "enacted": 8,
+      "enacted": 7,
       "proposed": 0
     },
     "PA": {
@@ -208,14 +208,13 @@
   "expiring_within_days": {
     "30": [
       "augusta-ga",
-      "birmingham-al",
-      "wixom-mi"
+      "wixom-mi",
+      "front-royal-va"
     ],
     "60": [
       "bangor-me",
       "augusta-ga",
       "vienna-township-trumbull-co-oh",
-      "birmingham-al",
       "wixom-mi",
       "lexington-fayette-county-ky",
       "white-county-in",
@@ -235,8 +234,8 @@
       "vienna-township-trumbull-co-oh",
       "charlotte-nc",
       "lavon-tx",
+      "johnson-city-tn",
       "springfield-mo",
-      "birmingham-al",
       "minneapolis-mn",
       "wixom-mi",
       "lexington-fayette-county-ky",
@@ -247,6 +246,8 @@
       "skagit-county-wa",
       "front-royal-va",
       "hillsboro-or",
+      "boulder-county-co",
+      "braceville-township-oh",
       "indio-ca",
       "palm-springs-ca"
     ]
