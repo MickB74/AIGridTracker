@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 5091,
+  "count": 5109,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -43071,7 +43071,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-31",
-      "last_seen": "2026-09-04"
+      "last_seen": "2026-09-05"
     },
     {
       "title": "A Data Center Promises Jobs in This Black Town, but Residents Aren’t Convinced",
@@ -43797,7 +43797,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-29",
-      "last_seen": "2026-09-01"
+      "last_seen": "2026-09-05"
     },
     {
       "title": "Sedgwick Co. considering extending data center moratorium",
@@ -47207,7 +47207,7 @@
       "locality": "Clinton",
       "state": "IA",
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-04"
+      "last_seen": "2026-09-05"
     },
     {
       "title": "What would it take to actually stop the data centers?",
@@ -56007,6 +56007,204 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-06-01",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "‘That’s our right’; Ralls County residents hold meeting, demand transparency on possible data center",
+      "outlet": "WCAX",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPM0FqR3RBd3NCbmpOTTFQZURjaExnMVZXZzBlOTRpOE9Lb295NVFUYmk4YkxJOERQTXAtb196Yk11eElrbUNKaDQ1ejlDMXEwSTRXTnpjOHR4MG1lRnBhemRDLUFlREs3Zk9VT0FrejBJdlJOR2RJZUt1OW5KZGZCRkRJQVZ1TTB1SThCWmYtOFMzYjJTNWJrMDlaVm5XckU1OUR3SEtuR1pWaFdsc3d0MlViaGctc3lIVFp2S1NxYmxWVmxRR2pMSi1iVQ?oc=5",
+      "published": "Thu, 03 Sep 2026 03:51:00 GMT",
+      "published_iso": "2026-09-03T03:51:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "Wilmington sued over 'emergency' rezoning for data center",
+      "outlet": "fox10tv.com",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPeVJpa2kwaXhnSm1nZkN0eUc4dW1yaTJJVEFYZ1VPUE5yenhYZzhaYVRwbERVLUFlbUhYX2t1clVpNWFOajRFczJqTmZQYzFCblNHRmI4TE5qOW1xVXJiTUh0LUg1clNBUHQyNW9Ha0k5S1BSaExGNHZBZGlrSTJhN2VDRGNLYkZPMzVWR3R3cVF1QkNWc2dEYQ?oc=5",
+      "published": "Fri, 04 Sep 2026 20:40:07 GMT",
+      "published_iso": "2026-09-04T20:40:07+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "Wilmington sued over 'emergency' rezoning for data center",
+      "outlet": "WDBJ7",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOVHFlTEotcXNOR2ZMdk51RVQtd293bFI2cldZSnRuRV9SUW5NSm9aS1lNb3ZxRGRCaW9kVHpCbG1VMi14UTBxRkRtemhMVl90ZzZzY1FxQVI5djFzdWhZTVdtT0VyME4xSG1tbmI5RzJLUGJnSzZ5dW85aEc3QWRpZnc5bThha2pfRnlFN1V3R2xYWEZwYlE?oc=5",
+      "published": "Fri, 04 Sep 2026 10:53:25 GMT",
+      "published_iso": "2026-09-04T10:53:25+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "California Plan Cracking Down on Data Centers Heads to Newsom",
+      "outlet": "Bloomberg Government News",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPekxOUmZGdXowci1qcTZRZFQwQTVxUDVSYUFlNzFYOGMxQjF2RlJ3MURyRWRPOTd3RG1EZGpHZWRTMDJ1LVJWYXd6OWROdm9Ha1BnNTRncllvRTBsQ0J3bVJNRlYydFZJNDA5RnNtRzJHNklyblo5bGF0SUZmc2NDUG5ocGxYMXJzbWxFSUZtTk5vS3ptQVlBVXVUWWFTNUtDS2pOWDlsVm9RYkJTdVE?oc=5",
+      "published": "Tue, 01 Sep 2026 18:48:00 GMT",
+      "published_iso": "2026-09-01T18:48:00+00:00",
+      "locality": null,
+      "state": "CA",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "Trump blasts data center critics: 'Backwards and poor'",
+      "outlet": "Mashable SEA",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQTE9TQnZjOTRRb3kzcjQ0V2lIVU92US1qcXFLSUlWNE1OZVZ3dzEyblFZZlpIZHpQbVhPWTJwMjZDTjFoNTJZSE90NnFTUlNuSHByMHdmbUE5aDZKV1huSURoUkdkZWE2U0c1VzV6YTRUTlZwLThWazdiNEpnWjA3MkRMWDdLc0FHMXpuQVF1ZUUtcl9JMVV1NUJxd3I?oc=5",
+      "published": "Mon, 31 Aug 2026 18:57:25 GMT",
+      "published_iso": "2026-08-31T18:57:25+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "New Brunswick to Review Data Center Development in Master Plan",
+      "outlet": "TAPinto",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxObXY3UHd4ZXB5MDE2WmlHSXVxanNxNk1GU21wc0dsRlZCNGc3d0lSOXBTWDhoa3gzOU9zdXUySE40SWp0aURiekNHSnd6dnp3eWtGUGNaTTJzdnEzejRyRWl4Tm9OX1A0YW9wWnU0aTRVRDZZTUlBWXp2NmVuTjB3SlJjTlQ3Vi1nTVQ4aDhoZkNfVy1JUE1NZ25YSDFYMTdMdHlQNWU1cVdwTVM1VlJ2VUdfZG5WQzg1RXRWWk9ZWElpdUN3Ul9penZUMlA4c21x?oc=5",
+      "published": "Wed, 02 Sep 2026 20:06:10 GMT",
+      "published_iso": "2026-09-02T20:06:10+00:00",
+      "locality": "Brunswick",
+      "state": "ME",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "Trump Attacks People Who Just Don’t Want to Live Near a Data Center",
+      "outlet": "The New Republic",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNVUduNHQ1Y1lJUUpWTjdJTkY0M0F1TFJHN3lORUdrdVpCeTVqeWI4MXdKWVpYbWpGN2ZKdVR4Vk1xWUYwNFVDUTJRSzZfRXIzYTAzUkxUM0Z3SUFiU1BfWTFaMHhfUk81aVhnMTBUODgyMmt3VVNrMUtEUklrMjVrLWR6RzQ4ZXRaY01SVktuVXN4dmxVNllmSWQzZw?oc=5",
+      "published": "Mon, 31 Aug 2026 16:20:09 GMT",
+      "published_iso": "2026-08-31T16:20:09+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "Insider NJ's 2026 Labor Power List",
+      "outlet": "Insider NJ",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8xRzVlYUhnZlFqa3BYU1Q5ODNBZ3FMblNPTDQxR3BNb1V1Yml3cEgtVndQbVRHb2tPRHBhNm01dWo3WGs2M1BNVDNHWWdJNG9lZWJ0Xy0tU01WX19YcTRFdm5PTjd3ZTF6a2M4bWhLOU9tVVdtcUZDVWdZSm55VEE?oc=5",
+      "published": "Thu, 03 Sep 2026 23:54:00 GMT",
+      "published_iso": "2026-09-03T23:54:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "Industrial Report: Data Center Backlash Tests Development Boom",
+      "outlet": "CommercialSearch",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPWXBBeUZrbERwQnNrSUo5N1lRQjVkdHdndXF3Ynd4SUdhbHBDVmFveTZUYzdyZXNrQWJGYWZjUzlUR1Q5UUZRRFFkMVVRQ2pWUVBhaDVLMHpudkE3cnp6V2VYbEtOR3hJaG5tYUdvSEVuc1hzS21iVEJuTV8zams2RzhmcFVDemk3d0lQMURMeGpCMXFFZlhNcThnakhxOUMwOUE?oc=5",
+      "published": "Fri, 04 Sep 2026 13:36:30 GMT",
+      "published_iso": "2026-09-04T13:36:30+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "New Mexico sues US, border wall contractors over unlawful water use and repeated unpermitted drilling",
+      "outlet": "The Cool Down",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbHNpMlJ4QUFBb3FwSFhvcnVyYk03MmQ2SjNiblVSaHRkVXpRai1pWVNiX0V4ODFRdXVFcm9jaUVqZFZiNXM2UkVHVEZ2WHd0LWZaTDBKN2N0Z1ZNd2JTQjZTT2VsTnN0cUhfNFpTRWZldzcyQWNUMkQzSFdmcWNPbjVDS21qRW5JaTROMlJkZWk2UjNxeEw1eQ?oc=5",
+      "published": "Tue, 01 Sep 2026 18:45:00 GMT",
+      "published_iso": "2026-09-01T18:45:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "Data center market faces all-time low vacancies despite record-breaking construction",
+      "outlet": "Construction Dive",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNSWtOUU11X0JqYXptRW5DeVFCV1NsUENPcnZVUzk4M09HUmh6cHJ4djdoY3FrU00wQlZ3ak9aa1pQaGRuWnExQkE2bTVqVlJRbDlNdHMwMU9LY01qSXkzTHZlLWtHSWt1UWNsa0xab2Ficld6TkR4MDFHREZkeDZYSHlSZWhmdVg1M0gzSUJ0ZExaTnptUktVazl1Y3F5bXM?oc=5",
+      "published": "Wed, 02 Sep 2026 13:44:02 GMT",
+      "published_iso": "2026-09-02T13:44:02+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "WSAZ Investigates | Residents react to new data center announcement",
+      "outlet": "WSAZ",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNSXFkZmtBUlRoczVHVVpUdl84Q29JTmFsOTk5LVNYTXJMY21NVXhzZDhnU1U1dk43RGo4Q0VrTmFMMk1MaWUycXhRS21Ua3EyRFRMekdMeGhuekxLRGhSeXJESGppbW5QblkzTUx6aXpmSDI0UzdpeWdZVHAydGREQmJ5OWx2RG9pOTNHM0ZXLWVWdHNzX1RiWFVXbUtpNERyNFk4?oc=5",
+      "published": "Fri, 04 Sep 2026 22:05:00 GMT",
+      "published_iso": "2026-09-04T22:05:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "Walker County committee weighs rules for data center growth",
+      "outlet": "The Rome News-Tribune",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOanpBWW92Tk96YmpHQ1hmbkJUTzhpZ253cURyQXlPTFBrWGprb3pYWlFPWW1MZVdka2MwVlNETFpOdjlqS0V3RnJHMjBBZXd5MGEyT2JFYlJzNXRFYXQzcFc5U2R0WU1nRkRPMGRIZFF2LUszRTVmSUpKbVF0dGdFV2RRMVd2a2dCMDNIWGMzV29fakFPT2VOWGRsY1Jkb1lleDNJYVpmcC0zUlA3aEo5Q0p2ZmRYdjhIdldXWVJoSlc0TzVsWWRxd1JIM0h6SEFRaHZhdzBCYlVOQl9ER2R1QjRwV0tORGxKZUlBMVFBaTFBRlNnU2ZoeUwtZTY2OVll?oc=5",
+      "published": "Sat, 05 Sep 2026 11:30:00 GMT",
+      "published_iso": "2026-09-05T11:30:00+00:00",
+      "locality": "Walker County",
+      "state": "GA",
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "Warnock, Kemp clash over Georgia data center boom",
+      "outlet": "Yahoo",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPdGZ1V3lNX19fSHFCWTRRZFVmZ0psLTJldERjM184aEhsbWJkYVZrU184Y2pxVkdjbDgzVjBFZGFwTWRudmk1QmhIRC03NnlCZVRhSXRuRmdBQzc4SG5ueUFEWGUxUHdEYTdjRXB2X3o1ZkRCZko4OEVObEZnN1VDRVFIcW50NXc?oc=5",
+      "published": "Tue, 01 Sep 2026 09:28:10 GMT",
+      "published_iso": "2026-09-01T09:28:10+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "Data center backlash uniting far-left and far-right",
+      "outlet": "National News Desk",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPaEowVXZxdHNFWU5Fbnl1SnZFUFY3Z3NSY2dJcG0tWjFGZ1N0elhvR0R1N3BtSzlkTTQtSTZNdnNHZnlMZVhGWjBILXJUNlJ3VTRmbWJzbDViRmwyQW9IZ0NDWUFNaGpDc3BpcjBBTWxmZVM1YjNSZjBJZW5QZGt4MzNRbTBrako5RVppR2ktY0tnZ0N3Ym1PODJORjItTDV0OFZpVTczODRVOFI4ZXZJ?oc=5",
+      "published": "Thu, 03 Sep 2026 20:05:34 GMT",
+      "published_iso": "2026-09-03T20:05:34+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "Data center backlash uniting far-left and far-right",
+      "outlet": "WJLA",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPa2tFcmtoT2lRVzI3RWNfOTNuMnF1V3Zja1huSnRmZXlmVENTYUg5eF9SQ1JESE9FNlRoMWlpZnZyNkp1MEdJRDVaV2F1RmQ0eXhjQWVFS2hRc3pxbVYzc1ljWTlPMWdHcElDQ0Y3Nml0c21tUFd5V3RJcmtiOVMxNWpUV29CaUZBRHZ5VlNSeVN2aFItWDMwTndETUFMZHpFajh1N0lB?oc=5",
+      "published": "Fri, 04 Sep 2026 06:04:15 GMT",
+      "published_iso": "2026-09-04T06:04:15+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "Texas Republicans are running against data centres, and both Senate candidates want the same water rules",
+      "outlet": "The Next Web",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBRTVNXdjQ5dk9Ma09nZjFCV3pDY1JHcmY4NTJyMFNNczJSYnpqWWtVbjV6aWQ4eVZPMmpsbXBMYmVHYlhNUkRab2dBSl9yYjdMTDRsNTB1elRuMHRrMmZYLVhWd2VMZjJHWjBNUU5rQkdFM0FvQTFGTlVMWUhuQQ?oc=5",
+      "published": "Thu, 03 Sep 2026 10:31:19 GMT",
+      "published_iso": "2026-09-03T10:31:19+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "title": "Meta breaks ground on $10 billion Lebanon data center for AI expansion",
+      "outlet": "ppc.land",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPYXZ0VGZERUhRem1FTnFHeGdreENtYVB5VXh2dS02eXk4SEIwTW5xNUVlZFp2WWFKaFExeEN3b09ZeWdvY09abGtJN3lhNGpYNGUwNGtreFJTV3dWb01TM1Jvb0tabHVNaXRUU09SSW8tQlhYc0JoczRVVTV2dGs5dlFsS20weVdRbUhqRFRMaG0?oc=5",
+      "published": "Sun, 15 Feb 2026 16:57:44 GMT",
+      "published_iso": "2026-02-15T16:57:44+00:00",
+      "locality": "Boone County",
+      "state": "IN",
+      "first_seen": "2026-02-15",
       "last_seen": "2026-09-05"
     }
   ]
