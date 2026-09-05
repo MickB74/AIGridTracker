@@ -29,6 +29,7 @@ import argparse
 import json
 import subprocess
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -127,15 +128,27 @@ def main():
     rc = 0
     for i in range(0, len(urls), BATCH):
         chunk = urls[i:i + BATCH]
-        try:
-            status = submit(site, key, chunk)
-            print(f"IndexNow accepted {len(chunk)} URL(s): HTTP {status}")
-        except urllib.error.HTTPError as e:
-            print(f"IndexNow refused: HTTP {e.code} {e.reason}", file=sys.stderr)
-            if 400 <= e.code < 500:
-                rc = 1        # bad key or malformed request: worth a red X
-        except (urllib.error.URLError, TimeoutError) as e:
-            print(f"IndexNow unreachable: {e}", file=sys.stderr)
+        for attempt in (1, 2):
+            try:
+                status = submit(site, key, chunk)
+                print(f"IndexNow accepted {len(chunk)} URL(s): HTTP {status}")
+                break
+            except urllib.error.HTTPError as e:
+                print(f"IndexNow refused: HTTP {e.code} {e.reason}",
+                      file=sys.stderr)
+                # 403 = "key not valid", which on a site that just deployed
+                # usually means the endpoint fetched /<key>.txt before the
+                # new deploy was serving. Seen on 2026-09-05: the same
+                # request succeeded on retry. One wait, one retry.
+                if e.code == 403 and attempt == 1:
+                    time.sleep(60)
+                    continue
+                if 400 <= e.code < 500:
+                    rc = 1    # bad key or malformed request: worth a red X
+                break
+            except (urllib.error.URLError, TimeoutError) as e:
+                print(f"IndexNow unreachable: {e}", file=sys.stderr)
+                break
     return rc
 
 
