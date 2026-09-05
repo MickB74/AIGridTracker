@@ -994,11 +994,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/red-oak-tx",
-      "destination": "/states/texas",
-      "permanent": true
-    },
-    {
       "source": "/communities/richmond-county-nc",
       "destination": "/states/north-carolina",
       "permanent": true

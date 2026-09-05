@@ -232,8 +232,8 @@
     "expires": "2027-02-11"
   },
   "cherokee-county-ga": {
-    "effective_status": "Expired",
-    "expires": "2026-08-21"
+    "effective_status": "Enacted",
+    "expires": "2027-02-14"
   },
   "cherry-hill-nj": {
     "effective_status": "Enacted",
@@ -375,6 +375,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "dougherty-county-ga": {
+    "effective_status": "Enacted",
+    "expires": "2027-02-27"
+  },
   "downe-township-nj": {
     "effective_status": "Enacted",
     "expires": null
@@ -386,6 +390,10 @@
   "dundee-township-mi": {
     "effective_status": "Enacted",
     "expires": null
+  },
+  "durham-county-nc": {
+    "effective_status": "Enacted",
+    "expires": "2027-05-18"
   },
   "durham-nc": {
     "effective_status": "Enacted",
@@ -422,6 +430,10 @@
   "eastport-me": {
     "effective_status": "Enacted",
     "expires": "2027-02-08"
+  },
+  "edgecombe-county-nc": {
+    "effective_status": "Enacted",
+    "expires": "2028-08-03"
   },
   "edgewater-park-nj": {
     "effective_status": "Enacted",
@@ -696,8 +708,8 @@
     "expires": "2026-11-08"
   },
   "kings-mountain-nc": {
-    "effective_status": "Expired",
-    "expires": "2026-08-25"
+    "effective_status": "Enacted",
+    "expires": "2027-08-25"
   },
   "kingwood-township-nj": {
     "effective_status": "Enacted",
@@ -740,8 +752,8 @@
     "expires": "2027-08-03"
   },
   "larimer-county-co": {
-    "effective_status": "Expired",
-    "expires": "2026-08-25"
+    "effective_status": "Enacted",
+    "expires": "2027-02-25"
   },
   "lavon-tx": {
     "effective_status": "Enacted",
@@ -756,8 +768,8 @@
     "expires": "2027-06-03"
   },
   "lenox-township-mi": {
-    "effective_status": "Enacted",
-    "expires": null
+    "effective_status": "Expired",
+    "expires": "2026-06-02"
   },
   "lexington-fayette-county-ky": {
     "effective_status": "Enacted",
@@ -886,6 +898,10 @@
   "massillon-oh": {
     "effective_status": "Expired",
     "expires": "2026-08-14"
+  },
+  "mattoon-il": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "mcminnville-tn": {
     "effective_status": "Enacted",
@@ -1258,6 +1274,10 @@
   "seattle-wa": {
     "effective_status": "Enacted",
     "expires": "2027-06-09"
+  },
+  "sedgwick-county-ks": {
+    "effective_status": "Enacted",
+    "expires": "2026-12-24"
   },
   "seward-county-ne": {
     "effective_status": "Enacted",

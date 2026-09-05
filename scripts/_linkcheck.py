@@ -26,7 +26,9 @@ def check_url(url):
     """(status_code_or_None, error_string_or_None).
 
     HEAD first because it is cheap, then GET: plenty of newsrooms answer HEAD
-    with 405 while serving the page fine.
+    with 405 while serving the page fine, and CivicPlus DocumentCenter PDFs
+    (Twinsburg's ordinance) answer HEAD with 404 while serving GET — so a
+    HEAD 404 is only a dead link once GET agrees.
     """
     for method in ("HEAD", "GET"):
         req = urllib.request.Request(url, method=method,
@@ -35,7 +37,7 @@ def check_url(url):
             with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
                 return r.status, None
         except urllib.error.HTTPError as e:
-            if method == "HEAD" and e.code in (405, 501):
+            if method == "HEAD" and e.code in (404, 405, 501):
                 continue
             return e.code, None
         except Exception as e:                                # noqa: BLE001

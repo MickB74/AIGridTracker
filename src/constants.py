@@ -927,10 +927,29 @@ MORATORIUMS = [
      "source": "https://www.chathamcountync.gov/Home/Components/News/News/17295/19"},
     {"locality": "Kings Mountain", "state": "NC", "level": "Local",
      "status": "Enacted", "when": "Feb 24, 2026",
-     "note": "182-day (6-month) pause, passed 5-2. Planning department studying "
+     "note": "182-day (6-month) pause, passed 5-2 Feb 24; extended a further "
+             "12 months on Aug 25, 2026 (the agenda carried 12- and 6-month "
+             "options; council took the year). Planning department studying "
              "setbacks/screening, utility capacity, and noise standards",
-     "lat": 35.25, "lon": -81.34, "expires": "2026-08-25", "as_of": "2026-08-13",
-     "source": "https://www.cityofkm.com/AgendaCenter/ViewFile/Minutes/_02242026-934"},
+     "lat": 35.25, "lon": -81.34, "expires": "2027-08-25", "as_of": "2026-09-04",
+     "source": "https://nsjonline.com/article/2026/09/data-center-moratorium-count-rises-again/"},
+    {"locality": "Durham County", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Aug 24, 2026",
+     "note": "9-month pause on new or expanded data centers over 100,000 sq ft, "
+             "4-1. Exempts facilities under 100,000 sq ft that use closed-loop "
+             "cooling and no diesel backup. Runs to May 18, 2027 per press "
+             "reports, aligned with the City of Durham's pause; staff draft "
+             "ordinance due December",
+     "lat": 36.04, "lon": -78.88, "expires": "2027-05-18", "as_of": "2026-09-04",
+     "source": "https://dconc.gov/DurhamCo-News/From-the-Desk-to-the-County-Manager-August-28-2026.htm"},
+    {"locality": "Edgecombe County", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Aug 3, 2026",
+     "note": "2-year moratorium, 5-0 of members present after a public hearing: "
+             "no data center applications or permits accepted, processed or "
+             "approved in the county's zoning jurisdiction until Aug 3, 2028. "
+             "Followed Energy Storage Solutions withdrawing its Kingsboro offer",
+     "lat": 35.90, "lon": -77.60, "expires": "2028-08-03", "as_of": "2026-09-04",
+     "source": "https://www.reflector.com/apgstate/commissioners-approve-two-year-moratorium-on-data-centers/article_d746111c-f601-5252-9055-22af0e2b292e.html"},
     {"locality": "Boone", "state": "NC", "level": "Local",
      "status": "Enacted", "when": "Mar 23, 2026",
      "note": "1-year pause, unanimous (5-0); covers data centers and crypto "
@@ -1135,10 +1154,23 @@ MORATORIUMS = [
      "source": "https://www.fox5atlanta.com/news/paulding-county-approves-data-center-moratorium-freezing-projects"},
     {"locality": "Cherokee County", "state": "GA", "level": "Local",
      "status": "Enacted", "when": "Jul 22, 2026",
-     "note": "30-day pause, with a stated plan to extend it into early 2027 — the "
-             "short term is procedural, not the real horizon",
-     "lat": 34.24, "lon": -84.48, "expires": "2026-08-21", "as_of": "2026-08-04",
-     "source": "https://www.atlantanewsfirst.com/2026/07/22/cherokee-county-approves-data-center-moratorium/"},
+     "note": "30-day pause Jul 21, extended 180 days on Aug 18, 2026 (unanimous) "
+             "after a packed hearing — no applications for permits, land "
+             "disturbance, rezoning or variances for data centers. County "
+             "describes the end as mid-February 2027; date here is 180 days "
+             "from the vote",
+     "lat": 34.24, "lon": -84.48, "expires": "2027-02-14", "as_of": "2026-09-04",
+     "source": "https://www.wsbtv.com/news/local/cherokee-county/data-center-moratorium-more-than-doubled-after-metro-atlanta-commission-vote/AXUQYR3EQZCVFCYTB6JZCZ7VME/"},
+    {"locality": "Dougherty County", "state": "GA", "level": "Local",
+     "status": "Enacted", "when": "Jul 20, 2026",
+     "note": "45-day pause on data center zoning applications (Jul 20), "
+             "extended up to 180 days on Aug 31, 2026 by a 6-1 vote after a "
+             "public hearing: no new applications, rezonings or permits for "
+             "large-scale data centers in unincorporated Dougherty County "
+             "through Feb 27, 2027. Officials say there is no cap on further "
+             "extensions",
+     "lat": 31.58, "lon": -84.16, "expires": "2027-02-27", "as_of": "2026-09-04",
+     "source": "https://www.dougherty.ga.us/Government/News/DOUGHERTY-COUNTY-EXTENDS-REVIEW-PERIOD-FOR-LARGE-SCALE-DATA-CENTER-DEVELOPMENT"},
     {"locality": "Walker County", "state": "GA", "level": "Local",
      "status": "Enacted", "when": "Extended Aug 7, 2026",
      "note": "30-day pause adopted Jul 9, extended unanimously to 180 days on "
@@ -2341,10 +2373,13 @@ MORATORIUMS = [
      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
     {"locality": "Lenox Township", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Feb 2, 2026",
-     "note": "4-month moratorium with extension option",
-     "lat": 42.74, "lon": -82.94, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.lenox-mi.gov/m/newsflash/home/detail/240",
-     "term": "fixed_undated"},
+     "note": "4-month moratorium effective Feb 2, 2026 with one 4-month "
+             "extension option; the township's adoption statement has since "
+             "been removed from its site. The Jun 1, 2026 board agenda carried "
+             "no extension item, so whether the option was exercised is "
+             "unrecorded",
+     "lat": 42.74, "lon": -82.94, "expires": "2026-06-02", "as_of": "2026-09-04",
+     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
     # ── Batch 3 — Kentucky ────────────────────────────────────────────────
     {"locality": "Daviess County", "state": "KY", "level": "Local",
      "status": "Enacted", "when": "May 28, 2026",
@@ -2566,6 +2601,14 @@ MORATORIUMS = [
              "standards, energy efficiency, annual reporting. 10 existing DCs",
      "lat": 41.76, "lon": -88.32, "expires": "2026-03-24", "as_of": "2026-08-13",
      "source": "https://abc7chicago.com/post/aurora-city-council-consider-temporary-moratorium-put-pause-development-new-data-centers/17882682/"},
+    {"locality": "Mattoon", "state": "IL", "level": "Local",
+     "status": "Enacted", "when": "Sep 1, 2026",
+     "note": "1-year moratorium on large-scale data centers, unanimous; renews "
+             "automatically each year unless the council acts, so it has no "
+             "fixed end date",
+     "lat": 39.48, "lon": -88.37, "expires": None, "as_of": "2026-09-04",
+     "source": "https://www.wandtv.com/2026/09/02/mattoon-city-council-unanimously-approves-1-year-data-center-moratorium/",
+     "term": "until_event"},
     {"locality": "Champaign County", "state": "IL", "level": "Local",
      "status": "Enacted", "when": "Apr 23, 2026",
      "note": "12-month moratorium on data centers >=10,000 sq ft on "
@@ -2959,6 +3002,15 @@ MORATORIUMS = [
              "Datacenters can resubmit — they just cannot be decided",
      "lat": 39.04, "lon": -95.76, "expires": "2027-02-17", "as_of": "2026-08-23",
      "source": "https://www.wibw.com/2026/08/13/shawnee-co-commissioners-approve-moratorium-new-data-centers/"},
+    {"locality": "Sedgwick County", "state": "KS", "level": "Local",
+     "status": "Enacted", "when": "Jan 2026",
+     "note": "Interim development control on data center applications, first "
+             "adopted January 2026 and extended three times — to Jun 11, to "
+             "Sep 11, and on Sep 2, 2026 (unanimous) through Dec 24, 2026 — "
+             "while planning staff write zoning rules; commission checkpoint "
+             "Dec 2",
+     "lat": 37.69, "lon": -97.34, "expires": "2026-12-24", "as_of": "2026-09-04",
+     "source": "https://www.kwch.com/2026/09/02/sedgwick-county-extends-pause-data-center-applications/"},
     # Promoted as Ohio; it is the Washington city. Corrected 2026-08-23.
     {"locality": "Mount Vernon", "state": "WA", "level": "Local",
      "status": "Enacted", "when": "Aug 12, 2026",
@@ -3022,9 +3074,10 @@ MORATORIUMS = [
     {"locality": "Larimer County", "state": "CO", "level": "Local",
      "status": "Enacted", "when": "Jan 27, 2026",
      "note": "Initial 30-day moratorium extended 6 months after Feb 9 public "
-             "hearing; prohibits land use applications for new data centers in "
-             "unincorporated county while staff develops regulations",
-     "lat": 40.63, "lon": -105.13, "expires": "2026-08-25", "as_of": "2026-08-19",
+             "hearing, then to Feb 25, 2027 on Jul 13, 2026; prohibits land use "
+             "applications for new data centers in unincorporated county while "
+             "staff develops regulations",
+     "lat": 40.63, "lon": -105.13, "expires": "2027-02-25", "as_of": "2026-09-04",
      "source": "https://www.larimer.gov/planning/temp-moratorium-data-centers"},
     {"locality": "Boulder County", "state": "CO", "level": "Local",
      "status": "Enacted", "when": "Jun 2, 2026",
@@ -5575,11 +5628,12 @@ TACTICS_PLAYBOOK = [
 CBA_BENCHMARKS = [
     {"community": "Loudoun County", "state": "VA", "company": "Multiple",
      "won": "Declined abatements and taxed data centers instead: the FY2027 "
-            "budget puts them at roughly $1.3B — about 45% of all county tax "
-            "revenue — on ~4% of commercial parcels. The benchmark for what a "
-            "jurisdiction with market power can simply refuse to give away",
-     "as_of": "2026-08-05",
-     "sources": ["https://www.loudoun.gov/Faq.aspx?QID=1793"]},
+            "adopted budget projects $1.3B in data center revenue — about 40% "
+            "of the total county budget (FY2026: $1.2B, 39%). The benchmark "
+            "for what a jurisdiction with market power can simply refuse to "
+            "give away",
+     "as_of": "2026-09-04",
+     "sources": ["https://www.loudoun.gov/6408/Data-Centers-The-Loudoun-Story"]},
     {"community": "Groton", "state": "CT", "company": "Multiple",
      "won": "A hard size cap, not a cheque: data center buildings limited to "
             "12,500 sq ft in the zoning adopted June 2023, after a one-year "

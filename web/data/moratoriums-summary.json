@@ -1,17 +1,17 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-09-05",
+  "generated": "2026-09-04",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 391,
+  "count": 396,
   "states": 39,
-  "enacted": 322,
+  "enacted": 329,
   "proposed": 35,
   "official_sourced": 29,
   "by_state": {
     "CO": {
       "total": 8,
-      "enacted": 6,
+      "enacted": 7,
       "proposed": 0
     },
     "MD": {
@@ -30,8 +30,8 @@
       "proposed": 2
     },
     "IL": {
-      "total": 8,
-      "enacted": 6,
+      "total": 9,
+      "enacted": 7,
       "proposed": 1
     },
     "UT": {
@@ -51,7 +51,7 @@
     },
     "MI": {
       "total": 32,
-      "enacted": 22,
+      "enacted": 21,
       "proposed": 0
     },
     "TX": {
@@ -60,8 +60,8 @@
       "proposed": 4
     },
     "GA": {
-      "total": 18,
-      "enacted": 13,
+      "total": 19,
+      "enacted": 15,
       "proposed": 2
     },
     "NY": {
@@ -85,8 +85,8 @@
       "proposed": 0
     },
     "NC": {
-      "total": 30,
-      "enacted": 23,
+      "total": 32,
+      "enacted": 26,
       "proposed": 2
     },
     "FL": {
@@ -185,8 +185,8 @@
       "proposed": 1
     },
     "KS": {
-      "total": 3,
-      "enacted": 2,
+      "total": 4,
+      "enacted": 3,
       "proposed": 1
     },
     "MS": {

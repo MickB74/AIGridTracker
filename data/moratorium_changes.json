@@ -68,5 +68,68 @@
     "locality": "Birmingham, AL",
     "kind": "status_changed",
     "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-09-04",
+    "id": "kings-mountain-nc",
+    "locality": "Kings Mountain, NC",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-09-04",
+    "id": "durham-county-nc",
+    "locality": "Durham County, NC",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-04",
+    "id": "edgecombe-county-nc",
+    "locality": "Edgecombe County, NC",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-04",
+    "id": "cherokee-county-ga",
+    "locality": "Cherokee County, GA",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-09-04",
+    "id": "dougherty-county-ga",
+    "locality": "Dougherty County, GA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-04",
+    "id": "lenox-township-mi",
+    "locality": "Lenox Township, MI",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-09-04",
+    "id": "mattoon-il",
+    "locality": "Mattoon, IL",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-04",
+    "id": "sedgwick-county-ks",
+    "locality": "Sedgwick County, KS",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-04",
+    "id": "larimer-county-co",
+    "locality": "Larimer County, CO",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
   }
 ]
