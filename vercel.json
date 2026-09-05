@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/virginia-september-2026-decision-calendar",
+      "destination": "/blog/virginia-september-2026-decision-calendar",
+      "permanent": true
+    },
+    {
       "source": "/nc-august-moratorium-wave-2026",
       "destination": "/blog/nc-august-moratorium-wave-2026",
       "permanent": true

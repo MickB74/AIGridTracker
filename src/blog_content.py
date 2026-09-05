@@ -72,6 +72,185 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "virginia-september-2026-decision-calendar",
+        "art": "moratorium",
+        "section": "stories",
+        "title": "Virginia Has Three Data Center Votes in the Next Five Weeks. Here Is What Each One Can and Cannot Do.",
+        "seo_title": "Virginia data centers: Loudoun, Fairfax and Richmond votes, Sept–Oct 2026",
+        "date": _dt.date(2026, 9, 5),
+        "author": "GridWatch AI",
+        "tags": ["Virginia", "Loudoun County", "Fairfax County", "moratoriums", "Dominion Energy", "rate cases"],
+        "summary": "Loudoun votes on pause options September 15 and on 23 grandfathered projects October 6; Fairfax's Planning Commission hears the Plaza 500 substation September 24. Behind them sits a governor who has said no to a statewide pause, a rate class that makes 25 MW customers pay for the grid they reserve, and a Dillon's Rule that limits what any county can actually stop.",
+        "body": """
+Virginia has more data centers than any other state, and for most of the last
+decade the fights over them were local and lost. That changed this summer.
+Between July 22 and September 1, the state's largest data center county voted
+to draft a pause, its most populous county set a hearing on a substation that
+a congressman has asked it to deny, two more counties asked the governor for a
+statewide moratorium, and the governor's office said no. Three of the votes
+that follow from all this land in the next five weeks.
+
+This post is the calendar, with one caveat repeated throughout: in Virginia a
+"moratorium" is a word the county attorney will correct, and the difference
+matters to anyone planning to quote one at a hearing.
+
+## September 15 — Loudoun County: pause options
+
+On July 22 the Loudoun County Board of Supervisors passed Supervisor Juli
+Briskman's motion, 6-1-2, directing the county attorney to return in
+September with options for pausing new data center applications while the
+county finishes its data center standards, per [Loudoun
+Now](https://www.loudounnow.com/news/loudoun-supervisors-eye-data-centers-moratorium-more-regulations/article_63c90942-647a-4af6-9d43-5ae05a148153.html).
+Supervisor Kristen Umstattd voted no; Supervisors Kershner and Letourneau were
+absent.
+
+The same report carries the limit. County Attorney Leo Rogers told the board
+it is not legal for the county to enact a moratorium on data centers. What it
+can do, he said, is "pause" legislative applications — rezonings and special
+exceptions, the ones that need a board vote — for up to a year. Administrative
+applications, such as site plans on land already zoned for the use, cannot be
+paused, because state code sets the review clock.
+
+That distinction is the whole story of Amazon's newest Ashburn filing. In
+March Amazon Data Services bought George Washington University's Ashburn
+campus for $427 million, and county economic development director Buddy Rizer
+told [WTOP](https://wtop.com/loudoun-county/2026/03/loudoun-county-will-fight-to-keep-amazon-data-center-off-just-sold-gw-campus-in-ashburn/)
+that "at no time has the Board of Supervisors envisioned data centers on that
+property." In late July Amazon filed a site plan for four data center
+buildings on the 122-acre campus, per [Northern Virginia
+Magazine](https://northernvirginiamag.com/news/2026/07/31/amazon-plans-4-data-centers-on-george-washington-universitys-loudoun-campus/).
+At an August meeting the company presented the plan, called Bridgefield Tech
+Center, as roughly 800,000 square feet, and residents and Briskman told
+[WTOP](https://wtop.com/loudoun-county/2026/08/concrete-jungle-as-amazon-details-plans-for-new-ashburn-data-centers-some-residents-are-fed-up/)
+the application relies on 1972-era zoning to proceed as a site plan, with no
+Planning Commission review, no public hearing and no board vote. If that
+reading holds, it is exactly the kind of application a Loudoun pause could not
+touch. Whether it holds is the fight; the county says the site is not
+by-right. The dossier is
+[here](/projects.html#amazon-bridgefield-ashburn-va).
+
+## October 6 — Loudoun County: the 23 grandfathered projects
+
+There is a second Loudoun item, and it is easy to confuse with the first. Last
+year the board required new data centers to go through its updated rules and
+a public hearing, but 23 projects already in development and not yet built
+were exempted. Briskman and Supervisor Laura TeKrony want those 23 put through
+the same regulations, hearings and a final board vote. On September 1 the
+board delayed that vote and asked the county attorney to review the proposal
+to avoid lawsuits, according to [FOX 5](https://www.fox5dc.com/news/vote-delayed-proposal-halt-loudoun-county-data-center-projects).
+It returns October 6.
+
+Read the two items together. The September 15 vote is about applications that
+have not been filed. The October 6 vote is about 23 that were approved under
+the old rules. A resident who wants either should say which one.
+
+## September 24 — Fairfax County: the Plaza 500 substation
+
+Fairfax rewrote its data center zoning two years ago. The ordinance amendment
+adopted September 10, 2024, per the [county's own
+release](https://www.fairfaxcounty.gov/news/board-supervisors-approve-new-data-center-zoning-ordinance-amendment),
+requires 200 feet between a data center building and an adjacent residential
+lot line, 300 feet for backup generators, a mile from any Metro station, full
+enclosure or screening of mechanical equipment, and noise studies before and
+after construction. A companion amendment for electrical substations, adopted
+in December 2025, sets a 100-foot residential setback, a 12-foot solid wall
+and a 55 dBA nighttime limit at residential property lines, per the [county's
+release](https://www.fairfaxcounty.gov/news/board-supervisors-approves-electrical-substation-zoning-amendment)
+— while leaving substations by-right in industrial zones.
+
+Which is why the Plaza 500 fight in Lincolnia runs through a 2232 public
+facility review rather than a rezoning. Starwood Capital's data center campus
+is by-right under its industrial zoning; the substation Dominion Energy needs
+to power it is the only piece with a public process. Rep. Don Beyer wrote to
+the Planning Commission on July 30 asking it to deny the substation permit,
+saying data center infrastructure "should not be built in residential areas
+where its scale and likely impacts are fundamentally incompatible with the
+character and quality of life of adjacent neighborhoods," per [his
+office](https://beyer.house.gov/news/documentsingle.aspx?DocumentID=9183).
+The Planning Commission's review is scheduled for September 24 at 7 p.m.; the
+[dossier](/projects.html#plaza-500-lincolnia-va) has the full timeline back
+to the 2024 SCC transmission case, and the [Fairfax community
+page](/communities/fairfax-county-va.html) has all ten supervisors' district
+inboxes and the county's speaker sign-up rules.
+
+## The ask that Richmond turned down
+
+On July 30, state Sen. Glen Sturtevant wrote to Gov. Abigail Spanberger asking
+her to use executive authority for an immediate moratorium on new data center
+approvals while the state assesses its grid, water and infrastructure, per
+[Virginia Lawyers Weekly](https://valawyersweekly.com/2026/08/13/spanberger-rejects-data-center-moratorium-virginia-growth/).
+Sens. Richard Stuart and Russet Perry separately asked for a special session
+on groundwater, per [NBC4](https://www.nbcwashington.com/news/local/northern-virginia/virginia-state-senators-call-for-data-center-moratorium/4137267/).
+Two county boards joined them: Spotsylvania adopted a resolution 4-2 on
+August 11 backing Sturtevant's request, per
+[WJLA](https://wjla.com/news/local/spotsylvania-county-backs-call-for-statewide-moratorium-on-data-centers-abigail-spanberger-ai-energy-use-zoning-decisions),
+and on September 1 Stafford's board directed staff to draft letters asking for
+a special session and, failing quick legislation, a temporary pause on new
+large-scale approvals, per [Potomac
+Local](https://www.potomaclocal.com/2026/09/04/stafford-supervisors-seek-state-and-federal-data-center-limits/).
+
+The governor's office answered on August 11. Its statement to The
+Progress-Index, as reported by Virginia Lawyers Weekly, said the
+administration's regulatory approach "supersedes any effort to block them
+from being developed," pointing to the new consumption tax and an SCC
+directive on transmission costs. No pause. The site's [state
+row](/communities/virginia-statewide-pause-request-va.html) records it as
+rejected.
+
+## What the state did instead
+
+Two things, and both are worth more at a hearing than a moratorium request
+that was declined.
+
+First, the rate class. On November 25, 2025 the State Corporation Commission
+issued its final order in Dominion's biennial review, case PUR-2025-00058,
+creating rate class GS-5 for customers demanding 25 megawatts or more,
+effective January 1, 2027. Per the [SCC's
+release](https://www.scc.virginia.gov/about-the-scc/newsreleases/release/scc-issues-order-on-dev-biennial-review-2025/scc-rules-in-dev-biennial-review-case.html),
+those customers must pay minimum demand charges covering at least 85% of
+their contracted transmission and distribution demand and 60% of generation
+demand — the point being that a campus that reserves capacity and never uses
+it still pays for the wires built for it. The same order cut Dominion's rate
+request: residential bills rise $11.24 a month in 2026, 23.7% less than the
+utility asked for.
+
+Second, the legislature. Of 61 data center bills filed in the 2026 session,
+15 reached the governor, per
+[MultiState](https://www.multistate.us/insider/2026/3/30/virginia-lawmakers-pass-15-data-center-bills-as-tax-exemption-fight-looms).
+They include HB 153, a permit process for facilities of 100 MW or more with
+sound assessments within 500 feet of homes and schools and locality
+assessments of water, agriculture and historic resources; SB 553, which
+requires annual water consumption estimates in rezoning and permit decisions;
+and HB 1393, directing Dominion to petition the SCC for rates that recover new
+generating-capacity costs from 25 MW customers. The governor's July 6 release
+says she signed the generator, local-assessment and ratepayer measures, but it
+names no bill numbers, so confirm each bill's final status on the
+legislature's information system before quoting one.
+
+## What to do with this
+
+If you live in Loudoun, the September 15 and October 6 items are different
+votes and the board's contact line is one number: 703-777-0204, with all nine
+supervisors listed on the [community
+page](/communities/loudoun-county-va.html). If you live in Fairfax, the
+September 24 hearing is at the Planning Commission, not the Board, and you sign
+up with the Commission. If you live anywhere else in the state, the strongest
+sentence available to you is not "the county should pass a moratorium" — the
+county attorney will explain why it cannot — but "the applicant should be
+required to disclose its contracted demand under GS-5 and its water estimate
+under SB 553 before this board votes."
+
+## See also
+
+- [Virginia state page](/states/virginia.html) — every tracked project,
+  pause, governing body and race in the state
+- [Moratorium tracker](/moratoriums.html) — 14 Virginia rows, each with its
+  source and derived status
+- [Senators](/senators.html) — Sen. Warner's Power for the People Act, which
+  would push the GS-5 idea nationwide
+""",
+    },
+    {
         "id": "nc-august-moratorium-wave-2026",
         "art": "moratorium",
         "section": "stories",

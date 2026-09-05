@@ -239,6 +239,8 @@ nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
 nav .nav-state { font-size:13px; padding:6px 8px; border-radius:8px; max-width:150px;
   border:1px solid var(--rule); background:var(--card); color:var(--muted); }
 nav .nav-state:hover, nav .nav-state:focus { color:var(--teal); border-color:var(--teal); }
+table.sortable th[data-dir="asc"], table.sortable th[data-dir="desc"] { color:var(--teal); }
+table.sortable td { vertical-align:middle; }
 /* Grouped dropdowns (desktop). Menus reveal on hover, keyboard focus, or the
    native <details> toggle; the summary marker is replaced with a caret. */
 .navgroup { position:relative; }
@@ -11698,6 +11700,124 @@ def _load_senate_money():
 _SENATE_MONEY = _load_senate_money()
 
 
+def _sortable_table(table_id, headers, rows, caption=""):
+    """A compact sortable table: click a header to sort, click again to flip.
+
+    `headers` is a list of (label, kind): "text", "num" (largest first on
+    the first click) or "rank" (an ordinal where lower is better, so best
+    first on the first click — grades, leans, election years);
+    `rows` is a list of lists of (cell_html, sort_key). Sorting is plain JS
+    on data-sort attributes, so cells stay rendered in Python and the table
+    works with scripting off (unsorted, but complete). Both race trackers use
+    it as the at-a-glance view above their cards: a resident scanning for
+    their state wants a row, not a stack of cards.
+    """
+    ths = "".join(
+        f'<th data-kind="{kind}" onclick="stSort(\'{table_id}\',{i})" '
+        f'style="cursor:pointer;white-space:nowrap" title="Sort">{label} '
+        f'<span class="muted">&#8597;</span></th>'
+        for i, (label, kind) in enumerate(headers))
+    trs = "".join(
+        "<tr>" + "".join(
+            f'<td data-sort="{esc(str(key))}">{cell}</td>' for cell, key in r)
+        + "</tr>" for r in rows)
+    cap = f'<p class="muted" style="font-size:13px;margin:6px 0 0">{caption}</p>' if caption else ""
+    return f"""
+<div class="table-scroll"><table id="{table_id}" class="sortable">
+<thead><tr>{ths}</tr></thead><tbody>{trs}</tbody></table></div>{cap}
+<script>
+if(!window.stSort){{window.stSort=function(id,col){{
+  var t=document.getElementById(id),tb=t.tBodies[0],th=t.tHead.rows[0].cells[col];
+  var kind=th.dataset.kind,cur=th.dataset.dir;
+  var dir=cur?(cur==='asc'?'desc':'asc'):(kind==='num'?'desc':'asc');
+  for(var i=0;i<t.tHead.rows[0].cells.length;i++)delete t.tHead.rows[0].cells[i].dataset.dir;
+  th.dataset.dir=dir;
+  var rows=[].slice.call(tb.rows);
+  rows.sort(function(a,b){{
+    var x=a.cells[col].dataset.sort,y=b.cells[col].dataset.sort;
+    if(kind==='num'||kind==='rank'){{x=parseFloat(x)||0;y=parseFloat(y)||0;return dir==='asc'?x-y:y-x;}}
+    return dir==='asc'?x.localeCompare(y):y.localeCompare(x);
+  }});
+  rows.forEach(function(r){{tb.appendChild(r);}});
+}};}}
+</script>"""
+
+
+def _sr_table(races):
+    """Every 2026 Senate candidate as one row."""
+    rows = []
+    for r in races:
+        for c in r["candidates"]:
+            n_items = len(c.get("items") or [])
+            rows.append([
+                (f'<a href="#race-{esc(r["abbrev"].lower())}">{esc(r["state"])}</a>'
+                 + (' <span class="muted">(special)</span>' if r["special"] else ""),
+                 r["state"]),
+                (f'<strong>{esc(c["name"])}</strong>'
+                 + (' <span class="muted">· incumbent</span>' if c["incumbent"] else ""),
+                 c["name"]),
+                (esc(c["party"]), c["party"]),
+                (_sr_lean_badge(c), {"guardrails": 0, "mixed": 1, "accelerate": 2}.get(c["lean"], 3)),
+                (str(n_items) if n_items else '<span class="muted">—</span>', n_items),
+                (esc(c["as_of"]) if c.get("as_of") else '<span class="muted">—</span>',
+                 c.get("as_of") or ""),
+                (esc(r["pvi"]), r["pvi"]),
+            ])
+    return _sortable_table(
+        "sr-table",
+        [("State", "text"), ("Candidate", "text"), ("Party", "text"),
+         ("Lean", "rank"), ("Cited items", "num"), ("Record read", "text"),
+         ("PVI", "text")],
+        rows,
+        caption="One row per filed candidate. Click a state to jump to the race "
+                "card with every cited item. Lean summarises only the cited items; "
+                "“No record found” is a gap, not a position.")
+
+
+def _sen_table(rows, names):
+    """Every sitting senator as one row."""
+    out = []
+    order = {"guardrails": 0, "mixed": 1, "accelerate": 2}
+    for s in rows:
+        st = names.get(s["state"], s["state"])
+        stance = s.get("stance") or {}
+        rec = s.get("record") or s.get("race")
+        grade = stance.get("grade") or ""
+        gcell = (f'<span class="gradebadge" style="background:'
+                 f'{_GRADE_COLORS.get(grade, "#888")}">{esc(grade)}</span>'
+                 if grade else '<span class="muted">—</span>')
+        lean_cell = (f'<span class="gradebadge" style="background:{rec["lean_color"]};'
+                     f'font-size:12px;padding:3px 9px">{esc(rec["lean_label"])}</span>'
+                     if rec else '<span class="muted">No record found</span>')
+        n_items = len(rec["items"]) if rec else 0
+        when = (f'<a href="senate-races.html#race-{esc(s["state"].lower())}">2026</a>'
+                if s["on_ballot_2026"] else str(s["next_election"]))
+        links = " · ".join(x for x in (
+            f'<a href="{esc(s["contact"])}" rel="nofollow">contact</a>' if s.get("contact") else "",
+            f'<a href="tel:{esc(s["phone"])}">call</a>' if s.get("phone") else "") if x)
+        out.append([
+            (f'<a href="#state-{esc(s["state"].lower())}">{esc(st)}</a>', st),
+            (f'<a href="#sen-{esc(s["bioguide"].lower())}"><strong>{esc(s["name"])}</strong></a>',
+             s["last"] + " " + s["first"]),
+            (esc(s["party"]), s["party"]),
+            (when, s["next_election"]),
+            (gcell, {"A": 0, "B": 1, "C": 2, "D": 3, "F": 4}.get(grade, 5)),
+            (lean_cell, order.get(rec["lean"], 3) if rec else 3),
+            (str(n_items) if n_items else '<span class="muted">—</span>', n_items),
+            (links or '<span class="muted">—</span>', ""),
+        ])
+    return _sortable_table(
+        "sen-table",
+        [("State", "text"), ("Senator", "text"), ("Party", "text"),
+         ("Next election", "rank"), ("Grade", "rank"), ("Lean", "rank"),
+         ("Cited items", "num"), ("Reach", "text")],
+        out,
+        caption="One row per sitting senator. Grade is the officials-scorecard "
+                "grade on a documented action; lean summarises the researched "
+                "record. Click a name for every cited item, or a state for both "
+                "senators.")
+
+
 def _sr_lean_badge(c):
     return (f'<span class="gradebadge" style="background:{c["lean_color"]};'
             f'font-size:12px;padding:3px 9px">{esc(c["lean_label"])}</span>')
@@ -11900,6 +12020,9 @@ rather than as neutral. If you have a source for one of them,
 
 {filt}
 {jump}
+
+<h2 id="table">Every candidate at a glance</h2>
+{_sr_table(races)}
 
 <h2 id="fights">Races where data centers are already an issue</h2>
 <p class="muted">{len(documented)} of {cov["races"]} races. Ordered by state.</p>
@@ -12500,6 +12623,9 @@ source for one of them, <a href="#method">send it to us</a>.</p></div>
   <p class="muted" id="sncount" style="margin:8px 0 0"></p>
 </div>
 {jump}
+
+<h2 id="table">Every senator at a glance</h2>
+{_sen_table(rows, names)}
 
 <h2 id="states">By state</h2>
 {cards}
