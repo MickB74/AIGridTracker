@@ -544,8 +544,8 @@
     "expires": null
   },
   "greensboro-nc": {
-    "effective_status": "Proposed",
-    "expires": null
+    "effective_status": "Enacted",
+    "expires": "2027-02-14"
   },
   "groton-ct": {
     "effective_status": "Expired",
@@ -1526,6 +1526,10 @@
   "white-county-in": {
     "effective_status": "Enacted",
     "expires": "2026-10-20"
+  },
+  "whiteville-nc": {
+    "effective_status": "Enacted",
+    "expires": "2027-08-25"
   },
   "winslow-township-nj": {
     "effective_status": "Enacted",

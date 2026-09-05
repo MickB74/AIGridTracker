@@ -71,6 +71,164 @@ decisions should be informed by public data.
 # ──────────────────────────────────────────────────────────────────────────────
 
 BLOG_STORIES = [
+    {
+        "id": "nc-august-moratorium-wave-2026",
+        "art": "moratorium",
+        "section": "stories",
+        "title": "North Carolina Added Eight Data Center Pauses in August. Read the Fine Print Before You Cite One.",
+        "seo_title": "North Carolina data center moratoriums: August 2026's eight votes",
+        "date": _dt.date(2026, 9, 5),
+        "author": "GridWatch AI",
+        "tags": ["North Carolina", "moratoriums", "local government", "zoning"],
+        "summary": "Eight North Carolina councils and county boards paused data centers in August, or extended a pause that was about to lapse. The terms range from six months to two years, and half of them carry a size threshold or a geographic carve-out that a resident quoting them at a hearing needs to know about.",
+        "body": """
+North Carolina's data center pauses came in a cluster last month. Between
+August 3 and August 25, five county boards and three city councils either
+enacted a moratorium or extended one that was days from expiring. The [North
+State Journal](https://nsjonline.com/article/2026/09/data-center-moratorium-count-rises-again/),
+which has been keeping a running count from public records, put the statewide
+total at **at least 14 counties and 20 municipalities** by early September, up
+from [11 and 17](https://nsjonline.com/article/2026/08/data-center-moratoriums-spreading/)
+a month earlier. Our own [tracker](/moratoriums.html) lists 28 pauses in
+force in the state as of this post, each with its source and end date.
+
+The headline number is the least useful thing about these votes. What matters
+to someone three weeks from a zoning hearing is *what each one actually
+covers*, because the eight are not alike. Four have a size threshold. Two
+apply only outside town limits. Three end early if the jurisdiction adopts new
+rules. One of them was extended for twice as long as the agenda proposed, and
+another was lengthened after residents asked for something far longer.
+
+## The eight, in the order they happened
+
+**Edgecombe County, August 3 — two years.** After a public hearing, all five
+commissioners present voted for a moratorium under which, until August 3,
+2028, the county "cannot accept, process and approve development applications
+and development permits for data centers and related uses within the county's
+zoning jurisdiction," per the [Rocky Mount Telegram / Daily
+Reflector](https://www.reflector.com/apgstate/commissioners-approve-two-year-moratorium-on-data-centers/article_d746111c-f601-5252-9055-22af0e2b292e.html).
+The same report says the vote followed news that Energy Storage Solutions,
+which had been eyeing a wooded parcel in the Kingsboro Business Park, had
+backed out. Two years is the longest term in this group.
+[Community page](/communities/edgecombe-county-nc.html).
+
+**Waxhaw, August 11 — twelve months.** The town board voted unanimously to
+pause "acceptance, processing and approval of development applications for
+data centers, cryptocurrency mining facilities, data storage and processing,
+and related telecommunications equipment," according to
+[WBTV](https://www.wbtv.com/2026/08/13/town-waxhaw-unanimously-approved-12-month-moratorium-data-centers/).
+No proposal was pending. The mayor's stated reason was to avoid getting
+"caught unprepared." [Community page](/communities/waxhaw-nc.html).
+
+**Alamance County, August 17 — one year, 10 MW threshold.** Commissioners
+voted 5-0 after a hearing that ran more than two hours, with more than 23
+speakers in favor, per [Elon News
+Network](https://www.elonnewsnetwork.com/article/2026/08/alamance-county-commissioners-pass-one-year-data-center-moratorium).
+The ordinance applies to "large-scale" projects, which the county defines as
+needing 10 megawatts or more, and it requires the board to meet at least 30
+days before the August 2027 expiry to decide whether to let it lapse or extend
+it. Commissioner Ed Priola's remark that non-disclosure agreements "should be
+not part of government" is worth keeping for your own hearing.
+[Community page](/communities/alamance-county-nc.html).
+
+**Yadkin County, August 17 — two years, unincorporated areas only.** The
+agenda carried a 12-month pause. After more than an hour of opposition
+testimony, a commissioner moved to double it, and the board approved two years
+5-0, according to the [Yadkin
+Ripple](https://www.yadkinripple.com/news/moratorium-approved-for-yadkin-county-as-potential-yadkinville-data-center-project-announced/article_485d48fb-c61b-4167-b885-3d469e9a6bbe.html).
+The same story reports the catch: the moratorium covers unincorporated county
+land only, and the county manager confirmed it does not reach the
+municipalities. That matters because the Ripple also reports that Enovum Data
+Centers, operating as White Fiber, has announced a $60 million purchase of two
+former Unifi properties *inside Yadkinville* for campuses it says would start
+at 60 MW with potential for about 200 MW. The county's pause does not touch
+that site. [Community page](/communities/yadkin-county-nc.html).
+
+**Greensboro, August 18 — 180 days, 10 MW threshold.** Council voted 8-0 with
+one recusal for a pause on data centers whose electrical demand exceeds 10
+megawatts, per the [Greensboro
+Thread](https://greensborothread.com/news/politics/greensboro-nc-data-center-moratorium-denise-roth/).
+The draft council had [voted on August 3 to take to a
+hearing](https://www.wfdd.org/politics-government/2026-08-04/greensboro-randolph-officials-take-steps-to-address-data-centers)
+was 120 days; council lengthened it after public input, and residents in the
+room were asking for 32 months. The
+[North State Journal](https://nsjonline.com/article/2026/09/data-center-moratorium-count-rises-again/)
+puts the end in mid-February 2027. [Community page](/communities/greensboro-nc.html).
+
+**Durham County, August 24 — nine months, 100,000 sq ft threshold, with an
+exemption.** The county's own [manager's
+update](https://dconc.gov/DurhamCo-News/From-the-Desk-to-the-County-Manager-August-28-2026.htm)
+describes a moratorium on "the creation of new data centers and the expansion
+of current data centers, beyond 100,000 total square feet," with a staff draft
+ordinance due in December and adoption targeted for May.
+[WFAE](https://www.wfae.org/2026-08-26/durham-county-data-center-moratorium)
+reports the vote was 4-1, that it runs to May 2027 in step with the City of
+Durham's separate pause, and that the lone no vote, Commissioner Nida Allam,
+objected to the exemption: facilities under 100,000 square feet that use
+closed-loop cooling and have no diesel backup generators are not covered. If
+you live near a smaller proposed site, read that exemption twice.
+[Community page](/communities/durham-county-nc.html).
+
+**Kings Mountain, August 25 — extended twelve months.** The city's original
+182-day pause, adopted in February, was set to lapse the same week. The
+[August 25 agenda](https://www.cityofkm.com/AgendaCenter/ViewFile/Agenda/_08252026-984)
+gave council two ordinances to choose from, a 12-month extension and a 6-month
+one. Per the [North State
+Journal](https://nsjonline.com/article/2026/09/data-center-moratorium-count-rises-again/),
+council took the year. [Community page](/communities/kings-mountain-nc.html).
+
+**Whiteville, August 25 — twelve months, with an early-end clause.** The city
+council enacted an immediate pause on new data centers, data processing
+facilities and cryptocurrency mining, running to August 25, 2027 "or until the
+city adopts a zoning ordinance text amendment addressing these land uses,
+whichever comes first," per
+[WECT](https://www.wect.com/2026/08/26/whiteville-approves-12-month-moratorium-new-data-centers-crypto-mining/).
+The stated concerns were water for cooling, electricity demand, diesel backup
+emissions and noise, and the fact that the city's code had no definition for
+any of it.
+
+## What the fine print has in common
+
+**Thresholds cut both ways.** Alamance and Greensboro draw the line at 10 MW;
+Durham County at 100,000 square feet. A threshold keeps a pause from sweeping
+in a hospital's server room, which is why counsel likes it. It also means a
+developer can size a first phase to slip under it. Ask your own planning staff
+which number their draft uses, and why.
+
+**"County" often means "unincorporated."** Yadkin's board said so on the
+record. Durham County and the City of Durham have two separate moratoriums
+with two separate end dates. If your project sits inside town limits, a county
+pause may not apply to it at all, and a hearing where you cite the wrong one
+is a hearing you lose.
+
+**The clock has escape hatches.** Whiteville's pause ends the day the city
+adopts a text amendment. Alamance requires a decision meeting 30 days before
+expiry. Kings Mountain shows the other direction: a "six-month" pause adopted
+in February now runs eighteen months. Our tracker derives each row's status from its stated end
+date, so a lapsed pause shows as *Expired* rather than staying "Enacted"
+forever. Check the date on the row before you read it aloud.
+
+**Length is negotiable in the room.** Yadkin doubled its term after an hour of
+comment. Greensboro added two months. Neither board arrived intending to do
+that. Show up with a specific number and a reason for it.
+
+## What this does not tell you
+
+A moratorium is a pause, not a policy. Every one of the eight is explicitly a
+window for staff to write rules, and the rules are where the substance will be:
+setbacks, noise limits, water sourcing, who pays for grid upgrades. Several of
+these jurisdictions have said drafts are due this winter. That is the meeting
+to prepare for. The [Start here](/start-here.html) guide walks through what to
+ask for when the ordinance draft lands.
+
+## See also
+
+- [North Carolina state page](/states/north-carolina.html) — every tracked
+  locality, project and pause in the state, with sources
+- [Moratorium tracker](/moratoriums.html) — all 397 rows nationwide, with
+  end dates and verification status
+""",
+    },
     # ── New Jersey's ban wave, and the trouble with counting it ──
     {
         "id": "new-jersey-ban-count-2026",

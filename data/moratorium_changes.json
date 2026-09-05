@@ -131,5 +131,19 @@
     "locality": "Larimer County, CO",
     "kind": "status_changed",
     "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "whiteville-nc",
+    "locality": "Whiteville, NC",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "greensboro-nc",
+    "locality": "Greensboro, NC",
+    "kind": "status_changed",
+    "detail": "Proposed \u2192 Enacted"
   }
 ]

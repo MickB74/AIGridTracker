@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/nc-august-moratorium-wave-2026",
+      "destination": "/blog/nc-august-moratorium-wave-2026",
+      "permanent": true
+    },
+    {
       "source": "/new-jersey-ban-count-2026",
       "destination": "/blog/new-jersey-ban-count-2026",
       "permanent": true

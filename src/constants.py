@@ -942,6 +942,15 @@ MORATORIUMS = [
              "ordinance due December",
      "lat": 36.04, "lon": -78.88, "expires": "2027-05-18", "as_of": "2026-09-04",
      "source": "https://dconc.gov/DurhamCo-News/From-the-Desk-to-the-County-Manager-August-28-2026.htm"},
+    {"locality": "Whiteville", "state": "NC", "level": "Local",
+     "status": "Enacted", "when": "Aug 25, 2026",
+     "note": "12-month moratorium on new data centers, data processing "
+             "facilities and cryptocurrency mining, effective immediately and "
+             "running to Aug 25, 2027 or until the city adopts a zoning text "
+             "amendment for these uses, whichever comes first. Staff to draft "
+             "location, size and proximity standards",
+     "lat": 34.34, "lon": -78.70, "expires": "2027-08-25", "as_of": "2026-09-05",
+     "source": "https://www.wect.com/2026/08/26/whiteville-approves-12-month-moratorium-new-data-centers-crypto-mining/"},
     {"locality": "Edgecombe County", "state": "NC", "level": "Local",
      "status": "Enacted", "when": "Aug 3, 2026",
      "note": "2-year moratorium, 5-0 of members present after a public hearing: "
@@ -1405,12 +1414,14 @@ MORATORIUMS = [
      "source": "https://www.yakimaherald.com/news/local/government/yakima-county-commissioners-pass-six-month-data-center-moratorium/article_997dbbc7-7fe0-476a-9d92-73179f958bf7.html",
      "term": "fixed_undated"},
     {"locality": "Greensboro", "state": "NC", "level": "Local",
-     "status": "Proposed", "when": "Public hearing Aug 17, 2026",
-     "note": "Council voted 5-4 on Jul 21 against even starting the moratorium "
-             "process, then reversed course and set a public hearing on a 120-day "
-             "pause for facilities above 10 MW. Nothing is in effect yet",
-     "lat": 36.07, "lon": -79.79, "expires": None, "as_of": "2026-08-04",
-     "source": "https://www.wfdd.org/politics-government/2026-08-04/greensboro-randolph-officials-take-steps-to-address-data-centers"},
+     "status": "Enacted", "when": "Aug 18, 2026",
+     "note": "180-day pause on applications for data centers with electrical "
+             "demand above 10 MW, 8-0 with one recusal, after a hearing at which "
+             "residents asked for 32 months. Council had voted 5-4 on Jul 21 "
+             "against starting the process, then reversed; the 120-day draft was "
+             "lengthened to 180 after public input. Runs to mid-February 2027",
+     "lat": 36.07, "lon": -79.79, "expires": "2027-02-14", "as_of": "2026-09-05",
+     "source": "https://greensborothread.com/news/politics/greensboro-nc-data-center-moratorium-denise-roth/"},
     {"locality": "New Haven", "state": "CT", "level": "Local",
      "status": "Proposed", "when": "Jul 6, 2026",
      "note": "12-month moratorium pitched; would bar city departments from "
