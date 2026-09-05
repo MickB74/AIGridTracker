@@ -188,11 +188,18 @@ Then push. `web/` is committed output, so the post and its rendered pages ship
 in one commit:
 
 ```bash
-git pull --rebase && git add -A src/blog_content.py web/ data/ && git commit -m "post: <title>" && git push
+git add -A src/blog_content.py web/ data/ vercel.json && git commit -m "post: <title>" && git pull --rebase && git push
 ```
 
-Rebase first — CI pushes to `master` daily and a diverged local branch is the
-one failure mode here.
+**Commit first, then rebase, then push — in that order.** The build leaves
+`web/` and `data/` dirty, and `git pull --rebase` refuses to run on a tree with
+unstaged changes (`cannot pull with rebase: You have unstaged changes`). An
+earlier version of this file put the pull first, which fails every time by
+construction: step 5 always runs with a dirty tree, because that is what step 5
+just built. Committing first gives the rebase something to replay.
+
+Still rebase before pushing — CI pushes to `master` daily, and a diverged local
+branch is the one failure mode here.
 
 If the build fails or `git pull --rebase` conflicts, **do not force anything**.
 Leave the tree as-is and report what broke.
