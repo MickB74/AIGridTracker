@@ -1,58 +1,69 @@
-ProjectName,ProjectID,ProjectType,Permits,Map,ProjectStatus,PermitStatus,Municipality,County,DEPRegion,FastTrack,Latitude,Longitude
-Project Hazelnut (NorthPoint Development),10000001,Data Center,YES,YES,Under Review,Pending,Hazle Township,Luzerne,Northeast,Yes,40.956861,-76.035028
-Salem Township Data Center Development (Amazon Web Services),10000002,Data Center,YES,YES,DEP Review Complete,Complete,Salem Township,Luzerne,Northeast,Yes,41.109278,-76.143611
-Project Gravity (Archbald 25 Developer LLC),10000003,Data Center,YES,YES,Under Review,Pending,Archbald Borough,Lackawanna,Northeast,No,41.524918,-75.562403
-Kline Township Data Center Development (Amazon Web Services),10000004,Data Center,YES,YES,Under Review,Pending,Kline Township,Schuylkill,Northeast,Yes,40.880089,-76.013999
-Project Boson / Highway Auto Data Center (Kriger Construction Company),10000005,Data Center,YES,YES,Under Review,Pending,Archbald Borough,Lackawanna,Northeast,No,41.512042,-75.558133
-Project Atlas (Edged US / CDE Acquisitions),10000006,Data Center,YES,YES,Under Review,Pending,South Whitehall Township,Lehigh,Northeast,No,40.643472,-75.537083
-Carbon Node East / Panther Creek (Keel Infrastructure),10000007,Data Center,YES,YES,Under Review,Pending,Nesquehoning Borough,Carbon,Northeast,No,40.856052,-75.876873
-QTS Salem (QTS Data Centers),10000008,Data Center,YES,YES,Under Review,Pending,Salem Township,Luzerne,Northeast,Yes,41.069512,-76.170543
-Falls Township Data Center Development (Amazon Web Services),10000009,Data Center,YES,YES,DEP Review Complete,Complete,Falls Township,Bucks,Southeast,Yes,40.154944,-74.744417
-Project Forge Data Center (Sentinel Green Fig LLC),10000010,Data Center,YES,YES,Under Review,Pending,East Whiteland Township,Chester,Southeast,No,40.040644,-75.583066
-Pennsylvania Digital 1 (PAX-1) (Pennsylvania Data Center Partners),10000011,Data Center,YES,YES,Under Review,Pending,Middlesex Township,Cumberland,Southcentral,Yes,40.255656,-77.118747
-216 Greenfield Road (Chirisa Technology Parks),10000012,Data Center,YES,YES,DEP Review Complete,Complete,Lancaster City,Lancaster,Southcentral,No,40.04868,-76.259216
-Unnamed Data Center (Homer City Redevelopment LLC),10000013,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Center Township,Indiana,Northwest,No,40.511509,-79.197647
-Project Phoenix (Aligned Data Centers),10000014,Data Center,YES,YES,Under Review,Pending,Shippingport Borough,Beaver,Southwest,Yes,40.633333,-80.418083
-Highridge Data Center (NorthPoint Development),10000015,Data Center,YES,YES,Under Review,Pending,Butler Township,Schuylkill,Northeast,No,40.739419,-76.30971
-Wyalusing Energy Center (Klondike Digital Infrastructure) ,10000016,Data Center,YES,YES,Under Review,Pending,Wyalusing Township,Bradford,Northcentral,No,41.653734,-76.234913
-Project Hummingbird (International Electric Power),10000017,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Monongahela Township,Greene,Southwest,Yes,39.836695,-79.934643
-Pittsburgh International Race Complex Data Center (Wampum I LLC),10000018,Data Center,YES,YES,Under Review,Pending,Big Beaver Borough,Beaver,Southwest,No,40.849164,-80.345682
-Springdale Data Center (Allegheny DC Property Co. LLC),10000019,Data Center,YES,YES,Under Review,Pending,Springdale Borough,Allegheny ,Southwest,No,40.538293,-79.789708
-Keystone Connect (TECfusions),10000020,Data Center,YES,YES,DEP Review Complete,Complete,Upper Burrell Township,Westmoreland,Southwest,No,40.548872,-79.646673
-Sharon Data Center Project (Keel Infrastructure),10000021,Data Center,YES,YES,Under Review,Pending,City of Sharon,Mercer,Northwest,Yes,41.244194,-80.504278
-Starpointe Data Center (Prime Data Centers),10000022,Data Center,YES,YES,Under Review,Pending,Hanover Township,Washington,Southwest,No,40.429087,-80.410839
-Spring Mountain Quakake Tunnel (NorthPoint Development ),10000023,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Spring Mountain / Packer / Banks Townships,Carbon,Northeast,No,40.919672,-75.919695
-Unnamed Data Center (Linde Corporation),10000024,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Clinton Township,Wayne,Northeast,No,41.645475,-75.451135
-Nescopeck / Valley View Wood Data Center,10000025,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Nescopeck Township,Luzerne,Northeast,No,41.038306,-76.169701
-Unnamed Data Centers (Archbald I LLC / Archbald II LLC),10000026,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Archbald Borough,Lackawanna,Northeast,No,41.52458,-75.553656
-Wildcat Ridge (Pine Line Inc),10000027,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Archbald Borough,Lackawanna,Northeast,No,41.500385,-75.587248
-Patrinely-Provident Real Estate Data Center,10000028,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Archbald Borough,Lackawanna,Northeast,No,41.516635,-75.564383
-Lower Mount Bethel Technology Center (Peron Development),10000029,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Lower Mount Bethel Township,Northampton,Northeast,No,40.803772,-75.109743
-River Pointe Data Center,10000030,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Upper Mount Bethel Township,Northampton,Northeast,No,40.91249,-75.099765
-Gouldsboro Data Center Project / Project Gold (Quantm Group LLC / 1778 Rich Pike LLC),10000031,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Clifton / Covington Townships,Lackawanna,Northeast,No,41.24927,-75.514587
-Newport Ridge Data & Energy Center,10000032,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Newport Township,Luzerne,Northeast,No,41.180821,-76.052982
-Project Green Mountain (Green Mountain 6 LLC),10000033,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Archbald Borough,Lackawanna,Northeast,No,41.507665,-75.523531
-Unnamed Data Center (Verdantas / Prologis),10000034,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Allen Township,Northampton,Northeast,No,40.700509,-75.478886
-Unnamed Data Center (LBT Investment Group LLC),10000035,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Sugarloaf Township,Luzerne,Northeast,No,40.970932,-76.07323
-Emaus Ave Warehouse (Quantm LLC),10000036,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,City of Allentown,Lehigh,Northeast,No,40.567406,-75.474544
-Unnamed Data Center (Brewster Land Company LLC),10000037,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Dorrance Township,Luzerne,Northeast,No,41.095141,-75.997345
-Breaker Street Data Center (Breaker Street Associates LLC) ,10000038,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Jessup Borough,Lackawanna,Northeast,No,41.474623,-75.550695
-Sunnyside Road Data Center (Sunnyside Road Associates LLC),10000039,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Jessup Borough,Lackawanna,Northeast,No,41.468192,-75.550657
-Unnamed Data Center (Pocono Manor Investors),10000040,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Tobyhanna Township,Monroe,Northeast,No,41.120538,-75.517713
-Smithfield Gateway Project (DEPG Moiser Assoc. LP / DEPG of Shawnee II Assoc. LP),10000041,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Smithfield Township,Monroe,Northeast,No,41.006366,-75.148804
-West Hazelton Data Center (One Trinity Real Estate),10000042,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,West Hazelton Borough,Luzerne,Northeast,No,40.965302,-76.013331
-Scranton Materials Data Center,10000043,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Ransom Township,Lackawanna,Northeast,No,41.443052,-75.702123
-Dickson City Data Center (Dickson City Development LLC),10000044,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Dickson City Borough,Lackawanna,Northeast,No,41.468988,-75.642736
-TekPark Data Center Expansion (TierPoint),10000045,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Upper Macungie Township,Lehigh,Northeast,No,40.545066,-75.655952
-Unnamed Data Center (KSR),10000046,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Plains Township,Luzerne,Northeast,No,41.270147,-75.810385
-Unnamed Data Center (Avison Young),10000047,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,City of Wilkes-Barre,Luzerne,Northeast,No,41.245179,-75.881659
-4-3 Salem Township Data Center (4-3 Glen Brook Group) ,10000048,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Salem Township,Luzerne,Northeast,No,41.081402,-76.197027
-Hunlock Data Center (Castleton Commodities),10000049,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Hunlock Township,Luzerne,Northeast,No,41.23021,-76.099584
-Frackville Data (KRNL Data Centers),10000050,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,New Caste Township,Schuylkill,Northeast,No,40.774345,-76.237631
-Unnamed Data Center (Hendricks),10000051,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Penn Forest Township,Carbon,Northeast,No,40.898121,-75.686933
-Unnamed Data Center (Amazon Web Services),10000053,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Center Township,Indiana,Northwest,No,40.511609,-79.198647
-Unnamed Data Center (Fezzik Energy),10000054,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Midland Borough,Beaver,Southwest,No,40.631349,-80.236332
-Londonderry Data Center,10000055,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Londonderry Township,Dauphin,Southcentral,No,40.187142,-76.677316
-Highlands East Data Center,10000056,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Lower Swatara / Swatara Townships,Dauphin,Southcentral,No,40.230539,-76.793893
-Highlands West Data Center,10000057,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Lower Swatara / Swatara Townships,Dauphin,Southcentral,No,40.230539,-76.793893
-Zediker Station Data Center (CNX),10000058,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,South Strabane Township,Washington,Southwest,No,40.158686,-80.176944
+ProjectName,ProjectID,ProjectType,Permits,Map,ProjectStatus,PermitStatus,Municipality,County,DEPRegion,Latitude,Longitude
+Project Hazelnut (NorthPoint Development),10000001,Data Center,YES,YES,Under Review,Pending,Hazle Township,Luzerne,Northeast,40.956861,-76.035028
+Salem Township Data Center Development (Amazon Web Services) - Phase 1,10000002,Data Center,YES,YES,DEP Review Complete,Complete,Salem Township,Luzerne,Northeast,41.109278,-76.143611
+Project Gravity (Archbald 25 Developer LLC),10000003,Data Center,YES,YES,Under Review,Pending,Archbald Borough,Lackawanna,Northeast,41.524918,-75.562403
+Kline Township Data Center Development (Amazon Web Services),10000004,Data Center,YES,YES,Under Review,Pending,Kline Township,Schuylkill,Northeast,40.880089,-76.013999
+Project Boson / Highway Auto Data Center (Kriger Construction Company),10000005,Data Center,YES,YES,Under Review,Pending,Archbald Borough,Lackawanna,Northeast,41.512042,-75.558133
+Project Atlas (Edged US / CDE Acquisitions),10000006,Data Center,YES,YES,Under Review,Pending,South Whitehall Township,Lehigh,Northeast,40.643472,-75.537083
+Carbon Node East / Panther Creek (Keel Infrastructure),10000007,Data Center,YES,YES,Under Review,Pending,Nesquehoning Borough,Carbon,Northeast,40.856052,-75.876873
+QTS Salem (QTS Data Centers),10000008,Data Center,YES,YES,Under Review,Pending,Salem Township,Luzerne,Northeast,41.069512,-76.170543
+Falls Township Data Center Development (Amazon Web Services) - Phase 1,10000009,Data Center,YES,YES,DEP Review Complete,Complete,Falls Township,Bucks,Southeast,40.154944,-74.744417
+Project Forge Data Center (Sentinel Green Fig LLC),10000010,Data Center,YES,YES,Under Review,Pending,East Whiteland Township,Chester,Southeast,40.039418,-75.587083
+Pennsylvania Digital 1 (PAX-1) (Pennsylvania Data Center Partners),10000011,Data Center,YES,YES,Under Review,Pending,Middlesex Township,Cumberland,Southcentral,40.255656,-77.118747
+216 Greenfield Road (Chirisa Technology Parks),10000012,Data Center,YES,YES,DEP Review Complete,Complete,Lancaster City,Lancaster,Southcentral,40.04868,-76.259216
+Unnamed Data Center (Homer City Redevelopment LLC),10000013,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Center Township,Indiana,Northwest,40.511509,-79.197647
+Project Phoenix (Aligned Data Centers) - Phase 1,10000014,Data Center,YES,YES,Under Review,Pending,Shippingport Borough,Beaver,Southwest,40.633333,-80.418083
+Highridge Data (NorthPoint Development) Project Nebius,10000015,Data Center,YES,YES,Under Review,Pending,Butler Township,Schuylkill,Northeast,40.739419,-76.30971
+Wyalusing Energy Center (Klondike Digital Infrastructure) ,10000016,Data Center,YES,YES,Under Review,Pending,Wyalusing Township,Bradford,Northcentral,41.653734,-76.234913
+Project Hummingbird (International Electric Power),10000017,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Monongahela Township,Greene,Southwest,39.836695,-79.934643
+Pittsburgh International Race Complex Data Center (Wampum I LLC),10000018,Data Center,YES,YES,Under Review,Pending,Big Beaver Borough,Beaver,Southwest,40.849164,-80.345682
+Springdale Data Center (Allegheny DC Property Co. LLC),10000019,Data Center,YES,YES,Under Review,Pending,Springdale Borough,Allegheny ,Southwest,40.538293,-79.789708
+Keystone Connect (TECfusions),10000020,Data Center,YES,YES,DEP Review Complete,Complete,Upper Burrell Township,Westmoreland,Southwest,40.548872,-79.646673
+Sharon Data Center Project (Keel Infrastructure),10000021,Data Center,YES,YES,Under Review,Pending,City of Sharon,Mercer,Northwest,41.244194,-80.504278
+Starpointe Data Center (Prime Data Centers),10000022,Data Center,YES,YES,Under Review,Pending,Hanover Township,Washington,Southwest,40.429087,-80.410839
+Spring Mountain Quakake Tunnel (NorthPoint Development),10000023,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Spring Mountain / Packer / Banks Townships,Carbon,Northeast,40.919672,-75.919695
+Linde Data Center / Forest City Energy Center LLC,10000024,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Clinton Township,Wayne,Northeast,41.645475,-75.451135
+Nescopeck / Valley View Wood Data Center,10000025,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Nescopeck Township,Luzerne,Northeast,41.038306,-76.169701
+Unnamed Data Centers (Archbald I LLC / Archbald II LLC),10000026,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Archbald Borough,Lackawanna,Northeast,41.52458,-75.553656
+Wildcat Ridge (Pine Line Inc),10000027,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Archbald Borough,Lackawanna,Northeast,41.500385,-75.587248
+Project Scott (Patrinely-Provident Real Estate),10000028,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Archbald Borough,Lackawanna,Northeast,41.516635,-75.564383
+Lower Mount Bethel Technology Center (Peron Development),10000029,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Lower Mount Bethel Township,Northampton,Northeast,40.803772,-75.109743
+River Pointe Data Center,10000030,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Upper Mount Bethel Township,Northampton,Northeast,40.91249,-75.099765
+Gouldsboro Data Center Project / Project Gold (Quantm Group LLC / 1778 Rich Pike LLC),10000031,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Clifton / Covington Townships,Lackawanna,Northeast,41.24927,-75.514587
+Newport Ridge Data Center,10000032,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Newport Township,Luzerne,Northeast,41.180821,-76.052982
+Project Green Mountain (Green Mountain 6 LLC),10000033,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Archbald Borough,Lackawanna,Northeast,41.507665,-75.523531
+Unnamed Data Center (Verdantas / Prologis),10000034,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Allen Township,Northampton,Northeast,40.700509,-75.478886
+Unnamed Data Center (LBT Investment Group LLC),10000035,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Sugarloaf Township,Luzerne,Northeast,40.970932,-76.07323
+Emaus Ave Warehouse (Quantm LLC),10000036,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,City of Allentown,Lehigh,Northeast,40.567406,-75.474544
+Unnamed Data Center (Brewster Land Company LLC),10000037,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Dorrance Township,Luzerne,Northeast,41.095141,-75.997345
+Breaker Street Data Center (Breaker Street Associates LLC) ,10000038,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Jessup Borough,Lackawanna,Northeast,41.474623,-75.550695
+Sunnyside Road Data Center (Sunnyside Road Associates LLC),10000039,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Jessup Borough,Lackawanna,Northeast,41.468192,-75.550657
+Unnamed Data Center (Pocono Manor Investors),10000040,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Tobyhanna Township,Monroe,Northeast,41.120538,-75.517713
+Smithfield Gateway Project (DEPG Moiser Assoc. LP / DEPG of Shawnee II Assoc. LP),10000041,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Smithfield Township,Monroe,Northeast,41.006366,-75.148804
+West Hazelton Data Center (One Trinity Real Estate),10000042,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,West Hazelton Borough,Luzerne,Northeast,40.965302,-76.013331
+Scranton Materials Data Center,10000043,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Ransom Township,Lackawanna,Northeast,41.443052,-75.702123
+Dickson City Data Center (Dickson City Development LLC),10000044,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Dickson City Borough,Lackawanna,Northeast,41.468988,-75.642736
+TekPark Data Center Expansion (TierPoint),10000045,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Upper Macungie Township,Lehigh,Northeast,40.545066,-75.655952
+Unnamed Data Center (KSR),10000046,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Plains Township,Luzerne,Northeast,41.270147,-75.810385
+Unnamed Data Center (Avison Young),10000047,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,City of Wilkes-Barre,Luzerne,Northeast,41.245179,-75.881659
+4-3 Salem Township Data Center (4-3 Glen Brook Group) ,10000048,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Salem Township,Luzerne,Northeast,41.081402,-76.197027
+Hunlock Data Center (Castleton Commodities),10000049,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Hunlock Township,Luzerne,Northeast,41.23021,-76.099584
+Frackville Data (KRNL Data Centers),10000050,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,New Caste Township,Schuylkill,Northeast,40.774345,-76.237631
+Unnamed Data Center (Hendricks),10000051,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Penn Forest Township,Carbon,Northeast,40.963987,-75.619176
+Unnamed Data Center (Amazon Web Services),10000052,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Center Township,Indiana,Northwest,40.511609,-79.198647
+Unnamed Data Center (Fezzik Energy),10000053,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Midland Borough,Beaver,Southwest,40.631349,-80.236332
+Londonderry Data Center,10000054,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Londonderry Township,Dauphin,Southcentral,40.187142,-76.677316
+Highlands East Data Center (Corscale),10000055,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Lower Swatara / Swatara Townships,Dauphin,Southcentral,40.230539,-76.793893
+Highlands West Data Center (Corscale),10000056,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,Swatara Township,Dauphin,Southcentral,40.230539,-76.793893
+Zediker Station Data Center (CNX),10000057,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedUnlocated,South Strabane Township,Washington,Southwest,40.158686,-80.176944
+PECO - Limerick Distribution Project (67 MW),10000058,Data Center,YES,YES,Under Review,Pending, East Coventry / Lower Pottsgrove / Limerick Townships,Chester / Montgomery,Southeast,40.230703,-75.593175
+900 Conshohocken Rd. Data Center (MLP Ventures),10000059,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Plymouth Township,Montgomery,Southeast,40.087383,-75.318547
+600 River Rd. Data Center (MLP Ventures),10000060,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Upper Merion Township,Montgomery,Southeast,40.094182,-75.327152
+2100 Renaissance Blvd. Data Center (MLP Ventures),10000061,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Upper Merion Township,Montgomery,Southeast,40.084261,-75.335954
+"2201, 2301, 2501, 2701, & 2901 Renaissance Blvd. Data Center (MLP Ventures)",10000062,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Upper Merion Township,Montgomery,Southeast,40.082889,-75.337809
+3200 Horizon Dr. Data Center (MLP Ventures),10000063,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Upper Merion Township,Montgomery,Southeast,40.08714,-75.338712
+411 Swedeland Rd. Data Center (MLP Ventures),10000064,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,Upper Merion Township,Montgomery,Southeast,40.076056,-75.333721
+1205 Commonwealth Dr. Data Center (former Pennhurst Asylum),10000065,Data Center,NO,YES,Proposed (No Applications Received),UnsubmittedLocated,East Vincent Township,Chester,Southeast,40.194295,-75.561253
+Salem Township Data Center Development (Amazon Web Services) - Phase 2,10000066,Data Center,YES,YES,Under Review,Pending,Salem Township,Luzerne,Northeast,41.109278,-76.143611
+Falls Township Data Center Development (Amazon Web Services) - Phase 2,10000067,Data Center,YES,YES,Under Review,Pending,Falls Township,Bucks,Southeast,40.154944,-74.744417
+Project Phoenix (Aligned Data Centers) - Phase 2,10000068,Data Center,YES,YES,Under Review,Pending,Shippingport Borough,Beaver,Southwest,40.633333,-80.418083

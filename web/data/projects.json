@@ -1,12 +1,12 @@
 {
   "name": "AI GridWatch data center project tracker",
-  "generated": "2026-09-04",
+  "generated": "2026-09-05",
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/projects",
-  "count": 271,
-  "verified_count": 270,
+  "count": 272,
+  "verified_count": 271,
   "caveat": "A working set of identified proposals a community can track, not a census — most of the country's activity is not in here yet. Pennsylvania is the exception: its rows are synced from PA DEP's own data-center permit tracker, so the state's coverage is close to complete and carries the permit trail with it.\n\n**Each row carries its own provenance.** Rows showing a verification date link to reporting or the governing body's own record and were read on that date; rows marked *unverified* have no source on record — a lead to check, not a fact to cite.\n\n**Stage is derived, not asserted.** *Hearing scheduled*, *Awaiting decision*, *Approved* and *Withdrawn* are computed from each row's milestone dates on every rebuild, so a hearing date that has passed stops reading 'scheduled'. Hearings get moved and projects re-file under new names — treat a scheduled date as the earliest to act by, and confirm with the clerk before relying on it. Leads are mined into data/project_candidates.json and promoted here only after a human reads a primary source.",
   "schema": {
     "id": "Stable slug, unique per project.",
@@ -152,7 +152,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Hearing scheduled",
-      "days_to_hearing": 20,
+      "days_to_hearing": 19,
       "note": "By-right data center on the 34-acre 6299 Edsall Road site; the required substation faces a Fairfax County Planning Commission Public Facilities (2232) review on Sept 24, 2026 amid organized opposition.",
       "source": "https://www.ffxnow.com/2026/08/04/pressure-grows-on-fairfax-county-to-deny-substation-for-data-center-in-lincolnia/",
       "as_of": "2026-08-07",
@@ -329,7 +329,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -36,
+      "days_to_hearing": -37,
       "note": "~129-acre hyperscale campus proposed across from Rural Hall town hall; Forsyth County Planning Board recommended denial. Commissioners held the public hearing July 30, 2026 - decision pending.",
       "source": "https://www.wfdd.org/politics-government/2026-07-28/proposed-rural-hall-data-center-up-for-public-hearing-thursday",
       "as_of": "2026-08-07",
@@ -491,7 +491,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -17,
+      "days_to_hearing": -18,
       "note": "Two-story 230,000 sq ft data center plus a 32,000 sq ft substation on ~26.5 acres at 6539 Burkhalter Road (R-4 residential to Office & Business rezoning). Planning Commission recommended approval 5-1; City Council decides Aug 18, 2026. Bulloch County, separately, has been extending data-center moratoriums.",
       "source": "https://www.wtoc.com/2026/08/04/statesboro-planning-commission-backs-proposed-data-center-rezoning-5-1-vote/",
       "as_of": "2026-08-07",
@@ -671,7 +671,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -10,
+      "days_to_hearing": -11,
       "note": "200 MW campus in three buildings on ~89 acres at Broad St SW & Mink St SW. Planning & Zoning recommended rejection 5-2 after protests filled City Hall; City Council decides Aug 25, 2026 (5:30 p.m.). Council has separately advanced a ballot measure that could ban large data centers.",
       "source": "https://www.thereportingproject.org/pataskala-planning-board-says-city-council-should-reject-aligned-data-centers-proposal/",
       "as_of": "2026-08-07",
@@ -1958,7 +1958,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -31,
+      "days_to_hearing": -32,
       "note": "Commissioners stated at an Aug 4, 2026 meeting in Mount Vernon that they will vote no on the proposed data center near Boberg and Hoenert Roads, while continuing to evaluate proposals elsewhere in the county. The developer is unnamed; commissioners disclosed they signed an NDA despite no official proposal. Residents submitted hundreds of opposition letters and requested a two-year moratorium; no formal vote has been reported.",
       "source": "https://www.14news.com/2026/08/04/posey-co-commissioners-vote-no-proposed-data-center-near-boberg-hoenert-rd/",
       "as_of": "2026-08-14",
@@ -2261,7 +2261,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -11,
+      "days_to_hearing": -12,
       "note": "Verrus (with Walbridge as general contractor) is developing the Project Flex data center on Milford Road in Lyon Township. The Planning Commission gave initial approval on Sept 8, 2025; final site-plan approval review is anticipated at the commission's Aug 24, 2026 meeting. Verrus is offering a $10M community benefits package and its attorney has warned of legal action if approval is further delayed; residents organized as 'No Data Center Lyon Township' oppose the project.",
       "source": "https://www.wxyz.com/news/region/oakland-county/project-flex-data-center-eyes-final-lyon-township-approval-amid-pushback-from-nearby-residents",
       "as_of": "2026-08-14",
@@ -2372,7 +2372,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -130,
+      "days_to_hearing": -131,
       "note": "TeraWulf leases 183 acres of the 434-acre former Cayuga Power Plant site on Cayuga Lake in Lansing, NY, proposing ~125 acres of development: Phase 1 of 150 MW across three buildings plus a Phase 2 of another 150 MW. On April 27, 2026 the Lansing Planning Board deemed the site-plan application incomplete and requested lease details, construction-traffic data, and landscaping clarification; environmental groups' lawsuit over the Zoning Board's permit interpretation survived a standing challenge on April 29.",
       "source": "https://www.ithaca.com/news/regional_news/terawulf-s-proposed-data-center-faces-local-delays-pushback/article_8949eab1-47fd-46df-87ec-841b76a6527b.html",
       "as_of": "2026-08-14",
@@ -2471,7 +2471,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Hearing scheduled",
-      "days_to_hearing": 6,
+      "days_to_hearing": 5,
       "note": "Atmosphere Data Centers (which took over the project from Terra Innovations, whose initial conditional-use application dates to January 2024) proposes a five-building data center campus on 110 acres at the decommissioned Dickerson Generating Station coal plant site; a major modification to the conditional use was filed in December 2025 and amended plans are on Montgomery Planning's development database. On 2026-07-28 the Montgomery County Council approved an 18-month moratorium on new data center approvals that encompasses this proposal; Office of Zoning and Administrative Appeals hearings had been scheduled for Sept 10-11, 2026.",
       "source": "https://www.sugarloafcitizens.org/issues-blog/lets-hit-pause-on-dickerson-data-center",
       "as_of": "2026-08-14",
@@ -2570,7 +2570,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -32,
+      "days_to_hearing": -33,
       "note": "Stream US Data Centers proposes a $19.46 billion, three-building, roughly 600 MW data center campus at the STAMP site in the Town of Alabama, Genesee County. The Town Planning Board reviewed site-plan conditions (annual noise monitoring, heat-island mitigation, a dedicated code enforcement officer) and was expected to vote July 6, but both July meetings were cancelled after GCEDC, the SEQRA lead agency, could not complete environmental-review documentation; the next scheduled Planning Board meeting was Aug 3, 2026. GCEDC's CEO says the project keeps moving unless New York's passed-but-unsigned statewide data center moratorium becomes law.",
       "source": "https://videonewsservice.net/index.php/2026/06/17/genesee-county-alabama-planning-board-expected-to-vote-july-6th-on-data-center-site-plan-approval/",
       "as_of": "2026-08-14",
@@ -2675,7 +2675,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -30,
+      "days_to_hearing": -31,
       "note": "Maryland-based Stonebridge Associates has applied to build a data center campus at the Powder Mill Works commercial development site spanning North Beaver and Mahoning townships in Lawrence County, PA. The application was rejected administratively because a required $3,000 Lawrence County escrow check was missing, and back-to-back zoning hearings in early August 2026 argued over whether the application was validly filed - which determines whether older April or newer June zoning rules apply. The zoning board deferred its ruling, expected within 45 days.",
       "source": "https://www.aol.com/articles/zoning-hearing-addresses-data-center-022942000.html",
       "as_of": "2026-08-14",
@@ -2774,7 +2774,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -4,
+      "days_to_hearing": -5,
       "note": "Prime Data Centers filed a conditional-use application in May 2026 for a seven-building, ~1.7 million sq ft data center campus with an attached behind-the-meter 450 MW gas-fired power plant on roughly 126 acres of reclaimed strip-mine land in the Starpointe Business Park (land owned by ALTIAN Development LLC), near the Pavilion at Starlake. The Aug. 5 conditional-use hearing drew 200+ residents; about three dozen won party status, and residents' attorneys argued the application belongs before the zoning hearing board rather than the supervisors, so the hearing was continued to Aug. 31 without Prime presenting.",
       "source": "https://www.observer-reporter.com/news/local-news/2026/aug/07/hanover-township-continues-starpointe-data-center-meeting/",
       "as_of": "2026-08-14",
@@ -2831,7 +2831,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -18,
+      "days_to_hearing": -19,
       "note": "900 Conshohocken Road LLC, an entity of developer Brian O'Neill, seeks a special exception from Plymouth Township's zoning hearing board to convert the recently closed Cleveland-Cliffs steel mill — 10 existing buildings totaling about 2 million sq ft on 66 acres along the Schuylkill River — into a data center. The Aug. 6 hearing nearly filled a 750-seat auditorium; Conshohocken Borough was granted party status while Norristown was denied. The board set a procedural-only session for Aug. 17, with testimony continuing in September; an opposition petition has topped 4,000 signatures.",
       "source": "https://morethanthecurve.com/almost-full-house-for-conshohocken-data-center-hearing-before-plymouth-townships-zoning-hearing-board/",
       "as_of": "2026-08-14",
@@ -3875,7 +3875,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -11,
+      "days_to_hearing": -12,
       "note": "Black Chamber Partners (a BlackChamber Group affiliate) and co-developer Pacifico Energy plan a 2,842-acre data center campus at 382 Earl Callahan Road near Cedar Creek with a 710 MW gas-fired energy facility, a ~$2.2 billion investment with two 100% county tax-abatement applications under review; construction is estimated for September 2026 through October 2028. Neighboring property owners filed motions July 20 asking TCEQ to overturn two construction stormwater permits issued in mid-July.",
       "source": "https://communityimpact.com/bastrop-cedar-creek/government/bastrop-county-residents-challenge-tceq-data-center-permits-as-officials-table-request-for-more-authority/",
       "as_of": "2026-08-14",
@@ -4124,7 +4124,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -17,
+      "days_to_hearing": -18,
       "note": "Gigawatt Development proposes a ~900-acre, multi-phase technology campus south of Carpenter Canyon Road along SR-160 at the south end of Pahrump Valley, pledging closed-loop cooling using under 300 acre-feet of water per year (~1.5% of the Pahrump Basin's annual yield) on water rights it already owns, with no tax abatements sought; the application predates the county's June 2026 temporary moratorium on new data center applications. The 'August vote' was on Nye County Bill 2026-11, a proposed ban on data centers in communities without elected town boards: at the Aug 4 commission meeting it did not come to a vote, and commissioners instead moved toward putting the question to voters, with a possible special election (earliest January 2027) to be discussed Aug 18.",
       "source": "https://pvtimes.com/news/manse-tech-campus-aiming-to-assuage-community-concerns-189023/",
       "as_of": "2026-08-14",
@@ -4556,7 +4556,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -46,
+      "days_to_hearing": -47,
       "note": "Kentucky Industrial Alliance LLC proposes a data center on a 381-acre project site within its 600+ acres at 2001 Doyle Avenue, about 10 miles from Mammoth Cave National Park; it submitted an application May 11, 2026, and sued the city on June 8 after Cave City adopted a one-year moratorium. The city moved to dismiss on June 29, arguing no actual development plan was ever filed; a July 20 preliminary-injunction hearing was scheduled. Residents fear runoff through the karst into the Mammoth Cave system.",
       "source": "https://spectrumnews1.com/ky/louisville/news/2026/07/18/cave-city-residents-push-back-on-proposed-data-center-near-mammoth-cave",
       "as_of": "2026-08-14",
@@ -4766,7 +4766,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -23,
+      "days_to_hearing": -24,
       "note": "Two 250,000 sq ft data center buildings proposed at Smithfield Gateway behind St. Luke's and Wawa on Route 209. Developer filed a curative amendment application; township initiated a 180-day review period starting May 6, 2026. Township is proposing a new H-1 (Heavy Industrial) Zoning District where data centers would be the only permitted conditional use, removing them from ED and M-1 districts. Board of Supervisors held public hearing and vote on Aug 12, 2026.",
       "source": "https://smithfieldtownship.com/odp/gatewaydc/",
       "as_of": "2026-08-14",
@@ -5171,7 +5171,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -9,
+      "days_to_hearing": -10,
       "note": "Site Layer 4, a New York-based firm, has applied to rezone 5,344 acres of ranchland on the Lazy V Six Ranch northeast of Wheatland for a $26 billion data center campus with co-located utility-scale energy generation. The project promises 300 jobs and substantial tax revenue but neighbors are concerned about water, wildlife, and viewshed impacts. More than 400 public comments were received. Planning and Zoning Commission hearing rescheduled to August 26, 2026, with County Commissioners hearing on September 2.",
       "source": "https://cowboystatedaily.com/2026/07/13/ranchlands-near-wheatland-eyed-for-26-billion-transformational-data-center/",
       "as_of": "2026-08-14",
@@ -15278,7 +15278,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -9,
+      "days_to_hearing": -10,
       "note": "Originally 59 data centers + 2 gas plants on 3,300 acres; scaled back 80% to 11 data centers (1 GW) after ~60 verbal comments and 50 emails all opposing.",
       "source": "https://www.kjzz.org/fronteras-desk/2026-05-28/largest-proposed-data-center-in-arizona-to-be-scaled-back-80-after-opposition",
       "as_of": "2026-08-19",
@@ -15689,7 +15689,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -14,
+      "days_to_hearing": -15,
       "note": "368 MW; CUP discussed at Planning Commission Aug 21. Staff recommended approval.",
       "source": "https://rock1015.com/2026/08/18/data-center-conditional-use-permit-to-be-discussed-at-kearney-planning-commission-meeting/",
       "as_of": "2026-08-19",
@@ -18267,9 +18267,9 @@
       "outcome": "",
       "stage": "In review",
       "days_to_hearing": null,
-      "note": "Environmental permits under review at PA DEP (2 pending, 13 issued). Flagged by DEP as a fast-track project, so the permit review clock is shorter than usual.",
+      "note": "Environmental permits under review at PA DEP (2 pending, 13 issued).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": [
         {
@@ -18282,6 +18282,12 @@
           "date": "2024-12-31",
           "kind": "permit",
           "summary": "Water Obstruction & Encroachment Pmt application submitted to PA DEP under WRM Water Obstructions & Encroachments (E4002224-013 / eFACTS auth 1511183) — DEP status: Issued.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
+        {
+          "date": "2025-02-12",
+          "kind": "permit",
+          "summary": "Erosion & Sediment Control Pmt application submitted to PA DEP under WPC Erosion & Sediment Control (ESP024025001) — DEP status: Issued.",
           "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
         },
         {
@@ -18380,7 +18386,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (2 pending).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": [
         {
@@ -18417,9 +18423,9 @@
       "outcome": "",
       "stage": "In review",
       "days_to_hearing": null,
-      "note": "Environmental permits under review at PA DEP (2 pending, 4 issued). Flagged by DEP as a fast-track project, so the permit review clock is shorter than usual.",
+      "note": "Environmental permits under review at PA DEP (2 pending, 4 issued).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": [
         {
@@ -18441,6 +18447,12 @@
           "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
         },
         {
+          "date": "2025-11-26",
+          "kind": "permit",
+          "summary": "BWM-GP-11 Maintenance /Testing / Repair / Rehabilitation / Replacement General Pmt application submitted to PA DEP under WRM Water Obstructions & Encroachments (GP115402221-011 / eFACTS auth 1550957) — DEP status: Issued.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
+        {
           "date": "2026-01-20",
           "kind": "permit",
           "summary": "Chapter 102 Individual NPDES Permit application submitted to PA DEP under WPC Erosion & Sediment Control (PAD540025 / eFACTS auth 1365919) — DEP status: Issued.",
@@ -18453,9 +18465,21 @@
           "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
         },
         {
+          "date": "2026-03-19",
+          "kind": "permit",
+          "summary": "Chapter 102 Individual NPDES Permit application submitted to PA DEP under WPC Erosion & Sediment Control (PAD540025 A-1) — DEP status: Pending.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
+        {
           "date": "2026-05-05",
           "kind": "permit",
           "summary": "Chapter 102 Individual NPDES Permit application submitted to PA DEP under WPC Erosion & Sediment Control (PAD540025-A2) — DEP status: Pending.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
+        {
+          "date": "2026-05-05",
+          "kind": "permit",
+          "summary": "Chapter 102 Individual NPDES Permit application submitted to PA DEP under WPC Erosion & Sediment Control (PAD540025 A-2) — DEP status: Pending.",
           "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
         }
       ]
@@ -18480,9 +18504,9 @@
       "outcome": "",
       "stage": "In review",
       "days_to_hearing": null,
-      "note": "Environmental permits under review at PA DEP (2 pending).",
+      "note": "Environmental permits under review at PA DEP (1 pending).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": [
         {
@@ -18492,9 +18516,21 @@
           "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
         },
         {
+          "date": "2026-03-02",
+          "kind": "permit",
+          "summary": "Act 537 Sewage Planning application submitted to PA DEP under WPC Act 537 Municipal Sewage Planning (2-35804048-3) — DEP status: Returned.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
+        {
           "date": "2026-04-02",
           "kind": "permit",
           "summary": "Chapter 102 Individual NPDES Permit application submitted to PA DEP under WPC Erosion & Sediment Control (PAD350071) — DEP status: Pending.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
+        {
+          "date": "2026-04-02",
+          "kind": "permit",
+          "summary": "Chapter 102 Individual NPDES Permit application submitted to PA DEP under WPC Erosion & Sediment Control (PAD350071 / eFACTS auth 1575507) — DEP status: Pending.",
           "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
         }
       ]
@@ -18513,15 +18549,15 @@
       "size_mw": "",
       "acres": "",
       "announced": "",
-      "rezoning_filed": "2025-10-24",
+      "rezoning_filed": "2026-01-28",
       "hearing_date": "",
       "decided_date": "",
       "outcome": "",
       "stage": "In review",
       "days_to_hearing": null,
-      "note": "Environmental permits under review at PA DEP (4 pending).",
+      "note": "Environmental permits under review at PA DEP (3 pending).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": [
         {
@@ -18537,6 +18573,12 @@
           "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
         },
         {
+          "date": "2026-03-11",
+          "kind": "permit",
+          "summary": "Notice of Intent to Remediate (Act 2) application submitted to PA DEP under Environmental Cleanup & Brownfields — DEP status: Received.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
+        {
           "date": "2026-03-30",
           "kind": "permit",
           "summary": "Notice of Intent to Remediate (Act 2) application submitted to PA DEP under Environmental Cleanup & Brownfields — DEP status: Pending.",
@@ -18546,6 +18588,12 @@
           "date": "2026-06-12",
           "kind": "permit",
           "summary": "Minor Facility Plan Approval New Source Performance Std application submitted to PA DEP under Air Quality (39-00117A / eFACTS auth 1574924) — DEP status: Pending.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
+        {
+          "date": "2026-08-04",
+          "kind": "permit",
+          "summary": "Chapter 102 Individual NPDES Permit application submitted to PA DEP under WPC Erosion & Sediment Control (PAD390390 / eFACTS auth 1578878) — DEP status: Pending.",
           "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
         }
       ]
@@ -18564,7 +18612,7 @@
       "size_mw": "",
       "acres": "",
       "announced": "",
-      "rezoning_filed": "2026-03-13",
+      "rezoning_filed": "2026-02-25",
       "hearing_date": "",
       "decided_date": "",
       "outcome": "",
@@ -18572,9 +18620,15 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (3 pending).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": [
+        {
+          "date": "2026-02-25",
+          "kind": "permit",
+          "summary": "Chapter 102 Individual NPDES Permit application submitted to PA DEP under WPC Erosion & Sediment Control (PAD130057 / eFACTS auth 1567677) — DEP status: Pending.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
         {
           "date": "2026-03-13",
           "kind": "permit",
@@ -18615,9 +18669,9 @@
       "outcome": "",
       "stage": "In review",
       "days_to_hearing": null,
-      "note": "Environmental permits under review at PA DEP (3 pending). Flagged by DEP as a fast-track project, so the permit review clock is shorter than usual.",
+      "note": "Environmental permits under review at PA DEP (4 pending).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": [
         {
@@ -18637,6 +18691,12 @@
           "kind": "permit",
           "summary": "Water Obstruction & Encroachment Pmt application submitted to PA DEP under WRM Water Obstructions & Encroachments (E4002226-011 / eFACTS auth 1570648) — DEP status: Pending.",
           "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
+        {
+          "date": "2026-07-29",
+          "kind": "permit",
+          "summary": "Minor Facility Plan Approval New Source Performance Std application submitted to PA DEP under Air Quality (40-00162A / eFACTS auth 1578397) — DEP status: Pending.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
         }
       ]
     },
@@ -18649,8 +18709,8 @@
       "filing_llc": "Sentinel Green Fig LLC",
       "locality": "East Whiteland Township (Chester County)",
       "state": "PA",
-      "lat": 40.040644,
-      "lon": -75.583066,
+      "lat": 40.039418,
+      "lon": -75.587083,
       "size_mw": "",
       "acres": "",
       "announced": "",
@@ -18662,7 +18722,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (2 issued).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": [
         {
@@ -18675,6 +18735,12 @@
           "date": "2025-03-25",
           "kind": "permit",
           "summary": "Act 537 Waiver application submitted to PA DEP under WPC Act 537 Municipal Sewage Planning — DEP status: Issued.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
+        {
+          "date": "2025-03-25",
+          "kind": "permit",
+          "summary": "Act 537 Waiver application submitted to PA DEP under WPC Act 537 Municipal Sewage Planning (1-15925-426-E) — DEP status: Issued.",
           "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
         }
       ]
@@ -18701,7 +18767,7 @@
       "days_to_hearing": null,
       "note": "PA DEP has finished reviewing this project's environmental permits (2 issued). That is a permit milestone, not a local land-use approval.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": [
         {
@@ -18734,14 +18800,14 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
     {
       "id": "highridge-data-center-butler-township-pa",
-      "name": "Highridge Data Center",
-      "operator": "NorthPoint Development",
+      "name": "Highridge Data (NorthPoint Development) Project Nebius",
+      "operator": "",
       "owner": "",
       "tenant": "",
       "filing_llc": "",
@@ -18760,7 +18826,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (1 pending, 2 issued).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": [
         {
@@ -18779,6 +18845,12 @@
           "date": "2026-08-07",
           "kind": "permit",
           "summary": "Chapter 102 Individual NPDES Permit application submitted to PA DEP under WPC Erosion & Sediment Control (PAD540030-A1) — DEP status: Pending.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
+        {
+          "date": "2026-08-07",
+          "kind": "permit",
+          "summary": "Chapter 102 Individual NPDES Permit application submitted to PA DEP under WPC Erosion & Sediment Control (PAD540030 A-1) — DEP status: Pending.",
           "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
         }
       ]
@@ -18805,7 +18877,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (1 issued).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": [
         {
@@ -18836,9 +18908,9 @@
       "outcome": "",
       "stage": "Rumored",
       "days_to_hearing": null,
-      "note": "On PA DEP's tracker as proposed — no permit applications received yet. Flagged by DEP as a fast-track project, so the permit review clock is shorter than usual.",
+      "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -18856,17 +18928,24 @@
       "size_mw": "",
       "acres": "",
       "announced": "",
-      "rezoning_filed": "",
+      "rezoning_filed": "2026-07-09",
       "hearing_date": "",
       "decided_date": "",
       "outcome": "",
-      "stage": "Rumored",
+      "stage": "In review",
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (1 pending).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
-      "events": []
+      "events": [
+        {
+          "date": "2026-07-09",
+          "kind": "permit",
+          "summary": "Chapter 102 General NPDES Permit (PAG-02) application submitted to PA DEP under WPC Erosion & Sediment Control (PAC040210) — DEP status: Pending.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        }
+      ]
     },
     {
       "id": "springdale-data-center-springdale-borough-pa",
@@ -18890,7 +18969,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (3 issued).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": [
         {
@@ -18909,6 +18988,12 @@
           "date": "2025-12-08",
           "kind": "permit",
           "summary": "BWM-GP-11 Maintenance, Testing, Repair, Rehabilitation or Replacement General Pmt application submitted to PA DEP under WRM Water Obstructions & Encroachments (GP110216248 / eFACTS auth 1551375) — DEP status: Issued.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
+        {
+          "date": "2025-12-08",
+          "kind": "permit",
+          "summary": "BWM-GP-11 Maintenance /Testing / Repair / Rehabilitation / Replacement General Pmt application submitted to PA DEP under WRM Water Obstructions & Encroachments (GP110216248 / eFACTS auth 1551375) — DEP status: Issued.",
           "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
         }
       ]
@@ -18935,7 +19020,7 @@
       "days_to_hearing": null,
       "note": "PA DEP has finished reviewing this project's environmental permits (4 issued). That is a permit milestone, not a local land-use approval.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": [
         {
@@ -18990,15 +19075,21 @@
       "outcome": "",
       "stage": "In review",
       "days_to_hearing": null,
-      "note": "Environmental permits under review at PA DEP (1 pending). Flagged by DEP as a fast-track project, so the permit review clock is shorter than usual.",
+      "note": "Environmental permits under review at PA DEP (1 pending).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": [
         {
           "date": "2026-04-28",
           "kind": "permit",
           "summary": "Chapter 102 Individual NPDES Permit application submitted to PA DEP under WPC Erosion & Sediment Control (PAD430004) — DEP status: Pending.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
+        {
+          "date": "2026-05-18",
+          "kind": "permit",
+          "summary": "Notice of Intent to Remediate (Act 2) application submitted to PA DEP under Environmental Cleanup & Brownfields — DEP status: Received.",
           "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
         }
       ]
@@ -19025,14 +19116,14 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
     {
       "id": "linde-corporation-unnamed-data-center-clinton-township-pa",
-      "name": "Unnamed Data Center",
-      "operator": "Linde Corporation",
+      "name": "Linde Data Center / Forest City Energy Center LLC",
+      "operator": "",
       "owner": "",
       "tenant": "",
       "filing_llc": "",
@@ -19051,7 +19142,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19077,7 +19168,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19103,7 +19194,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19129,14 +19220,14 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
     {
       "id": "patrinely-provident-real-estate-data-center-archbald-borough-pa",
-      "name": "Patrinely-Provident Real Estate Data Center",
-      "operator": "",
+      "name": "Project Scott",
+      "operator": "Patrinely-Provident Real Estate",
       "owner": "",
       "tenant": "",
       "filing_llc": "",
@@ -19155,7 +19246,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19181,7 +19272,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19207,7 +19298,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19233,13 +19324,13 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
     {
       "id": "newport-ridge-data-energy-center-newport-township-pa",
-      "name": "Newport Ridge Data & Energy Center",
+      "name": "Newport Ridge Data Center",
       "operator": "",
       "owner": "",
       "tenant": "",
@@ -19259,7 +19350,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19285,7 +19376,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19311,7 +19402,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19337,7 +19428,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19363,7 +19454,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19389,7 +19480,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19415,7 +19506,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19441,7 +19532,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19467,7 +19558,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19493,7 +19584,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19519,7 +19610,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19545,7 +19636,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19571,7 +19662,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19597,7 +19688,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19623,7 +19714,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19649,7 +19740,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19675,7 +19766,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19701,7 +19792,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
@@ -19714,8 +19805,8 @@
       "filing_llc": "",
       "locality": "Penn Forest Township (Carbon County)",
       "state": "PA",
-      "lat": 40.898121,
-      "lon": -75.686933,
+      "lat": 40.963987,
+      "lon": -75.619176,
       "size_mw": "",
       "acres": "",
       "announced": "",
@@ -19727,38 +19818,12 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
     {
       "id": "amazon-web-services-unnamed-data-center-center-township-pa",
-      "name": "Unnamed Data Center",
-      "operator": "Amazon Web Services",
-      "owner": "",
-      "tenant": "",
-      "filing_llc": "",
-      "locality": "Center Township (Indiana County)",
-      "state": "PA",
-      "lat": 40.511609,
-      "lon": -79.198647,
-      "size_mw": "",
-      "acres": "",
-      "announced": "",
-      "rezoning_filed": "",
-      "hearing_date": "",
-      "decided_date": "",
-      "outcome": "",
-      "stage": "Rumored",
-      "days_to_hearing": null,
-      "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
-      "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
-      "verified": true,
-      "events": []
-    },
-    {
-      "id": "fezzik-energy-unnamed-data-center-midland-borough-pa",
       "name": "Unnamed Data Center",
       "operator": "Fezzik Energy",
       "owner": "",
@@ -19779,12 +19844,12 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
     {
-      "id": "londonderry-data-center-londonderry-township-pa",
+      "id": "fezzik-energy-unnamed-data-center-midland-borough-pa",
       "name": "Londonderry Data Center",
       "operator": "",
       "owner": "",
@@ -19805,18 +19870,44 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
+      "verified": true,
+      "events": []
+    },
+    {
+      "id": "londonderry-data-center-londonderry-township-pa",
+      "name": "Highlands East Data Center",
+      "operator": "Corscale",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Lower Swatara / Swatara Townships (Dauphin County)",
+      "state": "PA",
+      "lat": 40.230539,
+      "lon": -76.793893,
+      "size_mw": "",
+      "acres": "",
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "Rumored",
+      "days_to_hearing": null,
+      "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
+      "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
     {
       "id": "highlands-east-data-center-lower-swatara-swatara-townships-pa",
-      "name": "Highlands East Data Center",
-      "operator": "",
+      "name": "Highlands West Data Center",
+      "operator": "Corscale",
       "owner": "",
       "tenant": "",
       "filing_llc": "",
-      "locality": "Lower Swatara / Swatara Townships (Dauphin County)",
+      "locality": "Swatara Township (Dauphin County)",
       "state": "PA",
       "lat": 40.230539,
       "lon": -76.793893,
@@ -19831,38 +19922,12 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
     },
     {
       "id": "highlands-west-data-center-lower-swatara-swatara-townships-pa",
-      "name": "Highlands West Data Center",
-      "operator": "",
-      "owner": "",
-      "tenant": "",
-      "filing_llc": "",
-      "locality": "Lower Swatara / Swatara Townships (Dauphin County)",
-      "state": "PA",
-      "lat": 40.230539,
-      "lon": -76.793893,
-      "size_mw": "",
-      "acres": "",
-      "announced": "",
-      "rezoning_filed": "",
-      "hearing_date": "",
-      "decided_date": "",
-      "outcome": "",
-      "stage": "Rumored",
-      "days_to_hearing": null,
-      "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
-      "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
-      "verified": true,
-      "events": []
-    },
-    {
-      "id": "zediker-station-data-center-south-strabane-township-pa",
       "name": "Zediker Station Data Center",
       "operator": "CNX",
       "owner": "",
@@ -19883,9 +19948,48 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-08-21",
+      "as_of": "2026-09-05",
       "verified": true,
       "events": []
+    },
+    {
+      "id": "zediker-station-data-center-south-strabane-township-pa",
+      "name": "PECO - Limerick Distribution Project",
+      "operator": "67 MW",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "East Coventry / Lower Pottsgrove / Limerick Townships (Chester / Montgomery County)",
+      "state": "PA",
+      "lat": 40.230703,
+      "lon": -75.593175,
+      "size_mw": "",
+      "acres": "",
+      "announced": "",
+      "rezoning_filed": "2026-02-18",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "In review",
+      "days_to_hearing": null,
+      "note": "Environmental permits under review at PA DEP (1 pending, 1 issued).",
+      "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
+      "as_of": "2026-09-05",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-02-18",
+          "kind": "permit",
+          "summary": "Water Obstruction & Encroachment Pmt application submitted to PA DEP under WRM Water Obstructions & Encroachments (E4601226-004 / eFACTS auth 1559464) — DEP status: Pending.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
+        {
+          "date": "2026-07-10",
+          "kind": "permit",
+          "summary": "Chapter 102 General NPDES Permit (PAG-02) application submitted to PA DEP under WPC Erosion & Sediment Control (PAC461072) — DEP status: Issued.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        }
+      ]
     },
     {
       "id": "openai-project-camellia-effingham-ga",
@@ -20683,7 +20787,7 @@
       "decided_date": "",
       "outcome": "",
       "stage": "Awaiting decision",
-      "days_to_hearing": -389,
+      "days_to_hearing": -390,
       "note": "Proposed data center at Mid-America Commerce Park, Wolcott, at the intersection of U.S. 24 and CR 1100 West. Site plans describe up to four data halls (~327,612 sq ft each), a 50,000 sq ft office building, and a 100,000 sq ft warehouse, with full build-out projected for 2029 and ~1,000 construction jobs over the build-out period; the developer's own site describes it as a 'closed-loop, minimal-water' campus seeking no incentives. Rezoning covers ~184 acres (per an Aug 2025 lawsuit) within a larger ~322-acre parcel. The rezoning applications were filed by the White County Redevelopment Commission rather than the property owners (BOWS4CRM and Liebengood Family Partnership) -- neighboring landowners Bart and Amy Snyder sued in Aug 2025 alleging the redevelopment commission lacked a notarized letter authorizing it to act as agent and that no site plan was submitted with the rezoning application, both allegedly required under White County's zoning ordinance. As of a June 2026 community open house, the project was still moving forward despite the moratorium and the pending lawsuit; White County Economic Development Organization President Randy Strasser confirmed the open house was authentic and co-hosted with the commissioners.",
       "source": "https://www.wolcottdatacenter.com/",
       "as_of": "2026-09-02",
@@ -20765,6 +20869,32 @@
           "source": "https://www.wndu.com/2026/03/03/fulton-county-commissioners-approve-one-year-moratorium-data-center-construction/"
         }
       ]
+    },
+    {
+      "id": "amazon-web-services-unnamed-data-center-center-township-pa-52",
+      "name": "Unnamed Data Center",
+      "operator": "Amazon Web Services",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Center Township (Indiana County)",
+      "state": "PA",
+      "lat": 40.511609,
+      "lon": -79.198647,
+      "size_mw": "",
+      "acres": "",
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "Rumored",
+      "days_to_hearing": null,
+      "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
+      "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
+      "as_of": "2026-09-05",
+      "verified": true,
+      "events": []
     }
   ]
 }
