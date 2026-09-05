@@ -89,6 +89,17 @@ SITE_URL = os.environ.get("SITE_URL", "https://aigridwatch.com")
 # rendered; the footer falls back to linking the app's signup instead, so an
 # unconfigured build never ships a broken form.
 FORMSPREE_ID = os.environ.get("FORMSPREE_ID", "xljroogo")
+
+# IndexNow (Bing, Yandex, Naver, Seznam share the endpoint): the key is proven
+# by serving it at /<key>.txt, so it is public by construction — same class of
+# value as FORMSPREE_ID. scripts/indexnow_ping.py submits every URL whose
+# sitemap lastmod moved in the latest build. Generated 2026-09-05.
+INDEXNOW_KEY = os.environ.get("INDEXNOW_KEY", "640f6612083c24b374530b6ba85d0d57")
+
+# Bing Webmaster Tools ownership tag. Empty until the code from
+# bing.com/webmasters is pasted in (or the site is imported from Search
+# Console, which needs no tag at all).
+BING_SITE_VERIFICATION = os.environ.get("BING_SITE_VERIFICATION", "")
 FORMSPREE_SUBMIT_ID = os.environ.get("FORMSPREE_SUBMIT_ID", "xdenpwor")
 
 # Third-party existing-facility directory (SOURCES["datacentermap"]). State
@@ -925,6 +936,8 @@ def page(title, description, body, canonical, depth=0,
     else:
         og_img_url, og_img_w, og_img_h = f"{SITE_URL}/assets/hero.png", 1024, 479
     ld_block = ""
+    bing_meta = (f'<meta name="msvalidate.01" content="{esc(BING_SITE_VERIFICATION)}">'
+                 if BING_SITE_VERIFICATION else "")
     date_meta = ""
     if modified or published:
         wp = {"@context": "https://schema.org", "@type": "WebPage",
@@ -951,6 +964,7 @@ def page(title, description, body, canonical, depth=0,
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b1220">
 <meta name="google-site-verification" content="kkgrLvRLdgGg12Y1ka456PlN9iNsyWGCyJIS-8ip9I4">
+{bing_meta}
 <title>{esc(title_serp)}</title>
 <meta name="description" content="{esc(desc_serp)}">
 <link rel="canonical" href="{canonical}">
@@ -14937,14 +14951,34 @@ def main():
             continue
         html_path = WEB / (p.rstrip("/") + ".html" if not p.endswith("/") else p + "index.html")
         if html_path.exists():
-            _content_hash = hashlib.sha256(
-                html_path.read_bytes()).hexdigest()[:16]
+            # Data pages print "As of <today>" and dateModified=<today> on
+            # every build. Those strings are stripped before hashing, so a
+            # page whose only change is the date it was regenerated keeps its
+            # old lastmod — otherwise ~500 URLs would claim a change daily
+            # and the IndexNow ping would submit the whole site every morning.
+            raw = html_path.read_bytes()
+            stable = (raw.replace(BUILD_DATE.encode(), b"")
+                         .replace(BUILD_DATE_LONG.encode(), b""))
+            _content_hash = hashlib.sha256(stable).hexdigest()[:16]
         else:
+            raw = b""
             _content_hash = ""
         _new_hashes[p] = _content_hash
         prev = _prev_hashes.get(p)
         if prev and isinstance(prev, dict) and prev.get("hash") == _content_hash:
-            _sitemap_entries.append((p, prev["lastmod"]))
+            lastmod = prev["lastmod"]
+            # Keep the machine-readable modified date consistent with the
+            # sitemap: the page says "as of today" (true — the counts were
+            # checked today) but was last *changed* on lastmod.
+            if raw and lastmod != _build_date and BUILD_DATE.encode() in raw:
+                fixed = (raw.replace(
+                    f'article:modified_time" content="{BUILD_DATE}"'.encode(),
+                    f'article:modified_time" content="{lastmod}"'.encode())
+                    .replace(f'"dateModified": "{BUILD_DATE}"'.encode(),
+                             f'"dateModified": "{lastmod}"'.encode()))
+                if fixed != raw:
+                    html_path.write_bytes(fixed)
+            _sitemap_entries.append((p, lastmod))
         else:
             _sitemap_entries.append((p, _build_date))
     _hash_data = {
@@ -14956,6 +14990,7 @@ def main():
         encoding="utf-8")
     (WEB / "sitemap.xml").write_text(
         build_sitemap(_sitemap_entries), encoding="utf-8")
+    (WEB / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY, encoding="utf-8")
     (WEB / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n",
         encoding="utf-8")

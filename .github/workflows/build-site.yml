@@ -160,3 +160,16 @@ jobs:
           git add web/ data/news_cache.json data/youtube_cache.json data/story_candidates.json data/locality_candidates.json data/moratorium_candidates.json data/study_candidates.json data/projects.json data/pa_dep_sync.md data/external/pa_dep_projects.csv data/external/pa_dep_permits.csv
           git commit -m "chore: rebuild static site [skip ci]"
           git push
+
+      # Push-notify Bing (and the other IndexNow engines) of exactly the URLs
+      # whose sitemap lastmod moved in this build. Bing is what ChatGPT's
+      # browsing reads, so this is the fastest path from "row added" to
+      # "answer engine can cite it". Runs after the push so the deployed page
+      # is the one Bing fetches; the key file is served at /<key>.txt by the
+      # build. Non-blocking: IndexNow is a hint, the sitemap crawl still runs.
+      - name: Ping IndexNow with changed URLs
+        if: github.ref == 'refs/heads/master'
+        continue-on-error: true
+        run: |
+          sleep 90   # let the Vercel deploy for the commit above land first
+          python scripts/indexnow_ping.py --since HEAD~1 | tee -a "$GITHUB_STEP_SUMMARY"
