@@ -73,9 +73,63 @@ def build_gazetteer():
         if name.lower() in _STATE_NAMES_LOWER:
             continue
         seen.setdefault((name.lower(), state), (name, state))
+    # Headlines rarely say "Stafford County": the Free Lance-Star writes
+    # "Stafford supervisors", WTOP writes "Loudoun". So a county whose bare
+    # name is unambiguous also matches bare — but only when that bare name
+    # names one place in the gazetteer (Stafford County exists in Kansas
+    # too; if both were tracked neither would get the variant), is not a
+    # common-word or presidential county name (Orange, Franklin, Warren…),
+    # and is not already a tracked locality in its own right (Chesterfield
+    # is a county and Chesterfield the place; Henrico is stored bare).
+    # The variant keeps the county's display name so stories group with
+    # the county page rather than spawning a second page for the bare name.
+    bare_counts = {}
+    for name, state in seen.values():
+        if name.lower().endswith(" county"):
+            bare = name[:-7].strip()
+            bare_counts.setdefault(bare.lower(), set()).add(state)
+    taken = {name.lower() for name, _ in seen.values()}
+    variants = []
+    for name, state in list(seen.values()):
+        if not name.lower().endswith(" county"):
+            continue
+        bare = name[:-7].strip()
+        if (len(bare) < 6 or bare.lower() in _AMBIGUOUS_BARE_COUNTIES
+                or bare.lower() in taken or bare.lower() in _STATE_NAMES_LOWER
+                or len(bare_counts.get(bare.lower(), ())) != 1
+                or " " in bare):
+            continue
+        variants.append((name, state, bare))
     entries = sorted(seen.values(), key=lambda e: len(e[0]), reverse=True)
-    return [(name, state, re.compile(rf"\b{re.escape(name)}\b", re.IGNORECASE))
-            for name, state in entries]
+    out = [(name, state, re.compile(rf"\b{re.escape(name)}\b", re.IGNORECASE))
+           for name, state in entries]
+    # Bare variants go last so any full name (including another locality
+    # that contains the bare word) wins first.
+    out.extend((name, state, re.compile(rf"\b{re.escape(bare)}\b", re.IGNORECASE))
+               for name, state, bare in sorted(variants, key=lambda v: len(v[2]), reverse=True))
+    return out
+
+
+# Bare county names that are also common words, people, or places in many
+# states. A headline saying "Washington" or "Orange" is not a locality hit.
+_AMBIGUOUS_BARE_COUNTIES = {
+    "washington", "jefferson", "franklin", "lincoln", "jackson", "madison",
+    "monroe", "marion", "orange", "warren", "wayne", "union", "grant", "lake",
+    "clark", "clarke", "montgomery", "greene", "henry", "carroll", "douglas",
+    "butler", "hamilton", "fayette", "clinton", "boone", "harris", "dallas",
+    "sussex", "essex", "chester", "morgan", "lawrence", "howard", "johnson",
+    "williams", "richmond", "columbia", "cumberland", "lancaster", "york",
+    "prince", "charles", "james", "george", "frederick", "augusta", "hanover",
+    "bedford", "nelson", "campbell", "russell", "mercer", "pike", "mason",
+    "putnam", "tucker", "wood", "berkeley", "morgan", "ohio", "hancock",
+    "jasper", "porter", "marshall", "shelby", "knox", "tipton", "blount",
+    "summit", "stark", "wayne", "ross", "logan", "harrison", "perry",
+    "fulton", "cobb", "coweta", "newton", "walton", "forsyth", "douglas",
+    "lee", "polk", "scott", "adams", "allen", "brown", "clay", "cook",
+    "hall", "hill", "kent", "long", "love", "page", "park", "rich", "wise",
+    "gloucester", "cape", "salem", "surry", "sterling", "central", "eagle",
+    "grand", "san", "santa", "saint", "st", "el", "la", "de", "new",
+}
 
 
 def guess_locality(title, gazetteer):

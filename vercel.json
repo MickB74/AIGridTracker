@@ -514,11 +514,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/allegheny-county-pa",
-      "destination": "/states/pennsylvania",
-      "permanent": true
-    },
-    {
       "source": "/communities/amherst-oh",
       "destination": "/states/ohio",
       "permanent": true

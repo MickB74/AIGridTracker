@@ -7692,8 +7692,7 @@ EXECUTIVES = [
     # Center Alley, and its rate case created the GS-5 large-load class.
     {"company": "Dominion Energy", "name": "Robert M. Blue", "title": "Chair, President and Chief Executive Officer",
      "category": "policy", "focus": "Dominion Energy Virginia — the utility serving Loudoun and Prince William; the 2025 biennial review that created the GS-5 rate class for 25 MW+ customers, transmission build-out for data centers, PJM capacity costs. Chair since Apr 2021, CEO since Oct 2020; formerly counselor and policy director to Gov. Mark Warner.",
-     "linkedin": _li("Robert Blue", "Dominion Energy"),
-     "verified": "2026-09-05", "verified_source": "https://www.dominionenergy.com/-/media/content/about/board-and-executives/pdf/bob-blue-bio.pdf"},
+     "linkedin": _li("Robert Blue", "Dominion Energy")},
 ]
 # Verification log — read off each company's OWN leadership page on the date
 # shown. Keyed by (company, name). Kept separate from the rows above because
@@ -7706,6 +7705,8 @@ EXECUTIVES = [
 # profiles do not count — the same rule the LOCAL_OFFICIALS rows follow.
 _EXEC_VERIFIED_ON = "2026-08-18"
 EXEC_VERIFIED = {
+    # A (url, date) pair overrides _EXEC_VERIFIED_ON for rows read later.
+    ("Dominion Energy", "Robert M. Blue"): ("https://www.dominionenergy.com/-/media/content/about/board-and-executives/pdf/bob-blue-bio.pdf", "2026-09-05"),
     ("Microsoft", "Satya Nadella"):        "https://news.microsoft.com/leadership/",
     ("Meta", "Mark Zuckerberg"):           "https://www.meta.com/media-gallery/executives/",
     ("Meta", "Susan Li"):                  "https://www.meta.com/media-gallery/executives/",
@@ -7735,11 +7736,21 @@ EXEC_VERIFIED = {
 }
 
 EXECUTIVES_DF = pd.DataFrame(EXECUTIVES)
+def _exec_receipt(company, name):
+    """(verified_date, source_url) for one executive, or (None, None)."""
+    v = EXEC_VERIFIED.get((company, name))
+    if v is None:
+        return None, None
+    if isinstance(v, tuple):
+        return v[1], v[0]
+    return _EXEC_VERIFIED_ON, v
+
+
 EXECUTIVES_DF["verified"] = [
-    _EXEC_VERIFIED_ON if (c, n) in EXEC_VERIFIED else None
+    _exec_receipt(c, n)[0]
     for c, n in zip(EXECUTIVES_DF["company"], EXECUTIVES_DF["name"])]
 EXECUTIVES_DF["verified_source"] = [
-    EXEC_VERIFIED.get((c, n))
+    _exec_receipt(c, n)[1]
     for c, n in zip(EXECUTIVES_DF["company"], EXECUTIVES_DF["name"])]
 
 # --------------------------------------------------------------------------- #

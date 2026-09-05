@@ -5,8 +5,8 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/projects",
-  "count": 273,
-  "verified_count": 272,
+  "count": 279,
+  "verified_count": 278,
   "caveat": "A working set of identified proposals a community can track, not a census — most of the country's activity is not in here yet. Pennsylvania is the exception: its rows are synced from PA DEP's own data-center permit tracker, so the state's coverage is close to complete and carries the permit trail with it.\n\n**Each row carries its own provenance.** Rows showing a verification date link to reporting or the governing body's own record and were read on that date; rows marked *unverified* have no source on record — a lead to check, not a fact to cite.\n\n**Stage is derived, not asserted.** *Hearing scheduled*, *Awaiting decision*, *Approved* and *Withdrawn* are computed from each row's milestone dates on every rebuild, so a hearing date that has passed stops reading 'scheduled'. Hearings get moved and projects re-file under new names — treat a scheduled date as the earliest to act by, and confirm with the clerk before relying on it. Leads are mined into data/project_candidates.json and promoted here only after a human reads a primary source.",
   "schema": {
     "id": "Stable slug, unique per project.",
@@ -20938,6 +20938,264 @@
           "kind": "meeting",
           "summary": "Amazon presented the 'Bridgefield Tech Center' plan (about 800,000 sq ft in four buildings) to residents. The application relies on 1972 zoning to proceed as a site plan with no Planning Commission review, public hearing or Board vote. Briskman called it too close to homes, Bles Park and the Potomac; residents described the area as becoming \"a concrete jungle.\"",
           "source": "https://wtop.com/loudoun-county/2026/08/concrete-jungle-as-amazon-details-plans-for-new-ashburn-data-centers-some-residents-are-fed-up/"
+        }
+      ]
+    },
+    {
+      "id": "google-botetourt-greenfield-va",
+      "name": "Google Botetourt (Botetourt Center at Greenfield)",
+      "operator": "Google",
+      "owner": "Google",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Daleville (Botetourt County)",
+      "state": "VA",
+      "lat": 37.41,
+      "lon": -79.92,
+      "size_mw": "",
+      "acres": 312,
+      "announced": "2025-06-20",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "2025-06-24",
+      "outcome": "approved",
+      "stage": "Approved",
+      "days_to_hearing": null,
+      "note": "312 acres bought from the county for $14.06M (Jun 20, 2025) plus $4M in grants; performance agreement approved by the EDA Jun 20 and the Board of Supervisors Jun 24, 2025. First building due 2028; first-building cooling announced as air-cooled after a fight over drawing from Carvins Cove. A board-appointed water study commission (Jul 28, 2026, 3-1) reports within six months. Grading permit issued Aug 2026.",
+      "source": "https://www.botetourtva.gov/1021/Google-Data-Center",
+      "as_of": "2026-09-05",
+      "verified": true,
+      "events": [
+        {
+          "date": "2024-11-26",
+          "kind": "rezoning",
+          "summary": "Board of Supervisors and Planning Commission, in a joint public hearing, unanimously approved a zoning ordinance text amendment defining data centers and permitting them in the Research and Advanced Manufacturing (RAM) district — the only zoning in the county that allows one.",
+          "source": "https://www.botetourtva.gov/1021/Google-Data-Center"
+        },
+        {
+          "date": "2025-06-20",
+          "kind": "announcement",
+          "summary": "Google closed on 312 acres at Botetourt Center at Greenfield for $14,055,406 ($45,000/acre) and committed $4M in grants to county projects over five years; the Economic Development Authority approved the performance agreement the same day.",
+          "source": "https://www.botetourtva.gov/1021/Google-Data-Center"
+        },
+        {
+          "date": "2025-06-24",
+          "kind": "vote",
+          "summary": "Board of Supervisors approved the performance agreement: construction of the first data center to start in 2026 and the first building fit for occupancy in 2028, with a grant whenever Google's business personal property tax exceeds an effective $2.40 per $100.",
+          "source": "https://www.botetourtva.gov/1021/Google-Data-Center"
+        },
+        {
+          "date": "2026-07-28",
+          "kind": "vote",
+          "summary": "Supervisors voted 3-1 to create a five-member, board-appointed commission — no Google or county affiliation — to study the data center's impact on regional water resources within six months. Supervisor Linda Rottman dissented, calling it 'a gigantic middle finger to everyone in the crowd.'",
+          "source": "https://www.wdbj7.com/2026/07/29/botetourt-supervisors-vote-create-board-appointed-water-study-commission/"
+        },
+        {
+          "date": "2026-08-28",
+          "kind": "permit",
+          "summary": "The county issued Google a Land Disturbance Permit allowing phased grading of the 312-acre site.",
+          "source": "https://www.wsls.com/news/local/2026/08/28/grading-to-begin-for-google-data-center-campus-in-botetourt-county/"
+        }
+      ]
+    },
+    {
+      "id": "stack-berry-hill-pittsylvania-va",
+      "name": "STACK Infrastructure Berry Hill megasite",
+      "operator": "Stack Infrastructure",
+      "owner": "Blue Owl / IPI Partners",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Berry Hill (Pittsylvania County / Danville)",
+      "state": "VA",
+      "lat": 36.55,
+      "lon": -79.53,
+      "size_mw": "",
+      "acres": 2990,
+      "announced": "2026-02-20",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "2026-05-18",
+      "outcome": "approved",
+      "stage": "Approved",
+      "days_to_hearing": null,
+      "note": "Up to 2,990 of the 3,528-acre Southern Virginia Megasite at Berry Hill, owned by the Danville-Pittsylvania Regional Industrial Facility Authority. Performance agreement: $73.5B minimum investment and 2,050 jobs at $80,500 average, against a stated $100B over 30 years; the county says the deal depends on Virginia keeping its data center sales-tax exemption to 2035. The county's 1991 zoning code does not mention data centers.",
+      "source": "https://cardinalnews.org/2026/05/19/a-data-center-project-in-pittsylvania-was-approved-monday-with-higher-investment-and-jobs-than-previously-announced/",
+      "as_of": "2026-09-05",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-02-20",
+          "kind": "incentive",
+          "summary": "The Regional Industrial Facility Authority backed an incentives deal for a data center developer at the Berry Hill megasite.",
+          "source": "https://virginiabusiness.com/stack-100b-berry-hill-data-center-project/"
+        },
+        {
+          "date": "2026-05-18",
+          "kind": "vote",
+          "summary": "The Danville-Pittsylvania Regional Industrial Facilities Authority unanimously approved STACK Infrastructure's local performance agreement: $100B over 30 years and 2,500 jobs at a minimum $80,500, with penalties if targets are missed. Economic development director Matt Rowe said the project 'is dependent upon the state honoring its commitments', including the sales-and-use tax exemption's 2035 expiry.",
+          "source": "https://cardinalnews.org/2026/05/19/a-data-center-project-in-pittsylvania-was-approved-monday-with-higher-investment-and-jobs-than-previously-announced/"
+        },
+        {
+          "date": "2026-07-21",
+          "kind": "vote",
+          "summary": "Pittsylvania County Board of Supervisors approved a resolution supporting the campus over resident objections that industrial siting decisions were being made before the comprehensive plan and without public access to the RIFA and IDA strategy reports. Chairman Robert Tucker: 'four to five hundred million dollars of revenue' moving through the economy.",
+          "source": "https://wset.com/news/local/pittsylvania-county-advances-100b-data-center-campus-proposal-despite-resident-concerns-berry-hill-july-2026"
+        }
+      ]
+    },
+    {
+      "id": "red-ace-keyser-road-culpeper-va",
+      "name": "Red Ace data center campus (Keyser Road)",
+      "operator": "Red Ace Capital Management",
+      "owner": "Red Ace Capital Management",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Culpeper County",
+      "state": "VA",
+      "lat": 38.49,
+      "lon": -77.97,
+      "size_mw": "",
+      "acres": 69,
+      "announced": "2026-06-01",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "2026-07-02",
+      "outcome": "approved",
+      "stage": "Approved",
+      "days_to_hearing": null,
+      "note": "69.19 acres of farmland at Nalles Mill and Keyser roads rezoned Rural to Light Industrial 4-3 on Jul 2, 2026 after being tabled in June: two four-story, 290,000 sq ft buildings (1.16M sq ft total) plus a substation, about $350M, completion not before 2028. Approved under the county's Sep 2025 rule that industrial-land data centers need a conditional use permit.",
+      "source": "https://www.datacenterdynamics.com/en/news/data-center-campus-in-virginias-culpeper-county-gets-approval/",
+      "as_of": "2026-09-05",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-06-01",
+          "kind": "vote",
+          "summary": "In June the Board of Supervisors tabled the Red Ace rezoning.",
+          "source": "https://www.datacenterdynamics.com/en/news/data-center-campus-in-virginias-culpeper-county-gets-approval/"
+        },
+        {
+          "date": "2026-07-02",
+          "kind": "vote",
+          "summary": "Board of Supervisors approved the rezoning 4-3 (Deal, Durr, Gugino, Underwood for; Bates, Lee, Rosenberger against) for 69.19 acres from Rural to Light Industrial for a two-building, 1.16M sq ft campus with an electrical substation.",
+          "source": "https://www.datacenterdynamics.com/en/news/data-center-campus-in-virginias-culpeper-county-gets-approval/"
+        }
+      ]
+    },
+    {
+      "id": "amazon-warrenton-blackwell-road-va",
+      "name": "Amazon Warrenton (Blackwell Road)",
+      "operator": "Amazon (AWS)",
+      "owner": "Amazon Web Services, Inc.",
+      "tenant": "Amazon (AWS)",
+      "filing_llc": "Amazon Data Services",
+      "locality": "Warrenton (Fauquier County)",
+      "state": "VA",
+      "lat": 38.72,
+      "lon": -77.78,
+      "size_mw": "",
+      "acres": 42,
+      "announced": "2022-04-01",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "2023-02-01",
+      "outcome": "approved",
+      "stage": "Approved",
+      "days_to_hearing": null,
+      "note": "220,000 sq ft data center on a 42-acre parcel at Blackwell Road and Lee Highway bought by AWS in Sep 2021 for about $40M; roughly $550M investment. Special use permit approved 4-3 by the Town Council in Feb 2023 after an application filed Apr 2022 and sustained opposition; town staff approved the site development plan in Apr 2024 on its fourth review, with 27 conditions.",
+      "source": "https://www.fauquiernow.com/news/business/warrenton-town-council-approves-amazon-data-center-proposal/article_3913e82e-ad0a-11ed-83f3-538a8a5bb411.html",
+      "as_of": "2026-09-05",
+      "verified": true,
+      "events": [
+        {
+          "date": "2022-04-01",
+          "kind": "filing",
+          "summary": "Amazon Data Services filed its special use permit application with the Town of Warrenton in April 2022.",
+          "source": "https://www.fauquiernow.com/news/business/warrenton-town-council-approves-amazon-data-center-proposal/article_3913e82e-ad0a-11ed-83f3-538a8a5bb411.html"
+        },
+        {
+          "date": "2023-02-01",
+          "kind": "vote",
+          "summary": "Warrenton Town Council approved the special use permit 4-3 in February 2023 for a 220,000 sq ft data center at Blackwell Road and Lee Highway, ending the public approval process despite opposition.",
+          "source": "https://www.fauquiernow.com/news/business/warrenton-town-council-approves-amazon-data-center-proposal/article_3913e82e-ad0a-11ed-83f3-538a8a5bb411.html"
+        },
+        {
+          "date": "2024-04-01",
+          "kind": "permit",
+          "summary": "Town staff approved the site development plan for the 220,000 sq ft campus on the 42-acre plot after a fourth review, with 27 conditions and requirements (April 2024).",
+          "source": "https://www.fauquiernow.com/news/warrenton-town-staff-approves-site-plan-for-220-000-square-foot-amazon-data-center-project/article_13b53e3e-fe67-11ee-81ce-b361084ba5ae.html"
+        }
+      ]
+    },
+    {
+      "id": "accokeek-center-stafford-va",
+      "name": "Accokeek Center data campus",
+      "operator": "",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Stafford County",
+      "state": "VA",
+      "lat": 38.45,
+      "lon": -77.38,
+      "size_mw": "",
+      "acres": "",
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "In review",
+      "days_to_hearing": null,
+      "note": "Rezoning with proffers plus a conditional use permit for a substation. The Planning Commission recommended approval on separate 4-3 votes in late Aug 2026; the Board of Supervisors had not voted as of Sep 1, 2026, the night it instead directed letters seeking a state special session and a temporary pause on large-scale approvals.",
+      "source": "https://www.potomaclocal.com/2026/09/01/stafford-planning-commission-recommends-accokeek-center-data-campus-4-3/",
+      "as_of": "2026-09-05",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-08-26",
+          "kind": "vote",
+          "summary": "Stafford Planning Commission recommended, on separate 4-3 votes, that the Board of Supervisors approve the Accokeek Center rezoning with proffers and the conditional use permit for its substation (late August 2026; the recommendation was reported Aug 28 and Sep 1).",
+          "source": "https://www.potomaclocal.com/2026/09/01/stafford-planning-commission-recommends-accokeek-center-data-campus-4-3/"
+        },
+        {
+          "date": "2026-09-01",
+          "kind": "meeting",
+          "summary": "The Board of Supervisors took no vote on Accokeek; it directed staff to draft letters to Gov. Spanberger asking for a special session on data center rules and, failing that, a temporary pause on new large-scale approvals. Supervisor Vanuch: 'I don't want us to be in a situation where we approve now and regulate later.'",
+          "source": "https://www.potomaclocal.com/2026/09/04/stafford-supervisors-seek-state-and-federal-data-center-limits/"
+        }
+      ]
+    },
+    {
+      "id": "potomac-creek-stafford-va",
+      "name": "Potomac Creek data center (historic cemetery site)",
+      "operator": "",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Stafford County",
+      "state": "VA",
+      "lat": 38.38,
+      "lon": -77.36,
+      "size_mw": "",
+      "acres": 99,
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "In review",
+      "days_to_hearing": null,
+      "note": "99-acre proposal deferred by the Board of Supervisors in Jul 2026 over a roughly 200-year-old cemetery of enslaved people on the property.",
+      "source": "https://www.fredericksburgfreepress.com/2026/07/09/grave-concerns-stafford-supervisors-defer-data-center-project-on-property-with-historic-cemetery/",
+      "as_of": "2026-09-05",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-07-07",
+          "kind": "hearing",
+          "summary": "Stafford supervisors deferred the 99-acre Potomac Creek data center after residents and historians raised the presence of a 200-year-old cemetery of enslaved people on the site (meeting the week of Jul 7, 2026; reported Jul 9).",
+          "source": "https://www.fredericksburgfreepress.com/2026/07/09/grave-concerns-stafford-supervisors-defer-data-center-project-on-property-with-historic-cemetery/"
         }
       ]
     }
