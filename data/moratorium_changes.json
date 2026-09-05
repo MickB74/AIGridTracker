@@ -145,5 +145,12 @@
     "locality": "Greensboro, NC",
     "kind": "status_changed",
     "detail": "Proposed \u2192 Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "fairfax-county-va",
+    "locality": "Fairfax County, VA",
+    "kind": "added",
+    "detail": "Added as Enacted"
   }
 ]

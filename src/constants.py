@@ -1926,13 +1926,21 @@ MORATORIUMS = [
      "source": "https://www.roi-nj.com/2026/08/25/industry/energy-utilities/north-brunswick-east-brunswick-and-stafford-township-ban-data-centers/",
      "term": "standing"},
     {"locality": "Loudoun County", "state": "VA", "level": "Local",
-     "status": "Proposed", "when": "Jul 2026",
-     "note": "Board of Supervisors voted 6-1 to direct staff to prepare "
-             "moratorium options by Sep 15. Legal questions remain about "
-             "Virginia law's allowance of blanket moratoriums. World's largest "
-             "data center hub (~46M sq ft constructed or permitted)",
-     "lat": 39.08, "lon": -77.64, "expires": None, "as_of": "2026-08-13",
-     "source": "https://virginiabusiness.com/loudoun-supervisors-mull-data-center-moratorium/"},
+     "status": "Proposed", "when": "Jul 22, 2026",
+     "note": "Board of Supervisors passed Supervisor Briskman's motion 6-1-2 "
+             "(Umstattd opposed; Kershner and Letourneau absent) directing the "
+             "county attorney to return in September with options for pausing "
+             "new data center applications while the county finishes its "
+             "data center standards. County Attorney Leo Rogers told the board "
+             "a blanket moratorium is not legal in Virginia: legislative "
+             "applications (rezonings, special exceptions) could be paused for "
+             "up to a year, but administrative applications cannot because "
+             "state code sets review clocks. The item is expected Sep 15, "
+             "2026. A separate proposal to strip the exemption from 23 "
+             "grandfathered projects was deferred Sep 1 for legal review and "
+             "returns Oct 6. World's largest data center hub",
+     "lat": 39.08, "lon": -77.64, "expires": None, "as_of": "2026-09-05",
+     "source": "https://www.loudounnow.com/news/loudoun-supervisors-eye-data-centers-moratorium-more-regulations/article_63c90942-647a-4af6-9d43-5ae05a148153.html"},
     # ── Batch 2 — additional promotions, 2026-08-13 ───────────────────────
     {"locality": "Oklahoma City", "state": "OK", "level": "Local",
      "status": "Enacted", "when": "Apr 22, 2026",
@@ -3303,6 +3311,24 @@ MORATORIUMS = [
              "Aug 18 is that Tuesday",
      "lat": 36.85, "lon": -75.98, "expires": "2027-08-18", "as_of": "2026-08-23",
      "source": "https://www.wtkr.com/news/in-the-community/virginia-beach/virginia-beach-city-council-approves-12-month-moratorium-on-new-data-center-applications"},
+    {"locality": "Fairfax County", "state": "VA", "level": "Local",
+     "status": "Enacted", "when": "Sep 10, 2024", "term": "standing",
+     "note": "Not a pause — a standing zoning ordinance amendment, adopted "
+             "Sep 10, 2024 and effective Sep 11, that requires Board of "
+             "Supervisors special-exception approval for nearly all new data "
+             "centers (by-right only in I-5/I-6 industrial districts), 200-ft "
+             "setbacks from residential lot lines (300 ft for backup "
+             "generators), a one-mile buffer from Metro stations, full "
+             "enclosure or screening of mechanical equipment, and pre- and "
+             "post-construction noise studies. A companion substation "
+             "amendment adopted Dec 9, 2025 (unanimous) adds 100-ft residential "
+             "setbacks, 12-ft solid walls, a 50-ft planted buffer and a 55 dBA "
+             "nighttime noise limit — but leaves substations by-right in "
+             "industrial zones, which is why the Plaza 500 (Lincolnia) fight "
+             "runs through a 2232 public-facility review rather than a "
+             "rezoning. Applications pending on Sep 11, 2024 were grandfathered",
+     "lat": 38.85, "lon": -77.31, "expires": None, "as_of": "2026-09-05",
+     "source": "https://www.fairfaxcounty.gov/news/board-supervisors-approve-new-data-center-zoning-ordinance-amendment"},
     {"locality": "Lyon County", "state": "KS", "level": "Local",
      "status": "Enacted", "when": "Jul 23, 2026",
      "note": "Resolution 12-26: 6-month pause on new data center and battery "
@@ -4504,7 +4530,32 @@ def project_status(row, today=None):
                                 "for the hearing date and request formal "
                                 "notice."))
         return out
-    if has_value(row.get("announced")):
+
+    # Built or building campuses. Bulk-imported rows (Epoch AI, PA DEP)
+    # carry dated `operational` / `construction` events but no milestone
+    # fields, so before this fallback a Google campus running since 2020
+    # rendered as "Rumored" next to its own operating history — the single
+    # most visible credibility hole on the Virginia pages. An active process
+    # above (hearing, application) still wins: an operating campus with an
+    # expansion before the board is a hearing first.
+    kinds = {str(e.get("kind", "")).strip().lower()
+             for e in (row.get("events") or []) if isinstance(e, dict)}
+    if "operational" in kinds:
+        out.update(stage="Operating", phase="operating", terminal=True,
+                   next_action=("Already operating — the leverage now is "
+                                "enforcement: noise and water conditions, "
+                                "tax revenue tracking, and any expansion "
+                                "filing, which reopens the record."))
+        return out
+    if "construction" in kinds:
+        out.update(stage="Under construction", phase="construction",
+                   terminal=True,
+                   next_action=("Under construction — pull the approved "
+                                "conditions and permits and hold the builder "
+                                "to them; an expansion or a new building "
+                                "reopens the record."))
+        return out
+    if has_value(row.get("announced")) or "announcement" in kinds:
         out.update(stage="Proposed", phase="proposed",
                    next_action=("Early stage. File a public-records request "
                                 "for the application and site plan."))
@@ -8562,8 +8613,11 @@ LOCAL_BODIES = [
      "body": "Board of Supervisors",
      "decides": "Rezonings, conditional use permits and comprehensive plan "
                 "amendments across five magisterial districts — the body that "
-                "rules on data center rezonings in a county seeing heavy data "
-                "center interest.",
+                "rules on data center rezonings. Approved three Google "
+                "data-center campuses ($9B+ investment) in a public vote; "
+                "residents say the county used NDAs and concealed Google's "
+                "involvement until after approval. The county keeps a data "
+                "center page at chesterfield.gov/datacenters.",
      "meets": "See the county's published 2026 meeting schedule (Board Meetings page)",
      "where": "Public Meeting Room, 10001 Iron Bridge Road, Chesterfield, VA 23831",
      "agenda_url": "https://www.chesterfield.gov/244/Agendas-and-Minutes",
@@ -9159,14 +9213,22 @@ LOCAL_BODIES = [
      "decides": "Zoning and land use in one of the country's largest data "
                 "center markets. Residents have publicly questioned Dominion "
                 "Energy over a specific data-center proposal's power needs.",
-     "meets": "2 Tuesdays per month.",
+     "meets": "Usually two Tuesdays per month.",
      "where": "Board Auditorium, Fairfax County Government Center, 12000 Government Center Parkway, Fairfax, VA 22035",
      "agenda_url": "https://www.fairfaxcounty.gov/boardofsupervisors/board-supervisors-meetings",
-     "comment_process": "See the board's published agenda for the "
-                        "public-comment process for a specific meeting.",
-     "phone": "", "email": "",
+     "comment_process": "Public hearings: register in advance with the "
+                        "Department of Clerk Services (703-324-3151) or at "
+                        "fairfaxcounty.gov/bosclerk/speakers-form; 3 minutes "
+                        "speaking on your own behalf, 5 for an organization. "
+                        "General public comment is heard after the last public "
+                        "hearing of the day — max 10 speakers, 3 minutes each, "
+                        "once per six months, and not on items already set for "
+                        "a public hearing. The Plaza 500 substation is a "
+                        "Planning Commission 2232 review (Sep 24, 2026, 7 p.m.), "
+                        "not a Board hearing — sign up with the Commission.",
+     "phone": "703-324-3151", "email": "chairman@fairfaxcounty.gov",
      "website": "https://www.fairfaxcounty.gov/boardofsupervisors/",
-     "as_of": "2026-08-12", "source": "https://www.fairfaxcounty.gov/boardofsupervisors/board-supervisors-meetings"},
+     "as_of": "2026-09-05", "source": "https://www.fairfaxcounty.gov/boardofsupervisors/sites/boardofsupervisors/files/assets/documents/pdf/board-of-supervisors-flyer.pdf"},
 
     {"locality": "Loudoun County", "state": "VA",
      "body": "Board of Supervisors",
@@ -9179,11 +9241,14 @@ LOCAL_BODIES = [
      "meets": "See the board's published meeting calendar.",
      "where": "Board Room, Loudoun County Government Center, 1 Harrison Street SE, Leesburg, VA 20175",
      "agenda_url": "https://www.loudoun.gov/3426/Board-of-Supervisors-Meetings-Packets",
-     "comment_process": "See the board's published agenda for the "
-                        "public-comment process for a specific meeting.",
-     "phone": "", "email": "",
+     "comment_process": "Board comment line 703-777-0115. Sign up to speak at "
+                        "public hearings through the Clerk; see the board's "
+                        "published agenda for the process for a specific "
+                        "meeting. The moratorium-options item is expected at "
+                        "the Sep 15, 2026 business meeting.",
+     "phone": "703-777-0204", "email": "",
      "website": "https://www.loudoun.gov/86/Board-of-Supervisors",
-     "as_of": "2026-08-12", "source": "https://www.loudoun.gov/6221/Phase-1-Project-Plan-for-Data-Center-Sta"},
+     "as_of": "2026-09-05", "source": "https://www.loudoun.gov/6221/Phase-1-Project-Plan-for-Data-Center-Sta"},
 
     {"locality": "Lee County", "state": "NC",
      "body": "Board of Commissioners",
@@ -9321,21 +9386,6 @@ LOCAL_BODIES = [
      "website": "https://co.forsyth.nc.us/Commissioners/default.aspx",
      "as_of": "2026-08-12", "source": "https://co.forsyth.nc.us/Commissioners/default.aspx"},
 
-    {"locality": "Chesterfield County", "state": "VA",
-     "body": "Board of Supervisors",
-     "decides": "Zoning and land use. Approved three Google data-center "
-                "campuses ($9B+ investment) in a public vote; residents say "
-                "the county used NDAs and concealed Google's involvement "
-                "until after approval, raising transparency concerns.",
-     "meets": "See the county's published Board of Supervisors meeting "
-              "calendar.",
-     "where": "Chesterfield County Public Meeting Room, 10001 Iron Bridge Road, Chesterfield, VA 23832",
-     "agenda_url": "https://www.chesterfield.gov/datacenters",
-     "comment_process": "See the board's published agenda for the "
-                        "public-comment process for a specific meeting.",
-     "phone": "", "email": "",
-     "website": "https://www.chesterfield.gov/datacenters",
-     "as_of": "2026-08-12", "source": "https://www.chesterfield.gov/datacenters"},
 
     {"locality": "Edgewater", "state": "FL",
      "body": "City Council",
@@ -11511,6 +11561,91 @@ LOCAL_OFFICIALS = [
      "email": "", "phone": "",
      "stance": "Voted for the 2026-08-18 moratorium (part of the unanimous 3-0 vote)", "as_of": "2026-09-02",
      "source": "https://kokomolantern.substack.com/p/county-adopts-data-center-moratorium"},
+
+    # Loudoun County, VA — https://www.loudoun.gov/Directory.aspx?did=4
+    # The county directory publishes one board phone and a contact form,
+    # no per-member addresses; email is left blank rather than copied from
+    # a third-party list. Chair Randall's term runs to 2027.
+    {"locality": "Loudoun County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Phyllis J. Randall", "role": "Chair", "district": "At-Large",
+     "email": "", "phone": "703-777-0204", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.loudoun.gov/Directory.aspx?did=4"},
+    {"locality": "Loudoun County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Michael R. Turner", "role": "Vice Chair", "district": "Ashburn",
+     "email": "", "phone": "703-777-0204", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.loudoun.gov/Directory.aspx?did=4"},
+    {"locality": "Loudoun County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Juli E. Briskman", "role": "Supervisor", "district": "Algonkian",
+     "email": "", "phone": "703-777-0204", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.loudoun.gov/Directory.aspx?did=4"},
+    {"locality": "Loudoun County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Sylvia R. Glass", "role": "Supervisor", "district": "Broad Run",
+     "email": "", "phone": "703-777-0204", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.loudoun.gov/Directory.aspx?did=4"},
+    {"locality": "Loudoun County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Caleb A. Kershner", "role": "Supervisor", "district": "Catoctin",
+     "email": "", "phone": "703-777-0204", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.loudoun.gov/Directory.aspx?did=4"},
+    {"locality": "Loudoun County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Matthew F. Letourneau", "role": "Supervisor", "district": "Dulles",
+     "email": "", "phone": "703-777-0204", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.loudoun.gov/Directory.aspx?did=4"},
+    {"locality": "Loudoun County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Kristen C. Umstattd", "role": "Supervisor", "district": "Leesburg",
+     "email": "", "phone": "703-777-0204", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.loudoun.gov/Directory.aspx?did=4"},
+    {"locality": "Loudoun County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Laura A. TeKrony", "role": "Supervisor", "district": "Little River",
+     "email": "", "phone": "703-777-0204", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.loudoun.gov/Directory.aspx?did=4"},
+    {"locality": "Loudoun County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Koran T. Saines", "role": "Supervisor", "district": "Sterling",
+     "email": "", "phone": "703-777-0204", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.loudoun.gov/Directory.aspx?did=4"},
+
+    # Fairfax County, VA — county-published board flyer (Oct 2025), terms
+    # to Dec 31, 2027. District emails are the office inboxes the county
+    # publishes, not personal addresses.
+    {"locality": "Fairfax County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Jeffrey C. McKay", "role": "Chairman", "district": "At-Large",
+     "email": "chairman@fairfaxcounty.gov", "phone": "703-324-2321", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.fairfaxcounty.gov/boardofsupervisors/sites/boardofsupervisors/files/assets/documents/pdf/board-of-supervisors-flyer.pdf"},
+    {"locality": "Fairfax County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Kathy L. Smith", "role": "Vice Chairman", "district": "Sully",
+     "email": "sully@fairfaxcounty.gov", "phone": "703-814-7100", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.fairfaxcounty.gov/boardofsupervisors/sites/boardofsupervisors/files/assets/documents/pdf/board-of-supervisors-flyer.pdf"},
+    {"locality": "Fairfax County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Rachna Sizemore Heizer", "role": "Supervisor", "district": "Braddock",
+     "email": "braddock@fairfaxcounty.gov", "phone": "703-425-9300", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.fairfaxcounty.gov/boardofsupervisors/sites/boardofsupervisors/files/assets/documents/pdf/board-of-supervisors-flyer.pdf"},
+    {"locality": "Fairfax County", "state": "VA", "body": "Board of Supervisors",
+     "name": "James N. Bierman Jr.", "role": "Supervisor", "district": "Dranesville",
+     "email": "dranesville@fairfaxcounty.gov", "phone": "703-356-0551", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.fairfaxcounty.gov/boardofsupervisors/sites/boardofsupervisors/files/assets/documents/pdf/board-of-supervisors-flyer.pdf"},
+    {"locality": "Fairfax County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Rodney L. Lusk", "role": "Supervisor", "district": "Franconia",
+     "email": "franconia@fairfaxcounty.gov", "phone": "703-971-6262", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.fairfaxcounty.gov/boardofsupervisors/sites/boardofsupervisors/files/assets/documents/pdf/board-of-supervisors-flyer.pdf"},
+    {"locality": "Fairfax County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Walter L. Alcorn", "role": "Supervisor", "district": "Hunter Mill",
+     "email": "huntermill@fairfaxcounty.gov", "phone": "703-478-0283", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.fairfaxcounty.gov/boardofsupervisors/sites/boardofsupervisors/files/assets/documents/pdf/board-of-supervisors-flyer.pdf"},
+    {"locality": "Fairfax County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Andres F. Jimenez", "role": "Supervisor", "district": "Mason",
+     "email": "mason@fairfaxcounty.gov", "phone": "703-256-7717", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.fairfaxcounty.gov/boardofsupervisors/sites/boardofsupervisors/files/assets/documents/pdf/board-of-supervisors-flyer.pdf"},
+    {"locality": "Fairfax County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Daniel G. Storck", "role": "Supervisor", "district": "Mount Vernon",
+     "email": "mtvernon@fairfaxcounty.gov", "phone": "703-780-7518", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.fairfaxcounty.gov/boardofsupervisors/sites/boardofsupervisors/files/assets/documents/pdf/board-of-supervisors-flyer.pdf"},
+    {"locality": "Fairfax County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Dalia A. Palchik", "role": "Supervisor", "district": "Providence",
+     "email": "provdist@fairfaxcounty.gov", "phone": "703-560-6946", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.fairfaxcounty.gov/boardofsupervisors/sites/boardofsupervisors/files/assets/documents/pdf/board-of-supervisors-flyer.pdf"},
+    {"locality": "Fairfax County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Pat Herrity", "role": "Supervisor", "district": "Springfield",
+     "email": "springfield@fairfaxcounty.gov", "phone": "703-451-8873", "stance": "",
+     "as_of": "2026-09-05", "source": "https://www.fairfaxcounty.gov/boardofsupervisors/sites/boardofsupervisors/files/assets/documents/pdf/board-of-supervisors-flyer.pdf"},
 ]
 LOCAL_OFFICIALS_DF = pd.DataFrame(LOCAL_OFFICIALS)
 

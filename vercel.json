@@ -654,11 +654,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/fairfax-county-va",
-      "destination": "/states/virginia",
-      "permanent": true
-    },
-    {
       "source": "/communities/falls-township-pa",
       "destination": "/states/pennsylvania",
       "permanent": true

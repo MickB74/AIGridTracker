@@ -220,6 +220,118 @@ AI_RECORDS = {
         ],
         "as_of": "2026-08-26",
     },
+    # ── Virginia — the state with the most data centers and, until 2026-09-05,
+    # zero records on this page. Each item is the member's own release or a
+    # dated interview; a letter to a planning commission is an action, a
+    # study bill is a bill, and an interview quote is only a quote — the
+    # summaries say which.
+    ("VA", "8", "Don Beyer"): {
+        "lean": "guardrails",
+        "summary": "Wrote to the Fairfax County Planning Commission asking it "
+                   "to deny the Dominion substation that would power the Plaza "
+                   "500 data center in Lincolnia — a documented action on a "
+                   "live project in his district, not a bill.",
+        "items": [
+            {"what": "Sent a formal letter urging the Fairfax County Planning "
+                     "Commission to reject the 2232 permit for the Edsall Road "
+                     "data-center substation at Plaza 500, citing flooding, "
+                     "light and noise: “Data center infrastructure should not "
+                     "be built in residential areas where its scale and likely "
+                     "impacts are fundamentally incompatible with the character "
+                     "and quality of life of adjacent neighborhoods.”",
+             "date": "2026-07-30",
+             "source": "https://beyer.house.gov/news/documentsingle.aspx?DocumentID=9183"},
+        ],
+        "as_of": "2026-09-05",
+    },
+    ("VA", "7", "Eugene Vindman"): {
+        "lean": "guardrails",
+        "summary": "Introduced the Smart Data Center Policy Act, a Commerce "
+                   "Department study of siting data centers in industrial "
+                   "zones, transport hubs and military bases instead of next "
+                   "to neighborhoods, schools and parks. A study bill, not a "
+                   "mandate.",
+        "items": [
+            {"what": "Introduced the Smart Data Center Policy Act, directing "
+                     "the Department of Commerce to study the costs, benefits "
+                     "and possible federal incentives for siting data centers "
+                     "in industrial zones, rail and airport hubs and military "
+                     "installations rather than near homes and green space, "
+                     "with findings due to Congress in 180 days. Vindman: “We "
+                     "need to ensure data centers pay their fair share and are "
+                     "built in places that make sense — not next to "
+                     "neighborhoods, schools, or our public lands.”",
+             "date": "2026-08-04",
+             "source": "https://vindman.house.gov/2026/08/04/vindman-introduces-legislation-to-prevent-data-center-development-near-neighborhoods-schools-parks/"},
+        ],
+        "as_of": "2026-09-05",
+    },
+    ("VA", "10", "Suhas Subramanyam"): {
+        "lean": "guardrails",
+        "summary": "Represents Data Center Alley and has filed two bills on "
+                   "it: a DHS security strategy for communities around data "
+                   "centers, and a bipartisan NIST standard for measuring what "
+                   "each facility actually draws in power and water.",
+        "items": [
+            {"what": "Introduced the Data Infrastructure Risk Reduction Act, "
+                     "directing the Department of Homeland Security to write a "
+                     "security strategy and recommendations for protecting "
+                     "communities around data centers and the transmission and "
+                     "water systems that serve them.",
+             "date": "2026-05-08",
+             "source": "https://subramanyam.house.gov/media/press-releases/rep-subramanyam-introduces-bill-protect-homes-and-property-near-data-centers"},
+            {"what": "Introduced the bipartisan Data Infrastructure Energy "
+                     "Measurement and Standards Act with Reps. Obernolte (R-CA) "
+                     "and Foushee (D-NC), directing NIST and DOE to set "
+                     "standards for measuring data center energy and water use "
+                     "so forecasting and siting rest on disclosed numbers. "
+                     "Subramanyam: “We need a simple way to track how much "
+                     "power and water these facilities use.”",
+             "date": "2026-06-18",
+             "source": "https://subramanyam.house.gov/media/press-releases/reps-subramanyam-obernolte-foushee-introduce-legislation-create-first-its-kind"},
+        ],
+        "as_of": "2026-09-05",
+    },
+    ("VA", "1", "Rob Wittman"): {
+        "lean": "accelerate",
+        "summary": "Backed an NDAA provision using a Naval Weapons Station "
+                   "Yorktown–Dominion nuclear partnership as a pathfinder for "
+                   "meeting military and data-center power demand. Supply-side "
+                   "only; nothing located on who pays or on siting.",
+        "items": [
+            {"what": "Supported the FY2026 NDAA committee text that “directs "
+                     "the Navy to use a promising partnership between Naval "
+                     "Weapons Station Yorktown and Dominion Energy as a "
+                     "pathfinder to determine how to leverage nuclear power to "
+                     "meet Navy and Marine Corps installation power demands, in "
+                     "addition to supporting the data center energy demands of "
+                     "accelerating technologies like artificial intelligence.”",
+             "date": "2025-07-15",
+             "source": "https://wittman.house.gov/newsroom/press-releases/wittman-supports-legislation-that-strengthens-national-defense-and-supports-virginia-shipbuilding"},
+        ],
+        "as_of": "2026-09-05",
+    },
+    ("VA", "2", "Jen Kiggans"): {
+        "lean": "mixed",
+        "summary": "An interview quote, not an action: said data centers "
+                   "cannot all be banned but there is “a commonsense "
+                   "conversation to be had” about their energy and water use, "
+                   "and that the fight belongs in Richmond. Her district "
+                   "includes Virginia Beach and Chesapeake, both under local "
+                   "pauses.",
+        "items": [
+            {"what": "Told The Daily Signal: “They have data centers under the "
+                     "ocean floor. We can't ban all data centers,” adding there "
+                     "is “a commonsense conversation to be had” on their "
+                     "consumption of energy, water and local resources, that "
+                     "the debate has so far been left to the General Assembly, "
+                     "and that she has “enjoyed watching the Democrats fight "
+                     "with each other about the issue.”",
+             "date": "2026-08-18",
+             "source": "https://www.dailysignal.com/2026/08/18/midterm-rematch-fate-of-country/"},
+        ],
+        "as_of": "2026-09-05",
+    },
 }
 
 

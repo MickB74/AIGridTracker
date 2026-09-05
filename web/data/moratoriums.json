@@ -5,8 +5,8 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 397,
-  "verified_count": 397,
+  "count": 398,
+  "verified_count": 398,
   "caveat": "Illustrative rather than exhaustive \u2014 dozens of localities churn weekly, and this tracks the ones we have read a source for.\n\n**Each row carries its own provenance.** Rows showing a verification date link to the ordinance, the enacting body's own page, or a datable report of the vote, and were read on that date. Rows marked *unverified* came from bulk compilation and have not been checked against a primary source \u2014 the locality, the year, and the status may all be off. Verify one of those with the town clerk before citing it as precedent.\n\n**Expiry is derived, not asserted.** A row with a documented end date flips to *Expired* on its own once that date passes. A time-limited moratorium whose start date was never documented keeps showing as enacted \u2014 that is a known gap, not a claim that it is still in force. Moratoriums are also routinely extended, so an expiry date is the earliest it could have ended, not proof that it did.",
   "schema": {
     "id": "Stable row id, derived from locality + state \u2014 matches the community-page slug",
@@ -5436,26 +5436,26 @@
       "effective_status": "Proposed",
       "expired": false,
       "days_left": null,
-      "when": "Jul 2026",
-      "date": "2026-07-01",
-      "date_precision": "month",
+      "when": "Jul 22, 2026",
+      "date": "2026-07-22",
+      "date_precision": "day",
       "expires": null,
       "term_kind": "unknown",
       "term_label": "Term not documented",
-      "note": "Board of Supervisors voted 6-1 to direct staff to prepare moratorium options by Sep 15. Legal questions remain about Virginia law's allowance of blanket moratoriums. World's largest data center hub (~46M sq ft constructed or permitted)",
-      "source": "https://virginiabusiness.com/loudoun-supervisors-mull-data-center-moratorium/",
+      "note": "Board of Supervisors passed Supervisor Briskman's motion 6-1-2 (Umstattd opposed; Kershner and Letourneau absent) directing the county attorney to return in September with options for pausing new data center applications while the county finishes its data center standards. County Attorney Leo Rogers told the board a blanket moratorium is not legal in Virginia: legislative applications (rezonings, special exceptions) could be paused for up to a year, but administrative applications cannot because state code sets review clocks. The item is expected Sep 15, 2026. A separate proposal to strip the exemption from 23 grandfathered projects was deferred Sep 1 for legal review and returns Oct 6. World's largest data center hub",
+      "source": "https://www.loudounnow.com/news/loudoun-supervisors-eye-data-centers-moratorium-more-regulations/article_63c90942-647a-4af6-9d43-5ae05a148153.html",
       "source_kind": "news",
       "ordinance_url": null,
-      "as_of": "2026-08-13",
+      "as_of": "2026-09-05",
       "verified": true,
       "threshold": null,
-      "covers": null,
+      "covers": "rezoning",
       "events": [
         {
-          "date": "2026-07-01",
+          "date": "2026-07-22",
           "kind": "proposed",
           "label": "Proposed",
-          "source": "https://virginiabusiness.com/loudoun-supervisors-mull-data-center-moratorium/"
+          "source": "https://www.loudounnow.com/news/loudoun-supervisors-eye-data-centers-moratorium-more-regulations/article_63c90942-647a-4af6-9d43-5ae05a148153.html"
         }
       ],
       "replaced_by": null,
@@ -11411,6 +11411,41 @@
       "replaced_by": null,
       "lat": 36.85,
       "lon": -75.98
+    },
+    {
+      "id": "fairfax-county-va",
+      "locality": "Fairfax County",
+      "state": "VA",
+      "level": "Local",
+      "status": "Enacted",
+      "effective_status": "Enacted",
+      "expired": false,
+      "days_left": null,
+      "when": "Sep 10, 2024",
+      "date": "2024-09-10",
+      "date_precision": "day",
+      "expires": null,
+      "term_kind": "standing",
+      "term_label": "No end date by design \u2014 a permanent ban or standing statute",
+      "note": "Not a pause \u2014 a standing zoning ordinance amendment, adopted Sep 10, 2024 and effective Sep 11, that requires Board of Supervisors special-exception approval for nearly all new data centers (by-right only in I-5/I-6 industrial districts), 200-ft setbacks from residential lot lines (300 ft for backup generators), a one-mile buffer from Metro stations, full enclosure or screening of mechanical equipment, and pre- and post-construction noise studies. A companion substation amendment adopted Dec 9, 2025 (unanimous) adds 100-ft residential setbacks, 12-ft solid walls, a 50-ft planted buffer and a 55 dBA nighttime noise limit \u2014 but leaves substations by-right in industrial zones, which is why the Plaza 500 (Lincolnia) fight runs through a 2232 public-facility review rather than a rezoning. Applications pending on Sep 11, 2024 were grandfathered",
+      "source": "https://www.fairfaxcounty.gov/news/board-supervisors-approve-new-data-center-zoning-ordinance-amendment",
+      "source_kind": "official",
+      "ordinance_url": null,
+      "as_of": "2026-09-05",
+      "verified": true,
+      "threshold": null,
+      "covers": "rezoning",
+      "events": [
+        {
+          "date": "2024-09-10",
+          "kind": "enacted",
+          "label": "Enacted",
+          "source": "https://www.fairfaxcounty.gov/news/board-supervisors-approve-new-data-center-zoning-ordinance-amendment"
+        }
+      ],
+      "replaced_by": null,
+      "lat": 38.85,
+      "lon": -77.31
     },
     {
       "id": "lyon-county-ks",

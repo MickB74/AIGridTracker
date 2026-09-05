@@ -350,6 +350,29 @@ AI_RECORDS = {
         ],
         "as_of": "2026-08-25",
     },
+    # ── Virginia — the incumbent's own bill, sourced to his own release ──
+    ("VA", "Mark Warner"): {
+        "lean": "guardrails",
+        "summary": "Sponsored the Power for the People Act to stop households "
+                   "subsidising data centers: separate rate classes for data "
+                   "centers, FERC-enforced payment for the local transmission "
+                   "upgrades they trigger, and better load forecasting.",
+        "items": [
+            {"what": "Introduced the Power for the People Act with eight "
+                     "Democratic cosponsors (Van Hollen, Durbin, Blumenthal, "
+                     "Booker, Duckworth, Smith, Welch, Alsobrooks). It would "
+                     "create new utility rate classes for data centers, direct "
+                     "FERC to make data centers pay for the local transmission "
+                     "upgrades they require, tie interconnection to clean "
+                     "energy and prevailing-wage incentives, and improve demand "
+                     "forecasting. Warner: “If corporations are going to run "
+                     "data centers in Virginia, they should cover the cost of "
+                     "them.”",
+             "date": "2026-06-02",
+             "source": "https://www.warner.senate.gov/newsroom/press-releases/warner-sponsors-bill-to-ensure-virginians-arent-stuck-footing-the-bill-for-big-data-centers/"},
+        ],
+        "as_of": "2026-09-05",
+    },
 }
 
 

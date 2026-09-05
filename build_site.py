@@ -512,6 +512,8 @@ footer { margin-top:48px; border-top:1px solid var(--rule);
 .badge-in-review { background:#134e4a; color:#5eead4; }
 .badge-rumored { background:#374151; color:#9ca3af; }
 .badge-approved { background:#7f1d1d; color:#fca5a5; }
+.badge-under-construction { background:#7c2d12; color:#fdba74; }
+.badge-operating { background:#1f2937; color:#d1d5db; }
 .badge-denied { background:#065f46; color:#6ee7b7; }
 .badge-withdrawn { background:#334155; color:#cbd5e1; }
 .timeline { list-style:none; padding:0; margin:10px 0 0;
@@ -8962,7 +8964,7 @@ PROJECT_SCHEMA = [
     ("hearing_date", "ISO date of the next/decisive public hearing, or blank."),
     ("decided_date", "ISO date a terminal decision was reached, or blank."),
     ("outcome", "approved | denied | withdrawn | blank (blank = still live)."),
-    ("stage", "DERIVED status shown on the page (Hearing scheduled, Awaiting decision, In review, Proposed, Rumored, Approved, Denied, Withdrawn)."),
+    ("stage", "DERIVED status shown on the page (Hearing scheduled, Awaiting decision, In review, Proposed, Rumored, Approved, Under construction, Operating, Denied, Withdrawn, Blocked by ban)."),
     ("days_to_hearing", "DERIVED days until the hearing (negative once past), or blank."),
     ("note", "One-line plain-language status."),
     ("source", "Primary URL backing the current status."),
@@ -8973,7 +8975,8 @@ PROJECT_SCHEMA = [
 # Live stages before terminal ones; within live, soonest hearing first.
 _PROJECT_PHASE_ORDER = {"hearing": 0, "awaiting": 1, "review": 2,
                         "proposed": 3, "rumored": 4,
-                        "approved": 5, "denied": 6, "withdrawn": 7}
+                        "approved": 5, "construction": 6, "operating": 7,
+                        "denied": 8, "withdrawn": 9}
 
 
 def _project_sort_key(p):

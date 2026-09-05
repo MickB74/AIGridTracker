@@ -19915,6 +19915,48 @@
       "pa_dep_county": "Indiana",
       "pa_dep_status": "Proposed (No Applications Received)",
       "events": []
+    },
+    {
+      "id": "amazon-bridgefield-ashburn-va",
+      "name": "Amazon Bridgefield Tech Center (GW campus, Ashburn)",
+      "operator": "Amazon (AWS)",
+      "owner": "Amazon Data Services",
+      "tenant": "Amazon (AWS)",
+      "filing_llc": "Amazon Data Services",
+      "locality": "Ashburn (Loudoun County)",
+      "state": "VA",
+      "lat": 39.05,
+      "lon": -77.46,
+      "size_mw": null,
+      "acres": 122,
+      "announced": "2026-03-17",
+      "rezoning_filed": "2026-07-31",
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": null,
+      "note": "Four data center buildings (about 800,000 sq ft per WTOP; Northern Virginia Magazine reports ~400,000 sq ft plus three parking garages) on George Washington University's Virginia Science and Technology campus, filed as a site plan under 1972-era zoning so it would need no Planning Commission review, public hearing or Board vote. The county says data centers are not by-right there and will require special-exception review. Construction cannot start until GW vacates, up to five years. 'rezoning_filed' here is the site-plan filing date.",
+      "source": "https://wtop.com/loudoun-county/2026/08/concrete-jungle-as-amazon-details-plans-for-new-ashburn-data-centers-some-residents-are-fed-up/",
+      "as_of": "2026-09-05",
+      "events": [
+        {
+          "date": "2026-03-17",
+          "kind": "announcement",
+          "summary": "Amazon Data Services bought George Washington University's Ashburn campus for $427 million. Economic development director Buddy Rizer: \"At no time has the Board of Supervisors envisioned data centers on that property,\" and the county said any data center there needs special-exception review before the Board of Supervisors, not by-right approval.",
+          "source": "https://wtop.com/loudoun-county/2026/03/loudoun-county-will-fight-to-keep-amazon-data-center-off-just-sold-gw-campus-in-ashburn/"
+        },
+        {
+          "date": "2026-07-31",
+          "kind": "filing",
+          "summary": "Amazon Data Services filed a site plan for four two-story data center buildings and three parking garages on the 122-acre campus. Supervisor Juli Briskman (Algonkian): \"Replacing the George Washington University campus with four massive data center buildings would be a profound loss for our community.\"",
+          "source": "https://northernvirginiamag.com/news/2026/07/31/amazon-plans-4-data-centers-on-george-washington-universitys-loudoun-campus/"
+        },
+        {
+          "date": "2026-08-04",
+          "kind": "meeting",
+          "summary": "Amazon presented the 'Bridgefield Tech Center' plan (about 800,000 sq ft in four buildings) to residents. The application relies on 1972 zoning to proceed as a site plan with no Planning Commission review, public hearing or Board vote. Briskman called it too close to homes, Bles Park and the Potomac; residents described the area as becoming \"a concrete jungle.\"",
+          "source": "https://wtop.com/loudoun-county/2026/08/concrete-jungle-as-amazon-details-plans-for-new-ashburn-data-centers-some-residents-are-fed-up/"
+        }
+      ]
     }
   ]
 }
