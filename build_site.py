@@ -96,10 +96,10 @@ FORMSPREE_ID = os.environ.get("FORMSPREE_ID", "xljroogo")
 # sitemap lastmod moved in the latest build. Generated 2026-09-05.
 INDEXNOW_KEY = os.environ.get("INDEXNOW_KEY", "640f6612083c24b374530b6ba85d0d57")
 
-# Bing Webmaster Tools ownership tag. Empty until the code from
-# bing.com/webmasters is pasted in (or the site is imported from Search
-# Console, which needs no tag at all).
-BING_SITE_VERIFICATION = os.environ.get("BING_SITE_VERIFICATION", "")
+# Bing Webmaster Tools ownership tag (msvalidate.01), issued 2026-09-05.
+# Public by design, like the Google tag above.
+BING_SITE_VERIFICATION = os.environ.get("BING_SITE_VERIFICATION",
+                                        "EAFCC85873DF7F2A656666010A7D79FD")
 FORMSPREE_SUBMIT_ID = os.environ.get("FORMSPREE_SUBMIT_ID", "xdenpwor")
 
 # Third-party existing-facility directory (SOURCES["datacentermap"]). State
