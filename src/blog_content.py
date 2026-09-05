@@ -185,7 +185,7 @@ whichever comes first," per
 [WECT](https://www.wect.com/2026/08/26/whiteville-approves-12-month-moratorium-new-data-centers-crypto-mining/).
 The stated concerns were water for cooling, electricity demand, diesel backup
 emissions and noise, and the fact that the city's code had no definition for
-any of it.
+any of it. [Community page](/communities/whiteville-nc.html).
 
 ## What the fine print has in common
 
