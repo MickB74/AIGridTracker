@@ -3653,12 +3653,14 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
             latest = g["stories"][0]
             ml = _maps_link(g)
             pin_html = (f'<div class="angle">{ml.strip() if ml else "📍"}</div>')
+            _ps = locality_slugs.get((g["locality"], g["state"])) if g["locality"] else None
+            _ph = f"communities/{_ps}" if _ps else f"#{_story_group_slug(g['label'])}"
             rows.append(
                 '<li class="top-story">'
                 f'<div class="rank">{i}</div>'
                 f'{pin_html}'
                 '<div class="top-body">'
-                f'<h3><a href="#{_story_group_slug(g["label"])}">{esc(g["label"])}</a> '
+                f'<h3><a href="{_ph}">{esc(g["label"])}</a> '
                 f'<span class="count">{g["count"]} stories</span></h3>'
                 f'<p class="blurb">{esc(g["summary"])}</p>'
                 f'<p class="meta">Latest: <a href="{esc(latest.get("link", ""))}" '
@@ -3723,14 +3725,8 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
         last_active = _fmt_date(_latest_iso(g), fmt="%b %-d")
         search_blob = esc(" ".join([g["label"]] + [s.get("title", "") for s in g["stories"]]))
         slug = _story_group_slug(g["label"])
-        page_link = ""
-        # Only link a page that is actually written. A locality can carry a
-        # label with no page behind it — fewer than 4 archived stories and no
-        # moratorium row — and it happens retroactively too, when a row is
-        # removed from MORATORIUMS_DF but its already-tagged stories stay.
+        # Link the heading to the community page when one exists, else anchor.
         _page_slug = locality_slugs.get((g["locality"], g["state"])) if g["locality"] else None
-        if _page_slug:
-            page_link = f' · <a href="communities/{_page_slug}.html">Full page &rarr;</a>'
         # Surface the latest headline on the card face
         latest_story = g["stories"][0] if g["stories"] else None
         latest_html = ""
@@ -3746,6 +3742,7 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
         if g["state"]:
             state_chip = (f'<button type="button" class="tag tag-btn sg-state-chip" '
                           f'data-filter-state="{esc(g["state"])}">{esc(g["state"])}</button>')
+        heading_href = f"communities/{_page_slug}" if _page_slug else f"#{slug}"
         cards.append(
             f'<article class="story-group" id="{slug}" data-state="{esc(g["state"] or "")}" '
             f'data-count="{g["count"]}" data-latest="{esc(_latest_iso(g))}" '
@@ -3753,12 +3750,12 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
             f'data-search="{search_blob.lower()}">'
             f'<div class="sg-head">'
             f'<div class="sg-title-row">'
-            f'<h3><a href="#{slug}" class="anchor">{esc(g["label"])}</a></h3>'
+            f'<h3><a href="{heading_href}" class="anchor">{esc(g["label"])}</a></h3>'
             f'<span class="sg-count">{g["count"]}</span></div>'
             f'<div class="sg-meta-row">{state_chip}{pattern_badge}'
             f'{_maps_link(g)}'
             f'{f"<span class=\"sg-activity\">Active {last_active}</span>" if last_active else ""}'
-            f'{page_link}</div></div>'
+            f'</div></div>'
             f'{summary_html}'
             f'{latest_html}'
             f'<details{" open" if g["count"] <= 3 else ""}>'
@@ -11700,7 +11697,7 @@ def _load_senate_money():
 _SENATE_MONEY = _load_senate_money()
 
 
-def _sortable_table(table_id, headers, rows, caption=""):
+def _sortable_table(table_id, headers, rows, caption="", lazy=None, first=60):
     """A compact sortable table: click a header to sort, click again to flip.
 
     `headers` is a list of (label, kind): "text", "num" (largest first on
@@ -11717,16 +11714,40 @@ def _sortable_table(table_id, headers, rows, caption=""):
         f'style="cursor:pointer;white-space:nowrap" title="Sort">{label} '
         f'<span class="muted">&#8597;</span></th>'
         for i, (label, kind) in enumerate(headers))
-    trs = "".join(
+    row_html = [
         "<tr>" + "".join(
             f'<td data-sort="{esc(str(key))}">{cell}</td>' for cell, key in r)
-        + "</tr>" for r in rows)
+        + "</tr>" for r in rows]
+    lazy_attr = ""
+    if lazy and len(row_html) > first:
+        # Same bargain as the moratoriums table: the page ships one screen
+        # of rows, the rest live in a JSON file fetched on the first sort
+        # or filter. Every row is still rendered in Python, byte-identical.
+        (WEB / lazy).parent.mkdir(parents=True, exist_ok=True)
+        (WEB / lazy).write_text(json.dumps({"rows": row_html}), encoding="utf-8")
+        lazy_attr = f' data-lazy="{esc(lazy)}" data-total="{len(row_html)}"'
+        trs = "".join(row_html[:first])
+        caption = (f'Showing the first {first} of {len(row_html)} rows — sort or '
+                   f'filter to load them all. ' + caption)
+    else:
+        trs = "".join(row_html)
     cap = f'<p class="muted" style="font-size:13px;margin:6px 0 0">{caption}</p>' if caption else ""
     return f"""
-<div class="table-scroll"><table id="{table_id}" class="sortable">
+<div class="table-scroll"><table id="{table_id}" class="sortable"{lazy_attr}>
 <thead><tr>{ths}</tr></thead><tbody>{trs}</tbody></table></div>{cap}
 <script>
+if(!window.stLoad){{window.stLoad=function(t,cb){{
+  if(!t.dataset.lazy||t.dataset.loaded){{cb();return;}}
+  if(!t._loading){{t._loading=fetch(t.dataset.lazy).then(function(r){{return r.json();}})
+    .then(function(d){{t.tBodies[0].innerHTML=d.rows.join('');t.dataset.loaded='1';}})
+    .catch(function(){{}});}}
+  t._loading.then(cb);
+}};}}
 if(!window.stSort){{window.stSort=function(id,col){{
+  var t=document.getElementById(id);
+  stLoad(t,function(){{stSortNow(id,col);}});
+}};}}
+if(!window.stSortNow){{window.stSortNow=function(id,col){{
   var t=document.getElementById(id),tb=t.tBodies[0],th=t.tHead.rows[0].cells[col];
   var kind=th.dataset.kind,cur=th.dataset.dir;
   var dir=cur?(cur==='asc'?'desc':'asc'):(kind==='num'?'desc':'asc');
@@ -11816,6 +11837,196 @@ def _sen_table(rows, names):
                 "grade on a documented action; lean summarises the researched "
                 "record. Click a name for every cited item, or a state for both "
                 "senators.")
+
+
+def _hr_table(races):
+    """Every 2026 House candidate as one row — 1,161 of them, so the table
+    carries its own text filter. A district with a card links to it; the
+    rest link to the state's section of the full ballot."""
+    rows = []
+    for r in races:
+        dist = f'{r["abbrev"]}-{r["district"]}'
+        target = (f'#race-{r["abbrev"].lower()}-{r["district"].lower()}'
+                  if r["contested"] else f'#s-{slugify(r["state"])}')
+        for c in r["candidates"]:
+            n_items = len(c.get("items") or [])
+            rows.append([
+                (f'<a href="{target}">{esc(dist)}</a>'
+                 + (' <span class="muted">(delegate)</span>' if r.get("delegate") else ""),
+                 f'{r["state"]} {int(r["district"]) if r["district"].isdigit() else 0:03d}'),
+                (esc(r["state"]), r["state"]),
+                (f'<strong>{esc(c["name"])}</strong>'
+                 + (' <span class="muted">· incumbent</span>' if c["incumbent"] else ""),
+                 c["name"]),
+                (esc(c["party"]), c["party"]),
+                (_sr_lean_badge(c), {"guardrails": 0, "mixed": 1, "accelerate": 2}.get(c["lean"], 3)),
+                (str(n_items) if n_items else '<span class="muted">—</span>', n_items),
+                (esc(r["pvi"]), r["pvi"]),
+            ])
+    table = _sortable_table(
+        "hr-table",
+        [("District", "text"), ("State", "text"), ("Candidate", "text"),
+         ("Party", "text"), ("Lean", "rank"), ("Cited items", "num"),
+         ("PVI", "text")],
+        rows,
+        caption="One row per filed candidate. Click a district to jump to its "
+                "card, or to the state's section of the full ballot when no "
+                "record has been located yet.",
+        lazy="data/house-table.json")
+    filt = """
+<p><input type="search" id="hrtq" placeholder="Filter rows — state, district like TX-33, or a name…"
+   oninput="stFilter('hr-table', this.value, 'hrtcount')"
+   style="width:100%;max-width:420px;padding:9px;border-radius:8px;
+          border:1px solid #2a3a55;background:#0b1220;color:#eaf0f7">
+   <span class="muted" id="hrtcount" style="margin-left:8px;font-size:13px"></span></p>
+<script>
+if(!window.stFilter){window.stFilter=function(id,q,countId){
+  var t=document.getElementById(id);
+  stLoad(t,function(){
+    var qq=q.toLowerCase().trim(); var rows=t.tBodies[0].rows,n=0;
+    for(var i=0;i<rows.length;i++){var hit=!qq||rows[i].textContent.toLowerCase().indexOf(qq)>-1;
+      rows[i].style.display=hit?'':'none'; if(hit)n++;}
+    var c=document.getElementById(countId); if(c)c.textContent=qq?(n+' of '+rows.length+' rows'):'';
+  });
+};}
+</script>"""
+    return filt + table
+
+
+def _candidate_record_rows():
+    """Every cited item across the three federal trackers, one row each.
+
+    This is the citable form of the pages: a resident quoting a senator at a
+    hearing needs the sentence, the date, and the link, not a card. The
+    same rows feed the JSON/CSV download and the RSS feed, so the three
+    never disagree.
+    """
+    import src.senate_races as sr
+    import src.house_races as hr
+    import src.senators as sn
+    rows = []
+    for s in sn.senators(with_mentions=False):
+        page = f"{SITE_URL}/senators#sen-{s['bioguide'].lower()}"
+        st = s.get("stance")
+        if st and st.get("source"):
+            rows.append({"chamber": "Senate", "role": "senator", "state": s["state"],
+                         "district": "", "name": s["name"], "party": s["party"],
+                         "kind": "action", "what": st["text"], "date": "",
+                         "source": st["source"], "source_name": st.get("source_name") or "",
+                         "grade": st.get("grade") or "", "lean": (s.get("record") or {}).get("lean", ""),
+                         "as_of": (s.get("record") or {}).get("as_of") or "", "page": page})
+        rec = s.get("record")
+        if rec:
+            for i in rec["items"]:
+                rows.append({"chamber": "Senate", "role": "senator", "state": s["state"],
+                             "district": "", "name": s["name"], "party": s["party"],
+                             "kind": i.get("kind") or "statement", "what": i["what"],
+                             "date": i.get("date") or "", "source": i["source"],
+                             "source_name": i.get("source_name") or "",
+                             "grade": (st or {}).get("grade") or "", "lean": rec["lean"],
+                             "as_of": rec.get("as_of") or "", "page": page})
+    for r in sr.races():
+        page = f"{SITE_URL}/senate-races#race-{r['abbrev'].lower()}"
+        for c in r["candidates"]:
+            for i in c.get("items") or []:
+                rows.append({"chamber": "Senate", "role": "candidate", "state": r["abbrev"],
+                             "district": "", "name": c["name"], "party": c["party"],
+                             "kind": "statement", "what": i["what"], "date": i.get("date") or "",
+                             "source": i["source"], "source_name": "", "grade": "",
+                             "lean": c["lean"], "as_of": c.get("as_of") or "", "page": page})
+    for r in hr.races():
+        page = f"{SITE_URL}/house-races#race-{r['abbrev'].lower()}-{r['district'].lower()}"
+        for c in r["candidates"]:
+            for i in c.get("items") or []:
+                rows.append({"chamber": "House", "role": "candidate", "state": r["abbrev"],
+                             "district": r["district"], "name": c["name"], "party": c["party"],
+                             "kind": "statement", "what": i["what"], "date": i.get("date") or "",
+                             "source": i["source"], "source_name": "", "grade": "",
+                             "lean": c["lean"], "as_of": c.get("as_of") or "", "page": page})
+    # dedupe on (name, source, what) — a senator's graded stance often cites
+    # the same release as one of the researched items
+    seen, out = set(), []
+    for r in rows:
+        k = (r["name"], r["source"], r["what"][:80])
+        if k in seen:
+            continue
+        seen.add(k)
+        out.append(r)
+    out.sort(key=lambda r: (r["date"] or r["as_of"] or ""), reverse=True)
+    return out
+
+
+def publish_candidate_records():
+    """web/data/candidate-records.{json,csv} + web/feeds/candidate-records.xml."""
+    import csv
+    import io
+    import datetime as _dt
+    from email.utils import format_datetime
+    rows = _candidate_record_rows()
+    (WEB / "data").mkdir(parents=True, exist_ok=True)
+    (WEB / "data" / "candidate-records.json").write_text(json.dumps({
+        "generated": _dt.date.today().isoformat(),
+        "license": "CC BY 4.0",
+        "note": ("One row per cited item. kind=action is a bill, letter, "
+                 "hearing question or investigation; kind=statement is a quote, "
+                 "op-ed or campaign line. grade is the officials-scorecard grade "
+                 "(sitting officials only); lean summarises the cited items."),
+        "count": len(rows), "records": rows}, indent=1, ensure_ascii=False),
+        encoding="utf-8")
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=list(rows[0].keys()) if rows else [])
+    w.writeheader()
+    w.writerows(rows)
+    (WEB / "data" / "candidate-records.csv").write_text(buf.getvalue(), encoding="utf-8")
+
+    feeds = WEB / "feeds"
+    feeds.mkdir(parents=True, exist_ok=True)
+    now = _dt.datetime.now(_dt.timezone.utc)
+    items = []
+    for r in rows[:200]:
+        d = r["date"] or r["as_of"]
+        try:
+            dt = _dt.datetime.fromisoformat((d + "-01-01"[len(d) - 4:]) if len(d) < 10 else d)
+            dt = dt.replace(tzinfo=_dt.timezone.utc)
+        except ValueError:
+            dt = now
+        who = f"{r['name']} ({r['party']}, {r['state']}" + (f"-{r['district']}" if r["district"] else "") + ")"
+        title = f"{who}: {r['what'][:110]}{'…' if len(r['what']) > 110 else ''}"
+        desc = (f"{r['what']} Source: {r['source']}"
+                + (f" ({r['source_name']})" if r["source_name"] else "")
+                + f". Kind: {r['kind']}." + (f" Lean: {r['lean']}." if r["lean"] else "")
+                + f" Read {r['as_of']}." if r["as_of"] else "")
+        guid = hashlib.sha1(f"{r['name']}|{r['source']}|{r['what'][:80]}".encode()).hexdigest()
+        items.append(f"""  <item>
+    <title>{esc(title)}</title>
+    <link>{esc(r['page'])}</link>
+    <guid isPermaLink="false">{guid}</guid>
+    <pubDate>{format_datetime(dt)}</pubDate>
+    <description>{esc(desc)}</description>
+  </item>""")
+    (feeds / "candidate-records.xml").write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+  <title>AI GridWatch — federal officials and candidates on data centers</title>
+  <link>{SITE_URL}/senators</link>
+  <description>Every newly cited bill, letter, hearing question or statement
+  on AI data centers by a sitting U.S. senator or a 2026 Senate or House
+  candidate, with the source behind it. From AI GridWatch.</description>
+  <language>en-us</language>
+  <lastBuildDate>{format_datetime(now)}</lastBuildDate>
+{chr(10).join(items)}
+</channel></rss>
+""", encoding="utf-8")
+    return len(rows)
+
+
+def _records_cite_line(p=""):
+    """The "this is citable" strip under each tracker's table heading."""
+    return (f'<p class="muted" style="font-size:13px;margin:0 0 10px">Citable and '
+            f'subscribable: every row\'s items ship with their source and date. '
+            f'<a href="{p}feeds/candidate-records.xml">Subscribe by RSS</a> to new '
+            f'records · <a href="{p}data/candidate-records.json">JSON</a> · '
+            f'<a href="{p}data/candidate-records.csv">CSV</a> · '
+            f'<a href="{p}open-data.html">how to cite</a></p>')
 
 
 def _sr_lean_badge(c):
@@ -12022,6 +12233,7 @@ rather than as neutral. If you have a source for one of them,
 {jump}
 
 <h2 id="table">Every candidate at a glance</h2>
+{_records_cite_line()}
 {_sr_table(races)}
 
 <h2 id="fights">Races where data centers are already an issue</h2>
@@ -12236,6 +12448,10 @@ documented data-center record. The rest show <em>no record found</em> — never
                 color:#eaf0f7" oninput="srFilter()">
   <p class="muted" id="srcount" style="margin:8px 0 0"></p>
 </div>
+
+<h2 id="table">Every candidate at a glance</h2>
+{_records_cite_line()}
+{_hr_table(races)}
 
 <h2 id="documented">Districts with a documented record</h2>
 <p class="muted">{len(documented)} of {cov["races"]}. Everything else is in the
@@ -12625,6 +12841,7 @@ source for one of them, <a href="#method">send it to us</a>.</p></div>
 {jump}
 
 <h2 id="table">Every senator at a glance</h2>
+{_records_cite_line()}
 {_sen_table(rows, names)}
 
 <h2 id="states">By state</h2>
@@ -14980,6 +15197,22 @@ def build_open_data():
                          "local news", "story tracker"],
         },
         {
+            "title": "Federal officials & candidates on data centers",
+            "desc": ("Every cited bill, letter, hearing question and statement "
+                     "on AI data centers by a sitting U.S. senator or a 2026 "
+                     "Senate or House candidate — one row per item, each with "
+                     "its source URL, date, and the page it appears on. Also "
+                     "an RSS feed of new records."),
+            "page": "senators",
+            "json": "data/candidate-records.json",
+            "csv": "data/candidate-records.csv",
+            "schema": None,
+            "count": None,
+            "ds_name": "Federal officials and candidates on AI data centers",
+            "keywords": ["senator", "data center", "congress", "ratepayer",
+                         "2026 election", "voting record"],
+        },
+        {
             "title": "Moratorium deadline alerts",
             "desc": ("Moratoriums with documented end dates approaching or "
                      "recently lapsed. Also available as RSS — subscribe once, "
@@ -15398,6 +15631,8 @@ def main():
     (WEB / "cba-clauses.html").write_text(build_cba_clauses(), encoding="utf-8")
     (WEB / "officials.html").write_text(build_officials(), encoding="utf-8")
     (WEB / "scorecard.html").write_text(build_official_scorecard(), encoding="utf-8")
+    _n_records = publish_candidate_records()
+    print(f"  [data] published {_n_records} candidate/official records as JSON + CSV + RSS")
     (WEB / "senate-races.html").write_text(build_senate_races(), encoding="utf-8")
     (WEB / "senators.html").write_text(build_senators(), encoding="utf-8")
     (WEB / "house-races.html").write_text(build_house_races(), encoding="utf-8")
