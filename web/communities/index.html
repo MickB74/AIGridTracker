@@ -7,12 +7,12 @@
 <meta name="google-site-verification" content="kkgrLvRLdgGg12Y1ka456PlN9iNsyWGCyJIS-8ip9I4">
 <meta name="msvalidate.01" content="EAFCC85873DF7F2A656666010A7D79FD">
 <title>Data center fights, town by town — AI GridWatch</title>
-<meta name="description" content="Community briefings for 398 tracked data center moratoriums and actions across 39 states: status, sources, and next steps.">
+<meta name="description" content="Community briefings for 419 tracked data center moratoriums and actions across 39 states: status, sources, and next steps.">
 <link rel="canonical" href="https://aigridwatch.com/communities">
 <link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
       href="https://aigridwatch.com/blog/feed.xml">
 <meta property="og:title" content="Data center fights, town by town — AI GridWatch">
-<meta property="og:description" content="Community briefings for 398 tracked data center moratoriums and actions across 39 states: status, sources, and next steps.">
+<meta property="og:description" content="Community briefings for 419 tracked data center moratoriums and actions across 39 states: status, sources, and next steps.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://aigridwatch.com/communities">
 <meta property="og:site_name" content="AI GridWatch">
@@ -46,6 +46,11 @@ nav .nav-search { display:inline-flex; align-items:center; gap:6px;
   font-size:14px; padding:6px 10px; border-radius:8px;
   border:1px solid var(--rule); color:var(--muted); }
 nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
+/* One-click path from any national page to the reader's own state briefing —
+   the site's answer to "I don't want to wade through 49 other states". */
+nav .nav-state { font-size:13px; padding:6px 8px; border-radius:8px; max-width:150px;
+  border:1px solid var(--rule); background:var(--card); color:var(--muted); }
+nav .nav-state:hover, nav .nav-state:focus { color:var(--teal); border-color:var(--teal); }
 /* Grouped dropdowns (desktop). Menus reveal on hover, keyboard focus, or the
    native <details> toggle; the summary marker is replaced with a caret. */
 .navgroup { position:relative; }
@@ -78,6 +83,7 @@ nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
   nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-state { order:1; max-width:120px; }
   nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
@@ -528,11 +534,14 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
          role="button">&#9776;</label>
   <a class="nav-search" href="../search" aria-label="Search the site"
      title="Search">&#128269;<span>Search</span></a>
+  <select class="nav-state" aria-label="Jump to your state's briefing"
+     onchange="if(this.value)location.href='../states/'+this.value">
+    <option value="">Your state…</option><option value="alabama">Alabama</option><option value="alaska">Alaska</option><option value="arizona">Arizona</option><option value="arkansas">Arkansas</option><option value="california">California</option><option value="colorado">Colorado</option><option value="connecticut">Connecticut</option><option value="delaware">Delaware</option><option value="district-of-columbia">District of Columbia</option><option value="florida">Florida</option><option value="georgia">Georgia</option><option value="hawaii">Hawaii</option><option value="idaho">Idaho</option><option value="illinois">Illinois</option><option value="indiana">Indiana</option><option value="iowa">Iowa</option><option value="kansas">Kansas</option><option value="kentucky">Kentucky</option><option value="louisiana">Louisiana</option><option value="maine">Maine</option><option value="maryland">Maryland</option><option value="massachusetts">Massachusetts</option><option value="michigan">Michigan</option><option value="minnesota">Minnesota</option><option value="mississippi">Mississippi</option><option value="missouri">Missouri</option><option value="montana">Montana</option><option value="nebraska">Nebraska</option><option value="nevada">Nevada</option><option value="new-hampshire">New Hampshire</option><option value="new-jersey">New Jersey</option><option value="new-mexico">New Mexico</option><option value="new-york">New York</option><option value="north-carolina">North Carolina</option><option value="north-dakota">North Dakota</option><option value="ohio">Ohio</option><option value="oklahoma">Oklahoma</option><option value="oregon">Oregon</option><option value="pennsylvania">Pennsylvania</option><option value="rhode-island">Rhode Island</option><option value="south-carolina">South Carolina</option><option value="south-dakota">South Dakota</option><option value="tennessee">Tennessee</option><option value="texas">Texas</option><option value="utah">Utah</option><option value="vermont">Vermont</option><option value="virginia">Virginia</option><option value="washington">Washington</option><option value="west-virginia">West Virginia</option><option value="wisconsin">Wisconsin</option><option value="wyoming">Wyoming</option></select>
   <div class="nav-links">
     <a href="../">Home</a>
     <details class="navgroup"><summary>News & analysis</summary><div class="navmenu"><a href="../news">Top stories</a><a href="../blog">Blog</a><a href="../story-tracker">Story tracker</a><a href="../projects">Projects tracker</a><a href="../videos">Videos</a></div></details>
     <details class="navgroup"><summary>Act</summary><div class="navmenu"><a href="../start-here">Start here</a><a href="../siting">Siting score</a><a href="../hearing-questions">Hearing prep</a><a href="../opposition">Know the opposition</a><a href="../cba-clauses">Model clauses</a><a href="../case-studies">Case studies</a><a href="../impact">Impact calculator</a></div></details>
-    <details class="navgroup"><summary>Your area</summary><div class="navmenu"><a href="../states">Your state</a><a href="../map">Map & projects</a><a href="../moratoriums">Moratoriums</a><a href="../puc">PUCs</a><a href="../scorecard">Officials scorecard</a><a href="../senate-races">Senate races 2026</a><a href="../house-races">House races 2026</a><a href="../community-value">Community playbook</a></div></details>
+    <details class="navgroup"><summary>Your area</summary><div class="navmenu"><a href="../states">Your state</a><a href="../map">Map & projects</a><a href="../moratoriums">Moratoriums</a><a href="../puc">PUCs</a><a href="../scorecard">Officials scorecard</a><a href="../senate-races">Senate races 2026</a><a href="../senators">All 100 senators</a><a href="../house-races">House races 2026</a><a href="../community-value">Community playbook</a></div></details>
     <details class="navgroup"><summary>The facts</summary><div class="navmenu"><a href="../health-risks">Health risks</a><a href="../bills">Your electric bill</a><a href="../tax-breaks">Tax breaks</a><a href="../environment">Environment</a><a href="../learn">Learn the basics</a></div></details>
     <details class="navgroup"><summary>Industry</summary><div class="navmenu"><a href="../data-centers">Data centers</a><a href="../companies">Companies</a><a href="../complaints">Complaints by company</a><a href="../outlook">Electricity outlook</a><a href="../open-data">Open data</a></div></details>
   </div>
@@ -543,7 +552,7 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
 <header>
   <div class="kicker">Community briefings</div>
   <h1>Data center fights, town by town</h1>
-  <p class="sub">A page for every one of the 398 tracked moratoriums and
+  <p class="sub">A page for every one of the 419 tracked moratoriums and
   community actions across 39 states — status, sources, where the
   decision gets made, and what to do next.</p>
 </header>
@@ -720,9 +729,11 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
 <li><a href="st-charles-county-mo">St. Charles County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-01-13</span></li>
 <li><a href="columbia-mo">Columbia</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">fixed term, end date not recorded</span></li>
 <li><a href="neosho-mo">Neosho</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-07-07</span></li>
-<li><a href="camdenton-mo">Camdenton</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-05-05</span></li></ul></section><section><h2><a href="../states/nebraska">Nebraska</a> (1)</h2><ul><li><a href="seward-county-ne">Seward County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-06-30</span></li></ul></section><section><h2><a href="../states/nevada">Nevada</a> (3)</h2><ul><li><a href="reno-nv">Reno</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-08-31</span></li>
+<li><a href="camdenton-mo">Camdenton</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-05-05</span></li></ul></section><section><h2><a href="../states/nebraska">Nebraska</a> (1)</h2><ul><li><a href="seward-county-ne">Seward County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-06-30</span></li></ul></section><section><h2><a href="../states/nevada">Nevada</a> (5)</h2><ul><li><a href="reno-nv">Reno</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-08-31</span></li>
 <li><a href="henderson-nv">Henderson</a> — <span class="badge badge-rejected">Rejected</span><span class="badge-note">term not documented</span></li>
-<li><a href="nye-county-nv">Nye County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no fixed end — runs until a condition is met</span></li></ul></section><section><h2><a href="../states/new-jersey">New Jersey</a> (67)</h2><ul><li><a href="monroe-township-gloucester-co-nj">Monroe Township (Gloucester Co.)</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no end date — permanent</span></li>
+<li><a href="nye-county-nv">Nye County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no fixed end — runs until a condition is met</span></li>
+<li><a href="humboldt-county-nv">Humboldt County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-07-13</span></li>
+<li><a href="white-pine-county-nv">White Pine County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-01-18</span></li></ul></section><section><h2><a href="../states/new-jersey">New Jersey</a> (67)</h2><ul><li><a href="monroe-township-gloucester-co-nj">Monroe Township (Gloucester Co.)</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no end date — permanent</span></li>
 <li><a href="phillipsburg-nj">Phillipsburg</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no end date — permanent</span></li>
 <li><a href="warren-nj">Warren</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no end date — permanent</span></li>
 <li><a href="jersey-city-nj">Jersey City</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li>
@@ -788,9 +799,10 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
 <li><a href="vernon-township-nj">Vernon Township</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">term not documented</span></li>
 <li><a href="washington-nj">Washington</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">term not documented</span></li>
 <li><a href="winslow-township-nj">Winslow Township</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no end date — permanent</span></li>
-<li><a href="woodstown-nj">Woodstown</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">term not documented</span></li></ul></section><section><h2><a href="../states/new-mexico">New Mexico</a> (3)</h2><ul><li><a href="sierra-county-nm">Sierra County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2028-01-22</span></li>
+<li><a href="woodstown-nj">Woodstown</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">term not documented</span></li></ul></section><section><h2><a href="../states/new-mexico">New Mexico</a> (4)</h2><ul><li><a href="sierra-county-nm">Sierra County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2028-01-22</span></li>
 <li><a href="socorro-county-nm">Socorro County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-06-09</span></li>
-<li><a href="santa-fe-county-nm">Santa Fe County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2028-01-02</span></li></ul></section><section><h2><a href="../states/new-york">New York</a> (11)</h2><ul><li><a href="lysander-onondaga-co-ny">Lysander (Onondaga Co.)</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-11-06</span></li>
+<li><a href="santa-fe-county-nm">Santa Fe County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2028-01-02</span></li>
+<li><a href="colfax-county-nm">Colfax County</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li></ul></section><section><h2><a href="../states/new-york">New York</a> (11)</h2><ul><li><a href="lysander-onondaga-co-ny">Lysander (Onondaga Co.)</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-11-06</span></li>
 <li><a href="perth-fulton-co-ny">Perth (Fulton Co.)</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-06-04</span></li>
 <li><a href="tonawanda-erie-co-ny">Tonawanda (Erie Co.)</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-08-03</span></li>
 <li><a href="newfield-tompkins-co-ny">Newfield (Tompkins Co.)</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-07-09</span></li>
@@ -850,9 +862,13 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
 <li><a href="grafton-oh">Grafton</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2031-05-19</span></li>
 <li><a href="hubbard-oh">Hubbard</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-06-01</span></li>
 <li><a href="howland-township-oh">Howland Township</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-12-10</span></li>
-<li><a href="braceville-township-oh">Braceville Township</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-12-02</span></li></ul></section><section><h2><a href="../states/oklahoma">Oklahoma</a> (3)</h2><ul><li><a href="oklahoma-city-ok">Oklahoma City</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-12-31</span></li>
+<li><a href="braceville-township-oh">Braceville Township</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-12-02</span></li></ul></section><section><h2><a href="../states/oklahoma">Oklahoma</a> (7)</h2><ul><li><a href="oklahoma-city-ok">Oklahoma City</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-12-31</span></li>
 <li><a href="oklahoma-sb-1488-ok">Oklahoma (SB 1488)</a> — <span class="badge badge-rejected">Rejected</span><span class="badge-note">no end date — permanent</span></li>
-<li><a href="luther-ok">Luther</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-12-31</span></li></ul></section><section><h2><a href="../states/oregon">Oregon</a> (4)</h2><ul><li><a href="salem-or">Salem</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li>
+<li><a href="luther-ok">Luther</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-12-31</span></li>
+<li><a href="tulsa-ok">Tulsa</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-12-31</span></li>
+<li><a href="broken-arrow-ok">Broken Arrow</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-12-31</span></li>
+<li><a href="edmond-ok">Edmond</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-12-31</span></li>
+<li><a href="norman-ok">Norman</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-06-09</span></li></ul></section><section><h2><a href="../states/oregon">Oregon</a> (4)</h2><ul><li><a href="salem-or">Salem</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li>
 <li><a href="oregon-statewide-or">Oregon (statewide)</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li>
 <li><a href="oregon-enterprise-zone-tax-or">Oregon (enterprise zone tax)</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no fixed end — runs until a condition is met</span></li>
 <li><a href="hillsboro-or">Hillsboro</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-11-24</span></li></ul></section><section><h2><a href="../states/pennsylvania">Pennsylvania</a> (3)</h2><ul><li><a href="olyphant-pa">Olyphant</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">fixed term, end date not recorded</span></li>
@@ -868,21 +884,35 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
 <li><a href="mcminnville-tn">McMinnville</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-12-03</span></li>
 <li><a href="anderson-county-tn">Anderson County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2028-06-15</span></li>
 <li><a href="carter-county-tn">Carter County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-08-17</span></li>
-<li><a href="memphis-tn">Memphis</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li></ul></section><section><h2><a href="../states/texas">Texas</a> (9)</h2><ul><li><a href="hill-county-tx">Hill County</a> — <span class="badge badge-rescinded">Rescinded</span><span class="badge-note">term not documented</span></li>
+<li><a href="memphis-tn">Memphis</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li></ul></section><section><h2><a href="../states/texas">Texas</a> (11)</h2><ul><li><a href="hill-county-tx">Hill County</a> — <span class="badge badge-rescinded">Rescinded</span><span class="badge-note">term not documented</span></li>
 <li><a href="san-marcos-tx">San Marcos</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no end date — permanent</span></li>
 <li><a href="hays-county-tx">Hays County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-12-31</span></li>
 <li><a href="texas-abbott-directive-tx">Texas (Abbott directive)</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no fixed end — runs until a condition is met</span></li>
 <li><a href="fort-worth-tx">Fort Worth</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li>
 <li><a href="lavon-tx">Lavon</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-11-05</span></li>
-<li><a href="san-antonio-tx">San Antonio</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li>
+<li><a href="san-antonio-tx">San Antonio</a> — <span class="badge badge-rejected">Rejected</span><span class="badge-note">term not documented</span></li>
 <li><a href="denton-tx">Denton</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li>
-<li><a href="lubbock-tx">Lubbock</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li></ul></section><section><h2><a href="../states/utah">Utah</a> (1)</h2><ul><li><a href="iron-county-ut">Iron County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-11-22</span></li></ul></section><section><h2><a href="../states/vermont">Vermont</a> (1)</h2><ul><li><a href="vermont-s-205-vt">Vermont (S.205)</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">no fixed end — runs until a condition is met</span></li></ul></section><section><h2><a href="../states/virginia">Virginia</a> (7)</h2><ul><li><a href="loudoun-county-va">Loudoun County</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li>
+<li><a href="lubbock-tx">Lubbock</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li>
+<li><a href="austin-tx">Austin</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li>
+<li><a href="harlingen-tx">Harlingen</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">fixed term, end date not recorded</span></li></ul></section><section><h2><a href="../states/utah">Utah</a> (6)</h2><ul><li><a href="iron-county-ut">Iron County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-11-22</span></li>
+<li><a href="cache-county-ut">Cache County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-12-20</span></li>
+<li><a href="box-elder-county-ut">Box Elder County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-12-07</span></li>
+<li><a href="logan-ut">Logan</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-12-27</span></li>
+<li><a href="grand-county-ut">Grand County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-01-03</span></li>
+<li><a href="wayne-county-ut">Wayne County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-01-17</span></li></ul></section><section><h2><a href="../states/vermont">Vermont</a> (1)</h2><ul><li><a href="vermont-s-205-vt">Vermont (S.205)</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">no fixed end — runs until a condition is met</span></li></ul></section><section><h2><a href="../states/virginia">Virginia</a> (14)</h2><ul><li><a href="loudoun-county-va">Loudoun County</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li>
 <li><a href="chesapeake-va">Chesapeake</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">fixed term, end date not recorded</span></li>
 <li><a href="front-royal-va">Front Royal</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires soon — 2026-10-04</span></li>
 <li><a href="suffolk-va">Suffolk</a> — <span class="badge badge-proposed">Proposed</span><span class="badge-note">term not documented</span></li>
 <li><a href="virginia-data-center-power-tax-va">Virginia (data center power tax)</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no end date — permanent</span></li>
 <li><a href="virginia-beach-va">Virginia Beach</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-08-18</span></li>
-<li><a href="fairfax-county-va">Fairfax County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no end date — permanent</span></li></ul></section><section><h2><a href="../states/washington">Washington</a> (13)</h2><ul><li><a href="spokane-wa">Spokane</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-06-23</span></li>
+<li><a href="fairfax-county-va">Fairfax County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no end date — permanent</span></li>
+<li><a href="stafford-county-va">Stafford County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no end date — permanent</span></li>
+<li><a href="spotsylvania-county-va">Spotsylvania County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no end date — permanent</span></li>
+<li><a href="culpeper-county-va">Culpeper County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no end date — permanent</span></li>
+<li><a href="fluvanna-county-va">Fluvanna County</a> — <span class="badge badge-expired">Expired</span><span class="badge-note">term ran to 2026-01-31</span></li>
+<li><a href="virginia-statewide-pause-request-va">Virginia (statewide pause request)</a> — <span class="badge badge-rejected">Rejected</span><span class="badge-note">term not documented</span></li>
+<li><a href="virginia-dominion-gs-5-large-load-rate-class-va">Virginia (Dominion GS-5 large-load rate class)</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no end date — permanent</span></li>
+<li><a href="virginia-2026-general-assembly-package-va">Virginia (2026 General Assembly package)</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">no end date — permanent</span></li></ul></section><section><h2><a href="../states/washington">Washington</a> (13)</h2><ul><li><a href="spokane-wa">Spokane</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-06-23</span></li>
 <li><a href="seattle-wa">Seattle</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2027-06-09</span></li>
 <li><a href="yakima-county-wa">Yakima County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">fixed term, end date not recorded</span></li>
 <li><a href="snohomish-county-wa">Snohomish County</a> — <span class="badge badge-enacted">Enacted</span><span class="badge-note">expires 2026-12-24</span></li>

@@ -22,6 +22,7 @@ the repo, set Root Directory to `web`, framework "Other", no build step.
 """
 
 import hashlib
+import functools
 import html
 import json
 import math
@@ -209,6 +210,11 @@ def slugify(state):
     return state.lower().replace(" ", "-")
 
 
+_STATE_OPTIONS = "".join(
+    f'<option value="{slugify(st)}">{html.escape(st)}</option>'
+    for st in sorted(STATE_GRID_PROFILES))
+
+
 CSS = """
 :root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
         --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
@@ -228,6 +234,11 @@ nav .nav-search { display:inline-flex; align-items:center; gap:6px;
   font-size:14px; padding:6px 10px; border-radius:8px;
   border:1px solid var(--rule); color:var(--muted); }
 nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
+/* One-click path from any national page to the reader's own state briefing —
+   the site's answer to "I don't want to wade through 49 other states". */
+nav .nav-state { font-size:13px; padding:6px 8px; border-radius:8px; max-width:150px;
+  border:1px solid var(--rule); background:var(--card); color:var(--muted); }
+nav .nav-state:hover, nav .nav-state:focus { color:var(--teal); border-color:var(--teal); }
 /* Grouped dropdowns (desktop). Menus reveal on hover, keyboard focus, or the
    native <details> toggle; the summary marker is replaced with a caret. */
 .navgroup { position:relative; }
@@ -260,6 +271,7 @@ nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
   nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-state { order:1; max-width:120px; }
   nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
@@ -732,6 +744,7 @@ NAV_GROUPS = [
         ("PUCs", "puc.html"),
         ("Officials scorecard", "scorecard.html"),
         ("Senate races 2026", "senate-races.html"),
+        ("All 100 senators", "senators.html"),
         ("House races 2026", "house-races.html"),
         ("Community playbook", "community-value.html"),
     ]),
@@ -1000,6 +1013,9 @@ def page(title, description, body, canonical, depth=0,
          role="button">&#9776;</label>
   <a class="nav-search" href="{p}search.html" aria-label="Search the site"
      title="Search">&#128269;<span>Search</span></a>
+  <select class="nav-state" aria-label="Jump to your state's briefing"
+     onchange="if(this.value)location.href='{p}states/'+this.value">
+    <option value="">Your state…</option>{_STATE_OPTIONS}</select>
   <div class="nav-links">
     {_nav_links_html(p, canonical)}
   </div>
@@ -1441,7 +1457,7 @@ def _mora_map_svg():
     lons = [float(m.lon) for m in rows]
     lat_min, lat_max = min(lats) - 0.6, max(lats) + 0.6
     lon_min, lon_max = min(lons) - 0.6, max(lons) + 0.6
-    W, H, PAD = 720, 380, 4
+    W, H, PAD = 960, 520, 6
     def _xy(lat, lon):
         x = PAD + (lon - lon_min) / (lon_max - lon_min) * (W - 2 * PAD)
         y = PAD + (lat_max - lat) / (lat_max - lat_min) * (H - 2 * PAD)
@@ -1453,7 +1469,7 @@ def _mora_map_svg():
         href = f"communities/{_loc_slug(m.locality, m.state)}.html"
         title = f"{esc(str(m.locality))}, {esc(str(m.state))} — {esc(str(m.effective_status))}"
         dots.append(
-            f'<a href="{href}"><circle cx="{x:.1f}" cy="{y:.1f}" r="3.6" '
+            f'<a href="{href}"><circle cx="{x:.1f}" cy="{y:.1f}" r="4.4" '
             f'fill="{color}" fill-opacity="0.82" stroke="var(--bg)" '
             f'stroke-width="0.6"><title>{title}</title></circle></a>')
     legend = "".join(
@@ -1790,12 +1806,31 @@ def _state_delegation_html(state, abbrev):
             if has_value(o.website) else "",
             f'<a href="{esc(o.contact)}" rel="nofollow">contact</a>'
             if has_value(o.contact) else "") if x)
+        seat, extra = "", ""
+        if o.office == "Senator":
+            for sn in _senators_by_state().get(abbrev, []):
+                if sn["last"].casefold() in str(o.name).casefold():
+                    seat = (" · on the 2026 ballot" if sn["on_ballot_2026"]
+                            else f" · next on the ballot {sn['next_election']}")
+                    # The researched record (bills, letters, statements) is
+                    # richer than the one graded line; surface its summary
+                    # here so the state page answers the question without a
+                    # hop, and link to the itemised, sourced version.
+                    rec = sn.get("record") or sn.get("race")
+                    if rec:
+                        extra = (f'<br><span class="gradebadge" style="background:'
+                                 f'{rec["lean_color"]};font-size:11px;padding:2px 7px">'
+                                 f'{esc(rec["lean_label"])}</span> '
+                                 f'<span class="muted">{esc(rec["summary"])} '
+                                 f'<a href="../senators.html#sen-{esc(sn["bioguide"].lower())}">'
+                                 f'sources</a></span>')
+                    break
         trs += (
             f'<tr><td>{grade}</td>'
             f'<td><strong>{esc(str(o.name))}</strong><br>'
             f'<span class="muted">{cell(o.party, dash="")} · '
-            f'{esc(str(o.office))}{dist}</span></td>'
-            f'<td>{stance}</td><td>{links}</td></tr>')
+            f'{esc(str(o.office))}{dist}{esc(seat)}</span></td>'
+            f'<td>{stance}{extra}</td><td>{links}</td></tr>')
     return (
         f'<section><h2>Your federal delegation and governor</h2>'
         f'<p class="muted">Grades cross party — this is an issue axis, not a '
@@ -1805,7 +1840,11 @@ def _state_delegation_html(state, abbrev):
         f'<th>Documented action (sourced)</th><th>Reach them</th></tr>'
         f'{trs}</table>'
         f'<p class="src">Roster: {esc(ogen)}.</p>'
-        f'<p><a class="btn ghost" href="../scorecard.html">'
+        f'<p><a class="btn" href="../senators.html#write-{esc(abbrev.lower())}">'
+        f'Write to your senators &rarr;</a> '
+        f'<a class="btn ghost" href="../senators.html#state-{esc(abbrev.lower())}">'
+        f'Your senators in detail &rarr;</a> '
+        f'<a class="btn ghost" href="../scorecard.html">'
         f'Full officials scorecard &rarr;</a> '
         f'<a class="btn ghost" href="../officials.html">'
         f'Find your state legislators &rarr;</a></p></section>')
@@ -7837,8 +7876,10 @@ def build_moratoriums():
     </div>
   </div>
   <style>
-  .mora-viz-grid {{ display:grid; grid-template-columns:1.3fr 1fr; gap:20px; }}
-  @media (max-width:860px) {{ .mora-viz-grid {{ grid-template-columns:1fr; }} }}
+  /* Stacked, not side by side: the timeline SVG carries a min-width that
+     squeezed the map into a third of the row. The map is the page's one
+     picture of the whole country and gets the full width. */
+  .mora-viz-grid {{ display:grid; grid-template-columns:1fr; gap:24px; }}
   .mora-map-wrap {{ border:1px solid var(--rule); border-radius:12px;
     background:var(--card); padding:10px; }}
   .mora-map-wrap a circle {{ transition:r .1s ease; }}
@@ -11882,7 +11923,9 @@ That is a gap in the public record — or in our research — not a position.</p
   <p><strong>Silence is disclosed, never scored.</strong> {esc(sr.LEAN_NOTE)}</p>
   <p><strong>This is not the officials scorecard.</strong> The
   <a href="scorecard.html">A–F scorecard</a> grades sitting officials on
-  roll-call votes and signed laws. Most people here are challengers whose whole
+  roll-call votes and signed laws, and <a href="senators.html">the senators
+  page</a> lists all 100 sitting senators, including the ones whose seats are
+  not on this ballot. Most people here are challengers whose whole
   record is a campaign statement — much weaker evidence. A press release is a
   promise, not an action, and this page will not launder one into the other,
   which is why nobody here gets a letter grade.</p>
@@ -12118,6 +12161,8 @@ none has been located. Click a linked district to jump to its card.</p>
   <ul>
     <li><a href="senate-races.html">2026 Senate races</a> — the other half of
       the federal ballot.</li>
+    <li><a href="senators.html">All 100 senators</a> — the sitting Senate,
+      not just the seats on the ballot.</li>
     <li><a href="scorecard.html">Officials scorecard</a> — A–F grades for
       sitting members on their actual votes.</li>
     <li><a href="moratoriums.html">Moratorium tracker</a> — what communities
@@ -12153,6 +12198,387 @@ function srFilter(){{
         body, f"{SITE_URL}/house-races",
         jsonld=_breadcrumb(("Home", SITE_URL),
                            ("House races 2026", f"{SITE_URL}/house-races")))
+
+@functools.lru_cache(maxsize=1)
+def _senators_by_state():
+    """All 100 sitting senators keyed by postal abbreviation (see src/senators.py)."""
+    import src.senators as sn
+    out = {}
+    for s in sn.senators():
+        out.setdefault(s["state"], []).append(s)
+    return out
+
+
+def _sen_block(s):
+    """One sitting senator: seat facts, the graded action if any, the 2026
+    campaign record if they are on this year's ballot, and automated mentions.
+
+    The two record kinds are kept visibly apart. A bill introduced is an
+    action a resident can hold the senator to; a campaign line is a promise.
+    Rendering them in one list would launder the second into the first.
+    """
+    rank = "senior" if s.get("state_rank") == "senior" else "junior"
+    if s["on_ballot_2026"]:
+        when = (f'<a href="senate-races.html#race-{esc(s["state"].lower())}">'
+                f'on the 2026 ballot</a>')
+    else:
+        when = f'next on the ballot {s["next_election"]}'
+    stance = s.get("stance")
+    race = s.get("race")
+    if stance and stance["grade"]:
+        badge = (f'<span class="gradebadge" style="background:'
+                 f'{_GRADE_COLORS.get(stance["grade"], "#888")}">'
+                 f'{esc(stance["grade"])}</span> ')
+    else:
+        badge = ""
+    links = " · ".join(x for x in (
+        f'<a href="{esc(s["website"])}" rel="nofollow">site</a>' if s.get("website") else "",
+        f'<a href="{esc(s["contact"])}" rel="nofollow">contact</a>' if s.get("contact") else "",
+        f'<a href="tel:{esc(s["phone"])}">{esc(s["phone"])}</a>' if s.get("phone") else "",
+    ) if x)
+    head = (f'<p style="margin:0 0 6px">{badge}<strong>{esc(s["name"])}</strong> '
+            f'<span class="muted">({esc(s["party"])}) · {rank} senator · '
+            f'{when}</span></p>')
+    parts = [head]
+    if stance:
+        src = (f' <span class="muted">— <a href="{esc(stance["source"])}" '
+               f'rel="nofollow">{esc(stance["source_name"])}</a></span>'
+               if stance.get("source") else "")
+        parts.append(f'<p style="margin:0 0 6px"><strong>Documented action:</strong> '
+                     f'{esc(stance["text"])}{src}</p>')
+    record = s.get("record")
+    if record:
+        items = "".join(
+            f'<li><span class="muted" style="font-size:12px;text-transform:uppercase;'
+            f'letter-spacing:.03em">{"Action" if i.get("kind") == "action" else "Statement"}</span> '
+            f'{esc(i["what"])} <span class="muted">('
+            f'{esc(i["date"]) if i["date"] else "date not recorded"} — '
+            f'<a href="{esc(i["source"])}" rel="nofollow">'
+            f'{esc(i.get("source_name") or "source")}</a>)</span></li>'
+            for i in record["items"])
+        asof = (f' <span class="muted">Record read {esc(record["as_of"])}.</span>'
+                if record.get("as_of") else "")
+        parts.append(
+            f'<p style="margin:0 0 4px"><strong>Documented record</strong> '
+            f'<span class="gradebadge" style="background:{record["lean_color"]};'
+            f'font-size:12px;padding:3px 9px">{esc(record["lean_label"])}</span> '
+            f'— {esc(record["summary"])}{asof}</p><ul style="margin:0">{items}</ul>')
+    if race:
+        items = "".join(
+            f'<li>{esc(i["what"])} <span class="muted">('
+            f'{esc(i["date"]) if i["date"] else "date not recorded"} — '
+            f'<a href="{esc(i["source"])}" rel="nofollow">source</a>)</span></li>'
+            for i in race["items"])
+        asof = (f' <span class="muted">Record read {esc(race["as_of"])}.</span>'
+                if race.get("as_of") else "")
+        parts.append(
+            f'<p style="margin:0 0 4px"><strong>2026 campaign record</strong> '
+            f'<span class="gradebadge" style="background:{race["lean_color"]};'
+            f'font-size:12px;padding:3px 9px">{esc(race["lean_label"])}</span> '
+            f'— {esc(race["summary"])}{asof}</p><ul style="margin:0">{items}</ul>')
+    if not (stance or race or record):
+        parts.append('<p class="muted" style="margin:0">No documented statement '
+                     'or action on data centers located. Not scored — see '
+                     '<a href="#method">how this page treats silence</a>.</p>')
+    parts.append(_sr_mentions(s))
+    if links:
+        parts.append(f'<p class="muted" style="margin:6px 0 0;font-size:13px">'
+                     f'Reach them: {links}</p>')
+    return (f'<div class="sr-cand" id="sen-{esc(s["bioguide"].lower())}" '
+            f'data-documented="{"1" if s["documented"] else "0"}">'
+            + "".join(parts) + '</div>')
+
+
+def _sen_write_section(rows, names):
+    """Contact links plus three editable templates, filled in client-side.
+
+    Same bargain as the Start here wizard: plain JS, one JSON blob, no
+    requests — and a download at the end so the letter can leave the page.
+    The templates ask for one specific, sourced thing (the ratepayer bills
+    already cited on this page) rather than for vague concern, because a
+    staffer logs a letter by the bill it names. A senator who already
+    cosponsored gets a thank-you-and-keep-going version instead of an ask;
+    sending the ask to a cosponsor tells the office the writer did not look.
+    """
+    blob = {}
+    for s in rows:
+        st = s.get("stance") or {}
+        blob.setdefault(s["state"], []).append({
+            "name": s["name"], "party": s["party"], "last": s["last"],
+            "contact": s.get("contact") or s.get("website") or "",
+            "website": s.get("website") or "", "phone": s.get("phone") or "",
+            "grade": st.get("grade") or "", "action": st.get("text") or "",
+            "ballot": s["on_ballot_2026"], "next": s["next_election"],
+        })
+    state_opts = "".join(
+        f'<option value="{esc(abbr)}">{esc(names.get(abbr, abbr))}</option>'
+        for abbr in sorted(blob, key=lambda a: names.get(a, a)))
+    data = json.dumps({"sen": blob, "names": {a: names.get(a, a) for a in blob}},
+                      ensure_ascii=False).replace("</", "<\\/")
+    return f"""
+<section id="write" class="panel" style="margin:28px 0">
+  <h2 style="margin-top:0">Write to your senators</h2>
+  <p>Pick your state. You get both senators' contact links and phone numbers,
+  and three templates already filled in with their names and the bills on
+  this page. Edit the bracketed parts, then copy or download. A letter that
+  names a specific bill gets logged by the bill; a letter that says "I'm
+  worried about data centers" gets logged as correspondence.</p>
+  <div style="display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+    <label>Your state<br><select id="wst" onchange="snRender()" style="width:100%;padding:8px;
+      border-radius:8px;border:1px solid #2a3a55;background:#0b1220;color:#eaf0f7">
+      <option value="">— choose —</option>{state_opts}</select></label>
+    <label>Your name<br><input id="wname" placeholder="Jane Resident" oninput="snRender()"
+      style="width:100%;padding:8px;border-radius:8px;border:1px solid #2a3a55;background:#0b1220;color:#eaf0f7"></label>
+    <label>Your town or county<br><input id="wtown" placeholder="Vineland, NJ" oninput="snRender()"
+      style="width:100%;padding:8px;border-radius:8px;border:1px solid #2a3a55;background:#0b1220;color:#eaf0f7"></label>
+    <label>Project near you (optional)<br><input id="wproj" placeholder="the 300 MW campus proposed on Route 55" oninput="snRender()"
+      style="width:100%;padding:8px;border-radius:8px;border:1px solid #2a3a55;background:#0b1220;color:#eaf0f7"></label>
+  </div>
+  <div id="wcontacts" style="margin-top:14px"></div>
+  <div id="wtabs" style="margin-top:14px;display:none">
+    <p style="margin:0 0 8px">
+      <button class="btn ghost" type="button" onclick="snTab('letter')">Letter or email</button>
+      <button class="btn ghost" type="button" onclick="snTab('call')">30-second phone script</button>
+      <button class="btn ghost" type="button" onclick="snTab('meet')">Request a meeting</button>
+    </p>
+    <textarea id="wout" rows="18" style="width:100%;padding:10px;border-radius:8px;
+      border:1px solid #2a3a55;background:#0b1220;color:#eaf0f7;font:14px/1.45 inherit"></textarea>
+    <p style="margin:8px 0 0">
+      <button class="btn" type="button" onclick="snCopy()">Copy</button>
+      <button class="btn ghost" type="button" onclick="snDownload()">Download .txt</button>
+      <span id="wmsg" class="muted" style="margin-left:8px"></span></p>
+    <p class="muted" style="font-size:13px;margin-top:8px">Senate offices don't
+    publish direct email addresses; "Contact" opens the official webform. Paste
+    the letter there, or read the phone script to whoever answers — a staffer
+    tallies calls by issue and bill.</p>
+  </div>
+</section>
+<script>
+var SN={data};
+var snTabName='letter';
+function snPick(st){{var el=document.getElementById('wst');el.value=st;snRender();}}
+(function(){{var m=/^#write-([a-z]{{2}})$/i.exec(location.hash);
+  if(m){{snPick(m[1].toUpperCase());
+    var w=document.getElementById('write'); if(w) w.scrollIntoView();}}}})();
+function snTab(t){{snTabName=t;snRender();}}
+function snEl(id){{return document.getElementById(id).value.trim();}}
+function snRender(){{
+  var st=snEl('wst'); var box=document.getElementById('wcontacts');
+  var tabs=document.getElementById('wtabs');
+  if(!st){{box.innerHTML='';tabs.style.display='none';return;}}
+  var sens=SN.sen[st]; var h='';
+  sens.forEach(function(s){{
+    var links=[];
+    if(s.contact)links.push('<a href="'+s.contact+'" rel="nofollow">Contact form</a>');
+    if(s.website)links.push('<a href="'+s.website+'" rel="nofollow">Website</a>');
+    if(s.phone)links.push('<a href="tel:'+s.phone+'">'+s.phone+'</a>');
+    var rec=s.action?'<br><span class="muted">On record: '+s.action+'</span>':
+      '<br><span class="muted">No documented action on data centers located.</span>';
+    h+='<p style="margin:0 0 8px"><strong>Sen. '+s.name+'</strong> <span class="muted">('+s.party+
+       (s.ballot?', on the 2026 ballot':', next on the ballot '+s.next)+')</span> — '+links.join(' · ')+rec+'</p>';
+  }});
+  box.innerHTML=h; tabs.style.display='';
+  document.getElementById('wout').value=snText(st,sens);
+}}
+function snText(st,sens){{
+  var name=snEl('wname')||'[your name]', town=snEl('wtown')||'[your town], '+st;
+  var proj=snEl('wproj'); var stname=SN.names[st];
+  var bills='the Power for the People Act, the GRID Act, and the Ratepayer Protection Act';
+  var ask='I am asking you to cosponsor and push for a floor vote on '+bills+
+    ' — the bills that require large loads like data centers to pay for the generation and grid upgrades they cause, instead of passing those costs to households through utility rates.';
+  var local=proj?('In '+town+', we are facing '+proj+'. ') : ('I live in '+town+'. ');
+  var out=[];
+  sens.forEach(function(s){{
+    var thanks=s.grade==='A'||s.grade==='B';
+    if(snTabName==='letter'){{
+      out.push('Dear Senator '+s.last+',\\n\\n'+local+
+        (thanks?('Thank you for your work on this: '+s.action+' Please keep pushing — and please press leadership for a floor vote on '+bills+'.')
+               :ask)+
+        '\\n\\nData centers are the largest new source of electricity demand in '+stname+' and nationally. Utilities are already asking regulators to approve new generation and transmission for them, and the cost of that buildout lands on residential bills unless Congress and the states require the customers who cause it to pay for it. Local governments also need the authority to say no or to condition approval — a moratorium or a community benefits agreement should not be preempted from Washington.\\n\\n'+
+        'Specifically, I ask you to:\\n'+
+        '1. '+(thanks?'Keep cosponsoring, and':'Cosponsor')+' the ratepayer-protection bills above, and ask for a hearing in the Energy and Natural Resources Committee.\\n'+
+        '2. Oppose any federal preemption of local zoning, moratoriums, or water rules for data centers.\\n'+
+        '3. Support requiring data-center operators to disclose their electricity and water use publicly, by site.\\n'+
+        '4. Tell me, in writing, where you stand on each of these.\\n\\n'+
+        'I would welcome a reply, and I would be glad to meet with your '+stname+' staff.\\n\\nSincerely,\\n'+name+'\\n'+town);
+    }} else if(snTabName==='call'){{
+      out.push('CALL: Sen. '+s.name+(s.phone?' — '+s.phone:'')+'\\n\\n'+
+        'Hi, my name is '+name+' and I am a constituent in '+town+'. '+
+        (proj?'We have '+proj+' proposed near us. ':'')+
+        'I am calling to ask Senator '+s.last+' to '+(thanks?'keep pushing':'cosponsor')+' the Power for the People Act, the GRID Act and the Ratepayer Protection Act, so data centers pay for the grid upgrades they cause instead of putting them on our electric bills. '+
+        (thanks?'Please thank the senator for what they have already done on this. ':'')+
+        'I would also like to know whether the senator opposes federal preemption of local zoning and moratoriums for data centers. Can you tell me where the senator stands, or have someone follow up? My contact is [phone or email]. Thank you.');
+    }} else {{
+      out.push('Subject: Meeting request — data-center costs in '+town+'\\n\\nDear Scheduler for Senator '+s.last+',\\n\\n'+
+        'I am writing on behalf of residents of '+town+' to request a meeting with the senator or the '+stname+' state director. '+
+        (proj?'We are facing '+proj+', and ':'')+'we want to brief the office on what data-center growth is doing to local electric bills, water, and land use, and to ask the senator to '+(thanks?'keep leading on':'support')+' ratepayer-protection legislation ('+bills+').\\n\\n'+
+        'We can meet in the district office, by phone, or bring the senator to a site visit. We will bring a one-page brief and residents who can speak to specifics.\\n\\n'+
+        'Proposed dates: [two or three options]\\nContact: '+name+', [phone], [email]\\n\\nThank you for your time.\\n\\n'+name+'\\n'+town);
+    }}
+  }});
+  return out.join('\\n\\n' + '─'.repeat(40) + '\\n\\n');
+}}
+function snCopy(){{
+  var t=document.getElementById('wout'); t.select();
+  try{{navigator.clipboard.writeText(t.value);}}catch(e){{document.execCommand('copy');}}
+  document.getElementById('wmsg').textContent='Copied.';
+}}
+function snDownload(){{
+  var st=snEl('wst')||'senators';
+  var b=new Blob([document.getElementById('wout').value],{{type:'text/plain'}});
+  var a=document.createElement('a');a.href=URL.createObjectURL(b);
+  a.download='letter-to-'+st.toLowerCase()+'-senators-'+snTabName+'.txt';a.click();
+}}
+</script>"""
+
+
+def build_senators():
+    """All 100 sitting U.S. senators and what each has done on data centers."""
+    import src.senators as sn
+
+    rows = sn.senators()
+    cov = sn.coverage(rows)
+    by_state = {}
+    for s in rows:
+        by_state.setdefault(s["state"], []).append(s)
+    names = {abbr: st for st, abbr in _STATE_LIST}
+
+    chips = (
+        f'<span class="stat"><b>{cov["senators"]}</b><span>sitting senators</span></span>'
+        f'<span class="stat"><b>{cov["documented"]}</b><span>with a documented record</span></span>'
+        f'<span class="stat"><b>{cov["graded"]}</b><span>graded on an action</span></span>'
+        f'<span class="stat"><b>{cov["on_ballot_2026"]}</b><span>seats on the 2026 ballot</span></span>')
+
+    jump = '<div class="statelist">' + "".join(
+        f'<a href="#state-{abbr.lower()}">{esc(names.get(abbr, abbr))}</a>'
+        for abbr in sorted(by_state, key=lambda a: names.get(a, a))) + "</div>"
+
+    cards = ""
+    for abbr in sorted(by_state, key=lambda a: names.get(a, a)):
+        st = names.get(abbr, abbr)
+        sens = by_state[abbr]
+        doc = any(x["documented"] for x in sens)
+        cards += f"""
+<section class="card" id="state-{esc(abbr.lower())}"
+         data-state="{esc(st.lower())}"
+         data-names="{esc(' '.join(x['name'] for x in sens).lower())}"
+         data-documented="{'1' if doc else '0'}">
+  <h3 style="margin:0 0 4px">{esc(st)}</h3>
+  {_sr_stakes(abbr)}
+  {''.join(_sen_block(x) for x in sens)}
+  <p style="margin:10px 0 0"><a class="btn ghost" href="#write"
+     onclick="snPick('{esc(abbr)}')">Write to {esc(st)}'s senators &rarr;</a>
+     <a class="btn ghost" href="states/{slugify(st)}.html">{esc(st)} data-center page</a></p>
+</section>"""
+
+    body = f"""
+<header>
+  <div class="kicker">U.S. Senate</div>
+  <h1>Where every U.S. senator stands on AI data centers</h1>
+  <p class="sub">All 100 sitting senators, two per state, with what each has
+  actually done or said about data centers — each claim with the link behind
+  it. The <a href="senate-races.html">2026 race tracker</a> covers only the 35
+  seats on this year's ballot; federal siting, tax and ratepayer bills get
+  voted on by all 100, and two of them are yours.</p>
+  <div class="stats">{chips}</div>
+</header>
+
+<div class="freshness"><p><strong>Most senators have no record here, and that
+is the finding.</strong> {cov["documented"]} of {cov["senators"]} have a documented
+action or statement on data centers; the other {cov["senators"] - cov["documented"]}
+are shown as <em>no record found</em> rather than as neutral. If you have a
+source for one of them, <a href="#method">send it to us</a>.</p></div>
+
+<div class="panel" style="margin:18px 0">
+  <label for="snq"><strong>Find your senators</strong></label>
+  <input id="snq" type="search" placeholder="Type a state or a senator's name…"
+         style="width:100%;max-width:420px;padding:9px;margin-top:6px;
+                border-radius:8px;border:1px solid #2a3a55;background:#0b1220;
+                color:#eaf0f7" oninput="snFilter()">
+  <label class="muted" style="display:block;margin-top:8px;font-size:13px">
+    <input type="checkbox" id="sndoc" onchange="snFilter()"> Only senators with a record</label>
+  <p class="muted" id="sncount" style="margin:8px 0 0"></p>
+</div>
+{jump}
+
+<h2 id="states">By state</h2>
+{cards}
+
+{_sen_write_section(rows, names)}
+
+<section id="method">
+  <h2>How this page is built</h2>
+  <p><strong>The roster is the public record.</strong> Names, parties, seat
+  class and term dates come from the @unitedstates congress-legislators
+  dataset (<a href="{esc(cov["source"])}" rel="nofollow">source</a>), read
+  {esc(str(cov["generated"]))}. When a seat is next on the ballot is derived
+  from the term end, so an appointee finishing someone else's term shows the
+  special-election year, not a full six.</p>
+  <p><strong>Three kinds of record, kept apart.</strong> A <em>documented
+  action</em> line is the entry the <a href="scorecard.html">officials
+  scorecard</a> grades A–F on one axis: does it protect ratepayers and host
+  communities? The <em>documented record</em> beneath it is everything else
+  we could source — bills, letters to regulators, hearing questions, and
+  on-the-record statements — each tagged <em>action</em> or
+  <em>statement</em>, with a lean that summarises only those items. A
+  <em>2026 campaign record</em> is what a senator running this year has said
+  while asking for the job; it carries a lean, never a grade, because a
+  promise is not an action.</p>
+  <p><strong>How the record was researched.</strong> Each senator's own
+  press-release archive and the reputable press were searched for
+  data-center bills, letters, hearings and statements; every item kept was
+  opened at its source and confirmed to name the senator. A senator with
+  nothing found is listed as such. Items that could not be traced past a
+  social post or a partisan aggregator were dropped, and the module notes
+  which.</p>
+  <p><strong>Silence is disclosed, never scored.</strong> A senator with no
+  located record is shown as exactly that. Nothing is inferred from party.</p>
+  <p><strong>Cosponsorship counts once per bill.</strong> The Power for the
+  People Act cosponsors are each credited from the sponsors' own release, and
+  each gets the same grade as the lead sponsor for the same action.</p>
+  <p>Know of a senator's statement or vote we have missed? Send the link —
+  <a href="about.html">contact</a>. That is how this page grows.</p>
+  {provenance_html("SENATORS")}
+</section>
+
+<section>
+  <h2>See also</h2>
+  <ul>
+    <li><a href="senate-races.html">2026 Senate races</a> — every candidate on
+      the 35 ballots, challengers included.</li>
+    <li><a href="house-races.html">2026 House races</a> — the other chamber.</li>
+    <li><a href="scorecard.html">Officials scorecard</a> — the same grades,
+      plus governors and House members.</li>
+    <li><a href="states/index.html">Your state page</a> — everything the site
+      tracks in one state.</li>
+  </ul>
+</section>
+
+<script>
+function snFilter(){{
+  var q=document.getElementById('snq').value.toLowerCase().trim();
+  var only=document.getElementById('sndoc').checked;
+  var cards=document.querySelectorAll('section.card[data-state]');
+  var n=0;
+  cards.forEach(function(c){{
+    var hit=(!q||c.dataset.state.indexOf(q)>-1||c.dataset.names.indexOf(q)>-1)
+            &&(!only||c.dataset.documented==='1');
+    c.style.display=hit?'':'none'; if(hit)n++;
+  }});
+  document.getElementById('sncount').textContent=
+    (q||only)?(n+' state'+(n===1?'':'s')+' shown'):'';
+}}
+</script>"""
+
+    return page(
+        "Every U.S. senator on AI data centers — AI GridWatch",
+        "All 100 sitting U.S. senators and their documented record on AI data "
+        "centers: bills, investigations and campaign positions, sourced claim "
+        "by claim, with when each seat is next on the ballot.",
+        body, f"{SITE_URL}/senators",
+        jsonld=_breadcrumb(("Home", SITE_URL),
+                           ("All U.S. senators", f"{SITE_URL}/senators")))
+
 
 def build_official_scorecard():
     """Full federal + gubernatorial roster with A–F ratepayer/community-protection
@@ -12217,6 +12643,8 @@ def build_official_scorecard():
   <p class="muted">Grades cross party — this is an issue axis, not a partisan one.
   Only officials with a documented, cited action are graded; blanks mean no public
   record, not neutrality. Point-in-time; see the update cadence in the repo.</p>
+  <p class="muted">Looking for your senators? <a href="senators.html">All 100
+  sitting senators</a>, by state, with when each seat is next on the ballot.</p>
 </section>
 <section>
   <h2>Graded officials ({len(graded)})</h2>
@@ -14845,6 +15273,7 @@ def main():
     (WEB / "officials.html").write_text(build_officials(), encoding="utf-8")
     (WEB / "scorecard.html").write_text(build_official_scorecard(), encoding="utf-8")
     (WEB / "senate-races.html").write_text(build_senate_races(), encoding="utf-8")
+    (WEB / "senators.html").write_text(build_senators(), encoding="utf-8")
     (WEB / "house-races.html").write_text(build_house_races(), encoding="utf-8")
     (WEB / "community-value.html").write_text(build_community_value(), encoding="utf-8")
     (WEB / "case-studies.html").write_text(build_case_studies(), encoding="utf-8")
@@ -14918,7 +15347,7 @@ def main():
              "learn", "puc", "executives", "about", "search", "dividend",
              "data-centers", "environment", "studies", "complaints",
              "cba-clauses", "officials", "case-studies",
-             "community-value", "open-data", "senate-races", "house-races",
+             "community-value", "open-data", "senate-races", "senators", "house-races",
              "hearing-questions", "opposition", "glossary", "tax-breaks", "siting",
              "companies/", "states/", "blog/", "news/", "videos", "map",
              "communities/"]

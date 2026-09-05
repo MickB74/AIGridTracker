@@ -48,6 +48,11 @@ nav .nav-search { display:inline-flex; align-items:center; gap:6px;
   font-size:14px; padding:6px 10px; border-radius:8px;
   border:1px solid var(--rule); color:var(--muted); }
 nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
+/* One-click path from any national page to the reader's own state briefing —
+   the site's answer to "I don't want to wade through 49 other states". */
+nav .nav-state { font-size:13px; padding:6px 8px; border-radius:8px; max-width:150px;
+  border:1px solid var(--rule); background:var(--card); color:var(--muted); }
+nav .nav-state:hover, nav .nav-state:focus { color:var(--teal); border-color:var(--teal); }
 /* Grouped dropdowns (desktop). Menus reveal on hover, keyboard focus, or the
    native <details> toggle; the summary marker is replaced with a caret. */
 .navgroup { position:relative; }
@@ -80,6 +85,7 @@ nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
   nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-state { order:1; max-width:120px; }
   nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
@@ -530,11 +536,14 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
          role="button">&#9776;</label>
   <a class="nav-search" href="search" aria-label="Search the site"
      title="Search">&#128269;<span>Search</span></a>
+  <select class="nav-state" aria-label="Jump to your state's briefing"
+     onchange="if(this.value)location.href='states/'+this.value">
+    <option value="">Your state…</option><option value="alabama">Alabama</option><option value="alaska">Alaska</option><option value="arizona">Arizona</option><option value="arkansas">Arkansas</option><option value="california">California</option><option value="colorado">Colorado</option><option value="connecticut">Connecticut</option><option value="delaware">Delaware</option><option value="district-of-columbia">District of Columbia</option><option value="florida">Florida</option><option value="georgia">Georgia</option><option value="hawaii">Hawaii</option><option value="idaho">Idaho</option><option value="illinois">Illinois</option><option value="indiana">Indiana</option><option value="iowa">Iowa</option><option value="kansas">Kansas</option><option value="kentucky">Kentucky</option><option value="louisiana">Louisiana</option><option value="maine">Maine</option><option value="maryland">Maryland</option><option value="massachusetts">Massachusetts</option><option value="michigan">Michigan</option><option value="minnesota">Minnesota</option><option value="mississippi">Mississippi</option><option value="missouri">Missouri</option><option value="montana">Montana</option><option value="nebraska">Nebraska</option><option value="nevada">Nevada</option><option value="new-hampshire">New Hampshire</option><option value="new-jersey">New Jersey</option><option value="new-mexico">New Mexico</option><option value="new-york">New York</option><option value="north-carolina">North Carolina</option><option value="north-dakota">North Dakota</option><option value="ohio">Ohio</option><option value="oklahoma">Oklahoma</option><option value="oregon">Oregon</option><option value="pennsylvania">Pennsylvania</option><option value="rhode-island">Rhode Island</option><option value="south-carolina">South Carolina</option><option value="south-dakota">South Dakota</option><option value="tennessee">Tennessee</option><option value="texas">Texas</option><option value="utah">Utah</option><option value="vermont">Vermont</option><option value="virginia">Virginia</option><option value="washington">Washington</option><option value="west-virginia">West Virginia</option><option value="wisconsin">Wisconsin</option><option value="wyoming">Wyoming</option></select>
   <div class="nav-links">
     <a href="./">Home</a>
     <details class="navgroup"><summary>News & analysis</summary><div class="navmenu"><a href="news">Top stories</a><a href="blog">Blog</a><a href="story-tracker">Story tracker</a><a href="projects">Projects tracker</a><a href="videos">Videos</a></div></details>
     <details class="navgroup"><summary>Act</summary><div class="navmenu"><a href="start-here">Start here</a><a href="siting">Siting score</a><a href="hearing-questions">Hearing prep</a><a href="opposition">Know the opposition</a><a href="cba-clauses">Model clauses</a><a href="case-studies">Case studies</a><a href="impact">Impact calculator</a></div></details>
-    <details class="navgroup"><summary>Your area</summary><div class="navmenu"><a href="states">Your state</a><a href="map">Map & projects</a><a href="moratoriums">Moratoriums</a><a href="puc">PUCs</a><a href="scorecard">Officials scorecard</a><a href="senate-races">Senate races 2026</a><a href="house-races">House races 2026</a><a href="community-value">Community playbook</a></div></details>
+    <details class="navgroup"><summary>Your area</summary><div class="navmenu"><a href="states">Your state</a><a href="map">Map & projects</a><a href="moratoriums">Moratoriums</a><a href="puc">PUCs</a><a href="scorecard">Officials scorecard</a><a href="senate-races">Senate races 2026</a><a href="senators">All 100 senators</a><a href="house-races">House races 2026</a><a href="community-value">Community playbook</a></div></details>
     <details class="navgroup"><summary>The facts</summary><div class="navmenu"><a href="health-risks">Health risks</a><a href="bills">Your electric bill</a><a href="tax-breaks">Tax breaks</a><a href="environment">Environment</a><a href="learn">Learn the basics</a></div></details>
     <details class="navgroup"><summary>Industry</summary><div class="navmenu"><a href="data-centers">Data centers</a><a href="companies">Companies</a><a href="complaints">Complaints by company</a><a href="outlook">Electricity outlook</a><a href="open-data">Open data</a></div></details>
   </div>
@@ -546,9 +555,9 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
   <div class="kicker">Moratorium tracker</div>
   <h1>How we count data center moratoriums</h1>
   <p class="lede">As of September 5, 2026, AI GridWatch counts
-  398 data center moratoriums and pushback actions in
+  419 data center moratoriums and pushback actions in
   39 states, of which
-  332 are in
+  349 are in
   force today. A row is a documented vote by a council, board, commission or
   legislature to pause, restrict or ban data center development; status is
   derived from the recorded end date, never stored.</p>

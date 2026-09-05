@@ -5,7 +5,7 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/data-centers",
-  "count": 84,
+  "count": 89,
   "caveat": "Each row carries its own attribution level \u2014 first-party rows come from the operator's own site, but colocation and REIT ownership was compiled from trade press and never passed an independent fact-check. Check the attribution column before citing a row.",
   "schema": {
     "operator": "Primary operator or developer",
@@ -1027,6 +1027,66 @@
       "filing_llc": "Mostly TENANT in partners' buildings: Core Scientific, Chirisa/Bulk, Flexential, Lincoln, TierPoint, Digital Realty, DataBank, Switch, Galaxy, Applied Digital",
       "attribution": "leasing_news",
       "src": "crwv_dc"
+    },
+    {
+      "operator": "Equinix",
+      "owner": "self",
+      "tenant": "Colocation tenants (undisclosed)",
+      "location": "Ashburn (DC1\u2013DC15 IBX campus, Loudoun Co.)",
+      "state": "VA",
+      "lat": 39.02,
+      "lon": -77.46,
+      "filing_llc": "IBX-branded site entities",
+      "attribution": "first_party",
+      "src": "equinix_dc"
+    },
+    {
+      "operator": "Digital Realty",
+      "owner": "self",
+      "tenant": "Colocation tenants (undisclosed)",
+      "location": "Ashburn (Digital Loudoun campus, ~500 MW)",
+      "state": "VA",
+      "lat": 39.01,
+      "lon": -77.47,
+      "filing_llc": "'Digital [City]/[Address] LLC'; legacy Telx entities; Ascenty (LatAm)",
+      "attribution": "first_party",
+      "src": "dlr_dc"
+    },
+    {
+      "operator": "Vantage",
+      "owner": "DigitalBridge + Silver Lake",
+      "tenant": "Colocation tenants (undisclosed)",
+      "location": "Sterling / Ashburn (Ashburn I\u2013III, 142 + 288 MW)",
+      "state": "VA",
+      "lat": 39.0,
+      "lon": -77.43,
+      "filing_llc": "Per-campus 'Vantage ... LLC' site entities",
+      "attribution": "first_party",
+      "src": "vantage_dc"
+    },
+    {
+      "operator": "QTS",
+      "owner": "Blackstone",
+      "tenant": "Colocation tenants (undisclosed)",
+      "location": "Ashburn (Ashburn 2 / Dulles Vault campus, Loudoun Co.)",
+      "state": "VA",
+      "lat": 38.99,
+      "lon": -77.45,
+      "filing_llc": "'QTS ... LLC' + Blackstone holding entities; early generic project LLCs",
+      "attribution": "first_party",
+      "src": "qts_dc"
+    },
+    {
+      "operator": "CloudHQ",
+      "owner": "self",
+      "tenant": "Colocation tenants (undisclosed)",
+      "location": "Ashburn (LC campus) and Manassas (MCC campus)",
+      "state": "VA",
+      "lat": 38.79,
+      "lon": -77.52,
+      "filing_llc": null,
+      "attribution": "first_party",
+      "src": "cloudhq_dc"
     }
   ]
 }

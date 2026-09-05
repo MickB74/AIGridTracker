@@ -67,6 +67,29 @@ PROTECTION_SCORES = {
     ("Senator", "OH", "husted"): 4,        # leads ratepayer bill
     ("Senator", "GA", "ossoff"): 3,        # investigating bill impact
     ("Senator", "PA", "fetterman"): 1,     # opposes moratorium ("China First")
+    ("Senator", "MD", "van hollen"): 4,    # Power for the People Act co-lead
+    ("Senator", "IL", "durbin"): 4,        # Power for the People cosponsor
+    ("Senator", "NJ", "booker"): 4,        # Power for the People cosponsor
+    ("Senator", "IL", "duckworth"): 4,     # Power for the People cosponsor
+    ("Senator", "MN", "smith"): 4,         # Power for the People cosponsor
+    ("Senator", "MD", "alsobrooks"): 4,    # Power for the People cosponsor
+    ("Senator", "MA", "markey"): 4,        # ISO-NE/NARUC letters, certificate bill draft
+    ("Senator", "MA", "warren"): 4,        # Big Tech cost investigation, EIA reporting
+    ("Senator", "KS", "marshall"): 4,      # Ratepayer Protection Pledge resolution
+    ("Senator", "MS", "hyde-smith"): 3,    # pressed FERC on large-load cost allocation
+    ("Senator", "NH", "shaheen"): 3,       # signed ISO-NE ratepayer letter
+    ("Senator", "OR", "wyden"): 4,         # Big Tech water letters, excise-tax proposal
+    ("Senator", "RI", "whitehouse"): 4,    # co-led ISO-NE letter, White House letter
+    ("Senator", "RI", "reed"): 3,          # co-led ISO-NE letter
+    ("Senator", "OR", "merkley"): 3,       # letter to OR advisory committee
+    ("Senator", "NJ", "kim"): 3,           # co-led PJM letter
+    ("Senator", "VT", "sanders"): 4,       # AI Data Center Moratorium Act
+    ("Senator", "TN", "blackburn"): 3,     # draft: operators bear full infrastructure cost
+    ("Senator", "UT", "lee"): 3,           # backed FERC large-load order; no bill
+    ("Senator", "CA", "schiff"): 4,        # Energy Cost Fairness and Reliability Act
+    ("Senator", "GA", "warnock"): 4,       # FERC letter, $50M, moratorium call
+    ("Senator", "AZ", "kelly"): 3,         # FERC technical-conference letter
+    ("Senator", "FL", "scott"): 4,         # Ratepayer Protection Pledge resolution
     # Governors
     ("Governor", "MI", "whitmer"): 3,      # accountability pledge proposal
 }

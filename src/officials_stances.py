@@ -98,6 +98,99 @@ STANCES = {
     ("Senator", "OH", "husted"): (
         "Leads a Senate bill to protect Americans from footing the bill for new "
         "data centers.", "sen_husted"),
+    # Power for the People Act — Welch/Van Hollen's release (2026-01-22) names
+    # the cosponsors; Warner joined 2026-06-02 (his own release). One action,
+    # one source, one score each — the same bill Welch is graded on.
+    ("Senator", "MD", "van hollen"): (
+        "Co-led the Power for the People Act with Welch: data-center operators "
+        "pay the infrastructure and energy costs they create instead of "
+        "ratepayers.", "sen_welch"),
+    ("Senator", "NJ", "booker"): (
+        "Cosponsored the Power for the People Act, making data-center operators "
+        "pay the grid costs they create.", "sen_welch"),
+    ("Senator", "IL", "duckworth"): (
+        "Cosponsored the Power for the People Act, making data-center operators "
+        "pay the grid costs they create.", "sen_welch"),
+    ("Senator", "MN", "smith"): (
+        "Cosponsored the Power for the People Act, making data-center operators "
+        "pay the grid costs they create.", "sen_welch"),
+    ("Senator", "MD", "alsobrooks"): (
+        "Cosponsored the Power for the People Act, making data-center operators "
+        "pay the grid costs they create.", "sen_welch"),
+    # Researched 2026-09-05 (see src/senator_records.py for the full items)
+    ("Senator", "MA", "markey"): (
+        "Led letters to ISO New England and to NARUC on shielding ratepayers "
+        "from data-center costs; released a draft bill requiring a federal "
+        "public-interest certificate before a data center is permitted.",
+        "sen_markey"),
+    ("Senator", "MA", "warren"): (
+        "Opened an investigation into whether Big Tech data centers raise "
+        "families' utility bills and, with Hawley, secured mandatory EIA "
+        "energy-use reporting for data centers.", "sen_warren"),
+    ("Senator", "KS", "marshall"): (
+        "Introduced a resolution backing the Ratepayer Protection Pledge — "
+        "tech companies pay their own grid costs — and opposes tax incentives "
+        "for data centers.", "sen_marshall"),
+    ("Senator", "MS", "hyde-smith"): (
+        "Pressed FERC commissioners at oversight to make large loads such as "
+        "data centers pay upfront so residential rates do not rise.",
+        "sen_hydesmith"),
+    ("Senator", "NH", "shaheen"): (
+        "Signed the New England senators' letter asking ISO New England how it "
+        "will protect residential ratepayers from data-center-driven price "
+        "increases.", "sen_shaheen"),
+    ("Senator", "IL", "durbin"): (
+        "Cosponsored the Power for the People Act and introduced the Data "
+        "Center Water and Energy Transparency Act (S. 4213).", "sen_durbin"),
+    ("Senator", "OR", "wyden"): (
+        "Demanded answers from Google, Apple, Meta and Amazon on data-center "
+        "water use in Oregon, and proposed stripping data centers of federal "
+        "investment incentives plus a new excise tax.", "sen_wyden"),
+    ("Senator", "RI", "whitehouse"): (
+        "Co-led the New England senators' letter to ISO New England on "
+        "data-center-driven rate increases; earlier urged the White House not to "
+        "fast-track data centers past clean-air, water and cost protections.",
+        "sen_whitehouse"),
+    ("Senator", "RI", "reed"): (
+        "Co-led the New England senators' letter asking ISO New England how it "
+        "will shield residential ratepayers from data-center-driven price "
+        "increases.", "sen_reed"),
+    ("Senator", "OR", "merkley"): (
+        "With Wyden, wrote Oregon's data center advisory committee listing "
+        "constituent concerns on energy demand, consumer costs, water, noise and "
+        "farmland.", "sen_merkley"),
+    ("Senator", "NJ", "kim"): (
+        "Co-led the NJ delegation's letter pressing PJM on the data-center-driven "
+        "capacity price increase behind a ~17% rate rise.", "sen_kim"),
+    ("Senator", "VT", "sanders"): (
+        "Introduced the AI Data Center Moratorium Act (S. 4214) with Rep. "
+        "Ocasio-Cortez: no new or expanded AI data centers until federal "
+        "safeguards, including against higher utility costs, are in place.",
+        "sen_sanders"),
+    ("Senator", "TN", "blackburn"): (
+        "Released the TRUMP AMERICA AI Act discussion draft, which would make "
+        "data-center operators responsible for the full cost of energy and water "
+        "infrastructure with no impact on ratepayers.", "sen_blackburn"),
+    ("Senator", "UT", "lee"): (
+        "As Energy Committee chair, backed FERC's Large Load Order at oversight "
+        "and agreed existing ratepayers should not subsidize data centers; says "
+        "data-center legislation is not currently a priority.", "sen_lee"),
+    ("Senator", "CA", "schiff"): (
+        "Introduced the Energy Cost Fairness and Reliability Act: large loads "
+        "such as data centers pay 100% of the grid upgrades needed to serve them "
+        "and bring their own generation before connecting.", "sen_schiff"),
+    ("Senator", "GA", "warnock"): (
+        "Led a letter to FERC to shield households from data-center costs, "
+        "secured $50M for communities facing data-center energy and water "
+        "demands, and called for a Georgia data-center pause.", "sen_warnock"),
+    ("Senator", "AZ", "kelly"): (
+        "Co-signed a letter asking FERC to convene a technical conference on "
+        "data-center load and affordable rates; previewed legislation to bring "
+        "communities into siting with enforceable commitments.", "sen_kelly"),
+    ("Senator", "FL", "scott"): (
+        "Introduced, with Marshall, a resolution endorsing the Ratepayer "
+        "Protection Pledge: tech companies pay their own electricity and "
+        "grid-infrastructure costs.", "sen_rickscott"),
     # ── Additional governors ───────────────────────────────────────────────
     ("Governor", "MI", "whitmer"): (
         "Proposed that data centers pledge to cover utility costs, protect the "

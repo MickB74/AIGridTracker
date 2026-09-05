@@ -67,6 +67,10 @@
     "effective_status": "Expired",
     "expires": "2026-03-24"
   },
+  "austin-tx": {
+    "effective_status": "Proposed",
+    "expires": null
+  },
   "avon-lake-oh": {
     "effective_status": "Enacted",
     "expires": "2027-06-22"
@@ -147,6 +151,10 @@
     "effective_status": "Enacted",
     "expires": "2026-12-02"
   },
+  "box-elder-county-ut": {
+    "effective_status": "Enacted",
+    "expires": "2026-12-07"
+  },
   "braceville-township-oh": {
     "effective_status": "Enacted",
     "expires": "2026-12-02"
@@ -154,6 +162,10 @@
   "brevard-nc": {
     "effective_status": "Expired",
     "expires": "2026-06-23"
+  },
+  "broken-arrow-ok": {
+    "effective_status": "Enacted",
+    "expires": "2026-12-31"
   },
   "brookhaven-ny": {
     "effective_status": "Enacted",
@@ -166,6 +178,10 @@
   "burien-wa": {
     "effective_status": "Enacted",
     "expires": "2027-06-29"
+  },
+  "cache-county-ut": {
+    "effective_status": "Enacted",
+    "expires": "2026-12-20"
   },
   "calvert-county-md": {
     "effective_status": "Enacted",
@@ -295,6 +311,10 @@
     "effective_status": "Enacted",
     "expires": "2027-02-15"
   },
+  "colfax-county-nm": {
+    "effective_status": "Proposed",
+    "expires": null
+  },
   "colleton-county-sc": {
     "effective_status": "Enacted",
     "expires": "2027-01-07"
@@ -314,6 +334,10 @@
   "cullman-al": {
     "effective_status": "Enacted",
     "expires": "2027-06-24"
+  },
+  "culpeper-county-va": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "cumberland-county-nc": {
     "effective_status": "Enacted",
@@ -439,6 +463,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "edmond-ok": {
+    "effective_status": "Enacted",
+    "expires": "2026-12-31"
+  },
   "elsinboro-nj": {
     "effective_status": "Enacted",
     "expires": null
@@ -491,6 +519,10 @@
     "effective_status": "Enacted",
     "expires": "2027-06-08"
   },
+  "fluvanna-county-va": {
+    "effective_status": "Expired",
+    "expires": "2026-01-31"
+  },
   "fort-payne-al": {
     "effective_status": "Enacted",
     "expires": "2026-12-16"
@@ -535,6 +567,10 @@
     "effective_status": "Enacted",
     "expires": "2027-01-21"
   },
+  "grand-county-ut": {
+    "effective_status": "Enacted",
+    "expires": "2027-01-03"
+  },
   "grant-county-in": {
     "effective_status": "Enacted",
     "expires": "2028-03-16"
@@ -564,6 +600,10 @@
     "expires": "2026-08-25"
   },
   "harford-county-md": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "harlingen-tx": {
     "effective_status": "Enacted",
     "expires": null
   },
@@ -638,6 +678,10 @@
   "hubbard-oh": {
     "effective_status": "Enacted",
     "expires": "2027-06-01"
+  },
+  "humboldt-county-nv": {
+    "effective_status": "Enacted",
+    "expires": "2027-07-13"
   },
   "ida-county-ia": {
     "effective_status": "Enacted",
@@ -806,6 +850,10 @@
   "logan-township-nj": {
     "effective_status": "Enacted",
     "expires": null
+  },
+  "logan-ut": {
+    "effective_status": "Enacted",
+    "expires": "2026-12-27"
   },
   "london-ky": {
     "effective_status": "Enacted",
@@ -1022,6 +1070,10 @@
   "normal-il": {
     "effective_status": "Enacted",
     "expires": "2026-11-30"
+  },
+  "norman-ok": {
+    "effective_status": "Enacted",
+    "expires": "2027-06-09"
   },
   "north-brunswick-nj": {
     "effective_status": "Enacted",
@@ -1252,7 +1304,7 @@
     "expires": null
   },
   "san-antonio-tx": {
-    "effective_status": "Proposed",
+    "effective_status": "Rejected",
     "expires": null
   },
   "san-marcos-tx": {
@@ -1339,6 +1391,10 @@
     "effective_status": "Enacted",
     "expires": "2027-06-23"
   },
+  "spotsylvania-county-va": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "springfield-mo": {
     "effective_status": "Enacted",
     "expires": "2026-11-17"
@@ -1361,6 +1417,10 @@
   },
   "st-lawrence-county-ny": {
     "effective_status": "Proposed",
+    "expires": null
+  },
+  "stafford-county-va": {
+    "effective_status": "Enacted",
     "expires": null
   },
   "stafford-township-nj": {
@@ -1431,6 +1491,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "tulsa-ok": {
+    "effective_status": "Enacted",
+    "expires": "2026-12-31"
+  },
   "twinsburg-oh": {
     "effective_status": "Enacted",
     "expires": null
@@ -1467,12 +1531,24 @@
     "effective_status": "Enacted",
     "expires": "2027-06-16"
   },
+  "virginia-2026-general-assembly-package-va": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "virginia-beach-va": {
     "effective_status": "Enacted",
     "expires": "2027-08-18"
   },
   "virginia-data-center-power-tax-va": {
     "effective_status": "Enacted",
+    "expires": null
+  },
+  "virginia-dominion-gs-5-large-load-rate-class-va": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "virginia-statewide-pause-request-va": {
+    "effective_status": "Rejected",
     "expires": null
   },
   "walker-county-ga": {
@@ -1519,6 +1595,10 @@
     "effective_status": "Enacted",
     "expires": "2027-08-11"
   },
+  "wayne-county-ut": {
+    "effective_status": "Enacted",
+    "expires": "2027-01-17"
+  },
   "weathersfield-township-oh": {
     "effective_status": "Enacted",
     "expires": null
@@ -1530,6 +1610,10 @@
   "white-county-in": {
     "effective_status": "Enacted",
     "expires": "2026-10-20"
+  },
+  "white-pine-county-nv": {
+    "effective_status": "Enacted",
+    "expires": "2027-01-18"
   },
   "whiteville-nc": {
     "effective_status": "Enacted",

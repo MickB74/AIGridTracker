@@ -176,6 +176,27 @@ its own constants.
     nothing located are `unrecorded` and render as *No record found*, never as
     neutral. Coverage is published on the page precisely because it is low
     (17 of 117 at launch).
+  - `SENATOR_RECORDS` (in **`src/senator_records.py`**) plus the roster in
+    **`data/senators.json`** — all 100 sitting senators, not just the 35 on
+    a ballot, rendered by `build_senators()` → `senators.html`. The roster
+    is read from the @unitedstates congress-legislators dataset by
+    `scripts/refresh_senators.py` (stdlib, `--offline` reuses
+    `data/external/legislators-current.json`); it carries the seat class,
+    so *when the seat is next on a ballot* is derived from the term end —
+    upstream ends an appointee's term on the special-election date itself
+    (Moody, Husted), so a term not ending on January 3 is on the ballot in
+    the year it ends. `src/senators.py` joins each senator to three record
+    tables and keeps them apart on the page: the graded *action* from
+    `officials_stances.py`, the researched *record* from
+    `senator_records.py` (per-item `kind`: `action` or `statement`; only
+    actions are ever graded), and the 2026 *campaign record* from
+    `senate_races.py` for incumbents on the ballot. `senator_records.py` is
+    generated from a researched review queue by a curation script whose
+    drop list is written into the module docstring — re-running research
+    means re-curating, not appending. The page also carries the
+    write-to-your-senators generator (letter, call script, meeting
+    request), which reads `#write-<st>` from the URL so state pages can
+    deep-link into it pre-filled.
   - `HOUSE_RACES_2026` — the 2026 U.S. House ballot: 435 voting districts
     plus 5 non-voting delegates, 1,161 filed candidates. **The roster lives in
     `data/house_races_2026.json`, not in Python** — 440 districts is ~2,500
@@ -421,6 +442,13 @@ published pages are static files.
   That took `moratoriums.html` from 453 KB to 179 KB. Keep cell rendering
   in Python: the JSON rows must be byte-identical to what the static rows
   would be, and each locality still has its own crawlable community page.
+- **Every page's header carries a "Your state…" picker** (`_STATE_OPTIONS`
+  in `build_site.py`) that jumps straight to `states/<slug>` — the state
+  briefing is the landing page for a resident, and the national trackers
+  are where they would otherwise have to wade through 49 other states.
+- **The moratorium map and timeline stack vertically.** The timeline SVG
+  carries a `min-width`, which in a two-column grid squeezed the map into a
+  third of the row. Don't put them side by side again.
 - **`web/404.html` is a real page.** Vercel serves it for any miss; it
   carries `<base href="/">` because it renders at arbitrary depths, and
   `noindex` so it never ranks.

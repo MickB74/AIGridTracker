@@ -7,12 +7,12 @@
 <meta name="google-site-verification" content="kkgrLvRLdgGg12Y1ka456PlN9iNsyWGCyJIS-8ip9I4">
 <meta name="msvalidate.01" content="EAFCC85873DF7F2A656666010A7D79FD">
 <title>AI GridWatch — data center news, analysis and tools for…</title>
-<meta name="description" content="Daily data center news, sourced analysis, a moratorium tracker covering 398 local actions, and free tools for communities facing data center development.">
+<meta name="description" content="Daily data center news, sourced analysis, a moratorium tracker covering 419 local actions, and free tools for communities facing data center development.">
 <link rel="canonical" href="https://aigridwatch.com/">
 <link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
       href="https://aigridwatch.com/blog/feed.xml">
 <meta property="og:title" content="AI GridWatch — data center news, analysis and tools for communities">
-<meta property="og:description" content="Daily data center news, sourced analysis, a moratorium tracker covering 398 local actions, and free tools for communities facing data center development.">
+<meta property="og:description" content="Daily data center news, sourced analysis, a moratorium tracker covering 419 local actions, and free tools for communities facing data center development.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://aigridwatch.com/">
 <meta property="og:site_name" content="AI GridWatch">
@@ -49,6 +49,11 @@ nav .nav-search { display:inline-flex; align-items:center; gap:6px;
   font-size:14px; padding:6px 10px; border-radius:8px;
   border:1px solid var(--rule); color:var(--muted); }
 nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
+/* One-click path from any national page to the reader's own state briefing —
+   the site's answer to "I don't want to wade through 49 other states". */
+nav .nav-state { font-size:13px; padding:6px 8px; border-radius:8px; max-width:150px;
+  border:1px solid var(--rule); background:var(--card); color:var(--muted); }
+nav .nav-state:hover, nav .nav-state:focus { color:var(--teal); border-color:var(--teal); }
 /* Grouped dropdowns (desktop). Menus reveal on hover, keyboard focus, or the
    native <details> toggle; the summary marker is replaced with a caret. */
 .navgroup { position:relative; }
@@ -81,6 +86,7 @@ nav .nav-search:hover { color:var(--teal); border-color:var(--teal); }
   .nav-burger:hover { color:var(--teal); border-color:var(--teal); }
   nav .cta { order:2; margin-left:auto; padding:6px 11px; font-size:13px; }
   nav .nav-search { order:1; padding:5px 9px; font-size:13px; }
+  nav .nav-state { order:1; max-width:120px; }
   nav .nav-search span { display:none; }
   .nav-links { order:4; display:none; flex-basis:100%;
     flex-direction:column; gap:0; padding:4px 0 2px; }
@@ -531,11 +537,14 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
          role="button">&#9776;</label>
   <a class="nav-search" href="search" aria-label="Search the site"
      title="Search">&#128269;<span>Search</span></a>
+  <select class="nav-state" aria-label="Jump to your state's briefing"
+     onchange="if(this.value)location.href='states/'+this.value">
+    <option value="">Your state…</option><option value="alabama">Alabama</option><option value="alaska">Alaska</option><option value="arizona">Arizona</option><option value="arkansas">Arkansas</option><option value="california">California</option><option value="colorado">Colorado</option><option value="connecticut">Connecticut</option><option value="delaware">Delaware</option><option value="district-of-columbia">District of Columbia</option><option value="florida">Florida</option><option value="georgia">Georgia</option><option value="hawaii">Hawaii</option><option value="idaho">Idaho</option><option value="illinois">Illinois</option><option value="indiana">Indiana</option><option value="iowa">Iowa</option><option value="kansas">Kansas</option><option value="kentucky">Kentucky</option><option value="louisiana">Louisiana</option><option value="maine">Maine</option><option value="maryland">Maryland</option><option value="massachusetts">Massachusetts</option><option value="michigan">Michigan</option><option value="minnesota">Minnesota</option><option value="mississippi">Mississippi</option><option value="missouri">Missouri</option><option value="montana">Montana</option><option value="nebraska">Nebraska</option><option value="nevada">Nevada</option><option value="new-hampshire">New Hampshire</option><option value="new-jersey">New Jersey</option><option value="new-mexico">New Mexico</option><option value="new-york">New York</option><option value="north-carolina">North Carolina</option><option value="north-dakota">North Dakota</option><option value="ohio">Ohio</option><option value="oklahoma">Oklahoma</option><option value="oregon">Oregon</option><option value="pennsylvania">Pennsylvania</option><option value="rhode-island">Rhode Island</option><option value="south-carolina">South Carolina</option><option value="south-dakota">South Dakota</option><option value="tennessee">Tennessee</option><option value="texas">Texas</option><option value="utah">Utah</option><option value="vermont">Vermont</option><option value="virginia">Virginia</option><option value="washington">Washington</option><option value="west-virginia">West Virginia</option><option value="wisconsin">Wisconsin</option><option value="wyoming">Wyoming</option></select>
   <div class="nav-links">
     <a href="./" aria-current="page">Home</a>
     <details class="navgroup"><summary>News & analysis</summary><div class="navmenu"><a href="news">Top stories</a><a href="blog">Blog</a><a href="story-tracker">Story tracker</a><a href="projects">Projects tracker</a><a href="videos">Videos</a></div></details>
     <details class="navgroup"><summary>Act</summary><div class="navmenu"><a href="start-here">Start here</a><a href="siting">Siting score</a><a href="hearing-questions">Hearing prep</a><a href="opposition">Know the opposition</a><a href="cba-clauses">Model clauses</a><a href="case-studies">Case studies</a><a href="impact">Impact calculator</a></div></details>
-    <details class="navgroup"><summary>Your area</summary><div class="navmenu"><a href="states">Your state</a><a href="map">Map & projects</a><a href="moratoriums">Moratoriums</a><a href="puc">PUCs</a><a href="scorecard">Officials scorecard</a><a href="senate-races">Senate races 2026</a><a href="house-races">House races 2026</a><a href="community-value">Community playbook</a></div></details>
+    <details class="navgroup"><summary>Your area</summary><div class="navmenu"><a href="states">Your state</a><a href="map">Map & projects</a><a href="moratoriums">Moratoriums</a><a href="puc">PUCs</a><a href="scorecard">Officials scorecard</a><a href="senate-races">Senate races 2026</a><a href="senators">All 100 senators</a><a href="house-races">House races 2026</a><a href="community-value">Community playbook</a></div></details>
     <details class="navgroup"><summary>The facts</summary><div class="navmenu"><a href="health-risks">Health risks</a><a href="bills">Your electric bill</a><a href="tax-breaks">Tax breaks</a><a href="environment">Environment</a><a href="learn">Learn the basics</a></div></details>
     <details class="navgroup"><summary>Industry</summary><div class="navmenu"><a href="data-centers">Data centers</a><a href="companies">Companies</a><a href="complaints">Complaints by company</a><a href="outlook">Electricity outlook</a><a href="open-data">Open data</a></div></details>
   </div>
@@ -548,7 +557,7 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
   <div class="kicker">AI GridWatch</div>
   <h1>The data center fight,<br>tracked daily.</h1>
   <p class="sub">News, analysis and the numbers behind them: a moratorium
-  tracker covering 398 local and state actions, project dossiers, health
+  tracker covering 419 local and state actions, project dossiers, health
   evidence, and free tools for communities facing a data center. Every claim
   links to its source.</p>
   <p>
@@ -706,9 +715,9 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
   </g>
   <text x="24" y="262" fill="#93a1b5" font-size="12" font-weight="700" letter-spacing="1.6" font-family="system-ui,-apple-system,sans-serif">WEEK IN REVIEW</text>
 </svg><span class="post-date">August 30, 2026</span><h3>Week in Review: Georgia&#x27;s Secret OpenAI Contract, New Jersey&#x27;s New Transparency Law, and a Second California City Bans Data Centers</h3><p class="muted">This week Georgia regulators approved a confidential 3.2-gigawatt contract to power OpenAI&#x27;s $20 billion Effingham County data center and Sen. Warnock answered with a call for a statewide moratorium, New Jersey&#x27;s governor signed a law forcing data centers to report their water and energy use, and Coachella became the second California city to ban data centers outright. Plus: a Microsoft-tied New Jersey site accused of running dozens of unpermitted gas turbines, PJM&#x27;s plan to make data centers bring their own power, and ten more communities that paused or banned data centers in a single week.</p></a></div></section>
-<section class="home-changes"><div class="sechead"><h2>Moratorium tracker: what changed</h2><a href="moratoriums">Full tracker &rarr;</a></div><p class="muted">22 rows moved in the last 10 days: pauses added, extended, lapsed or rescinded. Each row carries its source and end date.</p><ul class="chg-list"><li><span class="chg-kind">New</span><a href="moratoriums#whiteville-nc">Whiteville, NC</a><span class="chg-detail">Added as Enacted</span><span class="chg-date">09-05</span></li><li><span class="chg-kind">Status</span><a href="moratoriums#greensboro-nc">Greensboro, NC</a><span class="chg-detail">Proposed → Enacted</span><span class="chg-date">09-05</span></li><li><span class="chg-kind">New</span><a href="moratoriums#fairfax-county-va">Fairfax County, VA</a><span class="chg-detail">Added as Enacted</span><span class="chg-date">09-05</span></li><li><span class="chg-kind">Status</span><a href="moratoriums#birmingham-al">Birmingham, AL</a><span class="chg-detail">Enacted → Expired</span><span class="chg-date">09-04</span></li><li><span class="chg-kind">Status</span><a href="moratoriums#kings-mountain-nc">Kings Mountain, NC</a><span class="chg-detail">Expired → Enacted</span><span class="chg-date">09-04</span></li><li><span class="chg-kind">New</span><a href="moratoriums#durham-county-nc">Durham County, NC</a><span class="chg-detail">Added as Enacted</span><span class="chg-date">09-04</span></li></ul></section>
+<section class="home-changes"><div class="sechead"><h2>Moratorium tracker: what changed</h2><a href="moratoriums">Full tracker &rarr;</a></div><p class="muted">44 rows moved in the last 10 days: pauses added, extended, lapsed or rescinded. Each row carries its source and end date.</p><ul class="chg-list"><li><span class="chg-kind">New</span><a href="moratoriums#whiteville-nc">Whiteville, NC</a><span class="chg-detail">Added as Enacted</span><span class="chg-date">09-05</span></li><li><span class="chg-kind">Status</span><a href="moratoriums#greensboro-nc">Greensboro, NC</a><span class="chg-detail">Proposed → Enacted</span><span class="chg-date">09-05</span></li><li><span class="chg-kind">New</span><a href="moratoriums#fairfax-county-va">Fairfax County, VA</a><span class="chg-detail">Added as Enacted</span><span class="chg-date">09-05</span></li><li><span class="chg-kind">Status</span><a href="moratoriums#san-antonio-tx">San Antonio, TX</a><span class="chg-detail">Proposed → Rejected</span><span class="chg-date">09-05</span></li><li><span class="chg-kind">New</span><a href="moratoriums#cache-county-ut">Cache County, UT</a><span class="chg-detail">Added as Enacted</span><span class="chg-date">09-05</span></li><li><span class="chg-kind">New</span><a href="moratoriums#box-elder-county-ut">Box Elder County, UT</a><span class="chg-detail">Added as Enacted</span><span class="chg-date">09-05</span></li></ul></section>
 <div class="stats">
-  <div class="stat"><b>332</b><span>data center pauses in force, of 398 tracked</span></div>
+  <div class="stat"><b>349</b><span>data center pauses in force, of 419 tracked</span></div>
   <div class="stat"><b>4,427</b><span>tracked U.S. data center facilities</span></div>
   <div class="stat"><b>153 TWh</b><span>estimated annual electricity, all 50 states + D.C.</span></div>
   <div class="stat"><b>325&ndash;580 TWh</b><span>projected U.S. data center demand by 2030 (Berkeley Lab)</span></div>

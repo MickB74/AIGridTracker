@@ -381,6 +381,21 @@ AI_COMPETITOR_SITES = [
 AI_COMPETITOR_SITES_DF = pd.DataFrame(
     AI_COMPETITOR_SITES, columns=["company", "location", "state", "lat", "lon", "src"])
 
+# Colocation / wholesale campuses in the markets the site covers hardest.
+# First-party rows: each is the operator's own campus page, which names the
+# site and its scale but never its tenants — so `tenant` is recorded as
+# undisclosed rather than guessed. Added 2026-09-05 because the Virginia
+# pages listed only the four hyperscalers while Ashburn's largest landlords
+# (Equinix, Digital Realty, Vantage, QTS, CloudHQ) were absent.
+COLO_SITES = [
+    # company, location, state, lat, lon, src
+    ("Equinix", "Ashburn (DC1–DC15 IBX campus, Loudoun Co.)", "VA", 39.02, -77.46, "equinix_dc"),
+    ("Digital Realty", "Ashburn (Digital Loudoun campus, ~500 MW)", "VA", 39.01, -77.47, "dlr_dc"),
+    ("Vantage", "Sterling / Ashburn (Ashburn I–III, 142 + 288 MW)", "VA", 39.00, -77.43, "vantage_dc"),
+    ("QTS", "Ashburn (Ashburn 2 / Dulles Vault campus, Loudoun Co.)", "VA", 38.99, -77.45, "qts_dc"),
+    ("CloudHQ", "Ashburn (LC campus) and Manassas (MCC campus)", "VA", 38.79, -77.52, "cloudhq_dc"),
+]
+
 HYPERSCALER_COLORS = {"Google": "#34a853", "Meta": "#0866ff",
                       "Microsoft": "#f25022", "Amazon (AWS)": "#ff9900",
                       "xAI (Colossus)": "#a855f7",
@@ -475,6 +490,11 @@ def _role_rows():
         llc = OPERATORS[company][5] if company in OPERATORS else None
         rows.append((company, owner, tenant, loc, st_, lat, lon,
                      llc, attribution, src))
+    for company, loc, st_, lat, lon, src in COLO_SITES:      # landlords
+        owner = OPERATORS[company][1] if company in OPERATORS else "self"
+        llc = OPERATORS[company][5] if company in OPERATORS else None
+        rows.append((company, owner, "Colocation tenants (undisclosed)",
+                     loc, st_, lat, lon, llc, "first_party", src))
     return rows
 
 # Role-aware master site table. The legacy HYPERSCALERS_DF / AI_COMPETITOR_SITES_DF
@@ -1891,12 +1911,16 @@ MORATORIUMS = [
      "lat": 33.03, "lon": -96.43, "expires": "2026-11-05", "as_of": "2026-08-15",
      "source": "https://www.wfaa.com/video/tech/city-of-lavon-discussing-data-center-moratorium/287-bda49564-1e93-43c5-ad74-4dbb71af0464"},
     {"locality": "San Antonio", "state": "TX", "level": "Local",
-     "status": "Proposed", "when": "Aug 7, 2026",
-     "note": "Three council members (Galvan, Castillo, Meza Gonzalez) filed memo "
-             "requesting 3-6 month moratorium on all data center development. "
-             "Special council meeting requested by Aug 31",
-     "lat": 29.42, "lon": -98.49, "expires": None, "as_of": "2026-08-15",
-     "source": "https://foxsanantonio.com/newsletter-daily/san-antonio-councilmembers-seek-temporary-moratorium-on-new-data-centers"},
+     "status": "Rejected", "when": "Aug 26, 2026",
+     "note": "Three council members (Galvan, Castillo, Meza Gonzalez) filed an "
+             "Aug 7 memo for a 3-6 month moratorium. At the Aug 26 session most "
+             "of council declined it by consensus and chose UDC amendments "
+             "instead: 500-ft buffers from homes, schools and hospitals, "
+             "industrial/commercial zones only, noise buffers, possible "
+             "special-use authorization. Zoning Commission Sep 15, council "
+             "vote Oct 15, 2026",
+     "lat": 29.42, "lon": -98.49, "expires": None, "as_of": "2026-09-05",
+     "source": "https://www.sacurrent.com/news/san-antonio-news/san-antonio-city-council-debates-data-center-moratorium-stricter-development-rules/"},
     {"locality": "Columbia County", "state": "GA", "level": "Local",
      "status": "Proposed", "when": "Aug 2026",
      "note": "180-day moratorium proposed at commission meeting by chair candidate "
@@ -3329,6 +3353,126 @@ MORATORIUMS = [
              "rezoning. Applications pending on Sep 11, 2024 were grandfathered",
      "lat": 38.85, "lon": -77.31, "expires": None, "as_of": "2026-09-05",
      "source": "https://www.fairfaxcounty.gov/news/board-supervisors-approve-new-data-center-zoning-ordinance-amendment"},
+    # ── Virginia batch, 2026-09-05 ─────────────────────────────────────────
+    {"locality": "Stafford County", "state": "VA", "level": "Local",
+     "status": "Enacted", "when": "Oct 21, 2025", "term": "standing",
+     "note": "Standing ordinance, not a pause. Phase 2 data center rules "
+             "(Ordinance O25-29 and Comprehensive Plan amendment R25-208, "
+             "adopted Oct 21, 2025; O25-29(R) on Dec 2, 2025 grandfathered five "
+             "approved projects — Stafford Technology Campus, Potomac Church "
+             "Tech Center, Centreport Gateway/Pemberton, Vantage VA-4 and "
+             "Cranes Corner, 31 buildings and 8.7M sq ft) on top of the Oct "
+             "2023 Phase 1 rules: by-right only in M-2 and the ICTP overlay, "
+             "100/200-ft setbacks from non-commercial zoning (a 500-ft "
+             "residential setback was recommended), sound mitigation with "
+             "post-occupancy noise checks at 90 days and annually, 30% open "
+             "space outside the urban service area. The county reports 11 "
+             "applications still under review and none filed since Sep 2025. "
+             "On Sep 1, 2026 the board directed staff to draft letters asking "
+             "Gov. Spanberger for a special session on data center rules and, "
+             "failing quick legislation, a temporary pause on new large-scale "
+             "approvals; Chair Diggs calls the ordinance 'the strictest in "
+             "Virginia'",
+     "lat": 38.42, "lon": -77.41, "expires": None, "as_of": "2026-09-05",
+     "source": "https://staffordcountyva.gov/government/departments_p-z/planning_and_zoning/data_centers/index.php"},
+    {"locality": "Spotsylvania County", "state": "VA", "level": "Local",
+     "status": "Enacted", "when": "Aug 11, 2026", "term": "standing",
+     "note": "Resolution adopted 4-2 (Mullins and Frazier opposed) backing Sen. "
+             "Sturtevant's call for the governor to 'issue a statewide "
+             "moratorium on data centers to determine whether development "
+             "should be permitted and, if so, under what conditions'. Sits on "
+             "two standing local rules: a Feb 2026 vote requiring a special "
+             "use permit for every data center, ending by-right siting even on "
+             "industrial land, and an Aug 25, 2026 comprehensive plan "
+             "amendment (3-2) capping data centers at 45% of the county's "
+             "industrial-zoned land, with two supervisors voting no because "
+             "they wanted a lower cap. The county had earlier welcomed some "
+             "$35B in data center investment",
+     "lat": 38.20, "lon": -77.66, "expires": None, "as_of": "2026-09-05",
+     "source": "https://wjla.com/news/local/spotsylvania-county-backs-call-for-statewide-moratorium-on-data-centers-abigail-spanberger-ai-energy-use-zoning-decisions"},
+    {"locality": "Culpeper County", "state": "VA", "level": "Local",
+     "status": "Enacted", "when": "Sep 2, 2025", "term": "standing",
+     "note": "Unanimous zoning text amendment requiring a conditional use "
+             "permit — planning commission review, public hearing and a board "
+             "vote — for data centers on light and heavy industrial land "
+             "(about 2,200 acres on 140 LI parcels plus 867 acres HI). Data "
+             "centers inside the Culpeper Technology Zone stay by-right. The "
+             "permit route has not meant denial: on Jul 2, 2026 the board "
+             "rezoned 69.19 acres of farmland at Nalles Mill and Keyser roads "
+             "4-3 for Red Ace Capital's two-building, 1.16M sq ft campus, after "
+             "tabling it in June. The county counts two operating data centers "
+             "and expects seven campuses in the Tech Zone plus an approved "
+             "Amazon campus",
+     "lat": 38.47, "lon": -77.99, "expires": None, "as_of": "2026-09-05",
+     "source": "https://starexponent.com/news/local/government-politics/article_6b5228c6-4e69-4caf-a4a5-d3ac8d1b1964.html"},
+    {"locality": "Fluvanna County", "state": "VA", "level": "Local",
+     "status": "Enacted", "when": "Sep 2025",
+     "note": "In Sep 2025 the board directed staff to postpone consideration "
+             "of data center site plan applications until Jan 31, 2026 while "
+             "it rewrote the code; the planning commission's minutes called it "
+             "a moratorium and County Attorney Dan Whitten later said it was "
+             "not one. In Dec 2025 the board amended the code to require a "
+             "special use permit for data centers in industrial districts. On "
+             "Aug 5, 2026, with an 843-acre agricultural parcel near Bremo "
+             "Bluff being marketed as a data center site, Supervisor Fairchild "
+             "asked for a resolution and a temporary pause on new applications "
+             "to be placed on the Aug 19 agenda; Chair O'Brien opposed an "
+             "outright prohibition. The Aug 19 outcome has not been located — "
+             "check the minutes before citing",
+     "lat": 37.84, "lon": -78.28, "expires": "2026-01-31", "as_of": "2026-09-05",
+     "source": "https://www.bisnow.com/news/washington-dc/data-center-development/the-world-s-largest-data-center-hub-pursues-a-development-pause-is-it-even-legal-"},
+    {"locality": "Virginia (statewide pause request)", "state": "VA", "level": "State",
+     "status": "Rejected", "when": "Aug 11, 2026",
+     "note": "Sen. Glen Sturtevant (R) wrote to Gov. Spanberger on Jul 30, 2026 "
+             "asking her to use executive authority for an immediate "
+             "moratorium on new data center approvals while the state assesses "
+             "grid, water and infrastructure capacity; Sens. Richard Stuart (R) "
+             "and Russet Perry (D) jointly asked for a special session on "
+             "groundwater. Spotsylvania (Aug 11, 4-2) and Stafford (Sep 1) "
+             "boards backed the ask. The governor's office answered Aug 11 "
+             "that its approach — the $0.011/kWh consumption tax and an SCC "
+             "directive making new data centers pay their full transmission "
+             "cost — 'supersedes any effort to block them from being "
+             "developed', and Spanberger has said a pause is a local choice. "
+             "Under Virginia's Dillon's Rule a locality cannot enact a true "
+             "moratorium; it can defer applications for up to 12 months while "
+             "amending its ordinance",
+     "lat": 37.54, "lon": -77.43, "expires": None, "as_of": "2026-09-05",
+     "source": "https://valawyersweekly.com/2026/08/13/spanberger-rejects-data-center-moratorium-virginia-growth/"},
+    {"locality": "Virginia (Dominion GS-5 large-load rate class)", "state": "VA", "level": "State",
+     "status": "Enacted", "when": "Nov 25, 2025", "term": "standing",
+     "note": "SCC final order in Dominion's biennial review (PUR-2025-00058) "
+             "creates rate class GS-5 for customers demanding 25 MW or more — "
+             "in practice data centers — effective Jan 1, 2027. GS-5 customers "
+             "sign long-term contracts (reported as 14 years) with minimum "
+             "demand charges covering at least 85% of contracted transmission "
+             "and distribution demand and 60% of generation demand, so a "
+             "campus that under-uses its reservation still pays for the grid "
+             "built for it. The same order cut Dominion's base-rate ask: "
+             "residential bills rise $11.24/month in 2026 (23.7% less than "
+             "requested) and $2.36 in 2027",
+     "lat": 37.54, "lon": -77.44, "expires": None, "as_of": "2026-09-05",
+     "source": "https://www.scc.virginia.gov/about-the-scc/newsreleases/release/scc-issues-order-on-dev-biennial-review-2025/scc-rules-in-dev-biennial-review-case.html"},
+    {"locality": "Virginia (2026 General Assembly package)", "state": "VA", "level": "State",
+     "status": "Enacted", "when": "Mar 2026", "term": "standing",
+     "note": "Of 61 data center bills filed in the 2026 session, 15 reached the "
+             "governor. Among them: HB 1393 (Dominion to petition the SCC for "
+             "rates recovering new generating-capacity costs from 25 MW+ "
+             "customers), HB 284 (demand-flexibility programs for 25 MW+ "
+             "customers by 2029, costs not passed to other customers), SB 339 "
+             "(SCC to determine whether high-load service is subsidised by "
+             "other customers), SB 336 and HB 1502 (Tier 4 backup generators; "
+             "one-year standby-generator pollution study), HB 496 and SB 553 "
+             "(monthly water volumes reported by water utilities; annual water "
+             "consumption estimates required in rezoning and permit "
+             "decisions), and HB 153 (a permit process for 100 MW+ facilities "
+             "with sound assessments within 500 ft of homes and schools and "
+             "locality assessments of water, agriculture and historic "
+             "resources). The governor's Jul 6, 2026 release says she signed "
+             "the generator, local-assessment and ratepayer measures — confirm "
+             "each bill's final status on LIS before citing a number",
+     "lat": 37.54, "lon": -77.42, "expires": None, "as_of": "2026-09-05",
+     "source": "https://www.multistate.us/insider/2026/3/30/virginia-lawmakers-pass-15-data-center-bills-as-tax-exemption-fight-looms"},
     {"locality": "Lyon County", "state": "KS", "level": "Local",
      "status": "Enacted", "when": "Jul 23, 2026",
      "note": "Resolution 12-26: 6-month pause on new data center and battery "
@@ -3973,6 +4117,131 @@ MORATORIUMS = [
              "unanimous -- first municipality in El Paso County to adopt one",
      "lat": 39.09, "lon": -104.87, "expires": "2027-01-20", "as_of": "2026-09-02",
      "source": "https://wp.ocn.me/v26n8montc-2/"},
+    # ── Southwest batch, 2026-09-05 ────────────────────────────────────────
+    {"locality": "Cache County", "state": "UT", "level": "Local",
+     "status": "Enacted", "when": "Jun 23, 2026",
+     "note": "180-day moratorium on new data center approvals, 6-0 (one "
+             "absent); unincorporated county only. Staff said the county code "
+             "had no definitions or standards for data centers",
+     "lat": 41.72, "lon": -111.83, "expires": "2026-12-20", "as_of": "2026-09-05",
+     "source": "https://www.upr.org/politics/2026-07-01/as-data-centers-weigh-on-utahns-minds-another-county-has-hit-pause"},
+    {"locality": "Box Elder County", "state": "UT", "level": "Local",
+     "status": "Enacted", "when": "Jun 10, 2026",
+     "note": "180-day moratorium on new data centers and data center power "
+             "plants on unincorporated land, unanimous (3-0). Does not reach "
+             "the Stratos project: the county had already ceded land-use "
+             "authority over that site to Utah's Military Installation "
+             "Development Authority for 50 years",
+     "lat": 41.51, "lon": -112.02, "expires": "2026-12-07", "as_of": "2026-09-05",
+     "source": "https://www.upr.org/utah-news/2026-06-17/box-elder-data-center-moratorium-stratos"},
+    {"locality": "Logan", "state": "UT", "level": "Local",
+     "status": "Enacted", "when": "Jun 30, 2026",
+     "note": "180-day temporary land use regulation (Ordinance 26-12): the city "
+             "will not accept, process or approve any application or permit "
+             "for a data center or data center power plant within city limits "
+             "while it writes permanent rules. End date is 180 days from "
+             "adoption",
+     "lat": 41.74, "lon": -111.83, "expires": "2026-12-27", "as_of": "2026-09-05",
+     "source": "https://www.loganutah.gov/news_detail_T2_R412.php"},
+    {"locality": "Grand County", "state": "UT", "level": "Local",
+     "status": "Enacted", "when": "Jul 7, 2026",
+     "note": "180-day temporary land use regulation, unanimous: pauses "
+             "acceptance, processing and approval of applications, permits "
+             "and licenses for data centers, data center power plants and "
+             "associated digital infrastructure. Pre-emptive -- nothing was "
+             "in the queue",
+     "lat": 38.57, "lon": -109.55, "expires": "2027-01-03", "as_of": "2026-09-05",
+     "source": "https://www.moabtimes.com/articles/grand-county-pauses-data-center-applications-to-develop-new-land-use-rules/"},
+    {"locality": "Wayne County", "state": "UT", "level": "Local",
+     "status": "Enacted", "when": "Jul 21, 2026",
+     "note": "Resolution 2026-04: immediate 180-day moratorium on all land use "
+             "applications for data centers, data center power plants "
+             "(explicitly including nuclear) and supporting digital "
+             "infrastructure, unanimous. County code did not address data "
+             "centers at all",
+     "lat": 38.40, "lon": -111.64, "expires": "2027-01-17", "as_of": "2026-09-05",
+     "source": "https://ironcountytoday.com/2026/07/21/industrial-developers-target-rural-utah-as-wayne-county-enacts-temporary-freeze-community-urged-to-stay-vigilant/"},
+    {"locality": "Humboldt County", "state": "NV", "level": "Local",
+     "status": "Enacted", "when": "Jul 6, 2026",
+     "note": "Temporary moratorium on data center applications through Jul 13, "
+             "2027 while the county updates land-use rules on water, power and "
+             "infrastructure; multiple developers had approached the county "
+             "and its code did not address data centers",
+     "lat": 40.97, "lon": -117.74, "expires": "2027-07-13", "as_of": "2026-09-05",
+     "source": "https://thenevadaindependent.com/article/how-has-your-city-or-county-regulated-data-centers-heres-the-latest-in-nevada"},
+    {"locality": "White Pine County", "state": "NV", "level": "Local",
+     "status": "Enacted", "when": "Jul 22, 2026",
+     "note": "Resolution 2026-18: 180-day moratorium on accepting, processing "
+             "or approving land-use applications for data center development "
+             "while staff draft zoning standards; renewable. End date is 180 "
+             "days from adoption",
+     "lat": 39.25, "lon": -114.89, "expires": "2027-01-18", "as_of": "2026-09-05",
+     "source": "https://elynews.com/2026/07/30/joint-white-pine-county-commission-road-commission-and-liquor-board-meeting/"},
+    {"locality": "Austin", "state": "TX", "level": "Local",
+     "status": "Proposed", "when": "Aug 27, 2026",
+     "note": "Council unanimously directed staff to draft Land Development "
+             "Code rules for large-scale data centers (location, size, water, "
+             "noise, heat, lighting) that could regulate or ban facilities "
+             "above 75 MW, with the first ordinance due back by end of 2026. "
+             "At least five members back a full ban on hyperscale sites. "
+             "No moratorium is in effect",
+     "lat": 30.27, "lon": -97.74, "expires": None, "as_of": "2026-09-05",
+     "source": "https://www.kut.org/austin/2026-08-27/austin-tx-data-center-rules-bans-city-council"},
+    {"locality": "Harlingen", "state": "TX", "level": "Local",
+     "status": "Enacted", "when": "May 2026",
+     "note": "120-day moratorium on data center development within city "
+             "limits, adopted in May 2026 after public hearings, running to "
+             "mid-October; commissioners approved first reading of a 60-day "
+             "extension to December in August, second reading pending. City "
+             "hired Ambiotec Engineering to study water, wastewater and power "
+             "impacts",
+     "lat": 26.19, "lon": -97.70, "expires": None, "as_of": "2026-09-05",
+     "source": "https://www.krgv.com/news/harlingen-city-officials-look-to-extend-moratorium-on-data-centers",
+     "term": "fixed_undated"},
+    {"locality": "Tulsa", "state": "OK", "level": "Local",
+     "status": "Enacted", "when": "Mar 25, 2026",
+     "note": "9-month pause on processing and approving building permits for "
+             "data centers within city limits, unanimous, through Dec 31, "
+             "2026 or earlier if zoning is updated. Phases one and two of "
+             "Project Anthem exempt. Sponsor had sought a year and cut it to "
+             "nine months in committee",
+     "lat": 36.15, "lon": -95.99, "expires": "2026-12-31", "as_of": "2026-09-05",
+     "source": "https://ktul.com/news/local/tulsa-city-council-oks-temporary-halt-on-new-data-center-construction-through-2026"},
+    {"locality": "Broken Arrow", "state": "OK", "level": "Local",
+     "status": "Enacted", "when": "Jun 15, 2026",
+     "note": "6-month moratorium on accepting land use development "
+             "applications for data centers, unanimous, to Dec 31, 2026 with "
+             "an option to extend six more months; includes an appeal route "
+             "to the Board of Adjustment. City studying power, water, noise, "
+             "traffic and state tax exemptions",
+     "lat": 36.06, "lon": -95.80, "expires": "2026-12-31", "as_of": "2026-09-05",
+     "source": "https://basentinel.com/broken-arrow-approves-6-month-data-center-moratorium/"},
+    {"locality": "Edmond", "state": "OK", "level": "Local",
+     "status": "Enacted", "when": "Jun 8, 2026",
+     "note": "Moratorium on applications for land or building permits for "
+             "data centers through Dec 31, 2026, unanimous, with an emergency "
+             "clause so it took effect immediately. No applications were "
+             "pending",
+     "lat": 35.65, "lon": -97.48, "expires": "2026-12-31", "as_of": "2026-09-05",
+     "source": "https://okcfox.com/news/local/edmond-city-council-approves-data-center-permit-moratorium-through-december"},
+    {"locality": "Norman", "state": "OK", "level": "Local",
+     "status": "Enacted", "when": "Jun 23, 2026",
+     "note": "One-year moratorium on approving permits for data centers within "
+             "city limits, unanimous; press reports the suspension runs to "
+             "Jun 9, 2027. Mayor said no specific proposal prompted it",
+     "lat": 35.22, "lon": -97.44, "expires": "2027-06-09", "as_of": "2026-09-05",
+     "source": "https://www.news9.com/data-centers-in-oklahoma/norman-city-council-approves-temporary-moratorium-data-center"},
+    {"locality": "Colfax County", "state": "NM", "level": "Local",
+     "status": "Proposed", "when": "Introduced Jul 21, 2026",
+     "note": "Ordinance 2026-02, a moratorium on new data center projects, "
+             "introduced Jul 21 with a public hearing Aug 11, 2026. The "
+             "county's own ordinance page still lists it as proposed; early "
+             "September press reports say it was adopted, not yet confirmed "
+             "against the county record. Raton, the county seat, postponed "
+             "its own city moratorium in June over an MOU with developer "
+             "Atterix",
+     "lat": 36.90, "lon": -104.44, "expires": None, "as_of": "2026-09-05",
+     "source": "https://www.co.colfax.nm.us/government/ordinances_new.php"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.
@@ -4554,6 +4823,12 @@ def project_status(row, today=None):
                                 "conditions and permits and hold the builder "
                                 "to them; an expansion or a new building "
                                 "reopens the record."))
+        return out
+    if kinds & {"filing", "rezoning", "hearing", "public-comment", "vote"}:
+        out.update(stage="In review", phase="review",
+                   next_action=("An application is in the record. Ask the "
+                                "planning office for the next hearing date "
+                                "and request formal notice."))
         return out
     if has_value(row.get("announced")) or "announcement" in kinds:
         out.update(stage="Proposed", phase="proposed",
@@ -6767,6 +7042,42 @@ SOURCES = {
                      "https://www.hawley.senate.gov/hawley-blumenthal-introduce-bill-to-prevent-data-centers-from-increasing-electricity-costs-for-americans"),
     "sen_welch":    ("Sen. Welch joins bill so Americans aren't footing big data-center costs (2026)",
                      "https://www.welch.senate.gov/welch-joins-new-bill-to-ensure-americans-arent-footing-the-bill-for-big-data-centers"),
+    "sen_markey":   ("Sen. Markey — discussion draft, Protecting Communities from Data Center Impacts Act (2026)",
+                     "https://www.markey.senate.gov/news/press-releases/senator-markey-releases-discussion-draft-of-legislation-to-create-a-national-framework-to-address-data-center-harm"),
+    "sen_warren":   ("Sen. Warren — investigation into Big Tech data centers' role in utility costs (2025)",
+                     "https://www.warren.senate.gov/newsroom/press-releases/senator-warren-lawmakers-open-investigation-into-big-tech-data-centers-role-in-driving-up-families-utility-costs"),
+    "sen_marshall": ("Sen. Marshall applauds expansion of the Ratepayer Protection Pledge (2026)",
+                     "https://www.marshall.senate.gov/newsroom/press-releases/senator-marshall-applauds-president-trump-for-expanding-ratepayer-protection-pledge/"),
+    "sen_hydesmith": ("Sen. Hyde-Smith — FERC commissioners examine affordability as data centers proliferate (2026)",
+                     "https://www.hydesmith.senate.gov/hyde-smith-ferc-commissioners-examine-affordability-data-centers-proliferate"),
+    "sen_shaheen":  ("Sen. Shaheen joins letter to ISO New England on data-center energy costs (2026)",
+                     "https://www.shaheen.senate.gov/news/press/shaheen-joins-colleagues-in-searching-for-answers-about-how-new-regional-data-centers-will-drive-up-energy-costs-for-new-england-communities"),
+    "sen_durbin":   ("Sen. Durbin introduces the Data Center Water and Energy Transparency Act (2026)",
+                     "https://www.durbin.senate.gov/newsroom/press-releases/as-utility-costs-rise-durbin-introduces-new-legislation-to-bring-transparency-to-energy-and-water-consumption-by-data-centers"),
+    "sen_wyden":    ("Sen. Wyden demands Big Tech execs answer on data-center water impact (2026)",
+                     "https://www.wyden.senate.gov/news/press-releases/wyden-demands-big-tech-execs-answer-questions-about-data-centers-water-impact"),
+    "sen_whitehouse": ("Sens. Reed & Whitehouse seek answers on how regional data centers could drive up costs (2026)",
+                     "https://www.whitehouse.senate.gov/news/release/reed-whitehouse-seek-answers-about-how-new-regional-data-centers-could-drive-up-energy-health-environmental-costs-for-consumers/"),
+    "sen_reed":     ("Sens. Reed & Whitehouse seek answers on how regional data centers could drive up costs (2026)",
+                     "https://www.reed.senate.gov/news/releases/reed-and-whitehouse-seek-answers-about-how-new-regional-data-centers-could-drive-up-energy-health_environmental-costs-for-consumers"),
+    "sen_merkley":  ("Sens. Wyden & Merkley ask Oregon data center advisory committee to weigh Oregonians' concerns (2026)",
+                     "https://www.merkley.senate.gov/wyden-merkley-ask-state-data-center-advisory-committee-to-consider-multiple-issues-raised-by-oregonians/"),
+    "sen_kim":      ("Sens. Kim & Booker lead NJ delegation letter to PJM on rate increase (2025)",
+                     "https://www.kim.senate.gov/press_release/kim-booker-lead-members-of-nj-congressional-delegation-in-letter-to-pjm-interconnection-pjm-raising-serious-concerns-over-rate-increase-impacting-new-jersey-families/"),
+    "sen_sanders":  ("Sens. Sanders & Rep. Ocasio-Cortez announce AI Data Center Moratorium Act (2026)",
+                     "https://www.sanders.senate.gov/press-releases/news-sanders-ocasio-cortez-announce-ai-data-center-moratorium-act/"),
+    "sen_blackburn": ("Sen. Blackburn unveils TRUMP AMERICA AI Act national policy framework (2025)",
+                     "https://www.blackburn.senate.gov/2025/12/technology/blackburn-unveils-national-policy-framework-for-artificial-intelligence"),
+    "sen_lee":      ("APPA — Senate ENR Committee holds FERC oversight hearing (2026)",
+                     "https://www.publicpower.org/periodical/article/senate-energy-natural-resources-committee-holds-ferc-oversight-hearing"),
+    "sen_schiff":   ("Sen. Schiff unveils Energy Cost Fairness and Reliability Act (2026)",
+                     "https://www.schiff.senate.gov/news/press-releases/news-sen-schiff-unveils-major-legislation-to-ensure-fair-and-affordable-energy-costs-for-americans-amid-data-center-buildouts/"),
+    "sen_warnock":  ("Sens. Warnock & Markey push FERC to shield Americans from data-center energy costs (2026)",
+                     "https://www.warnock.senate.gov/newsroom/press-releases/warnock-markey-push-trump-admin-to-shield-americans-from-data-center-energy-costs/"),
+    "sen_kelly":    ("Sen. Van Hollen & colleagues call on FERC to ensure affordable service amid data-center demand (2025)",
+                     "https://www.vanhollen.senate.gov/news/press-releases/van-hollen-colleagues-call-on-ferc-to-ensure-affordable-reliable-electricity-service-for-americans-amid-rising-energy-demands-of-data-centers"),
+    "sen_rickscott": ("Sens. Rick Scott & Marshall introduce resolution supporting the Ratepayer Protection Pledge (2026)",
+                     "https://www.rickscott.senate.gov/2026/4/sens-rick-scott-roger-marshall-introduce-resolution-supporting-pres-trump-s-ratepayer-protection-pledge"),
     "sen_husted":   ("Sen. Husted leads bill to protect Americans from new data-center costs (2026)",
                      "https://www.husted.senate.gov/media/press-releases/husted-leads-bill-to-protect-americans-from-footing-the-bill-for-new-data-centers/"),
     "gov_whitmer":  ("Gov. Whitmer — data centers must pledge to cover utility costs (2026)",
@@ -6875,6 +7186,20 @@ SOURCES = {
     # --- Closest-neighbor protections (property values, buyouts, eminent domain) ---
     "mason_buyout": ("WCHS — Nscale's voluntary 'Good Neighbors' buyout of 53 homes beside the Monarch campus, Mason County WV (Jun 2026)",
                      "https://wchstv.com/news/local/voluntary-buyout-offers-rolled-out-for-meadowlands-estates-homes-near-data-center"),
+    "equinix_dc":  ("Equinix — Washington D.C. (Ashburn) IBX data centers, campus page",
+                    "https://www.equinix.com/data-centers/americas-colocation/united-states-colocation/washington-dc-data-centers"),
+    "dlr_dc":      ("Digital Realty — Northern Virginia (Digital Loudoun / Ashburn campus, 500 MW) data centers",
+                    "https://www.digitalrealty.com/data-centers/americas/northern-virginia"),
+    "vantage_dc":  ("Vantage Data Centers — Ashburn I (45200 Vantage Data Plaza, Sterling), Ashburn II and Ashburn III campus pages",
+                    "https://vantage-dc.com/data-center-locations/north-america/ashburn-i-virginia/"),
+    "qts_dc":      ("QTS — Ashburn 2 campus page (52-acre Ashburn site adjacent to the Dulles 'Vault' campus, announced Oct 2017)",
+                    "https://qtsdatacenters.com/data-centers/ashburn-2/"),
+    "cloudhq_dc":  ("CloudHQ — LC campus (Ashburn, 14 planned data centers) and MCC campus (Manassas, 7 data centers, 375+ MW)",
+                    "https://cloudhq.com/campus/lc-campus/"),
+    "scc_gs5":     ("Virginia SCC — final order in Dominion biennial review PUR-2025-00058: GS-5 rate class for 25 MW+ customers (Nov 25, 2025)",
+                    "https://www.scc.virginia.gov/about-the-scc/newsreleases/release/scc-issues-order-on-dev-biennial-review-2025/scc-rules-in-dev-biennial-review-case.html"),
+    "dominion_blue": ("Dominion Energy — Robert M. Blue executive biography (Chair, President and CEO)",
+                    "https://www.dominionenergy.com/-/media/content/about/board-and-executives/pdf/bob-blue-bio.pdf"),
     "ashburn_buyout": ("NBC4 Washington — Loudoun County / Ashburn homeowners report ~$4M buyout offers from data center developers",
                      "https://www.nbcwashington.com/news/local/northern-virginia/data-center-expansion-loudoun-county-homeowners-buyout-offers/"),
     "ga_eminent":   ("Fortune — Georgia Power eminent domain for data-center transmission; opening offers at 125% of appraised value (Jul 2026)",
@@ -7363,6 +7688,12 @@ EXECUTIVES = [
     {"company": "Core Scientific", "name": "Adam Sullivan",  "title": "CEO",
      "category": "leadership", "focus": "HPC/AI pivot (CoreWeave acquisition terminated Oct 2025; Core Scientific remains independent).",
      "linkedin": _li("Adam Sullivan", "Core Scientific")},
+    # The utility, not an operator: Dominion Energy Virginia serves Data
+    # Center Alley, and its rate case created the GS-5 large-load class.
+    {"company": "Dominion Energy", "name": "Robert M. Blue", "title": "Chair, President and Chief Executive Officer",
+     "category": "policy", "focus": "Dominion Energy Virginia — the utility serving Loudoun and Prince William; the 2025 biennial review that created the GS-5 rate class for 25 MW+ customers, transmission build-out for data centers, PJM capacity costs. Chair since Apr 2021, CEO since Oct 2020; formerly counselor and policy director to Gov. Mark Warner.",
+     "linkedin": _li("Robert Blue", "Dominion Energy"),
+     "verified": "2026-09-05", "verified_source": "https://www.dominionenergy.com/-/media/content/about/board-and-executives/pdf/bob-blue-bio.pdf"},
 ]
 # Verification log — read off each company's OWN leadership page on the date
 # shown. Keyed by (company, name). Kept separate from the rows above because
@@ -7600,6 +7931,19 @@ REGISTRY_PROVENANCE = {
             "— pending primaries, withdrawals and redistricting litigation all "
             "change the field, so check the linked state list before quoting a "
             "name."),
+    },
+    "SENATORS": {
+        "label": "Sitting U.S. senators on AI data centers",
+        "as_of": "September 2026",
+        "source": None,
+        "churn": "medium",
+        "caveat": (
+            "The roster is read from the @unitedstates congress-legislators "
+            "dataset and is solid; the records are not evenly covered. Most "
+            "senators have no located action or statement and are shown as "
+            "such rather than as neutral. Cosponsor lists are read from the "
+            "sponsors' own press releases, which can lag the bill's page on "
+            "congress.gov."),
     },
     "SENATE_RACES_2026": {
         "label": "2026 U.S. Senate candidates on AI data centers",
@@ -10290,6 +10634,68 @@ LOCAL_BODIES = [
      "phone": "", "email": "webmaster@howardcountyin.gov",
      "website": "https://www.in.gov/counties/howard/home/meetings,-minutes,-and-agendas/",
      "as_of": "2026-09-02", "source": "https://www.in.gov/counties/howard/home/meetings,-minutes,-and-agendas/"},
+
+    # ── Virginia batch, 2026-09-05 — each read off the locality's own page ──
+    {"locality": "Stafford County", "state": "VA",
+     "body": "Board of Supervisors",
+     "decides": 'Rezonings, conditional use permits and the data center ordinance (Phase 2 rules adopted Oct 21, 2025). Five campuses grandfathered, 11 applications under review; Accokeek Center awaits a board vote after a 4-3 Planning Commission recommendation.',
+     "meets": '1st, 3rd and 4th Tuesday of each month, 5:00 p.m. (4th Tuesday is a work session as needed; recess July–August).',
+     "where": 'Board Chambers, 1300 Courthouse Road, Stafford, VA 22554',
+     "agenda_url": "https://staffordcountyva.gov/government/elected_and_appointed_officials/board_of_supervisors/agenda_and_minutes.php",
+     "comment_process": "Sign up through the county's Public Hearings and Participation page or submit Online Public Meeting Comments; meetings stream at regionalwebtv.com/staffordbos.",
+     "phone": "540-658-8600", "email": "",
+     "website": "https://staffordcountyva.gov/government/elected_and_appointed_officials/board_of_supervisors/index.php",
+     "as_of": "2026-09-05", "source": "https://staffordcountyva.gov/government/elected_and_appointed_officials/board_of_supervisors/index.php"},
+    {"locality": "Spotsylvania County", "state": "VA",
+     "body": "Board of Supervisors",
+     "decides": 'Special use permits for every data center (required since Feb 2026), comprehensive plan (45% industrial-land cap, Aug 2026) and the Aug 11, 2026 resolution backing a statewide moratorium.',
+     "meets": '2nd and 4th Tuesday of each month, 5:00 p.m. unless otherwise specified.',
+     "where": 'Holbert Building, 9104 Courthouse Road, Spotsylvania, VA 22553',
+     "agenda_url": "https://www.spotsylvania.va.us/1547/Meeting-Agendas",
+     "comment_process": 'Use the Board of Supervisors Public Comment Sign Up Form on the county site; clerk 540-507-7010. The Chancellor District seat is vacant as of Sep 2026.',
+     "phone": "540-507-7010", "email": "",
+     "website": "https://www.spotsylvania.va.us/1195/Board-of-Supervisors",
+     "as_of": "2026-09-05", "source": "https://www.spotsylvania.va.us/1195/Board-of-Supervisors"},
+    {"locality": "Botetourt County", "state": "VA",
+     "body": "Board of Supervisors",
+     "decides": 'Zoning and land use; approved the Nov 2024 ordinance permitting data centers in the RAM district and the Jun 2025 Google performance agreement; created a five-member water study commission Jul 28, 2026 (3-1).',
+     "meets": '4th Tuesday of each month, 2:00 p.m.',
+     "where": 'Botetourt County Administration Center, 57 S Center Drive, Daleville, VA 24083',
+     "agenda_url": "https://www.botetourtva.gov/AgendaCenter",
+     "comment_process": 'Speak in person (3-minute limit), mail comments to 57 South Center Drive, Suite 200, Daleville, VA 24083, or use the online Citizen Comment Form; written comments must arrive by 9:00 a.m. on meeting day to enter the minutes. Livestream is view-only. Deputy Clerk Celeste Parker, 540-928-2006.',
+     "phone": "540-928-2006", "email": "",
+     "website": "https://www.botetourtva.gov/338/Board-of-Supervisors",
+     "as_of": "2026-09-05", "source": "https://www.botetourtva.gov/338/Board-of-Supervisors"},
+    {"locality": "Pittsylvania County", "state": "VA",
+     "body": "Board of Supervisors",
+     "decides": "Zoning and the comprehensive plan (the 1991 code does not mention data centers); adopted a Jul 21, 2026 resolution supporting STACK Infrastructure's $100B Berry Hill campus, whose performance agreement belongs to the Danville-Pittsylvania Regional Industrial Facility Authority.",
+     "meets": "As scheduled on the county's Upcoming Meetings page.",
+     "where": '39 Bank Street, Chatham, VA 24531',
+     "agenda_url": "https://www.pittsylvaniacountyva.gov/AgendaCenter",
+     "comment_process": 'Members are reached through the contact forms on the board page; Clerk to the Board Kaylyn McCluster, 434-432-1987. See the published agenda for the public-comment process for a specific meeting.',
+     "phone": "434-432-1987", "email": "",
+     "website": "https://www.pittsylvaniacountyva.gov/170/Board-of-Supervisors",
+     "as_of": "2026-09-05", "source": "https://www.pittsylvaniacountyva.gov/170/Board-of-Supervisors"},
+    {"locality": "Culpeper County", "state": "VA",
+     "body": "Board of Supervisors",
+     "decides": 'Rezonings and the conditional use permits required for data centers on industrial land since Sep 2, 2025 (the Technology Zone stays by-right). Approved the Red Ace campus rezoning 4-3 on Jul 2, 2026.',
+     "meets": 'Regular meetings on the first Tuesday; see the board calendar (e.g. Oct 6, 2026 at 10 a.m. and 7 p.m.).',
+     "where": '302 North Main Street, Culpeper, VA 22701',
+     "agenda_url": "https://web.culpepercounty.gov/bos",
+     "comment_process": 'Email all members at BOS@culpepercounty.gov; agendas and minutes are on BoardDocs. See the published agenda for the public-comment process for a specific meeting.',
+     "phone": "540-727-3427", "email": "BOS@culpepercounty.gov",
+     "website": "https://web.culpepercounty.gov/bos/page/members-board",
+     "as_of": "2026-09-05", "source": "https://web.culpepercounty.gov/bos/page/members-board"},
+    {"locality": "Warrenton", "state": "VA",
+     "body": "Town Council",
+     "decides": "Special use permits and site plans inside the town, including the 4-3 Feb 2023 approval of Amazon's 220,000 sq ft data center at Blackwell Road and Lee Highway.",
+     "meets": "See the town's Meetings, Agendas, Minutes & Recordings page for the current schedule.",
+     "where": 'Town Hall, 21 Main Street, Warrenton, VA 20186',
+     "agenda_url": "https://www.warrentonva.gov/295/Meetings-Agendas-Minutes-Recordings",
+     "comment_process": "Submit a public comment virtually through the town's Submit a Public Comment page, or contact the Town Clerk via the main office, 540-347-1101.",
+     "phone": "540-347-1101", "email": "",
+     "website": "https://www.warrentonva.gov/286/Town-Council",
+     "as_of": "2026-09-05", "source": "https://www.warrentonva.gov/380/Council-Members"},
 ]
 LOCAL_BODIES_DF = pd.DataFrame(LOCAL_BODIES)
 
@@ -11646,6 +12052,174 @@ LOCAL_OFFICIALS = [
      "name": "Pat Herrity", "role": "Supervisor", "district": "Springfield",
      "email": "springfield@fairfaxcounty.gov", "phone": "703-451-8873", "stance": "",
      "as_of": "2026-09-05", "source": "https://www.fairfaxcounty.gov/boardofsupervisors/sites/boardofsupervisors/files/assets/documents/pdf/board-of-supervisors-flyer.pdf"},
+
+    # ── Virginia batch, 2026-09-05 ─────────────────────────────────────────
+    # Stafford County, VA — county staff directory
+    {"locality": "Stafford County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Deuntay Diggs", "role": "Chairman", "district": "George Washington",
+     "email": "ddiggs@staffordcountyva.gov", "phone": "(826) 204-0767", "stance": "Called the county's data center ordinance 'the strictest in Virginia' at the Sep 1, 2026 meeting that directed letters seeking state and federal limits (Potomac Local, Sep 4, 2026)",
+     "as_of": "2026-09-05", "source": "https://staffordcountyva.gov/staff_directory/board_of_supervisors.php"},
+    {"locality": "Stafford County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Maya Guy", "role": "Vice Chairwoman", "district": "Aquia",
+     "email": "mguy@staffordcountyva.gov", "phone": "(826) 204-0127", "stance": '',
+     "as_of": "2026-09-05", "source": "https://staffordcountyva.gov/staff_directory/board_of_supervisors.php"},
+    {"locality": "Stafford County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Kecia Evans", "role": "Supervisor", "district": "Falmouth",
+     "email": "ksevans@staffordcountyva.gov", "phone": "(540) 940-4692", "stance": '',
+     "as_of": "2026-09-05", "source": "https://staffordcountyva.gov/staff_directory/board_of_supervisors.php"},
+    {"locality": "Stafford County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Tinesha Allen", "role": "Supervisor", "district": "Griffis-Widewater",
+     "email": "tallen@staffordcountyva.gov", "phone": "(540) 940-5099", "stance": 'Insisted the board also write to the federal government opposing forced siting on localities (Sep 1, 2026; Potomac Local)',
+     "as_of": "2026-09-05", "source": "https://staffordcountyva.gov/staff_directory/board_of_supervisors.php"},
+    {"locality": "Stafford County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Pamela Yeung", "role": "Supervisor", "district": "Garrisonville",
+     "email": "pyeung@staffordcountyva.gov", "phone": "(540) 273-2506", "stance": 'Supported letters to the governor and federal government seeking data center limits (Sep 1, 2026; Potomac Local)',
+     "as_of": "2026-09-05", "source": "https://staffordcountyva.gov/staff_directory/board_of_supervisors.php"},
+    {"locality": "Stafford County", "state": "VA", "body": "Board of Supervisors",
+     "name": "E. Darrell English", "role": "Supervisor", "district": "Hartwood",
+     "email": "denglish@staffordcountyva.gov", "phone": "(540) 295-5974", "stance": '',
+     "as_of": "2026-09-05", "source": "https://staffordcountyva.gov/staff_directory/board_of_supervisors.php"},
+    {"locality": "Stafford County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Crystal Vanuch", "role": "Supervisor", "district": "Rock Hill",
+     "email": "cvanuch@staffordcountyva.gov", "phone": "(571) 540-0303", "stance": "'I don't want us to be in a situation where we approve now and regulate later' (Sep 1, 2026; Potomac Local)",
+     "as_of": "2026-09-05", "source": "https://staffordcountyva.gov/staff_directory/board_of_supervisors.php"},
+    # Spotsylvania County, VA — no per-member contacts published; Chancellor seat vacant
+    {"locality": "Spotsylvania County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Lori Hayes", "role": "Chairman", "district": "Lee Hill",
+     "email": "", "phone": "540-507-7010", "stance": 'Voted for the 45% industrial-land cap on data centers, Aug 25, 2026 (Fredericksburg Free Press)',
+     "as_of": "2026-09-05", "source": "https://www.spotsylvania.va.us/1200/Members"},
+    {"locality": "Spotsylvania County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Drew Mullins", "role": "Vice Chairman", "district": "Courtland",
+     "email": "", "phone": "540-507-7010", "stance": 'Voted against the Aug 11, 2026 statewide-moratorium resolution; moved the 45% cap as a substitute on Aug 25 (WJLA; Fredericksburg Free Press)',
+     "as_of": "2026-09-05", "source": "https://www.spotsylvania.va.us/1200/Members"},
+    {"locality": "Spotsylvania County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Chris Yakabouski", "role": "Supervisor", "district": "Battlefield",
+     "email": "", "phone": "540-507-7010", "stance": 'Voted against the 45% cap because he wanted less land open to data centers, Aug 25, 2026 (Fredericksburg Free Press)',
+     "as_of": "2026-09-05", "source": "https://www.spotsylvania.va.us/1200/Members"},
+    {"locality": "Spotsylvania County", "state": "VA", "body": "Board of Supervisors",
+     "name": "David Goosman", "role": "Supervisor", "district": "Berkeley",
+     "email": "", "phone": "540-507-7010", "stance": 'Voted against the 45% cap because he wanted less land open to data centers, Aug 25, 2026 (Fredericksburg Free Press)',
+     "as_of": "2026-09-05", "source": "https://www.spotsylvania.va.us/1200/Members"},
+    {"locality": "Spotsylvania County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Jacob Lane", "role": "Supervisor", "district": "Livingston",
+     "email": "", "phone": "540-507-7010", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.spotsylvania.va.us/1200/Members"},
+    {"locality": "Spotsylvania County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Deborah H. Frazier", "role": "Supervisor", "district": "Salem",
+     "email": "", "phone": "540-507-7010", "stance": 'Voted against the Aug 11, 2026 statewide-moratorium resolution; voted for the 45% cap Aug 25 (WJLA; Fredericksburg Free Press)',
+     "as_of": "2026-09-05", "source": "https://www.spotsylvania.va.us/1200/Members"},
+    # Botetourt County, VA — emails are contact links on the county page, phones not published
+    {"locality": "Botetourt County", "state": "VA", "body": "Board of Supervisors",
+     "name": "D. \"Mac\" Scothorn", "role": "Chair", "district": "Valley",
+     "email": "", "phone": "540-928-2006", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.botetourtva.gov/338/Board-of-Supervisors"},
+    {"locality": "Botetourt County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Brandon Nicely", "role": "Vice-Chair", "district": "Fincastle",
+     "email": "", "phone": "540-928-2006", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.botetourtva.gov/338/Board-of-Supervisors"},
+    {"locality": "Botetourt County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Walter Michael", "role": "Supervisor", "district": "Blue Ridge",
+     "email": "", "phone": "540-928-2006", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.botetourtva.gov/338/Board-of-Supervisors"},
+    {"locality": "Botetourt County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Linda Rottman", "role": "Supervisor", "district": "Buchanan",
+     "email": "", "phone": "540-928-2006", "stance": "Lone no vote on the Jul 28, 2026 Google water study commission, calling it 'a gigantic middle finger to everyone in the crowd' (WDBJ7)",
+     "as_of": "2026-09-05", "source": "https://www.botetourtva.gov/338/Board-of-Supervisors"},
+    {"locality": "Botetourt County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Tim Snyder", "role": "Supervisor", "district": "Amsterdam",
+     "email": "", "phone": "540-928-2006", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.botetourtva.gov/338/Board-of-Supervisors"},
+    # Pittsylvania County, VA — members reached via county contact forms; clerk line published
+    {"locality": "Pittsylvania County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Robert M. Tucker, Jr.", "role": "Chairman", "district": "Banister",
+     "email": "", "phone": "434-432-1987", "stance": "Backed the Berry Hill campus resolution Jul 21, 2026, citing 'four to five hundred million dollars of revenue' moving through the economy (WSET)",
+     "as_of": "2026-09-05", "source": "https://www.pittsylvaniacountyva.gov/170/Board-of-Supervisors"},
+    {"locality": "Pittsylvania County", "state": "VA", "body": "Board of Supervisors",
+     "name": "William \"Vic\" Ingram", "role": "Vice-Chairman", "district": "Tunstall",
+     "email": "", "phone": "434-432-1987", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.pittsylvaniacountyva.gov/170/Board-of-Supervisors"},
+    {"locality": "Pittsylvania County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Kenneth Bowman", "role": "Supervisor", "district": "Chatham-Blairs",
+     "email": "", "phone": "434-432-1987", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.pittsylvaniacountyva.gov/170/Board-of-Supervisors"},
+    {"locality": "Pittsylvania County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Justin Brown", "role": "Supervisor", "district": "Dan River",
+     "email": "", "phone": "434-432-1987", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.pittsylvaniacountyva.gov/170/Board-of-Supervisors"},
+    {"locality": "Pittsylvania County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Darrell Dalton", "role": "Supervisor", "district": "Callands-Gretna",
+     "email": "", "phone": "434-432-1987", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.pittsylvaniacountyva.gov/170/Board-of-Supervisors"},
+    {"locality": "Pittsylvania County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Tim Dudley", "role": "Supervisor", "district": "Staunton River",
+     "email": "", "phone": "434-432-1987", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.pittsylvaniacountyva.gov/170/Board-of-Supervisors"},
+    {"locality": "Pittsylvania County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Murray Whittle", "role": "Supervisor", "district": "Westover",
+     "email": "", "phone": "434-432-1987", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.pittsylvaniacountyva.gov/170/Board-of-Supervisors"},
+    # Culpeper County, VA — read Sep 5, 2026; the board that voted 4-3 on Red Ace in July had three members since replaced
+    {"locality": "Culpeper County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Tom Underwood", "role": "Chairman", "district": "Salem",
+     "email": "TUNDERWOOD@CULPEPERCOUNTY.GOV", "phone": "(540) 717-5263", "stance": 'Voted yes on the Red Ace rezoning, Jul 2, 2026 (Data Center Dynamics)',
+     "as_of": "2026-09-05", "source": "https://web.culpepercounty.gov/bos/page/members-board"},
+    {"locality": "Culpeper County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Gary M. Deal", "role": "Vice Chairman", "district": "West Fairfax",
+     "email": "GDEAL@CULPEPERCOUNTY.GOV", "phone": "(540) 219-8835", "stance": "Voted yes on the Red Ace rezoning, Jul 2, 2026; said 'a lot of fabrications' fuel data center outrage (WJLA, Jul 2026)",
+     "as_of": "2026-09-05", "source": "https://web.culpepercounty.gov/bos/page/members-board"},
+    {"locality": "Culpeper County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Paul W. Bates", "role": "Supervisor", "district": "Catalpa",
+     "email": "PWBATES@CULPEPERCOUNTY.GOV", "phone": "(540) 827-9072", "stance": 'Voted no on the Red Ace rezoning, Jul 2, 2026 (Data Center Dynamics)',
+     "as_of": "2026-09-05", "source": "https://web.culpepercounty.gov/bos/page/members-board"},
+    {"locality": "Culpeper County", "state": "VA", "body": "Board of Supervisors",
+     "name": "David C. Lee", "role": "Supervisor", "district": "East Fairfax",
+     "email": "DLEE@CULPEPERCOUNTY.GOV", "phone": "(540) 718-9432", "stance": 'Voted no on the Red Ace rezoning, Jul 2, 2026 (Data Center Dynamics)',
+     "as_of": "2026-09-05", "source": "https://web.culpepercounty.gov/bos/page/members-board"},
+    {"locality": "Culpeper County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Mandy Brown", "role": "Supervisor", "district": "Cedar Mountain",
+     "email": "MBROWN@CULPEPERCOUNTY.GOV", "phone": "(540) 718-2459", "stance": '',
+     "as_of": "2026-09-05", "source": "https://web.culpepercounty.gov/bos/page/members-board"},
+    {"locality": "Culpeper County", "state": "VA", "body": "Board of Supervisors",
+     "name": "DeWayne Payne", "role": "Supervisor", "district": "Stevensburg",
+     "email": "DPAYNE@CULPEPERCOUNTY.GOV", "phone": "(540) 764-2195", "stance": '',
+     "as_of": "2026-09-05", "source": "https://web.culpepercounty.gov/bos/page/members-board"},
+    {"locality": "Culpeper County", "state": "VA", "body": "Board of Supervisors",
+     "name": "Keith Farrish", "role": "Supervisor", "district": "Jefferson",
+     "email": "KFARRISH@CULPEPERCOUNTY.GOV", "phone": "(703) 887-8041", "stance": '',
+     "as_of": "2026-09-05", "source": "https://web.culpepercounty.gov/bos/page/members-board"},
+    # Warrenton, VA — town council page
+    {"locality": "Warrenton", "state": "VA", "body": "Town Council",
+     "name": "Carter Nevill", "role": "Mayor", "district": "At-Large",
+     "email": "cnevill@warrentonva.gov", "phone": "(540) 359-5246", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.warrentonva.gov/380/Council-Members"},
+    {"locality": "Warrenton", "state": "VA", "body": "Town Council",
+     "name": "William Semple II", "role": "Vice Mayor", "district": "Ward 2",
+     "email": "wsemple@warrentonva.gov", "phone": "(540) 422-5031", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.warrentonva.gov/380/Council-Members"},
+    {"locality": "Warrenton", "state": "VA", "body": "Town Council",
+     "name": "Paul Mooney", "role": "Council Member", "district": "At-Large",
+     "email": "pmooney@warrentonva.gov", "phone": "(540) 272-5329", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.warrentonva.gov/380/Council-Members"},
+    {"locality": "Warrenton", "state": "VA", "body": "Town Council",
+     "name": "David McGuire", "role": "Council Member", "district": "At-Large",
+     "email": "dmcguire@warrentonva.gov", "phone": "(540) 422-3590", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.warrentonva.gov/380/Council-Members"},
+    {"locality": "Warrenton", "state": "VA", "body": "Town Council",
+     "name": "Roy Francis", "role": "Council Member", "district": "Ward 1",
+     "email": "rfrancis@warrentonva.gov", "phone": "(540) 340-4947", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.warrentonva.gov/380/Council-Members"},
+    {"locality": "Warrenton", "state": "VA", "body": "Town Council",
+     "name": "Larry Kovalik", "role": "Council Member", "district": "Ward 3",
+     "email": "lkovalik@warrentonva.gov", "phone": "(540) 422-3605", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.warrentonva.gov/380/Council-Members"},
+    {"locality": "Warrenton", "state": "VA", "body": "Town Council",
+     "name": "Michele O'Halloran", "role": "Council Member", "district": "Ward 4",
+     "email": "mohalloran@warrentonva.gov", "phone": "(540) 340-4946", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.warrentonva.gov/380/Council-Members"},
+    {"locality": "Warrenton", "state": "VA", "body": "Town Council",
+     "name": "Eric Gagnon", "role": "Council Member", "district": "Ward 5",
+     "email": "egagnon@warrentonva.gov", "phone": "(540) 645-6156", "stance": '',
+     "as_of": "2026-09-05", "source": "https://www.warrentonva.gov/380/Council-Members"},
 ]
 LOCAL_OFFICIALS_DF = pd.DataFrame(LOCAL_OFFICIALS)
 

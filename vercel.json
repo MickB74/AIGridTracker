@@ -1084,11 +1084,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/tulsa-ok",
-      "destination": "/states/oklahoma",
-      "permanent": true
-    },
-    {
       "source": "/communities/union-county-nj",
       "destination": "/states/new-jersey",
       "permanent": true

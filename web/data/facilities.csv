@@ -83,3 +83,8 @@ CoreWeave,self,,Las Vegas (Core Campus / LAS1),NV,36.1,-115.15,"Mostly TENANT in
 CoreWeave,self,,Lancaster,PA,40.04,-76.3,"Mostly TENANT in partners' buildings: Core Scientific, Chirisa/Bulk, Flexential, Lincoln, TierPoint, Digital Realty, DataBank, Switch, Galaxy, Applied Digital",leasing_news,crwv_dc
 CoreWeave,self,,Denton (Core Scientific host),TX,33.21,-97.13,"Mostly TENANT in partners' buildings: Core Scientific, Chirisa/Bulk, Flexential, Lincoln, TierPoint, Digital Realty, DataBank, Switch, Galaxy, Applied Digital",leasing_news,crwv_dc
 CoreWeave,self,,Port of Muskogee (Core Scientific host),OK,35.74,-95.37,"Mostly TENANT in partners' buildings: Core Scientific, Chirisa/Bulk, Flexential, Lincoln, TierPoint, Digital Realty, DataBank, Switch, Galaxy, Applied Digital",leasing_news,crwv_dc
+Equinix,self,Colocation tenants (undisclosed),"Ashburn (DC1–DC15 IBX campus, Loudoun Co.)",VA,39.02,-77.46,IBX-branded site entities,first_party,equinix_dc
+Digital Realty,self,Colocation tenants (undisclosed),"Ashburn (Digital Loudoun campus, ~500 MW)",VA,39.01,-77.47,'Digital [City]/[Address] LLC'; legacy Telx entities; Ascenty (LatAm),first_party,dlr_dc
+Vantage,DigitalBridge + Silver Lake,Colocation tenants (undisclosed),"Sterling / Ashburn (Ashburn I–III, 142 + 288 MW)",VA,39.0,-77.43,Per-campus 'Vantage ... LLC' site entities,first_party,vantage_dc
+QTS,Blackstone,Colocation tenants (undisclosed),"Ashburn (Ashburn 2 / Dulles Vault campus, Loudoun Co.)",VA,38.99,-77.45,'QTS ... LLC' + Blackstone holding entities; early generic project LLCs,first_party,qts_dc
+CloudHQ,self,Colocation tenants (undisclosed),Ashburn (LC campus) and Manassas (MCC campus),VA,38.79,-77.52,,first_party,cloudhq_dc

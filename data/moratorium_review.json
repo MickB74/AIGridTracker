@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-04",
+  "generated": "2026-09-05",
   "findings": [
     {
       "kind": "expired",
@@ -386,6 +386,14 @@
       "source": "https://www.wsav.com/news/local-news/bloomingdale-city-council-approves-data-center-moratorium/"
     },
     {
+      "kind": "undated-term",
+      "locality": "Harlingen",
+      "state": "TX",
+      "status": "Enacted",
+      "detail": "note describes a fixed term but no end date is recorded \u2014 the page cannot expire it. Find the adoption date",
+      "source": "https://www.krgv.com/news/harlingen-city-officials-look-to-extend-moratorium-on-data-centers"
+    },
+    {
       "kind": "unclassified-term",
       "locality": "Manatee County",
       "state": "FL",
@@ -662,7 +670,7 @@
       "locality": "Bangor",
       "state": "ME",
       "status": "Enacted",
-      "detail": "ends 2026-10-10 (36.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-10 (35.0d) \u2014 watch for an extension",
       "source": "https://www.wabi.tv/2026/04/14/bangor-passes-180-day-moratorium-data-center-development/"
     },
     {
@@ -670,7 +678,7 @@
       "locality": "Augusta",
       "state": "GA",
       "status": "Enacted",
-      "detail": "ends 2026-09-19 (15.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-09-19 (14.0d) \u2014 watch for an extension",
       "source": "https://www.wjbf.com/news/augusta-commissioners-delaying-approval-of-data-center-ordinance-and-extending-moratorium-by-60-days/"
     },
     {
@@ -678,7 +686,7 @@
       "locality": "Vienna Township (Trumbull Co.)",
       "state": "OH",
       "status": "Enacted",
-      "detail": "ends 2026-10-16 (42.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-16 (41.0d) \u2014 watch for an extension",
       "source": "https://www.tribtoday.com/news/local-news/2026/08/vienna-extends-data-center-moratorium/"
     },
     {
@@ -686,7 +694,7 @@
       "locality": "Wixom",
       "state": "MI",
       "status": "Enacted",
-      "detail": "ends 2026-09-24 (20.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-09-24 (19.0d) \u2014 watch for an extension",
       "source": "https://www.wixomgov.org/departments/construction-development-services-building/data-center-moratorium-ordinance"
     },
     {
@@ -694,7 +702,7 @@
       "locality": "Lexington (Fayette County)",
       "state": "KY",
       "status": "Enacted",
-      "detail": "ends 2026-10-31 (57.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-31 (56.0d) \u2014 watch for an extension",
       "source": "https://www.lex18.com/news/covering-kentucky/lexington-city-council-passes-moratorium-on-data-center-development"
     },
     {
@@ -702,7 +710,7 @@
       "locality": "White County",
       "state": "IN",
       "status": "Enacted",
-      "detail": "ends 2026-10-20 (46.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-20 (45.0d) \u2014 watch for an extension",
       "source": "https://www.wrul.com/local-news/twelve-month-moratorium-approved-for-white-county/"
     },
     {
@@ -710,7 +718,7 @@
       "locality": "Front Royal",
       "state": "VA",
       "status": "Enacted",
-      "detail": "ends 2026-10-04 (30.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-04 (29.0d) \u2014 watch for an extension",
       "source": "https://www.nvdaily.com/nvdaily/council-oks-moratorium-on-data-center-applications/article_8bbfc9ce-d84e-5dd8-a4be-e8f9ee95cc94.html"
     },
     {
@@ -718,7 +726,7 @@
       "locality": "Indio",
       "state": "CA",
       "status": "Enacted",
-      "detail": "ends 2026-10-16 (42.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-16 (41.0d) \u2014 watch for an extension",
       "source": "https://www.nbcpalmsprings.com/2026/07/16/indio-city-council-extends-data-center-moratorium-with-planning-commission-already-recommending-a-full-ban"
     },
     {
@@ -726,7 +734,7 @@
       "locality": "Palm Springs",
       "state": "CA",
       "status": "Enacted",
-      "detail": "ends 2026-10-10 (36.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-10 (35.0d) \u2014 watch for an extension",
       "source": "https://kesq.com/news/2026/08/26/palm-springs-city-council-approves-temporary-data-center-moratorium/"
     }
   ]

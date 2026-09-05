@@ -152,5 +152,159 @@
     "locality": "Fairfax County, VA",
     "kind": "added",
     "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "san-antonio-tx",
+    "locality": "San Antonio, TX",
+    "kind": "status_changed",
+    "detail": "Proposed \u2192 Rejected"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "cache-county-ut",
+    "locality": "Cache County, UT",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "box-elder-county-ut",
+    "locality": "Box Elder County, UT",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "logan-ut",
+    "locality": "Logan, UT",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "grand-county-ut",
+    "locality": "Grand County, UT",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "wayne-county-ut",
+    "locality": "Wayne County, UT",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "humboldt-county-nv",
+    "locality": "Humboldt County, NV",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "white-pine-county-nv",
+    "locality": "White Pine County, NV",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "austin-tx",
+    "locality": "Austin, TX",
+    "kind": "added",
+    "detail": "Added as Proposed"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "harlingen-tx",
+    "locality": "Harlingen, TX",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "tulsa-ok",
+    "locality": "Tulsa, OK",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "broken-arrow-ok",
+    "locality": "Broken Arrow, OK",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "edmond-ok",
+    "locality": "Edmond, OK",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "norman-ok",
+    "locality": "Norman, OK",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "colfax-county-nm",
+    "locality": "Colfax County, NM",
+    "kind": "added",
+    "detail": "Added as Proposed"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "stafford-county-va",
+    "locality": "Stafford County, VA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "spotsylvania-county-va",
+    "locality": "Spotsylvania County, VA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "culpeper-county-va",
+    "locality": "Culpeper County, VA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "fluvanna-county-va",
+    "locality": "Fluvanna County, VA",
+    "kind": "added",
+    "detail": "Added as Expired"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "virginia-statewide-pause-request-va",
+    "locality": "Virginia (statewide pause request), VA",
+    "kind": "added",
+    "detail": "Added as Rejected"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "virginia-dominion-gs-5-large-load-rate-class-va",
+    "locality": "Virginia (Dominion GS-5 large-load rate class), VA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-05",
+    "id": "virginia-2026-general-assembly-package-va",
+    "locality": "Virginia (2026 General Assembly package), VA",
+    "kind": "added",
+    "detail": "Added as Enacted"
   }
 ]
