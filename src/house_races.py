@@ -332,6 +332,151 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-05",
     },
+
+    # ── Ohio ───────────────────────────────────────────────────────────────
+    ("OH", "1", "Greg Landsman"): {
+        "lean": "guardrails",
+        "summary": "Introduced three bills targeting data center accountability: "
+                   "FERC cost-shifting recommendations, full-cost-recovery and "
+                   "NDA bans, and an EPA/National Academies environmental study.",
+        "items": [
+            {"what": "Introduced H.R. 6529, the Protecting Families from AI "
+                     "Data Center Energy Costs Act, directing FERC to convene "
+                     "stakeholders and recommend ways to prevent data center "
+                     "energy costs from being passed onto residents.",
+             "date": "2025-12-09",
+             "source": "https://landsman.house.gov/posts/landsman-beyer-introduce-bill-to-protect-residents-from-rising-costs-caused-by-ai-data-centers"},
+            {"what": "Introduced H.R. 8033, the No Harm Data Centers Act, "
+                     "requiring data centers to cover full costs of energy "
+                     "demands and infrastructure, mandating environmental "
+                     "impact studies, and prohibiting NDAs between data center "
+                     "developers and elected officials.",
+             "date": "2026-04-09",
+             "source": "https://landsman.house.gov/posts/landsman-leads-new-bill-requiring-big-tech-to-pay-for-data-centers-and-no-ndas"},
+            {"what": "Introduced the Protecting Communities from Data Center "
+                     "Impacts Act, directing EPA to contract with the National "
+                     "Academies of Sciences for a study on data center "
+                     "environmental impacts (noise, air, water, carbon, e-waste).",
+             "date": "2026-07-10",
+             "source": "https://landsman.house.gov/posts/landsman-introduced-third-ai-data-center-bill-in-congress"},
+        ],
+        "as_of": "2026-09-06",
+    },
+    ("OH", "13", "Emilia Sykes"): {
+        "lean": "guardrails",
+        "summary": "Ranking Member of the Science Committee's Investigations "
+                   "and Oversight Subcommittee. Pushed for consumer protections "
+                   "at data center hearings, added data center water study "
+                   "provisions to WRDA.",
+        "items": [
+            {"what": "Unveiled Affordability Agenda policy roadmap including a "
+                     "provision to reallocate electric grid costs so consumers "
+                     "are protected from price hikes driven by data center "
+                     "development.",
+             "date": "2026-02-11",
+             "source": "https://sykes.house.gov/media/press-releases/rep-sykes-unveils-affordability-agenda-to-address-the-cost-of-living-crisis"},
+            {"what": "At House Science Committee hearing on data center "
+                     "infrastructure, pressed for consumer protections as Ohio "
+                     "hosts 217 data centers (fifth most nationally).",
+             "date": "2026-02-24",
+             "source": "https://sykes.house.gov/media/press-releases/ranking-member-sykes-presses-for-consumer-protections-as-data-centers-expand-across-ohio"},
+            {"what": "Incorporated provisions into the bipartisan Water "
+                     "Resources Development Act of 2026 to study data center "
+                     "impacts on regional water resources.",
+             "date": "2026-07-14",
+             "source": "https://sykes.house.gov/media/press-releases/rep-sykes-advances-bipartisan-water-infrastructure-bill-with-key-wins-for-northeast-ohio"},
+        ],
+        "as_of": "2026-09-06",
+    },
+    ("OH", "5", "Bob Latta"): {
+        "lean": "mixed",
+        "summary": "Energy Subcommittee Chairman who championed the Ratepayer "
+                   "Protection Act through committee (52-0) but also co-signed "
+                   "a letter alleging foreign adversaries are behind data "
+                   "center opposition.",
+        "items": [
+            {"what": "As Energy Subcommittee Chairman, championed H.R. 9340, "
+                     "the Ratepayer Protection Act, through subcommittee markup "
+                     "to protect families from covering grid upgrade costs "
+                     "driven by AI infrastructure.",
+             "date": "2026-06-24",
+             "source": "https://latta.house.gov/news/documentsingle.aspx?DocumentID=406815"},
+            {"what": "Applauded full Energy and Commerce Committee passage of "
+                     "H.R. 9340 (52-0), noting Ohio already has large load "
+                     "tariffs in place for data centers.",
+             "date": "2026-07-21",
+             "source": "https://latta.house.gov/news/documentsingle.aspx?DocumentID=406829"},
+            {"what": "Co-signed letter (with Guthrie and Joyce) to PCAST and "
+                     "FBI Director requesting investigation of alleged Chinese "
+                     "Communist Party influence campaigns working to block "
+                     "American data center infrastructure.",
+             "date": "2026-06-04",
+             "source": "https://energycommerce.house.gov/posts/chairmen-guthrie-joyce-and-latta-request-investigation-of-foreign-adversaries-efforts-to-block-american-data-center-buildout"},
+        ],
+        "as_of": "2026-09-06",
+    },
+    ("OH", "12", "Troy Balderson"): {
+        "lean": "accelerate",
+        "summary": "Led the GRID Power Act to fast-track dispatchable power "
+                   "through interconnection queues, citing central Ohio's data "
+                   "center cluster. Co-introduced the Load Forecasting "
+                   "Enhancement Act.",
+        "items": [
+            {"what": "Led H.R. 1047, the GRID Power Act, directing FERC to let "
+                     "grid operators fast-track dispatchable power projects "
+                     "through interconnection queues. Cited data center growth "
+                     "in central Ohio. Passed the House.",
+             "date": "2025-09-18",
+             "source": "https://balderson.house.gov/news/documentsingle.aspx?DocumentID=2887"},
+            {"what": "At Energy and Commerce hearing, noted his district hosts "
+                     "Google, AWS, Meta, QTS, Vantage and others, with signed "
+                     "power agreements reaching 5,000 MW by 2030. Questioned "
+                     "Eric Schmidt about tech companies' role in bringing new "
+                     "generation capacity online.",
+             "date": "2025-04-09",
+             "source": "https://energycommerce.house.gov/posts/energy-and-commerce-committee-holds-hearing-on-ai-and-american-global-competitiveness"},
+            {"what": "Co-introduced H.R. 9332, the Load Forecasting Enhancement "
+                     "Act, directing FERC to work with state PUCs on improving "
+                     "electric load forecasting as demand surges from AI and "
+                     "data centers. Passed Energy Subcommittee.",
+             "date": "2026-06-24",
+             "source": "https://menendez.house.gov/media/press-releases/menendez-and-balderson-applaud-advancement-of-key-grid-reliability-bill"},
+        ],
+        "as_of": "2026-09-06",
+    },
+    ("OH", "6", "Michael Rulli"): {
+        "lean": "accelerate",
+        "summary": "Supports data center buildout near the Lordstown Stargate "
+                   "site while acknowledging constituent opposition; claims "
+                   "CCP propaganda is behind local resistance.",
+        "items": [
+            {"what": "On Fox Business, supported the OpenAI/Nvidia $500B data "
+                     "center project but acknowledged 'Most of my constituents "
+                     "do not like data centers.' Claimed 'The CCP has "
+                     "infiltrated Ohio with propaganda against this' and "
+                     "advocated 'Keep them out of the corn fields. Keep them "
+                     "out of the neighborhoods.'",
+             "date": "2026-08-28",
+             "source": "https://www.breitbart.com/clips/2026/08/28/gop-rep-rulli-the-ccp-has-infiltrated-ohio-with-propaganda-against-500b-data-center/"},
+        ],
+        "as_of": "2026-09-06",
+    },
+    ("OH", "9", "Marcy Kaptur"): {
+        "lean": "guardrails",
+        "summary": "Ranking Member of the Appropriations Energy and Water "
+                   "Subcommittee. Warned on the House floor that unchecked "
+                   "data center growth could raise electricity costs 8% by 2030.",
+        "items": [
+            {"what": "In House floor remarks on the FY2026 Energy and Water "
+                     "Development bill, warned that unchecked data center "
+                     "growth could raise average US electricity generation "
+                     "costs by roughly 8% by 2030. Cited Ohio families seeing "
+                     "10%+ monthly bill increases.",
+             "date": "2025-09-03",
+             "source": "https://kaptur.house.gov/media-center/press-releases/ranking-member-kaptur-floor-remarks-2026-energy-and-water-development"},
+        ],
+        "as_of": "2026-09-06",
+    },
 }
 
 

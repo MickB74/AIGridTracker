@@ -3605,6 +3605,314 @@ MORATORIUMS = [
              "meeting, matching Jun 2",
      "lat": 41.24, "lon": -80.98, "expires": "2026-12-02", "as_of": "2026-08-23",
      "source": "https://www.tribtoday.com/news/local-news/2026/06/braceville-enacts-6-month-moratorium-on-data-centers/"},
+    {"locality": "Avon", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Apr 13, 2026",
+     "note": "Ordinance No. 37-26, emergency measure effective immediately. "
+             "One-year moratorium on all data center zoning, building, and "
+             "occupancy permits city-wide while Planning Commission studies "
+             "impacts. Council may extend up to 6 additional months",
+     "lat": 41.45, "lon": -82.04, "expires": "2027-04-14", "as_of": "2026-09-06",
+     "source": "https://www.cityofavon.com/DocumentCenter/View/12216/Ordinance-No-37-26---Moratorium-on-Data-Centers-jag"},
+    {"locality": "Berea", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Jun 15, 2026",
+     "note": "Ord. 6-6, emergency measure passed on first reading. Moratorium "
+             "on issuing or processing data center permits for up to one year "
+             "while the city studies zoning and infrastructure impacts. "
+             "Sponsored by Councilwomen Coble and Weaver",
+     "lat": 41.37, "lon": -81.85, "expires": "2027-06-15", "as_of": "2026-09-06",
+     "source": "https://cityofberea.org/DocumentCenter/View/5594/Ord-6-6-Moratorium-Data-Centers"},
+    {"locality": "Blanchester", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Mar 12, 2026",
+     "note": "Ordinance No. 2026.007, two-year moratorium on authorization or "
+             "establishment of any computer data center within village limits. "
+             "Passed 6-0, effective immediately. Prompted by proposals in "
+             "nearby Wilmington and Mount Orab",
+     "lat": 39.29, "lon": -83.99, "expires": "2028-03-12", "as_of": "2026-09-06",
+     "source": "https://www.blanvillage.com/_files/ugd/06e39b_12d5f04dc599499cb342df0366771c23.pdf"},
+    {"locality": "Butler County", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Jun 16, 2026",
+     "note": "Resolution 26-06-00963, six-month moratorium on data center "
+             "permits in six unincorporated townships (Hanover, Lemon, Madison, "
+             "Milford, Oxford, Ross) under county zoning. Unanimous vote by "
+             "Commissioners Rogers, Carpenter, Dixon",
+     "lat": 39.44, "lon": -84.57, "expires": "2026-12-16", "as_of": "2026-09-06",
+     "source": "https://butlercountyoh.iqm2.com/Citizens/FileOpen.aspx?Type=15&ID=1980&Inline=True"},
+    {"locality": "Canton Township", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Apr 9, 2026",
+     "note": "Resolution 04-03-2026, moratorium on any new data center "
+             "operating or locating in the township. Unanimous 3-0 vote. "
+             "Third Stark County jurisdiction to freeze after Plain Township "
+             "and Massillon",
+     "lat": 40.80, "lon": -81.44, "expires": None, "as_of": "2026-09-06",
+     "term": "fixed_undated",
+     "source": "https://www.cantontwp-oh.gov/_files/ugd/4e001a_48d8666b955c4b0db84d935eee664ff8.pdf"},
+    {"locality": "Cincinnati", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Feb 11, 2026",
+     "note": "Interim Development Control Overlay #89 on data centers across "
+             "six zoning districts (~22,000 parcels). Originally 3 months, "
+             "extended Apr 1 for 9 additional months. Gives Planning Dept time "
+             "to draft permanent zoning classification for data centers, which "
+             "were previously unclassified and treated as indoor storage",
+     "lat": 39.10, "lon": -84.51, "expires": "2027-02-11", "as_of": "2026-09-06",
+     "source": "https://www.cincinnati-oh.gov/planning/projects/active/interim-development-control-overlay-89-data-centers-and-zoning-study/"},
+    {"locality": "Cleveland", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Jul 15, 2026",
+     "note": "Emergency Ordinance File #556-2026, 3-month moratorium on new "
+             "standalone data center permits and certificates of occupancy. "
+             "Passed 14-1. Does not apply to server rooms in multi-tenant "
+             "buildings. Council may extend up to 3 additional months. "
+             "Cleveland currently has zero hyperscale standalone data centers",
+     "lat": 41.50, "lon": -81.69, "expires": "2026-10-16", "as_of": "2026-09-06",
+     "source": "https://www.clevelandohio.gov/news/cleveland-city-council-approves-temporary-pause-new-standalone-data-centers"},
+    {"locality": "Cortland", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Jun 2, 2026",
+     "note": "One-year emergency moratorium on data center zoning permits and "
+             "applications. Council President Picuri cited electricity and "
+             "water concerns. Trumbull County jurisdiction",
+     "lat": 41.33, "lon": -80.72, "expires": None, "as_of": "2026-09-06",
+     "term": "fixed_undated",
+     "source": "https://www.tribtoday.com/news/local-news/2026/06/cortland-enacts-1-year-ban-on-data-centers/"},
+    {"locality": "Defiance", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Sep 2026",
+     "note": "Six-month moratorium on acceptance and processing of data center "
+             "applications. Originally proposed as 12 months, amended 5-2 to "
+             "six. Companion referendum on November 2026 ballot would cap data "
+             "centers at 25 MW",
+     "lat": 41.28, "lon": -84.36, "expires": None, "as_of": "2026-09-06",
+     "term": "fixed_undated",
+     "source": "https://wbnowqct.com/defiance-city-council-approves-two-ordinances-pertaining-to-data-center/"},
+    {"locality": "Findlay", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Apr 22, 2026",
+     "note": "Ordinance 2026-42, 12-month moratorium on establishment or "
+             "conversion of buildings into data centers, city-wide. Passed "
+             "9-1. Draft follow-on ordinance would allow data centers only as "
+             "Conditional Use in I-3 zones with 1,000-ft residential setback",
+     "lat": 41.04, "lon": -83.65, "expires": "2027-04-22", "as_of": "2026-09-06",
+     "source": "https://www.findlayohio.gov/government/city-departments/zoning/proposed-data-center-zoning-ordinance"},
+    {"locality": "Girard", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Jul 13, 2026",
+     "note": "Ordinance No. 53-36, one-year moratorium on AI data center "
+             "construction permits. Emergency measure passed 7-0. Council "
+             "cited solidarity with neighboring Mahoning Valley communities "
+             "(Niles, Ellsworth, Lordstown, Cortland, Hubbard)",
+     "lat": 41.15, "lon": -80.70, "expires": "2027-07-13", "as_of": "2026-09-06",
+     "source": "https://cityofgirardoh.gov/wp-content/uploads/2026/07/Minutes-7-13-2026.docx"},
+    {"locality": "Grove City", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Jun 1, 2026",
+     "note": "Ordinance C-22-26, emergency 12-month moratorium on data center "
+             "approvals. Passed 6-1. Prompted by Stream Data Centers' proposed "
+             "310-acre campus and a 4,000-signature petition",
+     "lat": 39.88, "lon": -83.09, "expires": "2027-06-01", "as_of": "2026-09-06",
+     "source": "https://grovecityohio.gov/m/newsflash/home/detail/270"},
+    {"locality": "Jackson Township (Franklin Co.)", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "May 12, 2026",
+     "note": "Resolution 2026-049, one-year moratorium on data center permits "
+             "and zoning approvals on unincorporated township land. Unanimous "
+             "3-0 vote. Preemptive — no active DC proposals at time of vote",
+     "lat": 39.85, "lon": -83.10, "expires": "2027-05-12", "as_of": "2026-09-06",
+     "source": "https://www.10tv.com/article/news/local/jackson-township-approves-1-year-data-center-moratorium/530-b8cddb38-1b51-412b-a97c-1f718112af08"},
+    {"locality": "Jerome Township", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Sep 3, 2025",
+     "note": "Resolution 25-061, nine-month moratorium on data center zoning "
+             "certificates. First Ohio locality to enact a DC moratorium. "
+             "Affected up to 4 projects. Two existing Amazon DCs in township "
+             "have 10-year tax abatements",
+     "lat": 40.22, "lon": -83.21, "expires": "2026-06-01", "as_of": "2026-09-06",
+     "source": "https://www.wosu.org/politics-government/2025-09-09/jerome-township-puts-pause-on-new-data-center-development-for-nine-months"},
+    {"locality": "Kent", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Apr 15, 2026",
+     "note": "Ordinance No. 2026-31, 12-month moratorium on issuing any "
+             "permits for AI data centers within city limits",
+     "lat": 41.15, "lon": -81.36, "expires": "2027-04-15", "as_of": "2026-09-06",
+     "source": "https://www.kentohio.gov/media/yrhjyjrn/2026-31-data-center-moratorium_signed.pdf"},
+    {"locality": "Lake Township (Wood Co.)", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Mar 3, 2026",
+     "note": "One-year moratorium. Part of broader Wood County trend — 7 of "
+             "19 townships adopted moratoriums, 8 more discussed. Enacted "
+             "after a potential data center site was listed for sale",
+     "lat": 41.48, "lon": -83.46, "expires": "2027-03-03", "as_of": "2026-09-06",
+     "source": "https://bgindependentmedia.org/temporary-moratoriums-on-data-centers-7-townships-in-wood-county-have-adopted-8-have-discussed/"},
+    {"locality": "Maumee", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Feb 2, 2026",
+     "note": "Resolution No. 005-2026, 12-month emergency moratorium on "
+             "establishment or conversion of structures into data centers. "
+             "Passed 6-0. Precautionary measure while city studies impacts",
+     "lat": 41.56, "lon": -83.65, "expires": "2027-02-02", "as_of": "2026-09-06",
+     "source": "https://www.toledoblade.com/local/suburbs/2026/02/03/maumee-becomes-latest-northwest-ohio-community-to-pass-data-center-moratorium/stories/20260203114"},
+    {"locality": "Monclova Township", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Feb 17, 2026",
+     "note": "Resolution 02172026-01, 12-month moratorium. Enacted after "
+             "zoning law change would allow DCs on farmland. Related to "
+             "nearby 350 MW gas plant approval by Ohio Power Siting Board",
+     "lat": 41.57, "lon": -83.77, "expires": "2027-02-17", "as_of": "2026-09-06",
+     "source": "https://monclovatwp.org/trustee-chuck-hoecherls-statement-on-data-centers/"},
+    {"locality": "Montgomery Township (Ashland Co.)", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Jun 18, 2026",
+     "note": "Two-year moratorium on new data center construction. Unanimous "
+             "3-0 vote. Drafted with county prosecutor's office. Trustee "
+             "originally proposed outright ban but settled on temporary pause",
+     "lat": 40.93, "lon": -82.25, "expires": "2028-07-01", "as_of": "2026-09-06",
+     "source": "https://www.ashlandsource.com/2026/06/18/montgomery-township-approves-data-center-moratorium/"},
+    {"locality": "Mount Orab", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Mar 3, 2026",
+     "note": "Ordinance No. 1339, 180-day moratorium on data center permits. "
+             "Triggered by mysterious 1,000-acre mega site project by DB Stu "
+             "LLC. Council member rescinded NDA to introduce the ordinance. "
+             "1,700-member opposition Facebook group",
+     "lat": 39.03, "lon": -83.92, "expires": "2026-08-30", "as_of": "2026-09-06",
+     "source": "https://www.wcpo.com/news/local-news/mt-orab-council-introduces-data-center-moratorium-amid-community-opposition-to-mysterious-mega-site-project"},
+    {"locality": "New Carlisle", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Feb 17, 2026",
+     "note": "Ordinance 2026-06, 12-month moratorium. Study period for "
+             "planning, zoning, and business regulation decisions",
+     "lat": 39.94, "lon": -84.03, "expires": "2027-02-17", "as_of": "2026-09-06",
+     "source": "https://newcarlisleohio.gov/wp-content/uploads/2026/02/CouncilPacket-2026-0217.pdf"},
+    {"locality": "Norton", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Dec 1, 2025",
+     "note": "Ordinance 108-2025, 180-day moratorium on data center zoning "
+             "certificates. Extended 90 days by Ord. 55-2026 (May 18, 2026). "
+             "Permanent zoning ordinances (Ord. 60-2026, 61-2026) adopted "
+             "Jul 6 but do not replace the moratorium. Prompted by Quantum "
+             "HPC project at former PPG mine",
+     "lat": 41.03, "lon": -81.64, "expires": None, "as_of": "2026-09-06",
+     "term": "fixed_undated",
+     "source": "https://www.akron.com/articles/city-of-norton-introduces-moratorium-on-data-centers/"},
+    {"locality": "Pierce Township", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Feb 11, 2026",
+     "note": "Resolution 2026-002, 240-day moratorium directing staff and "
+             "zoning commission to develop data center zoning amendments",
+     "lat": 39.09, "lon": -84.29, "expires": "2026-10-09", "as_of": "2026-09-06",
+     "source": "https://piercetownship.org/wp-content/uploads/2026/02/Res-Imposing-Moratorium-Data-Centers-kb-edits.pdf"},
+    {"locality": "Plain Township (Stark Co.)", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Mar 24, 2026",
+     "note": "12-month moratorium on data center permits. Third Stark County "
+             "jurisdiction to freeze (after Canton Township and Massillon). "
+             "Concerns over noise, electricity, water, and aesthetics",
+     "lat": 40.83, "lon": -81.33, "expires": "2027-03-24", "as_of": "2026-09-06",
+     "source": "https://www.news5cleveland.com/news/local-news/we-follow-through/as-data-center-proposals-spread-across-stark-county-neighbors-fear-whats-next"},
+    {"locality": "Providence Township", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Apr 15, 2026",
+     "note": "One-year moratorium modeled on Waterville Township language. "
+             "Part of the broader NW Ohio moratorium wave in Lucas County",
+     "lat": 41.70, "lon": -83.80, "expires": "2027-04-15", "as_of": "2026-09-06",
+     "source": "https://www.wtol.com/article/news/local/toledo-free-press/providence-township-considers-data-center-zoning-waterville/512-f3f99621-6feb-4d49-b1da-29f7581f1c61"},
+    {"locality": "Richfield Township", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Feb 17, 2026",
+     "note": "Resolution 021726-01, 12-month emergency moratorium on data "
+             "centers, energy-producing/storage facilities, and high-energy-use "
+             "facilities in all zoning districts. Cited lack of zoning inspector",
+     "lat": 41.60, "lon": -83.70, "expires": "2027-02-17", "as_of": "2026-09-06",
+     "source": "https://www.toledoblade.com/local/politics/2026/02/18/monclova-richfield-townships-latest-to-pass-data-center-moratoriums/stories/20260218126"},
+    {"locality": "Scioto Township", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Mar 6, 2026",
+     "note": "12-month moratorium pausing all new data center applications "
+             "while township updates zoning codes. Trustee Wasmus introduced; "
+             "Trustee Wolfe proposed 6 months but was overruled",
+     "lat": 39.70, "lon": -82.95, "expires": "2027-03-06", "as_of": "2026-09-06",
+     "source": "https://www.sciotopost.com/scioto-township-enacts-12-month-data-center-moratorium-amid-statewide-tech-surge/"},
+    {"locality": "Shawnee Township", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Jun 9, 2026",
+     "note": "18-month moratorium on data centers, battery energy storage, "
+             "and solar energy fields. Unanimous vote following zoning board "
+             "recommendation",
+     "lat": 40.78, "lon": -84.11, "expires": "2027-12-09", "as_of": "2026-09-06",
+     "source": "https://www.hometownstations.com/news/allen_county/shawnee-township-approves-18-month-moratorium-on-data-centers-energy-projects/article_431ac6ec-8564-4865-9b2f-a243d933bf4d.html"},
+    {"locality": "Sprigg Township", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Feb 24, 2026",
+     "note": "12-month moratorium. Followed pushback over proposed data center "
+             "at former Stuart power plant site that would consume 31x the "
+             "energy of the entire county",
+     "lat": 38.77, "lon": -83.61, "expires": "2027-02-24", "as_of": "2026-09-06",
+     "source": "https://www.wcpo.com/news/local-news/i-team/adams-county-data-center-gets-federal-permit-as-voters-sign-petitions-to-block-it"},
+    {"locality": "Springfield", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Jul 14, 2026",
+     "note": "Ordinance 159-26, 6-month moratorium on high-density computing "
+             "facilities with energy demand > 25 MW. Passed 5-0 by City "
+             "Commission. Could be extended if state does not act",
+     "lat": 39.92, "lon": -83.81, "expires": "2027-01-14", "as_of": "2026-09-06",
+     "source": "https://www.springfieldnewssun.com/local/springfield-passes-6-month-moratorium-on-data-centers/article_d9587a42-4cb0-5262-a191-c5dee6a6bfc1.html"},
+    {"locality": "St. Marys", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Jun 22, 2026",
+     "note": "Emergency Resolution 2026-08, 12-month moratorium on "
+             "establishing or converting buildings to data centers. Final "
+             "passage with one abstention. Council can rescind at any time",
+     "lat": 40.54, "lon": -84.39, "expires": "2027-06-22", "as_of": "2026-09-06",
+     "source": "https://www.hometownstations.com/news/auglaize_county/st-marys-approves-one-year-moratorium-on-data-center-projects/article_cfdd565e-c7ac-48dc-be55-2c345dfa132f.html"},
+    {"locality": "Tallmadge", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Apr 13, 2026",
+     "note": "Ordinance 2026-38, 6-month moratorium on data center proposals. "
+             "Passed 7-0. Proactive — no pending applications. Includes "
+             "hardship appeal process under ORC Chapter 2506",
+     "lat": 41.10, "lon": -81.44, "expires": "2026-10-10", "as_of": "2026-09-06",
+     "source": "https://www.yahoo.com/news/articles/tallmadge-considers-six-month-moratorium-100316607.html"},
+    {"locality": "Tiffin", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Apr 20, 2026",
+     "note": "Resolution 2026-42, 12-month moratorium barring establishment "
+             "or conversion of structures into data centers. Passed 6-0, "
+             "declared emergency. Preemptive — no project proposed",
+     "lat": 41.11, "lon": -83.18, "expires": "2027-04-20", "as_of": "2026-09-06",
+     "source": "https://tiffinohio.net/posts/tiffin-city-council-approves-12-month-data-center-moratorium/"},
+    {"locality": "Vermilion", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Apr 20, 2026",
+     "note": "Ordinance 2026-17, moratorium on consideration, approval, or "
+             "authorization of data center development across all zoning "
+             "districts. Bars building permits, COOs, development plans, and "
+             "special use permits",
+     "lat": 41.42, "lon": -82.37, "expires": "2027-03-23", "as_of": "2026-09-06",
+     "source": "https://www.cityofvermilionohio.gov/2025-Main-Menu-Folder/2025-City-Council/Ordinances-and-Resolutions/2026-Ordinances-and-Resolutions/Ordinances/Ordinances/2026-17-TEMPORARY-MORATORIUM-ON-FUTURE-DEVELOPMENT-OF-DATA-CENTERS"},
+    {"locality": "Washington Township (Butler Co.)", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Apr 21, 2026",
+     "note": "360-day moratorium on zoning permits for new data center uses. "
+             "Preemptive — no one had contacted the township about a project",
+     "lat": 39.47, "lon": -84.37, "expires": "2027-04-16", "as_of": "2026-09-06",
+     "source": "https://www.journal-news.com/community/data-centers-area-township-adds-moratorium-as-others-weigh-these-huge-projects/article_b9578880-2346-57d1-8d45-8151a7cb1441.html"},
+    {"locality": "Waterville", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Dec 8, 2025",
+     "note": "Resolution 34-25, 6-month moratorium (amended down from 12 "
+             "months). Passed 7-0. Council member Wagner introduced it, citing "
+             "agricultural land protection",
+     "lat": 41.50, "lon": -83.72, "expires": "2026-06-08", "as_of": "2026-09-06",
+     "source": "https://www.13abc.com/2025/12/09/council-opts-six-month-moratorium-data-centers-waterville/"},
+    {"locality": "Waterville Township", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Dec 17, 2025",
+     "note": "12-month moratorium. Passed unanimously. Drafted by Columbus "
+             "law firm. Data Center Advisory Committee formed Jan 2026 and "
+             "presented findings May 2026 with proposed M-3 zoning",
+     "lat": 41.50, "lon": -83.73, "expires": "2026-12-17", "as_of": "2026-09-06",
+     "source": "https://www.toledoblade.com/local/suburbs/2025/12/18/waterville-township-passes-12-month-moratorium-on-data-centers-becomes-region-s/stories/20251218106"},
+    {"locality": "Williamsburg", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Mar 13, 2026",
+     "note": "Ordinance 1249-26, emergency moratorium on authorization or "
+             "establishment of data centers within the village. Applies to "
+             "all pending applications without a final permit",
+     "lat": 39.06, "lon": -84.05, "expires": "2027-03-13", "as_of": "2026-09-06",
+     "source": "https://williamsburgohio.org/index.php/government/mayor-village-council/ordinances-resolutions/"},
+    {"locality": "Yellow Springs", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "May 18, 2026",
+     "note": "Ordinance 2026-08, 12-month moratorium on data centers with "
+             "demand > 2 MW. Exempts auxiliary data centers under 10% of "
+             "primary structure. Council member Pearce cited misalignment "
+             "with community scale and values",
+     "lat": 39.81, "lon": -83.89, "expires": "2027-05-18", "as_of": "2026-09-06",
+     "source": "https://ysnews.com/news/2026/05/ordinance-2026-08"},
+    {"locality": "Archbold", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Apr 7, 2026",
+     "note": "Emergency resolution, 6-month moratorium on data centers, "
+             "advanced manufacturing, and technology storage facilities. "
+             "Passed 5-0. Extended another 6 months to ~Apr 2027 due to "
+             "uncertainty around HB 646 and state study commission",
+     "lat": 41.52, "lon": -84.31, "expires": None, "as_of": "2026-09-06",
+     "term": "fixed_undated",
+     "source": "https://www.northwestsignal.net/news/article_f8a39535-c2e8-41cc-bc66-392a93b62104.html"},
+    {"locality": "Ashville", "state": "OH", "level": "Local",
+     "status": "Enacted", "when": "Dec 22, 2025",
+     "note": "Ordinance 2025-13, 180-day moratorium on data center zoning. "
+             "Extended Jul 6 by Ord. 2026-14 for another 180 days. Triggered "
+             "by EdgeConneX application for two DCs + gas plant on 195 acres. "
+             "Anti-DC referendum headed to November 2026 ballot after Ohio "
+             "Supreme Court ordered petition certification",
+     "lat": 39.72, "lon": -82.95, "expires": "2027-01-02", "as_of": "2026-09-06",
+     "source": "http://www.circlevilleherald.com/community/ashville-village-council-extends-data-center-moratorium/article_eeb8945a-5940-4c11-abf4-f5f8d84c9208.html"},
     {"locality": "Indio", "state": "CA", "level": "Local",
      "status": "Enacted", "when": "Jun 3, 2026",
      "note": "Urgency Ordinance 1838 under Cal. Gov. Code 65858, originally 45 "
