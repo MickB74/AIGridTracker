@@ -670,6 +670,87 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
   80%{opacity:1} 100%{opacity:0; transform:translateX(180px)} }
 @media (prefers-reduced-motion:reduce){ .grid-flow-svg .flow-dot{ animation:none } }
 
+/* ---- Light theme ---- */
+@media (prefers-color-scheme:light) {
+  :root:not([data-theme="dark"]) {
+    --bg:#f7f8fa; --card:#fff; --ink:#1a1e2e; --muted:#5a6577;
+    --teal:#0d7d74; --amber:#a85000; --rule:#dde0e6;
+  }
+  :root:not([data-theme="dark"]) .navmenu { box-shadow:0 10px 28px rgba(0,0,0,.1); }
+  :root:not([data-theme="dark"]) nav .cta { color:#fff; }
+  :root:not([data-theme="dark"]) .src-wire,
+  :root:not([data-theme="dark"]) .src-national { background:rgba(13,125,116,.08);
+    color:#0a6e66; border-color:rgba(13,125,116,.2); }
+  :root:not([data-theme="dark"]) .src-nonprofit { background:rgba(109,40,217,.06);
+    color:#6d28d9; border-color:rgba(109,40,217,.2); }
+  :root:not([data-theme="dark"]) .src-trade { background:rgba(37,99,235,.06);
+    color:#2563eb; border-color:rgba(37,99,235,.2); }
+  :root:not([data-theme="dark"]) .src-local,
+  :root:not([data-theme="dark"]) .src-international { background:rgba(71,85,105,.06);
+    color:#475569; border-color:rgba(71,85,105,.2); }
+  :root:not([data-theme="dark"]) .src-official { background:rgba(180,83,9,.06);
+    color:#b45309; border-color:rgba(180,83,9,.2); }
+  :root:not([data-theme="dark"]) .src-aggregator,
+  :root:not([data-theme="dark"]) .src-advocacy { background:rgba(220,38,38,.06);
+    color:#dc2626; border-color:rgba(220,38,38,.2); }
+}
+:root[data-theme="light"] {
+  --bg:#f7f8fa; --card:#fff; --ink:#1a1e2e; --muted:#5a6577;
+  --teal:#0d7d74; --amber:#a85000; --rule:#dde0e6;
+}
+:root[data-theme="light"] .navmenu { box-shadow:0 10px 28px rgba(0,0,0,.1); }
+:root[data-theme="light"] nav .cta { color:#fff; }
+:root[data-theme="light"] .src-wire,
+:root[data-theme="light"] .src-national { background:rgba(13,125,116,.08);
+  color:#0a6e66; border-color:rgba(13,125,116,.2); }
+:root[data-theme="light"] .src-nonprofit { background:rgba(109,40,217,.06);
+  color:#6d28d9; border-color:rgba(109,40,217,.2); }
+:root[data-theme="light"] .src-trade { background:rgba(37,99,235,.06);
+  color:#2563eb; border-color:rgba(37,99,235,.2); }
+:root[data-theme="light"] .src-local,
+:root[data-theme="light"] .src-international { background:rgba(71,85,105,.06);
+  color:#475569; border-color:rgba(71,85,105,.2); }
+:root[data-theme="light"] .src-official { background:rgba(180,83,9,.06);
+  color:#b45309; border-color:rgba(180,83,9,.2); }
+:root[data-theme="light"] .src-aggregator,
+:root[data-theme="light"] .src-advocacy { background:rgba(220,38,38,.06);
+  color:#dc2626; border-color:rgba(220,38,38,.2); }
+/* Theme toggle */
+.theme-toggle { background:none; border:1px solid var(--rule); color:var(--muted);
+  border-radius:8px; padding:5px 9px; font-size:16px; cursor:pointer; line-height:1; }
+.theme-toggle:hover { color:var(--teal); border-color:var(--teal); }
+@media (max-width:820px) {
+  .theme-toggle { order:1; padding:4px 7px; font-size:14px; }
+}
+/* Mobile quick-action bar */
+.mob-bar { display:none; }
+@media (max-width:820px) {
+  .mob-bar { display:flex; position:fixed; bottom:0; left:0; right:0; z-index:100;
+    background:var(--card); border-top:1px solid var(--rule);
+    padding:6px 8px calc(6px + env(safe-area-inset-bottom, 0px));
+    justify-content:space-around; gap:2px;
+    box-shadow:0 -4px 16px rgba(0,0,0,.15); }
+  .mob-bar a { display:flex; flex-direction:column; align-items:center; gap:2px;
+    font-size:10px; font-weight:600; color:var(--muted); text-decoration:none;
+    padding:4px 8px; border-radius:8px; min-width:56px; text-align:center; }
+  .mob-bar a:hover { color:var(--teal); }
+  .mob-bar svg { width:20px; height:20px; stroke:currentColor; fill:none;
+    stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+  .wrap { padding-bottom:80px; }
+}
+/* Quick-action entry points on the home page */
+.quick-actions { display:grid; grid-template-columns:repeat(2,1fr); gap:10px;
+  margin:18px 0 28px; }
+@media (min-width:640px){ .quick-actions{ grid-template-columns:repeat(4,1fr); } }
+.quick-actions a { background:var(--card); border:1px solid var(--rule);
+  border-radius:12px; padding:14px; text-decoration:none; color:var(--ink);
+  transition:border-color .15s; }
+.quick-actions a:hover { border-color:var(--teal); }
+.quick-actions .qa-title { font-weight:700; font-size:15px; display:block;
+  color:var(--teal); }
+.quick-actions .qa-desc { font-size:13px; color:var(--muted); display:block;
+  margin-top:4px; }
+
 /* Print: this is a handout. People print state briefings, hearing questions
    and the health-risk page to carry into a meeting, so drop the dark theme
    (wastes ink, reads badly on paper), strip the chrome that can't be tapped,
@@ -682,9 +763,9 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
       filter:none !important; animation:none !important; }
   body { background:#fff; color:#111; font-size:11.5pt; }
   .wrap { max-width:none; padding:0; }
-  nav, footer, .nav-search, .cta, .nav-burger, .skip,
+  nav, footer, .nav-search, .cta, .nav-burger, .skip, .theme-toggle,
   .hero-art, .us-map, .grid-flow-svg, .flow-dot, .blog-list .thumb,
-  .post-art, .demand-chart { display:none !important; }
+  .post-art, .demand-chart, .mob-bar { display:none !important; }
   a { color:#111; text-decoration:underline; }
   /* Show the destination of real links, not internal .html jumps or buttons. */
   main a[href^="http"]:not(.btn):not(.tag)::after {
@@ -713,6 +794,23 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
   @page { margin:1.6cm; }
 }
 """
+
+_THEME_JS = """<script>
+function toggleTheme(){
+  var d=document.documentElement,c=d.getAttribute('data-theme');
+  if(!c)c=matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';
+  var n=c==='dark'?'light':'dark';
+  d.setAttribute('data-theme',n);
+  try{localStorage.setItem('theme',n)}catch(e){}
+  var b=document.querySelector('.theme-toggle');
+  if(b){b.innerHTML=n==='dark'?'&#9728;':'&#9790;';
+  b.setAttribute('aria-label',n==='dark'?'Switch to light mode':'Switch to dark mode')}}
+(function(){var b=document.querySelector('.theme-toggle');if(!b)return;
+var c=document.documentElement.getAttribute('data-theme');
+if(!c)c=matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';
+b.innerHTML=c==='dark'?'&#9728;':'&#9790;';
+b.setAttribute('aria-label',c==='dark'?'Switch to light mode':'Switch to dark mode')})();
+</script>"""
 
 
 # Nav grouped into five task-shaped menus, mirroring the app's tab logic and
@@ -979,7 +1077,8 @@ def page(title, description, body, canonical, depth=0,
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b1220">
+<meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
 <meta name="google-site-verification" content="kkgrLvRLdgGg12Y1ka456PlN9iNsyWGCyJIS-8ip9I4">
 {bing_meta}
 <title>{esc(title_serp)}</title>
@@ -1004,6 +1103,7 @@ def page(title, description, body, canonical, depth=0,
 <link rel="dns-prefetch" href="//gc.zgo.at">
 <link rel="preconnect" href="//gc.zgo.at" crossorigin>
 <style>{CSS}</style>
+<script>try{{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}}catch(e){{}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -1015,6 +1115,8 @@ def page(title, description, body, canonical, depth=0,
          role="button">&#9776;</label>
   <a class="nav-search" href="{p}search.html" aria-label="Search the site"
      title="Search">&#128269;<span>Search</span></a>
+  <button class="theme-toggle" onclick="toggleTheme()"
+          aria-label="Switch to light mode">&#9728;</button>
   <select class="nav-state" aria-label="Jump to your state's briefing"
      onchange="if(this.value)location.href='{p}states/'+this.value">
     <option value="">Your state…</option>{_STATE_OPTIONS}</select>
@@ -1044,6 +1146,13 @@ def page(title, description, body, canonical, depth=0,
   <a href="{p}start-here.html">toolkit</a>. Built from public data.</p>
 </footer>
 </div>
+<div class="mob-bar" aria-label="Quick actions">
+  <a href="{p}start-here.html"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Toolkit</a>
+  <a href="{p}states/index.html"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>States</a>
+  <a href="{p}moratoriums.html"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>Tracker</a>
+  <a href="{p}search.html"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>Search</a>
+</div>
+{_THEME_JS}
 {_ANALYTICS}
 </body>
 </html>
@@ -1238,6 +1347,12 @@ def build_index(top_stories=None):
     <a href="alerts.xml">Expiring pauses</a> (RSS)</p>
 </header>
 {_hero_art_svg()}
+</div>
+<div class="quick-actions">
+  <a href="start-here.html"><span class="qa-title">Start here</span><span class="qa-desc">5-step toolkit for your hearing</span></a>
+  <a href="moratoriums.html"><span class="qa-title">{n_enacted} pauses in force</span><span class="qa-desc">Full moratorium tracker</span></a>
+  <a href="projects.html"><span class="qa-title">Project tracker</span><span class="qa-desc">Every campus, dossier &amp; paper trail</span></a>
+  <a href="impact.html"><span class="qa-title">Impact calculator</span><span class="qa-desc">Your community&rsquo;s numbers</span></a>
 </div>
 {_home_top_stories_html(top_stories)}
 {_home_posts_html()}
