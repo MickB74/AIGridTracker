@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 5213,
+  "count": 5225,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -43357,7 +43357,7 @@
       "locality": null,
       "state": "WV",
       "first_seen": "2026-08-31",
-      "last_seen": "2026-09-04"
+      "last_seen": "2026-09-06"
     },
     {
       "title": "Students join local push to block Amazon’s data center in Loudoun County",
@@ -47009,7 +47009,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-02"
+      "last_seen": "2026-09-06"
     },
     {
       "title": "Champaign County officials say they can’t ban data centers. But residents want tighter restrictions",
@@ -47559,7 +47559,7 @@
       "locality": null,
       "state": "WV",
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-05"
+      "last_seen": "2026-09-06"
     },
     {
       "title": "Energy 2026: JOHN D. HEWA",
@@ -52399,7 +52399,7 @@
       "locality": null,
       "state": "ND",
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-05"
+      "last_seen": "2026-09-06"
     },
     {
       "title": "County Commissioners Support Data Center Moratorium Plan",
@@ -52542,7 +52542,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-05"
+      "last_seen": "2026-09-06"
     },
     {
       "title": "Butte-Silver Bow County commission votes to pursue temporary moratorium on data centers",
@@ -54071,7 +54071,7 @@
       "locality": "Lubbock",
       "state": "TX",
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-05"
+      "last_seen": "2026-09-06"
     },
     {
       "title": "The datacenter backlash is bringing the entire political spectrum together – against big tech billionaires",
@@ -56436,7 +56436,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-05"
+      "last_seen": "2026-09-06"
     },
     {
       "title": "Opinion | The Data-Center Dividend for Workers",
@@ -57349,6 +57349,138 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2025-09-05",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "Michigan neighbors unite to protest 2 AI data centers they say threaten water, way of life",
+      "outlet": "MLive.com",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQYjRjX1JRV213V1VCckIxUUtpNXAweDlnRUZFVVo2OVctZjlXdjhZUV9ERFdMZFdRbC1ZeTh0cU40cjExdGtteXYzZzQ2RmhzcUFMcFhabHpGQ0p4cEZLSWRZLW1kcVY0ZkpjMi1Qem5VNzFmNUsxdGpVOWg1ZFVvNGdTVXpheU93MGxmOGgyU2NtLWZjRW15b3gwVWMyOHV3U0U3d2xwRnd3V1lXTjJNT2FZbGJuMVlnd1ZBSUdoQVVsXzRTUkVmY1hwcnYtNk43SlludTVn0gHqAUFVX3lxTE5lcVUzdGtCajAxV0dRdW8yakpKcmk0Nzk3TmNmb0dMWWJ0ZHI2X2VLMHZSXzVQTFZMUkNGWGxmbXhwLW1IUVBxOC1xXzFfZnZaQ21vNkV3dG1DVFlhNG0wZ3FEMDNwZ0hPajQwWmlvdFJFTU1OYTdPczJxSVJIbko5YjcxUTFsN0RkcGkzTGVFeTRqSlZ5V3I0R3ExY1REa0xEQUp6bVkzNEhrR202alJ2TjVob2xxYnZWR21JY1EyREFOaUdLUmFQZ1A4MVc0SUlWWVljZW5mWTd0NWdfaUdZQzB2VXo0SUNrQQ?oc=5",
+      "published": "Sun, 06 Sep 2026 15:01:00 GMT",
+      "published_iso": "2026-09-06T15:01:00+00:00",
+      "locality": null,
+      "state": "MI",
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "Luzerne County zoning plan for data centers under legal review",
+      "outlet": "The Citizens' Voice",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPdmJybU1YVXRBeklsWjVBS1VncjhaQjRrUE5vTGhmemxhTGNDMEcwMUw2RW9EOW0yemVfX2ZnbExZNk41WXNLYmZUdjZqazNJc2FFZE5nU3FRdHJVd1E4SlpXM2xESXlCaDZmeEpZaVpBcVY3Tkd2dTdmWkZxMjBxeVBRd3Q3RnJMWEpaTlJPLTBia0NjQnBReE5OaEJ6ZEJ1YTNBUDVFMA?oc=5",
+      "published": "Sat, 05 Sep 2026 14:48:44 GMT",
+      "published_iso": "2026-09-05T14:48:44+00:00",
+      "locality": "Luzerne County",
+      "state": "PA",
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "NAACP Warns Data Center Boom Could Hurt WV Communities",
+      "outlet": "The Fulcrum",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQaFEycVZwOTF2VG9mbjJ2OGZCdk02M20tQWJDTlh2V3FWSE9TZUlERGJwTVNVRndXMEgzVXZqS1JPN3UybUVhZlpLYUF5MC1uWlRoaXo1WjdxRXM0MUtyOGJ3UWUxQXVkLXB1alRRRFNHSC0yMDBYZ1I1MHA4a3FWXzViVFpJZw?oc=5",
+      "published": "Sun, 06 Sep 2026 11:06:55 GMT",
+      "published_iso": "2026-09-06T11:06:55+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "The fight against data centers is bringing Americans together | Opinion",
+      "outlet": "Times-Standard",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNTTh2SFA3Sm1vVHJQb2x4Rk5DanczanpzYUVkSEJTUU1NYkg0VF9rMUpzTGlaQ3VuOG9pbm40SDZKY3ZEOFhPN3o4YWxyNlVxbnlHNlJDWE1tX0Fxb2JYSVY5Yy0xUFdfMDlMQ1A5R2hVd3RndGtRT2NRVzdhamMtREZIYXlBTkdweFdEWTByOFhsbnpEREZlb09sRUpyQVlDZ3ZyRVlWdXhzYVVzZWFiSGJB?oc=5",
+      "published": "Sun, 06 Sep 2026 13:06:34 GMT",
+      "published_iso": "2026-09-06T13:06:34+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "Families sue Meta over data center, ‘contaminat­ed’ water",
+      "outlet": "pressreader.com",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBsaFZLWUpjZGZuOGNJRi1mY2tBOFpUZzVGeUNBeDcwamk1WEtpX2EtUGQtR0pPekRhbUIzemlYdjE3UEZhZGd5Vk0zNERZZTZaOHZhNmVZSHNiVXM2TDdzTm0xVmRKN0dsdFhsd29hQ3Fpbm5oNHNMSzMyTUVXYm8?oc=5",
+      "published": "Fri, 04 Sep 2026 23:25:39 GMT",
+      "published_iso": "2026-09-04T23:25:39+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "Civil rights groups urge a halt to South Africa data centres boom amid water and power fears",
+      "outlet": "Jamaica Gleaner",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcDFuNXhrN1gxNkpjNW11dVl0a0VYSlA3a25wdEFXci1LU2dzeHU0TFNSLXcwRlNxUmczQjJoT2dweFpCalQ0RjBrUTJfcU03VEZZTzZWclk2RGc5Y0hjRUVWSktuS2o4aUJrdWxhcUdsWjNiYXpWZF81RDFuUXRDTXNHcGI3WGRYektHY1pEU05aa1ktVERsbWZxcEV1NGpoS0g1M1Z4TnBrSTFYVDJHU1NZS29wcWxHcWh3WmVfNF9PUQ?oc=5",
+      "published": "Sun, 06 Sep 2026 05:09:47 GMT",
+      "published_iso": "2026-09-06T05:09:47+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "Texas data center boom raises transparency concerns",
+      "outlet": "KETK.com",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNX095N1lWSlFudGI0M3UzQ2ZqbjhxbXRXaVl3OTBEYnNpSGNLTWNyd3ZnUlN3VDV3a29Zek14bFF5YWU5OGdxVGlMWGpFR09jMjBzWHNxVmFxVm00MTdUWGFJeVktZGNuZkdZeWRsUXN2MElWZkRrQnVvblFVSFpnSUVmZV9lVGR6VDN1ZUhUUVZmQQ?oc=5",
+      "published": "Thu, 03 Sep 2026 20:32:15 GMT",
+      "published_iso": "2026-09-03T20:32:15+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "Data Centers Are Driving a New U.S. Natural Gas Buildout",
+      "outlet": "Crude Oil Prices Today | OilPrice.com",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxObkNmWWRpLUR3bXg4VGxoSzlyZjk3MGw5SlR6X1VzMUZIdVZlZlBueThuWTJ1akRtQWxoWlVZX2phakpQNEtFWjFBS1dhSGEzSDNIWi16bjFQTERLalJkbHpPNXNwT1NMTDhjS0xsVzV3QmZuNHZveThNdHFKRjR5dmZkSTk4MzVpZC1FcU1RcXRaV3Q2MDFPckFNT0NSMEZzVVB4UtIBqgFBVV95cUxPcjF4NTR5eVZDckFRRG9xd05GOWM3cVFJWWgwMnNqbURLTmRHNEprT2NXREExU1BOdlVQblVMVTJjUHFoYTZ5MFIzeWdDWFU4bm5RY0tIZGlTMlgwSWxVQ0RQYkxzTWhfaWFBa3VZbmR0aUh6cS1mMXBGRHhROEkzY09JOUJrRzFWNnFkbFQ5ZGZ6eEw4YXN6aXUzRnlaYmc2enlyQXhpZDRKZw?oc=5",
+      "published": "Sun, 30 Aug 2026 17:00:00 GMT",
+      "published_iso": "2026-08-30T17:00:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "Data center company promises to replace Turkey’s aging water tower",
+      "outlet": "KCBD",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQY29INU1XMjFFOTV3akhLaVFZa3NlMDdrMkFCdkJRaF83TUhNRGg1cE1pYW1IbU5hQU5OaG0tbzBNTHNDSUs0elE0cFdhdUlSZlBQUWhOU3hCTUgzc0xWUENOQThicHJhN2puQkZTOUMzVHcxYmQtQnc3MUtFc2hUX1l1MHhyVXFSXzlKdC1EaG1yY2JjMjdhR1R3T1BkSVF0Z044aVZjTVYtT29hN0FR0gGvAUFVX3lxTFBjb0g1TVcyMUU5NXdqSEtpUVlrc2UwN2syQUJ2QlFoXzdNSE1EaDVwTWlhbUhtTmFBTk5obS1vME1Mc0NJSzR6UTRwV2F1SVJmUFBRaE5TeEJNSDNzTFZQQ05BOGJwcmE3am5CRlM5QzNUdzFiZC1CdzcxS0VzaFRfWXUweHJVcVJfOUp0LURobXJjYmMyN2FHVHdPUGRJUXRnTjhpVmNNVi1Pb2E3QVE?oc=5",
+      "published": "Fri, 04 Sep 2026 03:21:00 GMT",
+      "published_iso": "2026-09-04T03:21:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "Jeffersonville community pushes back against Meta data center",
+      "outlet": "WDRB",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZ0V5TlRqTUNJUXQzSHNDbnBYckVsMzlTQk9HcXFqakJwUU1aT093a3BZdzBSb0NteU5paWNTSGhYSVU3S1BYYTcwYmpqcTRDZmFFa2hXNmYxTTBXWXdkV29wWXVsdlVhRVRmdGFDcmdweVZDel8yejRPdlIwcmlBcTZYX081M2NwODVBUm1QeElFVlRzRWJVQUZqMXYzX0dRRjA0?oc=5",
+      "published": "Sat, 04 Oct 2025 07:00:00 GMT",
+      "published_iso": "2025-10-04T07:00:00+00:00",
+      "locality": "Jeffersonville",
+      "state": "IN",
+      "first_seen": "2025-10-04",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "Cass County (Ind.) man arrested for child molesting allegations",
+      "outlet": "WNDU",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWUdYZWpJNmlXckFsSW41STRRVFV4N0lsZm04OHpTNk5oR0xsRzMxU1R1bTdJZmN3NGx5b3FXbEVZUGE0TUpNMWdwakFtX2JVTFJVamZydTVXQXpNT3BRZ3Y0VzRmcnF6SGFlRC1KcklOVFlqTThEWGtwQXEzeW5razdTdjVvakVJbU9EVHpFX2RCUkk?oc=5",
+      "published": "Wed, 27 Nov 2024 08:00:00 GMT",
+      "published_iso": "2024-11-27T08:00:00+00:00",
+      "locality": "Cass County",
+      "state": "IN",
+      "first_seen": "2024-11-27",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "Daniel “Dan” D. Severns 82, of Akron, Indiana",
+      "outlet": "giant.fm",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOekxRVWtaVHVVOHhCVDM2eFZRSzlUWnB5clhwU0paSmtqRFE1WXFkQzRPbHNkclY5dmlUX2lwREJGVjlsZlFVTl93R1BWMnpRZ050bUw0WWZ0dE5jZFlkWjBjSGp6YjhPNUNxWnZDZkpGVGxVRzJ0eC1zWmZHVFB2NDgwYTlxUXUtYjJDc2pLRVY0MkZKc053?oc=5",
+      "published": "Mon, 31 Aug 2026 15:06:28 GMT",
+      "published_iso": "2026-08-31T15:06:28+00:00",
+      "locality": "Fulton County",
+      "state": "IN",
+      "first_seen": "2026-08-31",
       "last_seen": "2026-09-06"
     }
   ]
