@@ -15966,9 +15966,25 @@ def main():
                              f"which is not a live page")
     _retired_file.write_text(
         json.dumps(_retired, indent=1, sort_keys=True) + "\n", encoding="utf-8")
-    _retired_redirects = [
-        {"source": url, "destination": dest, "permanent": True}
-        for url, dest in sorted(_retired.items())
+    _retired_redirects = []
+    for url, dest in sorted(_retired.items()):
+        _retired_redirects.append(
+            {"source": url, "destination": dest, "permanent": True})
+        _retired_redirects.append(
+            {"source": url + ".html", "destination": dest, "permanent": True})
+    # Root-level community slugs: Google indexed /<slug>-<st> URLs before
+    # the /communities/ prefix existed.  Two regex redirects catch them all
+    # (the -XX suffix is unique to community slugs — no blog/state/company
+    # slug ends that way, and specific redirects listed earlier win anyway).
+    _root_community_redirects = [
+        {"source": "/:s([a-z0-9]+-[a-z0-9-]+-[a-z]{2}).html",
+         "destination": "/communities/:s", "permanent": True},
+        {"source": "/:s([a-z0-9]+-[a-z0-9-]+-[a-z]{2})",
+         "destination": "/communities/:s", "permanent": True},
+        {"source": "/:s([a-z0-9]+-[a-z]{2}).html",
+         "destination": "/communities/:s", "permanent": True},
+        {"source": "/:s([a-z0-9]+-[a-z]{2})",
+         "destination": "/communities/:s", "permanent": True},
     ]
     (WEB / "vercel.json").write_text(
         '{ "cleanUrls": true, "trailingSlash": false }\n', encoding="utf-8")
@@ -15981,7 +15997,8 @@ def main():
             "trailingSlash": False,
             "redirects": (_blog_redirects + _state_redirects
                           + _company_redirects + _community_redirects
-                          + _retired_redirects),
+                          + _retired_redirects
+                          + _root_community_redirects),
             # Static assets and open-data files change rarely and are
             # re-fetched on every page view without this; HTML stays
             # must-revalidate so a daily rebuild is seen immediately.

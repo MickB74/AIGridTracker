@@ -524,7 +524,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/adelanto-ca.html",
+      "destination": "/states/california",
+      "permanent": true
+    },
+    {
       "source": "/communities/alabama-al",
+      "destination": "/states/alabama",
+      "permanent": true
+    },
+    {
+      "source": "/communities/alabama-al.html",
       "destination": "/states/alabama",
       "permanent": true
     },
@@ -534,7 +544,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/amherst-oh.html",
+      "destination": "/states/ohio",
+      "permanent": true
+    },
+    {
       "source": "/communities/archbald-pa",
+      "destination": "/states/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/communities/archbald-pa.html",
       "destination": "/states/pennsylvania",
       "permanent": true
     },
@@ -544,7 +564,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/archer-county-tx.html",
+      "destination": "/states/texas",
+      "permanent": true
+    },
+    {
       "source": "/communities/ashville-oh",
+      "destination": "/states/ohio",
+      "permanent": true
+    },
+    {
+      "source": "/communities/ashville-oh.html",
       "destination": "/states/ohio",
       "permanent": true
     },
@@ -554,7 +584,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/bessemer-al.html",
+      "destination": "/states/alabama",
+      "permanent": true
+    },
+    {
       "source": "/communities/bristol-tn",
+      "destination": "/states/tennessee",
+      "permanent": true
+    },
+    {
+      "source": "/communities/bristol-tn.html",
       "destination": "/states/tennessee",
       "permanent": true
     },
@@ -564,7 +604,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/brownhelm-township-oh.html",
+      "destination": "/states/ohio",
+      "permanent": true
+    },
+    {
       "source": "/communities/butler-township-pa",
+      "destination": "/states/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/communities/butler-township-pa.html",
       "destination": "/states/pennsylvania",
       "permanent": true
     },
@@ -574,7 +624,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/caddo-parish-la.html",
+      "destination": "/states/louisiana",
+      "permanent": true
+    },
+    {
       "source": "/communities/cass-county-ne",
+      "destination": "/states/nebraska",
+      "permanent": true
+    },
+    {
+      "source": "/communities/cass-county-ne.html",
       "destination": "/states/nebraska",
       "permanent": true
     },
@@ -584,7 +644,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/castro-county-tx.html",
+      "destination": "/states/texas",
+      "permanent": true
+    },
+    {
       "source": "/communities/cedar-falls-ia",
+      "destination": "/states/iowa",
+      "permanent": true
+    },
+    {
+      "source": "/communities/cedar-falls-ia.html",
       "destination": "/states/iowa",
       "permanent": true
     },
@@ -594,7 +664,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/chesterfield-county-va.html",
+      "destination": "/states/virginia",
+      "permanent": true
+    },
+    {
       "source": "/communities/clark-county-nv",
+      "destination": "/states/nevada",
+      "permanent": true
+    },
+    {
+      "source": "/communities/clark-county-nv.html",
       "destination": "/states/nevada",
       "permanent": true
     },
@@ -604,7 +684,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/clarkstown-ny.html",
+      "destination": "/states/new-york",
+      "permanent": true
+    },
+    {
       "source": "/communities/colorado-city-tx",
+      "destination": "/states/texas",
+      "permanent": true
+    },
+    {
+      "source": "/communities/colorado-city-tx.html",
       "destination": "/states/texas",
       "permanent": true
     },
@@ -614,7 +704,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/colorado-co.html",
+      "destination": "/states/colorado",
+      "permanent": true
+    },
+    {
       "source": "/communities/colorado-springs-co",
+      "destination": "/states/colorado",
+      "permanent": true
+    },
+    {
+      "source": "/communities/colorado-springs-co.html",
       "destination": "/states/colorado",
       "permanent": true
     },
@@ -624,7 +724,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/cranford-nj.html",
+      "destination": "/states/new-jersey",
+      "permanent": true
+    },
+    {
       "source": "/communities/delaware-de",
+      "destination": "/states/delaware",
+      "permanent": true
+    },
+    {
+      "source": "/communities/delaware-de.html",
       "destination": "/states/delaware",
       "permanent": true
     },
@@ -634,7 +744,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/douglas-county-ga.html",
+      "destination": "/states/georgia",
+      "permanent": true
+    },
+    {
       "source": "/communities/eagle-creek-township-in",
+      "destination": "/states/indiana",
+      "permanent": true
+    },
+    {
+      "source": "/communities/eagle-creek-township-in.html",
       "destination": "/states/indiana",
       "permanent": true
     },
@@ -644,7 +764,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/eagle-mountain-ut.html",
+      "destination": "/states/utah",
+      "permanent": true
+    },
+    {
       "source": "/communities/east-rockhill-township-pa",
+      "destination": "/states/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/communities/east-rockhill-township-pa.html",
       "destination": "/states/pennsylvania",
       "permanent": true
     },
@@ -654,7 +784,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/edgewater-fl.html",
+      "destination": "/states/florida",
+      "permanent": true
+    },
+    {
       "source": "/communities/el-segundo-ca",
+      "destination": "/states/california",
+      "permanent": true
+    },
+    {
+      "source": "/communities/el-segundo-ca.html",
       "destination": "/states/california",
       "permanent": true
     },
@@ -664,7 +804,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/elk-river-mn.html",
+      "destination": "/states/minnesota",
+      "permanent": true
+    },
+    {
       "source": "/communities/falls-township-pa",
+      "destination": "/states/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/communities/falls-township-pa.html",
       "destination": "/states/pennsylvania",
       "permanent": true
     },
@@ -674,12 +824,37 @@
       "permanent": true
     },
     {
+      "source": "/communities/florida-fl.html",
+      "destination": "/states/florida",
+      "permanent": true
+    },
+    {
       "source": "/communities/forsyth-county-nc",
       "destination": "/states/north-carolina",
       "permanent": true
     },
     {
+      "source": "/communities/forsyth-county-nc.html",
+      "destination": "/states/north-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/communities/franklin-county-va",
+      "destination": "/states/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/communities/franklin-county-va.html",
+      "destination": "/states/virginia",
+      "permanent": true
+    },
+    {
       "source": "/communities/gallatin-tn",
+      "destination": "/states/tennessee",
+      "permanent": true
+    },
+    {
+      "source": "/communities/gallatin-tn.html",
       "destination": "/states/tennessee",
       "permanent": true
     },
@@ -689,7 +864,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/garrett-county-md.html",
+      "destination": "/states/maryland",
+      "permanent": true
+    },
+    {
       "source": "/communities/gilroy-ca",
+      "destination": "/states/california",
+      "permanent": true
+    },
+    {
+      "source": "/communities/gilroy-ca.html",
       "destination": "/states/california",
       "permanent": true
     },
@@ -699,7 +884,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/glassboro-nj.html",
+      "destination": "/states/new-jersey",
+      "permanent": true
+    },
+    {
       "source": "/communities/goochland-county-va",
+      "destination": "/states/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/communities/goochland-county-va.html",
       "destination": "/states/virginia",
       "permanent": true
     },
@@ -709,7 +904,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/guadalupe-county-tx.html",
+      "destination": "/states/texas",
+      "permanent": true
+    },
+    {
       "source": "/communities/guilderland-ny",
+      "destination": "/states/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/communities/guilderland-ny.html",
       "destination": "/states/new-york",
       "permanent": true
     },
@@ -719,7 +924,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/hallam-ne.html",
+      "destination": "/states/nebraska",
+      "permanent": true
+    },
+    {
       "source": "/communities/harris-county-ga",
+      "destination": "/states/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/communities/harris-county-ga.html",
       "destination": "/states/georgia",
       "permanent": true
     },
@@ -729,7 +944,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/harrison-county-ky.html",
+      "destination": "/states/kentucky",
+      "permanent": true
+    },
+    {
       "source": "/communities/henrico-va",
+      "destination": "/states/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/communities/henrico-va.html",
       "destination": "/states/virginia",
       "permanent": true
     },
@@ -739,7 +964,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/henry-county-va.html",
+      "destination": "/states/virginia",
+      "permanent": true
+    },
+    {
       "source": "/communities/hillsborough-county-fl",
+      "destination": "/states/florida",
+      "permanent": true
+    },
+    {
+      "source": "/communities/hillsborough-county-fl.html",
       "destination": "/states/florida",
       "permanent": true
     },
@@ -749,7 +984,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/hoffman-estates-il.html",
+      "destination": "/states/illinois",
+      "permanent": true
+    },
+    {
       "source": "/communities/hopkins-county-ky",
+      "destination": "/states/kentucky",
+      "permanent": true
+    },
+    {
+      "source": "/communities/hopkins-county-ky.html",
       "destination": "/states/kentucky",
       "permanent": true
     },
@@ -759,7 +1004,27 @@
       "permanent": true
     },
     {
+      "source": "/communities/idaho-id.html",
+      "destination": "/states/idaho",
+      "permanent": true
+    },
+    {
+      "source": "/communities/illinois-il",
+      "destination": "/states/illinois",
+      "permanent": true
+    },
+    {
+      "source": "/communities/illinois-il.html",
+      "destination": "/states/illinois",
+      "permanent": true
+    },
+    {
       "source": "/communities/indiana-in",
+      "destination": "/states/indiana",
+      "permanent": true
+    },
+    {
+      "source": "/communities/indiana-in.html",
       "destination": "/states/indiana",
       "permanent": true
     },
@@ -769,7 +1034,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/jackson-county-al.html",
+      "destination": "/states/alabama",
+      "permanent": true
+    },
+    {
       "source": "/communities/jefferson-county-al",
+      "destination": "/states/alabama",
+      "permanent": true
+    },
+    {
+      "source": "/communities/jefferson-county-al.html",
       "destination": "/states/alabama",
       "permanent": true
     },
@@ -779,7 +1054,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/joliet-il.html",
+      "destination": "/states/illinois",
+      "permanent": true
+    },
+    {
       "source": "/communities/kansas-city-mo",
+      "destination": "/states/missouri",
+      "permanent": true
+    },
+    {
+      "source": "/communities/kansas-city-mo.html",
       "destination": "/states/missouri",
       "permanent": true
     },
@@ -789,7 +1074,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/kentucky-ky.html",
+      "destination": "/states/kentucky",
+      "permanent": true
+    },
+    {
       "source": "/communities/kewanee-il",
+      "destination": "/states/illinois",
+      "permanent": true
+    },
+    {
+      "source": "/communities/kewanee-il.html",
       "destination": "/states/illinois",
       "permanent": true
     },
@@ -799,7 +1094,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/king-william-county-va.html",
+      "destination": "/states/virginia",
+      "permanent": true
+    },
+    {
       "source": "/communities/kirksville-mo",
+      "destination": "/states/missouri",
+      "permanent": true
+    },
+    {
+      "source": "/communities/kirksville-mo.html",
       "destination": "/states/missouri",
       "permanent": true
     },
@@ -809,7 +1114,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/lacey-township-nj.html",
+      "destination": "/states/new-jersey",
+      "permanent": true
+    },
+    {
       "source": "/communities/lansing-mi",
+      "destination": "/states/michigan",
+      "permanent": true
+    },
+    {
+      "source": "/communities/lansing-mi.html",
       "destination": "/states/michigan",
       "permanent": true
     },
@@ -819,12 +1134,37 @@
       "permanent": true
     },
     {
+      "source": "/communities/laredo-tx.html",
+      "destination": "/states/texas",
+      "permanent": true
+    },
+    {
       "source": "/communities/leray-ny",
       "destination": "/states/new-york",
       "permanent": true
     },
     {
+      "source": "/communities/leray-ny.html",
+      "destination": "/states/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/communities/lexington-ky",
+      "destination": "/states/kentucky",
+      "permanent": true
+    },
+    {
+      "source": "/communities/lexington-ky.html",
+      "destination": "/states/kentucky",
+      "permanent": true
+    },
+    {
       "source": "/communities/limerick-township-pa",
+      "destination": "/states/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/communities/limerick-township-pa.html",
       "destination": "/states/pennsylvania",
       "permanent": true
     },
@@ -834,7 +1174,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/louisiana-la.html",
+      "destination": "/states/louisiana",
+      "permanent": true
+    },
+    {
       "source": "/communities/lowell-charter-township-mi",
+      "destination": "/states/michigan",
+      "permanent": true
+    },
+    {
+      "source": "/communities/lowell-charter-township-mi.html",
       "destination": "/states/michigan",
       "permanent": true
     },
@@ -844,7 +1194,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/lower-mount-bethel-township-pa.html",
+      "destination": "/states/pennsylvania",
+      "permanent": true
+    },
+    {
       "source": "/communities/lyon-county-nv",
+      "destination": "/states/nevada",
+      "permanent": true
+    },
+    {
+      "source": "/communities/lyon-county-nv.html",
       "destination": "/states/nevada",
       "permanent": true
     },
@@ -854,7 +1214,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/madison-county-ms.html",
+      "destination": "/states/mississippi",
+      "permanent": true
+    },
+    {
       "source": "/communities/martindale-brightwood-in",
+      "destination": "/states/indiana",
+      "permanent": true
+    },
+    {
+      "source": "/communities/martindale-brightwood-in.html",
       "destination": "/states/indiana",
       "permanent": true
     },
@@ -864,7 +1234,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/maryland-md.html",
+      "destination": "/states/maryland",
+      "permanent": true
+    },
+    {
       "source": "/communities/maryville-mo",
+      "destination": "/states/missouri",
+      "permanent": true
+    },
+    {
+      "source": "/communities/maryville-mo.html",
       "destination": "/states/missouri",
       "permanent": true
     },
@@ -874,7 +1254,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/michigan-mi.html",
+      "destination": "/states/michigan",
+      "permanent": true
+    },
+    {
       "source": "/communities/middleton-township-oh",
+      "destination": "/states/ohio",
+      "permanent": true
+    },
+    {
+      "source": "/communities/middleton-township-oh.html",
       "destination": "/states/ohio",
       "permanent": true
     },
@@ -884,7 +1274,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/missouri-mo.html",
+      "destination": "/states/missouri",
+      "permanent": true
+    },
+    {
       "source": "/communities/modesto-ca",
+      "destination": "/states/california",
+      "permanent": true
+    },
+    {
+      "source": "/communities/modesto-ca.html",
       "destination": "/states/california",
       "permanent": true
     },
@@ -894,7 +1294,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/monroe-township-nj.html",
+      "destination": "/communities/monroe-township-gloucester-co-nj",
+      "permanent": true
+    },
+    {
       "source": "/communities/montgomery-county-tn",
+      "destination": "/states/tennessee",
+      "permanent": true
+    },
+    {
+      "source": "/communities/montgomery-county-tn.html",
       "destination": "/states/tennessee",
       "permanent": true
     },
@@ -904,7 +1314,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/montour-county-pa.html",
+      "destination": "/states/pennsylvania",
+      "permanent": true
+    },
+    {
       "source": "/communities/mount-vernon-oh",
+      "destination": "/states/ohio",
+      "permanent": true
+    },
+    {
+      "source": "/communities/mount-vernon-oh.html",
       "destination": "/states/ohio",
       "permanent": true
     },
@@ -914,7 +1334,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/nebraska-ne.html",
+      "destination": "/states/nebraska",
+      "permanent": true
+    },
+    {
       "source": "/communities/nelson-county-ky",
+      "destination": "/states/kentucky",
+      "permanent": true
+    },
+    {
+      "source": "/communities/nelson-county-ky.html",
       "destination": "/states/kentucky",
       "permanent": true
     },
@@ -924,7 +1354,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/nevada-nv.html",
+      "destination": "/states/nevada",
+      "permanent": true
+    },
+    {
       "source": "/communities/new-albany-oh",
+      "destination": "/states/ohio",
+      "permanent": true
+    },
+    {
+      "source": "/communities/new-albany-oh.html",
       "destination": "/states/ohio",
       "permanent": true
     },
@@ -934,7 +1374,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/new-jersey-nj.html",
+      "destination": "/states/new-jersey",
+      "permanent": true
+    },
+    {
       "source": "/communities/new-mexico-nm",
+      "destination": "/states/new-mexico",
+      "permanent": true
+    },
+    {
+      "source": "/communities/new-mexico-nm.html",
       "destination": "/states/new-mexico",
       "permanent": true
     },
@@ -944,7 +1394,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/north-carolina-nc.html",
+      "destination": "/states/north-carolina",
+      "permanent": true
+    },
+    {
       "source": "/communities/north-dakota-nd",
+      "destination": "/states/north-dakota",
+      "permanent": true
+    },
+    {
+      "source": "/communities/north-dakota-nd.html",
       "destination": "/states/north-dakota",
       "permanent": true
     },
@@ -954,7 +1414,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/north-port-fl.html",
+      "destination": "/states/florida",
+      "permanent": true
+    },
+    {
       "source": "/communities/north-richland-hills-tx",
+      "destination": "/states/texas",
+      "permanent": true
+    },
+    {
+      "source": "/communities/north-richland-hills-tx.html",
       "destination": "/states/texas",
       "permanent": true
     },
@@ -964,7 +1434,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/nottingham-nh.html",
+      "destination": "/states/new-hampshire",
+      "permanent": true
+    },
+    {
       "source": "/communities/oklahoma-ok",
+      "destination": "/states/oklahoma",
+      "permanent": true
+    },
+    {
+      "source": "/communities/oklahoma-ok.html",
       "destination": "/states/oklahoma",
       "permanent": true
     },
@@ -974,7 +1454,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/osawatomie-ks.html",
+      "destination": "/states/kansas",
+      "permanent": true
+    },
+    {
       "source": "/communities/owensboro-ky",
+      "destination": "/states/kentucky",
+      "permanent": true
+    },
+    {
+      "source": "/communities/owensboro-ky.html",
       "destination": "/states/kentucky",
       "permanent": true
     },
@@ -984,7 +1474,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/petersburg-va.html",
+      "destination": "/states/virginia",
+      "permanent": true
+    },
+    {
       "source": "/communities/plymouth-township-pa",
+      "destination": "/states/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/communities/plymouth-township-pa.html",
       "destination": "/states/pennsylvania",
       "permanent": true
     },
@@ -994,7 +1494,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/port-washington-wi.html",
+      "destination": "/states/wisconsin",
+      "permanent": true
+    },
+    {
       "source": "/communities/posey-county-in",
+      "destination": "/states/indiana",
+      "permanent": true
+    },
+    {
+      "source": "/communities/posey-county-in.html",
       "destination": "/states/indiana",
       "permanent": true
     },
@@ -1004,7 +1514,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/prairie-township-oh.html",
+      "destination": "/states/ohio",
+      "permanent": true
+    },
+    {
       "source": "/communities/richmond-county-nc",
+      "destination": "/states/north-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/communities/richmond-county-nc.html",
       "destination": "/states/north-carolina",
       "permanent": true
     },
@@ -1014,7 +1534,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/roselle-park-nj.html",
+      "destination": "/states/new-jersey",
+      "permanent": true
+    },
+    {
       "source": "/communities/saline-township-mi",
+      "destination": "/communities/saline-mi",
+      "permanent": true
+    },
+    {
+      "source": "/communities/saline-township-mi.html",
       "destination": "/communities/saline-mi",
       "permanent": true
     },
@@ -1024,7 +1554,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/sangamon-county-il.html",
+      "destination": "/states/illinois",
+      "permanent": true
+    },
+    {
       "source": "/communities/schuylkill-county-pa",
+      "destination": "/states/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/communities/schuylkill-county-pa.html",
       "destination": "/states/pennsylvania",
       "permanent": true
     },
@@ -1034,7 +1574,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/shackelford-county-tx.html",
+      "destination": "/states/texas",
+      "permanent": true
+    },
+    {
       "source": "/communities/shalersville-township-oh",
+      "destination": "/states/ohio",
+      "permanent": true
+    },
+    {
+      "source": "/communities/shalersville-township-oh.html",
       "destination": "/states/ohio",
       "permanent": true
     },
@@ -1044,7 +1594,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/shreveport-la.html",
+      "destination": "/states/louisiana",
+      "permanent": true
+    },
+    {
       "source": "/communities/south-strabane-township-pa",
+      "destination": "/states/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/communities/south-strabane-township-pa.html",
       "destination": "/states/pennsylvania",
       "permanent": true
     },
@@ -1054,7 +1614,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/st-charles-mo.html",
+      "destination": "/communities/st-charles-county-mo",
+      "permanent": true
+    },
+    {
       "source": "/communities/st-charles-parish-la",
+      "destination": "/states/louisiana",
+      "permanent": true
+    },
+    {
+      "source": "/communities/st-charles-parish-la.html",
       "destination": "/states/louisiana",
       "permanent": true
     },
@@ -1064,7 +1634,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/sterling-va.html",
+      "destination": "/states/virginia",
+      "permanent": true
+    },
+    {
       "source": "/communities/tennessee-tn",
+      "destination": "/states/tennessee",
+      "permanent": true
+    },
+    {
+      "source": "/communities/tennessee-tn.html",
       "destination": "/states/tennessee",
       "permanent": true
     },
@@ -1074,7 +1654,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/texarkana-tx.html",
+      "destination": "/states/texas",
+      "permanent": true
+    },
+    {
       "source": "/communities/tonawanda-ny",
+      "destination": "/communities/tonawanda-erie-co-ny",
+      "permanent": true
+    },
+    {
+      "source": "/communities/tonawanda-ny.html",
       "destination": "/communities/tonawanda-erie-co-ny",
       "permanent": true
     },
@@ -1084,7 +1674,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/tonganoxie-ks.html",
+      "destination": "/states/kansas",
+      "permanent": true
+    },
+    {
       "source": "/communities/tooele-county-ut",
+      "destination": "/states/utah",
+      "permanent": true
+    },
+    {
+      "source": "/communities/tooele-county-ut.html",
       "destination": "/states/utah",
       "permanent": true
     },
@@ -1094,7 +1694,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/trenton-oh.html",
+      "destination": "/states/ohio",
+      "permanent": true
+    },
+    {
       "source": "/communities/union-county-nj",
+      "destination": "/states/new-jersey",
+      "permanent": true
+    },
+    {
+      "source": "/communities/union-county-nj.html",
       "destination": "/states/new-jersey",
       "permanent": true
     },
@@ -1104,7 +1714,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/union-township-nj.html",
+      "destination": "/states/new-jersey",
+      "permanent": true
+    },
+    {
       "source": "/communities/upper-merion-township-pa",
+      "destination": "/states/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/communities/upper-merion-township-pa.html",
       "destination": "/states/pennsylvania",
       "permanent": true
     },
@@ -1114,12 +1734,37 @@
       "permanent": true
     },
     {
+      "source": "/communities/utah-ut.html",
+      "destination": "/states/utah",
+      "permanent": true
+    },
+    {
       "source": "/communities/vienna-township-oh",
       "destination": "/communities/vienna-township-trumbull-co-oh",
       "permanent": true
     },
     {
+      "source": "/communities/vienna-township-oh.html",
+      "destination": "/communities/vienna-township-trumbull-co-oh",
+      "permanent": true
+    },
+    {
+      "source": "/communities/virginia-tax-zoning-va",
+      "destination": "/states/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/communities/virginia-tax-zoning-va.html",
+      "destination": "/states/virginia",
+      "permanent": true
+    },
+    {
       "source": "/communities/virginia-va",
+      "destination": "/states/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/communities/virginia-va.html",
       "destination": "/states/virginia",
       "permanent": true
     },
@@ -1129,7 +1774,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/washington-township-mi.html",
+      "destination": "/communities/washington-township-macomb-co-mi",
+      "permanent": true
+    },
+    {
       "source": "/communities/washington-wa",
+      "destination": "/states/washington",
+      "permanent": true
+    },
+    {
+      "source": "/communities/washington-wa.html",
       "destination": "/states/washington",
       "permanent": true
     },
@@ -1139,7 +1794,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/waterford-township-oh.html",
+      "destination": "/states/ohio",
+      "permanent": true
+    },
+    {
       "source": "/communities/weld-county-co",
+      "destination": "/states/colorado",
+      "permanent": true
+    },
+    {
+      "source": "/communities/weld-county-co.html",
       "destination": "/states/colorado",
       "permanent": true
     },
@@ -1149,7 +1814,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/west-rockhill-township-pa.html",
+      "destination": "/states/pennsylvania",
+      "permanent": true
+    },
+    {
       "source": "/communities/western-maryland-md",
+      "destination": "/states/maryland",
+      "permanent": true
+    },
+    {
+      "source": "/communities/western-maryland-md.html",
       "destination": "/states/maryland",
       "permanent": true
     },
@@ -1159,7 +1834,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/western-new-york-ny.html",
+      "destination": "/states/new-york",
+      "permanent": true
+    },
+    {
       "source": "/communities/westfield-nj",
+      "destination": "/states/new-jersey",
+      "permanent": true
+    },
+    {
+      "source": "/communities/westfield-nj.html",
       "destination": "/states/new-jersey",
       "permanent": true
     },
@@ -1169,7 +1854,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/wolfe-county-ky.html",
+      "destination": "/states/kentucky",
+      "permanent": true
+    },
+    {
       "source": "/communities/yaphank-ny",
+      "destination": "/states/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/communities/yaphank-ny.html",
       "destination": "/states/new-york",
       "permanent": true
     },
@@ -1179,7 +1874,17 @@
       "permanent": true
     },
     {
+      "source": "/communities/yorkville-il.html",
+      "destination": "/states/illinois",
+      "permanent": true
+    },
+    {
       "source": "/communities/yukon-ok",
+      "destination": "/states/oklahoma",
+      "permanent": true
+    },
+    {
+      "source": "/communities/yukon-ok.html",
       "destination": "/states/oklahoma",
       "permanent": true
     },
@@ -1189,13 +1894,48 @@
       "permanent": true
     },
     {
+      "source": "/consulting.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/la-crosse-wi",
+      "destination": "/communities/la-crosse-wi",
+      "permanent": true
+    },
+    {
+      "source": "/la-crosse-wi.html",
       "destination": "/communities/la-crosse-wi",
       "permanent": true
     },
     {
       "source": "/methodology",
       "destination": "/moratoriums-methodology",
+      "permanent": true
+    },
+    {
+      "source": "/methodology.html",
+      "destination": "/moratoriums-methodology",
+      "permanent": true
+    },
+    {
+      "source": "/:s([a-z0-9]+-[a-z0-9-]+-[a-z]{2}).html",
+      "destination": "/communities/:s",
+      "permanent": true
+    },
+    {
+      "source": "/:s([a-z0-9]+-[a-z0-9-]+-[a-z]{2})",
+      "destination": "/communities/:s",
+      "permanent": true
+    },
+    {
+      "source": "/:s([a-z0-9]+-[a-z]{2}).html",
+      "destination": "/communities/:s",
+      "permanent": true
+    },
+    {
+      "source": "/:s([a-z0-9]+-[a-z]{2})",
+      "destination": "/communities/:s",
       "permanent": true
     }
   ],
