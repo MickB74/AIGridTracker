@@ -2,7 +2,7 @@
  "generated": "2026-09-06",
  "license": "CC BY 4.0",
  "note": "One row per cited item. kind=action is a bill, letter, hearing question or investigation; kind=statement is a quote, op-ed or campaign line. grade is the officials-scorecard grade (sitting officials only); lean summarises the cited items.",
- "count": 208,
+ "count": 222,
  "records": [
   {
    "chamber": "Senate",
@@ -685,6 +685,23 @@
    "page": "https://aigridwatch.com/senators#sen-w000790"
   },
   {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "OH",
+   "district": "6",
+   "name": "Michael Rulli",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "On Fox Business, supported the OpenAI/Nvidia $500B data center project but acknowledged 'Most of my constituents do not like data centers.' Claimed 'The CCP has infiltrated Ohio with propaganda against this' and advocated 'Keep them out of the corn fields. Keep them out of the neighborhoods.'",
+   "date": "2026-08-28",
+   "source": "https://www.breitbart.com/clips/2026/08/28/gop-rep-rulli-the-ccp-has-infiltrated-ohio-with-propaganda-against-500b-data-center/",
+   "source_name": "",
+   "grade": "",
+   "lean": "accelerate",
+   "as_of": "2026-09-06",
+   "page": "https://aigridwatch.com/house-races#race-oh-6"
+  },
+  {
    "chamber": "Senate",
    "role": "senator",
    "state": "TX",
@@ -1348,6 +1365,23 @@
    "page": "https://aigridwatch.com/senators#sen-w000805"
   },
   {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "OH",
+   "district": "5",
+   "name": "Bob Latta",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Applauded full Energy and Commerce Committee passage of H.R. 9340 (52-0), noting Ohio already has large load tariffs in place for data centers.",
+   "date": "2026-07-21",
+   "source": "https://latta.house.gov/news/documentsingle.aspx?DocumentID=406829",
+   "source_name": "",
+   "grade": "",
+   "lean": "mixed",
+   "as_of": "2026-09-06",
+   "page": "https://aigridwatch.com/house-races#race-oh-5"
+  },
+  {
    "chamber": "Senate",
    "role": "candidate",
    "state": "OH",
@@ -1433,6 +1467,23 @@
    "page": "https://aigridwatch.com/senators#sen-g000555"
   },
   {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "OH",
+   "district": "13",
+   "name": "Emilia Sykes",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Incorporated provisions into the bipartisan Water Resources Development Act of 2026 to study data center impacts on regional water resources.",
+   "date": "2026-07-14",
+   "source": "https://sykes.house.gov/media/press-releases/rep-sykes-advances-bipartisan-water-infrastructure-bill-with-key-wins-for-northeast-ohio",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-06",
+   "page": "https://aigridwatch.com/house-races#race-oh-13"
+  },
+  {
    "chamber": "Senate",
    "role": "senator",
    "state": "MA",
@@ -1465,6 +1516,23 @@
    "lean": "guardrails",
    "as_of": "2026-08-26",
    "page": "https://aigridwatch.com/house-races#race-ny-19"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "OH",
+   "district": "1",
+   "name": "Greg Landsman",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Introduced the Protecting Communities from Data Center Impacts Act, directing EPA to contract with the National Academies of Sciences for a study on data center environmental impacts (noise, air, water, carbon, e-waste).",
+   "date": "2026-07-10",
+   "source": "https://landsman.house.gov/posts/landsman-introduced-third-ai-data-center-bill-in-congress",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-06",
+   "page": "https://aigridwatch.com/house-races#race-oh-1"
   },
   {
    "chamber": "Senate",
@@ -1603,6 +1671,40 @@
    "page": "https://aigridwatch.com/house-races#race-nj-6"
   },
   {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "OH",
+   "district": "5",
+   "name": "Bob Latta",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "As Energy Subcommittee Chairman, championed H.R. 9340, the Ratepayer Protection Act, through subcommittee markup to protect families from covering grid upgrade costs driven by AI infrastructure.",
+   "date": "2026-06-24",
+   "source": "https://latta.house.gov/news/documentsingle.aspx?DocumentID=406815",
+   "source_name": "",
+   "grade": "",
+   "lean": "mixed",
+   "as_of": "2026-09-06",
+   "page": "https://aigridwatch.com/house-races#race-oh-5"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "OH",
+   "district": "12",
+   "name": "Troy Balderson",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Co-introduced H.R. 9332, the Load Forecasting Enhancement Act, directing FERC to work with state PUCs on improving electric load forecasting as demand surges from AI and data centers. Passed Energy Subcommittee.",
+   "date": "2026-06-24",
+   "source": "https://menendez.house.gov/media/press-releases/menendez-and-balderson-applaud-advancement-of-key-grid-reliability-bill",
+   "source_name": "",
+   "grade": "",
+   "lean": "accelerate",
+   "as_of": "2026-09-06",
+   "page": "https://aigridwatch.com/house-races#race-oh-12"
+  },
+  {
    "chamber": "Senate",
    "role": "senator",
    "state": "NM",
@@ -1737,6 +1839,23 @@
    "lean": "guardrails",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-m000133"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "OH",
+   "district": "5",
+   "name": "Bob Latta",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Co-signed letter (with Guthrie and Joyce) to PCAST and FBI Director requesting investigation of alleged Chinese Communist Party influence campaigns working to block American data center infrastructure.",
+   "date": "2026-06-04",
+   "source": "https://energycommerce.house.gov/posts/chairmen-guthrie-joyce-and-latta-request-investigation-of-foreign-adversaries-efforts-to-block-american-data-center-buildout",
+   "source_name": "",
+   "grade": "",
+   "lean": "mixed",
+   "as_of": "2026-09-06",
+   "page": "https://aigridwatch.com/house-races#race-oh-5"
   },
   {
    "chamber": "Senate",
@@ -1958,6 +2077,23 @@
    "lean": "guardrails",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-w000817"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "OH",
+   "district": "1",
+   "name": "Greg Landsman",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Introduced H.R. 8033, the No Harm Data Centers Act, requiring data centers to cover full costs of energy demands and infrastructure, mandating environmental impact studies, and prohibiting NDAs between data center developers and elected officials.",
+   "date": "2026-04-09",
+   "source": "https://landsman.house.gov/posts/landsman-leads-new-bill-requiring-big-tech-to-pay-for-data-centers-and-no-ndas",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-06",
+   "page": "https://aigridwatch.com/house-races#race-oh-1"
   },
   {
    "chamber": "Senate",
@@ -2300,6 +2436,23 @@
    "page": "https://aigridwatch.com/senators#sen-b001305"
   },
   {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "OH",
+   "district": "13",
+   "name": "Emilia Sykes",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "At House Science Committee hearing on data center infrastructure, pressed for consumer protections as Ohio hosts 217 data centers (fifth most nationally).",
+   "date": "2026-02-24",
+   "source": "https://sykes.house.gov/media/press-releases/ranking-member-sykes-presses-for-consumer-protections-as-data-centers-expand-across-ohio",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-06",
+   "page": "https://aigridwatch.com/house-races#race-oh-13"
+  },
+  {
    "chamber": "Senate",
    "role": "senator",
    "state": "AK",
@@ -2349,6 +2502,23 @@
    "lean": "guardrails",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-h001089"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "OH",
+   "district": "13",
+   "name": "Emilia Sykes",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Unveiled Affordability Agenda policy roadmap including a provision to reallocate electric grid costs so consumers are protected from price hikes driven by data center development.",
+   "date": "2026-02-11",
+   "source": "https://sykes.house.gov/media/press-releases/rep-sykes-unveils-affordability-agenda-to-address-the-cost-of-living-crisis",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-06",
+   "page": "https://aigridwatch.com/house-races#race-oh-13"
   },
   {
    "chamber": "Senate",
@@ -2980,6 +3150,23 @@
    "page": "https://aigridwatch.com/senators#sen-c000127"
   },
   {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "OH",
+   "district": "1",
+   "name": "Greg Landsman",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Introduced H.R. 6529, the Protecting Families from AI Data Center Energy Costs Act, directing FERC to convene stakeholders and recommend ways to prevent data center energy costs from being passed onto residents.",
+   "date": "2025-12-09",
+   "source": "https://landsman.house.gov/posts/landsman-beyer-introduce-bill-to-protect-residents-from-rising-costs-caused-by-ai-data-centers",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-06",
+   "page": "https://aigridwatch.com/house-races#race-oh-1"
+  },
+  {
    "chamber": "Senate",
    "role": "senator",
    "state": "AZ",
@@ -3116,6 +3303,23 @@
    "page": "https://aigridwatch.com/senators#sen-l000571"
   },
   {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "OH",
+   "district": "12",
+   "name": "Troy Balderson",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Led H.R. 1047, the GRID Power Act, directing FERC to let grid operators fast-track dispatchable power projects through interconnection queues. Cited data center growth in central Ohio. Passed the House.",
+   "date": "2025-09-18",
+   "source": "https://balderson.house.gov/news/documentsingle.aspx?DocumentID=2887",
+   "source_name": "",
+   "grade": "",
+   "lean": "accelerate",
+   "as_of": "2026-09-06",
+   "page": "https://aigridwatch.com/house-races#race-oh-12"
+  },
+  {
    "chamber": "Senate",
    "role": "senator",
    "state": "AZ",
@@ -3131,6 +3335,23 @@
    "lean": "guardrails",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-k000377"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "OH",
+   "district": "9",
+   "name": "Marcy Kaptur",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "In House floor remarks on the FY2026 Energy and Water Development bill, warned that unchecked data center growth could raise average US electricity generation costs by roughly 8% by 2030. Cited Ohio families seeing 10%+ monthly bill increases.",
+   "date": "2025-09-03",
+   "source": "https://kaptur.house.gov/media-center/press-releases/ranking-member-kaptur-floor-remarks-2026-energy-and-water-development",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-06",
+   "page": "https://aigridwatch.com/house-races#race-oh-9"
   },
   {
    "chamber": "Senate",
@@ -3284,6 +3505,23 @@
    "lean": "mixed",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-k000394"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "OH",
+   "district": "12",
+   "name": "Troy Balderson",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "At Energy and Commerce hearing, noted his district hosts Google, AWS, Meta, QTS, Vantage and others, with signed power agreements reaching 5,000 MW by 2030. Questioned Eric Schmidt about tech companies' role in bringing new generation capacity online.",
+   "date": "2025-04-09",
+   "source": "https://energycommerce.house.gov/posts/energy-and-commerce-committee-holds-hearing-on-ai-and-american-global-competitiveness",
+   "source_name": "",
+   "grade": "",
+   "lean": "accelerate",
+   "as_of": "2026-09-06",
+   "page": "https://aigridwatch.com/house-races#race-oh-12"
   },
   {
    "chamber": "Senate",

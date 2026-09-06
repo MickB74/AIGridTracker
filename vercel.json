@@ -569,16 +569,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/ashville-oh",
-      "destination": "/states/ohio",
-      "permanent": true
-    },
-    {
-      "source": "/communities/ashville-oh.html",
-      "destination": "/states/ohio",
-      "permanent": true
-    },
-    {
       "source": "/communities/bessemer-al",
       "destination": "/states/alabama",
       "permanent": true

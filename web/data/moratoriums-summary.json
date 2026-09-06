@@ -3,11 +3,11 @@
   "generated": "2026-09-06",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 419,
+  "count": 460,
   "states": 39,
-  "enacted": 349,
+  "enacted": 387,
   "proposed": 35,
-  "official_sourced": 33,
+  "official_sourced": 43,
   "by_state": {
     "CO": {
       "total": 8,
@@ -95,8 +95,8 @@
       "proposed": 1
     },
     "OH": {
-      "total": 19,
-      "enacted": 16,
+      "total": 60,
+      "enacted": 54,
       "proposed": 1
     },
     "TN": {
@@ -221,6 +221,9 @@
       "lexington-fayette-county-ky",
       "white-county-in",
       "front-royal-va",
+      "cleveland-oh",
+      "pierce-township-oh",
+      "tallmadge-oh",
       "indio-ca",
       "palm-springs-ca"
     ],
@@ -250,6 +253,9 @@
       "hillsboro-or",
       "boulder-county-co",
       "braceville-township-oh",
+      "cleveland-oh",
+      "pierce-township-oh",
+      "tallmadge-oh",
       "indio-ca",
       "palm-springs-ca"
     ]

@@ -4,7 +4,7 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
-  "count": 38,
+  "count": 42,
   "alerts": [
     {
       "id": "mora-MI-armada-township-2026-07-13",
@@ -124,6 +124,19 @@
       "verified": true
     },
     {
+      "id": "mora-OH-mount-orab-2026-08-30",
+      "kind": "moratorium-expiry",
+      "severity": "expired",
+      "locality": "Mount Orab",
+      "state": "OH",
+      "expires": "2026-08-30",
+      "days_left": -7,
+      "title": "Mount Orab, OH: data center moratorium has lapsed",
+      "body": "The moratorium's documented term ran to 2026-08-30 (7 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
+      "source": "https://www.wcpo.com/news/local-news/mt-orab-council-introduces-data-center-moratorium-amid-community-opposition-to-mysterious-mega-site-project",
+      "verified": true
+    },
+    {
       "id": "mora-GA-hogansville-2026-09-01",
       "kind": "moratorium-expiry",
       "severity": "expired",
@@ -189,6 +202,19 @@
       "verified": true
     },
     {
+      "id": "mora-OH-pierce-township-2026-10-09",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Pierce Township",
+      "state": "OH",
+      "expires": "2026-10-09",
+      "days_left": 33,
+      "title": "Pierce Township, OH: data center moratorium expires in 33 days",
+      "body": "The documented term ends 2026-10-09. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://piercetownship.org/wp-content/uploads/2026/02/Res-Imposing-Moratorium-Data-Centers-kb-edits.pdf",
+      "verified": true
+    },
+    {
       "id": "mora-ME-bangor-2026-10-10",
       "kind": "moratorium-expiry",
       "severity": "upcoming",
@@ -199,6 +225,19 @@
       "title": "Bangor, ME: data center moratorium expires in 34 days",
       "body": "The documented term ends 2026-10-10. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.wabi.tv/2026/04/14/bangor-passes-180-day-moratorium-data-center-development/",
+      "verified": true
+    },
+    {
+      "id": "mora-OH-tallmadge-2026-10-10",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Tallmadge",
+      "state": "OH",
+      "expires": "2026-10-10",
+      "days_left": 34,
+      "title": "Tallmadge, OH: data center moratorium expires in 34 days",
+      "body": "The documented term ends 2026-10-10. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.yahoo.com/news/articles/tallmadge-considers-six-month-moratorium-100316607.html",
       "verified": true
     },
     {
@@ -225,6 +264,19 @@
       "title": "Vienna Township (Trumbull Co.), OH: data center moratorium expires in 40 days",
       "body": "The documented term ends 2026-10-16. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.tribtoday.com/news/local-news/2026/08/vienna-extends-data-center-moratorium/",
+      "verified": true
+    },
+    {
+      "id": "mora-OH-cleveland-2026-10-16",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Cleveland",
+      "state": "OH",
+      "expires": "2026-10-16",
+      "days_left": 40,
+      "title": "Cleveland, OH: data center moratorium expires in 40 days",
+      "body": "The documented term ends 2026-10-16. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.clevelandohio.gov/news/cleveland-city-council-approves-temporary-pause-new-standalone-data-centers",
       "verified": true
     },
     {
