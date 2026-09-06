@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Microsoft Signed the Ratepayer Pledge. Then It Sued to Avoid Paying.</title>
+      <link>https://aigridwatch.com/blog/microsoft-ratepayer-pledge-hypocrisy-2026</link>
+      <guid>https://aigridwatch.com/blog/microsoft-ratepayer-pledge-hypocrisy-2026</guid>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 GMT</pubDate>
+      <description>In January 2026 Microsoft became the first company to sign the White House&#x27;s ratepayer protection pledge, promising that data center growth would not raise household electricity bills. Eight months later it is fighting cost-recovery orders in Virginia&#x27;s Supreme Court and at FERC in Wisconsin. The pledge has no enforcement mechanism. The lawsuits do.</description>
+    </item>
+    <item>
       <title>Week in Review: Amazon Withdraws a Virginia Water Permit, Maryland&#x27;s Two Counties Split on Moratoriums, and Georgia Residents Sue Over a Secret NDA</title>
       <link>https://aigridwatch.com/blog/week-in-review-2026-09-06</link>
       <guid>https://aigridwatch.com/blog/week-in-review-2026-09-06</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/ezra-klein-ai-revolt-mainstream-2026</guid>
       <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
       <description>The Ezra Klein Show&#x27;s August 4 episode is titled &quot;The A.I. Revolt Is Here,&quot; and its subject is data centers — the bipartisan opposition, Hochul&#x27;s New York moratorium, and the 100-plus moratorium proposals nationwide. When the country&#x27;s flagship policy podcast frames local zoning fights as a national political force, the leverage map has changed. Here&#x27;s what the episode covers, what our own tracker shows, and why this moment favors communities that are ready to negotiate.</description>
-    </item>
-    <item>
-      <title>The $327 Million Guess That Became $2.5 Billion: States Are Finally Learning What Data Center Tax Breaks Cost</title>
-      <link>https://aigridwatch.com/blog/data-center-tax-break-blowouts-2026</link>
-      <guid>https://aigridwatch.com/blog/data-center-tax-break-blowouts-2026</guid>
-      <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-      <description>Four states now lose more than $1 billion a year to data center sales-tax exemptions — and every one of them originally projected a fraction of that. Georgia revised its estimate up 664% in one January. Ohio&#x27;s real cost came in at 12 times its projection. Indiana admitted 83% of its subsidy went to one company: Amazon. Fourteen states still won&#x27;t publish a number at all. Here&#x27;s what the June 2026 Good Jobs First report found, and what it means for the fiscal-note fight in your county.</description>
     </item>
 </channel>
 </rss>

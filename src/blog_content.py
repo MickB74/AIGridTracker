@@ -72,6 +72,160 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "microsoft-ratepayer-pledge-hypocrisy-2026",
+        "art": "oversight",
+        "section": "stories",
+        "title": "Microsoft Signed the Ratepayer Pledge. Then It Sued to Avoid Paying.",
+        "seo_title": "Microsoft signed the ratepayer pledge then sued to avoid paying",
+        "date": _dt.date(2026, 9, 6),
+        "author": "GridWatch AI",
+        "tags": ["Microsoft", "ratepayers", "Virginia", "Wisconsin", "pledge",
+                 "Dominion", "ATC", "FERC", "transmission",
+                 "cost allocation", "analysis"],
+        "summary": (
+            "In January 2026 Microsoft became the first company to sign the "
+            "White House's ratepayer protection pledge, promising that data "
+            "center growth would not raise household electricity bills. Eight "
+            "months later it is fighting cost-recovery orders in Virginia's "
+            "Supreme Court and at FERC in Wisconsin. The pledge has no "
+            "enforcement mechanism. The lawsuits do."
+        ),
+        "body": """\
+In January 2026, Microsoft became the first technology company to sign the
+White House's **ratepayer protection pledge** — a voluntary commitment that
+data center growth would not raise electricity costs for ordinary households.
+By March, seven companies had signed: Microsoft, Amazon, Google, Meta, xAI,
+Oracle, and OpenAI
+([White House fact sheet](https://www.whitehouse.gov/fact-sheets/2026/03/fact-sheet-president-trump-takes-action-to-protect-ratepayers/)).
+
+The pledge was celebrated as a turning point. For the first time, the companies
+driving the largest surge in U.S. electricity demand since the postwar
+industrial boom were on the record saying they would pay their own way.
+
+Then the filings started.
+
+### Virginia: Microsoft appeals a cost-recovery order
+
+On **September 3, 2026**, Microsoft appealed a Virginia State Corporation
+Commission ruling to the Virginia Supreme Court. The SCC had ordered Dominion
+Energy to charge data center operators **directly and upfront** for
+transmission infrastructure built to serve their load — part of Dominion's
+effort to recover **$1.5 billion** in transmission costs driven by data center
+demand in Northern Virginia
+([Financial Times, Sep 3 2026](https://www.ft.com/content/f86672dd-5ee5-46f6-8419-3c959814dd1c)).
+
+Northern Virginia is the largest data center market in the world. Dominion's
+grid there is under extraordinary strain: the utility has said publicly that
+data centers account for the vast majority of new load on its system. The SCC's
+ruling was a straightforward application of cost-causation — the principle that
+the customer driving a grid upgrade should pay for it.
+
+Microsoft's position, in the appeal, is that the SCC's methodology is flawed
+and the charges are disproportionate. That may or may not be true on the merits.
+What is not in dispute is the timing: the company that signed a pledge promising
+ratepayers wouldn't bear these costs is now in court arguing it shouldn't have
+to bear them either.
+
+### Wisconsin: Microsoft protests a $500 million transmission plan
+
+The Virginia case is not isolated. In Wisconsin, Microsoft is contesting a
+**$500 million transmission plan** filed by American Transmission Company and
+We Energies at the Federal Energy Regulatory Commission. The plan would build
+new high-voltage lines to serve the growing data center cluster in southeastern
+Wisconsin — load that Microsoft's own campuses are a significant part of
+([Wisconsin Watch](https://wisconsinwatch.org/2026/07/big-tech-and-data-centers-strain-wisconsins-electric-grid/)).
+
+Microsoft's FERC filing argues that the plan overbuilds for speculative demand
+and that cost allocation across the region is unfair. Again, these may be
+legitimate engineering objections. But the pattern is the same: sign the pledge
+in Washington, contest the bill in the docket.
+
+### The pledge has no teeth
+
+The ratepayer protection pledge is **voluntary and non-binding**. There is no
+enforcement mechanism, no penalty for violation, and no federal agency
+monitoring compliance. It is, in the language of corporate governance, an
+aspirational statement — the energy-policy equivalent of a sustainability
+report's forward-looking disclaimer.
+
+This is not a secret. When the Brookings Institution
+[analyzed the pledge](https://www.brookings.edu/articles/data-centers-and-electricity-what-to-know/)
+in mid-2026, it noted that "voluntary pledges without regulatory teeth are
+unlikely to change corporate behavior when billions of dollars in
+infrastructure costs are at stake." The Union of Concerned Scientists
+[documented](https://www.ucsusa.org/resources/data-center-electricity-use)
+that Microsoft had argued against binding cost-recovery commitments in Illinois
+even before signing the White House pledge.
+
+Meanwhile, the numbers keep growing. PJM Interconnection — the grid operator
+serving Virginia, Wisconsin, and eleven other states — reported that data center
+demand has driven **$23 billion in customer price increases** across its
+footprint. ICF International projects **15–40% residential rate increases by
+2030** in data-center-heavy markets
+([Fortune](https://fortune.com/2026/05/15/data-centers-raising-electric-bills/)).
+A Consumer Reports survey found **75% of Americans** lack confidence that
+technology companies will cover their share of grid costs.
+
+### What this means for communities
+
+If you are a resident in a state where a data center developer has signed
+the ratepayer pledge, here is what the Virginia and Wisconsin cases tell you:
+
+**1. The pledge is not a contract.** It does not bind the company at your PUC,
+in your state court, or at FERC. If a developer cites the pledge in a public
+hearing, ask them to put the same commitment in a **written condition of
+approval** — with the same dollar figures, the same infrastructure scope, and
+the same penalties for breach that any other commercial contract would carry.
+
+**2. Watch the docket, not the press release.** The pledge was announced in
+January. The Virginia appeal was filed in September. The Wisconsin FERC
+protest was filed months before that. If you are tracking a data center
+project in your community, the company's regulatory filings — at the PUC, the
+SCC, FERC, or state court — are where its actual position lives. The
+[PUC directory](/puc.html) has commission websites and complaint links for
+all 50 states plus D.C.
+
+**3. Cost-causation is the principle that matters.** The Virginia SCC didn't
+invent a new rule. It applied a standard regulatory principle: the customer
+that causes a grid upgrade pays for it. If your state's PUC has not yet
+applied this principle to data center load, ask your commissioners — by name,
+on the record — whether they intend to. The
+[Start here wizard](/start-here.html) generates a public-comment script
+with your state's numbers baked in.
+
+**4. Transmission is where the money hides.** In both Virginia and Wisconsin,
+the contested costs are **transmission** — the high-voltage lines connecting
+a data center campus to the grid. This is the same pattern we documented in
+the [Meta Hyperion analysis](meta-hyperion-louisiana-ratepayer-fight-2026):
+a developer commits to paying for on-site infrastructure while the lines
+reaching the site go into the general rate base. Ask which side of the meter
+the commitment covers.
+
+**5. Federal pledges do not preempt state regulators.** The White House cannot
+order a Virginia SCC commissioner or a Wisconsin PSC commissioner to do
+anything. Rate design is a state function. If the pledge matters to your
+fight, use it as a floor — *your own company signed this* — and then push
+for an enforceable state-level mechanism.
+
+Ari Peskoe, director of the Electricity Law Initiative at Harvard Law School,
+[told the Financial Times](https://www.ft.com/content/f86672dd-5ee5-46f6-8419-3c959814dd1c):
+"I would have guessed for a trillion-dollar corporation like Microsoft, the
+amount of money at issue here is not worth the PR pushback." The fact that
+Microsoft calculated otherwise tells you everything about the gap between a
+pledge and a filing.
+
+### Sources
+
+- [Financial Times — Microsoft challenges data centre costs (Sep 3 2026)](https://www.ft.com/content/f86672dd-5ee5-46f6-8419-3c959814dd1c)
+- [White House fact sheet — Ratepayer protection pledge (March 2026)](https://www.whitehouse.gov/fact-sheets/2026/03/fact-sheet-president-trump-takes-action-to-protect-ratepayers/)
+- [Wisconsin Watch — Big tech strains Wisconsin's grid (July 2026)](https://wisconsinwatch.org/2026/07/big-tech-and-data-centers-strain-wisconsins-electric-grid/)
+- [Fortune — Data centers raising electric bills (May 2026)](https://fortune.com/2026/05/15/data-centers-raising-electric-bills/)
+- [Brookings Institution — Data centers and electricity](https://www.brookings.edu/articles/data-centers-and-electricity-what-to-know/)
+- [Union of Concerned Scientists — Data center electricity use](https://www.ucsusa.org/resources/data-center-electricity-use)
+- [Food & Water Watch — Data center energy demand](https://www.foodandwaterwatch.org/2026/07/22/data-center-energy-demand-poses-serious-risks/)
+""",
+    },
+    {
         "id": "week-in-review-2026-09-06",
         "art": "review",
         "section": "stories",
