@@ -72,6 +72,334 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "week-in-review-2026-09-06",
+        "art": "review",
+        "section": "stories",
+        "title": "Week in Review: Amazon Withdraws a Virginia Water Permit, Maryland's Two Counties Split on Moratoriums, and Georgia Residents Sue Over a Secret NDA",
+        "seo_title": "Week in review: Amazon drops VA water permit, GA NDA suit",
+        "date": _dt.date(2026, 9, 6),
+        "author": "GridWatch AI",
+        "tags": ["week in review", "moratorium", "Virginia", "Maryland", "Georgia",
+                 "West Virginia", "South Carolina", "Texas", "water", "transparency",
+                 "community"],
+        "summary": (
+            "This week Amazon withdrew a groundwater permit for its 869-acre King "
+            "George County, Virginia campus two days after a newspaper asked about "
+            "it, Montgomery County's toughest moratorium challenger backed down "
+            "while neighboring Baltimore County moved to extend its own pause "
+            "through 2027, and Effingham County, Georgia residents sued over a "
+            "zoning ordinance they say cleared the way for OpenAI's data center "
+            "behind a signed NDA. Plus: West Virginia certifies a second $12 "
+            "billion data center in one county under a law that skips local "
+            "review, a South Carolina town moves preemptively, and data centers "
+            "become a Texas governor's-race issue."
+        ),
+        "body": """\
+Welcome back to the GridWatch AI Week in Review — our Sunday roundup of the
+most important data center stories from the past seven days, what they mean
+for communities, and what you can learn from each one.
+
+---
+
+### 1. Amazon drops a groundwater permit for its 869-acre Virginia campus, two days after the local paper asked about it
+
+**What happened:** Amazon Web Services withdrew its application to renew a
+permit allowing up to 6.4 million gallons a year of groundwater withdrawals
+from the Potomac aquifer for its Birchwood Tech Campus, a planned
+data-center campus on 869 acres in King George County, Virginia, according
+to the [Richmond Times-Dispatch](https://richmond.com/). The withdrawal came
+two days after the paper reported on the permit, which Virginia's
+Department of Environmental Quality had disclosed through a routine public
+notice. The county's own water utility and state Sen. Richard Stuart had
+already objected, warning that groundwater levels nearby were already
+depleted; Stuart called granting the permit "indefensible" in the
+[Fredericksburg Free Press](https://www.fredericksburgfreepress.com/).
+Amazon told reporters it would "seek alternate water sources as advised by
+VDEQ and Virginia regulation."
+
+**Why it matters:** The permit would not have supplied cooling water — Amazon
+says the campus will use closed-loop or air-based cooling — but groundwater
+for employee use, landscaping and other site needs. That distinction matters
+because it shows the water fight moving past cooling water, the number most
+communities ask about first, to every other draw a campus this size puts on
+a local aquifer.
+
+**What to learn — a public notice is the opening, not the end, of a water
+fight:** Virginia's DEQ, like most state environmental agencies, is required
+to publish a public notice before approving a groundwater withdrawal permit,
+with a comment period before any decision. That notice is exactly what let
+King George's water utility and Sen. Stuart get on record before a permit
+was ever granted. Two things to do before your own county's aquifer is on
+the line:
+
+1. Ask your county's public works or water utility department whether it
+   tracks pending withdrawal permits near local wellfields — the utility
+   often has more technical standing to object than an individual resident.
+2. Search your state environmental agency's public-notice log directly
+   rather than waiting for a news story; by the time a story runs, the
+   comment period may already be closing. See our breakdown of how these
+   water numbers actually add up in
+   [The Hidden Water Cost of Your AI Prompt](/blog/hidden-water-cost).
+
+*Sources: [Virginia Mercury, Aug 26](https://virginiamercury.com/);
+[Maryland Matters, Aug 30](https://marylandmatters.org/);
+[Fredericksburg Free Press, Aug 21](https://www.fredericksburgfreepress.com/);
+[Potomac Local, Sep 4](https://www.potomaclocal.com/)*
+
+---
+
+### 2. A developer drops its legal fight against Montgomery County's moratorium — because a tougher one already replaced it
+
+**What happened:** Atmosphere Data Centers withdrew its legal appeal of a
+six-month data center permitting pause County Executive Marc Elrich ordered
+in June, according to [Bethesda Magazine](https://bethesdamagazine.com/) and
+[WTOP](https://wtop.com/). The appeal became moot on July 28, when the
+Montgomery County Council voted unanimously to pass its own, stronger
+18-month moratorium — which superseded Elrich's executive order outright.
+Atmosphere had proposed a 360-megawatt, five-building campus at the former
+Dickerson power plant site; the company says it is still evaluating its
+options for the project.
+
+**Why it matters:** This is a case study in a distinction that matters
+anywhere a county executive and a county council can both act: an executive
+order is one official's decision and can be reversed by the next official,
+or superseded the moment the legislature acts on the same subject. A council
+ordinance is a legislative act, harder to undo, and — as this case shows —
+strong enough to make a legal challenge to the weaker order pointless before
+it was ever decided.
+
+**What to learn — know which body actually controls the pause you're
+citing:** If your county has both a moratorium-by-executive-order and a
+council considering its own ordinance, the executive order is the more
+fragile one. Push for the council vote, not just the order, because that is
+the version a developer's lawyers will actually have to litigate around.
+Montgomery County's tracker row and the underlying ordinance are on our
+[moratorium tracker](/moratoriums.html) and its
+[community page](/communities/montgomery-county-md.html).
+
+*Sources: [Bethesda Magazine, Aug 28](https://bethesdamagazine.com/);
+[WTOP, Aug 28](https://wtop.com/);
+[The Baltimore Banner, Jul 28](https://www.thebanner.com/);
+[Data Center Dynamics, Jul 16](https://www.datacenterdynamics.com/)*
+
+---
+
+### 3. Next door, Baltimore County is moving the opposite direction — toward a longer pause, not a shorter one
+
+**What happened:** Baltimore County's Planning Board held a public hearing
+September 3 on a 51-page draft report recommending new data center rules —
+limiting them to industrial zones, barring them from agricultural land, and
+requiring setbacks from residential property — ahead of a September 17 board
+vote on the report, per [The Baltimore Banner](https://www.thebanner.com/).
+Separately, five of the county council's seven members back extending the
+county's existing moratorium, which is due to expire no later than January
+1, 2027, through 2027; County Executive Kathy Klausmeier supports the
+extension as well, and the council vote is expected September 21, according
+to [WYPR](https://www.wypr.org/). At the hearing itself, residents spoke
+overwhelmingly against large data centers, per
+[CBS News Baltimore](https://www.cbsnews.com/baltimore/).
+
+**Why it matters:** Baltimore County shows what a moratorium is actually
+for, used correctly: not a permanent ban, but time bought to write specific,
+defensible rules — a zoning-only restriction, an agricultural-land carve-out,
+a residential setback — before the pause lapses and applications resume
+under whatever standard existed before.
+
+**What to learn — an extension vote is not a rubber stamp; show up for the
+report, not just the vote:** The draft rules a planning board produces
+during a moratorium usually become the actual standard once the pause ends,
+regardless of whether the council also extends it. If your county is in a
+moratorium, find out when its planning board's report becomes public — often
+weeks before the final council vote — and comment on the rules themselves,
+not just on whether to extend the clock. Baltimore County's moratorium and
+its January 2027 expiration are recorded on our
+[moratorium tracker](/moratoriums.html) and
+[community page](/communities/baltimore-county-md.html).
+
+*Sources: [The Baltimore Banner, Sep 1](https://www.thebanner.com/);
+[WYPR, Sep 1](https://www.wypr.org/);
+[CBS News Baltimore, Sep 4](https://www.cbsnews.com/baltimore/);
+[citybiz, Aug 31](https://www.citybiz.co/)*
+
+---
+
+### 4. West Virginia certifies a second $12 billion data center in one county — under a law that skips local review entirely
+
+**What happened:** Gov. Patrick Morrisey announced that Starwood Digital
+Ventures received the state's "high-impact data center" certification for a
+$12 billion, roughly 2.16-gigawatt project called Project Tamarack in West
+Columbia, Mason County — the sixth large-scale data center now confirmed in
+West Virginia, and the second certified in Mason County alone, according to
+[West Virginia Public Broadcasting](https://wvpublic.org/) and
+[WV MetroNews](https://wvmetronews.com/). The state says Starwood will fund
+the project's own infrastructure costs rather than pass them to ratepayers,
+and the company says it will use closed-loop cooling to limit water use.
+Residents reacted with what one told [WSAZ](https://www.wsaz.com/) was a
+"total shocker."
+
+**Why it matters:** West Virginia's certification program, created under
+2025's H.B. 2014, lets the state Department of Commerce certify a
+"high-impact data center" within 14 days once a developer shows the project
+will have a significant economic impact and help attract at least two other
+businesses to the state — a state-level approval track that does not run
+through the county's own zoning or public-hearing process. [West Virginia
+Watch](https://westvirginiawatch.com/) reported in February that the
+enabling legislation passed the House without the local-control or
+water-protection provisions some lawmakers sought.
+
+**What to learn — a state "certification" is not the same thing as a local
+permit, and residents can lose the hearing they assumed they'd get:** Before
+assuming a data center project in your state will go through your county's
+normal zoning process, ask whether your state has a fast-track certification
+or siting law like West Virginia's, and if so, what it does and does not
+require locally. Mason County's earlier data-center buyout program for
+neighboring homeowners — the first of its kind, profiled in our own reporting
+— is the kind of local leverage that still exists even when the zoning fight
+doesn't: see
+[The Playbook Communities Are Already Using](/blog/resource-extraction-precedent-2026).
+
+*Sources: [West Virginia Public Broadcasting, Sep 4](https://wvpublic.org/);
+[WV MetroNews, Sep 3](https://wvmetronews.com/);
+[WSAZ, Sep 4](https://www.wsaz.com/);
+[Herald-Dispatch, Sep 3](https://www.herald-dispatch.com/)*
+
+---
+
+### 5. Georgia residents sue Effingham County, alleging officials signed a secret NDA with OpenAI and skipped a required hearing
+
+**What happened:** Three Effingham County residents filed suit in Effingham
+County Superior Court alleging the county commission changed its zoning
+ordinance to clear the way for OpenAI's planned "Project Camellia" data
+center without holding the two public hearings — one before the planning
+board, one before the commission — that state law and the county's own rules
+require, according to [The Current](https://thecurrentga.org/) and
+[Georgia Public Broadcasting](https://www.gpb.org/). The suit also cites a
+non-disclosure agreement County Manager Tim Callanan signed with OpenAI that,
+the plaintiffs say, barred him from telling residents about the project — the
+same site, near Rincon, where Georgia's Public Service Commission approved a
+roughly $20 billion power contract just last week and Sen. Raphael Warnock
+called for a statewide moratorium (see our
+[coverage](/blog/week-in-review-2026-08-30)). The plaintiffs are asking a
+judge to declare the zoning change invalid.
+
+**Why it matters:** This is a different legal tool than a moratorium
+lawsuit — it doesn't argue the zoning decision was wrong on the merits, it
+argues the county broke its own procedural rules to reach that decision. If
+a court agrees, the zoning change itself could be thrown out regardless of
+what anyone thinks of the project.
+
+**What to learn — a skipped hearing is its own, separate claim:** Most
+states require a specific number of public hearings, at specific bodies,
+before certain zoning changes take effect, and those requirements exist
+independent of whether the ultimate decision was reasonable. If your county
+approved a rezoning tied to a data center, check whether it actually held
+every hearing your state's zoning-enabling statute requires — county
+commission minutes and agendas are public record, and a missed hearing is
+often easier to prove than a broader "the process was unfair" argument.
+NDAs signed by public employees are a
+separate flag: ask your county attorney directly whether any official signed
+one related to a pending project.
+
+*Sources: [The Current, Sep 3](https://thecurrentga.org/);
+[Georgia Public Broadcasting, Sep 3](https://www.gpb.org/);
+[WSAV-TV, Sep 3](https://www.wsav.com/);
+[Effingham Herald, Sep 3](https://www.effinghamherald.net/)*
+
+---
+
+### 6. A South Carolina town's planning commission recommends a moratorium — even though no large data center has actually applied yet
+
+**What happened:** Mount Pleasant's Planning Commission voted August 31 to
+recommend a 120-day moratorium on new data centers to the full town council,
+which takes it up September 8, according to
+[Live 5 News](https://www.live5news.com/) and
+[The Post and Courier](https://www.postandcourier.com/). Mayor Will Haynie
+told the paper there is "no immediate rush" — no developer has yet proposed
+a large-scale data center east of the Cooper River — but the pause is meant
+to give staff time to write a clearer definition of what counts as a "data
+center" before one is proposed, so that small business server rooms aren't
+swept up by rules meant for hyperscale campuses.
+
+**Why it matters:** Most moratoriums in this tracker respond to a specific
+project already in the pipeline. Mount Pleasant's is preemptive — written
+before any application exists, specifically so the definition and the rules
+are settled before a developer, not after.
+
+**What to learn — a moratorium written before a project arrives is easier to
+defend in court than one written in response to one:** Courts have been more
+skeptical of moratoriums that look like they were written to stop a single,
+named, already-filed project — that pattern is exactly what's being
+litigated in a Michigan lawsuit we covered two weeks ago. A pause adopted for
+a stated planning purpose, before any specific application exists, is the
+more legally durable version of the same tool. If your town hasn't had a
+data center proposal yet, this is the argument for asking it to act now
+rather than waiting for one.
+
+*Sources: [Live 5 News, Aug 31](https://www.live5news.com/);
+[The Post and Courier, Aug 31](https://www.postandcourier.com/);
+[ABC News 4, Aug 31](https://abcnews4.com/);
+[WCBD News 2, Aug 31](https://www.counton2.com/)*
+
+---
+
+### 7. Data centers become a Texas governor's race issue as a Democratic candidate calls for a special legislative session
+
+**What happened:** Democratic gubernatorial candidate Gina Hinojosa held a
+campaign stop outside the El Paso County Courthouse on August 31 calling on
+Gov. Greg Abbott to convene a special legislative session on data centers,
+according to [El Paso Matters](https://elpasomatters.org/) and
+[KVIA](https://kvia.com/). Hinojosa said that, if elected, she would seek to
+ban non-disclosure agreements between developers and local officials,
+prohibit local tax subsidies for data centers, require union labor, and void
+water contracts if local supplies face shortages. The stop came as Meta
+builds a $14 billion data center campus in El Paso.
+
+**Why it matters:** A campaign promise is not a policy, and a special
+session requires the governor to call one — Hinojosa cannot do that unless
+she wins. What it signals is that data centers, water and electricity costs
+have moved from a local zoning fight into a statewide campaign issue that a
+candidate expects to help, not hurt, a run for governor.
+
+**What to learn — track the platform, not just the press conference:** A
+candidate's data-center platform is a useful benchmark for what "good"
+policy could look like in your state, but it is not enforceable until it
+becomes a bill that passes and is signed. If a candidate in your state makes
+a promise like this, the concrete next step to watch is whether a sitting
+legislator introduces the actual bill — Texas's 2027 legislative session,
+not the campaign trail, is where any of this would actually happen. Track
+who represents you and what they've said on the record with our
+[officials scorecard](/scorecard.html).
+
+*Sources: [El Paso Matters, Aug 31](https://elpasomatters.org/);
+[KVIA, Aug 31](https://kvia.com/);
+[KTSM, Aug 31](https://www.ktsm.com/);
+[CBS Austin, Aug 31](https://cbsaustin.com/)*
+
+---
+
+### What to watch next week
+
+- **Baltimore County, MD** — whether the Planning Board's September 17 vote
+  on its draft rules, and the council's September 21 extension vote, land as
+  expected
+- **Mount Pleasant, SC** — whether the full town council adopts the
+  120-day moratorium its Planning Commission recommended
+- **Effingham County, GA** — the county's response to the residents' lawsuit
+  over the zoning ordinance and the OpenAI non-disclosure agreement
+- **King George County, VA** — whether Amazon returns with an alternate water
+  source for the Birchwood campus, and what that source turns out to be
+- **Mason County, WV** — whether Starwood's Project Tamarack files for any
+  local permits now that it holds state certification
+
+---
+
+*Every Sunday we cover the week's most important data center stories,
+explain the underlying concepts, and point you to the tools you need. Know
+a story we should cover? Reach out at hello@aigridwatch.com or sign up for
+the newsletter below.*
+""",
+    },
+    {
         "id": "virginia-september-2026-decision-calendar",
         "art": "moratorium",
         "section": "stories",
