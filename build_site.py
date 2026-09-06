@@ -1669,6 +1669,151 @@ at build time — an old month's bar can still show a color change if a row
 from that month later expired or was rescinded{caveat}.</p>"""
 
 
+def _mora_shape_html():
+    """What a moratorium looks like in practice, computed from the registry.
+
+    A resident drafting one wants the going rate: how long these run, who
+    passes them, what thresholds they use. Every figure here is derived from
+    rows with the relevant field documented — the denominator is stated so
+    "half run twelve months" cannot be read as "half of all rows".
+    """
+    import pandas as _pd
+    loc = MORATORIUMS_DF[MORATORIUMS_DF["level"] == "Local"]
+    if loc.empty:
+        return ""
+
+    def _body_kind(name):
+        n = str(name).lower()
+        if "county" in n or "parish" in n:
+            return "County"
+        if "township" in n or n.endswith(" twp"):
+            return "Township"
+        if "tribe" in n or "nation" in n:
+            return "Tribal"
+        return "City / town"
+
+    kinds = loc["locality"].map(_body_kind).value_counts()
+    termed = loc[loc["date"].map(has_value) & loc["expires"].map(has_value)]
+    days = (_pd.to_datetime(termed["expires"]) - _pd.to_datetime(termed["date"])).dt.days
+    months = (days / 30.44).round()
+    edges = [(0, 3, "3 months or less"), (4, 6, "4–6 months"), (7, 9, "7–9 months"),
+             (10, 12, "10–12 months"), (13, 18, "13–18 months"),
+             (19, 24, "19–24 months"), (25, 10 ** 6, "over 2 years")]
+    buckets = [(lbl, int(((months >= lo) & (months <= hi)).sum()))
+               for lo, hi, lbl in edges]
+    n_term = len(termed)
+    median = int(months.median()) if n_term else 0
+    extended = int(sum(1 for ev in loc["events"]
+                       if any(e.get("kind") == "extended" for e in (ev or []))))
+    thresholds = loc["threshold"].dropna().value_counts()
+    n_thr = int(loc["threshold"].map(has_value).sum())
+    top_thr = ", ".join(f"{esc(str(t))} ({n})" for t, n in thresholds.head(5).items())
+    standing = int((loc["term_kind"] == "standing").sum())
+    until_event = int((loc["term_kind"] == "until_event").sum())
+
+    peak = max((n for _, n in buckets), default=1) or 1
+    bars = "".join(
+        f'<div class="mora-shape-row"><span>{esc(lbl)}</span>'
+        f'<div class="mora-shape-bar"><i style="width:{n / peak * 100:.0f}%"></i></div>'
+        f'<b>{n}</b></div>' for lbl, n in buckets)
+    kind_rows = "".join(
+        f'<div class="mora-shape-row"><span>{esc(str(k))}</span>'
+        f'<div class="mora-shape-bar"><i style="width:{n / kinds.max() * 100:.0f}%"></i></div>'
+        f'<b>{int(n)}</b></div>' for k, n in kinds.items())
+    return f"""
+<section id="shape">
+  <h2>What a moratorium looks like</h2>
+  <p class="muted" style="margin-bottom:12px">The going rate, computed from
+  the tracker. Useful when a council asks "how long do these usually run?" —
+  the answer is in the record, not in the developer's talking points.</p>
+  <div class="mora-shape-grid">
+    <div class="mora-shape-card">
+      <h3>How long they run</h3>
+      <p class="muted">{n_term} local actions have both a start and a
+      documented end date. Median term: <b>{median} months</b>.
+      {extended} {"has" if extended == 1 else "have"} since been extended at
+      least once.</p>
+      {bars}
+      <p class="muted" style="font-size:12.5px;margin-top:8px">A further
+      {standing} {"is" if standing == 1 else "are"} standing bans with no end
+      date and {until_event} run until a condition is met, usually adoption
+      of new zoning rules.</p>
+    </div>
+    <div class="mora-shape-card">
+      <h3>Who passes them</h3>
+      <p class="muted">Local actions by the kind of body that acted, from the
+      locality name on the record.</p>
+      {kind_rows}
+      <h3 style="margin-top:16px">Size thresholds</h3>
+      <p class="muted">{n_thr} rows state a size trigger in their note — the
+      point at which the pause applies. Most common: {top_thr or "—"}. The
+      rest cover every data center regardless of size, or pause a specific
+      approval such as rezoning.</p>
+    </div>
+  </div>
+  <style>
+  .mora-shape-grid {{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }}
+  @media (max-width:860px) {{ .mora-shape-grid {{ grid-template-columns:1fr; }} }}
+  .mora-shape-card {{ border:1px solid var(--rule); border-radius:12px;
+    background:var(--card); padding:14px 16px; }}
+  .mora-shape-card h3 {{ margin:0 0 6px; font-size:15px; }}
+  .mora-shape-row {{ display:grid; grid-template-columns:120px 1fr 32px;
+    gap:10px; align-items:center; font-size:13px; margin:4px 0; }}
+  .mora-shape-row span {{ color:var(--muted); }}
+  .mora-shape-row b {{ text-align:right; }}
+  .mora-shape-bar {{ background:rgba(127,127,127,.12); border-radius:4px;
+    height:12px; overflow:hidden; }}
+  .mora-shape-bar i {{ display:block; height:100%; background:#2563eb;
+    border-radius:4px; }}
+  </style>
+</section>"""
+
+
+def _mora_report_html():
+    """"We missed one" form: the cheapest source of new rows is a resident
+    who was in the room. Plain Formspree POST like the footer capture — no
+    JS, and every field is optional except the locality so a tip from a
+    phone in a parking lot still lands.
+    """
+    if not FORMSPREE_ID:
+        return (f'<section id="report"><h2>Missing one? Tell us</h2>'
+                f'<p>Email <a href="mailto:hello@aigridwatch.com?subject='
+                f'Moratorium%20tip">hello@aigridwatch.com</a> with the '
+                f'locality, the date of the vote and a link to the agenda, '
+                f'ordinance or news report.</p></section>')
+    return f"""
+<section id="report">
+  <h2>Missing one? Tell us</h2>
+  <p class="muted" style="margin-bottom:12px">A vote we have not tracked, a
+  term that was extended, a link that died. Every row here started as a
+  document somebody read — send the document and it gets checked and added
+  with a source and a date, usually within a week.</p>
+  <form action="https://formspree.io/f/{FORMSPREE_ID}" method="POST"
+        class="mora-report-form">
+    <input type="text" name="locality" required placeholder="Locality and state, e.g. Cedar County, IA"
+           aria-label="Locality and state">
+    <input type="url" name="link" placeholder="Link to the ordinance, agenda, minutes or news report"
+           aria-label="Link to the record">
+    <input type="text" name="what" placeholder="What happened and when (one line)"
+           aria-label="What happened">
+    <input type="email" name="email" placeholder="Your email (optional, if we may follow up)"
+           aria-label="Email address">
+    <input type="hidden" name="source" value="moratoriums-report">
+    <input type="hidden" name="_subject" value="Moratorium tracker tip">
+    <button type="submit" class="btn">Send the tip</button>
+  </form>
+  <style>
+  .mora-report-form {{ display:grid; grid-template-columns:1fr 1fr; gap:10px;
+    background:var(--card); border:1px solid var(--rule); border-radius:12px;
+    padding:14px 16px; }}
+  @media (max-width:700px) {{ .mora-report-form {{ grid-template-columns:1fr; }} }}
+  .mora-report-form input {{ padding:8px 11px; border-radius:8px;
+    border:1px solid var(--rule); background:rgba(255,255,255,.04);
+    color:var(--ink); font-size:14px; }}
+  .mora-report-form button {{ grid-column:1 / -1; justify-self:start; }}
+  </style>
+</section>"""
+
 _MORATORIUM_SNAPSHOT_PATH = ROOT / "data" / "moratorium_snapshot.json"
 _MORATORIUM_CHANGES_PATH = ROOT / "data" / "moratorium_changes.json"
 _MORA_CHANGE_RETENTION_DAYS = 90
@@ -8033,6 +8178,7 @@ def build_moratoriums():
 {map_timeline_html}
 {alerts_html}
 {changes_html}
+{_mora_shape_html()}
 <section>
   <h2>All tracked moratoriums</h2>
   <p class="muted" style="margin-bottom:12px">Status is what applies
@@ -8272,6 +8418,7 @@ def build_moratoriums():
     <p><a href="embed/moratoriums.html" target="_blank" rel="noopener">Preview it &rarr;</a></p>
   </details>
 </section>
+{_mora_report_html()}
 <section>
   <h2>What happened next: case studies</h2>
   <p class="muted" style="margin-bottom:14px">Six communities that took

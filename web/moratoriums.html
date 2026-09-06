@@ -784,6 +784,53 @@ from that month later expired or was rescinded · 16 rows excluded (only a year 
 <li><a href="#stafford-county-va"><strong>Stafford County, VA</strong></a> — <span class="badge">New</span> <span class="muted">Added as Enacted</span></li>
 <li><a href="#spotsylvania-county-va"><strong>Spotsylvania County, VA</strong></a> — <span class="badge">New</span> <span class="muted">Added as Enacted</span></li></ul>
 </section>
+
+<section id="shape">
+  <h2>What a moratorium looks like</h2>
+  <p class="muted" style="margin-bottom:12px">The going rate, computed from
+  the tracker. Useful when a council asks "how long do these usually run?" —
+  the answer is in the record, not in the developer's talking points.</p>
+  <div class="mora-shape-grid">
+    <div class="mora-shape-card">
+      <h3>How long they run</h3>
+      <p class="muted">239 local actions have both a start and a
+      documented end date. Median term: <b>12 months</b>.
+      12 have since been extended at
+      least once.</p>
+      <div class="mora-shape-row"><span>3 months or less</span><div class="mora-shape-bar"><i style="width:4%"></i></div><b>5</b></div><div class="mora-shape-row"><span>4–6 months</span><div class="mora-shape-bar"><i style="width:57%"></i></div><b>65</b></div><div class="mora-shape-row"><span>7–9 months</span><div class="mora-shape-bar"><i style="width:14%"></i></div><b>16</b></div><div class="mora-shape-row"><span>10–12 months</span><div class="mora-shape-bar"><i style="width:100%"></i></div><b>115</b></div><div class="mora-shape-row"><span>13–18 months</span><div class="mora-shape-bar"><i style="width:20%"></i></div><b>23</b></div><div class="mora-shape-row"><span>19–24 months</span><div class="mora-shape-bar"><i style="width:9%"></i></div><b>10</b></div><div class="mora-shape-row"><span>over 2 years</span><div class="mora-shape-bar"><i style="width:4%"></i></div><b>5</b></div>
+      <p class="muted" style="font-size:12.5px;margin-top:8px">A further
+      50 are standing bans with no end
+      date and 6 run until a condition is met, usually adoption
+      of new zoning rules.</p>
+    </div>
+    <div class="mora-shape-card">
+      <h3>Who passes them</h3>
+      <p class="muted">Local actions by the kind of body that acted, from the
+      locality name on the record.</p>
+      <div class="mora-shape-row"><span>City / town</span><div class="mora-shape-bar"><i style="width:100%"></i></div><b>190</b></div><div class="mora-shape-row"><span>County</span><div class="mora-shape-bar"><i style="width:77%"></i></div><b>147</b></div><div class="mora-shape-row"><span>Township</span><div class="mora-shape-bar"><i style="width:33%"></i></div><b>62</b></div>
+      <h3 style="margin-top:16px">Size thresholds</h3>
+      <p class="muted">41 rows state a size trigger in their note — the
+      point at which the pause applies. Most common: 10 MW (4), 20 MW (3), 100,000 sq ft (3), 50 MW (3), 500 MW (2). The
+      rest cover every data center regardless of size, or pause a specific
+      approval such as rezoning.</p>
+    </div>
+  </div>
+  <style>
+  .mora-shape-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  @media (max-width:860px) { .mora-shape-grid { grid-template-columns:1fr; } }
+  .mora-shape-card { border:1px solid var(--rule); border-radius:12px;
+    background:var(--card); padding:14px 16px; }
+  .mora-shape-card h3 { margin:0 0 6px; font-size:15px; }
+  .mora-shape-row { display:grid; grid-template-columns:120px 1fr 32px;
+    gap:10px; align-items:center; font-size:13px; margin:4px 0; }
+  .mora-shape-row span { color:var(--muted); }
+  .mora-shape-row b { text-align:right; }
+  .mora-shape-bar { background:rgba(127,127,127,.12); border-radius:4px;
+    height:12px; overflow:hidden; }
+  .mora-shape-bar i { display:block; height:100%; background:#2563eb;
+    border-radius:4px; }
+  </style>
+</section>
 <section>
   <h2>All tracked moratoriums</h2>
   <p class="muted" style="margin-bottom:12px">Status is what applies
@@ -1066,6 +1113,38 @@ from that month later expired or was rescinded · 16 rows excluded (only a year 
     for attribution.</p>
     <p><a href="embed/moratoriums" target="_blank" rel="noopener">Preview it &rarr;</a></p>
   </details>
+</section>
+
+<section id="report">
+  <h2>Missing one? Tell us</h2>
+  <p class="muted" style="margin-bottom:12px">A vote we have not tracked, a
+  term that was extended, a link that died. Every row here started as a
+  document somebody read — send the document and it gets checked and added
+  with a source and a date, usually within a week.</p>
+  <form action="https://formspree.io/f/xljroogo" method="POST"
+        class="mora-report-form">
+    <input type="text" name="locality" required placeholder="Locality and state, e.g. Cedar County, IA"
+           aria-label="Locality and state">
+    <input type="url" name="link" placeholder="Link to the ordinance, agenda, minutes or news report"
+           aria-label="Link to the record">
+    <input type="text" name="what" placeholder="What happened and when (one line)"
+           aria-label="What happened">
+    <input type="email" name="email" placeholder="Your email (optional, if we may follow up)"
+           aria-label="Email address">
+    <input type="hidden" name="source" value="moratoriums-report">
+    <input type="hidden" name="_subject" value="Moratorium tracker tip">
+    <button type="submit" class="btn">Send the tip</button>
+  </form>
+  <style>
+  .mora-report-form { display:grid; grid-template-columns:1fr 1fr; gap:10px;
+    background:var(--card); border:1px solid var(--rule); border-radius:12px;
+    padding:14px 16px; }
+  @media (max-width:700px) { .mora-report-form { grid-template-columns:1fr; } }
+  .mora-report-form input { padding:8px 11px; border-radius:8px;
+    border:1px solid var(--rule); background:rgba(255,255,255,.04);
+    color:var(--ink); font-size:14px; }
+  .mora-report-form button { grid-column:1 / -1; justify-self:start; }
+  </style>
 </section>
 <section>
   <h2>What happened next: case studies</h2>
