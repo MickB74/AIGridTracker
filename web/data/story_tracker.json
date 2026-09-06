@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 5225,
+  "count": 5233,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -45876,7 +45876,7 @@
       "locality": "Northern Virginia",
       "state": "VA",
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-05"
+      "last_seen": "2026-09-06"
     },
     {
       "title": "Anthropic Has Agreed To Spend $45 Billion To Rent AI Cloud Computing Power From Nscale’S Data Center Development In West Virginia-Bloomberg News",
@@ -47669,7 +47669,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-05"
+      "last_seen": "2026-09-06"
     },
     {
       "title": "AROUND TOWN: Georgia Dems hear Cobb residents’ concerns about affordability, data centers",
@@ -47735,7 +47735,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-05"
+      "last_seen": "2026-09-06"
     },
     {
       "title": "More than half of Texas data centers broke law by not responding to water use inquiry",
@@ -50089,7 +50089,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-04"
+      "last_seen": "2026-09-06"
     },
     {
       "title": "Abbott launches Project Watershed 250 to bolster Texas water systems against cyberattacks",
@@ -52333,7 +52333,7 @@
       "locality": "Colfax County",
       "state": "NM",
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-05"
+      "last_seen": "2026-09-06"
     },
     {
       "title": "UPDATE: Walker Co. data center study committee says outright ban not ‘legally viable’",
@@ -53895,7 +53895,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-05"
+      "last_seen": "2026-09-06"
     },
     {
       "title": "Find Data Centers Near You in Texas With Our Search Tools",
@@ -55567,7 +55567,7 @@
       "locality": "Hanover Township",
       "state": "PA",
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-05"
+      "last_seen": "2026-09-06"
     },
     {
       "title": "Data center moratorium approved by metro Atlanta City in special meeting",
@@ -57481,6 +57481,94 @@
       "locality": "Fulton County",
       "state": "IN",
       "first_seen": "2026-08-31",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "Data center noise lawsuits test limits of local ordinances",
+      "outlet": "Smart Cities Dive",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa0piQnY1VE52NU9FS19wRjVnV1BfSHhYd1FjVmdnVDdnNHlXRDdhRjhWdkYzbVN3bnNPYXNRM3hvYkRGYXk1ZmhLU3Q2M0RpYkRxaTFoS2owdXZ4UGo3NEl6M2VjelhnX2xXbkJDZW13TmZfblVrb2RtLXZxZVFlMlczMnFQLUNtRmtLQWFpR2VicmpQLTUzc1FzMmJWTzBxT054N3ZYNlZwZU5RZlhWZEQtVQ?oc=5",
+      "published": "Tue, 01 Sep 2026 15:37:57 GMT",
+      "published_iso": "2026-09-01T15:37:57+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "‘Someone has to go out on a limb’: What to know about Bernie Sanders’ newest AI pitch",
+      "outlet": "politico.com",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQaEZKOGRjMkRCbjYyeGMwUmRCRXJLYmtscElQMUxlYkRHVWxnclFibXc0aEdWOUxhaUo3azMwbWZmUlFscmd2SlFqOU1CY0FZOFNNbVhEQndsVEI4SzEwRDc0X3lkSEdRczFhOXAxUkZ1WVY1em4zNnlvb2d4dGN3OFNiUm9Xc1JmUEM2S2U5NS1Wa043OTBDTDZodkd4OFIyb3lBMTBQajJxZkxHSjZfb0dfQ1Nycy05ODRpRkV5aDFLM1I1blZISjd4cw?oc=5",
+      "published": "Thu, 03 Sep 2026 23:16:00 GMT",
+      "published_iso": "2026-09-03T23:16:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "In Residence at the Arts Council of Princeton, and Already On the Wall on Spring Street",
+      "outlet": "TAPinto",
+      "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQSUhpUDcyLXQ5T1V2cmtmUHYyckdXaDNoLUlQa0xST3JrMmZDTHlCZDY2d1lvNF9IZWMwSjhqeTRNVUxIOU9LdzJ1RmFrVjc3d2JvTkRrU2hBTm1NYklESTlzRFhjT1JaLTlLT09PYmpoOTFlTWRmSlUxQmlSWmZjNjBMUUZ1eDB6UkhmMF9NTkJOQzN2R3lUelZWX1JIeXRCcFVuc09TWS1Oai1uOGoxWG9IcVBFc3JYMXdTTFlGcFR6TUFrRi1WSDUxUzNUb2RVYlZaSTZQMk4tNXVWdTRRazZPZUlpeDN5bjZLelBfazJESFltOWNGRWtxcw?oc=5",
+      "published": "Tue, 01 Sep 2026 00:52:54 GMT",
+      "published_iso": "2026-09-01T00:52:54+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "Should we expect more standalone data centre treaties during 2027 renewals?",
+      "outlet": "theinsurer.com",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOTUstRGNzV1lPMHN3NnhSdzdmQUh1dnV4alNvVk1iWmdWOFpkMTdSOVJIZGdDZ3B0V2lnLTgtZXJnaWczdWtldzg4SjdlRjlVZ2JiWHp1aTRMRnpuS3FGQllqcUhZY1liSGRnWm51bmlEaUozOEVUU1R6dTNCVjVDanVYZXBBZWplZ1paZnBWOEhrb2oyNUkwbmJOaGdJR1RyVmIwb281aWNtNHlNNFJuNW9KSTVUSDEyZVl3ckNRTkRDZm85RWNLUjJ2MWl6UQ?oc=5",
+      "published": "Sun, 06 Sep 2026 05:07:57 GMT",
+      "published_iso": "2026-09-06T05:07:57+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "'Literally killing us': Huge Texas data center advances amid backlash",
+      "outlet": "Chron",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPS0hldXBxV1E5dzRIbHJQdWJ3ZGlUa0YtdS00djNRcWEyUEwwNmJiYW5obzhGY0YyRHdHQlZpOWVxeDJXaHZ5LURLSXVxYU11ckFXWkhKSWs2cWcwS3cwaHhDdlA1UmVGbk5ubFR1Ylh1b1RSdDF5WXRtcjVMbGx1djI3aFNyRlFmQjNXRA?oc=5",
+      "published": "Sun, 06 Sep 2026 17:32:39 GMT",
+      "published_iso": "2026-09-06T17:32:39+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "Find data centers near you in Texas with our search tools",
+      "outlet": "Yahoo",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdzFtOG5KVVJnakRrVk9HVTN4VHFaVEktU2pvaEJyM08zZW90U1JsLVNWWFM5XzVpVllWWjBnZHhzbFAzaUw0QlRtbmphV0hpQnpwYWktUUhFcnhPNlIyMWs3R3pQY18tM0tjTjR0VkVBNk1WYnkxbk0xQnhvY0RLR0l5Qlo3MmRydWt2Sg?oc=5",
+      "published": "Wed, 02 Sep 2026 10:00:00 GMT",
+      "published_iso": "2026-09-02T10:00:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "‘Backwards and poor’: Trump issues dire warning to communities blocking critical technology",
+      "outlet": "Fox News",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNMEFFTnJxUUoteERpczF1elduLVRnTFE2S2hmWVFpaGJTdllCVGpkaks0NkprZUlKNHBJQXAzNUd6VHlCQzBvRFR3Mmt0Qk5Va1ZqU2RiMWlzMEJyNEJYWjBtRnY3bmMwMUNDdGIzUWZhMkxrODN3RXNfbEFzaENzM0IzanEyaEFvend1WEt2dTRIbW1NSHpXVjl0Zklub05TVkczM1pIVlFMUm5MYTc0QS0wY0I?oc=5",
+      "published": "Mon, 31 Aug 2026 18:21:31 GMT",
+      "published_iso": "2026-08-31T18:21:31+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "title": "Amazon funding Starke County watershed restoration project",
+      "outlet": "Inside INdiana Business",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNVmdJeEJWbWVCZTdkUzRVdmFfckhDdkJ5UXJjZUk1eC1hQnF0UU1XSkJVUjdCWFNHSFNNU1lQczFXYW9tdFREV1hneW45VkhMUXNxVXZtLW5ZUkIxNUpERW9LXzJaZTIyZ3NVMDZtLXA4QnZsTVpkb0V6MDV3SkxkWEJPaG1oT1FpZWpSbk5FN2FtejVCRFU1UTNnd0JRcURaOV93RG9aVHA?oc=5",
+      "published": "Tue, 02 Jun 2026 07:00:00 GMT",
+      "published_iso": "2026-06-02T07:00:00+00:00",
+      "locality": "Starke County",
+      "state": "IN",
+      "first_seen": "2026-06-02",
       "last_seen": "2026-09-06"
     }
   ]
