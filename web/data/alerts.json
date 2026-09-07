@@ -4,7 +4,7 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
-  "count": 50,
+  "count": 52,
   "alerts": [
     {
       "id": "mora-MI-armada-township-2026-07-13",
@@ -108,6 +108,19 @@
       "title": "Kingsland, GA: data center moratorium has lapsed",
       "body": "The moratorium's documented term ran to 2026-08-09 (28 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
       "source": "https://kingslandgeorgia.com/DocumentCenter/View/12289/Data-Center-Temporary-Suspension-and-Moratorium-Ordinance?bidId=",
+      "verified": true
+    },
+    {
+      "id": "mora-MI-saugatuck-township-2026-08-11",
+      "kind": "moratorium-expiry",
+      "severity": "expired",
+      "locality": "Saugatuck Township",
+      "state": "MI",
+      "expires": "2026-08-11",
+      "days_left": -26,
+      "title": "Saugatuck Township, MI: data center moratorium has lapsed",
+      "body": "The moratorium's documented term ran to 2026-08-11 (26 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
+      "source": "https://saugatucktownshipmi.gov/wp-content/uploads/2026/04/20260211-Meeting-minutes-APPROVED-SIGNED.pdf",
       "verified": true
     },
     {
@@ -576,6 +589,19 @@
       "title": "Bloomington, IL: data center moratorium expires in 81 days",
       "body": "The documented term ends 2026-11-26. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.wglt.org/local-news/2026-05-26/bloomington-approves-6-month-moratorium-on-data-centers",
+      "verified": true
+    },
+    {
+      "id": "mora-ME-gorham-2026-11-29",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Gorham",
+      "state": "ME",
+      "expires": "2026-11-29",
+      "days_left": 84,
+      "title": "Gorham, ME: data center moratorium expires in 84 days",
+      "body": "The documented term ends 2026-11-29. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.gorhamtimes.com/town-council-meeting-june-2/",
       "verified": true
     },
     {

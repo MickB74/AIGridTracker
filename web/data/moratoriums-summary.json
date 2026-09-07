@@ -3,11 +3,11 @@
   "generated": "2026-09-06",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 512,
+  "count": 524,
   "states": 41,
-  "enacted": 430,
+  "enacted": 441,
   "proposed": 39,
-  "official_sourced": 46,
+  "official_sourced": 48,
   "by_state": {
     "CO": {
       "total": 10,
@@ -40,8 +40,8 @@
       "proposed": 0
     },
     "WI": {
-      "total": 13,
-      "enacted": 12,
+      "total": 14,
+      "enacted": 13,
       "proposed": 1
     },
     "RI": {
@@ -50,8 +50,8 @@
       "proposed": 0
     },
     "MI": {
-      "total": 37,
-      "enacted": 26,
+      "total": 41,
+      "enacted": 29,
       "proposed": 0
     },
     "TX": {
@@ -65,8 +65,8 @@
       "proposed": 2
     },
     "NY": {
-      "total": 11,
-      "enacted": 8,
+      "total": 12,
+      "enacted": 9,
       "proposed": 3
     },
     "CT": {
@@ -80,8 +80,8 @@
       "proposed": 0
     },
     "ME": {
-      "total": 5,
-      "enacted": 3,
+      "total": 6,
+      "enacted": 4,
       "proposed": 1
     },
     "NC": {
@@ -125,8 +125,8 @@
       "proposed": 0
     },
     "NJ": {
-      "total": 67,
-      "enacted": 62,
+      "total": 68,
+      "enacted": 63,
       "proposed": 5
     },
     "IN": {
@@ -160,13 +160,13 @@
       "proposed": 2
     },
     "OK": {
-      "total": 7,
-      "enacted": 6,
+      "total": 8,
+      "enacted": 7,
       "proposed": 0
     },
     "MN": {
-      "total": 8,
-      "enacted": 8,
+      "total": 9,
+      "enacted": 9,
       "proposed": 0
     },
     "AL": {
@@ -175,8 +175,8 @@
       "proposed": 0
     },
     "PA": {
-      "total": 6,
-      "enacted": 5,
+      "total": 8,
+      "enacted": 7,
       "proposed": 1
     },
     "AZ": {
@@ -277,7 +277,8 @@
       "augusta-richmond-county-ga",
       "camden-county-ga",
       "roswell-ga",
-      "riley-county-ks"
+      "riley-county-ks",
+      "gorham-me"
     ]
   }
 }
