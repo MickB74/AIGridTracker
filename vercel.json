@@ -579,16 +579,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/bristol-tn",
-      "destination": "/states/tennessee",
-      "permanent": true
-    },
-    {
-      "source": "/communities/bristol-tn.html",
-      "destination": "/states/tennessee",
-      "permanent": true
-    },
-    {
       "source": "/communities/brownhelm-township-oh",
       "destination": "/states/ohio",
       "permanent": true
@@ -606,16 +596,6 @@
     {
       "source": "/communities/butler-township-pa.html",
       "destination": "/states/pennsylvania",
-      "permanent": true
-    },
-    {
-      "source": "/communities/caddo-parish-la",
-      "destination": "/states/louisiana",
-      "permanent": true
-    },
-    {
-      "source": "/communities/caddo-parish-la.html",
-      "destination": "/states/louisiana",
       "permanent": true
     },
     {

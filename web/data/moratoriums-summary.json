@@ -3,21 +3,21 @@
   "generated": "2026-09-06",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 460,
-  "states": 39,
-  "enacted": 387,
-  "proposed": 35,
-  "official_sourced": 43,
+  "count": 512,
+  "states": 41,
+  "enacted": 430,
+  "proposed": 39,
+  "official_sourced": 46,
   "by_state": {
     "CO": {
-      "total": 8,
-      "enacted": 7,
+      "total": 10,
+      "enacted": 9,
       "proposed": 0
     },
     "MD": {
-      "total": 14,
+      "total": 15,
       "enacted": 13,
-      "proposed": 1
+      "proposed": 2
     },
     "NV": {
       "total": 5,
@@ -25,8 +25,8 @@
       "proposed": 0
     },
     "IA": {
-      "total": 15,
-      "enacted": 12,
+      "total": 17,
+      "enacted": 14,
       "proposed": 2
     },
     "IL": {
@@ -50,8 +50,8 @@
       "proposed": 0
     },
     "MI": {
-      "total": 32,
-      "enacted": 21,
+      "total": 37,
+      "enacted": 26,
       "proposed": 0
     },
     "TX": {
@@ -60,8 +60,8 @@
       "proposed": 4
     },
     "GA": {
-      "total": 19,
-      "enacted": 15,
+      "total": 30,
+      "enacted": 23,
       "proposed": 2
     },
     "NY": {
@@ -70,28 +70,28 @@
       "proposed": 3
     },
     "CT": {
-      "total": 3,
+      "total": 4,
       "enacted": 1,
-      "proposed": 1
+      "proposed": 2
     },
     "MO": {
-      "total": 8,
-      "enacted": 8,
+      "total": 10,
+      "enacted": 9,
       "proposed": 0
     },
     "ME": {
-      "total": 4,
+      "total": 5,
       "enacted": 3,
-      "proposed": 0
+      "proposed": 1
     },
     "NC": {
-      "total": 33,
-      "enacted": 28,
+      "total": 35,
+      "enacted": 30,
       "proposed": 1
     },
     "FL": {
-      "total": 14,
-      "enacted": 12,
+      "total": 15,
+      "enacted": 13,
       "proposed": 1
     },
     "OH": {
@@ -100,13 +100,13 @@
       "proposed": 1
     },
     "TN": {
-      "total": 8,
-      "enacted": 7,
+      "total": 17,
+      "enacted": 16,
       "proposed": 1
     },
     "CA": {
-      "total": 7,
-      "enacted": 7,
+      "total": 8,
+      "enacted": 8,
       "proposed": 0
     },
     "WA": {
@@ -120,8 +120,8 @@
       "proposed": 1
     },
     "KY": {
-      "total": 12,
-      "enacted": 12,
+      "total": 14,
+      "enacted": 14,
       "proposed": 0
     },
     "NJ": {
@@ -130,8 +130,8 @@
       "proposed": 5
     },
     "IN": {
-      "total": 18,
-      "enacted": 18,
+      "total": 19,
+      "enacted": 19,
       "proposed": 0
     },
     "AR": {
@@ -150,9 +150,9 @@
       "proposed": 0
     },
     "SC": {
-      "total": 5,
-      "enacted": 5,
-      "proposed": 0
+      "total": 8,
+      "enacted": 7,
+      "proposed": 1
     },
     "VA": {
       "total": 14,
@@ -175,8 +175,8 @@
       "proposed": 0
     },
     "PA": {
-      "total": 3,
-      "enacted": 2,
+      "total": 6,
+      "enacted": 5,
       "proposed": 1
     },
     "AZ": {
@@ -185,8 +185,8 @@
       "proposed": 1
     },
     "KS": {
-      "total": 4,
-      "enacted": 3,
+      "total": 7,
+      "enacted": 6,
       "proposed": 1
     },
     "MS": {
@@ -203,13 +203,25 @@
       "total": 1,
       "enacted": 1,
       "proposed": 0
+    },
+    "MA": {
+      "total": 1,
+      "enacted": 1,
+      "proposed": 0
+    },
+    "LA": {
+      "total": 1,
+      "enacted": 0,
+      "proposed": 0
     }
   },
   "expiring_within_days": {
     "30": [
       "augusta-ga",
       "wixom-mi",
-      "front-royal-va"
+      "front-royal-va",
+      "augusta-richmond-county-ga",
+      "roswell-ga"
     ],
     "60": [
       "bangor-me",
@@ -225,7 +237,10 @@
       "pierce-township-oh",
       "tallmadge-oh",
       "indio-ca",
-      "palm-springs-ca"
+      "palm-springs-ca",
+      "lowndes-county-ga",
+      "augusta-richmond-county-ga",
+      "roswell-ga"
     ],
     "90": [
       "bloomington-il",
@@ -257,7 +272,12 @@
       "pierce-township-oh",
       "tallmadge-oh",
       "indio-ca",
-      "palm-springs-ca"
+      "palm-springs-ca",
+      "lowndes-county-ga",
+      "augusta-richmond-county-ga",
+      "camden-county-ga",
+      "roswell-ga",
+      "riley-county-ks"
     ]
   }
 }
