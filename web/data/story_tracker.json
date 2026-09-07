@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 5321,
+  "count": 5335,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -9455,7 +9455,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-09-04"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "Data centers, pickleball courts discussed in Far Hills",
@@ -44424,7 +44424,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-04"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "N.J. enacts data center energy, water disclosure law",
@@ -47592,7 +47592,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-04"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "Data center impact report released by Treasurer Pack",
@@ -47603,7 +47603,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-02"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "Caddo commissioners reject data center moratorium step",
@@ -47746,7 +47746,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-05"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "Survey finds some North Texas governments feel unprepared for data center growth",
@@ -48274,7 +48274,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-04"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "Is Digital Realty Trust (NYSE:DLR) Doubling Down on Northern Virginia?",
@@ -49044,7 +49044,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-04"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "How much water will Effingham’s OpenAI data center need? A lot – but not on site.",
@@ -49605,7 +49605,7 @@
       "locality": null,
       "state": "NC",
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-06"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "Louisiana residents press Amazon for answers on noise near proposed data centers",
@@ -52080,7 +52080,7 @@
       "locality": null,
       "state": "NE",
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-06"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "‘That’s our right’; Ralls County residents hold meeting, demand transparency on possible data center",
@@ -52135,7 +52135,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-06"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "‘That’s our right’; Ralls County residents hold meeting, demand transparency on possible data center",
@@ -52201,7 +52201,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-06"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "Newsom already said no to data centers disclosing water use once. Now he has two more chances",
@@ -53433,7 +53433,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-06"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "LG Electronics considers Virginia chiller plant to meet AI data center cooling surge",
@@ -55732,7 +55732,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-06"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "Harmony residents raise concerns over pacing of proposed data center ordinance",
@@ -56051,7 +56051,7 @@
       "locality": null,
       "state": "CA",
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-06"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "Trump blasts data center critics: 'Backwards and poor'",
@@ -56557,7 +56557,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-06"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "Data center moratoria will make life less affordable for Americans",
@@ -58537,6 +58537,160 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-02",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Microsoft and xAI data centers face growing complaints from nearby residents",
+      "outlet": "techradar.com",
+      "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQdUI2Vm83Q3cxZTY0eVlEVEVrbG1DRjNpeklSQWstSk5QRmVTS25VejFwYjdoMWMyX0tFRzBGaU5tUjhfbWFoLTNvRmZiVUx2SXFJeHM3a3dtR1dGRmJMWTdDckdEMXpXRWFtUXJXaUtfZk9rTzlhQ1VmNDdpMUhvUnZ1R00tSVJtM1hmN2FzWWx4Sk0wSlp0aXRUMS1QUjF0ZTVLT1d1SzU5SGhnRGlLTXZIaFNzN0VWSzVEN3FZRDc4b0hCU2gyQzY0NHppWHVTenlYYmprYVVLYjhRdFlGOVJfc2hremNNQzR4TDVGUGpVbmtBRDViUDR4N1prdw?oc=5",
+      "published": "Mon, 07 Sep 2026 22:20:00 GMT",
+      "published_iso": "2026-09-07T22:20:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Mayor says data centers not allowed in Fresno. So why is city mulling 10-year ban?",
+      "outlet": "Fresno Bee",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5zVDhReWlBckxFRnY3S0hKVVhUMVRaQUJFYVFKWDFZdXlxN3FGXy12X1hNZGJqU0s5ODNsZktMNkpuSlQtZjRQbW5zT0oydm56Q2ZQbTF4bkt5enp5NWRCNHlJSHFMM3l5OHhVWFNfSU9wcVRoUk1uWE1HRl_SAXxBVV95cUxPMy1Lb0NjeHpYQzJjUjU0cVdFeWxfZDdLbUwxVkFZd212ZXZjWXZ0UFdDSUQ3WGQxc2tYSzI1bVNPVXk0TWlnQXNTWTU5QXFnSmN0LVljbWVuRXRtdElVWXQzUUp0ekpyZHNyZHpDMjNaYTRmVWJaSWt4Qms0?oc=5",
+      "published": "Wed, 02 Sep 2026 22:11:15 GMT",
+      "published_iso": "2026-09-02T22:11:15+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Ohio Supreme Court orders Trenton vote on data center ban",
+      "outlet": "Journal-News.com",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPbWdsYl92ajJleEh0SUt6NloteWg3N0ZzcmNob2d1RGNienVFcXZmdWIyYnZhNG11amVubjRvN3B5bnNGZXRZbnBwSHQwTnFlWDJlblpnWll0WkMxZVBEdjNNN3d3MUxsc3JBbTNlZVlRYm1DcHdXZ0JjaHBzTEVXd1NMa0ZtU1lHX0libi1paGY?oc=5",
+      "published": "Thu, 03 Sep 2026 01:05:06 GMT",
+      "published_iso": "2026-09-03T01:05:06+00:00",
+      "locality": null,
+      "state": "OH",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Tulare moves past data center moratorium",
+      "outlet": "The Sun-Gazette Newspaper",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPVTJ6OVcwMlExa1VlVEMzVzZQZHhjaVZzWkJGNXhURkFEeDBqTFVqSWJEM2xJQ3ZSZGxfRnU2TmRiQXpER0JtUWZVVmNpdFdxdW5jSFUxWC03ellqRG9aODExRTktRURHdTJkemJETXlRaGNVaGlnMEc4ZFNNSzlTMi01eEpXR1R6OTk2SG5LT25Pdlc2bEE?oc=5",
+      "published": "Fri, 04 Sep 2026 00:37:21 GMT",
+      "published_iso": "2026-09-04T00:37:21+00:00",
+      "locality": "Tulare County",
+      "state": "CA",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Avnos Launches New Jersey Plant Capturing 450 Tons of CO2 While Producing Water",
+      "outlet": "finance.biggo.com",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBuTzVCd0ZEYWthQUlqdmxKR21UYjl2RXpnRnNQeWNJcE80eUJGSWkyWkFfWXNTQ2NtM1k1LThBbG1LWGdBWUliaHNCUUFWN0VNQU41c3BCeG1wWk5jckFoN3FVQUVXZzlmZGd3NVdSSzBESFo0aUE?oc=5",
+      "published": "Wed, 02 Sep 2026 18:23:00 GMT",
+      "published_iso": "2026-09-02T18:23:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Princeton Police: Another Scam, With $16,880 Going From a Resident's Bank Account to a Bitcoin Kiosk in Trenton",
+      "outlet": "TAPinto",
+      "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxOUktuZEhRanJKMnJncU5PeHUwN3RVQ24wYzNMemNrNWMxaU1kM2dRU205QmlBYm1pbWFuSU1Fd0t1ajY0X2VUWXkyVm1jLXZra2ZpYVBPRjBERi1WVktmeGhKNEZkbGJoMDREcDNRSG5iRnN0Q0llNC1RZ2lHTFM5cFZzYzI4NnZRMUV6d0VyVmlQUnU4R2t0VGJLOTl6VkV1TmFVN1ZtbWowQ3I3ZkdqZG9sdzZTQzdsM0VJWTFOdktnRjBWX21QTVJ5UUJ1RE93N3ZhNmlnMzVvcFcydDFsWlRNOXVMc0c5SUVya3lTRmlKOERaeWwyOHE2NkJnTFJOMGV2Qy1RRFlZR1hyZXE4?oc=5",
+      "published": "Thu, 03 Sep 2026 18:44:39 GMT",
+      "published_iso": "2026-09-03T18:44:39+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "'Negotiating the pennies left in the couch,' data centers outpacing West Virginia's outdated revenue model",
+      "outlet": "Yahoo",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPejVzMnF5X2JCQmw3U0dfeUlBdk9ucUVpbEZzcnZsQTgwcHdLV2ppeGtCLXlUWDF3Tk10aGFac3Z3MjdDZy1MWEhGSFNmUVpUUEVtdkYyRDBtZFRoWkFoNEx1aTNhOG1jeE1rcllTMlM3NzBpSlpkYzlWUEh6U1gzWVdua3pudU9QeXdaNA?oc=5",
+      "published": "Tue, 01 Sep 2026 03:35:00 GMT",
+      "published_iso": "2026-09-01T03:35:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Anniston Pauses Data Centers as Floyd County Adopts New Development Rules",
+      "outlet": "weisradio.com",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOdldwbW5hdHBQRFdBTllZdnROXzdodzhZTTZieHYyXzdOVW5UWFB6c3BkTmdNeHlHZ2doT21CaHFDZTJhUDFRZWxyWlhBbHloRFdvYmp2SFUyQkgxYW9iX1FGSGtBM1NnejBja2duM01raGV5dnZiNkI1ZGZ0Z2VVblJmRUhmTl9BdWd3Sg?oc=5",
+      "published": "Mon, 07 Sep 2026 21:32:12 GMT",
+      "published_iso": "2026-09-07T21:32:12+00:00",
+      "locality": "Floyd County",
+      "state": "GA",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Public Service Commission sets Sept. 15 meeting in Savannah",
+      "outlet": "Statesboro Herald",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNekJCTmxlN251QmNtUDNORU4wdy1sdXpFMWVweHdqOEdqY2I3UG5wYUpmN0RWZ3BVZEpITThiODRxcTNYWHV2X0JiVndqaEhicjhWajctYUN5MUtNa2xkQzIxcjdndkp0Tml3UE0tTkxuTDQ1MUthX2pXWm12X0ZsRFl0T3pvODdNUWJLQXZBcnp2QUtIR1Yydnl2aXdpS00?oc=5",
+      "published": "Mon, 07 Sep 2026 20:53:50 GMT",
+      "published_iso": "2026-09-07T20:53:50+00:00",
+      "locality": "Savannah",
+      "state": "GA",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Fort Worth forms new commission to guide local data center growth",
+      "outlet": "WFAA",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNNkIxTFJTU0tNaUo4QmNpamFkM2RHS3JMQ21xbkptejBVWEZYdjh2NkIwemdkNUIwbEE1ZVN5S1lxQ29qU0ltRDRiaXpWQy15TVlMZ2pnaHBUc1duOW5pcC1SVV9ucHF3VHNDc2ZSSE9wUFZBd0RTNS16b3lRNkhpRTVsOWVHT2JoOVp3YzFub28zcTNYZGxSS09MMzVTU2JYR1c2WWxBMUZIMVhHUEcwWGFlQmxhVHloT3NpeExscnNGaWVrOHZMR3dOdDBpeVAzWEE?oc=5",
+      "published": "Fri, 04 Sep 2026 10:26:00 GMT",
+      "published_iso": "2026-09-04T10:26:00+00:00",
+      "locality": "Fort Worth",
+      "state": "TX",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Vantage’s 1.4GW Texas campus makes grid contracts the real data center schedule",
+      "outlet": "MarketScale",
+      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNTHZYcjZVTTQwLXVFenFEdGlpejdNMDh1WGRsZWRIaWNabnJfSTFobjdNMFBPNjVmTXZ6S19ZZkVRcHVQTFpiZWotc1BrUG1qU0l1MEN1ZlUzUHV4dmYxTG1TVjNOMlo4cVdyYkl3M1FhbmxHQlVYb2FnR05fQWp4cUliNU5SaktEOVd0bXpxWFh0M3dPWHNzd1Fxai1WUU1iYVFzbVB6M0luaDNWdGtrVmRPaDd0eHNJMi1oMVVkUzY2V2hnY3BwMURwZHgxUk9oSXJCN1JxNA?oc=5",
+      "published": "Mon, 07 Sep 2026 22:42:46 GMT",
+      "published_iso": "2026-09-07T22:42:46+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Gas City Mayor Bill Rock's 2025 end of year reflections",
+      "outlet": "Chronicle-Tribune",
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQMzJzMU9TVC1uQzlobC1yNW1ZLVl5T3ZUZjlFcmtabkxCaTJuVzJXSVo2aGJrSUVWY0ZLc2xfUC1sNlVKUGppMGZqbzNmVVBzeVdnZFh5cF9SdTI3NkhBV0RTbFdGQXJNNlNaTWlrNFlNSldCeHhtSUxHUEExMXp4bmF5c0VwWHc0SWNzYUYyYTA2c3NXaGpDSTh2RGlqdU1CUi1JbmNCalRlZmRXaDRtU0lsMjlmaXhabW9hcmVFbWcyTmdvN09JbGFyeFIzRjlTNWNNLXYzcmY2cW8?oc=5",
+      "published": "Thu, 25 Dec 2025 01:57:00 GMT",
+      "published_iso": "2025-12-25T01:57:00+00:00",
+      "locality": "Grant County",
+      "state": "IN",
+      "first_seen": "2025-12-25",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Cass County Commissioners call for more transparency on data center projects",
+      "outlet": "WVPE",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQT0hLLVNRSk9TYUktcUNxbDFPRkgzb05ybDg1MHhnNTc3cy1ISEZvd2NNazFldnZxbm1XRS1jNHNlSUZZT1poNWlVT2JqNDJZRHJQRlJuUUlIX1FJQndZejdXUWpQWlN4cXE5d1JIdENkTzZrT0FQT19GRUhRazBXWGxiZHNXOE1BaVFVdjVGMGswc19lU1l4eU9qcDQtT1VveTk0T2FFQVFJWklMdnlYMHFPbXlxQy1jMlE?oc=5",
+      "published": "Sat, 10 Jan 2026 08:00:00 GMT",
+      "published_iso": "2026-01-10T08:00:00+00:00",
+      "locality": "Cass County",
+      "state": "IN",
+      "first_seen": "2026-01-10",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Logansport Memorial Hospital welcomes first Cass County baby of 2024 | News",
+      "outlet": "Pharos-Tribune",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPR2RuNUVuMjJJTmR2ajhMcUFfdG1VZlZWQ3d4d056ZEw0SWV6WmZKVi1lTW1yclpnb1cyb0pRNWRXTFU5VU1WeVhneS0tc2prMktGckZUS25UZDhYQmRDTEVlMEV4c1Q1YmpCdmRJQkU2ME92cnVYR3RKYTNfVUpTaEQxUGt5VmZZc3lTVg?oc=5",
+      "published": "Wed, 03 Jan 2024 08:00:00 GMT",
+      "published_iso": "2024-01-03T08:00:00+00:00",
+      "locality": "Cass County",
+      "state": "IN",
+      "first_seen": "2024-01-03",
       "last_seen": "2026-09-07"
     }
   ]
