@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Ohio Went from Zero Data Center Moratoriums to 60 in One Year. Here Is What Happened.</title>
+      <link>https://aigridwatch.com/blog/ohio-moratorium-wave-2026</link>
+      <guid>https://aigridwatch.com/blog/ohio-moratorium-wave-2026</guid>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Ohio now has the second-most data center moratoriums in the country — 60 local actions plus a state-level tax exemption freeze — behind only New Jersey. The wave started in late 2025 and shows no sign of slowing, with Cleveland, Cincinnati, and dozens of smaller communities pausing permits while the state legislature studies the issue.</description>
+    </item>
+    <item>
       <title>Microsoft Signed the Ratepayer Pledge. Then It Sued to Avoid Paying.</title>
       <link>https://aigridwatch.com/blog/microsoft-ratepayer-pledge-hypocrisy-2026</link>
       <guid>https://aigridwatch.com/blog/microsoft-ratepayer-pledge-hypocrisy-2026</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/data-center-jobs-2026</guid>
       <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
       <description>Every data center pitch leads with jobs — usually thousands of them. The number that actually matters is far smaller and fully knowable: a typical hyperscale hall runs on about 50 full-time workers, half of them contractors. Here&#x27;s the real math from Virginia&#x27;s own legislative watchdog, the construction mirage behind the big headline, and the three questions that put it on the record.</description>
-    </item>
-    <item>
-      <title>&quot;The A.I. Revolt Is Here&quot;: When Ezra Klein Covers Your Zoning Fight, the Politics Have Changed</title>
-      <link>https://aigridwatch.com/blog/ezra-klein-ai-revolt-mainstream-2026</link>
-      <guid>https://aigridwatch.com/blog/ezra-klein-ai-revolt-mainstream-2026</guid>
-      <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-      <description>The Ezra Klein Show&#x27;s August 4 episode is titled &quot;The A.I. Revolt Is Here,&quot; and its subject is data centers — the bipartisan opposition, Hochul&#x27;s New York moratorium, and the 100-plus moratorium proposals nationwide. When the country&#x27;s flagship policy podcast frames local zoning fights as a national political force, the leverage map has changed. Here&#x27;s what the episode covers, what our own tracker shows, and why this moment favors communities that are ready to negotiate.</description>
     </item>
 </channel>
 </rss>

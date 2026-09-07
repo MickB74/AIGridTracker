@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/ohio-moratorium-wave-2026",
+      "destination": "/blog/ohio-moratorium-wave-2026",
+      "permanent": true
+    },
+    {
       "source": "/microsoft-ratepayer-pledge-hypocrisy-2026",
       "destination": "/blog/microsoft-ratepayer-pledge-hypocrisy-2026",
       "permanent": true

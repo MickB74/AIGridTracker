@@ -72,6 +72,78 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "ohio-moratorium-wave-2026",
+        "art": "moratorium",
+        "section": "stories",
+        "title": "Ohio Went from Zero Data Center Moratoriums to 60 in One Year. Here Is What Happened.",
+        "seo_title": "Ohio data center moratoriums: 60 local pauses in one year",
+        "date": _dt.date(2026, 9, 7),
+        "author": "GridWatch AI",
+        "tags": ["ohio", "moratoriums", "data centers", "zoning", "state policy"],
+        "summary": "Ohio now has the second-most data center moratoriums in the country — 60 local "
+                   "actions plus a state-level tax exemption freeze — behind only New Jersey. The wave "
+                   "started in late 2025 and shows no sign of slowing, with Cleveland, Cincinnati, and "
+                   "dozens of smaller communities pausing permits while the state legislature studies the issue.",
+        "body": """Ohio had no data center moratoriums a year ago. Today it has 60 — second only to New Jersey's 72 in our [national tracker](moratoriums). The wave started in September 2025 with a single township resolution and has since reached Cleveland, Cincinnati, Springfield, and dozens of communities across the state.
+
+This is not a story about one city saying no. It is a story about an entire state figuring out, in real time, what it wants from the industry it spent years courting with tax breaks.
+
+## The numbers
+
+Our [Ohio moratorium tracker](states/ohio) now lists 62 rows: 60 local moratoriums plus two state-level actions. Of the 60 local pauses, [56 are currently in effect](moratoriums). Four have expired, one was rejected, and one remains proposed.
+
+Ohio hosts [217 data centers](https://sykes.house.gov/media/press-releases/ranking-member-sykes-presses-for-consumer-protections-as-data-centers-expand-across-ohio), the fifth-most of any state, and its central corridor around Columbus has become one of the country's fastest-growing data center markets. Google, Amazon, Meta, QTS, and Vantage all operate or are building campuses there, with signed power agreements reaching [5,000 MW by 2030](https://energycommerce.house.gov/posts/energy-and-commerce-committee-holds-hearing-on-ai-and-american-global-competitiveness) in a single congressional district.
+
+## What the moratoriums actually say
+
+The 60 local actions vary widely in scope and duration:
+
+**The shortest**: Cleveland's [three-month emergency pause](https://www.clevelandohio.gov/news/cleveland-city-council-approves-temporary-pause-new-standalone-data-centers) on standalone data center permits, enacted July 15, 2026 and expiring October 16. The city council can extend it for another three months.
+
+**The longest**: Grafton's [five-year halt](https://chroniclet.com/news/466971/grafton-village-approves-five-year-moratorium-on-data-centers/) on data center development, enacted May 19, 2026 — the longest local moratorium term in our national tracker.
+
+**The broadest**: Cincinnati's [Interim Development Control Overlay #89](https://www.cincinnati-oh.gov/planning/projects/active/interim-development-control-overlay-89-data-centers-and-zoning-study/), which covers data centers across six zoning districts — roughly 22,000 parcels. Originally a three-month measure, it was extended in April to run through February 2027.
+
+**The most specific**: Yellow Springs' [Ordinance 2026-08](https://ysnews.com/news/2026/05/ordinance-2026-08), which pauses only data centers with demand above 2 MW and exempts auxiliary data operations that use less than 10% of a property's total energy.
+
+**The most contested**: Grove City's [Ordinance C-22-26](https://grovecityohio.gov/m/newsflash/home/detail/270), an emergency 12-month moratorium prompted by a Stream Data Centers proposal and backed by roughly 4,000 petition signatures. It passed 6-1.
+
+Several communities — Blanchester, Kent, Springfield — passed their moratoriums as emergency ordinances, skipping the usual three-reading process. Kent's council signed [Ordinance 2026-31](https://www.kentohio.gov/media/yrhjyjrn/2026-31-data-center-moratorium_signed.pdf) as a direct response to proposals in its commercial corridors.
+
+## The state-level response
+
+Ohio's state government has taken two actions of its own:
+
+**Tax exemption freeze.** Governor DeWine paused all new data center tax exemptions while the Joint Data Center Committee holds hearings. The last exemption before the moratorium — [$42.3 million to Cologix](https://signalcleveland.org/ohio-approves-last-data-center-exemption-before-moratorium/) for facilities in Delaware and Licking counties — was approved just days before the freeze took effect. Cumulative data center tax exemptions in Ohio had reached approximately $2.17 billion.
+
+**Failed ballot measure.** Conserve Ohio's proposed constitutional amendment to ban data centers over 25 MW [gathered only about 70,000 of the required 413,488 signatures](https://ballotpedia.org/Ohio_Prohibition_of_Data_Center_Construction_Amendment_(2026%29) by the July 1 deadline. Organizers say they will try again for the 2027 ballot.
+
+Meanwhile, several communities are pushing ballot questions of their own. The Ohio Supreme Court recently ordered Trenton to place a data center ban amendment on a special election ballot, and a similar fight is playing out in Wilmington.
+
+## Ohio's congressional delegation is split
+
+Six of Ohio's 15 U.S. House members have taken documented positions on data center policy, and they divide neatly into three camps. Our [House race tracker](house-races) carries each record with its source.
+
+**Guardrails**: Rep. Greg Landsman (OH-1) has introduced [three separate bills](https://landsman.house.gov/posts/landsman-introduced-third-ai-data-center-bill-in-congress) — a FERC cost-shifting study, the [No Harm Data Centers Act](https://landsman.house.gov/posts/landsman-leads-new-bill-requiring-big-tech-to-pay-for-data-centers-and-no-ndas) (which would ban NDAs between developers and elected officials), and an EPA environmental study. Rep. Emilia Sykes (OH-13) has pushed for consumer protections at [House Science Committee hearings](https://sykes.house.gov/media/press-releases/ranking-member-sykes-presses-for-consumer-protections-as-data-centers-expand-across-ohio) and added data center water-study provisions to the [Water Resources Development Act](https://sykes.house.gov/media/press-releases/rep-sykes-advances-bipartisan-water-infrastructure-bill-with-key-wins-for-northeast-ohio). Rep. Marcy Kaptur (OH-9) [warned on the House floor](https://kaptur.house.gov/media-center/press-releases/ranking-member-kaptur-floor-remarks-2026-energy-and-water-development) that unchecked data center growth could raise average U.S. electricity costs by 8% by 2030.
+
+**Accelerate**: Rep. Troy Balderson (OH-12), whose district hosts most of central Ohio's data center cluster, led the [GRID Power Act](https://balderson.house.gov/news/documentsingle.aspx?DocumentID=2887) to fast-track gas and nuclear projects through interconnection queues. Rep. Michael Rulli (OH-6), adjacent to the Lordstown Stargate site, told Fox Business that "[the CCP has infiltrated Ohio with propaganda](https://www.breitbart.com/clips/2026/08/28/gop-rep-rulli-the-ccp-has-infiltrated-ohio-with-propaganda-against-500b-data-center/)" against data center development.
+
+**Mixed**: Rep. Bob Latta (OH-5), who chairs the Energy Subcommittee, championed the [Ratepayer Protection Act](https://latta.house.gov/news/documentsingle.aspx?DocumentID=406829) through committee at 52-0 — the strongest bipartisan vote on data center cost allocation in the current Congress — but also co-signed a [letter requesting an FBI investigation](https://energycommerce.house.gov/posts/chairmen-guthrie-joyce-and-latta-request-investigation-of-foreign-adversaries-efforts-to-block-american-data-center-buildout) into alleged foreign influence behind data center opposition.
+
+## What to watch
+
+Ohio's moratorium wave is not slowing down. Four moratoriums are set to expire within the next 90 days, including Cleveland's October 16 deadline. What those communities decide when the clock runs out — extend, let lapse, or convert to permanent zoning rules — will shape whether the wave consolidates or recedes.
+
+The state's Joint Data Center Committee hearings are the other pressure point. The tax exemption freeze has no end date; it lasts as long as the legislature says it does. Whether the committee recommends new siting standards, rate protections, or simply lifts the freeze will determine how much leverage local moratoriums have in the long run.
+
+For communities currently in a moratorium window: the clock is yours to use. Our [Start here wizard](start-here) walks through what to negotiate before the pause expires.
+
+---
+
+*See also: [Ohio state briefing](states/ohio) · [National moratorium tracker](moratoriums) · [House race tracker](house-races)*
+""",
+    },
+    {
         "id": "microsoft-ratepayer-pledge-hypocrisy-2026",
         "art": "oversight",
         "section": "stories",
