@@ -5,13 +5,20 @@
   <description>Data center moratoriums, proposals, and community-impact
   headlines for New York, from AI GridWatch.</description>
   <language>en-us</language>
-  <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 07 Sep 2026 00:00:00 +0000</lastBuildDate>
   <item>
     <title>Highland: data center moratorium — Enacted</title>
     <link>https://aigridwatch.com/communities/highland-ny</link>
     <guid isPermaLink="false">mora-highland-ny</guid>
     <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
     <description>Local Law No. 1 of 2026: 12-month moratorium on large-scale data center development, extendable to 24 months. Sullivan County town; preemptive, no project proposed</description>
+  </item>
+  <item>
+    <title>LeRay: data center moratorium — Enacted</title>
+    <link>https://aigridwatch.com/communities/leray-ny</link>
+    <guid isPermaLink="false">mora-leray-ny</guid>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Town board approved one-year moratorium on data centers after public hearing. Prompted by a broker marketing hundreds of acres for a data center near Watertown/Fort Drum.</description>
   </item>
   <item>
     <title>Why southeast Georgia is becoming a data center hotspot</title>
@@ -348,12 +355,5 @@
     <guid isPermaLink="false">story-c19f4cf3</guid>
     <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
     <description>Via CNBC</description>
-  </item>
-  <item>
-    <title>New York State Pauses New Hyperscale Data Centers</title>
-    <link>https://news.google.com/rss/articles/CBMiggFBVV95cUxPaDlIekx5eUlheTN4eVhGT0ktTUpMSHZVR0hSSVdfR3pESW1XWDBrNmE3eXF2aUFtdllJMlc5OEJlM0VQVUt1b2lNYUZPQy1ObXNzSW94NzRoSkNteTNfajBjck1WOHFlRUxMNVFTQ1F3QlItamNXdm5wMEtGZ3FoeUhR?oc=5</link>
-    <guid isPermaLink="false">story-ab615e85</guid>
-    <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-    <description>Via deceleration.news</description>
   </item>
 </channel></rss>

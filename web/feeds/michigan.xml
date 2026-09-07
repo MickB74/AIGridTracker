@@ -5,7 +5,7 @@
   <description>Data center moratoriums, proposals, and community-impact
   headlines for Michigan, from AI GridWatch.</description>
   <language>en-us</language>
-  <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 07 Sep 2026 00:00:00 +0000</lastBuildDate>
   <item>
     <title>Delta County: data center moratorium — Enacted</title>
     <link>https://aigridwatch.com/communities/delta-county-mi</link>
@@ -68,6 +68,41 @@
     <guid isPermaLink="false">mora-webster-township-mi</guid>
     <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
     <description>Ordinance 26-02: 1-year moratorium on data centers and battery energy storage systems (BESS). Washtenaw County township</description>
+  </item>
+  <item>
+    <title>Allen Park: data center moratorium — Proposed</title>
+    <link>https://aigridwatch.com/communities/allen-park-mi</link>
+    <guid isPermaLink="false">mora-allen-park-mi</guid>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Planning commission rejected 26MW data center; city council considering 6-month moratorium on data center developments as of June 2026. No confirmed vote on moratorium yet.</description>
+  </item>
+  <item>
+    <title>Genoa Township: data center moratorium — Enacted</title>
+    <link>https://aigridwatch.com/communities/genoa-township-mi</link>
+    <guid isPermaLink="false">mora-genoa-township-mi</guid>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Board of Trustees approved a one-time 6-month extension of the moratorium on data centers and cryptocurrency mining facilities. Additional time needed for noise restriction provisions. This is Genoa Township in Livingston County, MI — not Ohio.</description>
+  </item>
+  <item>
+    <title>Lansing: data center moratorium — Enacted</title>
+    <link>https://aigridwatch.com/communities/lansing-mi</link>
+    <guid isPermaLink="false">mora-lansing-mi</guid>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Lansing City Council passed 182-day moratorium on Jul 14, 2026 (7-1 vote). Takes effect Jul 27, lasts until Jan 25, 2027. Pauses new building permits and zoning applications for data centers. Follows withdrawal of Deep Green AI proposal for downtown data center.</description>
+  </item>
+  <item>
+    <title>Michigan (HB 5594-5596): data center moratorium — Proposed</title>
+    <link>https://aigridwatch.com/communities/michigan-hb-5594-5596-mi</link>
+    <guid isPermaLink="false">mora-michigan-(hb-5594-5596)-mi</guid>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <description>HB 5594-5596 (House) and companion SB 1018-1020 (Senate) introduced June 2026. Data Center Regulation Act would halt new data center permits until Apr 1, 2027. Bipartisan sponsors (Reps. Wortz R, Fox R, Wegela D). In House Committee on Government Operations. Governor Whitmer has explicitly stated she would veto any moratorium legislation.</description>
+  </item>
+  <item>
+    <title>Zeeland Township: data center moratorium — Enacted</title>
+    <link>https://aigridwatch.com/communities/zeeland-township-mi</link>
+    <guid isPermaLink="false">mora-zeeland-township-mi</guid>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Township Board unanimously approved new 1-year moratorium on data centers and energy facilities, replacing a previous moratorium that was repealed at the same meeting. Provides time to review and update master plan.</description>
   </item>
   <item>
     <title>Ypsilanti City Council continues data center moratorium discussion</title>
@@ -320,40 +355,5 @@
     <guid isPermaLink="false">story-df0ef46f</guid>
     <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
     <description>Via POLITICO Pro</description>
-  </item>
-  <item>
-    <title>Forsyth Township officials hear opposition to data centers during town hall meeting</title>
-    <link>https://news.google.com/rss/articles/CBMiyAFBVV95cUxNRHRnMHNuWG40dGdUUUZsYWlSc0I2S3hTQ3hFRlBwdzNpNU5QX2F6UjlWZmt6ZkNxWUpuOC1IZVF3Ti1DMVJQZEc1SzhUZTJQbmsxWTIwT1AxQy1RUFJWM1NjNXlvdWVpZndQV1hGWmNjZGk3OTllVlJoR010a1RJdXFZY3VVQlN0cFdqWWI5c25FV0tMd3BHWXRtVE1feWg0dmZQY0tmYy1yakwxTFB0VVdVQngtR253M2lYZ09YVDlDZzFyTHVzWdIB3AFBVV95cUxOWXdSSUJqVk1PX0h4RGU3aWpYRV84RUtGSDFmWmFYZE5oU2lmT0ZpYnRRVVEwVmRxZW5iTnBfY2Q2a2NmeVpmTzRfUE5oTG5PZzZhcThVQ3IxODdwejh5cjdxenlaUGpLT2VJSnZmN1I1QmFRYi1ORE9ob2dRWGhmaDNXeUNTZUlmcDBQd01GSkZrNVBmMlZRbW5zbFNfcmwxNDlIb2dpaUw4QlBHdW9kNmt6azNtMVdJUG1DV2JjdXpaUkFUMWFDSWtkV1BueUpjTUdmWGdFOGF1bGFy?oc=5</link>
-    <guid isPermaLink="false">story-83762509</guid>
-    <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
-    <description>Via Upper Michigan&#x27;s Source</description>
-  </item>
-  <item>
-    <title>Michigan township combats nuclear weapons data center by passing ban on new electrical infrastructure — 220,000-square-foot hyperscale project is backed by University of Michigan and the Los Alamos National Laboratory</title>
-    <link>https://news.google.com/rss/articles/CBMihgNBVV95cUxON040S0dsMHF6VkhCMjVGOC1YTHJmLWRrWFVxSDJWcW0telBmTzAwLUc5Y2liRjVRZlJqTkNEOEQyVC1pVEZCOThyUm1hSDZBYkpmemxkVUM4cWJnX0RhaFQtTFctcjd3ZEVTUmNLSVFKb0gxNTljZ3VhZEFzNGZaTnlPY2cwM2lrQXZ3VFJvaGVtUElNTV9sb3A1TnlQMUpONFZ4cXB0bGpTREtRczRpa25uZU4zNW5RVUg0VlNTY0w4cTV6RGhUZ2hpYlU3TXA3Y0xfLXAyRGhEVTZQYXRYQjcxOW9rMnpEQU0yc1hKbW5KeWlVSnh2UWlVTFd5UF9FR2pmNmdrSy1BUWQxRTJ4VXpDc0NHWERHN0ptZ2U4RHR1SlJYT256LVQ0bk82cWVpaHhtWENBdVV3Uk90QWZnOFp0bkw4MzNOWGF5Q1p3aGFNZ1JUT1lTTHRVOEpRckp3WEtDRjdzZHlVSHgwZ3VhV18zdWNMNUt2cU9QM0RWbG5TS2tpTXc?oc=5</link>
-    <guid isPermaLink="false">story-c83adbea</guid>
-    <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
-    <description>Via Tom&#x27;s Hardware</description>
-  </item>
-  <item>
-    <title>Taylor residents push back on proposed 665-acre Project Mustang data center</title>
-    <link>https://news.google.com/rss/articles/CBMigAJBVV95cUxPWVZNa1Q3SnpLZlUtZmg0NWxzNlpUQ09LeFRPNkNfZFlfVjZHOHJIQnU1dUFsalJGcVZWYkhhdl9fMndQaHFvMVdQaFd6WEhNekZiSkp2M3FManNXc204cWNTQTBtZVdYbW5kRm5GR19tVUM5RnBrdmNuYTVLNzZJWjR2LVpMUVpNSnpYd0VnM1NwNEx6VUFuQm54TEdZVEZqS0tkWXl2Tk1sQVFEX0xsS1QwUXlyb1F3aW5ORnRsUTZZNmFXbGlmbXd1SEw1V3RkM1VHVEJfTDRZWHVHSWFQdzRlZFJncy1jSUJDYVhfWUpCM0hrWmh2MHFSQlhyY3Nj?oc=5</link>
-    <guid isPermaLink="false">story-9cd4210d</guid>
-    <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
-    <description>Via KVUE</description>
-  </item>
-  <item>
-    <title>Data Center Proposal Delayed After Pushback From Taylor Residents</title>
-    <link>https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbWpCeEVGNlIybUlpV1ZSYUd0Q1dlMjJCRVpkZzdWem4ydm5wdnFxNUt4VDRIN2hEVVhSdGNaV2hMTEllZU5zYTdqWGQzTVd1TTUtZUVVOWZDQ0hKVlQtVlhOUXRfb3gxejY4UEMxaFNMNExWOVBFaUo5d3pZTVBlMk1IR2hjTU1uT1p6TVJpMWdQaTZFSUdnQURKVGlDRC1NVWo5bjZZM05IUQ?oc=5</link>
-    <guid isPermaLink="false">story-7278d6be</guid>
-    <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
-    <description>Via KLBJ-AM</description>
-  </item>
-  <item>
-    <title>Ypsilanti Township issues land-use moratorium impacting data centers</title>
-    <link>https://news.google.com/rss/articles/CBMisgFBVV95cUxPTkY3T0NpS0Rsdkk3TzZpdThsNm5QMERZeHpWUGozdDFpYmY3YWZYU3VEbW1CNUNkT3BUSUl0dlY2ZkJ6SVVRTExBM000RkFjZW1VN1RZTVZGa2VLcWtrTDB1Z3VsT0dpRzdIMVZfTmptV1k1eFpXaklFaXc2RWhyZXVycE91cXdpcm5tTDEyYzNIZ05vTGx2eDR0TW9fWUdkTlR4V0dmN3U5cUM4UXo2eUZB?oc=5</link>
-    <guid isPermaLink="false">story-b2d1425d</guid>
-    <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
-    <description>Via The Eastern Echo</description>
   </item>
 </channel></rss>

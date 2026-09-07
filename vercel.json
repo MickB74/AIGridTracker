@@ -689,16 +689,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/cranford-nj",
-      "destination": "/states/new-jersey",
-      "permanent": true
-    },
-    {
-      "source": "/communities/cranford-nj.html",
-      "destination": "/states/new-jersey",
-      "permanent": true
-    },
-    {
       "source": "/communities/delaware-de",
       "destination": "/states/delaware",
       "permanent": true
@@ -816,16 +806,6 @@
     {
       "source": "/communities/franklin-county-va.html",
       "destination": "/states/virginia",
-      "permanent": true
-    },
-    {
-      "source": "/communities/gallatin-tn",
-      "destination": "/states/tennessee",
-      "permanent": true
-    },
-    {
-      "source": "/communities/gallatin-tn.html",
-      "destination": "/states/tennessee",
       "permanent": true
     },
     {
@@ -1029,16 +1009,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/kansas-city-mo",
-      "destination": "/states/missouri",
-      "permanent": true
-    },
-    {
-      "source": "/communities/kansas-city-mo.html",
-      "destination": "/states/missouri",
-      "permanent": true
-    },
-    {
       "source": "/communities/kentucky-ky",
       "destination": "/states/kentucky",
       "permanent": true
@@ -1089,16 +1059,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/lansing-mi",
-      "destination": "/states/michigan",
-      "permanent": true
-    },
-    {
-      "source": "/communities/lansing-mi.html",
-      "destination": "/states/michigan",
-      "permanent": true
-    },
-    {
       "source": "/communities/laredo-tx",
       "destination": "/states/texas",
       "permanent": true
@@ -1106,16 +1066,6 @@
     {
       "source": "/communities/laredo-tx.html",
       "destination": "/states/texas",
-      "permanent": true
-    },
-    {
-      "source": "/communities/leray-ny",
-      "destination": "/states/new-york",
-      "permanent": true
-    },
-    {
-      "source": "/communities/leray-ny.html",
-      "destination": "/states/new-york",
       "permanent": true
     },
     {
@@ -1379,16 +1329,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/north-port-fl",
-      "destination": "/states/florida",
-      "permanent": true
-    },
-    {
-      "source": "/communities/north-port-fl.html",
-      "destination": "/states/florida",
-      "permanent": true
-    },
-    {
       "source": "/communities/north-richland-hills-tx",
       "destination": "/states/texas",
       "permanent": true
@@ -1499,16 +1439,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/roselle-park-nj",
-      "destination": "/states/new-jersey",
-      "permanent": true
-    },
-    {
-      "source": "/communities/roselle-park-nj.html",
-      "destination": "/states/new-jersey",
-      "permanent": true
-    },
-    {
       "source": "/communities/saline-township-mi",
       "destination": "/communities/saline-mi",
       "permanent": true
@@ -1566,16 +1496,6 @@
     {
       "source": "/communities/shreveport-la.html",
       "destination": "/states/louisiana",
-      "permanent": true
-    },
-    {
-      "source": "/communities/south-strabane-township-pa",
-      "destination": "/states/pennsylvania",
-      "permanent": true
-    },
-    {
-      "source": "/communities/south-strabane-township-pa.html",
-      "destination": "/states/pennsylvania",
       "permanent": true
     },
     {

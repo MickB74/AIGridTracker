@@ -5,7 +5,7 @@
   <description>Data center moratoriums, proposals, and community-impact
   headlines for Pennsylvania, from AI GridWatch.</description>
   <language>en-us</language>
-  <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 07 Sep 2026 00:00:00 +0000</lastBuildDate>
   <item>
     <title>Brookville: data center moratorium — Enacted</title>
     <link>https://aigridwatch.com/communities/brookville-pa</link>
@@ -40,6 +40,34 @@
     <guid isPermaLink="false">mora-warrington-township-pa</guid>
     <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
     <description>Resolution 2026-09: curative amendment under PA MPC Section 609.2. York County (not Bucks). Administrative pause since Mar 11; formally ratified May 13</description>
+  </item>
+  <item>
+    <title>Allegheny County: data center moratorium — Proposed</title>
+    <link>https://aigridwatch.com/communities/allegheny-county-pa</link>
+    <guid isPermaLink="false">mora-allegheny-county-pa</guid>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <description>County Council introduced Bill 8185928 to ban data center construction and related infrastructure (backup generators, cooling towers) on county-owned properties (~770 parcels, ~30,000 acres). Introduced by seven council members including Dan Grzybek and Bethany Hallam. Referred to committee on sustainability and green initiatives.</description>
+  </item>
+  <item>
+    <title>Gregg Township: data center moratorium — Enacted</title>
+    <link>https://aigridwatch.com/communities/gregg-township-pa</link>
+    <guid isPermaLink="false">mora-gregg-township-pa</guid>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Board of Supervisors unanimously adopted Resolution 2026-03 imposing 180-day moratorium on new data center applications. Does not apply to PNK Group&#x27;s pending application for a 252,000-sq-ft data center at Great Stream Commons.</description>
+  </item>
+  <item>
+    <title>Upper Burrell Township: data center moratorium — Enacted</title>
+    <link>https://aigridwatch.com/communities/upper-burrell-township-pa</link>
+    <guid isPermaLink="false">mora-upper-burrell-township-pa</guid>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <description>180-day moratorium on new data center development, enacted May 2026, expires Nov 2. Does NOT apply to existing TECfusions permits (Building J already operational). Despite moratorium, commissioners approved a land development plan for TECfusions. 1,400-acre campus (Keystone Connect) could reach 3 GW. 50+ residents attended meeting opposing DC. Former Alcoa Technical Center site.</description>
+  </item>
+  <item>
+    <title>South Strabane Township: data center moratorium — Rejected</title>
+    <link>https://aigridwatch.com/communities/south-strabane-township-pa</link>
+    <guid isPermaLink="false">mora-south-strabane-township-pa</guid>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Residents called for moratorium but supervisors instead adopted regulatory ordinances with 1,500-foot residential setback, noise and dust rules. Unanimous vote on ordinances June 11. Leaves 651 of 1,400 acres available for DC on Zediker Station Road property. PA state moratorium bill (SB 1345) could provide additional tool if passed.</description>
   </item>
   <item>
     <title>Luzerne County zoning plan for data centers under legal review</title>
@@ -327,33 +355,5 @@
     <guid isPermaLink="false">story-b5b3bf18</guid>
     <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
     <description>Via Pottsville Republican Herald</description>
-  </item>
-  <item>
-    <title>PPL Corporation signs White House Ratepayer Protection Pledge, citing existing data center cost-allocation tariffs in Pennsylvania and Kentucky</title>
-    <link>https://news.google.com/rss/articles/CBMie0FVX3lxTE5tblR3LS1ZcEp1WnI2eWROZF9GRGdsRXlOaGZnblB4eDhlM285UUMtaHFxSVZuOVljM0dFTjFTTFFEQ0RaY0JnTnJjNkFIMXZpczRSbWJJVUMzeVRPbVloZmJUYXVSOUZrbkI5Y0tFSEFfR1huZXZacHdyQQ?oc=5</link>
-    <guid isPermaLink="false">story-4f33a4e3</guid>
-    <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
-    <description>Via Energies Media</description>
-  </item>
-  <item>
-    <title>‘We will not be bullied’: Plymouth Township pushes back against proposed Conshohocken data center</title>
-    <link>https://news.google.com/rss/articles/CBMilAFBVV95cUxQZHVsekpKZFlmdHVrLVlaaF81UEJ2WXlwTjZYX256NWwzR1AtY2xHR3ppM1J5dlBWUVdnNUt3MlEwSkZQZW1zS1I0U2pDamxtZTNaZGd6Q1FzSXVEbkxfaG5iM1JKRzByVkVJTFlXcmxfUXNBUUM2UWxhRkFJZ2gwUjZ4aFg3UTRsdlVtTUxDVV9uSGRn?oc=5</link>
-    <guid isPermaLink="false">story-3449c352</guid>
-    <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
-    <description>Via WHYY</description>
-  </item>
-  <item>
-    <title>West Rockhill Supervisors approve amended data center ordinance as first application is filed</title>
-    <link>https://news.google.com/rss/articles/CBMixwFBVV95cUxPM2h2NGwxeHFCbXBpWW5NeVlKMThfMjh3Z1gtQXJTeHByZ1FkeWlOaUE5YmUxUk9IN2VLWFZuVWE0NXJPOVJ1dGRIeEFzTmIyZ2JMZW5VQ2FGVkJ4MHFUVldnS0hjbUFJMUxWYXpUT1R3dThCZGVFbFE2QkVHeDlHZDdzWS1SSjlJaERQX3duOENINWdXV2RrRW0xZ21idDJtY0VLRlRDaEV6b2ZxR3d2a3FRV3lBbjIwUUowNE9TeXlVaDhoNmJV?oc=5</link>
-    <guid isPermaLink="false">story-26229fe2</guid>
-    <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
-    <description>Via Central Bucks Now</description>
-  </item>
-  <item>
-    <title>Lower Mount Bethel moves forward with data center ordinance as residents voice frustration</title>
-    <link>https://news.google.com/rss/articles/CBMif0FVX3lxTFBhWVBCNUdmcFJaakFBNW4zU3ZrNUMwSDZFX0VzY1M1UmxSYm9MOEhsb0Y1NF9YRGNSR29mdnlhUjRSY0RLZDBVaktLSk9iU1Z2RXRqNEx0aURMbmh5bGg0UXlfc0p3S1k5SE10U0VmaDMtb2dxS3FGOUxXYmRuOTQ?oc=5</link>
-    <guid isPermaLink="false">story-c8e58403</guid>
-    <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
-    <description>Via The Morning Call</description>
   </item>
 </channel></rss>

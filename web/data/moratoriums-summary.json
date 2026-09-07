@@ -1,22 +1,22 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-09-06",
+  "generated": "2026-09-07",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 524,
-  "states": 41,
-  "enacted": 441,
-  "proposed": 39,
-  "official_sourced": 48,
+  "count": 587,
+  "states": 43,
+  "enacted": 474,
+  "proposed": 65,
+  "official_sourced": 49,
   "by_state": {
     "CO": {
-      "total": 10,
+      "total": 12,
       "enacted": 9,
-      "proposed": 0
+      "proposed": 2
     },
     "MD": {
-      "total": 15,
-      "enacted": 13,
+      "total": 16,
+      "enacted": 14,
       "proposed": 2
     },
     "NV": {
@@ -30,9 +30,9 @@
       "proposed": 2
     },
     "IL": {
-      "total": 9,
-      "enacted": 7,
-      "proposed": 1
+      "total": 12,
+      "enacted": 8,
+      "proposed": 3
     },
     "UT": {
       "total": 6,
@@ -40,9 +40,9 @@
       "proposed": 0
     },
     "WI": {
-      "total": 14,
-      "enacted": 13,
-      "proposed": 1
+      "total": 19,
+      "enacted": 17,
+      "proposed": 2
     },
     "RI": {
       "total": 1,
@@ -50,23 +50,23 @@
       "proposed": 0
     },
     "MI": {
-      "total": 41,
-      "enacted": 29,
-      "proposed": 0
+      "total": 46,
+      "enacted": 32,
+      "proposed": 2
     },
     "TX": {
-      "total": 11,
+      "total": 12,
       "enacted": 5,
-      "proposed": 4
+      "proposed": 5
     },
     "GA": {
-      "total": 30,
-      "enacted": 23,
+      "total": 32,
+      "enacted": 24,
       "proposed": 2
     },
     "NY": {
-      "total": 12,
-      "enacted": 9,
+      "total": 13,
+      "enacted": 10,
       "proposed": 3
     },
     "CT": {
@@ -75,39 +75,39 @@
       "proposed": 2
     },
     "MO": {
-      "total": 10,
-      "enacted": 9,
+      "total": 12,
+      "enacted": 11,
       "proposed": 0
     },
     "ME": {
-      "total": 6,
-      "enacted": 4,
+      "total": 7,
+      "enacted": 5,
       "proposed": 1
     },
     "NC": {
-      "total": 35,
-      "enacted": 30,
+      "total": 37,
+      "enacted": 31,
       "proposed": 1
     },
     "FL": {
-      "total": 15,
+      "total": 18,
       "enacted": 13,
-      "proposed": 1
+      "proposed": 4
     },
     "OH": {
-      "total": 60,
-      "enacted": 54,
+      "total": 62,
+      "enacted": 56,
       "proposed": 1
     },
     "TN": {
-      "total": 17,
+      "total": 18,
       "enacted": 16,
-      "proposed": 1
+      "proposed": 2
     },
     "CA": {
-      "total": 8,
-      "enacted": 8,
-      "proposed": 0
+      "total": 14,
+      "enacted": 12,
+      "proposed": 2
     },
     "WA": {
       "total": 13,
@@ -125,24 +125,24 @@
       "proposed": 0
     },
     "NJ": {
-      "total": 68,
-      "enacted": 63,
-      "proposed": 5
+      "total": 72,
+      "enacted": 65,
+      "proposed": 7
     },
     "IN": {
-      "total": 19,
-      "enacted": 19,
-      "proposed": 0
+      "total": 22,
+      "enacted": 20,
+      "proposed": 2
     },
     "AR": {
-      "total": 6,
-      "enacted": 4,
+      "total": 7,
+      "enacted": 5,
       "proposed": 0
     },
     "OR": {
-      "total": 4,
+      "total": 5,
       "enacted": 2,
-      "proposed": 2
+      "proposed": 3
     },
     "WY": {
       "total": 1,
@@ -150,9 +150,9 @@
       "proposed": 0
     },
     "SC": {
-      "total": 8,
+      "total": 10,
       "enacted": 7,
-      "proposed": 1
+      "proposed": 3
     },
     "VA": {
       "total": 14,
@@ -165,19 +165,19 @@
       "proposed": 0
     },
     "MN": {
-      "total": 9,
-      "enacted": 9,
+      "total": 11,
+      "enacted": 11,
       "proposed": 0
     },
     "AL": {
-      "total": 8,
-      "enacted": 7,
+      "total": 9,
+      "enacted": 8,
       "proposed": 0
     },
     "PA": {
-      "total": 8,
-      "enacted": 7,
-      "proposed": 1
+      "total": 12,
+      "enacted": 9,
+      "proposed": 2
     },
     "AZ": {
       "total": 2,
@@ -185,9 +185,9 @@
       "proposed": 1
     },
     "KS": {
-      "total": 7,
-      "enacted": 6,
-      "proposed": 1
+      "total": 10,
+      "enacted": 7,
+      "proposed": 2
     },
     "MS": {
       "total": 1,
@@ -200,9 +200,9 @@
       "proposed": 1
     },
     "NE": {
-      "total": 1,
+      "total": 3,
       "enacted": 1,
-      "proposed": 0
+      "proposed": 2
     },
     "MA": {
       "total": 1,
@@ -213,6 +213,16 @@
       "total": 1,
       "enacted": 0,
       "proposed": 0
+    },
+    "ND": {
+      "total": 1,
+      "enacted": 1,
+      "proposed": 0
+    },
+    "MT": {
+      "total": 2,
+      "enacted": 1,
+      "proposed": 1
     }
   },
   "expiring_within_days": {
@@ -224,6 +234,7 @@
       "roswell-ga"
     ],
     "60": [
+      "lysander-onondaga-co-ny",
       "bangor-me",
       "augusta-ga",
       "vienna-township-trumbull-co-oh",
@@ -240,7 +251,13 @@
       "palm-springs-ca",
       "lowndes-county-ga",
       "augusta-richmond-county-ga",
-      "roswell-ga"
+      "camden-county-ga",
+      "roswell-ga",
+      "calaveras-county-ca",
+      "escondido-ca",
+      "eureka-ca",
+      "mendocino-county-ca",
+      "upper-burrell-township-pa"
     ],
     "90": [
       "bloomington-il",
@@ -278,7 +295,12 @@
       "camden-county-ga",
       "roswell-ga",
       "riley-county-ks",
-      "gorham-me"
+      "gorham-me",
+      "calaveras-county-ca",
+      "escondido-ca",
+      "eureka-ca",
+      "mendocino-county-ca",
+      "upper-burrell-township-pa"
     ]
   }
 }

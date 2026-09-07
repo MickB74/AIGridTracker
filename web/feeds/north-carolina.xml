@@ -5,7 +5,7 @@
   <description>Data center moratoriums, proposals, and community-impact
   headlines for North Carolina, from AI GridWatch.</description>
   <language>en-us</language>
-  <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 07 Sep 2026 00:00:00 +0000</lastBuildDate>
   <item>
     <title>Surry County: data center moratorium — Enacted</title>
     <link>https://aigridwatch.com/communities/surry-county-nc</link>
@@ -19,6 +19,20 @@
     <guid isPermaLink="false">mora-wilson-nc</guid>
     <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
     <description>1-year moratorium on large data center development approvals. Unanimous vote. UDO text amendments to follow.</description>
+  </item>
+  <item>
+    <title>Davidson County: data center moratorium — Rejected</title>
+    <link>https://aigridwatch.com/communities/davidson-county-nc</link>
+    <guid isPermaLink="false">mora-davidson-county-nc</guid>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Board of Commissioners split 3-3 on a proposed six-month moratorium on new data center development applications, so the moratorium was not adopted. One commissioner was absent.</description>
+  </item>
+  <item>
+    <title>McDowell County: data center moratorium — Enacted</title>
+    <link>https://aigridwatch.com/communities/mcdowell-county-nc</link>
+    <guid isPermaLink="false">mora-mcdowell-county-nc</guid>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Board of Commissioners unanimously approved a six-month moratorium on data center development following a special meeting and public hearing where residents raised concerns about water consumption during drought conditions. No data center project has been proposed in the county.</description>
   </item>
   <item>
     <title>Whiteville: data center moratorium — Enacted</title>
@@ -341,19 +355,5 @@
     <guid isPermaLink="false">story-37c6a231</guid>
     <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
     <description>Via WXLV</description>
-  </item>
-  <item>
-    <title>Greensboro data center moratorium raises questions about Dream Center project</title>
-    <link>https://news.google.com/rss/articles/CBMirgFBVV95cUxQS3AtNG9FSjdVVU1qajlIT2toak9PcWdVYVRwZVZTTE5kM0FydnJQeEdCRWFGdFEtSnZLZnFqTUZURU54a2VCb2hTV1FjV0poVTFrWTRFVEpjWG9TdGxITEw3cVpfZ3FvUldEVC1hVnRmNmdGM05heXU4XzAyOTR2TFZqS3BpVnJpbVk4QnlnczVpaEZ3Qjhrdm9haS00Tlo2LWY3VkxWZDZfRGtkS0E?oc=5</link>
-    <guid isPermaLink="false">story-1e4f0026</guid>
-    <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
-    <description>Via WUNC News</description>
-  </item>
-  <item>
-    <title>Greensboro data center moratorium raises questions about Dream Center project</title>
-    <link>https://news.google.com/rss/articles/CBMirgFBVV95cUxPNlFsTTkzYWplX1V2N0R0ZERUekx1MXVzZ2R5VHM5UkxHN21SYkFjbmpkREdiQ1B2NDBoUWw0d1RFdGlidDkxM2tFSG40RWd0a1gxUl9oeUQ5WDhGYWw5TU40aUM2Z1R5dDkzV1Z6NTJ1LU9NdnJmb3RjYkd2dUpya0lyd3VmMUp6cE56VXA0YzFNTnNWMnRBX0dWLTNqRjRqMGgtamhkZTQ5ODNRb2c?oc=5</link>
-    <guid isPermaLink="false">story-c698fbfb</guid>
-    <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
-    <description>Via WFAE</description>
   </item>
 </channel></rss>
