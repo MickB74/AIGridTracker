@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 5309,
+  "count": 5321,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -44864,7 +44864,7 @@
       "locality": "DeKalb",
       "state": "IL",
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-04"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "What do Nevada's congressional candidates think about data centers?",
@@ -45315,7 +45315,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-08-31",
-      "last_seen": "2026-09-02"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "Texas' halt on powering data centers reflects US reckoning over 'ghost' demand",
@@ -51508,7 +51508,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-06"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "Upper Burrell residents decry transparency as data center progresses despite moratorium and a lawsuit",
@@ -53554,7 +53554,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-05"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "Microsoft Challenges Data Centre Cost Recovery, After Public Pledge",
@@ -56854,7 +56854,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-06"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "EAST TEXAS POLITICS: Smith County GOP chair previews RNC midterm convention, reacts to Trump’s data center remarks",
@@ -56865,7 +56865,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-06"
+      "last_seen": "2026-09-07"
     },
     {
       "title": "Trump’s embrace of AI data centers adds to GOP’s midterm peril",
@@ -58405,6 +58405,138 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-05-31",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Residents question tax breaks for data centers in Ohio",
+      "outlet": "tiffinohio.net",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQTUFlSXFUWUVVdGNveE44cXVpZWxDT3p0NHdvZmMzYUV5TnJQMGw1aE1pSG41UGZRQ2g5d3VQSFExcm1yX0thbzJKeVhCMW5mU0tuMDBjOGZXTUQwTElXUXZVdmloUGNremp0b3Rhekc4TGFJU0E2RlFmTmlHN3IzLWtDb0R3X0Z3WGc?oc=5",
+      "published": "Mon, 07 Sep 2026 14:17:48 GMT",
+      "published_iso": "2026-09-07T14:17:48+00:00",
+      "locality": null,
+      "state": "OH",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Seven hours, 400 comments, packed City Hall: North Port moves to halt data centers",
+      "outlet": "WGCU",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPcEUzSWNWSjVPY2J1UXM1SFgyd1QxMzhNQlNLSGVWaDM4Y3RNcEF1LUlHUUVGVm5fWV9DTTVlZkszT3RsN2JOelZIQlVrSkltQncxQjhXbVFaREZWZTdoQ3YySnVpVWd2VndlNkpFZXdWLTlHblpGSGJLVUFpSVpCbXFxandGb256NFBFOC1nbjhZUFZuZVZfTzQ3d2JZSFVwWUJubVZIXzJFWTRlVGdLdGtRZnVUV18xSWZxcDd5bEdUbGwzd3R4Y29nNA?oc=5",
+      "published": "Fri, 04 Sep 2026 11:30:00 GMT",
+      "published_iso": "2026-09-04T11:30:00+00:00",
+      "locality": "North Port",
+      "state": "FL",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Warren City Council votes to approve 12-month data center moratorium",
+      "outlet": "candgnews.com",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOLUdnWmIwaWdzZEtfSXJSalFRVnJPa0t2dkNsejl3cmxOelhoZDdqMTJ6M3FfbTd6X29iZEpMelpnYmhGSkdiZTN2Ny1ydlFZOElNYTBPUmJ0a1ZEVTJuV2F0ZFpyTnRrRHQydjhOSDhWV053SmNla0lSSVRuVFdnOTZnb2J3X2hXWGdwb2I3SVMzSlJyR3dXSUpyVjlIS0psX0tsUHRyMU9MSHpaa2lCN2FIU2M1WE1qRTF2QQ?oc=5",
+      "published": "Mon, 07 Sep 2026 18:56:17 GMT",
+      "published_iso": "2026-09-07T18:56:17+00:00",
+      "locality": "Warren",
+      "state": "NJ",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "AOC reacts to Trump: 'Put a data center up in Mar-a-Lago'",
+      "outlet": "kmph.com",
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPcExiZVBKbUtYalVicWxfMnhWMEFES0dVMlFkN25RMVpiaEdValE0NmZnQmxpWWlKYXdMZjV5RTk3V1QwMUY0aDJqNzFHU3FBZy1IVWhRM0NtQXpyN2Z5Z2s5OWRhZ2c4bUdPSzNjZ1ZUd0k2ZWdfRmtfOEhtVVVGS3A0XzRZSkVkRkUtV1N3VFFYejNidjlyY3VNam1nWER6bjBMYW9BSDlDczVpWmRWaTdfVm1IaG9TOURtQ1lTVkN3VDJWeVV1bUVITThzelF0bU5VcU1XcUpVVzJkWkE?oc=5",
+      "published": "Tue, 01 Sep 2026 21:09:23 GMT",
+      "published_iso": "2026-09-01T21:09:23+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Pennsylvania report warns small businesses may subsidize AI data centers through higher power bills",
+      "outlet": "The Cool Down",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbWN6eGd5dkJHUEJEUlowUmVaVkoxV25GdHNtRTU5QUJmRFdmT2lqVS1KWGJiMUF4X0xMOWMtU3N6UjlsVGdPNGIzTXZJSmpobHJNdVRXVlZTcUpDM1pDZFAzT1h4Mi13VVVudGZ5clRRSmZScE1EbVRhSXhlX0g5VUFUaFl1MkYyRURaMVVWY3hTclpreDN2R04waDBkVXlvX19DMjZSdE5sZEk?oc=5",
+      "published": "Fri, 04 Sep 2026 10:15:00 GMT",
+      "published_iso": "2026-09-04T10:15:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Freeway Drive Lane Closure Returns to Schedule as East Orange Bridge Project Advances",
+      "outlet": "TAPinto",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPSmdXOERkMFoxTnJ0QU1oaGpIdnpKa1pHekxJT3VqM2hlY2FnNVZkWW5UeFZxSWFVWDBXZ0NRSXVNdTFzUlBmMV9SNWRjd3EtVDFQcUNnSkhKRWI3ZFNxcmNXM3BLMjdocHMxcFljclBvR0RlXy1PNkJGY0VwNkhOMUVGeHphSnZPOXk2dXdtcHNVejltV1FWZUpLMWRHWDZZNnB3dkVrSjBFdDNWRDRveG8wczh1VVkxbG41QWNCaVRRRUNPSWZNMzNGVXNoa1ZaamxPSzRRMXVkLU5nSk9PZm5JNA?oc=5",
+      "published": "Mon, 07 Sep 2026 14:00:00 GMT",
+      "published_iso": "2026-09-07T14:00:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Australia's Data Centre Boom Sparks Resource Fight",
+      "outlet": "The Tech Buzz",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPM2U1UzRFWVM2Rm12dW5Lb0hVNjNyT3R1SV9xOHNqaS11RmpWWTVwOE8xZVE1X0RXYlpOTGM4RFB6WjhHWEJFcHRBLVlNNGc2NkRzZUxoV0JlQk1RY2xkMV9ONjRQOUgwa0hDb3IyRWYyLXlHYVlzSzJFbDc2cFJfQ1JtZDlPMldnTEtB?oc=5",
+      "published": "Thu, 03 Sep 2026 19:47:00 GMT",
+      "published_iso": "2026-09-03T19:47:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "News Links: Amtrak Halts Most Virginia-to-D.C. Trains; Manassas Closes Lot for Data Center Work",
+      "outlet": "Potomac Local News",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOaUE2Y2ZzNGdoc0ZaZ3BzOFlvN0VPb2xMbWw0aDgzeDJoTHpFZHBWN1FCbW9WVUZsY2lTZVMyQ3paaHFkbUpXcXdJTlRRSmg0S09ZNWhFd0dGQWRDNTdaenhrSnJzWnZSaGk4ckY2S2sxUEozc2NQMEU4eUpEaWJRWllWWEJEZ2ExbmJJQnhib3ZNOWc2czFqQUlibUhhNE1YWmhrYnY1b1dFV3NVWW5XWC10VU9BODRFRTRkU1lQdjRwRGhybzlBRk5IU0pPUQ?oc=5",
+      "published": "Mon, 07 Sep 2026 11:00:55 GMT",
+      "published_iso": "2026-09-07T11:00:55+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Tax analysis report released for two high-profile data center projects in West Virginia",
+      "outlet": "WCHS",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNdGxxNDBiMGVJYVF3WkE1WDRCT1FrcmpCV19qSjJfcmp2eTFqTnVFYlI4Y2piZVFlbHJ4ZUYyX0ozUzJPaV93bFF3RkhvUW11M2lCclY0Z2pHM1lKREZMeHY2MkYxdjBzX3lmRzlEakJScTI4b2pVUDZjeFU5b1pzR1d6VVRDQVdwdWRvbC0tQnJnQTdxV19aR2hsclFpVHNnVTdjMUwyYWlOTDZrNnlqbkNzb3hUT0NkTDc2d3pLejhVWUlKWF9BODRJRkFEX1FyVUxFSEd3?oc=5",
+      "published": "Tue, 01 Sep 2026 20:43:03 GMT",
+      "published_iso": "2026-09-01T20:43:03+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Northern Virginia's Data Center Continues To Grow But Challenges Rise For Local Communities Drinking (dPnXdQLNeK)",
+      "outlet": "Mshale",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBLeEdNdjd0QVItajROWGswX2FOUUVtc21sQm9XQnVsMjFjRGR5dFQ5MGt4cmctOTVlbGRFX21ENXNwWFVudlM5WDFXcC1WTUFZOGRTV0RHTU82NVU?oc=5",
+      "published": "Fri, 04 Sep 2026 14:29:33 GMT",
+      "published_iso": "2026-09-04T14:29:33+00:00",
+      "locality": "Northern Virginia",
+      "state": "VA",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "The next big opportunity in data centers: Insuring them | World News",
+      "outlet": "Hindustan Times",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSEpkM09scFBTVjQ1WmtYTWI4QXJRMjdQWk9fQ0x4OXQxVVdyYW5DMnJ3QmZFeUMtNkgwb0pEdzlocWdNWnk1eEN3LWdpVXcxSVA2MnduUmhHVnBfcDRLS0hFYURPNmY4NExyWHVFeU9DQ2ZZbDNUaGdDZ3Azd2RBNHZ6bElTckJLZnRGOE1KWUYxcUw4QkRKQUlMaktkOVZQS2NpNS1yM2hNel9Mcy1rOWR2VTZFeHZo0gG-AUFVX3lxTE5uRW8yYUU4NlNXeEFjQnlPR0Qyc2xpZldfZzFBQm1UWW13QTFveW5NNG1INFdoN1lpYm5POUZCUXB0QkZBWmh4RXdOY0dvQXAzTGwwVlpKWFZ1YUlzYkxickdQS2lCNFVBQnl3ako0SnVVdkh3NWFvY2Zsbm40S09vZGF2bWZXRVl4QS1WVGhTLURMdkVHdTJzLXM4OW9sQm1WM3BoS3hEdFlEQnUyLXlkMG5Tc09Za2pJa2tnVVE?oc=5",
+      "published": "Sun, 06 Sep 2026 10:30:26 GMT",
+      "published_iso": "2026-09-06T10:30:26+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "title": "Texas Republicans Dig In on Opposition to Data Centers: Poll",
+      "outlet": "nationalreview.com",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQZXl4RUpERXNfSFFvekF0QnRJdGRYVUlpYjlORUJrZ3U2emdINVFBSWExN1BGQWtxUDdhRktTZDFxZlFLZ2FIR1d1VmFfcks3eWNnUl9QRTY4NmxBTW56UlZ4R05rSHI4NUpuQmdMdEFaX1Z4a2RfVExqTEJIQVp0R2NzeGxoaVN4Z1gwWHdYcjluRzdpT2dyNnNGRnI?oc=5",
+      "published": "Wed, 02 Sep 2026 14:33:16 GMT",
+      "published_iso": "2026-09-02T14:33:16+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-02",
       "last_seen": "2026-09-07"
     }
   ]
