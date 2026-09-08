@@ -1,16 +1,16 @@
 # Moratorium tracker review queue
-_Generated 2026-09-05 · 412/412 tracker rows sourced; 44/44 quotable claims (case studies, benchmarks, concessions) carry a citation and a read date_
+_Generated 2026-09-07 · 604/604 tracker rows sourced; 44/44 quotable claims (case studies, benchmarks, concessions) carry a citation and a read date_
 
 _Link checking skipped (--offline) — nothing below has been confirmed to resolve, let alone to say what the row claims._
 
 | Check | Count |
 |---|---|
-| expired | 19 |
-| undated-term | 30 |
-| unclassified-term | 34 |
-| expiring | 9 |
+| expired | 30 |
+| undated-term | 39 |
+| unclassified-term | 52 |
+| expiring | 25 |
 
-## expired (19)
+## expired (30)
 - **Groton, CT** (Enacted) — term ran to 2023-06-21; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://theday.com/local-news/20220621/groton-approves-one-year-moratorium-on-large-scale-data-centers)
 - **Brevard, NC** (Enacted) — term ran to 2026-06-23; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://www.transylvaniatimes.com/news/transylvania-county-not-pursuing-data-centers/article_51ca8d5c-a379-4b4b-8676-480c6bda88dd.html)
 - **Madison County, NC** (Enacted) — term ran to 2024-06-13; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://news.yahoo.com/madison-county-imposes-1-moratorium-090939100.html)
@@ -30,8 +30,19 @@ _Link checking skipped (--offline) — nothing below has been confirmed to resol
 - **Hayes Township, MI** (Enacted) — term ran to 2026-08-09; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact)
 - **Lenox Township, MI** (Enacted) — term ran to 2026-06-02; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact)
 - **Aurora, IL** (Enacted) — term ran to 2026-03-24; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://abc7chicago.com/post/aurora-city-council-consider-temporary-moratorium-put-pause-development-new-data-centers/17882682/)
+- **Fluvanna County, VA** (Enacted) — term ran to 2026-01-31; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://www.bisnow.com/news/washington-dc/data-center-development/the-world-s-largest-data-center-hub-pursues-a-development-pause-is-it-even-legal-)
+- **Jerome Township, OH** (Enacted) — term ran to 2026-06-01; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://www.wosu.org/politics-government/2025-09-09/jerome-township-puts-pause-on-new-data-center-development-for-nine-months)
+- **Mount Orab, OH** (Enacted) — term ran to 2026-08-30; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://www.wcpo.com/news/local-news/mt-orab-council-introduces-data-center-moratorium-amid-community-opposition-to-mysterious-mega-site-project)
+- **Waterville, OH** (Enacted) — term ran to 2026-06-08; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://www.13abc.com/2025/12/09/council-opts-six-month-moratorium-data-centers-waterville/)
+- **Covington, GA** (Enacted) — term ran to 2026-07-19; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://www.rockdalenewtoncitizen.com/news/covington-enacts-moratorium-on-data-center-permits/article_5054a82f-c4e7-47ab-b7b1-3892e30a4047.html)
+- **Floyd County, GA** (Enacted) — term ran to 2026-08-28; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://www.northwestgeorgianews.com/rome/news/local/floyd-county-commission-enacts-80-day-moratorium-on-new-data-centers/article_f6a7cc37-9486-42af-85b0-5705c980691e.html)
+- **Kingsland, GA** (Enacted) — term ran to 2026-08-09; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://kingslandgeorgia.com/DocumentCenter/View/12289/Data-Center-Temporary-Suspension-and-Moratorium-Ordinance?bidId=)
+- **Saugatuck Township, MI** (Enacted) — term ran to 2026-08-11; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://saugatucktownshipmi.gov/wp-content/uploads/2026/04/20260211-Meeting-minutes-APPROVED-SIGNED.pdf)
+- **Griffin, GA** (Enacted) — term ran to 2026-07-12; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://www.griffindailynews.com/news/griffin-puts-180-day-moratorium-on-data-centers-and-other-technological-facilities/article_a57b3fe6-cedf-54ec-8a84-a66c93da27da.html)
+- **Caledonia Township, MI** (Enacted) — term ran to 2026-07-01; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://www.fox17online.com/news/local-news/kent/caledonia-township-puts-6-month-pause-on-data-center-development-to-review-industrial-standards)
+- **Lyon Charter Township, MI** (Enacted) — term ran to 2026-08-30; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://www.detroitnews.com/story/news/local/oakland-county/2026/03/03/as-project-flex-proceeds-lyon-township-hits-pause-on-new-data-centers/88960710007/)
 
-## undated-term (30)
+## undated-term (39)
 - **Carroll County, GA** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://gradickcommunications.com/carroll-county-board-of-commissioners-approve-100-day-moratorium-on-data-centers-battery-energy-storage-systems/)
 - **Yakima County, WA** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.yakimaherald.com/news/local/government/yakima-county-commissioners-pass-six-month-data-center-moratorium/article_997dbbc7-7fe0-476a-9d92-73179f958bf7.html)
 - **Pinson, AL** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.trussvilletribune.com/2026/08/07/pinson-council-passes-one-year-moratorium-on-data-centers/)
@@ -60,10 +71,19 @@ _Link checking skipped (--offline) — nothing below has been confirmed to resol
 - **Tulare County, CA** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.yourcentralvalley.com/news/local-news/tulare-county-ai-data-center-moratorium/)
 - **Woodford County, IL** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://wmbdradio.com/2026/08/21/tazewell-county-revisits-data-center-ordinance-woodford-county-passes-moratorium/)
 - **Lyon County, KY** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.wpsdlocal6.com/news/data-center-moratorium-ordinance-passes-unanimously-in-lyon-county/article_3e62c03d-096f-42d0-b78d-d1f7e51be074.html)
+- **Canton Township, OH** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.cantontwp-oh.gov/_files/ugd/4e001a_48d8666b955c4b0db84d935eee664ff8.pdf)
+- **Cortland, OH** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.tribtoday.com/news/local-news/2026/06/cortland-enacts-1-year-ban-on-data-centers/)
+- **Defiance, OH** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://wbnowqct.com/defiance-city-council-approves-two-ordinances-pertaining-to-data-center/)
+- **Norton, OH** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.akron.com/articles/city-of-norton-introduces-moratorium-on-data-centers/)
+- **Archbold, OH** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.northwestsignal.net/news/article_f8a39535-c2e8-41cc-bc66-392a93b62104.html)
 - **Bloomingdale, GA** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.wsav.com/news/local-news/bloomingdale-city-council-approves-data-center-moratorium/)
 - **Harlingen, TX** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.krgv.com/news/harlingen-city-officials-look-to-extend-moratorium-on-data-centers)
+- **Shelbyville, TN** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.wsmv.com/video/2026/07/09/shelbyville-city-council-passes-data-center-moratorium/)
+- **Hagar Township, MI** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.tricityrecord.com/post/hagar-township-board-approves-data-center-moratorium-hears-concerns-over-drain-district-assessments)
+- **Lake Township, MI** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.laketownship.net/download/23077/minutes-july-2026.pdf)
+- **Lincoln Township (Berrien Co.), MI** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://wsbt.com/news/local/lincoln-township-trustees-agree-to-moratorium-on-data-centers-state-water-noise-electrical-consumption-impacts-communities-built-lincoln-township-michigan)
 
-## unclassified-term (34)
+## unclassified-term (52)
 - **Manatee County, FL** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.wusf.org/politics-issues/2026-08-04/manatee-county-pumps-brakes-data-centers-joining-hernando-pasco)
 - **Fairfield, AL** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.thecooldown.com/green-tech/patmos-company-proposed-ai-data-center-fairfield-alabama/)
 - **Village of Romeo, MI** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact)
@@ -98,15 +118,49 @@ _Link checking skipped (--offline) — nothing below has been confirmed to resol
 - **Vernon Township, NJ** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://pinelandsalliance.org/datacenters/)
 - **Washington, NJ** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://pinelandsalliance.org/datacenters/)
 - **Woodstown, NJ** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://pinelandsalliance.org/datacenters/)
+- **Pike County, GA** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.gpb.org/news/2025/10/22/wave-of-data-center-ordinances-sweep-through-ga-counties-how-strict-are-they)
+- **Ottawa, IL** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.shawlocal.com/illinois-valley/2026/08/20/ottawa-extends-data-center-moratorium-through-august-2027/)
+- **Topeka, KS** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.ksnt.com/news/local-news/one-year-data-center-moratorium-approved-in-topeka/)
+- **Genoa Township, MI** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.whmi.com/news/article/genoa-data-center-crypto-currency-mining-moratorium-extended)
+- **Zeeland Township, MI** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.fox17online.com/news/local-news/holland-zeeland-grand-haven/zeeland-township-approves-new-data-center-and-energy-facility-moratorium-to-protect-local-planning)
+- **St. Joseph, MN** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://mix949.com/st-joseph-data-center-moratorium/)
+- **Kansas City, MO** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.smartcitiesdive.com/news/data-centers-kansas-city-zoning-ordinance/811587/)
+- **Morton County, ND** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.govtech.com/policy/morton-county-n-d-will-consider-data-center-moratorium)
+- **Marathon County, WI** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.centralwinews.com/main/2026/06/02/marathon-county-to-consider-data-center-moratorium/?destination=tribune-phonograph)
+- **Middleton, WI** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.middletontimes.com/articles/2026/07/01/data-center-moratorium-adopted)
+- **Winnebago County, WI** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://fox11online.com/news/local/winnebago-county-to-pursue-12-month-data-center-moratorium)
+- **Clark County, IN** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.newsandtribune.com/news/clark-county-commissioners-approve-data-center-moratorium/article_75db5fbb-7271-4948-837d-c6dbfa79d9ab.html)
+- **Benton County, AR** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.ky3.com/2026/09/02/data-center-moratorium-fight-plays-out-benton-county-courtroom/)
+- **Green County, WI** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](http://www.beloitdailynews.com/news/local-news/green-county-joins-the-growing-list-of-wisconsin-counties-passing-data-center-moratoriums/article_644bfc7d-ebfb-4fa4-8ac7-c46b9d28d300.html)
+- **Pine County, MN** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.pinecountynews.com/communities/pinecity/news/pine-county-board-adopts-six-month-moratorium-on-data-center-developments/article_2b99d206-749d-4bdc-a8e9-b3d260d6a1da.html)
+- **Upper Sandusky, OH** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://crawfordcountynow.com/local/upper-sandusky-implements-six-month-moratorium-on-new-data-center-development/)
+- **Ellsworth, ME** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.ellsworthamerican.com/news/ellsworth-city-council-approves-data-center-moratorium/article_9ab5df1b-3fa9-41a0-be16-9fca1ad83919.html)
+- **Ellsworth Township, OH** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.wfmj.com/news/local-news/ellsworth-township-becomes-latest-community-to-enact-data-center-moratorium/article_bea66566-8047-437a-a897-5acbba9d48e1.html)
 
-## expiring (9)
-- **Bangor, ME** (Enacted) — ends 2026-10-10 (35.0d) — watch for an extension · [source](https://www.wabi.tv/2026/04/14/bangor-passes-180-day-moratorium-data-center-development/)
-- **Augusta, GA** (Enacted) — ends 2026-09-19 (14.0d) — watch for an extension · [source](https://www.wjbf.com/news/augusta-commissioners-delaying-approval-of-data-center-ordinance-and-extending-moratorium-by-60-days/)
-- **Vienna Township (Trumbull Co.), OH** (Enacted) — ends 2026-10-16 (41.0d) — watch for an extension · [source](https://www.tribtoday.com/news/local-news/2026/08/vienna-extends-data-center-moratorium/)
-- **Wixom, MI** (Enacted) — ends 2026-09-24 (19.0d) — watch for an extension · [source](https://www.wixomgov.org/departments/construction-development-services-building/data-center-moratorium-ordinance)
-- **Lexington (Fayette County), KY** (Enacted) — ends 2026-10-31 (56.0d) — watch for an extension · [source](https://www.lex18.com/news/covering-kentucky/lexington-city-council-passes-moratorium-on-data-center-development)
-- **White County, IN** (Enacted) — ends 2026-10-20 (45.0d) — watch for an extension · [source](https://www.wrul.com/local-news/twelve-month-moratorium-approved-for-white-county/)
-- **Front Royal, VA** (Enacted) — ends 2026-10-04 (29.0d) — watch for an extension · [source](https://www.nvdaily.com/nvdaily/council-oks-moratorium-on-data-center-applications/article_8bbfc9ce-d84e-5dd8-a4be-e8f9ee95cc94.html)
-- **Indio, CA** (Enacted) — ends 2026-10-16 (41.0d) — watch for an extension · [source](https://www.nbcpalmsprings.com/2026/07/16/indio-city-council-extends-data-center-moratorium-with-planning-commission-already-recommending-a-full-ban)
-- **Palm Springs, CA** (Enacted) — ends 2026-10-10 (35.0d) — watch for an extension · [source](https://kesq.com/news/2026/08/26/palm-springs-city-council-approves-temporary-data-center-moratorium/)
+## expiring (25)
+- **Lysander (Onondaga Co.), NY** (Enacted) — ends 2026-11-06 (60.0d) — watch for an extension · [source](https://www.informnny.com/news/local-news/lysander-board-approves-six-month-data-center-moratorium-residents-speak-out-against-project-proposal/)
+- **Bangor, ME** (Enacted) — ends 2026-10-10 (33.0d) — watch for an extension · [source](https://www.wabi.tv/2026/04/14/bangor-passes-180-day-moratorium-data-center-development/)
+- **Augusta, GA** (Enacted) — ends 2026-09-19 (12.0d) — watch for an extension · [source](https://www.wjbf.com/news/augusta-commissioners-delaying-approval-of-data-center-ordinance-and-extending-moratorium-by-60-days/)
+- **Vienna Township (Trumbull Co.), OH** (Enacted) — ends 2026-10-16 (39.0d) — watch for an extension · [source](https://www.tribtoday.com/news/local-news/2026/08/vienna-extends-data-center-moratorium/)
+- **Charlotte, NC** (Enacted) — ends 2026-11-05 (59.0d) — watch for an extension · [source](https://www.wfae.org/politics/2026-06-08/charlotte-city-council-approves-150-day-data-center-moratorium)
+- **Lavon, TX** (Enacted) — ends 2026-11-05 (59.0d) — watch for an extension · [source](https://www.wfaa.com/video/tech/city-of-lavon-discussing-data-center-moratorium/287-bda49564-1e93-43c5-ad74-4dbb71af0464)
+- **Wixom, MI** (Enacted) — ends 2026-09-24 (17.0d) — watch for an extension · [source](https://www.wixomgov.org/departments/construction-development-services-building/data-center-moratorium-ordinance)
+- **Lexington (Fayette County), KY** (Enacted) — ends 2026-10-31 (54.0d) — watch for an extension · [source](https://www.lex18.com/news/covering-kentucky/lexington-city-council-passes-moratorium-on-data-center-development)
+- **White County, IN** (Enacted) — ends 2026-10-20 (43.0d) — watch for an extension · [source](https://www.wrul.com/local-news/twelve-month-moratorium-approved-for-white-county/)
+- **Front Royal, VA** (Enacted) — ends 2026-10-04 (27.0d) — watch for an extension · [source](https://www.nvdaily.com/nvdaily/council-oks-moratorium-on-data-center-applications/article_8bbfc9ce-d84e-5dd8-a4be-e8f9ee95cc94.html)
+- **Cleveland, OH** (Enacted) — ends 2026-10-16 (39.0d) — watch for an extension · [source](https://www.clevelandohio.gov/news/cleveland-city-council-approves-temporary-pause-new-standalone-data-centers)
+- **Pierce Township, OH** (Enacted) — ends 2026-10-09 (32.0d) — watch for an extension · [source](https://piercetownship.org/wp-content/uploads/2026/02/Res-Imposing-Moratorium-Data-Centers-kb-edits.pdf)
+- **Tallmadge, OH** (Enacted) — ends 2026-10-10 (33.0d) — watch for an extension · [source](https://www.yahoo.com/news/articles/tallmadge-considers-six-month-moratorium-100316607.html)
+- **Indio, CA** (Enacted) — ends 2026-10-16 (39.0d) — watch for an extension · [source](https://www.nbcpalmsprings.com/2026/07/16/indio-city-council-extends-data-center-moratorium-with-planning-commission-already-recommending-a-full-ban)
+- **Palm Springs, CA** (Enacted) — ends 2026-10-10 (33.0d) — watch for an extension · [source](https://kesq.com/news/2026/08/26/palm-springs-city-council-approves-temporary-data-center-moratorium/)
+- **Lowndes County, GA** (Enacted) — ends 2026-10-25 (48.0d) — watch for an extension · [source](https://valdostadailytimes.com/2026/08/26/lowndes-county-approves-60-day-data-center-moratorium/)
+- **Augusta-Richmond County, GA** (Enacted) — ends 2026-09-19 (12.0d) — watch for an extension · [source](https://www.wrdw.com/2026/07/21/augusta-leaders-extend-moratorium-new-data-centers/)
+- **Camden County, GA** (Enacted) — ends 2026-11-06 (60.0d) — watch for an extension · [source](https://www.gpb.org/news/2026/05/06/camden-becomes-first-county-on-the-coast-adopt-data-center-moratorium)
+- **Roswell, GA** (Enacted) — ends 2026-09-20 (13.0d) — watch for an extension · [source](https://roswellconnections.com/datacenters/)
+- **Calaveras County, CA** (Enacted) — ends 2026-10-09 (32.0d) — watch for an extension · [source](https://mymotherlode.com/news/local/11092598/calaveras-data-center-moratorium-passes-4-0.html)
+- **Escondido, CA** (Enacted) — ends 2026-10-12 (35.0d) — watch for an extension · [source](https://ncpipeline.substack.com/p/escondido-data-center-moratorium)
+- **Eureka, CA** (Enacted) — ends 2026-10-17 (40.0d) — watch for an extension · [source](https://lostcoastoutpost.com/2026/sep/2/eureka-city-council-approved-temporary-ban-data-ce/)
+- **Mendocino County, CA** (Enacted) — ends 2026-10-16 (39.0d) — watch for an extension · [source](https://mendovoice.com/2026/09/mendocino-county-supes-ban-data-centers-for-the-moment-at-least/)
+- **Upper Burrell Township, PA** (Enacted) — ends 2026-11-02 (56.0d) — watch for an extension · [source](https://www.publicsource.org/upper-burrell-data-center-transparency-backlash/)
+- **Lyon Township, MI** (Enacted) — ends 2026-09-08 (1.0d) — watch for an extension · [source](https://www.whmi.com/news/article/lyon-twp-board-enacts-six-month-moratorium-on-new-data-center-projects)
 

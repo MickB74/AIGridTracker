@@ -4,7 +4,7 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
-  "count": 58,
+  "count": 60,
   "alerts": [
     {
       "id": "mora-GA-griffin-2026-07-12",
@@ -199,6 +199,19 @@
       "title": "Mount Orab, OH: data center moratorium has lapsed",
       "body": "The moratorium's documented term ran to 2026-08-30 (8 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
       "source": "https://www.wcpo.com/news/local-news/mt-orab-council-introduces-data-center-moratorium-amid-community-opposition-to-mysterious-mega-site-project",
+      "verified": true
+    },
+    {
+      "id": "mora-MI-lyon-charter-township-2026-08-30",
+      "kind": "moratorium-expiry",
+      "severity": "expired",
+      "locality": "Lyon Charter Township",
+      "state": "MI",
+      "expires": "2026-08-30",
+      "days_left": -8,
+      "title": "Lyon Charter Township, MI: data center moratorium has lapsed",
+      "body": "The moratorium's documented term ran to 2026-08-30 (8 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
+      "source": "https://www.detroitnews.com/story/news/local/oakland-county/2026/03/03/as-project-flex-proceeds-lyon-township-hits-pause-on-new-data-centers/88960710007/",
       "verified": true
     },
     {
@@ -667,6 +680,19 @@
       "title": "Bloomington, IL: data center moratorium expires in 80 days",
       "body": "The documented term ends 2026-11-26. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.wglt.org/local-news/2026-05-26/bloomington-approves-6-month-moratorium-on-data-centers",
+      "verified": true
+    },
+    {
+      "id": "mora-MI-hart-2026-11-26",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Hart",
+      "state": "MI",
+      "expires": "2026-11-26",
+      "days_left": 80,
+      "title": "Hart, MI: data center moratorium expires in 80 days",
+      "body": "The documented term ends 2026-11-26. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.shorelinemedia.net/ludington_daily_news/news/west-michigan-communities-move-to-regulate-data-centers/article_924d511a-66a7-4f94-ab63-ac9b984546ee.html",
       "verified": true
     },
     {

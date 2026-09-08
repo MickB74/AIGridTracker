@@ -3,11 +3,11 @@
   "generated": "2026-09-07",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 587,
+  "count": 602,
   "states": 43,
-  "enacted": 474,
-  "proposed": 65,
-  "official_sourced": 49,
+  "enacted": 483,
+  "proposed": 68,
+  "official_sourced": 50,
   "by_state": {
     "CO": {
       "total": 12,
@@ -50,9 +50,9 @@
       "proposed": 0
     },
     "MI": {
-      "total": 46,
-      "enacted": 32,
-      "proposed": 2
+      "total": 59,
+      "enacted": 41,
+      "proposed": 3
     },
     "TX": {
       "total": 12,
@@ -90,9 +90,9 @@
       "proposed": 1
     },
     "FL": {
-      "total": 18,
+      "total": 20,
       "enacted": 13,
-      "proposed": 4
+      "proposed": 6
     },
     "OH": {
       "total": 62,
@@ -296,6 +296,7 @@
       "roswell-ga",
       "riley-county-ks",
       "gorham-me",
+      "hart-mi",
       "calaveras-county-ca",
       "escondido-ca",
       "eureka-ca",

@@ -102,8 +102,10 @@
       "query": "data center moratorium county commission approved",
       "first_seen": "2026-08-04",
       "last_seen": "2026-08-04",
-      "status": "new",
-      "origin": "news-scan"
+      "status": "promoted",
+      "origin": "news-scan",
+      "resolved": "2026-09-07",
+      "reason": "promoted as Marion County, FL (Proposed)"
     },
     {
       "title": "Louisa County Supervisors Approve 18-Month Data Center Moratorium",
@@ -115,8 +117,10 @@
       "query": "data center moratorium county commission approved",
       "first_seen": "2026-08-04",
       "last_seen": "2026-08-04",
-      "status": "new",
-      "origin": "news-scan"
+      "status": "dismissed",
+      "origin": "news-scan",
+      "resolved": "2026-09-07",
+      "reason": "no Louisa County VA action found; the 18-month vote traces to Linn County, IA, already tracked"
     },
     {
       "title": "Eastern North Carolina county weighs data center ban after project nixed",
@@ -154,8 +158,10 @@
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-08-04",
       "last_seen": "2026-09-04",
-      "status": "new",
-      "origin": "news-scan"
+      "status": "dismissed",
+      "origin": "news-scan",
+      "resolved": "2026-09-07",
+      "reason": "unresolvable locality; the only confirmable match is Desert Hot Springs, CA, already tracked"
     },
     {
       "title": "Clarksville weighs ban on new data centers as interest grows across Clark County",
@@ -179,7 +185,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-07",
       "status": "new",
       "origin": "news-scan"
     },
@@ -1171,7 +1177,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-07",
       "status": "new",
       "origin": "news-scan"
     },
@@ -8711,9 +8717,11 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "dismissed",
       "origin": "moratorium-nation",
-      "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
+      "attribution": "https://mjbommar.github.io/moratorium-data-2026/",
+      "resolved": "2026-09-07",
+      "reason": "no ordinance, agenda or news record of a Cedar County IA moratorium could be located; only Linn County IA confirmed"
     },
     {
       "title": "Peosta, IA — City moratorium (active)",
@@ -9491,9 +9499,10 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "dismissed",
       "origin": "moratorium-nation",
-      "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
+      "attribution": "https://mjbommar.github.io/moratorium-data-2026/",
+      "dismiss_reason": "already tracked under variant name"
     },
     {
       "title": "Meade County Fiscal Court, KY — County moratorium (active)",
@@ -9595,9 +9604,10 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "dismissed",
       "origin": "moratorium-nation",
-      "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
+      "attribution": "https://mjbommar.github.io/moratorium-data-2026/",
+      "dismiss_reason": "already tracked under variant name"
     },
     {
       "title": "Versailles, KY — City moratorium (active)",
@@ -10063,7 +10073,7 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "promoted",
       "origin": "moratorium-nation",
       "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
     },
@@ -10089,7 +10099,7 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "promoted",
       "origin": "moratorium-nation",
       "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
     },
@@ -10115,7 +10125,7 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "dismissed",
       "origin": "moratorium-nation",
       "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
     },
@@ -10141,7 +10151,7 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "promoted",
       "origin": "moratorium-nation",
       "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
     },
@@ -10167,7 +10177,7 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "dismissed",
       "origin": "moratorium-nation",
       "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
     },
@@ -10193,7 +10203,7 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "dismissed",
       "origin": "moratorium-nation",
       "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
     },
@@ -10245,7 +10255,7 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "promoted",
       "origin": "moratorium-nation",
       "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
     },
@@ -10271,7 +10281,7 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "promoted",
       "origin": "moratorium-nation",
       "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
     },
@@ -10297,7 +10307,7 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "promoted",
       "origin": "moratorium-nation",
       "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
     },
@@ -10375,7 +10385,7 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "promoted",
       "origin": "moratorium-nation",
       "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
     },
@@ -10401,7 +10411,7 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "promoted",
       "origin": "moratorium-nation",
       "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
     },
@@ -10531,7 +10541,7 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "promoted",
       "origin": "moratorium-nation",
       "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
     },
@@ -10557,7 +10567,7 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "promoted",
       "origin": "moratorium-nation",
       "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
     },
@@ -10583,7 +10593,7 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "promoted",
       "origin": "moratorium-nation",
       "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
     },
@@ -10609,7 +10619,7 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "promoted",
       "origin": "moratorium-nation",
       "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
     },
@@ -10739,9 +10749,11 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "dismissed",
       "origin": "moratorium-nation",
-      "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
+      "attribution": "https://mjbommar.github.io/moratorium-data-2026/",
+      "resolved": "2026-09-07",
+      "reason": "no township record or news report of a Park Township MI moratorium could be located"
     },
     {
       "title": "Parma Township, MI — Township moratorium (active)",
@@ -13469,9 +13481,10 @@
       "as_of": null,
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-20",
-      "status": "new",
+      "status": "dismissed",
       "origin": "moratorium-nation",
-      "attribution": "https://mjbommar.github.io/moratorium-data-2026/"
+      "attribution": "https://mjbommar.github.io/moratorium-data-2026/",
+      "dismiss_reason": "already tracked under variant name"
     },
     {
       "title": "Warren County, TN — County moratorium (active)",
@@ -16188,7 +16201,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-08-31",
-      "last_seen": "2026-08-31",
+      "last_seen": "2026-09-07",
       "status": "new",
       "origin": "news-scan"
     },
@@ -16436,8 +16449,10 @@
       "query": "data center moratorium county commission approved",
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-06",
-      "status": "new",
-      "origin": "news-scan"
+      "status": "promoted",
+      "origin": "news-scan",
+      "resolved": "2026-09-07",
+      "reason": "promoted as Marion County, FL (Proposed)"
     },
     {
       "title": "Lincoln County data center moratorium fails in messy joint meeting with Sioux Falls City Council",
@@ -17112,8 +17127,10 @@
       "tier": 1,
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "a rejected project application, not a moratorium"
     },
     {
       "title": "Mayor Van Johnson pushes for moratorium on Savannah data center developments",
@@ -17229,8 +17246,10 @@
       "tier": 2,
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "a rejected project application, not a moratorium"
     },
     {
       "title": "Delaware governor signs legislation toughening restrictions on data centers",
@@ -17333,8 +17352,10 @@
       "tier": 2,
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "a rejected project application, not a moratorium"
     },
     {
       "title": "Savannah city council to vote on data center moratorium",
@@ -17944,8 +17965,10 @@
       "tier": 1,
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "a US senator calling for a statewide pause is not a locality action; Effingham County GA instead widened data center zoning"
     },
     {
       "title": "Data center pitched for P&G's old Ivorydale plant amid moratorium bid",
@@ -17970,8 +17993,10 @@
       "tier": 1,
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "a US senator calling for a statewide pause is not a locality action; Effingham County GA instead widened data center zoning"
     },
     {
       "title": "Congressional candidate demands pause on Central Valley data center expansion",
@@ -18061,8 +18086,10 @@
       "tier": 1,
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "a US senator calling for a statewide pause is not a locality action; Effingham County GA instead widened data center zoning"
     },
     {
       "title": "MARYLAND: Town council bans data centers",
@@ -18165,8 +18192,10 @@
       "tier": 1,
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "a US senator calling for a statewide pause is not a locality action; Effingham County GA instead widened data center zoning"
     },
     {
       "title": "Benton Twp. looks to adopt environmentally conscious data center ordinance",
@@ -18230,8 +18259,10 @@
       "tier": 1,
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "a US senator calling for a statewide pause is not a locality action; Effingham County GA instead widened data center zoning"
     },
     {
       "title": "North Port releases new information on proposed data center as commission considers moratorium",
@@ -18256,8 +18287,10 @@
       "tier": 1,
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "a US senator calling for a statewide pause is not a locality action; Effingham County GA instead widened data center zoning"
     },
     {
       "title": "Editorial: Data center moratoriums could hurt local regions; solutions should be sought",
@@ -18516,8 +18549,10 @@
       "tier": 1,
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "a US senator calling for a statewide pause is not a locality action; Effingham County GA instead widened data center zoning"
     },
     {
       "title": "Kokomo council advances data center ordinance despite public opposition",
@@ -19309,8 +19344,10 @@
       "tier": 1,
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "a US senator calling for a statewide pause is not a locality action; Effingham County GA instead widened data center zoning"
     },
     {
       "title": "Data center moratorium now",
@@ -19361,8 +19398,10 @@
       "tier": 1,
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "borough asking the state for a moratorium, not enacting a local one"
     },
     {
       "title": "Gov. Hochul on decision to impose 1-year moratorium on new data centers",
@@ -19595,8 +19634,10 @@
       "tier": 1,
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "borough asking the state for a moratorium, not enacting a local one"
     },
     {
       "title": "Bulloch County Commissioners deny data center ban in narrow vote",
@@ -19764,8 +19805,10 @@
       "tier": 1,
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "borough asking the state for a moratorium, not enacting a local one"
     },
     {
       "title": "Miamisburg imposes 9-month moratorium on data centers",
@@ -20023,7 +20066,7 @@
       "guess_state": null,
       "query": "data center moratorium city council",
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-07",
       "status": "new",
       "origin": "news-scan"
     },
@@ -20062,7 +20105,7 @@
       "guess_state": null,
       "query": "data center moratorium city council",
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-07",
       "status": "new",
       "origin": "news-scan"
     },
@@ -20088,7 +20131,7 @@
       "guess_state": null,
       "query": "data center moratorium city council",
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-07",
       "status": "new",
       "origin": "news-scan"
     },
@@ -20114,7 +20157,7 @@
       "guess_state": null,
       "query": "data center moratorium county commission approved",
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-07",
       "status": "new",
       "origin": "news-scan"
     },
@@ -20153,7 +20196,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-07",
       "status": "new",
       "origin": "news-scan"
     },
@@ -20179,7 +20222,7 @@
       "guess_state": null,
       "query": "data center moratorium extended",
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-07",
       "status": "new",
       "origin": "news-scan"
     },
@@ -20297,8 +20340,10 @@
       "tier": 2,
       "first_seen": "2026-09-05",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "litigation and protest over a zoning expansion; no moratorium proposed or adopted"
     },
     {
       "title": "Effingham County residents sue county over data center zoning ordinance, demand transparency",
@@ -20310,8 +20355,10 @@
       "tier": 2,
       "first_seen": "2026-09-05",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "litigation and protest over a zoning expansion; no moratorium proposed or adopted"
     },
     {
       "title": "Judge rules Edgerton petition seeking ban on data centers can move forward for now",
@@ -20401,8 +20448,10 @@
       "tier": 2,
       "first_seen": "2026-09-05",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "litigation and protest over a zoning expansion; no moratorium proposed or adopted"
     },
     {
       "title": "Wilmington residents continue dissent over data center ordinances passed by city council",
@@ -20427,8 +20476,10 @@
       "tier": 2,
       "first_seen": "2026-09-05",
       "last_seen": "2026-09-07",
-      "status": "new",
-      "origin": "archive-sweep"
+      "status": "dismissed",
+      "origin": "archive-sweep",
+      "resolved": "2026-09-07",
+      "reason": "litigation and protest over a zoning expansion; no moratorium proposed or adopted"
     },
     {
       "title": "Residents urge Gage County to adopt 18 month data center moratorium",
@@ -21172,6 +21223,58 @@
       "origin": "archive-sweep"
     },
     {
+      "title": "Hayden Town Council eyes data center moratorium after public pushback",
+      "outlet": "SteamboatToday.com",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZHdGUEF2dEJ3cEo3S3dGcXlfRWpWT0Z1M1lWbjBfWmY1TkI1RkpfWHFrdGM2ZmlKY0ItOG54dC1pMWN4MEtaVC0wTGF5LUtBY0xMT3hNU2FnSzktTE1nOXZQM3hfNnFYTTl5SWppMHMyQzFmSzZaSDJQTzRiTG9vTzFQbVBpU1NEamMtVGVqcGVkS1BwVUl5OGJWTGRVMGdRdGRKalRDSF9QUQ?oc=5",
+      "published": "Mon, 07 Sep 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium city council",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Fort Wayne council member proposes one-year data center moratorium",
+      "outlet": "WPTA | 21Alive | Fort Wayne, IN",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMUp2Nmc1TVVnenB3UDJ0d0R4c0xTTmluV1NTdGF0clc1LVEzbUZ5Z3lqN2J1MURycmR2Z1hGLVV2VXB4anJQcmZDc0xBSkRmZE5zZk9CU0ZHclNMSEpZampucmRhZ2FFZks0Rk9jLU81R2txRFBKRUpCLTNaV3ZuWW5ubFdyazRTYmtaRVVScERpMVdRWkJoMlRpUE9Selgwek5JdTlPeUxEZw?oc=5",
+      "published": "Mon, 07 Sep 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium city council",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Westlake City Council adopts ordinance placing temporary moratorium on approval of data centers",
+      "outlet": "Cleveland.com",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQaFNuTWtWdzliclJucWFnQWU5cmEtYWlhalZ1VjZpejJmVGVmQWVubVlzejduZkVHeEtHVkZ6elpRVm95RWdrV0twVWh1alBKU0xabWxkcE9kM0FGTXZSUFotaVREV2djbHVaS2ZfdmJkVkJ3VEo4WkRaUzBXZGFYd1ZSWjRuU2RzdmgwU2xBR2Zud29HbGJFY3dWZWZ6VFUwWWpjYVhRQ1BIaHJ1U0xpb3NBSzR6dE5La3lTX1BKUkNyS3NVby1ESURSZEk5YXdyeTlGQzNsTjNxejdO?oc=5",
+      "published": "Sun, 06 Sep 2026",
+      "guess_locality": "Westlake",
+      "guess_state": null,
+      "query": "data center moratorium city council",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Waterloo council to consider 3-month moratorium on data centers Tuesday",
+      "outlet": "Waterloo-Cedar Falls Courier",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQMjJXekdTT0gtT2lIbGtkSk1tdTNsckNmUHdTdjIyanZnckRIWGI4dGFYMXpIOGYzRWlNYjYxbXViNVJNem5uY2FTYW1BYlkwVWluWl9Hb3BVcGdoN05sVUxRTkRubVlyTWo5WGVMT3FaeWR1ZURRbTVnQzhCcVBzX3lid1QwZmJPWDk0S1FPd1FMd0ZRYmRSNlhvTVFFd1FRR0tsMDNB?oc=5",
+      "published": "Mon, 07 Sep 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium city council",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
       "title": "Salem City Council votes in favor on moratorium on AI data centers",
       "outlet": "Statesman Journal",
       "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQUDRnWTh3UDV6YjZFdVFOR09LOVJsdVlFYmRSd3NMcV9KdFRDbU1qc2dzSHN3UnVrcXktM1FmY1QtTlpkR21oN0stSEZCbGpTNzdmU2pERkxfVXhObU9XRllEYVdWZzVSOVk5bG9HSG9TRVdsbndpR1ZNeW5qQ20xcEtzc3lGVVhHNkh1MHBpWTluV253cjRmR29JZExWR0pPLUFDOEFUUDJHREE1MTh6aTF4bG1VVkVBVlBFbW54ajZpaU5OWFQ0YU9kYkVHbVpEZmFrSnE3NA?oc=5",
@@ -21596,7 +21699,7 @@
       "guess_state": null,
       "query": "data center moratorium extended",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-07",
       "status": "promoted",
       "origin": "news-scan"
     },
