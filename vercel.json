@@ -1349,16 +1349,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/nottingham-nh",
-      "destination": "/states/new-hampshire",
-      "permanent": true
-    },
-    {
-      "source": "/communities/nottingham-nh.html",
-      "destination": "/states/new-hampshire",
-      "permanent": true
-    },
-    {
       "source": "/communities/oklahoma-ok",
       "destination": "/states/oklahoma",
       "permanent": true
@@ -1840,6 +1830,15 @@
     }
   ],
   "headers": [
+    {
+      "source": "/assets/site.(.*).css",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
     {
       "source": "/assets/(.*)",
       "headers": [

@@ -224,7 +224,7 @@ body { background:var(--bg); color:var(--ink);
 .wrap { max-width:900px; margin:0 auto; padding:20px 20px 64px; }
 nav { display:flex; align-items:center; gap:14px; padding:14px 0;
       border-bottom:1px solid var(--rule); flex-wrap:wrap; }
-nav img { height:34px; }
+nav img { height:34px; width:auto; }
 nav a { color:var(--muted); text-decoration:none; font-size:14px; }
 nav a:hover { color:var(--teal); }
 nav a[aria-current] { color:var(--teal); font-weight:600; }
@@ -266,7 +266,7 @@ table.sortable td { vertical-align:middle; }
 .nav-links { display:contents; }
 @media (max-width:820px) {
   nav { gap:8px; }
-  nav img { height:30px; }
+  nav img { height:30px; width:auto; }
   .nav-burger { display:block; order:3; font-size:20px; line-height:1;
     color:var(--muted); cursor:pointer; padding:5px 8px; border-radius:8px;
     border:1px solid var(--rule); user-select:none; }
@@ -825,6 +825,7 @@ NAV_GROUPS = [
         ("Top stories", "news/index.html"),
         ("Blog", "blog/index.html"),
         ("Story tracker", "story-tracker.html"),
+        ("Tracker changes", "changes.html"),
         ("Projects tracker", "projects.html"),
         ("Videos", "videos.html"),
     ]),
@@ -1102,14 +1103,14 @@ def page(title, description, body, canonical, depth=0,
 <link rel="preload" href="{p}assets/logo.svg" as="image" type="image/svg+xml">
 <link rel="dns-prefetch" href="//gc.zgo.at">
 <link rel="preconnect" href="//gc.zgo.at" crossorigin>
-<style>{CSS}</style>
+<link rel="stylesheet" href="{p}{CSS_FILE}">
 <script>try{{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}}catch(e){{}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
 <nav>
-  <a href="{p}index.html"><img src="{p}assets/logo.svg" alt="AI GridWatch"></a>
+  <a href="{p}index.html"><img src="{p}assets/logo.svg" alt="AI GridWatch" width="540" height="120"></a>
   <input type="checkbox" id="navToggle" hidden>
   <label for="navToggle" class="nav-burger" aria-label="Menu"
          role="button">&#9776;</label>
@@ -1159,6 +1160,13 @@ def page(title, description, body, canonical, depth=0,
 """)
 
 
+# The shared stylesheet ships as one hashed, immutable file instead of 27 KB
+# inlined into every page: the second page a reader opens costs nothing for
+# CSS, and the hash in the name means a style change never fights a cache.
+CSS_HASH = hashlib.sha256(CSS.encode("utf-8")).hexdigest()[:10]
+CSS_FILE = f"assets/site.{CSS_HASH}.css"
+
+
 _ORG = {
     "@type": "Organization",
     "name": "AI GridWatch",
@@ -1166,7 +1174,7 @@ _ORG = {
     "description": "Free community tools for negotiating with data center "
                    "developers: impact calculators, CBA templates, health "
                    "evidence, and sourced data.",
-    "logo": f"{SITE_URL}/assets/logo.svg",
+    "logo": f"{SITE_URL}/assets/logo.png",
 }
 
 
@@ -1233,7 +1241,11 @@ def _article_schema(title, description, url, date_str, author="AI GridWatch"):
         "description": description,
         "url": url,
         "datePublished": date_str,
-        "author": {"@type": "Organization", "name": author},
+        "dateModified": date_str,
+        "mainEntityOfPage": {"@type": "WebPage", "@id": url},
+        "image": [f"{SITE_URL}/assets/hero.png"],
+        "author": {"@type": "Organization", "name": author,
+                   "url": SITE_URL},
         "publisher": {**_ORG, "@context": "https://schema.org"},
     }
 
@@ -1344,7 +1356,8 @@ def build_index(top_stories=None):
     <a href="blog/feed.xml">Blog</a> ·
     <a href="news/feed.xml">News</a> ·
     <a href="changes.xml">Tracker changes</a> ·
-    <a href="alerts.xml">Expiring pauses</a> (RSS)</p>
+    <a href="alerts.xml">Expiring pauses</a> (RSS) ·
+    <a href="changes.html">What changed this week</a></p>
 </header>
 {_hero_art_svg()}
 </div>
@@ -8113,7 +8126,8 @@ def build_moratoriums():
   <h2>Changed in the last 7 days</h2>
   <p class="muted" style="margin-bottom:12px">Every row that moved since a
   prior build: newly tracked, a status flip, or a term that got extended or
-  cut short. <a href="changes.xml">Subscribe by RSS</a></p>
+  cut short. <a href="changes.html">Full week-by-week log</a> ·
+  <a href="changes.xml">Subscribe by RSS</a></p>
   <ul>{_items}</ul>
 </section>"""
 
@@ -8440,6 +8454,10 @@ def build_moratoriums():
         f"each with a primary source and end date.",
         body, f"{SITE_URL}/moratoriums",
         og_image=_og_image("moratoriums"), modified=BUILD_DATE,
+        og_extra='<link rel="alternate" type="application/rss+xml" '
+                 f'title="AI GridWatch — tracker changes" href="{SITE_URL}/changes.xml">'
+                 '<link rel="alternate" type="application/rss+xml" '
+                 f'title="AI GridWatch — expiring pauses" href="{SITE_URL}/alerts.xml">',
         jsonld=[
             _breadcrumb(("Home", SITE_URL),
                         ("Moratoriums", f"{SITE_URL}/moratoriums")),
@@ -8774,14 +8792,34 @@ def build_community(m, news_group=None):
                           & (MORATORIUMS_DF["locality"] != loc)]
     sibs_html = ""
     if not sibs.empty:
+        # Nearest eight by great-circle distance, not the whole state: New
+        # Jersey alone has 60+ rows, and a page that links all of them is
+        # both heavier and less useful to a resident than the towns next
+        # door. The state page carries the full list.
+        def _dist(s):
+            if not (has_value(m.lat) and has_value(m.lon)
+                    and has_value(s.lat) and has_value(s.lon)):
+                return 1e9
+            la1, lo1, la2, lo2 = map(math.radians,
+                                     (m.lat, m.lon, s.lat, s.lon))
+            h = (math.sin((la2 - la1) / 2) ** 2
+                 + math.cos(la1) * math.cos(la2) * math.sin((lo2 - lo1) / 2) ** 2)
+            return 3959 * 2 * math.asin(math.sqrt(h))
+        ranked = sorted(sibs.itertuples(), key=_dist)[:8]
         items = "\n".join(
             f'<li><a href="{_loc_slug(s.locality, s.state)}.html">'
-            f'{esc(str(s.locality))}</a> — {_mora_status_cell(s)}</li>'
-            for s in sibs.itertuples())
+            f'{esc(str(s.locality))}</a>'
+            + (f' <span class="muted">({int(round(_dist(s)))} mi)</span>'
+               if _dist(s) < 1e8 else "")
+            + f' — {_mora_status_cell(s)}</li>'
+            for s in ranked)
         sibs_html = f"""
 <section>
-  <h2>Elsewhere in {esc(state_name)}</h2>
+  <h2>Nearby in {esc(state_name)}</h2>
   <ul>{items}</ul>
+  <p class="muted">All {len(sibs) + 1} tracked actions in {esc(state_name)}
+  are on the <a href="../states/{state_slug}.html#s-moratoriums">state
+  page</a>.</p>
 </section>"""
 
     note_html = (f"<p>{esc(str(m.note))}</p>" if has_value(m.note) else "")
@@ -15644,6 +15682,77 @@ def build_moratorium_changes_feed():
     return len(log)
 
 
+def build_changes_page():
+    """The change log as a page with a stable URL, grouped by ISO week.
+
+    changes.xml already carries this for feed readers; this is the version a
+    reporter or a council clerk can link to, and the one a search engine can
+    index for "new data center moratoriums this week". Every entry links to
+    the row on the tracker and, where the locality has one, its own page.
+    """
+    import datetime as _dt
+    log = sorted(_MORA_CHANGES_LOG, key=lambda c: c["date"], reverse=True)
+    _KIND = {"added": "New", "status_changed": "Status changed",
+             "extended": "Extended", "shortened": "Shortened"}
+    _slugs = {_loc_slug(r.locality, r.state) for r in MORATORIUMS_DF.itertuples()}
+    weeks = {}
+    for c in log:
+        d = _dt.date.fromisoformat(c["date"])
+        monday = d - _dt.timedelta(days=d.weekday())
+        weeks.setdefault(monday, []).append(c)
+    sections = []
+    for monday, items in weeks.items():
+        sunday = monday + _dt.timedelta(days=6)
+        lis = "\n".join(
+            f'<li><strong>{esc(c["date"])}</strong> · '
+            f'<a href="moratoriums.html#{esc(c["id"])}">{esc(c["locality"])}</a>'
+            + (f' (<a href="communities/{esc(c["id"])}.html">briefing</a>)'
+               if c["id"] in _slugs else "")
+            + f' — <span class="badge">{esc(_KIND.get(c["kind"], c["kind"]))}</span> '
+            f'<span class="muted">{esc(c["detail"])}</span></li>'
+            for c in items)
+        n_new = sum(1 for c in items if c["kind"] == "added")
+        sections.append(
+            f'<section id="w-{monday.isoformat()}">'
+            f'<h2>Week of {monday.strftime("%B %-d, %Y")}</h2>'
+            f'<p class="muted">{len(items)} change{"s" if len(items) != 1 else ""}'
+            f'{f", {n_new} newly tracked" if n_new else ""} · '
+            f'{monday.isoformat()} to {sunday.isoformat()}</p>'
+            f'<ul>{lis}</ul></section>')
+    body = f"""
+<header>
+  <div class="kicker">Change log</div>
+  <h1>Data center moratorium changes, week by week</h1>
+  <p class="lede">Every row of the <a href="moratoriums.html">moratorium
+  tracker</a> that moved: newly tracked actions, status changes, and terms
+  that were extended or cut short. {len(log)} logged changes since the log
+  began. Re-verifications with no substantive change are not listed.</p>
+  <p class="muted"><a href="changes.xml">Subscribe by RSS</a> ·
+  <a href="alerts.xml">Expiring pauses</a> ·
+  <a href="data/moratoriums.csv">Download the full tracker</a></p>
+</header>
+{"".join(sections) if sections else '<section><p class="muted">No changes logged yet.</p></section>'}
+<section>
+  <p class="muted">Changes are detected by diffing each daily build against
+  the previous snapshot of the registry. A row appears here the day it is
+  added or the day its status or documented end date changes. See
+  <a href="moratoriums-methodology.html">how we count</a>.</p>
+</section>
+"""
+    return page(
+        "Data center moratorium changes this week — AI GridWatch",
+        f"Week-by-week log of every change to the U.S. data center moratorium "
+        f"tracker: {len(log)} newly tracked actions, status changes, and "
+        f"extended or expired terms, each linked to its source.",
+        body, f"{SITE_URL}/changes",
+        og_image=_og_image("moratoriums"), modified=BUILD_DATE,
+        og_extra='<link rel="alternate" type="application/rss+xml" '
+                 f'title="AI GridWatch — tracker changes" href="{SITE_URL}/changes.xml">',
+        jsonld=_breadcrumb(("Home", SITE_URL),
+                           ("Moratoriums", f"{SITE_URL}/moratoriums"),
+                           ("Changes", f"{SITE_URL}/changes")))
+
+
 def build_alerts_outputs():
     """Publish the expiry alerts as JSON and RSS.
 
@@ -15828,6 +15937,9 @@ def main():
     (WEB / "assets").mkdir()
 
     shutil.copy(ROOT / "assets" / "logo.svg", WEB / "assets" / "logo.svg")
+    # Raster logo for Organization schema — Google won't take an SVG there.
+    shutil.copy(ROOT / "assets" / "logo.png", WEB / "assets" / "logo.png")
+    (WEB / CSS_FILE).write_text(CSS, encoding="utf-8")
     # Default og:image for every page — social platforms won't render an SVG
     # card, so the per-post inline art can't serve double duty here.
     shutil.copy(ROOT / "assets" / "hero.png", WEB / "assets" / "hero.png")
@@ -15856,6 +15968,7 @@ def main():
     _n_alerts = build_alerts_outputs()
     print(f"  [data] {_n_alerts} deadline alerts -> alerts.json + alerts.xml")
     _n_changes = build_moratorium_changes_feed()
+    (WEB / "changes.html").write_text(build_changes_page(), encoding="utf-8")
     # The home page's "what changed" block reads _MORA_CHANGES_LOG, which
     # build_moratoriums() populates — so the front door renders last.
     (WEB / "index.html").write_text(build_index(top_stories=top_stories),
@@ -15973,6 +16086,7 @@ def main():
              "community-value", "open-data", "senate-races", "senators", "house-races",
              "hearing-questions", "opposition", "glossary", "tax-breaks", "siting",
              "companies/", "states/", "blog/", "news/", "videos", "map",
+             "changes",
              "communities/"]
     paths.extend(_community_paths)
     paths.extend(f"companies/{h['slug']}" for h in _HYPERSCALERS)
@@ -16150,6 +16264,9 @@ def main():
             # re-fetched on every page view without this; HTML stays
             # must-revalidate so a daily rebuild is seen immediately.
             "headers": [
+                {"source": "/assets/site.(.*).css",
+                 "headers": [{"key": "Cache-Control",
+                              "value": "public, max-age=31536000, immutable"}]},
                 {"source": "/assets/(.*)",
                  "headers": [{"key": "Cache-Control",
                               "value": "public, max-age=86400, "

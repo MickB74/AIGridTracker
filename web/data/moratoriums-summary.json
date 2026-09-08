@@ -3,11 +3,11 @@
   "generated": "2026-09-07",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 611,
-  "states": 43,
-  "enacted": 491,
-  "proposed": 68,
-  "official_sourced": 52,
+  "count": 629,
+  "states": 48,
+  "enacted": 499,
+  "proposed": 73,
+  "official_sourced": 53,
   "by_state": {
     "CO": {
       "total": 13,
@@ -223,6 +223,31 @@
       "total": 2,
       "enacted": 1,
       "proposed": 1
+    },
+    "AK": {
+      "total": 2,
+      "enacted": 1,
+      "proposed": 1
+    },
+    "DE": {
+      "total": 4,
+      "enacted": 2,
+      "proposed": 1
+    },
+    "ID": {
+      "total": 3,
+      "enacted": 2,
+      "proposed": 1
+    },
+    "NH": {
+      "total": 6,
+      "enacted": 2,
+      "proposed": 2
+    },
+    "SD": {
+      "total": 3,
+      "enacted": 1,
+      "proposed": 0
     }
   },
   "expiring_within_days": {

@@ -434,6 +434,17 @@ published pages are static files.
   un-retired, and a destination that is not a live page fails the build.
   Renamed localities should still get a `_COMMUNITY_SLUG_ALIASES` entry so
   they redirect to the right locality rather than to the state.
+- **The stylesheet is one hashed file, not inlined.** `page()` links
+  `assets/site.<sha>.css` (`CSS_FILE`, hashed from `CSS` at import) and
+  `main()` writes it next to the logo; `vercel.json` serves it immutable for
+  a year. A CSS edit changes the hash, so every page's `<head>` changes with
+  it — that is expected in the diff, not churn. Per-page `<style>` blocks
+  inside builders stay inline; only the shared `CSS` moved.
+- **`changes.html` is the change log's indexable twin.** `changes.xml`
+  serves feed readers; `build_changes_page()` renders the same
+  `_MORA_CHANGES_LOG` grouped by ISO week at a stable URL, linked from the
+  Updates menu, the home feeds line, and the tracker's "changed this week"
+  block.
 - **The moratoriums table ships one page of rows; the rest is JSON.**
   `build_moratoriums()` renders every row's cells in Python, writes them all
   to `web/data/moratoriums-table.json`, and puts only the first 25 in the

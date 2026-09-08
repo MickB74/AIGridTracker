@@ -23,6 +23,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "anchorage-ak": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "anderson-county-sc": {
     "effective_status": "Enacted",
     "expires": "2027-02-20"
@@ -122,6 +126,10 @@
   "bangor-me": {
     "effective_status": "Enacted",
     "expires": "2026-10-10"
+  },
+  "bannock-county-id": {
+    "effective_status": "Enacted",
+    "expires": "2027-01-26"
   },
   "bass-river-township-nj": {
     "effective_status": "Enacted",
@@ -290,6 +298,10 @@
   "camdenton-mo": {
     "effective_status": "Enacted",
     "expires": "2027-05-05"
+  },
+  "canterbury-nh": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "canton-nc": {
     "effective_status": "Enacted",
@@ -543,6 +555,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "delaware-sb-353-de": {
+    "effective_status": "Defeated",
+    "expires": null
+  },
   "delaware-township-nj": {
     "effective_status": "Enacted",
     "expires": null
@@ -586,6 +602,10 @@
   "dougherty-county-ga": {
     "effective_status": "Enacted",
     "expires": "2027-02-27"
+  },
+  "dover-de": {
+    "effective_status": "Proposed",
+    "expires": null
   },
   "downe-township-nj": {
     "effective_status": "Enacted",
@@ -686,6 +706,10 @@
   "eureka-ca": {
     "effective_status": "Enacted",
     "expires": "2026-10-17"
+  },
+  "fairbanks-north-star-borough-ak": {
+    "effective_status": "Proposed",
+    "expires": null
   },
   "fairfax-county-va": {
     "effective_status": "Enacted",
@@ -1079,6 +1103,14 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "keene-nh": {
+    "effective_status": "Under Review",
+    "expires": null
+  },
+  "kent-county-de": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "kent-oh": {
     "effective_status": "Enacted",
     "expires": "2027-04-15"
@@ -1114,6 +1146,10 @@
   "knoxville-tn": {
     "effective_status": "Enacted",
     "expires": "2027-07-07"
+  },
+  "kootenai-county-id": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "la-crosse-county-wi": {
     "effective_status": "Enacted",
@@ -1185,6 +1221,10 @@
   },
   "liberty-township-nj": {
     "effective_status": "Enacted",
+    "expires": null
+  },
+  "lincoln-county-sd": {
+    "effective_status": "Defeated",
     "expires": null
   },
   "lincoln-township-mi": {
@@ -1439,6 +1479,10 @@
     "effective_status": "Enacted",
     "expires": "2026-11-21"
   },
+  "minnehaha-county-sd": {
+    "effective_status": "Under Review",
+    "expires": null
+  },
   "missoula-county-mt": {
     "effective_status": "Enacted",
     "expires": "2027-07-08"
@@ -1531,6 +1575,18 @@
     "effective_status": "Enacted",
     "expires": "2027-02-17"
   },
+  "new-castle-county-de": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "new-hampshire-ayotte-nh": {
+    "effective_status": "Proposed",
+    "expires": null
+  },
+  "new-hampshire-hb-1265-nh": {
+    "effective_status": "Defeated",
+    "expires": null
+  },
   "new-haven-ct": {
     "effective_status": "Proposed",
     "expires": null
@@ -1593,6 +1649,10 @@
   },
   "norton-oh": {
     "effective_status": "Enacted",
+    "expires": null
+  },
+  "nottingham-nh": {
+    "effective_status": "Proposed",
     "expires": null
   },
   "nye-county-nv": {
@@ -1855,6 +1915,10 @@
     "effective_status": "Enacted",
     "expires": "2027-03-15"
   },
+  "rochester-nh": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "rockaway-township-nj": {
     "effective_status": "Enacted",
     "expires": null
@@ -1913,6 +1977,10 @@
   },
   "san-marcos-tx": {
     "effective_status": "Enacted",
+    "expires": null
+  },
+  "sandpoint-id": {
+    "effective_status": "Proposed",
     "expires": null
   },
   "sanford-me": {
@@ -2418,6 +2486,10 @@
   "yakima-county-wa": {
     "effective_status": "Enacted",
     "expires": null
+  },
+  "yankton-county-sd": {
+    "effective_status": "Enacted",
+    "expires": "2027-01-21"
   },
   "yellow-springs-oh": {
     "effective_status": "Enacted",
