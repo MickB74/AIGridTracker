@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Michigan Has 64 Data Center Moratoriums, a Recall Wave, and a Congressional Delegation That Voted Both Ways</title>
+      <link>https://aigridwatch.com/blog/michigan-moratorium-wave-2026</link>
+      <guid>https://aigridwatch.com/blog/michigan-moratorium-wave-2026</guid>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Michigan now has the second-most data center moratoriums in the country. Detroit&#x27;s mayor has refused to adopt one the city council passed. A township that rejected its moratorium is now recalling the board members who voted no. And the state&#x27;s House delegation voted to preempt all local data center regulation — then pivoted.</description>
+    </item>
+    <item>
       <title>Ohio Went from Zero Data Center Moratoriums to 60 in One Year. Here Is What Happened.</title>
       <link>https://aigridwatch.com/blog/ohio-moratorium-wave-2026</link>
       <guid>https://aigridwatch.com/blog/ohio-moratorium-wave-2026</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/unmask-data-center-llc-2026</guid>
       <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
       <description>A project lands in your town under a code name — &quot;Project Blue,&quot; &quot;Project Rowan&quot; — bought by an LLC no one has heard of. That anonymity is a strategy, not an accident. Here&#x27;s the five-step method to find the hyperscaler actually behind it, worked through the real chain of shell companies that hid Amazon behind Tucson&#x27;s Project Blue — and why naming them changes your leverage.</description>
-    </item>
-    <item>
-      <title>How Many Jobs Does a Data Center Actually Create?</title>
-      <link>https://aigridwatch.com/blog/data-center-jobs-2026</link>
-      <guid>https://aigridwatch.com/blog/data-center-jobs-2026</guid>
-      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
-      <description>Every data center pitch leads with jobs — usually thousands of them. The number that actually matters is far smaller and fully knowable: a typical hyperscale hall runs on about 50 full-time workers, half of them contractors. Here&#x27;s the real math from Virginia&#x27;s own legislative watchdog, the construction mirage behind the big headline, and the three questions that put it on the record.</description>
     </item>
 </channel>
 </rss>

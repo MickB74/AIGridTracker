@@ -3,15 +3,15 @@
   "generated": "2026-09-07",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 602,
+  "count": 611,
   "states": 43,
-  "enacted": 483,
+  "enacted": 491,
   "proposed": 68,
-  "official_sourced": 50,
+  "official_sourced": 52,
   "by_state": {
     "CO": {
-      "total": 12,
-      "enacted": 9,
+      "total": 13,
+      "enacted": 10,
       "proposed": 2
     },
     "MD": {
@@ -50,8 +50,8 @@
       "proposed": 0
     },
     "MI": {
-      "total": 59,
-      "enacted": 41,
+      "total": 64,
+      "enacted": 45,
       "proposed": 3
     },
     "TX": {
@@ -70,8 +70,8 @@
       "proposed": 3
     },
     "CT": {
-      "total": 4,
-      "enacted": 1,
+      "total": 5,
+      "enacted": 2,
       "proposed": 2
     },
     "MO": {
@@ -90,8 +90,8 @@
       "proposed": 1
     },
     "FL": {
-      "total": 20,
-      "enacted": 13,
+      "total": 22,
+      "enacted": 15,
       "proposed": 6
     },
     "OH": {
@@ -231,7 +231,8 @@
       "wixom-mi",
       "front-royal-va",
       "augusta-richmond-county-ga",
-      "roswell-ga"
+      "roswell-ga",
+      "waterford-township-mi"
     ],
     "60": [
       "lysander-onondaga-co-ny",
@@ -253,6 +254,7 @@
       "augusta-richmond-county-ga",
       "camden-county-ga",
       "roswell-ga",
+      "waterford-township-mi",
       "calaveras-county-ca",
       "escondido-ca",
       "eureka-ca",
@@ -297,6 +299,7 @@
       "riley-county-ks",
       "gorham-me",
       "hart-mi",
+      "waterford-township-mi",
       "calaveras-county-ca",
       "escondido-ca",
       "eureka-ca",

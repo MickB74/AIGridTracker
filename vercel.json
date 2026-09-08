@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/michigan-moratorium-wave-2026",
+      "destination": "/blog/michigan-moratorium-wave-2026",
+      "permanent": true
+    },
+    {
       "source": "/ohio-moratorium-wave-2026",
       "destination": "/blog/ohio-moratorium-wave-2026",
       "permanent": true

@@ -4,7 +4,7 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
-  "count": 60,
+  "count": 61,
   "alerts": [
     {
       "id": "mora-GA-griffin-2026-07-12",
@@ -277,6 +277,19 @@
       "title": "Roswell, GA: data center moratorium expires in 13 days",
       "body": "The documented term ends 2026-09-20. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://roswellconnections.com/datacenters/",
+      "verified": true
+    },
+    {
+      "id": "mora-MI-waterford-township-2026-09-23",
+      "kind": "moratorium-expiry",
+      "severity": "urgent",
+      "locality": "Waterford Township",
+      "state": "MI",
+      "expires": "2026-09-23",
+      "days_left": 16,
+      "title": "Waterford Township, MI: data center moratorium expires in 16 days",
+      "body": "The documented term ends 2026-09-23. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.waterfordmi.gov/ArchiveCenter/ViewFile/Item/1696",
       "verified": true
     },
     {

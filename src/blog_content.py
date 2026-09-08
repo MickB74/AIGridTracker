@@ -72,6 +72,82 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "michigan-moratorium-wave-2026",
+        "art": "moratorium",
+        "section": "stories",
+        "title": "Michigan Has 64 Data Center Moratoriums, a Recall Wave, and a Congressional Delegation That Voted Both Ways",
+        "seo_title": "Michigan data center moratoriums: 64 local pauses and counting",
+        "date": _dt.date(2026, 9, 7),
+        "author": "GridWatch AI",
+        "tags": ["michigan", "moratoriums", "data centers", "congress", "local control"],
+        "summary": "Michigan now has the second-most data center moratoriums in the country. Detroit's "
+                   "mayor has refused to adopt one the city council passed. A township that rejected its "
+                   "moratorium is now recalling the board members who voted no. And the state's House "
+                   "delegation voted to preempt all local data center regulation — then pivoted.",
+        "body": """Michigan has 64 data center moratoriums on our [national tracker](moratoriums) — second only to New Jersey's 72 and just ahead of Ohio's 62. The wave spans from the Upper Peninsula to the Indiana border, and the political fights it is generating are unlike anything in other states.
+
+## The numbers
+
+Our [Michigan moratorium tracker](states/michigan) lists 64 rows: 45 currently enacted, 15 expired, 3 proposed, and 1 rejected. Nearly all are township-level actions — Michigan's township governance structure means data center zoning decisions happen at a granular level, and developers who get turned away in one township often surface in the next one over.
+
+The state has no county-level moratoriums except in [Huron County](communities/huron-county-mi), which enacted a three-year pause — the second-longest active term in the state. The longest belongs to [Grafton](communities/grafton-oh) in Ohio, but Michigan's township moratoriums are collectively covering more ground than any single long-duration ban.
+
+## Detroit: the moratorium the mayor won't sign
+
+Detroit is the largest city in any state to have a data center moratorium vote, and it went nowhere. The [City Council voted 6-2](https://planetdetroit.org/2026/03/detroit-data-center-moratorium/) on March 10, 2026 for a resolution asking Mayor Mary Sheffield to impose a two-year moratorium. The resolution calls for study of grid stability, water use, noise pollution, economic impact, and land use.
+
+Mayor Sheffield has not adopted it. Instead, she convened a stakeholder working group — city departments, DTE Energy, unions, environmental advocates — with a December 31, 2026 deadline for policy recommendations. As of September, environmental groups continue to push for formal adoption.
+
+## Lowell Township: reject the moratorium, face the recall
+
+Lowell Township's story is the inverse of Detroit's. The [Board voted 2-5 against](https://www.woodtv.com/news/kent-county/lowell-township-board-votes-against-data-center-moratorium/) a proposed six-month moratorium on May 18, 2026, despite Microsoft's plans for a data center at the 237-acre Covenant Business Park.
+
+The rejection triggered recall petitions against three board members. A petition alleged the township supervisor signed an NDA with Microsoft in January 2025. Whether the recalls succeed or not, the message to other boards is clear: rejecting a moratorium can carry political costs too.
+
+## Mason: moratorium, zoning, referendum, repeal
+
+Mason's timeline is the most convoluted in the tracker. The city council [enacted a 90-day moratorium](https://www.wkar.org/wkar-news/2026-01-31/mason-city-council-could-adopt-new-data-center-zoning-rules-monday) (Ordinance 267) on January 6, 2026. A month later it adopted a permanent M-3 Technology Innovation District zoning overlay (Ordinance 266, 5-2), lifting the moratorium.
+
+Citizens collected 755 referendum signatures to suspend the new zoning. The council then [repealed its own ordinance](https://www.fox47news.com/news/state/mason-city-council-votes-to-repeal-data-center-ordinance-leaving-citys-future-regulation-unclear) 4-2 on March 16 rather than face a ballot vote. In June, the council unanimously adopted a citizen-initiated noise and vibration ordinance instead. The mayor and a council member now face recall efforts of their own. Landowners are petitioning to annex the proposed site out of the city entirely via the State Boundary Commission.
+
+## Lyon Charter Township: Project Flex and the 180-day clock
+
+Lyon Charter Township's moratorium is the one most directly tied to a specific project. The board voted unanimously on March 3, 2026 for a [180-day pause](https://www.detroitnews.com/story/news/local/oakland-county/2026/03/03/as-project-flex-proceeds-lyon-township-hits-pause-on-new-data-centers/88960710007/) on data centers and all developments over 100,000 square feet — after the planning commission had already approved "Project Flex," a 1.8-million-square-foot, six-building Verrus data center on 172 acres.
+
+The already-approved project is not affected by the moratorium. The 180-day clock expired around August 30, and whether the township extended it or allowed it to lapse will determine whether the next proposal gets the same treatment.
+
+## Michigan's congressional delegation voted both ways
+
+Michigan's House delegation split cleanly on the OBBBA's AI preemption provision (SEC. 43201) — a 10-year ban on state and local enforcement of any law regulating AI systems, broad enough to cover data center zoning. All seven Republicans voted yes; all Democrats voted no. [The Senate stripped it 99-1.](https://clerk.house.gov/Votes/2025145)
+
+What happened next is the interesting part. Our [House race tracker](house-races) now carries records for five Michigan members:
+
+**Rep. Rashida Tlaib (MI-12)** introduced [H.R. 9939](https://tlaib.house.gov/posts/rep-tlaib-introduces-a-bill-to-ban-ai-data-centers-on-federal-lands), permanently banning AI data centers over 20 MW on federal lands, and cosponsored [H.R. 8488](https://www.congress.gov/bill/119th-congress/house-bill/8488/text), a site-selection transparency act. She also [issued a statement](https://tlaib.house.gov/posts/tlaib-statement-on-ai-data-center-vote-in-southfield) opposing a Southfield data center, citing residents' concerns about a 267% electricity cost increase.
+
+**Rep. Hillary Scholten (MI-3)** introduced [two accountability bills](https://scholten.house.gov/media/press-releases/congresswoman-scholten-introduces-two-data-center-accountability-bills): H.R. 10005, requiring annual federal surveys of data center energy and water consumption with a public dashboard, and H.R. 10004, updating DoD data center efficiency standards.
+
+**Rep. Debbie Dingell (MI-6)** co-signed the [first congressional letter](https://kevinmullin.house.gov/2025/10/28/rep-mullin-leads-group-of-lawmakers-investigating-impact-of-data-centers-on-energy-costs/) specifically investigating whether data center energy costs are being passed onto ratepayers.
+
+**Rep. Tom Barrett (MI-7)** presents the sharpest contradiction. He voted for the OBBBA's preemption provision in May 2025, then introduced [H.R. 10119](https://barrett.house.gov/media/press-releases/barrett-introduces-bills-protect-local-communities-data-center-overreach) — the Protecting Local Control of Data Centers Act — and [H.R. 10118](https://barrett.house.gov/media/press-releases/barrett-introduces-bills-protect-local-communities-data-center-overreach), banning congressional NDAs about data centers, in August 2026. He voted to strip local control, then introduced a bill to protect it.
+
+**Rep. John James (MI-10)** voted [four separate times](https://clerk.house.gov/Votes/2025145) to advance the preemption provision — including voting against an amendment to remove it. He is now the Republican nominee for Michigan governor, running on a "local control" platform.
+
+Neither of Michigan's senators — Gary Peters or Elissa Slotkin — has made a public statement about the state's data center moratorium wave, despite Michigan having more moratoriums than 42 other states.
+
+## What to watch
+
+Fifteen Michigan moratoriums have already expired, and several more are approaching their deadlines. Waterford Township's [Ordinance 2026-Z-003](https://www.waterfordmi.gov/ArchiveCenter/ViewFile/Item/1696) expires around September 23 — days from now. What these communities do at the end of their pause — extend, convert to permanent zoning, or let lapse — is the next chapter.
+
+The gubernatorial race adds another dimension. With John James running on local control after voting four times to preempt it, and with 64 communities having already asserted that control, data center policy is a live campaign issue in Michigan in a way it is nowhere else.
+
+For communities in an active moratorium: our [Start here wizard](start-here) walks through what to negotiate before the clock runs out.
+
+---
+
+*See also: [Michigan state briefing](states/michigan) · [National moratorium tracker](moratoriums) · [House race tracker](house-races)*
+""",
+    },
+    {
         "id": "ohio-moratorium-wave-2026",
         "art": "moratorium",
         "section": "stories",

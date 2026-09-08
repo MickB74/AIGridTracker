@@ -333,6 +333,116 @@ AI_RECORDS = {
         "as_of": "2026-09-05",
     },
 
+    # ── Michigan ───────────────────────────────────────────────────────────
+    ("MI", "12", "Rashida Tlaib"): {
+        "lean": "guardrails",
+        "summary": "Introduced a bill banning AI data centers on federal lands, "
+                   "cosponsored the site-selection transparency act, and issued "
+                   "a statement opposing a specific data center in her district.",
+        "items": [
+            {"what": "Introduced H.R. 9939, the No AI Data Centers on Federal "
+                     "Lands Act, permanently banning large AI data centers "
+                     "(>20 MW) and associated infrastructure on all federal "
+                     "land including military bases.",
+             "date": "2026-07-23",
+             "source": "https://tlaib.house.gov/posts/rep-tlaib-introduces-a-bill-to-ban-ai-data-centers-on-federal-lands"},
+            {"what": "Cosponsored H.R. 8488, the AI Data Center Site Selection "
+                     "Transparency Act, requiring developers to disclose "
+                     "location, impacts, and other information to local elected "
+                     "officials and the public before development.",
+             "date": "2026-04-23",
+             "source": "https://www.congress.gov/bill/119th-congress/house-bill/8488/text"},
+            {"what": "Issued statement after Southfield City Council approved "
+                     "a Metrobloks AI data center, citing residents' concerns "
+                     "about electricity costs rising 'as much as 267%' and "
+                     "water consumption of 'millions of gallons per day.'",
+             "date": "2025-12-16",
+             "source": "https://tlaib.house.gov/posts/tlaib-statement-on-ai-data-center-vote-in-southfield"},
+        ],
+        "as_of": "2026-09-07",
+    },
+    ("MI", "3", "Hillary Scholten"): {
+        "lean": "guardrails",
+        "summary": "Introduced two data center accountability bills: a resource "
+                   "disclosure act requiring annual energy and water surveys, and "
+                   "a DoD data center efficiency bill.",
+        "items": [
+            {"what": "Introduced H.R. 10005, the Data Center Resource Disclosure "
+                     "Act, requiring NTIA to conduct annual surveys of data "
+                     "center energy and water consumption and publish results on "
+                     "a public dashboard.",
+             "date": "2026-07-30",
+             "source": "https://scholten.house.gov/media/press-releases/congresswoman-scholten-introduces-two-data-center-accountability-bills"},
+            {"what": "Introduced H.R. 10004, the Defending Our Energy and Water "
+                     "Act, directing DoD to update data center efficiency "
+                     "standards and mandate cooling technologies that reduce "
+                     "water impact.",
+             "date": "2026-07-30",
+             "source": "https://scholten.house.gov/media/press-releases/congresswoman-scholten-introduces-two-data-center-accountability-bills"},
+        ],
+        "as_of": "2026-09-07",
+    },
+    ("MI", "6", "Debbie Dingell"): {
+        "lean": "guardrails",
+        "summary": "Co-signed the first congressional letter specifically "
+                   "investigating data center energy cost pass-throughs to "
+                   "ratepayers.",
+        "items": [
+            {"what": "One of 20 House members who signed a letter to FERC, "
+                     "Edison Electric Institute, and the Data Center Coalition "
+                     "expressing concern that data center energy costs are "
+                     "increasingly being passed onto everyday Americans and "
+                     "requesting information on consumer protections.",
+             "date": "2025-10-28",
+             "source": "https://kevinmullin.house.gov/2025/10/28/rep-mullin-leads-group-of-lawmakers-investigating-impact-of-data-centers-on-energy-costs/"},
+        ],
+        "as_of": "2026-09-07",
+    },
+    ("MI", "7", "Tom Barrett"): {
+        "lean": "mixed",
+        "summary": "Voted for the OBBBA's 10-year AI preemption in May 2025, "
+                   "then introduced local-control protection and NDA-ban bills "
+                   "in August 2026 as data centers became a campaign issue.",
+        "items": [
+            {"what": "Voted Yea on H.R. 1 (OBBBA) including SEC. 43201, a "
+                     "10-year moratorium on state and local enforcement of any "
+                     "law regulating AI systems — a provision broad enough to "
+                     "cover data center zoning. Stripped by the Senate 99-1.",
+             "date": "2025-05-22",
+             "source": "https://clerk.house.gov/Votes/2025145"},
+            {"what": "Introduced H.R. 10119, the Protecting Local Control of "
+                     "Data Centers Act, prohibiting federal agencies from "
+                     "overriding local land-use, zoning, siting, or permitting "
+                     "authority for data centers.",
+             "date": "2026-08-20",
+             "source": "https://barrett.house.gov/media/press-releases/barrett-introduces-bills-protect-local-communities-data-center-overreach"},
+            {"what": "Introduced H.R. 10118, the No Data Center NDAs Act, "
+                     "prohibiting members of Congress from signing NDAs about "
+                     "data centers including information on locations, water "
+                     "usage, or energy requirements.",
+             "date": "2026-08-20",
+             "source": "https://barrett.house.gov/media/press-releases/barrett-introduces-bills-protect-local-communities-data-center-overreach"},
+        ],
+        "as_of": "2026-09-07",
+    },
+    ("MI", "10", "John James"): {
+        "lean": "accelerate",
+        "summary": "Voted four times in support of the OBBBA's 10-year AI "
+                   "preemption provision, including voting against an amendment "
+                   "to remove it.",
+        "items": [
+            {"what": "Voted four separate times to advance the OBBBA's AI "
+                     "preemption provision (SEC. 43201): twice in committee, "
+                     "once against an amendment to remove it, and once on final "
+                     "passage. The provision would have banned all state and "
+                     "local AI/data center regulation for 10 years. Stripped "
+                     "by the Senate 99-1.",
+             "date": "2025-05-22",
+             "source": "https://clerk.house.gov/Votes/2025145"},
+        ],
+        "as_of": "2026-09-07",
+    },
+
     # ── Ohio ───────────────────────────────────────────────────────────────
     ("OH", "1", "Greg Landsman"): {
         "lean": "guardrails",
