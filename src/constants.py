@@ -4702,6 +4702,188 @@ MORATORIUMS = [
     {"locality": "West Haven", "state": "CT", "level": "City", "status": "Enacted", "when": "2026-06-08", "note": "City Council unanimously approved a 12-month moratorium on establishment and development of data centers; proposed by Mayor Dorinda Borer; defines data centers as facilities primarily used for storage, processing, and distribution of digital data; exempts incidental server rooms; city to review zoning and licensing rules", "lat": 41.2712, "lon": -72.947, "expires": "2027-06-08", "as_of": "2026-09-07", "source": "https://hartfordbusiness.com/article/new-haven-weighs-12-month-moratorium-on-data-center-development/"},
     {"locality": "Clay County", "state": "FL", "level": "County", "status": "Enacted", "when": "2026-06-23", "note": "Board of County Commissioners voted 4-1 to adopt a one-year moratorium on data center rezoning, permits, and site plans; Commissioner Compere sole no vote; staff to research potential impacts on water and infrastructure", "lat": 29.9814, "lon": -81.8068, "expires": "2027-06-23", "as_of": "2026-09-07", "source": "https://www.actionnewsjax.com/news/local/clay-county-commissioners-approve-one-year-moratorium-data-centers/GM7HRVAP3ND2TJ4SNUG3HAPABI/"},
     {"locality": "Nassau County", "state": "FL", "level": "County", "status": "Enacted", "when": "2026-06-08", "note": "Board of County Commissioners adopted Ordinance 2026-044, a 12-month moratorium on acceptance, review, or approval of applications for development permits, rezoning, or site plans for data centers, data processing, data mining, or cryptocurrency mining; county established a Fact-Finding Committee on Data Center Development; prompted by NextNRG's 1,600-acre lease option near Jacksonville International Airport", "lat": 30.611, "lon": -81.769, "expires": "2027-06-08", "as_of": "2026-09-07", "source": "https://www.nassaucountyfl.com/1528/Data-Centers"},
+
+    # ── Alaska ──────────────────────────────────────────────────────────
+    {"locality": "Anchorage", "state": "AK", "level": "Local",
+     "status": "Enacted", "when": "Mar 27, 2026",
+     "note": "AO 2026-27: defines data centers (20+ MW) in zoning code, "
+             "restricts to commercial/industrial zones, bans from "
+             "residential, requires conditional use review, utility "
+             "capacity statement, landscaping buffers and enclosed power "
+             "equipment",
+     "lat": 61.22, "lon": -149.90, "expires": None, "as_of": "2026-09-07",
+     "source": "https://www.adn.com/alaska-news/anchorage/2026/03/27/anchorage-assembly-preemptively-adopts-data-center-regulations/",
+     "term": "standing"},
+    {"locality": "Fairbanks North Star Borough", "state": "AK", "level": "Local",
+     "status": "Proposed", "when": "Aug 27, 2026",
+     "note": "Borough Assembly adopted 2027 legislative priority "
+             "requesting state and federal moratorium on permitting, "
+             "leasing and construction of commercial data centers on "
+             "public lands until regulations are developed; not a locally "
+             "enacted moratorium but an official resolution",
+     "lat": 64.84, "lon": -147.72, "expires": None, "as_of": "2026-09-07",
+     "source": "https://fm.kuac.org/2026-08-31/in-legislative-priorities-fairbanks-north-star-borough-assembly-doubles-up-on-ai-data-center-moratorium-request"},
+
+    # ── Delaware ────────────────────────────────────────────────────────
+    {"locality": "Delaware (SB 353)", "state": "DE", "level": "State",
+     "status": "Defeated", "when": "Jun 30, 2026",
+     "note": "SB 353: statewide moratorium on permits for 100+ MW data "
+             "centers through Jan 31, 2027; motion to suspend rules "
+             "failed 6-15 in the Senate. Legislature passed a "
+             "restrictions package (HB 233/HB 445/HB 310/SB 326) instead",
+     "lat": 39.16, "lon": -75.52, "expires": None, "as_of": "2026-09-07",
+     "source": "https://legis.delaware.gov/BillDetail/143681",
+     "term": None},
+    {"locality": "Dover", "state": "DE", "level": "Local",
+     "status": "Proposed", "when": "Aug 13, 2026",
+     "note": "18-month moratorium on acceptance, processing, review, "
+             "approval and issuance of permits for new data centers; "
+             "council committee voted unanimously to advance to full "
+             "council; would be first Delaware municipality with a "
+             "temporary ban",
+     "lat": 39.16, "lon": -75.52, "expires": None, "as_of": "2026-09-07",
+     "source": "https://spotlightdelaware.org/2026/08/13/dover-data-center-moratorium-gains-steam-amid-statewide-concerns-over-the-industry/"},
+    {"locality": "New Castle County", "state": "DE", "level": "County",
+     "status": "Enacted", "when": "Mar 11, 2026",
+     "note": "Council voted 12-0 for zoning regulations: 1,000-foot "
+             "residential buffer (500 ft with noise study), closed-loop "
+             "cooling required, energy-efficient backup generators, "
+             "decommissioning funds; existing projects exempt",
+     "lat": 39.58, "lon": -75.64, "expires": None, "as_of": "2026-09-07",
+     "source": "https://www.delawarepublic.org/politics-government/2026-03-11/new-castle-county-council-unanimously-approves-data-center-regulations-after-hours-long-meeting",
+     "term": "standing"},
+    {"locality": "Kent County", "state": "DE", "level": "County",
+     "status": "Enacted", "when": "Jul 21, 2026",
+     "note": "LC26-06: data centers permitted only in Limited Industrial "
+             "and General Industrial zones in unincorporated areas; "
+             "300-foot residential buffer, 6-foot vegetative buffers, "
+             "noise limits, written utility capacity documentation "
+             "required; county attorney reviewing viability of a complete "
+             "ban",
+     "lat": 39.15, "lon": -75.51, "expires": None, "as_of": "2026-09-07",
+     "source": "https://spotlightdelaware.org/2026/07/23/kent-county-adopts-data-center-regulations-may-consider-future-ban/",
+     "term": "standing"},
+
+    # ── Idaho ───────────────────────────────────────────────────────────
+    {"locality": "Kootenai County", "state": "ID", "level": "County",
+     "status": "Enacted", "when": "Sep 25, 2025",
+     "note": "ORA 25-0007: prohibits data centers in the Commercial "
+             "zone; allows in Light Industrial and Industrial only with "
+             "conditional use permit; bans data centers over the aquifer. "
+             "Replaced a 183-day emergency moratorium (Mar 2, 2025). "
+             "Commissioners directed staff to draft an outright ban in "
+             "unincorporated areas",
+     "lat": 47.68, "lon": -116.78, "expires": None, "as_of": "2026-09-07",
+     "source": "https://www.spokanepublicradio.org/regional-news/2025-10-02/avoiding-ai-kootenai-county-works-towards-total-ban-against-data-centers",
+     "term": "standing",
+     "events": [
+         {"date": "2025-03-02", "kind": "enacted", "label": "Emergency moratorium",
+          "source": "https://www.khq.com/news/kootenai-county-imposes-moratorium-on-data-center-building-permits/article_f622e15a-f79e-11ef-87ed-1bd380bdd67e.html"},
+         {"date": "2025-09-25", "kind": "enacted", "label": "Permanent restriction",
+          "source": "https://www.spokanepublicradio.org/regional-news/2025-10-02/avoiding-ai-kootenai-county-works-towards-total-ban-against-data-centers"},
+     ]},
+    {"locality": "Bannock County", "state": "ID", "level": "County",
+     "status": "Enacted", "when": "Jul 30, 2026",
+     "note": "180-day emergency moratorium on accepting or processing "
+             "new data center permit applications in unincorporated "
+             "county; does not affect Pocatello city limits; county to "
+             "draft standalone data center ordinance addressing water, "
+             "energy and land-use impacts",
+     "lat": 42.67, "lon": -112.00, "expires": "2027-01-26", "as_of": "2026-09-07",
+     "source": "https://localnews8.com/news/pocatello/2026/07/31/bannock-county-approves-180-day-emergency-moratorium-on-data-center-permits/"},
+    {"locality": "Sandpoint", "state": "ID", "level": "Local",
+     "status": "Proposed", "when": "Jul 15, 2026",
+     "note": "City Council voted unanimously to direct staff to propose "
+             "a data center definition for a future ordinance banning "
+             "them within city limits; currently a permitted use in the "
+             "Industrial Park District",
+     "lat": 48.28, "lon": -116.55, "expires": None, "as_of": "2026-09-07",
+     "source": "https://sandpointreader.com/sandpoint-looking-to-ban-data-centers-within-city-limits/"},
+
+    # ── New Hampshire ───────────────────────────────────────────────────
+    {"locality": "Canterbury", "state": "NH", "level": "Local",
+     "status": "Enacted", "when": "Mar 10, 2026",
+     "note": "Voters approved zoning amendment banning data centers in "
+             "all zones, 322-63; Planning Board proposed marking 'Data "
+             "Centers' as 'Not Allowed' in every zone",
+     "lat": 43.34, "lon": -71.57, "expires": None, "as_of": "2026-09-07",
+     "source": "https://www.nhpr.org/nh-news/2026-03-04/canterbury-town-meeting-voters-consider-banning-data-centers",
+     "term": "standing"},
+    {"locality": "Nottingham", "state": "NH", "level": "Local",
+     "status": "Proposed", "when": "Jul 1, 2026",
+     "note": "Planning Board adopted 12-month moratorium 5-0 under "
+             "RSA 674:23; requires voter ratification at special town "
+             "election Sep 8, 2026. Triggered by May 2026 proposal on "
+             "Route 4 which drew 25,000+ opposing petition signatures",
+     "lat": 43.12, "lon": -71.10, "expires": None, "as_of": "2026-09-07",
+     "source": "https://www.nhpr.org/environment/2026-07-03/nottingham-data-center-moratorium-town-meeting-nh"},
+    {"locality": "Rochester", "state": "NH", "level": "Local",
+     "status": "Enacted", "when": "Sep 1, 2026",
+     "note": "City Council enacted ordinance prohibiting data centers in "
+             "every zoning district except Recycling Industrial zone "
+             "(conditional use permit required); Waste Management owns "
+             "most land in that zone, making construction effectively "
+             "impossible. Two hours of resident testimony at Aug 18 "
+             "public hearing",
+     "lat": 43.30, "lon": -70.98, "expires": None, "as_of": "2026-09-07",
+     "source": "https://wzid.com/news/042240-rochester-enacts-new-ordinance-on-data-centers",
+     "term": "standing"},
+    {"locality": "Keene", "state": "NH", "level": "Local",
+     "status": "Under Review", "when": "Jun 18, 2026",
+     "note": "City Council referred request to add/update land "
+             "development code definitions for data centers, "
+             "cryptocurrency mines and private detention facilities to "
+             "Joint Planning Board/PLD Committee; definition work in "
+             "progress, no restriction adopted yet",
+     "lat": 42.93, "lon": -72.28, "expires": None, "as_of": "2026-09-07",
+     "source": "https://servercountry.org/policy/new-hampshire/"},
+    {"locality": "New Hampshire (HB 1265)", "state": "NH", "level": "State",
+     "status": "Defeated", "when": "Mar 11, 2026",
+     "note": "1-year statewide moratorium on new data center "
+             "construction plus legislative study committee; sponsored "
+             "by Rep. Peter Schmidt (D-Dover); declared Inexpedient to "
+             "Legislate by voice vote",
+     "lat": 43.21, "lon": -71.54, "expires": None, "as_of": "2026-09-07",
+     "source": "https://www.billtrack50.com/billdetail/1913074"},
+    {"locality": "New Hampshire (Ayotte)", "state": "NH", "level": "State",
+     "status": "Proposed", "when": "Aug 20, 2026",
+     "note": "Governor Ayotte announced support for statewide moratorium "
+             "lasting 'a period of years'; plans to include moratorium "
+             "in FY2028-2029 state budget. SB 439 (industry preemption) "
+             "was tabled 304-11 by the House. Two Democratic LSRs also "
+             "filed for 24-month moratorium in 2027 session",
+     "lat": 43.21, "lon": -71.54, "expires": None, "as_of": "2026-09-07",
+     "source": "https://www.nhpr.org/politics/2026-08-21/data-centers-ayotte-supports-moratorium-datacenters-nh"},
+
+    # ── South Dakota ────────────────────────────────────────────────────
+    {"locality": "Yankton County", "state": "SD", "level": "County",
+     "status": "Enacted", "when": "Jul 21, 2026",
+     "note": "6-month moratorium on data centers and Bitcoin mining "
+             "facilities, voted unanimously; can be extended another 6 "
+             "months if permanent ordinance not completed. Planning and "
+             "Zoning Commission directed to draft ordinance",
+     "lat": 42.88, "lon": -97.39, "expires": "2027-01-21", "as_of": "2026-09-07",
+     "source": "https://www.dakotanewsnow.com/2026/07/22/data-center-moratorium-passes-yankton-county-south-dakota/"},
+    {"locality": "Lincoln County", "state": "SD", "level": "County",
+     "status": "Defeated", "when": "Aug 25, 2026",
+     "note": "Commissioner Joel Arends proposed moratorium on hyperscale "
+             "data centers in Lincoln County-Sioux Falls joint "
+             "jurisdictional area twice: first attempt died for lack of "
+             "a second (Feb 24); second attempt to schedule a joint "
+             "hearing defeated 3-2 (Aug 25). Both bodies agreed to "
+             "reconvene Oct 27 to discuss data center issues",
+     "lat": 43.43, "lon": -96.73, "expires": None, "as_of": "2026-09-07",
+     "source": "https://www.siouxfallslive.com/news/sioux-falls/lincoln-county-data-center-moratorium-fails-in-messy-joint-meeting-with-sioux-falls-city-council"},
+    {"locality": "Minnehaha County", "state": "SD", "level": "County",
+     "status": "Under Review", "when": "Aug 24, 2026",
+     "note": "Planning Commission reviewed draft data center ordinance "
+             "that would outright prohibit hyperscale facilities (500,000+ "
+             "sq ft); smaller data centers allowed only in "
+             "commercial/industrial zones with half-mile dwelling setback. "
+             "Draft sent back for revision; final approval likely months "
+             "away",
+     "lat": 43.67, "lon": -96.79, "expires": None, "as_of": "2026-09-07",
+     "source": "https://www.siouxfallslive.com/news/sioux-falls/minnehaha-county-begins-work-on-potential-data-center-regulations"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.
