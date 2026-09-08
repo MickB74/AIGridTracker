@@ -16264,13 +16264,15 @@ def main():
             # re-fetched on every page view without this; HTML stays
             # must-revalidate so a daily rebuild is seen immediately.
             "headers": [
-                {"source": "/assets/site.(.*).css",
-                 "headers": [{"key": "Cache-Control",
-                              "value": "public, max-age=31536000, immutable"}]},
                 {"source": "/assets/(.*)",
                  "headers": [{"key": "Cache-Control",
                               "value": "public, max-age=86400, "
                                        "stale-while-revalidate=604800"}]},
+                # Listed after the generic /assets rule: Vercel applies every
+                # matching rule in order and the last one wins.
+                {"source": "/assets/site.(.*).css",
+                 "headers": [{"key": "Cache-Control",
+                              "value": "public, max-age=31536000, immutable"}]},
                 {"source": "/data/(.*)",
                  "headers": [{"key": "Cache-Control",
                               "value": "public, max-age=3600, "
