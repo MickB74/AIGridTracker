@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-10T04:29:42.953379+00:00",
+  "fetched_at": "2026-09-10T12:53:01.984769+00:00",
   "items": [
     {
       "title": "Foley approves 6-month data center moratorium",
@@ -18,11 +18,12 @@
       "states": []
     },
     {
-      "title": "Jasper County data center moratorium",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9hdUFiMGZ2UXdMUGVZX0V6czFTQklhRlhObE1yYjdubUxHZGdZdVN2REdYSXJpS29XNDRpMXoxNjNHSFBQbGY3UWM0NmlHQkg0X0Zpa09R?oc=5",
-      "video_id": "",
-      "published_iso": "2026-09-09T18:47:07+00:00",
+      "title": "Is everyone overreacting to the AI data center boom?",
+      "source": "More Perfect Union",
+      "link": "https://www.youtube.com/watch?v=efa5s_T7T_Y",
+      "video_id": "efa5s_T7T_Y",
+      "published_iso": "2026-09-05T12:22:58+00:00",
+      "category": "independent",
       "states": []
     },
     {
@@ -34,12 +35,15 @@
       "states": []
     },
     {
-      "title": "Data Center Activities Task Force - August 31, 2026 - Champaign County",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0xU1Y0UWNKNnRlSjRHS2dlUUVOZlVxWWJRQkFWN2RncF9wcUYtY3JCdE5peEFqWktGRmNmc0hQNWxGb2hRRWwwS2djX3pKNndXbnNjVXdR?oc=5",
-      "video_id": "",
-      "published_iso": "2026-09-01T17:10:39+00:00",
-      "states": []
+      "title": "We went to Wyoming. Locals are FURIOUS about Big Tech's data center takeover.",
+      "source": "More Perfect Union",
+      "link": "https://www.youtube.com/watch?v=6VS3c82oCzc",
+      "video_id": "6VS3c82oCzc",
+      "published_iso": "2026-09-01T21:06:00+00:00",
+      "category": "independent",
+      "states": [
+        "Wyoming"
+      ]
     },
     {
       "title": "Data Center Power: India's 6-Cent Electricity Edge",
@@ -102,6 +106,15 @@
       "states": []
     },
     {
+      "title": "\ud83c\udf1f The BEST data center speech ever \ud83c\udf1f",
+      "source": "Food & Water Watch",
+      "link": "https://www.youtube.com/watch?v=VXGbmQwSdC8",
+      "video_id": "VXGbmQwSdC8",
+      "published_iso": "2026-06-25T20:00:13+00:00",
+      "category": "independent",
+      "states": []
+    },
+    {
       "title": "Lawmakers Raise Concerns About Data Centers and Texas Water Supply",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE15TEF1UG82SlhvSnlyRl8wVzh4R0RkWVE1OHhqejR2UGF5XzdwMWhuOTVpYjZtVC02Ykc4a1JqdjFFbHVtT0NBWVdEVmtrM1BzbTZ0M0ZR?oc=5",
@@ -112,11 +125,12 @@
       ]
     },
     {
-      "title": "When the Power Company Takes Your Land for a Data Center",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBnUnNpWFhYdnRrU0hkdXk5V2ltRTR0YXNkX0hQRkFLMTJDWlRUSG5SMWdid1N2X3NJWWREcHFYQTJ3ckQwenR5Z01zRXhkSVY5Ym1zY19B?oc=5",
-      "video_id": "",
-      "published_iso": "2026-06-17T15:30:31+00:00",
+      "title": "Stop Data Centers Coalition Launch",
+      "source": "Food & Water Watch",
+      "link": "https://www.youtube.com/watch?v=N36bihRA21M",
+      "video_id": "N36bihRA21M",
+      "published_iso": "2026-06-12T02:01:08+00:00",
+      "category": "independent",
       "states": []
     },
     {
@@ -228,11 +242,35 @@
       "states": []
     },
     {
+      "title": "Data Center Cooling Methods Explained (Air, Liquid & Immersion Cooling)",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBOY0hacmVUYWZmaDYza21ITVVBTlhTN0t6RDREODBtZGYxUFVmeWxlVmRNOVl0czNRQjYzb1pEMmo4NUJLOHJ5Y2o5SzJPMUc3aWhPakh3?oc=5",
+      "video_id": "",
+      "published_iso": "2026-03-06T18:57:41+00:00",
+      "states": []
+    },
+    {
       "title": "How Data Centers Are Powered (And Why They\u2019re Straining the Grid)",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9wbGgzNldTblNhTUcyVGtMNzRnYjlsU3E1SGVjOENVb2lTa0JfSnBpNW1VZzNvbFRLdTdlR2ZUYk43Q0tqUFdsd2stWV8ydnNObnhaNjlR?oc=5",
       "video_id": "",
       "published_iso": "2026-02-28T03:51:09+00:00",
+      "states": []
+    },
+    {
+      "title": "Data Center Power Flow: From Utility Grid to Server Rack",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8ydEprNXlOeGdDeDlKd0ZTYXBhVFRoOWRPRGV0dUY4NkpoaFlVMjJZVjFWUksycXI1aF9MbWItRDdGX1pRdE9oT3BwOWZpZGNNa0ZLN3Jn?oc=5",
+      "video_id": "",
+      "published_iso": "2026-02-27T21:54:46+00:00",
+      "states": []
+    },
+    {
+      "title": "You\u2019re being lied to about electricity and AI data centers: the truth is dirtier and inefficient",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBOVnM4RFhEcmR4eHZORmtOeVkxTVdEZUdBLUdEWmo5bV9wUU5hcDJvMk80Y1k1UHZ5dWNUMVloQ1AwcjRwcm5WTEd3N2FrdUg2ZUx3YzdB?oc=5",
+      "video_id": "",
+      "published_iso": "2026-02-23T01:02:33+00:00",
       "states": []
     },
     {
