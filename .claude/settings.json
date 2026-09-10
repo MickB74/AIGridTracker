@@ -1,0 +1,23 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // .tool_response.filePath' | { read -r f; case \"$f\" in *.py) python3 -m py_compile \"$f\" ;; esac; } 2>&1 || true",
+            "timeout": 10,
+            "statusMessage": "Checking syntax..."
+          },
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // .tool_response.filePath' | { read -r f; case \"$f\" in */src/constants.py) python3 -c \"\nimport sys; sys.path.insert(0,'.')\nfrom src.constants import MORATORIUMS_DF, LOCAL_BODIES_DF, LOCAL_OFFICIALS_DF\nerrs=[]\ndups=MORATORIUMS_DF.duplicated(subset=['locality','state'],keep=False)\nif dups.any():\n    pairs=MORATORIUMS_DF.loc[dups,['locality','state']].drop_duplicates().values.tolist()\n    errs.append(f'Duplicate moratorium (locality,state): {pairs}')\nfor name,df in [('LOCAL_BODIES_DF',LOCAL_BODIES_DF),('LOCAL_OFFICIALS_DF',LOCAL_OFFICIALS_DF)]:\n    missing=df[df['source'].isna()]\n    if len(missing):\n        locs=missing[['locality','state']].values.tolist()\n        errs.append(f'{name} missing source: {locs}')\nif errs:\n    print('\\\\n'.join(errs),file=sys.stderr); sys.exit(1)\nprint('constants integrity OK')\n\" ;; esac; } 2>&1 || true",
+            "timeout": 30,
+            "statusMessage": "Checking constants integrity..."
+          }
+        ]
+      }
+    ]
+  }
+}
