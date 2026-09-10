@@ -1804,5 +1804,12 @@
     "locality": "Minnehaha County, SD",
     "kind": "added",
     "detail": "Added as Under Review"
+  },
+  {
+    "date": "2026-09-10",
+    "id": "nottingham-nh",
+    "locality": "Nottingham, NH",
+    "kind": "status_changed",
+    "detail": "Proposed \u2192 Enacted"
   }
 ]

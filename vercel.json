@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/new-hampshire-town-votes-2026",
+      "destination": "/blog/new-hampshire-town-votes-2026",
+      "permanent": true
+    },
+    {
       "source": "/michigan-moratorium-wave-2026",
       "destination": "/blog/michigan-moratorium-wave-2026",
       "permanent": true

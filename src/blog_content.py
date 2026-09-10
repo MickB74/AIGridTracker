@@ -72,6 +72,177 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "new-hampshire-town-votes-2026",
+        "art": "moratorium",
+        "section": "stories",
+        "title": "New Hampshire Has No Hyperscale Data Center. Four of Its Towns Restricted Them Anyway.",
+        "seo_title": "New Hampshire Data Center Bans: Four Towns, Four Tools",
+        "date": _dt.date(2026, 9, 10),
+        "author": "GridWatch AI",
+        "tags": ["New Hampshire", "moratorium", "zoning", "preemption",
+                 "Nottingham", "Canterbury", "Rochester", "Bow"],
+        "summary": (
+            "Nottingham voted 1,335-143 for a 12-month data center moratorium "
+            "on September 8, in a state with no hyperscale data center and no "
+            "pending project in town. Canterbury banned them outright, "
+            "Rochester zoned them into a landfill district, and a bill that "
+            "would have voided all of it was tabled 304-11. A catalog of what "
+            "each legal instrument costs and buys."
+        ),
+        "body": """On Tuesday, September 8, voters in Nottingham, New Hampshire approved a
+12-month moratorium on data center construction inside town limits. The tally
+was [1,335 to 143](https://www.nhpr.org/politics/2026-09-09/nottingham-voters-approve-moratorium-data-centers-nh-newhampshire)
+— about 90 percent of ballots cast, on the same day as the state primary.
+
+There is no data center proposed in Nottingham. The project that started the
+fight was withdrawn earlier this year. There is, according to
+[New Hampshire Public Radio](https://www.nhpr.org/politics/2026-09-09/nottingham-voters-approve-moratorium-data-centers-nh-newhampshire),
+no hyperscale data center anywhere in the state.
+
+That combination — no project, no industry, overwhelming votes against it — is
+what makes New Hampshire worth reading if you live somewhere the buildout has
+already arrived. Four towns here have now used four different legal tools, and
+the differences between those tools are the whole lesson.
+
+## Four towns, four instruments
+
+**Canterbury banned them outright.** At the March 10 town election, Article 4
+asked voters whether to amend the zoning ordinance "to ban data centers" by
+adding a definition and marking Data Centers as Not Allowed in every zone. It
+passed **322 to 63**, according to the
+[town clerk's attested results](https://www.canterburynh.gov/wp-content/uploads/2026/03/Town-Meeting-Election-Results-3_10_26.pdf).
+No developer had approached Canterbury. The planning board brought the article
+"proactively due to potential impacts to environmental resources," and its
+chair told the [Concord Monitor](https://www.concordmonitor.com/2026/03/03/canterbury-voters-to-consider-forbidding-data-centers-from-coming-to-town-whether-or-not-it-seems-likely-they-will/)
+the target was "large commercial deployments, think the multi-acre buildings
+that are going up around the country that take a ton of electricity." A board
+member quoted in the same story was openly skeptical it was needed: "I just
+don't think that they're coming here."
+
+**Rochester zoned them into a landfill.** Rochester's city government concluded
+it could not do what Canterbury did. Mayor Chuck Grassie told
+[NH Business Review](https://www.nhbr.com/rochester-looks-to-block-data-centers-with-zoning-law-will-it-work/)
+the city "cannot ban data centers outright by law," but could impose a one-year
+moratorium — so it took a third route instead. The amendment to Chapter 275 of
+the city ordinances, the subject of an
+[August 18 public hearing](https://news.rochesternh.gov/city-council-to-hold-public-hearings-on-northridge-funding-data-center-regulations-on-8-18/),
+confines data centers to the Recycling Industrial zone and requires a
+conditional use permit even there. NH Business Review counted 12 properties in
+that zone; seven of them, more than 975 acres including the Turnkey Landfill,
+belong to Waste Management. The city
+[enacted](https://wzid.com/news/042240-rochester-enacts-new-ordinance-on-data-centers)
+the ordinance, which prohibits data centers in every district except that one.
+Rochester handles adult entertainment the same way.
+
+**Nottingham bought time.** A 12-month moratorium is not a ban and does not
+pretend to be. Its stated purpose is to allow the town "adequate time to study
+the potential land use, environmental infrastructure and fiscal impacts
+associated with data centers." Planning board chair Drew Stevens told NHPR the
+year gives officials the chance to write permanent zoning. The moratorium is
+the scaffolding; the zoning is the building.
+
+**Keene is still writing definitions.** That is the least dramatic and most
+underrated step. A town that has not defined "data center" in its land
+development code has nothing to permit, condition, or refuse.
+
+## What is actually being proposed
+
+The project driving the statewide argument is in Bow, at the 345-acre site of
+the Merrimack Station coal plant, which stopped operating in 2025. Granite
+Shore Power is pursuing it, and Eversource and Granite Shore filed with federal
+regulators for a viability study on an interconnection of
+[up to 350 megawatts](https://indepthnh.org/2026/09/02/politicians-pile-on-calls-for-moratorium-as-data-centers-talks-in-bow-confirmed/),
+as InDepthNH reported. A Bow official confirmed "high-level discussions." The
+exact size and siting are not in the public record yet.
+
+Three hundred and fifty megawatts is the number to hold onto. In a
+[May column](https://indepthnh.org/2026/05/16/distant-dome-state-bites-the-bullet-on-data-centers/)
+for InDepthNH, Garry Rayno put New England's spare capacity at roughly 300 to
+400 megawatts. That is the analyst's figure, not a grid operator's filing, and
+you should cite it as his — but it explains why the governor's objection is
+about electricity rather than land.
+
+## The governor's moratorium is real, and it is slow
+
+Gov. Kelly Ayotte said on September 2 that she opposes "putting any data center
+in the state of New Hampshire," and that she would oppose Bow even if Bow wants
+it. Her stated reason, [to NHPR](https://www.nhpr.org/nh-news/2026-09-02/ayotte-opposes-potential-bow-data-center-plans-to-propose-moratorium-on-data-centers-in-state):
+"I want to reduce energy prices and the amount of energy a data center takes
+will raise energy costs in the state of New Hampshire, and I can't support
+that." She said ISO-New England's leadership had confirmed to her that a large
+data center would raise regional prices, and she wants a moratorium lasting "a
+period of years."
+
+Read the mechanism, not the headline. Ayotte plans to put the moratorium in her
+next budget, which means it would not take effect before **July 2027** unless
+she moves it by executive order first. Democrats in the State House have
+announced a 24-month moratorium proposal for the 2027 session, with a
+30-megawatt threshold, and Democratic gubernatorial candidate Cinde Warmington
+has pledged a day-one executive order, per InDepthNH.
+
+Every one of those is a promise about next year. The four town ordinances above
+are in force now. If you are a resident anywhere, that gap is the practical
+point: state-level relief runs on a legislative calendar, and your zoning board
+does not.
+
+## The preemption fight already happened once
+
+The most useful thing in the New Hampshire record is the bill that died.
+
+SB 439 was introduced by Sen. Debra Altschiller (D-Stratham) and Rep. Hope
+Damon (D-Croydon) to *authorize* cities and towns to regulate data centers in
+commercial and industrial zones. In the House, Reps. Diane Pauer (R-Brookline)
+and Keith Ammon (R-New Boston) co-sponsored an amendment that reversed it. As
+amended, the bill would have barred municipalities from regulating data centers
+more restrictively than other uses in the same district, and made them a
+permitted use by right in commercial and industrial zones. The House Municipal
+and County Government committee recommended the amended version 11-9 along
+party lines on May 5, [NHPR reported](https://www.nhpr.org/nh-news/2026-05-07/data-centers-nh-bill-local-regulations).
+
+Then Ammon himself moved to table it, and the House did so **304 to 11**,
+[per InDepthNH](https://indepthnh.org/2026/05/16/distant-dome-state-bites-the-bullet-on-data-centers/).
+The bill died at the June 4 adjournment. Taking it back off the table would
+take a two-thirds vote.
+
+Two things travel from that. The first is that preemption arrived as an
+amendment to a bill local-government advocates supported — it did not arrive
+with its own name and its own hearing. If you are tracking a state bill because
+its title sounds protective, track the amendments, not the title. The second is
+that a 304-11 tabling vote is what it looks like when a legislature decides an
+industry question is politically radioactive. That is the same body whose
+members represent Canterbury and Nottingham.
+
+## What to take from a state with nothing built
+
+Do not read New Hampshire as proof that towns win. Read it as a catalog of what
+each instrument costs and buys:
+
+- A **town-meeting zoning ban** is the strongest and the hardest — it needs a
+  ballot, and Rochester's lawyers concluded their city could not do it at all.
+  Ask your own attorney what your state's enabling statute allows before you
+  draft one.
+- **Confinement zoning** — permitted in exactly one district, by conditional
+  use permit — does the work of a ban without being one. It survives legal
+  review better and reads as neutral on its face.
+- A **moratorium** buys a study window and nothing else. It is worth exactly
+  the zoning you write during it.
+- **Definitions** are the precondition for all three.
+
+And whichever you pursue, watch the statehouse the entire time. Every one of
+these ordinances would have been void under SB 439 as amended.
+
+## See also
+
+- [New Hampshire state briefing](/states/new-hampshire.html) — the state's
+  tracked pauses, utilities and officials
+- [National moratorium tracker](/moratoriums.html) — every tracked locality
+  with its source and derived status
+- [Nottingham](/communities/nottingham-nh.html) ·
+  [Canterbury](/communities/canterbury-nh.html) ·
+  [Rochester](/communities/rochester-nh.html) — the community briefings for
+  each town above""",
+    },
+    {
         "id": "michigan-moratorium-wave-2026",
         "art": "moratorium",
         "section": "stories",

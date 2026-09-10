@@ -4810,13 +4810,18 @@ MORATORIUMS = [
      "source": "https://www.nhpr.org/nh-news/2026-03-04/canterbury-town-meeting-voters-consider-banning-data-centers",
      "term": "standing"},
     {"locality": "Nottingham", "state": "NH", "level": "Local",
-     "status": "Proposed", "when": "Jul 1, 2026",
-     "note": "Planning Board adopted 12-month moratorium 5-0 under "
-             "RSA 674:23; requires voter ratification at special town "
-             "election Sep 8, 2026. Triggered by May 2026 proposal on "
-             "Route 4 which drew 25,000+ opposing petition signatures",
-     "lat": 43.12, "lon": -71.10, "expires": None, "as_of": "2026-09-07",
-     "source": "https://www.nhpr.org/environment/2026-07-03/nottingham-data-center-moratorium-town-meeting-nh"},
+     "status": "Enacted", "when": "Sep 8, 2026",
+     "note": "Voters ratified a 12-month moratorium on data center "
+             "construction 1,335-143 at the Sep 8, 2026 special town "
+             "election; Planning Board had adopted it 5-0 under RSA "
+             "674:23 on Jul 1. Ordinance allows the town time to study "
+             "land use, environmental infrastructure and fiscal "
+             "impacts; planning board chair has said permanent zoning "
+             "may follow. End date of the 12-month term not stated in "
+             "the sourced reporting",
+     "lat": 43.12, "lon": -71.10, "expires": None, "as_of": "2026-09-10",
+     "source": "https://www.nhpr.org/politics/2026-09-09/nottingham-voters-approve-moratorium-data-centers-nh-newhampshire",
+     "term": "fixed_undated"},
     {"locality": "Rochester", "state": "NH", "level": "Local",
      "status": "Enacted", "when": "Sep 1, 2026",
      "note": "City Council enacted ordinance prohibiting data centers in "

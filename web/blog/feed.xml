@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>New Hampshire Has No Hyperscale Data Center. Four of Its Towns Restricted Them Anyway.</title>
+      <link>https://aigridwatch.com/blog/new-hampshire-town-votes-2026</link>
+      <guid>https://aigridwatch.com/blog/new-hampshire-town-votes-2026</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Nottingham voted 1,335-143 for a 12-month data center moratorium on September 8, in a state with no hyperscale data center and no pending project in town. Canterbury banned them outright, Rochester zoned them into a landfill district, and a bill that would have voided all of it was tabled 304-11. A catalog of what each legal instrument costs and buys.</description>
+    </item>
+    <item>
       <title>Michigan Has 64 Data Center Moratoriums, a Recall Wave, and a Congressional Delegation That Voted Both Ways</title>
       <link>https://aigridwatch.com/blog/michigan-moratorium-wave-2026</link>
       <guid>https://aigridwatch.com/blog/michigan-moratorium-wave-2026</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/data-centers-property-values-2026</guid>
       <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
       <description>It&#x27;s the first question at every hearing: will a data center tank my home&#x27;s value? The honest answer isn&#x27;t the scary one or the industry one. The headline studies say &quot;no measurable drag&quot; — but most were commissioned by developers, measure average distance rather than the house across the street, and come from hot markets where everything appreciates. Here&#x27;s what the evidence really says, and the move that beats arguing about it.</description>
-    </item>
-    <item>
-      <title>How to Unmask the Shell Company Behind a Data Center</title>
-      <link>https://aigridwatch.com/blog/unmask-data-center-llc-2026</link>
-      <guid>https://aigridwatch.com/blog/unmask-data-center-llc-2026</guid>
-      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
-      <description>A project lands in your town under a code name — &quot;Project Blue,&quot; &quot;Project Rowan&quot; — bought by an LLC no one has heard of. That anonymity is a strategy, not an accident. Here&#x27;s the five-step method to find the hyperscaler actually behind it, worked through the real chain of shell companies that hid Amazon behind Tucson&#x27;s Project Blue — and why naming them changes your leverage.</description>
     </item>
 </channel>
 </rss>
