@@ -1,6 +1,6 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-09-08",
+  "generated": "2026-09-10",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 629,
@@ -252,12 +252,17 @@
   },
   "expiring_within_days": {
     "30": [
+      "bangor-me",
       "augusta-ga",
       "wixom-mi",
       "front-royal-va",
+      "pierce-township-oh",
+      "tallmadge-oh",
+      "palm-springs-ca",
       "augusta-richmond-county-ga",
       "roswell-ga",
-      "waterford-township-mi"
+      "waterford-township-mi",
+      "calaveras-county-ca"
     ],
     "60": [
       "lysander-onondaga-co-ny",
@@ -268,6 +273,7 @@
       "lavon-tx",
       "wixom-mi",
       "lexington-fayette-county-ky",
+      "johnson-county-ia",
       "white-county-in",
       "front-royal-va",
       "cleveland-oh",
@@ -302,6 +308,7 @@
       "springfield-mo",
       "minneapolis-mn",
       "wixom-mi",
+      "green-charter-township-mi",
       "lexington-fayette-county-ky",
       "johnson-county-ia",
       "normal-il",
