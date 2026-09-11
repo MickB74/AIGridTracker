@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>California Vetoed a Water Disclosure Bill in 2025. Now Seven Data Center Bills Are on the Governor&#x27;s Desk.</title>
+      <link>https://aigridwatch.com/blog/california-moratorium-wave-2026</link>
+      <guid>https://aigridwatch.com/blog/california-moratorium-wave-2026</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
+      <description>California now has 21 data center moratoriums on our national tracker — from the Salton Sea to the San Francisco Bay. The state legislature has sent Governor Newsom seven bills covering ratepayer protection, mandatory CEQA review, and water disclosure. Last year he vetoed a milder version of the water bill. The question now is whether the political landscape has shifted enough to change his answer.</description>
+    </item>
+    <item>
       <title>New Hampshire Has No Hyperscale Data Center. Four of Its Towns Restricted Them Anyway.</title>
       <link>https://aigridwatch.com/blog/new-hampshire-town-votes-2026</link>
       <guid>https://aigridwatch.com/blog/new-hampshire-town-votes-2026</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/ai-chip-boom-scale-2026</guid>
       <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
       <description>The Times went looking for a way to describe the scale of the AI build-out and landed on comparisons to the railroads and the Manhattan Project. The chip count — doubling roughly every nine months — is the number that explains why the pipeline of new proposals isn&#x27;t slowing down. Here&#x27;s what the rest of the numbers mean if you&#x27;re the one facing the next one.</description>
-    </item>
-    <item>
-      <title>Do Data Centers Lower Property Values? What the Studies Actually Show</title>
-      <link>https://aigridwatch.com/blog/data-centers-property-values-2026</link>
-      <guid>https://aigridwatch.com/blog/data-centers-property-values-2026</guid>
-      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
-      <description>It&#x27;s the first question at every hearing: will a data center tank my home&#x27;s value? The honest answer isn&#x27;t the scary one or the industry one. The headline studies say &quot;no measurable drag&quot; — but most were commissioned by developers, measure average distance rather than the house across the street, and come from hot markets where everything appreciates. Here&#x27;s what the evidence really says, and the move that beats arguing about it.</description>
     </item>
 </channel>
 </rss>

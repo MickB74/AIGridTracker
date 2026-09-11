@@ -72,6 +72,88 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "california-moratorium-wave-2026",
+        "art": "moratorium",
+        "section": "stories",
+        "title": "California Vetoed a Water Disclosure Bill in 2025. Now Seven Data Center Bills Are on the Governor's Desk.",
+        "seo_title": "California data center moratoriums and bills: 21 local pauses, 7 state bills",
+        "date": _dt.date(2026, 9, 11),
+        "author": "GridWatch AI",
+        "tags": ["california", "moratoriums", "data centers", "legislation", "CEQA", "ratepayers", "water"],
+        "summary": "California now has 21 data center moratoriums on our national tracker — from the "
+                   "Salton Sea to the San Francisco Bay. The state legislature has sent Governor Newsom "
+                   "seven bills covering ratepayer protection, mandatory CEQA review, and water "
+                   "disclosure. Last year he vetoed a milder version of the water bill. The question "
+                   "now is whether the political landscape has shifted enough to change his answer.",
+        "body": """\
+California has 21 data center moratoriums on our [national tracker](moratoriums) — from the Imperial Valley floor to the San Francisco Bay. The wave is not as large numerically as New Jersey's 72 or Michigan's 64, but what California lacks in count it makes up in range: a permanent ban enacted by popular vote, a state legislative package with no equivalent anywhere in the country, and a governor who sided with the industry a year ago and now has to decide whether to do it again.
+
+## The map
+
+Our [California moratorium tracker](states/california) lists 21 rows across four distinct geographic clusters:
+
+**The Imperial Valley.** Four cities in one of the country's poorest, hottest, most water-stressed regions have acted within weeks of each other. [Imperial County](communities/imperial-county-ca) enacted a countywide moratorium in June 2026. [Calipatria](communities/calipatria-ca) went further — the city council voted 3-2 in July to permanently ban data centers, making it the first Imperial Valley city to do so. The [City of Imperial](communities/imperial-ca) extended its moratorium through May 2027. And [Indio](communities/indio-ca), in the Coachella Valley, has its own pause running through October.
+
+Rep. Raul Ruiz (CA-25), who represents much of the valley, [submitted a letter](https://www.thedesertreview.com/news/ruiz-formally-opposes-proposed-imperial-data-center-project/article_66fd01cf-c1db-4002-b64e-895dc9b5d09e.html) to the Imperial County Board of Supervisors opposing the proposed data center campus: "I unequivocally oppose data centers in Imperial Valley." He announced plans to send letters to the EPA and DOE seeking federal environmental review.
+
+**The San Gabriel Valley.** [Monterey Park](communities/monterey-park-ca) set the national template by becoming the first U.S. city to permanently ban data centers via ballot measure — [86% yes](https://www.latimes.com/california/story/2026-06-03/monterey-park-data-center-ban-election-results) on June 3, 2026. Neighboring [El Monte](communities/el-monte-ca) extended its moratorium through February 2027. [Montebello](communities/montebello-ca) passed a 45-day pause that expired without extension. Baldwin Park and Alhambra also acted, though details of their ordinances have not been confirmed.
+
+**The Central Valley.** [Patterson](communities/patterson-ca) in Stanislaus County extended its moratorium through July 2027 (Ordinance Nos. [889 and 890](https://www.cbsnews.com/sacramento/news/patterson-extends-data-center-moratorium/)), citing water — the city faces state requirements to reduce groundwater pumping. [Tulare County](communities/tulare-county-ca) enacted a 45-day pause in August. Fresno's city council voted 7-0 to begin drafting a [10-year prohibition](https://fresyes.com/fresno/fresno-started-a-data-center-ban-process-what-does-it-mean-for-property-values/), though no emergency moratorium is in place yet.
+
+**The Bay Area and beyond.** [Oakley](communities/oakley-ca) in Contra Costa County has a moratorium running through April 2027. [Morgan Hill](communities/morgan-hill-ca) in Santa Clara County unanimously approved a 45-day pause on August 26 covering both data centers and grid-scale battery storage. [Lake Elsinore](communities/lake-elsinore-ca) in Riverside County approved its own 45-day moratorium the day before. On the North Coast, [Eureka](communities/eureka-ca), [Mendocino County](communities/mendocino-county-ca), and [Humboldt County](communities/humboldt-county-ca) have all acted.
+
+## The state package
+
+What makes California's wave different from Ohio's or Michigan's is what the legislature did with it. On August 31, 2026 — the last day of the session — both chambers passed seven data center bills and sent them to Governor Newsom. He has until the end of September to sign or veto each one. Together they form the most comprehensive state-level data center regulatory package in the country.
+
+**SB 887** is the centerpiece. Authored by Sen. Steve Padilla, it [prohibits categorical CEQA exemptions](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB887) for data center projects — meaning every project statewide would require at minimum an initial study and either a full environmental impact report, a negative declaration, or a mitigated negative declaration. No more ministerial approvals. It passed the Senate 29-9.
+
+**SB 886** and **AB 2383** create a dedicated tariff for large-load customers with peak demand at or above 75 MW, ensuring data centers pay their own transmission, distribution, and generation costs. SB 886, also from Padilla, [passed the Senate 28-10](https://sd18.senate.ca.gov/news/nation-leading-data-center-regulations-head-governors-desk).
+
+**SB 1168**, from Sen. Jerry McNerney, directs the CPUC to ensure data centers pay their fair share of transmission and distribution costs. It passed the Senate 38-0.
+
+**AB 2469** bars local governments from approving new data centers unless the developer [discloses water plans and covers the full cost](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2469) of any new water infrastructure the facility requires.
+
+**AB 2619**, from Assemblymember Diane Papan, requires data center operators to [report water sources and usage](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2619) under penalty of perjury when seeking or renewing a business license.
+
+That last bill is the one that tells the story.
+
+## The 2025 veto and the 2026 question
+
+In October 2025, Governor Newsom vetoed [AB 93](https://a21.asmdc.org/press-releases/20251014-governor-vetoes-papan-bill-track-data-center-water-use) — a bill by the same Assemblymember Papan requiring data center operators to disclose their expected water use when applying for a business license. It was a disclosure requirement. No limits, no caps, no denial of permits. Just tell the public how much water you plan to use.
+
+Newsom's veto message: "I am reluctant to impose rigid reporting requirements about operational details on this sector without understanding the full impact on businesses and the consumers of their technology."
+
+The same session, he signed [SB 57](https://sd18.senate.ca.gov/news/legislation-protect-california-ratepayers-paying-data-centers-energy-costs-signed-law), a study mandate directing the CPUC to examine data center electricity impacts on ratepayers. No teeth — findings not even due until January 2027.
+
+That was the state of California data center policy twelve months ago: one study, one veto, and a governor who framed a water disclosure requirement as too burdensome.
+
+Now the same governor has seven bills on his desk. AB 2619, which Papan rewrote and reintroduced, is nearly identical to the bill he vetoed. SB 887 goes far beyond anything he was asked to sign in 2025 — it would require full environmental review for every data center in the state. And the political ground has shifted: Monterey Park's 86% ban, 21 local moratoriums, and a congressional delegation that is now on the record.
+
+## The federal delegation
+
+Two California members have taken significant action at the federal level.
+
+**Rep. Mike Levin (CA-49)** introduced the [SHIELD Act](https://levin.house.gov/media/press-releases/rep-mike-levin-introduces-new-bill-to-stop-data-centers-from-driving-up-electricity-prices-for-consumers) (H.R. 7066), creating a separate rate class for large energy users over 75 MW — a federal counterpart to what SB 886 does at the state level. He also co-introduced the [Energy Bills Relief Act](https://levin.house.gov/media/press-releases/reps-levin-and-casten_seec-clean-energy-deployment-task-force-introduce-the-energy-bills-relief-act) (H.R. 7977) and cosponsored the [Responsible Data Center Siting Act](https://www.govinfo.gov/app/details/BILLS-119hr10321ih) (H.R. 10321).
+
+**Sen. Adam Schiff** co-signed a [November 2025 letter](https://www.schiff.senate.gov/news/press-releases/news-sen-schiff-joins-sen-markey-colleagues-in-urging-federal-energy-regulator-to-prevent-data-centers-from-dramatically-hiking-energy-costs-for-american-families/) to FERC Chair Laura Swett urging the commission to prevent data centers from hiking energy costs for families, then introduced the [Energy Cost Fairness and Reliability Act](https://www.schiff.senate.gov/news/press-releases/schiff-introduces-legislation-to-protect-families-from-rising-energy-costs-due-to-data-centers/) in May 2026.
+
+## What to watch
+
+Newsom's deadline is the end of September. If he signs SB 887, California becomes the first state to require environmental review for every data center project statewide — a stronger position than any of the 21 local moratoriums on their own. If he vetoes it, the local moratoriums become the only line of defense, and several of them expire within weeks.
+
+Five California moratoriums expire before the end of October: [Tulare County](communities/tulare-county-ca) on October 2, [Calaveras County](communities/calaveras-county-ca) on October 9, [Lake Elsinore](communities/lake-elsinore-ca) on October 9, [Morgan Hill](communities/morgan-hill-ca) on October 10, and [Escondido](communities/escondido-ca) on October 12. Whether those communities extend, let lapse, or convert to permanent zoning will depend in part on what Sacramento does first.
+
+San Francisco Supervisor Shamann Walton is [expected to introduce](https://missionlocal.org/2026/09/data-center-moratorium-sf-board-of-supervisors/) a 45-day data center moratorium on September 15. And Fresno is drafting a 10-year prohibition. The wave is still building.
+
+For communities in an active moratorium: our [Start here wizard](start-here) walks through what to negotiate before the clock runs out.
+
+---
+
+*See also: [California state briefing](states/california) · [National moratorium tracker](moratoriums) · [House race tracker](house-races) · [Senate tracker](senators)*
+""",
+    },
+    {
         "id": "new-hampshire-town-votes-2026",
         "art": "moratorium",
         "section": "stories",
