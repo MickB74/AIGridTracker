@@ -3,6 +3,10 @@
     "effective_status": "Enacted",
     "expires": "2027-08-17"
   },
+  "alhambra-ca": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "allegheny-county-pa": {
     "effective_status": "Proposed",
     "expires": null
@@ -114,6 +118,10 @@
   "avon-oh": {
     "effective_status": "Enacted",
     "expires": "2027-04-14"
+  },
+  "baldwin-park-ca": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "baltimore-city-md": {
     "effective_status": "Enacted",
