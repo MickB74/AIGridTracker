@@ -1223,6 +1223,19 @@ def _howto_schema(name, description, url, steps, total_time=None):
     return schema
 
 
+def _speakable_schema(url, css_selectors):
+    """SpeakableSpecification schema for voice assistants."""
+    return {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "url": _canon(url),
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": css_selectors,
+        },
+    }
+
+
 def _dataset_schema(name, description, url, distributions,
                     keywords=None, temporal=None):
     """Dataset schema for citable, downloadable data.
@@ -2644,7 +2657,20 @@ def build_state(state, news_only=None):
         jsonld=[
             _breadcrumb(("Home", SITE_URL), ("States", f"{SITE_URL}/states/"),
                         (state, f"{SITE_URL}/states/{slugify(state)}")),
+            _speakable_schema(
+                f"{SITE_URL}/states/{slugify(state)}",
+                ["header .lede", ".stats .stat b", ".stats .stat span"]),
             _faq_schema(faq_pairs),
+            _dataset_schema(
+                f"{state} data center profile",
+                f"Tracked data center facilities, electricity consumption, "
+                f"moratoriums, and grid profile for {state}.",
+                f"{SITE_URL}/states/{slugify(state)}",
+                [("application/rss+xml",
+                  f"{SITE_URL}/feeds/{slugify(state)}.xml")],
+                keywords=["data centers", state, "electricity",
+                           "moratorium", "community impact"],
+            ),
         ])
 
 
@@ -2883,6 +2909,8 @@ def build_health():
         jsonld=[
             _breadcrumb(("Home", SITE_URL),
                         ("Health & community impacts", f"{SITE_URL}/health-risks")),
+            _speakable_schema(f"{SITE_URL}/health-risks",
+                              ["header .sub", ".card h3", ".card p"]),
             # Questions map 1:1 to the six panels; answers are the panel
             # summaries verbatim, so the rich result never diverges from the
             # sourced content on the page.
@@ -6302,6 +6330,8 @@ def build_start_here():
         jsonld=[
             _breadcrumb(("Home", SITE_URL),
                         ("Start here", f"{SITE_URL}/start-here")),
+            _speakable_schema(f"{SITE_URL}/start-here",
+                              ["header .sub", ".steptag", ".step > h2"]),
             _howto_schema(
                 "How to respond when a data center is proposed near you",
                 "A free five-step plan for anyone facing a new data center "
@@ -6508,6 +6538,36 @@ def build_impact_calculator():
         og_image=_og_image("impact"),
         jsonld=[
             _breadcrumb(("Home", SITE_URL), ("Calculator", f"{SITE_URL}/impact")),
+            _howto_schema(
+                "How to estimate the impact of a data center on your community",
+                "Use this free calculator to estimate the annual electricity, "
+                "water, carbon emissions, rate pressure, and CBA negotiation "
+                "target for a data center in your state.",
+                f"{SITE_URL}/impact",
+                [
+                    ("Choose the facility size",
+                     "Set the data center's capacity in megawatts using the "
+                     "slider. 10 MW is a small edge facility, 100 MW is a "
+                     "typical hyperscaler campus, and 500 MW is a mega-project."),
+                    ("Select your state",
+                     "Pick your state from the dropdown. The calculator uses "
+                     "your state's residential electricity rate, grid carbon "
+                     "intensity, and water stress level to estimate local impact."),
+                    ("Review the impact numbers",
+                     "Read the annual electricity in MWh, equivalent homes, "
+                     "water draw in million gallons, and CO2 emissions in "
+                     "metric tons. These are planning estimates, not engineering "
+                     "studies."),
+                    ("Use the CBA target in negotiations",
+                     "The calculator estimates 2% of project investment as a "
+                     "community benefit agreement floor. Print the page or use "
+                     "the full toolkit to generate a complete action pack with "
+                     "these numbers."),
+                ],
+                total_time="PT5M",
+            ),
+            _speakable_schema(f"{SITE_URL}/impact",
+                              [".stats .stat b", "header .sub"]),
             _faq_schema([
                 ("How much electricity does a data center use?",
                  "A data center's draw scales with its size. A 100 MW campus — a "
@@ -7758,7 +7818,51 @@ def build_puc():
         "and complaint portals. File a complaint or intervene when data "
         "center costs hit your electric bill.",
         body, f"{SITE_URL}/puc",
-        jsonld=_breadcrumb(("Home", SITE_URL), ("PUC directory", f"{SITE_URL}/puc")))
+        jsonld=[
+            _breadcrumb(("Home", SITE_URL), ("PUC directory", f"{SITE_URL}/puc")),
+            _howto_schema(
+                "How to file a PUC complaint about a data center",
+                "Find your state's Public Utility Commission, file a consumer "
+                "complaint, or intervene in a rate case when data center costs "
+                "hit your electric bill.",
+                f"{SITE_URL}/puc",
+                [
+                    ("Find your state PUC",
+                     "Search the directory for your state. Every state and D.C. "
+                     "has a Public Utility Commission that regulates electricity "
+                     "rates and large-load interconnections."),
+                    ("Check for an open rate case",
+                     "Visit your PUC's website and look for pending dockets. "
+                     "When a utility files a rate case to recover grid upgrade "
+                     "costs driven by data center load, the docket is public."),
+                    ("File a consumer complaint",
+                     "Use the complaint link in the directory to open your "
+                     "PUC's consumer-assistance portal. Filing puts your "
+                     "concerns on the public record and PUCs are required "
+                     "to respond."),
+                    ("Intervene in the rate case",
+                     "Most PUCs allow public intervention in rate cases. File "
+                     "a motion to intervene if a utility is seeking rate "
+                     "increases tied to data center infrastructure. See the "
+                     "electric bill explainer for how wholesale costs flow "
+                     "to your bill."),
+                ],
+                total_time="PT15M",
+            ),
+            _faq_schema([
+                ("What is a PUC and why does it matter for data centers?",
+                 "A Public Utility Commission (PUC) approves rate cases, "
+                 "large-load tariffs, and interconnection rules. It decides "
+                 "whether data center costs land on residential bills. Every "
+                 "state has one. Filing a complaint or intervening in a rate "
+                 "case puts your concerns on the public record."),
+                ("How do I file a complaint about my electric bill going up?",
+                 "Find your state in the PUC directory and click the complaint "
+                 "link to open the consumer-assistance portal. Pattern "
+                 "complaints can trigger PUC investigations into whether rate "
+                 "increases are driven by data center infrastructure costs."),
+            ]),
+        ])
 
 
 def build_executives():
