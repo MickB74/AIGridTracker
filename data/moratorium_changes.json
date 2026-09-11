@@ -2798,5 +2798,12 @@
     "locality": "Jasper County, SC",
     "kind": "added",
     "detail": "Added as Proposed"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "pinson-al",
+    "locality": "Pinson, AL",
+    "kind": "extended",
+    "detail": "Now runs to 2027-08-07"
   }
 ]

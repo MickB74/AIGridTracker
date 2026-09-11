@@ -1426,12 +1426,11 @@ MORATORIUMS = [
      "lat": 43.80, "lon": -91.24, "expires": "2028-02-14", "as_of": "2026-08-15",
      "source": "https://www.seehafernews.com/2026/08/14/la-crosse-common-council-approves-moratorium-on-data-center-developments/"},
     {"locality": "Yakima County", "state": "WA", "level": "Local",
-     "status": "Enacted", "when": "2026",
+     "status": "Enacted", "when": "Aug 12, 2026",
      "note": "6-month moratorium in unincorporated areas, unanimous. Studying "
              "economic, health, agricultural, and water impacts",
-     "lat": 46.60, "lon": -120.51, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.yakimaherald.com/news/local/government/yakima-county-commissioners-pass-six-month-data-center-moratorium/article_997dbbc7-7fe0-476a-9d92-73179f958bf7.html",
-     "term": "fixed_undated"},
+     "lat": 46.60, "lon": -120.51, "expires": "2027-02-12", "as_of": "2026-09-11",
+     "source": "https://www.yakimaherald.com/news/local/government/yakima-county-commissioners-pass-six-month-data-center-moratorium/article_997dbbc7-7fe0-476a-9d92-73179f958bf7.html"},
     {"locality": "Greensboro", "state": "NC", "level": "Local",
      "status": "Enacted", "when": "Aug 18, 2026",
      "note": "180-day pause on applications for data centers with electrical "
@@ -2210,12 +2209,11 @@ MORATORIUMS = [
      "lat": 34.44, "lon": -85.72, "expires": "2026-12-16", "as_of": "2026-08-13",
      "source": "https://256today.com/fort-payne-gets-ahead-of-data-center-boom-with-development-moratorium/"},
     {"locality": "Pinson", "state": "AL", "level": "Local",
-     "status": "Enacted", "when": "Aug 2026",
+     "status": "Enacted", "when": "Aug 7, 2026",
      "note": "1-year moratorium targeting hyper/mega data centers, especially "
              "AI facilities. Preemptive — no proposals pending",
-     "lat": 33.69, "lon": -86.68, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.trussvilletribune.com/2026/08/07/pinson-council-passes-one-year-moratorium-on-data-centers/",
-     "term": "fixed_undated"},
+     "lat": 33.69, "lon": -86.68, "expires": "2027-08-07", "as_of": "2026-09-11",
+     "source": "https://www.trussvilletribune.com/2026/08/07/pinson-council-passes-one-year-moratorium-on-data-centers/"},
     {"locality": "Fairfield", "state": "AL", "level": "Local",
      "status": "Enacted", "when": "Jul 2026",
      "note": "Temporary moratorium after resident pressure over Patmos "
@@ -2799,13 +2797,12 @@ MORATORIUMS = [
      "lat": 47.47, "lon": -122.35, "expires": "2027-06-29", "as_of": "2026-08-13",
      "source": "https://b-townblog.com/burien-city-council-approves-one-year-moratorium-on-new-data-centers-hears-concerns-over-nera-zoning-immigration-arrests-school-relocation-more/"},
     {"locality": "Marysville", "state": "WA", "level": "Local",
-     "status": "Enacted", "when": "Jul 2026",
+     "status": "Enacted", "when": "Jul 14, 2026",
      "note": "6-month moratorium on buildings/facilities whose principal use is "
              "data management/transmission, unanimous. Mayor urged surrounding "
              "counties to follow suit",
-     "lat": 48.05, "lon": -122.18, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.heraldnet.com/2026/07/15/marysville-initiates-6-month-moratorium-on-data-centers/",
-     "term": "fixed_undated"},
+     "lat": 48.05, "lon": -122.18, "expires": "2027-01-14", "as_of": "2026-09-11",
+     "source": "https://www.heraldnet.com/2026/07/15/marysville-initiates-6-month-moratorium-on-data-centers/"},
     {"locality": "Skagit County", "state": "WA", "level": "Local",
      "status": "Enacted", "when": "Jun 1, 2026",
      "note": "6-month moratorium in rural/unincorporated areas on data centers "
@@ -2814,13 +2811,12 @@ MORATORIUMS = [
      "lat": 48.47, "lon": -121.84, "expires": "2026-12-01", "as_of": "2026-08-13",
      "source": "https://www.skagitcounty.net/Departments/Home/press/060126.htm"},
     {"locality": "Pasco", "state": "WA", "level": "Local",
-     "status": "Enacted", "when": "Jul 2026",
+     "status": "Enacted", "when": "Jul 20, 2026",
      "note": "6-month moratorium, 6-0. Extendable if officials don't have "
              "satisfactory answers. Developing data-center-specific land-use "
              "regulations",
-     "lat": 46.24, "lon": -119.10, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.datacenterdynamics.com/en/news/council-in-pasco-washington-unanimously-approves-six-month-data-center-moratorium/",
-     "term": "fixed_undated"},
+     "lat": 46.24, "lon": -119.10, "expires": "2027-01-20", "as_of": "2026-09-11",
+     "source": "https://www.datacenterdynamics.com/en/news/council-in-pasco-washington-unanimously-approves-six-month-data-center-moratorium/"},
     {"locality": "Cle Elum", "state": "WA", "level": "Local",
      "status": "Enacted", "when": "Jul 31, 2026",
      "note": "6-month moratorium, unanimous. Prompted by Blue Fern Development's "
@@ -2829,18 +2825,19 @@ MORATORIUMS = [
      "lat": 47.19, "lon": -120.94, "expires": "2027-01-31", "as_of": "2026-08-13",
      "source": "https://www.dailyrecordnews.com/news/cle-elum-calls-timeout-on-development-applications-for-data-centers/article_43b63382-e7de-48da-9816-e760c936c24a.html"},
     {"locality": "Renton", "state": "WA", "level": "Local",
-     "status": "Proposed", "when": "Jun 15, 2026",
-     "note": "City council set AI data center moratorium in motion; process "
-             "initiated but may not be finalized",
-     "lat": 47.48, "lon": -122.22, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.rentonreporter.com/2026/06/15/renton-city-council-sets-ai-data-center-ban-in-motion/"},
+     "status": "Enacted", "when": "Aug 17, 2026",
+     "note": "One-year moratorium on filing, acceptance, processing, and approval "
+             "of applications/permits for siting or expansion of large data centers; "
+             "unanimously approved",
+     "lat": 47.48, "lon": -122.22, "expires": "2027-08-17", "as_of": "2026-09-11",
+     "source": "https://www.rentonreporter.com/2026/08/19/renton-places-one-year-moratorium-on-data-centers/"},
     {"locality": "Kittitas County", "state": "WA", "level": "Local",
-     "status": "Proposed", "when": "Aug 2026",
-     "note": "Commissioners reviewing proposed emergency 6-month moratorium. "
-             "Follows Cle Elum ban. Concerns: energy, water, transportation, "
-             "noise, lighting, agricultural compatibility",
-     "lat": 47.12, "lon": -120.72, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.dailyrecordnews.com/news/kittitas-county-commissioners-to-look-at-data-center-ban/article_e455846e-e6d5-462e-91bb-03856c76cec9.html"},
+     "status": "Enacted", "when": "Aug 12, 2026",
+     "note": "6-month moratorium on acceptance of data center applications, "
+             "voted 2-0 without discussion. Public hearing Sep 15 to consider "
+             "extending another six months",
+     "lat": 47.12, "lon": -120.72, "expires": "2027-02-12", "as_of": "2026-09-11",
+     "source": "http://www.dailyrecordnews.com/news/commissioners-approve-ban-on-data-centers/article_f748f50c-8759-4b25-9c2b-d87aa04a5942.html"},
     # ── Batch 4 — Arizona & Oregon ────────────────────────────────────────
     {"locality": "Arizona (tax incentives)", "state": "AZ", "level": "State",
      "status": "Enacted", "when": "Jul 1, 2026",
@@ -4675,7 +4672,7 @@ MORATORIUMS = [
     {"locality": "Arvada", "state": "CO", "level": "Local", "status": "Proposed", "when": None, "note": "Council directed staff to draft 18-month moratorium after Aug 11 study session. Vote on final language not yet scheduled as of mid-Aug 2026.", "lat": 39.8028, "lon": -105.0875, "expires": None, "as_of": "2026-09-06", "source": "https://www.arvadapress.com/news/government-politics/article_da742ecf-c59f-4ec9-ae0b-c6147a1cc385.html", "term": None},
     {"locality": "Butte-Silver Bow", "state": "MT", "level": "County", "status": "Proposed", "when": None, "note": "Commission voted 11-0 to direct county attorney to prepare temporary moratorium. Not yet formally enacted. Separate ballot initiative for voter-approval requirement was blocked by courts.", "lat": 46.0038, "lon": -112.5348, "expires": None, "as_of": "2026-09-06", "source": "https://www.kxlf.com/news/butte-silver-bow-county-commission-votes-to-pursue-temporary-moratorium-on-data-centers", "term": None},
     {"locality": "Calaveras County", "state": "CA", "level": "County", "status": "Enacted", "when": None, "note": "Board of Supervisors adopted 45-day urgency ordinance 4-0 (chair absent) on Aug 25, 2026. Can be extended up to two years. Planning Director said large-scale data centers warrant further study on water, electricity, noise, lighting impacts.", "lat": 38.1964, "lon": -120.6814, "expires": "2026-10-09", "as_of": "2026-09-06", "source": "https://mymotherlode.com/news/local/11092598/calaveras-data-center-moratorium-passes-4-0.html", "term": "fixed_undated"},
-    {"locality": "Clackamas County", "state": "OR", "level": "County", "status": "Proposed", "when": None, "note": "Commissioners voted unanimously to begin formal moratorium process (up to 120 days once enacted). Oregon law requires 45-day notice before public hearing; moratorium not yet in effect during notice period. No existing data center applications in the county.", "lat": 45.1768, "lon": -122.2153, "expires": None, "as_of": "2026-09-06", "source": "https://www.opb.org/article/2026/08/05/clackamas-county-to-consider-data-center-moratorium/", "term": None},
+    {"locality": "Clackamas County", "state": "OR", "level": "County", "status": "Proposed", "when": "Aug 11, 2026", "note": "Commissioners voted unanimously to direct staff to begin formal moratorium process (up to 120 days once enacted). Oregon law requires 45-day notice before public hearing; moratorium not yet in effect during notice period. No existing data center applications in the county.", "lat": 45.1768, "lon": -122.2153, "expires": None, "as_of": "2026-09-11", "source": "https://www.opb.org/article/2026/08/05/clackamas-county-to-consider-data-center-moratorium/", "term": None},
     {"locality": "Escondido", "state": "CA", "level": "Local", "status": "Enacted", "when": None, "note": "City council unanimously approved 45-day urgency ordinance. Can be extended up to one year with two additional extensions (10 months and 12 months). No current applications or inquiries. Progress update due Oct 10, 2026.", "lat": 33.1192, "lon": -117.0864, "expires": "2026-10-12", "as_of": "2026-09-06", "source": "https://ncpipeline.substack.com/p/escondido-data-center-moratorium", "term": "fixed_undated"},
     {"locality": "Eureka", "state": "CA", "level": "Local", "status": "Enacted", "when": None, "note": "City council unanimously adopted urgency ordinance Bill No. 1061-C.S. establishing 45-day moratorium effective immediately. Can be extended under CA Gov Code 65858 while city updates Local Coastal Program (up to two years).", "lat": 40.8021, "lon": -124.1637, "expires": "2026-10-17", "as_of": "2026-09-06", "source": "https://lostcoastoutpost.com/2026/sep/2/eureka-city-council-approved-temporary-ban-data-ce/", "term": "fixed_undated"},
     {"locality": "Loveland", "state": "CO", "level": "Local", "status": "Proposed", "when": None, "note": "Council held study session Sep 1 after multiple members expressed interest in emergency moratorium. A company has contacted city about establishing a data center. Larimer County (which contains Loveland) already has its own moratorium through Feb 2027.", "lat": 40.3978, "lon": -105.075, "expires": None, "as_of": "2026-09-06", "source": "https://bizwest.com/2026/09/02/loveland-likely-to-impose-data-center-moratorium/", "term": None},
