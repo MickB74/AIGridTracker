@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-09-10",
+  "generated": "2026-09-11",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 629,
+  "count": 636,
   "states": 48,
-  "enacted": 500,
+  "enacted": 506,
   "proposed": 72,
   "official_sourced": 53,
   "by_state": {
@@ -105,8 +105,8 @@
       "proposed": 2
     },
     "CA": {
-      "total": 14,
-      "enacted": 12,
+      "total": 21,
+      "enacted": 18,
       "proposed": 2
     },
     "WA": {
@@ -256,13 +256,16 @@
       "augusta-ga",
       "wixom-mi",
       "front-royal-va",
+      "tulare-county-ca",
       "pierce-township-oh",
       "tallmadge-oh",
       "palm-springs-ca",
       "augusta-richmond-county-ga",
       "roswell-ga",
       "waterford-township-mi",
-      "calaveras-county-ca"
+      "calaveras-county-ca",
+      "morgan-hill-ca",
+      "lake-elsinore-ca"
     ],
     "60": [
       "lysander-onondaga-co-ny",
@@ -276,6 +279,7 @@
       "johnson-county-ia",
       "white-county-in",
       "front-royal-va",
+      "tulare-county-ca",
       "cleveland-oh",
       "pierce-township-oh",
       "tallmadge-oh",
@@ -290,6 +294,8 @@
       "escondido-ca",
       "eureka-ca",
       "mendocino-county-ca",
+      "morgan-hill-ca",
+      "lake-elsinore-ca",
       "upper-burrell-township-pa"
     ],
     "90": [
@@ -317,7 +323,9 @@
       "skagit-county-wa",
       "front-royal-va",
       "hillsboro-or",
+      "tulare-county-ca",
       "boulder-county-co",
+      "howland-township-oh",
       "braceville-township-oh",
       "cleveland-oh",
       "pierce-township-oh",
@@ -338,6 +346,8 @@
       "escondido-ca",
       "eureka-ca",
       "mendocino-county-ca",
+      "morgan-hill-ca",
+      "lake-elsinore-ca",
       "upper-burrell-township-pa"
     ]
   }

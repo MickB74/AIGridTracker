@@ -139,6 +139,61 @@ AI_RECORDS = {
         "as_of": "2026-08-26",
     },
 
+    # ── CA deep dive, 2026-09-11 ──────────────────────────────────────────
+    ("CA", "25", "Raul Ruiz"): {
+        "lean": "guardrails",
+        "summary": "Formally opposed data centers in Imperial and Coachella "
+                   "Valleys, submitting a letter to the Imperial County Board "
+                   "of Supervisors and announcing plans to seek federal "
+                   "oversight from EPA and DOE. Sits on House Energy and "
+                   "Commerce Committee.",
+        "items": [
+            {"what": "Submitted letter to Imperial County Board of "
+                     "Supervisors opposing the proposed Imperial Valley Data "
+                     "Center Campus, read into the public record: "
+                     "“I unequivocally oppose data centers in Imperial "
+                     "Valley.” Cited reduced life expectancy, air "
+                     "pollution, asthma, energy costs and water use. "
+                     "Announced plans to send letters to EPA and DOE seeking "
+                     "federal environmental review.",
+             "date": "2026-06-02",
+             "source": "https://www.thedesertreview.com/news/ruiz-formally-opposes-proposed-imperial-data-center-project/article_66fd01cf-c1db-4002-b64e-895dc9b5d09e.html"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("CA", "49", "Mike Levin"): {
+        "lean": "guardrails",
+        "summary": "Introduced the SHIELD Act (H.R.7066) creating a separate "
+                   "rate class for large energy users so residential ratepayers "
+                   "don't subsidize data center grid upgrades. Also co-introduced "
+                   "the Energy Bills Relief Act and cosponsored the Responsible "
+                   "Data Center Siting Act.",
+        "items": [
+            {"what": "Introduced the SHIELD Act (H.R.7066, Stopping Hikes In "
+                     "Electricity from Large Load Demands): separate rate class "
+                     "for loads over 75 MW, prioritizes interconnection for "
+                     "renewable-powered large loads. Levin: “Families "
+                     "should not be forced to subsidize massive energy costs "
+                     "for billion-dollar companies.”",
+             "date": "2026-01-14",
+             "source": "https://levin.house.gov/media/press-releases/rep-mike-levin-introduces-new-bill-to-stop-data-centers-from-driving-up-electricity-prices-for-consumers"},
+            {"what": "Co-introduced the Energy Bills Relief Act (H.R.7977) "
+                     "with Rep. Casten and 120 House Democrats, including a "
+                     "provision ensuring data centers and large energy users "
+                     "pay their own grid costs.",
+             "date": "2026-03-18",
+             "source": "https://levin.house.gov/media/press-releases/reps-levin-and-casten_seec-clean-energy-deployment-task-force-introduce-the-energy-bills-relief-act"},
+            {"what": "Cosponsored the Responsible Data Center Siting Act "
+                     "(H.R.10321, introduced by Rep. Subramanyam), directing "
+                     "the Secretary of Energy to establish best practices for "
+                     "data center siting considering grid impacts, water use "
+                     "and utility bills.",
+             "date": "2026-09-08",
+             "source": "https://www.govinfo.gov/app/details/BILLS-119hr10321ih"},
+        ],
+        "as_of": "2026-09-11",
+    },
+
     # ── promoted from the review queue, 2026-08-26 ────────────────────────
     # Surfaced by scripts/scan_candidate_records.py as Google News leads, then
     # promoted by hand: each redirect was resolved to the member's own release,

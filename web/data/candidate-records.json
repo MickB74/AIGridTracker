@@ -1,9 +1,43 @@
 {
- "generated": "2026-09-10",
+ "generated": "2026-09-11",
  "license": "CC BY 4.0",
  "note": "One row per cited item. kind=action is a bill, letter, hearing question or investigation; kind=statement is a quote, op-ed or campaign line. grade is the officials-scorecard grade (sitting officials only); lean summarises the cited items.",
- "count": 231,
+ "count": 236,
  "records": [
+  {
+   "chamber": "Senate",
+   "role": "senator",
+   "state": "CA",
+   "district": "",
+   "name": "Adam B. Schiff",
+   "party": "Democratic",
+   "kind": "action",
+   "what": "Introduced the Energy Cost Fairness and Reliability Act: large loads such as data centers pay 100% of the grid upgrades needed to serve them and bring their own generation before connecting.",
+   "date": "",
+   "source": "https://www.schiff.senate.gov/news/press-releases/news-sen-schiff-unveils-major-legislation-to-ensure-fair-and-affordable-energy-costs-for-americans-amid-data-center-buildouts/",
+   "source_name": "Sen. Schiff unveils Energy Cost Fairness and Reliability Act (2026)",
+   "grade": "A",
+   "lean": "guardrails",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/senators#sen-s001150"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "CA",
+   "district": "49",
+   "name": "Mike Levin",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Cosponsored the Responsible Data Center Siting Act (H.R.10321, introduced by Rep. Subramanyam), directing the Secretary of Energy to establish best practices for data center siting considering grid impacts, water use and utility bills.",
+   "date": "2026-09-08",
+   "source": "https://www.govinfo.gov/app/details/BILLS-119hr10321ih",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-ca-49"
+  },
   {
    "chamber": "Senate",
    "role": "senator",
@@ -20,23 +54,6 @@
    "lean": "guardrails",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-k000377"
-  },
-  {
-   "chamber": "Senate",
-   "role": "senator",
-   "state": "CA",
-   "district": "",
-   "name": "Adam B. Schiff",
-   "party": "Democratic",
-   "kind": "action",
-   "what": "Introduced the Energy Cost Fairness and Reliability Act: large loads such as data centers pay 100% of the grid upgrades needed to serve them and bring their own generation before connecting.",
-   "date": "",
-   "source": "https://www.schiff.senate.gov/news/press-releases/news-sen-schiff-unveils-major-legislation-to-ensure-fair-and-affordable-energy-costs-for-americans-amid-data-center-buildouts/",
-   "source_name": "Sen. Schiff unveils Energy Cost Fairness and Reliability Act (2026)",
-   "grade": "A",
-   "lean": "guardrails",
-   "as_of": "2026-09-05",
-   "page": "https://aigridwatch.com/senators#sen-s001150"
   },
   {
    "chamber": "Senate",
@@ -1960,6 +1977,23 @@
    "page": "https://aigridwatch.com/senate-races#race-va"
   },
   {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "CA",
+   "district": "25",
+   "name": "Raul Ruiz",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Submitted letter to Imperial County Board of Supervisors opposing the proposed Imperial Valley Data Center Campus, read into the public record: “I unequivocally oppose data centers in Imperial Valley.” Cited reduced life expectancy, air pollution, asthma, energy costs and water use. Announced plans to send letters to EPA and DOE seeking federal environmental review.",
+   "date": "2026-06-02",
+   "source": "https://www.thedesertreview.com/news/ruiz-formally-opposes-proposed-imperial-data-center-project/article_66fd01cf-c1db-4002-b64e-895dc9b5d09e.html",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-ca-25"
+  },
+  {
    "chamber": "Senate",
    "role": "senator",
    "state": "UT",
@@ -1990,7 +2024,7 @@
    "source_name": "Sen. Schiff press release",
    "grade": "A",
    "lean": "guardrails",
-   "as_of": "2026-09-05",
+   "as_of": "2026-09-11",
    "page": "https://aigridwatch.com/senators#sen-s001150"
   },
   {
@@ -2383,6 +2417,23 @@
    "lean": "mixed",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-b001243"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "CA",
+   "district": "49",
+   "name": "Mike Levin",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Co-introduced the Energy Bills Relief Act (H.R.7977) with Rep. Casten and 120 House Democrats, including a provision ensuring data centers and large energy users pay their own grid costs.",
+   "date": "2026-03-18",
+   "source": "https://levin.house.gov/media/press-releases/reps-levin-and-casten_seec-clean-energy-deployment-task-force-introduce-the-energy-bills-relief-act",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-ca-49"
   },
   {
    "chamber": "Senate",
@@ -2878,6 +2929,23 @@
    "page": "https://aigridwatch.com/senate-races#race-nj"
   },
   {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "CA",
+   "district": "49",
+   "name": "Mike Levin",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Introduced the SHIELD Act (H.R.7066, Stopping Hikes In Electricity from Large Load Demands): separate rate class for loads over 75 MW, prioritizes interconnection for renewable-powered large loads. Levin: “Families should not be forced to subsidize massive energy costs for billion-dollar companies.”",
+   "date": "2026-01-14",
+   "source": "https://levin.house.gov/media/press-releases/rep-mike-levin-introduces-new-bill-to-stop-data-centers-from-driving-up-electricity-prices-for-consumers",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-ca-49"
+  },
+  {
    "chamber": "Senate",
    "role": "senator",
    "state": "AR",
@@ -3335,6 +3403,23 @@
    "lean": "mixed",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-c001088"
+  },
+  {
+   "chamber": "Senate",
+   "role": "senator",
+   "state": "CA",
+   "district": "",
+   "name": "Adam B. Schiff",
+   "party": "Democratic",
+   "kind": "action",
+   "what": "Co-signed letter with Sens. Markey, Van Hollen, Warren, Welch, Blumenthal and Warnock to FERC Chair Laura Swett urging the agency to ensure increased energy demand from data centers does not result in unjust or unreasonable rate hikes for American households.",
+   "date": "2025-11-17",
+   "source": "https://www.schiff.senate.gov/news/press-releases/news-sen-schiff-joins-sen-markey-colleagues-in-urging-federal-energy-regulator-to-prevent-data-centers-from-dramatically-hiking-energy-costs-for-american-families/",
+   "source_name": "Sen. Schiff press release",
+   "grade": "A",
+   "lean": "guardrails",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/senators#sen-s001150"
   },
   {
    "chamber": "House",

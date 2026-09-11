@@ -1811,5 +1811,68 @@
     "locality": "Nottingham, NH",
     "kind": "status_changed",
     "detail": "Proposed \u2192 Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "tulare-county-ca",
+    "locality": "Tulare County, CA",
+    "kind": "extended",
+    "detail": "Now runs to 2026-10-02"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "oakley-ca",
+    "locality": "Oakley, CA",
+    "kind": "extended",
+    "detail": "Now runs to 2027-04-14"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "calipatria-ca",
+    "locality": "Calipatria, CA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "el-monte-ca",
+    "locality": "El Monte, CA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "imperial-ca",
+    "locality": "Imperial, CA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "montebello-ca",
+    "locality": "Montebello, CA",
+    "kind": "added",
+    "detail": "Added as Expired"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "patterson-ca",
+    "locality": "Patterson, CA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "morgan-hill-ca",
+    "locality": "Morgan Hill, CA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "lake-elsinore-ca",
+    "locality": "Lake Elsinore, CA",
+    "kind": "added",
+    "detail": "Added as Enacted"
   }
 ]

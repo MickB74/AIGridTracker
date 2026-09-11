@@ -287,6 +287,10 @@
     "effective_status": "Expired",
     "expires": "2026-07-01"
   },
+  "calipatria-ca": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "calvert-county-md": {
     "effective_status": "Enacted",
     "expires": "2027-02-28"
@@ -671,6 +675,10 @@
     "effective_status": "Enacted",
     "expires": "2026-12-31"
   },
+  "el-monte-ca": {
+    "effective_status": "Enacted",
+    "expires": "2027-02-02"
+  },
   "elkhart-in": {
     "effective_status": "Enacted",
     "expires": "2027-12-31"
@@ -1019,6 +1027,10 @@
     "effective_status": "Enacted",
     "expires": "2028-07-01"
   },
+  "imperial-ca": {
+    "effective_status": "Enacted",
+    "expires": "2027-05-18"
+  },
   "imperial-county-ca": {
     "effective_status": "Enacted",
     "expires": "2027-06-16"
@@ -1166,6 +1178,10 @@
   "lake-county-il": {
     "effective_status": "Proposed",
     "expires": null
+  },
+  "lake-elsinore-ca": {
+    "effective_status": "Enacted",
+    "expires": "2026-10-09"
   },
   "lake-township-mi": {
     "effective_status": "Enacted",
@@ -1503,6 +1519,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "montebello-ca": {
+    "effective_status": "Expired",
+    "expires": "2026-03-28"
+  },
   "monterey-park-ca": {
     "effective_status": "Enacted",
     "expires": null
@@ -1526,6 +1546,10 @@
   "morgan-county-tn": {
     "effective_status": "Enacted",
     "expires": "2028-06-12"
+  },
+  "morgan-hill-ca": {
+    "effective_status": "Enacted",
+    "expires": "2026-10-10"
   },
   "morris-ct": {
     "effective_status": "Enacted",
@@ -1661,7 +1685,7 @@
   },
   "oakley-ca": {
     "effective_status": "Enacted",
-    "expires": "2027-04-01"
+    "expires": "2027-04-14"
   },
   "ohio-ballot-measure-oh": {
     "effective_status": "Rejected",
@@ -1750,6 +1774,10 @@
   "pasco-wa": {
     "effective_status": "Enacted",
     "expires": null
+  },
+  "patterson-ca": {
+    "effective_status": "Enacted",
+    "expires": "2027-07-15"
   },
   "paulding-county-ga": {
     "effective_status": "Enacted",
@@ -2245,7 +2273,7 @@
   },
   "tulare-county-ca": {
     "effective_status": "Enacted",
-    "expires": null
+    "expires": "2026-10-02"
   },
   "tulsa-ok": {
     "effective_status": "Enacted",

@@ -354,10 +354,11 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                    'kind': 'statement'}],
                         'as_of': '2026-09-05'},
  ('CA', 'Adam B. Schiff'): {'lean': 'guardrails',
-                            'summary': 'Schiff introduced the Energy Cost Fairness and '
-                                       'Reliability Act in May 2026 to make large-load '
-                                       'facilities such as data centers pay 100% of '
-                                       'the grid upgrades needed to serve them, show '
+                            'summary': 'Co-signed a November 2025 letter to FERC on '
+                                       'data center rate hikes, then introduced the '
+                                       'Energy Cost Fairness and Reliability Act in '
+                                       'May 2026 to make large-load facilities pay 100% '
+                                       'of the grid upgrades needed to serve them, show '
                                        'demand flexibility and bring their own '
                                        'generation before connecting.',
                             'items': [{'what': 'Introduced the Energy Cost Fairness '
@@ -376,8 +377,19 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                        'date': '2026-05-18',
                                        'source': 'https://www.schiff.senate.gov/news/press-releases/news-sen-schiff-unveils-major-legislation-to-ensure-fair-and-affordable-energy-costs-for-americans-amid-data-center-buildouts/',
                                        'source_name': 'Sen. Schiff press release',
+                                       'kind': 'action'},
+                                      {'what': 'Co-signed letter with Sens. Markey, '
+                                               'Van Hollen, Warren, Welch, Blumenthal '
+                                               'and Warnock to FERC Chair Laura Swett '
+                                               'urging the agency to ensure increased '
+                                               'energy demand from data centers does not '
+                                               'result in unjust or unreasonable rate '
+                                               'hikes for American households.',
+                                       'date': '2025-11-17',
+                                       'source': 'https://www.schiff.senate.gov/news/press-releases/news-sen-schiff-joins-sen-markey-colleagues-in-urging-federal-energy-regulator-to-prevent-data-centers-from-dramatically-hiking-energy-costs-for-american-families/',
+                                       'source_name': 'Sen. Schiff press release',
                                        'kind': 'action'}],
-                            'as_of': '2026-09-05'},
+                            'as_of': '2026-09-11'},
  ('CO', 'Michael F. Bennet'): {'lean': 'guardrails',
                                'summary': "Bennet's campaign for Colorado governor "
                                           'commits to requiring new data centers to '
