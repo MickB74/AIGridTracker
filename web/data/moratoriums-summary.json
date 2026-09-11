@@ -3,11 +3,11 @@
   "generated": "2026-09-11",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 727,
+  "count": 762,
   "states": 48,
-  "enacted": 578,
-  "proposed": 83,
-  "official_sourced": 59,
+  "enacted": 610,
+  "proposed": 85,
+  "official_sourced": 62,
   "by_state": {
     "CO": {
       "total": 17,
@@ -65,8 +65,8 @@
       "proposed": 2
     },
     "NY": {
-      "total": 13,
-      "enacted": 10,
+      "total": 16,
+      "enacted": 13,
       "proposed": 3
     },
     "CT": {
@@ -75,8 +75,8 @@
       "proposed": 2
     },
     "MO": {
-      "total": 12,
-      "enacted": 11,
+      "total": 17,
+      "enacted": 16,
       "proposed": 0
     },
     "ME": {
@@ -120,8 +120,8 @@
       "proposed": 1
     },
     "KY": {
-      "total": 14,
-      "enacted": 14,
+      "total": 29,
+      "enacted": 29,
       "proposed": 0
     },
     "NJ": {
@@ -135,8 +135,8 @@
       "proposed": 2
     },
     "AR": {
-      "total": 7,
-      "enacted": 5,
+      "total": 9,
+      "enacted": 6,
       "proposed": 0
     },
     "OR": {
@@ -150,9 +150,9 @@
       "proposed": 0
     },
     "SC": {
-      "total": 10,
-      "enacted": 7,
-      "proposed": 3
+      "total": 14,
+      "enacted": 9,
+      "proposed": 5
     },
     "VA": {
       "total": 14,
@@ -165,8 +165,8 @@
       "proposed": 0
     },
     "MN": {
-      "total": 11,
-      "enacted": 11,
+      "total": 17,
+      "enacted": 17,
       "proposed": 0
     },
     "AL": {
@@ -266,7 +266,8 @@
       "calaveras-county-ca",
       "morgan-hill-ca",
       "lake-elsinore-ca",
-      "newton-county-ga"
+      "newton-county-ga",
+      "scott-county-ky"
     ],
     "60": [
       "lysander-onondaga-co-ny",
@@ -301,7 +302,8 @@
       "newton-county-ga",
       "butler-township-pa",
       "smithfield-township-pa",
-      "west-whiteland-township-pa"
+      "west-whiteland-township-pa",
+      "scott-county-ky"
     ],
     "90": [
       "bloomington-il",
@@ -363,7 +365,8 @@
       "little-britain-township-pa",
       "smithfield-township-pa",
       "west-whiteland-township-pa",
-      "dickinson-county-ia"
+      "dickinson-county-ia",
+      "scott-county-ky"
     ]
   }
 }

@@ -4,7 +4,7 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
-  "count": 78,
+  "count": 79,
   "alerts": [
     {
       "id": "mora-MI-armada-township-2026-07-13",
@@ -238,6 +238,19 @@
       "title": "Rockdale County, GA: data center moratorium has lapsed",
       "body": "The moratorium's documented term ran to 2026-09-08 (3 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
       "source": "https://www.fox5atlanta.com/news/new-data-center-applications-paused-rockdale-county",
+      "verified": true
+    },
+    {
+      "id": "mora-KY-scott-county-2026-09-13",
+      "kind": "moratorium-expiry",
+      "severity": "urgent",
+      "locality": "Scott County",
+      "state": "KY",
+      "expires": "2026-09-13",
+      "days_left": 2,
+      "title": "Scott County, KY: data center moratorium expires in 2 days",
+      "body": "The documented term ends 2026-09-13. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.news-graphic.com/news/six-month-halt-on-potential-data-centers/article_4e78b630-fee8-4a86-99ac-abe6228e3fa2.html",
       "verified": true
     },
     {

@@ -134,16 +134,22 @@ AI_RECORDS = {
     ("NY", "20", "Paul Tonko"): {
         "lean": "guardrails",
         "summary": "Co-introduced the House Power for the People Act to shield "
-                   "consumers from data-center-driven energy costs.",
+                   "consumers from data-center-driven energy costs; says data "
+                   "centers should be built in communities that want them.",
         "items": [
             {"what": "Co-introduced H.R. 8241, the Power for the People Act of "
                      "2026, with Rep. Kweisi Mfume — the House companion to "
                      "S.3682 on data-center rate classes and FERC cost "
                      "allocation.",
-             "date": "2026",
+             "date": "2026-04-09",
              "source": "https://www.congress.gov/bill/119th-congress/house-bill/8241/all-info"},
+            {"what": "Said data centers \"should be built in communities that "
+                     "want them\" regarding the proposed Kenwood Commons project "
+                     "in Bethlehem.",
+             "date": "2026-08-11",
+             "source": "https://www.wamc.org/news/2026-08-11/tonko-kenwood-project-data-center"},
         ],
-        "as_of": "2026-08-26",
+        "as_of": "2026-09-11",
     },
 
     # ── CA deep dive, 2026-09-11 ──────────────────────────────────────────
@@ -256,7 +262,7 @@ AI_RECORDS = {
              "date": "2026-07-13",
              "source": "https://riley.house.gov/2026/07/13/riley-introduces-bill-to-stop-data-center-projects-from-driving-up-energy-bills/"},
         ],
-        "as_of": "2026-08-26",
+        "as_of": "2026-09-11",
     },
     ("GA", "7", "Rich McCormick"): {
         "lean": "accelerate",
@@ -925,6 +931,122 @@ AI_RECORDS = {
                      "and transmission costs.",
              "date": "2026-07-22",
              "source": "https://www.inquirer.com/politics/election/bob-harvie-ai-data-centers-stance-tv-ad-20260910.html"},
+        ],
+        "as_of": "2026-09-11",
+    },
+
+    # ── KY/NY/MN deep dive, 2026-09-11 ──────────────────────────────────
+    ("KY", "2", "Brett Guthrie"): {
+        "lean": "accelerate",
+        "summary": "As House Energy and Commerce Chair, champions AI data center "
+                   "expansion and energy permitting reform; called for FBI "
+                   "investigation of foreign influence in anti-DC opposition.",
+        "items": [
+            {"what": "Published op-ed in Washington Times arguing for expanded "
+                     "energy production to power AI data centers, calling for "
+                     "permitting reform and warning about China competition.",
+             "date": "2025-03-26",
+             "source": "https://energycommerce.house.gov/posts/chairman-guthrie-op-ed-driving-the-energy-future-of-ai-development"},
+            {"what": "Signed letter with Reps. Joyce and Latta to PCAST and "
+                     "FBI Director requesting investigations into foreign "
+                     "influence campaigns targeting AI and data center "
+                     "opposition.",
+             "date": "2026-06-11",
+             "source": "https://bgdailynews.com/2026/06/13/guthrie-calls-for-investigations-into-ai-data-center-opposition/"},
+            {"what": "Stated \"We can't have a moratorium that would cripple "
+                     "us\" while acknowledging local communities should have "
+                     "a say; said data centers must \"pay their own way.\"",
+             "date": "2026-06-30",
+             "source": "https://www.wnky.com/congressman-brett-guthrie-weighs-in-on-data-center-debate/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("KY", "3", "Morgan McGarvey"): {
+        "lean": "guardrails",
+        "summary": "Declared himself \"absolutely opposed\" to hyperscale data "
+                   "centers in Kentucky and sent letter to LG&E opposing Camp "
+                   "Ground Road data center and demanding ratepayer protections.",
+        "items": [
+            {"what": "Sent letter to LG&E President opposing Camp Ground Road "
+                     "hyperscale data center in Louisville, demanding ratepayer "
+                     "protections; cited 63% increase in electricity demand "
+                     "(400 MW).",
+             "date": "2026-07-09",
+             "source": "https://mcgarvey.house.gov/media/press-releases/rep-mcgarvey-opposes-camp-ground-road-data-center-in-letter-to-lgande-dont-raise-louisvilles-rates-to-pay-for-it"},
+            {"what": "Declared himself \"absolutely opposed\" to in-state "
+                     "hyperscale data centers at Louisville town hall on AI "
+                     "data centers; said residents should control what gets "
+                     "built in their community.",
+             "date": "2026-07-09",
+             "source": "https://www.lpm.org/news/2026-07-09/kentucky-congressman-absolutely-opposed-to-in-state-hyperscale-data-centers"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NY", "17", "Mike Lawler"): {
+        "lean": "accelerate",
+        "summary": "Opposes Gov. Hochul's data center moratorium, arguing it "
+                   "stifles innovation and drives businesses to other states.",
+        "items": [
+            {"what": "Criticized Hochul's Executive Order 62 data center "
+                     "moratorium on Fox Business, saying \"What she is saying "
+                     "is, don't come here. Go do your business elsewhere\" and "
+                     "arguing the pause harms NY's business climate.",
+             "date": "2026-08-18",
+             "source": "https://www.foxbusiness.com/media/new-york-republican-congressman-rips-hochul-policies-sending-businesses-dont-come-here-message"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("MN", "6", "Tom Emmer"): {
+        "lean": "accelerate",
+        "summary": "Strongly backs data center buildout citing AI competition "
+                   "with China; as House Majority Whip, supported bringing "
+                   "Ratepayer Protection Act to floor vote.",
+        "items": [
+            {"what": "As House Majority Whip, supported bringing bipartisan "
+                     "Ratepayer Protection Act (HR 9340) to floor vote, "
+                     "requiring data centers to cover full incremental "
+                     "infrastructure costs; stated \"I'm a true believer in "
+                     "local control.\"",
+             "date": "2026-08-01",
+             "source": "https://www.polialert.com/political-news/house-gop-to-vote-on-bill-targeting-data-center-power-costs/"},
+            {"what": "Tweeted support for Trump's pro-data center position, "
+                     "saying China and U.S. adversaries \"would love it if "
+                     "the United States was asleep at the wheel and stopped "
+                     "innovating and developing AI.\"",
+             "date": "2026-09-01",
+             "source": "https://www.minnpost.com/national/washington/2026/09/minnesota-gop-lawmakers-grapple-with-data-centers-as-republican-voters-turn-against-the-projects/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("MN", "1", "Brad Finstad"): {
+        "lean": "mixed",
+        "summary": "Supports data centers for economic and national security "
+                   "value but emphasizes local control and corporate "
+                   "transparency about environmental impacts.",
+        "items": [
+            {"what": "Said data centers \"can play an important role in our "
+                     "economic future and national security, but the "
+                     "decision...should be made by the people and local "
+                     "leaders who know their communities best, not handed "
+                     "down by Washington\"; emphasized need for corporate "
+                     "transparency.",
+             "date": "2026-09-01",
+             "source": "https://www.minnpost.com/national/washington/2026/09/minnesota-gop-lawmakers-grapple-with-data-centers-as-republican-voters-turn-against-the-projects/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("MN", "8", "Pete Stauber"): {
+        "lean": "mixed",
+        "summary": "Set four conditions for data center support: local "
+                   "community input, no rate increases, no tax increases, "
+                   "and projects must use their own water and energy.",
+        "items": [
+            {"what": "Stated four conditions for supporting data center "
+                     "projects: \"The local community's got to have input. "
+                     "It can't increase rates, or taxes, and they have to "
+                     "use their own water and energy.\"",
+             "date": "2026-08-01",
+             "source": "https://www.minnpost.com/national/washington/2026/09/minnesota-gop-lawmakers-grapple-with-data-centers-as-republican-voters-turn-against-the-projects/"},
         ],
         "as_of": "2026-09-11",
     },

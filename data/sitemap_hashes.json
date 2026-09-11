@@ -24,11 +24,11 @@
     "lastmod": "2026-09-08"
   },
   "changes": {
-    "hash": "898b9abfba1a77d8",
+    "hash": "8f278d7e40ef58af",
     "lastmod": "2026-09-11"
   },
   "communities/": {
-    "hash": "8bb815febde48fd0",
+    "hash": "16382ad78cc21a04",
     "lastmod": "2026-09-11"
   },
   "communities/abilene-tx": {
@@ -52,8 +52,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/allen-county-ky": {
-    "hash": "0b680c25d6bdd6ec",
-    "lastmod": "2026-09-08"
+    "hash": "929a669ff707ddc4",
+    "lastmod": "2026-09-11"
   },
   "communities/allen-park-mi": {
     "hash": "846f228d12c04dc6",
@@ -76,8 +76,8 @@
     "lastmod": "2026-09-08"
   },
   "communities/anderson-county-sc": {
-    "hash": "d6f2ac76778956fc",
-    "lastmod": "2026-09-08"
+    "hash": "fbecd18c8910db9e",
+    "lastmod": "2026-09-11"
   },
   "communities/anderson-county-tn": {
     "hash": "5dd032cea0239d93",
@@ -89,6 +89,10 @@
   },
   "communities/apex-nc": {
     "hash": "cbb5888bc833ab38",
+    "lastmod": "2026-09-11"
+  },
+  "communities/apple-valley-mn": {
+    "hash": "d7faa316933e068f",
     "lastmod": "2026-09-11"
   },
   "communities/archbold-oh": {
@@ -212,15 +216,15 @@
     "lastmod": "2026-09-08"
   },
   "communities/bell-county-ky": {
-    "hash": "794aefb66e797305",
-    "lastmod": "2026-09-08"
+    "hash": "682f2dd270beb733",
+    "lastmod": "2026-09-11"
   },
   "communities/bellevue-wi": {
     "hash": "a9ba3acaa6ea06a0",
     "lastmod": "2026-09-11"
   },
   "communities/benton-county-ar": {
-    "hash": "0dc076922e4fc5d4",
+    "hash": "e8a2e6d40f86239e",
     "lastmod": "2026-09-11"
   },
   "communities/berea-oh": {
@@ -279,6 +283,10 @@
     "hash": "36b11a81cccbca83",
     "lastmod": "2026-09-10"
   },
+  "communities/boone-county-ky": {
+    "hash": "491a98b4b6209135",
+    "lastmod": "2026-09-11"
+  },
   "communities/boone-nc": {
     "hash": "ad4f37c737bfa55e",
     "lastmod": "2026-09-11"
@@ -294,6 +302,14 @@
   "communities/box-elder-county-ut": {
     "hash": "2865f357b3c8ee77",
     "lastmod": "2026-09-08"
+  },
+  "communities/boyd-county-ky": {
+    "hash": "47c4f34ec0cd46ec",
+    "lastmod": "2026-09-11"
+  },
+  "communities/boyle-county-ky": {
+    "hash": "3ffda2879210ed0c",
+    "lastmod": "2026-09-11"
   },
   "communities/braceville-township-oh": {
     "hash": "f62efc04a8e4b684",
@@ -320,8 +336,8 @@
     "lastmod": "2026-09-08"
   },
   "communities/brookhaven-ny": {
-    "hash": "c6999869d2e6d6bd",
-    "lastmod": "2026-09-08"
+    "hash": "b4e84055318f06d8",
+    "lastmod": "2026-09-11"
   },
   "communities/brookville-pa": {
     "hash": "0418fae998641839",
@@ -344,8 +360,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/bullitt-county-ky": {
-    "hash": "50278812ec4431d0",
-    "lastmod": "2026-09-08"
+    "hash": "dcb42396a737d2a4",
+    "lastmod": "2026-09-11"
   },
   "communities/bulloch-county-ga": {
     "hash": "203166c5c0b6cb4b",
@@ -354,6 +370,10 @@
   "communities/burien-wa": {
     "hash": "d575d33964fe5999",
     "lastmod": "2026-09-08"
+  },
+  "communities/butler-county-ky": {
+    "hash": "6196ec9f625905d2",
+    "lastmod": "2026-09-11"
   },
   "communities/butler-county-oh": {
     "hash": "af699a01594ac40d",
@@ -400,8 +420,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/camdenton-mo": {
-    "hash": "de4c7d9ef6efd3de",
-    "lastmod": "2026-09-08"
+    "hash": "0a1885cdea1da43a",
+    "lastmod": "2026-09-11"
   },
   "communities/canterbury-nh": {
     "hash": "9701af3c9188db98",
@@ -411,13 +431,17 @@
     "hash": "db86ae1551ac2e68",
     "lastmod": "2026-09-11"
   },
+  "communities/canton-ny": {
+    "hash": "a472eb198077e715",
+    "lastmod": "2026-09-11"
+  },
   "communities/canton-township-oh": {
     "hash": "a9013790886632cb",
     "lastmod": "2026-09-08"
   },
   "communities/carlton-county-mn": {
-    "hash": "b79dacb1145b19f6",
-    "lastmod": "2026-09-08"
+    "hash": "39009aceb4e71400",
+    "lastmod": "2026-09-11"
   },
   "communities/carneys-point-nj": {
     "hash": "249d2294568a1fa3",
@@ -428,8 +452,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/carroll-county-ar": {
-    "hash": "d044aa528bb0a3d9",
-    "lastmod": "2026-09-08"
+    "hash": "e409a4d95a172bfd",
+    "lastmod": "2026-09-11"
   },
   "communities/carroll-county-ga": {
     "hash": "acfbb3397ebeb2d5",
@@ -444,8 +468,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/carver-mn": {
-    "hash": "76df5b327fb04362",
-    "lastmod": "2026-09-08"
+    "hash": "9dd9990f3a288e9b",
+    "lastmod": "2026-09-11"
   },
   "communities/cary-nc": {
     "hash": "cca2c7651884765c",
@@ -456,8 +480,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/cave-city-ky": {
-    "hash": "4c964a7c7f91657a",
-    "lastmod": "2026-09-08"
+    "hash": "5d3ff38d3e0e6ff1",
+    "lastmod": "2026-09-11"
   },
   "communities/cedar-hill-tn": {
     "hash": "aee40d6059aa2de1",
@@ -496,8 +520,12 @@
     "lastmod": "2026-09-10"
   },
   "communities/chester-county-sc": {
-    "hash": "1737c3098459c206",
-    "lastmod": "2026-09-08"
+    "hash": "16815927b82f7439",
+    "lastmod": "2026-09-11"
+  },
+  "communities/chesterfield-county-sc": {
+    "hash": "2709cb8ea39424da",
+    "lastmod": "2026-09-11"
   },
   "communities/chesterfield-nj": {
     "hash": "4c69dbfed8287516",
@@ -528,8 +556,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/city-of-st-charles-mo": {
-    "hash": "4dfbbffb33e2c055",
-    "lastmod": "2026-09-08"
+    "hash": "53dccc4d46351fd8",
+    "lastmod": "2026-09-11"
   },
   "communities/clackamas-county-or": {
     "hash": "f19ebd81393f757c",
@@ -537,6 +565,10 @@
   },
   "communities/clark-county-in": {
     "hash": "f6fbf4d81636f580",
+    "lastmod": "2026-09-11"
+  },
+  "communities/clark-county-ky": {
+    "hash": "2294be70a1bc4a66",
     "lastmod": "2026-09-11"
   },
   "communities/clarke-county-ia": {
@@ -592,8 +624,8 @@
     "lastmod": "2026-09-08"
   },
   "communities/colleton-county-sc": {
-    "hash": "f29433ae8c2c146e",
-    "lastmod": "2026-09-10"
+    "hash": "b5a40cd0a9d67f20",
+    "lastmod": "2026-09-11"
   },
   "communities/collier-county-fl": {
     "hash": "58114e01c935a2f2",
@@ -608,8 +640,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/columbia-mo": {
-    "hash": "c705795fe57c184f",
-    "lastmod": "2026-09-08"
+    "hash": "0dda2271fd7c00dc",
+    "lastmod": "2026-09-11"
   },
   "communities/commerce-city-co": {
     "hash": "ec293c6925c48410",
@@ -664,8 +696,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/daviess-county-ky": {
-    "hash": "067717ed076aec6c",
-    "lastmod": "2026-09-08"
+    "hash": "a7d4ce3959cdde1d",
+    "lastmod": "2026-09-11"
   },
   "communities/dearborn-county-in": {
     "hash": "a58cc6941469760e",
@@ -780,16 +812,16 @@
     "lastmod": "2026-09-11"
   },
   "communities/eagan-mn": {
-    "hash": "0a1394c825028ce7",
-    "lastmod": "2026-09-08"
+    "hash": "1aa67bd9832076b2",
+    "lastmod": "2026-09-11"
   },
   "communities/east-brunswick-nj": {
     "hash": "475578543934b44b",
     "lastmod": "2026-09-10"
   },
   "communities/east-fishkill-ny": {
-    "hash": "b86d4d8a69fb7c9c",
-    "lastmod": "2026-09-08"
+    "hash": "429d616dd2082f45",
+    "lastmod": "2026-09-11"
   },
   "communities/east-greenwich-township-nj": {
     "hash": "b06aade76afbbb5c",
@@ -827,6 +859,10 @@
     "hash": "cca7701865daa6b0",
     "lastmod": "2026-09-08"
   },
+  "communities/edmonson-county-ky": {
+    "hash": "3c4a3622800208f1",
+    "lastmod": "2026-09-11"
+  },
   "communities/effingham-county-ga": {
     "hash": "d3a3d04230262369",
     "lastmod": "2026-09-10"
@@ -841,6 +877,10 @@
   },
   "communities/el-paso-tx": {
     "hash": "73aa6365a66262b3",
+    "lastmod": "2026-09-11"
+  },
+  "communities/elk-river-mn": {
+    "hash": "b355783be9a8c054",
     "lastmod": "2026-09-11"
   },
   "communities/elkhart-in": {
@@ -890,6 +930,10 @@
   "communities/fairfield-al": {
     "hash": "55388277b8576c76",
     "lastmod": "2026-09-08"
+  },
+  "communities/fairfield-county-sc": {
+    "hash": "b1b624531242bc13",
+    "lastmod": "2026-09-11"
   },
   "communities/farmville-nc": {
     "hash": "91f6cfc897269364",
@@ -1015,6 +1059,10 @@
     "hash": "d14b53b07e34058e",
     "lastmod": "2026-09-11"
   },
+  "communities/georgetown-ky": {
+    "hash": "298906ed4751a234",
+    "lastmod": "2026-09-11"
+  },
   "communities/georgia-hb-1012-ga": {
     "hash": "f7fcac0e66d47cfb",
     "lastmod": "2026-09-11"
@@ -1047,6 +1095,10 @@
     "hash": "3e67f8725f6da9d2",
     "lastmod": "2026-09-10"
   },
+  "communities/grant-county-ky": {
+    "hash": "79c0f5996c14d2c3",
+    "lastmod": "2026-09-11"
+  },
   "communities/grant-county-wi": {
     "hash": "26a2c5bf58739263",
     "lastmod": "2026-09-11"
@@ -1072,8 +1124,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/greenwood-county-sc": {
-    "hash": "00cdbae522f6090e",
-    "lastmod": "2026-09-10"
+    "hash": "12be9c79bb538942",
+    "lastmod": "2026-09-11"
   },
   "communities/gregg-township-pa": {
     "hash": "fe739c2d192fa83f",
@@ -1131,6 +1183,10 @@
     "hash": "01b4df25967aa5c1",
     "lastmod": "2026-09-11"
   },
+  "communities/harrison-ar": {
+    "hash": "81ac78a549ebd0c4",
+    "lastmod": "2026-09-11"
+  },
   "communities/harrison-township-nj": {
     "hash": "b0a6f4c03004df0a",
     "lastmod": "2026-09-08"
@@ -1144,8 +1200,8 @@
     "lastmod": "2026-09-10"
   },
   "communities/hastings-mn": {
-    "hash": "bc2e3569cca59962",
-    "lastmod": "2026-09-08"
+    "hash": "c4c98a755837bee6",
+    "lastmod": "2026-09-11"
   },
   "communities/hawkins-county-tn": {
     "hash": "1cb5b39fae21ae7b",
@@ -1184,8 +1240,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/highland-ny": {
-    "hash": "93198dd0b059a529",
-    "lastmod": "2026-09-08"
+    "hash": "6f7aca4341f75fc4",
+    "lastmod": "2026-09-11"
   },
   "communities/hill-county-tx": {
     "hash": "75ab544096894622",
@@ -1284,12 +1340,12 @@
     "lastmod": "2026-09-11"
   },
   "communities/independence-county-ar": {
-    "hash": "63f6698f2235d22c",
-    "lastmod": "2026-09-08"
+    "hash": "9d11d1678eb4628e",
+    "lastmod": "2026-09-11"
   },
   "communities/independence-mo": {
-    "hash": "8ea34d3b94604e27",
-    "lastmod": "2026-09-10"
+    "hash": "b92387bd931e49be",
+    "lastmod": "2026-09-11"
   },
   "communities/indianapolis-marion-county-in": {
     "hash": "10c963e2b515f421",
@@ -1304,24 +1360,24 @@
     "lastmod": "2026-09-11"
   },
   "communities/inver-grove-heights-mn": {
-    "hash": "8b8b7cd9b2c06c22",
-    "lastmod": "2026-09-10"
+    "hash": "05b279bfe7babfcc",
+    "lastmod": "2026-09-11"
   },
   "communities/iron-county-ut": {
     "hash": "55322856253e3937",
     "lastmod": "2026-09-08"
   },
   "communities/islip-ny": {
-    "hash": "a5a8f1cfe11a07a4",
-    "lastmod": "2026-09-08"
+    "hash": "6a6fd1be9620ce12",
+    "lastmod": "2026-09-11"
   },
   "communities/jackson-county-fl": {
     "hash": "13bcdb9d688cf137",
     "lastmod": "2026-09-11"
   },
   "communities/jackson-county-mo": {
-    "hash": "6e2d6874e5916e94",
-    "lastmod": "2026-09-08"
+    "hash": "1a0e6ade3c05c9ab",
+    "lastmod": "2026-09-11"
   },
   "communities/jackson-ms": {
     "hash": "4c00d8f296acb7e4",
@@ -1334,6 +1390,10 @@
   "communities/jackson-township-nj": {
     "hash": "20992ebef295e580",
     "lastmod": "2026-09-08"
+  },
+  "communities/jasper-county-sc": {
+    "hash": "1256de6fcb87b395",
+    "lastmod": "2026-09-11"
   },
   "communities/jefferson-county-co": {
     "hash": "c60234ca7e6914c9",
@@ -1356,8 +1416,8 @@
     "lastmod": "2026-09-08"
   },
   "communities/jessamine-county-ky": {
-    "hash": "16d8e30b41995148",
-    "lastmod": "2026-09-08"
+    "hash": "2b19f374c69da8f9",
+    "lastmod": "2026-09-11"
   },
   "communities/johnson-city-tn": {
     "hash": "26c3cca1a0d2423d",
@@ -1372,7 +1432,7 @@
     "lastmod": "2026-09-11"
   },
   "communities/kansas-city-mo": {
-    "hash": "21e76c8d342050fd",
+    "hash": "8778b52bffa7c04f",
     "lastmod": "2026-09-11"
   },
   "communities/keene-nh": {
@@ -1392,8 +1452,8 @@
     "lastmod": "2026-09-08"
   },
   "communities/kershaw-county-sc": {
-    "hash": "994c9db8fa03193b",
-    "lastmod": "2026-09-08"
+    "hash": "f678fcdac792f777",
+    "lastmod": "2026-09-11"
   },
   "communities/kings-mountain-nc": {
     "hash": "df039a2c448d4e3f",
@@ -1479,8 +1539,16 @@
     "hash": "6d15f32551908d13",
     "lastmod": "2026-09-11"
   },
+  "communities/laurens-county-sc": {
+    "hash": "ca5ae2ab7e8321d3",
+    "lastmod": "2026-09-11"
+  },
   "communities/lavon-tx": {
     "hash": "a6e475195ef742aa",
+    "lastmod": "2026-09-11"
+  },
+  "communities/le-sueur-county-mn": {
+    "hash": "065b1a9858e0fe07",
     "lastmod": "2026-09-11"
   },
   "communities/leavenworth-county-ks": {
@@ -1508,8 +1576,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/leray-ny": {
-    "hash": "d9473d123accc630",
-    "lastmod": "2026-09-08"
+    "hash": "1504ab95c6d0bc14",
+    "lastmod": "2026-09-11"
   },
   "communities/levy-county-fl": {
     "hash": "efd78d9a7e00c778",
@@ -1520,8 +1588,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/lexington-fayette-county-ky": {
-    "hash": "5b65f978d50b22e9",
-    "lastmod": "2026-09-10"
+    "hash": "c7933c0dca01fd09",
+    "lastmod": "2026-09-11"
   },
   "communities/liberty-township-nj": {
     "hash": "52c5e29920dcea67",
@@ -1544,8 +1612,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/little-rock-ar": {
-    "hash": "954b62ba55789787",
-    "lastmod": "2026-09-10"
+    "hash": "a24f22d3e3f25473",
+    "lastmod": "2026-09-11"
   },
   "communities/lochbuie-co": {
     "hash": "fc7e9ead0a980e01",
@@ -1556,8 +1624,8 @@
     "lastmod": "2026-09-08"
   },
   "communities/logan-county-ky": {
-    "hash": "fb0a13a54b3656b2",
-    "lastmod": "2026-09-08"
+    "hash": "fc0be4a14a9508be",
+    "lastmod": "2026-09-11"
   },
   "communities/logan-township-nj": {
     "hash": "18d1a908d5d9da34",
@@ -1568,8 +1636,8 @@
     "lastmod": "2026-09-08"
   },
   "communities/london-ky": {
-    "hash": "f24e3b9aa7a50c69",
-    "lastmod": "2026-09-08"
+    "hash": "c57a19cd645fa886",
+    "lastmod": "2026-09-11"
   },
   "communities/longmont-co": {
     "hash": "7a1397ce1d964fb6",
@@ -1588,8 +1656,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/louisville-ky": {
-    "hash": "9e3c7f10798a2bc3",
-    "lastmod": "2026-09-08"
+    "hash": "182bc3b745e20353",
+    "lastmod": "2026-09-11"
   },
   "communities/loveland-co": {
     "hash": "25b77d30118b3b3a",
@@ -1608,7 +1676,7 @@
     "lastmod": "2026-09-11"
   },
   "communities/lubbock-tx": {
-    "hash": "f5d346a69214dcf8",
+    "hash": "c1f61cdb8afada7d",
     "lastmod": "2026-09-11"
   },
   "communities/luther-ok": {
@@ -1632,12 +1700,16 @@
     "lastmod": "2026-09-08"
   },
   "communities/lyon-county-ky": {
-    "hash": "5480d55910231a78",
-    "lastmod": "2026-09-08"
+    "hash": "157eb99ebbeda93c",
+    "lastmod": "2026-09-11"
   },
   "communities/lysander-onondaga-co-ny": {
-    "hash": "28b0cf2173d89546",
-    "lastmod": "2026-09-08"
+    "hash": "802e6798cd1637f2",
+    "lastmod": "2026-09-11"
+  },
+  "communities/madison-county-ar": {
+    "hash": "2f52e5df60a11e3d",
+    "lastmod": "2026-09-11"
   },
   "communities/madison-county-fl": {
     "hash": "043b4d1b340698fd",
@@ -1679,6 +1751,10 @@
     "hash": "6c68b3d4a7ce4de6",
     "lastmod": "2026-09-11"
   },
+  "communities/mankato-mn": {
+    "hash": "a57325ae577d826d",
+    "lastmod": "2026-09-11"
+  },
   "communities/mannington-township-nj": {
     "hash": "e8a9ecbac493a099",
     "lastmod": "2026-09-08"
@@ -1708,8 +1784,8 @@
     "lastmod": "2026-09-08"
   },
   "communities/marion-county-mo": {
-    "hash": "09ca060a6003c42e",
-    "lastmod": "2026-09-08"
+    "hash": "689243ed655463d0",
+    "lastmod": "2026-09-11"
   },
   "communities/marshall-county-ia": {
     "hash": "07dcef176b51d6b6",
@@ -1780,8 +1856,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/mercer-county-ky": {
-    "hash": "e8d72583b4259149",
-    "lastmod": "2026-09-08"
+    "hash": "ac88ea024c9bcc10",
+    "lastmod": "2026-09-11"
   },
   "communities/meridian-township-mi": {
     "hash": "a7906d70ea297290",
@@ -1824,12 +1900,16 @@
     "lastmod": "2026-09-08"
   },
   "communities/minneapolis-mn": {
-    "hash": "d347137a4f73d95b",
-    "lastmod": "2026-09-08"
+    "hash": "65b1f91e56586af8",
+    "lastmod": "2026-09-11"
   },
   "communities/minnehaha-county-sd": {
     "hash": "5da4a746a585b3e9",
     "lastmod": "2026-09-08"
+  },
+  "communities/minnetrista-mn": {
+    "hash": "84442a269dbc2cb1",
+    "lastmod": "2026-09-11"
   },
   "communities/missoula-county-mt": {
     "hash": "5697a451f99ae750",
@@ -1840,8 +1920,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/mohawk-montgomery-co-ny": {
-    "hash": "8988f8c44aad48b3",
-    "lastmod": "2026-09-08"
+    "hash": "4df41345313b7e8c",
+    "lastmod": "2026-09-11"
   },
   "communities/monclova-township-oh": {
     "hash": "887a98e2cd2ba9ef",
@@ -1908,7 +1988,7 @@
     "lastmod": "2026-09-08"
   },
   "communities/mount-pleasant-sc": {
-    "hash": "1c6f560b0260cd68",
+    "hash": "0e4bc267b9ef6207",
     "lastmod": "2026-09-11"
   },
   "communities/mount-pleasant-wi": {
@@ -1931,9 +2011,13 @@
     "hash": "70075c8f6d35a76a",
     "lastmod": "2026-09-11"
   },
+  "communities/nelson-county-ky": {
+    "hash": "b9a139dc0ee1cf21",
+    "lastmod": "2026-09-11"
+  },
   "communities/neosho-mo": {
-    "hash": "9114cb0d9d4d7c58",
-    "lastmod": "2026-09-08"
+    "hash": "959abca27251ac1f",
+    "lastmod": "2026-09-11"
   },
   "communities/neptune-township-nj": {
     "hash": "54b0307289cefc74",
@@ -1968,28 +2052,32 @@
     "lastmod": "2026-09-08"
   },
   "communities/new-york-s10642-a11560-ny": {
-    "hash": "6c5042964305c114",
-    "lastmod": "2026-09-08"
+    "hash": "9593165aaf0b1493",
+    "lastmod": "2026-09-11"
   },
   "communities/new-york-statewide-ny": {
-    "hash": "a3cd850d77c25461",
-    "lastmod": "2026-09-08"
+    "hash": "cb6af76cc5ed104f",
+    "lastmod": "2026-09-11"
   },
   "communities/newberry-county-sc": {
-    "hash": "04f03ccd4066ce14",
-    "lastmod": "2026-09-08"
+    "hash": "934c48eecd1ba96c",
+    "lastmod": "2026-09-11"
   },
   "communities/newfield-tompkins-co-ny": {
-    "hash": "43ccaf0bea14f02d",
-    "lastmod": "2026-09-08"
+    "hash": "d7ee5941e6836bc7",
+    "lastmod": "2026-09-11"
   },
   "communities/newton-county-ga": {
     "hash": "63558596634d504d",
     "lastmod": "2026-09-11"
   },
   "communities/nicholasville-ky": {
-    "hash": "6e8051c7376f34b2",
-    "lastmod": "2026-09-08"
+    "hash": "459476b058c0118f",
+    "lastmod": "2026-09-11"
+  },
+  "communities/nodaway-county-mo": {
+    "hash": "571fe4c56b608ce9",
+    "lastmod": "2026-09-11"
   },
   "communities/normal-il": {
     "hash": "1cfd0eb0e5de86b6",
@@ -2043,6 +2131,10 @@
     "hash": "5d7ff7898a042d6b",
     "lastmod": "2026-09-08"
   },
+  "communities/oak-grove-mo": {
+    "hash": "579ab3687a9267a9",
+    "lastmod": "2026-09-11"
+  },
   "communities/oakley-ca": {
     "hash": "edf1e7dde9800aad",
     "lastmod": "2026-09-11"
@@ -2068,8 +2160,8 @@
     "lastmod": "2026-09-08"
   },
   "communities/oldham-county-ky": {
-    "hash": "0366778fa8b8ad0d",
-    "lastmod": "2026-09-08"
+    "hash": "4b76a880742ef3d3",
+    "lastmod": "2026-09-11"
   },
   "communities/oldmans-township-nj": {
     "hash": "32ec7f2070d5c1ff",
@@ -2092,8 +2184,12 @@
     "lastmod": "2026-09-11"
   },
   "communities/orangeburg-county-sc": {
-    "hash": "7c415885770cc95c",
-    "lastmod": "2026-09-10"
+    "hash": "e5bc0a800d4e049e",
+    "lastmod": "2026-09-11"
+  },
+  "communities/orangetown-ny": {
+    "hash": "e8ce28ea6a933500",
+    "lastmod": "2026-09-11"
   },
   "communities/oregon-enterprise-zone-tax-or": {
     "hash": "f63c79df3289dc7a",
@@ -2114,6 +2210,10 @@
   "communities/ottawa-ks": {
     "hash": "a6f03eb20d0b990c",
     "lastmod": "2026-09-08"
+  },
+  "communities/pacific-mo": {
+    "hash": "824d127177808073",
+    "lastmod": "2026-09-11"
   },
   "communities/painesville-township-oh": {
     "hash": "041495228b330858",
@@ -2156,8 +2256,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/peculiar-mo": {
-    "hash": "2751a6ada42edbb0",
-    "lastmod": "2026-09-08"
+    "hash": "d67dabf2591532bb",
+    "lastmod": "2026-09-11"
   },
   "communities/pemberton-township-nj": {
     "hash": "9f2c42d0ada7f023",
@@ -2176,8 +2276,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/perth-fulton-co-ny": {
-    "hash": "e67d2d1ac1a0dc26",
-    "lastmod": "2026-09-08"
+    "hash": "301755a16b1a6a6a",
+    "lastmod": "2026-09-11"
   },
   "communities/phillips-county-co": {
     "hash": "b389c0d78d5d1c1f",
@@ -2204,7 +2304,7 @@
     "lastmod": "2026-09-08"
   },
   "communities/pine-county-mn": {
-    "hash": "126fbfbebe99de86",
+    "hash": "266b790ca2d7c73d",
     "lastmod": "2026-09-11"
   },
   "communities/pinson-al": {
@@ -2255,6 +2355,10 @@
     "hash": "22c310241311e4e7",
     "lastmod": "2026-09-10"
   },
+  "communities/potsdam-ny": {
+    "hash": "3e2a256f5a46a47f",
+    "lastmod": "2026-09-11"
+  },
   "communities/pottawatomie-county-ks": {
     "hash": "ff9e0e37981e65e2",
     "lastmod": "2026-09-11"
@@ -2280,8 +2384,8 @@
     "lastmod": "2026-09-08"
   },
   "communities/pulaski-county-ar": {
-    "hash": "d14f28eed89d65a1",
-    "lastmod": "2026-09-08"
+    "hash": "8bf110fbcb93b868",
+    "lastmod": "2026-09-11"
   },
   "communities/pulaski-county-in": {
     "hash": "75f2246ea6ba5642",
@@ -2304,8 +2408,8 @@
     "lastmod": "2026-09-08"
   },
   "communities/ralls-county-mo": {
-    "hash": "cc1f79d480db6631",
-    "lastmod": "2026-09-08"
+    "hash": "df7b4bb9ba1442e3",
+    "lastmod": "2026-09-11"
   },
   "communities/ravenna-oh": {
     "hash": "609c7ca6f85d7139",
@@ -2363,8 +2467,16 @@
     "hash": "c1f8f293ea37a0c7",
     "lastmod": "2026-09-08"
   },
+  "communities/rosemount-mn": {
+    "hash": "bc566ee0b00ec16d",
+    "lastmod": "2026-09-11"
+  },
   "communities/roswell-ga": {
     "hash": "71b18d28536eca47",
+    "lastmod": "2026-09-11"
+  },
+  "communities/rowan-county-ky": {
+    "hash": "64bd515bdba750a0",
     "lastmod": "2026-09-11"
   },
   "communities/rowan-county-nc": {
@@ -2372,8 +2484,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/russellville-ar": {
-    "hash": "02b6ae8356e0c30e",
-    "lastmod": "2026-09-08"
+    "hash": "d0b60c25680391d6",
+    "lastmod": "2026-09-11"
   },
   "communities/saginaw-mi": {
     "hash": "06a236b2d020ca73",
@@ -2447,6 +2559,10 @@
     "hash": "5b84197a5aadd1ee",
     "lastmod": "2026-09-08"
   },
+  "communities/scott-county-ky": {
+    "hash": "d898e60c24547e1c",
+    "lastmod": "2026-09-11"
+  },
   "communities/seattle-wa": {
     "hash": "c94a9c750effa007",
     "lastmod": "2026-09-08"
@@ -2481,6 +2597,10 @@
   },
   "communities/shelby-county-ia": {
     "hash": "aa5b51cff85178e9",
+    "lastmod": "2026-09-11"
+  },
+  "communities/shelby-county-ky": {
+    "hash": "a50c6c6bf45beeeb",
     "lastmod": "2026-09-11"
   },
   "communities/shelbyville-tn": {
@@ -2548,8 +2668,8 @@
     "lastmod": "2026-09-08"
   },
   "communities/spartanburg-county-sc": {
-    "hash": "66107cd48ccbef54",
-    "lastmod": "2026-09-10"
+    "hash": "6662b9e158ccc0bb",
+    "lastmod": "2026-09-11"
   },
   "communities/spokane-wa": {
     "hash": "ae211b9fde4c5281",
@@ -2572,8 +2692,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/springfield-mo": {
-    "hash": "e7f25d4c923df5a3",
-    "lastmod": "2026-09-10"
+    "hash": "828be2aff7ee8d5b",
+    "lastmod": "2026-09-11"
   },
   "communities/springfield-oh": {
     "hash": "a84f7abd53894e67",
@@ -2588,8 +2708,8 @@
     "lastmod": "2026-09-08"
   },
   "communities/st-charles-county-mo": {
-    "hash": "cf0f3b953342df98",
-    "lastmod": "2026-09-08"
+    "hash": "89faa6795314e52c",
+    "lastmod": "2026-09-11"
   },
   "communities/st-croix-county-wi": {
     "hash": "7b09a6cd06211ce2",
@@ -2600,7 +2720,7 @@
     "lastmod": "2026-09-11"
   },
   "communities/st-joseph-mn": {
-    "hash": "0817e87b97dd0085",
+    "hash": "d2f9fbae8ca5f214",
     "lastmod": "2026-09-11"
   },
   "communities/st-joseph-mo": {
@@ -2608,12 +2728,16 @@
     "lastmod": "2026-09-08"
   },
   "communities/st-lawrence-county-ny": {
-    "hash": "bd21647746a91083",
-    "lastmod": "2026-09-08"
+    "hash": "13d0388156777600",
+    "lastmod": "2026-09-11"
   },
   "communities/st-marys-oh": {
     "hash": "782e4f4042c4a31f",
     "lastmod": "2026-09-08"
+  },
+  "communities/st-peters-mo": {
+    "hash": "d04837c377d7b074",
+    "lastmod": "2026-09-11"
   },
   "communities/stafford-county-va": {
     "hash": "9b13087be0e6c771",
@@ -2720,8 +2844,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/tonawanda-erie-co-ny": {
-    "hash": "3719c4945aacc83d",
-    "lastmod": "2026-09-08"
+    "hash": "dc6040d22c17125a",
+    "lastmod": "2026-09-11"
   },
   "communities/topeka-ks": {
     "hash": "1674b5cfd617ac5b",
@@ -2776,8 +2900,8 @@
     "lastmod": "2026-09-08"
   },
   "communities/union-county-ar": {
-    "hash": "9b7d90f92910741d",
-    "lastmod": "2026-09-08"
+    "hash": "111d5428efebcb2f",
+    "lastmod": "2026-09-11"
   },
   "communities/upper-burrell-township-pa": {
     "hash": "7345bdaef940c721",
@@ -2806,6 +2930,10 @@
   "communities/vernon-township-nj": {
     "hash": "2dc5bde89a2ae60c",
     "lastmod": "2026-09-10"
+  },
+  "communities/versailles-ky": {
+    "hash": "02445f5084bac9ca",
+    "lastmod": "2026-09-11"
   },
   "communities/vienna-township-trumbull-co-oh": {
     "hash": "5dafed40fae98257",
@@ -2856,8 +2984,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/waite-park-mn": {
-    "hash": "4afb67fda846bb0d",
-    "lastmod": "2026-09-08"
+    "hash": "3e0ffec5fb6147dd",
+    "lastmod": "2026-09-11"
   },
   "communities/wakulla-county-fl": {
     "hash": "703a2937c0fe35c3",
@@ -2896,8 +3024,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/washington-county-mn": {
-    "hash": "e74a9330ff950200",
-    "lastmod": "2026-09-08"
+    "hash": "dc02fca8a24c35bd",
+    "lastmod": "2026-09-11"
   },
   "communities/washington-county-tn": {
     "hash": "7f93729ce07b0559",
@@ -2947,6 +3075,10 @@
     "hash": "016b48055fd8064c",
     "lastmod": "2026-09-08"
   },
+  "communities/webster-county-mo": {
+    "hash": "db160217269c0a45",
+    "lastmod": "2026-09-11"
+  },
   "communities/webster-township-mi": {
     "hash": "cfa58abd6bb6aebf",
     "lastmod": "2026-09-08"
@@ -2995,6 +3127,10 @@
     "hash": "6adda677534cc824",
     "lastmod": "2026-09-11"
   },
+  "communities/winchester-ky": {
+    "hash": "60c02900157713cc",
+    "lastmod": "2026-09-11"
+  },
   "communities/winnebago-county-wi": {
     "hash": "cd8c62087350a86e",
     "lastmod": "2026-09-11"
@@ -3023,6 +3159,10 @@
     "hash": "d2469bea71a291a0",
     "lastmod": "2026-09-08"
   },
+  "communities/woodford-county-ky": {
+    "hash": "06864db1d20615a2",
+    "lastmod": "2026-09-11"
+  },
   "communities/woodland-park-co": {
     "hash": "4f240565ea4c141a",
     "lastmod": "2026-09-11"
@@ -3036,8 +3176,8 @@
     "lastmod": "2026-09-11"
   },
   "communities/wright-county-mn": {
-    "hash": "b4c27099e8b6aef4",
-    "lastmod": "2026-09-08"
+    "hash": "420a30d71b6ec350",
+    "lastmod": "2026-09-11"
   },
   "communities/wrightstown-wi": {
     "hash": "7e42fb0be36b64ce",
@@ -3064,8 +3204,8 @@
     "lastmod": "2026-09-08"
   },
   "communities/york-county-sc": {
-    "hash": "6ea9dcca431e9dc2",
-    "lastmod": "2026-09-08"
+    "hash": "dc053a6218510d9b",
+    "lastmod": "2026-09-11"
   },
   "communities/york-township-mi": {
     "hash": "6de55b3bc01f45b8",
@@ -3180,7 +3320,7 @@
     "lastmod": "2026-09-08"
   },
   "house-races": {
-    "hash": "a0b307e119ba2b61",
+    "hash": "9de8377b0a016be8",
     "lastmod": "2026-09-11"
   },
   "impact": {
@@ -3192,15 +3332,15 @@
     "lastmod": "2026-09-08"
   },
   "map": {
-    "hash": "53740cf61d45552a",
+    "hash": "0f87b7f0f13e3aed",
     "lastmod": "2026-09-11"
   },
   "moratoriums": {
-    "hash": "52cb37a29d29267c",
+    "hash": "37619b24e1c0e08a",
     "lastmod": "2026-09-11"
   },
   "moratoriums-methodology": {
-    "hash": "c58288d45b78df6e",
+    "hash": "e4ab3f759bbd8427",
     "lastmod": "2026-09-11"
   },
   "news/": {
@@ -3212,7 +3352,7 @@
     "lastmod": "2026-09-08"
   },
   "open-data": {
-    "hash": "0f9cfe1d330a5d62",
+    "hash": "f9d8afaf8395e28d",
     "lastmod": "2026-09-11"
   },
   "opposition": {
@@ -3232,23 +3372,23 @@
     "lastmod": "2026-09-11"
   },
   "search": {
-    "hash": "6d1eebcd302d9ac5",
+    "hash": "08e09162da2f4b39",
     "lastmod": "2026-09-11"
   },
   "senate-races": {
-    "hash": "481966a3cea654c6",
+    "hash": "aad0e091586b36dd",
     "lastmod": "2026-09-11"
   },
   "senators": {
-    "hash": "a9503577ee886c24",
+    "hash": "66ab1b95283ac518",
     "lastmod": "2026-09-11"
   },
   "siting": {
-    "hash": "09b6b647fded8c84",
+    "hash": "5b383369f1b028c7",
     "lastmod": "2026-09-11"
   },
   "start-here": {
-    "hash": "f593d2fdcdf454c3",
+    "hash": "088c5e13a8a8a6d4",
     "lastmod": "2026-09-11"
   },
   "states/": {
@@ -3268,7 +3408,7 @@
     "lastmod": "2026-09-11"
   },
   "states/arkansas": {
-    "hash": "284b4c929eee3125",
+    "hash": "af7feaaa50743faf",
     "lastmod": "2026-09-11"
   },
   "states/california": {
@@ -3324,7 +3464,7 @@
     "lastmod": "2026-09-11"
   },
   "states/kentucky": {
-    "hash": "2ce9410e38d38dfb",
+    "hash": "110dff7d9e9ee0b9",
     "lastmod": "2026-09-11"
   },
   "states/louisiana": {
@@ -3348,7 +3488,7 @@
     "lastmod": "2026-09-11"
   },
   "states/minnesota": {
-    "hash": "0c4b0a54527c6964",
+    "hash": "4ec6dcb29b4f37ae",
     "lastmod": "2026-09-11"
   },
   "states/mississippi": {
@@ -3356,7 +3496,7 @@
     "lastmod": "2026-09-11"
   },
   "states/missouri": {
-    "hash": "389af19ed956f6fe",
+    "hash": "c920888f9563a788",
     "lastmod": "2026-09-11"
   },
   "states/montana": {
@@ -3384,7 +3524,7 @@
     "lastmod": "2026-09-11"
   },
   "states/new-york": {
-    "hash": "57a96eaa9cf54c5e",
+    "hash": "68a3da93b9530050",
     "lastmod": "2026-09-11"
   },
   "states/north-carolina": {
@@ -3416,7 +3556,7 @@
     "lastmod": "2026-09-11"
   },
   "states/south-carolina": {
-    "hash": "37944da7d97e41eb",
+    "hash": "08cb93733f7f7799",
     "lastmod": "2026-09-11"
   },
   "states/south-dakota": {
@@ -3428,7 +3568,7 @@
     "lastmod": "2026-09-11"
   },
   "states/texas": {
-    "hash": "e0203927d7561cbe",
+    "hash": "a5423161a0e8c0fe",
     "lastmod": "2026-09-11"
   },
   "states/utah": {
@@ -3460,7 +3600,7 @@
     "lastmod": "2026-09-11"
   },
   "story-tracker": {
-    "hash": "959b673284a124b7",
+    "hash": "15e788a21af998af",
     "lastmod": "2026-09-11"
   },
   "studies": {

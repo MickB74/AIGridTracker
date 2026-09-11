@@ -7,6 +7,34 @@
   <language>en-us</language>
   <lastBuildDate>Fri, 11 Sep 2026 00:00:00 +0000</lastBuildDate>
   <item>
+    <title>Mohawk (Montgomery Co.): data center moratorium — Enacted</title>
+    <link>https://aigridwatch.com/communities/mohawk-montgomery-co-ny</link>
+    <guid isPermaLink="false">mora-mohawk-(montgomery-co.)-ny</guid>
+    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+    <description>6-month moratorium adopted after public hearing; supervisor cites the state EO&#x27;s 50 MW floor as leaving smaller facilities unregulated.</description>
+  </item>
+  <item>
+    <title>Orangetown: data center moratorium — Enacted</title>
+    <link>https://aigridwatch.com/communities/orangetown-ny</link>
+    <guid isPermaLink="false">mora-orangetown-ny</guid>
+    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Local Law 5, 2026: 6-month moratorium on data centers and battery energy storage systems; does not apply to DataBank Phase 2 already in review.</description>
+  </item>
+  <item>
+    <title>Canton: data center moratorium — Enacted</title>
+    <link>https://aigridwatch.com/communities/canton-ny</link>
+    <guid isPermaLink="false">mora-canton-ny</guid>
+    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Moratorium on data center development until May 31, 2027; exempts existing operations and facilities under 20 MW.</description>
+  </item>
+  <item>
+    <title>Potsdam: data center moratorium — Proposed</title>
+    <link>https://aigridwatch.com/communities/potsdam-ny</link>
+    <guid isPermaLink="false">mora-potsdam-ny</guid>
+    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Town councilor drafted moratorium resolution; planned for August public hearing; outcome not confirmed.</description>
+  </item>
+  <item>
     <title>Highland: data center moratorium — Enacted</title>
     <link>https://aigridwatch.com/communities/highland-ny</link>
     <guid isPermaLink="false">mora-highland-ny</guid>
@@ -273,13 +301,6 @@
     <description>The county did not adopt a moratorium of its own — it passed a resolution affirming local zoning authority and urging its municipalities to consider one. Tracked as a signal, not a restriction</description>
   </item>
   <item>
-    <title>Mohawk (Montgomery Co.): data center moratorium — Proposed</title>
-    <link>https://aigridwatch.com/communities/mohawk-montgomery-co-ny</link>
-    <guid isPermaLink="false">mora-mohawk-(montgomery-co.)-ny</guid>
-    <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-    <description>6-month pause to write zoning rules; public hearing Aug 13, 2026. Supervisor cites the state EO&#x27;s 50 MW floor as leaving smaller facilities unregulated. Would run to Feb 13, 2027 if adopted</description>
-  </item>
-  <item>
     <title>New York (statewide): data center moratorium — Enacted</title>
     <link>https://aigridwatch.com/communities/new-york-statewide-ny</link>
     <guid isPermaLink="false">mora-new-york-(statewide)-ny</guid>
@@ -334,26 +355,5 @@
     <guid isPermaLink="false">story-a98cbc3d</guid>
     <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
     <description>Via News12 | New Jersey</description>
-  </item>
-  <item>
-    <title>Trump defends data centers, slams New York&#x27;s &#x27;terrible&#x27; moratorium</title>
-    <link>https://news.google.com/rss/articles/CBMivwFBVV95cUxObGpSUWduUWZBR3B1cGc2N0xQaXloWm50TDNJeVFaSnFYcUxiWHpHMjV5Njc5RXp4MjRic2Q4eHZ6MWZNN0NWOWltWV91STdkWlZqRFRqNXBuLVZleU9FaDY0b1JGOG5JekJSa1BNOFF1bENEYnlaVVdSbUNsZkpoeFV1U2ozeVpoTGw5SGtwWUI5RGRPWVlSRDIxdWZTV2U3bFVLQUdiNWZMbC1XQ3diXzhFRjJ2Vkt0TFVybXhIZw?oc=5</link>
-    <guid isPermaLink="false">story-62d76a43</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
-    <description>Via usatoday.com</description>
-  </item>
-  <item>
-    <title>NEWSLETTER: New York issues moratorium on data centers</title>
-    <link>https://news.google.com/rss/articles/CBMilAFBVV95cUxNQUJDT1M0ejJ6MUhxb1ZyTWFWaldjTkdtTjdvdFZxQTJIUTBFaGVTeGk0d3RyazhuSEJaa05qTnhibnpTMnUtdXBzM0xkUXpzYkdFYnl1V3JaeE45VlNJZFVrNllRVnNSQnVhZlFDRmlPeWtaNUJHc1I4U0xXTUhfMW1yY2pCenlWbUEtYUtoZEJyd2c0?oc=5</link>
-    <guid isPermaLink="false">story-e762be53</guid>
-    <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
-    <description>Via Reuters</description>
-  </item>
-  <item>
-    <title>Data centers in one Rockland town got $136M in tax breaks | Exclusive</title>
-    <link>https://news.google.com/rss/articles/CBMi0AFBVV95cUxOaE5rb2ZtbGlfRFU1ZVVqTjBfa05pWmpFTlZRSnVYWHBROGpRdEd0TjdYNGtWMUM4VlpMWnljcDlHNlk5V1lXd2l3aU9yblY1V0VlbHlWZFdHYW5ONTFHRC0yV281bzh0a1lYN2JLY2FnOTR3SFhFVmQtMnQzWHF0bzVtR2djUUZJV3ZKcTlvdllBUVUyTHQ3Wll3R2hmMmhoTjNHb2VZQnlXalVqQ0lFalBYdTNCMlV3VDVjYTBlSWZBTXlIRFg0OG8tQWltR2kt?oc=5</link>
-    <guid isPermaLink="false">story-4aafc7bd</guid>
-    <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-    <description>Via Lohud</description>
   </item>
 </channel></rss>

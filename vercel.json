@@ -749,16 +749,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/elk-river-mn",
-      "destination": "/states/minnesota",
-      "permanent": true
-    },
-    {
-      "source": "/communities/elk-river-mn.html",
-      "destination": "/states/minnesota",
-      "permanent": true
-    },
-    {
       "source": "/communities/falls-township-pa",
       "destination": "/states/pennsylvania",
       "permanent": true
@@ -1226,16 +1216,6 @@
     {
       "source": "/communities/nebraska-ne.html",
       "destination": "/states/nebraska",
-      "permanent": true
-    },
-    {
-      "source": "/communities/nelson-county-ky",
-      "destination": "/states/kentucky",
-      "permanent": true
-    },
-    {
-      "source": "/communities/nelson-county-ky.html",
-      "destination": "/states/kentucky",
       "permanent": true
     },
     {

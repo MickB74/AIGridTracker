@@ -2,7 +2,7 @@
  "generated": "2026-09-11",
  "license": "CC BY 4.0",
  "note": "One row per cited item. kind=action is a bill, letter, hearing question or investigation; kind=statement is a quote, op-ed or campaign line. grade is the officials-scorecard grade (sitting officials only); lean summarises the cited items.",
- "count": 253,
+ "count": 264,
  "records": [
   {
    "chamber": "Senate",
@@ -668,6 +668,40 @@
    "page": "https://aigridwatch.com/house-races#race-co-4"
   },
   {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "MN",
+   "district": "1",
+   "name": "Brad Finstad",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Said data centers \"can play an important role in our economic future and national security, but the decision...should be made by the people and local leaders who know their communities best, not handed down by Washington\"; emphasized need for corporate transparency.",
+   "date": "2026-09-01",
+   "source": "https://www.minnpost.com/national/washington/2026/09/minnesota-gop-lawmakers-grapple-with-data-centers-as-republican-voters-turn-against-the-projects/",
+   "source_name": "",
+   "grade": "",
+   "lean": "mixed",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-mn-1"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "MN",
+   "district": "6",
+   "name": "Tom Emmer",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Tweeted support for Trump's pro-data center position, saying China and U.S. adversaries \"would love it if the United States was asleep at the wheel and stopped innovating and developing AI.\"",
+   "date": "2026-09-01",
+   "source": "https://www.minnpost.com/national/washington/2026/09/minnesota-gop-lawmakers-grapple-with-data-centers-as-republican-voters-turn-against-the-projects/",
+   "source_name": "",
+   "grade": "",
+   "lean": "accelerate",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-mn-6"
+  },
+  {
    "chamber": "Senate",
    "role": "senator",
    "state": "PA",
@@ -993,6 +1027,23 @@
   {
    "chamber": "House",
    "role": "candidate",
+   "state": "NY",
+   "district": "17",
+   "name": "Mike Lawler",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Criticized Hochul's Executive Order 62 data center moratorium on Fox Business, saying \"What she is saying is, don't come here. Go do your business elsewhere\" and arguing the pause harms NY's business climate.",
+   "date": "2026-08-18",
+   "source": "https://www.foxbusiness.com/media/new-york-republican-congressman-rips-hochul-policies-sending-businesses-dont-come-here-message",
+   "source_name": "",
+   "grade": "",
+   "lean": "accelerate",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-ny-17"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
    "state": "VA",
    "district": "2",
    "name": "Jen Kiggans",
@@ -1074,6 +1125,23 @@
    "lean": "guardrails",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-h000601"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "NY",
+   "district": "20",
+   "name": "Paul Tonko",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Said data centers \"should be built in communities that want them\" regarding the proposed Kenwood Commons project in Bethlehem.",
+   "date": "2026-08-11",
+   "source": "https://www.wamc.org/news/2026-08-11/tonko-kenwood-project-data-center",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-ny-20"
   },
   {
    "chamber": "Senate",
@@ -1159,6 +1227,40 @@
    "lean": "guardrails",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-k000367"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "MN",
+   "district": "6",
+   "name": "Tom Emmer",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "As House Majority Whip, supported bringing bipartisan Ratepayer Protection Act (HR 9340) to floor vote, requiring data centers to cover full incremental infrastructure costs; stated \"I'm a true believer in local control.\"",
+   "date": "2026-08-01",
+   "source": "https://www.polialert.com/political-news/house-gop-to-vote-on-bill-targeting-data-center-power-costs/",
+   "source_name": "",
+   "grade": "",
+   "lean": "accelerate",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-mn-6"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "MN",
+   "district": "8",
+   "name": "Pete Stauber",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Stated four conditions for supporting data center projects: \"The local community's got to have input. It can't increase rates, or taxes, and they have to use their own water and energy.\"",
+   "date": "2026-08-01",
+   "source": "https://www.minnpost.com/national/washington/2026/09/minnesota-gop-lawmakers-grapple-with-data-centers-as-republican-voters-turn-against-the-projects/",
+   "source_name": "",
+   "grade": "",
+   "lean": "mixed",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-mn-8"
   },
   {
    "chamber": "House",
@@ -1803,7 +1905,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-08-26",
+   "as_of": "2026-09-11",
    "page": "https://aigridwatch.com/house-races#race-ny-19"
   },
   {
@@ -1822,6 +1924,40 @@
    "lean": "guardrails",
    "as_of": "2026-09-06",
    "page": "https://aigridwatch.com/house-races#race-oh-1"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "KY",
+   "district": "3",
+   "name": "Morgan McGarvey",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Sent letter to LG&E President opposing Camp Ground Road hyperscale data center in Louisville, demanding ratepayer protections; cited 63% increase in electricity demand (400 MW).",
+   "date": "2026-07-09",
+   "source": "https://mcgarvey.house.gov/media/press-releases/rep-mcgarvey-opposes-camp-ground-road-data-center-in-letter-to-lgande-dont-raise-louisvilles-rates-to-pay-for-it",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-ky-3"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "KY",
+   "district": "3",
+   "name": "Morgan McGarvey",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Declared himself \"absolutely opposed\" to in-state hyperscale data centers at Louisville town hall on AI data centers; said residents should control what gets built in their community.",
+   "date": "2026-07-09",
+   "source": "https://www.lpm.org/news/2026-07-09/kentucky-congressman-absolutely-opposed-to-in-state-hyperscale-data-centers",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-ky-3"
   },
   {
    "chamber": "Senate",
@@ -1941,6 +2077,23 @@
    "lean": "guardrails",
    "as_of": "2026-09-11",
    "page": "https://aigridwatch.com/house-races#race-co-1"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "KY",
+   "district": "2",
+   "name": "Brett Guthrie",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Stated \"We can't have a moratorium that would cripple us\" while acknowledging local communities should have a say; said data centers must \"pay their own way.\"",
+   "date": "2026-06-30",
+   "source": "https://www.wnky.com/congressman-brett-guthrie-weighs-in-on-data-center-debate/",
+   "source_name": "",
+   "grade": "",
+   "lean": "accelerate",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-ky-2"
   },
   {
    "chamber": "Senate",
@@ -2111,6 +2264,23 @@
    "lean": "mixed",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-c001114"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "KY",
+   "district": "2",
+   "name": "Brett Guthrie",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Signed letter with Reps. Joyce and Latta to PCAST and FBI Director requesting investigations into foreign influence campaigns targeting AI and data center opposition.",
+   "date": "2026-06-11",
+   "source": "https://bgdailynews.com/2026/06/13/guthrie-calls-for-investigations-into-ai-data-center-opposition/",
+   "source_name": "",
+   "grade": "",
+   "lean": "accelerate",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-ky-2"
   },
   {
    "chamber": "Senate",
@@ -2451,6 +2621,23 @@
    "lean": "guardrails",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-w000817"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "NY",
+   "district": "20",
+   "name": "Paul Tonko",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Co-introduced H.R. 8241, the Power for the People Act of 2026, with Rep. Kweisi Mfume — the House companion to S.3682 on data-center rate classes and FERC cost allocation.",
+   "date": "2026-04-09",
+   "source": "https://www.congress.gov/bill/119th-congress/house-bill/8241/all-info",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-ny-20"
   },
   {
    "chamber": "House",
@@ -3439,23 +3626,6 @@
    "page": "https://aigridwatch.com/house-races#race-md-7"
   },
   {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "NY",
-   "district": "20",
-   "name": "Paul Tonko",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Co-introduced H.R. 8241, the Power for the People Act of 2026, with Rep. Kweisi Mfume — the House companion to S.3682 on data-center rate classes and FERC cost allocation.",
-   "date": "2026",
-   "source": "https://www.congress.gov/bill/119th-congress/house-bill/8241/all-info",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-08-26",
-   "page": "https://aigridwatch.com/house-races#race-ny-20"
-  },
-  {
    "chamber": "Senate",
    "role": "senator",
    "state": "HI",
@@ -4049,6 +4219,23 @@
    "lean": "accelerate",
    "as_of": "2026-09-06",
    "page": "https://aigridwatch.com/house-races#race-oh-12"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "KY",
+   "district": "2",
+   "name": "Brett Guthrie",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Published op-ed in Washington Times arguing for expanded energy production to power AI data centers, calling for permitting reform and warning about China competition.",
+   "date": "2025-03-26",
+   "source": "https://energycommerce.house.gov/posts/chairman-guthrie-op-ed-driving-the-energy-future-of-ai-development",
+   "source_name": "",
+   "grade": "",
+   "lean": "accelerate",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-ky-2"
   },
   {
    "chamber": "Senate",
