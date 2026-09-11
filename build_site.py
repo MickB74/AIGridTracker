@@ -1204,6 +1204,25 @@ def _faq_schema(pairs):
     }
 
 
+def _howto_schema(name, description, url, steps, total_time=None):
+    """HowTo schema. steps = [(name, text), ...]. total_time is ISO 8601."""
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": name,
+        "description": description,
+        "url": _canon(url),
+        "step": [
+            {"@type": "HowToStep", "position": i + 1,
+             "name": s_name, "text": s_text}
+            for i, (s_name, s_text) in enumerate(steps)
+        ],
+    }
+    if total_time:
+        schema["totalTime"] = total_time
+    return schema
+
+
 def _dataset_schema(name, description, url, distributions,
                     keywords=None, temporal=None):
     """Dataset schema for citable, downloadable data.
@@ -6283,6 +6302,44 @@ def build_start_here():
         jsonld=[
             _breadcrumb(("Home", SITE_URL),
                         ("Start here", f"{SITE_URL}/start-here")),
+            _howto_schema(
+                "How to respond when a data center is proposed near you",
+                "A free five-step plan for anyone facing a new data center "
+                "proposal: size up the impact, unmask the LLC, and generate "
+                "a ready-to-use action pack with comment scripts, letters, "
+                "and social posts for your next meeting.",
+                f"{SITE_URL}/start-here",
+                [
+                    ("Assess your situation",
+                     "Select your state, identify where the project stands "
+                     "(rumors, application filed, hearing scheduled, approved, "
+                     "or operating), and note the next hearing or vote date. "
+                     "Your leverage and next moves are different at each stage."),
+                    ("Unmask who is really behind it",
+                     "Data center developers file under single-purpose shell "
+                     "LLCs. Look up the name on the deed, permit, or utility "
+                     "filing and check it against a registry of known filing "
+                     "entities and their parent companies to find the real "
+                     "operator."),
+                    ("Calculate what it will cost your community",
+                     "Estimate the facility's annual electricity, water draw, "
+                     "carbon emissions, and rate pressure using your state's "
+                     "grid profile. Set the facility size in MW and see what "
+                     "similar communities won in CBA benchmarks."),
+                    ("Plan what to do this week",
+                     "Get stage-specific moves: who to call, what to file, "
+                     "and which precedents to cite. Review moratorium outcomes "
+                     "from other communities and find your state PUC's "
+                     "complaint portal."),
+                    ("Download your action kit",
+                     "Generate a pre-filled action pack with a 2-minute public "
+                     "comment script, letters to elected officials, social "
+                     "media posts, a community outreach playbook, and a "
+                     "one-page campaign website — all with your project's "
+                     "numbers baked in."),
+                ],
+                total_time="PT30M",
+            ),
             _faq_schema([
                 ("A data center is proposed near me — what do I do first?",
                  "Find out where the project stands (rumors, application filed, "
@@ -16161,7 +16218,25 @@ def main():
         build_sitemap(_sitemap_entries), encoding="utf-8")
     (WEB / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY, encoding="utf-8")
     (WEB / "robots.txt").write_text(
-        f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n",
+        "# All crawlers welcome\n"
+        "User-agent: *\nAllow: /\n\n"
+        "# AI engine crawlers — explicitly welcomed\n"
+        "User-agent: GPTBot\nAllow: /\n\n"
+        "User-agent: ChatGPT-User\nAllow: /\n\n"
+        "User-agent: Google-Extended\nAllow: /\n\n"
+        "User-agent: GoogleOther\nAllow: /\n\n"
+        "User-agent: PerplexityBot\nAllow: /\n\n"
+        "User-agent: ClaudeBot\nAllow: /\n\n"
+        "User-agent: anthropic-ai\nAllow: /\n\n"
+        "User-agent: Applebot-Extended\nAllow: /\n\n"
+        "User-agent: Bytespider\nAllow: /\n\n"
+        "User-agent: CCBot\nAllow: /\n\n"
+        "User-agent: cohere-ai\nAllow: /\n\n"
+        "User-agent: Diffbot\nAllow: /\n\n"
+        "User-agent: ImagesiftBot\nAllow: /\n\n"
+        "User-agent: Omgilibot\nAllow: /\n\n"
+        "User-agent: YouBot\nAllow: /\n\n"
+        f"Sitemap: {SITE_URL}/sitemap.xml\n",
         encoding="utf-8")
     (WEB / "llms.txt").write_text(build_llms_txt(), encoding="utf-8")
     (WEB / "llms-full.txt").write_text(build_llms_full_txt(), encoding="utf-8")
