@@ -4,7 +4,7 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
-  "count": 70,
+  "count": 78,
   "alerts": [
     {
       "id": "mora-MI-armada-township-2026-07-13",
@@ -553,6 +553,19 @@
       "verified": true
     },
     {
+      "id": "mora-PA-west-whiteland-township-2026-11-01",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "West Whiteland Township",
+      "state": "PA",
+      "expires": "2026-11-01",
+      "days_left": 51,
+      "title": "West Whiteland Township, PA: data center moratorium expires in 51 days",
+      "body": "The documented term ends 2026-11-01. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://citizenportal.ai/articles/8209298/pennsylvania/chester-county/west-whiteland/township-to-rewrite-data-center-rules-after-board-invokes-180-day-municipal-cure",
+      "verified": true
+    },
+    {
       "id": "mora-PA-upper-burrell-township-2026-11-02",
       "kind": "moratorium-expiry",
       "severity": "upcoming",
@@ -563,6 +576,19 @@
       "title": "Upper Burrell Township, PA: data center moratorium expires in 52 days",
       "body": "The documented term ends 2026-11-02. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.publicsource.org/upper-burrell-data-center-transparency-backlash/",
+      "verified": true
+    },
+    {
+      "id": "mora-PA-smithfield-township-2026-11-02",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Smithfield Township",
+      "state": "PA",
+      "expires": "2026-11-02",
+      "days_left": 52,
+      "title": "Smithfield Township, PA: data center moratorium expires in 52 days",
+      "body": "The documented term ends 2026-11-02. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://smithfieldtownship.com/otp/dcca/",
       "verified": true
     },
     {
@@ -631,6 +657,19 @@
       "verified": true
     },
     {
+      "id": "mora-PA-butler-township-2026-11-08",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Butler Township",
+      "state": "PA",
+      "expires": "2026-11-08",
+      "days_left": 58,
+      "title": "Butler Township, PA: data center moratorium expires in 58 days",
+      "body": "The documented term ends 2026-11-08. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://fox56.com/news/local/butler-township-approves-180-day-curative-amendment-moratorium",
+      "verified": true
+    },
+    {
       "id": "mora-KS-riley-county-2026-11-12",
       "kind": "moratorium-expiry",
       "severity": "upcoming",
@@ -641,6 +680,19 @@
       "title": "Riley County, KS: data center moratorium expires in 62 days",
       "body": "The documented term ends 2026-11-12. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://1350kman.com/2026/05/end-date-set-for-riley-countys-data-center-moratorium/",
+      "verified": true
+    },
+    {
+      "id": "mora-IA-dickinson-county-2026-11-12",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Dickinson County",
+      "state": "IA",
+      "expires": "2026-11-12",
+      "days_left": 62,
+      "title": "Dickinson County, IA: data center moratorium expires in 62 days",
+      "body": "The documented term ends 2026-11-12. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.exploreokoboji.com/news/dickinson-county-supervisors-approve-moratorium-for-data-collection-bit-coin-solar-battery-storage-on-4-1-vote/",
       "verified": true
     },
     {
@@ -719,6 +771,19 @@
       "title": "Washington Township (Macomb Co.), MI: data center moratorium expires in 73 days",
       "body": "The documented term ends 2026-11-23. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.detroitnews.com/story/news/local/macomb-county/2026/05/23/washington-township-passes-six-month-moratorium-on-data-centers/90213646007/",
+      "verified": true
+    },
+    {
+      "id": "mora-IA-marshalltown-2026-11-23",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Marshalltown",
+      "state": "IA",
+      "expires": "2026-11-23",
+      "days_left": 73,
+      "title": "Marshalltown, IA: data center moratorium expires in 73 days",
+      "body": "The documented term ends 2026-11-23. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.marshalltown-ia.gov/DocumentCenter/View/12040/2026-08-24_ORD-15123_SIGNED-Temporary_Data_Center_Moratorium",
       "verified": true
     },
     {
@@ -862,6 +927,45 @@
       "title": "Johnson City, TN: data center moratorium expires in 83 days",
       "body": "The documented term ends 2026-12-03. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.supertalk929.com/2026/05/22/johnson-city-commission-votes-to-extend-data-center-moratorium/",
+      "verified": true
+    },
+    {
+      "id": "mora-PA-hazle-township-2026-12-05",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Hazle Township",
+      "state": "PA",
+      "expires": "2026-12-05",
+      "days_left": 85,
+      "title": "Hazle Township, PA: data center moratorium expires in 85 days",
+      "body": "The documented term ends 2026-12-05. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.foodandwaterwatch.org/2026/06/09/hazle-township-pa-pauses-data-center-development-for-six-months/",
+      "verified": true
+    },
+    {
+      "id": "mora-PA-little-britain-township-2026-12-06",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Little Britain Township",
+      "state": "PA",
+      "expires": "2026-12-06",
+      "days_left": 86,
+      "title": "Little Britain Township, PA: data center moratorium expires in 86 days",
+      "body": "The documented term ends 2026-12-06. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://lancasteronline.com/news/regional/little-britain-places-180-day-moratorium-on-data-center-applications-to-develop-ordinance/article_f0366ba4-3af9-41e5-bdd1-3d371891a571.html",
+      "verified": true
+    },
+    {
+      "id": "mora-FL-lake-county-2026-12-07",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Lake County",
+      "state": "FL",
+      "expires": "2026-12-07",
+      "days_left": 87,
+      "title": "Lake County, FL: data center moratorium expires in 87 days",
+      "body": "The documented term ends 2026-12-07. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.cfpublic.org/politics/2026-09-09/lake-county-presses-pause-on-accepting-data-center-applications",
       "verified": true
     },
     {

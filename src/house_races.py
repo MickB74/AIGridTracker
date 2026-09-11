@@ -121,8 +121,15 @@ AI_RECORDS = {
                      "the transmission upgrades they require.",
              "date": "2026",
              "source": "https://www.congress.gov/bill/119th-congress/house-bill/8241/all-info"},
+            {"what": "Co-signed Maryland Congressional delegation letter "
+                     "to FERC urging revision of PJM cost-allocation "
+                     "rules so Maryland consumers do not finance $2B in "
+                     "infrastructure built primarily for out-of-state "
+                     "data centers.",
+             "date": "2026-07-28",
+             "source": "https://mcclaindelaney.house.gov/media/press-releases/maryland-democrats-urge-ferc-protect-marylanders-rising-electricity-costs-due"},
         ],
-        "as_of": "2026-08-26",
+        "as_of": "2026-09-11",
     },
     ("NY", "20", "Paul Tonko"): {
         "lean": "guardrails",
@@ -776,6 +783,148 @@ AI_RECORDS = {
                      "rising utility rates or 'self-power.'",
              "date": "2025-12",
              "source": "https://wisconsinwatch.org/2025/12/wisconsin-foxconn-data-center-energy-trump-ai-congress-lawmakers-republican-democrat/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+
+    # ── FL/MD/PA/IA/CO deep dive, 2026-09-11 ─────────────────────────────
+    ("CO", "1", "Melat Kiros"): {
+        "lean": "guardrails",
+        "summary": "Democratic Socialist who defeated incumbent DeGette; "
+                   "supports a nationwide moratorium on data center "
+                   "construction.",
+        "items": [
+            {"what": "Supports a nationwide moratorium on data center "
+                     "construction; ran as a critic of unchecked AI "
+                     "development.",
+             "date": "2026-06-30",
+             "source": "https://www.dropsitenews.com/p/aipac-ai-degette-melat-kiros-colorado"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("CO", "4", "Lauren Boebert"): {
+        "lean": "mixed",
+        "summary": "Supports local government authority over data center "
+                   "siting decisions; disagreed with Trump's "
+                   "characterization of DC opponents.",
+        "items": [
+            {"what": "Stated she won't back Trump's claim that data center "
+                     "opponents are 'backwards and poor'; supports local "
+                     "control over data center decisions.",
+             "date": "2026-09-01",
+             "source": "https://www.yahoo.com/news/politics/articles/rep-lauren-boebert-won-t-123549824.html"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("MD", "1", "Andy Harris"): {
+        "lean": "mixed",
+        "summary": "Argues data centers should generate their own power "
+                   "rather than passing costs to consumers; part of "
+                   "Maryland Freedom Caucus energy platform but did not "
+                   "join Democratic delegation's FERC letter.",
+        "items": [
+            {"what": "Argued alongside Maryland Freedom Caucus that data "
+                     "centers should generate their own power, not pass "
+                     "infrastructure costs to consumers; part of 'Lower "
+                     "Electric Bills Now' platform.",
+             "date": "2026-02-25",
+             "source": "https://foxbaltimore.com/news/local/rep-harris-maryland-freedom-caucus-push-series-of-bills-aimed-to-lower-energy-bills"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("MD", "2", "Johnny Olszewski"): {
+        "lean": "guardrails",
+        "summary": "Co-signed Maryland Democratic delegation letter to "
+                   "FERC demanding data-center-driven transmission costs "
+                   "not be passed to Maryland ratepayers.",
+        "items": [
+            {"what": "Co-signed Maryland Congressional delegation letter "
+                     "to FERC urging revision of PJM cost-allocation "
+                     "rules so Maryland consumers do not finance $2B in "
+                     "infrastructure built primarily for out-of-state "
+                     "data centers.",
+             "date": "2026-07-28",
+             "source": "https://mcclaindelaney.house.gov/media/press-releases/maryland-democrats-urge-ferc-protect-marylanders-rising-electricity-costs-due"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("MD", "3", "Sarah Elfreth"): {
+        "lean": "guardrails",
+        "summary": "Co-signed Maryland Democratic delegation letter to "
+                   "FERC demanding data-center-driven transmission costs "
+                   "not be passed to Maryland ratepayers.",
+        "items": [
+            {"what": "Co-signed Maryland Congressional delegation letter "
+                     "to FERC urging revision of PJM cost-allocation "
+                     "rules so Maryland consumers do not finance $2B in "
+                     "infrastructure built primarily for out-of-state "
+                     "data centers.",
+             "date": "2026-07-28",
+             "source": "https://mcclaindelaney.house.gov/media/press-releases/maryland-democrats-urge-ferc-protect-marylanders-rising-electricity-costs-due"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("MD", "4", "Glenn Ivey"): {
+        "lean": "guardrails",
+        "summary": "Co-signed Maryland Democratic delegation letter to "
+                   "FERC demanding data-center-driven transmission costs "
+                   "not be passed to Maryland ratepayers.",
+        "items": [
+            {"what": "Co-signed Maryland Congressional delegation letter "
+                     "to FERC urging revision of PJM cost-allocation "
+                     "rules so Maryland consumers do not finance $2B in "
+                     "infrastructure built primarily for out-of-state "
+                     "data centers.",
+             "date": "2026-07-28",
+             "source": "https://mcclaindelaney.house.gov/media/press-releases/maryland-democrats-urge-ferc-protect-marylanders-rising-electricity-costs-due"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("MD", "6", "April McClain Delaney"): {
+        "lean": "guardrails",
+        "summary": "Led Maryland Democratic delegation letter to FERC "
+                   "demanding data-center-driven transmission costs "
+                   "not be passed to Maryland ratepayers.",
+        "items": [
+            {"what": "Led and issued press release for Maryland "
+                     "Congressional delegation letter to FERC urging "
+                     "revision of PJM cost-allocation rules so Maryland "
+                     "consumers do not finance $2B in infrastructure "
+                     "built primarily for out-of-state data centers.",
+             "date": "2026-07-28",
+             "source": "https://mcclaindelaney.house.gov/media/press-releases/maryland-democrats-urge-ferc-protect-marylanders-rising-electricity-costs-due"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("MD", "8", "Jamie Raskin"): {
+        "lean": "guardrails",
+        "summary": "Co-signed Maryland Democratic delegation letter to "
+                   "FERC demanding data-center-driven transmission costs "
+                   "not be passed to Maryland ratepayers.",
+        "items": [
+            {"what": "Co-signed Maryland Congressional delegation letter "
+                     "to FERC urging revision of PJM cost-allocation "
+                     "rules so Maryland consumers do not finance $2B in "
+                     "infrastructure built primarily for out-of-state "
+                     "data centers.",
+             "date": "2026-07-28",
+             "source": "https://mcclaindelaney.house.gov/media/press-releases/maryland-democrats-urge-ferc-protect-marylanders-rising-electricity-costs-due"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("PA", "1", "Brian Fitzpatrick"): {
+        "lean": "mixed",
+        "summary": "Cosponsored the Ratepayer Protection Act and Data "
+                   "Center Transparency Act, but initially voted for "
+                   "OBBBA which contained AI preemption provision.",
+        "items": [
+            {"what": "Cosponsored H.R. 9340, the Ratepayer Protection "
+                     "Act, directing states and PUCs to consider "
+                     "standards for connecting large-load customers so "
+                     "data centers, not families, cover new generation "
+                     "and transmission costs.",
+             "date": "2026-07-22",
+             "source": "https://www.inquirer.com/politics/election/bob-harvie-ai-data-centers-stance-tv-ad-20260910.html"},
         ],
         "as_of": "2026-09-11",
     },

@@ -609,16 +609,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/butler-township-pa",
-      "destination": "/states/pennsylvania",
-      "permanent": true
-    },
-    {
-      "source": "/communities/butler-township-pa.html",
-      "destination": "/states/pennsylvania",
-      "permanent": true
-    },
-    {
       "source": "/communities/cass-county-ne",
       "destination": "/states/nebraska",
       "permanent": true
@@ -746,16 +736,6 @@
     {
       "source": "/communities/east-rockhill-township-pa.html",
       "destination": "/states/pennsylvania",
-      "permanent": true
-    },
-    {
-      "source": "/communities/edgewater-fl",
-      "destination": "/states/florida",
-      "permanent": true
-    },
-    {
-      "source": "/communities/edgewater-fl.html",
-      "destination": "/states/florida",
       "permanent": true
     },
     {
@@ -926,16 +906,6 @@
     {
       "source": "/communities/henry-county-va.html",
       "destination": "/states/virginia",
-      "permanent": true
-    },
-    {
-      "source": "/communities/hillsborough-county-fl",
-      "destination": "/states/florida",
-      "permanent": true
-    },
-    {
-      "source": "/communities/hillsborough-county-fl.html",
-      "destination": "/states/florida",
       "permanent": true
     },
     {
@@ -1236,16 +1206,6 @@
     {
       "source": "/communities/montgomery-county-tn.html",
       "destination": "/states/tennessee",
-      "permanent": true
-    },
-    {
-      "source": "/communities/montour-county-pa",
-      "destination": "/states/pennsylvania",
-      "permanent": true
-    },
-    {
-      "source": "/communities/montour-county-pa.html",
-      "destination": "/states/pennsylvania",
       "permanent": true
     },
     {

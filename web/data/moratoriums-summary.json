@@ -3,21 +3,21 @@
   "generated": "2026-09-11",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 691,
+  "count": 727,
   "states": 48,
-  "enacted": 552,
-  "proposed": 76,
-  "official_sourced": 55,
+  "enacted": 578,
+  "proposed": 83,
+  "official_sourced": 59,
   "by_state": {
     "CO": {
-      "total": 13,
-      "enacted": 10,
-      "proposed": 2
+      "total": 17,
+      "enacted": 12,
+      "proposed": 4
     },
     "MD": {
-      "total": 16,
-      "enacted": 14,
-      "proposed": 2
+      "total": 21,
+      "enacted": 18,
+      "proposed": 3
     },
     "NV": {
       "total": 5,
@@ -25,8 +25,8 @@
       "proposed": 0
     },
     "IA": {
-      "total": 17,
-      "enacted": 14,
+      "total": 21,
+      "enacted": 18,
       "proposed": 2
     },
     "IL": {
@@ -90,9 +90,9 @@
       "proposed": 2
     },
     "FL": {
-      "total": 22,
-      "enacted": 15,
-      "proposed": 6
+      "total": 39,
+      "enacted": 26,
+      "proposed": 10
     },
     "OH": {
       "total": 62,
@@ -175,8 +175,8 @@
       "proposed": 0
     },
     "PA": {
-      "total": 12,
-      "enacted": 9,
+      "total": 18,
+      "enacted": 14,
       "proposed": 2
     },
     "AZ": {
@@ -298,7 +298,10 @@
       "morgan-hill-ca",
       "lake-elsinore-ca",
       "upper-burrell-township-pa",
-      "newton-county-ga"
+      "newton-county-ga",
+      "butler-township-pa",
+      "smithfield-township-pa",
+      "west-whiteland-township-pa"
     ],
     "90": [
       "bloomington-il",
@@ -312,6 +315,7 @@
       "vienna-township-trumbull-co-oh",
       "charlotte-nc",
       "lavon-tx",
+      "marshalltown-ia",
       "johnson-city-tn",
       "springfield-mo",
       "minneapolis-mn",
@@ -327,6 +331,7 @@
       "hillsboro-or",
       "tulare-county-ca",
       "boulder-county-co",
+      "lake-county-fl",
       "howland-township-oh",
       "braceville-township-oh",
       "cleveland-oh",
@@ -352,7 +357,13 @@
       "lake-elsinore-ca",
       "upper-burrell-township-pa",
       "newton-county-ga",
-      "forest-park-ga"
+      "forest-park-ga",
+      "hazle-township-pa",
+      "butler-township-pa",
+      "little-britain-township-pa",
+      "smithfield-township-pa",
+      "west-whiteland-township-pa",
+      "dickinson-county-ia"
     ]
   }
 }
