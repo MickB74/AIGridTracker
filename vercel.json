@@ -719,16 +719,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/douglas-county-ga",
-      "destination": "/states/georgia",
-      "permanent": true
-    },
-    {
-      "source": "/communities/douglas-county-ga.html",
-      "destination": "/states/georgia",
-      "permanent": true
-    },
-    {
       "source": "/communities/eagle-creek-township-in",
       "destination": "/states/indiana",
       "permanent": true

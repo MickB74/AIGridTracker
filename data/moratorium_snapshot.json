@@ -79,6 +79,10 @@
     "effective_status": "Enacted",
     "expires": "2027-01-02"
   },
+  "ashwaubenon-wi": {
+    "effective_status": "Enacted",
+    "expires": "2027-06-02"
+  },
   "athens-clarke-county-ga": {
     "effective_status": "Enacted",
     "expires": null
@@ -86,6 +90,10 @@
   "athens-oh": {
     "effective_status": "Enacted",
     "expires": "2027-08-04"
+  },
+  "athens-tx": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "atlanta-ga": {
     "effective_status": "Enacted",
@@ -106,6 +114,10 @@
   "aurora-il": {
     "effective_status": "Expired",
     "expires": "2026-03-24"
+  },
+  "austin-county-tx": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "austin-tx": {
     "effective_status": "Proposed",
@@ -206,6 +218,10 @@
   "boardman-township-oh": {
     "effective_status": "Enacted",
     "expires": "2027-04-28"
+  },
+  "boiling-spring-lakes-nc": {
+    "effective_status": "Enacted",
+    "expires": "2027-06-02"
   },
   "boone-county-in": {
     "effective_status": "Enacted",
@@ -355,6 +371,10 @@
     "effective_status": "Enacted",
     "expires": "2027-04-06"
   },
+  "cary-nc": {
+    "effective_status": "Enacted",
+    "expires": "2028-02-28"
+  },
   "cass-county-in": {
     "effective_status": "Enacted",
     "expires": null
@@ -487,6 +507,10 @@
     "effective_status": "Enacted",
     "expires": "2027-02-15"
   },
+  "coffee-county-tn": {
+    "effective_status": "Enacted",
+    "expires": "2027-06-09"
+  },
   "colfax-county-nm": {
     "effective_status": "Proposed",
     "expires": null
@@ -495,12 +519,20 @@
     "effective_status": "Enacted",
     "expires": "2027-01-07"
   },
+  "colquitt-county-ga": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "columbia-county-ga": {
     "effective_status": "Proposed",
     "expires": null
   },
   "columbia-mo": {
     "effective_status": "Enacted",
+    "expires": null
+  },
+  "corpus-christi-tx": {
+    "effective_status": "Proposed",
     "expires": null
   },
   "cortland-oh": {
@@ -518,6 +550,10 @@
   "cranford-nj": {
     "effective_status": "Enacted",
     "expires": null
+  },
+  "crossville-tn": {
+    "effective_status": "Enacted",
+    "expires": "2028-08-12"
   },
   "cullman-al": {
     "effective_status": "Enacted",
@@ -550,6 +586,10 @@
   "dearborn-county-in": {
     "effective_status": "Enacted",
     "expires": "2027-02-25"
+  },
+  "decatur-county-ga": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "deerfield-township-nj": {
     "effective_status": "Enacted",
@@ -614,6 +654,10 @@
   "dougherty-county-ga": {
     "effective_status": "Enacted",
     "expires": "2027-02-27"
+  },
+  "douglas-county-ga": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "dover-de": {
     "effective_status": "Proposed",
@@ -686,6 +730,10 @@
   "el-monte-ca": {
     "effective_status": "Enacted",
     "expires": "2027-02-02"
+  },
+  "el-paso-tx": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "elkhart-in": {
     "effective_status": "Enacted",
@@ -783,6 +831,14 @@
     "effective_status": "Expired",
     "expires": "2026-01-31"
   },
+  "forest-park-ga": {
+    "effective_status": "Enacted",
+    "expires": "2026-11-29"
+  },
+  "forney-tx": {
+    "effective_status": "Proposed",
+    "expires": null
+  },
   "forsyth-township-mi": {
     "effective_status": "Enacted",
     "expires": "2027-06-25"
@@ -793,6 +849,14 @@
   },
   "fort-worth-tx": {
     "effective_status": "Proposed",
+    "expires": null
+  },
+  "franklin-county-ga": {
+    "effective_status": "Enacted",
+    "expires": "2028-12-31"
+  },
+  "franklin-nc": {
+    "effective_status": "Enacted",
     "expires": null
   },
   "frelinghuysen-township-nj": {
@@ -818,6 +882,10 @@
   "galloway-township-nj": {
     "effective_status": "Enacted",
     "expires": "2027-01-14"
+  },
+  "garden-city-ga": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "garfield-township-mi": {
     "effective_status": "Enacted",
@@ -862,6 +930,10 @@
   "grant-county-in": {
     "effective_status": "Enacted",
     "expires": "2028-03-16"
+  },
+  "grant-county-wi": {
+    "effective_status": "Enacted",
+    "expires": "2027-06-18"
   },
   "green-charter-township-mi": {
     "effective_status": "Enacted",
@@ -915,6 +987,10 @@
     "effective_status": "Expired",
     "expires": "2026-08-25"
   },
+  "hamblen-county-tn": {
+    "effective_status": "Enacted",
+    "expires": "2027-07-07"
+  },
   "hamilton-county-tn": {
     "effective_status": "Enacted",
     "expires": "2027-07-15"
@@ -939,6 +1015,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "hart-county-ga": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "hart-mi": {
     "effective_status": "Enacted",
     "expires": "2026-11-26"
@@ -946,6 +1026,10 @@
   "hastings-mn": {
     "effective_status": "Enacted",
     "expires": "2027-08-17"
+  },
+  "hawkins-county-tn": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "hayes-township-mi": {
     "effective_status": "Expired",
@@ -955,8 +1039,16 @@
     "effective_status": "Enacted",
     "expires": "2026-12-31"
   },
+  "heard-county-ga": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "henderson-nv": {
     "effective_status": "Rejected",
+    "expires": null
+  },
+  "hendersonville-nc": {
+    "effective_status": "Proposed",
     "expires": null
   },
   "highland-ny": {
@@ -986,6 +1078,10 @@
   "homewood-al": {
     "effective_status": "Enacted",
     "expires": "2027-06-22"
+  },
+  "hood-county-tx": {
+    "effective_status": "Rejected",
+    "expires": null
   },
   "houghton-mi": {
     "effective_status": "Enacted",
@@ -1119,6 +1215,10 @@
     "effective_status": "Enacted",
     "expires": "2026-11-08"
   },
+  "jonesborough-tn": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "kansas-city-mo": {
     "effective_status": "Enacted",
     "expires": null
@@ -1179,6 +1279,10 @@
     "effective_status": "Enacted",
     "expires": "2028-02-14"
   },
+  "lagrange-ga": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "lake-county-fl": {
     "effective_status": "Proposed",
     "expires": null
@@ -1202,6 +1306,10 @@
   "lakeland-fl": {
     "effective_status": "Enacted",
     "expires": "2027-08-03"
+  },
+  "lamar-county-ga": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "lancaster-county-ne": {
     "effective_status": "Proposed",
@@ -1227,6 +1335,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "lee-county-nc": {
+    "effective_status": "Under review",
+    "expires": null
+  },
   "leeds-al": {
     "effective_status": "Enacted",
     "expires": "2027-06-03"
@@ -1238,6 +1350,10 @@
   "leray-ny": {
     "effective_status": "Enacted",
     "expires": "2027-08-01"
+  },
+  "lewisville-tx": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "lexington-fayette-county-ky": {
     "effective_status": "Enacted",
@@ -1290,6 +1406,10 @@
   "lordstown-oh": {
     "effective_status": "Enacted",
     "expires": null
+  },
+  "loudon-county-tn": {
+    "effective_status": "Enacted",
+    "expires": "2026-12-30"
   },
   "loudoun-county-va": {
     "effective_status": "Proposed",
@@ -1350,6 +1470,10 @@
   "madison-county-fl": {
     "effective_status": "Enacted",
     "expires": "2027-07-22"
+  },
+  "madison-county-ga": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "madison-county-ia": {
     "effective_status": "Enacted",
@@ -1443,6 +1567,10 @@
     "effective_status": "Enacted",
     "expires": "2027-02-02"
   },
+  "maury-county-tn": {
+    "effective_status": "Enacted",
+    "expires": "2027-07-19"
+  },
   "mcdowell-county-nc": {
     "effective_status": "Enacted",
     "expires": "2027-02-11"
@@ -1479,6 +1607,10 @@
     "effective_status": "Enacted",
     "expires": "2027-05-31"
   },
+  "mesquite-tx": {
+    "effective_status": "Proposed",
+    "expires": null
+  },
   "miami-county-in": {
     "effective_status": "Enacted",
     "expires": null
@@ -1492,6 +1624,10 @@
     "expires": null
   },
   "middleton-wi": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "milam-county-tx": {
     "effective_status": "Enacted",
     "expires": null
   },
@@ -1522,6 +1658,10 @@
   "monclova-township-oh": {
     "effective_status": "Enacted",
     "expires": "2027-02-17"
+  },
+  "monroe-county-wi": {
+    "effective_status": "Enacted",
+    "expires": "2028-01-21"
   },
   "monroe-township-gloucester-co-nj": {
     "effective_status": "Enacted",
@@ -1643,6 +1783,10 @@
     "effective_status": "Enacted",
     "expires": "2027-07-09"
   },
+  "newton-county-ga": {
+    "effective_status": "Enacted",
+    "expires": "2026-10-05"
+  },
   "nicholasville-ky": {
     "effective_status": "Enacted",
     "expires": null
@@ -1673,6 +1817,10 @@
   },
   "north-port-fl": {
     "effective_status": "Proposed",
+    "expires": null
+  },
+  "northampton-county-nc": {
+    "effective_status": "Enacted",
     "expires": null
   },
   "northville-mi": {
@@ -1726,6 +1874,10 @@
   "olyphant-pa": {
     "effective_status": "Enacted",
     "expires": null
+  },
+  "oneida-county-wi": {
+    "effective_status": "Enacted",
+    "expires": "2027-08-19"
   },
   "orange-county-fl": {
     "effective_status": "Proposed",
@@ -1891,6 +2043,10 @@
     "effective_status": "Enacted",
     "expires": "2028-07-07"
   },
+  "princeton-tx": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "providence-township-oh": {
     "effective_status": "Enacted",
     "expires": "2027-04-15"
@@ -1958,6 +2114,10 @@
   "rockaway-township-nj": {
     "effective_status": "Enacted",
     "expires": null
+  },
+  "rockdale-county-ga": {
+    "effective_status": "Expired",
+    "expires": "2026-09-08"
   },
   "rockford-il": {
     "effective_status": "Enacted",
@@ -2067,6 +2227,10 @@
     "effective_status": "Enacted",
     "expires": "2027-06-30"
   },
+  "shawano-county-wi": {
+    "effective_status": "Enacted",
+    "expires": "2027-06-24"
+  },
   "shawnee-county-ks": {
     "effective_status": "Enacted",
     "expires": "2027-02-17"
@@ -2074,6 +2238,10 @@
   "shawnee-township-oh": {
     "effective_status": "Enacted",
     "expires": "2027-12-09"
+  },
+  "sheboygan-wi": {
+    "effective_status": "Enacted",
+    "expires": "2027-07-23"
   },
   "shelby-county-ia": {
     "effective_status": "Enacted",
@@ -2142,6 +2310,14 @@
   "sprigg-township-oh": {
     "effective_status": "Enacted",
     "expires": "2027-02-24"
+  },
+  "spring-city-tn": {
+    "effective_status": "Enacted",
+    "expires": "2028-07-30"
+  },
+  "spring-hope-nc": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "springfield-mo": {
     "effective_status": "Enacted",
@@ -2263,6 +2439,10 @@
     "effective_status": "Enacted",
     "expires": "2027-04-20"
   },
+  "tom-green-county-tx": {
+    "effective_status": "Rejected",
+    "expires": null
+  },
   "tonawanda-erie-co-ny": {
     "effective_status": "Enacted",
     "expires": "2027-08-03"
@@ -2271,8 +2451,28 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "town-of-beetown-wi": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "town-of-bloomington-wi": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "town-of-cassville-wi": {
     "effective_status": "Enacted",
+    "expires": null
+  },
+  "town-of-hampden-wi": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "town-of-westport-wi": {
+    "effective_status": "Enacted",
+    "expires": "2027-04-06"
+  },
+  "troup-county-ga": {
+    "effective_status": "Rescinded",
     "expires": null
   },
   "trumbull-ct": {
@@ -2330,6 +2530,14 @@
   "vienna-township-trumbull-co-oh": {
     "effective_status": "Enacted",
     "expires": "2026-10-16"
+  },
+  "village-of-cottage-grove-wi": {
+    "effective_status": "Enacted",
+    "expires": "2028-01-20"
+  },
+  "village-of-greenville-wi": {
+    "effective_status": "Enacted",
+    "expires": "2027-06-08"
   },
   "village-of-romeo-mi": {
     "effective_status": "Enacted",
@@ -2398,6 +2606,10 @@
   "washington-county-mn": {
     "effective_status": "Enacted",
     "expires": null
+  },
+  "washington-county-tn": {
+    "effective_status": "Enacted",
+    "expires": "2027-06-30"
   },
   "washington-nj": {
     "effective_status": "Enacted",

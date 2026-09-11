@@ -3,11 +3,11 @@
   "generated": "2026-09-11",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 638,
+  "count": 691,
   "states": 48,
-  "enacted": 508,
-  "proposed": 72,
-  "official_sourced": 53,
+  "enacted": 552,
+  "proposed": 76,
+  "official_sourced": 55,
   "by_state": {
     "CO": {
       "total": 13,
@@ -40,8 +40,8 @@
       "proposed": 0
     },
     "WI": {
-      "total": 19,
-      "enacted": 17,
+      "total": 31,
+      "enacted": 29,
       "proposed": 2
     },
     "RI": {
@@ -55,13 +55,13 @@
       "proposed": 3
     },
     "TX": {
-      "total": 12,
-      "enacted": 5,
-      "proposed": 5
+      "total": 23,
+      "enacted": 11,
+      "proposed": 8
     },
     "GA": {
-      "total": 32,
-      "enacted": 24,
+      "total": 46,
+      "enacted": 36,
       "proposed": 2
     },
     "NY": {
@@ -85,9 +85,9 @@
       "proposed": 1
     },
     "NC": {
-      "total": 37,
-      "enacted": 31,
-      "proposed": 1
+      "total": 44,
+      "enacted": 36,
+      "proposed": 2
     },
     "FL": {
       "total": 22,
@@ -100,8 +100,8 @@
       "proposed": 1
     },
     "TN": {
-      "total": 18,
-      "enacted": 16,
+      "total": 27,
+      "enacted": 25,
       "proposed": 2
     },
     "CA": {
@@ -265,7 +265,8 @@
       "waterford-township-mi",
       "calaveras-county-ca",
       "morgan-hill-ca",
-      "lake-elsinore-ca"
+      "lake-elsinore-ca",
+      "newton-county-ga"
     ],
     "60": [
       "lysander-onondaga-co-ny",
@@ -296,7 +297,8 @@
       "mendocino-county-ca",
       "morgan-hill-ca",
       "lake-elsinore-ca",
-      "upper-burrell-township-pa"
+      "upper-burrell-township-pa",
+      "newton-county-ga"
     ],
     "90": [
       "bloomington-il",
@@ -348,7 +350,9 @@
       "mendocino-county-ca",
       "morgan-hill-ca",
       "lake-elsinore-ca",
-      "upper-burrell-township-pa"
+      "upper-burrell-township-pa",
+      "newton-county-ga",
+      "forest-park-ga"
     ]
   }
 }

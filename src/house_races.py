@@ -642,6 +642,143 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-06",
     },
+
+    # ── 5-state deep dive (GA/NC/TX/TN/WI) — 2026-09-11 ─────────────
+
+    ("GA", "2", "Sanford Bishop"): {
+        "lean": "guardrails",
+        "summary": "Insists communities weigh tradeoffs carefully and require "
+                   "data center operators to provide transparency on water and "
+                   "power consumption and deliver community benefits.",
+        "items": [
+            {"what": "Said south Georgia communities need guardrails, "
+                     "transparency on water/power consumption, and community "
+                     "benefits before data centers move forward.",
+             "date": "2026-07-17",
+             "source": "https://www.walb.com/2026/07/17/south-georgia-congressmen-say-data-centers-need-guardrails-before-moving-forward/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("GA", "7", "Rich McCormick"): {
+        "lean": "accelerate",
+        "summary": "Chairman of the House Science, Space, and Technology "
+                   "Committee. Chaired hearing on data center infrastructure "
+                   "policy, advocated streamlining permitting. Called "
+                   "opposition 'misinformation'.",
+        "items": [
+            {"what": "Chaired hearing 'Powering America's AI Future: Assessing "
+                     "Policy Options to Increase Data Center Infrastructure,' "
+                     "advocated streamlining permitting for data centers.",
+             "date": "2026-02",
+             "source": "https://science.house.gov/2026/2/opening-statement-of-chairman-rich-mccormick-at"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("GA", "8", "Austin Scott"): {
+        "lean": "mixed",
+        "summary": "Supports domestic data centers as a national security "
+                   "priority but demands companies pay their own energy costs "
+                   "and use closed-loop cooling.",
+        "items": [
+            {"what": "Said data centers need to be in the US for national "
+                     "security but companies must pay their own energy costs "
+                     "and use closed-loop cooling systems.",
+             "date": "2026-07-17",
+             "source": "https://www.walb.com/2026/07/17/south-georgia-congressmen-say-data-centers-need-guardrails-before-moving-forward/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NC", "4", "Valerie Foushee"): {
+        "lean": "mixed",
+        "summary": "Raised concerns about data center environmental impacts; "
+                   "led bipartisan HR 9372 (data center energy/water "
+                   "measurement standards, passed committee 34-1).",
+        "items": [
+            {"what": "Led HR 9372, the Data Infrastructure Energy Measurement "
+                     "and Standards Act, authorizing NIST and DOE to establish "
+                     "measurement standards for data center energy and water "
+                     "use including AI training; passed House Science "
+                     "Committee 34-1.",
+             "date": "2026-06-01",
+             "source": "https://foushee.house.gov/media/press-releases/rep-foushee-led-generative-ai-labeling-frontier-ai-safety-and-data-center-measures-advance-through-house-science-committee"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("TX", "4", "Pat Fallon"): {
+        "lean": "guardrails",
+        "summary": "Supported Governor Abbott's data center pause; expressed "
+                   "concerns about ERCOT grid capacity for data centers.",
+        "items": [
+            {"what": "Praised Abbott's data center moratorium: 'I think it "
+                     "was a thoughtful, good step.' Said 'the amount of energy "
+                     "needed for these new data centers far exceeds the "
+                     "capacity that we currently have.'",
+             "date": "2026-08",
+             "source": "https://www.cbsnews.com/texas/news/push-back-data-centers-texas-voters-gop-leaders-democratic-challengers/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("TN", "2", "Tim Burchett"): {
+        "lean": "guardrails",
+        "summary": "Publicly broke with Trump on data centers, called for "
+                   "local control and military-base siting over residential "
+                   "areas.",
+        "items": [
+            {"what": "Responded to Trump's warning that communities rejecting "
+                     "data centers risk becoming 'backwards and poor' by "
+                     "saying 'I guess I'm backwards and poor.' Called for "
+                     "more local control and suggested putting data centers "
+                     "in military installations.",
+             "date": "2026-08",
+             "source": "https://www.newsweek.com/list-of-republicans-publicly-breaking-with-trump-on-ai-data-centers-12391133"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("TN", "3", "Chuck Fleischmann"): {
+        "lean": "guardrails",
+        "summary": "As Energy-Water Appropriations chair, said TVA customers "
+                   "should not face surprise rate hikes from data center "
+                   "demand.",
+        "items": [
+            {"what": "As chair of the House Energy and Water Development "
+                     "Appropriations Subcommittee, said 'there will be no "
+                     "rate increases without going to the people' regarding "
+                     "TVA rate changes tied to data center demand.",
+             "date": "2026-05-27",
+             "source": "https://newschannel9.com/news/local/repfleischmann-says-tva-customers-shouldnt-see-surprise-rate-hikes-tied-to-data-centers-chuck-fleischmann-tva-rates-data-center-electricity-demand-tennessee-tva-ai-power-usage-chattanooga-electricity-rates-data-centers"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("WI", "2", "Mark Pocan"): {
+        "lean": "guardrails",
+        "summary": "Called for Congress to regulate AI and data centers; said "
+                   "Congress is 'not even crawling' on proper regulation.",
+        "items": [
+            {"what": "Told Wisconsin Watch that Congress needs 'proper "
+                     "regulation that's good on all fronts related to AI' and "
+                     "that he feels Congress is 'not even crawling at this "
+                     "point.' His district includes 11 Madison-based data "
+                     "centers.",
+             "date": "2025-12",
+             "source": "https://wisconsinwatch.org/2025/12/wisconsin-foxconn-data-center-energy-trump-ai-congress-lawmakers-republican-democrat/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("WI", "3", "Derrick Van Orden"): {
+        "lean": "mixed",
+        "summary": "Said Wisconsinites should not subsidize data center power "
+                   "or water, but voted for OBBBA which included federal "
+                   "preemption of state/local AI data center regulations.",
+        "items": [
+            {"what": "Said 'The average Wisconsinite should not have to "
+                     "subsidize the power or water for a commercial entity' "
+                     "and suggested data centers should either help pay for "
+                     "rising utility rates or 'self-power.'",
+             "date": "2025-12",
+             "source": "https://wisconsinwatch.org/2025/12/wisconsin-foxconn-data-center-energy-trump-ai-congress-lawmakers-republican-democrat/"},
+        ],
+        "as_of": "2026-09-11",
+    },
 }
 
 
