@@ -2805,5 +2805,236 @@
     "locality": "Pinson, AL",
     "kind": "extended",
     "detail": "Now runs to 2027-08-07"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "yakima-county-wa",
+    "locality": "Yakima County, WA",
+    "kind": "extended",
+    "detail": "Now runs to 2027-02-12"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "lake-county-il",
+    "locality": "Lake County, IL",
+    "kind": "status_changed",
+    "detail": "Proposed \u2192 Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "marysville-wa",
+    "locality": "Marysville, WA",
+    "kind": "extended",
+    "detail": "Now runs to 2027-01-14"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "pasco-wa",
+    "locality": "Pasco, WA",
+    "kind": "extended",
+    "detail": "Now runs to 2027-01-20"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "renton-wa",
+    "locality": "Renton, WA",
+    "kind": "status_changed",
+    "detail": "Proposed \u2192 Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "kittitas-county-wa",
+    "locality": "Kittitas County, WA",
+    "kind": "status_changed",
+    "detail": "Proposed \u2192 Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "woodford-county-il",
+    "locality": "Woodford County, IL",
+    "kind": "extended",
+    "detail": "Now runs to 2027-02-18"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "ottawa-il",
+    "locality": "Ottawa, IL",
+    "kind": "extended",
+    "detail": "Now runs to 2027-08-25"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "pierce-county-wa",
+    "locality": "Pierce County, WA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "spokane-county-wa",
+    "locality": "Spokane County, WA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "la-conner-wa",
+    "locality": "La Conner, WA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "lincoln-county-wa",
+    "locality": "Lincoln County, WA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "moses-lake-wa",
+    "locality": "Moses Lake, WA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "bourbonnais-il",
+    "locality": "Bourbonnais, IL",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "plainfield-il",
+    "locality": "Plainfield, IL",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "carbondale-il",
+    "locality": "Carbondale, IL",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "effingham-il",
+    "locality": "Effingham, IL",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "logan-county-il",
+    "locality": "Logan County, IL",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "macon-county-il",
+    "locality": "Macon County, IL",
+    "kind": "added",
+    "detail": "Added as Proposed"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "harpersville-al",
+    "locality": "Harpersville, AL",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "tarrant-al",
+    "locality": "Tarrant, AL",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "anniston-al",
+    "locality": "Anniston, AL",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "westover-al",
+    "locality": "Westover, AL",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "foley-al",
+    "locality": "Foley, AL",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "lowndes-county-al",
+    "locality": "Lowndes County, AL",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "pawhuska-ok",
+    "locality": "Pawhuska, OK",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "shawnee-ok",
+    "locality": "Shawnee, OK",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "cherokee-nation-ok",
+    "locality": "Cherokee Nation, OK",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "kickapoo-tribe-of-oklahoma-ok",
+    "locality": "Kickapoo Tribe of Oklahoma, OK",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "choctaw-ok",
+    "locality": "Choctaw, OK",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "choctaw-county-ok",
+    "locality": "Choctaw County, OK",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "oregon-state-land-or",
+    "locality": "Oregon (state land), OR",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-11",
+    "id": "woodburn-or",
+    "locality": "Woodburn, OR",
+    "kind": "added",
+    "detail": "Added as Proposed"
   }
 ]

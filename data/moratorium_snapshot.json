@@ -43,6 +43,10 @@
     "effective_status": "Proposed",
     "expires": null
   },
+  "anniston-al": {
+    "effective_status": "Enacted",
+    "expires": "2027-08-18"
+  },
   "apex-nc": {
     "effective_status": "Enacted",
     "expires": "2027-04-27"
@@ -247,6 +251,10 @@
     "effective_status": "Enacted",
     "expires": "2026-12-02"
   },
+  "bourbonnais-il": {
+    "effective_status": "Enacted",
+    "expires": "2027-01-31"
+  },
   "box-elder-county-ut": {
     "effective_status": "Enacted",
     "expires": "2026-12-07"
@@ -375,6 +383,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "carbondale-il": {
+    "effective_status": "Enacted",
+    "expires": "2027-06-23"
+  },
   "carlton-county-mn": {
     "effective_status": "Enacted",
     "expires": "2027-08-24"
@@ -443,6 +455,10 @@
     "effective_status": "Enacted",
     "expires": "2027-02-14"
   },
+  "cherokee-nation-ok": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "cherry-hill-nj": {
     "effective_status": "Enacted",
     "expires": null
@@ -478,6 +494,14 @@
   "chippewa-county-wi": {
     "effective_status": "Enacted",
     "expires": null
+  },
+  "choctaw-county-ok": {
+    "effective_status": "Enacted",
+    "expires": "2027-05-18"
+  },
+  "choctaw-ok": {
+    "effective_status": "Enacted",
+    "expires": "2027-07-21"
   },
   "cincinnati-oh": {
     "effective_status": "Enacted",
@@ -791,6 +815,10 @@
     "effective_status": "Enacted",
     "expires": "2027-06-08"
   },
+  "effingham-il": {
+    "effective_status": "Enacted",
+    "expires": "2027-06-02"
+  },
   "el-monte-ca": {
     "effective_status": "Enacted",
     "expires": "2027-02-02"
@@ -906,6 +934,10 @@
   "fluvanna-county-va": {
     "effective_status": "Expired",
     "expires": "2026-01-31"
+  },
+  "foley-al": {
+    "effective_status": "Enacted",
+    "expires": "2027-03-08"
   },
   "forest-park-ga": {
     "effective_status": "Enacted",
@@ -1098,6 +1130,10 @@
   "harnett-county-nc": {
     "effective_status": "Enacted",
     "expires": "2027-05-03"
+  },
+  "harpersville-al": {
+    "effective_status": "Enacted",
+    "expires": "2027-02-03"
   },
   "harrison-ar": {
     "effective_status": "Rescinded",
@@ -1363,6 +1399,10 @@
     "effective_status": "Proposed",
     "expires": null
   },
+  "kickapoo-tribe-of-oklahoma-ok": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "kings-mountain-nc": {
     "effective_status": "Enacted",
     "expires": "2027-08-25"
@@ -1376,8 +1416,8 @@
     "expires": null
   },
   "kittitas-county-wa": {
-    "effective_status": "Proposed",
-    "expires": null
+    "effective_status": "Enacted",
+    "expires": "2027-02-12"
   },
   "knowlton-township-nj": {
     "effective_status": "Enacted",
@@ -1394,6 +1434,10 @@
   "kootenai-county-id": {
     "effective_status": "Enacted",
     "expires": null
+  },
+  "la-conner-wa": {
+    "effective_status": "Enacted",
+    "expires": "2027-01-29"
   },
   "la-crosse-county-wi": {
     "effective_status": "Enacted",
@@ -1412,8 +1456,8 @@
     "expires": "2026-12-07"
   },
   "lake-county-il": {
-    "effective_status": "Proposed",
-    "expires": null
+    "effective_status": "Enacted",
+    "expires": "2027-05-08"
   },
   "lake-elsinore-ca": {
     "effective_status": "Enacted",
@@ -1507,6 +1551,10 @@
     "effective_status": "Defeated",
     "expires": null
   },
+  "lincoln-county-wa": {
+    "effective_status": "Enacted",
+    "expires": "2027-03-10"
+  },
   "lincoln-township-mi": {
     "effective_status": "Enacted",
     "expires": "2027-04-11"
@@ -1530,6 +1578,10 @@
   "lodi-township-mi": {
     "effective_status": "Expired",
     "expires": "2026-08-02"
+  },
+  "logan-county-il": {
+    "effective_status": "Enacted",
+    "expires": "2027-05-19"
   },
   "logan-county-ky": {
     "effective_status": "Enacted",
@@ -1579,6 +1631,10 @@
     "effective_status": "Rejected",
     "expires": null
   },
+  "lowndes-county-al": {
+    "effective_status": "Enacted",
+    "expires": "2026-10-25"
+  },
   "lowndes-county-ga": {
     "effective_status": "Enacted",
     "expires": "2026-10-25"
@@ -1614,6 +1670,10 @@
   "lysander-onondaga-co-ny": {
     "effective_status": "Enacted",
     "expires": "2026-11-06"
+  },
+  "macon-county-il": {
+    "effective_status": "Proposed",
+    "expires": null
   },
   "madison-county-ar": {
     "effective_status": "Enacted",
@@ -1709,7 +1769,7 @@
   },
   "marysville-wa": {
     "effective_status": "Enacted",
-    "expires": null
+    "expires": "2027-01-14"
   },
   "mason-mi": {
     "effective_status": "Expired",
@@ -1876,6 +1936,10 @@
     "expires": "2028-05-20"
   },
   "morton-county-nd": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "moses-lake-wa": {
     "effective_status": "Enacted",
     "expires": null
   },
@@ -2083,6 +2147,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "oregon-state-land-or": {
+    "effective_status": "Enacted",
+    "expires": "2027-07-01"
+  },
   "oregon-statewide-or": {
     "effective_status": "Proposed",
     "expires": null
@@ -2093,7 +2161,7 @@
   },
   "ottawa-il": {
     "effective_status": "Enacted",
-    "expires": null
+    "expires": "2027-08-25"
   },
   "pacific-mo": {
     "effective_status": "Enacted",
@@ -2125,7 +2193,7 @@
   },
   "pasco-wa": {
     "effective_status": "Enacted",
-    "expires": null
+    "expires": "2027-01-20"
   },
   "patterson-ca": {
     "effective_status": "Enacted",
@@ -2134,6 +2202,10 @@
   "paulding-county-ga": {
     "effective_status": "Enacted",
     "expires": "2027-01-01"
+  },
+  "pawhuska-ok": {
+    "effective_status": "Enacted",
+    "expires": "2026-12-31"
   },
   "peculiar-mo": {
     "effective_status": "Enacted",
@@ -2166,6 +2238,10 @@
   "phillipsburg-nj": {
     "effective_status": "Enacted",
     "expires": null
+  },
+  "pierce-county-wa": {
+    "effective_status": "Enacted",
+    "expires": "2027-08-25"
   },
   "pierce-township-oh": {
     "effective_status": "Enacted",
@@ -2206,6 +2282,10 @@
   "plain-township-stark-co-oh": {
     "effective_status": "Enacted",
     "expires": "2027-03-24"
+  },
+  "plainfield-il": {
+    "effective_status": "Enacted",
+    "expires": "2026-10-18"
   },
   "plainfield-nj": {
     "effective_status": "Proposed",
@@ -2296,8 +2376,8 @@
     "expires": "2027-08-31"
   },
   "renton-wa": {
-    "effective_status": "Proposed",
-    "expires": null
+    "effective_status": "Enacted",
+    "expires": "2027-08-17"
   },
   "richfield-township-oh": {
     "effective_status": "Enacted",
@@ -2455,6 +2535,10 @@
     "effective_status": "Enacted",
     "expires": "2027-02-17"
   },
+  "shawnee-ok": {
+    "effective_status": "Enacted",
+    "expires": "2027-12-31"
+  },
   "shawnee-township-oh": {
     "effective_status": "Enacted",
     "expires": "2027-12-09"
@@ -2530,6 +2614,10 @@
   "spartanburg-county-sc": {
     "effective_status": "Enacted",
     "expires": "2027-06-22"
+  },
+  "spokane-county-wa": {
+    "effective_status": "Enacted",
+    "expires": "2026-12-15"
   },
   "spokane-wa": {
     "effective_status": "Enacted",
@@ -2654,6 +2742,10 @@
   "tallmadge-oh": {
     "effective_status": "Enacted",
     "expires": "2026-10-10"
+  },
+  "tarrant-al": {
+    "effective_status": "Enacted",
+    "expires": "2027-09-08"
   },
   "taylor-county-fl": {
     "effective_status": "Rejected",
@@ -2935,6 +3027,10 @@
     "effective_status": "Enacted",
     "expires": "2026-11-01"
   },
+  "westover-al": {
+    "effective_status": "Enacted",
+    "expires": "2027-02-18"
+  },
   "white-county-in": {
     "effective_status": "Enacted",
     "expires": "2026-10-20"
@@ -2983,13 +3079,17 @@
     "effective_status": "Enacted",
     "expires": "2026-09-24"
   },
+  "woodburn-or": {
+    "effective_status": "Proposed",
+    "expires": null
+  },
   "woodbury-county-ia": {
     "effective_status": "Enacted",
     "expires": "2027-06-23"
   },
   "woodford-county-il": {
     "effective_status": "Enacted",
-    "expires": null
+    "expires": "2027-02-18"
   },
   "woodford-county-ky": {
     "effective_status": "Enacted",
@@ -3017,7 +3117,7 @@
   },
   "yakima-county-wa": {
     "effective_status": "Enacted",
-    "expires": null
+    "expires": "2027-02-12"
   },
   "yankton-county-sd": {
     "effective_status": "Enacted",

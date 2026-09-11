@@ -3,11 +3,11 @@
   "generated": "2026-09-11",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 762,
+  "count": 787,
   "states": 48,
-  "enacted": 610,
-  "proposed": 85,
-  "official_sourced": 62,
+  "enacted": 636,
+  "proposed": 84,
+  "official_sourced": 63,
   "by_state": {
     "CO": {
       "total": 17,
@@ -30,8 +30,8 @@
       "proposed": 2
     },
     "IL": {
-      "total": 12,
-      "enacted": 8,
+      "total": 18,
+      "enacted": 14,
       "proposed": 3
     },
     "UT": {
@@ -110,9 +110,9 @@
       "proposed": 2
     },
     "WA": {
-      "total": 13,
-      "enacted": 11,
-      "proposed": 2
+      "total": 18,
+      "enacted": 18,
+      "proposed": 0
     },
     "NM": {
       "total": 4,
@@ -140,9 +140,9 @@
       "proposed": 0
     },
     "OR": {
-      "total": 5,
-      "enacted": 2,
-      "proposed": 3
+      "total": 7,
+      "enacted": 3,
+      "proposed": 4
     },
     "WY": {
       "total": 1,
@@ -160,8 +160,8 @@
       "proposed": 2
     },
     "OK": {
-      "total": 8,
-      "enacted": 7,
+      "total": 14,
+      "enacted": 13,
       "proposed": 0
     },
     "MN": {
@@ -170,8 +170,8 @@
       "proposed": 0
     },
     "AL": {
-      "total": 9,
-      "enacted": 8,
+      "total": 15,
+      "enacted": 14,
       "proposed": 0
     },
     "PA": {
@@ -303,7 +303,9 @@
       "butler-township-pa",
       "smithfield-township-pa",
       "west-whiteland-township-pa",
-      "scott-county-ky"
+      "scott-county-ky",
+      "plainfield-il",
+      "lowndes-county-al"
     ],
     "90": [
       "bloomington-il",
@@ -366,7 +368,9 @@
       "smithfield-township-pa",
       "west-whiteland-township-pa",
       "dickinson-county-ia",
-      "scott-county-ky"
+      "scott-county-ky",
+      "plainfield-il",
+      "lowndes-county-al"
     ]
   }
 }

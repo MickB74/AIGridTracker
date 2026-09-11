@@ -1050,6 +1050,135 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
+    # ── Batch 4 deep dive — OR, AL, IL, OK — 2026-09-11 ─────────────────
+    ("OR", 6, "Andrea Salinas"): {
+        "lean": "guardrails",
+        "summary": "Introduced the Data Center Community Reinvestment Act to "
+                   "tax data center electricity use at 1 cent/kWh and reinvest "
+                   "$1.76B/year into housing, conservation, clean energy, and "
+                   "infrastructure",
+        "items": [
+            {"what": "Introduced Data Center Community Reinvestment Act "
+                     "establishing 1-cent-per-kWh excise tax on data center "
+                     "electricity consumption (>1 MW capacity), directing "
+                     "$1.76B/year to Land and Water Conservation Fund, Housing "
+                     "Trust Fund, Superfund, Highway Trust Fund, and Energy "
+                     "Technology Trust Fund",
+             "date": "2026-08-14",
+             "source": "https://salinas.house.gov/media/press-releases/rep-salinas-introduces-bill-tax-data-centers-reinvest-housing-conservation-and"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("OR", 2, "Cliff Bentz"): {
+        "lean": "accelerate",
+        "summary": "Sponsored H.R. 655 to transfer 150 acres of Mt. Hood "
+                   "National Forest land to The Dalles to expand water "
+                   "reservoir capacity, which critics say primarily benefits "
+                   "Google's data centers that use 40% of the city's water",
+        "items": [
+            {"what": "Sponsored and passed H.R. 655 (The Dalles Watershed "
+                     "Development Act) through the House, transferring 150 "
+                     "acres from Mt. Hood National Forest to The Dalles to "
+                     "triple reservoir capacity; said he did not ask the city "
+                     "how the water would be used",
+             "date": "2025-12-09",
+             "source": "https://bentz.house.gov/media/press-releases/congressman-bentz-s-bill-to-expand-the-city-of-the-dalles-water-passed-in-us-house-of-representatives"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("OR", 4, "Val Hoyle"): {
+        "lean": "mixed",
+        "summary": "Endorsed by pro-AI industry super PAC Leading the Future; "
+                   "initially distanced herself saying AI must be regulated, "
+                   "then backtracked to support industry engagement with "
+                   "worker protections",
+        "items": [
+            {"what": "Endorsed by Leading the Future (pro-AI industry super "
+                     "PAC); initially distanced herself saying 'AI must be "
+                     "regulated so that it does not harm labor or people,' "
+                     "then revised position to support engagement with "
+                     "industry while advocating federal regulations and "
+                     "worker protections",
+             "date": "2026-05-08",
+             "source": "https://www.transformernews.ai/p/an-oregon-congresswoman-distanced-val-hoyle"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("AL", 7, "Terri Sewell"): {
+        "lean": "guardrails",
+        "summary": "Cosponsored the AI Data Center Moratorium Act (HR 9442) "
+                   "calling for a pause on new data center construction until "
+                   "federal standards protect communities",
+        "items": [
+            {"what": "Cosponsored AI Data Center Moratorium Act (HR 9442) to "
+                     "temporarily halt data center construction until federal "
+                     "guardrails are established; said 'Responsible innovation "
+                     "and community protection are not competing goals'",
+             "date": "2026-07-22",
+             "source": "https://aldailynews.com/sewell-wants-to-stop-new-data-centers-until-guardrails-are-implemented/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("AL", 2, "Shomari Figures"): {
+        "lean": "guardrails",
+        "summary": "Sided with Lowndes County residents opposing a proposed "
+                   "1,050-acre data center, demanding community consent for "
+                   "data center siting",
+        "items": [
+            {"what": "Statement at Lowndes County event opposing proposed "
+                     "data center: 'I'm with the people of Lowndes County'; "
+                     "demands community consent for data center siting",
+             "date": "2026-08-01",
+             "source": "https://www.alabamagazette.com/story/2026/08/01/news/where-alabamas-major-public-officials-stand-on-hyperscale-ai-data-centers/12100.html"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("IL", 6, "Sean Casten"): {
+        "lean": "guardrails",
+        "summary": "Co-led the Energy Bills Relief Act requiring data centers "
+                   "to pay their own energy infrastructure costs rather than "
+                   "passing expenses to residential ratepayers",
+        "items": [
+            {"what": "Co-introduced the Energy Bills Relief Act with Rep. "
+                     "Mike Levin, requiring data centers to pay their own "
+                     "energy infrastructure costs",
+             "date": "2026-03-18",
+             "source": "https://casten.house.gov/media/press-releases/ebra"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("OK", 5, "Stephanie Bice"): {
+        "lean": "mixed",
+        "summary": "Acknowledged data center benefits but emphasized local "
+                   "communities must have a voice; applauded state ratepayer "
+                   "protection law",
+        "items": [
+            {"what": "Statement responding to President's comments on data "
+                     "centers: 'it is vital that local communities have a "
+                     "voice in the decisions on proposed data centers'; "
+                     "applauded Oklahoma legislature for passing ratepayer "
+                     "protection and groundwater laws",
+             "date": "2026-08-31",
+             "source": "https://kfor.com/news/local/president-comments-on-data-centers-in-usa/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("OK", 2, "Josh Brecheen"): {
+        "lean": "guardrails",
+        "summary": "Co-sponsors HR 9019 requiring DOE to report on data "
+                   "center electricity and water usage; told town hall that "
+                   "operators must not drive up electricity costs",
+        "items": [
+            {"what": "Town hall statement that data center operators 'have to "
+                     "make sure that they are not driving up people's "
+                     "electricity costs'; co-sponsors HR 9019 requiring "
+                     "Secretary of Energy to report on data center electricity "
+                     "and water usage",
+             "date": "2026-08-27",
+             "source": "https://www.kjrh.com/news/local-news/brecheen-gives-views-on-data-centers-smelter-election-denial-in-mcalester"},
+        ],
+        "as_of": "2026-09-11",
+    },
 }
 
 
