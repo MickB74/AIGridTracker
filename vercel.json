@@ -1404,16 +1404,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/st-charles-parish-la",
-      "destination": "/states/louisiana",
-      "permanent": true
-    },
-    {
-      "source": "/communities/st-charles-parish-la.html",
-      "destination": "/states/louisiana",
-      "permanent": true
-    },
-    {
       "source": "/communities/sterling-va",
       "destination": "/states/virginia",
       "permanent": true

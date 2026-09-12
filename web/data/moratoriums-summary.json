@@ -3,11 +3,11 @@
   "generated": "2026-09-12",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 835,
+  "count": 849,
   "states": 48,
-  "enacted": 677,
-  "proposed": 87,
-  "official_sourced": 65,
+  "enacted": 684,
+  "proposed": 89,
+  "official_sourced": 64,
   "by_state": {
     "CO": {
       "total": 17,
@@ -45,8 +45,8 @@
       "proposed": 2
     },
     "RI": {
-      "total": 1,
-      "enacted": 1,
+      "total": 3,
+      "enacted": 3,
       "proposed": 0
     },
     "MI": {
@@ -205,17 +205,17 @@
       "proposed": 2
     },
     "MA": {
-      "total": 1,
+      "total": 8,
+      "enacted": 5,
+      "proposed": 2
+    },
+    "LA": {
+      "total": 3,
       "enacted": 1,
       "proposed": 0
     },
-    "LA": {
-      "total": 1,
-      "enacted": 0,
-      "proposed": 0
-    },
     "ND": {
-      "total": 1,
+      "total": 4,
       "enacted": 1,
       "proposed": 0
     },
@@ -372,7 +372,8 @@
       "el-dorado-ks",
       "brunswick-me",
       "scarborough-me",
-      "westbrook-me"
+      "westbrook-me",
+      "barnes-county-nd"
     ]
   }
 }

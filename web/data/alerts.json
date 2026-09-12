@@ -4,7 +4,7 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
-  "count": 85,
+  "count": 86,
   "alerts": [
     {
       "id": "mora-GA-covington-2026-07-19",
@@ -771,6 +771,19 @@
       "title": "Meridian Township, MI: data center moratorium expires in 68 days",
       "body": "The documented term ends 2026-11-19. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.wkar.org/wkar-news/2026-05-28/meridian-township-is-officially-putting-a-pause-on-any-data-centers-that-might-come-to-town",
+      "verified": true
+    },
+    {
+      "id": "mora-ND-barnes-county-2026-11-19",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Barnes County",
+      "state": "ND",
+      "expires": "2026-11-19",
+      "days_left": 68,
+      "title": "Barnes County, ND: data center moratorium expires in 68 days",
+      "body": "The documented term ends 2026-11-19. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.valleynewslive.com/2026/05/19/barnes-county-puts-pause-data-centers-amid-resident-concerns/",
       "verified": true
     },
     {

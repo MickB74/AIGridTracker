@@ -1,4 +1,8 @@
 {
+  "agawam-ma": {
+    "effective_status": "Enacted",
+    "expires": "2027-06-03"
+  },
   "alamance-county-nc": {
     "effective_status": "Enacted",
     "expires": "2027-08-17"
@@ -158,6 +162,10 @@
   "bannock-county-id": {
     "effective_status": "Enacted",
     "expires": "2027-01-26"
+  },
+  "barnes-county-nd": {
+    "effective_status": "Enacted",
+    "expires": "2026-11-19"
   },
   "bass-river-township-nj": {
     "effective_status": "Enacted",
@@ -470,6 +478,10 @@
   "champaign-county-il": {
     "effective_status": "Enacted",
     "expires": "2027-04-23"
+  },
+  "charlestown-ri": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "charlotte-nc": {
     "effective_status": "Enacted",
@@ -1323,6 +1335,10 @@
     "effective_status": "Enacted",
     "expires": "2027-06-16"
   },
+  "holyoke-ma": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "homewood-al": {
     "effective_status": "Enacted",
     "expires": "2027-06-22"
@@ -1433,7 +1449,7 @@
   },
   "jackson-ms": {
     "effective_status": "Enacted",
-    "expires": null
+    "expires": "2027-02-12"
   },
   "jackson-township-franklin-co-oh": {
     "effective_status": "Enacted",
@@ -1947,6 +1963,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "mercer-county-nd": {
+    "effective_status": "Rescinded",
+    "expires": null
+  },
   "meridian-township-mi": {
     "effective_status": "Enacted",
     "expires": "2026-11-19"
@@ -2072,7 +2092,7 @@
     "expires": "2028-05-20"
   },
   "morton-county-nd": {
-    "effective_status": "Enacted",
+    "effective_status": "Rescinded",
     "expires": null
   },
   "moses-lake-wa": {
@@ -2151,6 +2171,10 @@
     "effective_status": "Proposed",
     "expires": null
   },
+  "new-orleans-la": {
+    "effective_status": "Enacted",
+    "expires": "2027-01-28"
+  },
   "new-york-s10642-a11560-ny": {
     "effective_status": "Proposed",
     "expires": null
@@ -2211,6 +2235,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "northampton-ma": {
+    "effective_status": "Proposed",
+    "expires": null
+  },
   "northville-mi": {
     "effective_status": "Enacted",
     "expires": "2027-01-06"
@@ -2265,6 +2293,10 @@
   },
   "oldmans-township-nj": {
     "effective_status": "Enacted",
+    "expires": null
+  },
+  "oliver-county-nd": {
+    "effective_status": "Rescinded",
     "expires": null
   },
   "olyphant-pa": {
@@ -2454,6 +2486,10 @@
   "plymouth-county-ia": {
     "effective_status": "Enacted",
     "expires": "2027-06-16"
+  },
+  "plymouth-ma": {
+    "effective_status": "Proposed",
+    "expires": null
   },
   "polk-county-wi": {
     "effective_status": "Proposed",
@@ -2731,6 +2767,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "shutesbury-ma": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "sierra-county-nm": {
     "effective_status": "Enacted",
     "expires": "2028-01-22"
@@ -2787,6 +2827,10 @@
     "effective_status": "Rejected",
     "expires": null
   },
+  "southbridge-ma": {
+    "effective_status": "Under Review",
+    "expires": null
+  },
   "spartanburg-county-sc": {
     "effective_status": "Enacted",
     "expires": "2027-06-22"
@@ -2834,6 +2878,10 @@
   "st-charles-county-mo": {
     "effective_status": "Enacted",
     "expires": "2027-01-13"
+  },
+  "st-charles-parish-la": {
+    "effective_status": "Rejected",
+    "expires": null
   },
   "st-croix-county-wi": {
     "effective_status": "Enacted",
@@ -3214,6 +3262,14 @@
   "westbrook-me": {
     "effective_status": "Enacted",
     "expires": "2026-11-28"
+  },
+  "westerly-ri": {
+    "effective_status": "Enacted",
+    "expires": "2027-07-27"
+  },
+  "westfield-ma": {
+    "effective_status": "Enacted",
+    "expires": "2027-07-06"
   },
   "westover-al": {
     "effective_status": "Enacted",

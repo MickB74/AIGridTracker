@@ -2,7 +2,7 @@
  "generated": "2026-09-12",
  "license": "CC BY 4.0",
  "note": "One row per cited item. kind=action is a bill, letter, hearing question or investigation; kind=statement is a quote, op-ed or campaign line. grade is the officials-scorecard grade (sitting officials only); lean summarises the cited items.",
- "count": 336,
+ "count": 345,
  "records": [
   {
    "chamber": "House",
@@ -173,6 +173,40 @@
    "lean": "guardrails",
    "as_of": "2026-09-11",
    "page": "https://aigridwatch.com/house-races#race-ks-3"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "LA",
+   "district": "1",
+   "name": "Steve Scalise",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "As Majority Leader, backed bringing the Ratepayer Protection Act to the House floor for a vote",
+   "date": "2026-09-10",
+   "source": "https://www.axios.com/2026/09/10/house-republicans-data-center-power-bills-ai",
+   "source_name": "",
+   "grade": "",
+   "lean": "accelerate",
+   "as_of": "2026-09-12",
+   "page": "https://aigridwatch.com/house-races#race-la-1"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "LA",
+   "district": "4",
+   "name": "Mike Johnson",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "As Speaker, brought the Ratepayer Protection Act (H.R. 9340) to the House floor for a vote — bipartisan bill requiring state utility regulators to consider rules making data centers cover costs of new power generation",
+   "date": "2026-09-10",
+   "source": "https://www.axios.com/2026/09/10/house-republicans-data-center-power-bills-ai",
+   "source_name": "",
+   "grade": "",
+   "lean": "mixed",
+   "as_of": "2026-09-12",
+   "page": "https://aigridwatch.com/house-races#race-la-4"
   },
   {
    "chamber": "House",
@@ -753,6 +787,23 @@
    "page": "https://aigridwatch.com/senators#sen-b001319"
   },
   {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "LA",
+   "district": "1",
+   "name": "Steve Scalise",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Suggested China was behind anti-data-center sentiment: 'We are investigating whether China is behind a lot of this misinformation, false information against data centers.' Claimed to be finding social media bots controlled by Beijing opposing data centers",
+   "date": "2026-09-04",
+   "source": "https://www.ms.now/rachel-maddow-show/maddowblog/data-centers-scalise-trump-republicans-china-conspiracy-theory-gop-elections-midterms",
+   "source_name": "",
+   "grade": "",
+   "lean": "accelerate",
+   "as_of": "2026-09-12",
+   "page": "https://aigridwatch.com/house-races#race-la-1"
+  },
+  {
    "chamber": "Senate",
    "role": "senator",
    "state": "OH",
@@ -785,6 +836,23 @@
    "lean": "mixed",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-j000312"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "LA",
+   "district": "1",
+   "name": "Steve Scalise",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Promoted data center benefits, citing Richland Parish Meta center teacher bonuses: 'They were able to give every single school teacher in that parish a $50,000 bonus.' Said decisions should remain at the local level",
+   "date": "2026-09-03",
+   "source": "https://www.moderntreatise.com/the-americas/2026/9/3/in-america-gop-under-pressure-to-pass-data-center-legislation-before-midterms",
+   "source_name": "",
+   "grade": "",
+   "lean": "accelerate",
+   "as_of": "2026-09-12",
+   "page": "https://aigridwatch.com/house-races#race-la-1"
   },
   {
    "chamber": "House",
@@ -1431,6 +1499,23 @@
    "lean": "mixed",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-g000608"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "LA",
+   "district": "4",
+   "name": "Mike Johnson",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Warned that 'a broad moratorium against data centers is kind of a dangerous prospect' and said 'We're in a race with China on that AI race'; campaigned against data center moratoriums in Michigan swing seat",
+   "date": "2026-08-18",
+   "source": "https://www.detroitnews.com/story/news/local/michigan/2026/08/18/johnson-warns-against-data-center-pause-stumping-in-michigan-swing-seat/91358562007/",
+   "source_name": "",
+   "grade": "",
+   "lean": "mixed",
+   "as_of": "2026-09-12",
+   "page": "https://aigridwatch.com/house-races#race-la-4"
   },
   {
    "chamber": "House",
@@ -2421,6 +2506,23 @@
   {
    "chamber": "House",
    "role": "candidate",
+   "state": "MA",
+   "district": "3",
+   "name": "Lori Trahan",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Supported passage of the Ratepayer Protection Act (H.R. 9340) and the Protecting Families from AI Data Center Energy Costs Act (H.R. 6529) during House Energy and Commerce Committee markup; stated people are 'already feeling it in their electric bill'",
+   "date": "2026-07-21",
+   "source": "https://trahan.house.gov/news/documentsingle.aspx?DocumentID=3815",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-12",
+   "page": "https://aigridwatch.com/house-races#race-ma-3"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
    "state": "OH",
    "district": "5",
    "name": "Bob Latta",
@@ -2485,6 +2587,23 @@
    "lean": "mixed",
    "as_of": "2026-09-11",
    "page": "https://aigridwatch.com/house-races#race-ga-8"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "MA",
+   "district": "7",
+   "name": "Ayanna Pressley",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Joined Reps. AOC, Summer Lee, and Justin Pearson in South Memphis for site tour and press conference at xAI data center facility, calling for data center oversight; met with residents reporting health impacts from methane gas turbines powering the facility",
+   "date": "2026-07-17",
+   "source": "https://www.localmemphis.com/video/news/local/us-reps-aoc-ayanna-pressley-and-summer-lee-join-rep-pearson-to-call-for-data-center-oversight/522-da7811da-261d-4d61-82bf-7a3abb74e29a",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-12",
+   "page": "https://aigridwatch.com/house-races#race-ma-7"
   },
   {
    "chamber": "Senate",
@@ -3454,6 +3573,23 @@
    "lean": "guardrails",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-w000779"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "ND",
+   "district": "AL",
+   "name": "Julie Fedorchak",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "At Energy Subcommittee hearing 'AI and the Grid,' pressed for fair cost allocation — 'those who drive the need for new energy infrastructure should pay for it.' Promoted FAIR Act (H.R. 6336) and High-Capacity Grid Act (H.R. 6633)",
+   "date": "2026-04-29",
+   "source": "https://fedorchak.house.gov/media/press-releases/fedorchak-presses-fair-cost-allocation-highlights-grid-solutions-energy",
+   "source_name": "",
+   "grade": "",
+   "lean": "mixed",
+   "as_of": "2026-09-12",
+   "page": "https://aigridwatch.com/house-races#race-nd-al"
   },
   {
    "chamber": "Senate",
@@ -5460,6 +5596,23 @@
    "lean": "accelerate",
    "as_of": "2026-09-11",
    "page": "https://aigridwatch.com/house-races#race-ky-2"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "ND",
+   "district": "AL",
+   "name": "Julie Fedorchak",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Launched AI and Energy Working Group; issued RFI on AI energy demands (100+ stakeholder responses). Framed as competitiveness vs China: 'we need everything we've got' for energy supply",
+   "date": "2025-03-01",
+   "source": "https://fedorchak.house.gov/media/press-releases/fedorchak-issues-request-information-address-ais-growing-energy-demands",
+   "source_name": "",
+   "grade": "",
+   "lean": "mixed",
+   "as_of": "2026-09-12",
+   "page": "https://aigridwatch.com/house-races#race-nd-al"
   },
   {
    "chamber": "Senate",

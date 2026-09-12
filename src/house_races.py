@@ -1955,6 +1955,108 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-12",
     },
+    # --- batch 8 (2026-09-12): MA, LA, RI, ND ---
+    ("MA", "3", "Lori Trahan"): {
+        "lean": "guardrails",
+        "summary": "Voted to advance Ratepayer Protection Act and Protecting "
+                   "Families from AI Data Center Energy Costs Act in E&C "
+                   "Committee markup",
+        "items": [
+            {"what": "Supported passage of the Ratepayer Protection Act "
+                     "(H.R. 9340) and the Protecting Families from AI Data "
+                     "Center Energy Costs Act (H.R. 6529) during House Energy "
+                     "and Commerce Committee markup; stated people are "
+                     "'already feeling it in their electric bill'",
+             "date": "2026-07-21",
+             "source": "https://trahan.house.gov/news/documentsingle.aspx?DocumentID=3815"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("MA", "7", "Ayanna Pressley"): {
+        "lean": "guardrails",
+        "summary": "Joined site tour and press conference at xAI Memphis "
+                   "facility calling for data center oversight",
+        "items": [
+            {"what": "Joined Reps. AOC, Summer Lee, and Justin Pearson in "
+                     "South Memphis for site tour and press conference at xAI "
+                     "data center facility, calling for data center oversight; "
+                     "met with residents reporting health impacts from methane "
+                     "gas turbines powering the facility",
+             "date": "2026-07-17",
+             "source": "https://www.localmemphis.com/video/news/local/us-reps-aoc-ayanna-pressley-and-summer-lee-join-rep-pearson-to-call-for-data-center-oversight/522-da7811da-261d-4d61-82bf-7a3abb74e29a"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("LA", "1", "Steve Scalise"): {
+        "lean": "accelerate",
+        "summary": "Promotes data center benefits; suggested China behind "
+                   "anti-DC sentiment; backed Ratepayer Protection Act floor "
+                   "vote as Majority Leader",
+        "items": [
+            {"what": "Promoted data center benefits, citing Richland Parish "
+                     "Meta center teacher bonuses: 'They were able to give "
+                     "every single school teacher in that parish a $50,000 "
+                     "bonus.' Said decisions should remain at the local level",
+             "date": "2026-09-03",
+             "source": "https://www.moderntreatise.com/the-americas/2026/9/3/in-america-gop-under-pressure-to-pass-data-center-legislation-before-midterms"},
+            {"what": "Suggested China was behind anti-data-center sentiment: "
+                     "'We are investigating whether China is behind a lot of "
+                     "this misinformation, false information against data "
+                     "centers.' Claimed to be finding social media bots "
+                     "controlled by Beijing opposing data centers",
+             "date": "2026-09-04",
+             "source": "https://www.ms.now/rachel-maddow-show/maddowblog/data-centers-scalise-trump-republicans-china-conspiracy-theory-gop-elections-midterms"},
+            {"what": "As Majority Leader, backed bringing the Ratepayer "
+                     "Protection Act to the House floor for a vote",
+             "date": "2026-09-10",
+             "source": "https://www.axios.com/2026/09/10/house-republicans-data-center-power-bills-ai"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("LA", "4", "Mike Johnson"): {
+        "lean": "mixed",
+        "summary": "Opposes moratoriums and frames DC buildout as AI race vs "
+                   "China; but also scheduled Ratepayer Protection Act for "
+                   "House floor vote",
+        "items": [
+            {"what": "Warned that 'a broad moratorium against data centers is "
+                     "kind of a dangerous prospect' and said 'We're in a race "
+                     "with China on that AI race'; campaigned against data "
+                     "center moratoriums in Michigan swing seat",
+             "date": "2026-08-18",
+             "source": "https://www.detroitnews.com/story/news/local/michigan/2026/08/18/johnson-warns-against-data-center-pause-stumping-in-michigan-swing-seat/91358562007/"},
+            {"what": "As Speaker, brought the Ratepayer Protection Act "
+                     "(H.R. 9340) to the House floor for a vote — bipartisan "
+                     "bill requiring state utility regulators to consider "
+                     "rules making data centers cover costs of new power "
+                     "generation",
+             "date": "2026-09-10",
+             "source": "https://www.axios.com/2026/09/10/house-republicans-data-center-power-bills-ai"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("ND", "AL", "Julie Fedorchak"): {
+        "lean": "mixed",
+        "summary": "Pro-AI/DC buildout framing (national security vs China) "
+                   "but insists data centers pay their own infrastructure "
+                   "costs",
+        "items": [
+            {"what": "Launched AI and Energy Working Group; issued RFI on AI "
+                     "energy demands (100+ stakeholder responses). Framed as "
+                     "competitiveness vs China: 'we need everything we've "
+                     "got' for energy supply",
+             "date": "2025-03-01",
+             "source": "https://fedorchak.house.gov/media/press-releases/fedorchak-issues-request-information-address-ais-growing-energy-demands"},
+            {"what": "At Energy Subcommittee hearing 'AI and the Grid,' "
+                     "pressed for fair cost allocation — 'those who drive the "
+                     "need for new energy infrastructure should pay for it.' "
+                     "Promoted FAIR Act (H.R. 6336) and High-Capacity Grid "
+                     "Act (H.R. 6633)",
+             "date": "2026-04-29",
+             "source": "https://fedorchak.house.gov/media/press-releases/fedorchak-presses-fair-cost-allocation-highlights-grid-solutions-energy"},
+        ],
+        "as_of": "2026-09-12",
+    },
     ("AK", "AL", "Nick Begich III"): {
         "lean": "accelerate",
         "summary": "Introduced DATA Act allowing data centers to operate on "

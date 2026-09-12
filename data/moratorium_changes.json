@@ -3421,5 +3421,117 @@
     "locality": "Fort Peck Reservation, MT",
     "kind": "added",
     "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "jackson-ms",
+    "locality": "Jackson, MS",
+    "kind": "extended",
+    "detail": "Now runs to 2027-02-12"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "morton-county-nd",
+    "locality": "Morton County, ND",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Rescinded"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "holyoke-ma",
+    "locality": "Holyoke, MA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "westfield-ma",
+    "locality": "Westfield, MA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "shutesbury-ma",
+    "locality": "Shutesbury, MA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "agawam-ma",
+    "locality": "Agawam, MA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "plymouth-ma",
+    "locality": "Plymouth, MA",
+    "kind": "added",
+    "detail": "Added as Proposed"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "northampton-ma",
+    "locality": "Northampton, MA",
+    "kind": "added",
+    "detail": "Added as Proposed"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "southbridge-ma",
+    "locality": "Southbridge, MA",
+    "kind": "added",
+    "detail": "Added as Under Review"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "new-orleans-la",
+    "locality": "New Orleans, LA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "st-charles-parish-la",
+    "locality": "St. Charles Parish, LA",
+    "kind": "added",
+    "detail": "Added as Rejected"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "charlestown-ri",
+    "locality": "Charlestown, RI",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "westerly-ri",
+    "locality": "Westerly, RI",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "oliver-county-nd",
+    "locality": "Oliver County, ND",
+    "kind": "added",
+    "detail": "Added as Rescinded"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "mercer-county-nd",
+    "locality": "Mercer County, ND",
+    "kind": "added",
+    "detail": "Added as Rescinded"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "barnes-county-nd",
+    "locality": "Barnes County, ND",
+    "kind": "added",
+    "detail": "Added as Enacted"
   }
 ]
