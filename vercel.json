@@ -789,26 +789,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/gilroy-ca",
-      "destination": "/states/california",
-      "permanent": true
-    },
-    {
-      "source": "/communities/gilroy-ca.html",
-      "destination": "/states/california",
-      "permanent": true
-    },
-    {
-      "source": "/communities/glassboro-nj",
-      "destination": "/states/new-jersey",
-      "permanent": true
-    },
-    {
-      "source": "/communities/glassboro-nj.html",
-      "destination": "/states/new-jersey",
-      "permanent": true
-    },
-    {
       "source": "/communities/goochland-county-va",
       "destination": "/states/virginia",
       "permanent": true

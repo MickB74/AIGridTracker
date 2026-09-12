@@ -1,6 +1,6 @@
 # AI GridWatch — full text for answer engines
 
-Generated 2026-09-11. Site: https://aigridwatch.com. Data license: CC BY 4.0 with
+Generated 2026-09-12. Site: https://aigridwatch.com. Data license: CC BY 4.0 with
 attribution to "AI GridWatch (https://aigridwatch.com)". Rebuilt daily; every number below
 was true on the date above.
 
@@ -11,13 +11,13 @@ sourced registry of moratoriums, bans and pushback actions; project dossiers;
 news; analysis; and free negotiation tools for communities. It is not
 anti-development. Every claim on the site links to the document it came from.
 
-## Moratorium tracker — headline numbers (as of 2026-09-11)
+## Moratorium tracker — headline numbers (as of 2026-09-12)
 
-- 826 data center moratoriums and pushback actions tracked across
+- 835 data center moratoriums and pushback actions tracked across
   48 states.
-- 669 in force today. 87 proposed. The remainder are expired,
+- 677 in force today. 87 proposed. The remainder are expired,
   rejected, vetoed or rescinded.
-- 826 rows carry a primary source URL and a verification date.
+- 835 rows carry a primary source URL and a verification date.
 - Tracker: https://aigridwatch.com/moratoriums · Methodology: https://aigridwatch.com/moratoriums-methodology
 - Data: https://aigridwatch.com/data/moratoriums.json · https://aigridwatch.com/data/moratoriums.csv
 - Change log (RSS): https://aigridwatch.com/changes.xml · Expiring pauses: https://aigridwatch.com/alerts.xml
@@ -40,26 +40,26 @@ anti-development. Every claim on the site links to the document it came from.
 
 ## Moratoriums by state (in force / proposed / tracked)
 
-- New Jersey: 65 in force, 7 proposed, 72 tracked — https://aigridwatch.com/states/new-jersey
+- New Jersey: 66 in force, 7 proposed, 73 tracked — https://aigridwatch.com/states/new-jersey
 - Ohio: 56 in force, 1 proposed, 62 tracked — https://aigridwatch.com/states/ohio
-- Michigan: 45 in force, 3 proposed, 64 tracked — https://aigridwatch.com/states/michigan
+- Michigan: 44 in force, 3 proposed, 64 tracked — https://aigridwatch.com/states/michigan
 - Georgia: 36 in force, 2 proposed, 46 tracked — https://aigridwatch.com/states/georgia
 - North Carolina: 36 in force, 2 proposed, 44 tracked — https://aigridwatch.com/states/north-carolina
 - Wisconsin: 29 in force, 2 proposed, 31 tracked — https://aigridwatch.com/states/wisconsin
 - Kentucky: 29 in force, 0 proposed, 29 tracked — https://aigridwatch.com/states/kentucky
 - Florida: 26 in force, 10 proposed, 39 tracked — https://aigridwatch.com/states/florida
 - Tennessee: 25 in force, 2 proposed, 27 tracked — https://aigridwatch.com/states/tennessee
+- Indiana: 21 in force, 2 proposed, 23 tracked — https://aigridwatch.com/states/indiana
 - California: 20 in force, 2 proposed, 23 tracked — https://aigridwatch.com/states/california
-- Indiana: 20 in force, 2 proposed, 22 tracked — https://aigridwatch.com/states/indiana
+- Washington: 19 in force, 0 proposed, 19 tracked — https://aigridwatch.com/states/washington
 - Iowa: 18 in force, 2 proposed, 21 tracked — https://aigridwatch.com/states/iowa
 - Maryland: 18 in force, 3 proposed, 21 tracked — https://aigridwatch.com/states/maryland
-- Washington: 18 in force, 0 proposed, 18 tracked — https://aigridwatch.com/states/washington
-- Minnesota: 17 in force, 0 proposed, 17 tracked — https://aigridwatch.com/states/minnesota
+- Minnesota: 18 in force, 0 proposed, 18 tracked — https://aigridwatch.com/states/minnesota
+- Missouri: 17 in force, 0 proposed, 18 tracked — https://aigridwatch.com/states/missouri
 - Nebraska: 16 in force, 2 proposed, 19 tracked — https://aigridwatch.com/states/nebraska
-- Missouri: 16 in force, 0 proposed, 17 tracked — https://aigridwatch.com/states/missouri
+- Pennsylvania: 15 in force, 2 proposed, 19 tracked — https://aigridwatch.com/states/pennsylvania
 - Kansas: 14 in force, 3 proposed, 19 tracked — https://aigridwatch.com/states/kansas
 - Illinois: 14 in force, 3 proposed, 18 tracked — https://aigridwatch.com/states/illinois
-- Pennsylvania: 14 in force, 2 proposed, 18 tracked — https://aigridwatch.com/states/pennsylvania
 - Alabama: 14 in force, 0 proposed, 15 tracked — https://aigridwatch.com/states/alabama
 - New York: 13 in force, 3 proposed, 16 tracked — https://aigridwatch.com/states/new-york
 - Oklahoma: 13 in force, 0 proposed, 14 tracked — https://aigridwatch.com/states/oklahoma
@@ -75,12 +75,12 @@ anti-development. Every claim on the site links to the document it came from.
 - New Hampshire: 3 in force, 1 proposed, 7 tracked — https://aigridwatch.com/states/new-hampshire
 - Oregon: 3 in force, 4 proposed, 7 tracked — https://aigridwatch.com/states/oregon
 - Connecticut: 3 in force, 1 proposed, 5 tracked — https://aigridwatch.com/states/connecticut
+- Montana: 3 in force, 1 proposed, 4 tracked — https://aigridwatch.com/states/montana
 - Delaware: 2 in force, 1 proposed, 4 tracked — https://aigridwatch.com/states/delaware
+- Arizona: 2 in force, 1 proposed, 3 tracked — https://aigridwatch.com/states/arizona
 - Idaho: 2 in force, 1 proposed, 3 tracked — https://aigridwatch.com/states/idaho
 - South Dakota: 1 in force, 0 proposed, 3 tracked — https://aigridwatch.com/states/south-dakota
 - Alaska: 1 in force, 1 proposed, 2 tracked — https://aigridwatch.com/states/alaska
-- Arizona: 1 in force, 1 proposed, 2 tracked — https://aigridwatch.com/states/arizona
-- Montana: 1 in force, 1 proposed, 2 tracked — https://aigridwatch.com/states/montana
 - Massachusetts: 1 in force, 0 proposed, 1 tracked — https://aigridwatch.com/states/massachusetts
 - Mississippi: 1 in force, 0 proposed, 1 tracked — https://aigridwatch.com/states/mississippi
 - North Dakota: 1 in force, 0 proposed, 1 tracked — https://aigridwatch.com/states/north-dakota

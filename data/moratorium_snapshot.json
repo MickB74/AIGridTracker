@@ -323,6 +323,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "buffalo-township-pa": {
+    "effective_status": "Enacted",
+    "expires": "2027-02-08"
+  },
   "bullitt-county-ky": {
     "effective_status": "Enacted",
     "expires": "2027-07-16"
@@ -543,6 +547,10 @@
     "effective_status": "Enacted",
     "expires": "2027-05-26"
   },
+  "city-of-missoula-mt": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "city-of-st-charles-mo": {
     "effective_status": "Enacted",
     "expires": null
@@ -560,6 +568,10 @@
     "expires": null
   },
   "clarke-county-ia": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "clarksville-in": {
     "effective_status": "Enacted",
     "expires": null
   },
@@ -1003,6 +1015,10 @@
     "effective_status": "Enacted",
     "expires": "2026-12-16"
   },
+  "fort-peck-reservation-mt": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "fort-worth-tx": {
     "effective_status": "Proposed",
     "expires": null
@@ -1018,6 +1034,10 @@
   "frederick-county-md": {
     "effective_status": "Enacted",
     "expires": "2026-12-31"
+  },
+  "freeborn-county-mn": {
+    "effective_status": "Enacted",
+    "expires": "2027-08-19"
   },
   "frelinghuysen-township-nj": {
     "effective_status": "Enacted",
@@ -1082,6 +1102,10 @@
   "girard-oh": {
     "effective_status": "Enacted",
     "expires": "2027-07-13"
+  },
+  "glassboro-nj": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "gordon-county-ga": {
     "effective_status": "Enacted",
@@ -1330,6 +1354,10 @@
   "howland-township-oh": {
     "effective_status": "Enacted",
     "expires": "2026-12-10"
+  },
+  "hualapai-indian-reservation-az": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "hubbard-oh": {
     "effective_status": "Enacted",
@@ -2307,6 +2335,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "palmyra-mo": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "parma-township-mi": {
     "effective_status": "Enacted",
     "expires": null
@@ -2919,6 +2951,10 @@
     "effective_status": "Proposed",
     "expires": null
   },
+  "thurston-county-wa": {
+    "effective_status": "Enacted",
+    "expires": "2027-08-20"
+  },
   "tiffin-oh": {
     "effective_status": "Enacted",
     "expires": "2027-04-20"
@@ -3232,8 +3268,8 @@
     "expires": null
   },
   "wixom-mi": {
-    "effective_status": "Enacted",
-    "expires": "2026-09-24"
+    "effective_status": "Expired",
+    "expires": "2026-08-26"
   },
   "woodburn-or": {
     "effective_status": "Proposed",

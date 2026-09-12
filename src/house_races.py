@@ -1051,7 +1051,7 @@ AI_RECORDS = {
         "as_of": "2026-09-11",
     },
     # ── Batch 4 deep dive — OR, AL, IL, OK — 2026-09-11 ─────────────────
-    ("OR", 6, "Andrea Salinas"): {
+    ("OR", "6", "Andrea Salinas"): {
         "lean": "guardrails",
         "summary": "Introduced the Data Center Community Reinvestment Act to "
                    "tax data center electricity use at 1 cent/kWh and reinvest "
@@ -1069,7 +1069,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("OR", 2, "Cliff Bentz"): {
+    ("OR", "2", "Cliff Bentz"): {
         "lean": "accelerate",
         "summary": "Sponsored H.R. 655 to transfer 150 acres of Mt. Hood "
                    "National Forest land to The Dalles to expand water "
@@ -1086,7 +1086,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("OR", 4, "Val Hoyle"): {
+    ("OR", "4", "Val Hoyle"): {
         "lean": "mixed",
         "summary": "Endorsed by pro-AI industry super PAC Leading the Future; "
                    "initially distanced herself saying AI must be regulated, "
@@ -1104,7 +1104,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("AL", 7, "Terri Sewell"): {
+    ("AL", "7", "Terri Sewell"): {
         "lean": "guardrails",
         "summary": "Cosponsored the AI Data Center Moratorium Act (HR 9442) "
                    "calling for a pause on new data center construction until "
@@ -1119,7 +1119,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("AL", 2, "Shomari Figures"): {
+    ("AL", "2", "Shomari Figures"): {
         "lean": "guardrails",
         "summary": "Sided with Lowndes County residents opposing a proposed "
                    "1,050-acre data center, demanding community consent for "
@@ -1133,7 +1133,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("IL", 6, "Sean Casten"): {
+    ("IL", "6", "Sean Casten"): {
         "lean": "guardrails",
         "summary": "Co-led the Energy Bills Relief Act requiring data centers "
                    "to pay their own energy infrastructure costs rather than "
@@ -1147,7 +1147,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("OK", 5, "Stephanie Bice"): {
+    ("OK", "5", "Stephanie Bice"): {
         "lean": "mixed",
         "summary": "Acknowledged data center benefits but emphasized local "
                    "communities must have a voice; applauded state ratepayer "
@@ -1163,7 +1163,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("OK", 2, "Josh Brecheen"): {
+    ("OK", "2", "Josh Brecheen"): {
         "lean": "guardrails",
         "summary": "Co-sponsors HR 9019 requiring DOE to report on data "
                    "center electricity and water usage; told town hall that "
@@ -1180,7 +1180,7 @@ AI_RECORDS = {
         "as_of": "2026-09-11",
     },
     # ── Batch 5 deep dive — KS, AR, ME, UT, NH — 2026-09-11 ─────────────
-    ("KS", 3, "Sharice Davids"): {
+    ("KS", "3", "Sharice Davids"): {
         "lean": "guardrails",
         "summary": "No data center should move forward if it raises costs, "
                    "wastes water, or shifts the burden onto Kansas communities",
@@ -1194,7 +1194,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("KS", 1, "Lauren Reinhold"): {
+    ("KS", "1", "Lauren Reinhold"): {
         "lean": "guardrails",
         "summary": "Supports community-approved projects with transparency, "
                    "opposes tax breaks for data centers",
@@ -1207,7 +1207,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("KS", 2, "Derek Schmidt"): {
+    ("KS", "2", "Derek Schmidt"): {
         "lean": "mixed",
         "summary": "Conditionally supportive; advises communities that "
                    "developers should not get tax abatements and should use "
@@ -1222,7 +1222,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("AR", 4, "Bruce Westerman"): {
+    ("AR", "4", "Bruce Westerman"): {
         "lean": "accelerate",
         "summary": "Frames data centers as crucial for US-China AI "
                    "competition; downplays environmental concerns",
@@ -1236,7 +1236,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("ME", 2, "Paul LePage"): {
+    ("ME", "2", "Paul LePage"): {
         "lean": "accelerate",
         "summary": "Self-described 'big, big fan' of data centers; says they "
                    "create jobs and should generate their own power",
@@ -1249,7 +1249,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("ME", 2, "Matthew Dunlap"): {
+    ("ME", "2", "Matthew Dunlap"): {
         "lean": "guardrails",
         "summary": "Favors benchmarks for worker benefits, ratepayer "
                    "protection, and community benefits from data centers",
@@ -1263,7 +1263,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("ME", 1, "Chellie Pingree"): {
+    ("ME", "1", "Chellie Pingree"): {
         "lean": "guardrails",
         "summary": "Believes Congress should assess environmental and "
                    "consumer impacts and put strong protections in place",
@@ -1277,7 +1277,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("UT", 1, "Ben McAdams"): {
+    ("UT", "1", "Ben McAdams"): {
         "lean": "guardrails",
         "summary": "Opposes Box Elder Stratos project; calls for water "
                    "stewardship and environmental standards",
@@ -1296,7 +1296,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("UT", 2, "Blake Moore"): {
+    ("UT", "2", "Blake Moore"): {
         "lean": "mixed",
         "summary": "Introduced bill requiring study of AI data center "
                    "impacts in rural America while supporting Utah as tech hub",
@@ -1311,7 +1311,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NH", 1, "Stefany Shaheen"): {
+    ("NH", "1", "Stefany Shaheen"): {
         "lean": "guardrails",
         "summary": "Strongly supports moratorium; municipalities not yet "
                    "prepared for data center complexity",
@@ -1325,7 +1325,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NH", 2, "Maggie Goodlander"): {
+    ("NH", "2", "Maggie Goodlander"): {
         "lean": "guardrails",
         "summary": "Communities must have ultimate say in data center siting; "
                    "corporations must bear costs, not taxpayers",
@@ -1339,7 +1339,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NH", 2, "Paige Beauchemin"): {
+    ("NH", "2", "Paige Beauchemin"): {
         "lean": "guardrails",
         "summary": "Called to stop data center construction until regulatory "
                    "legislation is introduced",
@@ -1353,7 +1353,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NH", 2, "Lily Tang Williams"): {
+    ("NH", "2", "Lily Tang Williams"): {
         "lean": "mixed",
         "summary": "Opposes government subsidies but supports private data "
                    "center development with local control",
@@ -1370,7 +1370,7 @@ AI_RECORDS = {
     },
 
     # ── Batch 6 deep dive — CT, NV, NM, DE, NE — 2026-09-11 ─────────────
-    ("CT", 1, "Luke Bronin"): {
+    ("CT", "1", "Luke Bronin"): {
         "lean": "guardrails",
         "summary": "Campaigned on sensible AI regulation and guardrails; "
                    "called for data center developers to pay their fair share",
@@ -1388,7 +1388,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NV", 1, "Dina Titus"): {
+    ("NV", "1", "Dina Titus"): {
         "lean": "guardrails",
         "summary": "Multiple actions demanding BLM transparency on data "
                    "center permits, called for tax abatement freeze, and "
@@ -1414,7 +1414,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NV", 1, "Carrie Buck"): {
+    ("NV", "1", "Carrie Buck"): {
         "lean": "accelerate",
         "summary": "Wants to make it easier to build AI energy and "
                    "infrastructure",
@@ -1427,7 +1427,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NV", 2, "Teresa Benitez-Thompson"): {
+    ("NV", "2", "Teresa Benitez-Thompson"): {
         "lean": "guardrails",
         "summary": "Supports local control over data center regulation; "
                    "opposes federal preemption of state/local authority",
@@ -1440,7 +1440,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NV", 2, "David Flippo"): {
+    ("NV", "2", "David Flippo"): {
         "lean": "mixed",
         "summary": "Opposes tax abatements for data centers; supports local "
                    "decision-making but would support federal involvement for "
@@ -1455,7 +1455,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NV", 3, "Susie Lee"): {
+    ("NV", "3", "Susie Lee"): {
         "lean": "mixed",
         "summary": "Toured Switch AI factory approvingly; opposes federal "
                    "pause on development but supports disclosure requirements",
@@ -1474,7 +1474,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NV", 3, "Martin O'Donnell"): {
+    ("NV", "3", "Martin O'Donnell"): {
         "lean": "guardrails",
         "summary": "Supports legislation ensuring local communities are not "
                    "negatively affected; backs water usage disclosure",
@@ -1487,7 +1487,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NV", 4, "Steven Horsford"): {
+    ("NV", "4", "Steven Horsford"): {
         "lean": "mixed",
         "summary": "Partners with OpenAI on AI workforce training and "
                    "opposes moratorium but supports disclosure requirements "
@@ -1513,7 +1513,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NV", 4, "Cody Whipple"): {
+    ("NV", "4", "Cody Whipple"): {
         "lean": "guardrails",
         "summary": "Supports common-sense frameworks safeguarding natural "
                    "resources; calls data centers a national security issue",
@@ -1528,7 +1528,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NM", 1, "Melanie Stansbury"): {
+    ("NM", "1", "Melanie Stansbury"): {
         "lean": "guardrails",
         "summary": "Demanded water accountability for Project Jupiter from "
                    "five NM state officials",
@@ -1543,7 +1543,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NM", 2, "Gabe Vasquez"): {
+    ("NM", "2", "Gabe Vasquez"): {
         "lean": "guardrails",
         "summary": "Called for Socorro County moratorium; co-sponsored FAIR "
                    "Data Act and Data Center Water and Energy Transparency Act",
@@ -1592,7 +1592,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NE", 1, "Mike Flood"): {
+    ("NE", "1", "Mike Flood"): {
         "lean": "accelerate",
         "summary": "Pro-data center at Nebraska energy summit; frames AI as "
                    "requiring legal accountability but supports infrastructure",
@@ -1606,7 +1606,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NE", 1, "Chris Backemeyer"): {
+    ("NE", "1", "Chris Backemeyer"): {
         "lean": "accelerate",
         "summary": "Supports domestic data center construction framed as "
                    "national security priority",
@@ -1619,7 +1619,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
-    ("NE", 3, "Adrian Smith"): {
+    ("NE", "3", "Adrian Smith"): {
         "lean": "accelerate",
         "summary": "Pro-AI efficiency; advocates for data centers despite "
                    "county moratorium wave",
@@ -1633,6 +1633,349 @@ AI_RECORDS = {
              "source": "https://nebraskapublicmedia.org/en/news/news-articles/nebraskas-federal-representatives-talk-energy-chinese-competition-and-iran-at-summit/"},
         ],
         "as_of": "2026-09-11",
+    },
+
+    # ── H.R. 9442, AI Data Center Moratorium Act + research batch 2026-09-12 ─
+    ("NY", "14", "Alexandria Ocasio-Cortez"): {
+        "lean": "guardrails",
+        "summary": "Introduced H.R. 9442, the AI Data Center Moratorium Act — "
+                   "the House companion to Sanders' S.4214 — halting new data "
+                   "center construction until Congress enacts community "
+                   "safeguards.",
+        "items": [
+            {"what": "Introduced H.R. 9442, the Artificial Intelligence Data "
+                     "Center Moratorium Act, which would halt construction or "
+                     "expansion of AI data centers until Congress passes "
+                     "safeguards and 'expressly terminates' the moratorium.",
+             "date": "2026-06-24",
+             "source": "https://ocasio-cortez.house.gov/media/press-releases/ocasio-cortez-introduces-house-version-ai-data-center-moratorium-act"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("IN", "7", "André Carson"): {
+        "lean": "guardrails",
+        "summary": "Introduced the AI Data Center Site Selection Transparency "
+                   "Act and cosponsored the moratorium bill.",
+        "items": [
+            {"what": "Introduced H.R. 8488, the AI Data Center Site Selection "
+                     "Transparency Act, requiring developers to disclose "
+                     "proposed locations at least 180 days before development, "
+                     "including electricity use, water consumption, and "
+                     "environmental impacts backed by independent analysis.",
+             "date": "2026-04-23",
+             "source": "https://carson.house.gov/media/press-releases/carson-introduces-data-center-moratorium-bill"},
+            {"what": "Original cosponsor of H.R. 9442, the AI Data Center "
+                     "Moratorium Act.",
+             "date": "2026-06-24",
+             "source": "https://ocasio-cortez.house.gov/media/press-releases/ocasio-cortez-introduces-house-version-ai-data-center-moratorium-act"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    # Bonnie Watson Coleman (NJ-12): retiring, not on 2026 ballot.
+    ("IL", "14", "Lauren Underwood"): {
+        "lean": "guardrails",
+        "summary": "Introduced the Data Center Water and Energy Transparency "
+                   "Act requiring operators to report energy and water use to "
+                   "states, EPA, and federal agencies.",
+        "items": [
+            {"what": "Introduced H.R. 9825, the Data Center Water and Energy "
+                     "Transparency Act, requiring data center operators to "
+                     "report energy and water use to states, EPA, and the "
+                     "Secretaries of Energy and Agriculture.",
+             "date": "2026-07-22",
+             "source": "https://www.congress.gov/bill/119th-congress/house-bill/9825/all-info"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("NJ", "8", "Rob Menendez"): {
+        "lean": "guardrails",
+        "summary": "Co-introduced the PRICE Act (75% renewable by 2035, 100% "
+                   "by 2040 for data centers) and the Data Center "
+                   "Transparency Act mandating EPA and EIA data collection.",
+        "items": [
+            {"what": "Co-introduced the PRICE Act and Data Center Transparency "
+                     "Act with Rep. Casar. The PRICE Act requires data centers "
+                     "to generate their own electricity (75% renewable by "
+                     "2035, 100% by 2040). The Transparency Act mandates EPA "
+                     "quarterly environmental data and EIA semi-annual energy "
+                     "data collection.",
+             "date": "2026-01-08",
+             "source": "https://menendez.house.gov/media/press-releases/-menendez-casar-introduce-groundbreaking-legislation-to-protect-americans-from-financial-and-environmental-impacts-of-ai-data-centers"},
+            {"what": "Cosponsored H.R. 7858, the Data Center Community "
+                     "Impact Act.",
+             "date": "2026-03-06",
+             "source": "https://watsoncoleman.house.gov/newsroom/press-releases/rep-watson-coleman-introduces-bill-to-study-impact-of-ai-data-centers-on-local-communities"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("TX", "37", "Greg Casar"): {
+        "lean": "guardrails",
+        "summary": "Co-introduced the PRICE Act and Data Center Transparency "
+                   "Act, arguing data center projects should be blocked if "
+                   "they raise electricity bills or harm communities.",
+        "items": [
+            {"what": "Co-introduced the PRICE Act and Data Center Transparency "
+                     "Act with Rep. Menendez. Argues data center projects "
+                     "should be blocked if they raise electricity bills or "
+                     "harm communities.",
+             "date": "2026-01-08",
+             "source": "https://menendez.house.gov/media/press-releases/-menendez-casar-introduce-groundbreaking-legislation-to-protect-americans-from-financial-and-environmental-impacts-of-ai-data-centers"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("CA", "15", "Kevin Mullin"): {
+        "lean": "guardrails",
+        "summary": "Led a 20-member congressional letter to FERC, Edison "
+                   "Electric Institute, and the Data Center Coalition on "
+                   "data center energy cost pass-throughs to consumers.",
+        "items": [
+            {"what": "Led a group of 20 House members in a letter to FERC, "
+                     "Edison Electric Institute, and the Data Center "
+                     "Coalition expressing concern that data center energy "
+                     "costs are being passed onto consumers and requesting "
+                     "information on consumer protections.",
+             "date": "2025-10-28",
+             "source": "https://kevinmullin.house.gov/2025/10/28/rep-mullin-leads-group-of-lawmakers-investigating-impact-of-data-centers-on-energy-costs/"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("NJ", "2", "Jeff Van Drew"): {
+        "lean": "guardrails",
+        "summary": "Cosponsored the FAIR Data Act, bipartisan legislation to "
+                   "prevent data center projects from passing grid upgrade "
+                   "costs onto residential ratepayers.",
+        "items": [
+            {"what": "Cosponsored H.R. 9655, the FAIR Data Act, bipartisan "
+                     "legislation to prevent data center projects from "
+                     "passing grid upgrade costs onto residential ratepayers "
+                     "and small businesses.",
+             "date": "2026-07-13",
+             "source": "https://riley.house.gov/2026/07/13/riley-introduces-bill-to-stop-data-center-projects-from-driving-up-energy-bills/"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("NJ", "10", "LaMonica McIver"): {
+        "lean": "guardrails",
+        "summary": "Introduced a bill to stop surprise AI data center "
+                   "development and cosponsored the moratorium act.",
+        "items": [
+            {"what": "Introduced bill to stop surprise AI data center "
+                     "development, requiring site selection transparency.",
+             "date": "2026-06-24",
+             "source": "https://mciver.house.gov/media/press-releases/mciver-introduces-bill-to-stop-surprise-ai-data-center-development"},
+            {"what": "Cosponsored H.R. 9442, the AI Data Center Moratorium "
+                     "Act.",
+             "date": "2026-06-29",
+             "source": "https://www.congress.gov/bill/119th-congress/house-bill/9442/cosponsors"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    # Dan Goldman (NY-10): lost renomination, not on 2026 ballot.
+    ("MA", "2", "Jim McGovern"): {
+        "lean": "guardrails",
+        "summary": "Original cosponsor of the AI Data Center Moratorium Act; "
+                   "told NOTUS Congress should give members a vote on a "
+                   "national moratorium.",
+        "items": [
+            {"what": "Original cosponsor of H.R. 9442, the AI Data Center "
+                     "Moratorium Act. Told NOTUS: 'We ought to at least give "
+                     "members the opportunity to vote on the national "
+                     "moratorium.'",
+             "date": "2026-06-24",
+             "source": "https://ocasio-cortez.house.gov/media/press-releases/ocasio-cortez-introduces-house-version-ai-data-center-moratorium-act"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    # Steve Cohen (TN-9): retiring, not on 2026 ballot.
+    # Chuy García (IL-4): retiring, not on 2026 ballot.
+    ("AZ", "7", "Adelita Grijalva"): {
+        "lean": "guardrails",
+        "summary": "Cosponsored the AI Data Center Moratorium Act and the "
+                   "Data Center Community Impact Act.",
+        "items": [
+            {"what": "Original cosponsor of H.R. 9442, the AI Data Center "
+                     "Moratorium Act.",
+             "date": "2026-06-24",
+             "source": "https://ocasio-cortez.house.gov/media/press-releases/ocasio-cortez-introduces-house-version-ai-data-center-moratorium-act"},
+            {"what": "Cosponsored H.R. 7858, the Data Center Community "
+                     "Impact Act.",
+             "date": "2026-03-06",
+             "source": "https://watsoncoleman.house.gov/newsroom/press-releases/rep-watson-coleman-introduces-bill-to-study-impact-of-ai-data-centers-on-local-communities"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("CA", "43", "Maxine Waters"): {
+        "lean": "guardrails",
+        "summary": "Cosponsored the AI Data Center Moratorium Act.",
+        "items": [
+            {"what": "Cosponsored H.R. 9442, the AI Data Center Moratorium "
+                     "Act.",
+             "date": "2026-07-13",
+             "source": "https://www.congress.gov/bill/119th-congress/house-bill/9442/cosponsors"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("CA", "10", "Mark DeSaulnier"): {
+        "lean": "guardrails",
+        "summary": "Cosponsored the AI Data Center Moratorium Act.",
+        "items": [
+            {"what": "Cosponsored H.R. 9442, the AI Data Center Moratorium "
+                     "Act.",
+             "date": "2026-07-21",
+             "source": "https://www.congress.gov/bill/119th-congress/house-bill/9442/cosponsors"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("PA", "12", "Summer Lee"): {
+        "lean": "guardrails",
+        "summary": "Cosponsored the Data Center Community Impact Act "
+                   "requiring DOE to study effects on communities of color "
+                   "and low-income communities.",
+        "items": [
+            {"what": "Cosponsored H.R. 7858, the Data Center Community "
+                     "Impact Act.",
+             "date": "2026-03-06",
+             "source": "https://watsoncoleman.house.gov/newsroom/press-releases/rep-watson-coleman-introduces-bill-to-study-impact-of-ai-data-centers-on-local-communities"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    # ── Batch 7: AZ, MT, AK — 2026-09-12 ────────────────────────────────
+    ("AZ", "3", "Yassamin Ansari"): {
+        "lean": "guardrails",
+        "summary": "Cosponsored H.R. 9442 AI Data Center Moratorium Act",
+        "items": [
+            {"what": "Cosponsored H.R. 9442 (AI Data Center Moratorium Act), "
+                     "which would pause construction of new AI data centers "
+                     "over 20 MW until Congress passes comprehensive AI "
+                     "legislation",
+             "date": "2026-09-12",
+             "source": "https://www.govinfo.gov/app/details/BILLS-119hr9442ih"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("AZ", "4", "Greg Stanton"): {
+        "lean": "mixed",
+        "summary": "Cosponsored Responsible Data Center Siting Act directing "
+                   "DOE to establish siting best practices",
+        "items": [
+            {"what": "Cosponsored H.R. 10321 (Responsible Data Center Siting "
+                     "Act), directing DOE to establish best practices for data "
+                     "center siting considering energy, water, utility bills, "
+                     "environment, noise, and community impacts",
+             "date": "2026-09-08",
+             "source": "https://subramanyam.house.gov/media/press-releases/rep-subramanyam-introduces-national-data-center-plan"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("AZ", "6", "JoAnna Mendoza"): {
+        "lean": "guardrails",
+        "summary": "Opposes data centers in the desert; cites heat and water "
+                   "impacts",
+        "items": [
+            {"what": "Stated 'No data centers in the desert. Not right now, "
+                     "not in our district, not in our state'; cites ASU "
+                     "research on 2-4 degree heat emissions from data centers; "
+                     "wants federal action on utility bill protection and "
+                     "water transparency",
+             "date": "2026-09-12",
+             "source": "https://blogforarizona.net/201903-2/"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("AZ", "7", "Adelita Grijalva"): {
+        "lean": "guardrails",
+        "summary": "Cosponsored H.R. 9442 AI Data Center Moratorium Act",
+        "items": [
+            {"what": "Cosponsored H.R. 9442 (AI Data Center Moratorium Act), "
+                     "which would pause construction of new AI data centers "
+                     "over 20 MW until Congress passes comprehensive AI "
+                     "legislation",
+             "date": "2026-09-12",
+             "source": "https://www.govinfo.gov/app/details/BILLS-119hr9442ih"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("MT", "2", "Troy Downing"): {
+        "lean": "mixed",
+        "summary": "Supports data centers with local control and water rights "
+                   "protections",
+        "items": [
+            {"what": "Stated 'Data centers can bring investment and "
+                     "opportunity to Montana, but these decisions should be "
+                     "made by the communities that will live with them'; "
+                     "called for 'light-touch' federal approach; insisted "
+                     "'Montana's senior water rights must be protected'",
+             "date": "2026-09-12",
+             "source": "https://homenewshere.com/national/news/article_5c76009c-97fc-5c0e-841e-126c000d2d21.html"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("MT", "2", "Brian Miller"): {
+        "lean": "guardrails",
+        "summary": "Emphasizes local control and transparency; served as "
+                   "legal counsel for citizens challenging data center "
+                   "development",
+        "items": [
+            {"what": "Served as legal counsel for citizens challenging "
+                     "Quantica data center development in Yellowstone County; "
+                     "stated 'We need to have maximum local control and "
+                     "respect state sovereignty on data centers'; criticized "
+                     "NDAs hiding operational details",
+             "date": "2026-09-12",
+             "source": "https://homenewshere.com/national/news/article_5c76009c-97fc-5c0e-841e-126c000d2d21.html"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("MT", "2", "Michael Eisenhauer"): {
+        "lean": "mixed",
+        "summary": "Supports local decision-making with conditions; not "
+                   "opposed to data centers but wants protections",
+        "items": [
+            {"what": "Stated 'I think local control is the way it needs to "
+                     "be. I am not in favor of a mandate either for or "
+                     "against'; has 5-Pillar policy including closed-loop "
+                     "cooling, worker/ratepayer protections, and community "
+                     "final approval",
+             "date": "2026-09-12",
+             "source": "https://homenewshere.com/national/news/article_5c76009c-97fc-5c0e-841e-126c000d2d21.html"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("MT", "2", "Patrick McCracken"): {
+        "lean": "guardrails",
+        "summary": "Highlights environmental and resource concerns; notes "
+                   "unaddressed electrical and water impacts",
+        "items": [
+            {"what": "Stated 'most people would not want to live next door to "
+                     "a data center'; highlighted unaddressed electrical and "
+                     "water resource impacts; referenced Montana's "
+                     "constitutional guarantee of healthful environment",
+             "date": "2026-09-12",
+             "source": "https://homenewshere.com/national/news/article_5c76009c-97fc-5c0e-841e-126c000d2d21.html"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("AK", "AL", "Nick Begich III"): {
+        "lean": "accelerate",
+        "summary": "Introduced DATA Act allowing data centers to operate on "
+                   "self-contained grid; pro-expansion op-ed",
+        "items": [
+            {"what": "Introduced H.R. 8400 (DATA Act of 2026) allowing large "
+                     "energy users including data centers to operate on "
+                     "self-contained 'grid of one' power systems disconnected "
+                     "from the broader grid, protecting ratepayers from "
+                     "subsidizing data center electricity loads",
+             "date": "2026-04-21",
+             "source": "https://begich.house.gov/media/press-releases/congressman-begich-leads-legislation-lower-energy-costs-introduces-house"},
+            {"what": "Op-ed 'How Alaska can Use our Energy Advantage to "
+                     "Capitalize on the AI Gold Rush': argued Alaska should "
+                     "aggressively pursue data centers citing natural gas, "
+                     "cold climate, and vast land; warned against "
+                     "over-regulation",
+             "date": "2026-04-23",
+             "source": "https://www.adn.com/opinions/2026/04/23/opinion-how-alaska-can-use-our-energy-advantage-to-capitalize-on-the-ai-gold-rush/"},
+        ],
+        "as_of": "2026-09-12",
     },
 }
 

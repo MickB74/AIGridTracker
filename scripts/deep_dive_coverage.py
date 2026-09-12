@@ -34,6 +34,8 @@ DEEP_DIVED = {
     "KS", "AR", "ME", "UT", "NH",
     # batch 6 (2026-09-11)
     "CT", "NV", "NM", "DE", "NE",
+    # batch 7 (2026-09-12)
+    "ID", "SD", "AZ", "MT", "AK",
 }
 
 

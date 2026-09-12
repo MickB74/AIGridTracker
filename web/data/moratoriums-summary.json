@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-09-11",
+  "generated": "2026-09-12",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 826,
+  "count": 835,
   "states": 48,
-  "enacted": 669,
+  "enacted": 677,
   "proposed": 87,
   "official_sourced": 65,
   "by_state": {
@@ -51,7 +51,7 @@
     },
     "MI": {
       "total": 64,
-      "enacted": 45,
+      "enacted": 44,
       "proposed": 3
     },
     "TX": {
@@ -75,8 +75,8 @@
       "proposed": 1
     },
     "MO": {
-      "total": 17,
-      "enacted": 16,
+      "total": 18,
+      "enacted": 17,
       "proposed": 0
     },
     "ME": {
@@ -110,8 +110,8 @@
       "proposed": 2
     },
     "WA": {
-      "total": 18,
-      "enacted": 18,
+      "total": 19,
+      "enacted": 19,
       "proposed": 0
     },
     "NM": {
@@ -125,13 +125,13 @@
       "proposed": 0
     },
     "NJ": {
-      "total": 72,
-      "enacted": 65,
+      "total": 73,
+      "enacted": 66,
       "proposed": 7
     },
     "IN": {
-      "total": 22,
-      "enacted": 20,
+      "total": 23,
+      "enacted": 21,
       "proposed": 2
     },
     "AR": {
@@ -165,8 +165,8 @@
       "proposed": 0
     },
     "MN": {
-      "total": 17,
-      "enacted": 17,
+      "total": 18,
+      "enacted": 18,
       "proposed": 0
     },
     "AL": {
@@ -175,13 +175,13 @@
       "proposed": 0
     },
     "PA": {
-      "total": 18,
-      "enacted": 14,
+      "total": 19,
+      "enacted": 15,
       "proposed": 2
     },
     "AZ": {
-      "total": 2,
-      "enacted": 1,
+      "total": 3,
+      "enacted": 2,
       "proposed": 1
     },
     "KS": {
@@ -220,8 +220,8 @@
       "proposed": 0
     },
     "MT": {
-      "total": 2,
-      "enacted": 1,
+      "total": 4,
+      "enacted": 3,
       "proposed": 1
     },
     "AK": {
@@ -254,7 +254,6 @@
     "30": [
       "bangor-me",
       "augusta-ga",
-      "wixom-mi",
       "front-royal-va",
       "tulare-county-ca",
       "pierce-township-oh",
@@ -264,6 +263,7 @@
       "roswell-ga",
       "waterford-township-mi",
       "calaveras-county-ca",
+      "escondido-ca",
       "morgan-hill-ca",
       "lake-elsinore-ca",
       "newton-county-ga",
@@ -276,7 +276,6 @@
       "vienna-township-trumbull-co-oh",
       "charlotte-nc",
       "lavon-tx",
-      "wixom-mi",
       "lexington-fayette-county-ky",
       "johnson-county-ia",
       "white-county-in",
@@ -323,7 +322,6 @@
       "johnson-city-tn",
       "springfield-mo",
       "minneapolis-mn",
-      "wixom-mi",
       "green-charter-township-mi",
       "lexington-fayette-county-ky",
       "johnson-county-ia",

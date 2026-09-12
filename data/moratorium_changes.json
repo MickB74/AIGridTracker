@@ -3351,5 +3351,75 @@
     "locality": "Hall County, NE",
     "kind": "added",
     "detail": "Added as Proposed"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "wixom-mi",
+    "locality": "Wixom, MI",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "buffalo-township-pa",
+    "locality": "Buffalo Township, PA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "glassboro-nj",
+    "locality": "Glassboro, NJ",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "clarksville-in",
+    "locality": "Clarksville, IN",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "freeborn-county-mn",
+    "locality": "Freeborn County, MN",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "thurston-county-wa",
+    "locality": "Thurston County, WA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "palmyra-mo",
+    "locality": "Palmyra, MO",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "hualapai-indian-reservation-az",
+    "locality": "Hualapai Indian Reservation, AZ",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "city-of-missoula-mt",
+    "locality": "City of Missoula, MT",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "fort-peck-reservation-mt",
+    "locality": "Fort Peck Reservation, MT",
+    "kind": "added",
+    "detail": "Added as Enacted"
   }
 ]

@@ -2290,9 +2290,10 @@ MORATORIUMS = [
     {"locality": "Wixom", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Mar 24, 2026",
      "note": "6-month moratorium on data center permits, construction, and "
-             "installation. Under legal challenge — Sansone Group (519,000 sq ft "
-             "complex) filed federal suit Aug 7",
-     "lat": 42.53, "lon": -83.54, "expires": "2026-09-24", "as_of": "2026-08-13",
+             "installation. Superseded Aug 26 by permanent zoning amendments "
+             "restricting DCs to heavy-industrial districts with setback, noise, "
+             "and water-use limits. Sansone Group federal suit still pending.",
+     "lat": 42.53, "lon": -83.54, "expires": "2026-08-26", "as_of": "2026-09-11",
      "source": "https://www.wixomgov.org/departments/construction-development-services-building/data-center-moratorium-ordinance"},
     {"locality": "Saline", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Jan 12, 2026",
@@ -2850,13 +2851,15 @@ MORATORIUMS = [
              "(nearly as many as in the previous 13 years combined)",
      "lat": 34.05, "lon": -111.09, "expires": "2029-06-30", "as_of": "2026-08-13",
      "source": "https://news.bloombergtax.com/daily-tax-report-state/arizona-data-center-tax-incentive-pause-signed-by-governor-hobbs"},
-    {"locality": "Pima County", "state": "AZ", "level": "Local",
+    {"locality": "Pima County", "state": "AZ", "level": "County",
      "status": "Proposed", "when": "Aug 11, 2026",
-     "note": "Board voted 3-2 to direct staff to draft 120-day moratorium on "
-             "data center approvals. Prompted by opposition to 'Project Blue'. "
-             "Formal approval still needed. Permanent ordinance expected fall 2026",
-     "lat": 32.22, "lon": -110.97, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.tucsonsentinel.com/local/report/081126_pima_data_moratorium/pima-county-moves-forward-possible-data-center-moratorium"},
+     "note": "Board voted 3-2 (Cano, Heinz, Allen yes; Scott, Christy no) to "
+             "direct County Administrator to draft 120-day moratorium resolution "
+             "on data center approvals. Not yet formally enacted — resolution "
+             "expected to return to board for final adoption. Prompted by "
+             "opposition to 'Project Blue'",
+     "lat": 32.22, "lon": -110.97, "expires": None, "as_of": "2026-09-12",
+     "source": "https://news.azpm.org/p/azpmnews/2026/8/13/230837-pima-county-staff-will-develop-moratorium-for-data-centers/"},
     {"locality": "Oregon (enterprise zone tax)", "state": "OR", "level": "State",
      "status": "Enacted", "when": "Jun 5, 2026",
      "note": "HB 4084 — makes new data centers ineligible for Enterprise Zone "
@@ -4670,14 +4673,14 @@ MORATORIUMS = [
     {"locality": "Middleton", "state": "WI", "level": "Local", "status": "Enacted", "when": None, "note": "City of Middleton Common Council adopted data center moratorium as of Jul 1, 2026. Pauses issuance of zoning certificates for data centers. Planning department directed to draft comprehensive data center ordinance.", "lat": 43.0972, "lon": -89.5043, "expires": None, "as_of": "2026-09-06", "source": "https://www.middletontimes.com/articles/2026/07/01/data-center-moratorium-adopted", "term": None},
     {"locality": "Winnebago County", "state": "WI", "level": "County", "status": "Enacted", "when": None, "note": "County Board passed 12-month moratorium in voice vote at Aug 18, 2026 meeting. Applies to townships of Algoma, Neenah, Nekimi, and Omro. Cities must adopt own regulations. Preemptive — no known data center proposals in county.", "lat": 44.0625, "lon": -88.6354, "expires": None, "as_of": "2026-09-06", "source": "https://fox11online.com/news/local/winnebago-county-to-pursue-12-month-data-center-moratorium", "term": None},
     {"locality": "Arvada", "state": "CO", "level": "Local", "status": "Proposed", "when": None, "note": "Council directed staff to draft 18-month moratorium after Aug 11 study session. Vote on final language not yet scheduled as of mid-Aug 2026.", "lat": 39.8028, "lon": -105.0875, "expires": None, "as_of": "2026-09-06", "source": "https://www.arvadapress.com/news/government-politics/article_da742ecf-c59f-4ec9-ae0b-c6147a1cc385.html", "term": None},
-    {"locality": "Butte-Silver Bow", "state": "MT", "level": "County", "status": "Proposed", "when": None, "note": "Commission voted 11-0 to direct county attorney to prepare temporary moratorium. Not yet formally enacted. Separate ballot initiative for voter-approval requirement was blocked by courts.", "lat": 46.0038, "lon": -112.5348, "expires": None, "as_of": "2026-09-06", "source": "https://www.kxlf.com/news/butte-silver-bow-county-commission-votes-to-pursue-temporary-moratorium-on-data-centers", "term": None},
+    {"locality": "Butte-Silver Bow", "state": "MT", "level": "County", "status": "Proposed", "when": "Sep 2, 2026", "note": "Commission voted 11-0 on Sep 2 to direct county attorney to prepare interim zoning ordinance for temporary moratorium. Requires three additional votes plus 30-day wait before implementation. Would be 6 months with option to extend to 1 year, up to 2.5 years total. Separately, a ballot initiative by 406 People First to require 2/3 voter approval for DCs was blocked — judge ruled Aug 28 that signature deadline had passed; group has appealed to MT Supreme Court.", "lat": 46.0038, "lon": -112.5348, "expires": None, "as_of": "2026-09-12", "source": "https://www.kxlf.com/news/butte-silver-bow-county-commission-votes-to-pursue-temporary-moratorium-on-data-centers"},
     {"locality": "Calaveras County", "state": "CA", "level": "County", "status": "Enacted", "when": None, "note": "Board of Supervisors adopted 45-day urgency ordinance 4-0 (chair absent) on Aug 25, 2026. Can be extended up to two years. Planning Director said large-scale data centers warrant further study on water, electricity, noise, lighting impacts.", "lat": 38.1964, "lon": -120.6814, "expires": "2026-10-09", "as_of": "2026-09-06", "source": "https://mymotherlode.com/news/local/11092598/calaveras-data-center-moratorium-passes-4-0.html", "term": "fixed_undated"},
     {"locality": "Clackamas County", "state": "OR", "level": "County", "status": "Proposed", "when": "Aug 11, 2026", "note": "Commissioners voted unanimously to direct staff to begin formal moratorium process (up to 120 days once enacted). Oregon law requires 45-day notice before public hearing; moratorium not yet in effect during notice period. No existing data center applications in the county.", "lat": 45.1768, "lon": -122.2153, "expires": None, "as_of": "2026-09-11", "source": "https://www.opb.org/article/2026/08/05/clackamas-county-to-consider-data-center-moratorium/", "term": None},
     {"locality": "Escondido", "state": "CA", "level": "Local", "status": "Enacted", "when": None, "note": "City council unanimously approved 45-day urgency ordinance. Can be extended up to one year with two additional extensions (10 months and 12 months). No current applications or inquiries. Progress update due Oct 10, 2026.", "lat": 33.1192, "lon": -117.0864, "expires": "2026-10-12", "as_of": "2026-09-06", "source": "https://ncpipeline.substack.com/p/escondido-data-center-moratorium", "term": "fixed_undated"},
     {"locality": "Eureka", "state": "CA", "level": "Local", "status": "Enacted", "when": None, "note": "City council unanimously adopted urgency ordinance Bill No. 1061-C.S. establishing 45-day moratorium effective immediately. Can be extended under CA Gov Code 65858 while city updates Local Coastal Program (up to two years).", "lat": 40.8021, "lon": -124.1637, "expires": "2026-10-17", "as_of": "2026-09-06", "source": "https://lostcoastoutpost.com/2026/sep/2/eureka-city-council-approved-temporary-ban-data-ce/", "term": "fixed_undated"},
     {"locality": "Loveland", "state": "CO", "level": "Local", "status": "Proposed", "when": None, "note": "Council held study session Sep 1 after multiple members expressed interest in emergency moratorium. A company has contacted city about establishing a data center. Larimer County (which contains Loveland) already has its own moratorium through Feb 2027.", "lat": 40.3978, "lon": -105.075, "expires": None, "as_of": "2026-09-06", "source": "https://bizwest.com/2026/09/02/loveland-likely-to-impose-data-center-moratorium/", "term": None},
     {"locality": "Mendocino County", "state": "CA", "level": "County", "status": "Enacted", "when": None, "note": "Supervisors voted 5-0 to adopt urgency ordinance banning new data centers in unincorporated county, effective immediately for 45 days. County has no data centers and no applications. Extension hearing set for Oct 6; can remain in place up to two years under state law.", "lat": 39.4382, "lon": -123.3317, "expires": "2026-10-16", "as_of": "2026-09-06", "source": "https://mendovoice.com/2026/09/mendocino-county-supes-ban-data-centers-for-the-moment-at-least/", "term": "fixed_undated"},
-    {"locality": "Missoula County", "state": "MT", "level": "County", "status": "Enacted", "when": None, "note": "Commissioners unanimously adopted one-year moratorium on new/expanded data centers countywide (excluding City of Missoula). First data center moratorium in Montana. 30 public commenters, all in favor. County must initiate study within 30 days. Can be extended one additional year.", "lat": 46.8721, "lon": -114.0181, "expires": "2027-07-08", "as_of": "2026-09-06", "source": "https://montanafreepress.org/2026/07/09/missoula-county-adopts-temporary-moratorium-on-data-centers/", "term": None},
+    {"locality": "Missoula County", "state": "MT", "level": "County", "status": "Enacted", "when": "Jul 9, 2026", "note": "Commissioners unanimously adopted interim zoning barring permits for new or expanded data centers in both zoned and unzoned unincorporated areas (excludes City of Missoula). First data center moratorium in Montana. All 30 public commenters favored it. County identified electricity/water demand, waste heat, noise, and vibration as impacts requiring study. Can be extended one additional year.", "lat": 46.8721, "lon": -114.0181, "expires": "2027-07-08", "as_of": "2026-09-12", "source": "https://montanafreepress.org/2026/07/09/missoula-county-adopts-temporary-moratorium-on-data-centers/"},
     {"locality": "San Joaquin County", "state": "CA", "level": "County", "status": "Proposed", "when": None, "note": "Board directed six-month study; 45-day moratorium expected to be voted on at Oct 1 meeting. No data center applications or operating facilities in unincorporated county. County code has no definition of data center.", "lat": 37.9577, "lon": -121.2908, "expires": None, "as_of": "2026-09-06", "source": "https://www.sjgov.org/department/bos/board-news/board-news-detail/2026/09/02/sjc-board-moves-to-address-impacts-of-large-scale-ai-data-centers", "term": None},
     {"locality": "Humboldt County", "state": "CA", "level": "County", "status": "Proposed", "when": None, "note": "Supervisors unanimously directed staff to draft one-year moratorium. Chose moratorium over permanent ban due to existing data center in Arcata. Not yet formally enacted.", "lat": 40.745, "lon": -123.8695, "expires": None, "as_of": "2026-09-06", "source": "https://lostcoastoutpost.com/2026/jul/15/humboldt-county-board-supervisors-kickstart-ban-of/", "term": None},
     {"locality": "Calipatria", "state": "CA", "level": "City", "status": "Enacted", "when": "Aug 26, 2026", "note": "Permanent ban on large-scale data centers. Council advanced ban 3-2 on Jul 14, first reading Aug 12, final adoption Aug 26. First city in Imperial County to permanently prohibit data centers. Mayor Michael Luellen led effort amid recall notices.", "lat": 33.1256, "lon": -115.514, "expires": None, "as_of": "2026-09-11", "source": "https://www.kpbs.org/news/environment/2026/08/04/after-months-of-public-outcry-imperial-valley-cities-are-hitting-the-brakes-on-data-centers", "term": "standing"},
@@ -5096,6 +5099,46 @@ MORATORIUMS = [
     {"locality": "Nehawka", "state": "NE", "level": "Town", "status": "Enacted", "when": "Aug 26, 2026", "note": "Indefinite ban on data centers, crypto mining, blockchain computing, and power plants to run them; first municipality in Nebraska to pass an outright ban. Cited as blueprint by residents of Union, Murray, and Plattsmouth", "lat": 40.83, "lon": -95.96, "expires": None, "as_of": "2026-09-11", "source": "https://www.wowt.com/2026/08/27/village-nehawka-votes-ban-data-centers/", "term": "standing"},
     {"locality": "Garfield County", "state": "NE", "level": "County", "status": "Proposed", "when": None, "note": "Planning commission voted in favor of moratorium; awaiting county board final vote", "lat": 41.91, "lon": -98.99, "expires": None, "as_of": "2026-09-11", "source": "https://nebraskapublicmedia.org/en/news/news-articles/data-centers-are-eyeing-nebraska-heres-how-counties-are-responding/"},
     {"locality": "Hall County", "state": "NE", "level": "County", "status": "Proposed", "when": None, "note": "Board of Commissioners debated 180-day moratorium on data center rezoning and construction permits; vote outcome not confirmed", "lat": 40.87, "lon": -98.50, "expires": None, "as_of": "2026-09-11", "source": "https://www.yahoo.com/news/articles/hall-county-commission-debating-180-181103481.html"},
+    # ── Tier A candidate triage — 2026-09-11 ─────────────────────────────
+    {"locality": "Buffalo Township", "state": "PA", "level": "Township", "status": "Enacted", "when": "Aug 12, 2026", "note": "180-day moratorium on data center development in Butler County township; supervisors voted unanimously.", "lat": 40.87, "lon": -79.93, "expires": "2027-02-08", "as_of": "2026-09-11", "source": "https://www.butlereagle.com/20260814/buffalo-township-implements-180-day-data-center-moratorium/"},
+    {"locality": "Glassboro", "state": "NJ", "level": "Local", "status": "Enacted", "when": "Sep 8, 2026", "note": "Permanent ban on data centers; city council voted unanimously to prohibit data center construction.", "lat": 39.70, "lon": -75.11, "expires": None, "as_of": "2026-09-11", "source": "https://thewhitonline.com/91708/news/glassboro-city-council-bans-data-centers/", "term": "standing"},
+    {"locality": "Clarksville", "state": "IN", "level": "Town", "status": "Enacted", "when": "Jul 14, 2026", "note": "Permanent ban on data centers; town council updated ordinances to prohibit data center facilities.", "lat": 38.30, "lon": -85.76, "expires": None, "as_of": "2026-09-11", "source": "https://www.townofclarksville.com/clarksville-updates-ordinances-to-address-data-centers/", "term": "standing"},
+    {"locality": "Freeborn County", "state": "MN", "level": "County", "status": "Enacted", "when": "Aug 19, 2025", "note": "One-year moratorium on data center permits in unincorporated areas; extended Aug 18, 2026 for a second year through Aug 19, 2027.", "lat": 43.67, "lon": -93.35, "expires": "2027-08-19", "as_of": "2026-09-11", "source": "https://www.startribune.com/minnesota-counties-data-centers/601857833"},
+    {"locality": "Thurston County", "state": "WA", "level": "County", "status": "Enacted", "when": "Aug 20, 2026", "note": "One-year moratorium on data center applications; county commissioners voted to pause new proposals.", "lat": 46.93, "lon": -122.83, "expires": "2027-08-20", "as_of": "2026-09-11", "source": "https://washingtoncounty.news/2026/08/21/county-approves-one-year-moratorium-on-data-center-applications/"},
+    {"locality": "Palmyra", "state": "MO", "level": "City", "status": "Enacted", "when": "Sep 3, 2026", "note": "City council approved moratorium on data centers; residents also petitioned for audit of city finances.", "lat": 39.79, "lon": -91.52, "expires": None, "as_of": "2026-09-11", "source": "https://www.nemonews.net/2026/09/09/palmyra-city-council-approves-moratorium-on-data-centers-members-address-citizens-petition-for-audit/", "term": "unknown"},
+    # ── Batch 7 deep dive — ID, SD, AZ, MT, AK — 2026-09-12 ─────────────
+    # AZ — 1 new row
+    {"locality": "Hualapai Indian Reservation", "state": "AZ", "level": "Tribal",
+     "status": "Enacted", "when": "Aug 20, 2026",
+     "note": "Tribal Council passed resolution opposing data center construction "
+             "on reservation land, citing water scarcity on the Colorado River, "
+             "light pollution, and wastewater concerns. Tribal sovereignty makes "
+             "this effectively a ban on all reservation land.",
+     "lat": 35.68, "lon": -113.42, "expires": None, "as_of": "2026-09-12",
+     "source": "https://www.knau.org/knau-and-arizona-news/2026-08-24/hualapai-tribe-passes-resolution-opposing-data-center-construction-on-the-reservation",
+     "term": "standing"},
+    # MT — 2 new rows
+    {"locality": "City of Missoula", "state": "MT", "level": "City",
+     "status": "Enacted", "when": "Mar 4, 2026",
+     "note": "City adopted Unified Development Code (Title 22) on Feb 2, "
+             "effective Mar 4. New zoning map contains no district in which a "
+             "data center is an allowed use — a de facto permanent ban through "
+             "zoning. Distinct from Missoula County's interim moratorium which "
+             "covers unincorporated areas only.",
+     "lat": 46.8721, "lon": -113.994, "expires": None, "as_of": "2026-09-12",
+     "source": "https://servercountry.org/policy/montana/",
+     "term": "standing"},
+    {"locality": "Fort Peck Reservation", "state": "MT", "level": "Tribal",
+     "status": "Enacted", "when": "Aug 10, 2026",
+     "note": "Fort Peck Tribal Executive Board (Assiniboine and Sioux) voted "
+             "to ban all future discussions between tribal government and data "
+             "center developers, effectively blocking development on the "
+             "reservation. Chairman Floyd Azure said three companies approached "
+             "in the past year. Primary concern is water contamination — 'Fort "
+             "Peck historically struggled with acquiring clean, drinkable water.'",
+     "lat": 48.2836, "lon": -105.4833, "expires": None, "as_of": "2026-09-12",
+     "source": "https://montanafreepress.org/2026/08/13/fort-peck-tribes-ban-discussions-data-center-development/",
+     "term": "standing"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.
