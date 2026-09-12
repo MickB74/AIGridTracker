@@ -1882,19 +1882,7 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-12",
     },
-    ("AZ", "7", "Adelita Grijalva"): {
-        "lean": "guardrails",
-        "summary": "Cosponsored H.R. 9442 AI Data Center Moratorium Act",
-        "items": [
-            {"what": "Cosponsored H.R. 9442 (AI Data Center Moratorium Act), "
-                     "which would pause construction of new AI data centers "
-                     "over 20 MW until Congress passes comprehensive AI "
-                     "legislation",
-             "date": "2026-09-12",
-             "source": "https://www.govinfo.gov/app/details/BILLS-119hr9442ih"},
-        ],
-        "as_of": "2026-09-12",
-    },
+    # Adelita Grijalva (AZ-7): duplicate removed, richer entry above at line ~1791.
     ("MT", "2", "Troy Downing"): {
         "lean": "mixed",
         "summary": "Supports data centers with local control and water rights "

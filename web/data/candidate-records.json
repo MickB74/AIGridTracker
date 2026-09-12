@@ -2,7 +2,7 @@
  "generated": "2026-09-12",
  "license": "CC BY 4.0",
  "note": "One row per cited item. kind=action is a bill, letter, hearing question or investigation; kind=statement is a quote, op-ed or campaign line. grade is the officials-scorecard grade (sitting officials only); lean summarises the cited items.",
- "count": 345,
+ "count": 346,
  "records": [
   {
    "chamber": "House",
@@ -37,23 +37,6 @@
    "lean": "guardrails",
    "as_of": "2026-09-12",
    "page": "https://aigridwatch.com/house-races#race-az-6"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "AZ",
-   "district": "7",
-   "name": "Adelita Grijalva",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Cosponsored H.R. 9442 (AI Data Center Moratorium Act), which would pause construction of new AI data centers over 20 MW until Congress passes comprehensive AI legislation",
-   "date": "2026-09-12",
-   "source": "https://www.govinfo.gov/app/details/BILLS-119hr9442ih",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-12",
-   "page": "https://aigridwatch.com/house-races#race-az-7"
   },
   {
    "chamber": "House",
@@ -3016,6 +2999,23 @@
   {
    "chamber": "House",
    "role": "candidate",
+   "state": "AZ",
+   "district": "7",
+   "name": "Adelita Grijalva",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Original cosponsor of H.R. 9442, the AI Data Center Moratorium Act.",
+   "date": "2026-06-24",
+   "source": "https://ocasio-cortez.house.gov/media/press-releases/ocasio-cortez-introduces-house-version-ai-data-center-moratorium-act",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-12",
+   "page": "https://aigridwatch.com/house-races#race-az-7"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
    "state": "IN",
    "district": "7",
    "name": "André Carson",
@@ -4117,6 +4117,23 @@
    "lean": "guardrails",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-b001288"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "AZ",
+   "district": "7",
+   "name": "Adelita Grijalva",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Cosponsored H.R. 7858, the Data Center Community Impact Act.",
+   "date": "2026-03-06",
+   "source": "https://watsoncoleman.house.gov/newsroom/press-releases/rep-watson-coleman-introduces-bill-to-study-impact-of-ai-data-centers-on-local-communities",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-12",
+   "page": "https://aigridwatch.com/house-races#race-az-7"
   },
   {
    "chamber": "House",
