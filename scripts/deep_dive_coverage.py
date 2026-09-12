@@ -40,6 +40,8 @@ DEEP_DIVED = {
     "MA", "LA", "MS", "RI", "ND",
     # batch 9 (2026-09-12)
     "VT", "WY", "HI", "WV",
+    # batch 10 (2026-09-12) — territories
+    "DC", "AS", "GU", "MP", "VI",
 }
 
 
