@@ -72,6 +72,157 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "nebraska-county-moratorium-wave-2026",
+        "art": "moratorium",
+        "section": "stories",
+        "title": "Sixteen Nebraska Counties Paused Data Centers. The Legislature Spent the Same Year Clearing the Way.",
+        "seo_title": "Nebraska data center moratoriums: 16 county pauses vs LB1261",
+        "date": _dt.date(2026, 9, 12),
+        "author": "GridWatch AI",
+        "tags": ["nebraska", "moratoriums", "data centers", "eminent domain", "public power", "tenaska", "conflict of interest"],
+        "summary": "Nebraska now has 19 data center moratorium entries on our tracker \u2014 16 enacted, two "
+                   "proposed, one withdrawn \u2014 almost all of them county-level and almost all of them passed "
+                   "in 2026. Over the same months, the Legislature passed and the governor signed a law "
+                   "narrowing public power\u0027s eminent domain authority to make room for privately built "
+                   "generation serving loads above 1,000 megawatts. Both things are true at once, and if you "
+                   "live in southeast Nebraska they are about the same project.",
+        "body": """
+If you are trying to understand what is happening in Nebraska, the useful frame is
+not "is the state for or against data centers." It is that two levels of government
+moved in opposite directions during the same twelve months, and the gap between them
+is where a resident actually has leverage.
+
+Start with the counties. Our tracker now carries
+[19 Nebraska entries](/moratoriums) \u2014 16 enacted moratoriums, two still proposed, and
+one withdrawn. Otoe County went first: the county board
+[voted in May 2026](https://flatwaterfreepress.org/a-nebraska-county-just-banned-new-data-centers-for-up-to-a-year-more-could-follow/)
+to suspend permits for new data centers for up to a year while it updated its
+regulations. By mid-July, [Logan County became the twelfth](https://nebraskapublicmedia.org/en/news/news-articles/twelfth-nebraska-county-temporarily-bans-data-centers/)
+to approve one \u2014 a 12-month pause covering data centers, wind and solar systems, and
+cryptocurrency mining. County Clerk Jennifer Nicholson put the reasoning plainly:
+"Data centers are popping up everywhere. We are in the middle of redoing our
+comprehensive plan and zoning regulations."
+
+That is the honest version of what most of these ordinances are. They are not bans.
+They are a county buying time to write rules before it has to apply rules it does not
+have. Nebraska Public Media
+[contacted all 93 counties](https://nebraskapublicmedia.org/en/news/news-articles/data-centers-are-eyeing-nebraska-heres-how-counties-are-responding/)
+in July; 27 said they had recently updated, were updating, or planned to update their
+comprehensive zoning plans.
+
+## What the Legislature did instead
+
+On April 14, 2026, Governor Jim Pillen signed
+[LB1261](https://nebraskalegislature.gov/bills/view_bill.php?DocumentID=62918),
+introduced by Senator DeKay at the governor\u0027s request and passed on final reading
+33\u201316. The bill prohibits consumer-owned utilities \u2014 which in Nebraska means all of
+them, since the state is entirely public power \u2014 from using eminent domain to acquire
+a privately owned electric generation facility built to serve a single industrial site
+with new load greater than 1,000 megawatts. Its requirements apply to contracts entered
+into on or before December 31, 2031.
+
+Read that threshold again, because it is the tell. A 1,000-megawatt single-site
+industrial load is not a factory. In 2026 it is a hyperscale data center campus, and
+the law exists to let a private developer build the power plant next to it without a
+public utility being able to take that plant over.
+
+The Legislature also passed [LB663](https://nebraskapublicmedia.org/en/news/news-articles/data-centers-are-eyeing-nebraska-heres-how-counties-are-responding/),
+which sets a strict timeline for county boards processing special and conditional use
+permit applications \u2014 a quieter change, but one that directly constrains the body a
+resident shows up to lobby.
+
+## The project underneath the policy
+
+The Flatwater Free Press has done the reporting that connects the two.
+[Its review of land records](https://flatwaterfreepress.org/google-proposes-nebraska-data-center-requiring-more-power-than-all-of-lincoln/)
+found Omaha-based energy company Tenaska optioning land across four southeast Nebraska
+counties for a natural gas plant and data center campus. By late June the options had
+grown to [at least 1,454 acres in Otoe County, at least 1,509 in Gage, at least 1,123 in
+Cass, and nearly 680 in Lancaster](https://flatwaterfreepress.org/a-nebraska-county-just-banned-new-data-centers-for-up-to-a-year-more-could-follow/).
+
+Flatwater reported, based on documents it obtained, that the data center would need
+1,000 to 3,000 megawatts \u2014 more than three times Lincoln\u0027s 800-megawatt peak summer
+demand \u2014 and that the accompanying gas plant could produce more than twice the 1,365
+megawatts of Nebraska Public Power District\u0027s Gerald Gentleman Station, the largest
+power plant in the state. The documents indicated a possible 2029 online date. Google
+and Tenaska declined to comment; the public power districts said they do not discuss
+potential customers before a public announcement.
+
+Treat those numbers as what they are: a reporter\u0027s reading of planning documents for a
+project no company has confirmed. But note the fit. A project needing more than 1,000
+megawatts at one site is exactly the project LB1261 was written to accommodate.
+
+## The disclosure
+
+One more thing from the same reporting, because it is the kind of fact a resident
+should have before a hearing. State Senator Myron Dorn, whose district includes Gage
+County, [optioned roughly 80 acres of his own land to Tenaska](https://flatwaterfreepress.org/nebraska-lawmaker-among-those-who-optioned-land-for-potential-data-center-project/)
+earlier in 2026. He filed a conflict of interest disclosure on March 18, 2026 \u2014 the
+day floor debate on LB1261 began, and after reporters contacted him. Under Nebraska
+rules the disclosure did not preclude him from voting, and he voted. "My vote is only
+one of 49," he told Flatwater. "This bill will benefit the entire state and any
+landowner who may contract with a private entity."
+
+Nothing here has been found unlawful, and we are not saying it was. The point is
+narrower and more useful: when a bill removes a local check on a specific class of
+project, ask who near you has already signed an option.
+
+## Where towns went further than counties
+
+County moratoriums have a hole in them, and Nehawka found it. A county pause covers
+unincorporated land under county zoning \u2014 not land inside a village\u0027s own zoning
+jurisdiction. In late August the Nehawka Village Board
+[voted to prohibit data centers outright](https://www.wowt.com/2026/08/27/village-nehawka-votes-ban-data-centers/),
+along with crypto mining, blockchain computing, and the power plants built to run
+them. Board co-chairperson Chad Kruger said residents had raised concerns about noise,
+water pollution and water usage, and that the county moratorium did not apply to their
+area. Jayden Speed of Cass County Data Center Watch told WOWT that residents in Union,
+Murray and Plattsmouth were already using the ordinance as a model.
+
+That is the first Nebraska municipality on our tracker with a standing ban rather than
+a timed pause, and it is worth understanding why it could do that when its county could
+not: different zoning jurisdiction, different tool.
+
+## And where a county backed off
+
+On September 10, Lancaster County
+[halted its plan to vote on a moratorium](https://nebraskapublicmedia.org/en/news/news-articles/lancaster-county-halts-plans-for-data-center-moratorium/)
+and formed two task forces instead \u2014 one on data centers, one on industrial zoning.
+Bold Nebraska, the advocacy group chaired by Jane Kleeb, had filed a zoning code text
+amendment application proposing regulation rather than a pause. Commissioner Flowerday
+argued an effective moratorium already existed, because "you only build these things on
+industrial land" and there are "very few spaces where you could pull a data center or
+much of anything that was currently zoned industrial out there."
+
+We record that row as **Withdrawn**, not as a defeat and not as a win. If you are
+citing Nebraska at a hearing, this is the row most likely to be thrown back at you, so
+know what it says: a county concluded its zoning map was already doing the work a
+moratorium would have done. Whether that holds depends entirely on how much industrial
+land your own jurisdiction has.
+
+## What to take from this
+
+Three practical things, if you are weeks out from a vote in a state with a friendly
+legislature and an unfriendly map:
+
+1. **Check which zoning jurisdiction you are actually in.** Nehawka acted because the
+   county pause did not reach it. The reverse is also common \u2014 residents lobbying a
+   village board over land the county controls.
+2. **Read the state law for thresholds, not for sentiment.** LB1261 does not say
+   "data center" anywhere in its operative threshold. It says 1,000 megawatts at a
+   single site. Thresholds are where the carve-outs live.
+3. **Ask what a pause is for.** Every Nebraska county clerk quoted above gave the same
+   answer: time to finish a comprehensive plan. A moratorium with no drafting work
+   behind it just expires.
+
+**See also:** our [Nebraska state briefing](/states/nebraska) for the full county-by-county
+list with sources and dates, and the community pages for
+[Otoe County](/communities/otoe-county-ne), [Cass County](/communities/cass-county-ne),
+[Lancaster County](/communities/lancaster-county-ne) and
+[Nehawka](/communities/nehawka-ne).
+""",
+    },
+    {
         "id": "california-moratorium-wave-2026",
         "art": "moratorium",
         "section": "stories",

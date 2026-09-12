@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/nebraska-county-moratorium-wave-2026",
+      "destination": "/blog/nebraska-county-moratorium-wave-2026",
+      "permanent": true
+    },
+    {
       "source": "/california-moratorium-wave-2026",
       "destination": "/blog/california-moratorium-wave-2026",
       "permanent": true
