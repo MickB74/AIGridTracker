@@ -2174,12 +2174,13 @@ MORATORIUMS = [
      "term": "standing"},
     # Proposed — batch 2
     {"locality": "Plainfield", "state": "NJ", "level": "Local",
-     "status": "Proposed", "when": "First reading Jul 2026",
-     "note": "Citywide ban across all zoning districts introduced by council; "
-             "final vote scheduled Aug 10. Council rejected a weaker regulatory "
-             "approach in May",
-     "lat": 40.63, "lon": -74.41, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.tapinto.net/towns/plainfield/articles/plainfield-city-council-takes-significant-step-towards-data-center-ban"},
+     "status": "Enacted", "when": "Aug 10, 2026",
+     "note": "Unanimous ban on data centers in all zoning districts, no variance "
+             "allowed. Council rejected a weaker regulatory approach in May and "
+             "went for an outright prohibition",
+     "lat": 40.63, "lon": -74.41, "expires": None, "as_of": "2026-09-12",
+     "source": "https://pinelandsalliance.org/datacenters/",
+     "term": "standing"},
     {"locality": "North Plainfield", "state": "NJ", "level": "Local",
      "status": "Enacted", "when": "Jul 13, 2026",
      "note": "Ordinance 26-10 adopted on second reading, banning data centers "
