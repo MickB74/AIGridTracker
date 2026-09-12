@@ -1339,16 +1339,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/port-washington-wi",
-      "destination": "/states/wisconsin",
-      "permanent": true
-    },
-    {
-      "source": "/communities/port-washington-wi.html",
-      "destination": "/states/wisconsin",
-      "permanent": true
-    },
-    {
       "source": "/communities/posey-county-in",
       "destination": "/states/indiana",
       "permanent": true
