@@ -804,7 +804,7 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
 _THEME_JS = """<script>
 function toggleTheme(){
   var d=document.documentElement,c=d.getAttribute('data-theme');
-  if(!c)c=matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';
+  if(!c)c='dark';
   var n=c==='dark'?'light':'dark';
   d.setAttribute('data-theme',n);
   try{localStorage.setItem('theme',n)}catch(e){}
@@ -813,7 +813,7 @@ function toggleTheme(){
   b.setAttribute('aria-label',n==='dark'?'Switch to light mode':'Switch to dark mode')}}
 (function(){var b=document.querySelector('.theme-toggle');if(!b)return;
 var c=document.documentElement.getAttribute('data-theme');
-if(!c)c=matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';
+if(!c)c='dark';
 b.innerHTML=c==='dark'?'&#9728;':'&#9790;';
 b.setAttribute('aria-label',c==='dark'?'Switch to light mode':'Switch to dark mode')})();
 </script>"""
@@ -1110,7 +1110,7 @@ def page(title, description, body, canonical, depth=0,
 <link rel="dns-prefetch" href="//gc.zgo.at">
 <link rel="preconnect" href="//gc.zgo.at" crossorigin>
 <link rel="stylesheet" href="{p}{CSS_FILE}">
-<script>try{{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}}catch(e){{}}</script>
+<script>try{{var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t)}}catch(e){{}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
