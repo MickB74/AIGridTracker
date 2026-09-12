@@ -1382,7 +1382,43 @@ def _home_tracker_changes_html(days=10, limit=6):
         f'{added_note}</section>')
 
 
-def build_index(top_stories=None):
+def _hero_search_json(news_only_communities=None):
+    """Compact JSON for the hero type-ahead: community pages + state pages.
+
+    Covers every community page the build produces: moratorium localities
+    plus news-only groups (passed in from main where they're computed).
+    """
+    import json as _json
+    _st_map = _abbr_to_state()
+    items = []
+    seen = set()
+    # Community pages from moratorium localities
+    for m in MORATORIUMS_DF.itertuples():
+        loc = str(m.locality)
+        st = str(m.state)
+        key = (loc, st)
+        if key in seen:
+            continue
+        seen.add(key)
+        slug = _loc_slug(loc, st)
+        full_state = _st_map.get(st, st)
+        items.append([f"{loc}, {full_state}", f"communities/{slug}"])
+    # News-only community pages (story groups with 4+ headlines, no moratorium)
+    for loc, st in (news_only_communities or []):
+        key = (loc, st)
+        if key in seen:
+            continue
+        seen.add(key)
+        slug = _loc_slug(loc, st)
+        full_state = _st_map.get(st, st)
+        items.append([f"{loc}, {full_state}", f"communities/{slug}"])
+    # State pages as fallback
+    for s in sorted(STATE_GRID_PROFILES):
+        items.append([s, f"states/{slugify(s)}"])
+    return _json.dumps(items, separators=(",", ":"))
+
+
+def build_index(top_stories=None, news_only_communities=None):
     n_states = len(STATE_DC_DF)
     n_dc = int(STATE_DC_DF["dc_count"].sum())
     twh = STATE_DC_DF["twh_year"].sum()
@@ -1395,6 +1431,7 @@ def build_index(top_stories=None):
         f"<li><strong>{esc(b['community'])}, {esc(b['state'])}</strong> "
         f"({esc(b['company'])}) — {esc(b['won'])}{_prov_links(b)}</li>"
         for b in CBA_BENCHMARKS)
+    _search_json = _hero_search_json(news_only_communities)
     body = f"""
 <div class="hero-grid">
 <header>
@@ -1404,6 +1441,11 @@ def build_index(top_stories=None):
   tracker covering {n_mora} local and state actions, project dossiers, health
   evidence, and free tools for communities facing a data center. Every claim
   links to its source.</p>
+  <div class="hero-search-wrap">
+    <input type="text" id="hero-q" placeholder="Find your town or county…"
+           autocomplete="off" aria-label="Search for your community">
+    <ul id="hero-results" hidden></ul>
+  </div>
   <p>
     <a class="btn" href="news/index.html">Today's top stories</a>
     <a class="btn ghost" href="start-here.html">Start here — the 5-step wizard</a>
@@ -1482,6 +1524,86 @@ def build_index(top_stories=None):
   <h2>Find your state</h2>
   <div class="statelist">{states_links}</div>
 </section>
+<style>
+.hero-search-wrap {{
+  position:relative; max-width:440px; margin:16px 0 8px;
+}}
+#hero-q {{
+  width:100%; padding:12px 16px; font-size:16px;
+  background:var(--card); color:var(--ink); border:1px solid var(--rule);
+  border-radius:10px; outline:none;
+}}
+#hero-q:focus {{ border-color:var(--teal); }}
+#hero-q::placeholder {{ color:var(--muted); }}
+#hero-results {{
+  position:absolute; left:0; right:0; top:100%; z-index:90;
+  background:var(--card); border:1px solid var(--rule); border-top:0;
+  border-radius:0 0 10px 10px; max-height:280px; overflow-y:auto;
+  list-style:none; padding:0; margin:0;
+  box-shadow:0 8px 24px rgba(0,0,0,.3);
+}}
+#hero-results li {{
+  padding:10px 16px; cursor:pointer; font-size:15px;
+  border-bottom:1px solid var(--rule);
+}}
+#hero-results li:last-child {{ border-bottom:0; }}
+#hero-results li:hover, #hero-results li.active {{
+  background:var(--tint); color:var(--teal);
+}}
+#hero-results li .hr-sub {{
+  display:block; font-size:12px; color:var(--muted); margin-top:2px;
+}}
+</style>
+<script>
+(function(){{
+  var D={_search_json};
+  var q=document.getElementById('hero-q');
+  var ul=document.getElementById('hero-results');
+  var sel=-1,hits=[];
+  function show(items){{
+    sel=-1; hits=items;
+    if(!items.length){{ ul.hidden=true; return; }}
+    ul.innerHTML=items.slice(0,8).map(function(it,i){{
+      var isSt=it[1].indexOf('states/')===0;
+      var sub=isSt?'State briefing':'Community page';
+      return '<li data-href="'+it[1]+'"'+(i===0?' class="active"':'')+'>'
+        +it[0]+'<span class="hr-sub">'+sub+'</span></li>';
+    }}).join('');
+    sel=0; ul.hidden=false;
+  }}
+  function go(href){{ window.location.href=href; }}
+  q.addEventListener('input',function(){{
+    var v=q.value.trim().toLowerCase();
+    if(v.length<2){{ ul.hidden=true; return; }}
+    var words=v.split(/\\s+/);
+    var m=D.filter(function(it){{
+      var low=it[0].toLowerCase();
+      return words.every(function(w){{ return low.indexOf(w)>=0; }});
+    }});
+    show(m);
+  }});
+  q.addEventListener('keydown',function(e){{
+    var lis=ul.querySelectorAll('li');
+    if(e.key==='ArrowDown'){{ e.preventDefault(); sel=Math.min(sel+1,lis.length-1); }}
+    else if(e.key==='ArrowUp'){{ e.preventDefault(); sel=Math.max(sel-1,0); }}
+    else if(e.key==='Enter'&&sel>=0&&lis[sel]){{ e.preventDefault(); go(lis[sel].getAttribute('data-href')); return; }}
+    else if(e.key==='Escape'){{ ul.hidden=true; return; }}
+    else return;
+    for(var i=0;i<lis.length;i++) lis[i].className=i===sel?'active':'';
+    if(lis[sel]) lis[sel].scrollIntoView({{block:'nearest'}});
+  }});
+  ul.addEventListener('click',function(e){{
+    var li=e.target.closest('li');
+    if(li) go(li.getAttribute('data-href'));
+  }});
+  document.addEventListener('click',function(e){{
+    if(!q.contains(e.target)&&!ul.contains(e.target)) ul.hidden=true;
+  }});
+  q.addEventListener('focus',function(){{
+    if(q.value.trim().length>=2&&hits.length) ul.hidden=false;
+  }});
+}})();
+</script>
 """
     home_ld = [
         {"@context": "https://schema.org", **_ORG},
@@ -16173,8 +16295,10 @@ def main():
     (WEB / "changes.html").write_text(build_changes_page(), encoding="utf-8")
     # The home page's "what changed" block reads _MORA_CHANGES_LOG, which
     # build_moratoriums() populates — so the front door renders last.
-    (WEB / "index.html").write_text(build_index(top_stories=top_stories),
-                                    encoding="utf-8")
+    (WEB / "index.html").write_text(
+        build_index(top_stories=top_stories,
+                    news_only_communities=[(l, s) for l, s, _ in _news_only]),
+        encoding="utf-8")
     print(f"  [data] {_n_changes} logged moratorium changes -> changes.xml")
     (WEB / "moratoriums-methodology.html").write_text(
         build_moratorium_methodology(), encoding="utf-8")

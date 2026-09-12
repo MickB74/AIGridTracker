@@ -1399,25 +1399,29 @@ MORATORIUMS = [
      "lat": 44.94, "lon": -123.04, "expires": None, "as_of": "2026-08-04",
      "source": "https://katu.com/news/local/tonight-salem-city-leaders-consider-ai-data-center-moratorium"},
     {"locality": "Jersey City", "state": "NJ", "level": "Local",
-     "status": "Proposed", "when": "Introduced Jul 15, 2026",
-     "note": "Ordinance 26-057 would bar data centers as the principal use of "
-             "industrial land. Passed first reading and the planning board; final "
-             "council vote set for Aug 19, 2026",
-     "lat": 40.72, "lon": -74.05, "expires": None, "as_of": "2026-08-04",
-     "source": "https://www.jerseycitynj.gov/news/jersey_city_introduces_law_to_ban_data_centers"},
+     "status": "Enacted", "when": "Aug 19, 2026",
+     "note": "Ordinance 26-057 passed unanimously, removing data centers as a "
+             "permitted principal use in Industrial Districts. Permanent zoning "
+             "ban; does not affect ~5 existing facilities in office buildings",
+     "lat": 40.72, "lon": -74.05, "expires": None, "as_of": "2026-09-12",
+     "source": "https://hudpost.com/jersey-city-council-bans-data-centers-from-industrial-zones/",
+     "term": "standing"},
     {"locality": "Howell Township", "state": "NJ", "level": "Local",
-     "status": "Proposed", "when": "2026",
-     "note": "Ordinance reconfirming data centers as a prohibited use; public "
-             "hearing and final vote set for Aug 18, 2026",
-     "lat": 40.18, "lon": -74.20, "expires": None, "as_of": "2026-08-04",
-     "source": "https://patch.com/new-jersey/howell/howell-moves-ban-ai-data-centers-township"},
+     "status": "Enacted", "when": "Aug 18, 2026",
+     "note": "Unanimous ban on hyperscale AI data centers (100+ MW, 1M+ sq ft). "
+             "33rd NJ municipality to ban. Amendments planned to distinguish "
+             "enterprise vs hyperscale facilities",
+     "lat": 40.18, "lon": -74.20, "expires": None, "as_of": "2026-09-12",
+     "source": "https://www.jerseyshoreonline.com/howell/ai-data-centers-banned-in-howell/",
+     "term": "standing"},
     {"locality": "Andover Township", "state": "NJ", "level": "Local",
-     "status": "Proposed", "when": "May 2026",
-     "note": "Township moved to ban AI data centers after a contentious public "
-             "meeting; faces a suit from National Land Developers over a former "
-             "airport site",
-     "lat": 41.00, "lon": -74.74, "expires": None, "as_of": "2026-08-04",
-     "source": "https://nj1015.com/andover-township-data-center-ban/"},
+     "status": "Enacted", "when": "May 28, 2026",
+     "note": "Ordinance 2026-13 banning data centers in all zones, passed "
+             "unanimously. Repealed two prior ordinances that allowed them. "
+             "NLD lawsuit filed Jul 10 in Sussex County Superior Court",
+     "lat": 41.00, "lon": -74.74, "expires": None, "as_of": "2026-09-12",
+     "source": "https://www.spartaindependent.com/news/local-news/andover-bans-data-centers-hardyston-could-be-next-FI5903755",
+     "term": "standing"},
     {"locality": "La Crosse", "state": "WI", "level": "Local",
      "status": "Enacted", "when": "Aug 14, 2026",
      "note": "18-month moratorium approved by Common Council, matching the county's "
@@ -1499,11 +1503,12 @@ MORATORIUMS = [
      "lat": 44.94, "lon": -123.03, "expires": None, "as_of": "2026-08-04",
      "source": "https://centraloregonian.com/2026/08/04/democratic-lawmakers-propose-three-year-moratorium-on-new-large-data-centers-in-oregon/"},
     {"locality": "Georgia (HB 1012)", "state": "GA", "level": "State",
-     "status": "Proposed", "when": "2026",
-     "note": "Would bar local permits for new data centers until Mar 1, 2027, "
-             "exempting approvals issued before Jul 1, 2026",
-     "lat": 33.75, "lon": -84.39, "expires": None, "as_of": "2026-08-04",
-     "source": "https://goodjobsfirst.org/data-center-moratorium-bills-are-spreading-in-2026/"},
+     "status": "Rejected", "when": "2026",
+     "note": "Died in House Governmental Affairs Committee; legislature adjourned "
+             "sine die Apr 2, 2026 without a vote. Companion SB 410 passed Senate "
+             "32-21 but also died in the House",
+     "lat": 33.75, "lon": -84.39, "expires": None, "as_of": "2026-09-12",
+     "source": "https://legiscan.com/GA/bill/HB1012/2025"},
     {"locality": "Maine (statewide)", "state": "ME", "level": "State",
      "status": "Vetoed", "when": "Apr 24, 2026",
      "note": "LD 307 would have paused 20+ MW facilities to Nov 2027; governor vetoed",
@@ -1683,13 +1688,13 @@ MORATORIUMS = [
      "lat": 43.42, "lon": -88.73, "expires": "2028-02-10", "as_of": "2026-08-12",
      "source": "https://dailydodge.com/dodge-county-to-hold-public-hearing-on-proposed-data-center-moratorium/"},
     {"locality": "Salix", "state": "IA", "level": "Local",
-     "status": "Proposed", "when": "Aug 12, 2026",
-     "note": "1-year moratorium on data centers, formal vote scheduled "
-             "Aug 12, 2026. Council voted 3-2 (Jul 8) to advance the "
-             "concept after 100+ residents debated a MidAmerican Energy "
-             "data center on ~900 acres of annexed farmland.",
-     "lat": 42.28, "lon": -96.29, "expires": None, "as_of": "2026-08-12",
-     "source": "https://www.ktiv.com/2026/08/12/salix-city-council-consider-data-center-moratorium/"},
+     "status": "Rejected", "when": "Aug 21, 2026",
+     "note": "Council voted 3-2 against a 12-month moratorium after Google was "
+             "identified as the prospective customer. Meeting delayed from Aug 12 "
+             "due to death threats. 100+ residents debated MidAmerican Energy "
+             "data center on ~900 acres of annexed farmland",
+     "lat": 42.28, "lon": -96.29, "expires": None, "as_of": "2026-09-12",
+     "source": "https://www.ktiv.com/2026/08/21/salix-city-council-votes-no-data-center-moratorium/"},
     {"locality": "Hogansville", "state": "GA", "level": "Local",
      "status": "Enacted", "when": "May 2026",
      "note": "90-day moratorium on data-center applications, extended "
@@ -2176,11 +2181,12 @@ MORATORIUMS = [
      "lat": 40.63, "lon": -74.41, "expires": None, "as_of": "2026-08-13",
      "source": "https://www.tapinto.net/towns/plainfield/articles/plainfield-city-council-takes-significant-step-towards-data-center-ban"},
     {"locality": "North Plainfield", "state": "NJ", "level": "Local",
-     "status": "Proposed", "when": "First reading Jun 2026",
-     "note": "Ordinance 26-10 banning data centers borough-wide, 6-0 first "
-             "reading; second reading and public hearing pending",
-     "lat": 40.63, "lon": -74.43, "expires": None, "as_of": "2026-08-13",
-     "source": "https://www.tapinto.net/towns/north-plainfield-slash-green-brook-slash-watchung/articles/north-plainfield-advances-ordinance-to-ban-data-centers-borough-wide"},
+     "status": "Enacted", "when": "Jul 13, 2026",
+     "note": "Ordinance 26-10 adopted on second reading, banning data centers "
+             "in all zoning districts borough-wide. First reading 6-0 on Jun 22",
+     "lat": 40.63, "lon": -74.43, "expires": None, "as_of": "2026-09-12",
+     "source": "https://www.northplainfieldnj.gov/government/documents/meeting-documents/mayor-council-meeting/2026-borough-council-meeting-documents/2026-minutes-bourough-council/1429-07-13-2026-regular-meeting-minutes-pdf/file",
+     "term": "standing"},
     # ── Batch 3 — Alabama ─────────────────────────────────────────────────
     {"locality": "Leeds", "state": "AL", "level": "Local",
      "status": "Enacted", "when": "Jun 3, 2026",

@@ -3568,5 +3568,47 @@
     "locality": "Hawaii County, HI",
     "kind": "added",
     "detail": "Added as Under Review"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "jersey-city-nj",
+    "locality": "Jersey City, NJ",
+    "kind": "status_changed",
+    "detail": "Proposed \u2192 Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "howell-township-nj",
+    "locality": "Howell Township, NJ",
+    "kind": "status_changed",
+    "detail": "Proposed \u2192 Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "andover-township-nj",
+    "locality": "Andover Township, NJ",
+    "kind": "status_changed",
+    "detail": "Proposed \u2192 Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "georgia-hb-1012-ga",
+    "locality": "Georgia (HB 1012), GA",
+    "kind": "status_changed",
+    "detail": "Proposed \u2192 Rejected"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "salix-ia",
+    "locality": "Salix, IA",
+    "kind": "status_changed",
+    "detail": "Proposed \u2192 Rejected"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "north-plainfield-nj",
+    "locality": "North Plainfield, NJ",
+    "kind": "status_changed",
+    "detail": "Proposed \u2192 Enacted"
   }
 ]
