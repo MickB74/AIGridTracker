@@ -1638,7 +1638,7 @@ def _mora_map_svg():
         title = f"{esc(str(m.locality))}, {esc(str(m.state))} — {esc(str(m.effective_status))}"
         dots.append(
             f'<a href="{href}"><circle cx="{x:.1f}" cy="{y:.1f}" r="4.4" '
-            f'fill="{color}" fill-opacity="0.82" stroke="var(--bg)" '
+            f'fill="{color}" fill-opacity="0.82" stroke="var(--map-bg, var(--bg))" '
             f'stroke-width="0.6"><title>{title}</title></circle></a>')
     legend = "".join(
         f'<span class="mora-map-legend-item"><i style="background:{c}"></i>{s}</span>'
@@ -8322,6 +8322,11 @@ def build_moratoriums():
   .mora-viz-grid {{ display:grid; grid-template-columns:1fr; gap:24px; }}
   .mora-map-wrap {{ border:1px solid var(--rule); border-radius:12px;
     background:var(--card); padding:10px; }}
+  .mora-map-wrap svg {{ background:var(--map-bg); border-radius:8px; }}
+  :root {{ --map-bg:transparent; }}
+  :root[data-theme="light"] {{ --map-bg:#1a2233; }}
+  @media (prefers-color-scheme:light) {{
+    :root:not([data-theme="dark"]) {{ --map-bg:#1a2233; }} }}
   .mora-map-wrap a circle {{ transition:r .1s ease; }}
   .mora-map-wrap a:hover circle {{ r:6; }}
   .mora-map-legend {{ display:flex; flex-wrap:wrap; gap:12px; align-items:center;
