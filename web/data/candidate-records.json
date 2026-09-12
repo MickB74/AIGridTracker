@@ -2,7 +2,7 @@
  "generated": "2026-09-11",
  "license": "CC BY 4.0",
  "note": "One row per cited item. kind=action is a bill, letter, hearing question or investigation; kind=statement is a quote, op-ed or campaign line. grade is the officials-scorecard grade (sitting officials only); lean summarises the cited items.",
- "count": 264,
+ "count": 267,
  "records": [
   {
    "chamber": "Senate",
@@ -3388,6 +3388,23 @@
    "page": "https://aigridwatch.com/house-races#race-ca-49"
   },
   {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "DE",
+   "district": "AL",
+   "name": "Sarah McBride",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Pressed Trump administration at Science, Space, and Technology hearing on data center community impacts; raised concerns about strain on energy and water supply and utility costs",
+   "date": "2026-01-14",
+   "source": "https://mcbride.house.gov/media/press-releases/rep-mcbride-presses-trump-administration-data-center-impacts-secures",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-de-al"
+  },
+  {
    "chamber": "Senate",
    "role": "senator",
    "state": "AR",
@@ -4019,6 +4036,23 @@
   {
    "chamber": "House",
    "role": "candidate",
+   "state": "DE",
+   "district": "AL",
+   "name": "Sarah McBride",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Co-sponsored H.R. 5332, Liquid Cooling for AI Act: bipartisan bill directing GAO to assess liquid cooling for AI compute and HPC facilities",
+   "date": "2025-09-15",
+   "source": "https://www.congress.gov/bill/119th-congress/house-bill/5332/cosponsors",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-de-al"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
    "state": "OH",
    "district": "9",
    "name": "Marcy Kaptur",
@@ -4134,6 +4168,23 @@
    "lean": "accelerate",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/house-races#race-va-1"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "DE",
+   "district": "AL",
+   "name": "Sarah McBride",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Secured $5M for Chemours liquid cooling technology — two-phase immersion cooling that can reduce water use, cut cooling energy by up to 90%, and shrink footprints by up to 60%",
+   "date": "2025-07-01",
+   "source": "https://mcbride.house.gov/media/press-releases/rep-mcbride-advances-5-million-delaware-innovation-and-chemours-house",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-11",
+   "page": "https://aigridwatch.com/house-races#race-de-al"
   },
   {
    "chamber": "Senate",

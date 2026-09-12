@@ -263,6 +263,10 @@
     "effective_status": "Under Review",
     "expires": null
   },
+  "box-butte-county-ne": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "box-elder-county-ut": {
     "effective_status": "Enacted",
     "expires": "2026-12-07"
@@ -334,6 +338,10 @@
   "butler-county-ky": {
     "effective_status": "Enacted",
     "expires": "2027-06-26"
+  },
+  "butler-county-ne": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "butler-county-oh": {
     "effective_status": "Enacted",
@@ -439,6 +447,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "cass-county-ne": {
+    "effective_status": "Enacted",
+    "expires": "2027-08-11"
+  },
   "cave-city-ky": {
     "effective_status": "Enacted",
     "expires": "2027-05-20"
@@ -470,6 +482,10 @@
   "cherokee-nation-ok": {
     "effective_status": "Enacted",
     "expires": null
+  },
+  "cherry-county-ne": {
+    "effective_status": "Enacted",
+    "expires": "2027-01-14"
   },
   "cherry-hill-nj": {
     "effective_status": "Enacted",
@@ -659,6 +675,10 @@
     "effective_status": "Enacted",
     "expires": "2026-12-15"
   },
+  "custer-county-ne": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "dane-county-wi": {
     "effective_status": "Enacted",
     "expires": "2027-12-04"
@@ -768,6 +788,10 @@
     "expires": "2027-05-26"
   },
   "dundee-township-mi": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "dundy-county-ne": {
     "effective_status": "Enacted",
     "expires": null
   },
@@ -903,6 +927,10 @@
     "effective_status": "Proposed",
     "expires": null
   },
+  "fallon-paiute-shoshone-tribe-nv": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "farmville-nc": {
     "effective_status": "Enacted",
     "expires": "2027-08-03"
@@ -1003,9 +1031,13 @@
     "effective_status": "Enacted",
     "expires": "2027-03-02"
   },
-  "gage-county-ne": {
-    "effective_status": "Proposed",
+  "furnas-county-ne": {
+    "effective_status": "Enacted",
     "expires": null
+  },
+  "gage-county-ne": {
+    "effective_status": "Enacted",
+    "expires": "2027-04-05"
   },
   "gallatin-tn": {
     "effective_status": "Proposed",
@@ -1017,6 +1049,10 @@
   },
   "garden-city-ga": {
     "effective_status": "Enacted",
+    "expires": null
+  },
+  "garfield-county-ne": {
+    "effective_status": "Proposed",
     "expires": null
   },
   "garfield-township-mi": {
@@ -1131,6 +1167,10 @@
     "effective_status": "Expired",
     "expires": "2026-08-25"
   },
+  "hall-county-ne": {
+    "effective_status": "Proposed",
+    "expires": null
+  },
   "hamblen-county-tn": {
     "effective_status": "Enacted",
     "expires": "2027-07-07"
@@ -1146,6 +1186,10 @@
   "haring-township-mi": {
     "effective_status": "Enacted",
     "expires": "2027-01-14"
+  },
+  "harlan-county-ne": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "harlingen-tx": {
     "effective_status": "Enacted",
@@ -1184,6 +1228,10 @@
     "expires": "2027-08-17"
   },
   "hawkins-county-tn": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "hayes-county-ne": {
     "effective_status": "Enacted",
     "expires": null
   },
@@ -1403,6 +1451,10 @@
     "effective_status": "Enacted",
     "expires": "2026-11-08"
   },
+  "johnson-county-ne": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "jonesborough-tn": {
     "effective_status": "Enacted",
     "expires": null
@@ -1413,6 +1465,10 @@
   },
   "kansas-sb-531-ks": {
     "effective_status": "Proposed",
+    "expires": null
+  },
+  "kearney-county-ne": {
+    "effective_status": "Enacted",
     "expires": null
   },
   "keene-nh": {
@@ -1516,7 +1572,7 @@
     "expires": null
   },
   "lancaster-county-ne": {
-    "effective_status": "Proposed",
+    "effective_status": "Withdrawn",
     "expires": null
   },
   "lansing-mi": {
@@ -1626,6 +1682,10 @@
   "logan-county-ky": {
     "effective_status": "Enacted",
     "expires": "2027-07-30"
+  },
+  "logan-county-ne": {
+    "effective_status": "Enacted",
+    "expires": "2027-07-15"
   },
   "logan-township-nj": {
     "effective_status": "Enacted",
@@ -2015,6 +2075,10 @@
     "effective_status": "Enacted",
     "expires": "2027-06-08"
   },
+  "nehawka-ne": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "nelson-county-ky": {
     "effective_status": "Enacted",
     "expires": null
@@ -2053,6 +2117,10 @@
   },
   "new-jersey-fair-share-act-nj": {
     "effective_status": "Enacted",
+    "expires": null
+  },
+  "new-mexico-nm": {
+    "effective_status": "Proposed",
     "expires": null
   },
   "new-york-s10642-a11560-ny": {
@@ -2131,6 +2199,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "nye-county-pahrump-nv": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "oak-grove-mo": {
     "effective_status": "Enacted",
     "expires": "2027-08-05"
@@ -2206,6 +2278,10 @@
   "orion-township-mi": {
     "effective_status": "Enacted",
     "expires": "2026-12-17"
+  },
+  "otoe-county-ne": {
+    "effective_status": "Enacted",
+    "expires": "2027-05-20"
   },
   "ottawa-il": {
     "effective_status": "Enacted",
@@ -2399,6 +2475,10 @@
     "effective_status": "Enacted",
     "expires": "2026-11-17"
   },
+  "pyramid-lake-paiute-tribe-nv": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "queen-anne-s-county-md": {
     "effective_status": "Enacted",
     "expires": "2027-07-29"
@@ -2410,6 +2490,10 @@
   "ralls-county-mo": {
     "effective_status": "Enacted",
     "expires": "2027-08-20"
+  },
+  "raton-nm": {
+    "effective_status": "Proposed",
+    "expires": null
   },
   "ravenna-oh": {
     "effective_status": "Enacted",
@@ -2438,6 +2522,10 @@
   "riley-county-ks": {
     "effective_status": "Enacted",
     "expires": "2026-11-12"
+  },
+  "rio-communities-nm": {
+    "effective_status": "Enacted",
+    "expires": "2027-08-26"
   },
   "rochester-hills-mi": {
     "effective_status": "Enacted",
@@ -2872,8 +2960,8 @@
     "expires": null
   },
   "trumbull-ct": {
-    "effective_status": "Proposed",
-    "expires": null
+    "effective_status": "Enacted",
+    "expires": "2028-09-09"
   },
   "tulare-county-ca": {
     "effective_status": "Enacted",
@@ -3070,6 +3158,10 @@
   "webster-township-mi": {
     "effective_status": "Enacted",
     "expires": "2027-04-21"
+  },
+  "wells-nv": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "wendell-nc": {
     "effective_status": "Enacted",

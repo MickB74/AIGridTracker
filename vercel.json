@@ -609,16 +609,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/cass-county-ne",
-      "destination": "/states/nebraska",
-      "permanent": true
-    },
-    {
-      "source": "/communities/cass-county-ne.html",
-      "destination": "/states/nebraska",
-      "permanent": true
-    },
-    {
       "source": "/communities/castro-county-tx",
       "destination": "/states/texas",
       "permanent": true
@@ -1246,16 +1236,6 @@
     {
       "source": "/communities/new-jersey-nj.html",
       "destination": "/states/new-jersey",
-      "permanent": true
-    },
-    {
-      "source": "/communities/new-mexico-nm",
-      "destination": "/states/new-mexico",
-      "permanent": true
-    },
-    {
-      "source": "/communities/new-mexico-nm.html",
-      "destination": "/states/new-mexico",
       "permanent": true
     },
     {

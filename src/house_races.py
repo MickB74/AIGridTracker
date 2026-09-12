@@ -1368,6 +1368,272 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
+
+    # ── Batch 6 deep dive — CT, NV, NM, DE, NE — 2026-09-11 ─────────────
+    ("CT", 1, "Luke Bronin"): {
+        "lean": "guardrails",
+        "summary": "Campaigned on sensible AI regulation and guardrails; "
+                   "called for data center developers to pay their fair share",
+        "items": [
+            {"what": "Primary victory speech called for 'sensible artificial "
+                     "intelligence regulation'; platform commits to AI "
+                     "guardrails against algorithmic addiction and AI operating "
+                     "without human oversight",
+             "date": "2026-08-13",
+             "source": "https://www.techtimes.com/articles/324305/20260813/bronin-routs-larson-21-points-connecticut-primary-adds-ai-guardrails-voice-congress.htm"},
+            {"what": "Called for regulation requiring data center developers "
+                     "to pay their fair share",
+             "date": "2026-05",
+             "source": "https://prospect.org/2026/05/21/meet-connecticuts-billionaire-backed-dark-money-democrat-bronin-larson-congress/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NV", 1, "Dina Titus"): {
+        "lean": "guardrails",
+        "summary": "Multiple actions demanding BLM transparency on data "
+                   "center permits, called for tax abatement freeze, and "
+                   "fought federal land data center approvals",
+        "items": [
+            {"what": "Letter to BLM demanding robust public consultation and "
+                     "transparency for data center permits on public lands; "
+                     "criticized switch from solar to data center without "
+                     "public review",
+             "date": "2026-07-08",
+             "source": "https://titus.house.gov/news/documentsingle.aspx?DocumentID=5916"},
+            {"what": "Called on Gov. Lombardo to freeze all data center tax "
+                     "breaks for projects on federal land until 2027 "
+                     "Legislature can act; cited $225.6M in sales/use tax "
+                     "breaks and $13.3M in property tax breaks",
+             "date": "2026-07-23",
+             "source": "https://titus.house.gov/news/documentsingle.aspx?DocumentID=5926"},
+            {"what": "NV Independent survey: favors local community input "
+                     "before federal land use; supports full environmental "
+                     "permitting with water consideration and public hearings",
+             "date": "2026-08-01",
+             "source": "https://thenevadaindependent.com/article/what-do-nevadas-congressional-candidates-think-about-data-centers"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NV", 1, "Carrie Buck"): {
+        "lean": "accelerate",
+        "summary": "Wants to make it easier to build AI energy and "
+                   "infrastructure",
+        "items": [
+            {"what": "NV Independent survey: federal government should 'make "
+                     "it easier to build the energy and infrastructure America "
+                     "needs to lead in AI'",
+             "date": "2026-08-01",
+             "source": "https://thenevadaindependent.com/article/what-do-nevadas-congressional-candidates-think-about-data-centers"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NV", 2, "Teresa Benitez-Thompson"): {
+        "lean": "guardrails",
+        "summary": "Supports local control over data center regulation; "
+                   "opposes federal preemption of state/local authority",
+        "items": [
+            {"what": "NV Independent survey: does not want federal actions to "
+                     "prevent state or local governments from taking their own "
+                     "regulatory action on data centers",
+             "date": "2026-08-01",
+             "source": "https://thenevadaindependent.com/article/what-do-nevadas-congressional-candidates-think-about-data-centers"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NV", 2, "David Flippo"): {
+        "lean": "mixed",
+        "summary": "Opposes tax abatements for data centers; supports local "
+                   "decision-making but would support federal involvement for "
+                   "national security",
+        "items": [
+            {"what": "NV Independent survey: 'The best decisions are made at "
+                     "the most local level possible.' Opposes tax abatements; "
+                     "would support federal involvement only for national "
+                     "security protection",
+             "date": "2026-08-01",
+             "source": "https://thenevadaindependent.com/article/what-do-nevadas-congressional-candidates-think-about-data-centers"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NV", 3, "Susie Lee"): {
+        "lean": "mixed",
+        "summary": "Toured Switch AI factory approvingly; opposes federal "
+                   "pause on development but supports disclosure requirements",
+        "items": [
+            {"what": "Toured Switch AI factory in Las Vegas with House "
+                     "Democratic Leader Jeffries; praised Switch for 'bringing "
+                     "the cutting edge of AI innovation right here to southern "
+                     "Nevada' and creating good-paying jobs",
+             "date": "2025-08-29",
+             "source": "https://susielee.house.gov/media/press-releases/icymi-congresswoman-lee-leader-jeffries-tour-new-cutting-edge-ai-factory-will"},
+            {"what": "NV Independent survey: supports water consumption "
+                     "disclosure and energy efficiency standards; opposes "
+                     "blanket federal pause on development",
+             "date": "2026-08-01",
+             "source": "https://thenevadaindependent.com/article/what-do-nevadas-congressional-candidates-think-about-data-centers"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NV", 3, "Martin O'Donnell"): {
+        "lean": "guardrails",
+        "summary": "Supports legislation ensuring local communities are not "
+                   "negatively affected; backs water usage disclosure",
+        "items": [
+            {"what": "NV Independent survey: supports legislation ensuring "
+                     "local communities are not negatively affected by data "
+                     "centers; backs water usage disclosure requirements",
+             "date": "2026-08-01",
+             "source": "https://thenevadaindependent.com/article/what-do-nevadas-congressional-candidates-think-about-data-centers"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NV", 4, "Steven Horsford"): {
+        "lean": "mixed",
+        "summary": "Partners with OpenAI on AI workforce training and "
+                   "opposes moratorium but supports disclosure requirements "
+                   "and worker protections",
+        "items": [
+            {"what": "Joined OpenAI and Rep. Khanna at College of Southern "
+                     "Nevada for AI workforce training; helped secure nearly "
+                     "$7M for CSN Westside Education and Training Center",
+             "date": "2026-04-24",
+             "source": "https://horsford.house.gov/media/press-releases/rep-horsford-joins-openai-rep-ro-khanna-and-college-of-southern-nevada-csn-to-expand-ai-workforce-training-in-north-las-vegas"},
+            {"what": "NV Independent survey: supports federal disclosure "
+                     "standards for energy and water use; states should be "
+                     "able to go further than federal baselines; opposes "
+                     "blanket moratorium",
+             "date": "2026-08-01",
+             "source": "https://thenevadaindependent.com/article/what-do-nevadas-congressional-candidates-think-about-data-centers"},
+            {"what": "Joined Rep. Khanna and Las Vegas unions to discuss "
+                     "AI/automation threats to workers; advocated advance "
+                     "notice, training, and collective bargaining as "
+                     "accountability tool",
+             "date": "2026-08-20",
+             "source": "https://lasvegassun.com/news/2026/aug/20/las-vegas-union-workers-reps-ro-khanna-and-steven/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NV", 4, "Cody Whipple"): {
+        "lean": "guardrails",
+        "summary": "Supports common-sense frameworks safeguarding natural "
+                   "resources; calls data centers a national security issue",
+        "items": [
+            {"what": "NV Independent survey: supports 'common-sense "
+                     "frameworks that safeguard Nevada's natural resources "
+                     "while fostering technological innovation'; calls data "
+                     "centers national security issue; wants federal standards "
+                     "bringing water, agriculture, and tech officials together",
+             "date": "2026-08-01",
+             "source": "https://thenevadaindependent.com/article/what-do-nevadas-congressional-candidates-think-about-data-centers"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NM", 1, "Melanie Stansbury"): {
+        "lean": "guardrails",
+        "summary": "Demanded water accountability for Project Jupiter from "
+                   "five NM state officials",
+        "items": [
+            {"what": "Formal letter to five NM state officials demanding "
+                     "written answers on Project Jupiter's water use, water "
+                     "rights, permits, and Rio Grande Compact compliance; "
+                     "called it 'an important test case for how New Mexico "
+                     "evaluates major industrial water users'",
+             "date": "2026-08-24",
+             "source": "https://stansbury.house.gov/media/press-releases/rep-stansbury-demands-answers-project-jupiters-water-use-new-mexico-supreme"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NM", 2, "Gabe Vasquez"): {
+        "lean": "guardrails",
+        "summary": "Called for Socorro County moratorium; co-sponsored FAIR "
+                   "Data Act and Data Center Water and Energy Transparency Act",
+        "items": [
+            {"what": "Publicly called on Socorro County commissioners to "
+                     "approve temporary data center moratorium before their "
+                     "June vote",
+             "date": "2026-06-09",
+             "source": "https://sourcenm.com/briefs/us-rep-vasquez-calls-for-new-mexico-county-to-approve-data-center-moratorium/"},
+            {"what": "Co-sponsored FAIR Data Act (H.R. 9655): prevents data "
+                     "center projects from raising energy costs for "
+                     "residential customers and small businesses",
+             "date": "2026-08-25",
+             "source": "https://vasquez.house.gov/media/press-releases/rep-gabe-vasquez-demands-accountability-data-center-developers-reiterates-new"},
+            {"what": "Co-sponsored Data Center Water and Energy Transparency "
+                     "Act (H.R. 9825): mandates disclosure of energy and water "
+                     "usage with fines up to $20,000/day for non-compliance",
+             "date": "2026-08-25",
+             "source": "https://vasquez.house.gov/media/press-releases/rep-gabe-vasquez-demands-accountability-data-center-developers-reiterates-new"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("DE", "AL", "Sarah McBride"): {
+        "lean": "guardrails",
+        "summary": "Pressed Trump administration on data center community "
+                   "impacts; co-sponsored Liquid Cooling for AI Act; secured "
+                   "$5M for cooling technology",
+        "items": [
+            {"what": "Pressed Trump administration at Science, Space, and "
+                     "Technology hearing on data center community impacts; "
+                     "raised concerns about strain on energy and water supply "
+                     "and utility costs",
+             "date": "2026-01-14",
+             "source": "https://mcbride.house.gov/media/press-releases/rep-mcbride-presses-trump-administration-data-center-impacts-secures"},
+            {"what": "Co-sponsored H.R. 5332, Liquid Cooling for AI Act: "
+                     "bipartisan bill directing GAO to assess liquid cooling "
+                     "for AI compute and HPC facilities",
+             "date": "2025-09-15",
+             "source": "https://www.congress.gov/bill/119th-congress/house-bill/5332/cosponsors"},
+            {"what": "Secured $5M for Chemours liquid cooling technology — "
+                     "two-phase immersion cooling that can reduce water use, "
+                     "cut cooling energy by up to 90%, and shrink footprints "
+                     "by up to 60%",
+             "date": "2025-07-01",
+             "source": "https://mcbride.house.gov/media/press-releases/rep-mcbride-advances-5-million-delaware-innovation-and-chemours-house"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NE", 1, "Mike Flood"): {
+        "lean": "accelerate",
+        "summary": "Pro-data center at Nebraska energy summit; frames AI as "
+                   "requiring legal accountability but supports infrastructure",
+        "items": [
+            {"what": "At Nebraska energy summit, advocated for data centers "
+                     "as needed infrastructure; framed AI as requiring legal "
+                     "accountability — companies cannot escape discrimination "
+                     "laws by claiming 'that was in our large language model'",
+             "date": "2026-08-12",
+             "source": "https://nebraskapublicmedia.org/en/news/news-articles/nebraskas-federal-representatives-talk-energy-chinese-competition-and-iran-at-summit/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NE", 1, "Chris Backemeyer"): {
+        "lean": "accelerate",
+        "summary": "Supports domestic data center construction framed as "
+                   "national security priority",
+        "items": [
+            {"what": "Expressed alarm at Saudi Arabia and UAE offering to host "
+                     "US data centers: 'That scares the bejesus out of me'; "
+                     "supports building data centers domestically",
+             "date": "2026-08-26",
+             "source": "https://www.nbcdfw.com/news/national-international/left-and-right-oppose-artificial-intelligence-data-centers/4067951/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NE", 3, "Adrian Smith"): {
+        "lean": "accelerate",
+        "summary": "Pro-AI efficiency; advocates for data centers despite "
+                   "county moratorium wave",
+        "items": [
+            {"what": "At Nebraska energy summit: 'The efficiencies that can "
+                     "be achieved already with AI, it's amazing' and 'We "
+                     "should celebrate how much better lives can be with more "
+                     "economic efficiency'; advocated for data centers despite "
+                     "county moratorium wave",
+             "date": "2026-08-12",
+             "source": "https://nebraskapublicmedia.org/en/news/news-articles/nebraskas-federal-representatives-talk-energy-chinese-competition-and-iran-at-summit/"},
+        ],
+        "as_of": "2026-09-11",
+    },
 }
 
 

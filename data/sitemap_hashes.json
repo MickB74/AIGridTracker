@@ -24,11 +24,11 @@
     "lastmod": "2026-09-12"
   },
   "changes": {
-    "hash": "ba5e42eb29b521de",
+    "hash": "23305e4983962450",
     "lastmod": "2026-09-12"
   },
   "communities/": {
-    "hash": "af58f610200ddd4d",
+    "hash": "1608b431cc3a6b32",
     "lastmod": "2026-09-12"
   },
   "communities/abilene-tx": {
@@ -315,6 +315,10 @@
     "hash": "7f847de6a051d602",
     "lastmod": "2026-09-12"
   },
+  "communities/box-butte-county-ne": {
+    "hash": "2c32ba2232296492",
+    "lastmod": "2026-09-12"
+  },
   "communities/box-elder-county-ut": {
     "hash": "ecd9b23b52ff506e",
     "lastmod": "2026-09-12"
@@ -389,6 +393,10 @@
   },
   "communities/butler-county-ky": {
     "hash": "2e50107da0684d2a",
+    "lastmod": "2026-09-12"
+  },
+  "communities/butler-county-ne": {
+    "hash": "73cf4ca5b13b440d",
     "lastmod": "2026-09-12"
   },
   "communities/butler-county-oh": {
@@ -499,6 +507,10 @@
     "hash": "462d672ea07ebe57",
     "lastmod": "2026-09-12"
   },
+  "communities/cass-county-ne": {
+    "hash": "f2559397beaa8500",
+    "lastmod": "2026-09-12"
+  },
   "communities/cave-city-ky": {
     "hash": "402bd44b09dc1071",
     "lastmod": "2026-09-12"
@@ -529,6 +541,10 @@
   },
   "communities/cherokee-nation-ok": {
     "hash": "8a0bd39306ce631e",
+    "lastmod": "2026-09-12"
+  },
+  "communities/cherry-county-ne": {
+    "hash": "dc3095981e618656",
     "lastmod": "2026-09-12"
   },
   "communities/cherry-hill-nj": {
@@ -656,7 +672,7 @@
     "lastmod": "2026-09-12"
   },
   "communities/colfax-county-nm": {
-    "hash": "bb0cd402976d7c91",
+    "hash": "b40f9213f47f2087",
     "lastmod": "2026-09-12"
   },
   "communities/colleton-county-sc": {
@@ -717,6 +733,10 @@
   },
   "communities/cumberland-county-nc": {
     "hash": "98d90f17ddecbd19",
+    "lastmod": "2026-09-12"
+  },
+  "communities/custer-county-ne": {
+    "hash": "3cd4661d5ba69975",
     "lastmod": "2026-09-12"
   },
   "communities/dane-county-wi": {
@@ -837,6 +857,10 @@
   },
   "communities/dundee-township-mi": {
     "hash": "9502310557c7cae9",
+    "lastmod": "2026-09-12"
+  },
+  "communities/dundy-county-ne": {
+    "hash": "5aa36cc035ca0aab",
     "lastmod": "2026-09-12"
   },
   "communities/durham-county-nc": {
@@ -975,6 +999,10 @@
     "hash": "323b0b63cfaeccab",
     "lastmod": "2026-09-12"
   },
+  "communities/fallon-paiute-shoshone-tribe-nv": {
+    "hash": "a5a0d65f3780ed93",
+    "lastmod": "2026-09-12"
+  },
   "communities/farmville-nc": {
     "hash": "32368a8699d2e611",
     "lastmod": "2026-09-12"
@@ -1075,8 +1103,12 @@
     "hash": "031457dcf2abfaf8",
     "lastmod": "2026-09-12"
   },
+  "communities/furnas-county-ne": {
+    "hash": "8b41eceff03ee21d",
+    "lastmod": "2026-09-12"
+  },
   "communities/gage-county-ne": {
-    "hash": "c6b4b40941eeed1a",
+    "hash": "58d48fff4d18e9d5",
     "lastmod": "2026-09-12"
   },
   "communities/gallatin-tn": {
@@ -1089,6 +1121,10 @@
   },
   "communities/garden-city-ga": {
     "hash": "2f9c38ea401e2c62",
+    "lastmod": "2026-09-12"
+  },
+  "communities/garfield-county-ne": {
+    "hash": "95e6dd0fd60db55c",
     "lastmod": "2026-09-12"
   },
   "communities/garfield-township-mi": {
@@ -1184,7 +1220,7 @@
     "lastmod": "2026-09-12"
   },
   "communities/groton-ct": {
-    "hash": "45843c34634b1d2a",
+    "hash": "6f6bafa07a6bd186",
     "lastmod": "2026-09-12"
   },
   "communities/grove-city-oh": {
@@ -1207,6 +1243,10 @@
     "hash": "69a7fe1688293f4b",
     "lastmod": "2026-09-12"
   },
+  "communities/hall-county-ne": {
+    "hash": "3fa969a0e30c31b0",
+    "lastmod": "2026-09-12"
+  },
   "communities/hamblen-county-tn": {
     "hash": "a8d4261a53f00d9d",
     "lastmod": "2026-09-12"
@@ -1221,6 +1261,10 @@
   },
   "communities/haring-township-mi": {
     "hash": "42b0b024668f132b",
+    "lastmod": "2026-09-12"
+  },
+  "communities/harlan-county-ne": {
+    "hash": "a4881e637105abc8",
     "lastmod": "2026-09-12"
   },
   "communities/harlingen-tx": {
@@ -1263,6 +1307,10 @@
     "hash": "7ee482032e5eee9f",
     "lastmod": "2026-09-12"
   },
+  "communities/hayes-county-ne": {
+    "hash": "4f370e2bf4c1c434",
+    "lastmod": "2026-09-12"
+  },
   "communities/hayes-township-mi": {
     "hash": "9e113c11fbf2c4fa",
     "lastmod": "2026-09-12"
@@ -1280,7 +1328,7 @@
     "lastmod": "2026-09-12"
   },
   "communities/henderson-nv": {
-    "hash": "d83ec29bb43d68cf",
+    "hash": "64e2c55c1c10ae50",
     "lastmod": "2026-09-12"
   },
   "communities/hendersonville-nc": {
@@ -1372,7 +1420,7 @@
     "lastmod": "2026-09-12"
   },
   "communities/humboldt-county-nv": {
-    "hash": "76af9733635ffa43",
+    "hash": "9921df23cfd84c3d",
     "lastmod": "2026-09-12"
   },
   "communities/huron-county-mi": {
@@ -1483,6 +1531,10 @@
     "hash": "3a52f846ecd6672c",
     "lastmod": "2026-09-12"
   },
+  "communities/johnson-county-ne": {
+    "hash": "9110a69aeaf5e7d9",
+    "lastmod": "2026-09-12"
+  },
   "communities/jonesborough-tn": {
     "hash": "28908123f2def5d8",
     "lastmod": "2026-09-12"
@@ -1493,6 +1545,10 @@
   },
   "communities/kansas-sb-531-ks": {
     "hash": "ae992e08392c9b62",
+    "lastmod": "2026-09-12"
+  },
+  "communities/kearney-county-ne": {
+    "hash": "603c8647c4b18a77",
     "lastmod": "2026-09-12"
   },
   "communities/keene-nh": {
@@ -1600,7 +1656,7 @@
     "lastmod": "2026-09-12"
   },
   "communities/lancaster-county-ne": {
-    "hash": "7ad45839760d325c",
+    "hash": "bd25345de7e2da62",
     "lastmod": "2026-09-12"
   },
   "communities/lansing-mi": {
@@ -1709,6 +1765,10 @@
   },
   "communities/logan-county-ky": {
     "hash": "6fcc5bdc3f671cdc",
+    "lastmod": "2026-09-12"
+  },
+  "communities/logan-county-ne": {
+    "hash": "eb99e1df68419f8f",
     "lastmod": "2026-09-12"
   },
   "communities/logan-township-nj": {
@@ -2076,7 +2136,7 @@
     "lastmod": "2026-09-12"
   },
   "communities/morris-ct": {
-    "hash": "d32dde262317b929",
+    "hash": "9ced6cd5e8a0bea2",
     "lastmod": "2026-09-12"
   },
   "communities/morton-county-nd": {
@@ -2115,6 +2175,10 @@
     "hash": "1dc248f1069bdd0c",
     "lastmod": "2026-09-12"
   },
+  "communities/nehawka-ne": {
+    "hash": "f392b6fb3068dc58",
+    "lastmod": "2026-09-12"
+  },
   "communities/nelson-county-ky": {
     "hash": "0f522570afb49323",
     "lastmod": "2026-09-12"
@@ -2148,11 +2212,15 @@
     "lastmod": "2026-09-12"
   },
   "communities/new-haven-ct": {
-    "hash": "59e9034125aaa488",
+    "hash": "04a4240f78abbbae",
     "lastmod": "2026-09-12"
   },
   "communities/new-jersey-fair-share-act-nj": {
     "hash": "d0c3969ff77284a1",
+    "lastmod": "2026-09-12"
+  },
+  "communities/new-mexico-nm": {
+    "hash": "89ec00c52c7829dc",
     "lastmod": "2026-09-12"
   },
   "communities/new-york-s10642-a11560-ny": {
@@ -2232,7 +2300,11 @@
     "lastmod": "2026-09-12"
   },
   "communities/nye-county-nv": {
-    "hash": "b942160bf3c4f612",
+    "hash": "443aad6803d8f8d4",
+    "lastmod": "2026-09-12"
+  },
+  "communities/nye-county-pahrump-nv": {
+    "hash": "33081936352aed6e",
     "lastmod": "2026-09-12"
   },
   "communities/oak-grove-mo": {
@@ -2309,6 +2381,10 @@
   },
   "communities/orion-township-mi": {
     "hash": "b2496d28d9eb9f16",
+    "lastmod": "2026-09-12"
+  },
+  "communities/otoe-county-ne": {
+    "hash": "6919e056ccd409b9",
     "lastmod": "2026-09-12"
   },
   "communities/ottawa-il": {
@@ -2523,6 +2599,10 @@
     "hash": "39b633304eb6bcdc",
     "lastmod": "2026-09-12"
   },
+  "communities/pyramid-lake-paiute-tribe-nv": {
+    "hash": "115a95610f4f146d",
+    "lastmod": "2026-09-12"
+  },
   "communities/queen-anne-s-county-md": {
     "hash": "d2f07733cd87c1c1",
     "lastmod": "2026-09-12"
@@ -2533,6 +2613,10 @@
   },
   "communities/ralls-county-mo": {
     "hash": "725f99ff34f9ca5d",
+    "lastmod": "2026-09-12"
+  },
+  "communities/raton-nm": {
+    "hash": "3878f9f61ff99e8b",
     "lastmod": "2026-09-12"
   },
   "communities/ravenna-oh": {
@@ -2548,7 +2632,7 @@
     "lastmod": "2026-09-12"
   },
   "communities/reno-nv": {
-    "hash": "7ff4fca830cfc55a",
+    "hash": "74993c2edd7e8912",
     "lastmod": "2026-09-12"
   },
   "communities/renton-wa": {
@@ -2565,6 +2649,10 @@
   },
   "communities/riley-county-ks": {
     "hash": "3048407ca77979db",
+    "lastmod": "2026-09-12"
+  },
+  "communities/rio-communities-nm": {
+    "hash": "3b739aa018604950",
     "lastmod": "2026-09-12"
   },
   "communities/rochester-hills-mi": {
@@ -2656,7 +2744,7 @@
     "lastmod": "2026-09-12"
   },
   "communities/santa-fe-county-nm": {
-    "hash": "2a4f5afdd1eeb086",
+    "hash": "6e15793acb754f67",
     "lastmod": "2026-09-12"
   },
   "communities/santa-rosa-county-fl": {
@@ -2704,7 +2792,7 @@
     "lastmod": "2026-09-12"
   },
   "communities/seward-county-ne": {
-    "hash": "116eb913adfb8887",
+    "hash": "f90b473a10507ce5",
     "lastmod": "2026-09-12"
   },
   "communities/shawano-county-wi": {
@@ -2740,7 +2828,7 @@
     "lastmod": "2026-09-12"
   },
   "communities/sierra-county-nm": {
-    "hash": "446beec89ee9ed0a",
+    "hash": "bd222c2c818d864d",
     "lastmod": "2026-09-12"
   },
   "communities/sioux-county-ia": {
@@ -2764,7 +2852,7 @@
     "lastmod": "2026-09-12"
   },
   "communities/socorro-county-nm": {
-    "hash": "965a0eff984d74bd",
+    "hash": "3b42055f32385e1e",
     "lastmod": "2026-09-12"
   },
   "communities/solon-township-mi": {
@@ -3020,7 +3108,7 @@
     "lastmod": "2026-09-12"
   },
   "communities/trumbull-ct": {
-    "hash": "9ee8413d601d032d",
+    "hash": "0cc54dd5f6146566",
     "lastmod": "2026-09-12"
   },
   "communities/tucker-county-wv": {
@@ -3227,12 +3315,16 @@
     "hash": "91fb8c54cf0032fb",
     "lastmod": "2026-09-12"
   },
+  "communities/wells-nv": {
+    "hash": "e6fac3ca5ac81810",
+    "lastmod": "2026-09-12"
+  },
   "communities/wendell-nc": {
     "hash": "83701e436fbf95ed",
     "lastmod": "2026-09-12"
   },
   "communities/west-haven-ct": {
-    "hash": "de9fc3d2dbfdac42",
+    "hash": "41788262a5ae43ba",
     "lastmod": "2026-09-12"
   },
   "communities/west-whiteland-township-pa": {
@@ -3260,7 +3352,7 @@
     "lastmod": "2026-09-12"
   },
   "communities/white-pine-county-nv": {
-    "hash": "ce0cd81fbc332fac",
+    "hash": "979ef003bb4a1582",
     "lastmod": "2026-09-12"
   },
   "communities/whiteville-nc": {
@@ -3480,7 +3572,7 @@
     "lastmod": "2026-09-12"
   },
   "house-races": {
-    "hash": "42511cd03a43c5a5",
+    "hash": "228f5f70212c1e04",
     "lastmod": "2026-09-12"
   },
   "impact": {
@@ -3492,15 +3584,15 @@
     "lastmod": "2026-09-12"
   },
   "map": {
-    "hash": "a539748f0e91bf66",
+    "hash": "f9ecacaf1970ef96",
     "lastmod": "2026-09-12"
   },
   "moratoriums": {
-    "hash": "450e49fa834f9a96",
+    "hash": "9313e1017623d8e1",
     "lastmod": "2026-09-12"
   },
   "moratoriums-methodology": {
-    "hash": "fba2c6be1bc08ab3",
+    "hash": "c0dc135fbdfeef98",
     "lastmod": "2026-09-12"
   },
   "news/": {
@@ -3512,7 +3604,7 @@
     "lastmod": "2026-09-12"
   },
   "open-data": {
-    "hash": "fd66dd327d0249c5",
+    "hash": "2519b31039a12770",
     "lastmod": "2026-09-12"
   },
   "opposition": {
@@ -3532,23 +3624,23 @@
     "lastmod": "2026-09-12"
   },
   "search": {
-    "hash": "6e40e30bab6a937b",
+    "hash": "a0ea6a0aada4ab3b",
     "lastmod": "2026-09-12"
   },
   "senate-races": {
-    "hash": "58fd892d00e0b6f8",
+    "hash": "24ed5f0536830bca",
     "lastmod": "2026-09-12"
   },
   "senators": {
-    "hash": "a230eccf9778dd7f",
+    "hash": "2a14d4c8a9bde95b",
     "lastmod": "2026-09-12"
   },
   "siting": {
-    "hash": "4f86ce72869e3283",
+    "hash": "9d80ab626204d9b2",
     "lastmod": "2026-09-12"
   },
   "start-here": {
-    "hash": "a79e8593992669bb",
+    "hash": "6a4fea5dab98d061",
     "lastmod": "2026-09-12"
   },
   "states/": {
@@ -3580,11 +3672,11 @@
     "lastmod": "2026-09-12"
   },
   "states/connecticut": {
-    "hash": "fba11711a6bbdf0b",
+    "hash": "e4345cc8e952d01a",
     "lastmod": "2026-09-12"
   },
   "states/delaware": {
-    "hash": "02905ccff63d6050",
+    "hash": "c13e9d109fea2aaa",
     "lastmod": "2026-09-12"
   },
   "states/district-of-columbia": {
@@ -3664,11 +3756,11 @@
     "lastmod": "2026-09-12"
   },
   "states/nebraska": {
-    "hash": "d9dae0262f8da4aa",
+    "hash": "201585ddfb6a15fd",
     "lastmod": "2026-09-12"
   },
   "states/nevada": {
-    "hash": "a4c31f3be245d2de",
+    "hash": "5b79091cd20d5d8e",
     "lastmod": "2026-09-12"
   },
   "states/new-hampshire": {
@@ -3680,7 +3772,7 @@
     "lastmod": "2026-09-12"
   },
   "states/new-mexico": {
-    "hash": "0eb770e4152a22ac",
+    "hash": "36a6edfc5ce0cc22",
     "lastmod": "2026-09-12"
   },
   "states/new-york": {
@@ -3760,7 +3852,7 @@
     "lastmod": "2026-09-12"
   },
   "story-tracker": {
-    "hash": "e6bf83771815084e",
+    "hash": "8acefc9ed152e548",
     "lastmod": "2026-09-12"
   },
   "studies": {
