@@ -1263,6 +1263,10 @@
     "effective_status": "Enacted",
     "expires": "2027-08-17"
   },
+  "hawaii-county-hi": {
+    "effective_status": "Under Review",
+    "expires": null
+  },
   "hawkins-county-tn": {
     "effective_status": "Enacted",
     "expires": null
@@ -2091,6 +2095,10 @@
     "effective_status": "Enacted",
     "expires": "2028-05-20"
   },
+  "morristown-vt": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "morton-county-nd": {
     "effective_status": "Rescinded",
     "expires": null
@@ -2635,6 +2643,10 @@
     "effective_status": "Enacted",
     "expires": "2027-05-04"
   },
+  "royalton-vt": {
+    "effective_status": "Enacted",
+    "expires": "2031-03-03"
+  },
   "russellville-ar": {
     "effective_status": "Enacted",
     "expires": "2027-01-31"
@@ -2808,6 +2820,10 @@
     "expires": null
   },
   "south-bloomfield-oh": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "south-burlington-vt": {
     "effective_status": "Enacted",
     "expires": null
   },
@@ -3088,7 +3104,7 @@
     "expires": null
   },
   "vermont-s-205-vt": {
-    "effective_status": "Proposed",
+    "effective_status": "Rejected",
     "expires": null
   },
   "vernon-township-nj": {

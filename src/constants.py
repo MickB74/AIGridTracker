@@ -3184,15 +3184,15 @@ MORATORIUMS = [
      "source": "https://www.williamsmullen.com/insights/news/legal-news/virginia-budget-creates-new-electricity-consumption-tax-data-centers",
      "term": "standing"},
     {"locality": "Vermont (S.205)", "state": "VT", "level": "State",
-     "status": "Proposed", "when": "2026",
-     "note": "S.205 (Sen. Rebecca White) would bar constructing or operating "
-             "an AI data center drawing over 100 MW of new electricity until "
-             "Jul 1, 2030, with a PUC impact study due Jan 15, 2027. "
-             "Introduced Jan 6, referred to Senate Finance, no vote taken",
-     "lat": 44.26, "lon": -72.58, "expires": None, "as_of": "2026-08-23",
-     "source": "https://legislature.vermont.gov/bill/status/2026/S.205",
-     "term": "until_event"},
-    # Tracked as "in committee" until 2026-08-23; it had already died.
+     "status": "Rejected", "when": "2026",
+     "note": "S.205 (Sen. Rebecca White) would have barred constructing or "
+             "operating an AI data center drawing over 100 MW of new "
+             "electricity until Jul 1, 2030. Introduced Jan 6, died in Senate "
+             "Finance Committee with no vote (session ended May 29). "
+             "Legislature passed H.727 (regulatory framework) instead but "
+             "Gov. Scott vetoed May 28; override failed 83-52",
+     "lat": 44.26, "lon": -72.58, "expires": None, "as_of": "2026-09-12",
+     "source": "https://legislature.vermont.gov/bill/status/2026/S.205"},
     {"locality": "Oklahoma (SB 1488)", "state": "OK", "level": "State",
      "status": "Rejected", "when": "May 14, 2026",
      "note": "SB 1488 (Sen. Sacchieri) would have barred new data centers of "
@@ -5280,6 +5280,51 @@ MORATORIUMS = [
      "lat": 46.9369, "lon": -98.0690, "expires": "2026-11-19",
      "as_of": "2026-09-12",
      "source": "https://www.valleynewslive.com/2026/05/19/barnes-county-puts-pause-data-centers-amid-resident-concerns/"},
+    # --- batch 9 (2026-09-12): VT, WY, HI, WV ---
+    {"locality": "Royalton", "state": "VT", "level": "Town",
+     "status": "Enacted", "when": "Mar 3, 2026",
+     "note": "Town Meeting Day vote by show of hands (154 voters) approved a "
+             "five-year moratorium on construction of AI and cryptocurrency "
+             "data centers. Nonbinding policy vote — Selectboard not required "
+             "to enforce. Planning Commission tasked with writing into town "
+             "plan. No data centers proposed or existing in Royalton.",
+     "lat": 43.82, "lon": -72.52, "expires": "2031-03-03",
+     "as_of": "2026-09-12",
+     "source": "https://vnews.com/2026/03/03/royalton-ai-crypto-moratorium-approved/"},
+    {"locality": "South Burlington", "state": "VT", "level": "City",
+     "status": "Enacted", "when": "Aug 3, 2026",
+     "note": "Planning Commission amended Land Development Regulations to ban "
+             "data centers with footprint exceeding 20,000 sq ft. Facilities "
+             "under 5,000 sq ft classified as general commercial and exempt. "
+             "Small-scale (5,000-20,000 sq ft) permitted in mixed "
+             "industrial-commercial and industrial zones only. Adopted after "
+             "Gov. Scott vetoed state-level H.727.",
+     "lat": 44.47, "lon": -73.18, "expires": None, "as_of": "2026-09-12",
+     "source": "https://www.sevendaysvt.com/news/constructiondevelopment/absent-state-action-vermont-towns-move-to-block-data-centers/",
+     "term": "standing"},
+    {"locality": "Morristown", "state": "VT", "level": "Town",
+     "status": "Enacted", "when": "Sep 2026",
+     "note": "Selectboard unanimously approved two-year moratorium on data "
+             "centers and 'high-impact uses' — businesses consuming over "
+             "10 MW, 57,600 gal/day water, or emitting over 70 dB persistent "
+             "noise, or adding over 10 acres impervious surface. Exempts "
+             "small data centers for administrative/operational support. Third "
+             "Vermont community to pass data center restrictions.",
+     "lat": 44.56, "lon": -72.62, "expires": None, "as_of": "2026-09-12",
+     "source": "https://www.sevendaysvt.com/news/constructiondevelopment/absent-state-action-vermont-towns-move-to-block-data-centers/",
+     "term": "unknown"},
+    {"locality": "Hawaii County", "state": "HI", "level": "County",
+     "status": "Under Review", "when": "Jul 8, 2026",
+     "note": "Bill 170 (Councilmember Heather Kimball) amends county zoning "
+             "code to declare industrial-scale data centers 'not a permitted "
+             "use in the County.' Policy Committee voted 8-0 to forward to "
+             "planning commissions. Windward Planning Commission voted 4-0 to "
+             "defer (Sep 3). Leeward Commission meets Oct 15. Both must "
+             "recommend by Nov 4 or it defaults to negative. Planning "
+             "Director prefers size limits (10,000 sq ft cap) over total ban. "
+             "Over 40 testimonies, mostly supportive.",
+     "lat": 19.7056, "lon": -155.0858, "expires": None, "as_of": "2026-09-12",
+     "source": "https://www.hawaiitribune-herald.com/2026/09/06/hawaii-news/push-to-ban-data-centers-continues/"},
 ]
 
 # Statuses that are already final — an expiry date cannot change them.

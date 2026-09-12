@@ -2067,6 +2067,55 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-12",
     },
+    # --- batch 9 (2026-09-12): VT, WY, HI, WV ---
+    ("WY", "AL", "Chuck Gray"): {
+        "lean": "guardrails",
+        "summary": "Campaigned on stopping data centers; ran ads calling for "
+                   "a federal ban; won GOP primary on anti-DC platform",
+        "items": [
+            {"what": "At Sheridan forum stated 'I'm the only candidate on "
+                     "stage that has been talking about these data AI data "
+                     "centers and expressed my opposition'; ran ads promising "
+                     "to 'stop data centers' and calling for a federal ban; "
+                     "said 'If Silicon Valley wants to build their liberal "
+                     "empire, they can do it somewhere else'",
+             "date": "2026-08-05",
+             "source": "https://cowboystatedaily.com/2026/08/05/u-s-house-forum-gray-hammers-data-centers-clashes-with-host/"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("WV", "2", "Riley Moore"): {
+        "lean": "guardrails",
+        "summary": "Cosponsored Ratepayer Protection Act requiring data "
+                   "centers to pay infrastructure costs",
+        "items": [
+            {"what": "Cosponsored the Ratepayer Protection Act (H.R. 9340) "
+                     "requiring states to consider directing data centers to "
+                     "pay the full cost of new generation and transmission "
+                     "upgrades; stated the bill ensures 'data centers — not "
+                     "American families, small businesses, and other "
+                     "ratepayers — are responsible for the costs'",
+             "date": "2026-08-31",
+             "source": "https://rileymoore.house.gov/issues/serving-west-virginia"},
+        ],
+        "as_of": "2026-09-12",
+    },
+    ("WV", "2", "Ace Parsi"): {
+        "lean": "guardrails",
+        "summary": "Called for repeal of WV HB 2014 (state preemption law); "
+                   "wants community referendums on data centers",
+        "items": [
+            {"what": "Called for repeal of HB 2014 (Power Generation and "
+                     "Consumption Act) which preempts local data center "
+                     "regulation; stated communities should decide via "
+                     "referendum whether data centers can move in; said he "
+                     "will 'halt the data centers being built in communities "
+                     "that will only expand corporate profits'",
+             "date": "2026-05-03",
+             "source": "https://www.timeswv.com/news/local_news/data-centers-and-power-lines-might-be-defining-issue-this-election-season-for-ncwv-voters/article_e07b109f-bda6-4bd5-bcfb-4dd7ece657e4.html"},
+        ],
+        "as_of": "2026-09-12",
+    },
 }
 
 

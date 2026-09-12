@@ -3533,5 +3533,40 @@
     "locality": "Barnes County, ND",
     "kind": "added",
     "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "vermont-s-205-vt",
+    "locality": "Vermont (S.205), VT",
+    "kind": "status_changed",
+    "detail": "Proposed \u2192 Rejected"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "royalton-vt",
+    "locality": "Royalton, VT",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "south-burlington-vt",
+    "locality": "South Burlington, VT",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "morristown-vt",
+    "locality": "Morristown, VT",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-12",
+    "id": "hawaii-county-hi",
+    "locality": "Hawaii County, HI",
+    "kind": "added",
+    "detail": "Added as Under Review"
   }
 ]

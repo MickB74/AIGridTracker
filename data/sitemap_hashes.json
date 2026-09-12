@@ -24,11 +24,11 @@
     "lastmod": "2026-09-12"
   },
   "changes": {
-    "hash": "679e1529088367a3",
+    "hash": "085fd369c3ce3bed",
     "lastmod": "2026-09-12"
   },
   "communities/": {
-    "hash": "f459be76d5c1d230",
+    "hash": "8b21e719a734ed10",
     "lastmod": "2026-09-12"
   },
   "communities/abilene-tx": {
@@ -1343,6 +1343,10 @@
     "hash": "b2aec12769696c52",
     "lastmod": "2026-09-12"
   },
+  "communities/hawaii-county-hi": {
+    "hash": "4a77cad0facc3e76",
+    "lastmod": "2026-09-12"
+  },
   "communities/hawkins-county-tn": {
     "hash": "dc56151fda7a39d1",
     "lastmod": "2026-09-12"
@@ -2191,6 +2195,10 @@
     "hash": "9ced6cd5e8a0bea2",
     "lastmod": "2026-09-12"
   },
+  "communities/morristown-vt": {
+    "hash": "4b1ba4ce72868264",
+    "lastmod": "2026-09-12"
+  },
   "communities/morton-county-nd": {
     "hash": "88aa6701164cb4c7",
     "lastmod": "2026-09-12"
@@ -2767,6 +2775,10 @@
     "hash": "4c445dd47b998b65",
     "lastmod": "2026-09-12"
   },
+  "communities/royalton-vt": {
+    "hash": "3db5ccfebe851bdf",
+    "lastmod": "2026-09-12"
+  },
   "communities/russellville-ar": {
     "hash": "19da534b3bb443de",
     "lastmod": "2026-09-12"
@@ -2941,6 +2953,10 @@
   },
   "communities/south-bloomfield-oh": {
     "hash": "0616bf9bce32e7be",
+    "lastmod": "2026-09-12"
+  },
+  "communities/south-burlington-vt": {
+    "hash": "44f97378260942a4",
     "lastmod": "2026-09-12"
   },
   "communities/south-fork-co": {
@@ -3244,7 +3260,7 @@
     "lastmod": "2026-09-12"
   },
   "communities/vermont-s-205-vt": {
-    "hash": "fdb661aca1e5ff0d",
+    "hash": "95e29e992dd4f4c8",
     "lastmod": "2026-09-12"
   },
   "communities/vernon-township-nj": {
@@ -3668,7 +3684,7 @@
     "lastmod": "2026-09-12"
   },
   "house-races": {
-    "hash": "9cbea0b5fbc0d572",
+    "hash": "be5c5bd82355f933",
     "lastmod": "2026-09-12"
   },
   "impact": {
@@ -3680,15 +3696,15 @@
     "lastmod": "2026-09-12"
   },
   "map": {
-    "hash": "3a2aa20e32f8be82",
+    "hash": "cec812163fdb5848",
     "lastmod": "2026-09-12"
   },
   "moratoriums": {
-    "hash": "99d4f7cd4e8fd7a2",
+    "hash": "66b2b7eab77ff3ab",
     "lastmod": "2026-09-12"
   },
   "moratoriums-methodology": {
-    "hash": "283c1fd5ad81170c",
+    "hash": "3e12025246783c9c",
     "lastmod": "2026-09-12"
   },
   "news/": {
@@ -3700,7 +3716,7 @@
     "lastmod": "2026-09-12"
   },
   "open-data": {
-    "hash": "6596b9c0c5d126ae",
+    "hash": "5db571c9d172a0da",
     "lastmod": "2026-09-12"
   },
   "opposition": {
@@ -3720,7 +3736,7 @@
     "lastmod": "2026-09-12"
   },
   "search": {
-    "hash": "e20bf0e87cc8cce0",
+    "hash": "c6408530e41f6d4d",
     "lastmod": "2026-09-12"
   },
   "senate-races": {
@@ -3728,15 +3744,15 @@
     "lastmod": "2026-09-12"
   },
   "senators": {
-    "hash": "1d786c59e58dcfdb",
+    "hash": "0357da933cc55fd2",
     "lastmod": "2026-09-12"
   },
   "siting": {
-    "hash": "971f2ce8570d3097",
+    "hash": "c0ddd05c47d7173b",
     "lastmod": "2026-09-12"
   },
   "start-here": {
-    "hash": "02190fafad77c6c8",
+    "hash": "f0bcebac408f1c69",
     "lastmod": "2026-09-12"
   },
   "states/": {
@@ -3788,7 +3804,7 @@
     "lastmod": "2026-09-12"
   },
   "states/hawaii": {
-    "hash": "d91289f6f007b62a",
+    "hash": "8a272acd7b2a5178",
     "lastmod": "2026-09-12"
   },
   "states/idaho": {
@@ -3924,7 +3940,7 @@
     "lastmod": "2026-09-12"
   },
   "states/vermont": {
-    "hash": "6ca89c417379f47d",
+    "hash": "b5d6ac97ef4b6755",
     "lastmod": "2026-09-12"
   },
   "states/virginia": {
@@ -3936,7 +3952,7 @@
     "lastmod": "2026-09-12"
   },
   "states/west-virginia": {
-    "hash": "d60854c1685d5902",
+    "hash": "7bbcb6607071d4d0",
     "lastmod": "2026-09-12"
   },
   "states/wisconsin": {
@@ -3944,7 +3960,7 @@
     "lastmod": "2026-09-12"
   },
   "states/wyoming": {
-    "hash": "c01563ca9edcc88c",
+    "hash": "71b38feed7dac331",
     "lastmod": "2026-09-12"
   },
   "story-tracker": {

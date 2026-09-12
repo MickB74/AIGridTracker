@@ -2,7 +2,7 @@
  "generated": "2026-09-12",
  "license": "CC BY 4.0",
  "note": "One row per cited item. kind=action is a bill, letter, hearing question or investigation; kind=statement is a quote, op-ed or campaign line. grade is the officials-scorecard grade (sitting officials only); lean summarises the cited items.",
- "count": 346,
+ "count": 349,
  "records": [
   {
    "chamber": "House",
@@ -1059,6 +1059,23 @@
    "page": "https://aigridwatch.com/house-races#race-ok-5"
   },
   {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "WV",
+   "district": "2",
+   "name": "Riley Moore",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Cosponsored the Ratepayer Protection Act (H.R. 9340) requiring states to consider directing data centers to pay the full cost of new generation and transmission upgrades; stated the bill ensures 'data centers — not American families, small businesses, and other ratepayers — are responsible for the costs'",
+   "date": "2026-08-31",
+   "source": "https://rileymoore.house.gov/issues/serving-west-virginia",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-12",
+   "page": "https://aigridwatch.com/house-races#race-wv-2"
+  },
+  {
    "chamber": "Senate",
    "role": "senator",
    "state": "GA",
@@ -1737,6 +1754,23 @@
    "lean": "guardrails",
    "as_of": "2026-08-26",
    "page": "https://aigridwatch.com/house-races#race-ca-17"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "WY",
+   "district": "AL",
+   "name": "Chuck Gray",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "At Sheridan forum stated 'I'm the only candidate on stage that has been talking about these data AI data centers and expressed my opposition'; ran ads promising to 'stop data centers' and calling for a federal ban; said 'If Silicon Valley wants to build their liberal empire, they can do it somewhere else'",
+   "date": "2026-08-05",
+   "source": "https://cowboystatedaily.com/2026/08/05/u-s-house-forum-gray-hammers-data-centers-clashes-with-host/",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-12",
+   "page": "https://aigridwatch.com/house-races#race-wy-al"
   },
   {
    "chamber": "House",
@@ -3522,6 +3556,23 @@
    "lean": "guardrails",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-g000574"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "WV",
+   "district": "2",
+   "name": "Ace Parsi",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Called for repeal of HB 2014 (Power Generation and Consumption Act) which preempts local data center regulation; stated communities should decide via referendum whether data centers can move in; said he will 'halt the data centers being built in communities that will only expand corporate profits'",
+   "date": "2026-05-03",
+   "source": "https://www.timeswv.com/news/local_news/data-centers-and-power-lines-might-be-defining-issue-this-election-season-for-ncwv-voters/article_e07b109f-bda6-4bd5-bcfb-4dd7ece657e4.html",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-12",
+   "page": "https://aigridwatch.com/house-races#race-wv-2"
   },
   {
    "chamber": "House",
