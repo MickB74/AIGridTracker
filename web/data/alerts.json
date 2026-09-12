@@ -4,7 +4,7 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
-  "count": 81,
+  "count": 87,
   "alerts": [
     {
       "id": "mora-MI-armada-township-2026-07-13",
@@ -124,6 +124,19 @@
       "verified": true
     },
     {
+      "id": "mora-KS-leavenworth-county-2026-08-11",
+      "kind": "moratorium-expiry",
+      "severity": "expired",
+      "locality": "Leavenworth County",
+      "state": "KS",
+      "expires": "2026-08-11",
+      "days_left": -31,
+      "title": "Leavenworth County, KS: data center moratorium has lapsed",
+      "body": "The moratorium's documented term ran to 2026-08-11 (31 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
+      "source": "https://www.kshb.com/news/local-news/kansas/leavenworth-county/leavenworth-county-commissioners-pass-90-day-moratorium-on-data-centers",
+      "verified": true
+    },
+    {
       "id": "mora-MI-york-township-2026-08-12",
       "kind": "moratorium-expiry",
       "severity": "expired",
@@ -238,6 +251,19 @@
       "title": "Rockdale County, GA: data center moratorium has lapsed",
       "body": "The moratorium's documented term ran to 2026-09-08 (3 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
       "source": "https://www.fox5atlanta.com/news/new-data-center-applications-paused-rockdale-county",
+      "verified": true
+    },
+    {
+      "id": "mora-KS-wichita-2026-09-10",
+      "kind": "moratorium-expiry",
+      "severity": "expired",
+      "locality": "Wichita",
+      "state": "KS",
+      "expires": "2026-09-10",
+      "days_left": -1,
+      "title": "Wichita, KS: data center moratorium has lapsed",
+      "body": "The moratorium's documented term ran to 2026-09-10 (1 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
+      "source": "https://www.wichita.gov/CivicAlerts.aspx?AID=412",
       "verified": true
     },
     {
@@ -865,6 +891,19 @@
       "verified": true
     },
     {
+      "id": "mora-ME-westbrook-2026-11-28",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Westbrook",
+      "state": "ME",
+      "expires": "2026-11-28",
+      "days_left": 78,
+      "title": "Westbrook, ME: data center moratorium expires in 78 days",
+      "body": "The documented term ends 2026-11-28. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.pressherald.com/2026/06/01/westbrook-city-council-approves-180-day-data-center-moratorium/",
+      "verified": true
+    },
+    {
       "id": "mora-ME-gorham-2026-11-29",
       "kind": "moratorium-expiry",
       "severity": "upcoming",
@@ -891,6 +930,19 @@
       "verified": true
     },
     {
+      "id": "mora-ME-brunswick-2026-11-29",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Brunswick",
+      "state": "ME",
+      "expires": "2026-11-29",
+      "days_left": 79,
+      "title": "Brunswick, ME: data center moratorium expires in 79 days",
+      "body": "The documented term ends 2026-11-29. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.pressherald.com/2026/06/01/brunswick-passes-data-center-moratorium/",
+      "verified": true
+    },
+    {
       "id": "mora-IL-normal-2026-11-30",
       "kind": "moratorium-expiry",
       "severity": "upcoming",
@@ -901,6 +953,32 @@
       "title": "Normal, IL: data center moratorium expires in 80 days",
       "body": "The documented term ends 2026-11-30. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.25newsnow.com/2026/05/19/data-center-pauses-considered-normal-bloomington/",
+      "verified": true
+    },
+    {
+      "id": "mora-KS-el-dorado-2026-11-30",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "El Dorado",
+      "state": "KS",
+      "expires": "2026-11-30",
+      "days_left": 80,
+      "title": "El Dorado, KS: data center moratorium expires in 80 days",
+      "body": "The documented term ends 2026-11-30. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.kake.com/home/el-dorado-approves-moratorium-on-high-impact-data-centers-as-court-fight-over-citizen-petition/article_bf517f2b-20cb-4f93-9ce7-95c1f5b067a8.html",
+      "verified": true
+    },
+    {
+      "id": "mora-ME-scarborough-2026-11-30",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Scarborough",
+      "state": "ME",
+      "expires": "2026-11-30",
+      "days_left": 80,
+      "title": "Scarborough, ME: data center moratorium expires in 80 days",
+      "body": "The documented term ends 2026-11-30. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.pressherald.com/2026/06/03/scarborough-town-council-imposes-data-center-moratorium/",
       "verified": true
     },
     {

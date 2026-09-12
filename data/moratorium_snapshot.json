@@ -199,6 +199,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "biddeford-me": {
+    "effective_status": "Proposed",
+    "expires": null
+  },
   "big-rapids-charter-township-mi": {
     "effective_status": "Enacted",
     "expires": "2027-02-23"
@@ -255,6 +259,10 @@
     "effective_status": "Enacted",
     "expires": "2027-01-31"
   },
+  "bow-nh": {
+    "effective_status": "Under Review",
+    "expires": null
+  },
   "box-elder-county-ut": {
     "effective_status": "Enacted",
     "expires": "2026-12-07"
@@ -302,6 +310,10 @@
   "brownsville-tx": {
     "effective_status": "Proposed",
     "expires": null
+  },
+  "brunswick-me": {
+    "effective_status": "Enacted",
+    "expires": "2026-11-29"
   },
   "buchanan-county-ia": {
     "effective_status": "Enacted",
@@ -550,6 +562,10 @@
   "cle-elum-wa": {
     "effective_status": "Enacted",
     "expires": "2027-01-31"
+  },
+  "clearfield-ut": {
+    "effective_status": "Enacted",
+    "expires": "2027-03-07"
   },
   "cleveland-oh": {
     "effective_status": "Enacted",
@@ -819,6 +835,10 @@
     "effective_status": "Enacted",
     "expires": "2027-06-02"
   },
+  "el-dorado-ks": {
+    "effective_status": "Enacted",
+    "expires": "2026-11-30"
+  },
   "el-monte-ca": {
     "effective_status": "Enacted",
     "expires": "2027-02-02"
@@ -837,7 +857,7 @@
   },
   "ellsworth-me": {
     "effective_status": "Enacted",
-    "expires": null
+    "expires": "2027-02-13"
   },
   "ellsworth-township-oh": {
     "effective_status": "Enacted",
@@ -1007,6 +1027,10 @@
     "effective_status": "Enacted",
     "expires": "2026-12-17"
   },
+  "geary-county-ks": {
+    "effective_status": "Enacted",
+    "expires": "2027-06-22"
+  },
   "genoa-township-mi": {
     "effective_status": "Enacted",
     "expires": null
@@ -1150,6 +1174,10 @@
   "hart-mi": {
     "effective_status": "Enacted",
     "expires": "2026-11-26"
+  },
+  "harvey-county-ks": {
+    "effective_status": "Enacted",
+    "expires": "2028-12-31"
   },
   "hastings-mn": {
     "effective_status": "Enacted",
@@ -1383,6 +1411,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "kansas-sb-531-ks": {
+    "effective_status": "Proposed",
+    "expires": null
+  },
   "keene-nh": {
     "effective_status": "Under Review",
     "expires": null
@@ -1400,6 +1432,10 @@
     "expires": null
   },
   "kickapoo-tribe-of-oklahoma-ok": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "kingman-county-ks": {
     "effective_status": "Enacted",
     "expires": null
   },
@@ -1499,13 +1535,17 @@
     "effective_status": "Enacted",
     "expires": "2026-11-05"
   },
+  "lawrence-ks": {
+    "effective_status": "Enacted",
+    "expires": "2028-07-14"
+  },
   "le-sueur-county-mn": {
     "effective_status": "Enacted",
     "expires": "2027-05-26"
   },
   "leavenworth-county-ks": {
     "effective_status": "Expired",
-    "expires": null
+    "expires": "2026-08-11"
   },
   "lebanon-township-nj": {
     "effective_status": "Enacted",
@@ -1835,6 +1875,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "miami-county-ks": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "miami-lakes-fl": {
     "effective_status": "Proposed",
     "expires": null
@@ -1854,6 +1898,10 @@
   "milam-county-tx": {
     "effective_status": "Enacted",
     "expires": null
+  },
+  "milford-ut": {
+    "effective_status": "Enacted",
+    "expires": "2026-12-13"
   },
   "millville-nj": {
     "effective_status": "Enacted",
@@ -2503,6 +2551,10 @@
     "effective_status": "Enacted",
     "expires": "2027-01-29"
   },
+  "scarborough-me": {
+    "effective_status": "Enacted",
+    "expires": "2026-11-30"
+  },
   "scioto-township-oh": {
     "effective_status": "Enacted",
     "expires": "2027-03-06"
@@ -2602,6 +2654,10 @@
   "south-fork-co": {
     "effective_status": "Enacted",
     "expires": "2027-06-18"
+  },
+  "south-hutchinson-ks": {
+    "effective_status": "Enacted",
+    "expires": "2027-05-26"
   },
   "south-lyon-mi": {
     "effective_status": "Enacted",
@@ -2789,7 +2845,7 @@
   },
   "topeka-ks": {
     "effective_status": "Enacted",
-    "expires": null
+    "expires": "2027-07-14"
   },
   "town-of-beetown-wi": {
     "effective_status": "Enacted",
@@ -3027,6 +3083,10 @@
     "effective_status": "Enacted",
     "expires": "2026-11-01"
   },
+  "westbrook-me": {
+    "effective_status": "Enacted",
+    "expires": "2026-11-28"
+  },
   "westover-al": {
     "effective_status": "Enacted",
     "expires": "2027-02-18"
@@ -3046,6 +3106,10 @@
   "whiteville-nc": {
     "effective_status": "Enacted",
     "expires": "2027-08-25"
+  },
+  "wichita-ks": {
+    "effective_status": "Expired",
+    "expires": "2026-09-10"
   },
   "wicomico-county-md": {
     "effective_status": "Enacted",

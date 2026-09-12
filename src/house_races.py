@@ -1179,6 +1179,195 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-11",
     },
+    # ── Batch 5 deep dive — KS, AR, ME, UT, NH — 2026-09-11 ─────────────
+    ("KS", 3, "Sharice Davids"): {
+        "lean": "guardrails",
+        "summary": "No data center should move forward if it raises costs, "
+                   "wastes water, or shifts the burden onto Kansas communities",
+        "items": [
+            {"what": "Statement: 'no data center should move forward if it "
+                     "raises electricity costs for families, wastes our limited "
+                     "water resources, or shifts the burden onto Kansas "
+                     "communities'",
+             "date": "2026-09-11",
+             "source": "https://www.kshb.com/news/local-news/kansas/johnson-county/voters-guide-kansas-political-candidates-stances-on-data-center-development"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("KS", 1, "Lauren Reinhold"): {
+        "lean": "guardrails",
+        "summary": "Supports community-approved projects with transparency, "
+                   "opposes tax breaks for data centers",
+        "items": [
+            {"what": "Statement supporting community-approved projects with "
+                     "transparency and opposing tax breaks for data centers; "
+                     "'there is no one-size-fits-all approach for this district'",
+             "date": "2026-09-11",
+             "source": "https://www.kshb.com/news/local-news/kansas/johnson-county/voters-guide-kansas-political-candidates-stances-on-data-center-development"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("KS", 2, "Derek Schmidt"): {
+        "lean": "mixed",
+        "summary": "Conditionally supportive; advises communities that "
+                   "developers should not get tax abatements and should use "
+                   "new power sources and closed water systems",
+        "items": [
+            {"what": "Town hall advice: data center developers should not "
+                     "require tax abatements, should source power from new "
+                     "sources to avoid raising local utility costs, and modern "
+                     "data centers can use closed systems with minimal water",
+             "date": "2026-06-10",
+             "source": "https://ransonfinancial.com/2026/06/10/three-tips-for-kansas-communities-on-data-centers/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("AR", 4, "Bruce Westerman"): {
+        "lean": "accelerate",
+        "summary": "Frames data centers as crucial for US-China AI "
+                   "competition; downplays environmental concerns",
+        "items": [
+            {"what": "Town hall promoting data centers as 'crucial to America "
+                     "winning the cold war with China on AI tech'; dismissed "
+                     "water concerns, argued large loads could lower "
+                     "residential electricity prices",
+             "date": "2026-09-01",
+             "source": "https://hopeprescott.com/2026/09/01/data-centers-crucial-to-america-winning-the-cold-war-with-china-on-ai-tech-according-to-congressman-westerman/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("ME", 2, "Paul LePage"): {
+        "lean": "accelerate",
+        "summary": "Self-described 'big, big fan' of data centers; says they "
+                   "create jobs and should generate their own power",
+        "items": [
+            {"what": "Called himself a 'big, big fan of data centers' at "
+                     "former mill site; said they will create jobs and should "
+                     "generate their own power",
+             "date": "2026-08-24",
+             "source": "https://www.bangordailynews.com/2026/08/24/politics/elections/paul-lepage-big-fan-data-centers-joam40zk0w/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("ME", 2, "Matthew Dunlap"): {
+        "lean": "guardrails",
+        "summary": "Favors benchmarks for worker benefits, ratepayer "
+                   "protection, and community benefits from data centers",
+        "items": [
+            {"what": "Campaign warned 'if we don't approach these projects "
+                     "deliberately they will jack up energy prices'; favors "
+                     "developing benchmarks and standards for worker benefits, "
+                     "ratepayer impact, and community benefits",
+             "date": "2026-08-24",
+             "source": "https://www.bangordailynews.com/2026/08/24/politics/elections/paul-lepage-big-fan-data-centers-joam40zk0w/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("ME", 1, "Chellie Pingree"): {
+        "lean": "guardrails",
+        "summary": "Believes Congress should assess environmental and "
+                   "consumer impacts and put strong protections in place",
+        "items": [
+            {"what": "Spokesperson said she believes Congress has a "
+                     "responsibility to assess environmental and consumer "
+                     "impacts of data center and AI expansion and put 'strong, "
+                     "science-based protections in place'",
+             "date": "2025-12-08",
+             "source": "https://www.mainepublic.org/climate/2025-12-08/maine-groups-join-call-for-u-s-data-center-moratorium"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("UT", 1, "Ben McAdams"): {
+        "lean": "guardrails",
+        "summary": "Opposes Box Elder Stratos project; calls for water "
+                   "stewardship and environmental standards",
+        "items": [
+            {"what": "Posted opposing Stratos Project: 'Utah should welcome "
+                     "technology investment only when it aligns with our "
+                     "values: water stewardship, Great Salt Lake restoration, "
+                     "clean energy, transparency, public accountability'",
+             "date": "2026-05-01",
+             "source": "https://x.com/BenMcAdams/status/2052173399594528777"},
+            {"what": "UT-1 primary debate: opposed Stratos Project; called "
+                     "for federal standards to ensure Americans benefit from "
+                     "AI transformation",
+             "date": "2026-05-27",
+             "source": "https://www.kuer.org/politics-government/2026-05-27/1st-district-debate-zeroes-in-on-utah-hot-topics-like-ai-data-centers-and-housing"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("UT", 2, "Blake Moore"): {
+        "lean": "mixed",
+        "summary": "Introduced bill requiring study of AI data center "
+                   "impacts in rural America while supporting Utah as tech hub",
+        "items": [
+            {"what": "Introduced bipartisan 'Unleashing Low-Cost Rural AI "
+                     "Act' requiring DOE, Interior, and Agriculture to study "
+                     "how AI data center expansions impact rural America — "
+                     "energy supply, reliability, consumer costs, and "
+                     "infrastructure",
+             "date": "2025-09-16",
+             "source": "https://blakemoore.house.gov/media/press-releases/representatives-moore-costa-introduce-legislation-to-study-impact-of-artificial-intelligence-in-rural-america"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NH", 1, "Stefany Shaheen"): {
+        "lean": "guardrails",
+        "summary": "Strongly supports moratorium; municipalities not yet "
+                   "prepared for data center complexity",
+        "items": [
+            {"what": "Stated 'I feel very strongly we need a moratorium. Our "
+                     "municipalities are not yet prepared to handle the "
+                     "complexity of what these kinds of projects could mean "
+                     "for their communities'",
+             "date": "2026-09-07",
+             "source": "https://spectrumnews1.com/ma/worcester/news/2026/09/08/new-hampshire-data-centers-shaheen-pappas-ayotte"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NH", 2, "Maggie Goodlander"): {
+        "lean": "guardrails",
+        "summary": "Communities must have ultimate say in data center siting; "
+                   "corporations must bear costs, not taxpayers",
+        "items": [
+            {"what": "Debate statement: communities seeing '200%+ energy "
+                     "price increases'; 'people and communities have got to "
+                     "have the ultimate say'; called for transparency and "
+                     "that corporations should bear costs",
+             "date": "2026-09-03",
+             "source": "https://indepthnh.org/2026/09/03/congressional-district-2-democratic-primary-candidates-debate-housing-immigration-and-data-centers/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NH", 2, "Paige Beauchemin"): {
+        "lean": "guardrails",
+        "summary": "Called to stop data center construction until regulatory "
+                   "legislation is introduced",
+        "items": [
+            {"what": "Debate statement: 'stop the construction of any data "
+                     "centers until legislation can be introduced to regulate "
+                     "the issue accordingly'; emphasized environmental impact "
+                     "studies and local control",
+             "date": "2026-09-03",
+             "source": "https://indepthnh.org/2026/09/03/congressional-district-2-democratic-primary-candidates-debate-housing-immigration-and-data-centers/"},
+        ],
+        "as_of": "2026-09-11",
+    },
+    ("NH", 2, "Lily Tang Williams"): {
+        "lean": "mixed",
+        "summary": "Opposes government subsidies but supports private data "
+                   "center development with local control",
+        "items": [
+            {"what": "Debate statement: 'no government perks, credits and "
+                     "taxpayer dollars should be involved. If a private "
+                     "company wants to come here, build data centers, then "
+                     "they need to respect our local control and address our "
+                     "concerns of environmental impact and electricity costs'",
+             "date": "2026-09-01",
+             "source": "https://indepthnh.org/2026/09/01/orlando-stakes-position-as-working-class-alternative-to-tang-williams-in-nh-02-gop-debate/"},
+        ],
+        "as_of": "2026-09-11",
+    },
 }
 
 

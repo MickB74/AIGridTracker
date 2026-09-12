@@ -3,11 +3,11 @@
   "generated": "2026-09-11",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 787,
+  "count": 803,
   "states": 48,
-  "enacted": 636,
-  "proposed": 84,
-  "official_sourced": 63,
+  "enacted": 648,
+  "proposed": 86,
+  "official_sourced": 65,
   "by_state": {
     "CO": {
       "total": 17,
@@ -35,8 +35,8 @@
       "proposed": 3
     },
     "UT": {
-      "total": 6,
-      "enacted": 6,
+      "total": 8,
+      "enacted": 8,
       "proposed": 0
     },
     "WI": {
@@ -80,9 +80,9 @@
       "proposed": 0
     },
     "ME": {
-      "total": 7,
-      "enacted": 5,
-      "proposed": 1
+      "total": 11,
+      "enacted": 8,
+      "proposed": 2
     },
     "NC": {
       "total": 44,
@@ -185,9 +185,9 @@
       "proposed": 1
     },
     "KS": {
-      "total": 10,
-      "enacted": 7,
-      "proposed": 2
+      "total": 19,
+      "enacted": 14,
+      "proposed": 3
     },
     "MS": {
       "total": 1,
@@ -240,7 +240,7 @@
       "proposed": 1
     },
     "NH": {
-      "total": 6,
+      "total": 7,
       "enacted": 3,
       "proposed": 1
     },
@@ -370,7 +370,11 @@
       "dickinson-county-ia",
       "scott-county-ky",
       "plainfield-il",
-      "lowndes-county-al"
+      "lowndes-county-al",
+      "el-dorado-ks",
+      "brunswick-me",
+      "scarborough-me",
+      "westbrook-me"
     ]
   }
 }

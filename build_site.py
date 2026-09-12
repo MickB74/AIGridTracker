@@ -217,7 +217,9 @@ _STATE_OPTIONS = "".join(
 
 CSS = """
 :root { --bg:#0b1220; --card:#121c30; --ink:#eaf0f7; --muted:#93a1b5;
-        --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a; }
+        --teal:#2dd4bf; --amber:#fbbf24; --rule:#22304a;
+        --tint:rgba(255,255,255,.04); --tint-md:rgba(255,255,255,.07);
+        --border-subtle:rgba(255,255,255,.08); }
 * { box-sizing:border-box; margin:0; }
 body { background:var(--bg); color:var(--ink);
        font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
@@ -279,10 +281,10 @@ table.sortable td { vertical-align:middle; }
     flex-direction:column; gap:0; padding:4px 0 2px; }
   #navToggle:checked ~ .nav-links { display:flex; }
   .nav-links > a { padding:10px 2px; font-size:15px;
-    border-bottom:1px solid rgba(255,255,255,.05); }
+    border-bottom:1px solid var(--border-subtle); }
   /* Groups become inline accordions: the menu stacks under its summary and
      is revealed by the native <details> tap, not an absolute overlay. */
-  .navgroup { position:static; border-bottom:1px solid rgba(255,255,255,.05); }
+  .navgroup { position:static; border-bottom:1px solid var(--border-subtle); }
   .navgroup > summary { padding:11px 2px; font-size:15px; justify-content:space-between; }
   .navgroup[open] > summary::after { transform:rotate(180deg); }
   .navmenu { position:static; display:none; box-shadow:none; border:none;
@@ -325,12 +327,12 @@ a { color:var(--teal); }
 .card h3 { margin-bottom:6px; font-size:16px; }
 .panel { border-radius:14px; padding:18px; color:#fff; }
 .panel h3 { margin-bottom:8px; }
-.panel p { font-size:14px; color:rgba(255,255,255,.85); }
+.panel p { font-size:14px; color:inherit; opacity:.88; }
 .ask { background:rgba(45,212,191,.08); border:1px solid var(--teal);
        border-radius:10px; padding:12px 14px; font-size:14px; margin-top:10px; }
 .src { font-size:12.5px; color:var(--muted); }
 .freshness { border-left:3px solid var(--rule); padding:10px 14px;
-  margin:14px 0; background:rgba(255,255,255,.02); border-radius:0 8px 8px 0;
+  margin:14px 0; background:var(--tint); border-radius:0 8px 8px 0;
   font-size:13.5px; }
 .freshness.stale { border-left-color:var(--amber);
   background:rgba(251,191,36,.07); }
@@ -343,7 +345,7 @@ a { color:var(--teal); }
 .note.good { border-left-color:#34d399; background:rgba(52,211,153,.07); }
 .note p { margin:0; }
 details.more { border:1px solid var(--rule); border-radius:10px;
-  padding:0 16px; margin:16px 0; background:rgba(255,255,255,.02); }
+  padding:0 16px; margin:16px 0; background:var(--tint); }
 details.more > summary { cursor:pointer; padding:13px 0; font-weight:600;
   color:var(--teal); font-size:14.5px; }
 details.more[open] { padding-bottom:10px; }
@@ -387,14 +389,14 @@ details.sect > p:first-of-type { margin-top:4px; }
 .flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
   gap:12px; margin:18px 0; }
 .flow .step { border:1px solid var(--rule); border-radius:10px; padding:12px 14px;
-  background:rgba(255,255,255,.02); font-size:14px; }
+  background:var(--tint); font-size:14px; }
 .flow .step b { display:block; margin-bottom:4px; }
 .flow .step.end { border-color:#ef4444; background:rgba(239,68,68,.08); }
 .hbars { margin:18px 0; display:flex; flex-direction:column; gap:8px; }
 .hbar-row { display:grid; grid-template-columns:minmax(90px,1.1fr) 2.4fr
   minmax(90px,1.3fr); gap:10px; align-items:center; font-size:13.5px; }
 .hbar-label { color:var(--ink); }
-.hbar-track { background:rgba(255,255,255,.06); border-radius:5px; height:16px; }
+.hbar-track { background:var(--tint-md); border-radius:5px; height:16px; }
 .hbar-fill { height:16px; border-radius:5px; }
 .hbar-val { color:var(--muted); font-variant-numeric:tabular-nums; }
 @media (max-width:640px) {
@@ -673,8 +675,10 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
 /* ---- Light theme ---- */
 @media (prefers-color-scheme:light) {
   :root:not([data-theme="dark"]) {
-    --bg:#f7f8fa; --card:#fff; --ink:#1a1e2e; --muted:#5a6577;
-    --teal:#0d7d74; --amber:#a85000; --rule:#dde0e6;
+    --bg:#f4f5f7; --card:#fff; --ink:#1a1e2e; --muted:#434d5e;
+    --teal:#0a6b63; --amber:#a85000; --rule:#c8ccd4;
+    --tint:rgba(0,0,0,.03); --tint-md:rgba(0,0,0,.05);
+    --border-subtle:rgba(0,0,0,.09);
   }
   :root:not([data-theme="dark"]) .navmenu { box-shadow:0 10px 28px rgba(0,0,0,.1); }
   :root:not([data-theme="dark"]) nav .cta { color:#fff; }
@@ -695,8 +699,10 @@ header .lede { font-size:17px; line-height:1.5; color:var(--ink);
     color:#dc2626; border-color:rgba(220,38,38,.2); }
 }
 :root[data-theme="light"] {
-  --bg:#f7f8fa; --card:#fff; --ink:#1a1e2e; --muted:#5a6577;
-  --teal:#0d7d74; --amber:#a85000; --rule:#dde0e6;
+  --bg:#f4f5f7; --card:#fff; --ink:#1a1e2e; --muted:#434d5e;
+  --teal:#0a6b63; --amber:#a85000; --rule:#c8ccd4;
+  --tint:rgba(0,0,0,.03); --tint-md:rgba(0,0,0,.05);
+  --border-subtle:rgba(0,0,0,.09);
 }
 :root[data-theme="light"] .navmenu { box-shadow:0 10px 28px rgba(0,0,0,.1); }
 :root[data-theme="light"] nav .cta { color:#fff; }
@@ -1079,7 +1085,7 @@ def page(title, description, body, canonical, depth=0,
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#f4f5f7" media="(prefers-color-scheme: light)">
 <meta name="google-site-verification" content="kkgrLvRLdgGg12Y1ka456PlN9iNsyWGCyJIS-8ip9I4">
 {bing_meta}
 <title>{esc(title_serp)}</title>
@@ -1853,7 +1859,7 @@ def _mora_report_html():
     padding:14px 16px; }}
   @media (max-width:700px) {{ .mora-report-form {{ grid-template-columns:1fr; }} }}
   .mora-report-form input {{ padding:8px 11px; border-radius:8px;
-    border:1px solid var(--rule); background:rgba(255,255,255,.04);
+    border:1px solid var(--rule); background:var(--tint);
     color:var(--ink); font-size:14px; }}
   .mora-report-form button {{ grid-column:1 / -1; justify-self:start; }}
   </style>
@@ -2521,7 +2527,7 @@ def build_state(state, news_only=None):
             thumb = f'https://i.ytimg.com/vi/{vid}/hqdefault.jpg' if vid else ""
             cards.append(
                 f'<a href="{esc(v["link"])}" rel="nofollow noopener" target="_blank" '
-                f'style="display:block;border:1px solid rgba(255,255,255,0.08);'
+                f'style="display:block;border:1px solid var(--border-subtle);'
                 f'border-radius:12px;overflow:hidden;text-decoration:none;color:inherit">'
                 f'{("<img src=" + repr(thumb) + " alt=\"" + esc(v.get("title", "")) + "\" loading=\"lazy\" style=\"width:100%;display:block;aspect-ratio:16/9;object-fit:cover\">") if thumb else placeholder}'
                 f'<div style="padding:10px 12px">'
@@ -4179,11 +4185,11 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
 .sg-meta-row a {{ color:var(--teal); font-size:12.5px; }}
 .sg-activity {{ color:var(--muted); }}
 .sg-state-chip {{ font-size:11px !important; padding:1px 7px !important;
-  background:rgba(255,255,255,.06); border:1px solid var(--rule);
+  background:var(--tint-md); border:1px solid var(--rule);
   color:var(--muted); border-radius:999px; cursor:pointer; }}
 .sg-state-chip:hover {{ background:rgba(45,212,191,.14); color:var(--teal);
   border-color:rgba(45,212,191,.28); }}
-.card-latest {{ margin:8px 0 10px; padding:10px 12px; background:rgba(255,255,255,.03);
+.card-latest {{ margin:8px 0 10px; padding:10px 12px; background:var(--tint);
   border-radius:8px; border:1px solid var(--rule); }}
 .card-latest a {{ font-size:13.5px; line-height:1.4; color:var(--ink);
   text-decoration:none; }}
@@ -4595,7 +4601,7 @@ Browse the <a href="story-tracker.html">story tracker</a> instead.</p></section>
 .cc-theme.muted {{ display:block; font-size:12.5px; }}
 .cc-theme-label {{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }}
 .cc-bar {{ display:block; height:6px; border-radius:999px;
-  background:rgba(255,255,255,.07); overflow:hidden; }}
+  background:var(--tint-md); overflow:hidden; }}
 .cc-bar i {{ display:block; height:100%; background:var(--brand);
   border-radius:999px; }}
 .cc-n {{ text-align:right; font-size:12.5px; color:var(--muted); }}
@@ -4855,7 +4861,7 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
   gap:6px; align-items:center; }}
 .feed-controls select, .feed-controls input[type=search] {{
   padding:7px 11px; border-radius:8px; border:1px solid var(--rule);
-  background:rgba(255,255,255,.04); color:var(--ink); font-size:14px;
+  background:var(--tint); color:var(--ink); font-size:14px;
   min-width:180px; }}
 .feed-controls input[type=search] {{ flex:1; min-width:200px; }}
 .tag-theme {{ background:rgba(45,212,191,.14); color:var(--teal);
@@ -5063,7 +5069,7 @@ def _video_card_html(v):
     return (
         f'<a class="video-card" data-states="{data_states}" '
         f'href="{esc(v["link"])}" rel="nofollow noopener" target="_blank" '
-        f'style="display:block;border:1px solid rgba(255,255,255,0.08);'
+        f'style="display:block;border:1px solid var(--border-subtle);'
         f'border-radius:12px;overflow:hidden;text-decoration:none;color:inherit">'
         f'{img}'
         f'<div style="padding:12px 14px">'
@@ -5138,7 +5144,7 @@ build. Try again shortly, or read the <a href="news/">news headlines</a>.</p></s
 .vid-controls label {{ font-size:13.5px; color:var(--muted); display:flex;
   gap:6px; align-items:center; }}
 .vid-controls select {{ padding:7px 11px; border-radius:8px;
-  border:1px solid var(--rule); background:rgba(255,255,255,.04);
+  border:1px solid var(--rule); background:var(--tint);
   color:var(--ink); font-size:14px; min-width:180px; }}
 .video-grid {{ display:grid;
   grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }}
@@ -8402,7 +8408,7 @@ def build_moratoriums():
     gap:6px; align-items:center; }}
   .mora-controls select, .mora-controls input[type=search] {{ padding:7px 11px;
     border-radius:8px; border:1px solid var(--rule);
-    background:rgba(255,255,255,.04); color:var(--ink); font-size:14px;
+    background:var(--tint); color:var(--ink); font-size:14px;
     min-width:160px; }}
   .mora-controls input[type=search] {{ flex:1; min-width:200px; }}
   </style>
@@ -14468,7 +14474,7 @@ function factorCard(label, score, narrative, key) {{
       <h3 style="margin:0">${{label}}</h3>
       <span style="font-size:22px;font-weight:700;color:${{color}}">${{score}}</span>
     </div>
-    <div style="height:6px;border-radius:3px;background:rgba(255,255,255,.06);overflow:hidden;margin-bottom:10px">
+    <div style="height:6px;border-radius:3px;background:var(--tint-md);overflow:hidden;margin-bottom:10px">
       <div style="height:6px;width:${{score}}%;background:${{color}};border-radius:3px"></div>
     </div>
     <p class="muted" style="margin:0;font-size:14px">${{narrative}}</p>
