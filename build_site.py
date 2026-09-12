@@ -1580,6 +1580,14 @@ def build_index(top_stories=None, news_only_communities=None):
       var low=it[0].toLowerCase();
       return words.every(function(w){{ return low.indexOf(w)>=0; }});
     }});
+    m.sort(function(a,b){{
+      var al=a[0].toLowerCase(),bl=b[0].toLowerCase();
+      var ap=al.indexOf(v)===0?0:1, bp=bl.indexOf(v)===0?0:1;
+      if(ap!==bp) return ap-bp;
+      var as=a[1].indexOf('states/')===0?0:1, bs=b[1].indexOf('states/')===0?0:1;
+      if(as!==bs) return as-bs;
+      return al<bl?-1:al>bl?1:0;
+    }});
     show(m);
   }});
   q.addEventListener('keydown',function(e){{
