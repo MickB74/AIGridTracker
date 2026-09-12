@@ -4930,7 +4930,7 @@ MORATORIUMS = [
     {"locality": "Franklin", "state": "NC", "level": "Local", "status": "Enacted", "when": "July 2026", "note": "1-year moratorium on data centers. Macon County mountain community, part of western NC moratorium wave.", "lat": 35.18, "lon": -83.38, "expires": None, "as_of": "2026-09-11", "source": "https://nsjonline.com/article/2026/09/data-center-moratorium-count-rises-again/"},
     {"locality": "Northampton County", "state": "NC", "level": "County", "status": "Enacted", "when": "May 2026", "note": "32-month moratorium on data centers; among the longest local moratoriums in the state.", "lat": 36.38, "lon": -77.4, "expires": None, "as_of": "2026-09-11", "source": "https://www.roanoke-chowannewsherald.com/news/data-center-moratorium-approved-35853894"},
     {"locality": "Hendersonville", "state": "NC", "level": "Local", "status": "Proposed", "when": "September 3, 2026", "note": "Proposed 12-month moratorium on data center building, zoning, and special use permits. City attorney cited outdated ordinance. Public hearing held September 3; outcome not yet confirmed.", "lat": 35.32, "lon": -82.46, "expires": None, "as_of": "2026-09-11", "source": "https://www.hendersonvillelightning.com/news/16142-local-governments-across-state-are-pausing-data-centers.html"},
-    {"locality": "Lee County", "state": "NC", "level": "County", "status": "Under review", "when": None, "note": "Commissioners voted 6-1 to draft moratorium language but rejected an immediate moratorium on Aug 18. Citizen petition with 2,500+ signatures for 180-day moratorium submitted for Sept 21 agenda.", "lat": 35.47, "lon": -79.18, "expires": None, "as_of": "2026-09-11", "source": "https://rantnc.com/2026/08/18/commissioners-reject-attempts-to-pause-data-center-project/"},
+    {"locality": "Lee County", "state": "NC", "level": "County", "status": "Under Review", "when": None, "note": "Commissioners voted 6-1 to draft moratorium language but rejected an immediate moratorium on Aug 18. Citizen petition with 2,500+ signatures for 180-day moratorium submitted for Sept 21 agenda.", "lat": 35.47, "lon": -79.18, "expires": None, "as_of": "2026-09-11", "source": "https://rantnc.com/2026/08/18/commissioners-reject-attempts-to-pause-data-center-project/"},
     {"locality": "Austin County", "state": "TX", "level": "County", "status": "Enacted", "when": "July 28, 2026", "note": "Commissioners unanimously approved a countywide moratorium on AI data centers and battery energy storage systems in unincorporated areas. Developers must submit equipment audits and sworn compliance certifications.", "lat": 29.88, "lon": -96.28, "expires": None, "as_of": "2026-09-11", "source": "https://kwhi.com/2026/07/28/austin-co-commissioners-enact-moratorium-on-data-centers-battery-energy-storage-systems/"},
     {"locality": "Athens", "state": "TX", "level": "Local", "status": "Enacted", "when": "August 23, 2026", "note": "City Council voted 3-2 to permanently ban data centers within city limits. Defines data center as any facility over 500 sq ft used primarily to house servers. Not a moratorium -- a standing zoning ban.", "lat": 32.2, "lon": -95.86, "expires": None, "as_of": "2026-09-11", "source": "https://www.kltv.com/2026/08/25/athens-city-council-votes-3-2-favor-ordinance-banning-data-centers/", "term": "standing"},
     {"locality": "Tom Green County", "state": "TX", "level": "County", "status": "Rejected", "when": "June 2, 2026", "note": "Commissioners rejected a 12-month moratorium on large-scale data centers, BESS, and power generation in Precinct 4; cited legal risk after Hill County's moratorium drew a $100M federal lawsuit.", "lat": 31.44, "lon": -100.45, "expires": None, "as_of": "2026-09-11", "source": "https://sanangelolive.com/news/county/2026-06-02/tom-green-county-commissioners-reject-data-center-moratorium"},
@@ -9577,6 +9577,7 @@ NEWS_SOURCE_TIERS = [
         "government strategies", "grant thornton", "deloitte", "mckinsey",
         "research group", "for congress", "for senate", "for governor",
         "for texas", "campaign", "press release",
+        "scpolicycouncil",
     }),
     ("official", "Official / .gov", 1.0, {
         "(.gov)", ".gov)", "gov.uk", "city of ", "county of ",
@@ -9710,6 +9711,10 @@ NEWS_SOURCE_EXACT = {
     "ap news": "wire",
     "fortune": "national",
     "fortune.com": "national",
+    # The Insider (theins.ru) — Russian independent investigative outlet
+    # (Roman Dobrokhotov; blocked in Russia, operates from exile). Real
+    # journalism, not advocacy; international tier.
+    "theins.ru": "international",
 }
 
 # Masthead words are matched on word boundaries, not as bare substrings:
