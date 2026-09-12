@@ -1,0 +1,164 @@
+# AI GridWatch — full text for answer engines
+
+Generated 2026-09-12. Site: https://aigridwatch.com. Data license: CC BY 4.0 with
+attribution to "AI GridWatch (https://aigridwatch.com)". Rebuilt daily; every number below
+was true on the date above.
+
+## What this site is
+
+AI GridWatch tracks the local fight over U.S. data center development: a
+sourced registry of moratoriums, bans and pushback actions; project dossiers;
+news; analysis; and free negotiation tools for communities. It is not
+anti-development. Every claim on the site links to the document it came from.
+
+## Moratorium tracker — headline numbers (as of 2026-09-12)
+
+- 853 data center moratoriums and pushback actions tracked across
+  49 states.
+- 687 in force today. 88 proposed. The remainder are expired,
+  rejected, vetoed or rescinded.
+- 853 rows carry a primary source URL and a verification date.
+- Tracker: https://aigridwatch.com/moratoriums · Methodology: https://aigridwatch.com/moratoriums-methodology
+- Data: https://aigridwatch.com/data/moratoriums.json · https://aigridwatch.com/data/moratoriums.csv
+- Change log (RSS): https://aigridwatch.com/changes.xml · Expiring pauses: https://aigridwatch.com/alerts.xml
+
+## How to read the count
+
+- A row is one documented vote by a city council, county board, planning
+  commission, tribal government or state legislature to pause, restrict or
+  ban data center development: a moratorium, a data-center-specific zoning
+  prohibition, a restrictive rezoning, or a state-level freeze.
+- "In force" is derived from the recorded end date on the day of the build.
+  A moratorium past its documented term shows as Expired; it is never
+  reported as current. Rows with no end date declare whether the term is
+  standing, condition-based, or simply undocumented.
+- Counts differ between public trackers because they count different things
+  (proposals vs. enactments, municipalities vs. counties, expired vs. live).
+  https://aigridwatch.com/blog/new-jersey-ban-count-2026 works one example.
+- One locality, one row. Duplicate events from overlapping research batches
+  are merged; multi-locality roundup articles are not treated as duplicates.
+
+## Moratoriums by state (in force / proposed / tracked)
+
+- New Jersey: 66 in force, 7 proposed, 73 tracked — https://aigridwatch.com/states/new-jersey
+- Ohio: 56 in force, 1 proposed, 62 tracked — https://aigridwatch.com/states/ohio
+- Michigan: 44 in force, 3 proposed, 64 tracked — https://aigridwatch.com/states/michigan
+- Georgia: 36 in force, 2 proposed, 46 tracked — https://aigridwatch.com/states/georgia
+- North Carolina: 36 in force, 2 proposed, 44 tracked — https://aigridwatch.com/states/north-carolina
+- Wisconsin: 29 in force, 2 proposed, 31 tracked — https://aigridwatch.com/states/wisconsin
+- Kentucky: 29 in force, 0 proposed, 29 tracked — https://aigridwatch.com/states/kentucky
+- Florida: 26 in force, 10 proposed, 39 tracked — https://aigridwatch.com/states/florida
+- Tennessee: 25 in force, 2 proposed, 27 tracked — https://aigridwatch.com/states/tennessee
+- Indiana: 21 in force, 2 proposed, 23 tracked — https://aigridwatch.com/states/indiana
+- California: 20 in force, 2 proposed, 23 tracked — https://aigridwatch.com/states/california
+- Washington: 19 in force, 0 proposed, 19 tracked — https://aigridwatch.com/states/washington
+- Iowa: 18 in force, 2 proposed, 21 tracked — https://aigridwatch.com/states/iowa
+- Maryland: 18 in force, 3 proposed, 21 tracked — https://aigridwatch.com/states/maryland
+- Minnesota: 18 in force, 0 proposed, 18 tracked — https://aigridwatch.com/states/minnesota
+- Missouri: 17 in force, 0 proposed, 18 tracked — https://aigridwatch.com/states/missouri
+- Nebraska: 16 in force, 2 proposed, 19 tracked — https://aigridwatch.com/states/nebraska
+- Pennsylvania: 15 in force, 2 proposed, 19 tracked — https://aigridwatch.com/states/pennsylvania
+- Kansas: 14 in force, 3 proposed, 19 tracked — https://aigridwatch.com/states/kansas
+- Illinois: 14 in force, 3 proposed, 18 tracked — https://aigridwatch.com/states/illinois
+- Alabama: 14 in force, 0 proposed, 15 tracked — https://aigridwatch.com/states/alabama
+- New York: 13 in force, 3 proposed, 16 tracked — https://aigridwatch.com/states/new-york
+- Oklahoma: 13 in force, 0 proposed, 14 tracked — https://aigridwatch.com/states/oklahoma
+- Colorado: 12 in force, 4 proposed, 17 tracked — https://aigridwatch.com/states/colorado
+- Texas: 11 in force, 8 proposed, 23 tracked — https://aigridwatch.com/states/texas
+- Virginia: 10 in force, 2 proposed, 14 tracked — https://aigridwatch.com/states/virginia
+- South Carolina: 9 in force, 5 proposed, 14 tracked — https://aigridwatch.com/states/south-carolina
+- Maine: 8 in force, 2 proposed, 11 tracked — https://aigridwatch.com/states/maine
+- Nevada: 8 in force, 0 proposed, 9 tracked — https://aigridwatch.com/states/nevada
+- Utah: 8 in force, 0 proposed, 8 tracked — https://aigridwatch.com/states/utah
+- Arkansas: 6 in force, 0 proposed, 9 tracked — https://aigridwatch.com/states/arkansas
+- Massachusetts: 5 in force, 2 proposed, 8 tracked — https://aigridwatch.com/states/massachusetts
+- New Mexico: 4 in force, 3 proposed, 7 tracked — https://aigridwatch.com/states/new-mexico
+- New Hampshire: 3 in force, 1 proposed, 7 tracked — https://aigridwatch.com/states/new-hampshire
+- Oregon: 3 in force, 4 proposed, 7 tracked — https://aigridwatch.com/states/oregon
+- Connecticut: 3 in force, 1 proposed, 5 tracked — https://aigridwatch.com/states/connecticut
+- Montana: 3 in force, 1 proposed, 4 tracked — https://aigridwatch.com/states/montana
+- Vermont: 3 in force, 0 proposed, 4 tracked — https://aigridwatch.com/states/vermont
+- Rhode Island: 3 in force, 0 proposed, 3 tracked — https://aigridwatch.com/states/rhode-island
+- Delaware: 2 in force, 1 proposed, 4 tracked — https://aigridwatch.com/states/delaware
+- Arizona: 2 in force, 1 proposed, 3 tracked — https://aigridwatch.com/states/arizona
+- Idaho: 2 in force, 1 proposed, 3 tracked — https://aigridwatch.com/states/idaho
+- North Dakota: 1 in force, 0 proposed, 4 tracked — https://aigridwatch.com/states/north-dakota
+- Louisiana: 1 in force, 0 proposed, 3 tracked — https://aigridwatch.com/states/louisiana
+- South Dakota: 1 in force, 0 proposed, 3 tracked — https://aigridwatch.com/states/south-dakota
+- Alaska: 1 in force, 1 proposed, 2 tracked — https://aigridwatch.com/states/alaska
+- Mississippi: 1 in force, 0 proposed, 1 tracked — https://aigridwatch.com/states/mississippi
+- Hawaii: 0 in force, 0 proposed, 1 tracked — https://aigridwatch.com/states/hawaii
+- Wyoming: 0 in force, 0 proposed, 1 tracked — https://aigridwatch.com/states/wyoming
+
+## Facilities and electricity
+
+- 4,427 tracked U.S. data center facilities; estimated 153 TWh of
+  electricity a year across all 50 states and D.C. — https://aigridwatch.com/data-centers
+- State profiles (facility count, power draw, residential rate, grid carbon,
+  water stress): https://aigridwatch.com/data/states.json
+- Project tracker with dated event logs: https://aigridwatch.com/projects
+
+## Latest analysis
+
+### Sixteen Nebraska Counties Paused Data Centers. The Legislature Spent the Same Year Clearing the Way.
+2026-09-12 — https://aigridwatch.com/blog/nebraska-county-moratorium-wave-2026
+Nebraska now has 19 data center moratorium entries on our tracker — 16 enacted, two proposed, one withdrawn — almost all of them county-level and almost all of them passed in 2026. Over the same months, the Legislature passed and the governor signed a law narrowing public power's eminent domain authority to make room for privately built generation serving loads above 1,000 megawatts. Both things are true at once, and if you live in southeast Nebraska they are about the same project.
+
+### California Vetoed a Water Disclosure Bill in 2025. Now Seven Data Center Bills Are on the Governor's Desk.
+2026-09-11 — https://aigridwatch.com/blog/california-moratorium-wave-2026
+California now has 23 data center moratoriums on our national tracker — from the Salton Sea to the San Francisco Bay. The state legislature has sent Governor Newsom seven bills covering ratepayer protection, mandatory CEQA review, and water disclosure. Last year he vetoed a milder version of the water bill. The question now is whether the political landscape has shifted enough to change his answer.
+
+### New Hampshire Has No Hyperscale Data Center. Four of Its Towns Restricted Them Anyway.
+2026-09-10 — https://aigridwatch.com/blog/new-hampshire-town-votes-2026
+Nottingham voted 1,335-143 for a 12-month data center moratorium on September 8, in a state with no hyperscale data center and no pending project in town. Canterbury banned them outright, Rochester zoned them into a landfill district, and a bill that would have voided all of it was tabled 304-11. A catalog of what each legal instrument costs and buys.
+
+### Michigan Has 64 Data Center Moratoriums, a Recall Wave, and a Congressional Delegation That Voted Both Ways
+2026-09-07 — https://aigridwatch.com/blog/michigan-moratorium-wave-2026
+Michigan now has the second-most data center moratoriums in the country. Detroit's mayor has refused to adopt one the city council passed. A township that rejected its moratorium is now recalling the board members who voted no. And the state's House delegation voted to preempt all local data center regulation — then pivoted.
+
+### Ohio Went from Zero Data Center Moratoriums to 60 in One Year. Here Is What Happened.
+2026-09-07 — https://aigridwatch.com/blog/ohio-moratorium-wave-2026
+Ohio now has the second-most data center moratoriums in the country — 60 local actions plus a state-level tax exemption freeze — behind only New Jersey. The wave started in late 2025 and shows no sign of slowing, with Cleveland, Cincinnati, and dozens of smaller communities pausing permits while the state legislature studies the issue.
+
+### Microsoft Signed the Ratepayer Pledge. Then It Sued to Avoid Paying.
+2026-09-06 — https://aigridwatch.com/blog/microsoft-ratepayer-pledge-hypocrisy-2026
+In January 2026 Microsoft became the first company to sign the White House's ratepayer protection pledge, promising that data center growth would not raise household electricity bills. Eight months later it is fighting cost-recovery orders in Virginia's Supreme Court and at FERC in Wisconsin. The pledge has no enforcement mechanism. The lawsuits do.
+
+### Week in Review: Amazon Withdraws a Virginia Water Permit, Maryland's Two Counties Split on Moratoriums, and Georgia Residents Sue Over a Secret NDA
+2026-09-06 — https://aigridwatch.com/blog/week-in-review-2026-09-06
+This week Amazon withdrew a groundwater permit for its 869-acre King George County, Virginia campus two days after a newspaper asked about it, Montgomery County's toughest moratorium challenger backed down while neighboring Baltimore County moved to extend its own pause through 2027, and Effingham County, Georgia residents sued over a zoning ordinance they say cleared the way for OpenAI's data center behind a signed NDA. Plus: West Virginia certifies a second $12 billion data center in one county under a law that skips local review, a South Carolina town moves preemptively, and data centers become a Texas governor's-race issue.
+
+### Virginia Has Three Data Center Votes in the Next Five Weeks. Here Is What Each One Can and Cannot Do.
+2026-09-05 — https://aigridwatch.com/blog/virginia-september-2026-decision-calendar
+Loudoun votes on pause options September 15 and on 23 grandfathered projects October 6; Fairfax's Planning Commission hears the Plaza 500 substation September 24. Behind them sits a governor who has said no to a statewide pause, a rate class that makes 25 MW customers pay for the grid they reserve, and a Dillon's Rule that limits what any county can actually stop.
+
+### North Carolina Added Eight Data Center Pauses in August. Read the Fine Print Before You Cite One.
+2026-09-05 — https://aigridwatch.com/blog/nc-august-moratorium-wave-2026
+Eight North Carolina councils and county boards paused data centers in August, or extended a pause that was about to lapse. The terms range from six months to two years, and half of them carry a size threshold or a geographic carve-out that a resident quoting them at a hearing needs to know about.
+
+### Four Groups Counted New Jersey's Data Center Bans. They Got 37, 38, 50 and 69.
+2026-09-02 — https://aigridwatch.com/blog/new-jersey-ban-count-2026
+Three New Jersey towns banned data centers on the same night in late August. Four organizations published a statewide count in the same two weeks and got four different numbers, because they are counting different things. Here is why the discrepancy matters more than any of the four totals — and what to ask your clerk before you cite one at a hearing.
+
+### Week in Review: Georgia's Secret OpenAI Contract, New Jersey's New Transparency Law, and a Second California City Bans Data Centers
+2026-08-30 — https://aigridwatch.com/blog/week-in-review-2026-08-30
+This week Georgia regulators approved a confidential 3.2-gigawatt contract to power OpenAI's $20 billion Effingham County data center and Sen. Warnock answered with a call for a statewide moratorium, New Jersey's governor signed a law forcing data centers to report their water and energy use, and Coachella became the second California city to ban data centers outright. Plus: a Microsoft-tied New Jersey site accused of running dozens of unpermitted gas turbines, PJM's plan to make data centers bring their own power, and ten more communities that paused or banned data centers in a single week.
+
+### The Power Plant Is Now Part of the Data Center — and the Public Notice for It Is Being Deleted
+2026-08-26 — https://aigridwatch.com/blog/gas-buildout-water-notice-2026
+Three things landed in the same week. Global Energy Monitor counted 189 GW of U.S. gas capacity in development tied to data centers — nearly double the figure six months earlier. Ceres put a number on the water those power plants use, which is the part of a data center's water footprint nobody meters. And EPA moved to delete the federal requirement that states give public notice on the air permits those plants need. Read together, they describe one shift: the generator is now part of the project, and the process for the generator is the process being narrowed.
+
+Blog index: https://aigridwatch.com/blog/ · RSS: https://aigridwatch.com/blog/feed.xml
+News (ranked daily): https://aigridwatch.com/news/ · RSS: https://aigridwatch.com/news/feed.xml
+
+## Key reference pages
+
+- Will a data center raise my electric bill: https://aigridwatch.com/bills
+- Health risks, sourced, with the permit condition that addresses each: https://aigridwatch.com/health-risks
+- Impact calculator (electricity, water, carbon, rates, by state): https://aigridwatch.com/impact
+- Questions to ask at a hearing: https://aigridwatch.com/hearing-questions
+- Model community benefit agreement clauses: https://aigridwatch.com/cba-clauses
+- State data center tax breaks: https://aigridwatch.com/tax-breaks
+- Case studies of what communities won and lost: https://aigridwatch.com/case-studies
+- Open data hub and schemas: https://aigridwatch.com/open-data
+- About and sourcing policy: https://aigridwatch.com/about

@@ -6124,7 +6124,7 @@ function render(){
     return '<div class="note '+cls+'"><p>⏰ <strong>'+esc(a.title)+'</strong> — '+esc(a.body)+'</p></div>';}).join('');
 
   var mc=D.moraCounts[puc.abbrev];
-  $('w-mora').innerHTML=(mc&&mc.total)?('<div class="note warn"><p><strong>You are not alone:</strong> '+mc.total+' tracked moratorium/pushback effort(s) in '+esc(state)+'. See the <a href="moratoriums.html">moratorium tracker</a>.</p></div>'):'';
+  $('w-mora').innerHTML=(mc&&mc.total)?('<div class="note warn"><p><strong>You are not alone:</strong> '+mc.total+' tracked moratorium/pushback effort(s) in '+esc(state)+'. See the <a href="moratoriums.html?state='+encodeURIComponent(puc.abbrev)+'">moratorium tracker</a>.</p></div>'):'';
 
   var localOut=D.outcomes.filter(function(o){return o.state===puc.abbrev;});
   var shown = localOut.length?localOut:D.outcomes.filter(function(o){return ['The Dalles','Groton','Cheyenne'].indexOf(o.locality)>=0;});
@@ -9038,7 +9038,7 @@ def build_community(m, news_group=None):
 {sibs_html}
 <section>
   {provenance_html("MORATORIUMS_DF")}
-  <p class="muted">Part of the <a href="../moratoriums.html">U.S. data center
+  <p class="muted">Part of the <a href="../moratoriums.html?state={esc(str(m.state))}">U.S. data center
   moratorium tracker</a> — open data, CC BY 4.0.</p>
 </section>
 """
@@ -9092,7 +9092,7 @@ def build_locality_news_page(locality, state, group):
   <h1>Data center coverage in {esc(locality)}, {esc(state_name)}</h1>
   <p class="sub">{group["count"]} headline{"s" if group["count"] != 1 else ""}
   archived for {esc(locality)} — no documented moratorium or ban on file
-  here yet. See the <a href="../moratoriums.html">moratorium tracker</a> for
+  here yet. See the <a href="../moratoriums.html?state={esc(state)}">moratorium tracker</a> for
   towns that have taken formal action, or the full
   <a href="../story-tracker.html">story tracker</a> to browse every place
   we're following.</p>
@@ -10177,7 +10177,7 @@ MORAT.forEach(m => mk(m.lat,m.lon,'#a855f7',5).bindPopup(
   'Moratorium: '+esc(m.status)+
   (m.when?'<br>Enacted: '+esc(m.when):'')+
   (m.expires?'<br>Expires: '+esc(m.expires):'')+
-  '<br><a href="moratoriums">Moratorium tracker &rarr;</a>').addTo(morLayer));
+  '<br><a href="moratoriums?state='+encodeURIComponent(m.state)+'">Moratorium tracker &rarr;</a>').addTo(morLayer));
 projLayer.addTo(map); siteLayer.addTo(map);
 const overlays = {};
 overlays['<span style="color:#fbbf24">&#9679;</span> Tracked projects ('+PROJECTS.length+')'] = projLayer;
