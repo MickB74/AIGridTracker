@@ -1346,22 +1346,40 @@ def _home_tracker_changes_html(days=10, limit=6):
     log.sort(key=lambda c: c["date"], reverse=True)
     if not log:
         return ""
-    labels = {"added": "New", "status_changed": "Status", "extended": "Extended",
+    # Split real-world changes (votes, expirations, extensions) from research
+    # additions — "added to tracker" is our work, not the world's.
+    real = [c for c in log if c["kind"] != "added"]
+    added = [c for c in log if c["kind"] == "added"]
+    labels = {"status_changed": "STATUS", "extended": "Extended",
               "shortened": "Shortened"}
-    rows = "".join(
-        f'<li><span class="chg-kind">{esc(labels.get(c["kind"], c["kind"]))}</span>'
-        f'<a href="moratoriums.html#{esc(c["id"])}">{esc(c["locality"])}</a>'
-        f'<span class="chg-detail">{esc(c["detail"])}</span>'
-        f'<span class="chg-date">{esc(c["date"][5:])}</span></li>'
-        for c in log[:limit])
+    if real:
+        rows = "".join(
+            f'<li><span class="chg-kind">{esc(labels.get(c["kind"], c["kind"]))}</span>'
+            f'<a href="moratoriums.html#{esc(c["id"])}">{esc(c["locality"])}</a>'
+            f'<span class="chg-detail">{esc(c["detail"])}</span>'
+            f'<span class="chg-date">{esc(c["date"][5:])}</span></li>'
+            for c in real[:limit])
+        n = len(real)
+        summary = (f'{n} status change{"s" if n != 1 else ""} in the '
+                   f'last {days} days: pauses enacted, extended, lapsed '
+                   'or rescinded. Each row carries its source and end date.')
+    else:
+        rows = ""
+        summary = f"No status changes in the last {days} days."
+    added_note = ""
+    if added:
+        na = len(added)
+        added_note = (f'<p class="muted" style="margin-top:6px">'
+                      f'{na} row{"s" if na != 1 else ""} also '
+                      f'<a href="changes.html">added to the tracker</a> '
+                      f'this period.</p>')
     return (
         '<section class="home-changes">'
         '<div class="sechead"><h2>Moratorium tracker: what changed</h2>'
         '<a href="moratoriums.html">Full tracker &rarr;</a></div>'
-        f'<p class="muted">{len(log)} row{"s" if len(log) != 1 else ""} moved in the '
-        f'last {days} days: pauses added, extended, lapsed or rescinded. '
-        'Each row carries its source and end date.</p>'
-        f'<ul class="chg-list">{rows}</ul></section>')
+        f'<p class="muted">{summary}</p>'
+        f'<ul class="chg-list">{rows}</ul>'
+        f'{added_note}</section>')
 
 
 def build_index(top_stories=None):
@@ -1899,7 +1917,9 @@ def _mora_detect_changes(records):
                 new_changes.append({"date": today, "id": r["id"],
                                      "locality": label, "kind": "added",
                                      "detail": f"Added as {r['effective_status']}"})
-            elif old.get("effective_status") != r["effective_status"]:
+            elif (old.get("effective_status") != r["effective_status"]
+                  and (old.get("effective_status") or "").lower()
+                  != (r["effective_status"] or "").lower()):
                 new_changes.append({
                     "date": today, "id": r["id"], "locality": label,
                     "kind": "status_changed",
@@ -8279,23 +8299,33 @@ def build_moratoriums():
     _recent_changes = sorted(
         (c for c in _MORA_CHANGES_LOG if c["date"] >= _week_ago),
         key=lambda c: c["date"], reverse=True)
-    _CHANGE_KIND_LABEL = {"added": "New", "status_changed": "Status changed",
+    _CHANGE_KIND_LABEL = {"status_changed": "Status changed",
                            "extended": "Extended", "shortened": "Shortened"}
+    _real_changes = [c for c in _recent_changes if c["kind"] != "added"]
+    _added_changes = [c for c in _recent_changes if c["kind"] == "added"]
     changes_html = ""
-    if _recent_changes:
-        _items = "\n".join(
-            f'<li><a href="#{esc(c["id"])}"><strong>{esc(c["locality"])}</strong></a> '
-            f'— <span class="badge">{esc(_CHANGE_KIND_LABEL.get(c["kind"], c["kind"]))}</span> '
-            f'<span class="muted">{esc(c["detail"])}</span></li>'
-            for c in _recent_changes[:20])
+    if _real_changes or _added_changes:
+        _items = ""
+        if _real_changes:
+            _items = "\n".join(
+                f'<li><a href="#{esc(c["id"])}"><strong>{esc(c["locality"])}</strong></a> '
+                f'— <span class="badge">{esc(_CHANGE_KIND_LABEL.get(c["kind"], c["kind"]))}</span> '
+                f'<span class="muted">{esc(c["detail"])}</span></li>'
+                for c in _real_changes[:20])
+        _nr = len(_real_changes)
+        _na = len(_added_changes)
+        _real_line = (f'{_nr} status change{"s" if _nr != 1 else ""}'
+                      if _nr else "No status changes")
+        _added_line = (f', plus {_na} row{"s" if _na != 1 else ""} '
+                       'newly added to the tracker' if _na else "")
         changes_html = f"""
 <section>
   <h2>Changed in the last 7 days</h2>
-  <p class="muted" style="margin-bottom:12px">Every row that moved since a
-  prior build: newly tracked, a status flip, or a term that got extended or
-  cut short. <a href="changes.html">Full week-by-week log</a> ·
+  <p class="muted" style="margin-bottom:12px">{_real_line} — pauses
+  enacted, extended, lapsed or rescinded{_added_line}.
+  <a href="changes.html">Full week-by-week log</a> ·
   <a href="changes.xml">Subscribe by RSS</a></p>
-  <ul>{_items}</ul>
+  {"<ul>" + _items + "</ul>" if _items else ""}
 </section>"""
 
     _map_svg = _mora_map_svg()
