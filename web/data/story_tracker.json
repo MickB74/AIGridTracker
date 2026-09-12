@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 6092,
+  "count": 6104,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -57965,7 +57965,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-09"
+      "last_seen": "2026-09-12"
     },
     {
       "title": "Montville Plugs Into Data Center Zoning Questions",
@@ -61122,7 +61122,7 @@
       "locality": "Lexington",
       "state": "KY",
       "first_seen": "2026-09-09",
-      "last_seen": "2026-09-09"
+      "last_seen": "2026-09-12"
     },
     {
       "title": "Sterling City Council approves moratorium on data center applications",
@@ -62970,7 +62970,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-09",
-      "last_seen": "2026-09-10"
+      "last_seen": "2026-09-12"
     },
     {
       "title": "Community Members Come Together With Goals To Affect Data Center Development",
@@ -65247,7 +65247,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2023-10-09",
-      "last_seen": "2026-09-11"
+      "last_seen": "2026-09-12"
     },
     {
       "title": "An industry-loving Maine town splits on regulating data centers",
@@ -67018,6 +67018,138 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    {
+      "title": "Data center ordinance meetings continue, at times contentiously",
+      "outlet": "Clinton Herald",
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNVFNTYmt0dkhXbWtFeHV3MTVxM1M4Y3FSQkllSDhhdWlBMGRuVVZ0STMyVkFVY0d1WmpuQ0ZuV2F0bU5CbWxZSlVMc18xbjF3TU9nUEc5TTBJX0VhZDAzQ3Zyc0NkYU9OY1FEY3lMUE1Sck9RTGw1Z2FtVVA4bUZ2c00zX0pYSkluMW5rT2gwUzQyT01RWHZXZ0s0Zm1IeE43VGc5cXotM2xWakk1Z1o4SDZoWGZrR0NDdGVfR05WYUtGaTFTbzBxNjZlMDB1bmM4WlZGbk54UzJGSW4ySGltRg?oc=5",
+      "published": "Sat, 12 Sep 2026 11:00:00 GMT",
+      "published_iso": "2026-09-12T11:00:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    {
+      "title": "Findlay's proposed data center zoning gets rewrite",
+      "outlet": "Findlay News | The Courier",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOTDZSeW0tQm5PWlBKSzV2U0YxVzlGeERzNFY4RURjNVUyOWFKVE5BcVl1T0NpTmFCZzdMalAzUzMtM003TkVEcTE1QkZPRnVYT3ZUa3lFN3gtZDRhd1kwVU9KWDNXdEx0YUJBeWNJWEs2c0lYU2dCcm45MzJvdW93bFFPNXY3dDlzcE5KSjhNQQ?oc=5",
+      "published": "Sat, 12 Sep 2026 12:00:00 GMT",
+      "published_iso": "2026-09-12T12:00:00+00:00",
+      "locality": "Findlay",
+      "state": "OH",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    {
+      "title": "Data Centers Come Into Focus at Hanover Township Committee Meeting",
+      "outlet": "TAPinto",
+      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNWldGdnk0TXlsSjdLYktBOW5LN0ZESUcxMDZOLVYtV0hpM3B6VXJyRDR6TV9RdkhFVC1Od2VrblRGNlFabzJxRlQ0NzBSdGZkV2VBMGtuRUhjcWlDZDlVMEJZUm5pZjRhODFMT1NXRFFkUmtycmhkekxucGtGOElDcWJNYWtQV2hKSHF5eTJkYTZQNnhtTVp1elpkdWNMVnNrWWUzMDFSTkFNZGJNWTVHbnIxRTZ1TWlCa0I1TnZKWERzcHEyTFM0NUNrUHlTdXBBakNXZFludHRkUQ?oc=5",
+      "published": "Sat, 12 Sep 2026 19:44:50 GMT",
+      "published_iso": "2026-09-12T19:44:50+00:00",
+      "locality": "Hanover Township",
+      "state": "PA",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    {
+      "title": "Sale of land for potential data center approved at I-81/581 interchange",
+      "outlet": "Roanoke Times",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQWm0zRU5xdWcxYjVsTTJ6S2lKRGJWc21QTDkzbjdiTHNzVWRsVTRBa3A4TGsyQlpvZm5LZ2pBWVhacXJodXZVWG9WVjlsNzk4QWVhT3k1Z29meGsydW9JVEMyd0hROGFnT3dibmxzZlFNOTlQY2hlTWF5Si1yRnBNNjA1UEx1V2dGdGRXRWk5VDhMOTU3b2hiQUIwcmhvMjlRRkE?oc=5",
+      "published": "Sat, 12 Sep 2026 10:00:00 GMT",
+      "published_iso": "2026-09-12T10:00:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    {
+      "title": "Amazon drops bid to tap depleted Virginia aquifer for data center amid backlash",
+      "outlet": "yahoo.com",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQZUdXbmtyMmt1WXZUbkNVUy1hMGlNNWVwMVhOQ2lnV28zVUdJUnV1VExDWnhYbXJHRk9lY2NSekptMWRwN2RxOXRtRTl3aS1yX2NNdUdHVUoxUldpbmczcDRYQWE2cDQ3REFzT3JpREFPUEZVRnlqRFRIeG1USTBwSzJYV1BDVU9YMkVF?oc=5",
+      "published": "Sat, 12 Sep 2026 04:12:00 GMT",
+      "published_iso": "2026-09-12T04:12:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    {
+      "title": "Area residents invited to nonpartisan town hall on proposed Effingham County OpenAI Data Center",
+      "outlet": "Grice Connect",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPa2ZKbllaQlRxRllhQVlISl9qYmctYjcwSGNNN2JkTDJlZHVfckoyY0dqaWFHcXh3dFNIRDJOeTNZX1d5YjNVRUpFSS1wV3p0LWxrMUFyU2k5ejVsZDZHZlQ2NXBNelYxTHBBUFlUTktwSXZqYzhYOWFaNW8xTjNvZkpraFFlZE9fMFRGMjh5ZDRoSzlfTzVLSi11RFh4ZXhOLUR6YjFsQUY4VnAxSVJfclBmS0NrWWNtbW8xdW0wbkZHbk16RGZDMjhrelpxcklwZEFlUFhnNVpUZmY4YzV0SW9R0gHiAUFVX3lxTE9rZkpuWVpCVHFGWWFBWUhKX2piZy1iNzBIY003YmRMMmVkdV9ySjJjR2ppYUdxeHd0U0hEMk55M1lfV3liM1VFSkVJLXBXenQtbGsxQXJTaTl6NWxkNkdmVDY1cE16VjFMcEFQWVROS3BJdmpjOFg5YVo1bzFOM29mSmtoUWVkT18wVEYyOHlkNGhLOV9PNUtKLXVEWHhleE4tRHpiMWxBRjhWcDFJUl9yUGZLQ2tZY21tbzF1bTBuRkduTXpEZkMyOGt6WnFySXBkQWVQWGc1WlRmZjhjNXRJb1E?oc=5",
+      "published": "Sat, 12 Sep 2026 18:20:00 GMT",
+      "published_iso": "2026-09-12T18:20:00+00:00",
+      "locality": "Effingham County",
+      "state": "GA",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    {
+      "title": "Walker County panel weighs rules for data centers",
+      "outlet": "The Rome News-Tribune",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZEhVSmRkRzh4eDFkZ18tN2VCLXVyQXNONEdXZ3NZckV2NVdtZ0xkcnQ2NlVvTmlvYllaQlJFVlhFdDNJNnp6Y290Qm9PM0N6R2lqS05tc3VHMzI1WTJ2NGpSVlNyaG95Ul95QnE2STNVb3pWVERFYjlteWhOR1ZLbm5KMDZfU29iU0h1RThNZGpVUFgxRzNDeVVlX0V1TFNuMmQ5TW9HOURleUtJeUZ0VmdxWm0zbTBfVWtyVTVHaHpJMGY2c1VJd0pNYWtpdmFTV3c?oc=5",
+      "published": "Sat, 12 Sep 2026 07:15:00 GMT",
+      "published_iso": "2026-09-12T07:15:00+00:00",
+      "locality": "Walker County",
+      "state": "GA",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    {
+      "title": "The Data Center Boom Is Coming For Small-Town Water",
+      "outlet": "dailycaller.com",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQWEhsSWFGWi14RnFEOUkxR0lZbXpObjZVa21TNnFZWnZBdnU4MkYtMlAyUm9sd1doZHh6LUdkckJzbjFJajlUX1pPczUtci1UUGpMNTZ3WkdQY3haTUNOQ0Q3ZjJRRjM3aVZJR0pHMFAxR2N4X0VkUWNuZkM2OWZMWGZaOW11eW1pUUxNUWtn?oc=5",
+      "published": "Sun, 06 Sep 2026 16:03:00 GMT",
+      "published_iso": "2026-09-06T16:03:00+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-12"
+    },
+    {
+      "title": "Texas data centers are booming. Who is watching out for homeowners?",
+      "outlet": "gmg-kprc-prod.cdn.arcpublishing.com",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOa3NtWExXN3ZZNHdkbVBTWDVNUVFLSDRwMTJTWTNnSHhCSlZSY3c0N2RnVmRFTE9uTlphQjFSdFJvUURsekw3bEF1aDd3cmlBRzNyamxvLXdmX1p3cEtEanhPWUFhT0VqbTZQNlpLNUlfTTh3bHphT2xscjFiYlc3T1ZxNm12Z3E2OHowODZFSzlXN1VSeTRNQURhRG1GVVdoQnM3MkNQN2ItQnlmVDAyaEt1VXo1b0d6RWlKWW9lSWY2a3d4bkt1dkZET2Y?oc=5",
+      "published": "Fri, 11 Sep 2026 16:53:49 GMT",
+      "published_iso": "2026-09-11T16:53:49+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-11",
+      "last_seen": "2026-09-12"
+    },
+    {
+      "title": "Fluidstack begins $4 billion data center construction in Cameron County",
+      "outlet": "ValleyCentral.com",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUFpYZTE3R1d3cnUzNnRrOE1XRnBvZWRlWTVaZU15MlVQcFowZjVNVlBDRFVONUJHSTFmTmRHWGRxUzB6aWZ1MjZhSllFdWRjODY3NU1PZnkzeFBRUnlpQmFveE52REZVU2lEZENEWlhxcndXRXVVZGlWQ3ZsUTcxcnIyTzhHR0tkX0tzX0JzTU5lOXlycmdRMUNmTF9SOElubHloMFhuMXBNLTdfMlRCbmVZMmllem9x0gG-AUFVX3lxTE9WbHVYLTdtXzhoTjY2cFhSTWRRV2luQi1Rajd3aXRhVkhUa0xTOTllLS0zcHVUMDhjSDQ4TWlfb1I4anNLNmI1dUtTUmc3RG14NVNULTFvNXhncFYzUi1pVEtLZjNqQWFydzdsTV8yT3dSTjJ1angzOTJPRENyQVNoeFd1MFhaVUhkN0c5ZU5KS0htMDZrYmxwaTFRazlHWkRQWDJpUnhVWV9tbkV2WVhxelVQLU9GWUxBU1VqSmc?oc=5",
+      "published": "Thu, 10 Sep 2026 21:47:51 GMT",
+      "published_iso": "2026-09-10T21:47:51+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-12"
+    },
+    {
+      "title": "Texas’ AI Data Center Boom Is Becoming a Fight Over Water",
+      "outlet": "HackerNoon",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPTldPR0dzSWg0dDZLOVNxdWJxTmt1ZGl5cHpONzBadFVraG5ycmt6VDEzcm1BeWxyRFRZNWpfdUMxb0tzaHFNaUtKN29wTW9BOUlmLUZDOGVybklKblk1clB5bm1Db1dyUGs3ZFBFMTNXZDVSQmo1X19nY1loRUNDck9mcVRVZw?oc=5",
+      "published": "Sat, 12 Sep 2026 19:06:29 GMT",
+      "published_iso": "2026-09-12T19:06:29+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    {
+      "title": "North Judson man arrested in fatal Starke County hit-and-run",
+      "outlet": "WNDU",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPdmNOLUo4NzAtRWFHRVpwcUNwVzRrUXhvUlB0a0dxajV0Sko1X2kzNWN0cms0Y3JTVmRpNDRqcnZWRUNnQnl3SWRsVGlfU2l6N0FHSUpSckpNY0JZV3l4bGo4enlKRWNDT0hmVEpmclNPMkZ3YWNtRXREOUEyLTUwLWlibEZfX2F1c2FVa1lMWXhzaHZY0gGoAUFVX3lxTFBMNHQ4T3lFdVduRDNjV003MXIwZk4tTUQ0TW85MG9jYzdJbnp0U3NObmlFcnlTVllfTk5WNE44LWJfS1FBbGEzdTJUbTVVMmI4U1l1YUpXVGVmN0lsNjFub3VLZUtSU2Y5c0hkeTlwTWhpWjRvaF85VjBBRzVBN0V0ZGw2cVhDSzhfbFNvUFB5WFJrbUZDTS1yU3ZZa0dQZjZvUzdNYTdGVQ?oc=5",
+      "published": "Wed, 08 Jul 2026 07:00:00 GMT",
+      "published_iso": "2026-07-08T07:00:00+00:00",
+      "locality": "Starke County",
+      "state": "IN",
+      "first_seen": "2026-07-08",
       "last_seen": "2026-09-12"
     }
   ]
