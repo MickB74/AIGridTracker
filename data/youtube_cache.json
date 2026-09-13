@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-12T22:12:26.053576+00:00",
+  "fetched_at": "2026-09-13T04:37:57.727860+00:00",
   "items": [
     {
       "title": "Foley approves 6-month data center moratorium",
@@ -104,23 +104,6 @@
       "states": []
     },
     {
-      "title": "\ud83c\udf1f The BEST data center speech ever \ud83c\udf1f",
-      "source": "Food & Water Watch",
-      "link": "https://www.youtube.com/watch?v=VXGbmQwSdC8",
-      "video_id": "VXGbmQwSdC8",
-      "published_iso": "2026-06-25T20:00:13+00:00",
-      "category": "independent",
-      "states": []
-    },
-    {
-      "title": "Data Center Water is a Distraction",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBSTGVBY0x4bEUwSXRSMkFUV0QwUGFDNXhGejYwdnNsYzA3a29ORDVRNTVaQ1dQanlsRlF3R3pXcXkzTkZael9oUm4yV291aG1QdnRQWlVB?oc=5",
-      "video_id": "",
-      "published_iso": "2026-06-25T16:00:25+00:00",
-      "states": []
-    },
-    {
       "title": "Why Do AI Data Centres Use So Much Water? | Explained",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA3d2lpRTJtcnM0by1RenZhQ2JDZE8tZ29laHNCLXZmSVFkYVlpZlhOUnhwX3NRU3JPRFYyY3Y1cUJMX0JSUWpHcEpacktEWDc2MlNvZzhB?oc=5",
@@ -137,15 +120,6 @@
       "states": [
         "Virginia"
       ]
-    },
-    {
-      "title": "Stop Data Centers Coalition Launch",
-      "source": "Food & Water Watch",
-      "link": "https://www.youtube.com/watch?v=N36bihRA21M",
-      "video_id": "N36bihRA21M",
-      "published_iso": "2026-06-12T02:01:08+00:00",
-      "category": "independent",
-      "states": []
     },
     {
       "title": "Liquid Cooling in AI Data Center",
@@ -182,6 +156,16 @@
       "states": []
     },
     {
+      "title": "Family disputes Georgia Power over home amid data center plans",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fT3BMWjVsQVoycnQtbmlOcHJZMjlkX05kTGRlRFZnSnJoS1FORzRpNncwSnZtN1NKTnV6NkxIUEFpVE1QdGRDNklvWTFfQk05SGNoQ1dn?oc=5",
+      "video_id": "",
+      "published_iso": "2026-05-15T17:19:14+00:00",
+      "states": [
+        "Georgia"
+      ]
+    },
+    {
       "title": "Bans, Moratoriums, Zoning: How to Stop or Limit Data Center Development",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5nN0VfSUFlSkFPVDRWM1JDaUFsbzl2UThWVEVzME1HZW1tTnlNM3FoY1VxejJEcUYwSWYwRXNUQUZhSUo5dE55VnlsRUYxY1ZHeC1OUEJR?oc=5",
@@ -203,14 +187,6 @@
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5fd1h1cDFxd2V2b2UyVi13X29TOVE0NjUxQ3ZJOEM3ZTBKWGtyTy1OQ3ZiWDM4X3pwazd0aXl5aUpia2VlMWlGdlRwVUNRSWRYWWl1cnFB?oc=5",
       "video_id": "",
       "published_iso": "2026-03-25T21:58:36+00:00",
-      "states": []
-    },
-    {
-      "title": "Bernie Sanders, AOC announce AI data center moratorium bill",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5FSWNNXzNCOVZCek50TlhLVWlfQkxfbXlLdmFaeE5rbmJSdXM1ZjdSOGt1QjNqQjhZVm5CUTdDaE9RWGhpWEg2cXRzNEM3SndXUmNVRTdR?oc=5",
-      "video_id": "",
-      "published_iso": "2026-03-25T20:35:24+00:00",
       "states": []
     },
     {
@@ -367,6 +343,14 @@
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1mbmZpRURQN1p3dWVSY1dqRV9xblBuOFgxQko2eEdPVXdxWW1fZFFiTW0tWjJ2eHVuSGFicW1xbzVNMUJLUW1uUFpVZ24xV1hMSV9uNXFB?oc=5",
       "video_id": "",
       "published_iso": "2023-04-07T11:21:09+00:00",
+      "states": []
+    },
+    {
+      "title": "Data Center Power Chain - Animation",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE84MlNicGN2TG1kZU5HWUd1ekdEQlZkdlgxUXNWWktLWWtCcFJYVHM2TkwzS1NLclFGYXNrYlNSZ1ZDYlNaZ1labjlySEttZXR5SDdzb0h3?oc=5",
+      "video_id": "",
+      "published_iso": "2018-02-01T18:59:09+00:00",
       "states": []
     }
   ]
