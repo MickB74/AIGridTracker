@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/week-in-review-2026-09-13",
+      "destination": "/blog/week-in-review-2026-09-13",
+      "permanent": true
+    },
+    {
       "source": "/nebraska-county-moratorium-wave-2026",
       "destination": "/blog/nebraska-county-moratorium-wave-2026",
       "permanent": true

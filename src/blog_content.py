@@ -7656,4 +7656,314 @@ a story we should cover? Reach out at hello@aigridwatch.com or sign up for
 the newsletter below.*
 """,
     },
+    {
+        "id": "week-in-review-2026-09-13",
+        "art": "review",
+        "section": "stories",
+        "title": "Week in Review: Kentucky Bans Data Centers for Good, a Virginia Farmer Loses His Land, and the EPA Moves to Cut the Public Out of Air Permits",
+        "seo_title": "Week in review: KY's permanent ban, EPA cuts comment",
+        "date": _dt.date(2026, 9, 13),
+        "author": "GridWatch AI",
+        "tags": [
+            "week in review",
+            "moratorium",
+            "Kentucky",
+            "Georgia",
+            "Virginia",
+            "New Jersey",
+            "water",
+            "air permits",
+            "tax incentives",
+            "community",
+        ],
+        "summary": (
+            "This week Woodford County, Kentucky became the state's first county to "
+            "permanently ban data center construction, Chatham County, Georgia enacted "
+            "a 155-day pause to study one, and a Virginia judge upheld a county's "
+            "eminent-domain taking of a farmer's land for a water project residents fear "
+            "is really for a data center. Plus: the EPA's push to drop the federal "
+            "requirement that states take public comment before approving many air "
+            "permits, a Microsoft-tied New Jersey site caught running 45 generators with "
+            "no permit at all, and more than ten states start ripping up the tax breaks "
+            "they handed data centers."
+        ),
+        "body": """\
+Welcome back to the GridWatch AI Week in Review — our Sunday roundup of the
+most important data center stories from the past seven days, what they mean
+for communities, and what you can learn from each one.
+
+---
+
+### 1. Woodford County, Kentucky becomes the first county in the state to permanently ban data centers
+
+**What happened:** The Woodford County Fiscal Court voted unanimously on
+Tuesday, September 8 to ban data centers, along with landfills and
+large-scale battery storage systems, countywide, according to the
+[Kentucky Lantern](https://kentuckylantern.com/) and
+[WKYT](https://www.wkyt.com/). The fiscal court worked with the city
+councils of Versailles and Midway — the county's two incorporated cities —
+to pass matching ordinances, so the ban is not limited to unincorporated
+land the way many county-level actions are. Judge-Executive James Kay told
+the Lantern: "The future of Woodford County's economy is not industry and
+data centers. The future is farming." [WKYT](https://www.wkyt.com/) had
+reported the fiscal court's first move toward the ban back in June; Tuesday's
+vote made it final.
+
+**Why it matters:** This is a permanent zoning prohibition, not a pause —
+Kentucky's first. Most of the moratorium rows on our own tracker are
+time-limited by design, bought to write rules before an application arrives.
+Woodford County skipped that step and went straight to "not allowed here,"
+citing farmland preservation rather than any specific pending project.
+
+**What to learn — a county ban only holds if its cities pass one too:**
+A board of county commissioners or a fiscal court almost never has zoning
+authority inside an incorporated city sitting inside the county — that city
+has its own council and its own zoning map. If your county passes a
+countywide-sounding ban, ask directly whether it covers incorporated cities
+or only unincorporated land; if it's the latter, a developer can simply
+target land inside city limits instead. Woodford County closed that door by
+getting Versailles and Midway to act at the same time. See Kentucky's row on
+our [moratorium tracker](/moratoriums.html) and the
+[Kentucky state page](/states/kentucky.html).
+
+*Sources: [Kentucky Lantern, Sep 10](https://kentuckylantern.com/);
+[WKYT, Sep 9](https://www.wkyt.com/); [WEKU, Sep 11](https://www.weku.org/)*
+
+---
+
+### 2. Chatham County, Georgia pauses data centers 10 megawatts and up for 155 days — closing a loophole for repurposed warehouses
+
+**What happened:** The Chatham County Board of Commissioners voted Friday,
+September 11 to impose a 155-day moratorium on new data center development
+of 10 megawatts or larger in unincorporated parts of the county, and on
+converting existing warehouses or industrial buildings to data-center use,
+according to [The Current](https://thecurrentga.org/) and
+[WSAV-TV](https://www.wsav.com/). Commissioner Dean Kicklighter had proposed
+a full year; the county attorney recommended the shorter window instead. The
+pause is meant to give staff time to study the impact on public resources
+before any application is decided, and commissioners floated extending
+restrictions to smaller "micro" data centers later.
+
+**Why it matters:** Chatham is now the third Coastal Georgia government to
+act, after Savannah's own 155-day moratorium in late August (which we
+covered [two weeks ago](/blog/week-in-review-2026-08-30)) and pauses in
+Garden City and Bloomingdale — but those are separate city governments
+inside the same county, each with its own zoning map. Chatham's new
+ordinance only reaches the unincorporated county; land already inside
+Savannah, Garden City or Bloomingdale answers to that city's own rules, not
+this one.
+
+**What to learn — a size threshold and a conversion clause are both doing
+real work:** Writing the pause to cover "10 MW and up" keeps it from
+sweeping in a small server closet, but it also means anything proposed at
+9.9 MW falls outside it entirely — worth watching whether an applicant
+resizes a project to duck the line. The conversion clause matters just as
+much: without it, a developer could buy an existing warehouse already zoned
+for industrial use and skip site-plan review altogether. If your own
+county's moratorium doesn't name a size threshold or say anything about
+converted buildings, ask why not before you assume it covers everything.
+See our [Georgia state page](/states/georgia.html) for the rest of this
+year's coastal moratorium wave.
+
+*Sources: [The Current, Sep 11](https://thecurrentga.org/);
+[WSAV-TV, Sep 12](https://www.wsav.com/);
+[WTOC, Aug 28](https://www.wtoc.com/)*
+
+---
+
+### 3. A Virginia judge upholds a county's eminent-domain taking of a farmer's land for a water project residents call a data-center pipeline in disguise
+
+**What happened:** Caroline Circuit Court Judge Dennis Hupp ruled against
+farmer Cory Garrett's bid to invalidate Caroline County's 2024 taking of 11
+acres of his Tidewater Trail land for a planned water-intake and treatment
+facility on the Rappahannock River, according to the
+[Fredericksburg Free Press](https://www.fredericksburgfreepress.com/),
+which first reported the ruling September 3; the case drew renewed national
+coverage this week from [The Cool Down](https://www.thecooldown.com/) and
+[The Nerd Stash](https://thenerdstash.com/). Garrett's attorney argued the
+2024 taking was premature because the county had not yet secured its state
+withdrawal permits; Hupp disagreed, writing that "the construction and
+operation of a water intake and treatment facility supplying water to the
+general public is a public use." The county's original 2024 offer for the
+land was $78,400.
+
+**Why it matters:** The county's permit history is the part residents keep
+pointing to. Caroline's 2024 state withdrawal application originally sought
+13.9 million gallons a day and included language about "industrial
+cooling" — language the county removed before lowering the request to 9
+million gallons a day later that year, even though local zoning already
+bars data centers from using potable water for cooling. Virginia's DEQ
+approved the withdrawal permit in late 2025, and the Virginia Marine
+Resources Commission voted 8–0 in June 2026 to approve construction on the
+land already taken from Garrett. The Rappahannock Tribe is separately
+appealing DEQ's permit approval in a case a judge has allowed to proceed.
+
+**What to learn — read what got removed from a permit application, not just
+what's currently in it:** A county can drop a phrase like "industrial
+cooling" from a filing without changing the pipeline's route, capacity, or
+ultimate customers. If a public water project near you once mentioned an
+industrial use and later doesn't, ask your utility directly who the
+customers of that new capacity will actually be — the disclosure history is
+public record even after the wording changes. And once land has been taken
+under eminent domain for a declared "public use," courts have set a high bar
+for reversing it later; the fight to prevent a taking is almost always more
+winnable *before* it happens than after. See our breakdown of how these
+numbers work in
+[The Hidden Water Cost of Your AI Prompt](/blog/hidden-water-cost) and
+Virginia's entries on the [moratorium tracker](/moratoriums.html).
+
+*Sources: [Fredericksburg Free Press, Sep 3](https://www.fredericksburgfreepress.com/);
+[The Cool Down, Sep 11](https://www.thecooldown.com/);
+[The Nerd Stash, Sep 12](https://thenerdstash.com/)*
+
+---
+
+### 4. The EPA moves to drop the federal floor requiring public notice before many data-center generator permits
+
+**What happened:** [Capital B News](https://capitalbnews.org/) reported this
+week on an EPA proposal, published July 7 and now past its public comment
+period, that would eliminate the federal requirement in 40 CFR 51.161 that
+states give the public notice and at least 30 days to comment before
+approving many "minor source" air permits — the category that covers the
+diesel generators and gas turbines used as backup and behind-the-meter power
+at data centers, along with landfills, asphalt plants and factories,
+according to [Federal News Network](https://federalnewsnetwork.com/), which
+first reported it in early September. The comment period on the proposal
+closed August 21; nearly 200 advocacy groups and more than a dozen states
+have formally objected. EPA is expected to finalize the rule next year.
+
+**Why it matters:** Data centers are usually permitted as "minor" sources
+under the Clean Air Act because their individual generators fall below
+major-source emissions thresholds, even when a site runs dozens of them at
+once. That makes this specific federal requirement — not the more familiar
+major-source review most people picture — the actual public comment window
+most data-center generator permits go through today. Cutting the federal
+floor wouldn't ban states from keeping their own notice-and-comment rules,
+but it would let states that don't have an independent statutory requirement
+drop the practice entirely.
+
+**What to learn — check whether your state's comment right survives on its
+own, not just because of federal law:** Some states have their own
+public-participation statutes for air permits that exist independently of
+the federal minimum EPA is proposing to remove; others rely entirely on the
+federal requirement and would lose the practice the day it disappears. Ask
+your state environmental agency, in writing, whether its own law requires
+public notice and comment for minor-source permits regardless of what EPA
+does. The story right below is exactly what this comment window is supposed
+to catch.
+
+*Sources: [Capital B News, Sep 10](https://capitalbnews.org/);
+[Federal News Network, Sep 4](https://federalnewsnetwork.com/);
+[Salt Lake Tribune, Aug 26](https://www.sltrib.com/)*
+
+---
+
+### 5. A Microsoft-tied New Jersey data center was running 45 generators with no air permit at all — the thing we flagged two weeks ago
+
+**What happened:** A [Floodlight](https://floodlightnews.org/) investigation
+published August 27 used thermal drone footage to show the DataOne USA data
+center under construction in Vineland, New Jersey running at least 45 of
+its 62 on-site generators, even though the New Jersey Department of
+Environmental Protection says it has issued no air permits — and has none
+under review — for generators at the site. NJDEP observed the generators
+during a July 29 site inspection and had not made a compliance
+determination as of this week's renewed coverage from
+[Community News](https://communitynews.org/) and
+[Latitude Media](https://www.latitudemedia.com/). The site is being built
+for DataOne to supply Nebius, which holds a roughly \\$17 billion, five-year
+contract to provide Microsoft with GPU capacity there — the same project
+on our own [Vineland community page](/communities/vineland-nj.html) — and
+sits about a mile from two schools. Former EPA air enforcement chief Bruce
+Buckheit told Floodlight that federal and state law require a final permit
+before generators are even brought onsite, let alone switched on, and that
+"one might be seeing administrative enforcement action" soon.
+
+**Why it matters:** We flagged this exact site as one to watch in our
+[August 30 roundup](/blog/week-in-review-2026-08-30), when the allegations
+first surfaced. This week's reporting confirms the specifics: not an
+incomplete permit or a paperwork lag, but generators already running with no
+application even filed. It's a live example of what the EPA's proposed
+comment-period rollback in the story above is actually deciding the fate of.
+
+**What to learn — equipment can arrive and start running before the permit
+paperwork does; ask directly, don't wait for a notice:** If a data center
+under construction near you already has visible generators or turbines on
+site, you don't need to wait for a public notice to find out whether they're
+permitted — call or email your state environmental agency's air permitting
+office and ask whether an air permit has been issued or applied for at that
+specific address. That question is public record whether or not a comment
+period is open.
+
+*Sources: [Floodlight, Aug 27](https://floodlightnews.org/);
+[Latitude Media, Aug 31](https://www.latitudemedia.com/);
+[Community News, Sep 12](https://communitynews.org/)*
+
+---
+
+### 6. More than ten states start ripping up the tax breaks they gave data centers
+
+**What happened:** The [Wall Street Journal](https://www.wsj.com/) reported
+this week that more than ten states have paused, frozen or moved to cancel
+data-center tax exemptions they previously granted, as summarized by
+[Daily Signal](https://www.dailysignal.com/) and [Quartz](https://qz.com/).
+Texas Gov. Greg Abbott and
+Pennsylvania Gov. Josh Shapiro have each taken steps to pause or restrict new
+development; legislators or governors in Illinois, New Jersey, Washington
+and others have moved to curb their own incentives; and Ohio Gov. Mike
+DeWine froze new applications outright, with some state legislators pushing
+to repeal the tax break entirely and reopen existing agreements with Amazon,
+Meta and Google. Ohio's exemption cost the state more than \\$1.5 billion in
+2025 — over ten times its original estimate, per the Journal's reporting.
+
+**Why it matters:** These exemptions were sold to legislatures as a
+low-cost way to attract investment; Ohio's actual cost coming in ten times
+over the original estimate is the number driving most of this reversal
+nationally, not water or noise complaints alone. Reopening a benefit already
+granted to a built facility is a much harder legal fight than freezing new
+applications — most of the actions reported this week are the latter, not
+the former.
+
+**What to learn — ask whether your state's data-center tax break has a
+clawback, and whether it's ever been used:** A tax exemption granted by
+statute or by a negotiated development agreement usually specifies, in
+writing, whether the state can revoke or recapture it and under what
+conditions — job-count minimums, investment thresholds, a sunset date. Pull
+that document (or ask your state's economic development agency for it)
+before assuming a deal already signed in your community can simply be
+undone by statute — that is exactly the harder fight some Ohio legislators
+are now attempting, distinct from the new-application freezes most other
+states have managed so far. Our
+[model CBA clause library](/cba-clauses.html) includes language communities
+have used to write clawbacks into the agreement from the start, rather than
+fighting to add one after the fact.
+
+*Sources: [Wall Street Journal, Sep 9](https://www.wsj.com/);
+[Daily Signal, Sep 9](https://www.dailysignal.com/);
+[Quartz, Sep 9](https://qz.com/)*
+
+---
+
+### What to watch next week
+
+- **Vineland, NJ** — whether NJDEP issues a compliance determination or
+  enforcement action against DataOne over the unpermitted generators
+- **EPA's minor-source permit rule** — any signal on when the agency moves
+  toward finalizing it, given opposition from nearly 200 groups and a dozen-
+  plus states
+- **Caroline County, VA** — whether Cory Garrett appeals Judge Hupp's ruling,
+  and the status of the Rappahannock Tribe's separate appeal of the DEQ
+  withdrawal permit
+- **Chatham County, GA** — what the 155-day study finds, and whether
+  commissioners extend restrictions to smaller "micro" data centers
+- **Ohio** — whether legislators succeed in reopening tax agreements already
+  signed with Amazon, Meta and Google, not just freezing new applications
+
+---
+
+*Every Sunday we cover the week's most important data center stories,
+explain the underlying concepts, and point you to the tools you need. Know
+a story we should cover? Reach out at hello@aigridwatch.com or sign up for
+the newsletter below.*
+""",
+    },
 ]
