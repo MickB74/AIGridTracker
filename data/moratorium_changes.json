@@ -3617,5 +3617,12 @@
     "locality": "Plainfield, NJ",
     "kind": "status_changed",
     "detail": "Proposed \u2192 Enacted"
+  },
+  {
+    "date": "2026-09-16",
+    "id": "scott-county-ky",
+    "locality": "Scott County, KY",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
   }
 ]

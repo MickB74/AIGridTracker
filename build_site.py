@@ -853,6 +853,9 @@ NAV_GROUPS = [
         ("Senate races 2026", "senate-races.html"),
         ("All 100 senators", "senators.html"),
         ("House races 2026", "house-races.html"),
+        # ("Legislation tracker", "legislation.html"),  # unlinked until
+        # data/legislation_cache.json exists: run scripts/fetch_legislation.py
+        # with LEGISCAN_API_KEY, else the page renders a placeholder.
         ("Community playbook", "community-value.html"),
     ]),
     ("The facts", [
@@ -13403,6 +13406,280 @@ function snDownload(){{
 </script>"""
 
 
+# The legislation tracker publishes only once scripts/fetch_legislation.py
+# (LEGISCAN_API_KEY) has written its cache. Without it build_legislation()
+# renders a "being populated" placeholder, so main() skips the page and the
+# sitemap entry rather than publishing and indexing an empty tracker.
+_LEGISLATION_READY = (ROOT / "data" / "legislation_cache.json").exists()
+
+
+def build_legislation():
+    """AI & data-center legislation tracker powered by LegiScan."""
+    from src.legislation import legislation_df, legislation_summary, PROGRESS_ORDER
+
+    df = legislation_df()
+    summary = legislation_summary()
+    total = summary.get("total_bills", 0)
+    n_states = summary.get("states", 0)
+    by_cat = summary.get("by_category", {})
+    by_progress = summary.get("by_progress", {})
+
+    if df.empty:
+        body = """
+<header>
+  <div class="kicker">Tracker</div>
+  <h1>AI &amp; Data Center Legislation</h1>
+  <p class="sub">State-level data center and AI bills across all 50 states.</p>
+</header>
+<section>
+  <p class="note info">The legislation tracker is being populated.
+  Check back soon for bills from state legislatures across the country.</p>
+</section>"""
+        return page("AI & Data Center Legislation Tracker",
+                     "Track data center and AI bills in all 50 state legislatures.",
+                     body, "legislation.html", modified=BUILD_DATE)
+
+    # Stats bar
+    dc_count = by_cat.get("Data Centers", 0)
+    ai_count = by_cat.get("AI Regulation", 0)
+    privacy_count = by_cat.get("Privacy", 0)
+    deepfake_count = by_cat.get("Deepfakes & Synthetic Media", 0)
+    healthcare_count = by_cat.get("Healthcare", 0)
+    energy_count = by_cat.get("Energy & Grid", 0)
+
+    signed = by_progress.get("Signed/Enacted", 0)
+
+    # Category chips for the filter
+    cat_order = ["Data Centers", "AI Regulation", "Deepfakes & Synthetic Media",
+                 "Privacy", "Energy & Grid", "Healthcare", "Education",
+                 "Employment & Labor", "Tax & Incentives", "Water", "Other"]
+    cats_present = [c for c in cat_order if by_cat.get(c, 0) > 0]
+    cat_options = '<option value="">All categories</option>' + "".join(
+        f'<option value="{esc(c)}">{esc(c)} ({by_cat[c]})</option>'
+        for c in cats_present)
+
+    # State filter
+    states_present = sorted(df["state"].unique())
+    _abbrev_to_name = dict(zip(STATE_PUCS_DF["abbrev"], STATE_PUCS_DF["state"]))
+    state_options = '<option value="">All states</option>' + "".join(
+        f'<option value="{esc(s)}">{esc(_abbrev_to_name.get(s, s))}</option>'
+        for s in sorted(states_present, key=lambda s: _abbrev_to_name.get(s, s)))
+
+    # Progress filter
+    progress_order = ["Prefiled", "Introduced", "Passed Committee",
+                      "Passed One Chamber", "Passed Both Chambers",
+                      "Signed/Enacted", "Vetoed"]
+    progress_present = [p for p in progress_order if by_progress.get(p, 0) > 0]
+    progress_options = '<option value="">All stages</option>' + "".join(
+        f'<option value="{esc(p)}">{esc(p)} ({by_progress[p]})</option>'
+        for p in progress_present)
+
+    # Build table rows — same pattern as moratoriums: first N in HTML, rest in JSON
+    LEG_PAGE = 25
+
+    def _progress_badge(stage):
+        colors = {
+            "Prefiled": "#999",
+            "Introduced": "#4361ee",
+            "Passed Committee": "#3a86a8",
+            "Passed One Chamber": "#f77f00",
+            "Passed Both Chambers": "#e36414",
+            "Signed/Enacted": "#2a9d4e",
+            "Vetoed": "#d62828",
+        }
+        c = colors.get(stage, "#999")
+        return f'<span class="badge" style="background:{c};color:#fff">{esc(stage)}</span>'
+
+    def _cat_badges(cats):
+        if not isinstance(cats, list):
+            return ""
+        return " ".join(
+            f'<span class="badge outline">{esc(c)}</span>' for c in cats[:2])
+
+    def _sponsor_summary(sponsors):
+        if not sponsors or not isinstance(sponsors, list):
+            return ""
+        first = sponsors[0]
+        name = first.get("name", "")
+        party = first.get("party", "")
+        extra = f" +{len(sponsors)-1}" if len(sponsors) > 1 else ""
+        party_tag = f' <span class="muted">({party})</span>' if party else ""
+        return f"{esc(name)}{party_tag}{extra}"
+
+    _table_rows = []
+    for _, b in df.iterrows():
+        bid = str(b.get("bill_id", ""))
+        state = str(b.get("state", ""))
+        cats = b.get("categories", [])
+        primary_cat = b.get("primary_category", "Other")
+        progress = str(b.get("progress_stage", "Introduced"))
+        state_link = b.get("state_link", "")
+        legiscan_url = b.get("legiscan_url", "")
+
+        bill_link = state_link or legiscan_url
+        bill_num = esc(str(b.get("bill_number", "")))
+        if bill_link:
+            bill_ref = f'<a href="{esc(bill_link)}" target="_blank" rel="noopener">{bill_num}</a>'
+        else:
+            bill_ref = bill_num
+
+        row_html = (
+            f"<td>{esc(state)}</td>"
+            f"<td>{bill_ref}</td>"
+            f"<td>{esc(str(b.get('title', ''))[:120])}</td>"
+            f"<td>{_cat_badges(cats)}</td>"
+            f"<td>{_progress_badge(progress)}</td>"
+            f"<td>{esc(str(b.get('status_date', '')))}</td>"
+            f"<td>{_sponsor_summary(b.get('sponsors'))}</td>")
+
+        _table_rows.append({
+            "id": bid, "state": state, "category": primary_cat,
+            "progress": progress, "html": row_html,
+        })
+
+    (WEB / "data").mkdir(parents=True, exist_ok=True)
+    (WEB / "data" / "legislation-table.json").write_text(
+        json.dumps({"count": len(_table_rows), "rows": _table_rows},
+                   ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8")
+
+    rows_html = "\n".join(
+        f'<tr id="b{esc(r["id"])}" data-state="{esc(r["state"])}" '
+        f'data-category="{esc(r["category"])}" '
+        f'data-progress="{esc(r["progress"])}">{r["html"]}</tr>'
+        for r in _table_rows[:LEG_PAGE])
+
+    body = f"""
+<header>
+  <div class="kicker">Tracker</div>
+  <h1>AI &amp; Data Center Legislation</h1>
+  <p class="sub">Data center and AI-related bills across all 50 state legislatures.
+  Data from <a href="https://legiscan.com" target="_blank" rel="noopener">LegiScan</a>.</p>
+</header>
+
+<section>
+  <div class="stats">
+    <div class="stat"><b>{total:,}</b><span>bills tracked</span></div>
+    <div class="stat"><b>{n_states}</b><span>states</span></div>
+    <div class="stat"><b>{dc_count}</b><span>data center bills</span></div>
+    <div class="stat"><b>{ai_count}</b><span>AI regulation bills</span></div>
+    <div class="stat"><b>{signed}</b><span>signed / enacted</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>All bills</h2>
+  <div class="filters" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+    <select id="legStateF" onchange="legFilter()" aria-label="Filter by state">{state_options}</select>
+    <select id="legCatF" onchange="legFilter()" aria-label="Filter by category">{cat_options}</select>
+    <select id="legProgressF" onchange="legFilter()" aria-label="Filter by progress">{progress_options}</select>
+    <input id="legSearch" type="search" placeholder="Search bills…"
+           oninput="legFilter()" aria-label="Search bills"
+           style="flex:1;min-width:180px">
+  </div>
+  <p id="legCount" class="muted" style="margin-bottom:8px">{total:,} bills</p>
+  <div style="overflow-x:auto">
+    <table class="data-table" id="legTable">
+      <thead><tr>
+        <th>State</th><th>Bill</th><th>Title</th><th>Category</th>
+        <th>Progress</th><th>Updated</th><th>Sponsor</th>
+      </tr></thead>
+      <tbody id="legBody">{rows_html}</tbody>
+    </table>
+  </div>
+  <div id="legPager" style="text-align:center;padding:16px 0">
+    <button id="legMore" class="btn" onclick="legLoadAll()"
+            style="display:{'inline-block' if len(_table_rows) > LEG_PAGE else 'none'}">
+      Show all {total:,} bills</button>
+    <span id="legShowing" class="muted"
+          style="display:{'inline' if len(_table_rows) > LEG_PAGE else 'none'}">
+      Showing {min(LEG_PAGE, len(_table_rows))} of {total:,}</span>
+  </div>
+
+  <p class="src" style="margin-top:8px">
+    Source: <a href="https://legiscan.com" target="_blank" rel="noopener">LegiScan</a>.
+    Bill text and vote records link to each state legislature's official site.
+    Updated {esc(summary.get('last_updated', 'periodically'))}.</p>
+</section>
+
+<section>
+  <h2>About this tracker</h2>
+  <p>This page tracks state-level bills related to data centers and artificial
+  intelligence across all 50 states and D.C. Bills are identified by searching
+  LegiScan's full-text index for data-center and AI terms, then classified into
+  categories based on their content.</p>
+  <p><strong>What's included:</strong> bills that mention data centers, AI, machine
+  learning, deepfakes, or related terms in their title or text. Categories are
+  assigned automatically and a bill may appear in more than one.</p>
+  <p><strong>What's not included:</strong> federal legislation, ballot measures, and
+  executive orders. Municipal and county ordinances (like moratoriums) are tracked
+  on our <a href="moratoriums.html">moratorium tracker</a> instead.</p>
+  <p>See also: <a href="moratoriums.html">Moratorium tracker</a> ·
+  <a href="senate-races.html">Senate races 2026</a> ·
+  <a href="house-races.html">House races 2026</a></p>
+</section>
+
+<script>
+var legAllRows=null;
+function legLoadAll(){{
+  if(legAllRows)return legApply();
+  fetch('data/legislation-table.json')
+    .then(r=>r.json()).then(d=>{{legAllRows=d.rows;legApply()}})
+    .catch(()=>{{document.getElementById('legMore').textContent='Load failed'}});
+}}
+function legFilter(){{
+  if(legAllRows)legApply();
+  else legApplyStatic();
+}}
+function legApplyStatic(){{
+  var st=document.getElementById('legStateF').value;
+  var cat=document.getElementById('legCatF').value;
+  var prog=document.getElementById('legProgressF').value;
+  var q=document.getElementById('legSearch').value.toLowerCase();
+  var rows=document.querySelectorAll('#legBody tr');
+  var n=0;
+  rows.forEach(function(r){{
+    var show=true;
+    if(st&&r.dataset.state!==st)show=false;
+    if(cat&&r.dataset.category!==cat)show=false;
+    if(prog&&r.dataset.progress!==prog)show=false;
+    if(q&&r.textContent.toLowerCase().indexOf(q)<0)show=false;
+    r.hidden=!show;
+    if(show)n++;
+  }});
+  document.getElementById('legCount').textContent=n+' bill'+(n!==1?'s':'');
+  if(!legAllRows&&(st||cat||prog||q))legLoadAll();
+}}
+function legApply(){{
+  if(!legAllRows)return;
+  var st=document.getElementById('legStateF').value;
+  var cat=document.getElementById('legCatF').value;
+  var prog=document.getElementById('legProgressF').value;
+  var q=document.getElementById('legSearch').value.toLowerCase();
+  var filtered=legAllRows.filter(function(r){{
+    if(st&&r.state!==st)return false;
+    if(cat&&r.category!==cat)return false;
+    if(prog&&r.progress!==prog)return false;
+    if(q){{var t=document.createElement('tr');t.innerHTML=r.html;
+      if(t.textContent.toLowerCase().indexOf(q)<0)return false}}
+    return true;
+  }});
+  var body=document.getElementById('legBody');
+  body.innerHTML=filtered.map(function(r){{
+    return '<tr id="b'+r.id+'" data-state="'+r.state+'" data-category="'+r.category+'" data-progress="'+r.progress+'">'+r.html+'</tr>';
+  }}).join('');
+  document.getElementById('legCount').textContent=filtered.length+' bill'+(filtered.length!==1?'s':'');
+  document.getElementById('legMore').style.display='none';
+  document.getElementById('legShowing').style.display='none';
+}}
+</script>"""
+
+    return page("AI & Data Center Legislation Tracker",
+                "Track data center and AI bills in all 50 state legislatures — "
+                f"{total:,} bills across {n_states} states.",
+                body, "legislation.html", modified=BUILD_DATE)
+
+
 def build_senators():
     """All 100 sitting U.S. senators and what each has done on data centers."""
     import src.senators as sn
@@ -16345,6 +16622,8 @@ def main():
     (WEB / "senate-races.html").write_text(build_senate_races(), encoding="utf-8")
     (WEB / "senators.html").write_text(build_senators(), encoding="utf-8")
     (WEB / "house-races.html").write_text(build_house_races(), encoding="utf-8")
+    if _LEGISLATION_READY:
+        (WEB / "legislation.html").write_text(build_legislation(), encoding="utf-8")
     (WEB / "community-value.html").write_text(build_community_value(), encoding="utf-8")
     (WEB / "case-studies.html").write_text(build_case_studies(), encoding="utf-8")
     (WEB / "hearing-questions.html").write_text(

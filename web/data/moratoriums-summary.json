@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-09-13",
+  "generated": "2026-09-16",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 853,
   "states": 49,
-  "enacted": 692,
+  "enacted": 691,
   "proposed": 81,
   "official_sourced": 64,
   "by_state": {
@@ -121,7 +121,7 @@
     },
     "KY": {
       "total": 29,
-      "enacted": 29,
+      "enacted": 28,
       "proposed": 0
     },
     "NJ": {
@@ -259,20 +259,23 @@
     "30": [
       "bangor-me",
       "augusta-ga",
+      "vienna-township-trumbull-co-oh",
       "front-royal-va",
       "tulare-county-ca",
+      "cleveland-oh",
       "pierce-township-oh",
       "tallmadge-oh",
+      "indio-ca",
       "palm-springs-ca",
       "augusta-richmond-county-ga",
       "roswell-ga",
       "waterford-township-mi",
       "calaveras-county-ca",
       "escondido-ca",
+      "mendocino-county-ca",
       "morgan-hill-ca",
       "lake-elsinore-ca",
-      "newton-county-ga",
-      "scott-county-ky"
+      "newton-county-ga"
     ],
     "60": [
       "lysander-onondaga-co-ny",
@@ -309,7 +312,6 @@
       "smithfield-township-pa",
       "west-whiteland-township-pa",
       "dickinson-county-ia",
-      "scott-county-ky",
       "plainfield-il",
       "lowndes-county-al"
     ],
@@ -324,8 +326,10 @@
       "augusta-ga",
       "vienna-township-trumbull-co-oh",
       "charlotte-nc",
+      "cumberland-county-nc",
       "lavon-tx",
       "marshalltown-ia",
+      "starke-county-in",
       "johnson-city-tn",
       "springfield-mo",
       "minneapolis-mn",
@@ -354,8 +358,10 @@
       "camden-county-ga",
       "roswell-ga",
       "riley-county-ks",
+      "brookville-pa",
       "center-township-pa",
       "gorham-me",
+      "lycoming-county-pa",
       "hart-mi",
       "waterford-township-mi",
       "calaveras-county-ca",
@@ -373,13 +379,14 @@
       "smithfield-township-pa",
       "west-whiteland-township-pa",
       "dickinson-county-ia",
-      "scott-county-ky",
+      "spokane-county-wa",
       "plainfield-il",
       "lowndes-county-al",
       "el-dorado-ks",
       "brunswick-me",
       "scarborough-me",
       "westbrook-me",
+      "milford-ut",
       "barnes-county-nd"
     ]
   }
