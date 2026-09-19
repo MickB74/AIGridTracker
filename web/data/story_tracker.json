@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 7218,
+  "count": 7229,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -68206,7 +68206,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-09-14",
-      "last_seen": "2026-09-17"
+      "last_seen": "2026-09-19"
     },
     {
       "title": "Data center spills diesel fuel into N.J. river tributary",
@@ -69350,7 +69350,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-14",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-19"
     },
     {
       "title": "Abbott orders crackdown on data center water usage compliance",
@@ -70494,7 +70494,7 @@
       "locality": "El Paso",
       "state": "TX",
       "first_seen": "2026-09-15",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-19"
     },
     {
       "title": "Governor Abbott Directs TWDB To Penalize Data Center Reporting Failures",
@@ -70527,7 +70527,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-14",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-19"
     },
     {
       "title": "Cass County leaders study data center impacts at public forum",
@@ -71044,7 +71044,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-14",
-      "last_seen": "2026-09-16"
+      "last_seen": "2026-09-19"
     },
     {
       "title": "Texas company breaks ground on Shippingport data center",
@@ -71088,7 +71088,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2024-01-25",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-19"
     },
     {
       "title": "Some of the voices behind Loudoun County’s data center debate",
@@ -72276,7 +72276,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-15",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-19"
     },
     {
       "title": "What can Charlotte actually control when it comes to data centers?",
@@ -74289,7 +74289,7 @@
       "locality": "Southeast",
       "state": "NY",
       "first_seen": "2026-09-16",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-19"
     },
     {
       "title": "AI Data Centers Are Driving a Surge in “Forever Chemicals,” Research Finds",
@@ -75378,7 +75378,7 @@
       "locality": "Lawrence",
       "state": "KS",
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-19"
     },
     {
       "title": "Oakland Weighs Data Center Moratorium as Opposition Mounts",
@@ -76357,7 +76357,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17"
+      "last_seen": "2026-09-19"
     },
     {
       "title": "Paxton says his office is investigating proposed data center on deeded parkland in Taylor",
@@ -76544,7 +76544,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-19"
     },
     {
       "title": "Will Lawrence rolls out plan for regulating Big Tech, data centers in Michigan and beyond",
@@ -77468,7 +77468,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-19"
     },
     {
       "title": "Ken Paxton Rails Against AI Data Centers. His Portfolio Says Otherwise.",
@@ -79404,6 +79404,127 @@
       "locality": "Austin",
       "state": "TX",
       "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
+    },
+    {
+      "title": "House Passes Bipartisan Legislation on Data Center Rate Hikes",
+      "outlet": "TD World",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRnhPVEdBU2NGek5XQkgwb2hTMFZWLUZoeldaS19DMjlqd29iVUdtamhEbG81WjluQTk0YVhaVjBIOEJvWjhfTVkzdFlLUDdVNDltemRFaWF3cl8zWk4wT3JieVB2VVJXQnByTml1ai1WSjJYNGtwN2RFVE0yQXZmbXRWbUVYUDdJUFR2al9nWFdoV3dLU0VPcVhoWUxMTGt0UngtU1BIaXgzMFlrdFE?oc=5",
+      "published": "Fri, 18 Sep 2026 23:58:52 GMT",
+      "published_iso": "2026-09-18T23:58:52+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-19"
+    },
+    {
+      "title": "N.J. bill would freeze AI data center construction and approvals for 6 months",
+      "outlet": "Yahoo",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWHB3MnhZaG9sU3FXSE4tWTR3LVVHSnFQWFlORXVGbFNfMTFjSURMRlMwUTlRdW03dGtoakRUQlBKMWNmRXpuMU1NTUFHeG5zSUdhYzl1VldsRkwtLWJBZ3Q0V1M4aUUtb3hQSGRXcWExWHZZVmFzVDdKRUxzZ01WcTZWbFM?oc=5",
+      "published": "Wed, 16 Sep 2026 23:33:32 GMT",
+      "published_iso": "2026-09-16T23:33:32+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-19"
+    },
+    {
+      "title": "Hunterdon County to Host Data Center Breakfast Talk for Municipal Officials",
+      "outlet": "TAPinto",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPZlhmdk1aUnRneE01cmx6VFluUTRpQ0FoX0ZjZFphQm8wbHVsVkZ4LXZmZzYxbUY0dFVpVmNBdm9JQkZZXzVQa0VyMTZJd0tSTW9femNJUlFvZ3ZiVTVnejlENGtVdlRkWTNhVE9qeDBTbktrYVNtSUVTdVRsM2FmeVlRSEJuX1dtWUNVMXNYMEVNU2JfUzVhYnE4TzNJRDhpQmNxMnZTLVNHTk1ublpCcl8xajAtY0VDX0FEQk4ybjVJX3dqOVNRZ2R3?oc=5",
+      "published": "Sat, 19 Sep 2026 14:26:50 GMT",
+      "published_iso": "2026-09-19T14:26:50+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
+    },
+    {
+      "title": "Power & Politics: Voter registration hearing; New poll on NJ's 7th Congressional District; ICE accused of using Roxbury warehouse",
+      "outlet": "News12 | New Jersey",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQekExamZDUldXMi1EUTFEZE12YWNfM19ZRHI3RU8zSk9WcVJ2eC1Td2dzU3MzVnFjUUtBdnRSVU5DOWN6bF9NYVpZWWhZTE1xY1M5djQ3dFNPQkVmcnlGalIzYWlBNDZBd2dsWGp2QWhJQXlOelUtTDlMN0toOWE4MDVHS2VxaGhoVlVjci1USEZrSFJoaHFQVGszZWR0UENBdGZqTzFxMThsZFZsOEE4RUxRNE0zdlAtYXR0WWxEc29teVc0dU9KSGcyQUlUQ2J5TjZfV1ptcUlROVBsSnlTZmlZYzZCeEE?oc=5",
+      "published": "Sat, 19 Sep 2026 20:30:11 GMT",
+      "published_iso": "2026-09-19T20:30:11+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
+    },
+    {
+      "title": "Oops: Dems Warn AI Electricity Price Jump Coming, Then GA Electric Customers Learn Bills Will Drop, Thanks to Data Centers",
+      "outlet": "westernjournal.com",
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPOW5GUkxYTmZCOVhhLW5CdWltWHpaWXRTbnNmN0tENXJsUE5sNGk4dWo0Q0ZwejgxOTdsUEp2cERQcWRna2l4Vzc4LUZUZ0k3S1lrUC1EZ3NWaUZWalFscmdqWmJYaW55bWhfOGFDNmFvQTNIUXZkZ2k5UGlEV1NwUmZQVkcyLXJoUmV4M1k5U2ZLdE8zc2VoMnhSbmZmck45UmVmWHBoU2d0THBpazd0eTJDSUIwRFd5aDd1RUh2V3YwN1BhQjJQSHRxUS04S1BHejcyVXBWdkRNWVE?oc=5",
+      "published": "Sat, 19 Sep 2026 18:38:00 GMT",
+      "published_iso": "2026-09-19T18:38:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
+    },
+    {
+      "title": "Gov. Spanberger reveals Data Center Accountability Framework",
+      "outlet": "WAVY.com",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNRFUydi1fdEJMUEN5V0J5WjBtT0V3R1lkYUtjTWRNNWpjbFFZdlVlZWM2dkRsbWtFajV6M1BkRlNVb2tVNEw3WFhPMUE3Sm5QZUNmdW5HUTJ6VXI0aEI1WXBfUHhWN0xMWk9Tdzh0cFdEeFpjMnl6QXgycmhCQ2lmVFlwWVdyWXk4SUxiTEItbzY2OG1nbjZIZVVDZl9FLTM10gGgAUFVX3lxTE1EVTJ2LV90QkxQQ3lXQnlaMG1PRXdHWWRhS2NNZE01amNsUVl2VWVlYzZ2RGxta0VqNXozUGRGU1Vva1U0TDdYWE8xQTdKblBlQ2Z1bkdRMnpVcjRoQjVZcF9QeFY3TExaT1N3OHRwV0R4WmMyeXpBeDJyaEJDaWZUWXBZV3JZeThJTGJMQi1vNjY4bWduNkhlVUNmX0UtMzU?oc=5",
+      "published": "Sat, 19 Sep 2026 15:31:14 GMT",
+      "published_iso": "2026-09-19T15:31:14+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
+    },
+    {
+      "title": "NEW REPORT: “Texans Say Their Concerns Over Rick Jackson’s Data Center Project Are Being Ignored”",
+      "outlet": "Democratic Party of Georgia",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOOTBtQ3ZNZlJhY1k4aUhUNXJIMGFnQmJVWW81UnlhRVhlRU96ZU1fN1pYWFEwdVV5VC1oOXV1S1p5VFFHZUtaUmFIMEhPMFdFWmVuNXVOZWFiYlB1VUNaLWEyN05nU2RjNU11X0dFY3UyM0J5NGNnOENCeVJ2cjk5eXd5cDJBOTZrQTVxNEhqbVlJQVk1b0dWblJBYUEwUG5qSWxFejFBcnJoc2lBZHh1UHZPQnhLUmN2ZTBhVGJQRQ?oc=5",
+      "published": "Sat, 19 Sep 2026 04:39:10 GMT",
+      "published_iso": "2026-09-19T04:39:10+00:00",
+      "locality": "Jackson",
+      "state": "MS",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
+    },
+    {
+      "title": "CleanSpark seeks $2.23 billion in bonds for Meta-linked AI data center",
+      "outlet": "Crypto Briefing",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBSU0lpdmdpZVRvMVNnRy0wamdPQkNYWFk4NmhoWU1lYjdvSFpvaU9Ba0F4ZUthU3g4UHBCdmU0SXdmS0x2Rnhyc0NnUDliaElrOGFXd1pSdTBYR0lUMlM4RHJSLVk3a3AyMjd5Wm1xWW5aczlIZUNn?oc=5",
+      "published": "Thu, 17 Sep 2026 17:40:24 GMT",
+      "published_iso": "2026-09-17T17:40:24+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-19"
+    },
+    {
+      "title": "Soluna finishes the 83 MW Kati 1 data center in Texas, where renewable power is built into the computing site from day one",
+      "outlet": "Energies Media",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9lNzd5cmJsRTNpU3U3MVZxSEZ1TmYyRHRnTGVsZWdrVzNzT19WelVaajQ0YzhUbTI0QVZEekhiQ2R1Q1hWVW5oVWpXaFJVM25CbWdZNkQ2eGM0X2ZaSkphVzlVcGRfMUVOM1BmMUw5N0NxZEJMSDVPWHBoOXBmS0U?oc=5",
+      "published": "Fri, 18 Sep 2026 14:55:17 GMT",
+      "published_iso": "2026-09-18T14:55:17+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-19"
+    },
+    {
+      "title": "Police investigate pursuit turned officer-involved shooting in Winamac",
+      "outlet": "starcitytv.com",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPNktRRDBHRUNyVnhERHhBMFZYU01seERTUkczbmFpcUxaVkJkTnZQOXN1Mk12M3ZDT2hFZkRHZlc2RHhyMk5ERExKV2I3b05YM21OaXk4cFBiazgwendZZ2JMSVl3YlJTOExoZXZKVU52QVBhU2tnUEl0b1pRME9JN1NCRDVOQzlQX0RlUkJtX2hidXhlMmVubTFTYXVnZlJvQTFXdHpWdnJZUi1EWk5TcTVnaHV3RUcyQW9keFFkYk5lWFRYTXJ0YUdOMS1oM1daYlVYd0VFQ0Q5TE9WTjlwV3ZsUGJzdlNCQjFaekoxUQ?oc=5",
+      "published": "Thu, 17 Sep 2026 13:39:00 GMT",
+      "published_iso": "2026-09-17T13:39:00+00:00",
+      "locality": "Pulaski County",
+      "state": "IN",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-19"
+    },
+    {
+      "title": "Patricia L. Perry 84, of Akron, Indiana",
+      "outlet": "giant.fm",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOVGg0N2stc19oYkc1ZEhnSzFERVEtbGdTbHo0VHBBeDFQZS1jbW5LV2o5QXJXYnV2bkVvVFZXZmFGN1dMdVZGSUlxVlA0NjdIMjM2RXpqVHZFMFdKRTBvanA0WklqOXc0Q1dUeVR5ZDlzUUFSQXlGMHducVU4QndKbWFFRzRKNldCN3JGNjN6UGxqbWx1?oc=5",
+      "published": "Mon, 23 Mar 2026 07:00:00 GMT",
+      "published_iso": "2026-03-23T07:00:00+00:00",
+      "locality": "Fulton County",
+      "state": "IN",
+      "first_seen": "2026-03-23",
       "last_seen": "2026-09-19"
     }
   ]
