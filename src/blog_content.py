@@ -72,6 +72,167 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "loudoun-pause-vote-2026",
+        "art": "moratorium",
+        "section": "stories",
+        "title": "Loudoun County Did Not Pause Data Centers. It Voted to Draft a Pause.",
+        "seo_title": "Loudoun data center pause: what the 7-1-1 vote did",
+        "date": _dt.date(2026, 9, 20),
+        "author": "GridWatch AI",
+        "tags": ["Virginia", "Loudoun County", "moratoriums", "zoning", "data centers", "Amazon"],
+        "summary": "The world's largest data center market voted 7-1-1 on September 15 to direct staff to draft a twelve-month pause. It did not enact one, the formal vote is in October, and the county attorney's memo says a true moratorium is not legal in Virginia at all. Here is the language that survives a county attorney, and the application type no pause can touch.",
+        "body": """On the night of Tuesday, September 15, the Loudoun County Board of Supervisors
+took a 7-1-1 vote on data centers. By Wednesday morning the headlines read
+"Loudoun County votes to pause new data center applications," "Loudoun County
+board pauses data center applications," and "Data center hot spot Loudoun
+County puts pause on new developments for one year."
+
+None of those is quite what happened. The gap between them and the record
+matters, because Loudoun is the county every other county cites. If you stand
+up at your own hearing in October and say the world's largest data center
+market has paused data centers, someone on the dais with a county attorney
+next to them is going to correct you.
+
+Here is what the board actually did.
+
+## The vote was to draft a pause, not to start one
+
+The motion directed county staff to prepare a resolution for a temporary
+pause. It did not enact one. The [Loudoun
+Times-Mirror](https://www.loudountimes.com/news/business_and_economy/board-of-supervisors-effectively-pauses-some-data-center-and-substation-applications-ahead-of-formal-vote/article_a7f161d6-26b3-48c4-bcbe-0017150250f2.html)
+reported the tally as 7-1-1 on September 15. In favor were Chair Phyllis
+Randall (D-At-Large) and Supervisors Juli Briskman (D-Algonkian), Mike Turner
+(D-Ashburn), Sylvia Glass (D-Broad Run), Matt Letourneau (R-Dulles), Laura
+TeKrony (D-Little River) and Koran Saines (D-Sterling). Supervisor Kristen
+Umstattd (D-Leesburg) voted against. Supervisor Caleb Kershner (R-Catoctin)
+abstained.
+
+The same report says the formal vote on the resolution is planned for October
+20, and that county staff did not recommend taking further action on the
+subject. In the meantime, a county spokesperson told the paper the board's
+intent is for the pause to be effective immediately — an intent, stated by a
+spokesperson, which is a different thing from an adopted resolution.
+
+Randall herself put the label plainly. She said the measure is not a
+moratorium, and described it as a way to give the county time to write new
+rules for data centers and their effects on nearby communities, according to
+[WJLA](https://wjla.com/news/local/loudoun-county-data-centers-development-applications-board-supervisors-pause-northern-virginia-regulations-leesburg-catoctin-grid-reliability-dominion-energy-merger-power-lines-laws).
+
+One more wrinkle worth knowing before you cite a date: the outlets do not
+agree on when the final vote lands. The Loudoun Times-Mirror says October 20.
+[Potomac Local](https://www.potomaclocal.com/2026/09/16/news-links-sept-16-2026/),
+citing FOX 5, says supervisors expect to take the item up again October 13.
+Check the county's published agenda before you build a plan around either one.
+
+## The county attorney's sentence is the one to carry
+
+County Attorney Leo Rogers told the board that moratoriums are not legal in
+Virginia, but that a pause to let the county update its zoning would be. The
+Loudoun Times-Mirror quotes his publicly released memo directly:
+
+> "It is not possible to do a moratorium on data center approvals. At most,
+> the County could delay action on a data center rezoning or special exception
+> for a year from the Planning Commission's public hearing of the
+> application."
+
+Read that twice, because it sets the ceiling on what any Virginia locality can
+promise you. The delay attaches to a specific application, runs a year from
+the Planning Commission's public hearing on it, and applies to rezonings and
+special exceptions — the legislative applications that need a board vote.
+
+That is also the boundary of the proposed Loudoun pause. Per the Loudoun
+Times-Mirror, it would cover only legislative applications, not the
+administrative ones processed by county staff. It would run no longer than
+twelve months, and it covers substations as well as data centers. And the
+paper notes something easy to miss: the board already has the ability to deny
+legislative applications case by case. The pause does not create a power the
+board lacked. It buys time.
+
+## Administrative applications are the ones that keep moving
+
+This is the part with real consequences in Loudoun right now. A site plan on
+land already zoned for the use is an administrative application. It does not
+need a board vote, and the proposed pause does not reach it.
+
+That is precisely the category Amazon's newest Ashburn filing is claimed to
+sit in — the Bridgefield Tech Center proposal on the former George Washington
+University campus, which residents and Briskman have said relies on 1972-era
+zoning to proceed as a site plan with no Planning Commission review and no
+board vote. The county has disputed that the site is by-right. Our dossier on
+that project is [here](/projects.html#p-amazon-bridgefield-ashburn-va). Either
+way, a pause on legislative applications is not the instrument that decides
+it.
+
+## Loudoun has been correcting this word since 2024
+
+The county published a statement on March 14, 2024, headed with the word
+"moratorium" in quotation marks, saying it does not have the legal authority
+to implement a moratorium on new data center applications. Its reasoning is
+the same one Rogers gave the board this month: [Virginia law requires the
+Board of Supervisors to consider each rezoning or special exception
+application on its merits](https://www.loudoun.gov/CivicAlerts.aspx?AID=9001&ARC=16729),
+so a blanket prohibition on approving any application, without weighing each
+on its individual merits, is not legally permissible.
+
+That statement is two and a half years old and still on the county's website.
+The same site's [data center standards
+page](https://www.loudoun.gov/datacenterstandards) does not mention a pause at
+all. It describes Phase 1, approved March 18, 2025, which made data centers a
+conditional use requiring a special exception in areas where they had been
+allowed by-right; a grandfathering resolution covering certain applications
+accepted before February 12, 2025; open houses on September 28 and 30; and
+Phase 2 standards expected to reach the Planning Commission in February 2027.
+
+## The precedents cited have short lives
+
+When Briskman first raised this in July, she told the board Loudoun would not
+be the first Virginia jurisdiction to pause data centers, naming Fluvanna
+County and Front Royal, with Suffolk considering one, per [Loudoun
+Now](https://www.loudounnow.com/news/loudoun-supervisors-eye-data-centers-moratorium-more-regulations/article_63c90942-647a-4af6-9d43-5ae05a148153.html).
+
+Both precedents come with fine print that our tracker carries. Fluvanna's
+pause ran to January 31, 2026 and has expired; its own planning commission
+minutes called it a moratorium and the county attorney later said it was not
+one. Front Royal's 90-day moratorium, passed 6-0 on July 6, 2026, expires
+October 4, 2026 — which is before Loudoun's own formal vote, on either of the
+reported October dates.
+
+So the honest summary of Virginia's pause wave is that it is real, it is
+spreading, and not one of its instruments is a ban. They are clocks.
+
+## What this means if you are three weeks from a vote
+
+Say "Loudoun County's board voted 7-1-1 on September 15 to direct staff to
+draft a twelve-month pause on legislative data center and substation
+applications, with a formal vote expected in October." That sentence survives
+a county attorney. "Loudoun paused data centers" does not.
+
+Ask your own attorney the Rogers question directly: can we delay action on a
+rezoning or special exception, and for how long from the Planning Commission's
+public hearing? In Virginia the answer is bounded, and knowing the bound is
+worth more than the word.
+
+And watch which application type your project is. A pause that covers
+legislative applications is no help against a site plan filed under
+decades-old zoning. If the project near you is administrative, the fight is
+about whether that classification is correct — not about a pause.
+
+Our Loudoun County moratorium row still reads **Proposed**, because that is
+what it is until October. It will change when the board changes it, not when
+the headlines do.
+
+## See also
+
+- [Loudoun County community briefing](/communities/loudoun-county-va.html) — the
+  governing body, meeting schedule, and how to comment
+- [Virginia state briefing](/states/virginia.html) — all 14 Virginia entries on
+  the tracker, including the statewide items
+- [Moratorium tracker](/moratoriums.html) — every row carries its source, the
+  date it was read, and a derived status, so an expired pause never reads as a
+  current one
+""",
+    },
+    {
         "id": "nebraska-county-moratorium-wave-2026",
         "art": "moratorium",
         "section": "stories",

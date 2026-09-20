@@ -3624,5 +3624,19 @@
     "locality": "Scott County, KY",
     "kind": "status_changed",
     "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-09-20",
+    "id": "augusta-ga",
+    "locality": "Augusta, GA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-09-20",
+    "id": "augusta-richmond-county-ga",
+    "locality": "Augusta-Richmond County, GA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
   }
 ]

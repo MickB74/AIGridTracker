@@ -227,6 +227,10 @@ def merge_into_queue(candidates, queue_path, today):
             print(f"Queue file is not valid JSON ({e}); refusing to overwrite.",
                   file=sys.stderr)
             return -1, None
+    # The queue has been written both as {"updated", "candidates"} and as a
+    # bare list; accept either and normalise to the dict form on write.
+    if isinstance(payload, list):
+        payload = {"updated": today, "candidates": payload}
     existing = payload.get("candidates", [])
 
     by_link = {}
