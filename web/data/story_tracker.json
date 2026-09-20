@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 7261,
+  "count": 7269,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -57228,7 +57228,7 @@
       "locality": "White County",
       "state": "IN",
       "first_seen": "2021-06-16",
-      "last_seen": "2026-09-14"
+      "last_seen": "2026-09-20"
     },
     {
       "title": "Kokomo Woman Killed In Three-Vehicle Crash In Howard County",
@@ -70461,7 +70461,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-15",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-20"
     },
     {
       "title": "Abbott Orders Penalties For Data Centers That Skip Texas Water Reports",
@@ -78436,7 +78436,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-20"
     },
     {
       "title": "Spanberger takes unusual step to limit data centers — up to a point",
@@ -79877,6 +79877,94 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20"
+    },
+    {
+      "title": "Evansville City Council to consider data center moratorium",
+      "outlet": "WSFA",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNX2JKS2VwbENPU29HY20yTmtUZjFhS1FMc3ljMGpqR2dKamduVng0dE12WmpLSGIzOVY5UnZkNTM4RXpTM0hSSUpacEZIYjRGVjFLX1JPcGJDR1o1bE5xU1NScE03R0hza2RqQ3hHc3hwdXZ5MVRwRHB1VTN0dWxkOWZERndrTDZsaGVzclNYRHpoNk5GQklMQlZB?oc=5",
+      "published": "Mon, 14 Sep 2026 23:20:00 GMT",
+      "published_iso": "2026-09-14T23:20:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-14",
+      "last_seen": "2026-09-20"
+    },
+    {
+      "title": "Data center debate enters gubernatorial race, Project Jupiter donations under scrutiny",
+      "outlet": "KOB 4",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOakJ0VDlCM0dLV09BcW5scm9PczdsVnpFdW1qR2Y1QWhHTmRGRmN2NUZCeWYyeG1KbDJUTEZSNWRzOHpQNXV5S0pjZjN2TXJJM0R6WVJhQTJ0dE1uTV9SR1VXWGpwa3dEb3hBY0lBWmdaN19KTktvRUhvUEptMU9yVTk3T3dvRW9DTlRsUGFOZUxHblFfbEZIMFY1M01LYTI2U3VjaVZ4a1JSVGhmYTQ5YVlmcl9Qd0prNldmUmZ4N0U?oc=5",
+      "published": "Fri, 18 Sep 2026 00:52:59 GMT",
+      "published_iso": "2026-09-18T00:52:59+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-20"
+    },
+    {
+      "title": "Virginia leaders call for end to secret data center deals, more AI oversight",
+      "outlet": "WVVA",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNSWVpVEZBSmtSblpnWWI5TDd3LUlFOXV4amNsUzJWaHFEcnVyRjB2eVpDZGJiLS1oVUE0dHEzT3ozd1dLV3lPLThsYm5ienNiVFkwc3dOb1V6NEk4N2lLM1JzaUtzbVd3VjVDYzJzYkVxTHdSS2I4c2d4ejl4ekRqb0JldFZFRUVPSXg1c0Zsaml2b1h5djRyczlxb18tcUNqaGlB0gG3AUFVX3lxTE1CSjYwMzdQc28xR2QyQWxNZE1PaElwWnEzbkJ0dlJHbUZRNGx6WVdsbEttNWk2bFNHNlpaNUoyRnRGUHk0QkpsNFpTQUlZTWtLQlVMTWc3TmV3dEl3NlBWVG9XeVMzOV92S0xsYkFlM1VicXZUdE9VeE1IY3hwSFNaRGRYbUpmcnQ1WHFkU3RTbHVLWFBRdWxVTTlsaHlRX3NXOXdma0ZqRExBVTVMM0JFYlJvTDdCMA?oc=5",
+      "published": "Sun, 20 Sep 2026 21:30:00 GMT",
+      "published_iso": "2026-09-20T21:30:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20"
+    },
+    {
+      "title": "Loudoun County board votes to advance pause on data center applications",
+      "outlet": "DC News Now",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPZ2dhdjZMaXIwVmVNaE5faEhZSm1jRnFyQjVjeHdZYU1WMUtKRHp1ajRidmZqRktSYmZpOHotTEJoV3ZmOXNvUzJiNlR6TGtrQTNqeHRkUVNIdzJNUGVHM0tVdG5aX3pjZXJqZVpqZXNOa2o0Z1NpaFVMNTA5NnEtd0ZyOXBWdjBVQjF1cVZCTkxqV1JEY1BNUl9tUDdGNzlCYXpOZFFBY2dybnlHSWQyclcxdkJOTXZILVJZVWVPV1JkMW9kSDFscU5pZ1l1RWl1WVBFQg?oc=5",
+      "published": "Wed, 16 Sep 2026 14:20:52 GMT",
+      "published_iso": "2026-09-16T14:20:52+00:00",
+      "locality": "Loudoun County",
+      "state": "VA",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-20"
+    },
+    {
+      "title": "Virginia Curbs State Support for Large Data Centers, Plans Tighter Rules",
+      "outlet": "TheEnergyMag",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOQTd4SEp6bWN3bkZ6dWphaU0zT1JhcWR2NEMwMFE1eWxMQWRmR3JWc01jbUtnWmE1NDBXcUE2aUVjUXRhcVJ0UVZwY1hYTXhNWHd3U3U1SWxfamdyZEZUNVJHbXEyOFVqRW9fdXFfanVlMEpCWDNDdGo2UHhQMmREN0J4MU9sT28?oc=5",
+      "published": "Sun, 20 Sep 2026 13:40:33 GMT",
+      "published_iso": "2026-09-20T13:40:33+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20"
+    },
+    {
+      "title": "Trump pledge on data center power supplies draws skepticism",
+      "outlet": "Reuters",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVkNCak9zQU9VZUdpN2FXOGJKUlFDSnFucV9vUjBwNl90Z1M3UU1ucFRQNVhTZ3pwS250ZHpETUdrM3JOcks3T2lYelM0NWFxaXRkNGxKOEpmYUNfTko0NnR2ZHNyeDI4djFWS1VUb2pFc05qLVI3V3dKOExzSjE4d3FFQVFsaEdqbVhXdjRiaUlQcHVjZDZpYU1sYnRIc2JtcEQwUXNjWUgxUWtleHc?oc=5",
+      "published": "Fri, 18 Sep 2026 07:00:00 GMT",
+      "published_iso": "2026-09-18T07:00:00+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-20"
+    },
+    {
+      "title": "Grant County woman arrested for allegedly pawning stolen property",
+      "outlet": "Chronicle-Tribune",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQZHR0NmtuZTB5ME1zcTBhUHUyMmJ1ZXdaQWhRSXlCX2o1SUhhUHVlV1NwQVBKSUVBb3pxTmN6YUV1YktodG00Y2lUcllHMTNibVZyM2RZT09nWmtXWFpNMmRDejRnSWlRdVd4cG5VdVhJck92SEVSS2NhQnBZc0ZQRi1oTFJsdTFyMjNMNFV2aTB6LWFhSENNYTI2czZZZ251SnhzOUVBUjFTMGM5NXVxU2JybUhpUlhhMHNMYzA3U2JNN01sR216QnpwUHpGMlplcXVmbW1DWjUxYmkxYTdvRjNZMzhlcWNSUGc?oc=5",
+      "published": "Fri, 24 Oct 2025 15:26:06 GMT",
+      "published_iso": "2025-10-24T15:26:06+00:00",
+      "locality": "Grant County",
+      "state": "IN",
+      "first_seen": "2025-10-24",
+      "last_seen": "2026-09-20"
+    },
+    {
+      "title": "Starke County Commissioners approve data center moratorium",
+      "outlet": "insideindianabusiness.com",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV1M1YWxqY1hsOXZvLUstb1FRQ1k5UVNGV01ka195blAwcTY3Z250QVNXUmdxNmdHSUM3aVVfMXQ4MVlSNHIwNHJlSnZqMmgtNFpOX0ptSm85ekpIVHVsb3hpVzRzTjF4NmZVS2lOLXV6SEJ5V3ZvekpUOU14bFlrb0laTDJvcTc3cEVWMFAzc2FwTW5sZ1ZxNUVVMFFucEJyclBLQ3QzMEM?oc=5",
+      "published": "Tue, 16 Dec 2025 08:00:00 GMT",
+      "published_iso": "2025-12-16T08:00:00+00:00",
+      "locality": "Starke County",
+      "state": "IN",
+      "first_seen": "2025-12-16",
       "last_seen": "2026-09-20"
     }
   ]
