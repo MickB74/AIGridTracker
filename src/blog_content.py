@@ -8127,4 +8127,345 @@ a story we should cover? Reach out at hello@aigridwatch.com or sign up for
 the newsletter below.*
 """,
     },
+    {
+        "id": "week-in-review-2026-09-20",
+        "art": "review",
+        "section": "stories",
+        "title": "Week in Review: Virginia's Governor Cracks Down on Data Centers Statewide, a New Jersey Site Spills Diesel Into the Meadowlands, and a Judge Exempts One Developer From a North Carolina Ban",
+        "seo_title": "Week in review: VA's new rules, NJ diesel spill, TX probe",
+        "date": _dt.date(2026, 9, 20),
+        "author": "GridWatch AI",
+        "tags": [
+            "week in review",
+            "moratorium",
+            "Virginia",
+            "Ohio",
+            "North Carolina",
+            "New Jersey",
+            "Texas",
+            "New Mexico",
+            "water",
+            "community",
+        ],
+        "summary": (
+            "This week Ohio crossed 125 active local data-center moratoriums with 18 more "
+            "communities voting in November, a North Carolina judge let one developer's "
+            "project proceed despite the county's standing ban because it had vested "
+            "rights before the ban took effect, and Virginia's governor rolled out the "
+            "most sweeping statewide data-center rules in the country. Plus: a New Jersey "
+            "data center spilled thousands of gallons of diesel into a Hackensack River "
+            "tributary, New Mexico's Democratic governor nominee pledged a moratorium "
+            "while taking data-center donors' money, and Texas's attorney general opens "
+            "an investigation into a data center proposed on land deeded for a park."
+        ),
+        "body": """\
+Welcome back to the GridWatch AI Week in Review — our Sunday roundup of the
+most important data center stories from the past seven days, what they mean
+for communities, and what you can learn from each one.
+
+---
+
+### 1. Ohio crosses 125 active local moratoriums, and voters in four cities decide bans of their own in November
+
+**What happened:** [Ohio Capital Journal](https://ohiocapitaljournal.com/)
+reported this week that at least 138 Ohio municipalities and townships now
+have active data-center moratoriums, with the outlet's running count putting
+the number of currently active moratoriums above 125 — 23 of them outright
+bans and roughly 23 more under consideration. Separately, the outlet
+reported that 18 Ohio communities will have data-center measures on their
+November ballots, including Urbana, which will vote on a charter amendment
+banning any data center drawing more than 7.5 megawatts, and Hubbard, the
+only Ohio city voting on a full permanent ban this fall. A Bowling Green
+State University poll the outlet cited found 78% of Ohioans support a
+moratorium until more is known about the industry's effects, and 75% oppose
+construction in their own community specifically.
+
+**Why it matters:** This is what a statewide pattern actually looks like
+counted up, not estimated — a state where the industry has had a genuinely
+difficult year is also a state where dozens of separate local governments
+reached the same conclusion independently, several of them now putting the
+question directly to voters rather than leaving it to a council vote alone.
+
+**What to learn — a ballot measure and a council moratorium are different
+tools with different durability:** A council-passed moratorium can be
+reversed by the next council election or renegotiated with a developer's
+lawyers; a charter amendment approved directly by voters is generally much
+harder for a future council to undo on its own. If your community is
+choosing between the two paths, ask which one your state's election law
+actually allows at the local level, and whether your council has the votes
+to refer the question to the ballot instead of deciding it themselves. Ohio
+communities are on our [moratorium tracker](/moratoriums.html); see the
+[Ohio state page](/states/ohio.html) for the full list.
+
+*Sources: [Ohio Capital Journal, Sep 18](https://ohiocapitaljournal.com/);
+[Ohio Capital Journal, Sep 14](https://ohiocapitaljournal.com/)*
+
+---
+
+### 2. A North Carolina judge lets a data center proceed despite Chatham County's moratorium — not because the ban is invalid, but because this one developer got there first
+
+**What happened:** Superior Court Judge John Morris granted summary
+judgment to Eco TIP West, exempting its roughly 75-megawatt, $11 million
+data center project from Chatham County's year-old moratorium, according to
+[Carolina Journal](https://www.carolinajournal.com/) and
+[Law360](https://www.law360.com/). The judge found that county planning
+staff had met with the developer as far back as October 2025 — months
+before commissioners enacted the moratorium in February 2026 — and treated
+that pre-moratorium engagement as equivalent to a vested right to proceed.
+The county was also ordered to pay the developer's attorney's fees, with a
+later hearing to set damages.
+
+**Why it matters:** Chatham County's moratorium itself was not struck down
+— it remains in force, and our own tracker still lists it as
+[Enacted](/moratoriums.html). What changed is narrower and, for other
+communities, more instructive: a court found this specific applicant had
+already acquired a vested right to build before the ban existed, based on
+informal staff contact rather than a signed permit.
+
+**What to learn — "vested rights" can attach earlier than a permit, and a
+moratorium can't retroactively erase it:** Most states' vested-rights
+doctrine protects a developer who has taken substantial, good-faith steps
+toward a project — which can include site-plan meetings with staff, not
+only an issued permit — before a new ordinance takes effect. If your
+county is drafting a moratorium in response to a project you already know
+about, ask your county attorney directly how far back the county's own
+staff contact with that developer goes, and whether it could support a
+vested-rights claim like this one. A pause written before any known
+applicant exists, like the ones we've
+[covered before](/blog/week-in-review-2026-09-13), is much harder to
+undermine this way. See [Chatham County's community page](/communities/chatham-county-nc.html).
+
+*Sources: [Carolina Journal, Sep 18](https://www.carolinajournal.com/);
+[Law360, Sep 18](https://www.law360.com/);
+[Raleigh News & Observer, Sep 18](https://www.newsobserver.com/)*
+
+---
+
+### 3. Virginia's governor rolls out the most sweeping statewide data-center rules in the country — two days after the state's largest-ever fine against one
+
+**What happened:** Gov. Abigail Spanberger unveiled a
+[Data Center Accountability Framework](https://www.governor.virginia.gov/)
+and signed Executive Order 22 to put its first pieces into effect
+immediately, according to [Virginia Mercury](https://virginiamercury.com/),
+[The Hill](https://thehill.com/) and [Politico](https://www.politico.com/).
+The order eliminates by-right approval for any data center drawing more
+than 25 megawatts, requiring local government sign-off instead; bans
+executive-branch agencies from signing non-disclosure agreements over data
+center projects; directs the state to write noise regulations for the
+industry; and creates a new AI Task Force. It follows, by two days, Virginia
+DEQ's announcement that Microsoft would pay roughly \\$2.5 million — the
+largest civil penalty the agency has ever assessed a data center — after
+its Leesburg facility ran 62 emergency backup generators for a full week
+during a June 2025 substation outage and exceeded its permitted nitrogen
+oxide, particulate and volatile-organic-compound limits, per
+[Virginia Business](https://virginiabusiness.com/) and
+[CBS News](https://www.cbsnews.com/).
+
+**Why it matters:** Virginia is the country's largest data-center market,
+and by-right approval — meaning a project meeting existing zoning could be
+built without a fresh public hearing — has been the single biggest
+procedural complaint from residents there for years. Ending it for anything
+over 25 MW is a structural change to who gets a hearing, not just a new
+disclosure form. The Microsoft fine, arriving just before it, is also the
+clearest evidence yet that the backup generators this framework is aimed at
+are the same ones [we wrote about](/blog/week-in-review-2026-09-13) two
+weeks ago in the context of the EPA's proposal to loosen federal air-permit
+comment rules — Virginia's fine shows a state enforcing its own permit
+limits without any federal comment rule doing the work.
+
+**What to learn — "by-right" is the zoning term worth knowing cold:** A
+by-right use is one a zoning code already allows outright, with no public
+hearing required before a permit issues; a special-use or conditional-use
+permit requires one. If a data center has been proposed as by-right in your
+jurisdiction, that is very likely why you never got a hearing notice — ask
+your zoning office directly whether the parcel's current zoning classifies
+data centers as by-right, and if a bill like Virginia's is moving in your
+state, that is the specific provision to ask your legislator whether it
+covers your zoning district too. See our
+[Virginia state page](/states/virginia.html) for the framework's full text
+and the reaction from both sides.
+
+*Sources: [Virginia Mercury, Sep 18](https://virginiamercury.com/);
+[The Hill, Sep 18](https://thehill.com/); [Politico, Sep 18](https://www.politico.com/);
+[Virginia Business, Sep 16](https://virginiabusiness.com/);
+[CBS News, Sep 16](https://www.cbsnews.com/)*
+
+---
+
+### 4. New Mexico's Democratic governor nominee pledges a data-center moratorium — while data-center executives are funding her campaign
+
+**What happened:** Deb Haaland, the Democratic nominee for New Mexico
+governor, announced an eight-point plan that includes signing an executive
+order on her first day in office to pause new large-scale data-center
+projects until statewide protections are in place, according to
+[Source New Mexico](https://sourcenm.com/) and
+[The Hill](https://thehill.com/). [Searchlight New
+Mexico](https://searchlightnm.org/) reported the same week that Haaland's
+campaign has received roughly \\$87,000 from donors tied to data-center
+developers — including about \\$75,000 traced to individuals matching
+leadership at Oracle and Clayco, and \\$12,400 from an Oracle subsidiary
+directly — with several of those donors connected to the contested Project
+Jupiter data center in Doña Ana County.
+
+**Why it matters:** A moratorium pledge from a candidate whose campaign has
+taken money from the industry it would pause is not proof the pledge is
+hollow, but it is exactly the kind of fact a resident should be able to
+check before a vote, and it is the reason campaign-finance disclosures are
+public in the first place. Haaland's plan would set a statewide floor while
+letting counties adopt stricter rules or outright bans, meaning it does not
+preempt tougher local action already underway.
+
+**What to learn — a candidate's donor list is a public record you can check
+before the pledge, not after:** Every state publishes candidate contribution
+data, usually searchable by employer or donor name, well before election
+day. Before repeating any candidate's data-center promise at a town hall,
+search their own state's campaign-finance database for the developer's
+name, its executives' names, and known shell entities tied to the specific
+project you're fighting — the disclosure is usually there weeks before a
+reporter writes the story about it. Track what's on the ballot with our
+[officials scorecard](/scorecard.html).
+
+*Sources: [Searchlight New Mexico, Sep 18](https://searchlightnm.org/);
+[Source New Mexico, Sep 17](https://sourcenm.com/);
+[The Hill, Sep 17](https://thehill.com/)*
+
+---
+
+### 5. A New Jersey data center spills thousands of gallons of diesel into a Hackensack River tributary — and the company blames a "computer glitch"
+
+**What happened:** More than 5,000 gallons of diesel fuel discharged from a
+storage tank outside Equinix's NY2 data center in Secaucus on the evening
+of September 11, with some of it reaching Anderson Creek, a tributary of
+the Hackensack River, according to the
+[Bergen Record](https://www.northjersey.com/) and
+[NJ.com](https://www.nj.com/). New Jersey's Department of Environmental
+Protection said the spill resulted from two broken valves in the tank's
+routine filtration process; Secaucus Mayor Michael Gonnelli told reporters
+he had been informed the cause was a "computer glitch." Contractors were
+still removing oil from the creek as of this week's coverage, and the state
+says the spill has been contained.
+
+**Why it matters:** Diesel is stored on nearly every large data center site
+specifically to fuel the backup generators this whole newsletter keeps
+coming back to — the same equipment behind Virginia's record Microsoft fine
+above. A spill from the fuel tank itself, rather than from generator
+exhaust, is a reminder that the infrastructure risk isn't only air
+emissions; a bulk fuel tank near a waterway is a spill risk under normal
+operation, glitch or not.
+
+**What to learn — ask what's stored on site, not only what's burned:** A
+site's air permit covers what a generator emits when it runs, but a
+separate set of state rules — usually administered by the same environmental
+agency, often called something like a "discharge prevention" or spill
+program — governs how much fuel can be stored on site and what containment
+is required around the tank. If a data center near you already has
+generators installed, ask your state environmental agency two separate
+questions: what's the air permit status, and what's the facility's spill
+prevention and containment plan for its fuel storage. See our breakdown of
+water and resource risk in
+[The Hidden Water Cost of Your AI Prompt](/blog/hidden-water-cost).
+
+*Sources: [Bergen Record, Sep 14](https://www.northjersey.com/);
+[NJ.com, Sep 15](https://www.nj.com/);
+[The New York Times, Sep 17](https://www.nytimes.com/)*
+
+---
+
+### 6. Texas's attorney general opens an investigation into a data center proposed on land deeded for a park
+
+**What happened:** Texas Attorney General Ken Paxton announced his office
+is investigating whether a 1999 deed restriction limiting a Taylor, Texas
+parcel to future use "as parkland" was properly modified or released before
+the land was sold for a data center, according to
+[KUT](https://www.kut.org/) and
+[USA Today](https://www.usatoday.com/). The land passed from a family, to a
+nonprofit holding it in trust for parkland, to the city of Taylor in 2004,
+to the Taylor Economic Development Corporation in 2009, which sold it in
+April 2025 for \\$10 million to the company behind the proposed Blueprint
+Data Centers project. Paxton said he may seek court intervention if the
+deed restriction was disregarded rather than lawfully released.
+
+**Why it matters:** Land that passes through several public and
+quasi-public owners over two decades can lose track of the restrictions
+attached to it — deliberately or not — well before a private buyer ever
+shows up. Whether this specific restriction was properly released is now a
+legal question for a court, not a settled fact either side can claim yet.
+
+**What to learn — pull the deed history yourself before assuming a
+restriction was honored:** County deed and property records are public and
+usually searchable online by parcel number; a restriction like "for use as
+parkland" typically has to be formally released, amended, or litigated away
+— it doesn't lapse just because the land changed hands. If a data center is
+proposed on land that was ever public, donated, or held by an economic
+development authority in your community, pull the deed chain before the
+hearing, not after a reporter or an attorney general does it for you. See
+[Texas's state page](/states/texas.html) for the rest of this year's
+water-reporting and siting fights there.
+
+*Sources: [KUT, Sep 17](https://www.kut.org/);
+[USA Today, Sep 19](https://www.usatoday.com/);
+[The Business Journals, Sep 18](https://www.bizjournals.com/)*
+
+---
+
+### 7. Eight more communities paused or banned data centers this week
+
+Beyond the stories above, at least eight more local governments moved on
+data centers in the past seven days:
+
+| Locality | State | Action | Duration / scope |
+|--|--|--|--|
+| Calexico | CA | Permanent ban | Standing |
+| Newark | NJ | Moratorium | 12 months |
+| Statesville | NC | Moratorium, unanimous | 180 days |
+| Sauk County | WI | Moratorium | 18 months |
+| Richmond | CA | Moratorium — third Bay Area city to enact one | 45 days |
+| Greenfield | MA | Moratorium | 1 year |
+| Cumberland | RI | Ban in zoning ordinance, 6-1 vote | Standing |
+| Loveland | CO | Large-scale application freeze | 1 year |
+
+**What to learn — "third Bay Area city" is worth noticing on its own:**
+When the same action spreads to a third, then a fourth city in one metro
+area within weeks, later councils are usually not deciding the underlying
+question from scratch — they're often adopting language modeled closely on
+the city that acted first. If a neighboring city just passed a moratorium,
+ask your own council whether they've seen that city's ordinance text before
+you draft your own from nothing.
+
+*Sources: [Calexico Chronicle, Sep 18](https://www.calexicochronicle.com/)
+(Calexico); [TAPinto, Sep 17](https://www.tapinto.net/) (Newark);
+[WBTV, Sep 15](https://www.wbtv.com/) (Statesville);
+[WMTV, Sep 16](https://www.nbc15.com/) (Sauk County);
+[NBC Bay Area, Sep 16](https://www.nbcbayarea.com/) (Richmond);
+[Greenfield Recorder, Sep 17](https://www.recorder.com/) (Greenfield);
+[Uprise RI, Sep 18](https://upriseri.com/) (Cumberland);
+[Reporter-Herald, Sep 16](https://www.reporterherald.com/) (Loveland)*
+
+---
+
+### What to watch next week
+
+- **Chatham County, NC** — whether the county appeals Judge Morris's ruling,
+  and what damages the follow-up hearing sets
+- **Virginia** — whether the General Assembly takes up the legislative
+  pieces of Spanberger's framework that an executive order alone can't
+  reach, including the by-right change for existing pending applications
+- **New Mexico** — whether Haaland's campaign returns or keeps the
+  data-center-linked donations, and how her Republican opponent responds
+- **Secaucus, NJ** — the final DEP assessment of how much diesel actually
+  reached Anderson Creek, and whether Equinix faces a separate penalty
+  beyond cleanup costs
+- **Taylor, TX** — whether Paxton's office seeks a court order before
+  construction on the site advances further
+- **Ohio** — turnout and results in the 18 communities with data-center
+  measures on the November ballot
+
+---
+
+*Every Sunday we cover the week's most important data center stories,
+explain the underlying concepts, and point you to the tools you need. Know
+a story we should cover? Reach out at hello@aigridwatch.com or sign up for
+the newsletter below.*
+""",
+    },
 ]
