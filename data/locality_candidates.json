@@ -1,6 +1,56 @@
 {
-  "updated": "2026-09-07",
+  "updated": "2026-09-20",
   "candidates": [
+    {
+      "name": "Evansville City",
+      "count": 30,
+      "examples": [
+        {
+          "title": "Evansville City Council to consider data center moratorium",
+          "outlet": "Courier & Press",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPM25xMV9tQWVrc3RORFhZN2UxbVRJaFdvc19sbDFRTmhhejNaNFVQbXBvSlZMRUhtbGJpTmJRVG5sd3JDcjJhNjFtNzc1aXd1bzdmZGRjWE84UlhMS1l5Z0JpQTRfT0xwaWltY0EtMmpqbXdDLUt5b0JTNUpTajZuNFlQVm9SWmpWT3BOQlF6YjVGOHg0ZmxQQTFZOVlIRzJqc0o3M3RfZTJESW16MnhCcmVCdzZCd1gxc2Rhd1hvSUVvNW0xbk1F?oc=5"
+        },
+        {
+          "title": "Evansville City Council to consider data center moratorium",
+          "outlet": "14 News",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNaHctbjN3aFNjZFJZT0xxdU5iWWpzUW1ONjY2eG1IeGRld0NpdThJOHBFSVlINlVNQ19WOUc1b2hBVjBxcUEwSVdzWWozX1RwWkdBaXRkdkNQdnlGbGpxVzAwQ2RyU0FDZE42TkhXYVpzUlRnRTlDeUw4UFg3Uzd3NG9hSXNuOHBJeE1leDh5Qk1UWnc1?oc=5"
+        },
+        {
+          "title": "Evansville City Council to consider data center moratorium",
+          "outlet": "KLTV.com",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPUWdsY1FTanJfZjluaWJOLTI1cTEzakNJTTAyVHhMTDdwZ2dNQkhjZzVOcllTY3JiSW9WMnVRX0NTRDZRa3lrU0VpbU1kM3MwbUVUN0h6MmwzeHF0NUR5T1RTQ1VublJNSUFkSmVtYWNJWWhLN3pvRFhFbmZHcTRsRlZWSUlXQ1l3NUx0MUlDbXFMa3VDVV92aFpB?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "McCormick",
+      "count": 15,
+      "examples": [
+        {
+          "title": "McCormick County council approves data center rezoning while tempers flare",
+          "outlet": "wrdw.com",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdVYtR2xIc0xEUWZaejY3QW9kc2xYbUhtU1A0eWtVYTZ0bFJrNnFjQjNjbVVDOFBZNWNJdV9UdlJLWVdNVHBnOUVPa255UFdBQ3pTdXAxSHZHRGg1TTJZcEtUbVRUN2pJbUFWYXljSklYcEtiUkpKOEdVOHpMLVFfOUpPd1NJMUZScDFHa1JxWnV3bU5XYmRseUt6eG1na20zQ2ZTY3kyLWI5bDDSAb8BQVVfeXFMUE5JakxSYzMycU9MVEpxaURhQUZZTWZGZ3dFVEtFaU1tZmFtX1BtZUtxOW4tYkoteDIwQ29vT2hDSHhMRGxQM2FqLW9CRWlXMDJOR0lCV0gtTFVoOW5yYjNHUG52SGR1T2Z5dXJQY0ZaenJUaVRwZnIxZDlaNnpqb0tPaW92a05PZEtwRlNYd0FKb2ZkS29LbXU1bW1BTUlBNzFKT3cwbEtpcC1CMUoyMEdSQUJhXzQ2aXg3eE1pWFk?oc=5"
+        },
+        {
+          "title": "McCormick County council approves data center rezoning while tempers flare",
+          "outlet": "KPTV",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUnR1NGk1Ml9ST1dPMnJYLU96VEtyeWtmVi1hTjN3TnJyRFFWZ3NlV2JLYnhZbjFIQWdqQ0VFa2dMbE1oeDJKU1VuQy15bXhoNmRRN3VadGVDeVNxS3hvdk85Mnk5VEFGcUhoQnRLTE1hUVNrNzAyVE1pbUdrU1hFN1BhRzRHaHM5MHV3R0tDdGJ3cERHZm5YdXpDb2dNZ0dmeGEtNENYLWlCSUwtUEhNZi16TQ?oc=5"
+        },
+        {
+          "title": "McCormick County council approves data center rezoning while tempers flare",
+          "outlet": "fox10tv.com",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQWHJJdThxRjM1Nl9MTUUyRGFjaldtMU1jMkdYUzA2LTB5RDN2b3ZNdEpCMUwxc043WlJMZ0hyM2o0SU9wNDBILUM1N3VVbTg2TVNEY2JTWk5hd09vS1V1cGRZTTgxZHF5UEQzNVhYR3FGS3duZmNRMmdMQkRrRG4zaDMzMXkxdVhDV1lQNjd4TWFoSXpsT2RIQ0hYVDVKX3VRcFJqRkdxakVfcmhoUTFiTjVmZmk0Q3M?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
     {
       "name": "Ralls County",
       "count": 13,
@@ -24,6 +74,31 @@
       "guess_state": null,
       "first_seen": "2026-09-05",
       "last_seen": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "name": "Beaufort",
+      "count": 9,
+      "examples": [
+        {
+          "title": "Data center freeze proposed in Beaufort County. ‘I’d rather fight than just give in’",
+          "outlet": "islandpacket.com",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNZGwtdHZLbi1YSkVlQktpcTNRcXlpV3IzOGRMS2oxbXkzdEt3akJsM0w4U0NpdXRIMEFWdl9aUW5kd0lJbXNodVZRTWo5WkFLWEZ4VGl4WmxQM3R2dU51eWJVNi1rTlFrMFhuYkk5UHVMeEVRMUZEanJnMmUwcVd1V3ZZZXBHMVluLTdxLUdR0gGOAUFVX3lxTFB0a1VGQ3oxdmVjWUgyd0c4eDlzYzRMdjc3b1hZYVdjbHdKTFAyZTMxaGVzOXRnLWdXT3lZUUhwekVDbVd2MFZ5bUlBaUNvY3JaNVJCemNqNDR3MktLemRxVGhhYWRYbWdTWTVaenJ4SDVWbzRWMUsyX1llcnMybVl0dnczSGJEWW95MXM3Ync?oc=5"
+        },
+        {
+          "title": "Beaufort County moves toward temporary data center moratorium",
+          "outlet": "WJCL",
+          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQZHRyZDZMRG03NnRhYkNQdTlPa2Q1UjAxd1J2RENlaDJ6MDZGMExwZHZwbFB2UzFyeDdrQkdJMXU1TVU0dUNESUVBUXVYS2J3cVRwNDFPM3dESTV1T0Jyd25qRGYxRU9SQWt0NU5UQkRQNlpMTEs0UWxPNU0wcjMtYlVBVXFzWUtNeThB?oc=5"
+        },
+        {
+          "title": "Beaufort County looks at regulating, possibly banning data centers as it calls for moratorium",
+          "outlet": "Post and Courier",
+          "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxObU1saXJVZ2otSExJWFRxRTNYQndhZUpKazdqUGQ1WVlsaGNnbHFIcXFDdTVOTmI3aWxPRHJjQnpKdHdhWVhIT2g2VjkyMTVsSks2RHdZSFczYnJtVW5IV0FRWHNZd2lzODhVRE1zeTF4dmxPNjloOGcyR1JOQm5CdUc2SlJOdzVIT3RRcnFodkg3VTdTR0xKNnp5WVhhYUpSTTNPT0oyMDFrcXlQXzNzVm5UWF9kZ0tUMFlERldLbW9NNE1KWGtTN2hJT092VEJWcjZuaS1mQUI4WnBnWlpFcmFiZk5aN3NaODBPNUIxM1l6WTZjYmhrYnpwTQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -74,6 +149,81 @@
       "guess_state": null,
       "first_seen": "2026-08-19",
       "last_seen": "2026-09-05",
+      "status": "new"
+    },
+    {
+      "name": "Richmond City",
+      "count": 6,
+      "examples": [
+        {
+          "title": "Richmond City Council to Consider Moratorium on Data Centers",
+          "outlet": "Contra Costa News",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPM2hUdDRWT1lnRDNMQlg4dEhuSWE3NnBzdXhLVkxCZ3Z5a2xiQ3pXVEVHeWhBUS1VcjdlSnNQV3dBNU5pZ1VjY3NwSXdNNkU1VnNXbXktT0JXRXhpYklYb0hSY2Z4RWZ2YnZObVFnNlJQSFF4akZLcTZvcDdMTGxXUTdnRVI1N2ZjaHUzX3EtWTdaOUQ0VERyOU1OZFhPNXZvVmlV?oc=5"
+        },
+        {
+          "title": "Richmond City Council to Consider Moratorium on Data Centers",
+          "outlet": "Contra Costa News",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQZ2owc3E1VG9UQnpaTkJlOWl2Q0Q2UHN3RHNCbUlGX3VWMnZuY0d3Z3JaR08tbDVkVU1WSUluMjdwM0wwTFR4SXBRazBidUk0SmZEc01nM2xJTnNFaFlPTjdxajdudkUtVkY2RGlNMFNtNUJ1OXVmcXFGaUo3bFBhNWZMNldMLVAyVWFGNUdqSXRsSk9QLXZ3blEySG5KZw?oc=5"
+        },
+        {
+          "title": "Richmond City Council Agrees to 45-Day Moratorium on Data Centers",
+          "outlet": "Contra Costa News",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbkwzRzU2RWN3UmtTUFBsS3ZCeWVWT2ptcGdtT2FKY0w1alU4XzRRRHl1d0FVNFREWi1KV2hwVkh0NlpGMTBtQTFnVXo2OFc3ODU4aE9janNHbnE1dU9XZzliVFBxcnZib3oxTEV0TWNoTnlEeGpQdkVEZmNYOGM5bmFmSWlpQ3M2RS1TQ3o0QnJtZEo4blNtZV9rWllTTWZzdk5ZUVNjRUNmdw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Eugene City",
+      "count": 6,
+      "examples": [
+        {
+          "title": "Residents urge Eugene City Council to consider data center moratorium amid AI growth",
+          "outlet": "KPIC",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQbFRZem9pWVoteE5yUC12Z2ZYalNEdmhFMDg3a0JRZXR2ekZqUl9DQnVYaXJ2emJ1MERxOGhVU3Mwbm9EVEpqby1JbXdzN3c5TF9jTGhHMnFtaU5RVUhEbDcwSWM1S0dSNjFNUGRYQzI1ZWprTk1nSmxBVjB6OXlxa3d0V0lXblo5YlVfVDdNZEVWZGZweldjenJXNDdwZ0VNTG9QWEZiMk5EQ3pzclY2dkhnSEpMZTdVckRMbnVPN3BONjJId2k2QjAxUQ?oc=5"
+        },
+        {
+          "title": "Residents urge Eugene City Council to consider data center moratorium amid AI growth",
+          "outlet": "KVAL",
+          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQY0ROWHJiTGJmZlZBdHlVcVF5clZqQi1mLTlBRHBNaEZyUkhqc09HaDJ6SlBtcTg5VkE5b2RPdHFaVjZPS0M0NXdYd2xMSkFXTF91a2xzR2swQ01uNURSYTFZLThCQnh6NnhDejZPTXY5WUpxdFJHV3NqQWtmN2REdkVEUVRDa3VUX1BFZUU0UnJGVU1Za0huUFplV3R5NUNnbkNzSnNHU2kyanFpT1IyVFc4eUxuNUhkTzRUYzBpY3VlRnBZRTM3a01ha0lpT1VMbGtmQVFn?oc=5"
+        },
+        {
+          "title": "Residents urge Eugene City Council to consider data center moratorium amid AI growth",
+          "outlet": "KPIC",
+          "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPWlBjMUZoSDBFcWxLZ3BkMUpGVGpKekFsYUdudnhXNTJPd3A0dXdra0FkZ3VtbUZjdV9wY2gwWURTcjNfTFZZellyQmNvdXBqamY4Y0JXSVkwNkRWWGExcHFCY3U1bWQwYlFKZVplMGg3bzRnbkRXbU5nV1dfYXVZOFpybnRaTkJRRG05ZFBYdWV1Rkd1YUJMWW1WNlV2YjlGT0NXOXhWRU9jTkR1RFdpRWVxcW9VQ3JCS0JrRm9HbjBta3RjRF9Rb0pDbkI0OWNFTWFYeDFPTnJlbHVNMlZCWA?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Poway City",
+      "count": 5,
+      "examples": [
+        {
+          "title": "Poway City Council to consider AI data center ban",
+          "outlet": "cbs8.com",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZ1gxT2tOY0toejBXUGNlUWw0ZjdBZTlwVTB2SS0yWG44bmtXX0RRb0Z0X1lSQ1RrRTR3LThFNTlBc1drYmpGOWpDYURPZnlBU0w1MEZ5cC1tYndhck92OFREaVZ2TjNueENDOVkyZFk5Mm5NNWhPczNoa1NNLTlXY0dDYV9Yd0RnVjRNejNWZFpza3VRMGVIOTB4bTBjeUdaZjRoYkdRUHBnRnU4UkFjNlRVb2xHOWZjNDhWMkt3?oc=5"
+        },
+        {
+          "title": "Poway City Council to consider AI data centers ban",
+          "outlet": "NBC 7 San Diego",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNSmtJWVk4a2dYWGJWRnZQUjRLTVZMTC10SnNCR1JBcnFMaGJFLWZzS0xlcU5nM2I1OG4xUzllMzdFSkxUT0g3MkxKOXNneWJpb3hUNEdISDZvcTRPWUExcmoxXzl5OEtVeUUwcWxIMVp6TlpTbjFBVU9mYi1TLVZmN01IYnFxT0pVQWFxaTRWZWs3a28zdG9hZ2pTLTJuTjDSAacBQVVfeXFMUHdzcUhPNE9namRFT2hFTjgxb2ttNjUySk9KUlhFTmZWY1V3WFl3RVhZVG91RDJ0Vl9FeVd5aW9VRTQzd2ZVNEljOFN1ck9TZHhCanRFeXFZcl9zY3lLb3lqRXk3STktWnRXcFR6MXBXYVB5VmozZGFsRDFsWkN6T2pxU1ZvVlRJM2hrM182b2o0MWpFOTduMlpFWDFiNzNsQjJrUnRDekk?oc=5"
+        },
+        {
+          "title": "Poway City Council unanimously advances AI data center ban",
+          "outlet": "cbs8.com",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOejJCYjBvTURxWUhKR25FemRJQ0ZQY20tQmRCaEdENXEtU095amU4ZXZsRFRSUHZxNllobHF6WmJPODduem1GWGc5aWdLWW1MMjRjWGdMR19rRW80M0pJZUpyMV9fQTZ2RFN1bzV4QUNlR2hxamxMeTB1d3BoTGxpRzRiNFNkX2hkSUdTVV9CamI4TkNyOWtudGxIdlZpSHBsSkNjRDZCdjNQSm14djd0bGN3SEZrN0ZyVnZuaTZrT1BmUmxMNGQw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -148,7 +298,107 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Pinal",
+      "count": 4,
+      "examples": [
+        {
+          "title": "Pinal County rejects massive La Osa data center. Residents want more rules for future projects",
+          "outlet": "KJZZ",
+          "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNSjJuZ3UwbXdUR1hIZXNqQWI4Z0x1eUxIeTN5eWlVdnN6VzVJSDJQYkNGTVVlZG1fVU9LVnR6aWpqVGtYZ0NYckRYRUZOLXdwTjk0ekVOY0hJU0liTXQ1T1luQjhHVE5DUHVUaXhlSVhFSndpYzczVUprTk5hUDE1UENjT2tPM3IwYkktWFBqQVVzMlY0ZWhBalZnelplaTdHeDFYTjBnWUZDQ01VVEE5MTNYNTFTYjhaRHhXSUtfaDVzODZqSVMzLUMxVFdrTDA?oc=5"
+        },
+        {
+          "title": "Pinal County board rejects massive data center project",
+          "outlet": "AZ Family",
+          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQeDMzOGRROHdaOGM3WVhZa1BfYlY2b2x4ZzR1bzVqaU4wMllNckYwVF9aUmcxaEpRN0lzbzVzNU14LTc3Q01HTU5wQVpRalhTU0hCRGVYWTRROHE4VlVwb1I1QVJJTy00YVpjbzNmZnRWanlOdkJzeVF2eVNqbUd6Nkl2OWdpT2tZQ3htckg1Nkl6ZGRrTVHSAaoBQVVfeXFMT0VoblQ2Sl9uWExtcVR0blR5Y05JQUg1THpYMGI0SmFndFBkaTg3aWlsMDNPWW9XMl9WQ0I2UEsyRDFYOG5wRG1xeUcwbE9nWFZTNUlNQU9oQl83X21IeGVHRmlqN2hvWWdvRnA4bWREMUhoREJxRXc2Q2ZQY3dkRTVoMkZYeENGeWdGYmpwdFB0THotaGNhZVQ5Smh2UEJNM3JSMUJhbmV2UFE?oc=5"
+        },
+        {
+          "title": "Pinal County rejects massive Vermaland data center project",
+          "outlet": "The Business Journals",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNdjRBcUdheXhqRi1GU2xlLTdtNEdHMDF6YlRZS0hrNnY1OTJoQ2RkYWktS09PU3pRal9LTEdxQWRPSzZTUlBCcjZINGtCblV4clZiQkVBZ09LbFNhdm85V000b3ZXRGkxNXlfcTlFXzFpM0oycXBNOVZVbmpIZ08wV2dlRTJnVzNOMnlqVEEyd05kNnJQclB0aFVGQnZaREgtUEE?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Massena",
+      "count": 4,
+      "examples": [
+        {
+          "title": "Keep open mind on data centers, ex-mayor tells Massena residents",
+          "outlet": "WWNY",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObm5UdUhjZUlGUk1zQUVvRE1iOGtWYXlYdGhZZ0hXNlZvMlFYSFAzc0VRNV8xOTZyVVZhLWhzNVBsUDYzdVI0VzM2ckVjeUNRYXVpRmdISTdHSWw0VVR4X1RkSTNwMnpFdEVCYVVEM21VVmRzbTJVbnNnTjBYTHpSZUZqTHdlNU5uWXd6cUdEejE4RkZqb0ZZSl9MZw?oc=5"
+        },
+        {
+          "title": "Keep open mind on data centers, ex-mayor tells Massena residents",
+          "outlet": "WWNY",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObm5UdUhjZUlGUk1zQUVvRE1iOGtWYXlYdGhZZ0hXNlZvMlFYSFAzc0VRNV8xOTZyVVZhLWhzNVBsUDYzdVI0VzM2ckVjeUNRYXVpRmdISTdHSWw0VVR4X1RkSTNwMnpFdEVCYVVEM21VVmRzbTJVbnNnTjBYTHpSZUZqTHdlNU5uWXd6cUdEejE4RkZqb0ZZSl9MZ9IBrwFBVV95cUxOcnpTd3F0WmZELVJJMVd4eldTOU5MeVZ0TEpCUFFCN1E2aWtMRUhvRWhLNVJCV1U0Z05FOHozQ1l4d0pzQVNkU3VIc2ZVSlFQSFBGcXY2cEdKdzAycGhYd2k3a1V6dWJmNHZKejgwVjZ1UWNsa3U4U1pqSXFIYUpJcnNQZDBmQjhUQ0YzV2dHa285TWNjR0NqNi11WDlncTVac0hYQ0pDWG0xSmp1dC1Z?oc=5"
+        },
+        {
+          "title": "Massena Town Board votes against data center moratorium",
+          "outlet": "NCPR: North Country Public Radio",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOYXNEdTBZeXJBNW0wNXlxTmhuVjVLdnF6X3pzZTVpenk2alJQOTRjdG5PYU5ESmxuOUo5cGI0UW10NmFqQXR5MGY1V2NUYW1aTmp4a0l0UTVKYU56RDBMc0F2alpmc3BfUFU2NFNJYS1qM2xxR1RFNUlVbzA1UU03NXNObHExNUIxSGJrZEVaN3RKcFJjQmNPUE9DaEZ5ZEtoWUdfRjVOQlF4cktGR20yTlVaXy1XQjhmRGNJY2Zn?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Upper Burrell",
+      "count": 4,
+      "examples": [
+        {
+          "title": "Upper Burrell residents decry transparency as data center progresses despite moratorium and a lawsuit",
+          "outlet": "Pittsburgh's Public Source",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNdVdrYTRiTlA4STZhbFhwQXJJRlFEcWdOZ1FFTjFTcnEtOW1TaS0teVVkVzNMTFRra2Z2QTNoYVVaaXl3TnpVT0lGc0l5cUFLeUZ2X2R1ZGhzblVFZzhDaHI0VFpZU2xDX1NjRmU1OVlBRXY5UGFRZmd6RFhUSm85bmljUQ?oc=5"
+        },
+        {
+          "title": "Upper Burrell residents decry transparency as data center progresses despite moratorium and a lawsuit",
+          "outlet": "Mon Valley Independent",
+          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQVTExdGpZa2RUcFRlTktTdzJqUjRvNVAtbFp0U0N5amFONHY5cFJkVUVGckhxVHJ1YlloUW5Eb1JCc0h2RXEyV0lmTzA0bGZhb1VYMEJUaTVPbUI5NDZqc2twSUZnRC1aSzhKOFZqNnR2N0FabjZ1dHh1bGEzMGh5anROY25qTTktZFI4enRodGZVTUhES0lvVGFnR1pNN2tMVHdXQmZBNU9nMThBN2JRcGxacV90YmNneDVfLWVkaw?oc=5"
+        },
+        {
+          "title": "Upper Burrell Planning Commission delays recommendation regarding data center ordinance",
+          "outlet": "TribLIVE.com",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE51WjdhSWpLejY1cFZEdExFTjB5dHN3VTA3NjJOVGhHNVFVak10TVRjWG5zQ0xucV8zcHNIUm5IeVZpc0RyQklCcjNvWFI3LTlTRk9LUG1R?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Eugene",
+      "count": 4,
+      "examples": [
+        {
+          "title": "Eugene residents forcefully oppose data centers in packed council meeting",
+          "outlet": "The Register-Guard",
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUXM2a3oxWS1Dd05BUFNaTFZJOHJTUHF5R1preTVfa3EyMzNURHpSRUVHcTgyYTFBa3R5Skp2dEl6VExrektGQnV3Tnh6a21HR0JoSEpJS0Y0Z2VyaF84Y1NIclRkYUNKaHc5ZndFRjVVckVCY1dLcjJ0SVMxdmNzY3ROaklqVUcyWmhXOGZrdlN6V0NsTldid1hCeVE4amxlTzA4dC1LaFFBc1dqZ0d6Rw?oc=5"
+        },
+        {
+          "title": "Eugene residents call for moratorium on data centers",
+          "outlet": "NPR for Oregonians",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQaFpFSmFNQmVZaVI5SWVhbGNvLWVzQkk0Y3FnTFJTNmViWlRjU1FTdEJpSVc4MG5PYlAtUDhrNFcwVmtGMlQ0NEpkNmVJamRpTGRzSmN5cWJOX3RuYXctTjlJSUtuRk9Vb1ByRmdSVkNXYWotWTY1LUNlUDlXMjcxNWlZU1FZMlluTjV1YnpoSGl6QXA4WTFtUFMyaEUzdXRWSnI1SkRJRQ?oc=5"
+        },
+        {
+          "title": "Eugene residents demand moratorium on data centers at council meeting",
+          "outlet": "KEZI",
+          "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOS1NvcTdWQkdSUHFqQWIyY1NuQXBjbThGYnJFdTllMUR4bGVIUWVsWUtsM1NRODdzc3Fka01adFd4TnRhQTdzMEFEcVpfM1dyOXNOZFpFbUlLenNqaC12NTN3Y3I0UkkyaUt0NUVhOVVDQTJ0T3JtRjhFT1RjS1FodmttWEFFeW44UVpINnQ4UlI4SXNlaEktNHdPLThIampyWElKMHNKSEprQWExeFJHQXdWZ0h2TlltWDlTaTZXbDRFVGVTU2g5UkctTFJJT3l4ajAxeWhpaHh6N3VFaW1tOHRvRU1sQQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -198,7 +448,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -248,7 +498,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -273,7 +523,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -298,7 +548,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -323,32 +573,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
-      "status": "new"
-    },
-    {
-      "name": "Pinal",
-      "count": 3,
-      "examples": [
-        {
-          "title": "Pinal County rejects massive La Osa data center. Residents want more rules for future projects",
-          "outlet": "KJZZ",
-          "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNSjJuZ3UwbXdUR1hIZXNqQWI4Z0x1eUxIeTN5eWlVdnN6VzVJSDJQYkNGTVVlZG1fVU9LVnR6aWpqVGtYZ0NYckRYRUZOLXdwTjk0ekVOY0hJU0liTXQ1T1luQjhHVE5DUHVUaXhlSVhFSndpYzczVUprTk5hUDE1UENjT2tPM3IwYkktWFBqQVVzMlY0ZWhBalZnelplaTdHeDFYTjBnWUZDQ01VVEE5MTNYNTFTYjhaRHhXSUtfaDVzODZqSVMzLUMxVFdrTDA?oc=5"
-        },
-        {
-          "title": "Pinal County board rejects massive data center project",
-          "outlet": "AZ Family",
-          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQeDMzOGRROHdaOGM3WVhZa1BfYlY2b2x4ZzR1bzVqaU4wMllNckYwVF9aUmcxaEpRN0lzbzVzNU14LTc3Q01HTU5wQVpRalhTU0hCRGVYWTRROHE4VlVwb1I1QVJJTy00YVpjbzNmZnRWanlOdkJzeVF2eVNqbUd6Nkl2OWdpT2tZQ3htckg1Nkl6ZGRrTVHSAaoBQVVfeXFMT0VoblQ2Sl9uWExtcVR0blR5Y05JQUg1THpYMGI0SmFndFBkaTg3aWlsMDNPWW9XMl9WQ0I2UEsyRDFYOG5wRG1xeUcwbE9nWFZTNUlNQU9oQl83X21IeGVHRmlqN2hvWWdvRnA4bWREMUhoREJxRXc2Q2ZQY3dkRTVoMkZYeENGeWdGYmpwdFB0THotaGNhZVQ5Smh2UEJNM3JSMUJhbmV2UFE?oc=5"
-        },
-        {
-          "title": "Pinal County rejects massive Vermaland data center project",
-          "outlet": "The Business Journals",
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNdjRBcUdheXhqRi1GU2xlLTdtNEdHMDF6YlRZS0hrNnY1OTJoQ2RkYWktS09PU3pRal9LTEdxQWRPSzZTUlBCcjZINGtCblV4clZiQkVBZ09LbFNhdm85V000b3ZXRGkxNXlfcTlFXzFpM0oycXBNOVZVbmpIZ08wV2dlRTJnVzNOMnlqVEEyd05kNnJQclB0aFVGQnZaREgtUEE?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -373,7 +598,257 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Hayward",
+      "count": 3,
+      "examples": [
+        {
+          "title": "Hayward Council to consider move to ban data centers at its Sept. 15 meeting",
+          "outlet": "City of Hayward (.gov)",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPdHJQcHMyOU80T3dBMDNhME9MNWRuczRiWU9PMjdoSWgtVWpXRF9ENnNvMUJXeEJYcFplTFp6a0RsbHpJZWZXcHlOTVZHLWtYOTZ3LUlHUDUwTXAxc3lNTVhvRUhoMXpNWmh5VUlaZHJMWUFiTzR0MnhJSi1EbmtaamI5VnVzX0pFY2RrYjFzaWlZOHEzY0VzLTJiNDd5LWVWZTV2cW45TUY1MDBmRnc?oc=5"
+        },
+        {
+          "title": "Hayward Council to consider move to ban data centers at its Sept. 15 meeting",
+          "outlet": "City of Hayward (.gov)",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPanVaSWlEVWh1V2ZmYTBEbXJ6WjM2a3FqRjQ5amh4UHpOWGJfT3o3SkZIMWhXelFhRDdjck9Dc21WX2FrRGpBLUVOU2t1MjBxOUgtS1JnRUlCSE1DSDNJZk9vRmJVVEVEdmR4THZlYXRrV0lsZ2M3S3JobUE4SnJlOGtrZDZtd3dLQ1lWV0pCZi1UcmNDUE11SlBKZzQwY3FfLWVmYUdtTVEzRktqYV9XUjl5MA?oc=5"
+        },
+        {
+          "title": "Hayward Council to consider move to ban data centers at its upcoming Sept. 15 meeting",
+          "outlet": "City of Hayward (.gov)",
+          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcVEyNXJ1MzlwQ00zUzMtSEFWVEJkLVhDencydWRtUEZEbUZKTHk5QU5NakRZeHI3c1Y0azlob0k2T2dGTXcwSDFFWTVFdzM4bzZFT0ZIbHE5Qm4td2tXQTItdW1veFZjSUVDdFE1R3BLT3VFTW5vMGRwcUN3Z0VpbmY4bTFUVmRleWhQOFh5MzdkTlpZV2JVallrajVnaW9wR1lxRzNuQTQ3UFZZZ1B4aXdrdnFaemJtZ1NMbXNtbw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Moffat",
+      "count": 3,
+      "examples": [
+        {
+          "title": "Moffat County commissioners discuss data center moratorium, address transparency questions",
+          "outlet": "Steamboat Pilot",
+          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZXFMMndmRzZ2SlFSdXdhUXZyZms1MkR1Z2pueW84NzkyZTFpZnAtQzBOcmFBbWdQS0NTM3o2ZjQtRzN6WHRxaDZpSzIwVFJQMUw3VHd6RnM5d2lXcXB5QkI4VmQ2Y2Vmenl0dFRyVXB0U3dwLXF0dXhVaEM4QzJoRGpSWWxVNkNpMkRHdzZtS3VtdDNjZ1dfcHV1SVJmWnNzS2RyUjFrdDNrQXJMMXJQUGRXUklZS2lvcDdBRmFGQW1rTFFw?oc=5"
+        },
+        {
+          "title": "Moffat County commissioners discuss data center moratorium, address transparency questions",
+          "outlet": "CraigDailyPress.com",
+          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOWWFDd1FYeWVkTXM4WGRIUkVHZmRGWnN4LW9XMDdjYUVOcHBuTHlGbDRrbjljOW5fVVlpaGVnSVJ1X3R5TXJKVGw4b0hfd2Z4UTNZNVVTMUFMR0VYaHJxY0g4NTIwUmY0d3FQZThwazlsUXZkaEtnYWRrT0FaNGNkVmxvVFhtb1NreTM0VG8zaC1fVnFpejlJUDBwMkpIbzFGM1c2NmUza19ZTnZwdllVdTZaczJPZlRsWS0ySkwzTURUSHlsdUE?oc=5"
+        },
+        {
+          "title": "Moffat County commissioners delay decision on data center moratorium in order to seek public input",
+          "outlet": "CraigDailyPress.com",
+          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPWE9HcFIzd3gxOGpOcnc3LUlOWjcxV25JMVJMMWFhYjZmRkRNTGd3OUdKcVl2LUpBVHJsbDUtN2plSmRRSDBSVm9zcjJkdldqcTRFeHZlMmJNcEdUWlpCc0pPUGV5eHNveHowN3ZOVnVuVEFOdGliMW5MdVZ1MC1nTTlIQ2tiTG1TU2lrNDRNNHNyMUhtUlB6ZFBZWGtMOUJEQkE1S21ycF8zMFo5bjU5aklnT2w0TnA0UG5tOFJKNFpPdGV0eUxXYmppNTRwemQ5T3c?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Jesup",
+      "count": 3,
+      "examples": [
+        {
+          "title": "Jesup residents address concerns surrounding potential data center",
+          "outlet": "WSAV-TV",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPMDVLZm4xSDF1dXlzZVRNaGxBWkFZZHNtUnhQUVFkSVFCS3BLR2UyY2w4cEhnT21Wdk1rLVZBTGJIRnI1VUl5eS00T1h4c21ZaW5qS0Z3Q2dyNDU5ampDT19iazAyRlJLVjBYNkZrM0FBUXVsV2JMM1ZvVVk5NHdiVG5PS0FkVTljQ0FtWnpjNnp6WTZZdHI2bmM3YWhKZ9IBngFBVV95cUxPMDVLZm4xSDF1dXlzZVRNaGxBWkFZZHNtUnhQUVFkSVFCS3BLR2UyY2w4cEhnT21Wdk1rLVZBTGJIRnI1VUl5eS00T1h4c21ZaW5qS0Z3Q2dyNDU5ampDT19iazAyRlJLVjBYNkZrM0FBUXVsV2JMM1ZvVVk5NHdiVG5PS0FkVTljQ0FtWnpjNnp6WTZZdHI2bmM3YWhKZw?oc=5"
+        },
+        {
+          "title": "Jesup residents address concerns surrounding potential data center",
+          "outlet": "WSAV-TV",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQZ09WUmljbXd2SFhjQkptQjhfMnpyRHBZdUo2YUJHZXhWR1NlMXBGeFF4aEtJTXh5ZU9Yd01jbE0xQnUzX3ZkeVo1V3FTSGR0cllpZ1M4TXZPS1hfbnNFM0NxWHJsMUtLWm8ySmdvRUFSWkktTVlMbW5wWkFPbXFjVHpONWpFMHZBUnNwbjFCX3Y2NS0xNXNHbg?oc=5"
+        },
+        {
+          "title": "Jesup residents address concerns surrounding potential data center",
+          "outlet": "WSAV-TV",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQZ09WUmljbXd2SFhjQkptQjhfMnpyRHBZdUo2YUJHZXhWR1NlMXBGeFF4aEtJTXh5ZU9Yd01jbE0xQnUzX3ZkeVo1V3FTSGR0cllpZ1M4TXZPS1hfbnNFM0NxWHJsMUtLWm8ySmdvRUFSWkktTVlMbW5wWkFPbXFjVHpONWpFMHZBUnNwbjFCX3Y2NS0xNXNHbtIBngFBVV95cUxPMDVLZm4xSDF1dXlzZVRNaGxBWkFZZHNtUnhQUVFkSVFCS3BLR2UyY2w4cEhnT21Wdk1rLVZBTGJIRnI1VUl5eS00T1h4c21ZaW5qS0Z3Q2dyNDU5ampDT19iazAyRlJLVjBYNkZrM0FBUXVsV2JMM1ZvVVk5NHdiVG5PS0FkVTljQ0FtWnpjNnp6WTZZdHI2bmM3YWhKZw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Alachua",
+      "count": 3,
+      "examples": [
+        {
+          "title": "Alachua residents push back against proposed data center rules ahead of planning meeting",
+          "outlet": "WCJB",
+          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQWklEMDlwRFBlQkVRbTdhLTNNSlh3M0l2eVRuNlpTZXRYNVZWM0s5Mi1YRUp4bFV3d0JLOTllUExJcS1UQ0oxUU80UWY2WTRVeUVjRmJhZWsyc3JFVUVhaE1UdGhkUklRRy1SODFSUUN5c0ltYldDN1FyTi1fVWtiRExIOHlESTJXc3F6U0VCMmJDenktQ3FiSUVOZGFsM1ZlUDRFSkVTUFBjRE9iNWxVanpmTi1aY0xvZHfSAc4BQVVfeXFMT1NrTFFJeS1fZVk4ck8yczVsZFZKVHFlejRFYkZkdWZXc2ZHMGhxUDVRMDJEel9TaDBybWxCODNnMTc5UUtXOXhSZk9EWEo4aHNKYmdLdW5RalpMSHQ2VmtWbmp1bTZYX0YyanVfdWhHQ09lOFVKb3pCV3hEUWJKTHZseVltNklzSzdrTXdNdW5UOFlmSE5KWHRlakpUQldCQ0tLZGZSdXY0dF9ranNEMUlMSThrMTlDMUE1SjFBTEhndzd1TDVVcjlhYnZBU1E?oc=5"
+        },
+        {
+          "title": "Alachua residents push back against proposed data center rules ahead of planning meeting",
+          "outlet": "WCJB",
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPU2tMUUl5LV9lWThyTzJzNWxkVkpUcWV6NEViRmR1ZldzZkcwaHFQNVEwMkR6X1NoMHJtbEI4M2cxNzlRS1c5eFJmT0RYSjhoc0piZ0t1blFqWkxIdDZWa1ZuanVtNlhfRjJqdV91aEdDT2U4VUpvekJXeERRYkpMdmx5WW02SXNLN2tNd011blQ4WWZITkpYdGVqSlRCV0JDS0tkZlJ1djR0X2tqc0QxSUxJOGsxOUMxQTVKMUFMSGd3N3VMNVVyOWFidkFTUdIBzgFBVV95cUxPU2tMUUl5LV9lWThyTzJzNWxkVkpUcWV6NEViRmR1ZldzZkcwaHFQNVEwMkR6X1NoMHJtbEI4M2cxNzlRS1c5eFJmT0RYSjhoc0piZ0t1blFqWkxIdDZWa1ZuanVtNlhfRjJqdV91aEdDT2U4VUpvekJXeERRYkpMdmx5WW02SXNLN2tNd011blQ4WWZITkpYdGVqSlRCV0JDS0tkZlJ1djR0X2tqc0QxSUxJOGsxOUMxQTVKMUFMSGd3N3VMNVVyOWFidkFTUQ?oc=5"
+        },
+        {
+          "title": "Alachua residents frustrated after data center meeting gets postponed: ‘It just seems to be a pattern’",
+          "outlet": "WCJB",
+          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPTUdicUxBQmF1REwzdi1oUXdjYm9CcUFkMmNLMTF5aEtRaHllZnFpTjJvY2hlbWhGbklEQ1hrWnpJMWxuN2F2VGdiZHBKSzFwbXZ1MXZsaDRNRWd3NWxaSEFlMmthYldaOWxTOTdMNUd3b3dXbGl2ZzJnLU5xSXJEN2ptdUxJaks2TGloOTFhTXJwUzdzSHVLeURjNktkblUzLURpM1Q4ek5QYnRvUEVPdE5mTWFEWVpsdWctMEhZMNIB0wFBVV95cUxONTVWLXVYMDN3elRWMFNrOGN6WmlBZDVuN0RERUs5NmJFUE9Ham9OUkZOTVlzTkR4Qmg2VmJzOWp4S2JkRG5BbEhUWjdYRE5RSm5fblVUTmlYZEhoY1dvM0ppa09hWDMxcDhaUVh0VUMtWVBNRjBNWUlzNS1zNjltRE05eVNYbDR1MTkxbG1hcmhtVlprOXF2eGpObHFPVzdEQXYtSHZSX3RGTGZkM1ZFZkZkdWYwdnF0QmZCN2FnSDY0MWNnNm9RaGxQaWZ4U0lrb0Fz?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Levy",
+      "count": 3,
+      "examples": [
+        {
+          "title": "Levy County Commission passes moratorium for large scale data centers",
+          "outlet": "WCJB",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQak83WHQ0VDBNSk9veHo2S0NjaGRzeVd1RFppNWNyLXAtVVZ4SGZlbEc4RjFYT2I1SVUtai1DSHktVy12Wl9RTjZkdV9UdDIyd3E1aVZ1M3lCLWVnQzRpZFM2LXIyT2FBQkRyM2tXcFpfN09HaTd2VmFRMVA2M3lEZ0xjM2JNNVFjc2tueHpRbTZfRTc3TEQ1d0lMMWMzTUXSAbMBQVVfeXFMTm9yeGxySDNZMFMtOXcxWXNyU2dxOHFDRzhxc2x6aTAzZmo3M0JvUFN3ZDNKMVdUNHpWQjBZSnJFNU84SEItWW1BbmVUYjFTc19UX3MzdEZFalByYjBMc2pkVTJBcURKd0Z6dG1uRXRReGtoS1pVSVBfUk1ic2hVakhZN3doRkxBbnpOTVhUQmF0U2NYSXpnbE9yQWpGWllHaXhqZXBfZzA5eGNBUDl5X2IxMGs?oc=5"
+        },
+        {
+          "title": "Levy County Commission passes moratorium for large scale data centers",
+          "outlet": "WCJB",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOTk9mYWMydTVZTGpGUmlubGQ3QXRiUHc3bVA1TjYxWFhtZkFqcFhNWFJtbzhGc2xTckJQYlNOclBwN0hQVGtsY0p4Y2UtaHpZSHRCMkY0bXBqRkFheGV5RGNNb2Y0SFhObGFLcV90WXRaTDY1cnI0M0QyLWpod0dmVTY3UlUyY042dE03ZUFlQ1hudHIzWjktYTJzaGtvSmdyYVVkR3Vza3ZpRVJvaDlOejYxQTRma25ocnU0?oc=5"
+        },
+        {
+          "title": "Levy County approves moratorium on data centers",
+          "outlet": "chronicleonline.com",
+          "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOVUxBSC10S3ZJQjNZem5aeEFKd2FGZjU3VFdScF9MOUR1TElzTVdvRDNEVHRyMjN3dDEyTFBfVngtRVRwbDVXNW1JeW84by12MWtiYnJ2Z1JHSnNjMUpodldrRXFSR2R6WVJub0VZbDV6N2QyQi1DX0QzTnVOOVdjX2tQNURHdGZ3WjJMenVkQTA5SThjVXRZX3hWNFl0VDFOdHlNRGY4UW5CZTg4Vkg1NEhXOExYcEh6aGRkLWlQam4ta0lMYXRUWFlFc0xGdkdZaDIwbUpmYW5JZWtWelhuTmUtbG56c2ZIc0hyZzVFZ1p6cGIwMzdxQnV5U0c4dw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Clermont",
+      "count": 3,
+      "examples": [
+        {
+          "title": "San Francisco company pitches data center in Clermont County despite local moratorium",
+          "outlet": "WKRC",
+          "link": "https://news.google.com/rss/articles/CBMixgJBVV95cUxQWnFEajRjZm5BQUFkTWpCRWxJeDlOdEFHTHlodGJkcmVCVExUaVU2TW55V1AtLUlsejJ6alJMSlBrYk01aFdWamRfQS1rQ1hfUk1MMVBjOUJzaFJrWHJiRE90eHJNcUVqWUhKT1h6SFlqeHR3c21zaGNvckJieEFpc3J6Ykt4a2lxVm40d1hvMlVQREU2MlpLaXFFM3poUHluWUZiaDNaZkxGSWU4elc1alE2MmdqaHdWRDc1X1YwcVNTRDFZYklsWkNCLXhackxOanl3a2UzQnNHelZTSHREX1g3SEdGYUVZX0hNOHZBeTAyTXBOVXI1ZklfdUVnc3pvV1NMWHhTMHVBcUNCUjBOV3FDZHFsWGtmRGlESnREMFk0MFRGUlh4cmJrVHVnWldVemZoYnRJc1pCVEwtN3NiZ0xrd3F1Zw?oc=5"
+        },
+        {
+          "title": "San Francisco company pitches data center in Clermont County despite local moratorium",
+          "outlet": "WKRC",
+          "link": "https://news.google.com/rss/articles/CBMi0AJBVV95cUxOb2R6ZllRcHNSRFhMZzZOWnZxV3pUdFN0TEY3cjc2M1hVZURKaVdtZFI2U1hxZ08xY1Z2enJWOXAtZTRjVVJUT2s2am12QUtpLWxpd0hLSEZNYmlENDBNQ1N3SjNFc0NZV0tTcXQtMXRZSnZjS3RLY2JZSTFYMGh4b2NSd1BsYV8yNDRwd0wxeWpWNzlkTE1rbE9IVGhYc3h1dkVWajdOWmh4UldjU29aRlk2MWxJQlZ3bDlETHhvRFg1WUw5dy1aMnduOElWTHhLNFJhTTJHdXd2OHc5UktYYTdqQ3NyNzZOTGJhMWh2bnJEZzRpbXh5c0o3SG8xaE0zMjhrazl3b04yek1rblVLam83Q3ZHV0ZURHMyR0QtbHZ6N2tfQzBfTWRzM1lpTFZhd2ZRS0pyQ0RmZVdCZlZoYndCV1UzOXY3WjNISm1xY0s?oc=5"
+        },
+        {
+          "title": "San Francisco company pitches data center in Clermont County despite local moratorium",
+          "outlet": "WKRC",
+          "link": "https://news.google.com/rss/articles/CBMi4wJBVV95cUxQaVJrdjEtTy03OFAxMFdPZ1NndGNKTWxDeUJ0eENxOEhxT2xUQ3JYSkRHb1FDREVBdFBocGhnLV80RHRvZFFSUVVEOWxPNlNBZjZJQnhwMVVYdGZ6bmx2eTh1RTBSWUYxU2ZueThGZ3hQX1p6X2gxTWNtTnF4UXpEVjNDQWhjb3pNUVVIODFiRVJscGlYUHJJOW15c1plRVo0VEJTYVdJOWVjcVN6OTZrQTVmR3phSjhFUTluTG5UdFFmSVlmdXRGSDdiOEtGR1ozR3hxaUpJYmFqQ1VscjFrd2QzM0JLMURHQmUxcTJnRVViTnp0c0hnRVhlclVyeGtsR1BCaEtMcmN0M3Z5OXVMcnpBQlJEeDR3UDEzWkRNWE1PMHpJYjFpNFpJNVRKMzcxVU5rdUlMWmdqNXpKQ0tFZm1EMU05TmM3emxNR1hOX0daTy1LVWVCQ2hlbmw0cWNpRm0w?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Jacinto City",
+      "count": 3,
+      "examples": [
+        {
+          "title": "Jacinto City residents not sold on proposed data center",
+          "outlet": "ABC13 Houston",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNRFgwMXZNdkpXYzRpVlVReW1Tekt3cC10ZmFMT05NZmNlNGRCVUFjaXIwOWcxVU1Id2I1RDEydXRaUTRETllzTXhnOVlkUzZoT0IyWGlrUS02WUxGTEhIMUdXdnlicmRvNE5VWTJoRGtmSEk5eEZ3TXVrTmxpZENibHdyUDVRTmdsRFlkYTln0gGTAUFVX3lxTE1IWXlmbVRKY2ZFRE5COGNwZXg2ekR1Zmg2UmVjcUV2U1FKaGlRNWEtZGdyNHAxOVNDOXJ6cWZVbmlPdW9JZlFjZ3VIUGtub1kxTzlXYjlEcDR4RzRKUUJXa2luRXlBaFZJR1ZaTzJual9aWWczR19XNzdYVFNXenhqWXJ2dXp6MFhUX3lTWHowbXhUQQ?oc=5"
+        },
+        {
+          "title": "Jacinto City residents push back against proposed AI data center at former Budweiser plant",
+          "outlet": "khou.com",
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNeEZ5TTFVSWpLVnN1WG4zaGtoZzB5YzBDTkR2VEhBbFNKUmFHR2gwYlAyS2otRklfTFFrRUZrakhsN0IwamdQQTg5cXZjUklaOXAwVktfRktQaW11M0RQSmJycG5WdDJLRWR4RHAtZUUwSkZLdmVXc1lRWDNZZklwQklYdXgyNkNGelFmOEtsWGV6cURKcEhPdnNxdUZmZG5kZC1vaksxSjRmUUYwcWlHaTlBd19GU0dDT0tMY3N2RXJKdw?oc=5"
+        },
+        {
+          "title": "Jacinto City leaders oppose proposed AI data center as company eyes October redevelopment",
+          "outlet": "Click2Houston",
+          "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNSGRGTE1TZzl6V1I1THNidWtfazhXQWxSYXBiNGlZc0IxSl9ETml5cE1GTVEwSDhsVElKY3RPNXhnbV9LSG1Na1k2dFBIOFlFWVRZblRObE9Cb3JURTJKUDRBcFVfaFdtZE12QnBpa09DSmZ2UzFhWTRrS1gwT0M4M0RaOXNDcF9vSURfYmZSanJqMXZWT1Z2ZVZ2N2F3S1dIdWhCMWtHTmg3UGp0MUZpUGxzTjdmbkZCTU9fdG1pQ3hPZmhhV0QyTzBReUxIZF9tdEdTcThVdUFpQQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Philadelphia",
+      "count": 3,
+      "examples": [
+        {
+          "title": "Philadelphia residents launch ‘No Data Centers in Philly’ campaign, call for citywide moratorium",
+          "outlet": "Yahoo",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNOUNxSWhXWnJLNnNERVNKcmtEamVmX3RsZGJ4RTUxWjFEOGpMLTBfU2JSZFh2Q1lpWHBPLXRpTFFqQi1BbUNORjFlcng5c3ZhMTNOdWJ5YmZlNFdTT3JuZE83djBUVkhYVjJ0N1VBdmtYVzRhTEhSWlZrenY5bXQzbWEyRVFWOTVvVFNLZnhUR1dxQQ?oc=5"
+        },
+        {
+          "title": "Philadelphia residents launch ‘No Data Centers in Philly’ campaign, call for citywide moratorium",
+          "outlet": "FOX 29 Philadelphia",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZG1XTWJiX0dZOGxxcHk5X3hLdUR4ZHdvamRaREdfQ21XTFQ2SXhBaXRPTFFYa1lqQ0ZyX0FIdExqaS1YX3M1V3pEVjhwZHJyY0FvU2ltVUV0WV9wY3lNTS1PaWdSclFaRkxna09mdTNQWDRka1lEX1pCTUIwLXoyLUotUDA0Rm13dmFkcTVVa2VGZmVkNGw4YXhOM25qMVExaWdVQURjOGl4bXgzY3RVM2h6Yw?oc=5"
+        },
+        {
+          "title": "Philadelphia residents say they need a moratorium, not a task force",
+          "outlet": "WHYY",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNRERPa2lxV3FWQmFRNWpxX0FOWXdieGM5OGtDbmFKN2tZVGFhQ0M4TURNLS04MHdmQW42RkVGbkRPN09PRGdmbzNab3VrUWoyVWF2WHZBQldxV1RfX3hVbEtiUExCM21KaTJKZXNoV3ZSajZYMEREbEZVTWRGamY2QWFzMVo?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Joppa",
+      "count": 3,
+      "examples": [
+        {
+          "title": "Joppa residents upset over data center construction saying there was no notification to residents",
+          "outlet": "WFAA",
+          "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNRHF3b3dFOVBLY28wMHZ1MnBVUEhqdHozSW5jSkNoTHFXWkUwVmJEUEVIX2ZHejRDNHdvcGVFalVjUmFERUJCMHZaUFdXeUxaRVNWSWlLRU9QSnl1VDEtTWdIMVBaOU5UNnJUeVY4Nld2XzNmakY5UVZndTQwM0NSUENJdnlMcDFBQ2dla2VyUXB3cXl6TzdrNlY1V1pOdndSQlFNWXNIZEhLdTdLNmkwb0k5c1lkNDlOdkVSTEUzd2ZCRW1JcFRsQjQ4UHZpbVV2ck5EUHROaWRTNUVRTUNJeGJ2MUxhaEpucWxxVXlJb0MtM2NzeUg2Q2dnWjY5Z1cxY2s4V1A1Ykp2c0E?oc=5"
+        },
+        {
+          "title": "Joppa residents raise concerns after data center built near homes without community notice",
+          "outlet": "WFAA",
+          "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOMUJJQlRBcXdkcmk1QkpIS0dhSHBZbGw0THY4eEhWaFh1WDdpMGwtdk90R1B4ZW9iNVRKSVl2YXJaRmJXVk1ya0lJMDZ5MkFXRVc2VGJydEpaakE3dFZPUUdrM1h2eFdlc0ZoTUNRS0c2aEQ5UmFtOG1CVlAxNVNja3d4QXV4Ui1mSWtodDdDb1RHM2ZGYm96eTVzd1BseGtydzNZY3FqZUhGUEtJSVNrdWF4ZkVIN1lfZk05akdaNER6QjRMLWd1SXhhVDRWNnBpNTZrSjNOUExDbElKRU9TYnBkdzgxeGxmOWEyMklGOW13dXU1LXRPQnRTN3lZTXN0aFJObnRZTzdpUTNVSnVpSQ?oc=5"
+        },
+        {
+          "title": "'Slap in the face': Joppa residents raise concerns over noisy new data center",
+          "outlet": "KERA News",
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQX0xpYmFsWVdLclUzM2Q2T01GVXlManFoRVpDcVFCVzJIS3pJYzJnLWt2a3NDY2RaampMNFRQeTVsRTZocHAtdjFSSnNWNVdvOUhneHpycS1vbFJfdGhCRHhwU3UzdnNVWDRUQlJYRXJSVFBJa0pncEtxLVNpLWpWc2NYeWNaNHZMME5ZYUdaNGtHVE9EYXNjb2dPbXVIRDQwOFRfNVVzNGxSNXRwaUlZR3JKSG5DeXFtWkxRM0tZUV9sLS00Q19rWQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Columbus",
+      "count": 3,
+      "examples": [
+        {
+          "title": "Changing the flow: Columbus Council eyes data center water costs",
+          "outlet": "WSYX",
+          "link": "https://news.google.com/rss/articles/CBMisAJBVV95cUxOc2sxdmstV3BfRDVrQ0JMWEJfVFM0MVg5X2tDLVQ5ZVFLbmJrc0lTZzZVZlktX0ZLX1U3bEc5UFRJN09OS0RUY1VFMy1qSklPLVRCRGFtbFNFR1BYVlVTRkNSYi1iREdXNTBhNC03MzVCSWlqR093aVNDRGxBVTRBY2U5RTJ3QXZDaXZSY2ZjdThURGZKNU5neEhCd1BXZzdGc3lXWlFHczBaYWNIbDQ1WnZUNDdRaXdmRElvQnBPenhmZ0FyTmFZaWp6bDFpcU5BMEdXU2JoMEF6VS1kZDMxMk9mT3d1Vm9DMkJmbkI2ZVhnbXNkNXpZeVBObGR2N252cDZ6NzE0UlhyeXpZMzVSSHVzcWgteTBkcE8tRmMwTVJIM0tjdjJFM3VYWm1QaGJv?oc=5"
+        },
+        {
+          "title": "Changing the flow: Columbus Council eyes data center water costs",
+          "outlet": "WSYX",
+          "link": "https://news.google.com/rss/articles/CBMitwJBVV95cUxOTjFXb1p1c1NFNWxtX0V1LXdXWENyRjFlRmloTWhBcGZkRmxYRTlzRmgzWnBXWl9hY1lmMDdJblFoQWFrYk5jVUNSaFZSOG9kY2VjaTZDWTN0TUh4S1NoSHhPQzAwWVE2UzN0a003ZWVFWjMwN2lqaEVZcXJzckZmMENxZ21vU1hSRVVIQ013Q2ZOd0Z1eTB1Q0RsVEZtdldVVENlWjYwaUpRSFIyc0I0Z1lzMXdrUlFWVU5VV05sMzgxU3MzTUpnX0ZFRE1EVnlveVVYdVJmU0hzc085RWg3SXprTjByby1hX2Y0WjZrSjRUQW5oblNXVW5jY21jYjhlckZWUk80LURZS3dhb1ZnM3Y3QXNyZ2R3d3VRZ0NYRzBRdk5ET2twNmM3Si1XQUQ5LTFCR0wtcw?oc=5"
+        },
+        {
+          "title": "Changing the flow: Columbus Council eyes data center water costs",
+          "outlet": "cwcolumbus.com",
+          "link": "https://news.google.com/rss/articles/CBMiygJBVV95cUxNYzdMVTRONzlpRThfVUNyaWlkbEJoSXhwVnhEWU1xcmVBbGtvQ0hUUFNOMDVZQzQ0dlVBZGdPZjNhMmZ6RXRzcThUdmVNRlA3eXVFTjlfQWRSVDRXTy01YWJ4OU0tNGdaVzdyZFRDY2ZETm1pUEo1NlRMRE1jOGtQNkpuZmFTZk11c0NuQmpLVzNab01fUEVHaV9RNmlIdm1VVlhYWEpreGZEcUhZWW5pbGoyT2VyY3RSa1ktUWNSODg1MUdYbFJzbEJPcTJPZk9kTkswbWduZnFTSGpzTDhTSkRJYnVOMUhiVWVQX3loZldGU3BFRmg2UEZlN084M3ZqZHFwcXYwRVdxZ25SbmY1MERlcEJGamlqWXA1emhKcGlQNnlrY3NzMF9EUXluQ21lSHphN2pheWVmNmFUY2V3ZnJKQUg1Y0JPMHc?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -433,47 +908,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
-      "status": "new"
-    },
-    {
-      "name": "Hayward",
-      "count": 2,
-      "examples": [
-        {
-          "title": "Hayward Council to consider move to ban data centers at its Sept. 15 meeting",
-          "outlet": "City of Hayward (.gov)",
-          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPdHJQcHMyOU80T3dBMDNhME9MNWRuczRiWU9PMjdoSWgtVWpXRF9ENnNvMUJXeEJYcFplTFp6a0RsbHpJZWZXcHlOTVZHLWtYOTZ3LUlHUDUwTXAxc3lNTVhvRUhoMXpNWmh5VUlaZHJMWUFiTzR0MnhJSi1EbmtaamI5VnVzX0pFY2RrYjFzaWlZOHEzY0VzLTJiNDd5LWVWZTV2cW45TUY1MDBmRnc?oc=5"
-        },
-        {
-          "title": "Hayward Council to consider move to ban data centers at its Sept. 15 meeting",
-          "outlet": "City of Hayward (.gov)",
-          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPanVaSWlEVWh1V2ZmYTBEbXJ6WjM2a3FqRjQ5amh4UHpOWGJfT3o3SkZIMWhXelFhRDdjck9Dc21WX2FrRGpBLUVOU2t1MjBxOUgtS1JnRUlCSE1DSDNJZk9vRmJVVEVEdmR4THZlYXRrV0lsZ2M3S3JobUE4SnJlOGtrZDZtd3dLQ1lWV0pCZi1UcmNDUE11SlBKZzQwY3FfLWVmYUdtTVEzRktqYV9XUjl5MA?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
-      "status": "new"
-    },
-    {
-      "name": "Moffat",
-      "count": 2,
-      "examples": [
-        {
-          "title": "Moffat County commissioners discuss data center moratorium, address transparency questions",
-          "outlet": "Steamboat Pilot",
-          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZXFMMndmRzZ2SlFSdXdhUXZyZms1MkR1Z2pueW84NzkyZTFpZnAtQzBOcmFBbWdQS0NTM3o2ZjQtRzN6WHRxaDZpSzIwVFJQMUw3VHd6RnM5d2lXcXB5QkI4VmQ2Y2Vmenl0dFRyVXB0U3dwLXF0dXhVaEM4QzJoRGpSWWxVNkNpMkRHdzZtS3VtdDNjZ1dfcHV1SVJmWnNzS2RyUjFrdDNrQXJMMXJQUGRXUklZS2lvcDdBRmFGQW1rTFFw?oc=5"
-        },
-        {
-          "title": "Moffat County commissioners discuss data center moratorium, address transparency questions",
-          "outlet": "CraigDailyPress.com",
-          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOWWFDd1FYeWVkTXM4WGRIUkVHZmRGWnN4LW9XMDdjYUVOcHBuTHlGbDRrbjljOW5fVVlpaGVnSVJ1X3R5TXJKVGw4b0hfd2Z4UTNZNVVTMUFMR0VYaHJxY0g4NTIwUmY0d3FQZThwazlsUXZkaEtnYWRrT0FaNGNkVmxvVFhtb1NreTM0VG8zaC1fVnFpejlJUDBwMkpIbzFGM1c2NmUza19ZTnZwdllVdTZaczJPZlRsWS0ySkwzTURUSHlsdUE?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -493,7 +928,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -513,7 +948,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -613,7 +1048,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -633,7 +1068,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -653,7 +1088,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -673,7 +1108,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -753,7 +1188,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -793,7 +1228,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -813,7 +1248,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -873,27 +1308,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
-      "status": "new"
-    },
-    {
-      "name": "Massena",
-      "count": 2,
-      "examples": [
-        {
-          "title": "Keep open mind on data centers, ex-mayor tells Massena residents",
-          "outlet": "WWNY",
-          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObm5UdUhjZUlGUk1zQUVvRE1iOGtWYXlYdGhZZ0hXNlZvMlFYSFAzc0VRNV8xOTZyVVZhLWhzNVBsUDYzdVI0VzM2ckVjeUNRYXVpRmdISTdHSWw0VVR4X1RkSTNwMnpFdEVCYVVEM21VVmRzbTJVbnNnTjBYTHpSZUZqTHdlNU5uWXd6cUdEejE4RkZqb0ZZSl9MZw?oc=5"
-        },
-        {
-          "title": "Keep open mind on data centers, ex-mayor tells Massena residents",
-          "outlet": "WWNY",
-          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObm5UdUhjZUlGUk1zQUVvRE1iOGtWYXlYdGhZZ0hXNlZvMlFYSFAzc0VRNV8xOTZyVVZhLWhzNVBsUDYzdVI0VzM2ckVjeUNRYXVpRmdISTdHSWw0VVR4X1RkSTNwMnpFdEVCYVVEM21VVmRzbTJVbnNnTjBYTHpSZUZqTHdlNU5uWXd6cUdEejE4RkZqb0ZZSl9MZ9IBrwFBVV95cUxOcnpTd3F0WmZELVJJMVd4eldTOU5MeVZ0TEpCUFFCN1E2aWtMRUhvRWhLNVJCV1U0Z05FOHozQ1l4d0pzQVNkU3VIc2ZVSlFQSFBGcXY2cEdKdzAycGhYd2k3a1V6dWJmNHZKejgwVjZ1UWNsa3U4U1pqSXFIYUpJcnNQZDBmQjhUQ0YzV2dHa285TWNjR0NqNi11WDlncTVac0hYQ0pDWG0xSmp1dC1Z?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -913,7 +1328,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -933,7 +1348,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -953,7 +1368,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -973,7 +1388,367 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Americus City",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Americus City Council discusses data center ordinance",
+          "outlet": "Americus Times-Recorder",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQamc5ZnRlOVB4VW5HVEtIbTNFN291QmhSQ2s3elNvSFFqUTBxaWpCdnpuSWF4TDhYUE5sRlFWc0prSVM1X3c2NVExb0w3dG93ZkFGaXVQcXBpNTJ3TTNsdjdiTF9GMGNraXB0TXRzeU9aTWthdEpEc0lJanQyekdxbUMxQ0tCcmhWQzV5ak0yMVhhbVkxX1VJck9aZjhJVkJf?oc=5"
+        },
+        {
+          "title": "Americus City Council to hold public hearing for data center ordinance amendment",
+          "outlet": "Americus Times-Recorder",
+          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQNjBGT2NHajRFQVJQLUN0WWhrdmxsaV9PMHk0WnljaERMQ1JJRnIzVTlTMXRZaF9CR1JjdzJ6YjVfREhyTmFrNnhQeDdMUl94Y25FajhiQjZKUTc4TkhhLTRMYTA5d25CcFNENWdsbTlnNlMwcmJuVzVWSHNIOWRKUl9oRmRvb21vT2NmcDhUNWktMG9VU01hbjFqWU82RUdUN0gxZVBDLTdmaldnd25meFBYMGN6QUVIY3lZa2s4NEtLcnZD?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "McDonald",
+      "count": 2,
+      "examples": [
+        {
+          "title": "McDonald residents address council over data center concerns",
+          "outlet": "WFMJ",
+          "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaWJ2Y3dKcXJ0YjlfdkdRTHpXQ2VCN2RHQTNZNThvOWhjVTlSd1lyWmxZTW9lX2syZm9LX2VodTVhSXFrNG9Ja2FpTnZQRGNXc0RLV1ZEWkZWNDJYT0hqeHk0N29vMkk3TWdyMDY3c2FxS2RGeThYOTRsdEdUN3lMR2JBeHR3ai1sYTNUdlNJVnFOdXpUSVNJdUVsQ21KcXZERS1RSk9xRGdtRi0xUEVLZlUwODBtcE5lbzYzZFBQNmREeTVqLVFlNEZGUFJwREUwZlpJN01rc1lxSjM3aHctTg?oc=5"
+        },
+        {
+          "title": "McDonald residents push back against proposed data center",
+          "outlet": "Yahoo",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPRHRwQnB6NXBpWVkwdENEbGowdUVaQ0ZFcUI4ZTNzWklEMDhRblRjMUUtVmxhakN5T180NFJlM3otT1c0TnVyMml3bENRb3VmSXM3d0o3R3RqckJYdXNGOTVrVmJPN0FHZEl6a2pBSWZTTU9taVh0ejJXalNrUk52VVM1ZnNaU1gzWG9YVEFUY0Q?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Byron City",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Byron City Council to discuss proposed data center ordinance during public forum",
+          "outlet": "WGXA",
+          "link": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOTGpqVXJmcVlKZjNZYjZFWWlBTmkxUXBRTnZEMk9HU2Vydl9uVUZJaGtjbVVXYkk0S25WMWU1WHNGbmZIYzBhRVRvUVFUeFVxVzhMcnRqYzNuWVp2dHpMb28tdWpVN2xWY3dPaXZjVWJJWWJ5N1BNR3U0dkkxdFhGYmQtdkxXbWhTX04zVEFpSmxIRnAtWjhGeHVZREI2cFEyUUFNQkFjaWNmbDNiWlZEODRxYm5mWS03TnBrdnBQcTgzUy1MaVdoZ0pCTllUXzRDQk1tUGN1ZDIyX0RxZW01dVBnY2FHcDd3WTdnT0swY0dDQkQ2OXd0Uzg1UDlmam5UdzZNcTlyb3JqWjFpeWlGNzI5X1laQ3M?oc=5"
+        },
+        {
+          "title": "Byron City Council approves data center ordinances despite residents' continued concerns",
+          "outlet": "wgxa.tv",
+          "link": "https://news.google.com/rss/articles/CBMiugJBVV95cUxQMHdURXp1WkI0aHRyaFc4X2NMVEpTRkMzdXVaMlJZSDI2amlZczJtRzh3OFJDaGV1UWpEbGszdUs4Q2cwOXdNNERuQVdTYW93ZzcyMkw4d1RxWXRTQTNOVWlSNkdsOWdPdWg5cnQ2aWdlNWt5bEctdnNvRnlZQ3phRXhEQ1U0M2I1RjJ0WGhLMkVVTFRiRG9PUG5IdGhmNzlJOGp0dWdHM0libmcyN1h1d21UenR1cmROTDl0VUdKSy1hbnV2Zi1pWW05ZHE3RTNpcVJqU1dSaWotNXpXSV8zQmJ2NkUzS2xQRmVNWFNLYXE5bTQ2TEhpZTV0cGVHSVRuWGJpY3dGTlFXdm95NVZ4YVhaRWZhc3Q4V01RVmpPREFvT052ZnctazdqeHdNbFVmMEh6TUZRTUFiQQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Byron",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Byron residents raise concerns over proposed data center ordinance",
+          "outlet": "41NBC News",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQc2xhVGlHUWJYVGVVcV9VRnZzSGVPOVVFSWhjajVWVEowMWlGS3dkTjJzdWg0MDVXVlJqZWVzWncxbFRaY0ZkNjhla2MyMFlxYXVrMENpenhqazVxSER1Qk5iMkxaX2lKZUg0azBZbk9ha1czZFVsZUNZOV9TZmJReVNPMWwzeDl3bU5CbjN3RjJKUE0?oc=5"
+        },
+        {
+          "title": "Byron city council unanimously adopts data center ordinance after months of review | Here's what that means",
+          "outlet": "13WMAZ",
+          "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOYjdNTFpicFNKSGVpUklmM1R4NkNfUE41RTVycDYwSWd3ZWR2ZFpiVF94dzBwV0VLeUZNUWc4WWU1ZERBSVpMa2M3NEoydzNPcFBrcHVCT1VhOEttOW16bjgyNU5QSXhMS1F1c1RYYm8tZzVwV2I0UHRtaTBCUE9hU1g2bUtxaGlFdFE5MGpGRnUxdTdyMUM0UXRCcGxIbVZnVjJkNjJxRGRFLWp3RTJ0Zkt2VGRHTDhOazNyeGVtR2pQQmw0RjdMY2ZKa2ZNU0FvZGtiTHR0bktJNWRKclJjR1RqNU90ZmVhV1lCX21icUdDQ1E4djhN?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Hopkinton",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Recap: Hopkinton Council Adopts 60-Day Data Center Moratorium, Weighs Extension Past Election Day",
+          "outlet": "Uprise RI",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUzZRTXpXTmNTOUVFMmtFbmxXTjdSQVZtSldYSWZlM0hBNmxZYmdSR1FGcVF5RmRyRThFMzd3ajZkdXdEZ3B2QXU2NmtzNVp1ZVdITFRDVlZSTWJ0b193Q2dSdlR1cFFMd0FSY2ZiTFZOdHMwc0M0UzBfV3NkRFpQV05YRzkybm5fdXlURkRCZzNrZ0FUQ3dYNUVTcFQzTG9Way14eFdjMjBfS2dfNHJMaVUxeVFqZjZQempzOUx1d2xMWEU?oc=5"
+        },
+        {
+          "title": "Recap: Hopkinton Planning Board Backs Townwide Data Center Ban, Tables Soil Erosion Ordinance",
+          "outlet": "Uprise RI",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOcWFJeVRycnRVSFNTZ21RYlNHV3F0Z3VfTE56NVZrejczQXJSNUJZdTRvVDdjUTkxUjdtZEpyRlFmTWlHUjVPcy1KZUpnZHpSWFh4Q0t5VngwV3I3eDdITG5rdzU5V2d4VVN0NGg2dWotdUFEUjU4bUhGQlZVWjVxOU84dUFveFhrNG43NTFRUUttNF81RUdKQlN6M1RzQ1hac1pGYk5UekxseTNSdXNhVHh1Zl9rTmdnYVdUOENn?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Oshkosh Common",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Oshkosh Common Council passes temporary moratorium on data centers",
+          "outlet": "WBAY",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQcmY5NHQ3dExfR2pfNGZKX0IxTXl4MHVGOXFGcUJ3QzBkN00tS1l0MkNBSWVMbWJIMXk3Y3FYaG91ZzJrTi1qeW0zNnhkNzl3alliNFp1Y25ja1BMUmlnRWdacW1fWndoZTVkakgydHN0aERLTWFVOTZUaWRMVnBLazh2SHhZaU1tRjNZOW1EUXM1MUNDeF9GUTFGRUE?oc=5"
+        },
+        {
+          "title": "Oshkosh Common Council passes temporary moratorium on data centers",
+          "outlet": "WBAY",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQcmY5NHQ3dExfR2pfNGZKX0IxTXl4MHVGOXFGcUJ3QzBkN00tS1l0MkNBSWVMbWJIMXk3Y3FYaG91ZzJrTi1qeW0zNnhkNzl3alliNFp1Y25ja1BMUmlnRWdacW1fWndoZTVkakgydHN0aERLTWFVOTZUaWRMVnBLazh2SHhZaU1tRjNZOW1EUXM1MUNDeF9GUTFGRUHSAbABQVVfeXFMUFhSYm5qa1pBWkh0ak5mUjJBNUlLb2tKUDJVX0NuT3ZJUG52Mk5ZYTNWNmdDdk1EMU5tYzI1dDAySkdQbE5TV2taV3YtX25IMWl3c3BsZk55YU1xeVBKY3dNLXVJU012YmdmMjhGWnZaVlZ5WG02RmpIRzlqcnBPWmFqNHBGbUV4T0Y0S1FYZ3dUSDFGNy1ieVBnby1RZWxUem14NDlyNTJ4TEVNU0dFXzM?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Sterling City",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Sterling City Council approves temporary ban on data center applications",
+          "outlet": "WQAD",
+          "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPbkl2RURHVlhqbGNpOC1rTEZ3YnAxRnNYUVZJNi1ZMTJyOHJmTjlmOW5tSmlGU09zeFlzVE9YWndjODZrTzV3VTd1NVcxLVR5NnFuZTlpQkRFcmF4aDlFdW5OR2ROZF93MWZYOTR6UEpId0xDMUt2OXFjeDdLQllfS2cxSFpsMmhBY1hYVlh5aS1SdHFTazRzM2hsckxpaFF2aXdRaXJqejhVVDRPX0ZOb05MMDRvUEJQMGdoZVNvRkdBR3V6eHljY0l5X3oxQk9zWVFPS3M5QzFJN0JWQUVkdkdkQzJUM2Z5OTBBRDFxY0M3RTBjSnNyX1FHZTE?oc=5"
+        },
+        {
+          "title": "Sterling City Council approves moratorium on data center applications",
+          "outlet": "WQAD",
+          "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNS0wwQTJjZWlVNmJaT0tSNjRlM0VlS0drakpZRjNUbllTV25zbzhldVJXeHpBa3AydGJHSU0wRGlyQi1lblV3VVd3WGlhZXN0R0Z3dHFaQlZVb2ZadE92Z1ZNY0E0Wno5NV9DUG4tOVpqb3hmVkFHNVZ4NHEwc1Fya0N5MDdHNVZsejduUnZkcnNKQW5NTlJ2NVZSYl9zYzJQT2NVY0NGckRQOTZnTUJKaDFqdXl6d3pmbnA0bGR3T041Vm1YM1M4TzRBZzZydW1WYWtuVDFXWnQ0Q2g5ZzJpNnFn?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Jasper",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Jasper County takes first step toward temporary moratorium on new data centers",
+          "outlet": "WJCL",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNR1BNWkIwVTJHTlMtOU5HcTVEZDB2b1g2TjNYS1hSSk5SOHlnSUI3b1VvbGFhTllmdmFaNEhCbWhPV2NCMUdjckhVR3ZhWDZwb3pieXJoLU1wNV96QkswektrNGNWSXZ1a3U1QmpHbUlNS1JudnVRRVhNTy04LWMtR0JaU0dvWWh1SmdoaTB2YmxmNkc5bkJEa0U0NHV5Ym5Fd3VDR29sX19TelhLaktRVTdXYmFjLXM?oc=5"
+        },
+        {
+          "title": "Jasper County wants a 1-year freeze on data centers. What that would mean",
+          "outlet": "Hilton Head Island Packet",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5yR2Z0YnlGT2lhbmc1WHFjaWdLVzM5Q2VEbzZrV080T25tTU1HaGQ3QVk3NWNkY3hkbndyTUZBLW5xVS03Z3ZHM0FSVjBFQkdWS1RCOUhPVFY1NHFDU25MaWF2VWtqNlQweW1fTElB0gFuQVVfeXFMUHVQY3BRSjc1ZFRWaVR1ai1VLVRXTGxQM2hMQ2pvT1NoZEQ3Q05LdDlpQUQ5aVhUZFVQYWxJRThMS0p3V0RScTZIbGlhQURnREYzSXFwbWtUYXhuTEtoTGdRU19odlNTZkJzcHhZeVE?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Chillicothe",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Chillicothe residents weigh proposed data center at former paper mill",
+          "outlet": "10TV",
+          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQQzJxYldSRFhhZmZzcVptX09zSE5mZGFDdkRya2VsUnVCdnNsSDVMWl9XNkFRQ0d4QWhhYnhhaVlTejlEUm55MUtmOVNGMXlXdlNhSlRDNlRFTjduM3IyeVVKSWVpMWtxSWxrRXMxbUhWQTA5Q014WDVXYzAwaWRoV2RvZlc4c3k5Q2VXRU5NdE9sS0FkVlo2LS1PVWJlcFo2TGJ4OHppVkVGTnVLSUxFZ2pWeHdtMkFxSUpWRGVTVkI3YThaOE1NcWVoaGhZd0xzaXc?oc=5"
+        },
+        {
+          "title": "Chillicothe residents weigh proposed data center at former paper mill",
+          "outlet": "Yahoo",
+          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOeDFMMVFtZDJ3a0NOTkE4MlVQc1RyRVFNYjA5UmwtNUd5Mno0dWtRWVc4OFY5NDkxcTNqU2pDa2NYalcxTW5EbUl4Z1Y2Z215QVNSQ2IyenMwanF6REZTSmdhMmV2LVlQNHc1WFBZdDJSMHRiZnpBVVJ2X3ZvVDhiVl9GOEpldFhYQTNwcUpHNWVSRkNtR2pJ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Greenfield City",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Greenfield City Council to consider data center moratorium following governor’s order",
+          "outlet": "Greenfield Recorder",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOLVRDRmRhQlR3Y1htVzU4WTJHbmpuaERtQ2RfV0dxaEg0RFRaR0R5clVKMDNNRXpKaE5KWkt1TERNSkQ2dlBLU19uQXZFbldwUGpUd1pnSG1xQWNSLVA4VnJWZHk4RHFHTGozM2l0SG1WRHpsdlZTaGRrZlNCWHVjSEpWM0xRNVN5QTRqQUtXYlhNanRRa2x3TjB4ZjBvZG5KUF9aTzVXQzlLRVJTUzNwV0FNbmNBTDlx?oc=5"
+        },
+        {
+          "title": "Greenfield City Council adopts one-year moratorium on data centers",
+          "outlet": "recorder.com",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOOWZNa1c3ejFnT2xNUjJEUWtpbGtIZHd0eW5MS011R1dzQ2hwOUV2dFJQZGxmZzhURVItSFphbXhBcENpZmxUcE9jaURTaF9WWGRBUDVYQW0zbjdtTEZzN0FITjZnMkduN1c4VTZDQWVfM1VtWGRvY3IwRDB1X2ZfdA?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Ramos Leads Newark",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Councilman Ramos Leads Newark Council Call for A Pause on Data Centers",
+          "outlet": "Insider NJ",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVmozb2ZIaW5tMURBdTYtajlZS1JPQUZGWm5wVlM2d0NVZ2xjdVdhS08xMzF5cFY5cDVmUjJPOFdvdDFYWkY2b1A4V1BSU1EwclpKUk84WHpjTVFOQmJiZFFCVHZMLW5ERGF3dWM4V3AzLVJaLU50OEtTbHg3U2UxcE5VaFV4UDRKVVlmZ2FoMVVqa2NZejk1ZzJoaVZpZw?oc=5"
+        },
+        {
+          "title": "Councilman Ramos Leads Newark Council Call for A Pause on Data Centers",
+          "outlet": "Insider NJ",
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUHpkb09UUVNmWS1DdXZnRmpKUk1ielRfQlRkWVhnSWVNX2lpYnduV0h5RXctVXJNazdEMmFDSGtqX2ZtbEhDT0g3WjI2UmdMRVRITW82cTItM1pDRzBJOWlvN3Y3WThIX3VYbzN6QTFsblZYSkVVQzlSSmRsa0ZXanVxV0d5VEoxbnppMHB2a1p3d3R3R0pfNG1kNjV2RE9GVzNrNVU4NUo1a3hsTlNpZw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Ionia",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Ionia residents voice concerns over potential data center development at city meeting",
+          "outlet": "WZZM13.com",
+          "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPamlxY29nSmw0SmZPRUIxVU5yNmVRTFpuZmVPdjVpS1dMT2xqSlNISlhJQmZXenp4NlpJZmlqeGpFNm9CN3YyR0VtOWpWbG1fS0gwbU42dlMtZ3c3MWk4N3JXdzJqdFdaczBHYkdLenRSQ3lVYnNHOUtuX255RUFydHhZeDJ6cWdaTEpMeVNrWW91NTdtLWJ6OWtZaXF0MXphZ0tXbm45eExNeVd4ZnMtdHpFTUJTRlpJLWpOSE5uLVBwQUVqdUFoY2FuY3E2MFhNcmF1bWZEVmtNOXY1V3hRZjhzMWlJa2ZSNXRScVQweEJ1UG1MWUFRWFVGWQ?oc=5"
+        },
+        {
+          "title": "Ionia leaders hear concerns, questions about data centers",
+          "outlet": "thedailynews.cc",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQUM5Nk1uUnhHeG5VMFlabG1rOG51aEZvWHF5NmxFd185ZmNGVGQ3SVhqV1Z5QkhveC03VzF5UVNSclhLVTM4U1c3VTd1QTZEQ25ncmJVUDU0UUlYZVlVcl9VbV9KdEJzV0ExZ0I1V2pHejlOaGlGS2hCMWRIT2FuSl9VSU1hRkRlaWJrTjZ5aUlJS1BHbFFxZ3Zn?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Southport",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Southport leaders unanimously back data center moratorium",
+          "outlet": "WECT",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPT2FnSmpyRU91M0F6WnNzdmswTVRXWHB2MlNFeWd6NUtEOUdjQ2lTU2Vyem54NkFnQUp4bmZ4MU5ENExMUk9PRnI2YzFkR1lpR1dwS1oyR0tUa3JTWkh0YVIyM2MwSXBUMk0tempBX1RWNmJMTEkyZ0NTcmw2Z2xzS1ZkMU4xeG4zbm1GNTRuVldyeHg10gGoAUFVX3lxTE5XSFd0NFN3bFg2eDB6UmRSSTVyc1RLMTlKbEZaa2t4WDVLT25WSmJtTUJJQjhtSE40bHFCalZYYUY5UHZzOVk2eEpLWHVWWjNTVTJPWDJOdC1FZTduM0ZlN0pEaFNNS3ZLNEtRSHI4dmdLWXlIcHlDcXE1NWQtVzl4M0oyaGVLSGIzdk5uZnZSSlZPdzc4Ykc5Q1p5bkRsVk5fckx0cnB0QQ?oc=5"
+        },
+        {
+          "title": "Southport leaders unanimously back data center moratorium",
+          "outlet": "WECT",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQb1FlbTFkYTJhSkpKbmktZVFUbW05ZG5nVHVNTmJyd2ZyWDRpejd1bC1MSFByOWlVVTlIYXRoTDJoRG1Nd0JGZFlkelY0YlNwNmMxcFZqazZ2MXlUbV9CUzRLNEZKbnVRcjRpTUFuNmdCNDVwVXJxT3YzcUNrbmowaER2QjMtNVlrWlE2ZTRlZVhSWmVBUExsTXQzbFU?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "West Richland",
+      "count": 2,
+      "examples": [
+        {
+          "title": "West Richland residents push for safeguards as data center debate grows",
+          "outlet": "The Center Square",
+          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVVJESE5XS0VTM1Z0WmJVRUNySDgxQVNFVHpFS1BCVUd1T0loalR4YjNnQ3EteHV1aDlwN1otQ3dzbDgzSnVSMHFOaFdKUDFRWlM0NEtQQk1veGRYb3JlTGFtODd5M1JOaEpvZHZhdlVXQ2pvQ0JjYUxZbnJzR1h4aG50dXQwMWxydGoxcmNHdk5aTEpEUTlR?oc=5"
+        },
+        {
+          "title": "West Richland residents pack city council meeting after land sold to data center developer",
+          "outlet": "Nonstop Local News",
+          "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOTzJoWVdfT09RT0ctV0w0Z01FUHZMSkt3Z2lXWm9hRk9BQXhUQ1VNQmNGZlBPcDl6V3FlQ3V0U0lXTnFmZWhIWFVVU3pnLTJHUW5JcGhuUWJOMXlMbGVMWVZURjcxaEFxRnN1RDdVdE5KSWF6TW5LOTgydVlIM295akVMN3NWUDBGSERNTzdZTE1qMXlac01UNDJ1Tlo0dU9NN1FnOHRoU2pOMkVuMVZtSWF4T0pTTzlubS05elhodk45WFRMOFI5QzdZZkNVTmRidFpvbjB6Q1hYMVBKRkJmRU5ZWGJGWVczSnlmeHZtVFZLcnVHUmZwN3dYN1ZXcnRRNnE0?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Portland",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Portland Council to vote on ban on secret NDAs with Data Center Developers",
+          "outlet": "KPTV",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNVUZxT25wS1VkejVrRkVVeDJuX1ZYaE9hdEc2bnQ4alNCUThDMm5qLTFpQk4yVVdCRWxSREJQSDM2ZnJSMXZDbmZtNEQ2TU82cWpHbkVDcmMtTzRlMDN4ZzA1Y2lnVl92Q1lXOGFYRnNqNl9pNDhhVkJQdnd0WWZySFJlUldYWlBmXzRVTXJ2TmRLcUk4UmJBeW5nWUNSXzg?oc=5"
+        },
+        {
+          "title": "Portland Council to vote on ban on secret NDAs with Data Center Developers",
+          "outlet": "KPTV",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNVUZxT25wS1VkejVrRkVVeDJuX1ZYaE9hdEc2bnQ4alNCUThDMm5qLTFpQk4yVVdCRWxSREJQSDM2ZnJSMXZDbmZtNEQ2TU82cWpHbkVDcmMtTzRlMDN4ZzA1Y2lnVl92Q1lXOGFYRnNqNl9pNDhhVkJQdnd0WWZySFJlUldYWlBmXzRVTXJ2TmRLcUk4UmJBeW5nWUNSXzjSAbMBQVVfeXFMTkhfUDlleVNjYkFDSzdNQ0Jwd1NPQ2NrM0RFMTZxdHk4RXVNRUlhSnhQdFlrVk90TFZac1E3QlE0OVJrbVo5TmNwQzJYckJZMnpJaFA3V1dXVVNFOEVJdzBUX2d4ODByZ3hKYm9HWGhEamxCc2IwRmNzYXpXaGZKanhSeHNmcEZFaDFsMC1sUE5CLTlBZXZvVlkzTzRFRlduQjhBdDZxZFFBXzlPX0F3enRYQ2c?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Macon Co.",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Dozens of Macon Co. residents gather for data center forum",
+          "outlet": "WCIA.com",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOOEF4VTFFSUd4VmNlSlBTZnNKWU1mamFCaVNWcmU5UkNGMlBuTDAzbVIzRXVvTFRobDhiLWRQdjFFVjQtdXVER0U4bUFaR1NEVEdQVG00Zk00eVRFcmM1d3VsYUV2X1BhSzBOX2hsS2ZCZ3prZk9POW1wTVZ4RTRoVmZibnpHR2VRVUx2dmdPaktEeDR0TnhKWmh1X3VEYTZkR1NR0gGjAUFVX3lxTE44QXhVMUVJR3hWY2VKUFNmc0pZTWZqYUJpU1ZyZTlSQ0YyUG5MMDNtUjNFdW9MVGhsOGItZFB2MUVWNC11dURHRThtQVpHU0RUR1BUbTRmTTR5VEVyYzV3dWxhRXZfUGFLME5faGxLZkJnemtmT085bXBNVnhFNGhWZmJuekdHZVFVTHZ2Z09qS0R4NHROeEpaaHVfdURhNmRHU1E?oc=5"
+        },
+        {
+          "title": "Dozens of Macon Co. residents gather for data center forum",
+          "outlet": "WCIA.com",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQS2hDQTBPcEZQck1jalJXNXNXdU9vUE0tV3BfWnloZ0ZSaWNtbkFnUzlIVFVvTDJYRDBkeUxEM2VpS1NFMUlPSDJlcDNseUpVZGFheUNZdUdtdDEycld5a1hJWGN4NDNCQXZwVi13eUF1eWd0NEZHSkxMNnhGcnVCZ2NRWHAtcDlMOU5YWHdEY3hKMFJXTUlUWEE3SGRFd9IBowFBVV95cUxOOEF4VTFFSUd4VmNlSlBTZnNKWU1mamFCaVNWcmU5UkNGMlBuTDAzbVIzRXVvTFRobDhiLWRQdjFFVjQtdXVER0U4bUFaR1NEVEdQVG00Zk00eVRFcmM1d3VsYUV2X1BhSzBOX2hsS2ZCZ3prZk9POW1wTVZ4RTRoVmZibnpHR2VRVUx2dmdPaktEeDR0TnhKWmh1X3VEYTZkR1NR?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Sauk",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Sauk County approves 18-month moratorium on new data centers",
+          "outlet": "WMTV 15 NEWS",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNOXZIazZuUWN4TXYxUTBxZHU3VXFQdGg3M2g2aGtGTlJFQVpsdXRRa1VsS0R2eDZDX1d5LS1sWHg5ZHd6dmJldVdLT2FCV0lkQkU0RnYyb2U3Y3g2N0hhSV9sVl9OZnc1S1dIYlFmUWxFMDFUOHRuMTlTMG5XcDJsNFY1NUFDdk13UFljeVY0VmRTaXkxWF9maERsNkXSAbABQVVfeXFMTzZEb0F6WjQ4NWcxNjJlS0FHSGxMakNBQTh5cHExcGl5WXQzeDBYeUhuQUJuaVhWT3pqTXdCSjFpMGpIVmg4eHNkQ2k2REtHVjlscGNZbVY5dXUzZHRhMThzd2llRGFlRG1tenU5QjRMVGdCUkJZb09qNTdmaEtxbmVjemJVck9Tdl85WnNxeVpycllqR2VuX3BvS3FEczFid0NIVldycE44b3N1aEt0N1M?oc=5"
+        },
+        {
+          "title": "Sauk County approves 18-month moratorium on new data centers",
+          "outlet": "WIBW",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxObXZQdFdtajU0bHhRTTBTQkVCNFNldmozQ2pvZ2EtT1g1Y2ktblJmalowM1JBbnpibG1xTTAtR1FvU3JJRWlBaTAzMjAyOEhocEh0Ny0xR19keURYeWx4YUZlRmpSaV8wTW9CbEduSVVBXzFMNW9FWWp4Zk5LT3VkN2t6dmswMl9scVNOaHg2Smc2ZDBGNFdQQk5GOGM?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Columbus City",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Columbus City Council to update residents on proposed data center legislation Wednesday",
+          "outlet": "myfox28columbus.com",
+          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQi1faVFlcWk4WFNneVlLeFRmc05mZnNBbjJRSkpwb1d1Z2wxbEl4TV9nU2ZSOU5zSU1nT25KNDg5ZWk4WlVFdjVxSjFDcEoyMHJOUDkzWl9SemJVdnpCeE1ia1prajhYUzZfM0tPRzYyR2NmQ0xMZ1pVaTB0bmwteUt6VHhoRkx1aXBtVUpMaEM3c0FqQi0wcUtCTW0wY2hrWXd6ZXBjN01ZQTkxMTNiaFNEdTlOaW1RSkU5ZWJSX0VYM3gw?oc=5"
+        },
+        {
+          "title": "Columbus City Council to update residents on proposed data center legislation Wednesday",
+          "outlet": "abc6onyourside.com",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOY3psUUM0Vk1tekl3b0hZLVJ1V09BYWVqcEp2MzNJS2o0YjhjYVZWMGNNMHBITFVvbEp2UmJkQWtWUnFlbzFldFZpZXVGeUNzQmhNTGVWWmItcHk4ajFRTVlFRkdCRzNQWXRIM2s3anB1QWNFT2lId2ZsbkhNUXZtWmlrLVVZUVB2Wkw4ajYzME82UFA4TWZvMnJJYlVhVFdZWU5ESFBQNFV3MWhlZU1Qb3BpNXQtd2M3Tl9tbFNkemdxQjQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -988,7 +1763,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1033,7 +1808,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1048,7 +1823,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1108,7 +1883,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1153,7 +1928,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1183,7 +1958,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1213,7 +1988,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1243,7 +2018,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1258,7 +2033,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1288,22 +2063,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
-      "status": "new"
-    },
-    {
-      "name": "Americus City",
-      "count": 1,
-      "examples": [
-        {
-          "title": "Americus City Council discusses data center ordinance",
-          "outlet": "Americus Times-Recorder",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQamc5ZnRlOVB4VW5HVEtIbTNFN291QmhSQ2s3elNvSFFqUTBxaWpCdnpuSWF4TDhYUE5sRlFWc0prSVM1X3c2NVExb0w3dG93ZkFGaXVQcXBpNTJ3TTNsdjdiTF9GMGNraXB0TXRzeU9aTWthdEpEc0lJanQyekdxbUMxQ0tCcmhWQzV5ak0yMVhhbVkxX1VJck9aZjhJVkJf?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1333,7 +2093,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1348,7 +2108,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1363,7 +2123,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1378,7 +2138,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1423,7 +2183,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1453,7 +2213,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1498,7 +2258,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1513,7 +2273,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1528,7 +2288,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1573,7 +2333,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1588,7 +2348,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1633,7 +2393,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1648,7 +2408,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1663,7 +2423,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1678,7 +2438,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1723,7 +2483,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1753,7 +2513,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1768,7 +2528,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1828,7 +2588,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1843,7 +2603,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1858,7 +2618,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1903,7 +2663,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1918,7 +2678,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1933,7 +2693,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1948,7 +2708,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -1993,7 +2753,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2008,7 +2768,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2083,22 +2843,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-09-07",
-      "status": "new"
-    },
-    {
-      "name": "McDonald",
-      "count": 1,
-      "examples": [
-        {
-          "title": "McDonald residents address council over data center concerns",
-          "outlet": "WFMJ",
-          "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaWJ2Y3dKcXJ0YjlfdkdRTHpXQ2VCN2RHQTNZNThvOWhjVTlSd1lyWmxZTW9lX2syZm9LX2VodTVhSXFrNG9Ja2FpTnZQRGNXc0RLV1ZEWkZWNDJYT0hqeHk0N29vMkk3TWdyMDY3c2FxS2RGeThYOTRsdEdUN3lMR2JBeHR3ai1sYTNUdlNJVnFOdXpUSVNJdUVsQ21KcXZERS1RSk9xRGdtRi0xUEVLZlUwODBtcE5lbzYzZFBQNmREeTVqLVFlNEZGUFJwREUwZlpJN01rc1lxSjM3aHctTg?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-08-20",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2113,7 +2858,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-21",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2128,7 +2873,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-21",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2173,7 +2918,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2188,7 +2933,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2203,7 +2948,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2218,7 +2963,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2263,7 +3008,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2278,22 +3023,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-09-07",
-      "status": "new"
-    },
-    {
-      "name": "Byron City",
-      "count": 1,
-      "examples": [
-        {
-          "title": "Byron City Council to discuss proposed data center ordinance during public forum",
-          "outlet": "WGXA",
-          "link": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOTGpqVXJmcVlKZjNZYjZFWWlBTmkxUXBRTnZEMk9HU2Vydl9uVUZJaGtjbVVXYkk0S25WMWU1WHNGbmZIYzBhRVRvUVFUeFVxVzhMcnRqYzNuWVp2dHpMb28tdWpVN2xWY3dPaXZjVWJJWWJ5N1BNR3U0dkkxdFhGYmQtdkxXbWhTX04zVEFpSmxIRnAtWjhGeHVZREI2cFEyUUFNQkFjaWNmbDNiWlZEODRxYm5mWS03TnBrdnBQcTgzUy1MaVdoZ0pCTllUXzRDQk1tUGN1ZDIyX0RxZW01dVBnY2FHcDd3WTdnT0swY0dDQkQ2OXd0Uzg1UDlmam5UdzZNcTlyb3JqWjFpeWlGNzI5X1laQ3M?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2308,7 +3038,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2323,7 +3053,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2338,7 +3068,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2353,22 +3083,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-09-07",
-      "status": "new"
-    },
-    {
-      "name": "Byron",
-      "count": 1,
-      "examples": [
-        {
-          "title": "Byron residents raise concerns over proposed data center ordinance",
-          "outlet": "41NBC News",
-          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQc2xhVGlHUWJYVGVVcV9VRnZzSGVPOVVFSWhjajVWVEowMWlGS3dkTjJzdWg0MDVXVlJqZWVzWncxbFRaY0ZkNjhla2MyMFlxYXVrMENpenhqazVxSER1Qk5iMkxaX2lKZUg0azBZbk9ha1czZFVsZUNZOV9TZmJReVNPMWwzeDl3bU5CbjN3RjJKUE0?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2383,7 +3098,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2398,7 +3113,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2413,7 +3128,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2443,7 +3158,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2458,7 +3173,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2503,7 +3218,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2533,7 +3248,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2548,7 +3263,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2563,7 +3278,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2578,7 +3293,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2593,7 +3308,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2608,7 +3323,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2638,7 +3353,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2653,7 +3368,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2668,7 +3383,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2683,7 +3398,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2698,7 +3413,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2713,7 +3428,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2728,7 +3443,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2743,7 +3458,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2758,7 +3473,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2773,7 +3488,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2788,7 +3503,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2803,7 +3518,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2818,7 +3533,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2833,7 +3548,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2848,7 +3563,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2863,7 +3578,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2878,7 +3593,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2893,7 +3608,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2908,7 +3623,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2923,7 +3638,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2953,7 +3668,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2968,7 +3683,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2983,7 +3698,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -2998,7 +3713,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3013,7 +3728,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3043,7 +3758,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3058,22 +3773,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
-      "status": "new"
-    },
-    {
-      "name": "Upper Burrell",
-      "count": 1,
-      "examples": [
-        {
-          "title": "Upper Burrell residents decry transparency as data center progresses despite moratorium and a lawsuit",
-          "outlet": "Pittsburgh's Public Source",
-          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNdVdrYTRiTlA4STZhbFhwQXJJRlFEcWdOZ1FFTjFTcnEtOW1TaS0teVVkVzNMTFRra2Z2QTNoYVVaaXl3TnpVT0lGc0l5cUFLeUZ2X2R1ZGhzblVFZzhDaHI0VFpZU2xDX1NjRmU1OVlBRXY5UGFRZmd6RFhUSm85bmljUQ?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3088,7 +3788,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3103,7 +3803,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3118,7 +3818,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3133,7 +3833,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3148,7 +3848,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3163,7 +3863,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3178,7 +3878,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3193,7 +3893,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3208,7 +3908,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3238,7 +3938,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3253,22 +3953,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
-      "status": "new"
-    },
-    {
-      "name": "Hopkinton",
-      "count": 1,
-      "examples": [
-        {
-          "title": "Recap: Hopkinton Council Adopts 60-Day Data Center Moratorium, Weighs Extension Past Election Day",
-          "outlet": "Uprise RI",
-          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUzZRTXpXTmNTOUVFMmtFbmxXTjdSQVZtSldYSWZlM0hBNmxZYmdSR1FGcVF5RmRyRThFMzd3ajZkdXdEZ3B2QXU2NmtzNVp1ZVdITFRDVlZSTWJ0b193Q2dSdlR1cFFMd0FSY2ZiTFZOdHMwc0M0UzBfV3NkRFpQV05YRzkybm5fdXlURkRCZzNrZ0FUQ3dYNUVTcFQzTG9Way14eFdjMjBfS2dfNHJMaVUxeVFqZjZQempzOUx1d2xMWEU?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3283,7 +3968,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3298,7 +3983,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-06",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {
@@ -3313,7 +3998,172 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Hayden Town",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Hayden Town Council eyes data center moratorium after public pushback",
+          "outlet": "steamboatpilot.com",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZHdGUEF2dEJ3cEo3S3dGcXlfRWpWT0Z1M1lWbjBfWmY1TkI1RkpfWHFrdGM2ZmlKY0ItOG54dC1pMWN4MEtaVC0wTGF5LUtBY0xMT3hNU2FnSzktTE1nOXZQM3hfNnFYTTl5SWppMHMyQzFmSzZaSDJQTzRiTG9vTzFQbVBpU1NEamMtVGVqcGVkS1BwVUl5OGJWTGRVMGdRdGRKalRDSF9QUQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Portland City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Portland City Council Will Consider Resolution Opposing NDAs in Data Center Talks",
+          "outlet": "Willamette Week",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYjNlTmRENi1JdkZqT2tLa0Z1WHNIS0o0M2diQkh0M25INm5sZmdqVW5KMzA2aVR5dlJqZ1R3cENyV0xGQVNELUZlVjUzeGhyQmpWZktpcVd5bHN3aFZtZWpscFpLQ2dSMVpfQnB2WS15QUZxZ2lHbjh3dnhBdlVZdHNabHdzYUlzOWNMamNWWVAyQ0Q5MlFldmNJWlBIZEdjaWI2V0tsSW1Ydw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Hood",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Hood County commissioners set to discuss proposed data center projects amid ongoing debate",
+          "outlet": "NBC 5 Dallas-Fort Worth",
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPb0tRNE5jVUVnXy1GTk10Yklqa3ZvajY0ZDdXUV9nUC1XNGhIbEQ3bGtETVZlbURpVW9SQmU4Z1c4NkVoMDJWUTQ3ZmJrV3J0bExQUGMzbzNRWi1aVzJrOFphTExxcEkwUURGbEp0WWhObGowOEtZRlp0NXIzeEJROHVIeUZtRzQtZEJBRXpibThSY1VmUmRkNmNtU0pSZlczMDJnZEhPNTFMaENzMVkwNjNlS0J6NGIwQTFoMlNLekJhUHUwWWppaTQxYnhlQdIB1gFBVV95cUxNMGVKQmc4NG1hTVpfWFQtMzh0dGJ4RmszU3hKZHh4d0V6VHE3eXJtTE51WVRZb3JfRVM4UkZLWF9teUR1UmtXTmpoZ0h6NW1qSVhfQjk3T1ZpU1IzM3RWV2JwZTNDVVpJZDUzZ1duRzVkNVh5TjBmcXp2YjlJRExBbnRPUnBiLTFKUmVIdUVmck4wWFdaVWhXeWVFVDFtWlJrWk1JR3ZVYXVWVDNDem9IMEVpbGYzejlGZElheDlBMXZjQW9kaTQ1YnRrWVdHQk1IcmtlWkRR?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Eau Claire",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Eau Claire County Begins Work On Data Center Moratorium -...",
+          "outlet": "Volume One",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOd1U3czlXSXNkLUZtRW5ubXFTejBKYmRtT2pPYmo3MG9oLVJhUzQ2TGs0SmZ6enN1QXV1TTRoZHl0Z3VLVmdUd09OUlVmNjlaZEZieG9Kc2U2RnhXUjlzNkNGMVo1ZTY3ZnNtNjVfV2hfaEJ4a0tNYmZvcG1lR1hrZW9TMWVPR3l2Skxja29IaV9aa0FSbzhOZ2pja01CQjdpSmFXX1FoTQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Fort Wayne City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Fort Wayne City Council considers 365-day data center moratorium",
+          "outlet": "WANE 15",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPYlhhU1V5ZGJUU1VGUXhKZVIxS1FfMjlhZEZiNFNFM0tDbWtwMWZIbFRqTko3a3BtbTkyRXhvLW1TNXhFdml1VWZCQng4RWxSNHZpdXBFNEFuMWotakZJQklRSFlTRXNZODB0SEhncUJ6QmE1NldESXgzQ3dzSjFKRnhGQS1zVlpfaVByeWlJNEpQX0pWMDVaUXJjWUxtRGPSAaQBQVVfeXFMTlpSYVZFS2RnN2JhS01SVEVUUS1sOFRZMlktYVJueVFGUXVhOVhILXhUcS0wSXdldFF5aFlSYmRNOWROY2F1Y3VjbjBMVl9mWFhaeVFSdlBHLW9OV3hZczY0SFR0YzBNeWNJQXBVUjlncTJMcWhyT1oyUUQ2T1M1M212c0JWeEJqd21JNEJmSm1MWjRJOXBoNGdkUUhSZ1RlS0VaS2I?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Dauphin",
+      "count": 1,
+      "examples": [
+        {
+          "title": "‘We’ll pay for everything’: Company pitches $10.5B data center plans in Dauphin County",
+          "outlet": "PennLive.com",
+          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNOHpkSUxhamllYkFFUXJIaTNVZ3lXbE5NSEhVT2ZrMzMxNGw2djVWdTJ3WGNHZUxyNUlRNmtDZm1pQ3lRV2NsaGJLRVFHM2w2SUQ2eWFIbkVSd3IzMjB0cGF3dE95d3ZtRGFBb08wQVIxY2hlOG5FSjI0dnJoX3QzR1F1c0tfcjZRbE9wVWJUNWFJRlpCMVZPRXYxT1FOOW9iaE9fdlFsRy1fSW1PcUtzOERTUGdXb29udjhLUHhtMEtzc0dqUXc?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Clearfield City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Clearfield City Council passes data center moratorium in wake of ‘grandiose scale of Stratos’",
+          "outlet": "Standard-Examiner",
+          "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPdkp5M2NpVHVOTXVJaEhLMUkzNEFlVzU3Wlg5NGNQS3A3ckQ2RGVHOU5VdDQ1MWk4ZTlKdHB0cVNQcTEwdGpTSnk1NVM2dE1ScWV2U20tU1ZlZWdDNmJUc1RVdTRFUFRMVVhFSVc5MVVfcUNPbFpJcXdlRHE4d2ppcGc3RDZrbnNKQXlZQVZkcHlfZXczdURla1oxSVdTblo0Wk5aTGNVT09LWEl5UW9nUmlBQ2dWSXNzdkpCTzJET3M5RnI1QTM5MjNJdFJ0ZE1JWnlBeUFGdw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Burgin",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Burgin city council member walks out to stop a vote for a proposed data center project",
+          "outlet": "News From The States",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPX3BFVzlVUnJRTUdHMVlPTXNhclRaNkZ4Wm9BdDJLbERQUnFpT3pZWUxIMWVDR1JaakRyNGNLSU1uVUt2bEFLSVh0Ty1qWWEwS3ozNGlfVlU3c2JpemZPMlI0a0NIOF84M1h5MTEzSXFBb1JVeHR5V21xYXZxSU9LbGdpX2h5M3h0M0FvNXU5a1ZxcGx2ZzBVdHBWMGdnbkRwQ3BkaVdmNHRwTzFsUDJHZ19SbExBTEd2?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Nash",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Nash County enacts temporary moratorium on data centers",
+          "outlet": "Rocky Mount Telegram",
+          "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOd0ctXzZhby0wRDB4a3RFNjRjQ29qSTJ3TFh2UWdhZHo0U3NhejlGUS1BVjJzQUFRcFBLaWs3d2tjMW9QZWw1SlJfaVlpVjBWRWdRX1U2SF84b3R4Z0c5c0lxVWQ0SGJidTlVRzY5aE5XUTR0WTJJRUFxZWNwT1dTNGJOeDRRUjg0d0lVSGpSV1UwU2lheUN6MXVZczVaZldkcUxBV3hMZG5TVUp1M3d5cF9BalRzWVpFanNaMHlNd0g4bWtJdVBWS1R0NHBvcVdTTjVLOWpUZWxVY3RwcmM2a2VWXzgzQQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Now",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Data centers sparked a fight. Now residents shape the rules.",
+          "outlet": "chronicleonline.com",
+          "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPaGRsWGFIWHZxaWNfYUpndXZkUjNFdzRkRUM0VkJ1aER6UmtIcmtiS0lEVHlyYXI5eDE0TFdQUjRxLV9QelBiaDlwZ2Z1SzlnQVFSN1RJRFd5dzJiRkZaYkxxR0psTnpTRnpObmYtSGE1bDFtUjdrTk9Pb1ZQY0VBUWFJUDJtLU41eUZmNS1IM19CTkhyVnZxQk45dmJXNG5GblNqbWd0dGZoejFBb0hGSEM1UXFMNi16ZHZJcldfVllPOC1TMDBCcTBNUGRaRkdOTGdnSGx4Ync0NVZpdmdUdzFoQjdodw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "status": "new"
+    },
+    {
+      "name": "Rockingham City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Rockingham City Council approves rezoning request for data center in split vote",
+          "outlet": "Richmond Observer",
+          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQQU5nYlNNSzRZWmpKZVNWNzZJcU5QSTVMNEhlUWtFWE55UDV3bzFZRFZseHRsSWdPS0xKOC1ucDZGTTVISm4wLUtmTlYzSVlnUm9VTmQ2bVgyMnZRWXM5V1E2UzFFRmIxMWIyaXJvZTZZSUt1MjNaZ2hLaTN4T29CSjg5ejZlcnV5V1pEckszOC1MYlV2Vkg2VEU3c1djUEJXRnRnN3U1dGM3TTF2eGVDS281T0RINDdHekdhSU9ILV8?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
       "status": "new"
     },
     {

@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 7254,
+  "count": 7256,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -55468,7 +55468,7 @@
       "locality": "Fulton County",
       "state": "IN",
       "first_seen": "2026-08-31",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-20"
     },
     {
       "title": "Akron, Indiana Population 2026",
@@ -70967,7 +70967,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-14",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-20"
     },
     {
       "title": "Texas counties have no zoning powers over data centers",
@@ -72859,7 +72859,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-16",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-20"
     },
     {
       "title": "Hayward Sets Stage for Data Center Moratorium",
@@ -74245,7 +74245,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-15",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-20"
     },
     {
       "title": "Abbott orders state water board to penalize uncompliant data centers",
@@ -76412,7 +76412,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-20"
     },
     {
       "title": "Silicon Valley AI data center boom faces local resistance over environmental concerns",
@@ -76731,7 +76731,7 @@
       "locality": "Scott County",
       "state": "KY",
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-20"
     },
     {
       "title": "Massive data center proposal faces potential legal battle as Tonganoxie neighbors voice noise, power concerns",
@@ -77677,7 +77677,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-20"
     },
     {
       "title": "Hanover Township Committee introduce ordinance curbing data centers",
@@ -78238,7 +78238,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-20"
     },
     {
       "title": "Arcata City Council OKs 45-day moratorium for data centers",
@@ -78249,7 +78249,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-20"
     },
     {
       "title": "Proposed Data Center Regulations for Wilmington Will Not Be on November Ballot",
@@ -79800,6 +79800,28 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-15",
+      "last_seen": "2026-09-20"
+    },
+    {
+      "title": "Ribbon cutting celebration for Matthews Greenspace",
+      "outlet": "Chronicle-Tribune",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPaGdiNVBBemJ1eElSdklYb2pjdUpQdjZyLUk1Qm14aG9kbl9FTmFnUjhsQWNYTE0tT1cwc1cyMTloSG4yRTBLamRmYWhlekZLY2I2TWVlb2ZYZkRCM1E1X2NzV0NocWZ1NHo1U1ZBVTQ5LXB0MTZGNXRFWWJTUWs0OUIwLVl1aGt5eDdmeHFpckg5eTlDRjI0eTY4R0JES25SR0lEcEdjYlViYUFRMjM5cFJBcUtHNTlodnlMUWJjUDlSRVFwOGN3bXBzSnVEaFpRMm9jdVlR?oc=5",
+      "published": "Wed, 02 Sep 2026 10:00:00 GMT",
+      "published_iso": "2026-09-02T10:00:00+00:00",
+      "locality": "Grant County",
+      "state": "IN",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-20"
+    },
+    {
+      "title": "EF0 tornado touched down in Cass County during weekend storm, NWS says",
+      "outlet": "Fox 59",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNelYtN09OQk9XMWZSWXIyX1RmT0N2OXFIbXJrdVI5NnlKYm5RR2Z1NHNscUs0RDRkNjV0OVk1Ni1leVN4ZHZNS1FPb2k2Nl9JOU1jclR3VFUzRE1zS2xRWVpjdkUyZ3k2WkRPRDBVOXl5bTlPRHhGaERuWkVoaUhBY2RUV1FHT1dIcF9uN0lNVlZXak80NUdVWlozZmtzWTdNcGcw0gGoAUFVX3lxTFBPNWhMVEYxbjNEQnl0dzl4MjN4LWdsdEdSUUNlbVU2c1c3NXhERW1mZ1FmUlIzNjNYM0RzXzREcmVKRERZMTZ3MnhQaG1td3A1RHdhcUFERUhMZERwcDZYampvVFgzeWtMaVlodWVzUV9IQ0tOQWVSTjlDRldTYjgzOTZxazJqendMU2pjMEtvSFBYZDVGdDBfZHhnLVlVa2NtSTg2VDNQTw?oc=5",
+      "published": "Mon, 07 Mar 2022 08:00:00 GMT",
+      "published_iso": "2022-03-07T08:00:00+00:00",
+      "locality": "Cass County",
+      "state": "IN",
+      "first_seen": "2022-03-07",
       "last_seen": "2026-09-20"
     }
   ]

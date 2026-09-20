@@ -5,8 +5,8 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/projects",
-  "count": 279,
-  "verified_count": 278,
+  "count": 282,
+  "verified_count": 281,
   "caveat": "A working set of identified proposals a community can track, not a census — most of the country's activity is not in here yet. Pennsylvania is the exception: its rows are synced from PA DEP's own data-center permit tracker, so the state's coverage is close to complete and carries the permit trail with it.\n\n**Each row carries its own provenance.** Rows showing a verification date link to reporting or the governing body's own record and were read on that date; rows marked *unverified* have no source on record — a lead to check, not a fact to cite.\n\n**Stage is derived, not asserted.** *Hearing scheduled*, *Awaiting decision*, *Approved* and *Withdrawn* are computed from each row's milestone dates on every rebuild, so a hearing date that has passed stops reading 'scheduled'. Hearings get moved and projects re-file under new names — treat a scheduled date as the earliest to act by, and confirm with the clerk before relying on it. Leads are mined into data/project_candidates.json and promoted here only after a human reads a primary source.",
   "schema": {
     "id": "Stable slug, unique per project.",
@@ -18269,7 +18269,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (2 pending, 13 issued).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -18386,7 +18386,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (2 pending).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -18425,7 +18425,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (2 pending, 4 issued).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -18506,7 +18506,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (1 pending).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -18557,7 +18557,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (3 pending).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -18620,7 +18620,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (3 pending).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -18669,9 +18669,9 @@
       "outcome": "",
       "stage": "In review",
       "days_to_hearing": null,
-      "note": "Environmental permits under review at PA DEP (4 pending).",
+      "note": "Environmental permits under review at PA DEP (5 pending).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -18722,7 +18722,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (2 issued).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -18767,7 +18767,7 @@
       "days_to_hearing": null,
       "note": "PA DEP has finished reviewing this project's environmental permits (2 issued). That is a permit milestone, not a local land-use approval.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -18800,7 +18800,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -18826,7 +18826,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (1 pending, 2 issued).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -18877,7 +18877,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (1 issued).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -18910,7 +18910,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -18936,7 +18936,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (1 pending).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -18969,7 +18969,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (3 issued).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -19020,7 +19020,7 @@
       "days_to_hearing": null,
       "note": "PA DEP has finished reviewing this project's environmental permits (4 issued). That is a permit milestone, not a local land-use approval.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -19077,7 +19077,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (1 pending).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -19116,7 +19116,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19142,7 +19142,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19168,7 +19168,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19194,7 +19194,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19220,7 +19220,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19246,7 +19246,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19272,7 +19272,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19298,7 +19298,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19324,7 +19324,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19350,7 +19350,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19376,7 +19376,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19402,7 +19402,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19428,7 +19428,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19454,7 +19454,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19480,7 +19480,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19506,7 +19506,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19532,7 +19532,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19558,7 +19558,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19584,7 +19584,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19610,7 +19610,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19636,7 +19636,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19662,7 +19662,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19688,7 +19688,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19714,7 +19714,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19740,7 +19740,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19766,7 +19766,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19792,7 +19792,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19818,7 +19818,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19844,7 +19844,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19870,7 +19870,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19896,7 +19896,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19922,7 +19922,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19948,7 +19948,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -19974,7 +19974,7 @@
       "days_to_hearing": null,
       "note": "Environmental permits under review at PA DEP (1 pending, 1 issued).",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": [
         {
@@ -20892,7 +20892,7 @@
       "days_to_hearing": null,
       "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
       "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
-      "as_of": "2026-09-05",
+      "as_of": "2026-09-20",
       "verified": true,
       "events": []
     },
@@ -21198,6 +21198,97 @@
           "source": "https://www.fredericksburgfreepress.com/2026/07/09/grave-concerns-stafford-supervisors-defer-data-center-project-on-property-with-historic-cemetery/"
         }
       ]
+    },
+    {
+      "id": "triboro-industrial-park-data-center-jessup-olyphant-throop-boroughs-pa",
+      "name": "Triboro Industrial Park Data Center",
+      "operator": "",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Jessup / Olyphant / Throop Boroughs (Lackawanna County)",
+      "state": "PA",
+      "lat": 41.449316,
+      "lon": -75.576001,
+      "size_mw": "",
+      "acres": "",
+      "announced": "",
+      "rezoning_filed": "2026-04-28",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "In review",
+      "days_to_hearing": null,
+      "note": "Environmental permits under review at PA DEP (1 pending, 1 issued).",
+      "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
+      "as_of": "2026-09-20",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-04-28",
+          "kind": "permit",
+          "summary": "Chapter 102 General NPDES Permit (PAG-02) application submitted to PA DEP under WPC Erosion & Sediment Control (PAC350120) — DEP status: Issued.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        },
+        {
+          "date": "2026-08-25",
+          "kind": "permit",
+          "summary": "Water Obstruction & Encroachment Pmt application submitted to PA DEP under WRM Water Obstructions & Encroachments (E3502221-006) — DEP status: Pending.",
+          "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/"
+        }
+      ]
+    },
+    {
+      "id": "mount-carmel-township-data-center-mount-carmel-township-pa",
+      "name": "Mount Carmel Township Data Center",
+      "operator": "",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Mount Carmel Township (Northumberland County)",
+      "state": "PA",
+      "lat": 40.808411,
+      "lon": -76.447227,
+      "size_mw": "",
+      "acres": "",
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "Rumored",
+      "days_to_hearing": null,
+      "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
+      "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
+      "as_of": "2026-09-20",
+      "verified": true,
+      "events": []
+    },
+    {
+      "id": "outrigger-data-center-mifflin-township-pa",
+      "name": "Outrigger Data Center",
+      "operator": "",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Mifflin Township (Columbia County)",
+      "state": "PA",
+      "lat": 41.014499,
+      "lon": -76.304823,
+      "size_mw": "",
+      "acres": "",
+      "announced": "",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "Rumored",
+      "days_to_hearing": null,
+      "note": "On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.",
+      "source": "https://gis.dep.pa.gov/DataCenterPermitTracker/",
+      "as_of": "2026-09-20",
+      "verified": true,
+      "events": []
     }
   ]
 }
