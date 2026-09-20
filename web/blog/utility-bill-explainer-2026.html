@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f5f7" media="(prefers-color-scheme: light)">
+<meta name="google-site-verification" content="kkgrLvRLdgGg12Y1ka456PlN9iNsyWGCyJIS-8ip9I4">
+<meta name="msvalidate.01" content="EAFCC85873DF7F2A656666010A7D79FD">
+<title>Why your electric bill is going up: data centers&#x27; role</title>
+<meta name="description" content="Capacity charges, peak load auctions, and the coincident-peak trap: a plain-language guide to the parts of your electric bill you&#x27;ve never heard of — and…">
+<link rel="canonical" href="https://aigridwatch.com/blog/utility-bill-explainer-2026">
+<link rel="alternate" type="application/rss+xml" title="AI GridWatch Blog"
+      href="https://aigridwatch.com/blog/feed.xml">
+<meta property="og:title" content="Why your electric bill is going up: data centers&#x27; role">
+<meta property="og:description" content="Capacity charges, peak load auctions, and the coincident-peak trap: a plain-language guide to the parts of your electric bill you&#x27;ve never heard of — and why data center growth is making them explode.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://aigridwatch.com/blog/utility-bill-explainer-2026">
+<meta property="og:site_name" content="AI GridWatch">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aigridwatch.com/assets/hero.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="479">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="article:published_time" content="2026-07-12">
+<meta property="article:author" content="GridWatch AI">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aigridwatch.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aigridwatch.com/blog"}, {"@type": "ListItem", "position": 3, "name": "Why Your Electric Bill Is Going Up — and What Data Centers Have to Do With It", "item": "https://aigridwatch.com/blog/utility-bill-explainer-2026"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Why Your Electric Bill Is Going Up — and What Data Centers Have to Do With It", "description": "Capacity charges, peak load auctions, and the coincident-peak trap: a plain-language guide to the parts of your electric bill you've never heard of — and why data center growth is making them explode.", "url": "https://aigridwatch.com/blog/utility-bill-explainer-2026", "datePublished": "2026-07-12", "dateModified": "2026-07-12", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://aigridwatch.com/blog/utility-bill-explainer-2026"}, "image": ["https://aigridwatch.com/assets/hero.png"], "author": {"@type": "Organization", "name": "GridWatch AI", "url": "https://aigridwatch.com"}, "publisher": {"@type": "Organization", "name": "AI GridWatch", "url": "https://aigridwatch.com", "description": "Free community tools for negotiating with data center developers: impact calculators, CBA templates, health evidence, and sourced data.", "logo": "https://aigridwatch.com/assets/logo.png", "@context": "https://schema.org"}}</script>
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/logo.svg" as="image" type="image/svg+xml">
+<link rel="dns-prefetch" href="//gc.zgo.at">
+<link rel="preconnect" href="//gc.zgo.at" crossorigin>
+<link rel="stylesheet" href="../assets/site.c9fcdcc03b.css">
+<script>try{var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<nav>
+  <a href="../"><img src="../assets/logo.svg" alt="AI GridWatch" width="540" height="120"></a>
+  <input type="checkbox" id="navToggle" hidden>
+  <label for="navToggle" class="nav-burger" aria-label="Menu"
+         role="button">&#9776;</label>
+  <a class="nav-search" href="../search" aria-label="Search the site"
+     title="Search">&#128269;<span>Search</span></a>
+  <button class="theme-toggle" onclick="toggleTheme()"
+          aria-label="Switch to light mode">&#9728;</button>
+  <select class="nav-state" aria-label="Jump to your state's briefing"
+     onchange="if(this.value)location.href='../states/'+this.value">
+    <option value="">Your state…</option><option value="alabama">Alabama</option><option value="alaska">Alaska</option><option value="arizona">Arizona</option><option value="arkansas">Arkansas</option><option value="california">California</option><option value="colorado">Colorado</option><option value="connecticut">Connecticut</option><option value="delaware">Delaware</option><option value="district-of-columbia">District of Columbia</option><option value="florida">Florida</option><option value="georgia">Georgia</option><option value="hawaii">Hawaii</option><option value="idaho">Idaho</option><option value="illinois">Illinois</option><option value="indiana">Indiana</option><option value="iowa">Iowa</option><option value="kansas">Kansas</option><option value="kentucky">Kentucky</option><option value="louisiana">Louisiana</option><option value="maine">Maine</option><option value="maryland">Maryland</option><option value="massachusetts">Massachusetts</option><option value="michigan">Michigan</option><option value="minnesota">Minnesota</option><option value="mississippi">Mississippi</option><option value="missouri">Missouri</option><option value="montana">Montana</option><option value="nebraska">Nebraska</option><option value="nevada">Nevada</option><option value="new-hampshire">New Hampshire</option><option value="new-jersey">New Jersey</option><option value="new-mexico">New Mexico</option><option value="new-york">New York</option><option value="north-carolina">North Carolina</option><option value="north-dakota">North Dakota</option><option value="ohio">Ohio</option><option value="oklahoma">Oklahoma</option><option value="oregon">Oregon</option><option value="pennsylvania">Pennsylvania</option><option value="rhode-island">Rhode Island</option><option value="south-carolina">South Carolina</option><option value="south-dakota">South Dakota</option><option value="tennessee">Tennessee</option><option value="texas">Texas</option><option value="utah">Utah</option><option value="vermont">Vermont</option><option value="virginia">Virginia</option><option value="washington">Washington</option><option value="west-virginia">West Virginia</option><option value="wisconsin">Wisconsin</option><option value="wyoming">Wyoming</option></select>
+  <div class="nav-links">
+    <a href="../">Home</a>
+    <details class="navgroup"><summary class="active">News & analysis</summary><div class="navmenu"><a href="../news">Top stories</a><a href="../blog" aria-current="page">Blog</a><a href="../story-tracker">Story tracker</a><a href="../changes">Tracker changes</a><a href="../projects">Projects tracker</a><a href="../videos">Videos</a></div></details>
+    <details class="navgroup"><summary>Act</summary><div class="navmenu"><a href="../start-here">Start here</a><a href="../siting">Siting score</a><a href="../hearing-questions">Hearing prep</a><a href="../opposition">Know the opposition</a><a href="../cba-clauses">Model clauses</a><a href="../case-studies">Case studies</a><a href="../impact">Impact calculator</a></div></details>
+    <details class="navgroup"><summary>Your area</summary><div class="navmenu"><a href="../states">Your state</a><a href="../map">Map & projects</a><a href="../moratoriums">Moratoriums</a><a href="../puc">PUCs</a><a href="../scorecard">Officials scorecard</a><a href="../senate-races">Senate races 2026</a><a href="../senators">All 100 senators</a><a href="../house-races">House races 2026</a><a href="../community-value">Community playbook</a></div></details>
+    <details class="navgroup"><summary>The facts</summary><div class="navmenu"><a href="../health-risks">Health risks</a><a href="../bills">Your electric bill</a><a href="../tax-breaks">Tax breaks</a><a href="../environment">Environment</a><a href="../learn">Learn the basics</a></div></details>
+    <details class="navgroup"><summary>Industry</summary><div class="navmenu"><a href="../data-centers">Data centers</a><a href="../companies">Companies</a><a href="../complaints">Complaints by company</a><a href="../outlook">Electricity outlook</a><a href="../open-data">Open data</a></div></details>
+  </div>
+  <a class="cta" href="../start-here">Open the toolkit &rarr;</a>
+</nav>
+<main id="main">
+
+<header>
+  <div class="kicker">Blog</div>
+  <h1>Why Your Electric Bill Is Going Up — and What Data Centers Have to Do With It</h1>
+  <div class="post-meta">Jul 12, 2026
+  &middot; GridWatch AI</div>
+  <div class="tags"><span class="tag">utility bills</span> <span class="tag">capacity markets</span> <span class="tag">PJM</span> <span class="tag">demand response</span> <span class="tag">research</span> <span class="tag">explainer</span></div>
+  <p class="sub">Capacity charges, peak load auctions, and the coincident-peak trap: a plain-language guide to the parts of your electric bill you&#x27;ve never heard of — and why data center growth is making them explode.</p>
+</header>
+<svg class="post-art" viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration: an electric bill next to a sharply rising cost line">
+  <defs><linearGradient id="bgutility-bill-explainer-2026" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#16233c"/><stop offset="1" stop-color="#0b1220"/></linearGradient></defs>
+  <rect width="640" height="280" rx="14" fill="url(#bgutility-bill-explainer-2026)"/>
+  <g stroke="#22304a" stroke-width=".7" opacity=".45"><line x1="40" y1="0" x2="40" y2="280"/><line x1="80" y1="0" x2="80" y2="280"/><line x1="120" y1="0" x2="120" y2="280"/><line x1="160" y1="0" x2="160" y2="280"/><line x1="200" y1="0" x2="200" y2="280"/><line x1="240" y1="0" x2="240" y2="280"/><line x1="280" y1="0" x2="280" y2="280"/><line x1="320" y1="0" x2="320" y2="280"/><line x1="360" y1="0" x2="360" y2="280"/><line x1="400" y1="0" x2="400" y2="280"/><line x1="440" y1="0" x2="440" y2="280"/><line x1="480" y1="0" x2="480" y2="280"/><line x1="520" y1="0" x2="520" y2="280"/><line x1="560" y1="0" x2="560" y2="280"/><line x1="600" y1="0" x2="600" y2="280"/><line x1="0" y1="40" x2="640" y2="40"/><line x1="0" y1="80" x2="640" y2="80"/><line x1="0" y1="120" x2="640" y2="120"/><line x1="0" y1="160" x2="640" y2="160"/><line x1="0" y1="200" x2="640" y2="200"/><line x1="0" y1="240" x2="640" y2="240"/></g>
+
+  <g>
+    <rect x="58" y="52" width="196" height="180" rx="8" fill="#121c30" stroke="#22304a" stroke-width="1.6"/>
+    <rect x="58" y="52" width="196" height="26" rx="8" fill="#22304a"/>
+    <rect x="58" y="70" width="196" height="8" fill="#22304a"/>
+    <text x="78" y="70" fill="#2dd4bf" font-size="13" font-weight="700"
+          font-family="system-ui,sans-serif">ELECTRIC BILL</text>
+    <rect x="78" y="96" width="150" height="7" rx="2" fill="#93a1b5" opacity=".35"/><rect x="78" y="114" width="108" height="7" rx="2" fill="#93a1b5" opacity=".35"/><rect x="78" y="132" width="150" height="7" rx="2" fill="#93a1b5" opacity=".35"/><rect x="78" y="150" width="84" height="7" rx="2" fill="#93a1b5" opacity=".35"/>
+    <line x1="78" y1="176" x2="234" y2="176" stroke="#22304a" stroke-width="1.4"/>
+    <text x="78" y="202" fill="#fbbf24" font-size="24" font-weight="700"
+          font-family="system-ui,sans-serif">$ ↑</text>
+  </g>
+  <g transform="translate(300,60)">
+    <line x1="0" y1="150" x2="288" y2="150" stroke="#22304a" stroke-width="1.5"/>
+    <line x1="0" y1="0" x2="0" y2="150" stroke="#22304a" stroke-width="1.5"/>
+    <path d="M 8,132 L 66,124 L 124,104 L 182,72 L 246,26" stroke="#fbbf24"
+          stroke-width="2.6" fill="none"/>
+    <path d="M 8,132 L 66,124 L 124,104 L 182,72 L 246,26 L 246,150 L 8,150 Z"
+          fill="#fbbf24" opacity=".1"/>
+    <g fill="#fbbf24"><circle cx="66" cy="124" r="3.4"/><circle cx="124" cy="104" r="3.4"/>
+      <circle cx="182" cy="72" r="3.4"/><circle class="glow" cx="246" cy="26" r="5"/></g>
+  </g>
+  <text x="24" y="262" fill="#93a1b5" font-size="12" font-weight="700" letter-spacing="1.6" font-family="system-ui,-apple-system,sans-serif">RATEPAYER IMPACT</text>
+</svg>
+<section class="prose">
+  <p>If your electricity bill has been climbing and you can't figure out why — you're
+not using more power, you haven't added appliances — the answer is probably hiding
+in a line item you've never looked at.</p>
+<p>It's not the kilowatt-hours. It's the <strong>capacity charges</strong>.</p>
+<h3>The part of your bill nobody explains</h3>
+<p>Most people think of electricity as a single rate: use more, pay more. In reality,
+your bill has three major components, and the one growing fastest is the one almost
+nobody understands:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>What it pays for</th>
+<th>Typical share</th>
+<th>Growing?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Energy charges</strong></td>
+<td>The actual electricity you consumed (kWh)</td>
+<td>40–60%</td>
+<td>Slowly</td>
+</tr>
+<tr>
+<td><strong>Capacity charges</strong></td>
+<td>Keeping enough power plants <em>available</em> to meet the highest hour of demand all year</td>
+<td>15–30%</td>
+<td><strong>Fast</strong></td>
+</tr>
+<tr>
+<td><strong>Transmission &amp; distribution</strong></td>
+<td>Wires, substations, and poles to move power from plant to home</td>
+<td>20–30%</td>
+<td>Moderately</td>
+</tr>
+</tbody>
+</table></div>
+<p>The energy charge is intuitive — run the AC more, pay more. But capacity charges
+are different. You pay them whether you use the power or not, because the grid must
+maintain enough generation to handle the <em>worst-case peak</em> — even if that peak lasts
+only a few hours each summer.</p>
+<p>Think of it like a fire department: your taxes pay for fire stations that sit idle
+most of the year, because they need to be there the one day your house catches fire.
+Capacity charges are the grid's fire department. And right now, someone is building
+a factory that requires its own fire station — and sending you part of the bill.</p>
+<h3>The coincident peak trap</h3>
+<p>Here's where it gets personal. In most deregulated markets, your capacity charge
+isn't based on <em>your</em> individual peak usage. It's based on your usage during the
+<strong>system coincident peak (CP)</strong> — the single highest-demand hour across the entire
+grid that year.</p>
+<p>If a new 200 MW data center comes online in your utility's territory and raises the
+system peak, <em>your</em> capacity allocation goes up even though your behavior didn't
+change. The new load raises the waterline, and everyone pays more to keep the system
+above it.</p>
+<p>This isn't hypothetical. In PJM — the grid operator serving 65 million people across
+13 states from New Jersey to Illinois — it just happened:</p>
+<ul>
+<li>The <strong>2025/26 capacity auction</strong> price jumped <strong>833%</strong> — from $28.92 to $269.92
+  per MW-day</li>
+<li>PJM's independent market monitor found data centers were responsible for <strong>63%</strong>
+  of that price increase</li>
+<li><strong>Pepco</strong> customers in Washington D.C. saw bills rise <strong>$21/month</strong>, with roughly
+  half attributable to capacity costs</li>
+<li>Across the PJM footprint, residential bills increased <strong>$15–21/month</strong> from
+  capacity charges alone</li>
+</ul>
+<p>That's not a rate increase driven by fuel costs, inflation, or your usage. It's a
+rate increase driven by someone else's load.</p>
+<h3>44 hours that could save $150 billion</h3>
+<p>In February 2025, researchers at <strong>Duke University's Nicholas Institute for Energy,
+Environment &amp; Sustainability</strong> published a study that reframed the entire debate.
+Led by Tyler Norris, the analysis introduced a concept called <strong>"curtailment-enabled
+headroom"</strong> — how much new load the existing grid can absorb if that load agrees to
+briefly reduce consumption during the handful of hours each year when the system is
+most stressed.</p>
+<p>The findings were striking:</p>
+<ul>
+<li>The existing U.S. grid could absorb <strong>up to 98 GW</strong> of new data center load —
+  more than the world's entire current data center fleet</li>
+<li>The required curtailment: just <strong>0.5% of annual hours</strong> — an average of <strong>44 hours
+  per year</strong>, with a maximum of 177 hours in the most constrained regions</li>
+<li>Potential avoided infrastructure cost: <strong>$150 billion or more</strong> in new power plants
+  and transmission lines that wouldn't need to be built</li>
+<li>The curtailment rate is comparable to existing demand response programs that
+  industrial customers already participate in</li>
+</ul>
+<p>In plain English: if data centers agreed to dim the lights for less than two days a
+year — spread across the summer's hottest afternoons — we wouldn't need to build
+tens of billions of dollars in new infrastructure, and your capacity charges would
+stay flat.</p>
+<h3>So why don't they just do it?</h3>
+<p>This is the question everyone asks, and the answer reveals a structural failure in
+how we regulate large electricity consumers.</p>
+<p><strong>1. The costs they impose aren't the costs they pay.</strong></p>
+<p>When a data center raises the system peak, the resulting capacity charges are
+socialized across <em>all</em> ratepayers. The data center pays its share, but the
+<em>incremental</em> system-wide cost it imposes — the billions in new capacity procurement
+triggered by its load — is spread across millions of customers. There's no price
+signal telling the operator: "Your consumption during this hour just cost the grid
+$50 million in capacity obligations."</p>
+<p>Under current rate design, a data center that curtails during peak hours saves almost
+nothing on its own bill. The capacity auction was settled months ago; the price is
+already set. Curtailment is a cost with no reward.</p>
+<p><strong>2. Uptime SLAs are contractually sacred.</strong></p>
+<p>Cloud and colocation contracts guarantee <strong>99.99–99.999% uptime</strong> — "four nines" to
+"five nines." Five-nines means a maximum of <strong>5.26 minutes of total downtime per
+year</strong>. The Duke study's 44-hour curtailment, even if it's just a partial load
+reduction, would blow through any existing SLA by orders of magnitude.</p>
+<p>Renegotiating these contracts means:
+- SLA breach penalties (often millions per incident)
+- Customer churn risk (if AWS curtails but Azure doesn't, customers switch)
+- Insurance and liability exposure (financial, healthcare, and government workloads
+  have legal uptime requirements)</p>
+<p>Here's the irony: <strong>AI training workloads are actually highly flexible</strong>. A training
+run can pause, checkpoint, and resume — it doesn't care about latency or real-time
+availability. But operators run training and inference on shared infrastructure and
+apply the strictest SLA to everything. Separating these workloads is technically
+straightforward but commercially inconvenient.</p>
+<p><strong>3. There's no regulatory mandate.</strong></p>
+<p>Unlike power plants, which must bid into capacity markets and face penalties for
+non-performance, <strong>data centers have no obligation to participate in demand response</strong>.
+They're classified as ordinary load. They consume what they want, when they want, and
+the grid must accommodate them.</p>
+<p>Several mechanisms could change this but don't exist at scale:</p>
+<ul>
+<li><strong>Marginal capacity pricing</strong> — charge new large loads for the <em>incremental</em> capacity
+  cost they impose, not just the system average. If a 200 MW data center knew it would
+  pay the full marginal cost of the capacity auction increase it triggered, curtailment
+  would become profitable overnight.</li>
+<li><strong>Mandatory demand response above a threshold</strong> — require any load above 10 MW to
+  participate in curtailment programs, the way generators must participate in capacity
+  markets.</li>
+<li><strong>Differentiated SLAs</strong> — regulatory frameworks that distinguish delay-tolerant
+  workloads (AI training, batch processing, backups) from latency-critical ones
+  (inference, real-time services), enabling curtailment of the flexible portion without
+  touching customer-facing services.</li>
+</ul>
+<h3>The research landscape: what we know and what's contested</h3>
+<p>The Duke study didn't land in a vacuum. A growing body of academic and policy research
+is wrestling with the same questions:</p>
+<p><strong>Lawrence Berkeley National Lab (LBNL, Jan 2025)</strong> found U.S. data center electricity
+surged from 58 TWh (2014) to 176 TWh (2023) and projects <strong>325–580 TWh by 2028</strong> —
+potentially 12% of all U.S. electricity. In July 2024, a voltage fluctuation in
+Northern Virginia triggered simultaneous disconnection of 60 data centers, causing a
+1,500 MW surplus that required emergency grid adjustments.</p>
+<p><strong>The Harvard Belfer Center (Feb 2026)</strong> called AI-driven load growth a "watershed
+moment" for grid planning, noting that traditional forecasting methods are failing
+because demand is growing faster than any historical precedent.</p>
+<p><strong>E3, funded by Amazon (Dec 2025)</strong>, studied four Amazon facilities and concluded data
+centers generate <strong>$3.4 million in surplus revenue</strong> per 100 MW facility — paying more
+than their direct cost to serve. This is the industry's primary counterargument to the
+"ratepayers are subsidizing data centers" narrative.</p>
+<p><strong>The critical nuance:</strong> both things can be true simultaneously. A data center can pay
+more than its direct cost-to-serve while <em>also</em> driving up system-wide capacity costs
+that are socialized to everyone. E3's facility-level analysis and PJM's system-level
+market monitor are measuring different things. The surplus at the meter doesn't capture
+the externality at the auction.</p>
+<p><strong>Columbia University (2025)</strong> showed that grid-enhancing technologies (dynamic line
+ratings, power flow controllers) could release 20–40% more capacity from existing
+transmission — deferring $10–30 billion in new construction.</p>
+<h3>What would actually fix this?</h3>
+<p>The research converges on a handful of structural reforms:</p>
+<ol>
+<li>
+<p><strong>Cost-causation rate design</strong> — charge large loads for the capacity and transmission
+   costs they <em>cause</em>, not the system average. FERC and several state PUCs are
+   investigating this, but no major market has implemented it yet.</p>
+</li>
+<li>
+<p><strong>Mandatory demand response for large loads</strong> — if you consume more than 10 MW, you
+   participate in curtailment programs, period. At least five state legislatures
+   introduced versions of this in 2026.</p>
+</li>
+<li>
+<p><strong>Load flexibility contracts</strong> — utilities offer lower rates in exchange for
+   contractual curtailment rights during peak hours. Duke Energy and Dominion are
+   piloting programs, but participation is voluntary and uptake is low.</p>
+</li>
+<li>
+<p><strong>Interconnection reform</strong> — FERC Order 2023 is speeding up queue processing and
+   requiring deposits to prevent speculative capacity hoarding, but implementation is
+   slow.</p>
+</li>
+<li>
+<p><strong>On-site generation requirements</strong> — require large loads to provide their own
+   peaking capacity (batteries, on-site generation) so the grid doesn't have to overbuild
+   for them. Proposed in North Carolina, Virginia, and Georgia.</p>
+</li>
+</ol>
+<h3>The bottom line</h3>
+<p>The Duke University research proves the <em>technical</em> solution exists: brief, modest
+curtailment — less than two days a year — could avoid tens of billions in new
+infrastructure and keep your capacity charges from spiraling. The barrier isn't
+engineering. It's a regulatory and commercial framework that lets the largest
+electricity consumers externalize their peak-load costs onto everyone else's bill.</p>
+<p>Until that framework changes, residential ratepayers bear the cost of keeping the
+grid ready for loads that refuse to flex.</p>
+<blockquote>
+<p><strong>Explore more:</strong> Use the <strong>💡 Your Utility Bill</strong> tab for an interactive breakdown
+of bill components, the <strong>🕐 Grid Timing</strong> tab to see real-time grid stress in your
+region, and the <strong>🏛️ Officials</strong> tab to contact your legislators about rate reform.</p>
+</blockquote>
+</section>
+<div class="post-nav"><a href="ny-moratorium-eo62-2026"><span class="dir">&larr; Previous</span>New York Just Changed the Game: What EO 62 Means for Every Community Fighting a Data Center</a><a href="social-license-risk-2026" style="text-align:right"><span class="dir">Next &rarr;</span>How the Industry Files Your Protest: &#x27;Social License&#x27; and the $64B Risk Column</a></div>
+
+</main>
+<footer>
+<div class="nl-box">
+  <p><strong>📬 The GridWatch Dispatch</strong> — one email a week: new moratoriums, rate cases, and negotiation wins. No spam.</p>
+  <form action="https://formspree.io/f/xljroogo" method="POST"
+        class="nl-form">
+    <input type="email" name="email" required placeholder="you@example.com"
+           aria-label="Email address">
+    <input type="hidden" name="source" value="static-site-footer">
+    <input type="hidden" name="_subject" value="GridWatch Dispatch signup">
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
+  <p style="margin-bottom:8px"><strong>Reference</strong> ·
+    <a href="../communities">Community pages</a> ·
+    <a href="../studies">State studies</a> ·
+    <a href="../officials">Officials directory</a> ·
+    <a href="../glossary">Glossary</a> ·
+    <a href="../tax-breaks">Tax breaks</a> ·
+    <a href="../dividend">Data dividend</a></p>
+  <p style="margin-bottom:8px"><strong>Site</strong> ·
+    <a href="../about">About</a> ·
+    <a href="../open-data">Open data</a> ·
+    <a href="../search">Search</a></p>
+  <p>AI GridWatch — community energy intelligence. Planning estimates, not
+  engineering studies; every number is sourced in the
+  <a href="../start-here">toolkit</a>. Built from public data.</p>
+</footer>
+</div>
+<div class="mob-bar" aria-label="Quick actions">
+  <a href="../start-here"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Toolkit</a>
+  <a href="../states"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>States</a>
+  <a href="../moratoriums"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>Tracker</a>
+  <a href="../search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>Search</a>
+</div>
+<script>
+function toggleTheme(){
+  var d=document.documentElement,c=d.getAttribute('data-theme');
+  if(!c)c='dark';
+  var n=c==='dark'?'light':'dark';
+  d.setAttribute('data-theme',n);
+  try{localStorage.setItem('theme',n)}catch(e){}
+  var b=document.querySelector('.theme-toggle');
+  if(b){b.innerHTML=n==='dark'?'&#9728;':'&#9790;';
+  b.setAttribute('aria-label',n==='dark'?'Switch to light mode':'Switch to dark mode')}}
+(function(){var b=document.querySelector('.theme-toggle');if(!b)return;
+var c=document.documentElement.getAttribute('data-theme');
+if(!c)c='dark';
+b.innerHTML=c==='dark'?'&#9728;':'&#9790;';
+b.setAttribute('aria-label',c==='dark'?'Switch to light mode':'Switch to dark mode')})();
+</script>
+
+<script data-goatcounter="https://mjb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+function gwevent(path) {
+  if (window.goatcounter && window.goatcounter.count)
+    window.goatcounter.count({ path: path, event: true });
+}
+document.addEventListener('click', function (e) {
+  var a = e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  var file = href.split('/').pop().split('?')[0];
+  if (/start-here\.html$/.test(href)) {
+    gwevent('toolkit-click' + location.pathname.replace(/\.html$/, ''));
+  } else if (/\.pdf($|\?)/.test(href) && a.host === location.host) {
+    gwevent('pdf-download/' + file);
+  } else if (href.indexOf('data/moratoriums.') !== -1 || href.indexOf('embed/moratoriums') !== -1
+             || href.indexOf('data/projects.') !== -1) {
+    gwevent('data-download/' + file);
+  }
+});
+// Nav dropdowns: one open at a time, closing on click-away or Escape. CSS
+// already reveals menus on hover/focus; this tidies the click path without
+// fighting the native <details> toggle — sibling-close runs off the toggle
+// event, and the click-away handler bails on any click inside the nav.
+document.querySelectorAll('.navgroup').forEach(function (g) {
+  g.addEventListener('toggle', function () {
+    if (!g.open) return;
+    document.querySelectorAll('.navgroup[open]').forEach(function (o) {
+      if (o !== g) o.open = false;
+    });
+  });
+});
+document.addEventListener('click', function (e) {
+  if (e.target.closest && e.target.closest('.navgroup')) return;
+  document.querySelectorAll('.navgroup[open]').forEach(function (g) { g.open = false; });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape')
+    document.querySelectorAll('.navgroup[open]').forEach(function (g) { g.open = false; });
+});
+</script>
+
+</body>
+</html>
