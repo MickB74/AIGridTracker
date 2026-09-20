@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/loudoun-pause-vote-2026",
+      "destination": "/blog/loudoun-pause-vote-2026",
+      "permanent": true
+    },
+    {
       "source": "/week-in-review-2026-09-13",
       "destination": "/blog/week-in-review-2026-09-13",
       "permanent": true
