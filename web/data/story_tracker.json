@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 7332,
+  "count": 7360,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -70505,7 +70505,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-14",
-      "last_seen": "2026-09-15"
+      "last_seen": "2026-09-21"
     },
     {
       "title": "Texas moves to penalize data centers for water violations",
@@ -75422,7 +75422,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-21"
     },
     {
       "title": "Data Center Spills Thousands of Gallons of Diesel Into Wetlands in New Jersey",
@@ -77974,7 +77974,7 @@
       "locality": null,
       "state": "OR",
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-21"
     },
     {
       "title": "Spanberger Pushes New Data Center Guardrails in Virginia",
@@ -78337,7 +78337,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-21"
     },
     {
       "title": "Governor Spanberger launches sweeping data center accountability in Virginia",
@@ -78612,7 +78612,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-21"
     },
     {
       "title": "Data Center Deep Dives: Texas",
@@ -78997,7 +78997,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-21"
     },
     {
       "title": "Restrictions on data centers move to Boerne City Council",
@@ -79206,7 +79206,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-16",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-21"
     },
     {
       "title": "D-FW already ranks among top data center hubs, with much more on the way",
@@ -80658,6 +80658,314 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-16",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "New lawsuit alleges unfair secrecy around Effingham data center",
+      "outlet": "thecurrentga.org",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOdExDREd3eExwT201Nkdua3hiZC1ZN0x2RDZsT1pGNXVGdVRPQWZjZkR0UGhxRUlaNGkxdnJJRjAxWjdRXzByMkdnTU9UbXI2cnc0QmpWSnlNVkx4QnhtSkcyaXIzOU9UWmwyM1lJTHVXS1JPN2JVZzdnMEZtb0ZyWk5JcG9EMGZyUUdfaEZqc0pwdjE5NERPRTVQZnNEZWRGUUE?oc=5",
+      "published": "Mon, 21 Sep 2026 15:38:15 GMT",
+      "published_iso": "2026-09-21T15:38:15+00:00",
+      "locality": "Effingham",
+      "state": "IL",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Central City residents seek answers on proposed South Side data center at meeting",
+      "outlet": "KGAN",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNTHVKSTFZcGphdzBCV3p3RGhuSzVzbUZJdXdjRnJLczBYOFJfbUQ2ZHlidG4wSmpGX0NEaDNhMGtaaEVZMVAxYy1CNzg3eVhYRkY4Uko1TWFlZFcteTZjcjh4UW5NbmdraTBEMjlIVzBkWURFOGZob3EtZDlTaVlBSmV2endwUDRmRk40SkF5dWhHNmpBb256X3Y5dDUwMER6ckM2Q1hjMW1KYzZGWHFFaVVocw?oc=5",
+      "published": "Fri, 18 Sep 2026 02:33:45 GMT",
+      "published_iso": "2026-09-18T02:33:45+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Second Lawsuit Targets Effingham IDA Over OpenAI Data Center",
+      "outlet": "Effingham Herald",
+      "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNMUR5aTNIVlExWl9RWFdNSzFHZ0FlX0dBRV9TbzY4UTBmZkNlc21LcGVjcWYyamdMX3ZnU0ZtU3FFNHJ4ejN4Q1VLOWIzVHZRSFplQTdKVGhWN0E1eUlicHBQRUJXZzZRMS1UT2VDblk0TXd4STBBVGhhQTNJQTZqRkZPSFdqaVJ4RVI3QmZwenp2emZIYW9OOXJ1SGVXR1N6cnlEdWtQUVB2V2hRbDNMU2NCenU4QkdMWWNDTEZrSmVqeEYxUktoRkE3aGxMeDlWYTVRcjBNNDc5bFpZak50bUE2dThId3pLWTRPV3FScmx5V0x5QlJzS29ZanFuU0gwMmdVVFR1TlR3QTBkM1pJdA?oc=5",
+      "published": "Mon, 21 Sep 2026 16:30:05 GMT",
+      "published_iso": "2026-09-21T16:30:05+00:00",
+      "locality": "Effingham",
+      "state": "IL",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Carroll County residents file ethics complaints related to data center information",
+      "outlet": "whas11.com",
+      "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNS09oN2w1VUNzdGFGdEhOMW5wYlM0SFg2V0tndnZ4ZXdUczhuT25MMkhXXzF2aG81Wjd1NzdWbllWVy1ndDlkYXBCRXNCRHhNeHRDeEZiQmo5N2d3anBIYjBSSmNjYW5qR0pnRF9Xak1UMTVVQ0dGSG1JMDB3YlJtZWNfNE1xYzRzTUZsTDdYSXFWa1hFWjRlVjQ3Y3BuNXMwQlU3Ykd1NEVMb0l4cklZTkExaTYtcUdsR0RRdTRXNjRPbTBBUVh4V0dOc3NNNzEzVS1ZcE45QjVVQnFsTUpfVUJ0UWRWaElWRGpyMFd0MkljbHVVMXc?oc=5",
+      "published": "Fri, 18 Sep 2026 21:49:00 GMT",
+      "published_iso": "2026-09-18T21:49:00+00:00",
+      "locality": "Carroll County",
+      "state": "GA",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Governor Newsom signs most comprehensive data center laws in the nation, providing communities more control on water, electricity, and land use",
+      "outlet": "gov.ca.gov",
+      "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQZnh1Y29vc0RkVDlrTUZReWY5d3VGQVNkNE1LenFaMG1mUmdiM1ItOFFRNzc4UGF5WTlpUEhDZ0xHdXplRG5EeDE4ZTgtaEZvLUJxUXBmbE9EYVVFZmU3M1MzdmhMcUZpMHRmTkNwLUE5WHA4V1ZKX2VKWG5aZHRwODgzNWZjUmxCMm84ZTBaa3NnU2ctY0VrZGtSbC1fNVBZU2ZuNzQtYnpkbXhNSjVqUE51MThJakFDRFZNVWloNW5Qc2x5c1VVTDlJcnluVzRXell4UG5lQWlnYjdDOFN5SFZreXdWTXBPMjE2aTNjVEY0c1l3Q1MyN3pldGsyUnJlUXNGTWRB?oc=5",
+      "published": "Mon, 21 Sep 2026 15:36:46 GMT",
+      "published_iso": "2026-09-21T15:36:46+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Pappas Helps Introduce New Legislation to Stop Tax Giveaways for Data Centers",
+      "outlet": "Congressman Chris Pappas | (.gov)",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOZ1Y5aEFEcmhFUTlMVzVpUHcwX05vMVVNaEVnbFFNYkNBVWxaVkZQTDUzeU5rZ3ZoNl9DMUVjQ3lQNGtHZklYck81TnRwc2FDS2FhZnV6SVlTcnhoNTlkY2VhR18waEFSX1FhT3BTTi1KZ0VGU2NHTlI5WDg0N3gzWllYSzJJeFhkRXRXOFlVTjBLYm1fb2laSWo5RGlXQ3RqaDUybkdndjQ2bDZReGNZV3B4MUN3OGJZeGV5WUJDZw?oc=5",
+      "published": "Thu, 17 Sep 2026 20:58:26 GMT",
+      "published_iso": "2026-09-17T20:58:26+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "City of Galesburg considering temporary ban on new data center development",
+      "outlet": "WQAD",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPZFVldzNLMVZMQmtTTW4yVHJXaEFyN194TFQ3LTFlbWxTZW1qcDk4TVluOEVHR0ZCOHloVTdCYXZNcHNEUHNwdVJiT19iZFRTbnBOcU1KNThEbUpYQ3JGQmtIOXQ2OFlGQ0dYdldnNFg2R3hSZm11cGozNUhoYy01TktWN1Z2TzAxT05weXRWZWJZODB5cEtvUFNuM3FCV2lySG5iUklYMHp3dkI5bzAxX3pONGNTRFpYTGYybHZGd1Y3TjlYQ196VzVqbmtNRndEM1I3OHRoNkpqX19XMHBMend0cw?oc=5",
+      "published": "Mon, 21 Sep 2026 18:50:00 GMT",
+      "published_iso": "2026-09-21T18:50:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Statesboro’s data center rezoning challenged in lawsuit",
+      "outlet": "WSAV-TV",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPaFF1T3RYUzI2Z2VPZU1Gcm95Wm04OHo3bUdHSW0wT0hCODRHdFRkdUNfYzUxU3FmSjE4eWFSaDVCMldyOUxCUWVhTWhGdzA1RTYxOUtybDZDeG5hdE9KVzRqX1FsRW8xS0pYMk1lbk5mOWJKZkNsNHk1bk9QSl9rd01BclVHTFU3djRzekg0NmU2djFUdHFyZw?oc=5",
+      "published": "Mon, 21 Sep 2026 17:35:42 GMT",
+      "published_iso": "2026-09-21T17:35:42+00:00",
+      "locality": "Statesboro",
+      "state": "GA",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Bethlehem sets public hearing date on data center proposed for site off Route 22",
+      "outlet": "Lehighvalleylive.com",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxORUNOLWlBb0ZtalZJbW9WSDZEOVZjRFJqbFdsSU1ScnB0NU5rMEdiQUpZZUpETlAxd0RaVldOZmR5allsWlRTdEpRZkpDbmZKYWRFRi1Od0tWdTdMOGZTX3R4Sk04ZmtZajVOSDItSVFxZ04yQzRadElIbWJSTFREa0JpaFNUazNlMmxzU3hhbnVzalNFSzkyR1JPUkJTZGdnMFBpbzBIRzk3UE9MTG50ejh3ME1WeFVCOXFXbVBISTJoMXFxMVp0MUU2R2kxYmVfWkE?oc=5",
+      "published": "Mon, 21 Sep 2026 10:00:00 GMT",
+      "published_iso": "2026-09-21T10:00:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Developer behind proposed data center on South National sues city over moratorium",
+      "outlet": "Springfield Daily Citizen",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNaEFzN2NCdG1YbTJTbHNPOVhMbFhqWXpOV0NsWEt0SGZxR3p2T0xqUkpkN3VFdGE0NXF6Q082WWwxeHB2bUM0d2sxUkRJN3pyaG8yS2h1dVBBaldYMmRxMW5yekFiNm8tSEtKT2pwUG5Uejh2LVVUZzFmWWsxM1N4ZktJLXBRZWtSNXRHSzU0dnNQWVREOVVJN1VxRVBaS19icG5Qa0pB?oc=5",
+      "published": "Fri, 18 Sep 2026 23:16:51 GMT",
+      "published_iso": "2026-09-18T23:16:51+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Trenton voters will decide on a data center ban: Election 2026",
+      "outlet": "Journal-News.com",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPRGp5N1NlUVZaU0JVRVIzcGpIcF9FY1NLSmZhMFRWLV85SnZaanB1ZjhTNXByZko1eGdvNWhzODR4QWd4WkoyT2tkNVdmOGVWbUx1UjlMSEdDd3JGU0c2a01TTjktQnVmSExJeEpkWHhSSk5nMFQ1c3Q2UFhUOU9IM21QWDM2Sk1VT2FBVmpqck0?oc=5",
+      "published": "Fri, 18 Sep 2026 12:36:28 GMT",
+      "published_iso": "2026-09-18T12:36:28+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Gov. Greg Abbott issues permit moratorium on new data centers",
+      "outlet": "Dallas News",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNYnBjWlhvbmwxZnhCMkY4MVpMOXRsTjhsUnNYeTBQN1JnTkxkUXQzVFFZWVZHOGZkTFlzZEhFTkJRS0hWU0NEUXJYdnNqbDFWc2Vhbk1RR3N1Z3p5bDBHeU1JZ1c0em9ub2dSdm1HVWJtcF9lRnZUNDBjR1lnUG91ODRXTVVaeFdZdWxjMV9yRlh5eTRXbUF4Z1VMUGNfSkVxellaT0ZDTlZkbjBI?oc=5",
+      "published": "Mon, 21 Sep 2026 19:06:25 GMT",
+      "published_iso": "2026-09-21T19:06:25+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "‘UpFront’ dives into Wisconsin Rapids data center controversy",
+      "outlet": "WisPolitics",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNRklwT0VWMDNGd05weUkxV1E1SGRoRjZIQVdnUnZXQklBYXA3LWlVdzlBdmcxVl8yMkthS3pOWlJkQ2stVjJIMzZsTkFqTXVTNlhJbmZwTEVka1lFNXB3UFdnQUhzazZWRzZodl9KZF92QWcxZVdyc2VVaHZBQmFnU2JwYmNWNVZTQ296c2dldVJ2czhiTm9qaQ?oc=5",
+      "published": "Mon, 21 Sep 2026 14:37:55 GMT",
+      "published_iso": "2026-09-21T14:37:55+00:00",
+      "locality": "Wisconsin Rapids",
+      "state": "WI",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Governor Spanberger Unveils Strong New Data Center Requirements",
+      "outlet": "Chesapeake Bay Foundation",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPQ0tEd2IwRVVUUUpFbDVZUnotdENmVl96QkxzQ0FBVEpsTkhxUDZMOWpDbzFTUnpIbGhtMU81UDY1QWtRM0kzQXpXSEpzdWRkOVE0ZG5acmx5RGYzR3dDSGZrand2T2doM21YNlAybFRMNkEzU2lzcHlCWXBQUVZHQUJDNTJWTGxEVVZkekFYVEx1X3M?oc=5",
+      "published": "Fri, 18 Sep 2026 07:00:00 GMT",
+      "published_iso": "2026-09-18T07:00:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Virginia moves to give communities more say on data centers",
+      "outlet": "Axios",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOZVdLMHQybmhvVjdJWU9sbW5pT0tJQUptcU9pbk9MXzRJalV6OTljMUNWSVNmUVNZR2VLSl9oeHBLNEtjZ2pqdy10eXEtN2hZYzFXLUhCN2FMRXRXYnRyVGVpbGtuZmpoWkxxMDJnVVlqZWRJRFJyOXlVcnE2YlNEdzRwQkNFelkxNW1HcUpQQkNHSjNrOHhOTzh2RVhFN1ItQ0VJRVRPQmhvaG8?oc=5",
+      "published": "Mon, 21 Sep 2026 19:30:38 GMT",
+      "published_iso": "2026-09-21T19:30:38+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Virginia pushes back on data centers",
+      "outlet": "Bond Buyer",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5HZlVpZk9WSVVXM3ZVWnZGWGZIWnlJM2labnR6RjlJRWhZM3V4RWZtZGF0enBEczN0cG56bVZMMjg0bFVKclIwbFVQU2J4WS1CM0Z0cHVYdjZ2Um9GU0xjaTJheFJiRko5SW9GZDlIMlFWYWVlZWc?oc=5",
+      "published": "Mon, 21 Sep 2026 17:38:00 GMT",
+      "published_iso": "2026-09-21T17:38:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Spanberger+proposes+by-right+approval+ban+for+data+centers",
+      "outlet": "valawyersweekly.com",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQQVNOSTFOazg5LWN3aDNib0NCS3p4aHh5bU9keXZ1RXpDa0wtakc1VnpnSmlfVkwyZXRORl9iaVd6UzItQ1NlMXNPeGFrTEdqUFY3Ym5CQ3E4SlV6MGludENKSm5GVXZwUlZQOUg0OTI1OW9HdTNBQnhpZzloNnhDNi1ZZ09YdjZydmlVYU9WY0xEZjVaQ0xMZ25R?oc=5",
+      "published": "Mon, 21 Sep 2026 16:30:39 GMT",
+      "published_iso": "2026-09-21T16:30:39+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "We’re suing over OpenAI’s secret $20B data center",
+      "outlet": "Southern Environmental Law Center",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBoR0ZVY0prUzFRV2tjT2pab2dmNTRXV2NSRjZGbUUyQkMybklTdGx2d0h3V1NfLW9XdXJUQVR4Xy1mR3FtcDZkR2x4Vkl0NkdXNmFCMm52elpaSXZpOGt3MFBoVF93c0RFSXUycWJ1Q0lyejk0aHMtN2N6a0FvUQ?oc=5",
+      "published": "Mon, 21 Sep 2026 18:28:31 GMT",
+      "published_iso": "2026-09-21T18:28:31+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Second Project Camellia Lawsuit Takes Aim at Secrecy by Effingham County Industrial Development Authority",
+      "outlet": "The Georgia Virtue",
+      "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOOTNXZTlON0lFd3BjUTBJSGVUenZ3d2hwRXladkRTLVpCRUlEV0tXdHR0azBjMkhTdGh6Z2RsdmRvV0hwZHI2QVdMa1FMLVVvOXFLSWpuS3FFX0FLa2tPN3ZROEFpLUxBa2k5b1NkckpKN1pYX0JnN1gzTlZlU1ZHYk5MaV9uWmlLek5ZcjJnTUItMVJjam1kWk91VlhTZEpTbEdMN1J2Zzl2bTZmRHlwdmRnTUM4dUZfcWY3MFk5VzNMZTlKQ2tXR0dVd2V6bWxiVEwzZDdLMWJJd2NVVVlYSjFKSmo5NnVES3lFZXJpdy04VDJOVEpDMUN1VHZCc3M?oc=5",
+      "published": "Mon, 21 Sep 2026 17:11:01 GMT",
+      "published_iso": "2026-09-21T17:11:01+00:00",
+      "locality": "Effingham County",
+      "state": "GA",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "What exactly is a data center?",
+      "outlet": "spectrumlocalnews.com",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOdEJhNDJJaVZKX3ZlVkhWc2lMZmd1S1VZM016MG00TjhnMTcxZnVPM054LVJldkdtNlEtWWNuOWRBZlcteno5NnZwNU5US3g0NDBsRGlSQzlRTGpVb2szNndpSWRmZGxubVBOTFFoWlZabjhfNDZTajNULUdBS1FZVVNNcVpxNFVnbkhiOTNXYw?oc=5",
+      "published": "Mon, 21 Sep 2026 18:58:26 GMT",
+      "published_iso": "2026-09-21T18:58:26+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Texas Data Center Audit Examines Power, Water And Community Impacts Of 461 Projects",
+      "outlet": "Dallas Express",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZzN3ZHFJXzhpZGUyT2d0LUZvdWpzalV3WUhONUVPYlZXbnNWNklCYjJ4d1J4NTdqV0ZBc0FZQkFjZk5SdjBJTzV4QUlXeXY2NUZqVHlVUl9GN2J0d3k3QWRHMGpvak1xUlRtTkNIMjFaSTl0VHY1MWVBTTZGX0pSQTRKdmktazdGSzZSMUx5eXJGRklwd21VTXpMeGRQcDk2YTdXSkNTRXRrdUFBMHVTMTRTVU1fZw?oc=5",
+      "published": "Mon, 21 Sep 2026 20:03:45 GMT",
+      "published_iso": "2026-09-21T20:03:45+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Governor Abbott Directs TCEQ To Halt Data Center Permits",
+      "outlet": "kcbd.com",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNUXVWZlZQbWlQVkpGcFNtMEsyb1VnM19VeWFLbnZUZjhTTWNkQ1hhRE41RDdEck9wY3hjdWxrYWFUOFhPVnY5NzFOY251c0xqU2F0S2hhUHpmWVdRNkJkSFBraGk2OVdVRjZqWUtsamRlNnJ0d0ZkVWJiZWRHQ2pzTmRYdUZPbTc0d1I0UzJJSdIBowFBVV95cUxNZThZRnRESjFBcDYwRzI2N2trdFpvT1Z3TFk3eUdRY3ZqZ1d0ZE94TElOTnhkemdSanZYaXh4S05RM1ZNOUNtWmF2TlRpM3Nvd1l3VVNCOHl5WkN3dVN6NVBPOWFuNEFWMnZ6SVMxWHctZjBJZE9ycUxfVGU2NWpCdElyNlZlMm45TnVlWWVrREprSlV2U3o5c3VMRTNPeXI1LWNV?oc=5",
+      "published": "Mon, 21 Sep 2026 19:39:00 GMT",
+      "published_iso": "2026-09-21T19:39:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Governor Abbott directs Texas Commission on Environmental Quality to pause data center permits",
+      "outlet": "KCENTV.com",
+      "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQNmJYOFdZenRGMnpua0luU1hzRmVhcXRXVV8wOUFjSzJzbXRfNk4tdHdDYVN6czZ1VmhabFVKWEl2cGk0RkNIOFVWTmt0bkdoUmhVUTItQ2ozdWFKNFZ3eTl5TGtid2V3SFhNYnR3ZzVDeVN4QnQ1eGt1eEJIakJzQmJGNVpBcDJmVUNIbG1IcUd1RUlmLXRWRWNCYnJ6dVM5QnM0ZWpTcmNHSng0QVphU3czVzVTUjFPc1FvMWVBbUk4MkgtTnB2NXl5ZUF3cUNsVzRGRThVcmtMM0xkMHp4Yk9Qb3Rxdm43WlozUzhGaXRVODE1X2diVnI1VTNxc0EzNHVtZTVDb2M?oc=5",
+      "published": "Mon, 21 Sep 2026 20:01:00 GMT",
+      "published_iso": "2026-09-21T20:01:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Texas governor wants penalties for data centers that don’t report water use",
+      "outlet": "Water Finance & Management",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNVTJXRzF1SDB6OXNXTjYwa0tGUmdzTlA4Uk5uTVVBbHFzZTUxbXd0cW5IaHI1WFZFYlI5RHh6MXJCckJGWmstT2EtelhvSlA3ak9KRHZQWjdxTjRiZWU0NkRzb2hQNlZ2SEVaRlBXU0U3eDdqZDJRZThrN1RxbUwwUDFRMG8?oc=5",
+      "published": "Mon, 21 Sep 2026 12:15:38 GMT",
+      "published_iso": "2026-09-21T12:15:38+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Texas Gov. Greg Abbott orders halt to all data center permits",
+      "outlet": "Arc XP",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNUUx4OWlhWUxBOWptVlZQdU8zRU8tX05JMDVTRnFWSDQ4X004VFZSMDhrYlg0cnJwYTJDQ1dWQ2h1TGxyLUd0SUQ2X2lvMEJBQnFrNUxGN1hrXy1YdURsejFDMU1EX0dMTi1DcmQ3SkZOZ1VnTmNyNW9JbFV6aUxhbVp3c01zNktLbk8wX2VkX3BKV0JYMlBEZXhLcldNWmpsREN2Y0VSY3Bzb2NJcmVyd1B3VHZtM3ZfNUdtbFh6WC00YkZmSXc?oc=5",
+      "published": "Mon, 21 Sep 2026 19:44:52 GMT",
+      "published_iso": "2026-09-21T19:44:52+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Abbott orders penalties for data centers that fail to report water use",
+      "outlet": "ValleyCentral.com",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNckx5WjFBOEE0M2FPV3RVWFI5Y0llZmRZbFhsZDc2T0drT3h6aEh3V2wzcDU0SjFIMzJsVTl6TzdpZVl1TVVHajU4X054eTlrT19UcW5RMEVqRENPRGNEXzhpSUxwbjMtVmlwdFV1MWN1ZnVkYU5qZGNaUGNtNXdWN0dBZXNWdjlDQzM4bjFkUXI1dDJTZDRjVFcydlZtLUxjbmNhSGZWZUl6bUlzWVhva01UZkxsaXlC0gGvAUFVX3lxTFBQWHFyZ00zenFWeURid2M5em9ycm1PQVk3UGFUVmVZUTJzcFpLaE1BeGJlX3BQa2RtMGlfM0dfVlY0ZDV4Tl8xdjRmNGQzQnFQeHBZX3BFN2FqdHgxa0VZX0hMMFZnSVM2MFczZl80QXpGc3BGUEdUYWpoWVdSOWF6N080Z3BFVGs5Szg4R0pjVHd2WVFLaklVcnBSRVlrZ2RDSEx1OHJZNXpMN2M1UkU?oc=5",
+      "published": "Tue, 15 Sep 2026 21:09:11 GMT",
+      "published_iso": "2026-09-15T21:09:11+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "Texas PUC adopts softened rules on data center interconnection",
+      "outlet": "Utility Dive",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQOVlMdWw0OG5ubkNiSWRhMi1hN2pVZk5TTDBxUmNKSUprTS1Za3dHODJXaDh6Q2tSOE5nRk9KRkdBc0JMa1JKeHRLb29MTlhNeWlWMklSN1k1dlFTcGRmV2FyOEIxbjFFOWxGM0RBWjF0RmxDb2pmRVVLUks5N0NqeVI0a0FoX0IxTUFfclRTOXFCSUtVN3c?oc=5",
+      "published": "Mon, 21 Sep 2026 18:00:45 GMT",
+      "published_iso": "2026-09-21T18:00:45+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    {
+      "title": "New Texas Data Center Power Deals Announced as Opposition Mounts",
+      "outlet": "hartenergy.com",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUHVQYTJ6ZFM0bGpTTDJ1WVhxWUhISnVtNEtESC1Hc2FMNWYzSVNqeFlDZlBUVVhJY1ZwOU5iUmROYldGai1ZamRnYWxlTHRaTTJSbmMwUUUtakhTMEZsWlZlbGEtTEdrRXBYWHhPdjlobUdXbnBDbnBTY0pfVjdZc2ZlWDh3ZmxESWU5WG5XU3ZqZVdlNWNhM2h6WmhGSkJtMklN?oc=5",
+      "published": "Mon, 21 Sep 2026 19:58:00 GMT",
+      "published_iso": "2026-09-21T19:58:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-21",
       "last_seen": "2026-09-21"
     }
   ]
