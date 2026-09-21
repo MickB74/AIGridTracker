@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-09-20",
+  "generated": "2026-09-21",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 853,
   "states": 49,
-  "enacted": 689,
+  "enacted": 688,
   "proposed": 81,
   "official_sourced": 64,
   "by_state": {
@@ -61,7 +61,7 @@
     },
     "GA": {
       "total": 46,
-      "enacted": 34,
+      "enacted": 33,
       "proposed": 1
     },
     "NY": {
@@ -267,7 +267,6 @@
       "tallmadge-oh",
       "indio-ca",
       "palm-springs-ca",
-      "roswell-ga",
       "waterford-township-mi",
       "calaveras-county-ca",
       "escondido-ca",
@@ -299,7 +298,6 @@
       "palm-springs-ca",
       "lowndes-county-ga",
       "camden-county-ga",
-      "roswell-ga",
       "riley-county-ks",
       "waterford-township-mi",
       "calaveras-county-ca",
@@ -359,10 +357,10 @@
       "waterville-township-oh",
       "indio-ca",
       "palm-springs-ca",
+      "cache-county-ut",
       "box-elder-county-ut",
       "lowndes-county-ga",
       "camden-county-ga",
-      "roswell-ga",
       "riley-county-ks",
       "brookville-pa",
       "center-township-pa",
@@ -387,6 +385,7 @@
       "smithfield-township-pa",
       "west-whiteland-township-pa",
       "dickinson-county-ia",
+      "peosta-ia",
       "webster-county-mo",
       "spokane-county-wa",
       "plainfield-il",

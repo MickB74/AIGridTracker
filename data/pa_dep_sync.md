@@ -1,11 +1,11 @@
-# PA DEP data-center tracker sync — 2026-09-20
+# PA DEP data-center tracker sync — 2026-09-21
 
 Source: https://gis.dep.pa.gov/DataCenterPermitTracker/
 
 - DEP projects on file: **71**
 - DEP permit records: **366**
-- Added to projects.json: **3**
-- Refreshed: **1**
+- Added to projects.json: **0**
+- Refreshed: **0**
 - Skipped (already tracked by hand): **16**
 
 ## Skipped — hand-written row already covers this
@@ -28,14 +28,4 @@ Left alone on purpose. If the DEP row carries detail ours lacks (a permit trail,
 - DEP 10000066 *Salem Township Data Center Development (Amazon Web Services) - Phase 2* (Salem Township (Luzerne County)) → `aws-salem-township-pa`
 - DEP 10000067 *Falls Township Data Center Development (Amazon Web Services) - Phase 2* (Falls Township (Bucks County)) → `aws-falls-township-pa`
 - DEP 10000068 *Project Phoenix (Aligned Data Centers) - Phase 2* (Shippingport Borough (Beaver County)) → `aligned-shippingport-pa`
-
-## Added
-
-- `triboro-industrial-park-data-center-jessup-olyphant-throop-boroughs-pa` — Triboro Industrial Park Data Center, Jessup / Olyphant / Throop Boroughs (Lackawanna County) — 2 permit events
-- `mount-carmel-township-data-center-mount-carmel-township-pa` — Mount Carmel Township Data Center, Mount Carmel Township (Northumberland County)
-- `outrigger-data-center-mifflin-township-pa` — Outrigger Data Center, Mifflin Township (Columbia County)
-
-## Refreshed
-
-- `qts-salem-salem-township-pa` — Environmental permits under review at PA DEP (5 pending).
 
