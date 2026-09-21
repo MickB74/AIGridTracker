@@ -19919,7 +19919,7 @@
       "guess_state": null,
       "query": "data center moratorium city council",
       "first_seen": "2026-09-20",
-      "last_seen": "2026-09-20",
+      "last_seen": "2026-09-21",
       "status": "new",
       "origin": "news-scan"
     },
@@ -20062,7 +20062,7 @@
       "guess_state": null,
       "query": "data center moratorium county commission approved",
       "first_seen": "2026-09-20",
-      "last_seen": "2026-09-20",
+      "last_seen": "2026-09-21",
       "status": "new",
       "origin": "news-scan"
     },
@@ -20088,7 +20088,7 @@
       "guess_state": null,
       "query": "data center moratorium county commission approved",
       "first_seen": "2026-09-20",
-      "last_seen": "2026-09-20",
+      "last_seen": "2026-09-21",
       "status": "new",
       "origin": "news-scan"
     },
@@ -20101,7 +20101,7 @@
       "guess_state": null,
       "query": "data center moratorium county commission approved",
       "first_seen": "2026-09-20",
-      "last_seen": "2026-09-20",
+      "last_seen": "2026-09-21",
       "status": "new",
       "origin": "news-scan"
     },
@@ -20127,7 +20127,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-09-20",
-      "last_seen": "2026-09-20",
+      "last_seen": "2026-09-21",
       "status": "new",
       "origin": "news-scan"
     },
@@ -20218,7 +20218,7 @@
       "guess_state": null,
       "query": "data center moratorium extended",
       "first_seen": "2026-09-20",
-      "last_seen": "2026-09-20",
+      "last_seen": "2026-09-21",
       "status": "new",
       "origin": "news-scan"
     },
@@ -24357,6 +24357,71 @@
       "origin": "archive-sweep"
     },
     {
+      "title": "Galesburg council to consider 180-day data center moratorium tonight",
+      "outlet": "WGIL",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE44Y3l5eXluX090a1ZUWnRfVWU1eWt6cG54bGN6V1BXcEw3WXVpblRSbGxIbVFaLUZVWnpwQjFCTG9aTmZRUEpLTUU3N25vNlFKNGdHRjMzSUlFTTBfb3RCaEp6bmhncTdtdlhGNm00Y29DT0xyQnEwaDJtcmtudw?oc=5",
+      "published": "Mon, 21 Sep 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium city council",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Another Colorado city is considering a pause on data center development",
+      "outlet": "Denver7",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPQWpobmVWbG5JMDFkMGN1MUJKeS14eDZpSUFVQVRzZzlpOWp1d2RTLW81dlJqeWtQbzc4WmJUOFhucW9IMy16UFBqRkh0WGp0VTFTNnZPWDdyTDhlTHpmWnNTUENrX2lLUTc1Z2JMQ2VxMVdlbGl4SjJaRFhueks1eVNuUzBfTFRIdmI3QUFIQkZkXzNnNWMzQlhPZ0U4WnJpa0pkX1hnNVJzT2xkTkZHYQ?oc=5",
+      "published": "Mon, 21 Sep 2026",
+      "guess_locality": null,
+      "guess_state": "CO",
+      "query": "data center moratorium city council",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Guilford mulls 180-day data center moratorium amid regional, national debate",
+      "outlet": "The Business Journals",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOU3o0SFNxY0hHNXN6UzY3Um91bXloZWRTRHZOZU91eUwzTlNZUjZ4LTFRVE5GZU1TdWp1bjZ4T3VVckhNWkdUMmZfYlExbmNSMjFmeFlXZ2pyb3dlVFNrNmEzeGVGa1RHdjVtQkl3dmRTUXZqTjZRZFZBYkZUVEhobjNWTXBEd3pyMHF5QTZ4SHFqU3hXZWVURVlkZlp1dWNJS1p5Sg?oc=5",
+      "published": "Mon, 21 Sep 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium county commission approved",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Greenfield City Council approves one-year moratorium on data centers",
+      "outlet": "Franklin County Now",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNTHRMSzlrRXFkTzhVWGhsaWhXQXdNdDZyS0RWdVVuMEllN3VSeTV4UTc5TVJ1bDlmLUNzNXloQXM3c2p1ZExVMDZzS05LZk5SNTlULV9CS2NJM25fNUNORUllRU96eWJ3OXlhWWpZMDFPcDNiOTRyU0ttUWg4Q2RyS1JVejhQSUxTaWpNUTlDN2RhN0I4em5NWTVULVFmNS1uclMwMTNlLWRZZHJFY055Vw?oc=5",
+      "published": "Fri, 18 Sep 2026",
+      "guess_locality": "Greenfield",
+      "guess_state": null,
+      "query": "data center moratorium county commission approved",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Cumberland Council Bans Data Centers in 6-1 Zoning Vote",
+      "outlet": "Uprise RI",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPUXl0QWhmRWlWMzVtVUF2dzZUdUxIbjY1YnBHc0VTdWNtSEoxUklrS3NRNzJ3ZmNCSkd4bm1hd1lIZktPVmlZQzRxanBFaS1JdDAyam1Zc0U0NjBYRXM1Z3FNUTBxNUpCeElBeUJVUi1ZMHNtQ0YxQzNKODhndzRKYXVBWFItb09VdDdPZExyZnZGMlF5d1RBZjNJTTJfdElwR0JoZENDSDhCUjNsOUVZb1Nxd0ZyWW9lR0FJSkxkOVN0VVlFajA5YQ?oc=5",
+      "published": "Thu, 17 Sep 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center ban zoning ordinance town board",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
       "title": "Marion County Commissioners Direct Staff to Begin 12-Month Data Center Moratorium After Workshop Debate",
       "outlet": "352today",
       "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPaDl1OXF3RW14TzFzQkl6VlI5VXVxX3VYYUJudlRlTWJUQ1RLbG96bWpCM1VhZG9UTUFtMUlDRDhFbTJ5Z1FTTHdDOXdXRXU4bTE2Wl8xelpvZEpDcVZLWkxWcWY5T19BMUk0R3ZCQ25ZaTNZSnVTbkJ3NkUzdUg2SXN6OWwzZ25FOU5tNWZOaTdkZTJqXzdzS2wwS0h2WXVOajNQRkM4QTJsWDVqc3VleEkxcFN4ZE9SaVcxNkE2RndlNFVkcTVLU0k3RlFRaWhOYnQ4?oc=5",
@@ -24395,7 +24460,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-09-20",
+      "last_seen": "2026-09-21",
       "status": "dismissed",
       "origin": "news-scan",
       "resolved": "2026-09-07",
@@ -24826,7 +24891,7 @@
       "guess_state": null,
       "query": "data center moratorium extended",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-09-20",
+      "last_seen": "2026-09-21",
       "status": "promoted",
       "origin": "news-scan"
     },

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20",
+  "generated": "2026-09-21",
   "findings": [
     {
       "kind": "expired",
@@ -235,6 +235,14 @@
     },
     {
       "kind": "expired",
+      "locality": "Roswell",
+      "state": "GA",
+      "status": "Enacted",
+      "detail": "term ran to 2026-09-20; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://roswellconnections.com/datacenters/"
+    },
+    {
+      "kind": "expired",
       "locality": "Saugatuck Township",
       "state": "MI",
       "status": "Enacted",
@@ -323,6 +331,14 @@
     },
     {
       "kind": "dead-link",
+      "locality": "Wisconsin",
+      "state": "WI",
+      "status": "Proposed",
+      "detail": "URLError: <urlopen error timed out> \u2014 https://docs.legis.wisconsin.gov/document/proposaltext/2025/REG/SB1061,2,5",
+      "source": "https://docs.legis.wisconsin.gov/document/proposaltext/2025/REG/SB1061,2,5"
+    },
+    {
+      "kind": "dead-link",
       "locality": "Shawnee Township",
       "state": "OH",
       "status": "Enacted",
@@ -352,6 +368,14 @@
       "status": "Enacted",
       "detail": "HTTP 404 \u2014 https://phillipscounty.colorado.gov/sites/phillipscounty/files/Resolution%202026-02-27-01.pdf",
       "source": "https://phillipscounty.colorado.gov/sites/phillipscounty/files/Resolution%202026-02-27-01.pdf"
+    },
+    {
+      "kind": "dead-link",
+      "locality": "Laurens County",
+      "state": "SC",
+      "status": "Proposed",
+      "detail": "TimeoutError: The read operation timed out \u2014 https://whosonthemove.com/laurens-county-council-approves-data-center-moratorium-honors-special-olympics-champions/",
+      "source": "https://whosonthemove.com/laurens-county-council-approves-data-center-moratorium-honors-special-olympics-champions/"
     },
     {
       "kind": "undated-term",
@@ -1294,7 +1318,7 @@
       "locality": "Meridian Township",
       "state": "MI",
       "status": "Enacted",
-      "detail": "ends 2026-11-19 (60.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-11-19 (59.0d) \u2014 watch for an extension",
       "source": "https://www.wkar.org/wkar-news/2026-05-28/meridian-township-is-officially-putting-a-pause-on-any-data-centers-that-might-come-to-town"
     },
     {
@@ -1302,7 +1326,7 @@
       "locality": "Lysander (Onondaga Co.)",
       "state": "NY",
       "status": "Enacted",
-      "detail": "ends 2026-11-06 (47.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-11-06 (46.0d) \u2014 watch for an extension",
       "source": "https://www.informnny.com/news/local-news/lysander-board-approves-six-month-data-center-moratorium-residents-speak-out-against-project-proposal/"
     },
     {
@@ -1310,7 +1334,7 @@
       "locality": "Bangor",
       "state": "ME",
       "status": "Enacted",
-      "detail": "ends 2026-10-10 (20.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-10 (19.0d) \u2014 watch for an extension",
       "source": "https://www.wabi.tv/2026/04/14/bangor-passes-180-day-moratorium-data-center-development/"
     },
     {
@@ -1318,7 +1342,7 @@
       "locality": "Vienna Township (Trumbull Co.)",
       "state": "OH",
       "status": "Enacted",
-      "detail": "ends 2026-10-16 (26.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-16 (25.0d) \u2014 watch for an extension",
       "source": "https://www.tribtoday.com/news/local-news/2026/08/vienna-extends-data-center-moratorium/"
     },
     {
@@ -1326,7 +1350,7 @@
       "locality": "Charlotte",
       "state": "NC",
       "status": "Enacted",
-      "detail": "ends 2026-11-05 (46.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-11-05 (45.0d) \u2014 watch for an extension",
       "source": "https://www.wfae.org/politics/2026-06-08/charlotte-city-council-approves-150-day-data-center-moratorium"
     },
     {
@@ -1334,7 +1358,7 @@
       "locality": "Lavon",
       "state": "TX",
       "status": "Enacted",
-      "detail": "ends 2026-11-05 (46.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-11-05 (45.0d) \u2014 watch for an extension",
       "source": "https://www.wfaa.com/video/tech/city-of-lavon-discussing-data-center-moratorium/287-bda49564-1e93-43c5-ad74-4dbb71af0464"
     },
     {
@@ -1342,7 +1366,7 @@
       "locality": "Springfield",
       "state": "MO",
       "status": "Enacted",
-      "detail": "ends 2026-11-17 (58.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-11-17 (57.0d) \u2014 watch for an extension",
       "source": "https://www.ky3.com/2026/06/29/springfield-city-council-passes-120-day-moratorium-data-centers-heres-what-happens-next/"
     },
     {
@@ -1350,7 +1374,7 @@
       "locality": "Lexington (Fayette County)",
       "state": "KY",
       "status": "Enacted",
-      "detail": "ends 2026-10-31 (41.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-31 (40.0d) \u2014 watch for an extension",
       "source": "https://www.lex18.com/news/covering-kentucky/lexington-city-council-passes-moratorium-on-data-center-development"
     },
     {
@@ -1358,7 +1382,7 @@
       "locality": "Johnson County",
       "state": "IA",
       "status": "Enacted",
-      "detail": "ends 2026-11-08 (49.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-11-08 (48.0d) \u2014 watch for an extension",
       "source": "https://cbs2iowa.com/news/local/johnson-county-imposes-moratorium-on-data-centers-to-protect-resources-and-assess-impacts"
     },
     {
@@ -1366,7 +1390,7 @@
       "locality": "Putnam County",
       "state": "IN",
       "status": "Enacted",
-      "detail": "ends 2026-11-17 (58.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-11-17 (57.0d) \u2014 watch for an extension",
       "source": "https://www.giant.fm/putnam-county/news/local-news/putnam-county-commissioners-vote-in-favor-of-moratorium-on-solar-farms/"
     },
     {
@@ -1374,7 +1398,7 @@
       "locality": "White County",
       "state": "IN",
       "status": "Enacted",
-      "detail": "ends 2026-10-20 (30.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-20 (29.0d) \u2014 watch for an extension",
       "source": "https://www.wrul.com/local-news/twelve-month-moratorium-approved-for-white-county/"
     },
     {
@@ -1382,7 +1406,7 @@
       "locality": "Front Royal",
       "state": "VA",
       "status": "Enacted",
-      "detail": "ends 2026-10-04 (14.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-04 (13.0d) \u2014 watch for an extension",
       "source": "https://www.nvdaily.com/nvdaily/council-oks-moratorium-on-data-center-applications/article_8bbfc9ce-d84e-5dd8-a4be-e8f9ee95cc94.html"
     },
     {
@@ -1390,7 +1414,7 @@
       "locality": "Tulare County",
       "state": "CA",
       "status": "Enacted",
-      "detail": "ends 2026-10-02 (12.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-02 (11.0d) \u2014 watch for an extension",
       "source": "https://sjvwater.org/tulare-county-hits-pause-on-ai-data-centers/"
     },
     {
@@ -1398,7 +1422,7 @@
       "locality": "Cleveland",
       "state": "OH",
       "status": "Enacted",
-      "detail": "ends 2026-10-16 (26.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-16 (25.0d) \u2014 watch for an extension",
       "source": "https://www.clevelandohio.gov/news/cleveland-city-council-approves-temporary-pause-new-standalone-data-centers"
     },
     {
@@ -1406,7 +1430,7 @@
       "locality": "Pierce Township",
       "state": "OH",
       "status": "Enacted",
-      "detail": "ends 2026-10-09 (19.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-09 (18.0d) \u2014 watch for an extension",
       "source": "https://piercetownship.org/wp-content/uploads/2026/02/Res-Imposing-Moratorium-Data-Centers-kb-edits.pdf"
     },
     {
@@ -1414,7 +1438,7 @@
       "locality": "Tallmadge",
       "state": "OH",
       "status": "Enacted",
-      "detail": "ends 2026-10-10 (20.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-10 (19.0d) \u2014 watch for an extension",
       "source": "https://www.yahoo.com/news/articles/tallmadge-considers-six-month-moratorium-100316607.html"
     },
     {
@@ -1422,7 +1446,7 @@
       "locality": "Indio",
       "state": "CA",
       "status": "Enacted",
-      "detail": "ends 2026-10-16 (26.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-16 (25.0d) \u2014 watch for an extension",
       "source": "https://www.nbcpalmsprings.com/2026/07/16/indio-city-council-extends-data-center-moratorium-with-planning-commission-already-recommending-a-full-ban"
     },
     {
@@ -1430,7 +1454,7 @@
       "locality": "Palm Springs",
       "state": "CA",
       "status": "Enacted",
-      "detail": "ends 2026-10-10 (20.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-10 (19.0d) \u2014 watch for an extension",
       "source": "https://kesq.com/news/2026/08/26/palm-springs-city-council-approves-temporary-data-center-moratorium/"
     },
     {
@@ -1438,7 +1462,7 @@
       "locality": "Lowndes County",
       "state": "GA",
       "status": "Enacted",
-      "detail": "ends 2026-10-25 (35.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-25 (34.0d) \u2014 watch for an extension",
       "source": "https://valdostadailytimes.com/2026/08/26/lowndes-county-approves-60-day-data-center-moratorium/"
     },
     {
@@ -1446,23 +1470,15 @@
       "locality": "Camden County",
       "state": "GA",
       "status": "Enacted",
-      "detail": "ends 2026-11-06 (47.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-11-06 (46.0d) \u2014 watch for an extension",
       "source": "https://www.gpb.org/news/2026/05/06/camden-becomes-first-county-on-the-coast-adopt-data-center-moratorium"
-    },
-    {
-      "kind": "expiring",
-      "locality": "Roswell",
-      "state": "GA",
-      "status": "Enacted",
-      "detail": "ends 2026-09-20 (0.0d) \u2014 watch for an extension",
-      "source": "https://roswellconnections.com/datacenters/"
     },
     {
       "kind": "expiring",
       "locality": "Riley County",
       "state": "KS",
       "status": "Enacted",
-      "detail": "ends 2026-11-12 (53.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-11-12 (52.0d) \u2014 watch for an extension",
       "source": "https://1350kman.com/2026/05/end-date-set-for-riley-countys-data-center-moratorium/"
     },
     {
@@ -1470,7 +1486,7 @@
       "locality": "Waterford Township",
       "state": "MI",
       "status": "Enacted",
-      "detail": "ends 2026-09-23 (3.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-09-23 (2.0d) \u2014 watch for an extension",
       "source": "https://www.waterfordmi.gov/ArchiveCenter/ViewFile/Item/1696"
     },
     {
@@ -1478,7 +1494,7 @@
       "locality": "Calaveras County",
       "state": "CA",
       "status": "Enacted",
-      "detail": "ends 2026-10-09 (19.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-09 (18.0d) \u2014 watch for an extension",
       "source": "https://mymotherlode.com/news/local/11092598/calaveras-data-center-moratorium-passes-4-0.html"
     },
     {
@@ -1486,7 +1502,7 @@
       "locality": "Escondido",
       "state": "CA",
       "status": "Enacted",
-      "detail": "ends 2026-10-12 (22.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-12 (21.0d) \u2014 watch for an extension",
       "source": "https://ncpipeline.substack.com/p/escondido-data-center-moratorium"
     },
     {
@@ -1494,7 +1510,7 @@
       "locality": "Eureka",
       "state": "CA",
       "status": "Enacted",
-      "detail": "ends 2026-10-17 (27.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-17 (26.0d) \u2014 watch for an extension",
       "source": "https://lostcoastoutpost.com/2026/sep/2/eureka-city-council-approved-temporary-ban-data-ce/"
     },
     {
@@ -1502,7 +1518,7 @@
       "locality": "Mendocino County",
       "state": "CA",
       "status": "Enacted",
-      "detail": "ends 2026-10-16 (26.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-16 (25.0d) \u2014 watch for an extension",
       "source": "https://mendovoice.com/2026/09/mendocino-county-supes-ban-data-centers-for-the-moment-at-least/"
     },
     {
@@ -1510,7 +1526,7 @@
       "locality": "Morgan Hill",
       "state": "CA",
       "status": "Enacted",
-      "detail": "ends 2026-10-10 (20.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-10 (19.0d) \u2014 watch for an extension",
       "source": "https://morganhilltimes.com/morgan-hill-declares-moratorium-on-data-centers-battery-storage-sites/"
     },
     {
@@ -1518,7 +1534,7 @@
       "locality": "Lake Elsinore",
       "state": "CA",
       "status": "Enacted",
-      "detail": "ends 2026-10-09 (19.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-09 (18.0d) \u2014 watch for an extension",
       "source": "https://elsinore247.com/2026/08/council-unanimously-approves-45-day-data-center-moratorium.html"
     },
     {
@@ -1526,7 +1542,7 @@
       "locality": "Upper Burrell Township",
       "state": "PA",
       "status": "Enacted",
-      "detail": "ends 2026-11-02 (43.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-11-02 (42.0d) \u2014 watch for an extension",
       "source": "https://www.publicsource.org/upper-burrell-data-center-transparency-backlash/"
     },
     {
@@ -1534,7 +1550,7 @@
       "locality": "Newton County",
       "state": "GA",
       "status": "Enacted",
-      "detail": "ends 2026-10-05 (15.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-05 (14.0d) \u2014 watch for an extension",
       "source": "https://www.covnews.com/news/county/newton-county-enacts-moratoriums-data-centers-convenience-stores/"
     },
     {
@@ -1542,7 +1558,7 @@
       "locality": "Butler Township",
       "state": "PA",
       "status": "Enacted",
-      "detail": "ends 2026-11-08 (49.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-11-08 (48.0d) \u2014 watch for an extension",
       "source": "https://fox56.com/news/local/butler-township-approves-180-day-curative-amendment-moratorium"
     },
     {
@@ -1550,7 +1566,7 @@
       "locality": "Smithfield Township",
       "state": "PA",
       "status": "Enacted",
-      "detail": "ends 2026-11-02 (43.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-11-02 (42.0d) \u2014 watch for an extension",
       "source": "https://smithfieldtownship.com/otp/dcca/"
     },
     {
@@ -1558,7 +1574,7 @@
       "locality": "West Whiteland Township",
       "state": "PA",
       "status": "Enacted",
-      "detail": "ends 2026-11-01 (42.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-11-01 (41.0d) \u2014 watch for an extension",
       "source": "https://citizenportal.ai/articles/8209298/pennsylvania/chester-county/west-whiteland/township-to-rewrite-data-center-rules-after-board-invokes-180-day-municipal-cure"
     },
     {
@@ -1566,7 +1582,7 @@
       "locality": "Dickinson County",
       "state": "IA",
       "status": "Enacted",
-      "detail": "ends 2026-11-12 (53.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-11-12 (52.0d) \u2014 watch for an extension",
       "source": "https://www.exploreokoboji.com/news/dickinson-county-supervisors-approve-moratorium-for-data-collection-bit-coin-solar-battery-storage-on-4-1-vote/"
     },
     {
@@ -1574,7 +1590,7 @@
       "locality": "Plainfield",
       "state": "IL",
       "status": "Enacted",
-      "detail": "ends 2026-10-18 (28.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-18 (27.0d) \u2014 watch for an extension",
       "source": "https://patch.com/illinois/plainfield/data-center-moratorium-imposed-plainfield-after-unanimous-village-board-vote"
     },
     {
@@ -1582,7 +1598,7 @@
       "locality": "Lowndes County",
       "state": "AL",
       "status": "Enacted",
-      "detail": "ends 2026-10-25 (35.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-10-25 (34.0d) \u2014 watch for an extension",
       "source": "https://x.com/abc27/status/2092703658844549512"
     },
     {
@@ -1590,7 +1606,7 @@
       "locality": "Barnes County",
       "state": "ND",
       "status": "Enacted",
-      "detail": "ends 2026-11-19 (60.0d) \u2014 watch for an extension",
+      "detail": "ends 2026-11-19 (59.0d) \u2014 watch for an extension",
       "source": "https://www.valleynewslive.com/2026/05/19/barnes-county-puts-pause-data-centers-amid-resident-concerns/"
     },
     {
@@ -1603,6 +1619,14 @@
     },
     {
       "kind": "blocked",
+      "locality": "Smithfield",
+      "state": "RI",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.wpri.com/news/local-news/northwest/smithfield-town-council-approves-ordinance-to-prevent-construction-of-data-centers/"
+    },
+    {
+      "kind": "blocked",
       "locality": "Washington Township (Macomb Co.)",
       "state": "MI",
       "status": "Enacted",
@@ -1611,11 +1635,35 @@
     },
     {
       "kind": "blocked",
+      "locality": "Lysander (Onondaga Co.)",
+      "state": "NY",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.informnny.com/news/local-news/lysander-board-approves-six-month-data-center-moratorium-residents-speak-out-against-project-proposal/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Newfield (Tompkins Co.)",
+      "state": "NY",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.tompkinsweekly.com/events/newfield-approves-one-year-moratorium-on-data-centers-fdcffc41"
+    },
+    {
+      "kind": "blocked",
       "locality": "Chatham County",
       "state": "NC",
       "status": "Enacted",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
       "source": "https://www.chathamcountync.gov/Home/Components/News/News/17295/19"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Hays County",
+      "state": "TX",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.kxan.com/news/local/hays/hays-county-approves-resolution-to-pause-review-of-data-centers/"
     },
     {
       "kind": "blocked",
@@ -1643,6 +1691,14 @@
     },
     {
       "kind": "blocked",
+      "locality": "Mohawk (Montgomery Co.)",
+      "state": "NY",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.dailygazette.com/leader_herald/the_recorder/news/govt_politics/mohawk-adopts-data-center-moratorium/article_4aca1a21-13bc-4ca1-8170-8101857aa84d.html"
+    },
+    {
+      "kind": "blocked",
       "locality": "New York (S10642/A11560)",
       "state": "NY",
       "status": "Proposed",
@@ -1659,6 +1715,14 @@
     },
     {
       "kind": "blocked",
+      "locality": "Hogansville",
+      "state": "GA",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.lagrangenews.com/news/hogansville-approves-90-day-moratorium-for-data-centers-9d59b175"
+    },
+    {
+      "kind": "blocked",
       "locality": "Rochester Hills",
       "state": "MI",
       "status": "Enacted",
@@ -1667,11 +1731,19 @@
     },
     {
       "kind": "blocked",
-      "locality": "Knoxville",
-      "state": "TN",
+      "locality": "Ridgely",
+      "state": "MD",
       "status": "Enacted",
-      "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://www.knoxvilletn.gov/news/2026/cc_approves_waterfront_plan_data_ctr_moratorium"
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "http://www.stardem.com/news/caroline/ridgely-passes-one-year-moratorium-on-data-centers/article_97ec1ae7-4a05-4e9e-9551-4bc8b650043a.html"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Columbia",
+      "state": "MO",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.columbiamissourian.com/news/local/city-council-approves-data-center-definition-requests-moratorium/article_064eadce-c84e-4bfc-8f9c-b930741b94af.html"
     },
     {
       "kind": "blocked",
@@ -1739,6 +1811,14 @@
     },
     {
       "kind": "blocked",
+      "locality": "Dorchester County",
+      "state": "MD",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "http://www.stardem.com/news/data_centers/dorchester-county-council-hopes-to-get-ahead-on-regulating-data-center-proposals/article_af7ff49c-f072-4e08-85e9-1cd10bf1ca33.html"
+    },
+    {
+      "kind": "blocked",
       "locality": "Asheville",
       "state": "NC",
       "status": "Enacted",
@@ -1795,11 +1875,19 @@
     },
     {
       "kind": "blocked",
-      "locality": "Hastings",
-      "state": "MN",
+      "locality": "Howard County",
+      "state": "IN",
       "status": "Enacted",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://kdwa.com/hastings-city-council-addresses-fentanyl-awareness-data-center-moratorium-and-environmental-litigation/"
+      "source": "https://kokomolantern.substack.com/p/county-adopts-data-center-moratorium"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Culpeper County",
+      "state": "VA",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://starexponent.com/news/local/government-politics/article_6b5228c6-4e69-4caf-a4a5-d3ac8d1b1964.html"
     },
     {
       "kind": "blocked",
@@ -1835,11 +1923,27 @@
     },
     {
       "kind": "blocked",
-      "locality": "Pittsgrove Township",
-      "state": "NJ",
+      "locality": "St. Croix County",
+      "state": "WI",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.hudsonstarobserver.com/news/st-croix-county-board-of-supervisors-approves-data-center-moratorium-unanimously/article_ffb0d3f1-77a5-43c7-8ba5-e9fd44b1aa32.html"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Salisbury",
+      "state": "MD",
+      "status": "Proposed",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.wboc.com/news/salisbury-planning-commission-recommends-one-year-data-center-moratorium/article_2778f1dd-058a-44d5-95af-5d90e9a09207.html"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Wilson",
+      "state": "NC",
       "status": "Enacted",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://www.pittsgrovetownship.com/ordinances/"
+      "source": "https://www.wilsontimes.com/news/city-council-approves-data-center-moratorium-25f2bcbd"
     },
     {
       "kind": "blocked",
@@ -1891,11 +1995,51 @@
     },
     {
       "kind": "blocked",
-      "locality": "Imperial",
+      "locality": "Brownsville",
+      "state": "TX",
+      "status": "Proposed",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://myrgv.com/local-news/2026/09/02/brownsville-commissioners-move-forward-with-data-center-moratorium/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Escondido",
       "state": "CA",
       "status": "Enacted",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://calexicochronicle.com/2026/06/09/imperial-implements-45-day-data-center-moratorium/"
+      "source": "https://ncpipeline.substack.com/p/escondido-data-center-moratorium"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Montebello",
+      "state": "CA",
+      "status": "Expired",
+      "detail": "HTTP 405 (bot-blocked, check by hand)",
+      "source": "https://citizenportal.ai/articles/7355998/california/los-angeles-county/montebello/residents-urge-montebello-council-to-support-moratorium-as-neighbors-oppose-nearby-data-center-proposals"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Baldwin Park",
+      "state": "CA",
+      "status": "Enacted",
+      "detail": "HTTP 405 (bot-blocked, check by hand)",
+      "source": "https://citizenportal.ai/articles/7830978/california/los-angeles-county/baldwin-park-city/baldwin-park-adopts-one-year-urgency-moratorium-on-new-data-centers-citing-water-concerns"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Polk County",
+      "state": "WI",
+      "status": "Proposed",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.osceolasun.com/news/polk-esc-approves-data-center-moratorium-resolution-sends-to-county-board/article_dff935d0-9975-4112-97c5-f531c9c21c50.html"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Ellsworth",
+      "state": "ME",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.ellsworthamerican.com/news/ellsworth-city-council-approves-data-center-moratorium/article_9ab5df1b-3fa9-41a0-be16-9fca1ad83919.html"
     },
     {
       "kind": "blocked",
@@ -1915,11 +2059,27 @@
     },
     {
       "kind": "blocked",
-      "locality": "Coffee County",
-      "state": "TN",
+      "locality": "Troup County",
+      "state": "GA",
+      "status": "Rescinded",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.lagrangenews.com/2025/09/18/hold-on-county-sets-90-day-moratorium-on-new-data-centers/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Spring Hope",
+      "state": "NC",
       "status": "Enacted",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://thunder1320.com/coffee-county-commission-approves-12-month-data-center-moratorium/"
+      "source": "https://www.springhopeenterprise.com/news/spring-hope-passes-data-center-moratorium-a007897a"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Northampton County",
+      "state": "NC",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.roanoke-chowannewsherald.com/news/data-center-moratorium-approved-35853894"
     },
     {
       "kind": "blocked",
@@ -1939,6 +2099,38 @@
     },
     {
       "kind": "blocked",
+      "locality": "Spring City",
+      "state": "TN",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.wdef.com/spring-city-approves-two-year-moratorium-on-ai-data-centers/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "West Whiteland Township",
+      "state": "PA",
+      "status": "Enacted",
+      "detail": "HTTP 405 (bot-blocked, check by hand)",
+      "source": "https://citizenportal.ai/articles/8209298/pennsylvania/chester-county/west-whiteland/township-to-rewrite-data-center-rules-after-board-invokes-180-day-municipal-cure"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Dickinson County",
+      "state": "IA",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.exploreokoboji.com/news/dickinson-county-supervisors-approve-moratorium-for-data-collection-bit-coin-solar-battery-storage-on-4-1-vote/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Thornton",
+      "state": "CO",
+      "status": "Proposed",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.northglenn-thorntonsentinel.com/news/data-centers-not-allowed-in-thornton-at-least-for-awhile/article_b9fd388b-1b2b-4735-b27f-5c14e0363115.html"
+    },
+    {
+      "kind": "blocked",
       "locality": "Boyd County",
       "state": "KY",
       "status": "Enacted",
@@ -1947,11 +2139,43 @@
     },
     {
       "kind": "blocked",
+      "locality": "Apple Valley",
+      "state": "MN",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.hometownsource.com/sun_thisweek/community/apple_valley/apple-valley-enacts-one-year-data-center-moratorium/article_202f77b2-8efe-4be3-aa3c-d514c6bf8885.html"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Macon County",
+      "state": "IL",
+      "status": "Proposed",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.wcia.com/news/macon-county/macon-county-residents-pushing-for-moratorium-on-data-centers/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Woodburn",
+      "state": "OR",
+      "status": "Proposed",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.koin.com/news/oregon/woodburn-signals-move-toward-data-center-moratorium/"
+    },
+    {
+      "kind": "blocked",
       "locality": "Wichita",
       "state": "KS",
       "status": "Enacted",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
       "source": "https://www.wichita.gov/CivicAlerts.aspx?AID=412"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Geary County",
+      "state": "KS",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.ksnt.com/news/local-news/geary-co-approves-moratorium-on-data-center-development/"
     },
     {
       "kind": "blocked",
@@ -1971,11 +2195,35 @@
     },
     {
       "kind": "blocked",
+      "locality": "Southbridge",
+      "state": "MA",
+      "status": "Under Review",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://thecitizenchronicle.substack.com/p/spencer-select-board-backs-push-for"
+    },
+    {
+      "kind": "blocked",
       "locality": "New Orleans",
       "state": "LA",
       "status": "Enacted",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
       "source": "https://veritenews.org/2026/01/28/data-centers-ban-new-orleans-council/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Mesa case study",
+      "state": "AZ",
+      "status": "Permanent limits adopted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.themesatribune.com/news/mesa-council-to-vote-on-data-center-controls/article_95cfba83-0015-4c0e-aa8e-116cef4c8c6e.html"
+    },
+    {
+      "kind": "blocked",
+      "locality": "CyrusOne: Chandler, AZ",
+      "state": "",
+      "status": "concession",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.eastvalleytribune.com/residents-skeptical-about-noise-declines-at-data-center/article_9edb4c85-ceb9-54e9-9b0e-ab4b6390d04e.html"
     }
   ]
 }
