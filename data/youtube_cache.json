@@ -1,21 +1,12 @@
 {
-  "fetched_at": "2026-09-21T20:24:09.888281+00:00",
+  "fetched_at": "2026-09-22T04:43:42.825922+00:00",
   "items": [
     {
-      "title": "Data Centers Are Breaking The Power Grid",
+      "title": "North Port considers 18-month data center moratorium",
       "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1MdFlqQm5hZUtxYnJwbWlDVmF5VmtmeDJmUU91RmE1LXdpSFhaSHJCMU1Yb1NsMXdBajBacktxdE85OUZXSFZaSGZLUlNFS0sxcExJRGlB?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9LVGxVQXhYUlBPMVEwNzhKSjNkcEpBcjJwSTV1UFFfT3EwZk0wcXNlTENScmVKNGtPY2RlR3kyLXBMRU8zbXJvaUlBczR1M3kxdzdlYkdB?oc=5",
       "video_id": "",
-      "published_iso": "2026-09-18T12:00:19+00:00",
-      "states": []
-    },
-    {
-      "title": "How to Stop a Data Center in Your Backyard & Beyond [Livable Future LIVE]",
-      "source": "Food & Water Watch",
-      "link": "https://www.youtube.com/watch?v=CkCcrl9UXlc",
-      "video_id": "CkCcrl9UXlc",
-      "published_iso": "2026-09-17T19:24:44+00:00",
-      "category": "independent",
+      "published_iso": "2026-09-21T17:27:33+00:00",
       "states": []
     },
     {
@@ -27,13 +18,14 @@
       "states": []
     },
     {
-      "title": "Is everyone overreacting to the AI data center boom?",
-      "source": "More Perfect Union",
-      "link": "https://www.youtube.com/watch?v=efa5s_T7T_Y",
-      "video_id": "efa5s_T7T_Y",
-      "published_iso": "2026-09-05T12:22:58+00:00",
-      "category": "independent",
-      "states": []
+      "title": "Michigan town erupts over proposed AI data center as fight gets political",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9qdkstYkhEc21CQlNmV2JFLUNkZHpMSjlVdE5XdGotZWVxZzlzQm51SzdyeklFNTg2SDBnUTRON0V6OWFRcXVkMlJLTG1NZ3l1OXZHT0R3?oc=5",
+      "video_id": "",
+      "published_iso": "2026-09-15T23:34:48+00:00",
+      "states": [
+        "Michigan"
+      ]
     },
     {
       "title": "Data Center Power: India's 6-Cent Electricity Edge",
@@ -78,22 +70,14 @@
       ]
     },
     {
-      "title": "\ud83c\udf1f The BEST data center speech ever \ud83c\udf1f",
-      "source": "Food & Water Watch",
-      "link": "https://www.youtube.com/watch?v=VXGbmQwSdC8",
-      "video_id": "VXGbmQwSdC8",
-      "published_iso": "2026-06-25T20:00:13+00:00",
-      "category": "independent",
-      "states": []
-    },
-    {
-      "title": "Stop Data Centers Coalition Launch",
-      "source": "Food & Water Watch",
-      "link": "https://www.youtube.com/watch?v=N36bihRA21M",
-      "video_id": "N36bihRA21M",
-      "published_iso": "2026-06-12T02:01:08+00:00",
-      "category": "independent",
-      "states": []
+      "title": "Data center noise irks Virginia neighbors: \u2018You just want to curse\u2019 | The Hill",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8zYzNKZ1lDQ0FPQWJaZ0dmT3NxYW5kcWc4ZTNwbGVWbm1IbEhKelRvRFdsTU9KVm1YSkpqanU4VE1iWGdoVlU0WEo2NDBXVU92UTRRSkx3?oc=5",
+      "video_id": "",
+      "published_iso": "2026-06-19T03:22:02+00:00",
+      "states": [
+        "Virginia"
+      ]
     },
     {
       "title": "Liquid Cooling in AI Data Center",
@@ -136,16 +120,6 @@
       "video_id": "",
       "published_iso": "2026-05-22T22:56:53+00:00",
       "states": []
-    },
-    {
-      "title": "Family disputes Georgia Power over home amid data center plans",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fT3BMWjVsQVoycnQtbmlOcHJZMjlkX05kTGRlRFZnSnJoS1FORzRpNncwSnZtN1NKTnV6NkxIUEFpVE1QdGRDNklvWTFfQk05SGNoQ1dn?oc=5",
-      "video_id": "",
-      "published_iso": "2026-05-15T17:19:14+00:00",
-      "states": [
-        "Georgia"
-      ]
     },
     {
       "title": "Bans, Moratoriums, Zoning: How to Stop or Limit Data Center Development",
@@ -204,6 +178,14 @@
       "states": [
         "Washington"
       ]
+    },
+    {
+      "title": "How Data Center Electrical Systems Work Power, UPS, and Backup Generators Explained",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1yb3FtQ2tRTnhmcnF6TzJHaVZGbVhlRkVyQnJtc3o2cEZuZFc3bVRMa1kyTnV3b3NmQ2duTGtFaUx4c0RxcVByTmFWbzEweEtITjFIc3VB?oc=5",
+      "video_id": "",
+      "published_iso": "2026-03-20T14:11:52+00:00",
+      "states": []
     },
     {
       "title": "What Is Data Center Power Infrastructure and How Do UPS, PDUs, and Redundancy Systems Work?",
@@ -270,27 +252,19 @@
       "states": []
     },
     {
-      "title": "Press Briefing: AI Data Centers & Their Climate and Community Impact",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4tWFBpSlJCNEU4WVVaRGpIUWhjekptOHBySk9oY2ZmZUpWZHJrRU5xUnpqZGVEd2pzZVJVM1ljM0hjdk11M2pJSDRBZ3pLakRJRmVLdWhB?oc=5",
-      "video_id": "",
-      "published_iso": "2026-02-24T18:49:56+00:00",
-      "states": []
-    },
-    {
-      "title": "You\u2019re being lied to about electricity and AI data centers: the truth is dirtier and inefficient",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBOVnM4RFhEcmR4eHZORmtOeVkxTVdEZUdBLUdEWmo5bV9wUU5hcDJvMk80Y1k1UHZ5dWNUMVloQ1AwcjRwcm5WTEd3N2FrdUg2ZUx3YzdB?oc=5",
-      "video_id": "",
-      "published_iso": "2026-02-23T01:02:33+00:00",
-      "states": []
-    },
-    {
       "title": "How Data Centers Are Wiping Out Our Drinking Water",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Dc0Y3ZXJ3RWhRc3JadlYycUhzS0loSlYtc3Yxb3lUNTkyeGNoc2JBbnU1THZjRVhpUzhIS2Rqc0tYMkZvbl9SNE55UDhQY056eTBDZVFB?oc=5",
       "video_id": "",
       "published_iso": "2026-02-20T17:15:08+00:00",
+      "states": []
+    },
+    {
+      "title": "'This isn't right': impact of AI data centers on residents and their utility bills",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1VcnFpaU42Q1hCd1N4VW9WUExfZkNscTZuNlhIOWh2ZXpRWDVIME1YM2Rrc2hyU3MyczlHMEV2OHBpNVFGcTlIY3BvTjEwWnF5QWlHZ2Z3?oc=5",
+      "video_id": "",
+      "published_iso": "2026-02-19T03:11:46+00:00",
       "states": []
     },
     {
@@ -308,16 +282,6 @@
       "video_id": "",
       "published_iso": "2025-12-16T18:53:45+00:00",
       "states": []
-    },
-    {
-      "title": "Former Texas Gov. Rick Perry addresses concerns over AI data center's water use",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE91Vm9HLU5fWW42RlU4WExtSFpLcEpDS2dlUkRpM3dqU01Gd2RXUVRXX290RkFNUUJHeFBSa3MxcFJEdkJ3b2NaQUQ5bmY4cHR6TGNzd0JB?oc=5",
-      "video_id": "",
-      "published_iso": "2025-10-23T22:48:40+00:00",
-      "states": [
-        "Texas"
-      ]
     },
     {
       "title": "Archbald residents voice concerns over proposed data center zoning law",
