@@ -12823,7 +12823,8 @@ def build_senate_races():
     legend = "".join(
         f'<li><span class="gradebadge" style="background:{color};font-size:12px;'
         f'padding:3px 9px">{esc(label)}</span> — {esc(desc)}</li>'
-        for label, desc, color in sr.LEANS.values())
+        for k, (label, desc, color) in sr.LEANS.items()
+        if k != "consensus")   # House-only: the Senate has no RPA roll call
 
     chips = (
         f'<span class="stat"><b>{cov["races"]}</b><span>races on the ballot</span></span>'
@@ -13044,6 +13045,7 @@ def build_house_races():
         f'<span class="stat"><b>{cov["races"]}</b><span>districts on the ballot</span></span>'
         f'<span class="stat"><b>{cov["candidates"]}</b><span>candidates filed</span></span>'
         f'<span class="stat"><b>{cov["documented"]}</b><span>with a documented record</span></span>'
+        f'<span class="stat"><b>{cov["consensus"]}</b><span>on the record only for the 417-3 vote</span></span>'
         f'<span class="stat"><b>{cov["mentions"]}</b><span>unverified mentions queued</span></span>')
 
     state_sections = []
@@ -13069,8 +13071,13 @@ def build_house_races():
 
 <div class="freshness"><p><strong>Coverage here is very low, and saying so is
 the point.</strong> {cov["documented"]} of {cov["candidates"]} candidates have a
-documented data-center record. The rest show <em>no record found</em> — never
-"neutral". At 440 districts this page starts as a complete
+documented data-center record. Another {cov["consensus"]} are on the record
+only for voting yes when the House passed the Ratepayer Protection Act 417-3
+(<a href="https://clerk.house.gov/evs/2026/roll312.xml" target="_blank"
+rel="noopener">roll call 312</a>). That vote is listed on their records but
+labelled <em>Consensus vote only</em> and never scored, because a vote nearly
+every member cast says little about any one of them. The rest show <em>no
+record found</em> — never "neutral". At 440 districts this page starts as a complete
 <em>ballot</em> and an almost-empty <em>record</em>; it fills in as
 <code>scan_candidate_records.py</code> surfaces leads and a human verifies them.
 <a href="#method">How that works</a>.</p></div>

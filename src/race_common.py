@@ -49,6 +49,12 @@ LEANS = {
         "incentives, or siting help — without a matching cost or community "
         "safeguard on the record.",
         "#ef4444"),
+    "consensus": (
+        "Consensus vote only",
+        "On the record only for a near-unanimous vote (the House passed the "
+        "Ratepayer Protection Act 417-3). Shown, not scored — a vote nearly "
+        "everyone cast says little about any one member.",
+        "#94a3b8"),
     "unrecorded": (
         "No record found",
         "No documented statement or action on data centers located. Not "
@@ -195,11 +201,15 @@ def attach_records(races, records, key_fields, with_mentions=True):
                 "mentions": mentions_for(c["name"], archive) if archive else [],
             })
         order = {"Democratic": 0, "DFL": 0, "Republican": 0}
-        cands.sort(key=lambda c: (c["lean"] == "unrecorded",
+        cands.sort(key=lambda c: ({"unrecorded": 2, "consensus": 1}.get(c["lean"], 0),
                                   order.get(c["party"], 1), c["name"]))
         race["candidates"] = cands
-        race["documented"] = sum(1 for c in cands if c["lean"] != "unrecorded")
-        race["contested"] = race["documented"] > 0
+        # A consensus-only record is shown (contested) but not counted as
+        # documented — a 417-3 vote must not inflate coverage.
+        race["documented"] = sum(1 for c in cands
+                                 if c["lean"] not in ("unrecorded", "consensus"))
+        race["consensus"] = sum(1 for c in cands if c["lean"] == "consensus")
+        race["contested"] = race["documented"] + race["consensus"] > 0
         race["mention_count"] = sum(len(c["mentions"]) for c in cands)
         out.append(race)
     return out
@@ -210,9 +220,11 @@ def coverage(races, roster_as_of):
     return {
         "races": len(races),
         "candidates": len(cands),
-        "documented": sum(1 for c in cands if c["lean"] != "unrecorded"),
+        "documented": sum(1 for c in cands
+                          if c["lean"] not in ("unrecorded", "consensus")),
+        "consensus": sum(1 for c in cands if c["lean"] == "consensus"),
         "stale": sum(1 for c in cands if c.get("stale")),
-        "races_documented": sum(1 for r in races if r["contested"]),
+        "races_documented": sum(1 for r in races if r["documented"]),
         "mentions": sum(len(c["mentions"]) for c in cands),
         "as_of": roster_as_of,
         **election_phase(),

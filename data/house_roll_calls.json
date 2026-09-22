@@ -1,0 +1,1765 @@
+{
+ "_readme": "Recorded House roll calls on data-center bills, read from the Clerk's roll-call XML. Each vote lists the 2026 ballot keys [state, district, ballot name] of members who voted yea AND are on the 2026 ballot; members retiring or running for another office are omitted because house_races records must key to a ballot candidate. A vote with consensus=true is near-unanimous: it is shown as an item on each member's record but never sets a lean on its own (lean 'consensus' = on the record only for this vote). bioguide IDs matched via data/external/legislators-current.json; redistricted members keyed to the district they are running in.",
+ "votes": [
+  {
+   "id": "hr9340-passage",
+   "bill": "H.R. 9340",
+   "title": "Ratepayer Protection Act",
+   "roll": 312,
+   "date": "2026-09-16",
+   "question": "On Motion to Suspend the Rules and Pass, as Amended",
+   "result": "417-3",
+   "consensus": true,
+   "source": "https://clerk.house.gov/evs/2026/roll312.xml",
+   "as_of": "2026-09-22",
+   "what_yea": "Voted yes on H.R. 9340, the Ratepayer Protection Act, which passed 417-3 (roll call 312). It directs state utility commissions to consider rate designs making data centers with 100 MW or more of peak demand at one site pay the full incremental cost of the generation and grid upgrades they require. A near-unanimous vote: shown on the record, not scored on its own.",
+   "yea": [
+    [
+     "AK",
+     "AL",
+     "Nick Begich III"
+    ],
+    [
+     "AL",
+     "2",
+     "Shomari Figures"
+    ],
+    [
+     "AL",
+     "3",
+     "Mike Rogers"
+    ],
+    [
+     "AL",
+     "4",
+     "Robert Aderholt"
+    ],
+    [
+     "AL",
+     "5",
+     "Dale Strong"
+    ],
+    [
+     "AL",
+     "6",
+     "Gary Palmer"
+    ],
+    [
+     "AL",
+     "7",
+     "Terri Sewell"
+    ],
+    [
+     "AR",
+     "1",
+     "Rick Crawford"
+    ],
+    [
+     "AR",
+     "2",
+     "French Hill"
+    ],
+    [
+     "AR",
+     "4",
+     "Bruce Westerman"
+    ],
+    [
+     "AZ",
+     "2",
+     "Eli Crane"
+    ],
+    [
+     "AZ",
+     "3",
+     "Yassamin Ansari"
+    ],
+    [
+     "AZ",
+     "4",
+     "Greg Stanton"
+    ],
+    [
+     "AZ",
+     "6",
+     "Juan Ciscomani"
+    ],
+    [
+     "AZ",
+     "7",
+     "Adelita Grijalva"
+    ],
+    [
+     "AZ",
+     "8",
+     "Abraham Hamadeh"
+    ],
+    [
+     "AZ",
+     "9",
+     "Paul Gosar"
+    ],
+    [
+     "CA",
+     "1",
+     "James Gallagher"
+    ],
+    [
+     "CA",
+     "10",
+     "Mark DeSaulnier"
+    ],
+    [
+     "CA",
+     "12",
+     "Lateefah Simon"
+    ],
+    [
+     "CA",
+     "13",
+     "Adam Gray"
+    ],
+    [
+     "CA",
+     "14",
+     "Aisha Wahab"
+    ],
+    [
+     "CA",
+     "15",
+     "Kevin Mullin"
+    ],
+    [
+     "CA",
+     "16",
+     "Sam Liccardo"
+    ],
+    [
+     "CA",
+     "17",
+     "Ro Khanna"
+    ],
+    [
+     "CA",
+     "18",
+     "Zoe Lofgren"
+    ],
+    [
+     "CA",
+     "19",
+     "Jimmy Panetta"
+    ],
+    [
+     "CA",
+     "2",
+     "Jared Huffman"
+    ],
+    [
+     "CA",
+     "20",
+     "Vince Fong"
+    ],
+    [
+     "CA",
+     "21",
+     "Jim Costa"
+    ],
+    [
+     "CA",
+     "22",
+     "David Valadao"
+    ],
+    [
+     "CA",
+     "23",
+     "Jay Obernolte"
+    ],
+    [
+     "CA",
+     "24",
+     "Salud Carbajal"
+    ],
+    [
+     "CA",
+     "25",
+     "Raul Ruiz"
+    ],
+    [
+     "CA",
+     "27",
+     "George Whitesides"
+    ],
+    [
+     "CA",
+     "28",
+     "Judy Chu"
+    ],
+    [
+     "CA",
+     "29",
+     "Luz Rivas"
+    ],
+    [
+     "CA",
+     "3",
+     "Ami Bera"
+    ],
+    [
+     "CA",
+     "30",
+     "Laura Friedman"
+    ],
+    [
+     "CA",
+     "31",
+     "Gil Cisneros"
+    ],
+    [
+     "CA",
+     "32",
+     "Brad Sherman"
+    ],
+    [
+     "CA",
+     "33",
+     "Pete Aguilar"
+    ],
+    [
+     "CA",
+     "34",
+     "Jimmy Gomez"
+    ],
+    [
+     "CA",
+     "35",
+     "Norma Torres"
+    ],
+    [
+     "CA",
+     "36",
+     "Ted Lieu"
+    ],
+    [
+     "CA",
+     "37",
+     "Sydney Kamlager-Dove"
+    ],
+    [
+     "CA",
+     "39",
+     "Mark Takano"
+    ],
+    [
+     "CA",
+     "4",
+     "Mike Thompson"
+    ],
+    [
+     "CA",
+     "40",
+     "Ken Calvert"
+    ],
+    [
+     "CA",
+     "40",
+     "Young Kim"
+    ],
+    [
+     "CA",
+     "41",
+     "Linda Sánchez"
+    ],
+    [
+     "CA",
+     "42",
+     "Robert Garcia"
+    ],
+    [
+     "CA",
+     "43",
+     "Maxine Waters"
+    ],
+    [
+     "CA",
+     "44",
+     "Nanette Barragán"
+    ],
+    [
+     "CA",
+     "45",
+     "Derek Tran"
+    ],
+    [
+     "CA",
+     "46",
+     "Lou Correa"
+    ],
+    [
+     "CA",
+     "47",
+     "Dave Min"
+    ],
+    [
+     "CA",
+     "49",
+     "Mike Levin"
+    ],
+    [
+     "CA",
+     "5",
+     "Tom McClintock"
+    ],
+    [
+     "CA",
+     "51",
+     "Sara Jacobs"
+    ],
+    [
+     "CA",
+     "6",
+     "Kevin Kiley"
+    ],
+    [
+     "CA",
+     "7",
+     "Doris Matsui"
+    ],
+    [
+     "CA",
+     "9",
+     "Josh Harder"
+    ],
+    [
+     "CO",
+     "2",
+     "Joe Neguse"
+    ],
+    [
+     "CO",
+     "3",
+     "Jeff Hurd"
+    ],
+    [
+     "CO",
+     "4",
+     "Lauren Boebert"
+    ],
+    [
+     "CO",
+     "5",
+     "Jeff Crank"
+    ],
+    [
+     "CO",
+     "6",
+     "Jason Crow"
+    ],
+    [
+     "CO",
+     "7",
+     "Brittany Pettersen"
+    ],
+    [
+     "CO",
+     "8",
+     "Gabe Evans"
+    ],
+    [
+     "CT",
+     "2",
+     "Joe Courtney"
+    ],
+    [
+     "CT",
+     "3",
+     "Rosa DeLauro"
+    ],
+    [
+     "CT",
+     "4",
+     "Jim Himes"
+    ],
+    [
+     "CT",
+     "5",
+     "Jahana Hayes"
+    ],
+    [
+     "DE",
+     "AL",
+     "Sarah McBride"
+    ],
+    [
+     "FL",
+     "1",
+     "Jimmy Patronis"
+    ],
+    [
+     "FL",
+     "10",
+     "Maxwell Frost"
+    ],
+    [
+     "FL",
+     "12",
+     "Gus Bilirakis"
+    ],
+    [
+     "FL",
+     "13",
+     "Anna Paulina Luna"
+    ],
+    [
+     "FL",
+     "14",
+     "Kathy Castor"
+    ],
+    [
+     "FL",
+     "15",
+     "Laurel Lee"
+    ],
+    [
+     "FL",
+     "17",
+     "Greg Steube"
+    ],
+    [
+     "FL",
+     "18",
+     "Scott Franklin"
+    ],
+    [
+     "FL",
+     "20",
+     "Debbie Wasserman Schultz"
+    ],
+    [
+     "FL",
+     "21",
+     "Brian Mast"
+    ],
+    [
+     "FL",
+     "23",
+     "Lois Frankel"
+    ],
+    [
+     "FL",
+     "25",
+     "Jared Moskowitz"
+    ],
+    [
+     "FL",
+     "26",
+     "Mario Díaz-Balart"
+    ],
+    [
+     "FL",
+     "28",
+     "Carlos Giménez"
+    ],
+    [
+     "FL",
+     "3",
+     "Kat Cammack"
+    ],
+    [
+     "FL",
+     "4",
+     "Aaron Bean"
+    ],
+    [
+     "FL",
+     "5",
+     "John Rutherford"
+    ],
+    [
+     "FL",
+     "6",
+     "Randy Fine"
+    ],
+    [
+     "FL",
+     "8",
+     "Mike Haridopolos"
+    ],
+    [
+     "FL",
+     "9",
+     "Darren Soto"
+    ],
+    [
+     "GA",
+     "12",
+     "Rick Allen"
+    ],
+    [
+     "GA",
+     "14",
+     "Clay Fuller"
+    ],
+    [
+     "GA",
+     "2",
+     "Sanford Bishop"
+    ],
+    [
+     "GA",
+     "3",
+     "Brian Jack"
+    ],
+    [
+     "GA",
+     "4",
+     "Hank Johnson"
+    ],
+    [
+     "GA",
+     "5",
+     "Nikema Williams"
+    ],
+    [
+     "GA",
+     "6",
+     "Lucy McBath"
+    ],
+    [
+     "GA",
+     "7",
+     "Rich McCormick"
+    ],
+    [
+     "GA",
+     "8",
+     "Austin Scott"
+    ],
+    [
+     "GA",
+     "9",
+     "Andrew Clyde"
+    ],
+    [
+     "HI",
+     "1",
+     "Ed Case"
+    ],
+    [
+     "HI",
+     "2",
+     "Jill Tokuda"
+    ],
+    [
+     "IA",
+     "1",
+     "Mariannette Miller-Meeks"
+    ],
+    [
+     "IA",
+     "3",
+     "Zach Nunn"
+    ],
+    [
+     "ID",
+     "1",
+     "Russ Fulcher"
+    ],
+    [
+     "ID",
+     "2",
+     "Mike Simpson"
+    ],
+    [
+     "IL",
+     "1",
+     "Jonathan Jackson"
+    ],
+    [
+     "IL",
+     "10",
+     "Brad Schneider"
+    ],
+    [
+     "IL",
+     "11",
+     "Bill Foster"
+    ],
+    [
+     "IL",
+     "12",
+     "Mike Bost"
+    ],
+    [
+     "IL",
+     "13",
+     "Nikki Budzinski"
+    ],
+    [
+     "IL",
+     "14",
+     "Lauren Underwood"
+    ],
+    [
+     "IL",
+     "15",
+     "Mary Miller"
+    ],
+    [
+     "IL",
+     "16",
+     "Darin LaHood"
+    ],
+    [
+     "IL",
+     "17",
+     "Eric Sorensen"
+    ],
+    [
+     "IL",
+     "5",
+     "Mike Quigley"
+    ],
+    [
+     "IL",
+     "6",
+     "Sean Casten"
+    ],
+    [
+     "IN",
+     "1",
+     "Frank Mrvan"
+    ],
+    [
+     "IN",
+     "2",
+     "Rudy Yakym"
+    ],
+    [
+     "IN",
+     "3",
+     "Marlin Stutzman"
+    ],
+    [
+     "IN",
+     "4",
+     "Jim Baird"
+    ],
+    [
+     "IN",
+     "5",
+     "Victoria Spartz"
+    ],
+    [
+     "IN",
+     "6",
+     "Jefferson Shreve"
+    ],
+    [
+     "IN",
+     "7",
+     "André Carson"
+    ],
+    [
+     "IN",
+     "8",
+     "Mark Messmer"
+    ],
+    [
+     "IN",
+     "9",
+     "Erin Houchin"
+    ],
+    [
+     "KS",
+     "1",
+     "Tracey Mann"
+    ],
+    [
+     "KS",
+     "2",
+     "Derek Schmidt"
+    ],
+    [
+     "KS",
+     "3",
+     "Sharice Davids"
+    ],
+    [
+     "KS",
+     "4",
+     "Ron Estes"
+    ],
+    [
+     "KY",
+     "1",
+     "James Comer"
+    ],
+    [
+     "KY",
+     "2",
+     "Brett Guthrie"
+    ],
+    [
+     "KY",
+     "3",
+     "Morgan McGarvey"
+    ],
+    [
+     "KY",
+     "5",
+     "Hal Rogers"
+    ],
+    [
+     "LA",
+     "1",
+     "Steve Scalise"
+    ],
+    [
+     "LA",
+     "2",
+     "Troy Carter"
+    ],
+    [
+     "LA",
+     "3",
+     "Clay Higgins"
+    ],
+    [
+     "MA",
+     "1",
+     "Richard Neal"
+    ],
+    [
+     "MA",
+     "2",
+     "Jim McGovern"
+    ],
+    [
+     "MA",
+     "3",
+     "Lori Trahan"
+    ],
+    [
+     "MA",
+     "4",
+     "Jake Auchincloss"
+    ],
+    [
+     "MA",
+     "5",
+     "Katherine Clark"
+    ],
+    [
+     "MA",
+     "7",
+     "Ayanna Pressley"
+    ],
+    [
+     "MA",
+     "8",
+     "Stephen Lynch"
+    ],
+    [
+     "MA",
+     "9",
+     "Bill Keating"
+    ],
+    [
+     "MD",
+     "1",
+     "Andy Harris"
+    ],
+    [
+     "MD",
+     "2",
+     "Johnny Olszewski"
+    ],
+    [
+     "MD",
+     "3",
+     "Sarah Elfreth"
+    ],
+    [
+     "MD",
+     "4",
+     "Glenn Ivey"
+    ],
+    [
+     "MD",
+     "6",
+     "April McClain Delaney"
+    ],
+    [
+     "MD",
+     "7",
+     "Kweisi Mfume"
+    ],
+    [
+     "MD",
+     "8",
+     "Jamie Raskin"
+    ],
+    [
+     "ME",
+     "1",
+     "Chellie Pingree"
+    ],
+    [
+     "MI",
+     "1",
+     "Jack Bergman"
+    ],
+    [
+     "MI",
+     "2",
+     "John Moolenaar"
+    ],
+    [
+     "MI",
+     "3",
+     "Hillary Scholten"
+    ],
+    [
+     "MI",
+     "4",
+     "Bill Huizenga"
+    ],
+    [
+     "MI",
+     "5",
+     "Tim Walberg"
+    ],
+    [
+     "MI",
+     "6",
+     "Debbie Dingell"
+    ],
+    [
+     "MI",
+     "7",
+     "Tom Barrett"
+    ],
+    [
+     "MI",
+     "8",
+     "Kristen McDonald Rivet"
+    ],
+    [
+     "MI",
+     "9",
+     "Lisa McClain"
+    ],
+    [
+     "MN",
+     "1",
+     "Brad Finstad"
+    ],
+    [
+     "MN",
+     "3",
+     "Kelly Morrison"
+    ],
+    [
+     "MN",
+     "4",
+     "Betty McCollum"
+    ],
+    [
+     "MN",
+     "5",
+     "Ilhan Omar"
+    ],
+    [
+     "MN",
+     "6",
+     "Tom Emmer"
+    ],
+    [
+     "MN",
+     "7",
+     "Michelle Fischbach"
+    ],
+    [
+     "MN",
+     "8",
+     "Pete Stauber"
+    ],
+    [
+     "MO",
+     "1",
+     "Wesley Bell"
+    ],
+    [
+     "MO",
+     "2",
+     "Ann Wagner"
+    ],
+    [
+     "MO",
+     "3",
+     "Bob Onder"
+    ],
+    [
+     "MO",
+     "4",
+     "Mark Alford"
+    ],
+    [
+     "MO",
+     "5",
+     "Emanuel Cleaver"
+    ],
+    [
+     "MO",
+     "7",
+     "Eric Burlison"
+    ],
+    [
+     "MO",
+     "8",
+     "Jason Smith"
+    ],
+    [
+     "MS",
+     "1",
+     "Trent Kelly"
+    ],
+    [
+     "MS",
+     "2",
+     "Bennie Thompson"
+    ],
+    [
+     "MS",
+     "3",
+     "Michael Guest"
+    ],
+    [
+     "MS",
+     "4",
+     "Mike Ezell"
+    ],
+    [
+     "MT",
+     "2",
+     "Troy Downing"
+    ],
+    [
+     "NC",
+     "1",
+     "Don Davis"
+    ],
+    [
+     "NC",
+     "10",
+     "Pat Harrigan"
+    ],
+    [
+     "NC",
+     "12",
+     "Alma Adams"
+    ],
+    [
+     "NC",
+     "13",
+     "Brad Knott"
+    ],
+    [
+     "NC",
+     "14",
+     "Tim Moore"
+    ],
+    [
+     "NC",
+     "2",
+     "Deborah Ross"
+    ],
+    [
+     "NC",
+     "3",
+     "Greg Murphy"
+    ],
+    [
+     "NC",
+     "4",
+     "Valerie Foushee"
+    ],
+    [
+     "NC",
+     "5",
+     "Virginia Foxx"
+    ],
+    [
+     "NC",
+     "6",
+     "Addison McDowell"
+    ],
+    [
+     "NC",
+     "7",
+     "David Rouzer"
+    ],
+    [
+     "NC",
+     "8",
+     "Mark Harris"
+    ],
+    [
+     "NC",
+     "9",
+     "Richard Hudson"
+    ],
+    [
+     "ND",
+     "AL",
+     "Julie Fedorchak"
+    ],
+    [
+     "NE",
+     "1",
+     "Mike Flood"
+    ],
+    [
+     "NE",
+     "3",
+     "Adrian Smith"
+    ],
+    [
+     "NH",
+     "2",
+     "Maggie Goodlander"
+    ],
+    [
+     "NJ",
+     "1",
+     "Donald Norcross"
+    ],
+    [
+     "NJ",
+     "10",
+     "LaMonica McIver"
+    ],
+    [
+     "NJ",
+     "11",
+     "Analilia Mejia"
+    ],
+    [
+     "NJ",
+     "2",
+     "Jeff Van Drew"
+    ],
+    [
+     "NJ",
+     "3",
+     "Herb Conaway"
+    ],
+    [
+     "NJ",
+     "4",
+     "Chris Smith"
+    ],
+    [
+     "NJ",
+     "5",
+     "Josh Gottheimer"
+    ],
+    [
+     "NJ",
+     "6",
+     "Frank Pallone"
+    ],
+    [
+     "NJ",
+     "7",
+     "Thomas Kean Jr."
+    ],
+    [
+     "NJ",
+     "8",
+     "Rob Menendez"
+    ],
+    [
+     "NJ",
+     "9",
+     "Nellie Pou"
+    ],
+    [
+     "NM",
+     "1",
+     "Melanie Stansbury"
+    ],
+    [
+     "NM",
+     "2",
+     "Gabe Vasquez"
+    ],
+    [
+     "NV",
+     "1",
+     "Dina Titus"
+    ],
+    [
+     "NV",
+     "3",
+     "Susie Lee"
+    ],
+    [
+     "NV",
+     "4",
+     "Steven Horsford"
+    ],
+    [
+     "NY",
+     "1",
+     "Nick LaLota"
+    ],
+    [
+     "NY",
+     "11",
+     "Nicole Malliotakis"
+    ],
+    [
+     "NY",
+     "13",
+     "Adriano Espaillat"
+    ],
+    [
+     "NY",
+     "14",
+     "Alexandria Ocasio-Cortez"
+    ],
+    [
+     "NY",
+     "15",
+     "Ritchie Torres"
+    ],
+    [
+     "NY",
+     "16",
+     "George Latimer"
+    ],
+    [
+     "NY",
+     "17",
+     "Mike Lawler"
+    ],
+    [
+     "NY",
+     "18",
+     "Pat Ryan"
+    ],
+    [
+     "NY",
+     "19",
+     "Josh Riley"
+    ],
+    [
+     "NY",
+     "2",
+     "Andrew Garbarino"
+    ],
+    [
+     "NY",
+     "20",
+     "Paul Tonko"
+    ],
+    [
+     "NY",
+     "22",
+     "John Mannion"
+    ],
+    [
+     "NY",
+     "23",
+     "Nick Langworthy"
+    ],
+    [
+     "NY",
+     "24",
+     "Claudia Tenney"
+    ],
+    [
+     "NY",
+     "25",
+     "Joseph Morelle"
+    ],
+    [
+     "NY",
+     "26",
+     "Tim Kennedy"
+    ],
+    [
+     "NY",
+     "3",
+     "Tom Suozzi"
+    ],
+    [
+     "NY",
+     "4",
+     "Laura Gillen"
+    ],
+    [
+     "NY",
+     "5",
+     "Gregory Meeks"
+    ],
+    [
+     "NY",
+     "6",
+     "Grace Meng"
+    ],
+    [
+     "NY",
+     "8",
+     "Hakeem Jeffries"
+    ],
+    [
+     "NY",
+     "9",
+     "Yvette Clarke"
+    ],
+    [
+     "OH",
+     "1",
+     "Greg Landsman"
+    ],
+    [
+     "OH",
+     "10",
+     "Mike Turner"
+    ],
+    [
+     "OH",
+     "11",
+     "Shontel Brown"
+    ],
+    [
+     "OH",
+     "12",
+     "Troy Balderson"
+    ],
+    [
+     "OH",
+     "13",
+     "Emilia Sykes"
+    ],
+    [
+     "OH",
+     "14",
+     "David Joyce"
+    ],
+    [
+     "OH",
+     "15",
+     "Mike Carey"
+    ],
+    [
+     "OH",
+     "2",
+     "David Taylor"
+    ],
+    [
+     "OH",
+     "3",
+     "Joyce Beatty"
+    ],
+    [
+     "OH",
+     "4",
+     "Jim Jordan"
+    ],
+    [
+     "OH",
+     "5",
+     "Bob Latta"
+    ],
+    [
+     "OH",
+     "6",
+     "Michael Rulli"
+    ],
+    [
+     "OH",
+     "7",
+     "Max Miller"
+    ],
+    [
+     "OH",
+     "8",
+     "Warren Davidson"
+    ],
+    [
+     "OH",
+     "9",
+     "Marcy Kaptur"
+    ],
+    [
+     "OK",
+     "2",
+     "Josh Brecheen"
+    ],
+    [
+     "OK",
+     "4",
+     "Tom Cole"
+    ],
+    [
+     "OK",
+     "5",
+     "Stephanie Bice"
+    ],
+    [
+     "OR",
+     "1",
+     "Suzanne Bonamici"
+    ],
+    [
+     "OR",
+     "2",
+     "Cliff Bentz"
+    ],
+    [
+     "OR",
+     "3",
+     "Maxine Dexter"
+    ],
+    [
+     "OR",
+     "4",
+     "Val Hoyle"
+    ],
+    [
+     "OR",
+     "5",
+     "Janelle Bynum"
+    ],
+    [
+     "OR",
+     "6",
+     "Andrea Salinas"
+    ],
+    [
+     "PA",
+     "1",
+     "Brian Fitzpatrick"
+    ],
+    [
+     "PA",
+     "10",
+     "Scott Perry"
+    ],
+    [
+     "PA",
+     "11",
+     "Lloyd Smucker"
+    ],
+    [
+     "PA",
+     "13",
+     "John Joyce"
+    ],
+    [
+     "PA",
+     "14",
+     "Guy Reschenthaler"
+    ],
+    [
+     "PA",
+     "15",
+     "Glenn Thompson"
+    ],
+    [
+     "PA",
+     "16",
+     "Mike Kelly"
+    ],
+    [
+     "PA",
+     "17",
+     "Chris Deluzio"
+    ],
+    [
+     "PA",
+     "4",
+     "Madeleine Dean"
+    ],
+    [
+     "PA",
+     "5",
+     "Mary Gay Scanlon"
+    ],
+    [
+     "PA",
+     "6",
+     "Chrissy Houlahan"
+    ],
+    [
+     "PA",
+     "7",
+     "Ryan Mackenzie"
+    ],
+    [
+     "PA",
+     "8",
+     "Rob Bresnahan"
+    ],
+    [
+     "PA",
+     "9",
+     "Dan Meuser"
+    ],
+    [
+     "RI",
+     "1",
+     "Gabe Amo"
+    ],
+    [
+     "RI",
+     "2",
+     "Seth Magaziner"
+    ],
+    [
+     "SC",
+     "2",
+     "Joe Wilson"
+    ],
+    [
+     "SC",
+     "3",
+     "Sheri Biggs"
+    ],
+    [
+     "SC",
+     "4",
+     "William Timmons"
+    ],
+    [
+     "SC",
+     "6",
+     "Jim Clyburn"
+    ],
+    [
+     "SC",
+     "7",
+     "Russell Fry"
+    ],
+    [
+     "TN",
+     "1",
+     "Diana Harshbarger"
+    ],
+    [
+     "TN",
+     "2",
+     "Tim Burchett"
+    ],
+    [
+     "TN",
+     "3",
+     "Chuck Fleischmann"
+    ],
+    [
+     "TN",
+     "4",
+     "Scott DesJarlais"
+    ],
+    [
+     "TN",
+     "7",
+     "Matt Van Epps"
+    ],
+    [
+     "TN",
+     "8",
+     "David Kustoff"
+    ],
+    [
+     "TX",
+     "1",
+     "Nathaniel Moran"
+    ],
+    [
+     "TX",
+     "11",
+     "August Pfluger"
+    ],
+    [
+     "TX",
+     "12",
+     "Craig Goldman"
+    ],
+    [
+     "TX",
+     "13",
+     "Ronny Jackson"
+    ],
+    [
+     "TX",
+     "14",
+     "Randy Weber"
+    ],
+    [
+     "TX",
+     "15",
+     "Monica De La Cruz"
+    ],
+    [
+     "TX",
+     "16",
+     "Veronica Escobar"
+    ],
+    [
+     "TX",
+     "17",
+     "Pete Sessions"
+    ],
+    [
+     "TX",
+     "18",
+     "Christian Menefee"
+    ],
+    [
+     "TX",
+     "20",
+     "Joaquin Castro"
+    ],
+    [
+     "TX",
+     "24",
+     "Beth Van Duyne"
+    ],
+    [
+     "TX",
+     "25",
+     "Roger Williams"
+    ],
+    [
+     "TX",
+     "26",
+     "Brandon Gill"
+    ],
+    [
+     "TX",
+     "27",
+     "Michael Cloud"
+    ],
+    [
+     "TX",
+     "28",
+     "Henry Cuellar"
+    ],
+    [
+     "TX",
+     "29",
+     "Sylvia Garcia"
+    ],
+    [
+     "TX",
+     "3",
+     "Keith Self"
+    ],
+    [
+     "TX",
+     "31",
+     "John Carter"
+    ],
+    [
+     "TX",
+     "34",
+     "Vicente Gonzalez"
+    ],
+    [
+     "TX",
+     "36",
+     "Brian Babin"
+    ],
+    [
+     "TX",
+     "37",
+     "Greg Casar"
+    ],
+    [
+     "TX",
+     "4",
+     "Pat Fallon"
+    ],
+    [
+     "TX",
+     "5",
+     "Lance Gooden"
+    ],
+    [
+     "TX",
+     "6",
+     "Jake Ellzey"
+    ],
+    [
+     "TX",
+     "7",
+     "Lizzie Fletcher"
+    ],
+    [
+     "UT",
+     "2",
+     "Blake Moore"
+    ],
+    [
+     "UT",
+     "3",
+     "Celeste Maloy"
+    ],
+    [
+     "UT",
+     "4",
+     "Mike Kennedy"
+    ],
+    [
+     "VA",
+     "1",
+     "Rob Wittman"
+    ],
+    [
+     "VA",
+     "10",
+     "Suhas Subramanyam"
+    ],
+    [
+     "VA",
+     "11",
+     "James Walkinshaw"
+    ],
+    [
+     "VA",
+     "2",
+     "Jen Kiggans"
+    ],
+    [
+     "VA",
+     "3",
+     "Bobby Scott"
+    ],
+    [
+     "VA",
+     "4",
+     "Jennifer McClellan"
+    ],
+    [
+     "VA",
+     "5",
+     "John McGuire"
+    ],
+    [
+     "VA",
+     "6",
+     "Ben Cline"
+    ],
+    [
+     "VA",
+     "7",
+     "Eugene Vindman"
+    ],
+    [
+     "VA",
+     "8",
+     "Don Beyer"
+    ],
+    [
+     "VA",
+     "9",
+     "Morgan Griffith"
+    ],
+    [
+     "VT",
+     "AL",
+     "Becca Balint"
+    ],
+    [
+     "WA",
+     "1",
+     "Suzan DelBene"
+    ],
+    [
+     "WA",
+     "10",
+     "Marilyn Strickland"
+    ],
+    [
+     "WA",
+     "2",
+     "Rick Larsen"
+    ],
+    [
+     "WA",
+     "3",
+     "Marie Gluesenkamp Perez"
+    ],
+    [
+     "WA",
+     "5",
+     "Michael Baumgartner"
+    ],
+    [
+     "WA",
+     "6",
+     "Emily Randall"
+    ],
+    [
+     "WA",
+     "7",
+     "Pramila Jayapal"
+    ],
+    [
+     "WA",
+     "8",
+     "Kim Schrier"
+    ],
+    [
+     "WI",
+     "1",
+     "Bryan Steil"
+    ],
+    [
+     "WI",
+     "2",
+     "Mark Pocan"
+    ],
+    [
+     "WI",
+     "3",
+     "Derrick Van Orden"
+    ],
+    [
+     "WI",
+     "4",
+     "Gwen Moore"
+    ],
+    [
+     "WI",
+     "5",
+     "Scott Fitzgerald"
+    ],
+    [
+     "WI",
+     "6",
+     "Glenn Grothman"
+    ],
+    [
+     "WI",
+     "8",
+     "Tony Wied"
+    ],
+    [
+     "WV",
+     "1",
+     "Carol Miller"
+    ],
+    [
+     "WV",
+     "2",
+     "Riley Moore"
+    ]
+   ]
+  }
+ ]
+}

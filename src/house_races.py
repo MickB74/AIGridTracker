@@ -2189,12 +2189,60 @@ def _key(r):
     return (r["abbrev"], r["district"])
 
 
+ROLL_CALLS_FILE = ROOT / "data" / "house_roll_calls.json"
+
+
+def _roll_calls():
+    try:
+        return json.loads(ROLL_CALLS_FILE.read_text(encoding="utf-8"))["votes"]
+    except FileNotFoundError:
+        return []
+
+
+def records():
+    """AI_RECORDS plus recorded roll-call votes from data/house_roll_calls.json.
+
+    AI_RECORDS stays the hand-researched table (the scanners and link checker
+    read it, so a member on the record only for a roll call is still flagged
+    as needing research). A roll-call item is appended to an existing record
+    without touching its lean; a member with no other record gets lean
+    'consensus' when the vote was near-unanimous, so a 417-3 vote is visible
+    on every record but never scores anyone by itself.
+    """
+    out = {k: {**v, "items": list(v.get("items", []))}
+           for k, v in AI_RECORDS.items()}
+    by_name = {(k[0], k[1], rc.norm(k[2])): k for k in out}
+    for vote in _roll_calls():
+        item = {"what": vote["what_yea"], "date": vote["date"],
+                "source": vote["source"]}
+        for st, dist, name in vote["yea"]:
+            k = by_name.get((st, dist, rc.norm(name)))
+            if k:
+                rec = out[k]
+                # Hand records sometimes already cite the passage (Evans,
+                # Castor); don't list the same vote twice.
+                if not any(it.get("date") == vote["date"]
+                           and vote["bill"] in it.get("what", "")
+                           for it in rec["items"]):
+                    rec["items"].append(item)
+            else:
+                out[(st, dist, name)] = {
+                    "lean": "consensus" if vote.get("consensus") else "guardrails",
+                    "summary": (f"On the record only for voting yes on "
+                                f"{vote['bill']}, the {vote['title']} "
+                                f"({vote['result']}). No other data-center "
+                                f"record located yet."),
+                    "items": [item], "as_of": vote["as_of"]}
+                by_name[(st, dist, rc.norm(name))] = (st, dist, name)
+    return out
+
+
 def races(state=None):
     """Every 2026 House race with records and unverified mentions attached."""
     rows = HOUSE_RACES_2026
     if state:
         rows = [r for r in rows if r["abbrev"] == state or r["state"] == state]
-    return rc.attach_records(rows, AI_RECORDS, _key)
+    return rc.attach_records(rows, records(), _key)
 
 
 def coverage():
@@ -2212,4 +2260,4 @@ def by_state():
 
 
 def validate():
-    return rc.validate(races(), AI_RECORDS, _key)
+    return rc.validate(races(), records(), _key)
