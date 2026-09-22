@@ -9500,6 +9500,10 @@ STORY_STATE_QUERIES = {
 # story published as Grant County's own news would be read out at a
 # hearing. Used at site-build time only (build_site.py).
 STORY_LOCALITY_QUERIES = {
+    ("Brewster County", "TX"): {
+        "query": "\"data center\" (Alpine OR \"Brewster County\" OR \"Glass Mountains\") Texas",
+        "gate": r"""(?i)\b(Brewster County|Glass Mountains|Alpine,? (TX|Texas)|Big Bend)\b""",
+    },
     ("Grant County", "IN"): {
         "query": 'site:chronicle-tribune.com "data center" when:30d',
         "gate": r"\b(Grant County|Grant Co\.?|Marion(?! County)|Gas City|Jonesboro|"
@@ -10212,6 +10216,31 @@ LOCAL_BODIES = [
      "phone": "386-313-4001", "email": "",
      "website": "https://www.flaglercounty.gov/Government/Board-of-County-Commissioners",
      "as_of": "2026-08-07", "source": "https://www.flaglercounty.gov/Government/Board-of-County-Commissioners"},
+
+    {"locality": "Brewster County", "state": "TX",
+     "body": "Commissioners Court",
+     "decides": "County budget, roads and any tax abatement or development "
+                "agreement for unincorporated Brewster County; a county judge and "
+                "four precinct commissioners. Texas counties generally lack zoning "
+                "power over unincorporated land, so an abatement or development "
+                "agreement is where conditions on a project get written. Pacifico "
+                "Energy, developer of the gas plant powering Amazon's Pecos County "
+                "campus, presented an off-grid data center and gas plant concept "
+                "for a Glass Mountains ranch at a special meeting on Sep 15, 2026 "
+                "(no action taken).",
+     "meets": "2nd and 4th Tuesdays, 9:30 a.m. Central (special meetings posted "
+              "separately); broadcast live on the county YouTube channel",
+     "where": "Commissioners Courtroom, Brewster County Courthouse, 201 West "
+              "Avenue E, Alpine, TX 79830",
+     "agenda_url": "http://brewstercotx.portal.civicclerk.com/",
+     "comment_process": "Every agenda opens with public comment, limited to 5 "
+                        "minutes per person; the public can also comment by "
+                        "phone at 432-244-6663. The county posts a public "
+                        "comment sheet and its rules of conduct on the "
+                        "Commissioners Court page.",
+     "phone": "432-837-6200", "email": "county.judge@co.brewster.tx.us",
+     "website": "https://www.brewstercounty.gov/page/comm.court.home",
+     "as_of": "2026-09-22", "source": "https://www.brewstercounty.gov/page/comm.court.home"},
 
     {"locality": "Hays County", "state": "TX",
      "body": "Commissioners Court",
@@ -12135,6 +12164,26 @@ LOCAL_OFFICIALS = [
      "source": "https://www.flaglercounty.gov/Government/Board-of-County-Commissioners"},
 
     # Hays County, TX — https://www.hayscountytx.gov/188/Commissioners-Court-Members
+    {"locality": "Brewster County", "state": "TX", "body": "Commissioners Court",
+     "name": "Greg P. Henington", "role": "County Judge (presides)", "district": "At-large",
+     "email": "county.judge@co.brewster.tx.us", "phone": "432-837-6200 ext. 200", "stance": "At Pacifico Energy's Sep 15, 2026 presentation: \u201cwe're not taking this, like a lay down\u201d; said the county would be \u201cextremely sensitive to water usage\u201d and raised noise (Marfa Public Radio, Sep 18, 2026)", "as_of": "2026-09-22",
+     "source": "https://www.brewstercounty.gov/page/comm.court.home"},
+    {"locality": "Brewster County", "state": "TX", "body": "Commissioners Court",
+     "name": "Jim Westermann", "role": "Commissioner", "district": "Precinct 1",
+     "email": "jim.westermann@co.brewster.tx.us", "phone": "432-294-0065", "stance": "", "as_of": "2026-09-22",
+     "source": "https://www.brewstercounty.gov/page/comm.court.home"},
+    {"locality": "Brewster County", "state": "TX", "body": "Commissioners Court",
+     "name": "Sara Allen Colando", "role": "Commissioner", "district": "Precinct 2",
+     "email": "colando@co.brewster.tx.us", "phone": "432-244-7656", "stance": "", "as_of": "2026-09-22",
+     "source": "https://www.brewstercounty.gov/page/comm.court.home"},
+    {"locality": "Brewster County", "state": "TX", "body": "Commissioners Court",
+     "name": "Ruben Ortega", "role": "Commissioner", "district": "Precinct 3",
+     "email": "", "phone": "432-294-1096", "stance": "", "as_of": "2026-09-22",
+     "source": "https://www.brewstercounty.gov/page/comm.court.home"},
+    {"locality": "Brewster County", "state": "TX", "body": "Commissioners Court",
+     "name": "Mo Morrow", "role": "Commissioner", "district": "Precinct 4",
+     "email": "mo.morrow@co.brewster.tx.us", "phone": "432-294-3688", "stance": "", "as_of": "2026-09-22",
+     "source": "https://www.brewstercounty.gov/page/comm.court.home"},
     {"locality": "Hays County", "state": "TX", "body": "Commissioners Court",
      "name": "Ruben Becerra", "role": "County Judge (presides)", "district": "At-large",
      "email": "", "phone": "512-393-7779", "stance": "", "as_of": "2026-08-07",

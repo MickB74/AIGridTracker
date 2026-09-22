@@ -2,7 +2,7 @@
  "generated": "2026-09-22",
  "license": "CC BY 4.0",
  "note": "One row per cited item. kind=action is a bill, letter, hearing question or investigation; kind=statement is a quote, op-ed or campaign line. grade is the officials-scorecard grade (sitting officials only); lean summarises the cited items.",
- "count": 352,
+ "count": 355,
  "records": [
   {
    "chamber": "House",
@@ -54,6 +54,57 @@
    "lean": "guardrails",
    "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-fl-14"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "IL",
+   "district": "3",
+   "name": "Delia Ramirez",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "One of three members to vote no on H.R. 9340, the Ratepayer Protection Act (passed 417-3). To NBC News: the bill “does not address the concerns of our constituents and the threats that data centers pose,” and “my district is demanding more than a bill that suggests states take action.”",
+   "date": "2026-09-16",
+   "source": "https://www.nbcnews.com/politics/congress/house-passes-bill-shield-consumers-data-center-price-hikes-energy-rcna597683",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-22",
+   "page": "https://aigridwatch.com/house-races#race-il-3"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "MI",
+   "district": "12",
+   "name": "Rashida Tlaib",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "One of three members to vote no on H.R. 9340, the Ratepayer Protection Act (passed 417-3), on the grounds that it was too weak: it “fails to meaningfully protect our communities.” Before the vote she wrote on X that “the strongest action Congress can take right now is to pass a national moratorium on data centers and enact a prohibition on federal lands.”",
+   "date": "2026-09-16",
+   "source": "https://www.nbcnews.com/politics/congress/house-passes-bill-shield-consumers-data-center-price-hikes-energy-rcna597683",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-22",
+   "page": "https://aigridwatch.com/house-races#race-mi-12"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "PA",
+   "district": "12",
+   "name": "Summer Lee",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "One of three members to vote no on H.R. 9340, the Ratepayer Protection Act (passed 417-3), saying it would not guarantee lower rates and “pays lip service to affordability talking points and doesn't address the water and noise pollution or the environmental and health concerns that continue to harass frontline communities that data centers are strategically placed in.”",
+   "date": "2026-09-16",
+   "source": "https://www.nbcnews.com/politics/congress/house-passes-bill-shield-consumers-data-center-price-hikes-energy-rcna597683",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-22",
+   "page": "https://aigridwatch.com/house-races#race-pa-12"
   },
   {
    "chamber": "House",
@@ -2381,7 +2432,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-07",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-mi-12"
   },
   {
@@ -3775,7 +3826,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-07",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-mi-12"
   },
   {
@@ -4268,7 +4319,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-pa-12"
   },
   {
@@ -5101,7 +5152,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-07",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-mi-12"
   },
   {

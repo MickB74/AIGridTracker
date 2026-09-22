@@ -432,7 +432,9 @@ AI_RECORDS = {
         "lean": "guardrails",
         "summary": "Introduced a bill banning AI data centers on federal lands, "
                    "cosponsored the site-selection transparency act, and issued "
-                   "a statement opposing a specific data center in her district.",
+                   "a statement opposing a specific data center in her "
+                   "district. Voted no on the Ratepayer Protection Act as too "
+                   "weak, calling for a national moratorium instead.",
         "items": [
             {"what": "Introduced H.R. 9939, the No AI Data Centers on Federal "
                      "Lands Act, permanently banning large AI data centers "
@@ -452,8 +454,17 @@ AI_RECORDS = {
                      "water consumption of 'millions of gallons per day.'",
              "date": "2025-12-16",
              "source": "https://tlaib.house.gov/posts/tlaib-statement-on-ai-data-center-vote-in-southfield"},
+            {"what": "One of three members to vote no on H.R. 9340, the "
+                     "Ratepayer Protection Act (passed 417-3), on the grounds "
+                     "that it was too weak: it “fails to meaningfully protect "
+                     "our communities.” Before the vote she wrote on X that "
+                     "“the strongest action Congress can take right now is to "
+                     "pass a national moratorium on data centers and enact a "
+                     "prohibition on federal lands.”",
+             "date": "2026-09-16",
+             "source": "https://www.nbcnews.com/politics/congress/house-passes-bill-shield-consumers-data-center-price-hikes-energy-rcna597683"},
         ],
-        "as_of": "2026-09-07",
+        "as_of": "2026-09-22",
     },
     ("MI", "3", "Hillary Scholten"): {
         "lean": "guardrails",
@@ -1852,18 +1863,47 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-12",
     },
+    ("IL", "3", "Delia Ramirez"): {
+        "lean": "guardrails",
+        "summary": "Voted no on the Ratepayer Protection Act — not against "
+                   "making data centers pay, but because, she said, it only "
+                   "suggests states act and does not address the threats "
+                   "data centers pose to her district.",
+        "items": [
+            {"what": "One of three members to vote no on H.R. 9340, the "
+                     "Ratepayer Protection Act (passed 417-3). To NBC News: "
+                     "the bill “does not address the concerns of our "
+                     "constituents and the threats that data centers pose,” "
+                     "and “my district is demanding more than a bill that "
+                     "suggests states take action.”",
+             "date": "2026-09-16",
+             "source": "https://www.nbcnews.com/politics/congress/house-passes-bill-shield-consumers-data-center-price-hikes-energy-rcna597683"},
+        ],
+        "as_of": "2026-09-22",
+    },
     ("PA", "12", "Summer Lee"): {
         "lean": "guardrails",
         "summary": "Cosponsored the Data Center Community Impact Act "
                    "requiring DOE to study effects on communities of color "
-                   "and low-income communities.",
+                   "and low-income communities. Voted no on the Ratepayer "
+                   "Protection Act as too weak on pollution and health.",
         "items": [
             {"what": "Cosponsored H.R. 7858, the Data Center Community "
                      "Impact Act.",
              "date": "2026-03-06",
              "source": "https://watsoncoleman.house.gov/newsroom/press-releases/rep-watson-coleman-introduces-bill-to-study-impact-of-ai-data-centers-on-local-communities"},
+            {"what": "One of three members to vote no on H.R. 9340, the "
+                     "Ratepayer Protection Act (passed 417-3), saying it would "
+                     "not guarantee lower rates and “pays lip service to "
+                     "affordability talking points and doesn't address the "
+                     "water and noise pollution or the environmental and "
+                     "health concerns that continue to harass frontline "
+                     "communities that data centers are strategically placed "
+                     "in.”",
+             "date": "2026-09-16",
+             "source": "https://www.nbcnews.com/politics/congress/house-passes-bill-shield-consumers-data-center-price-hikes-energy-rcna597683"},
         ],
-        "as_of": "2026-09-12",
+        "as_of": "2026-09-22",
     },
     # ── Batch 7: AZ, MT, AK — 2026-09-12 ────────────────────────────────
     ("AZ", "3", "Yassamin Ansari"): {

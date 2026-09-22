@@ -20303,6 +20303,42 @@
       "pa_dep_county": "Columbia",
       "pa_dep_status": "Proposed (No Applications Received)",
       "events": []
+    },
+    {
+      "id": "pacifico-glass-mountains-brewster",
+      "name": "Pacifico Energy Glass Mountains data center and gas plant (proposed)",
+      "operator": "Pacifico Energy",
+      "owner": null,
+      "tenant": null,
+      "filing_llc": null,
+      "locality": "Brewster County",
+      "state": "TX",
+      "lat": 30.42,
+      "lon": -103.33,
+      "size_mw": null,
+      "acres": 8400,
+      "announced": "2026-09-15",
+      "rezoning_filed": null,
+      "hearing_date": null,
+      "decided_date": null,
+      "outcome": null,
+      "note": "Pacifico Energy, which is developing the GW Ranch gas plant for Amazon's Pecos County campus, presented Brewster County Commissioners Court with a concept for an off-grid data center powered by gas turbines (possibly with solar and batteries) on a roughly 8,400-acre ranch in the Glass Mountains owned by James Ahern. No filing, tenant, size or development agreement yet; the company's own cost range is $5 billion to $60 billion.",
+      "source": "https://www.marfapublicradio.org/news/2026-09-18/developer-behind-amazons-pecos-county-data-center-approaches-brewster-county-officials",
+      "as_of": "2026-09-22",
+      "events": [
+        {
+          "date": "2026-09-15",
+          "kind": "meeting",
+          "summary": "Brewster County Commissioners Court special meeting, agenda item 5: 'Review and discuss presentation by Pacifico Energy; no action required.' Pacifico's senior director of development, director of land services and a water adviser attended; there was no formal presentation because the company called the project very early.",
+          "source": "https://brewstercotx.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=1256,plainText=false)"
+        },
+        {
+          "date": "2026-09-18",
+          "kind": "coverage",
+          "summary": "Marfa Public Radio reported the company described an off-grid data center and gas plant employing 100 to 200 people, possibly with worker housing, costing $5 billion to $60 billion, with one to two years of planning before construction. County Judge Greg Henington said 'we're not taking this, like a lay down' and raised water and noise; about 10 residents spoke against it over air quality, noise, dark skies, housing and the region's identity.",
+          "source": "https://www.marfapublicradio.org/news/2026-09-18/developer-behind-amazons-pecos-county-data-center-approaches-brewster-county-officials"
+        }
+      ]
     }
   ]
 }

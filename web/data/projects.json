@@ -5,8 +5,8 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/projects",
-  "count": 282,
-  "verified_count": 281,
+  "count": 283,
+  "verified_count": 282,
   "caveat": "A working set of identified proposals a community can track, not a census — most of the country's activity is not in here yet. Pennsylvania is the exception: its rows are synced from PA DEP's own data-center permit tracker, so the state's coverage is close to complete and carries the permit trail with it.\n\n**Each row carries its own provenance.** Rows showing a verification date link to reporting or the governing body's own record and were read on that date; rows marked *unverified* have no source on record — a lead to check, not a fact to cite.\n\n**Stage is derived, not asserted.** *Hearing scheduled*, *Awaiting decision*, *Approved* and *Withdrawn* are computed from each row's milestone dates on every rebuild, so a hearing date that has passed stops reading 'scheduled'. Hearings get moved and projects re-file under new names — treat a scheduled date as the earliest to act by, and confirm with the clerk before relying on it. Leads are mined into data/project_candidates.json and promoted here only after a human reads a primary source.",
   "schema": {
     "id": "Stable slug, unique per project.",
@@ -21301,6 +21301,45 @@
       "as_of": "2026-09-20",
       "verified": true,
       "events": []
+    },
+    {
+      "id": "pacifico-glass-mountains-brewster",
+      "name": "Pacifico Energy Glass Mountains data center and gas plant (proposed)",
+      "operator": "Pacifico Energy",
+      "owner": "",
+      "tenant": "",
+      "filing_llc": "",
+      "locality": "Brewster County",
+      "state": "TX",
+      "lat": 30.42,
+      "lon": -103.33,
+      "size_mw": "",
+      "acres": 8400,
+      "announced": "2026-09-15",
+      "rezoning_filed": "",
+      "hearing_date": "",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "Proposed",
+      "days_to_hearing": null,
+      "note": "Pacifico Energy, which is developing the GW Ranch gas plant for Amazon's Pecos County campus, presented Brewster County Commissioners Court with a concept for an off-grid data center powered by gas turbines (possibly with solar and batteries) on a roughly 8,400-acre ranch in the Glass Mountains owned by James Ahern. No filing, tenant, size or development agreement yet; the company's own cost range is $5 billion to $60 billion.",
+      "source": "https://www.marfapublicradio.org/news/2026-09-18/developer-behind-amazons-pecos-county-data-center-approaches-brewster-county-officials",
+      "as_of": "2026-09-22",
+      "verified": true,
+      "events": [
+        {
+          "date": "2026-09-15",
+          "kind": "meeting",
+          "summary": "Brewster County Commissioners Court special meeting, agenda item 5: 'Review and discuss presentation by Pacifico Energy; no action required.' Pacifico's senior director of development, director of land services and a water adviser attended; there was no formal presentation because the company called the project very early.",
+          "source": "https://brewstercotx.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=1256,plainText=false)"
+        },
+        {
+          "date": "2026-09-18",
+          "kind": "coverage",
+          "summary": "Marfa Public Radio reported the company described an off-grid data center and gas plant employing 100 to 200 people, possibly with worker housing, costing $5 billion to $60 billion, with one to two years of planning before construction. County Judge Greg Henington said 'we're not taking this, like a lay down' and raised water and noise; about 10 residents spoke against it over air quality, noise, dark skies, housing and the region's identity.",
+          "source": "https://www.marfapublicradio.org/news/2026-09-18/developer-behind-amazons-pecos-county-data-center-approaches-brewster-county-officials"
+        }
+      ]
     }
   ]
 }

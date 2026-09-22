@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 7558,
+  "count": 7560,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -83142,6 +83142,28 @@
       "published": "Tue, 22 Sep 2026 16:29:22 GMT",
       "published_iso": "2026-09-22T16:29:22+00:00",
       "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22"
+    },
+    {
+      "title": "Developer behind Amazon's Pecos County data center approaches Brewster County officials",
+      "outlet": "Marfa Public Radio",
+      "link": "https://www.marfapublicradio.org/news/2026-09-18/developer-behind-amazons-pecos-county-data-center-approaches-brewster-county-officials",
+      "published": "Fri, 18 Sep 2026 12:00:00 +0000",
+      "published_iso": "2026-09-18T12:00:00+00:00",
+      "locality": "Brewster County",
+      "state": "TX",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22"
+    },
+    {
+      "title": "Data centers loom closer to Brewster County",
+      "outlet": "Alpine Avalanche",
+      "link": "https://www.alpineavalanche.com/news/data-centers-loom-closer-brewster-county",
+      "published": "Wed, 19 Aug 2026 12:00:00 +0000",
+      "published_iso": "2026-08-19T12:00:00+00:00",
+      "locality": "Brewster County",
       "state": "TX",
       "first_seen": "2026-09-22",
       "last_seen": "2026-09-22"
