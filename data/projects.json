@@ -3844,7 +3844,7 @@
       "outcome": null,
       "note": "Amazon Data Services filed TDLR registrations for three data center buildings (A, B, C; 189,060 sq ft and ~$300 million each) at a site 11 miles north of Fort Stockton, with construction scheduled August-December 2026, part of an August 2026 filing wave totaling 16 buildings and at least $4.8 billion across Fort Stockton, Floydada, and Amazon's existing Boling (Wharton County) campus. Amazon confirmed it is financing the GW Ranch gas plant being developed by Pacifico Energy in Pecos County (35 turbines, 7.65 GW) to power the campus; its permitted emissions of over 30 million metric tonnes of GHG per year would exceed any single source currently operating in the US.",
       "source": "https://usdatacenterprojects.com/texas/amazon-files-plans-for-new-data-center-buildings-in-texas-across-three-sites",
-      "as_of": "2026-08-14",
+      "as_of": "2026-09-22",
       "events": [
         {
           "date": "2025-08-20",
@@ -3923,6 +3923,18 @@
           "kind": "coverage",
           "summary": "The Fort Stockton Pioneer published a report on community debate over the data center proposal's impact on Fort Stockton land, water, and future growth.",
           "source": "https://www.fortstocktonpioneer.com/news/data-center-proposal-sparks-debate-over-fort-stockton-land-water-and-future-growth"
+        },
+        {
+          "date": "2026-09-18",
+          "kind": "coverage",
+          "summary": "Marfa Public Radio reported that Pacifico Energy, the developer of the GW Ranch plant powering this campus, pitched Brewster County officials on a second off-grid data center and gas plant on about 8,400 acres in the Glass Mountains of Brewster County, estimated at $5 billion to $60 billion. County Judge Greg Henington said the county was 'not taking this, like a lay down'; about 10 residents spoke against it, citing air quality, noise and dark skies.",
+          "source": "https://www.marfapublicradio.org/news/2026-09-18/developer-behind-amazons-pecos-county-data-center-approaches-brewster-county-officials"
+        },
+        {
+          "date": "2026-09-22",
+          "kind": "coverage",
+          "summary": "During Climate Week NYC, Democracy Now! broadcast from outside Amazon's New York office with Bill McKibben (350.org, Third Act) and Kavita Sthanumurthy of Amazon Employees for Climate Justice, who targeted the 35-turbine Pecos County gas plant. Sthanumurthy said the group's own research put Amazon's actual renewable share 'closer to 22%', against the company's 100% renewable claim; that figure is the group's, not an audited number.",
+          "source": "https://www.democracynow.org/2026/9/22/un_climate_week"
         }
       ]
     },

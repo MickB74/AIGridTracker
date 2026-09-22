@@ -3638,5 +3638,54 @@
     "locality": "Augusta-Richmond County, GA",
     "kind": "status_changed",
     "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-09-20",
+    "id": "sauk-county-wi",
+    "locality": "Sauk County, WI",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-20",
+    "id": "sawyer-county-wi",
+    "locality": "Sawyer County, WI",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-20",
+    "id": "milwaukee-wi",
+    "locality": "Milwaukee, WI",
+    "kind": "added",
+    "detail": "Added as Proposed"
+  },
+  {
+    "date": "2026-09-20",
+    "id": "manchester-township-nj",
+    "locality": "Manchester Township, NJ",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-20",
+    "id": "shawnee-township-oh",
+    "locality": "Shawnee Township, OH",
+    "kind": "shortened",
+    "detail": "Now runs to 2027-10-13"
+  },
+  {
+    "date": "2026-09-22",
+    "id": "roswell-ga",
+    "locality": "Roswell, GA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-09-22",
+    "id": "new-hampshire-senate-nh",
+    "locality": "New Hampshire (Senate), NH",
+    "kind": "added",
+    "detail": "Added as Proposed"
   }
 ]

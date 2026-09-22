@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/climate-week-amazon-pecos-brewster-2026",
+      "destination": "/blog/climate-week-amazon-pecos-brewster-2026",
+      "permanent": true
+    },
+    {
       "source": "/loudoun-pause-vote-2026",
       "destination": "/blog/loudoun-pause-vote-2026",
       "permanent": true

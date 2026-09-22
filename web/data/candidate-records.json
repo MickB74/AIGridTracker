@@ -2,8 +2,59 @@
  "generated": "2026-09-22",
  "license": "CC BY 4.0",
  "note": "One row per cited item. kind=action is a bill, letter, hearing question or investigation; kind=statement is a quote, op-ed or campaign line. grade is the officials-scorecard grade (sitting officials only); lean summarises the cited items.",
- "count": 349,
+ "count": 352,
  "records": [
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "VA",
+   "district": "10",
+   "name": "Suhas Subramanyam",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "At a Brookings Institution event, called the current ad hoc, community-by-community approach to data center siting “short-term profit-driven” and sometimes “predatory”, and called for “a national strategy that puts communities first”: coordinated planning across states, disclosure of development agreements that now carry nondisclosure clauses, and measured rather than projected power and water use.",
+   "date": "2026-09-22",
+   "source": "https://www.nextgov.com/modernization/2026/09/do-data-centers-need-national-strategy-puts-communities-first/416137/",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-22",
+   "page": "https://aigridwatch.com/house-races#race-va-10"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "CO",
+   "district": "8",
+   "name": "Gabe Evans",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "H.R. 9340 passed the full House 417-3. It directs state utility commissions to consider rate designs under which data centers with 100 MW or more of peak demand at one site bear the full incremental cost of the generation, transmission and distribution upgrades they require. Now goes to the Senate.",
+   "date": "2026-09-16",
+   "source": "https://energycommerce.house.gov/posts/ratepayer-protection-act-passes-house-with-strong-bipartisan-support",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-22",
+   "page": "https://aigridwatch.com/house-races#race-co-8"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "FL",
+   "district": "14",
+   "name": "Kathy Castor",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "H.R. 9340 passed the full House 417-3. It directs state utility commissions to consider rate designs under which data centers with 100 MW or more of peak demand at one site bear the full incremental cost of the generation, transmission and distribution upgrades they require. Now goes to the Senate.",
+   "date": "2026-09-16",
+   "source": "https://energycommerce.house.gov/posts/ratepayer-protection-act-passes-house-with-strong-bipartisan-support",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-09-22",
+   "page": "https://aigridwatch.com/house-races#race-fl-14"
+  },
   {
    "chamber": "House",
    "role": "candidate",
@@ -2432,7 +2483,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-08-26",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-co-8"
   },
   {
@@ -2449,7 +2500,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-08-26",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-fl-14"
   },
   {
@@ -3180,7 +3231,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-05",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-va-10"
   },
   {
@@ -3537,7 +3588,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-05",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-va-10"
   },
   {

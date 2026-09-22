@@ -82,8 +82,16 @@ AI_RECORDS = {
                      "House Energy and Commerce 52-0.",
              "date": "2026-07-22",
              "source": "https://broadbandbreakfast.com/house-committee-approves-package-to-address-data-centers-growing-energy-demands/"},
+            {"what": "H.R. 9340 passed the full House 417-3. It directs state "
+                     "utility commissions to consider rate designs under which "
+                     "data centers with 100 MW or more of peak demand at one "
+                     "site bear the full incremental cost of the generation, "
+                     "transmission and distribution upgrades they require. "
+                     "Now goes to the Senate.",
+             "date": "2026-09-16",
+             "source": "https://energycommerce.house.gov/posts/ratepayer-protection-act-passes-house-with-strong-bipartisan-support"},
         ],
-        "as_of": "2026-08-26",
+        "as_of": "2026-09-22",
     },
     ("FL", "14", "Kathy Castor"): {
         "lean": "guardrails",
@@ -99,8 +107,16 @@ AI_RECORDS = {
                      "52-0.",
              "date": "2026-07-22",
              "source": "https://broadbandbreakfast.com/house-committee-approves-package-to-address-data-centers-growing-energy-demands/"},
+            {"what": "H.R. 9340 passed the full House 417-3. It directs state "
+                     "utility commissions to consider rate designs under which "
+                     "data centers with 100 MW or more of peak demand at one "
+                     "site bear the full incremental cost of the generation, "
+                     "transmission and distribution upgrades they require. "
+                     "Now goes to the Senate.",
+             "date": "2026-09-16",
+             "source": "https://energycommerce.house.gov/posts/ratepayer-protection-act-passes-house-with-strong-bipartisan-support"},
         ],
-        "as_of": "2026-08-26",
+        "as_of": "2026-09-22",
     },
 
     # ── H.R. 8241, Power for the People Act of 2026 ────────────────────────
@@ -357,8 +373,18 @@ AI_RECORDS = {
                      "power and water these facilities use.”",
              "date": "2026-06-18",
              "source": "https://subramanyam.house.gov/media/press-releases/reps-subramanyam-obernolte-foushee-introduce-legislation-create-first-its-kind"},
+            {"what": "At a Brookings Institution event, called the current "
+                     "ad hoc, community-by-community approach to data center "
+                     "siting “short-term profit-driven” and sometimes "
+                     "“predatory”, and called for “a national strategy that "
+                     "puts communities first”: coordinated planning across "
+                     "states, disclosure of development agreements that now "
+                     "carry nondisclosure clauses, and measured rather than "
+                     "projected power and water use.",
+             "date": "2026-09-22",
+             "source": "https://www.nextgov.com/modernization/2026/09/do-data-centers-need-national-strategy-puts-communities-first/416137/"},
         ],
-        "as_of": "2026-09-05",
+        "as_of": "2026-09-22",
     },
     ("VA", "1", "Rob Wittman"): {
         "lean": "accelerate",

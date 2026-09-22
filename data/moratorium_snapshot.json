@@ -1863,6 +1863,10 @@
     "effective_status": "Enacted",
     "expires": "2027-10-14"
   },
+  "manchester-township-nj": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "manitowoc-county-wi": {
     "effective_status": "Enacted",
     "expires": "2027-10-29"
@@ -2019,6 +2023,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "milwaukee-wi": {
+    "effective_status": "Proposed",
+    "expires": null
+  },
   "minneapolis-mn": {
     "effective_status": "Enacted",
     "expires": "2026-11-21"
@@ -2165,6 +2173,10 @@
   },
   "new-hampshire-hb-1265-nh": {
     "effective_status": "Defeated",
+    "expires": null
+  },
+  "new-hampshire-senate-nh": {
+    "effective_status": "Proposed",
     "expires": null
   },
   "new-haven-ct": {
@@ -2632,7 +2644,7 @@
     "expires": "2027-04-21"
   },
   "roswell-ga": {
-    "effective_status": "Enacted",
+    "effective_status": "Expired",
     "expires": "2026-09-20"
   },
   "rowan-county-ky": {
@@ -2711,6 +2723,10 @@
     "effective_status": "Expired",
     "expires": "2026-08-11"
   },
+  "sauk-county-wi": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "sault-ste-marie-tribe-of-chippewa-indians-mi": {
     "effective_status": "Enacted",
     "expires": null
@@ -2718,6 +2734,10 @@
   "savannah-ga": {
     "effective_status": "Enacted",
     "expires": "2027-01-29"
+  },
+  "sawyer-county-wi": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "scarborough-me": {
     "effective_status": "Enacted",
@@ -2761,7 +2781,7 @@
   },
   "shawnee-township-oh": {
     "effective_status": "Enacted",
-    "expires": "2027-12-09"
+    "expires": "2027-10-13"
   },
   "sheboygan-wi": {
     "effective_status": "Enacted",

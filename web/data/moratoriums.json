@@ -5,8 +5,8 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 853,
-  "verified_count": 853,
+  "count": 858,
+  "verified_count": 858,
   "caveat": "Illustrative rather than exhaustive \u2014 dozens of localities churn weekly, and this tracks the ones we have read a source for.\n\n**Each row carries its own provenance.** Rows showing a verification date link to the ordinance, the enacting body's own page, or a datable report of the vote, and were read on that date. Rows marked *unverified* came from bulk compilation and have not been checked against a primary source \u2014 the locality, the year, and the status may all be off. Verify one of those with the town clerk before citing it as precedent.\n\n**Expiry is derived, not asserted.** A row with a documented end date flips to *Expired* on its own once that date passes. A time-limited moratorium whose start date was never documented keeps showing as enacted \u2014 that is a known gap, not a claim that it is still in force. Moratoriums are also routinely extended, so an expiry date is the earliest it could have ended, not proof that it did.",
   "schema": {
     "id": "Stable row id, derived from locality + state \u2014 matches the community-page slug",
@@ -246,6 +246,111 @@
       "replaced_by": null,
       "lat": 37.68,
       "lon": -113.06
+    },
+    {
+      "id": "sauk-county-wi",
+      "locality": "Sauk County",
+      "state": "WI",
+      "level": "County",
+      "status": "Enacted",
+      "effective_status": "Enacted",
+      "expired": false,
+      "days_left": null,
+      "when": "Sep 15, 2026",
+      "date": "2026-09-15",
+      "date_precision": "day",
+      "expires": null,
+      "term_kind": "fixed_undated",
+      "term_label": "A stated duration, but the end date isn't recorded here",
+      "note": "Ordinance 07-2026-0 amends the county zoning code to enact an 18-month moratorium on receipt of applications and the granting of all zoning permits or approvals for siting or placement of data centers. Effective on publication; runs 18 months from publication or until the board amends or rescinds it, whichever comes first. Publication date not recorded, so no end date is stored",
+      "source": "https://www.co.sauk.wi.us/resolutions/07-2026-0",
+      "source_kind": "news",
+      "ordinance_url": null,
+      "as_of": "2026-09-20",
+      "verified": true,
+      "threshold": null,
+      "covers": null,
+      "events": [
+        {
+          "date": "2026-09-15",
+          "kind": "enacted",
+          "label": "Enacted",
+          "source": "https://www.co.sauk.wi.us/resolutions/07-2026-0"
+        }
+      ],
+      "replaced_by": null,
+      "lat": 43.42,
+      "lon": -89.95
+    },
+    {
+      "id": "sawyer-county-wi",
+      "locality": "Sawyer County",
+      "state": "WI",
+      "level": "County",
+      "status": "Enacted",
+      "effective_status": "Enacted",
+      "expired": false,
+      "days_left": null,
+      "when": "Aug 20, 2026",
+      "date": "2026-08-20",
+      "date_precision": "day",
+      "expires": null,
+      "term_kind": "fixed_undated",
+      "term_label": "A stated duration, but the end date isn't recorded here",
+      "note": "County board adopted an 18-month temporary moratorium on development of large data centers and associated infrastructure, to give staff time to draft setback, permitting and performance standards. Zoning committee had recommended it 5-0 on Jul 15. Source is meeting coverage, not the county's own ordinance; end date is not stated in it",
+      "source": "https://citizenportal.ai/articles/9605659/Wisconsin/Sawyer-County/Sawyer-County-adopts-18-month-moratorium-on-large-data-centers",
+      "source_kind": "news",
+      "ordinance_url": null,
+      "as_of": "2026-09-20",
+      "verified": true,
+      "threshold": null,
+      "covers": null,
+      "events": [
+        {
+          "date": "2026-08-20",
+          "kind": "enacted",
+          "label": "Enacted",
+          "source": "https://citizenportal.ai/articles/9605659/Wisconsin/Sawyer-County/Sawyer-County-adopts-18-month-moratorium-on-large-data-centers"
+        }
+      ],
+      "replaced_by": null,
+      "lat": 45.88,
+      "lon": -91.15
+    },
+    {
+      "id": "milwaukee-wi",
+      "locality": "Milwaukee",
+      "state": "WI",
+      "level": "Local",
+      "status": "Proposed",
+      "effective_status": "Proposed",
+      "expired": false,
+      "days_left": null,
+      "when": "Aug 10, 2026",
+      "date": "2026-08-10",
+      "date_precision": "day",
+      "expires": null,
+      "term_kind": "until_event",
+      "term_label": "Runs until a condition is met, not to a date",
+      "note": "Proposed ordinance would bar city departments from accepting or processing applications to construct, enlarge, expand, convert or occupy data centers, for one year after passage or until the zoning code is amended to regulate them, whichever comes first. Zoning Code Technical Committee endorsed it Aug 10; City Plan Commission hearing set for Sep 28, 2026. Common Council approval still required \u2014 not yet adopted",
+      "source": "https://urbanmilwaukee.com/2026/09/17/milwaukees-data-center-moratorium-heads-to-first-public-hearing/",
+      "source_kind": "news",
+      "ordinance_url": null,
+      "as_of": "2026-09-20",
+      "verified": true,
+      "threshold": null,
+      "covers": null,
+      "events": [
+        {
+          "date": "2026-08-10",
+          "kind": "proposed",
+          "label": "Proposed",
+          "source": "https://urbanmilwaukee.com/2026/09/17/milwaukees-data-center-moratorium-heads-to-first-public-hearing/"
+        }
+      ],
+      "replaced_by": null,
+      "lat": 43.04,
+      "lon": -87.91
     },
     {
       "id": "manitowoc-county-wi",
@@ -10433,6 +10538,41 @@
       "lon": -122.99
     },
     {
+      "id": "manchester-township-nj",
+      "locality": "Manchester Township",
+      "state": "NJ",
+      "level": "Local",
+      "status": "Enacted",
+      "effective_status": "Enacted",
+      "expired": false,
+      "days_left": null,
+      "when": "Sep 2026",
+      "date": "2026-09-01",
+      "date_precision": "month",
+      "expires": null,
+      "term_kind": "standing",
+      "term_label": "No end date by design \u2014 a permanent ban or standing statute",
+      "note": "Ordinance 26-48, adopted unanimously, repeals the 2025 redevelopment-plan provision that listed data centers as a permitted use on the Stavola Corporation site off South Hope Chapel Road, and states that data centers are not permitted anywhere in the township. Introduced Aug 26; takes effect 20 days after publication. The source does not give the date of the final vote, so only the month is recorded",
+      "source": "https://www.jerseyshoreonline.com/manchester/data-centers-blocked-but-concerns-remain/",
+      "source_kind": "news",
+      "ordinance_url": null,
+      "as_of": "2026-09-20",
+      "verified": true,
+      "threshold": null,
+      "covers": null,
+      "events": [
+        {
+          "date": "2026-09-01",
+          "kind": "enacted",
+          "label": "Enacted",
+          "source": "https://www.jerseyshoreonline.com/manchester/data-centers-blocked-but-concerns-remain/"
+        }
+      ],
+      "replaced_by": null,
+      "lat": 39.97,
+      "lon": -74.33
+    },
+    {
       "id": "red-bank-nj",
       "locality": "Red Bank",
       "state": "NJ",
@@ -13030,27 +13170,27 @@
       "status": "Enacted",
       "effective_status": "Enacted",
       "expired": false,
-      "days_left": 443.0,
-      "when": "Jun 9, 2026",
-      "date": "2026-06-09",
+      "days_left": 386.0,
+      "when": "Apr 13, 2026",
+      "date": "2026-04-13",
       "date_precision": "day",
-      "expires": "2027-12-09",
+      "expires": "2027-10-13",
       "term_kind": "until_date",
       "term_label": "Runs to a documented date",
-      "note": "18-month moratorium on data centers, battery energy storage, and solar energy fields. Unanimous vote following zoning board recommendation",
-      "source": "https://www.hometownstations.com/news/allen_county/shawnee-township-approves-18-month-moratorium-on-data-centers-energy-projects/article_431ac6ec-8564-4865-9b2f-a243d933bf4d.html",
+      "note": "18-month moratorium on data centers, battery energy storage, and solar energy fields. Unanimous vote following zoning board recommendation. WLIO's report is dated Apr 14, 2026 and places the vote on 'Monday night', i.e. Apr 13; the publisher has since removed the article, so the source is the Internet Archive copy",
+      "source": "http://web.archive.org/web/20260416110229/https://www.hometownstations.com/news/allen_county/shawnee-township-approves-18-month-moratorium-on-data-centers-energy-projects/article_431ac6ec-8564-4865-9b2f-a243d933bf4d.html",
       "source_kind": "news",
       "ordinance_url": null,
-      "as_of": "2026-09-06",
+      "as_of": "2026-09-20",
       "verified": true,
       "threshold": null,
       "covers": null,
       "events": [
         {
-          "date": "2026-06-09",
+          "date": "2026-04-13",
           "kind": "enacted",
           "label": "Enacted",
-          "source": "https://www.hometownstations.com/news/allen_county/shawnee-township-approves-18-month-moratorium-on-data-centers-energy-projects/article_431ac6ec-8564-4865-9b2f-a243d933bf4d.html"
+          "source": "http://web.archive.org/web/20260416110229/https://www.hometownstations.com/news/allen_county/shawnee-township-approves-18-month-moratorium-on-data-centers-energy-projects/article_431ac6ec-8564-4865-9b2f-a243d933bf4d.html"
         }
       ],
       "replaced_by": null,
@@ -13143,10 +13283,10 @@
       "term_kind": "until_date",
       "term_label": "Runs to a documented date",
       "note": "Emergency Resolution 2026-08, 12-month moratorium on establishing or converting buildings to data centers. Final passage with one abstention. Council can rescind at any time",
-      "source": "https://www.hometownstations.com/news/auglaize_county/st-marys-approves-one-year-moratorium-on-data-center-projects/article_cfdd565e-c7ac-48dc-be55-2c345dfa132f.html",
+      "source": "https://www.limaohio.com/top-stories/2026/06/23/st-marys-council-adopts-temporary-data-center-ban/",
       "source_kind": "news",
       "ordinance_url": null,
-      "as_of": "2026-09-06",
+      "as_of": "2026-09-20",
       "verified": true,
       "threshold": null,
       "covers": null,
@@ -13155,7 +13295,7 @@
           "date": "2026-06-22",
           "kind": "enacted",
           "label": "Enacted",
-          "source": "https://www.hometownstations.com/news/auglaize_county/st-marys-approves-one-year-moratorium-on-data-center-projects/article_cfdd565e-c7ac-48dc-be55-2c345dfa132f.html"
+          "source": "https://www.limaohio.com/top-stories/2026/06/23/st-marys-council-adopts-temporary-data-center-ban/"
         }
       ],
       "replaced_by": null,
@@ -16162,7 +16302,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://abcnews4.com/news/local/mt-pleasant-planning-commission-recommends-120-day-data-center-moratorium-community-decides-on-controversy-topic-of-discussion-charleston-south-carolina-lowcountry-news-trending-viral"
@@ -16302,7 +16442,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://www.wboc.com/news/salisbury-planning-commission-recommends-one-year-data-center-moratorium/article_2778f1dd-058a-44d5-95af-5d90e9a09207.html"
@@ -16372,7 +16512,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://wgme.com/news/local/north-berwick-could-vote-to-ban-data-centers-in-november"
@@ -18043,10 +18183,10 @@
       "term_kind": "until_date",
       "term_label": "Runs to a documented date",
       "note": "Ordinance 2172-2026: 6-month moratorium on data center approval, development, construction and expansion. Introduced Jun 16, adopted Jul 14",
-      "source": "https://www.gtnj.org/index.php/i-want-to/find-a-form-or-document/public-notices-1/municipal-clerk-notices/2871-introduction-ordinance-2172-2026-data-centers/file",
+      "source": "https://gtnj.org/index.php/i-want-to/find-council-meeting-agendas/2026-1/2884-7-14-2026-agenda/file",
       "source_kind": "news",
       "ordinance_url": null,
-      "as_of": "2026-09-06",
+      "as_of": "2026-09-20",
       "verified": true,
       "threshold": null,
       "covers": null,
@@ -18055,7 +18195,7 @@
           "date": "2026-01-01",
           "kind": "enacted",
           "label": "Enacted",
-          "source": "https://www.gtnj.org/index.php/i-want-to/find-a-form-or-document/public-notices-1/municipal-clerk-notices/2871-introduction-ordinance-2172-2026-data-centers/file"
+          "source": "https://gtnj.org/index.php/i-want-to/find-council-meeting-agendas/2026-1/2884-7-14-2026-agenda/file"
         }
       ],
       "replaced_by": null,
@@ -18612,7 +18752,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://abc7chicago.com/post/mayor-brandon-johnson-sign-executive-order-regulating-data-centers-chicago/19662414/"
@@ -18682,7 +18822,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://wsbt.com/news/local/michigan-city-council-to-consider-data-center-moratorium-vote-brakes-future-porposed-google-million-dollar-city-residents-members-city-hall-impact-ban-vote-michigan-city-indiana"
@@ -18717,7 +18857,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://vermilioncountyfirst.com/2026/08/31/statement-from-the-vermillion-county-indiana-board-of-commissioners/"
@@ -18857,7 +18997,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://planetdetroit.org/2026/06/allen-park-planners-reject-data-center/"
@@ -18892,7 +19032,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://www.whmi.com/news/article/genoa-data-center-crypto-currency-mining-moratorium-extended"
@@ -18927,7 +19067,7 @@
       "covers": "permits",
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://www.wkar.org/wkar-news/2026-07-14/lansing-passes-6-month-data-center-moratorium"
@@ -18962,7 +19102,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://michiganadvance.com/briefs/wortz-spearheads-bipartisan-effort-to-halt-data-center-construction-in-michigan/"
@@ -18997,7 +19137,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://www.fox17online.com/news/local-news/holland-zeeland-grand-haven/zeeland-township-approves-new-data-center-and-energy-facility-moratorium-to-protect-local-planning"
@@ -19627,7 +19767,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://mix949.com/st-joseph-data-center-moratorium/"
@@ -19662,7 +19802,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://www.smartcitiesdive.com/news/data-centers-kansas-city-zoning-ordinance/811587/"
@@ -19802,7 +19942,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "rescinded",
           "label": "Rescinded",
           "source": "https://www.kfyrtv.com/2026/09/11/morton-county-approves-new-rules-future-data-centers/"
@@ -20257,7 +20397,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://www.centralwinews.com/main/2026/06/02/marathon-county-to-consider-data-center-moratorium/?destination=tribune-phonograph"
@@ -20292,7 +20432,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://www.middletontimes.com/articles/2026/07/01/data-center-moratorium-adopted"
@@ -20327,7 +20467,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://fox11online.com/news/local/winnebago-county-to-pursue-12-month-data-center-moratorium"
@@ -20362,7 +20502,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://www.arvadapress.com/news/government-politics/article_da742ecf-c59f-4ec9-ae0b-c6147a1cc385.html"
@@ -20432,7 +20572,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://mymotherlode.com/news/local/11092598/calaveras-data-center-moratorium-passes-4-0.html"
@@ -20502,7 +20642,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://ncpipeline.substack.com/p/escondido-data-center-moratorium"
@@ -20537,7 +20677,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://lostcoastoutpost.com/2026/sep/2/eureka-city-council-approved-temporary-ban-data-ce/"
@@ -20572,7 +20712,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://bizwest.com/2026/09/02/loveland-likely-to-impose-data-center-moratorium/"
@@ -20607,7 +20747,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://mendovoice.com/2026/09/mendocino-county-supes-ban-data-centers-for-the-moment-at-least/"
@@ -20677,7 +20817,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://www.sjgov.org/department/bos/board-news/board-news-detail/2026/09/02/sjc-board-moves-to-address-impacts-of-large-scale-ai-data-centers"
@@ -20712,7 +20852,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://lostcoastoutpost.com/2026/jul/15/humboldt-county-board-supervisors-kickstart-ban-of/"
@@ -21062,7 +21202,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://www.newsandtribune.com/news/clark-county-commissioners-approve-data-center-moratorium/article_75db5fbb-7271-4948-837d-c6dbfa79d9ab.html"
@@ -21132,7 +21272,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "http://www.beloitdailynews.com/news/local-news/green-county-joins-the-growing-list-of-wisconsin-counties-passing-data-center-moratoriums/article_644bfc7d-ebfb-4fa4-8ac7-c46b9d28d300.html"
@@ -21237,7 +21377,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://www.osceolasun.com/news/polk-esc-approves-data-center-moratorium-resolution-sends-to-county-board/article_dff935d0-9975-4112-97c5-f531c9c21c50.html"
@@ -21272,7 +21412,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://themercury.com/news/residents-request-a-moratorium-at-pott-county-public-hearing-on-data-centers/article_28b9078a-7561-5591-a7e5-e65589aeafd6.html"
@@ -21307,7 +21447,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://wmbdradio.com/2026/08/21/tazewell-county-revisits-data-center-ordinance-woodford-county-passes-moratorium/"
@@ -21342,7 +21482,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://www.publicsource.org/upper-burrell-data-center-transparency-backlash/"
@@ -21377,7 +21517,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://crawfordcountynow.com/local/upper-sandusky-implements-six-month-moratorium-on-new-data-center-development/"
@@ -21412,7 +21552,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "rejected",
           "label": "Rejected",
           "source": "https://www.observer-reporter.com/news/local-news/2026/jun/11/south-strabane-adopts-data-center-noise-ordinances/"
@@ -21482,7 +21622,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://www.wfmj.com/news/local-news/ellsworth-township-becomes-latest-community-to-enact-data-center-moratorium/article_bea66566-8047-437a-a897-5acbba9d48e1.html"
@@ -22262,6 +22402,41 @@
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://www.nhpr.org/politics/2026-08-21/data-centers-ayotte-supports-moratorium-datacenters-nh"
+        }
+      ],
+      "replaced_by": null,
+      "lat": 43.21,
+      "lon": -71.54
+    },
+    {
+      "id": "new-hampshire-senate-nh",
+      "locality": "New Hampshire (Senate)",
+      "state": "NH",
+      "level": "State",
+      "status": "Proposed",
+      "effective_status": "Proposed",
+      "expired": false,
+      "days_left": null,
+      "when": "Sep 18, 2026",
+      "date": "2026-09-18",
+      "date_precision": "day",
+      "expires": null,
+      "term_kind": "unknown",
+      "term_label": "Term not documented",
+      "note": "Senate President Sharon Carson (R-Londonderry) announced the Republican-majority Senate will explore legislation for a moratorium on AI data centers in the session opening January 2027 \u2014 a shift after Republicans watered down SB 439 earlier in the year. No bill number, duration or text yet; separate from Gov. Ayotte's budget-vehicle proposal",
+      "source": "https://www.nhpr.org/politics/2026-09-18/datacenters-nh-republicans-moratorium-ai-data-centers",
+      "source_kind": "news",
+      "ordinance_url": null,
+      "as_of": "2026-09-22",
+      "verified": true,
+      "threshold": null,
+      "covers": null,
+      "events": [
+        {
+          "date": "2026-09-18",
+          "kind": "proposed",
+          "label": "Proposed",
+          "source": "https://www.nhpr.org/politics/2026-09-18/datacenters-nh-republicans-moratorium-ai-data-centers"
         }
       ],
       "replaced_by": null,
@@ -23098,7 +23273,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://rantnc.com/2026/08/18/commissioners-reject-attempts-to-pause-data-center-project/"
@@ -25399,10 +25574,10 @@
       "term_kind": "until_date",
       "term_label": "Runs to a documented date",
       "note": "Moratorium on data center facility applications in unincorporated areas; extended Aug 20 through Dec 31, 2026.",
-      "source": "https://phillipscounty.colorado.gov/sites/phillipscounty/files/Resolution%202026-02-27-01.pdf",
-      "source_kind": "official",
+      "source": "https://www.hfherald.com/story/2026/09/03/news/phillips-co-commissioners-extend-moratoriums-on-wind-solar-and-data-center-projects/4962.html",
+      "source_kind": "news",
       "ordinance_url": null,
-      "as_of": "2026-09-11",
+      "as_of": "2026-09-20",
       "verified": true,
       "threshold": null,
       "covers": null,
@@ -25411,7 +25586,7 @@
           "date": "2026-02-27",
           "kind": "enacted",
           "label": "Enacted",
-          "source": "https://phillipscounty.colorado.gov/sites/phillipscounty/files/Resolution%202026-02-27-01.pdf"
+          "source": "https://www.hfherald.com/story/2026/09/03/news/phillips-co-commissioners-extend-moratoriums-on-wind-solar-and-data-center-projects/4962.html"
         }
       ],
       "replaced_by": null,
@@ -28488,7 +28663,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://nebraskapublicmedia.org/en/news/news-articles/twelfth-nebraska-county-temporarily-bans-data-centers/"
@@ -28523,7 +28698,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://nebraskapublicmedia.org/en/news/news-articles/twelfth-nebraska-county-temporarily-bans-data-centers/"
@@ -28558,7 +28733,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://nebraskapublicmedia.org/en/news/news-articles/twelfth-nebraska-county-temporarily-bans-data-centers/"
@@ -28593,7 +28768,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://nebraskapublicmedia.org/en/news/news-articles/twelfth-nebraska-county-temporarily-bans-data-centers/"
@@ -28628,7 +28803,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://nebraskapublicmedia.org/en/news/news-articles/twelfth-nebraska-county-temporarily-bans-data-centers/"
@@ -28663,7 +28838,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://nebraskapublicmedia.org/en/news/news-articles/twelfth-nebraska-county-temporarily-bans-data-centers/"
@@ -28698,7 +28873,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://nebraskapublicmedia.org/en/news/news-articles/twelfth-nebraska-county-temporarily-bans-data-centers/"
@@ -28733,7 +28908,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "enacted",
           "label": "Enacted",
           "source": "https://nebraskapublicmedia.org/en/news/news-articles/twelfth-nebraska-county-temporarily-bans-data-centers/"
@@ -28908,7 +29083,7 @@
       "covers": null,
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://nebraskapublicmedia.org/en/news/news-articles/data-centers-are-eyeing-nebraska-heres-how-counties-are-responding/"
@@ -28943,7 +29118,7 @@
       "covers": "rezoning",
       "events": [
         {
-          "date": NaN,
+          "date": null,
           "kind": "proposed",
           "label": "Proposed",
           "source": "https://www.yahoo.com/news/articles/hall-county-commission-debating-180-181103481.html"

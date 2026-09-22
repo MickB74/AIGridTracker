@@ -72,6 +72,166 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "climate-week-amazon-pecos-brewster-2026",
+        "art": "grid",
+        "section": "stories",
+        "title": "Climate Week Put Amazon's Texas Gas Plant on the Agenda. Its Developer Is Already Pitching the Next County.",
+        "seo_title": "Amazon's Pecos gas plant, Climate Week and Brewster County",
+        "date": _dt.date(2026, 9, 22),
+        "author": "GridWatch AI",
+        "tags": ["Amazon", "Texas", "Pecos County", "Brewster County",
+                 "Pacifico Energy", "natural gas", "Climate Week",
+                 "renewable energy claims", "private equity", "off-grid power"],
+        "summary": (
+            "During Climate Week NYC, Amazon workers and Bill McKibben pointed "
+            "at the 35-turbine gas plant Amazon is financing in Pecos County, "
+            "Texas. The same week, that plant's developer met Brewster County "
+            "officials about a second off-grid data center and gas plant in "
+            "the Glass Mountains. What a county in that position should know "
+            "about the claims on both sides."
+        ),
+        "body": """\
+Climate Week NYC opened on September 20, and data centers are the theme it
+cannot get away from. On September 22, *Democracy Now!* broadcast from outside
+Amazon's New York office with Bill McKibben (350.org, Third Act) and Kavita
+Sthanumurthy, a former Amazon software engineer with Amazon Employees for
+Climate Justice. [Their target](https://www.democracynow.org/2026/9/22/un_climate_week)
+was the gas plant Amazon is financing in Pecos County, Texas, to run its new
+data center campus north of Fort Stockton: 35 turbines, set against Amazon's
+public claim to run on renewable energy.
+
+That is the national story. The local one is next door. Four days
+earlier, [Marfa Public Radio reported](https://www.marfapublicradio.org/news/2026-09-18/developer-behind-amazons-pecos-county-data-center-approaches-brewster-county-officials)
+that Pacifico Energy, the company developing the Pecos County plant, had met
+Brewster County officials about a similar project: an off-grid data center and
+natural-gas power plant on a roughly 8,400-acre ranch in the Glass Mountains.
+If you live in the Big Bend, this post is mostly for you.
+
+## What is already built in Pecos County
+
+We covered the Pecos County plant [in August](/blog/amazon-pecos-county-gas-plant-2026.html),
+and the [project dossier](/projects.html#p-amazon-fort-stockton-pecos) keeps
+its timeline. In brief:
+
+- Pacifico [announced GW Ranch](https://finance.yahoo.com/news/pacifico-energy-announces-gw-ranch-130000590.html)
+  in August 2025 as an off-grid campus on more than 8,000 acres, gas turbines
+  plus batteries, built for hyperscale data centers.
+- In January 2026 Pacifico said it had secured a [TCEQ air permit for 7.65 GW](https://finance.yahoo.com/news/pacifico-energy-secures-7-65-120000106.html)
+  of gas-fired generation, which it described as the largest air permit
+  granted in the United States.
+- In August, Amazon [confirmed it is financing the plant](https://techxplore.com/news/2026-08-amazon-massive-private-gas-centers.html)
+  to power its campus. Permitting records reviewed by the
+  [*New York Times*](https://www.nytimes.com/2026/08/08/climate/amazon-data-center-texas-pollution.html)
+  allow up to 33 million tons of CO2 a year. That is a permit ceiling, not a
+  measured output, and a plant rarely runs at its ceiling. But it is the number
+  the state signed off on.
+
+Because the plant does not connect to the ERCOT grid, it largely sidesteps the
+fights a resident would normally use. When Gov. Abbott [paused new data center
+approvals](https://www.texastribune.org/2026/08/03/texas-data-center-project-audit-greg-abbott/)
+pending an ERCOT and PUCT audit in August, off-grid projects like this one
+were noted as largely unaffected. There is no utility rate case, so there is no
+ratepayer docket to intervene in.
+
+## What the Climate Week protest actually claimed
+
+The protesters' central number is that Amazon's renewable share is "closer to
+22%," not 100%. It is worth knowing exactly where that number comes from before
+anyone repeats it at a microphone.
+
+- **Amazon's claim** is precise about its wording. Its [2025 sustainability report](https://www.aboutamazon.com/news/sustainability/amazon-sustainability-report-2025)
+  says it *matched* 100% of the electricity its global operations consumed
+  with renewable energy, for the third year in a row. "Matched" means Amazon
+  bought or contracted for as much renewable power, including renewable energy
+  credits, as it used over the year. It does not mean the electrons at any
+  given data center were renewable at any given hour.
+- **The 22% figure** comes from a [July 2024 report](https://techxplore.com/news/2024-07-years-amazon-climate-pledge-workers.html)
+  by Amazon Employees for Climate Justice. It estimated the share of renewable
+  power Amazon's data centers drew from the local utilities that serve them.
+  Amazon said the report had "incorrect findings and assumptions." It is the
+  group's estimate, it is two years old, and it predates the Pecos plant.
+- **What nobody disputes** is that Amazon's emissions are rising. ESG Dive
+  [reported](https://www.esgdive.com/news/amazon-2025-emissions-jump-as-ai-brings-momentum-and-complexity-report/825667/)
+  that Amazon's absolute carbon emissions rose 16% in 2025, with scope 2
+  (purchased electricity) up 34%. Amazon's own framing was that AI is
+  "creating new demands for energy, water, and infrastructure."
+
+Both of the first two statements can be true at once, and that is the useful
+point for a county. An annual renewable *match* made through credit purchases
+elsewhere does nothing to the air permit, the turbines, or the water drawn at a
+site in West Texas. If a developer or tenant tells a commissioners court that
+the project is "100% renewable," the question to ask is: matched how, where,
+and in which hours? And does that include the power plant on this site?
+
+## What happened in Brewster County
+
+Per [Marfa Public Radio](https://www.marfapublicradio.org/news/2026-09-18/developer-behind-amazons-pecos-county-data-center-approaches-brewster-county-officials),
+Pacifico representatives met Brewster County officials with no formal
+presentation, describing the project as very early. The concept they described
+was an off-grid data center powered by gas turbines, possibly with solar and
+batteries. It would employ 100 to 200 people, might include worker housing, and
+would cost somewhere between $5 billion and $60 billion. That range is
+Pacifico's own, and a twelve-fold spread tells you how early this is.
+
+County Judge Greg Henington told the company, "we're not taking this, like a
+lay down," and raised noise, water use, and the county's identity. About ten
+residents spoke against it, citing air quality, noise, and the dark skies that
+the region's tourism depends on. No development agreement was presented,
+though the idea came up several times.
+
+A Brewster County resident is in a stronger position than Pecos County was,
+for one reason: they know what the first project looks like. In Pecos County,
+the county's leverage was the [Chapter 312 tax abatement](https://www.co.pecos.tx.us/commissioners-court-regular-session-agenda-6222026/)
+for the GW Ranch reinvestment zone, heard in June 2026. Texas counties generally
+lack zoning power over unincorporated land, so an abatement agreement is where
+conditions go.
+Floyd County commissioners [said they would use](https://www.rfdtv.com/texas-county-uses-tax-incentives-to-steer-data-center-development)
+exactly that tool to put conditions on Amazon's Floydada campus. If Pacifico
+wants an abatement in Brewster County, that agreement is where noise limits,
+lighting, water reporting, and decommissioning terms get written, or don't.
+
+## Who is paying for the gas buildout
+
+Pecos County is not the only place a data center is getting its own gas plant,
+and the money behind these projects increasingly isn't the tech company. Timed
+to Climate Week, the Private Equity Stakeholder Project [published research](https://pestakeholder.org/news/pe-in-ai-nyc-climate-week/)
+on private equity's role in data centers and power. It is an advocacy group, so
+read its framing as advocacy, but its numbers are cited:
+
+- Citing S&P Global, it puts private equity investment in U.S. data centers at
+  **$45.7 billion in 2025, roughly 72%** of all investment in the sector, and
+  says PE firms back half of the top 10 U.S. data center companies.
+- DigitalBridge, a data-center investor, agreed this summer to acquire ArcLight
+  Capital Partners, which owns about 20.8 GW of power generation, including gas.
+- EQT-backed EdgeConneX is developing data centers alongside gas generation in
+  Ohio, and EQT is moving to acquire the utility AES.
+
+Why this matters locally: the entity across the table from a county is often
+not the brand on the building. In Pecos County the plant is Pacifico's and the
+campus is Amazon's, filed under Amazon Data Services. When a new developer
+arrives, find out who owns it, who finances it, and who the tenant is. Then
+make any commitment bind the entity that will actually be there in ten years.
+
+## Questions for a commissioners court
+
+1. Will the plant connect to ERCOT? If not, which state review applies, and
+   is the air permit already filed with TCEQ?
+2. What is the permitted CO2 and NOx ceiling, and what is the expected actual
+   operating profile?
+3. Where does the water come from, and will withdrawals be reported publicly?
+4. Who is the tenant? Is the tenant a party to the abatement agreement?
+5. If the company claims renewable energy, is that an annual match through
+   credits, or generation on this site?
+
+## See also
+
+- [Amazon Fort Stockton campus dossier](/projects.html#p-amazon-fort-stockton-pecos): dated, sourced timeline
+- [Our August post on the Pecos County plant](/blog/amazon-pecos-county-gas-plant-2026.html)
+- [Texas state briefing](/states/texas.html): moratoriums, officials, and the PUC
+- [Start here](/start-here.html): the meeting-prep wizard for a vote in the next three weeks
+""",
+    },
+    {
         "id": "loudoun-pause-vote-2026",
         "art": "moratorium",
         "section": "stories",

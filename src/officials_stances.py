@@ -57,15 +57,18 @@ STANCES = {
         "rockinst"),
     # ── House ──────────────────────────────────────────────────────────────
     ("Representative", "KY", "guthrie"): (
-        "Sponsors the Ratepayer Protection Act — a federal standard requiring "
-        "large loads (data centers) to pay the full cost of new generation and "
-        "transmission.", "house_rpa"),
+        "As Energy & Commerce chairman, moved the Ratepayer Protection Act "
+        "through committee to a 417-3 House vote (Sep 2026) — states must "
+        "consider making 100 MW+ data centers pay their own grid costs.",
+        "house_rpa_pass"),
     ("Representative", "FL", "castor"): (
-        "Co-sponsors the Ratepayer Protection Act — large loads pay their own "
-        "grid-upgrade costs.", "house_rpa"),
+        "Lead sponsor of the Ratepayer Protection Act, passed by the House "
+        "417-3 (Sep 2026) — large loads pay their own grid-upgrade costs.",
+        "house_rpa_pass"),
     ("Representative", "CO", "evans"): (
-        "Co-sponsors the Ratepayer Protection Act — large loads pay their own "
-        "grid-upgrade costs.", "house_rpa"),
+        "Lead sponsor of the Ratepayer Protection Act, passed by the House "
+        "417-3 (Sep 2026) — large loads pay their own grid-upgrade costs.",
+        "house_rpa_pass"),
     ("Representative", "NJ", "pallone"): (
         "Called for a nationwide moratorium on new data-center development.",
         "house_pallone"),
