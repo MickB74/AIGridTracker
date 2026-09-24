@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-09-23",
+  "generated": "2026-09-24",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 858,
   "states": 49,
-  "enacted": 691,
+  "enacted": 690,
   "proposed": 83,
   "official_sourced": 63,
   "by_state": {
@@ -51,7 +51,7 @@
     },
     "MI": {
       "total": 64,
-      "enacted": 44,
+      "enacted": 43,
       "proposed": 3
     },
     "TX": {
@@ -267,7 +267,6 @@
       "tallmadge-oh",
       "indio-ca",
       "palm-springs-ca",
-      "waterford-township-mi",
       "calaveras-county-ca",
       "escondido-ca",
       "eureka-ca",
@@ -280,11 +279,13 @@
     "60": [
       "iron-county-ut",
       "meridian-township-mi",
+      "washington-township-macomb-co-mi",
       "lysander-onondaga-co-ny",
       "bangor-me",
       "vienna-township-trumbull-co-oh",
       "charlotte-nc",
       "lavon-tx",
+      "marshalltown-ia",
       "springfield-mo",
       "minneapolis-mn",
       "lexington-fayette-county-ky",
@@ -301,7 +302,6 @@
       "lowndes-county-ga",
       "camden-county-ga",
       "riley-county-ks",
-      "waterford-township-mi",
       "calaveras-county-ca",
       "escondido-ca",
       "eureka-ca",
@@ -334,6 +334,7 @@
       "marshalltown-ia",
       "starke-county-in",
       "johnson-city-tn",
+      "coweta-county-ga",
       "jackson-county-mo",
       "springfield-mo",
       "fort-payne-al",
@@ -371,7 +372,6 @@
       "gorham-me",
       "lycoming-county-pa",
       "hart-mi",
-      "waterford-township-mi",
       "calaveras-county-ca",
       "escondido-ca",
       "eureka-ca",

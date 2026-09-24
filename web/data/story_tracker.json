@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 7898,
+  "count": 7910,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -68360,7 +68360,7 @@
       "locality": "Grant County",
       "state": "IN",
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-20"
+      "last_seen": "2026-09-24"
     },
     {
       "title": "Proposal would pay homeowners 'data center dividends' to counter growing backlash",
@@ -84673,7 +84673,7 @@
       "locality": "Normal",
       "state": "IL",
       "first_seen": "2026-09-22",
-      "last_seen": "2026-09-23"
+      "last_seen": "2026-09-24"
     },
     {
       "title": "Did Aaron Ford give data centers millions of dollars that were meant for Nevada schools?",
@@ -85146,7 +85146,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-09-22",
-      "last_seen": "2026-09-23"
+      "last_seen": "2026-09-24"
     },
     {
       "title": "Natural gas and the data center power draw",
@@ -86884,6 +86884,138 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-03-20",
+      "last_seen": "2026-09-24"
+    },
+    {
+      "title": "Some council members seek hearing on data center construction moratorium",
+      "outlet": "Dallas News",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOTHg3X21ZaEhwQ01mdHotM3RzYk5obW9Xa0Q4R3d6aU03aFlzTk9UeXUzWDZ3TjdaMldpVUVvV0hwdEp5NEMxUVFTWjdKWGlIUWRZY3BaN19JUWw1R3NVR3FmejNqM0NTSkxudlhybTlhVC1vTzdSak12aDY0OF9VN1lTcW5ydkxKMTNvWnM5VEExRUQwbG9HZ1NFUS1JWHpuYnFlYk5LQTgycDRQNFE?oc=5",
+      "published": "Wed, 23 Sep 2026 19:48:58 GMT",
+      "published_iso": "2026-09-23T19:48:58+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-24"
+    },
+    {
+      "title": "Belmont Glen Faces A New Neighbor: OpenAI Data Center",
+      "outlet": "Effingham Herald",
+      "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQRnRRUXlpZm94OUU5REp2NVNZNzJjYklRVUkyVkc2WnBFaHhxZ0dqRWJGVzhZNWd5ZXIycU92SzhaY2RzZmMwNUZ6dWtPMFhaVGYyc0doUVNrRHdHR096QXd4MkdSdTZLdFdkNmRTNEJ3aFUtQlhGTGppYnN0Vmh4dVpwSVRaVjk1QzNSdGtIbHltdlZic2NwS2lqT1FUWWYwOEFrZ3N4YUg4Y1A0b2Y5dXdHajFRb1lLTEJiMmdxTTBKMU5HNVQ0LXVUUWo5aWEyZUhWTVU3TXhJMmhYb0gyVDkzWm1zUFFXZHZSaVp1eEtUOEhs?oc=5",
+      "published": "Thu, 24 Sep 2026 13:37:00 GMT",
+      "published_iso": "2026-09-24T13:37:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24"
+    },
+    {
+      "title": "City Council to Hold Public Hearing on Temporary Moratorium for Data Center Approvals",
+      "outlet": "RaleighNC.gov",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNOWlIYmNZdnZOemNaOGJ4cUxoZEQ5YnI1aTZvSFBTYXZSdVlKS1Y2bjBlRUJmNkZ4ZGl5OGdpM2tCSVh5WWh4LXRuTTY4UFBTR04tV3FKZUVSZHdlT3dxUEdnTUEyencwQWxtYU9ucnRkdkFwVkg5eFhvZ25RNW0tNFNzM3RBdnREcmUwWTRwekJwVlhBbG52MW5WNlF4ZkUxSzFqSVVnSXZUUEtEWm91b0xRaw?oc=5",
+      "published": "Wed, 23 Sep 2026 07:00:00 GMT",
+      "published_iso": "2026-09-23T07:00:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-24"
+    },
+    {
+      "title": "New Jersey Just Fined a Data Center $1 Million for an Illegal Power Setup",
+      "outlet": "Yahoo",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNVlJsODU0LS1CaG11Wi1wWEVVZ0swcW1xYnJTTnE0SnREV2duVUVwZ19TRU9Pcnc1TjFWUTNra3MxVkZGMjF5YUVSVURUaU83bUFNNDhuYnVBTU8zbXdrX1ltbFcxTmVCd2h6U18zZzR1ZXlzUDgyeS1oMzFmc2Q1U1R6OXQ5eFY4aF9J?oc=5",
+      "published": "Thu, 24 Sep 2026 15:00:41 GMT",
+      "published_iso": "2026-09-24T15:00:41+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24"
+    },
+    {
+      "title": "New Jersey fines data center $1.07 million for violating air pollution laws | PHL17 Morning News",
+      "outlet": "PHL17.com",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxON1BoYmZJSkx0Yzc4UERIZTl1dHROdVVIV1dDMklhbll0RVVTd29FQXUzYVU5TC04U0k1R3Z3dTc3bEwyRU9FUVlYdE5qZ3R4aFFzZ2pkT2l4UzB6ckR4Y2Jfc2Vwb216bFdXUVdnaEU3LWd6cTBobmRLZUp5ajExZEQzaG55SmxqSS1lOUNucUtUSjNTYjUteThOU3J3UTFOM3hfWFNpbU9vSkZMMnZOQkRnU2ZHaXUwNUpkcXNidjY2SWpEbGc?oc=5",
+      "published": "Thu, 24 Sep 2026 00:34:28 GMT",
+      "published_iso": "2026-09-24T00:34:28+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24"
+    },
+    {
+      "title": "Virginia’s new data center rules raise questions for construction",
+      "outlet": "Construction Dive",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNZ2k1RkdWZ0diVDZZZmVZVk04M0lDYlRGUkxOSDZUSnltVDRoUFpBS242MXVnT0dvZGtXX01QYjd4NWhUUTdtOWdhZFl3MnJ3WkdNWnhGTnp4V2pZQjRMT1BLRjNiaU1UYVFEdi1wcGgxbjZrR0M0SHBDTTRjV01iWDI5Z05SbHRHWTcyUFBOUFV5dU9GTGxXc2tFODllZ1N6OFVIV1NGVFE?oc=5",
+      "published": "Thu, 24 Sep 2026 14:37:30 GMT",
+      "published_iso": "2026-09-24T14:37:30+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24"
+    },
+    {
+      "title": "News Links: Supervisors End By-Right Data Centers 8-0; Keep 90-Day Grace Period",
+      "outlet": "Potomac Local News",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBveWc1WE1mb3RDVFlSYzZuSk5HdXJiWUEzYVRQMGJCeVVBMmpzUFZ5cFpNSGlxOGZQMklCY0hpZzRCR0pDY1JtR0tpc0EzYlBiRWl0LVc3a09aSzZnSk1OWlF0RVlhUjlDT0tGVnBlTHhHUQ?oc=5",
+      "published": "Wed, 23 Sep 2026 11:00:00 GMT",
+      "published_iso": "2026-09-23T11:00:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-24"
+    },
+    {
+      "title": "Recent Times-Dispatch reporting on data centers",
+      "outlet": "Fredericksburg.com",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPZl9HVVh1Q0Q2R2FJNGdoOXBieVpVSE5uMlFnb0ZuLVJ0dzVPSExObWxYdHozVTRoVVdia1RieWx6WWFESjA2Y2xMdk9uWVgzWVNDWE94MjEza3dNUkRqQUMtaFE3Mkh0bVczRWt6anV4RDBndmctRWZyWVhqR0k4T1I2Ui1QUQ?oc=5",
+      "published": "Tue, 22 Sep 2026 16:53:00 GMT",
+      "published_iso": "2026-09-22T16:53:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-24"
+    },
+    {
+      "title": "West Virginia should end tax breaks for unpopular data centers",
+      "outlet": "The Register-Herald",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOVThxeFdVRFk0cmF6NEJGbWJ3ekR6UXhUbDMxNE5Qb1JSdV9VbzQtY1Q1MUZyX2VPc0JXTlVhRHR0MGZuNDFWYTI0YlFtV0F5ejJkVUVqVm9kdXVuMUZNT25ZNlJQSjNWbkFTZlNrM0Y5TXhXYmRTVTIyV0lka1lhXzRZaEFkT3didEpnV29pQktTcXNHTzlUVHdBLXJkQnc2bDk2SXQ4cjhGRW16eWY1UnBtVU8zVUZWSnpNd0ZsdFhkREc2ME8ybTRBN2xfTzRXa29NYXNWMTRjVFRXOXNQQzAxaXEyVjdIZVhBRVVzb3hNQQ?oc=5",
+      "published": "Mon, 21 Sep 2026 13:03:00 GMT",
+      "published_iso": "2026-09-21T13:03:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-24"
+    },
+    {
+      "title": "Unlabeled kratom found in cat’s claw products across Virginia and more headlines",
+      "outlet": "Virginia Mercury",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQOXFOMElkenJDNmVlc045bnJNby01M241dzVmVkxUWm05UTRzdjc0ODRaMC1UVWVIMGs5Tkx3XzhvcDhrYjBLbGhmZk9nWjB5YS1RYjhiLW8xTTVvdmplZUhOek5zMkJxd1BfRnlIZm9qeEI0Y1lIWk8tZUVmT2lpM2RmSzBTeEtYdmRXUllvbm5BWi10MldoU0dONzFpWms4SzVveEVHeVNQRS1HNFhmN0ZJYnhPZEJUYUZF?oc=5",
+      "published": "Mon, 21 Sep 2026 09:24:19 GMT",
+      "published_iso": "2026-09-21T09:24:19+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-24"
+    },
+    {
+      "title": "Today on Texas Standard: Why Texas became a magnet for massive data centers",
+      "outlet": "Texas Standard",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQYmhnd19kbG9TTXpRTGh3RkxUb3poWmZWV1hxd1lHTGw0Vko3MGdHZlcwaEJVOTJLUUpROUtMNHpURzdOM3F3T1FTbFN6RlBKY3k4RmtiZjhlNHVVWUk3QUcyUnRPS2ZDS3ZYcXgzTF9EWHBWTTVvVW5zdGJycURmS0Zn?oc=5",
+      "published": "Thu, 24 Sep 2026 14:28:51 GMT",
+      "published_iso": "2026-09-24T14:28:51+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24"
+    },
+    {
+      "title": "Gen Z religiosity, the data center backlash and 'lack of consent'",
+      "outlet": "fortune.com",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSDFTM05reVNsdFladU8wN3NrSzJ0WU9WWnFMWEMzTXdvaHZSUmVHTXNLYS05Nm5SbTBzMzUwUXkzcUh4N1JCM3UzRl9xZWVNM0NZb1BQTlpNRUZHTlh0bzVIUWx3MmxwNmRscmZNS25QckFvWWhFSklkaE40c2R0WEtfbjZqaXI4d2Z0TXdNTnZLSE1BY0duV0R5X2c?oc=5",
+      "published": "Thu, 24 Sep 2026 12:00:00 GMT",
+      "published_iso": "2026-09-24T12:00:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-24",
       "last_seen": "2026-09-24"
     }
   ]
