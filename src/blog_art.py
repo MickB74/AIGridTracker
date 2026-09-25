@@ -16,6 +16,8 @@ renders every post's art in one document, and duplicate ids across SVGs make
 the first definition win for all of them.
 """
 
+import datetime as _dt
+
 # Palette mirrors CSS :root — keep in sync with build_site.CSS.
 _BG_TOP, _BG_BOT = "#16233c", "#0b1220"
 _CARD, _RULE, _MUTED, _TEAL, _AMBER = "#121c30", "#22304a", "#93a1b5", "#2dd4bf", "#fbbf24"
@@ -367,27 +369,48 @@ def _extraction(u):
   </g>'''
 
 
-def _review(u):
-    """Week-in-review: a calendar page beside stacked headline cards."""
-    return f'''
-  <g transform="translate(60,50)">
-    <rect x="0" y="0" width="120" height="140" rx="8" fill="{_CARD}" stroke="{_RULE}" stroke-width="1.5"/>
-    <rect x="0" y="0" width="120" height="28" rx="8" fill="{_RULE}"/>
-    <rect x="0" y="14" width="120" height="14" fill="{_RULE}"/>
-    <g fill="{_MUTED}" font-size="11" text-anchor="middle" opacity=".8">
-      <text x="20" y="22" font-weight="bold" fill="{_TEAL}">S</text>
-      <text x="40" y="22">M</text><text x="60" y="22">T</text>
-      <text x="80" y="22">W</text><text x="100" y="22">T</text>
-    </g>
-    <g fill="{_MUTED}" font-size="9" text-anchor="middle" opacity=".5">
-      <text x="20" y="50">10</text><text x="40" y="50">11</text><text x="60" y="50">12</text>
-      <text x="80" y="50">13</text><text x="100" y="50">14</text>
-      <text x="20" y="70">17</text><text x="40" y="70">18</text>
-    </g>
-    <circle cx="60" cy="66" r="11" fill="none" stroke="{_TEAL}" stroke-width="2"/>
-    <circle cx="80" cy="46" r="11" fill="none" stroke="{_AMBER}" stroke-width="1.6" opacity=".7"/>
-  </g>
-  <g transform="translate(260,44)">
+def _review(u, story=None):
+    """Week-in-review: the post's own month, its week highlighted, beside
+    stacked headline cards.
+
+    The calendar is drawn from the post date rather than fixed, so the page a
+    reader sees is the week the post covers. Monday-first, so the Sunday a
+    review publishes on closes the highlighted row instead of opening a new one.
+    """
+    d = (story or {}).get("date")
+    if not isinstance(d, _dt.date):
+        d = None
+    parts = [
+        f'<rect x="0" y="0" width="176" height="186" rx="8" fill="{_CARD}" stroke="{_RULE}" stroke-width="1.5"/>',
+        f'<rect x="0" y="0" width="176" height="28" rx="8" fill="{_RULE}"/>',
+        f'<rect x="0" y="14" width="176" height="14" fill="{_RULE}"/>',
+    ]
+    if d:
+        parts.append(f'<text x="88" y="19" fill="{_TEAL}" font-size="11" font-weight="bold" '
+                     f'text-anchor="middle" letter-spacing="1.2">{d.strftime("%b %Y").upper()}</text>')
+    cx = [18 + 23 * i for i in range(7)]
+    parts.append(f'<g fill="{_MUTED}" font-size="9" text-anchor="middle" opacity=".8">'
+                 + "".join(f'<text x="{x}" y="44">{l}</text>' for x, l in zip(cx, "MTWTFSS"))
+                 + "</g>")
+    if d:
+        first = d.replace(day=1)
+        nxt = (first + _dt.timedelta(days=32)).replace(day=1)
+        days = (nxt - first).days
+        cells = []
+        for n in range(1, days + 1):
+            idx = first.weekday() + n - 1
+            row, col = divmod(idx, 7)
+            y = 64 + 20 * row
+            if n == d.day:
+                parts.append(f'<rect x="5" y="{y - 13}" width="166" height="18" rx="9" '
+                             f'fill="{_TEAL}" fill-opacity=".14" stroke="{_TEAL}" stroke-width="1.2"/>')
+                parts.append(f'<circle cx="{cx[col]}" cy="{y - 4}" r="9" fill="none" '
+                             f'stroke="{_AMBER}" stroke-width="1.6"/>')
+            cells.append(f'<text x="{cx[col]}" y="{y}">{n}</text>')
+        parts.append(f'<g fill="{_MUTED}" font-size="9" text-anchor="middle" opacity=".75">'
+                     + "".join(cells) + "</g>")
+    return ('\n  <g transform="translate(40,40)">\n    ' + "\n    ".join(parts) + "\n  </g>\n"
+            + f'''  <g transform="translate(260,44)">
     <rect x="0" y="0" width="300" height="44" rx="6" fill="{_CARD}" stroke="{_RULE}" stroke-width="1.2"/>
     <rect x="12" y="12" width="200" height="7" rx="3.5" fill="{_TEAL}" opacity=".6"/>
     <rect x="12" y="27" width="140" height="6" rx="3" fill="{_MUTED}" opacity=".35"/>
@@ -403,8 +426,8 @@ def _review(u):
     <rect x="12" y="27" width="100" height="6" rx="3" fill="{_MUTED}" opacity=".35"/>
   </g>
   <g stroke="{_TEAL}" stroke-width="1.4" fill="none" opacity=".35" stroke-dasharray="5 5">
-    <path d="M 180,120 L 256,80"/><path d="M 180,130 L 266,140"/>
-  </g>'''
+    <path d="M 218,110 L 256,72"/><path d="M 218,130 L 266,124"/>
+  </g>''')
 
 
 def _negotiation(u):
@@ -510,7 +533,7 @@ def art_svg(story, cls="post-art", uid=None):
         f'<stop offset="1" stop-color="{_BG_BOT}"/></linearGradient></defs>\n'
         f'  <rect width="{W}" height="{H}" rx="14" fill="url(#bg{u})"/>\n'
         f'  {_bg_grid()}\n'
-        f'{draw(u)}\n'
+        f'{draw(u, story) if draw is _review else draw(u)}\n'
         f'  <text x="24" y="262" fill="{_MUTED}" font-size="12" font-weight="700"'
         f' letter-spacing="1.6" font-family="system-ui,-apple-system,sans-serif">'
         f'{caption.upper()}</text>\n'
