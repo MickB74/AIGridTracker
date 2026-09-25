@@ -72,6 +72,183 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "california-newsom-signs-seven-data-center-bills-2026",
+        "art": "bills",
+        "section": "stories",
+        "title": "Newsom Signed Seven Data Center Bills. None of Them Has a Threshold Yet.",
+        "seo_title": "California data center bills signed: what seven new laws require",
+        "date": _dt.date(2026, 9, 26),
+        "author": "GridWatch AI",
+        "tags": ["California", "Newsom", "legislation", "ratepayer protection",
+                 "water", "CPUC", "CEQA", "disclosure", "cost-shifting"],
+        "summary": (
+            "On September 21, Governor Newsom signed seven data center bills "
+            "into law -- the same package he blocked a year ago. The laws shift "
+            "grid upgrade costs to operators, mandate water and energy disclosure, "
+            "and strip a blanket environmental exemption. But every dollar figure "
+            "and megawatt trigger is delegated to future CPUC rulemaking, with no "
+            "filing deadline. Here is what each bill actually requires, what it "
+            "leaves to regulators, and what a community can use right now."
+        ),
+        "body": """\
+On September 21, 2026, Governor Gavin Newsom signed seven bills regulating
+data centers in California. His office called them "the most comprehensive
+data center laws in the nation"
+([Governor's press release, Sep 21](https://www.gov.ca.gov/2026/09/21/governor-newsom-signs-most-comprehensive-data-center-laws-in-the-nation-providing-communities-more-control-on-water-electricity-and-land-use/)).
+
+A year earlier, he vetoed the water disclosure bill that started this
+legislative push. Assemblymember Diane Papan's AB 93 would have required
+data center operators to report water use under penalty of perjury. Newsom's
+veto message said he was "reluctant to impose rigid reporting requirements
+about operational details on this sector without understanding the full
+impact on businesses"
+([CalMatters, Aug 2026](https://calmatters.org/environment/2026/08/california-data-centers-water-transparency-bills/)).
+
+What changed is not hard to find. Monterey Park became the first U.S. city
+to permanently ban data centers by popular vote, 86% yes, in June 2026.
+Twenty-two other California communities followed with their own moratoriums
+or bans. A May 2026 Gallup poll found 70% of Americans oppose data center
+construction in their communities
+([CalMatters, Sep 2026](https://calmatters.org/economy/technology/2026/09/new-california-laws-data-centers/)).
+
+Newsom said: "We don't have to sell out Californians or sacrifice our
+well-being to innovate and succeed"
+([Governor's press release, Sep 21](https://www.gov.ca.gov/2026/09/21/governor-newsom-signs-most-comprehensive-data-center-laws-in-the-nation-providing-communities-more-control-on-water-electricity-and-land-use/)).
+
+Here is what the seven bills actually do — and, just as important, what
+they leave undone.
+
+---
+
+## The three electricity bills
+
+These are the core of the package. Together they are supposed to prevent
+grid upgrade costs from being shifted onto residential ratepayers.
+
+**SB 886** (Senators Steve Padilla and Jerry McNerney) — the *California
+Technology Innovation and Ratepayer Protection Act*. Data centers connecting
+at the transmission level must bear the costs of all transmission facility
+upgrades and usage. If a facility departs the system or fails to reach its
+projected demand, it owes a 10-year early termination fee calculated as
+the revenue gap between projected and actual consumption. The CPUC must
+adopt conforming tariffs by January 1, 2028; the rules apply to agreements
+signed on or after January 1, 2027
+([National Law Review, Sep 2026](https://natlawreview.com/article/california-signs-sweeping-data-center-energy-laws)).
+
+**AB 2383** (Assemblymember Rick Chavez Zbur) — data centers must comply
+with state clean energy procurement requirements and pay incremental
+generation cost increases for a minimum 10-year period. Electric service
+providers and community choice aggregators must adopt conforming tariffs
+by January 1, 2027
+([National Law Review, Sep 2026](https://natlawreview.com/article/california-signs-sweeping-data-center-energy-laws)).
+
+**SB 1168** (Senator Jerry McNerney) — directs the California Energy
+Commission to assess rate structure opportunities that prevent
+cost-shifting to other ratepayers
+([National Law Review, Sep 2026](https://natlawreview.com/article/california-signs-sweeping-data-center-energy-laws)).
+
+## The three water and disclosure bills
+
+**AB 1577** (Assemblymember Rebecca Bauer-Kahan) — energy reporting to the
+California Energy Commission, including data center location and size,
+power usage effectiveness metrics, and fuel consumption from onsite
+generators. Local permit applicants must also disclose expected annual
+energy consumption and sound levels. The Energy Commission must assess
+electrical load trends beginning with its 2029 integrated energy policy
+report
+([National Law Review, Sep 2026](https://natlawreview.com/article/california-signs-sweeping-data-center-energy-laws)).
+
+**AB 2469** (Assemblymember Diane Papan) — bars local governments from
+approving new or expanded data centers unless developers disclose water
+plans and cover full water infrastructure costs
+([CalMatters, Aug 2026](https://calmatters.org/environment/2026/08/california-data-centers-water-transparency-bills/)).
+
+**AB 2619** (Assemblymember Diane Papan) — requires data center operators
+to disclose estimated or actual water sources and usage when seeking or
+renewing business licenses or permits. This is the direct successor to
+the AB 93 that Newsom vetoed in 2025. It passed the Senate 30-9
+([CalMatters, Aug 2026](https://calmatters.org/environment/2026/08/california-data-centers-water-transparency-bills/)).
+
+## The environmental review bill
+
+**SB 887** (Senator Steve Padilla) — removes blanket CEQA (California
+Environmental Quality Act) exemptions for data centers. Projects that
+meet state water and energy conservation standards can qualify for
+expedited approval, but they can no longer skip environmental review
+entirely
+([Governor's press release, Sep 21](https://www.gov.ca.gov/2026/09/21/governor-newsom-signs-most-comprehensive-data-center-laws-in-the-nation-providing-communities-more-control-on-water-electricity-and-land-use/)).
+
+---
+
+## What is not in any of them
+
+No bill in the package caps data center load, blocks a project, or sets a
+megawatt threshold above which the new duties attach. No bill states a
+dollar threshold or a megawatt trigger. No bill sets a filing deadline for
+the CPUC rulemaking that will determine the actual cost-shifting
+mechanism. As mGrid's analysis put it: "The package moves a cost without
+naming it"
+([mGrid, Sep 21](https://mgrid.org/2026/09/21/newsom-signs-seven-data-center-laws-that-shift-grid-upgrade-costs-with-none-of-the-thresholds-written-yet/)).
+
+The one hard date is SB 886's tariff deadline: the CPUC must adopt new
+tariffs by January 1, 2028, and the rules apply to agreements signed on or
+after January 1, 2027. Everything else — what counts as a data center for
+reporting purposes, what constitutes an "incremental generation cost,"
+how water disclosure is enforced — is delegated to future proceedings.
+
+California data centers currently draw approximately 1,000 MW, projected to
+reach 4,500 MW (about 9% of peak demand) by 2040
+([National Law Review, Sep 2026](https://natlawreview.com/article/california-signs-sweeping-data-center-energy-laws)).
+The rules that will govern how that load pays its way do not exist yet.
+
+Assemblymember Papan acknowledged the gap: "When you're looking down the
+barrel of public outcry that says we don't want them at all ... then you
+know the atmosphere has changed"
+([CalMatters, Sep 2026](https://calmatters.org/economy/technology/2026/09/new-california-laws-data-centers/)).
+
+## What a community can use right now
+
+If you are in a California town with a data center proposal in front of
+your planning commission, three things changed on September 21:
+
+1. **The CEQA exemption is gone.** SB 887 means a developer can no longer
+   skip environmental review. If someone tells you the project is exempt,
+   cite SB 887.
+
+2. **Water disclosure is now a condition of the permit.** AB 2469 bars your
+   local government from approving a new or expanded facility unless the
+   developer discloses its water plan and covers infrastructure costs. If
+   your planning commission is about to vote without that disclosure, the
+   vote is premature.
+
+3. **The cost-shifting argument has a statute behind it.** SB 886 and
+   AB 2383 establish the principle that data centers pay their own
+   transmission and generation costs. The tariffs are not written yet, but
+   the legislative intent is on the record — and a community benefit
+   agreement can reference it.
+
+The Data Center Coalition, whose members include Google, Microsoft, and
+OpenAI, warned that "further regulation could push the data center industry
+out of California"
+([CalMatters, Sep 2026](https://calmatters.org/economy/technology/2026/09/new-california-laws-data-centers/)).
+Arnab Pal of Deploy Action responded: "I don't think these bills are the
+end of this fight"
+([CalMatters, Sep 2026](https://calmatters.org/economy/technology/2026/09/new-california-laws-data-centers/)).
+
+He is probably right. The laws are a framework, not a finished product.
+The CPUC rulemaking will determine whether the framework has teeth. Watch
+CPUC Proceeding A.24-11-007.
+
+---
+
+**See also:**
+[California's 23 moratoriums and bans](/states/california) |
+[The bills on Newsom's desk (Sep 11 post)](/blog/california-moratorium-wave-2026) |
+[Moratorium tracker](/moratoriums) |
+[Start here: the three weeks before a vote](/start-here)
+""",
+    },
+    {
         "id": "trump-ai-force-gop-split-2026",
         "art": "oversight",
         "section": "stories",

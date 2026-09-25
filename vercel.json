@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/california-newsom-signs-seven-data-center-bills-2026",
+      "destination": "/blog/california-newsom-signs-seven-data-center-bills-2026",
+      "permanent": true
+    },
+    {
       "source": "/trump-ai-force-gop-split-2026",
       "destination": "/blog/trump-ai-force-gop-split-2026",
       "permanent": true
