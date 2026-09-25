@@ -72,6 +72,385 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "trump-ai-force-gop-split-2026",
+        "art": "oversight",
+        "section": "stories",
+        "title": "Trump Announced an AI Force. The Same Week, His Own Pollster Said Data Centers Are a Losing Issue.",
+        "seo_title": "Trump AI Force vs GOP data center backlash September 2026",
+        "date": _dt.date(2026, 9, 25),
+        "author": "GridWatch AI",
+        "tags": ["federal policy", "Trump", "AI Force", "polling", "midterms",
+                 "Texas", "Abbott", "California", "Newsom", "Republican",
+                 "moratorium", "ratepayer protection"],
+        "summary": (
+            "On September 19, President Trump announced an 'AI Force' modeled on the Space Force "
+            "and promised an AI czar. Four days earlier, his own pollster told Republican "
+            "candidates that unqualified support for data centers is 'a losing position.' "
+            "The same weekend, Texas froze all data center environmental permits and California "
+            "signed seven data center laws. What actually happened, and what it means for "
+            "communities heading into a hearing."
+        ),
+        "body": """\
+On September 19, 2026, President Trump posted on Truth Social that he was
+"forming the AI Force, much like I did Space Force" and would soon appoint
+an AI czar to oversee the industry. He called data centers "prestigious"
+and said communities that host them get "Higher Salaries, Lower Taxes, and
+Safer Streets." He added: "We will not in any way hinder or stifle the
+Growth of this incredible Industry. Rather, we will cherish it, help it,
+and watch over it, as it grows!"
+([NBC News, Sep 19](https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688);
+[Al Jazeera, Sep 19](https://www.aljazeera.com/news/2026/9/19/trump-says-he-will-create-ai-force-with-new-ai-czar);
+[Fortune, Sep 19](https://fortune.com/2026/09/19/trump-ai-force-czar-law-enforcement-role-slowdown-development/)).
+
+The announcement was short on structure. Trump did not name the czar, did not
+say where the AI Force would sit in the federal government, and did not explain
+how it would differ from the existing AI initiatives his administration has
+already stood up. The previous AI and crypto czar, venture capitalist David
+Sacks, stepped down earlier in 2026 due to term limits for special government
+employees and moved to an advisory role
+([NBC News, Sep 19](https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688)).
+
+What makes the announcement worth watching is not the announcement itself. It
+is the four days around it.
+
+---
+
+## His own pollster said the opposite
+
+Four days before Trump posted, his longtime pollster Tony Fabrizio sent a
+two-page memo to Republican candidates. Axios obtained the document on
+September 15. Its core finding: **"Unqualified support for building more AI
+data centers is a losing position"**
+([Axios, Sep 15](https://www.axios.com/2026/09/15/trump-pollster-data-center-republicans-midterm-election);
+[IBTimes, Sep 16](https://www.ibtimes.com/trumps-pollster-warns-gop-against-unqualified-support-ai-data-centers-opposition-remains-high-3807513)).
+
+The numbers in the memo:
+
+- **65%** of registered voters oppose building more data centers without
+  conditions, versus 24% who support it.
+- **61%** would allow construction *if* developers met requirements — paying
+  their own infrastructure costs, protecting consumers from higher utility
+  bills, and safeguarding local water and natural resources.
+- **28%** favor stopping construction entirely.
+
+Fabrizio's advice to candidates was a three-step script: (1) validate the
+concern — acknowledge that voters worry about utility bills and grid strain;
+(2) draw the line — refuse projects that force families to subsidize them;
+(3) then build — support projects where companies pay for infrastructure and
+accept "legally enforceable accountability." He wrote: "This converts the
+candidate from a defender of technology companies into the person imposing
+rules on them"
+([IBTimes, Sep 16](https://www.ibtimes.com/trumps-pollster-warns-gop-against-unqualified-support-ai-data-centers-opposition-remains-high-3807513)).
+
+His specific warning: do not say "I support building more data centers."
+
+## Republicans are already breaking ranks
+
+The memo landed in a party that was already fracturing on the issue.
+
+**Amy Kremer**, a Georgia RNC committeewoman and chair of the group Humans
+First, launched the "AI Data Center Revolt" bus tour at the Republican
+National Convention in Dallas, with stops planned in Texas, Ohio, Iowa,
+Georgia, and North Carolina — states where Republicans need turnout in
+November. Kremer told Semafor: "Unlike the data center cheerleaders, I was one
+of the earliest and most outspoken supporters of President Trump." She added
+that "decisions about the construction of data centers are local ones not
+made by the White House or Congress"
+([Semafor, Sep 9](https://www.semafor.com/article/09/09/2026/sitting-rnc-member-challenges-trump-on-data-centers)).
+
+Newsweek tallied at least eight Republican officeholders who have publicly
+broken with Trump on data centers
+([Newsweek, Sep 2026](https://www.newsweek.com/list-of-republicans-publicly-breaking-with-trump-on-ai-data-centers-12391133)):
+
+- **Mike Rogers** (Michigan Senate nominee) called for a one-year statewide
+  moratorium and a "fair, transparent approval process that puts local
+  communities first."
+- **Sen. Jon Husted** (Ohio) introduced the Ratepayer Protection Act to
+  prevent utility customers from shouldering data center costs.
+- **Rep. Tom Barrett** (Michigan) introduced two bills protecting local control
+  over data center projects.
+- **Gov. Greg Abbott** (Texas) paused projects and said developers "dug their
+  own grave" by failing to engage communities.
+- **Stacy Garrity** (Pennsylvania gubernatorial nominee) called for a pause on
+  development.
+- **Rep. Tom Tiffany** (Wisconsin gubernatorial nominee) pledged to end tax
+  breaks for data centers.
+- **Rep. Nancy Mace** (South Carolina) called for a one-year moratorium and
+  opposed eminent domain use for data centers.
+- **Rep. Tim Burchett** (Tennessee) suggested data centers be located on
+  military installations instead of residential areas.
+
+## Two days later, two governors acted
+
+On September 21 — two days after the AI Force announcement — two of the
+largest states in the country moved in the opposite direction from the
+White House.
+
+**Texas.** Governor Abbott directed the Texas Commission on Environmental
+Quality (TCEQ) to halt all environmental permits for data center projects
+until ERCOT and the Texas Water Development Board complete power and water
+audits. TCEQ must report back by October 19; the ERCOT audit could run
+through December. Abbott laid out five conditions: projects must cover all
+electrical infrastructure costs, result in lower residential bills, not
+compromise grid reliability, not use water needed by local communities, and
+abide by setback requirements. He also said he would work with the
+legislature to eliminate financial incentives for data centers. Only 28% of
+data centers responded to a state-mandated water usage survey
+([Texas Tribune, Sep 21](https://www.texastribune.org/2026/09/21/texas-data-center-moratorium-water-energy/);
+[Governor Abbott press release, Sep 21](https://gov.texas.gov/news/post/governor-abbott-directs-tceq-to-halt-data-center-permits);
+[CNBC, Sep 21](https://www.cnbc.com/2026/09/21/texas-governor-abbott-ai-data-center-permits.html)).
+
+This was Abbott's second escalation. In August he had imposed a moratorium on
+new data center grid connections. The TCEQ permit freeze extends the halt to
+air and water permits — the environmental approvals a project needs before it
+can break ground.
+
+**California.** Governor Newsom signed seven bills on the same day. The
+package includes SB 886 (the California Technology Innovation and Ratepayer
+Protection Act, requiring the CPUC to assign transmission upgrade costs to
+data centers), AB 2383 (requiring data centers to comply with state clean
+energy procurement and pay incremental generation costs for at least 10
+years), AB 1577 (energy reporting to the California Energy Commission),
+AB 2469 and AB 2619 (water use disclosure), SB 887 (removing blanket
+environmental exemptions for data centers), and SB 1168 (data center rate
+structures). Newsom said: "With these laws, we are ensuring that Californians
+remain in the driver's seat — and that those profiting from data centers
+aren't doing so at our expense"
+([Governor Newsom press release, Sep 21](https://www.gov.ca.gov/2026/09/21/governor-newsom-signs-most-comprehensive-data-center-laws-in-the-nation-providing-communities-more-control-on-water-electricity-and-land-use/);
+[CalMatters, Sep 2026](https://calmatters.org/economy/technology/2026/09/new-california-laws-data-centers/)).
+
+Newsom had vetoed a similar water disclosure bill in 2025. A May 2026 Gallup
+poll found 70% of Americans oppose data center construction in their
+communities
+([CalMatters, Sep 2026](https://calmatters.org/economy/technology/2026/09/new-california-laws-data-centers/)).
+
+## What this means if you are heading into a hearing
+
+The AI Force announcement does not change federal law. It does not override
+your local zoning code. It does not preempt your state's environmental
+permits. What it does is signal that the White House will continue to push
+for faster federal permitting on public lands — the July 2025 Executive
+Order 14318 on data center permitting is the operative policy, and that
+order applies to projects over 100 MW on federal land
+([Federal Register](https://www.whitehouse.gov/presidential-actions/2025/07/accelerating-federal-permitting-of-data-center-infrastructure/)).
+
+What *has* changed this week is the political landscape. The president's own
+pollster is telling Republican candidates not to say "I support building more
+data centers." An RNC committeewoman is running a bus tour against them. The
+two largest states — one red, one blue — froze permits and signed laws on the
+same day. And the conditions that Abbott, Newsom, Fabrizio, and every
+Republican on that Newsweek list are converging on are the same ones
+communities have been asking for all along:
+
+1. **Pay your own infrastructure costs.** No ratepayer subsidies for grid
+   upgrades or transmission builds.
+2. **Disclose water and power use.** Not voluntarily — as a condition of the
+   permit.
+3. **Accept enforceable accountability.** Not a promise in a press release —
+   a condition in the zoning approval or the utility contract.
+
+If your town is negotiating with a developer right now, those three conditions
+are no longer a wish list. They are what the president's own pollster is
+telling his party's candidates to demand.
+
+---
+
+**See also:**
+[Trump's federal data center program](/blog/trump-data-center-support-2026) |
+[Moratorium tracker](/moratoriums) |
+[Texas state page](/states/texas) |
+[California state page](/states/california) |
+[Start here: the three weeks before a vote](/start-here)
+""",
+    },
+    {
+        "id": "georgia-data-center-lawsuits-statesboro-effingham-2026",
+        "art": "oversight",
+        "section": "stories",
+        "title": "Two Georgia Data Center Lawsuits in Five Days, and Neither One Argues the Project Is a Bad Idea",
+        "seo_title": "Statesboro and Effingham data center lawsuits explained",
+        "date": _dt.date(2026, 9, 25),
+        "author": "GridWatch AI",
+        "tags": ["Georgia", "Statesboro", "Bulloch County", "Effingham County",
+                 "OpenAI", "Project Camellia", "lawsuits", "rezoning",
+                 "Open Meetings Act", "Zoning Procedures Law"],
+        "summary": (
+            "Residents in Statesboro and Effingham County, Georgia filed "
+            "separate Superior Court challenges to data center decisions "
+            "between September 17 and 21. One attacks a rezoning, the other "
+            "attacks how a development authority kept OpenAI's deal quiet. "
+            "Both lean on process rather than on whether a data center "
+            "belongs there, and both started on a clock."
+        ),
+        "body": """Between September 17 and September 21, residents in two
+Georgia communities went to Superior Court over data centers.
+In Statesboro they are challenging the rezoning of a 27-acre tract on
+Burkhalter Road. In Effingham County, a conservation group and five residents
+are challenging how the county's Industrial Development Authority negotiated
+and signed the deal for OpenAI's Project Camellia.
+
+Neither complaint asks a judge to decide whether a data center is a good
+idea. Both argue that the local government skipped steps it was required to
+take. For a resident weeks from a vote, that is the useful part: the grounds
+these suits rest on are things you can check in public records before the
+vote, not only after it.
+
+## Statesboro: a rezoning appeal filed on a 30-day clock
+
+On August 18, Statesboro City Council voted 3-2 to rezone about 27 acres at
+6539 Burkhalter Road from R-4 high-density residential to O, office and
+business, [according to the Statesboro Herald](https://www.statesboroherald.com/local/statesboro-mayor-and-council-approve-rezoning-for-burkhalter-data-center-by-3-2-vote/).
+[Grice Connect reported](https://www.griceconnect.com/local-government/mayor-breaks-tie-as-statesboro-council-approves-burkhalter-road-rezoning-12680718)
+that the mayor broke a tie to pass it. The applicant, 4AM Development LLC,
+had submitted a sketch of a two-story data center of roughly 230,000 square
+feet.
+
+On September 17, eleven residents and the nonprofit Coastal Communities
+United filed what the [Herald describes](https://www.statesboroherald.com/local/eleven-citizens-and-nonprofit-group-file-legal-challenge-to-statesboro-data-center-rezoning/)
+as a "petition for review/appeal and request for declaratory judgment" in
+Bulloch County Superior Court, naming the city and 4AM Development. The
+Herald says it was filed to meet a 30-day deadline. That deadline is the
+first thing to take from this case. The window to appeal a zoning decision
+is short. Residents who wait to see whether the project actually moves
+forward can lose the right to challenge it.
+
+According to the Herald and [WTOC](https://www.wtoc.com/2026/09/22/group-sues-statesboro-over-data-center-rezoning/),
+the petition argues that:
+
+- **The city did not follow its own rules.** The petitioners say the city
+  disregarded its own procedural requirements. WTOC reports the petition lists
+  what the city did not require before voting: traffic studies, an
+  environmental impact assessment, consultation with the Georgia Department of
+  Natural Resources, and a hazardous-materials review covering battery
+  storage, diesel generators and cooling systems.
+- **The project breaks the city's own data center ordinance.** Council
+  adopted a Data Centers Ordinance on June 2, [by a 3-1 vote](https://www.thegeorgiavirtue.com/bulloch-local-government/statesboro-council-approves-data-center-ordinance-in-3-1-vote/).
+  The petitioners say that ordinance prohibits hyperscale facilities. The
+  developers have applied to Georgia Power for up to 99 megawatts, [the Herald
+  reports](https://www.statesboroherald.com/local/burkhalter-road-data-center-developers-intend-to-move-forward-despite-challenge-to-zoning/),
+  which the petition says is only one megawatt under that threshold and is
+  hyperscale in substance. That is the petitioners' reading of the ordinance.
+  A court has not ruled on it.
+- **It is spot zoning, and it takes neighbors' property value.** The petition
+  also claims spot zoning, due process and equal protection violations, and
+  "inverse condemnation," a theory that government action reduced the value of
+  neighboring property enough to count as a taking. It cites harm to the
+  watershed and aquifer, noise, vibration, traffic and property values.
+
+The petitioners ask the court to declare the rezoning void, to declare the
+data center ordinance unconstitutional, and to send the matter back to
+council with instructions to follow its own code. Robert Abney Fricks Sr., a
+Warner Robins attorney, represents them.
+
+**Whether the suit pauses anything is disputed.** WTOC reports that filing
+under Georgia's Zoning Procedures Law stays proceedings. But City Attorney
+Cain Smith told the Herald the lawsuit would not, on its own, stay the
+project's special use permit process unless a court grants injunctive
+relief. If you are relying on a filing to freeze a project, get a lawyer's
+answer on this for your own case. Don't assume it.
+
+The city confirmed it was served on September 21. In a statement quoted by
+WTOC, the city said it "intends to meet" the 30-day response deadline and
+would not comment further while the matter is pending. WTOC gives the case
+number as SUCV2026000219. The developers told the Herald they intend to go
+ahead. Charles Way, one of them, said they have more than one potential end
+user and are close to an agreement with one.
+
+Separately, Bulloch County, which surrounds Statesboro, has a moratorium on
+data center permitting in its unincorporated areas that runs through
+December 31, 2026. Commissioners [extended it 5-0 in May](https://www.thegeorgiavirtue.com/bulloch-local-government/bulloch-commissioners-voice-opposition-to-data-centers-vote-to-extend-moratorium/).
+The Burkhalter Road site is inside the city limits, so that moratorium does
+not cover it.
+
+## Effingham County: the second Project Camellia suit
+
+OpenAI's Project Camellia was announced on July 22 [as a $20 billion
+campus](https://thecurrentga.org/2026/07/22/20-billion-openai-data-center-to-open-in-effingham-county/)
+at the Savannah Gateway Industrial Hub near Rincon. On September 2, three
+residents filed the first lawsuit over it. That suit challenges the county's
+August 4 ordinance allowing data centers in industrial zoning districts, and
+argues the county skipped required hearings. We covered it
+[in our September 6 roundup](/blog/week-in-review-2026-09-06).
+
+The second suit, filed September 21 in Effingham County Superior Court, has a
+different target. The plaintiffs are the conservation group One Hundred
+Miles and residents Amy Collins, Robert Collins, Elizabeth Fisher, Crystal
+Hayes and Manjusha Sheobaran, represented by the Southern Environmental Law
+Center. They name the Effingham County Industrial Development Authority and
+Octans GA, an OpenAI affiliate, [according to WTOC](https://www.wtoc.com/2026/09/21/georgia-group-sues-over-openai-data-center-deal-effingham-county/).
+
+As reported by [WTOC](https://www.wtoc.com/2026/09/21/georgia-group-sues-over-openai-data-center-deal-effingham-county/),
+the [Effingham Herald](https://www.effinghamherald.net/data-centers/second-lawsuit-targets-effingham-ida-over-openai-data-center-one-hundred-miles-southern-environmental-law-center-project-camellia-georgia/),
+[The Current](https://thecurrentga.org/2026/09/21/new-lawsuit-alleges-unfair-secrecy-around-effingham-data-center/)
+and [The Georgia Virtue](https://www.thegeorgiavirtue.com/local-government-south-georgia/second-project-camellia-lawsuit-takes-aim-at-secrecy-by-effingham-county-industrial-development-authority/),
+the complaint alleges that the authority:
+
+- entered a nondisclosure agreement over the project in October 2025 and
+  negotiated behind it into 2026;
+- moved its regular July meeting without the week's public notice Georgia law
+  requires;
+- listed the item on its July agenda as "Project Gateway," without saying it
+  was a data center or that it involved tax incentives;
+- discussed the tax deal in closed executive sessions;
+- sold publicly owned land to Octans without the public vote that property
+  sales require; and
+- did not release records residents asked for.
+
+The Georgia Virtue counts four alleged Open Meetings Act violations and one
+Open Records Act violation. The plaintiffs ask the court to declare the tax
+agreement and the land sale void, and to order release of the May and July
+purchase and sale agreements.
+
+The stakes are large. The authority's memorandum of understanding with Octans
+[grants a 50% property tax abatement for 15 years](https://www.wtoc.com/2026/07/30/records-show-effingham-county-leaders-finalized-massive-tax-break-20b-openai-data-center-day-before-public-announcement/),
+and WTOC reported it was signed the day before the public announcement. WTOC
+and the Effingham Herald now put the value of the abatements at nearly $900
+million. Neither outlet says how that figure was calculated, so attribute it
+to them if you repeat it. The Herald describes the project as needing up to
+3.2 gigawatts of power.
+
+The authority told the Herald it "will respond appropriately through the
+legal process." It told The Current it would review the allegations once it
+receives formal notice. No court has ruled in either Effingham case.
+
+## What a resident can do with this before the vote
+
+These two cases show two separate ways to challenge a data center decision,
+and each one depends on records you can collect now.
+
+1. **Know your appeal deadline before the vote.** The Statesboro petition was
+   filed to beat a 30-day window. Find out your state's deadline for appealing
+   a zoning decision, and line up a lawyer before council votes, not after.
+2. **Read your community's own data center ordinance against the
+   application.** If your town has already adopted size limits, compare them
+   with what the developer requested from the utility, not only with the
+   square footage on the site plan. In Statesboro, the gap between 99 MW and
+   the hyperscale limit is the heart of the ordinance claim.
+3. **List what the city did not ask for.** Traffic studies, environmental
+   review and hazardous-materials review of generators and batteries are
+   concrete, checkable items. Put the question of whether each one was
+   required on the record at the hearing.
+4. **Look past the zoning board.** In Effingham, the land sale and the tax
+   break went through a development authority, not the county commission.
+   Get that body's agendas, meeting notices and executive-session minutes. A
+   code name on an agenda, a meeting moved without notice, or a property sale
+   with no vote is each its own claim under open-government law.
+5. **File records requests early and keep the dates.** A request that goes
+   unanswered becomes evidence, as the Effingham plaintiffs' records claim
+   shows.
+
+None of this guarantees a result. Both cases are at the very start: the
+defendants have not yet answered in court.
+
+**See also:** [Burkhalter Road project dossier](/projects.html#p-burkhalter-road-statesboro-ga) ·
+[Project Camellia dossier](/projects.html#p-openai-project-camellia-effingham-ga) ·
+[Statesboro community briefing](/communities/statesboro-ga.html) ·
+[Effingham County community briefing](/communities/effingham-county-ga.html) ·
+[Georgia state briefing](/states/georgia.html) ·
+[Where to find a project's permit record](/projects.html#records)
+""",
+    },
+    {
         "id": "climate-week-amazon-pecos-brewster-2026",
         "art": "grid",
         "section": "stories",
