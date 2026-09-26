@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 8143,
+  "count": 8153,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -65236,7 +65236,7 @@
       "locality": "Fayette County",
       "state": "IN",
       "first_seen": "2021-10-27",
-      "last_seen": "2026-09-25"
+      "last_seen": "2026-09-26"
     },
     {
       "title": "2 injured in Cass County crash",
@@ -87753,7 +87753,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-24",
-      "last_seen": "2026-09-25"
+      "last_seen": "2026-09-26"
     },
     {
       "title": "Fort Wayne City Council delays decision on data center moratorium",
@@ -88512,7 +88512,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-25"
+      "last_seen": "2026-09-26"
     },
     {
       "title": "$430M data center project planned for Fort Worth, state filing shows",
@@ -88589,7 +88589,7 @@
       "locality": "Indiantown",
       "state": "FL",
       "first_seen": "2026-09-22",
-      "last_seen": "2026-09-25"
+      "last_seen": "2026-09-26"
     },
     {
       "title": "Gov. McMaster declines calling for SC-wide data center moratorium as more counties pass their own",
@@ -89579,6 +89579,116 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-24",
+      "last_seen": "2026-09-26"
+    },
+    {
+      "title": "Judge Barry Hyde vetoes data center ordinance",
+      "outlet": "KATV",
+      "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPVzlkLTY1c0lQVTJHNTdCZG5tb3FWWWlUcHVGcW94aTJjUXh1TG1XNmtvRTQ1LUQyZTdCLWtna1cxSV9lWkJ2aHgzd1FycTI4UG5MOEdBQklsZEphVWJySEdhNmExczFLWERWSmxVTmZ1bGFyS1lFQnVYdEpqNEJJVFZ4Si1ZMlBZbzNPNUpGY0JWNnduRzNJcnM5NHNEcmFHcXAxcy1EMkFHRl9ZcXBWTktpUWlQaUtQdkdlSFZhOHJ0eTBmTjF3cU5FSVNpNl9sMzQxZ2E0SjZZYVNJb1hueld1SUpyMEVaM1JEN1FVN2NmUDF2N1dtOHFHZjlRdw?oc=5",
+      "published": "Sat, 26 Sep 2026 01:15:49 GMT",
+      "published_iso": "2026-09-26T01:15:49+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-26",
+      "last_seen": "2026-09-26"
+    },
+    {
+      "title": "Tulare County supervisor sets record straight on his votes on data centers",
+      "outlet": "Fresno Bee",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPWnVhRTY1MDJ4MGY2ZVpiMzNxQm9ZQ1MxVTUxcHJsZm1nZGt1RTl6N1BRemdrNWwtN1JpSlZneU00Ull6UEw5LU54aFA5MXdwQjE0aTdrVDMwM3ZNTng2U1hDbzZBcjNSV2RqWjluUlI2eFZWV3Nqbk03MTZnRHhFaGotUnPSAYQBQVVfeXFMUHI5ZW45TGg1UDhaZUdKYW5VejJMamlpQnhvVnBlQTJuOGU1OHZwcWdHNVFZWGNvREI4TFVkVW1RazBvTGZJSlZDRGFVb182STVZNngxRE1QcFVKY1o1WmlNMFAtU3FIOW1iTlN3VmxiX2p6QjRPTHJRYWt4MHRMNkVzOUll?oc=5",
+      "published": "Sat, 26 Sep 2026 14:26:48 GMT",
+      "published_iso": "2026-09-26T14:26:48+00:00",
+      "locality": "Tulare County",
+      "state": "CA",
+      "first_seen": "2026-09-26",
+      "last_seen": "2026-09-26"
+    },
+    {
+      "title": "Maryland Governor Opts For New Data Center Standards Over Moratorium",
+      "outlet": "The BayNet",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPNlZ6Z2MxdTN2aWh5c2tmMExDc211Mm4tR3U1WjVBVXFrN0cxT010TXNtaHhLd2NaanQ1UkNJclEzZUp5YnZxS1BDOHczd2RCXzFnM3ZCZ3YzajFzN1A1bHVsUTc0NHRZLVM4OHNXOWJIVUNNOElDdnZhbzdCenREWm1CR2FlNFRSX2FNWGo2M0VwRmpMYVE?oc=5",
+      "published": "Fri, 25 Sep 2026 16:07:27 GMT",
+      "published_iso": "2026-09-25T16:07:27+00:00",
+      "locality": null,
+      "state": "MD",
+      "first_seen": "2026-09-25",
+      "last_seen": "2026-09-26"
+    },
+    {
+      "title": "Pritzker pushing for data center legislation in fall veto session",
+      "outlet": "Crain's Chicago Business",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPMFpYaWsyNjNHdExacHZwQ2Z4M0R5ZFlmc0dWTGRoR2UtTjZVbk1vYmpQWmw2U2VobklSMXV6bWFzbjVackZ6WjZhLURiQTBhVUxjRTI3NEZ0MWVBa2t1MmgwTjQ3bzN0RjJiQU1qNzFEY3J4UHJHSzFQeDF5d3N1T3QwVmw0eXJWMEx4amdycmMzV3VUZ3Vv?oc=5",
+      "published": "Fri, 25 Sep 2026 11:00:00 GMT",
+      "published_iso": "2026-09-25T11:00:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-25",
+      "last_seen": "2026-09-26"
+    },
+    {
+      "title": "What we learned this week about Baltimore’s plans for data centers",
+      "outlet": "The Baltimore Banner",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQbEx5d1hjQ0EtZ3VsdVo5SDJEeDdJNWlWWXRtRGI3NF9ucjBvYjdCa0lQZWd5M2lpSHlxbjBwQlZzSF9yd08yQnBiT1R4ZHluUUdZUnhMSV91WmJrSW5zRm9IRnBJNFpScmMxYWJzbXhaQzNJdnp6NVhmVGdGNlV0Mk1CeHZraDFkejRqSFc5N2oxNVNPanRYTGNsdnhBY2M2R2RidDB6U3lqX2RhUWdVT05TVGYxTy1GdEhOVUQ1LUV5WWFa?oc=5",
+      "published": "Fri, 25 Sep 2026 17:30:00 GMT",
+      "published_iso": "2026-09-25T17:30:00+00:00",
+      "locality": "Baltimore County",
+      "state": "MD",
+      "first_seen": "2026-09-25",
+      "last_seen": "2026-09-26"
+    },
+    {
+      "title": "Troy City Council extends data center moratorium until March 2027",
+      "outlet": "The Troy Times Tribune",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNZXlMNExtSnZUcWhhMnBVN0dTR0xZem5FN3FuOUc0Z1VEQ3dINkwzaV94V2dta1JkVGx3VjF5SkV4akpMT29mVW1nYmViTkFUQXh3Um9VVmtYR3VQWG1OWkQ1NW9HaEZ2b2s3VVdjTEdMZkJIcWdYc1Ntd2FmcDAySF81UVl3NGNHYzVOb1BYUVp2bE41STlrRjNzZlY0blBFTzZXS2toOUtKOTNhajNN?oc=5",
+      "published": "Thu, 24 Sep 2026 23:02:51 GMT",
+      "published_iso": "2026-09-24T23:02:51+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-26"
+    },
+    {
+      "title": "The blue-collar AI job market is booming. Will data center backlash make it go bust?",
+      "outlet": "CNBC",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQWktXN2V4a0pWV0ttWFIwRTZVNnpBSHVzUHRONWhUVmpzeVlKMTlWUllkY1ROdGdocEVJZkNhbWdBUkpkRVR4QTJSTHdNRmwxNzgwYU05S21pQ1FiVFQ0dmRoTldzR0wxbHhqN052YlEwb0E5alRuSVFvLS13b29aUTA4QdIBiAFBVV95cUxOcmxtN215eXRYUnFmTHJhOE9yVm93bjJmOWNRa0JVNGZ6T0Z3MFRILXdFRWstODZmNHpUSWE1eWpPbDV6WEJKamh5TENUZHFUNWlEYnpBRDJrSDBwdXhJdTdFb1h3YzhTNDYxenhlR29abDBMQzJSOXc2NFZicTlhOFVSc2NoZGQ0?oc=5",
+      "published": "Sat, 26 Sep 2026 13:43:07 GMT",
+      "published_iso": "2026-09-26T13:43:07+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-26",
+      "last_seen": "2026-09-26"
+    },
+    {
+      "title": "20 data centers are operating or planned in Florida as candidates clash",
+      "outlet": "IslanderNews.com",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOMWkyWEg4ZVdlZGh5eUtZMHljNWVGOTU5SnVuNlJuNE1qTHYzcnRseGs3UVgwODV5OElvUmI5OUZzS1Nsd1RpWWJpV3AybTByUXhSRzRNQkFmSjBfQ1BFYUNJNndjcnowVktaTElsZ1Y3X213MGtmVm1CbkJmNkRjdmxQaWJmNHhta1JiWGJKdkFSQ1BSMDl5NjRDeTMteHFTSHkxTzhlN3FvREs2SFNXZjMtY0d6dnJJN3pxaGpPMjU1TUpDRzdzUjQ4aVluZGtzdjZua0oxUHZ6blN4UUhKa1UtdjZ1VkZVTnVGX0hRa2N2Vkc4amdLa1F3NjhPOVc5?oc=5",
+      "published": "Sun, 20 Sep 2026 14:40:00 GMT",
+      "published_iso": "2026-09-20T14:40:00+00:00",
+      "locality": null,
+      "state": "FL",
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-26"
+    },
+    {
+      "title": "RGGI allowance prices 153% higher in Virginia return",
+      "outlet": "thecentersquare.com",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOaWZlbDVyenlPUkFISE1oUUlxVDgtUDkyV1pIMDBWUlFJMjNTc19FUUUxWTFnOGFuQ3piSFNkUklqRTJEUlM0bGxqS2hVZldHQ2lMZlh4QzYzVm9RdGVzR1FTeXJYUjAzV056WklnNlQ2M1FLT2lXcVhINGVIUmZ2V2MtYk9QRnE0dmhwdTUyZTB4MVg20gGaAUFVX3lxTE8zMC1sZWpOU2NwUUxIZjVGZDVYYW5ucjRwWi1VcDRMRGZqRHp1OFpZeWhKTjB0LU9rN3VBZ1ZhU2Z6WERnblVVZW03V19WTlFLakNVX0NIR0NRVnN3bXY2TXdYbkFRTzhaX1F6TTBXYWtwVlRuckZpVkFOYzF5UVREdi02Uks4V215a0ZDclJNWndIUDVqM3pDSlE?oc=5",
+      "published": "Tue, 22 Sep 2026 16:49:00 GMT",
+      "published_iso": "2026-09-22T16:49:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-26"
+    },
+    {
+      "title": "Texas imposes open-ended freeze on data-center environmental permits",
+      "outlet": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQnl3eDhWMV9fV3JOSDBUM0thU0lCLU5kaDBZb216VkNXMXViejNTOWw1ZUw4MzJsa1BsdmpldFFjSnBTaHRmQk1tMW5aVkxFVndvMUVrRXQ4OTZXa2lkUjJBWmFEOXk4UVVfNXNzSWRNcG5NY2VaTFdpTEhkRVNOWFExdlpxNVZlU1JueGpndy1aZ01PZENV?oc=5",
+      "published": "Tue, 22 Sep 2026 13:20:54 GMT",
+      "published_iso": "2026-09-22T13:20:54+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-22",
       "last_seen": "2026-09-26"
     }
   ]
