@@ -9184,4 +9184,321 @@ a story we should cover? Reach out at hello@aigridwatch.com or sign up for
 the newsletter below.*
 """,
     },
+    {
+        "id": "week-in-review-2026-09-27",
+        "art": "review",
+        "section": "stories",
+        "title": "Week in Review: New Jersey's Record Data Center Fine, Prince William County Ends By-Right Approval, and Palm Beach County Passes a Moratorium — Then Cuts Its Own Resident Task Force",
+        "seo_title": "Week in review: NJ record fine, VA by-right ends, FL moratorium",
+        "date": _dt.date(2026, 9, 27),
+        "author": "GridWatch AI",
+        "tags": [
+            "week in review",
+            "moratorium",
+            "New Jersey",
+            "Virginia",
+            "Texas",
+            "Tennessee",
+            "Mississippi",
+            "Florida",
+            "water",
+            "noise",
+            "NDA",
+            "community",
+        ],
+        "summary": (
+            "This week New Jersey hit a Vineland data center with its largest-ever "
+            "civil penalty over 62 unpermitted gas generators, Prince William "
+            "County, Virginia ended by-right approval for new data centers "
+            "countywide, and Texas's attorney general opened an investigation into "
+            "hundreds of data centers that never answered a mandatory water-use "
+            "survey. A Republican and a Democrat in Congress each introduced NDA-"
+            "transparency bills the same week, Memphis-area residents filed two "
+            "separate lawsuits against an xAI data center in one week, and Palm "
+            "Beach County passed a year-long moratorium — then scrapped its own "
+            "resident task force in favor of paid consultants. Plus: nine more "
+            "communities paused or banned data centers in the past seven days."
+        ),
+        "body": """\
+Welcome back to the GridWatch AI Week in Review — our Sunday roundup of the
+most important data center stories from the past seven days, what they mean
+for communities, and what you can learn from each one.
+
+---
+
+### 1. New Jersey hits a Vineland data center with its largest-ever fine — 62 generators had reportedly been running without a permit
+
+**What happened:** New Jersey's Department of Environmental Protection fined
+DataOne USA \\$1.07 million — described by multiple outlets as the state's
+largest-ever civil penalty against a data center — for operating 62 natural
+gas generators without required air permits at its Vineland facility,
+according to [WHYY](https://whyy.org/) and the
+[New Jersey Monitor](https://newjerseymonitor.com/).
+[Tom's Hardware](https://www.tomshardware.com/) reported the state gave the
+company a 45-day deadline to bring the generators into compliance or shut
+them down, and that the same site had separately built an unpermitted
+1.5-million-gallon fuel tank.
+
+**Why it matters:** A fine this size is real leverage, but it only arrived
+after 62 generators were already running — this is enforcement catching up
+to a violation, not a permit process that caught it in advance. Vineland has
+no data center moratorium of its own; the city's approach so far has been to
+approve the project and then fine violations after the fact, which is a
+fundamentally different tool than the pause-first approach dozens of other
+communities have chosen this year.
+
+**What to learn — ask what a facility's *approved* equipment list actually
+says, not just whether it has a permit:** A data center's zoning approval
+typically references a specific site plan, and a separate air permit
+(or exemption) covers each individual piece of combustion equipment like a
+backup generator. A facility can hold a valid zoning approval while running
+equipment that was never separately permitted, and that gap is often what a
+public records request to your state environmental agency — not the zoning
+office — will surface. See the full paper trail on
+[Vineland's project dossier](/projects.html) and how to pull the same kind
+of record for a project in your own community.
+
+*Sources: [WHYY, Sep 22](https://whyy.org/);
+[New Jersey Monitor, Sep 22](https://newjerseymonitor.com/);
+[Tom's Hardware, Sep 25](https://www.tomshardware.com/)*
+
+---
+
+### 2. Prince William County, Virginia — the country's largest data-center market — ends by-right approval countywide
+
+**What happened:** The Prince William County Board of County Supervisors
+voted to end by-right approval for new data center development across the
+county, requiring a public hearing and board sign-off for projects that
+previously could proceed under existing zoning alone, according to
+[Virginia Business](https://virginiabusiness.com/) and
+[NBC4 Washington](https://www.nbcwashington.com/).
+[Data Center Dynamics](https://www.datacenterdynamics.com/) reported the
+change overhauls the county's approval framework for future projects.
+
+**Why it matters:** We explained the term "by-right" in
+[last week's roundup](/blog/week-in-review-2026-09-20) when Gov. Spanberger
+proposed ending it statewide above 25 megawatts. This week, Virginia's
+single largest data-center jurisdiction did essentially the same thing on
+its own, at the county level, ahead of any statewide law actually passing —
+a reminder that a county board doesn't have to wait on the legislature to
+close the by-right gap in its own zoning code.
+
+**What to learn — a county can end by-right approval faster than a state
+can pass a law, but check whether it applies to pending applications too:**
+Local zoning text amendments generally take effect on adoption unless the
+ordinance says otherwise, but they don't automatically reach back to
+applications already filed under the old rules. If your county is
+considering the same move, ask specifically whether it covers projects
+already in the pipeline or only new filings — that distinction decided the
+outcome in the Chatham County, North Carolina vested-rights case we
+[covered last week](/blog/week-in-review-2026-09-20). See
+[Prince William County's community page](/communities/prince-william-county-va.html)
+and the [Virginia state page](/states/virginia.html).
+
+*Sources: [Virginia Business, Sep 23](https://virginiabusiness.com/);
+[NBC4 Washington, Sep 23](https://www.nbcwashington.com/);
+[Data Center Dynamics, Sep 25](https://www.datacenterdynamics.com/)*
+
+---
+
+### 3. Texas's attorney general opens an investigation into hundreds of data centers that never answered a mandatory water-use survey
+
+**What happened:** Attorney General Ken Paxton announced an investigation
+into hundreds of Texas data centers — including facilities in Smith,
+Tarrant, Potter and Randall counties — for failing to respond to a
+state-mandated water-usage reporting survey, according to
+[USA Today](https://www.usatoday.com/),
+[KXAN Austin](https://www.kxan.com/) and the
+[Washington Examiner](https://www.washingtonexaminer.com/).
+
+**Why it matters:** This is a separate action from Gov. Abbott's TCEQ permit
+freeze, which we covered in depth in
+[our piece on the AI Force announcement](/blog/trump-ai-force-gop-split-2026)
+— that story noted only 28% of Texas data centers had responded to the same
+water survey. Paxton's investigation is what happens next when a mandatory
+disclosure requirement goes mostly ignored: an enforcement referral, not
+just a renewed request for data.
+
+**What to learn — a "mandatory" disclosure requirement is only as strong as
+the enforcement behind it:** Plenty of state and local rules require a
+company to report water or power use, but the requirement often carries no
+real penalty for simply not answering until, as in Texas, an attorney
+general or agency decides to make an example of the non-responders. If your
+state or utility has a disclosure rule a project near you may be ignoring,
+ask directly what happens when a company doesn't respond — and who has the
+authority to escalate it if nothing does.
+
+*Sources: [USA Today, Sep 24](https://www.usatoday.com/);
+[KXAN Austin, Sep 24](https://www.kxan.com/);
+[Washington Examiner, Sep 24](https://www.washingtonexaminer.com/)*
+
+---
+
+### 4. A Republican and a Democrat in Congress each introduce data-center NDA bills the same week
+
+**What happened:** Rep. Tom Barrett (R-MI) announced a bipartisan bill to
+increase transparency and ban non-disclosure agreements tied to data center
+deals, per [his own release](https://barrett.house.gov/), while Rep. Raja
+Krishnamoorthi (D-IL) called for a ban on NDAs between data center
+developers and government officials or agencies at any level, per
+[his own release](https://krishnamoorthi.house.gov/).
+
+**Why it matters:** NDAs between developers and local economic-development
+authorities are exactly what residents in Effingham County, Georgia are
+suing over right now, alleging officials kept OpenAI's "Project Camellia"
+deal quiet under one — a dispute we covered in
+[a dedicated piece](/blog/georgia-data-center-lawsuits-statesboro-effingham-2026)
+this week. Seeing lawmakers from both parties target the same practice in
+the same week suggests the Effingham fight isn't an isolated complaint; it's
+becoming a live federal legislative target.
+
+**What to learn — an NDA on a public deal is a red flag to ask about, even
+where it isn't yet illegal:** Before assuming your local development
+authority signed away its ability to disclose terms, ask directly (in
+writing, so it's a record) whether any confidentiality agreement covers the
+project, what it covers, and whether your state's open-records law creates
+an exception for it regardless of what the NDA says. Our
+[model CBA clause library](/cba-clauses.html) includes language communities
+have used to require disclosure as a condition of any agreement going
+forward.
+
+*Sources: [Rep. Tom Barrett, Sep 24](https://barrett.house.gov/);
+[Rep. Raja Krishnamoorthi, Sep 23](https://krishnamoorthi.house.gov/)*
+
+---
+
+### 5. Memphis-area residents file two separate lawsuits against an xAI data center in one week
+
+**What happened:** Memphis residents sued xAI subsidiary "SpaceXAI" over
+noise pollution from its Southaven, Mississippi data center, according to
+[WREG](https://wreg.com/) and [Local Memphis](https://www.localmemphis.com/).
+Days earlier, [WREG](https://wreg.com/) reported that the family of a worker
+who died at the same SpaceXAI data center filed a separate \\$30 million
+wrongful-death suit.
+
+**Why it matters:** Two unrelated lawsuits against the same facility in the
+same week — one from neighbors over noise, one from a worker's family over a
+death on site — is a pattern worth naming on its own: it's evidence that
+whatever review process the project went through did not anticipate either
+kind of harm, operational or off-site.
+
+**What to learn — get a noise-ordinance baseline before a facility opens,
+not after you're already living with it:** Many local noise ordinances set
+a specific decibel limit measured at the property line, sometimes with
+stricter limits at night, rather than a vague "no unreasonable noise"
+standard. Ask your zoning office what the actual numeric limit is for your
+district, and take baseline sound-meter readings (a smartphone app is
+enough to document a pattern, even if not admissible on its own) before
+construction finishes — a "before" measurement is much harder to dispute
+than a complaint filed after the fact. See our
+[health risk pages](/health-risks.html) for the fuller list of what to
+document.
+
+*Sources: [WREG, Sep 25](https://wreg.com/);
+[Local Memphis, Sep 25](https://www.localmemphis.com/);
+[WREG, Sep 23](https://wreg.com/)*
+
+---
+
+### 6. Palm Beach County passes a year-long data center moratorium — then scraps its own resident task force
+
+**What happened:** Palm Beach County commissioners unanimously approved a
+year-long moratorium on new hyperscale AI data centers, aimed in part at
+deterring projects like the previously proposed "Project Tango," according
+to [WPTV](https://www.wptv.com/) and the
+[Palm Beach Post](https://www.palmbeachpost.com/). Days later,
+[WPTV](https://www.wptv.com/) reported the county is scrapping the resident
+task force it had set up on AI data centers and plans to hire paid
+consultants instead.
+
+**Why it matters:** A moratorium and a decision about who does the technical
+analysis behind it are two different levers, and they can move in opposite
+directions in the same week. Trading a volunteer resident body for paid
+consultants isn't necessarily worse — consultants can bring expertise a
+task force may lack — but it does change who is in the room, and residents
+who counted the moratorium as a win should still be asking who replaces
+their seat at the table.
+
+**What to learn — ask who is paying the consultants and what their scope of
+work covers:** When a county replaces a citizen board with hired
+consultants, find out whether the county or the developer (often through an
+escrow or reimbursement arrangement) is funding the contract, and request
+the scope of work and any conflict-of-interest disclosures before the
+consultants' findings shape a vote. A moratorium buys time; it doesn't by
+itself guarantee residents get to use that time the way a task force would
+have let them. See
+[Palm Beach County's community page](/communities/palm-beach-county-fl.html)
+and the full [moratorium tracker](/moratoriums.html).
+
+*Sources: [WPTV, Sep 24](https://www.wptv.com/);
+[Palm Beach Post, Sep 24](https://www.palmbeachpost.com/);
+[WPTV, Sep 25](https://www.wptv.com/)*
+
+---
+
+### 7. Nine more communities moved on data centers this week
+
+Beyond the stories above, at least nine more local governments acted on
+data centers in the past seven days:
+
+| Locality | State | Action | Duration / scope |
+|--|--|--|--|
+| LA County (unincorporated areas) | CA | Temporary ban | Interim |
+| Pima County | AZ | Moratorium | 120 days |
+| Anne Arundel County | MD | Moratorium, chosen over outright ban | 15 months |
+| Baltimore County | MD | Moratorium extended | Through December 2027 |
+| Buffalo | NY | Ban expected to pass Common Council | 2 years |
+| Manatee County | FL | Moratorium advanced by commissioners | Under consideration |
+| Oakland | CA | Moratorium clears key council hurdle | Under consideration |
+| Chicago | IL | Mayor Johnson proposes moratorium | 12 months (proposed) |
+| Denton | TX | First council hearing on a pause | Under consideration |
+
+**What to learn — the proposed duration is itself a signal worth asking
+about:** A 120-day pause (Pima County) buys a council time to hold a few
+hearings; a 15-month pause chosen deliberately over a permanent ban (Anne
+Arundel County) signals the board wants a real study period without
+foreclosing approval later; an extension through a specific future date
+(Baltimore County, to December 2027) tells you exactly when the fight
+reopens. Before celebrating any moratorium as a win, ask your own council
+which of these three postures theirs actually is.
+
+*Sources: [ABC7 Los Angeles, Sep 20](https://abc7.com/) (LA County);
+[AZ Luminaria, Sep 23](https://azluminaria.org/) (Pima County);
+[The Baltimore Banner, Sep 22](https://www.thebaltimorebanner.com/)
+(Anne Arundel County); [CBS News, Sep 22](https://www.cbsnews.com/)
+(Baltimore County); [WGRZ, Sep 23](https://www.wgrz.com/) (Buffalo);
+[Bradenton Herald, Sep 25](https://www.bradenton.com/) (Manatee County);
+[The Oaklandside, Sep 23](https://oaklandside.org/) (Oakland);
+[Axios, Sep 24](https://www.axios.com/) (Chicago);
+[KERA News, Sep 24](https://www.kera.org/) (Denton)*
+
+---
+
+### What to watch next week
+
+- **Vineland, NJ** — whether DataOne brings its 62 generators into
+  compliance within NJDEP's 45-day deadline or is forced to shut them down
+- **Prince William County, VA** — the first project to test the new
+  by-right rules, and whether it was already in the pipeline before the vote
+- **Texas** — how many of the "hundreds" of data centers under Paxton's
+  investigation respond, and TCEQ's audit report due back to Gov. Abbott by
+  October 19
+- **Congress** — whether Rep. Barrett's and Rep. Krishnamoorthi's NDA bills
+  attract co-sponsors from the other party beyond their own
+- **Southaven, MS** — how xAI responds to the noise lawsuit and the
+  wrongful-death suit, and whether either is consolidated or moves to
+  discovery
+- **Palm Beach County, FL** — who the county hires as consultants, and
+  whether residents from the former task force get any formal role
+- **Chicago, IL** and **Buffalo, NY** — whether Mayor Johnson's proposal and
+  the Common Council's ban actually pass a floor vote
+
+---
+
+*Every Sunday we cover the week's most important data center stories,
+explain the underlying concepts, and point you to the tools you need. Know
+a story we should cover? Reach out at hello@aigridwatch.com or sign up for
+the newsletter below.*
+""",
+    },
 ]

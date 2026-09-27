@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/week-in-review-2026-09-27",
+      "destination": "/blog/week-in-review-2026-09-27",
+      "permanent": true
+    },
+    {
       "source": "/california-newsom-signs-seven-data-center-bills-2026",
       "destination": "/blog/california-newsom-signs-seven-data-center-bills-2026",
       "permanent": true
