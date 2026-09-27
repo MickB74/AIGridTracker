@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 8220,
+  "count": 8225,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -55226,7 +55226,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-07-29",
-      "last_seen": "2026-09-26"
+      "last_seen": "2026-09-27"
     },
     {
       "title": "Cass County election commission votes on petition recall for data center moratorium decision",
@@ -75675,7 +75675,7 @@
       "locality": "Dearborn County",
       "state": "IN",
       "first_seen": "2024-08-18",
-      "last_seen": "2026-09-25"
+      "last_seen": "2026-09-27"
     },
     {
       "title": "Putnam County school bus and SUV involved in crash; police investigate",
@@ -85102,7 +85102,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-22",
-      "last_seen": "2026-09-25"
+      "last_seen": "2026-09-27"
     },
     {
       "title": "NJ Slaps $1M Fine On Data Center In Vineland",
@@ -88941,7 +88941,7 @@
       "locality": "Cleveland",
       "state": "OH",
       "first_seen": "2026-09-25",
-      "last_seen": "2026-09-26"
+      "last_seen": "2026-09-27"
     },
     {
       "title": "Republicans say they want to address data centers. Democrats smell a campaign-season rat.",
@@ -89656,7 +89656,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-26",
-      "last_seen": "2026-09-26"
+      "last_seen": "2026-09-27"
     },
     {
       "title": "20 data centers are operating or planned in Florida as candidates clash",
@@ -90423,6 +90423,61 @@
       "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWHE3RFRfUTRKMWg3d3hpd2dPc1dRMWRSU0lJOUZ1WnJ5cXhRZnNVZGJXTkNtWkZiUVRiUGRCdjFocXZST1RBMVA5Y1NabGhpUTJDb1kwQTNHS1Z6UURYSTJlTlYyLUUzS2R2VEpHZExhRnA0SG5JUWFGT3VYbmZmeUhxRVNsbGFIalVFVk9pT1hFcXc?oc=5",
       "published": "Sun, 27 Sep 2026 18:00:00 GMT",
       "published_iso": "2026-09-27T18:00:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27"
+    },
+    {
+      "title": "Local organization fights back against Campground Road data center",
+      "outlet": "The Louisville Cardinal",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPTE5VYnJpWGxVdE1fRFBHbWNGUV90SjZ5dU1ZWFFPS003Ym9YMG9XUWpMdGRHZTBKZk1adVhFM1I5UktQbGVtYVUtMFB1ZGJIeEVjYXR6ZUtFYU51NnFhb1BhUVlHdjdPNDhaT3c5VmJjUUJzeS1qMWhoc2VjdXZRTUFLNHE3UTlMVTlyd1hVOGp0V1ZUOVhYajdSNGd1YWJsVmpFUmd5UTVVMGZVdVI4?oc=5",
+      "published": "Sun, 27 Sep 2026 20:40:21 GMT",
+      "published_iso": "2026-09-27T20:40:21+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27"
+    },
+    {
+      "title": "Hobart residents’ lawsuit seeks to stall data center project",
+      "outlet": "Chicago Tribune",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNSUZjZWs1OU1MWThwRUltRlhFZnNZQUxVRzhvYm12eF90cVE1cmZlYWFJUGFpM3VsV05iWVdPNExqRHBCXzBxcER1M0tkcS1td0RQOF9hQnBYRGRMUl9zdXBIYXNvQ1pRYVZkeF9CSGFJZFhUZlk4MUlpVUJFWXREYURsRkRVd2FKOFhiUzc4bjVKYm5ldzhFVEhKdndhcWtqdFRoNw?oc=5",
+      "published": "Sun, 27 Sep 2026 21:52:16 GMT",
+      "published_iso": "2026-09-27T21:52:16+00:00",
+      "locality": "Hobart",
+      "state": "WI",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27"
+    },
+    {
+      "title": "Pima County supervisors approve data center moratorium",
+      "outlet": "CaloNews.com",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNUnBHS3ppQWhhMFFya0lFNGdCNnd4cnFJeFlrb2xkdm1RQjdWME80V0lsMjdPd0MxdjNETDc5RENacmQ1eWZwSl9NVW1FMXBDNEFkMEhDa0FLelFXZ3M3QWZQbGhVOUx5MExvYlk0UUc0bjAwZEd0dGxDMzkyRnBZZm1lY0tFVFZxS0tfYWlfMXNURzNJYUx5cW83ejQ1V0FucmZGYU5ER1F6V1pWM2U5Y2xfQWxmemVfV1pTWkd5Y2xWa2xTNkZsSktKWWYxRnFjWi0w?oc=5",
+      "published": "Sat, 26 Sep 2026 14:00:00 GMT",
+      "published_iso": "2026-09-26T14:00:00+00:00",
+      "locality": "Pima County",
+      "state": "AZ",
+      "first_seen": "2026-09-26",
+      "last_seen": "2026-09-27"
+    },
+    {
+      "title": "Virginia-Looks-to-Build-a-Secure-Energy-Future-With-Plentiful-Power",
+      "outlet": "The Daily Signal",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPOXFoWEctbGxsV3l4SVlldVFvRWVrSXBKTHR5aXhjeFZXakV0UkFaVkJjUlZuWk02VFVCMTMtTUJ6a0lxM2ttb3NIaDFobExaMl9ISzdkd2phdkU1Yl9YNEZINU1PQXpQTDlVREFfaTRNUUlaZ3RfQzVFNmFsRjFYR1JkTjc1NmpMV2dVYUhEcGtUazc5ekxxcWxvWE5obzRXdExCYXRFb2hHWkZX?oc=5",
+      "published": "Sun, 27 Sep 2026 19:50:00 GMT",
+      "published_iso": "2026-09-27T19:50:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27"
+    },
+    {
+      "title": "Abbott pauses new Texas data center permits as state studies water and power use",
+      "outlet": "cbs19.tv",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOWC04S1REalN0ZkJ6S0dEcmppUktSc2NMZWxieGhiNTNsTXJ5VVRlSUxLNTJBTk5XcU9GQUlUd0NVajFxcVlPUDFwc1YteG1KT2g0ZmlyekRHeVM5a1JfbGlRb2hyMGZQcnViU1ZNWTQ4Wnl4Y3k3eDJ3bVU1bUgyR29qczVHWmZBVERVY1JvYjNmU01abV9YaGZzUzZqYzhBQ1RsZ1BMUWtPc01BcTlrMXRmeVI3dGppRzViMkJvWE5YWXJnMGVJanFlcVJRMWlTSnBfcUdFMFAzX3pZN0piNHo3dHF0aWk5ZTBrMDlvVXk?oc=5",
+      "published": "Sun, 27 Sep 2026 21:10:00 GMT",
+      "published_iso": "2026-09-27T21:10:00+00:00",
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-27",
