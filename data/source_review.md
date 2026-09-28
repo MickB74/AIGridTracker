@@ -1,14 +1,15 @@
 # SOURCES review queue
-_Generated 2026-09-21 · 174 keys_
+_Generated 2026-09-28 · 175 keys_
 
 ## dead (1)
 - **`ga_house_2024`** — URLError: <urlopen error timed out> · <https://www.house.ga.gov/>
 
-## orphan (13)
+## orphan (14)
 - **`ashburn_buyout`** — defined but never referenced — delete it or wire it up · <https://www.nbcwashington.com/news/local/northern-virginia/data-center-expansion-loudoun-county-homeowners-buyout-offers/>
 - **`dominion_blue`** — defined but never referenced — delete it or wire it up · <https://www.dominionenergy.com/-/media/content/about/board-and-executives/pdf/bob-blue-bio.pdf>
 - **`ga_eminent`** — defined but never referenced — delete it or wire it up · <https://fortune.com/2026/07/26/georgia-power-utility-company-eminent-domain-grid-expansion-data-center/>
 - **`gjf_subsidy`** — defined but never referenced — delete it or wire it up · <https://subsidytracker.goodjobsfirst.org/>
+- **`house_rpa`** — defined but never referenced — delete it or wire it up · <https://www.eenews.net/articles/energy-and-commerce-lawmakers-to-introduce-data-center-bill/>
 - **`marcellus_lease`** — defined but never referenced — delete it or wire it up · <https://extension.psu.edu/energy/marcellus-shale-and-natural-gas/landowner-leasing-and-royalties>
 - **`mason_buyout`** — defined but never referenced — delete it or wire it up · <https://wchstv.com/news/local/voluntary-buyout-offers-rolled-out-for-meadowlands-estates-homes-near-data-center>
 - **`nuisance_law`** — defined but never referenced — delete it or wire it up · <https://windhamlaw.com/what-damages-can-you-recover-in-a-data-center-nuisance-lawsuit/>
@@ -35,9 +36,9 @@ _Generated 2026-09-21 · 174 keys_
 - **`gartner`** — HTTP 403 — check by hand · <https://www.gartner.com/en/newsroom/press-releases/2025-11-17-gartner-says-electricity-demand-for-data-centers-to-grow-16-percent-in-2025-and-double-by-2030>
 - **`iea_2025`** — HTTP 403 — check by hand · <https://www.iea.org/reports/energy-and-ai>
 - **`lbnl`** — HTTP 403 — check by hand · <https://eta.lbl.gov/publications/2024-united-states-data-center-energy>
+- **`nuisance_law`** — HTTP 403 — check by hand · <https://windhamlaw.com/what-damages-can-you-recover-in-a-data-center-nuisance-lawsuit/>
 - **`reddit`** — HTTP 403 — check by hand · <https://www.reddit.com/>
 - **`sen_fetterman`** — HTTP 403 — check by hand · <https://thehill.com/homenews/senate/5877732-fetterman-ai-data-centers/>
 - **`sp_451`** — HTTP 403 — check by hand · <https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/110525-global-data-center-power-demand-expected-to-almost-double-by-2030>
 - **`stargate`** — HTTP 403 — check by hand · <https://openai.com/index/five-new-stargate-sites/>
-- **`usda_land`** — HTTP 403 — check by hand · <https://www.nass.usda.gov/Publications/Todays_Reports/reports/land0824.pdf>
 
