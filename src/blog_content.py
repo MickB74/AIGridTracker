@@ -72,6 +72,198 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "vineland-dataone-fine-order-2026",
+        "art": "oversight",
+        "section": "stories",
+        "title": "New Jersey Fined Vineland's Data Center $1.07 Million. The Order Gives It 45 Days, Not a Shutdown.",
+        "seo_title": "Vineland DataOne fine: what NJDEP's order requires",
+        "date": _dt.date(2026, 9, 29),
+        "author": "GridWatch AI",
+        "tags": ["New Jersey", "Vineland", "DataOne", "Nebius", "NJDEP",
+                 "air permits", "gas generators", "enforcement"],
+        "summary": (
+            "NJDEP's order against DataOne is five pages long, and it says more "
+            "than the headlines about it. The $1,072,000 penalty covers 62 gas "
+            "engines installed and run without permits. The company has 45 days "
+            "to file permit applications, and the engines only have to stop if "
+            "it misses that filing deadline. Here is what the order requires, "
+            "what it leaves open, and what Vineland residents can check next."
+        ),
+        "body": """\
+On September 22 the New Jersey Department of Environmental Protection
+[fined DataOne $1.07 million](https://dep.nj.gov/newsrel/26_0044/) for
+installing and running 62 natural-gas generators at its Vineland data center
+without air permits. DEP Commissioner Ed Potosnak called it "by far the
+largest" enforcement action ever taken against a data center in New Jersey.
+More than twenty outlets carried the story within a day. Most of them ran the
+number and a line about "45 days or shut down."
+
+DEP also published the order itself, a five-page
+[Administrative Order and Notice of Civil Administrative Penalty Assessment](https://dep.nj.gov/wp-content/uploads/newsrel/2026/dataone75894-aonocapa.pdf).
+If you live near the South Lincoln Avenue site, that document matters more
+than any article about it. Here is what it says.
+
+## What the state found
+
+The order is issued under New Jersey's Air Pollution Control Act. It rests
+on a single inspection, on
+[July 29, 2026](https://dep.nj.gov/wp-content/uploads/newsrel/2026/dataone75894-aonocapa.pdf).
+Inspectors found sixty-two Caterpillar G3516H engines, each rated at 1,982
+kilowatts and burning natural gas. That adds up to roughly
+[123 megawatts](https://www.enr.com/articles/63694-nj-fines-data-center-1m-over-123-mw-of-unpermitted-generation)
+of unpermitted on-site generation. The order cites two violations:
+
+- **Installing** the engines without a preconstruction permit (N.J.A.C.
+  7:27-8.3(a)).
+- **Operating** them without an operating certificate (N.J.A.C. 7:27-8.3(b)).
+
+In New Jersey those approvals apply to
+[any generator of 37 kilowatts or more](https://dep.nj.gov/newsrel/26_0044/).
+Each of these engines is more than fifty times that size. DEP says the
+generators
+[were not there](https://dep.nj.gov/newsrel/26_0044/) at its previous
+inspection, in December 2025. So all 62 were installed and started up in the
+roughly seven months between two state visits.
+
+The state was not the first to see them running. In August, the nonprofit
+newsroom Floodlight
+[flew a thermal drone over the campus](https://floodlightnews.org/new-jersey-data-center-federal-violation/)
+and counted at least 45 of the 62 generators running at once. Imagery from a
+data company appeared to show 25 running in late June. Floodlight also
+reported that DataOne had filed an air permit application for more than 30
+gas engines of a different make, and withdrew it in May after DEP found
+multiple deficiencies. On August 28, a DEP spokesperson told
+[WHYY](https://whyy.org/articles/vineland-new-jersey-data-center-gas-generators-permit/)
+that DataOne had no permit for power generators and had not applied for one.
+
+## What the order requires, and when
+
+Paragraph 4 is the part residents should read closely. DataOne must submit
+permit and certificate applications
+[within 45 days of receiving the order](https://dep.nj.gov/wp-content/uploads/newsrel/2026/dataone75894-aonocapa.pdf),
+and it must answer any DEP request for more information within 14 days. The
+order then says that if the applications are **not submitted** within 45
+days, the company "must cease installation/operation" of the engines.
+
+That trigger is narrower than "get a permit or shut down." Under the
+order's own wording, the shutdown turns on whether DataOne *files* on time.
+The order does not say the engines must stop while DEP reviews an
+application that was filed on time. That is why Floodlight ran its
+follow-up under the headline
+[DEP is "letting them run for 45 more days"](https://floodlightnews.org/new-jersey-dataones-illegal-still-running/).
+
+The clock starts when DataOne receives the order, and that date is not
+public. The order was signed digitally on the morning of September 22. If
+DataOne received it the same day, the 45 days end on November 6.
+
+## The penalty, and how DataOne can contest it
+
+The assessed penalty is
+[$1,072,000](https://dep.nj.gov/wp-content/uploads/newsrel/2026/dataone75894-aonocapa.pdf).
+The order says DEP's reasoning for that figure is "set forth in the
+attachment." That attachment is not part of the five-page PDF DEP
+published. The order also reserves DEP's right to add, on top of the
+penalty, the economic benefit the company gained by not complying. It does
+not put a figure on that.
+
+DataOne has 20 calendar days from receipt to request a hearing. If it does
+not ask, the order becomes final on day 21 and the penalty is due. If it
+does ask, payment waits until the hearing is resolved. However, the order
+states that requesting a hearing
+[does not pause its terms](https://dep.nj.gov/wp-content/uploads/newsrel/2026/dataone75894-aonocapa.pdf),
+so the 45-day filing requirement runs either way.
+
+The rest of the order recites the law, and residents should know it. The
+order covers only the violations it lists, and DEP says it keeps the right
+to take further action. The Air Pollution Control Act separately sets
+penalties of up to $10,000 for a first offense, $25,000 for a second and
+$50,000 for each one after that, and
+[each day a violation continues counts as a separate offense](https://dep.nj.gov/wp-content/uploads/newsrel/2026/dataone75894-aonocapa.pdf).
+None of those per-day amounts has been assessed. They are what the statute
+allows, not what DEP has charged.
+
+## What DataOne says
+
+A DataOne spokesperson, Naomi Race, said the company is moving to fuel cells
+for the site's permanent power and "will apply for the air permits for the
+temporary generators." She also said DataOne
+[disagrees with "the temporary generator determination"](https://www.enr.com/articles/63694-nj-fines-data-center-1m-over-123-mw-of-unpermitted-generation).
+She did not explain the disagreement, and the order itself does not use the
+word "temporary." It treats the 62 engines as significant sources that need
+permits. Reporting has not settled whether the company's objection is
+about the permits, the penalty, or both. The hearing-request deadline will
+show whether DataOne formally contests the order.
+
+The fuel cells are a separate approval. On August 17 the Vineland Planning
+Board voted 8-1 for
+[300 MW of Bloom Energy fuel cells and a 1.5-million-gallon LNG storage tank](https://whyy.org/articles/vineland-planning-board-approves-data-center-plan/)
+on the site. WHYY reported that state permits were still required. Earlier
+that month the city had issued
+[two stop-work orders](https://whyy.org/articles/vineland-data-center-stop-work-orders/),
+on August 6 and August 10, over work on that same equipment that had
+started without approvals. According to Floodlight, DataOne gave
+[no timeline](https://floodlightnews.org/new-jersey-dataones-illegal-still-running/)
+for when the fuel cells would replace the engines.
+
+## Is $1.07 million a lot?
+
+It depends on what you compare it to, and people have compared it to
+different things.
+
+DEP compares it to other data center cases in New Jersey, and by DEP's
+account it is the largest the state has issued. Critics compare it to the
+project's size. Nebius, the company that runs the site's computing, signed a
+five-year deal to supply Microsoft with GPU capacity from Vineland worth
+[$17.4 billion](https://www.rcrwireless.com/20250910/ai-infrastructure/nebius-microsoft-ai).
+Matt Williams of the local group Sustain SJ told Floodlight that
+["$1M does not affect companies like DataOne"](https://floodlightnews.org/new-jersey-dataones-illegal-still-running/)
+and that the engines should stop immediately. Bruce Buckheit, a former head
+of air enforcement at the U.S. EPA, told Floodlight in August that running
+the engines unpermitted
+[violates federal law](https://floodlightnews.org/new-jersey-data-center-federal-violation/).
+After the order came out, he said he suspected the company was "breathing a
+sigh of relief" at being allowed to keep them running.
+
+Those are opinions, and they are attributed to the people who hold them. The
+order is a fact: a large fine, a filing deadline, and no requirement to
+stop the engines while that deadline runs.
+
+## What a resident can do with this
+
+**Track the two deadlines.** Twenty days to request a hearing and 45 days to
+file applications, both counted from a receipt date DEP has not published.
+You can ask DEP's Bureau of Air Compliance & Enforcement – Southern, in
+Camden, which the order names, when DataOne received the order and whether
+it filed a hearing request. The order's enforcement ID is
+**PEA260001-75894**. Use it in every request.
+
+**Request the missing attachment.** The penalty rationale is part of the
+public enforcement record. An
+[OPRA request](https://www.nj.gov/dep/opra/) for the attachment to
+PEA260001-75894 will show how DEP arrived at $1,072,000, and whether any
+economic-benefit amount was calculated.
+
+**Watch for the applications.** Once DataOne files, the applications go to
+DEP's Bureau of Stationary Sources. Ask DEP directly whether the permit for
+123 MW of gas engines will have a public notice and comment period, and
+get the answer in writing.
+
+**If you live somewhere else,** notice the order of events here. The
+engines were running before any agency with authority over air emissions
+had approved them. A local site plan approval does not cover that. The
+separate state air permit is where a resident can see what a facility is
+actually allowed to burn.
+
+---
+
+**See also:** [Vineland community briefing](/communities/vineland-nj.html) ·
+[DataOne / Nebius project dossier](/projects.html#p-microsoft-nebius-new-jersey) ·
+[Millville, which banned data centers next door](/communities/millville-nj.html) ·
+[New Jersey state page](/states/new-jersey.html) ·
+[Where to find a project's permit record](/projects.html#records)
+""",
+    },
+    {
         "id": "california-newsom-signs-seven-data-center-bills-2026",
         "art": "bills",
         "section": "stories",

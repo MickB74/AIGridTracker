@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/vineland-dataone-fine-order-2026",
+      "destination": "/blog/vineland-dataone-fine-order-2026",
+      "permanent": true
+    },
+    {
       "source": "/week-in-review-2026-09-27",
       "destination": "/blog/week-in-review-2026-09-27",
       "permanent": true
@@ -1201,16 +1206,6 @@
     {
       "source": "/communities/monroe-township-nj.html",
       "destination": "/communities/monroe-township-gloucester-co-nj",
-      "permanent": true
-    },
-    {
-      "source": "/communities/montgomery-county-tn",
-      "destination": "/states/tennessee",
-      "permanent": true
-    },
-    {
-      "source": "/communities/montgomery-county-tn.html",
-      "destination": "/states/tennessee",
       "permanent": true
     },
     {
