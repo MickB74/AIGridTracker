@@ -96,7 +96,7 @@
     "expires": "2027-06-02"
   },
   "athens-clarke-county-ga": {
-    "effective_status": "Enacted",
+    "effective_status": "Rescinded",
     "expires": null
   },
   "athens-oh": {
@@ -113,11 +113,11 @@
   },
   "augusta-ga": {
     "effective_status": "Expired",
-    "expires": "2026-09-19"
+    "expires": "2026-09-15"
   },
   "augusta-richmond-county-ga": {
     "effective_status": "Expired",
-    "expires": "2026-09-19"
+    "expires": "2026-09-15"
   },
   "aurora-co": {
     "effective_status": "Rejected",
@@ -1111,6 +1111,10 @@
     "effective_status": "Rejected",
     "expires": null
   },
+  "gilroy-ca": {
+    "effective_status": "Enacted",
+    "expires": "2026-10-29"
+  },
   "girard-oh": {
     "effective_status": "Enacted",
     "expires": "2027-07-13"
@@ -1463,6 +1467,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "janesville-wi": {
+    "effective_status": "Enacted",
+    "expires": "2027-09-28"
+  },
   "jasper-county-sc": {
     "effective_status": "Proposed",
     "expires": null
@@ -1752,6 +1760,10 @@
     "expires": null
   },
   "lordstown-oh": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "los-angeles-county-ca": {
     "effective_status": "Enacted",
     "expires": null
   },
@@ -2453,7 +2465,7 @@
   },
   "pierce-township-oh": {
     "effective_status": "Enacted",
-    "expires": "2026-10-09"
+    "expires": "2027-05-31"
   },
   "pike-county-ga": {
     "effective_status": "Enacted",
@@ -2603,6 +2615,10 @@
     "effective_status": "Enacted",
     "expires": "2027-02-17"
   },
+  "richmond-ca": {
+    "effective_status": "Enacted",
+    "expires": "2026-10-30"
+  },
   "ridgely-md": {
     "effective_status": "Enacted",
     "expires": "2027-08-31"
@@ -2628,8 +2644,8 @@
     "expires": null
   },
   "rockdale-county-ga": {
-    "effective_status": "Expired",
-    "expires": "2026-09-08"
+    "effective_status": "Enacted",
+    "expires": "2026-10-09"
   },
   "rockford-il": {
     "effective_status": "Enacted",
@@ -2748,8 +2764,8 @@
     "expires": "2027-03-06"
   },
   "scott-county-ky": {
-    "effective_status": "Expired",
-    "expires": "2026-09-13"
+    "effective_status": "Enacted",
+    "expires": null
   },
   "seattle-wa": {
     "effective_status": "Enacted",
@@ -3115,6 +3131,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "upper-township-nj": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "vermilion-oh": {
     "effective_status": "Enacted",
     "expires": "2027-03-23"
@@ -3248,8 +3268,8 @@
     "expires": null
   },
   "waterford-township-mi": {
-    "effective_status": "Expired",
-    "expires": "2026-09-23"
+    "effective_status": "Enacted",
+    "expires": "2026-10-01"
   },
   "waterville-oh": {
     "effective_status": "Expired",

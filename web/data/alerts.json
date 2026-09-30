@@ -185,20 +185,7 @@
       "days_left": -26,
       "title": "Birmingham, AL: data center moratorium has lapsed",
       "body": "The moratorium's documented term ran to 2026-09-03 (26 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://www.wbrc.com/2026/03/04/birmingham-city-council-votes-pause-new-data-center-applications-six-months/",
-      "verified": true
-    },
-    {
-      "id": "mora-GA-rockdale-county-2026-09-08",
-      "kind": "moratorium-expiry",
-      "severity": "expired",
-      "locality": "Rockdale County",
-      "state": "GA",
-      "expires": "2026-09-08",
-      "days_left": -21,
-      "title": "Rockdale County, GA: data center moratorium has lapsed",
-      "body": "The moratorium's documented term ran to 2026-09-08 (21 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://www.fox5atlanta.com/news/new-data-center-applications-paused-rockdale-county",
+      "source": "https://www.birminghamtimes.com/2026/06/birmingham-city-council-votes-6-3-to-pass-new-regulations-for-data-centers/",
       "verified": true
     },
     {
@@ -215,42 +202,29 @@
       "verified": true
     },
     {
-      "id": "mora-KY-scott-county-2026-09-13",
-      "kind": "moratorium-expiry",
-      "severity": "expired",
-      "locality": "Scott County",
-      "state": "KY",
-      "expires": "2026-09-13",
-      "days_left": -16,
-      "title": "Scott County, KY: data center moratorium has lapsed",
-      "body": "The moratorium's documented term ran to 2026-09-13 (16 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://www.news-graphic.com/news/six-month-halt-on-potential-data-centers/article_4e78b630-fee8-4a86-99ac-abe6228e3fa2.html",
-      "verified": true
-    },
-    {
-      "id": "mora-GA-augusta-2026-09-19",
+      "id": "mora-GA-augusta-2026-09-15",
       "kind": "moratorium-expiry",
       "severity": "expired",
       "locality": "Augusta",
       "state": "GA",
-      "expires": "2026-09-19",
-      "days_left": -10,
+      "expires": "2026-09-15",
+      "days_left": -14,
       "title": "Augusta, GA: data center moratorium has lapsed",
-      "body": "The moratorium's documented term ran to 2026-09-19 (10 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://www.wjbf.com/news/augusta-commissioners-delaying-approval-of-data-center-ordinance-and-extending-moratorium-by-60-days/",
+      "body": "The moratorium's documented term ran to 2026-09-15 (14 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
+      "source": "https://theaugustapress.com/augusta-data-center-ordinances-passes-6-5/",
       "verified": true
     },
     {
-      "id": "mora-GA-augusta-richmond-county-2026-09-19",
+      "id": "mora-GA-augusta-richmond-county-2026-09-15",
       "kind": "moratorium-expiry",
       "severity": "expired",
       "locality": "Augusta-Richmond County",
       "state": "GA",
-      "expires": "2026-09-19",
-      "days_left": -10,
+      "expires": "2026-09-15",
+      "days_left": -14,
       "title": "Augusta-Richmond County, GA: data center moratorium has lapsed",
-      "body": "The moratorium's documented term ran to 2026-09-19 (10 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://www.wrdw.com/2026/07/21/augusta-leaders-extend-moratorium-new-data-centers/",
+      "body": "The moratorium's documented term ran to 2026-09-15 (14 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
+      "source": "https://theaugustapress.com/augusta-data-center-ordinances-passes-6-5/",
       "verified": true
     },
     {
@@ -263,20 +237,20 @@
       "days_left": -9,
       "title": "Roswell, GA: data center moratorium has lapsed",
       "body": "The moratorium's documented term ran to 2026-09-20 (9 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://roswellconnections.com/datacenters/",
+      "source": "https://roswellconnections.com/mayor-and-council-meeting-recap-aug-10-2026/",
       "verified": true
     },
     {
-      "id": "mora-MI-waterford-township-2026-09-23",
+      "id": "mora-MI-waterford-township-2026-10-01",
       "kind": "moratorium-expiry",
-      "severity": "expired",
+      "severity": "urgent",
       "locality": "Waterford Township",
       "state": "MI",
-      "expires": "2026-09-23",
-      "days_left": -6,
-      "title": "Waterford Township, MI: data center moratorium has lapsed",
-      "body": "The moratorium's documented term ran to 2026-09-23 (6 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://www.waterfordmi.gov/ArchiveCenter/ViewFile/Item/1696",
+      "expires": "2026-10-01",
+      "days_left": 2,
+      "title": "Waterford Township, MI: data center moratorium expires in 2 days",
+      "body": "The documented term ends 2026-10-01. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.waterfordmi.gov/AgendaCenter/ViewFile/Agenda/_09282026-1705?packet=true",
       "verified": true
     },
     {
@@ -319,19 +293,6 @@
       "verified": true
     },
     {
-      "id": "mora-OH-pierce-township-2026-10-09",
-      "kind": "moratorium-expiry",
-      "severity": "urgent",
-      "locality": "Pierce Township",
-      "state": "OH",
-      "expires": "2026-10-09",
-      "days_left": 10,
-      "title": "Pierce Township, OH: data center moratorium expires in 10 days",
-      "body": "The documented term ends 2026-10-09. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
-      "source": "https://piercetownship.org/wp-content/uploads/2026/02/Res-Imposing-Moratorium-Data-Centers-kb-edits.pdf",
-      "verified": true
-    },
-    {
       "id": "mora-CA-calaveras-county-2026-10-09",
       "kind": "moratorium-expiry",
       "severity": "urgent",
@@ -355,6 +316,19 @@
       "title": "Lake Elsinore, CA: data center moratorium expires in 10 days",
       "body": "The documented term ends 2026-10-09. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://elsinore247.com/2026/08/council-unanimously-approves-45-day-data-center-moratorium.html",
+      "verified": true
+    },
+    {
+      "id": "mora-GA-rockdale-county-2026-10-09",
+      "kind": "moratorium-expiry",
+      "severity": "urgent",
+      "locality": "Rockdale County",
+      "state": "GA",
+      "expires": "2026-10-09",
+      "days_left": 10,
+      "title": "Rockdale County, GA: data center moratorium expires in 10 days",
+      "body": "The documented term ends 2026-10-09. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.rockdalecitizen.com/news/rockdale-adopts-most-of-new-udo-delays-data-center-regs/article_f40792e3-03b1-4f5a-b41e-a904d6eae277.html",
       "verified": true
     },
     {
@@ -537,6 +511,32 @@
       "title": "Lowndes County, AL: data center moratorium expires in 26 days",
       "body": "The documented term ends 2026-10-25. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://x.com/abc27/status/2092703658844549512",
+      "verified": true
+    },
+    {
+      "id": "mora-CA-gilroy-2026-10-29",
+      "kind": "moratorium-expiry",
+      "severity": "urgent",
+      "locality": "Gilroy",
+      "state": "CA",
+      "expires": "2026-10-29",
+      "days_left": 30,
+      "title": "Gilroy, CA: data center moratorium expires in 30 days",
+      "body": "The documented term ends 2026-10-29. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.cityofgilroy.org/m/newsflash/Home/Detail/1331",
+      "verified": true
+    },
+    {
+      "id": "mora-CA-richmond-2026-10-30",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Richmond",
+      "state": "CA",
+      "expires": "2026-10-30",
+      "days_left": 31,
+      "title": "Richmond, CA: data center moratorium expires in 31 days",
+      "body": "The documented term ends 2026-10-30. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://contracosta.news/2026/09/16/richmond-city-council-agrees-to-45-day-moratorium-on-data-centers/",
       "verified": true
     },
     {
@@ -1134,7 +1134,7 @@
       "days_left": 77,
       "title": "Starke County, IN: data center moratorium expires in 77 days",
       "body": "The documented term ends 2026-12-15. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
-      "source": "https://starke.in.gov/dlp_document/ordinance-2025-37-hyperscale-data-center-moratorium/",
+      "source": "https://starke.in.gov/wp-content/uploads/2026/02/ORD-2025-37-Hyperscale-Data-Center-Moratorium.pdf",
       "verified": true
     },
     {

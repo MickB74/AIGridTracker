@@ -1,21 +1,21 @@
 # Moratorium candidate triage
 
-1024 distinct candidates not already tracked (452 dropped as already published; repeat coverage collapsed).
+1163 distinct candidates not already tracked (454 dropped as already published; repeat coverage collapsed).
 
 A trailing `?` on a state is inferred from the headline, not confirmed — worth a glance before you search.
 
 | Tier | Meaning | Count |
 |---|---|---|
-| A | cited — link or named document in hand | 147 |
+| A | cited — link or named document in hand | 176 |
 | B | structured — dated, active, upstream-verified; source still to find | 0 |
 | C | thin — structured but unverified, pending, or undated | 91 |
-| D | unlocated — headline with no resolvable locality | 786 |
+| D | unlocated — headline with no resolvable locality | 896 |
 
-## Tier A — cited — link or named document in hand (147)
+## Tier A — cited — link or named document in hand (176)
 
-States: unknown 136, MD? 3, CO? 1, FL? 1, KY? 1, MI? 1, MN? 1, MT? 1, NJ? 1, OH? 1
+States: unknown 164, MD? 4, CO? 1, FL? 1, KY? 1, MI? 1, MN? 1, MT? 1, NJ? 1, OH? 1
 
-- **Evansville** · 32 outlets — google-news redirect, locality 'Evansville'
+- **Evansville** · 34 outlets — google-news redirect, locality 'Evansville'
   - Evansville City Council to consider data center moratorium
   - https://news.google.com/rss/articles/CBMilAFBVV95cUxNaHctbjN3aFNjZFJZT0xxdU5iWWpzUW1ONjY2eG1IeGRld0NpdThJOHBFSVlINlVNQ19WOUc1b2hBVjBxcUEwSVdzWWozX1RwWkdBaXRkdkNQdnlGbGpxVzAwQ2RyU0FDZE42TkhXYVpzUlRnRTlDeUw4UFg3Uzd3NG9hSXNuOHBJeE1leDh5Qk1UWnc1?oc=5
 - **Eugene** · 6 outlets — google-news redirect, locality 'Eugene'
@@ -42,6 +42,12 @@ States: unknown 136, MD? 3, CO? 1, FL? 1, KY? 1, MI? 1, MN? 1, MT? 1, NJ? 1, OH?
 - **Hudson** · 2 outlets — google-news redirect, locality 'Hudson'
   - Hudson Valley residents dissatisfied with data center moratorium
   - https://news.google.com/rss/articles/CBMiowFBVV95cUxPLTNDajloR0lWVi0tLWpNb3JUbUx3YVI4bnFjd0p3SGNpYUpDeDZyWG90T0RyUjAzZmhSTC1IWHRyd1lHWFM5SW5aRWNnU01yRmswYU1HQlJUV2ozTnBxQ1Y0TXgxWVgwZGpQcW5WQzFIVExpYVpmMTBxdDVOc3lnbFdXUTR5VG5oNGlvVGdpRUVaU25GcmxGSHhkVUlnSFhNWDFF?oc=5
+- **Janesville** · 2 outlets — google-news redirect, locality 'Janesville'
+  - Janesville City Council passes data center moratorium
+  - https://news.google.com/rss/articles/CBMiigFBVV95cUxQWVRVOVBEdHFVYzJVSklVWUJSVzRSTVotSDVFejlySHp4UjBxNS0xaXM4NnpxWFU4QWJ1YWtpLTdqYlhKc0M4c3dBLTlmZnNwSTZMbVVuNVNidXhSWkw1SDdXb3lSVWNCZTR5QTFMcGQxWE5hQWNSNFQ4eFdsblJiRnNHRXZPcExCeEE?oc=5
+- **LA** · 2 outlets — google-news redirect, locality 'LA'
+  - LA County issues temporary ban on data centers in unincorporated areas
+  - https://news.google.com/rss/articles/CBMinAFBVV95cUxNYndVNm4xM1RDVTRmS050MjBzVWFYN3BnRzRnUG5GOVRCbUJrVnhEUVNZTk50aEJ6ajdNZVhweS1uZlRGMXVuUmRnZWlkcmtKWW9aSHlkby14dGpERHk5bWFfOThZR2F1UzFmYjl5Mkd5UGwwOG1xX2ltcndVcDlwZEpWZWhhdllSRGxIUkYwTVl1ZzY3WGVyT3BVNlPSAaIBQVVfeXFMTms2blRYeWFtVUtvenpfRkExV1BNUXhzMFNac0Jfd0F0Q25hM0F3TDUzU1ZiNzczVVM2Wl9uQzBpZjUzTXZ3RE9JcXZqX3FxY1VEVU96SHNwMTg2T3dZWWoxTVBZZ1JpdU9yVG9vX1NFTGJxQWg4Tlo1NmRfNnlHX0gyamVxUmdSVWpXd1A2WVVqYjFSX3hGYXJHS1FFQVdOZkF3?oc=5
 - **Manchester And Upper** · 2 outlets — google-news redirect, locality 'Manchester And Upper'
   - Data Center Bans Spread As Manchester And Upper Township Approve Restrictions
   - https://news.google.com/rss/articles/CBMi1wFBVV95cUxOSjROVGtKUkdxYnQ1T1V1RGR3RnhIQzdqS0VHU0JOZEo2aldPSnE5ZmNmanRHYXVFRjJFbXBhbGUxQXkwSHpZdTkyQ3htUE55czhsaTJEZHFDRV9XQ2pVUWZNU005dW1DTkxoMVFKdWVxaXJEX21Ja0tCeGxvcjh2dDhxemVrdUxQR2VVUk9mbk44eVp4OEQtQ0xiYlVFWVM1b3JvQXRNSWtRTk5naFJBUWxFNjlZbzVPVzJEb19kVTlYYW1wSFYyQTVPdGpkT2hYSVJJU095bw?oc=5
@@ -54,9 +60,6 @@ States: unknown 136, MD? 3, CO? 1, FL? 1, KY? 1, MI? 1, MN? 1, MT? 1, NJ? 1, OH?
 - **Richmond** · 2 outlets — google-news redirect, locality 'Richmond'
   - Richmond City Council Agrees to 45-Day Moratorium on Data Centers
   - https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbkwzRzU2RWN3UmtTUFBsS3ZCeWVWT2ptcGdtT2FKY0w1alU4XzRRRHl1d0FVNFREWi1KV2hwVkh0NlpGMTBtQTFnVXo2OFc3ODU4aE9janNHbnE1dU9XZzliVFBxcnZib3oxTEV0TWNoTnlEeGpQdkVEZmNYOGM5bmFmSWlpQ3M2RS1TQ3o0QnJtZEo4blNtZV9rWllTTWZzdk5ZUVNjRUNmdw?oc=5
-- **Sauk** · 2 outlets — google-news redirect, locality 'Sauk'
-  - Sauk County approves 18-month moratorium on new data centers
-  - https://news.google.com/rss/articles/CBMinAFBVV95cUxNOXZIazZuUWN4TXYxUTBxZHU3VXFQdGg3M2g2aGtGTlJFQVpsdXRRa1VsS0R2eDZDX1d5LS1sWHg5ZHd6dmJldVdLT2FCV0lkQkU0RnYyb2U3Y3g2N0hhSV9sVl9OZnc1S1dIYlFmUWxFMDFUOHRuMTlTMG5XcDJsNFY1NUFDdk13UFljeVY0VmRTaXkxWF9maERsNkXSAbABQVVfeXFMTzZEb0F6WjQ4NWcxNjJlS0FHSGxMakNBQTh5cHExcGl5WXQzeDBYeUhuQUJuaVhWT3pqTXdCSjFpMGpIVmg4eHNkQ2k2REtHVjlscGNZbVY5dXUzZHRhMThzd2llRGFlRG1tenU5QjRMVGdCUkJZb09qNTdmaEtxbmVjemJVck9Tdl85WnNxeVpycllqR2VuX3BvS3FEczFid0NIVldycE44b3N1aEt0N1M?oc=5
 - **Sturtevant** · 2 outlets — google-news redirect, locality 'Sturtevant'
   - Sturtevant presses Spanberger for data center pause
   - https://news.google.com/rss/articles/CBMilAFBVV95cUxNWHhwZEZiT1gwN2l4d2gyUHhTYnhnYzBScmk2YmpkNEhlbGFIZEQxYVYxU3ZER05pcUt0NEhXWTlsbC1ZOG9jVnZESU1PcU9hMlQ3d212TXNQQ0xvS1JyeUJJb1Z1QXprLTJDMXBScVNkaXlYWXZFY1k3ckdKSEt6aHp0ZHJOeUxhZzd2c3g2NG5VMXpy0gGaAUFVX3lxTE9WcDR6T1ptV01QR3VFZmY1MWR6alVIc1ZjbmVkRE1rbHV3c0dMWFRFV0gyU25vVzZYUkhtdzJzdWpra1cwb1BSWVI4bTZ6RVRmVTlIRDRYZGRJZWw2UkMwbi05TXNYdU14VkVtSUdDaWFGWV9oYXZ2ejNrUGRxYmNrdkV4OFYzOVdObmxRQy1mV2hBTXRkX3YyX2c?oc=5
@@ -72,6 +75,9 @@ States: unknown 136, MD? 3, CO? 1, FL? 1, KY? 1, MI? 1, MN? 1, MT? 1, NJ? 1, OH?
 - **Kentucky, KY?** — google-news redirect, locality 'Kentucky'
   - A Kentucky County Becomes First in State to Permanently Ban Data Center Construction
   - https://news.google.com/rss/articles/CBMiygFBVV95cUxObWxlU1pqMWhCS3JtaGpGaHI4dTM4S3BsbExDOE5iakN5VWkxVEh4SzBMSzJKNjBFUFM5aDJfTXdYMDhwdzdUZFJvNFRZdDQzN0djYVg5dFlGOGU3NXkzMWIwZnluN2FWeXhDc3VQVEpEOE1VZUhOV1lyZVRTWFQ2aHBTY1VhTmtoVHdBdGRpMHRIQTVXM05tVDlKeS1VdHc4N2pTZFBETFA1VVNzOXRkbUtLV1BrQ052cjM0bGMwVTFYSUJwTVpxR1JB?oc=5
+- **Maryland, MD?** — google-news redirect, locality 'Maryland'
+  - Maryland County Downgrades Potential Data Center Ban to Pause
+  - https://news.google.com/rss/articles/CBMilwFBVV95cUxPcGtHRWYybVF6THkyb2NEX3FoMnFpWVJwOFhQSlVfWGc2alZPeFFvOXJOa3dOcUo2ejVIdHZDaVJ1bVdOYVBzUS1DamFEalpRZ3RwV0NZQWx4MEthaGpwa1drUldsbThjRWtLYTZ2bm54RXYxc3JUX25mMGsxMkR5SlBDVjg2YkNvMXNfT204aWtZaEZFYzI4?oc=5
 - **Maryland (statewide), MD?** — document named: mgaleg.maryland.gov 2026-session search for data center moratorium bills. Do not create a row without a bill number.
   - Maryland — Statewide moratorium legislation reported in committee (2026 session); bill number not given by the source
   - https://www.electricchoice.com/datacenters/moratoriums/#maryland-statewide
@@ -84,11 +90,5 @@ States: unknown 136, MD? 3, CO? 1, FL? 1, KY? 1, MI? 1, MN? 1, MT? 1, NJ? 1, OH?
 - **Dowagiac, MI?** — google-news redirect, locality 'Dowagiac'
   - 'It sounds like someone set up a vacuum, like in your living room': Michigan residents sue AI data center emitting noise 24/7 — company fined for industrial noise ordinance violations, offers to buy homes from residents
   - https://news.google.com/rss/articles/CBMiggNBVV95cUxQVlZtTnRtclpzbDdnWjdXNFMwNTJxLUwyblVkLWp4X3JRQVVjX2NDalcxa3VfWW10cmhqc1FtNmdweFh6M0duNDBvR2lPUWltZ0YzOUxxeUxwYVQ0N0dMbUtxeEE2U01Pd0JSUjA2QXdzLVNMZ185c05SRDlCb0dNNGQxejNrclB6eExjTW9URHk4T1VhNm9ESmhXbVhzRHczLTRPd0ZBSU5WcTNBLWU1UTk3Rm85OVBOYzRKNzNyTVhUTjl2TVZHZm9EdmJwZml3MEdpR3NuYzVZZWN0eHNXaU9mMFlPSEpiVkRNeTBTQXF4UTRGYkJwWi00NlViNnFrX1FlRlNWRURLVHVfajY1WXIwd1Bjcmt3c285bWs1elpJUXNzaXZHeTFrb2JQMEE4Zy1tMVczYlUxbTFsNXRTVlVTYlh5eFYzR0M3MVdHMlhYOGlQbjZQNWFYem9zZURhdTlGaWR3RHo3dkdKdndUMTJQUkdvdnJBMVN6b1ZJOE9Idw?oc=5
-- **Minnesota (HF 4888), MN?** — document named: revisor.mn.gov / house.mn.gov bill page for HF 4888 — confirm scope, threshold and status.
-  - Minnesota — HF 4888: reported statewide moratorium bill in committee
-  - https://www.electricchoice.com/datacenters/moratoriums/#minnesota-hf-4888
-- **Yellowstone, MT?** — google-news redirect, locality 'Yellowstone'
-  - Montana residents demand vote on data center moratorium as Yellowstone County takes no action
-  - https://news.google.com/rss/articles/CBMijwFBVV95cUxPVklPdC1LdHA4N001ZHdSaGhOWEJucS1iY2pSX3VSdnRYcldTM05XYnEybG12V0E5UlR0Q3FvZExrMjI4NUpMUjVlNjJ4Q0REbFk2ckdscVhkczVDWGNYd1l5T1RUT2pZOUFlNm5wSDZ1SFMySjBwOEF6M1lNUVlQSDFrcDhWRzI1b3dINmo3VQ?oc=5
-- …and 122 more (raise --limit)
+- …and 151 more (raise --limit)
 

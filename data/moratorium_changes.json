@@ -3694,5 +3694,89 @@
     "locality": "Waterford Township, MI",
     "kind": "status_changed",
     "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-09-29",
+    "id": "augusta-ga",
+    "locality": "Augusta, GA",
+    "kind": "shortened",
+    "detail": "Now runs to 2026-09-15"
+  },
+  {
+    "date": "2026-09-29",
+    "id": "athens-clarke-county-ga",
+    "locality": "Athens-Clarke County, GA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Rescinded"
+  },
+  {
+    "date": "2026-09-29",
+    "id": "pierce-township-oh",
+    "locality": "Pierce Township, OH",
+    "kind": "extended",
+    "detail": "Now runs to 2027-05-31"
+  },
+  {
+    "date": "2026-09-29",
+    "id": "janesville-wi",
+    "locality": "Janesville, WI",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-29",
+    "id": "richmond-ca",
+    "locality": "Richmond, CA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-29",
+    "id": "gilroy-ca",
+    "locality": "Gilroy, CA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-29",
+    "id": "los-angeles-county-ca",
+    "locality": "Los Angeles County, CA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-29",
+    "id": "upper-township-nj",
+    "locality": "Upper Township, NJ",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-09-29",
+    "id": "augusta-richmond-county-ga",
+    "locality": "Augusta-Richmond County, GA",
+    "kind": "shortened",
+    "detail": "Now runs to 2026-09-15"
+  },
+  {
+    "date": "2026-09-29",
+    "id": "waterford-township-mi",
+    "locality": "Waterford Township, MI",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-09-29",
+    "id": "rockdale-county-ga",
+    "locality": "Rockdale County, GA",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-09-29",
+    "id": "scott-county-ky",
+    "locality": "Scott County, KY",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
   }
 ]
