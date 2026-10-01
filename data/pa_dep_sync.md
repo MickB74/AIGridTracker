@@ -1,4 +1,4 @@
-# PA DEP data-center tracker sync — 2026-09-30
+# PA DEP data-center tracker sync — 2026-10-01
 
 Source: https://gis.dep.pa.gov/DataCenterPermitTracker/
 
