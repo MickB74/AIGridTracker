@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 9068,
+  "count": 9075,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -95244,7 +95244,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-30",
-      "last_seen": "2026-10-01"
+      "last_seen": "2026-10-03"
     },
     {
       "title": "Talarico says data centers shouldn’t be ‘running over’ Texas communities and local governments",
@@ -96003,7 +96003,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-10-03"
     },
     {
       "title": "Building data centers at the speed of Texas",
@@ -96025,7 +96025,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-01"
+      "last_seen": "2026-10-03"
     },
     {
       "title": "Talarico vs. Paxton: Different plans for Texas’ data center boom",
@@ -99754,6 +99754,83 @@
       "locality": "Starke County",
       "state": "IN",
       "first_seen": "2024-09-20",
+      "last_seen": "2026-10-03"
+    },
+    {
+      "title": "City of Brownsville, TX - Municipal Government. . The City of Brownsville Commission will consider several items on the October 6 agenda, including a temporary moratorium for High-Intensity Data Processing Facilities, an ordinance for a Municipal Drainage U",
+      "outlet": "facebook.com",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNcElrcEo3dTdRLVJ6Zm5UcXZhblFIeGVJMG1DOHNHZmxRWEc3ZnNjVk5PLTFnLXdCNzhGT21yWHFZZG92VW82WkFuMm9ERjR2alAwaFY1Y2RwSGJCR01zd2d3cmRTMlEtYnA1Vkxpd0dGNU1FMzFQT3lMZzItS3l4VkgzWXhaM1lRcnM2b3o4b2hKOXBkamp4OV9RazBVbWNWX2c?oc=5",
+      "published": "Sat, 03 Oct 2026 16:49:55 GMT",
+      "published_iso": "2026-10-03T16:49:55+00:00",
+      "locality": "Brownsville",
+      "state": "TX",
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
+    },
+    {
+      "title": "Data center lawsuit against Andover Township dismissed",
+      "outlet": "WRNJ Radio",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQOGlZN0Y1VjFHRURHSEt1UzNsX3AzeFpMZW1JT1ByU1I1ajBMWEgxYXI0QnJqQWtDUXlKVmNobWZ1X0U0ZWNfbVZnbG1FU3BoVXVpLUprQmJUeXotd3lZdG4xd3ptcWphMzFJTkpWblc1VDVqdjFINEVoZ1UzX0JQZUhBNA?oc=5",
+      "published": "Fri, 02 Oct 2026 17:29:11 GMT",
+      "published_iso": "2026-10-02T17:29:11+00:00",
+      "locality": "Andover Township",
+      "state": "NJ",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-03"
+    },
+    {
+      "title": "With no ballot question, Butte will begin crafting potential temporary data center ban",
+      "outlet": "Montana Standard",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMmFtQzlFSm16SkE1eUVaWS1EcVRhVDZtTllzc2FUT1NCN29SbkZxQkRLRjdMQ0FvcjBQYjk3djJ3WnBnbGRXNjFVOXRqVjNkX29xQktCeUppZWNDdmlZMzVDZ3FockRRQVUyVG1EakpwMHQtRGV1X0M4VTRubjBmT09fTEpKTDZyLXdPTjd1Y2xBMkRVR1pCQmtCTlM3M1ZtUXVqQmJ3?oc=5",
+      "published": "Thu, 01 Oct 2026 11:45:00 GMT",
+      "published_iso": "2026-10-01T11:45:00+00:00",
+      "locality": null,
+      "state": "MT",
+      "first_seen": "2026-10-01",
+      "last_seen": "2026-10-03"
+    },
+    {
+      "title": "GOP wrestles with rising data center backlash weeks before midterms",
+      "outlet": "thehill.com",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQSHdXdjg4OFVpTVlEcWpxS1ZjNnRKLWFNaVJTeEFaRUpBSzRTd3k1aDY2aUN4eUZhYmR3NkFaNElrSHM5bWNnV1FCUDBMMklFOTVhOWVuLUhwYmJQamg1QV8waTFfRExFU0F3Y0JjaWFkMHcxNDA3SjU2a2ZXVG9BMmRNNNIBiAFBVV95cUxNcERxMlNZSWpLZ05ER3FPeGNROEdxS2RpOF9xNWNCRnRKZ01xNW5UMExOYkZRX2ZIZkJlQTlsdm5RU1FpTWRjRHZfNzZKMzZnWVNHVGpSS2tvRnp2YmdZVnI5Ulk5V0d1M3RTYW94R1E5clYtUEM0WHJROHlVSnY0RDl3UDQ4R2x0?oc=5",
+      "published": "Thu, 01 Oct 2026 10:00:00 GMT",
+      "published_iso": "2026-10-01T10:00:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-01",
+      "last_seen": "2026-10-03"
+    },
+    {
+      "title": "Editorial: Gov. Spanberger’s data center plan provides pathway for Virginia",
+      "outlet": "The Virginian-Pilot",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQOWlSU2h2cmVrekl6QmQ4VFItN3lmckZySDJOcUExQ1FLX0dlMjdXVmtMTTJydWo2VEVyTzJZaHVPZkVLSXAtZW9ZSkY0SDYtZlJWUzBPeG9yMmZIUzRwMUhPSjJFbGR0RjJhcmpaWEtBeGwxQ1k5UWdDcnpaWU40bDNwNFpScGVCM21JbER3UVRsRjNxTk9ZcUVvQkppeWNGeHUyaXdvLXMxbWduTzBNUU13?oc=5",
+      "published": "Sat, 03 Oct 2026 20:48:45 GMT",
+      "published_iso": "2026-10-03T20:48:45+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
+    },
+    {
+      "title": "Virginia governor unveils new energy plan amid data center boom",
+      "outlet": "Yahoo",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQM0lJS0ZCeUJzTkhUVVpod203YU9NdWl4TUMwTE9TenVsdkRleVVERGtEUFJ5V2Q2dkhmNU9Wa2hUZW9ZUkFaRjFTdlk4MTMtODE4YUEyS0hmTWtFUjlOQUd0VkNXdnlYZ3g4X0xjMU5BbzJoQ2JqSHZJbDhrTHA4aUd4WU5WMVo2dkpjWFluRQ?oc=5",
+      "published": "Thu, 01 Oct 2026 23:13:45 GMT",
+      "published_iso": "2026-10-01T23:13:45+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-01",
+      "last_seen": "2026-10-03"
+    },
+    {
+      "title": "Google could help pay for Georgia nuclear upgrades",
+      "outlet": "AOL.com",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9jRHMzVW52T24xNFVmc0xOdXBvV1VPeFZOT2RJSmdid1NCcUhnOGJVeGJrYTR3T01TZnVTX2JJWW1QUGpyYTNvak1KZlB6NXpWcW0ySEkySDlVTGQxRG9MUUl4V2t6Vlg1Yk9pSlNlcE4xeEhnWk5HVE5MSUtsUQ?oc=5",
+      "published": "Fri, 02 Oct 2026 09:01:34 GMT",
+      "published_iso": "2026-10-02T09:01:34+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-10-02",
       "last_seen": "2026-10-03"
     }
   ]
