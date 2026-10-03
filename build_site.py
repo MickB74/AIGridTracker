@@ -65,6 +65,7 @@ from src.constants import (
     EDGECONNEX_2024_HEADLINE, STACK_2023_HEADLINE,
     CYRUSONE_2023_HEADLINE, VANTAGE_2023_HEADLINE,
     COREWEAVE_PROFILE, QTS_PROFILE, SWITCH_PROFILE, COMPASS_PROFILE,
+    DC_CLEAN_ENERGY_LAWS_DF,
     SOURCES, registry_provenance, has_value,
     QUERY_COEFFS, TOKEN_COEFFS, GRID_INTENSITY, ONSITE_WUE, OFFSITE_WATER,
     WATER_STRESS_CLIMATE_MULTIPLIER,
@@ -857,6 +858,7 @@ NAV_GROUPS = [
         # data/legislation_cache.json exists: run scripts/fetch_legislation.py
         # with LEGISCAN_API_KEY, else the page renders a placeholder.
         ("Community playbook", "community-value.html"),
+        ("Clean energy laws", "clean-energy-laws.html"),
     ]),
     ("The facts", [
         ("Health risks", "health-risks.html"),
@@ -12111,6 +12113,160 @@ state should tailor them before they go in front of a commission.</p></div>
             ("CBA clauses", f"{SITE_URL}/cba-clauses")))
 
 
+def build_clean_energy_laws():
+    """Data center clean energy laws & requirements tracker."""
+    df = DC_CLEAN_ENERGY_LAWS_DF.copy()
+
+    enacted = df[df["status"] == "Enacted"].copy()
+    proposed = df[df["status"] == "Proposed"].copy()
+    failed = df[df["status"] == "Failed"].copy()
+
+    n_enacted = len(enacted)
+    n_mandate = len(enacted[enacted["requirement_type"].isin(["mandate", "regulatory"])])
+    n_incentive = len(enacted[enacted["requirement_type"] == "incentive"])
+    n_proposed = len(proposed)
+    n_failed = len(failed)
+    n_federal = len(df[df["jurisdiction"] == "Federal"])
+    n_states = df[~df["jurisdiction"].isin(["Federal", "Ireland"])]["jurisdiction"].nunique()
+
+    def _status_badge(status):
+        colors = {
+            "Enacted": "#2a9d4e",
+            "Proposed": "#4361ee",
+            "Failed": "#d62828",
+        }
+        c = colors.get(status, "#999")
+        return f'<span class="badge" style="background:{c};color:#fff">{esc(status)}</span>'
+
+    def _type_badge(rtype):
+        labels = {
+            "mandate": "Mandate",
+            "incentive": "Incentive-tied",
+            "regulatory": "Regulatory order",
+            "proposed": "Proposed",
+            "failed": "Failed",
+            "federal": "Federal",
+        }
+        colors = {
+            "mandate": "#e36414",
+            "incentive": "#3a86a8",
+            "regulatory": "#7b2d8e",
+            "proposed": "#4361ee",
+            "failed": "#d62828",
+            "federal": "#555",
+        }
+        label = labels.get(rtype, rtype)
+        c = colors.get(rtype, "#999")
+        return f'<span class="badge" style="background:{c};color:#fff">{esc(label)}</span>'
+
+    def _scope_label(scope):
+        labels = {
+            "dc_specific": "Data-center specific",
+            "large_load": "Large energy users (incl. DCs)",
+            "economy": "Economy-wide",
+        }
+        return labels.get(scope, scope or "")
+
+    def _law_card(row):
+        source_link = ""
+        if has_value(row.get("source")):
+            source_link = (f' <a href="{esc(row["source"])}" rel="nofollow" '
+                           f'target="_blank">Source</a>')
+        threshold = ""
+        if has_value(row.get("threshold_mw")):
+            threshold = f' | Threshold: {row["threshold_mw"]}+ MW'
+        as_of = ""
+        if has_value(row.get("as_of")):
+            as_of = f' | Verified: {esc(str(row["as_of"]))}'
+        return f"""
+<div class="card" style="margin-bottom:12px">
+  <h3 style="margin:0 0 6px">{esc(row['jurisdiction'])} — {esc(row['law'])}</h3>
+  <p style="margin:4px 0">{_status_badge(row['status'])} {_type_badge(row['requirement_type'])}
+  <span class="muted" style="font-size:13px">{esc(_scope_label(row.get('scope')))} | {row.get('year', '')}{threshold}{as_of}</span></p>
+  <p style="margin:6px 0">{esc(row['requirement'])}</p>
+  <p class="muted" style="font-size:13px;margin:4px 0">{source_link}</p>
+</div>"""
+
+    enacted_cards = "".join(_law_card(r) for _, r in enacted.iterrows())
+    proposed_cards = "".join(_law_card(r) for _, r in proposed.iterrows())
+    failed_cards = "".join(_law_card(r) for _, r in failed.iterrows())
+
+    provenance = provenance_html("DC_CLEAN_ENERGY_LAWS_DF")
+
+    body = f"""
+<header>
+  <div class="kicker">Policy tracker</div>
+  <h1>Data Center Clean Energy Laws</h1>
+  <p class="sub">Laws, regulations, and incentive programs that require data
+  centers to procure, generate, or bring clean energy — enacted, proposed,
+  and failed — across {n_states} states plus federal proposals.</p>
+</header>
+<div class="stat-bar">
+  <div class="stat"><b>{n_enacted}</b><span>Enacted</span></div>
+  <div class="stat"><b>{n_mandate}</b><span>Mandates &amp; orders</span></div>
+  <div class="stat"><b>{n_incentive}</b><span>Incentive-tied</span></div>
+  <div class="stat"><b>{n_proposed}</b><span>Proposed</span></div>
+  <div class="stat"><b>{n_failed}</b><span>Failed</span></div>
+  <div class="stat"><b>{n_federal}</b><span>Federal bills</span></div>
+</div>
+
+{provenance}
+
+<details class="more sect" open>
+<summary><h2 style="display:inline">Enacted laws &amp; regulations</h2></summary>
+<p>Laws and regulatory orders currently in effect — including mandates (must
+comply to operate or connect), incentive-tied requirements (must comply to keep
+tax breaks), and regulatory orders (PUC/PSC rulings).</p>
+{enacted_cards}
+</details>
+
+<details class="more sect">
+<summary><h2 style="display:inline">Proposed &amp; pending</h2></summary>
+<p>Bills introduced but not yet enacted. Status can change within a session —
+verify before citing.</p>
+{proposed_cards}
+</details>
+
+<details class="more sect">
+<summary><h2 style="display:inline">Failed &amp; expired</h2></summary>
+<p>Bills that were voted down, died in committee, or expired without action.
+Listed because they show the direction of debate and often return in revised
+form the next session.</p>
+{failed_cards}
+</details>
+
+<section>
+<h2>Key distinctions</h2>
+<div class="note info">
+<p><strong>True mandates</strong> (California SB 57, New Jersey S731, Oregon
+POWER Act): data centers must procure or generate clean energy as a condition
+of operating or connecting to the grid.</p>
+<p><strong>Incentive-tied requirements</strong> (Illinois, Michigan): data
+centers can operate without clean energy but lose substantial tax exemptions
+if they don't meet the threshold.</p>
+<p><strong>Cost-allocation orders</strong> (Georgia PSC, Michigan MPSC,
+Maryland RELIEF Act): don't mandate clean energy directly, but prevent
+cost-shifting to residential ratepayers — which removes the subsidy that
+made fossil-powered operation artificially cheap.</p>
+</div>
+</section>
+
+<section>
+<p class="muted">See also: <a href="cba-clauses">Model CBA clauses</a> |
+<a href="legislation">AI &amp; Data Center Legislation</a> |
+<a href="moratoriums">Moratorium tracker</a></p>
+</section>
+"""
+    return page(
+        "Data Center Clean Energy Laws — AI GridWatch",
+        "Laws and regulations requiring data centers to procure clean energy: enacted mandates, incentive programs, proposed bills, and failed attempts across US states and federal.",
+        body, f"{SITE_URL}/clean-energy-laws",
+        og_image=_og_image("clean-energy-laws"),
+        jsonld=_breadcrumb(
+            ("Home", SITE_URL),
+            ("Clean energy laws", f"{SITE_URL}/clean-energy-laws")))
+
+
 _COMMUNITY_VALUE_MD = """
 **The core idea.** A data center is a one-time chance to trade a local resource
 — land, grid access, water, and a permit — for lasting community value. The
@@ -16622,6 +16778,7 @@ def main():
     # footer link and sitemap entry.
     (WEB / "studies.html").write_text(build_studies(), encoding="utf-8")
     (WEB / "cba-clauses.html").write_text(build_cba_clauses(), encoding="utf-8")
+    (WEB / "clean-energy-laws.html").write_text(build_clean_energy_laws(), encoding="utf-8")
     (WEB / "officials.html").write_text(build_officials(), encoding="utf-8")
     (WEB / "scorecard.html").write_text(build_official_scorecard(), encoding="utf-8")
     _n_records = publish_candidate_records()
@@ -16702,7 +16859,7 @@ def main():
              "projects", "impact", "bills", "outlook",
              "learn", "puc", "executives", "about", "search", "dividend",
              "data-centers", "environment", "studies", "complaints",
-             "cba-clauses", "officials", "case-studies",
+             "cba-clauses", "clean-energy-laws", "officials", "case-studies",
              "community-value", "open-data", "senate-races", "senators", "house-races",
              "hearing-questions", "opposition", "glossary", "tax-breaks", "siting",
              "companies/", "states/", "blog/", "news/", "videos", "map",

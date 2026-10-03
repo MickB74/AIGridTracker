@@ -9307,6 +9307,19 @@ REGISTRY_PROVENANCE = {
             "but no verification date is recorded. The linked site is "
             "authoritative if a URL has moved."),
     },
+    "DC_CLEAN_ENERGY_LAWS_DF": {
+        "label": "Data center clean energy laws & requirements",
+        "as_of": "2026-10-02",
+        "source": None,
+        "churn": "high",
+        "caveat": (
+            "Laws, regulations, and incentive-tied requirements that mandate "
+            "or condition benefits on data centers procuring clean energy. "
+            "Per-row source + as_of. Includes enacted mandates, incentive "
+            "programs, regulatory orders, proposed and failed bills, federal "
+            "proposals, and one international comparison (Ireland). Legislative "
+            "sessions move fast — verify status before citing at a hearing."),
+    },
 }
 
 _CHURN_NOTE = {
@@ -14220,3 +14233,439 @@ MODEL_CLAUSES = {
         "unit": "per MW (one-time bond)",
     },
 }
+
+
+# ── Clean energy laws for data centers ───────────── #
+# Laws, regulations, and incentive-tied requirements that mandate or
+# condition benefits on data centers procuring clean / renewable energy.
+# Rendered by build_site.py::build_clean_energy_laws() -> web/clean-energy-laws.html.
+#
+# `requirement_type`:
+#   mandate     — must comply to operate or connect
+#   incentive   — must comply to keep tax breaks / subsidies
+#   regulatory  — PUC / PSC order, not statute
+#   proposed    — introduced but not enacted
+#   failed      — voted down or died in committee
+#   federal     — federal bill (all pending as of Oct 2026)
+#
+# `scope`:
+#   dc_specific — targets data centers explicitly
+#   large_load  — targets large energy users (MW threshold) that includes DCs
+#   economy     — economy-wide standard that applies to DCs as customers
+#
+# Per-row `source` + `as_of` — same discipline as MORATORIUMS_DF.
+
+DC_CLEAN_ENERGY_LAWS = [
+    # ── Enacted: DC-specific mandates ──
+    {
+        "jurisdiction": "California",
+        "law": "SB 57",
+        "status": "Enacted",
+        "year": 2025,
+        "requirement": (
+            "All retail electricity delivered to tariffed data centers must come "
+            "from 100% zero-carbon resources by January 1, 2030. Must not result "
+            "in resource shuffling or increase carbon emissions elsewhere in the "
+            "western grid."
+        ),
+        "requirement_type": "mandate",
+        "scope": "dc_specific",
+        "threshold_mw": None,
+        "source": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB57",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "California",
+        "law": "AB 2383 + 6-bill package",
+        "status": "Enacted",
+        "year": 2026,
+        "requirement": (
+            "Seven-bill package: data centers must comply with state clean energy "
+            "procurement requirements and pay incremental generation costs for at "
+            "least 10 years. AB 1577 creates CEC reporting obligations (PUE, fuel "
+            "consumption). Additional water and land-use oversight."
+        ),
+        "requirement_type": "mandate",
+        "scope": "dc_specific",
+        "threshold_mw": None,
+        "source": "https://www.mayerbrown.com/en/insights/publications/2026/09/californias-governor-signs-nations-most-comprehensive-data-center-laws-reshaping-regulation-of-energy-water-and-land-use",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "New Jersey",
+        "law": "S731 / A796",
+        "status": "Enacted",
+        "year": 2026,
+        "requirement": (
+            "Data centers with 100+ MW peak demand must bring their own new clean "
+            "energy, pay for grid upgrades, commit to covering at least 85% of "
+            "requested electrical service for minimum 10 years, and reduce or shift "
+            "energy use during periods of high grid stress. Creates a separate "
+            "utility rate class for large-load data centers."
+        ),
+        "requirement_type": "mandate",
+        "scope": "dc_specific",
+        "threshold_mw": 100,
+        "source": "https://pub.njleg.gov/Bills/2026/S1000/731_R3.HTM",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "Oregon",
+        "law": "HB 3546 / POWER Act",
+        "status": "Enacted",
+        "year": 2025,
+        "requirement": (
+            "Large energy users (20+ MW) must enter 10-year power-purchase "
+            "agreements, pay for projected energy use and new transmission "
+            "infrastructure, install on-site zero-carbon energy storage, and "
+            "participate in demand response programs. Creates a separate rate class. "
+            "PUC renewable energy requirements before coming online."
+        ),
+        "requirement_type": "mandate",
+        "scope": "large_load",
+        "threshold_mw": 20,
+        "source": "https://www.climatesolutions.org/article/2026-05/oregons-power-act-first-its-kind-protect-oregonians-utility-bills-data-center",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "New York",
+        "law": "S6394A / Responsible Data Center Development Act",
+        "status": "Enacted",
+        "year": 2026,
+        "requirement": (
+            "Data centers with 5+ MW peak load must derive 33% of electricity from "
+            "renewable energy 2030-2034, 67% from 2035-2039, and 90% by 2040 and "
+            "after. Must derive as much energy as feasible from on-site renewable "
+            "generation. Prohibits incentives for fossil fuel PPAs. Governor also "
+            "issued executive order for 1-year moratorium on hyperscale DCs (50+ MW)."
+        ),
+        "requirement_type": "mandate",
+        "scope": "dc_specific",
+        "threshold_mw": 5,
+        "source": "https://www.nysenate.gov/legislation/bills/2025/S6394/amendment/A",
+        "as_of": "2026-10-02",
+    },
+    # ── Enacted: incentive-tied ──
+    {
+        "jurisdiction": "Illinois",
+        "law": "SB 1591 / Data Center Investment Program",
+        "status": "Enacted",
+        "year": 2019,
+        "requirement": (
+            "To receive up to 20 years of state/local sales and use tax exemptions, "
+            "data centers must become carbon neutral or obtain green building "
+            "certification within 2 years of entering service. Requires $250M+ "
+            "investment over 5 years and 20+ new FTE jobs. New entrants paused "
+            "July 2026 by Gov. Pritzker."
+        ),
+        "requirement_type": "incentive",
+        "scope": "dc_specific",
+        "threshold_mw": None,
+        "source": "https://dceo.illinois.gov/expandrelocate/incentives/datacenters.html",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "Michigan",
+        "law": "SB 237 / HB 4906 (Public Act 207 of 2024)",
+        "status": "Enacted",
+        "year": 2024,
+        "requirement": (
+            "Data centers must source 90% of electricity from clean or renewable "
+            "energy to claim sales and use tax exemptions. Extended through "
+            "December 31, 2050."
+        ),
+        "requirement_type": "incentive",
+        "scope": "dc_specific",
+        "threshold_mw": None,
+        "source": "https://www.michiganbusiness.org/services/data-center/",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "Minnesota",
+        "law": "HF 16 (Chapter 12, 2025 1st Special Session)",
+        "status": "Enacted",
+        "year": 2025,
+        "requirement": (
+            "Qualified large-scale data centers must obtain green building "
+            "certification (LEED, Energy Star, ISO 50001) within 3 years. Annual "
+            "fees of $2M-$5M based on peak demand (100-750+ MW) fund low-income "
+            "energy conservation. Utilities must offer voluntary clean energy "
+            "tariffs to commercial and industrial customers."
+        ),
+        "requirement_type": "incentive",
+        "scope": "dc_specific",
+        "threshold_mw": 100,
+        "source": "https://www.revisor.mn.gov/laws/2025/1/Session+Law/Chapter/12/",
+        "as_of": "2026-10-02",
+    },
+    # ── Enacted: broader / regulatory ──
+    {
+        "jurisdiction": "Michigan",
+        "law": "2023 Clean Energy Law",
+        "status": "Enacted",
+        "year": 2023,
+        "requirement": (
+            "60% renewable by 2035, 100% low-carbon by 2040 for all utilities. "
+            "Applies to data center load like any other customer."
+        ),
+        "requirement_type": "mandate",
+        "scope": "economy",
+        "threshold_mw": None,
+        "source": "https://blog.ucs.org/lee-shaver/as-data-centers-test-michigans-grid-its-time-to-strengthen-clean-energy-standards-not-abandon-them/",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "Michigan",
+        "law": "MPSC Large Load Order",
+        "status": "Enacted",
+        "year": 2026,
+        "requirement": (
+            "Any new customer with 100+ MW single-site load must sign 15-year "
+            "contracts, pay for 80% minimum of agreed usage, and pay exit fees. "
+            "Pushes grid infrastructure costs to data center developers."
+        ),
+        "requirement_type": "regulatory",
+        "scope": "large_load",
+        "threshold_mw": 100,
+        "source": "https://bridgemi.com/michigan-environment-watch/michigan-oks-landmark-regulations-that-push-up-front-costs-to-data-centers/",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "Maryland",
+        "law": "Utility RELIEF Act",
+        "status": "Enacted",
+        "year": 2026,
+        "requirement": (
+            "Data centers must pay for electric grid upgrades and register with "
+            "the Public Service Commission. Creates a first-of-its-kind rate class "
+            "specifically for data centers. Prevents cost-shifting to residential "
+            "ratepayers."
+        ),
+        "requirement_type": "mandate",
+        "scope": "dc_specific",
+        "threshold_mw": None,
+        "source": "https://thedailyrecord.com/2026/06/15/maryland-energy-law-data-centers-grid-upgrades/",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "Georgia",
+        "law": "PSC Large Load Order + Customer Identified Resource Program",
+        "status": "Enacted",
+        "year": 2025,
+        "requirement": (
+            "Customers drawing 100+ MW must operate under customized contracts, "
+            "not standard rates. The Customer Identified Resource program lets "
+            "large customers propose and fund their own clean energy projects for "
+            "bill credits, up to 3 GW through 2035. Not a mandate — an opt-in "
+            "pathway."
+        ),
+        "requirement_type": "regulatory",
+        "scope": "large_load",
+        "threshold_mw": 100,
+        "source": "https://www.canarymedia.com/articles/data-centers/georgia-power-byo-clean-energy",
+        "as_of": "2026-10-02",
+    },
+    # ── Proposed / pending ──
+    {
+        "jurisdiction": "Illinois",
+        "law": "POWER Act",
+        "status": "Proposed",
+        "year": 2026,
+        "requirement": (
+            "Would require hyperscale data centers to pay for their own energy "
+            "from renewable sources, report water usage, and negotiate community "
+            "benefit agreements."
+        ),
+        "requirement_type": "proposed",
+        "scope": "dc_specific",
+        "threshold_mw": None,
+        "source": "https://capitolnewsillinois.com/news/power-act-data-center-regulation-wont-move-forward-this-spring/",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "Connecticut",
+        "law": "HB 5469",
+        "status": "Proposed",
+        "year": 2026,
+        "requirement": (
+            "Any electric customer with 50+ MW peak demand must either contract "
+            "with a colocated electric supplier or demonstrate it can supply its "
+            "full anticipated load from a new generation source (bring your own "
+            "power)."
+        ),
+        "requirement_type": "proposed",
+        "scope": "large_load",
+        "threshold_mw": 50,
+        "source": "https://hartfordbusiness.com/article/legislation-would-codify-bring-your-own-power-mandate-for-data-centers-large-power-users/",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "New Jersey",
+        "law": "S680",
+        "status": "Proposed",
+        "year": 2026,
+        "requirement": (
+            "Would require new AI data centers and crypto mining facilities to "
+            "source electricity exclusively from renewable energy or newly "
+            "constructed nuclear. BPU-reviewed energy plan before project approval. "
+            "Applies to facilities over 100 MW."
+        ),
+        "requirement_type": "proposed",
+        "scope": "dc_specific",
+        "threshold_mw": 100,
+        "source": "https://www.nixonpeabody.com/insights/alerts/2026/04/09/new-jersey-pushes-for-data-center-clean-power-mandates",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "South Carolina",
+        "law": "H. 4583",
+        "status": "Proposed",
+        "year": 2026,
+        "requirement": (
+            "Would revoke all tax incentives and exemptions for incoming data "
+            "centers and require data centers to be entirely energy independent."
+        ),
+        "requirement_type": "proposed",
+        "scope": "dc_specific",
+        "threshold_mw": None,
+        "source": "https://www.ncelenviro.org/articles/states-act-to-align-data-center-energy-demand-with-climate-goals/",
+        "as_of": "2026-10-02",
+    },
+    # ── Failed ──
+    {
+        "jurisdiction": "Connecticut",
+        "law": "HB 5076",
+        "status": "Failed",
+        "year": 2025,
+        "requirement": (
+            "Would have required AI data centers to derive at least 50% of energy "
+            "from renewable sources, implement energy storage, and adopt water "
+            "conservation."
+        ),
+        "requirement_type": "failed",
+        "scope": "dc_specific",
+        "threshold_mw": None,
+        "source": "https://www.billtrack50.com/billdetail/1772898",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "Washington",
+        "law": "HB 2515",
+        "status": "Failed",
+        "year": 2026,
+        "requirement": (
+            "Would have required 80% clean electricity by 2031 and 100% by 2046 "
+            "for qualifying large energy facilities (20+ MW). Required clean "
+            "energy procurement, cost-shifting protections, and demand response. "
+            "Passed House 51-41, died in Senate."
+        ),
+        "requirement_type": "failed",
+        "scope": "large_load",
+        "threshold_mw": 20,
+        "source": "https://www.dwt.com/blogs/energy--environmental-law-blog/2026/03/washington-legislature-delays-data-center-bill",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "Virginia",
+        "law": "HB 155 and 2026 session bills",
+        "status": "Failed",
+        "year": 2026,
+        "requirement": (
+            "HB 155 would have required SCC review of whether large users (25+ MW) "
+            "contracted sufficient renewable energy. Other proposals would have "
+            "required zero-carbon procurement on an accelerated RPS schedule. "
+            "Legislature ended session without passing clean energy requirements; "
+            "imposed $600M electricity-use tax instead."
+        ),
+        "requirement_type": "failed",
+        "scope": "dc_specific",
+        "threshold_mw": 25,
+        "source": "https://www.canarymedia.com/articles/data-centers/virginia-data-centers-new-tax",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "Oregon",
+        "law": "HB 2816",
+        "status": "Failed",
+        "year": 2023,
+        "requirement": (
+            "Would have required data centers to demonstrate 60% carbon-free power "
+            "by 2027, 80% by 2030, 90% by 2035, and 100% by 2040. Killed in "
+            "committee; the POWER Act (HB 3546) was its successor."
+        ),
+        "requirement_type": "failed",
+        "scope": "dc_specific",
+        "threshold_mw": None,
+        "source": "https://www.oregonlegislature.gov/marsh/Documents/HB2816_CleanElecforBigTech.pdf",
+        "as_of": "2026-10-02",
+    },
+    # ── Federal proposals ──
+    {
+        "jurisdiction": "Federal",
+        "law": "GRID Act (S. 3852)",
+        "status": "Proposed",
+        "year": 2026,
+        "requirement": (
+            "New data centers (20+ MW) must derive all energy, including backup, "
+            "from on-site or non-grid sources. Existing facilities get 10-year "
+            "transition. Civil penalties up to $1 million per day. Bipartisan: "
+            "Sens. Blumenthal (D-CT) and Hawley (R-MO)."
+        ),
+        "requirement_type": "federal",
+        "scope": "dc_specific",
+        "threshold_mw": 20,
+        "source": "https://www.congress.gov/bill/119th-congress/senate-bill/3852/all-info",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "Federal",
+        "law": "DATA Act",
+        "status": "Proposed",
+        "year": 2026,
+        "requirement": (
+            "Would exempt fully off-grid power suppliers from the Federal Power "
+            "Act and DOE regulation — enables but does not require clean energy. "
+            "Sen. Tom Cotton (R-AR)."
+        ),
+        "requirement_type": "federal",
+        "scope": "dc_specific",
+        "threshold_mw": None,
+        "source": "https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/march/the-data-act-of-2026-and-the-future-of-data-center-development/",
+        "as_of": "2026-10-02",
+    },
+    {
+        "jurisdiction": "Federal",
+        "law": "Data Center Water and Energy Disclosure Act",
+        "status": "Proposed",
+        "year": 2026,
+        "requirement": (
+            "Transparency only — requires data centers to report energy and water "
+            "consumption. No clean energy mandate. Sen. Dick Durbin."
+        ),
+        "requirement_type": "federal",
+        "scope": "dc_specific",
+        "threshold_mw": None,
+        "source": "https://www.afslaw.com/perspectives/alerts/the-future-data-center-power-federal-policy-trends",
+        "as_of": "2026-10-02",
+    },
+    # ── International comparison ──
+    {
+        "jurisdiction": "Ireland",
+        "law": "CRU Large Energy User Connection Policy",
+        "status": "Enacted",
+        "year": 2025,
+        "requirement": (
+            "Data centers must meet at least 80% of annual energy demand with "
+            "additional renewable electricity projects generating in Ireland. "
+            "6-year glide path. Above 10 MVA, must provide on-site or proximate "
+            "generation at 100% of grid connection capacity."
+        ),
+        "requirement_type": "mandate",
+        "scope": "dc_specific",
+        "threshold_mw": None,
+        "source": "https://www.rte.ie/news/business/2025/1212/1548674-80-of-data-centre-energy-must-come-from-renewables-cru/",
+        "as_of": "2026-10-02",
+    },
+]
+
+DC_CLEAN_ENERGY_LAWS_DF = pd.DataFrame(DC_CLEAN_ENERGY_LAWS)

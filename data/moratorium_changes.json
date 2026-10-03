@@ -3778,5 +3778,12 @@
     "locality": "Scott County, KY",
     "kind": "status_changed",
     "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-02",
+    "id": "waterford-township-mi",
+    "locality": "Waterford Township, MI",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
   }
 ]

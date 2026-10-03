@@ -72,6 +72,303 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "amazon-built-together-1-billion-data-center-communities-2026",
+        "art": "money",
+        "section": "stories",
+        "title": "Amazon Pledged $1 Billion to Data Center Communities. Here Is What the Number Actually Means.",
+        "seo_title": "Amazon Built Together: $1B pledge vs $276B in data centers",
+        "date": _dt.date(2026, 10, 2),
+        "author": "GridWatch AI",
+        "tags": ["Amazon", "AWS", "NDAs", "community benefits", "moratoriums",
+                 "Indiana", "North Carolina", "Virginia", "Built Together"],
+        "summary": (
+            "AWS announced a $1 billion, five-year community investment "
+            "program called Built Together alongside a promise to stop "
+            "requiring NDAs from local governments. The headline is large. "
+            "The math, measured against Amazon's own capital spending and "
+            "the tax breaks it already claims, is not."
+        ),
+        "body": """On October 2 Amazon Web Services announced
+[Built Together](https://www.usnews.com/news/top-news/articles/2026-10-02/amazon-to-invest-1-billion-over-five-years-in-us-data-center-communities),
+a five-year, $1 billion community investment program for the towns and
+counties where it builds data centers. The same announcement said AWS will
+stop requiring nondisclosure agreements from local governments before sharing
+project details. CEO Matt Garman said the company intends to "share
+information about its plans as early as possible, listen to community
+concerns, and let residents engage as projects progress."
+
+The pledge comes three days after Representative Jamie Raskin, the top
+Democrat on the House Judiciary Committee,
+[sent Amazon a letter](https://democrats-judiciary.house.gov/sites/evo-subsites/democrats-judiciary.house.gov/files/evo-media-document/2026-09-29-raskin-to-jassy-amazon-re-data-center-ndas.pdf)
+requesting information about NDA practices with local officials, and amid a
+wave of community opposition that our own tracker now counts at more than 780
+active data center moratoriums nationwide.
+
+## What Built Together promises
+
+The program's commitments, as AWS described them:
+
+- **Community college tuition** covering fees not met by financial aid for an
+  estimated 300,000 students over five years.
+- **Trade certification centers** expanded from three sites today to 25 by
+  2028, with a target of training 100,000 workers annually.
+- **Energy efficiency upgrades** for more than 30,000 homes and 300 schools
+  and public buildings.
+- **Flexible local grants** for priorities that communities themselves help
+  direct.
+- **Water positive by 2030** across all data centers, meaning AWS would return
+  more water than it uses. The company says it is 75 percent of the way there.
+- **Lower-emission backup generators** at new sites.
+
+AWS also said it would publish its energy and water usage annually and pay
+enough for power to keep local electricity bills from rising.
+
+## The math behind the headline
+
+A billion dollars is a large number in isolation. It is a smaller number next
+to Amazon's own disclosures.
+
+Amazon told investors it spent **$276 billion** on data center infrastructure
+between 2011 and 2025, and expects **$220 billion** in capital expenditures
+in 2026 alone. Built Together's $1 billion over five years works out to
+**$200 million a year** — less than a tenth of one percent of a single year's
+capex budget.
+
+The comparison gets sharper at the state level.
+[Hoodline reported](https://hoodline.com/2026/10/amazon-drops-data-center-secrecy-deals-pledges-1b/)
+that Amazon claimed **$561 million in sales tax exemptions** for its Indiana
+data centers in 2025 alone — nearly three times Built Together's annual
+nationwide commitment. The program does not include a pledge to stop seeking
+those exemptions.
+
+In Richmond County, North Carolina, where AWS is building a $10 billion,
+21-building campus, environmental groups
+[filed legal challenges](https://www.opb.org/article/2026/10/02/amazon-to-invest-dollar1b-into-data-center-communities-amid-backlash-against-data-center-rollouts/)
+in September over air quality permits for nearly 600 diesel backup generators
+on site. Built Together does not address the permitting disputes already
+under way.
+
+## The NDA reversal matters more
+
+The decision to stop requiring NDAs from local governments may be the more
+significant half of the announcement. A University of Mary Washington study
+found that in 25 of 31 Virginia localities with existing or proposed data
+center projects, local officials had signed nondisclosure agreements with
+developers. Microsoft dropped its own data center NDAs earlier in 2026, and
+Pennsylvania, Massachusetts and Delaware all issued executive orders
+restricting the practice this year.
+
+NDAs are not a side issue. When a council member cannot tell constituents what
+has been proposed in their own town, the three-week window between a project's
+public filing and its zoning vote — the window this site exists to serve —
+shrinks to zero. Ending NDAs does not guarantee transparency, but it removes
+the legal barrier that made transparency impossible.
+
+## What a community should do with this
+
+If Amazon announces a data center in your area and references Built Together,
+three questions are worth asking before the zoning hearing:
+
+1. **What is the dollar figure for your community, not the national total?**
+   A billion dollars divided across every AWS data center market is a different
+   number than a billion dollars in your county. Get the local commitment in
+   writing before the vote, not after.
+
+2. **How does the community investment compare to the tax incentives Amazon is
+   requesting?** Indiana's $561 million in sales tax exemptions in a single
+   year is public record. Your state's incentive package should be too. If the
+   give-back is smaller than the giveaway, that is a negotiating fact, not a
+   reason to refuse — but it belongs on the table.
+
+3. **Is the NDA actually gone for your project?** The national policy
+   announcement is not a binding contract with your planning board. Ask
+   whether any confidentiality agreement, letter of intent, or
+   pre-development agreement restricts what your elected officials can
+   disclose, and ask it on the record.
+
+Built Together is the first time a hyperscaler has put a dollar figure on
+community investment at this scale. That is worth noting. Whether the figure
+is large enough to change the economics of a data center deal in any
+individual community is a question the community has to answer with its own
+numbers — and that is what the [meeting brief generator](/start-here) and the
+[CBA clause library](/cba-clauses) on this site are built to help with.
+
+---
+
+*Sources:
+[Reuters via U.S. News](https://www.usnews.com/news/top-news/articles/2026-10-02/amazon-to-invest-1-billion-over-five-years-in-us-data-center-communities),
+[OPB / AP](https://www.opb.org/article/2026/10/02/amazon-to-invest-dollar1b-into-data-center-communities-amid-backlash-against-data-center-rollouts/),
+[Hoodline](https://hoodline.com/2026/10/amazon-drops-data-center-secrecy-deals-pledges-1b/),
+[The Hill](https://thehill.com/policy/technology/6126145-amazon-investment-data-center-communities-energy-water-costs/),
+[Raskin letter (PDF)](https://democrats-judiciary.house.gov/sites/evo-subsites/democrats-judiciary.house.gov/files/evo-media-document/2026-09-29-raskin-to-jassy-amazon-re-data-center-ndas.pdf).
+Moratorium count from the [GridWatch AI tracker](/moratoriums).*
+""",
+    },
+    {
+        "id": "when-the-moratorium-ends-augusta-birmingham-roswell-2026",
+        "art": "review",
+        "section": "stories",
+        "title": "Three Southern Cities Let Their Data Center Moratoriums End. Here Is What They Wrote Instead.",
+        "seo_title": "When a data center moratorium ends: Augusta, Birmingham",
+        "date": _dt.date(2026, 9, 30),
+        "author": "GridWatch AI",
+        "tags": ["Georgia", "Alabama", "Ohio", "Augusta", "Birmingham",
+                 "Roswell", "Pierce Township", "moratoriums", "zoning"],
+        "summary": (
+            "In September, moratoriums in Augusta, Georgia, Birmingham, "
+            "Alabama and Roswell, Georgia all came to an end. Each city "
+            "replaced its pause with permanent rules, but the rules are not "
+            "alike, and Augusta's passed by a single vote. What they cover, "
+            "and what a resident can learn from them before their own "
+            "town's pause runs out."
+        ),
+        "body": """A moratorium is a clock, not a decision. It stops applications
+for a set period so a town can write rules, and when the clock runs out, the
+rules written in the meantime are what a developer will actually face. This
+month three Southern cities reached the end of that clock, and each one
+replaced its pause with a permanent ordinance.
+
+If your town is partway through a pause right now, these three are worth
+reading closely. They show how much a set of rules can vary, how close the
+final vote can be, and which projects were never covered by the pause in the
+first place.
+
+## Augusta, Georgia: 6-5, and the pause is over
+
+Augusta's commission voted 6-5 on Tuesday, September 15 to adopt data center
+rules, ending what [The Augusta Press](https://theaugustapress.com/augusta-data-center-ordinance-passes-6-5/)
+called "an almost three-month moratorium." The paper reports that some
+commissioners said that wasn't long enough.
+
+The pause had already been extended once. On July 21, when it was set to
+expire, [WRDW reported](https://www.wrdw.com/2026/07/21/augusta-leaders-extend-moratorium-new-data-centers/)
+that a motion to extend it by 90 days or more failed on a 5-5 tie. Commissioners
+then unanimously approved a 60-day extension on the condition that three
+public hearings be held at community centers first. The same report notes
+that the moratorium never applied to two projects already under construction:
+a data center near the Haynes Station neighborhood and the QTS campus on
+Gordon Highway.
+
+[WRDW's summary](https://www.wrdw.com/2026/09/09/augusta-releases-final-draft-proposed-data-center-ordinance/)
+of the 29-page final draft, released on September 9, says it would:
+
+- bar data centers from residential and agricultural areas, and allow them in
+  heavy industrial, light industrial, general business and mixed-use zones
+  only after a public hearing and Augusta Commission approval;
+- sort facilities into five size classes, ranging from accessory rooms under
+  2,000 square feet to campuses of 500,000 square feet or more;
+- require a 500-foot buffer from homes and farmland, reduced to 300 feet if
+  the developer builds a berm that blocks the view, and at least 100 feet
+  from roads;
+- cap noise at the property line at 65 decibels by day and 60 at night;
+- require closed-loop cooling and prohibit private wells as a water source;
+- encourage, but not require, community benefits agreements.
+
+Those figures come from the draft as WRDW described it. We could not confirm
+from an open source whether commissioners amended any of them before the
+vote, so check the adopted text with the clerk before you cite one of these
+numbers as Augusta law.
+
+The five no votes were not a formality. Commissioner Jordan Johnson told
+[Augusta CEO](https://augustaceo.com/news/2026/09/augusta-commissioner-says-new-data-center-regs-do-not-go-far-enough/)
+that the ordinance "lacks additional protections from communities where these
+data centers will call home."
+
+## Birmingham, Alabama: the rules were passed three months early
+
+Birmingham handled the timing differently. The council voted on March 3 to
+stop accepting applications for data centers over 20 megawatts for six
+months, [according to WBRC](https://www.wbrc.com/2026/03/04/birmingham-city-council-votes-pause-new-data-center-applications-six-months/).
+Nebius had filed its application for an AI facility before that vote, so its
+project was exempt.
+
+On April 28, the council [delayed its vote on the draft rules](https://www.wbrc.com/2026/04/28/birmingham-city-council-delays-vote-data-center-rules-neighbors-push-more-safeguards/)
+after residents asked for more. Ryan Anderson of the Southern Environmental Law
+Center told the council the group supported a 1,000-foot setback over the proposed
+500 feet, and neighbors pressed for tighter lighting rules. Six weeks later,
+on June 9, the council passed the regulations 6-3 after a public hearing that
+ran nearly three hours, [the Birmingham Times reported](https://www.birminghamtimes.com/2026/06/birmingham-city-council-votes-6-3-to-pass-new-regulations-for-data-centers/).
+The rules took effect when the moratorium lifted. The paper lists these
+requirements:
+
+- a 500-foot setback from residential and urban neighborhood districts (the
+  1,000 feet residents asked for was not adopted), and 1,000 feet from
+  high-capacity transit facilities;
+- a five-acre minimum lot;
+- closed-loop cooling, with water use limited to what a similarly sized
+  office building would use;
+- no onsite gas turbines and no diesel generators running around the clock;
+  solar, fuel cells and batteries are allowed;
+- acoustical walls, plus noise studies before and after construction;
+- notice by certified mail to every property owner within 500 feet.
+
+Birmingham's approach avoided what happened in Augusta, where the rules were
+voted on in the final days of an extension. Birmingham finished its rules
+with three months of the pause still left. The trade-off is that the rules
+were locked in before anyone could see how they worked in practice.
+
+## Roswell, Georgia: unanimous, with less on the public record
+
+Roswell adopted an emergency moratorium unanimously on January 12. It was
+[extended twice](https://roswellconnections.com/datacenters/), first to
+June 26 and then to September 20, while staff wrote a 27-page white paper and
+the Planning Commission held a public hearing. On August 10 the council
+approved the resulting code amendment 5-0, [according to the city's own
+recap](https://roswellconnections.com/mayor-and-council-meeting-recap-aug-10-2026/).
+The amendment defines "data centers" and sets standards for noise, water and
+energy consumption.
+
+That recap does not list the actual numbers, and we could not find an open
+source that does. Roswell shows a common gap. The vote gets covered, but the
+numbers a resident would need to hold a developer to are only in the adopted
+ordinance itself. We found no report of a further extension after
+September 20.
+
+## The other way a moratorium ends
+
+Letting a pause expire into permanent rules is one option. The other is to
+extend it. On September 9, trustees in Pierce Township, Ohio extended their
+zoning moratorium on data center uses until May 31, 2027, [FOX19
+reported](https://www.fox19.com/2026/09/10/pierce-township-trustees-rule-out-data-center-extend-zoning-moratorium/).
+FOX19 also reported the trustees' statement: "We are not considering a data
+center at any site in Pierce Township." Their zoning commission is reviewing
+the code in the meantime.
+
+Neither approach is automatically better. An extension buys time, but Augusta
+shows that commissions can split on how much time they are willing to add. A
+permanent ordinance ends the uncertainty, but it also sets a standard the
+next applicant only has to meet.
+
+## What to take from this if your town is mid-pause
+
+- **Find the expiry date and put it on a calendar.** Our
+  [moratorium tracker](/moratoriums.html) lists the end date for every row
+  that has one and marks the rows where no date has been recorded.
+- **Ask which projects the pause excluded.** Augusta's excluded two projects
+  already under construction, and Birmingham's excluded Nebius. A pause can
+  sound citywide and still leave out the project you are worried about.
+- **Get the draft and track each number in it.** Setback distances, decibel
+  limits, water caps and generator rules are where these ordinances differ.
+  Birmingham residents asked for 1,000 feet, and the council adopted 500.
+- **Watch the hearing schedule.** Augusta's extension came with a condition:
+  three public hearings in community centers before a permanent ordinance.
+  Conditions like that are worth asking for whenever an extension is on the
+  agenda.
+- **Read the adopted text, not the recap.** A news story or a city newsletter
+  will tell you a rule passed. Only the ordinance tells you what it requires.
+
+## See also
+
+- [Augusta, GA community briefing](/communities/augusta-ga.html)
+- [Birmingham, AL community briefing](/communities/birmingham-al.html)
+- [Roswell, GA community briefing](/communities/roswell-ga.html)
+- [Pierce Township, OH community briefing](/communities/pierce-township-oh.html)
+- [Model CBA clauses](/cba-clauses.html), for the protections these
+  ordinances only encourage
+- [Moratorium tracker](/moratoriums.html)
+""",
+    },
+    {
         "id": "vineland-dataone-fine-order-2026",
         "art": "oversight",
         "section": "stories",
