@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 9044,
+  "count": 9050,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -96399,7 +96399,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-30",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-10-03"
     },
     {
       "title": "LG Electronics bets 150 billion won on AI cooling",
@@ -97477,7 +97477,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-10-03"
     },
     {
       "title": "Backlash Engulfs West Virginia Data Center Law",
@@ -97818,7 +97818,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-10-03"
     },
     {
       "title": "Second quarter GDP growth is brought to you by the letters A and I",
@@ -97829,7 +97829,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-30",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-10-03"
     },
     {
       "title": "Here's a look at how Texas is using AI in state government",
@@ -99490,6 +99490,72 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-03-17",
+      "last_seen": "2026-10-03"
+    },
+    {
+      "title": "Amazon vows $1 billion for data center towns, warning U.S. \"can't afford to lose\" AI race",
+      "outlet": "CBS News",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9tRnFMT1cteWhwdjV3LVRQWmc4SkVoY2d1eXNUWjNVRlB6UExZUG8xNW5aVVM4OEljVTJMdk5pYV9QYUFVN25CRzB2dHA4QzV5eHJadHBjNS1ZeEdNc2hSdUdKN09Bby1faTVIcEp1R1ZBWU1ENmgyQVZyeEg?oc=5",
+      "published": "Fri, 02 Oct 2026 17:42:10 GMT",
+      "published_iso": "2026-10-02T17:42:10+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-03"
+    },
+    {
+      "title": "Why Seattle’s data center moratorium isn’t stopping new projects",
+      "outlet": "The Seattle Times",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZmxKZm8tQ3pqSDdRd3lCbk96R0hzQnJmT2tkQktTaVBGV1RadzRaMnZTMVoxaUx2NVB6YlBQWjBReGNwUWUtNGxQdloyNlJPZkVQOC1zdlhjcUJzRGJ3ekN5dVBUVWc2UXV1aXBLQlc3ODAyVWZhSHpvZTRfb205eERXUWp5VVRLY3NCYWk2blR3OEVWdnY1UDJpZTg4aFBZbnl5RlZzckdpWkhweXVkNFNveGVWZlBv?oc=5",
+      "published": "Sat, 03 Oct 2026 13:00:00 GMT",
+      "published_iso": "2026-10-03T13:00:00+00:00",
+      "locality": "Seattle",
+      "state": "WA",
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
+    },
+    {
+      "title": "Senate fails to advance data center and lawmaker stock trading bills before campaign break",
+      "outlet": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQb3YxVkNNX0I2UWVnRlduNjFMYjJpbXByT200WDBVbDEyQXlSWmZjOHhhV3dvQ3c4VXFnSmc2WXpSLVJaYzNONmxCdE02U29ITmtPTVloeDNvWVBMLXJhb0JYbFFoZGtOQmdUVnRweV9POEpyaUh0ajRwUEh6Mkw3N3VYS2xqQS1JVEFzRFUyYmt2cFl5bHI2WHJhdmwzbmxHQkxtektocGhxd2pza09sNFJHUlMzejlQRmRscjhxTjBuMFZwdzBwSWp1R2l2MlVaTlowSmdMaHkwaVFhX0NyaQ?oc=5",
+      "published": "Wed, 30 Sep 2026 18:17:34 GMT",
+      "published_iso": "2026-09-30T18:17:34+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-09-30",
+      "last_seen": "2026-10-03"
+    },
+    {
+      "title": "Around Livingston: Medicaid + ICE + Data Centers + Gateway Tunnel",
+      "outlet": "Patch",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPRzBjR2pHRFhqWFMtaXJVZmNsc1Q0dDdhc1JMbWhQWFFqN2pSakZ6R2p3VURQZ3VBY2ozMzJOZUlZRnliNnF1Ylk2NV9OVkNabGNvcjlrdVRXbmV4UW1SYWRxTG1yazk3cGE3Rmt3MUZzRXgzRWVRenUtWkxISkdfMlYwalhyaEhCZTljYVFVZ3hFbGlXc3VhRWdNMHFsNVXSAbABQVVfeXFMTnI5aUdFSTlseElNYmFPanM0UXg0TEZDWV9LOTZNUWExbmdEOWpTVW5TanV4Y1h2aDVwblB3MjR2aXlFVGJlUFJSQ0N1MEtjdjJlYklCT0JDbGhhRmJHSHFUWkRMb3V5UkdsN1htSWM1aURUaGlrNm5CM0hBVWdUOXhVVWF2MEVZVDFHZ0QxSGU3aURYUmduVmpkbjByWVBTWm0xcmhXX1dpZ0p2VXE2YW0?oc=5",
+      "published": "Sat, 03 Oct 2026 13:00:38 GMT",
+      "published_iso": "2026-10-03T13:00:38+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
+    },
+    {
+      "title": "DCA tool lets municipalities map their vacant land",
+      "outlet": "breakingac.com",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNMk9hUVYzeXBhenU0QjVrbnd3OHFTbENzWXU5VzRnbHJabDJKZlI1dVN1b2N1RjFaODhnTkM3SVNlUTBycjh5MGFhUDBxRmdGeDN6ZzR2SVp3bXVFdDZtV2ExZnk4T3JtYnEtaE9kS2VvN0hZZkczOUtTYWRpTGM0VzVzLVlEQQ?oc=5",
+      "published": "Sat, 03 Oct 2026 05:45:40 GMT",
+      "published_iso": "2026-10-03T05:45:40+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
+    },
+    {
+      "title": "Data center bill falls short in Senate as lawmakers take final votes before the midterms",
+      "outlet": "Santa Cruz Sentinel",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBvYVdXT0xyemEyaTZGZFNXNGYzY3Vka3ZjTHNxbDA3bnREN1hjZk9ZNWNLRklQYS1JZ25xdlJpaHVOVE9MTlRRcFNZSGxYOV9IOTFrQXgxbW1EdURKX05FMl9keF9pYkpQYmhGaHp4cV91SjItYnFwdk5hVF9pekk?oc=5",
+      "published": "Wed, 30 Sep 2026 15:38:07 GMT",
+      "published_iso": "2026-09-30T15:38:07+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-09-30",
       "last_seen": "2026-10-03"
     }
   ]

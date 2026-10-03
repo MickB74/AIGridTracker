@@ -1,11 +1,11 @@
-# PA DEP data-center tracker sync — 2026-10-02
+# PA DEP data-center tracker sync — 2026-10-03
 
 Source: https://gis.dep.pa.gov/DataCenterPermitTracker/
 
 - DEP projects on file: **72**
 - DEP permit records: **374**
-- Added to projects.json: **1**
-- Refreshed: **2**
+- Added to projects.json: **0**
+- Refreshed: **0**
 - Skipped (already tracked by hand): **16**
 
 ## Skipped — hand-written row already covers this
@@ -28,13 +28,4 @@ Left alone on purpose. If the DEP row carries detail ours lacks (a permit trail,
 - DEP 10000066 *Salem Township Data Center Development (Amazon Web Services) - Phase 2* (Salem Township (Luzerne County)) → `aws-salem-township-pa`
 - DEP 10000067 *Falls Township Data Center Development (Amazon Web Services) - Phase 2* (Falls Township (Bucks County)) → `aws-falls-township-pa`
 - DEP 10000068 *Aligned Data Center - Phase 2* (Shippingport Borough (Beaver County)) → `aligned-shippingport-pa`
-
-## Added
-
-- `lancaster-ai-hub-west-harrisburg-place-owner-llc-chirisa-technology-parks-city-of-lancaster-pa` — Lancaster AI Hub West [Harrisburg  Place Owner LLC (Chirisa Technology Parks)], City of Lancaster (Lancaster County) — 1 permit event
-
-## Refreshed
-
-- `kline-township-data-center-development-kline-township-pa` — Environmental permits under review at PA DEP (2 pending, 4 issued).
-- `216-greenfield-road-lancaster-city-pa` — PA DEP has finished reviewing this project's environmental permits (2 issued). That is a permit milestone, not a local land-use approval.
 

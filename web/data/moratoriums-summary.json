@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-10-02",
+  "generated": "2026-10-03",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 863,
   "states": 49,
-  "enacted": 696,
+  "enacted": 695,
   "proposed": 83,
   "official_sourced": 62,
   "by_state": {
@@ -106,7 +106,7 @@
     },
     "CA": {
       "total": 26,
-      "enacted": 23,
+      "enacted": 22,
       "proposed": 2
     },
     "WA": {
@@ -262,7 +262,6 @@
       "lexington-fayette-county-ky",
       "white-county-in",
       "front-royal-va",
-      "tulare-county-ca",
       "cleveland-oh",
       "richmond-ca",
       "gilroy-ca",
@@ -276,8 +275,10 @@
       "mendocino-county-ca",
       "morgan-hill-ca",
       "lake-elsinore-ca",
+      "upper-burrell-township-pa",
       "newton-county-ga",
       "rockdale-county-ga",
+      "smithfield-township-pa",
       "west-whiteland-township-pa",
       "plainfield-il",
       "lowndes-county-al"
@@ -304,7 +305,8 @@
       "skagit-county-wa",
       "front-royal-va",
       "hillsboro-or",
-      "tulare-county-ca",
+      "boulder-county-co",
+      "braceville-township-oh",
       "cleveland-oh",
       "richmond-ca",
       "gilroy-ca",
@@ -348,6 +350,8 @@
       "gates-county-nc",
       "nashville-tn",
       "hays-county-tx",
+      "baltimore-county-md",
+      "paulding-county-ga",
       "vienna-township-trumbull-co-oh",
       "charlotte-nc",
       "cumberland-county-nc",
@@ -373,7 +377,6 @@
       "wendell-nc",
       "sedgwick-county-ks",
       "hillsboro-or",
-      "tulare-county-ca",
       "boulder-county-co",
       "lake-county-fl",
       "luther-ok",
