@@ -10341,13 +10341,23 @@ SITES.forEach(s => mk(s.lat,s.lon,'#38bdf8',5).bindPopup(
   (s.tenant&&s.tenant!==s.operator?'<br>Tenant: '+esc(s.tenant):'')+
   '<br>'+esc(s.location)+', '+esc(s.state)+
   (s.stateLink?'<br><a href="states/'+esc(s.stateLink)+'">State profile &rarr;</a>':'')).addTo(siteLayer));
-MORAT.forEach(m => mk(m.lat,m.lon,'#a855f7',5).bindPopup(
+// Moratoriums sit in their own pane *below* the project/campus markers and
+// draw as small translucent dots, so 800+ of them don't bury the projects
+// east of the Mississippi. They grow as you zoom in and the density thins.
+map.createPane('morPane').style.zIndex = 390;
+const morRenderer = L.svg({pane:'morPane'});
+function morRadius(){ const z=map.getZoom(); return z<=4 ? 2.5 : z<=6 ? 3.5 : 5; }
+const morMarkers = [];
+map.on('zoomend', () => { const r=morRadius(); morMarkers.forEach(m=>m.setRadius(r)); });
+MORAT.forEach(m => morMarkers.push(L.circleMarker([m.lat,m.lon],
+  {pane:'morPane', renderer:morRenderer, radius:morRadius(), color:'#a855f7',
+   weight:1, opacity:0.75, fillColor:'#a855f7', fillOpacity:0.35}).bindPopup(
   '<b>'+esc(m.locality)+', '+esc(m.state)+'</b><br>'+
   (m.level?esc(m.level)+' &middot; ':'')+
   'Moratorium: '+esc(m.status)+
   (m.when?'<br>Enacted: '+esc(m.when):'')+
   (m.expires?'<br>Expires: '+esc(m.expires):'')+
-  '<br><a href="moratoriums?state='+encodeURIComponent(m.state)+'">Moratorium tracker &rarr;</a>').addTo(morLayer));
+  '<br><a href="moratoriums?state='+encodeURIComponent(m.state)+'">Moratorium tracker &rarr;</a>').addTo(morLayer)));
 projLayer.addTo(map); siteLayer.addTo(map);
 const overlays = {};
 overlays['<span style="color:#fbbf24">&#9679;</span> Tracked projects ('+PROJECTS.length+')'] = projLayer;
@@ -10510,6 +10520,19 @@ def build_map():
 .mf-op input {{ cursor:pointer; margin:0; }}
 .mf-link {{ background:none; border:0; color:var(--accent,#38bdf8);
   cursor:pointer; font-size:12.5px; padding:0; text-decoration:underline; }}
+/* Leaflet's layer list is a <section>, so the site's section margin padded
+   it with dead space; and its default white box glared on the dark tiles. */
+#gw-map .leaflet-control-layers {{ background:rgba(15,23,42,.88); color:#e2e8f0;
+  border:1px solid rgba(148,163,184,.35); border-radius:10px;
+  box-shadow:0 4px 14px rgba(0,0,0,.4); }}
+#gw-map .leaflet-control-layers-expanded {{ padding:8px 12px; }}
+#gw-map .leaflet-control-layers-list {{ margin:0; }}
+#gw-map .leaflet-control-layers label {{ font-size:13px; line-height:1.7; }}
+#gw-map .leaflet-control-layers-selector {{ accent-color:var(--accent,#38bdf8); }}
+#gw-map .leaflet-bar a {{ background:#1e293b; color:#e2e8f0;
+  border-bottom-color:rgba(148,163,184,.35); }}
+#gw-map .leaflet-bar a:hover {{ background:#334155; }}
+#gw-map .leaflet-bar {{ border:1px solid rgba(148,163,184,.35); }}
 </style>
 <div id="gw-map" style="height:72vh;min-height:460px;border-radius:14px;
   overflow:hidden;border:1px solid var(--rule);margin:8px 0 6px"></div>
