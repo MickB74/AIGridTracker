@@ -3785,5 +3785,12 @@
     "locality": "Waterford Township, MI",
     "kind": "status_changed",
     "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-04",
+    "id": "tulare-county-ca",
+    "locality": "Tulare County, CA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
   }
 ]

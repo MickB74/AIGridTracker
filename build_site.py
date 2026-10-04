@@ -10291,9 +10291,14 @@ def _projects_geo():
 _MAP_JS = """
 const SITES = __SITES__, PROJECTS = __PROJECTS__, MORAT = __MORAT__;
 const map = L.map('gw-map', {scrollWheelZoom:true}).setView([39.5, -98.35], 4);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-  subdomains:'abcd', maxZoom:19}).addTo(map);
+// Esri Dark Gray Canvas: keyless. CARTO's dark_all started serving an
+// "API KEY REQUIRED" watermark in place of tiles, so don't switch back.
+const ESRI = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/';
+L.tileLayer(ESRI + 'World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; <a href="https://www.esri.com/">Esri</a> &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors',
+  maxZoom:16}).addTo(map);
+L.tileLayer(ESRI + 'World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {
+  maxZoom:16}).addTo(map);
 function esc(s){ return (s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
 function mk(lat,lon,color,r){ return L.circleMarker([lat,lon],
   {radius:r,color:color,weight:1,fillColor:color,fillOpacity:0.8}); }

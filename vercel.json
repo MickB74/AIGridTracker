@@ -1369,16 +1369,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/saline-township-mi",
-      "destination": "/communities/saline-mi",
-      "permanent": true
-    },
-    {
-      "source": "/communities/saline-township-mi.html",
-      "destination": "/communities/saline-mi",
-      "permanent": true
-    },
-    {
       "source": "/communities/sangamon-county-il",
       "destination": "/states/illinois",
       "permanent": true
