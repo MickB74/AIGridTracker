@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 9112,
+  "count": 9123,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -50045,7 +50045,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-01",
-      "last_seen": "2026-10-03"
+      "last_seen": "2026-10-04"
     },
     {
       "title": "Texas Republicans Dig in on Opposition to Data Centers: Poll",
@@ -54940,7 +54940,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-09-13"
+      "last_seen": "2026-10-04"
     },
     {
       "title": "Warrick County Commissioners to hold public meeting on data center development",
@@ -55006,7 +55006,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-25",
-      "last_seen": "2026-09-09"
+      "last_seen": "2026-10-04"
     },
     {
       "title": "Data center ordinance meeting planned in Warrick County",
@@ -55952,7 +55952,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-09-22"
+      "last_seen": "2026-10-04"
     },
     {
       "title": "Warrick county puts pause on data center development",
@@ -91042,7 +91042,7 @@
       "locality": "Westlake",
       "state": "TX",
       "first_seen": "2026-09-28",
-      "last_seen": "2026-09-30"
+      "last_seen": "2026-10-04"
     },
     {
       "title": "Denton officials weigh data center moratorium during first public hearing",
@@ -91317,7 +91317,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-09-28",
-      "last_seen": "2026-10-03"
+      "last_seen": "2026-10-04"
     },
     {
       "title": "‘Virginia Is for Servers’: Data Center Enthusiasts Look to Engineer a Vibe Shift",
@@ -93902,7 +93902,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-10-04"
     },
     {
       "title": "Georgia races expose threats to Medicaid, voting rights, and more",
@@ -97411,7 +97411,7 @@
       "locality": "Lexington",
       "state": "KY",
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-03"
+      "last_seen": "2026-10-04"
     },
     {
       "title": "Posey Co. data center public hearing on data center proposal continues tonight",
@@ -98104,7 +98104,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-10-04"
     },
     {
       "title": "New Jersey hits data center with 'record' $1.1m fine after drone exposes 62 unpermitted gas generators",
@@ -99446,7 +99446,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-03"
+      "last_seen": "2026-10-04"
     },
     {
       "title": "Trump says data centers next to homes add value but he wouldn’t want to live there",
@@ -100238,6 +100238,127 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04"
+    },
+    {
+      "title": "In Upper Burrell, where fracking and AI industries converge, residents look to regulate data centers",
+      "outlet": "90.5 WESA",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOLVc0eXRWZnNHZDZiNUNzblVXUmtSdDVNN2w1TzVSQUN4VVpodFpxelFIZ3VDSy15SEhsMGJrSHFSczFjSUE5ZUMwbk9COV84UHhBbUFPX3U3bDJvbmNITEJUNlBxLWFpaVVMQXh6UWp5d1RWMlgxSFAzZkpvaWctams4SGUtRTZjeEJrZkp4S25TZFVuc0RXODRENGowelNmSldr?oc=5",
+      "published": "Sun, 04 Oct 2026 19:00:00 GMT",
+      "published_iso": "2026-10-04T19:00:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04"
+    },
+    {
+      "title": "Wayne County commissioners override veto to approve Google data center tax incentives in Van Buren Township",
+      "outlet": "WXYZ 7 News Detroit",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPbldtd3lkWmtOQ0daaGliZ3RRQ21FYU9XNEY3cW5fR1NjV0pMZy12eVV4LU55VkwwOW9aWVBZbUkyYjJkSXZDNFByNkxXYjItcEt1eldpWlhFOVBVMXlRaUc0dWwzMi1rSWtxRGNOUGV1X25TTEtFZlFTTGE5SXpRLWtnbVIwcWhUNTBVMzNrdjdWZV9vZ25GU3VCZkI2NEZyWnRqUmgtVlpxdEFfXzFxYWh3WnUtTTZLRTN2RzJjLUhLc252d3lCXzVqVkVjdw?oc=5",
+      "published": "Fri, 02 Oct 2026 00:06:00 GMT",
+      "published_iso": "2026-10-02T00:06:00+00:00",
+      "locality": "Wayne County",
+      "state": "UT",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-04"
+    },
+    {
+      "title": "Palm Springs votes to extend data center moratorium",
+      "outlet": "The Desert Sun",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNzJ5clE5S3VVN0dsZGROLVRfQjJjTmRjNDZFTjRSUlRpQ1ZLd3oxUFZSTDhaWG5GbkFOVnZlVGRuYTVHaVdPaFNHd0NXcnF4UGpSVlpkQ1NoNElTOWhScWRkUUdxR3VHY1Y3bFZEWEd6M1M5eEx2Z3dFWGV2NUFqUFpCRjlpakl5WEZwYTczNXRjTHZoTThxcHdndXp3OEpvOVJUSEdET1hialR3VzJ5ZlpkSQ?oc=5",
+      "published": "Thu, 01 Oct 2026 17:10:16 GMT",
+      "published_iso": "2026-10-01T17:10:16+00:00",
+      "locality": "Palm Springs",
+      "state": "CA",
+      "first_seen": "2026-10-01",
+      "last_seen": "2026-10-04"
+    },
+    {
+      "title": "Data centers are back before Council this week. 5 things worth watching",
+      "outlet": "CivicLex",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTEFnLWtFR0ZqMnpzb2lXWHJUM2kwUm5DSGN4NTkzWGdaNndLN3plZlR0d0Q2bndiUFVXTGhlb2hJUE8yQkFpN1QxMnoxZWw2LUx0RjNDNnB6NVQtV0s3eV9uclBVOGcyMlhZamUxMW5wYlk5Y1BVMEtTRGN1am5wbUpxQTJhZnJ5cDZ0TXNRTlVjZ3lOWFVwbnpn?oc=5",
+      "published": "Sun, 04 Oct 2026 10:01:56 GMT",
+      "published_iso": "2026-10-04T10:01:56+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04"
+    },
+    {
+      "title": "AI is moving fast. N.J. must not move blindly | Opinion",
+      "outlet": "NJ.com",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQWhYeWthaXQ5UUZrNC1JMDR0bXRNdjc4aWtTYkhWNjdjazZ3MGJJZGNUNkRraWllM3d5RncxS3hoUDkycC1oTnZYNGxxUkw2VGhJcFlKcHNXR1dHZ1RUWVUyQUhCRW12NnZ3ckpZY3RRei1PY3l3QWxOZy1HYy1fSlcwSnlSSnpFQkMxMDBoaWRreTh4?oc=5",
+      "published": "Sun, 04 Oct 2026 18:00:00 GMT",
+      "published_iso": "2026-10-04T18:00:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04"
+    },
+    {
+      "title": "N.J.’s data center industry has a trust problem | Opinion",
+      "outlet": "NJ.com",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVnR3bTJtTzQwY09nTVFKcEtWQm1OU3dIMDFpWmhQV2xEYS1mLTNvd052U0JsTWpUeGlJOVlZV1BnNDJVYWZYMzJMTEVyYmRaQXQ1SkgwZThtNlpWR1lzTTFqRFFKd2NzZERXUjd5cXZQaVVEeWZBSUdub2lwMzg2ck1ZclVQRVhQa0RyaWJFWlR3UGp0X3pZ?oc=5",
+      "published": "Sun, 04 Oct 2026 19:00:00 GMT",
+      "published_iso": "2026-10-04T19:00:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04"
+    },
+    {
+      "title": "How US Data Center Capital Became Unexpected House Battleground",
+      "outlet": "Newsweek",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQajRfRGVYTkw0ZW9xMk1lUVU5Y2RLT2ViblBOMnptLTViMnFOQ1ZidmhQaC12d2VuOWdKX3VEQlNaQjh4QXE1YW1Scng5amhOQ0tzc2x4Z0hDNTlld3RjazRqTldpcVJzeVRVVVhqb1NGUkxsaXhfOU1zeW9oRjFzWlhlUkpsdG1IdmVSc0JfZ1BXc0tSOUZRUTVaNDJmdUU?oc=5",
+      "published": "Sun, 04 Oct 2026 18:00:00 GMT",
+      "published_iso": "2026-10-04T18:00:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04"
+    },
+    {
+      "title": "Neighborhood backlash collides with America's tech arms race — but is this the plan to fix it?",
+      "outlet": "Fox News",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQWEltU01JdUNldjQtZTBXMWcxdUVqOXpHbmROSWppSzNWTHh2V3hNU3YtZU5SQWxvYXp5ZDJGSldWNWFrTWdqU05SUmpoZmEwUlQ5RWg4WWVJQTRtRzJMWC16NTQ2WHFSaWkwRzFoa1MybEZBMmxjNGNMcndDc1JUYzJvYm9KdkRkdWg5MDhZNjZXbjZ3ejdEak1LQ2FXblVhZDhyeWFn0gGmAUFVX3lxTFBYSW1TTUl1Q2V2NC1lMFcxZzF1RWo5ekduZE5JamlLM1ZMeHZXeE1Tdi1lTlJBbG9henlkMkZKV1Y1YWtNZ2pTTlJSamhmYTBSVDlFaDhZZUlBNG1HMkxYLXo1NDZYcVJpaTBHMWhrUzJsRkEybGM0Y0xyd0NzUlRjMm9ib0p2RGR1aDkwOFk2NlduNnd6N0RqTUtDYVduVWFkOHJ5YWc?oc=5",
+      "published": "Sun, 04 Oct 2026 17:00:05 GMT",
+      "published_iso": "2026-10-04T17:00:05+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04"
+    },
+    {
+      "title": "Trump cuts end Virginia Medicaid access for thousands of legal immigrants and more headlines",
+      "outlet": "Virginia Mercury",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOc2x5aGc5UFhuQVpfd3hndVNKcTA2aDJoMUtmNHZCSXBDTlNlLTRZYmVfVjNoMW1oUlp2aWQyX0ZDSXExWEI5RGxmR1ZGZ1NPbmF3NTc0eWlKbXIyMmswQmJyZC1tcWk3ejh6aW4tUEFQODhDVHlNSXc0S0ZqSmk2ZWM1NncxT05sQVdVZ05wLXRsazJ0X0VMZ3dkbTN6N2lqYVJ3eXhTV1pYZU9BNXQyTDhaVlA3XzcydV9HeWV0ZXlXWFgzMDJxYndieTQ?oc=5",
+      "published": "Fri, 02 Oct 2026 09:11:08 GMT",
+      "published_iso": "2026-10-02T09:11:08+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-04"
+    },
+    {
+      "title": "Pro-Data Centre Party in Washington Interrupted by Protesters Shouting 'Thank You for Using Our Water'",
+      "outlet": "inkl",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNSWJYWm1qTnlhbUhteklkMzFGZnd4SGtkbHdtaWxYaG5aeEVIYThJN25nMmRBNGxOYUkwaDBiOERBTkxqMjBoYzNHcU9GbjJ1YTBOTmszWHNFQU40RE9aWWdwcDE3VDdVU0MyU3ZQU01TTmJ2ZWpscmpyRVlpTzNwVV9mMFV0eUYwVXlCaWg5ZmU5NExxR21mVC1peEhwbzZoOHlnMmljbXlvMldvVFFhczNaMFVYZjIteGFveXYzSzBGX2tE?oc=5",
+      "published": "Mon, 28 Sep 2026 12:52:10 GMT",
+      "published_iso": "2026-09-28T12:52:10+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-10-04"
+    },
+    {
+      "title": "Motorcyclist injured after hitting deer on Sunset Boulevard in Cass County",
+      "outlet": "WWMT",
+      "link": "https://news.google.com/rss/articles/CBMitgJBVV95cUxNMXdwZGxYNW9UNTdjaklTckQ2aF8waXNNSm9ZZzVzdkJTbzNDLWdBcXcwTE03eE9RZ1l2OUF6Q0FsZEtfd1FrQ2VkVWxMaXF4cEhmTE1idjFPMEdfNzA3Nm02bklxZW5WTnFGek04dUNFVWJqdjdQdE5PVVVVb2Z3ZWZPcUtzUWFiOXVFZnRvRDdPRHBoX21FNlFVOXNLbVozYWZiSk1Rb3ZHZGp1QVZ1azhadDhUUkNSUEp2MzJnbzQ2dC04eGpEM3JtNm5KQ05yZlEzLUJjZFlNM016bW82WFl2bU1MaGltSFR1cDhZUVdSQ0NMWFJzbEs4N2NCdENlMTd2azlGQkZKX1hYcnZPNVBtUkFMVEtuUXZpV0FTOTc4ZVFDRzNnVlF6bi1kU0Y3eGlmc0ln?oc=5",
+      "published": "Sat, 08 Aug 2026 07:00:00 GMT",
+      "published_iso": "2026-08-08T07:00:00+00:00",
+      "locality": "Cass County",
+      "state": "IN",
+      "first_seen": "2026-08-08",
       "last_seen": "2026-10-04"
     }
   ]
