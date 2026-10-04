@@ -9990,4 +9990,337 @@ a story we should cover? Reach out at hello@aigridwatch.com or sign up for
 the newsletter below.*
 """,
     },
+    {
+        "id": "week-in-review-2026-10-04",
+        "art": "review",
+        "section": "stories",
+        "title": "Week in Review: The Senate Blocks a 'Toothless' Ratepayer Bill, Milwaukee and Buffalo Move on Moratoriums, and Developers Sue to Undo Three Local Bans",
+        "seo_title": "Week in review: Senate ratepayer bill blocked, moratorium suits",
+        "date": _dt.date(2026, 10, 4),
+        "author": "GridWatch AI",
+        "tags": [
+            "week in review",
+            "moratorium",
+            "Wisconsin",
+            "New York",
+            "Texas",
+            "Pennsylvania",
+            "Arizona",
+            "Nevada",
+            "Ohio",
+            "ratepayers",
+            "water",
+            "community",
+        ],
+        "summary": (
+            "This week the U.S. Senate blocked Sen. Jon Husted's data center "
+            "ratepayer bill after Democrats called it toothless, even though it "
+            "had passed the House 417-3. Milwaukee's Plan Commission and the "
+            "Buffalo Common Council both moved on local moratoriums — one "
+            "unanimously advanced, one delayed for a new task force — while a "
+            "Pennsylvania developer's \\$10,000-per-household offer drew "
+            "'bribe' accusations. Meanwhile, developers sued to overturn bans "
+            "in Nevada and Ohio, and a libertarian legal group told Arizona's "
+            "Pima County its moratorium is illegal. Plus: seven more "
+            "communities acted on data centers this week."
+        ),
+        "body": """\
+Welcome back to the GridWatch AI Week in Review — our Sunday roundup of the
+most important data center stories from the past seven days, what they mean
+for communities, and what you can learn from each one.
+
+---
+
+### 1. The Senate blocks Sen. Husted's data center ratepayer bill, 57-43 — even though the House passed it 417-3
+
+**What happened:** A procedural cloture vote on Sen. Jon Husted's (R-OH)
+"Ratepayer Protection Act" failed 57-43 in the Senate on Sept. 30, falling
+short of the 60 votes needed to proceed, according to
+[NBC News](https://www.nbcnews.com/), [The Hill](https://thehill.com/) and
+[CBS News](https://www.cbsnews.com/). The bill had passed the House earlier
+in the month 417-3. Four Democrats — Sens. Jon Ossoff and Raphael Warnock of
+Georgia, Maggie Hassan of New Hampshire and Amy Klobuchar of Minnesota —
+crossed over to vote with Republicans to advance it anyway.
+
+**Why it matters:** Senate Minority Leader Chuck Schumer called the bill
+"toothless," saying it "completely misses the mark" — not because its goal
+was wrong, but because of what it actually does: the text *directs states to
+consider* adopting standards that keep data-center-driven grid upgrade costs
+off other ratepayers' bills, rather than *requiring* it. A near-unanimous
+House vote and a blocked Senate vote on the same stated goal is possible
+precisely because "make data centers pay their own way" and "tell states
+they may want to look into making data centers pay their own way" are not
+the same bill.
+
+**What to learn — read the verb before you count a bill as a win:**
+Whatever side of a ratepayer fight you're on, the sponsor's press release
+will describe the goal; the bill text tells you the mechanism. A bill that
+"directs," "encourages," "urges," or "allows" states or utilities to act is
+voluntary — it creates no obligation if they decline. A bill that
+"requires," "shall," or "mandates" is binding. Before citing any pending
+state or federal bill at a hearing, find the operative verb attached to the
+thing you actually want to happen. Our [bill tracker](/bills.html) flags
+this distinction for state-level data center legislation, and our
+[outlook page](/outlook.html) covers what's pending in Congress.
+
+*Sources: [NBC News, Sep 30](https://www.nbcnews.com/);
+[The Hill, Sep 30](https://thehill.com/);
+[CBS News, Sep 30](https://www.cbsnews.com/)*
+
+---
+
+### 2. Milwaukee's Plan Commission unanimously advances a one-year data center moratorium
+
+**What happened:** Milwaukee's City Plan Commission voted unanimously on
+Sept. 28 to advance an ordinance pausing new and expanded data centers for
+one year, or until the city's zoning code is amended to specifically
+regulate them — whichever comes first, according to
+[WTMJ](https://wtmj.com/), [BizTimes Milwaukee](https://biztimes.com/) and
+the [Milwaukee Business Journal](https://www.bizjournals.com/milwaukee/).
+The measure next goes to the Zoning, Neighborhoods and Development
+Committee on Oct. 6, then to the full Common Council on Oct. 13.
+
+**Why it matters:** A "one year, or until the zoning code changes"
+moratorium is a different commitment than a flat one-year pause — it ends
+the moment the city does the regulatory work, which gives the council an
+incentive to actually finish that work rather than let the clock run out
+and default back to the old rules.
+
+**What to learn — a moratorium's *trigger* for ending matters as much as
+its length:** Ask whether your own community's proposed pause expires on a
+fixed date, on a condition (a new ordinance, a completed study), or both —
+whichever comes first. A fixed date with no condition can lapse before the
+underlying zoning gap is fixed; a condition with no outside date can drag on
+indefinitely. See [Milwaukee's community page](/communities/milwaukee-wi.html)
+and the [moratorium tracker](/moratoriums.html) for how other cities have
+structured theirs.
+
+*Sources: [WTMJ, Sep 28](https://wtmj.com/);
+[BizTimes Milwaukee, Sep 29](https://biztimes.com/);
+[Milwaukee Business Journal, Sep 29](https://www.bizjournals.com/milwaukee/)*
+
+---
+
+### 3. Buffalo's Common Council adds a 9-member task force — and delays the final vote on its 2-year moratorium
+
+**What happened:** The Buffalo Common Council amended its proposed two-year
+moratorium on data centers and cryptocurrency facilities to add a nine-member
+task force — including the city planner, the climate action manager, and
+community, environmental and business representatives — and pushed the final
+vote back roughly two weeks, according to
+[Spectrum News](https://spectrumlocalnews.com/),
+[WIVB](https://www.wivb.com/) and [WGRZ](https://www.wgrz.com/). Sponsor
+Councilmember Joseph Golombek said the goal is to give the city time to
+update its zoning rules before more facilities can move forward.
+
+**Why it matters:** Some of this week's early headlines reported the
+moratorium as already "approved." What actually happened was narrower: the
+council amended and advanced the resolution, then delayed the vote that
+would enact it. That's a meaningful distinction for a resident deciding
+whether to show up at the next meeting — the fight isn't over, it just moved
+to a later date.
+
+**What to learn — a council "advancing" or "moving forward on" a measure is
+not the same as passing it:** Headlines compress multi-step legislative
+processes into a single verb, and that verb is sometimes wrong by the time
+the dust settles. Before you cite a moratorium as enacted, check the
+locality's own council calendar or clerk's office for the actual vote
+record and effective date — the same discipline behind our own
+`effective_status` field on the [moratorium tracker](/moratoriums.html),
+which only shows a status as current once a vote is actually recorded.
+
+*Sources: [Spectrum News, Sep 30](https://spectrumlocalnews.com/);
+[WIVB, Sep 29](https://www.wivb.com/);
+[WGRZ, Sep 29](https://www.wgrz.com/)*
+
+---
+
+### 4. A Pennsylvania developer offers \\$10,000 to 4,500 households — residents call it a bribe
+
+**What happened:** NorthPoint Development, seeking approval for a 1,300-acre
+data center campus ("Project Hazelnut") in Hazle Township, Luzerne County,
+is offering \\$10,000 checks to roughly 4,500 households, payable only after
+the first building receives its certificate of occupancy, according to
+[Tom's Hardware](https://www.tomshardware.com/), [PhillyVoice](https://www.phillyvoice.com/)
+and [The Center Square](https://www.thecentersquare.com/). The company has
+also floated up to \\$120 million over 15 years for community and local
+services. One resident told reporters, "Sounds like a bribe to me."
+
+**Why it matters:** A per-household check conditioned on the project getting
+approved and built is a different instrument than a Community Benefits
+Agreement — it's structured to reward residents for *not* opposing the
+project, rather than to bind the developer to specific, enforceable
+commitments regardless of how residents vote.
+
+**What to learn — a conditional cash offer and a CBA are not the same
+negotiation:** A real CBA is a signed, enforceable contract: it names
+specific obligations (local hiring, infrastructure upgrades, water-use
+caps), an enforcement mechanism if the company doesn't deliver, and
+generally doesn't hinge on residents' public support. A \\$10,000 check
+that only clears once the project is already built gives residents no
+leverage *during* the approval process — by the time it arrives, the
+decision that mattered is over. See our [model CBA clause library](/cba-clauses.html)
+and [what similar communities have actually won](/community-value.html)
+before treating any developer's up-front offer as the ceiling of what's
+negotiable.
+
+*Sources: [Tom's Hardware, Sep 28](https://www.tomshardware.com/);
+[PhillyVoice, Sep 27](https://www.phillyvoice.com/);
+[The Center Square, Sep 29](https://www.thecentersquare.com/)*
+
+---
+
+### 5. Legal experts question whether Texas Gov. Abbott actually has the authority to freeze data center permits
+
+**What happened:** Following Gov. Greg Abbott's Sept. 21 order directing
+TCEQ to pause environmental permitting for data centers until ERCOT and the
+Texas Water Development Board finish pending audits, legal experts quoted
+by the [San Antonio Current](https://www.sacurrent.com/) questioned whether
+a governor can direct an independent regulatory agency to stop issuing
+permits altogether, rather than simply requesting the agency's cooperation.
+[KXAN Austin](https://www.kxan.com/) and
+[KLTV](https://www.kltv.com/) reported TCEQ has not said how long the pause
+will last; ERCOT's audit isn't due until December.
+
+**Why it matters:** We've covered the substance of Abbott's permit freeze
+before, in [our piece on the AI Force split](/blog/trump-ai-force-gop-split-2026)
+and [last week's roundup](/blog/week-in-review-2026-09-27). This week's
+story isn't about the policy — it's about whether the governor had the
+legal power to order it unilaterally, which is a separate question from
+whether the underlying water and grid concerns are legitimate.
+
+**What to learn — an executive order pausing permits isn't automatically
+durable law:** A governor directing an agency to stop issuing permits is
+different from the legislature passing a statute or the agency adopting a
+rule through its own rulemaking process. If a project near you is paused by
+executive order rather than statute or regulation, ask what happens if a
+court or the next governor disagrees — and don't assume the pause outlives
+the person who ordered it. See our explainers on
+[Texas's ERCOT interconnection queue](/blog/ercot-queue-explainer) and
+[the hidden water cost behind these audits](/blog/hidden-water-cost) for the
+numbers driving the dispute.
+
+*Sources: [San Antonio Current, Sep 29](https://www.sacurrent.com/);
+[KXAN Austin, Sep 24](https://www.kxan.com/);
+[KLTV, Sep 29](https://www.kltv.com/)*
+
+---
+
+### 6. Developers sue to overturn local bans in Nevada and Ohio, as Arizona's Pima County is told its moratorium is illegal
+
+**What happened:** Three separate legal challenges to local data center
+bans surfaced this week. In Nevada, developers CDDC LLC and 9 of a Kind LLC
+sued Nye County over its new ban on data centers in the Pahrump area and
+Water Basin 162, arguing the county reversed course after they'd already
+complied with existing zoning, according to
+[KTNV](https://www.ktnv.com/) and the
+[Las Vegas Review-Journal](https://www.reviewjournal.com/). In Arizona, the
+libertarian [Goldwater Institute](https://www.goldwaterinstitute.org/)
+told Pima County its four-month moratorium violates a state law that
+limits local moratoriums to cases of a proven "imminent threat" to health
+or safety — a standard the group says the county hasn't met, per
+[KJZZ](https://www.kjzz.org/). And in Ohio, where
+[the Highland County Press](https://highlandcountypress.com/) counted over
+125 active local data center moratoriums statewide (138 by other counts,
+with 23 outright bans and a Bowling Green State University poll finding 78%
+of Ohioans support a pause), the same report noted Urbana, Lordstown and
+Commercial Point are all being sued by developers who say officials worked
+with them on site plans before reversing course and passing moratoriums.
+
+**Why it matters:** A moratorium or ban stopping a legally compliant,
+already-filed project is exactly the fact pattern that invites a lawsuit —
+whether the claim is a state-law limit on moratoriums (Arizona), a vested
+zoning-rights argument (Nevada), or both (the three Ohio towns). None of
+this means the underlying water, power or noise concerns driving these
+votes are wrong; it means the *procedure* a council uses to act on them can
+itself become the weak point.
+
+**What to learn — before your council votes on a pause, ask what your
+state's enabling statute actually allows:** Many states authorize local
+moratoriums only under specific conditions — a documented infrastructure
+shortage, a genuine health-or-safety threat, or a defined study period —
+and some set limits on how a moratorium interacts with projects already in
+the pipeline. Ask your county or city attorney, in writing, to identify the
+specific state-law authority the moratorium relies on *before* the vote,
+not after a developer's lawyers do it for you. See
+[Pima County's](/communities/pima-county-az.html) and
+[Nye County's](/communities/nye-county-nv.html) community pages, and the
+[Ohio state page](/states/ohio.html) for the state's broader moratorium
+count.
+
+*Sources: [KTNV, Sep 28](https://www.ktnv.com/);
+[Las Vegas Review-Journal, Sep 30](https://www.reviewjournal.com/);
+[KJZZ, Sep 29](https://www.kjzz.org/);
+[Highland County Press, Sep 30](https://highlandcountypress.com/)*
+
+---
+
+### 7. Seven more communities moved on data centers this week
+
+Beyond the stories above, at least seven more local governments acted on
+data centers in the past seven days:
+
+| Locality | State | Action | Duration / scope |
+|--|--|--|--|
+| Janesville | WI | Moratorium passed unanimously | 12 months; Nov. referendum on major developments also pending |
+| Dover | DE | Temporary ban passed | 18 months |
+| Mesa County | CO | Moratorium approved unanimously | 1 year, unincorporated county only |
+| Sioux County | IA | Permanent ordinance, first reading | 25 MW cap, closed-loop cooling required, no private-well water; 2nd reading Oct. 13 |
+| Saginaw | MI | Permanent ordinance approved 8-0 | Replaces expiring moratorium; effective Oct. 9 |
+| Georgetown | KY | Council directs staff to draft a ban | Outright ban; still needs Planning & Zoning sign-off |
+| Mercer County | KY | Rejected proposed data center zoning | Sent back to planning commission; no change to current rules |
+
+**What to learn — a "rejected" ordinance can mean the opposite of what it
+sounds like:** Mercer County's fiscal court voting down a proposed zoning
+district for data centers near a coal plant sounds like a loss for the
+industry — and residents who opposed it called it a win — but it also means
+no new rules exist yet, and the question goes back to the planning
+commission that's been drafting them since April. Meanwhile, Georgetown is
+the county seat of Scott County, Kentucky, which separately
+[extended its own moratorium to March 2027](/communities/scott-county-ky.html)
+two weeks before this vote — two governments in the same county working the
+same problem through different tools. Before marking either outcome as
+settled, check what replaces the rejected or expired rule, not just that it
+was rejected or expired.
+
+*Sources: [Channel 3000, Sep 28](https://www.channel3000.com/) (Janesville);
+[Delaware Public Media, Sep 30](https://www.delawarepublic.org/) (Dover);
+[KJCT8, Sep 30](https://www.kjct8.com/) (Mesa County);
+[KTIV, Sep 30](https://www.ktiv.com/) (Sioux County);
+[WNEM, Sep 29](https://www.wnem.com/) (Saginaw);
+[WKYT, Sep 30](https://www.wkyt.com/) (Georgetown);
+[Kentucky Lantern, Sep 29](https://kentuckylantern.com/) (Mercer County)*
+
+---
+
+### What to watch next week
+
+- **Milwaukee, WI** — the Oct. 6 Zoning, Neighborhoods and Development
+  Committee vote, and whether the moratorium reaches the full Common
+  Council on Oct. 13 as scheduled
+- **Buffalo, NY** — the rescheduled Common Council vote on the amended,
+  task-force version of the moratorium
+- **Washington, DC** — whether Sen. Husted's ratepayer bill returns in a
+  mandatory form that could win over the Democrats who blocked it, or
+  whether this round is the end of the road for 2026
+- **Hazle Township, PA** — whether local officials respond to the "bribe"
+  characterization of NorthPoint's \\$10,000 offer, and whether residents'
+  pushback changes the terms before any vote
+- **Austin, TX** — whether anyone formally challenges Gov. Abbott's permit
+  freeze in court, and the status of ERCOT's and the Texas Water
+  Development Board's audits ahead of their December deadline
+- **Pima County, AZ** and **Nye County, NV** — whether either county
+  rescinds, amends, or digs in and defends its moratorium against the
+  pending legal challenges
+- **Sioux County, IA** — the Oct. 13 second reading of its permanent
+  ordinance, with a third and final reading set for Oct. 27
+
+---
+
+*Every Sunday we cover the week's most important data center stories,
+explain the underlying concepts, and point you to the tools you need. Know
+a story we should cover? Reach out at hello@aigridwatch.com or sign up for
+the newsletter below.*
+""",
+    },
 ]
