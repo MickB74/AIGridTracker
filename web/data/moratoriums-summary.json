@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-10-04",
+  "generated": "2026-10-05",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 863,
   "states": 49,
-  "enacted": 695,
+  "enacted": 694,
   "proposed": 83,
   "official_sourced": 62,
   "by_state": {
@@ -156,7 +156,7 @@
     },
     "VA": {
       "total": 14,
-      "enacted": 10,
+      "enacted": 9,
       "proposed": 2
     },
     "OK": {
@@ -261,7 +261,6 @@
       "vienna-township-trumbull-co-oh",
       "lexington-fayette-county-ky",
       "white-county-in",
-      "front-royal-va",
       "cleveland-oh",
       "richmond-ca",
       "gilroy-ca",
@@ -304,7 +303,6 @@
       "putnam-county-in",
       "white-county-in",
       "skagit-county-wa",
-      "front-royal-va",
       "hillsboro-or",
       "boulder-county-co",
       "braceville-township-oh",
@@ -374,7 +372,6 @@
       "putnam-county-in",
       "white-county-in",
       "skagit-county-wa",
-      "front-royal-va",
       "wendell-nc",
       "sedgwick-county-ks",
       "hillsboro-or",
@@ -395,6 +392,7 @@
       "cache-county-ut",
       "box-elder-county-ut",
       "logan-ut",
+      "grand-county-ut",
       "tulsa-ok",
       "broken-arrow-ok",
       "edmond-ok",
