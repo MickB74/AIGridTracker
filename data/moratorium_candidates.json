@@ -24196,7 +24196,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-10-05",
       "status": "new",
       "origin": "news-scan"
     },
@@ -26042,7 +26042,7 @@
       "guess_state": null,
       "query": "data center moratorium county commission approved",
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-10-05",
       "status": "new",
       "origin": "news-scan"
     },
@@ -27501,6 +27501,58 @@
       "last_seen": "2026-10-05",
       "status": "new",
       "origin": "archive-sweep"
+    },
+    {
+      "title": "Alders push data center moratorium",
+      "outlet": "Evanston Now",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5WRGZld2p6dlJnWFkwZDhOWGdsWWRZZ1BVc0VsSzNRdDhBYVdEa0x0cHp2UXY3bGNEbGdIT0hlNTlPYVZBN2pmTmFkR2dZSUxVOHctY0ZoYTRwRWFNMXFTVTlQWGtlNDJHOHk0?oc=5",
+      "published": "Mon, 05 Oct 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium city council",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Dixon City Council imposes 45-day moratorium on new data centers",
+      "outlet": "fox40.com",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQXzVpYkNlMDA4cTVWUkJheWNhSTZ3ZkR6X0k0Y0dPUTJIRVctNEI2SFNNbEFaY1gyRTkxZUpqLUFFRnVqWGNmYWt1cUktcXRDV3NVSUhHXzdEVndhMFNpdko0VDBQcDI0eHlaZndaLWxTTVdyTnVFRHJqek51VlRJdXZEc9IBiAFBVV95cUxNdGtrdkY1cEVTelY4YnNmdERpdll5STZCVkx2UzVBMmxROHFSWlJycXJRV3pPUXlWSlQ3UHRDWEVKV1hGeGZBRjZ3VDJDeGV4TW40b0t0V2JTSFUyX3lrcC1IclhRZ0pYQkxhOUtWYlRUNlRCa3dOY3FzRzNQcDBIOFlQazlmXzRP?oc=5",
+      "published": "Thu, 01 Oct 2026",
+      "guess_locality": "Dixon",
+      "guess_state": null,
+      "query": "data center moratorium city council",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "ABC24 News Update| City Council to vote on data center moratorium",
+      "outlet": "localmemphis.com",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNN05HeFpnc1R2dTNXUVVLa1dCX0N6eW9yV2wzZTN4WVZVOWI3TllZR1Z4bzhvUnFOa2dmQUZaM0p5ckc1NXNtN3ZjUkUzZVpjZ3RYR3Z2UTlRbGw0dzFic2dPREdRSGFZLVRwcXhQNDVrbkQ1RGdOYk9kWVFjZVVMQXp0Um1PNDJQaWVBeDdNRUQ2eDFpbmxVLXB4VzBUY3FhOFFYckhySDdSYlRHajJwMFMwTXdNSmVnYlRMSDI2d3MtcUd6amR1bmN5SG85UTljU3pLMURFdkFrSzlpOWlIVHVvd0NWd3FYRVFOSEVDU1JfbVU?oc=5",
+      "published": "Mon, 05 Oct 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium city council",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Mesa County Commissioners approve data center moratorium",
+      "outlet": "WesternSlopeNow.com",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPR2JUc0EzLXpCQ1M3eHUzbGN1TTJ1a19PMTFwWFE2Zk10WFVwVTdLTGw3NVdZamRlc1VReXl4dnNldDk4VFZVb1B2cWNnNkZqcFJsN2xGUDZaUFAxQlY2UFBUbTRaUUxSc2lPWEloNThhVl9oOHdUQVhidWtpaWxqYmJFZlhaSGk5Q3ltSWZYaldac1BhdDVkS2NBSDNtcklIR1JKbjJXTQ?oc=5",
+      "published": "Sat, 03 Oct 2026",
+      "guess_locality": "Mesa",
+      "guess_state": null,
+      "query": "data center moratorium county commission approved",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "status": "new",
+      "origin": "news-scan"
     },
     {
       "title": "Marion County Commissioners Direct Staff to Begin 12-Month Data Center Moratorium After Workshop Debate",
