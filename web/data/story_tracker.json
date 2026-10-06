@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 9368,
+  "count": 9382,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -94397,7 +94397,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-30",
-      "last_seen": "2026-10-01"
+      "last_seen": "2026-10-06"
     },
     {
       "title": "‘Substantial issues and deficiencies’: Prince William planning staff pooh-poohs latest Four Seasons data center proposals",
@@ -94694,7 +94694,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-09-30",
-      "last_seen": "2026-10-04"
+      "last_seen": "2026-10-06"
     },
     {
       "title": "A $3B Georgia pipeline changed course — away from a utility leader’s property",
@@ -96278,7 +96278,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-05"
+      "last_seen": "2026-10-06"
     },
     {
       "title": "Dixon approves 45-day moratorium on new data center approvals",
@@ -97653,7 +97653,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-05"
+      "last_seen": "2026-10-06"
     },
     {
       "title": "LG Electronics Targets AI Data Center Cooling Market with U.S., Korea Capacity Expansion",
@@ -99138,7 +99138,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-05"
+      "last_seen": "2026-10-06"
     },
     {
       "title": "AWS drops non-disclosure agreements for data center projects",
@@ -103054,6 +103054,160 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2015-07-19",
+      "last_seen": "2026-10-06"
+    },
+    {
+      "title": "Linn County needs Data Center Advisory Committee members. Here’s how residents can volunteer",
+      "outlet": "KCRG",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPUkhaRWNKbFRIUGM5Nm5rcDc3QlpfX0w4Y21Rd0ZFSDVSUzkyUHlpeDdxUXRhcy1XcW1vYVlJWUhFZzAtaDR5N3haTXh1Q2J6cW5oQU45ZzlTMWc5Vm9pM3NhLV9SVUl1YzFGZV8yUEVQOTlmUkZ5LWtlTG1VYUJsMTVfaFk3UHB1ZnkzTnBDN1lZMmZNd3A3Nkk0UU9RSEdjUl9SQTQydzJHY2tqTmg1dzA2VkI3eklUei1rWHhhaWs?oc=5",
+      "published": "Tue, 06 Oct 2026 17:07:00 GMT",
+      "published_iso": "2026-10-06T17:07:00+00:00",
+      "locality": "Linn County",
+      "state": "IA",
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    {
+      "title": "Mahomet ends talks with data center developer after community backlash",
+      "outlet": "IPM Newsroom",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPeVJJVVptQjZsV0ZaWnd4MS1kUldyZVljRWw2ZUNDcTdScmFPSEkyNDdyUWd6TjB4ejZNNzdmZGxNVGVLZV8ya0FtWmVwMzYwNUJrcVpVY2FDeVZPWGNySzlXN0FxWWJFNDNjRi1ocEIwT2xJeEtNd2RMRC1iLWpuRWJodHhhMEJEY0tuTWRxZlI2dXpZV3pJQTRVUQ?oc=5",
+      "published": "Tue, 06 Oct 2026 17:06:12 GMT",
+      "published_iso": "2026-10-06T17:06:12+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    {
+      "title": "Settlement bans data center development across most of Colleton County’s ACE Basin",
+      "outlet": "Live 5 News",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNW8wQS1xMWFheGxYMnlKcmVKMjEtTFBfWTdvY1RkYk80RHpmS05sREJ0TVRfUkZmaDFMal9QUnpodmpoUXZEcDl6cGF2dE5oU05vMkdoMnZOa0JXMGZ1dm50Q1ZuNDUxSDlHTV9MaUlCVkJYSi1SSklyVlF6TU42WC1GS05BWW41RVBIRUZMcXJHVzQwZ3RXQm5jUlhRQy1CdE5Fc1YwN2x0MzhEZVNKYkJYalY3M2_SAcsBQVVfeXFMTTlZUm00MEFLN09GYUpHZ05xVU9PN1p2TFFVdE9jdkpPS1dQTk9JeHppcDNOYU5BdHExa1p4NmFjYmJ2Y0lmWk55V2xSeGFtTnpza2VxQXdLTVE3M01qNGFBMVM3UjZXLVF5bklsRF9VQUpRSFpLS2JHMzQ3WWw1X0tWUzBRd1A4Ym53WVU3TldBVE1wQkZxS2g3NEtlcnMyVlBLVVJ4OHQxd25HUks0Q3VyeFVISGJrdnZXc2Fka0xySXdveURQN3RhcGs?oc=5",
+      "published": "Mon, 05 Oct 2026 22:00:00 GMT",
+      "published_iso": "2026-10-05T22:00:00+00:00",
+      "locality": "Colleton County",
+      "state": "SC",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-06"
+    },
+    {
+      "title": "Milwaukee’s Data Center Moratorium Takes Key Step Forward",
+      "outlet": "Urban Milwaukee",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOVWtpeFRZUW9oOUFlaWo4SWYzTjV1SGFEVko0OTlUakMxdm1GUFdJb2hxdE9zVXZlSkZwZUVtZGRYTnNiYXRZZnpOaHpPcTNRbTdLR1BTT2pTMlhfajJJaXZVcFo2dEF3MkpEVnpVMEp5VmNKb0tMOXlEYm8tYjNBWGJPVUxkeGdLV1R3QklIUDlwS1JxSzlib2FHRQ?oc=5",
+      "published": "Tue, 06 Oct 2026 17:03:00 GMT",
+      "published_iso": "2026-10-06T17:03:00+00:00",
+      "locality": "Milwaukee",
+      "state": "WI",
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    {
+      "title": "Walla Walla voices join statewide call for data center moratorium in Washington",
+      "outlet": "Union-Bulletin",
+      "link": "https://news.google.com/rss/articles/CBMimwJBVV95cUxQZHpqRzZtS09odThQbGltUFhuMFhlSmFIM3QtdWxQYlBJZUYydDlOQS1ScFJObVA1TzJDTUlJTmFNVFF6anJGckVwQi1EMkRnREhGX0ZDZDlaZEE5d2hzTG1Mb29UbUhNNHhUbHNzUG14b1Q3dWtSN1NsbklaSDdsNjVad295X3ppVmdLUm5ySzV5NUlETkRRRE1rRXF4QmFHWkI1cE82dmh0VjU2MmJDZjdaMkpMSlg1TlZoUEozMGgtMHVBdmlqSlg3cm5majJSRVhEcC16em8tdGZKWkhGLTI2cUVMSXB2a3Y0Y0xwTEY1OFUtQWZQbTMzdkZ1NjQyMWtZRFVsMzdlU1IzdE1yM3dlQ1MyVlpLZUZN?oc=5",
+      "published": "Tue, 06 Oct 2026 12:00:00 GMT",
+      "published_iso": "2026-10-06T12:00:00+00:00",
+      "locality": null,
+      "state": "WA",
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    {
+      "title": "Manatee quorum failure delays AI data center moratorium, Jason Bearden’s Charlie Bishop showdown",
+      "outlet": "Florida Politics",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNRXJPTmdFMkJaT2ZGd29rUFFVNURWd0JMYW1lYWl4cllZVXdVVFlNUUdGN1NOQkJHeFpfaWN1OHkycHgtNGVqdWtzWjlVTXVtS3J2N1lQWC11cXhVNjVObGJvWjg2cEhnUHJWano3WGVfaGxid0RBazBVQU1Wc1dPbW5rUTJMZG41QzZVdGNyTXVIYkYyN1E5bjM0ZW9aMHltRkl4Z3cxWExQdTY2UHBWQVA0SFJEdTBzX2xmeG43STZkdVBFbG1ucHFjSUViOWpGenBQbl9R?oc=5",
+      "published": "Tue, 06 Oct 2026 17:40:08 GMT",
+      "published_iso": "2026-10-06T17:40:08+00:00",
+      "locality": "Manatee County",
+      "state": "FL",
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    {
+      "title": "Chicagoland’s McHenry County Weighs Data Center Moratorium",
+      "outlet": "The Real Deal",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPTUxOZTU0Y0RFMkNjcUpHTDZ5dkQ1LVRxUTl4VFVGWXpvQ2VzMXJmSDFpeldSZllDV25VekhxeVd2UHB5NFBScGhhbF95NlNMaXh6YkpQMkFnTVA0VHZobVdVWjJHcTJTOVBJR2lGOGZLaHRCRmY4bnlLM0l4RG9rQmFCNG1sekU4Yk1hZ2ZPLWxjcHV6UjgtN1B0WkZaUlBjOS1F?oc=5",
+      "published": "Tue, 06 Oct 2026 17:45:00 GMT",
+      "published_iso": "2026-10-06T17:45:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    {
+      "title": "LG Electronics expands Korea-U.S. chiller output to power AI data centers - CHOSUNBIZ",
+      "outlet": "Chosunbiz",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE54UUJScUZVR2hPZlRHTE5NYnNPWE45MHpCNjVDZWlVeE42OWVCUTZsU3dHVHF5RVQ4WlVkYnNJVzlZdzV3Y3lha3hUendCTHF3WlI0d0JrdlJmdFU3ZTQtc2l0eTkyQU1JVjZaTEhZMlc2WEREYkl1OGZB0gGOAUFVX3lxTFBRd2R3QjRLU21kWFdfS2ZuYWFtalFNTmpfaVNwTzBvcXdnRmdQNXBBeVJsbEZyQzZCOGFJRzA3aWlyTGdaZjVVUnhxMUtoMFJZajdEcVRwQjFMeVNtaDNPblZTV3V3X3lacHppVHRnNDVLTk1Wd3dKRU1BLWZZOUZ2ck1Scmw4Z1JjX2NnOFE?oc=5",
+      "published": "Mon, 05 Oct 2026 23:25:00 GMT",
+      "published_iso": "2026-10-05T23:25:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-06"
+    },
+    {
+      "title": "Debate over data center growth in Georgia heats up race for governor",
+      "outlet": "Lanier County News",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPV0tWSDRLTXYwd1VCSndET2hXVFJRazFVZkI2QUNScnFWZTZNSDI1dVNYbTZybWRPVmFNLWxYWGF3NDRURWJuV2tBSGlRQ2hDZVFfeHhZcTFHaGRrTEhVZy1UbGszZVdsZXVobEZTV3kxTzJJbmRCeE4tSElUbXFqWml1X01PdXhXb2o1ZFA3YVdOSW5WYkNIYjJ5cXlxRzNwSVdKeEhHM0lxNEo3cEs0ZHV0bHNZbENmeGln?oc=5",
+      "published": "Thu, 01 Oct 2026 05:03:22 GMT",
+      "published_iso": "2026-10-01T05:03:22+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-10-01",
+      "last_seen": "2026-10-06"
+    },
+    {
+      "title": "Data Center, Energy Companies Form Coalition Amid Texas Backlash",
+      "outlet": "Texas Scorecard",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTmkwSERsVU81N2xVQWtVbmRISkRFNWk5SlYxRXl1bHlsS1pyUGJzNVV6alBRN2pBcUxCMmdXVElYQ2E4eWdTdFlic3pDTjN0LUNDcFRXd3NCV0tDdjJURnZ5YVpxalpoa1FOWWZWVWptLXMtbFZ6eU1XdWZwamt2VFYyWjVtektrM01SakhJcGxrVkR0dnFMcGdxeFVYUQ?oc=5",
+      "published": "Tue, 06 Oct 2026 17:32:08 GMT",
+      "published_iso": "2026-10-06T17:32:08+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    {
+      "title": "Skybox Wins Hutto Rezoning, but Data Center Power Is Unclear",
+      "outlet": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQbXNRSWVpcEt0SF9tOFJRM1pTeEY1aFJJQnNLLVJfS1ZLb1d5UmFDbjQ2MURGU1FwMUxXYjk4ZlQybUtpcXRodUNlakMyZEgtTzBCdC0waDhaU3hOOTRVYzViTk9Cc1JZUWR6dkcydl9QVEZpUEtIWS1waGNnSF9Zb29DbVpxWnVBbFE2YlYydnU1MnBFam1ZVw?oc=5",
+      "published": "Tue, 06 Oct 2026 17:13:22 GMT",
+      "published_iso": "2026-10-06T17:13:22+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    {
+      "title": "West Texas leaders address data center concerns, outline economic potential",
+      "outlet": "Permian Proud",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVXY5RzlTUnNCVTJ0TUdINHJCWU9vQll4NUVKd0R2VVUyclVLXzdxT2Foa05JV2tEQWdhWkRPeUx5ODRuZi1MZjB0ajVodGliV2FOdjNWYU9wWk1MVVp3clkwdm1LWlY1bmprVVgtN1NOZy12czBuX2JrNk84Z0JTcGlfT0FfVjBEZnNXS2JMZ2V1TldVLUhNZVFrWU1lYk5BQ2xNNUNzWVllWkE5R3Y0?oc=5",
+      "published": "Fri, 02 Oct 2026 23:02:16 GMT",
+      "published_iso": "2026-10-02T23:02:16+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-06"
+    },
+    {
+      "title": "Letters — James Talarico, Don Huffines, Irving ISD, data centers",
+      "outlet": "Dallas News",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOeEN5SE1BcDNRY3UyTXhBY1pvd2M1UHhZM1EyaUl5SWw0amgwNnQ0cm4yQVJyQnRLbktqWmZFaXBTWVhsdkhJckp6bnE5N1hoYjgzY0hETHNsbnB6VEU3UWtGZ1k4NXFRVWpjOGN5b3JRODFaT1FNcHBFMHdSN2Y2RFNaR0czN3RLNEdJRUk2WHhvcDdEMEVEaWhMZEdZN1Y3UEx1b2ZXTVhTUDdLM3l2bm5xdGlMN0E?oc=5",
+      "published": "Mon, 05 Oct 2026 17:05:15 GMT",
+      "published_iso": "2026-10-05T17:05:15+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-06"
+    },
+    {
+      "title": "Warrick County approves moratorium on data centers",
+      "outlet": "Yahoo",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxObXFNLVQ2ZEU4UXFua1R6RVRkemQzMVE0eXRfdk41QkpXbkV2bFVuaWZpbDNFZDZ3SmFTbjFLYlN6Z2pXT2ZYd3o4SVQxdkFWdGlYWFJrOHhNMi1mMHhLS0tOLW9OeXJSNjJaTzB6QUpIZnhwbERsN1ZoUVdNaVBkdHMwX0tudFRYbWUtb3FVNi15TVJIZUoydQ?oc=5",
+      "published": "Tue, 11 Aug 2026 07:00:00 GMT",
+      "published_iso": "2026-08-11T07:00:00+00:00",
+      "locality": "Warrick County",
+      "state": "IN",
+      "first_seen": "2026-08-11",
       "last_seen": "2026-10-06"
     }
   ]
