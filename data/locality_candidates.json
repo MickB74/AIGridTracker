@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-10-08",
   "candidates": [
     {
       "name": "Evansville City",
@@ -23,7 +23,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -48,7 +48,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -98,7 +98,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -173,7 +173,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -198,7 +198,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -223,7 +223,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -248,7 +248,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -273,7 +273,32 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
+      "status": "new"
+    },
+    {
+      "name": "Raleigh City",
+      "count": 5,
+      "examples": [
+        {
+          "title": "Raleigh City Council to consider data center moratorium",
+          "outlet": "CBS 17",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQamhZcFA5cG05S0I4ekxqekhSUkJJa29jOXlwNGZNSXpjOFRRaDg1MEhxUkVJb2MxMWtaU1doOEx3WkRSSXI3MnFjbUpSX2VoZDdFQkZSdVJRNG5pU05ieEY1SGxJVmR5NEc3QzVSYkZnaDRSamc1TTB1MDc0blIySlN3ckx2d0N4OHdfVklDUlVTbkJHM0ZjOA?oc=5"
+        },
+        {
+          "title": "Raleigh City Council considers six-month pause on large data center approvals",
+          "outlet": "ABC11 News",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTURXUjdPSlZiLTVyVDBhSzRVSHp0cXk5MGVvaVNWeWdWVlVtMFlSTm5ITjBvTlRleUZrRi10V2xqZjlldXlWU0I0akoyQVF1SWhNcm1fUlhSMC01SGxjT3lQUHEySTlVWGQwX3NTU2d3bFRKSnl1c0NzLVgzV1EydkZvanJkZ1hRanRWdHYxcGprd0ZWUWNOcEwyRXZjb0trdWlSbl9R0gGrAUFVX3lxTE1FVV9jWUNkMnluMU5JRmQ3MFVDY3AyZDBMeFlrRktTZXMtTUQyb0JxQkZ5Q2NBWnA0Nm4xMlNaYktsQXVqQTRDaUNPWjIwQTNsNGFFN3VOOVRtQmxkT2swREdsV0l2YnM3QV9qQ1RHbHRTejQwX2JHSW5SdFlVRERIWHZqTTRyeWxuVG5TeVNMc2QwSzVHRENtWkZrc2VGeTFZYTNmTmtDVkNmTQ?oc=5"
+        },
+        {
+          "title": "Raleigh City Council approves 6-month moratorium on large data centers",
+          "outlet": "CBS17.com",
+          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNalQtMVNiWVU0d0Q0d0VsTTdtQnlObkJrTVNMa0NQTDNGa2VRRnNIeTAwd3dJeUw0bWFHYjRSYm9NLUxoTjVpVGhnanl2UFJhLTBUVUxoUzZ3NUNxQzFXeHl6UlpiekNSSGFBdXRSb2FJVERaQWtpQkgwU1RmRXAtVk0tYm5Ca3JyZnpleVN0dDUxd0JaWFBuZkZmTUdwZXdLaVpBYXNoZHQxbWpVczhKMGxPQVBMZWdreDl1Mm5lVzhaOVJl0gHKAUFVX3lxTE1jM1dDMzBsRjd4WmZUODdKSUVYNXFpWG1hSkxBLVN4WHBDaEJnaWoxMlY1MEc0d19RM0lMNFBUTEJuM0poS0JGa3pfN01ocUQxTk1YMlFQbWRUNFpvU21xR0tyRUhGd1BScjJET3R3THROTWx0bzJiQlJkOVJLT2p6c0hXVDJFdFhBUjNrLXpDWkE2cThGNHdZM1ZPeV84b3ZKWDNHNmhtc3pnaWdFQzVoaDFXbHdxS0REUHJ5Rjk5NnZ4bmxLM0stbVE?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -348,7 +373,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -373,7 +398,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -398,7 +423,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -423,7 +448,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -448,7 +473,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -473,32 +498,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-10-07",
-      "status": "new"
-    },
-    {
-      "name": "Raleigh City",
-      "count": 4,
-      "examples": [
-        {
-          "title": "Raleigh City Council to consider data center moratorium",
-          "outlet": "CBS 17",
-          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQamhZcFA5cG05S0I4ekxqekhSUkJJa29jOXlwNGZNSXpjOFRRaDg1MEhxUkVJb2MxMWtaU1doOEx3WkRSSXI3MnFjbUpSX2VoZDdFQkZSdVJRNG5pU05ieEY1SGxJVmR5NEc3QzVSYkZnaDRSamc1TTB1MDc0blIySlN3ckx2d0N4OHdfVklDUlVTbkJHM0ZjOA?oc=5"
-        },
-        {
-          "title": "Raleigh City Council considers six-month pause on large data center approvals",
-          "outlet": "ABC11 News",
-          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTURXUjdPSlZiLTVyVDBhSzRVSHp0cXk5MGVvaVNWeWdWVlVtMFlSTm5ITjBvTlRleUZrRi10V2xqZjlldXlWU0I0akoyQVF1SWhNcm1fUlhSMC01SGxjT3lQUHEySTlVWGQwX3NTU2d3bFRKSnl1c0NzLVgzV1EydkZvanJkZ1hRanRWdHYxcGprd0ZWUWNOcEwyRXZjb0trdWlSbl9R0gGrAUFVX3lxTE1FVV9jWUNkMnluMU5JRmQ3MFVDY3AyZDBMeFlrRktTZXMtTUQyb0JxQkZ5Q2NBWnA0Nm4xMlNaYktsQXVqQTRDaUNPWjIwQTNsNGFFN3VOOVRtQmxkT2swREdsV0l2YnM3QV9qQ1RHbHRTejQwX2JHSW5SdFlVRERIWHZqTTRyeWxuVG5TeVNMc2QwSzVHRENtWkZrc2VGeTFZYTNmTmtDVkNmTQ?oc=5"
-        },
-        {
-          "title": "Raleigh City Council approves 6-month moratorium on large data centers",
-          "outlet": "CBS17.com",
-          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNalQtMVNiWVU0d0Q0d0VsTTdtQnlObkJrTVNMa0NQTDNGa2VRRnNIeTAwd3dJeUw0bWFHYjRSYm9NLUxoTjVpVGhnanl2UFJhLTBUVUxoUzZ3NUNxQzFXeHl6UlpiekNSSGFBdXRSb2FJVERaQWtpQkgwU1RmRXAtVk0tYm5Ca3JyZnpleVN0dDUxd0JaWFBuZkZmTUdwZXdLaVpBYXNoZHQxbWpVczhKMGxPQVBMZWdreDl1Mm5lVzhaOVJl0gHKAUFVX3lxTE1jM1dDMzBsRjd4WmZUODdKSUVYNXFpWG1hSkxBLVN4WHBDaEJnaWoxMlY1MEc0d19RM0lMNFBUTEJuM0poS0JGa3pfN01ocUQxTk1YMlFQbWRUNFpvU21xR0tyRUhGd1BScjJET3R3THROTWx0bzJiQlJkOVJLT2p6c0hXVDJFdFhBUjNrLXpDWkE2cThGNHdZM1ZPeV84b3ZKWDNHNmhtc3pnaWdFQzVoaDFXbHdxS0REUHJ5Rjk5NnZ4bmxLM0stbVE?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -548,7 +548,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -598,7 +598,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -623,7 +623,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -648,7 +648,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -673,7 +673,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -698,7 +698,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -723,7 +723,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -748,7 +748,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -773,7 +773,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -798,7 +798,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -823,7 +823,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -848,7 +848,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -873,7 +873,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -898,7 +898,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -923,7 +923,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -948,7 +948,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -973,7 +973,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -998,7 +998,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1023,7 +1023,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-24",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1048,7 +1048,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1073,7 +1073,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-26",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1098,7 +1098,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1123,7 +1123,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1148,7 +1148,32 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
+      "status": "new"
+    },
+    {
+      "name": "West Richland",
+      "count": 3,
+      "examples": [
+        {
+          "title": "West Richland residents push for safeguards as data center debate grows",
+          "outlet": "The Center Square",
+          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVVJESE5XS0VTM1Z0WmJVRUNySDgxQVNFVHpFS1BCVUd1T0loalR4YjNnQ3EteHV1aDlwN1otQ3dzbDgzSnVSMHFOaFdKUDFRWlM0NEtQQk1veGRYb3JlTGFtODd5M1JOaEpvZHZhdlVXQ2pvQ0JjYUxZbnJzR1h4aG50dXQwMWxydGoxcmNHdk5aTEpEUTlR?oc=5"
+        },
+        {
+          "title": "West Richland residents pack city council meeting after land sold to data center developer",
+          "outlet": "Nonstop Local News",
+          "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOTzJoWVdfT09RT0ctV0w0Z01FUHZMSkt3Z2lXWm9hRk9BQXhUQ1VNQmNGZlBPcDl6V3FlQ3V0U0lXTnFmZWhIWFVVU3pnLTJHUW5JcGhuUWJOMXlMbGVMWVZURjcxaEFxRnN1RDdVdE5KSWF6TW5LOTgydVlIM295akVMN3NWUDBGSERNTzdZTE1qMXlac01UNDJ1Tlo0dU9NN1FnOHRoU2pOMkVuMVZtSWF4T0pTTzlubS05elhodk45WFRMOFI5QzdZZkNVTmRidFpvbjB6Q1hYMVBKRkJmRU5ZWGJGWVczSnlmeHZtVFZLcnVHUmZwN3dYN1ZXcnRRNnE0?oc=5"
+        },
+        {
+          "title": "LIVE: West Richland residents ask for moratorium on data centers",
+          "outlet": "AppleValleyNewsNow.com",
+          "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNUXIzVzRZSmNDSVF0ZEVZUFBxWnplRklHbjVmdURLR3hta3QtN3plRmdRVU9jQTNDbFNSRjJFVXh0RG9jcF8tTmF1d2Myb19QM1NvRW9MYXlzVFphdVRfaTV1eFBFSGFLVGsybjBqQ3RobjIxY05xZVluakkzV3Z3dC1ybmxNbElDWGl0Um5JdFNYWlBqZVMzUG04Y19pdG5OMGU5UVZhakR0QU5XQ0JucUFhT0R0c3RXSWFMSmZPWkdmUWNVRHQ4Tzk5Z1ZOejNNR0I3bUVieWFaVFczWldJS1I4dzl5Wmc?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1208,7 +1233,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1228,7 +1253,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1328,7 +1353,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1348,7 +1373,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1368,7 +1393,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1388,7 +1413,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1468,7 +1493,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1508,7 +1533,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1528,7 +1553,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1588,7 +1613,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1608,7 +1633,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1628,7 +1653,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1648,7 +1673,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1668,7 +1693,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1688,7 +1713,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1708,7 +1733,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1728,7 +1753,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1748,7 +1773,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1768,7 +1793,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1788,7 +1813,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1808,7 +1833,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1828,7 +1853,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1848,7 +1873,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1868,7 +1893,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1888,7 +1913,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1908,27 +1933,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
-      "status": "new"
-    },
-    {
-      "name": "West Richland",
-      "count": 2,
-      "examples": [
-        {
-          "title": "West Richland residents push for safeguards as data center debate grows",
-          "outlet": "The Center Square",
-          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVVJESE5XS0VTM1Z0WmJVRUNySDgxQVNFVHpFS1BCVUd1T0loalR4YjNnQ3EteHV1aDlwN1otQ3dzbDgzSnVSMHFOaFdKUDFRWlM0NEtQQk1veGRYb3JlTGFtODd5M1JOaEpvZHZhdlVXQ2pvQ0JjYUxZbnJzR1h4aG50dXQwMWxydGoxcmNHdk5aTEpEUTlR?oc=5"
-        },
-        {
-          "title": "West Richland residents pack city council meeting after land sold to data center developer",
-          "outlet": "Nonstop Local News",
-          "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOTzJoWVdfT09RT0ctV0w0Z01FUHZMSkt3Z2lXWm9hRk9BQXhUQ1VNQmNGZlBPcDl6V3FlQ3V0U0lXTnFmZWhIWFVVU3pnLTJHUW5JcGhuUWJOMXlMbGVMWVZURjcxaEFxRnN1RDdVdE5KSWF6TW5LOTgydVlIM295akVMN3NWUDBGSERNTzdZTE1qMXlac01UNDJ1Tlo0dU9NN1FnOHRoU2pOMkVuMVZtSWF4T0pTTzlubS05elhodk45WFRMOFI5QzdZZkNVTmRidFpvbjB6Q1hYMVBKRkJmRU5ZWGJGWVczSnlmeHZtVFZLcnVHUmZwN3dYN1ZXcnRRNnE0?oc=5"
-        }
-      ],
-      "guess_state": null,
-      "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1948,7 +1953,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1968,7 +1973,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -1988,7 +1993,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2008,7 +2013,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2028,7 +2033,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2048,7 +2053,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2068,7 +2073,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-22",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2088,7 +2093,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-28",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2108,7 +2113,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2128,7 +2133,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2148,7 +2153,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-30",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2168,7 +2173,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-30",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2188,7 +2193,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2208,7 +2213,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2228,7 +2233,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2248,7 +2253,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2268,7 +2273,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2288,7 +2293,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-22",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2308,7 +2313,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2328,7 +2333,27 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
+      "status": "new"
+    },
+    {
+      "name": "Tooele",
+      "count": 2,
+      "examples": [
+        {
+          "title": "Residents push Tooele County to delay data center rules over water, power concerns",
+          "outlet": "KUTV",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQT1dES3l4VjVtaFNSTlJUZTdNWmdURG1WUkpxV1lHMmk0SGFEX0IxeFVRdlB0SV94blFjYjBqT2MyVnVhbWF5RlMyMm8yRXJVMUEzRHFzeEcwV0ZjUGpTN0FCOFY1N0pSaFVsOHBWRHhtWG44ZWJMWGY3X1NVcE5HaXo1Z24zQWRJSV82TlZ5V2E4SHFWWnBrQ09Eak80YkRfTDZsaTk3WFU5WjhVbVE?oc=5"
+        },
+        {
+          "title": "Residents push Tooele County to delay data center rules over water, power concerns",
+          "outlet": "KUTV",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPN2lwdHFJZWZJd1lZQVE1dkZ0Z1YwZWNWd0FwLTZLUmYyTnI5WW9FcHY2ZGhPZ3hGRFlMY19OUmsyUTBxRGY1b0RWZG5DWGV0bzlyc0JSVUpBQk8wYV8wRDdHRlJMNXktdVNuaXRSXzF4SW1xN3RPVGJ5QU1HTnpUYXJMbG0xcWJRVUdZOThOSy1rMVNzcTVOcTZRbkppVTdfY3FUSmN6blZxd1V5T3ZVZWhLUU9UbjMy?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2343,7 +2368,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2388,7 +2413,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2448,7 +2473,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2493,7 +2518,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2523,7 +2548,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2553,7 +2578,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2583,7 +2608,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2598,7 +2623,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2628,7 +2653,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2658,7 +2683,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2673,7 +2698,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2688,7 +2713,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2703,7 +2728,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2748,7 +2773,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2778,7 +2803,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2823,7 +2848,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2838,7 +2863,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2853,7 +2878,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2898,7 +2923,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2913,7 +2938,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2958,7 +2983,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2973,7 +2998,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -2988,7 +3013,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3033,7 +3058,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3063,7 +3088,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3078,7 +3103,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3138,7 +3163,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3153,7 +3178,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3168,7 +3193,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3213,7 +3238,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3228,7 +3253,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3243,7 +3268,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3258,7 +3283,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3303,7 +3328,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3318,7 +3343,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3393,7 +3418,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3408,7 +3433,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3423,7 +3448,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3468,7 +3493,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3483,7 +3508,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3498,7 +3523,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3513,7 +3538,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3558,7 +3583,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3573,7 +3598,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3588,7 +3613,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3603,7 +3628,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3618,7 +3643,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3633,7 +3658,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3648,7 +3673,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3663,7 +3688,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3678,7 +3703,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3708,7 +3733,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3723,7 +3748,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3768,7 +3793,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3798,7 +3823,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3813,7 +3838,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3828,7 +3853,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3843,7 +3868,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3858,7 +3883,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3873,7 +3898,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3903,7 +3928,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3918,7 +3943,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3933,7 +3958,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3948,7 +3973,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3963,7 +3988,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3978,7 +4003,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -3993,7 +4018,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4008,7 +4033,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4023,7 +4048,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4038,7 +4063,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4053,7 +4078,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4068,7 +4093,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4083,7 +4108,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4098,7 +4123,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4113,7 +4138,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4128,7 +4153,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4143,7 +4168,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4173,7 +4198,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4188,7 +4213,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4203,7 +4228,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4218,7 +4243,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4233,7 +4258,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4263,7 +4288,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4278,7 +4303,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4293,7 +4318,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4308,7 +4333,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4323,7 +4348,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4338,7 +4363,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4353,7 +4378,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4368,7 +4393,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4383,7 +4408,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4398,7 +4423,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4413,7 +4438,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4443,7 +4468,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4458,7 +4483,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4473,7 +4498,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-06",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4488,7 +4513,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-07",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4503,7 +4528,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4518,7 +4543,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4533,7 +4558,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4548,7 +4573,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4563,7 +4588,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4578,7 +4603,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4593,7 +4618,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4608,7 +4633,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4623,7 +4648,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4638,7 +4663,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4653,7 +4678,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4668,7 +4693,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4683,7 +4708,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4698,7 +4723,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4713,7 +4738,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4728,7 +4753,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4743,7 +4768,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4758,7 +4783,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4773,7 +4798,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4788,7 +4813,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4803,7 +4828,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4818,7 +4843,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4833,7 +4858,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4848,7 +4873,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4863,7 +4888,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4878,7 +4903,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4893,7 +4918,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4908,7 +4933,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4923,7 +4948,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4953,7 +4978,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4968,7 +4993,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4983,7 +5008,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -4998,7 +5023,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5013,7 +5038,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5028,7 +5053,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5043,7 +5068,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5058,7 +5083,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5073,7 +5098,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5088,7 +5113,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5103,7 +5128,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5118,7 +5143,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5133,7 +5158,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5148,7 +5173,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5163,7 +5188,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-22",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5178,7 +5203,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-22",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5193,7 +5218,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-22",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5208,7 +5233,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-22",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5223,7 +5248,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5238,7 +5263,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5253,7 +5278,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5268,7 +5293,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5283,7 +5308,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5298,7 +5323,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-24",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5313,7 +5338,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-24",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5328,7 +5353,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-24",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5343,7 +5368,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-26",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5358,7 +5383,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-26",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5373,7 +5398,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-26",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5388,7 +5413,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-27",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5403,7 +5428,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-27",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5418,7 +5443,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-27",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5433,7 +5458,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-27",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5448,7 +5473,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-27",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5463,7 +5488,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-28",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5478,7 +5503,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5493,7 +5518,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-30",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5508,7 +5533,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-30",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5523,7 +5548,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-30",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5538,7 +5563,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-30",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5553,7 +5578,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-09-30",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5568,7 +5593,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5583,7 +5608,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5598,7 +5623,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5613,7 +5638,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5628,7 +5653,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5643,7 +5668,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5658,7 +5683,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5673,7 +5698,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5688,7 +5713,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5703,7 +5728,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5718,7 +5743,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5733,7 +5758,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5748,7 +5773,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5763,7 +5788,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5778,7 +5803,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5793,7 +5818,172 @@
       ],
       "guess_state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
+      "status": "new"
+    },
+    {
+      "name": "Jacksonville City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Jacksonville City Council members, JEA, planners answer residents’ data center questions",
+          "outlet": "News4JAX",
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQeVl6SUdNV2lpT3NDYUs3OXYyWDBlVU5XRERrZ3FQVDEyMzZIWUZ1MTRoV2pVTzJLVDRzeGN2Z1dYenlLT1M5S2NNbDVXeV96QjA5RTVocEVWUlJYZ1kwU3ZBNDNEWmh0dDU0cGxzcHFCYk9GYWZod1ExX2xDOGJlMjVMdUJhRTd6TjZWRjVVYTJJbVBrTDByZ0FHUGV6aWJTUXp0TGdBZVVMMXhyU05LR1A2UGJYOWVEaUh5X3Y2eDk4MFZJajJTUzNNenM0QQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "status": "new"
+    },
+    {
+      "name": "Pennsylvanian",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Pennsylvanian residents rally at State Capitol over data center development",
+          "outlet": "WGAL",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNeFhqclpzTUJQRkNoQ1NyZ3I4STFHSHBpOGk3T2FEX0FfZ3phRDc3WGdqc3plX3NvQlgwMnZiZzgycDhoLXpRLTlsbTUwRHdtcWdxUkJiRXRNWFllZUQ5c3FUOEV1N0FmUFhOZG5ERHRnLURvb2VwQlhtMmVMWjY2alh0R3pUUng3N3lhZGxKVXZRbGdEaFpELW9VYXdxbmlXUFVj?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "status": "new"
+    },
+    {
+      "name": "Bethlehem City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Bethlehem City Council holds public hearing on data centers and passes zoning ordinance amendments",
+          "outlet": "The Brown and White",
+          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPVVZJdmFOcmtfdkNPc1JrSVJjdng1RzZEQkNKdHIzRFFMZzVNQUljZEs5MllYc3dqSlhVRWVVa09IM2I2MEpONml3R2hGZ3JyYnVWTlRYdTlMdENNVXUwYmhPMm9UQWlyb0RkQkc0emcxRXRKTkxHcGsxWHlBcXUyMnR0RWhldzhWMXJyX042ZW1GMnNxend6eVZwMkNIcEgxbTd3WlU1X2dWc2lsWjU4WFZnZXg3enVud3hzekprNmZtY3R2dUk2LWlxVEVyUW9QazkxYzdB?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "status": "new"
+    },
+    {
+      "name": "Williamsport City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Williamsport City Council finalizes draft zoning ordinance for data centers",
+          "outlet": "Williamsport Sun-Gazette",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQMnEzdUl3dUdrNks0V1RXQlh6SXdwTG1JaUpMQjVTckUwb0tCaktIN1llZEJSSHc3RWZ5YnhwbTJUSnVheF95OUZ0WXd4LUc3ams5T2FFeHdmalE1V296dWxHT2dCT0VyRkhIODNIb1FjVkd1OHlSQ25hZ0hYQjRZancxeUgxeldOcWZXRVMwNXFINGlZdlhyTFRPd2J6bGNJbjc0RHJmZDIwYWJnNkx5UkFRUjZqM3pPcUR5ZlNpS2FXS3c?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "status": "new"
+    },
+    {
+      "name": "Anne Arundel County",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Anne Arundel County Council extends data center moratorium through 2028",
+          "outlet": "WBAL News Radio",
+          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcXJtU0RaTllkSHFFYTlvUUtaZXVjS0phM2hfQXQ2QnNhcGFOcEtJQXN5T29TTTQ5R0hhdHNDV091VVNXRW4ycmRlTkNvbEhRNlpGMHl0ZHl4bm5Qd1JJNmJlZWFrNlRmVWhfbTB2TjlLM3ZxVkNsNlRSeDE3Z1VvRDF1cHcxTHRHWHh5akFzdTduTUwwc0Fv?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "status": "new"
+    },
+    {
+      "name": "Another",
+      "count": 1,
+      "examples": [
+        {
+          "title": "S.F., Oakland vote to temporarily ban new data centers. Another city is taking a different path",
+          "outlet": "San Francisco Chronicle",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNalZGaV9oVTVMQTF1dk5QbkI0SGRYQWpZVXdkUVV0NkNzbjhNNmdjTkQtWVcyRWtTMnB5U0prUHEtcDlyTXpDUVhLcXd5ZFdkU05ySDA5LVhiaXB1TXZIVE54MVFpWFZDRVlQYmlFcDcyRHZsbnJFV3NIeEltTGJrbVNMMWNUWU4w?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "status": "new"
+    },
+    {
+      "name": "Jacksonville",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Jacksonville city leaders weigh next steps on data centers as residents call for moratorium",
+          "outlet": "firstcoastnews.com",
+          "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOR2hzYUZDRXVDRDBZdmo5UVY1ZWNMSkhHV3YxVG1VTDh5eGU0d3hhVXlBX1poaDladlpQaV9vd3hnd1RoekJ6R1p1alBSdV9lWWNqZHAxVDhpdkFRNGJfRmpsZVZOaDVPWnNlamhNaDNoYzFTaVdBNWZlWk1iSFhHSnRQU0dKbFVnMXk0WENOam9sUnFJd21ObTBCUXFweXhaR2trelZsWWZnUkdyVDlBc1pURFJmNF9XYi14SjFrMmdBei1IZi0wYktZWk90aHZWdk5N?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "status": "new"
+    },
+    {
+      "name": "Santa Clara City",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Data Centers Take Center Stage at Santa Clara City Council",
+          "outlet": "The Silicon Valley Voice",
+          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNTzl4S2Q4cldzYzlLV1dWTkxXX2xEaGZHakhMOU45ZnNBWWpDVXRNbXczeWZLOGhlX1VvYmZRTjBvTXN0amFpMDZWeWo1Smxra253aV9yUDJocnZSMi1NVEFTeXNCNU9GLVpuc0ZDX2oxMHhMSVlRZ0toTHFnbWJnTU5sZ2RaNk5PVnpr0gGQAUFVX3lxTE1UcDZyTzZIV3BPMjUydHEyQkhnX3hMbFVJYkVMOHBzQ1JIMWprNi0ySTRGYjBRaG9DOU5kZmhnMW1KY2ZvSGZFZnEyN1d1bDJrY3hnM1R1VHdXeWcwaFRkazQ4NHl3X3lwOUZGN213dk9MUjJCazljQ3N0M3RfUUNMcXRUYWZ4SlhleTM0YUxkWg?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "status": "new"
+    },
+    {
+      "name": "Cordele",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Cordele Commissioners hold public hearing for data center ordinance",
+          "outlet": "Cordele Dispatch",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQblVFNHdXSHBlcmUzeHJsQlBEek96WFl3MjV1dkUzR2dHYXhrWm9rUXp0dkRzQXdxUzE2U183R2xxakV4SWhBUFI5X2hxYml2OTRjVFl5NmYwZThDSjJsTTlpR0xwSk1nbEp3Q2VGNVdyekZ2NnlQcFVIQlFCX3BJOVUwZGxoemROS2VTWEZEaXEzcFhtVWxoLXQ2d1dLWmxwMC1xZ3dBUHdCcnc?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "status": "new"
+    },
+    {
+      "name": "Colchester",
+      "count": 1,
+      "examples": [
+        {
+          "title": "Colchester residents pack town hall to oppose proposed data center",
+          "outlet": "WFSB",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPczR3WjNoOUIwT01VSm9kcTU0Um9wcHpuN2JRU3FtSVo0TWZEc1pCamNJcC10a1EyQmxGYXA3a2xrN2plVFd5OXZTZnFPdGV2WUNjMlFRUGp1b3pZRlpSczgzMDRmQ3JuejFyLTRueFdKeGNBZVU4bW5wSjFJNGJhLWZORVVBdmcyclRQbFV6bEdvMVZHTWFUTG94b2tRZy1kSmdCNnQtUDhqNklBVTlhb05n0gHGAUFVX3lxTE1YWXBqVmE5MkMtVTRLWGJSWFdoNDFzOVNlWEt6UXU1M3JobURvbWI1aFctZm1lMGVZLWNJdE5WemtTVHNpSHEzZWU1UWpvMXNMcEhjbkc4NkhBeGFfdXo4ZWtWUUt6QWw2UEREN05qeU9PUWtQWnl5Ny1mMUhYa2dhMGJWRnhvbDd6WVlFQjAxNFlFcU05cFpfc1FxbGdlWnBEU1ZaRnNJZ3h2LWJxemZHUFJKQVdkVEI1anJmNVMtOWtWRExWdw?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "status": "new"
+    },
+    {
+      "name": "Forward",
+      "count": 1,
+      "examples": [
+        {
+          "title": "As data center backlash grows, residents in Forward Township beg leaders to ‘please, please hear us’",
+          "outlet": "Pittsburgh Post-Gazette",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOUGVVQ3Q4bWdnRHlhb1I4Q3g0X184UWFuOTY4bzdvRjZXb1F0V3Rxc3ZETVNPa1g2TnJDRlppUnZHeGRZOVlaRmFNUkdRRGM1VDV2UXJjWVhTdllpZmZFVXUxRTAyT1BfVGZzQmc0WDdGNUpsbmtJaUxldkdNd1dyTFpCeTdFQXI3R2t5Tjh6OG9RQTNGc3FBVURTanVMeHRpd1ZEeVIzdE9TTnJhNWloQ0tldmtpQTU3ckctdDljdEFhZ3NDMmpRbGFJSQ?oc=5"
+        }
+      ],
+      "guess_state": null,
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
       "status": "new"
     },
     {
@@ -5892,7 +6082,7 @@
       ],
       "guess_state": null,
       "first_seen": "2026-08-12",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "status": "dismissed",
       "dismiss_reason": "Pitt County NC — the town referenced is Farmville NC, already tracked in MORATORIUMS_DF"
     },

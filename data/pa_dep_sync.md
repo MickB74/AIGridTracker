@@ -1,11 +1,11 @@
-# PA DEP data-center tracker sync — 2026-10-07
+# PA DEP data-center tracker sync — 2026-10-08
 
 Source: https://gis.dep.pa.gov/DataCenterPermitTracker/
 
-- DEP projects on file: **72**
-- DEP permit records: **374**
-- Added to projects.json: **0**
-- Refreshed: **0**
+- DEP projects on file: **73**
+- DEP permit records: **394**
+- Added to projects.json: **1**
+- Refreshed: **2**
 - Skipped (already tracked by hand): **16**
 
 ## Skipped — hand-written row already covers this
@@ -28,4 +28,13 @@ Left alone on purpose. If the DEP row carries detail ours lacks (a permit trail,
 - DEP 10000066 *Salem Township Data Center Development (Amazon Web Services) - Phase 2* (Salem Township (Luzerne County)) → `aws-salem-township-pa`
 - DEP 10000067 *Falls Township Data Center Development (Amazon Web Services) - Phase 2* (Falls Township (Bucks County)) → `aws-falls-township-pa`
 - DEP 10000068 *Aligned Data Center - Phase 2* (Shippingport Borough (Beaver County)) → `aligned-shippingport-pa`
+
+## Added
+
+- `lancaster-ai-hub-east-formerly-referred-to-as-216-greenfield-road-chirisa-technology-parks-phase-2-city-of-lancaster-pa` — Lancaster AI Hub East [formerly referred to as 216 Greenfield Road (Chirisa Technology Parks)] - Phase 2, City of Lancaster (Lancaster County)
+
+## Refreshed
+
+- `216-greenfield-road-lancaster-city-pa` — Environmental permits under review at PA DEP (1 pending, 2 issued).
+- `lancaster-ai-hub-west-harrisburg-place-owner-llc-chirisa-technology-parks-city-of-lancaster-pa` — Environmental permits under review at PA DEP (2 pending).
 

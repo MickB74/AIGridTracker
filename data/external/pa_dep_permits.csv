@@ -26,6 +26,11 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000002,Storage Tanks,Storage Tank Registration/Permitting,Modification,1528417,40-98591,5/27/25,Issued
 10000002,Storage Tanks,Storage Tank Registration/Permitting,New,1527333,40-98591,4/30/25,Issued
 10000002,Storage Tanks,Storage Tank Registration/Permitting,Modification,1550683,R2402,12/1/25,Issued
+10000002,Storage Tanks,Storage Tank Registration/Permitting,Modification,1549877,R2391,11/19/25,Issued
+10000002,Storage Tanks,Storage Tank Registration/Permitting,Modification,1560401,R2515,2/26/26,Issued
+10000002,Storage Tanks,Storage Tank Registration/Permitting,Modification,1562594,R2529,3/11/26,Issued
+10000002,Storage Tanks,Storage Tank Registration/Permitting,Modification,1574598,R2697,6/26/26,Issued
+10000002,Storage Tanks,Storage Tank Registration/Permitting,Modification,1577726,R2724,7/20/26,Issued
 10000002,Storage Tanks,Site Specific Installation Permit,New,1536651,25003,7/30/25,Issued
 10000002,Air Quality,Minor Facility Plan Approval New Source Performance Std,New,1522103,40-00158B,4/1/25,Issued
 10000002,Air Quality,AQ GP 11 - Nonroad Engines,New,1503057,GP11-40-034,10/10/24,Issued
@@ -48,7 +53,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000002,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),Minor Amendment,,PAC400336 ,10/17/25,Issued
 10000002,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),,,PAC400193 A-4,,Issued
 10000002,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),,,PAC400333 A-1,2/18/25,Issued
-10000002,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),Major Amendment,,PAC400333 A-2,3/31/26,Pending
+10000002,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),Major Amendment,,PAC400333 A-2,3/31/26,Issued
 10000002,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),Major Amendment,,PAC400333 A-3,,Not Yet Submitted
 10000002,Air Quality,Minor Facility Plan Approval New Source Performance Std,New,1556707,40-00158C,1/22/26,Pending
 10000003,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),,,PAC350210,11/3/25,Pending
@@ -109,7 +114,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000011,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),Transfer,,PAC210079 A-1,8/9/25,Issued
 10000011,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),Minor Amendment,,PAC210079 A-2,8/28/25,Issued
 10000011,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),Major Amendment,,PAC210079 A-3,11/4/25,Issued
-10000011,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),Major Amendment,,PAC210079 A-4,12/9/25,Pending
+10000011,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),Major Amendment,,PAC210079 A-4,12/9/25,Issued
 10000011,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),Major Amendment,,PAC210079 A-5,7/13/26,Pending
 10000011,WRM Water Obstructions & Encroachments,GP-05 Utility Line Stream Crossings,New,1559045,GP052103226-001,1/30/25,Issued
 10000011,WRM Water Obstructions & Encroachments,GP-05 Utility Line Stream Crossings,New,1541734,GP052103226-002,9/12/25,Issued
@@ -129,6 +134,8 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000011,MING Explosives Safety,Blasting Activity Permit,New,1566689,21264110,4/21/26,Issued
 10000012,Air Quality,Minor Facility Plan Approval MACT Air Toxics Minor,New,1527342,36-05169A,5/14/25,Issued
 10000012,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),,,PAC361091,,Issued
+10000012,Air Quality,Minor Facility Plan Approval New Source Performance Std,New,1575120,36-05169B,6/22/26,Pending
+10000012,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
 10000014,Air Quality,Minor Facility Plan Approval MACT Air Toxics Minor,New,1566012,04-00953A,4/13/26,Pending
 10000014,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),,,PAC04198  ,10/31/25,Issued
 10000014,MING Explosives Safety,Blasting Activity Permit,New,1580774,4264103,8/19/26,Withdrawn
@@ -372,4 +379,17 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000071,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Permitting (Chapter 105),,,,,Not Yet Submitted
 10000071,WPC Act 537 Municipal Sewage Planning,Act 537 Sewage Planning,,,,,Not Yet Submitted
 10000071,WPC State Water Pollution Control,WQM Sewer Extensions,,,,,Not Yet Submitted
-10000072,Air Quality,Plan Approval,New,,36-05170A,9/25/26,Pending
+10000072,Air Quality,Minor Facility Plan Approval MACT Air Toxics Minor,New,1586002,36-05170A,9/25/26,Pending
+10000009,Storage Tanks,Storage Tank Registration/Permitting,New,1550454,R2393,11/20/25,Issued
+10000009,Storage Tanks,Storage Tank Registration/Permitting,Modification,1551841,R2407,12/8/25,Issued
+10000009,Storage Tanks,Storage Tank Registration/Permitting,Modification,1552435,R2417,12/16/25,Issued
+10000009,Storage Tanks,Storage Tank Registration/Permitting,Modification,1555649,R2466,1/20/26,Issued
+10000009,Storage Tanks,Storage Tank Registration/Permitting,Modification,1556861,R2483,1/30/26,Issued
+10000009,Storage Tanks,Storage Tank Registration/Permitting,Modification,1559499,R2507,2/20/26,Issued
+10000009,Storage Tanks,Storage Tank Registration/Permitting,Modification,1563674,R2546,3/20/26,Issued
+10000009,Storage Tanks,Storage Tank Registration/Permitting,Modification,1564999,R2564,4/6/26,Issued
+10000009,Storage Tanks,Storage Tank Registration/Permitting,Modification,1578015,R2733,7/24/26,Issued
+10000009,Storage Tanks,Storage Tank Registration/Permitting,Modification,1580909,R2785,8/14/26,Issued
+10000073,WPC Erosion & Sediment Control,Chapter 102 Individual NPDES Permit,,,,,Not Yet Submitted
+10000072,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Pmt,New,1586119,E3603226-013,9/29/26,Pending
+10000072,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
