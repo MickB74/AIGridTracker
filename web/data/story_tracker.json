@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 10015,
+  "count": 10026,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -56799,7 +56799,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-08"
+      "last_seen": "2026-10-10"
     },
     {
       "title": "Wilder, Gilmore blast Spanberger on data centers",
@@ -101404,7 +101404,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-06"
+      "last_seen": "2026-10-10"
     },
     {
       "title": "Memphis City Council to vote on updated data center moratorium ordinance on Tuesday",
@@ -103845,7 +103845,7 @@
       "published_iso": "2026-10-07T01:57:26+00:00",
       "locality": null,
       "state": "UT",
-      "first_seen": "2026-10-07",
+      "first_seen": "2026-10-06",
       "last_seen": "2026-10-10"
     },
     {
@@ -109192,7 +109192,7 @@
       "locality": null,
       "state": "AR",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-09"
+      "last_seen": "2026-10-10"
     },
     {
       "title": "Ending Loudoun's data center grandfathering clause could expose county to up to $60 million in liability, staff warns",
@@ -110171,6 +110171,127 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
+      "last_seen": "2026-10-10"
+    },
+    {
+      "title": "What Comes After a Data Center Moratorium?",
+      "outlet": "ACHR News",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOTVN3dVlubi1ScHFVUjVXcldBN1ROTmtvMkpmWEZBd0Y5S2NYRTZFeWZ6SWpEc252TVhtYWc1TWRJb2I3WHRQMFRBazJMZGxya2lIc1UxN2lrdmNXbkw2Y1lFOWVMdmdQdVJTZzc1VUg3aWhZd2ZLOFpySUFuOWxybEVlcWlkVE5PVWc?oc=5",
+      "published": "Wed, 07 Oct 2026 20:01:40 GMT",
+      "published_iso": "2026-10-07T20:01:40+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-10"
+    },
+    {
+      "title": "Oakland puts temporary pause on new data centers",
+      "outlet": "SiliconValley.com",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQ1YzOUxFR3dpd1hVdlVwU25tNTdBU0htTFdJME13V3BTSmNCcVFwS005SnozazRNU1JGYmNJMDZmelk5LTJzMUxwbUFWQzlqQk9kSjFpOHFjSE91ci1RRWw5b04tTkdHZkdGcjRySUlHQVFRRjRNTHFCMGt4TkdLd09oR0R1cTBPVTluTjJQU244OXhE0gGaAUFVX3lxTE5UdmpRVERKREZVeEF2STFOcDhid1R0dTJJN2lTeWRGTzJVa0J4cW5PczBSdmlqR2l3ckd6bmVPbnFYSDNSY0xleU5lMm5fSkxMZm9rQTZPWlFVbnJfRmlNN3BtblQ0dWdPVzNfY2ZZTHZzNklHeVFPM19ySWdiaUU0ZFNtX2RSZnBqalBYWTQ2SmpzcjU3QzVZS3c?oc=5",
+      "published": "Wed, 07 Oct 2026 07:00:00 GMT",
+      "published_iso": "2026-10-07T07:00:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-10"
+    },
+    {
+      "title": "North Jersey has over a dozen data centers and more coming. See list",
+      "outlet": "AOL.com",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBvdjUtRHlXaG1RNWszWHFFaWJQdm1ud0NEbFBJdUl2ZVZEZDRiTXd1OVpGNUkxSGFGVTdfRVdOM2FDa2FaY1ZFa3dRaGMxb0hmNUl3SDE0ekdmT003OWFGcG5xT3BLdllDVmhWc3BHNUdDLUtkUVlJNFc1UW4?oc=5",
+      "published": "Wed, 07 Oct 2026 13:53:36 GMT",
+      "published_iso": "2026-10-07T13:53:36+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-10"
+    },
+    {
+      "title": "Gov. Spanberger's data center plan provides pathway for Virginia",
+      "outlet": "The Korea Times",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbnpqS0hUZFZJWTN2NlBUNEkycDQtWEpkcTdzRHFWN3VLWTNYbVdpV0ZvQnJxVzRHdEQwU0NCbUV6cDhmV0xpRjNXekFUZEdfcU9tOEQ0SEZqNkFTRFJlUzNSLTVkUHJoeE4ybk9VT3k4dUFMazYwaGRwVzFtb3FCZTItMHZTcUlDcTZlTXBEMkRBcDdpd09HR0hUSWt6UGZycGlkbFF1Z2g1Yzdj0gGyAUFVX3lxTE55Wm1uQ2RmbndlWlpRcDRiejhVcWEyLXozNkRpSFpNWVhNN21XTlNuUXNQdjQ4T1h0X3ljZXVwMUh2YlVReVNsZk0tQVZPNmdYcWUtTFU3c1FPeGxHT282ZjI4eVhaY0N1R3VramxVZkJac0IzUjdPVkdZakpzMTFBbTlEUmZCOC1DdkwtT01KczdwT1dmNVlNRngzdzZua3dncy1oMzZCc3R4VjdoM0RBdFE?oc=5",
+      "published": "Tue, 06 Oct 2026 01:25:02 GMT",
+      "published_iso": "2026-10-06T01:25:02+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-10"
+    },
+    {
+      "title": "One of America's Last Remaining Chestnut Groves Could Soon Be Wiped Out to Make Room for an AI Data Center",
+      "outlet": "Futurism",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYmZ2c0Y4bEZHczJFUDJxek91WEJIUm5OT0xYQUtSMEZFZExkcXNlR3UwYXM5S1dEUGlDOThESmVzWXFBc05JeTJzT25Zck9rbnA1REJEWVZ3b3ZjdXZxMFRHNGYxV0w4cjdPd1JNaEtUREhDbmVIbmpLN1NaR2VfRVo3dUVWbmIzSlRzenF0YkFwTkl0YkRzZnhjbGVtclFL?oc=5",
+      "published": "Sat, 10 Oct 2026 17:01:00 GMT",
+      "published_iso": "2026-10-10T17:01:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-10",
+      "last_seen": "2026-10-10"
+    },
+    {
+      "title": "Concentration Risk in Northern Virginia Data Centers Raises Cyber and Regulatory Concerns",
+      "outlet": "TipRanks",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQejBxX0tsMkZJVWtldERSeWVOSjV0Z00zRmx5VkVzMjFmWTg0X00zWnM3ZTVrbElXNXJlQ2k4dFJWZ3FsclcweEZRU0xGSDJ6b2prNjZiNVNlMGdtWXpHUkNjQ1d5bUV5YUdmZW02QW1hQlhROElyZmVSM2pCSXNIbUJRLUNSUHBWMGdVRksxa2p0T2c3VHJtMkxDUkhQYzdZR0NXSTJNY0ZGMTBhXzBiR3dYTV9Gb3pDb3JyTkVVY2w4ZGdMUGZneGthb3dCS21EcUxN?oc=5",
+      "published": "Tue, 06 Oct 2026 07:00:00 GMT",
+      "published_iso": "2026-10-06T07:00:00+00:00",
+      "locality": "Northern Virginia",
+      "state": "VA",
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-10"
+    },
+    {
+      "title": "Fact-checking Jon Ossoff and Mike Collins in Georgia’s first Senate debate",
+      "outlet": "PolitiFact",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPTWhHXzlIM2xHY2ZSa1o5VVlTX1RiaVh4TE1fcWdha1lIaEN0ZVp5NzE4aGVvaWNPYjRUWHhrenJ1YnFlOEZ5c0JQUS1BenNmVlptMTBNVEg0Wk5POUdlNTAtNVhKV0h5WWNVdUlOQm51SlRBYlpRSW5rMldnbGF6dnJnTGZWSWtadTM5QmxRczhCV3ExUk9mcw?oc=5",
+      "published": "Fri, 09 Oct 2026 21:00:29 GMT",
+      "published_iso": "2026-10-09T21:00:29+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-10-09",
+      "last_seen": "2026-10-10"
+    },
+    {
+      "title": "Chris Erwin, House District 32",
+      "outlet": "mainstreetnews.com",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPNmptZ2NxZURhbjdPSFdyLUZtUnlpZzNMdFV4X2dha1E4bmtodVB4WGRkbmc5MjhYT1dTaWRBblJFLTZuTE1SSVlKMVQwb2p3anBXTEJ3Wl9JVDl4aUp3Y0I0blNNdkRnZkFKUURDRVFMcE1paC15MnVCNzd2Yi1wM2hfZFhoZDFUWVBpNVFrVVU2UUtaaXFuM3ZNMzlseVZTVnRCMmFDdmtUVlZjbEVZQVdERl9zWDZRQmJFVklmRlA?oc=5",
+      "published": "Wed, 07 Oct 2026 12:00:00 GMT",
+      "published_iso": "2026-10-07T12:00:00+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-10"
+    },
+    {
+      "title": "CleanSpark’s Bitcoin Holdings Fell 173 BTC in September",
+      "outlet": "TOKENPOST",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1sSVpkcEJHUHBoU3BpVk9iMGFqWnVwaTBsT0hDQU9DV0RYRlVTRzZRZGMwTHdYU3o3aHh6QzdoTGQ1b3daamxQd19Pc1o0NHF5Rnp5SG5tUDU?oc=5",
+      "published": "Sat, 10 Oct 2026 14:07:54 GMT",
+      "published_iso": "2026-10-10T14:07:54+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-10-10",
+      "last_seen": "2026-10-10"
+    },
+    {
+      "title": "Perot Jr. talks up data centers at Waco luncheon, touts Texas' role in US economic future",
+      "outlet": "Waco Tribune-Herald",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQRlU1TllNck1fTnczbzB1ZzdvLVRQVFhFRDFfQW1lbU5mSjlRNS1LbTRyS2JOYkV4eDhTUV9CSTVhLTBBSG1rQmlaWHU0OEExck1ndHJ2ZHRCUFdXeFZ0M3U4Q29LeEI3d0xoRmtYaWc0NVNLY2cyTDlRZjIxUGgtZTdmYkRQQjV0S2M5blhTSVBkSkVr?oc=5",
+      "published": "Sat, 10 Oct 2026 18:33:00 GMT",
+      "published_iso": "2026-10-10T18:33:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-10",
+      "last_seen": "2026-10-10"
+    },
+    {
+      "title": "Connersville Commons Retail Center",
+      "outlet": "PR Web",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOWlVza1Q0T0hPVGNLbnhjZFAtSlFURVFDb1VTR2dXdlRRM1dqZjBydXhBUjk2VXZ5NkRjbHNlMlJGcDl4REFlT05kSENtaTZQV0xfRGsxVVNUeklGeTBQUDFERjk2Q1NYbUQtd2VGT0EyTzNfd2xpSWRBRFlMNncxYWVkSjFnNG9GaWs0?oc=5",
+      "published": "Fri, 11 Oct 2013 07:00:00 GMT",
+      "published_iso": "2013-10-11T07:00:00+00:00",
+      "locality": "Fayette County",
+      "state": "IN",
+      "first_seen": "2013-10-11",
       "last_seen": "2026-10-10"
     }
   ]
