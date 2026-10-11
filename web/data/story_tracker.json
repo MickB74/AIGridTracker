@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 10048,
+  "count": 10052,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -55314,7 +55314,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-04-24",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Child molesting suspect dies by suicide in Fort Wayne on day 2 of Cass County trial",
@@ -104198,7 +104198,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-09"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center moratorium vote ends abruptly amid protests, fistfight",
@@ -106123,7 +106123,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Texas agency fights release of data center records",
@@ -110534,6 +110534,50 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-04",
+      "last_seen": "2026-10-11"
+    },
+    {
+      "title": "SF approves 45-day data center moratorium",
+      "outlet": "KTVU",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNaFVlc1l5WFR6VDVBbXNaVjN2cUFxb3N1TV96eEdaYnM0MVlqdjUyaGlsbThKWk1VS1hKUU8zdGZLYmdsY3RZUVZ1cjNXUmJtTjRkVG90WE90c2VwMXRGWjRHcGR1MEcycUZhTFpjOUtEQlFpYV93YTBfV3RnSURLMTFXaXhsbllsRGpNbUNWWDhYeUlVSy1MX0ZZV0FISWEwSmFYaw?oc=5",
+      "published": "Wed, 07 Oct 2026 00:40:25 GMT",
+      "published_iso": "2026-10-07T00:40:25+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-11"
+    },
+    {
+      "title": "Manatee County approves 12-month data center moratorium",
+      "outlet": "wtsp.com",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQcmYtMVBXV0M4VkswWW9DdlNUR0tFUHlNNWEyVTdzb3dZNFZJOWVkY3l1M1ZNOFI3SEhyQlRDWWs5TkY5QmZubVUtMGlhR0pYWTEyUFZ5LUt5MDlwc09ORXBqa25UX3c3TGZEOWhrRG1EelVxUzA5c1Yxam5fc1lEaHk1VzA1SkVFT1FsYWllOXlUSXdNVFB2cUlwVlZvUTBkN3V5c3NWQ242Zlp4Yks2Wk5LVF9oOXhaRzNsX0tkYVFYbHo0S0xfVlRaSExSSVE?oc=5",
+      "published": "Sun, 11 Oct 2026 15:43:00 GMT",
+      "published_iso": "2026-10-11T15:43:00+00:00",
+      "locality": "Manatee County",
+      "state": "FL",
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11"
+    },
+    {
+      "title": "Citizen coalition calls on Sioux Falls to enact temporary data center moratorium before final permitting of Gemini Project",
+      "outlet": "Tri-State Livestock News",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNa204RHduWTFIdkhTYUMtd1Z1cmNRZk5GSlZSQVFBNERaNTVmZUtValRkdzEyVXlzWFM4QzZHek4tbDduaTFUWU1aaHM2eUZlNTVUaHBKTy01UmZ5QlJmZ0NsX24tcHVMelVELVNnNDhIYXpLdmMzWDVoTzZqRXNYQzJ4Qms0NjNkSG9NdE9HenJEUmpoa2pPUm9KZjJZOTlBQmpBM2lqRHlXS1ZNNEFwT0tORHpYaW9aNzhSN2tTTVVpLWQ5VHpqM1J0cG5lS1dUcTdtZTRtaDhUMWdKcDBDQUIxWQ?oc=5",
+      "published": "Thu, 08 Oct 2026 16:53:03 GMT",
+      "published_iso": "2026-10-08T16:53:03+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-11"
+    },
+    {
+      "title": "Amazon changes course on water use for King George data center campus",
+      "outlet": "News From The States",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQb2NjcGhfeXBJVTNYclFWNkRjUHMyZVc2WnEzdE1ZSFlkVkVnQ2d4OUNKM2lxSS1KRlFkNXRVSTVUcFotcmwwVXZiNzdSb0tRbG8zeUlhMUs0X2k1c1RmTm55N0dCU29qd3M1MEh2bGlaazhjcXFDTTI3SFZ3UUdaeWU2SE9wcVJnQ1lhSnc3cy1EcUZpaFViVWNhbnVGMWlEdllGTXJCWQ?oc=5",
+      "published": "Fri, 09 Oct 2026 07:00:00 GMT",
+      "published_iso": "2026-10-09T07:00:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-09",
       "last_seen": "2026-10-11"
     }
   ]
