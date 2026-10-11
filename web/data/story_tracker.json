@@ -1,12 +1,12 @@
 {
   "name": "AI GridWatch data center story tracker",
-  "generated": "2026-10-10",
+  "generated": "2026-10-11",
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 10026,
+  "count": 10035,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -721,7 +721,7 @@
       "locality": "Southaven",
       "state": "MS",
       "first_seen": "2026-07-16",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Residents demand transparency on Port Washington's $15B AI data center's water and environmental impact",
@@ -10632,7 +10632,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-08-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Form Energy raises $750m to expand West Virginia iron-air battery plant to meet surging data center demand",
@@ -17617,7 +17617,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Bayonne says no to new data centers",
@@ -18563,7 +18563,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "New York hit pause on big data centers. Here’s what it means for construction.",
@@ -50045,7 +50045,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-01",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Texas Republicans Dig in on Opposition to Data Centers: Poll",
@@ -50067,7 +50067,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-02",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "TIDAL PWR, BTQ Develop Blueprint for Quantum-Ready Data Centers",
@@ -54467,7 +54467,7 @@
       "locality": "Merrillville",
       "state": "IN",
       "first_seen": "2026-05-27",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Merrillville Council OKs year data center moratorium",
@@ -54478,7 +54478,7 @@
       "locality": "Merrillville",
       "state": "IN",
       "first_seen": "2026-05-28",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Merrillville council extends data center moratorium by 6 months",
@@ -54489,7 +54489,7 @@
       "locality": "Merrillville",
       "state": "IN",
       "first_seen": "2026-07-18",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Merrillville reschedules data center informational event for July 16",
@@ -54500,7 +54500,7 @@
       "locality": "Merrillville",
       "state": "IN",
       "first_seen": "2026-07-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Merrillville explores data center ballot question amid revenue squeeze",
@@ -54511,7 +54511,7 @@
       "locality": "Merrillville",
       "state": "IN",
       "first_seen": "2026-05-24",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Merrillville officials place one-year moratorium on data centers",
@@ -54522,7 +54522,7 @@
       "locality": "Merrillville",
       "state": "IN",
       "first_seen": "2026-05-27",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "$2B+ in Data Center Projects Planned for Merrillville, Ind.",
@@ -54533,7 +54533,7 @@
       "locality": "Merrillville",
       "state": "IN",
       "first_seen": "2024-11-25",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Developer looking to invest up to $900 million in Merrillville data center that would bring hundreds of jobs",
@@ -54544,7 +54544,7 @@
       "locality": "Merrillville",
       "state": "IN",
       "first_seen": "2024-09-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Proposed data center project could bring $600M investment to Merrillville",
@@ -54555,7 +54555,7 @@
       "locality": "Merrillville",
       "state": "IN",
       "first_seen": "2024-11-21",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Proposed Merrillville data center gets favorable recommendation from citizen advisory committee",
@@ -54566,7 +54566,7 @@
       "locality": "Merrillville",
       "state": "IN",
       "first_seen": "2024-09-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Merrillville welcoming data centers as major generators of tax revenue",
@@ -54577,7 +54577,7 @@
       "locality": "Merrillville",
       "state": "IN",
       "first_seen": "2024-12-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Merrillville rezones 180 acres for potential data center",
@@ -54610,7 +54610,7 @@
       "locality": "Merrillville",
       "state": "IN",
       "first_seen": "2025-03-19",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Jeffersonville passes year-long data center moratorium amid resident outcry and major utility disclosures",
@@ -54632,7 +54632,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2026-08-26",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Meta Platforms' $800M data center nears completion in Jeffersonville - Louisville Business First",
@@ -54643,7 +54643,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2026-06-26",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Lebanon, Jeffersonville expected to receive part of $1B Meta campaign",
@@ -54654,7 +54654,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Fayette County commissioners approve Jeffersonville annexations, review data center moratorium and Avery’s Law",
@@ -54676,7 +54676,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Jeffersonville City Council approves data center moratorium",
@@ -54698,7 +54698,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2026-05-29",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "New developments at River Ridge could bring massive economic impact to southern Indiana",
@@ -54720,7 +54720,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2026-06-26",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "River Ridge Commerce Center hits 20 million square feet milestone",
@@ -54742,7 +54742,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2024-01-25",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Meta to develop data center campus in Jeffersonville, Indiana",
@@ -54753,7 +54753,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2024-01-26",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Jeffersonville City Council members consider 6-month data center moratorium",
@@ -54764,7 +54764,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2026-07-21",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Facebook parent Meta to build $800 million data center in Jeffersonville, Indiana",
@@ -54786,7 +54786,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2024-01-25",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "'Excited to welcome Meta' | $800 million data center campus coming to Jeffersonville",
@@ -54797,7 +54797,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2024-01-25",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Meta to Build $800M Data Center Campus in Jeffersonville, Indiana",
@@ -54819,7 +54819,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2024-08-22",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Meta leader talks Jeffersonville data center - Louisville Business First",
@@ -54830,7 +54830,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2024-08-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Facebook parent company Meta to build $800-million data center campus in Jeffersonville",
@@ -54852,7 +54852,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2024-01-25",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Construction underway at Facebook Meta's 600-acre site in southern Indiana's River Ridge",
@@ -54874,7 +54874,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2024-01-25",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "River Ridge analysis finds $3B economic impact in S. Indiana",
@@ -54907,7 +54907,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Warrick county puts pause on data center development",
@@ -54918,7 +54918,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Warrick County hosts data center public forum",
@@ -54940,7 +54940,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Warrick County Commissioners to hold public meeting on data center development",
@@ -54973,7 +54973,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Warrick County tables data center ordinance, moratorium possible",
@@ -54984,7 +54984,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-07-14",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Warrick County fire fighters want to join conversation on data centers",
@@ -54995,7 +54995,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Warrick County hosts data center public forum",
@@ -55006,7 +55006,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-25",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center ordinance meeting planned in Warrick County",
@@ -55017,7 +55017,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-07-12",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Warrick County public hearing on data center ordinance set for Monday",
@@ -55028,7 +55028,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-07-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data Center Proposed for Warrick County",
@@ -55039,7 +55039,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2025-12-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Company looking to build data center in Warrick County; meeting set",
@@ -55050,7 +55050,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2025-12-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Hearing postponed on possible data center in Warrick County",
@@ -55072,7 +55072,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2025-12-03",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Meeting on data centers in Warrick County moved to February",
@@ -55083,7 +55083,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2025-12-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Construction on Meta Lebanon data center a ‘nightmare’ for neighbors",
@@ -55094,7 +55094,7 @@
       "locality": "Boone County",
       "state": "IN",
       "first_seen": "2026-07-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Lebanon data center plan passes next hurdle",
@@ -55105,7 +55105,7 @@
       "locality": "Boone County",
       "state": "IN",
       "first_seen": "2025-08-19",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Lebanon commission to review Meta’s 15-building data center project at LEAP District",
@@ -55116,7 +55116,7 @@
       "locality": "Boone County",
       "state": "IN",
       "first_seen": "2025-08-15",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Looking back: Sudoku game known worldwide developed by Connersville's Howard Garns",
@@ -55138,7 +55138,7 @@
       "locality": "Starke County",
       "state": "IN",
       "first_seen": "2026-06-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Starke County Board of Commissioners approve 12-month ban on data center projects",
@@ -55149,7 +55149,7 @@
       "locality": "Starke County",
       "state": "IN",
       "first_seen": "2025-12-15",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Starke County Commissioners vote to pause data center projects as community voices concern",
@@ -55160,7 +55160,7 @@
       "locality": "Starke County",
       "state": "IN",
       "first_seen": "2025-12-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Starke County’s public hearing on data center moratorium tonight",
@@ -55226,7 +55226,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-07-29",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Cass County election commission votes on petition recall for data center moratorium decision",
@@ -55237,7 +55237,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Cass County Planning Commission approves moratorium on data center development",
@@ -55248,7 +55248,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Cass County urges more transparency in data center development with new resolution",
@@ -55259,7 +55259,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-01-12",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Oregon woman hospitalized after crashing into Indiana driver in Cass County",
@@ -55281,7 +55281,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-05-31",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Cass County leaders meet with expert to understand data center impacts on community",
@@ -55303,7 +55303,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-07-14",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Vandalia holds town hall meeting to discuss potential data center developers in Cass County",
@@ -55402,7 +55402,7 @@
       "locality": "Putnam County",
       "state": "IN",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Search ends for missing Putnam County teen last seen in May",
@@ -55435,7 +55435,7 @@
       "locality": "White County",
       "state": "IN",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Traffic Alert: U.S. 35 south of Winamac set to close for seal coat operations",
@@ -55457,7 +55457,7 @@
       "locality": "Fulton County",
       "state": "IN",
       "first_seen": "2026-02-12",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "James “Jim” M. Zimmerman 64, of Akron, Indiana, longtime Mentone resident",
@@ -55468,7 +55468,7 @@
       "locality": "Fulton County",
       "state": "IN",
       "first_seen": "2026-08-31",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Akron, Indiana Population 2026",
@@ -55479,7 +55479,7 @@
       "locality": "Fulton County",
       "state": "IN",
       "first_seen": "2024-08-15",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Eleanor Bailey Obituary (1941 - 2022) - Akron, IN - Indiana Plain Dealer",
@@ -55644,7 +55644,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2026-02-12",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Starke County Planning Commission approves one-year data center moratorium",
@@ -55655,7 +55655,7 @@
       "locality": "Starke County",
       "state": "IN",
       "first_seen": "2025-12-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Starke County Planning Commission will hold meeting on proposed data center project",
@@ -55666,7 +55666,7 @@
       "locality": "Starke County",
       "state": "IN",
       "first_seen": "2025-11-12",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Orange County to weigh temporary moratorium on AI Data Center applications",
@@ -55941,7 +55941,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2024-01-25",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Warrick County forum addresses data center concerns",
@@ -55952,7 +55952,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Warrick county puts pause on data center development",
@@ -55974,7 +55974,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-07-30",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Community talks data centers in Warrick County",
@@ -55985,7 +55985,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Man injured in early morning rollover crash in Cass County",
@@ -56205,7 +56205,7 @@
       "locality": "Boone County",
       "state": "IN",
       "first_seen": "2026-02-15",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Feeling Pinched by Princeton Property Taxes? You Might Qualify for Some Relief",
@@ -56271,7 +56271,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Cass County residents prepare to act on future data center proposals",
@@ -56513,7 +56513,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-02",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Cass County Prosecutor announces resignation",
@@ -56535,7 +56535,7 @@
       "locality": "New Albany",
       "state": "IN",
       "first_seen": "2026-06-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Residents concerned Calhoun city attorney has conflict of interest on data centers",
@@ -56678,7 +56678,7 @@
       "locality": "Merrillville",
       "state": "IN",
       "first_seen": "2025-04-22",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Merrillville to form data center advisory committee",
@@ -56689,7 +56689,7 @@
       "locality": "Merrillville",
       "state": "IN",
       "first_seen": "2024-08-15",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Public meeting on Starke County data center moved to larger location",
@@ -56700,7 +56700,7 @@
       "locality": "Starke County",
       "state": "IN",
       "first_seen": "2025-12-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Residents prepare to act on future data center proposals in Cass County",
@@ -56799,7 +56799,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-03",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Wilder, Gilmore blast Spanberger on data centers",
@@ -56909,7 +56909,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-07-31",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Warrick County officials make a choice on data centers",
@@ -57195,7 +57195,7 @@
       "locality": "Fayette County",
       "state": "IN",
       "first_seen": "2026-05-25",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Starke County police arrest 2 suspects in armed robbery at Marathon gas station",
@@ -57228,7 +57228,7 @@
       "locality": "White County",
       "state": "IN",
       "first_seen": "2021-06-16",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Kokomo Woman Killed In Three-Vehicle Crash In Howard County",
@@ -57338,7 +57338,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-05-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Cass County Board of Commissioners terminates administrator's contract",
@@ -57569,7 +57569,7 @@
       "locality": "Starke County",
       "state": "IN",
       "first_seen": "2026-06-02",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Prime Data Centers faces packed firehall as residents protest 1.7M-square-foot complex",
@@ -58273,7 +58273,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Residents prepare to act on future data center proposals in Cass County",
@@ -58405,7 +58405,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-05-31",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Residents question tax breaks for data centers in Ohio",
@@ -64488,7 +64488,7 @@
       "locality": "Putnam County",
       "state": "IN",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Bethlehem residents voice concerns over proposed Route 22 data center",
@@ -66072,7 +66072,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data centers are coming to Texas. What could it mean for your electric bill, water and neighborhood?",
@@ -66149,7 +66149,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-09-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Texas Data Centers: Leading With Energy Storage",
@@ -66589,7 +66589,7 @@
       "locality": "Putnam County",
       "state": "IN",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center opposition is growing, with Nebraskans crossing party lines in protest",
@@ -67018,7 +67018,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-09-12",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center ordinance meetings continue, at times contentiously",
@@ -67612,7 +67612,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-08-15",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Pasco residents push back on data centers, ask city to extend moratorium",
@@ -72166,7 +72166,7 @@
       "locality": "Putnam County",
       "state": "IN",
       "first_seen": "2026-04-29",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Inver Grove Heights exempts data center project from city moratorium",
@@ -79514,7 +79514,7 @@
       "locality": "Pulaski County",
       "state": "IN",
       "first_seen": "2026-09-17",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Patricia L. Perry 84, of Akron, Indiana",
@@ -79525,7 +79525,7 @@
       "locality": "Fulton County",
       "state": "IN",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Lawmakers told data centers could be key to improving West Virginia's water issues",
@@ -82132,7 +82132,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2024-01-25",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Residents Raise Concerns Over Water, Energy and Accountability Amid Data Center Proposals",
@@ -82363,7 +82363,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "N.J. activists are at war with data centers — and a fuel spill just made things a lot worse",
@@ -83727,7 +83727,7 @@
       "locality": "Brewster County",
       "state": "TX",
       "first_seen": "2026-03-11",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Big Bend Telephone building data center in West Texas",
@@ -83738,7 +83738,7 @@
       "locality": "Brewster County",
       "state": "TX",
       "first_seen": "2021-04-16",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "MCFI builds modular data center for Big Bend Telephone in Texas",
@@ -83749,7 +83749,7 @@
       "locality": "Brewster County",
       "state": "TX",
       "first_seen": "2022-01-18",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Big Bend Border Patrol Sector’s new chief sworn in",
@@ -88006,7 +88006,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2026-08-03",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "‘Game changer’: Incubator Kitchen and pavilion set to open soon in Cass County",
@@ -88897,7 +88897,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2025-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Pontiac's data center moratorium expires in January, and the city is racing to set rules",
@@ -89920,7 +89920,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-14",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "WARRICK COUNTY PUTS PAUSE ON DATA CENTER DEVELOPMENT",
@@ -90316,7 +90316,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Trump’s home county hits pause on data centers over environment and electric bill concerns",
@@ -90547,7 +90547,7 @@
       "locality": "Starke County",
       "state": "IN",
       "first_seen": "2026-03-13",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "In Upper Burrell, where the fracking and AI industries converge, residents look to regulate data center",
@@ -91108,7 +91108,7 @@
       "locality": "Starke County",
       "state": "IN",
       "first_seen": "2025-11-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "City commissioners in Raton, N.M. reject moratorium on data centers despite petition",
@@ -93319,7 +93319,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-26",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "AI Data Centers Lose Right to Build in Virginia as Senate Stalls Ratepayer Bill",
@@ -93880,7 +93880,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Where America's Data Centers Are Actually Going Up And Why I",
@@ -98852,7 +98852,7 @@
       "locality": "Fayette County",
       "state": "IN",
       "first_seen": "2026-08-18",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "22 Investigates: Alleged misuse of money from the Starke County Sheriff's Department",
@@ -98907,7 +98907,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Indiana Landmarks adds Pulaski County Courthouse to list of buildings at risk of being demolished",
@@ -98918,7 +98918,7 @@
       "locality": "Pulaski County",
       "state": "IN",
       "first_seen": "2019-04-29",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "As Casa Grande commission approves massive data center, residents ask, 'Why are we here?'",
@@ -99435,7 +99435,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Virginia energy plan targets utility costs, data center growth",
@@ -100062,7 +100062,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "What’s it like living in the shadow of an AI data center? These New Jersey residents know",
@@ -100084,7 +100084,7 @@
       "locality": "Madison",
       "state": "WI",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "AI data centers: How much are ratepayers on the hook for?",
@@ -100172,7 +100172,7 @@
       "locality": "Brewster County",
       "state": "TX",
       "first_seen": "2026-09-18",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Not Even $10,000 Could Convince These Locals To Stop Protesting a Data Center Project",
@@ -100205,7 +100205,7 @@
       "locality": null,
       "state": "SC",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Around Livingston: Medicaid + ICE + Data Centers + Gateway Tunnel",
@@ -100238,7 +100238,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "In Upper Burrell, where fracking and AI industries converge, residents look to regulate data centers",
@@ -100293,7 +100293,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "N.J.’s data center industry has a trust problem | Opinion",
@@ -100304,7 +100304,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "How US Data Center Capital Became Unexpected House Battleground",
@@ -100315,7 +100315,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Neighborhood backlash collides with America's tech arms race — but is this the plan to fix it?",
@@ -100392,7 +100392,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Trump says he ‘wouldn’t necessarily like’ a data center right next to his house",
@@ -100491,7 +100491,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "West Virginia Rep. Riley Moore sponsors bill to make data centers pay for additional electrical infrastructure",
@@ -100645,7 +100645,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Every household in this rural town will get $10,000 if a data center gets built",
@@ -100832,7 +100832,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Princeton University, speak out against the South Brunswick data center",
@@ -100843,7 +100843,7 @@
       "locality": "Princeton",
       "state": "TX",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "The AI revolution is likely to drive up your electricity bill. Here's why.",
@@ -100876,7 +100876,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Equinix Data Center Spills 5,000 Gallons of Diesel into New Jersey Creek Amid Moratorium Calls",
@@ -100887,7 +100887,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Virginia Launches Data Center Accountability Framework",
@@ -100909,7 +100909,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Trump says he ‘wouldn’t necessarily like’ a data center right next to his house",
@@ -100953,7 +100953,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Governor Announces Virginia Energy Plan",
@@ -100975,7 +100975,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Researcher: The data center jobs are real. So is everything else on the ledger.",
@@ -100986,7 +100986,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "QTS Supports 132-Acre Forest Restoration at Towaliga Preserve",
@@ -101008,7 +101008,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Texas Data Center Map: See where 600+ data centers are operating or planned",
@@ -101052,7 +101052,7 @@
       "locality": "Taylor",
       "state": "MI",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Flip-flop tracker: See where Paxton, Talarico and others have changed positions",
@@ -101063,7 +101063,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Pa. House committee advances bills targeting data centers, electricity costs",
@@ -101173,7 +101173,7 @@
       "locality": "Kent",
       "state": "OH",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Why Seattle’s data center moratorium isn’t stopping new projects",
@@ -101217,7 +101217,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Amazon's answer to data center backlash: $1 billion for community college and home energy upgrades",
@@ -101272,7 +101272,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Axe Compute makes nearly $130M AI server deal after completely shedding biotech roots",
@@ -101283,7 +101283,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Inside The Trillions Being Spent On The AI Data Center Buildout",
@@ -101327,7 +101327,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "UPDATE: Beaufort County commissioners voted for 1-year pause on data center development",
@@ -101404,7 +101404,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Memphis City Council to vote on updated data center moratorium ordinance on Tuesday",
@@ -101646,7 +101646,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "DataOne Datacenter Faced Fine Over Air Pollution",
@@ -101701,7 +101701,7 @@
       "locality": "Chesterfield",
       "state": "NJ",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Querétaro Is Becoming Latin America's AI Capital — Billions Prove It",
@@ -101712,7 +101712,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Amazon's answer to data center backlash: $1 billion for community college and home energy upgrades",
@@ -101723,7 +101723,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "TeraWulf Slides 5% Despite Doubling Muskie Power Contract to 1 Gigawatt; Core Scientific Drops 3%, Riot Eases",
@@ -101734,7 +101734,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Conservation group calls for moratorium on AI data centers on US public lands",
@@ -101767,7 +101767,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "AI Infrastructure’s Next Phase: Capital, Power and the Right to Build",
@@ -101778,7 +101778,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Power grid audits shifting plan for data center developer in Austin suburb",
@@ -101789,7 +101789,7 @@
       "locality": "Austin",
       "state": "TX",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Colleton County settles lawsuit, creating exclusion zone for data centers in ACE Basin",
@@ -101811,7 +101811,7 @@
       "locality": null,
       "state": "PA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Pitt County residents speak out on data centers",
@@ -101833,7 +101833,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Kings Mountain leaders heard from residents on data center impacts",
@@ -101855,7 +101855,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-08"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Outmaneuvered, outmatched and outspent: How data centers are overwhelming small-town America",
@@ -102031,7 +102031,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Vermillion County commissioners reject data center moratorium in 2-1 vote",
@@ -102064,7 +102064,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-09"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Proposed Pennsylvania data center rules emphasize transparency, local control",
@@ -102163,7 +102163,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data centers emerge as hot issue in midterm elections",
@@ -102185,7 +102185,7 @@
       "locality": "Spartanburg County",
       "state": "SC",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Why is LG Building AI Data Centre Chillers in Virginia?",
@@ -102196,7 +102196,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "News | Data center growth expected to hold steady in face of project protests",
@@ -102207,7 +102207,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Williams Mullen Expands Virginia Regulatory Capabilities with Shianne Randolph",
@@ -102218,7 +102218,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "U.S. AI Data Centers Face 34% Power Shortfall by 2028",
@@ -102229,7 +102229,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "NextEra’s $67bn Dominion takeover faces political backlash in Virginia",
@@ -102240,7 +102240,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Axe Compute acquires full ownership of AI cluster in Columbus, Georgia",
@@ -102251,7 +102251,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Conservation group calls for moratorium on AI data centers on US public lands",
@@ -102284,7 +102284,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center employees accused of stealing copper, tools from work site",
@@ -102383,7 +102383,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "How Champaign County residents organized an AI data center resistance",
@@ -102394,7 +102394,7 @@
       "locality": "Champaign County",
       "state": "IL",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Oakland City Council to vote on 45-day data center moratorium",
@@ -102405,7 +102405,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "How Local Debates Over Data Centers Leak into Water Scarcity Concerns",
@@ -102427,7 +102427,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "N.J.’s impossible AI data center choice: Refuse and get sued, or give in and face fury",
@@ -102460,7 +102460,7 @@
       "locality": null,
       "state": "FL",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-08"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Pitt County residents speak out on data centers",
@@ -102504,7 +102504,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "N.J.’s impossible AI data center choice: Refuse and get sued, or give in and face fury",
@@ -102746,7 +102746,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center, ‘pop-up’ power plant fined just $41,500 after starting without permit",
@@ -102757,7 +102757,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Borough Council introduces borough employee salary adjustments and discusses data center ordinance",
@@ -102768,7 +102768,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Majority of Northern Virginia business leaders give data centers thumbs-up",
@@ -102779,7 +102779,7 @@
       "locality": "Northern Virginia",
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "LA County supervisors to consider developing data center ban",
@@ -102790,7 +102790,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Spanberger recommends a quarter million acres of new solar panels on farms and forests",
@@ -102801,7 +102801,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Can Dominion Energy Leverage Data-Center Demand for Long-Term Growth?",
@@ -102823,7 +102823,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Perriello seeks another 5th District upset as McGuire leans on Trump",
@@ -102834,7 +102834,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Georgianomics: A data center upside",
@@ -102845,7 +102845,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Ga. voters’ top issues: Jackson, Bottoms face questions in debate",
@@ -102856,7 +102856,7 @@
       "locality": "Jackson",
       "state": "MS",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Voters’ biggest concerns: These are the topics Jackson, Bottoms could face during debate",
@@ -102867,7 +102867,7 @@
       "locality": "Jackson",
       "state": "MS",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Where are data centers located around Texas?",
@@ -102878,7 +102878,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "NEW AD: Hinojosa Calls Out Greg Abbott Putting Data Centers Before Texans",
@@ -102889,7 +102889,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Gaines County holding public meeting for proposed data center project",
@@ -102911,7 +102911,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Texas data center pause isn't stopping construction of facilities, including one just outside San Antonio",
@@ -102922,7 +102922,7 @@
       "locality": "San Antonio",
       "state": "TX",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center backlash tests Byron Donalds campaign for governor",
@@ -102944,7 +102944,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "The United States Department of Commerce and the Government of the Republic of Korea Announce Strategic Investment in Project Star, a $22.3 billion Energy Infrastructure Campus in Encinal, Texas, being jointly developed by Related Companies and Next",
@@ -102966,7 +102966,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "1606 Corp. Provides East Texas Data Center Project Update",
@@ -103054,7 +103054,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2015-07-19",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Linn County needs Data Center Advisory Committee members. Here’s how residents can volunteer",
@@ -103065,7 +103065,7 @@
       "locality": "Linn County",
       "state": "IA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Mahomet ends talks with data center developer after community backlash",
@@ -103076,7 +103076,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Settlement bans data center development across most of Colleton County’s ACE Basin",
@@ -103164,7 +103164,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Skybox Wins Hutto Rezoning, but Data Center Power Is Unclear",
@@ -103175,7 +103175,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "West Texas leaders address data center concerns, outline economic potential",
@@ -103197,7 +103197,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Warrick County approves moratorium on data centers",
@@ -103208,7 +103208,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Levy County residents raise health and water concerns over data centers",
@@ -103230,7 +103230,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Lansing Town Board moves toward data center ban",
@@ -103241,7 +103241,7 @@
       "locality": "Lansing",
       "state": "MI",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Evansville council approves data center moratorium",
@@ -103263,7 +103263,7 @@
       "locality": "Augusta",
       "state": "GA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Lawmakers hear testimony on data center water usage, resident concerns",
@@ -103274,7 +103274,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Volunteers needed for Linn County's Data Center Advisory Committee",
@@ -103351,7 +103351,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Anne Arundel County extends data center moratorium to 2028",
@@ -103373,7 +103373,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "America’s data center fight is a preview of what's to come for the rest of the world",
@@ -103428,7 +103428,7 @@
       "locality": "Milwaukee",
       "state": "WI",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Rapid City to host open house on data center ordinance",
@@ -103483,7 +103483,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Memphis City Council postpones vote on data center development moratorium",
@@ -103505,7 +103505,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "UPDATE: Bradley Co. mayor plans to fight data center lawsuit despite no insurance coverage",
@@ -103560,7 +103560,7 @@
       "locality": null,
       "state": "MD",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "How the AI Boom Is Reshaping Virginia's Data Center Economy",
@@ -103571,7 +103571,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Virginia Reps. Suhas Subramanyam, James Walkinshaw to headline AI data center forum",
@@ -103582,7 +103582,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Carroll County vote slows $11 billion data center project as NRV communities weigh their options",
@@ -103593,7 +103593,7 @@
       "locality": "Carroll County",
       "state": "GA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "VA 'March For A Moratorium' Events To Kick Off This Weekend",
@@ -103604,7 +103604,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Can Dominion Energy Leverage Data-Center Demand for Long-Term Growth?",
@@ -103648,7 +103648,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Georgia fines 2 companies over data center, power plant permit violations",
@@ -103659,7 +103659,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Amazon exec talks about data centers",
@@ -103714,7 +103714,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Flip-flop tracker: See where Paxton, Talarico and others have changed positions",
@@ -103736,7 +103736,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Texas developer to hold data center town hall",
@@ -103813,7 +103813,7 @@
       "locality": null,
       "state": "NY",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Inside the neighborhood living on the edge of America’s tech frontier",
@@ -103835,7 +103835,7 @@
       "locality": "Lexington",
       "state": "KY",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "What it’s like living next to a data center: West Jordan residents share their experience",
@@ -103846,7 +103846,7 @@
       "locality": null,
       "state": "UT",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Residents voice concerns at Lexington data center public listening session",
@@ -103868,7 +103868,7 @@
       "locality": "Linn County",
       "state": "IA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Plans for massive Brighton data center withdrawn as residents push for moratorium",
@@ -103879,7 +103879,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Sparks fly at City Council meeting as residents again speak out against data centers",
@@ -103890,7 +103890,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Fayette County residents push back on data center zoning plan",
@@ -103912,7 +103912,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Pierce Township residents pack zoning meeting over data center concerns",
@@ -104033,7 +104033,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center moratorium vote postponed after fight, protests",
@@ -104077,7 +104077,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center moratorium vote ends abruptly amid protests, fistfight",
@@ -104143,7 +104143,7 @@
       "locality": null,
       "state": "WA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Memphis City Council delays vote on data center moratorium",
@@ -104154,7 +104154,7 @@
       "locality": "Memphis",
       "state": "TN",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Hochul, AOC stump on data center ban common ground",
@@ -104231,7 +104231,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Morristown looks to set data center rules to govern any future proposals",
@@ -104319,7 +104319,7 @@
       "locality": "Mendocino County",
       "state": "CA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center moratorium vote ends abruptly amid protests, fistfight",
@@ -104363,7 +104363,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center project divides three Southwest Virginia localities",
@@ -104374,7 +104374,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data Centers A Hot Topic At Economic Outlook Conference",
@@ -104385,7 +104385,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Regional authority no longer under NDA, but still won't disclose potential data center developer",
@@ -104396,7 +104396,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Statewide March For A Moratorium Events To Kick Off Near Alexandria's Planned Plaza 500 Data Center",
@@ -104429,7 +104429,7 @@
       "locality": "Jackson",
       "state": "MS",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Jackson, Bottoms clash over data centers, privacy and Trump in sole Georgia governor debate",
@@ -104440,7 +104440,7 @@
       "locality": "Jackson",
       "state": "MS",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Candidates Clash Over Medicaid, Data Centers in Georgia Deba...",
@@ -104451,7 +104451,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Bottoms and Jackson clash over Trump and data centers at Georgia governor debate",
@@ -104462,7 +104462,7 @@
       "locality": "Jackson",
       "state": "MS",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "DeKalb leaders consider data center impact study",
@@ -104484,7 +104484,7 @@
       "locality": "Jackson",
       "state": "MS",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Augusta finalizes data center rules as resident urges tougher oversight, enforcement",
@@ -104506,7 +104506,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Bottoms confronts Jackson in governor debate",
@@ -104528,7 +104528,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "West Texas is getting another huge data center campus",
@@ -104539,7 +104539,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Texas agency sues to stop release of data center records that it says could aid terrorists",
@@ -104561,7 +104561,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Enerflex Lands 450-MW Behind-the-Meter Gas Power Deal for Data Centers",
@@ -104605,7 +104605,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "City of Brighton approves data center moratorium to prevent new data center from moving forward",
@@ -104616,7 +104616,7 @@
       "locality": null,
       "state": "CO",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Rural Klickitat County faces surge in data center proposals",
@@ -104627,7 +104627,7 @@
       "locality": null,
       "state": "WA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Heath residents to submit new petition in push for data center ban",
@@ -104638,7 +104638,7 @@
       "locality": "Heath",
       "state": "MA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Oakland City Council approves 45-day moratorium on new data centers",
@@ -104649,7 +104649,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "How to regulate a data center? Pierce Township residents have ideas",
@@ -104660,7 +104660,7 @@
       "locality": "Pierce Township",
       "state": "OH",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Colorado city council backs year-long data center moratorium after proposed project withdrawn",
@@ -104671,7 +104671,7 @@
       "locality": null,
       "state": "CO",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Residents voice concerns at Lexington data center public listening session",
@@ -104682,7 +104682,7 @@
       "locality": "Lexington",
       "state": "KY",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Memphis City Council devolves into chaos after data center moratorium vote postponed",
@@ -104693,7 +104693,7 @@
       "locality": "Memphis",
       "state": "TN",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data Centers: Dalton Utilities details water usage, power costs, citizens repeat pause request",
@@ -104726,7 +104726,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Volusia County moves data center ban ordinance forward",
@@ -104748,7 +104748,7 @@
       "locality": "Shelby County",
       "state": "IA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Residents gather to oppose future data centers",
@@ -104759,7 +104759,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "‘You were supposed to protect us from this’: Backlash grows over Princeton Nurseries data center",
@@ -104781,7 +104781,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Bethlehem data center rules pass first vote 7-0 as residents call them only a start",
@@ -104792,7 +104792,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Klickitat County faces surge in data center proposals",
@@ -104880,7 +104880,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Raleigh City Council approves six-month data center mora­torium, op­po­sition wants more time",
@@ -104902,7 +104902,7 @@
       "locality": null,
       "state": "PA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Council moves to extend Lexington's pause on data center development, restart zoning process",
@@ -104968,7 +104968,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "County Board Adopts Second 45-Day Data Center Moratorium",
@@ -105012,7 +105012,7 @@
       "locality": "Lexington",
       "state": "KY",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "County enacts emergency moratorium on data centers",
@@ -105056,7 +105056,7 @@
       "locality": "Colleton County",
       "state": "SC",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Northfield council moves away from data center ban, toward tiered regulation",
@@ -105122,7 +105122,7 @@
       "locality": null,
       "state": "MT",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "North Berwick data center ban – Maine Voter Guide 2026",
@@ -105166,7 +105166,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "North Jersey has over a dozen data centers and more coming. See list",
@@ -105177,7 +105177,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Guardian Data Opens 42,000-Square-Foot Moonachie Facility, Doubling New Jersey Capacity",
@@ -105210,7 +105210,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Survey: N. Va. business leaders upbeat on data centers, less so on national economy",
@@ -105221,7 +105221,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Cleanview Analysis: Election Results Could Slow Data Centers",
@@ -105232,7 +105232,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data Center Backlash Is MAGA’s Comeuppance",
@@ -105243,7 +105243,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "LG to Build its First U.S. Factory for AI Data Center Chillers",
@@ -105254,7 +105254,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Virginia lawmakers question Dominion, NextEra acquisition",
@@ -105287,7 +105287,7 @@
       "locality": null,
       "state": "AL",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Can Dominion Energy Leverage Data-Center Demand for Long-Term Growth?",
@@ -105320,7 +105320,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "LG Locks Preferred Supplier Role for 5GW AI Data Center Platform; NVIDIA Backs Cooling Unit",
@@ -105331,7 +105331,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Debate over data center growth in Georgia heats up race for governor",
@@ -105353,7 +105353,7 @@
       "locality": "Jackson",
       "state": "MS",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Georgia fines 2 companies over data center, power plant permit violations",
@@ -105375,7 +105375,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Georgia governor candidates spar over the economy and Trump in lone debate",
@@ -105386,7 +105386,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Bartow County tests voting machines for Georgia midterms",
@@ -105419,7 +105419,7 @@
       "locality": "Jackson",
       "state": "MS",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "5 takeaways from the Georgia governor debate",
@@ -105430,7 +105430,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Ossoff campaigns in Georgia ahead of November midterms",
@@ -105452,7 +105452,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "AI data center growth won't be slowed down by angry neighbors: Goldman Sachs",
@@ -105463,7 +105463,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Texas Agency Tries To Keep Data Centers Hidden Over Terror Fears",
@@ -105474,7 +105474,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "“The Single Most Toxic Issue in the Midterms”: How America Turned on Data Centers.",
@@ -105485,7 +105485,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Texas agency sues to stop release of data center records that it says could aid terrorists",
@@ -105507,7 +105507,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "With midterms approaching, data centers are still a hot issue in some races",
@@ -105518,7 +105518,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Despite big Texas solar purchase agreement, Meta still uses lots of gas",
@@ -105540,7 +105540,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "High-Stakes Pushback: Data Center and Energy Giants Form Coalition to Fight Texas Backlash",
@@ -105584,7 +105584,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Levy County residents raise health and water concerns over data centers",
@@ -105606,7 +105606,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Residents push Tooele County to delay data center rules over water, power concerns",
@@ -105617,7 +105617,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Jefferson Davis County Residents Sound Alarm Over Proposed $6 Billion Data Center, Fearing Widespread Harms",
@@ -105628,7 +105628,7 @@
       "locality": null,
       "state": "MS",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Why Austin Water wants new rules for major water users",
@@ -105639,7 +105639,7 @@
       "locality": "Austin",
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Outmaneuvered, outmatched and outspent: How data centers are overwhelming small-town America",
@@ -105661,7 +105661,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Judge could order Nebius to halt data center construction in Independence",
@@ -105672,7 +105672,7 @@
       "locality": "Independence",
       "state": "MO",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Legislators weigh data center issues as Pritzker pushes POWER Act",
@@ -105738,7 +105738,7 @@
       "locality": "Denver",
       "state": "CO",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Raleigh approves 6-month data center moratorium as activists push for longer pause",
@@ -105749,7 +105749,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Raleigh City Council approves six-month data center mora­torium, op­po­sition wants more time",
@@ -105760,7 +105760,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "San Francisco Passes Data Center Moratorium in Hometown of AI",
@@ -105771,7 +105771,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Bethlehem City Council holds public hearing on data centers and passes zoning ordinance amendments",
@@ -105804,7 +105804,7 @@
       "locality": "Memphis",
       "state": "TN",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Champaign Co. data center task force moves forward on ordinance after Mahomet cuts talks with Clean Cloud",
@@ -105815,7 +105815,7 @@
       "locality": "Champaign County",
       "state": "IL",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Oakland passes 45-day data center moratorium",
@@ -105848,7 +105848,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Hochul and AOC came to Fishkill Farms. Here's what they said",
@@ -105859,7 +105859,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "2-year data center moratorium proposed in City of Frederick",
@@ -105892,7 +105892,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Humboldt County supervisors OK data center moratorium, oppose Prop. 45",
@@ -105969,7 +105969,7 @@
       "locality": null,
       "state": "NV",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Readington residents concerned about data centers",
@@ -105980,7 +105980,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "What the Data Center Boom Looks Like From the Sky",
@@ -105991,7 +105991,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "One of America’s Last Chestnut Groves Is About to Be Destroyed for a Data Center",
@@ -106002,7 +106002,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data-center disinformation proliferates across Georgia",
@@ -106024,7 +106024,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Georgia lawmakers hear from vendors of new voting tech",
@@ -106046,7 +106046,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Georgia gubernatorial town hall debate preview",
@@ -106079,7 +106079,7 @@
       "locality": "Jackson",
       "state": "MS",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Why Texas Is Making Data Centers Wait",
@@ -106090,7 +106090,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "A small Texas town looks to strike data center bargain",
@@ -106101,7 +106101,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "America’s data center boom is running into a grid-sized problem",
@@ -106112,7 +106112,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data Centers in San Angelo: Mayor Tom Thompson Answers the Big Questions",
@@ -106145,7 +106145,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Major data center supplier expands Georgetown footprint",
@@ -106156,7 +106156,7 @@
       "locality": "Georgetown",
       "state": "KY",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "EdgeConneX Cedar Creek data center filings reach $5.8B",
@@ -106167,7 +106167,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Election Dispatches: Push for More Data Centers Squeezes Republicans in Tight Midterm Races",
@@ -106189,7 +106189,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Known Dell supplier expanding in Georgetown amid data center boom",
@@ -106200,7 +106200,7 @@
       "locality": "Georgetown",
       "state": "KY",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-09"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "America’s new blue-collar job boom is one nobody saw coming — and it’s just getting started",
@@ -106233,7 +106233,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Residents raise concerns over noise from Google data center construction in Pumpkin Center",
@@ -106244,7 +106244,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Grayslake cancels meeting with public comment about massive data center, lawsuit to halt construction filed",
@@ -106255,7 +106255,7 @@
       "locality": "Grayslake",
       "state": "IL",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Residents voice opposition to Brownsville data centers during public hearing",
@@ -106266,7 +106266,7 @@
       "locality": "Brownsville",
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "City leaders weigh next steps on data centers as residents call for moratorium",
@@ -106277,7 +106277,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Residents raise concerns over noise from Google data center construction in Pumpkin Center",
@@ -106288,7 +106288,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Champaign County residents voice opposition to potential data centers",
@@ -106299,7 +106299,7 @@
       "locality": "Champaign County",
       "state": "IL",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Fayette County residents push back on data center zoning plan",
@@ -106310,7 +106310,7 @@
       "locality": "Fayette County",
       "state": "IN",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "‘You were supposed to protect us from this’: Backlash grows over Princeton Nurseries data center",
@@ -106321,7 +106321,7 @@
       "locality": "Princeton",
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Fayette County residents push back on data center zoning plan",
@@ -106343,7 +106343,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Pierce Township residents pack zoning meeting over data center concerns",
@@ -106387,7 +106387,7 @@
       "locality": "Nashville",
       "state": "TN",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Lexington council to take first vote on data center moratorium extension",
@@ -106398,7 +106398,7 @@
       "locality": "Lexington",
       "state": "KY",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Council to meet on data center moratorium Thursday",
@@ -106409,7 +106409,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Biddeford Planning Board advances data center ordinance to city council",
@@ -106474,8 +106474,8 @@
       "published_iso": "2026-10-08T00:03:17+00:00",
       "locality": null,
       "state": "NY",
-      "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Mayor Woodfin responds after wife's business subpoenaed in Birmingham data center lawsuit",
@@ -106486,7 +106486,7 @@
       "locality": "Birmingham",
       "state": "AL",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "City of Hawthorne adopts interim urgency ordinance pausing new data center development",
@@ -106497,7 +106497,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Plans for data center campus in Brighton halted after developers withdraw rezoning application",
@@ -106508,7 +106508,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Attorneys reach partial agreement on some records in Birmingham data center lawsuit",
@@ -106530,7 +106530,7 @@
       "locality": "Brownsville",
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Aurora Mayor Coffman seeks to halt Trident data center project after public backlash",
@@ -106563,7 +106563,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "San Joaquin County orders temporary halt on new AI data center projects",
@@ -106640,7 +106640,7 @@
       "locality": "Denver",
       "state": "CO",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "A data center in N.J. leaked 5,000 gallons of diesel fuel. How much is left?",
@@ -106651,7 +106651,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Guardian Data Opens 42,000-Square-Foot Moonachie Facility, Doubling New Jersey Capacity",
@@ -106662,7 +106662,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-09"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data Centers Everywhere",
@@ -106673,7 +106673,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "LG to Open Virginia Chiller Factory for AI Data Centers",
@@ -106717,7 +106717,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Virginia: Wilder blasts Spanberger on data centers",
@@ -106728,7 +106728,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "AWS US East (N. Virginia) market has 194 data center facilities",
@@ -106739,7 +106739,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "LG expands AI data centre chiller production in US",
@@ -106750,7 +106750,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Georgia’s gubernatorial candidates go head-to-head for first and likely only television debate",
@@ -106761,7 +106761,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Bottoms and Jackson face off in gubernatorial town hall debate",
@@ -106772,7 +106772,7 @@
       "locality": "Jackson",
       "state": "MS",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Hope Beard, House District 123",
@@ -106805,7 +106805,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "45 Texas lawmakers back limits on data center water use",
@@ -106816,7 +106816,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center eyed by Anthropic could break ground soon in Bastrop County",
@@ -106827,7 +106827,7 @@
       "locality": "Bastrop County",
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Big NextEra Energy project unveiled in Texas",
@@ -106860,7 +106860,7 @@
       "locality": "Wichita",
       "state": "KS",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "South Texas to get $22B power project tied to data center",
@@ -106871,7 +106871,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Border Patrol apprehends known MS-13 gang member near Alpine, Texas",
@@ -106882,7 +106882,7 @@
       "locality": "Brewster County",
       "state": "TX",
       "first_seen": "2020-03-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Questions to ask before a data center develops in your neighborhood",
@@ -106915,7 +106915,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Questions to ask before a data center develops in your neighborhood",
@@ -106937,7 +106937,7 @@
       "locality": "Lexington",
       "state": "KY",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "UW-Parkside hosts public forum on AI data center impact",
@@ -106948,7 +106948,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Questions to ask before a data center develops in your neighborhood",
@@ -106981,7 +106981,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "‘Nevadans can’t drink tax dollars’: Voters uneasy on data centers, water ahead of election",
@@ -106992,7 +106992,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Questions to ask before a data center develops in your neighborhood",
@@ -107014,7 +107014,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Questions to ask before a data center develops in your neighborhood",
@@ -107025,7 +107025,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Questions to ask before a data center develops in your neighborhood",
@@ -107047,7 +107047,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Colchester residents pack town hall to oppose proposed data center",
@@ -107058,7 +107058,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "A construction ban on data centers would be better for Ohio than the status quo, study says",
@@ -107069,7 +107069,7 @@
       "locality": null,
       "state": "OH",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Hochul highlights New York's data center moratorium in Dutchess",
@@ -107080,7 +107080,7 @@
       "locality": null,
       "state": "NY",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Easthampton considers moratorium on data centers",
@@ -107091,7 +107091,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Tazewell County Zoning Board moves to recommend 9-month data center moratorium",
@@ -107102,7 +107102,7 @@
       "locality": "Tazewell County",
       "state": "IL",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "$575M permit filed for Memphis data center project promising 250 jobs",
@@ -107113,7 +107113,7 @@
       "locality": "Memphis",
       "state": "TN",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Fact check: John James, Jocelyn Benson debate data centers, tariffs, more",
@@ -107124,7 +107124,7 @@
       "locality": null,
       "state": "MI",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Judge tosses lawsuit against data center and Spartanburg County over land development rules",
@@ -107168,7 +107168,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center accountability framework is wrong approach | Guest column",
@@ -107179,7 +107179,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "NEWSLETTER: Can data centers be built sustainably?",
@@ -107190,7 +107190,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "W.Va. lawmaker likens AI data centers’ footprint to steel mills, says impacts are less",
@@ -107201,7 +107201,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Some+Petersburg+residents+demand+pause+on+data+centers",
@@ -107212,7 +107212,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "'We’ve been screwed': A wealthy county is overrun with data centers",
@@ -107223,7 +107223,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "'We’ve been screwed': A wealthy county is overrun with data centers",
@@ -107256,7 +107256,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Questions to ask before a data center develops in your neighborhood",
@@ -107278,7 +107278,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Feds OK Virginia grid operator's plan to address power shortfall from data centers",
@@ -107300,7 +107300,7 @@
       "locality": "Chicago",
       "state": "IL",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Can Dominion Energy Leverage Data-Center Demand for Long-Term Growth?",
@@ -107311,7 +107311,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Local candidates talk data centers, energy policy at environmental forum",
@@ -107322,7 +107322,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "State fines companies for ‘pop-up’ power plants for data center",
@@ -107333,7 +107333,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data centers promise big financial returns. Should that outweigh other determining factors?",
@@ -107344,7 +107344,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "What Does Prologis (PLD) Risk From Texas Data Center Power Limits?",
@@ -107355,7 +107355,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Abbott puts the brakes on data center permits",
@@ -107366,7 +107366,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "a16z Texas Data Centers Analysis: Why ERCOT Put the Queue on Hold",
@@ -107388,7 +107388,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Over 70% of Americans oppose local data center construction, surpassing opposition to nuclear power plants",
@@ -107399,7 +107399,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "CBRE Group stock secures five-year Texas data center contract",
@@ -107410,7 +107410,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-09"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "BofA Warns: Data Center Moratoriums Emerge in 20 U.S. Gubernatorial Races, AI Infrastructure Capital Poised for Major Shift",
@@ -107421,7 +107421,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Meta goes in on solar, but it’s still powering data centres with gas",
@@ -107454,7 +107454,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Questions to ask before a data center develops in your neighborhood",
@@ -107509,7 +107509,7 @@
       "locality": "Denver",
       "state": "CO",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Mayor's Wife Denies Involvement as Birmingham Data Center Lawsuit Moves Forward",
@@ -107575,7 +107575,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-09"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "To win over locals, data centers pump $340M into rural Texas projects",
@@ -107586,7 +107586,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Public Utility Commission Sues Attorney General To Block Data Center Records Release",
@@ -107597,7 +107597,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "The \"Texas of Europe\": Finland's US$75bn Data Centre Boom",
@@ -107608,7 +107608,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Massive Taylor data center plan to come back for city council vote",
@@ -107652,7 +107652,7 @@
       "locality": null,
       "state": "MO",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "DeKalb leaders consider data center impact study",
@@ -107718,7 +107718,7 @@
       "locality": "Memphis",
       "state": "TN",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "South El Monte Puts 45 Day Moratorium on Data Center and Battery Facility Development",
@@ -107729,7 +107729,7 @@
       "locality": "El Monte",
       "state": "CA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Manatee Commissioners put AI data centers on ice with 12-month moratorium",
@@ -107740,7 +107740,7 @@
       "locality": "Manatee County",
       "state": "FL",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Thursday's public hearing on Clinton's data center ordinance postponed",
@@ -107762,7 +107762,7 @@
       "locality": "Clinton",
       "state": "IA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Indio Extends Data Center Moratorium For Up To 1 Year",
@@ -107773,7 +107773,7 @@
       "locality": "Indio",
       "state": "CA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "'Project Hercules' data center construction expected to start by end of the year in Appomattox County",
@@ -107784,7 +107784,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Council member calls for accountability after Tuesday’s data center protests",
@@ -107806,7 +107806,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "NJ Data Center Emitted 140 Tons of Air Pollution Before Regulators Stepped In",
@@ -107817,7 +107817,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Opinions on data centers are shaping this year's campaign cycle",
@@ -107828,7 +107828,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Spanberger: data center sales tax exemption still up for discussion",
@@ -107839,7 +107839,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Can Dominion Energy Leverage Data-Center Demand for Long-Term Growth?",
@@ -107861,7 +107861,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "RTD coverage of the data center tax exemption debate",
@@ -107872,7 +107872,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Meet The PSC Candidates Fighting to Lower Georgia Electric Bills",
@@ -107883,7 +107883,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Coal plant that was set to close now powers Georgia’s data center growth",
@@ -107905,7 +107905,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Anthropic-tied data center moves ahead with $366M construction",
@@ -107916,7 +107916,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Texas poll: Paxton, Talarico tied in U.S. Senate race",
@@ -107927,7 +107927,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Texas Directs TCEQ To Halt Data-Center Permits Amid AI Boom",
@@ -107949,7 +107949,7 @@
       "locality": null,
       "state": "OK",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Casselton-area residents question data center location on prime farmland",
@@ -107960,7 +107960,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Questions to ask before a data center develops in your neighborhood",
@@ -107982,7 +107982,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center light and noise pollution rankle Reston residents",
@@ -108015,7 +108015,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Marquette residents ask questions at data center presentation",
@@ -108048,7 +108048,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Next Steps on Raleigh’s Temporary Data Center Pause",
@@ -108059,7 +108059,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "New details emerge after fight breaks out at city hall during data center vote",
@@ -108081,7 +108081,7 @@
       "locality": "Manatee County",
       "state": "FL",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Lexington-Fayette Urban County Council votes to extend data center moratorium",
@@ -108103,7 +108103,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Brownsville data center moratorium passes first vote",
@@ -108114,7 +108114,7 @@
       "locality": "Brownsville",
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "WATCH: Memphis councilman addresses postponed data center moratorium vote, interrupted council meeting",
@@ -108125,7 +108125,7 @@
       "locality": "Memphis",
       "state": "TN",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Urban County Council extends data center moratorium",
@@ -108136,7 +108136,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Georgetown-Scott County Planning Commission reviews draft data center ordinance",
@@ -108147,7 +108147,7 @@
       "locality": "Scott County",
       "state": "KY",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Company amending complaint in Nashville data center lawsuit",
@@ -108158,7 +108158,7 @@
       "locality": "Nashville",
       "state": "TN",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Grand Junction City Council advances one-year moratorium on large data centers",
@@ -108191,7 +108191,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Pembroke to review data center rules during 180-day moratorium",
@@ -108202,7 +108202,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Council passes first reading of data center regulation ordinance, gives ban notices",
@@ -108213,7 +108213,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "NJ residents push back on $1.8B AI data center",
@@ -108235,7 +108235,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Second largest gas plant in the U.S. threatens rural Virginia",
@@ -108246,7 +108246,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Toxic AI boom breathes new life into a dying forever chemical industry",
@@ -108268,7 +108268,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Spanberger: data center sales tax exemption still up for discussion",
@@ -108279,7 +108279,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Jury selection resumes for Naresh Bhatt, Virginia man accused of killing, dismembering missing wife",
@@ -108301,7 +108301,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Ossoff, Collins discuss tariffs, data centers in Georgia Senate debate",
@@ -108312,7 +108312,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Ossoff and Collins trade personal attacks during heated Georgia Senate debate",
@@ -108323,7 +108323,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Georgia Public Service Commission Chair",
@@ -108334,7 +108334,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Hinojosa puts affordability, schools and data centers at center of challenge to Abbott",
@@ -108345,7 +108345,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Google’s Corio Says Data Centers are Future of Power",
@@ -108356,7 +108356,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Taylor City Council greenlights 664-Acre Data Center Project",
@@ -108367,7 +108367,7 @@
       "locality": "Taylor",
       "state": "MI",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Taylor’s 664-acre data center project approved in 5-0 city council vote",
@@ -108378,7 +108378,7 @@
       "locality": "Taylor",
       "state": "MI",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Texas agency sues to block release of data center locations",
@@ -108389,7 +108389,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Plans filed for $366M Pacifico-BlackChamber data center | Bastrop - Cedar Creek",
@@ -108400,7 +108400,7 @@
       "locality": "Bastrop County",
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Why Announced Data Centers Take Years to Switch On (And What It Means for the AI You Use)",
@@ -108411,7 +108411,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Gina Hinojosa targets Gov. Greg Abbott’s campaign donors, data center tax breaks in San Antonio",
@@ -108422,7 +108422,7 @@
       "locality": "San Antonio",
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Hot Stacks — The force majeure clause haunting data center debt docs",
@@ -108433,7 +108433,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Oracle Trucks in Natural Gas to Keep AI Data Centers on Schedule",
@@ -108455,7 +108455,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2025-09-20",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center light and noise pollution rankle Reston residents",
@@ -108466,7 +108466,7 @@
       "locality": null,
       "state": "WA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "San Joaquin County halts new data center approvals amid water, power concerns",
@@ -108477,7 +108477,7 @@
       "locality": "San Joaquin County",
       "state": "CA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Modi wants India to power the AI age. Residents are pushing back",
@@ -108488,7 +108488,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center light pollution rankles Reston residents",
@@ -108499,7 +108499,7 @@
       "locality": null,
       "state": "WA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Questions to ask before a data center develops in your neighborhood",
@@ -108510,7 +108510,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Can Canton spare enough water for 4 proposed data centers?",
@@ -108521,7 +108521,7 @@
       "locality": "Canton",
       "state": "NC",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "‘This is not an anti-tech town’: backlash to datacenter in city once home to IBM",
@@ -108532,7 +108532,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Questions to ask before a data center develops in your neighborhood",
@@ -108554,7 +108554,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Taylor Township residents voice concerns over potential AI data center development",
@@ -108565,7 +108565,7 @@
       "locality": "Taylor",
       "state": "MI",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Poll shows New Mexico residents reject large-scale data center development",
@@ -108598,7 +108598,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Lexington-Fayette Urban County Council votes to extend data center moratorium",
@@ -108609,7 +108609,7 @@
       "locality": "Lexington-Fayette",
       "state": "KY",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Clinton postpones public hearing on data center zoning ordinance",
@@ -108631,7 +108631,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Lexington council extends data center moratorium",
@@ -108642,7 +108642,7 @@
       "locality": "Lexington",
       "state": "KY",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Months after session, weeks before election, Republicans propose repeal of data center tax break",
@@ -108653,7 +108653,7 @@
       "locality": null,
       "state": "WI",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center companies have approached Champaign County for projects in Sidney, Tolono",
@@ -108664,7 +108664,7 @@
       "locality": "Champaign County",
       "state": "IL",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Diegnan Bill Requiring DEP Study on Data Center Water Usage Advances",
@@ -108675,7 +108675,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Play this data center simulator to step into the role of decision-maker",
@@ -108686,7 +108686,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Lawrence Township Council Introduces Ordinance to Ban Data Centers Townshipwide",
@@ -108697,7 +108697,7 @@
       "locality": "Lawrence",
       "state": "KS",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Constellation, Google strike 890-MW nuclear deal in PJM",
@@ -108708,7 +108708,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data centers emerge as hot issue in midterm elections",
@@ -108719,7 +108719,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Guardian Data Opens 42,000-Square-Foot Moonachie Facility, Doubling New Jersey Capacity",
@@ -108730,7 +108730,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Opinion/Op-Ed: Data centers are an economic opportunity for West Virginia",
@@ -108741,7 +108741,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Spartanburg County officials visit Virginia’s ‘Data Center Alley.’ Here’s what they learned.",
@@ -108752,7 +108752,7 @@
       "locality": "Spartanburg County",
       "state": "SC",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Google data center project in Chesterfield racks up seven environmental violations from state",
@@ -108796,7 +108796,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Ossoff, Collins face off in first Georgia Senate debate",
@@ -108807,7 +108807,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Readers write",
@@ -108818,7 +108818,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "CleanSpark Still Has 13K Bitcoin On Its Books, But It's Ending Its Monthly Updates As Data Center Buildout Accelerates",
@@ -108829,7 +108829,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Taylor City Council approves deal to clear the way for a nearby data center and power plant",
@@ -108840,7 +108840,7 @@
       "locality": "Taylor",
       "state": "MI",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Anthropic-linked $366m data center project filed for in Cedar Creek, Texas",
@@ -108851,7 +108851,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Kalshi traders see high odds that more than 5,100 data centers will be planned or operating before 2027",
@@ -108862,7 +108862,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "ThisWay Global plans 73MW AI and HPC data center in Bryan, Texas",
@@ -108873,7 +108873,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Developers unveil plans for $471.8M AI data center campus in South Texas",
@@ -108884,7 +108884,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data Center Allies Form a Coalition to Discuss Economic Benefits Amid Opposition",
@@ -108895,7 +108895,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Texas Puts Data-Center Permits on Hold as ERCOT Considers 474 GW in Requests",
@@ -108928,7 +108928,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "60.4 Gigawatts and Counting: How AI Data Center Energy Demand Is Driving a U.S. Gas Power Surge",
@@ -108950,7 +108950,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-03-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Exclusive: Senate Investigation Challenges Big Tech’s Case for AI Data Centers",
@@ -108961,7 +108961,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center lawsuit could be tossed out",
@@ -108983,7 +108983,7 @@
       "locality": "Manatee County",
       "state": "FL",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "The hypocrisy of the data center moratorium",
@@ -109005,7 +109005,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data centers emerge as hot issue in midterm elections",
@@ -109016,7 +109016,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Google Vows To Cover Full Cost Of Boosting Three States’ Nuclear Plants To Power Its AI Growth",
@@ -109027,7 +109027,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Virginia Data Center Ran Diesel Generators for 24 Hours. Residents Fled Their Homes",
@@ -109049,7 +109049,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Google data center project in Chesterfield racks up seven environmental violations from state",
@@ -109060,7 +109060,7 @@
       "locality": "Chesterfield",
       "state": "NJ",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Virginia: Spanberger plan calls for clean energy future",
@@ -109071,7 +109071,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Bottoms & Jackson clash over healthcare & data centers",
@@ -109093,7 +109093,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "How Texas Research Park became San Antonio's data center hub",
@@ -109104,7 +109104,7 @@
       "locality": "San Antonio",
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "PUC sues Texas Attorney General over data center record dispute",
@@ -109115,7 +109115,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Gina Hinojosa targets Gov. Greg Abbott’s campaign donors and data center tax breaks in San Antonio",
@@ -109126,7 +109126,7 @@
       "locality": "San Antonio",
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-09"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Lake County considers tighter rules for data centers as residents call for ban",
@@ -109137,7 +109137,7 @@
       "locality": "Lake County",
       "state": "IL",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Palo residents to get first look at Google’s data center plans",
@@ -109148,7 +109148,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Lake Elsinore data center moratorium extended",
@@ -109159,7 +109159,7 @@
       "locality": "Lake Elsinore",
       "state": "CA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Grand Junction City Council advances one-year moratorium on large data centers",
@@ -109170,7 +109170,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Lexington extends data center moratorium until October 2027",
@@ -109192,7 +109192,7 @@
       "locality": null,
       "state": "AR",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Ending Loudoun's data center grandfathering clause could expose county to up to $60 million in liability, staff warns",
@@ -109203,7 +109203,7 @@
       "locality": "Loudoun County",
       "state": "VA",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-09"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data Center Meeting Attracts Heavy Interest In Tuolumne County",
@@ -109214,7 +109214,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Ratepayer Protection Act is a Start, But for New Jersey, Clean Energy Can Help Keep Rising Energy Costs from Data Centers in Check",
@@ -109225,7 +109225,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Gov. Shapiro, Stacy Garrity talk data centers, gas tax, Trump during debate",
@@ -109236,7 +109236,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Loudoun officials say Amazon needs county approval to build data centers at VSTC campus",
@@ -109247,7 +109247,7 @@
       "locality": "Loudoun County",
       "state": "VA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Stafford approves data center with reduced setbacks",
@@ -109258,7 +109258,7 @@
       "locality": "Stafford County",
       "state": "VA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Google cited for sediment runoff at Chesterfield data center site",
@@ -109269,7 +109269,7 @@
       "locality": "Chesterfield",
       "state": "NJ",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "RTD reporting on Google data center plans",
@@ -109280,7 +109280,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "(WATCH) Data Center Concerns",
@@ -109291,7 +109291,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Georgia Senator race candidates face off",
@@ -109302,7 +109302,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Texas House candidates talk taxes, education and data centers ahead of Tarrant County midterms",
@@ -109313,7 +109313,7 @@
       "locality": "Tarrant",
       "state": "AL",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Bulletin Board: AI and Data Center news from Minnesota, nationally, and globally",
@@ -109324,7 +109324,7 @@
       "locality": null,
       "state": "MN",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "How Texas Research Park became San Antonio's data center hub",
@@ -109335,7 +109335,7 @@
       "locality": "San Antonio",
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "$22B data center and power campus dubbed Project Star planned for rural Encinal",
@@ -109346,7 +109346,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "The powerful way American communities can benefit from the new tech boom revealed by data center CEO",
@@ -109357,7 +109357,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Nye County residents clash with commissioners over new data center ordinance",
@@ -109368,7 +109368,7 @@
       "locality": "Nye County",
       "state": "NV",
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Stafford residents oppose massive data centers proposed near Rappahannock River",
@@ -109379,7 +109379,7 @@
       "locality": "Stafford County",
       "state": "VA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "City, residents weigh in on length of data center legislation moratorium",
@@ -109390,7 +109390,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Community Group Calls On Supervisors To Ban Data Centers Countywide",
@@ -109401,7 +109401,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Questions to ask before a data center develops in your neighborhood",
@@ -109412,7 +109412,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Virginia Data Center Ran Diesel Generators for 24 Hours. Residents Fled Their Homes",
@@ -109423,7 +109423,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "TeraWulf suggests it will take legal action if Lansing pursues data center ban",
@@ -109456,7 +109456,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Siloam Springs City Board approves first reading of data center ordinance",
@@ -109467,7 +109467,7 @@
       "locality": null,
       "state": "AR",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Debate continues over Michigan City data center moratorium language",
@@ -109478,7 +109478,7 @@
       "locality": "Michigan City",
       "state": "IN",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Stanislaus city considers a longer data center moratorium to evaluate new state laws",
@@ -109500,7 +109500,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Why the Wilderness Society Backs a Data Center Moratorium",
@@ -109511,7 +109511,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data centers are on the ballot in Trenton. Here’s what to know about Issue 17",
@@ -109522,7 +109522,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "After Mahomet ends data center talks, some Champaign County residents hope for strict guardrails",
@@ -109533,7 +109533,7 @@
       "locality": "Champaign County",
       "state": "IL",
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Niles Township board approves data center moratorium, marijuana zoning amendment",
@@ -109544,7 +109544,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Who Is the Operator of the Controversial Data Center Next to Princeton? Bloomberg, It Appears",
@@ -109555,7 +109555,7 @@
       "locality": "Princeton",
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Constellation, Google strike 890-MW nuclear deal to meet data center power demand",
@@ -109577,7 +109577,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Oct. 10- Oct. 24: March for a Moratorium — Stand up to data centers in Virginia!",
@@ -109588,7 +109588,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "'We’ve been screwed': A wealthy county is overrun with data centers",
@@ -109599,7 +109599,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Fed Contractor Layoffs + New Arcade Bar Opens + Marches Against Data Centers: VA Business Headlines",
@@ -109610,7 +109610,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Amazon's Ashburn Data Center Plans Must Face Public Review: Loudoun Zoning Administrator",
@@ -109621,7 +109621,7 @@
       "locality": "Ashburn",
       "state": "VA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Western Hemisphere’s largest coal plant will keep running as Georgia’s data center demand grows",
@@ -109632,7 +109632,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Planning panel backs Alpharetta data center expansion",
@@ -109643,7 +109643,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Why is Southern Company (NYSE:SO) drawing attention as Georgia power demand surges?",
@@ -109654,7 +109654,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Can salty, dirty water cool data centers? Research points to desalination as a cooling option",
@@ -109665,7 +109665,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Taylor City Council Approves 664-Acre Data Center Project",
@@ -109676,7 +109676,7 @@
       "locality": "Taylor",
       "state": "MI",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Texas Gov Greg Abbott on data centers: ‘Businesses can find ways to be a good neighbor’",
@@ -109687,7 +109687,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Los Angeles-based firm breaks ground on $15B data center in Hudspeth County",
@@ -109709,7 +109709,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "San Gabriel Valley Residents Fighting Data Centers Hit a 12-Mile-Long Snag",
@@ -109720,7 +109720,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Neighbors push back on Hanover data center developer over noise near Humane Society",
@@ -109731,7 +109731,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Volusia County moves data center ban ordinance forward",
@@ -109753,7 +109753,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Google goes nuclear to power its AI data centers, committing to buy 890 megawatts of energy from Constellation",
@@ -109764,7 +109764,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "US Democrats split over proposed data center moratoriums amid rising energy and climate concerns",
@@ -109775,7 +109775,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "5 Notable Data Center Links, Oct 10 2026",
@@ -109863,7 +109863,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Guardian Data Opens 42,000-Square-Foot Moonachie Facility, Doubling New Jersey Capacity",
@@ -109874,7 +109874,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Candidate Profile: Gregg Mele For NJ-12 Congressional District",
@@ -109885,7 +109885,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Fairfax County community weighs in on Dominion-NextEra Energy merger as concerns grow over data centers, electric bills",
@@ -109907,7 +109907,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "MARC HYDEN: Data-center disinformation proliferates across Georgia",
@@ -109918,7 +109918,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Article | Texas lawmakers are planning a data center crackdown. Then what?",
@@ -109929,7 +109929,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Armstrong County data center: a community week in Texas",
@@ -109940,7 +109940,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Will Texas Power Limits on Hutto Data Center Rethink Prologis' (PLD) Development-Led Growth Narrative",
@@ -109951,7 +109951,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Xcel Energy launches transparency pledge as data center power demand raises cost fears",
@@ -109962,7 +109962,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "APC to discuss additional data center moratorium on Oct. 15",
@@ -109973,7 +109973,7 @@
       "locality": "Grant County",
       "state": "IN",
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Volusia County moves data center ban ordinance forward",
@@ -110006,7 +110006,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Georgia Tech Opens Supercomputer to Researchers Nationwide",
@@ -110017,7 +110017,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "San Francisco imposes temporary ban on new data centers",
@@ -110028,7 +110028,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Hudpeth County confirms: new $15B data center being built near Far East El Paso County",
@@ -110039,7 +110039,7 @@
       "locality": "El Paso",
       "state": "TX",
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Los Angeles-based firm breaks ground on $15B data center in Hudspeth County",
@@ -110050,7 +110050,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Volusia County moves data center ban ordinance forward",
@@ -110061,7 +110061,7 @@
       "locality": "Volusia County",
       "state": "FL",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center open house shifts to forum as Tuolumne County residents call for ban",
@@ -110072,7 +110072,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "City data center moratorium gets public hearing date",
@@ -110083,7 +110083,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "VIDEO: New Jersey Residents Protest $1.8B Data Center in Their Neighborhood",
@@ -110094,7 +110094,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Data center developers are using lawsuits, cash offers to ‘overwhelm’ rural America",
@@ -110105,7 +110105,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Chatham moves to ban data centers across the borough",
@@ -110116,7 +110116,7 @@
       "locality": "Chatham County",
       "state": "NC",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "'We’ve been screwed': A wealthy county is overrun with data centers",
@@ -110149,7 +110149,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "The powerful way American communities can benefit from the new tech boom revealed by data center CEO",
@@ -110171,7 +110171,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "What Comes After a Data Center Moratorium?",
@@ -110182,7 +110182,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Oakland puts temporary pause on new data centers",
@@ -110193,7 +110193,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "North Jersey has over a dozen data centers and more coming. See list",
@@ -110204,7 +110204,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Gov. Spanberger's data center plan provides pathway for Virginia",
@@ -110215,7 +110215,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "One of America's Last Remaining Chestnut Groves Could Soon Be Wiped Out to Make Room for an AI Data Center",
@@ -110226,7 +110226,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Concentration Risk in Northern Virginia Data Centers Raises Cyber and Regulatory Concerns",
@@ -110237,7 +110237,7 @@
       "locality": "Northern Virginia",
       "state": "VA",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Fact-checking Jon Ossoff and Mike Collins in Georgia’s first Senate debate",
@@ -110248,7 +110248,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Chris Erwin, House District 32",
@@ -110259,7 +110259,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "CleanSpark’s Bitcoin Holdings Fell 173 BTC in September",
@@ -110270,7 +110270,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Perot Jr. talks up data centers at Waco luncheon, touts Texas' role in US economic future",
@@ -110281,7 +110281,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     {
       "title": "Connersville Commons Retail Center",
@@ -110292,7 +110292,106 @@
       "locality": "Fayette County",
       "state": "IN",
       "first_seen": "2013-10-11",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
+    },
+    {
+      "title": "Questions to ask before a data center develops in your neighborhood",
+      "outlet": "WSBT",
+      "link": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxQQmJZQk1XdXlMUWllX3VGMXFKRllnWFJWemlwVHNMOUp4YmJXYmhLbkFJLU51NnNtUEloLVRsUDJob1BEdnZBR2UwT0xGOXFabFlxZTVTZEVCVktHYVUydkotSFlJLVk1cmMzX2RleG1zcmpYMTF3dG51eElCTjAtTWNMNjdiUnF4V0FwWndVLWRQZzBzZVJfR2IwVDJWTVp5NW5wdFNqczBrYzBZdWxzbzlObC1FOHljelZ3RE9UV01KemtSUUhqSS01WWhUM0tNYll1SmZCOGxicVY4YXdCYkVKY1NtUmlURnNSYWNaT0hiZGxCcmZETndoVUU3ZXFEeTkxNnB5ZnNzRDFHekgzQVBscUZOSzNDRU5uMVphd3JCR1dSSjh3ZnB1a09FaE9wZXhjYjd1MDY1QktyLUJVcnlodGdTWnNtQl95WTlmdXZEb1FyOXdaalpiajJiYU0?oc=5",
+      "published": "Thu, 08 Oct 2026 13:03:23 GMT",
+      "published_iso": "2026-10-08T13:03:23+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-11"
+    },
+    {
+      "title": "Data center lawsuit alleges Frederick County executive put politics ahead of development",
+      "outlet": "WJLA",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWHoxdjRBeXpod1hyVlU1NFlMSTctZzVGZE5oYk9VWWNlcjR6Y2VNUzNYeDhzUG9GMGJWREc3Y3FkbjlfZlRYSG9RWE9ma2FVQldIamdpSW5Rajl5UHlqMmY4c21UWWdBa2xseVZRdWljcHdIVmNQU1cxYlNqY1RDR19nWi1iS1pXVndOSnRSTlJKbk5FTjdVSW9XSGFBaEJBR1hwRlJJR19LamZDTzYxS0NWNkRyQ28?oc=5",
+      "published": "Sat, 10 Oct 2026 03:16:35 GMT",
+      "published_iso": "2026-10-10T03:16:35+00:00",
+      "locality": "Frederick County",
+      "state": "MD",
+      "first_seen": "2026-10-10",
+      "last_seen": "2026-10-11"
+    },
+    {
+      "title": "‘Tensions were high:’ Memphis City Council members reflect on Tuesday’s ended meeting, data center moratorium vote postponed again",
+      "outlet": "Action News 5",
+      "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxObzR5eWxXTlhWY09MazlaTFdxZ2h3bGJWeUc3VV91akZXMk1FX05ZaTd4aGRBb2REUjMwMzJxaVNqbS1IejRMb1dsaUR6YlhSa05SNkNPTVhZTTdkWjRJd1NXdGUzRFZSbmlGYVRWVlNFVGJHVlhzSjVtUkRGZUN3Y3ZtS21MaDBQYnFic2VGeFVGc1hFY0hwQ3F3MGJQUE5ySHV6UU9pZ0VIM2VLMVgzTXpFSE95MGZTQ0sxTXhNaW80dVNaYTJmLXpTa0pEYk83NVFqeFhXUldHSk1Sa2RqdDJUMUdpSElKUjdKUHZPTGRUbXJv?oc=5",
+      "published": "Wed, 07 Oct 2026 23:37:00 GMT",
+      "published_iso": "2026-10-07T23:37:00+00:00",
+      "locality": "Memphis",
+      "state": "TN",
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-11"
+    },
+    {
+      "title": "Beyond the Megawatt: Why Data Center Site Selection Is Now a Three-Front Battle",
+      "outlet": "Data Center Knowledge",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPWmpzVmJsWkd3aHR1QVlKT3d0SERsQ0JsaGVSYUwtamU3MmF6THh1TTZuSDRKNi1XalhqZllZTng2SWFkaEdOSDBVRVZsSTFIZ2g0MGFKWEpoWUlpOG13ZFdfdmVrYUtxc1dMei12SEhvbjNoQ2E2ZnMwaUxlTEFyekhIR2hWMW9sRkZXSzlabGtYam9MbEE2SmhxM0VtQUE1VVdYR3A5aFpXQ09qNHJoamdQbk5BTVg1OXhEUC13T1hOZlctLThWMW56ZWVQZThPU0pZUmZQNHQ?oc=5",
+      "published": "Mon, 05 Oct 2026 18:55:35 GMT",
+      "published_iso": "2026-10-05T18:55:35+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-11"
+    },
+    {
+      "title": "VIDEO: New Jersey Residents Protest $1.8B Data Center in Their Neighborhood",
+      "outlet": "Yahoo",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxONm5CYUtHR2lYREM4TEtxUXlHQW1lTGZabkVoVzZxQ0pSSDVxNHVmT3RieVdlZUl0akhRc2h0a3hSNHVGSVVQTllyZThkQjhDdWl4OVRrbHJnSUhfMFpzYjd2QmdrTHpZSE1xLVdwTWhhTlFESUw0TGh3aGVjQ2FQVFFtX010Uk8tYS1j?oc=5",
+      "published": "Sat, 10 Oct 2026 17:01:00 GMT",
+      "published_iso": "2026-10-10T17:01:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-10",
+      "last_seen": "2026-10-11"
+    },
+    {
+      "title": "Why Wall Street Real Estate Bets On Ai Data Centers Are Getting Risky",
+      "outlet": "ИФЗ РАН",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbWtKUmpzbnRTTWtnQjVPSThBLWFISF9JRGg0bk0ySGhMSUlPUW9tLVNNeEtzczYzSlRBUDZ3MzdUU2ZYeU5iS2ppTlF6RkVxY3dBQUg1aENMdElUX1BIX3A1d2xSeGhJSElRLXA5dk4yVVozWHlyTkVpSmZkWnVpaXZYTkdoWHZSUnM0?oc=5",
+      "published": "Fri, 09 Oct 2026 17:18:13 GMT",
+      "published_iso": "2026-10-09T17:18:13+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-09",
+      "last_seen": "2026-10-11"
+    },
+    {
+      "title": "Jackson vs. Bottoms: 3 Biggest Takeaways From the Peach State Debate",
+      "outlet": "The Daily Signal",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5CbGNJcFh4NkgtMlN0U1YyNHlYNElOTHhnM2g3RmhtclE2SDhqYVoyaGZjNjdaUDRNQ3c5OEVvelVmVURKSFRtbmlzNHRYYVJCWkV3TnIwNFNpZkdWejhWM2VpX2dFaDMydXcweFEzRQ?oc=5",
+      "published": "Wed, 07 Oct 2026 18:50:29 GMT",
+      "published_iso": "2026-10-07T18:50:29+00:00",
+      "locality": "Jackson",
+      "state": "MS",
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-11"
+    },
+    {
+      "title": "The powerful way American communities can benefit from the new tech boom revealed by data center CEO",
+      "outlet": "Fox News",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQTGp4NTBNUFZjaVctUGY2WnRXOVFwOUVoMGxlel9kOUlaRUlUNFBEX2lCbWsweEpDZVFyYy1yeDlhbnBDR3hsXzFodW1UVlpkbGpRZF9Na3J6eW1FNlV5UXZraUhRd1MzdWVXcE5sTzFVaFRZbmF2R1lheW9CZERHUERSYktwTmRHdDZRX3ozMjBscUU2aDVUU19RMVNNZTNrZUJ6cDQtTG04S3ZJa3hVZzhGaw?oc=5",
+      "published": "Fri, 09 Oct 2026 10:00:54 GMT",
+      "published_iso": "2026-10-09T10:00:54+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-09",
+      "last_seen": "2026-10-11"
+    },
+    {
+      "title": "Niles man hospitalized after crashing into tree in Cass County",
+      "outlet": "MLive.com",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNT2o5RUUxX21oMzRuRWFFejhsWW9XOTU4ZXZLeGR2SXZNYXlpLWlSc3FiSzk2NmZxRnBlOE5UTDloQWd4N3BBZlg1R0JfekFJa25hVlhDRGpwRTl5UURkUHY4c1dwTFV0eWxkUGpiUEV5NDlXa2pXcXo2cjliSmk1Mk1KQ01EQ0tUcUNja0JZMGhfSnJsUTVKUVRrWGYwaUhqc2EtbEp6Z0xYelZCUERNTnd3?oc=5",
+      "published": "Sat, 11 Apr 2026 07:00:00 GMT",
+      "published_iso": "2026-04-11T07:00:00+00:00",
+      "locality": "Cass County",
+      "state": "IN",
+      "first_seen": "2026-04-11",
+      "last_seen": "2026-10-11"
     }
   ]
 }
