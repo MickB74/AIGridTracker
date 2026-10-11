@@ -3806,5 +3806,54 @@
     "locality": "Newton County, GA",
     "kind": "status_changed",
     "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "bangor-me",
+    "locality": "Bangor, ME",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "tallmadge-oh",
+    "locality": "Tallmadge, OH",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "palm-springs-ca",
+    "locality": "Palm Springs, CA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "calaveras-county-ca",
+    "locality": "Calaveras County, CA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "morgan-hill-ca",
+    "locality": "Morgan Hill, CA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "lake-elsinore-ca",
+    "locality": "Lake Elsinore, CA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "rockdale-county-ga",
+    "locality": "Rockdale County, GA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
   }
 ]

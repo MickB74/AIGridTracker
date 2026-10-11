@@ -10192,4 +10192,329 @@ a story we should cover? Reach out at hello@aigridwatch.com or sign up for
 the newsletter below.*
 """,
     },
+    {
+        "id": "week-in-review-2026-10-11",
+        "art": "review",
+        "section": "stories",
+        "title": "Week in Review: San Francisco Bans Data Centers in the Birthplace of AI, Texas's Own Utility Regulator Sues to Keep Data Center Locations Secret, and Memphis's Moratorium Vote Ends in a Brawl",
+        "seo_title": "Week in review: SF data center ban, Texas PUC vs AG",
+        "date": _dt.date(2026, 10, 11),
+        "author": "GridWatch AI",
+        "tags": [
+            "week in review",
+            "moratorium",
+            "California",
+            "Texas",
+            "Tennessee",
+            "North Carolina",
+            "Georgia",
+            "Virginia",
+            "water",
+            "transparency",
+            "community",
+        ],
+        "summary": (
+            "This week San Francisco and Oakland each passed 45-day data center "
+            "moratoriums in the city where OpenAI, Anthropic, and most of the AI "
+            "industry is headquartered, and Texas's own Public Utility Commission "
+            "sued Attorney General Ken Paxton's office to keep data center "
+            "location records secret. Memphis's council postponed its moratorium "
+            "vote twice amid a meeting that ended in a physical altercation, "
+            "Raleigh passed a six-month pause after activists asked for 32 months, "
+            "Georgia and Virginia regulators cited data centers for environmental "
+            "and permit violations, and a federal judge upheld Nashville's "
+            "authority to pause a project near the city zoo. Plus: Denver7 counted "
+            "nearly 500 U.S. communities that have now paused or banned data "
+            "centers."
+        ),
+        "body": """\
+Welcome back to the GridWatch AI Week in Review — our Sunday roundup of the
+most important data center stories from the past seven days, what they mean
+for communities, and what you can learn from each one.
+
+---
+
+### 1. San Francisco and Oakland each pass data center moratoriums — in the city where the AI industry itself is headquartered
+
+**What happened:** The San Francisco Board of Supervisors passed a 45-day
+moratorium on new data centers, which [Bloomberg](https://www.bloomberg.com/)
+described as happening "in the hometown of AI," while
+[CBS News](https://www.cbsnews.com/) reported Oakland's City Council approved
+its own 45-day pause the same week. [The Oaklandside](https://oaklandside.org/)
+reported Oakland's vote came amid broader local backlash to AI data center
+growth, and other Bay Area cities were reported to be reviewing similar
+policies.
+
+**Why it matters:** San Francisco is where OpenAI, Anthropic, and a large
+share of the companies driving data center demand are physically
+headquartered. A 45-day pause doesn't block anything permanently, but the
+symbolism is hard to miss: the industry's hometown joining the roughly 500
+communities nationwide (see story 7) that have decided they need a timeout
+before the next project gets approved.
+
+**What to learn — a short pause is a tool, not a verdict:** 45 days is barely
+enough time to hold one or two hearings, which means the real fight over
+whether San Francisco and Oakland get a longer moratorium, a permanent
+ordinance, or nothing at all is still ahead. If your own council passes a
+short pause, treat it as a deadline to organize before, not a result to
+celebrate. See the full [moratorium tracker](/moratoriums.html) and the
+[California state page](/states/california.html).
+
+*Sources: [Bloomberg, Oct 7](https://www.bloomberg.com/);
+[CBS News, Oct 7](https://www.cbsnews.com/);
+[The Oaklandside, Oct 7](https://oaklandside.org/)*
+
+---
+
+### 2. Texas's own Public Utility Commission sues the state's attorney general to keep data center locations secret
+
+**What happened:** The Texas Public Utility Commission sued Attorney General
+Ken Paxton's office to block the release of data center location records,
+according to the [Texas Tribune](https://www.texastribune.org/),
+[KXAN Austin](https://www.kxan.com/) and
+[Texas Scorecard](https://texasscorecard.com/). The outlets' headlines
+describe a dispute over whether the records have to be disclosed; none of
+them report who originally requested the locations or when a ruling is
+expected.
+
+**Why it matters:** We covered Paxton's office opening an investigation into
+hundreds of Texas data centers that never answered a mandatory water-use
+survey in [last month's roundup](/blog/week-in-review-2026-09-27). This week
+a different arm of Texas state government — the utility regulator that is
+supposed to oversee grid reliability — went to court specifically to keep
+facility locations out of public view. Two state agencies pulling in
+opposite directions on data center transparency in the same month is worth
+watching regardless of how the suit resolves.
+
+**What to learn — "confidential" is a legal category, not a given, and it's
+worth contesting:** Utilities and regulators often claim location or
+load data is protected as a trade secret or critical-infrastructure
+information. That claim isn't automatically correct — many states have a
+public-interest override or require the agency to justify the
+withholding specifically, not categorically. If a utility or state agency in
+your area refuses to disclose a data center's location or power draw, ask
+specifically which statute they're citing and whether it's been tested in
+court. See the [Texas state page](/states/texas.html) and our
+[PUC directory](/puc.html) for how to file your own request.
+
+*Sources: [Texas Tribune, Oct 6](https://www.texastribune.org/);
+[KXAN Austin, Oct 9](https://www.kxan.com/);
+[Texas Scorecard, Oct 8](https://texasscorecard.com/)*
+
+---
+
+### 3. Memphis's data center moratorium vote is postponed twice — the second time after a meeting ends in a physical altercation
+
+**What happened:** The Memphis City Council's vote on a data center
+moratorium ordinance, originally scheduled for Tuesday, was postponed twice
+within the same week, according to
+[localmemphis.com](https://www.localmemphis.com/) and
+[FOX13 Memphis](https://www.fox13memphis.com/). After the second
+postponement, [Tri-State Defender](https://tri-statedefender.com/) reported
+"fists fly" among attendees and
+[The Commercial Appeal](https://www.commercialappeal.com/) and
+[Fox News](https://www.foxnews.com/) both described the meeting devolving
+into chaos before it ended. Separately,
+[localmemphis.com](https://www.localmemphis.com/) reported Shelby County's
+own commission introduced a parallel moratorium ordinance covering the
+unincorporated county.
+
+**Why it matters:** A procedural postponement is routine; two postponements
+in a week, one ending in a physical confrontation, is a sign the underlying
+disagreement in Memphis — over an xAI-linked data center buildout that has
+also drawn a wrongful-death suit and a noise lawsuit we covered in
+[September's roundup](/blog/week-in-review-2026-09-27) — has outpaced the
+council's ability to manage the room. A city and a county both drafting their
+own ordinances at the same time also means residents need to track two
+separate votes, not one.
+
+**What to learn — know which body actually has jurisdiction over the parcel
+you care about:** A data center sited within city limits is governed by the
+city council's zoning code; one in unincorporated county land answers to the
+county commission instead, and the two bodies can move on completely
+different timelines, as Memphis and Shelby County are doing right now.
+Before you track a vote, confirm with your clerk's office which jurisdiction
+the specific parcel sits in. See
+[Memphis's community page](/communities/memphis-tn.html) and the
+[Tennessee state page](/states/tennessee.html).
+
+*Sources: [localmemphis.com, Oct 6](https://www.localmemphis.com/);
+[FOX13 Memphis, Oct 7](https://www.fox13memphis.com/);
+[Tri-State Defender, Oct 7](https://tri-statedefender.com/);
+[The Commercial Appeal, Oct 7](https://www.commercialappeal.com/)*
+
+---
+
+### 4. Raleigh passes a six-month data center moratorium — activists had asked for 32 months
+
+**What happened:** The Raleigh City Council passed a six-month moratorium on
+new data center approvals, according to
+[WRAL](https://www.wral.com/) and the
+[Raleigh News & Observer](https://www.newsobserver.com/).
+[The Business Journals](https://www.bizjournals.com/) reported that
+opposition groups had specifically asked the council for a 32-month pause,
+and the city's own notice,
+[published by the City of Raleigh](https://raleighnc.gov/), confirms the
+adopted pause runs six months from enactment.
+
+**Why it matters:** This is the gap between "a moratorium passed" and "the
+moratorium residents wanted" made concrete with real numbers: six months
+versus the 32 months activists requested, a more than five-to-one
+difference. A headline that says a city "passed a moratorium" doesn't tell
+you which side of that gap your own council landed on.
+
+**What to learn — ask for the proposed duration in writing before the vote,
+not after:** When your council is considering a pause, get the specific
+number of months on the record ahead of the hearing — from the ordinance
+text, not a summary — and compare it to what residents are asking for.
+Raleigh's six months buys time for one planning cycle; a group asking for 32
+months is asking for enough time to rewrite the zoning code entirely. Those
+are different asks and your testimony should match which one your council is
+actually voting on. See
+[our model CBA clause library](/cba-clauses.html) for the kind of time-bound
+language negotiators use, and the
+[North Carolina state page](/states/north-carolina.html).
+
+*Sources: [WRAL, Oct 6](https://www.wral.com/);
+[Raleigh News & Observer, Oct 7](https://www.newsobserver.com/);
+[The Business Journals, Oct 7](https://www.bizjournals.com/);
+[City of Raleigh, Oct 8](https://raleighnc.gov/)*
+
+---
+
+### 5. Georgia fines two companies over "pop-up" power plant permits, and Virginia regulators cite a Google data center for sediment violations
+
+**What happened:** Georgia regulators fined two companies a combined
+\\$41,500 over permit violations tied to "pop-up" power plants built to
+supply data centers, according to
+[WSB-TV](https://www.wsbtv.com/) and the
+[Atlanta Journal-Constitution](https://www.ajc.com/). Separately in
+Virginia, state regulators cited a Google data center project in
+Chesterfield County for what
+[WRIC ABC 8News](https://www.wric.com/) reported as seven environmental
+violations tied to sediment runoff, after
+[Richmond Times-Dispatch](https://richmond.com/) first reported Google was
+cited for the runoff days earlier.
+
+**Why it matters:** Both are enforcement catching up after the fact, the
+same pattern we flagged with New Jersey's record fine against a Vineland
+data center [last month](/blog/week-in-review-2026-09-27): a facility
+operates out of compliance for a period before a state agency issues a
+citation or fine. A \\$41,500 fine against a project representing hundreds of
+millions in capital spending is not, on its own, much of a deterrent —
+whether it changes behavior depends on whether the violation gets fixed, not
+just fined.
+
+**What to learn — a facility's environmental record is split across more
+than one agency, and each keeps its own log:** An air or power-generation
+permit violation (Georgia's case) and a stormwater/sediment-control
+violation (Virginia's case) are enforced by different divisions, often under
+different statutes, even at the same company. If you want the complete
+compliance picture for a project near you, you generally have to request
+records from each relevant division separately — the zoning office's file
+won't show you either one. See the [Georgia](/states/georgia.html) and
+[Virginia](/states/virginia.html) state pages.
+
+*Sources: [WSB-TV, Oct 6](https://www.wsbtv.com/);
+[Atlanta Journal-Constitution, Oct 8](https://www.ajc.com/);
+[WRIC ABC 8News, Oct 9](https://www.wric.com/);
+[Richmond Times-Dispatch, Oct 6](https://richmond.com/)*
+
+---
+
+### 6. A federal judge dismisses a developer's lawsuit over Nashville's handling of a data center near the zoo
+
+**What happened:** A federal judge dismissed a lawsuit DC Blox had filed
+challenging Metro Nashville's actions on a proposed data center project near
+the Nashville Zoo, according to [WSMV](https://www.wsmv.com/) and
+[Axios](https://www.axios.com/). [The Center Square](https://www.thecentersquare.com/)
+reported the company said it plans to amend its complaint and continue
+pursuing the case rather than drop it.
+
+**Why it matters:** A developer suing over a moratorium or a permit denial
+is one of the more common pressure tactics communities face once they pause
+or reject a project, and this is a data point in the other direction: a
+court sided with the city's authority to act, at least on this round of
+claims. It's not the end of the case — DC Blox is reportedly amending its
+complaint — but it is evidence that a moratorium ordinance, drafted
+carefully, can survive a legal challenge.
+
+**What to learn — "the developer will just sue" is a real risk, but not an
+automatic loss:** Communities often hear that passing a moratorium or
+denying a permit invites an unwinnable lawsuit. Nashville's result (so far)
+and the dismissal of a similar developer challenge to North Carolina's
+Chatham County ban we covered [in September](/blog/week-in-review-2026-09-20)
+both suggest a well-drafted ordinance, grounded in the locality's actual
+zoning authority, has a real chance of holding up. See
+[Nashville's community page](/communities/nashville-tn.html).
+
+*Sources: [WSMV, Oct 7](https://www.wsmv.com/);
+[Axios, Oct 8](https://www.axios.com/);
+[The Center Square, Oct 8](https://www.thecentersquare.com/)*
+
+---
+
+### 7. Nearly 500 communities nationwide have now paused or banned data centers
+
+Beyond the stories above, [Denver7](https://www.denver7.com/) reported this
+week that Denver's own advisory-group move on data centers makes it "part of
+a growing trend" it counted at nearly 500 U.S. communities that have paused
+or banned data center development. A sample of what moved in just the past
+seven days:
+
+| Locality | State | Action | Duration / scope |
+|--|--|--|--|
+| Lexington-Fayette | KY | Moratorium extended | Until October 2027 |
+| Manatee County | FL | Moratorium approved | 12 months |
+| Cheyenne and Arapaho Tribes | OK | Tribal ban enacted | 3 years |
+| Easthampton | MA | Moratorium approved | 18 months |
+| Brownsville | TX | Moratorium, first vote | Under consideration |
+| Niles Township | IN | Moratorium approved | Under consideration |
+
+**What to learn — extensions are their own kind of signal:** Lexington
+didn't just pass a pause, it extended one it already had, out to a specific
+date two years away — a sign the council still doesn't consider its original
+review finished. If your own community already has a moratorium on the
+books, the date it's set to expire (or whether it gets extended before that
+date) tells you exactly when the real decision will actually get made. See
+the full [moratorium tracker](/moratoriums.html) for all tracked
+jurisdictions and their expiration dates.
+
+*Sources: [Denver7, Oct 7](https://www.denver7.com/);
+[Lexington Herald Leader, Oct 7](https://www.kentucky.com/) and
+[WKYT, Oct 8](https://www.wkyt.com/) (Lexington-Fayette);
+[WUSF, Oct 9](https://www.wusf.org/) and
+[Florida Politics, Oct 8](https://floridapolitics.com/) (Manatee County);
+[News 9, Oct 4](https://www.news9.com/) and
+[KOSU, Oct 5](https://www.kosu.org/) (Cheyenne and Arapaho Tribes);
+[Daily Hampshire Gazette, Oct 8](https://www.gazettenet.com/) (Easthampton)*
+
+---
+
+### What to watch next week
+
+- **San Francisco and Oakland, CA** — whether either city moves from a
+  45-day pause to a longer moratorium or permanent ordinance before it
+  lapses
+- **Texas** — how the PUC's suit against Paxton's office over data center
+  records plays out, and whether it's resolved before TCEQ's audit report
+  due back to Gov. Abbott
+- **Memphis, TN** — whether the city council and Shelby County's commission
+  both reach a vote on their separate moratorium ordinances, and whether
+  either passes
+- **Raleigh, NC** — what the city does with its six months, and whether
+  opposition groups keep pushing for a longer pause before it expires
+- **Nashville, TN** — whether DC Blox's amended complaint survives a second
+  motion to dismiss
+- **Lexington-Fayette, KY** — what the council's zoning review produces
+  before the extended moratorium's October 2027 deadline
+
+---
+
+*Every Sunday we cover the week's most important data center stories,
+explain the underlying concepts, and point you to the tools you need. Know
+a story we should cover? Reach out at hello@aigridwatch.com or sign up for
+the newsletter below.*
+""",
+    },
 ]

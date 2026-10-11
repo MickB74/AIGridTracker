@@ -6,26 +6,54 @@
   actions, status changes, and extended or shortened terms. Re-verifications
   with no substantive change are not logged here.</description>
   <language>en-us</language>
-  <lastBuildDate>Sat, 10 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 11 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Status changed: Bangor, ME</title>
+    <link>https://aigridwatch.com/moratoriums#bangor-me</link>
+    <guid isPermaLink="false">bangor-me-2026-10-11-status_changed</guid>
+    <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Enacted → Expired</description>
+  </item>
+  <item>
+    <title>Status changed: Tallmadge, OH</title>
+    <link>https://aigridwatch.com/moratoriums#tallmadge-oh</link>
+    <guid isPermaLink="false">tallmadge-oh-2026-10-11-status_changed</guid>
+    <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Enacted → Expired</description>
+  </item>
+  <item>
+    <title>Status changed: Palm Springs, CA</title>
+    <link>https://aigridwatch.com/moratoriums#palm-springs-ca</link>
+    <guid isPermaLink="false">palm-springs-ca-2026-10-11-status_changed</guid>
+    <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Enacted → Expired</description>
+  </item>
   <item>
     <title>Status changed: Calaveras County, CA</title>
     <link>https://aigridwatch.com/moratoriums#calaveras-county-ca</link>
-    <guid isPermaLink="false">calaveras-county-ca-2026-10-10-status_changed</guid>
-    <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">calaveras-county-ca-2026-10-11-status_changed</guid>
+    <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Enacted → Expired</description>
+  </item>
+  <item>
+    <title>Status changed: Morgan Hill, CA</title>
+    <link>https://aigridwatch.com/moratoriums#morgan-hill-ca</link>
+    <guid isPermaLink="false">morgan-hill-ca-2026-10-11-status_changed</guid>
+    <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
     <description>Enacted → Expired</description>
   </item>
   <item>
     <title>Status changed: Lake Elsinore, CA</title>
     <link>https://aigridwatch.com/moratoriums#lake-elsinore-ca</link>
-    <guid isPermaLink="false">lake-elsinore-ca-2026-10-10-status_changed</guid>
-    <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">lake-elsinore-ca-2026-10-11-status_changed</guid>
+    <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
     <description>Enacted → Expired</description>
   </item>
   <item>
     <title>Status changed: Rockdale County, GA</title>
     <link>https://aigridwatch.com/moratoriums#rockdale-county-ga</link>
-    <guid isPermaLink="false">rockdale-county-ga-2026-10-10-status_changed</guid>
-    <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="false">rockdale-county-ga-2026-10-11-status_changed</guid>
+    <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
     <description>Enacted → Expired</description>
   </item>
   <item>
@@ -678,33 +706,5 @@
     <guid isPermaLink="false">spring-hope-nc-2026-09-11-added</guid>
     <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
     <description>Added as Enacted</description>
-  </item>
-  <item>
-    <title>New: Franklin, NC</title>
-    <link>https://aigridwatch.com/moratoriums#franklin-nc</link>
-    <guid isPermaLink="false">franklin-nc-2026-09-11-added</guid>
-    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
-    <description>Added as Enacted</description>
-  </item>
-  <item>
-    <title>New: Northampton County, NC</title>
-    <link>https://aigridwatch.com/moratoriums#northampton-county-nc</link>
-    <guid isPermaLink="false">northampton-county-nc-2026-09-11-added</guid>
-    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
-    <description>Added as Enacted</description>
-  </item>
-  <item>
-    <title>New: Hendersonville, NC</title>
-    <link>https://aigridwatch.com/moratoriums#hendersonville-nc</link>
-    <guid isPermaLink="false">hendersonville-nc-2026-09-11-added</guid>
-    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
-    <description>Added as Proposed</description>
-  </item>
-  <item>
-    <title>New: Lee County, NC</title>
-    <link>https://aigridwatch.com/moratoriums#lee-county-nc</link>
-    <guid isPermaLink="false">lee-county-nc-2026-09-11-added</guid>
-    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
-    <description>Added as Under review</description>
   </item>
 </channel></rss>

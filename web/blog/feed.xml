@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Week in Review: San Francisco Bans Data Centers in the Birthplace of AI, Texas&#x27;s Own Utility Regulator Sues to Keep Data Center Locations Secret, and Memphis&#x27;s Moratorium Vote Ends in a Brawl</title>
+      <link>https://aigridwatch.com/blog/week-in-review-2026-10-11</link>
+      <guid>https://aigridwatch.com/blog/week-in-review-2026-10-11</guid>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 GMT</pubDate>
+      <description>This week San Francisco and Oakland each passed 45-day data center moratoriums in the city where OpenAI, Anthropic, and most of the AI industry is headquartered, and Texas&#x27;s own Public Utility Commission sued Attorney General Ken Paxton&#x27;s office to keep data center location records secret. Memphis&#x27;s council postponed its moratorium vote twice amid a meeting that ended in a physical altercation, Raleigh passed a six-month pause after activists asked for 32 months, Georgia and Virginia regulators cited data centers for environmental and permit violations, and a federal judge upheld Nashville&#x27;s authority to pause a project near the city zoo. Plus: Denver7 counted nearly 500 U.S. communities that have now paused or banned data centers.</description>
+    </item>
+    <item>
       <title>Developers Are Suing Towns That Ban Data Centers. Here Is What the Cases Say.</title>
       <link>https://aigridwatch.com/blog/data-center-developer-lawsuits-moratorium-bans-2026</link>
       <guid>https://aigridwatch.com/blog/data-center-developer-lawsuits-moratorium-bans-2026</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/week-in-review-2026-09-06</guid>
       <pubDate>Sun, 06 Sep 2026 00:00:00 GMT</pubDate>
       <description>This week Amazon withdrew a groundwater permit for its 869-acre King George County, Virginia campus two days after a newspaper asked about it, Montgomery County&#x27;s toughest moratorium challenger backed down while neighboring Baltimore County moved to extend its own pause through 2027, and Effingham County, Georgia residents sued over a zoning ordinance they say cleared the way for OpenAI&#x27;s data center behind a signed NDA. Plus: West Virginia certifies a second $12 billion data center in one county under a law that skips local review, a South Carolina town moves preemptively, and data centers become a Texas governor&#x27;s-race issue.</description>
-    </item>
-    <item>
-      <title>Virginia Has Three Data Center Votes in the Next Five Weeks. Here Is What Each One Can and Cannot Do.</title>
-      <link>https://aigridwatch.com/blog/virginia-september-2026-decision-calendar</link>
-      <guid>https://aigridwatch.com/blog/virginia-september-2026-decision-calendar</guid>
-      <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
-      <description>Loudoun votes on pause options September 15 and on 23 grandfathered projects October 6; Fairfax&#x27;s Planning Commission hears the Plaza 500 substation September 24. Behind them sits a governor who has said no to a statewide pause, a rate class that makes 25 MW customers pay for the grid they reserve, and a Dillon&#x27;s Rule that limits what any county can actually stop.</description>
     </item>
 </channel>
 </rss>

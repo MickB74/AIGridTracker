@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-10-10",
+  "generated": "2026-10-11",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 863,
   "states": 49,
-  "enacted": 690,
+  "enacted": 686,
   "proposed": 83,
   "official_sourced": 62,
   "by_state": {
@@ -81,7 +81,7 @@
     },
     "ME": {
       "total": 11,
-      "enacted": 8,
+      "enacted": 7,
       "proposed": 2
     },
     "NC": {
@@ -96,7 +96,7 @@
     },
     "OH": {
       "total": 62,
-      "enacted": 56,
+      "enacted": 55,
       "proposed": 1
     },
     "TN": {
@@ -106,7 +106,7 @@
     },
     "CA": {
       "total": 26,
-      "enacted": 20,
+      "enacted": 18,
       "proposed": 2
     },
     "WA": {
@@ -258,7 +258,6 @@
   "expiring_within_days": {
     "30": [
       "lysander-onondaga-co-ny",
-      "bangor-me",
       "vienna-township-trumbull-co-oh",
       "charlotte-nc",
       "lavon-tx",
@@ -268,15 +267,12 @@
       "cleveland-oh",
       "richmond-ca",
       "gilroy-ca",
-      "tallmadge-oh",
       "indio-ca",
-      "palm-springs-ca",
       "lowndes-county-ga",
       "camden-county-ga",
       "escondido-ca",
       "eureka-ca",
       "mendocino-county-ca",
-      "morgan-hill-ca",
       "upper-burrell-township-pa",
       "butler-township-pa",
       "smithfield-township-pa",
@@ -290,7 +286,6 @@
       "meridian-township-mi",
       "washington-township-macomb-co-mi",
       "lysander-onondaga-co-ny",
-      "bangor-me",
       "nashville-tn",
       "vienna-township-trumbull-co-oh",
       "charlotte-nc",
@@ -309,13 +304,12 @@
       "hillsboro-or",
       "boulder-county-co",
       "lake-county-fl",
+      "howland-township-oh",
       "braceville-township-oh",
       "cleveland-oh",
       "richmond-ca",
       "gilroy-ca",
-      "tallmadge-oh",
       "indio-ca",
-      "palm-springs-ca",
       "box-elder-county-ut",
       "lowndes-county-ga",
       "camden-county-ga",
@@ -326,7 +320,6 @@
       "escondido-ca",
       "eureka-ca",
       "mendocino-county-ca",
-      "morgan-hill-ca",
       "upper-burrell-township-pa",
       "forest-park-ga",
       "hazle-township-pa",
@@ -349,7 +342,6 @@
       "meridian-township-mi",
       "washington-township-macomb-co-mi",
       "lysander-onondaga-co-ny",
-      "bangor-me",
       "gates-county-nc",
       "nashville-tn",
       "hays-county-tx",
@@ -390,11 +382,9 @@
       "cleveland-oh",
       "richmond-ca",
       "gilroy-ca",
-      "tallmadge-oh",
       "waterville-township-oh",
       "ashville-oh",
       "indio-ca",
-      "palm-springs-ca",
       "cache-county-ut",
       "box-elder-county-ut",
       "logan-ut",
@@ -420,7 +410,6 @@
       "escondido-ca",
       "eureka-ca",
       "mendocino-county-ca",
-      "morgan-hill-ca",
       "upper-burrell-township-pa",
       "orion-township-mi",
       "forest-park-ga",
@@ -436,6 +425,7 @@
       "peosta-ia",
       "phillips-county-co",
       "versailles-ky",
+      "boyd-county-ky",
       "georgetown-ky",
       "shelby-county-ky",
       "webster-county-mo",
