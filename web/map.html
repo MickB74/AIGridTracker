@@ -169,7 +169,8 @@ function popupHtml(p){
   (p.mw?' &middot; '+p.mw+' MW':'')+'<br><b>'+esc(p.stage)+'</b>'+
   (p.hearing_date?'<br>Hearing: '+esc(p.hearing_date):'')+
   (p.next_action?'<br><em>'+esc(p.next_action)+'</em>':'')+
-  '<br><a href="projects#p-'+esc(p.id)+'">Project details &rarr;</a>';
+  // Extensionless on purpose: this is a JS string, which _clean_links() does not rewrite.
+  '<br><a href="projects/'+esc(p.id)+'">Project details &rarr;</a>';
 }
 const projLayer = L.layerGroup(), siteLayer = L.layerGroup(), morLayer = L.layerGroup();
 const projMarkers = [];

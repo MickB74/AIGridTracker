@@ -295,7 +295,7 @@ its own constants.
 
 ### Static site (web/ — Vercel front door)
 
-- **Pages built** — landing page, Start here wizard (`start-here.html`), 51 state one-pagers (`states/<slug>.html`), moratorium tracker (`moratoriums.html`), 2026 Senate race tracker (`senate-races.html`), project tracker (`projects.html`), 379 community briefings (`communities/<loc>-<st>.html`), story tracker (`story-tracker.html`), client-side impact calculator (`impact.html`), bills / outlook / learn / puc / executives / data-centers / environment / studies / cba-clauses, company scorecards, blog posts, the health infographic PDF, per-state RSS feeds, JSON+CSV open-data downloads, and sitemap/robots/vercel.json. Blog posts are markdown converted via the `markdown` library.
+- **Pages built** — landing page, Start here wizard (`start-here.html`), 51 state one-pagers (`states/<slug>.html`), moratorium tracker (`moratoriums.html`), 2026 Senate race tracker (`senate-races.html`), project tracker (`projects.html`, with one dossier page per project at `projects/<id>.html`), 379 community briefings (`communities/<loc>-<st>.html`), story tracker (`story-tracker.html`), client-side impact calculator (`impact.html`), bills / outlook / learn / puc / executives / data-centers / environment / studies / cba-clauses, company scorecards, blog posts, the health infographic PDF, per-state RSS feeds, JSON+CSV open-data downloads, and sitemap/robots/vercel.json. Blog posts are markdown converted via the `markdown` library.
 
 - **Deployment** — Vercel serves `web/` as-is (Root Directory = `web`, framework "Other", no build step). `web/` is committed output: rebuild it in the same commit as any data change. The **root** `vercel.json` is the load-bearing one.
 
@@ -463,6 +463,11 @@ published pages are static files.
 - **`web/404.html` is a real page.** Vercel serves it for any miss; it
   carries `<base href="/">` because it renders at arbitrary depths, and
   `noindex` so it never ranks.
+- **`projects.html` and `projects/` coexist.** The index keeps its URL because
+  that is the URL holding the ranking; each project's dossier is
+  `projects/<id>.html` (`build_project_page()`), and the index carries only a
+  compact card. Never create `projects/index.html` — it would shadow the
+  index under some static servers.
 - **The root `vercel.json` is load-bearing.** It carries `outputDirectory` and
   every redirect. Deleting it took the domain down for two days.
 - **Renaming a locality changes its community-page URL.** Add an entry to

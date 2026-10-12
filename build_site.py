@@ -2161,7 +2161,7 @@ def _state_projects_html(state, abbrev):
     for p in rows:
         s = project_status(p)
         trs += (
-            f'<tr><td><a href="../projects.html#p-{esc(str(p.get("id","")))}">'
+            f'<tr><td><a href="../projects/{esc(str(p.get("id","")))}.html">'
             f'{esc(str(p.get("name","")))}</a></td>'
             f'<td>{esc(str(p.get("locality","") or "—"))}</td>'
             f'<td>{_project_size(p)}</td>'
@@ -8912,7 +8912,7 @@ def _local_projects_section_html(locality, state):
                 for e in events)
             ev_html = (f"<h3>Latest in the record</h3><ul>{items}</ul>"
                        f'<p class="muted">Full dated timeline on the '
-                       f'<a href="../projects.html#p-{esc(str(r.get("id", "")))}">'
+                       f'<a href="../projects/{esc(str(r.get("id", "")))}.html">'
                        f'project tracker</a>.</p>')
         src = ""
         if has_value(r.get("source")):
@@ -9803,6 +9803,255 @@ def _project_dossier(p):
 </div>"""
 
 
+def _project_plain_builder(p):
+    """Plain-text twin of _project_builder() for <title>/description."""
+    for k in ("operator", "owner", "filing_llc"):
+        if has_value(p.get(k)):
+            return str(p[k]).strip()
+    return ""
+
+
+def _project_plain_size(p):
+    if has_value(p.get("size_mw")):
+        return f"{int(p['size_mw']):,} MW"
+    if has_value(p.get("acres")):
+        return f"{int(p['acres']):,}-acre"
+    return ""
+
+
+def _project_title(p, stage):
+    """SERP title, 60-char ladder: most specific form that fits."""
+    name = str(p.get("name", "")).strip()
+    loc = str(p.get("locality", "")).strip()
+    st = str(p.get("state", "")).strip()
+    head = name if re.search(r"data\s*cent", name, re.I) else f"{name} data center"
+    loc_part = f"{loc}, {st}" if loc and st else (st or loc)
+    forms = []
+    if loc_part:
+        forms.append(f"{head} — {loc_part}: {stage}")
+        forms.append(f"{head} — {loc_part}")
+    if st:
+        forms.append(f"{head} — {st}")
+    forms.append(head)
+    for t in forms:
+        if len(t) <= 60:
+            return t
+    return forms[-1]
+
+
+def _project_description(p, status):
+    state_name = _abbr_to_state().get(str(p.get("state")), str(p.get("state", "")))
+    loc = str(p.get("locality", "")).strip()
+    where = f"{loc}, {state_name}" if loc else state_name
+    builder = _project_plain_builder(p)
+    size = _project_plain_size(p)
+    noun = f"{size} data center" if size else "Data center"
+    lead = f"{noun[0].upper()}{noun[1:]}" + (f" by {builder}" if builder else "")
+    stage = status["stage"]
+    if status["phase"] == "hearing" and has_value(p.get("hearing_date")):
+        stage = f"{stage} {p['hearing_date']}"
+    return f"{lead} in {where}. {stage}. Sourced timeline, permit trail and next steps."
+
+
+def _project_mora_match(p):
+    """The MORATORIUMS_DF row for the same place, or None."""
+    base = str(p.get("locality", "")).split(" (")[0].strip().lower()
+    paren = re.search(r"\(([^)]*)\)", str(p.get("locality", "")))
+    alt = paren.group(1).strip().lower() if paren else ""
+    for m in MORATORIUMS_DF.itertuples():
+        if str(m.state) != str(p.get("state")):
+            continue
+        mb = str(m.locality).split(" (")[0].strip().lower()
+        if mb == base or (alt and mb == alt):
+            return m
+    return None
+
+
+def _project_siblings(p, limit=5):
+    """Other tracked projects in the state — nearest first when both rows are
+    mapped, alphabetical otherwise. This is the internal-link mesh."""
+    same = [r for r in PROJECTS
+            if str(r.get("state")) == str(p.get("state"))
+            and str(r.get("id")) != str(p.get("id"))]
+    if not same:
+        return []
+    def _num(v):
+        try:
+            return float(v) if has_value(v) else None
+        except (TypeError, ValueError):
+            return None
+    la1, lo1 = _num(p.get("lat")), _num(p.get("lon"))
+    def _dist(r):
+        la2, lo2 = _num(r.get("lat")), _num(r.get("lon"))
+        if None in (la1, lo1, la2, lo2):
+            return 1e9
+        a, b, c, d = map(math.radians, (la1, lo1, la2, lo2))
+        h = (math.sin((c - a) / 2) ** 2
+             + math.cos(a) * math.cos(c) * math.sin((d - b) / 2) ** 2)
+        return 3959 * 2 * math.asin(math.sqrt(h))
+    same.sort(key=lambda r: (_dist(r), str(r.get("name"))))
+    return [(r, _dist(r)) for r in same[:limit]]
+
+
+def build_project_page(p, news_group=None):
+    """One crawlable page per tracked project — web/projects/<id>.html.
+
+    The index (projects.html) carries a compact card per project; this page
+    is the canonical home of the full dossier, so a search for the project's
+    name lands on a page about that project rather than a 285-row table.
+    Everything is derived from PROJECTS / project_status() at build time —
+    stage is never stored, unverified rows say so, and every field goes
+    through has_value() because NaN is truthy.
+    """
+    pid = str(p.get("id"))
+    status = project_status(p)
+    state_abbr = str(p.get("state", ""))
+    state_name = _abbr_to_state().get(state_abbr, state_abbr)
+    state_link = _state_href(state_abbr)
+    loc = str(p.get("locality", "")).strip()
+    name = str(p.get("name", "")).strip()
+
+    # -- key facts
+    facts = []
+    for label, key in (("Operator", "operator"), ("Owner", "owner"),
+                       ("Tenant", "tenant"), ("Filing LLC", "filing_llc")):
+        if has_value(p.get(key)):
+            facts.append((label, esc(str(p[key]))))
+    size = _project_size(p)
+    if size != "—":
+        facts.append(("Size", esc(size)))
+    if has_value(p.get("size_mw")) and has_value(p.get("acres")):
+        facts.append(("Acres", f"{int(p['acres']):,}"))
+    where = esc(loc) + (", " if loc else "")
+    where += (f'<a href="../{state_link}">{esc(state_name)}</a>'
+              if state_link else esc(state_name))
+    facts.append(("Location", where))
+    for label, key in (("First proposed", "announced"),
+                       ("Application filed", "rezoning_filed"),
+                       ("Hearing", "hearing_date"),
+                       ("Decided", "decided_date")):
+        if has_value(p.get(key)):
+            facts.append((label, esc(str(p[key]))))
+    facts.append(("Stage today", _project_stage_cell(status)))
+    facts_html = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in facts)
+
+    # -- header lede: the researched note, else a generated line
+    if has_value(p.get("note")):
+        lede = esc(str(p["note"]))
+    else:
+        lede = esc(_project_description(p, status).split(" Sourced timeline")[0])
+
+    unverified_html = ""
+    if not has_value(p.get("source")):
+        unverified_html = (
+            '<div class="note warn"><p><strong>Unverified.</strong> This row '
+            'has not been read against a primary source — treat it as a lead '
+            'to check with the locality, not a fact to cite at a hearing.'
+            '</p></div>')
+
+    next_cls = "note warn" if status["hearing_soon"] else "note info"
+    next_html = (
+        f'<div class="{next_cls}"><p><strong>Next step:</strong> '
+        f'{esc(status["next_action"])}</p></div>'
+        f'<p><a class="btn" href="../start-here.html">Build an action pack '
+        f'for this project &rarr;</a></p>')
+
+    events = PROJECT_EVENTS.get(pid, [])
+    log_html = ""
+    if events:
+        n = len(events)
+        log_html = (f'<section><h2>What has happened so far '
+                    f'({n} event{"s" if n != 1 else ""})</h2>'
+                    f'{_project_timeline(events)}</section>')
+
+    trail = _project_paper_trail(p).replace(
+        'href="#records"', 'href="../projects.html#records"')
+
+    news_html = _story_news_section_html(news_group) if news_group else ""
+
+    # -- the community this sits in, and its neighbours
+    mesh = []
+    m = _project_mora_match(p)
+    if m is not None:
+        mesh.append(
+            f'<li><a href="../communities/{_loc_slug(m.locality, m.state)}.html">'
+            f'{esc(str(m.locality))} community briefing</a> — '
+            f'{_mora_status_cell(m)}</li>')
+    if state_link:
+        mesh.append(f'<li><a href="../{state_link}">{esc(state_name)} '
+                    f'briefing</a> — rates, grid carbon, PUC contacts.</li>')
+    sib_items = "".join(
+        f'<li><a href="{esc(str(r["id"]))}.html">{esc(str(r.get("name", "")))}</a>'
+        f' <span class="muted">— {esc(str(r.get("locality", "")))}'
+        + (f', {int(round(d))} mi' if d < 1e8 else "")
+        + f'</span> {_status_badge(project_status(r)["stage"])}</li>'
+        for r, d in _project_siblings(p))
+    sib_html = (f'<h3>Other tracked projects in {esc(state_name)}</h3>'
+                f'<ul>{sib_items}</ul>') if sib_items else ""
+    mesh_html = (f'<section><h2>Around here</h2>'
+                 f'<ul>{"".join(mesh)}</ul>{sib_html}</section>'
+                 if (mesh or sib_html) else "")
+
+    cite = (f'GridWatch AI, “{esc(name)}”, aigridwatch.com/projects/{esc(pid)}, '
+            f'retrieved {esc(BUILD_DATE)}.')
+
+    body = f"""
+<header>
+  <div class="kicker">Project dossier · {esc(loc)}{', ' if loc else ''}{esc(state_name)}</div>
+  <h1>{esc(name)} {_status_badge(status['stage'])}</h1>
+  <p class="lede">{lede}</p>
+</header>
+{unverified_html}
+<section>
+  <h2>Key facts</h2>
+  <dl class="facts" style="display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;margin:0 0 12px">{facts_html}</dl>
+  <p>{_project_source_cell(p)}</p>
+</section>
+<section>
+  <h2>What to do next</h2>
+  {next_html}
+</section>
+{log_html}
+<section>
+  <h2>Find the paper trail</h2>
+  {trail}
+</section>
+{news_html}
+{mesh_html}
+<section>
+  <p class="muted"><strong>Cite this page:</strong> {cite}</p>
+  {provenance_html("PROJECTS_DF", depth=1)}
+  <p class="muted">Part of the <a href="../projects.html">data center project
+  tracker</a> — open data, CC BY 4.0 (<a href="../data/projects.json">JSON</a>
+  · <a href="../data/projects.csv">CSV</a>).</p>
+</section>
+"""
+    return page(
+        _project_title(p, status["stage"]),
+        _project_description(p, status),
+        body, f"{SITE_URL}/projects/{pid}", depth=1,
+        modified=BUILD_DATE,
+        og_image=_og_image(f"state-{slugify(state_name)}"),
+        jsonld=_breadcrumb(
+            ("Home", SITE_URL),
+            ("Projects", f"{SITE_URL}/projects"),
+            (name, f"{SITE_URL}/projects/{pid}")))
+
+
+def _project_card(p):
+    """Compact index card; the full dossier lives on projects/<id>."""
+    status = project_status(p)
+    pid = esc(str(p.get("id", "")))
+    builder = _project_builder(p)
+    return f"""
+<div class="proj" id="p-{pid}">
+  <h3><a href="projects/{pid}.html">{esc(str(p.get('name','')))}</a> {_status_badge(status['stage'])}</h3>
+  <p class="meta">{esc(str(p.get('locality','')))}, {esc(str(p.get('state','')))} · {_project_size(p)} · {builder}</p>
+  <p class="next"><strong>Next step:</strong> {esc(status['next_action'])}</p>
+  <p>{_project_source_cell(p)} · <a href="projects/{pid}.html">Full dossier &amp; timeline &rarr;</a></p>
+</div>"""
+
+
 def _state_href(abbrev):
     """web/states/<slug>.html for a state abbrev, or '' if unknown."""
     if not has_value(abbrev):
@@ -9967,7 +10216,7 @@ def build_projects():
             f' data-phase="{_PROJECT_PHASE_ORDER.get(s["phase"], 9)}"'
             f' data-date="{esc(iso_when)}"'
             f' data-verified="{1 if has_value(p.get("source")) else 0}">'
-            f'<td><a href="#p-{esc(str(p.get("id","")))}">'
+            f'<td><a href="projects/{esc(str(p.get("id","")))}.html">'
             f'{esc(str(p.get("name","")))}</a></td>'
             f'<td>{state_cell}</td>'
             f'<td>{esc(str(p.get("locality","")))}</td>'
@@ -9982,7 +10231,7 @@ def build_projects():
     state_opts = "".join(f'<option value="{esc(x)}">{esc(x)}</option>'
                          for x in sorted(state_names))
 
-    dossiers = "\n".join(_project_dossier(p) for p in ordered)
+    dossiers = "\n".join(_project_card(p) for p in ordered)
     records_rows = "\n".join(
         f'<details class="more"><summary>{esc(k["name"])}</summary>'
         f'<p class="why"><strong>Who holds it:</strong> {esc(k["holder"])}</p>'
@@ -10060,14 +10309,14 @@ def build_projects():
 </section>
 <section>
   <h2>Project dossiers</h2>
-  <p class="muted" style="margin-bottom:8px">The full record for each project,
-  with ownership, the next thing to do, and the sourced timeline of what has
-  happened so far.</p>
+  <p class="muted" style="margin-bottom:8px">Every project has its own page
+  with ownership, the next thing to do, the sourced timeline of what has
+  happened so far, and where to find its permit file.</p>
   {dossiers}
 </section>
 <section id="records">
   <h2>The seven documents worth asking for</h2>
-  <p class="muted" style="margin-bottom:12px">Every dossier above ends with
+  <p class="muted" style="margin-bottom:12px">Every project page ends with
   <strong>Find the paper trail</strong> — the registers, dockets and queues
   that hold that project's record. This is what to look for once you are
   there, roughly in the order the documents tend to exist. A records request
@@ -10318,7 +10567,8 @@ function popupHtml(p){
   (p.mw?' &middot; '+p.mw+' MW':'')+'<br><b>'+esc(p.stage)+'</b>'+
   (p.hearing_date?'<br>Hearing: '+esc(p.hearing_date):'')+
   (p.next_action?'<br><em>'+esc(p.next_action)+'</em>':'')+
-  '<br><a href="projects#p-'+esc(p.id)+'">Project details &rarr;</a>';
+  // Extensionless on purpose: this is a JS string, which _clean_links() does not rewrite.
+  '<br><a href="projects/'+esc(p.id)+'">Project details &rarr;</a>';
 }
 const projLayer = L.layerGroup(), siteLayer = L.layerGroup(), morLayer = L.layerGroup();
 const projMarkers = [];
@@ -15432,6 +15682,11 @@ def build_search():
         index.append({"t": ld["name"], "k": "company",
                        "d": f'disclosure: {ld["disclosure"]}',
                        "u": f"companies/{ld['slug']}"})
+    for _p in PROJECTS:
+        index.append({"t": str(_p.get("name")), "k": "project",
+                       "d": f"{_p.get('locality')}, {_p.get('state')} · "
+                            f"{project_status(_p)['stage']}",
+                       "u": f"projects/{_p['id']}"})
     index_json = json.dumps(index)
 
     body = f"""
@@ -15458,7 +15713,7 @@ def build_search():
   var ct = document.getElementById('count');
   var kinds = {{moratorium:'#ef4444', operator:'#3b82f6', executive:'#a855f7',
                 site:'#f59e0b', state:'#2dd4bf', blog:'#6366f1',
-                company:'#f472b6'}};
+                company:'#f472b6', project:'#22c55e'}};
   function render(items) {{
     if (!q.value.trim()) {{ box.innerHTML = ''; ct.textContent = IX.length + ' items indexed'; return; }}
     if (!items.length) {{ box.innerHTML = '<p style="color:var(--muted)">No results.</p>'; ct.textContent = ''; return; }}
@@ -15695,7 +15950,9 @@ Full text version with current counts, definitions and latest analysis:
   bans, and community actions, each with a primary source, verification date,
   and derived expiry status. JSON/CSV downloads, CC BY 4.0.
 - [Project tracker]({SITE_URL}/projects): individual data center proposals
-  tracked from rumor to hearing to decision, with dated event logs.
+  tracked from rumor to hearing to decision, with dated event logs. Each
+  project has its own page at {SITE_URL}/projects/<id>; the full list is
+  {SITE_URL}/data/projects.json.
 - [Facility registry]({SITE_URL}/data/facilities.json): tracked data center
   campuses with operator, owner, tenant, and filing LLC.
 - [State profiles]({SITE_URL}/data/states.json): all 50 states + D.C. —
@@ -16783,6 +17040,17 @@ def main():
         build_moratorium_embed(), encoding="utf-8")
     print(f"  [data] published {_n_data} moratoriums as JSON + CSV + embed")
     (WEB / "projects.html").write_text(build_projects(), encoding="utf-8")
+    (WEB / "projects").mkdir(parents=True, exist_ok=True)
+    _project_paths = []
+    for _p in PROJECTS:
+        _pid = str(_p["id"])
+        _pg = _groups_by_locality.get(
+            (story_tracker.clean_locality(str(_p.get("locality", ""))),
+             str(_p.get("state", ""))))
+        (WEB / "projects" / f"{_pid}.html").write_text(
+            build_project_page(_p, news_group=_pg), encoding="utf-8")
+        _project_paths.append(f"projects/{_pid}")
+    print(f"  [pages] {len(_project_paths)} project pages -> projects/")
     print(f"  [data] published {_n_projects} projects as JSON + CSV")
     print(f"  [data] published {_n_facilities} facilities + {_n_states_data} states as JSON + CSV")
     (WEB / "open-data.html").write_text(build_open_data(), encoding="utf-8")
@@ -16894,6 +17162,7 @@ def main():
              "changes",
              "communities/"]
     paths.extend(_community_paths)
+    paths.extend(_project_paths)
     paths.extend(f"companies/{h['slug']}" for h in _HYPERSCALERS)
     paths.extend(f"companies/{h['slug']}" for h in _OPERATORS)
     paths.extend(f"companies/{ld['slug']}" for ld in _LIMITED_DISCLOSURE)
@@ -17109,7 +17378,7 @@ def main():
     # after a build. Either way the stale pages get served and indexed, so
     # fail loudly rather than ship them.
     expected_dirs = {"assets", "blog", "communities", "companies", "data",
-                     "embed", "feeds", "news", "states"}
+                     "embed", "feeds", "news", "projects", "states"}
     actual_dirs = {d.name for d in WEB.iterdir() if d.is_dir()}
     unexpected = actual_dirs - expected_dirs
     if unexpected:

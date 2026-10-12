@@ -18,7 +18,9 @@ https://aigridwatch.com/llms-full.txt
   bans, and community actions, each with a primary source, verification date,
   and derived expiry status. JSON/CSV downloads, CC BY 4.0.
 - [Project tracker](https://aigridwatch.com/projects): individual data center proposals
-  tracked from rumor to hearing to decision, with dated event logs.
+  tracked from rumor to hearing to decision, with dated event logs. Each
+  project has its own page at https://aigridwatch.com/projects/<id>; the full list is
+  https://aigridwatch.com/data/projects.json.
 - [Facility registry](https://aigridwatch.com/data/facilities.json): tracked data center
   campuses with operator, owner, tenant, and filing LLC.
 - [State profiles](https://aigridwatch.com/data/states.json): all 50 states + D.C. —
