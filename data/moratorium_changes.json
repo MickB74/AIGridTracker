@@ -3988,5 +3988,61 @@
     "locality": "Newton County, GA",
     "kind": "status_changed",
     "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "mesa-county-co",
+    "locality": "Mesa County, CO",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "oakland-ca",
+    "locality": "Oakland, CA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "evansville-in",
+    "locality": "Evansville, IN",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "columbus-county-nc",
+    "locality": "Columbus County, NC",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "anne-arundel-county-md",
+    "locality": "Anne Arundel County, MD",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "dixon-ca",
+    "locality": "Dixon, CA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "blaine-county-id",
+    "locality": "Blaine County, ID",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "brighton-township-mi",
+    "locality": "Brighton Township, MI",
+    "kind": "added",
+    "detail": "Added as Enacted"
   }
 ]

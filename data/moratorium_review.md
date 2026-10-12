@@ -1,12 +1,12 @@
 # Moratorium tracker review queue
-_Generated 2026-10-11 · 863/863 tracker rows sourced; 44/44 quotable claims (case studies, benchmarks, concessions) carry a citation and a read date_
+_Generated 2026-10-11 · 871/871 tracker rows sourced; 44/44 quotable claims (case studies, benchmarks, concessions) carry a citation and a read date_
 
 _Link checking skipped (--offline) — nothing below has been confirmed to resolve, let alone to say what the row claims._
 
 | Check | Count |
 |---|---|
 | expired | 33 |
-| undated-term | 56 |
+| undated-term | 63 |
 | unclassified-term | 76 |
 | expiring | 54 |
 
@@ -45,7 +45,7 @@ _Link checking skipped (--offline) — nothing below has been confirmed to resol
 - **Montour County, PA** (Enacted) — term ran to 2026-04-30; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://www.dailyitem.com/news/montour-county-hires-attorney-for-data-center-ordinances-180-day-moratorium-imposed/article_8408ec8e-8226-4086-80b4-a3e53125ff7c.html)
 - **Wichita, KS** (Enacted) — term ran to 2026-09-10; confirm whether it lapsed, was extended, or became permanent zoning · [source](https://www.wichita.gov/CivicAlerts.aspx?AID=412)
 
-## undated-term (56)
+## undated-term (63)
 - **Sauk County, WI** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.co.sauk.wi.us/resolutions/07-2026-0)
 - **Sawyer County, WI** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://citizenportal.ai/articles/9605659/Wisconsin/Sawyer-County/Sawyer-County-adopts-18-month-moratorium-on-large-data-centers)
 - **Bangor, ME** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.wabi.tv/2026/09/29/bangor-city-council-votes-extend-data-center-moratorium/)
@@ -102,6 +102,13 @@ _Link checking skipped (--offline) — nothing below has been confirmed to resol
 - **Moses Lake, WA** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://mrsc.org/stay-informed/mrsc-insight/august-2026/data-centers)
 - **Miami County, KS** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.kshb.com/news/local-news/kansas/miami-county/miami-county-commission-considers-pause-on-data-center-construction-following-nearby-1b-proposal)
 - **Butler County, NE** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.journal-news.com/tncms/asset/editorial/cdf1ab44-e310-5697-8a14-ebbf0311f198)
+- **Mesa County, CO** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.gjsentinel.com/news/western_colorado/county-approves-1-year-moratorium-on-data-centers/article_42ed04ef-22bb-4b2e-ac52-779fa541e5a9.html)
+- **Oakland, CA** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.ktvu.com/news/oakland-city-council-approves-45-day-moratorium-new-data-centers)
+- **Evansville, IN** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.inkfreenews.com/2026/10/07/evansville-city-council-passes-data-center-moratorium/)
+- **Columbus County, NC** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://columbuscountynews.com/2026/10/commissioners-approve-120-day-stay-on-data-centers/)
+- **Dixon, CA** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.cityofdixonca.gov/meetingfiles/17686/agendas/4d7cddb827724af3940b4e5345b5a02b.pdf)
+- **Blaine County, ID** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.mtexpress.com/news/blaine_county/county-enacts-emergency-moratorium-on-data-centers/article_f6a9f3b1-88ad-40c6-b9c2-36649bedfe3f.html)
+- **Brighton Township, MI** (Enacted) — note describes a fixed term but no end date is recorded — the page cannot expire it. Find the adoption date · [source](https://www.whmi.com/news/article/brighton-twp-adopts-moratorium-on-new-data-center-applications)
 
 ## unclassified-term (76)
 - **Manatee County, FL** (Enacted) — no end date and no `term` declared — the row could be a permanent ban or an unresearched pause and the page cannot tell the reader which. Read the source and set `term` · [source](https://www.wusf.org/politics-issues/2026-08-04/manatee-county-pumps-brakes-data-centers-joining-hernando-pasco)

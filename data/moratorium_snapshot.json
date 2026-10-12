@@ -47,6 +47,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "anne-arundel-county-md": {
+    "effective_status": "Enacted",
+    "expires": "2028-01-31"
+  },
   "anniston-al": {
     "effective_status": "Enacted",
     "expires": "2027-08-18"
@@ -223,6 +227,10 @@
     "effective_status": "Expired",
     "expires": "2026-09-03"
   },
+  "blaine-county-id": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "blanchester-oh": {
     "effective_status": "Enacted",
     "expires": "2028-03-12"
@@ -297,6 +305,10 @@
   },
   "bridgewater-township-nj": {
     "effective_status": "Proposed",
+    "expires": null
+  },
+  "brighton-township-mi": {
+    "effective_status": "Enacted",
     "expires": null
   },
   "bristol-tn": {
@@ -659,6 +671,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "columbus-county-nc": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "commerce-city-co": {
     "effective_status": "Proposed",
     "expires": null
@@ -778,6 +794,10 @@
   "dickinson-county-ia": {
     "effective_status": "Enacted",
     "expires": "2026-11-12"
+  },
+  "dixon-ca": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "dodge-county-wi": {
     "effective_status": "Enacted",
@@ -934,6 +954,10 @@
   "eureka-ca": {
     "effective_status": "Enacted",
     "expires": "2026-10-17"
+  },
+  "evansville-in": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "fairbanks-north-star-borough-ak": {
     "effective_status": "Proposed",
@@ -1995,6 +2019,10 @@
     "effective_status": "Enacted",
     "expires": "2027-05-31"
   },
+  "mesa-county-co": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "mesquite-tx": {
     "effective_status": "Proposed",
     "expires": null
@@ -2294,6 +2322,10 @@
   "oak-grove-mo": {
     "effective_status": "Enacted",
     "expires": "2027-08-05"
+  },
+  "oakland-ca": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "oakley-ca": {
     "effective_status": "Enacted",
