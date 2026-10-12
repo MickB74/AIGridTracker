@@ -1,8 +1,10 @@
 # SOURCES review queue
-_Generated 2026-10-05 · 175 keys_
+_Generated 2026-10-12 · 175 keys_
 
-## dead (1)
+## dead (3)
 - **`ga_house_2024`** — URLError: <urlopen error timed out> · <https://www.house.ga.gov/>
+- **`usda_land`** — URLError: <urlopen error [Errno -3] Temporary failure in name resolution> · <https://www.nass.usda.gov/Publications/Todays_Reports/reports/land0824.pdf>
+- **`usda_quickstats`** — URLError: <urlopen error [Errno -3] Temporary failure in name resolution> · <https://quickstats.nass.usda.gov/>
 
 ## orphan (14)
 - **`ashburn_buyout`** — defined but never referenced — delete it or wire it up · <https://www.nbcwashington.com/news/local/northern-virginia/data-center-expansion-loudoun-county-homeowners-buyout-offers/>
@@ -26,10 +28,11 @@ _Generated 2026-10-05 · 175 keys_
 - **`eia_rates`** — HTTP 503 — transient, recheck before touching it · <https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a>
 - **`eia_state`** — HTTP 503 — transient, recheck before touching it · <https://www.eia.gov/electricity/state/>
 
-## blocked (14)
+## blocked (15)
 - **`az_hobbs`** — HTTP 403 — check by hand · <https://news.bloombergtax.com/daily-tax-report-state/arizona-data-center-tax-incentive-pause-signed-by-governor-hobbs>
 - **`btm_gas`** — HTTP 405 — check by hand · <https://naturalgasintel.com/news/on-site-natural-gas-generation-gains-favor-with-hyperscalers-as-bridge-to-grid/>
 - **`datacentermap`** — HTTP 429 — check by hand · <https://www.datacentermap.com/usa/>
+- **`ehp_health`** — HTTP 429 — check by hand · <https://www.environmentalhealthproject.org/_files/ugd/a9ce25_3c3574ea12324c65909d308c3a716e56.pdf>
 - **`equinix_dc`** — HTTP 403 — check by hand · <https://www.equinix.com/data-centers/americas-colocation/united-states-colocation/washington-dc-data-centers>
 - **`ferc_pjm_colo`** — HTTP 403 — check by hand · <https://www.ferc.gov/news-events/news/fact-sheet-ferc-directs-nations-largest-grid-operator-create-new-rules-embrace>
 - **`ferc_showcause`** — HTTP 403 — check by hand · <https://www.ferc.gov/news-events/news/ferc-launches-aggressive-targeted-action-speed-large-load-integration>
