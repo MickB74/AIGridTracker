@@ -1,5 +1,7 @@
 # Backlink Campaign — AI GridWatch
 
+*Counts come from `python3 scripts/outreach_counts.py` — re-run it before sending anything.*
+
 *Working sheet. Check off as you go. Grounded in real, current targets (Aug 2026).*
 
 **Honest read on link value:** self-serve links (GitHub, Reddit, forums, most
@@ -13,7 +15,7 @@ that's the SEO payoff.
 Reusable one-liner for every submission:
 > **AI GridWatch** (aigridwatch.com) — free, sourced tools for communities facing
 > a data center proposal: an impact calculator, model CBA language, a health-risk
-> briefing, and a moratorium tracker of 99 community actions with per-row sources,
+> briefing, and a moratorium tracker of 860+ community actions with per-row sources,
 > published as open CC BY 4.0 data.
 
 ---
@@ -35,9 +37,27 @@ CC BY 4.0. That earns a listing on data lists that reject marketing pages.
 - [ ] **data.world** and **Kaggle Datasets** — upload the moratoriums CSV with a
   description linking back to aigridwatch.com/moratoriums as the source.
 
+**Re-checked 2026-10-11 against the four repos (none of these PRs has been opened):**
+
+- **awesomedata/awesome-public-datasets** — active (pushed 2026-10-09). The
+  README says *do not edit it*: entries are YAML files in
+  `awesomedata/apd-core` (`core/Energy/*.yml`, per its CONTRIBUTING.md).
+  Open the PR there, not here.
+- **rebase-energy/awesome-energy-datasets** — active, takes a table row
+  (Name, Description, Data Type, Energy Sector, Format, Coverage, Links).
+  Not the markdown list item below; adapt it to the table.
+- **open-energy-transition/Awesome-Grid-Model-Data** — poor fit. It lists
+  grid *modelling* tools and data; a moratorium registry is neither. Skip.
+- **OpenEnergyPlatform/awesome-sustainable-technology** — last pushed
+  2021-03-16. Almost certainly unmaintained, so a PR would sit unreviewed.
+  Skip.
+
+So two PRs are worth opening, both need the entry reformatted, and they post
+publicly from the user's GitHub account, which needs the user's go-ahead.
+
 **Copy-paste PR entry (markdown list item):**
 ```
-- [U.S. Data Center Moratorium Tracker](https://aigridwatch.com/moratoriums) — 99
+- [U.S. Data Center Moratorium Tracker](https://aigridwatch.com/moratoriums) — 860+
   data center moratoriums, bans, and community actions across the U.S., each with a
   primary source, verification date, and derived expiry status. Open JSON/CSV,
   CC BY 4.0.
@@ -111,7 +131,7 @@ never as promotion.
 > I run AI GridWatch (aigridwatch.com), a free, non-commercial resource for
 > communities weighing a data center proposal. It's deliberately *not* anti-
 > development — it's built to help officials negotiate a better deal: an impact
-> calculator, model CBA language, and a tracker of 99 community actions, every
+> calculator, model CBA language, and a tracker of 860+ community actions, every
 > number linked to a primary source (EIA, SEC, IEA).
 >
 > A lot of [state] towns are getting proposals with no staff expertise to

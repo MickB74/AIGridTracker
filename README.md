@@ -10,7 +10,7 @@ GridWatch AI is an open-source static site that gives communities, researchers, 
 ### 🌐 [aigridwatch.com](https://aigridwatch.com) — live site · [Start here](https://aigridwatch.com/start-here)
 
 - 🧮 [Data center impact calculator](https://aigridwatch.com/impact) — electricity, water, carbon, and rate impact for any facility size, in your state
-- 📋 [Moratorium tracker](https://aigridwatch.com/moratoriums) — 333 U.S. data center moratoriums and community actions across 39 states, each sourced and dated — **open data ([JSON](https://aigridwatch.com/data/moratoriums.json) · [CSV](https://aigridwatch.com/data/moratoriums.csv)), CC BY 4.0**
+- 📋 [Moratorium tracker](https://aigridwatch.com/moratoriums) — 860+ U.S. data center moratoriums and community actions across 49 states, each sourced and dated — **open data ([JSON](https://aigridwatch.com/data/moratoriums.json) · [CSV](https://aigridwatch.com/data/moratoriums.csv)), CC BY 4.0**
 - 🏛️ [Model CBA clause library](https://aigridwatch.com/cba-clauses) · [Questions to ask at your hearing](https://aigridwatch.com/hearing-questions)
 - ⚕️ [The health risks of data centers](https://aigridwatch.com/health-risks), sourced · [Why your electric bill is going up](https://aigridwatch.com/bills)
 - 📍 [State briefings — all 50 states + D.C.](https://aigridwatch.com/states/) · [Methodology](https://aigridwatch.com/methodology) — every coefficient, its source, and its caveats

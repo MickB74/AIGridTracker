@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this data, please cite it as below."
+title: "AI GridWatch: U.S. data center moratorium and project tracker"
+type: dataset
+authors:
+  - name: "AI GridWatch"
+    website: "https://aigridwatch.com"
+url: "https://aigridwatch.com"
+repository-code: "https://github.com/MickB74/AIGridTracker"
+license: CC-BY-4.0
+abstract: >-
+  Open, sourced data on U.S. data center moratoriums, bans and community
+  actions, and on individual data center projects tracked from proposal to
+  decision. Every row carries a primary source and a verification date.
+keywords:
+  - data centers
+  - moratorium
+  - open data
+  - civic tech
+  - energy
+  - community benefits agreements

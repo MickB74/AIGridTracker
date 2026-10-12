@@ -1,5 +1,7 @@
 # Outreach — ready to send
 
+*Counts come from `python3 scripts/outreach_counts.py` — re-run it before sending anything.*
+
 *Filled-in, copy-paste assets. Companion to `backlink-campaign.md`.*
 
 ---
@@ -11,7 +13,7 @@ PR title and body below the entries.
 
 **List item to add** (drop into the Energy / Environment / Politics section):
 ```markdown
-- [U.S. Data Center Moratorium Tracker](https://aigridwatch.com/moratoriums) — 99 data center moratoriums, bans, and community actions across the U.S., each with a primary source, verification date, and derived expiry status. Open JSON/CSV, CC BY 4.0.
+- [U.S. Data Center Moratorium Tracker](https://aigridwatch.com/moratoriums) — 860+ data center moratoriums, bans, and community actions across the U.S., each with a primary source, verification date, and derived expiry status. Open JSON/CSV, CC BY 4.0.
 ```
 
 **Targets & best section:**
@@ -25,7 +27,7 @@ PR title and body below the entries.
 **PR title:** `Add U.S. Data Center Moratorium Tracker (open dataset)`
 
 **PR body:**
-> Adds the U.S. Data Center Moratorium Tracker — an open, sourced dataset of 99
+> Adds the U.S. Data Center Moratorium Tracker — an open, sourced dataset of 860+
 > data center moratoriums and community actions across the U.S. Each row carries
 > a primary source, a verification date, and a derived expiry status. Published
 > as JSON and CSV under CC BY 4.0, with a documented schema.
@@ -53,7 +55,7 @@ field to `https://aigridwatch.com/moratoriums` and license to CC BY 4.0.
 > I've been tracking community responses to data center siting — moratoriums,
 > bans, zoning fights — and kept hitting the same wall: the data exists in
 > scattered news stories but nobody publishes it structured and sourced. So I
-> built a tracker: 99 actions across the U.S., each with a primary source, a
+> built a tracker: 860+ actions across the U.S., each with a primary source, a
 > verification date, and a status that expires on its own once a moratorium's
 > documented term runs out (so the page can't keep asserting a lapsed pause is
 > still in force).
