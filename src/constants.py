@@ -938,10 +938,9 @@ MORATORIUMS = [
      "term": "standing"},
     {"locality": "Bangor", "state": "ME", "level": "Local",
      "status": "Enacted", "when": "Apr 13, 2026",
-     "note": "180-day pause, 9-0. City cited lack of information about "
-             "infrastructure impacts and no state-level framework to reference",
-     "lat": 44.80, "lon": -68.77, "expires": "2026-10-10", "as_of": "2026-08-13",
-     "source": "https://www.wabi.tv/2026/04/14/bangor-passes-180-day-moratorium-data-center-development/"},
+     "note": "180-day pause, 9-0, from Apr 13, 2026. Council extended it another 180 days by an 8-0 vote on Sep 28, 2026; the new end date was not published in the coverage read.",
+     "lat": 44.80, "lon": -68.77, "expires": None, "as_of": "2026-10-11",
+     "source": "https://www.wabi.tv/2026/09/29/bangor-city-council-votes-extend-data-center-moratorium/", "term": "fixed_undated"},
     # North Carolina — 20+ jurisdictions since late 2025.
     {"locality": "Gates County", "state": "NC", "level": "Local",
      "status": "Enacted", "when": "Dec 17, 2025",
@@ -953,10 +952,9 @@ MORATORIUMS = [
      "source": "https://gatescountync.gov/vertical/sites/%7BC4993D33-7F3A-4388-B179-2EC1739C7E2E%7D/uploads/Data_Center_Moratorium.pdf"},
     {"locality": "Brevard", "state": "NC", "level": "Local",
      "status": "Enacted", "when": "Mar 2026",
-     "note": "90-day moratorium while city staff draft UDO text amendments. "
-             "Term may have lapsed — confirm current status with the city",
-     "lat": 35.23, "lon": -82.73, "expires": "2026-06-23", "as_of": "2026-08-13",
-     "source": "https://www.transylvaniatimes.com/news/transylvania-county-not-pursuing-data-centers/article_51ca8d5c-a379-4b4b-8676-480c6bda88dd.html"},
+     "note": "90-day moratorium (Ord 2026-11) while city staff drafted UDO text amendments; the ordinance states its own expiry as July 2, 2026. Council adopted permanent data center regulations in Ord 2026-19 on May 18, 2026, ending the need for the pause.",
+     "lat": 35.23, "lon": -82.73, "expires": "2026-07-02", "as_of": "2026-10-11",
+     "source": "https://www.cityofbrevard.com/DocumentCenter/View/6290"},
     {"locality": "Clay County", "state": "NC", "level": "Local",
      "status": "Enacted", "when": "Jan 8, 2026",
      "note": "Permanent ban — Ordinance No. 01.08.2026 prohibits the "
@@ -2144,11 +2142,9 @@ MORATORIUMS = [
      "term": "standing"},
     {"locality": "Hall County", "state": "GA", "level": "Local",
      "status": "Enacted", "when": "Feb 26, 2026",
-     "note": "180-day moratorium on data centers, high-density residential, and "
-             "detention centers, approved 4-0. Staff examining regulations for "
-             "impacts on county services and infrastructure",
-     "lat": 34.30, "lon": -83.82, "expires": "2026-08-25", "as_of": "2026-08-13",
-     "source": "https://accessnorthga.com/news/hall-co-approves-180-day-moratorium-includes-detention-centers"},
+     "note": "180-day moratorium from Feb 2026 (4-0). Commissioners voted unanimously on Aug 27, 2026 to impose new moratoriums on data centers and detention centers; the Gainesville Times article read does not state the new end date.",
+     "lat": 34.30, "lon": -83.82, "expires": None, "as_of": "2026-10-11",
+     "source": "https://www.gainesvilletimes.com/news/government/hall-county-imposes-new-moratoriums-on-data-centers-detention-centers-here-are-the-details/", "term": "fixed_undated"},
     {"locality": "Coweta County", "state": "GA", "level": "Local",
      "status": "Enacted", "when": "Jun 2026",
      "note": "180-day moratorium; five previously proposed data centers (including "
@@ -2358,9 +2354,9 @@ MORATORIUMS = [
      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
     {"locality": "Armada Township", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Jan 14, 2026",
-     "note": "180-day moratorium on data center development",
-     "lat": 42.84, "lon": -82.88, "expires": "2026-07-13", "as_of": "2026-08-13",
-     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
+     "note": "180-day moratorium from Jan 14, 2026. Resolution 2026-10, adopted at the Jun 10, 2026 meeting, extends it an additional 180 days; the minutes do not state a calendar end date.",
+     "lat": 42.84, "lon": -82.88, "expires": None, "as_of": "2026-10-11",
+     "source": "https://armadatwp.gov/wp-content/uploads/2026/06/6.10.26-Regular-Meeting.pdf", "term": "fixed_undated"},
     {"locality": "Green Charter Township", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Dec 9, 2025",
      "note": "1-year moratorium citing water, energy, and noise concerns",
@@ -2368,14 +2364,14 @@ MORATORIUMS = [
      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
     {"locality": "Pittsfield Township", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Nov 18, 2025",
-     "note": "180-day moratorium on data center development",
-     "lat": 42.22, "lon": -83.74, "expires": "2026-05-17", "as_of": "2026-08-13",
-     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
+     "note": "180-day moratorium from Nov 2025, renewed in May 2026 for six months; the township's page says it expires in November 2026 (no day given). A zoning amendment passed first reading 7-0 on Sep 9, with second reading scheduled Oct 14.",
+     "lat": 42.22, "lon": -83.74, "expires": None, "as_of": "2026-10-11",
+     "source": "https://www.pittsfield-mi.gov/2449/Data-Center-Ordinance", "term": "fixed_undated"},
     {"locality": "Howell Township", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Nov 20, 2025",
-     "note": "6-month moratorium on data center development",
-     "lat": 42.61, "lon": -83.93, "expires": "2026-05-20", "as_of": "2026-08-13",
-     "source": "https://www.fractracker.org/2026/01/howell-township-data-center-win"},
+     "note": "6-month moratorium from Nov 2025. Ordinance 298, adopted 7-0 on May 11, 2026, extends it six more months from its effective date (blank in the copy read), or until a data center ordinance takes effect. A draft ordinance is posted but not adopted.",
+     "lat": 42.61, "lon": -83.93, "expires": None, "as_of": "2026-10-11",
+     "source": "https://howelltownshipmi.org/wp-content/uploads/2026/06/20260513155523130.pdf", "term": "fixed_undated"},
     {"locality": "Northville", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Jan 6, 2026",
      "note": "12-month moratorium on data center development",
@@ -2383,14 +2379,14 @@ MORATORIUMS = [
      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
     {"locality": "Pontiac", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Jan 21, 2026",
-     "note": "6-month moratorium on data center development",
-     "lat": 42.64, "lon": -83.29, "expires": "2026-07-21", "as_of": "2026-08-13",
-     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
+     "note": "6-month moratorium from Jan 2026, followed by a second six-month moratorium that WXYZ reported on Sep 25, 2026 expires in January (no year or day given) while the city races to set rules.",
+     "lat": 42.64, "lon": -83.29, "expires": None, "as_of": "2026-10-11",
+     "source": "https://www.wxyz.com/news/pontiacs-data-center-moratorium-expires-in-january-and-the-city-is-racing-to-set-rules", "term": "fixed_undated"},
     {"locality": "Saginaw", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Jan 13, 2026",
-     "note": "6-month moratorium on data center development",
-     "lat": 43.42, "lon": -83.95, "expires": "2026-07-13", "as_of": "2026-08-13",
-     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
+     "note": "6-month moratorium on data center development, since extended to the close of 2026. Council approved a data center zoning ordinance in late September 2026, expected to take effect Oct 9, ahead of the moratorium's end.",
+     "lat": 43.42, "lon": -83.95, "expires": "2026-12-31", "as_of": "2026-10-11",
+     "source": "https://www.wnem.com/2026/09/29/saginaw-approves-new-rules-future-data-centers-moratorium-nears-end/"},
     {"locality": "Sterling Heights", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Feb 4, 2026",
      "note": "1-year moratorium on data center development",
@@ -2409,9 +2405,9 @@ MORATORIUMS = [
      "term": "fixed_undated"},
     {"locality": "Tyrone Township", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Dec 2, 2025",
-     "note": "6-month moratorium on data center development",
-     "lat": 42.66, "lon": -83.86, "expires": "2026-06-01", "as_of": "2026-08-13",
-     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
+     "note": "6-month moratorium from Dec 2025, replaced by a new nine-month moratorium (Resolution #260502) adopted May 19, 2026. The township's planning commission page lists it as expiring 3/2/2027; zoning rules are still being drafted.",
+     "lat": 42.66, "lon": -83.86, "expires": "2027-03-02", "as_of": "2026-10-11",
+     "source": "https://www.tyronetownship.us/wp-content/uploads/2026/06/260502-Data-Center-Moratorium.pdf"},
     {"locality": "Dundee Township", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Oct 2025",
      "note": "90-day moratorium with extension on data center development",
@@ -2420,9 +2416,9 @@ MORATORIUMS = [
      "term": "fixed_undated"},
     {"locality": "Sylvan Township", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Jan 22, 2026",
-     "note": "6-month moratorium on data center development",
-     "lat": 42.32, "lon": -84.08, "expires": "2026-07-22", "as_of": "2026-08-13",
-     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
+     "note": "6-month moratorium from Jan 2026. Resolution 26-05, adopted Jul 14, 2026, imposes a new 12-month moratorium effective immediately.",
+     "lat": 42.32, "lon": -84.08, "expires": None, "as_of": "2026-10-11",
+     "source": "https://thesuntimesnews.com/sylvan-twp-notice-of-resolution-26-05/", "term": "fixed_undated"},
     {"locality": "Lodi Township", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Feb 3, 2026",
      "note": "180-day moratorium on data center development",
@@ -2435,9 +2431,9 @@ MORATORIUMS = [
      "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
     {"locality": "Hayes Township", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Feb 10, 2026",
-     "note": "180-day moratorium on data center development",
-     "lat": 42.92, "lon": -83.04, "expires": "2026-08-09", "as_of": "2026-08-13",
-     "source": "https://www.wkar.org/wkar-news/2026-02-27/michigan-data-center-tracker-moratoria-legislation-and-grid-impact"},
+     "note": "180-day moratorium from Feb 2026; the township's own public statement (June 2026) says the board passed a 1-year moratorium in February, amended in March. Minutes and ordinance text not read.",
+     "lat": 42.92, "lon": -83.04, "expires": None, "as_of": "2026-10-11",
+     "source": "https://www.hayestownshipmi.gov/wp-content/uploads/2026/06/PSA-and-E-mail-Response_Hayes-Twp_FINAL-1.pdf", "term": "fixed_undated"},
     {"locality": "Springfield Township", "state": "MI", "level": "Local",
      "status": "Enacted", "when": "Dec 2025",
      "note": "180-day moratorium on data center development",
@@ -2925,11 +2921,9 @@ MORATORIUMS = [
      "term": "fixed_undated"},
     {"locality": "Front Royal", "state": "VA", "level": "Local",
      "status": "Enacted", "when": "Jul 6, 2026",
-     "note": "90-day moratorium on land-use applications for data centers, 6-0. "
-             "Planning Commission drafting language to prohibit data centers in "
-             "every town zoning district",
-     "lat": 38.92, "lon": -78.19, "expires": "2026-10-04", "as_of": "2026-08-13",
-     "source": "https://www.nvdaily.com/nvdaily/council-oks-moratorium-on-data-center-applications/article_8bbfc9ce-d84e-5dd8-a4be-e8f9ee95cc94.html"},
+     "note": "90-day moratorium on data center land-use applications (6-0) from Jul 6, 2026. Council voted Sep 28 to extend it 60 days; the permanent prohibition is still pending outside-counsel review.",
+     "lat": 38.92, "lon": -78.19, "expires": None, "as_of": "2026-10-11",
+     "source": "https://www.nvdaily.com/nvdaily/moratorium-extended-on-data-center-applications/article_70296165-36fc-57e3-b87e-563cbba64a59.html", "term": "fixed_undated"},
     {"locality": "Suffolk", "state": "VA", "level": "Local",
      "status": "Proposed", "when": "Jun 17, 2026",
      "note": "Council directed Planning Commission to draft UDO amendment "
@@ -3167,13 +3161,9 @@ MORATORIUMS = [
      "source": "https://www.mainepublic.org/climate/2026-08-14/eastport-enacts-pause-on-data-center-development"},
     {"locality": "Tulare County", "state": "CA", "level": "County",
      "status": "Enacted", "when": "Aug 18, 2026",
-     "note": "45-day urgency moratorium (4-1 vote, Townsend dissenting) on "
-             "acceptance, processing and approval of permits for large-scale "
-             "data centers in unincorporated county. Triggered by Global Stack "
-             "USA proposal for edge-node computing at the county fairgrounds. "
-             "Extendable to 10 mo 15 days, then up to 2 years total",
-     "lat": 36.23, "lon": -119.32, "expires": "2026-10-02", "as_of": "2026-09-11",
-     "source": "https://sjvwater.org/tulare-county-hits-pause-on-ai-data-centers/"},
+     "note": "45-day urgency moratorium (4-1) from Aug 18, 2026, extended 5-0 on Sep 22, 2026 by 10 months 15 days. The coverage read gives no calendar end date.",
+     "lat": 36.23, "lon": -119.32, "expires": None, "as_of": "2026-10-11",
+     "source": "https://kmph.com/news/local/woman-removed-from-tulare-county-meeting-as-data-center-debate-erupts", "term": "fixed_undated"},
     {"locality": "Larimer County", "state": "CO", "level": "Local",
      "status": "Enacted", "when": "Jan 27, 2026",
      "note": "Initial 30-day moratorium extended 6 months after Feb 9 public "
@@ -3464,20 +3454,9 @@ MORATORIUMS = [
      "source": "https://starexponent.com/news/local/government-politics/article_6b5228c6-4e69-4caf-a4a5-d3ac8d1b1964.html"},
     {"locality": "Fluvanna County", "state": "VA", "level": "Local",
      "status": "Enacted", "when": "Sep 2025",
-     "note": "In Sep 2025 the board directed staff to postpone consideration "
-             "of data center site plan applications until Jan 31, 2026 while "
-             "it rewrote the code; the planning commission's minutes called it "
-             "a moratorium and County Attorney Dan Whitten later said it was "
-             "not one. In Dec 2025 the board amended the code to require a "
-             "special use permit for data centers in industrial districts. On "
-             "Aug 5, 2026, with an 843-acre agricultural parcel near Bremo "
-             "Bluff being marketed as a data center site, Supervisor Fairchild "
-             "asked for a resolution and a temporary pause on new applications "
-             "to be placed on the Aug 19 agenda; Chair O'Brien opposed an "
-             "outright prohibition. The Aug 19 outcome has not been located — "
-             "check the minutes before citing",
-     "lat": 37.84, "lon": -78.28, "expires": "2026-01-31", "as_of": "2026-09-05",
-     "source": "https://www.bisnow.com/news/washington-dc/data-center-development/the-world-s-largest-data-center-hub-pursues-a-development-pause-is-it-even-legal-"},
+     "note": "Not a formal moratorium. Sep 2025: board postponed data center site plan applications to Jan 31, 2026. Aug 19, 2026: board voted 4-1 (O'Brien opposed) not to consider new special use permit applications for data centers until December 31, 2026, and proposed removing data centers as a special-use-permit use in I-1/I-2; that amendment is not yet adopted.",
+     "lat": 37.84, "lon": -78.28, "expires": "2026-12-31", "as_of": "2026-10-11",
+     "source": "https://www.fluvannacounty.org/sites/default/files/fileattachments/board_of_supervisors/meeting/23864/action_report_2026-08-19.pdf"},
     {"locality": "Virginia (statewide pause request)", "state": "VA", "level": "State",
      "status": "Rejected", "when": "Aug 11, 2026",
      "note": "Sen. Glen Sturtevant (R) wrote to Gov. Spanberger on Jul 30, 2026 "
@@ -3954,11 +3933,9 @@ MORATORIUMS = [
      "source": "https://www.limaohio.com/top-stories/2026/06/23/st-marys-council-adopts-temporary-data-center-ban/"},
     {"locality": "Tallmadge", "state": "OH", "level": "Local",
      "status": "Enacted", "when": "Apr 13, 2026",
-     "note": "Ordinance 2026-38, 6-month moratorium on data center proposals. "
-             "Passed 7-0. Proactive — no pending applications. Includes "
-             "hardship appeal process under ORC Chapter 2506",
-     "lat": 41.10, "lon": -81.44, "expires": "2026-10-10", "as_of": "2026-09-06",
-     "source": "https://www.yahoo.com/news/articles/tallmadge-considers-six-month-moratorium-100316607.html"},
+     "note": "Ordinance 2026-38, 6-month moratorium on data center proposals, passed 7-0; proactive, no pending applications; includes hardship appeal process under ORC Chapter 2506. Ordinance 2026-74 extends it twelve months effective Oct 13, 2026, or until the code is amended to address data centers.",
+     "lat": 41.10, "lon": -81.44, "expires": "2027-10-13", "as_of": "2026-10-11",
+     "source": "https://www.tallmadgeoh.gov/DocumentCenter/View/8384/2026-074"},
     {"locality": "Tiffin", "state": "OH", "level": "Local",
      "status": "Enacted", "when": "Apr 20, 2026",
      "note": "Resolution 2026-42, 12-month moratorium barring establishment "
@@ -4090,13 +4067,9 @@ MORATORIUMS = [
      "source": "https://www.ktiv.com/2026/08/25/emmet-county-ia-approves-one-year-data-center-moratorium/"},
     {"locality": "Palm Springs", "state": "CA", "level": "Local",
      "status": "Enacted", "when": "Aug 26, 2026",
-     "note": "45-day pause on large-scale data center projects, unanimous, "
-             "sponsored by Councilmember Grace Garner, while the city studies "
-             "whether additional regulation is needed. Part of the "
-             "Coachella Valley wave alongside Desert Hot Springs, Indio and "
-             "Coachella",
-     "lat": 33.83, "lon": -116.55, "expires": "2026-10-10", "as_of": "2026-08-30",
-     "source": "https://kesq.com/news/2026/08/26/palm-springs-city-council-approves-temporary-data-center-moratorium/"},
+     "note": "45-day pause from Aug 26, 2026, unanimous. Council extended it on Sep 30 to the longest term California law allows, two years in total, per NBC Palm Springs. Exact end date not published in the article read.",
+     "lat": 33.83, "lon": -116.55, "expires": None, "as_of": "2026-10-11",
+     "source": "https://www.nbcpalmsprings.com/local-and-community/2026/10/01/palm-springs-extends-data-center-ban-nearly-two-years", "term": "fixed_undated"},
     {"locality": "Bloomingdale", "state": "GA", "level": "Local",
      "status": "Enacted", "when": "Reported Aug 2026",
      "note": "180-day pause on data center applications, permits, licenses, "
@@ -4676,8 +4649,8 @@ MORATORIUMS = [
     {"locality": "Bulloch County", "state": "GA", "level": "County", "status": "Enacted", "when": "2026-02-17", "note": "90-day moratorium on data center permitting in unincorporated county; extended 5-0 on May 5 through Dec 31 2026. Commission voted 4-3 against outright ban on Sep 1; moratorium remains in place while citizen working group considers regulations.", "lat": 32.3949, "lon": -81.7637, "expires": "2026-12-31", "as_of": "2026-09-06", "source": "https://www.statesboroherald.com/local/commissioners-extend-both-moratoriums-step-toward-outright-ban-on-data-centers/"},
     {"locality": "Camden County", "state": "GA", "level": "County", "status": "Enacted", "when": "2026-05-06", "note": "6-month moratorium on data centers in unincorporated county; first coastal Georgia county to act. Prompted by rezoning request for 700-acre industrial park straddling Kingsland city limits.", "lat": 30.9271, "lon": -81.6616, "expires": "2026-11-06", "as_of": "2026-09-06", "source": "https://www.gpb.org/news/2026/05/06/camden-becomes-first-county-on-the-coast-adopt-data-center-moratorium"},
     {"locality": "Clayton County", "state": "GA", "level": "County", "status": "Enacted", "when": "2025-09-03", "note": "120-day moratorium (Resolution 2025-193) on data center permits in unincorporated county; extended three times, now through Dec 31 2026. Does not cover Lovejoy. Sponsored by Vice Chair Alaina Reaves; studying health, safety and welfare effects.", "lat": 33.5413, "lon": -84.3585, "expires": "2026-12-31", "as_of": "2026-09-06", "source": "https://www.gpb.org/news/2025/10/22/wave-of-data-center-ordinances-sweep-through-ga-counties-how-strict-are-they"},
-    {"locality": "Covington", "state": "GA", "level": "City", "status": "Enacted", "when": "2026-01-20", "note": "180-day moratorium enacted unanimously Jan 20 (initiated Jan 5); city will not accept new data center requests. Also initiated process to require special use permits for data centers in all zones. Upstream marks as 'active'.", "lat": 33.5968, "lon": -83.8602, "expires": "2026-07-19", "as_of": "2026-09-06", "source": "https://www.rockdalenewtoncitizen.com/news/covington-enacts-moratorium-on-data-center-permits/article_5054a82f-c4e7-47ab-b7b1-3892e30a4047.html"},
-    {"locality": "Floyd County", "state": "GA", "level": "County", "status": "Enacted", "when": "2026-06-09", "note": "80-day moratorium on data center permits, unanimously approved. Halts issuance of permits for construction or expansion. Draft ordinance for Unified Land Development Code establishing data center standards expected by late August.", "lat": 34.2632, "lon": -85.1894, "expires": "2026-08-28", "as_of": "2026-09-06", "source": "https://www.northwestgeorgianews.com/rome/news/local/floyd-county-commission-enacts-80-day-moratorium-on-new-data-centers/article_f6a7cc37-9486-42af-85b0-5705c980691e.html"},
+    {"locality": "Covington", "state": "GA", "level": "City", "status": "Enacted", "when": "2026-01-20", "note": "180-day moratorium enacted unanimously Jan 20, extended in July to October (Oct 20 per Covington News). Council lifted it early on Aug 31, 2026 after updating its data center ordinances.", "lat": 33.5968, "lon": -83.8602, "expires": "2026-08-31", "as_of": "2026-10-11", "source": "https://www.covnews.com/news/data-centers-gas-stations-moratoriums-lifted/article_07be8300-3426-4d03-b901-13ff3629a8e1.html"},
+    {"locality": "Floyd County", "state": "GA", "level": "County", "status": "Enacted", "when": "2026-06-09", "note": "80-day moratorium on data center permits, unanimously approved. On Aug 25, 2026 the commission approved a data center ordinance allowing data centers only in Heavy Industrial zones, replacing the pause.", "lat": 34.2632, "lon": -85.1894, "expires": "2026-08-28", "as_of": "2026-10-11", "source": "https://www.mykcountry.com/2026/08/25/floyd-county-commission-approves-data-center-regs-in-front-of-a-packed-room/"},
     {"locality": "Kingsland", "state": "GA", "level": "City", "status": "Enacted", "when": "2026-05-11", "note": "90-day suspension of data center Ordinance No. 2026-03 (adopted Mar 9); halts acceptance of data center development applications. City manager recommended approval at May 11 meeting; GPB and The Current confirm moratorium in effect. .gov resolution document available.", "lat": 30.7999, "lon": -81.6896, "expires": "2026-08-09", "as_of": "2026-09-06", "source": "https://kingslandgeorgia.com/DocumentCenter/View/12289/Data-Center-Temporary-Suspension-and-Moratorium-Ordinance?bidId="},
     {"locality": "Marietta", "state": "GA", "level": "City", "status": "Enacted", "when": "2026-07-09", "note": "6-month moratorium on new data center applications through Dec 31 2026. Approved despite two data centers being grandfathered (applications filed before freeze). City studying zoning regulations and potential environmental impacts.", "lat": 33.9526, "lon": -84.5499, "expires": "2026-12-31", "as_of": "2026-09-06", "source": "https://www.wsbradio.com/news/local/marietta-pauses-new-data-center-applications-through-end-year/ZH356T4QD5HERPQIWS7DT2YBIE/"},
     {"locality": "Pike County", "state": "GA", "level": "County", "status": "Enacted", "when": "2025-09", "note": "Moratorium enacted September 2025; Commissioner James Jenkins motioned because county lacks building codes and zoning ordinances for data center facilities. One of four GA counties to pass moratoriums that month (with Lamar, Troup, Clayton). Duration and expiration not documen...", "lat": 33.0887, "lon": -84.3847, "expires": None, "as_of": "2026-09-06", "source": "https://www.gpb.org/news/2025/10/22/wave-of-data-center-ordinances-sweep-through-ga-counties-how-strict-are-they"},
@@ -4732,7 +4705,7 @@ MORATORIUMS = [
     {"locality": "Martin County", "state": "FL", "level": "County", "status": "Proposed", "when": "2026-08-26", "note": "Commissioners voted 4-1 to direct staff to return with a proposal for a one-year moratorium on data centers. A moratorium would require two public hearings before adoption. No formal moratorium ordinance has been enacted yet.", "lat": 27.0842, "lon": -80.36, "expires": None, "as_of": "2026-09-06", "source": "https://www.wflx.com/2026/08/27/martin-county-commissioners-move-toward-pause-data-center-development/", "term": None},
     {"locality": "North Port", "state": "FL", "level": "Local", "status": "Proposed", "when": "2026-09-02", "note": "City Commission voted 4-1 on first reading of an 18-month moratorium on data center applications, following 7 hours of public comment with nearly all speakers opposed. Final vote expected September 22, 2026. Triggered by a data center application filed just hours before the moratorium discussion.", "lat": 27.0442, "lon": -82.2362, "expires": None, "as_of": "2026-09-06", "source": "https://www.sarasotamagazine.com/news-and-profiles/2026/09/north-port-data-center-moratorium-commissioner-meeting", "term": None},
     {"locality": "Volusia County", "state": "FL", "level": "County", "status": "Proposed", "when": "2026-08-17", "note": "County Council directed staff to draft a permanent ban on large-scale data centers in unincorporated areas, moving beyond an initial six-month moratorium proposal. The ban ordinance must go through the Planning Commission and two public hearings before formal adoption. New data center applications are not being accepted in the interim.", "lat": 29.028, "lon": -81.0659, "expires": None, "as_of": "2026-09-06", "source": "https://www.orlandoweekly.com/news/orlando-area-news/volusia-county-advances-permanent-ban-on-large-scale-data-centers/", "term": "standing"},
-    {"locality": "Griffin", "state": "GA", "level": "Local", "status": "Enacted", "when": "2026-01-13", "note": "Board of Commissioners unanimously approved a 180-day moratorium on 'technological facilities' including data centers and cryptocurrency mining operations, to allow staff time to study current codes and develop regulations.", "lat": 33.2468, "lon": -84.2641, "expires": "2026-07-12", "as_of": "2026-09-06", "source": "https://www.griffindailynews.com/news/griffin-puts-180-day-moratorium-on-data-centers-and-other-technological-facilities/article_a57b3fe6-cedf-54ec-8a84-a66c93da27da.html", "term": "fixed_undated"},
+    {"locality": "Griffin", "state": "GA", "level": "Local", "status": "Enacted", "when": "2026-01-13", "note": "Board of Commissioners unanimously approved a 180-day moratorium on 'technological facilities' including data centers and cryptocurrency mining. UDC amendments adopted May 26, 2026 allow data centers only by special use permit in Planned Industrial districts and bar hyperscale campuses.", "lat": 33.2468, "lon": -84.2641, "expires": "2026-07-12", "as_of": "2026-10-11", "source": "https://www.griffindailynews.com/news/city-of-grifin-commissioners-approve-data-center-ordinance/article_3f730561-73ca-5e91-8d06-6c5fc962c5a0.html", "term": "fixed_undated"},
     {"locality": "Savannah", "state": "GA", "level": "Local", "status": "Enacted", "when": "2026-08-27", "note": "City Council unanimously approved a 155-day moratorium blocking large-load data centers over 10 MW and conversion of industrial buildings over 200,000 sq ft into data centers, to study impacts on water resources and the energy grid.", "lat": 32.0809, "lon": -81.0912, "expires": "2027-01-29", "as_of": "2026-09-06", "source": "https://www.wtoc.com/2026/08/28/savannah-city-council-approves-155-day-moratorium-large-scale-data-centers/", "term": None},
     {"locality": "Chicago", "state": "IL", "level": "Local", "status": "Proposed", "when": None, "note": "Mayor Brandon Johnson signed Executive Order 2026-5 on Aug 11, 2026, directing city departments to strengthen data center oversight and calling on City Council to enact a temporary moratorium. Executive order imposes enhanced air pollution, noise, and planned development review requirements immediately. City Council must approve the moratorium for it to take effect. 90-day rulemaking clock set for Dept of Environment.", "lat": 41.8781, "lon": -87.6298, "expires": None, "as_of": "2026-09-06", "source": "https://abc7chicago.com/post/mayor-brandon-johnson-sign-executive-order-regulating-data-centers-chicago/19662414/", "term": None},
     {"locality": "Ottawa", "state": "IL", "level": "Local", "status": "Enacted", "when": "Mar 3, 2026", "note": "Original 180-day moratorium established Mar 3, 2026. Unanimously extended Aug 19, 2026 through Aug 25, 2027 due to state inaction on the POWER Act. City drafting its own ordinance but waiting for state guidelines.", "lat": 41.3456, "lon": -88.8426, "expires": "2027-08-25", "as_of": "2026-09-11", "source": "https://www.shawlocal.com/illinois-valley/2026/08/20/ottawa-extends-data-center-moratorium-through-august-2027/"},
@@ -4811,7 +4784,7 @@ MORATORIUMS = [
     {"locality": "Montebello", "state": "CA", "level": "City", "status": "Expired", "when": "Feb 11, 2026", "note": "Urgency Ordinance No. 2491 (5-0 vote). 45-day moratorium on AI data centers. Expired on schedule ~Mar 28. No extension adopted per review of all council agendas through Jul 2026. Adjacent to Monterey Park which permanently banned data centers.", "lat": 34.0159, "lon": -118.112, "expires": "2026-03-28", "as_of": "2026-09-11", "source": "https://citizenportal.ai/articles/7355998/california/los-angeles-county/montebello/residents-urge-montebello-council-to-support-moratorium-as-neighbors-oppose-nearby-data-center-proposals"},
     {"locality": "Patterson", "state": "CA", "level": "City", "status": "Enacted", "when": "Jul 16, 2026", "note": "Interim Urgency Ordinance No. 889 (initial 45-day). Extended unanimously Aug 18 via Ordinance No. 890 for 10 months 15 days. Data centers were previously permitted by right in industrial zones. Key concern is water — city faces state requirements to reduce groundwater pumping.", "lat": 37.4716, "lon": -121.1297, "expires": "2027-07-15", "as_of": "2026-09-11", "source": "https://www.cbsnews.com/sacramento/news/patterson-extends-data-center-moratorium/"},
     {"locality": "Morgan Hill", "state": "CA", "level": "City", "status": "Enacted", "when": "Aug 26, 2026", "note": "45-day urgency moratorium covering data centers AND grid-scale battery energy storage. Unanimous vote. City has no zoning standards for either use. Extendable up to 2 years under CA Gov. Code 65858.", "lat": 37.1305, "lon": -121.6544, "expires": "2026-10-10", "as_of": "2026-09-11", "source": "https://morganhilltimes.com/morgan-hill-declares-moratorium-on-data-centers-battery-storage-sites/", "term": "fixed_undated"},
-    {"locality": "Lake Elsinore", "state": "CA", "level": "City", "status": "Enacted", "when": "Aug 25, 2026", "note": "Emergency ordinance establishing 45-day moratorium on new data center applications. Unanimous vote. Requested by Councilmember Steve Manos after resident concerns. City zoning code does not specifically address data centers.", "lat": 33.6681, "lon": -117.3273, "expires": "2026-10-09", "as_of": "2026-09-11", "source": "https://elsinore247.com/2026/08/council-unanimously-approves-45-day-data-center-moratorium.html", "term": "fixed_undated"},
+    {"locality": "Lake Elsinore", "state": "CA", "level": "City", "status": "Enacted", "when": "Aug 25, 2026", "note": "Emergency ordinance establishing a 45-day moratorium on new data center applications, unanimous, requested by Councilmember Steve Manos. Council extended it by 10 months 15 days in October 2026; the article read gives no calendar end date. City zoning code does not specifically address data centers.", "lat": 33.6681, "lon": -117.3273, "expires": None, "as_of": "2026-10-11", "source": "https://hoodline.com/2026/10/lake-elsinore-extends-data-center-freeze-10-months-despite-no-projects-pending/", "term": "fixed_undated"},
     {"locality": "Baldwin Park", "state": "CA", "level": "City", "status": "Enacted", "when": "Apr 16, 2026", "note": "One-year urgency moratorium suspending approval, establishment, or operation of data centers within city limits. Extended from an initial short-term urgency ordinance adopted in March 2026. Vote 3-0. Water/groundwater protection cited as primary concern — city sits atop the San Gabriel Valley Groundwater Basin. Part of the San Gabriel Valley wave alongside Monterey Park, El Monte, and Montebello.", "lat": 34.0855, "lon": -117.9609, "expires": None, "as_of": "2026-09-11", "source": "https://citizenportal.ai/articles/7830978/california/los-angeles-county/baldwin-park-city/baldwin-park-adopts-one-year-urgency-moratorium-on-new-data-centers-citing-water-concerns", "term": "fixed_undated"},
     {"locality": "Alhambra", "state": "CA", "level": "City", "status": "Enacted", "when": "Jun 22, 2026", "note": "Ordinance O2M26-4863 (effective Aug 1, 2026) prohibits data centers in office and industrial zones. Planning Commission unanimously recommended approval (Resolution 26-07). Measure DB on the Nov 3, 2026 ballot would extend the ban to all zones and lock it into the city charter, requiring voter approval to reverse. If passed, Alhambra would be the second CA city after Monterey Park to enact a voter-approved permanent ban.", "lat": 34.0953, "lon": -118.1270, "expires": None, "as_of": "2026-09-11", "source": "https://laist.com/news/alhambra-ballot-measure-data-center-ban-2026", "term": "standing"},
     {"locality": "Clark County", "state": "IN", "level": "County", "status": "Enacted", "when": None, "note": "One-year moratorium to study and review potential zoning amendments. Planning director working with five jurisdictions developing DC regulations. Commissioner noted expectation of state-level legislation.", "lat": 38.4767, "lon": -85.7586, "expires": None, "as_of": "2026-09-06", "source": "https://www.newsandtribune.com/news/clark-county-commissioners-approve-data-center-moratorium/article_75db5fbb-7271-4948-837d-c6dbfa79d9ab.html", "term": None},
@@ -5034,7 +5007,7 @@ MORATORIUMS = [
      "lat": 43.67, "lon": -96.79, "expires": None, "as_of": "2026-09-07",
      "source": "https://www.siouxfallslive.com/news/sioux-falls/minnehaha-county-begins-work-on-potential-data-center-regulations"},
     # ── 5-state deep dive (GA/NC/TX/TN/WI) — 2026-09-11 ─────────────
-    {"locality": "Newton County", "state": "GA", "level": "County", "status": "Enacted", "when": "April 2025", "note": "Moratorium on data center development applications; unanimously approved; extended 180 days through October 5, 2026.", "lat": 33.56, "lon": -83.86, "expires": "2026-10-05", "as_of": "2026-09-11", "source": "https://www.covnews.com/news/county/newton-county-enacts-moratoriums-data-centers-convenience-stores/"},
+    {"locality": "Newton County", "state": "GA", "level": "County", "status": "Enacted", "when": "April 2025", "note": "Moratorium on data center development applications, first approved April 2025. Commissioners extended it unanimously on Oct 6, 2026, through Dec. 16.", "lat": 33.56, "lon": -83.86, "expires": "2026-12-16", "as_of": "2026-10-11", "source": "https://www.covnews.com/news/county-extends-moratoriums-on-data-centers-convenience-stores/article_e6d90e9a-89b8-405f-b282-ec59aea63384.html"},
     {"locality": "Douglas County", "state": "GA", "level": "County", "status": "Enacted", "when": "March 19, 2025", "note": "90-day moratorium on new data center development; 4-1 vote; prompted by pending application for 11 buildings and three warehouse data centers.", "lat": 33.7, "lon": -84.77, "expires": None, "as_of": "2026-09-11", "source": "https://www.fox5atlanta.com/news/douglas-county-data-centers-moratorium"},
     {"locality": "Lamar County", "state": "GA", "level": "County", "status": "Enacted", "when": "September 2025", "note": "Moratorium on data center development; commissioners also updating industrial and commercial zoning codes last updated in 2010.", "lat": 33.07, "lon": -84.14, "expires": None, "as_of": "2026-09-11", "source": "https://www.gpb.org/news/2025/10/22/wave-of-data-center-ordinances-sweep-through-ga-counties-how-strict-are-they"},
     {"locality": "Troup County", "state": "GA", "level": "County", "status": "Rescinded", "when": "September 16, 2025", "note": "90-day moratorium on all data center applications in unincorporated areas; lifted after commissioners approved a data center ordinance.", "lat": 33.03, "lon": -85.03, "expires": None, "as_of": "2026-09-11", "source": "https://www.lagrangenews.com/2025/09/18/hold-on-county-sets-90-day-moratorium-on-new-data-centers/"},

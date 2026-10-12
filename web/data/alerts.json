@@ -4,7 +4,7 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
-  "count": 126,
+  "count": 122,
   "alerts": [
     {
       "id": "mora-MI-york-township-2026-08-12",
@@ -33,19 +33,6 @@
       "verified": true
     },
     {
-      "id": "mora-GA-hall-county-2026-08-25",
-      "kind": "moratorium-expiry",
-      "severity": "expired",
-      "locality": "Hall County",
-      "state": "GA",
-      "expires": "2026-08-25",
-      "days_left": -47,
-      "title": "Hall County, GA: data center moratorium has lapsed",
-      "body": "The moratorium's documented term ran to 2026-08-25 (47 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://accessnorthga.com/news/hall-co-approves-180-day-moratorium-includes-detention-centers",
-      "verified": true
-    },
-    {
       "id": "mora-MI-wixom-2026-08-26",
       "kind": "moratorium-expiry",
       "severity": "expired",
@@ -68,7 +55,7 @@
       "days_left": -44,
       "title": "Floyd County, GA: data center moratorium has lapsed",
       "body": "The moratorium's documented term ran to 2026-08-28 (44 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://www.northwestgeorgianews.com/rome/news/local/floyd-county-commission-enacts-80-day-moratorium-on-new-data-centers/article_f6a7cc37-9486-42af-85b0-5705c980691e.html",
+      "source": "https://www.mykcountry.com/2026/08/25/floyd-county-commission-approves-data-center-regs-in-front-of-a-packed-room/",
       "verified": true
     },
     {
@@ -95,6 +82,19 @@
       "title": "Lyon Charter Township, MI: data center moratorium has lapsed",
       "body": "The moratorium's documented term ran to 2026-08-30 (42 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
       "source": "https://www.detroitnews.com/story/news/local/oakland-county/2026/03/03/as-project-flex-proceeds-lyon-township-hits-pause-on-new-data-centers/88960710007/",
+      "verified": true
+    },
+    {
+      "id": "mora-GA-covington-2026-08-31",
+      "kind": "moratorium-expiry",
+      "severity": "expired",
+      "locality": "Covington",
+      "state": "GA",
+      "expires": "2026-08-31",
+      "days_left": -41,
+      "title": "Covington, GA: data center moratorium has lapsed",
+      "body": "The moratorium's documented term ran to 2026-08-31 (41 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
+      "source": "https://www.covnews.com/news/data-centers-gas-stations-moratoriums-lifted/article_07be8300-3426-4d03-b901-13ff3629a8e1.html",
       "verified": true
     },
     {
@@ -189,45 +189,6 @@
       "verified": true
     },
     {
-      "id": "mora-CA-tulare-county-2026-10-02",
-      "kind": "moratorium-expiry",
-      "severity": "expired",
-      "locality": "Tulare County",
-      "state": "CA",
-      "expires": "2026-10-02",
-      "days_left": -9,
-      "title": "Tulare County, CA: data center moratorium has lapsed",
-      "body": "The moratorium's documented term ran to 2026-10-02 (9 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://sjvwater.org/tulare-county-hits-pause-on-ai-data-centers/",
-      "verified": true
-    },
-    {
-      "id": "mora-VA-front-royal-2026-10-04",
-      "kind": "moratorium-expiry",
-      "severity": "expired",
-      "locality": "Front Royal",
-      "state": "VA",
-      "expires": "2026-10-04",
-      "days_left": -7,
-      "title": "Front Royal, VA: data center moratorium has lapsed",
-      "body": "The moratorium's documented term ran to 2026-10-04 (7 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://www.nvdaily.com/nvdaily/council-oks-moratorium-on-data-center-applications/article_8bbfc9ce-d84e-5dd8-a4be-e8f9ee95cc94.html",
-      "verified": true
-    },
-    {
-      "id": "mora-GA-newton-county-2026-10-05",
-      "kind": "moratorium-expiry",
-      "severity": "expired",
-      "locality": "Newton County",
-      "state": "GA",
-      "expires": "2026-10-05",
-      "days_left": -6,
-      "title": "Newton County, GA: data center moratorium has lapsed",
-      "body": "The moratorium's documented term ran to 2026-10-05 (6 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://www.covnews.com/news/county/newton-county-enacts-moratoriums-data-centers-convenience-stores/",
-      "verified": true
-    },
-    {
       "id": "mora-CA-calaveras-county-2026-10-09",
       "kind": "moratorium-expiry",
       "severity": "expired",
@@ -241,19 +202,6 @@
       "verified": true
     },
     {
-      "id": "mora-CA-lake-elsinore-2026-10-09",
-      "kind": "moratorium-expiry",
-      "severity": "expired",
-      "locality": "Lake Elsinore",
-      "state": "CA",
-      "expires": "2026-10-09",
-      "days_left": -2,
-      "title": "Lake Elsinore, CA: data center moratorium has lapsed",
-      "body": "The moratorium's documented term ran to 2026-10-09 (2 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://elsinore247.com/2026/08/council-unanimously-approves-45-day-data-center-moratorium.html",
-      "verified": true
-    },
-    {
       "id": "mora-GA-rockdale-county-2026-10-09",
       "kind": "moratorium-expiry",
       "severity": "expired",
@@ -264,45 +212,6 @@
       "title": "Rockdale County, GA: data center moratorium has lapsed",
       "body": "The moratorium's documented term ran to 2026-10-09 (2 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
       "source": "https://www.rockdalecitizen.com/news/rockdale-adopts-most-of-new-udo-delays-data-center-regs/article_f40792e3-03b1-4f5a-b41e-a904d6eae277.html",
-      "verified": true
-    },
-    {
-      "id": "mora-ME-bangor-2026-10-10",
-      "kind": "moratorium-expiry",
-      "severity": "expired",
-      "locality": "Bangor",
-      "state": "ME",
-      "expires": "2026-10-10",
-      "days_left": -1,
-      "title": "Bangor, ME: data center moratorium has lapsed",
-      "body": "The moratorium's documented term ran to 2026-10-10 (1 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://www.wabi.tv/2026/04/14/bangor-passes-180-day-moratorium-data-center-development/",
-      "verified": true
-    },
-    {
-      "id": "mora-OH-tallmadge-2026-10-10",
-      "kind": "moratorium-expiry",
-      "severity": "expired",
-      "locality": "Tallmadge",
-      "state": "OH",
-      "expires": "2026-10-10",
-      "days_left": -1,
-      "title": "Tallmadge, OH: data center moratorium has lapsed",
-      "body": "The moratorium's documented term ran to 2026-10-10 (1 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://www.yahoo.com/news/articles/tallmadge-considers-six-month-moratorium-100316607.html",
-      "verified": true
-    },
-    {
-      "id": "mora-CA-palm-springs-2026-10-10",
-      "kind": "moratorium-expiry",
-      "severity": "expired",
-      "locality": "Palm Springs",
-      "state": "CA",
-      "expires": "2026-10-10",
-      "days_left": -1,
-      "title": "Palm Springs, CA: data center moratorium has lapsed",
-      "body": "The moratorium's documented term ran to 2026-10-10 (1 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://kesq.com/news/2026/08/26/palm-springs-city-council-approves-temporary-data-center-moratorium/",
       "verified": true
     },
     {
@@ -1138,6 +1047,19 @@
       "verified": true
     },
     {
+      "id": "mora-GA-newton-county-2026-12-16",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Newton County",
+      "state": "GA",
+      "expires": "2026-12-16",
+      "days_left": 66,
+      "title": "Newton County, GA: data center moratorium expires in 66 days",
+      "body": "The documented term ends 2026-12-16. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.covnews.com/news/county-extends-moratoriums-on-data-centers-convenience-stores/article_e6d90e9a-89b8-405f-b282-ec59aea63384.html",
+      "verified": true
+    },
+    {
       "id": "mora-MO-webster-county-2026-12-16",
       "kind": "moratorium-expiry",
       "severity": "upcoming",
@@ -1333,6 +1255,19 @@
       "verified": true
     },
     {
+      "id": "mora-MI-saginaw-2026-12-31",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Saginaw",
+      "state": "MI",
+      "expires": "2026-12-31",
+      "days_left": 81,
+      "title": "Saginaw, MI: data center moratorium expires in 81 days",
+      "body": "The documented term ends 2026-12-31. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.wnem.com/2026/09/29/saginaw-approves-new-rules-future-data-centers-moratorium-nears-end/",
+      "verified": true
+    },
+    {
       "id": "mora-NC-wendell-2026-12-31",
       "kind": "moratorium-expiry",
       "severity": "upcoming",
@@ -1343,6 +1278,19 @@
       "title": "Wendell, NC: data center moratorium expires in 81 days",
       "body": "The documented term ends 2026-12-31. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.wral.com/news/local/central-north-carolina-data-center-plans-april-2026/",
+      "verified": true
+    },
+    {
+      "id": "mora-VA-fluvanna-county-2026-12-31",
+      "kind": "moratorium-expiry",
+      "severity": "upcoming",
+      "locality": "Fluvanna County",
+      "state": "VA",
+      "expires": "2026-12-31",
+      "days_left": 81,
+      "title": "Fluvanna County, VA: data center moratorium expires in 81 days",
+      "body": "The documented term ends 2026-12-31. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
+      "source": "https://www.fluvannacounty.org/sites/default/files/fileattachments/board_of_supervisors/meeting/23864/action_report_2026-08-19.pdf",
       "verified": true
     },
     {

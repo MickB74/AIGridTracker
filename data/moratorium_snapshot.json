@@ -72,8 +72,8 @@
     "expires": "2029-06-30"
   },
   "armada-township-mi": {
-    "effective_status": "Expired",
-    "expires": "2026-07-13"
+    "effective_status": "Enacted",
+    "expires": null
   },
   "arvada-co": {
     "effective_status": "Proposed",
@@ -156,8 +156,8 @@
     "expires": "2027-01-01"
   },
   "bangor-me": {
-    "effective_status": "Expired",
-    "expires": "2026-10-10"
+    "effective_status": "Enacted",
+    "expires": null
   },
   "bannock-county-id": {
     "effective_status": "Enacted",
@@ -293,7 +293,7 @@
   },
   "brevard-nc": {
     "effective_status": "Expired",
-    "expires": "2026-06-23"
+    "expires": "2026-07-02"
   },
   "bridgewater-township-nj": {
     "effective_status": "Proposed",
@@ -673,7 +673,7 @@
   },
   "covington-ga": {
     "effective_status": "Expired",
-    "expires": "2026-07-19"
+    "expires": "2026-08-31"
   },
   "coweta-county-ga": {
     "effective_status": "Enacted",
@@ -1004,8 +1004,8 @@
     "expires": "2026-08-28"
   },
   "fluvanna-county-va": {
-    "effective_status": "Expired",
-    "expires": "2026-01-31"
+    "effective_status": "Enacted",
+    "expires": "2026-12-31"
   },
   "foley-al": {
     "effective_status": "Enacted",
@@ -1056,8 +1056,8 @@
     "expires": null
   },
   "front-royal-va": {
-    "effective_status": "Expired",
-    "expires": "2026-10-04"
+    "effective_status": "Enacted",
+    "expires": null
   },
   "fulton-county-in": {
     "effective_status": "Enacted",
@@ -1204,8 +1204,8 @@
     "expires": null
   },
   "hall-county-ga": {
-    "effective_status": "Expired",
-    "expires": "2026-08-25"
+    "effective_status": "Enacted",
+    "expires": null
   },
   "hall-county-ne": {
     "effective_status": "Proposed",
@@ -1280,8 +1280,8 @@
     "expires": null
   },
   "hayes-township-mi": {
-    "effective_status": "Expired",
-    "expires": "2026-08-09"
+    "effective_status": "Enacted",
+    "expires": null
   },
   "hays-county-tx": {
     "effective_status": "Enacted",
@@ -1368,8 +1368,8 @@
     "expires": "2027-11-02"
   },
   "howell-township-mi": {
-    "effective_status": "Expired",
-    "expires": "2026-05-20"
+    "effective_status": "Enacted",
+    "expires": null
   },
   "howell-township-nj": {
     "effective_status": "Enacted",
@@ -1608,8 +1608,8 @@
     "expires": "2027-05-08"
   },
   "lake-elsinore-ca": {
-    "effective_status": "Expired",
-    "expires": "2026-10-09"
+    "effective_status": "Enacted",
+    "expires": null
   },
   "lake-township-mi": {
     "effective_status": "Enacted",
@@ -2224,8 +2224,8 @@
     "expires": "2027-07-09"
   },
   "newton-county-ga": {
-    "effective_status": "Expired",
-    "expires": "2026-10-05"
+    "effective_status": "Enacted",
+    "expires": "2026-12-16"
   },
   "nicholasville-ky": {
     "effective_status": "Enacted",
@@ -2392,8 +2392,8 @@
     "expires": "2027-07-31"
   },
   "palm-springs-ca": {
-    "effective_status": "Expired",
-    "expires": "2026-10-10"
+    "effective_status": "Enacted",
+    "expires": null
   },
   "palmetto-ga": {
     "effective_status": "Enacted",
@@ -2488,8 +2488,8 @@
     "expires": "2027-08-07"
   },
   "pittsfield-township-mi": {
-    "effective_status": "Expired",
-    "expires": "2026-05-17"
+    "effective_status": "Enacted",
+    "expires": null
   },
   "pittsgrove-township-nj": {
     "effective_status": "Enacted",
@@ -2528,8 +2528,8 @@
     "expires": null
   },
   "pontiac-mi": {
-    "effective_status": "Expired",
-    "expires": "2026-07-21"
+    "effective_status": "Enacted",
+    "expires": null
   },
   "porter-township-mi": {
     "effective_status": "Enacted",
@@ -2680,8 +2680,8 @@
     "expires": "2027-01-31"
   },
   "saginaw-mi": {
-    "effective_status": "Expired",
-    "expires": "2026-07-13"
+    "effective_status": "Enacted",
+    "expires": "2026-12-31"
   },
   "salem-or": {
     "effective_status": "Proposed",
@@ -3004,8 +3004,8 @@
     "expires": "2027-04-21"
   },
   "sylvan-township-mi": {
-    "effective_status": "Expired",
-    "expires": "2026-07-22"
+    "effective_status": "Enacted",
+    "expires": null
   },
   "talbot-county-md": {
     "effective_status": "Proposed",
@@ -3016,8 +3016,8 @@
     "expires": null
   },
   "tallmadge-oh": {
-    "effective_status": "Expired",
-    "expires": "2026-10-10"
+    "effective_status": "Enacted",
+    "expires": "2027-10-13"
   },
   "tarrant-al": {
     "effective_status": "Enacted",
@@ -3100,8 +3100,8 @@
     "expires": "2028-09-09"
   },
   "tulare-county-ca": {
-    "effective_status": "Expired",
-    "expires": "2026-10-02"
+    "effective_status": "Enacted",
+    "expires": null
   },
   "tulsa-ok": {
     "effective_status": "Enacted",
@@ -3112,8 +3112,8 @@
     "expires": null
   },
   "tyrone-township-mi": {
-    "effective_status": "Expired",
-    "expires": "2026-06-01"
+    "effective_status": "Enacted",
+    "expires": "2027-03-02"
   },
   "union-county-ar": {
     "effective_status": "Enacted",

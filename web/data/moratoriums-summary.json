@@ -5,9 +5,9 @@
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 863,
   "states": 49,
-  "enacted": 686,
+  "enacted": 703,
   "proposed": 83,
-  "official_sourced": 62,
+  "official_sourced": 66,
   "by_state": {
     "CO": {
       "total": 17,
@@ -51,7 +51,7 @@
     },
     "MI": {
       "total": 64,
-      "enacted": 43,
+      "enacted": 51,
       "proposed": 3
     },
     "TX": {
@@ -61,7 +61,7 @@
     },
     "GA": {
       "total": 46,
-      "enacted": 31,
+      "enacted": 33,
       "proposed": 1
     },
     "NY": {
@@ -81,7 +81,7 @@
     },
     "ME": {
       "total": 11,
-      "enacted": 7,
+      "enacted": 8,
       "proposed": 2
     },
     "NC": {
@@ -96,7 +96,7 @@
     },
     "OH": {
       "total": 62,
-      "enacted": 55,
+      "enacted": 56,
       "proposed": 1
     },
     "TN": {
@@ -106,7 +106,7 @@
     },
     "CA": {
       "total": 26,
-      "enacted": 18,
+      "enacted": 21,
       "proposed": 2
     },
     "WA": {
@@ -156,7 +156,7 @@
     },
     "VA": {
       "total": 14,
-      "enacted": 9,
+      "enacted": 11,
       "proposed": 2
     },
     "OK": {
@@ -364,6 +364,7 @@
       "minneapolis-mn",
       "green-charter-township-mi",
       "northville-mi",
+      "saginaw-mi",
       "lexington-fayette-county-ky",
       "johnson-county-ia",
       "normal-il",
@@ -375,6 +376,7 @@
       "hillsboro-or",
       "boulder-county-co",
       "lake-county-fl",
+      "fluvanna-county-va",
       "luther-ok",
       "howland-township-oh",
       "braceville-township-oh",
@@ -412,6 +414,7 @@
       "mendocino-county-ca",
       "upper-burrell-township-pa",
       "orion-township-mi",
+      "newton-county-ga",
       "forest-park-ga",
       "loudon-county-tn",
       "bay-county-fl",

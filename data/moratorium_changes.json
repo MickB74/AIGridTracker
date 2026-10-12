@@ -3855,5 +3855,138 @@
     "locality": "Rockdale County, GA",
     "kind": "status_changed",
     "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "bangor-me",
+    "locality": "Bangor, ME",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "brevard-nc",
+    "locality": "Brevard, NC",
+    "kind": "extended",
+    "detail": "Now runs to 2026-07-02"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "hall-county-ga",
+    "locality": "Hall County, GA",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "armada-township-mi",
+    "locality": "Armada Township, MI",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "pittsfield-township-mi",
+    "locality": "Pittsfield Township, MI",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "howell-township-mi",
+    "locality": "Howell Township, MI",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "pontiac-mi",
+    "locality": "Pontiac, MI",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "saginaw-mi",
+    "locality": "Saginaw, MI",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "tyrone-township-mi",
+    "locality": "Tyrone Township, MI",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "sylvan-township-mi",
+    "locality": "Sylvan Township, MI",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "hayes-township-mi",
+    "locality": "Hayes Township, MI",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "front-royal-va",
+    "locality": "Front Royal, VA",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "tulare-county-ca",
+    "locality": "Tulare County, CA",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "fluvanna-county-va",
+    "locality": "Fluvanna County, VA",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "tallmadge-oh",
+    "locality": "Tallmadge, OH",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "palm-springs-ca",
+    "locality": "Palm Springs, CA",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "covington-ga",
+    "locality": "Covington, GA",
+    "kind": "extended",
+    "detail": "Now runs to 2026-08-31"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "lake-elsinore-ca",
+    "locality": "Lake Elsinore, CA",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-11",
+    "id": "newton-county-ga",
+    "locality": "Newton County, GA",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
   }
 ]
