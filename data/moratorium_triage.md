@@ -1,21 +1,21 @@
 # Moratorium candidate triage
 
-1163 distinct candidates not already tracked (454 dropped as already published; repeat coverage collapsed).
+1365 distinct candidates not already tracked (459 dropped as already published; repeat coverage collapsed).
 
 A trailing `?` on a state is inferred from the headline, not confirmed — worth a glance before you search.
 
 | Tier | Meaning | Count |
 |---|---|---|
-| A | cited — link or named document in hand | 176 |
+| A | cited — link or named document in hand | 210 |
 | B | structured — dated, active, upstream-verified; source still to find | 0 |
 | C | thin — structured but unverified, pending, or undated | 91 |
-| D | unlocated — headline with no resolvable locality | 896 |
+| D | unlocated — headline with no resolvable locality | 1064 |
 
-## Tier A — cited — link or named document in hand (176)
+## Tier A — cited — link or named document in hand (210)
 
-States: unknown 164, MD? 4, CO? 1, FL? 1, KY? 1, MI? 1, MN? 1, MT? 1, NJ? 1, OH? 1
+States: unknown 198, MD? 4, CO? 1, FL? 1, KY? 1, MI? 1, MN? 1, MT? 1, NJ? 1, OH? 1
 
-- **Evansville** · 34 outlets — google-news redirect, locality 'Evansville'
+- **Evansville** · 35 outlets — google-news redirect, locality 'Evansville'
   - Evansville City Council to consider data center moratorium
   - https://news.google.com/rss/articles/CBMilAFBVV95cUxNaHctbjN3aFNjZFJZT0xxdU5iWWpzUW1ONjY2eG1IeGRld0NpdThJOHBFSVlINlVNQ19WOUc1b2hBVjBxcUEwSVdzWWozX1RwWkdBaXRkdkNQdnlGbGpxVzAwQ2RyU0FDZE42TkhXYVpzUlRnRTlDeUw4UFg3Uzd3NG9hSXNuOHBJeE1leDh5Qk1UWnc1?oc=5
 - **Eugene** · 6 outlets — google-news redirect, locality 'Eugene'
@@ -27,45 +27,51 @@ States: unknown 164, MD? 4, CO? 1, FL? 1, KY? 1, MI? 1, MN? 1, MT? 1, NJ? 1, OH?
 - **Beaufort** · 3 outlets — google-news redirect, locality 'Beaufort'
   - Residents voice support for data center moratorium in Beaufort County
   - https://news.google.com/rss/articles/CBMimwFBVV95cUxPbXB0SV9GYWNQVWF3cmFtaTIydnpkSW13MXVLNlBZRTZYdDNHa2MzOGhtcXkzOVBwMEJsNHFYcmlvVTNTaUpXSzkteHRTQ3ZTWXZDM0RmMTVqODRUX2dwdlhNUkRrR3poalltWXZUM2V5bjB2WDRqcGd1NXd3bXFBc3FnMFVLR2pJRGF3dVdMUmNPbXpvbjRzaXM1RQ?oc=5
-- **Clermont** · 3 outlets — google-news redirect, locality 'Clermont'
-  - San Francisco company pitches data center in Clermont County despite local moratorium
-  - https://news.google.com/rss/articles/CBMixgJBVV95cUxQWnFEajRjZm5BQUFkTWpCRWxJeDlOdEFHTHlodGJkcmVCVExUaVU2TW55V1AtLUlsejJ6alJMSlBrYk01aFdWamRfQS1rQ1hfUk1MMVBjOUJzaFJrWHJiRE90eHJNcUVqWUhKT1h6SFlqeHR3c21zaGNvckJieEFpc3J6Ykt4a2lxVm40d1hvMlVQREU2MlpLaXFFM3poUHluWUZiaDNaZkxGSWU4elc1alE2MmdqaHdWRDc1X1YwcVNTRDFZYklsWkNCLXhackxOanl3a2UzQnNHelZTSHREX1g3SEdGYUVZX0hNOHZBeTAyTXBOVXI1ZklfdUVnc3pvV1NMWHhTMHVBcUNCUjBOV3FDZHFsWGtmRGlESnREMFk0MFRGUlh4cmJrVHVnWldVemZoYnRJc1pCVEwtN3NiZ0xrd3F1Zw?oc=5
 - **Hudson** · 3 outlets — google-news redirect, locality 'Hudson'
   - Scenic Hudson president praises Gov. Hochul's moratorium on data centers
   - https://news.google.com/rss/articles/CBMixwFBVV95cUxNUVF5ZUQ1MTQycGdJdktTRUlyVGFWaU0wTV85WXE2UDJuSUlpSWtiajNNMWF6N0c0aFZjWkZ1aGlqRzl4bzByYWRVSzIwZ2ZnSUFxcGdjRE03cXdzckNDdzg2UUVwRXl5M1lUcUxPUzRkNU03XzM5cG1fUFhsRGRGZFMxTUU3NTlVY2xLeC01MVFwSzlJU3RMTXlIT1lsWDcxRXNEY2ZsN1FFRkt3a0FYZE5hTElkSVR0cHZFeWNrZU9uQU1Nd1Zj?oc=5
 - **Beaufort** · 2 outlets — google-news redirect, locality 'Beaufort'
   - Beaufort County data center moratorium hearing postponed, officials say
   - https://news.google.com/rss/articles/CBMipgFBVV95cUxPQVl3RFJBQmVrOXlkbno0WmM0SUk5azFQSUhSSjV5d2o5a1V3YkFVMlFFVGNLR0dVR0lGdGpiZzVYOHNHY3Q5bGdmdXVJT1k3SV90NlN5VDhnQ1RlZXVldTZIUmxvZ0U4NFhoZWtmcS1MeHpNaFR5TVI5WTBubUFyc0Z6bFlJZjNpTDhBbDZVemtiQnMxMldDblF5TXNwdFpNUlZuTEh30gG6AUFVX3lxTE5Ucl9ucUYxY19PZkQzM2pyX1BZWENrMGNFRVBUMEJpRjh3NXJnNGRGdjhHRHlnODQ2ek8wMmRRMUY0SVFQNzlaVDNnUmlVYWIxTm52dXpzTnRiWUlweU9FcmwyVjV5M2I2dEJGOThFNHdYMDNxRThfYXh3RERRSnZTdkF0OFE2ajB4LWktUW5fQjBWRjdtVWp5ZEY3UnVxSjhlT1MzV1plQjRMbFBaVTZucnIwTWNIdWNjQQ?oc=5
-- **Gilroy** · 2 outlets — google-news redirect, locality 'Gilroy'
-  - Gilroy considers moratorium on new data centers
-  - https://news.google.com/rss/articles/CBMikwFBVV95cUxQRW5vYXV0RTVJdDB0dzFFV25nQ3F4NlMzVVlrTHlFbm9aQ010blFCVEdabVRJM05fcGZlRWk5WWlORjhiUzVZREM2QXZvaTZiVnp6dUhhMlhwS19udlBMY1l6ODVYUnFSSVc2RWtWUGlYUG52NTFzTTZNc3lVZnJQTWVBcUxNbWdLZnFYeXQ0Xy1uU0U?oc=5
+- **Columbus** · 2 outlets — google-news redirect, locality 'Columbus'
+  - Columbus County to consider 120-day data center moratorium
+  - https://news.google.com/rss/articles/CBMikgFBVV95cUxQaXVGeXNKVjNic2hDWXFvMk9vZjhHWmVNOTJnSVR6b0xfajlPampQV3AyWVBwamFpcG1ZV0hkZnhiaHF3THlzcXRmdllObWVlQTBfRE8zZGlJZF83b0hhUXdnUEVxYk0zWFFwSjc5V1FDSDEtbDRpeWt0Z1U2X19EV3NRZ04waElEUzl5cEdpUjBxUdIBpgFBVV95cUxOOFM2VzM4WXd4TXJKUW5VYnltbHFoNjJlb3hHbUJ6Qy13VnkxblduNU84Qk92Y0VwT1o1UjFwMFFHaUxmSkIzVll4Y1kyYzZzbGh5QTROODI4aTY1VVU1WUpGNEE4czB6UTVFNE5uS2h6M0hnQzFpUXdkMHN1dVRKaHNIV2dyNmZReUFCR0xxeVdoV2g4WjFPSzk2Vy12Qnd4dE84emd3?oc=5
+- **Delphos** · 2 outlets — google-news redirect, locality 'Delphos'
+  - Delphos City Council approves 18-month data center moratorium
+  - https://news.google.com/rss/articles/CBMiqgFBVV95cUxObV96eTh4Z2M0bHptUXVMZXljci0xQjA3ZnpMM0dmVkNmcXBZT3I4ckFLSm1HdEx5QTEtc3hnSFBydU9TZnBuQnhGb1lvTmpZa1p5TU0xaEZmaUN2cTlNZzhiTUhtTmVBRGNWbFM4N05LNkNJT0pKRzFaSkRTVnNtWUYyN2dNS1FJSG94MF9NMDdsNkxnMUNvcGl6NEQweXlsbURHUFVHdC16Z9IBvgFBVV95cUxOYWg0bWtKS3JBajNpZV9SdVh0bnhZblVCdUQ4X1FxWGV0LWhRSnJ2a3hZdG1HQXN4ZmlsMzJnQmZEQWhLNlRRVW5OM1l1M3dOSU1ZNWlkaVR3LTNrUHh2cVlrT3VTUUlBMVpzQkN3MU5zbWtZamxiNEw3a3lNM3dMTEJhb3VPZnBuX2hOa2VUQ2VMRk1pdVFKSFRLbnVsVU5YTVVxcU4zTzg2SWhtXzVkWng5QVNURHVLa1U4U1Zn?oc=5
+- **Grand Junction** · 2 outlets — google-news redirect, locality 'Grand Junction'
+  - Grand Junction City Council advances one-year moratorium on large data centers
+  - https://news.google.com/rss/articles/CBMitAFBVV95cUxNWWZzQW5UY3A4S1gzTnFUNGJfaFNQSDM3UnJVeEo2b2t4YnRCV3NjdHREaHdKSnA0cU0wZDlQcVBYaUJpMnpRUC1meG5Mc0gtLUFUOTVEX0FKTTQwRlJoTS15djc4Ti1aOC1LU1BvMXBZeUR2THVYd1JHQTRYRXRWVkNtQnBCU2xMeXNMV0cweTZOd0NzdHdiczFBOEVMTF9LMEdaSVdMbDVYOUkwdzZGTVRRZDg?oc=5
 - **Hudson** · 2 outlets — google-news redirect, locality 'Hudson'
   - Hudson Valley residents dissatisfied with data center moratorium
   - https://news.google.com/rss/articles/CBMiowFBVV95cUxPLTNDajloR0lWVi0tLWpNb3JUbUx3YVI4bnFjd0p3SGNpYUpDeDZyWG90T0RyUjAzZmhSTC1IWHRyd1lHWFM5SW5aRWNnU01yRmswYU1HQlJUV2ozTnBxQ1Y0TXgxWVgwZGpQcW5WQzFIVExpYVpmMTBxdDVOc3lnbFdXUTR5VG5oNGlvVGdpRUVaU25GcmxGSHhkVUlnSFhNWDFF?oc=5
-- **Janesville** · 2 outlets — google-news redirect, locality 'Janesville'
-  - Janesville City Council passes data center moratorium
-  - https://news.google.com/rss/articles/CBMiigFBVV95cUxQWVRVOVBEdHFVYzJVSklVWUJSVzRSTVotSDVFejlySHp4UjBxNS0xaXM4NnpxWFU4QWJ1YWtpLTdqYlhKc0M4c3dBLTlmZnNwSTZMbVVuNVNidXhSWkw1SDdXb3lSVWNCZTR5QTFMcGQxWE5hQWNSNFQ4eFdsblJiRnNHRXZPcExCeEE?oc=5
 - **LA** · 2 outlets — google-news redirect, locality 'LA'
-  - LA County issues temporary ban on data centers in unincorporated areas
-  - https://news.google.com/rss/articles/CBMinAFBVV95cUxNYndVNm4xM1RDVTRmS050MjBzVWFYN3BnRzRnUG5GOVRCbUJrVnhEUVNZTk50aEJ6ajdNZVhweS1uZlRGMXVuUmRnZWlkcmtKWW9aSHlkby14dGpERHk5bWFfOThZR2F1UzFmYjl5Mkd5UGwwOG1xX2ltcndVcDlwZEpWZWhhdllSRGxIUkYwTVl1ZzY3WGVyT3BVNlPSAaIBQVVfeXFMTms2blRYeWFtVUtvenpfRkExV1BNUXhzMFNac0Jfd0F0Q25hM0F3TDUzU1ZiNzczVVM2Wl9uQzBpZjUzTXZ3RE9JcXZqX3FxY1VEVU96SHNwMTg2T3dZWWoxTVBZZ1JpdU9yVG9vX1NFTGJxQWg4Tlo1NmRfNnlHX0gyamVxUmdSVWpXd1A2WVVqYjFSX3hGYXJHS1FFQVdOZkF3?oc=5
-- **Manchester And Upper** · 2 outlets — google-news redirect, locality 'Manchester And Upper'
-  - Data Center Bans Spread As Manchester And Upper Township Approve Restrictions
-  - https://news.google.com/rss/articles/CBMi1wFBVV95cUxOSjROVGtKUkdxYnQ1T1V1RGR3RnhIQzdqS0VHU0JOZEo2aldPSnE5ZmNmanRHYXVFRjJFbXBhbGUxQXkwSHpZdTkyQ3htUE55czhsaTJEZHFDRV9XQ2pVUWZNU005dW1DTkxoMVFKdWVxaXJEX21Ja0tCeGxvcjh2dDhxemVrdUxQR2VVUk9mbk44eVp4OEQtQ0xiYlVFWVM1b3JvQXRNSWtRTk5naFJBUWxFNjlZbzVPVzJEb19kVTlYYW1wSFYyQTVPdGpkT2hYSVJJU095bw?oc=5
+  - Supervisors considering AI data center ban for unincorporated LA County
+  - https://news.google.com/rss/articles/CBMirgFBVV95cUxNaUZkR05admJCNTJ3VUQtY0daa3FpbXU5eFVTMjJhaEFVRzB5T3ktYzJseDMwdEh2RnE2d1ZYZlZEYTM4Nk5SZ0lublhIMHRUQm9fTWNLMEhjYkNNRmJTZkFYUGVpeHZhSlliNmZPTF9rVzAxR2JUbWE3SFdIdG5ZYVBRUGctQzJleU9ORjBoalgtcEVuYlJselpaSXdMa0hZVDdVZmRaMnZiMW1QaGc?oc=5
+- **Mahaska** · 2 outlets — google-news redirect, locality 'Mahaska'
+  - Mahaska County works on data center ordinance
+  - https://news.google.com/rss/articles/CBMigwFBVV95cUxQNTFtbGhSVGZuSmVETWdzTm8zNnhwZnhjRDg2dmtrRTdsRXhELW9mYWdWOVF4NlJWRzVqb3lFYm83cFJSbWU0aC0ybGZQYUtEcHM4RnUtbjdmcEJUUUlHYVhON2c5QUlWamxyNWwxRFJieGhLa1ZIOU9ncGMtMWY2S0xXd9IBlwFBVV95cUxPbWQ4T1FIYWFDckM3b2djbzZmUGs3enNudUc0SmU1eFJTaC1LNDBSSW43RDJVZnQ2WFhiaGpWNVh1YUZGY3FkM3NPVjlmcDR5dG13aU1TQWVFc3hXX3BzZWFSZmJVZWEyYlBWX2lueDdaTFo5VUdVMk01RFRhNE5idmIwOTVjeXFpSkJ6RFBPcmR4NHcwNWd3?oc=5
+- **Mesa** · 2 outlets — google-news redirect, locality 'Mesa'
+  - Mesa County Commissioners approve data center moratorium
+  - https://news.google.com/rss/articles/CBMivAFBVV95cUxQaVBaOWZoZ3hyWVFFRHIwdk41SUR6MjJfZFJSSHdUMmZhWlkwUTVIQ1N4U2JBcklIZWd3enIwel9oY3otQmVLc0hLTl83V2JFbW5hVnRWQjB3S0dtRFE3Uzc2aGhYdDhkbzdsVmZINm1nQ0p4TVR2S09YQ2hDNW84dVE1dG8tRkVzRVhOdF82WDd5YklySklfTmhjY002SHJsTENMRGtLNW9hZzhRSlFqeGN4V2N6NVpXMFNzQtIBwgFBVV95cUxQbTZDbndiOXNTZHVCMlV1dktGWXdKc0hmSjYzd2FPM0VTMFNUbWgzdEF5ZlJidWJqQm1DWEE2bDVfejFTSXVod3F3Zy0xeHpoNEZ4REZoMHhwTl93M1ozX05LVWl0akhZOUR0UmdWbGtobFJkQWpzT1VaZzJCanR0STVhVHktTS1mRkZuemh6Z3VONEZUMVhpLTBpRHA3MG9OUnVoMFltbC1keUxmRnRpMTlNVHdTcXFMVy1Wc1A3eHFzdw?oc=5
+- **Oakland** · 2 outlets — google-news redirect, locality 'Oakland'
+  - Oakland City Council to vote on 45-day data center moratorium
+  - https://news.google.com/rss/articles/CBMijAFBVV95cUxOX185Yk8tcHktazcybHZXTGpvellfbV93MzZobndLNzJWc3pzeXZVVGtSWGttNTdxcWstcXJFNlE1M2hQSTE2WnBhSXFkVnkzTFhkOGpBSFg3TWNobGFLZ1JpWW9TSDFmLWtRRWdRMnQ2dnZfMkgwYVI3LXpMVXNtbzBnT2lvZkVzckd5c9IBlAFBVV95cUxPUnNEX3A5Sl9ud3dqVHdMb3prZ0Mya2h2WURyN1E0YkZQZ2FDaVVWTXlJZGkyQXR6VnpIeDBNSkhGM0R3UklXZDJ4Rzdtb0NzdHV2bkVaNXI0UnB1T3RiSnJZSXlRVWRfcHJua2FWRmhXeUtLa3ZXTlBzYlgzbjdZOF92eUFwTmtWdk8xeXJKY0VJZ0FN?oc=5
+- **Oakland** · 2 outlets — google-news redirect, locality 'Oakland'
+  - Oakland City Council approves 45-day moratorium on new data centers
+  - https://news.google.com/rss/articles/CBMilAFBVV95cUxQcFNUYmJ4b29UeGEweTR0cm13Zk0yYjJLUk9LMDhEY0QtUkZRNEo5X1hmVUtUZy1Scld4MnIwMnc0eWdUYXZFNUM1bDhYNlRmSk9MS25hQXhsVlIzdHM3UWpVbUl4SEZJRTVKMEg1ZERGLXNCZkxsT0t2QjhNQl81QWRVUVU3eVRHV2hubF9UamxLbFl30gGaAUFVX3lxTE9TbmxEMHp5QmIwQzF4TUlfdzVwT2I2dkdPQnlCUXpVVG8xaEVQSi1Uazl6VTdKdGYyaERiTWhaLTA4bFowZTB2TFlOd1pQMG5wak9TS0hCZHpUWGZZNlRFUTZjYkFGeHU2SmQwU1Y5YnZXaEEzVVZwa05vUUFiS0JhWDk3SG1PN21rSGI5cWdSYWlLdmJCVlk3c3c?oc=5
 - **Pott** · 2 outlets — google-news redirect, locality 'Pott'
   - Residents request a moratorium at Pott County public hearing on data centers
   - https://news.google.com/rss/articles/CBMi6gFBVV95cUxQX1U2czd0enp3VXpnTzVTNmhSY3pyMEwzZkNRUEVCcmdpZTQ5Vm95MHVEWlRRYlhPa3g4OGZfX0Fjdl9CaDRLYnN2TS1fbFUwVUlmX1pqNnBXVUE0ekZTOElhRDRsYjZpT0o3ZGFuTUxYa1ZrLVJ1U1VQUzRWblBXR0RLeE1lUWJSamg5bXh5R3FEMzh4NnBCUTZPcDdoNEEteVZzRG5lSXBWVG01SWptLUVOUzJsR2h1bmJkc2VmX0lQZm51ZzladnV1bUF5NDc5bXhoQTFmWXVUWDk5clV3LVdVY0g1QWd2SEE?oc=5
-- **Richmond** · 2 outlets — google-news redirect, locality 'Richmond'
-  - Richmond City Council to Consider Moratorium on Data Centers
-  - https://news.google.com/rss/articles/CBMingFBVV95cUxQZ2owc3E1VG9UQnpaTkJlOWl2Q0Q2UHN3RHNCbUlGX3VWMnZuY0d3Z3JaR08tbDVkVU1WSUluMjdwM0wwTFR4SXBRazBidUk0SmZEc01nM2xJTnNFaFlPTjdxajdudkUtVkY2RGlNMFNtNUJ1OXVmcXFGaUo3bFBhNWZMNldMLVAyVWFGNUdqSXRsSk9QLXZ3blEySG5KZw?oc=5
-- **Richmond** · 2 outlets — google-news redirect, locality 'Richmond'
-  - Richmond City Council Agrees to 45-Day Moratorium on Data Centers
-  - https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbkwzRzU2RWN3UmtTUFBsS3ZCeWVWT2ptcGdtT2FKY0w1alU4XzRRRHl1d0FVNFREWi1KV2hwVkh0NlpGMTBtQTFnVXo2OFc3ODU4aE9janNHbnE1dU9XZzliVFBxcnZib3oxTEV0TWNoTnlEeGpQdkVEZmNYOGM5bmFmSWlpQ3M2RS1TQ3o0QnJtZEo4blNtZV9rWllTTWZzdk5ZUVNjRUNmdw?oc=5
 - **Sturtevant** · 2 outlets — google-news redirect, locality 'Sturtevant'
   - Sturtevant presses Spanberger for data center pause
   - https://news.google.com/rss/articles/CBMilAFBVV95cUxNWHhwZEZiT1gwN2l4d2gyUHhTYnhnYzBScmk2YmpkNEhlbGFIZEQxYVYxU3ZER05pcUt0NEhXWTlsbC1ZOG9jVnZESU1PcU9hMlQ3d212TXNQQ0xvS1JyeUJJb1Z1QXprLTJDMXBScVNkaXlYWXZFY1k3ckdKSEt6aHp0ZHJOeUxhZzd2c3g2NG5VMXpy0gGaAUFVX3lxTE9WcDR6T1ptV01QR3VFZmY1MWR6alVIc1ZjbmVkRE1rbHV3c0dMWFRFV0gyU25vVzZYUkhtdzJzdWpra1cwb1BSWVI4bTZ6RVRmVTlIRDRYZGRJZWw2UkMwbi05TXNYdU14VkVtSUdDaWFGWV9oYXZ2ejNrUGRxYmNrdkV4OFYzOVdObmxRQy1mV2hBTXRkX3YyX2c?oc=5
 - **VB** · 2 outlets — google-news redirect, locality 'VB'
   - VB City Council establishes 12-month moratorium on data centers in the city
   - https://news.google.com/rss/articles/CBMipgFBVV95cUxQdThQQ0JWQWg3RGJudEM1MHRTUVgzejBaZ0lzalo0M2NoZVloUDA3UkI1WVpYM2dwYUl5MzdvRzRvcDE1bl8zTkpZcU1xdEhpS1JQTGdGalZrYnJ4cU81Zkh3S2F1OTUtUnMxaGNyQXVvLUZCTVoyTGJxbmlfVkppak9YeDNHMjBlbUY5VHI0ZVlhYTlxUnZJWFU5QkxLWVJ3QTh5NE5n?oc=5
+- **Why Calumet** · 2 outlets — google-news redirect, locality 'Why Calumet'
+  - Why Calumet County hasn't passed a data center moratorium
+  - https://news.google.com/rss/articles/CBMizgFBVV95cUxQQ2JraGNTNmh5d1JlSWxjQlVtNWJuNnpxcGVyZC1PQ1RSZUtwMHZJNkY4QUFfUzB3TGlnd2hwei04QnNVODRaUVhHYU5SamZZYlAzN3AzQzF3NGRiZElZdmpzdVZKZ0JIeE1oLUFlTUhRUWltM0diWjFfQ0pkZVZwY1NtT2x3cC1oRHhNSzZXUEJ3emlZckJPVWl5OUNuX000QXd4ek5pZWl2WjZCREdyMTAxTnpnSEduTDlPeGg5NlVmcEtEemRZb3VJUENaZw?oc=5
 - **Colorado, CO?** — google-news redirect, locality 'Colorado'
   - Colorado County Prepares to Extend Data Center Moratorium
   - https://news.google.com/rss/articles/CBMiqAFBVV95cUxOLUN3N0lIUm1IMG1QUmpuS1ZlUVQtTGE0S3Ixa1RnTlVxMTJWN3VUb0UxUXU1SlRxcW5DbVdwcmwtUm9kaWQ4UG8wYW50QmNCc3JmeHZlTlVqOFZxMXNNMmh3dUZENm5XQUVzSlBGcFBVR09WMkNacHU3N3BNSXp2bnlZNkUwa21LUmJtR1FoaTFaS0djYW5mR2hjLUxxemtXNW1GX25LOXI?oc=5
@@ -84,11 +90,5 @@ States: unknown 164, MD? 4, CO? 1, FL? 1, KY? 1, MI? 1, MN? 1, MT? 1, NJ? 1, OH?
 - **Town, MD?** — google-news redirect, locality 'Town'
   - MARYLAND: Town council bans data centers
   - https://news.google.com/rss/articles/CBMi3AFBVV95cUxNQm9wMm5DeHJrR2ZBdnJ1WlNsNTE1dkFfNHhkVjhleFlVSklMekZMMTdnd1pwdWtvZ1NWWVhKZVo3OHJDTGRfZXlRdFlWNnFSYXdMUnZCTGxYOTRPc0pNMnRKZ012ZVdoa2YwMWRsQ0VXMlRMUmJSbFptc20zRlN5R0tIc3BhTm4xdm9vb2RDWkliZEYxSHNTR2FlcVJpZnV6VlIwb2x6S2xiZDlfcllHSjcwTTh5Qnh1TEtaa1hJUlFnRmI2M2tEOTIySTVuNlB5V0JFeEEtSGxHOC1i?oc=5
-- **Western Maryland, MD?** — google-news redirect, locality 'Western Maryland'
-  - Western MD county approves data center moratorium
-  - https://news.google.com/rss/articles/CBMingFBVV95cUxNd1R0NUdWWUt4all0LWRZRExaODhQTlBHdWV3SVR6bWZRYVdfNy12Z3VRendBbGRyWExwQkFLUEFlQlVWRmlrVWh3NVdyNzZ3MmdXbFhpNmJkS2dHUHZZZmh4Zmw2TVhaVlYzNkJkNWJfYVVWYmJPVV9jQ1VvV0hPTTJWRVV6YmxhSzIweXQ1T1gwV0N0TmpzXy1hbkdJQQ?oc=5
-- **Dowagiac, MI?** — google-news redirect, locality 'Dowagiac'
-  - 'It sounds like someone set up a vacuum, like in your living room': Michigan residents sue AI data center emitting noise 24/7 — company fined for industrial noise ordinance violations, offers to buy homes from residents
-  - https://news.google.com/rss/articles/CBMiggNBVV95cUxQVlZtTnRtclpzbDdnWjdXNFMwNTJxLUwyblVkLWp4X3JRQVVjX2NDalcxa3VfWW10cmhqc1FtNmdweFh6M0duNDBvR2lPUWltZ0YzOUxxeUxwYVQ0N0dMbUtxeEE2U01Pd0JSUjA2QXdzLVNMZ185c05SRDlCb0dNNGQxejNrclB6eExjTW9URHk4T1VhNm9ESmhXbVhzRHczLTRPd0ZBSU5WcTNBLWU1UTk3Rm85OVBOYzRKNzNyTVhUTjl2TVZHZm9EdmJwZml3MEdpR3NuYzVZZWN0eHNXaU9mMFlPSEpiVkRNeTBTQXF4UTRGYkJwWi00NlViNnFrX1FlRlNWRURLVHVfajY1WXIwd1Bjcmt3c285bWs1elpJUXNzaXZHeTFrb2JQMEE4Zy1tMVczYlUxbTFsNXRTVlVTYlh5eFYzR0M3MVdHMlhYOGlQbjZQNWFYem9zZURhdTlGaWR3RHo3dkdKdndUMTJQUkdvdnJBMVN6b1ZJOE9Idw?oc=5
-- …and 151 more (raise --limit)
+- …and 185 more (raise --limit)
 
