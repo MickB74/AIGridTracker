@@ -1326,11 +1326,12 @@ def _home_top_stories_html(top_stories):
 def _home_posts_html():
     cards = []
     for st in _sorted_posts()[:3]:
+        post_id = st["id"]
         title = st["title"].replace("\\$", "$")
         summary = st["summary"].replace("\\$", "$")
         cards.append(
-            f'<a class="post-card" href="blog/{st["id"]}.html">'
-            f'{art_svg(st, cls="thumb", uid=f"h-{st["id"]}")}'
+            f'<a class="post-card" href="blog/{post_id}.html">'
+            f'{art_svg(st, cls="thumb", uid=f"h-{post_id}")}'
             f'<span class="post-date">{st["date"].strftime("%B %-d, %Y")}</span>'
             f'<h3>{esc(title)}</h3>'
             f'<p class="muted">{esc(summary)}</p></a>')
@@ -2680,15 +2681,25 @@ def build_state(state, news_only=None):
         for v in state_videos:
             vid = v.get("video_id", "")
             thumb = f'https://i.ytimg.com/vi/{vid}/hqdefault.jpg' if vid else ""
+            if thumb:
+                title_attr = esc(v.get("title", ""))
+                img_html = (
+                    f'<img src="{thumb}" alt="{title_attr}" loading="lazy" '
+                    'style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover">')
+            else:
+                img_html = placeholder
+            link = esc(v["link"])
+            source = esc(v.get("source", ""))
+            vtitle = esc(v["title"])
             cards.append(
-                f'<a href="{esc(v["link"])}" rel="nofollow noopener" target="_blank" '
+                f'<a href="{link}" rel="nofollow noopener" target="_blank" '
                 f'style="display:block;border:1px solid var(--border-subtle);'
                 f'border-radius:12px;overflow:hidden;text-decoration:none;color:inherit">'
-                f'{("<img src=" + repr(thumb) + " alt=\"" + esc(v.get("title", "")) + "\" loading=\"lazy\" style=\"width:100%;display:block;aspect-ratio:16/9;object-fit:cover\">") if thumb else placeholder}'
+                f'{img_html}'
                 f'<div style="padding:10px 12px">'
-                f'<div class="post-meta" style="font-size:12px;opacity:0.75">{esc(v.get("source",""))}</div>'
+                f'<div class="post-meta" style="font-size:12px;opacity:0.75">{source}</div>'
                 f'<div style="font-weight:600;margin-top:4px;line-height:1.3">'
-                f'{esc(v["title"])}</div></div></a>')
+                f'{vtitle}</div></div></a>')
         videos_html = (
             f'<section><h2>Video coverage mentioning {esc(state)}</h2>'
             f'<div style="display:grid;grid-template-columns:repeat(auto-fill,'
@@ -4224,6 +4235,8 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
             state_chip = (f'<button type="button" class="tag tag-btn sg-state-chip" '
                           f'data-filter-state="{esc(g["state"])}">{esc(g["state"])}</button>')
         heading_href = f"communities/{_page_slug}" if _page_slug else f"#{slug}"
+        activity_html = (
+            f'<span class="sg-activity">Active {last_active}</span>' if last_active else "")
         cards.append(
             f'<article class="story-group" id="{slug}" data-state="{esc(g["state"] or "")}" '
             f'data-count="{g["count"]}" data-latest="{esc(_latest_iso(g))}" '
@@ -4235,7 +4248,7 @@ def build_story_tracker(stories, videos=None, groups=None, locality_slugs=None):
             f'<span class="sg-count">{g["count"]}</span></div>'
             f'<div class="sg-meta-row">{state_chip}{pattern_badge}'
             f'{_maps_link(g)}'
-            f'{f"<span class=\"sg-activity\">Active {last_active}</span>" if last_active else ""}'
+            f'{activity_html}'
             f'</div></div>'
             f'{summary_html}'
             f'{latest_html}'
@@ -4948,6 +4961,8 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
                      _fmt_date(it.get("published_iso", ""))]
         meta = " · ".join(x for x in meta_bits if x)
         tier = _source_tier(it)
+        chips_html = (
+            f'<div class="tags" style="margin-top:6px">{chips}</div>' if chips else "")
         li_html += (
             f'<li data-states="{data_states}" data-themes="{data_themes}" '
             f'data-tier="{esc(tier)}">'
@@ -4955,7 +4970,7 @@ Try again shortly, or browse the <a href="blog/">blog</a> for our own analysis.<
             f'{_source_badge_html(it.get("source", ""))}</div>'
             f'<h3><a href="{esc(it["link"])}" rel="nofollow noopener" '
             f'target="_blank">{esc(it["title"])}</a></h3>'
-            f'{"<div class=\"tags\" style=\"margin-top:6px\">" + chips + "</div>" if chips else ""}'
+            f'{chips_html}'
             f'</li>\n')
 
     total_count = len(feed_rows)
@@ -5221,6 +5236,7 @@ def _video_card_html(v):
                                   _fmt_news_date(v.get("published_iso", ""))) if x)
     img = (f'<img src={thumb!r} alt="{esc(v.get("title", ""))}" loading="lazy" style="width:100%;'
            f'display:block;aspect-ratio:16/9;object-fit:cover">') if thumb else placeholder
+    chips_html = f'<div class="tags">{chips}</div>' if chips else ""
     return (
         f'<a class="video-card" data-states="{data_states}" '
         f'href="{esc(v["link"])}" rel="nofollow noopener" target="_blank" '
@@ -5232,7 +5248,7 @@ def _video_card_html(v):
         f'{_source_badge_html(v.get("source", ""))}</div>'
         f'<div style="font-weight:600;margin:4px 0 6px;line-height:1.3">'
         f'{esc(v["title"])}</div>'
-        f'{"<div class=\"tags\">" + chips + "</div>" if chips else ""}'
+        f'{chips_html}'
         f'</div></a>')
 
 
@@ -13113,10 +13129,17 @@ def _sr_mentions(c):
     """
     if not c.get("mentions"):
         return ""
-    lis = "".join(
-        f'<li><a href="{esc(str(m["link"]))}" rel="nofollow">{esc(str(m["title"]))}</a>'
-        f'{f" <span class=\'muted\'>({esc(str(m["seen"])[:10])})</span>" if m.get("seen") else ""}</li>'
-        for m in c["mentions"] if m.get("link"))
+
+    def _mention_li(m):
+        seen_html = ""
+        if m.get("seen"):
+            seen_date = esc(str(m["seen"])[:10])
+            seen_html = f' <span class="muted">({seen_date})</span>'
+        link = esc(str(m["link"]))
+        title = esc(str(m["title"]))
+        return f'<li><a href="{link}" rel="nofollow">{title}</a>{seen_html}</li>'
+
+    lis = "".join(_mention_li(m) for m in c["mentions"] if m.get("link"))
     if not lis:
         return ""
     return (f'<details class="more" style="margin:6px 0 0">'
