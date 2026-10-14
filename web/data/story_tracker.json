@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 10464,
+  "count": 10476,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -103208,7 +103208,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-10-13"
+      "last_seen": "2026-10-14"
     },
     {
       "title": "Levy County residents raise health and water concerns over data centers",
@@ -107564,7 +107564,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-12"
+      "last_seen": "2026-10-14"
     },
     {
       "title": "Yandex data center hit in drone attack in Russia",
@@ -110600,7 +110600,7 @@
       "locality": null,
       "state": "CO",
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-13"
+      "last_seen": "2026-10-14"
     },
     {
       "title": "St. Cloud Data Center Rules Return to Planning Commission With Staff Answers on Water, Taxes",
@@ -115110,6 +115110,138 @@
       "locality": "Brewster County",
       "state": "TX",
       "first_seen": "2017-11-20",
+      "last_seen": "2026-10-14"
+    },
+    {
+      "title": "Moffat County considers data center regulations as residents, experts debate safeguards",
+      "outlet": "CraigDailyPress.com",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbElJUWpHRXo1STRJY3ZfZFNrellhRnUzTGRPMW01NVZuQlk4U1Q2QkxGYS1IbUhSdkNVMVFaX2dFbkdISzRiZ24yLXNsNDYweDJhQkdESkRVUGlVSXpDYkZMdHJVTzZseGdFOEh5SlA2cDI2MVZMMDFWSkVvUXg5b3p4OUl3VWE1SktiNnVmR2N6SElxbjhEcldZTlJFVXNpZ2FLeHoycEhUc0xSVk4xYi1XWTFJVzZVeElqdndkcGQtdw?oc=5",
+      "published": "Wed, 14 Oct 2026 12:15:57 GMT",
+      "published_iso": "2026-10-14T12:15:57+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14"
+    },
+    {
+      "title": "Yates County residents push back against proposed AI data center near Seneca Lake",
+      "outlet": "RochesterFirst",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQN0dBVzZ5LVU5TGV2SmgyY1k3WFlsTWRYRkJYb1FBWk9KUVVOSFl1VkZvdWZLdzRwZ2c5U0lVMDNwdDZfUkY4TVAwQVZ5dmVMOXJBMWY2MGpnVG13WDNOaXZJbEp3LUlOLW9xT1VxMFcwdC1VVjZOTHFiRFJqak5jRmdONzVpY3lObEVnTDFqLXdCSHZTR0ZXWDBUbjZISlJyMXRvOU9iMGZRcjNGSWhRUi0xQnNOYWVQdjZGcWpjd2R0dUxKV19ITm1uLXpOd9IBzgFBVV95cUxQN0dBVzZ5LVU5TGV2SmgyY1k3WFlsTWRYRkJYb1FBWk9KUVVOSFl1VkZvdWZLdzRwZ2c5U0lVMDNwdDZfUkY4TVAwQVZ5dmVMOXJBMWY2MGpnVG13WDNOaXZJbEp3LUlOLW9xT1VxMFcwdC1VVjZOTHFiRFJqak5jRmdONzVpY3lObEVnTDFqLXdCSHZTR0ZXWDBUbjZISlJyMXRvOU9iMGZRcjNGSWhRUi0xQnNOYWVQdjZGcWpjd2R0dUxKV19ITm1uLXpOdw?oc=5",
+      "published": "Tue, 13 Oct 2026 23:07:09 GMT",
+      "published_iso": "2026-10-13T23:07:09+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-14"
+    },
+    {
+      "title": "Mount Pleasant finalizes 2-year data center development pause",
+      "outlet": "Live 5 News",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVENmcTBFYWVRdHl3SXpOb3ZnUHZQZEtsRVhvekNPVDM4U2Rsb2RLVHFhMkNKdGZ5ZDlCTkpCSk5vTHNpdUhvc3dBWWJ6TGcxMUdOSGVaOHpucFlkbXh3WFBoNHM5LWRfSE56djY2bEFKVXpscWc4RkZPMzl4NTRhSnpZNk1XX3hET0ozcjR6eEtUQVp5VGRsMTI1QlNNZXRE0gG0AUFVX3lxTE9wcUtKODQwdkxIWHpCSUc0WmI1c3hyXzB0WGxkSE9TaEY4Wk4zaVlLZXFDMlFZT3c5TkNabmVRc0VaZW9DdVZOTWpmVnp3cE1pSlVKNzB5cjQ4ZUI1d3FVc3EyblpfaThTaUNUZ3hGMC03VFVzOVlfWFlsOXNzclROTVZNZThvb2dmd1A3ejVhRERKWGF0VWxSdDIxbnFjQkI3WFYyWWRCSm5lbVlSQzlDcEVGQQ?oc=5",
+      "published": "Wed, 14 Oct 2026 03:15:00 GMT",
+      "published_iso": "2026-10-14T03:15:00+00:00",
+      "locality": "Mount Pleasant",
+      "state": "WI",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14"
+    },
+    {
+      "title": "Butler Twp. data center ordinance approved but may be adjusted in the future",
+      "outlet": "Times Leader",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMEJfQkZnSTVkR2VtVGNTZlY0TWxNbXF1TEl1QzJGdUFTdjU0eEJEZ1ItOGpadnYzd056MWs2cEZEQ0xzTlBld2x4NzdTRWtXY3lROVBCS2pvRWo0di1lZ0FUTFNDTEswd0s2eUxBd1ptaC1kTUVJOFFlOU9CRjlMeFB0S2M5MzNKR0ZaOWkwZ2oxWEpFa2dmS3I4N2N1Z3hOVEtPanBtcHIyY3VzOVBYa2RjQTg0Xzg?oc=5",
+      "published": "Wed, 14 Oct 2026 01:50:00 GMT",
+      "published_iso": "2026-10-14T01:50:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14"
+    },
+    {
+      "title": "2028 Democratic Hopefuls Take on Data Centers",
+      "outlet": "The Nation",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE50WWRXTmNRaEhfWnV4bzRaUnV5T0pXZWFSdF83aFNVdHF5VkpxcVVaVDBzTC1XbGlBbmNNU3ZYLTdBdmpmYlc3UERnZ0p6LTIzcmtianRuOUdhWXh1aHVNQlVoWdIBogFBVV95cUxOLTFFR2NENWFaR3NySm43cDEzTUduQ0x1YTBqeUFLWEhUT1FRTmc4QlFqRU9VaEt0WkhUN2dMYWZtRU1hNmR4VS0xSTZVX1IyMEstRHBVNEkySC13UUlBTWtMMzJjbjdpZk5QRzBZdUxya1lidlNtVEc1bWFqakUtbXh4ZDVxM0FrSTlPeXVCVVctdWQyMThBcjNkRk5jcXRZZEE?oc=5",
+      "published": "Wed, 14 Oct 2026 09:11:40 GMT",
+      "published_iso": "2026-10-14T09:11:40+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14"
+    },
+    {
+      "title": "A data center in N.J. leaked 5,000 gallons of diesel fuel. How much is left?",
+      "outlet": "The Audubon County Advocate Journal",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOZFZCVG1UZUkydkdVMGFINnFRZXdlOGQxaklQZllRYVZXYkh1UnpDNVFCa0xJNkh0bGZab09nbmV0Nk5kSGpRaVhPRGlyUzB2M1hBQ0RzX0JIOXRtcER0TjNObFc5QjZVclBTd0dXeHVKcmlwc2d2RlNqbloxYTB2OVh3el9GUHM?oc=5",
+      "published": "Wed, 07 Oct 2026 23:04:55 GMT",
+      "published_iso": "2026-10-07T23:04:55+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-14"
+    },
+    {
+      "title": "Equinix Releases Incident Report Into Secaucus Fuel Spill Local Officials Share Update",
+      "outlet": "News12 | New Jersey",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPeUtBeGZLM1NSY2lBWldrUGpZSUlPb2t4akxVc3ZCTmtCSDEwWms3UnB4b2FGYjJoeWNCVjBKYUZVMDg1NVNTVWU2blFpaTRJbURBSmxxZU5VVzlYMS1ZR3ppaWNXMno5cWtzWVZBWkpteGw0UEt6VktLMzY5aWJLbTV2S0QzbmlrNW5rTVdTVHMxMVNtclRRdlRKdFpDclgzZHY1a0NsSE9QTkJuTzh1WVdqcVI5UTNuaVdTTXVoREtaLWJhZE5EX0lkcEFPY0lrb0lmRDN4emVVRFJnU0VEZWVjUQ?oc=5",
+      "published": "Wed, 14 Oct 2026 02:04:22 GMT",
+      "published_iso": "2026-10-14T02:04:22+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14"
+    },
+    {
+      "title": "Why AI Data Center Cooling Needs to Get Smarter",
+      "outlet": "Data Center Knowledge",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPMzFVVm5RbFZXbmZvNDVsd0JuOUVmNmdFVFFIWlptdWp6VjVxVVROSU82LVEteUJMNG9XVXl6cVhPaGNHTGNKQm1zUzBkQTVVZGlIeGRrQnFXTkE2Nzh5eFA3M3VCOElFc0ViczJMbXpHVHh3X2s4Y3FQUjVYYk5oeXgtaHhwRDJTejhuUV9VSGk5MnNhTHc?oc=5",
+      "published": "Wed, 14 Oct 2026 11:43:14 GMT",
+      "published_iso": "2026-10-14T11:43:14+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14"
+    },
+    {
+      "title": "CSRA Democrats speak out against Rick Jackson’s stance on data centers",
+      "outlet": "WJBF",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxON2Fsc3lwMjN6bEZqZ0pWY1R0YkhJVFd1NWtVamFGRU1VbnN6WklzUjZpLWZYMUlBVzk2T0tSTERlOEdBa1dLZS1YUHVTenRxTlFoaHYybllVYnJxUWFSYUdZNl85cGxvazhqeVAzenc0RmdRb0ZyZmNsV2tEMFNnV0loamc4Q1VWdk1sTEJ0cTNWLTRIUWpiVldIc1ZGT0hBMXfSAaIBQVVfeXFMTjdhbHN5cDIzemxGamdKVmNUdGJISVRXdTVrVWphRkVNVW5zelpJc1I2aS1mWDFJQVc5Nk9LUkxEZThHQWtXS2UtWFB1U3p0cU5RaGh2Mm5ZVWJycVFhUmFHWTZfOXBsb2s4anlQM3p3NEZnUW9GcmZjbFdrRDBTZ1dJaGpnOENVVnZNbExCdHEzVi00SFFqYlZXSHNWRk9IQTF3?oc=5",
+      "published": "Mon, 12 Oct 2026 16:53:31 GMT",
+      "published_iso": "2026-10-12T16:53:31+00:00",
+      "locality": "Jackson",
+      "state": "MS",
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-14"
+    },
+    {
+      "title": "CleanSpark sells more Bitcoin than mined in Sep...",
+      "outlet": "Pluang",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOcG5CQ2tadWpVM0xSSFRBeDFURmd4bFRid045bFZVbTRfYk9vaFFLNWh5U2NLT21ucDhVRm8zbVZ2OWE1SDZDSjRLY2Z3WGJicFdIUV9oRTVmaUp1bzZJcFdYeDRPSTlfanhVYk5YT1hzMWVlVXotbkRPS1dOeFh0OE56OGlNZw?oc=5",
+      "published": "Sat, 10 Oct 2026 14:24:19 GMT",
+      "published_iso": "2026-10-10T14:24:19+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-10-10",
+      "last_seen": "2026-10-14"
+    },
+    {
+      "title": "Texas agency sues to stop release of data center records that it says could aid terrorists",
+      "outlet": "KWTX",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQRUhGOEwwOWh5b0Q4TXd2WXY3QmtHeWN5T3ZaMTFJVTNZczFiYWJDTHNOREQxZHc0ZnAtQmw4SllpSzlrOFpkdGEzdFdHUkpoUUlNNVZYQkRCaUlORV82bUUyU0NWQ1oxSHVFOUxSN09lR3oxSUFLcm9Xdm9fMHM3VC1OOUh1dWRrWWhtM2VMTm15U1Z6M1JSalF4VFRaQTdrb2hCVEsxLWdJRmdxcWFkNmdtRHg1bm5I0gHMAUFVX3lxTFB0X05Qb0Q1ZkRjQzlRVWlTdjV5b3dOVEFqdF9QbmFlOXdCLTNMVjRUUU9VVHFuZGJZaGVUODFaM2ZEM1dUTWFCWHdCaVFiWWx2ZzZ1U0VqemJ3THBWYmJWdWctZXJPUWRMYUZ5dWVfc29vZ1BDU3JOdXJnVzZnRWM0V0Z2RTZOWnRmRHJjbE50Mm9MUHUxWlBmenl6WFdpZm5HbThyUDBLODBtUHpDcl9IcVkydEF5LXN0WnVsRjBNaTVKeEotRE5zWlVyNA?oc=5",
+      "published": "Wed, 07 Oct 2026 16:35:00 GMT",
+      "published_iso": "2026-10-07T16:35:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-14"
+    },
+    {
+      "title": "Texas rejected a settlement that would have cut a proposed data center from 2,523 acres to 1,375; commiss",
+      "outlet": "The Times of India",
+      "link": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxNQkJ6NlFSdG5QN0NpTVNmczVTOTBueWxCeXc0SVU3NkE1N0gxd25mSlZSbWRIYlRnclF5VjhxY0ctRVVza0VNVlRzWGRpOFgtRVd4TW5lYlMwYWNPcVQwcTZxMlR4d2xFUUI1bzNfYW55QVRDV2VNWGNoa2tia3hVRjJYMEJXaGVhUGNHVVJpZFU5d1VSV2VjTXVUVUZaYkZhY3BzdDNWX3RfUjJMM3Fxcm0weWlPY2ZNVm5jQzZaT0RWbURDYndxSkplQ1l0MU4tZ19xTS13SU9JbE45OHBSUDBlNC0xT3lpSGRyRVl4SnZxeUYzRHR5Q0U1aC1veXJaYXBfN05rZXpWRUJmcmc1VmxMcVhKdHU0YTU3amxZN25laDl2Wnk4N3dzRDVybnJxbFJzMEdnM3VMd3Q0NkZRMDk0VFVWUDFsZjJENU5Dd3VYWG0tUXlIXzlUYTJOUUxhM0lCZG1BUjhMZ3VLRVIybWstTGRwQdIB-wJBVV95cUxNZVlxM1R5ZFBWbjdVc2RHSTVtbUkwQTRKZTVidlBJYW5FbnFZY3JFVnBfVlZzMmx0VXBlalNsWHhFeHZXYmI4UWRyd3RhanRlNklYUUNYZmVlRU5uZG9TYkJ3UWhQUTZGVUNmZ2ppZjJqcmtUc0NxUnlQdlFnc3l2VG5OWVBpR2k0bWFUNzItQnlSWDZqcFI3QjFOSmxIODNrdkxOUmVrVlJLeEkxejhtT2RCeWYyOVM2VEYzajBpZkh4R0llUHFHYjZxTVNORF9FalJJcHFPM2pVd1dneHJvTV92V1Z0ZkZnWFItZUJzWEZSUU14Zmd2YktzaTBhcmd6MW9qSE1KV29OVTV1ck1TX1hfTlVaR0VVcnRteVRzTWhyTEppZzZmMVpSaDJDU2NaVllDUXVqa0VvVHBRSENBZXlkbWw2VTRiWUlFUUJFb292bzdUSEtsQmdWTnppS3RsbEFzTDRkeXk1eWNRUXptUmZrWHI0VE1YUGpn?oc=5",
+      "published": "Wed, 14 Oct 2026 06:48:00 GMT",
+      "published_iso": "2026-10-14T06:48:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-14",
       "last_seen": "2026-10-14"
     }
   ]
