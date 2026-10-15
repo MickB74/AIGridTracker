@@ -1,9 +1,9 @@
-# PA DEP data-center tracker sync — 2026-10-14
+# PA DEP data-center tracker sync — 2026-10-15
 
 Source: https://gis.dep.pa.gov/DataCenterPermitTracker/
 
 - DEP projects on file: **73**
-- DEP permit records: **394**
+- DEP permit records: **375**
 - Added to projects.json: **0**
 - Refreshed: **0**
 - Skipped (already tracked by hand): **16**
