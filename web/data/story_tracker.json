@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 10962,
+  "count": 10974,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -17617,7 +17617,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-10-14"
+      "last_seen": "2026-10-17"
     },
     {
       "title": "Bayonne says no to new data centers",
@@ -55160,7 +55160,7 @@
       "locality": "Starke County",
       "state": "IN",
       "first_seen": "2025-12-04",
-      "last_seen": "2026-10-16"
+      "last_seen": "2026-10-17"
     },
     {
       "title": "Starke County’s public hearing on data center moratorium tonight",
@@ -83716,7 +83716,7 @@
       "locality": "Brewster County",
       "state": "TX",
       "first_seen": "2026-09-18",
-      "last_seen": "2026-10-01"
+      "last_seen": "2026-10-17"
     },
     {
       "title": "Texas sheriffs, judges, ranchers oppose Big Bend border wall plans",
@@ -116177,7 +116177,7 @@
       "locality": "Walker County",
       "state": "GA",
       "first_seen": "2026-10-14",
-      "last_seen": "2026-10-16"
+      "last_seen": "2026-10-17"
     },
     {
       "title": "Bottoms, Jackson face each other for first, and likely only, time in Georgia governor’s race",
@@ -117805,7 +117805,7 @@
       "locality": "Franklin County",
       "state": "GA",
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-16"
+      "last_seen": "2026-10-17"
     },
     {
       "title": "Village of Springville Board sets public hearings for data center moratorium, CDBG projects",
@@ -119620,7 +119620,7 @@
       "locality": "Butler County",
       "state": "OH",
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16"
+      "last_seen": "2026-10-17"
     },
     {
       "title": "East Lyme Bans Data Center, Tightens Short-Term Rental Rules",
@@ -119697,7 +119697,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-16"
+      "last_seen": "2026-10-17"
     },
     {
       "title": "Westfield planning board kills $3 billion data center project",
@@ -120588,6 +120588,138 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-06-22",
+      "last_seen": "2026-10-17"
+    },
+    {
+      "title": "In Massachusetts, residents push to ban future data centers in every district",
+      "outlet": "The Cool Down",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPS1lNNWdFODlBUEpYWDV2bmZWdXRGQm95SzdLX080YVFhY2hYbUZNTG4xN18za1lnRGtVZG1CdlVCdFBIOVlPTUNZUHVBR3JRQkFFQ01SZjU1UVluemdLdDBfTDhPZjAtZUpKcjJXVktzZlQ4WUlQQjhrWjVUY0JLa0FVcERZWXM2eHZwbDItamc?oc=5",
+      "published": "Sat, 17 Oct 2026 20:36:00 GMT",
+      "published_iso": "2026-10-17T20:36:00+00:00",
+      "locality": null,
+      "state": "MA",
+      "first_seen": "2026-10-17",
+      "last_seen": "2026-10-17"
+    },
+    {
+      "title": "Rapid City data center ordinance open house draws in crowd of over 150 residents",
+      "outlet": "Rapid City Journal",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxONWdhOU12U3lmWDlheGlDb2EySXptV0JVSUpyV3R6ZWhSa0F6Q2lfSHlPbzdVbHRnUllZWmQ2Z25WOVMwSzlqY21jQnpKNkx0QnhnQ0lCYVpVMEhBMm1lMi05SGcycEJxQUxyb0llOVNSUkFnWU5pc0V2QlBFVE1yc2Q2c1JJMDJXOUVXTDVoSDdRYlA0d1V3ZGFuYWx3MHFFaGNDQ0RzcDFTbzJkQVE?oc=5",
+      "published": "Thu, 15 Oct 2026 22:00:00 GMT",
+      "published_iso": "2026-10-15T22:00:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-17"
+    },
+    {
+      "title": "‘We don’t trust the companies,’ say Bloomington residents about proposed data centers rules",
+      "outlet": "WEEK | 25 News Now",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPVGpxbVlQMlRmdVNoSVZkLVBNb3VXeDNFV3o3cnUweWtieGRwdG5IcHZpZkVIUW9NZFc4ZzM4X0pITXQtdTVhS2VDU2xUS3dEckxSa081UjFhQk1MMVQ5LVVTS2pnSVYwbGZid2Rjc21VWjdpckExcklCd0lyRjViUDhUMGh2anB5VHVpRlJYVEdfX0xvakRDZU55aDhENF9mZjJpQ1dod2VqM1VUNktHSmJGc1BteTNYWmhLN0Zqa3hJd2dlN1BEWGNRMFBlSXdPN0HSAdIBQVVfeXFMT1RqcW1ZUDJUZnVTaElWZC1QTW91V3gzRVd6N3J1MHlrYnhkcHRuSHB2aWZFSFFvTWRXOGczOF9KSE10LXU1YUtlQ1NsVEt3RHJMUmtPNVIxYUJNTDFUOS1VU0tqZ0lWMGxmYndkY3NtVVo3aXJBMXJJQndJckY1YlA4VDBodmpweVR1aUZSWFRHX19Mb2pEQ2VOeWg4RDRfZmYyaUNXaHdlajNVVDZLR0piRnNQbXkzWFpoSzdGamt4SXdnZTdQRFhjUTBQZUl3TzdB?oc=5",
+      "published": "Sat, 17 Oct 2026 03:10:00 GMT",
+      "published_iso": "2026-10-17T03:10:00+00:00",
+      "locality": "Bloomington",
+      "state": "IL",
+      "first_seen": "2026-10-17",
+      "last_seen": "2026-10-17"
+    },
+    {
+      "title": "New Orleans planners urge council to extend data center ban, while punting on firm rules",
+      "outlet": "NOLA.com",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQNkQtN2N2VjUxN0JfLXI2OW9ncFJVYWF2YjRqRndPaWhPYWNaamZJRHFDS0tkNmxoX3U1NUdkN3NxY0hWSmJacG9fMWt2ZlZsNzByUjdIaHhWV0lYd1FHdGdMV3B6ZzhSWGxNZGFvYVJqNVJ5NzhWS1IxMlNVdGFfLU9kbzc0ZDJRRS1jR0hkNXdKLW5wWGljamJDcXZpQ1dxYWlaZGNiazBZWnVOR0dlOW56Zk1xSE1BbzRlNzdzWEJ5QTdSZFI2RGlUSlZIQdIB0wFBVV95cUxNcXVUNU1kMmRJZ2JoaUlEcXZnNmx4YlMxSTMtZ0UyUnJ5bUczUkppaDNjel9fN0hBUHo3NW5KVXBzUWxaRHZpWXgxQ2ZXakhPcHpwZkozRTkwaWVxT2M3Y19GYXdYdGZSM29weXpGSHVLMUVQZkNJTzFVSmpGYVVyTldRS2M0X1lJN1V0c2t6WUFENWRSM1NhUmhOa090UXVLRUNRa3Fza1UzRmNvRkFWclNlTTNmV3ZKck9mUkp1THFCWTdSdDZ5UTA3ZnlUN0Fkck5V?oc=5",
+      "published": "Thu, 15 Oct 2026 09:00:00 GMT",
+      "published_iso": "2026-10-15T09:00:00+00:00",
+      "locality": "New Orleans",
+      "state": "LA",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-17"
+    },
+    {
+      "title": "West Virginia's rare chestnut grove could be bulldozed to make room for an AI data center",
+      "outlet": "The Cool Down",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPV1F1WGp1N3JvLWJIbENfX2lrS2VPNjB1blVyWTUtWWtUTGJGdC1hU3FjVXpwdmllUDk1VnhTVldSa0M4X1pxSG5OY3owYnJMTVVMeDZja3oySEJGYmh5UmFJNjRlUHdzNDlERUFzNDNKczBLa2o5YWhfX2hvWlBTYUdzNDBXTGhp?oc=5",
+      "published": "Sat, 17 Oct 2026 17:08:00 GMT",
+      "published_iso": "2026-10-17T17:08:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-17",
+      "last_seen": "2026-10-17"
+    },
+    {
+      "title": "Fredericksburg Targets Data Center Secrecy With Proposed NDA Ban: Report",
+      "outlet": "Patch",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPbUZwMUhkc2FIb0FUZU9uNW5kek9CLXBmOW1RaXFDX21FSFk5VDRzTC05dXJ4bzFYcXNjcXBaT2FMZnlNd0JGUXhKeWN2WlFyS0VQZFB0NFRsVWJPaE9tSnE5NkRqa3BvRlZzWVlxM3dhZ3NxbmllUmgxVWF3YkI2eEtzUFNtMEJpTVl4NWFubktOOUxFbHB2NjNvWTZOLWJKUDI2b0M0aWMtWHFq?oc=5",
+      "published": "Fri, 16 Oct 2026 18:35:35 GMT",
+      "published_iso": "2026-10-16T18:35:35+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-17"
+    },
+    {
+      "title": "Paxton Instructs Data Centers To Provide Up To Date Reporting On Water Usage",
+      "outlet": "News Radio 1200 WOAI",
+      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOMHBQOU16X2ZlalhXZ05KV0ZhbmtDaVhPem4yajA1NjAxQmhUUUpUcWNyc3FUN0FHVG15MEVDeG9oNmx2LWFiSzBsYlZZLUNWemI3Q3NKaVcxMGEtR1J1aHJZQjBRUVpjOU12c2hKUTRpaTkyUmFYc2x3TUJyUlIyTEtJOUtIWG05TVZPVUF6Y0Y2MWFlNTdVLXF5a3ZEcC1FV1FDR2t6T1IyZS1ISVEtZV8zZHFWSEtrbUZucVRVQWZ1cFh0aXJmZkdQQ3RpRGs0cmVtb1ZheWhMUGpocUpHUkhIWEZjLXpw?oc=5",
+      "published": "Thu, 15 Oct 2026 17:16:10 GMT",
+      "published_iso": "2026-10-15T17:16:10+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-17"
+    },
+    {
+      "title": "How Much Water? Paxton Demands Answers From 156 Texas Data Center Projects",
+      "outlet": "WBAP",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZ08yNVdWNklGeFFxaEhMUWxLWkwycm0wYWJTU2RTa1NzRW9wUDdOVHVndUxENnNGLWFpcnczcEw1aXV4NWNiMzN3WGVUeU1NVjN4VVBZMk1nX3B3M0ZCckVSMV9sdTdaWlliYUVhcjlRX3ZjU2ZlSGVQNHBLVklscU5YMWk5Zml6MlA2X19zUk9oWDROVlU4Q2VHUFlMeWJPQmlVbXdOUVVqZw?oc=5",
+      "published": "Sat, 17 Oct 2026 21:37:22 GMT",
+      "published_iso": "2026-10-17T21:37:22+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-17",
+      "last_seen": "2026-10-17"
+    },
+    {
+      "title": "Multiple fire crews extinguish house fire near Eagle Lake in Cass County",
+      "outlet": "WSBT",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNVEY0bV84cHNGU3A2TU1xNU1jcW5EUHBNM1VXS05wLWFCYkRSNlBWN0diZEtNVkNjTzVYZS1SRERPUy1YUE9NQzZEcEY4Z2gzTjI5ME9KdDgxVThMNnJNeWU1bTlMOWZJY2N2dEdRa2NEc3VMMERsU0I2SEx2U1pQWXBvemdqUHZfUXlzWHFRaThNZ1pfSEhQbEY3SHhrOU4wenA2T2FiRUtLRnM3b3c?oc=5",
+      "published": "Sat, 22 Nov 2025 08:00:00 GMT",
+      "published_iso": "2025-11-22T08:00:00+00:00",
+      "locality": "Cass County",
+      "state": "IN",
+      "first_seen": "2025-11-22",
+      "last_seen": "2026-10-17"
+    },
+    {
+      "title": "One injured in fiery crash in Cass County",
+      "outlet": "WSBT",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNT1U5WTZPX3VFN3lsREE2c25jQl9YVE5XWEpPQmUwa0dVdEg4cE9jZ3NJVGhFYmxwWFRZbmVXdGI4cWJyWng3SV9tbGFVQWx2WENUM1MyWjJIaGppR1EzQUhSSDVLZjQtS0gtOEpCYVZWZlVmMVJ3X0lkbDBuZEt6M1FLOW1tWkVBalNiYk5VTF8xRkFOX2FfRmViRjZySml4X2lqcWZzdU5MNk82R2FxeC1yM0tkTFJLNUc2MG1JUU5KcHNhOVBvVUF0WTJ0b2NJS2pHQmJTc1kwTkJr?oc=5",
+      "published": "Sat, 20 Sep 2025 07:00:00 GMT",
+      "published_iso": "2025-09-20T07:00:00+00:00",
+      "locality": "Cass County",
+      "state": "IN",
+      "first_seen": "2025-09-20",
+      "last_seen": "2026-10-17"
+    },
+    {
+      "title": "Former Cass County Prosecutor Victor Fitz calls out county leaders",
+      "outlet": "WSBT",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPTm5EamdnRHFfY3JHbm9EYXgzaTdpYXljZDNPX09zbDFJWFNDeWdwaXdPTl9iS21fRE5YWHZqWWZRMHgxVGhDbE15cUwydVdKQUl0QzJsbVhaZ1RkX0lJekx2eVo5YWVuUVRlNXlsTUZOazRHR3V6akNMTlIxdDFKSVViX1EwaHhINi1DQV9UOGljVnBOcGp5V1NLWHFISEpnQkl2eHdqZ0JOMEpCRURKTm5HdWJVUzdPS0F2NnZJZ1VzTl81WFhucFB3?oc=5",
+      "published": "Wed, 27 May 2026 07:00:00 GMT",
+      "published_iso": "2026-05-27T07:00:00+00:00",
+      "locality": "Cass County",
+      "state": "IN",
+      "first_seen": "2026-05-27",
+      "last_seen": "2026-10-17"
+    },
+    {
+      "title": "One dead in single vehicle crash in Silver Creek Township in Cass County",
+      "outlet": "WSBT",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOSVlaaXFFZ05EVC1BekZtVUNYRlZxbTBzckl3LUNBeHA3LS1ndmtXcWNpMW82RGRtV3U2NjJaZTdoY2xPcG5BcWl4QTFDVDBKTXAtU3NXLW5EbGN1WjNLYUtYNzBkcGZDNUZiTHdZSjZjRHRISzlrNm8wLUlXY0M4dlphR1RGWTNwSWpnSWpNaDkwNVZ0NnRUWkdxUlRFcEFBZWxiNlBCYXg3Y2QycjJ4emE1QVdTWTg5UUZwUnlLSFJoYmhVXzh0UE1xaGJyN0hy?oc=5",
+      "published": "Thu, 10 Sep 2026 07:00:00 GMT",
+      "published_iso": "2026-09-10T07:00:00+00:00",
+      "locality": "Cass County",
+      "state": "IN",
+      "first_seen": "2026-09-10",
       "last_seen": "2026-10-17"
     }
   ]
