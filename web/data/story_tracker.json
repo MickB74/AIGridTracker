@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 11023,
+  "count": 11032,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -57327,7 +57327,7 @@
       "locality": "Jeffersonville",
       "state": "IN",
       "first_seen": "2025-10-04",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-10-18"
     },
     {
       "title": "Diamond Lake Association calls for data center moratorium in Cass County",
@@ -78139,7 +78139,7 @@
       "locality": "Howard County",
       "state": "IN",
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-30"
+      "last_seen": "2026-10-18"
     },
     {
       "title": "Clarendon OKs 6-month pause on data centers as residents push for more info on Project 59",
@@ -111150,7 +111150,7 @@
       "locality": null,
       "state": "DE",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-16"
+      "last_seen": "2026-10-18"
     },
     {
       "title": "Equinix finalizing incident report after fuel spill at NY2 data center in New Jersey",
@@ -111227,7 +111227,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-12",
-      "last_seen": "2026-10-17"
+      "last_seen": "2026-10-18"
     },
     {
       "title": "Feds Predict Record Power Use in 2026, 2027 Due to Data Cent...",
@@ -111425,7 +111425,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-10-12",
-      "last_seen": "2026-10-17"
+      "last_seen": "2026-10-18"
     },
     {
       "title": "Georgia fines 2 companies over data center, power plant permit violations",
@@ -111645,7 +111645,7 @@
       "locality": "Memphis",
       "state": "TN",
       "first_seen": "2026-10-12",
-      "last_seen": "2026-10-16"
+      "last_seen": "2026-10-18"
     },
     {
       "title": "Sherrill joins bipartisan effort to tackle rising energy costs",
@@ -120214,7 +120214,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-17"
+      "last_seen": "2026-10-18"
     },
     {
       "title": "The state of Wisconsin has signed multiple NDAs for data center development deals",
@@ -120621,7 +120621,7 @@
       "locality": "Bloomington",
       "state": "IL",
       "first_seen": "2026-10-17",
-      "last_seen": "2026-10-17"
+      "last_seen": "2026-10-18"
     },
     {
       "title": "New Orleans planners urge council to extend data center ban, while punting on firm rules",
@@ -121259,6 +121259,105 @@
       "locality": "Starke County",
       "state": "IN",
       "first_seen": "2026-02-02",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "Gilbert residents could get new protections from data centers",
+      "outlet": "azcentral.com and The Arizona Republic",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQR3dGbVVBWndGZ2UxaEYzM2dmbmxXVk95NEIzRmNZNFlLaXlKRjhEdzhxR3ZycnhveFZ0aHNkUTFncnUxZlFZeHc0bnRybUp3WWFQa1dfWEU2VFNxUkZTd0ZDSExSb2IzWkhKckg5TDgwXzROZ21fWDNTNmp6RUt4eG5RZlFFZWR6dnk4d3EtYS1QczdldlQtWTVBN3p5bXp3aHNzcHgwRzRlUEE2NHBVWHZjZFptd2RkMnNjY051MFRsNm16eGVR?oc=5",
+      "published": "Thu, 15 Oct 2026 11:02:00 GMT",
+      "published_iso": "2026-10-15T11:02:00+00:00",
+      "locality": null,
+      "state": "AZ",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "JD Vance Says Data Centers Have To Be ‘Good Citizens’ As He Touts Benefits",
+      "outlet": "Newsweek",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOVUctbU5kWktaOXROVXdkZWpBN0RUT2NjMDd6S3kyMGNzdVJEdURvTHVieE44N2VIeEl6WkcwdldmRHhvckNHeEc1Z0hsOTNxeEhoTzkxQ0M1bktVdUYwQjhXaWY1aUEwcDhqUEVIaUpCc1Y0OGEwWE43XzZidlNERVZoM3NKc0tkejdwZm0xbWlZSWtPb1dhNF94SDVqS3gwWDFVdlgzOTQ5QQ?oc=5",
+      "published": "Sun, 18 Oct 2026 11:19:00 GMT",
+      "published_iso": "2026-10-18T11:19:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "Data center planned on Dauphin golf course moves forward despite opposition",
+      "outlet": "ABC27",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMXJ4SFpUcFVFWkFyUFd6ZlBrN2hzN1BIQUJvTnI0V3VXb2pCamY3alY1VFBfR2hReExpclI2TmdUMmFHZWM3OGt5QXdkMjVrUF9WczFVYUhIZDg1RnhUTXhITE00SGw0NFFUNGUwVzFFcXN0bTUzQnkwdVlIWXZPTE12cWdFbU9JQ1JEdkhnOG82VGZLUEJ1dzBXeXJHMFJIZ004aG9LbnVsVzh2MHZndVZ4Z9IBswFBVV95cUxOMXJ4SFpUcFVFWkFyUFd6ZlBrN2hzN1BIQUJvTnI0V3VXb2pCamY3alY1VFBfR2hReExpclI2TmdUMmFHZWM3OGt5QXdkMjVrUF9WczFVYUhIZDg1RnhUTXhITE00SGw0NFFUNGUwVzFFcXN0bTUzQnkwdVlIWXZPTE12cWdFbU9JQ1JEdkhnOG82VGZLUEJ1dzBXeXJHMFJIZ004aG9LbnVsVzh2MHZndVZ4Zw?oc=5",
+      "published": "Thu, 15 Oct 2026 18:57:26 GMT",
+      "published_iso": "2026-10-15T18:57:26+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "Salix council clarifies no data center moratorium in place, approves MOU with Google",
+      "outlet": "KTIV",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQSEZhNHRxbmVOVWtvam1lQVdkWV84LXh2NjR0Sy1vM0VhRktyR1VjdmtuRTF5V005SlFKTmRzcTBobkx3Mi1jdTFsU3VMcmFLNHhHbHFYMUU0SGV6R0Y4b2daUHlWNFF5TkRGaFdOS3F0TVNvdUN6cThpYUhna2h5WUFneGhFRF8yUm9oalhWVmpVS1pPOUtQSnBRNDdKcHE4RkowQW1UZTN0dWtjQ1k5R0doeFF6RHQ5NUxv?oc=5",
+      "published": "Thu, 15 Oct 2026 11:54:00 GMT",
+      "published_iso": "2026-10-15T11:54:00+00:00",
+      "locality": "Salix",
+      "state": "IA",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "Push for Virginia Data Center Moratorium Supported at Leesburg Rally",
+      "outlet": "LoudounNow.com",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPWFVzTEZXZHlqN3F0S3FOM3N5ZWg0MHJ5RWNUcUM4QVpXa2drRVUxaUthX0Ftb01zV0JhRDV3T3daTXdRcndCbVlxWGxESXpaWXNsQVRNbjZCTWVNcmN3eFBCM2FNR1VTZ09helZJY1o3N3laemdtUWVqTjd2d2VDdy1HRno2azRJaUJIc0hBeEdEWGNlZzBKVVdPdlcwMUZhS1BTaXRWck9kNEM0NFZfMnIxZDhlTWRnVjZVYTZQcURTeE5DS0tfejBfVkVTcU1IM3M0YTR6VEhJVWp2SHlZSlhUYnY?oc=5",
+      "published": "Sun, 18 Oct 2026 15:29:00 GMT",
+      "published_iso": "2026-10-18T15:29:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "N.J.’s union tradespeople know how to build data centers responsibly | Opinion",
+      "outlet": "NJ.com",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVmFkVmZsemRpSkl3QU1MMnYyN1pMQUZtVFJvWm5acGlnd28xaEk1UXJEcFpTUndOaVBiTk5XQ01qYjFxcHlza2M3dG5feC04R0xWTXFkRmpINS1oZDR4TlR5Ql9aSTJPTU5IUVp4d2toMVdBNVk1N256UHAyWEd3SEhlc1Y5SDZvQmpkM1k5STA5VHRsTWFKQUw2bkdnR2FXXy1Zb3MxRFJJVDFVVEJiLVB5QQ?oc=5",
+      "published": "Sun, 18 Oct 2026 17:00:00 GMT",
+      "published_iso": "2026-10-18T17:00:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "Georgia’s data center boom raises questions about power costs and economic growth",
+      "outlet": "WRBL",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPVW51VWhlRlpkN2xySkhpMnk1QjBaYTA0d21MNnlZNXVQWHA2NU1rUlFxUUlaSE1qMllFV1E1SUs1VFVCS01qUy1uQjBkQzJWdFVwY3Z0NUdLRWVSOHBMdlBqaXZKNlFCTDF2UWNwcXY3ZVQtelRsUWtYT09KaklwdVppMTFuNzdpV21tOGhwVVpJbGFGeUZGM0VoM3d2ci1YdUpodTI2NFZjeG_SAbABQVVfeXFMTmpMZjllaU5BMEJYQkZDM3UwX2RmWHFDRFlVZm54eGdMYUwyLWFVUThfSUJYcVdhOWFvbTBoSmd3VEhMREllMXNWcnlIUl9uOVN2S3F1aVJnODNsRDBzaUtFOTdjd0t4MGgxcmxkRTBHUzkwTGRTaEZSZ1I1Z2lIdkdLU1paX28xQUtxOW9qeVptNUxiSGNyZVRFWHg4YmpiRGNoOGhNZlhpbUZQLXJJYTI?oc=5",
+      "published": "Fri, 16 Oct 2026 13:52:52 GMT",
+      "published_iso": "2026-10-16T13:52:52+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "Carrier Connect expands data center capacity by 52% with new 4MW lease in Alpharetta, Georgia.",
+      "outlet": "Pluang",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQb09USVNYOEMtU0hZZFliUlRPY3BaLUpucEJqMzg4RVNEeDQ1aE1KX0VkU2VpajZTMUxIZXdOWE91TTJMT1N1dVd0QWxtU0hFU2NDbmZvdW80Y1Z5QWpKa2FuUnMxLWVhYXJoc1FtZnBYMVdFb3ZPcklNMm5EUXd6OGNwY3VOc2J0M3h0ank1eXdkY2VOZnVMVThZdDdRXy11LU50eURsZ1Ywdw?oc=5",
+      "published": "Thu, 15 Oct 2026 07:00:00 GMT",
+      "published_iso": "2026-10-15T07:00:00+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "‘Failed Mayor’: Gov. Candidate Keisha Bottoms Faces Backlash for Plan to Pause Data Centers in Georgia",
+      "outlet": "The Nerd Stash",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOMW9ub3RyMDlSMTlUaTRlNG9wZkNfUmRINFFwMXdmd3UwZklUa3FwN2tmeVpSWlNFd0xJeHhicFluSGFuMWkwTEpPeTEwR05BZ1hyZzdYV1drenNBVEhvVm95U0RhNllELVIzemtjSXVLNm9FNW82d2hBam40OG5vZGRjOGhla3lyUGJpRG9XYlhLcXdmUWZrWHc0a19iQlNIaDNaZVJKX1cxYUFBbzZ6eU85Z0tTb1g3R2tSUHpUQzNTUQ?oc=5",
+      "published": "Sun, 18 Oct 2026 15:33:14 GMT",
+      "published_iso": "2026-10-18T15:33:14+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-10-18",
       "last_seen": "2026-10-18"
     }
   ]
