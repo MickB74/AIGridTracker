@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 11015,
+  "count": 11023,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -75653,7 +75653,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-04-18",
-      "last_seen": "2026-09-17"
+      "last_seen": "2026-10-18"
     },
     {
       "title": "37-year-old man suffers life-threatening injuries after crashing into utility pole, barn in Cass County",
@@ -99303,7 +99303,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-06"
+      "last_seen": "2026-10-18"
     },
     {
       "title": "McHenry County mulls data center moratorium",
@@ -109269,7 +109269,7 @@
       "locality": "Chesterfield",
       "state": "NJ",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-13"
+      "last_seen": "2026-10-18"
     },
     {
       "title": "RTD reporting on Google data center plans",
@@ -111315,7 +111315,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-12",
-      "last_seen": "2026-10-16"
+      "last_seen": "2026-10-18"
     },
     {
       "title": "Dominion-NextEra merger hearing focused on rates, data centers",
@@ -112393,7 +112393,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-13",
-      "last_seen": "2026-10-16"
+      "last_seen": "2026-10-18"
     },
     {
       "title": "Loudoun County, other Virginia localities consider hitting the brakes on data center development",
@@ -119345,7 +119345,7 @@
       "locality": "Howell Township",
       "state": "NJ",
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-17"
+      "last_seen": "2026-10-18"
     },
     {
       "title": "What's at stake in Minnesota's data center debate",
@@ -121171,6 +121171,94 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2023-10-25",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "Guilford County commissioners hear public input on proposed data centers",
+      "outlet": "WXLV",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPOVhOR01GVndOVXpzZ0hZWmVIZGM3RHRxWDZRTEdIZUVhMmZJM1RvVFlrYnl4bG5VQndBdGd1T3M2QWx0UXhhSlR4aWRyRUhHRkJVZENSLUxIYUpLQWxOVFBPZzJxQ25kcExiWFhYQTVma0pUbDFLNVJyOXN1ZVVlR29Fa2U5bTBsREh5dVJiYjc2Uk1oMjZONVRqRWR6M1I5cWc4eVFCSHNkNkE?oc=5",
+      "published": "Thu, 15 Oct 2026 07:00:00 GMT",
+      "published_iso": "2026-10-15T07:00:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "Lurie Signs 45-Day Data Center Moratorium",
+      "outlet": "GrowSF",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB1Sy1qaFh3QU92TGVoNVNrMmstal9jVmt5Y25zek1KZ1YxdHRVOFNaajNhWVdVM1liWTBDaTVrU18wS25Mb0RoWUlkY1ZNajFDVmN0b2ptd0Y5c2lzemhDUHZKeXFHT01DSkllUENBZTJMWF9mTzBiRGJB?oc=5",
+      "published": "Fri, 16 Oct 2026 22:33:59 GMT",
+      "published_iso": "2026-10-16T22:33:59+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "Salix council clarifies no data center moratorium in place, approves MOU with Google",
+      "outlet": "Valley News Live",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNdDhmc1dtSy13RE9scFZvc21jYlR5bG40eG50RHhtRGVXZ1pEQXhUYVBGVG9oMzhlMzJPVmdNSTlFa0hsQmlWQ3NpM0ZoV0hZSkNXdG5qNU12ZDYxbWxfVlFRUDM1dE1DLXE2eUc3QjJVck9NanctcXpzdlR3bk5lS2hmSE43YzNzeTRtOFg2a2hCaldxRU51bHF1RUFSSjVaUWRWcUJPOGk5cU5zVVFiR3dkcEszdFV5Njh1d1h4UG5SS1NweGd1Skotaw?oc=5",
+      "published": "Thu, 15 Oct 2026 11:54:00 GMT",
+      "published_iso": "2026-10-15T11:54:00+00:00",
+      "locality": "Salix",
+      "state": "IA",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "An Arkansas Mom Obtained Public Records About a New Data Center. Then She Got Sued.",
+      "outlet": "The Intercept",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0yMDNHM2Q1OU5telFrMVQ3Y3JWV1hpLW1KN25La2J5Ui05R1hxRDk5VTNuQUhGOUlNRjdWT2Y4RHg4YzB6eENFODJBUGVLNUNfa2FjTG9Ybks3RGxfcl9YNHdpbmpLVGllMUJEVVFrcEtvYWdtQ0NUcQ?oc=5",
+      "published": "Tue, 13 Oct 2026 10:51:00 GMT",
+      "published_iso": "2026-10-13T10:51:00+00:00",
+      "locality": null,
+      "state": "AR",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "Wallington NJ Scraps Data Center Plan for Dairy Site",
+      "outlet": "Hoodline",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOOElncy03R2dHQWpMS3J4azlYMmNNSmQ5U0JwRWNjLWRSUU1HcUJLcTZUbFFTa1hhalVBM3ZHMUYzTE9mcjM1dk5Sd2VlSmgyS09SM3lXYm9xQkJCbUEzcHdoaGFSbklaaEcxTDdYdDJXT0dUNWxrV1l4LVJtUHpsejBzQVM4OUhNd0I1S2dlOU80TXJ6dzFONERwZWtSOU9aR1E?oc=5",
+      "published": "Sun, 18 Oct 2026 12:53:26 GMT",
+      "published_iso": "2026-10-18T12:53:26+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "More data centers headed to San Antonio. City Council will vote on data center regulations",
+      "outlet": "KABB",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOQ1I2dmtrbi1fU2JPdTFDUDFxWWhDSTlUMm5McmJGNy1mamRQM3llamNYaDU1VncwZm5mZkpqX3ZHd3Z5d1liLXl4U0FfWFRXelhXSDhNLVNpYVRvR3dTdDd6U2FUZ1pWdVoyRFA2LVpvUTVHQXVvRnpheXI1b2VoMkdsUU5LZVF3U2phWFVNY1BvWDlYQ3RXNVFmZGE4ZzZsVzRkMDQ1b0h2Qmxvdm9QeVJWRTNtZ1BCdjFRR0RHUlEwUzZQUHFVY1piVGI?oc=5",
+      "published": "Wed, 14 Oct 2026 03:50:29 GMT",
+      "published_iso": "2026-10-14T03:50:29+00:00",
+      "locality": "San Antonio",
+      "state": "TX",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "She was building her dream home. Then came a data center's 'minor' power plant on a shortcut permit",
+      "outlet": "Straight Arrow",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQVHA2NlVJRngySmg2eTNLajJWSUtvQkZoQkloZno1QTBTLWhxUFlxVXh0ZVhmb3RORldjNFJRcWw3Sy1DTXhRU0ZzV1VZRTNIOWdZamlmU0RvWGxCTHdJYVh6dUJ4QlV0bktyTGdPRUc5ZmlzTElFUFlvSFBmSEFLMlQtX2NSa3E4a3lqOGZ6eHdFb1VGWmZ0Rl9oUjdkdkJjMUhyaWVIdjNUUHFOTFBmSzFmOUdIQ0pGNmZQZk51Yw?oc=5",
+      "published": "Sun, 18 Oct 2026 13:00:00 GMT",
+      "published_iso": "2026-10-18T13:00:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18"
+    },
+    {
+      "title": "One person seriously injured after three vehicle crash in Starke County",
+      "outlet": "WSBT",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxORWE2YnQxbC11QzNheVB5cEx2QlNMek9MZzVwWmFyblZEcWl4WE44eXZ4eGdvUnVsd2V5N2hvTHoxY3J3WnpldDF6YXExZVNmYzYtV2NOc2xvX0d4bGZNSGRDd05ZV3FhMElfTE4xdTFRVC1PTFBoVnE3c0ljUFpyR3JEZw?oc=5",
+      "published": "Mon, 02 Feb 2026 08:00:00 GMT",
+      "published_iso": "2026-02-02T08:00:00+00:00",
+      "locality": "Starke County",
+      "state": "IN",
+      "first_seen": "2026-02-02",
       "last_seen": "2026-10-18"
     }
   ]
