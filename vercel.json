@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/week-in-review-2026-10-18",
+      "destination": "/blog/week-in-review-2026-10-18",
+      "permanent": true
+    },
+    {
       "source": "/week-in-review-2026-10-11",
       "destination": "/blog/week-in-review-2026-10-11",
       "permanent": true
@@ -899,16 +904,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/harris-county-ga",
-      "destination": "/states/georgia",
-      "permanent": true
-    },
-    {
-      "source": "/communities/harris-county-ga.html",
-      "destination": "/states/georgia",
-      "permanent": true
-    },
-    {
       "source": "/communities/harrison-county-ky",
       "destination": "/states/kentucky",
       "permanent": true
@@ -1346,16 +1341,6 @@
     {
       "source": "/communities/petersburg-va.html",
       "destination": "/states/virginia",
-      "permanent": true
-    },
-    {
-      "source": "/communities/plymouth-township-pa",
-      "destination": "/states/pennsylvania",
-      "permanent": true
-    },
-    {
-      "source": "/communities/plymouth-township-pa.html",
-      "destination": "/states/pennsylvania",
       "permanent": true
     },
     {

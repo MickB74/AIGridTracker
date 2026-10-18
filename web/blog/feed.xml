@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Week in Review: Oregon&#x27;s Governor Pauses Data Center Permits Statewide, Milwaukee Bans New Ones for a Year, and a $3 Billion Massachusetts Project Dies on a Technicality</title>
+      <link>https://aigridwatch.com/blog/week-in-review-2026-10-18</link>
+      <guid>https://aigridwatch.com/blog/week-in-review-2026-10-18</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Oregon Gov. Tina Kotek ordered state regulators to stop issuing air and water permits for new data centers until mid-2027, and Milwaukee&#x27;s Common Council unanimously passed its own one-year moratorium. In Texas, Hood County commissioners rejected a developer&#x27;s settlement offer and permit appeal despite an explicit threat of a lawsuit, while in Massachusetts, a Planning Board quietly killed a $3-4 billion data center campus by refusing to extend a permit the developer let lapse. Plus: Memphis and Shelby County both advance competing moratorium ordinances, a month-old New Jersey diesel spill still hasn&#x27;t drawn a fine, and West Virginia&#x27;s governor strikes a deal to relocate a rare 200-tree chestnut grove instead of clearing it.</description>
+    </item>
+    <item>
       <title>Week in Review: San Francisco Bans Data Centers in the Birthplace of AI, Texas&#x27;s Own Utility Regulator Sues to Keep Data Center Locations Secret, and Memphis&#x27;s Moratorium Vote Ends in a Brawl</title>
       <link>https://aigridwatch.com/blog/week-in-review-2026-10-11</link>
       <guid>https://aigridwatch.com/blog/week-in-review-2026-10-11</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/microsoft-ratepayer-pledge-hypocrisy-2026</guid>
       <pubDate>Sun, 06 Sep 2026 00:00:00 GMT</pubDate>
       <description>In January 2026 Microsoft became the first company to sign the White House&#x27;s ratepayer protection pledge, promising that data center growth would not raise household electricity bills. Eight months later it is fighting cost-recovery orders in Virginia&#x27;s Supreme Court and at FERC in Wisconsin. The pledge has no enforcement mechanism. The lawsuits do.</description>
-    </item>
-    <item>
-      <title>Week in Review: Amazon Withdraws a Virginia Water Permit, Maryland&#x27;s Two Counties Split on Moratoriums, and Georgia Residents Sue Over a Secret NDA</title>
-      <link>https://aigridwatch.com/blog/week-in-review-2026-09-06</link>
-      <guid>https://aigridwatch.com/blog/week-in-review-2026-09-06</guid>
-      <pubDate>Sun, 06 Sep 2026 00:00:00 GMT</pubDate>
-      <description>This week Amazon withdrew a groundwater permit for its 869-acre King George County, Virginia campus two days after a newspaper asked about it, Montgomery County&#x27;s toughest moratorium challenger backed down while neighboring Baltimore County moved to extend its own pause through 2027, and Effingham County, Georgia residents sued over a zoning ordinance they say cleared the way for OpenAI&#x27;s data center behind a signed NDA. Plus: West Virginia certifies a second $12 billion data center in one county under a law that skips local review, a South Carolina town moves preemptively, and data centers become a Texas governor&#x27;s-race issue.</description>
     </item>
 </channel>
 </rss>

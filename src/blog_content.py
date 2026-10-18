@@ -10517,4 +10517,301 @@ a story we should cover? Reach out at hello@aigridwatch.com or sign up for
 the newsletter below.*
 """,
     },
+    {
+        "id": "week-in-review-2026-10-18",
+        "art": "review",
+        "section": "stories",
+        "title": "Week in Review: Oregon's Governor Pauses Data Center Permits Statewide, Milwaukee Bans New Ones for a Year, and a $3 Billion Massachusetts Project Dies on a Technicality",
+        "seo_title": "Week in review: Oregon permit pause, Milwaukee ban",
+        "date": _dt.date(2026, 10, 18),
+        "author": "GridWatch AI",
+        "tags": ["week in review", "moratorium", "Oregon", "Wisconsin", "Texas", "Tennessee", "Massachusetts", "New Jersey", "West Virginia", "water", "community"],
+        "summary": "Oregon Gov. Tina Kotek ordered state regulators to stop issuing air and water permits for new data centers until mid-2027, and Milwaukee's Common Council unanimously passed its own one-year moratorium. In Texas, Hood County commissioners rejected a developer's settlement offer and permit appeal despite an explicit threat of a lawsuit, while in Massachusetts, a Planning Board quietly killed a $3-4 billion data center campus by refusing to extend a permit the developer let lapse. Plus: Memphis and Shelby County both advance competing moratorium ordinances, a month-old New Jersey diesel spill still hasn't drawn a fine, and West Virginia's governor strikes a deal to relocate a rare 200-tree chestnut grove instead of clearing it.",
+        "body": """
+Welcome back to the GridWatch AI Week in Review — our Sunday roundup of the
+most important data center stories from the past seven days, what they mean
+for communities, and what you can learn from each one.
+
+---
+
+### 1. Oregon's governor orders a statewide pause on data center environmental permits — but says she can't go further than that
+
+**What happened:** Gov. Tina Kotek directed the Oregon Department of
+Environmental Quality to stop processing and issuing air and water permits
+for new or expanded data centers until July 1, 2027, according to
+[OPB](https://www.opb.org/), [KPTV](https://www.kptv.com/) and the
+[Oregon Capital Chronicle](https://oregoncapitalchronicle.com/). The pause,
+issued in an Oct. 9 letter to DEQ Director Leah Feldon, also covers
+municipalities seeking to modify wastewater permits to handle data center
+discharge. Kotek's office told reporters that Oregon law does not give her
+the authority to impose a true statewide moratorium on private land without
+the Legislature acting — her pause only reaches the permits her own
+executive branch issues.
+
+**Why it matters:** This is the broadest state-level permitting freeze
+we've covered, and it followed a narrower September order that paused data
+center requests on state-owned land only. [Oregon Rural Action](https://www.opb.org/)
+said the new pause could affect a proposed Amazon hyperscale facility in
+Boardman; Amazon called the move disappointing and said it could cost the
+state jobs and investment. Both candidates in Oregon's governor's race,
+Kotek and Republican Christine Drazan, say they support some form of
+moratorium — meaning the fight here isn't really over whether to act, but
+over how far an executive can act without the Legislature.
+
+**What to learn — an executive order is only as strong as the authority
+behind it:** Kotek's own office is the one saying she can't ban data
+centers on private land by herself. If your governor or mayor issues an
+order, find out in the same news cycle which specific permits or approvals
+it actually freezes, because "pause" can mean anything from a total halt to
+a narrow hold on one agency's paperwork. Oregon's Data Center Advisory
+Committee is taking public comment on its preliminary recommendations
+through Oct. 24 — a concrete, date-stamped way for residents in any state
+to see what a formal rulemaking process looks like. See the
+[moratorium tracker](/moratoriums.html) and the
+[Oregon state page](/states/oregon.html).
+
+*Sources: [OPB, Oct 13](https://www.opb.org/);
+[KPTV, Oct 13](https://www.kptv.com/);
+[Oregon Capital Chronicle, Oct 13](https://oregoncapitalchronicle.com/)*
+
+---
+
+### 2. Milwaukee's Common Council unanimously passes a one-year data center moratorium
+
+**What happened:** The Milwaukee Common Council voted unanimously to adopt
+a one-year moratorium on new data center construction and expansion,
+according to [Urban Milwaukee](https://urbanmilwaukee.com/) and
+[Hoodline](https://hoodline.com/). The pause runs for one year or until the
+city finishes new zoning rules defining data centers, whichever comes
+first, and state law would let the city extend it up to six more months
+"if absolutely necessary." Developers can still seek a site-specific
+planned-development rezoning, which requires its own public hearings.
+
+**Why it matters:** [Urban Milwaukee](https://urbanmilwaukee.com/) traces
+the push to a fight over a proposed 19,000-square-foot data center inside a
+redevelopment of a vacant Midtown Center Walmart; after sustained public
+opposition, the computing component was dropped from that project entirely
+before the citywide moratorium even passed. That is the sequence worth
+noting — organized opposition to one specific proposal is what produced a
+citywide policy, not the other way around.
+
+**What to learn — a single fight, won locally, is how citywide rules get
+written:** Milwaukee's moratorium didn't start as a citywide campaign; it
+started as neighbors objecting to one redevelopment plan. If you're facing
+a single proposed site, documenting your specific objections on the record
+is also laying groundwork your city council can point to later if it
+decides to write a general ordinance. See the
+[Wisconsin community page for Milwaukee](/communities/milwaukee-wi.html)
+and the [moratorium tracker](/moratoriums.html).
+
+*Sources: [Urban Milwaukee, Oct 13](https://urbanmilwaukee.com/);
+[Hoodline, Oct 13](https://hoodline.com/)*
+
+---
+
+### 3. Hood County, Texas commissioners reject a developer's settlement offer — and its permit appeal — despite an explicit threat of a lawsuit
+
+**What happened:** Hood County commissioners voted 3-1 to reject a
+settlement proposal from Comanche Circle developer Sailfish Investors, then
+voted unanimously to deny the company's appeal of its own permit
+applications, according to [KERA News](https://www.kera.org/) and
+[The Cool Down](https://www.thecooldown.com/). The rejected settlement
+would have shrunk the project's footprint from roughly 2,523 acres to about
+1,375 acres in exchange for commitments on setbacks, cooling methods, light
+pollution and road repairs. In an Oct. 1 email to county officials first
+reported by KERA, Sailfish founder Ryan Hughes warned that rejecting the
+deal could lead to a lawsuit and a larger project built with fewer
+restrictions. After the vote, Hughes said he was ready for "the fight that
+would ensue."
+
+**Why it matters:** This is a county commission turning down a
+developer's own stated alternative to litigation, in writing, immediately
+before the vote. Hood County has already been sued twice by data center
+developers this year, and two earlier attempts by its commissioners to pass
+a moratorium failed after a state lawmaker warned they were acting outside
+their authority — in Texas, counties generally lack the zoning power cities
+have. Commissioners here are navigating a case where saying no is a real
+legal risk, not a bluff, and they still said no.
+
+**What to learn — a developer's threat to sue over a *smaller* version of
+their own project is a negotiating position, not a fact about the law:** A
+threat framed as "we'll build something bigger and worse if you don't take
+this deal" is still just a prediction about the next move, not a legal
+consequence of this one. If a developer tells your council or commission
+that rejecting a compromise invites something worse, ask your own counsel
+what authority the body actually has — the answer in Texas is that it
+depends heavily on whether you're a city or a county. See the
+[Texas community page for Hood County](/communities/hood-county-tx.html)
+and [last month's roundup on developer lawsuits](/blog/data-center-developer-lawsuits-moratorium-bans-2026).
+
+*Sources: [KERA News, Oct 13](https://www.kera.org/);
+[The Cool Down, Oct 14](https://www.thecooldown.com/)*
+
+---
+
+### 4. Memphis and Shelby County advance two separate, competing moratorium ordinances in the same week
+
+**What happened:** The Memphis City Council voted 7-5 to postpone its data
+center moratorium ordinance to Oct. 20, its third delay since the chaotic
+meeting we covered [last week](/blog/week-in-review-2026-10-11), according
+to [Action News 5](https://www.actionnews5.com/). Separately, the Shelby
+County Commission — a different body covering only unincorporated county
+land — passed its own, narrower 12-month moratorium on first reading in a
+5-4 vote with four commissioners abstaining, according to the
+[Memphis Flyer](https://www.memphisflyer.com/) and
+[FOX13 Memphis](https://www.fox13memphis.com/). County Attorney Greg Barnes
+confirmed the county's version would only reach unincorporated areas, not
+the city. Opponents on the commission questioned why a pause was needed
+when, as County Director Ragsdale noted, no data center permits are
+currently pending in the county.
+
+**Why it matters:** Two governing bodies, two different ordinances, two
+different timelines, covering two different pieces of the same county —
+this is the jurisdictional split we flagged as a teaching point last week,
+playing out in real time. A resident following "the Memphis data center
+fight" actually has to follow both votes separately to know whether a
+given parcel is covered.
+
+**What to learn — an ordinance that passes "first reading" has two more
+votes to go:** Tennessee county ordinances require three separate readings
+before taking effect, and the Shelby County measure's 5-4 margin with four
+abstentions means it could still fail on a later reading. Don't report a
+multi-reading ordinance as "passed" until it clears its final vote — see
+[the Shelby County ordinance's next scheduled stop, Oct. 21](https://www.memphisflyer.com/),
+and [Memphis's community page](/communities/memphis-tn.html).
+
+*Sources: [Action News 5, Oct 13](https://www.actionnews5.com/);
+[Memphis Flyer, Oct 12](https://www.memphisflyer.com/);
+[FOX13 Memphis, Oct 12](https://www.fox13memphis.com/)*
+
+---
+
+### 5. A Massachusetts Planning Board kills a $3-4 billion data center project by simply declining to extend its permit
+
+**What happened:** The Westfield, Massachusetts Planning Board voted
+unanimously not to extend developer Servistar Realties' special permit for
+a 150-plus-acre data center campus, effectively ending a project the
+company had pursued since 2019, according to the
+[Boston Globe](https://www.bostonglobe.com/) and
+[Connecticut Public](https://www.ctpublic.org/). Board members cited a lack
+of progress since the permits were first approved in 2021: Servistar never
+purchased the land, let its LLC status expire in late 2024, and never
+recorded its special permit with the Hampden County Registry of Deeds. The
+developer's representative blamed delays on state data center tax
+incentives that Gov. Maura Healey froze applications for over the summer.
+Servistar can appeal within 20 days.
+
+**Why it matters:** No council vote banned this project — a board simply
+declined to give an inactive permit more time, and a $3-4 billion campus
+died on paperwork. Westfield also has a citywide one-year data center
+moratorium in effect; City Councilor Kristen Mello noted a developer is
+free to try again once it expires next July, but said any new proposal
+would need stronger water-supply protections than this one had.
+
+**What to learn — track your local permit's actual expiration date, not
+just whether a project was "approved":** An approval from years ago can
+quietly lapse if a developer never acts on it — and a planning board that
+won't extend it is functionally the same as a denial, without ever holding
+a vote that looks like one. If a project near you was approved long ago and
+you haven't heard updates, check whether its permit has an expiration
+clause and when it falls due. See [our hidden-water-cost explainer](/blog/hidden-water-cost)
+for the kind of water-supply language Westfield's councilor says the next
+version will need.
+
+*Sources: [Boston Globe, Oct 14](https://www.bostonglobe.com/);
+[Connecticut Public, Oct 14](https://www.ctpublic.org/)*
+
+---
+
+### 6. New Jersey's largest data center fuel spill still hasn't drawn a fine, a month later
+
+**What happened:** Equinix told [W.Media](https://w.media/) it is still
+finalizing a full incident report on the roughly 5,000-to-5,500-gallon
+diesel spill at its NY2 facility in Secaucus, first reported in September.
+Equinix now attributes the spill to a mechanical failure of two valves
+during routine fuel filtration, after Secaucus's mayor initially described
+it as a "computer glitch." New Jersey DEP said the diesel reached a small
+tributary of Anderson Creek but stayed contained short of the Hackensack
+River; crews recovered about 3,500 of the estimated gallons released. As of
+the most recent reporting, the state had not issued any fine or enforcement
+action against the company.
+
+**Why it matters:** Rep. Nellie Pou called it the largest data
+center-related fuel spill on record in New Jersey and gave NJDEP an Oct. 9
+deadline to respond with a full accounting. A month after the spill and
+roughly a week past that deadline, the public record still consists of the
+company's own evolving explanation and no stated penalty — the same
+enforcement-catches-up-later pattern we flagged with
+[Vineland's fine](/blog/vineland-dataone-fine-order-2026) and with Georgia
+and Virginia's citations [last week](/blog/week-in-review-2026-10-11).
+
+**What to learn — "diesel backup generator" means there's a fuel tank, and
+fuel tanks leak:** Every data center of any size keeps diesel on hand for
+backup power, which means every data center of any size is a potential
+spill site, not just an electricity user. If you're negotiating with a
+developer, ask specifically about tank capacity, containment design, and
+who the facility is required to notify — and how fast — if a tank fails.
+See [our CBA clause library](/cba-clauses.html) for model language on
+incident reporting and the [New Jersey state page](/states/new-jersey.html).
+
+*Sources: [W.Media, Oct 12](https://w.media/)*
+
+---
+
+### 7. Also this week: a chestnut grove gets a reprieve, and three more moratoriums move
+
+Beyond the stories above, West Virginia Gov. Patrick Morrisey announced a
+deal to relocate — rather than clear — a roughly 200-tree grove of
+blight-surviving American chestnuts at the former Clements State Tree
+Nursery in Mason County, with developer Nscale funding the move, according
+to [Cybernews](https://cybernews.com/) and [Gadget Review](https://www.gadgetreview.com/).
+The grove sat on land slated for an Anthropic-linked data center campus;
+arborists are expected to relocate the trees during the 2027 dormant
+season. A sample of three more actions still in motion:
+
+| Locality | State | Action | Status |
+|--|--|--|--|
+| Charlotte | NC | Moratorium extension | Council vote set for Oct. 26; current 150-day pause expires Nov. 5 |
+| Minneapolis | MN | Moratorium nearing expiration | Runs through Nov. 21; permanent zoning due the same month |
+| Dover | DE | First-in-state pause advances | City committee sent an 18-month pause to the full council |
+
+**What to learn — "relocation" is a negotiated outcome, not a default
+protection:** Nothing in federal or West Virginia law required Nscale to
+move these trees rather than clear them; the commitment came from public
+pressure plus a governor's announcement, the same kind of negotiated
+mitigation residents elsewhere have won on noise limits or water caps. If
+a site near you has a specific natural feature worth protecting, naming it
+explicitly in testimony is what gives a developer or official something
+concrete to agree to. See the [moratorium tracker](/moratoriums.html) for
+every jurisdiction's status and deadline.
+
+*Sources: [Cybernews, Oct 11](https://cybernews.com/);
+[Gadget Review, Oct 11](https://www.gadgetreview.com/)*
+
+---
+
+### What to watch next week
+
+- **Memphis, TN** — the City Council's third-scheduled vote on Oct. 20, and
+  whether Shelby County's moratorium survives its second and third
+  readings
+- **Charlotte, NC** — the Oct. 26 council vote on extending its moratorium
+  by up to 11 months before the current pause expires Nov. 5
+- **Hood County, TX** — whether Sailfish Investors follows through on
+  litigation after its settlement and appeal were both rejected
+- **Secaucus, NJ** — whether NJDEP issues a fine now that Rep. Pou's Oct. 9
+  deadline has passed
+- **Oregon** — what comes out of the Data Center Advisory Committee's
+  public comment period, open through Oct. 24
+- **Minneapolis, MN** — whether the City Council finalizes permanent data
+  center zoning before its moratorium lapses Nov. 21
+
+---
+
+*Every Sunday we cover the week's most important data center stories,
+explain the underlying concepts, and point you to the tools you need. Know
+a story we should cover? Reach out at hello@aigridwatch.com or sign up for
+the newsletter below.*
+""",
+    },
 ]

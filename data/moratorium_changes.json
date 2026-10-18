@@ -4044,5 +4044,47 @@
     "locality": "Brighton Township, MI",
     "kind": "added",
     "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-18",
+    "id": "vienna-township-trumbull-co-oh",
+    "locality": "Vienna Township (Trumbull Co.), OH",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-18",
+    "id": "cleveland-oh",
+    "locality": "Cleveland, OH",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-18",
+    "id": "indio-ca",
+    "locality": "Indio, CA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-18",
+    "id": "escondido-ca",
+    "locality": "Escondido, CA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-18",
+    "id": "eureka-ca",
+    "locality": "Eureka, CA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-18",
+    "id": "mendocino-county-ca",
+    "locality": "Mendocino County, CA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
   }
 ]
