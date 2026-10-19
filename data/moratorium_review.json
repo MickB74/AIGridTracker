@@ -214,8 +214,8 @@
       "locality": "Caledonia Township",
       "state": "MI",
       "status": "Enacted",
-      "detail": "term ran to 2026-10-17; confirm whether it lapsed, was extended, or became permanent zoning",
-      "source": "https://caledoniatownship.org/AgendaCenter/ViewFile/Minutes/_06032026-554"
+      "detail": "term ran to 2026-07-01; confirm whether it lapsed, was extended, or became permanent zoning",
+      "source": "https://www.fox17online.com/news/local-news/kent/caledonia-township-puts-6-month-pause-on-data-center-development-to-review-industrial-standards"
     },
     {
       "kind": "expired",
@@ -331,14 +331,6 @@
     },
     {
       "kind": "dead-link",
-      "locality": "Jersey City",
-      "state": "NJ",
-      "status": "Enacted",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://hudpost.com/jersey-city-council-bans-data-centers-from-industrial-zones/",
-      "source": "https://hudpost.com/jersey-city-council-bans-data-centers-from-industrial-zones/"
-    },
-    {
-      "kind": "dead-link",
       "locality": "Rochester Hills",
       "state": "MI",
       "status": "Enacted",
@@ -347,75 +339,19 @@
     },
     {
       "kind": "dead-link",
-      "locality": "Tyrone Township",
-      "state": "MI",
-      "status": "Enacted",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://www.tyronetownship.us/wp-content/uploads/2026/06/260502-Data-Center-Moratorium.pdf",
-      "source": "https://www.tyronetownship.us/wp-content/uploads/2026/06/260502-Data-Center-Moratorium.pdf"
-    },
-    {
-      "kind": "dead-link",
       "locality": "Wisconsin",
       "state": "WI",
       "status": "Proposed",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://docs.legis.wisconsin.gov/document/proposaltext/2025/REG/SB1061,2,5",
+      "detail": "URLError: <urlopen error timed out> \u2014 https://docs.legis.wisconsin.gov/document/proposaltext/2025/REG/SB1061,2,5",
       "source": "https://docs.legis.wisconsin.gov/document/proposaltext/2025/REG/SB1061,2,5"
     },
     {
       "kind": "dead-link",
-      "locality": "Norton",
-      "state": "OH",
-      "status": "Enacted",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://www.akron.com/articles/city-of-norton-introduces-moratorium-on-data-centers/",
-      "source": "https://www.akron.com/articles/city-of-norton-introduces-moratorium-on-data-centers/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Jackson Township",
-      "state": "NJ",
-      "status": "Enacted",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://www.jerseyshoreonline.com/jackson/jackson-votes-to-ban-data-centers/",
-      "source": "https://www.jerseyshoreonline.com/jackson/jackson-votes-to-ban-data-centers/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Grand County",
-      "state": "UT",
-      "status": "Enacted",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://www.moabtimes.com/articles/grand-county-pauses-data-center-applications-to-develop-new-land-use-rules/",
-      "source": "https://www.moabtimes.com/articles/grand-county-pauses-data-center-applications-to-develop-new-land-use-rules/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Cedar Hill",
-      "state": "TN",
-      "status": "Enacted",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://mainstreetmediatn.com/articles/news-robertsoncountyconnection/cedar-hill-imposes-moratorium-on-data-centers-within-city-limits/",
-      "source": "https://mainstreetmediatn.com/articles/news-robertsoncountyconnection/cedar-hill-imposes-moratorium-on-data-centers-within-city-limits/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Taylor County",
-      "state": "IA",
-      "status": "Enacted",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://taylorcounty.iowa.gov/data-solar-etc-moratorium-draft-passed-july-30-2026/",
-      "source": "https://taylorcounty.iowa.gov/data-solar-etc-moratorium-draft-passed-july-30-2026/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Huron County",
-      "state": "MI",
-      "status": "Enacted",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://huroncountyview.com/articles/huron-county-planners-advance-moratorium-on-data-centers/",
-      "source": "https://huroncountyview.com/articles/huron-county-planners-advance-moratorium-on-data-centers/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Galloway Township",
-      "state": "NJ",
-      "status": "Enacted",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://gtnj.org/index.php/i-want-to/find-council-meeting-agendas/2026-1/2884-7-14-2026-agenda/file",
-      "source": "https://gtnj.org/index.php/i-want-to/find-council-meeting-agendas/2026-1/2884-7-14-2026-agenda/file"
+      "locality": "Pima County",
+      "state": "AZ",
+      "status": "Proposed",
+      "detail": "URLError: <urlopen error [Errno 111] Connection refused> \u2014 https://news.azpm.org/p/azpmnews/2026/8/13/230837-pima-county-staff-will-develop-moratorium-for-data-centers/",
+      "source": "https://news.azpm.org/p/azpmnews/2026/8/13/230837-pima-county-staff-will-develop-moratorium-for-data-centers/"
     },
     {
       "kind": "dead-link",
@@ -424,86 +360,6 @@
       "status": "Enacted",
       "detail": "HTTP 402 \u2014 https://www.detroitnews.com/story/news/local/oakland-county/2026/03/03/as-project-flex-proceeds-lyon-township-hits-pause-on-new-data-centers/88960710007/",
       "source": "https://www.detroitnews.com/story/news/local/oakland-county/2026/03/03/as-project-flex-proceeds-lyon-township-hits-pause-on-new-data-centers/88960710007/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Orion Township",
-      "state": "MI",
-      "status": "Enacted",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://lakeorionreview.com/articles/news/orion-twp-board-passes-six-month-moratorium-on-data-centers/",
-      "source": "https://lakeorionreview.com/articles/news/orion-twp-board-passes-six-month-moratorium-on-data-centers/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Town of Beetown",
-      "state": "WI",
-      "status": "Enacted",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://sustainruralwisconsin.org/data-centers",
-      "source": "https://sustainruralwisconsin.org/data-centers"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Town of Bloomington",
-      "state": "WI",
-      "status": "Enacted",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://sustainruralwisconsin.org/data-centers",
-      "source": "https://sustainruralwisconsin.org/data-centers"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "St. Johns County",
-      "state": "FL",
-      "status": "Proposed",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://www.stjohnscountybuzz.com/2026/07/17/st-johns-county-commissioners-move-toward-data-center-moratorium-approve-five-rezonings/",
-      "source": "https://www.stjohnscountybuzz.com/2026/07/17/st-johns-county-commissioners-move-toward-data-center-moratorium-approve-five-rezonings/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Lincoln County",
-      "state": "WA",
-      "status": "Enacted",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://www.odessarecord.com/story/2026/09/10/news/county-enacts-data-center-moratorium/17860.html",
-      "source": "https://www.odessarecord.com/story/2026/09/10/news/county-enacts-data-center-moratorium/17860.html"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Clarksville",
-      "state": "IN",
-      "status": "Enacted",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://www.townofclarksville.com/clarksville-updates-ordinances-to-address-data-centers/",
-      "source": "https://www.townofclarksville.com/clarksville-updates-ordinances-to-address-data-centers/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Agawam",
-      "state": "MA",
-      "status": "Enacted",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://thereminder.com/local-news/agawam-moves-toward-270-day-moratorium-on-data-centers/",
-      "source": "https://thereminder.com/local-news/agawam-moves-toward-270-day-moratorium-on-data-centers/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "Mercer County",
-      "state": "ND",
-      "status": "Rescinded",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://www.centralnordak.com/articles/split-commission-approves-one-year-data-center-moratorium/",
-      "source": "https://www.centralnordak.com/articles/split-commission-approves-one-year-data-center-moratorium/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "The Dalles case study",
-      "state": "OR",
-      "status": "Mixed outcome",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://waterwatch.org/googles-water-use-is-soaring-in-the-dalles-records-show-with-two-more-data-centers-to-come-2/",
-      "source": "https://waterwatch.org/googles-water-use-is-soaring-in-the-dalles-records-show-with-two-more-data-centers-to-come-2/"
-    },
-    {
-      "kind": "dead-link",
-      "locality": "The Dalles benchmark",
-      "state": "OR",
-      "status": "Google",
-      "detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)> \u2014 https://waterwatch.org/googles-water-use-is-soaring-in-the-dalles-records-show-with-two-more-data-centers-to-come-2/",
-      "source": "https://waterwatch.org/googles-water-use-is-soaring-in-the-dalles-records-show-with-two-more-data-centers-to-come-2/"
     },
     {
       "kind": "undated-term",
@@ -2115,6 +1971,22 @@
     },
     {
       "kind": "blocked",
+      "locality": "Sawyer County",
+      "state": "WI",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://citizenportal.ai/articles/9605659/Wisconsin/Sawyer-County/Sawyer-County-adopts-18-month-moratorium-on-large-data-centers"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Perth (Fulton Co.)",
+      "state": "NY",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.dailygazette.com/the_recorder/leader_herald/data-center-moratorium/article_28560f58-b336-4cae-8773-f0a04cd3001b.html"
+    },
+    {
+      "kind": "blocked",
       "locality": "Newfield (Tompkins Co.)",
       "state": "NY",
       "status": "Enacted",
@@ -2128,14 +2000,6 @@
       "status": "Enacted",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
       "source": "https://www.chathamcountync.gov/Home/Components/News/News/17295/19"
-    },
-    {
-      "kind": "blocked",
-      "locality": "Spokane",
-      "state": "WA",
-      "status": "Enacted",
-      "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://my.spokanecity.org/news/releases/2026/06/23/spokane-city-council-passes-one-year-moratorium-on-data-centers/"
     },
     {
       "kind": "blocked",
@@ -2160,14 +2024,6 @@
       "status": "Rejected",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
       "source": "https://legiscan.com/GA/bill/HB1012/2025"
-    },
-    {
-      "kind": "blocked",
-      "locality": "Dodge County",
-      "state": "WI",
-      "status": "Enacted",
-      "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://dailydodge.com/dodge-county-to-hold-public-hearing-on-proposed-data-center-moratorium/"
     },
     {
       "kind": "blocked",
@@ -2211,34 +2067,10 @@
     },
     {
       "kind": "blocked",
-      "locality": "Armada Township",
-      "state": "MI",
-      "status": "Enacted",
-      "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://armadatwp.gov/wp-content/uploads/2026/06/6.10.26-Regular-Meeting.pdf"
-    },
-    {
-      "kind": "blocked",
-      "locality": "Howell Township",
-      "state": "MI",
-      "status": "Enacted",
-      "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://howelltownshipmi.org/wp-content/uploads/2026/06/20260513155523130.pdf"
-    },
-    {
-      "kind": "blocked",
-      "locality": "Hayes Township",
-      "state": "MI",
-      "status": "Enacted",
-      "detail": "HTTP 429 (bot-blocked, check by hand)",
-      "source": "https://www.hayestownshipmi.gov/wp-content/uploads/2026/06/PSA-and-E-mail-Response_Hayes-Twp_FINAL-1.pdf"
-    },
-    {
-      "kind": "blocked",
       "locality": "Pulaski County",
       "state": "IN",
       "status": "Enacted",
-      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
       "source": "https://pulaskijournal.com/news/12-month-data-center-moratorium-passes-unanimously"
     },
     {
@@ -2251,11 +2083,11 @@
     },
     {
       "kind": "blocked",
-      "locality": "Howard County",
+      "locality": "Talbot County",
       "state": "MD",
-      "status": "Enacted",
-      "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://ccanactionfund.org/howard-county-approves-data-center-moratorium-and-task-force-legislation/"
+      "status": "Proposed",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.stardem.com/news/local_news/talbot-county-council-to-consider-1-year-data-center-moratorium/article_291971b2-d964-40c8-a533-e9982c8c234f.html"
     },
     {
       "kind": "blocked",
@@ -2307,11 +2139,43 @@
     },
     {
       "kind": "blocked",
+      "locality": "Howard County",
+      "state": "IN",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://kokomolantern.substack.com/p/county-adopts-data-center-moratorium"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Hastings",
+      "state": "MN",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://kdwa.com/hastings-city-council-addresses-fentanyl-awareness-data-center-moratorium-and-environmental-litigation/"
+    },
+    {
+      "kind": "blocked",
       "locality": "Findlay",
       "state": "OH",
       "status": "Enacted",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
       "source": "https://www.findlayohio.gov/government/city-departments/zoning/proposed-data-center-zoning-ordinance"
+    },
+    {
+      "kind": "blocked",
+      "locality": "St. Marys",
+      "state": "OH",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.limaohio.com/top-stories/2026/06/23/st-marys-council-adopts-temporary-data-center-ban/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Archbold",
+      "state": "OH",
+      "status": "Enacted",
+      "detail": "HTTP 429 (bot-blocked, check by hand)",
+      "source": "https://www.northwestsignal.net/news/article_f8a39535-c2e8-41cc-bc66-392a93b62104.html"
     },
     {
       "kind": "blocked",
@@ -2331,11 +2195,11 @@
     },
     {
       "kind": "blocked",
-      "locality": "Pennsville",
+      "locality": "Pittsgrove Township",
       "state": "NJ",
       "status": "Enacted",
-      "detail": "HTTP 429 (bot-blocked, check by hand)",
-      "source": "https://www.pennsville.org/171/Township-Ordinances"
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.pittsgrovetownship.com/ordinances/"
     },
     {
       "kind": "blocked",
@@ -2347,27 +2211,11 @@
     },
     {
       "kind": "blocked",
-      "locality": "Big Rapids Charter Township",
-      "state": "MI",
-      "status": "Enacted",
-      "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://bigrapidstownshipmi.gov/2026/02/27/data-center-moratorium-ordinance/"
-    },
-    {
-      "kind": "blocked",
       "locality": "Fenton Township",
       "state": "MI",
       "status": "Enacted",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
       "source": "https://www.fentontownship.org/media/14701"
-    },
-    {
-      "kind": "blocked",
-      "locality": "Parma Township",
-      "state": "MI",
-      "status": "Enacted",
-      "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://parmatwp.gov/2026/02/23/notice-of-data-center-moratorium-adoption-2026-3/"
     },
     {
       "kind": "blocked",
@@ -2379,11 +2227,43 @@
     },
     {
       "kind": "blocked",
-      "locality": "Middleton",
-      "state": "WI",
+      "locality": "Brownsville",
+      "state": "TX",
+      "status": "Proposed",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://myrgv.com/local-news/2026/09/02/brownsville-commissioners-move-forward-with-data-center-moratorium/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Escondido",
+      "state": "CA",
       "status": "Enacted",
-      "detail": "HTTP 429 (bot-blocked, check by hand)",
-      "source": "https://www.middletontimes.com/articles/2026/07/01/data-center-moratorium-adopted"
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://ncpipeline.substack.com/p/escondido-data-center-moratorium"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Imperial",
+      "state": "CA",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://calexicochronicle.com/2026/06/09/imperial-implements-45-day-data-center-moratorium/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Montebello",
+      "state": "CA",
+      "status": "Expired",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://citizenportal.ai/articles/7355998/california/los-angeles-county/montebello/residents-urge-montebello-council-to-support-moratorium-as-neighbors-oppose-nearby-data-center-proposals"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Baldwin Park",
+      "state": "CA",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://citizenportal.ai/articles/7830978/california/los-angeles-county/baldwin-park-city/baldwin-park-adopts-one-year-urgency-moratorium-on-new-data-centers-citing-water-concerns"
     },
     {
       "kind": "blocked",
@@ -2443,19 +2323,35 @@
     },
     {
       "kind": "blocked",
-      "locality": "Shawano County",
-      "state": "WI",
+      "locality": "Coffee County",
+      "state": "TN",
       "status": "Enacted",
-      "detail": "HTTP 429 (bot-blocked, check by hand)",
-      "source": "https://www.newmedia-wi.com/board-adopts-moratorium-data-center-development"
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://thunder1320.com/coffee-county-commission-approves-12-month-data-center-moratorium/"
     },
     {
       "kind": "blocked",
-      "locality": "Phillips County",
-      "state": "CO",
+      "locality": "Spring City",
+      "state": "TN",
       "status": "Enacted",
       "detail": "HTTP 403 (bot-blocked, check by hand)",
-      "source": "https://www.hfherald.com/story/2026/09/03/news/phillips-co-commissioners-extend-moratoriums-on-wind-solar-and-data-center-projects/4962.html"
+      "source": "https://www.wdef.com/spring-city-approves-two-year-moratorium-on-ai-data-centers/"
+    },
+    {
+      "kind": "blocked",
+      "locality": "West Whiteland Township",
+      "state": "PA",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://citizenportal.ai/articles/8209298/pennsylvania/chester-county/west-whiteland/township-to-rewrite-data-center-rules-after-board-invokes-180-day-municipal-cure"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Dickinson County",
+      "state": "IA",
+      "status": "Enacted",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://www.exploreokoboji.com/news/dickinson-county-supervisors-approve-moratorium-for-data-collection-bit-coin-solar-battery-storage-on-4-1-vote/"
     },
     {
       "kind": "blocked",
@@ -2480,6 +2376,14 @@
       "status": "Enacted",
       "detail": "HTTP 429 (bot-blocked, check by hand)",
       "source": "https://www.startribune.com/minnesota-counties-data-centers/601857833"
+    },
+    {
+      "kind": "blocked",
+      "locality": "Southbridge",
+      "state": "MA",
+      "status": "Under Review",
+      "detail": "HTTP 403 (bot-blocked, check by hand)",
+      "source": "https://thecitizenchronicle.substack.com/p/spencer-select-board-backs-push-for"
     },
     {
       "kind": "blocked",

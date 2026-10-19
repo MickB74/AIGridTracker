@@ -1,10 +1,8 @@
 # SOURCES review queue
-_Generated 2026-10-12 · 175 keys_
+_Generated 2026-10-19 · 175 keys_
 
-## dead (3)
+## dead (1)
 - **`ga_house_2024`** — URLError: <urlopen error timed out> · <https://www.house.ga.gov/>
-- **`usda_land`** — URLError: <urlopen error [Errno -3] Temporary failure in name resolution> · <https://www.nass.usda.gov/Publications/Todays_Reports/reports/land0824.pdf>
-- **`usda_quickstats`** — URLError: <urlopen error [Errno -3] Temporary failure in name resolution> · <https://quickstats.nass.usda.gov/>
 
 ## orphan (14)
 - **`ashburn_buyout`** — defined but never referenced — delete it or wire it up · <https://www.nbcwashington.com/news/local/northern-virginia/data-center-expansion-loudoun-county-homeowners-buyout-offers/>
