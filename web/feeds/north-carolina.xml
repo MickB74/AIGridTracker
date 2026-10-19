@@ -5,7 +5,7 @@
   <description>Data center moratoriums, proposals, and community-impact
   headlines for North Carolina, from AI GridWatch.</description>
   <language>en-us</language>
-  <lastBuildDate>Sun, 18 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 19 Oct 2026 00:00:00 +0000</lastBuildDate>
   <item>
     <title>Data centers banned In Chatham despite questions over whether they&#x27;re a threat</title>
     <link>https://news.google.com/rss/articles/CBMiiwJBVV95cUxQMVN1ejd0Y2hUZFlIclV5QWxWTFJwSklDRWpidzBqY2pJLVJxbm42QWhLWGhaejQ5cEkwSTBsZnN3TXRtT0lIMU5XUGUwOXljOGpkZTBGbnl0THo1Q3Fzb2IybmFocVFoQThONUNELVQyMGFRQWljSllDc1RxNngxM1A5Tjd5US1iVnRwbjExRjhXWTVQQjkxa2JRS2FSdUd4aThuTmJQckRjaGFpcEdpUEFxRHVDdWZfSUczcWRXdEtDYVdVUVgtSFNJYWRKSk9CR2txZTIzbk16SWVuM19OS0ZJQl9PQ3pxNnlhd1NrWEF5bVNwVFBQX0xhRGhwdzNPajY0NnVIWjFaR3c?oc=5</link>
@@ -131,6 +131,20 @@
     <guid isPermaLink="false">mora-columbus-county-nc</guid>
     <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
     <description>120-day moratorium on data centers in the county, approved by the Board of Commissioners on Oct 5, 2026 on a motion by Commissioner Giles Byrd. Vote tally, effective date and end date not reported; source is local news, minutes not read.</description>
+  </item>
+  <item>
+    <title>Beaufort County: data center moratorium — Enacted</title>
+    <link>https://aigridwatch.com/communities/beaufort-county-nc</link>
+    <guid isPermaLink="false">mora-beaufort-county-nc</guid>
+    <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Commissioners voted 6-1 on Oct 5, 2026 for a one-year moratorium on accepting, processing or approving applications/permits for data centers. Formal vote had been postponed from Sep 14 (informal hearing only). Effective date not stated and no ordinance text read, so end date not computed. No data center currently proposed.</description>
+  </item>
+  <item>
+    <title>Raleigh: data center moratorium — Enacted</title>
+    <link>https://aigridwatch.com/communities/raleigh-nc</link>
+    <guid isPermaLink="false">mora-raleigh-nc</guid>
+    <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+    <description>City Council approved a six-month pause on approvals for large (major-utility) data centers, 7-1 (Christina Jones opposed, saying six months was too short). Vote dated Oct 6 (Tuesday) per WUNC/Axios published Oct 7. End date Apr 6, 2027 is from the city&#x27;s own schedule (&#x27;Council takes final action on draft text amendments; moratorium ends&#x27;). News reports describe scope as roughly 10,000+ sq ft / over 5 MW; the city page gives no thresholds. Ordinance text not read.</description>
   </item>
   <item>
     <title>Can Canton spare enough water for 4 proposed data centers?</title>
@@ -341,19 +355,5 @@
     <guid isPermaLink="false">story-53b8b540</guid>
     <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
     <description>Via ABC11 News</description>
-  </item>
-  <item>
-    <title>Orange County supports pressing pause on data centers to develop new rules</title>
-    <link>https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRmFNTkIwdXdlMDlIYnY2ZS15dTMzcWtlVjhmRnhYN2VDVHlZclVlVDlVUHRHUy05VjM3UjVIa2tsTlQ3R2VhNkw3Z3hoRzdBdF9EN0FNYU1YcUhRME4tRHFndmxaVktSZ2JuOW0xcHlwNUExazdqcW1rbEtzbWg3bjhTdG9BZlNaYTBrSlZ0SW84SDBOODFQY282b3V3czVJb0NreGZfaDdZNkp3bUZpOTE0Y0RJcVp3Y3hV?oc=5</link>
-    <guid isPermaLink="false">story-1e4b61e6</guid>
-    <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
-    <description>Via Florida Politics</description>
-  </item>
-  <item>
-    <title>Statesville unanimously approves 180-day moratorium on data centers: What we know</title>
-    <link>https://news.google.com/rss/articles/CBMirwFBVV95cUxQZnItWko0RWxfLWxDdkpQUXplcTg1QlJ2aFB0aGxVaVZWdG9xdTNkZUF5RURqdF9nUWl2NTFndmZfTjA4RkpDVHhFN1VQbUx3aWVJMXRLQUt3X2pQc1BQWXVpNlBNNWhEQmp2cGpBQ2lEeVVsbkllRzZGQWJzNnN0bUFBMF96M0U0ZzlxRTdMN0ZyQlp2aS0xMi1LeGFQd2R6cVBNWFFuUWstdXZGR0lj?oc=5</link>
-    <guid isPermaLink="false">story-16d3e8e1</guid>
-    <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
-    <description>Via WBTV</description>
   </item>
 </channel></rss>

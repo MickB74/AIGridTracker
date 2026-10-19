@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/salix-iowa-google-mou-no-moratorium-2026",
+      "destination": "/blog/salix-iowa-google-mou-no-moratorium-2026",
+      "permanent": true
+    },
+    {
       "source": "/week-in-review-2026-10-18",
       "destination": "/blog/week-in-review-2026-10-18",
       "permanent": true
@@ -614,6 +619,11 @@
       "permanent": true
     },
     {
+      "source": "/communities/augusta-richmond-county-ga",
+      "destination": "/communities/augusta-ga",
+      "permanent": true
+    },
+    {
       "source": "/communities/adelanto-ca",
       "destination": "/states/california",
       "permanent": true
@@ -661,6 +671,16 @@
     {
       "source": "/communities/archer-county-tx.html",
       "destination": "/states/texas",
+      "permanent": true
+    },
+    {
+      "source": "/communities/augusta-richmond-county-ga",
+      "destination": "/states/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/communities/augusta-richmond-county-ga.html",
+      "destination": "/states/georgia",
       "permanent": true
     },
     {

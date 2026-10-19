@@ -72,6 +72,72 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "salix-iowa-google-mou-no-moratorium-2026",
+        "art": "negotiation",
+        "section": "stories",
+        "title": "Salix, Iowa Says It Has No Data Center Moratorium. It Just Signed a Cost Deal With Google.",
+        "seo_title": "Salix Iowa Google data center MOU, no moratorium",
+        "date": _dt.date(2026, 10, 19),
+        "author": "GridWatch AI",
+        "tags": ["Iowa", "Salix", "Google", "MidAmerican Energy", "MOU",
+                 "moratoriums", "annexation"],
+        "summary": (
+            "On Oct. 14 the Salix, Iowa council voted 3-2 to state that no "
+            "data center moratorium exists, then 3-2 to approve an agreement "
+            "under which Google pays up to $150,000 for the city's outside "
+            "advisors. The land has not been sold and no rezoning has been "
+            "filed. Here is what the agreement does and does not say."
+        ),
+        "body": """
+On Wednesday, Oct. 14, the city council of Salix, Iowa (a Woodbury County town near Sioux City) took two votes on a possible Google data center. [KTIV reported](https://www.ktiv.com/2026/10/15/salix-council-clarifies-no-data-center-moratorium-place-approves-mou-with-google/) that the council first voted 3-2 on a resolution stating it has not adopted a data center moratorium, and then voted 3-2 to approve a memorandum of understanding (MOU) with Google. The article does not say how individual members voted.
+
+This is a small, early-stage step, and it is easy to over-read in either direction. This post sets out what is documented, what the MOU actually commits the city to, and what is still undecided.
+
+## How a moratorium that wasn't became a vote
+
+The site at issue is roughly 900 acres of farmland northeast of town. On Aug. 3, MidAmerican Energy sent a letter to Salix officials naming Google as a prospective customer. [KTIV's account of the letter](https://www.ktiv.com/2026/08/03/google-considering-data-center-salix-iowa-according-midamerican-energy/) quotes MidAmerican saying: "This is not a project announcement, development agreement or request for approval." As of that date, no rezoning request or development application had been filed.
+
+The moratorium confusion came from the council's own meetings. [Hoodline](https://hoodline.com/2026/10/salix-council-flip-flops-on-data-center-ban-then-strikes-deal-with-google/) reports the council first voted 3-2 to have its attorney draft a one-year moratorium, then later voted against a 12-month moratorium. [KTIV reported](https://www.ktiv.com/2026/08/22/salix-moves-dismiss-annexation-lawsuit-data-center-moratorium-fails/) that Councilmember Gene Monk believed a July motion of his had already created a one-year moratorium, while the mayor said it had not. KTIV also reported that a Google representative appeared to believe a moratorium was in place and said a data center could not be built currently because the municipal code has no data center ordinance.
+
+The August vote is documented. [Iowa Public Radio reported](https://www.iowapublicradio.org/ipr-news/2026-08-21/salix-data-center-moratorium-fails) that the council rejected a year-long pause 3-2 on Aug. 20. Councilmember Denise Burkhart voted no, saying "It may not be right for us, but we're not going to know until we ask the questions." An earlier Aug. 12 meeting had been postponed after the city received death and terroristic threats on social media, according to the same report.
+
+The Oct. 14 resolution closed the question. Mayor Kevin Nelson said, per KTIV: "there is no moratorium on data centers in Salix."
+
+## What the Google MOU says
+
+According to [KTIV's report of the Sept. 30 special meeting](https://www.ktiv.com/2026/10/01/salix-city-council-discusses-memorandum-understanding-with-google/) and the [Oct. 15 report](https://www.ktiv.com/2026/10/15/salix-council-clarifies-no-data-center-moratorium-place-approves-mou-with-google/), the terms are:
+
+- **Google pays for the city's advisors.** Google covers the cost of independent advisors the city hires to study the project's impact, capped at $150,000, with invoices paid within 30 days.
+- **Study topics.** Water and wastewater, threatened and endangered species, traffic, and noise.
+- **Three-month term.** Hoodline reports the agreement expires three months after its effective date. At the Sept. 30 meeting, city attorney Nathan Overberg and Google representative Trent Fellers said the length and the dollar amount could both be extended or increased.
+- **A moratorium ends the payments.** If the council imposes a moratorium, Google's payments stop immediately. Overberg said the city would owe Google no refund if it ends the deal early.
+- **Aquifer.** Google said it will not draw cooling water from the Dakota Aquifer. That is Google's statement, not a term the reporting shows is written into the MOU.
+- **A site tour.** Google offered a tour of its existing data center in Papillion, Nebraska for council members and residents. No date has been set.
+
+Two things follow from that list. Reimbursed independent advisors are a real benefit to a small town that would otherwise be reviewing a hyperscale project on its own budget. And the moratorium clause means a future council that wants to pause the project loses the funding for its own advisors at the moment it acts. Whether that matters depends on how the city weighs it; the reporting does not say that anyone objected to the clause specifically. We could not obtain the MOU text itself, so these terms are as reported by the press, and a resident who intends to cite them should request the signed document from the city clerk.
+
+## What is still undecided
+
+- **The land has not been sold.** Mayor Nelson told KTIV the same six or seven families who owned the land last year still own it, and that "until they sign on the dotted line and actually buy it, then no project can proceed." He described the project as "still very much up in the air."
+- **No rezoning has been filed.** Iowa Public Radio reports the annexed farmland would first need to be rezoned before a data center could be built. Hoodline, citing DatacenterDynamics, says no rezoning request or development application had been filed as of its publication.
+- **An ordinance is being drafted.** [KTIV reported](https://www.ktiv.com/2026/09/10/salix-ia-city-leaders-discuss-data-center-ordinance-future-conversations-with-google/) that at its Sept. 9 meeting the council began work on a data center ordinance. Burkhart proposed listing the council's concerns and desired provisions and sending them to SIMPCO, the regional planning council, to draft the ordinance, with town halls to follow for public input.
+- **The annexation is being challenged.** Iowa Public Radio reports Woodbury County is challenging the April annexation in court, arguing the city failed to properly notify residents and included property that does not border city limits. KTIV reported that the city filed a motion to dismiss. Overberg said at the Sept. 30 meeting that current lawsuits do not affect the MOU. Separately, Woodbury County's own June moratorium covers only unincorporated areas, so it does not apply inside Salix.
+
+## What a resident can take from this
+
+If you live in a town where a developer is being introduced through a utility letter, the Salix sequence is a useful template for questions to ask your own council:
+
+1. **Who pays for the outside review?** Ask for it in writing before any application arrives, and ask what happens to that money if the town later pauses.
+2. **Is the written record clear?** Salix spent two months arguing about whether a moratorium existed. Ask the clerk for the minutes and the adopted text, not anyone's recollection of a motion.
+3. **Is there an ordinance yet?** The Google representative's own point was that Salix's code has no data center provisions. Standards written before a proposal arrives are harder to negotiate away than standards written after.
+4. **Who owns the land today?** Options and annexation are not a sale, and the mayor says no project proceeds without one.
+
+None of this is an approval of a data center. It is a council choosing to study first, with the developer paying part of the bill and the political option of a moratorium still open at a price.
+
+*See also: [Salix, IA community briefing](/communities/salix-ia.html) · [Iowa state page](/states/iowa.html) · [Moratorium tracker](/moratoriums) · [Start here](/start-here) for the three-week zoning-vote playbook.*
+""",
+    },
+    {
         "id": "data-center-developer-lawsuits-moratorium-bans-2026",
         "art": "moratorium",
         "section": "stories",

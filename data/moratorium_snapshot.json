@@ -1,4 +1,8 @@
 {
+  "aberdeen-sd": {
+    "effective_status": "Enacted",
+    "expires": "2026-11-18"
+  },
   "agawam-ma": {
     "effective_status": "Enacted",
     "expires": "2027-06-03"
@@ -28,6 +32,10 @@
     "expires": "2027-06-08"
   },
   "alpha-nj": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "americus-ga": {
     "effective_status": "Enacted",
     "expires": null
   },
@@ -62,6 +70,10 @@
   "apple-valley-mn": {
     "effective_status": "Enacted",
     "expires": "2027-07-09"
+  },
+  "arcata-ca": {
+    "effective_status": "Enacted",
+    "expires": "2026-10-31"
   },
   "archbold-oh": {
     "effective_status": "Enacted",
@@ -119,10 +131,6 @@
     "effective_status": "Expired",
     "expires": "2026-09-15"
   },
-  "augusta-richmond-county-ga": {
-    "effective_status": "Expired",
-    "expires": "2026-09-15"
-  },
   "aurora-co": {
     "effective_status": "Rejected",
     "expires": null
@@ -146,6 +154,10 @@
   "avon-oh": {
     "effective_status": "Enacted",
     "expires": "2027-04-14"
+  },
+  "baldwin-county-al": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "baldwin-park-ca": {
     "effective_status": "Enacted",
@@ -180,6 +192,10 @@
     "expires": "2027-01-08"
   },
   "bayonne-nj": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "beaufort-county-nc": {
     "effective_status": "Enacted",
     "expires": null
   },
@@ -343,6 +359,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "bucksport-me": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "buffalo-township-pa": {
     "effective_status": "Enacted",
     "expires": "2027-02-08"
@@ -393,7 +413,7 @@
   },
   "caledonia-township-mi": {
     "effective_status": "Expired",
-    "expires": "2026-07-01"
+    "expires": "2026-10-17"
   },
   "calipatria-ca": {
     "effective_status": "Enacted",
@@ -491,6 +511,10 @@
     "effective_status": "Enacted",
     "expires": "2027-04-23"
   },
+  "charleston-il": {
+    "effective_status": "Enacted",
+    "expires": "2027-10-06"
+  },
   "charlestown-ri": {
     "effective_status": "Enacted",
     "expires": null
@@ -581,6 +605,10 @@
   },
   "clackamas-county-or": {
     "effective_status": "Proposed",
+    "expires": null
+  },
+  "clarendon-county-sc": {
+    "effective_status": "Enacted",
     "expires": null
   },
   "clark-county-in": {
@@ -767,6 +795,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "delphos-oh": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "delta-county-mi": {
     "effective_status": "Enacted",
     "expires": "2027-07-23"
@@ -872,6 +904,10 @@
     "expires": null
   },
   "east-whiteland-township-pa": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "easthampton-ma": {
     "effective_status": "Enacted",
     "expires": null
   },
@@ -1299,6 +1335,10 @@
     "effective_status": "Enacted",
     "expires": null
   },
+  "hawthorne-ca": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "hayes-county-ne": {
     "effective_status": "Enacted",
     "expires": null
@@ -1412,7 +1452,7 @@
     "expires": "2027-06-01"
   },
   "humboldt-county-ca": {
-    "effective_status": "Proposed",
+    "effective_status": "Enacted",
     "expires": null
   },
   "humboldt-county-nv": {
@@ -1999,9 +2039,13 @@
     "effective_status": "Proposed",
     "expires": null
   },
+  "menasha-wi": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
   "mendocino-county-ca": {
-    "effective_status": "Expired",
-    "expires": "2026-10-16"
+    "effective_status": "Enacted",
+    "expires": "2028-08-21"
   },
   "mercer-county-ky": {
     "effective_status": "Enacted",
@@ -2256,6 +2300,10 @@
     "expires": "2026-12-16"
   },
   "nicholasville-ky": {
+    "effective_status": "Enacted",
+    "expires": null
+  },
+  "niles-charter-township-mi": {
     "effective_status": "Enacted",
     "expires": null
   },
@@ -2536,7 +2584,7 @@
     "expires": "2027-03-24"
   },
   "plainfield-il": {
-    "effective_status": "Enacted",
+    "effective_status": "Expired",
     "expires": "2026-10-18"
   },
   "plainfield-nj": {
@@ -2618,6 +2666,10 @@
   "quinton-township-nj": {
     "effective_status": "Enacted",
     "expires": null
+  },
+  "raleigh-nc": {
+    "effective_status": "Enacted",
+    "expires": "2027-04-06"
   },
   "ralls-county-mo": {
     "effective_status": "Enacted",
@@ -2737,6 +2789,10 @@
   },
   "san-antonio-tx": {
     "effective_status": "Rejected",
+    "expires": null
+  },
+  "san-francisco-ca": {
+    "effective_status": "Enacted",
     "expires": null
   },
   "san-joaquin-county-ca": {
@@ -3342,6 +3398,10 @@
   "west-haven-ct": {
     "effective_status": "Enacted",
     "expires": "2027-06-08"
+  },
+  "west-seneca-ny": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "west-whiteland-township-pa": {
     "effective_status": "Enacted",

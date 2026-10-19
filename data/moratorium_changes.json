@@ -4086,5 +4086,145 @@
     "locality": "Mendocino County, CA",
     "kind": "status_changed",
     "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "caledonia-township-mi",
+    "locality": "Caledonia Township, MI",
+    "kind": "extended",
+    "detail": "Now runs to 2026-10-17"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "plainfield-il",
+    "locality": "Plainfield, IL",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "mendocino-county-ca",
+    "locality": "Mendocino County, CA",
+    "kind": "status_changed",
+    "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "humboldt-county-ca",
+    "locality": "Humboldt County, CA",
+    "kind": "status_changed",
+    "detail": "Proposed \u2192 Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "charleston-il",
+    "locality": "Charleston, IL",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "niles-charter-township-mi",
+    "locality": "Niles Charter Township, MI",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "bucksport-me",
+    "locality": "Bucksport, ME",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "aberdeen-sd",
+    "locality": "Aberdeen, SD",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "menasha-wi",
+    "locality": "Menasha, WI",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "west-seneca-ny",
+    "locality": "West Seneca, NY",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "delphos-oh",
+    "locality": "Delphos, OH",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "americus-ga",
+    "locality": "Americus, GA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "beaufort-county-nc",
+    "locality": "Beaufort County, NC",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "baldwin-county-al",
+    "locality": "Baldwin County, AL",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "arcata-ca",
+    "locality": "Arcata, CA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "clarendon-county-sc",
+    "locality": "Clarendon County, SC",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "easthampton-ma",
+    "locality": "Easthampton, MA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "raleigh-nc",
+    "locality": "Raleigh, NC",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "san-francisco-ca",
+    "locality": "San Francisco, CA",
+    "kind": "added",
+    "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "hawthorne-ca",
+    "locality": "Hawthorne, CA",
+    "kind": "added",
+    "detail": "Added as Enacted"
   }
 ]
