@@ -3,11 +3,11 @@
   "generated": "2026-10-19",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 886,
+  "count": 871,
   "states": 49,
-  "enacted": 722,
-  "proposed": 82,
-  "official_sourced": 68,
+  "enacted": 704,
+  "proposed": 83,
+  "official_sourced": 67,
   "by_state": {
     "CO": {
       "total": 18,
@@ -30,8 +30,8 @@
       "proposed": 1
     },
     "IL": {
-      "total": 19,
-      "enacted": 14,
+      "total": 18,
+      "enacted": 13,
       "proposed": 3
     },
     "UT": {
@@ -40,8 +40,8 @@
       "proposed": 0
     },
     "WI": {
-      "total": 36,
-      "enacted": 33,
+      "total": 35,
+      "enacted": 32,
       "proposed": 3
     },
     "RI": {
@@ -50,8 +50,8 @@
       "proposed": 0
     },
     "MI": {
-      "total": 66,
-      "enacted": 53,
+      "total": 65,
+      "enacted": 52,
       "proposed": 3
     },
     "TX": {
@@ -61,12 +61,12 @@
     },
     "GA": {
       "total": 46,
-      "enacted": 34,
+      "enacted": 33,
       "proposed": 1
     },
     "NY": {
-      "total": 17,
-      "enacted": 14,
+      "total": 16,
+      "enacted": 13,
       "proposed": 3
     },
     "CT": {
@@ -80,13 +80,13 @@
       "proposed": 0
     },
     "ME": {
-      "total": 12,
-      "enacted": 9,
+      "total": 11,
+      "enacted": 8,
       "proposed": 2
     },
     "NC": {
-      "total": 47,
-      "enacted": 39,
+      "total": 45,
+      "enacted": 37,
       "proposed": 2
     },
     "FL": {
@@ -95,8 +95,8 @@
       "proposed": 10
     },
     "OH": {
-      "total": 63,
-      "enacted": 55,
+      "total": 62,
+      "enacted": 54,
       "proposed": 1
     },
     "TN": {
@@ -105,9 +105,9 @@
       "proposed": 2
     },
     "CA": {
-      "total": 31,
-      "enacted": 24,
-      "proposed": 1
+      "total": 28,
+      "enacted": 19,
+      "proposed": 2
     },
     "WA": {
       "total": 19,
@@ -150,8 +150,8 @@
       "proposed": 0
     },
     "SC": {
-      "total": 15,
-      "enacted": 10,
+      "total": 14,
+      "enacted": 9,
       "proposed": 5
     },
     "VA": {
@@ -170,8 +170,8 @@
       "proposed": 0
     },
     "AL": {
-      "total": 16,
-      "enacted": 15,
+      "total": 15,
+      "enacted": 14,
       "proposed": 0
     },
     "PA": {
@@ -205,8 +205,8 @@
       "proposed": 2
     },
     "MA": {
-      "total": 9,
-      "enacted": 6,
+      "total": 8,
+      "enacted": 5,
       "proposed": 2
     },
     "LA": {
@@ -245,8 +245,8 @@
       "proposed": 2
     },
     "SD": {
-      "total": 4,
-      "enacted": 2,
+      "total": 3,
+      "enacted": 1,
       "proposed": 0
     },
     "HI": {
@@ -275,9 +275,7 @@
       "smithfield-township-pa",
       "west-whiteland-township-pa",
       "dickinson-county-ia",
-      "lowndes-county-al",
-      "aberdeen-sd",
-      "arcata-ca"
+      "lowndes-county-al"
     ],
     "60": [
       "bloomington-il",
@@ -340,9 +338,7 @@
       "scarborough-me",
       "westbrook-me",
       "milford-ut",
-      "barnes-county-nd",
-      "aberdeen-sd",
-      "arcata-ca"
+      "barnes-county-nd"
     ],
     "90": [
       "bloomington-il",
@@ -451,9 +447,7 @@
       "westbrook-me",
       "milford-ut",
       "cherry-county-ne",
-      "barnes-county-nd",
-      "aberdeen-sd",
-      "arcata-ca"
+      "barnes-county-nd"
     ]
   }
 }

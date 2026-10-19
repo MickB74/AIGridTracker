@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 11105,
+  "count": 11113,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -117519,7 +117519,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-13",
-      "last_seen": "2026-10-16"
+      "last_seen": "2026-10-19"
     },
     {
       "title": "Virginia Residents Skeptical of Data Center Moratorium Proposed by State Senator Russet Perry: 'Spanberger Would Veto This 100%'",
@@ -118058,7 +118058,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-16"
+      "last_seen": "2026-10-19"
     },
     {
       "title": "Data centers urged to provide latest water information by Texas Attorney General",
@@ -118080,7 +118080,7 @@
       "locality": "El Paso",
       "state": "TX",
       "first_seen": "2026-10-14",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-19"
     },
     {
       "title": "AI data centers are coming for federal land. They're roiling the Nevada governor's race",
@@ -118861,7 +118861,7 @@
       "locality": "Taylor",
       "state": "MI",
       "first_seen": "2026-10-13",
-      "last_seen": "2026-10-17"
+      "last_seen": "2026-10-19"
     },
     {
       "title": "156 Texas data centers warned to comply with water use reporting requirements",
@@ -121270,7 +121270,7 @@
       "locality": null,
       "state": "AZ",
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-19"
     },
     {
       "title": "JD Vance Says Data Centers Have To Be ‘Good Citizens’ As He Touts Benefits",
@@ -122161,6 +122161,94 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2024-07-12",
+      "last_seen": "2026-10-19"
+    },
+    {
+      "title": "'We will not be bullied.' Is a mega data center coming to Shalersville?",
+      "outlet": "Record-Courier",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNTVdhMTA1S041bEFyNFQwYmtTeGlDR2tCUkVtOU9la05LUXVoWnBoWHhkOFJmeWVrckVuT1ZEWEdPYXo3LWpiSXNhRlFTY2RUZVNJbVFsa1Q5VFBseUVEMmNFMVRlb2RYek9DWlZ1aXdrcVgydUxnaHU1amQxSVhNV2F0akszdEZrRTl3QmN3WWZjcGhINV84d3l3UTNpeFpONG0tLVJlZU5zM0ltUFUtUW1mOVFDdW9Vamh4VzZBVFdOdUw1?oc=5",
+      "published": "Thu, 15 Oct 2026 15:42:00 GMT",
+      "published_iso": "2026-10-15T15:42:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-19"
+    },
+    {
+      "title": "Massillon residents voice concerns about new data center near school",
+      "outlet": "Canton Repository",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOcEVFOGJjc3RONF9mdGJBT0kwc19LVUlqR2lGWFRJaGxweDBfZ0t4N2xtendiRnlRZVp2bE16NVIxdEk0VzFtQUxBX3JJRmhlQWJOUkFqdm12S3RkY2ROSm8yeExvaVRoQko5c0hLQnRmeFA1Qmp6RWJNd1hxTEZNeS1yTnhITzVrRUp1RWEzdGxqTUcxNGx5MlpXc1BnSERGSjRYbENCdFpMX2MwTG1Mb2ZlTkJvUXVESnEyUHhUa3RHVlFvOG5RX0hQQ3k0dzZxQmhRRA?oc=5",
+      "published": "Thu, 15 Oct 2026 09:54:36 GMT",
+      "published_iso": "2026-10-15T09:54:36+00:00",
+      "locality": "Massillon",
+      "state": "OH",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-19"
+    },
+    {
+      "title": "Data center moratorium discussion held in Guilford County",
+      "outlet": "FOX8 WGHP",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWEt1UVRnVmlxWGZQVTBJYUF3b1hhbnJ2d2dQNE14U1hlZWVWdTFQYmE4RHdoblF4Ym5PUlo1QlF1TnBYQ3FuTEJwTDBmWnZqa1BFU1NZUkJkYXpsVTNDWmRDZUhxQ09GT25vd2lfbWdVNGxEQ1M3cjQ3YXFOejRlZVBsZUl3VmFhYmhlc09rbS1mU2xUQmpLanRqSmNwcFZPeUFOUmJzOEYwQdIBrwFBVV95cUxNY1NDdlBVbUM5bVQ5ek9hT2FIeXp2VFdoSUtyaHpOdWk0dW10Q1FzblhJZERlNTRfc0FWdkJwN08zSXJMb1hoOGpSN2YxcUs5QkExUDNrRXBYNWp0V05vUktqQ1h5eHZCN3A2V1RteDFpTFc0VWhoU1NPSm05OUFXUkVhanVac1h1ejdsSUJlNjVTYkxnTFNUTlVnOFRMN2s3UlEwYnFjWVJFdURIWEZz?oc=5",
+      "published": "Fri, 16 Oct 2026 02:49:29 GMT",
+      "published_iso": "2026-10-16T02:49:29+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-19"
+    },
+    {
+      "title": "Geronimo Power pushes back against proposed Harmony Township moratorium with $140M incentive pitch",
+      "outlet": "The Mighty 790 KFGO",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNc0ZfQmxJSUdZT01PZHZVYjhKZmNEMUVxQUp2NVRuNmZKR2xabkh4eldtU1F5YUNhOUNFUm4zVzA0Y3lka01Lb0tyZEd1SGQ2RmUtaGlIWU55cFJCQWxuUW5YOU90akZuQndEN1NOSWpoeDJuSi1GVG9Gc3Y0R01kSEp4dEhXY3FCY3ZoM0pYejNvSHM5N0k0MzhIZDdWR3JxOFJyNmFyX00tSFJzQURKOHhXTnZnNl8xY2FaZ0JXSWFabmpU?oc=5",
+      "published": "Wed, 14 Oct 2026 02:16:33 GMT",
+      "published_iso": "2026-10-14T02:16:33+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-19"
+    },
+    {
+      "title": "Google explores data center site in Roanoke County, Virginia",
+      "outlet": "Data Center Dynamics",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPdEdyc1MwZXZINEZ5Wkt0dHM3YkxTellLTFBTVVI0a0NSQU52bDdlOHdWdlU5ZWZSbGNjVHFvak9CZFlVcVdURTZWZWlpYVFJWEFEMWNDTHRRTnZMYXF4U3BRUjI3V1o5aEJtVzAxX05RTGk4Q0x3UnJZVy1wdHRXRE5oWk95X0dLaEF0QnM2VHI4UkJKUGV2SXp4Sk9UQktXa0hEd2Z3?oc=5",
+      "published": "Mon, 19 Oct 2026 15:45:56 GMT",
+      "published_iso": "2026-10-19T15:45:56+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19"
+    },
+    {
+      "title": "They Retired Here for a Country Idyll. But Meta Had Other Plans.",
+      "outlet": "The New Republic",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSkRIYXA1Tnc5WWxLZjh5M1VwZVJyQ2JBem5qTDVQRll3QkZUa0g2SExGUXVPSS15T01FRkhEMkVndG1FRXc0RG56OVJaeDZENWx4c0NQWUZNekJsbFk1bkFoaVNqSGJjYXQzS1NpbDlGa1hETVZCczc1NFRoQWFUZWlOakxJc2ZsRmZaLUNaYVU?oc=5",
+      "published": "Mon, 19 Oct 2026 16:47:31 GMT",
+      "published_iso": "2026-10-19T16:47:31+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19"
+    },
+    {
+      "title": "Data Centers Are Skewing Political Party Lines in Texas",
+      "outlet": "Austin Monthly Magazine",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRnlWN2pDVTd6SFk5Y0Y2ZDFZRGVNdG5nSXozR3lhalhueUxwR2VaM0IwemZCQzcyaWZzNlpGaVBXVm81STNoaWh4NmhiUnN4RG5LSU9qSFFXZHNoRVhMQ0hfckxOamNNUXJhcEJaOU5sTUQtREtCZ29WMzlFdFJrSkdvaVhWbWxrQk9WWlJqRQ?oc=5",
+      "published": "Mon, 19 Oct 2026 15:43:28 GMT",
+      "published_iso": "2026-10-19T15:43:28+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19"
+    },
+    {
+      "title": "Second data center developer meets with Warrick County commissioners",
+      "outlet": "Courier & Press",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQY0YweVRPcW14OWZzZ1Fxb29qbUREQWF4MjhsNlh6Z1lINUR6a2gzUm5MVHRXLVFuUE5aXy0yMGlGTkRjSXYxVGJjTzhmTE9HOFNVeFlPNWpkVDNHTzBSZGVfcGtzMFNsZURFVVRIYjRsakx6RTE3VWJoVmpZVmFEQ3cwSkMxemFfaEI5Sy1OV0pEWW1EZjdmR01LeXFYdzNrN0lsSjRZLXF5TVh4anZneHF1WTk0N1d3YmxJX1FkSjBRUGdrd0NiR2M5TQ?oc=5",
+      "published": "Mon, 19 Oct 2026 15:45:00 GMT",
+      "published_iso": "2026-10-19T15:45:00+00:00",
+      "locality": "Warrick County",
+      "state": "IN",
+      "first_seen": "2026-10-19",
       "last_seen": "2026-10-19"
     }
   ]

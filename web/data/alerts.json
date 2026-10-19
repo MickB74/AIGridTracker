@@ -4,7 +4,7 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "AI GridWatch (https://aigridwatch.com)",
-  "count": 130,
+  "count": 129,
   "alerts": [
     {
       "id": "mora-MI-wixom-2026-08-26",
@@ -119,6 +119,19 @@
       "expires": "2026-09-15",
       "days_left": -34,
       "title": "Augusta, GA: data center moratorium has lapsed",
+      "body": "The moratorium's documented term ran to 2026-09-15 (34 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
+      "source": "https://theaugustapress.com/augusta-data-center-ordinances-passes-6-5/",
+      "verified": true
+    },
+    {
+      "id": "mora-GA-augusta-richmond-county-2026-09-15",
+      "kind": "moratorium-expiry",
+      "severity": "expired",
+      "locality": "Augusta-Richmond County",
+      "state": "GA",
+      "expires": "2026-09-15",
+      "days_left": -34,
+      "title": "Augusta-Richmond County, GA: data center moratorium has lapsed",
       "body": "The moratorium's documented term ran to 2026-09-15 (34 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
       "source": "https://theaugustapress.com/augusta-data-center-ordinances-passes-6-5/",
       "verified": true
@@ -241,16 +254,16 @@
       "verified": true
     },
     {
-      "id": "mora-MI-caledonia-township-2026-10-17",
+      "id": "mora-CA-mendocino-county-2026-10-16",
       "kind": "moratorium-expiry",
       "severity": "expired",
-      "locality": "Caledonia Township",
-      "state": "MI",
-      "expires": "2026-10-17",
-      "days_left": -2,
-      "title": "Caledonia Township, MI: data center moratorium has lapsed",
-      "body": "The moratorium's documented term ran to 2026-10-17 (2 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
-      "source": "https://caledoniatownship.org/AgendaCenter/ViewFile/Minutes/_06032026-554",
+      "locality": "Mendocino County",
+      "state": "CA",
+      "expires": "2026-10-16",
+      "days_left": -3,
+      "title": "Mendocino County, CA: data center moratorium has lapsed",
+      "body": "The moratorium's documented term ran to 2026-10-16 (3 days ago). Unless it was extended, new applications can be filed again. Confirm the current status with the clerk before relying on either reading.",
+      "source": "https://mendovoice.com/2026/09/mendocino-county-supes-ban-data-centers-for-the-moment-at-least/",
       "verified": true
     },
     {
@@ -355,19 +368,6 @@
       "title": "Lexington (Fayette County), KY: data center moratorium expires in 12 days",
       "body": "The documented term ends 2026-10-31. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.lex18.com/news/covering-kentucky/lexington-city-council-passes-moratorium-on-data-center-development",
-      "verified": true
-    },
-    {
-      "id": "mora-CA-arcata-2026-10-31",
-      "kind": "moratorium-expiry",
-      "severity": "urgent",
-      "locality": "Arcata",
-      "state": "CA",
-      "expires": "2026-10-31",
-      "days_left": 12,
-      "title": "Arcata, CA: data center moratorium expires in 12 days",
-      "body": "The documented term ends 2026-10-31. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
-      "source": "https://lostcoastoutpost.com/loco-media/loco-media/agendizer/attachment/26290/1.pdf",
       "verified": true
     },
     {
@@ -537,19 +537,6 @@
       "title": "Putnam County, IN: data center moratorium expires in 29 days",
       "body": "The documented term ends 2026-11-17. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
       "source": "https://www.giant.fm/putnam-county/news/local-news/putnam-county-commissioners-vote-in-favor-of-moratorium-on-solar-farms/",
-      "verified": true
-    },
-    {
-      "id": "mora-SD-aberdeen-2026-11-18",
-      "kind": "moratorium-expiry",
-      "severity": "urgent",
-      "locality": "Aberdeen",
-      "state": "SD",
-      "expires": "2026-11-18",
-      "days_left": 30,
-      "title": "Aberdeen, SD: data center moratorium expires in 30 days",
-      "body": "The documented term ends 2026-11-18. If your community wants it extended, that decision usually has to reach a meeting agenda weeks beforehand \u2014 check when the board next meets.",
-      "source": "https://aberdeeninsider.com/city-of-aberdeen-notice-of-resolution-26-07-04r/",
       "verified": true
     },
     {
