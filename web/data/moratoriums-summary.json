@@ -1,6 +1,6 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-10-19",
+  "generated": "2026-10-20",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 871,
@@ -257,6 +257,7 @@
   },
   "expiring_within_days": {
     "30": [
+      "meridian-township-mi",
       "lysander-onondaga-co-ny",
       "charlotte-nc",
       "lavon-tx",
@@ -275,7 +276,8 @@
       "smithfield-township-pa",
       "west-whiteland-township-pa",
       "dickinson-county-ia",
-      "lowndes-county-al"
+      "lowndes-county-al",
+      "barnes-county-nd"
     ],
     "60": [
       "bloomington-il",
@@ -291,6 +293,7 @@
       "marshalltown-ia",
       "starke-county-in",
       "johnson-city-tn",
+      "jackson-county-mo",
       "springfield-mo",
       "fort-payne-al",
       "minneapolis-mn",
@@ -398,6 +401,7 @@
       "logan-ut",
       "grand-county-ut",
       "wayne-county-ut",
+      "white-pine-county-nv",
       "tulsa-ok",
       "broken-arrow-ok",
       "edmond-ok",
