@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-10-20",
+  "generated": "2026-10-21",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 871,
   "states": 49,
-  "enacted": 704,
+  "enacted": 703,
   "proposed": 83,
   "official_sourced": 67,
   "by_state": {
@@ -131,7 +131,7 @@
     },
     "IN": {
       "total": 24,
-      "enacted": 22,
+      "enacted": 21,
       "proposed": 2
     },
     "AR": {
@@ -265,7 +265,6 @@
       "lexington-fayette-county-ky",
       "johnson-county-ia",
       "putnam-county-in",
-      "white-county-in",
       "richmond-ca",
       "gilroy-ca",
       "lowndes-county-ga",
@@ -302,7 +301,6 @@
       "johnson-county-ia",
       "normal-il",
       "putnam-county-in",
-      "white-county-in",
       "skagit-county-wa",
       "hillsboro-or",
       "boulder-county-co",
@@ -313,6 +311,7 @@
       "richmond-ca",
       "gilroy-ca",
       "waterville-township-oh",
+      "cache-county-ut",
       "box-elder-county-ut",
       "lowndes-county-ga",
       "camden-county-ga",
@@ -333,6 +332,7 @@
       "smithfield-township-pa",
       "west-whiteland-township-pa",
       "dickinson-county-ia",
+      "peosta-ia",
       "webster-county-mo",
       "spokane-county-wa",
       "lowndes-county-al",
@@ -378,7 +378,6 @@
       "madison-wi",
       "normal-il",
       "putnam-county-in",
-      "white-county-in",
       "marysville-wa",
       "skagit-county-wa",
       "wendell-nc",
