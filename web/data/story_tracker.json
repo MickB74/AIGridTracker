@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 11449,
+  "count": 11491,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -55446,7 +55446,7 @@
       "locality": "Pulaski County",
       "state": "IN",
       "first_seen": "2026-08-17",
-      "last_seen": "2026-10-04"
+      "last_seen": "2026-10-21"
     },
     {
       "title": "Officials recommend data center moratorium for approval in Fulton County, Indiana",
@@ -62585,7 +62585,7 @@
       "locality": "Starke County",
       "state": "IN",
       "first_seen": "2017-05-31",
-      "last_seen": "2026-09-15"
+      "last_seen": "2026-10-21"
     },
     {
       "title": "Pasco puts brakes on data center boom, studies impact on city resources",
@@ -75642,7 +75642,7 @@
       "locality": "Starke County",
       "state": "IN",
       "first_seen": "2026-05-05",
-      "last_seen": "2026-09-17"
+      "last_seen": "2026-10-21"
     },
     {
       "title": "Two arrested, accused of maintaining a drug house in Cass County",
@@ -100172,7 +100172,7 @@
       "locality": "Brewster County",
       "state": "TX",
       "first_seen": "2026-09-18",
-      "last_seen": "2026-10-20"
+      "last_seen": "2026-10-21"
     },
     {
       "title": "Not Even $10,000 Could Convince These Locals To Stop Protesting a Data Center Project",
@@ -115110,7 +115110,7 @@
       "locality": "Brewster County",
       "state": "TX",
       "first_seen": "2017-11-20",
-      "last_seen": "2026-10-20"
+      "last_seen": "2026-10-21"
     },
     {
       "title": "Moffat County considers data center regulations as residents, experts debate safeguards",
@@ -117794,7 +117794,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-21"
     },
     {
       "title": "Local coalitions sue Franklin County, data center developers",
@@ -120071,7 +120071,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-17",
-      "last_seen": "2026-10-20"
+      "last_seen": "2026-10-21"
     },
     {
       "title": "Rahway, Clark, and Other Union County Towns To Ban Data Centers",
@@ -120555,7 +120555,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-17",
-      "last_seen": "2026-10-20"
+      "last_seen": "2026-10-21"
     },
     {
       "title": "Ballot Breakdown: West Texas Senate candidates weigh in on data centers",
@@ -122293,7 +122293,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-17",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-21"
     },
     {
       "title": "Cleveland City Council looks to extend data center moratorium",
@@ -123888,7 +123888,7 @@
       "locality": "Volusia County",
       "state": "FL",
       "first_seen": "2026-10-20",
-      "last_seen": "2026-10-20"
+      "last_seen": "2026-10-21"
     },
     {
       "title": "Ottawa residents win case against city; voters to decide 10-year data center ban",
@@ -124174,7 +124174,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-20",
-      "last_seen": "2026-10-20"
+      "last_seen": "2026-10-21"
     },
     {
       "title": "Data center ordinance in the works in Warrick Co.; Meeting set for Nov. 2",
@@ -125945,6 +125945,468 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Memphis Wants to Be the “Digital Delta.” Its Residents Want to Breathe.",
+      "outlet": "Mother Jones",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUlFtVElWVmM5NWFQdDFFdU9tMl9uck9TSjlVcmNucXV2RTEteDZnUjQ4YllfZXM5VHhEaHNIWGFIdVltdDFRY0hodUgyN1A0bTdGSjVWbHU5a1ZLb2prYXhLZEdMdms5TUNWbHRiQVF0YmthbmY1RGRqRW9kWUdYbVhSMEhrN0d6bnVucFZoSExTNWRVc0tyWWVKb1NfWTZlR1RkYmF1Y08?oc=5",
+      "published": "Wed, 21 Oct 2026 17:04:52 GMT",
+      "published_iso": "2026-10-21T17:04:52+00:00",
+      "locality": "Memphis",
+      "state": "TN",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Newly approved MLGW budget sees 12% price hike for residents, 30% for data centers",
+      "outlet": "Action News 5",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPaG43d2xsLUk2NmpVTzFUVlVNSEVlRXVQNXNMZ2ZnM2tsX2RMWjJPckc2U1JWQmlQZG5RRmw4cU9qWWJ2ZHcyY05DR1RBbmVja3R0dVE1R0V3aWp3NjBMamQ0TGljYXRwcU1MQ0tIS01lVDNaUERYYVREZW10b1Nfc2JjT3RxektfNHhkV0hTUEF0aE5oMmFPOGotclZrTWMwNEE?oc=5",
+      "published": "Wed, 21 Oct 2026 16:27:00 GMT",
+      "published_iso": "2026-10-21T16:27:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Judge dismisses lawsuit challenging Port Washington ordinance giving residents more power over development",
+      "outlet": "WPR",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOQ1dZY05EY1V2bEhzVWs4S0VWQmhGYnFjcjJWdWJmTzZqZ05mYUhRN25ZUlJlMUlLcTRNc3paLXpYekpEcXlOWkpUUGNGMW9xY19lbVZmMGxrV2tLOHdCZkdtLTdKV0NXS3NqeWNGaHdrRWN4ajRZamxhVDNtQURjY0sxMUNua3oxTzROVzZQM3ltRXdIRy1NRWp2WnA?oc=5",
+      "published": "Wed, 21 Oct 2026 19:01:34 GMT",
+      "published_iso": "2026-10-21T19:01:34+00:00",
+      "locality": "Port Washington",
+      "state": "WI",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Michigan City advances data center moratorium as residents push to limit Google project",
+      "outlet": "nwitimes.com",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPeEhfM0VXdnFsdWNNRzZzbTdfX0RrM2ZiSVRtc19zSkJndXdIdmRBUzJ4ZHBJcm9RQXBydlgyTmlSVzgwOVFkdEQtajctT2w2Q1JHSzRlckVsWHJ4YmpodE10aXBVY0NXNm9iaG9xdGp4RE1DdVktNDQ1QnV4eDBpVTVFbFpOUVlMTF9IdHhCYUJyWllPRFhnSm1oQ1JmbWp2clFv?oc=5",
+      "published": "Wed, 21 Oct 2026 17:30:00 GMT",
+      "published_iso": "2026-10-21T17:30:00+00:00",
+      "locality": "Michigan City",
+      "state": "IN",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Community Members React to Failed Data Center Moratorium Vote",
+      "outlet": "Memphis Flyer",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQWVZsNzdpMWFFWGJkVktnZ09ZVVhJMmg2SFBjTFFmWjJOcmd6QUlFZ21zNXV3bDNTU1dBRTdpX2t0QUpqVnlqWXN4dVRuOGd2VUtNcXk4YnhQb0QxZmlEalp3bFdzRjhYcV9BSFQxUjZxMHphRnM2cmZ5ZlFWS1FMRlFkRkw4N2thdzJhUU5XQVJXWXMyaFE?oc=5",
+      "published": "Wed, 21 Oct 2026 15:20:10 GMT",
+      "published_iso": "2026-10-21T15:20:10+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Union Township community voices concerns over handling of data center proposal",
+      "outlet": "WJAC",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNTF85OVQyd2tGTmJFYTkyalM5THVWZWdkZGRvanFsQzdIYkRBRFFkRHFIdGdiWWl1enljb3Z5M1ZyaXBha2xFN0FvdkZnYTY3NmNfWU1jajM4WmRwbDRPUU9tOEc4OGlVVktCNmNWbkJ4UTJhbjZ6RE9zRjN5bWJqb1FmZW9nTEZrdy0yZGl5a09HcDNFRG5IZVZWVEZkUDE5NXV3MGh3WmRINjM2?oc=5",
+      "published": "Wed, 21 Oct 2026 18:41:55 GMT",
+      "published_iso": "2026-10-21T18:41:55+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Brighton asks residents to conserve water while tower undergoes maintenance",
+      "outlet": "FOX13 Memphis",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQcFdkTUdnZG83dFNDSHVHS3ZXUFBubFBqSGg3UzlYRnRzbEo3d3ZnQmpMMmhnLXJ0NmFMV0E1TnB6NWNJUnczOUtQQlB3X2NyZkl1Zmp2b1N4T3Vpek1aaTRpUERUS1NxQkRWSnE3MHo4RVBhdzcwOTYxOXI0dEVfZUpRbU44NUgtWmVXZlQ2d3J1TDZ3Njdtc0hnZG9zeUIzX3pJRnF2RjlQQjY3YmxReE9WVXdvVWtHWDZIXzBsODhTazM1Z1ZJdnpyUlNmZ2Z1cTdxeGx5OHgwSUd2Tm5sNk1teDFXdmFySXRfVDhIUlM?oc=5",
+      "published": "Wed, 21 Oct 2026 17:42:00 GMT",
+      "published_iso": "2026-10-21T17:42:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Walls Residents Push Back on Data Center at Listening Session",
+      "outlet": "DeSoto County News",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNanZvb2dnNTJ6ZFhDNWhfQ0NlbEpnR0gyVzdRRUJaSmJJczlhX0xUY3piSVhsdUIyTUtoMk14UTRmNGlIWENKNC1obUhxdUczeWJRNEV3WU55d0FsZF8wSHNTMV9fVmF2NGYtYlVIR0djRWItYWFsMDVXc2RVSHZqXw?oc=5",
+      "published": "Tue, 20 Oct 2026 12:24:11 GMT",
+      "published_iso": "2026-10-20T12:24:11+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-20",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Lawsuit filed over commission's data center deal",
+      "outlet": "Lowndes Signal",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPck5hMEtBWEx4Zi1TYWZHX2tNNkVKRlBuZjExNnBkTXNQaTBjbm54OUExNkc1c0ltQnM0MGREd2pfV2VEM0NxOGRaTTRHOEgzUnN4QjBFUDRhbE4tSm8zaWI0TGZuNzJKekw0Z0Jvenk0X1BKdUhXR0JZdF9jeUMtQm0yNlk3dThuN0ZpaDVKSWd0OU1FbVpmWUdQdUg?oc=5",
+      "published": "Tue, 20 Oct 2026 21:17:08 GMT",
+      "published_iso": "2026-10-20T21:17:08+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-20",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Kris Mayes considers nuisance lawsuit against Ahwatukee data center",
+      "outlet": "azcentral.com and The Arizona Republic",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNVGp3WHRaRFVRQXlhd2tvS21uRWVyR05Bb0lzTnRIWUVycUsxMUozdHVxM2lsQk5YNVlCX3NHbzNUOW5Db1lWa1JRS21ndTZjaWlSNWNQSnRsS3VQa1BGbzE2cm1lNTd1VExFMkJSUGZXdmxNeFgtQndTbmxNcWRUNHJEMEFjaEh0Wkd6cWxUVFlLVEhWcDdaUmxQNUlDVTk0T0dzRkZwU2g4dmhRN3FQTklMb09xTG9LTWg2bk1LVEpJNEpNZlptb1FrVm1tZ00wR2JFRg?oc=5",
+      "published": "Fri, 16 Oct 2026 11:04:00 GMT",
+      "published_iso": "2026-10-16T11:04:00+00:00",
+      "locality": null,
+      "state": "AZ",
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Data centers shouldn't be rushed, 115th District candidate Szabo says",
+      "outlet": "Pocono Record",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTXpwU3hTREZyMTRyeFNlY0xOMHIwUW5nR3FRNnlYa1EzNmQ1ZEZmRGE2MzJ1eXVIVmV3VTh3Rm8tUWEzbDlnZ0hhMWVSMEsySEM1MHA2X3VYZXF1aG5NS0VaSzRscXVhcTQ5MEtmZmN4cU55VG01aVBJOUZKa0lpZ0lhMTVPVklBMy0ycjNMRGplZnFpOVZnWFl5Y05BUExCLVcycXR2cGlYN3c3V1VMX2ZGWVNXejR0cHJsbHN3c0IxdEpuei02Tk9UZWRkXzFJQk9lM0JR?oc=5",
+      "published": "Wed, 21 Oct 2026 08:58:00 GMT",
+      "published_iso": "2026-10-21T08:58:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Data center legislation surges as states shift from incentives to oversight",
+      "outlet": "National Association of Counties",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOU05PQ050ZkpzY2xpN3lFU3I1dHdlYnF5Sm4yV1Z2MVNNNEZoQ1BteWN3Q1JSQ2QteWdIaHF3RVYtZDF0cDNVS040M24wQ2NZSEFlUWg2YVBQWnY5c2ptMXBBeG91X1VnSThIQXRIZFlGUXZzLUZGRC04T0NqNjNiMjdMWE8tY3Q3T3ZMcnB5X3BJVEJv?oc=5",
+      "published": "Wed, 21 Oct 2026 15:26:19 GMT",
+      "published_iso": "2026-10-21T15:26:19+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Utah County protester arrested after confrontation at meeting on data center ordinance",
+      "outlet": "KUTV",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPR3NkVHZ0bEFnd1ptZzgtNXFCclYxMWpRbzV1bVRza3A3R1F6NFVBUDFfS1JyMWpqMDc5cW5vQ2lNTWsyM2Q0Z2c2TnZUal8zWW1jYjE3d25SWUZ4aE04cWNFczZtS1l4TEpqN2J1akdLSG5Hd0dpbFBvcEJxcFdBNWE2NGM1LVE3UC1RMTJTY0poZEZvaDJlcWs1SGRweU1zeWN6MzRUVmVuVGcxRkxCTkxUWQ?oc=5",
+      "published": "Wed, 21 Oct 2026 16:05:31 GMT",
+      "published_iso": "2026-10-21T16:05:31+00:00",
+      "locality": null,
+      "state": "UT",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Cleveland Extends Data Center Moratorium Through January",
+      "outlet": "GovTech",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPUTlVTVRRb0RsU3Ayd3E0d1ZvaXVIdHhLWjRVVXFOQWExT3FOdjVneDVNYk1zMWZxOHg2SS16amU5MGVGaTd4cThEbV9fMzhzcWE5cjNpU2lfQ0VlTm1EVHVBMWpnT2V2NmJzZTlpbmEzanNSSVJCSVd1cDkxUlVISF9fc3JGencwOXowU3J4dU5yTEJZLWk1ZVNuTzlQYUJ4WGVrckdVdw?oc=5",
+      "published": "Wed, 21 Oct 2026 18:15:35 GMT",
+      "published_iso": "2026-10-21T18:15:35+00:00",
+      "locality": "Cleveland",
+      "state": "OH",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Judge blocks council from banning attendees following chaotic AI data center vote",
+      "outlet": "Action News 5",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWFU0N01FZmRTQ2ZMdFk1Q2Q0RWNFMmlyRXQ1NVNRMWtkajNKeGNzbnRrMThORzY0Tm5RbGZrbWZ5QXRVRVZCTWFyZGJQVUNVTFdidmN4eVZYYkFaZ09mMmh1TVRyX3FUTHc0QVdESEJVRlg5T3MzeG16NHQ5emZCczJLaGFDMlk4QnFlVU9mWUxSMTFQWjJNYXdFRVdWNG5NNXlrdUs3QmxwUFYtQmhPeHN30gHGAUFVX3lxTE1telB0b2dIWGc4ZTBfdHZpQzlKWlFGdE8yck9Ca1RFQ3R4cGQ3S3QxWE1ra1FNeUp1RHowNGw0QUJfcWFtSHZVZElfWVNoeWRCb3BZUmVLcUZKX0RtZzZ2RWJJN0ZGWTJldmJWa1EzOU1LNjNTT1JJZm9KYWZyOHJFc2k2QWxwZ2VjRWltZTdJTF95QVJfZHlHcWRDN085YkFfOWlLTWpWVVA5MHJ4TE5ELXBUYlhHRkx1aVZQUXV1WGY2cUJpQQ?oc=5",
+      "published": "Tue, 20 Oct 2026 15:54:00 GMT",
+      "published_iso": "2026-10-20T15:54:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-20",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Memphis councilors reject 18-month data center moratorium",
+      "outlet": "Data Center Dynamics",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNa0xxdnNULWVPLTJtX2w4VDNCLW93Z1NfejEzYnRuQUExb0xadjl3cVc2b3VEWFdqbVZWbUxfSGtjeEZXdllnUjh5ZGs4OVdZM3RpNjhERHJOR3puTkI5ZDR2bXk0LXdjekh0SWVlcnpyWlc2UnZoY3lZNnZFMHFfWmttSzJ4WjB4ZUM1TjkxX2lCdw?oc=5",
+      "published": "Wed, 21 Oct 2026 16:28:21 GMT",
+      "published_iso": "2026-10-21T16:28:21+00:00",
+      "locality": "Memphis",
+      "state": "TN",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "County leaders push for a voice in data center regulation authority",
+      "outlet": "National Association of Counties",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPRHhJUF9GTHhCSWl6ZjRhZVpMU3phR3JQSWNnT3BkU0RkWDdockhDakJ5R3d1MEJjaU9CZFdtT3N3VGVSVnRvR0RuaFNIUHZBSnB1NTFvZ0lmV3JjN2gyaUxhdGhLYjd1dHVrSnhCQmtmUXRzVnFrcTg3Z2JiUkZTZG9fR3Z0LTV4NXI5cw?oc=5",
+      "published": "Wed, 21 Oct 2026 15:26:29 GMT",
+      "published_iso": "2026-10-21T15:26:29+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Planning Commission To Give Input On Data Center Ordinance Development",
+      "outlet": "myMotherLode.com",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOaXJycXp0bFhvUmx6dEI3Zk5NaUVuckwyQlpFakNMTkplV2FVTU5XSGZGWVVjcDd1a0E4ZWdad3FnWTYwU21WdW5FLXlsZ28tT2VPSlZtcjJjWkxWcVBMeFJYN3hDaFJqY01TaW1VOVN2S3pxakcwXzNGR1VTVWpOem91ZktvaE00RTl0TGFMT0x5RzQzZlpjYlhVSzFpNHlKMTVqM3RKT1k1eURSLUQ2M1pabnJpQXJOQl8wZNIBwgFBVV95cUxPb01VMlNtTGVIVU5CWEhuS3R4OHl5TURKQWhMdEhEX1lRUHkwemlDSndKYWItZndqdlp6MnIxOGFfWEJVRUpxSC04b0ZtU2tJUUlYcE95Y0Z5aTJSNkJvS1lIZ1hxVmVCTWRDVkdtWTdvMUs4VmUzVVV2YXZES0JMWWFRc1JEbEN2cXFoOUVVdWtoeVNPXzF4VzNyWm82alAyam5mck44MnFEeTNGS043OV9lYjlLXzk3YWNOb25kUTlVUQ?oc=5",
+      "published": "Wed, 21 Oct 2026 14:04:09 GMT",
+      "published_iso": "2026-10-21T14:04:09+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Birmingham, developers seek dismissal of lawsuit over Nebius data center project",
+      "outlet": "WBMA",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNd3FkYW9kdDZHWkVpOWZMd1pLeUc1Xy02MVBDMXRwX1ktNm51ZUtRRmZVd3dBLXEwdkJ5aV9waVF3VFZRbFdnNHVlVHBsNTNWeTZmQ0hwRDVzUjhDVUdzUzU4OEc4VC1HUndLUW1tTmJTQ08xYjk3RUtuU3RicXN4R1RWUWRfVFpnU2M5NzlBNkRhZEFhTHNxU1dYbEtEbXNDV2l0OWk1bkhtVzdsSVpn?oc=5",
+      "published": "Wed, 21 Oct 2026 03:41:40 GMT",
+      "published_iso": "2026-10-21T03:41:40+00:00",
+      "locality": "Birmingham",
+      "state": "AL",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Opinion | Democrats Should Get Behind a National AI Data Center Moratorium",
+      "outlet": "Common Dreams",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1LdlB6M1BnR2tnME9zRDNLX1lHZEpwUmtqRXZUUmNQRjFqZTZWdFFVRTlIRTdjV2VJbXVvQllYR2VnLXBEMFUwVGhaaDdsem5ib0QweE1lMmxDRGxSVzJEekwyaDAyYzAyNzdfSDBuOUo4Zw?oc=5",
+      "published": "Wed, 21 Oct 2026 12:13:19 GMT",
+      "published_iso": "2026-10-21T12:13:19+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Judge denies Trump administration request to dismiss NAACP lawsuit against xAI",
+      "outlet": "Mississippi Today",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOQUh2Vjk1dkJVYnUzVHhEZFdCSkNuekFjZHl0Y0hPbzhzdlBMaTB6QTZJcHhSVkppd2RLeEJGd0l6WjlEcTRfWExuYlVNZzUyeWFhMTVYd1pBQ2F5LVp1eHVaUlljZWlBUkVCY19LejVkMTZheHpUVEJsQ0ZNYWZRWEMxc3Myejlvdk43M2dKOV8tMDAyd09uc3ZMWQ?oc=5",
+      "published": "Wed, 21 Oct 2026 15:00:00 GMT",
+      "published_iso": "2026-10-21T15:00:00+00:00",
+      "locality": null,
+      "state": "MS",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Damascus holds public hearing on data center ordinance",
+      "outlet": "The River Reporter",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQTnkxUU5DYWRfTnFMNDlfektLOHQ3U0ZtWHQtMTZNdG94cUZUR2JEZmtxWWJxY1phaGljb1lBMTZhaFdrakIyVzFWUHM0WkFmSDhmX1lMbEM4dnMwUWhNUU5EckJnOXB3bldRS3ZBRnc4R212ZG9KS3dTTURoUFZtUHRRZzBWNllvellOdnNDZmV2TFJXTncwTlZYTXY0NXc?oc=5",
+      "published": "Wed, 21 Oct 2026 16:12:00 GMT",
+      "published_iso": "2026-10-21T16:12:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Berkeley Becomes Latest Town To Ban Data Centers",
+      "outlet": "Patch",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQcmxIejZKbC1EbFFmWHE1MFlXa2dKakgzU3pDZ0RlRXlzOEstN3Uyb1Zva0tQcWpUWGtTRlc3bUZmX29LdEZ3WFFPYlBDV1pxX1dab1BzQ3lhdl9ROE5PSGNOSVBaOVJIQjk1Q2RsU3A1Mll2SVg2M0hpa1UxUmVHUUJjenhXajV2ZlNWS01zZ9IBpAFBVV95cUxNSmV0WFEzcVF5SUhzdjJ5QUVyTERyNXdPUk43NzkyTjNLallYMlhPUWdnNHlCcFk3bkRUUkZlaXdFTm9BRmZ4RXcxZnNCbGpSTjJzbkVwaXYtb2xOSmZEajhaNk4zLXZpaFY4YU1reDNFQy1VNnhFQnBYYW9xdkpSbFdDYTYtU0hKYkYtUmhUZldyTHJDY0NmRFRwNUMtdXB1OU03VQ?oc=5",
+      "published": "Wed, 21 Oct 2026 18:30:46 GMT",
+      "published_iso": "2026-10-21T18:30:46+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "3 Free Guided Nature Walks In DeKorte Park",
+      "outlet": "Patch",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOOFRIMHA1M2ZRWld1U3lVNE9peGpTTk9JdFBmV1hYcEZ6S29iNDl0QVRBc3JvTG9aRU9idUt4b0JweV84bU1zREhJLVZxM2hUNkVFMXBQT1d2MlRWQnBhTXFXb3dpNnlqcUpueUowQWJpVUIxLWR3dWxsNTVreUp6Qjl1UGJ0LWMzMURkamJjM3k3QW5nbTdDVtIBmAFBVV95cUxOOFRIMHA1M2ZRWld1U3lVNE9peGpTTk9JdFBmV1hYcEZ6S29iNDl0QVRBc3JvTG9aRU9idUt4b0JweV84bU1zREhJLVZxM2hUNkVFMXBQT1d2MlRWQnBhTXFXb3dpNnlqcUpueUowQWJpVUIxLWR3dWxsNTVreUp6Qjl1UGJ0LWMzMURkamJjM3k3QW5nbTdDVg?oc=5",
+      "published": "Mon, 19 Oct 2026 20:57:34 GMT",
+      "published_iso": "2026-10-19T20:57:34+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Amazon cancels data centers for GW Ashburn campus",
+      "outlet": "Virginia Business",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPMVZyUTFEUTNXN2ZSTDh1bFR4VnZXaGVESXJSbl9OamoxWU5pSkE0OGg2Z051Y1c0YTVrNWtPbzlBVE9neE9iSEhZZjU5U3FhZFdPUmVWTDg2aUdzYXQtTlV4dmNKejJ2Qy0zeHVjNHpVS0kyN2N0ekNzU3VXRzE0WnI3OVZJUQ?oc=5",
+      "published": "Wed, 21 Oct 2026 16:29:09 GMT",
+      "published_iso": "2026-10-21T16:29:09+00:00",
+      "locality": "Ashburn",
+      "state": "VA",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Amazon abandons $427 million GW campus data center plan and pledges land donations worth $65 million instead",
+      "outlet": "Fortune",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOY1RHRG1NVTZQUlB3bGlOX0Z4X2xnNllqWlR2QmlWNWVQb21MUHpiM1VlemlBV3hoVE1Ja1l6b0NkR0Frb3Z6WDI5WDNLZHJGZi1fbjctak5JeTF2WmlUWG5xa0o5dmJFb2xFQklhWHNTQmdOaTJMNzhveFQxZmJuT3RFWlFlZE12Nmdj?oc=5",
+      "published": "Wed, 21 Oct 2026 18:19:00 GMT",
+      "published_iso": "2026-10-21T18:19:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Amazon Cancels Data Center Plans for GW Campus, Plans to Donate Part of the Land to Loudoun County",
+      "outlet": "Northern Virginia Magazine",
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOcExNclNmNjdDSDJma0k2d2dtcW0tSUt1MGpOWGZLcEhCSXhwS1RwOWxfLV9yQ0VScUdxM0NBX2NiUVVJV1liRk5fOVVwdko5T2Mwb2FxNy1kT19XUkVLYjNqMFd1eThrRU9QdmNpN1VwRnlmaWpjNzBsRkFqZVpzVTJMY3cxOE5VZEZ2OC1QQnp4b1lYanlWOUpKLW5SSVdwLXQtZTVGZUdDXzNNSXI1c1FOLXBPUEJXWXRyV1Z4X0pkZl9ETnVzMDlTck1aMVE3UWYzeE5RNGh6dGlHTGY0?oc=5",
+      "published": "Wed, 21 Oct 2026 13:56:48 GMT",
+      "published_iso": "2026-10-21T13:56:48+00:00",
+      "locality": "Loudoun County",
+      "state": "VA",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Data Centers and Power Policies Shape Virginia Politics",
+      "outlet": "The Daily Signal",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQb1gwdGZOU2VXN1hCS3hZdndDN1VDVVEzTDl4dGtoejc4eV9aZWN1WUxmWHMzMkh2VzVLZzg3djRpX0ZrVkxXSE0zbmJRcktFbzUtQWxEc2diZkZScXhxZUo5c1pWeHNSLVRvWmNvTl9feksxeG9USURmLU1xa0lKaHNzNWVCOGpiMXdpRlB6NHoxYzRtclZOWEtUNGE?oc=5",
+      "published": "Wed, 21 Oct 2026 17:05:26 GMT",
+      "published_iso": "2026-10-21T17:05:26+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Come January, state lawmakers will debate a slate of bills that would halt data center development in the commonwealth, as some feel Gov. Spanberger's proposed plan doesn’t go far enough. Full story: https://www.henricocitizen.com/data-center-moratorium-",
+      "outlet": "Instagram",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9RVkFMTk5IUU1welpMd1kwZmxaeG01UjdoZzlrVjl4MWZySXQ3WmlQMHBRTEtLWVJjdHJmdVpGbVI5aW5YcnlsNFZKRGF2WGFZS3c?oc=5",
+      "published": "Wed, 21 Oct 2026 15:12:26 GMT",
+      "published_iso": "2026-10-21T15:12:26+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Wizards’ Season Opens With Faint, Unusual Sense of Hope; Amazon Agrees Not to Build Some Data Centers in Virginia; and Area Panda Is Named for Dolly Parton",
+      "outlet": "Washingtonian",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOa2xxMWpMUWM3bVpQc2ZaOHZGaDhkUXJrcDZSZ29BN1VFbmpNWnlSRlRpYVZiNlpUandoSnV4ZmMxM3BrdTNoN0liTHdZZlN1aWE0N0JDNEttMi00dTVrd1NUdEdKUTY3QVJYeHdvMnZKZDVDVld1Z1pfTWt1SEYzVU93eWdPQklVU3FMck5PQldqd0EzelJqMzZTN0VoT1pEY3c?oc=5",
+      "published": "Wed, 21 Oct 2026 11:29:31 GMT",
+      "published_iso": "2026-10-21T11:29:31+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Loudoun County scraps plans for new Amazon data center amid community pushback",
+      "outlet": "Washington Examiner",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY0I2RmNGMWtiNUxrT3NEb0ZYLUkyWGtHcFJFeTAydHVOc1JDOGFHaGZ5WGtCQUNINFdvV3dPOHE1Umc2aDdiYjFmVllFQkd0ZTNmc2NvdG5vbFpFUjRPN182YW1HeHZaTVNIenRvNFhDcjQ4NFVRcjlHSGJqOHlRU3NiV2JPSVBOa1dFbkMxMGxkSHY4dTNSLTFxS1NOUzRidFVlZDE4SjA2UQ?oc=5",
+      "published": "Wed, 21 Oct 2026 17:44:24 GMT",
+      "published_iso": "2026-10-21T17:44:24+00:00",
+      "locality": "Loudoun County",
+      "state": "VA",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Amazon abandons Virginia data center — Fortune",
+      "outlet": "UA.NEWS",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPOTQxT1JSSkhhZFJHamQwb1JyVEdKYkZBUm9sbXVOdFpEZlAybWJITDd1aUo4cWxLZGxnbU44MHhmeFpSb3gzdFhrNm1vUXg5S2RYWE91M29EQlZfTklxaEdGZkIzcm10RWp3VS1rcGEwLWpFWnhraEJhQ3hoVVdwclBLdlpmWllRdFFV?oc=5",
+      "published": "Wed, 21 Oct 2026 18:49:38 GMT",
+      "published_iso": "2026-10-21T18:49:38+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "4 Georgia families sue Meta, claim data center construction contaminated well water",
+      "outlet": "WSB-TV",
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQY19PaDRXUk9nWmNrMXY0U1QyQWh6YzhGRlNkUTlnRjBtTnJLZGhZOFNqc3BuazBGY1d1Y2JwQWZFV2tYdjltbVdFYmFqUTd1ejh0Ri1VQzJ2dTdJM2Z0QlN2eEtyWGpVLUJyZmZEOGQxdlpCaFp5eDd3djBVdl9Ld25hby1ORnNseDNUdmt0NGg3QkNIRjQyeUNhN0QycElJWkhmbUlZX05CLUtYX3dvb1lKc1lQb0RMVFRnamdNMVFmSGRpbC1KYk41a2E1M2VKaWZhNWJzbm9GLTjSAe8BQVVfeXFMUGdxaVZJZ0pseVc1RnF1enNjSUFldDJORlkxS0phbzRFRUw5Zk1oRkpwMFdZQVZvd3BsclQ1UFBPdzJ5WWE0OXVaRWNWWVhmOGJCUXdsM2tyUXBJYW1FcUJfQThOeGwxeXVJakpDWEMtRDhBNkRnX3lQUUZkZkExYVRhcVk0NV92LW03bmpMNnRtZ2hsNlZ0Q0JZVnVDQWx5dmx6dHl1NW9sV0JDSnVtRU9WUnhkTndxU3VQNXhJeU55cTctTENIV2J0NUNlbmZDS19scHVIUU1ZTUpFaWdrczZVNHhVQnVYblFLT3V6UzA?oc=5",
+      "published": "Wed, 21 Oct 2026 18:28:43 GMT",
+      "published_iso": "2026-10-21T18:28:43+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Study warns Texas data center boom could reverse decades of air quality gains",
+      "outlet": "KEYE",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNeWFqazJVRmR0YncyQzc2QVpKZFJySld3azI1b25rSmNUQlRwRC0yNFlpc0xNa1FCQ0RYZmxsLS1WLW5zZmxRYU84SXc4czJSakZyRnNmUGVXOGNGSk56Yk5sX3RuMmgtMlBkS0ltbUVnM2puTWFBcXZlcld3b01fbDRTcHBhQklNMEFLVDg0QzNQcGtDNVE2a0tuekUyRlhqc0NTeXNLbUIyUWhvR0ln?oc=5",
+      "published": "Wed, 21 Oct 2026 18:01:55 GMT",
+      "published_iso": "2026-10-21T18:01:55+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Data center project proposed on federal land gets sent back to square one",
+      "outlet": "News From The States",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQdXc4RzlRblItQktiUGZ4d25EaEFpN0pfX3BQMG52aE9GdndJOU9oRzgyMDFRWVppUWdib2lpZXZCbVhkT2lqMFlHWW94WGxMeE9fUHVBc2FwQ0JzYVhzUWtWZjEyZjlmZ2wtZkFnWDVyN01tNnhTNW52c0lNLUdHb2stMkFFQ2wzbzBZTUNmT2lHdlZOVFFfN1NpcjlUekpVa1NNWVpSaDg3bjZtc0E?oc=5",
+      "published": "Tue, 20 Oct 2026 11:47:19 GMT",
+      "published_iso": "2026-10-20T11:47:19+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-20",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "WTOC heads to Abilene, Texas to learn more about the impact of data centers on the community",
+      "outlet": "WTOC",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNelJzS3I5RnR5TlJoaHRfckNpc01oeU9uelBkM0tiel93MFo5Y1c2NnhqZktOZEJkeUFaWWVPTmExWUo3YUZHbkNqbUhvdmRrT3hxUTVZNzVYU0w5aURTV2NxeUdJZHBvQkstMFVMeHVkbjY1LUhsV3ItTklPVWhfdG5jRmlXaHplcl8wa2w4SmFJdFpDODJmWm9RMEoxQm1yRjZXaVp4RTBXaFB2dUNR?oc=5",
+      "published": "Wed, 21 Oct 2026 05:37:27 GMT",
+      "published_iso": "2026-10-21T05:37:27+00:00",
+      "locality": "Abilene",
+      "state": "TX",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Three Data Centers Could Undo the Millions El Paso and New Mexico Spent on their Climate Plans",
+      "outlet": "deceleration.news",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWWVDNkhvT3lrV1BreTdLR0pxY3R4NEd2UkdWc1JiY1Q2QjFISk81U2tRb3djM1k5cm92cTZsMzdXQXBsUDBqamVJSEYzeWxCQTB2aG1LOXBPMnY0cVZjekhLbnd0SGJhUVpzLVdvaVB3Qk82WlA2QUFDSzdTUS1BLXEzb2NvMm01cGtrWmxR?oc=5",
+      "published": "Fri, 16 Oct 2026 20:50:40 GMT",
+      "published_iso": "2026-10-16T20:50:40+00:00",
+      "locality": "El Paso",
+      "state": "TX",
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "WTOC heads to Abilene, Texas to learn more about the impact of data centers on the community",
+      "outlet": "WTOC",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPTVhoRXVKM3hmaFVDbER6MWQzTEozLTNkOWs1dXQzTVNKc2o2aUFId2d0RlI1ek5WR2lhbElCaUN1SnFSWF91WFd4cjVfR0MySm8xRmFadWhPVjlBMkFRS2ZYOEVlT2JENnhLTnlnT05SNGI4LWlLTjV0R0lqVzlHUVRtdTVXYVp2eUFSeEQzZEMwMU15VUJrU1hpd20wc0hBRWo4ZlY2bUJQeDNkMHJvV3NTU0Fxc0FJSUpGdGhhcjNobzZFWWc?oc=5",
+      "published": "Wed, 21 Oct 2026 10:42:52 GMT",
+      "published_iso": "2026-10-21T10:42:52+00:00",
+      "locality": "Abilene",
+      "state": "TX",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Election integrity, affordability, immigration, data centers and Flock cameras: Key issues for Greater Houston voters",
+      "outlet": "Click2Houston",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQQlhIVHR1VGxuTm83andFQ0g4ajAwejRNZ2pKTUV5TDl4UmI4UVdZbS1QZGNGNVBpNENzS200X0habEtXejAxQWczZ3BETTB6MTRCVFlxS2VYRllkbzdqT243dlhfek84WFZsZW1rSXducnlIT1BpVWZIaEI3bTNiZlhuR0hfTWVOUjBqS09rWWg4WUprNHBmTDhhcEtTcnpUR1RwWTV2OHlWQ092OVBEZ29FWV9XRUVGSjR3eG5UV01xYXIxQTdJZVpiNG92blIzQmVHQl9aMlQ2WUVYdXc5cl9OWUFlQzRra1VGZ05xMA?oc=5",
+      "published": "Wed, 21 Oct 2026 17:57:49 GMT",
+      "published_iso": "2026-10-21T17:57:49+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Places Most at Risk of Home Values Decreasing Amid Data Center Construction",
+      "outlet": "Newsweek",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPX0xaT2s4a0hIVkNhemNBSG95RnVqSVlSSldQREpjU21yenJYSUVaaGJpaHQxMGNlTXlMTmtvU0xqSXluTjV3V0l6TTFJOS0yajBqQ3dGY2g4NXRlX0diZ1RpNXVYVEp1Sm10dnkwR0R6YnpYWTMtTmZFaXlZSElmZjFVcHdPM19GT3VLY1VUR0ExUmFrQkhrMUlsaw?oc=5",
+      "published": "Mon, 19 Oct 2026 09:00:00 GMT",
+      "published_iso": "2026-10-19T09:00:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "Motorcyclist injured after hitting deer on Sunset Boulevard in Cass County",
+      "outlet": "WSBT",
+      "link": "https://news.google.com/rss/articles/CBMitgJBVV95cUxQb1Q4VUYyNEYwX3RPMlBuQk5Wb1kwV0VwbHhpOWFFMllxQk4wenY1NG1SWndWT3hlalRuWkpHOU55dUtZdVRDVldtbUl2Ui1RWDJleTN4aTBUUl9CNlp4UGU4MTJCMzBSYXA3cXVJdTJsSWE2c2UxSlJsTlNPYnJtcHJEdmFEY1JvZXRnbi0wSTdaemt6b1lMM2YxdmtlTWEyWXMzVTI0UHZHZE9jWEYtd0luYjdKXzBMUVYydDdCRExQWFRWUERPVWJqWVJuUGNWODRNYVBfVDhGdXRPbm9PQ2dBdWlLNHNHc08tdE1DVGduZ3M5RWhMY042NTltWGwzSWdCaGN5ZVpIRThRQi1MTEI4eW9sVGVxNlNySFhIUHh4UkVnaTVQRktBNkg0dmZ5NTAyZ0V3?oc=5",
+      "published": "Sat, 08 Aug 2026 07:00:00 GMT",
+      "published_iso": "2026-08-08T07:00:00+00:00",
+      "locality": "Cass County",
+      "state": "IN",
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-10-21"
+    },
+    {
+      "title": "One killed in crash on Anderson Road in Cass County",
+      "outlet": "WSBT",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPYjdwQjR5MnJKOTFRR2hJSkljcmVzclVicjMtYlEwa1BycFVpRzczem9Ya3gtaDVIdUdZOENXZWxuREV4Zk9vaEdqZGVSbk9jN1VZRWlpeXRvcUo4TXYzYlFjUG1rY3NhTWZ4V3NsU1hGOFg2elh3S1ZyOTdMbDVjNTFzdzJ2OERIMHhCNEJibnRRUENWTWN2TEh4b1hybkpjWVBOOEpJRUhOWXJWN2JiSUxpQi02WDVUX1BUOTVvZG1WOThSN3dzdE1PbjQxck5Jd2QyVGk5bHExSzlxSnlMbWFqUnBnMWNFYjFXWUoya3c?oc=5",
+      "published": "Wed, 13 May 2026 07:00:00 GMT",
+      "published_iso": "2026-05-13T07:00:00+00:00",
+      "locality": "Cass County",
+      "state": "IN",
+      "first_seen": "2026-05-13",
       "last_seen": "2026-10-21"
     }
   ]
