@@ -28,6 +28,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000002,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Pmt,Major Amendment,1573216,E4002225-007A,6/12/26,Pending
 10000002,WRM Water Obstructions & Encroachments,GP-05 Utility Line Stream Crossings,New,1514005,GP054002225-001,1/28/25,Issued
 10000002,WRM Water Obstructions & Encroachments,GP-05 Utility Line Stream Crossings,New,1549022,GP054002225-011,11/12/25,Issued
+10000002,WPC State Water Pollution Control,WQM Pump Stations,New,1580154,4026407,8/12/26,Pending
 10000002,WPC State Water Pollution Control,WQM Sewer Extensions,New,1537796,1925401,8/18/25,Issued
 10000002,WPC NPDES,Minor IW Facility without ELG,New,1558529,PA0277118,2/4/26,Pending
 10000002,WPC Erosion & Sediment Control,Chapter 102 Individual NPDES Permit,New,1498616,PAD400049,8/23/24,Issued
@@ -43,7 +44,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000002,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),,,PAC400193 A-4,,Issued
 10000002,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),,,PAC400333 A-1,2/18/25,Issued
 10000002,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),Major Amendment,,PAC400333 A-2,3/31/26,Issued
-10000002,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),Major Amendment,,PAC400333 A-3,,Not Yet Submitted
+10000002,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),,,,,Not Yet Submitted
 10000002,Air Quality,Minor Facility Plan Approval New Source Performance Std,New,1556707,40-00158C,1/22/26,Pending
 10000003,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),,,PAC350210,11/3/25,Pending
 10000003,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Pmt,New,1546852,E3502225-006,10/24/25,Pending
@@ -56,7 +57,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000004,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Pmt,Transfer,1550954,E5402222-001,11/26/25,Issued
 10000004,WRM Water Obstructions & Encroachments,GP-05 Utility Line Stream Crossings,Transfer,,GP05540221-006,11/26/25,Issued
 10000004,WRM Water Obstructions & Encroachments,BWM-GP-11 Maintenance /Testing / Repair / Rehabilitation / Replacement General Pmt,Transfer,1550957,GP115402221-011,11/26/25,Issued
-10000004,WPC State Water Pollution Control,WQM Sewer Extensions,,,5422403,,Not Yet Submitted
+10000004,WPC State Water Pollution Control,WQM Sewer Extensions,,,,,Not Yet Submitted
 10000004,WPC Act 537 Municipal Sewage Planning,New Land Development Plan App Component 3-Commercial,,,,,Not Yet Submitted
 10000004,Air Quality,Air Quality Permitting,,,,,Not Yet Submitted
 10000004,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
@@ -150,7 +151,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000019,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Pmt,Transfer,1551370,E02-231,12/8/25,Issued
 10000019,WRM Water Obstructions & Encroachments,BWM-GP-11 Maintenance /Testing / Repair / Rehabilitation / Replacement General Pmt,Transfer,1551375,GP110216248,12/8/25,Issued
 10000019,WPC Erosion & Sediment Control,Chapter 102 Individual NPDES Permit,,,,,Not Yet Submitted
-10000019,Environmental Cleanup & Brownfields,Notice of Intent to Remediate (Act 2),,,,,Not Yet Submitted
+10000019,Environmental Cleanup & Brownfields,RIR and Cleanup Plan (Act 2),New,,LRP- 5-2-841-19308,8/24/26,Pending
 10000020,Air Quality,Minor Source Operating Permit,New,1540303,65-01147,8/20/25,Pending
 10000020,WPC State Water Pollution Control,WQM Minor and Non-NPDES Industrial Waste Treatment Plants,Transfer,1516950,6570201,2/19/25,Issued
 10000020,WPC State Water Pollution Control,WQM Minor and Non-NPDES Sewage Treatment Plants,Transfer,1516965,6570401,2/19/25,Issued
@@ -354,7 +355,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000064,,To Be Determined,,,,,Not Yet Submitted
 10000065,,To Be Determined,,,,,Not Yet Submitted
 10000069,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),Transfer,,PAC350120,4/28/26,Issued
-10000069,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),Minor Amendment,,PAC350120 A1,,Not Yet Submitted
+10000069,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),,,,,Not Yet Submitted
 10000069,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Pmt,Transfer,,E3502221-006,8/25/26,Pending
 10000069,Clean Water,Clean Water Permitting,,,,,Not Yet Submitted
 10000069,Air Quality,Air Quality Permitting,,,,,Not Yet Submitted
@@ -369,7 +370,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000071,WPC Act 537 Municipal Sewage Planning,Act 537 Sewage Planning,,,,,Not Yet Submitted
 10000071,WPC State Water Pollution Control,WQM Sewer Extensions,,,,,Not Yet Submitted
 10000072,Air Quality,Minor Facility Plan Approval MACT Air Toxics Minor,New,1586002,36-05170A,9/25/26,Pending
-10000009,Storage Tanks,Storage Tank Registration/Permitting,New,1550454,,11/20/25,Issued
+10000009,Storage Tanks,Storage Tank Registration/Permitting,New,1550454,R2393,11/20/25,Issued
 10000009,Storage Tanks,Site Specific Installation Permit,New,1532915,25001,7/2/25,Issued
 10000073,WPC Erosion & Sediment Control,Chapter 102 Individual NPDES Permit,,,,,Not Yet Submitted
 10000072,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Pmt,New,1586119,E3603226-013,9/29/26,Pending

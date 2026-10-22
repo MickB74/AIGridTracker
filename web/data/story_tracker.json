@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 11627,
+  "count": 11636,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -83716,7 +83716,7 @@
       "locality": "Brewster County",
       "state": "TX",
       "first_seen": "2026-09-18",
-      "last_seen": "2026-10-21"
+      "last_seen": "2026-10-22"
     },
     {
       "title": "Texas sheriffs, judges, ranchers oppose Big Bend border wall plans",
@@ -118674,7 +118674,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-22"
     },
     {
       "title": "Council updates zoning rules for potential data centers",
@@ -119180,7 +119180,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-22"
     },
     {
       "title": "Clackamas County is weighing a pause on data centers. Here’s how you can weigh in",
@@ -119620,7 +119620,7 @@
       "locality": "Butler County",
       "state": "OH",
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-21"
+      "last_seen": "2026-10-22"
     },
     {
       "title": "East Lyme Bans Data Center, Tightens Short-Term Rental Rules",
@@ -125955,7 +125955,7 @@
       "published_iso": "2026-10-21T17:04:52+00:00",
       "locality": "Memphis",
       "state": "TN",
-      "first_seen": "2026-10-21",
+      "first_seen": "2026-10-20",
       "last_seen": "2026-10-22"
     },
     {
@@ -127903,6 +127903,105 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-04-11",
+      "last_seen": "2026-10-22"
+    },
+    {
+      "title": "Over half of Indiana counties now restrict data centers",
+      "outlet": "Indiana Public Radio",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPOGM5YjBXWVVMaTlteEZoM0hZV1RHcFoycmpEXzRJX1ZfWUk3TnpXbWNwemUzQVVBSS0yekQxT2FfbzZneGNqTjUzOUstUlhtNGtOYTdvNlFZbWk2a1NraGJTdzdKckJWTnBkQjVEQ21pLWhrV3Nvc2lvRWNyenBSTlUzOGhWblhyblZtdVljb2UtcWotaVJMNGRGQU5maTlNYlE?oc=5",
+      "published": "Wed, 21 Oct 2026 21:14:48 GMT",
+      "published_iso": "2026-10-21T21:14:48+00:00",
+      "locality": null,
+      "state": "IN",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-22"
+    },
+    {
+      "title": "Little Rock board rejects 6-month data center moratorium",
+      "outlet": "Northwest Arkansas Democrat-Gazette",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPYmVmSlQtek1JV1dZeUdGcmN3NWlIUy01OXFCTXFqMGpuMUgya0N6VzdHSjl4dEdyNms4QjNIMTRQYzI0N3dzbG42QmNyRjF2dWZxdVZFT3RXTzFVQ25mVFVzNzl1VU1QTmRFTExaTUR5QnprX1pXT1d6NC02X2RVWjQ2VjZMbkxOSWNVMHNjMlJGY28?oc=5",
+      "published": "Wed, 21 Oct 2026 03:25:00 GMT",
+      "published_iso": "2026-10-21T03:25:00+00:00",
+      "locality": "Little Rock",
+      "state": "AR",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-22"
+    },
+    {
+      "title": "How data center battles in the Philadelphia suburbs could impact party control of the Pa. legislature",
+      "outlet": "WHYY",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNOWdCTlpqWV9pLU9VWDNNeDRFR29uWXJyTWhMT1BkLUhCeHJXQ0hnTWpHNloxbExDajNZU2R5NWluNWFtbnVMNDlfVjh4QjZUZi0zMC1GWTFjQ0Q2WEFDNVVWd1p3Sl9TTTdTUGlYdlp0QUhRRTA4bmM4ZEpGLXE5M193N2dEQktSaVg4?oc=5",
+      "published": "Thu, 22 Oct 2026 10:04:02 GMT",
+      "published_iso": "2026-10-22T10:04:02+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-22",
+      "last_seen": "2026-10-22"
+    },
+    {
+      "title": "In New Jersey, Cranbury blocks data centers, and activists want a statewide moratorium",
+      "outlet": "Yahoo",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQeWRfSXgzbVJtVkFCTDc3V1NQUlhBc0Z6bmpVOUtTTEM4TW83aktIdjVDUDhmZ3EydU9Vc05adHNuZXFSRndyN3pCQ3BpOGk4TGVKQ0lBLTJVMHhSdmtac3VqM242MGtJd3lwc3ltZlAwVjd6Vy1iZ3ZYX01lVW9LNEpHX0xHOHEzU2puQm9laS1ObVU?oc=5",
+      "published": "Tue, 20 Oct 2026 08:15:00 GMT",
+      "published_iso": "2026-10-20T08:15:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-20",
+      "last_seen": "2026-10-22"
+    },
+    {
+      "title": "Amazon cancels plan for data centers in Loudoun County, donates land",
+      "outlet": "The Washington Post",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNXzBsaFpHTHYtSTd1RWVXS0pPSHB6amo2NUhOWkNNUHlTMlRJTTR5aUhKSGRKZm1JcjFkSWdwbWlmYy1vTlBfb0hwS1NVSlFhZFhURU1LQ0Y0dC1PeWNMZFdQYWNFYzQyWmRrR0txNFRjbHFvOHllc0RiVzJWdFF0X2ZZcVBISU5OWmNIdEFwUzlWOWlqdlV5YjBCdW40cHBoYUNGbmY3OGdiWUd5dWtSSGVRT3lzVFVvZ1ZsR3FB?oc=5",
+      "published": "Thu, 22 Oct 2026 14:36:35 GMT",
+      "published_iso": "2026-10-22T14:36:35+00:00",
+      "locality": "Loudoun County",
+      "state": "VA",
+      "first_seen": "2026-10-22",
+      "last_seen": "2026-10-22"
+    },
+    {
+      "title": "Map: 55 million Americans live within 5 miles of a data center. Find out how close you are.",
+      "outlet": "NBC News",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdFJNaTMzYmxYLTNsNHRCek1rOV9LSDBtMlF6M0d6aDZFVmEyS01ORFhvaURWamdXQmZOQkFoY2ZDLVRMYl9Tal9FYi1hdnM3UFpsaHNKNi04Wk9CNzdLUk82cHdNUTJDcE5tYVZmTEluYkV3QXlLN0hNVmp2UUFtMWVIUzBBaW11SVk3NFg3clRTME5xamROVQ?oc=5",
+      "published": "Thu, 22 Oct 2026 10:30:40 GMT",
+      "published_iso": "2026-10-22T10:30:40+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-22",
+      "last_seen": "2026-10-22"
+    },
+    {
+      "title": "Virginia Is for Lovers … of Data Centers?",
+      "outlet": "The Good Men Project",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPMk90WnI2WnlaTFA2Ymc4MG9xVGhqQldqN0JZYnlyTnRiRVBfUzZ2eHRoTkl3eU9ORzJZZFpNVEcyQV9TOHREUldVWi1zMTRQdWpPM0ZyTUxlNFBneURjckEtajhfcndQbVRESEY2T25VRE1PVEU0MmNfbEdtNU9XNm56Zko5NkgxajY4?oc=5",
+      "published": "Thu, 22 Oct 2026 13:32:44 GMT",
+      "published_iso": "2026-10-22T13:32:44+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-22",
+      "last_seen": "2026-10-22"
+    },
+    {
+      "title": "Georgia Southern to host data center forums.",
+      "outlet": "Yahoo",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNVFdPNGNsWTdBdHV1b3VGV3BYMUsxUWg5RkdRSDlnbktOVnhJWFpObURobTkwTXN0Q2U0aFp5MGwyclhTdjdhTk1VVEJ5ZVFqTzJ5X3drX0IwRVd0TmtFLUw2azY5LXk4LVkwd01LaUtmcnpuTjFsX0JEaHE2VE84Qkg2VnhmdVJkd2c?oc=5",
+      "published": "Thu, 15 Oct 2026 21:09:27 GMT",
+      "published_iso": "2026-10-15T21:09:27+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-22"
+    },
+    {
+      "title": "Texas Data Centers Threaten to Overturn Decades of Air Quality Improvements",
+      "outlet": "PCMag",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQV21hazIyTUlKVWt5UkwtQTJILWZJWHNfZlFiMVpiNFU2Mnk0OWIxd1lCdGZJZ3BybUFDT0d4ZUxwRzNBOHVnTWsxeWhTLVBEZi1tT2xXWHRyVmFyRTdka2NDYXlLZGlrbF9QaUJUNm1pbkN2VFM0QUpWNl9CakNMV3hVSENXMUZCazVldGU4bkNfZUZnVjh0UHNnNGFDRkNCR3U4Vg?oc=5",
+      "published": "Thu, 22 Oct 2026 15:18:16 GMT",
+      "published_iso": "2026-10-22T15:18:16+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-22",
       "last_seen": "2026-10-22"
     }
   ]
