@@ -1,11 +1,11 @@
-# PA DEP data-center tracker sync — 2026-10-22
+# PA DEP data-center tracker sync — 2026-10-23
 
 Source: https://gis.dep.pa.gov/DataCenterPermitTracker/
 
 - DEP projects on file: **73**
 - DEP permit records: **376**
 - Added to projects.json: **0**
-- Refreshed: **1**
+- Refreshed: **0**
 - Skipped (already tracked by hand): **16**
 
 ## Skipped — hand-written row already covers this
@@ -28,8 +28,4 @@ Left alone on purpose. If the DEP row carries detail ours lacks (a permit trail,
 - DEP 10000066 *Salem Township Data Center Development (Amazon Web Services) - Phase 2* (Salem Township (Luzerne County)) → `aws-salem-township-pa`
 - DEP 10000067 *Falls Township Data Center Development (Amazon Web Services) - Phase 2* (Falls Township (Bucks County)) → `aws-falls-township-pa`
 - DEP 10000068 *Aligned Data Center - Phase 2* (Shippingport Borough (Beaver County)) → `aligned-shippingport-pa`
-
-## Refreshed
-
-- `springdale-data-center-springdale-borough-pa` — Environmental permits under review at PA DEP (1 pending, 3 issued).
 
