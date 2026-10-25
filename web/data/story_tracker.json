@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 11963,
+  "count": 11968,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -55314,7 +55314,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-04-24",
-      "last_seen": "2026-10-12"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Child molesting suspect dies by suicide in Fort Wayne on day 2 of Cass County trial",
@@ -55985,7 +55985,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-10-23"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Man injured in early morning rollover crash in Cass County",
@@ -98830,7 +98830,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Senate Set to Block Bill to Address Data Center Costs",
@@ -110886,7 +110886,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Banks are now trying to offload the AI data center debt they just underwrote",
@@ -120742,7 +120742,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Johnson County extends data center moratorium",
@@ -124372,7 +124372,7 @@
       "locality": "Jackson",
       "state": "MS",
       "first_seen": "2026-10-19",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Watchdog group criticizes TCEQ for advancing data center permits",
@@ -129245,7 +129245,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-10-23",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Hackettstown Town Council Votes 4-0 to Ban Data Centers Across Town",
@@ -129443,7 +129443,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-22",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Fairfield County requests public input in survey, town meetings during year-long data center moratorium",
@@ -129993,7 +129993,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-23",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Vineland residents plan to sue data center over unpermitted natural gas engines",
@@ -131005,7 +131005,7 @@
       "locality": "Tarrant",
       "state": "AL",
       "first_seen": "2026-10-23",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Abbott promises tax relief, touts record in San Angelo campaign stop",
@@ -131016,7 +131016,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-23",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "U.S. jobless claims fell to 194,000 last week, lowest since July",
@@ -131027,7 +131027,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-22",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Applied Digital Shares Climb on 50MW Texas AI Data Center Joint Venture and Roth/MKM Buy Call",
@@ -131049,7 +131049,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-23",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Texas environmental agency shuts down online permit filing system after data center controversy",
@@ -131071,7 +131071,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-24",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Texas Paused Data Center Hookups—2 Power Stocks Are Waiting on the Verdict",
@@ -131082,7 +131082,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-22",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "How Data Center Expansion Will Impact Texas Pacific Land Stock",
@@ -131093,7 +131093,7 @@
       "locality": "Pacific",
       "state": "MO",
       "first_seen": "2026-10-24",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Commissioner Christian Backs Energy Secretary Wright’s Call for Responsible Texas Data Center Growth",
@@ -131115,7 +131115,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-23",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Savannah council workshops data center ordinance, emphasizing resident input",
@@ -131599,6 +131599,61 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-20",
+      "last_seen": "2026-10-25"
+    },
+    {
+      "title": "Maryland utility advocates: AI data centers in other states could drive up electric bills for Marylanders",
+      "outlet": "WBOC TV",
+      "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQRldkX0kxSDEwalIxUmdGUkhFOGlpNlFGRU5rOGM4SHNaeWtydmNqRTM1S3JTbGprWndrb09oQ2tDanVIZ09NMmlNNHJISXY3UGt3dVY5RkNXYzQybm9KaHZ4eDE5ZzRWUmQzU2pUdjhCUkVINE94XzJ2cG04eDZ0UUNEN2hFQXYxOGVKaFc5YUl3MlRwUm5vXzFjSFZYRGxzUHFPUEdlZmtNRWZpbXg4VThjemh6V21paUx2R3NGaGFoaXB5UFloWlp2Z0NmUTFKZXJ3THV4blU4S3JCYmQtaEZDOUJHQzRISmNJaWRyQnZuWFZSbkV1ME82MjFiblZMYzgyUw?oc=5",
+      "published": "Wed, 21 Oct 2026 21:11:00 GMT",
+      "published_iso": "2026-10-21T21:11:00+00:00",
+      "locality": null,
+      "state": "MD",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-25"
+    },
+    {
+      "title": "Data Center Pause? | Reading and Podcast Picks - October 25, 2026",
+      "outlet": "The Texas Energy and Power Newsletter",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPcURIVldBQV9kc3IxU0NXMXM0T3dSbnNDZGFQUko2ZDk3WG1XNWdxQkVhVGFRcXNUMGVhQlVNYUdEa3BOQzVoQTFtZXB2VDRURmtYbFo3V1NfenI3bWQ5WEswekdCbzZHMzFRS0U3TXBiQkRubVNCMC0ybnYtRm1Zcg?oc=5",
+      "published": "Sun, 25 Oct 2026 14:03:41 GMT",
+      "published_iso": "2026-10-25T14:03:41+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25"
+    },
+    {
+      "title": "Texas company pays $5M for 160 acres south of Lawton, apparently for development of data center",
+      "outlet": "The Lawton Constitution",
+      "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOSTdaczhWVmY2dFdBeUJnT1FVZjc3bkp3aG1JMEtmNHdvMnFiNTltRTF0bEJ5N0tPdUtJOUg1MzZFNE10dTB0cEZhME1kTFlTMzluX3VqTDQ5R1hvUVNiM2dzbG9laFZOamJ4VE5xa2M3QkZ2TldzUlkzNklCaXZpM2llQXNPMy1sdGRVRlVkZ0JsaWFzYjFnd1JpWEtTSkFBY0hCWXdGVlVTb05GazNlQmxnTGIyc1NlR25oNG1PR1htUFVwQWlZTXlDeDJ1WnpockdsVnQ0LW81R21lbFBHQmJwbUZjSVFLZ1lkV25uZkpYd1M4RG10Vmtn?oc=5",
+      "published": "Sat, 24 Oct 2026 22:30:00 GMT",
+      "published_iso": "2026-10-24T22:30:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-25"
+    },
+    {
+      "title": "Endeavour partners with US desalination firm Trevi to turn data center waste heat into clean water",
+      "outlet": "BeBeez International",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNM1RSZ25GbEFvWHFDYjJwQlR3bVFuVlBxdS13dVc0UldnTHN1Yzlrd2JtLVYwR1F1U2h0RjdlcGFVMXB5bTRNV1huUkhlRUNXcFRLOEtxcnB5M0V6UW5lclRGdXFfU3Z5OTlmU3h6Z0p2djlqWHlyWnBEa0pOZTNONXktYTN6WmF3WXNXTEdXcjZURFMzdnZhZ3V1THVfNGJqMlRTMENfc0s4c212bWRDeHlSZ2hZbHFtSDE2WjRjZG80c3JwYW9z?oc=5",
+      "published": "Fri, 23 Oct 2026 11:08:15 GMT",
+      "published_iso": "2026-10-23T11:08:15+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-23",
+      "last_seen": "2026-10-25"
+    },
+    {
+      "title": "How Long Term Data Center Leases At Hut 8 Stock Have Changed Its Investment Story",
+      "outlet": "Simply Wall Street",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQa29sQ2hwcE9fcnM2dFpOWi1JRVQ3ak5vaWZvSFJFeE5HNS1pb3dxc0NHd0hhbGpVMklyc0Mwa0Jkd0FQSEhEYVdtdXc4djVwMWFqNlk2UWk4eThoNkNjZVdocndCb1BEMi15NXNXQ0FfWXd3c3ZfemhadjAtRkliN1JoX1NNcEd3b1lLVEgzWURBVU1Ybm9MeTBicExhUFh3OGRvX3VBRmNjZGM0ZTJzbldYdVQzYnpNRnFrOFRqTm_SAcYBQVVfeXFMTnhIY1dCUThLM0szVkExdzY4Z2ZMaUZIUGp0TjJGc0dIbnFlTHNXdlhnTG5yQXBaTm1MZG5JRXdlOHNBS1NRTXJHVnBManFpc0lQQy1yTUdKN0dabXpSWWRxZEk3d0x5dGFLUWRIaFB4NnkxbUpFekVreGMwWXFYLW81dF9ZUnUzQ3NHRTJmb1ZGa2dEVzF4cnVhcFhTT1JCNTV3QnF4dnBZVG9ETnEydjdod1VfeDllT0U2M3JjdzVrY3A3dmh3?oc=5",
+      "published": "Sat, 24 Oct 2026 09:24:42 GMT",
+      "published_iso": "2026-10-24T09:24:42+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-24",
       "last_seen": "2026-10-25"
     }
   ]
