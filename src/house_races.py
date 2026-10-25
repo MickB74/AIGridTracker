@@ -530,23 +530,14 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-07",
     },
-    ("MI", "10", "John James"): {
-        "lean": "accelerate",
-        "summary": "Voted four times in support of the OBBBA's 10-year AI "
-                   "preemption provision, including voting against an amendment "
-                   "to remove it.",
-        "items": [
-            {"what": "Voted four separate times to advance the OBBBA's AI "
-                     "preemption provision (SEC. 43201): twice in committee, "
-                     "once against an amendment to remove it, and once on final "
-                     "passage. The provision would have banned all state and "
-                     "local AI/data center regulation for 10 years. Stripped "
-                     "by the Senate 99-1.",
-             "date": "2025-05-22",
-             "source": "https://clerk.house.gov/Votes/2025145"},
-        ],
-        "as_of": "2026-09-07",
-    },
+    # ("MI", "10", "John James") was removed on 2026-10-19. He is retiring
+    # from MI-10 to run for governor, so he is on no 2026 congressional
+    # ballot, and validate() had been failing on the orphaned key
+    # ("record key not on any ballot"). attach_records() never matched it to
+    # a candidate, so it rendered nowhere — it only kept the guard red.
+    # His four OBBBA AI-preemption votes are real and are in git history;
+    # this registry tracks the ballot, and there is no governor tracker to
+    # move them to. Restore them here only if he lands on a federal ballot.
 
     # ── Ohio ───────────────────────────────────────────────────────────────
     ("OH", "1", "Greg Landsman"): {

@@ -884,16 +884,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/goochland-county-va",
-      "destination": "/states/virginia",
-      "permanent": true
-    },
-    {
-      "source": "/communities/goochland-county-va.html",
-      "destination": "/states/virginia",
-      "permanent": true
-    },
-    {
       "source": "/communities/guadalupe-county-tx",
       "destination": "/states/texas",
       "permanent": true
@@ -931,16 +921,6 @@
     {
       "source": "/communities/harrison-county-ky.html",
       "destination": "/states/kentucky",
-      "permanent": true
-    },
-    {
-      "source": "/communities/henrico-va",
-      "destination": "/states/virginia",
-      "permanent": true
-    },
-    {
-      "source": "/communities/henrico-va.html",
-      "destination": "/states/virginia",
       "permanent": true
     },
     {

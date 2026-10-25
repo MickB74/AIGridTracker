@@ -5,7 +5,7 @@
   <description>Data center moratoriums, proposals, and community-impact
   headlines for North Carolina, from AI GridWatch.</description>
   <language>en-us</language>
-  <lastBuildDate>Sat, 24 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0000</lastBuildDate>
   <item>
     <title>4 reasons North Carolina residents are pushing back on data centers</title>
     <link>https://news.google.com/rss/articles/CBMidkFVX3lxTE5mN282SmZLS0JDNmwtUTNhSXdiNUQ0eGVFMEx1QUxFbE5Eb2lRTC1WUHVCSlg1dWdPeDVNSVNCb2xUcnV6TllSc0ljaWpFWUliU08xd3kxV3dRRW9FNjRjT3JMdEdhekkzb3BfSTVrZldPLTVLdmc?oc=5</link>
@@ -203,6 +203,20 @@
     <description>120-day moratorium on data centers in the county, approved by the Board of Commissioners on Oct 5, 2026 on a motion by Commissioner Giles Byrd. Vote tally, effective date and end date not reported; source is local news, minutes not read.</description>
   </item>
   <item>
+    <title>Beaufort County: data center moratorium — Enacted</title>
+    <link>https://aigridwatch.com/communities/beaufort-county-nc</link>
+    <guid isPermaLink="false">mora-beaufort-county-nc</guid>
+    <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Commissioners voted 6-1 on Oct 5, 2026 for a one-year moratorium on accepting, processing or approving applications/permits for data centers. Formal vote had been postponed from Sep 14 (informal hearing only). Effective date not stated and no ordinance text read, so end date not computed. No data center currently proposed.</description>
+  </item>
+  <item>
+    <title>Raleigh: data center moratorium — Enacted</title>
+    <link>https://aigridwatch.com/communities/raleigh-nc</link>
+    <guid isPermaLink="false">mora-raleigh-nc</guid>
+    <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+    <description>City Council approved a six-month pause on approvals for large (major-utility) data centers, 7-1 (Christina Jones opposed, saying six months was too short). Vote dated Oct 6 (Tuesday) per WUNC/Axios published Oct 7. End date Apr 6, 2027 is from the city&#x27;s own schedule (&#x27;Council takes final action on draft text amendments; moratorium ends&#x27;). News reports describe scope as roughly 10,000+ sq ft / over 5 MW; the city page gives no thresholds. Ordinance text not read.</description>
+  </item>
+  <item>
     <title>Can Canton spare enough water for 4 proposed data centers?</title>
     <link>https://news.google.com/rss/articles/CBMitAFBVV95cUxNTERjbENCRXM4MVc4dWJsQTdhSnp5QzVGXzluZndWSnNkODA3VzljVVJBSTFvMmJraEdBUlpzVW1vdER3UXd3TlpkSnFPNWdQV0ttX1NFbWlkOFdXSnc2eHRBRkFmdU5NSjljNG9reUd6cWxRWnBBdi1mNmtpeU14Z3R3anlnUEF6Q2JleDROZmF0aXdpU0ZrODVLVVlfYllScGVzRkN2YVh1NU5SV1hIZDlUVlA?oc=5</link>
     <guid isPermaLink="false">story-46667fa2</guid>
@@ -341,19 +355,5 @@
     <guid isPermaLink="false">story-e0c0cf76</guid>
     <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     <description>Via The Business Journals</description>
-  </item>
-  <item>
-    <title>After months of debate, Cumberland County releases draft data center rules</title>
-    <link>https://news.google.com/rss/articles/CBMiuAFBVV95cUxQdlBhOFYtRGpNbk1TcE4zU3NfOGhxZ0U5VXpYTnJUVGtKSXNoNWUtOXV6Ym9vOGR4VmxZZ2xncjFGZHdvREdmNkRVYlFBc1JUQzNSaVV3Z3kyM2g2Z0tLRWp0MExJNjBxMDQwakZOczQ1TzlzWDR1THlJMkZPSkRqZzFLdTdWemFQak5JWG41VTNfd2IyUENZaVFtRkV4dElZZURwU1gtOGRmUHBlQmpJUHJVM2lZYlhG?oc=5</link>
-    <guid isPermaLink="false">story-07e79e50</guid>
-    <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
-    <description>Via The Fayetteville Observer</description>
-  </item>
-  <item>
-    <title>Cumberland County Proposes Tight Restrictions for Data Centers</title>
-    <link>https://news.google.com/rss/articles/CBMinwFBVV95cUxOUkZ1ZkNaVVJoaU53MklXcHByWGJtQlNQcTlDY2hhWExlb2hTWE81X0lRT2t5azVRcV9aSXdKbV9ZWHp2RExZai1ueFg0STdVb09peUh1ZExDbkhLSlZ6UTFnbU0xVjJHTTlXZ1oyellOaVdCZnpUWGVES2ZvN1JZdEQ1TDBwZ3FYbkR4eVBxVkhDaDdQYk9yN3h5SnV0Zzg?oc=5</link>
-    <guid isPermaLink="false">story-89d3b671</guid>
-    <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
-    <description>Via CityView NC</description>
   </item>
 </channel></rss>

@@ -8841,6 +8841,9 @@ _COMMUNITY_SLUG_ALIASES = {
     # Unigov makes Indianapolis and Marion County one jurisdiction, and the
     # queue carried the same moratorium under both names; relabelled 2026-08-23.
     "indianapolis-in": ("Indianapolis (Marion County)", "IN"),
+    # Augusta and Augusta-Richmond County are one consolidated government;
+    # the two rows carried the same moratorium, merged 2026-10-15.
+    "augusta-richmond-county-ga": ("Augusta", "GA"),
 }
 
 
@@ -13050,7 +13053,14 @@ def publish_candidate_records():
 
     feeds = WEB / "feeds"
     feeds.mkdir(parents=True, exist_ok=True)
-    now = _dt.datetime.now(_dt.timezone.utc)
+    # Midnight UTC, not datetime.now(): web/ is committed output, so a
+    # wall-clock lastBuildDate rewrites this file on every single build and
+    # check_site_fresh.py — which has no ignore list and relies on the build
+    # being deterministic — reported web/ as stale every run. A gate that can
+    # never pass is a gate people learn to skip. Every other feed on the site
+    # already uses this convention.
+    now = _dt.datetime.combine(_dt.date.today(), _dt.time(0, 0),
+                               tzinfo=_dt.timezone.utc)
     items = []
     for r in rows[:200]:
         d = r["date"] or r["as_of"]
@@ -13254,16 +13264,27 @@ def build_senate_races():
     documented = [r for r in races if r["contested"]]
     quiet = [r for r in races if not r["contested"]]
 
+    # The Senate holds no roll call on the Ratepayer Protection Act, so for a
+    # long time no Senate candidate could carry a "consensus" lean and the
+    # legend hid it. That stopped being true once a sitting House member ran
+    # for a Senate seat: Chris Pappas (NH) brings his 417-3 House vote with
+    # him. Drive it off the data rather than the assumption — hiding the
+    # legend entry left a badge on the page with nothing to decode it.
     legend = "".join(
         f'<li><span class="gradebadge" style="background:{color};font-size:12px;'
         f'padding:3px 9px">{esc(label)}</span> — {esc(desc)}</li>'
         for k, (label, desc, color) in sr.LEANS.items()
-        if k != "consensus")   # House-only: the Senate has no RPA roll call
+        if k != "consensus" or cov["consensus"])
 
+    consensus_chip = (
+        f'<span class="stat"><b>{cov["consensus"]}</b>'
+        f'<span>on the record only for the 417-3 House vote</span></span>'
+        if cov["consensus"] else "")
     chips = (
         f'<span class="stat"><b>{cov["races"]}</b><span>races on the ballot</span></span>'
         f'<span class="stat"><b>{cov["candidates"]}</b><span>candidates filed</span></span>'
         f'<span class="stat"><b>{cov["documented"]}</b><span>with a documented record</span></span>'
+        f'{consensus_chip}'
         f'<span class="stat"><b>{cov["races_documented"]}</b><span>races where it is already a fight</span></span>')
 
     jump = '<div class="statelist">' + "".join(

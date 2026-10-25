@@ -1,6 +1,20 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-25",
   "videos": [
+    {
+      "title": "Little Rock Board of Directors Rejects 6-month Data Center Moratorium",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9ncUtObUdON1BvR2twMGNjUE5lS1dZR0hkVjQtSmotYnFGa0xpMmdYRVk4cENaak9oZW0zMm9SZEN1RnlPR1FraUJjczBtMlBpUVg2OQ?oc=5",
+      "video_id": "",
+      "published_iso": "2026-10-21T21:23:50+00:00",
+      "states": [
+        "Arkansas"
+      ],
+      "locality": "Little Rock",
+      "state": "AR",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-25"
+    },
     {
       "title": "Aurora City Council to attend special meeting to discuss moratorium on data centers",
       "source": "YouTube",
@@ -104,6 +118,20 @@
       "last_seen": "2026-10-19"
     },
     {
+      "title": "The Village Of Baldwinsville Encourages Lysander To Extend Current Data Center Moratorium",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBmSTJxdzlKUXBJMnRLakVXTG8tc1NZbUlDSDJjNmo4U0xOWDcxbkJNRTlLY3FabjhjYnhHNk5wNVRuUHFDbWJGMk9zblFQbUpQemh2TQ?oc=5",
+      "video_id": "",
+      "published_iso": "2026-10-14T12:02:10+00:00",
+      "states": [
+        "New York"
+      ],
+      "locality": "Lysander",
+      "state": "NY",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-25"
+    },
+    {
       "title": "Minneapolis Planning Commission advances data center zoning rules as moratorium nears end",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5KMnNFcURLV0w3c1NObFBxcXBZZFBlbnlWaFFOR0N3cm5CbUQ0YU1NbDRlVnpmSDhIckZiZTlyOHZtTlBVZEJoeEY3ZDA4QlE3NkdyazdB?oc=5",
@@ -204,7 +232,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "9.24.24 Reps. Barger & Verobish Townhall Meeting – Data Centers – 6:30PM",
@@ -291,7 +319,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Data Centers Are Breaking The Power Grid",
@@ -600,7 +628,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-08-31",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Foley considers 6-month moratorium on data centers - NBC 15",
@@ -827,7 +855,7 @@
       "locality": "Calvert County",
       "state": "MD",
       "first_seen": "2026-08-18",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Calvert County commissioners pass 6-month data center moratorium",
@@ -944,7 +972,7 @@
       "locality": "Louisville",
       "state": "KY",
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-16"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Metro Council approves 6-month data center moratorium for Louisville",
@@ -1604,7 +1632,7 @@
       "locality": null,
       "state": "MI",
       "first_seen": "2026-07-23",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Data Center noise: How would you like to live next to this sound all day, all night?",
@@ -1640,7 +1668,19 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-07-23",
-      "last_seen": "2026-09-27"
+      "last_seen": "2026-10-25"
+    },
+    {
+      "title": "AI data center power: from grid to GPU at 800V | PCIM 2026 | ST",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBEMGxuS1lDeTR2YzJ4dmxtTUsxUUF3RHpxcm5Cell2RHpMWElwS1dIM3c5bkhmVWVBTmlLNXB4N21iM3FoTUZqdlNBUk9GcFBWTzRqQl9R?oc=5",
+      "video_id": "",
+      "published_iso": "2026-07-23T08:47:44+00:00",
+      "states": [],
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Angelette Aviles: Baltimore County considers extending data center moratorium amid statewide debate",
@@ -1718,7 +1758,7 @@
       "locality": "Mount Pleasant",
       "state": "WI",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Researcher explains data centers' water and power demands",
@@ -1742,7 +1782,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-07-07",
-      "last_seen": "2026-10-11"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "🌟 The BEST data center speech ever 🌟",
@@ -1781,7 +1821,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "6/23 - Data Center Moratorium Rally",
@@ -1819,7 +1859,7 @@
       "locality": null,
       "state": "OH",
       "first_seen": "2026-06-20",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Data center noise irks Virginia neighbors: ‘You just want to curse’ | The Hill",
@@ -1976,7 +2016,7 @@
       "locality": "Vineland",
       "state": "NJ",
       "first_seen": "2026-05-27",
-      "last_seen": "2026-09-27"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "How we're going to power the AI data center buildout | Energy Sec. Chris Wright & Scott Nolan",
@@ -1988,7 +2028,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-05-23",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Data centers being blamed for water issues",
@@ -2101,6 +2141,20 @@
       "last_seen": "2026-09-11"
     },
     {
+      "title": "Maine Passes Nation's First Statewide AI Data Center Moratorium — Will Gov. Mills Sign It?",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9nTTkwbWRGVW9TQjlDSDhieWkzT3FPa3NiRnc2SWloNmJLdDZWQWNmc3dPVlF4eXR1TnhtV2pNclFJZU8tVV9WSGMwdkQ5aUJUY1pIbkl3?oc=5",
+      "video_id": "",
+      "published_iso": "2026-04-22T15:47:43+00:00",
+      "states": [
+        "Maine"
+      ],
+      "locality": null,
+      "state": "ME",
+      "first_seen": "2026-04-22",
+      "last_seen": "2026-10-25"
+    },
+    {
       "title": "Questions grow over water use at massive QTS Data Center in Eagle Mountain",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBqX2k2YlROYUJoU3k0Nmg1dW9FdDJHa2dFelhGTlpsU1BXSnMwX0s0a0lQbUx2dVg0TVFzeXBlUjhoQWRPRjR4NU5rczhwNGhYTTlvTnJB?oc=5",
@@ -2124,7 +2178,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-04-21",
-      "last_seen": "2026-09-20"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Dowagiac residents complain about constant noise from Hyperscale Data center",
@@ -2186,7 +2240,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-04-10",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Mount Pleasant residents raise concerns over noise from Microsoft AI data center",
@@ -2300,7 +2354,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-03-25",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Bernie Sanders, AOC announce AI data center moratorium bill",
@@ -2312,7 +2366,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-03-25",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Why AI Data Centers Are Destroying Power Equipment",
@@ -2324,7 +2378,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-03-24",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Neighbors raise concerns about noisy data center in Loudoun | NBC4 Washington",
@@ -2428,7 +2482,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-03-15",
-      "last_seen": "2026-10-11"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "South Jersey residents complain about noise from new AI data center",
@@ -2452,7 +2506,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-03-13",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "We need a moratorium on AI data centers NOW. Here’s why.",
@@ -2464,7 +2518,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-03-11",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "South Jersey community says AI data center is making loud humming noise",
@@ -2538,7 +2592,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-03-06",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Power-smart AI Data Center: Grid-aware, Renewables-ready, Self-optimizing",
@@ -2610,7 +2664,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-02-27",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Community Meeting on Large-Scale Data Centers Zoning Feb. 23",
@@ -2686,7 +2740,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-02-20",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "'This isn't right': impact of AI data centers on residents and their utility bills",
@@ -2772,7 +2826,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-01-28",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "How to Power a Data Center",
@@ -2832,7 +2886,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-01-13",
-      "last_seen": "2026-10-11"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Protecting Electricity Customers from the Impacts of Data Centers",
@@ -2908,7 +2962,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2025-11-18",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Data centers, water & secrets: Companies using NDAs to hide water usage in Georgia",
@@ -3034,7 +3088,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2025-09-02",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "We Found the Hidden Cost of Data Centers. It's in Your Electric Bill",
@@ -3058,7 +3112,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2025-08-25",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "The impact of data centers on rising electricity costs",
@@ -3070,7 +3124,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2025-08-11",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Data Centers' Water Usage",
@@ -3130,7 +3184,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2025-06-13",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Data center boom impacting Georgia's water resources",
@@ -3145,6 +3199,18 @@
       "state": "GA",
       "first_seen": "2025-04-15",
       "last_seen": "2026-09-22"
+    },
+    {
+      "title": "Data Center Interconnection: Why the Grid Can't Keep Up | AEIC with Dr. Elizabeth Cook",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5nQ1B5Q0tPY1RsOV95LUdrTDZFbkxmaTdHWlhpOE9oQ29mSVVXMThLV0V2eThSWTNqVFRVNXZhTmNXbVdNVm9wcmdXM1FjSk5hdnVseU1B?oc=5",
+      "video_id": "",
+      "published_iso": "2025-03-25T15:41:16+00:00",
+      "states": [],
+      "locality": null,
+      "state": null,
+      "first_seen": "2025-03-25",
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Powering Data Centers: From the Grid to the Gate",
@@ -3180,7 +3246,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2025-02-06",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "How Data Centers Manage Intense Heat: Cooling Systems Explained",
@@ -3204,7 +3270,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2024-07-14",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Microsoft’s Datacenter Community Pledge",
@@ -3216,7 +3282,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2024-06-07",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Data Center Tour & Technical Deep Dive into the Power, Data and Cooling Infrastructure!",
@@ -3240,7 +3306,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2023-04-07",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-25"
     },
     {
       "title": "Data centers seek sustainable solutions to rising water consumption",

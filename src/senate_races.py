@@ -373,6 +373,219 @@ AI_RECORDS = {
         ],
         "as_of": "2026-09-05",
     },
+    # ── Competitive-race sweep, Oct 2026 — 15 days out ───────────────────
+    # The 11 races at PVI<=5 were the gap: 24 major-party candidates, only
+    # 11 with a record. These nine close it. Two candidates stay unrecorded
+    # on purpose: John E. Sununu (NH), whose Oct 16 NHPR energy interview
+    # never mentions data centers, and Justin Murphy (NJ), whose platform
+    # covers nuclear and shale but not data centers or electricity bills.
+    # Attributing a position to either would be the one failure these pages
+    # cannot afford.
+    ("NC", "Roy Cooper"): {
+        "lean": "guardrails",
+        "summary": "Says data centers must pay for all the energy they use "
+                   "with nothing passed to consumers, and backs letting "
+                   "communities block projects. Republicans call it a pivot; "
+                   "the tax breaks they cite predate his governorship.",
+        "items": [
+            {"what": "Campaign position, via a spokesperson: \u201cData centers "
+                     "must pay for all of the energy they use without passing "
+                     "on any of their costs to consumers.\u201d Cooper also "
+                     "supports local communities blocking data centers if they "
+                     "choose, and has not backed a federal moratorium.",
+             "date": "2026-08-27",
+             "source": "https://spectrumlocalnews.com/nc/charlotte/news/2026/08/27/data-centers-roy-cooper-whatley"},
+            {"what": "His \u201cMake Stuff Cost Less\u201d plan calls for data "
+                     "centers to pay the full cost of all the power they use "
+                     "and to prevent those costs being passed to consumers. "
+                     "Coverage framed this as a reversal of his record as "
+                     "governor; his campaign says the data-center sales-tax "
+                     "break was signed in 2006 and expanded in 2015, before "
+                     "his term, and a Wake Forest political scientist said the "
+                     "benefit came from a longstanding exemption not "
+                     "negotiated for those deals.",
+             "date": "2026-08-30",
+             "source": "https://www.foxnews.com/politics/roy-cooper-changes-tune-data-centers-rising-power-costs-collide-senate-campaign"},
+        ],
+        "as_of": "2026-10-19",
+    },
+    ("NH", "Chris Pappas"): {
+        # Lean is "consensus", not "guardrails": the only gradeable action
+        # here is a yes on a bill that carried 417-3, and a yes on a
+        # near-unanimous bill does not separate him from 416 colleagues.
+        # The local-control line is a statement, and statements are not graded.
+        "lean": "consensus",
+        "summary": "Voted for the Ratepayer Protection Act and says large "
+                   "loads \u201cshould pay their own way\u201d \u2014 but the "
+                   "vote was 417-3, so it distinguishes him from almost nobody.",
+        "items": [
+            {"what": "Voted for H.R. 9340, the Ratepayer Protection Act, which "
+                     "directs state utility regulators to consider requiring "
+                     "100 MW-plus large-load customers to cover the full added "
+                     "cost of generation, transmission and distribution "
+                     "upgrades they need. The House passed it 417-3.",
+             "date": "2026-09-16",
+             "source": "https://pappas.house.gov/media/press-releases/pappas-helps-pass-bipartisan-ratepayer-protection-act"},
+            {"what": "Statement on the vote: \u201cdata centers and other "
+                     "large-load consumers shouldn\u2019t be given a free pass "
+                     "to hike electric rates\u201d and \u201cthey should pay "
+                     "their own way.\u201d He also said the bill would "
+                     "\u201cput the decision of whether data center "
+                     "construction can move forward in the hands of Granite "
+                     "Staters.\u201d",
+             "date": "2026-09-17",
+             "source": "https://pappas.house.gov/media/press-releases/pappas-helps-pass-bipartisan-ratepayer-protection-act"},
+        ],
+        "as_of": "2026-10-19",
+    },
+    ("MN", "Peggy Flanagan"): {
+        "lean": "guardrails",
+        "summary": "Opposes big tax breaks for Big Tech, would ban data-center "
+                   "NDAs, and says host communities \u201cget to call the "
+                   "shots.\u201d Called data centers a possible existential "
+                   "threat if they get out of control.",
+        "items": [
+            {"what": "Told a Forum News Service candidate survey that "
+                     "Minnesotans should not pay for Big Tech\u2019s "
+                     "data-center costs and that she opposes major tax breaks "
+                     "for Big Tech: \u201cCommunities get to call the "
+                     "shots.\u201d She also backs banning NDAs between local "
+                     "governments and data-center developers, requiring union "
+                     "labor, and holding projects to Minnesota environmental "
+                     "standards. She did not back a statewide or federal "
+                     "moratorium.",
+             "date": "2026-09-11",
+             "source": "https://www.inforum.com/news/minnesota/where-do-minnesota-statewide-office-candidates-stand-on-data-centers"},
+        ],
+        "as_of": "2026-10-19",
+    },
+    ("MN", "Michele Tafoya"): {
+        "lean": "mixed",
+        "summary": "Welcomes the investment but says residents "
+                   "\u201cshouldn\u2019t be left paying the bill\u201d and "
+                   "developers must disclose incentives. Declined to answer on "
+                   "tax breaks, an NDA ban, or environmental rules.",
+        "items": [
+            {"what": "Told a Forum News Service candidate survey that Minnesota "
+                     "should welcome investment as long as it is done "
+                     "responsibly with residents involved, that residents, "
+                     "farmers and businesses deserve a real say and "
+                     "\u201cshouldn\u2019t be left paying the bill,\u201d and "
+                     "that developers must be upfront about what they need, "
+                     "what incentives they receive and how they will cover the "
+                     "costs their projects create. Her campaign did not answer "
+                     "the survey\u2019s questions on tax breaks, a federal NDA "
+                     "ban, or environmental regulation, and she did not back a "
+                     "moratorium.",
+             "date": "2026-09-11",
+             "source": "https://www.inforum.com/news/minnesota/where-do-minnesota-statewide-office-candidates-stand-on-data-centers"},
+        ],
+        "as_of": "2026-10-19",
+    },
+    ("VA", "Bert Mizusawa"): {
+        "lean": "mixed",
+        "summary": "Would give host communities a veto over AI data centers "
+                   "and site them in remote areas, but states no position on "
+                   "ratepayer costs, water use or tax breaks.",
+        "items": [
+            {"what": "In a Charlottesville Tomorrow / VPM candidate Q&A, backed "
+                     "\u201cthe ability of local communities, who will bear the "
+                     "costs, to veto having data centers\u201d rather than "
+                     "having them \u201cforced on them by Richmond or "
+                     "Washington, DC,\u201d said \u201cData centers can and "
+                     "should be located in remote areas,\u201d and called for "
+                     "rapid deployment of newer nuclear reactors. He stated no "
+                     "position on ratepayer costs, water use or data-center tax "
+                     "breaks.",
+             "date": "2026-09-18",
+             "source": "https://www.cvilletomorrow.org/qa-for-u-s-senate-shows-virginias-warner-and-mizusawa-agree-data-centers-are-a-problem-but-theyd-fix-it-differently/"},
+        ],
+        "as_of": "2026-10-19",
+    },
+    ("NM", "Ben Ray Luj\u00e1n"): {
+        "lean": "guardrails",
+        "summary": "Would keep data centers off drinking and agricultural "
+                   "water and require them to generate their own power: "
+                   "\u201cNew Mexicans should not pay a penny more for their "
+                   "electricity.\u201d",
+        "items": [
+            {"what": "In a KVIA voter-guide questionnaire, said data centers "
+                     "\u201cshould not use our drinking water or water used "
+                     "for agricultural purposes\u201d and \u201cshould also be "
+                     "required to generate their own power rather than strain "
+                     "the grid,\u201d adding that \u201cNew Mexicans should "
+                     "not pay a penny more for their electricity.\u201d He "
+                     "cited bipartisan legislation he wrote aimed at stopping "
+                     "water waste and protecting community drinking water.",
+             "date": "2026-10-05",
+             "source": "https://kvia.com/voter-guide-2026/new-mexico-senator-district-3/2026/10/05/ben-ray-lujan-candidate-for-new-mexico-senator/"},
+        ],
+        "as_of": "2026-10-19",
+    },
+    ("NM", "Larry Marker"): {
+        "lean": "mixed",
+        "summary": "Would zone data centers into dedicated parks away from "
+                   "people, farmland and water, and let each county decide "
+                   "whether to host them. States no position on who pays for "
+                   "the power.",
+        "items": [
+            {"what": "Called data centers a political \u201chot potato\u201d "
+                     "and proposed designated data-center parks sited away from "
+                     "population centers, prime farmland and critical water "
+                     "resources, comparing the approach to how feedlots are "
+                     "sited: \u201cEach county can and should determine if they "
+                     "want data centers or not.\u201d",
+             "date": "2026-10-14",
+             "source": "https://www.easternnewmexiconews.com/story/2026/10/14/news/marker-challenges-lujan-for-senate-seat/234373.html"},
+        ],
+        "as_of": "2026-10-19",
+    },
+    ("FL", "Ashley Moody"): {
+        "lean": "guardrails",
+        "summary": "Cosponsored the Senate Ratepayer Protection Act making "
+                   "data centers cover the full added cost of serving them, "
+                   "and attacked Senate Democrats for blocking it.",
+        "items": [
+            {"what": "Cosponsored Sen. Jon Husted\u2019s Ratepayer Protection "
+                     "Act, directing state utility regulators and unregulated "
+                     "utilities to consider rules making data centers pay the "
+                     "full added cost of new generation, transmission or "
+                     "distribution needed to serve them, post financial "
+                     "guarantees before upgrades begin, and cover costs if they "
+                     "end power contracts early. \u201cFloridians should not be "
+                     "left to foot the bill.\u201d After Senate Democrats "
+                     "blocked it: \u201cWhile Democrats continue to play "
+                     "politics over the issue, I\u2019ll keep fighting to get "
+                     "this common-sense legislation passed.\u201d",
+             "date": "2026-09-25",
+             "source": "https://www.moody.senate.gov/press-releases/senator-moody-cosponsors-legislation-to-protect-ratepayers-from-energy-consuming-data-centers/"},
+        ],
+        "as_of": "2026-10-19",
+    },
+    ("FL", "Angie Nixon"): {
+        "lean": "guardrails",
+        "summary": "The only candidate in a competitive Senate race backing a "
+                   "construction moratorium: pledged to cosponsor the Sanders "
+                   "AI Data Center Moratorium Act pending federal guardrails.",
+        "items": [
+            {"what": "On a moratorium: \u201cI think there needs to be a "
+                     "moratorium until more research is done.\u201d She said "
+                     "she is not opposed to AI or technological innovation but "
+                     "wants tougher guardrails around privacy, employment and "
+                     "data-center construction, and quipped that \u201cif "
+                     "people want to build a data center, they should put it on "
+                     "Mar-a-Lago.\u201d",
+             "date": "2026-09-26",
+             "source": "https://www.newsweek.com/angie-nixon-ashley-moody-trump-florida-data-center-mar-a-lago-12490702"},
+            {"what": "Campaigning in Gainesville alongside Sen. Bernie Sanders, "
+                     "called for restrictions on AI data centers; she has "
+                     "pledged to cosponsor the Sanders-Ocasio-Cortez Artificial "
+                     "Intelligence Data Center Moratorium Act.",
+             "date": "2026-10-19",
+             "source": "https://www.wuft.org/politics/2026-10-19/in-gainesville-visit-senate-hopeful-angie-nixon-calls-for-data-center-restrictions-campaign-finance-reform"},
+        ],
+        "as_of": "2026-10-19",
+    },
 }
 
 
@@ -667,12 +880,17 @@ SENATE_RACES_2026 = [
         "incumbent": 'Jeanne Shaheen',
         "incumbent_party": 'Democratic',
         "status": 'Incumbent retiring',
-        "roster_source": 'https://nhjournal.com/john-e-sununu-jumps-into-race/',
+        # Post-primary roster. The Sept 8, 2026 primary resolved this to
+        # Pappas vs Sununu; Scott Brown, Karishma Manzur and Jared Sullivan
+        # were defeated primary candidates and are off the general ballot.
+        # The previous roster_source was nhjournal.com — a campaign-launch
+        # story, not a candidate list — and it carried the pre-primary field.
+        # sos.nh.gov answers 403 to every scripted client (curl and fetch
+        # alike), so the certified list could not be read; this cites the
+        # primary result instead. Swap in the SOS list when read by hand.
+        "roster_source": 'https://www.wbur.org/news/2026/09/09/new-hampshire-primary-senate-sununu-pappas-shaheen',
         "candidates": [
-            {"name": 'Scott Brown', "party": 'Republican'},
-            {"name": 'Karishma Manzur', "party": 'Democratic'},
             {"name": 'Chris Pappas', "party": 'Democratic'},
-            {"name": 'Jared Sullivan', "party": 'Democratic'},
             {"name": 'John E. Sununu', "party": 'Republican'},
         ],
     },

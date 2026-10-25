@@ -1,18 +1,18 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-10-24",
+  "generated": "2026-10-25",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 871,
+  "count": 887,
   "states": 49,
-  "enacted": 703,
+  "enacted": 721,
   "proposed": 83,
-  "official_sourced": 67,
+  "official_sourced": 68,
   "by_state": {
     "CO": {
-      "total": 18,
+      "total": 19,
       "enacted": 13,
-      "proposed": 4
+      "proposed": 5
     },
     "MD": {
       "total": 22,
@@ -30,8 +30,8 @@
       "proposed": 1
     },
     "IL": {
-      "total": 18,
-      "enacted": 13,
+      "total": 19,
+      "enacted": 14,
       "proposed": 3
     },
     "UT": {
@@ -40,8 +40,8 @@
       "proposed": 0
     },
     "WI": {
-      "total": 35,
-      "enacted": 32,
+      "total": 36,
+      "enacted": 33,
       "proposed": 3
     },
     "RI": {
@@ -50,8 +50,8 @@
       "proposed": 0
     },
     "MI": {
-      "total": 65,
-      "enacted": 52,
+      "total": 66,
+      "enacted": 53,
       "proposed": 3
     },
     "TX": {
@@ -61,12 +61,12 @@
     },
     "GA": {
       "total": 46,
-      "enacted": 33,
+      "enacted": 34,
       "proposed": 1
     },
     "NY": {
-      "total": 16,
-      "enacted": 13,
+      "total": 17,
+      "enacted": 14,
       "proposed": 3
     },
     "CT": {
@@ -80,13 +80,13 @@
       "proposed": 0
     },
     "ME": {
-      "total": 11,
-      "enacted": 8,
+      "total": 12,
+      "enacted": 9,
       "proposed": 2
     },
     "NC": {
-      "total": 45,
-      "enacted": 37,
+      "total": 47,
+      "enacted": 39,
       "proposed": 2
     },
     "FL": {
@@ -95,8 +95,8 @@
       "proposed": 10
     },
     "OH": {
-      "total": 62,
-      "enacted": 54,
+      "total": 63,
+      "enacted": 55,
       "proposed": 1
     },
     "TN": {
@@ -105,9 +105,9 @@
       "proposed": 2
     },
     "CA": {
-      "total": 28,
-      "enacted": 19,
-      "proposed": 2
+      "total": 31,
+      "enacted": 24,
+      "proposed": 1
     },
     "WA": {
       "total": 19,
@@ -150,8 +150,8 @@
       "proposed": 0
     },
     "SC": {
-      "total": 14,
-      "enacted": 9,
+      "total": 15,
+      "enacted": 10,
       "proposed": 5
     },
     "VA": {
@@ -170,8 +170,8 @@
       "proposed": 0
     },
     "AL": {
-      "total": 15,
-      "enacted": 14,
+      "total": 16,
+      "enacted": 15,
       "proposed": 0
     },
     "PA": {
@@ -205,8 +205,8 @@
       "proposed": 2
     },
     "MA": {
-      "total": 8,
-      "enacted": 5,
+      "total": 9,
+      "enacted": 6,
       "proposed": 2
     },
     "LA": {
@@ -245,8 +245,8 @@
       "proposed": 2
     },
     "SD": {
-      "total": 3,
-      "enacted": 1,
+      "total": 4,
+      "enacted": 2,
       "proposed": 0
     },
     "HI": {
@@ -269,6 +269,7 @@
       "lexington-fayette-county-ky",
       "johnson-county-ia",
       "putnam-county-in",
+      "hillsboro-or",
       "richmond-ca",
       "gilroy-ca",
       "lowndes-county-ga",
@@ -280,7 +281,9 @@
       "west-whiteland-township-pa",
       "dickinson-county-ia",
       "lowndes-county-al",
-      "barnes-county-nd"
+      "barnes-county-nd",
+      "aberdeen-sd",
+      "arcata-ca"
     ],
     "60": [
       "bloomington-il",
@@ -292,6 +295,7 @@
       "nashville-tn",
       "charlotte-nc",
       "cumberland-county-nc",
+      "snohomish-county-wa",
       "lavon-tx",
       "marshalltown-ia",
       "starke-county-in",
@@ -307,6 +311,7 @@
       "normal-il",
       "putnam-county-in",
       "skagit-county-wa",
+      "sedgwick-county-ks",
       "hillsboro-or",
       "boulder-county-co",
       "lake-county-fl",
@@ -347,7 +352,9 @@
       "scarborough-me",
       "westbrook-me",
       "milford-ut",
-      "barnes-county-nd"
+      "barnes-county-nd",
+      "aberdeen-sd",
+      "arcata-ca"
     ],
     "90": [
       "bloomington-il",
@@ -463,7 +470,9 @@
       "westbrook-me",
       "milford-ut",
       "cherry-county-ne",
-      "barnes-county-nd"
+      "barnes-county-nd",
+      "aberdeen-sd",
+      "arcata-ca"
     ]
   }
 }

@@ -4226,5 +4226,19 @@
     "locality": "Hawthorne, CA",
     "kind": "added",
     "detail": "Added as Enacted"
+  },
+  {
+    "date": "2026-10-19",
+    "id": "grand-junction-co",
+    "locality": "Grand Junction, CO",
+    "kind": "added",
+    "detail": "Added as Proposed"
+  },
+  {
+    "date": "2026-10-25",
+    "id": "white-county-in",
+    "locality": "White County, IN",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
   }
 ]

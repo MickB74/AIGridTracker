@@ -1203,6 +1203,10 @@
     "effective_status": "Enacted",
     "expires": "2027-01-03"
   },
+  "grand-junction-co": {
+    "effective_status": "Proposed",
+    "expires": null
+  },
   "grant-county-in": {
     "effective_status": "Enacted",
     "expires": "2028-03-16"
@@ -3424,7 +3428,7 @@
     "expires": "2027-02-18"
   },
   "white-county-in": {
-    "effective_status": "Enacted",
+    "effective_status": "Expired",
     "expires": "2026-10-20"
   },
   "white-county-tn": {
