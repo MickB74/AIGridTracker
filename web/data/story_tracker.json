@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 12046,
+  "count": 12054,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -54918,7 +54918,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-08-11",
-      "last_seen": "2026-10-23"
+      "last_seen": "2026-10-26"
     },
     {
       "title": "Warrick County hosts data center public forum",
@@ -55325,7 +55325,7 @@
       "locality": "Cass County",
       "state": "IN",
       "first_seen": "2026-07-28",
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-26"
     },
     {
       "title": "Traffic Alert: Cassopolis road closed in Cass County",
@@ -63718,7 +63718,7 @@
       "locality": "Starke County",
       "state": "IN",
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-20"
+      "last_seen": "2026-10-26"
     },
     {
       "title": "Weld County officials vote to approve controversial data center",
@@ -124911,7 +124911,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-21",
-      "last_seen": "2026-10-25"
+      "last_seen": "2026-10-26"
     },
     {
       "title": "Data Center Control New Issue for Sitka",
@@ -125593,7 +125593,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-19",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-26"
     },
     {
       "title": "Soluna Agrees to Form Strategic Partnership with Applied Digital to Develop Wind-Powered AI Data Center in Texas",
@@ -127188,7 +127188,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-21",
-      "last_seen": "2026-10-25"
+      "last_seen": "2026-10-26"
     },
     {
       "title": "Soluna, Applied Digital to develop 50 MW AI data center in Texas",
@@ -127309,7 +127309,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-21",
-      "last_seen": "2026-10-25"
+      "last_seen": "2026-10-26"
     },
     {
       "title": "AI Is Redrawing the US Data Center Map",
@@ -129982,7 +129982,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-23",
-      "last_seen": "2026-10-25"
+      "last_seen": "2026-10-26"
     },
     {
       "title": "Texas TCEQ disables STEERS amid data center permit dispute",
@@ -130180,7 +130180,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-23",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-26"
     },
     {
       "title": "News | Amazon switches gears on project after backlash in country's largest data center market",
@@ -130939,7 +130939,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-23",
-      "last_seen": "2026-10-25"
+      "last_seen": "2026-10-26"
     },
     {
       "title": "County passes data center moratorium",
@@ -131577,7 +131577,7 @@
       "locality": "Tom Green County",
       "state": "TX",
       "first_seen": "2026-10-23",
-      "last_seen": "2026-10-25"
+      "last_seen": "2026-10-26"
     },
     {
       "title": "Lt. Gov. Dan Patrick campaigns in Lubbock, says state must regulate data centers",
@@ -132512,6 +132512,94 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-25",
+      "last_seen": "2026-10-26"
+    },
+    {
+      "title": "Aurora considers indefinite moratorium on new data centers as Trident project looks at new locations",
+      "outlet": "Denver7",
+      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPd2dCdEo5NXo1OUhxakM4Z1FkODMxUkNqb3MySzlkLUZMUlhfRnMxSkRVV2N0ZHp3Sk9KbXNBRGlETGR3TUc1SkdYMS1TNjZsYkxUOGZTMHZ4S0taYnN0WUtja3d0bzBsUFBPV1NzWjh5WkNRUkVWa3NiYmVFakdUWEk3cHVpV0xoUmVFZXA0UGswbVctSW1wTmdjb1FuRzZQNXBUWGpwX2EzM2xQMHhNeEtXajZ6MmdOZHpEUERZWVhtSFZvT0VfRnp4M1ZILVBxZ3pIMjJSTQ?oc=5",
+      "published": "Mon, 26 Oct 2026 14:21:06 GMT",
+      "published_iso": "2026-10-26T14:21:06+00:00",
+      "locality": "Aurora",
+      "state": "CO",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26"
+    },
+    {
+      "title": "Data center discussion deserves a bigger room",
+      "outlet": "Bleeding Heartland",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNbl93ZUcxNk1uWGNEQ3NmRURVaVRrdnpuVWUwc2JtV01weEdjd3pLV3JsYVJYYmVBdjktbWVsLTJ0ZzNzNUlVM2JwNm15NExQUS1zZkUzR2tRWXZvWUNJc1FQcWdtNTkxeEpBZTdJSXFqWTRxamdENEprdFdwS3p1cTVMTTBvSERlYmRsSzE4ZFdXMVVNX0E?oc=5",
+      "published": "Mon, 26 Oct 2026 13:16:53 GMT",
+      "published_iso": "2026-10-26T13:16:53+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26"
+    },
+    {
+      "title": "Hundreds rally at Capital Square urging moratorium on Virginia data center growth",
+      "outlet": "WCYB",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNSjFnbGxwY2lHeEJRVWJwcnZ3UlRFWmdfS3lxUkE3Q1loYVlXVWFQSERrLXJFX3FDVFp4OV9VWWdXejRQOTV6VWxKR2l6OXlKSHBOMUgyN2x6S3dUcWlMX2FTOVVuNEF5OVJidWRYSGg3RE5ZUENWRDZWTmNoZjF3NkNjYlZrU2dPSFpKYnA5dUhWWWdYUHUxWDhOaW5GNU5oNnY5V1FQclBNOXlDMUFqb01Yd1RLdG5QeWxBS1JpZ1c5M0dHOUZR?oc=5",
+      "published": "Mon, 26 Oct 2026 02:32:30 GMT",
+      "published_iso": "2026-10-26T02:32:30+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26"
+    },
+    {
+      "title": "New Mexico State University students and organizers call for statewide ban on data centers",
+      "outlet": "Source New Mexico",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPWXpTY0Q1OXVvVGpqNzVTeWNZYWV5a3dneDBnXy1pWGNPQk56dk4tRGw2MVhHV01yVGoySmxDbmxQYm5CakZaSm80clFFVVdjejltMFIycGFoTmFJQkw5a2VtMkR4bmM5WngxOHgwUVNWSDk1enpDa2RnYktaWHZ5NmJlN2paeVJlNTBBWnZmdmxobS15NnRSOHc3Zkc0dGFBTWp3T29GQkp3UnUweFJjTnY0VF8wOTBWY0liY244MlA?oc=5",
+      "published": "Mon, 26 Oct 2026 15:27:53 GMT",
+      "published_iso": "2026-10-26T15:27:53+00:00",
+      "locality": null,
+      "state": "NM",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26"
+    },
+    {
+      "title": "Documents show Cromwell data center discussion dates back over a year",
+      "outlet": "WFSB",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdG0welI1MVRnVlhZQVZjWmlad1hWbThnaF93OVljcFR3YnlXLUFrY0VvbWhsZzZxNFRhajVpYk9hZ2tiTWhwZDBkaXJzVWlaYlJLSEhGbUdjMmRYYXpuUjdSS2tIT2xBZU9la3VZYzRQZGVqcmhXVjAydTBUUUdWZ0FWdVc4ODNJbUNZNEJsRDB5Z2JFWDduY0xiZEtkZFVvNGfSAbYBQVVfeXFMTVk4Q1RRZy13WUpqR21aTG4xVjhmS1ZjT2tESUV0b1JnbzlkemRvQTVBbzR3bWRsdFk3WE1nX1kxSXl4RnNtT010bGIySHN0R1ZFODhBQmFOd2pQNVZLX3F0U21zQ2tEZk5WNURENlBBVDVQZUFVbTd2WVdqVWRRMG5yaTdSSU1WM2NxUXcwbE9adF9NZGZoQmdNaW04clZnbzIwVV9HcVp2YjJkWURUc0VMR0xQNlE?oc=5",
+      "published": "Sat, 24 Oct 2026 03:13:00 GMT",
+      "published_iso": "2026-10-24T03:13:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-26"
+    },
+    {
+      "title": "Luzerne County Council set to discuss data center zoning ordinance",
+      "outlet": "Times Leader",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQYVQxSEl4TjRSb3BUUlBaQnF1dDFodkRJS0EzcmZobHBJSDU2SkU1b1lpeWo2OE0yd0pxXzBaTjdZQUFGUXFGVTFCSmltSWh5SFF0SERPbGhYMUpsSmN1YVBTN2xZTXQwQ2VGSlN3bWxoRXlWeG1UMXpfM25SNlZhYnpTenJ3dm1ubklzNV96Mnd3a2J5TlBfU29iSVZTRjZqZHp0Qzl1M3dmOTA?oc=5",
+      "published": "Mon, 26 Oct 2026 12:00:00 GMT",
+      "published_iso": "2026-10-26T12:00:00+00:00",
+      "locality": "Luzerne County",
+      "state": "PA",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26"
+    },
+    {
+      "title": "Bloom Energy (NYSE:BE) Powers Up AI: Can Fuel Cells Scale Fast?",
+      "outlet": "Kalkine Media",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQMThUMHd6NWVkWi1RUU8zeHhqTVFNY0otVmFiMUcxWlAzaUxxSjZmcGs4NVYzSF83TTVWVHBxcldERDM0YmYxeFRsVkYzUjhWczcteFNtYUR6N1lzR2FFWnNBZFB2TmgwZGZ0eTl6T1k4eHNvbUlJY0xvOWVxaGpibnBaYTAteFh1eVVmNF9EWlE5MGF0alJhaElNaHo0c01IemZ0bFlsdw?oc=5",
+      "published": "Mon, 26 Oct 2026 16:18:00 GMT",
+      "published_iso": "2026-10-26T16:18:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26"
+    },
+    {
+      "title": "Fireworks to lease data center capacity in Dallas, Texas",
+      "outlet": "Data Center Dynamics",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMWdRZ29jclRLNU1vdUlYejg0MS1SYjVFdS12MXBBWmlMT0o5QUFldUIxRWlQMndXaGh4czBXMDlTMnZibWY0NU15SHZhU0cyekQ2S1A3cUVuVXJEall2VDRtbU9tcXFjQlhHQ2k1TWxYVFdsOVA5bHdRUDdVTkFkQko1LXFtUDZJdkJ1VWpGakJ0RzhHN2ItSkhYS2J6UGZS?oc=5",
+      "published": "Mon, 26 Oct 2026 16:17:47 GMT",
+      "published_iso": "2026-10-26T16:17:47+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-26",
       "last_seen": "2026-10-26"
     }
   ]

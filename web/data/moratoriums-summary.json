@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-10-25",
+  "generated": "2026-10-26",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 887,
   "states": 49,
-  "enacted": 721,
+  "enacted": 719,
   "proposed": 83,
   "official_sourced": 68,
   "by_state": {
@@ -61,7 +61,7 @@
     },
     "GA": {
       "total": 46,
-      "enacted": 34,
+      "enacted": 33,
       "proposed": 1
     },
     "NY": {
@@ -171,7 +171,7 @@
     },
     "AL": {
       "total": 16,
-      "enacted": 15,
+      "enacted": 14,
       "proposed": 0
     },
     "PA": {
@@ -272,7 +272,6 @@
       "hillsboro-or",
       "richmond-ca",
       "gilroy-ca",
-      "lowndes-county-ga",
       "camden-county-ga",
       "riley-county-ks",
       "upper-burrell-township-pa",
@@ -280,7 +279,6 @@
       "smithfield-township-pa",
       "west-whiteland-township-pa",
       "dickinson-county-ia",
-      "lowndes-county-al",
       "barnes-county-nd",
       "aberdeen-sd",
       "arcata-ca"
@@ -323,7 +321,6 @@
       "waterville-township-oh",
       "cache-county-ut",
       "box-elder-county-ut",
-      "lowndes-county-ga",
       "camden-county-ga",
       "clinton-tn",
       "riley-county-ks",
@@ -346,7 +343,6 @@
       "peosta-ia",
       "webster-county-mo",
       "spokane-county-wa",
-      "lowndes-county-al",
       "el-dorado-ks",
       "brunswick-me",
       "scarborough-me",
@@ -421,7 +417,6 @@
       "tulsa-ok",
       "broken-arrow-ok",
       "edmond-ok",
-      "lowndes-county-ga",
       "bulloch-county-ga",
       "camden-county-ga",
       "clayton-county-ga",
@@ -462,7 +457,6 @@
       "webster-county-mo",
       "nodaway-county-mo",
       "spokane-county-wa",
-      "lowndes-county-al",
       "pawhuska-ok",
       "el-dorado-ks",
       "brunswick-me",
