@@ -1,11 +1,11 @@
-# PA DEP data-center tracker sync — 2026-10-29
+# PA DEP data-center tracker sync — 2026-10-30
 
 Source: https://gis.dep.pa.gov/DataCenterPermitTracker/
 
 - DEP projects on file: **75**
 - DEP permit records: **389**
-- Added to projects.json: **2**
-- Refreshed: **3**
+- Added to projects.json: **0**
+- Refreshed: **0**
 - Skipped (already tracked by hand): **16**
 
 ## Skipped — hand-written row already covers this
@@ -28,15 +28,4 @@ Left alone on purpose. If the DEP row carries detail ours lacks (a permit trail,
 - DEP 10000066 *Salem Township Data Center Development (Amazon Web Services) - Phase 2* (Salem Township (Luzerne County)) → `aws-salem-township-pa`
 - DEP 10000067 *Falls Township Data Center Development (Amazon Web Services) - Phase 2* (Falls Township (Bucks County)) → `aws-falls-township-pa`
 - DEP 10000068 *Aligned Data Center - Phase 2* (Shippingport Borough (Beaver County)) → `aligned-shippingport-pa`
-
-## Added
-
-- `sei-allegheny-findlay-township-pa` — SEI Allegheny, Findlay Township (Allegheny County)
-- `trienergy-inc-stanton-farm-llc-south-huntingdon-township-pa` — TriEnergy Inc. / Stanton Farm LLC, South Huntingdon Township (Westmoreland County) — 1 permit event
-
-## Refreshed
-
-- `kline-township-data-center-development-kline-township-pa` — Environmental permits under review at PA DEP (3 pending, 4 issued).
-- `project-boson-highway-auto-data-center-archbald-borough-pa` — Environmental permits under review at PA DEP (1 pending).
-- `sharon-data-center-project-city-of-sharon-pa` — Environmental permits under review at PA DEP (1 pending, 2 issued).
 
