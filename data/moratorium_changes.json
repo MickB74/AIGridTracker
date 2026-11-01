@@ -4240,5 +4240,47 @@
     "locality": "White County, IN",
     "kind": "status_changed",
     "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-01",
+    "id": "lexington-fayette-county-ky",
+    "locality": "Lexington (Fayette County), KY",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-01",
+    "id": "richmond-ca",
+    "locality": "Richmond, CA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-01",
+    "id": "gilroy-ca",
+    "locality": "Gilroy, CA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-01",
+    "id": "lowndes-county-ga",
+    "locality": "Lowndes County, GA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-01",
+    "id": "lowndes-county-al",
+    "locality": "Lowndes County, AL",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-01",
+    "id": "arcata-ca",
+    "locality": "Arcata, CA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
   }
 ]

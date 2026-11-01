@@ -72,6 +72,330 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "week-in-review-2026-11-01",
+        "art": "review",
+        "section": "stories",
+        "title": "Week in Review: Charlotte Extends Its Data Center Pause to 2027, Aurora Fails to Ban Them Twice, and a Federal Judge Keeps a Pollution Suit Against Elon Musk's xAI Alive",
+        "seo_title": "Week in review: Charlotte extends pause, Aurora fails",
+        "date": _dt.date(2026, 11, 1),
+        "author": "GridWatch AI",
+        "tags": ["week in review", "moratorium", "North Carolina", "Colorado",
+                 "California", "Oklahoma", "Texas", "Mississippi",
+                 "Pennsylvania", "water", "community", "oversight"],
+        "summary": (
+            "Charlotte's City Council unanimously extended its data center "
+            "moratorium by 11 months, to October 2027, while Aurora, "
+            "Colorado failed for the second time in two weeks to even bring "
+            "a moratorium up for a vote, falling short of the supermajority "
+            "its own rules require. Davidson County, North Carolina and "
+            "San Antonio, Texas both rejected moratoriums in favor of "
+            "permanent rules and case-by-case council approval instead, "
+            "Pittsburg, California adopted a 45-day pause with a disputed "
+            "scope, and Oklahoma City approved a rezoning under its own "
+            "moratorium because the application beat the deadline. Plus: a "
+            "federal judge refuses to let the Trump administration dismiss "
+            "the NAACP's Clean Air Act lawsuit against Elon Musk's xAI, and "
+            "three more fights move in Pennsylvania, Virginia and Iowa."
+        ),
+        "body": """
+Welcome back to the GridWatch AI Week in Review — our Sunday roundup of the
+most important data center stories from the past seven days, what they mean
+for communities, and what you can learn from each one.
+
+---
+
+### 1. Charlotte unanimously extends its data center moratorium to October 2027
+
+**What happened:** The Charlotte City Council voted unanimously on Oct. 26
+to extend its data center moratorium by 11 months, pushing the pause to
+Oct. 18, 2027, according to [WBTV](https://www.wbtv.com/) and
+[Bisnow](https://www.bisnow.com/). The original 150-day pause, approved in
+June, had been set to expire Nov. 5. Existing permits are unaffected; the
+extension only blocks new applications. Council members said they need the
+extra time to write rules covering neighborhoods, water and the electricity
+grid, and [WUNC](https://www.wunc.org/) reports the council is also
+counting on the General Assembly to pass statewide data center legislation
+when it convenes next year.
+
+**Why it matters:** This is Charlotte's second extension of a pause it
+first adopted in June, and residents turned out again to ask for it,
+according to [WFAE](https://www.wfae.org/). A city that keeps renewing its
+own pause rather than letting it lapse is a city that still doesn't have
+the zoning rules it set out to write five months ago — the moratorium is
+buying time the council hasn't yet used.
+
+**What to learn — a moratorium's value is what gets written during it, not
+how long it lasts:** An extension is not a result on its own; it's a
+deadline reset. If your city or county is mid-pause, the question worth
+asking at the next meeting isn't "will you extend it" but "what specific
+ordinance language exists right now, and when does the public get to
+comment on a draft." Charlotte's council is explicitly waiting on the
+state legislature, which means the city's own rules may not move until
+well into 2027. See the
+[North Carolina state page](/states/north-carolina.html) and the
+[moratorium tracker](/moratoriums.html).
+
+*Sources: [WBTV, Oct 27](https://www.wbtv.com/);
+[Bisnow, Oct 27](https://www.bisnow.com/);
+[WFAE, Oct 27](https://www.wfae.org/);
+[WUNC, Oct 27](https://www.wunc.org/)*
+
+---
+
+### 2. Aurora, Colorado fails to pass a data center moratorium for the second time in two weeks
+
+**What happened:** The Aurora City Council could not even bring a proposed
+indefinite data center moratorium back up for a vote on Oct. 26, after an
+effort to reconsider it fell short of the two-thirds majority required
+under council rules, according to [Denver7](https://www.denver7.com/) and
+the [Denver Gazette](https://www.denvergazette.com/). It was the second
+rejection in as many weeks: the council had already voted down a narrower,
+six-month version 6-5 earlier in October, with Mayor Mike Coffman casting
+the deciding vote. Coffman has said he will bring the same resolution back
+at the next regular meeting. The fight centers on a data center project
+known as Trident, proposed by Vantage Data Centers, which has told the
+council it is now looking at other sites, according to
+[Colorado Politics](https://www.coloradopolitics.com/).
+
+**Why it matters:** A council majority appears to want some form of pause
+— the vote that failed to reach seven votes still had more members
+supporting it than opposing it — but under Aurora's rules, a bare majority
+isn't enough to even debate the measure again. Residents who packed the
+chamber told the council afterward, "you failed us," according to
+[CBS News Colorado](https://www.cbsnews.com/). Separately, the council did
+approve new restrictions barring data centers from mixed-use office zones,
+according to [Sentinel Colorado](https://sentinelcolorado.com/).
+
+**What to learn — check your council's own procedural rules before
+assuming a majority wins:** Aurora's charter requires a supermajority to
+reconsider a resolution that already failed once, which is why a measure
+with more supporters than opponents still didn't get an up-or-down vote.
+Before a hearing, ask your city clerk what threshold your own council
+needs — simple majority, supermajority, or something else — because that
+number can decide the outcome before a single resident testifies. See the
+[Colorado state page](/states/colorado.html) and the
+[Aurora community page](/communities/aurora-co.html).
+
+*Sources: [Denver7, Oct 26](https://www.denver7.com/);
+[Denver Gazette, Oct 26](https://www.denvergazette.com/);
+[Colorado Politics, Oct 26](https://www.coloradopolitics.com/);
+[CBS News Colorado, Oct 28](https://www.cbsnews.com/);
+[Sentinel Colorado, Oct 27](https://sentinelcolorado.com/)*
+
+---
+
+### 3. Davidson County, North Carolina rejects a moratorium and writes permanent rules instead
+
+**What happened:** Davidson County commissioners voted 5-2 on Oct. 27 to
+reject a proposed four-month data center moratorium and adopt new
+development standards in its place, according to
+[WFAE](https://www.wfae.org/) and [WUNC](https://www.wunc.org/). The rules
+cover noise, water and power use, and environmental impacts for future
+data center proposals in unincorporated parts of the county. Officials say
+no applications have actually been filed yet — the county wrote the rules
+ahead of any specific project. Commissioner Matt Mizell argued that setting
+strict standards in advance would help the county avoid the fights that
+have broken out in other communities after a project was already under
+review.
+
+**Why it matters:** This is the opposite sequencing from Charlotte's: a
+county that never had a pending project chose to adopt permanent
+regulation instead of a temporary pause. That's a legitimate path to the
+same protections a moratorium buys, but it only works if the standards
+adopted are actually specific and enforceable — "stricter rules" is only
+as strong as what's written in the ordinance.
+
+**What to learn — a rejected moratorium isn't automatically a loss, if
+real standards replace it:** Don't assume "no moratorium" means "no
+protection." Ask to see the actual ordinance text that passed instead, and
+check whether it sets numeric limits (decibels, gallons, setback feet) or
+just directs staff to "consider" impacts — the first is enforceable, the
+second is a suggestion. See [our CBA clause library](/cba-clauses.html)
+for what a specific standard looks like, and the
+[North Carolina state page](/states/north-carolina.html).
+
+*Sources: [WFAE, Oct 27](https://www.wfae.org/);
+[WUNC, Oct 27](https://www.wunc.org/)*
+
+---
+
+### 4. Pittsburg, California approves a 45-day data center pause — but only for the project's unbuilt phases
+
+**What happened:** The Pittsburg City Council voted unanimously to impose a
+45-day moratorium on new data center development, effective immediately,
+according to [NBC Bay Area](https://www.nbcbayarea.com/) and
+[Local News Matters](https://localnewsmatters.org/). The pause targets
+future phases of the Avaio data center project at the former Delta View
+Golf Course; the project's first phase, approved in 2024, is unaffected.
+Residents who have fought the project since last year said the pause
+doesn't go far enough. A California Chamber of Commerce legal analysis
+cited by Local News Matters argues the measure's definitions may not even
+cover conventional (non-AI) data centers, a reading some residents dispute.
+
+**Why it matters:** Pittsburg joins a growing list of Bay Area cities
+pausing data center approvals, but the carve-out for the Avaio project's
+already-approved first phase shows how a pause can coexist with a project
+moving forward on the ground. The dispute over what the ordinance's own
+definitions actually cover is a preview of a fight residents elsewhere are
+likely to have once their own pause's text gets tested against a real
+application.
+
+**What to learn — read your moratorium's definitions section before
+celebrating it:** An ordinance that says "data center" without defining
+the term precisely can be argued around by a company whose facility fits
+some other description. If a pause is adopted near you, ask your council
+or its attorney to walk through, in plain language, exactly which kinds of
+facilities the definition does and doesn't reach — and get that answer on
+the record before the 45 days run out. See the
+[California state page](/states/california.html) and the
+[Pittsburg community page](/communities/pittsburg-ca.html).
+
+*Sources: [NBC Bay Area, Oct 27](https://www.nbcbayarea.com/);
+[Local News Matters, Oct 28](https://localnewsmatters.org/)*
+
+---
+
+### 5. Oklahoma City approves a data center rezoning under its own moratorium — because the application beat the deadline
+
+**What happened:** The Oklahoma City Council voted 6-3 on Oct. 27 to
+rezone land near I-40 and Frisco Road for Beltline Energy's data center
+campus, according to [OKCFOX](https://okcfox.com/) and
+[News9](https://www.news9.com/). The approval carries conditions on water,
+electricity and noise, and requires a community benefits agreement before
+any building permit can be issued. Mayor David Holt said the vote doesn't
+contradict the city's own data center moratorium, in place since April and
+running through year's end, because Beltline's application was filed
+before the pause took effect. "I do not think that means that Oklahoma
+City is open for business for data centers," Holt said, according to
+OKCFOX, which also reports Holt asked the council to extend the moratorium
+itself by six months.
+
+**Why it matters:** Oklahoma City's moratorium already carried an
+exemption for pending applications when it was adopted — this vote is that
+exemption working as designed, not a loophole discovered after the fact.
+Still, a resident who hears "the city has a data center moratorium" needs
+to know that the moratorium never applied to this specific 6-3 vote at
+all.
+
+**What to learn — ask what a moratorium exempts on the day it's adopted,
+not after a project gets approved under it:** Grandfather clauses for
+applications already in the pipeline are common and often reasonable, but
+they mean a "pause" can have a parallel track running underneath it the
+whole time. When your own city or county adopts a moratorium, read the
+exemptions clause first — it tells you which projects the pause will
+never actually touch. See the
+[Oklahoma state page](/states/oklahoma.html) and the
+[Oklahoma City community page](/communities/oklahoma-city-ok.html).
+
+*Sources: [OKCFOX, Oct 27](https://okcfox.com/);
+[News9, Oct 27](https://www.news9.com/)*
+
+---
+
+### 6. San Antonio skips a moratorium and instead requires council approval for every new data center
+
+**What happened:** The San Antonio City Council voted Oct. 29 to pass on a
+proposed moratorium on new data center development, choosing instead to
+amend the city's zoning code, according to [KSAT](https://www.ksat.com/)
+and the [San Antonio Report](https://sanantonioreport.org/). Under the new
+rules, every new data center needs a specific-use authorization — meaning
+each project goes before the Zoning Commission and then the full City
+Council for case-by-case approval, rather than being approved by city
+staff under existing zoning. The amendment also restricts new data centers
+to land already zoned industrial or heavy commercial, and bars them from
+the Edwards Aquifer Recharge Zone, the region's primary drinking-water
+source.
+
+**Why it matters:** This is the same choice San Antonio's council
+previewed in August — most members favored a case-by-case approval
+requirement over a blanket pause, according to the
+[San Antonio Current](https://www.sacurrent.com/), because it lets the
+council negotiate with each developer individually rather than freezing
+the whole category. The aquifer recharge zone restriction is also notable
+on its own: it's a water-specific limit written directly into zoning,
+not a post-approval promise.
+
+**What to learn — case-by-case council approval is a different tool than
+a moratorium, with different leverage:** A moratorium stops everything for
+a fixed time; a specific-use authorization requirement stops nothing on
+its own, but gives your elected council a formal vote — and formal
+negotiating leverage — on every single future project, indefinitely. If
+your city is choosing between the two, ask which one actually guarantees
+residents a seat at the table for *the next* project, not just the current
+one. See [our hidden-water-cost explainer](/blog/hidden-water-cost) for why
+aquifer recharge zones matter, and the
+[Texas state page](/states/texas.html).
+
+*Sources: [KSAT, Oct 19](https://www.ksat.com/);
+[San Antonio Report, Oct 25](https://sanantonioreport.org/);
+[San Antonio Current, Aug 26](https://www.sacurrent.com/)*
+
+---
+
+### 7. Also this week: a federal judge keeps the NAACP's pollution lawsuit against xAI alive, and three more fights move
+
+A federal judge in Mississippi ruled Oct. 19 that the Trump administration
+can intervene in the NAACP's Clean Air Act lawsuit against Elon Musk's
+xAI — but refused to let the administration dismiss the case outright,
+according to [CNBC](https://www.cnbc.com/), [Jurist](https://www.jurist.org/)
+and [Earthjustice](https://earthjustice.org/), which represents the
+plaintiffs. The suit, covering gas turbines xAI ran without air permits at
+its Southaven, Mississippi site near Memphis, had drawn a Justice
+Department motion arguing only the EPA — not private citizens — can
+enforce the Clean Air Act. Judge Debra Brown disagreed. A separate NAACP
+request to shut the turbines down while the case proceeds is still
+pending. We first covered xAI's unpermitted-turbine fight in our
+[oversight-gaps roundup](/blog/oversight-gaps-agency-shopping-2026) in
+July; this is the first court ruling testing whether that strategy survives
+a lawsuit.
+
+Three more fights to know about:
+
+| Locality | State | Action | Status |
+|--|--|--|--|
+| Springdale / Allegheny County | PA | Residents rally ahead of county review | Springdale borough approved the project 5-2 with 19 conditions in Dec. 2025; the land-use decision now rests with Allegheny County, where a public comment period is still open |
+| Chesterfield County | VA | Community forum | County and tech-company representatives took resident questions on data center impacts at an Oct. 28 public forum |
+| Sioux County | IA | Ordinance vs. moratorium | County advanced a permanent data-center ordinance (25 MW cap, farmland and noise standards) toward a final vote; its existing one-year moratorium has not been confirmed lifted |
+
+**What to learn — "approved" at one level of government doesn't mean
+approved everywhere:** Springdale's borough council said yes to the data
+center proposed there nearly a year ago, but the project still needs
+Allegheny County's separate land-use sign-off — exactly the multi-layer
+approval structure we've flagged before, and why residents are still
+organizing against a project some news coverage already treats as
+settled. If a project near you clears a city or borough vote, ask
+immediately which county, state, or utility approvals still stand between
+that vote and a shovel in the ground. See the
+[moratorium tracker](/moratoriums.html) for every jurisdiction's current
+status.
+
+---
+
+### What to watch next week
+
+- **Aurora, CO** — whether Mayor Coffman's promised return of the
+  moratorium resolution at the next regular council meeting fares any
+  better against the two-thirds threshold
+- **Oklahoma City, OK** — whether the council acts on Mayor Holt's request
+  to extend the citywide moratorium by six months before it lapses Dec. 31
+- **Allegheny County, PA** — the county's land-use decision on the
+  Springdale data center, after residents' last-ditch push to block it
+- **Sioux County, IA** — whether the board's proposed 25 MW ordinance
+  clears a final vote, and what that means for its existing moratorium
+- **Southaven, MS** — whether Judge Brown rules on the NAACP's pending
+  request to halt xAI's turbines while the Clean Air Act case proceeds
+- **San Antonio, TX** — how the first data center application tests the
+  new specific-use authorization requirement in practice
+
+---
+
+*Every Sunday we cover the week's most important data center stories,
+explain the underlying concepts, and point you to the tools you need. Know
+a story we should cover? Reach out at hello@aigridwatch.com or sign up for
+the newsletter below.*
+""",
+    },
+    {
         "id": "salix-iowa-google-mou-no-moratorium-2026",
         "art": "negotiation",
         "section": "stories",

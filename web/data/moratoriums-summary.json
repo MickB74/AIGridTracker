@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-10-31",
+  "generated": "2026-11-01",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 887,
   "states": 49,
-  "enacted": 717,
+  "enacted": 715,
   "proposed": 83,
   "official_sourced": 68,
   "by_state": {
@@ -106,7 +106,7 @@
     },
     "CA": {
       "total": 31,
-      "enacted": 22,
+      "enacted": 21,
       "proposed": 1
     },
     "WA": {
@@ -121,7 +121,7 @@
     },
     "KY": {
       "total": 29,
-      "enacted": 29,
+      "enacted": 28,
       "proposed": 0
     },
     "NJ": {
@@ -262,15 +262,16 @@
       "meridian-township-mi",
       "washington-township-macomb-co-mi",
       "lysander-onondaga-co-ny",
+      "nashville-tn",
       "charlotte-nc",
       "lavon-tx",
       "marshalltown-ia",
       "springfield-mo",
       "minneapolis-mn",
-      "lexington-fayette-county-ky",
       "johnson-county-ia",
       "normal-il",
       "putnam-county-in",
+      "skagit-county-wa",
       "hillsboro-or",
       "camden-county-ga",
       "riley-county-ks",
@@ -287,8 +288,7 @@
       "scarborough-me",
       "westbrook-me",
       "barnes-county-nd",
-      "aberdeen-sd",
-      "arcata-ca"
+      "aberdeen-sd"
     ],
     "60": [
       "bloomington-il",
@@ -298,11 +298,13 @@
       "lysander-onondaga-co-ny",
       "gates-county-nc",
       "nashville-tn",
+      "hays-county-tx",
       "charlotte-nc",
       "cumberland-county-nc",
       "snohomish-county-wa",
       "lavon-tx",
       "marshalltown-ia",
+      "oklahoma-city-ok",
       "starke-county-in",
       "johnson-city-tn",
       "coweta-county-ga",
@@ -311,15 +313,18 @@
       "fort-payne-al",
       "minneapolis-mn",
       "green-charter-township-mi",
-      "lexington-fayette-county-ky",
+      "saginaw-mi",
       "johnson-county-ia",
       "normal-il",
       "putnam-county-in",
       "skagit-county-wa",
+      "wendell-nc",
       "sedgwick-county-ks",
       "hillsboro-or",
       "boulder-county-co",
       "lake-county-fl",
+      "fluvanna-county-va",
+      "luther-ok",
       "howland-township-oh",
       "braceville-township-oh",
       "butler-county-oh",
@@ -327,8 +332,15 @@
       "cache-county-ut",
       "box-elder-county-ut",
       "logan-ut",
+      "tulsa-ok",
+      "broken-arrow-ok",
+      "edmond-ok",
+      "bulloch-county-ga",
       "camden-county-ga",
+      "clayton-county-ga",
+      "marietta-ga",
       "clinton-tn",
+      "mitchell-county-ia",
       "riley-county-ks",
       "brookville-pa",
       "center-township-pa",
@@ -341,6 +353,7 @@
       "newton-county-ga",
       "forest-park-ga",
       "loudon-county-tn",
+      "frederick-county-md",
       "hazle-township-pa",
       "butler-township-pa",
       "little-britain-township-pa",
@@ -348,16 +361,20 @@
       "west-whiteland-township-pa",
       "dickinson-county-ia",
       "peosta-ia",
+      "phillips-county-co",
+      "versailles-ky",
+      "georgetown-ky",
+      "shelby-county-ky",
       "webster-county-mo",
       "spokane-county-wa",
+      "pawhuska-ok",
       "el-dorado-ks",
       "brunswick-me",
       "scarborough-me",
       "westbrook-me",
       "milford-ut",
       "barnes-county-nd",
-      "aberdeen-sd",
-      "arcata-ca"
+      "aberdeen-sd"
     ],
     "90": [
       "bloomington-il",
@@ -391,7 +408,6 @@
       "green-charter-township-mi",
       "northville-mi",
       "saginaw-mi",
-      "lexington-fayette-county-ky",
       "johnson-county-ia",
       "madison-wi",
       "normal-il",
@@ -476,8 +492,7 @@
       "cherry-county-ne",
       "new-orleans-la",
       "barnes-county-nd",
-      "aberdeen-sd",
-      "arcata-ca"
+      "aberdeen-sd"
     ]
   }
 }

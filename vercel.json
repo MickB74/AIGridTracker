@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/week-in-review-2026-11-01",
+      "destination": "/blog/week-in-review-2026-11-01",
+      "permanent": true
+    },
+    {
       "source": "/salix-iowa-google-mou-no-moratorium-2026",
       "destination": "/blog/salix-iowa-google-mou-no-moratorium-2026",
       "permanent": true
@@ -644,16 +649,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/amherst-oh",
-      "destination": "/states/ohio",
-      "permanent": true
-    },
-    {
-      "source": "/communities/amherst-oh.html",
-      "destination": "/states/ohio",
-      "permanent": true
-    },
-    {
       "source": "/communities/archbald-pa",
       "destination": "/states/pennsylvania",
       "permanent": true
@@ -701,16 +696,6 @@
     {
       "source": "/communities/brownhelm-township-oh.html",
       "destination": "/states/ohio",
-      "permanent": true
-    },
-    {
-      "source": "/communities/castro-county-tx",
-      "destination": "/states/texas",
-      "permanent": true
-    },
-    {
-      "source": "/communities/castro-county-tx.html",
-      "destination": "/states/texas",
       "permanent": true
     },
     {
