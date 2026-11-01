@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 13017,
+  "count": 13028,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -124867,7 +124867,7 @@
       "locality": "Loudoun County",
       "state": "VA",
       "first_seen": "2026-10-21",
-      "last_seen": "2026-10-30"
+      "last_seen": "2026-11-01"
     },
     {
       "title": "Amazon agrees to withdraw data center construction plans on GW’s Virginia campus following backlash",
@@ -137891,7 +137891,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-29",
-      "last_seen": "2026-10-30"
+      "last_seen": "2026-11-01"
     },
     {
       "title": "Data Center Talks to be held for Texas County Residents",
@@ -138826,7 +138826,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-29",
-      "last_seen": "2026-10-30"
+      "last_seen": "2026-11-01"
     },
     {
       "title": "Residents Played a Data Center's Mechanical Drone in Court - and Officials Couldn't Stand It",
@@ -140553,7 +140553,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-10-30",
-      "last_seen": "2026-10-31"
+      "last_seen": "2026-11-01"
     },
     {
       "title": "Sabey DC to pilot HVO fuel as diesel replacement at its data center in Austin, Texas",
@@ -143193,6 +143193,127 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01"
+    },
+    {
+      "title": "Mississippi man says noise from data centre plant is 'torture.' But he won't sell his home to Musk's SpaceXSI",
+      "outlet": "CBC",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOZXByQjN0Zk95bllKdXhKdE1LUzFUczVMTmhHb0lzNmxxVlRkTTJhWnBEcXh5Y1NjOGM3RWlWRUxjTmg5SmVZeGtqdEFfNUM5Nk96LThrNVduTWhxcnhnS2hIM3VFaXZNQnVJWTlDdXp5aG5nM0YtQXUzb2t5ZzFiUw?oc=5",
+      "published": "Fri, 30 Oct 2026 23:58:46 GMT",
+      "published_iso": "2026-10-30T23:58:46+00:00",
+      "locality": null,
+      "state": "MS",
+      "first_seen": "2026-10-30",
+      "last_seen": "2026-11-01"
+    },
+    {
+      "title": "Fact check: John James’ link to data center tax breaks, donations",
+      "outlet": "Bridge Michigan",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNbld1OGI4NzdCR0ZIQ0JiV1RpSWtyUHBCako1akNoVFdKWnVEbWJlWlRkYWdDdm55SjlONXVNRUdhN1FzZk5lellZTFRUamp6OXl3WDdTZzVoYU1TUVFwcTUzTWRUWTRoQlVsVFl3aGNRRVNnTnQ1dVN0N3JiLUJOeTJEejQ2VUFHcUNNY3BIQUp1V3Bfdk80azRpeC03a1l2UHJHaQ?oc=5",
+      "published": "Wed, 28 Oct 2026 21:16:55 GMT",
+      "published_iso": "2026-10-28T21:16:55+00:00",
+      "locality": null,
+      "state": "MI",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-11-01"
+    },
+    {
+      "title": "NY Gov. Hochul once resisted a data center pause. Now it’s central to her campaign.",
+      "outlet": "Gothamist",
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE0yWG5WYVFSbHE4ai1Nc3Q0cE9XX0hlalA5dVRxcVBVRlgyd3ZSbkdQc0paUG91MnB6UGc3Y2NOSldXR0tJbWthV2pSWmdwMS1i?oc=5",
+      "published": "Tue, 27 Oct 2026 10:01:27 GMT",
+      "published_iso": "2026-10-27T10:01:27+00:00",
+      "locality": null,
+      "state": "NY",
+      "first_seen": "2026-10-27",
+      "last_seen": "2026-11-01"
+    },
+    {
+      "title": "Veteran electrician who raised six kids says AI boom opens path to six-figure jobs",
+      "outlet": "AOL.com",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPZmgyZGhwa3FJMHNtdjloamxVZWw1dzVvOHdNeU1SeTh6YTQyZXBNdlppRl9CVnRWcjRnMTl4U3VpTDBMVG01M3o2eUVGU1ZXR3IwNE9faHdSZlRURWhGVVBsR2xkUFRQdnIwVWozalYwekw2Rkp4LUFpcURrQU9kNA?oc=5",
+      "published": "Sun, 01 Nov 2026 14:23:45 GMT",
+      "published_iso": "2026-11-01T14:23:45+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01"
+    },
+    {
+      "title": "Report: 11 Data Centers Near Virginia School",
+      "outlet": "Newsmax",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQzFuOEI0TWlRX2pBdWY3bEN6QlBUem5lQmNfSG1SdzFVOHh6TmNtU1FaS1RzZ09ra2tCYzMwMWt6Z0NnMTFXRHRJbmk1Vmp6V05DRUlsQ0hXNG85cV81ZWtpWmVNS2NYa29aVktVVHZuSmFCTFdrYTZoRmFMMUZ1THVfY2JFaTc2NjZ6ZU5uWnJoZ1Vf?oc=5",
+      "published": "Sun, 01 Nov 2026 16:49:39 GMT",
+      "published_iso": "2026-11-01T16:49:39+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01"
+    },
+    {
+      "title": "Thieves steal $23M in data center cargo bound for Georgia and Texas after ramming escort cars",
+      "outlet": "Yahoo",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPcjJoVmZ1eTF5U3dhRk5FSlM2NEtoaHpzTkhhVkNPNzM5WTJQOWtfcUdlN1Y1SXV5clJCYlN3bVAtUFRleHhPZk42Ql9nbTFQbHdOUk5NdG9EVUpTSHdub2VXb1FldTdDUzc1anQ4VG1lZEtlS2VaMTdKQkswRi14bUYzM0FWcHhCUWR3?oc=5",
+      "published": "Fri, 30 Oct 2026 15:01:00 GMT",
+      "published_iso": "2026-10-30T15:01:00+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-10-30",
+      "last_seen": "2026-11-01"
+    },
+    {
+      "title": "Power bills and data centers cast rare spotlight on utilities in US midterms",
+      "outlet": "Reuters",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQdDZvZzZVcVBUX1dLclJCcVpTNkdSbnZsaWVDT3ZPTXM4ZG50RkY1XzdfWDR0WVk0elUzNWVlSHJSdDFlbkVTZE8tVW5mQWRuaTl3b3I4SjBDRmVuMVozMXNSMEdCZU9MV0c4RHR6T3NiTk5NRVFkenFId3hvc2JsUkpZUVVUYmJJYkp2cmprY2J5b1JSRnR3Zk1KUVNtR3I1b2oybW9nUVRKS282dU02UnVGVURTdjM5SVE?oc=5",
+      "published": "Sat, 31 Oct 2026 10:56:10 GMT",
+      "published_iso": "2026-10-31T10:56:10+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-10-31",
+      "last_seen": "2026-11-01"
+    },
+    {
+      "title": "Guest Column: Yes, Georgia's PSC needs a backbone, but it needs expertise too",
+      "outlet": "The Atlanta Journal-Constitution",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQLU1NSTY4MThmcjRmRWR4aUM5X0xJNXRKYjI0VlgzejVIcktXeVVwRzdSbld1V2VyUDdNWnVKZnhGbEt2MFlKcWZWYmgyeURidUZRUzNPaWs0ZEdwOWtxNENXS3c5aElpR1NIZ1l1dUc3dVlVbkZwQTR4MDNNZDFnaWpjNFFkVjBPT2pvcmFuUWpVT0V4b093?oc=5",
+      "published": "Sun, 01 Nov 2026 17:22:30 GMT",
+      "published_iso": "2026-11-01T17:22:30+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01"
+    },
+    {
+      "title": "Power bills and data centers cast rare spotlight on utilities in US midterms",
+      "outlet": "The Express Tribune",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUWNmSm4tRlVRaVRaRmdBYlFveHc4VU54TXU1OUNYUl9sNHdJU0gzYVFCSm9rclZSNjNIeDRPWDFUZkJfQV9KWVFBaE02SjRGMFpJS0dpQ1lJOGdTeGYtLWZZWmhnbHRQVkd6WHJVWGpwNUotbGp5cnBiZWh6TlVxeTJWLUc4RWcwTmZ6TktJSVFfRC0tQTJZSDJaQkVLc1NYQ0p5SjQxbW44NHZBbVNQVVk4R3lUbDdEVDBB0gG7AUFVX3lxTE5RY2ZKbi1GVVFpVFpGZ0FiUW94dzhVTnhNdTU5Q1hSX2w0d0lTSDNhUUJKb2tyVlI2M0h4NE9YMVRmQl9BX0pZUUFoTTZKNEYwWklLR2lDWUk4Z1N4Zi0tZllaaGdsdFBWR3pYclVYanA1Si1sanlycGJlaHpOVXF5MlYtRzhFZzBOZnpOS0lJUV9ELS1BMllIMlpCRUtzU1hDSnlKNDFtbjg0dkFtU1BVWThHeVRsN0RUMEE?oc=5",
+      "published": "Sat, 31 Oct 2026 14:19:55 GMT",
+      "published_iso": "2026-10-31T14:19:55+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-10-31",
+      "last_seen": "2026-11-01"
+    },
+    {
+      "title": "Candidates Backing Data Center Pauses Could Win in Up to 15 Governor’s Races",
+      "outlet": "The Information",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNb2VfZURBeHJuaUU5UV8wbW1mUG5KYUliQVdRWlFkVHIwMWxueV9SbFBoTWc4YWYzcEFYNnh6Q1pUSUw1WmlxUVNLOEZUdjk4YTQ1TUt6VHpfQnoxRDZaYXN0ZjBwWXRtOTNqT1g0QTFIMGlzNVV1SmJ3VERBRU0zNHlQNXZTUzZRTm1Dd2ZLRldvb1ctUl9EM0VJd3lCdEJBTVE?oc=5",
+      "published": "Sun, 01 Nov 2026 16:00:00 GMT",
+      "published_iso": "2026-11-01T16:00:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01"
+    },
+    {
+      "title": "Nuclear power projects flock to Texas, with billions in federal subsidies",
+      "outlet": "Houston Chronicle",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNSjNmN0pMaFFYcTQ0ZGw5Rm5ISkJaSVhpT2dmTmltb2poUkhjU1dwNkxsUXZEbHNHYllIT3JZVXJ1VGpyQWFyX1FiNUZZZUltMFVxWjFYbWlLTDMzei1xSERubGlHNWZCZTBlOXdrTmRia1BqZU9xSU95UVJ5NjBEeENUd241a2owc1NOVnNMcjBHTzFnbUNUYXhmb1VMYnVfTmtPWmdR?oc=5",
+      "published": "Thu, 29 Oct 2026 09:10:23 GMT",
+      "published_iso": "2026-10-29T09:10:23+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-10-29",
       "last_seen": "2026-11-01"
     }
   ]
