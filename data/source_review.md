@@ -1,8 +1,12 @@
 # SOURCES review queue
-_Generated 2026-10-26 · 175 keys_
+_Generated 2026-11-02 · 175 keys_
 
-## dead (1)
+## dead (5)
 - **`ga_house_2024`** — URLError: <urlopen error timed out> · <https://www.house.ga.gov/>
+- **`nuisance_law`** — RemoteDisconnected: Remote end closed connection without response · <https://windhamlaw.com/what-damages-can-you-recover-in-a-data-center-nuisance-lawsuit/>
+- **`tx_sb6`** — URLError: <urlopen error [Errno 111] Connection refused> · <https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=SB6>
+- **`tx_sb6_2025`** — URLError: <urlopen error [Errno 111] Connection refused> · <https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=SB6>
+- **`tx_sb6_ll`** — URLError: <urlopen error [Errno 111] Connection refused> · <https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=SB6>
 
 ## orphan (14)
 - **`ashburn_buyout`** — defined but never referenced — delete it or wire it up · <https://www.nbcwashington.com/news/local/northern-virginia/data-center-expansion-loudoun-county-homeowners-buyout-offers/>
