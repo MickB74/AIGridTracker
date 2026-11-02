@@ -1,176 +1,81 @@
-# Weekly data-freshness digest — 2026-09-28
+# Weekly data-freshness digest — 2026-11-02
 
-**161 items need a human look this week: 0 hearings scheduled in the next 30 days, 42 expired + 43 expiring-soon + 76 unclassified-term moratorium rows, 2 stale registries, and a review-queue backlog of 1,765 new moratorium candidates / 83 new project candidates.**
+**33 moratoriums expire within 30 days, 46 are already past their end date, 20 projects have been awaiting a decision for 39–448 days, and 2,369 moratorium leads + 173 project leads are sitting unreviewed.** No stale `as_of` or missing-source rows this week — the tracker's citation discipline is holding.
 
 ## Upcoming hearings (next 30 days)
 
-`PROJECTS_DF` / `project_status()`: **no project has a scheduled hearing in the next 30 days** (or even the next `PROJECT_HEARING_SOON_DAYS` = 45).
-
-20 projects are instead in **"Awaiting decision"** — hearing already held, no decision recorded yet, so a ruling could land without further public notice. The most recent, most time-critical:
-
-| Project | Locality | Hearing held | Days since |
-|---|---|---|---|
-| Plaza 500 (Lincolnia) | Lincolnia (Fairfax County), VA | 2026-09-24 | 4d |
-| Dickerson Data Center Campus (Atmosphere) | Dickerson (Montgomery County), MD | 2026-09-10 | 18d |
-| Prime Data Centers — Starpointe Business Park | Hanover Township (Washington County), PA | 2026-08-31 | 28d |
-| Site Layer 4 Data Center Campus | Wheatland (Platte County), WY | 2026-08-26 | 33d |
-| La Osa | Pinal County (near Eloy), AZ | 2026-08-26 | 33d |
-| Aligned Data Centers — Pataskala industrial park | Pataskala (Licking County), OH | 2026-08-25 | 34d |
-| Project Flex | Lyon Township (Oakland County), MI | 2026-08-24 | 35d |
-| BCG Cedar Creek Campus | Cedar Creek (Bastrop County), TX | 2026-08-24 | 35d |
-| Kearney Data Center | Kearney, NE | 2026-08-21 | 38d |
-| Burkhalter Road data center (4AM Development) | Statesboro (Bulloch County), GA | 2026-08-18 | 41d |
-
-(10 more awaiting decision, oldest hearing 2025-08-11 — Wolcott Data Center, White County IN. Full list on request.)
+- **No scheduled public hearings** on `PROJECTS_DF` fall in the next 30 days (phase `hearing`, `days_to_hearing` 0–30 → 0 rows).
+- **20 projects are stuck in "Awaiting decision"** — hearing already happened, no `decided_date`/`outcome` recorded. These need a status check this week, oldest first:
+  - White County, IN — Wolcott Data Center — heard 2025-08-11 (**448d** ago)
+  - Lansing (Tompkins Co.), NY — TeraWulf Cayuga — heard 2026-04-27 (189d ago)
+  - Cave City, KY — Cave City data center — heard 2026-07-20 (105d ago)
+  - Rural Hall, NC — Project Iron Spur — heard 2026-07-30 (95d ago)
+  - Alabama, NY (Genesee Co.) — Project Double Reed — heard 2026-08-03 (91d ago)
+  - Posey County, IN — Boberg/Hoenert Roads — heard 2026-08-04 (90d ago)
+  - North Beaver & Mahoning twps, PA — Powder Mill Works — heard 2026-08-05 (89d ago)
+  - Smithfield Township, PA — Smithfield Gateway — heard 2026-08-12 (82d ago)
+  - Plymouth Township, PA — 900 Conshohocken Rd — heard 2026-08-17 (77d ago)
+  - Pahrump, NV — Manse Technology Campus — heard 2026-08-18 (76d ago)
+  - Statesboro, GA — Burkhalter Road — heard 2026-08-18 (76d ago)
+  - Kearney, NE — Kearney Data Center — heard 2026-08-21 (73d ago)
+  - Lyon Township, MI — Project Flex — heard 2026-08-24 (70d ago)
+  - Cedar Creek, TX — BCG Cedar Creek Campus — heard 2026-08-24 (70d ago)
+  - Pataskala, OH — Aligned DC industrial park — heard 2026-08-25 (69d ago)
+  - Pinal County, AZ — La Osa — heard 2026-08-26 (68d ago)
+  - Wheatland, WY — Site Layer 4 Campus — heard 2026-08-26 (68d ago)
+  - Hanover Township, PA — Prime DC / Starpointe — heard 2026-08-31 (63d ago)
+  - Dickerson, MD — Atmosphere Data Center Campus — heard 2026-09-10 (53d ago)
+  - Lincolnia (Fairfax Co.), VA — Plaza 500 — heard 2026-09-24 (39d ago)
 
 ## Stale registries
 
-`registry_provenance()` over `REGISTRY_PROVENANCE`: **2 of 13** registries flagged (no `as_of` recorded — treated as stale regardless of churn tier):
+`REGISTRY_PROVENANCE` flags **2 of 14** tracked registries — both for a missing `as_of`, not a churn-shelf-life expiry:
 
-| Registry | as_of | churn | Note |
-|---|---|---|---|
-| `DC_SITES_DF` | None | medium | No verification date recorded — shelf life is 18mo once dated |
-| `STATE_PUCS_DF` | None | low | No verification date recorded — shelf life is 36mo once dated |
-
-Action: set a real `as_of` (or confirm these were never populated) rather than leaving them silently uncaptioned.
-
-## Moratorium audit (`verify_moratoriums.py --offline`)
-
-858/858 tracker rows carry a `source`; 44/44 quotable claims (case studies, benchmarks, concessions) carry a citation + `as_of`. **Missing-source: 0. Stale `as_of` (>180d): 0.** Link-checking was skipped (`--offline`), so nothing below has been confirmed to still resolve.
-
-| Check | Count |
-|---|---|
-| expired | 42 |
-| expiring (≤60d) | 43 |
-| unclassified-term (`term_kind=unknown`) | 76 |
-| undated-term (`fixed_undated`, no end date) | 43 |
-
-### Expired — term end date has passed, `effective_status` needs confirming (42)
-
-Oldest first (dates are the recorded term end, not a hearing):
-
-| Locality | State | Term ended |
+| Registry | as_of | churn |
 |---|---|---|
-| Groton | CT | 2023-06-21 |
-| Madison County | NC | 2024-06-13 |
-| Fluvanna County | VA | 2026-01-31 |
-| Mason | MI | 2026-02-03 |
-| Montebello | CA | 2026-03-28 |
-| Aurora | IL | 2026-03-24 |
-| Montour County | PA | 2026-04-30 |
-| Howell Township | MI | 2026-05-20 |
-| Pittsfield Township | MI | 2026-05-17 |
-| Lenox Township | MI | 2026-06-02 |
-| Tyrone Township | MI | 2026-06-01 |
-| Jerome Township | OH | 2026-06-01 |
-| Waterville | OH | 2026-06-08 |
-| Brevard | NC | 2026-06-23 |
-| Caledonia Township | MI | 2026-07-01 |
-| Griffin | GA | 2026-07-12 |
-| Armada Township | MI | 2026-07-13 |
-| Saginaw | MI | 2026-07-13 |
-| Covington | GA | 2026-07-19 |
-| Pontiac | MI | 2026-07-21 |
-| Sylvan Township | MI | 2026-07-22 |
-| Massillon | OH | 2026-08-14 |
-| Leavenworth County | KS | 2026-08-11 |
-| Saugatuck Township | MI | 2026-08-11 |
-| Kingsland | GA | 2026-08-09 |
-| Lodi Township | MI | 2026-08-02 |
-| Hayes Township | MI | 2026-08-09 |
-| York Township | MI | 2026-08-12 |
-| Hall County | GA | 2026-08-25 |
-| Wixom | MI | 2026-08-26 |
-| Floyd County | GA | 2026-08-28 |
-| Mount Orab | OH | 2026-08-30 |
-| Lyon Charter Township | MI | 2026-08-30 |
-| Hogansville | GA | 2026-09-01 |
-| Birmingham | AL | 2026-09-03 |
-| Rockdale County | GA | 2026-09-08 |
-| Wichita | KS | 2026-09-10 |
-| Scott County | KY | 2026-09-13 |
-| Augusta / Augusta-Richmond County | GA | 2026-09-19 |
-| Roswell | GA | 2026-09-20 |
-| Waterford Township | MI | 2026-09-23 |
+| `DC_SITES_DF` | None | medium |
+| `STATE_PUCS_DF` | None | low |
 
-Each needs its source re-read to set `effective_status` (lapsed / extended / rescinded / became permanent zoning) — the audit doesn't guess.
+No `as_of` ever recorded on either → both render as stale by default. Needs someone to set a real verification date (never fabricate one).
 
-### Expiring soon — within 60 days (43)
+## Moratorium audit (expiring / expired / missing-source)
 
-Nearest-first:
+`scripts/verify_moratoriums.py --offline`: 887/887 tracker rows sourced, 44/44 quotable case-study/benchmark/concession claims cited. **0 missing-source, 0 stale-as-of (>180d)** — clean on both this week.
 
-| Locality | State | Ends | Days left |
-|---|---|---|---|
-| Front Royal | VA | 2026-10-04 | 6 |
-| Newton County | GA | 2026-10-05 | 7 |
-| Tulare County | CA | 2026-10-02 | 4 |
-| Calaveras County | CA | 2026-10-09 | 11 |
-| Pierce Township | OH | 2026-10-09 | 11 |
-| Lake Elsinore | CA | 2026-10-09 | 11 |
-| Morgan Hill | CA | 2026-10-10 | 12 |
-| Tallmadge | OH | 2026-10-10 | 12 |
-| Palm Springs | CA | 2026-10-10 | 12 |
-| Escondido | CA | 2026-10-12 | 14 |
-| Cleveland | OH | 2026-10-16 | 18 |
-| Indio | CA | 2026-10-16 | 18 |
-| Mendocino County | CA | 2026-10-16 | 18 |
-| Eureka | CA | 2026-10-17 | 19 |
-| Plainfield | IL | 2026-10-18 | 20 |
-| White County | IN | 2026-10-20 | 22 |
-| Lowndes County | GA | 2026-10-25 | 27 |
-| Lowndes County | AL | 2026-10-25 | 27 |
-| Putnam County | IN | 2026-11-17 | 50 |
-| Hillsboro | OR | 2026-11-24 | 57 |
-| Hart | MI | 2026-11-26 | 59 |
+**Expired — 46 rows**, oldest first by lapse date (confirm lapsed vs. extended vs. made permanent):
+Groton CT (2023-06-21) · Madison County NC (2024-06-13) · Mason MI (2026-02-03) · Aurora IL (2026-03-24) · Montebello CA (2026-03-28) · Montour County PA (2026-04-30) · Jerome Township OH (2026-06-01) · Lenox Township MI (2026-06-02) · Waterville OH (2026-06-08) · Brevard NC (2026-07-02) · Griffin GA (2026-07-12) · Lodi Township MI (2026-08-02) · Kingsland GA (2026-08-09) · Leavenworth County KS (2026-08-11) · Saugatuck Township MI (2026-08-11) · York Township MI (2026-08-12) · Massillon OH (2026-08-14) · Wixom MI (2026-08-26) · Floyd County GA (2026-08-28) · Lyon Charter Township MI (2026-08-30) · Mount Orab OH (2026-08-30) · Covington GA (2026-08-31) · Hogansville GA (2026-09-01) · Birmingham AL (2026-09-03) · Wichita KS (2026-09-10) · Augusta GA (2026-09-15) · Roswell GA (2026-09-20) · Waterford Township MI (2026-10-01) · Rockdale County GA (2026-10-09) · Calaveras County CA (2026-10-09) · Morgan Hill CA (2026-10-10) · Escondido CA (2026-10-12) · Indio CA (2026-10-16) · Cleveland OH (2026-10-16) · Vienna Township OH (2026-10-16) · Eureka CA (2026-10-17) · Caledonia Township MI (2026-10-17) · Plainfield IL (2026-10-18) · White County IN (2026-10-20) · Lowndes County AL (2026-10-25) · Lowndes County GA (2026-10-25) · Gilroy CA (2026-10-29) · Richmond CA (2026-10-30) · Arcata CA (2026-10-31) · Lexington (Fayette Co.) KY (2026-10-31) · West Whiteland Township PA (2026-11-01)
 
-(+ 22 more between 34–59 days out, including several PA townships on 180-day curative-amendment clocks — Upper Burrell, Butler Township, Smithfield Township, West Whiteland — and GA/KS/IA counties in the 39–52 day range. Full list on request.)
+**Expiring within 30 days — 33 rows** (need a "did it lapse or extend" check before they go stale):
+Smithfield Township PA & Upper Burrell Township PA — today (0d) · Charlotte NC & Lavon TX — 11/05 (3d) · Camden County GA & Lysander NY — 11/06 (4d) · Butler Township PA & Johnson County IA — 11/08 (6d) · Dickinson County IA & Riley County KS — 11/12 (10d) · Putnam County IN & Springfield MO — 11/17 (15d) · Aberdeen SD — 11/18 (16d) · Barnes County ND & Meridian Township MI — 11/19 (17d) · Minneapolis MN — 11/21 (19d) · Iron County UT — 11/22 (20d) · Marshalltown IA & Washington Township MI — 11/23 (21d) · Hillsboro OR — 11/24 (22d) · Bloomington IL & Hart MI — 11/26 (24d) · Westbrook ME — 11/28 (26d) · Brunswick ME, Forest Park GA, Gorham ME — 11/29 (27d) · El Dorado KS, Normal IL, Scarborough ME — 11/30 (28d) · Nashville TN, Skagit County WA — 12/01 (29d) · Boulder County CO, Braceville Township OH — 12/02 (30d)
 
-These are exactly the rows most likely to get quietly extended without the tracker noticing — worth a status check before they flip to "expired" next week.
+- **Expiring 31–60 days: 52 more rows** (lower urgency, full list in the worklist file below).
+- **Undated/unclassified term rows (154 total: 74 undated-term + 78 unclassified-term, 2 overlap categories)**: not expiry-urgent but a standing data-quality backlog — each needs its adoption/end date or a `term` classification read off the source.
+- Full detail (all 301 findings) saved to `/tmp/claude-0/-home-user-AIGridTracker/e38ff0c7-a64a-5dfe-8807-4d1a20f4df6a/scratchpad/moratorium_audit.json` this run (not committed — regenerate with `python3 scripts/verify_moratoriums.py --offline --json <path>`).
 
-### Unclassified term (76) and undated fixed term (43)
+## Review-queue backlog (counts + top items to promote this week)
 
-Not immediately time-critical but a data-quality backlog: 76 rows have no `term` declared at all (could be permanent bans or unresearched pauses — the page can't tell the reader which), and 43 more have a recorded fixed-duration note but no end date to compute against. Heavy NJ Pinelands-area concentration in the unclassified set (one shared source, `pinelandsalliance.org/datacenters`, covering ~20+ townships) — worth one research pass rather than one row at a time.
+**Moratorium candidates** (`data/moratorium_candidates.json`, updated 2026-11-01): 2,369 new / 2,669 total (249 promoted, 51 dismissed). Newest unreviewed leads:
+1. Prince William, VA(?) — "residents call for 12-month pause on data center approvals"
+2. Amherst, ? — "begins discussion on data center ban or regulations"
+3. Newark area, ? — "Early Voting + Data Center Ban + Picket Lines"
+4. Essex County, NJ(?) — "Data Center Ban in Belleville..."
+5. San Diego, CA — "City Council passes a temporary moratorium on data centers"
+6. Unlocated — "Readers split over city plan for data center moratorium"
+7. Unlocated — "SK Council moves ahead with restrictions on potential data centers"
+8. Aiken, SC(?) — "Where do Aiken County governing bodies stand on restrictions?"
+9. Unlocated — "Data Center Bans Won't Stop AI..."
+10. Dade City, FL(?) — "Ordinance for Data Center Moratorium Moves Forward"
 
-## Review-queue backlog
+**Project candidates** (`data/project_candidates.json`, updated 2026-10-26): 173 new / 285 total (65 promoted, 47 dismissed). Newest unreviewed leads:
+1. St. Joseph, ? — "City Council to consider rezoning properties, data center ordinances"
+2. Spokane County, WA — "Data Center Zoning Public Meeting"
+3. Luzerne County, PA(?) — "Council set to discuss data center zoning ordinance"
+4. Unlocated — "Public hearing set for data center-related zoning ordinance proposal"
+5. Unlocated — "Planning Commission's hearing on zoning rewrite"
+6. King of Prussia, PA(?) — "developers withdraw applications ... amid lawsuits over zoning dispute"
+7. Lexington-Fayette (LFUCC), KY — "passes 2 ordinances regulating zoning and language surrounding data centers"
+8. Fauquier County, VA — "restricts future data center development with new zoning rules"
+9. Talbot County, MD — "Judge Voids Talbot County Data Center Zoning Rule Over Skipped Hearings"
+10. Lawrence, ? — "City Commission approves extra layers of oversight for data centers"
 
-**Not promoted or dismissed — read-only counts, no triage performed here.**
-
-| Queue | New (awaiting review) | Total |
-|---|---|---|
-| `data/moratorium_candidates.json` | 1,765 | 1,973 (167 promoted, 41 dismissed) |
-| `data/project_candidates.json` | 83 | 195 (65 promoted, 47 dismissed) |
-
-Of the 1,765 new moratorium candidates, only 533 have a `guess_locality` resolved; `triage_moratorium_candidates.py --tier A` separately finds 172 "cited" candidates (link or named document already in hand) ready to promote fastest.
-
-### Top 10 newest moratorium candidates with a resolved locality (of 533)
-
-| First seen | Locality | Title |
-|---|---|---|
-| 2026-09-27 | Tuolumne, CA(?) | Tuolumne County To Seek Public Input On Data Center Ordinance |
-| 2026-09-27 | Mesa, CO(?) | Mesa County to consider data center moratorium |
-| 2026-09-26 | Brighton | Brighton Township latest to adopt data center moratorium |
-| 2026-09-26 | Shaker | 'Needs to be protected': Shaker Village CEO urges public to speak out ahead of data center ordinance vote |
-| 2026-09-26 | Janesville, WI(?) | Janesville City Council to host hearing on proposed data center moratorium |
-| 2026-09-26 | Troy | Troy City Council extends data center moratorium until March 2027 |
-| 2026-09-25 | LA | LA County issues temporary ban on data centers in unincorporated areas |
-| 2026-09-25 | Fort Wayne, IN(?) | Fort Wayne City Council delays decision on data center moratorium |
-| 2026-09-25 | Americus, GA(?) | Americus City Council passes data center moratorium |
-| 2026-09-24 | Columbus | Columbus County Considers a Moratorium on Data Centers |
-
-*Guessed states above are the scanner's own inference (unresolved in the raw records), not confirmed — verify against the locality's own .gov source before promoting, per CLAUDE.md.*
-
-### Top project candidates with a resolved locality (of 34, all first-seen 2026-09-21)
-
-| Locality | Title |
-|---|---|
-| Custer County, MT | MONTANA: Data Center concerns dominate Custer County zoning hearing |
-| Colleton County | Colleton County approves new zoning changes to allow data center |
-| Stokes County | Data Center Debate: Stokes County Commissioners hold public hearing |
-| Effingham County | Effingham County residents sue county over data center zoning ordinance, demand transparency |
-| Luzerne County | Luzerne County zoning plan for data centers under legal review |
-| Spotsylvania | Spotsylvania Planning Commission recommends approval of 555-acre data center campus |
-| Prince William | Prince William Planning Commission recommends ending by-right data centers, downsizing data center district |
-| Scott County | Scott County planning commission tables data center ordinance |
-| Wood County | Wood County enacts ordinance to ensure notice of data center proposals |
-
-Promotion still requires reading each locality's own .gov source for `source` + `as_of` — nothing above has been promoted or dismissed by this run.
+Reminder: promotion requires reading each locality's own ordinance/agenda and adding a sourced row by hand — this digest only ranks the queue, per CLAUDE.md.
