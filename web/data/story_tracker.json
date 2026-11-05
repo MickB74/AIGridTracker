@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 13594,
+  "count": 13660,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -10632,7 +10632,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-08-08",
-      "last_seen": "2026-11-04"
+      "last_seen": "2026-11-05"
     },
     {
       "title": "Form Energy raises $750m to expand West Virginia iron-air battery plant to meet surging data center demand",
@@ -140465,7 +140465,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-10-30",
-      "last_seen": "2026-11-04"
+      "last_seen": "2026-11-05"
     },
     {
       "title": "Virginia lawmakers still divided on how to manage data center growth",
@@ -141092,7 +141092,7 @@
       "locality": "Tazewell County",
       "state": "IL",
       "first_seen": "2026-10-31",
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-05"
     },
     {
       "title": "Data center firm sues Pulaski County 3 days after new regulations passed in Quorum Court",
@@ -143699,7 +143699,7 @@
       "locality": "Massillon",
       "state": "OH",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-04"
+      "last_seen": "2026-11-05"
     },
     {
       "title": "Elon Musk’s SpaceXAI will buy your home near its Mississippi gas turbines — if you never sue over ‘torturous’ noise",
@@ -143754,7 +143754,7 @@
       "locality": "Gallatin",
       "state": "TN",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-04"
+      "last_seen": "2026-11-05"
     },
     {
       "title": "What happened to Marshalltown’s data center ordinance?",
@@ -145074,7 +145074,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-11-03",
-      "last_seen": "2026-11-04"
+      "last_seen": "2026-11-05"
     },
     {
       "title": "Lawsuit claims Botetourt County’s data center agreement with Google is invalid",
@@ -146361,7 +146361,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-11-03",
-      "last_seen": "2026-11-04"
+      "last_seen": "2026-11-05"
     },
     {
       "title": "Pataskala, village of Granville voters deciding on large data center ban",
@@ -146515,7 +146515,7 @@
       "locality": null,
       "state": "VA",
       "first_seen": "2026-11-03",
-      "last_seen": "2026-11-04"
+      "last_seen": "2026-11-05"
     },
     {
       "title": "Bartow County site eyed for new data center development",
@@ -147285,7 +147285,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-11-03",
-      "last_seen": "2026-11-04"
+      "last_seen": "2026-11-05"
     },
     {
       "title": "Georgia Voters Head to the Polls With Healthcare, Iran War, and Data Centers on Their Minds",
@@ -148836,7 +148836,7 @@
       "locality": "Stokes County",
       "state": "NC",
       "first_seen": "2026-11-04",
-      "last_seen": "2026-11-04"
+      "last_seen": "2026-11-05"
     },
     {
       "title": "American Voters Overwhelmingly Reject AI Data Centers",
@@ -149540,6 +149540,732 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Fayetteville tightens rules for data centers as residents continue pushing for moratorium",
+      "outlet": "CBS17.com",
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPM3k3eFlKOWVxV3JwU2RBMWhsa3VTdkprMUVmTHY1N2kxSWJBWHlkaExvTUtmWXNMR1A1dE5XNWV4UHhQUWpkWFFaTHZwUUQ3ZmpKeWJicXczN0ZsWXBlQVJWc01DWE50ZjhkYTFUMnhtZDRhVXQ4cC00NDRmSnoxTVpudUpyWGw0TjY0dmlGazdRUUJHYk9ISGxkdFdKMmRHWmU5dGxQYkFZdVBRY3dQTkU1emhMZmktZEtFWFNvVTd4VXhUaDY5T1MxUHh6b1c0QXVOZmU3a2kzLUZndXN6c1pSQUtsd9IB6wFBVV95cUxPclJ6eVV6R0lremYxMlppdlhoLXFzOU0xQkNnZGdnZF9WNnlBMmo3ZkJGMFJlMXNmVnNIMUIwVzhVem9ocjc5TUF2SWJ6Z2hXdHZta3BVQ3ZubXBrSXpEdEtLNHpaTkVDVnNkSWxjX05oUl9UYkpiam00VFA1R0Z0SUpJbXZHMEdaTnQta3BuMjg3dWVMcWxUX05uSDRWeFY0c1hnVkFrdmNGdGNZdjBZeTBiWkdtc1lFWFRzV1VBaTgyRUMzUzJSUUt3SDIxemItdUVCb2ZIYmFxbldXMGxSSVFQUVpiVC1lZk5F?oc=5",
+      "published": "Thu, 05 Nov 2026 01:37:16 GMT",
+      "published_iso": "2026-11-05T01:37:16+00:00",
+      "locality": "Fayetteville",
+      "state": "NC",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Across Southwest Ohio, voters pushed back against data centers — and politicians who support them",
+      "outlet": "WYSO Public Radio",
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQYnJvUkNGODdHakhHeFJJMncyTW81RFBEZ09XWUpOVlpOSDVFUi1qb3hzU3VTLURNM0Q4N19Od3NSYUNSMHYxRlJUVE0tRUp4Tk5vclIxdGRLaGd6TmN1UXAyVi0wc19Wb1lYS01MMVU1QUVIY2xfeUZmWlQ2bU54aVBTY0NvQ3pDS1FCUHhkaGtZNHE4ZzJyczZtRzZkZDNTaWIwUlBqN0NTOGpENDZtejV5YkJiTXlvamdrSGQyMGZ5eVByc0RVb1dBbHJ0YnNPWEFadWszeXhHOFJQam5qSlUtdzJkZw?oc=5",
+      "published": "Thu, 05 Nov 2026 03:38:00 GMT",
+      "published_iso": "2026-11-05T03:38:00+00:00",
+      "locality": null,
+      "state": "OH",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Fayetteville hasn't paused data centers yet. Here's what could happen",
+      "outlet": "The Fayetteville Observer",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNMDRHTHlkVms1RWhaNXlZM0V1bW10NGlkZDNreHItNVl1Z2w1QXhhMEsyc1pRUGt2a29wMDJkb09VT2RhV1VjNGJGQWVOMmg3S21oZzRtT0x1R1hwbnloZVhzOTZXUTdITWQ2Mlp4VW5EcUF4dG9GQS1fRnNQN0h3dkVLSmtNdVJ6R0NZTUU2RlBoZHlHOUl0MXdyNzBYQlNvTHVrSkVrV0RaN1FzQnh5cXRNTUw?oc=5",
+      "published": "Thu, 05 Nov 2026 10:02:00 GMT",
+      "published_iso": "2026-11-05T10:02:00+00:00",
+      "locality": "Fayetteville",
+      "state": "NC",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Jackson Commissioners hear data center concerns, select school architect",
+      "outlet": "Highlandsnews.com",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSGoxNHRWY2l6S0dhQmVhSEI1WDhQTUZ0Y05nS01ERjlNd2tia0hCRURJTURDc1h1ZFQzSUZ2NzFSeC1xUGxvQzNydXhueFFDZkwyaFU0VlBsYmFPLVA3VHM0Uy1zWlVodmxGTF91QkNWTVE5cGpRa0lRUmtNdTgxdUR1Y0lPWFZpUFhZbk9XMVctdXBZT2l0LXQ0UXM5M0RkYmhlTjNmYkZKX081TV80?oc=5",
+      "published": "Thu, 05 Nov 2026 11:22:51 GMT",
+      "published_iso": "2026-11-05T11:22:51+00:00",
+      "locality": "Jackson",
+      "state": "MS",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "OpenAI to Change How It Handles Data Center Efforts After Outcry",
+      "outlet": "Bloomberg.com",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNaEowNWhNQkUxQWk5Z2xWQ0NNc3hkTV92SzBjV1hGMmw3NEQ4QXlSTTRQRl9wZlNWWGtEZzVpN3Y2MXZPdVpLZTdBZUJnR0NxMXRpV2ROaElJRF9pYzlLXy1Sclp6Nmk0UU5QQ2JZSEw5VDVuNWNmSWFwZGp6UWwtWklwR1lIZDlQVERuMlZQVlk4ZEJURmlDd3RUaW9fdjhwY212UW9MZl9VRmtmRXJqdUcyS2RnUQ?oc=5",
+      "published": "Thu, 05 Nov 2026 10:00:00 GMT",
+      "published_iso": "2026-11-05T10:00:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Data center pauses are spreading in Connecticut. A statewide moratorium could be next",
+      "outlet": "Stamford Advocate",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWnBReGVZdFpkQ3UwbmtCOWJPNGlYc0lYbWxXQlpNN1F0ZFdTcVRDTFB6WGtqMTJuSjdBUUtLZFN6YWJGOG8xdUpFakhDYnFWRmJmWE9SdjgxYlVmTlJUQk14Ql8xS0RjMDA2X2pzRURkVmRNaUJIbGg0QUpkOWFLeThDSFRWcHNNVW1EOFJzSjJwbW9ZTnp0WExIaTA4QQ?oc=5",
+      "published": "Thu, 05 Nov 2026 09:01:52 GMT",
+      "published_iso": "2026-11-05T09:01:52+00:00",
+      "locality": null,
+      "state": "CT",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Data Center Drama: Data Centers have been eyeing Mountain Ho...",
+      "outlet": "mountainhomenews",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPdzFHeVo5cEhiMk13RWRMMjNVRDd5RWdIQlpFeUNmS0ZsTWt3TzhVaWk0d1ZfUGQ0OXF5RHpieWVnYXRsTjB1MFp5bFN3aUlKTmttMDZpUWNXY3BaZGNfRmRNMGRTRE1EUHp3aHFrQ1JCRWUxN1lLOS1TaHZKRFJ6NmZ2YXc2a2dWc2RCSHpqOFRVZzhUdzItSDRubEJuRzg3MDNvREktMzU2WVJFYUlILVBpMHREN2VfTW1saGk1RzAwcVJPelJIdTRJd2dtTW8xY0o5UU5acERZN091LTdaY3ptZ0NrZEwzRUE?oc=5",
+      "published": "Wed, 04 Nov 2026 22:30:57 GMT",
+      "published_iso": "2026-11-04T22:30:57+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "West Richland crowd presses for data center pause during tense council meeting",
+      "outlet": "Nonstop Local News",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPNVBZWG1adUc2dnYtRzJGb2hJaklKX1Fzb2pqcnliUFdaS0ZSZXBrZUstdjJpZHBUVXNLNjJZVWJNckcyZ1REQ1Y0MWZrYmRZdGtIMFBGTFN6U0FVQko4MDl0OGdUZC03RzZ4dzZqVHpQM2JPMzEtT3dSM3lEWVRoaFJBckxPa1Npek5ReFB2MkZWUGhnM0lUTmNUTjl0Rzhvb19PR3M2RXRlWXVVRWNTUkhrMHY4ZGo4T0swTXJST0tLN1RLNlFqTzZBVU9WRWdtY3pYZV9NSGpHQXV0R18yMG1KV3FNZUlVcXM2M1o1c1E2SUU?oc=5",
+      "published": "Wed, 04 Nov 2026 07:28:00 GMT",
+      "published_iso": "2026-11-04T07:28:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "West Richland City Council rejects data center moratorium",
+      "outlet": "TriYakNews.com",
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZm5hcGZCV2lDNUZiSTBZOVhCSlppWnd1MGZrOVEtVnkzbFhlRDRNLUtGZ1ZNVUZFX1k0ZG9KSEdfUFlZMzhyNVd0WnQ4LU95eDlLUFBNNWFKQl9sZWFhRURnamxqUFR5YUFQZmpNN2Y0eUZISmF6czJ4TEhZZTVIc0FhTXJha2hZbmlpOG1NTFFEa29LMzVlTi1wbk9RQ2Rjdm9WUTJrNkQ2LW9fRTYxVDRUQVdTanM3clJraXBOWTNzNXU2alAtNkxsdDczNFNqR3dCTVdibGQwdHM?oc=5",
+      "published": "Wed, 04 Nov 2026 23:22:00 GMT",
+      "published_iso": "2026-11-04T23:22:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Shawnee County residents fight to stop data center growth",
+      "outlet": "The Topeka Capital-Journal",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQdm1mY3pocFJ2bE1PTWJWa1R6WjlEbUtYVG9ZV1ZCRkZQZ0k2VjE1NGN4cEVEeWgwWXpJeHotdExyczJpYk50M3ltSG1hNXVLaEdIM1hHOEh0Ulh3VmJST3JLWkM4a0tTZzZqd0ZLRXV3b0VodkE0V09OX1dmZ3NiRFJHTU45U24tTnBUTGpWeEpXZGdBa0tpRlUzSFhpYkpIY0ozcVpTN1d0OUdMandmTXRfNHJqSlZ3Xzg5QW5B?oc=5",
+      "published": "Thu, 05 Nov 2026 10:13:00 GMT",
+      "published_iso": "2026-11-05T10:13:00+00:00",
+      "locality": "Shawnee County",
+      "state": "KS",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "3 Kansas communities approve data center bans in midterm election",
+      "outlet": "KWCH",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOQ0dKdUI0NVhvWW1TYk8xYzhzd3luVXhVQ3pBUXdmOVJ5NnppUnRneldVRFNZVXBNQzhPQVpxdTM3MTJEbHhkVEZ2bEF0UjBWOUpMS0RfcVZuLU5LX1NxRFhRR3JyeTg0VEpyT1Nxd3hyaFlHVlY4Tnh1cF9lOUh5UktxME1mOFZiSUd2SUF3S1VZRDFteG51Y1NROA?oc=5",
+      "published": "Tue, 03 Nov 2026 03:55:00 GMT",
+      "published_iso": "2026-11-03T03:55:00+00:00",
+      "locality": null,
+      "state": "KS",
+      "first_seen": "2026-11-03",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "What a new Texas Governor could mean for data centers",
+      "outlet": "NBC 5 Dallas-Fort Worth",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQmVXVG9fdENoODZ0LXI5cERoZGxZbW9GblNYSW51QjJxTTI2ZDlELWJLdDBjb0tfSGdXTmRhX0dGdVlfWlhBME4zWktNM2JsZ1ZST3drb1l6dWpieFNXLVk0RmtESlFsNEN1Y3g3N01pU002Zk9KMzlVS1hmY3EyUVQ1TzJ2QlYwSXJYUVFiVVVSMnowLVVBbHdyRWdtSV9neUHSAaoBQVVfeXFMTmtoTGpjc3Y3d2NBY3dVeTJkOWFfTVU2VWY1c3c3TjRwTzlSRkNQdnUyR3d3eW8wVXFWdUZGeHFRQzJCLUJUTDUycXRCcEtEdzJDZWFkZkdzZWdpeFAwZU9XQTIzMDlXdHlCMTlhb2YyeTVoLUNpUDFVb3d2LWxCYWpoNDQ3cVR4X0VyMG16OHBvZ1UwNDdKcmJLSFItQnRuMDRjbFZTRk1YWHc?oc=5",
+      "published": "Thu, 05 Nov 2026 03:50:00 GMT",
+      "published_iso": "2026-11-05T03:50:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Datacenters were on the ballot. US voters rejected them",
+      "outlet": "The Guardian",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQMjd1X3FyNVRETUU3RUcxaW9aUC1nMFh3NVBfNWtSVWh5UFgwQVNqZ3p2NHYxTjdrZVd6U0lGWlluMkotYjZMaThsZnBpMU5SZ05kbjZXY3kxLTU5SlFRU0lQN0I2OGFvUExIZDRscEpPX0RZV3A5TVhtNS02d2JWNFozSQ?oc=5",
+      "published": "Thu, 05 Nov 2026 01:30:00 GMT",
+      "published_iso": "2026-11-05T01:30:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Data center pauses are spreading in Connecticut. A statewide moratorium could be next",
+      "outlet": "CT Insider",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQSDdsbXdvbjhjc014VDc4cHVRZHc2dU05TkREaFBsTGlqb0FkeG14ajE4WFlfeGszcWI2RFdsMVZQc2FjTTZRNXo0UDJNUUhPeHNicWo1Nmp1NjlILTl5Wmw0Qi1qMVh3c01YVzQ3Q0ZxQWgzbU5KbVM2bm52dzRLNGN1aDJ3RkFYbGlHWkxobFpyeWl4?oc=5",
+      "published": "Thu, 05 Nov 2026 09:05:22 GMT",
+      "published_iso": "2026-11-05T09:05:22+00:00",
+      "locality": null,
+      "state": "CT",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Get Off of My Cloud – Texas Moratorium on Data Center Grid Connections Disrupts U.S. Project Pipeline",
+      "outlet": "RBN Energy",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPd0JYNUt6S0djRWV0OFZEblhtRHk1QkVfWGVSSllZNm9nSzR4LW9VVnp6QWV1Z3NLQlRxcExtZG5ucEZONEhwaDA0X19BWFU5RldmTlRZY2M3MTF4Qll2N3J2TEotQVBYYUREcXVQYjdoLXhmQlp0Q1MyQm1tMlRCdS1Jb2h5aHBJajIzc0hXVUp2Q1F5alY3S0lyYVQ2U3Rkem1Rd3RqQkoyaTdRbEcyblViRQ?oc=5",
+      "published": "Thu, 05 Nov 2026 06:00:00 GMT",
+      "published_iso": "2026-11-05T06:00:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "America got the anti-data-center wave it voted for. Here come the economic consequences",
+      "outlet": "CNN",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE45eE5aUXhYMVFkZ0lRNzk1UTdrUkFYYkxGdHVVMlE3dm9OaXAyQ3ZSWGl5ZmZueUd3SXgxU1BLNUE4Zm1sUy1WaGdpb05aZDZHbHhmT2EteGRpWmFZdFJCUGxWSTQxWW90VEdVZVBHZDZUYWs?oc=5",
+      "published": "Thu, 05 Nov 2026 11:00:15 GMT",
+      "published_iso": "2026-11-05T11:00:15+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "What Michigan election results mean for data centers, DTE, clean energy",
+      "outlet": "Planet Detroit",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE80dnNhcU5NSW44aWZFYUZ0OVNnWTlEc2JDM2VoVVRHdTlVc19qeW1LSlo0X2hlNlFWSWpqSWZLdnREV0hkZlFaMmk5czdJU0NnempUejRVLXZuRkZJLWRKQ1YySGVPT09CWVMxWXNwX3VUbmx4Q0xRTF9rUTBfRUk?oc=5",
+      "published": "Thu, 05 Nov 2026 01:42:40 GMT",
+      "published_iso": "2026-11-05T01:42:40+00:00",
+      "locality": null,
+      "state": "MI",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Cromwell considers moratorium to pause new data center developments",
+      "outlet": "FOX Carolina News",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOb3lHM2g5Y01Xb3lCUV9nOXlqTTNxcm1neWF1QlVmZGJSUnF4UURua2U0anY2cWR4clVSTmtOOXhER21WQWZsY3JmR3pvVkgtT296b2NBQ0pVQ2xoSlRQV1FGdzFvRDNNeU5jUWFtbGp6eHBGQ3R0OG1OXzktUFNNODlMUEJZcEdxMUlzSjJrdGFUUTFYNlRadFRLSlh6eGRQV3pQLUFrWF9Yb2ZyUWpB?oc=5",
+      "published": "Thu, 05 Nov 2026 11:42:01 GMT",
+      "published_iso": "2026-11-05T11:42:01+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Texas, Ohio and Georgia data center risks after Democratic election wins",
+      "outlet": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPR0Q5ck14MUdWNExWSFZwcXA0a3dxUnBGOXJ3cnpod3JqUkkwT0tTOF9lUGN3TmJkZnA5Y21CVDdWd2pJLTRkRGhqYjdDMmFPRkR6SXhrMi1OQUU4TXY0Y3JNd1g4eU56RmMtRzVrR1hzVmFfZkFCQlBkb204cDNyTHpZNDhxMmxIQUt5V1JENEctV2xPeEhhVy1n?oc=5",
+      "published": "Wed, 04 Nov 2026 13:16:24 GMT",
+      "published_iso": "2026-11-04T13:16:24+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Cromwell considers moratorium to pause new data center developments",
+      "outlet": "WFSB",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQc0hDZkdUd3k5cmJ3MTUtRTFlMG9oeFhicmhSZi1XeTRCLUNEdWs4emVlWVk3NzNBM1R5Y1lZN0ZlcEZEVWlVLVZVQ1A0dzM4SFNUSWdMTmpWT09RV21EVGRnbUZIaGNGdjd2emF3czhyQWI1WllCanU4N2pVNHFWTXZybGsySUlxcS1DUXJxVkdvaEozVU9qbGg1YWE0dw?oc=5",
+      "published": "Thu, 05 Nov 2026 10:08:00 GMT",
+      "published_iso": "2026-11-05T10:08:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Scarborough Town Council unanimously approves ban on data centers",
+      "outlet": "WMTW",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNzlGRTFrMGFBcDZqVTFEcjBONXBTaFJDNUhnLTNYT3RaOGdTQ19zMGtJUXZPczhwbUxYVGk4QkVmV0RTVXhGMGZONWdoTmMyZWx2S0hxOHhFOHM2bFpTcllZRFpBUzMxUHY0UEc3QjVUTV9PamNzVUliWGxpYW9abzk0TXN2aE0?oc=5",
+      "published": "Thu, 05 Nov 2026 02:55:00 GMT",
+      "published_iso": "2026-11-05T02:55:00+00:00",
+      "locality": "Scarborough",
+      "state": "ME",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "After the midterms, a bigger clash over data centers could be coming",
+      "outlet": "TechCrunch",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPR2N3b0VOOTZnaW5wdEc4eGJBY2hMeC1FWUV6ajhwRkNGbmpZUzRZN2JJUFJFZG1qOVFMbGNqLThTdjdId05Yb25OUUFnVmRzVnZLUV9TYnZGakdBTGU0cmp2NXBsWVhrclZEZ21hSldGdWpHVjB5RkJXV2phdHpabTg5bGJ1MDdKMWg3YmhtclN2dU1nTDZuZ1JJcDhvY3hSSGFtag?oc=5",
+      "published": "Thu, 05 Nov 2026 01:02:14 GMT",
+      "published_iso": "2026-11-05T01:02:14+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Voters signal rejection of data centers, grocery tax and pro-Israel laws in nonbinding ballot questions",
+      "outlet": "WGLT",
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNdEhqMnhFRTQ1bWk1WkstMERtNmltTzl0cHFHYlIxYVQ3NzZPNU5YN3kwYl82b2ZSbEs0X1pfZnQtc21MQXJEWG9jVTkzczF2amVVNWN4bFRXTlBaVkN4aFlEYTFYRTM3OXF1em95OW5qOXE3WnFSWTQ0MFVTdmRqVy1DOFFlQml3QUpUVlVTVmlZTjhqU0VKSmo0RC1vWXlFMTBYaHZkMkhBNWs1VXNXUGlVNnJPaE9GMl93dUQ2OENpdXhHZ1VxNHpBZjhOZ3BsOE9FbGVWWGdBM25VOWc?oc=5",
+      "published": "Wed, 04 Nov 2026 21:50:54 GMT",
+      "published_iso": "2026-11-04T21:50:54+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Pickens County pumps brakes on data center development",
+      "outlet": "Greenville Online",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOTjJQVG9IVHRjUWcyeXg0SmRwVVZGNEtQNmY0NmFGdmp5azlzbWd6YU1nX1FHNW5pWndkSVlKYW45aVY4RUxHY2tuWk14aWFER0o1T2FuNkd1TG1fT2h6UXlpUWR2UU0xS0dBX0RYRjVUdThpQ3AwUi1LMHA5d05BLW8tcEtxN2FwNFlWTl9lY2FxSXIxYldrOUs0NmtmdUM5ZU5mUGRHWFZUbGpKSjFEdmJPYVRhVE1vU0Z1Q19wcFp3Qm83aE9GS05yYVBWS3NiV0JRTA?oc=5",
+      "published": "Wed, 04 Nov 2026 20:29:00 GMT",
+      "published_iso": "2026-11-04T20:29:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Cromwell considers moratorium to pause new data center developments",
+      "outlet": "KTTC | Rochester, MN",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOODVOSnU2YVo4amlobWg4U3FXdnhiQXJkZVJibnZrQ29PYV9qOUZDWk9Zdi1FWTREeVNUZGkzakVhZ2RHY09NMkV5NW9keVlfM052TEo5WkpYUFE0S1NySENoTGlNaUtwb1hmVkxlT2haSTBFNkhILWRwMEdDdlg3aW5jbTAybVVNcDJRYUxINzZod054NnlZUTUzUFRyWmNZOXJJM0VR?oc=5",
+      "published": "Thu, 05 Nov 2026 11:42:17 GMT",
+      "published_iso": "2026-11-05T11:42:17+00:00",
+      "locality": null,
+      "state": "MN",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Elections Across U.S. Are Clear Rebuke of Unchecked AI Data Center Buildout",
+      "outlet": "Food & Water Watch",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQdGhNOGNtdXBsZGlKLV9xRW41NWVxTlFUVmNsU0M0Ti1nblItbEpYUmk4WjZNelZoVklqZEd2Qkp5ZDRDWkRFZ3RmZEJGRzFGUmpXTkpiOW5lbG1XX2dSM2ZoQUFBVy1EMUpoZHJIRWdINjJOYUtlNE5aRmp4OGZPQ3UxNndBd2dHOW1hTUk0UWtLNllaY1QwU2k3TVdCcnpWS0gwVmdRU2lpdGlCTFNPZXFtSjFvTnJ4bVNxOHJDVW5CRTdI?oc=5",
+      "published": "Wed, 04 Nov 2026 16:20:41 GMT",
+      "published_iso": "2026-11-04T16:20:41+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Revolting Against Data Centers, Voters in Nearly 40 Towns Reject Projects",
+      "outlet": "Capital B News",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE51emI5WGhNeEhIaTQ2SEtmTXp4bUtJSS1HR01NU0F6Zk1XTHI3c0xIWVFNMzhSelNSVXR4ZWJEMHF2OHpGaFJOelRaM1Z3aE9OeF9LZkNwWUhKRkRodlVfYnFFdm43OHlkZGxJMnUyUHdhX0NRUXc?oc=5",
+      "published": "Wed, 04 Nov 2026 21:00:00 GMT",
+      "published_iso": "2026-11-04T21:00:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Vineland Data Center, Who Owns It and What’s Next",
+      "outlet": "SNJ Today",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBSbkNxTWg2eWtHLXk1WkNyeEszUEF5QjNkMVo3SGg0MWEwVHdqeGYtUTlTVk1DV194dGZyVmtOU281Vm9jOWR4NFJtSmZzcjJRaFV0Wg?oc=5",
+      "published": "Thu, 05 Nov 2026 10:45:02 GMT",
+      "published_iso": "2026-11-05T10:45:02+00:00",
+      "locality": "Vineland",
+      "state": "NJ",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Voters Across 10 States Just Sent a Message About AI Data Centers",
+      "outlet": "Gadget Review",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcEpDSkZva0lDMmVBLTQ5Vk8tSTFmSlVVckRHY1M0SW8yRXF5NHVNYXpzZ1pMeWlhem5OU3hOY1BVVlVEYjh6VVY0NmZ2c2loX1JQTlRQUllQM2txMWR0Mks1VFFwSGlBSmxnU0RUM01qaHZscVJrajBJSEFKMGlrd25vU3UzX0FvSXo3ejIwb1JBQlhVSnpRZFZ3?oc=5",
+      "published": "Wed, 04 Nov 2026 19:22:51 GMT",
+      "published_iso": "2026-11-04T19:22:51+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "US voters back data center restrictions amid backlash over artificial intelligence expansion",
+      "outlet": "Anadolu Ajansı",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQZm9HV0F5Tlg2ZUd3MDNLVnhTUnBRTWtWMzRGWjI3d0h6M3cwRWZlSkY0ZW5kSjZ6NDZtcXpoTi1WbVpxcms1LXU5anVvZ1JtT3U0WHBSZkt6cVBpb1hVRTMteG5lLTNIdFpMTVEwSHlyMVE1OEtFbXozeDg1VEdHRDNEVDAzSUVjOVZxQ1QzTDNWQmNYLU9HTmNFU01XLUJYbnN4Q1J4dUJ0VWE0ZFdQeUgtVnJWZkgtWklpUVFxXy1WUm1Va0VHRm93?oc=5",
+      "published": "Thu, 05 Nov 2026 09:01:56 GMT",
+      "published_iso": "2026-11-05T09:01:56+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Appalachian author: Who pays when Virginia’s data centers go quiet or get sold to another firm?",
+      "outlet": "Cardinal News",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOVzRWeFV2cWN0dm5NWDRnS0dFYURZLWdvQlVnekNUUGRnaHdLQ0VSRGxQUkF3QzJQaW5zcVF0ZmhsckRfaDFRbGplRmROWDlQQmdXckEtWm1RWjNiLTh3RGNGQ0MxMUgzUzAza2pQRDFLR3Bud3pNZVIwa3pfWU5rbXJILTBfcEJTY21IU0NFTTZkSVczTjVyTGxjSzJIei1TSm5FTFhjNWhCLURBOXBmQm44VWotRko4aWJyRHF1Y3RjT05ZVVpMSA?oc=5",
+      "published": "Thu, 05 Nov 2026 09:00:00 GMT",
+      "published_iso": "2026-11-05T09:00:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Power costs just keep rising in Northern Virginia's Data Center Alley",
+      "outlet": "The Daily Progress",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbHNhdnZSM1dMRnd1QUkyNW9VcUVzbmpJaEhaMXFvTFFkSWFJMGo4b0tEM2h4Xzg5MXd5eXhYVFEzV0RaTWNtdFdrX20tMHZNTnR4SGlZaFlsc3NaTldLX1BCQzFIQWl4blhRRzF1UFotMkNsNG13XzA1clB2cTRTRWl1NGM4dE5WM1hkVkdoSXU1NEliYzlqZDhaeVdJTUlCZjVMR0VqUQ?oc=5",
+      "published": "Mon, 02 Nov 2026 16:30:00 GMT",
+      "published_iso": "2026-11-02T16:30:00+00:00",
+      "locality": "Northern Virginia",
+      "state": "VA",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Virginia voters backed candidates seeking strict data center regulations",
+      "outlet": "WJLA",
+      "link": "https://news.google.com/rss/articles/CBMilgJBVV95cUxNUGxYdHlscl9IYTY1U0pZajRJbGdsT3pSZGI5c0ZMeFBRZTZkaGlDS0RtVmkxNTRnR1FWUlZBRGNXMTVlQU9iMVNtSjBhZk9pNWpaMFNqQ3dUakhqZ21hZXhCd1pYRVBpMFRoSGxkSU91NldFYl9SNE5NblpibjEtZ3BsLVpEclg4MDdMSGhMRGdGV2NILVYxUndvNS1JakJRWkFub3ViWU5HUkpJQnczamh6XzhMbE5Yc2RDTFBmd0FKRk5HN2N0SVlvemtsSm9iMkYyZktsWC1adkpzbjBkemlBbHBVLTV0OTI1V2xtSTNydWRfMnppNlpDTklxNFRHUE1xYnZHRTdZVnppY0hBcXg4bXhGQQ?oc=5",
+      "published": "Thu, 05 Nov 2026 09:11:22 GMT",
+      "published_iso": "2026-11-05T09:11:22+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "DCD Connect Virginia 2026 Draws Data Center Leaders to Discuss AI Infrastructure",
+      "outlet": "Inside Towers",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOSzhPVHMwenRVeUZsUVNnbHFuR25tYnJZdWpUdTJaZk5kTlQ3UTlqWlkyeFZOdkJWZXlhMkYxbm1qc2s1dzNHdjhodTJ0OXYycmc2TlVGSE9mWk05QzhjTG84OUt4b3IxYnZ3MFFCbnpqX2dRdDVaWE9VT08zRDNGR1RsenhKOGNKMEVYNkQ2Vk03elY2VXRaU0VYLXc1WFIweHB4TWZWOXlDZw?oc=5",
+      "published": "Thu, 05 Nov 2026 10:56:30 GMT",
+      "published_iso": "2026-11-05T10:56:30+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "NextEra and Dominion Accept 101 Virginia Merger Conditions",
+      "outlet": "Environmental Leader",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQckszUlNhOVFJRk1DaGJvcGEzYWlKWEhPcTZ0Zk1VajU5b2dCMXBxOWZFTnNtY0RBOUxaaEtBWjRURjUwYkMtWi0zQlV1T1hpazFWSGQtMHh2NE9VemZNQk41MDAwN1V3THVXTW5RdHozQUg3VEhlOERpN0xDZTJWYi12TmxvNUFTa2dVLWdxemxqaE00bDR6MDBGNXFLZVZ5MEFzVllQYXRFUXhWamVvZVF2QQ?oc=5",
+      "published": "Wed, 04 Nov 2026 19:00:00 GMT",
+      "published_iso": "2026-11-04T19:00:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Virginia-based developer to purchase Pittsburgh Mills mall in Frazer",
+      "outlet": "TribLIVE.com",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPWnBUSG9HT0V0REpfcjhUWGJMMTZpZG4tTFRfSFVhODVIWFNxZ0dnWGx2TTBjaFQxOVI5cVZRRjIwcmMyZ0tCOElacm9acmxEMUNrLVpRNVlLcFR6aWY2N21YUGVEdFRPaUpxM2ZJWm1mWDFCeGdZM0tEaC1BVmRmWGQwSnJIS0dQWGY3UUFLalFaeG9uYTdQbHJLcWdvbHFmbk9hc0hISG1JRjloUTIxbE0wUHdtV2ha?oc=5",
+      "published": "Wed, 04 Nov 2026 03:05:37 GMT",
+      "published_iso": "2026-11-04T03:05:37+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Data Center Opponents Win Big in US Midterms",
+      "outlet": "Technology Org",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOcVRLSmROczc2MGN5Sk9JOVZNSm5COWVUckFzOUdnYlRVclJKMmUwR2M1XzE1ZjgybUd5MkFrM0xPenhmMFZZcHJtODlHdWVJSDFtWTRzb1lvLUFZMi1aX3BtWGl3Z3lxLVUyY1JKRE9pSmJFWGVLd0tYTy11MzBjcTlxM0ZuRjMxWWtHZVRNZw?oc=5",
+      "published": "Thu, 05 Nov 2026 09:16:00 GMT",
+      "published_iso": "2026-11-05T09:16:00+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "OpenAI to Change How It Handles Data Center Efforts After Outcry",
+      "outlet": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPektPalR4TVFNSldoVEd6bDdwNnZCWXg0NW1FQk9WemdSdzliSkxKQTJoMXptOWthZnpObXlVcHVBT0wtalprZ3paQ0JycUhrUjBEeGhwcFlIQVBRUXFoQlhZMlkyS09hTk1pQVN4OHZmYTBpd2pSWnh1Z05ENnhaSUhrQzAtazlkTnlteTVGdDc3M2wtVkI3NnRCeDBGZw?oc=5",
+      "published": "Thu, 05 Nov 2026 11:32:26 GMT",
+      "published_iso": "2026-11-05T11:32:26+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Voters elected governors to curb data centers. Lowering bills for gas and groceries is harder",
+      "outlet": "Scripps News",
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNZy1CNW5lMWFpMkExUkZFVVgzcVpOWmpqd0ZIV0tvdE1lMWYxbFk5MUV1aUh5NC16eWRINDBYbnhkZ2JzcWJiTXRIcWd0T1RRazF5bUhTdVh3Tzk2RnV4dGROTFhqZ2xYOEhSNXlWSE1RcGQtWERfVVBvaWZDbkRuTWxSYUdVSGc4dlRyNWp3S3l5UnVoc0lRX1dac2hZMy1STjh1emJOcGdVVzYtdXdiay1ldkJiaEdLT1dXSFVSU2wxODUzRlcxeXBQcTZseTlUbXFPLUpUX1VycXM?oc=5",
+      "published": "Thu, 05 Nov 2026 01:42:28 GMT",
+      "published_iso": "2026-11-05T01:42:28+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Trump’s midterm drubbing demonstrates the power of data center opponents",
+      "outlet": "The Japan Times",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPQXB6VjFjOGhOSEZBUkY1SzFjUkR0dEJYRndqaEpodTZySmV2ZHR1WUFOZ3VIcXl0akFzbFVqb2NHUDk4ckFkRDY3SEFtcXhfNWtza2NWWlBlUGMtWHZydUVxVzE1RG1WakRMZ3VJQXJScUUzQTVoSDB0ZEJTdEpVemhrZ1AtQ2VXMXkwLW9laFgyODE3bXNkTkFR?oc=5",
+      "published": "Thu, 05 Nov 2026 01:30:00 GMT",
+      "published_iso": "2026-11-05T01:30:00+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "US midterm elections threaten AI data center projects",
+      "outlet": "ET Datacenters",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOcm9IWUJzaVlpa1R4aWRPdENwaHRVYXFzMHRUU1pnMTJzVFZwcDc4RlJYNl81dldVc1l0ZlhFTmJscW5sVEpOQ0Roc2NhQ2REaWpnRVdtYnA5MjJ2Ml82bHBVajZHNUt2eFlLQ280TUZhQkI4bmlDeUV0cGdnNjlrajRDcTFWcG9iVUM5dnRrWVA3a3pDRFA4QTBXbnFOMGNrRmp6NTh4Nm01c1lCaHJ0aGtKOVBoZm9rWm04RU5UTndFYXM2aTB0VC1kSWs2cmUz0gHUAUFVX3lxTFB1Q3NxRUpvT2xZVE4zdVRhLXRyLTdid3R0ai1IcU1WbkFlZXhReWh6WlhwR3MyOE9PTW1YTG92UWtkRzI4YmNyeklfOEFGTU5id0hhOXBQQnRwdkpMYl9YN0ZYR1VNQmxzWEFEbHRtSjMxWHUzOVd4QjNvT3MzRWhzMWJkc1lnNGtIXzFYWW9fa0pxNktTOEx4QVhXUVJaaVI1YXBWeE5XMl9JaFg1aUR4ci1zNzFkbzJ6YkhOZ0ZURXMzTC1CZ014U3ZvVkFxTzlYdHc1?oc=5",
+      "published": "Thu, 05 Nov 2026 07:25:57 GMT",
+      "published_iso": "2026-11-05T07:25:57+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "OpenAI pledges to cover data center power costs after election backlash",
+      "outlet": "Cryptonews.net",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBXSVMwbXVKcVQxSjc3bE9wc0hRd0R2eXROc1hXa3FHVWdGcDljZFJsMDMyMDA4YXdKc2d1TkRBdTU3SjNMOUh0bW9nR00wR1JzRUhRMmV0S08?oc=5",
+      "published": "Tue, 03 Nov 2026 08:00:00 GMT",
+      "published_iso": "2026-11-03T08:00:00+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-11-03",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "OpenAI Bans NDAs With Officials, Vows to Cover Data Center Power Costs After Midterm Blowback",
+      "outlet": "BigGo Finance",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1jSzdZV2xsX0tZaEduc1VyTXM4cHpYM3pQTUlGZGFaMUdIeUhtdHhYRHQ1RExNQ3BaUHJyNEtBMklwTmhNeXRZSWNNM1VVOWtBc3hZb3VUd28xbXRNRGg5RTBWSThZRG5DTE5NaU1Dd0hsQ1QxblE?oc=5",
+      "published": "Thu, 05 Nov 2026 10:35:00 GMT",
+      "published_iso": "2026-11-05T10:35:00+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "‘The voters…have spoken’; Going up; Latest on proposed data center",
+      "outlet": "97.5 Glory FM",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOb29MVVdYUFVKamdCX3gxM3dOM21lT081d25XZzU1MXc4dTg1MGZPYlJWZU1HTkVxcTdHZERZcG85RnZnaWU0TlQtbnlsYUhUX3lEakRjZ0I2RmRVcTJrZ3dPdkRZU2gycGFmcHprLVZGR3BJQ3VFaHVfTGY2NVJsWkF2MTAzMUdoV0RpYjRsa1g?oc=5",
+      "published": "Thu, 05 Nov 2026 01:21:06 GMT",
+      "published_iso": "2026-11-05T01:21:06+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "US midterms: Data centre backlash helps Democrats win in Texas, Georgia and Ohio. What happens now?",
+      "outlet": "Newswav",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPblBXUjZ6YVdGWUpXUnI1T05QXzI1U1BuZmhFQkdFOUFaeG51dzl1ejJuaFVFUDFpSWNzVHVjaXEzY19kZWUyUWJZRHExRDI5SnU4Mm0yMzlIbmhRODliS1puWDFNUnBHUVNKZ255cDVweGVLQkdHVUdYMlRZQzd0TXBnanFKZlJCRFhuTmd5NHNCRUd5cV9wSGZEVnNjcTZRQWpLbHNCdy1hZXJyMVh3cmVNRGctZFk?oc=5",
+      "published": "Wed, 04 Nov 2026 15:01:44 GMT",
+      "published_iso": "2026-11-04T15:01:44+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Microsoft will not expand Texas data center deal with UK's Nscale, source says",
+      "outlet": "Reuters",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNb3YxSi01QlpvU2xqQVk1TUZQVTdjQnlqOUZwaFUzZ2txZHBJaHZ5bTVNOXpRZGV0czNzQkRCamNqNXZ2cUFoZ1JsV1l0cGFKazh4SXpjSlJ0Q1pMR0IyVWhfQkZlbTAtWFJ1ZERpbDdfNzZqaVlZUjg2a2RKNlRfS0N4OFMwSmpERG9EWng5MC1XXy1ENURJMUNWTTEyR3Q0UkE3WnRSMVJmVDAwdlJoVDhXa0h1YXpyYjBR?oc=5",
+      "published": "Thu, 05 Nov 2026 05:11:00 GMT",
+      "published_iso": "2026-11-05T05:11:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Gina Hinojosa won the governor’s race. What happens to Texas data centers now?",
+      "outlet": "Denton Record-Chronicle",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQb05UZ2paZXNjazNVdGpUU2U1RHBVaFZlb0NaWER5NUFIcmtnM3JvOU93Y01lOU8zZE5RQ2RQUEtZaUVpVHY3X0ZpdzZrNDZ1bTFxTmtzZlNLTTJWUmZMRkJiTXBFdldGUG1IS3kzMVZLaXIzX0M5MUNkdVBRZ0JBYlA2NnpuWTVYMXYtNEhPT0NTWmxNM2hGQXczaGxhVWFSajV6UmJLcWFkSFlHdTBmYzVPU0ZBTkJXcTlMcmVQUXBORUMyZkJwcjduT2JodDdUdTZoT1U0c2R2QjNYRUgxRUVITEZkNFVGOGVqRFlMVQ?oc=5",
+      "published": "Wed, 04 Nov 2026 22:00:00 GMT",
+      "published_iso": "2026-11-04T22:00:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Texas data centers face uncertain future after Hinojosa wins governor’s race By Reuters",
+      "outlet": "Investing.com",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNN254YjA0Q08zWHpqWmp2dW5LV3dHSnJKS28zWk5KRTk0YUxUdm1Talk0cThxXzJiLXU2N3Y2MTdwUFFRMDhYclBnd0FGV1lvdldTMXh2NVVydl9XeDVoR1JEOEhYZnc1bzJidm80M2RCN2JTOGZfWGJYa1VYN043Q1FTa1ZXZFlwQTlIVE9CMjlISVRjR2tlVkVxSFN2YS1SUG5lSmlIUFJ3YU9BVE9DbGRhZTBYMGNDOGJzS1pLRHp4cElYc0s3M200cw?oc=5",
+      "published": "Wed, 04 Nov 2026 17:26:12 GMT",
+      "published_iso": "2026-11-04T17:26:12+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Texas data centers face uncertain future after Hinojosa wins governor’s race",
+      "outlet": "Yahoo Finance UK",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNZlRIOUtlMTJEMXNTUURjcE5YZGExd0NEWmlOVGlTN2UwM053VTNUMzh5a0tadTFzZFFhNzl1d04xMU4yQkNQeVpiSllNUGtTRml1QWFLNE9pX2VxZXphM29rckJ2SUpTWU4ybmVwYjE4dURRR3RkaUF0U2ROQnNPSTZZcXdyZ3dZLUE?oc=5",
+      "published": "Wed, 04 Nov 2026 17:23:40 GMT",
+      "published_iso": "2026-11-04T17:23:40+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "13 GW At Immediate Risk As Texas Data Center Developers Face New Power Struggle",
+      "outlet": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQc19DTTdDRmZDQ0NTbV9zWURwNUZDOWNlZkYzMkQxOEZUUk1Zb1l2aTdnR19YdGxXZHZlMW02bEZ2OXBHNXpQRnN4Vnl3ZTNzRnNWeThWV2YxT3NidzYzTkloOGd4SWZvYnhFQUFvRFVPX1BSSFZmYVBvT2VMbTJQejkzLThqeENPNHJGVnd1Ry1FQQ?oc=5",
+      "published": "Thu, 05 Nov 2026 00:36:00 GMT",
+      "published_iso": "2026-11-05T00:36:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Texas data centers face uncertain future after Hinojosa wins governor’s race",
+      "outlet": "The Korea Herald",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1oYm5fZFVTVFNFVkRjbjZuWU5lR3pyU3dGU0dEdlFad29Rc19DdkVFZGZvNjJwalBtWFRtVGlFTENreGtQVF8ySG5rTXFRQmxSYWVkRC1wdw?oc=5",
+      "published": "Thu, 05 Nov 2026 01:38:59 GMT",
+      "published_iso": "2026-11-05T01:38:59+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "OpenAI kicks off charm offensive to change voters' view of data centers",
+      "outlet": "Reuters",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNT3pvX1VfZi1WbVpNTl9weHZ0YUJ5RmhvVTgyOVRadlVyc01HeW1rdm5uRjhzMFRSSkJ4TW1yVmxHbkFvSnpTWkxWSGRIalRXM0dndmdtUXNTNTlYc0V2TGlxNTEtZm5iZDJlZXd5VUhjWUc1ejFXeTJpNHBzY2g4NllDX3dNWmo0eFBZQW1MUVR5Z2NVOUFMcENoLWZzMThDaGNXdERwWXJ6Mi1MTHc?oc=5",
+      "published": "Thu, 05 Nov 2026 10:10:01 GMT",
+      "published_iso": "2026-11-05T10:10:01+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "The Lone Star State of Data Centers After Historic Texas Midterms",
+      "outlet": "The Daily Upside",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNaE93eE9fRkU2YXBxeDBfMUxuU1BhTWFlcGVCcVNrVnBMZkl4bU5tTXE4cm82R3FZRUh2T3FDRnU2OGdpZ2tfcDF2RW5xVW1OQlI4Tkprc3FLd3J2czdrM05oXzMxbU5PMVBRZUVfS1B0dnk5VkU4UWQyTGtfeDVoZS1tWVZUZ0p1c1NtMEhKdVUtdS1QNVBLdVphXzRRWGZ1VTRpZzQ3bTNOaFdzX3B0a1lLM1lycm53ZmFSdUtzZjlxTjJNRV84UVRaRTQ?oc=5",
+      "published": "Thu, 05 Nov 2026 05:06:39 GMT",
+      "published_iso": "2026-11-05T05:06:39+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "ERCOT Interconnection Queue: Gas Up 85.5% in a Year Amid Texas Data Center Boom",
+      "outlet": "The Des Moines Register",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNOUk3QVBTdng1VEZqMVBsaGZoZ1hwbk41VGlPRHQ4bnBtdmw2STV0bFpCblI4eHFFdkFuUm1hY3RaZFR5SkRwMDZ0ME1xbVpaNW9yN3kydEhvWEctdkhJUkpMcWZFd1BTTGFLZVVMTHJWNjR6VXo1aXQ0Q3pORWQydUN0bnJqRTBQb1VQUFZlQzhVSVlhd25IcGxRTmo4QThGSFNhb0trdDNEVkNlTXF2SGdkeWZNZlpRNGFTeUsyVTlNWTlnakNhYWFfLVJXZG5FWjlWWnd3?oc=5",
+      "published": "Mon, 02 Nov 2026 23:36:46 GMT",
+      "published_iso": "2026-11-02T23:36:46+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Voters fiercely reject data centers",
+      "outlet": "The Hill",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNU01aOEo4SHBsT1FEcTFMQkh3V2dGQmQ1WlNPMlVzdXViZEpJWFNXeGZVM1J6N2lKLV9HMDVlal9nTFA0VVBhTURYdUllR3Y2eDN0Tm00dkxnZzJvMHJHRnp6RzNLYmZKb09RMjliVGRQR1c2bFV2NFVqSmFIV196UTVOa3BIZDNzLUdvOC1jdDR5c20wQlHSAZsBQVVfeXFMTnBpQVBLLURpWHotMldnU2Q2YVBQRTFiRjFkSG4tZ3ZZNGt5c204enl5VEVOTV9IYTQ1a0Q1eVNMdHBldXhYdzY2bUV3ai0zY21TRGtsOXdpSFJSeTZQM2tfZVJ4NW9acnNvYU5hc2NLYW9ReEJyd2VELUh2UFRKUUJDdUg5bmtQc1J4ek1Ea3AxdHBGWXhJczVzR00?oc=5",
+      "published": "Thu, 05 Nov 2026 11:00:00 GMT",
+      "published_iso": "2026-11-05T11:00:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Data center concerns help shape Texas Agriculture Commissioner election",
+      "outlet": "KVUE",
+      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNcEZXU2N0b2dPSEV6RWk3bjZEanliZ194UTBvLWZ5WnJPOUVRdjZnQk5Mc3BmQnhIMmZQdGM3Mjc0TGNkY005R0JpeW11bG16a3BBdmpfNWwwMXVEVFowNm1jX2VkWjl5cE5fYWJGY2R5cTZhZV9uZDk0cXJ2VUFPSVpZSlRYektuWnpzQ1dVNmctNmtUZWFWN2V5Z2VsV0k4ZTF0ZE0xNHdSeEt3MVdzbnp4NEtTbGRZaUo5Ym43dzE0X0lFRzRpY3AtQWlyam1odFVieHByLUUtTFcwa3BIbF80S2tnUHB1ZmlR?oc=5",
+      "published": "Thu, 05 Nov 2026 03:08:57 GMT",
+      "published_iso": "2026-11-05T03:08:57+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Texas governor-elect Gina Hinojosa promises continued data center moratorium, further legislation",
+      "outlet": "Data Center Dynamics",
+      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRHVfdDV1UDRUWlRpSHVELVEwQ0l4TkkxUG54TmlpZDJ0bWZ2WS0wUHFid3NEUDlycnBTRVNfQmN2Wk5wbDNMbVlvclhVWDdWWmdIWk11WlZWZERLcW04UUFUWHhBTlJjV1VIZkE5bFZXMnBVSzVqT3NKVE1fQ2dtZ08ySG14cHE3cktjNXpua0NHblRpWFA1Wk14d1JWN291WWFUUERxTl9WX2JDU3dnM3dHVE1EdldVM3ZDWkhWT0FNUTFOcjB1NXJlaVp6dkpuMVQ5WEtqcw?oc=5",
+      "published": "Thu, 05 Nov 2026 10:58:09 GMT",
+      "published_iso": "2026-11-05T10:58:09+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Texas election rattles AI data centers: Is this cloud giant less exposed?",
+      "outlet": "Investing.com",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNS1NfeFEyTmdMM00xMnJNeklEc09Ud1VUU2NrdnpHTkd3NWdmWVNpMlMxVkd3Y2IwZFljVFp2Tlp3bWdaWjdfWmh4SEZjRGRBT3J3UVlyMDZBQk02cGJTU0dUaU1jU3llQ0FiOG52S2dLS1JrZGxOWEc1WUxwNjVLNzZwcGpua2U3TDY2cEhVeGpfOEVRbjhiZURxemtEZ3d0dlpzeVdkeFhsYkd6MVU3bXJaVXM5alBXS25JWkpDR1U1NVB2NUNj?oc=5",
+      "published": "Thu, 05 Nov 2026 08:04:35 GMT",
+      "published_iso": "2026-11-05T08:04:35+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Data Center Stocks Just Plunged After the Midterms. Is It Time to Buy the Dip?",
+      "outlet": "The Motley Fool",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOQmo1WnpmM1hvYmdvRnJFelpzN1FlYTFpaVBwci1xOV9fNEFHaGZNelhBNHZWTTZsWndnZy1mY2NDSk9lcVZPb2FLMmJyWTVNUEcwazZqeTVjMnlwR1BNd2ZHZzNsaTc1S1hnX1p3eUw1SjVqdG9ISXYtOXhuNUNBNm9ZbU1ZajVRaEZQOW5nVTRQcEFMZ1ZLVlk2NjBIODRlWjQtWXRxY1IzWkZoSllmcUZXZkxZYkI3dC1Z?oc=5",
+      "published": "Wed, 04 Nov 2026 16:28:00 GMT",
+      "published_iso": "2026-11-04T16:28:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Data center developers to casino advocates: The winners and losers of Texas’ Democratic sweep",
+      "outlet": "The Real Deal",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNnpzWGx5M3oxUFZYTVdySEtrUWFJWG5zSFItZ3JIY3pVbTdMUC1yVkdrSU1oX1kwV0hOaHFpaUZiWWdIeElMWkVhZjZOUHo2dFdXSFdZa0l0Tm9yakYtT0YzVWw3akZuY0dJbGIyVHFkSkV0amhkRTNVckhZd0c1RFN6OGRERDJuRVJqVk1rQkljazM0?oc=5",
+      "published": "Wed, 04 Nov 2026 20:34:00 GMT",
+      "published_iso": "2026-11-04T20:34:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "The midterm AI backlash could strengthen Amazon, Microsoft, and Google while squeezing smaller rivals",
+      "outlet": "Business Insider",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQVEItNWZHVjR5M3lydTNEUF9BYkRKckFSQXYzZEVkMldiNXFKc2RzZUxrNzZQV3JxRU4ydy1kY2NHM29CWWljbzdNdnFTcnpHajNONWZWZHJxMXpJNkFKUlpnVTZsTF9Ma2xuSms1eHFtbDJNWFVwZndsYUdzMWprOGhoXzNac191dmFYbEdaVGx4eWdOdUMyWThxSlE?oc=5",
+      "published": "Thu, 05 Nov 2026 10:00:00 GMT",
+      "published_iso": "2026-11-05T10:00:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Election results could impact Texas data center projects",
+      "outlet": "KVUE",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPOEdwbmJZVE02ZFpzeDVuVzkyV3VfbEtuazVRYWcwZkNXNlRtaVBicVVBcFV0RWo1NFptNGQ0NWZtSG0wZi1pSHI1ZVotbU1BaGxSUHdzbl95bHRpTFVTd1ktMUZ6cXliZmlpU0xUbUlsZUY2cWlhdkw0Rmo1dzZPV1NXOVZ2Y1VQR1kxLXVYTS1iVFZsOVdsNUZvWFcxVERYOUVockY0Z3RJSXlZb3NqNWhucnNDTmxxTkk2RllUdF81N2JYWFBjR3g1THVGVndXOHhWdDdTN0ZzelBmU05hRnZHUQ?oc=5",
+      "published": "Thu, 05 Nov 2026 04:09:22 GMT",
+      "published_iso": "2026-11-05T04:09:22+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "40 of 41 Data Center Votes Go Against AI Builders [2026]",
+      "outlet": "shattered.io",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOclA1VUF5WmlObmZLNm1ZSWZLWUF1UmNFQTZMVjVOck5sYzd1YkQ4ZnR5MVBCWUw3blpYTTNnQ2VZWTkwc2ZTY2pNMGJoYmFxU1FONzJiSVpLYmc1cUhleFYxcS13LThFLUJkTW5wd0JSZ0xVVXpIYWtULV9EeEFzNFIyTmZMeHVyLTQ0?oc=5",
+      "published": "Thu, 05 Nov 2026 01:33:03 GMT",
+      "published_iso": "2026-11-05T01:33:03+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "CoreWeave and Oracle Face a New Threat From Texas",
+      "outlet": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPcXU3d3RHbGV1YVpBaGNReW5YQ1RhNkpGVTkxcjBTUE5QZ1JCSVhWZkZodkljUjZzdjVObTltWXdjOTk0SlNYV0g5ZW1DeFFzdTdBNTlSU3hQRmVHaE8wOHhPUS1tR29OekNDNjc1T2VLSVA3WUl4V3RRX0xKck13VFp1cjNZV3pMZG9WUkYzM1p3VjZGS2djR0FTUjZ1NzQ?oc=5",
+      "published": "Wed, 04 Nov 2026 17:01:04 GMT",
+      "published_iso": "2026-11-04T17:01:04+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "CoreWeave Falls 3%, IREN Down 4% as Democratic Sweep Hits Data Centers: “Incrementally More Negative Sentiment”",
+      "outlet": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOaXN3STR2VU9fcFVsTXFnVTMtcDVzai1NQjJVRUZpcTktV1B1WlluX0o3S244T29MQ1B4MmVKOEdwOTJqNVVaR0dyX05VR0daZjRWOFZHdUhGcU9URW4zUHBWVGFTQUx0Z3FmbTlDY1FkaDRtcy1jMFVQUjhKbWNydGYtS1FZYlZia3FHT0FMT1ctQ2ZBNk1z?oc=5",
+      "published": "Wed, 04 Nov 2026 14:42:43 GMT",
+      "published_iso": "2026-11-04T14:42:43+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-05"
+    },
+    {
+      "title": "Public hearing on Warrick County data center planned",
+      "outlet": "AOL.com",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQRUV2cGNmYUdwaWhGQkZnbnN1OVJRYkpHdUp5TkdrYzgzVlVmMlRpM1FNX1l6RjREX2tYLURSdWlyakxQRkl5bUMtajNUeE51dUhydklMM3NuN0ZyMFMyNl9hRGRhQTM5Q1JsWXFjZzEzTlVRdC1IYzJNOGtDTURyXzF1MHg?oc=5",
+      "published": "Mon, 02 Nov 2026 11:24:37 GMT",
+      "published_iso": "2026-11-02T11:24:37+00:00",
+      "locality": "Warrick County",
+      "state": "IN",
+      "first_seen": "2026-11-02",
       "last_seen": "2026-11-05"
     }
   ]
