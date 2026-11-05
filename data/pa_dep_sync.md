@@ -1,11 +1,11 @@
-# PA DEP data-center tracker sync — 2026-11-04
+# PA DEP data-center tracker sync — 2026-11-05
 
 Source: https://gis.dep.pa.gov/DataCenterPermitTracker/
 
-- DEP projects on file: **75**
-- DEP permit records: **389**
-- Added to projects.json: **0**
-- Refreshed: **0**
+- DEP projects on file: **76**
+- DEP permit records: **408**
+- Added to projects.json: **1**
+- Refreshed: **1**
 - Skipped (already tracked by hand): **16**
 
 ## Skipped — hand-written row already covers this
@@ -28,4 +28,12 @@ Left alone on purpose. If the DEP row carries detail ours lacks (a permit trail,
 - DEP 10000066 *Salem Township Data Center Development (Amazon Web Services) - Phase 2* (Salem Township (Luzerne County)) → `aws-salem-township-pa`
 - DEP 10000067 *Falls Township Data Center Development (Amazon Web Services) - Phase 2* (Falls Township (Bucks County)) → `aws-falls-township-pa`
 - DEP 10000068 *Aligned Data Center - Phase 2* (Shippingport Borough (Beaver County)) → `aligned-shippingport-pa`
+
+## Added
+
+- `newport-township-data-center-newport-township-pa` — Newport Township Data Center (Fit Energy), Newport Township (Luzerne County)
+
+## Refreshed
+
+- `newport-ridge-data-energy-center-newport-township-pa` — On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.
 

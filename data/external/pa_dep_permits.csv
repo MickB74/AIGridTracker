@@ -15,6 +15,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000001,WPC State Water Pollution Control,WQM Major Sewage Treatment Plants,Amendment,1564528,4008405,3/30/26,Issued
 10000001,WPC Act 537 Municipal Sewage Planning,New Land Development Plan App Component 3-Commercial,New,1546661,2-40940187-3,10/20/25,Issued
 10000001,Air Quality,Air Quality Permitting,,,,,Not Yet Submitted
+10000001,Storage Tanks,Site Specific Installation Permit,,,,,Not Yet Submitted
 10000001,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
 10000002,Safe Drinking Water,Noncommunity Water System Operations Approval,Transfer,1492258,2401123,6/11/24,Issued
 10000002,Safe Drinking Water,Noncommunity Water System Operations Approval,Modification,1500188,2401123,9/19/24,Issued
@@ -50,6 +51,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000003,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Pmt,New,1546852,E3502225-006,10/24/25,Pending
 10000003,Clean Water,Clean Water Permitting,,,,,Not Yet Submitted
 10000003,Air Quality,Air Quality Permitting,,,,,Not Yet Submitted
+10000003,Storage Tanks,Site Specific Installation Permit,New,,,,Not Yet Submitted
 10000003,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
 10000004,WPC Erosion & Sediment Control,Chapter 102 Individual NPDES Permit ,Transfer,1555830,PAD540025,1/20/26,Issued
 10000004,WPC Erosion & Sediment Control,Chapter 102 Individual NPDES Permit,Minor Amendment,,PAD540025 A-1,3/19/26,Pending
@@ -61,23 +63,27 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000004,WPC State Water Pollution Control,WQM Sewer Extensions,,,,,Not Yet Submitted
 10000004,WPC Act 537 Municipal Sewage Planning,New Land Development Plan App Component 3-Commercial,,,,,Not Yet Submitted
 10000004,Air Quality,Air Quality Permitting,,,,,Not Yet Submitted
+10000004,Storage Tanks,Site Specific Installation Permit,New,,,,Not Yet Submitted
 10000004,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
 10000005,WPC Erosion & Sediment Control,Chapter 102 Individual NPDES Permit,New,1575507,PAD350071,4/2/26,Pending
 10000005,WPC Act 537 Municipal Sewage Planning,Act 537 Sewage Planning,,,2-35804048-3,3/2/26,Returned
 10000005,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Permitting (Chapter 105),,,,,Not Yet Submitted
 10000005,Clean Water,Clean Water Permitting,,,,,Not Yet Submitted
 10000005,Air Quality,Air Quality Permitting,,,,,Not Yet Submitted
+10000005,Storage Tanks,Site Specific Installation Permit,New,,,,Not Yet Submitted
 10000005,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
 10000006,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Pmt,New,1556659,E3902226-002,1/28/26,Pending
 10000006,WPC Erosion & Sediment Control,Chapter 102 Individual NPDES Permit,New,1578878,PAD390390,8/4/26,Pending
 10000006,Air Quality,Minor Facility Plan Approval New Source Performance Std,New,1574924,39-00117A,6/12/26,Pending
 10000006,Environmental Cleanup & Brownfields,Notice of Intent to Remediate (Act 2),,,,3/11/26,Received
+10000006,Storage Tanks,Site Specific Installation Permit,New,,,,Not Yet Submitted
 10000006,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
 10000006,WPC Act 537 Municipal Sewage Planning,Act 537 Sewage Planning,,,,,Not Yet Submitted
 10000007,WPC Erosion & Sediment Control,Chapter 102 Individual NPDES Permit,New,1567677,PAD130057,2/25/26,Pending
 10000007,WPC Act 537 Municipal Sewage Planning,New Land Development Plan App Component 3-Commercial,New,1575562,2-13917022-3,7/3/26,Pending
 10000007,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Pmt,New,1562782,E1302226-001,3/13/26,Pending
 10000007,Air Quality,Air Quality Permitting,,,,,Not Yet Submitted
+10000007,Storage Tanks,Site Specific Installation Permit,New,,,,Not Yet Submitted
 10000007,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
 10000008,Air Quality,Minor Facility Plan Approval New Source Performance Std,New,1578397,40-00162A,7/29/26,Pending
 10000008,WPC Erosion & Sediment Control,Chapter 102 Individual NPDES Permit,New,1560309,PAD400116,2/17/26,Pending
@@ -93,6 +99,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000008,WPC Erosion & Sediment Control,Chapter 102 Individual NPDES Permit,,,,,Not Yet Submitted
 10000008,Storage Tanks,Site Specific Installation Permit,,,,,Not Yet Submitted
 10000008,WPC Act 537 Municipal Sewage Planning,Act 537 Sewage Planning,,,,,Not Yet Submitted
+10000008,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
 10000008,U.S. Fish & Wildlife Service,General Conservation Plan,,,,,Pending
 10000009,Air Quality,Minor Facility Plan Approval New Source Performance Std,New,1526061,09-0261,5/5/25,Issued
 10000009,Air Quality,Minor Facility Plan Approval New Source Performance Std,Modification,1541156,09-0261,9/9/25,Issued
@@ -131,6 +138,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000014,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),,,PAC04198  ,10/31/25,Issued
 10000014,MING Explosives Safety,Blasting Activity Permit,New,1580774,4264103,8/19/26,Withdrawn
 10000014,WPC Act 537 Municipal Sewage Planning,Act 537 Sewage Planning,,,,,Not Yet Submitted
+10000014,Storage Tanks,Site Specific Installation Permit,New,,,,Not Yet Submitted
 10000014,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
 10000015,WPC Erosion & Sediment Control,Chapter 102 Individual NPDES Permit,Transfer,1570051,PAD540030,5/18/26,Issued
 10000015,WPC Erosion & Sediment Control,Chapter 102 Individual NPDES Permit,Minor Amendment,,PAD540030 A-1,8/7/26,Pending
@@ -138,6 +146,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000015,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Pmt,Amendment,,,,Not Yet Submitted
 10000015,Clean Water,Clean Water Permitting,,,,,Not Yet Submitted
 10000015,Air Quality,Air Quality Permitting,,,,,Not Yet Submitted
+10000015,Storage Tanks,Site Specific Installation Permit,New,,,,Not Yet Submitted
 10000015,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
 10000016,Air Quality,Minor Facility Plan Approval New Source Performance Std,New,1511828,08-0006A,12/27/24,Issued
 10000016,WPC Erosion & Sediment Control,Construction Stormwater NPDES Permitting (Chapter 102),,,,,Not Yet Submitted
@@ -147,6 +156,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000018,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),,,PAC040210,7/9/26,Pending
 10000018,Air Quality,Plan Approval,,,,,Not Yet Submitted
 10000018,Storage Tanks,Site Specific Installation Permit,,,,,Not Yet Submitted
+10000018,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
 10000018,WPC Act 537 Municipal Sewage Planning,Act 537 Sewage Planning,,,,,Not Yet Submitted
 10000019,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Pmt,Transfer,1551380,E02-145,12/8/25,Issued
 10000019,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Pmt,Transfer,1551370,E02-231,12/8/25,Issued
@@ -195,6 +205,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000023,Clean Water,Clean Water Permitting,,,,,Not Yet Submitted
 10000023,Air Quality,Air Quality Permitting,,,,,Not Yet Submitted
 10000023,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
+10000023,Storage Tanks,Site Specific Installation Permit,,,,,Not Yet Submitted
 10000047,,To Be Determined,,,,,Not Yet Submitted
 10000024,WPC Erosion & Sediment Control,Construction Stormwater NPDES Permitting (Chapter 102),,,,,Not Yet Submitted
 10000024,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Permitting (Chapter 105),,,,,Not Yet Submitted
@@ -349,6 +360,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000056,Air Quality,Plan Approval,,,,,Not Yet Submitted
 10000056,Air Quality,Operating Permit,,,,,Not Yet Submitted
 10000056,WPC Act 537 Municipal Sewage Planning,Act 537 Sewage Planning,,,,,Not Yet Submitted
+10000056,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
 10000056,Storage Tanks,Site Specific Installation Permit,,,,,Not Yet Submitted
 10000059,,To Be Determined,,,,,Not Yet Submitted
 10000060,,To Be Determined,,,,,Not Yet Submitted
@@ -362,6 +374,7 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000069,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Pmt,Transfer,,E3502221-006,8/25/26,Pending
 10000069,Clean Water,Clean Water Permitting,,,,,Not Yet Submitted
 10000069,Air Quality,Air Quality Permitting,,,,,Not Yet Submitted
+10000069,Storage Tanks,Site Specific Installation Permit,New,,,,Not Yet Submitted
 10000069,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
 10000070,Air Quality,Minor Facility Plan Approval New Source Performance Std,,,,,Not Yet Submitted
 10000070,WPC Erosion & Sediment Control,Construction Stormwater NPDES Permitting (Chapter 102),,,,,Not Yet Submitted
@@ -373,11 +386,12 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000071,WPC Act 537 Municipal Sewage Planning,Act 537 Sewage Planning,,,,,Not Yet Submitted
 10000071,WPC State Water Pollution Control,WQM Sewer Extensions,,,,,Not Yet Submitted
 10000072,Air Quality,Minor Facility Plan Approval MACT Air Toxics Minor,New,1586002,36-05170A,9/25/26,Pending
-10000009,Storage Tanks,Storage Tank Registration/Permitting,New,1550454,R2393,11/20/25,Issued
+10000009,Storage Tanks,Storage Tank Registration/Permitting,New,1550454,09-98668,11/20/25,Issued
 10000009,Storage Tanks,Site Specific Installation Permit,New,1532915,25001,7/2/25,Issued
 10000073,WPC Erosion & Sediment Control,Chapter 102 Individual NPDES Permit,,,,,Not Yet Submitted
 10000072,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Pmt,New,1586119,E3603226-013,9/29/26,Pending
 10000072,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
+10000072,Storage Tanks,Site Specific Installation Permit,New,,,,Not Yet Submitted
 10000075,WRM Water Obstructions & Encroachments,Water Obstruction & Enchroachment Pmt,New,1551946,E6505225-014,12/10/25,Pending
 10000075,WPC Erosion & Sediment Control,Chapter 102 General NPDES Permit (PAG-02),,,PAC650364,,Issued
 10000075,WPC Act 537 Municipal Sewage Planning,Act 537 Sewage Planning,,,,,Not Yet Submitted
@@ -388,3 +402,8 @@ ProjectID,AuthorizationCategory,AuthorizationType,ApplicationType,eFactsAuthID,P
 10000074,WPC NPDES,Clean Water Permitting,,,,,Not Yet Submitted
 10000074,Storage Tanks,Site Specific Installation Permit,,,,,Not Yet Submitted
 10000074,WRM Water Obstructions & Encroachments,Water Obstruction & Enchroachment Pmt,,,,,Not Yet Submitted
+10000076,WPC Erosion & Sediment Control,Construction Stormwater NPDES Permitting (Chapter 102),,,,,Not Yet Submitted
+10000076,WRM Water Obstructions & Encroachments,Water Obstruction & Encroachment Permitting (Chapter 105),,,,,Not Yet Submitted
+10000076,WPC NPDES,Clean Water Permitting,,,,,Not Yet Submitted
+10000076,Air Quality,Plan Approval,,,,,Not Yet Submitted
+10000076,Storage Tanks,Storage Tank Registration/Permitting,,,,,Not Yet Submitted
