@@ -72,6 +72,304 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "week-in-review-2026-11-08",
+        "art": "review",
+        "section": "stories",
+        "title": "Week in Review: Data Centers Lose Nearly Every Ballot Measure Nationwide, Georgia Flips Its Utility Board, and OpenAI Launches a Post-Election Charm Offensive",
+        "seo_title": "Week in review: data centers lose at the ballot box",
+        "date": _dt.date(2026, 11, 8),
+        "author": "GridWatch AI",
+        "tags": ["week in review", "moratorium", "election", "Ohio", "Georgia",
+                 "Texas", "Virginia", "New Jersey", "Maine", "Connecticut",
+                 "Idaho", "PUC", "community", "money"],
+        "summary": (
+            "In Tuesday's elections, voters decided data-center ballot "
+            "measures in roughly ten states and 41 local contests — the "
+            "industry won one. Ohio's wave of local bans swept through "
+            "Election Day and cost Vantage Data Centers a project in "
+            "Oregon, Ohio; Georgia voters flipped control of the state's "
+            "Public Service Commission; and Texas elected a governor who "
+            "says she'll keep the state's data center moratorium going. "
+            "OpenAI responded with a new policy framework promising more "
+            "local input and a pledge to cover its own power costs. Plus: "
+            "Bernie Sanders wants a national moratorium, and fresh bans in "
+            "Maine, Connecticut and New Jersey."
+        ),
+        "body": """
+Welcome back to the GridWatch AI Week in Review — our Sunday roundup of the
+most important data center stories from the past seven days, what they mean
+for communities, and what you can learn from each one. This week's roundup
+covers Tuesday's elections, which touched nearly every story we have.
+
+---
+
+### 1. Voters rejected data centers almost everywhere they were on the ballot
+
+**What happened:** On Nov. 3, voters in roughly ten states decided
+data-center-related ballot measures spanning 41 local contests. The
+data-center industry won exactly one of them, according to
+[CNBC](https://www.cnbc.com/) and the
+[Latin Times](https://www.latintimes.com/), which both published that tally
+after results came in. [Mother Jones](https://www.motherjones.com/) counted
+close to 40 towns that rejected data center projects outright, and
+[Ballotpedia](https://ballotpedia.org/) had flagged the roughly ten-state
+slate of measures before the vote. We first wrote about data centers
+becoming a cross-partisan political liability back in August, in
+[Data Center Opposition Just Became a National Political Force](/blog/data-center-midterms-politics-2026) —
+this week is that prediction arriving all at once.
+
+**Why it matters:** A single-digit industry win rate across 41 separate
+local votes is not noise; it is the clearest national signal yet that
+opposing a data center is no longer a fringe local-politics position. Every
+council member and state legislator up in the next cycle saw these numbers
+too.
+
+**What to learn — a ballot-measure win is a mandate, not an ordinance:**
+Voters approving a ban or a moratorium question tells elected officials what
+residents want, but in most places it still has to be implemented or
+re-passed as a specific ordinance with its own definitions, exemptions and
+enforcement mechanism — the same gap we flagged in
+[Pittsburg, California](/blog/week-in-review-2026-11-01) two weeks ago, where
+a disputed definitions section nearly let a project through a pause voters
+thought was airtight. After a ballot win near you, the next question is which
+board writes the implementing ordinance, and when. See the
+[moratorium tracker](/moratoriums.html) for how local actions turn into
+enforceable rules.
+
+*Sources: [CNBC, Nov 4](https://www.cnbc.com/);
+[Latin Times, Nov 6](https://www.latintimes.com/);
+[Mother Jones, Nov 5](https://www.motherjones.com/);
+[Ballotpedia](https://ballotpedia.org/)*
+
+---
+
+### 2. Ohio's moratorium wave swept through Election Day — and cost Vantage a project
+
+**What happened:** Local data center bans "passed easily" across Ohio on
+Nov. 3, according to the
+[Columbus Dispatch](https://www.dispatch.com/), and
+[WYSO Public Radio](https://www.wyso.org/) reported voters across
+southwest Ohio pushed back against both data centers and the politicians who
+support them. Specific results piled up fast: Pataskala and the village of
+Granville both passed bans, per the
+[Newark Advocate](https://www.newarkadvocate.com/) (the Licking County,
+Ohio paper — not to be confused with Newark, New Jersey, which had its own
+data center news this week, below); Urbana voters recalled their mayor and
+approved a ban in the same election, according to
+[WDTN](https://www.wdtn.com/); and Upper Sandusky approved a ban citing
+farmland and water concerns, per
+[Brownfield Ag News](https://www.brownfieldagnews.com/). In Oregon, Ohio, a
+Toledo suburb, voters approved a charter amendment restricting data centers
+— known locally as Issue 25 — and
+[WTVG](https://www.13abc.com/) reports Vantage Data Centers has said it will
+not move forward with its project there as a result.
+
+**Why it matters:** We counted 60 local Ohio moratorium actions in our
+[September look at the state's wave](/blog/ohio-moratorium-wave-2026); this
+week's results show the wave didn't crest, it kept building straight through
+a statewide election. The Vantage withdrawal is also a rarer thing than most
+of this week's headlines: a named operator confirming, on the record, that a
+specific local vote actually stopped a specific project — not just a pause
+while rules get written.
+
+**What to learn — a citizen-passed charter amendment is harder to undo than
+a council ordinance:** Oregon, Ohio's restriction took the form of a charter
+amendment, which (unlike an ordinance a council adopted on its own vote)
+generally can't be repealed or weakened by that same council without going
+back to voters. If your community is choosing how to enact a restriction,
+ask whether a ballot-approved charter change is on the table — it changes who
+gets to undo it later. See the
+[Ohio state page](/states/ohio.html) and the
+[moratorium tracker](/moratoriums.html).
+
+*Sources: [Columbus Dispatch, Nov 6](https://www.dispatch.com/);
+[WYSO, Nov 5](https://www.wyso.org/);
+[Newark Advocate, Nov 4](https://www.newarkadvocate.com/);
+[WDTN, Nov 4](https://www.wdtn.com/);
+[Brownfield Ag News, Nov 6](https://www.brownfieldagnews.com/);
+[WTVG/13abc, Nov 5](https://www.13abc.com/)*
+
+---
+
+### 3. Georgia flips its utility board, and OpenAI answers there first
+
+**What happened:** Georgia voters handed Democrats control of the state's
+Public Service Commission, according to
+[The Daily Caller](https://dailycaller.com/) and
+[WSB-TV](https://www.wsbtv.com/) — the same PSC listed in our own
+[PUC directory](/puc.html) as the body that regulates Georgia Power. WSB-TV
+reports the newly elected commissioner has said they support a data center
+moratorium. Separately this week, OpenAI said it would begin testing a
+"Grid Protectors" program that cuts its data centers' electricity draw during
+peak demand, starting with up to 1 GW of capacity in Georgia, according to
+[Tom's Hardware](https://www.tomshardware.com/) and
+[FourWeekMBA](https://fourweekmba.com/).
+
+**Why it matters:** The Public Service Commission — not the local zoning
+board — is who approves Georgia Power's rate cases and decides whether
+ordinary ratepayers help cover the cost of serving a new data center campus.
+Flipping its majority changes the referee in that fight just as OpenAI is
+making Georgia the test case for its own voluntary demand-reduction pitch.
+We've covered Georgia data center fights before in
+[our September look at Statesboro and Effingham County](/blog/georgia-data-center-lawsuits-statesboro-effingham-2026);
+this is the state-level piece of the same story.
+
+**What to learn — your PUC/PSC is often the most powerful official you've
+never heard of:** A zoning board can deny a site plan; a PUC decides whether
+the rest of a utility's customers subsidize the power line built for one.
+Before a hearing, find out who regulates your state's utility — our
+[PUC directory](/puc.html) lists all 51 — and ask what rate case, if any, is
+open for the project near you. See the
+[Georgia state page](/states/georgia.html).
+
+*Sources: [The Daily Caller, Nov 6](https://dailycaller.com/);
+[WSB-TV, Nov 5](https://www.wsbtv.com/);
+[Tom's Hardware, Nov 3](https://www.tomshardware.com/);
+[FourWeekMBA, Nov 2](https://fourweekmba.com/)*
+
+---
+
+### 4. Texas elects a governor who promises to keep the moratorium going — and the spin starts immediately
+
+**What happened:** Gina Hinojosa, elected Texas's next governor, said she
+will keep the state's data center moratorium in place and pursue further
+legislation, according to
+[Data Center Dynamics](https://www.datacenterdynamics.com/) and
+[KHOU](https://www.khou.com/).
+
+**Why it matters:** Texas carries one of the largest pipelines of planned
+data center capacity in the country, so a governor committed to an active
+moratorium is a bigger lever than almost any single local vote this week.
+Within days, at least one financial newsletter was already arguing the
+market shouldn't worry much, framing Hinojosa as meaningfully different from
+national moratorium advocates like Sen. Bernie Sanders (more on him below) —
+a reminder that a campaign promise gets reinterpreted by interested parties
+the moment the polls close.
+
+**What to learn — track the bill, not the soundbite:** "The governor supports
+a moratorium" and "the legislature passed a moratorium extension" are
+different facts, and only one of them is binding. Once a legislative session
+opens, look for the actual bill number and its committee status rather than
+re-reading the campaign-trail quote. See our
+[Texas ERCOT queue explainer](/blog/texas-ercot-queue-freeze-2026) for how the
+state's existing freeze actually works on the ground, and the
+[Texas state page](/states/texas.html).
+
+*Sources: [Data Center Dynamics, Nov 5](https://www.datacenterdynamics.com/);
+[KHOU, Nov 7](https://www.khou.com/)*
+
+---
+
+### 5. OpenAI's post-election pivot: more local input, and a pledge to cover power costs
+
+**What happened:** OpenAI laid out a new policy framework for its data
+centers this week, according to
+[Politico](https://www.politico.com/), which
+[The New York Times](https://www.nytimes.com/) reports includes giving local
+communities more say in siting decisions. [Yahoo Finance](https://finance.yahoo.com/)
+reports the company also pledged to "pay the full cost of the electricity we
+use," so that households near its facilities aren't billed for its draw on
+the grid.
+
+**Why it matters:** The complaint behind nearly every moratorium fight on
+this page — that ordinary ratepayers end up subsidizing a hyperscaler's grid
+hookup — is exactly what OpenAI is now promising, in public, to not do. That
+is a notable public commitment from a frontier AI lab, and also exactly the
+kind of pledge this site exists to track rather than take at face value.
+
+**What to learn — a company pledge is not a filed rate-case stipulation:**
+We've been here before. Our
+[look at Microsoft's ratepayer pledge](/blog/microsoft-ratepayer-pledge-hypocrisy-2026)
+found a gap between a company's public promise and what was actually on file
+with regulators. Before citing OpenAI's pledge at a hearing, ask your utility
+or PUC whether it appears as an actual rider or stipulation in an open rate
+case — not just a company blog post. See the [PUC directory](/puc.html).
+
+*Sources: [Politico, Nov 5](https://www.politico.com/);
+[The New York Times, Nov 5](https://www.nytimes.com/);
+[Yahoo Finance, Nov 6](https://finance.yahoo.com/)*
+
+---
+
+### 6. Virginia: "the midterms' other big loser"
+
+**What happened:** [Politico](https://www.politico.com/) called data centers
+the midterms' other big loser in Virginia, and
+[WJLA](https://wjla.com/) reports Virginia voters backed candidates who ran
+on stricter data center regulation.
+
+**Why it matters:** Virginia hosts the largest concentration of existing
+data centers in the country, so a political shift there carries more weight
+than a similar shift almost anywhere else. We've been tracking Virginia's
+decision calendar closely — see
+[our September rundown of Loudoun's and Fairfax's votes](/blog/virginia-september-2026-decision-calendar)
+and [Loudoun's pause vote](/blog/loudoun-pause-vote-2026) — and this week's
+results mean the next round of those votes happens under different political
+pressure than the last.
+
+**What to learn — "backed stricter regulation" can mean several different
+things:** A candidate's data center position usually bundles several
+separate levers — siting authority, by-right approval repeal, ratepayer cost
+allocation, water permitting — that don't all move together. Ask a newly
+elected official which specific lever they intend to pull first. See the
+[Virginia state page](/states/virginia.html).
+
+*Sources: [Politico, Nov 4](https://www.politico.com/);
+[WJLA, Nov 5](https://wjla.com/)*
+
+---
+
+### 7. Also this week: Sanders calls for a national moratorium, and more local bans in Maine, Connecticut and New Jersey
+
+Sen. Bernie Sanders and other top Democrats called for a "national data
+center moratorium now" after this week's results, according to
+[Quartz](https://qz.com/) and [CNBC](https://www.cnbc.com/). A federal
+moratorium has no realistic path through Congress this session, but it
+signals where part of the party wants to take this fight next.
+
+Four more results to know about:
+
+| Locality | State | Action | Status |
+|--|--|--|--|
+| 8 towns (incl. Scarborough) | ME | Local ballot bans | Eight more Maine towns adopted data center bans in Tuesday's lopsided local elections, including a unanimous Town Council ban in Scarborough ([Maine Monitor](https://www.themainemonitor.org/), [Maine Morning Star](https://mainemorningstar.com/), [WMTW](https://www.wmtw.com/)) |
+| Cromwell and others | CT | Moratorium proposals spreading | Multiple Connecticut towns, including Cromwell, are moving toward local pauses on new data center applications; a statewide moratorium bill could be next ([CT Insider](https://www.ctinsider.com/)) |
+| Unnamed district | NJ | Incumbent lost reelection | A sitting member of Congress whose district included a contested data center project lost reelection, according to [New Jersey Digest](https://newjerseydigest.com/) |
+| Boise | ID | Emergency moratorium proposed | Mayor Lauren McLean proposed an emergency moratorium on mega data centers within city limits; two councilmembers have voiced support ([KTVB](https://www.ktvb.com/)) |
+
+**What to learn — New Jersey's ban count is a trap, so don't quote a number
+you can't source yourself:** When we tried to pin down New Jersey's statewide
+ban total in August, four different groups published four different
+totals — see
+[Four Groups Counted New Jersey's Data Center Bans. They Got 37, 38, 50 and 69](/blog/new-jersey-ban-count-2026) —
+because they were counting different things. Treat any single "definitive"
+count of this week's results the same way: ask what, exactly, is being
+counted before you repeat it.
+
+---
+
+### What to watch next week
+
+- **Georgia** — what the newly elected PSC commissioner's stated support for
+  a moratorium turns into once an actual docket is open
+- **Georgia** — whether OpenAI's "Grid Protectors" demand-reduction pilot
+  actually launches, and on what terms
+- **Texas** — what legislation, if any, Governor-elect Hinojosa's office
+  files once the legislature is back in session
+- **Oregon, Ohio** — whether Vantage Data Centers' withdrawal is final, or
+  whether the charter amendment draws a legal challenge
+- **Boise, ID** — whether the City Council takes up Mayor McLean's emergency
+  moratorium proposal
+- **Connecticut** — whether a statewide moratorium bill actually gets filed
+
+---
+
+*Every Sunday we cover the week's most important data center stories,
+explain the underlying concepts, and point you to the tools you need. Know
+a story we should cover? Reach out at hello@aigridwatch.com or sign up for
+the newsletter below.*
+""",
+    },
+    {
         "id": "week-in-review-2026-11-01",
         "art": "review",
         "section": "stories",

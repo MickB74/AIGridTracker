@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/week-in-review-2026-11-08",
+      "destination": "/blog/week-in-review-2026-11-08",
+      "permanent": true
+    },
+    {
       "source": "/week-in-review-2026-11-01",
       "destination": "/blog/week-in-review-2026-11-01",
       "permanent": true
@@ -1116,16 +1121,6 @@
     {
       "source": "/communities/lyon-county-nv.html",
       "destination": "/states/nevada",
-      "permanent": true
-    },
-    {
-      "source": "/communities/madison-county-ms",
-      "destination": "/states/mississippi",
-      "permanent": true
-    },
-    {
-      "source": "/communities/madison-county-ms.html",
-      "destination": "/states/mississippi",
       "permanent": true
     },
     {

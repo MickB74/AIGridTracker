@@ -4282,5 +4282,54 @@
     "locality": "Arcata, CA",
     "kind": "status_changed",
     "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-08",
+    "id": "lysander-onondaga-co-ny",
+    "locality": "Lysander (Onondaga Co.), NY",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-08",
+    "id": "charlotte-nc",
+    "locality": "Charlotte, NC",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-08",
+    "id": "lavon-tx",
+    "locality": "Lavon, TX",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-08",
+    "id": "camden-county-ga",
+    "locality": "Camden County, GA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-08",
+    "id": "upper-burrell-township-pa",
+    "locality": "Upper Burrell Township, PA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-08",
+    "id": "smithfield-township-pa",
+    "locality": "Smithfield Township, PA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-08",
+    "id": "west-whiteland-township-pa",
+    "locality": "West Whiteland Township, PA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
   }
 ]

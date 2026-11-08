@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Week in Review: Data Centers Lose Nearly Every Ballot Measure Nationwide, Georgia Flips Its Utility Board, and OpenAI Launches a Post-Election Charm Offensive</title>
+      <link>https://aigridwatch.com/blog/week-in-review-2026-11-08</link>
+      <guid>https://aigridwatch.com/blog/week-in-review-2026-11-08</guid>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+      <description>In Tuesday&#x27;s elections, voters decided data-center ballot measures in roughly ten states and 41 local contests — the industry won one. Ohio&#x27;s wave of local bans swept through Election Day and cost Vantage Data Centers a project in Oregon, Ohio; Georgia voters flipped control of the state&#x27;s Public Service Commission; and Texas elected a governor who says she&#x27;ll keep the state&#x27;s data center moratorium going. OpenAI responded with a new policy framework promising more local input and a pledge to cover its own power costs. Plus: Bernie Sanders wants a national moratorium, and fresh bans in Maine, Connecticut and New Jersey.</description>
+    </item>
+    <item>
       <title>Week in Review: Charlotte Extends Its Data Center Pause to 2027, Aurora Fails to Ban Them Twice, and a Federal Judge Keeps a Pollution Suit Against Elon Musk&#x27;s xAI Alive</title>
       <link>https://aigridwatch.com/blog/week-in-review-2026-11-01</link>
       <guid>https://aigridwatch.com/blog/week-in-review-2026-11-01</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/new-hampshire-town-votes-2026</guid>
       <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
       <description>Nottingham voted 1,335-143 for a 12-month data center moratorium on September 8, in a state with no hyperscale data center and no pending project in town. Canterbury banned them outright, Rochester zoned them into a landfill district, and a bill that would have voided all of it was tabled 304-11. A catalog of what each legal instrument costs and buys.</description>
-    </item>
-    <item>
-      <title>Michigan Has 64 Data Center Moratoriums, a Recall Wave, and a Congressional Delegation That Voted Both Ways</title>
-      <link>https://aigridwatch.com/blog/michigan-moratorium-wave-2026</link>
-      <guid>https://aigridwatch.com/blog/michigan-moratorium-wave-2026</guid>
-      <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
-      <description>Michigan now has the second-most data center moratoriums in the country. Detroit&#x27;s mayor has refused to adopt one the city council passed. A township that rejected its moratorium is now recalling the board members who voted no. And the state&#x27;s House delegation voted to preempt all local data center regulation — then pivoted.</description>
     </item>
 </channel>
 </rss>
