@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-08T16:43:19.496861+00:00",
+  "fetched_at": "2026-11-08T20:24:30.059719+00:00",
   "items": [
     {
       "title": "Europeans protest construction of large AI data centres across continent",
@@ -24,6 +24,14 @@
       "video_id": "rU94BbCiY2A",
       "published_iso": "2026-11-05T22:40:58+00:00",
       "category": "independent",
+      "states": []
+    },
+    {
+      "title": "Tech Volatility Grips Stock Market as Blue Chips Lead; OpenAI to Pay for Data Center Power",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB2V1l5TklBVnpfVDlXTGR1U0lDXzdZTEdONWh4Z19DUktLVFlCZXFrTmdMZUxfcE1JeDF1RHJHaUZGUDZ5TEMweG1MOGd4QXVvRk4xd3Vn?oc=5",
+      "video_id": "",
+      "published_iso": "2026-11-05T14:30:13+00:00",
       "states": []
     },
     {
@@ -115,14 +123,6 @@
       "states": []
     },
     {
-      "title": "Why data centre communities worry about water",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE81eXVxSDB1OHN2V0VqeTRJMjNJSXVQLUVsclRTMkdfeUNMZHlCWjdzWHV1MWd0dWRhTVFyT2RFRWdWNWpITzAxelZZc1JxSEdTUUlLenlR?oc=5",
-      "video_id": "",
-      "published_iso": "2026-06-08T22:05:42+00:00",
-      "states": []
-    },
-    {
       "title": "6-month moratorium on data centers",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5GVFowQml3bzYzQ2xvN0Y1TEYwNEg3Qng5cjN4NUNnSG1IOEkwRmNDaEtUMURWWGU1eEVXejZmRUpCSFFHSUVRdVRRY1lBSjl0WG9mSThB?oc=5",
@@ -165,14 +165,6 @@
       "states": []
     },
     {
-      "title": "Debilitating white noise: Data center neighbors complain about high-pitched sounds 'all the time'",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAzV1ZmQ1kyZlFWb1F6dWd2RzJGU19fOEk1M25qSFpQa25mc2lQUm1MRjdjSFN1NVdOYnBHVWlDZnozRkdlOHQweEJJV0FTYjRnWlUxVXV3?oc=5",
-      "video_id": "",
-      "published_iso": "2026-04-06T21:35:46+00:00",
-      "states": []
-    },
-    {
       "title": "Rep. AOC and Senator Sanders Introduce the AI Data Center Moratorium Act",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5fd1h1cDFxd2V2b2UyVi13X29TOVE0NjUxQ3ZJOEM3ZTBKWGtyTy1OQ3ZiWDM4X3pwazd0aXl5aUpia2VlMWlGdlRwVUNRSWRYWWl1cnFB?oc=5",
@@ -207,21 +199,11 @@
       "states": []
     },
     {
-      "title": "The community around Meta\u2019s Louisiana data center has questions. We\u2019re looking for answers.",
+      "title": "What Is Data Center Power Infrastructure and How Do UPS, PDUs, and Redundancy Systems Work?",
       "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9NaGRXaGJkbkFtR3RwaE9pVjF5X25nRmpoeUVZQzlMS1dyR0JLLVVoQ0lVeFBFOVdpT1pFRG83QmtBSFZZOW1kVEVsTkhrRXdPZGJEUU53?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5KcXJKc1c3dURhN0o2dWlObGpKZVd0YWxVOVFVTXRqN0JLUnlNR1h0UVVad0pqQ0VzOUQxMmFXVzZEckNuM1cyY1Zqc3Jsb3A3c3owYmxR?oc=5",
       "video_id": "",
-      "published_iso": "2026-03-11T21:15:32+00:00",
-      "states": [
-        "Louisiana"
-      ]
-    },
-    {
-      "title": "Moratorium NOW: AI Data Center National Organizing Call",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1LMGhUbUR1SUN2VE83RW4wQVZCSDI0QnQxOVZvZHlyTHRibVRHc0ZwS3BnSTZyVHBfQVI5UU8xY1Q2dy1fakFyNEE4OVdGb2NMRWtIcTBn?oc=5",
-      "video_id": "",
-      "published_iso": "2026-03-05T15:48:41+00:00",
+      "published_iso": "2026-03-15T19:53:56+00:00",
       "states": []
     },
     {
@@ -233,11 +215,11 @@
       "states": []
     },
     {
-      "title": "'This isn't right': impact of AI data centers on residents and their utility bills",
+      "title": "Understanding water use at Microsoft datacenters",
       "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1VcnFpaU42Q1hCd1N4VW9WUExfZkNscTZuNlhIOWh2ZXpRWDVIME1YM2Rrc2hyU3MyczlHMEV2OHBpNVFGcTlIY3BvTjEwWnF5QWlHZ2Z3?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE92MDlfbDJlSXpqcDFBa2VlajZtdEpUdk5Zem5MM3FsdENrbHJ6Sy1TVGFaSGtkckdsVGktYnlYSTJMRGhnRmtjZXZZOFZ5UnVwQWFTWVlB?oc=5",
       "video_id": "",
-      "published_iso": "2026-02-19T03:11:46+00:00",
+      "published_iso": "2025-10-02T17:38:14+00:00",
       "states": []
     },
     {
@@ -246,6 +228,14 @@
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fSFJMNVR3SUVhcEJMUXhpUGVTYlBtMFNEX0pPNHROeW1DcVZ3VncwNHVsOWFBaEF5Z2pVQjAtQ1ZWdE9HNjJCdnZmRW9ETF9EcXRDenhR?oc=5",
       "video_id": "",
       "published_iso": "2025-09-02T20:47:24+00:00",
+      "states": []
+    },
+    {
+      "title": "Why data centers are eating up enormous water resources | Transforming Business",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1UdEk5RkhUd2VncGE3OGoyLUJsX1d2REpfaWJEc01sMThkQlBjVjJENUE5THBQNEppRjlUd3hDU1RNVVluVTdqaDdPMFRLZG9kQXZKUTl3?oc=5",
+      "video_id": "",
+      "published_iso": "2025-07-21T13:38:18+00:00",
       "states": []
     },
     {
