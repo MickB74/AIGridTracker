@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-11-08",
+  "generated": "2026-11-09",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 887,
   "states": 49,
-  "enacted": 708,
+  "enacted": 706,
   "proposed": 83,
   "official_sourced": 68,
   "by_state": {
@@ -26,7 +26,7 @@
     },
     "IA": {
       "total": 21,
-      "enacted": 18,
+      "enacted": 17,
       "proposed": 1
     },
     "IL": {
@@ -176,7 +176,7 @@
     },
     "PA": {
       "total": 19,
-      "enacted": 12,
+      "enacted": 11,
       "proposed": 2
     },
     "AZ": {
@@ -266,7 +266,7 @@
       "johnson-city-tn",
       "springfield-mo",
       "minneapolis-mn",
-      "johnson-county-ia",
+      "green-charter-township-mi",
       "normal-il",
       "putnam-county-in",
       "skagit-county-wa",
@@ -281,7 +281,6 @@
       "hart-mi",
       "forest-park-ga",
       "hazle-township-pa",
-      "butler-township-pa",
       "little-britain-township-pa",
       "dickinson-county-ia",
       "el-dorado-ks",
@@ -316,7 +315,6 @@
       "green-charter-township-mi",
       "northville-mi",
       "saginaw-mi",
-      "johnson-county-ia",
       "normal-il",
       "putnam-county-in",
       "skagit-county-wa",
@@ -356,9 +354,9 @@
       "newton-county-ga",
       "forest-park-ga",
       "loudon-county-tn",
+      "bay-county-fl",
       "frederick-county-md",
       "hazle-township-pa",
-      "butler-township-pa",
       "little-britain-township-pa",
       "dickinson-county-ia",
       "peosta-ia",
@@ -394,6 +392,7 @@
       "snohomish-county-wa",
       "sanford-me",
       "colleton-county-sc",
+      "warrick-county-in",
       "russellville-ar",
       "marshalltown-ia",
       "oklahoma-city-ok",
@@ -411,7 +410,6 @@
       "northville-mi",
       "saginaw-mi",
       "sterling-heights-mi",
-      "johnson-county-ia",
       "madison-wi",
       "normal-il",
       "putnam-county-in",
@@ -475,7 +473,6 @@
       "bay-county-fl",
       "frederick-county-md",
       "hazle-township-pa",
-      "butler-township-pa",
       "little-britain-township-pa",
       "dickinson-county-ia",
       "peosta-ia",
