@@ -140,7 +140,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-11-09",
       "status": "new",
       "origin": "news-scan"
     },
@@ -32568,7 +32568,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-11-09",
       "status": "new",
       "origin": "news-scan"
     },
@@ -36328,6 +36328,32 @@
       "last_seen": "2026-11-09",
       "status": "new",
       "origin": "archive-sweep"
+    },
+    {
+      "title": "Greeneville Municipal Planning To Consider Recommending Data Center Moratorium",
+      "outlet": "WGRV.com",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSjVvRGxiVzRsRktJUmtPQ2I5N2dpa3djUy1ZMmZydnh4YjF5enpUQnB2M0VXMUoxSUNlU1QzaHVBdi15SXptSVJpZm9tUFJ5X1pFS2I1WGpuU1E2ZzRmRm9pbjJibkFmVWdxWHc5UFpZY0xpNElBTHBjZlFQSkNVSkZXNTFhOE5mWTFHWW5fbFZWMVV4cVVCWkpyMlU?oc=5",
+      "published": "Mon, 09 Nov 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium city council",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Dade County considers 90-day moratorium as data center proposal advances",
+      "outlet": "WTVC",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWExURGt6Rm9wbk1hM21qZzlGdlRGV1FEdUxpSzlFQWFhdkkzZEJhRDFIRFFWMG9lXzNtb2hGRFh6OFkyQV9JVzFHbjJqX1ZDcDJTbVRLS0xFNk8wZkRVbnFNTjRoMXJWaU5xNjJOMEdabXB6YTZsWTl1TVRMcmxfSU9xZGVoT1NEZkJWTklmY3QwaF9iM1U3LUU0ZE5jNmtweDVhMkNxLVdtS3It?oc=5",
+      "published": "Fri, 06 Nov 2026",
+      "guess_locality": "Dade",
+      "guess_state": null,
+      "query": "data center moratorium county commission approved",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "status": "new",
+      "origin": "news-scan"
     },
     {
       "title": "Marion County Commissioners Direct Staff to Begin 12-Month Data Center Moratorium After Workshop Debate",
