@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 14595,
+  "count": 14608,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -149705,7 +149705,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-11-04",
-      "last_seen": "2026-11-10"
+      "last_seen": "2026-11-11"
     },
     {
       "title": "America got the anti-data-center wave it voted for. Here come the economic consequences",
@@ -156085,7 +156085,7 @@
       "locality": "Saginaw",
       "state": "MI",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-10"
+      "last_seen": "2026-11-11"
     },
     {
       "title": "Arizona approved 107 data center tax breaks before moratorium",
@@ -156767,7 +156767,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-10"
+      "last_seen": "2026-11-11"
     },
     {
       "title": "New Texas Administration Signals Tighter Data Center Rules: Implications for Industry",
@@ -158835,7 +158835,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-11-10",
-      "last_seen": "2026-11-10"
+      "last_seen": "2026-11-11"
     },
     {
       "title": "Texas wastewater: A new weapon against data center water woes",
@@ -160548,6 +160548,149 @@
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNc2d6cTJNcGd2WktxTnNWZGRkUS10dEVCYjhLM2lrUUptWGlWdnNuX0p6LXM0REVCd0t4NnlmV1NvV0l1ckY2UHdzckZjTDFVVE1rM2lfdlZQZXJUSzVKd3I5bWMyZk9zRXB6OHdOUkszS09uVWRMZER5eEV0b1RpVDFqeUczTjhPTjFV?oc=5",
       "published": "Wed, 11 Nov 2026 12:25:02 GMT",
       "published_iso": "2026-11-11T12:25:02+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11"
+    },
+    {
+      "title": "Hundreds pack La Pine City Hall to oppose proposed data center",
+      "outlet": "Central Oregon Daily",
+      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNWnB5RzZmeG1ZV3pWU1FKcnN2ZkZlcjc2U3k4Q2VTMU94T0tLSDgtQUE1d0diSUI0YjQzYjZ3ZDMyVjd1aUpGUXlSUThocTVCaG9hbHNDcGFqTXlULVlDd0FqSjZ0VDhaTkk0SkFYU0UtVmdDeEJ2ZkM3cGZJSl9CdU4zYlFabjd2SU9NRG0waERCeWxzYi1fVzlXNkZvSU56TEY5cTFiZjl5QkdnQTNYTEdRU2tFaDlyZTZfdWFqb0phbkp2bEI1QksyZHZsaXRxYnZ2NmtTZzdzQQ?oc=5",
+      "published": "Wed, 11 Nov 2026 00:32:50 GMT",
+      "published_iso": "2026-11-11T00:32:50+00:00",
+      "locality": null,
+      "state": "OR",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11"
+    },
+    {
+      "title": "Murphy residents decry data center proposal as county works on ordinance",
+      "outlet": "The Asheville Citizen Times",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxONm9iNUZORm9kcWdGTnR0NHFfc0RvcWRoV3hKWWpONnBfZzBrTG53dWRpanVJWHVteEtfOXFhSnhmbmx5UXoyRUZlLVB4T0tiTTJaekRwOHhaOXlvZUE2aF9oS3R0N0hBajNyTUpSM2RkcmhNU0tONlh3b1hIU1BuVUE3b1VocU04bFVwRkpPbnVwaWU3eEk0Tlc4bkExbVBaVWRtT18zYTBJVTBEYVlyYTdUWXlCaWZ3Z3JFSFU5VE1pdUdQd1hsV3RaSV9hWWpnX3RhR3NB?oc=5",
+      "published": "Wed, 11 Nov 2026 17:19:00 GMT",
+      "published_iso": "2026-11-11T17:19:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11"
+    },
+    {
+      "title": "Residents pack Sutton meeting to oppose $16 billion data center from Kraft Group",
+      "outlet": "The Business Journals",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPOVd3MXpmNkdaeWpnZVJLSWJuLTY3MnphcVNEY293SlVENEU1NnhSc3BnbU9kTDlXaEpKWUdKUkVqcDV0RWJ4M0NCbUgtajAxSXJ1Z01lLUVQalRzR2JxU3dGLVhyM1FIbzFkeHdsS2JIc09ZNjhTRUhHY0MzUGthZVZpRHROUFpPbVNJWld2amlVTnV4Tnk0ekdxSTdjWWVUMkh0WTZudE4?oc=5",
+      "published": "Wed, 11 Nov 2026 11:05:00 GMT",
+      "published_iso": "2026-11-11T11:05:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11"
+    },
+    {
+      "title": "OpenAI and Georgia county leaders hit with Mafia-style RICO racketeering lawsuit over $30 billion AI data center — residents allege closed-door conspiracy and NDAs were used to push 3.2-gigawatt ‘Project Camellia’ through",
+      "outlet": "Tom's Hardware",
+      "link": "https://news.google.com/rss/articles/CBMi8AJBVV95cUxPamJCY3otWUdoaXpvanUwaWYtMVF3R2lWeTExLXd1WFhLdjF0bFN4NVBNejJkNUpycWtoZFgwdkFaX0NQbzBYRGgzSFdtbm1RUW5uTjJsR3ZFVmVNb2YxUGstRjVRaFBGMmFIVGthcEQ5Vml3dmszQ0wyeHVwVFVuc0FJa3Jtbm5kR3JWSHBOV1NmeGJURDBsbDRLOWV2eDdwX3NyOUpYSzBZcjFCc2ZFLVZIaGl5U3NWRmlVUDAzUldBcy11ajVXbnpDVDRoSTlnMGZpTlFHYmJzUXlLMS1pN3VOWVNQZHltT3NtWlBQYnhGQjdlNW9VZU5ZWHRUbUtuYUVTTkFadHZFcTEyRVFxbzlwUUhudHpVUzBrZE1SV2gtclFodnJrZkIyT2RKMXlROGFzSmdSTVNxUm9FWDlWUWRNU2g4ZGZGMTJRbWN5ZlBpdzl3NHRNeFlSLTJhcjBLSlZCcnR0RTlJSzVjR1RFTg?oc=5",
+      "published": "Wed, 11 Nov 2026 16:30:00 GMT",
+      "published_iso": "2026-11-11T16:30:00+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11"
+    },
+    {
+      "title": "Vanderburgh County data center study group has three meetings left",
+      "outlet": "Courier & Press",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPbk9xNXYycmY1ajVSSEdlME5INGhxZjQyejNsRjF0ZkhTLUcxbFZOd0NlUmRBcFp1Z3R2Q2FOT29oOV93eEUxTVBZRUdEYUVOaFVLdFBoNzh3MlVaSzljWEhjX0ROUXdOUGFCYnc0TWRpaTFkRGRaUFhKUVRVbzAyVW1wMF80WlN2YVdVUjhxOF9xc3duS1M2WXFBNGRhdkJzeEZIeF9VRFo3UzUxdFhVMTh5N0NKTVZJM3FlM0E4eVpSeHBGU2c?oc=5",
+      "published": "Wed, 11 Nov 2026 16:17:00 GMT",
+      "published_iso": "2026-11-11T16:17:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11"
+    },
+    {
+      "title": "Texas Voters Reject Data Centers, Elect Democrats",
+      "outlet": "조선일보",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOTGJiaUVDZFB6d2ZKRGNZUzA1dmVvTGlJS05UZ1lJMVluMTBEdmFseEhIVVdhWDA4Q0VBREF2X1JRc09QWkpRQ203NG9HR0taSDFIcGtIYzlsbEFJUkFWdzRrSFdaV29DbmtlSTZOSGQwS0tnX0kzWGNlVnA1Ui1KTTJmd1Q?oc=5",
+      "published": "Wed, 11 Nov 2026 16:08:45 GMT",
+      "published_iso": "2026-11-11T16:08:45+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11"
+    },
+    {
+      "title": "Big Tech Wants to Build Data Centers Everywhere. Voters in Red and Blue States Want to Pump the Brakes",
+      "outlet": "U.S. News & World Report",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNeGdJQnUzWll0OG1KRGg1NkMyajI5REtKU0x3SDBhR0pva1B6ZHlHZU5BUkFLSnFyeXFySldkbVo4RUhtNlE2bzZfVEJ3dUsyQ0tOMDRkVEhRVzR1cTREZDVyM01RT01pczIxYWxwcldkcHYtNnNFN3lSS0JkcDRfR0ltTGk1RFJnRzVFU1I4dUpoV0hYc1FpOVZibWxPTUh1YU92Sm1CT0NNZU15Rmtvc0RzY0dDQms?oc=5",
+      "published": "Tue, 10 Nov 2026 12:00:39 GMT",
+      "published_iso": "2026-11-10T12:00:39+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-11"
+    },
+    {
+      "title": "City of Boise approves emergency moratorium on large data centers",
+      "outlet": "KBOI",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNaFZrU1JtdldnRHlVMk4tMGJqV2tLUm1XT3I1czlJTFpEWW9zVWhjUERZSkdURlo2MktndHk5Tk1pNjROYzZNbEd1Z2xmX004bDhpYU5TN21UTHF6SHdnekx1dEVxdlRuQW1aTnVGMW5ySWx5OWlkNXhvYXRJSnVFbEs2bDhLcnJxZXpBMzVTSFp1b21hakNpa2ROaXhNREU?oc=5",
+      "published": "Wed, 11 Nov 2026 03:56:58 GMT",
+      "published_iso": "2026-11-11T03:56:58+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11"
+    },
+    {
+      "title": "Romulus approves 180-day moratorium on data centers",
+      "outlet": "ClickOnDetroit | WDIV Local 4",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPaE14UkZUenlDeHJrWkwxWi1LYXJsZzRwMURRUFVJZG9VUjBmNHFoWk1SbFdsd01mTU5keHpGYWVFa0ppNEVWMzhPM05LaFZUUFdQQTJFOEl1SHdaYW10RU1OV0dBaHRoZkVXNC1ncVdsYm44MjdxY1pWYXFtczRBNUVvcUVxRjJQOXNmZm9wcnhzcm5Kd0hVdzQ0andLclJXV3ZSOEgzZjY?oc=5",
+      "published": "Tue, 10 Nov 2026 04:27:52 GMT",
+      "published_iso": "2026-11-10T04:27:52+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-11"
+    },
+    {
+      "title": "Data centers: Powering the digital economy while navigating emerging risks",
+      "outlet": "Kennedys Law LLP",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOQVAxTlE5V2FkSEdYLWFQQlB5aS1PRkw0NTcwdFBtSzliT0VUUW1fVG1RT0xkOHppT2QzRmk3dEZndUYwWXQ3NTF2Y1lQQzBRRGVoUUlEdzNpbWRwaWVVZzJOYjdtbWhSTzdid0ZiYzdkaE9QSUpEcTJkUHFxVnN5ellLZGZtQzdZcnM0ZzlxZkZNcFAzUFBIWUc4bHZXNkl4WW4ycGNqZTFiWFNCMlZUQjdBZlpPMWtIc3ZHb2NhUXJqaTRkQ3RrbWZmM3pBS3I5VlRZ?oc=5",
+      "published": "Mon, 09 Nov 2026 08:00:00 GMT",
+      "published_iso": "2026-11-09T08:00:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-11"
+    },
+    {
+      "title": "These 11 South Jersey towns have adopted data center bans or restrictions",
+      "outlet": "Press of Atlantic City",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQaGxIOWdSSnFpSUlja3NXWmR0Z2JPeFdiMTVSSXZTZXR4aWVSTE8zbVEwR05ZZ3A4dWNfX0xLVmY5Ynh0Y3g4ZW5qc2JrM3dvT3czY2poN0RsWXU5QVdGYVlyRXdkT1Bnc1MyWGdCYWctczZycVVTUlAyejVpbXhrdEppd0pOTmJTcEdEWF9YQmlpZVA1WDBhaHpndDVaNUNuSFk1emhncnFUdkVzR09sUXIyUQ?oc=5",
+      "published": "Wed, 11 Nov 2026 16:00:00 GMT",
+      "published_iso": "2026-11-11T16:00:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11"
+    },
+    {
+      "title": "Spanberger, Democrats Outline Virginia's 2027 Agenda",
+      "outlet": "Hoodline",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQb3RpYWwxNWVWLVYxZWZFeEowLWo5WXlEeGtJVklfNnRIbGQ4ajdjM1Y2SHh5MHBJeXptVDJwXzh3OFdpYUpzX3JMdkI4UDlKSGpPV19SX2NoblA0Uy1jVHBraC1XeFZYRDRDYXBxWE5Lb0hBangzRTBVT2dKbUFURTdMSVB6c2VaUTN4NzVIRWd2VmZBMVVBdUI3elpOTk1ITGg0ajBPelhTRWJvV2ZSUXNOZEI3UQ?oc=5",
+      "published": "Wed, 11 Nov 2026 17:00:29 GMT",
+      "published_iso": "2026-11-11T17:00:29+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11"
+    },
+    {
+      "title": "The impact of data centers on the midterm elections",
+      "outlet": "Spectrum News",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNTTdROW9teDdfNmxqN3gtVklobFJKbUZId1o5SkdTclZFOWs5TG0tLU9IaXhpZmd0REVseUJMVlZjVHp2MkhPWV8yb21fVTRFREswTUVGdndIdGhieGNmVWpadjNmeW5zOEw2eWdZS1NPcTl4bzlsU3JQS0FnaVFIMy11SFRVNDJlNVFqV2Y2dGpKVi1SSDdUeGc2U2wwNmFpYlE?oc=5",
+      "published": "Wed, 11 Nov 2026 17:41:09 GMT",
+      "published_iso": "2026-11-11T17:41:09+00:00",
       "locality": null,
       "state": "TX",
       "first_seen": "2026-11-11",
