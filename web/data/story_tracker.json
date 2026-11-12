@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 14745,
+  "count": 14768,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -55974,7 +55974,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-07-30",
-      "last_seen": "2026-11-11"
+      "last_seen": "2026-11-12"
     },
     {
       "title": "Community talks data centers in Warrick County",
@@ -55985,7 +55985,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-11-01"
+      "last_seen": "2026-11-12"
     },
     {
       "title": "Man injured in early morning rollover crash in Cass County",
@@ -123173,7 +123173,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-11"
+      "last_seen": "2026-11-12"
     },
     {
       "title": "Data center proposal heard by Warrick County Commissioners",
@@ -153577,7 +153577,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-09"
+      "last_seen": "2026-11-12"
     },
     {
       "title": "Update: Market Chatter: Microsoft Declines Texas Data Center Contract Extension With Nscale, Tightening Data Center Oversight",
@@ -155150,7 +155150,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-11-08",
-      "last_seen": "2026-11-10"
+      "last_seen": "2026-11-12"
     },
     {
       "title": "Is Texas banning data centers? What Gina Hinojosa's proposed pause would and wouldn't cover",
@@ -156712,7 +156712,7 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-11"
+      "last_seen": "2026-11-12"
     },
     {
       "title": "Starke County Commissioners approve ban on commercial data centers",
@@ -159605,7 +159605,7 @@
       "locality": "Botetourt County",
       "state": "VA",
       "first_seen": "2026-11-10",
-      "last_seen": "2026-11-11"
+      "last_seen": "2026-11-12"
     },
     {
       "title": "Fort Worth committee presents recommendations on how city can best regulate data centers",
@@ -160804,7 +160804,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-11-11",
-      "last_seen": "2026-11-11"
+      "last_seen": "2026-11-12"
     },
     {
       "title": "Data center restrictions pass in Saginaw Township and Romulus",
@@ -160826,7 +160826,7 @@
       "locality": "Oakland",
       "state": "CA",
       "first_seen": "2026-11-11",
-      "last_seen": "2026-11-11"
+      "last_seen": "2026-11-12"
     },
     {
       "title": "Idaho city approves 6-month moratorium on large data center construction",
@@ -162201,6 +162201,259 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-11-10",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "$150 million Fairfield data center plan advances, residents push back",
+      "outlet": "AL.com",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbE5EbTRpbnZiQjhoNHUtZ3NORVRFNTktaElNWTRMWWJKemd2NGRJQ1VWbTA2eDJUbm54WXFHd05QMkoybmVsaWlSZ2hxeXVIT3RjTTRCRVBKTDVPaTBDUW5GTXlITVBtUDVDTzJkSzRRZDMxSDZaSVVVZXRpUDN3c1kxMmJSdW5mQlMyQ095bmtiaWxLaEU0VjRESlBucnFaV3hnQ0FGd3hINDlubEdLaEl2MzNrUk9iaG1Z?oc=5",
+      "published": "Wed, 11 Nov 2026 18:31:00 GMT",
+      "published_iso": "2026-11-11T18:31:00+00:00",
+      "locality": "Fairfield",
+      "state": "AL",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Allen Park extends its data center moratorium",
+      "outlet": "The Detroit News",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQbkNuclJJM2FIblJhSF9pbVVBSWoyS3VZelUyMUJFYldTenZZNmNDVENrbnVPMDMtZHpVT0xWY1JQenh3eU00TExPc01GTU5TTE5Wal8yZTZQR3R3MFRPTEhTZHFxdEFTRTBXODhYa2hlbWVRc2t6ZWptdmc0YkhBRzMwT0Zjak4wYzBMZ016TG5PUWhYTm5vMkhxUGVxTkFLRkRkR244OWptTXkzYmo5WFhoeUQ2OW5GY2h3QWowbWtQYVBjbkN0VTNjeVM?oc=5",
+      "published": "Thu, 12 Nov 2026 18:04:00 GMT",
+      "published_iso": "2026-11-12T18:04:00+00:00",
+      "locality": "Allen Park",
+      "state": "MI",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Oakland to vote on data center moratorium extension",
+      "outlet": "NBC Bay Area",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPNzBKd013aFFDTElCOVRwaWFMdjY2XzdFeWdYY1ItcnJ4VkRqM2pWRGd2Y1pCdjNmUWw3aEVaVk1sc0s5b3lZNUFmYlVuX1FYbGhCMl9pSlVRcV9jbGpuNnE3Q2Izc0tEcDBZTkl3ejgzUzRWeWZQRm9UOE9UZkg3Q2VqS19fNk4tSE9nVC1samk0SEN6VXFn?oc=5",
+      "published": "Tue, 10 Nov 2026 15:55:02 GMT",
+      "published_iso": "2026-11-10T15:55:02+00:00",
+      "locality": "Oakland",
+      "state": "CA",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Public notice: Salem City Council public hearing – regulation of data centers",
+      "outlet": "Salem Reporter",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPdWtNX25aT19IdDA5TjBiSVRBbmdHQ3lndUdrNUVUaFdxMm14UG1RVlczS1pxT0t6OVJHZ3E2LWhMV2tqMHBiT0I0YTZ4ZjNUX0N4QnlpUDU1amJoZnZNbXNkc1lOU2U4SXBHXzZsQ2k3WWNadXZIdm9GbHJ0Y2QtaWgxR0ZSTm5OS2FVRFRLVTRfd0RoQkNTbHdxYTk0Sjc3eFVLenVVUQ?oc=5",
+      "published": "Thu, 12 Nov 2026 14:31:43 GMT",
+      "published_iso": "2026-11-12T14:31:43+00:00",
+      "locality": "Salem",
+      "state": "OR",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Oakland City Council Unanimously Extends Data Center Moratorium for a Year",
+      "outlet": "Democracy Now!",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNLWh0Zm9nN1J5T0EtUG5rdWtUc19SOG4tYjl6YXN1RmdoVmlBTHlWUUdyOElQdG5BTUc2ZG5kQThXaGxJWEpBSkpsaVItVjI3OVd1bV9VWUs1bDZWanRWWXA1UGpqSWVoTjdmYUlwRlBCd2c4WGh2cGZBRmxULV9kSGtqQlpyWUtrVHdMSE9wT1ZYWC1Db3Y4Nkw5Yy1aMVRXeVN6ZWpBMGRRMVVvTmVTNmp5akNTYnFlV0VPNW5xbU44QQ?oc=5",
+      "published": "Thu, 12 Nov 2026 15:41:07 GMT",
+      "published_iso": "2026-11-12T15:41:07+00:00",
+      "locality": "Oakland",
+      "state": "CA",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "High Ranking Republican Joins Dems To Back Nationwide Data Center Moratorium",
+      "outlet": "Gizmodo",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPOFptNkEtZjVaY2pEX0dsS3lIaUJhVmt4MlJjUkhKeVQ5ODBvcDVKd2l1aFBkQ3RmMmZ3U1ZQMVBONEJTSWs5YTE2bU1Nem8taHEtb0lHVktPN09uZ2g4Z0hkbzdlSE9mdndFR05xSHFGZ2UwT2hSSUNWTUxVZjBjTm5NOV9JWDZ6SmZRa3lhZElHTngwcGV5eERUdnRORm1KX19nQTZ1NFJtQUU?oc=5",
+      "published": "Wed, 11 Nov 2026 23:13:28 GMT",
+      "published_iso": "2026-11-11T23:13:28+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Sacramento utility leaders decry data centers, call for stronger protections",
+      "outlet": "Abridged – PBS KVIE",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ZQ05RM2hVTTNieUFJRk01MmtSYXJGaEMyckUtakJCQmJZMl9FYjJSOEdQLUg3bUc1STJ2RXBzZXVpMU9vUTVNWnEzcUwyeVFiVXA1V1gwU0tFeTRESHhpbktFQnVFSi1tcnVXTlFTQQ?oc=5",
+      "published": "Thu, 12 Nov 2026 13:18:16 GMT",
+      "published_iso": "2026-11-12T13:18:16+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Hawley backs data center moratorium as Washington weighs new restrictions",
+      "outlet": "13WHAM-TV",
+      "link": "https://news.google.com/rss/articles/CBMipwJBVV95cUxNWUI5LU84YkN0M3RlakE0TzJxQk00NVB2c3phRFNPXzh5UXRoRzhnNC1WbmlCci12cjVSWjNBNmFLMXJZY0h4cUJPV3NkTERPbXpGTldoNTNCcWtZczRycVpHUXNEU0wxLUpnaVNZd0ZDaEtCa3prb3hlVTh2cFhycnZLcmVQRkQ0MkNaQ0M1dDhXUzFJRGNEMm1rTHJGY2QzdUV6ZHRRYlRZNnpwNmRESU5mWDNiLW54YmVwaXYwYlJuUjdvT0NuMkUxc2FKc0s2anRkdzZFSjFmcVJsaFJoVFIwN0pVbXNtaDJ6UlcyZG9hTk9sNFJpcjlfVnI0YmxVbjk2dGRGdFd4NlNNSVl5WU9MNngtUzN6eDNkd0tYV2tscldLbGtZ?oc=5",
+      "published": "Thu, 12 Nov 2026 17:39:25 GMT",
+      "published_iso": "2026-11-12T17:39:25+00:00",
+      "locality": null,
+      "state": "WA",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Fort Worth data center commission gives recommendations ahead of moratorium ruling",
+      "outlet": "Community Impact",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQdEFMWHBLTWJKSmpGamowR2N4RXFqeGV2emx4TmwyRXh3eDlkSzhhcUZGZkVkTUFBdzA5dUR0azZPRHRhMm9QUkdMZURpc3ZLUnRPN3dQY2ZHUnRXVElXQ2hlRTBIOGluTTF4NXpYQllEWDJ3VGloVV9tWjRlOUZqX0otY1hYalFfbXBseEZqT2R6amJwVU9QVFNLd0E5TlF1cHFMZUtoSkRTdmVaSU01UnZfbF9La0I5dTdnZ3BPMDVXNWtzTGZBcXlVX0czUHoyOXVBQmtxTWQ0NkJ2NFhDS09GWXVDYlFQQ0dWb3QwNA?oc=5",
+      "published": "Thu, 12 Nov 2026 05:25:06 GMT",
+      "published_iso": "2026-11-12T05:25:06+00:00",
+      "locality": "Fort Worth",
+      "state": "TX",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Rochester considering temporary ban on data center development",
+      "outlet": "Post Bulletin",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdVJNQmpTRnVLRm4wS1RyMmJneEJ1eW45VWdlM185di04b2R0YjMxbmpBZzJ2dDg4NVZjUy1XcE9SRXdxOGZCUHVvcVJLWEFjUG9zTTBXMUlMSENJb2M0ZU1oZ2JmbW82ZHpEc2o0dDRrWXNPQVpRckhtQ2V3OFJOM3huMTdmUkNaNXZLbkFaajlJT194bzdYalJWZ1NJVWhsMU9IOA?oc=5",
+      "published": "Wed, 11 Nov 2026 17:22:46 GMT",
+      "published_iso": "2026-11-11T17:22:46+00:00",
+      "locality": "Rochester",
+      "state": "NH",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "How Democrats Could Unleash Sweeping Data Center Crackdown",
+      "outlet": "Newsweek",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPUGc4V2txVGJ5TGdjWHBsMFNQWXdGRnBxaVNmMUhVWTg2YVFBNVhGSVIyRG84RS1mVWwzdmpMekt1UDNCRVYxWDVtcDRYOTFLZmFrVEpXMU5GVFFfbVgtbTB6UjJQSnFRMEc5MGpHMjZGamthM0tuTkUxNXZTaFRoZEsyNFhlczhyaUx6S0lRdWJ2WV9POVNR?oc=5",
+      "published": "Thu, 12 Nov 2026 18:02:00 GMT",
+      "published_iso": "2026-11-12T18:02:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Who is Really Paying for the Data Center Boom",
+      "outlet": "Crude Oil Prices Today | OilPrice.com",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQLXdic2dOVlZIY19HTEdnV09aZ3JkVnJXZXEyaWJMWW5IYWZNYk5QNXNQS2ZKWm9jU2duWFNuUm96QVNrdjNWcmlJQ1k3bGFORU1JVkY3QlNNckhPT01Odm1odFRjQVRtTlB0V21LcFNDQzc3MkdhaktEV01tU3R0VVBBSWhEc0NQU2dmVmZ5cmRaVFVCVTZjSdIBngFBVV95cUxNS2t3VWp0WUh0ZjBzRS16REF4WmxhNnJteWJBaUNHem9GWElHVHJEM2dRY3Z5TXM1eXJxNkctRTNsX2FxSWR1VDEwUEVIWlFwY25qQUtIbVd6Nk9DazU3WmtGYkRhMjNxLUlHQ1B3bVpubDJTcHQwQ3c3ckNkMWlycHFUYjJncUJIWU9yWUVwN0FMRzJ4bXUxZ1BoOUJsUQ?oc=5",
+      "published": "Thu, 12 Nov 2026 16:00:00 GMT",
+      "published_iso": "2026-11-12T16:00:00+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Mecklenburg County suffered economic decline in the 1990s. Now they see rebound from data centers",
+      "outlet": "WVTF",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQa0s0VlB2SU9yclJwV0xzcVpvTUxKVFZUZ3YyWDBINVpFYVFzeTJ5YnJpYkk3WXdwUUtVSUI1UU43eWkwdVFTN3pkVmFTdXlhekVTRjNVVjhBUkVWY09JdkJJWXRSOE8tdkJWMmM5aUpEWlRzSm52QXJxSTBtTVZaWVV5R09VSDFIbzhUbEFjOUtLWmtJaEV4Slp4MmtDNjMxcVl2clNOcUJTXzAtbmpiTGJpMHZrYmV4Z3BVX3dfcmp2MjRfbkM3LVF4LTJxQQ?oc=5",
+      "published": "Wed, 11 Nov 2026 11:30:00 GMT",
+      "published_iso": "2026-11-11T11:30:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Danville protesters call for pause on new Virginia data centers",
+      "outlet": "WSET",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNY0FOVFp1aTRhZWNwVlhNRE9DR25KMTloem1MX05RYmtQZ2VoWm5oQ1RrMjBJMFc3UEZGQkJDTnlFRGdydnJzdURzRXNaWVdYVmtlZlB3LXRPcmNQMDN4eUo0TzhEV2EzVTRPUzFibm1IVlNoRWtJclh2ckpUWUJNWERhUlgyX1ltRW1HT0FicDF4dktLWWt3VGRIRExMcDRjRVpoZzhxNEMwT2xXY3pCMkQtWXY5OFFvRmpfWQ?oc=5",
+      "published": "Thu, 12 Nov 2026 16:59:24 GMT",
+      "published_iso": "2026-11-12T16:59:24+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "From AI to Front Royal: Virginia Author Examines Data Centers, Water, and the Future of Local Communities",
+      "outlet": "Royal Examiner",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOZUNjZ0xpSEhIamloYjNGVlNMRkp5Q1g1TkwxVk11ci1Eck9tc0VmREY5MGdTbWpyQW9aRmRPMFlodlVGdzNtVXdwSFA5U1FESmxUWWlUME1jUlozcW9taWNlQzN5YWtYbjJUTnIxaGFrUlRoUUdQRFpCTi05Qk1QYUpGQ2Vjb2RSR3ZuRTU0Z3hPRU5EaDJpazFsa2NodzVNVEhSLTJySnZrR3RCNmJJZ2dUSWVaRmNseXlEMHFpZk1rOG1USjlueA?oc=5",
+      "published": "Thu, 12 Nov 2026 17:53:57 GMT",
+      "published_iso": "2026-11-12T17:53:57+00:00",
+      "locality": "Front Royal",
+      "state": "VA",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Is AI and data center mania overhyped? | READER COMMENTARY",
+      "outlet": "Baltimore Sun",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1EaGh1aHdrXzlYcGNFQ1NaZkh0V2xGcDdFVzR6QVdTRlFFZlN6X3h1bEdBbWVRVVVLTS10cEVTTTNtUzhYNzEweF9QYVppVy1IUFR1UnNfSVYwdTd4SXpOcmtLLUhTb3hBMkVRUnU1NERNdU5T?oc=5",
+      "published": "Thu, 12 Nov 2026 17:09:20 GMT",
+      "published_iso": "2026-11-12T17:09:20+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Texas Democrats promised to rein in data centers. Now they have their chance",
+      "outlet": "Texas Public Radio | TPR",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNeURJRU9IRXdNcDZkTzRabkhVUl9KU0Nvcl94WC1VWTAyX1J2X010aXg1cVk2YURRS1JOSU94ekFwdkZTUC0ydm5VSXZyenNhSUlyUUhYN0pyWHJLdGxuVmN2YXVHUVlWelVTcXh0NExtcnEyelc1cFZ5QjYxS3BaeEtDNDFiM05OYjdpQjJabDRjLTJuN1FvTUpqdjRwcWI1aktMTFdUMFNrX1hqWnJYbA?oc=5",
+      "published": "Thu, 12 Nov 2026 17:27:43 GMT",
+      "published_iso": "2026-11-12T17:27:43+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Texas Wants to Rethink Data Center Construction. Here's the AI Stock Most Exposed.",
+      "outlet": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNVk8wMHBJZE5BcE43SUNQNE45ODRrT21vdXhMYVlZR2F2TjQwMy00Yk9vOFM2bFBUUnQ1STdEa3JXMFJHRmFYZm5NWkJWVXRxYmZBREQwRHFaZl82dUJNeGJtNGhydTkwS2kwa0ZabE9vY3Yzc3ZjYWMxbjhFWG15U0xVWG9iM1FyckJNLWVSaTIxbGZkSFE3c09QTQ?oc=5",
+      "published": "Thu, 12 Nov 2026 12:50:00 GMT",
+      "published_iso": "2026-11-12T12:50:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "SpaceX Plans More Than $74 Billion in Texas, Arizona Data-Center Investments",
+      "outlet": "WSJ",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRHBDbl83ZEF3NVVUcjdrMG9mczZ2UGdtRWNpbWxiOVo3aHNodU03Z0RsRU8wSFZZZlBNQV83V09DOWVlendGdjliM0xvT0twMjhqbkIyZEZva21DZDhLOEtFQ3lha1NLM2J6Q01EWTNET3ZxNFlieWRHX29CRl9HVDByY05qLWNyU2NQcDhPcGxEeFlEUzFWM3hYVEtzRk9LbklfQ3JLaF9lYkZhenB3R3dB?oc=5",
+      "published": "Thu, 12 Nov 2026 18:13:00 GMT",
+      "published_iso": "2026-11-12T18:13:00+00:00",
+      "locality": null,
+      "state": "AZ",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Sabey signs 43.5MW PPA in Texas",
+      "outlet": "Data Center Dynamics",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFByS25GUXU0NDlIaUpvRktVTW0yTVQxc1ZMbWthenJzNTIyLTgwcXp5Vm8zN053ZTltd1Y2LTZjUzRBYXNMSWJzNEl5Tld3YjVzRmVUc21ZSHljTDZSUWxqNFR4T0RDdTI2aW9GanFuWnk3UURCUUhpYnlZSWE3UWs?oc=5",
+      "published": "Thu, 12 Nov 2026 17:24:07 GMT",
+      "published_iso": "2026-11-12T17:24:07+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Midterms Push Data Center Natural Gas Demand Behind the Meter, Analysts Say",
+      "outlet": "Natural Gas Intelligence",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOLXVSNHdKZGJYWG1WM1B6M3d2NVdINnlxSjNxZ3lRUUlFOTE3eFlEM2tRMmZ2cVVLY3A0dXg3WDBrelBjV2trVzFyOXR1RzAxd2h6aFN4LXNpU0xyX2FGT2tncGsxekR1cFBnVHcwSUtUb3dRT1h3SU00RTc3eXN1d3RMWUs1VmtzQUVGQzREbXRRZWJZMk13VmU0ZGMxUDFhMnNDZm5QZzQ2RDlZ?oc=5",
+      "published": "Thu, 12 Nov 2026 15:56:00 GMT",
+      "published_iso": "2026-11-12T15:56:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "Texas Data Center Industry Faces New Regulatory Challenges",
+      "outlet": "Times Of AI",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4xME9hbXZyMG1peEY4XzZnOV8yV0hQRFE3cF9admJXUHZIT1pzek1oOHo5eU1hbTFydTZrSlZXTC1FaGxYenpWdnoxVU1LNkI0cVplZ2hOU2szM0NFLWVRb0VQQlZYZmJabFZOcmpJOFJrNWV1OGNMTnVmUQ?oc=5",
+      "published": "Fri, 06 Nov 2026 08:09:51 GMT",
+      "published_iso": "2026-11-06T08:09:51+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-12"
+    },
+    {
+      "title": "SpaceX Plans $74 Billion Data Center Projects in Arizona, Texas",
+      "outlet": "Bloomberg.com",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQYkphbl9aSlh4QjR1eUwzLVIwREZYd1NZbU9qY05vQ3JiZEFjMFJsdXdGRmxkMzB0VW1SOXJYbGJrRGo5V04zNTdONy12eWt6OTdNNnluSlM2TnhyanB3NXBJNXgzZWxiUkFxbHR5NjBCSFZETzhnaFZzV2kwYXBzQzhjR0N2QnROUXFlTlRMQTBkTnVzVTY5ampycVI4SllMVFNLSjRxNm9ISlV2NklzZDNB?oc=5",
+      "published": "Thu, 12 Nov 2026 16:21:47 GMT",
+      "published_iso": "2026-11-12T16:21:47+00:00",
+      "locality": null,
+      "state": "AZ",
+      "first_seen": "2026-11-12",
       "last_seen": "2026-11-12"
     }
   ]
