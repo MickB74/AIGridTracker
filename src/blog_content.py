@@ -72,6 +72,326 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "week-in-review-2026-11-15",
+        "art": "review",
+        "section": "stories",
+        "title": (
+            "Week in Review: Minneapolis Passes Data Center Rules But Not a "
+            "Ban, Oakland Extends Its Moratorium to 2027, and a Third "
+            "Lawsuit Hits OpenAI's Georgia Project"
+        ),
+        "seo_title": "Week in review: Minneapolis, Oakland tighten DC rules",
+        "date": _dt.date(2026, 11, 15),
+        "author": "GridWatch AI",
+        "tags": ["week in review", "moratorium", "Minnesota", "California",
+                 "Missouri", "Georgia", "Texas", "Indiana", "New Hampshire",
+                 "Colorado", "New Jersey", "community", "lawsuit"],
+        "summary": (
+            "Eight cities and counties landed in eight different places on "
+            "the spectrum from outright ban to negotiated settlement this "
+            "week. Minneapolis passed new data center rules but not the ban "
+            "some residents wanted; Oakland extended its moratorium through "
+            "2027; Springfield, Missouri's moratorium survived a developer's "
+            "court challenge; and a third lawsuit, this one alleging "
+            "racketeering, hit OpenAI's Project Camellia in Effingham "
+            "County, Georgia. In North Texas, Fort Worth is still weighing a "
+            "90-day pause while neighboring Westlake already settled its "
+            "way to a cleared project. Plus: a 800-signature petition in "
+            "Bow, New Hampshire, a second failed moratorium vote in Aurora, "
+            "Colorado, and a push to block an air permit in South Brunswick, "
+            "New Jersey."
+        ),
+        "body": """
+Welcome back to the GridWatch AI Week in Review — our Sunday roundup of the
+most important data center stories from the past seven days, what they mean
+for communities, and what you can learn from each one. This week's theme is
+local government actually deciding things: eight different cities and
+counties landed in eight different places on the same spectrum, from
+outright ban to negotiated settlement, often within days of each other.
+
+---
+
+### 1. Minneapolis passes data center rules — but the push for an outright ban failed
+
+**What happened:** On Nov. 13 the Minneapolis City Council approved a new
+ordinance setting rules for data centers in the city, according to
+[FOX 9 Minneapolis-St. Paul](https://www.fox9.com/),
+[CBS News](https://www.cbsnews.com/),
+[MPR News](https://www.mprnews.org/) and
+[KSTP](https://kstp.com/), which all reported the vote was narrow and that
+the council stopped short of the full ban some residents and council
+members had pushed for. The [Star Tribune](https://www.startribune.com/)
+had reported a week earlier that the city was moving to "crack down" on
+data centers broadly, and [kare11.com](https://www.kare11.com/) and
+[GovTech](https://www.govtech.com/) covered the council's deliberations in
+the days before the final vote.
+
+**Why it matters:** Minneapolis already has an entry on our
+[moratorium tracker](/moratoriums.html) — the city enacted a data center
+moratorium in August, which gave the council time to write a permanent
+ordinance rather than relying on a temporary pause. This week's vote is
+what that moratorium time bought: standing rules, not a renewed pause and
+not a ban.
+
+**What to learn — "regulation" and "ban" are not points on the same scale:**
+A moratorium stops new applications for a fixed window. An ordinance that
+survives it can do one of three different things: ban data centers
+outright, allow them with conditions (setbacks, noise limits, water-use
+caps, zoning overlays), or do almost nothing. Minneapolis landed in the
+middle — new conditions, no ban — which is a different outcome than either
+a moratorium extension (see Oakland, next) or an outright prohibition.
+Before a hearing, ask which of the three your town's draft ordinance
+actually is; "new regulations" in a headline can describe any of them. See
+the [Minnesota state page](/states/minnesota.html).
+
+*Sources: [FOX 9 Minneapolis-St. Paul, Nov 10](https://www.fox9.com/);
+[Star Tribune, Nov 9](https://www.startribune.com/);
+[CBS News, Nov 13](https://www.cbsnews.com/);
+[MPR News, Nov 13](https://www.mprnews.org/)*
+
+---
+
+### 2. Oakland extends its data center moratorium through 2027
+
+**What happened:** The Oakland City Council voted unanimously on Nov. 11 to
+extend the city's data center moratorium, according to
+[NBC Bay Area](https://www.nbcbayarea.com/),
+[KTVU](https://www.ktvu.com/),
+[The Oaklandside](https://oaklandside.org/) and
+[The Mercury News](https://www.mercurynews.com/). Outlets described the
+length differently — The Oaklandside reported the new end date as October
+2027, while the Mercury News called it a "10-month" extension and NBC Bay
+Area described it as "nearly a year."
+
+**Why it matters:** Oakland's original pause, which KTVU reported as a
+45-day moratorium when the city first enacted it, was always going to
+expire on its own. A council that wants more time to write permanent
+rules — the same thing Minneapolis just did, above — has to vote to extend
+it before that happens, in public, on the record. This is the second time
+Oakland has had to do that.
+
+**What to learn — a moratorium has an expiration date, and someone has to
+renew it on purpose:** Our tracker flags any moratorium whose dated term has
+lapsed as expired, because an expired pause is not a current protection — a
+resident citing a moratorium that quietly lapsed last month is citing
+nothing. If your community has a pause in place, find its actual end date
+(not the headline that announced it) and watch your council's calendar in
+the weeks before that date arrives. See the
+[California state page](/states/california.html) and the
+[moratorium tracker](/moratoriums.html) for how to read an "effective
+status."
+
+*Sources: [NBC Bay Area, Nov 11](https://www.nbcbayarea.com/);
+[KTVU, Nov 11](https://www.ktvu.com/);
+[The Oaklandside, Nov 11](https://oaklandside.org/);
+[The Mercury News, Nov 11](https://www.mercurynews.com/)*
+
+---
+
+### 3. Springfield, Missouri's moratorium survives a developer's court challenge
+
+**What happened:** A developer identified in local coverage as Trent
+Overhue sought a preliminary injunction to block Springfield's data center
+moratorium, according to the
+[Springfield Daily Citizen](https://sgfcitizen.org/), which reported on the
+Nov. 6 hearing. A judge denied that request on Nov. 9, according to the
+Springfield Daily Citizen and [KY3](https://www.ky3.com/). Separately, the
+[Springfield News-Leader](https://www.news-leader.com/) reported a
+developer had also asked a court to force the city to review data center
+plans it says the moratorium has left in limbo.
+
+**Why it matters:** Springfield enacted a 120-day moratorium over the
+summer, already logged on our [moratorium tracker](/moratoriums.html). This
+is the scenario every moratorium town eventually faces: a developer with
+money on the line goes to court to try to lift the pause before it expires
+on its own. Losing a motion for a preliminary injunction does not end that
+lawsuit — it just means the moratorium stays in effect while the underlying
+case continues.
+
+**What to learn — "the judge ruled against the developer" is not the same
+as "the city won":** A preliminary injunction is an emergency, temporary
+order; denying one only means the judge didn't find grounds to pause the
+moratorium while the case proceeds, not that the moratorium itself was
+found lawful on the merits. Ask whoever briefs you on a pending case
+whether it was a motion for a preliminary injunction, a motion to dismiss,
+or a final judgment — they are different stages with very different
+stakes. See the [Missouri state page](/states/missouri.html).
+
+*Sources: [Springfield Daily Citizen, Nov 6 & Nov 9](https://sgfcitizen.org/);
+[KY3, Nov 10](https://www.ky3.com/);
+[Springfield News-Leader, Nov 7](https://www.news-leader.com/)*
+
+---
+
+### 4. A third lawsuit hits OpenAI's Georgia data center — this one alleges racketeering
+
+**What happened:** Effingham County, Georgia residents filed a third
+lawsuit against OpenAI and county officials over the proposed Project
+Camellia data center, according to [WTOC](https://www.wtoc.com/) and
+[WJCL](https://www.wjcl.com/), which both reported the suit alleges fraud
+and conspiracy and seeks damages. [The Georgia Virtue](https://www.thegeorgiavirtue.com/)
+described the claims as including civil racketeering, and
+[The Daily Signal](https://www.dailysignal.com/) also covered the filing.
+Outlets disagree on the size of the underlying deal: WJCL reported it at
+$20 billion, while [Data Center Dynamics](https://www.datacenterdynamics.com/)
+put the project at $30 billion.
+
+**Why it matters:** We covered the first two lawsuits over this project in
+September, in
+[Two Georgia Data Center Lawsuits in Five Days, and Neither One Argues the Project Is a Bad Idea](/blog/georgia-data-center-lawsuits-statesboro-effingham-2026) —
+that piece's point was that the earlier suits were procedural (open
+meetings, permitting process) rather than arguments against the project
+itself. A racketeering and fraud claim is a different kind of lawsuit: it
+alleges the deal itself, and the officials who approved it, were corrupt.
+That is a materially heavier accusation than a skipped public notice.
+
+**What to learn — when outlets disagree on a dollar figure, that's a flag
+to check the filing yourself, not split the difference:** We ran into the
+identical problem with New Jersey's ban count in August — see
+[Four Groups Counted New Jersey's Data Center Bans. They Got 37, 38, 50 and 69](/blog/new-jersey-ban-count-2026) —
+where different outlets were counting different things and calling it one
+number. A $20 billion and a $30 billion figure for the same project aren't
+rounding error; one is probably citing a different scope (land and
+buildings versus the full multi-year buildout). Before repeating either
+number, ask which document it comes from. See the
+[Georgia state page](/states/georgia.html) and the
+[Project Camellia dossier](/projects/openai-project-camellia-effingham-ga.html).
+
+*Sources: [WTOC, Nov 9](https://www.wtoc.com/);
+[WJCL, Nov 9](https://www.wjcl.com/);
+[Data Center Dynamics, Nov 12](https://www.datacenterdynamics.com/);
+[The Daily Signal, Nov 11](https://www.dailysignal.com/);
+[The Georgia Virtue, Nov 9](https://www.thegeorgiavirtue.com/)*
+
+---
+
+### 5. Two Tarrant County suburbs, two different outcomes: Fort Worth weighs a pause while Westlake clears its project
+
+**What happened:** Fort Worth's data center advisory commission presented
+the City Council with 19 recommendations on Nov. 11, according to
+[WFAA](https://www.wfaa.com/) and the
+[Fort Worth Report](https://fortworthreport.org/), as the council considers
+a 90-day pause on new data center development —
+[NBC 5 Dallas-Fort Worth](https://www.nbcdfw.com/) and
+[CBS News](https://www.cbsnews.com/) both reported the proposed moratorium
+length at 90 days. The city held its first public hearing on the question
+on Nov. 12, per [Community Impact](https://communityimpact.com/). A few
+miles away, the town of Westlake went the other direction: after Keller
+and Westlake settled a lawsuit over the proposed Circle T Data Center on
+Nov. 6 — CBS News and the
+[Fort Worth Star-Telegram](https://www.star-telegram.com/) reported the
+deal secures specific protections for Keller's neighboring residents —
+Westlake's Town Council approved the development agreement on Nov. 13,
+clearing the way for the project, according to WFAA and the
+[Dallas Morning News](https://www.dallasnews.com/).
+
+**Why it matters:** Fort Worth already has a "Proposed" entry on our
+[moratorium tracker](/moratoriums.html); this week's recommendations and
+hearing are the process that entry predicted continuing. Westlake shows the
+other branch of that same decision tree: a lawsuit over a specific
+project's impacts can end in a negotiated settlement that lets the project
+proceed with conditions attached, instead of a moratorium that blocks it
+outright. Both are live options in the same North Texas region at the same
+time.
+
+**What to learn — a settlement that "secures protections" is only as good
+as what's actually in the agreement:** Headlines about Westlake used words
+like "protections" and "agreement," but none of the coverage we found
+quotes the specific terms. Before treating a neighboring settlement as a
+template, ask for the development agreement itself — what it requires
+(water-use limits? noise limits? a buffer distance?) and who enforces it.
+See our [ERCOT queue explainer](/blog/ercot-queue-explainer) for how a
+project like this gets its power in the first place, and the
+[Texas state page](/states/texas.html).
+
+*Sources: [WFAA, Nov 11 & Nov 13](https://www.wfaa.com/);
+[Fort Worth Report, Nov 11](https://fortworthreport.org/);
+[NBC 5 Dallas-Fort Worth, Nov 10](https://www.nbcdfw.com/);
+[Fort Worth Star-Telegram, Nov 6](https://www.star-telegram.com/);
+[Dallas Morning News, Nov 13](https://www.dallasnews.com/);
+[Community Impact, Nov 12](https://communityimpact.com/)*
+
+---
+
+### 6. Warrick County, Indiana tables its data center ordinance, calling it "vague"
+
+**What happened:** Warrick County commissioners voted to table a proposed
+data center ordinance for two weeks on Nov. 10, according to
+[WNIN](https://www.wnin.org/), which reported commissioners called the
+draft "vague." The [Courier & Press](https://www.courierpress.com/) and
+[14 News](https://www.14news.com/) both confirmed the delay, and 14 News
+reported the county's plan commission had responded to commissioners'
+earlier disappointment over how an initial data center vote had gone.
+
+**Why it matters:** Warrick County already enacted a pause on data center
+development in August, per our [moratorium tracker](/moratoriums.html);
+this ordinance was supposed to be the permanent rule that pause was buying
+time to write. Tabling it isn't a rejection and isn't necessarily a delay
+tactic by itself — but it does mean the county's own commissioners didn't
+think the draft in front of them was specific enough to vote on.
+
+**What to learn — "tabled" means neither passed nor killed, and the clock
+still matters:** A tabled ordinance comes back for another vote — in this
+case, in two weeks — and the underlying moratorium's own expiration date
+doesn't pause itself to wait for it. If your town tables a draft ordinance,
+find out two things: when it comes back up, and whether the moratorium
+protecting you in the meantime has an end date of its own. See the
+[Indiana state page](/states/indiana.html).
+
+*Sources: [WNIN, Nov 10](https://www.wnin.org/);
+[Courier & Press, Nov 10](https://www.courierpress.com/);
+[14 News, Nov 9](https://www.14news.com/)*
+
+---
+
+### 7. Also this week: a petition in New Hampshire, a second failed moratorium vote in Colorado, and a push to stop a New Jersey air permit
+
+Three more results worth knowing about:
+
+| Locality | State | Action | Status |
+|--|--|--|--|
+| Bow | NH | Petition for a town vote | Bow residents gathered more than 800 signatures on a petition asking town officials to put a data center moratorium to a town vote, and the town has scheduled a hearing on the request ([New Hampshire Union Leader](https://www.unionleader.com/), [Concord Monitor](https://www.concordmonitor.com/), [WMUR](https://www.wmur.com/), [NHPR](https://www.nhpr.org/)) |
+| Aurora | CO | Moratorium rejected again; tax-incentive ban advances | Aurora's City Council rejected a renewed push for a data center moratorium for a second time this year, but advanced a separate ban on tax incentives for data centers — and state regulators said a major Aurora data center project may have violated state law ([Sentinel Colorado](https://sentinelcolorado.com/), [Denver Gazette](https://denvergazette.com/), [Colorado Public Radio](https://www.cpr.org/)) |
+| South Brunswick | NJ | Lawmakers ask state to withhold an air permit | U.S. Rep. Bonnie Watson Coleman and State Sen. Andrew Zwicker asked the New Jersey Department of Environmental Protection to pause or withhold an air permit for the proposed Sentinel Data Center, after residents packed a public meeting to oppose the project ([TAPinto](https://www.tapinto.net/), [MercerMe](https://mercerme.com/), [Patch](https://patch.com/)) |
+
+**What to learn — a rejected moratorium and a possible state-law violation
+are two completely different kinds of leverage:** Aurora's council can keep
+voting down a moratorium, but that vote has no bearing on whether the
+project itself is complying with state law — those are enforced by
+different bodies on different timelines. If a project near you has a
+pending regulatory question (an air permit, a water right, an
+interconnection filing), track that process on its own, separately from
+whatever your council does or doesn't pass. See the
+[Colorado state page](/states/colorado.html) and the
+[PUC directory](/puc.html) for who actually regulates what.
+
+---
+
+### What to watch next week
+
+- **Minneapolis** — whether the new ordinance's specific standards
+  (setbacks, water, noise) show up in a project's next permit application
+- **Fort Worth** — whether the City Council actually votes on the 90-day
+  pause following this week's commission recommendations and public
+  hearing
+- **Effingham County, GA** — how OpenAI and the named county officials
+  respond to the racketeering claim
+- **Warrick County, IN** — what changes in the ordinance when
+  commissioners take it back up in two weeks
+- **Bow, NH** — whether the town's scheduled hearing results in a vote
+  being placed on a ballot
+- **Aurora, CO** — what, if anything, state regulators do about the
+  possible violation Colorado Public Radio reported
+
+---
+
+*Every Sunday we cover the week's most important data center stories,
+explain the underlying concepts, and point you to the tools you need. Know
+a story we should cover? Reach out at hello@aigridwatch.com or sign up for
+the newsletter below.*
+""",
+    },
+    {
         "id": "week-in-review-2026-11-08",
         "art": "review",
         "section": "stories",

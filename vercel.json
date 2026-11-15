@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/week-in-review-2026-11-15",
+      "destination": "/blog/week-in-review-2026-11-15",
+      "permanent": true
+    },
+    {
       "source": "/week-in-review-2026-11-08",
       "destination": "/blog/week-in-review-2026-11-08",
       "permanent": true
@@ -764,16 +769,6 @@
       "permanent": true
     },
     {
-      "source": "/communities/colorado-springs-co",
-      "destination": "/states/colorado",
-      "permanent": true
-    },
-    {
-      "source": "/communities/colorado-springs-co.html",
-      "destination": "/states/colorado",
-      "permanent": true
-    },
-    {
       "source": "/communities/delaware-de",
       "destination": "/states/delaware",
       "permanent": true
@@ -1341,16 +1336,6 @@
     {
       "source": "/communities/prairie-township-oh.html",
       "destination": "/states/ohio",
-      "permanent": true
-    },
-    {
-      "source": "/communities/sangamon-county-il",
-      "destination": "/states/illinois",
-      "permanent": true
-    },
-    {
-      "source": "/communities/sangamon-county-il.html",
-      "destination": "/states/illinois",
       "permanent": true
     },
     {

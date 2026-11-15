@@ -4331,5 +4331,33 @@
     "locality": "West Whiteland Township, PA",
     "kind": "status_changed",
     "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-15",
+    "id": "johnson-county-ia",
+    "locality": "Johnson County, IA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-15",
+    "id": "riley-county-ks",
+    "locality": "Riley County, KS",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-15",
+    "id": "butler-township-pa",
+    "locality": "Butler Township, PA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-15",
+    "id": "dickinson-county-ia",
+    "locality": "Dickinson County, IA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
   }
 ]

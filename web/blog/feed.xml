@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Week in Review: Minneapolis Passes Data Center Rules But Not a Ban, Oakland Extends Its Moratorium to 2027, and a Third Lawsuit Hits OpenAI&#x27;s Georgia Project</title>
+      <link>https://aigridwatch.com/blog/week-in-review-2026-11-15</link>
+      <guid>https://aigridwatch.com/blog/week-in-review-2026-11-15</guid>
+      <pubDate>Sun, 15 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Eight cities and counties landed in eight different places on the spectrum from outright ban to negotiated settlement this week. Minneapolis passed new data center rules but not the ban some residents wanted; Oakland extended its moratorium through 2027; Springfield, Missouri&#x27;s moratorium survived a developer&#x27;s court challenge; and a third lawsuit, this one alleging racketeering, hit OpenAI&#x27;s Project Camellia in Effingham County, Georgia. In North Texas, Fort Worth is still weighing a 90-day pause while neighboring Westlake already settled its way to a cleared project. Plus: a 800-signature petition in Bow, New Hampshire, a second failed moratorium vote in Aurora, Colorado, and a push to block an air permit in South Brunswick, New Jersey.</description>
+    </item>
+    <item>
       <title>Week in Review: Data Centers Lose Nearly Every Ballot Measure Nationwide, Georgia Flips Its Utility Board, and OpenAI Launches a Post-Election Charm Offensive</title>
       <link>https://aigridwatch.com/blog/week-in-review-2026-11-08</link>
       <guid>https://aigridwatch.com/blog/week-in-review-2026-11-08</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/california-moratorium-wave-2026</guid>
       <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
       <description>California now has 23 data center moratoriums on our national tracker — from the Salton Sea to the San Francisco Bay. The state legislature has sent Governor Newsom seven bills covering ratepayer protection, mandatory CEQA review, and water disclosure. Last year he vetoed a milder version of the water bill. The question now is whether the political landscape has shifted enough to change his answer.</description>
-    </item>
-    <item>
-      <title>New Hampshire Has No Hyperscale Data Center. Four of Its Towns Restricted Them Anyway.</title>
-      <link>https://aigridwatch.com/blog/new-hampshire-town-votes-2026</link>
-      <guid>https://aigridwatch.com/blog/new-hampshire-town-votes-2026</guid>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
-      <description>Nottingham voted 1,335-143 for a 12-month data center moratorium on September 8, in a state with no hyperscale data center and no pending project in town. Canterbury banned them outright, Rochester zoned them into a landfill district, and a bill that would have voided all of it was tabled 304-11. A catalog of what each legal instrument costs and buys.</description>
     </item>
 </channel>
 </rss>
