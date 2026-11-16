@@ -140,7 +140,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-08-04",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-16",
       "status": "new",
       "origin": "news-scan"
     },
@@ -32568,7 +32568,7 @@
       "guess_state": null,
       "query": "data center ban zoning ordinance town board",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-16",
       "status": "new",
       "origin": "news-scan"
     },
@@ -34232,7 +34232,7 @@
       "guess_state": null,
       "query": "data center moratorium county commission approved",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-16",
       "status": "new",
       "origin": "news-scan"
     },
@@ -34245,7 +34245,7 @@
       "guess_state": null,
       "query": "data center moratorium county commission approved",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-16",
       "status": "new",
       "origin": "news-scan"
     },
@@ -37992,6 +37992,71 @@
       "last_seen": "2026-11-16",
       "status": "new",
       "origin": "archive-sweep"
+    },
+    {
+      "title": "Data center projects, moratoriums and proposed rules vary by county",
+      "outlet": "14 News",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOZHlJdnRNallHUHVUaXMzS1dyQ1JwSjlMWG1xRVZiUVdnOHFMemtEOUtFVGVqeERnYTNHZWdvOXh5UGFQQkwzUFduSGw1ZDZYV0pmRUl4VlZmYjc3YVJaT0RhVndJTDNwU0Iyck82WE0tN2xQMWJ0ZWNaVnljTVFwV2VKbDc0SU9obU5QTEZ0SVQtTnBKclNCNS1fYk9CZw?oc=5",
+      "published": "Fri, 13 Nov 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium county commission approved",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Calvert Planning Commission To Hear Proposal To Ban Data Center Development",
+      "outlet": "The BayNet",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPdWpqb0h2RUlyQlRmN0tnbGxHdkdMRmxvRjY5QkhvSlk1Yk9yZ0MtRVpXNUtkbWdHTUE0VzM1cHdfZkFqdFdlWmlqb01IWEdmajdlX21LTnNKQWJJMko3aktOSHVXVWNCeURKZzNnZTEyQ3Q2UFZPUE5TU3RIZk5iLXNWQk1FOHJ5ZGk3Wm1DcTFOY05sc2pFaU9hQmhHeTg?oc=5",
+      "published": "Fri, 13 Nov 2026",
+      "guess_locality": "Calvert",
+      "guess_state": null,
+      "query": "data center moratorium county commission approved",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Data center moratorium extended by 30 days",
+      "outlet": "hendersondispatch.com",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPc3czcHFiMUhDTF9fcGVxNGhKXzBkSTJQck05MC1YTkFpeXMyVU5HSDNhV1BNN3ozSEh1cnctM3RveTdranZTcW9SaGhGOFJzN2lXd2pTdkJLdnp6d3NIVGlreVdkNERMLTRPMlZCU2pzLVN3ZmxlSnJJd3owNG1UV0ZVN3YyZG1hN0c3N1k3dVNxZWYtdjFNYkpIdjJ5OXhkUmc4SVhDcHRKbFJxUV8wUmc0LWRWdHBOY3I0RmRiYl9KNHpaQmh2QlFTQ082ZEJ3?oc=5",
+      "published": "Mon, 16 Nov 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium extended",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Waterloo council may extend data center moratorium until April",
+      "outlet": "Waterloo-Cedar Falls Courier",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNdldfMHlrSEoxY2VfcFNhOEExSWtseEQydDJPNFA1T2dkVDd0Wml0STYtUW5qZElZcFdUR1JIRUFySVVDS1NfdW5IWGhsNjhoTXBLZTFzbTRaeDlxcXJybEQwTE5Ub3RBRU1PaEg3aU5XbXp0ZkhxV0E4QnhkeFo4UmlKU1J2Vk1RcW4xeGVtWks2dDVkdUFkWExOX0h1WFZ1NnZEdkR3?oc=5",
+      "published": "Sun, 15 Nov 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium extended",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
+      "title": "Bay Area cities extend or pass new moratoriums on data centers",
+      "outlet": "KALW",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPeE05MG1raXp4Qi1pVmRSNzEyc2NNa2hpdWdPSVl0RkhiRVYxSVBua1hjamlQT202Y0pULVNzMDI4Z3dIeEQxVmx3WDlVOVoxaDZ2c3g5Mzc2WTE0VGltMXBmdU5FOHhGcVVyallrZlM3dUdoc3FVbnpaaUVDOW1vUUU0YjJlZVU0S2lmRHdreDQ4cHg4eklmYkNPQUoyWGx3ejI2ejFGMDdXS1E4?oc=5",
+      "published": "Thu, 12 Nov 2026",
+      "guess_locality": null,
+      "guess_state": null,
+      "query": "data center moratorium extended",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "status": "new",
+      "origin": "news-scan"
     },
     {
       "title": "Marion County Commissioners Direct Staff to Begin 12-Month Data Center Moratorium After Workshop Debate",
