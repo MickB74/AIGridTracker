@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 15177,
+  "count": 15192,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -158791,7 +158791,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-11-10",
-      "last_seen": "2026-11-13"
+      "last_seen": "2026-11-16"
     },
     {
       "title": "Why Texas is now a 'flash point' for America's AI build-out",
@@ -161057,7 +161057,7 @@
       "locality": null,
       "state": "TX",
       "first_seen": "2026-11-11",
-      "last_seen": "2026-11-14"
+      "last_seen": "2026-11-16"
     },
     {
       "title": "The Rural Shift in Data Center Development",
@@ -163587,7 +163587,7 @@
       "locality": "Marietta",
       "state": "GA",
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-14"
+      "last_seen": "2026-11-16"
     },
     {
       "title": "WDI data center proposal faces scrutiny ahead of county hearing",
@@ -166950,6 +166950,171 @@
       "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPT0Z2X0poS2t4ZXNjQzlJbEZEby1UTkhEby0xbDlIMjJqTVBSdUZueGdWWkJlaXhjTk5icUQ1eHI3bm5PVFZsUlRaeGlhZnJ2SkxxeGhZSkhPMS13UnZNYkdzSkN2dDJtTDJ6MHE1SGluLW1TSGdHNkxvQklPMi13ZWxkR3p3NGVXQlNyMFNtSm42TUVWOFVya0xIQmtzTTNOVXh4OUYwNnduYnhnRERoZE5BelR3c3ZPemhyTVlxRDFmZ3F6Z2lRanB5dnlXc09ySkJvNUtvSHhHUkFUaUE?oc=5",
       "published": "Mon, 16 Nov 2026 16:04:42 GMT",
       "published_iso": "2026-11-16T16:04:42+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16"
+    },
+    {
+      "title": "Virginia residents say nearby data center lights shine through their blackout curtains",
+      "outlet": "The Cool Down",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPQkRuLVFET1JHang0UXVPZEZNRUltUnhPTU1XZW9zTmlhVFpLZmVzQTEzU0tzamNKeTc1aGhmS09Yd0t0bEdsczNfQkZSQmVKc3RzVmQ3bXZfTXVrYl9uV0FtNDBQXzRKQzJMVFhxV0dNRVl2cU1vMm1ldVBHZ05YYkhoNk00M0lNZEV2WA?oc=5",
+      "published": "Mon, 16 Nov 2026 18:20:00 GMT",
+      "published_iso": "2026-11-16T18:20:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16"
+    },
+    {
+      "title": "Lubbock residents urge council to pass data center moratorium",
+      "outlet": "KCBD",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNaWlZczNNWTF1THFhRFQtbUg5S3h0Ykg5UkJmODF2c1hsUmdSRVdSVmJVZzZRR2R0NTB1U1lvQVczYnZNZGl5Sms3WGNJSHRDWkl2UXVzUmNpYkhYV1VoNElBNTEyNV9lNkNLaW4wS0Z2V2tRZlZFSHBKRnJuS2hBZDZWM3l5X0RTTExCREdxeUY0R09m?oc=5",
+      "published": "Wed, 11 Nov 2026 04:21:03 GMT",
+      "published_iso": "2026-11-11T04:21:03+00:00",
+      "locality": "Lubbock",
+      "state": "TX",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-16"
+    },
+    {
+      "title": "Mahwah Votes To Ban One Category Of Data Centers",
+      "outlet": "Patch",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOUWtHQnNZRG96UHVEcldEb0xROXFnSUN6aWNZTzhBUWItUm5sT3FHNng2dzd1dUJ0azVsc0lkT3hMM3ZBOVJ4THdUQlZ6ZVJzSHlnOEc4YmJGWUN2ckVCY1JZaWlWTmg5WVlkTTlHcnY5UExXNGhzQXRFS2F4b2ZQRUdtVWHSAZ4BQVVfeXFMTjNGLVZNOXlnTXFkTU1DeXFzeldKaVNBeW5mVjNDSUM2cjF0NS0xSGNpWUpYaXRjclZnOXI3SS02WXpGUVRyU1hSZnhsR1hLb0hlT2FxcnFSWUVScFFzcFRMZmRiOFR2dWdvRVdCVUdTX21IenZOcGsyVENPS2FtNmxLNUpfMTdSY0JmRlltWU1xU3lQQlowRjZtWThDMXc?oc=5",
+      "published": "Mon, 16 Nov 2026 19:52:08 GMT",
+      "published_iso": "2026-11-16T19:52:08+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16"
+    },
+    {
+      "title": "Rezoning meeting canceled in Michigan township engulfed in data center controversy",
+      "outlet": "MLive.com",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxON1ZMRjBycWRMbFVNMFZPRmd0R2pLX0JZcmNLLXNTRzBadmpNSjkySnVVX0ZWWE5LMW9nWXlPT3FLY280Zm1jeU9Wb0RqUzNfNzRuQll0SnFaTzdmaTNKbGNNMzFTY3ZEcXRFLU1rN2RKaW1yVjNtSDNzY1QwX3I5RzN2NVNzWV8xbTA5RWdPUzBwN2c5SThvcFBUZkllRXVGcWs4d0xOaFh4U0Q4NUFHSUZVT0YxMFdHT2xON3JfSQ?oc=5",
+      "published": "Mon, 16 Nov 2026 19:25:00 GMT",
+      "published_iso": "2026-11-16T19:25:00+00:00",
+      "locality": null,
+      "state": "MI",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16"
+    },
+    {
+      "title": "Why Data Center Politics Could Prolong The AI Investment Boom",
+      "outlet": "Forbes",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRmw0THhOVlZqUE5lUTFzVXU4SW1PN2FyRWUyLXM5SGhWVXJhVnhyMWdpZWtXRFNqMHhpQjItVURjYTl0bTBHX1RfV1NadUIxR3NPVHF3Q0RlZ01Cc0hHUnhDQ2JWaXQ1bkFUYXdDUzVlZV9WTklKZnlqelVjSDVKM0hSTWFPMnQ4anBjcHhrX1FLMGkzMmlpNlZWTVRIV0o1dTVYYjI5WmQ5MjBNTjRJNTZOQ1ZKUQ?oc=5",
+      "published": "Mon, 16 Nov 2026 20:06:40 GMT",
+      "published_iso": "2026-11-16T20:06:40+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16"
+    },
+    {
+      "title": "Gaming Infrastructure Redundancy Across Data Centers",
+      "outlet": "SportsGrid",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaE1BODJsdkFheWpnVXZFNUxuR1VSd3ZSZXRJTHZ2dnVsQklBVHAtN2dUZFp2NjR3T3F1b2pOQkk5cU5aUnI4X2twUlh2VGZTTlVfckJRcWhLTFA1aTYycFJrR3RkOGRtYUdDcFhkT0NzLWN6R3NISWY4S2FSV2JvTmVNZlJLa282MHJMM2lDMnl4SDh5ZzFtdA?oc=5",
+      "published": "Mon, 16 Nov 2026 18:26:21 GMT",
+      "published_iso": "2026-11-16T18:26:21+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16"
+    },
+    {
+      "title": "Data Centers",
+      "outlet": "Potomac Riverkeeper Network",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1fZ3BNa2ZrSU5vclJ1ODJhVHYwZllwU2htMmJPaHJ3LThaNFR6UV8tR2xXaDhqX0pxOGdKMjBCa1A5Z2wwUWdCdTROaVJkcGt5VDhxWnE0cHBUaEtETERKTQ?oc=5",
+      "published": "Mon, 16 Nov 2026 05:36:29 GMT",
+      "published_iso": "2026-11-16T05:36:29+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16"
+    },
+    {
+      "title": "Virginia cashing in on data centers",
+      "outlet": "Bond Buyer",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBma0lTM2lKUUxLYkpYV3hKbGc1dENBUkEtcWNnYTlOUS1BZFIzbU53NEFUU2kwcmNvQzBRYktxMXlzdFpXNTdlWFZVY0FmRzh0Wklwclp4QTQ3R2p5anJPVldEczgybk1yc2JWNjZGVEJLOG5w?oc=5",
+      "published": "Mon, 16 Nov 2026 18:21:00 GMT",
+      "published_iso": "2026-11-16T18:21:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16"
+    },
+    {
+      "title": "Amazon pledges millions to cover in-demand career training at Virginia community colleges",
+      "outlet": "Fredericksburg Free Press",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOYVowNlU3X29lN2taZXJQY3VHVHZEYnJnb0xHMDZLREgzLXBZT21iOE92S0plVWhvb0JRNUhTT2ZGUXg3XzhiaFVkWndtTW1QR0RvTW1wUEgycWhoa0MxMlVWUlFiZmhRNFpCLXVsSWVmYnJ2VmtFVHFyYXo0cHVndDdLc0xocXh2OHhKemNMUFRMMzNvVE94ZWh5c2JhUUtkZmYzM2V5Yy02YUFNV01Jd3VlZ0JDczhFaVVJa3EwVURaSERZejBqRVgwVElvcFRPYW1jbTNnUUg?oc=5",
+      "published": "Mon, 16 Nov 2026 16:36:00 GMT",
+      "published_iso": "2026-11-16T16:36:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16"
+    },
+    {
+      "title": "America’s 403 Largest Data Centers Consumed an Estimated 82 Terawatt-Hours of Electricity, 54% Powered by Fossil Fuels",
+      "outlet": "Gadget Review",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOV290SnFsaUQ1bGJ4eFRYc2Qxc2dEQXhXSzVEQ3dqWEtZY1FMMUh3bmxDSGl6UkpyWXdJQnBuNWd5Nk9jbVpSZjR4cVpiUE9ZYUh3QzNVeFRDS1h0VE94VE9EUXVQRlRmbVFjX3VuUVNkbW9GaXROS2Q5SEd5Yk9fZHk4VnJlRHpmMW42bTJrcjM5Qy1lMThCaWxLMXRYdG5feXhGaHR0Q3JmaTU1QWZWTWYzWEYxTGtDYktPblRrY3FSNENIeWtRbkU5RDNLNnpTTUZyYXF0VG1McHJp?oc=5",
+      "published": "Mon, 16 Nov 2026 18:39:05 GMT",
+      "published_iso": "2026-11-16T18:39:05+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16"
+    },
+    {
+      "title": "\"Collaboration with local communities is essential… Look ahead to power and cooling demand five years from now\"",
+      "outlet": "머니투데이",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB1SlI0cDVrQy1yTEF3WnFVb0c4dm5BdHhNZ0lobEd3Y241UFc0YlFlQmdGNzg1emdXZE0tUHR4UWFHdmlVd2lPckRlbXh3enJzQVE2NmpqZXp1UEw4TDJrclM1UjI2MXl6Y3ZF?oc=5",
+      "published": "Mon, 16 Nov 2026 19:00:00 GMT",
+      "published_iso": "2026-11-16T19:00:00+00:00",
+      "locality": null,
+      "state": "VA",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16"
+    },
+    {
+      "title": "Hyperscale data centers’ energy consumption, carbon emissions newly estimated by researchers",
+      "outlet": "Harvard T.H. Chan School of Public Health",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZzd0S3YxcW5NSEE0eGp3cFFSeGZmQV96SnFGQWptc2J4ajJYb3h0cEI3ZmdhSHVFZ0FtZlk4NjRNNzZZUnRMSXhBeHlfN0UxZzNqcHRqLVRnNUlTZlRaeGZIdGJkVzlEY2JKY2poRTJLZ1B2Y082aUZMZ2dmOHhmTl90M3MtT3JWREppbmVhQ01RZFNINnpiM2ZBWGlvX3NGTlduX0FFNG0teTFWTnJ0OGdCRzdRdGlWeFdvTHV3?oc=5",
+      "published": "Mon, 16 Nov 2026 16:00:00 GMT",
+      "published_iso": "2026-11-16T16:00:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16"
+    },
+    {
+      "title": "Wärtsilä 790 MW Texas Data Center: 42 Gas Engines",
+      "outlet": "shattered.io",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPcmtvT0V4LTNyZ1NRYm9QQ2hoZFZUTlR5eXFwR1YxU2NoUFV0T3gtSHlvYXptNHZ2SnROSThMUkJsQW1zZWFWRUxnaFAxcEZPQnNZb3dUSmlBVGFkeHhvSktic2lNMVl5RFQ4OTdvMDZSVkw2UTRWQktPbkNTRUNtNXJJWHhFdw?oc=5",
+      "published": "Thu, 12 Nov 2026 02:11:55 GMT",
+      "published_iso": "2026-11-12T02:11:55+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-16"
+    },
+    {
+      "title": "Wärtsilä powers data centers in Texas with 790 MW for AI",
+      "outlet": "Inspenet",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9tbDRQM2pnWC1SVnY0enVrNTIxLUNQdUhjUmxhTnM2NWkwVHFEOGFiWm9iRmpSLVVvSmo4bk1sOVBVczcyN1Fib3BXQVZnUURIQUFhOWl0WmtuRmFRMVBTcGNBNU9MSFpIMzB3aXRPWkhCWXdTUFIzZHVn?oc=5",
+      "published": "Mon, 16 Nov 2026 15:57:14 GMT",
+      "published_iso": "2026-11-16T15:57:14+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16"
+    },
+    {
+      "title": "Scandal-plagued Texas lawmaker quits 54 days early for data center work",
+      "outlet": "Chron",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNXFzTjFWemxremgxRjhaR0FYYXlDQ0w4QnRhSDcyZGxXMThYZkFGMEZMQ2VFQzYzTkRBbTlZbXI0VHRreGFhREtNWjBuQ0RYdG1uV1hPb3ZkZ1B3LU1HVjlwM0hQTERhUHNCT0s3ZTRJck1sMFRLdlY5d3lfZ0dTSFNQRWVXYThRM0E?oc=5",
+      "published": "Mon, 16 Nov 2026 18:33:58 GMT",
+      "published_iso": "2026-11-16T18:33:58+00:00",
       "locality": null,
       "state": "TX",
       "first_seen": "2026-11-16",
