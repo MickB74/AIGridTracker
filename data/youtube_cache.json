@@ -1,6 +1,14 @@
 {
-  "fetched_at": "2026-11-18T17:10:46.838946+00:00",
+  "fetched_at": "2026-11-18T18:55:05.082133+00:00",
   "items": [
+    {
+      "title": "Red Oak approves zoning expansion on data center project",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAtTklGaW1IVS1UWlhQbmdBRnRaODdCVXBRWkxSQi1YSGllVTZQSWJZbkk0ckxhdktuQ3ZIVVBTakNEYUJaN0h2YWpCN05XQnhFTGlfMlNR?oc=5",
+      "video_id": "",
+      "published_iso": "2026-11-18T12:02:24+00:00",
+      "states": []
+    },
     {
       "title": "Members of Congress demand data center moratorium citing environmental, health concerns",
       "source": "YouTube",
@@ -171,12 +179,14 @@
       "states": []
     },
     {
-      "title": "Rep. AOC Presses EPA Assistant Admin Kramer on Jeopardizing Clean Water by Caving to Data Centers",
+      "title": "Family disputes Georgia Power over home amid data center plans",
       "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9PcFhRSk81c1EtYWxNa2d4SlhLR1FwRlRxLTBMMHNVVnN3dUVybzNBRDd6U3d6UWFnVzdZVkxSZU5DM0xweGVHcncyRnFWalJPRlU0Q0lR?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fT3BMWjVsQVoycnQtbmlOcHJZMjlkX05kTGRlRFZnSnJoS1FORzRpNncwSnZtN1NKTnV6NkxIUEFpVE1QdGRDNklvWTFfQk05SGNoQ1dn?oc=5",
       "video_id": "",
-      "published_iso": "2026-05-20T16:10:24+00:00",
-      "states": []
+      "published_iso": "2026-05-15T17:19:14+00:00",
+      "states": [
+        "Georgia"
+      ]
     },
     {
       "title": "Science 4 Everyone: Why do data centers need water? | NBC4 Washington",
@@ -247,20 +257,22 @@
       "states": []
     },
     {
-      "title": "How can Google data centers support reliable electricity?",
-      "source": "YouTube",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBBMldhUW9OVTVDOTNxSnNBLXpGMHp3S3FHQ0xZX3ppVHR1ZFNCVkVOTHFoUmd2TTRlamxLYWVOVS02Mjk5ZVM1SGloSkc1SzBSU0pFcThn?oc=5",
-      "video_id": "",
-      "published_iso": "2026-03-19T13:00:37+00:00",
-      "states": []
-    },
-    {
       "title": "What Is Data Center Power Infrastructure and How Do UPS, PDUs, and Redundancy Systems Work?",
       "source": "YouTube",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5KcXJKc1c3dURhN0o2dWlObGpKZVd0YWxVOVFVTXRqN0JLUnlNR1h0UVVad0pqQ0VzOUQxMmFXVzZEckNuM1cyY1Zqc3Jsb3A3c3owYmxR?oc=5",
       "video_id": "",
       "published_iso": "2026-03-15T19:53:56+00:00",
       "states": []
+    },
+    {
+      "title": "The community around Meta\u2019s Louisiana data center has questions. We\u2019re looking for answers.",
+      "source": "YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9NaGRXaGJkbkFtR3RwaE9pVjF5X25nRmpoeUVZQzlMS1dyR0JLLVVoQ0lVeFBFOVdpT1pFRG83QmtBSFZZOW1kVEVsTkhrRXdPZGJEUU53?oc=5",
+      "video_id": "",
+      "published_iso": "2026-03-11T21:15:32+00:00",
+      "states": [
+        "Louisiana"
+      ]
     },
     {
       "title": "Moratorium NOW: AI Data Center National Organizing Call",

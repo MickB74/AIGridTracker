@@ -6,7 +6,21 @@
   actions, status changes, and extended or shortened terms. Re-verifications
   with no substantive change are not logged here.</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 17 Nov 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 18 Nov 2026 00:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Status changed: Springfield, MO</title>
+    <link>https://aigridwatch.com/moratoriums#springfield-mo</link>
+    <guid isPermaLink="false">springfield-mo-2026-11-18-status_changed</guid>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Enacted → Expired</description>
+  </item>
+  <item>
+    <title>Status changed: Putnam County, IN</title>
+    <link>https://aigridwatch.com/moratoriums#putnam-county-in</link>
+    <guid isPermaLink="false">putnam-county-in-2026-11-18-status_changed</guid>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Enacted → Expired</description>
+  </item>
   <item>
     <title>Status changed: Johnson County, IA</title>
     <link>https://aigridwatch.com/moratoriums#johnson-county-ia</link>
@@ -692,19 +706,5 @@
     <guid isPermaLink="false">new-hampshire-senate-nh-2026-09-22-added</guid>
     <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
     <description>Added as Proposed</description>
-  </item>
-  <item>
-    <title>Status changed: Augusta, GA</title>
-    <link>https://aigridwatch.com/moratoriums#augusta-ga</link>
-    <guid isPermaLink="false">augusta-ga-2026-09-20-status_changed</guid>
-    <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
-    <description>Enacted → Expired</description>
-  </item>
-  <item>
-    <title>Status changed: Augusta-Richmond County, GA</title>
-    <link>https://aigridwatch.com/moratoriums#augusta-richmond-county-ga</link>
-    <guid isPermaLink="false">augusta-richmond-county-ga-2026-09-20-status_changed</guid>
-    <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
-    <description>Enacted → Expired</description>
   </item>
 </channel></rss>

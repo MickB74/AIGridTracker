@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-11-17",
+  "generated": "2026-11-18",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 887,
   "states": 49,
-  "enacted": 704,
+  "enacted": 702,
   "proposed": 83,
   "official_sourced": 68,
   "by_state": {
@@ -76,7 +76,7 @@
     },
     "MO": {
       "total": 18,
-      "enacted": 17,
+      "enacted": 16,
       "proposed": 0
     },
     "ME": {
@@ -131,7 +131,7 @@
     },
     "IN": {
       "total": 24,
-      "enacted": 21,
+      "enacted": 20,
       "proposed": 2
     },
     "AR": {
@@ -267,12 +267,10 @@
       "marshalltown-ia",
       "starke-county-in",
       "johnson-city-tn",
-      "springfield-mo",
       "fort-payne-al",
       "minneapolis-mn",
       "green-charter-township-mi",
       "normal-il",
-      "putnam-county-in",
       "skagit-county-wa",
       "hillsboro-or",
       "boulder-county-co",
@@ -322,7 +320,6 @@
       "johnson-city-tn",
       "coweta-county-ga",
       "jackson-county-mo",
-      "springfield-mo",
       "fort-payne-al",
       "st-charles-county-mo",
       "minneapolis-mn",
@@ -332,7 +329,6 @@
       "saginaw-mi",
       "madison-wi",
       "normal-il",
-      "putnam-county-in",
       "marysville-wa",
       "skagit-county-wa",
       "wendell-nc",
@@ -352,6 +348,7 @@
       "box-elder-county-ut",
       "logan-ut",
       "grand-county-ut",
+      "wayne-county-ut",
       "tulsa-ok",
       "broken-arrow-ok",
       "edmond-ok",
@@ -428,7 +425,6 @@
       "johnson-city-tn",
       "coweta-county-ga",
       "jackson-county-mo",
-      "springfield-mo",
       "fort-payne-al",
       "st-charles-county-mo",
       "minneapolis-mn",
@@ -441,7 +437,6 @@
       "south-lyon-mi",
       "madison-wi",
       "normal-il",
-      "putnam-county-in",
       "pulaski-county-in",
       "marysville-wa",
       "skagit-county-wa",
@@ -497,6 +492,7 @@
       "haring-township-mi",
       "hart-mi",
       "mcdowell-county-nc",
+      "gregg-township-pa",
       "el-monte-ca",
       "benton-county-ar",
       "ellsworth-me",
