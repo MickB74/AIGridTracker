@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-11-18",
+  "generated": "2026-11-19",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 887,
   "states": 49,
-  "enacted": 702,
+  "enacted": 701,
   "proposed": 83,
   "official_sourced": 68,
   "by_state": {
@@ -246,7 +246,7 @@
     },
     "SD": {
       "total": 4,
-      "enacted": 2,
+      "enacted": 1,
       "proposed": 0
     },
     "HI": {
@@ -267,6 +267,7 @@
       "marshalltown-ia",
       "starke-county-in",
       "johnson-city-tn",
+      "jackson-county-mo",
       "fort-payne-al",
       "minneapolis-mn",
       "green-charter-township-mi",
@@ -298,8 +299,7 @@
       "scarborough-me",
       "westbrook-me",
       "milford-ut",
-      "barnes-county-nd",
-      "aberdeen-sd"
+      "barnes-county-nd"
     ],
     "60": [
       "bloomington-il",
@@ -349,6 +349,7 @@
       "logan-ut",
       "grand-county-ut",
       "wayne-county-ut",
+      "white-pine-county-nv",
       "tulsa-ok",
       "broken-arrow-ok",
       "edmond-ok",
@@ -389,8 +390,7 @@
       "westbrook-me",
       "milford-ut",
       "cherry-county-ne",
-      "barnes-county-nd",
-      "aberdeen-sd"
+      "barnes-county-nd"
     ],
     "90": [
       "bloomington-il",
@@ -428,6 +428,7 @@
       "fort-payne-al",
       "st-charles-county-mo",
       "minneapolis-mn",
+      "eagan-mn",
       "saline-mi",
       "grand-blanc-township-mi",
       "green-charter-township-mi",
@@ -444,6 +445,7 @@
       "cle-elum-wa",
       "kittitas-county-wa",
       "wendell-nc",
+      "shawnee-county-ks",
       "sedgwick-county-ks",
       "mount-vernon-wa",
       "hillsboro-or",
@@ -459,6 +461,9 @@
       "butler-county-oh",
       "cincinnati-oh",
       "maumee-oh",
+      "monclova-township-oh",
+      "new-carlisle-oh",
+      "richfield-township-oh",
       "springfield-oh",
       "waterville-township-oh",
       "ashville-oh",
@@ -489,6 +494,7 @@
       "prichard-al",
       "savannah-ga",
       "lansing-mi",
+      "fenton-township-mi",
       "haring-township-mi",
       "hart-mi",
       "mcdowell-county-nc",
@@ -527,8 +533,7 @@
       "cherry-county-ne",
       "buffalo-township-pa",
       "new-orleans-la",
-      "barnes-county-nd",
-      "aberdeen-sd"
+      "barnes-county-nd"
     ]
   }
 }

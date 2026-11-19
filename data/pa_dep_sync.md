@@ -1,11 +1,11 @@
-# PA DEP data-center tracker sync — 2026-11-18
+# PA DEP data-center tracker sync — 2026-11-19
 
 Source: https://gis.dep.pa.gov/DataCenterPermitTracker/
 
 - DEP projects on file: **77**
-- DEP permit records: **417**
-- Added to projects.json: **0**
-- Refreshed: **0**
+- DEP permit records: **419**
+- Added to projects.json: **1**
+- Refreshed: **2**
 - Skipped (already tracked by hand): **16**
 
 ## Skipped — hand-written row already covers this
@@ -28,4 +28,13 @@ Left alone on purpose. If the DEP row carries detail ours lacks (a permit trail,
 - DEP 10000066 *Salem Township Data Center Development (Amazon Web Services) - Phase 2* (Salem Township (Luzerne County)) → `aws-salem-township-pa`
 - DEP 10000067 *Falls Township Data Center Development (Amazon Web Services) - Phase 2* (Falls Township (Bucks County)) → `aws-falls-township-pa`
 - DEP 10000068 *Aligned Data Center - Phase 2* (Shippingport Borough (Beaver County)) → `aligned-shippingport-pa`
+
+## Added
+
+- `great-stream-commons-data-center-gregg-township-pa` — Great Stream Commons Data Center (PNK Group), Gregg Township (Union County)
+
+## Refreshed
+
+- `keystone-connect-upper-burrell-township-pa` — PA DEP has finished reviewing this project's environmental permits (5 issued). That is a permit milestone, not a local land-use approval.
+- `amazon-web-services-unnamed-data-center-center-township-pa-52` — On PA DEP's tracker as proposed — no permit applications received yet. DEP records the location as approximate.
 
