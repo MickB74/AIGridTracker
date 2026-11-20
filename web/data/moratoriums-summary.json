@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-11-19",
+  "generated": "2026-11-20",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 887,
   "states": 49,
-  "enacted": 701,
+  "enacted": 699,
   "proposed": 83,
   "official_sourced": 68,
   "by_state": {
@@ -51,7 +51,7 @@
     },
     "MI": {
       "total": 66,
-      "enacted": 53,
+      "enacted": 52,
       "proposed": 3
     },
     "TX": {
@@ -216,7 +216,7 @@
     },
     "ND": {
       "total": 4,
-      "enacted": 1,
+      "enacted": 0,
       "proposed": 0
     },
     "MT": {
@@ -259,7 +259,6 @@
     "30": [
       "bloomington-il",
       "iron-county-ut",
-      "meridian-township-mi",
       "washington-township-macomb-co-mi",
       "gates-county-nc",
       "nashville-tn",
@@ -280,6 +279,7 @@
       "braceville-township-oh",
       "butler-county-oh",
       "waterville-township-oh",
+      "cache-county-ut",
       "box-elder-county-ut",
       "brookville-pa",
       "center-township-pa",
@@ -292,19 +292,18 @@
       "forest-park-ga",
       "hazle-township-pa",
       "little-britain-township-pa",
+      "peosta-ia",
       "webster-county-mo",
       "spokane-county-wa",
       "el-dorado-ks",
       "brunswick-me",
       "scarborough-me",
       "westbrook-me",
-      "milford-ut",
-      "barnes-county-nd"
+      "milford-ut"
     ],
     "60": [
       "bloomington-il",
       "iron-county-ut",
-      "meridian-township-mi",
       "washington-township-macomb-co-mi",
       "gates-county-nc",
       "nashville-tn",
@@ -389,13 +388,11 @@
       "scarborough-me",
       "westbrook-me",
       "milford-ut",
-      "cherry-county-ne",
-      "barnes-county-nd"
+      "cherry-county-ne"
     ],
     "90": [
       "bloomington-il",
       "iron-county-ut",
-      "meridian-township-mi",
       "washington-township-macomb-co-mi",
       "gates-county-nc",
       "canton-nc",
@@ -453,6 +450,7 @@
       "eastport-me",
       "boulder-county-co",
       "lake-county-fl",
+      "woodford-county-il",
       "fluvanna-county-va",
       "lyon-county-ks",
       "luther-ok",
@@ -524,6 +522,7 @@
       "la-conner-wa",
       "bourbonnais-il",
       "harpersville-al",
+      "westover-al",
       "pawhuska-ok",
       "el-dorado-ks",
       "brunswick-me",
@@ -532,8 +531,7 @@
       "milford-ut",
       "cherry-county-ne",
       "buffalo-township-pa",
-      "new-orleans-la",
-      "barnes-county-nd"
+      "new-orleans-la"
     ]
   }
 }
