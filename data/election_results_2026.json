@@ -1,0 +1,3911 @@
+{
+ "as_of": "2026-11-21",
+ "election_date": "2026-11-03",
+ "note": "Winners as read from the cited page on the as_of date. 'called' means a news organisation's call or projection, not a state certification.",
+ "senate": {
+  "AK": {
+   "winner": "Mary Peltola",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true,
+   "vote_note": "50.1%–45.8%"
+  },
+  "AL": {
+   "winner": "Barry Moore",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "54.7%–45.2%"
+  },
+  "AR": {
+   "winner": "Tom Cotton",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "54.3%–42.4%"
+  },
+  "CO": {
+   "winner": "John Hickenlooper",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "60.2%–35.6%"
+  },
+  "DE": {
+   "winner": "Chris Coons",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "63.6%–36.4%"
+  },
+  "FL": {
+   "winner": "Ashley Moody",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "50.9%–48.0%"
+  },
+  "GA": {
+   "winner": "Jon Ossoff",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "59.0%–41.0%"
+  },
+  "IA": {
+   "winner": "Josh Turek",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true,
+   "vote_note": "50.5%–46.4%"
+  },
+  "ID": {
+   "winner": "Jim Risch",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "56.5%–33.6%"
+  },
+  "IL": {
+   "winner": "Juliana Stratton",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "61.0%–37.4%"
+  },
+  "KS": {
+   "winner": "Adam Hamilton",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true,
+   "vote_note": "50.9%–46.1%"
+  },
+  "KY": {
+   "winner": "Andy Barr",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "55.0%–42.9%"
+  },
+  "LA": {
+   "winner": "Julia Letlow",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "50.9%–49.1%"
+  },
+  "MA": {
+   "winner": "Ed Markey",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "63.3%–32.3%"
+  },
+  "ME": {
+   "winner": "Troy Jackson",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true,
+   "vote_note": "53.6%–46.3%"
+  },
+  "MI": {
+   "winner": "Abdul El-Sayed",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "52.5%–45.5%"
+  },
+  "MN": {
+   "winner": "Peggy Flanagan",
+   "winner_party": "DFL",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "53.7%–43.6%"
+  },
+  "MS": {
+   "winner": "Scott Colom",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.fox10tv.com/2026/11/14/ms-secretary-state-releases-final-election-numbers/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true,
+   "vote_note": "49.3%–48.6% (479,404 to 471,817)"
+  },
+  "MT": {
+   "winner": "Kurt Alme",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://nbcmontana.com/news/local/bodnar-concedes-senate-race-alme-projected-to-take-seat",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NC": {
+   "winner": "Roy Cooper",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://aljazeera.com/news/2026/11/4/democratic-party-flips-us-senate-in-2026-midterm-elections",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true,
+   "vote_note": "58.8%–39.1%"
+  },
+  "NE": {
+   "winner": "Pete Ricketts",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.wowt.com/2026/11/04/republican-pete-ricketts-wins-reelection-us-senate-over-independent-challenger-nebraska/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "49.8%–44.2%"
+  },
+  "NH": {
+   "winner": "Chris Pappas",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.abqjournal.com/news/democrats-win-us-senate-ending-republican-dominance-by-harnessing-voters-frustration-with-trump/3155283",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "55.9%–42.2%"
+  },
+  "NJ": {
+   "winner": "Cory Booker",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://gvwire.com/2026/11/03/democrats-hold-senate-seats-in-delaware-illinois-massachusetts-new-jersey-and-rhode-island/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "62.6%–34.7%"
+  },
+  "NM": {
+   "winner": "Ben Ray Luján",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://gvwire.com/2026/11/03/ap-calls-senate-races-in-colorado-new-mexico-and-wyoming/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "63.3%–36.7%"
+  },
+  "OH": {
+   "winner": "Sherrod Brown",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true,
+   "vote_note": "50.0%–45.2%"
+  },
+  "OK": {
+   "winner": "Kevin Hern",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://gvwire.com/2026/11/03/republicans-hagerty-hern-win-senate-races-in-tennessee-oklahoma/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "57.2%–39.3%"
+  },
+  "OR": {
+   "winner": "Jeff Merkley",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://katu.com/news/local/jeff-merkley-wins-fourth-term-in-us-senate-defeating-challenger-david-brock-smith-in-oregon",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "58.0%–38.7% (NBC table, 94% reporting)"
+  },
+  "RI": {
+   "winner": "Jack Reed",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://gvwire.com/2026/11/03/democrats-hold-senate-seats-in-delaware-illinois-massachusetts-new-jersey-and-rhode-island/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "66.8%–29.3%"
+  },
+  "SC": {
+   "winner": "Annie Andrews",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.cbsnews.com/news/2026-midterm-election-results-where-democrats-won/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true,
+   "vote_note": "51.1%–46.6%"
+  },
+  "SD": {
+   "winner": "Mike Rounds",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.dakotanewsnow.com/2026/11/04/mike-rounds-wins-re-election-us-senate/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "60.5%–39.5%"
+  },
+  "TN": {
+   "winner": "Bill Hagerty",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://gvwire.com/2026/11/03/republicans-hagerty-hern-win-senate-races-in-tennessee-oklahoma/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "55.1%–42.9%"
+  },
+  "TX": {
+   "winner": "James Talarico",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.cbsnews.com/news/2026-midterm-election-results-where-democrats-won/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true,
+   "vote_note": "55.1%–43.0%"
+  },
+  "VA": {
+   "winner": "Mark Warner",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://aljazeera.com/news/2026/11/4/democratic-party-flips-us-senate-in-2026-midterm-elections",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "61.5%–38.3%"
+  },
+  "WV": {
+   "winner": "Shelley Moore Capito",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://legis1.com/news/west-virginia-senate-election-decisions",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "58.3%–37.9%"
+  },
+  "WY": {
+   "winner": "Harriet Hageman",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://gvwire.com/2026/11/03/ap-calls-senate-races-in-colorado-new-mexico-and-wyoming/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "vote_note": "64.9%–34.6%"
+  }
+ },
+ "house": {
+  "AK-AL": {
+   "winner": "Nick Begich III",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.elections.alaska.gov/enr/26GENR/results/RCV-USRep.pdf",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "AL-1": {
+   "winner": "Jerry Carl",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.alreporter.com/2026/11/04/incumbent-representatives-command-victories-in-u-s-house-races",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "AL-2": {
+   "winner": "Shomari Figures",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.alreporter.com/2026/11/04/incumbent-representatives-command-victories-in-u-s-house-races",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "AL-3": {
+   "winner": "Mike Rogers",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.alreporter.com/2026/11/04/incumbent-representatives-command-victories-in-u-s-house-races",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "AL-4": {
+   "winner": "Robert Aderholt",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.alreporter.com/2026/11/04/incumbent-representatives-command-victories-in-u-s-house-races",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "AL-5": {
+   "winner": "Dale Strong",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.alreporter.com/2026/11/04/incumbent-representatives-command-victories-in-u-s-house-races",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "AL-6": {
+   "winner": "Gary Palmer",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.alreporter.com/2026/11/04/incumbent-representatives-command-victories-in-u-s-house-races",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "AL-7": {
+   "winner": "Terri Sewell",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.alreporter.com/2026/11/04/incumbent-representatives-command-victories-in-u-s-house-races",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "AR-1": {
+   "winner": "Rick Crawford",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arkansas,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "AR-2": {
+   "winner": "French Hill",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://katv.com/news/local/ap-calls-french-hill-winner-in-arkansas-2nd-district-race-edging-chris-jones",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "AR-3": {
+   "winner": "Steve Womack",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arkansas,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "AR-4": {
+   "winner": "Bruce Westerman",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arkansas,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "AS-AL": {
+   "winner": "Amata Coleman Radewagen",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.hawaiifreepress.com/Articles-Main/ID/49936/Territories-Guam-Flips-to-D-NMI-Keeps-R-American-Samoa-still-voting",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "AZ-1": {
+   "winner": "Amish Shah",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.kjzz.org/elections/2026-11-03/arizona-congressional-districts-election-results-elex",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "AZ-2": {
+   "winner": "Eli Crane",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.kjzz.org/elections/2026-11-03/arizona-congressional-districts-election-results-elex",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "AZ-3": {
+   "winner": "Yassamin Ansari",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.fox10phoenix.com/election/3-arizona-democrats-projected-win-reelection-congress-ap",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "AZ-4": {
+   "winner": "Greg Stanton",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.fox10phoenix.com/election/3-arizona-democrats-projected-win-reelection-congress-ap",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "AZ-5": {
+   "winner": "Mark Lamb",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.kjzz.org/elections/2026-11-03/arizona-congressional-districts-election-results-elex",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "AZ-6": {
+   "winner": "JoAnna Mendoza",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.kjzz.org/elections/2026-11-03/arizona-congressional-districts-election-results-elex",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "AZ-7": {
+   "winner": "Adelita Grijalva",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.fox10phoenix.com/election/3-arizona-democrats-projected-win-reelection-congress-ap",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "AZ-8": {
+   "winner": "Abraham Hamadeh",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.kjzz.org/elections/2026-11-03/arizona-congressional-districts-election-results-elex",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "AZ-9": {
+   "winner": "Paul Gosar",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.fox10phoenix.com/election/3-arizona-democrats-projected-win-reelection-congress-ap",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "CA-1": {
+   "winner": "Mike McGuire",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "CA-10": {
+   "winner": "Mark DeSaulnier",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-11": {
+   "winner": "Scott Wiener",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-12": {
+   "winner": "Lateefah Simon",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-13": {
+   "winner": "Adam Gray",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-14": {
+   "winner": "Aisha Wahab",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-15": {
+   "winner": "Kevin Mullin",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-16": {
+   "winner": "Sam Liccardo",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-17": {
+   "winner": "Ro Khanna",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-18": {
+   "winner": "Zoe Lofgren",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-19": {
+   "winner": "Jimmy Panetta",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-2": {
+   "winner": "Jared Huffman",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-20": {
+   "winner": "Vince Fong",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-21": {
+   "winner": "Jim Costa",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-22": {
+   "winner": "Randy Villegas",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "CA-23": {
+   "winner": null,
+   "winner_party": null,
+   "status": "uncalled",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "note": "Rep. Jay Obernolte (R) led Tessa Lynn Hodge (D) in the state's Nov. 20 count; no call had been made."
+  },
+  "CA-24": {
+   "winner": "Salud Carbajal",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-25": {
+   "winner": "Raul Ruiz",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-26": {
+   "winner": "Jacqui Irwin",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-27": {
+   "winner": "George Whitesides",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-28": {
+   "winner": "Judy Chu",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-29": {
+   "winner": "Luz Rivas",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-3": {
+   "winner": "Ami Bera",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-30": {
+   "winner": "Laura Friedman",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-31": {
+   "winner": "Gil Cisneros",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-32": {
+   "winner": "Brad Sherman",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-33": {
+   "winner": "Pete Aguilar",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-34": {
+   "winner": "Angela Gonzales-Torres",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-35": {
+   "winner": "Norma Torres",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-36": {
+   "winner": "Ted Lieu",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-37": {
+   "winner": "Sydney Kamlager-Dove",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-38": {
+   "winner": "Hilda Solis",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-39": {
+   "winner": "Mark Takano",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-4": {
+   "winner": "Eric Jones",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-40": {
+   "winner": "Ken Calvert",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-41": {
+   "winner": "Linda Sánchez",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "CA-42": {
+   "winner": "Robert Garcia",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-43": {
+   "winner": "Maxine Waters",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-44": {
+   "winner": "Nanette Barragán",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-45": {
+   "winner": "Derek Tran",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-46": {
+   "winner": "Lou Correa",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-47": {
+   "winner": "Dave Min",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-48": {
+   "winner": "Marni von Wilpert",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "CA-49": {
+   "winner": "Mike Levin",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-5": {
+   "winner": "Tom McClintock",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-50": {
+   "winner": "Scott Peters",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-51": {
+   "winner": "Sara Jacobs",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-52": {
+   "winner": "Juan Vargas",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-6": {
+   "winner": "Richard Pan",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "CA-7": {
+   "winner": "Doris Matsui",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-8": {
+   "winner": "John Garamendi",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CA-9": {
+   "winner": "Josh Harder",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "CO-1": {
+   "winner": "Melat Kiros",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Colorado,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "CO-2": {
+   "winner": "Joe Neguse",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Colorado,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "CO-3": {
+   "winner": "Jeff Hurd",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://ballotpedia.org/Colorado's_3rd_Congressional_District_election,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "CO-4": {
+   "winner": "Eileen Laubacher",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.kunc.org/politics/2026-11-17/lauren-boebert-lost-one-of-the-most-pro-trump-districts-any-house-republican-lost-this-year",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "CO-5": {
+   "winner": "Jessica Killin",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.kunc.org/news/2026-11-05/jessica-killin-flips-colorados-5th-congressional-district-becomes-first-democrat-to-win",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "CO-6": {
+   "winner": "Jason Crow",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Colorado,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "CO-7": {
+   "winner": "Brittany Pettersen",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Colorado,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "CO-8": {
+   "winner": "Manny Rutinel",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.coloradopolitics.com/2026/11/03/gabe-evans-manny-rutinel-colorado-cd8-election-results/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "CT-1": {
+   "winner": "Luke Bronin",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ctmirror.org/2026/11/03/luke-bronin-declares-victory-as-ct-democrats-anticipate-sweep-in-u-s-house-races/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "CT-2": {
+   "winner": "Joe Courtney",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ctmirror.org/2026/11/03/luke-bronin-declares-victory-as-ct-democrats-anticipate-sweep-in-u-s-house-races/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "CT-3": {
+   "winner": "Rosa DeLauro",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ctmirror.org/2026/11/03/luke-bronin-declares-victory-as-ct-democrats-anticipate-sweep-in-u-s-house-races/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "CT-4": {
+   "winner": "Jim Himes",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ctmirror.org/2026/11/03/luke-bronin-declares-victory-as-ct-democrats-anticipate-sweep-in-u-s-house-races/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "CT-5": {
+   "winner": "Jahana Hayes",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ctmirror.org/2026/11/03/luke-bronin-declares-victory-as-ct-democrats-anticipate-sweep-in-u-s-house-races/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "DC-AL": {
+   "winner": "Robert White",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://wjla.com/news/elections/democrat-robert-white-wins-race-for-dc-congressional-delegate",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "DE-AL": {
+   "winner": "Sarah McBride",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.fox29.com/news/sarah-mcbride-wins-reelection-delawares-u-s-house-race-ap-projects",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "FL-1": {
+   "winner": "Jimmy Patronis",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-10": {
+   "winner": "Maxwell Frost",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Florida",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "FL-11": {
+   "winner": "Joe Strada",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-12": {
+   "winner": "Gus Bilirakis",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-13": {
+   "winner": "Anna Paulina Luna",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-14": {
+   "winner": "Kathy Castor",
+   "winner_party": "Democratic",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-15": {
+   "winner": "Laurel Lee",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-16": {
+   "winner": "Sydney Gruters",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-17": {
+   "winner": "Greg Steube",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-18": {
+   "winner": "Scott Franklin",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-19": {
+   "winner": "Jim Schwartzel",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-2": {
+   "winner": "Austin Rogers",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-20": {
+   "winner": "Debbie Wasserman Schultz",
+   "winner_party": "Democratic",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-21": {
+   "winner": "Brian Mast",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-22": {
+   "winner": "Pia Dandiya",
+   "winner_party": "Democratic",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-23": {
+   "winner": "Lois Frankel",
+   "winner_party": "Democratic",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-24": {
+   "winner": "Oliver Gilbert",
+   "winner_party": "Democratic",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-25": {
+   "winner": "Jared Moskowitz",
+   "winner_party": "Democratic",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-26": {
+   "winner": "Mario Díaz-Balart",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-27": {
+   "winner": "María Elvira Salazar",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-28": {
+   "winner": "Carlos Giménez",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-3": {
+   "winner": "Kat Cammack",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-4": {
+   "winner": "Aaron Bean",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-5": {
+   "winner": "John Rutherford",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-6": {
+   "winner": "Randy Fine",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-7": {
+   "winner": "Ryan Elijah",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-8": {
+   "winner": "Mike Haridopolos",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "FL-9": {
+   "winner": "Darren Soto",
+   "winner_party": "Democratic",
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USRepresentative",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "GA-1": {
+   "winner": "Jim Kingston",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "GA-10": {
+   "winner": "Houston Gaines",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "GA-11": {
+   "winner": "John Cowan",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "GA-12": {
+   "winner": "Rick Allen",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "GA-13": {
+   "winner": "Jasmine Clark",
+   "winner_party": "Democratic",
+   "status": "certified",
+   "source": "https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "GA-14": {
+   "winner": "Clay Fuller",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "GA-2": {
+   "winner": "Sanford Bishop",
+   "winner_party": "Democratic",
+   "status": "certified",
+   "source": "https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "GA-3": {
+   "winner": "Brian Jack",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "GA-4": {
+   "winner": "Hank Johnson",
+   "winner_party": "Democratic",
+   "status": "certified",
+   "source": "https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "GA-5": {
+   "winner": "Nikema Williams",
+   "winner_party": "Democratic",
+   "status": "certified",
+   "source": "https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "GA-6": {
+   "winner": "Lucy McBath",
+   "winner_party": "Democratic",
+   "status": "certified",
+   "source": "https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "GA-7": {
+   "winner": "Rich McCormick",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "GA-8": {
+   "winner": "Austin Scott",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "GA-9": {
+   "winner": "Andrew Clyde",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "GU-AL": {
+   "winner": "Alicia Limtiaco",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.hawaiifreepress.com/Articles-Main/ID/49936/Territories-Guam-Flips-to-D-NMI-Keeps-R-American-Samoa-still-voting",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "HI-1": {
+   "winner": "Ed Case",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://elections.hawaii.gov/wp-content/results/2026%20General/summary.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "HI-2": {
+   "winner": "Jill Tokuda",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://elections.hawaii.gov/wp-content/results/2026%20General/summary.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "IA-1": {
+   "winner": "Christina Bohannan",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://electionresults.iowa.gov/IA/127077/web.345435/#/summary",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "IA-2": {
+   "winner": "Lindsay James",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://electionresults.iowa.gov/IA/127077/web.345435/#/summary",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "IA-3": {
+   "winner": "Sarah Trone Garriott",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://electionresults.iowa.gov/IA/127077/web.345435/#/summary",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "IA-4": {
+   "winner": "Chris McGowan",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://electionresults.iowa.gov/IA/127077/web.345435/#/summary",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "ID-1": {
+   "winner": "Russ Fulcher",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://idahonews.com/news/local/idaho-2026-general-election-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "ID-2": {
+   "winner": "Mike Simpson",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://idahonews.com/news/local/idaho-2026-general-election-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-1": {
+   "winner": "Jonathan Jackson",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-10": {
+   "winner": "Brad Schneider",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-11": {
+   "winner": "Bill Foster",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-12": {
+   "winner": "Mike Bost",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-13": {
+   "winner": "Nikki Budzinski",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.stlpr.org/government-politics-issues/2026-11-03/illinois-us-reps-bost-budzinski-miller-win-election",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-14": {
+   "winner": "Lauren Underwood",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-15": {
+   "winner": "Mary Miller",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-16": {
+   "winner": "Darin LaHood",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-17": {
+   "winner": "Eric Sorensen",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-2": {
+   "winner": "Donna Miller",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-3": {
+   "winner": "Delia Ramirez",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-4": {
+   "winner": "Patty Garcia",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-5": {
+   "winner": "Mike Quigley",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-6": {
+   "winner": "Sean Casten",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-7": {
+   "winner": "La Shawn Ford",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-8": {
+   "winner": "Melissa Bean",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IL-9": {
+   "winner": "Daniel Biss",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcchicago.com/elections/who-won-illinois-live-election-results-and-winners-from-the-2026-midterm-election/4012160/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IN-1": {
+   "winner": "Frank Mrvan",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://indianacapitalchronicle.com/2026/11/04/indiana-democrats-gained-congressional-seat-gop-incumbents-lead-elsewhere/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IN-2": {
+   "winner": "Rudy Yakym",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://indianacapitalchronicle.com/2026/11/04/indiana-democrats-gained-congressional-seat-gop-incumbents-lead-elsewhere/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IN-3": {
+   "winner": "Marlin Stutzman",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://indianacapitalchronicle.com/2026/11/04/indiana-democrats-gained-congressional-seat-gop-incumbents-lead-elsewhere/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IN-4": {
+   "winner": "Jim Baird",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://indianacapitalchronicle.com/2026/11/04/indiana-democrats-gained-congressional-seat-gop-incumbents-lead-elsewhere/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IN-5": {
+   "winner": "J. D. Ford",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://indianacapitalchronicle.com/2026/11/04/indiana-democrats-gained-congressional-seat-gop-incumbents-lead-elsewhere/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "IN-6": {
+   "winner": "Jefferson Shreve",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://indianacapitalchronicle.com/2026/11/04/indiana-democrats-gained-congressional-seat-gop-incumbents-lead-elsewhere/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IN-7": {
+   "winner": "André Carson",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://indianacapitalchronicle.com/2026/11/04/indiana-democrats-gained-congressional-seat-gop-incumbents-lead-elsewhere/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IN-8": {
+   "winner": "Mark Messmer",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://indianacapitalchronicle.com/2026/11/04/indiana-democrats-gained-congressional-seat-gop-incumbents-lead-elsewhere/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "IN-9": {
+   "winner": "Erin Houchin",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://indianacapitalchronicle.com/2026/11/04/indiana-democrats-gained-congressional-seat-gop-incumbents-lead-elsewhere/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "KS-1": {
+   "winner": "Tracey Mann",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/kansas-us-house-district-1-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "KS-2": {
+   "winner": "Derek Schmidt",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/kansas-us-house-district-2-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "KS-3": {
+   "winner": "Sharice Davids",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/kansas-us-house-district-3-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "KS-4": {
+   "winner": "Ron Estes",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/kansas-us-house-district-4-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "KY-1": {
+   "winner": "James Comer",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://vrsws.sos.ky.gov/liveresults/Statewide",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "KY-2": {
+   "winner": "Brett Guthrie",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://vrsws.sos.ky.gov/liveresults/Statewide",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "KY-3": {
+   "winner": "Morgan McGarvey",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://vrsws.sos.ky.gov/liveresults/Statewide",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "KY-4": {
+   "winner": "Ed Gallrein",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://vrsws.sos.ky.gov/liveresults/Statewide",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "KY-5": {
+   "winner": "Hal Rogers",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://vrsws.sos.ky.gov/liveresults/Statewide",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "KY-6": {
+   "winner": "Zach Dembo",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://vrsws.sos.ky.gov/liveresults/Statewide",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "LA-1": {
+   "winner": "Steve Scalise",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://voterportal.sos.la.gov/graphical",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "LA-2": {
+   "winner": "Troy Carter",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://voterportal.sos.la.gov/graphical",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "LA-3": {
+   "winner": "Clay Higgins",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://voterportal.sos.la.gov/graphical",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "LA-4": {
+   "winner": "Mike Johnson",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://voterportal.sos.la.gov/graphical",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "LA-5": {
+   "winner": null,
+   "winner_party": null,
+   "status": "runoff",
+   "source": "https://voterportal.sos.la.gov/graphical",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "runoff_date": "2026-12-12",
+   "note": "Between Pat Moore (D) and Gabe Firment (R)."
+  },
+  "LA-6": {
+   "winner": null,
+   "winner_party": null,
+   "status": "runoff",
+   "source": "https://voterportal.sos.la.gov/graphical",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "runoff_date": "2026-12-12",
+   "note": "Between Chauna Banks (D) and Blake Miguez (R)."
+  },
+  "MA-1": {
+   "winner": "Richard Neal",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.boston25news.com/news/local/town-by-town-results-maps-show-how-mass-voted-governor-us-senate-house/QOGNAMYWWZEPLAKQ4CI7JHKGT4/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MA-2": {
+   "winner": "Jim McGovern",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.boston25news.com/news/local/town-by-town-results-maps-show-how-mass-voted-governor-us-senate-house/QOGNAMYWWZEPLAKQ4CI7JHKGT4/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MA-3": {
+   "winner": "Lori Trahan",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.boston25news.com/news/local/town-by-town-results-maps-show-how-mass-voted-governor-us-senate-house/QOGNAMYWWZEPLAKQ4CI7JHKGT4/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MA-4": {
+   "winner": "Jake Auchincloss",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.boston25news.com/news/local/town-by-town-results-maps-show-how-mass-voted-governor-us-senate-house/QOGNAMYWWZEPLAKQ4CI7JHKGT4/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MA-5": {
+   "winner": "Katherine Clark",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.boston25news.com/news/local/town-by-town-results-maps-show-how-mass-voted-governor-us-senate-house/QOGNAMYWWZEPLAKQ4CI7JHKGT4/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MA-6": {
+   "winner": "Daniel Koh",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.boston25news.com/news/local/town-by-town-results-maps-show-how-mass-voted-governor-us-senate-house/QOGNAMYWWZEPLAKQ4CI7JHKGT4/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MA-7": {
+   "winner": "Ayanna Pressley",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.boston25news.com/news/local/town-by-town-results-maps-show-how-mass-voted-governor-us-senate-house/QOGNAMYWWZEPLAKQ4CI7JHKGT4/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MA-8": {
+   "winner": "Stephen Lynch",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.boston25news.com/news/local/town-by-town-results-maps-show-how-mass-voted-governor-us-senate-house/QOGNAMYWWZEPLAKQ4CI7JHKGT4/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MA-9": {
+   "winner": "Bill Keating",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.boston25news.com/news/local/town-by-town-results-maps-show-how-mass-voted-governor-us-senate-house/QOGNAMYWWZEPLAKQ4CI7JHKGT4/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MD-1": {
+   "winner": "Andy Harris",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://elections.maryland.gov/elections/2026/general_results/gen_results_2026_4.html",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MD-2": {
+   "winner": "Johnny Olszewski",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://elections.maryland.gov/elections/2026/general_results/gen_results_2026_4.html",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MD-3": {
+   "winner": "Sarah Elfreth",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://elections.maryland.gov/elections/2026/general_results/gen_results_2026_4.html",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MD-4": {
+   "winner": "Glenn Ivey",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://elections.maryland.gov/elections/2026/general_results/gen_results_2026_4.html",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MD-5": {
+   "winner": "Adrian Boafo",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://elections.maryland.gov/elections/2026/general_results/gen_results_2026_4.html",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MD-6": {
+   "winner": "April McClain Delaney",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://elections.maryland.gov/elections/2026/general_results/gen_results_2026_4.html",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MD-7": {
+   "winner": "Kweisi Mfume",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://elections.maryland.gov/elections/2026/general_results/gen_results_2026_4.html",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MD-8": {
+   "winner": "Jamie Raskin",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://elections.maryland.gov/elections/2026/general_results/gen_results_2026_4.html",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "ME-1": {
+   "winner": "Chellie Pingree",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nhpr.org/2026-11-03/chellie-pingree-wins-10th-term-in-maines-1st-congressional-district",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "ME-2": {
+   "winner": "Paul LePage",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/Nov26%20CG2%20RCV%20Summary%20Report%2020261112_0.csv",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "MI-1": {
+   "winner": "Jack Bergman",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://bridgemi.com/?p=82751",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MI-10": {
+   "winner": "Christina Hines",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://bridgemi.com/?p=82751",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "MI-11": {
+   "winner": "Jeremy Moss",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://bridgemi.com/?p=82751",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MI-12": {
+   "winner": "Rashida Tlaib",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://bridgemi.com/?p=82751",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MI-13": {
+   "winner": "Donavan McKinney",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://bridgemi.com/?p=82751",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MI-2": {
+   "winner": "John Moolenaar",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://bridgemi.com/?p=82751",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MI-3": {
+   "winner": "Hillary Scholten",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Michigan,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "MI-4": {
+   "winner": "Sean McCann",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://bridgemi.com/?p=82751",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "MI-5": {
+   "winner": "Tim Walberg",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://bridgemi.com/?p=82751",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MI-6": {
+   "winner": "Debbie Dingell",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://bridgemi.com/?p=82751",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MI-7": {
+   "winner": "William Lawrence",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://bridgemi.com/?p=82751",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "MI-8": {
+   "winner": "Kristen McDonald Rivet",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.michiganpublic.org/politics-government/2026-11-04/mcdonald-rivet-wins-reelection-in-michigans-8th-congressional-district",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MI-9": {
+   "winner": "Lisa McClain",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Michigan,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "MN-1": {
+   "winner": null,
+   "winner_party": null,
+   "status": "uncalled",
+   "source": "https://electionresultsfiles.sos.mn.gov/20261103/ushouse.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "note": "Jake Johnson (DFL) led Rep. Brad Finstad (R) by 324 votes; a recount is set for Nov. 30 to Dec. 4."
+  },
+  "MN-2": {
+   "winner": "Matt Little",
+   "winner_party": "DFL",
+   "status": "certified",
+   "source": "https://electionresultsfiles.sos.mn.gov/20261103/ushouse.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MN-3": {
+   "winner": "Kelly Morrison",
+   "winner_party": "DFL",
+   "status": "certified",
+   "source": "https://electionresultsfiles.sos.mn.gov/20261103/ushouse.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MN-4": {
+   "winner": "Betty McCollum",
+   "winner_party": "DFL",
+   "status": "certified",
+   "source": "https://electionresultsfiles.sos.mn.gov/20261103/ushouse.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MN-5": {
+   "winner": "Ilhan Omar",
+   "winner_party": "DFL",
+   "status": "certified",
+   "source": "https://electionresultsfiles.sos.mn.gov/20261103/ushouse.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MN-6": {
+   "winner": "Tom Emmer",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://electionresultsfiles.sos.mn.gov/20261103/ushouse.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MN-7": {
+   "winner": "Michelle Fischbach",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://electionresultsfiles.sos.mn.gov/20261103/ushouse.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MN-8": {
+   "winner": "Pete Stauber",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://electionresultsfiles.sos.mn.gov/20261103/ushouse.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MO-1": {
+   "winner": "Wesley Bell",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://enr.sos.mo.gov/",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MO-2": {
+   "winner": "Fred Wellman",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://enr.sos.mo.gov/",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "MO-3": {
+   "winner": "Bob Onder",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://enr.sos.mo.gov/",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MO-4": {
+   "winner": "Mark Alford",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://enr.sos.mo.gov/",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MO-5": {
+   "winner": "Emanuel Cleaver",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://enr.sos.mo.gov/",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MO-6": {
+   "winner": "Chris Stigall",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://enr.sos.mo.gov/",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MO-7": {
+   "winner": "Eric Burlison",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://enr.sos.mo.gov/",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MO-8": {
+   "winner": "Jason Smith",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://enr.sos.mo.gov/",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "MP-AL": {
+   "winner": "Kimberlyn King-Hinds",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://www.thegreenpapers.com/G26/MP",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "MS-1": {
+   "winner": "Trent Kelly",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.wlox.com/2026/11/04/kelly-wins-re-election-us-house-mississippis-1st-congressional-district/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MS-2": {
+   "winner": "Bennie Thompson",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.wlox.com/2026/11/04/incumbent-bennie-thompson-wins-2nd-congressional-district-race/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MS-3": {
+   "winner": "Michael Guest",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.wlox.com/2026/11/04/incumbent-michael-guest-secures-reelection-mississippis-3rd-congressional-district/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MS-4": {
+   "winner": "Mike Ezell",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.wlox.com/2026/11/04/ap-declares-republican-rep-mike-ezell-winner-mississippis-4th-congressional-district/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "MT-1": {
+   "winner": "Sam Forstag",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/montana-us-house-district-1-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "MT-2": {
+   "winner": "Troy Downing",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/montana-us-house-district-2-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NC-1": {
+   "winner": "Don Davis",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "NC-10": {
+   "winner": null,
+   "winner_party": null,
+   "status": "uncalled",
+   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "note": "Rep. Pat Harrigan (R) led Ashley Bell (D) in the state board's count; Bell requested a recount."
+  },
+  "NC-11": {
+   "winner": "Jamie Ager",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "NC-12": {
+   "winner": "Alma Adams",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "NC-13": {
+   "winner": "Paul Barringer",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "NC-14": {
+   "winner": "Lakesha Womack",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "NC-2": {
+   "winner": "Deborah Ross",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "NC-3": {
+   "winner": "Raymond Smith Jr.",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "NC-4": {
+   "winner": "Valerie Foushee",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "NC-5": {
+   "winner": null,
+   "winner_party": null,
+   "status": "uncalled",
+   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "note": "Chuck Hubbard (D) led Rep. Virginia Foxx (R) by 330 votes in the state board's count; a recount was under way."
+  },
+  "NC-6": {
+   "winner": "Cyril Jefferson",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "NC-7": {
+   "winner": "David Rouzer",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "NC-8": {
+   "winner": "Mark Harris",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "NC-9": {
+   "winner": "Richard Ojeda",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "ND-AL": {
+   "winner": "Julie Fedorchak",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.valleynewslive.com/2026/11/04/rep-julie-fedorchak-reelected-us-house/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NE-1": {
+   "winner": "Mike Flood",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://electionresults.nebraska.gov/resultsSW.aspx?text=Race&type=CG&map=CTY",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "NE-2": {
+   "winner": "Denise Powell",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://electionresults.nebraska.gov/resultsSW.aspx?text=Race&type=CG&map=CTY",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "NE-3": {
+   "winner": "Adrian Smith",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://electionresults.nebraska.gov/resultsSW.aspx?text=Race&type=CG&map=CTY",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "NH-1": {
+   "winner": "Stefany Shaheen",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nhpr.org/nh-news/2026-11-03/democrats-sweep-nh-congressional-seats-goodlander-shaheen-win",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NH-2": {
+   "winner": "Maggie Goodlander",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nhpr.org/nh-news/2026-11-03/democrats-sweep-nh-congressional-seats-goodlander-shaheen-win",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NJ-1": {
+   "winner": "Donald Norcross",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-jersey-us-house-district-1-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NJ-10": {
+   "winner": "LaMonica McIver",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-jersey-us-house-district-10-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NJ-11": {
+   "winner": "Analilia Mejia",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-jersey-us-house-district-11-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NJ-12": {
+   "winner": "Adam Hamawy",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-jersey-us-house-district-12-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NJ-2": {
+   "winner": "Zack Mullock",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-jersey-us-house-district-2-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "NJ-3": {
+   "winner": "Herb Conaway",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-jersey-us-house-district-3-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NJ-4": {
+   "winner": "Chris Smith",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-jersey-us-house-district-4-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NJ-5": {
+   "winner": "Josh Gottheimer",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-jersey-us-house-district-5-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NJ-6": {
+   "winner": "Frank Pallone",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-jersey-us-house-district-6-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NJ-7": {
+   "winner": "Rebecca Bennett",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-jersey-us-house-district-7-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "NJ-8": {
+   "winner": "Rob Menendez",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-jersey-us-house-district-8-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NJ-9": {
+   "winner": "Nellie Pou",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-jersey-us-house-district-9-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NM-1": {
+   "winner": "Melanie Stansbury",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-mexico-us-house-district-1-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NM-2": {
+   "winner": "Gabe Vasquez",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-mexico-us-house-district-2-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NM-3": {
+   "winner": "Teresa Leger Fernández",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-mexico-us-house-district-3-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NV-1": {
+   "winner": "Dina Titus",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://thenevadaindependent.com/article/teresa-benitez-thompson-flips-northern-nevada-house-seat-for-first-time-in-blue-wave/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NV-2": {
+   "winner": "Teresa Benitez-Thompson",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://thenevadaindependent.com/article/teresa-benitez-thompson-flips-northern-nevada-house-seat-for-first-time-in-blue-wave/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "NV-3": {
+   "winner": "Susie Lee",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://thenevadaindependent.com/article/teresa-benitez-thompson-flips-northern-nevada-house-seat-for-first-time-in-blue-wave/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NV-4": {
+   "winner": "Steven Horsford",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://thenevadaindependent.com/article/teresa-benitez-thompson-flips-northern-nevada-house-seat-for-first-time-in-blue-wave/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-1": {
+   "winner": "Nick LaLota",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-1-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-10": {
+   "winner": "Brad Lander",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-10-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-11": {
+   "winner": "Nicole Malliotakis",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-11-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-12": {
+   "winner": "Micah Lasher",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-12-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-13": {
+   "winner": "Darializa Avila Chevalier",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-13-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-14": {
+   "winner": "Alexandria Ocasio-Cortez",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-14-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-15": {
+   "winner": "Ritchie Torres",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-15-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-16": {
+   "winner": "George Latimer",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-16-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-17": {
+   "winner": "Cait Conley",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-17-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "NY-18": {
+   "winner": "Pat Ryan",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-18-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-19": {
+   "winner": "Josh Riley",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-19-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-2": {
+   "winner": "Andrew Garbarino",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-2-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-20": {
+   "winner": "Paul Tonko",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-20-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-21": {
+   "winner": "Anthony Constantino",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-21-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-22": {
+   "winner": "John Mannion",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-22-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-23": {
+   "winner": "Nick Langworthy",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-23-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-24": {
+   "winner": "Claudia Tenney",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-24-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-25": {
+   "winner": "Joseph Morelle",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-25-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-26": {
+   "winner": "Tim Kennedy",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-26-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-3": {
+   "winner": "Tom Suozzi",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-3-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-4": {
+   "winner": "Laura Gillen",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-4-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-5": {
+   "winner": "Gregory Meeks",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-5-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-6": {
+   "winner": "Grace Meng",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-6-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-7": {
+   "winner": "Claire Valdez",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-7-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-8": {
+   "winner": "Hakeem Jeffries",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-8-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "NY-9": {
+   "winner": "Yvette Clarke",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/new-york-us-house-district-9-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OH-1": {
+   "winner": "Greg Landsman",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-1-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OH-10": {
+   "winner": "Kristina Knickerbocker",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-10-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "OH-11": {
+   "winner": "Shontel Brown",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-11-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OH-12": {
+   "winner": "Troy Balderson",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-12-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OH-13": {
+   "winner": "Emilia Sykes",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-13-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OH-14": {
+   "winner": "David Joyce",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-14-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OH-15": {
+   "winner": "Don Leonard",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-15-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "OH-2": {
+   "winner": "David Taylor",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-2-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OH-3": {
+   "winner": "Joyce Beatty",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-3-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OH-4": {
+   "winner": "Jim Jordan",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-4-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OH-5": {
+   "winner": "Bob Latta",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-5-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OH-6": {
+   "winner": "Michael Rulli",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-6-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OH-7": {
+   "winner": "Brian Poindexter",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-7-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "OH-8": {
+   "winner": "Warren Davidson",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-8-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OH-9": {
+   "winner": "Marcy Kaptur",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-9-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OK-1": {
+   "winner": "Mark Tedford",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.news9.com/oklahoma-politics/oklahomas-2026-election-results-breakdown-from-mazzei-to-local-races-heres-what-stands-out",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OK-2": {
+   "winner": "Josh Brecheen",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://okcfox.com/news/local/republican-josh-brecheen-wins-reelection-to-oks-2nd-congressional-district",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OK-3": {
+   "winner": "Frank Lucas",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://okcfox.com/news/local/republican-josh-brecheen-wins-reelection-to-oks-2nd-congressional-district",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OK-4": {
+   "winner": "Tom Cole",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://okcfox.com/news/local/republican-josh-brecheen-wins-reelection-to-oks-2nd-congressional-district",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OK-5": {
+   "winner": "Stephanie Bice",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.news9.com/oklahoma-politics/oklahomas-2026-election-results-breakdown-from-mazzei-to-local-races-heres-what-stands-out",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OR-1": {
+   "winner": "Suzanne Bonamici",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/oregon-us-house-district-1-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OR-2": {
+   "winner": "Cliff Bentz",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/oregon-us-house-district-2-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OR-3": {
+   "winner": "Maxine Dexter",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/oregon-us-house-district-3-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OR-4": {
+   "winner": "Val Hoyle",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/oregon-us-house-district-4-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OR-5": {
+   "winner": "Janelle Bynum",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/oregon-us-house-district-5-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "OR-6": {
+   "winner": "Andrea Salinas",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/oregon-us-house-district-6-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "PA-1": {
+   "winner": "Bob Harvie",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.inquirer.com/politics/election/pennsylvania-midterms-2026-election-results-analysis-blue-wave-20261103.html",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "PA-10": {
+   "winner": "Janelle Stelson",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.inquirer.com/politics/election/pennsylvania-midterms-2026-election-results-analysis-blue-wave-20261103.html",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "PA-11": {
+   "winner": "Lloyd Smucker",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "PA-12": {
+   "winner": "Summer Lee",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "PA-13": {
+   "winner": "John Joyce",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "PA-14": {
+   "winner": "Guy Reschenthaler",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "PA-15": {
+   "winner": "Glenn Thompson",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "PA-16": {
+   "winner": "Mike Kelly",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "PA-17": {
+   "winner": "Chris Deluzio",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "PA-2": {
+   "winner": "Brendan Boyle",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "PA-3": {
+   "winner": "Chris Rabb",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "PA-4": {
+   "winner": "Madeleine Dean",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "PA-5": {
+   "winner": "Mary Gay Scanlon",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "PA-6": {
+   "winner": "Chrissy Houlahan",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "PA-7": {
+   "winner": "Bob Brooks",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.inquirer.com/politics/election/pennsylvania-midterms-2026-election-results-analysis-blue-wave-20261103.html",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "PA-8": {
+   "winner": "Paige Cognetti",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.inquirer.com/politics/election/pennsylvania-midterms-2026-election-results-analysis-blue-wave-20261103.html",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "PA-9": {
+   "winner": "Dan Meuser",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "RI-1": {
+   "winner": "Gabe Amo",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://bostonglobe.com/2026/11/03/metro/ri-election-representatives-amo-magaziner-senator-reed-whitehouse",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "RI-2": {
+   "winner": "Seth Magaziner",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://bostonglobe.com/2026/11/03/metro/ri-election-representatives-amo-magaziner-senator-reed-whitehouse",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "SC-1": {
+   "winner": "Nancy Lacore",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.enr-scvotes.org/SC/127300/web.345435/#/summary",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "SC-2": {
+   "winner": "Joe Wilson",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.enr-scvotes.org/SC/127592/",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "SC-3": {
+   "winner": "Sheri Biggs",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.enr-scvotes.org/SC/127300/web.345435/#/summary",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "SC-4": {
+   "winner": "William Timmons",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.enr-scvotes.org/SC/127300/web.345435/#/summary",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "SC-5": {
+   "winner": "Wes Climer",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.enr-scvotes.org/SC/127300/web.345435/#/summary",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "SC-6": {
+   "winner": "Jim Clyburn",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.enr-scvotes.org/SC/127300/web.345435/#/summary",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "SC-7": {
+   "winner": "Russell Fry",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.enr-scvotes.org/SC/127300/web.345435/#/summary",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "SD-AL": {
+   "winner": "Marty Jackley",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.dakotanewsnow.com/2026/11/04/marty-jackley-wins-south-dakotas-us-house-race/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TN-1": {
+   "winner": "Diana Harshbarger",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/tennessee-us-house-district-1-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TN-2": {
+   "winner": "Tim Burchett",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/tennessee-us-house-district-2-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TN-3": {
+   "winner": "Chuck Fleischmann",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/tennessee-us-house-district-3-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TN-4": {
+   "winner": "Victoria Broderick",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://newschannel9.com/news/local/scott-desjarlais-concedes-tennessee-congressional-race-after-16-years-in-office",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "TN-5": {
+   "winner": "Charlie Hatcher",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/tennessee-us-house-district-5-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TN-6": {
+   "winner": "Johnny Garrett",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/tennessee-us-house-district-6-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TN-7": {
+   "winner": "Matt Van Epps",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/tennessee-us-house-district-7-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TN-8": {
+   "winner": "David Kustoff",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/tennessee-us-house-district-8-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TN-9": {
+   "winner": "Brent Taylor",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/tennessee-us-house-district-9-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "TX-1": {
+   "winner": "Nathaniel Moran",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-10": {
+   "winner": "Chris Gober",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-11": {
+   "winner": "August Pfluger",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-12": {
+   "winner": "Craig Goldman",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-13": {
+   "winner": "Ronny Jackson",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-14": {
+   "winner": "Randy Weber",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-15": {
+   "winner": "Bobby Pulido",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "TX-16": {
+   "winner": "Veronica Escobar",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-17": {
+   "winner": "Pete Sessions",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-18": {
+   "winner": "Christian Menefee",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-19": {
+   "winner": "Tom Sell",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-2": {
+   "winner": "Steve Toth",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-20": {
+   "winner": "Joaquin Castro",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-21": {
+   "winner": "Mark Teixeira",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-22": {
+   "winner": "Trever Nehls",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-23": {
+   "winner": "Katy Padilla Stout",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "TX-24": {
+   "winner": "Beth Van Duyne",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-25": {
+   "winner": "Roger Williams",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-26": {
+   "winner": "Brandon Gill",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-27": {
+   "winner": "Michael Cloud",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-28": {
+   "winner": "Henry Cuellar",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-29": {
+   "winner": "Sylvia Garcia",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-3": {
+   "winner": "Keith Self",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-30": {
+   "winner": "Frederick Haynes III",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-31": {
+   "winner": "John Carter",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-32": {
+   "winner": "Jace Yarbrough",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "TX-33": {
+   "winner": "Colin Allred",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-34": {
+   "winner": "Vicente Gonzalez",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-35": {
+   "winner": "Johnny Garcia",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-36": {
+   "winner": "Brian Babin",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-37": {
+   "winner": "Greg Casar",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-38": {
+   "winner": "Jon Bonck",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-4": {
+   "winner": "Pat Fallon",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-5": {
+   "winner": "Lance Gooden",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-6": {
+   "winner": "Jake Ellzey",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-7": {
+   "winner": "Lizzie Fletcher",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-8": {
+   "winner": "Jessica Hart Steinmann",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "TX-9": {
+   "winner": "Leticia Gutierrez",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://apps.texastribune.org/features/2026/texas-general-election-live-results-2026/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "UT-1": {
+   "winner": "Ben McAdams",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.deseret.com/politics/2026/11/03/utah-voters-elect-democrat-to-congress-under-new-map/",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "UT-2": {
+   "winner": "Blake Moore",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.ksl.com/article/51644068/utahns-vote-to-retain-supreme-court-justice-jill-pohlman",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "UT-3": {
+   "winner": "Celeste Maloy",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://kutv.com/news/politics/rep-celeste-maloy-wins-reelection-to-us-house-in-utahs-3rd-congressional-district",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "UT-4": {
+   "winner": "Mike Kennedy",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.ksl.com/article/51644068/utahns-vote-to-retain-supreme-court-justice-jill-pohlman",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "VA-1": {
+   "winner": "Shannon Taylor",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2026-November-General",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "VA-10": {
+   "winner": "Suhas Subramanyam",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2026-November-General",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "VA-11": {
+   "winner": "James Walkinshaw",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2026-November-General",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "VA-2": {
+   "winner": "Elaine Luria",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2026-November-General",
+   "source_kind": "state",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "VA-3": {
+   "winner": "Bobby Scott",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2026-November-General",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "VA-4": {
+   "winner": "Jennifer McClellan",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2026-November-General",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "VA-5": {
+   "winner": "John McGuire",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2026-November-General",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "VA-6": {
+   "winner": "Ben Cline",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2026-November-General",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "VA-7": {
+   "winner": "Eugene Vindman",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2026-November-General",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "VA-8": {
+   "winner": "Don Beyer",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2026-November-General",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "VA-9": {
+   "winner": "Morgan Griffith",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2026-November-General",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "VI-AL": {
+   "winner": "Janelle Sarauw",
+   "winner_party": "Democratic",
+   "status": "certified",
+   "source": "https://vivote.gov/wp-content/uploads/2026/11/2026-General-Election-Certification-11.03.2026.pdf",
+   "source_kind": "state",
+   "as_of": "2026-11-21"
+  },
+  "VT-AL": {
+   "winner": "Becca Balint",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/vermont-us-house-district-1-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "WA-1": {
+   "winner": "Suzan DelBene",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "WA-10": {
+   "winner": "Marilyn Strickland",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "WA-2": {
+   "winner": "Rick Larsen",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "WA-3": {
+   "winner": "Marie Gluesenkamp Perez",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "WA-4": {
+   "winner": "Amanda McKinney",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "WA-5": {
+   "winner": "Michael Baumgartner",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "WA-6": {
+   "winner": "Emily Randall",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "WA-7": {
+   "winner": "Pramila Jayapal",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "WA-8": {
+   "winner": "Kim Schrier",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "WA-9": {
+   "winner": "Adam Smith",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "WI-1": {
+   "winner": "Mitchell Berman",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/wisconsin-us-house-district-1-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "WI-2": {
+   "winner": "Mark Pocan",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/wisconsin-us-house-district-2-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "WI-3": {
+   "winner": "Rebecca Cooke",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/wisconsin-us-house-district-3-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21",
+   "flip": true
+  },
+  "WI-4": {
+   "winner": "Gwen Moore",
+   "winner_party": "Democratic",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/wisconsin-us-house-district-4-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "WI-5": {
+   "winner": "Scott Fitzgerald",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/wisconsin-us-house-district-5-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "WI-6": {
+   "winner": "Glenn Grothman",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/wisconsin-us-house-district-6-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "WI-7": {
+   "winner": "Michael Alfonso",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/wisconsin-us-house-district-7-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "WI-8": {
+   "winner": "Tony Wied",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://www.nbcnews.com/politics/2026-elections/wisconsin-us-house-district-8-results",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  },
+  "WV-1": {
+   "winner": "Carol Miller",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_West_Virginia,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "WV-2": {
+   "winner": "Riley Moore",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_West_Virginia,_2026",
+   "source_kind": "reference",
+   "as_of": "2026-11-21"
+  },
+  "WY-AL": {
+   "winner": "Chuck Gray",
+   "winner_party": "Republican",
+   "status": "called",
+   "source": "https://cowboystatedaily.com/2026/11/04/harshman-gets-most-votes-in-contested-statewide-races-chuck-gray-least/",
+   "source_kind": "press",
+   "as_of": "2026-11-21"
+  }
+ }
+}

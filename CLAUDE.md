@@ -208,6 +208,19 @@ its own constants.
     primary-sourced roster, per-item `source` + `date`, full-name keys,
     `unrecorded` for silence. Coverage starts near zero by construction and the
     page says so — this is a complete *ballot* with an almost-empty *record*.
+  - **Election results** live in `data/election_results_2026.json`, not on
+    either roster: `{"senate": {"TX": {...}}, "house": {"TX-33": {...}}}`,
+    loaded by `race_common.load_results()` and attached to each race as
+    `result` (and to the winning candidate as `won`) in `attach_records()`.
+    Each result carries `winner`, `winner_party`, `status`, `source` and
+    `as_of`. **`status` is `called` unless the state itself labels its
+    results official** — a news organisation's projection is not a
+    certification, and at first recording (2026-11-21) only 50 of 440 House
+    results and none of the 35 Senate results were certified. A race with no
+    winner (`runoff`, `uncalled`) renders as open; a race with no entry
+    renders as "result not recorded", never as a guess from incumbency.
+    `race_common.validate_results()` runs in `main()` and fails the build on
+    a result keyed to a race not on the ballot or one with no source.
   - `STATE_PERMIT_PORTALS` / `NATIONAL_PERMIT_TOOLS` / `RTO_QUEUES` +
     `STATE_RTO` / `PERMIT_KINDS` — the permit paper trail: where a project's
     public record lives. **Navigational links, not claims** — nothing here

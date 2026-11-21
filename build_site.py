@@ -12847,7 +12847,8 @@ def _sr_table(races):
                  + (' <span class="muted">(special)</span>' if r["special"] else ""),
                  r["state"]),
                 (f'<strong>{esc(c["name"])}</strong>'
-                 + (' <span class="muted">· incumbent</span>' if c["incumbent"] else ""),
+                 + (' <span class="muted">· incumbent</span>' if c["incumbent"] else "")
+                 + (_WON_BADGE if c.get("won") else ""),
                  c["name"]),
                 (esc(c["party"]), c["party"]),
                 (_sr_lean_badge(c), {"guardrails": 0, "mixed": 1, "accelerate": 2}.get(c["lean"], 3)),
@@ -12928,7 +12929,8 @@ def _hr_table(races):
                  f'{r["state"]} {int(r["district"]) if r["district"].isdigit() else 0:03d}'),
                 (esc(r["state"]), r["state"]),
                 (f'<strong>{esc(c["name"])}</strong>'
-                 + (' <span class="muted">· incumbent</span>' if c["incumbent"] else ""),
+                 + (' <span class="muted">· incumbent</span>' if c["incumbent"] else "")
+                 + (_WON_BADGE if c.get("won") else ""),
                  c["name"]),
                 (esc(c["party"]), c["party"]),
                 (_sr_lean_badge(c), {"guardrails": 0, "mixed": 1, "accelerate": 2}.get(c["lean"], 3)),
@@ -13139,6 +13141,42 @@ def _sr_mentions(c):
             f'<ul style="font-size:13px;margin:0">{lis}</ul></details>')
 
 
+_WON_BADGE = (' <span class="gradebadge" style="background:#0ea5e9;'
+              'font-size:11px;padding:2px 7px">Won</span>')
+
+
+def _race_result_html(r):
+    """The result line on a race card: who won, how settled it is, and the
+    page it was read from. A race with nothing recorded says so rather than
+    implying the incumbent held."""
+    from src.race_common import RESULT_STATUS
+    res = r.get("result")
+    if not res:
+        return ('<p class="muted" style="margin:0 0 10px"><strong>Result:</strong> '
+                'not recorded yet.</p>')
+    src = (f' &mdash; <a href="{esc(res["source"])}" rel="nofollow">source</a>, '
+           f'read {esc(res.get("as_of") or "date not recorded")}')
+    status = RESULT_STATUS.get(res.get("status"), "")
+    extra = ""
+    if res.get("runoff_date"):
+        extra += f' Runoff: {esc(res["runoff_date"])}.'
+    if res.get("vote_note"):
+        extra += f' {esc(res["vote_note"])}.'
+    if res.get("flip"):
+        extra += ' The seat changed party.'
+    if res.get("note"):
+        extra += f' {esc(res["note"])}'
+    if not res.get("winner"):
+        return (f'<p class="note" style="margin:0 0 10px"><strong>Result:</strong> '
+                f'{esc(status.lower() or "open")}.{extra}{src}.</p>')
+    off = ("" if r.get("winner_on_roster") else
+           ' <span class="muted">(not on the roster read before the primaries)</span>')
+    party = f' ({esc(res["winner_party"])})' if res.get("winner_party") else ""
+    return (f'<p class="note" style="margin:0 0 10px"><strong>Result:</strong> '
+            f'<strong>{esc(res["winner"])}</strong>{party} won{off}. '
+            f'<span class="muted">{esc(status)}.</span>{extra}{src}.</p>')
+
+
 def _sr_candidate(c, abbrev="", method_href="#method"):
     """One candidate block: lean badge, summary, and every cited item.
 
@@ -13153,7 +13191,8 @@ def _sr_candidate(c, abbrev="", method_href="#method"):
     """
     inc = ' <span class="muted">· incumbent</span>' if c["incumbent"] else ""
     head = (f'<p style="margin:0 0 6px"><strong>{esc(c["name"])}</strong> '
-            f'<span class="muted">({esc(c["party"])})</span>{inc} '
+            f'<span class="muted">({esc(c["party"])})</span>{inc}'
+            f'{_WON_BADGE if c.get("won") else ""} '
             f'{_sr_lean_badge(c)}</p>')
     if c["lean"] == "unrecorded":
         return (f'<div class="sr-cand" data-lean="unrecorded">{head}'
@@ -13247,6 +13286,7 @@ def _sr_race_card(r):
      Seat held by {esc(r['incumbent'])} ({esc(r['incumbent_party'])}) ·
      {esc(r['status'])}</p>
   {note}
+  {_race_result_html(r)}
   {_sr_stakes(r['abbrev'])}
   {''.join(_sr_candidate(c, r['abbrev']) for c in r['candidates'])}
   <p class="src" style="margin:10px 0 0">Ballot roster: {src} (read
@@ -13431,8 +13471,17 @@ def _race_phase_banner(cov, what):
         return ('<p class="note"><strong>Election day.</strong> This page '
                 'freezes as a record of what each candidate said before the '
                 'vote.</p>')
+    recorded = (f' Results are recorded for <strong>{cov["results"]} of '
+                f'{cov["races"]}</strong> races, each linked to the page it '
+                f'was read from'
+                + (f'; {cov["results_open"]} more are in a runoff or not yet '
+                   f'called' if cov.get("results_open") else "")
+                + f'. {cov["winners_documented"]} of the winners have a '
+                  f'documented data-center record here.'
+                if cov.get("results") else
+                ' Results have not been recorded here yet.')
     return (f'<p class="note"><strong>The election was '
-            f'{cov["days_since_election"]} days ago.</strong> This page is now '
+            f'{cov["days_since_election"]} days ago.</strong>{recorded} This page is now '
             f'an archive: what each {what} promised about data centers while '
             f'asking for the job. Hold the winners to it — and see the '
             f'<a href="scorecard.html">officials scorecard</a> for what they '
@@ -13458,6 +13507,7 @@ def _hr_race_card(r):
   <h3 style="margin:0 0 4px">{esc(r['abbrev'])}-{esc(r['district'])}{dele}</h3>
   <p class="muted" style="margin:0 0 10px">{esc(r['state'])} · PVI
      {esc(r['pvi'])} · {inc} · {esc('; '.join(r['statuses']) or 'status not recorded')}</p>
+  {_race_result_html(r)}
   {_sr_stakes(r['abbrev'])}
   {''.join(_sr_candidate(c, r['abbrev']) for c in r['candidates'])}
   <p class="src" style="margin:10px 0 0">Ballot roster: {src} (read
@@ -13471,15 +13521,25 @@ def _hr_compact_row(r):
     chips = " ".join(
         f'<span class="gradebadge" style="background:{c["lean_color"]};'
         f'font-size:11px;padding:2px 7px">{esc(c["name"])}'
-        f'{" ★" if c["incumbent"] else ""}</span>'
+        f'{" ★" if c["incumbent"] else ""}{" ✓" if c.get("won") else ""}</span>'
         for c in r["candidates"]) or '<span class="muted">no candidates listed</span>'
     inc = " · ".join(esc(n) for n in r["incumbents"]) or "open seat"
     anchor = f"race-{r['abbrev'].lower()}-{r['district'].lower()}"
     label = f"{r['abbrev']}-{r['district']}"
     cell_ = (f'<a href="#{anchor}">{esc(label)}</a>' if r["contested"]
              else esc(label))
+    res = r.get("result") or {}
+    if res.get("winner"):
+        won = (f'<a href="{esc(res["source"])}" rel="nofollow">{esc(res["winner"])}</a>'
+               + (' <span class="muted">(flip)</span>' if res.get("flip") else ""))
+    elif res:
+        from src.race_common import RESULT_STATUS
+        won = f'<span class="muted">{esc(RESULT_STATUS.get(res.get("status"), "open"))}</span>'
+    else:
+        won = '<span class="muted">not recorded</span>'
     return (f'<tr><td><strong>{cell_}</strong></td>'
-            f'<td>{esc(r["pvi"])}</td><td>{esc(inc)}</td><td>{chips}</td></tr>')
+            f'<td>{esc(r["pvi"])}</td><td>{esc(inc)}</td><td>{won}</td>'
+            f'<td>{chips}</td></tr>')
 
 
 def build_house_races():
@@ -13506,7 +13566,8 @@ def build_house_races():
     state_sections = []
     for state, rows in grouped.items():
         body = ('<table><thead><tr><th>District</th><th>PVI</th>'
-                '<th>Incumbent</th><th>Candidates (★ = incumbent)</th></tr>'
+                '<th>Incumbent</th><th>Winner</th>'
+                '<th>Candidates (★ = incumbent, ✓ = won)</th></tr>'
                 '</thead><tbody>'
                 + "".join(_hr_compact_row(r) for r in rows)
                 + '</tbody></table>')
@@ -17100,6 +17161,13 @@ def main():
     (WEB / "scorecard.html").write_text(build_official_scorecard(), encoding="utf-8")
     _n_records = publish_candidate_records()
     print(f"  [data] published {_n_records} candidate/official records as JSON + CSV + RSS")
+    # A result on the wrong race, or a winner with no source, is the same
+    # failure as a record on the wrong candidate - stop rather than publish it.
+    import src.senate_races as _sr_mod, src.house_races as _hr_mod, src.race_common as _rc_mod
+    _res_problems = _rc_mod.validate_results(_sr_mod.SENATE_RACES_2026,
+                                             _hr_mod.HOUSE_RACES_2026)
+    if _res_problems:
+        raise SystemExit("election results invalid:\n  " + "\n  ".join(_res_problems[:20]))
     (WEB / "senate-races.html").write_text(build_senate_races(), encoding="utf-8")
     (WEB / "senators.html").write_text(build_senators(), encoding="utf-8")
     (WEB / "house-races.html").write_text(build_house_races(), encoding="utf-8")

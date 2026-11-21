@@ -4,6 +4,31 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/anthropic-ipo-900-billion-compute-community-pledges-2026",
+      "destination": "/blog/anthropic-ipo-900-billion-compute-community-pledges-2026",
+      "permanent": true
+    },
+    {
+      "source": "/house-results-data-center-records-2026",
+      "destination": "/blog/house-results-data-center-records-2026",
+      "permanent": true
+    },
+    {
+      "source": "/nvidia-118-billion-guarantees-pike-county-ohio-2026",
+      "destination": "/blog/nvidia-118-billion-guarantees-pike-county-ohio-2026",
+      "permanent": true
+    },
+    {
+      "source": "/governors-elect-data-center-moratorium-pledges-2026",
+      "destination": "/blog/governors-elect-data-center-moratorium-pledges-2026",
+      "permanent": true
+    },
+    {
+      "source": "/senate-results-data-center-promises-2026",
+      "destination": "/blog/senate-results-data-center-promises-2026",
+      "permanent": true
+    },
+    {
       "source": "/week-in-review-2026-11-15",
       "destination": "/blog/week-in-review-2026-11-15",
       "permanent": true

@@ -51,6 +51,20 @@ LEAN_NOTE = rc.LEAN_NOTE
 #   items   : list of {what, date (ISO or ""), source (URL)}
 #   as_of   : date this entry was last read. Never invent one.
 AI_RECORDS = {
+    # ── South Carolina — added after the election, from post-election reporting ──
+    ("SC", "Annie Andrews"): {
+        "lean": "guardrails",
+        "summary": "Ran on a two-year moratorium on new data centers and on "
+                   "local control over whether a project is approved.",
+        "items": [
+            {"what": "Campaigned on a two-year data-center moratorium and "
+                     "local control; WSOC-TV reported the platform in its "
+                     "coverage of her win over Darline Graham.",
+             "date": "2026-11-04",
+             "source": "https://www.wsoctv.com/news/local/data-center-debate-continues-south-carolina-after-andrews-victory/RMMHTFFSIBCJJCWXEIMGKWMPWI/"},
+        ],
+        "as_of": "2026-11-21",
+    },
     # ── Texas — the race where this became the defining issue ─────────────
     ("TX", "James Talarico"): {
         "lean": "guardrails",

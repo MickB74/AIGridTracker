@@ -72,6 +72,820 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "anthropic-ipo-900-billion-compute-community-pledges-2026",
+        "art": "negotiation",
+        "section": "stories",
+        "title": "Anthropic Went Public With $900 Billion in Compute Commitments. Here Are the Promises It Made to the Towns That Host It.",
+        "seo_title": "Anthropic IPO: $900B compute, community pledges",
+        "date": _dt.date(2026, 11, 20),
+        "author": "GridWatch AI",
+        "tags": ["Anthropic", "IPO", "Texas", "Navarro County", "Corsicana",
+                 "Riot Platforms", "community benefit agreement", "demand response",
+                 "natural gas", "tax incentives"],
+        "summary": "Anthropic began trading on Nov. 19. Its prospectus discloses about $900.9 billion in commitments, nearly all for compute and data centers, and repeats a pledge to cover electricity price increases its data centers cause. The company has also published commitments on tax incentives, NDAs and community benefit agreements. The prospectus names no sites. One landlord's filing does, in Navarro County, Texas, and its terms are worth reading against the pledges.",
+        "body": """Anthropic, the company behind the Claude AI models, began trading on the
+Nasdaq on Nov. 19 after raising $81.3 billion, which
+[Bisnow described](https://www.bisnow.com/news/national/data-center-capital-markets/anthropic-record-ipo-reverberates-across-data-center-sector)
+as the largest stock market debut on record.
+
+The part of the offering that matters to a host community is in the
+[final prospectus filed with the SEC](https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm).
+It discloses committed spending of about $900.9 billion, which the company
+says is substantially all for compute and infrastructure. About $451.6
+billion of that is expected to be spent before the end of 2030. The total
+does not include a further $150 billion to $175 billion in arrangements with
+no fixed dollar amount.
+
+That money becomes buildings, substations and power plants in specific
+counties. The prospectus does not say which ones. It contains no megawatt
+figures and no U.S. site names. To find out where Anthropic is going, a resident
+has to read its landlords' filings instead. This post does that for one site
+and sets it beside what the company has promised.
+
+## What Anthropic has promised
+
+Anthropic has made more specific public commitments to host communities than
+most companies in this business. They are in three places.
+
+**In the prospectus.** The company states that it has publicly committed to
+covering the cost of electricity price increases to consumers caused by its
+data centers, including both the electricity and the infrastructure to
+deliver it. It tells investors these commitments have raised its operating
+costs and will continue to. A promise repeated in an SEC filing carries more
+weight than one in a blog post, because misstating it to investors has
+consequences.
+
+**In its February announcement.** In
+[a post titled "Covering electricity price increases"](https://www.anthropic.com/news/covering-electricity-price-increases),
+Anthropic said it would pay for the grid upgrades needed to connect its data
+centers, work to bring new generation online, and cover demand-driven price
+effects where that generation is not yet built. For capacity it leases
+rather than owns, the same post says it is exploring further ways to do
+this. That is softer language.
+
+**On its policy page.** A page titled
+["Our approach to responsible data center development"](https://www.anthropic.com/policy/infrastructure)
+says the company will not accept local tax incentives for future sites, will
+commit tens of millions of dollars to a community benefit agreement for each
+data center, will not ask public officials to sign nondisclosure agreements,
+and will publish a market-by-market method for calculating its effect on
+power prices. It says the commitments apply to every site Anthropic owns or
+leases. The page carries no date, and we could not find the published
+method.
+
+On the day of the listing, co-founder Daniela Amodei told CNBC that the
+company needs to listen to what host communities want and repeated the
+electricity pledge, according to
+[CNBC's transcript](https://www.cnbc.com/2026/11/19/cnbc-exclusive-transcript-anthropic-co-founders-dario-and-daniela-amodei-speak-with-andrew-ross-sorkin-on-cnbc-today.html).
+
+## One site on paper: Corsicana, Texas
+
+Riot Platforms, a bitcoin mining company, names Anthropic as a tenant in its
+[quarterly report filed Nov. 4](https://www.sec.gov/Archives/edgar/data/1167419/000110465926122417/riot-20260930x10q.htm).
+According to that filing:
+
+- Anthropic leased land and power infrastructure at Riot's campus in
+  Corsicana, in Navarro County, for **910 megawatts** of computing load,
+  delivered in three phases from June 2027 to July 2028.
+- The initial term runs until 15 years after the last phase is delivered,
+  with two five-year extensions.
+- The lease is triple-net: the tenant bears taxes, insurance, site expenses
+  and the cost of electricity.
+- A second lease covers **191 megawatts** at Riot's site in Rockdale.
+
+One clause deserves attention from anyone who follows the Texas grid. The
+filing says Riot may not curtail the tenant's power load, other than as
+mandatorily ordered by the utility or grid operator, or enroll the premises
+in voluntary demand response programs without the tenant's consent.
+
+Riot's bitcoin mining, by the same filing, takes part in demand response,
+which means it can be paid to switch off when the grid is short. Mining is
+easy to interrupt. AI computing is not. Under this lease, load that used to
+be available to the grid in a pinch becomes load that stays on unless the
+grid operator orders otherwise or Anthropic agrees.
+
+That is not a broken promise. Anthropic's February post says it will invest
+in ways to reduce its draw at peak times, and nothing in the lease stops it
+from consenting. But the lease puts that decision with the tenant, and
+residents of a state that has been through grid emergencies are entitled to
+ask how it will be used.
+
+## Questions the documents leave open
+
+None of what follows is an accusation. These are the things we looked for
+and did not find.
+
+1. **Is there a signed community benefit agreement at Corsicana or
+   Rockdale?** The policy page promises tens of millions per data center,
+   and says the company committed millions to repair a water system near
+   one Texas data center, without naming the town. We found no signed
+   agreement at any named site.
+2. **Does the tax-incentive pledge cover a leased site with a history?**
+   Navarro County commissioners
+   [declined a reinvestment zone Riot requested in 2024](https://www.corsicanadailysun.com/news/commissioners-deny-reinvestment-zone-disapprove-bitcoin-tax-abatements/article_c294df5a-e075-11ee-a6d7-33f12c762991.html)
+   after residents objected. We have not confirmed what, if any, abatement
+   applies to the site today. Because the lease makes Anthropic bear the
+   property taxes, the question of whether "no local tax incentives at future
+   sites" covers an existing landlord arrangement is one for the company and
+   the county.
+3. **Where is the price method?** The pledge to cover price increases
+   depends on how the increase is measured. Until the method is published,
+   nobody outside the company can check the arithmetic.
+4. **How much of the power is gas?** The prospectus says some planned
+   facilities rely on dedicated on-site natural gas generation, with fuel
+   costs passed through to Anthropic without a cap. The policy page says
+   much of its new power is natural gas. On-site gas plants need air
+   permits, and those have public comment periods.
+
+## It is not only Texas
+
+The prospectus warns investors that opposition to data centers has become
+more organized and that the company's public profile may draw particular
+attention to projects associated with it. A week of news from Australia
+shows what that looks like. Reuters reported on Nov. 20 that a developer's
+filing for a 1.44-gigawatt campus about 250 kilometers west of Brisbane,
+with Anthropic as anchor tenant, drew nearly 600 public submissions, of
+which 595 opposed it or asked for delay
+([via ThePrint](https://theprint.in/world/anthropics-australian-data-centre-overwhelmingly-opposed-by-residents/3103784/)).
+
+## How to use this if Anthropic is coming to your county
+
+The useful thing about written commitments is that you can hold someone to
+them. If a developer in your county says the tenant is Anthropic, print the
+policy page and bring it to the meeting. Then ask, on the record:
+
+1. Will you sign a community benefit agreement here, for how much, and who
+   enforces it? Our [model clauses](/cba-clauses.html) show what enforceable
+   language looks like.
+2. Is this site receiving any local tax abatement, including one granted to
+   the landlord?
+3. Has any official been asked to sign a nondisclosure agreement, by you or
+   by the developer?
+4. What is your estimate of this site's effect on local electricity prices,
+   and how was it calculated?
+5. Will this load take part in demand response?
+
+A company that has published these commitments should be able to answer all
+five. Record the answers.
+
+## See also
+
+- [Milam County, Texas community briefing](/communities/milam-county-tx.html),
+  for the Rockdale site.
+- [Texas state page](/states/texas.html): projects, local moratoriums and
+  the utility commission.
+- [Company scorecards](/companies/index.html): what operators have conceded
+  elsewhere.
+- [Nvidia Is Guaranteeing $105 Billion for One Data Center Campus in Pike County, Ohio](/blog/nvidia-118-billion-guarantees-pike-county-ohio-2026)
+""",
+    },
+    {
+        "id": "house-results-data-center-records-2026",
+        "art": "checklist",
+        "section": "stories",
+        "title": "434 House Races Have a Winner. Only 91 of Them Ever Said Anything Specific About Data Centers.",
+        "seo_title": "2026 House results: who has a data center record",
+        "date": _dt.date(2026, 11, 19),
+        "author": "GridWatch AI",
+        "tags": ["election 2026", "House", "New Jersey", "Maine", "Wyoming",
+                 "New York", "Virginia", "super PAC", "ratepayers", "accountability"],
+        "summary": "Our House tracker now records a result for every one of the 440 seats on the ballot: 434 winners and six races still in a recount or runoff. Ninety-one winners have a documented position on data centers. Another 228 are on the record only for one near-unanimous vote. The rest have said nothing we could find, including the new member for the South Jersey district where Vineland sits. What the results show, where they cut against the easy story, and how to look up your own district.",
+        "body": """Every seat on the 2026 House ballot now has a result on our
+[House race tracker](/house-races.html): 434 with a winner and six still
+open. Each result links to the page it was read from. Most are news
+organizations' calls. Fifty are marked certified because the state itself
+labels its results official.
+
+The New York Times counted
+[257 Democratic seats with seven races uncalled as of Nov. 17](https://gvwire.com/?p=278474).
+That is the national picture. This post is about a narrower question that
+matters more if a data center is proposed near you: what has your
+representative actually said about it?
+
+For most districts, the honest answer is very little.
+
+## The count
+
+Of the 434 winners in our records:
+
+- **91 have a documented position** on data centers. Of those, 64 lean
+  toward what we call guardrails (data centers pay their own costs, or the
+  community gets a say), 15 are mixed, and 12 lean toward building faster
+  without a matching safeguard on the record.
+- **228 are on the record only for one vote.** In September the House passed
+  the Ratepayer Protection Act 417-3. A yes on a bill nearly everyone voted
+  for tells you little about any one member, so we show it and do not score
+  it.
+- **113 have no record we could find.** Many of these are new members.
+
+So roughly one winner in five has said something specific enough to hold
+them to.
+
+## The House did not follow the Senate pattern
+
+In the [Senate](/blog/senate-results-data-center-promises-2026), every
+candidate whose record leaned toward faster buildout lost. It would be tidy
+to report the same for the House. The data does not support it.
+
+Of the 16 House candidates with that lean whose races are decided, 12 won.
+Nearly all are incumbents in safe seats. Four lost, including Mike Lawler in
+New York's 17th District, who had
+[opposed his governor's data center moratorium](https://www.foxbusiness.com/media/new-york-republican-congressman-rips-hochul-policies-sending-businesses-dont-come-here-message),
+and Rob Wittman in Virginia's 1st.
+
+The results cut the other way too. In Maine's 2nd District, Paul LePage, who
+[described himself as a big fan of data centers](https://www.bangordailynews.com/2026/08/24/politics/elections/paul-lepage-big-fan-data-centers-joam40zk0w/),
+won the open seat over a Democrat who favored ratepayer and community
+benefit benchmarks. And two Republicans with guardrails records lost their
+seats anyway: Gabe Evans in Colorado's 8th, the
+[lead Republican sponsor of the Ratepayer Protection Act](https://broadbandbreakfast.com/house-committee-approves-package-to-address-data-centers-growing-energy-demands/),
+and Jeff Van Drew in New Jersey's 2nd.
+
+In House races, incumbency and the national mood decided more than any
+candidate's data center position did. Anyone telling you the House results
+were a referendum on data centers is ahead of the evidence.
+
+## New Jersey's 2nd: a new member with no record
+
+This one is close to home for us. New Jersey's 2nd District covers the
+southern end of the state, including Vineland, where the state
+[fined a data center $1.07 million](/blog/vineland-dataone-fine-order-2026)
+in September.
+
+Van Drew, the Republican incumbent, had cosponsored the
+[FAIR Data Act](https://riley.house.gov/2026/07/13/riley-introduces-bill-to-stop-data-center-projects-from-driving-up-energy-bills/),
+a bipartisan bill to stop data center projects from passing grid upgrade
+costs to residential customers. He lost to Democrat Zack Mullock.
+
+We have found no documented statement or action by Mullock on data centers.
+That is not a criticism of him. It is a gap, and it may be a gap in our
+research. But it means the district with one of the most contested data
+centers in the state is now represented by someone whose position residents
+cannot look up. If you have a source, [send it to us](/about.html). If you
+live there, it is a fair first question to put to his office.
+
+## New members who did take a position
+
+Several first-time winners arrive with something on the record:
+
+- **Wyoming at-large: Chuck Gray**, a Republican, campaigned on stopping
+  data centers and
+  [ran on that platform in the primary](https://cowboystatedaily.com/2026/08/05/u-s-house-forum-gray-hammers-data-centers-clashes-with-host/).
+- **Utah's 1st: Ben McAdams**, a Democrat, opposed the Stratos project in
+  Box Elder County.
+- **New Hampshire's 1st: Stefany Shaheen** supported a moratorium, saying
+  municipalities were not yet prepared, per
+  [Spectrum News](https://spectrumnews1.com/ma/worcester/news/2026/09/08/new-hampshire-data-centers-shaheen-pappas-ayotte).
+- **Colorado's 1st: Melat Kiros** supports a nationwide moratorium on data
+  center construction,
+  [Drop Site News reported](https://www.dropsitenews.com/p/aipac-ai-degette-melat-kiros-colorado).
+- **Connecticut's 1st: Luke Bronin** called for developers to pay their fair
+  share.
+
+Opposition to data centers is not confined to one party. Gray and Kiros
+agree on little else.
+
+## How the AI industry's money did
+
+Two networks of AI-focused super PACs spent in House general elections.
+[Fortune tallied the results](https://fortune.com/2026/11/04/candidates-backed-by-ai-super-pacs-result/)
+the day after the election, and we checked each race against our own
+records.
+
+Candidates the networks backed who **lost**: Aaron Flint in Montana's 1st
+($590,428), Laurie Buckhout in North Carolina's 1st ($509,067), Scott
+Singer in Florida's 25th ($857,426), Carlos De La Cruz in Texas's 35th
+($1,492,321), Rhett Marques in Alabama's 2nd ($974,908) and Alex Mealer in
+Texas's 9th ($647,075).
+
+Candidates they backed who **won**: Jared Moskowitz in Florida's 25th,
+Brian Poindexter in Ohio's 7th and Bob Brooks in Pennsylvania's 7th, all
+Democrats. Jace Yarbrough in Texas's 32nd was uncalled when Fortune
+published and has since been called the winner.
+
+The dollar figures are Fortune's. One of the networks, Leading the Future,
+[told TechCrunch](https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/)
+before the election that it sees primaries as a better use of its money, and
+it plans to keep spending in 2028. That matters for the next cycle. A primary is where a candidate with no
+record acquires one, and where far fewer voters are watching.
+
+## Still open
+
+Six races have no winner in our records:
+
+- **Minnesota's 1st, North Carolina's 5th and 10th:** recounts. In the first
+  two the margin is a few hundred votes.
+- **California's 23rd:** not yet called.
+- **Louisiana's 5th and 6th:** runoffs on Dec. 12.
+
+We will update each when it is settled. California counties certify by
+Dec. 3 and the state by Dec. 11,
+[according to AP](https://www.ajc.com/news/2026/11/more-than-a-dozen-key-races-remain-too-early-to-call-one-week-after-election-day/).
+
+## Look up your district
+
+1. Open the [House tracker](/house-races.html) and type your state or your
+   representative's name.
+2. If your representative has a cited record, read the items and the date
+   we read them. A position from last spring may have moved.
+3. If the record is only the 417-3 vote, that is a starting point for a
+   letter, not an answer. The question to ask is what they will do beyond a
+   bill that nearly everyone supported.
+4. If there is no record, ask for one. A new member's staff is building its
+   list of constituent concerns right now. Being on it early is worth more
+   than being on it late.
+
+The federal government does not decide whether a data center gets built in
+your county. Your county does. But Congress sets the rules for who pays for
+the transmission lines, and that is the part that shows up on your bill.
+
+## See also
+
+- [2026 House race tracker](/house-races.html): all 440 seats, results and
+  cited positions.
+- [Nine Senate Seats Flipped. Here Is What the Winners Put in Writing About Data Centers.](/blog/senate-results-data-center-promises-2026)
+- [Officials scorecard](/scorecard.html): votes and signed laws, graded.
+- [Your electric bill](/bills.html): how transmission costs are divided.
+""",
+    },
+    {
+        "id": "nvidia-118-billion-guarantees-pike-county-ohio-2026",
+        "art": "money",
+        "section": "stories",
+        "title": "Nvidia Is Guaranteeing $105 Billion for One Data Center Campus in Pike County, Ohio",
+        "seo_title": "Nvidia's $105B guarantee for Pike County, Ohio campus",
+        "date": _dt.date(2026, 11, 18),
+        "author": "GridWatch AI",
+        "tags": ["Nvidia", "Ohio", "Pike County", "PORTS", "OpenAI", "SoftBank",
+                 "financing", "natural gas", "transmission", "AEP Ohio"],
+        "summary": "Nvidia's quarterly filing on Nov. 17 shows the chipmaker standing behind $118 billion in guarantees for other companies' data centers. $105 billion of it backs a single site: the PORTS-Pike campus on the old uranium enrichment plant in Pike County, Ohio. What the filing says, what was promised to the county in August, and the state approvals that are still ahead.",
+        "body": """Nvidia reported quarterly results on Nov. 17. The headline numbers were
+[revenue of $115.8 billion, up 103% from a year earlier, with $107.6 billion of it from data centers](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx).
+
+The number that matters to a resident is in a different document. The
+[CFO commentary filed with the SEC the same day](https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000088/q3fy27cfocommentary.htm)
+shows Nvidia has issued guarantees with a maximum exposure of $118.0 billion
+to help other companies build data centers. Of that, $105.0 billion is
+credit support for one project: SB Energy's PORTS-Pike Technology Campus in
+Pike County, Ohio.
+
+A company that sells chips is now backing the land, the power and the
+buildings. If you live in southern Ohio, that tells you how badly the
+industry wants this site finished. It does not tell you the site has its
+approvals.
+
+## What the filing says
+
+According to the CFO commentary, as of Oct. 25:
+
+- **$105.0 billion** in credit support for SB Energy covers the land, power
+  and building shells for about **4.25 gigawatts across nine buildings** at
+  PORTS-Pike. The campus is to host Nvidia hardware under 20-year leases to
+  OpenAI.
+- The guarantees take effect **building by building**, as each one is
+  complete and ready for service. Nvidia expects the first in its fiscal
+  2029. No payments have been made.
+- There is an option covering roughly **3.8 more gigawatts**.
+- A further **$9.5 billion** is credit support for power and systems, and
+  **$3.5 billion** guarantees land, power and shells for smaller cloud
+  companies.
+
+On the earnings call, interim chief executive Colette Kress described the
+guarantees as conditional. As
+[TechCrunch reported](https://techcrunch.com/2026/11/18/nvidia-clarifies-when-it-will-and-wont-keep-financing-neoclouds/),
+she said a guarantee applies only after the customer has secured its own
+financing and the facility is built with Nvidia products installed.
+[Data Center Knowledge](https://www.datacenterknowledge.com/data-center-chips/nvidia-ai-surge-comes-with-118-billion-in-guarantees)
+confirmed the same breakdown of the $118 billion.
+
+So this is not Nvidia writing a $105 billion check to Pike County. Under the
+terms Nvidia disclosed in August, it is Nvidia promising SB Energy, the
+landlord, that if a building is finished and OpenAI stops paying, Nvidia
+will cover the shortfall between a guaranteed minimum lease value and
+whatever a replacement lease or sale brings in. OpenAI has agreed to
+reimburse Nvidia. That makes the project easier to finance. It does nothing
+about permits.
+
+## Why chips now come with land and power
+
+The same filing lists what Nvidia has committed to buy from its own
+suppliers: $390 billion, up from $279 billion a quarter earlier. Chips
+ordered on that scale need somewhere to run.
+
+A trade press account of the call,
+[from SiliconANGLE](https://siliconangle.com/2026/11/19/what-we-learned-from-nvidias-first-earnings-call-without-jensen-huang/),
+says Kress listed land, power and shell readiness first among the criteria
+for deciding which customers get chips. The filing also shows $74 billion of
+data center leases, with Nvidia itself as the tenant, that have not yet
+started and run up to 20 years.
+
+In plain terms, the constraint on this industry is no longer chips. It is
+sites with power. That is why a site like the one in Pike County is worth a
+$105 billion guarantee, and why developers push so hard at the county and
+state level.
+
+## What Pike County was told in August
+
+The project was announced Aug. 17 in a
+[joint release attached to an SEC filing](https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000069/sbeoainvidia-portsrelease.htm).
+It describes a campus on and around the decommissioned Portsmouth Gaseous
+Diffusion Plant with:
+
+- **8 gigawatts** of computing load in total, of which the first 4.25 are
+  the part Nvidia is backing.
+- **At least 10 gigawatts of new power generation**, to be built by SB
+  Energy and SoftBank.
+- **At least $4.2 billion** in regional grid investment, which the release
+  describes as designed to protect ratepayers. AEP Ohio is the utility.
+- An **$80 million community fund**, half from SB Energy and half from
+  OpenAI.
+
+[OpenAI's own announcement](https://openai.com/index/openai-joins-ports-pike-project/)
+adds that the first 800 megawatts are expected in 2028, largely on existing
+AEP infrastructure, with construction running through 2032. It says later
+phases need new power plants, including natural gas, and new transmission
+lines. It describes cooling as closed-loop and air-cooled, and puts the job
+count at 35,000 in construction and 2,500 long-term. It says SB Energy will
+pay the full cost of grid upgrades.
+
+Those are the developers' figures and the developers' promises. For scale,
+8 gigawatts of computing load is roughly the output of seven large nuclear
+reactors, and an $80 million community fund is less than one-tenth of one
+percent of the $105 billion Nvidia is guaranteeing.
+
+## What still needs approval
+
+Trade publication
+[Data Center Frontier reported in August](https://www.datacenterfrontier.com/hyperscale/article/55398883/ports-pike-takes-shape-as-an-8-gw-ai-infrastructure-model)
+that:
+
+- About 9.2 gigawatts of the planned generation is natural gas.
+- AEP Ohio's related project is roughly 50 miles of 765-kilovolt
+  transmission line from Pike County to Gallia County, which needs approval
+  from the Ohio Power Siting Board. AEP says the data center customer pays.
+- The project is on a federal fast-track permitting list with the Army Corps
+  of Engineers as lead agency, and Ohio EPA had found a water-quality filing
+  incomplete in July.
+
+We have not re-checked the status of those approvals since August, so treat
+them as the list of places to look, not as current status. The Ohio Power
+Siting Board holds public hearings and accepts public comments on
+transmission lines. A line across two counties affects landowners well
+outside Pike County.
+
+## Questions worth asking in Pike County
+
+1. **Who is on the hook if a building is finished and OpenAI stops
+   paying?** Under Nvidia's August disclosure, Nvidia, up to the $105
+   billion cap. That protects the landlord. Ask what protects the county's
+   tax base and the utility's other customers.
+2. **Is the $4.2 billion grid investment a binding condition?** A press
+   release is not a tariff. Ask AEP Ohio and the Public Utilities Commission
+   of Ohio where the commitment is written into an approved rate schedule.
+3. **What are the terms of the $80 million fund?** Who controls it, over how
+   many years, and what happens to it if only the first phase is built.
+4. **Which gas plants, and where?** More than 9 gigawatts of gas generation
+   means air permits. Each one has a public comment period.
+
+Ohio's governor-elect has said she backs a conditional moratorium, as we
+covered in
+[our post on the governors' pledges](/blog/governors-elect-data-center-moratorium-pledges-2026).
+Nothing reported so far says how that would apply to a project already
+announced and on a federal permitting track.
+
+## See also
+
+- [PORTS Technology Campus project dossier](/projects/softbank-ports-piketon-oh.html):
+  the timeline and the public records trail.
+- [Ohio state page](/states/ohio.html): other projects, moratoriums and the
+  state utility commission.
+- [Your electric bill](/bills.html): how grid upgrade costs reach customers
+  who never asked for them.
+- [Model CBA clauses](/cba-clauses.html): what a community fund looks like
+  when it is written to be enforced.
+""",
+    },
+    {
+        "id": "governors-elect-data-center-moratorium-pledges-2026",
+        "art": "moratorium",
+        "section": "stories",
+        "title": "Five Governors-Elect Promised a Data Center Pause. Here Is What a Governor Can Actually Do.",
+        "seo_title": "Governors-elect and data center moratorium pledges",
+        "date": _dt.date(2026, 11, 17),
+        "author": "GridWatch AI",
+        "tags": ["election 2026", "governors", "Texas", "Georgia", "Ohio",
+                 "Kansas", "Wisconsin", "Michigan", "Arizona", "moratorium",
+                 "utility commission"],
+        "summary": "Of 34 winning candidates for governor, 32 backed tighter rules on data centers and 12 backed a ban or moratorium, according to a tally cited by the Associated Press. The pledges are real. So are the limits: a governor cannot repeal a tax break alone, cannot freeze a permit already issued, and an executive-order pause may not survive a lawsuit. A state-by-state read of what was promised and which lever it depends on.",
+        "body": """Of the 34 candidates who won a governor's race this month, 32 supported
+stronger regulation of data centers and 12 supported a ban or moratorium.
+That count comes from the research group Data Center Watch and was
+[reported by the Associated Press](https://www.nbcwashington.com/news/national-international/ai-data-centers-midterm-elections/4179349/)
+on Nov. 6.
+
+If you live near a proposed site, a governor-elect's moratorium pledge
+sounds like the end of your fight. It is not, and the reason matters for
+what you do at the next county meeting. A governor has three real levers:
+executive orders over state agencies, appointments to the commissions that
+regulate utilities and permits, and a signature on whatever the legislature
+passes. Almost every pledge below depends on one of those, and each has a
+limit.
+
+## Texas: a pause tied to the Legislature
+
+Gina Hinojosa defeated Gov. Greg Abbott and takes office Jan. 19. During the
+campaign she pledged a moratorium on data center approvals that would last
+until the Legislature meets and passes protections,
+[the Texas Tribune reported](https://texastribune.org/2026/11/04/data-center-texas-pause-gina-hinojosa-governor-policies/).
+Her stated priorities are union hiring, water protection, no nondisclosure
+agreements, no shifting of electricity costs onto other customers, and an end
+to the sales-tax subsidy.
+
+Two limits apply. First, the tax break. A 2025 state Comptroller report put
+the data center sales-tax exemption at more than $1 billion that year, rising
+to about $1.75 billion a year by 2030, and a Rice University economist told
+[CBS Austin](https://cbsaustin.com/news/local/could-democrats-election-wins-reshape-texas-data-center-tax-policy)
+that the governor cannot repeal it on her own. That takes the Legislature,
+where Democrats won the House 78-63 but Republicans kept the Senate 19-12,
+according to a
+[post-election client alert from the law firm Brownstein](https://bhfs.com/insight/post-election-state-of-play-states-tax-and-spend-plans-for-2027-2028).
+The same alert notes that repeal has support on both sides, since Abbott had
+proposed it too.
+
+Second, existing projects. A University of Houston lecturer told
+[ABC13 Houston](https://abc13.com/post/governor-elect-gina-hinojosa-vows-ban-future-data-centers-texas/20021143/)
+that a pause applies to future projects and that already-permitted ones
+cannot be frozen. What a Texas governor can do over time is reshape the
+Public Utility Commission and the state environmental agency through
+appointments.
+
+For a Texas resident, that means a project with permits in hand is still
+your county's problem, and the place to watch is the session that opens in
+January.
+
+## Georgia: an executive order of uncertain footing
+
+Keisha Lance Bottoms, who won the Georgia governor's race, said she would
+sign an executive order imposing a temporary moratorium on new data center
+approvals. Local station WRDW reported the pause
+[could last a month to six months or longer](https://www.wrdw.com/2026/11/06/election-may-bring-reckoning-data-centers-georgia/)
+and would mainly affect future rezonings and tax deals, not approved
+projects.
+
+The
+[Atlanta Journal-Constitution reported](https://www.ajc.com/business/2026/11/data-center-elections/)
+that it is unclear whether such an order would survive a legal challenge,
+and that the industry will not support a statewide moratorium. In Georgia, zoning belongs to counties and cities. An order
+aimed at state agencies does not rewrite a county's zoning code, which is
+why the local moratoriums already on our
+[tracker](/moratoriums.html) still matter.
+
+Georgia voters also flipped the Public Service Commission to a 3-2
+Democratic majority. One Democratic commissioner, Peter Hubbard, who was
+re-elected, said stopping data centers is not in his power or his interest,
+[Atlanta News First reported](https://www.atlantanewsfirst.com/2026/11/06/georgias-newly-flipped-utility-commission-targets-power-bills-shutoffs-data-centers/).
+What a commission controls is who pays for the power plants and lines, which
+is the part that reaches your bill.
+
+## Ohio, Kansas, Wisconsin
+
+- **Ohio.** Amy Acton backs a conditional moratorium: projects would have
+  to cover all their utility costs, use union labor and locate on old
+  industrial sites. She also promised to claw back incentives, according to
+  [Scripps News](https://www.news5cleveland.com/politics/america-votes/voters-elected-governors-to-curb-data-centers-lowering-bills-for-gas-and-groceries-is-harder).
+- **Kansas.** AP called the race for Cindy Holscher, NPR reported on
+  Nov. 12. She
+  [called for a moratorium on new data centers](https://www.kuow.org/npr-news/2026-11-12/cindy-holscher-wins-in-kansas-holding-governors-office-for-democrats)
+  during the campaign.
+- **Wisconsin.** David Crowley moved to backing a moratorium during the
+  campaign, per the AP report above. We found no local reporting on how he
+  intends to carry it out.
+
+None of these three has published a mechanism or a date. Until one does,
+treat each as a stated intention.
+
+## The quieter lever: who sits on the utility commission
+
+Five incoming governors campaigned on appointing utility commissioners who
+would put ratepayers first: Acton in Ohio, Jocelyn Benson in Michigan,
+Crowley in Wisconsin, Aaron Ford in Nevada and Hannah Pingree in Maine,
+according to
+[Heatmap News](https://heatmap.news/daily/the-anti-utility-election).
+Ford also pledged to pause and review data center tax abatements, per a
+[Columbia University energy policy analysis](https://www.energypolicy.columbia.edu/how-the-midterm-results-could-affect-data-center-growth-and-electricity-prices-qa/).
+
+This is slower than a moratorium and likely to last longer. A commission
+decides whether a utility's new substation for a data center is paid for by
+the data center or spread across every customer. Appointments take effect as
+terms expire, so the change arrives over years.
+
+Two results to keep straight:
+
+- **Arizona.** Democrats Jonathon Hill and Clara Pratte won seats on the
+  Corporation Commission, where Republicans had held all five,
+  [KJZZ reported](https://www.kjzz.org/elections/2026-11-06/democrats-jonathon-hill-and-clara-pratte-win-seats-on-arizona-corporation-commission-elex).
+  By our arithmetic that leaves a 3-2 Republican majority. The commission
+  did not change hands.
+- **Michigan.** Voters passed a measure barring regulated utilities from
+  making campaign contributions with 81% of the vote, and the state's two
+  largest utilities have sued to block it,
+  [Latitude Media reported](https://www.latitudemedia.com/news/michigan-is-a-test-bed-for-democrats-energy-affordability-promises/).
+  Advocates expect Benson to pursue a pause, but her transition team did not
+  comment, and the same report notes a pause may need the Legislature
+  because siting there is largely local.
+
+## How much of the buildout this touches
+
+The Columbia analysis estimates that the five states where the governorship
+changed party (Texas, Georgia, Ohio, Iowa and Nevada) hold about 142.5
+gigawatts of announced data center demand, roughly 41% of the national
+pipeline. Its authors estimate slowdowns could affect up to about 50
+gigawatts over two to three years, or under 10 gigawatts if the pauses are
+short.
+
+Those are estimates of announced projects, many of which would never have
+been built. They show where the pressure is, not what will happen.
+
+## What to do with this
+
+1. **Do not stand down locally.** No pledge above stops a project that
+   already has its permits, and none takes effect before January.
+2. **Ask which lever.** When an official cites the governor-elect's
+   moratorium, ask whether it is an executive order, a bill or an
+   appointment, and when it takes effect.
+3. **Watch the commission.** Rate cases and large-load tariffs are where the
+   cost question is decided. Your state's commission and its open dockets
+   are on our [PUC directory](/puc.html).
+4. **Keep your own moratorium current.** A local pause with an end date
+   still expires on that date, whoever is governor. Check yours on the
+   [moratorium tracker](/moratoriums.html).
+
+## See also
+
+- [Nine Senate Seats Flipped. Here Is What the Winners Put in Writing About Data Centers.](/blog/senate-results-data-center-promises-2026)
+- [Moratorium tracker](/moratoriums.html): every local and state pause we
+  have sourced, with end dates.
+- [Your state page](/states/index.html): the projects, megawatts and rate
+  pressure behind these pledges.
+- [Officials scorecard](/scorecard.html): what sitting governors have
+  signed.
+""",
+    },
+    {
+        "id": "senate-results-data-center-promises-2026",
+        "art": "oversight",
+        "section": "stories",
+        "title": "Nine Senate Seats Flipped. Here Is What the Winners Put in Writing About Data Centers.",
+        "seo_title": "2026 Senate results: winners' data center promises",
+        "date": _dt.date(2026, 11, 16),
+        "author": "GridWatch AI",
+        "tags": ["election 2026", "Senate", "Texas", "Ohio", "North Carolina",
+                 "South Carolina", "Maine", "Michigan", "ratepayers", "accountability"],
+        "summary": "All 35 Senate races on the 2026 ballot now have a called winner. Thirteen of those winners left a documented position on data centers during the campaign, and twelve of the thirteen promised some version of the same thing: data centers pay their own way. This post lists who promised what, with the source for each, and what none of it guarantees.",
+        "body": """All 35 U.S. Senate races on the Nov. 3 ballot now have a called winner, and our
+[Senate race tracker](/senate-races.html) records each one with the page the
+result was read from. The Associated Press count stands at
+[56 Democratic seats to 44 Republican, with nine seats changing party](https://www.adn.com/politics/2026/11/17/democrat-mary-peltola-wins-us-senate-race-in-alaska-beating-incumbent-republican-dan-sullivan/),
+which AP describes as the most flips since 1958.
+
+If you are fighting a data center in your county, the party count is not the
+useful part. The useful part is what the person who now represents you said
+about data centers while asking for the job. That is what the tracker was
+built to hold, and this is the first time it can be read as a list of
+promises owed rather than a voter guide.
+
+One caution before the list. Every result here is a news organization's call
+or projection. None had been certified by a state when we read them. Alaska's
+certification is targeted for Nov. 25, and Mississippi, where the winner led
+by about 2,600 votes, certifies Dec. 3, according to
+[AP's rundown of outstanding races](https://www.ajc.com/news/2026/11/more-than-a-dozen-key-races-remain-too-early-to-call-one-week-after-election-day/).
+The AP report on Alaska linked above also notes a Justice Department appeal
+over certification there.
+
+## The count
+
+Of the 35 winners, 13 have a documented position on data centers in our
+records. Twelve of those 13 lean toward what we label guardrails: a documented
+position that data centers should carry their own costs, or that the host
+community should get a say. One is mixed. One more, Chris Pappas of New
+Hampshire, is on the record only for the House's near-unanimous vote on the
+Ratepayer Protection Act, which we show but do not score. The other 21
+winners have no record we could find and source, and they are shown that way
+on the tracker rather than as neutral.
+
+Three candidates in the tracker had a record that leaned the other way,
+toward building faster without a matching cost or community safeguard on the
+record. All three were Republicans on a general election ballot, in Alaska,
+Iowa and North Carolina. All three lost.
+
+That is a small sample, and other things were going on in this election. But
+it is the complete set, so it is worth stating plainly.
+
+## The seats that changed hands
+
+Six of the nine flipped seats went to a candidate with a record on our page.
+
+- **Texas: James Talarico.** In July he released a plan to
+  [end the state sales-tax break for data centers, require closed-loop water systems, set federal minimum standards and let localities approve or reject projects](https://www.texastribune.org/2026/07/22/texas-james-talarico-data-centers-regulation-senate-2026/).
+  His opponent, Ken Paxton, later put out his own plan that also backed
+  repealing the exemption, as
+  [FOX 7 Austin reported in September](https://www.fox4news.com/election/james-talarcio-ken-paxton-texas-data-center-plan).
+  In Texas, both major candidates ended the race against the tax break.
+- **Ohio: Sherrod Brown.** He ran ads against Jon Husted's record on
+  developer tax breaks and
+  [pledged to make data centers pay the full cost of their electricity](https://ohiocapitaljournal.com/2026/08/10/ohio-u-s-senate-candidates-offer-contrasting-visions-for-data-centers/).
+- **North Carolina: Roy Cooper.** His campaign's position was that data
+  centers must pay for all the energy they use with nothing passed to
+  consumers. He, like his opponent, supported letting communities block a
+  project,
+  [per Spectrum News](https://spectrumlocalnews.com/nc/charlotte/news/2026/08/27/data-centers-roy-cooper-whatley).
+  The same report noted that numerous data centers were built while he was
+  governor.
+- **South Carolina: Annie Andrews.** She ran on a two-year moratorium and
+  local control,
+  [WSOC-TV reported](https://www.wsoctv.com/news/local/data-center-debate-continues-south-carolina-after-andrews-victory/RMMHTFFSIBCJJCWXEIMGKWMPWI/).
+  Her opponent was the largest general-election bet by AI-focused super
+  PACs, at about $4.8 million,
+  [according to Fortune's tally](https://fortune.com/2026/11/04/candidates-backed-by-ai-super-pacs-result/).
+- **Maine: Troy Jackson.** He set conditions for data centers: union jobs,
+  fair taxes, environmental protection, community engagement and covering
+  their own power costs, as summarized in
+  [Newsweek's survey of Senate candidates](https://www.newsweek.com/ai-data-center-war-where-democrats-republicans-in-key-senate-races-stand-12354265).
+- **Iowa: Josh Turek.** This is the mixed one. He echoed local moratorium
+  sentiment but published no data center platform we could find.
+
+The other three flips, in Alaska (Mary Peltola), Kansas (Adam Hamilton) and
+Mississippi (Scott Colom), went to candidates with no documented data center
+position in our records. If you live in one of those states and have a source,
+[send it to us](/about.html).
+
+## The seats that did not change hands
+
+Several returning or newly elected senators in held seats are on the record
+too:
+
+- **Michigan: Abdul El-Sayed** published "terms of engagement" for data
+  center proposals, including
+  [protections meant to ensure projects do not raise electric rates](https://planetdetroit.org/2026/01/el-sayed-data-centers-senate/).
+- **Minnesota: Peggy Flanagan** opposes major tax breaks for Big Tech and
+  thinks the use of NDAs for data centers should be banned, according to a
+  [Forum News Service rundown of candidates' positions](https://www.inforum.com/news/minnesota/where-do-minnesota-statewide-office-candidates-stand-on-data-centers).
+- **Virginia: Mark Warner** signed on to the
+  [Power for the People Act](https://www.warner.senate.gov/newsroom/press-releases/warner-sponsors-bill-to-ensure-virginians-arent-stuck-footing-the-bill-for-big-data-centers/),
+  which would direct states to consider separate utility rate classes for
+  data centers. **New Jersey's Cory Booker** is also a
+  [cosponsor](https://www.booker.senate.gov/news/press/booker-van-hollen-colleagues-introduce-legislation-to-ensure-americans-arent-footing-the-bill-for-big-data-centers).
+- **New Mexico: Ben Ray Luján** said data centers should not use drinking or
+  agricultural water and should generate their own power, in a
+  [KVIA voter guide](https://kvia.com/voter-guide-2026/new-mexico-senator-district-3/2026/10/05/ben-ray-lujan-candidate-for-new-mexico-senator/).
+- **Florida: Ashley Moody**, the one Republican winner with a record here,
+  [cosponsored the Senate Ratepayer Protection Act](https://www.moody.senate.gov/press-releases/senator-moody-cosponsors-legislation-to-protect-ratepayers-from-energy-consuming-data-centers/).
+
+## How much the issue mattered
+
+The NBC News exit poll found
+[76% of voters opposed a new data center in their own community](https://www.nbcnews.com/politics/2026-elections/exit-polls),
+and that group voted Democratic 65 to 34. Asked how much AI data centers
+mattered to their vote for Congress, 23% said crucial and 33% said a major
+factor.
+
+Read that carefully. It is a rating voters gave when asked about the issue
+directly. A pre-election NBC poll found only 3% called AI data centers the
+most important issue facing the country,
+[as Reason noted](https://reason.com/2026/11/04/it-was-a-data-center-election-after-all/).
+Both things are true: most voters do not want one nearby, and for most of
+them it was not the main reason they voted the way they did.
+
+## What a promise is worth
+
+Nothing on this list is an action yet. A campaign plan is a press release.
+The tracker separates the two on purpose, and the
+[officials scorecard](/scorecard.html) is where votes and signed laws go.
+
+The first test is already on the calendar. On Nov. 9 the outgoing Senate
+[voted 73-25 to take up a permitting bill](https://www.aljazeera.com/news/2026/11/10/us-senate-advances-major-bill-boosting-energy-infrastructure)
+that would make data center owners pay for the infrastructure built to
+power them. That was a vote to begin debate, not final passage, and some
+Democrats want to wait for the new Congress. The new senators are sworn in in
+January.
+
+For a resident, the practical use of this list is narrow and real. When your
+senator's office tells you siting is a local matter, you can answer with the
+sentence they published during the campaign and the link to it.
+
+## See also
+
+- [2026 Senate race tracker](/senate-races.html): every race, every result,
+  every cited position.
+- [All 100 senators](/senators.html), including the ones who were not on
+  this ballot, with a letter generator for writing to yours.
+- [Officials scorecard](/scorecard.html): what sitting officials have
+  actually voted for.
+- [Moratorium tracker](/moratoriums.html): what communities in these states
+  have already passed.
+""",
+    },
+    {
         "id": "week-in-review-2026-11-15",
         "art": "review",
         "section": "stories",

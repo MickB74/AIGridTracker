@@ -119,6 +119,67 @@ def election_phase(on=None):
             "election_date": ELECTION_DATE}
 
 
+# ── results ────────────────────────────────────────────────────────────────
+# Who won, per race. Kept in data/election_results_2026.json rather than on
+# the roster: the roster is "who was on the ballot" (a fact each state
+# published before the vote), a result is a separate claim with its own
+# source and read date, and most of it arrives in bulk.
+#
+#   {"as_of": "...", "senate": {"TX": {...}}, "house": {"TX-33": {...}}}
+#
+# Each result: winner (name as on the roster when it is there), winner_party,
+# status (see RESULT_STATUS), source (URL actually read), as_of, and
+# optionally runoff_date, flip, vote_note, note. A race with no entry renders
+# as "result not recorded" - never as a guess from incumbency or lean.
+RESULTS_FILE = ROOT / "data" / "election_results_2026.json"
+RESULT_STATUS = {
+    "certified": "Certified",
+    "called": "Called",
+    "runoff": "Headed to a runoff",
+    "uncalled": "Not yet called",
+}
+_RESULTS_CACHE = None
+
+
+def load_results():
+    global _RESULTS_CACHE
+    if _RESULTS_CACHE is None:
+        try:
+            _RESULTS_CACHE = json.loads(RESULTS_FILE.read_text())
+        except (OSError, ValueError):
+            _RESULTS_CACHE = {}
+    return _RESULTS_CACHE
+
+
+def result_for(prefix):
+    """The recorded result for a race key - ("TX",) or ("TX", "33") - or None."""
+    chamber = "senate" if len(prefix) == 1 else "house"
+    return (load_results().get(chamber) or {}).get("-".join(prefix))
+
+
+def validate_results(senate_races, house_races):
+    """Problems in the results file; empty means clean. A result keyed to a
+    race that is not on the ballot, or a winner with no source, is the same
+    failure as a record on the wrong candidate."""
+    problems = []
+    data = load_results()
+    keys = {"senate": {r["abbrev"] for r in senate_races},
+            "house": {f'{r["abbrev"]}-{r["district"]}' for r in house_races}}
+    for chamber in ("senate", "house"):
+        for k, v in (data.get(chamber) or {}).items():
+            if k not in keys[chamber]:
+                problems.append(f"{chamber} result for a race not on the ballot: {k}")
+            if v.get("status") not in RESULT_STATUS:
+                problems.append(f"{chamber} {k}: unknown status {v.get('status')!r}")
+            if v.get("status") in ("certified", "called") and not v.get("winner"):
+                problems.append(f"{chamber} {k}: {v.get('status')} with no winner")
+            if not str(v.get("source", "")).startswith("http"):
+                problems.append(f"{chamber} {k}: result without a source URL")
+            if not v.get("as_of"):
+                problems.append(f"{chamber} {k}: result without an as_of")
+    return problems
+
+
 # ── automated, unverified mentions ─────────────────────────────────────────
 # Sourced from the same story archive that already feeds story-tracker.html,
 # which publishes unreviewed headlines under an explicit caveat. Same bargain
@@ -184,6 +245,9 @@ def attach_records(races, records, key_fields, with_mentions=True):
         if race.get("incumbent"):
             inc_names.add(norm(race.get("incumbent_on_ballot")
                                or race["incumbent"]))
+        res = result_for(prefix)
+        won_name = norm(res["winner"]) if res and res.get("winner") else None
+        race["result"] = res
         cands = []
         for c in race["candidates"]:
             rec = by_name.get((prefix, norm(c["name"]))) or {}
@@ -193,6 +257,7 @@ def attach_records(races, records, key_fields, with_mentions=True):
             cands.append({
                 **c,
                 "incumbent": norm(c["name"]) in inc_names,
+                "won": won_name is not None and norm(c["name"]) == won_name,
                 "lean": lean, "lean_label": label, "lean_color": color,
                 "summary": rec.get("summary"),
                 "items": rec.get("items", []),
@@ -201,7 +266,8 @@ def attach_records(races, records, key_fields, with_mentions=True):
                 "mentions": mentions_for(c["name"], archive) if archive else [],
             })
         order = {"Democratic": 0, "DFL": 0, "Republican": 0}
-        cands.sort(key=lambda c: ({"unrecorded": 2, "consensus": 1}.get(c["lean"], 0),
+        cands.sort(key=lambda c: (0 if c["won"] else 1,
+                                  {"unrecorded": 2, "consensus": 1}.get(c["lean"], 0),
                                   order.get(c["party"], 1), c["name"]))
         race["candidates"] = cands
         # A consensus-only record is shown (contested) but not counted as
@@ -211,6 +277,7 @@ def attach_records(races, records, key_fields, with_mentions=True):
         race["consensus"] = sum(1 for c in cands if c["lean"] == "consensus")
         race["contested"] = race["documented"] + race["consensus"] > 0
         race["mention_count"] = sum(len(c["mentions"]) for c in cands)
+        race["winner_on_roster"] = any(c["won"] for c in cands)
         out.append(race)
     return out
 
@@ -226,6 +293,13 @@ def coverage(races, roster_as_of):
         "stale": sum(1 for c in cands if c.get("stale")),
         "races_documented": sum(1 for r in races if r["documented"]),
         "mentions": sum(len(c["mentions"]) for c in cands),
+        "results": sum(1 for r in races
+                       if (r.get("result") or {}).get("winner")),
+        "results_open": sum(1 for r in races if r.get("result")
+                            and not r["result"].get("winner")),
+        "winners_documented": sum(
+            1 for c in cands if c.get("won")
+            and c["lean"] not in ("unrecorded", "consensus")),
         "as_of": roster_as_of,
         **election_phase(),
     }
