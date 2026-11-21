@@ -1109,6 +1109,16 @@
       "permanent": true
     },
     {
+      "source": "/communities/lowndes-county-al",
+      "destination": "/states/alabama",
+      "permanent": true
+    },
+    {
+      "source": "/communities/lowndes-county-al.html",
+      "destination": "/states/alabama",
+      "permanent": true
+    },
+    {
       "source": "/communities/lyon-county-nv",
       "destination": "/states/nevada",
       "permanent": true

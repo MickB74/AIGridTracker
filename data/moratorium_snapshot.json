@@ -1,7 +1,7 @@
 {
   "aberdeen-sd": {
-    "effective_status": "Expired",
-    "expires": "2026-11-18"
+    "effective_status": "Enacted",
+    "expires": "2027-07-01"
   },
   "agawam-ma": {
     "effective_status": "Enacted",
@@ -72,8 +72,8 @@
     "expires": "2027-07-09"
   },
   "arcata-ca": {
-    "effective_status": "Expired",
-    "expires": "2026-10-31"
+    "effective_status": "Enacted",
+    "expires": "2027-09-15"
   },
   "archbold-oh": {
     "effective_status": "Enacted",
@@ -180,8 +180,8 @@
     "expires": "2027-01-26"
   },
   "barnes-county-nd": {
-    "effective_status": "Expired",
-    "expires": "2026-11-19"
+    "effective_status": "Enacted",
+    "expires": null
   },
   "bass-river-township-nj": {
     "effective_status": "Enacted",
@@ -289,7 +289,7 @@
   },
   "boulder-county-co": {
     "effective_status": "Enacted",
-    "expires": "2026-12-02"
+    "expires": null
   },
   "bourbonnais-il": {
     "effective_status": "Enacted",
@@ -397,7 +397,7 @@
   },
   "butler-township-pa": {
     "effective_status": "Expired",
-    "expires": "2026-11-08"
+    "expires": "2026-10-13"
   },
   "butte-silver-bow-mt": {
     "effective_status": "Proposed",
@@ -428,8 +428,8 @@
     "expires": "2027-02-28"
   },
   "camden-county-ga": {
-    "effective_status": "Expired",
-    "expires": "2026-11-06"
+    "effective_status": "Enacted",
+    "expires": null
   },
   "camdenton-mo": {
     "effective_status": "Enacted",
@@ -524,8 +524,8 @@
     "expires": null
   },
   "charlotte-nc": {
-    "effective_status": "Expired",
-    "expires": "2026-11-05"
+    "effective_status": "Enacted",
+    "expires": "2027-10-18"
   },
   "chatham-county-nc": {
     "effective_status": "Enacted",
@@ -945,7 +945,7 @@
   },
   "el-dorado-ks": {
     "effective_status": "Enacted",
-    "expires": "2026-11-30"
+    "expires": null
   },
   "el-monte-ca": {
     "effective_status": "Enacted",
@@ -1176,8 +1176,8 @@
     "expires": null
   },
   "gilroy-ca": {
-    "effective_status": "Expired",
-    "expires": "2026-10-29"
+    "effective_status": "Enacted",
+    "expires": "2027-09-03"
   },
   "girard-oh": {
     "effective_status": "Enacted",
@@ -1193,7 +1193,7 @@
   },
   "gorham-me": {
     "effective_status": "Enacted",
-    "expires": "2026-11-29"
+    "expires": null
   },
   "grafton-oh": {
     "effective_status": "Enacted",
@@ -1325,7 +1325,7 @@
   },
   "hart-mi": {
     "effective_status": "Enacted",
-    "expires": "2026-11-26"
+    "expires": "2027-05-26"
   },
   "harvey-county-ks": {
     "effective_status": "Enacted",
@@ -1393,7 +1393,7 @@
   },
   "hillsboro-or": {
     "effective_status": "Enacted",
-    "expires": "2026-11-24"
+    "expires": null
   },
   "hillsborough-county-fl": {
     "effective_status": "Proposed",
@@ -1512,8 +1512,8 @@
     "expires": "2027-06-26"
   },
   "iron-county-ut": {
-    "effective_status": "Enacted",
-    "expires": "2026-11-22"
+    "effective_status": "Rescinded",
+    "expires": null
   },
   "islip-ny": {
     "effective_status": "Enacted",
@@ -1576,8 +1576,8 @@
     "expires": "2026-12-03"
   },
   "johnson-county-ia": {
-    "effective_status": "Expired",
-    "expires": "2026-11-08"
+    "effective_status": "Enacted",
+    "expires": "2027-08-08"
   },
   "johnson-county-ne": {
     "effective_status": "Enacted",
@@ -1716,8 +1716,8 @@
     "expires": null
   },
   "lavon-tx": {
-    "effective_status": "Expired",
-    "expires": "2026-11-05"
+    "effective_status": "Proposed",
+    "expires": null
   },
   "lawrence-ks": {
     "effective_status": "Enacted",
@@ -1764,8 +1764,8 @@
     "expires": null
   },
   "lexington-fayette-county-ky": {
-    "effective_status": "Expired",
-    "expires": "2026-10-31"
+    "effective_status": "Enacted",
+    "expires": "2027-10-31"
   },
   "liberty-township-nj": {
     "effective_status": "Enacted",
@@ -1863,10 +1863,6 @@
     "effective_status": "Rejected",
     "expires": null
   },
-  "lowndes-county-al": {
-    "effective_status": "Expired",
-    "expires": "2026-10-25"
-  },
   "lowndes-county-ga": {
     "effective_status": "Expired",
     "expires": "2026-10-25"
@@ -1900,8 +1896,8 @@
     "expires": null
   },
   "lysander-onondaga-co-ny": {
-    "effective_status": "Expired",
-    "expires": "2026-11-06"
+    "effective_status": "Enacted",
+    "expires": "2027-05-05"
   },
   "macon-county-il": {
     "effective_status": "Proposed",
@@ -2321,7 +2317,7 @@
   },
   "normal-il": {
     "effective_status": "Enacted",
-    "expires": "2026-11-30"
+    "expires": "2027-05-31"
   },
   "norman-ok": {
     "effective_status": "Enacted",
@@ -2708,8 +2704,8 @@
     "expires": "2027-02-17"
   },
   "richmond-ca": {
-    "effective_status": "Expired",
-    "expires": "2026-10-30"
+    "effective_status": "Enacted",
+    "expires": "2028-09-15"
   },
   "ridgely-md": {
     "effective_status": "Enacted",
@@ -2853,7 +2849,7 @@
   },
   "scarborough-me": {
     "effective_status": "Enacted",
-    "expires": "2026-11-30"
+    "expires": null
   },
   "scioto-township-oh": {
     "effective_status": "Enacted",
@@ -2925,7 +2921,7 @@
   },
   "skagit-county-wa": {
     "effective_status": "Enacted",
-    "expires": "2026-12-01"
+    "expires": null
   },
   "smithfield-ri": {
     "effective_status": "Enacted",
@@ -2933,7 +2929,7 @@
   },
   "smithfield-township-pa": {
     "effective_status": "Expired",
-    "expires": "2026-11-02"
+    "expires": "2026-08-12"
   },
   "snohomish-county-wa": {
     "effective_status": "Enacted",
@@ -3008,8 +3004,8 @@
     "expires": null
   },
   "springfield-mo": {
-    "effective_status": "Expired",
-    "expires": "2026-11-17"
+    "effective_status": "Enacted",
+    "expires": "2027-02-24"
   },
   "springfield-oh": {
     "effective_status": "Enacted",
@@ -3413,11 +3409,11 @@
   },
   "west-whiteland-township-pa": {
     "effective_status": "Expired",
-    "expires": "2026-11-01"
+    "expires": "2026-10-14"
   },
   "westbrook-me": {
     "effective_status": "Enacted",
-    "expires": "2026-11-28"
+    "expires": null
   },
   "westerly-ri": {
     "effective_status": "Enacted",

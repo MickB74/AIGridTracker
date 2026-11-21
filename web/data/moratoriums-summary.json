@@ -3,11 +3,11 @@
   "generated": "2026-11-21",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
-  "count": 888,
+  "count": 887,
   "states": 49,
-  "enacted": 700,
-  "proposed": 83,
-  "official_sourced": 68,
+  "enacted": 710,
+  "proposed": 84,
+  "official_sourced": 71,
   "by_state": {
     "CO": {
       "total": 19,
@@ -26,7 +26,7 @@
     },
     "IA": {
       "total": 21,
-      "enacted": 16,
+      "enacted": 17,
       "proposed": 1
     },
     "IL": {
@@ -36,7 +36,7 @@
     },
     "UT": {
       "total": 8,
-      "enacted": 8,
+      "enacted": 7,
       "proposed": 0
     },
     "WI": {
@@ -57,16 +57,16 @@
     "TX": {
       "total": 23,
       "enacted": 10,
-      "proposed": 8
+      "proposed": 9
     },
     "GA": {
       "total": 46,
-      "enacted": 32,
+      "enacted": 33,
       "proposed": 1
     },
     "NY": {
       "total": 17,
-      "enacted": 13,
+      "enacted": 14,
       "proposed": 3
     },
     "CT": {
@@ -76,7 +76,7 @@
     },
     "MO": {
       "total": 18,
-      "enacted": 16,
+      "enacted": 17,
       "proposed": 0
     },
     "ME": {
@@ -86,7 +86,7 @@
     },
     "NC": {
       "total": 47,
-      "enacted": 38,
+      "enacted": 39,
       "proposed": 2
     },
     "FL": {
@@ -106,7 +106,7 @@
     },
     "CA": {
       "total": 31,
-      "enacted": 21,
+      "enacted": 24,
       "proposed": 1
     },
     "WA": {
@@ -121,7 +121,7 @@
     },
     "KY": {
       "total": 29,
-      "enacted": 28,
+      "enacted": 29,
       "proposed": 0
     },
     "NJ": {
@@ -170,7 +170,7 @@
       "proposed": 0
     },
     "AL": {
-      "total": 16,
+      "total": 15,
       "enacted": 14,
       "proposed": 0
     },
@@ -216,7 +216,7 @@
     },
     "ND": {
       "total": 4,
-      "enacted": 0,
+      "enacted": 1,
       "proposed": 0
     },
     "MT": {
@@ -246,7 +246,7 @@
     },
     "SD": {
       "total": 4,
-      "enacted": 1,
+      "enacted": 2,
       "proposed": 0
     },
     "HI": {
@@ -258,7 +258,6 @@
   "expiring_within_days": {
     "30": [
       "bloomington-il",
-      "iron-county-ut",
       "washington-township-macomb-co-mi",
       "gates-county-nc",
       "nashville-tn",
@@ -270,10 +269,6 @@
       "fort-payne-al",
       "minneapolis-mn",
       "green-charter-township-mi",
-      "normal-il",
-      "skagit-county-wa",
-      "hillsboro-or",
-      "boulder-county-co",
       "lake-county-fl",
       "howland-township-oh",
       "braceville-township-oh",
@@ -284,9 +279,7 @@
       "brookville-pa",
       "center-township-pa",
       "archuleta-county-co",
-      "gorham-me",
       "lycoming-county-pa",
-      "hart-mi",
       "orion-township-mi",
       "newton-county-ga",
       "forest-park-ga",
@@ -295,15 +288,11 @@
       "peosta-ia",
       "webster-county-mo",
       "spokane-county-wa",
-      "el-dorado-ks",
       "brunswick-me",
-      "scarborough-me",
-      "westbrook-me",
       "milford-ut"
     ],
     "60": [
       "bloomington-il",
-      "iron-county-ut",
       "washington-township-macomb-co-mi",
       "gates-county-nc",
       "nashville-tn",
@@ -327,14 +316,10 @@
       "northville-mi",
       "saginaw-mi",
       "madison-wi",
-      "normal-il",
       "marysville-wa",
-      "skagit-county-wa",
       "pasco-wa",
       "wendell-nc",
       "sedgwick-county-ks",
-      "hillsboro-or",
-      "boulder-county-co",
       "lake-county-fl",
       "fluvanna-county-va",
       "luther-ok",
@@ -363,11 +348,9 @@
       "brookville-pa",
       "center-township-pa",
       "archuleta-county-co",
-      "gorham-me",
       "galloway-township-nj",
       "lycoming-county-pa",
       "haring-township-mi",
-      "hart-mi",
       "orion-township-mi",
       "newton-county-ga",
       "forest-park-ga",
@@ -385,16 +368,12 @@
       "webster-county-mo",
       "spokane-county-wa",
       "pawhuska-ok",
-      "el-dorado-ks",
       "brunswick-me",
-      "scarborough-me",
-      "westbrook-me",
       "milford-ut",
       "cherry-county-ne"
     ],
     "90": [
       "bloomington-il",
-      "iron-county-ut",
       "washington-township-macomb-co-mi",
       "gates-county-nc",
       "canton-nc",
@@ -436,10 +415,8 @@
       "sterling-heights-mi",
       "south-lyon-mi",
       "madison-wi",
-      "normal-il",
       "pulaski-county-in",
       "marysville-wa",
-      "skagit-county-wa",
       "pasco-wa",
       "cle-elum-wa",
       "kittitas-county-wa",
@@ -448,10 +425,8 @@
       "shawnee-county-ks",
       "sedgwick-county-ks",
       "mount-vernon-wa",
-      "hillsboro-or",
       "jackson-ms",
       "eastport-me",
-      "boulder-county-co",
       "lake-county-fl",
       "woodford-county-il",
       "fluvanna-county-va",
@@ -489,7 +464,6 @@
       "muncy-township-pa",
       "chester-county-sc",
       "archuleta-county-co",
-      "gorham-me",
       "galloway-township-nj",
       "lycoming-county-pa",
       "prichard-al",
@@ -497,7 +471,6 @@
       "lansing-mi",
       "fenton-township-mi",
       "haring-township-mi",
-      "hart-mi",
       "mcdowell-county-nc",
       "gregg-township-pa",
       "el-monte-ca",
@@ -527,10 +500,7 @@
       "harpersville-al",
       "westover-al",
       "pawhuska-ok",
-      "el-dorado-ks",
       "brunswick-me",
-      "scarborough-me",
-      "westbrook-me",
       "milford-ut",
       "cherry-county-ne",
       "buffalo-township-pa",
