@@ -1,6 +1,6 @@
 {
   "aberdeen-sd": {
-    "effective_status": "Enacted",
+    "effective_status": "Expired",
     "expires": "2026-11-18"
   },
   "agawam-ma": {
@@ -180,7 +180,7 @@
     "expires": "2027-01-26"
   },
   "barnes-county-nd": {
-    "effective_status": "Enacted",
+    "effective_status": "Expired",
     "expires": "2026-11-19"
   },
   "bass-river-township-nj": {
@@ -270,6 +270,10 @@
   "boiling-spring-lakes-nc": {
     "effective_status": "Enacted",
     "expires": "2027-06-02"
+  },
+  "boise-id": {
+    "effective_status": "Enacted",
+    "expires": null
   },
   "boone-county-in": {
     "effective_status": "Enacted",
@@ -2060,7 +2064,7 @@
     "expires": null
   },
   "meridian-township-mi": {
-    "effective_status": "Enacted",
+    "effective_status": "Expired",
     "expires": "2026-11-19"
   },
   "merrillville-in": {
@@ -2656,7 +2660,7 @@
     "expires": "2027-09-08"
   },
   "putnam-county-in": {
-    "effective_status": "Enacted",
+    "effective_status": "Expired",
     "expires": "2026-11-17"
   },
   "pyramid-lake-paiute-tribe-nv": {
@@ -3004,7 +3008,7 @@
     "expires": null
   },
   "springfield-mo": {
-    "effective_status": "Enacted",
+    "effective_status": "Expired",
     "expires": "2026-11-17"
   },
   "springfield-oh": {

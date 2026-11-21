@@ -4359,5 +4359,47 @@
     "locality": "Dickinson County, IA",
     "kind": "status_changed",
     "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-21",
+    "id": "meridian-township-mi",
+    "locality": "Meridian Township, MI",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-21",
+    "id": "springfield-mo",
+    "locality": "Springfield, MO",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-21",
+    "id": "putnam-county-in",
+    "locality": "Putnam County, IN",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-21",
+    "id": "barnes-county-nd",
+    "locality": "Barnes County, ND",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-21",
+    "id": "aberdeen-sd",
+    "locality": "Aberdeen, SD",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-21",
+    "id": "boise-id",
+    "locality": "Boise, ID",
+    "kind": "added",
+    "detail": "Added as Enacted"
   }
 ]
