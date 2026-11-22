@@ -243,13 +243,13 @@ five. Record the answers.
         "id": "house-results-data-center-records-2026",
         "art": "checklist",
         "section": "stories",
-        "title": "434 House Races Have a Winner. Only 91 of Them Ever Said Anything Specific About Data Centers.",
+        "title": "434 House Races Have a Winner. Only 78 of Them Ever Said Anything Specific About Data Centers.",
         "seo_title": "2026 House results: who has a data center record",
         "date": _dt.date(2026, 11, 19),
         "author": "GridWatch AI",
         "tags": ["election 2026", "House", "New Jersey", "Maine", "Wyoming",
                  "New York", "Virginia", "super PAC", "ratepayers", "accountability"],
-        "summary": "Our House tracker now records a result for every one of the 440 seats on the ballot: 434 winners and six races still in a recount or runoff. Ninety-one winners have a documented position on data centers. Another 228 are on the record only for one near-unanimous vote. The rest have said nothing we could find, including the new member for the South Jersey district where Vineland sits. What the results show, where they cut against the easy story, and how to look up your own district.",
+        "summary": "Our House tracker now records a result for every one of the 440 seats on the ballot: 434 winners and six races still in a recount or runoff. Seventy-eight winners have a documented position on data centers. Another 240 are on the record only for one near-unanimous vote. The rest have said nothing we could find, including the new member for the South Jersey district where Vineland sits. What the results show, where they cut against the easy story, and how to look up your own district.",
         "body": """Every seat on the 2026 House ballot now has a result on our
 [House race tracker](/house-races.html): 434 with a winner and six still
 open. Each result links to the page it was read from. Most are news
@@ -268,15 +268,15 @@ For most districts, the honest answer is very little.
 
 Of the 434 winners in our records:
 
-- **91 have a documented position** on data centers. Of those, 64 lean
+- **78 have a documented position** on data centers. Of those, 59 lean
   toward what we call guardrails (data centers pay their own costs, or the
-  community gets a say), 15 are mixed, and 12 lean toward building faster
+  community gets a say), 14 are mixed, and 5 lean toward building faster
   without a matching safeguard on the record.
-- **228 are on the record only for one vote.** In September the House passed
+- **240 are on the record only for one vote.** In September the House passed
   the Ratepayer Protection Act 417-3. A yes on a bill nearly everyone voted
   for tells you little about any one member, so we show it and do not score
   it.
-- **113 have no record we could find.** Many of these are new members.
+- **116 have no record we could find.** Many of these are new members.
 
 So roughly one winner in five has said something specific enough to hold
 them to.
@@ -287,15 +287,16 @@ In the [Senate](/blog/senate-results-data-center-promises-2026), the two
 candidates whose records leaned toward faster buildout both lost. It would
 be tidy to report a pattern. The House data does not support one.
 
-Of the 16 House candidates with that lean whose races are decided, 12 won.
-Nearly all are incumbents in safe seats. Four lost, including Mike Lawler in
+Of the 8 House candidates with that lean whose races are decided, 5 won.
+All five are incumbents. Three lost, including Mike Lawler in
 New York's 17th District, who had
 [opposed his governor's data center moratorium](https://www.foxbusiness.com/media/new-york-republican-congressman-rips-hochul-policies-sending-businesses-dont-come-here-message),
 and Rob Wittman in Virginia's 1st.
 
 The results cut the other way too. In Maine's 2nd District, Paul LePage, who
-[described himself as a big fan of data centers](https://www.bangordailynews.com/2026/08/24/politics/elections/paul-lepage-big-fan-data-centers-joam40zk0w/),
-won the open seat over a Democrat who favored ratepayer and community
+[described himself as a big fan of data centers](https://www.bangordailynews.com/2026/08/24/politics/elections/paul-lepage-big-fan-data-centers-joam40zk0w/)
+(his campaign said afterward that he supports "sensible regulation," so we
+record him as mixed), won the open seat over a Democrat who favored ratepayer and community
 benefit benchmarks. And two Republicans with guardrails records lost their
 seats anyway: Gabe Evans in Colorado's 8th, the
 [lead Republican sponsor of the Ratepayer Protection Act](https://broadbandbreakfast.com/house-committee-approves-package-to-address-data-centers-growing-energy-demands/),
@@ -312,7 +313,7 @@ southern end of the state, including Vineland, where the state
 [fined a data center $1.07 million](/blog/vineland-dataone-fine-order-2026)
 in September.
 
-Van Drew, the Republican incumbent, had cosponsored the
+Van Drew, the Republican incumbent, had introduced, with Rep. Riley, the
 [FAIR Data Act](https://riley.house.gov/2026/07/13/riley-introduces-bill-to-stop-data-center-projects-from-driving-up-energy-bills/),
 a bipartisan bill to stop data center projects from passing grid upgrade
 costs to residential customers. He lost to Democrat Zack Mullock.
@@ -328,9 +329,12 @@ live there, it is a fair first question to put to his office.
 
 Several first-time winners arrive with something on the record:
 
-- **Wyoming at-large: Chuck Gray**, a Republican, campaigned on stopping
-  data centers and
-  [ran on that platform in the primary](https://cowboystatedaily.com/2026/08/05/u-s-house-forum-gray-hammers-data-centers-clashes-with-host/).
+- **Wyoming at-large: Chuck Gray**, a Republican, said at an August forum
+  that he opposes AI data centers, and Cowboy State Daily
+  [reported](https://cowboystatedaily.com/2026/08/05/u-s-house-forum-gray-hammers-data-centers-clashes-with-host/)
+  he alone among the candidates indicated a desire to ban them federally.
+  The same article notes he voted in 2021 to keep Wyoming's data center tax
+  exemption.
 - **Utah's 1st: Ben McAdams**, a Democrat, opposed the Stratos project in
   Box Elder County.
 - **New Hampshire's 1st: Stefany Shaheen** supported a moratorium, saying
@@ -339,8 +343,9 @@ Several first-time winners arrive with something on the record:
 - **Colorado's 1st: Melat Kiros** supports a nationwide moratorium on data
   center construction,
   [Drop Site News reported](https://www.dropsitenews.com/p/aipac-ai-degette-melat-kiros-colorado).
-- **Connecticut's 1st: Luke Bronin** called for developers to pay their fair
-  share.
+- **Connecticut's 1st: Luke Bronin** has called for developers to pay their
+  fair share, [according to the American Prospect](https://prospect.org/2026/05/21/meet-connecticuts-billionaire-backed-dark-money-democrat-bronin-larson-congress/).
+  The article does not quote him.
 
 Opposition to data centers is not confined to one party. Gray and Kiros
 agree on little else.

@@ -2,7 +2,7 @@
  "generated": "2026-11-21",
  "license": "CC BY 4.0",
  "note": "One row per cited item. kind=action is a bill, letter, hearing question or investigation; kind=statement is a quote, op-ed or campaign line. grade is the officials-scorecard grade (sitting officials only); lean summarises the cited items.",
- "count": 717,
+ "count": 701,
  "records": [
   {
    "chamber": "Senate",
@@ -114,13 +114,13 @@
    "name": "Suhas Subramanyam",
    "party": "Democratic",
    "kind": "statement",
-   "what": "At a Brookings Institution event, called the current ad hoc, community-by-community approach to data center siting “short-term profit-driven” and sometimes “predatory”, and called for “a national strategy that puts communities first”: coordinated planning across states, disclosure of development agreements that now carry nondisclosure clauses, and measured rather than projected power and water use.",
+   "what": "At a Brookings Institution event called the community-by-community approach to data center siting \"short-term profit-driven, sometimes it's a little predatory, and it's not working\" and said he wants \"a national strategy that puts communities first\"; also called for transparency in development agreements, which often include nondisclosure agreements signed by officials, and on actual power and water use.",
    "date": "2026-09-22",
    "source": "https://www.nextgov.com/modernization/2026/09/do-data-centers-need-national-strategy-puts-communities-first/416137/",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-22",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-va-10"
   },
   {
@@ -158,6 +158,23 @@
    "page": "https://aigridwatch.com/senate-races#race-nh"
   },
   {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "TX",
+   "district": "37",
+   "name": "Greg Casar",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Cosponsor of H.R. 9442, the AI Data Center Moratorium Act (sponsor Rep. Ocasio-Cortez), added 09/17/2026.",
+   "date": "2026-09-17",
+   "source": "https://www.congress.gov/bill/119th-congress/house-bill/9442/cosponsors",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-tx-37"
+  },
+  {
    "chamber": "Senate",
    "role": "candidate",
    "state": "NH",
@@ -187,8 +204,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-12",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ak-al"
   },
   {
@@ -205,7 +222,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-al-2"
   },
   {
@@ -290,7 +307,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-al-7"
   },
   {
@@ -340,8 +357,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ar-4"
   },
   {
@@ -374,8 +391,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "lean": "consensus",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-az-3"
   },
   {
@@ -391,8 +408,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-12",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-az-4"
   },
   {
@@ -426,7 +443,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-az-7"
   },
   {
@@ -613,7 +630,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ca-10"
   },
   {
@@ -681,7 +698,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ca-15"
   },
   {
@@ -715,7 +732,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-08-26",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ca-17"
   },
   {
@@ -851,7 +868,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ca-25"
   },
   {
@@ -1140,7 +1157,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ca-43"
   },
   {
@@ -1225,7 +1242,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ca-49"
   },
   {
@@ -1292,8 +1309,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-co-4"
   },
   {
@@ -1361,7 +1378,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-22",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-co-8"
   },
   {
@@ -1445,8 +1462,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "lean": "consensus",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-de-al"
   },
   {
@@ -1627,13 +1644,13 @@
    "name": "Kathy Castor",
    "party": "Democratic",
    "kind": "statement",
-   "what": "H.R. 9340 passed the full House 417-3. It directs state utility commissions to consider rate designs under which data centers with 100 MW or more of peak demand at one site bear the full incremental cost of the generation, transmission and distribution upgrades they require. Now goes to the Senate.",
+   "what": "Voted yes on H.R. 9340, the Ratepayer Protection Act, which passed 417-3 (roll call 312). It directs state utility commissions to consider rate designs making data centers with 100 MW or more of peak demand at one site pay the full incremental cost of the generation and grid upgrades they require. A near-unanimous vote: shown on the record, not scored on its own.",
    "date": "2026-09-16",
-   "source": "https://energycommerce.house.gov/posts/ratepayer-protection-act-passes-house-with-strong-bipartisan-support",
+   "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-22",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-fl-14"
   },
   {
@@ -1803,7 +1820,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ga-2"
   },
   {
@@ -1888,7 +1905,7 @@
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ga-7"
   },
   {
@@ -1905,7 +1922,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ga-8"
   },
   {
@@ -2092,7 +2109,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-22",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-il-3"
   },
   {
@@ -2126,7 +2143,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-il-6"
   },
   {
@@ -2211,7 +2228,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-il-14"
   },
   {
@@ -2381,7 +2398,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-in-7"
   },
   {
@@ -2448,8 +2465,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ks-2"
   },
   {
@@ -2466,7 +2483,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ks-3"
   },
   {
@@ -2516,8 +2533,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ky-2"
   },
   {
@@ -2534,7 +2551,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ky-3"
   },
   {
@@ -2568,7 +2585,7 @@
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-la-1"
   },
   {
@@ -2636,7 +2653,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ma-2"
   },
   {
@@ -2653,7 +2670,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ma-3"
   },
   {
@@ -2703,8 +2720,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "lean": "consensus",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-ma-7"
   },
   {
@@ -2754,8 +2771,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
+   "lean": "consensus",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-md-1"
   },
   {
@@ -2772,7 +2789,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-md-2"
   },
   {
@@ -2789,7 +2806,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-md-3"
   },
   {
@@ -2806,7 +2823,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-md-4"
   },
   {
@@ -2823,7 +2840,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-md-6"
   },
   {
@@ -2840,7 +2857,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-md-7"
   },
   {
@@ -2857,7 +2874,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-md-8"
   },
   {
@@ -2874,7 +2891,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-me-1"
   },
   {
@@ -2925,7 +2942,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-07",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mi-3"
   },
   {
@@ -2976,7 +2993,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-07",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mi-6"
   },
   {
@@ -2992,8 +3009,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-07",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mi-7"
   },
   {
@@ -3038,13 +3055,13 @@
    "name": "Rashida Tlaib",
    "party": "Democratic",
    "kind": "statement",
-   "what": "One of three members to vote no on H.R. 9340, the Ratepayer Protection Act (passed 417-3), on the grounds that it was too weak: it “fails to meaningfully protect our communities.” Before the vote she wrote on X that “the strongest action Congress can take right now is to pass a national moratorium on data centers and enact a prohibition on federal lands.”",
+   "what": "One of three House members (with Summer Lee and Delia Ramirez) to vote against H.R. 9340, the Ratepayer Protection Act (417-3). Said it 'fails to meaningfully protect our communities'; before the vote wrote on X: \"The strongest action Congress can take right now is to pass a national moratorium on data centers and enact a prohibition on federal lands.\"",
    "date": "2026-09-16",
    "source": "https://www.nbcnews.com/politics/congress/house-passes-bill-shield-consumers-data-center-price-hikes-energy-rcna597683",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-22",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mi-12"
   },
   {
@@ -3061,7 +3078,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mn-1"
   },
   {
@@ -3129,7 +3146,7 @@
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mn-6"
   },
   {
@@ -3162,8 +3179,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
+   "lean": "consensus",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-mn-8"
   },
   {
@@ -3367,7 +3384,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mt-2"
   },
   {
@@ -3434,8 +3451,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
+   "lean": "consensus",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-nc-4"
   },
   {
@@ -3605,7 +3622,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nd-al"
   },
   {
@@ -3621,8 +3638,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "lean": "consensus",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-ne-1"
   },
   {
@@ -3639,7 +3656,7 @@
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ne-3"
   },
   {
@@ -3656,7 +3673,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nh-2"
   },
   {
@@ -3690,7 +3707,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nj-2"
   },
   {
@@ -3758,7 +3775,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-08-26",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nj-6"
   },
   {
@@ -3792,7 +3809,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nj-8"
   },
   {
@@ -3826,7 +3843,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nj-10"
   },
   {
@@ -3860,7 +3877,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nm-1"
   },
   {
@@ -3877,7 +3894,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nm-2"
   },
   {
@@ -3894,7 +3911,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nv-1"
   },
   {
@@ -3911,7 +3928,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nv-3"
   },
   {
@@ -3928,7 +3945,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nv-4"
   },
   {
@@ -4115,7 +4132,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ny-14"
   },
   {
@@ -4166,7 +4183,7 @@
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ny-17"
   },
   {
@@ -4200,7 +4217,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ny-19"
   },
   {
@@ -4217,7 +4234,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ny-20"
   },
   {
@@ -4319,7 +4336,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-06",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-1"
   },
   {
@@ -4387,7 +4404,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-06",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-5"
   },
   {
@@ -4403,8 +4420,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-06",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-6"
   },
   {
@@ -4454,8 +4471,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-06",
+   "lean": "consensus",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-oh-9"
   },
   {
@@ -4506,7 +4523,7 @@
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-06",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-12"
   },
   {
@@ -4523,7 +4540,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-06",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-13"
   },
   {
@@ -4574,7 +4591,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ok-2"
   },
   {
@@ -4608,7 +4625,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ok-5"
   },
   {
@@ -4641,8 +4658,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "lean": "consensus",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-or-2"
   },
   {
@@ -4675,8 +4692,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
+   "lean": "consensus",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-or-4"
   },
   {
@@ -4710,7 +4727,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-or-6"
   },
   {
@@ -4727,7 +4744,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-pa-1"
   },
   {
@@ -4880,7 +4897,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-22",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-pa-12"
   },
   {
@@ -5118,7 +5135,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-tn-2"
   },
   {
@@ -5135,7 +5152,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-tn-3"
   },
   {
@@ -5237,7 +5254,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-tx-4"
   },
   {
@@ -5611,7 +5628,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-tx-37"
   },
   {
@@ -5628,7 +5645,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ut-2"
   },
   {
@@ -5679,7 +5696,7 @@
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-05",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-va-1"
   },
   {
@@ -5696,7 +5713,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-05",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-va-2"
   },
   {
@@ -5781,7 +5798,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-05",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-va-7"
   },
   {
@@ -5798,7 +5815,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-05",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-va-8"
   },
   {
@@ -5832,7 +5849,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-22",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-va-10"
   },
   {
@@ -6035,8 +6052,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "lean": "consensus",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-wi-2"
   },
   {
@@ -6052,8 +6069,8 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-wi-3"
   },
   {
@@ -6154,43 +6171,26 @@
    "source": "https://clerk.house.gov/evs/2026/roll312.xml",
    "source_name": "",
    "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "lean": "consensus",
+   "as_of": "2026-09-22",
    "page": "https://aigridwatch.com/house-races#race-wv-2"
   },
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "AZ",
-   "district": "3",
-   "name": "Yassamin Ansari",
+   "state": "ME",
+   "district": "1",
+   "name": "Chellie Pingree",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Cosponsored H.R. 9442 (AI Data Center Moratorium Act), which would pause construction of new AI data centers over 20 MW until Congress passes comprehensive AI legislation",
-   "date": "2026-09-12",
-   "source": "https://www.govinfo.gov/app/details/BILLS-119hr9442ih",
+   "what": "Cosponsor of H.R. 9442, the AI Data Center Moratorium Act (sponsor Rep. Ocasio-Cortez), added 09/14/2026.",
+   "date": "2026-09-14",
+   "source": "https://www.congress.gov/bill/119th-congress/house-bill/9442/cosponsors",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
-   "page": "https://aigridwatch.com/house-races#race-az-3"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "AZ",
-   "district": "6",
-   "name": "JoAnna Mendoza",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Stated 'No data centers in the desert. Not right now, not in our district, not in our state'; cites ASU research on 2-4 degree heat emissions from data centers; wants federal action on utility bill protection and water transparency",
-   "date": "2026-09-12",
-   "source": "https://blogforarizona.net/201903-2/",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-12",
-   "page": "https://aigridwatch.com/house-races#race-az-6"
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-me-1"
   },
   {
    "chamber": "House",
@@ -6206,7 +6206,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mt-2"
   },
   {
@@ -6223,7 +6223,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mt-2"
   },
   {
@@ -6240,7 +6240,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mt-2"
   },
   {
@@ -6257,7 +6257,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mt-2"
   },
   {
@@ -6325,7 +6325,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ks-1"
   },
   {
@@ -6342,7 +6342,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ks-3"
   },
   {
@@ -6353,31 +6353,31 @@
    "name": "Steve Scalise",
    "party": "Republican",
    "kind": "statement",
-   "what": "As Majority Leader, backed bringing the Ratepayer Protection Act to the House floor for a vote",
+   "what": "Article says he highlights a Richland Parish, LA data center that paid every schoolteacher in the parish a $50,000 bonus. Quoted: 'They're good customers, they're good neighbors, and studies prove that they don't add to the cost of the grid. They're paying their own way.'",
    "date": "2026-09-10",
-   "source": "https://www.axios.com/2026/09/10/house-republicans-data-center-power-bills-ai",
+   "source": "https://www.moderntreatise.com/the-americas/2026/9/3/in-america-gop-under-pressure-to-pass-data-center-legislation-before-midterms",
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-la-1"
   },
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "LA",
-   "district": "4",
-   "name": "Mike Johnson",
+   "state": "PA",
+   "district": "1",
+   "name": "Brian Fitzpatrick",
    "party": "Republican",
    "kind": "statement",
-   "what": "As Speaker, brought the Ratepayer Protection Act (H.R. 9340) to the House floor for a vote — bipartisan bill requiring state utility regulators to consider rules making data centers cover costs of new power generation",
+   "what": "Per the Inquirer, his campaign spokesperson said he supports 'uniform federal regulations' and '100% control by local residents who could be impacted' and pointed to his cosponsorship of the Ratepayer Protection Act and the Data Center Transparency Act. The article notes his initial House vote for OBBBA (with a provision banning state/local AI regulation) and that he voted against the final version, which lacked the provision.",
    "date": "2026-09-10",
-   "source": "https://www.axios.com/2026/09/10/house-republicans-data-center-power-bills-ai",
+   "source": "https://www.inquirer.com/politics/election/bob-harvie-ai-data-centers-stance-tv-ad-20260910.html",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-12",
-   "page": "https://aigridwatch.com/house-races#race-la-4"
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-pa-1"
   },
   {
    "chamber": "House",
@@ -6387,13 +6387,13 @@
    "name": "Greg Stanton",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Cosponsored H.R. 10321 (Responsible Data Center Siting Act), directing DOE to establish best practices for data center siting considering energy, water, utility bills, environment, noise, and community impacts",
+   "what": "Named as a cosponsor of the Responsible Data Center Siting Act, which would direct the Secretary of Energy to establish best practices for siting data centers considering energy availability, utility bills, water and electricity use, the environment, and community impacts such as noise.",
    "date": "2026-09-08",
    "source": "https://subramanyam.house.gov/media/press-releases/rep-subramanyam-introduces-national-data-center-plan",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-12",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-az-4"
   },
   {
@@ -6404,13 +6404,13 @@
    "name": "Mike Levin",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Cosponsored the Responsible Data Center Siting Act (H.R.10321, introduced by Rep. Subramanyam), directing the Secretary of Energy to establish best practices for data center siting considering grid impacts, water use and utility bills.",
+   "what": "Listed as a cosponsor of H.R. 10321, the Responsible Data Center Siting Act of 2026 (sponsor Rep. Suhas Subramanyam), 'to direct the Secretary of Energy to establish best practices for the siting of data centers'.",
    "date": "2026-09-08",
    "source": "https://www.govinfo.gov/app/details/BILLS-119hr10321ih",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ca-49"
   },
   {
@@ -6427,7 +6427,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nh-1"
   },
   {
@@ -6958,23 +6958,6 @@
    "page": "https://aigridwatch.com/senators#sen-b001319"
   },
   {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "LA",
-   "district": "1",
-   "name": "Steve Scalise",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "Suggested China was behind anti-data-center sentiment: 'We are investigating whether China is behind a lot of this misinformation, false information against data centers.' Claimed to be finding social media bots controlled by Beijing opposing data centers",
-   "date": "2026-09-04",
-   "source": "https://www.ms.now/rachel-maddow-show/maddowblog/data-centers-scalise-trump-republicans-china-conspiracy-theory-gop-elections-midterms",
-   "source_name": "",
-   "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-12",
-   "page": "https://aigridwatch.com/house-races#race-la-1"
-  },
-  {
    "chamber": "Senate",
    "role": "senator",
    "state": "OH",
@@ -7011,19 +6994,36 @@
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "LA",
+   "state": "MN",
    "district": "1",
-   "name": "Steve Scalise",
+   "name": "Brad Finstad",
    "party": "Republican",
    "kind": "statement",
-   "what": "Promoted data center benefits, citing Richland Parish Meta center teacher bonuses: 'They were able to give every single school teacher in that parish a $50,000 bonus.' Said decisions should remain at the local level",
+   "what": "Said data centers \"can play an important role in our economic future and national security, but the decision...should be made by the people and local leaders who know their communities best, not handed down by Washington\"; emphasized need for corporate transparency.",
    "date": "2026-09-03",
-   "source": "https://www.moderntreatise.com/the-americas/2026/9/3/in-america-gop-under-pressure-to-pass-data-center-legislation-before-midterms",
+   "source": "https://www.minnpost.com/national/washington/2026/09/minnesota-gop-lawmakers-grapple-with-data-centers-as-republican-voters-turn-against-the-projects/",
+   "source_name": "",
+   "grade": "",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-mn-1"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "MN",
+   "district": "6",
+   "name": "Tom Emmer",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "MinnPost reported Emmer “immediately embraced” Trump’s message of support for data centers. In a post on X he said Trump was “absolutely spot on” and that “Communist China and our adversaries would love it if the United States was asleep at the wheel and stopped innovating and developing AI and emerging tech.”",
+   "date": "2026-09-03",
+   "source": "https://www.minnpost.com/national/washington/2026/09/minnesota-gop-lawmakers-grapple-with-data-centers-as-republican-voters-turn-against-the-projects/",
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-12",
-   "page": "https://aigridwatch.com/house-races#race-la-1"
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-mn-6"
   },
   {
    "chamber": "House",
@@ -7033,13 +7033,13 @@
    "name": "Maggie Goodlander",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Debate statement: communities seeing '200%+ energy price increases'; 'people and communities have got to have the ultimate say'; called for transparency and that corporations should bear costs",
+   "what": "Debate (WMUR, via InDepthNH): said some communities are seeing more than 200% increases in energy prices because of data centers; people and communities 'have got to have the ultimate say in whether a data center comes into their community'; reporter paraphrases her as calling for transparency and accountability and for the corporations to pay rather than taxpayers.",
    "date": "2026-09-03",
    "source": "https://indepthnh.org/2026/09/03/congressional-district-2-democratic-primary-candidates-debate-housing-immigration-and-data-centers/",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nh-2"
   },
   {
@@ -7050,13 +7050,13 @@
    "name": "Paige Beauchemin",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Debate statement: 'stop the construction of any data centers until legislation can be introduced to regulate the issue accordingly'; emphasized environmental impact studies and local control",
+   "what": "Debate (WMUR, via InDepthNH): reporter says she supports stopping the construction of any data centers until legislation can be introduced to regulate the issue; quoted: 'Those kinds of regulations need to ensure that environmental impact studies initially and ongoing, they need to ensure that utility costs are paid for by the companies and not from the other folks, and we also need to make sure that the local folks have their own local control.'",
    "date": "2026-09-03",
    "source": "https://indepthnh.org/2026/09/03/congressional-district-2-democratic-primary-candidates-debate-housing-immigration-and-data-centers/",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nh-2"
   },
   {
@@ -7118,13 +7118,13 @@
    "name": "Bruce Westerman",
    "party": "Republican",
    "kind": "statement",
-   "what": "Town hall promoting data centers as 'crucial to America winning the cold war with China on AI tech'; dismissed water concerns, argued large loads could lower residential electricity prices",
+   "what": "Town hall: 'We are in a Cold War with China on developing AI technology'; 'we have to develop AI. To develop AI, you have to have data centers'; on water, 'I don't think is as big an issue as what some people make it out to be'; said data center companies 'are willing to pay for that new generating equipment' and transmission, and that communities should define water and electrical requirements and hold the companies accountable.",
    "date": "2026-09-01",
    "source": "https://hopeprescott.com/2026/09/01/data-centers-crucial-to-america-winning-the-cold-war-with-china-on-ai-tech-according-to-congressman-westerman/",
    "source_name": "",
    "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ar-4"
   },
   {
@@ -7135,48 +7135,31 @@
    "name": "Lauren Boebert",
    "party": "Republican",
    "kind": "statement",
-   "what": "Stated she won't back Trump's claim that data center opponents are 'backwards and poor'; supports local control over data center decisions.",
+   "what": "Asked by a MeidasTouch reporter about Trump saying data center opponents are 'backwards and poor,' said 'The president says a lot of things. Sometimes, it's really funny... Anyway, I fought for data centers to have local control' and 'I want people to have local control. That's what I fought for.'",
    "date": "2026-09-01",
    "source": "https://www.yahoo.com/news/politics/articles/rep-lauren-boebert-won-t-123549824.html",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-co-4"
   },
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "MN",
+   "state": "LA",
    "district": "1",
-   "name": "Brad Finstad",
+   "name": "Steve Scalise",
    "party": "Republican",
    "kind": "statement",
-   "what": "Said data centers \"can play an important role in our economic future and national security, but the decision...should be made by the people and local leaders who know their communities best, not handed down by Washington\"; emphasized need for corporate transparency.",
+   "what": "Told Fox Business: 'We are investigating whether China is behind a lot of this misinformation, false information against data centers,' and said Republicans are 'finding some things,' including Beijing-controlled social media bots.",
    "date": "2026-09-01",
-   "source": "https://www.minnpost.com/national/washington/2026/09/minnesota-gop-lawmakers-grapple-with-data-centers-as-republican-voters-turn-against-the-projects/",
-   "source_name": "",
-   "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-mn-1"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "MN",
-   "district": "6",
-   "name": "Tom Emmer",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "Tweeted support for Trump's pro-data center position, saying China and U.S. adversaries \"would love it if the United States was asleep at the wheel and stopped innovating and developing AI.\"",
-   "date": "2026-09-01",
-   "source": "https://www.minnpost.com/national/washington/2026/09/minnesota-gop-lawmakers-grapple-with-data-centers-as-republican-voters-turn-against-the-projects/",
+   "source": "https://www.ms.now/rachel-maddow-show/maddowblog/data-centers-scalise-trump-republicans-china-conspiracy-theory-gop-elections-midterms",
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-mn-6"
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-la-1"
   },
   {
    "chamber": "House",
@@ -7186,14 +7169,31 @@
    "name": "Lily Tang Williams",
    "party": "Republican",
    "kind": "statement",
-   "what": "Debate statement: 'no government perks, credits and taxpayer dollars should be involved. If a private company wants to come here, build data centers, then they need to respect our local control and address our concerns of environmental impact and electricity costs'",
+   "what": "GOP debate (WMUR, via InDepthNH): 'I would say no government perks, credits and taxpayer dollars should be involved. If a private company wants to come here, build data centers, then they need to respect our local control and address our concerns of environmental impact and electricity costs.'",
    "date": "2026-09-01",
    "source": "https://indepthnh.org/2026/09/01/orlando-stakes-position-as-working-class-alternative-to-tang-williams-in-nh-02-gop-debate/",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nh-2"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "TN",
+   "district": "2",
+   "name": "Tim Burchett",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Responded to Trump's warning that communities rejecting data centers risk becoming 'backwards and poor' by saying 'I guess I'm backwards and poor.' Called for more local control and suggested putting data centers in military installations.",
+   "date": "2026-09-01",
+   "source": "https://www.newsweek.com/list-of-republicans-publicly-breaking-with-trump-on-ai-data-centers-12391133",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-tn-2"
   },
   {
    "chamber": "Senate",
@@ -7243,25 +7243,8 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ok-5"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "WV",
-   "district": "2",
-   "name": "Riley Moore",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "Cosponsored the Ratepayer Protection Act (H.R. 9340) requiring states to consider directing data centers to pay the full cost of new generation and transmission upgrades; stated the bill ensures 'data centers — not American families, small businesses, and other ratepayers — are responsible for the costs'",
-   "date": "2026-08-31",
-   "source": "https://rileymoore.house.gov/issues/serving-west-virginia",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-12",
-   "page": "https://aigridwatch.com/house-races#race-wv-2"
   },
   {
    "chamber": "Senate",
@@ -7305,13 +7288,13 @@
    "name": "Michael Rulli",
    "party": "Republican",
    "kind": "statement",
-   "what": "On Fox Business, supported the OpenAI/Nvidia $500B data center project but acknowledged 'Most of my constituents do not like data centers.' Claimed 'The CCP has infiltrated Ohio with propaganda against this' and advocated 'Keep them out of the corn fields. Keep them out of the neighborhoods.'",
+   "what": "On Fox Business's Mornings with Maria, said 'Most of my constituents do not like data centers. They don't want them.' Told constituents to learn 'in front of the meter' (you pay) vs 'behind the meter' (the company pays) and whether the water system is self-contained, said data centers 'shouldn't put them on waste lands, brown fields' and 'Keep them out of the corn fields. Keep them out of the neighborhoods. We need to do better.' Also said 'The CCP has infiltrated Ohio with propaganda against this.' Did not state a position on the OpenAI/Nvidia project by name.",
    "date": "2026-08-28",
    "source": "https://www.breitbart.com/clips/2026/08/28/gop-rep-rulli-the-ccp-has-infiltrated-ohio-with-propaganda-against-500b-data-center/",
    "source_name": "",
    "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-06",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-6"
   },
   {
@@ -7351,36 +7334,36 @@
   {
    "chamber": "House",
    "role": "candidate",
+   "state": "MD",
+   "district": "7",
+   "name": "Kweisi Mfume",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Added as a cosponsor of H.R. 9442, the AI Data Center Moratorium Act (sponsor Rep. Ocasio-Cortez), on 08/27/2026.",
+   "date": "2026-08-27",
+   "source": "https://www.congress.gov/bill/119th-congress/house-bill/9442/cosponsors",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-md-7"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
    "state": "OK",
    "district": "2",
    "name": "Josh Brecheen",
    "party": "Republican",
    "kind": "statement",
-   "what": "Town hall statement that data center operators 'have to make sure that they are not driving up people's electricity costs'; co-sponsors HR 9019 requiring Secretary of Energy to report on data center electricity and water usage",
+   "what": "Town hall, McAlester: said operators 'have to make sure that they are not driving up people's electricity costs'; 'Congress is not gonna create the regulatory environment. What we can do is make sure people have information about the data centers.' Co-sponsors HR9019 requiring the Energy Secretary to report to Congress on data center electricity and water use.",
    "date": "2026-08-27",
    "source": "https://www.kjrh.com/news/local-news/brecheen-gives-views-on-data-centers-smelter-election-denial-in-mcalester",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ok-2"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "NE",
-   "district": "1",
-   "name": "Chris Backemeyer",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Expressed alarm at Saudi Arabia and UAE offering to host US data centers: 'That scares the bejesus out of me'; supports building data centers domestically",
-   "date": "2026-08-26",
-   "source": "https://www.nbcdfw.com/news/national-international/left-and-right-oppose-artificial-intelligence-data-centers/4067951/",
-   "source_name": "",
-   "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-ne-1"
   },
   {
    "chamber": "Senate",
@@ -7424,13 +7407,13 @@
    "name": "Gabe Vasquez",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Co-sponsored FAIR Data Act (H.R. 9655): prevents data center projects from raising energy costs for residential customers and small businesses",
+   "what": "Per his Aug 25 release, was 'the only statewide or federal official' to publicly call for an end to the Socorro County data center proposal; the developer pulled out and commissioners unanimously approved a one-year moratorium.",
    "date": "2026-08-25",
    "source": "https://vasquez.house.gov/media/press-releases/rep-gabe-vasquez-demands-accountability-data-center-developers-reiterates-new",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nm-2"
   },
   {
@@ -7441,13 +7424,13 @@
    "name": "Gabe Vasquez",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Co-sponsored Data Center Water and Energy Transparency Act (H.R. 9825): mandates disclosure of energy and water usage with fines up to $20,000/day for non-compliance",
+   "what": "Announced support for the FAIR Data Act (H.R. 9655), which would force large corporate electricity users to pay their own way so residential customers and small businesses do not cover data center costs.",
    "date": "2026-08-25",
    "source": "https://vasquez.house.gov/media/press-releases/rep-gabe-vasquez-demands-accountability-data-center-developers-reiterates-new",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nm-2"
   },
   {
@@ -7526,13 +7509,13 @@
    "name": "Paul LePage",
    "party": "Republican",
    "kind": "statement",
-   "what": "Called himself a 'big, big fan of data centers' at former mill site; said they will create jobs and should generate their own power",
+   "what": "Said 'I'm a big, big fan of data centers... I think they're going to create jobs. I think we can solve our energy problems' at a former mill site in Lincoln; downplayed water and power concerns. His campaign said Friday he supports 'sensible regulation,' including guarantees of adequate water supply, local community buy-in and no rate hikes for consumers.",
    "date": "2026-08-24",
    "source": "https://www.bangordailynews.com/2026/08/24/politics/elections/paul-lepage-big-fan-data-centers-joam40zk0w/",
    "source_name": "",
    "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-me-2"
   },
   {
@@ -7549,7 +7532,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-me-2"
   },
   {
@@ -7566,7 +7549,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nm-1"
   },
   {
@@ -7662,48 +7645,14 @@
    "name": "Tom Barrett",
    "party": "Republican",
    "kind": "statement",
-   "what": "Introduced H.R. 10119, the Protecting Local Control of Data Centers Act, prohibiting federal agencies from overriding local land-use, zoning, siting, or permitting authority for data centers.",
+   "what": "Introduced H.R. 10119, the Protecting Local Control of Data Centers Act (prohibits federal agencies from overriding local land-use, zoning, siting or permitting authority related to data centers and from leveraging federal funds to force local governments to give up that authority) and H.R. 10118, the No Data Center NDAs Act (prohibits members of Congress from signing NDAs about data centers, including locations or expected water and energy use). \"They deserve to know all the facts and have the final say over any proposed project.\" His release says that in the Michigan House he voted against legislation giving data center construction and equipment tax breaks.",
    "date": "2026-08-20",
    "source": "https://barrett.house.gov/media/press-releases/barrett-introduces-bills-protect-local-communities-data-center-overreach",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-07",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mi-7"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "MI",
-   "district": "7",
-   "name": "Tom Barrett",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "Introduced H.R. 10118, the No Data Center NDAs Act, prohibiting members of Congress from signing NDAs about data centers including information on locations, water usage, or energy requirements.",
-   "date": "2026-08-20",
-   "source": "https://barrett.house.gov/media/press-releases/barrett-introduces-bills-protect-local-communities-data-center-overreach",
-   "source_name": "",
-   "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-07",
-   "page": "https://aigridwatch.com/house-races#race-mi-7"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "NV",
-   "district": "4",
-   "name": "Steven Horsford",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Joined Rep. Khanna and Las Vegas unions to discuss AI/automation threats to workers; advocated advance notice, training, and collective bargaining as accountability tool",
-   "date": "2026-08-20",
-   "source": "https://lasvegassun.com/news/2026/aug/20/las-vegas-union-workers-reps-ro-khanna-and-steven/",
-   "source_name": "",
-   "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-nv-4"
   },
   {
    "chamber": "Senate",
@@ -7721,6 +7670,23 @@
    "lean": "mixed",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-c001035"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "NV",
+   "district": "4",
+   "name": "Steven Horsford",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "At a town hall on AI and automation with Khanna, advocated advance notice and training for workers and collective bargaining as accountability tools (about worker automation, not data centers).",
+   "date": "2026-08-19",
+   "source": "https://lasvegassun.com/news/2026/aug/20/las-vegas-union-workers-reps-ro-khanna-and-steven/",
+   "source_name": "",
+   "grade": "",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-nv-4"
   },
   {
    "chamber": "Senate",
@@ -7742,35 +7708,18 @@
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "LA",
-   "district": "4",
-   "name": "Mike Johnson",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "Warned that 'a broad moratorium against data centers is kind of a dangerous prospect' and said 'We're in a race with China on that AI race'; campaigned against data center moratoriums in Michigan swing seat",
-   "date": "2026-08-18",
-   "source": "https://www.detroitnews.com/story/news/local/michigan/2026/08/18/johnson-warns-against-data-center-pause-stumping-in-michigan-swing-seat/91358562007/",
-   "source_name": "",
-   "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-12",
-   "page": "https://aigridwatch.com/house-races#race-la-4"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
    "state": "NY",
    "district": "17",
    "name": "Mike Lawler",
    "party": "Republican",
    "kind": "statement",
-   "what": "Criticized Hochul's Executive Order 62 data center moratorium on Fox Business, saying \"What she is saying is, don't come here. Go do your business elsewhere\" and arguing the pause harms NY's business climate.",
+   "what": "On Fox Business's Mornings with Maria, said of Hochul's data center pause: 'What she is saying is, don't come here. Go do your business elsewhere, which is why New York State leads the nation in out-migration.' Also said New York has 'the highest tax burden and the worst business climate'.",
    "date": "2026-08-18",
    "source": "https://www.foxbusiness.com/media/new-york-republican-congressman-rips-hochul-policies-sending-businesses-dont-come-here-message",
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ny-17"
   },
   {
@@ -7781,14 +7730,65 @@
    "name": "Jen Kiggans",
    "party": "Republican",
    "kind": "statement",
-   "what": "Told The Daily Signal: “They have data centers under the ocean floor. We can't ban all data centers,” adding there is “a commonsense conversation to be had” on their consumption of energy, water and local resources, that the debate has so far been left to the General Assembly, and that she has “enjoyed watching the Democrats fight with each other about the issue.”",
+   "what": "Told The Daily Signal: “They have data centers under the ocean floor. We can’t ban all data centers,” adding there is a “commonsense conversation to be had” on their use of energy, water and other local resources, that the debate has so far been left to Virginia’s Legislature, and that she has “enjoyed watching the Democrats fight with each other about the issue.”",
    "date": "2026-08-18",
    "source": "https://www.dailysignal.com/2026/08/18/midterm-rematch-fate-of-country/",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-05",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-va-2"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "NV",
+   "district": "1",
+   "name": "Dina Titus",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Asked Gov. Lombardo to refrain from approving data center tax abatements for projects on BLM land until the Legislature reconvenes to reconsider; the governor's reply did not commit to halting abatements.",
+   "date": "2026-08-17",
+   "source": "https://titus.house.gov/news/documentsingle.aspx?DocumentID=5926",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-nv-1"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "TX",
+   "district": "4",
+   "name": "Pat Fallon",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Told CBS News Texas: 'I think it was a thoughtful, good step that the governor put in place. He was listening to his constituents... They share those concerns, as I do.' Referring to Abbott's data center directives, which CBS describes as including a pause.",
+   "date": "2026-08-17",
+   "source": "https://www.cbsnews.com/texas/news/push-back-data-centers-texas-voters-gop-leaders-democratic-challengers/",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-tx-4"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "AZ",
+   "district": "6",
+   "name": "JoAnna Mendoza",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Said: 'No data centers in the desert... Not right now, not in our district, not in our state.' Also said 'We can't have data centers near residential areas,' citing ASU research that air-cooled data centers emit heat 'anywhere between two to four degrees more,' and warned energy bills would go up.",
+   "date": "2026-08-14",
+   "source": "https://blogforarizona.net/201903-2/",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-az-6"
   },
   {
    "chamber": "House",
@@ -7804,25 +7804,25 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-or-6"
   },
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "CT",
-   "district": "1",
-   "name": "Luke Bronin",
+   "state": "NM",
+   "district": "2",
+   "name": "Gabe Vasquez",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Primary victory speech called for 'sensible artificial intelligence regulation'; platform commits to AI guardrails against algorithmic addiction and AI operating without human oversight",
+   "what": "Cosponsor of H.R. 9825, the Data Center Water and Energy Transparency Act of 2026 (sponsor Rep. Underwood), whose official title is to require data center operators to submit reports on data center energy and water use; added as a cosponsor 08/13/2026.",
    "date": "2026-08-13",
-   "source": "https://www.techtimes.com/articles/324305/20260813/bronin-routs-larson-21-points-connecticut-primary-adds-ai-guardrails-voice-congress.htm",
+   "source": "https://www.congress.gov/bill/119th-congress/house-bill/9825/all-info",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-ct-1"
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-nm-2"
   },
   {
    "chamber": "Senate",
@@ -7862,34 +7862,17 @@
    "chamber": "House",
    "role": "candidate",
    "state": "NE",
-   "district": "1",
-   "name": "Mike Flood",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "At Nebraska energy summit, advocated for data centers as needed infrastructure; framed AI as requiring legal accountability — companies cannot escape discrimination laws by claiming 'that was in our large language model'",
-   "date": "2026-08-12",
-   "source": "https://nebraskapublicmedia.org/en/news/news-articles/nebraskas-federal-representatives-talk-energy-chinese-competition-and-iran-at-summit/",
-   "source_name": "",
-   "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-ne-1"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "NE",
    "district": "3",
    "name": "Adrian Smith",
    "party": "Republican",
    "kind": "statement",
-   "what": "At Nebraska energy summit: 'The efficiencies that can be achieved already with AI, it's amazing' and 'We should celebrate how much better lives can be with more economic efficiency'; advocated for data centers despite county moratorium wave",
+   "what": "At Nebraska energy summit: 'The efficiencies that can be achieved already with AI, it's amazing... We should not stand in the way. We should celebrate how much better lives can be with more economic efficiency out there that can be a result of AI.' Article reports the delegation advocated for data centers while a dozen-plus counties weighed moratoriums, and that members said AI should have rules without specifics.",
    "date": "2026-08-12",
    "source": "https://nebraskapublicmedia.org/en/news/news-articles/nebraskas-federal-representatives-talk-energy-chinese-competition-and-iran-at-summit/",
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ne-3"
   },
   {
@@ -7929,18 +7912,35 @@
   {
    "chamber": "House",
    "role": "candidate",
+   "state": "CT",
+   "district": "1",
+   "name": "Luke Bronin",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Victory speech called for 'sensible artificial intelligence regulation'; published platform says 'We need guardrails' against algorithmic addiction of kids and 'machines that act without human input or oversight'. The article records no data-center position.",
+   "date": "2026-08-11",
+   "source": "https://www.techtimes.com/articles/324305/20260813/bronin-routs-larson-21-points-connecticut-primary-adds-ai-guardrails-voice-congress.htm",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-ct-1"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
    "state": "NY",
    "district": "20",
    "name": "Paul Tonko",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Said data centers \"should be built in communities that want them\" regarding the proposed Kenwood Commons project in Bethlehem.",
+   "what": "Said at an Albany roundtable that data centers like the one proposed for the Kenwood site in South Albany \"should be built in communities that want them\", and that \"we have to provide for those safety nets and the guardrails for both AI and data centers.\"",
    "date": "2026-08-11",
    "source": "https://www.wamc.org/news/2026-08-11/tonko-kenwood-project-data-center",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ny-20"
   },
   {
@@ -8008,8 +8008,25 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-08-26",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ca-17"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "WV",
+   "district": "2",
+   "name": "Ace Parsi",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Said at a virtual 'Candidates Against Transmission Lines' news conference: 'People don't feel like they're listened to or represented, because if nobody wants these, how did this go through such an overwhelming majority in the House and Senate.' Said the architects behind the data-center build-out have been withholding information. (HB 2014 repeal was called for by another candidate, Vince George.)",
+   "date": "2026-08-05",
+   "source": "https://www.timeswv.com/news/local_news/data-centers-and-power-lines-might-be-defining-issue-this-election-season-for-ncwv-voters/article_e07b109f-bda6-4bd5-bcfb-4dd7ece657e4.html",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-wv-2"
   },
   {
    "chamber": "House",
@@ -8019,13 +8036,30 @@
    "name": "Chuck Gray",
    "party": "Republican",
    "kind": "statement",
-   "what": "At Sheridan forum stated 'I'm the only candidate on stage that has been talking about these data AI data centers and expressed my opposition'; ran ads promising to 'stop data centers' and calling for a federal ban; said 'If Silicon Valley wants to build their liberal empire, they can do it somewhere else'",
+   "what": "At a Sheridan forum said: 'I'm the only candidate on stage that has been talking about these data AI data centers and expressed my opposition to these AI data centers.' Reporter: only Gray has indicated a desire to ban them at the federal level.",
    "date": "2026-08-05",
    "source": "https://cowboystatedaily.com/2026/08/05/u-s-house-forum-gray-hammers-data-centers-clashes-with-host/",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-wy-al"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "WY",
+   "district": "AL",
+   "name": "Chuck Gray",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Same article: Rasner said Gray voted in 2021 for data-center tax breaks; the article confirms Gray voted to keep the tax exemption, and that his signature is on the business registration approval for Terra Crypto, tied by a 2024 order to MineOne, which Gray denied wrongdoing over.",
+   "date": "2026-08-05",
+   "source": "https://cowboystatedaily.com/2026/08/05/u-s-house-forum-gray-hammers-data-centers-clashes-with-host/",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-wy-al"
   },
   {
@@ -8042,7 +8076,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-05",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-va-7"
   },
   {
@@ -8070,48 +8104,14 @@
    "name": "Shomari Figures",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Statement at Lowndes County event opposing proposed data center: 'I'm with the people of Lowndes County'; demands community consent for data center siting",
+   "what": "At a Lowndes County event asked residents if they wanted the proposed 1,050-acre, $1.5B AI data center in Hayneville; when they said no, said 'Well, I'm with the people of Lowndes County.' Columnist reports he is not entirely opposed to hyperscale data centers but says companies need to pick sites where communities actually want them.",
    "date": "2026-08-01",
    "source": "https://www.alabamagazette.com/story/2026/08/01/news/where-alabamas-major-public-officials-stand-on-hyperscale-ai-data-centers/12100.html",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-al-2"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "MN",
-   "district": "6",
-   "name": "Tom Emmer",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "As House Majority Whip, supported bringing bipartisan Ratepayer Protection Act (HR 9340) to floor vote, requiring data centers to cover full incremental infrastructure costs; stated \"I'm a true believer in local control.\"",
-   "date": "2026-08-01",
-   "source": "https://www.polialert.com/political-news/house-gop-to-vote-on-bill-targeting-data-center-power-costs/",
-   "source_name": "",
-   "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-mn-6"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "MN",
-   "district": "8",
-   "name": "Pete Stauber",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "Stated four conditions for supporting data center projects: \"The local community's got to have input. It can't increase rates, or taxes, and they have to use their own water and energy.\"",
-   "date": "2026-08-01",
-   "source": "https://www.minnpost.com/national/washington/2026/09/minnesota-gop-lawmakers-grapple-with-data-centers-as-republican-voters-turn-against-the-projects/",
-   "source_name": "",
-   "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-mn-8"
   },
   {
    "chamber": "House",
@@ -8121,13 +8121,13 @@
    "name": "Dina Titus",
    "party": "Democratic",
    "kind": "statement",
-   "what": "NV Independent survey: favors local community input before federal land use; supports full environmental permitting with water consideration and public hearings",
+   "what": "Nevada Independent: described the permitting process she wants for data centers on federal land as 'Full environmental permitting process with consideration for water and also public consultation and hearings'.",
    "date": "2026-08-01",
    "source": "https://thenevadaindependent.com/article/what-do-nevadas-congressional-candidates-think-about-data-centers",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nv-1"
   },
   {
@@ -8144,7 +8144,7 @@
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nv-1"
   },
   {
@@ -8161,7 +8161,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nv-2"
   },
   {
@@ -8178,7 +8178,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nv-2"
   },
   {
@@ -8189,13 +8189,13 @@
    "name": "Susie Lee",
    "party": "Democratic",
    "kind": "statement",
-   "what": "NV Independent survey: supports water consumption disclosure and energy efficiency standards; opposes blanket federal pause on development",
+   "what": "Nevada Independent: said there should be disclosure requirements on water consumption and potentially energy efficiency standards. The article reports almost all candidates opposed a blanket federal pause on data centers.",
    "date": "2026-08-01",
    "source": "https://thenevadaindependent.com/article/what-do-nevadas-congressional-candidates-think-about-data-centers",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nv-3"
   },
   {
@@ -8212,7 +8212,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nv-3"
   },
   {
@@ -8223,13 +8223,13 @@
    "name": "Steven Horsford",
    "party": "Democratic",
    "kind": "statement",
-   "what": "NV Independent survey: supports federal disclosure standards for energy and water use; states should be able to go further than federal baselines; opposes blanket moratorium",
+   "what": "Nevada Independent: said the federal government should set standards requiring disclosure of energy and water use; states should be allowed to 'go further' ('a national standard should act as a floor we can build on, never a ceiling'). The only candidate who kept the door open to a federal moratorium in future.",
    "date": "2026-08-01",
    "source": "https://thenevadaindependent.com/article/what-do-nevadas-congressional-candidates-think-about-data-centers",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nv-4"
   },
   {
@@ -8240,81 +8240,30 @@
    "name": "Cody Whipple",
    "party": "Republican",
    "kind": "statement",
-   "what": "NV Independent survey: supports 'common-sense frameworks that safeguard Nevada's natural resources while fostering technological innovation'; calls data centers national security issue; wants federal standards bringing water, agriculture, and tech officials together",
+   "what": "Nevada Independent: written response supports 'common-sense frameworks that safeguard Nevada's natural resources while fostering technological innovation'; campaign later said he wants local water, agricultural and technology officials to inform federal standards. At a closed-door event recording he called data centers a 'national security issue for us'.",
    "date": "2026-08-01",
    "source": "https://thenevadaindependent.com/article/what-do-nevadas-congressional-candidates-think-about-data-centers",
    "source_name": "",
    "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nv-4"
   },
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "TN",
-   "district": "2",
-   "name": "Tim Burchett",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "Responded to Trump's warning that communities rejecting data centers risk becoming 'backwards and poor' by saying 'I guess I'm backwards and poor.' Called for more local control and suggested putting data centers in military installations.",
-   "date": "2026-08",
-   "source": "https://www.newsweek.com/list-of-republicans-publicly-breaking-with-trump-on-ai-data-centers-12391133",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-tn-2"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "TX",
-   "district": "4",
-   "name": "Pat Fallon",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "Praised Abbott's data center moratorium: 'I think it was a thoughtful, good step.' Said 'the amount of energy needed for these new data centers far exceeds the capacity that we currently have.'",
-   "date": "2026-08",
-   "source": "https://www.cbsnews.com/texas/news/push-back-data-centers-texas-voters-gop-leaders-democratic-challengers/",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-tx-4"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
    "state": "MI",
    "district": "3",
    "name": "Hillary Scholten",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Introduced H.R. 10005, the Data Center Resource Disclosure Act, requiring NTIA to conduct annual surveys of data center energy and water consumption and publish results on a public dashboard.",
+   "what": "Announced introduction of two bills, the Data Center Resource Disclosure Act (NTIA annual survey of operators' energy and water consumption, public comment, public dashboard, list of non-responders) and the Defending Our Energy and Water Act (DoD to update data center efficiency requirements and ensure new facilities adopt cooling technologies that reduce water impact). \"Accountability starts with transparency.\"",
    "date": "2026-07-30",
    "source": "https://scholten.house.gov/media/press-releases/congresswoman-scholten-introduces-two-data-center-accountability-bills",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-07",
-   "page": "https://aigridwatch.com/house-races#race-mi-3"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "MI",
-   "district": "3",
-   "name": "Hillary Scholten",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Introduced H.R. 10004, the Defending Our Energy and Water Act, directing DoD to update data center efficiency standards and mandate cooling technologies that reduce water impact.",
-   "date": "2026-07-30",
-   "source": "https://scholten.house.gov/media/press-releases/congresswoman-scholten-introduces-two-data-center-accountability-bills",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-07",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mi-3"
   },
   {
@@ -8325,13 +8274,13 @@
    "name": "Don Beyer",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Sent a formal letter urging the Fairfax County Planning Commission to reject the 2232 permit for the Edsall Road data-center substation at Plaza 500, citing flooding, light and noise: “Data center infrastructure should not be built in residential areas where its scale and likely impacts are fundamentally incompatible with the character and quality of life of adjacent neighborhoods.”",
+   "what": "Letter urging the Fairfax County Planning Commission to deny the Edsall Data Center Substation 2232 application, citing land use, flooding mitigation, light and noise pollution and Lincolnia's growth goals: \"Data center infrastructure should not be built in residential areas where its scale and likely impacts are fundamentally incompatible with the character and quality of life of adjacent neighborhoods.\"",
    "date": "2026-07-30",
    "source": "https://beyer.house.gov/news/documentsingle.aspx?DocumentID=9183",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-05",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-va-8"
   },
   {
@@ -8416,7 +8365,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-md-2"
   },
   {
@@ -8433,7 +8382,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-md-3"
   },
   {
@@ -8450,7 +8399,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-md-4"
   },
   {
@@ -8461,13 +8410,13 @@
    "name": "April McClain Delaney",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Led and issued press release for Maryland Congressional delegation letter to FERC urging revision of PJM cost-allocation rules so Maryland consumers do not finance $2B in infrastructure built primarily for out-of-state data centers.",
+   "what": "Joined, and issued the press release for, the Maryland Congressional delegation letter to FERC urging revision of PJM transmission cost-allocation rules so Maryland ratepayers do not pay roughly $2 billion for infrastructure needed primarily for out-of-state data centers; letter supports the Maryland Office of People's Counsel's FERC complaint.",
    "date": "2026-07-28",
    "source": "https://mcclaindelaney.house.gov/media/press-releases/maryland-democrats-urge-ferc-protect-marylanders-rising-electricity-costs-due",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-md-6"
   },
   {
@@ -8478,13 +8427,13 @@
    "name": "Kweisi Mfume",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Co-signed Maryland Congressional delegation letter to FERC urging revision of PJM cost-allocation rules so Maryland consumers do not finance $2B in infrastructure built primarily for out-of-state data centers.",
+   "what": "Named among the Maryland congressional delegation members calling on FERC to require PJM to protect Marylanders after PJM assigned roughly $2 billion in costs to Maryland ratepayers for infrastructure needed primarily to serve out-of-state data centers; the letter supports a complaint filed by the Maryland Office of People's Counsel.",
    "date": "2026-07-28",
    "source": "https://mcclaindelaney.house.gov/media/press-releases/maryland-democrats-urge-ferc-protect-marylanders-rising-electricity-costs-due",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-md-7"
   },
   {
@@ -8501,7 +8450,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-md-8"
   },
   {
@@ -8597,31 +8546,14 @@
    "name": "Rashida Tlaib",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Introduced H.R. 9939, the No AI Data Centers on Federal Lands Act, permanently banning large AI data centers (>20 MW) and associated infrastructure on all federal land including military bases.",
+   "what": "Introduced the No AI Data Centers on Federal Lands Act, which permanently bans large AI data centers and associated infrastructure on land owned or managed by the U.S., including military bases, and requires removal of existing qualifying data centers and site remediation.",
    "date": "2026-07-23",
    "source": "https://tlaib.house.gov/posts/rep-tlaib-introduces-a-bill-to-ban-ai-data-centers-on-federal-lands",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-22",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mi-12"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "NV",
-   "district": "1",
-   "name": "Dina Titus",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Called on Gov. Lombardo to freeze all data center tax breaks for projects on federal land until 2027 Legislature can act; cited $225.6M in sales/use tax breaks and $13.3M in property tax breaks",
-   "date": "2026-07-23",
-   "source": "https://titus.house.gov/news/documentsingle.aspx?DocumentID=5926",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-nv-1"
   },
   {
    "chamber": "Senate",
@@ -8678,18 +8610,18 @@
    "chamber": "House",
    "role": "candidate",
    "state": "AL",
-   "district": "7",
-   "name": "Terri Sewell",
+   "district": "2",
+   "name": "Shomari Figures",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Cosponsored AI Data Center Moratorium Act (HR 9442) to temporarily halt data center construction until federal guardrails are established; said 'Responsible innovation and community protection are not competing goals'",
+   "what": "Cosponsor of H.R. 9442, the AI Data Center Moratorium Act (sponsor Rep. Ocasio-Cortez), added 07/22/2026.",
    "date": "2026-07-22",
-   "source": "https://aldailynews.com/sewell-wants-to-stop-new-data-centers-until-guardrails-are-implemented/",
+   "source": "https://www.congress.gov/bill/119th-congress/house-bill/9442/cosponsors",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-al-7"
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-al-2"
   },
   {
    "chamber": "House",
@@ -8705,7 +8637,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-22",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-co-8"
   },
   {
@@ -8716,13 +8648,13 @@
    "name": "Kathy Castor",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Introduced H.R. 9340, the Ratepayer Protection Act, with Rep. Gabe Evans — standards for states and PUCs connecting large-load customers so the cost of new generation, transmission and upgrades falls on those customers rather than on households. Cleared House Energy and Commerce 52-0.",
+   "what": "Sponsor, with Rep. Gabe Evans (R-CO), of H.R. 9340, the Ratepayer Protection Act, which would require each state regulatory authority to consider a federal standard under which data centers and hyperscalers with demand of 100 megawatts pay the full cost of generation, transmission or distribution upgrades needed to serve them. Cleared the House Energy and Commerce Committee 52-0.",
    "date": "2026-07-22",
    "source": "https://broadbandbreakfast.com/house-committee-approves-package-to-address-data-centers-growing-energy-demands/",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-22",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-fl-14"
   },
   {
@@ -8733,31 +8665,14 @@
    "name": "Lauren Underwood",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Introduced H.R. 9825, the Data Center Water and Energy Transparency Act, requiring data center operators to report energy and water use to states, EPA, and the Secretaries of Energy and Agriculture.",
+   "what": "Introduced H.R. 9825, the Data Center Water and Energy Transparency Act of 2026. Its official title: to require data center operators to submit to States or the EPA Administrator and the Secretaries of Energy and Agriculture reports on data center energy and water use. Referred to House Energy and Commerce.",
    "date": "2026-07-22",
    "source": "https://www.congress.gov/bill/119th-congress/house-bill/9825/all-info",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-il-14"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "PA",
-   "district": "1",
-   "name": "Brian Fitzpatrick",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "Cosponsored H.R. 9340, the Ratepayer Protection Act, directing states and PUCs to consider standards for connecting large-load customers so data centers, not families, cover new generation and transmission costs.",
-   "date": "2026-07-22",
-   "source": "https://www.inquirer.com/politics/election/bob-harvie-ai-data-centers-stance-tv-ad-20260910.html",
-   "source_name": "",
-   "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-pa-1"
   },
   {
    "chamber": "Senate",
@@ -8779,6 +8694,23 @@
   {
    "chamber": "House",
    "role": "candidate",
+   "state": "AL",
+   "district": "7",
+   "name": "Terri Sewell",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Announced cosponsorship of the AI Data Center Moratorium Act, which would stop new construction and large expansions of AI data centers until a federal framework is established; said 'The bill simply says, let's put common sense guardrails in place before this expansion continues' and 'Responsible innovation and community protection are not competing goals—they are complementary ones.'",
+   "date": "2026-07-21",
+   "source": "https://aldailynews.com/sewell-wants-to-stop-new-data-centers-until-guardrails-are-implemented/",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-al-7"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
    "state": "CA",
    "district": "10",
    "name": "Mark DeSaulnier",
@@ -8790,7 +8722,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ca-10"
   },
   {
@@ -8801,13 +8733,13 @@
    "name": "Lori Trahan",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Supported passage of the Ratepayer Protection Act (H.R. 9340) and the Protecting Families from AI Data Center Energy Costs Act (H.R. 6529) during House Energy and Commerce Committee markup; stated people are 'already feeling it in their electric bill'",
+   "what": "At the Energy and Commerce markup she supported passage of the Ratepayer Protection Act and the Protecting Families from AI Data Center Energy Costs Act (H.R. 6529). Said: 'If you build the data center, you pay for the data center.' Said both are 'good first steps' but 'don't fully address the water these facilities draw from our communities.'",
    "date": "2026-07-21",
    "source": "https://trahan.house.gov/news/documentsingle.aspx?DocumentID=3815",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ma-3"
   },
   {
@@ -8818,13 +8750,13 @@
    "name": "Bob Latta",
    "party": "Republican",
    "kind": "statement",
-   "what": "Applauded full Energy and Commerce Committee passage of H.R. 9340 (52-0), noting Ohio already has large load tariffs in place for data centers.",
+   "what": "Statement on full Energy and Commerce Committee approval of H.R. 9340, the Ratepayer Protection Act (July 21, 2026): said he spoke in support at the markup and that numerous states, including Ohio, already have large load tariffs in place for data centers.",
    "date": "2026-07-21",
    "source": "https://latta.house.gov/news/documentsingle.aspx?DocumentID=406829",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-06",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-5"
   },
   {
@@ -8858,7 +8790,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ga-2"
   },
   {
@@ -8869,31 +8801,14 @@
    "name": "Austin Scott",
    "party": "Republican",
    "kind": "statement",
-   "what": "Said data centers need to be in the US for national security but companies must pay their own energy costs and use closed-loop cooling systems.",
+   "what": "Said computing 'is a big part of national security' and data centers should be in the U.S.; said 'We need to make sure that the companies who build the data centers are paying their own cost of energy' and that residents see no increased power costs. Said 'Closed-loop systems don't use nearly as much water as the old systems do. We need to make sure that we're talking about what kind of cooling systems they have.'",
    "date": "2026-07-17",
    "source": "https://www.walb.com/2026/07/17/south-georgia-congressmen-say-data-centers-need-guardrails-before-moving-forward/",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ga-8"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "MA",
-   "district": "7",
-   "name": "Ayanna Pressley",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Joined Reps. AOC, Summer Lee, and Justin Pearson in South Memphis for site tour and press conference at xAI data center facility, calling for data center oversight; met with residents reporting health impacts from methane gas turbines powering the facility",
-   "date": "2026-07-17",
-   "source": "https://www.localmemphis.com/video/news/local/us-reps-aoc-ayanna-pressley-and-summer-lee-join-rep-pearson-to-call-for-data-center-oversight/522-da7811da-261d-4d61-82bf-7a3abb74e29a",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-12",
-   "page": "https://aigridwatch.com/house-races#race-ma-7"
   },
   {
    "chamber": "Senate",
@@ -8971,13 +8886,13 @@
    "name": "Emilia Sykes",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Incorporated provisions into the bipartisan Water Resources Development Act of 2026 to study data center impacts on regional water resources.",
+   "what": "Advanced the Water Resources Development Act of 2026 (H.R. 9497) in the Transportation and Infrastructure Committee; the release says the bill 'advances efforts to study the impact of data centers on regional water resources' but does not attribute that provision to her.",
    "date": "2026-07-14",
    "source": "https://sykes.house.gov/media/press-releases/rep-sykes-advances-bipartisan-water-infrastructure-bill-with-key-wins-for-northeast-ohio",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-06",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-13"
   },
   {
@@ -9011,7 +8926,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ca-43"
   },
   {
@@ -9022,13 +8937,13 @@
    "name": "Jeff Van Drew",
    "party": "Republican",
    "kind": "statement",
-   "what": "Cosponsored H.R. 9655, the FAIR Data Act, bipartisan legislation to prevent data center projects from passing grid upgrade costs onto residential ratepayers and small businesses.",
+   "what": "With Rep. Riley, introduced the FAIR Data Act, which prohibits utilities from passing grid upgrade costs for very large (75+ MW) data centers onto households and small businesses; said companies behind these projects should 'cover those added costs instead of passing them on to ratepayers'.",
    "date": "2026-07-13",
    "source": "https://riley.house.gov/2026/07/13/riley-introduces-bill-to-stop-data-center-projects-from-driving-up-energy-bills/",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nj-2"
   },
   {
@@ -9045,25 +8960,8 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ny-19"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "OH",
-   "district": "1",
-   "name": "Greg Landsman",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Introduced the Protecting Communities from Data Center Impacts Act, directing EPA to contract with the National Academies of Sciences for a study on data center environmental impacts (noise, air, water, carbon, e-waste).",
-   "date": "2026-07-10",
-   "source": "https://landsman.house.gov/posts/landsman-introduced-third-ai-data-center-bill-in-congress",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-06",
-   "page": "https://aigridwatch.com/house-races#race-oh-1"
   },
   {
    "chamber": "House",
@@ -9073,13 +8971,13 @@
    "name": "Morgan McGarvey",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Sent letter to LG&E President opposing Camp Ground Road hyperscale data center in Louisville, demanding ratepayer protections; cited 63% increase in electricity demand (400 MW).",
+   "what": "Sent a letter to LG&E President John Crockett III opposing the hyperscale data center planned for Camp Ground Road and demanding existing ratepayers not bear the cost; release says the 400 MW facility is a 63% increase in demand.",
    "date": "2026-07-09",
    "source": "https://mcgarvey.house.gov/media/press-releases/rep-mcgarvey-opposes-camp-ground-road-data-center-in-letter-to-lgande-dont-raise-louisvilles-rates-to-pay-for-it",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ky-3"
   },
   {
@@ -9090,13 +8988,13 @@
    "name": "Morgan McGarvey",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Declared himself \"absolutely opposed\" to in-state hyperscale data centers at Louisville town hall on AI data centers; said residents should control what gets built in their community.",
+   "what": "LPM reported he told a forum he opposes hyperscale data center construction in Louisville and the state, and that residents should control what gets put into their community (headline: 'absolutely opposed'; his own quoted words: 'I am done with out-of-state corporations coming into our state, our home, our community, and using our resources').",
    "date": "2026-07-09",
    "source": "https://www.lpm.org/news/2026-07-09/kentucky-congressman-absolutely-opposed-to-in-state-hyperscale-data-centers",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ky-3"
   },
   {
@@ -9107,13 +9005,13 @@
    "name": "Dina Titus",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Letter to BLM demanding robust public consultation and transparency for data center permits on public lands; criticized switch from solar to data center without public review",
+   "what": "Letter to BLM (sent July 8) asking for 'robust public consultation and transparency' in permitting data centers on public land; said the BLM let a developer switch from a solar farm to a data center on federal land 'without any public review. This is unacceptable.'",
    "date": "2026-07-08",
    "source": "https://titus.house.gov/news/documentsingle.aspx?DocumentID=5916",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nv-1"
   },
   {
@@ -9221,36 +9119,53 @@
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "CO",
-   "district": "1",
-   "name": "Melat Kiros",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Supports a nationwide moratorium on data center construction; ran as a critic of unchecked AI development.",
-   "date": "2026-06-30",
-   "source": "https://www.dropsitenews.com/p/aipac-ai-degette-melat-kiros-colorado",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-co-1"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
    "state": "KY",
    "district": "2",
    "name": "Brett Guthrie",
    "party": "Republican",
    "kind": "statement",
-   "what": "Stated \"We can't have a moratorium that would cripple us\" while acknowledging local communities should have a say; said data centers must \"pay their own way.\"",
+   "what": "Told WNKY: 'We can't have a moratorium that would cripple us. We also have to respect local communities and ensure these data centers pay their own way.' Said 'there's a good reason to be concerned' and developers should cover infrastructure costs.",
    "date": "2026-06-30",
    "source": "https://www.wnky.com/congressman-brett-guthrie-weighs-in-on-data-center-debate/",
    "source_name": "",
    "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ky-2"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "CO",
+   "district": "1",
+   "name": "Melat Kiros",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Told Drop Site News she supports a moratorium on data center construction; said 'a federal data center moratorium is imperative and should be used as a negotiation tactic to implement significant regulation of AI.'",
+   "date": "2026-06-29",
+   "source": "https://www.dropsitenews.com/p/aipac-ai-degette-melat-kiros-colorado",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-co-1"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "IN",
+   "district": "7",
+   "name": "André Carson",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "In a release on the AI Data Center Moratorium Act (H.R. 9442, of which he is an original cosponsor) he said: 'Our bill would enact a pause until we can guarantee common sense protections.'",
+   "date": "2026-06-29",
+   "source": "https://carson.house.gov/media/press-releases/carson-introduces-data-center-moratorium-bill",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-in-7"
   },
   {
    "chamber": "House",
@@ -9260,13 +9175,13 @@
    "name": "LaMonica McIver",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Cosponsored H.R. 9442, the AI Data Center Moratorium Act.",
+   "what": "Cosponsor of H.R. 9442, the AI Data Center Moratorium Act (sponsor Rep. Ocasio-Cortez), added 06/29/2026.",
    "date": "2026-06-29",
    "source": "https://www.congress.gov/bill/119th-congress/house-bill/9442/cosponsors",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nj-10"
   },
   {
@@ -9289,23 +9204,6 @@
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "NJ",
-   "district": "6",
-   "name": "Frank Pallone",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Called for a national AI data-center moratorium at an Energy Subcommittee markup — “in favor of a national AI data center moratorium until we can find a way to ensure they don't harm our nation's air, water, and power bills.”",
-   "date": "2026-06-25",
-   "source": "https://pallone.house.gov/media/press-releases/pallone-supports-national-ai-data-center-moratorium",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-08-26",
-   "page": "https://aigridwatch.com/house-races#race-nj-6"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
    "state": "AZ",
    "district": "7",
    "name": "Adelita Grijalva",
@@ -9317,7 +9215,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-az-7"
   },
   {
@@ -9328,13 +9226,13 @@
    "name": "André Carson",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Original cosponsor of H.R. 9442, the AI Data Center Moratorium Act.",
+   "what": "Listed as a cosponsor of the House AI Data Center Moratorium Act in Ocasio-Cortez's release.",
    "date": "2026-06-24",
    "source": "https://ocasio-cortez.house.gov/media/press-releases/ocasio-cortez-introduces-house-version-ai-data-center-moratorium-act",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-in-7"
   },
   {
@@ -9345,31 +9243,31 @@
    "name": "Jim McGovern",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Original cosponsor of H.R. 9442, the AI Data Center Moratorium Act. Told NOTUS: 'We ought to at least give members the opportunity to vote on the national moratorium.'",
+   "what": "Listed among the cosponsors of H.R. 9442, the AI Data Center Moratorium Act, which would institute an immediate federal moratorium on construction of new data centers and expansion of existing ones until Congress passes comprehensive AI legislation.",
    "date": "2026-06-24",
    "source": "https://ocasio-cortez.house.gov/media/press-releases/ocasio-cortez-introduces-house-version-ai-data-center-moratorium-act",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ma-2"
   },
   {
    "chamber": "House",
    "role": "candidate",
    "state": "NJ",
-   "district": "10",
-   "name": "LaMonica McIver",
+   "district": "6",
+   "name": "Frank Pallone",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Introduced bill to stop surprise AI data center development, requiring site selection transparency.",
+   "what": "Called for a national AI data-center moratorium at an Energy Subcommittee markup — “in favor of a national AI data center moratorium until we can find a way to ensure they don't harm our nation's air, water, and power bills.”",
    "date": "2026-06-24",
-   "source": "https://mciver.house.gov/media/press-releases/mciver-introduces-bill-to-stop-surprise-ai-data-center-development",
+   "source": "https://pallone.house.gov/media/press-releases/pallone-supports-national-ai-data-center-moratorium",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
-   "page": "https://aigridwatch.com/house-races#race-nj-10"
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-nj-6"
   },
   {
    "chamber": "House",
@@ -9379,13 +9277,13 @@
    "name": "Alexandria Ocasio-Cortez",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Introduced H.R. 9442, the Artificial Intelligence Data Center Moratorium Act, which would halt construction or expansion of AI data centers until Congress passes safeguards and 'expressly terminates' the moratorium.",
+   "what": "Introduced the Artificial Intelligence Data Center Moratorium Act, a temporary prohibition on construction of new data centers and expansion of existing ones until national safeguards (including that AI does not increase electricity and utility prices) are in place; requires reporting on water, energy, wastewater and wages.",
    "date": "2026-06-24",
    "source": "https://ocasio-cortez.house.gov/media/press-releases/ocasio-cortez-introduces-house-version-ai-data-center-moratorium-act",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ny-14"
   },
   {
@@ -9396,13 +9294,13 @@
    "name": "Bob Latta",
    "party": "Republican",
    "kind": "statement",
-   "what": "As Energy Subcommittee Chairman, championed H.R. 9340, the Ratepayer Protection Act, through subcommittee markup to protect families from covering grid upgrade costs driven by AI infrastructure.",
+   "what": "Statement after chairing the June 24, 2026 subcommittee markup: \"We must ensure that American families are not left footing the bill for the significant grid upgrades and increased electricity demand driven by new AI infrastructure and other large load operations.\"",
    "date": "2026-06-24",
    "source": "https://latta.house.gov/news/documentsingle.aspx?DocumentID=406815",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-06",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-5"
   },
   {
@@ -9419,7 +9317,7 @@
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-06",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-12"
   },
   {
@@ -9447,13 +9345,13 @@
    "name": "Suhas Subramanyam",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Introduced the bipartisan Data Infrastructure Energy Measurement and Standards Act with Reps. Obernolte (R-CA) and Foushee (D-NC), directing NIST and DOE to set standards for measuring data center energy and water use so forecasting and siting rest on disclosed numbers. Subramanyam: “We need a simple way to track how much power and water these facilities use.”",
+   "what": "Introduced, with Reps. Jay Obernolte (R-CA) and Valerie Foushee (D-NC), the Data Infrastructure Energy Measurement and Standards Act, directing NIST in coordination with DOE to develop best practices and technical standards for measuring data center energy and water use, as a foundation for forecasting, planning and siting. \"We need a simple way to track how much power and water these facilities use.\"",
    "date": "2026-06-18",
    "source": "https://subramanyam.house.gov/media/press-releases/reps-subramanyam-obernolte-foushee-introduce-legislation-create-first-its-kind",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-22",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-va-10"
   },
   {
@@ -9532,13 +9430,13 @@
    "name": "Brett Guthrie",
    "party": "Republican",
    "kind": "statement",
-   "what": "Signed letter with Reps. Joyce and Latta to PCAST and FBI Director requesting investigations into foreign influence campaigns targeting AI and data center opposition.",
+   "what": "Signed a letter with Reps. Joyce and Latta to the PCAST co-chairs and FBI Director Kash Patel expressing worries about 'foreign influence campaigns targeting artificial intelligence'; told the Daily News there is 'reasonable suspicion' that opposition is backed by China.",
    "date": "2026-06-11",
    "source": "https://bgdailynews.com/2026/06/13/guthrie-calls-for-investigations-into-ai-data-center-opposition/",
    "source_name": "",
    "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ky-2"
   },
   {
@@ -9566,13 +9464,13 @@
    "name": "Derek Schmidt",
    "party": "Republican",
    "kind": "statement",
-   "what": "Town hall advice: data center developers should not require tax abatements, should source power from new sources to avoid raising local utility costs, and modern data centers can use closed systems with minimal water",
+   "what": "Per Ranson Financial's summary of a CJonline report: at a town hall gave three tips for communities: developers should not require tax abatements; data centers should source power from new or supplemental sources to avoid raising local utility costs; modern data centers can be designed as closed systems that do not consume large amounts of water.",
    "date": "2026-06-10",
    "source": "https://ransonfinancial.com/2026/06/10/three-tips-for-kansas-communities-on-data-centers/",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ks-2"
   },
   {
@@ -9595,35 +9493,18 @@
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "NM",
-   "district": "2",
-   "name": "Gabe Vasquez",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Publicly called on Socorro County commissioners to approve temporary data center moratorium before their June vote",
-   "date": "2026-06-09",
-   "source": "https://sourcenm.com/briefs/us-rep-vasquez-calls-for-new-mexico-county-to-approve-data-center-moratorium/",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-nm-2"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
    "state": "OH",
    "district": "5",
    "name": "Bob Latta",
    "party": "Republican",
    "kind": "statement",
-   "what": "Co-signed letter (with Guthrie and Joyce) to PCAST and FBI Director requesting investigation of alleged Chinese Communist Party influence campaigns working to block American data center infrastructure.",
+   "what": "Co-signed, with Chairmen Guthrie and Joyce, a letter to the PCAST co-chairs and FBI Director Kash Patel requesting information about evidence suggesting foreign influence campaigns are working to slow American AI progress and block data center infrastructure.",
    "date": "2026-06-04",
    "source": "https://energycommerce.house.gov/posts/chairmen-guthrie-joyce-and-latta-request-investigation-of-foreign-adversaries-efforts-to-block-american-data-center-buildout",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-06",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-5"
   },
   {
@@ -9651,31 +9532,14 @@
    "name": "Raul Ruiz",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Submitted letter to Imperial County Board of Supervisors opposing the proposed Imperial Valley Data Center Campus, read into the public record: “I unequivocally oppose data centers in Imperial Valley.” Cited reduced life expectancy, air pollution, asthma, energy costs and water use. Announced plans to send letters to EPA and DOE seeking federal environmental review.",
+   "what": "Letter to the Imperial County Board of Supervisors, read into the record by a district representative on June 2: \"I unequivocally oppose data centers in Imperial Valley and urge local officials to prevent them from happening.\" Cited reduced life expectancy, air pollution, asthma, energy costs and water use. His office said he plans to send letters to EPA and DOE seeking federal oversight and environmental review of proposed projects in water-stressed environmental justice communities, including the Imperial and Coachella valleys.",
    "date": "2026-06-02",
    "source": "https://www.thedesertreview.com/news/ruiz-formally-opposes-proposed-imperial-data-center-project/article_66fd01cf-c1db-4002-b64e-895dc9b5d09e.html",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ca-25"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "NC",
-   "district": "4",
-   "name": "Valerie Foushee",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Led HR 9372, the Data Infrastructure Energy Measurement and Standards Act, authorizing NIST and DOE to establish measurement standards for data center energy and water use including AI training; passed House Science Committee 34-1.",
-   "date": "2026-06-01",
-   "source": "https://foushee.house.gov/media/press-releases/rep-foushee-led-generative-ai-labeling-frontier-ai-safety-and-data-center-measures-advance-through-house-science-committee",
-   "source_name": "",
-   "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-nc-4"
   },
   {
    "chamber": "Senate",
@@ -9708,7 +9572,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-tn-3"
   },
   {
@@ -9719,14 +9583,48 @@
    "name": "Ben McAdams",
    "party": "Democratic",
    "kind": "statement",
-   "what": "UT-1 primary debate: opposed Stratos Project; called for federal standards to ensure Americans benefit from AI transformation",
+   "what": "UT-1 Democratic debate: all four candidates opposed the Stratos Project; said 'What we need are federal standards to make sure that when, as the economy is transformed, that the American people are the ones who benefit'. Opponents pointed to his financial stake in a data center project near Delta in Millard County; he said he was 'the only candidate who has worked to make a data center better by adding renewable energy' and described the stake as stock options and consulting pay from two years ago.",
    "date": "2026-05-27",
    "source": "https://www.kuer.org/politics-government/2026-05-27/1st-district-debate-zeroes-in-on-utah-hot-topics-like-ai-data-centers-and-housing",
    "source_name": "",
    "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ut-1"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "NM",
+   "district": "2",
+   "name": "Gabe Vasquez",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Told Source NM he encourages the county to approve the temporary moratorium it was considering on the proposed Socorro County data center, saying the proposal “should not be considered at this time.”",
+   "date": "2026-05-26",
+   "source": "https://sourcenm.com/2026/05/26/us-rep-vasquez-calls-for-new-mexico-county-to-approve-data-center-moratorium/",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-nm-2"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "CT",
+   "district": "1",
+   "name": "Luke Bronin",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "The American Prospect wrote that, despite donations from billionaires with a stake in the data center build-out, Bronin “has called for regulation requiring data center developers to pay their fair share.” The article does not quote him or say where he said it.",
+   "date": "2026-05-21",
+   "source": "https://prospect.org/2026/05/21/meet-connecticuts-billionaire-backed-dark-money-democrat-bronin-larson-congress/",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-ct-1"
   },
   {
    "chamber": "Senate",
@@ -9782,35 +9680,18 @@
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "OR",
-   "district": "4",
-   "name": "Val Hoyle",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Endorsed by Leading the Future (pro-AI industry super PAC); initially distanced herself saying 'AI must be regulated so that it does not harm labor or people,' then revised position to support engagement with industry while advocating federal regulations and worker protections",
-   "date": "2026-05-08",
-   "source": "https://www.transformernews.ai/p/an-oregon-congresswoman-distanced-val-hoyle",
-   "source_name": "",
-   "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-or-4"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
    "state": "VA",
    "district": "10",
    "name": "Suhas Subramanyam",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Introduced the Data Infrastructure Risk Reduction Act, directing the Department of Homeland Security to write a security strategy and recommendations for protecting communities around data centers and the transmission and water systems that serve them.",
+   "what": "Introduced the Data Infrastructure Risk Reduction Act, directing DHS to produce a security strategy and recommendations for protecting communities around data centers, considering the security of transmission and water infrastructure.",
    "date": "2026-05-08",
    "source": "https://subramanyam.house.gov/media/press-releases/rep-subramanyam-introduces-bill-protect-homes-and-property-near-data-centers",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-22",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-va-10"
   },
   {
@@ -9833,53 +9714,19 @@
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "WV",
-   "district": "2",
-   "name": "Ace Parsi",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Called for repeal of HB 2014 (Power Generation and Consumption Act) which preempts local data center regulation; stated communities should decide via referendum whether data centers can move in; said he will 'halt the data centers being built in communities that will only expand corporate profits'",
-   "date": "2026-05-03",
-   "source": "https://www.timeswv.com/news/local_news/data-centers-and-power-lines-might-be-defining-issue-this-election-season-for-ncwv-voters/article_e07b109f-bda6-4bd5-bcfb-4dd7ece657e4.html",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-12",
-   "page": "https://aigridwatch.com/house-races#race-wv-2"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
    "state": "UT",
    "district": "1",
    "name": "Ben McAdams",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Posted opposing Stratos Project: 'Utah should welcome technology investment only when it aligns with our values: water stewardship, Great Salt Lake restoration, clean energy, transparency, public accountability'",
-   "date": "2026-05-01",
+   "what": "Posted that 'Utah should welcome technology investment only when it aligns with our values: water stewardship, Great Salt Lake restoration, clean energy, transparency, public accountability, and real public benefit. This proposed data center project in Box Elder County does not meet that standard.'",
+   "date": "2026-05-06",
    "source": "https://x.com/BenMcAdams/status/2052173399594528777",
    "source_name": "",
    "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ut-1"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "CT",
-   "district": "1",
-   "name": "Luke Bronin",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Called for regulation requiring data center developers to pay their fair share",
-   "date": "2026-05",
-   "source": "https://prospect.org/2026/05/21/meet-connecticuts-billionaire-backed-dark-money-democrat-bronin-larson-congress/",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-ct-1"
   },
   {
    "chamber": "Senate",
@@ -9901,18 +9748,35 @@
   {
    "chamber": "House",
    "role": "candidate",
+   "state": "ME",
+   "district": "1",
+   "name": "Chellie Pingree",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Cosponsor of H.R. 8241, the Power for the People Act of 2026 (sponsor Rep. Tonko), added 04/30/2026.",
+   "date": "2026-04-30",
+   "source": "https://www.congress.gov/bill/119th-congress/house-bill/8241/all-info",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-me-1"
+  },
+  {
+   "chamber": "House",
+   "role": "candidate",
    "state": "ND",
    "district": "AL",
    "name": "Julie Fedorchak",
    "party": "Republican",
    "kind": "statement",
-   "what": "At Energy Subcommittee hearing 'AI and the Grid,' pressed for fair cost allocation — 'those who drive the need for new energy infrastructure should pay for it.' Promoted FAIR Act (H.R. 6336) and High-Capacity Grid Act (H.R. 6633)",
+   "what": "At the Energy Subcommittee hearing 'AI and the Grid: Meeting Growing Power Demand While Protecting Ratepayers,' emphasized that those who drive the need for new energy infrastructure should pay for it (press release paraphrase), asked witnesses whether large loads such as data centers have shown willingness to pay for upgrades, and highlighted her FAIR Act and High-Capacity Grid Act.",
    "date": "2026-04-29",
    "source": "https://fedorchak.house.gov/media/press-releases/fedorchak-presses-fair-cost-allocation-highlights-grid-solutions-energy",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nd-al"
   },
   {
@@ -9940,13 +9804,13 @@
    "name": "Steven Horsford",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Joined OpenAI and Rep. Khanna at College of Southern Nevada for AI workforce training; helped secure nearly $7M for CSN Westside Education and Training Center",
+   "what": "Release announced he would join OpenAI and Rep. Khanna at a College of Southern Nevada AI workforce-training event; says he helped secure almost $7 million for CSN's Westside Education and Training Center.",
    "date": "2026-04-24",
    "source": "https://horsford.house.gov/media/press-releases/rep-horsford-joins-openai-rep-ro-khanna-and-college-of-southern-nevada-csn-to-expand-ai-workforce-training-in-north-las-vegas",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nv-4"
   },
   {
@@ -9957,13 +9821,13 @@
    "name": "Nick Begich III",
    "party": "Republican",
    "kind": "statement",
-   "what": "Op-ed 'How Alaska can Use our Energy Advantage to Capitalize on the AI Gold Rush': argued Alaska should aggressively pursue data centers citing natural gas, cold climate, and vast land; warned against over-regulation",
+   "what": "Op-ed: said Alaska's natural gas, renewables and stranded energy assets are an advantage for AI data centers; said the DATA Act protects ratepayers from subsidizing new loads; wrote 'We can hesitate, regulate too early and risk becoming an observer... or we can engage thoughtfully, strategically and on our own terms.'",
    "date": "2026-04-23",
    "source": "https://www.adn.com/opinions/2026/04/23/opinion-how-alaska-can-use-our-energy-advantage-to-capitalize-on-the-ai-gold-rush/",
    "source_name": "",
    "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-12",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ak-al"
   },
   {
@@ -9974,31 +9838,31 @@
    "name": "André Carson",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Introduced H.R. 8488, the AI Data Center Site Selection Transparency Act, requiring developers to disclose proposed locations at least 180 days before development, including electricity use, water consumption, and environmental impacts backed by independent analysis.",
+   "what": "Original cosponsor (04/23/2026) of H.R. 8488, the AI Data Center Site Selection Transparency Act of 2026, sponsored by Rep. McIver. Its text requires developers, 180 days before a definitive step, to disclose the site location and estimated resource needs and environmental impact to local elected officials and the public, and limits non-disclosure agreements.",
    "date": "2026-04-23",
-   "source": "https://carson.house.gov/media/press-releases/carson-introduces-data-center-moratorium-bill",
+   "source": "https://www.congress.gov/bill/119th-congress/house-bill/8488/cosponsors",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-in-7"
   },
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "MI",
-   "district": "12",
-   "name": "Rashida Tlaib",
+   "state": "NJ",
+   "district": "10",
+   "name": "LaMonica McIver",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Cosponsored H.R. 8488, the AI Data Center Site Selection Transparency Act, requiring developers to disclose location, impacts, and other information to local elected officials and the public before development.",
+   "what": "Introduced H.R. 8488, the AI Data Center Site Selection Transparency Act of 2026 (04/23/2026). Its text requires developers, 180 days before a definitive step, to disclose the site location and estimated resource needs and environmental impact to local elected officials and the public, limits non-disclosure agreements, and requires a developer-funded independent environmental impact analysis.",
    "date": "2026-04-23",
    "source": "https://www.congress.gov/bill/119th-congress/house-bill/8488/text",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-22",
-   "page": "https://aigridwatch.com/house-races#race-mi-12"
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-nj-10"
   },
   {
    "chamber": "Senate",
@@ -10042,13 +9906,13 @@
    "name": "Nick Begich III",
    "party": "Republican",
    "kind": "statement",
-   "what": "Introduced H.R. 8400 (DATA Act of 2026) allowing large energy users including data centers to operate on self-contained 'grid of one' power systems disconnected from the broader grid, protecting ratepayers from subsidizing data center electricity loads",
+   "what": "Introduced the DATA Act of 2026 with Reps. Crenshaw and Owens; the release says it lets manufacturers and other energy-intensive industries run fully isolated off-grid power so 'innovation can scale without forcing households to subsidize massive new energy demands.'",
    "date": "2026-04-21",
    "source": "https://begich.house.gov/media/press-releases/congressman-begich-leads-legislation-lower-energy-costs-introduces-house",
    "source_name": "",
    "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-12",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ak-al"
   },
   {
@@ -10105,36 +9969,36 @@
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "NY",
-   "district": "20",
-   "name": "Paul Tonko",
+   "state": "MD",
+   "district": "7",
+   "name": "Kweisi Mfume",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Co-introduced H.R. 8241, the Power for the People Act of 2026, with Rep. Kweisi Mfume — the House companion to S.3682 on data-center rate classes and FERC cost allocation.",
+   "what": "Original cosponsor of H.R. 8241, the Power for the People Act of 2026, sponsored by Rep. Tonko; congress.gov gives its purpose as promoting data center load queues and data center-specific rate classes to mitigate the impact of data centers on other electricity consumers.",
    "date": "2026-04-09",
    "source": "https://www.congress.gov/bill/119th-congress/house-bill/8241/all-info",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-ny-20"
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-md-7"
   },
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "OH",
-   "district": "1",
-   "name": "Greg Landsman",
+   "state": "NY",
+   "district": "20",
+   "name": "Paul Tonko",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Introduced H.R. 8033, the No Harm Data Centers Act, requiring data centers to cover full costs of energy demands and infrastructure, mandating environmental impact studies, and prohibiting NDAs between data center developers and elected officials.",
+   "what": "Sponsor of H.R. 8241, the Power for the People Act of 2026, introduced 04/09/2026. congress.gov gives its purpose as promoting data center load queues and data center-specific rate classes to mitigate the impact of data centers on other electricity consumers.",
    "date": "2026-04-09",
-   "source": "https://landsman.house.gov/posts/landsman-leads-new-bill-requiring-big-tech-to-pay-for-data-centers-and-no-ndas",
+   "source": "https://www.congress.gov/bill/119th-congress/house-bill/8241/all-info",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-06",
-   "page": "https://aigridwatch.com/house-races#race-oh-1"
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-ny-20"
   },
   {
    "chamber": "Senate",
@@ -10290,6 +10154,23 @@
    "page": "https://aigridwatch.com/senators#sen-s000033"
   },
   {
+   "chamber": "House",
+   "role": "candidate",
+   "state": "OH",
+   "district": "1",
+   "name": "Greg Landsman",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Introduced H.R. 8033, the No Harm Data Centers Act; official title: to ensure that American families are protected from the impacts of data centers on the electric grid. Referred to House Energy and Commerce.",
+   "date": "2026-03-20",
+   "source": "https://www.congress.gov/bill/119th-congress/house-bill/8033/all-info",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-oh-1"
+  },
+  {
    "chamber": "Senate",
    "role": "senator",
    "state": "TN",
@@ -10314,13 +10195,13 @@
    "name": "Mike Levin",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Co-introduced the Energy Bills Relief Act (H.R.7977) with Rep. Casten and 120 House Democrats, including a provision ensuring data centers and large energy users pay their own grid costs.",
+   "what": "With Rep. Sean Casten, led 120 House Democrats in introducing the Energy Bills Relief Act, which Levin said \"ensures that data centers and large energy users pay their fair share instead of passing those costs onto families and small businesses.\"",
    "date": "2026-03-18",
    "source": "https://levin.house.gov/media/press-releases/reps-levin-and-casten_seec-clean-energy-deployment-task-force-introduce-the-energy-bills-relief-act",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ca-49"
   },
   {
@@ -10331,13 +10212,13 @@
    "name": "Sean Casten",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Co-introduced the Energy Bills Relief Act with Rep. Mike Levin, requiring data centers to pay their own energy infrastructure costs",
+   "what": "Co-led, with Rep. Mike Levin, the introduction by 120 House Democrats of the Energy Bills Relief Act; release lists 'Ensuring that facilities like data centers are paying for their own costs because it's not fair for their expenses to be pushed onto your household'. Casten's own quoted remarks do not mention data centers.",
    "date": "2026-03-18",
    "source": "https://casten.house.gov/media/press-releases/ebra",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-il-6"
   },
   {
@@ -10456,7 +10337,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-az-7"
   },
   {
@@ -10467,13 +10348,13 @@
    "name": "Rob Menendez",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Cosponsored H.R. 7858, the Data Center Community Impact Act.",
+   "what": "Listed as a cosponsor of the Data Center Community Impact Act, which would authorize a federal study of data centers' environmental, economic and public health impacts.",
    "date": "2026-03-06",
    "source": "https://watsoncoleman.house.gov/newsroom/press-releases/rep-watson-coleman-introduces-bill-to-study-impact-of-ai-data-centers-on-local-communities",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nj-8"
   },
   {
@@ -10490,7 +10371,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-22",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-pa-12"
   },
   {
@@ -10547,19 +10428,19 @@
   {
    "chamber": "House",
    "role": "candidate",
-   "state": "MD",
-   "district": "1",
-   "name": "Andy Harris",
+   "state": "GA",
+   "district": "7",
+   "name": "Rich McCormick",
    "party": "Republican",
    "kind": "statement",
-   "what": "Argued alongside Maryland Freedom Caucus that data centers should generate their own power, not pass infrastructure costs to consumers; part of 'Lower Electric Bills Now' platform.",
-   "date": "2026-02-25",
-   "source": "https://foxbaltimore.com/news/local/rep-harris-maryland-freedom-caucus-push-series-of-bills-aimed-to-lower-energy-bills",
+   "what": "Opening statement as chairman at the hearing 'Powering America's AI Future: Assessing Policy Options to Increase Data Center Infrastructure': called the Trump executive order prioritizing data center permitting 'a positive step', said several projects have faced substantial permitting hurdles, and asked whether a permitting framework 'largely designed in the 1970s' is suited to this infrastructure; also raised the question of whether residential ratepayers could end up subsidizing upgrades that primarily serve high-intensity users.",
+   "date": "2026-02-24",
+   "source": "https://science.house.gov/2026/2/opening-statement-of-chairman-rich-mccormick-at",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-md-1"
+   "lean": "accelerate",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/house-races#race-ga-7"
   },
   {
    "chamber": "House",
@@ -10569,13 +10450,13 @@
    "name": "Emilia Sykes",
    "party": "Democratic",
    "kind": "statement",
-   "what": "At House Science Committee hearing on data center infrastructure, pressed for consumer protections as Ohio hosts 217 data centers (fifth most nationally).",
+   "what": "At the House Science Committee hearing on data center infrastructure said: \"We need to put strong guardrails in place so that data centers support our communities rather than the other way around. Ohioans should not pay higher electricity bills so billionaires in Silicon Valley can see higher profits.\" Noted Ohio has 217 data centers, the fifth most of any state.",
    "date": "2026-02-24",
    "source": "https://sykes.house.gov/media/press-releases/ranking-member-sykes-presses-for-consumer-protections-as-data-centers-expand-across-ohio",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-06",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-13"
   },
   {
@@ -10637,13 +10518,13 @@
    "name": "Emilia Sykes",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Unveiled Affordability Agenda policy roadmap including a provision to reallocate electric grid costs so consumers are protected from price hikes driven by data center development.",
+   "what": "Released the Affordability Agenda with the New Democrat Coalition; its energy section includes 'Reallocate electric grid costs to protect consumers from price hikes due to manufacturing and data center development.'",
    "date": "2026-02-11",
    "source": "https://sykes.house.gov/media/press-releases/rep-sykes-unveils-affordability-agenda-to-address-the-cost-of-living-crisis",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-06",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-13"
   },
   {
@@ -10662,23 +10543,6 @@
    "lean": "accelerate",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-d000618"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "GA",
-   "district": "7",
-   "name": "Rich McCormick",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "Chaired hearing 'Powering America's AI Future: Assessing Policy Options to Increase Data Center Infrastructure,' advocated streamlining permitting for data centers.",
-   "date": "2026-02",
-   "source": "https://science.house.gov/2026/2/opening-statement-of-chairman-rich-mccormick-at",
-   "source_name": "",
-   "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-ga-7"
   },
   {
    "chamber": "Senate",
@@ -10909,31 +10773,14 @@
    "name": "Mike Levin",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Introduced the SHIELD Act (H.R.7066, Stopping Hikes In Electricity from Large Load Demands): separate rate class for loads over 75 MW, prioritizes interconnection for renewable-powered large loads. Levin: “Families should not be forced to subsidize massive energy costs for billion-dollar companies.”",
+   "what": "Introduced, with Rep. Kathy Castor, the Stopping Hikes In Electricity from Large Load Demands (SHIELD) Act: a separate rate class for large load customers (facilities using more than 75MW) so households do not pay for their grid upgrades, plus priority interconnection for large loads powered by zero-emission electricity. \"Families should not be forced to subsidize massive energy costs for billion-dollar companies.\"",
    "date": "2026-01-14",
    "source": "https://levin.house.gov/media/press-releases/rep-mike-levin-introduces-new-bill-to-stop-data-centers-from-driving-up-electricity-prices-for-consumers",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ca-49"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "DE",
-   "district": "AL",
-   "name": "Sarah McBride",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Pressed Trump administration at Science, Space, and Technology hearing on data center community impacts; raised concerns about strain on energy and water supply and utility costs",
-   "date": "2026-01-14",
-   "source": "https://mcbride.house.gov/media/press-releases/rep-mcbride-presses-trump-administration-data-center-impacts-secures",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-de-al"
   },
   {
    "chamber": "Senate",
@@ -10977,13 +10824,13 @@
    "name": "Rob Menendez",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Co-introduced the PRICE Act and Data Center Transparency Act with Rep. Casar. The PRICE Act requires data centers to generate their own electricity (75% renewable by 2035, 100% by 2040). The Transparency Act mandates EPA quarterly environmental data and EIA semi-annual energy data collection.",
+   "what": "Co-introduced the PRICE Act (require data centers to generate the electricity they consume; 75% renewable by 2035, 100% by 2040) and the Data Center Transparency Act (EPA quarterly and EIA semi-annual data collection) with Rep. Casar.",
    "date": "2026-01-08",
    "source": "https://menendez.house.gov/media/press-releases/-menendez-casar-introduce-groundbreaking-legislation-to-protect-americans-from-financial-and-environmental-impacts-of-ai-data-centers",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nj-8"
   },
   {
@@ -10994,13 +10841,13 @@
    "name": "Greg Casar",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Co-introduced the PRICE Act and Data Center Transparency Act with Rep. Menendez. Argues data center projects should be blocked if they raise electricity bills or harm communities.",
+   "what": "Co-introduced the PRICE Act and Data Center Transparency Act with Rep. Menendez; quoted: 'Families should not pay more for utilities so that billionaires can get rich off AI data centers' and 'AI data centers should not be allowed to jack up your electric bill or poison your environment.'",
    "date": "2026-01-08",
    "source": "https://menendez.house.gov/media/press-releases/-menendez-casar-introduce-groundbreaking-legislation-to-protect-americans-from-financial-and-environmental-impacts-of-ai-data-centers",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-tx-37"
   },
   {
@@ -11174,23 +11021,6 @@
    "page": "https://aigridwatch.com/senate-races#race-nc"
   },
   {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "MD",
-   "district": "7",
-   "name": "Kweisi Mfume",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Introduced H.R. 8241, the Power for the People Act of 2026, with Rep. Paul Tonko — the House companion to S.3682, which directs states to consider data-center rate classes and seeks a FERC rule making data centers pay for the transmission upgrades they require.",
-   "date": "2026",
-   "source": "https://www.congress.gov/bill/119th-congress/house-bill/8241/all-info",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-md-7"
-  },
-  {
    "chamber": "Senate",
    "role": "senator",
    "state": "HI",
@@ -11300,13 +11130,13 @@
    "name": "Rashida Tlaib",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Issued statement after Southfield City Council approved a Metrobloks AI data center, citing residents' concerns about electricity costs rising 'as much as 267%' and water consumption of 'millions of gallons per day.'",
+   "what": "Statement after Southfield City Council approved a site plan for Metrobloks' proposed AI data center: cited residents' concerns about electricity costs rising 'by as much as 267%' and consuming 'millions of gallons of water per day', said she was inspired to see residents 'organizing together to push back', and said she would work with them to 'protect our communities'.",
    "date": "2025-12-16",
    "source": "https://tlaib.house.gov/posts/tlaib-statement-on-ai-data-center-vote-in-southfield",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-22",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mi-12"
   },
   {
@@ -11334,31 +11164,14 @@
    "name": "Greg Landsman",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Introduced H.R. 6529, the Protecting Families from AI Data Center Energy Costs Act, directing FERC to convene stakeholders and recommend ways to prevent data center energy costs from being passed onto residents.",
+   "what": "Introduced H.R. 6529, the Protecting Families from AI Data Center Energy Costs Act, whose official title is to require FERC to hold a technical conference on protecting residential ratepayers from increased costs associated with large loads. Ordered to be reported by House Energy and Commerce on 07/21/2026.",
    "date": "2025-12-09",
-   "source": "https://landsman.house.gov/posts/landsman-beyer-introduce-bill-to-protect-residents-from-rising-costs-caused-by-ai-data-centers",
+   "source": "https://www.congress.gov/bill/119th-congress/house-bill/6529/all-info",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-06",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-1"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "OR",
-   "district": "2",
-   "name": "Cliff Bentz",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "Sponsored and passed H.R. 655 (The Dalles Watershed Development Act) through the House, transferring 150 acres from Mt. Hood National Forest to The Dalles to triple reservoir capacity; said he did not ask the city how the water would be used",
-   "date": "2025-12-09",
-   "source": "https://bentz.house.gov/media/press-releases/congressman-bentz-s-bill-to-expand-the-city-of-the-dalles-water-passed-in-us-house-of-representatives",
-   "source_name": "",
-   "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-or-2"
   },
   {
    "chamber": "House",
@@ -11368,13 +11181,13 @@
    "name": "Chellie Pingree",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Spokesperson said she believes Congress has a responsibility to assess environmental and consumer impacts of data center and AI expansion and put 'strong, science-based protections in place'",
+   "what": "Spokesperson Gabrielle Maninno said Pingree believes Congress has a responsibility to assess the environmental and consumer impacts of data center and AI expansion and put 'strong, science-based protections in place'.",
    "date": "2025-12-08",
    "source": "https://www.mainepublic.org/climate/2025-12-08/maine-groups-join-call-for-u-s-data-center-moratorium",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-me-1"
   },
   {
@@ -11398,34 +11211,17 @@
    "chamber": "House",
    "role": "candidate",
    "state": "WI",
-   "district": "2",
-   "name": "Mark Pocan",
-   "party": "Democratic",
+   "district": "3",
+   "name": "Derrick Van Orden",
+   "party": "Republican",
    "kind": "statement",
-   "what": "Told Wisconsin Watch that Congress needs 'proper regulation that's good on all fronts related to AI' and that he feels Congress is 'not even crawling at this point.' His district includes 11 Madison-based data centers.",
+   "what": "Told Wisconsin Watch: “The average Wisconsinite should not have to subsidize the power or water for a commercial entity” (said of manufacturers’ energy and water use, in a Foxconn story), and, of data centers, that they are “either going to help pay for those utility rates (that) are rising, or you’re going to self-power.”",
    "date": "2025-12",
    "source": "https://wisconsinwatch.org/2025/12/wisconsin-foxconn-data-center-energy-trump-ai-congress-lawmakers-republican-democrat/",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-wi-2"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "WI",
-   "district": "3",
-   "name": "Derrick Van Orden",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "Said 'The average Wisconsinite should not have to subsidize the power or water for a commercial entity' and suggested data centers should either help pay for rising utility rates or 'self-power.'",
-   "date": "2025-12",
-   "source": "https://wisconsinwatch.org/2025/12/wisconsin-foxconn-data-center-energy-trump-ai-congress-lawmakers-republican-democrat/",
-   "source_name": "",
-   "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-wi-3"
   },
   {
@@ -11493,7 +11289,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ca-15"
   },
   {
@@ -11504,13 +11300,13 @@
    "name": "Debbie Dingell",
    "party": "Democratic",
    "kind": "statement",
-   "what": "One of 20 House members who signed a letter to FERC, Edison Electric Institute, and the Data Center Coalition expressing concern that data center energy costs are increasingly being passed onto everyday Americans and requesting information on consumer protections.",
+   "what": "Named among the co-signers of the Mullin-led letters to FERC, the Edison Electric Institute and the Data Center Coalition raising concern that energy costs associated with data center development 'are increasingly being passed on to everyday Americans and small businesses' and requesting information.",
    "date": "2025-10-28",
    "source": "https://kevinmullin.house.gov/2025/10/28/rep-mullin-leads-group-of-lawmakers-investigating-impact-of-data-centers-on-energy-costs/",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-09-07",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-mi-6"
   },
   {
@@ -11612,7 +11408,7 @@
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-06",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-12"
   },
   {
@@ -11646,42 +11442,8 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ut-2"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "DE",
-   "district": "AL",
-   "name": "Sarah McBride",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Co-sponsored H.R. 5332, Liquid Cooling for AI Act: bipartisan bill directing GAO to assess liquid cooling for AI compute and HPC facilities",
-   "date": "2025-09-15",
-   "source": "https://www.congress.gov/bill/119th-congress/house-bill/5332/cosponsors",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-de-al"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "OH",
-   "district": "9",
-   "name": "Marcy Kaptur",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "In House floor remarks on the FY2026 Energy and Water Development bill, warned that unchecked data center growth could raise average US electricity generation costs by roughly 8% by 2030. Cited Ohio families seeing 10%+ monthly bill increases.",
-   "date": "2025-09-03",
-   "source": "https://kaptur.house.gov/media-center/press-releases/ranking-member-kaptur-floor-remarks-2026-energy-and-water-development",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-06",
-   "page": "https://aigridwatch.com/house-races#race-oh-9"
   },
   {
    "chamber": "House",
@@ -11691,13 +11453,13 @@
    "name": "Susie Lee",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Toured Switch AI factory in Las Vegas with House Democratic Leader Jeffries; praised Switch for 'bringing the cutting edge of AI innovation right here to southern Nevada' and creating good-paying jobs",
+   "what": "Toured Switch AI factory in Las Vegas with Democratic Leader Jeffries; said 'Switch is bringing the cutting edge of AI innovation right here to southern Nevada' and that the factories 'will help create good-paying jobs'.",
    "date": "2025-08-29",
    "source": "https://susielee.house.gov/media/press-releases/icymi-congresswoman-lee-leader-jeffries-tour-new-cutting-edge-ai-factory-will",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-11",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nv-3"
   },
   {
@@ -11799,25 +11561,8 @@
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-05",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-va-1"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "DE",
-   "district": "AL",
-   "name": "Sarah McBride",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Secured $5M for Chemours liquid cooling technology — two-phase immersion cooling that can reduce water use, cut cooling energy by up to 90%, and shrink footprints by up to 60%",
-   "date": "2025-07-01",
-   "source": "https://mcbride.house.gov/media/press-releases/rep-mcbride-advances-5-million-delaware-innovation-and-chemours-house",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-09-11",
-   "page": "https://aigridwatch.com/house-races#race-de-al"
   },
   {
    "chamber": "Senate",
@@ -11835,23 +11580,6 @@
    "lean": "guardrails",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-s001194"
-  },
-  {
-   "chamber": "House",
-   "role": "candidate",
-   "state": "MI",
-   "district": "7",
-   "name": "Tom Barrett",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "Voted Yea on H.R. 1 (OBBBA) including SEC. 43201, a 10-year moratorium on state and local enforcement of any law regulating AI systems — a provision broad enough to cover data center zoning. Stripped by the Senate 99-1.",
-   "date": "2025-05-22",
-   "source": "https://clerk.house.gov/Votes/2025145",
-   "source_name": "",
-   "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-09-07",
-   "page": "https://aigridwatch.com/house-races#race-mi-7"
   },
   {
    "chamber": "Senate",
@@ -11901,7 +11629,7 @@
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-09-06",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-oh-12"
   },
   {
@@ -11912,13 +11640,13 @@
    "name": "Brett Guthrie",
    "party": "Republican",
    "kind": "statement",
-   "what": "Published op-ed in Washington Times arguing for expanded energy production to power AI data centers, calling for permitting reform and warning about China competition.",
-   "date": "2025-03-26",
+   "what": "Washington Times op-ed (posted by E&C): argued for expanded energy production for AI data centers and permitting reform, warned about China; said 'common-sense, tailored protections may be necessary'.",
+   "date": "2025-03-27",
    "source": "https://energycommerce.house.gov/posts/chairman-guthrie-op-ed-driving-the-energy-future-of-ai-development",
    "source_name": "",
    "grade": "",
-   "lean": "accelerate",
-   "as_of": "2026-09-11",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-ky-2"
   },
   {
@@ -11929,13 +11657,13 @@
    "name": "Julie Fedorchak",
    "party": "Republican",
    "kind": "statement",
-   "what": "Launched AI and Energy Working Group; issued RFI on AI energy demands (100+ stakeholder responses). Framed as competitiveness vs China: 'we need everything we've got' for energy supply",
-   "date": "2025-03-01",
+   "what": "Announced the next step of her AI and Energy Working Group, an RFI on AI energy demand with a topic titled 'Strategic Competition: Outpacing China.' Said: 'To be AI dominant, we must first be energy dominant.'",
+   "date": "2025-03-10",
    "source": "https://fedorchak.house.gov/media/press-releases/fedorchak-issues-request-information-address-ais-growing-energy-demands",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-09-12",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/house-races#race-nd-al"
   },
   {
