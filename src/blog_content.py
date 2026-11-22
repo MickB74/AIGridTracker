@@ -759,8 +759,11 @@ or projection. None had been certified by a state when we read them. Alaska's
 certification is targeted for Nov. 25, and Mississippi, where the winner led
 by about 2,600 votes, certifies Dec. 3, according to
 [AP's rundown of outstanding races](https://www.ajc.com/news/2026/11/more-than-a-dozen-key-races-remain-too-early-to-call-one-week-after-election-day/).
-The AP report on Alaska linked above also notes a Justice Department appeal
-over certification there.
+The Justice Department had sued to block certification in Alaska; on
+Nov. 19 it
+[told the appeals court it is no longer pursuing the case](https://www.kyuk.org/politics/2026-11-19/doj-abandons-lawsuit-that-sought-to-pause-certification-of-alaskas-us-senate-election),
+and the state's elections director has said she intends to certify the
+result.
 
 ## The count
 
