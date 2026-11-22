@@ -68,19 +68,24 @@ AI_RECORDS = {
     # ── Texas — the race where this became the defining issue ─────────────
     ("TX", "James Talarico"): {
         "lean": "guardrails",
-        "summary": "Ran on a “Hold Data Centers Accountable” plan: end "
-                   "the state sales-tax break, require closed-loop cooling, and "
-                   "let communities decide whether a project comes in.",
+        "summary": "Ran on a “Hold Data Centers Accountable” plan: end the state "
+                   "sales-tax break, make large energy users pay their own grid "
+                   "costs, require closed-loop water systems, and let "
+                   "communities approve or reject a project. Did not call for a "
+                   "moratorium.",
         "items": [
-            {"what": "Released a data-center plan calling to end Texas sales-tax "
-                     "incentives for data centers, set federal minimum standards "
-                     "for grid, environment and jobs, require closed-loop cooling "
-                     "to cut water use, and empower localities to approve or "
-                     "reject projects.",
+            {"what": "Released a data-center plan: federal minimum requirements "
+                     "for the grid, environment, jobs and transparency; repeal of "
+                     "the Texas data center sales-tax exemption; large energy "
+                     "users pay for their own infrastructure and grid "
+                     "interconnection costs; closed-loop water systems that reuse "
+                     "a fixed amount of water; local authority to approve and "
+                     "reject projects; and release of facility-level tax-break "
+                     "records. He did not call for a moratorium.",
              "date": "2026-07-22",
              "source": "https://www.texastribune.org/2026/07/22/texas-james-talarico-data-centers-regulation-senate-2026/"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
     ("TX", "Ken Paxton"): {
         "lean": "mixed",
@@ -149,19 +154,24 @@ AI_RECORDS = {
     # ── Michigan ──────────────────────────────────────────────────────────
     ("MI", "Abdul El-Sayed"): {
         "lean": "guardrails",
-        "summary": "Published “terms of engagement” for data centers: "
-                   "zero rate hikes, closed-loop cooling, no weakening of the "
-                   "state's clean-energy law, and penalties for noncompliance.",
+        "summary": "Published “terms of engagement” for data center proposals: "
+                   "protections against electric rate hikes, harm to grid "
+                   "reliability and waterways, and the weakening of clean-energy "
+                   "laws, plus assurances on transparency, community benefits "
+                   "and jobs.",
         "items": [
-            {"what": "Released a framework requiring developers to guarantee no "
-                     "utility rate increases, protect water and grid reliability, "
-                     "bar utilities from citing data-center demand to weaken "
-                     "Michigan clean-energy law, and attach clear penalties to "
-                     "every commitment.",
-             "date": "2026-01",
+            {"what": "Released a framework for evaluating data center proposals "
+                     "that, as Planet Detroit described it, outlines community "
+                     "protections to ensure projects do not result in electric "
+                     "rate hikes, harm energy reliability, pollute local waterways "
+                     "or undermine clean-energy laws, and calls for assurances on "
+                     "transparency, community benefits and job-creation promises. "
+                     "He said he wants it to guide local decisions and federal "
+                     "legislation.",
+             "date": "2026-01-08",
              "source": "https://planetdetroit.org/2026/01/el-sayed-data-centers-senate/"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
     ("MI", "Mike Rogers"): {
         "lean": "mixed",
@@ -218,64 +228,62 @@ AI_RECORDS = {
     },
 
     # ── Virginia ──────────────────────────────────────────────────────────
-    ("VA", "Mark Warner"): {
-        "lean": "guardrails",
-        "summary": "Sponsored federal legislation to stop data-center costs "
-                   "landing on Virginia ratepayers, and would tie tax benefits to "
-                   "water- and energy-use disclosure.",
-        "items": [
-            {"what": "Sponsored the Power for the People Act: directs states to "
-                     "consider new data-center rate classes, seeks a FERC rule "
-                     "making data centers pay for the transmission upgrades they "
-                     "require, and raises accountability for local grid "
-                     "infrastructure.",
-             "date": "2026-06-03",
-             "source": "https://www.warner.senate.gov/newsroom/press-releases/warner-sponsors-bill-to-ensure-virginians-arent-stuck-footing-the-bill-for-big-data-centers/"},
-            {"what": "Introduced further bills tying certain deferred tax "
-                     "benefits to disclosure of water and energy use and "
-                     "compliance with related standards.",
-             "date": "2026-07-22",
-             "source": "https://www.arlnow.com/2026/07/22/sen-warner-targets-data-centers-energy-usage-economic-impacts-of-ai-in-new-bills/"},
-        ],
-        "as_of": "2026-08-25",
-    },
 
     # ── New Jersey ────────────────────────────────────────────────────────
     ("NJ", "Cory Booker"): {
         "lean": "guardrails",
-        "summary": "Original cosponsor of the Power for the People Act, the "
-                   "Senate's main data-center cost-allocation bill.",
+        "summary": "Joined Sen. Van Hollen in introducing the Power for the "
+                   "People Act, the Senate Democrats' main data-center "
+                   "cost-allocation bill.",
         "items": [
-            {"what": "Cosponsored the Power for the People Act (Van Hollen, "
-                     "introduced Jan 15 2026): new data-center rate classes, a "
-                     "FERC rule making data centers pay for local transmission "
-                     "upgrades, interconnection incentives to bring their own "
-                     "generation and storage, and prevailing-wage standards.",
-             "date": "2026-01-15",
+            {"what": "Joined Sen. Chris Van Hollen and colleagues in introducing "
+                     "the Power for the People Act. Per his office, it directs "
+                     "states to evaluate the need for new rate classes for data "
+                     "centers, directs FERC to issue a rule making data centers "
+                     "pay for the local transmission upgrades they require, "
+                     "creates interconnection incentives for data centers to bring "
+                     "their own new generation and battery storage, and sets "
+                     "prevailing-wage and apprenticeship standards.",
+             "date": "2026-01-16",
              "source": "https://www.booker.senate.gov/news/press/booker-van-hollen-colleagues-introduce-legislation-to-ensure-americans-arent-footing-the-bill-for-big-data-centers"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
 
     # ── North Carolina ────────────────────────────────────────────────────
     ("NC", "Michael Whatley"): {
-        "lean": "accelerate",
-        "summary": "Called data-center opposition “not organic” and "
-                   "backs tax breaks for developers; reported to hold stock in "
-                   "data-center companies.",
+        "lean": "mixed",
+        "summary": "Called data-center opposition “not organic” and backs tax "
+                   "breaks for developers, while his campaign says data centers "
+                   "should pay their own way with no costs shifted to "
+                   "residential ratepayers and that communities decide.",
         "items": [
             {"what": "Told a Fox News interview that “this opposition to data "
-                     "centers is not organic”, and agreed governments should "
-                     "offer developers tax breaks, though not subsidies, to "
-                     "encourage expansion.",
+                     "centers is not organic”, and agreed governments should offer "
+                     "developers tax breaks, though not subsidies, to encourage "
+                     "expansion.",
              "date": "2026-07",
              "source": "https://www.newsweek.com/ai-data-center-war-where-democrats-republicans-in-key-senate-races-stand-12354265"},
-            {"what": "Reported by NBC News to back data-center tax breaks while "
-                     "owning stock in data-center companies.",
+            {"what": "A campaign spokesman told Spectrum News his standard is that "
+                     "“data centers pay their own way, families pay nothing, and "
+                     "communities decide”, with Big Tech covering the grid "
+                     "upgrades it needs and no costs shifted onto residential "
+                     "ratepayers. In the same podcast interview where he called "
+                     "opposition “ginned up”, he said there must be no disparate "
+                     "impact on a community's water, traffic or electricity. "
+                     "Spectrum reported that both he and his opponent support "
+                     "letting communities block data centers and that neither "
+                     "backed a federal moratorium.",
+             "date": "2026-08-27",
+             "source": "https://spectrumlocalnews.com/nc/charlotte/news/2026/08/27/data-centers-roy-cooper-whatley"},
+            {"what": "An NBC News report that he backs data-center tax breaks "
+                     "while owning stock in data-center companies, as republished "
+                     "by the North Carolina Democratic Party, his opponent's "
+                     "party. The NBC original has not been read.",
              "date": "2026",
              "source": "https://www.ncdp.org/media/new-from-nbc-news-michael-whatley-backs-tax-breaks-for-data-centers-while-owning-stock-in-data-center-companies/"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
 
     # ── Maine ─────────────────────────────────────────────────────────────
@@ -367,25 +375,27 @@ AI_RECORDS = {
     # ── Virginia — the incumbent's own bill, sourced to his own release ──
     ("VA", "Mark Warner"): {
         "lean": "guardrails",
-        "summary": "Sponsored the Power for the People Act to stop households "
-                   "subsidising data centers: separate rate classes for data "
-                   "centers, FERC-enforced payment for the local transmission "
-                   "upgrades they trigger, and better load forecasting.",
+        "summary": "Cosponsored the Power for the People Act, aimed at stopping "
+                   "households from subsidising data centers: it directs states "
+                   "to evaluate separate rate classes for data centers, directs "
+                   "FERC to make data centers pay for the local transmission "
+                   "upgrades they trigger, and funds better load forecasting.",
         "items": [
-            {"what": "Introduced the Power for the People Act with eight "
-                     "Democratic cosponsors (Van Hollen, Durbin, Blumenthal, "
-                     "Booker, Duckworth, Smith, Welch, Alsobrooks). It would "
-                     "create new utility rate classes for data centers, direct "
-                     "FERC to make data centers pay for the local transmission "
-                     "upgrades they require, tie interconnection to clean "
-                     "energy and prevailing-wage incentives, and improve demand "
-                     "forecasting. Warner: “If corporations are going to run "
-                     "data centers in Virginia, they should cover the cost of "
-                     "them.”",
+            {"what": "Cosponsored the Power for the People Act, joining Sens. Van "
+                     "Hollen, Durbin, Blumenthal, Booker, Duckworth, Smith, Welch "
+                     "and Alsobrooks. Per his office, the bill directs states to "
+                     "evaluate the need for new rate classes for data centers, "
+                     "directs FERC to issue a rule ensuring data centers pay for "
+                     "the local transmission upgrades they require, sets up "
+                     "interconnection incentives tied to bringing new generation "
+                     "and storage, clean energy and prevailing wages, and provides "
+                     "resources to improve load forecasting. Warner: “If "
+                     "corporations are going to run data centers in Virginia, they "
+                     "should cover the cost of them.”",
              "date": "2026-06-02",
              "source": "https://www.warner.senate.gov/newsroom/press-releases/warner-sponsors-bill-to-ensure-virginians-arent-stuck-footing-the-bill-for-big-data-centers/"},
         ],
-        "as_of": "2026-09-05",
+        "as_of": "2026-11-21",
     },
     # ── Competitive-race sweep, Oct 2026 — 15 days out ───────────────────
     # The 11 races at PVI<=5 were the gap: 24 major-party candidates, only
@@ -397,31 +407,34 @@ AI_RECORDS = {
     # cannot afford.
     ("NC", "Roy Cooper"): {
         "lean": "guardrails",
-        "summary": "Says data centers must pay for all the energy they use "
-                   "with nothing passed to consumers, and backs letting "
-                   "communities block projects. Republicans call it a pivot; "
-                   "the tax breaks they cite predate his governorship.",
+        "summary": "Says data centers must pay for all the energy they use with "
+                   "nothing passed to consumers, and supports letting "
+                   "communities block projects. Numerous data centers were built "
+                   "while he was governor; his campaign says the tax breaks they "
+                   "used predate his term.",
         "items": [
-            {"what": "Campaign position, via a spokesperson: \u201cData centers "
-                     "must pay for all of the energy they use without passing "
-                     "on any of their costs to consumers.\u201d Cooper also "
-                     "supports local communities blocking data centers if they "
-                     "choose, and has not backed a federal moratorium.",
+            {"what": "Campaign position, via a spokesperson: “Data centers must "
+                     "pay for all of the energy they use without passing on any of "
+                     "their costs to consumers.” Spectrum News reported that both "
+                     "he and his opponent support letting local communities block "
+                     "data centers and that neither has backed a federal "
+                     "moratorium. It also noted numerous data centers were built "
+                     "while he was governor; his campaign said the tax breaks were "
+                     "signed into law in 2006 and expanded in 2015, before his "
+                     "term.",
              "date": "2026-08-27",
              "source": "https://spectrumlocalnews.com/nc/charlotte/news/2026/08/27/data-centers-roy-cooper-whatley"},
-            {"what": "His \u201cMake Stuff Cost Less\u201d plan calls for data "
-                     "centers to pay the full cost of all the power they use "
-                     "and to prevent those costs being passed to consumers. "
-                     "Coverage framed this as a reversal of his record as "
-                     "governor; his campaign says the data-center sales-tax "
-                     "break was signed in 2006 and expanded in 2015, before "
-                     "his term, and a Wake Forest political scientist said the "
-                     "benefit came from a longstanding exemption not "
-                     "negotiated for those deals.",
+            {"what": "Said in a local interview that “we need to make sure data "
+                     "centers pay for their own power” and should be encouraged to "
+                     "build their own energy sources, framing it as part of his "
+                     "“make stuff cost less” campaign. Fox News described this as "
+                     "a shift from his time as governor, when he applauded data "
+                     "center growth, and noted that the bulk of the state's tax "
+                     "breaks already existed when he took office in 2017.",
              "date": "2026-08-30",
              "source": "https://www.foxnews.com/politics/roy-cooper-changes-tune-data-centers-rising-power-costs-collide-senate-campaign"},
         ],
-        "as_of": "2026-10-19",
+        "as_of": "2026-11-21",
     },
     ("NH", "Chris Pappas"): {
         # Lean is "consensus", not "guardrails": the only gradeable action
@@ -454,24 +467,26 @@ AI_RECORDS = {
     },
     ("MN", "Peggy Flanagan"): {
         "lean": "guardrails",
-        "summary": "Opposes big tax breaks for Big Tech, would ban data-center "
-                   "NDAs, and says host communities \u201cget to call the "
-                   "shots.\u201d Called data centers a possible existential "
+        "summary": "Opposes major tax breaks for Big Tech, thinks data-center "
+                   "NDAs should be banned, and says host communities “get to "
+                   "call the shots.” Called data centers a possible existential "
                    "threat if they get out of control.",
         "items": [
-            {"what": "Told a Forum News Service candidate survey that "
-                     "Minnesotans should not pay for Big Tech\u2019s "
-                     "data-center costs and that she opposes major tax breaks "
-                     "for Big Tech: \u201cCommunities get to call the "
-                     "shots.\u201d She also backs banning NDAs between local "
-                     "governments and data-center developers, requiring union "
-                     "labor, and holding projects to Minnesota environmental "
-                     "standards. She did not back a statewide or federal "
-                     "moratorium.",
+            {"what": "A Forum News Service report on the candidates' positions "
+                     "said she emphasises Minnesotans not paying Big Tech's costs "
+                     "and opposes major tax breaks for Big Tech, and quoted her: "
+                     "“Communities get to call the shots.” It said she thinks NDA "
+                     "use for data centers should be banned, that they should be "
+                     "built with union labor and that they should meet Minnesota's "
+                     "environmental standards. In a July primary debate she said "
+                     "data centers could be “an existential threat to us if it "
+                     "gets out of control.” The report said none of the four "
+                     "candidates it covered said they would support a statewide or "
+                     "federal moratorium.",
              "date": "2026-09-11",
              "source": "https://www.inforum.com/news/minnesota/where-do-minnesota-statewide-office-candidates-stand-on-data-centers"},
         ],
-        "as_of": "2026-10-19",
+        "as_of": "2026-11-21",
     },
     ("MN", "Michele Tafoya"): {
         "lean": "mixed",

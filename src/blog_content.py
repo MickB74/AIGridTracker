@@ -281,11 +281,11 @@ Of the 434 winners in our records:
 So roughly one winner in five has said something specific enough to hold
 them to.
 
-## The House did not follow the Senate pattern
+## Leaning toward faster buildout did not cost House members their seats
 
-In the [Senate](/blog/senate-results-data-center-promises-2026), every
-candidate whose record leaned toward faster buildout lost. It would be tidy
-to report the same for the House. The data does not support it.
+In the [Senate](/blog/senate-results-data-center-promises-2026), the two
+candidates whose records leaned toward faster buildout both lost. It would
+be tidy to report a pattern. The House data does not support one.
 
 Of the 16 House candidates with that lean whose races are decided, 12 won.
 Nearly all are incumbents in safe seats. Four lost, including Mike Lawler in
@@ -776,13 +776,20 @@ Ratepayer Protection Act, which we show but do not score. The other 21
 winners have no record we could find and source, and they are shown that way
 on the tracker rather than as neutral.
 
-Three candidates in the tracker had a record that leaned the other way,
+Only two candidates in the tracker had a record that leaned the other way,
 toward building faster without a matching cost or community safeguard on the
-record. All three were Republicans on a general election ballot, in Alaska,
-Iowa and North Carolina. All three lost.
+record. Both were Republicans on a general election ballot, in Alaska and
+Iowa, and both lost. Two races is too few to draw a conclusion from, and
+other things were going on in this election.
 
-That is a small sample, and other things were going on in this election. But
-it is the complete set, so it is worth stating plainly.
+A third, Michael Whatley in North Carolina, called opposition to data centers
+"not organic" and backed tax breaks for developers. But his campaign also
+told
+[Spectrum News](https://spectrumlocalnews.com/nc/charlotte/news/2026/08/27/data-centers-roy-cooper-whatley)
+that data centers should pay their own way with no costs shifted to
+residential ratepayers, so we record him as mixed. He lost too. By the end
+of the campaign, very few Senate candidates in either party were willing to
+be on the record without some version of that promise.
 
 ## The seats that changed hands
 
