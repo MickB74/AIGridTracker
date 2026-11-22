@@ -57,9 +57,9 @@ AI_RECORDS = {
         "summary": "Ran on a two-year moratorium on new data centers and on "
                    "local control over whether a project is approved.",
         "items": [
-            {"what": "Campaigned on a two-year data-center moratorium and "
-                     "local control; WSOC-TV reported the platform in its "
-                     "coverage of her win over Darline Graham.",
+            {"what": "Campaigned on a two-year data-center moratorium and local "
+                     "control; WSOC-TV reported the platform in its coverage of "
+                     "her win over Darline Graham.",
              "date": "2026-11-04",
              "source": "https://www.wsoctv.com/news/local/data-center-debate-continues-south-carolina-after-andrews-victory/RMMHTFFSIBCJJCWXEIMGKWMPWI/"},
         ],
@@ -89,25 +89,34 @@ AI_RECORDS = {
     },
     ("TX", "Ken Paxton"): {
         "lean": "mixed",
-        "summary": "Called the issue “complicated” and stressed competing "
-                   "with China, then released a “Texas First” plan built "
-                   "on Chinese-technology bans and child-safety liability rather "
-                   "than on ratepayer cost allocation.",
+        "summary": "Released a “Texas First” plan built on banning Chinese "
+                   "technology and child-safety liability, while also backing "
+                   "repeal of the data center sales-tax exemption he voted for "
+                   "in 2013. His office left a county's request to pause data "
+                   "centers unanswered for six months.",
         "items": [
-            {"what": "Released a four-point “Texas First Data Center Plan”: "
-                     "bar Chinese technology from powering American data centers, "
-                     "hold operators criminally liable where a center powers AI "
-                     "chatbots that endanger children, and co-sponsor Sen. Tom "
-                     "Cotton's DATA Act.",
+            {"what": "Released a four-point plan: back legislation barring Chinese "
+                     "technology from powering data centers and holding developers "
+                     "criminally liable where their infrastructure powers AI "
+                     "chatbots that endanger children; co-sponsor Sen. Tom "
+                     "Cotton's DATA Act, which would exempt new off-grid "
+                     "electricity providers from certain federal regulations; and "
+                     "advocate for Gov. Abbott's state-level data center plan.",
              "date": "2026-08-24",
              "source": "https://thehill.com/policy/technology/6049559-ken-paxton-texas-senate-ai-data-center-plan/"},
-            {"what": "Reported to have taken roughly $400,000 from data-center-"
-                     "connected donors; as attorney general, declined requests to "
-                     "act against local data-center development.",
+            {"what": "The Texas Tribune reported his plan also champions Abbott's "
+                     "push to repeal the industry's sales-tax exemptions and backs "
+                     "a ban on AI data centers in rural Texas. It noted that as a "
+                     "state senator in 2013 he voted for the data center sales-tax "
+                     "exemption; that Hood County's February request for an "
+                     "attorney general opinion on whether it could impose a data "
+                     "center moratorium was still undecided six months later; and "
+                     "that NOTUS reported his political operation had taken nearly "
+                     "$450,000 from data-center-affiliated donors.",
              "date": "2026-08-24",
-             "source": "https://www.washingtonpost.com/nation/2026/08/24/ken-paxton-unveils-anti-data-center-plan-gop-voter-anger-mounts-texas/"},
+             "source": "https://www.texastribune.org/2026/08/24/ken-paxton-james-talarico-data-centers-senate-texas/"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
 
     # ── Ohio (special) ────────────────────────────────────────────────────
@@ -118,37 +127,51 @@ AI_RECORDS = {
                    "promising to make data centers pay the full cost of the "
                    "electricity they use.",
         "items": [
-            {"what": "Ran two July ads attacking Husted's record supporting tax "
-                     "breaks for data-center developers, and pledged to make data "
-                     "centers pay the full cost of their electricity use.",
+            {"what": "Attacked Husted's record of supporting tax breaks for "
+                     "data-center developers in two July ads and, in a third, "
+                     "promised to make data centers pay the full cost of their "
+                     "electricity use. He called for ending the data center tax "
+                     "breaks and said local communities should decide whether data "
+                     "centers are built. He did not back a halt to construction.",
              "date": "2026-08-10",
              "source": "https://ohiocapitaljournal.com/2026/08/10/ohio-u-s-senate-candidates-offer-contrasting-visions-for-data-centers/"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
     ("OH", "Jon Husted"): {
         "lean": "mixed",
-        "summary": "Frames AI buildout as a national-security necessity, and "
-                   "introduced a bill directing states to make 100 MW+ loads "
-                   "cover their own infrastructure costs.",
+        "summary": "Frames AI buildout as a national-security necessity and "
+                   "helped bring data centers to Ohio with tax breaks as "
+                   "lieutenant governor, then introduced a bill asking states to "
+                   "consider making large loads cover their own infrastructure "
+                   "costs.",
         "items": [
-            {"what": "Introduced the Ratepayer Protection Act: standards for "
-                     "states and PUCs connecting 100 MW+ loads, requiring "
-                     "large-load customers to recover full incremental upgrade "
-                     "costs and post financial assurances so utilities cannot "
-                     "shift them to households. “We must do that without "
-                     "passing the costs on to working families and small "
+            {"what": "Introduced the Ratepayer Protection Act, which would require "
+                     "states to consider establishing standards for connecting "
+                     "large electricity users such as data centers, so that those "
+                     "customers pay for the generation, transmission and other "
+                     "infrastructure needed to serve them. “We must do that "
+                     "without passing the costs on to working families and small "
                      "businesses.”",
              "date": "2026-07-20",
              "source": "https://www.husted.senate.gov/media/press-releases/husted-leads-bill-to-protect-americans-from-footing-the-bill-for-new-data-centers/"},
-            {"what": "Bill introduced the day after Brown's first attack ad aired; "
-                     "reported to have taken roughly $69,750 from tech and energy "
-                     "PACs and employees including Google, Amazon, Microsoft, "
-                     "Oracle, AEP, Duke Energy and Vistra.",
+            {"what": "The Ohio Capital Journal reported he introduced the bill one "
+                     "day after an ad from his opponent on data centers was "
+                     "released, that as lieutenant governor he backed tens of "
+                     "millions of dollars in tax breaks for data center projects, "
+                     "and that he has otherwise called data centers a “local "
+                     "issue” the federal government should stay out of.",
+             "date": "2026-08-10",
+             "source": "https://ohiocapitaljournal.com/2026/08/10/ohio-u-s-senate-candidates-offer-contrasting-visions-for-data-centers/"},
+            {"what": "Said in February that data centers should be “producing "
+                     "their own electricity so that it doesn't hit ratepayers” and "
+                     "recycling the water in their systems. A leaked National "
+                     "Republican Senatorial Committee memo called data centers "
+                     "“the anchor hanging around Husted's neck.”",
              "date": "2026-08-21",
              "source": "https://ohiocapitaljournal.com/2026/08/21/leaked-memo-about-data-centers-shows-gop-worried-about-ohios-u-s-senate-race/"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
 
     # ── Michigan ──────────────────────────────────────────────────────────
@@ -175,56 +198,61 @@ AI_RECORDS = {
     },
     ("MI", "Mike Rogers"): {
         "lean": "mixed",
-        "summary": "Backed state and local control, then endorsed a one-year "
-                   "statewide moratorium days after his AI-sector investments "
-                   "were reported.",
+        "summary": "Called for a one-year statewide moratorium on new data "
+                   "centers days after his investments in companies positioned "
+                   "to benefit from the AI buildout were reported.",
         "items": [
-            {"what": "Endorsed a one-year Michigan moratorium on new data-center "
-                     "development, citing community control, utility price hikes, "
-                     "water, and “pay-to-play schemes” — a state "
-                     "pause, not a national ban.",
-             "date": "2026-08-20",
-             "source": "https://www.detroitnews.com/story/news/politics/2026/08/20/data-center-politics-michigan-senate-mike-rogers-abdul-el-sayed/91385736007/"},
-            {"what": "Shift came days after reporting that he holds millions in "
-                     "tech investments that stand to benefit from the data-center "
-                     "buildout; his campaign would not say whether he would "
-                     "divest.",
+            {"what": "Announced he was calling for a one-year moratorium on new "
+                     "data center construction in Michigan, The Hill reported.",
+             "date": "2026-08-25",
+             "source": "https://thehill.com/policy/technology/6049559-ken-paxton-texas-senate-ai-data-center-plan/"},
+            {"what": "Reversed his position and backed a statewide moratorium days "
+                     "after The Lever reported that he holds between $1.7 million "
+                     "and $2.6 million in companies that stand to benefit from "
+                     "tech-friendly policies and faster permitting for AI "
+                     "development. His campaign did not say whether he was "
+                     "considering divesting.",
              "date": "2026-08-20",
              "source": "https://michiganadvance.com/2026/08/20/after-data-center-investments-revealed-rogers-backs-statewide-moratorium/"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
 
     # ── Georgia ───────────────────────────────────────────────────────────
     ("GA", "Jon Ossoff"): {
         "lean": "guardrails",
-        "summary": "Asked FERC to examine what AI server load is doing to power "
-                   "bills.",
+        "summary": "Opened an inquiry into what AI data centers are doing to "
+                   "Georgians' power bills, asking FERC whether tech companies' "
+                   "promises to “pay their own way” are credible or enforceable.",
         "items": [
-            {"what": "Sent a letter to FERC probing the impact of AI servers on "
-                     "electricity bills.",
-             "date": "2026-04",
-             "source": "https://www.newsweek.com/ai-data-center-war-where-democrats-republicans-in-key-senate-races-stand-12354265"},
+            {"what": "Wrote to FERC Chair Laura Swett asking, among other "
+                     "questions, whether FERC considers it credible or enforceable "
+                     "when technology companies say they will “pay their own way” "
+                     "for data center power, what it is doing to improve load "
+                     "forecasting, and how it will take part in standardising "
+                     "interconnection for large loads such as data centers.",
+             "date": "2026-04-20",
+             "source": "https://www.wrdw.com/2026/04/20/ossoff-looks-into-ga-data-centers-impact-power-bills/"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
     ("GA", "Mike Collins"): {
         "lean": "mixed",
-        "summary": "Names data centers a priority issue and argues local leaders "
-                   "should decide siting, while backing a federal role because "
-                   "“we're in a race with China for AI.”",
+        "summary": "Says local leaders should decide whether a data center fits "
+                   "their community, while seeing a federal role because “we're "
+                   "in a race with China for AI.”",
         "items": [
-            {"what": "Campaigning on data centers: says Georgia's 200+ data "
-                     "centers matter but local leaders should decide whether one "
-                     "fits their community — “if a data center goes into "
-                     "a local community and destroys the infrastructure, you "
-                     "didn't do good” — while allowing a federal role "
-                     "given AI competition with China. Meta operates a large "
-                     "campus in his House district.",
+            {"what": "Told voters he recognises the importance of Georgia's more "
+                     "than 200 data centers but would rather let local leaders "
+                     "decide whether one is the right fit: “I am a firm believer "
+                     "in local control. If a data center goes into a local "
+                     "community and destroys the infrastructure, you didn't do "
+                     "good.” He also said there is a role for the federal "
+                     "government “because we're in a race with China for AI.”",
              "date": "2026",
              "source": "https://www.local3news.com/local-news/decision-2026-u-s-senate-candidate-mike-collins-makes-campaign-stop-in-dalton/article_7ca14bf8-2e99-40a6-acc6-6dfd684a1f0e.html"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
 
     # ── Virginia ──────────────────────────────────────────────────────────
@@ -299,7 +327,7 @@ AI_RECORDS = {
              "date": "2026",
              "source": "https://www.newsweek.com/ai-data-center-war-where-democrats-republicans-in-key-senate-races-stand-12354265"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
     ("ME", "Susan Collins"): {
         "lean": "mixed",
@@ -307,21 +335,21 @@ AI_RECORDS = {
                    "cost pressure, while attributing Maine's rate increases to "
                    "state Democratic leadership.",
         "items": [
-            {"what": "Voiced concern about data-center energy consumption and "
-                     "cost pressure and toured redevelopment sites with Energy "
+            {"what": "Voiced concern about data-center energy consumption and cost "
+                     "pressure and toured redevelopment sites with Energy "
                      "Secretary Chris Wright, while blaming rising rates on "
                      "Democratic state leaders.",
              "date": "2026",
              "source": "https://www.newsweek.com/ai-data-center-war-where-democrats-republicans-in-key-senate-races-stand-12354265"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
 
     # ── Iowa ──────────────────────────────────────────────────────────────
     ("IA", "Josh Turek"): {
         "lean": "mixed",
-        "summary": "Campaigns against “billionaires and large corporations” "
-                   "and has echoed local moratorium sentiment, without a published "
+        "summary": "Campaigns against “billionaires and large corporations” and "
+                   "has echoed local moratorium sentiment, without a published "
                    "data-center platform.",
         "items": [
             {"what": "Framed his campaign around opposing billionaires and large "
@@ -330,19 +358,20 @@ AI_RECORDS = {
              "date": "2026",
              "source": "https://www.newsweek.com/ai-data-center-war-where-democrats-republicans-in-key-senate-races-stand-12354265"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
     ("IA", "Ashley Hinson"): {
         "lean": "accelerate",
         "summary": "Emphasises American AI leadership against China; no "
-                   "data-center cost or siting restriction located on the record.",
+                   "data-center cost or siting restriction located on the "
+                   "record.",
         "items": [
             {"what": "Emphasised American AI leadership and competition with "
                      "China; no specific data-center restrictions stated.",
              "date": "2026",
              "source": "https://www.newsweek.com/ai-data-center-war-where-democrats-republicans-in-key-senate-races-stand-12354265"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
 
     # ── Alaska ────────────────────────────────────────────────────────────
@@ -356,21 +385,26 @@ AI_RECORDS = {
              "date": "2026",
              "source": "https://www.newsweek.com/ai-data-center-war-where-democrats-republicans-in-key-senate-races-stand-12354265"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
 
     # ── Nebraska ──────────────────────────────────────────────────────────
     ("NE", "Dan Osborn"): {
         "lean": "guardrails",
-        "summary": "Argues Nebraska should be investing in hospitals rather than "
-                   "data centers.",
+        "summary": "Argues Nebraska should be building hospitals rather than "
+                   "data centers, and praised the governor for rolling back data "
+                   "center tax incentives.",
         "items": [
-            {"what": "Called for shifting investment away from data centers and "
-                     "toward hospitals.",
-             "date": "2026",
+            {"what": "In prepared remarks at a press conference in rural Dunbar, "
+                     "said “we need to be focused on building hospitals, not data "
+                     "centers,” commended Gov. Jim Pillen for executive orders "
+                     "rolling back tax incentives for data centers, and said “we "
+                     "must protect our water and land, not sell it to the highest "
+                     "bidder.”",
+             "date": "2026-07-23",
              "source": "https://rivercountry.newschannelnebraska.com/story/336427630/fact-check-dan-osborn-data-centers"},
         ],
-        "as_of": "2026-08-25",
+        "as_of": "2026-11-21",
     },
     # ── Virginia — the incumbent's own bill, sourced to his own release ──
     ("VA", "Mark Warner"): {
@@ -463,7 +497,7 @@ AI_RECORDS = {
              "date": "2026-09-17",
              "source": "https://pappas.house.gov/media/press-releases/pappas-helps-pass-bipartisan-ratepayer-protection-act"},
         ],
-        "as_of": "2026-10-19",
+        "as_of": "2026-11-21",
     },
     ("MN", "Peggy Flanagan"): {
         "lean": "guardrails",
@@ -490,130 +524,124 @@ AI_RECORDS = {
     },
     ("MN", "Michele Tafoya"): {
         "lean": "mixed",
-        "summary": "Welcomes the investment but says residents "
-                   "\u201cshouldn\u2019t be left paying the bill\u201d and "
-                   "developers must disclose incentives. Declined to answer on "
-                   "tax breaks, an NDA ban, or environmental rules.",
+        "summary": "Welcomes the investment but says residents “shouldn't be "
+                   "left paying the bill” and developers must disclose "
+                   "incentives. Her campaign did not answer questions on tax "
+                   "breaks, an NDA ban or environmental rules.",
         "items": [
-            {"what": "Told a Forum News Service candidate survey that Minnesota "
-                     "should welcome investment as long as it is done "
-                     "responsibly with residents involved, that residents, "
-                     "farmers and businesses deserve a real say and "
-                     "\u201cshouldn\u2019t be left paying the bill,\u201d and "
-                     "that developers must be upfront about what they need, "
+            {"what": "Said in a statement reported by Forum News Service that "
+                     "Minnesota should welcome new economic growth but projects "
+                     "“have to work for the communities where they're being "
+                     "built”; that residents, farmers and businesses deserve a "
+                     "real say and “certainly shouldn't be left paying the bill”; "
+                     "and that developers must be upfront about what they need, "
                      "what incentives they receive and how they will cover the "
-                     "costs their projects create. Her campaign did not answer "
-                     "the survey\u2019s questions on tax breaks, a federal NDA "
-                     "ban, or environmental regulation, and she did not back a "
-                     "moratorium.",
+                     "costs their projects create. Her campaign did not respond to "
+                     "the outlet's questions on tax breaks, a federal NDA ban or "
+                     "environmental regulation. The report said none of the four "
+                     "candidates it covered said they would support a statewide or "
+                     "federal moratorium.",
              "date": "2026-09-11",
              "source": "https://www.inforum.com/news/minnesota/where-do-minnesota-statewide-office-candidates-stand-on-data-centers"},
         ],
-        "as_of": "2026-10-19",
+        "as_of": "2026-11-21",
     },
     ("VA", "Bert Mizusawa"): {
         "lean": "mixed",
-        "summary": "Would give host communities a veto over AI data centers "
-                   "and site them in remote areas, but states no position on "
+        "summary": "Would give host communities a veto over AI data centers and "
+                   "site them in remote areas, but states no position on "
                    "ratepayer costs, water use or tax breaks.",
         "items": [
             {"what": "In a Charlottesville Tomorrow / VPM candidate Q&A, backed "
-                     "\u201cthe ability of local communities, who will bear the "
-                     "costs, to veto having data centers\u201d rather than "
-                     "having them \u201cforced on them by Richmond or "
-                     "Washington, DC,\u201d said \u201cData centers can and "
-                     "should be located in remote areas,\u201d and called for "
+                     "“the ability of local communities, who will bear the costs, "
+                     "to veto having data centers” rather than having them “forced "
+                     "on them by Richmond or Washington, DC,” said “Data centers "
+                     "can and should be located in remote areas,” and called for "
                      "rapid deployment of newer nuclear reactors. He stated no "
                      "position on ratepayer costs, water use or data-center tax "
                      "breaks.",
              "date": "2026-09-18",
              "source": "https://www.cvilletomorrow.org/qa-for-u-s-senate-shows-virginias-warner-and-mizusawa-agree-data-centers-are-a-problem-but-theyd-fix-it-differently/"},
         ],
-        "as_of": "2026-10-19",
+        "as_of": "2026-11-21",
     },
-    ("NM", "Ben Ray Luj\u00e1n"): {
+    ("NM", "Ben Ray Luján"): {
         "lean": "guardrails",
-        "summary": "Would keep data centers off drinking and agricultural "
-                   "water and require them to generate their own power: "
-                   "\u201cNew Mexicans should not pay a penny more for their "
-                   "electricity.\u201d",
+        "summary": "Would keep data centers off drinking and agricultural water "
+                   "and require them to generate their own power: “New Mexicans "
+                   "should not pay a penny more for their electricity.”",
         "items": [
             {"what": "In a KVIA voter-guide questionnaire, said data centers "
-                     "\u201cshould not use our drinking water or water used "
-                     "for agricultural purposes\u201d and \u201cshould also be "
-                     "required to generate their own power rather than strain "
-                     "the grid,\u201d adding that \u201cNew Mexicans should "
-                     "not pay a penny more for their electricity.\u201d He "
-                     "cited bipartisan legislation he wrote aimed at stopping "
-                     "water waste and protecting community drinking water.",
+                     "“should not use our drinking water or water used for "
+                     "agricultural purposes” and “should also be required to "
+                     "generate their own power rather than strain the grid,” "
+                     "adding that “New Mexicans should not pay a penny more for "
+                     "their electricity.” He cited bipartisan legislation he wrote "
+                     "aimed at stopping water waste and protecting community "
+                     "drinking water.",
              "date": "2026-10-05",
              "source": "https://kvia.com/voter-guide-2026/new-mexico-senator-district-3/2026/10/05/ben-ray-lujan-candidate-for-new-mexico-senator/"},
         ],
-        "as_of": "2026-10-19",
+        "as_of": "2026-11-21",
     },
     ("NM", "Larry Marker"): {
-        "lean": "mixed",
-        "summary": "Would zone data centers into dedicated parks away from "
-                   "people, farmland and water, and let each county decide "
-                   "whether to host them. States no position on who pays for "
-                   "the power.",
+        "lean": "guardrails",
+        "summary": "Says siting should be left to local ordinances and that each "
+                   "county should decide whether it wants data centers. This is "
+                   "one answer in a candidate questionnaire; he states no "
+                   "position on who pays for the power.",
         "items": [
-            {"what": "Called data centers a political \u201chot potato\u201d "
-                     "and proposed designated data-center parks sited away from "
-                     "population centers, prime farmland and critical water "
-                     "resources, comparing the approach to how feedlots are "
-                     "sited: \u201cEach county can and should determine if they "
-                     "want data centers or not.\u201d",
+            {"what": "Asked by The Eastern New Mexico News how the federal "
+                     "government should regulate data centers, answered that local "
+                     "city or county ordinances should address where they go: "
+                     "“Each county can and should determine if they want data "
+                     "centers or not.”",
              "date": "2026-10-14",
              "source": "https://www.easternnewmexiconews.com/story/2026/10/14/news/marker-challenges-lujan-for-senate-seat/234373.html"},
         ],
-        "as_of": "2026-10-19",
+        "as_of": "2026-11-21",
     },
     ("FL", "Ashley Moody"): {
         "lean": "guardrails",
-        "summary": "Cosponsored the Senate Ratepayer Protection Act making "
-                   "data centers cover the full added cost of serving them, "
-                   "and attacked Senate Democrats for blocking it.",
+        "summary": "Cosponsored the Senate Ratepayer Protection Act making data "
+                   "centers cover the full added cost of serving them, and "
+                   "attacked Senate Democrats for blocking it.",
         "items": [
-            {"what": "Cosponsored Sen. Jon Husted\u2019s Ratepayer Protection "
-                     "Act, directing state utility regulators and unregulated "
-                     "utilities to consider rules making data centers pay the "
-                     "full added cost of new generation, transmission or "
-                     "distribution needed to serve them, post financial "
-                     "guarantees before upgrades begin, and cover costs if they "
-                     "end power contracts early. \u201cFloridians should not be "
-                     "left to foot the bill.\u201d After Senate Democrats "
-                     "blocked it: \u201cWhile Democrats continue to play "
-                     "politics over the issue, I\u2019ll keep fighting to get "
-                     "this common-sense legislation passed.\u201d",
+            {"what": "Cosponsored Sen. Jon Husted’s Ratepayer Protection Act, "
+                     "directing state utility regulators and unregulated utilities "
+                     "to consider rules making data centers pay the full added "
+                     "cost of new generation, transmission or distribution needed "
+                     "to serve them, post financial guarantees before upgrades "
+                     "begin, and cover costs if they end power contracts early. "
+                     "“Floridians should not be left to foot the bill.” After "
+                     "Senate Democrats blocked it: “While Democrats continue to "
+                     "play politics over the issue, I’ll keep fighting to get this "
+                     "common-sense legislation passed.”",
              "date": "2026-09-25",
              "source": "https://www.moody.senate.gov/press-releases/senator-moody-cosponsors-legislation-to-protect-ratepayers-from-energy-consuming-data-centers/"},
         ],
-        "as_of": "2026-10-19",
+        "as_of": "2026-11-21",
     },
     ("FL", "Angie Nixon"): {
         "lean": "guardrails",
-        "summary": "The only candidate in a competitive Senate race backing a "
-                   "construction moratorium: pledged to cosponsor the Sanders "
-                   "AI Data Center Moratorium Act pending federal guardrails.",
+        "summary": "Said there should be a moratorium on new AI data centers "
+                   "“until more research is done” and wants tougher guardrails "
+                   "on their construction.",
         "items": [
-            {"what": "On a moratorium: \u201cI think there needs to be a "
-                     "moratorium until more research is done.\u201d She said "
-                     "she is not opposed to AI or technological innovation but "
-                     "wants tougher guardrails around privacy, employment and "
-                     "data-center construction, and quipped that \u201cif "
-                     "people want to build a data center, they should put it on "
-                     "Mar-a-Lago.\u201d",
+            {"what": "On a moratorium: “I think there needs to be a moratorium "
+                     "until more research is done.” She said she is not opposed to "
+                     "AI or technological innovation but wants tougher guardrails "
+                     "around privacy, employment and data-center construction, and "
+                     "quipped that “if people want to build a data center, they "
+                     "should put it on Mar-a-Lago.”",
              "date": "2026-09-26",
              "source": "https://www.newsweek.com/angie-nixon-ashley-moody-trump-florida-data-center-mar-a-lago-12490702"},
             {"what": "Campaigning in Gainesville alongside Sen. Bernie Sanders, "
-                     "called for restrictions on AI data centers; she has "
-                     "pledged to cosponsor the Sanders-Ocasio-Cortez Artificial "
-                     "Intelligence Data Center Moratorium Act.",
+                     "said she supports restrictions on AI data centers.",
              "date": "2026-10-19",
              "source": "https://www.wuft.org/politics/2026-10-19/in-gainesville-visit-senate-hopeful-angie-nixon-calls-for-data-center-restrictions-campaign-finance-reform"},
         ],
-        "as_of": "2026-10-19",
+        "as_of": "2026-11-21",
     },
 }
 

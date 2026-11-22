@@ -2,7 +2,7 @@
  "generated": "2026-11-21",
  "license": "CC BY 4.0",
  "note": "One row per cited item. kind=action is a bill, letter, hearing question or investigation; kind=statement is a quote, op-ed or campaign line. grade is the officials-scorecard grade (sitting officials only); lean summarises the cited items.",
- "count": 716,
+ "count": 717,
  "records": [
   {
    "chamber": "Senate",
@@ -29,13 +29,13 @@
    "name": "Angie Nixon",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Campaigning in Gainesville alongside Sen. Bernie Sanders, called for restrictions on AI data centers; she has pledged to cosponsor the Sanders-Ocasio-Cortez Artificial Intelligence Data Center Moratorium Act.",
+   "what": "Campaigning in Gainesville alongside Sen. Bernie Sanders, said she supports restrictions on AI data centers.",
    "date": "2026-10-19",
    "source": "https://www.wuft.org/politics/2026-10-19/in-gainesville-visit-senate-hopeful-angie-nixon-calls-for-data-center-restrictions-campaign-finance-reform",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-10-19",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-fl"
   },
   {
@@ -46,13 +46,13 @@
    "name": "Larry Marker",
    "party": "Republican",
    "kind": "statement",
-   "what": "Called data centers a political “hot potato” and proposed designated data-center parks sited away from population centers, prime farmland and critical water resources, comparing the approach to how feedlots are sited: “Each county can and should determine if they want data centers or not.”",
+   "what": "Asked by The Eastern New Mexico News how the federal government should regulate data centers, answered that local city or county ordinances should address where they go: “Each county can and should determine if they want data centers or not.”",
    "date": "2026-10-14",
    "source": "https://www.easternnewmexiconews.com/story/2026/10/14/news/marker-challenges-lujan-for-senate-seat/234373.html",
    "source_name": "",
    "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-10-19",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-nm"
   },
   {
@@ -69,7 +69,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-10-19",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-nm"
   },
   {
@@ -86,7 +86,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-10-19",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-fl"
   },
   {
@@ -103,7 +103,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-10-19",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-fl"
   },
   {
@@ -137,7 +137,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-10-19",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-va"
   },
   {
@@ -154,7 +154,7 @@
    "source_name": "",
    "grade": "",
    "lean": "consensus",
-   "as_of": "2026-10-19",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-nh"
   },
   {
@@ -171,7 +171,7 @@
    "source_name": "",
    "grade": "",
    "lean": "consensus",
-   "as_of": "2026-10-19",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-nh"
   },
   {
@@ -6302,13 +6302,13 @@
    "name": "Michele Tafoya",
    "party": "Republican",
    "kind": "statement",
-   "what": "Told a Forum News Service candidate survey that Minnesota should welcome investment as long as it is done responsibly with residents involved, that residents, farmers and businesses deserve a real say and “shouldn’t be left paying the bill,” and that developers must be upfront about what they need, what incentives they receive and how they will cover the costs their projects create. Her campaign did not answer the survey’s questions on tax breaks, a federal NDA ban, or environmental regulation, and she did not back a moratorium.",
+   "what": "Said in a statement reported by Forum News Service that Minnesota should welcome new economic growth but projects “have to work for the communities where they're being built”; that residents, farmers and businesses deserve a real say and “certainly shouldn't be left paying the bill”; and that developers must be upfront about what they need, what incentives they receive and how they will cover the costs their projects create. Her campaign did not respond to the outlet's questions on tax breaks, a federal NDA ban or environmental regulation. The report said none of the four candidates it covered said they would support a statewide or federal moratorium.",
    "date": "2026-09-11",
    "source": "https://www.inforum.com/news/minnesota/where-do-minnesota-statewide-office-candidates-stand-on-data-centers",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-10-19",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-mn"
   },
   {
@@ -7400,6 +7400,23 @@
    "page": "https://aigridwatch.com/senators#sen-c001098"
   },
   {
+   "chamber": "Senate",
+   "role": "candidate",
+   "state": "MI",
+   "district": "",
+   "name": "Mike Rogers",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "Announced he was calling for a one-year moratorium on new data center construction in Michigan, The Hill reported.",
+   "date": "2026-08-25",
+   "source": "https://thehill.com/policy/technology/6049559-ken-paxton-texas-senate-ai-data-center-plan/",
+   "source_name": "",
+   "grade": "",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/senate-races#race-mi"
+  },
+  {
    "chamber": "House",
    "role": "candidate",
    "state": "NM",
@@ -7475,13 +7492,13 @@
    "name": "Ken Paxton",
    "party": "Republican",
    "kind": "statement",
-   "what": "Released a four-point “Texas First Data Center Plan”: bar Chinese technology from powering American data centers, hold operators criminally liable where a center powers AI chatbots that endanger children, and co-sponsor Sen. Tom Cotton's DATA Act.",
+   "what": "Released a four-point plan: back legislation barring Chinese technology from powering data centers and holding developers criminally liable where their infrastructure powers AI chatbots that endanger children; co-sponsor Sen. Tom Cotton's DATA Act, which would exempt new off-grid electricity providers from certain federal regulations; and advocate for Gov. Abbott's state-level data center plan.",
    "date": "2026-08-24",
    "source": "https://thehill.com/policy/technology/6049559-ken-paxton-texas-senate-ai-data-center-plan/",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-08-25",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-tx"
   },
   {
@@ -7492,13 +7509,13 @@
    "name": "Ken Paxton",
    "party": "Republican",
    "kind": "statement",
-   "what": "Reported to have taken roughly $400,000 from data-center-connected donors; as attorney general, declined requests to act against local data-center development.",
+   "what": "The Texas Tribune reported his plan also champions Abbott's push to repeal the industry's sales-tax exemptions and backs a ban on AI data centers in rural Texas. It noted that as a state senator in 2013 he voted for the data center sales-tax exemption; that Hood County's February request for an attorney general opinion on whether it could impose a data center moratorium was still undecided six months later; and that NOTUS reported his political operation had taken nearly $450,000 from data-center-affiliated donors.",
    "date": "2026-08-24",
-   "source": "https://www.washingtonpost.com/nation/2026/08/24/ken-paxton-unveils-anti-data-center-plan-gop-voter-anger-mounts-texas/",
+   "source": "https://www.texastribune.org/2026/08/24/ken-paxton-james-talarico-data-centers-senate-texas/",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-08-25",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-tx"
   },
   {
@@ -7577,13 +7594,13 @@
    "name": "Jon Husted",
    "party": "Republican",
    "kind": "statement",
-   "what": "Bill introduced the day after Brown's first attack ad aired; reported to have taken roughly $69,750 from tech and energy PACs and employees including Google, Amazon, Microsoft, Oracle, AEP, Duke Energy and Vistra.",
+   "what": "Said in February that data centers should be “producing their own electricity so that it doesn't hit ratepayers” and recycling the water in their systems. A leaked National Republican Senatorial Committee memo called data centers “the anchor hanging around Husted's neck.”",
    "date": "2026-08-21",
    "source": "https://ohiocapitaljournal.com/2026/08/21/leaked-memo-about-data-centers-shows-gop-worried-about-ohios-u-s-senate-race/",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-08-25",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-oh"
   },
   {
@@ -7628,30 +7645,13 @@
    "name": "Mike Rogers",
    "party": "Republican",
    "kind": "statement",
-   "what": "Endorsed a one-year Michigan moratorium on new data-center development, citing community control, utility price hikes, water, and “pay-to-play schemes” — a state pause, not a national ban.",
-   "date": "2026-08-20",
-   "source": "https://www.detroitnews.com/story/news/politics/2026/08/20/data-center-politics-michigan-senate-mike-rogers-abdul-el-sayed/91385736007/",
-   "source_name": "",
-   "grade": "",
-   "lean": "mixed",
-   "as_of": "2026-08-25",
-   "page": "https://aigridwatch.com/senate-races#race-mi"
-  },
-  {
-   "chamber": "Senate",
-   "role": "candidate",
-   "state": "MI",
-   "district": "",
-   "name": "Mike Rogers",
-   "party": "Republican",
-   "kind": "statement",
-   "what": "Shift came days after reporting that he holds millions in tech investments that stand to benefit from the data-center buildout; his campaign would not say whether he would divest.",
+   "what": "Reversed his position and backed a statewide moratorium days after The Lever reported that he holds between $1.7 million and $2.6 million in companies that stand to benefit from tech-friendly policies and faster permitting for AI development. His campaign did not say whether he was considering divesting.",
    "date": "2026-08-20",
    "source": "https://michiganadvance.com/2026/08/20/after-data-center-investments-revealed-rogers-backs-statewide-moratorium/",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-08-25",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-mi"
   },
   {
@@ -7951,13 +7951,30 @@
    "name": "Sherrod Brown",
    "party": "Democratic",
    "kind": "statement",
-   "what": "Ran two July ads attacking Husted's record supporting tax breaks for data-center developers, and pledged to make data centers pay the full cost of their electricity use.",
+   "what": "Attacked Husted's record of supporting tax breaks for data-center developers in two July ads and, in a third, promised to make data centers pay the full cost of their electricity use. He called for ending the data center tax breaks and said local communities should decide whether data centers are built. He did not back a halt to construction.",
    "date": "2026-08-10",
    "source": "https://ohiocapitaljournal.com/2026/08/10/ohio-u-s-senate-candidates-offer-contrasting-visions-for-data-centers/",
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-08-25",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/senate-races#race-oh"
+  },
+  {
+   "chamber": "Senate",
+   "role": "candidate",
+   "state": "OH",
+   "district": "",
+   "name": "Jon Husted",
+   "party": "Republican",
+   "kind": "statement",
+   "what": "The Ohio Capital Journal reported he introduced the bill one day after an ad from his opponent on data centers was released, that as lieutenant governor he backed tens of millions of dollars in tax breaks for data center projects, and that he has otherwise called data centers a “local issue” the federal government should stay out of.",
+   "date": "2026-08-10",
+   "source": "https://ohiocapitaljournal.com/2026/08/10/ohio-u-s-senate-candidates-offer-contrasting-visions-for-data-centers/",
+   "source_name": "",
+   "grade": "",
+   "lean": "mixed",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-oh"
   },
   {
@@ -8556,6 +8573,23 @@
    "page": "https://aigridwatch.com/senators#sen-s001184"
   },
   {
+   "chamber": "Senate",
+   "role": "candidate",
+   "state": "NE",
+   "district": "",
+   "name": "Dan Osborn",
+   "party": "Independent",
+   "kind": "statement",
+   "what": "In prepared remarks at a press conference in rural Dunbar, said “we need to be focused on building hospitals, not data centers,” commended Gov. Jim Pillen for executive orders rolling back tax incentives for data centers, and said “we must protect our water and land, not sell it to the highest bidder.”",
+   "date": "2026-07-23",
+   "source": "https://rivercountry.newschannelnebraska.com/story/336427630/fact-check-dan-osborn-data-centers",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/senate-races#race-ne"
+  },
+  {
    "chamber": "House",
    "role": "candidate",
    "state": "MI",
@@ -8801,13 +8835,13 @@
    "name": "Jon Husted",
    "party": "Republican",
    "kind": "statement",
-   "what": "Introduced the Ratepayer Protection Act: standards for states and PUCs connecting 100 MW+ loads, requiring large-load customers to recover full incremental upgrade costs and post financial assurances so utilities cannot shift them to households. “We must do that without passing the costs on to working families and small businesses.”",
+   "what": "Introduced the Ratepayer Protection Act, which would require states to consider establishing standards for connecting large electricity users such as data centers, so that those customers pay for the generation, transmission and other infrastructure needed to serve them. “We must do that without passing the costs on to working families and small businesses.”",
    "date": "2026-07-20",
    "source": "https://www.husted.senate.gov/media/press-releases/husted-leads-bill-to-protect-americans-from-footing-the-bill-for-new-data-centers/",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-08-25",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-oh"
   },
   {
@@ -10036,6 +10070,23 @@
   },
   {
    "chamber": "Senate",
+   "role": "candidate",
+   "state": "GA",
+   "district": "",
+   "name": "Jon Ossoff",
+   "party": "Democratic",
+   "kind": "statement",
+   "what": "Wrote to FERC Chair Laura Swett asking, among other questions, whether FERC considers it credible or enforceable when technology companies say they will “pay their own way” for data center power, what it is doing to improve load forecasting, and how it will take part in standardising interconnection for large loads such as data centers.",
+   "date": "2026-04-20",
+   "source": "https://www.wrdw.com/2026/04/20/ossoff-looks-into-ga-data-centers-impact-power-bills/",
+   "source_name": "",
+   "grade": "",
+   "lean": "guardrails",
+   "as_of": "2026-11-21",
+   "page": "https://aigridwatch.com/senate-races#race-ga"
+  },
+  {
+   "chamber": "Senate",
    "role": "senator",
    "state": "MA",
    "district": "",
@@ -10118,23 +10169,6 @@
    "lean": "guardrails",
    "as_of": "2026-09-05",
    "page": "https://aigridwatch.com/senators#sen-m001198"
-  },
-  {
-   "chamber": "Senate",
-   "role": "candidate",
-   "state": "GA",
-   "district": "",
-   "name": "Jon Ossoff",
-   "party": "Democratic",
-   "kind": "statement",
-   "what": "Sent a letter to FERC probing the impact of AI servers on electricity bills.",
-   "date": "2026-04",
-   "source": "https://www.newsweek.com/ai-data-center-war-where-democrats-republicans-in-key-senate-races-stand-12354265",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-08-25",
-   "page": "https://aigridwatch.com/senate-races#race-ga"
   },
   {
    "chamber": "Senate",
@@ -11034,7 +11068,7 @@
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-08-25",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-ak"
   },
   {
@@ -11045,13 +11079,13 @@
    "name": "Mike Collins",
    "party": "Republican",
    "kind": "statement",
-   "what": "Campaigning on data centers: says Georgia's 200+ data centers matter but local leaders should decide whether one fits their community — “if a data center goes into a local community and destroys the infrastructure, you didn't do good” — while allowing a federal role given AI competition with China. Meta operates a large campus in his House district.",
+   "what": "Told voters he recognises the importance of Georgia's more than 200 data centers but would rather let local leaders decide whether one is the right fit: “I am a firm believer in local control. If a data center goes into a local community and destroys the infrastructure, you didn't do good.” He also said there is a role for the federal government “because we're in a race with China for AI.”",
    "date": "2026",
    "source": "https://www.local3news.com/local-news/decision-2026-u-s-senate-candidate-mike-collins-makes-campaign-stop-in-dalton/article_7ca14bf8-2e99-40a6-acc6-6dfd684a1f0e.html",
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-08-25",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-ga"
   },
   {
@@ -11068,7 +11102,7 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-08-25",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-ia"
   },
   {
@@ -11085,7 +11119,7 @@
    "source_name": "",
    "grade": "",
    "lean": "accelerate",
-   "as_of": "2026-08-25",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-ia"
   },
   {
@@ -11102,7 +11136,7 @@
    "source_name": "",
    "grade": "",
    "lean": "guardrails",
-   "as_of": "2026-08-25",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-me"
   },
   {
@@ -11119,25 +11153,8 @@
    "source_name": "",
    "grade": "",
    "lean": "mixed",
-   "as_of": "2026-08-25",
+   "as_of": "2026-11-21",
    "page": "https://aigridwatch.com/senate-races#race-me"
-  },
-  {
-   "chamber": "Senate",
-   "role": "candidate",
-   "state": "NE",
-   "district": "",
-   "name": "Dan Osborn",
-   "party": "Independent",
-   "kind": "statement",
-   "what": "Called for shifting investment away from data centers and toward hospitals.",
-   "date": "2026",
-   "source": "https://rivercountry.newschannelnebraska.com/story/336427630/fact-check-dan-osborn-data-centers",
-   "source_name": "",
-   "grade": "",
-   "lean": "guardrails",
-   "as_of": "2026-08-25",
-   "page": "https://aigridwatch.com/senate-races#race-ne"
   },
   {
    "chamber": "Senate",
