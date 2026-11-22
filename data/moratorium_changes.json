@@ -4527,5 +4527,12 @@
     "locality": "Arcata, CA",
     "kind": "status_changed",
     "detail": "Expired \u2192 Enacted"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "minneapolis-mn",
+    "locality": "Minneapolis, MN",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
   }
 ]

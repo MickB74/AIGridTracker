@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Week in Review: Loudoun County Pauses Data Centers for a Year, Minneapolis&#x27;s New Rules Die in a Failed Veto Override, and a New York Town&#x27;s Ban Hits a Legal Snag</title>
+      <link>https://aigridwatch.com/blog/week-in-review-2026-11-22</link>
+      <guid>https://aigridwatch.com/blog/week-in-review-2026-11-22</guid>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
+      <description>The country&#x27;s largest data center market, Loudoun County, Virginia, paused new approvals for 12 months this week — and half a dozen other local governments landed in just as many different places on the same spectrum. Minneapolis&#x27;s new data center ordinance died when the council fell short of the votes to override a mayoral veto; Rochester, Minnesota banned data centers outright with a 5-1 vote; San Francisco extended its own moratorium for the second time; a New York town&#x27;s 3-2 vote to ban data centers may not survive a landowner protest petition; and Olyphant, Pennsylvania took a $101 million settlement instead of a fight. Plus: Effingham County, Georgia approved OpenAI&#x27;s site plan while punting its moratorium decision to January, and Hillsboro, Oregon renewed its pause for a third time.</description>
+    </item>
+    <item>
       <title>Anthropic Went Public With $900 Billion in Compute Commitments. Here Are the Promises It Made to the Towns That Host It.</title>
       <link>https://aigridwatch.com/blog/anthropic-ipo-900-billion-compute-community-pledges-2026</link>
       <guid>https://aigridwatch.com/blog/anthropic-ipo-900-billion-compute-community-pledges-2026</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/georgia-data-center-lawsuits-statesboro-effingham-2026</guid>
       <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
       <description>Residents in Statesboro and Effingham County, Georgia filed separate Superior Court challenges to data center decisions between September 17 and 21. One attacks a rezoning, the other attacks how a development authority kept OpenAI&#x27;s deal quiet. Both lean on process rather than on whether a data center belongs there, and both started on a clock.</description>
-    </item>
-    <item>
-      <title>Climate Week Put Amazon&#x27;s Texas Gas Plant on the Agenda. Its Developer Is Already Pitching the Next County.</title>
-      <link>https://aigridwatch.com/blog/climate-week-amazon-pecos-brewster-2026</link>
-      <guid>https://aigridwatch.com/blog/climate-week-amazon-pecos-brewster-2026</guid>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <description>During Climate Week NYC, Amazon workers and Bill McKibben pointed at the 35-turbine gas plant Amazon is financing in Pecos County, Texas. The same week, that plant&#x27;s developer met Brewster County officials about a second off-grid data center and gas plant in the Glass Mountains. What a county in that position should know about the claims on both sides.</description>
     </item>
 </channel>
 </rss>

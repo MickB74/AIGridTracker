@@ -72,6 +72,364 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "week-in-review-2026-11-22",
+        "art": "review",
+        "section": "stories",
+        "title": (
+            "Week in Review: Loudoun County Pauses Data Centers for a Year, "
+            "Minneapolis's New Rules Die in a Failed Veto Override, and a "
+            "New York Town's Ban Hits a Legal Snag"
+        ),
+        "seo_title": "Loudoun County pause, Minneapolis veto: week in review",
+        "date": _dt.date(2026, 11, 22),
+        "author": "GridWatch AI",
+        "tags": ["week in review", "moratorium", "Virginia", "Minnesota",
+                 "California", "New York", "Pennsylvania", "Georgia",
+                 "Oregon", "community", "veto", "CBA"],
+        "summary": (
+            "The country's largest data center market, Loudoun County, "
+            "Virginia, paused new approvals for 12 months this week — and "
+            "half a dozen other local governments landed in just as many "
+            "different places on the same spectrum. Minneapolis's new data "
+            "center ordinance "
+            "died when the council fell short of the votes to override a "
+            "mayoral veto; Rochester, Minnesota banned data centers "
+            "outright with a 5-1 vote; San Francisco extended its own "
+            "moratorium for the second time; a New York town's 3-2 vote to "
+            "ban data centers may not survive a landowner protest petition; "
+            "and Olyphant, Pennsylvania took a $101 million settlement "
+            "instead of a fight. Plus: Effingham County, Georgia approved "
+            "OpenAI's site plan while punting its moratorium decision to "
+            "January, and Hillsboro, Oregon renewed its pause for a third "
+            "time."
+        ),
+        "body": """
+Welcome back to the GridWatch AI Week in Review — our Sunday roundup of the
+most important data center stories from the past seven days, what they mean
+for communities, and what you can learn from each one. This week's roundup
+runs from the country's single largest concentration of data centers to a
+town of about 11,000 people outside Scranton, and it shows the full range of
+ways a local government can respond to a project it didn't ask for.
+
+---
+
+### 1. Loudoun County, Virginia — the data center capital of the world pauses for a year
+
+**What happened:** The Loudoun County Board of Supervisors voted to pause
+new data center and electrical substation applications for up to 12
+months — the maximum a Virginia locality is allowed — in a vote on Nov. 17,
+according to [Data Center Dynamics](https://www.datacenterdynamics.com/)
+and [FOX 5 DC](https://www.fox5dc.com/). The county's own
+[announcement](https://www.loudoun.gov/) reports the vote at 7-1-1, with
+Supervisor Kristen Umstattd of Leesburg opposed and Supervisor Caleb
+Kershner of Catoctin abstaining. [Virginia Mercury](https://virginiamercury.com/)
+and [Commercial Observer](https://commercialobserver.com/) both noted the
+pause is retroactive to Sept. 15, and that the county has 33 active
+applications already in its pipeline that the pause does not touch.
+
+**Why it matters:** Loudoun County is "Data Center Alley" — the single
+largest concentration of data centers on the planet, and the place every
+other county's debate eventually gets compared to. A year-long pause there
+is a different kind of signal than the same pause in a town most people
+have never heard of.
+
+**What to learn — a "pause" and a "moratorium" aren't always the same
+legal tool, and the difference can decide what a county is allowed to do:**
+Virginia Mercury reported that the Loudoun County Attorney's Office had
+already determined the Board does not have the legal authority to halt
+*by-right administrative* applications — only the newer category of
+applications that require a legislative vote. That is why county
+officials are careful to call this a "pause" on legislative applications
+rather than a blanket moratorium: it is the broadest tool state law
+actually gives them, not the broadest tool they might want. Before you
+cite a neighboring county's moratorium as a model, find out whether your
+own state's enabling law lets your locality do the same thing, or only
+part of it. See the [Virginia state page](/states/virginia.html) and the
+[moratorium tracker](/moratoriums.html).
+
+*Sources: [Data Center Dynamics, Nov 17](https://www.datacenterdynamics.com/);
+[FOX 5 DC, Nov 17](https://www.fox5dc.com/);
+[Virginia Mercury, Nov 20](https://virginiamercury.com/);
+[Commercial Observer, Nov 18](https://commercialobserver.com/)*
+
+---
+
+### 2. Minnesota, two cities, two outcomes: Minneapolis's rules die in a failed veto override, Rochester bans first
+
+**What happened:** Minneapolis Mayor Jacob Frey vetoed the City Council's
+new data center ordinance on Nov. 19, and the council's attempt to override
+that veto failed 7-5 — two votes short of the nine required — at a special
+meeting on Nov. 20, according to
+[MPR News](https://www.mprnews.org/),
+[Axios Twin Cities](https://www.axios.com/) and
+[FOX 9 Minneapolis-St. Paul](https://www.fox9.com/). The council had passed
+the ordinance 7-6 the week before; Frey objected to a last-minute amendment
+requiring case-by-case council approval of every new data center, calling
+it a "de facto ban." With the city's temporary moratorium also expiring
+that weekend, [MPR News](https://www.mprnews.org/) reported Minneapolis now
+has no data center regulations on size, noise, energy or water use at all,
+while the Planning Commission starts over with a public hearing set for
+Dec. 14 and a council vote for Dec. 17. A hundred miles south,
+[KTTC](https://www.kttc.com/) reported the Rochester City Council passed
+its own one-year moratorium on a 5-1 vote on Nov. 17, even though city
+staff told the council there are no pending data center applications to
+pause.
+
+**Why it matters:** We covered Minneapolis's push for standing rules
+instead of an outright ban two weeks ago in
+[our last Week in Review](/blog/week-in-review-2026-11-15) — this week is
+what happened after the council actually tried to pass them. The ordinance
+is dead, not paused: Minneapolis will spend the next month with zero data
+center rules in place while a new draft works through the planning
+process.
+
+**What to learn — know the override number before the vote, not after:**
+A council that passes something on a narrow 7-6 margin has, by definition,
+not secured the votes to survive a mayoral veto if most charters require a
+two-thirds majority to override one — Minneapolis needed nine of thirteen.
+If your city's data center ordinance clears committee by a one- or
+two-vote margin, that margin tells you whether a veto is survivable before
+the mayor ever uses one. Rochester took the simpler, blunter path — a
+pause needs only a majority, which is why it passed with no project even
+on file yet. See the [Minnesota state page](/states/minnesota.html) and
+the [moratorium tracker](/moratoriums.html).
+
+*Sources: [MPR News, Nov 19 & Nov 20](https://www.mprnews.org/);
+[Axios Twin Cities, Nov 19](https://www.axios.com/);
+[FOX 9 Minneapolis-St. Paul, Nov 20](https://www.fox9.com/);
+[KTTC, Nov 16 & Nov 17](https://www.kttc.com/)*
+
+---
+
+### 3. San Francisco extends its data center moratorium again — because its own report found gaps
+
+**What happened:** The San Francisco Board of Supervisors voted on Nov. 17
+to extend the city's data center moratorium roughly another 10 and a half
+months, to around September 2027, according to
+[SFist](https://sfist.com/) and the
+[San Francisco Standard](https://sfstandard.com/). Both outlets reported
+the vote was unanimous except for Supervisor Connie Chan, who was absent.
+The Planning Department's own report, cited by both outlets, found data
+centers in the city are concentrated in southeast San Francisco, a part of
+the city that already carries a disproportionate share of its air
+pollution burden — though the report stopped short of finding that
+existing facilities are causing significant environmental harm on their
+own. Supervisor Shamann Walton, who sponsored the original pause in
+October, also sponsored this extension.
+
+**Why it matters:** San Francisco's first 45-day pause is already on our
+[moratorium tracker](/moratoriums.html), where it's flagged as
+"fixed_undated" because early coverage couldn't agree on an effective
+date. This extension is the city buying itself more time precisely because
+its own study wasn't finished — not because of outside pressure. One
+specific project, the NOVVA data center in Bayview, had been planning to
+grow from 9 to 36 megawatts by 2028; that expansion stays frozen for
+another ten months.
+
+**What to learn — an unfinished environmental study is itself a reason to
+extend a pause, and that's by design:** Several of the moratoriums we
+track exist specifically to buy time for a study the locality hasn't
+finished yet. When a report comes back incomplete or inconclusive, as
+San Francisco's did, that isn't a reason to let the pause lapse — in a
+well-run process it's the reason to extend it until the study is actually
+done. If your town's moratorium was passed "to study impacts," ask what
+specifically the study is supposed to answer, and whether an incomplete
+answer extends the pause or ends it. See the
+[California state page](/states/california.html) and the
+[community page for San Francisco](/communities/san-francisco-ca.html).
+
+*Sources: [SFist, Nov 17](https://sfist.com/);
+[San Francisco Standard, Nov 17](https://sfstandard.com/);
+[Mission Local, Nov 17](https://missionlocal.org/)*
+
+---
+
+### 4. Lansing, New York votes to ban data centers 3-2 — but a landowner petition could void it
+
+**What happened:** The Lansing Town Board voted 3-2 on Nov. 18 for a zoning
+change that would prohibit data centers and cryptocurrency mining
+facilities townwide, according to
+[Fingerlakes1](https://www.fingerlakes1.com/) and the
+[Cornell Daily Sun](https://www.cornellsun.com/). But a group of
+landowners — organized around TeraWulf, the company behind a proposed
+300-megawatt AI data center on Cayuga Lake — delivered a written protest
+petition the day before the vote. Under New York Town Law Section 265, a
+valid protest signed by owners of a large enough share of the affected
+land raises the threshold for approval from a simple majority to
+three-fourths of the board — four of Lansing's five members, not three.
+[Fingerlakes1](https://www.fingerlakes1.com/) reported the town was still
+verifying whether the petition's signers actually own enough of the
+affected land to trigger that higher bar.
+
+**Why it matters:** A 3-2 vote reads as a win in a headline. Whether it
+legally *is* one depends on a procedural question — acreage ownership
+percentages on a petition — that most residents watching a town board
+meeting have never heard of and that may not be resolved for days or weeks
+after the vote itself.
+
+**What to learn — in New York, and in some other states, a landowner
+protest petition can quietly change the number of votes a zoning change
+needs:** This is the single most consequential thing to check after a
+close local vote on a data center ban or ordinance: does your state's
+zoning enabling law let a qualifying group of affected landowners — not
+voters generally, specifically landowners — force a supermajority? If it
+does, find out the exact threshold (acreage percentage, not signature
+count) before declaring the vote final. See the
+[New York state page](/states/new-york.html) and the
+[moratorium tracker](/moratoriums.html) for how we flag a status that
+hasn't actually settled yet.
+
+*Sources: [Fingerlakes1, Nov 18 & Nov 20](https://www.fingerlakes1.com/);
+[Cornell Daily Sun, Nov 19 & Nov 21](https://www.cornellsun.com/);
+[WBNG, Nov 18](https://www.wbng.com/)*
+
+---
+
+### 5. Olyphant, Pennsylvania takes the money instead of the fight: a $101 million settlement, no ban
+
+**What happened:** Olyphant Borough Council voted 5-2 on Nov. 17 to settle
+its lawsuit with ERCOR Triboro LLC and approve a community benefits
+agreement worth $101 million over 15 years, clearing the way for the
+seven-building, roughly 470-acre Project Triboro data center campus,
+according to [WVIA](https://www.wvia.org/). Under the deal, the developer
+is allowed to skip the borough's conditional-use review process — the
+public hearing track the project would otherwise have had to clear — in
+exchange for guaranteed payments: $5 million a year for 15 years, plus
+additional milestone payments tied to each building permit issued. Several
+residents spoke against the deal before the vote, and WVIA reported the
+agreement does not include the Mid Valley School District, which will host
+the project's tax and infrastructure impact without being a party to the
+settlement that was supposed to address it.
+
+**Why it matters:** Olyphant had been fighting ERCOR Triboro in court; this
+settlement ends that fight by giving the borough guaranteed cash instead of
+the conditional-use hearings where residents could have pushed for
+specific limits (noise, setbacks, water use) project by project.
+
+**What to learn — a CBA that trades away your public hearing is trading
+away more than a vote:** A community benefits agreement is only as good as
+what it actually locks in, and what it gives up to get there. Olyphant's
+deal secures a payment schedule, but it also waives the conditional-use
+process — the mechanism that would have let the borough attach
+project-specific conditions as each building came up for approval. And a
+CBA negotiated by one government body doesn't automatically cover every
+body with a stake in the outcome: a school district that isn't a signatory
+has no claim on the settlement, even though it's the one that will see new
+students, new infrastructure demands, or new tax base depending on how the
+deal is actually structured. Before your town trades hearings for cash,
+ask who else is affected and whether they're in the room. See our
+[model CBA clause library](/cba-clauses.html) and the
+[community page for Olyphant](/communities/olyphant-pa.html).
+
+*Sources: [WVIA, Nov 18](https://www.wvia.org/);
+[Scranton Times-Tribune, Nov 18](https://www.thetimes-tribune.com/)*
+
+---
+
+### 6. Effingham County, Georgia approves OpenAI's site plan — and punts its moratorium decision to January
+
+**What happened:** Effingham County commissioners voted Nov. 17 to approve
+the preliminary site plan for OpenAI's $20 billion Project Camellia data
+center campus — now six buildings on more than 1,300 acres, up from an
+earlier four-building design — while delaying a separate vote on a
+proposed moratorium on future data center applications until January,
+according to the [Atlanta Journal-Constitution](https://www.ajc.com/) and
+[WTOC](https://www.wtoc.com/). [WRDW](https://www.wrdw.com/) reported some
+residents in the crowd shouted "nay" and "shame" as commissioners voted.
+The AJC reported the site plan approval is the second of three reviews the
+project must clear before breaking ground, with a more detailed
+development plan review still to come and construction targeted for early
+2027.
+
+**Why it matters:** We covered the lawsuits piling up against this project
+in [an earlier piece](/blog/georgia-data-center-lawsuits-statesboro-effingham-2026) —
+by November, Effingham County residents had filed a third suit alleging
+racketeering. None of that litigation stopped this week's vote. A pending
+lawsuit is not, by itself, a legal bar to a county continuing to approve
+permits; only a court order — an injunction — can do that, and none has
+been issued here.
+
+**What to learn — "approved" rarely means the last approval, and a
+lawsuit doesn't pause anything unless a judge says so:** Large projects
+clear review in stages — rezoning, then a preliminary site plan, then a
+detailed development plan, then permits — and a story that says a project
+was "approved" is usually describing one stage, not the whole thing. Ask
+which stage, and what's still ahead. Separately, if you're counting on a
+lawsuit to slow a project down while it's litigated, check whether anyone
+has actually asked for — and been granted — a preliminary injunction;
+otherwise the county keeps approving things on its normal schedule while
+the case proceeds in parallel. See the
+[Georgia state page](/states/georgia.html) and the
+[Project Camellia dossier](/projects/openai-project-camellia-effingham-ga.html).
+
+*Sources: [Atlanta Journal-Constitution, Nov 17](https://www.ajc.com/);
+[WTOC, Nov 17](https://www.wtoc.com/);
+[WRDW, Nov 18](https://www.wrdw.com/)*
+
+---
+
+### 7. Hillsboro, Oregon extends its data center moratorium for a third time
+
+**What happened:** The Hillsboro City Council voted on Nov. 17 to extend
+its data center land-use moratorium another six months, after nearly a
+dozen residents spoke at the meeting, according to
+[KPTV](https://www.kptv.com/). The council first adopted a 120-day
+moratorium in July; Oregon state law caps a single moratorium at 120 days,
+which is why Hillsboro's pause has had to come back for a council vote
+more than once rather than run on a single long clock the way Virginia's
+12-month pause or Rochester's one-year ban can.
+
+**Why it matters:** Hillsboro is one of Oregon's established data center
+hubs, alongside Prineville and The Dalles — see our
+[hidden water cost of a single prompt](/blog/hidden-water-cost) for what
+that kind of concentration actually costs a high-desert or suburban water
+system. City leaders said they still want more research time before
+writing permanent rules, which is the same justification Loudoun, San
+Francisco and several towns on our tracker have used for their own
+extensions this year.
+
+**What to learn — your state's statutory cap on moratorium length tells
+you how often your town has to come back and vote:** Virginia caps a
+legislative pause at 12 months. Oregon caps one at 120 days. Those are
+wildly different rhythms for the same tool, and neither is a surprise if
+you read your own state's enabling statute before the first vote.
+A town that has to renew every four months gives residents four more
+chances a year to show up and be heard than one that only has to renew
+once a year — know which clock your own town is on. See the
+[Oregon state page](/states/oregon.html) and the
+[community page for Hillsboro](/communities/hillsboro-or.html).
+
+*Sources: [KPTV, Nov 18](https://www.kptv.com/)*
+
+---
+
+### What to watch next week
+
+- **Minneapolis** — what the Planning Commission's Dec. 14 draft looks
+  like, and whether it can find nine votes this time
+- **Lansing, NY** — whether the TeraWulf-backed landowner petition is
+  validated, and whether the board's 3-2 vote ends up needing a fourth
+  vote it doesn't have
+- **Olyphant, PA** — whether the Mid Valley School District pursues its
+  own remedy now that the borough has settled without it
+- **Effingham County, GA** — what the county decides on its delayed
+  moratorium vote in January, and whether any of the three pending
+  lawsuits reach a ruling before then
+- **Loudoun County, VA** — how the county works through its backlog of 33
+  pending applications that the new pause doesn't cover
+- **San Francisco** — whether the Planning Department's extended study
+  finds the "significant" environmental impact that would let supervisors
+  extend the pause even further, up to 22 months total
+
+---
+
+*Every Sunday we cover the week's most important data center stories,
+explain the underlying concepts, and point you to the tools you need. Know
+a story we should cover? Reach out at hello@aigridwatch.com or sign up for
+the newsletter below.*
+""",
+    },
+    {
         "id": "anthropic-ipo-900-billion-compute-community-pledges-2026",
         "art": "negotiation",
         "section": "stories",

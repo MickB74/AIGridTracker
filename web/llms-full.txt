@@ -1,6 +1,6 @@
 # AI GridWatch — full text for answer engines
 
-Generated 2026-11-21. Site: https://aigridwatch.com. Data license: CC BY 4.0 with
+Generated 2026-11-22. Site: https://aigridwatch.com. Data license: CC BY 4.0 with
 attribution to "AI GridWatch (https://aigridwatch.com)". Rebuilt daily; every number below
 was true on the date above.
 
@@ -11,11 +11,11 @@ sourced registry of moratoriums, bans and pushback actions; project dossiers;
 news; analysis; and free negotiation tools for communities. It is not
 anti-development. Every claim on the site links to the document it came from.
 
-## Moratorium tracker — headline numbers (as of 2026-11-21)
+## Moratorium tracker — headline numbers (as of 2026-11-22)
 
 - 887 data center moratoriums and pushback actions tracked across
   49 states.
-- 710 in force today. 84 proposed. The remainder are expired,
+- 709 in force today. 84 proposed. The remainder are expired,
   rejected, vetoed or rescinded.
 - 887 rows carry a primary source URL and a verification date.
 - Tracker: https://aigridwatch.com/moratoriums · Methodology: https://aigridwatch.com/moratoriums-methodology
@@ -53,8 +53,8 @@ anti-development. Every claim on the site links to the document it came from.
 - Indiana: 20 in force, 2 proposed, 24 tracked — https://aigridwatch.com/states/indiana
 - Maryland: 19 in force, 3 proposed, 22 tracked — https://aigridwatch.com/states/maryland
 - Washington: 19 in force, 0 proposed, 19 tracked — https://aigridwatch.com/states/washington
-- Minnesota: 18 in force, 0 proposed, 18 tracked — https://aigridwatch.com/states/minnesota
 - Iowa: 17 in force, 1 proposed, 21 tracked — https://aigridwatch.com/states/iowa
+- Minnesota: 17 in force, 0 proposed, 18 tracked — https://aigridwatch.com/states/minnesota
 - Missouri: 17 in force, 0 proposed, 18 tracked — https://aigridwatch.com/states/missouri
 - Nebraska: 16 in force, 2 proposed, 19 tracked — https://aigridwatch.com/states/nebraska
 - Illinois: 14 in force, 3 proposed, 19 tracked — https://aigridwatch.com/states/illinois
@@ -100,6 +100,10 @@ anti-development. Every claim on the site links to the document it came from.
 
 ## Latest analysis
 
+### Week in Review: Loudoun County Pauses Data Centers for a Year, Minneapolis's New Rules Die in a Failed Veto Override, and a New York Town's Ban Hits a Legal Snag
+2026-11-22 — https://aigridwatch.com/blog/week-in-review-2026-11-22
+The country's largest data center market, Loudoun County, Virginia, paused new approvals for 12 months this week — and half a dozen other local governments landed in just as many different places on the same spectrum. Minneapolis's new data center ordinance died when the council fell short of the votes to override a mayoral veto; Rochester, Minnesota banned data centers outright with a 5-1 vote; San Francisco extended its own moratorium for the second time; a New York town's 3-2 vote to ban data centers may not survive a landowner protest petition; and Olyphant, Pennsylvania took a $101 million settlement instead of a fight. Plus: Effingham County, Georgia approved OpenAI's site plan while punting its moratorium decision to January, and Hillsboro, Oregon renewed its pause for a third time.
+
 ### Anthropic Went Public With $900 Billion in Compute Commitments. Here Are the Promises It Made to the Towns That Host It.
 2026-11-20 — https://aigridwatch.com/blog/anthropic-ipo-900-billion-compute-community-pledges-2026
 Anthropic began trading on Nov. 19. Its prospectus discloses about $900.9 billion in commitments, nearly all for compute and data centers, and repeats a pledge to cover electricity price increases its data centers cause. The company has also published commitments on tax incentives, NDAs and community benefit agreements. The prospectus names no sites. One landlord's filing does, in Navarro County, Texas, and its terms are worth reading against the pledges.
@@ -143,10 +147,6 @@ Oregon Gov. Tina Kotek ordered state regulators to stop issuing air and water pe
 ### Week in Review: San Francisco Bans Data Centers in the Birthplace of AI, Texas's Own Utility Regulator Sues to Keep Data Center Locations Secret, and Memphis's Moratorium Vote Ends in a Brawl
 2026-10-11 — https://aigridwatch.com/blog/week-in-review-2026-10-11
 This week San Francisco and Oakland each passed 45-day data center moratoriums in the city where OpenAI, Anthropic, and most of the AI industry is headquartered, and Texas's own Public Utility Commission sued Attorney General Ken Paxton's office to keep data center location records secret. Memphis's council postponed its moratorium vote twice amid a meeting that ended in a physical altercation, Raleigh passed a six-month pause after activists asked for 32 months, Georgia and Virginia regulators cited data centers for environmental and permit violations, and a federal judge upheld Nashville's authority to pause a project near the city zoo. Plus: Denver7 counted nearly 500 U.S. communities that have now paused or banned data centers.
-
-### Developers Are Suing Towns That Ban Data Centers. Here Is What the Cases Say.
-2026-10-09 — https://aigridwatch.com/blog/data-center-developer-lawsuits-moratorium-bans-2026
-At least eight data center developers have filed lawsuits against local moratoriums and bans in 2026. One Texas county rescinded its moratorium within two weeks of being sued for $100 million. Others are fighting back. The cases are drawing a practical line between bans that hold and bans that fold.
 
 Blog index: https://aigridwatch.com/blog/ · RSS: https://aigridwatch.com/blog/feed.xml
 News (ranked daily): https://aigridwatch.com/news/ · RSS: https://aigridwatch.com/news/feed.xml
