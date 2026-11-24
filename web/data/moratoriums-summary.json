@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-11-23",
+  "generated": "2026-11-24",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 887,
   "states": 49,
-  "enacted": 709,
+  "enacted": 707,
   "proposed": 84,
   "official_sourced": 71,
   "by_state": {
@@ -26,7 +26,7 @@
     },
     "IA": {
       "total": 21,
-      "enacted": 17,
+      "enacted": 16,
       "proposed": 1
     },
     "IL": {
@@ -51,7 +51,7 @@
     },
     "MI": {
       "total": 66,
-      "enacted": 52,
+      "enacted": 51,
       "proposed": 3
     },
     "TX": {
@@ -258,17 +258,17 @@
   "expiring_within_days": {
     "30": [
       "bloomington-il",
-      "washington-township-macomb-co-mi",
       "gates-county-nc",
       "nashville-tn",
       "cumberland-county-nc",
-      "marshalltown-ia",
+      "snohomish-county-wa",
       "starke-county-in",
       "johnson-city-tn",
       "coweta-county-ga",
       "jackson-county-mo",
       "fort-payne-al",
       "green-charter-township-mi",
+      "sedgwick-county-ks",
       "lake-county-fl",
       "howland-township-oh",
       "braceville-township-oh",
@@ -294,7 +294,6 @@
     ],
     "60": [
       "bloomington-il",
-      "washington-township-macomb-co-mi",
       "gates-county-nc",
       "nashville-tn",
       "hays-county-tx",
@@ -303,7 +302,6 @@
       "cumberland-county-nc",
       "snohomish-county-wa",
       "colleton-county-sc",
-      "marshalltown-ia",
       "oklahoma-city-ok",
       "starke-county-in",
       "johnson-city-tn",
@@ -379,7 +377,6 @@
     ],
     "90": [
       "bloomington-il",
-      "washington-township-macomb-co-mi",
       "gates-county-nc",
       "canton-nc",
       "chatham-county-nc",
@@ -402,7 +399,6 @@
       "cobb-county-ga",
       "russellville-ar",
       "louisville-ky",
-      "marshalltown-ia",
       "oklahoma-city-ok",
       "starke-county-in",
       "johnson-city-tn",
