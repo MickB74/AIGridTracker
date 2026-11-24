@@ -1,5 +1,5 @@
 # SOURCES review queue
-_Generated 2026-11-16 · 175 keys_
+_Generated 2026-11-24 · 175 keys_
 
 ## dead (3)
 - **`ga_house_2024`** — URLError: <urlopen error timed out> · <https://www.house.ga.gov/>
@@ -38,8 +38,8 @@ _Generated 2026-11-16 · 175 keys_
 - **`gartner`** — HTTP 403 — check by hand · <https://www.gartner.com/en/newsroom/press-releases/2025-11-17-gartner-says-electricity-demand-for-data-centers-to-grow-16-percent-in-2025-and-double-by-2030>
 - **`iea_2025`** — HTTP 403 — check by hand · <https://www.iea.org/reports/energy-and-ai>
 - **`lbnl`** — HTTP 403 — check by hand · <https://eta.lbl.gov/publications/2024-united-states-data-center-energy>
+- **`lbnl_price_trends`** — HTTP 429 — check by hand · <https://eta-publications.lbl.gov/sites/default/files/2025-01/retail_price_and_cost_trends_2024_update_final_v3.pdf>
 - **`reddit`** — HTTP 403 — check by hand · <https://www.reddit.com/>
 - **`sen_fetterman`** — HTTP 403 — check by hand · <https://thehill.com/homenews/senate/5877732-fetterman-ai-data-centers/>
 - **`sp_451`** — HTTP 403 — check by hand · <https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/110525-global-data-center-power-demand-expected-to-almost-double-by-2030>
-- **`stargate`** — HTTP 403 — check by hand · <https://openai.com/index/five-new-stargate-sites/>
 
