@@ -1,11 +1,11 @@
-# PA DEP data-center tracker sync — 2026-11-24
+# PA DEP data-center tracker sync — 2026-11-25
 
 Source: https://gis.dep.pa.gov/DataCenterPermitTracker/
 
-- DEP projects on file: **77**
+- DEP projects on file: **78**
 - DEP permit records: **419**
-- Added to projects.json: **0**
-- Refreshed: **0**
+- Added to projects.json: **1**
+- Refreshed: **1**
 - Skipped (already tracked by hand): **16**
 
 ## Skipped — hand-written row already covers this
@@ -28,4 +28,12 @@ Left alone on purpose. If the DEP row carries detail ours lacks (a permit trail,
 - DEP 10000066 *Salem Township Data Center Development (Amazon Web Services) - Phase 2* (Salem Township (Luzerne County)) → `aws-salem-township-pa`
 - DEP 10000067 *Falls Township Data Center Development (Amazon Web Services) - Phase 2* (Falls Township (Bucks County)) → `aws-falls-township-pa`
 - DEP 10000068 *Aligned Data Center - Phase 2* (Shippingport Borough (Beaver County)) → `aligned-shippingport-pa`
+
+## Added
+
+- `shaw-island-taylor-township-pa` — Shaw Island, Taylor Township (Lawrence County)
+
+## Refreshed
+
+- `sharon-data-center-project-city-of-sharon-pa` — Environmental permits under review at PA DEP (3 issued).
 

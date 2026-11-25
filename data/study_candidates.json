@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "candidates": [
     {
       "title": "State Rep. Newman Votes in Support of Establishing the Ohio Data Center Study Commission",
@@ -95,7 +95,7 @@
       "state_tracked": true,
       "query": "data center legislative study state",
       "first_seen": "2026-08-21",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -137,7 +137,7 @@
       "state_tracked": true,
       "query": "public utility commission data center report",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -151,7 +151,7 @@
       "state_tracked": false,
       "query": "public utility commission data center report",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -165,7 +165,7 @@
       "state_tracked": true,
       "query": "public utility commission data center report",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -235,7 +235,7 @@
       "state_tracked": false,
       "query": "data center impact study commissioned",
       "first_seen": "2026-09-05",
-      "last_seen": "2026-10-31",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -277,7 +277,7 @@
       "state_tracked": false,
       "query": "public utility commission data center report",
       "first_seen": "2026-09-05",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -305,7 +305,7 @@
       "state_tracked": false,
       "query": "public utility commission data center report",
       "first_seen": "2026-09-06",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -445,7 +445,7 @@
       "state_tracked": true,
       "query": "data center legislative study state",
       "first_seen": "2026-09-22",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -515,7 +515,7 @@
       "state_tracked": false,
       "query": "data center impact study commissioned",
       "first_seen": "2026-09-27",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -571,7 +571,7 @@
       "state_tracked": false,
       "query": "public utility commission data center report",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -599,7 +599,7 @@
       "state_tracked": false,
       "query": "data center legislative audit report",
       "first_seen": "2026-10-12",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -627,7 +627,7 @@
       "state_tracked": false,
       "query": "public utility commission data center report",
       "first_seen": "2026-10-15",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -823,7 +823,7 @@
       "state_tracked": true,
       "query": "data center legislative audit report",
       "first_seen": "2026-10-30",
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -879,7 +879,7 @@
       "state_tracked": false,
       "query": "public utility commission data center report",
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -907,7 +907,7 @@
       "state_tracked": false,
       "query": "public utility commission data center report",
       "first_seen": "2026-11-08",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -1005,7 +1005,7 @@
       "state_tracked": false,
       "query": "public utility commission data center report",
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -1019,7 +1019,7 @@
       "state_tracked": true,
       "query": "public utility commission data center report",
       "first_seen": "2026-11-14",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "new",
       "origin": "news-scan"
     },
@@ -1220,6 +1220,20 @@
       "origin": "news-scan"
     },
     {
+      "title": "Floyd County Commission approves data center regs in front of a packed room",
+      "outlet": "wrganews.com",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQT2NWbWszQ0N3MkJQQkw4d1ctR1BOSVREaENnQXZneExNYVk4NGt3VjFuMWpZcXVBZm5VSldPaDFPUmg4R3dCOUp6UEdTQzVKcGsybEloVlBUUDNxc2xJdVpuQnNGeGlWb3JMNVo4X1BXUzQzOTVHWXp6Qld4SGNsNTk5cG9SV3UwVVJCckFNSk11WGVJZDIwOVhGamVsNWFyT1pYaFBodlNGWlV4MHF5azJn?oc=5",
+      "published": "Tue, 25 Aug 2026",
+      "guess_state": null,
+      "guess_abbrev": null,
+      "state_tracked": false,
+      "query": "data center impact study commissioned",
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "status": "new",
+      "origin": "news-scan"
+    },
+    {
       "title": "Data center concerns dominate public comment for new legislative committee",
       "outlet": "North Dakota Monitor",
       "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOOUJCV1c2b3N2Mng0VGExSVltaDhab09Vc1BQUUVxbTdZWDdwOEpCLXlmTFVDYlBrMHB3X1dtcGRkNXd0cXVXWll4aHhiR3lKNkNPMFN5eXlramppSV8wbVFFai1LY2VlbU8wRmFOOWNOZ0t2aTl4Y3hfUlR5anI2ZUFKb1diTTlHTHZqbVVLcHpKUEtMWlJzTTJDMGR4QUxIdDh4MnIyV21TMDB5cWI1LUQyOWw3dlFU?oc=5",
@@ -1229,7 +1243,7 @@
       "state_tracked": false,
       "query": "data center legislative study state",
       "first_seen": "2026-08-15",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "watch",
       "origin": "news-scan",
       "triage": "ND interim legislative committee just forming; no study published yet. Re-check when it reports.",
@@ -1261,7 +1275,7 @@
       "state_tracked": false,
       "query": "data center legislative study state",
       "first_seen": "2026-08-15",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "watch",
       "origin": "news-scan",
       "triage": "OK legislature to study data centers; prospective, no report yet.",
@@ -1293,7 +1307,7 @@
       "state_tracked": true,
       "query": "data center legislative audit report",
       "first_seen": "2026-08-15",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "promoted",
       "origin": "news-scan",
       "triage": "Promoted 2026-08-15 → STATE_STUDIES['Texas'] (SB 6 + 2026 audit).",
@@ -1421,7 +1435,7 @@
       "state_tracked": false,
       "query": "data center impact study commissioned",
       "first_seen": "2026-08-15",
-      "last_seen": "2026-11-18",
+      "last_seen": "2026-11-25",
       "status": "dismissed",
       "origin": "news-scan",
       "triage": "Industry-funded (Amazon/E3), not a government study. Already noted as industry-funded in the environment page.",
@@ -1453,7 +1467,7 @@
       "state_tracked": true,
       "query": "data center legislative audit report",
       "first_seen": "2026-08-15",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "dismissed",
       "origin": "news-scan",
       "triage": "The VA JLARC 2024 report already tracked in the Virginia entry.",
@@ -1469,7 +1483,7 @@
       "state_tracked": false,
       "query": "data center legislative audit report",
       "first_seen": "2026-08-15",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "dismissed",
       "origin": "news-scan",
       "triage": "Coverage of the same VA JLARC 2024 report; already tracked.",
@@ -1485,7 +1499,7 @@
       "state_tracked": false,
       "query": "data center legislative audit report",
       "first_seen": "2026-08-15",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "dismissed",
       "origin": "news-scan",
       "triage": "Coverage of the same VA JLARC 2024 report; already tracked.",
@@ -1501,7 +1515,7 @@
       "state_tracked": false,
       "query": "data center legislative audit report",
       "first_seen": "2026-08-15",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "status": "dismissed",
       "origin": "news-scan",
       "triage": "Coverage of the same VA JLARC 2024 report; already tracked.",
