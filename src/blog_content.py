@@ -72,6 +72,195 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "botetourt-google-foia-ruling-walk-on-vote-2026",
+        "art": "oversight",
+        "section": "stories",
+        "title": (
+            "A Judge Stopped Google's Virginia Data Center Over a Vote the "
+            "County Never Described. The Project Is Not Dead."
+        ),
+        "seo_title": "Judge Halts Google's Botetourt Data Center Over FOIA Vote",
+        "date": _dt.date(2026, 11, 26),
+        "author": "GridWatch AI",
+        "tags": ["Virginia", "Botetourt County", "Google", "open meetings",
+                 "FOIA", "lawsuits", "performance agreement", "accountability"],
+        "summary": (
+            "A Virginia circuit judge voided Botetourt County's 2025 deal with "
+            "Google and ordered construction stopped, because supervisors "
+            "voted on it after a closed session without saying what it was. "
+            "The county can hold a proper hearing and vote again. Here is "
+            "what the ruling says, what it does not, and what to check in "
+            "your own county's minutes."
+        ),
+        "body": """
+On Monday, November 23, a circuit judge in Botetourt County, Virginia ordered
+construction to stop on Google's data center campus at the Botetourt Center at
+Greenfield. He did not rule that the project is bad for the county, uses too
+much water, or violates zoning. He ruled that the Board of Supervisors never
+told the public what it was voting on.
+
+That is a narrower win than the headlines suggest, and a more useful one. Most
+residents fighting a data center cannot prove the project is harmful. Many can
+check whether their local board followed its own state's open-meetings law.
+
+## What the judge ruled
+
+Substitute Judge Michael Doucette found that the board violated the Virginia
+Freedom of Information Act at its June 24, 2025 meeting, when it approved a
+performance agreement with Helio Capital LLC, the Google affiliate behind the
+project. According to
+[Cardinal News](https://cardinalnews.org/2026/11/23/judge-halts-google-data-center-construction-in-botetourt-county-orders-public-hearing/),
+which reported from the written ruling, the order does three things:
+
+- It rescinds every action the county has taken on the project since that
+  meeting.
+- It bars further action under the agreement.
+  [Virginia Business](https://virginiabusiness.com/judge-blocks-google-3b-data-center-campus-in-botetourt/)
+  reports the injunction forbids Helio Capital, and anyone acting on its
+  behalf, from doing construction on the campus.
+- It tells the board how to fix the problem: hold a public hearing that
+  "conforms to" the state's open-meetings law, then vote.
+
+The judge took the request for attorney fees under advisement and declined to
+order the county to follow the law in future, writing that if it does not,
+"the result will be the same as today."
+
+## What happened at the 2025 meeting
+
+The facts were not really in dispute. Cardinal News reports that the county's
+lawyer did not contest them and argued instead that the county had done enough.
+
+As the two outlets describe the record: the board went into closed session on
+a motion that cited economic development in the Amsterdam District, where the
+industrial park sits. The motion did not mention a performance agreement or a
+data center. The closed session ran well over an hour. When the board came
+back into public session, the chair called up "walk-on item number one," asked
+whether anyone had questions about the performance agreement resolution, and
+the board voted 5-0 with no discussion. The item had not been on the published
+agenda.
+
+The public announcement that the buyer was Google came later the same day,
+after a recess, at about 5:03 p.m. The county argued that this later
+announcement satisfied the law. The judge called that a "tortured reading of
+the statute." Virginia Business quotes him from the bench: "I have a
+fundamental disagreement about whether you can disclose 3.5 hours after the
+vote."
+
+The county's lawyer described the problems as "technical violations" and said
+"magic words" were not used. The judge's answer, as quoted by Cardinal News,
+is the part worth remembering: the act "is a technical and strictly procedural
+act," so "'magic words' must be used and 'technical violations' are not
+excused."
+
+## The statute he applied
+
+The rule is one sentence in the Code of Virginia.
+[Section 2.2-3711(B)](https://law.lis.virginia.gov/vacode/title2.2/chapter37/section2.2-3711/)
+says that nothing "adopted, passed or agreed to in a closed meeting shall
+become effective" unless the public body reconvenes in open meeting and votes
+on a resolution "that shall have its substance reasonably identified in the
+open meeting."
+
+The judge found that "walk-on item number one" did not identify anything, and
+concluded the board's action "never became effective." Cardinal News reports
+he relied on a 2023 Virginia Supreme Court decision that voided Fairfax
+County's rewritten zoning ordinance over an open-meetings violation.
+
+Two neighboring sections matter to anyone thinking about a similar case in
+Virginia.
+[Section 2.2-3712(A)](https://law.lis.virginia.gov/vacode/title2.2/chapter37/section2.2-3712/)
+requires the motion to enter closed session to identify the subject matter,
+state the purpose, and cite the exemption, and says a general reference is not
+enough.
+[Section 2.2-3713](https://law.lis.virginia.gov/vacode/title2.2/chapter37/section2.2-3713/)
+lets any person denied rights under the act petition for an injunction, says a
+single violation is enough to invoke the remedy, calls for a hearing within
+seven days, and entitles a petitioner who substantially prevails to costs and
+attorney fees unless special circumstances make that unjust.
+
+The speed is real. Robert Dallas, a retired anesthesiologist who lives about
+half a mile from the site,
+[filed on November 2](https://cardinalnews.org/2026/11/02/lawsuit-claims-botetourt-countys-data-center-agreement-with-google-is-invalid/).
+The judge
+[refused to dismiss the case on November 10](https://cardinalnews.org/2026/11/11/lawsuit-over-botetourt-county-data-center-project-can-move-forward-judge-rules/)
+and ruled on November 23. That is three weeks from filing to an order halting
+a project Virginia Business values at $3 billion.
+
+## What the ruling does not do
+
+It does not kill the project. Every source that covered the ruling says the
+same thing: the county can hold a compliant public hearing and vote again, and
+the result may be identical. It can also appeal. The county's statement
+said it was "evaluating its options," and Google told
+[WSLS](https://www.wsls.com/news/local/2026/11/24/google-data-center-lawsuit-ruling/)
+it was evaluating the ruling.
+
+It does not make the site go quiet overnight. Board chair Mac Scothorn said
+Tuesday that construction activity would be minimal through the holidays and
+limited to keeping the site in compliance with its permits.
+[The Roanoke Rambler](https://www.roanokerambler.com/a-judge-stopped-googles-botetourt-data-center/)
+reports a county spokesman said wind-down activity could continue for several
+days, possibly a week.
+
+It does not settle the money. Google paid about $14.06 million for the 312
+acres and pledged $4 million for county projects. Testimony showed $2.5
+million of that pledge has already been transferred and spent on things like
+ambulances and fire trucks. Lawyers for the county and Helio argued that this,
+and grading that began in September, made the suit too late. The judge was not
+persuaded, but nobody has said what happens to money already spent under an
+agreement a court now says never took effect. The Rambler reports the board
+pulled two agenda items on Tuesday that depended on Google funds.
+
+It does not bind other courts. This is one circuit judge's ruling. Megan Rhyne
+of the Virginia Coalition for Open Government told Virginia Business it is
+uncommon for a judge to invalidate a public body's action over a FOIA
+violation, and that it is too early to know the wider effect.
+
+And the board that votes next is not the board that voted in 2025. Two of the
+five supervisors from that meeting are gone, replaced by members elected a few
+months after the deal was announced.
+
+## What to check in your own county
+
+This ruling applies Virginia law. Every state has its own open-meetings act,
+with its own notice rules, deadlines and remedies, and a violation that
+voids a vote in Virginia may not void one where you live. So the lesson is
+not "sue over the agenda." It is that the paper trail of the
+approval meeting is public, checkable, and sometimes decisive.
+
+For the meeting where your project's key agreement was approved, pull the
+published agenda, the minutes, and the video if one exists, and ask:
+
+1. Was the item on the agenda that was published before the meeting, or added
+   during it?
+2. If there was a closed session, what did the motion to close say? Did it
+   name the subject, or only a category like "economic development"?
+3. When the board came back and voted, did anyone say out loud what the
+   resolution was and what it committed the county to?
+4. Was the public told at the time of the vote, or later?
+5. What does your state's law say happens to a vote that skipped those steps,
+   and how long do you have to challenge it?
+
+Question five needs a lawyer licensed in your state. The first four need a
+records request and an evening. In Botetourt, residents had been saying for
+more than a year that the process was wrong. What changed the outcome was
+finding the specific sentence in the statute that the meeting did not satisfy.
+
+## See also
+
+- [Google Botetourt project dossier](/projects/google-botetourt-greenfield-va.html):
+  the timeline, permits and public records for this site.
+- [Botetourt County community briefing](/communities/botetourt-county-va.html):
+  who sits on the board, when it meets, and how to comment.
+- [Virginia state page](/states/virginia.html): every tracked project and
+  moratorium in the state.
+- [Developers Are Suing Towns That Ban Data Centers. Here Is What the Cases Say.](/blog/data-center-developer-lawsuits-moratorium-bans-2026):
+  the lawsuits running in the other direction.
+- [Loudoun County Did Not Pause Data Centers. It Voted to Draft a Pause.](/blog/loudoun-pause-vote-2026):
+  another Virginia case where the procedural detail was the whole story.
+""",
+    },
+    {
         "id": "week-in-review-2026-11-22",
         "art": "review",
         "section": "stories",

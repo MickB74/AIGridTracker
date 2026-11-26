@@ -21035,9 +21035,9 @@
       "announced": "2025-06-20",
       "rezoning_filed": "",
       "hearing_date": "",
-      "decided_date": "2025-06-24",
-      "outcome": "approved",
-      "stage": "Approved",
+      "decided_date": "",
+      "outcome": "",
+      "stage": "In review",
       "days_to_hearing": null,
       "note": "312 acres bought from the county for $14.06M (Jun 20, 2025) plus $4M in grants; performance agreement approved by the EDA Jun 20 and the Board of Supervisors Jun 24, 2025. First building due 2028; first-building cooling announced as air-cooled after a fight over drawing from Carvins Cove. A board-appointed water study commission (Jul 28, 2026, 3-1) reports within six months. Grading permit issued Aug 2026.",
       "source": "https://www.botetourtva.gov/1021/Google-Data-Center",
@@ -21073,6 +21073,18 @@
           "kind": "permit",
           "summary": "The county issued Google a Land Disturbance Permit allowing phased grading of the 312-acre site.",
           "source": "https://www.wsls.com/news/local/2026/08/28/grading-to-begin-for-google-data-center-campus-in-botetourt-county/"
+        },
+        {
+          "date": "2026-11-02",
+          "kind": "lawsuit",
+          "summary": "County resident Robert Dallas petitioned Botetourt County Circuit Court to rescind the June 2025 performance agreement, alleging the Board of Supervisors violated the Virginia Freedom of Information Act by voting on it after a closed session without identifying it on the agenda or in open meeting.",
+          "source": "https://cardinalnews.org/2026/11/02/lawsuit-claims-botetourt-countys-data-center-agreement-with-google-is-invalid/"
+        },
+        {
+          "date": "2026-11-23",
+          "kind": "ruling",
+          "summary": "Substitute Judge Michael Doucette ruled the board violated the Virginia Freedom of Information Act at its June 24, 2025 meeting, rescinded all county actions on the project since then, enjoined further action under the performance agreement and ordered construction stopped. The county may hold a compliant public hearing and vote again; it said it is evaluating its options.",
+          "source": "https://cardinalnews.org/2026/11/23/judge-halts-google-data-center-construction-in-botetourt-county-orders-public-hearing/"
         }
       ]
     },

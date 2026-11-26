@@ -4534,5 +4534,19 @@
     "locality": "Minneapolis, MN",
     "kind": "status_changed",
     "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-26",
+    "id": "washington-township-macomb-co-mi",
+    "locality": "Washington Township (Macomb Co.), MI",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-26",
+    "id": "marshalltown-ia",
+    "locality": "Marshalltown, IA",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
   }
 ]

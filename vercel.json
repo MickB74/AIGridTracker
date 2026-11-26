@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/botetourt-google-foia-ruling-walk-on-vote-2026",
+      "destination": "/blog/botetourt-google-foia-ruling-walk-on-vote-2026",
+      "permanent": true
+    },
+    {
       "source": "/week-in-review-2026-11-22",
       "destination": "/blog/week-in-review-2026-11-22",
       "permanent": true
