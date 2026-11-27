@@ -1,11 +1,11 @@
 {
   "name": "AI GridWatch moratorium tracker \u2014 summary",
-  "generated": "2026-11-26",
+  "generated": "2026-11-27",
   "license": "CC BY 4.0",
   "source_page": "https://aigridwatch.com/moratoriums",
   "count": 887,
   "states": 49,
-  "enacted": 707,
+  "enacted": 706,
   "proposed": 84,
   "official_sourced": 71,
   "by_state": {
@@ -31,7 +31,7 @@
     },
     "IL": {
       "total": 19,
-      "enacted": 14,
+      "enacted": 13,
       "proposed": 3
     },
     "UT": {
@@ -257,7 +257,6 @@
   },
   "expiring_within_days": {
     "30": [
-      "bloomington-il",
       "gates-county-nc",
       "nashville-tn",
       "cumberland-county-nc",
@@ -276,6 +275,7 @@
       "waterville-township-oh",
       "cache-county-ut",
       "box-elder-county-ut",
+      "logan-ut",
       "clinton-tn",
       "brookville-pa",
       "center-township-pa",
@@ -293,7 +293,6 @@
       "milford-ut"
     ],
     "60": [
-      "bloomington-il",
       "gates-county-nc",
       "nashville-tn",
       "hays-county-tx",
@@ -354,6 +353,7 @@
       "lansing-mi",
       "haring-township-mi",
       "orion-township-mi",
+      "bannock-county-id",
       "yankton-county-sd",
       "newton-county-ga",
       "forest-park-ga",
@@ -377,7 +377,6 @@
       "cherry-county-ne"
     ],
     "90": [
-      "bloomington-il",
       "gates-county-nc",
       "canton-nc",
       "chatham-county-nc",
@@ -418,6 +417,7 @@
       "south-lyon-mi",
       "big-rapids-township-mi",
       "madison-wi",
+      "dearborn-county-in",
       "pulaski-county-in",
       "marysville-wa",
       "pasco-wa",
@@ -430,6 +430,7 @@
       "mount-vernon-wa",
       "jackson-ms",
       "eastport-me",
+      "larimer-county-co",
       "lake-county-fl",
       "anderson-county-sc",
       "woodford-county-il",
@@ -498,6 +499,7 @@
       "boyd-county-ky",
       "georgetown-ky",
       "shelby-county-ky",
+      "orangetown-ny",
       "webster-county-mo",
       "nodaway-county-mo",
       "spokane-county-wa",
