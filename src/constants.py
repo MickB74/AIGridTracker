@@ -7805,6 +7805,67 @@ STATE_GRID_PROFILES = {
     "Wyoming":        {"rate": 0.148, "gco2": 460, "water_stress": "low"},
 }
 
+# How each state's residential rate has moved (cents/kWh, EIA). `ytd26` and
+# `ytd25` are January-September 2026 and 2025 from Electric Power Monthly
+# Table 5.6.B (a nine-month average, so a clean like-for-like year-over-year
+# comparison); `y2020` is the full-year 2020 average from EIA's historical
+# state price file (the file stops at 2020). Nominal dollars, not inflation-
+# adjusted. This shows THAT rates moved, never WHY: no cause is attributed.
+STATE_RATE_TREND = {
+    "Alabama": {"y2020": 12.58, "ytd25": 16.05, "ytd26": 16.53},
+    "Alaska": {"y2020": 22.57, "ytd25": 26.18, "ytd26": 27.38},
+    "Arizona": {"y2020": 12.27, "ytd25": 15.19, "ytd26": 15.3},
+    "Arkansas": {"y2020": 10.41, "ytd25": 12.86, "ytd26": 13.85},
+    "California": {"y2020": 20.45, "ytd25": 31.21, "ytd26": 32.35},
+    "Colorado": {"y2020": 12.36, "ytd25": 15.58, "ytd26": 16.92},
+    "Connecticut": {"y2020": 22.71, "ytd25": 30.23, "ytd26": 27.44},
+    "Delaware": {"y2020": 12.56, "ytd25": 16.92, "ytd26": 18.08},
+    "District of Columbia": {"y2020": 12.63, "ytd25": 21.44, "ytd26": 24.96},
+    "Florida": {"y2020": 11.27, "ytd25": 15.13, "ytd26": 15.25},
+    "Georgia": {"y2020": 12.02, "ytd25": 14.91, "ytd26": 15.58},
+    "Hawaii": {"y2020": 30.28, "ytd25": 40.35, "ytd26": 46.64},
+    "Idaho": {"y2020": 9.95, "ytd25": 11.73, "ytd26": 13.14},
+    "Illinois": {"y2020": 13.04, "ytd25": 17.6, "ytd26": 19.22},
+    "Indiana": {"y2020": 12.83, "ytd25": 15.81, "ytd26": 17.04},
+    "Iowa": {"y2020": 12.46, "ytd25": 13.81, "ytd26": 14.6},
+    "Kansas": {"y2020": 12.85, "ytd25": 14.35, "ytd26": 15.33},
+    "Kentucky": {"y2020": 10.87, "ytd25": 13.07, "ytd26": 14.12},
+    "Louisiana": {"y2020": 9.67, "ytd25": 12.52, "ytd26": 13.28},
+    "Maine": {"y2020": 16.81, "ytd25": 27.51, "ytd26": 30.33},
+    "Maryland": {"y2020": 13.01, "ytd25": 19.13, "ytd26": 21.34},
+    "Massachusetts": {"y2020": 21.97, "ytd25": 30.22, "ytd26": 30.27},
+    "Michigan": {"y2020": 16.26, "ytd25": 20.06, "ytd26": 21.88},
+    "Minnesota": {"y2020": 13.17, "ytd25": 15.91, "ytd26": 16.54},
+    "Mississippi": {"y2020": 11.17, "ytd25": 13.88, "ytd26": 14.98},
+    "Missouri": {"y2020": 11.22, "ytd25": 13.55, "ytd26": 14.49},
+    "Montana": {"y2020": 11.24, "ytd25": 12.93, "ytd26": 14.28},
+    "Nebraska": {"y2020": 10.8, "ytd25": 12.09, "ytd26": 13.03},
+    "Nevada": {"y2020": 11.34, "ytd25": 13.12, "ytd26": 13.35},
+    "New Hampshire": {"y2020": 19.04, "ytd25": 23.78, "ytd26": 27.12},
+    "New Jersey": {"y2020": 16.03, "ytd25": 22.42, "ytd26": 24.14},
+    "New Mexico": {"y2020": 12.94, "ytd25": 14.85, "ytd26": 15.53},
+    "New York": {"y2020": 18.36, "ytd25": 26.22, "ytd26": 29.17},
+    "North Carolina": {"y2020": 11.38, "ytd25": 13.93, "ytd26": 15},
+    "North Dakota": {"y2020": 10.44, "ytd25": 11.84, "ytd26": 12.62},
+    "Ohio": {"y2020": 12.29, "ytd25": 16.72, "ytd26": 18.84},
+    "Oklahoma": {"y2020": 10.12, "ytd25": 13.16, "ytd26": 14.01},
+    "Oregon": {"y2020": 11.17, "ytd25": 15.43, "ytd26": 15.49},
+    "Pennsylvania": {"y2020": 13.58, "ytd25": 19, "ytd26": 21.24},
+    "Rhode Island": {"y2020": 22.01, "ytd25": 29.02, "ytd26": 29.14},
+    "South Carolina": {"y2020": 12.78, "ytd25": 15.03, "ytd26": 15.97},
+    "South Dakota": {"y2020": 11.75, "ytd25": 13.34, "ytd26": 14.75},
+    "Tennessee": {"y2020": 10.76, "ytd25": 13.25, "ytd26": 13.73},
+    "Texas": {"y2020": 11.71, "ytd25": 15.25, "ytd26": 16.01},
+    "Utah": {"y2020": 10.44, "ytd25": 12.97, "ytd26": 13.21},
+    "Vermont": {"y2020": 19.54, "ytd25": 22.43, "ytd26": 24.02},
+    "Virginia": {"y2020": 12.03, "ytd25": 15.14, "ytd26": 17.03},
+    "Washington": {"y2020": 9.87, "ytd25": 12.99, "ytd26": 14.47},
+    "West Virginia": {"y2020": 11.8, "ytd25": 15.42, "ytd26": 15.64},
+    "Wisconsin": {"y2020": 14.32, "ytd25": 18.08, "ytd26": 19.09},
+    "Wyoming": {"y2020": 11.11, "ytd25": 13.24, "ytd26": 14.09},
+}
+
+
 # Named campus siting locations: regional temperature penalty on PUE,
 # interconnection queue wait (months), and grid carbon (gCO2/kWh). `iso` is
 # the regional grid operator the site sits under; the community siting
@@ -8283,6 +8344,10 @@ SOURCES = {
                      "https://www.gridstatus.io/"),
     "eia_rates":    ("EIA — Electric Power Monthly, Table 5.6.A: average retail price of electricity to residential customers by state (the current figure, updated monthly)",
                      "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a"),
+    "eia_rates_ytd": ("EIA — Electric Power Monthly, Table 5.6.B: average residential price by state, year-to-date (Jan-Sep 2026 vs Jan-Sep 2025)",
+                     "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_b"),
+    "eia_price_hist": ("EIA — Average price of electricity by state by provider, 1990-2020 (annual, historical file)",
+                     "https://www.eia.gov/electricity/data/state/"),
     "eia930":       ("EIA-930 — hourly net generation by fuel type (API v2, free key)",
                      "https://www.eia.gov/opendata/browser/electricity/rto/fuel-type-data"),
     "cbre_dc":      ("CBRE — North America Data Center Trends 2025 (market operational MW)",
@@ -9294,6 +9359,19 @@ STATE_PUCS_DF = pd.DataFrame(STATE_PUCS)
 # --------------------------------------------------------------------------- #
 
 REGISTRY_PROVENANCE = {
+    "STATE_RATE_TREND": {
+        "label": "State residential rate trend",
+        "as_of": "September 2026",
+        "source": "eia_rates_ytd",
+        "churn": "high",
+        "caveat": (
+            "Year-over-year compares January-September 2026 with the same "
+            "nine months of 2025, EIA Table 5.6.B. The 2020 figure is EIA's "
+            "full-year 2020 average; the file stops there, so 2021-2025 "
+            "annual values are not shown. Prices are nominal, not adjusted "
+            "for inflation. A rise in a rate is not shown to be caused by "
+            "data centers; this table cannot attribute a cause."),
+    },
     "STATE_DC_DF": {
         "label": "State data center counts & electricity use",
         "as_of": "July 2026",

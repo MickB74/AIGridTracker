@@ -44,6 +44,7 @@ from src.permit_lookup import (
     sections as permit_sections, state_portal,
 )
 from src.constants import (
+    STATE_RATE_TREND,
     AI_COMPETITORS_DF, STATE_STUDIES, MODEL_CLAUSES,
     STATE_GRID_PROFILES, STATE_DC_DF, STATE_DC_NATIONAL,
     STATE_PUCS_DF, MORATORIUMS_DF,
@@ -2480,6 +2481,46 @@ def _state_lead_sentence(state, moras, dc_count, twh, plain=False):
     return text if plain else esc(text)
 
 
+def _rate_trend_html(state):
+    """Residential-rate movement for one state, from STATE_RATE_TREND.
+
+    Shows the like-for-like nine-month change and the 2020 baseline as
+    bars on a shared scale. Says that rates moved, never why.
+    """
+    t = STATE_RATE_TREND.get(state)
+    if not t:
+        return ""
+    y20, a, b = t["y2020"], t["ytd25"], t["ytd26"]
+    yoy = (b / a - 1) * 100
+    since = (b / y20 - 1) * 100
+    top = max(y20, a, b)
+    def bar(label, v, strong=False):
+        w = v / top * 100
+        col = "var(--accent, #5fd1bd)" if strong else "rgba(150,160,185,.55)"
+        return (f'<div style="display:flex;align-items:center;gap:10px;margin:5px 0">'
+                f'<span style="flex:0 0 150px;font-size:.88rem">{label}</span>'
+                f'<span style="flex:1;background:rgba(150,160,185,.12);border-radius:4px;height:14px">'
+                f'<span style="display:block;width:{w:.1f}%;height:100%;border-radius:4px;background:{col}"></span></span>'
+                f'<b style="flex:0 0 58px;text-align:right">{v:.1f}&cent;</b></div>')
+    return f"""
+<section class="rate-trend" aria-label="Residential rate trend">
+  <h2>How {esc(state)}'s residential rate has moved</h2>
+  <p>Residents here pay <b>{b:.1f}&cent;/kWh</b> on average in 2026 so far,
+  <b>{yoy:+.1f}%</b> against the same nine months of 2025
+  (<a href="{esc(SOURCES["eia_rates_ytd"][1])}" rel="nofollow">EIA Table 5.6.B</a>). Against EIA's full-year 2020 average the
+  change is <b>{since:+.0f}%</b> (<a href="{esc(SOURCES["eia_price_hist"][1])}" rel="nofollow">EIA historical prices</a>).</p>
+  {bar("2020 (full year)", y20)}
+  {bar("Jan&ndash;Sep 2025", a)}
+  {bar("Jan&ndash;Sep 2026", b, True)}
+  <p class="muted" style="margin-top:6px">Nominal prices, not adjusted for
+  inflation; EIA publishes no 2021&ndash;2025 annual series in this file. This
+  shows that the rate moved, not why &mdash; it cannot be attributed to data
+  centers or to any other single cause. To find out what is driving your
+  utility's rates, read its rate-case docket at your PUC.</p>
+  {provenance_html("STATE_RATE_TREND")}
+</section>
+"""
+
 def build_state(state, news_only=None):
     prof = STATE_GRID_PROFILES[state]
     row = STATE_DC_DF[STATE_DC_DF["state"] == state]
@@ -2765,6 +2806,7 @@ def build_state(state, news_only=None):
   <div class="stat"><b>{prof['gco2']}</b><span>grid gCO&#8322;/kWh · water stress: {esc(prof['water_stress'])}</span></div>
 </div>
 {provenance_html("STATE_DC_DF")}
+{_rate_trend_html(state)}
 {_html_sections_grouped(grouped)}
 {cta_html}
 {muni_html}
