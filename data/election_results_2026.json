@@ -6,13 +6,13 @@
   "AK": {
    "winner": "Mary Peltola",
    "winner_party": "Democratic",
-   "status": "called",
-   "source": "https://www.kyuk.org/politics/2026-11-19/doj-abandons-lawsuit-that-sought-to-pause-certification-of-alaskas-us-senate-election",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
+   "status": "certified",
+   "source": "https://www.elections.alaska.gov/",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
    "flip": true,
-   "vote_note": "50.1%–45.8%",
-   "note": "The Justice Department told the 9th Circuit on Nov. 19 that it is no longer pursuing its lawsuit over certification, and the Division of Elections director said she intends to certify the result the following week."
+   "vote_note": "50.14%–45.78% (144,583 to 132,022)",
+   "note": "The Division of Elections lists the 2026 general election as certified. Peltola cleared 50%, so there was no ranked-choice tabulation."
   },
   "AL": {
    "winner": "Barry Moore",
@@ -35,38 +35,42 @@
   "CO": {
    "winner": "John Hickenlooper",
    "winner_party": "Democratic",
-   "status": "called",
-   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
-   "vote_note": "60.2%–35.6%"
+   "status": "certified",
+   "source": "https://www.coloradosos.gov/pubs/newsRoom/pressReleases/2026/PR20261127GeneralCertified.html",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
+   "vote_note": "60.2%–35.6%",
+   "note": "The state certified its results on 2026-11-27."
   },
   "DE": {
    "winner": "Chris Coons",
    "winner_party": "Democratic",
-   "status": "called",
-   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
-   "vote_note": "63.6%–36.4%"
+   "status": "certified",
+   "source": "https://elections.delaware.gov/results/enr/GE2026.html",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
+   "vote_note": "63.58%–36.42% (240,587 to 137,837)",
+   "note": "The state election authority labels these results official; no dated certification announcement was found."
   },
   "FL": {
    "winner": "Ashley Moody",
    "winner_party": "Republican",
-   "status": "called",
-   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
-   "vote_note": "50.9%–48.0%"
+   "status": "certified",
+   "source": "https://floridaelectionwatch.gov/FederalOffices/USSenator",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
+   "vote_note": "50.86%–48.00% (4,211,733 to 3,975,375)",
+   "note": "The state election authority labels these results official; no dated certification announcement was found."
   },
   "GA": {
    "winner": "Jon Ossoff",
    "winner_party": "Democratic",
-   "status": "called",
-   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
-   "vote_note": "59.0%–41.0%"
+   "status": "certified",
+   "source": "https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
+   "vote_note": "59.03%–40.97% (2,469,059 to 1,713,673)",
+   "note": "The state election authority labels these results official; no dated certification announcement was found."
   },
   "IA": {
    "winner": "Josh Turek",
@@ -81,11 +85,12 @@
   "ID": {
    "winner": "Jim Risch",
    "winner_party": "Republican",
-   "status": "called",
-   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
-   "vote_note": "56.5%–33.6%"
+   "status": "certified",
+   "source": "https://results.voteidaho.gov/results/public/id/elections/nov2026",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
+   "vote_note": "56.50%–33.57% (402,983 to 239,422)",
+   "note": "The state election authority labels these results official; no dated certification announcement was found."
   },
   "IL": {
    "winner": "Juliana Stratton",
@@ -118,11 +123,12 @@
   "LA": {
    "winner": "Julia Letlow",
    "winner_party": "Republican",
-   "status": "called",
-   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
-   "vote_note": "50.9%–49.1%"
+   "status": "certified",
+   "source": "https://voterportal.sos.la.gov/static/2026-11-03/resultsRace/Congressional",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
+   "vote_note": "50.88%–49.12% (746,466 to 720,516)",
+   "note": "The state election authority labels these results official; no dated certification announcement was found."
   },
   "MA": {
    "winner": "Ed Markey",
@@ -137,29 +143,32 @@
    "winner": "Troy Jackson",
    "winner_party": "Democratic",
    "status": "called",
-   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
+   "source": "https://www.maine.gov/sos/elections-voting/election-results-data",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
    "flip": true,
-   "vote_note": "53.6%–46.3%"
+   "vote_note": "52.82%–47.11% (379,629 to 338,596)",
+   "note": "Vote totals are the Secretary of State's posted tabulation, with percentages computed excluding blank ballots; the state had not labelled the result certified when read."
   },
   "MI": {
    "winner": "Abdul El-Sayed",
    "winner_party": "Democratic",
-   "status": "called",
-   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
-   "vote_note": "52.5%–45.5%"
+   "status": "certified",
+   "source": "https://www.michigan.gov/sos/resources/news/2026/11/23/michigan-board-of-state-canvassers-certifies-record-breaking-2026-general-election",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
+   "vote_note": "52.5%–45.5%",
+   "note": "The state certified its results on 2026-11-23."
   },
   "MN": {
    "winner": "Peggy Flanagan",
    "winner_party": "DFL",
-   "status": "called",
-   "source": "https://political.org/2026/11/04/2026-senate-results-how-every-race-compares-with-the-last-10-elections/",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
-   "vote_note": "53.7%–43.6%"
+   "status": "certified",
+   "source": "https://www.sos.mn.gov/elections-voting/election-results/2026/2026-general-election-results/2026-state-canvassing-board-general/",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
+   "vote_note": "53.72%–43.55% (1,521,835 to 1,233,592)",
+   "note": "The state certified its results on 2026-11-19."
   },
   "MS": {
    "winner": "Scott Colom",
@@ -175,19 +184,22 @@
    "winner": "Kurt Alme",
    "winner_party": "Republican",
    "status": "called",
-   "source": "https://nbcmontana.com/news/local/bodnar-concedes-senate-race-alme-projected-to-take-seat",
-   "source_kind": "press",
-   "as_of": "2026-11-21"
+   "source": "https://sosmt.gov/elections/results/",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
+   "vote_note": "48.2%–37.7% (235,693 to 184,574)",
+   "note": "State totals with 727 of 728 precincts fully reported; the state page says results are unofficial until canvassed."
   },
   "NC": {
    "winner": "Roy Cooper",
    "winner_party": "Democratic",
-   "status": "called",
-   "source": "https://aljazeera.com/news/2026/11/4/democratic-party-flips-us-senate-in-2026-midterm-elections",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
+   "status": "certified",
+   "source": "https://www.ncsbe.gov/news/press-releases/2026/11/24/state-board-unanimously-certifies-midterm-elections",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
    "flip": true,
-   "vote_note": "58.8%–39.1%"
+   "vote_note": "58.75%–39.05% (2,480,649 to 1,648,867)",
+   "note": "The state certified its results on 2026-11-24."
   },
   "NE": {
    "winner": "Pete Ricketts",
@@ -219,11 +231,12 @@
   "NM": {
    "winner": "Ben Ray Luján",
    "winner_party": "Democratic",
-   "status": "called",
-   "source": "https://gvwire.com/2026/11/03/ap-calls-senate-races-in-colorado-new-mexico-and-wyoming/",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
-   "vote_note": "63.3%–36.7%"
+   "status": "certified",
+   "source": "https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY&eid=2917",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
+   "vote_note": "63.3%–36.7% (459,052 to 266,524)",
+   "note": "The state election authority labels these results official; no dated certification announcement was found."
   },
   "OH": {
    "winner": "Sherrod Brown",
@@ -238,11 +251,12 @@
   "OK": {
    "winner": "Kevin Hern",
    "winner_party": "Republican",
-   "status": "called",
-   "source": "https://gvwire.com/2026/11/03/republicans-hagerty-hern-win-senate-races-in-tennessee-oklahoma/",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
-   "vote_note": "57.2%–39.3%"
+   "status": "certified",
+   "source": "https://results.okelections.gov/OKER/?elecDate=20261103",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
+   "vote_note": "57.20%–39.29% (639,860 to 439,522)",
+   "note": "The state election authority labels these results official; no dated certification announcement was found."
   },
   "OR": {
    "winner": "Jeff Merkley",
@@ -256,21 +270,23 @@
   "RI": {
    "winner": "Jack Reed",
    "winner_party": "Democratic",
-   "status": "called",
-   "source": "https://gvwire.com/2026/11/03/democrats-hold-senate-seats-in-delaware-illinois-massachusetts-new-jersey-and-rhode-island/",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
-   "vote_note": "66.8%–29.3%"
+   "status": "certified",
+   "source": "https://electionresults.ri.gov/results/public/rhodeisland/elections/2026StatewideGeneralElection",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
+   "vote_note": "66.78%–29.26% (240,707 to 105,459)",
+   "note": "The state election authority labels these results official; no dated certification announcement was found."
   },
   "SC": {
    "winner": "Annie Andrews",
    "winner_party": "Democratic",
-   "status": "called",
-   "source": "https://www.cbsnews.com/news/2026-midterm-election-results-where-democrats-won/",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
+   "status": "certified",
+   "source": "https://scvotes.gov/state-election-commission-certifies-2026-statewide-general-election/",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
    "flip": true,
-   "vote_note": "51.1%–46.6%"
+   "vote_note": "51.14%–46.64% (1,044,001 to 952,191)",
+   "note": "The state certified its results on 2026-11-11."
   },
   "SD": {
    "winner": "Mike Rounds",
@@ -321,11 +337,12 @@
   "WY": {
    "winner": "Harriet Hageman",
    "winner_party": "Republican",
-   "status": "called",
-   "source": "https://gvwire.com/2026/11/03/ap-calls-senate-races-in-colorado-new-mexico-and-wyoming/",
-   "source_kind": "press",
-   "as_of": "2026-11-21",
-   "vote_note": "64.9%–34.6%"
+   "status": "certified",
+   "source": "https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_General_State_Canvassing_Board_Minutes.pdf",
+   "source_kind": "state",
+   "as_of": "2026-11-28",
+   "vote_note": "64.9%–34.6% (122,174 to 65,105)",
+   "note": "The state certified its results on 2026-11-10."
   }
  },
  "house": {
@@ -635,8 +652,8 @@
    "status": "uncalled",
    "source": "https://api.sos.ca.gov/returns/us-rep/district/all",
    "source_kind": "state",
-   "as_of": "2026-11-21",
-   "note": "Rep. Jay Obernolte (R) led Tessa Lynn Hodge (D) in the state's Nov. 20 count; no call had been made."
+   "as_of": "2026-11-28",
+   "note": "Rep. Jay Obernolte (R) led Tessa Lynn Hodge (D) 110,239 to 107,332 (50.7%–49.3%) in the state's Nov. 27 count, with all precincts reporting; no call or certification had been recorded here."
   },
   "CA-24": {
    "winner": "Salud Carbajal",
@@ -2072,8 +2089,8 @@
    "status": "uncalled",
    "source": "https://electionresultsfiles.sos.mn.gov/20261103/ushouse.txt",
    "source_kind": "state",
-   "as_of": "2026-11-21",
-   "note": "Jake Johnson (DFL) led Rep. Brad Finstad (R) by 324 votes; a recount is set for Nov. 30 to Dec. 4."
+   "as_of": "2026-11-28",
+   "note": "Jake Johnson (DFL) led Rep. Brad Finstad (R) by 324 votes (163,065 to 162,741) in the state's count; a recount is set for Nov. 30 to Dec. 4."
   },
   "MN-2": {
    "winner": "Matt Little",
@@ -2262,13 +2279,14 @@
    "as_of": "2026-11-21"
   },
   "NC-10": {
-   "winner": null,
-   "winner_party": null,
-   "status": "uncalled",
-   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "winner": "Pat Harrigan",
+   "winner_party": "Republican",
+   "status": "certified",
+   "source": "https://www.ncsbe.gov/news/press-releases/2026/11/24/state-board-unanimously-certifies-midterm-elections",
    "source_kind": "state",
-   "as_of": "2026-11-21",
-   "note": "Rep. Pat Harrigan (R) led Ashley Bell (D) in the state board's count; Bell requested a recount."
+   "as_of": "2026-11-28",
+   "vote_note": "49.63%–48.78% (146,589 to 144,073)",
+   "note": "The State Board certified all contests on Nov. 24 except two still under recount, neither of them this one. Vote totals are from the board's results file."
   },
   "NC-11": {
    "winner": "Jamie Ager",
@@ -2331,13 +2349,15 @@
    "as_of": "2026-11-21"
   },
   "NC-5": {
-   "winner": null,
-   "winner_party": null,
-   "status": "uncalled",
-   "source": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "winner": "Chuck Hubbard",
+   "winner_party": "Democratic",
+   "status": "certified",
+   "source": "https://www.ncsbe.gov/news/press-releases/2026/11/24/state-board-unanimously-certifies-midterm-elections",
    "source_kind": "state",
-   "as_of": "2026-11-21",
-   "note": "Chuck Hubbard (D) led Rep. Virginia Foxx (R) by 330 votes in the state board's count; a recount was under way."
+   "as_of": "2026-11-28",
+   "flip": true,
+   "vote_note": "48.74%–48.62% (139,769 to 139,439)",
+   "note": "The State Board certified all contests on Nov. 24 except two still under recount, neither of them this one. Vote totals are from the board's results file."
   },
   "NC-6": {
    "winner": "Cyril Jefferson",
