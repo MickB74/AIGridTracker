@@ -6,7 +6,7 @@
   "attribution": "AI GridWatch (https://aigridwatch.com)",
   "source_page": "https://aigridwatch.com/story-tracker",
   "caveat": "Automated Google News aggregation, not human-verified — locality tags are regex-guessed from the headline and can be wrong. Treat as a lead to check, not a fact to cite.",
-  "count": 16779,
+  "count": 16797,
   "stories": [
     {
       "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
@@ -54566,7 +54566,7 @@
       "locality": "Merrillville",
       "state": "IN",
       "first_seen": "2024-09-10",
-      "last_seen": "2026-11-16"
+      "last_seen": "2026-11-27"
     },
     {
       "title": "Merrillville welcoming data centers as major generators of tax revenue",
@@ -164610,7 +164610,7 @@
       "locality": null,
       "state": null,
       "first_seen": "2026-11-14",
-      "last_seen": "2026-11-16"
+      "last_seen": "2026-11-27"
     },
     {
       "title": "Data Center Outrage Swept Pennsylvania Democrats Into Office. What Comes Next?",
@@ -178690,7 +178690,7 @@
       "locality": null,
       "state": "GA",
       "first_seen": "2026-11-23",
-      "last_seen": "2026-11-26"
+      "last_seen": "2026-11-27"
     },
     {
       "title": "POWER STRUGGLE: Who pays for Georgia’s data center growth? An Atlanta News First investigation",
@@ -180296,7 +180296,7 @@
       "locality": "Shelby County",
       "state": "IA",
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-25"
+      "last_seen": "2026-11-27"
     },
     {
       "title": "Company seeks rezoning for data center at former Alton Steel site",
@@ -181385,7 +181385,7 @@
       "locality": null,
       "state": "NJ",
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-26"
+      "last_seen": "2026-11-27"
     },
     {
       "title": "Elon Musk’s SpaceX Data Centers Face Key Votes on Same Day in December",
@@ -181814,7 +181814,7 @@
       "locality": "Colleton County",
       "state": "SC",
       "first_seen": "2026-11-25",
-      "last_seen": "2026-11-25"
+      "last_seen": "2026-11-27"
     },
     {
       "title": "Rock Valley Residents Weigh Data Center’s Tax Benefits & Press for Answers on Health and Power",
@@ -184575,6 +184575,204 @@
       "locality": "Warrick County",
       "state": "IN",
       "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Bow to hold public hearing on proposed data center pause",
+      "outlet": "New Hampshire Union Leader",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOLUJrMGNCSTBtQzR4bXVKcjNBcTl6bTczdURZRWpERkJ3YV9ELUN2VmwtOXl4b294cWxMSkp5YzA5YndWV29xYlJkTVBob19NWFlQODl6UTZHRnpyc3R3MjcyNUdReFRUVVA3RDd4YVQ2LUxTUFVJZXZWdHNtdGtXQ2tjSk5vZXc?oc=5",
+      "published": "Fri, 27 Nov 2026 22:09:53 GMT",
+      "published_iso": "2026-11-27T22:09:53+00:00",
+      "locality": "Bow",
+      "state": "NH",
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Residents raise concerns over Brewer’s proposed data center ordinance",
+      "outlet": "WABI",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQMmk2VmtHUkJUT3dlRm9wQ0hORllfaDBTV1l3LWJzd3RTZExYM0lQdllHQTRwcXlhU0dabVFGbTEzMm44WVdWQVdHYjFGNlFiNkRlbDFpSlNKYklBYi0wdkxIRm03WmFjLW52M2lqV0ZHdWJDSjZ6QU1Tb1B3NUYxVm5EOExJcE9PVnJMai1IRkQyeW1zZzhTZXprbkRqb0F2cFltSk5iU3hrLUdwY3IzQU0zZDAtZ9IBtgFBVV95cUxQMmk2VmtHUkJUT3dlRm9wQ0hORllfaDBTV1l3LWJzd3RTZExYM0lQdllHQTRwcXlhU0dabVFGbTEzMm44WVdWQVdHYjFGNlFiNkRlbDFpSlNKYklBYi0wdkxIRm03WmFjLW52M2lqV0ZHdWJDSjZ6QU1Tb1B3NUYxVm5EOExJcE9PVnJMai1IRkQyeW1zZzhTZXprbkRqb0F2cFltSk5iU3hrLUdwY3IzQU0zZDAtZw?oc=5",
+      "published": "Mon, 23 Nov 2026 23:09:00 GMT",
+      "published_iso": "2026-11-23T23:09:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Fort Meade data center will face new vote after revisions to plan",
+      "outlet": "Miramar News",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9mS1hETmxWWldmLUotczdnMFFhQjdyYnpYZzF4THY5alZvOXQxejdTRzFUa2I1UzlCTzdSOC1CeU5OMzJ5UUgtYTdJU2RteXBfeFFGOTdUMHRRVDdBV0k0MjJqWjFfWGc?oc=5",
+      "published": "Sat, 21 Nov 2026 00:21:25 GMT",
+      "published_iso": "2026-11-21T00:21:25+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Judge denies Hobart residents’ suit against city’s data center approval",
+      "outlet": "Chicago Tribune",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNb2llanhoTTUxYnZoTGlhdFgwVFphSDVXYnJaWlJNVlRiNXRLUkQwa2RJWVF5bTRTV1RYMUlXS0dfc1BRT2p0OWo2QUFSMHlWUmZXX3VEQk5VQ0E2V2doc1dhN3A2a25BLUx4bFVoYVA0eU1BQ2M1eXZGZ0t1Y3NEeXEwdTdYeVNldjVpNUlnUmt2Qi1vX0VaeTl1SEdPUzNMc1BLbDNCLWtiX2MyLWZOcm1R?oc=5",
+      "published": "Fri, 27 Nov 2026 20:07:03 GMT",
+      "published_iso": "2026-11-27T20:07:03+00:00",
+      "locality": "Hobart",
+      "state": "WI",
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Group to take statewide data center moratorium fight to Olympia",
+      "outlet": "AppleValleyNewsNow.com",
+      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQLTc2dC1vd3JoYklxWWRUUHY1MWs0bEVmb3pWQ01hZTRVVVJ3SlpleUpqN21kQTNOM3o3X1JMa1FRVmZRa2E5SFBCWnhiVDZfcTJKUmYwVTJKMjVJWE83eTFMZ0VPbGZyWVZhVmRSRFh6cXVjVTE5UnE2cHlCcTlHNy1xb2FIeUwyZk5QdS1uekdaVS1TN0tUaE9CQ3RhQ2dDaU53Qkd0RHlLWUxhWm1ERjZjWFY2UF9yUjhZR29oQ3BWOV9MZkNOTnRhTkg5N0Nja1BtMEd3ZzlwVTkyOE1wWTlZR0s3cXR2?oc=5",
+      "published": "Fri, 27 Nov 2026 22:58:00 GMT",
+      "published_iso": "2026-11-27T22:58:00+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Georgia County to Hold Landmark Vote on Overturning Data Center Mega-Project",
+      "outlet": "DeSmog",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPOGl4eWxBOXJpRTBZb0RkRFdBeWRqblp3dHp3WDRfOHNhaF9CTF9nV05ja1FmOU9fME1tWU5YRHFrZFlIbUNfQTdOcnQ0STRsM04xNGppeDF1ZW5XUzVBQXNzYVZOSkxhdk5UV1o4QVNocWFOTjg2bmJ6VVhhUnpFZDRHbDJxSEk0TERGTUt1RjVNTkE1VEZMNFlKaldoNHRwcTRuTWlzZUo1S2paWkZwWg?oc=5",
+      "published": "Fri, 27 Nov 2026 19:40:23 GMT",
+      "published_iso": "2026-11-27T19:40:23+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Viewpoint: Citizen group renews call for six-month data center moratorium",
+      "outlet": "Dalton Daily Citizen",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYWhwUGNpdmpzU2c0VnFoOVA5QXVnVV82SDN2UTB4b051ZDF6bkVIWDBWNHRxWFREbUhMazEyQTE0TlRqRWlKQ0RFQXFhX25QU1lyRW5VZVVXUXp4RlVWY2V1bGwzSDdZc3B6WXRVWlBrQUYzNWMwSFlSZkk4MkJkUFM1NElzSUszaHZQOXQ2ZEV3UlRpMjU3UzB6ZTdaWmdWRU5HR0FLZTFfU3A5NFdF?oc=5",
+      "published": "Fri, 27 Nov 2026 22:17:10 GMT",
+      "published_iso": "2026-11-27T22:17:10+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Group asks McDonald village council to reconsider data center moratorium",
+      "outlet": "WKBN.com",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOWU5vSm9zemtkNWhtd3R3M3hhZDh1dzlRdG1TM0Etekpnei1BUGhxa0wwaUhkUGQ5UkY3d1BVc3Q1d1RtOGEyemJhb1hRSndlU1Fndm1GNmQ4dVk3QU1KMURzeDFMRmpHVG9jWFhQWmRGdUpnMFFSekIxU0VVWDdIN08ydnZxYXJoOWRBR1lyMW1TSnpnUXVlVDZyVzVkeGF0UXgtd0xLYVBaUkRraGk1UmlBMjFMQmNCaEhsZkhXWTB0Z9IBxwFBVV95cUxONTVpR3gzR3RjS3VadVExTFJlaHlFbHFMaFNTNGhRTDNyZktFdkV2eUkyUHVFcWFONk5FOWZXMklibUFFODQwWXhXQ2xhR0NGMTVTSl85NHFrUFpudU9QNVo5M2RzMlpidzkzRERjN3BiREppWDFKSUhtTUZWODBFcnFxeVh1S1VqemJaX3JRdTlpdHlFeWw5U3JaLUZDRHI0eURRNzIxeWFySlUtT2tFRUp1eFh4eWVfU28wTnJQdU8zbnoxOHVV?oc=5",
+      "published": "Fri, 27 Nov 2026 19:25:44 GMT",
+      "published_iso": "2026-11-27T19:25:44+00:00",
+      "locality": null,
+      "state": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Bulloch commissioners poised to extend data center moratorium another 6 months",
+      "outlet": "Statesboro Herald",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQaVJNalNBM2JsbDFkQW5SaU5xenAzcW81eDIzNW9CbVhSME44U3VJWFJUWmlfWDJZY2ZLb0tCUWo4NjRfZWVvRVhGMlg1M3l0RmZrNTVmN2tsT3VsV2JPRXFvUVVqaWU5VTVYZW9XZ19FbUtIQzB5MWZRWERhTjhhQUFGdkFXSERnT2pORjNZUGJ4V3NETXZkdXZJTWtOVWtjc1hzNTkxcGN2VlZwQXZid0VJTC1ISENEdmc?oc=5",
+      "published": "Fri, 27 Nov 2026 23:20:30 GMT",
+      "published_iso": "2026-11-27T23:20:30+00:00",
+      "locality": "Bulloch County",
+      "state": "GA",
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Chaince Digital launches AI data center unit, targets projects up to 100MW",
+      "outlet": "Data Center Dynamics",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZi1uWVl3TE5jeE5mTFZJX05FdUthM2lxRXpJdG5kQTY0emFXWHZHUVpqZXhDNE4zZnktNTNYdHdwSmtSNEJTX19qWFM3T25RS3ZlUUJKZ2J5X3U0ZXQ1M1NPZmZrT1JPUEdCd3Zqa2hvZGR2OXh6bWIybDB0OWFBbXg0Q3NnckRIZlJhZTY3OEJibmZUNXZmU3VnNmt0bS03czBBQ0xaNEpXYkNBNFA3bGFLWDRNX3hr?oc=5",
+      "published": "Fri, 27 Nov 2026 10:09:28 GMT",
+      "published_iso": "2026-11-27T10:09:28+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Randolph Advances Data Center Ban Proposal: What Residents Need To Know",
+      "outlet": "Patch",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVGszQm5VQVJSMEh0dHk2c2NDbzIzTmthNnZYemFucENGbHFEZ09QVzFXb3hMNlVPMXdURG5BOEI3SFJZWUp3RGhudFBiQkQ3OEcxNmxYMGlpM1VKWEZleGRxODVDRDc0TVNIRjU2b2pjQ1Y5YzctRDVpVWdIZlFnUEY2RW93d3oteUEtb2VhSkxTenU2OUY4eXhHZWhyMEFxQ29iUWVqTzDSAb4BQVVfeXFMTzlQZ3pfUlhEN2tCN3RrclpxbFV5a3lTTGRtUURiNGNyVDFnSWtpZ2pLZHJGdXZyU3BWZEJOLUJRaUlsZGpNMmtOdlJETnJFZ3dvZEo0N0NHN0FIb2RrS3JVcmJ1OGZ1NnctYWJQdTFBZXk5NzZQcEhjdks5Vmp0bmNnV1lDVVh5MncwVWVKTkNkcTY5THRKdXdzVWhUOElCZGdsMGRoR3U3VzZNQnRWZi1TMjBab1ZvMDQ4MV91QQ?oc=5",
+      "published": "Fri, 27 Nov 2026 19:51:50 GMT",
+      "published_iso": "2026-11-27T19:51:50+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Exclusive: Prologis Sells Data Center-Ready Facility for $163M",
+      "outlet": "CommercialSearch",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOQUxDZ3dvWHlnVWxFVGliSUZLV3NrZVFTTldyQWozd3F1WnNtRUxTeTNfalp0U1ExTE83amg5WTlEM25uZXlMWGpHeDVqejdSY3F3NEYtbE5uRWN0UG1SWkJjc2tJdjdPZExBUkRidUVHMjgycHMtaUNzcXYyeXdhNTd0cmdGX3NZSlktMmhIYWtBc1BjNXpFRlo5cmxvYjRh?oc=5",
+      "published": "Thu, 26 Nov 2026 08:33:52 GMT",
+      "published_iso": "2026-11-26T08:33:52+00:00",
+      "locality": null,
+      "state": "NJ",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Loudoun County pauses new data center applications for a year",
+      "outlet": "InsideNoVa",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQV0VLdjd2Y0c5ck53SHItcmZVWlp4a3ZuZ3dRSXBjdGdEVXcwZlhZUTRlTDlTcXVKYWZ4WDJQdC1uenVqU1ljQzFSNDZDYXpfd2F1Qm52RjBvX2w2YmUyV2t0N2RYaWtzcHFiS3ctMUVheVRkNm14dzNPaGIxejBYSEFKcExHWXBFNi1GYlJHMmZleFBtWnhyWG81NWc0eW10bWpqbg?oc=5",
+      "published": "Sun, 22 Nov 2026 16:00:27 GMT",
+      "published_iso": "2026-11-22T16:00:27+00:00",
+      "locality": "Loudoun County",
+      "state": "VA",
+      "first_seen": "2026-11-22",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Georgia Data Center Tax Break Costs Twice Its Return",
+      "outlet": "Wisevoter",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMm5GM20zT1VZb04wQ2dfb1BRVHRCVjcxeFV3OGVwelliYU5JZU5fV3NFWkg3Z0RwYWl3Ylhxa0NMMV8zNzNlTGhZdTQ4S2VrM01XeXZWZmdkN055VzRtaks2WEhmYU1yNG05SFByNWN4MmJrS1hxMFl1QUp6ZWIzd2JNOVpyZE0?oc=5",
+      "published": "Fri, 27 Nov 2026 20:33:25 GMT",
+      "published_iso": "2026-11-27T20:33:25+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Georgia Voters to Decide Fate of $17B Data Center Megaproject",
+      "outlet": "Dosya Haber",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNOXY4VHV6a1otRTdzaXdQRmJFT3NqSmpoVzFBR1N4VnVCc2JvbUk0QWpsY1NOMXVDTXRjWU5mZ3FrU2Nlc1dheGtQTzBCSDc0ZXdRUmt6WUxGQWhwcGIxUjE3amxwQjM5My12ejE0aXJPTUVDRmRWRmlxMDVFOFlBUDVub0RUMWE2aDA3RVRhQVF1S3N2RHdfTHdnRmd2QkNJaF9MSG13?oc=5",
+      "published": "Fri, 27 Nov 2026 22:18:58 GMT",
+      "published_iso": "2026-11-27T22:18:58+00:00",
+      "locality": null,
+      "state": "GA",
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "With Abbott out, what does the future look like for data centers in Texas?",
+      "outlet": "NPR",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNaU9waGxGSUlXb3k4cWFnS2QtY1dtYXpsdWprRlpUaXJTd1doWVBGeG5VRUZJdTllRTVPT29ORWtZUEMxLV9WdUVBWndoLTBFVFBRUkFFT1YzcnBrTEN0SGtreEI5OWt2VzdEWXFaZng1ZVNvNmVhS0k5RDdRSGhNa0w1ZWNqM0NibVFENmMwVm9CaGU2MGFUd1RzVHFLRHlUaVVSWGpReUxrWlV0QzljVUtIN2EyTGtF?oc=5",
+      "published": "Fri, 27 Nov 2026 22:20:33 GMT",
+      "published_iso": "2026-11-27T22:20:33+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "As Data Center Construction Plans Soar, U.S. Electric Utilities Race to Serve Once-in-a-Lifetime Load Growth",
+      "outlet": "Industrial Info Resources",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPM3ZxRnA4MWdwc01LLWFNWEh1RjlBaXpGVTR4VndoaUxOeTFXdWNYNkdyTFlOU2JmYmYwMk1rQ1pYYV90WnowcXo1MWg1a1ZGQmFfUlhpNnYyblQ3TUo4LXU4QnJ6RnQtVkVKa1BjNDRhcXhmVzF0UnE5V2loNjY3VzY0OWRVSkhjZlNSOUQ2Sm15MlVON0NmbTBmcE5TWXU4YTA4ZXdndi0xR0tOMFp6cWExTVVkZExQLU5SeFFUeWZBUnlqajVHU0txdmVmNzRtQk40aWF0YWdTOW16RWVtbG1QcFBwQm8?oc=5",
+      "published": "Wed, 25 Nov 2026 08:00:00 GMT",
+      "published_iso": "2026-11-25T08:00:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "title": "Ted Cruz Blames China for Data Center Water Fears: ‘You’re Being Lied To’",
+      "outlet": "Newsweek",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdFJFT0VlNDI3SzZIdmp2R1dGa1lfU1lUUkppaHJDcU16cVY5U3FmR0doSmVoVVN5dGZSdlRqNEpLeHFRRS12ZHNEZHdIaU1wTnRBSmNhSjh6Z1FJSHFKTkkxYk8yTU5BVUtCV0FzV3gzOGNRY1NSZDlTTUhrd3JQV1dfU3o3Q0s2RVJtQzF1TkJucmVFcEJLNERQVi0zUDRzNERkX3Zfc1ItaDhTSkxfX05OdXl3UQ?oc=5",
+      "published": "Fri, 27 Nov 2026 23:45:00 GMT",
+      "published_iso": "2026-11-27T23:45:00+00:00",
+      "locality": null,
+      "state": "TX",
+      "first_seen": "2026-11-27",
       "last_seen": "2026-11-27"
     }
   ]
