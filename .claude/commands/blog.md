@@ -17,13 +17,28 @@ in step 3, stop and say so. A thin post on a quiet news day is worse than a
 gap — this site's whole claim is that every number links to the document it
 came from.
 
+## 0a. Work in a private worktree
+
+Never build in the main checkout; parallel sessions share it and a build wipes
+`web/` under them. From the main repo:
+
+```bash
+git fetch -q origin && git worktree prune
+W=~/GitHub/AIGridTracker-blog-$(date +%Y%m%d%H%M)
+git worktree add --detach "$W" origin/master && cd "$W"
+```
+
+Everything below runs in `$W` (detached HEAD at origin/master, so "not on
+master" and "dirty tree" checks apply to this fresh copy). Push with
+`git push origin HEAD:master`. At the end: `cd` out and
+`git worktree remove --force "$W"`. Keep it under `~/GitHub`, never `~/Documents`.
+
 ## 0. Preflight — is there already a post today?
 
 Run this first, before any research. It is cheap, and it catches the ways this
 job burns a full research cycle or publishes the same thing twice.
 
 ```bash
-git rev-parse --abbrev-ref HEAD
 git status --porcelain -- src/ web/
 git fetch -q origin && git rev-list --left-right --count origin/master...HEAD
 python3 - <<'PY'
@@ -188,7 +203,7 @@ Then push. `web/` is committed output, so the post and its rendered pages ship
 in one commit:
 
 ```bash
-git add -A src/blog_content.py web/ data/ vercel.json && git commit -m "post: <title>" && git pull --rebase && git push
+git add -A src/blog_content.py web/ data/ vercel.json && git commit -m "post: <title>" && git pull --rebase origin master && git push origin HEAD:master
 ```
 
 **Commit first, then rebase, then push — in that order.** The build leaves
