@@ -6,6 +6,13 @@
   <description>Analysis and explainers on data center development, grid impact, and community advocacy.</description>
   <atom:link href="https://aigridwatch.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Aurora, Colorado Passed a Partial Data Center Pause. The Developer Had Already Walked Away From the Site Residents Fought.</title>
+      <link>https://aigridwatch.com/blog/aurora-colorado-moratorium-trident-vantage-2026</link>
+      <guid>https://aigridwatch.com/blog/aurora-colorado-moratorium-trident-vantage-2026</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description>On Nov. 23 Aurora&#x27;s council unanimously passed a moratorium covering only part of the city, hours after Vantage said it would drop the Trident site. The moratorium exempts applications already accepted, and a separate tax-incentive ban does not touch existing deals worth up to about $83 million.</description>
+    </item>
+    <item>
       <title>A Judge Stopped Google&#x27;s Virginia Data Center Over a Vote the County Never Described. The Project Is Not Dead.</title>
       <link>https://aigridwatch.com/blog/botetourt-google-foia-ruling-walk-on-vote-2026</link>
       <guid>https://aigridwatch.com/blog/botetourt-google-foia-ruling-walk-on-vote-2026</guid>
@@ -137,13 +144,6 @@
       <guid>https://aigridwatch.com/blog/california-newsom-signs-seven-data-center-bills-2026</guid>
       <pubDate>Sat, 26 Sep 2026 00:00:00 GMT</pubDate>
       <description>On September 21, Governor Newsom signed seven data center bills into law -- the same package he blocked a year ago. The laws shift grid upgrade costs to operators, mandate water and energy disclosure, and strip a blanket environmental exemption. But every dollar figure and megawatt trigger is delegated to future CPUC rulemaking, with no filing deadline. Here is what each bill actually requires, what it leaves to regulators, and what a community can use right now.</description>
-    </item>
-    <item>
-      <title>Trump Announced an AI Force. The Same Week, His Own Pollster Said Data Centers Are a Losing Issue.</title>
-      <link>https://aigridwatch.com/blog/trump-ai-force-gop-split-2026</link>
-      <guid>https://aigridwatch.com/blog/trump-ai-force-gop-split-2026</guid>
-      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
-      <description>On September 19, President Trump announced an &#x27;AI Force&#x27; modeled on the Space Force and promised an AI czar. Four days earlier, his own pollster told Republican candidates that unqualified support for data centers is &#x27;a losing position.&#x27; The same weekend, Texas froze all data center environmental permits and California signed seven data center laws. What actually happened, and what it means for communities heading into a hearing.</description>
     </item>
 </channel>
 </rss>

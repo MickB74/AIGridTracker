@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/aurora-colorado-moratorium-trident-vantage-2026",
+      "destination": "/blog/aurora-colorado-moratorium-trident-vantage-2026",
+      "permanent": true
+    },
+    {
       "source": "/botetourt-google-foia-ruling-walk-on-vote-2026",
       "destination": "/blog/botetourt-google-foia-ruling-walk-on-vote-2026",
       "permanent": true

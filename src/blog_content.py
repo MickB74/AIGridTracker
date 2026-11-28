@@ -72,6 +72,69 @@ decisions should be informed by public data.
 
 BLOG_STORIES = [
     {
+        "id": "aurora-colorado-moratorium-trident-vantage-2026",
+        "art": "moratorium",
+        "section": "stories",
+        "title": "Aurora, Colorado Passed a Partial Data Center Pause. The Developer Had Already Walked Away From the Site Residents Fought.",
+        "seo_title": "Aurora, CO Data Center Moratorium and Trident Exit",
+        "date": _dt.date(2026, 11, 28),
+        "author": "GridWatch AI",
+        "tags": ["Aurora", "Colorado", "moratorium", "Vantage", "Trident", "tax incentives"],
+        "summary": "On Nov. 23 Aurora's council unanimously passed a moratorium covering only part of the city, hours after Vantage said it would drop the Trident site. The moratorium exempts applications already accepted, and a separate tax-incentive ban does not touch existing deals worth up to about $83 million.",
+        "body": """On the evening of Monday, Nov. 23, the Aurora, Colorado city council voted unanimously for a temporary data center moratorium. Earlier the same evening, Vantage Data Centers said it would no longer pursue the site for its proposed Trident campus, the project that had drawn months of opposition from nearby neighborhoods. Both facts matter, and they are easy to run together. The moratorium did not stop Trident. Vantage's decision did.
+
+Everything below comes from the reporting listed at the end of this post. Where outlets disagree, the post says so.
+
+## What the council passed
+
+The moratorium prohibits data centers "west and south of the intersection of Powhaton Road and Interstate 70," according to [Sentinel Colorado](https://sentinelcolorado.com/metro/aurora-city-council-passes-data-center-moratorium-through-september-2027/). [Mile High CRE](https://milehighcre.com/aurora-city-council-approves-data-center-moratorium/) gives the same boundary and identifies the measure as Resolution R2026-146. It says the moratorium bars the acceptance, processing and approval of new data center applications in that area. [Denver7](https://www.denver7.com/news/local-news/vantage-drops-plans-for-data-center-after-community-concerns) quotes the boundary with a different road, "Aerotropolis Parkway," so check the adopted text before relying on a specific intersection.
+
+Three limits apply, and they are the part a resident should know:
+
+- **It is partial.** Sentinel reports that Mayor Mike Coffman described it as a compromise that leaves out the vacant land on the east side of the city. The [Denver Gazette](https://www.denvergazette.com/2026/11/23/vantage-drops-aurora-location-for-trident-data-center/) quotes Coffman as excluding vacant land north of I-70 and east of Powhaton Road, which it describes as far from residential areas. Denver7's lede, by contrast, calls it a moratorium "within city limits." The other outlets describe a limited area.
+- **Applications already accepted are exempt.** Sentinel says this "includes Trident," and Mile High CRE confirms that previously accepted applications are exempt.
+- **It can end early.** Sentinel and Mile High CRE both give Sept. 30, 2027 as the outer date. Sentinel says the pause could end sooner, once council decides appropriate rules are in place. Mile High CRE words it as "whichever comes first."
+
+Councilmember Curtis Gardner was excused from the vote, per Sentinel. This was the third council vote on a moratorium since August. According to the Gazette, council voted one down in August and rejected an indefinite one in October.
+
+## What Vantage said, and when
+
+The Gazette reports that City Attorney Pete Schulte announced Vantage's decision early in the meeting, and that Vantage had not yet found an alternative site. The company's statement, attributed by Sentinel and others to Misty Allen, Vantage's vice president of public policy for North America, reads in part: "While we will no longer pursue the current site for our proposed campus, Vantage remains committed to being a responsible long-term partner in the state."
+
+Per the Gazette, Vantage had asked council in late October for at least 90 days to find another site and for the city to hold off on new data center rules. The Gazette also reports that council had advanced a resolution in a study session urging Vantage to move Trident, and that Vantage's announcement came before the formal vote. Outlets disagree on what happened to that resolution afterward. Sentinel says it was pulled from the agenda. Mile High CRE says it was postponed and returns on Dec. 7. Nothing in the coverage we read settles which is right.
+
+The reporting does not agree on how large the project was. The Gazette describes two stories and 1.5 million square feet on 108 acres, at the northwest corner of E-470 and East 48th Avenue. Mile High CRE gives about 860,000 square feet on 108 acres in two buildings. [Newsweek](https://www.newsweek.com/colorado-aurora-data-center-moratorium-trident-12762912) gives about 861,866 square feet, and Denver7 says nearly 900,000. None of the pages we read gives a megawatt figure. If you are citing Trident's size, cite the outlet and say the figures differ.
+
+Vantage's statement, as Denver7 reproduces it, also cites more than 3,000 construction jobs and 30 to 50 permanent jobs. Those are the company's figures. Sentinel quotes a labor union representative, Chaz Tedesco, who opposed the pause: "Aurora should not have to choose between protecting neighborhoods and supporting jobs."
+
+## The tax incentive ban
+
+Separately on Nov. 23, council voted unanimously on a ban on future sales and use tax incentives for data centers, per [Sentinel Colorado](https://sentinelcolorado.com/metro/aurora-city-council-passes-data-center-moratorium-through-september-2027/). It ends the practice of remitting sales or use tax back to data centers in exchange for jobs, but it does not apply to existing agreements. Sentinel's [earlier report on the ban](https://sentinelcolorado.com/metro/aurora-data-center-tax-incentive-ban-advances-amid-another-failed-push-for-a-moratorium/) says the city has already committed to four incentive agreements with a maximum total rebate of about $83 million, and that one of them, for Trident, could receive up to $39 million. Sentinel adds that the ban needs one more vote before it takes effect.
+
+Read that carefully. Vantage has dropped the site, but nothing in the coverage says the Trident incentive agreement is void or what happens to it. We found no reporting on that, so we are not claiming either way. Councilmember Coombs called the ban "performative" but voted for it, per Sentinel.
+
+## What comes next
+
+Sentinel reports that council is working on development code changes. One proposal would prohibit data centers within 750 feet of residentially zoned areas and make them a conditional use between 750 feet and a half-mile, along with a noise study requirement. Councilmember Amy Wiles is exploring rules on vibration, low-frequency noise and community benefit agreements, and Councilmember Lawson said state legislation is likely. These are proposals under discussion, not adopted rules.
+
+Quotes from the meeting show the council is not of one mind on the goal. Coffman said, per Sentinel, "I'm just grateful that the nightmare is over with and that you prevailed." Councilmember Hancock said "data centers are here to stay" and that she is not in favor of the word moratorium. Councilmember Jackson said residents "don't want data centers in Aurora, period," and voted yes because the votes were not there for a total ban.
+
+## What this means if you are watching a similar fight
+
+1. **Check the map.** A partial moratorium protects only the area it names. Aurora's covers the south and west, and the exclusion is vacant land in the east.
+2. **Check what is grandfathered.** Accepted applications are exempt. Trident was in that exempt group, and it left anyway. Residents had no legal lever on it from the moratorium.
+3. **Ask about existing incentive agreements.** A ban on new incentives leaves signed deals alone. The $83 million figure is a ceiling on agreements already made.
+4. **The next fight is the rulebook.** The pause lasts until the code is rewritten, so the setback distance and noise standards are where the outcome is decided.
+5. **The site is not resolved.** Vantage said it is still looking for an alternative location. The Gazette said it had found none yet.
+
+## Sources read
+
+[Sentinel Colorado](https://sentinelcolorado.com/metro/aurora-city-council-passes-data-center-moratorium-through-september-2027/), [Denver Gazette](https://www.denvergazette.com/2026/11/23/vantage-drops-aurora-location-for-trident-data-center/), [Denver7](https://www.denver7.com/news/local-news/vantage-drops-plans-for-data-center-after-community-concerns), [Mile High CRE](https://milehighcre.com/aurora-city-council-approves-data-center-moratorium/), [Newsweek](https://www.newsweek.com/colorado-aurora-data-center-moratorium-trident-12762912). We did not obtain the resolution text itself; the council's own record is the authority on the boundary and the end date.
+
+**See also:** the [Aurora, CO community briefing](/communities/aurora-co.html), the [Colorado state page](/states/colorado.html), and the [moratorium tracker](/moratoriums.html).
+""",
+    },
+    {
         "id": "botetourt-google-foia-ruling-walk-on-vote-2026",
         "art": "oversight",
         "section": "stories",

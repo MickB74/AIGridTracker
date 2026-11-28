@@ -4548,5 +4548,12 @@
     "locality": "Marshalltown, IA",
     "kind": "status_changed",
     "detail": "Enacted \u2192 Expired"
+  },
+  {
+    "date": "2026-11-28",
+    "id": "bloomington-il",
+    "locality": "Bloomington, IL",
+    "kind": "status_changed",
+    "detail": "Enacted \u2192 Expired"
   }
 ]
